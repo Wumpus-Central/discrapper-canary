@@ -35,7 +35,7 @@ function j(e) {
         let e = Object.values(y);
         t = e.length > 0 ? e[0] : null;
     }
-    let Z = r.useCallback(async () => {
+    let T = r.useCallback(async () => {
         if (N() && null !== t) {
             let e = await s.Z.create(n.id, t.id).catch((e) => {
                 let { body: t, status: n } = e;
@@ -61,13 +61,13 @@ function j(e) {
         }
     }, [N, t, n]);
     (0, c.ZP)(() => {
-        0 === v.length && Z();
+        0 === v.length && T();
     });
-    let T = null !== t;
-    return (0, i.jsxs)(a.hjN, {
+    let Z = null !== t;
+    return (0, i.jsxs)("div", {
         children: [
-            (0, i.jsx)(a.R94, {
-                type: a.geA.DESCRIPTION,
+            (0, i.jsx)(a.Text, {
+                variant: "text-sm/normal",
                 children: g.intl.format(g.t.WL0d0d, {
                     helpdeskArticle: p.Z.getArticleURL(b.BhN.WEBHOOKS),
                     developersArticle: b.EYA.API_DOCS_WEBHOOKS,
@@ -84,8 +84,8 @@ function j(e) {
                                   variant: "primary",
                                   size: "sm",
                                   text: g.intl.string(g.t["nrO/HB"]),
-                                  disabled: !T,
-                                  onClick: Z,
+                                  disabled: !Z,
+                                  onClick: T,
                               }),
                           }),
                           (0, i.jsx)(m.Z, {
@@ -125,7 +125,7 @@ function j(e) {
                               }),
                           ],
                       });
-                  })(S, T, Z),
+                  })(S, Z, T),
         ],
     });
 }

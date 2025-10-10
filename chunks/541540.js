@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685), n(415506);
+n.d(t, { Z: () => y }), n(388685), n(415506);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -9,9 +9,8 @@ var r = n(951288),
     u = n(626135),
     d = n(669079),
     f = n(981631),
-    _ = n(388032),
-    p = n(954655);
-function h(e, t, n) {
+    _ = n(388032);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +23,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,12 +34,12 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function g(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -52,85 +51,76 @@ function g(e, t) {
     }
     return n;
 }
-function E(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let b = "WUMP-AAAAA-BBBBB-CCCCC";
-class y extends i.Component {
+let E = "WUMP-AAAAA-BBBBB-CCCCC";
+class b extends i.Component {
     get analyticsLocation() {
         let {
             analyticsContext: { location: e },
         } = this.props;
-        return E(m({}, e), { object: f.qAy.BUTTON_CTA });
+        return g(h({}, e), { object: f.qAy.BUTTON_CTA });
     }
     render() {
         let { obscureInput: e } = this.props,
             { codeInput: t, submitting: n, hasError: i, isPromoCode: a } = this.state;
-        return (0, r.jsxs)(o.hjN, {
-            tag: o.RB0.H1,
-            title: _.intl.string(_.t["il+VCg"]),
-            children: [
-                (0, r.jsx)(o.vwX, { children: _.intl.string(_.t.SeKIoa) }),
-                (0, r.jsx)("form", {
-                    onSubmit: this.handleSubmit,
-                    children: (0, r.jsxs)(o.Kqy, {
-                        direction: "horizontal",
-                        gap: 8,
-                        children: [
-                            (0, r.jsx)(o.oil, {
-                                type: e ? "password" : "text",
-                                value: t,
-                                onChange: this.handleChange,
-                                placeholder: b,
-                                error: !a && i ? _.intl.string(_.t.Y11a2t) : null,
-                                fullWidth: !0,
-                            }),
-                            (0, r.jsx)(o.zxk, {
-                                variant: "primary",
-                                text: _.intl.string(_.t.KIpp7O),
-                                type: "submit",
-                                loading: n,
-                            }),
-                        ],
-                    }),
+        return (0, r.jsx)(o.C3N, {
+            label: _.intl.string(_.t["il+VCg"]),
+            children: (0, r.jsx)("form", {
+                onSubmit: this.handleSubmit,
+                children: (0, r.jsxs)(o.NIo, {
+                    children: [
+                        (0, r.jsx)(o.oil, {
+                            label: _.intl.string(_.t.SeKIoa),
+                            type: e ? "password" : "text",
+                            value: t,
+                            onChange: this.handleChange,
+                            placeholder: E,
+                            error: !a && i ? _.intl.string(_.t.Y11a2t) : null,
+                            helperText: a
+                                ? _.intl.format(_.t.gPt3PD, {
+                                      promoLink: () => {
+                                          window.open("https://discord.com/billing/promotions/".concat(t));
+                                      },
+                                  })
+                                : null,
+                            fullWidth: !0,
+                        }),
+                        (0, r.jsx)(o.zxk, {
+                            variant: "primary",
+                            text: _.intl.string(_.t.KIpp7O),
+                            type: "submit",
+                            loading: n,
+                        }),
+                    ],
                 }),
-                a
-                    ? (0, r.jsx)(o.Text, {
-                          className: p.errorMessage,
-                          variant: "text-sm/normal",
-                          children: _.intl.format(_.t.gPt3PD, {
-                              promoLink: () => {
-                                  window.open("https://discord.com/billing/promotions/".concat(t));
-                              },
-                          }),
-                      })
-                    : null,
-            ],
+            }),
         });
     }
     constructor(...e) {
         super(...e),
-            h(this, "state", {
+            p(this, "state", {
                 codeInput: "",
                 submitting: !1,
                 hasError: !1,
                 isPromoCode: !1,
             }),
-            h(this, "handleChange", (e) => {
+            p(this, "handleChange", (e) => {
                 this.setState({
                     codeInput: e,
                     hasError: !1,
                 });
             }),
-            h(this, "handleSubmit", async (e) => {
+            p(this, "handleSubmit", async (e) => {
                 e.preventDefault();
                 let { codeInput: t } = this.state;
                 if ("" === t) return;
@@ -143,7 +133,7 @@ class y extends i.Component {
                         throw (this.setState({ isPromoCode: !0 }), Error("Cannnot redeem promotion code as gift"));
                     u.default.track(f.rMx.OPEN_MODAL, {
                         type: "gift_accept",
-                        location: E(m({}, this.analyticsLocation), { object: f.qAy.BUTTON_CTA }),
+                        location: g(h({}, this.analyticsLocation), { object: f.qAy.BUTTON_CTA }),
                     }),
                         (0, l.V)({ processedCode: n }),
                         this.setState({ codeInput: "" });
@@ -155,10 +145,10 @@ class y extends i.Component {
             });
     }
 }
-function O() {
+function y() {
     let e = i.useContext(u.AnalyticsContext),
         t = (0, a.e7)([c.Z], () => c.Z.enabled);
-    return (0, r.jsx)(y, {
+    return (0, r.jsx)(b, {
         analyticsContext: e,
         obscureInput: t,
     });

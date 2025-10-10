@@ -35,8 +35,8 @@ function m() {
                                   duration: 250,
                               }).start());
                     },
-                    children: (0, i.jsxs)(o.vwX, {
-                        tag: "h1",
+                    children: (0, i.jsxs)(o.Text, {
+                        variant: "text-lg/semibold",
                         className: p.advancedTitle,
                         children: [
                             g.intl.string(g.t.dYRsrq),

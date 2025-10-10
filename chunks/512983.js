@@ -1,7 +1,4 @@
-n.d(t, {
-    R: () => p,
-    v: () => h,
-});
+n.d(t, { v: () => p });
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -81,10 +78,7 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-var p = (function (e) {
-    return (e.H1 = "h1"), (e.H2 = "h2"), (e.H3 = "h3"), (e.H4 = "h4"), (e.H5 = "h5"), (e.LEGEND = "legend"), e;
-})({});
-function h(e) {
+function p(e) {
     let t;
     var { tag: n = "h5", children: i, className: l, disabled: u, required: _ = !1, error: p, errorId: h } = e,
         m = f(e, ["tag", "children", "className", "disabled", "required", "error", "errorId"]);

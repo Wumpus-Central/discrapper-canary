@@ -1,7 +1,6 @@
 n.d(t, { Z: () => _ });
-var r = n(951288);
-n(647438);
-var i = n(873546),
+var r = n(951288),
+    i = n(873546),
     a = n(159691),
     o = n(481060),
     s = n(270237),
@@ -27,18 +26,13 @@ let _ = (e) => {
                         onClick: t,
                     }),
                     (0, r.jsx)(o.LZC, { size: 10 }),
-                    (0, r.jsx)(o.vwX, {
-                        tag: "h1",
-                        children: d.intl.string(d.t["KzCF//"]),
-                    }),
-                    (0, r.jsx)(o.Text, {
-                        variant: "text-sm/normal",
-                        className: f.pageDescription,
-                        children: d.intl.string(d.t["Y+ucR0"]),
-                    }),
-                    (0, r.jsx)("div", {
-                        className: f.subscriptionsContainer,
-                        children: n.map((e) => (0, r.jsx)(u.Z, { subscription: e }, e.id)),
+                    (0, r.jsx)(o.C3N, {
+                        label: d.intl.string(d.t["KzCF//"]),
+                        description: d.intl.string(d.t["Y+ucR0"]),
+                        children: (0, r.jsx)("div", {
+                            className: f.subscriptionsContainer,
+                            children: n.map((e) => (0, r.jsx)(u.Z, { subscription: e }, e.id)),
+                        }),
                     }),
                 ],
             });

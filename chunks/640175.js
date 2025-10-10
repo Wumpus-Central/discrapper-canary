@@ -1,36 +1,39 @@
-n.d(t, { z: () => u });
+n.d(t, { z: () => u }), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    s = n(538534),
-    a = n(650774),
+    a = n(538534),
+    s = n(650774),
     o = n(434404),
     c = n(981631),
     d = n(388032);
 function u(e) {
-    let { guildId: t, defaultSettings: n, canManageGuild: u } = e,
-        g = (0, l.e7)([a.Z], () => a.Z.getMemberCount(t)),
-        m = i.useMemo(
+    let { label: t, description: n, helperText: u, guildId: g, defaultSettings: m, canManageGuild: p } = e,
+        f = (0, l.e7)([s.Z], () => s.Z.getMemberCount(g)),
+        h = i.useMemo(
             () => [
                 {
                     name: d.intl.string(d.t["n/bTaW"]),
                     value: c.bL.ALL_MESSAGES,
-                    desc: null != g && g >= c.qWG ? d.intl.string(d.t["L+P4t7"]) : null,
+                    desc: null != f && f >= c.qWG ? d.intl.string(d.t["L+P4t7"]) : null,
                 },
                 {
                     name: d.intl.string(d.t["6fQPho"]),
                     value: c.bL.ONLY_MENTIONS,
                 },
             ],
-            [g],
+            [f],
         ),
-        p = i.useCallback((e) => {
+        x = i.useCallback((e) => {
             o.Z.updateGuild({ defaultMessageNotifications: e });
         }, []);
-    return (0, r.jsx)(s.E, {
-        options: m,
-        value: n,
-        disabled: !u,
-        onChange: p,
+    return (0, r.jsx)(a.E, {
+        label: t,
+        description: n,
+        helperText: u,
+        options: h,
+        value: m,
+        disabled: !p,
+        onChange: x,
     });
 }

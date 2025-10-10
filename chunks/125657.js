@@ -66,21 +66,16 @@ function j(e) {
                               children: [
                                   (0, i.jsx)(o.izJ, { className: x.divider }),
                                   n.length > 0
-                                      ? (0, i.jsxs)(i.Fragment, {
-                                            children: [
-                                                (0, i.jsx)(o.vwX, {
-                                                    className: x.permissionHeader,
-                                                    children: h.intl.format(h.t.PCs0oq, { numRoles: n.length }),
-                                                }),
-                                                (0, i.jsx)(c.ZP, {
-                                                    className: x.rolePills,
-                                                    user: e,
-                                                    guild: t,
-                                                    userRoleIds: n,
-                                                    wrap: !1,
-                                                    readOnly: !0,
-                                                }),
-                                            ],
+                                      ? (0, i.jsx)(o.gNt, {
+                                            label: h.intl.format(h.t.PCs0oq, { numRoles: n.length }),
+                                            children: (0, i.jsx)(c.ZP, {
+                                                className: x.rolePills,
+                                                user: e,
+                                                guild: t,
+                                                userRoleIds: n,
+                                                wrap: !1,
+                                                readOnly: !0,
+                                            }),
                                         })
                                       : null,
                                   a.length > 0 || s.length > 0

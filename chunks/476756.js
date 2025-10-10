@@ -25,6 +25,7 @@ function _() {
         },
     ];
     return (0, r.jsx)(s.q4e, {
+        label: f.intl.string(f.t.fgSHf3),
         onChange: l.c,
         value: e,
         options: n,

@@ -1,17 +1,17 @@
-r.d(t, { default: () => p }), r(388685);
+r.d(t, { default: () => b }), r(388685);
 var n = r(951288),
     o = r(647438),
     i = r(913527),
     c = r.n(i),
     l = r(755721),
     u = r(481060),
-    s = r(388032),
-    a = r(74450);
-function p(e) {
+    a = r(388032),
+    s = r(74450);
+function b(e) {
     var t,
         r,
         { createReminder: i } = e,
-        p = (function (e, t) {
+        b = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -32,11 +32,11 @@ function p(e) {
             }
             return o;
         })(e, ["createReminder"]);
-    let [b, f] = o.useState(() => c()()),
-        [O, d] = o.useState(() => c()()),
-        y = o.useCallback(() => {
-            i(b.toDate());
-        }, [i, b]),
+    let [p, f] = o.useState(() => c()()),
+        [O, y] = o.useState(() => c()()),
+        d = o.useCallback(() => {
+            i(p.toDate());
+        }, [i, p]),
         j = (e) => {
             e.isValid() && f(e);
         };
@@ -68,35 +68,31 @@ function p(e) {
             return e;
         })(
             {
-                header: s.intl.string(s.t.VKsXpa),
-                confirmText: s.intl.string(s.t.R3BPHx),
-                cancelText: s.intl.string(s.t["ETE/oK"]),
+                header: a.intl.string(a.t.VKsXpa),
+                confirmText: a.intl.string(a.t.R3BPHx),
+                cancelText: a.intl.string(a.t["ETE/oK"]),
                 confirmButtonColor: l.zx.Colors.BRAND,
-                onConfirm: y,
+                onConfirm: d,
             },
-            p,
+            b,
         )),
         (r = r =
             {
                 children: (0, n.jsxs)("div", {
-                    className: a.doubleInput,
+                    className: s.doubleInput,
                     children: [
-                        (0, n.jsx)(u.xJW, {
-                            title: s.intl.string(s.t.pSZKvL),
+                        (0, n.jsx)(u.Wrb, {
+                            label: a.intl.string(a.t.pSZKvL),
                             required: !0,
-                            children: (0, n.jsx)(u.Wrb, {
-                                value: b,
-                                onSelect: j,
-                                minDate: O,
-                            }),
+                            value: p,
+                            onSelect: j,
+                            minDate: O,
                         }),
-                        (0, n.jsx)(u.xJW, {
-                            title: s.intl.string(s.t.GOmEb2),
+                        (0, n.jsx)(u.MGJ, {
+                            label: a.intl.string(a.t.GOmEb2),
                             required: !0,
-                            children: (0, n.jsx)(u.MGJ, {
-                                value: b,
-                                onChange: j,
-                            }),
+                            value: p,
+                            onChange: j,
                         }),
                     ],
                 }),

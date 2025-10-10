@@ -1,60 +1,13 @@
-n.d(t, { Z: () => d });
-var r = n(951288);
-n(647438);
-var i = n(120356),
-    l = n.n(i),
-    o = n(137317),
-    a = n(692547),
-    s = n(481060),
-    c = n(565138),
-    u = n(106663);
-function d(e) {
-    let { guild: t, show: n, active: i, onAnimationStart: d, onAnimationRest: p } = e,
-        h = {},
-        f = {};
-    (h.transform = "translate3d(10px, 10px, 0) scale3d(3, 3, 1)"),
-        (f.transform = "translate3d(0, 0, 0) scale3d(1, 1, 1)");
-    let g = (0, s.dQu)(a.Z.unsafe_rawColors.BRAND_500).hex(),
-        m = (0, s.dQu)(a.Z.unsafe_rawColors.PRIMARY_630).hex();
-    i && null == t.icon && ((h.backgroundColor = g), (f.backgroundColor = m));
-    let b = (0, s.Yzy)(n, {
-        from: h,
-        enter: f,
-        leave: h,
-        config: { duration: 100 },
-        onStart: d,
-        onRest: p,
-    });
-    return (0, r.jsx)(r.Fragment, {
-        children: b(
-            (e, n, i) =>
-                n &&
-                (0, r.jsx)(
-                    "div",
-                    {
-                        className: u.folderGroup,
-                        children: (0, r.jsx)("div", {
-                            className: l()(u.folderHeader, u.folderHeaderSmall),
-                            style: { margin: 0 },
-                            children: (0, r.jsx)(o.animated.div, {
-                                className: u.folderDragPreview,
-                                style: e,
-                                children: (0, r.jsx)("div", {
-                                    className: u.folderPreviewWrapper,
-                                    children: (0, r.jsx)("div", {
-                                        className: u.folderPreview,
-                                        children: (0, r.jsx)(c.Z, {
-                                            guild: t,
-                                            size: c.Z.Sizes.SMOL,
-                                            className: u.folderPreviewGuildIcon,
-                                        }),
-                                    }),
-                                }),
-                            }),
-                        }),
-                    },
-                    i.key,
-                ),
-        ),
-    });
-}
+n.d(t, { Z: () => r });
+var r = {};
+r = {
+    ascending: "crescente",
+    ascendingSort: (e) => `in ordine crescente in base alla colonna ${e.columnName}`,
+    columnSize: (e) => `${e.value} pixel`,
+    descending: "decrescente",
+    descendingSort: (e) => `in ordine decrescente in base alla colonna ${e.columnName}`,
+    resizerDescription: "Premi Invio per iniziare a ridimensionare",
+    select: "Seleziona",
+    selectAll: "Seleziona tutto",
+    sortable: "colonna ordinabile",
+};

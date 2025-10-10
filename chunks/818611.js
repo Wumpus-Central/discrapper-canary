@@ -233,7 +233,10 @@ let O = () => 80,
                 return (0, n.jsx)("div", {
                     className: g.headings,
                     style: j(v({}, t), { position: "absolute" }),
-                    children: (0, n.jsx)(o.vwX, { children: r }),
+                    children: (0, n.jsx)(o.Text, {
+                        variant: "text-md/medium",
+                        children: r,
+                    }),
                 });
             },
             getSectionHeight: (e) => u[e].height,

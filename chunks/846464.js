@@ -1,7 +1,6 @@
 n.d(t, { q: () => v });
-var r = n(951288);
-n(647438);
-var i = n(120356),
+var r = n(951288),
+    i = n(120356),
     a = n.n(i),
     l = n(481060),
     o = n(140465),
@@ -99,27 +98,31 @@ function y(e) {
                   variant: "heading-lg/bold",
                   children: j.intl.string(j.t["r+SebW"]),
               })
-            : (0, r.jsx)(l.vwX, {
-                  tag: l.RB0.H4,
+            : (0, r.jsx)(l.X6q, {
+                  variant: "heading-md/semibold",
                   children: j.intl.string(j.t["r+SebW"]),
               }),
         { giftRecipient: m } = (0, _.wD)(),
         x = (0, d.y)({ location: "PremiumPaymentSelect" }) && i && null != m;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsxs)(l.xBx, {
+            (0, r.jsx)(l.xBx, {
                 "data-migration-pending": !0,
                 className: a()(b.skuSelectModalHeader, { [b.premiumBrandRefreshHeader]: h }),
                 separator: !1,
-                children: [
-                    f,
-                    (0, r.jsx)(l.olH, {
-                        "data-migration-pending": !0,
-                        className: b.close,
-                        innerClassName: b.closeInner,
-                        onClick: n,
-                    }),
-                ],
+                children: (0, r.jsxs)(l.Kqy, {
+                    direction: "horizontal",
+                    justify: "space-between",
+                    children: [
+                        f,
+                        (0, r.jsx)(l.olH, {
+                            "data-migration-pending": !0,
+                            className: b.close,
+                            innerClassName: b.closeInner,
+                            onClick: n,
+                        }),
+                    ],
+                }),
             }),
             (0, r.jsx)(l.hzk, {
                 "data-migration-pending": !0,

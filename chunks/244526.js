@@ -1,19 +1,17 @@
-n.d(t, { Z: () => E }), n(953529);
+n.d(t, { Z: () => m });
 var r,
     i = n(951288),
     a = n(647438),
-    o = n(120356),
-    s = n.n(o),
-    l = n(481060),
-    c = n(987032),
-    u = n(600164),
-    d = n(219929),
-    f = n(46141),
-    _ = n(122289),
-    p = n(624138),
-    h = n(388032),
-    m = n(916648);
-function g(e, t, n) {
+    o = n(481060),
+    s = n(987032),
+    l = n(600164),
+    c = n(219929),
+    u = n(46141),
+    d = n(122289),
+    f = n(624138),
+    _ = n(388032),
+    p = n(916648);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,74 +24,74 @@ function g(e, t, n) {
         e
     );
 }
-class E extends (r = a.PureComponent) {
+class m extends (r = a.PureComponent) {
     get typeString() {
         let { paymentSource: e } = this.props;
-        if (e instanceof f.qo) return d.ZP.Types.PAYPAL;
-        if (e instanceof f.Sf) return d.ZP.Types.SOFORT;
-        if (e instanceof f.dm) return d.ZP.getType(e.brand);
-        if (e instanceof f.fv) return d.ZP.Types.GIROPAY;
-        if (e instanceof f.Vg) return d.ZP.Types.PRZELEWY24;
-        else if (e instanceof f.sn) return d.ZP.Types.PAYSAFECARD;
-        else if (e instanceof f.o_) return d.ZP.Types.GCASH;
-        else if (e instanceof f.kX) return d.ZP.Types.GRABPAY;
-        else if (e instanceof f.z) return d.ZP.Types.MOMO_WALLET;
-        else if (e instanceof f.Xc) return d.ZP.Types.VENMO;
-        else if (e instanceof f.Om) return d.ZP.Types.KAKAOPAY;
-        else if (e instanceof f.JC) return d.ZP.Types.GOPAY_WALLET;
-        else if (e instanceof f.U4) return d.ZP.Types.BANCONTACT;
-        else if (e instanceof f.D0) return d.ZP.Types.EPS;
-        else if (e instanceof f.jc) return d.ZP.Types.IDEAL;
-        else if (e instanceof f.u_) return d.ZP.Types.CASH_APP;
-        else if (e instanceof f.$z) return d.ZP.Types.APPLE;
-        return d.ZP.Types.UNKNOWN;
+        if (e instanceof u.qo) return c.ZP.Types.PAYPAL;
+        if (e instanceof u.Sf) return c.ZP.Types.SOFORT;
+        if (e instanceof u.dm) return c.ZP.getType(e.brand);
+        if (e instanceof u.fv) return c.ZP.Types.GIROPAY;
+        if (e instanceof u.Vg) return c.ZP.Types.PRZELEWY24;
+        else if (e instanceof u.sn) return c.ZP.Types.PAYSAFECARD;
+        else if (e instanceof u.o_) return c.ZP.Types.GCASH;
+        else if (e instanceof u.kX) return c.ZP.Types.GRABPAY;
+        else if (e instanceof u.z) return c.ZP.Types.MOMO_WALLET;
+        else if (e instanceof u.Xc) return c.ZP.Types.VENMO;
+        else if (e instanceof u.Om) return c.ZP.Types.KAKAOPAY;
+        else if (e instanceof u.JC) return c.ZP.Types.GOPAY_WALLET;
+        else if (e instanceof u.U4) return c.ZP.Types.BANCONTACT;
+        else if (e instanceof u.D0) return c.ZP.Types.EPS;
+        else if (e instanceof u.jc) return c.ZP.Types.IDEAL;
+        else if (e instanceof u.u_) return c.ZP.Types.CASH_APP;
+        else if (e instanceof u.$z) return c.ZP.Types.APPLE;
+        return c.ZP.Types.UNKNOWN;
     }
     getLabel(e) {
-        return e instanceof f.dm
-            ? h.intl.format(h.t["o/dsrK"], {
-                  brand: (0, p.De)(e.brand),
+        return e instanceof u.dm
+            ? _.intl.format(_.t["o/dsrK"], {
+                  brand: (0, f.De)(e.brand),
                   last_4: e.last4,
               })
-            : e instanceof f.qo
-              ? h.intl.string(h.t["2dgEq6"])
-              : e instanceof f.Sf
-                ? h.intl.string(h.t["edKX//"])
-                : e instanceof f.fv
-                  ? h.intl.string(h.t["y+0MQU"])
-                  : e instanceof f.Vg
-                    ? h.intl.string(h.t.u25uLy)
-                    : e instanceof f.sn
-                      ? h.intl.string(h.t.boznHB)
-                      : e instanceof f.o_
-                        ? h.intl.string(h.t.PjehcH)
-                        : e instanceof f.kX
-                          ? h.intl.string(h.t.T5davL)
-                          : e instanceof f.z
-                            ? h.intl.string(h.t.J0A1Vl)
-                            : e instanceof f.Xc
-                              ? h.intl.string(h.t.jYOezc)
-                              : e instanceof f.Om
-                                ? h.intl.string(h.t.CSVexs)
-                                : e instanceof f.JC
-                                  ? h.intl.string(h.t["43J8JC"])
-                                  : e instanceof f.U4
-                                    ? h.intl.string(h.t["1ITkfn"])
-                                    : e instanceof f.jc
+            : e instanceof u.qo
+              ? _.intl.string(_.t["2dgEq6"])
+              : e instanceof u.Sf
+                ? _.intl.string(_.t["edKX//"])
+                : e instanceof u.fv
+                  ? _.intl.string(_.t["y+0MQU"])
+                  : e instanceof u.Vg
+                    ? _.intl.string(_.t.u25uLy)
+                    : e instanceof u.sn
+                      ? _.intl.string(_.t.boznHB)
+                      : e instanceof u.o_
+                        ? _.intl.string(_.t.PjehcH)
+                        : e instanceof u.kX
+                          ? _.intl.string(_.t.T5davL)
+                          : e instanceof u.z
+                            ? _.intl.string(_.t.J0A1Vl)
+                            : e instanceof u.Xc
+                              ? _.intl.string(_.t.jYOezc)
+                              : e instanceof u.Om
+                                ? _.intl.string(_.t.CSVexs)
+                                : e instanceof u.JC
+                                  ? _.intl.string(_.t["43J8JC"])
+                                  : e instanceof u.U4
+                                    ? _.intl.string(_.t["1ITkfn"])
+                                    : e instanceof u.jc
                                       ? null == e.bank
-                                          ? h.intl.string(h.t.nSbwqK)
-                                          : h.intl.format(h.t["9kUlRU"], { bank: (0, c.YE)(e.bank) })
-                                      : e instanceof f.D0
-                                        ? h.intl.format(h.t.hSPoZ2, { bank: (0, c.Ul)(e.bank) })
-                                        : e instanceof f.u_
-                                          ? h.intl.string(h.t["+rbTmJ"])
-                                          : e instanceof f.$z
-                                            ? h.intl.string(h.t.RFi12t)
-                                            : h.intl.string(h.t.jdPblp);
+                                          ? _.intl.string(_.t.nSbwqK)
+                                          : _.intl.format(_.t["9kUlRU"], { bank: (0, s.YE)(e.bank) })
+                                      : e instanceof u.D0
+                                        ? _.intl.format(_.t.hSPoZ2, { bank: (0, s.Ul)(e.bank) })
+                                        : e instanceof u.u_
+                                          ? _.intl.string(_.t["+rbTmJ"])
+                                          : e instanceof u.$z
+                                            ? _.intl.string(_.t.RFi12t)
+                                            : _.intl.string(_.t.jdPblp);
     }
     renderDescription() {
         let { paymentSource: e, descriptionClassName: t } = this.props;
-        return (0, i.jsx)(l.Text, {
-            className: s()(m.description, t),
+        return (0, i.jsx)(o.Text, {
+            className: t,
             variant: "text-md/semibold",
             children: this.getLabel(e),
         });
@@ -102,16 +100,16 @@ class E extends (r = a.PureComponent) {
         let { paymentSource: e, locale: t } = this.props,
             n = null;
         return (
-            e instanceof f.dm
-                ? (n = h.intl.formatToPlainString(h.t["8rTTub"], {
-                      month: (0, _.E2)(e.expiresMonth, t),
+            e instanceof u.dm
+                ? (n = _.intl.formatToPlainString(_.t["8rTTub"], {
+                      month: (0, d.E2)(e.expiresMonth, t),
                       year: e.expiresYear,
                   }))
-                : e instanceof f.qo || e instanceof f.Sf || e instanceof f.Vg
+                : e instanceof u.qo || e instanceof u.Sf || e instanceof u.Vg
                   ? (n = e.email)
-                  : e instanceof f.Xc
+                  : e instanceof u.Xc
                     ? (n = "@" + e.username)
-                    : e instanceof f.u_ && (n = e.username),
+                    : e instanceof u.u_ && (n = e.username),
             n
         );
     }
@@ -122,44 +120,46 @@ class E extends (r = a.PureComponent) {
                 showSubtext: n,
                 isForSubscription: r,
                 showPaymentSourceIcon: a,
-                showLabels: o,
+                showLabels: s,
             } = this.props,
-            s = this.renderSubText();
-        return (0, i.jsxs)(u.Z, {
+            u = this.renderSubText();
+        return (0, i.jsxs)(l.Z, {
             children: [
-                a && (0, i.jsx)(d.ZP, { type: this.typeString }),
-                (0, i.jsxs)(u.Z, {
-                    direction: u.Z.Direction.VERTICAL,
-                    className: m.descriptionWrapper,
+                a && (0, i.jsx)(c.ZP, { type: this.typeString }),
+                (0, i.jsxs)(l.Z, {
+                    direction: l.Z.Direction.VERTICAL,
+                    className: p.descriptionWrapper,
                     children: [
-                        (0, i.jsxs)(u.Z, {
-                            align: u.Z.Align.CENTER,
+                        (0, i.jsxs)(l.Z, {
+                            align: l.Z.Align.CENTER,
                             children: [
                                 this.renderDescription(),
-                                o && e
+                                s && e
                                     ? (0, i.jsx)("div", {
-                                          className: m.defaultIndicator,
-                                          children: h.intl.string(h.t.bBvAEB),
+                                          className: p.defaultIndicator,
+                                          children: _.intl.string(_.t.bBvAEB),
                                       })
                                     : null,
                                 r
                                     ? (0, i.jsx)("div", {
-                                          className: m.premiumIndicator,
-                                          children: h.intl.string(h.t.YCrcPD),
+                                          className: p.premiumIndicator,
+                                          children: _.intl.string(_.t.YCrcPD),
                                       })
                                     : null,
-                                o && t.invalid
+                                s && t.invalid
                                     ? (0, i.jsx)("div", {
-                                          className: m.invalidIndicator,
-                                          children: h.intl.string(h.t["851k9/"]),
+                                          className: p.invalidIndicator,
+                                          children: _.intl.string(_.t["851k9/"]),
                                       })
                                     : null,
                             ],
                         }),
-                        n && null != s
-                            ? (0, i.jsx)("div", {
-                                  className: m.subText,
-                                  children: s,
+                        n && null != u
+                            ? (0, i.jsx)(o.Text, {
+                                  variant: "text-sm/normal",
+                                  color: "text-secondary",
+                                  className: p.subText,
+                                  children: u,
                               })
                             : null,
                     ],
@@ -168,7 +168,7 @@ class E extends (r = a.PureComponent) {
         });
     }
 }
-g(E, "defaultProps", {
+h(m, "defaultProps", {
     isForSubscription: !1,
     isDefault: !1,
     showSubtext: !1,

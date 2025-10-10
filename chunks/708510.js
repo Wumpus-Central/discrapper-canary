@@ -2,8 +2,8 @@ n.d(t, { O: () => T });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    s = n(481060),
-    a = n(456268),
+    a = n(481060),
+    s = n(456268),
     o = n(863249),
     c = n(981312),
     d = n(430824),
@@ -16,8 +16,8 @@ var r = n(951288),
     x = n(202905),
     b = n(44867),
     j = n(557359),
-    _ = n(658666),
-    v = n(307375),
+    v = n(658666),
+    _ = n(307375),
     C = n(384632),
     O = n(981631),
     y = n(388032),
@@ -29,7 +29,7 @@ function E(e) {
             async (e) => {
                 if (!n.current)
                     try {
-                        await (0, m.k)(e), (0, p.V)(e), (0, a.le)(), (0, a.aC)(e);
+                        await (0, m.k)(e), (0, p.V)(e), (0, s.le)(), (0, s.aC)(e);
                     } finally {
                         n.current = !0;
                     }
@@ -55,16 +55,16 @@ function E(e) {
 }
 function I(e) {
     let { guildId: t } = e,
-        { nsfwLevel: n, ownerConfiguredContentLevel: a } = (0, l.cj)([d.Z], () => {
+        { nsfwLevel: n, ownerConfiguredContentLevel: s } = (0, l.cj)([d.Z], () => {
             var e, n;
             return {
                 nsfwLevel: null == (e = d.Z.getGuild(t)) ? void 0 : e.nsfwLevel,
                 ownerConfiguredContentLevel: null == (n = d.Z.getGuild(t)) ? void 0 : n.ownerConfiguredContentLevel,
             };
         }),
-        o = (0, l.e7)([_.Z], () => {
+        o = (0, l.e7)([v.Z], () => {
             var e;
-            return null == (e = _.Z.pendingState) ? void 0 : e.isAgeRestricted;
+            return null == (e = v.Z.pendingState) ? void 0 : e.isAgeRestricted;
         }),
         c = i.useCallback(
             (e) => {
@@ -72,17 +72,15 @@ function I(e) {
             },
             [t],
         ),
-        g = n === O.V_K.AGE_RESTRICTED && a !== O.V_K.AGE_RESTRICTED;
-    return (0, r.jsx)(s.hjN, {
-        children: (0, r.jsx)(s.rsf, {
-            label: y.intl.string(y.t.N9xEJC),
-            description: y.intl.format(y.t["iyQQ6+"], {
-                helpArticleLink: u.Z.getArticleURL(O.BhN.NSFW_SERVER_AGE_RESTRICTION),
-            }),
-            checked: o,
-            onChange: c,
-            disabled: g,
+        g = n === O.V_K.AGE_RESTRICTED && s !== O.V_K.AGE_RESTRICTED;
+    return (0, r.jsx)(a.rsf, {
+        label: y.intl.string(y.t.N9xEJC),
+        description: y.intl.format(y.t["iyQQ6+"], {
+            helpArticleLink: u.Z.getArticleURL(O.BhN.NSFW_SERVER_AGE_RESTRICTION),
         }),
+        checked: o,
+        onChange: c,
+        disabled: g,
     });
 }
 function S(e) {
@@ -99,7 +97,7 @@ function S(e) {
 }
 function T() {
     let e = (0, l.e7)([g.Z], () => g.Z.getProps().guild),
-        t = (0, l.e7)([_.Z], () => _.Z.pendingState);
+        t = (0, l.e7)([v.Z], () => v.Z.pendingState);
     i.useEffect(() => {
         (null == e ? void 0 : e.id) != null && o.ZP.fetchVerificationForm(e.id);
     }, [null == e ? void 0 : e.id]);
@@ -110,18 +108,18 @@ function T() {
         [null == e ? void 0 : e.id],
     );
     if (null == e || null == t) return null;
-    let { joinType: a } = t;
-    return (0, r.jsxs)(s.Kqy, {
+    let { joinType: s } = t;
+    return (0, r.jsxs)(a.Kqy, {
         gap: 32,
         children: [
-            (0, r.jsx)(s.X6q, {
+            (0, r.jsx)(a.X6q, {
                 color: "header-primary",
                 variant: "heading-lg/semibold",
                 children: y.intl.string(y.t.YJlvBA),
             }),
-            (0, r.jsx)(v.h, {
+            (0, r.jsx)(_.h, {
                 onTypePicked: n,
-                activeType: a,
+                activeType: s,
                 guild: e,
             }),
             (0, r.jsx)("div", { className: N.divider }),

@@ -1,16 +1,22 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var r = n(951288),
     i = n(481060),
-    a = n(438976),
-    o = n(135013);
-function s(e) {
-    let { title: t, className: n, children: s } = e,
-        l = (0, a.Z)() ? void 0 : t;
-    return (0, r.jsx)(i.hjN, {
-        tag: i.RB0.H1,
-        title: l,
-        titleClassName: o.title,
+    a = n(438976);
+function o(e) {
+    let { title: t, className: n, children: o } = e,
+        s = (0, a.Z)() ? void 0 : t;
+    return (0, r.jsx)("div", {
         className: n,
-        children: s,
+        children: (0, r.jsxs)(i.Kqy, {
+            gap: 16,
+            children: [
+                (0, r.jsx)(i.X6q, {
+                    variant: "heading-lg/semibold",
+                    color: "header-primary",
+                    children: s,
+                }),
+                o,
+            ],
+        }),
     });
 }

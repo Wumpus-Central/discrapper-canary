@@ -2,8 +2,8 @@ n.d(t, { Z: () => Z });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    s = n.n(l),
-    a = n(399606),
+    a = n.n(l),
+    s = n(399606),
     o = n(481060),
     c = n(100527),
     d = n(906732),
@@ -16,8 +16,8 @@ var r = n(951288),
     x = n(430824),
     b = n(893966),
     j = n(527379),
-    _ = n(305473),
-    v = n(113679),
+    v = n(305473),
+    _ = n(113679),
     C = n(440857),
     O = n(472596),
     y = n(598948),
@@ -30,15 +30,15 @@ var r = n(951288),
     w = n(630016);
 function Z(e) {
     let { guildId: t } = e,
-        n = (0, a.e7)([x.Z], () => x.Z.getGuild(t)),
+        n = (0, s.e7)([x.Z], () => x.Z.getGuild(t)),
         { analyticsLocations: l } = (0, d.ZP)(c.Z.GUILD_SETTINGS_MEMBERS_PAGE),
         Z = (0, u.m)(t),
-        R = (0, a.e7)([h.ZP], () => h.ZP.getGuildSidebarState(t), [t]),
+        R = (0, s.e7)([h.ZP], () => h.ZP.getGuildSidebarState(t), [t]),
         D = i.useCallback(() => {
             p.Z.closeGuildSidebar(t);
         }, [t]),
         A = !1 == !!(null == n ? void 0 : n.features.has(S.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
-        L = (0, a.e7)([b.Z], () => b.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
+        L = (0, s.e7)([b.Z], () => b.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
         k = i.useCallback(
             (e) => {
                 null != e &&
@@ -61,17 +61,17 @@ function Z(e) {
         value: l,
         children: [
             (0, r.jsx)("div", {
-                className: s()(w.customColumn, P.override, P.settingsColumn),
+                className: a()(w.customColumn, P.override, P.settingsColumn),
                 children: (0, r.jsx)("div", {
                     className: w.customContainer,
                     children: (0, r.jsx)(o.w0Z, {
-                        className: s()(w.customScroller, P.settingsVerticalScroller),
+                        className: a()(w.customScroller, P.settingsVerticalScroller),
                         orientation: "auto",
                         children: (0, r.jsx)(o.w0Z, {
                             className: P.settingsHorizontalScroller,
                             orientation: "auto",
                             children: (0, r.jsxs)("main", {
-                                className: s()(
+                                className: a()(
                                     w.customColumn,
                                     w.contentColumnDefault,
                                     P.override,
@@ -80,24 +80,24 @@ function Z(e) {
                                 ),
                                 children: [
                                     (0, r.jsx)(
-                                        o.hjN,
+                                        "div",
                                         {
                                             className: P.header,
-                                            children: (0, r.jsx)(o.vwX, {
-                                                tag: o.RB0.H1,
+                                            children: (0, r.jsx)(o.X6q, {
+                                                variant: "heading-lg/semibold",
                                                 children: T.intl.string(T.t["S40K6+"]),
                                             }),
                                         },
                                         "header",
                                     ),
                                     (0, r.jsx)(
-                                        o.hjN,
+                                        "div",
                                         {
                                             children: (0, r.jsxs)("div", {
                                                 className: P.tableContainer,
                                                 children: [
-                                                    (0, r.jsx)(v.Z, { guild: n }),
                                                     (0, r.jsx)(_.Z, { guild: n }),
+                                                    (0, r.jsx)(v.Z, { guild: n }),
                                                     A
                                                         ? (0, r.jsxs)("div", {
                                                               className: P.mainTableContainer,

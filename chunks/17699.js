@@ -2,8 +2,8 @@ n.d(t, { Z: () => k }), n(388685), n(781311), n(953529), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(392711),
-    s = n.n(l),
-    a = n(399606),
+    a = n.n(l),
+    s = n(399606),
     o = n(481060),
     c = n(239091),
     d = n(749210),
@@ -16,8 +16,8 @@ var r = n(951288),
     x = n(733026),
     b = n(246946),
     j = n(594174),
-    _ = n(626135),
-    v = n(136015),
+    v = n(626135),
+    _ = n(136015),
     C = n(51144),
     O = n(434404),
     y = n(999382),
@@ -75,23 +75,23 @@ function Z(e, t) {
 }
 function R(e) {
     var t;
-    let { transitionState: n, guild: l, user: s, ban: a, hideDiscriminator: c, onClose: g } = e,
+    let { transitionState: n, guild: l, user: a, ban: s, hideDiscriminator: c, onClose: g } = e,
         [m, h] = i.useState(!1),
         [x, b] = i.useState(null),
         { analyticsLocations: j } = (0, f.ZP)(),
-        v = null != (t = null == j ? void 0 : j[0]) ? t : null;
+        _ = null != (t = null == j ? void 0 : j[0]) ? t : null;
     async function O() {
         if (null != l) {
             b(null), h(!0);
             try {
-                await d.Z.unbanUser(l.id, s.id),
+                await d.Z.unbanUser(l.id, a.id),
                     g(),
-                    _.default.track(
+                    v.default.track(
                         I.rMx.GUILD_BAN_REMOVED,
                         Z(w({}, (0, p.hH)(l.id)), {
-                            target_user_id: s.id,
-                            reason: a.reason,
-                            location: v,
+                            target_user_id: a.id,
+                            reason: s.reason,
+                            location: _,
                         }),
                     );
             } catch (e) {
@@ -111,17 +111,17 @@ function R(e) {
                     (0, r.jsx)(o.X6q, {
                         variant: "heading-xl/semibold",
                         className: T.userUsername,
-                        children: C.ZP.getUserTag(s, {
+                        children: C.ZP.getUserTag(a, {
                             mode: "username",
                             identifiable: c ? "never" : "always",
                         }),
                     }),
-                    c || s.hasUniqueUsername()
+                    c || a.hasUniqueUsername()
                         ? null
                         : (0, r.jsxs)(o.X6q, {
                               variant: "heading-xl/semibold",
                               className: T.userDiscrim,
-                              children: ["#", s.discriminator],
+                              children: ["#", a.discriminator],
                           }),
                 ],
             }),
@@ -135,7 +135,7 @@ function R(e) {
                     (0, r.jsx)(o.Text, {
                         variant: "text-xs/medium",
                         color: "text-secondary",
-                        children: null != a.reason && "" !== a.reason ? a.reason : S.intl.string(S.t["t+2Zcn"]),
+                        children: null != s.reason && "" !== s.reason ? s.reason : S.intl.string(S.t["t+2Zcn"]),
                     }),
                     null != x
                         ? (0, r.jsx)(o.Text, {
@@ -227,22 +227,22 @@ class D extends i.PureComponent {
     }
 }
 let A = i.forwardRef(function (e, t) {
-    let { guild: n, sortedBans: l, bans: s } = e,
-        c = (0, a.e7)([b.Z], () => b.Z.hidePersonalInformation, []),
+    let { guild: n, sortedBans: l, bans: a } = e,
+        c = (0, s.e7)([b.Z], () => b.Z.hidePersonalInformation, []),
         d = i.useCallback(
             (e) => {
                 var t;
-                if (null == s && 0 === e) return 60;
+                if (null == a && 0 === e) return 60;
                 let n = l[e],
-                    r = null == s ? void 0 : s.get(null != (t = null == n ? void 0 : n.id) ? t : "");
+                    r = null == a ? void 0 : a.get(null != (t = null == n ? void 0 : n.id) ? t : "");
                 return 60 * (null != n && null != r);
             },
-            [s, l],
+            [a, l],
         ),
         u = i.useCallback(
             (e) => {
                 var t;
-                if (null == s && 0 === e)
+                if (null == a && 0 === e)
                     return (0, r.jsx)(
                         o.$jN,
                         {
@@ -252,20 +252,20 @@ let A = i.forwardRef(function (e, t) {
                         "spinner",
                     );
                 let i = l[e],
-                    a = null == s ? void 0 : s.get(null != (t = null == i ? void 0 : i.id) ? t : "");
-                if (null != i && null != a)
+                    s = null == a ? void 0 : a.get(null != (t = null == i ? void 0 : i.id) ? t : "");
+                if (null != i && null != s)
                     return (0, r.jsx)(
                         D,
                         {
                             user: i,
-                            ban: a,
+                            ban: s,
                             hideDiscriminator: c,
                             guild: n,
                         },
                         i.id,
                     );
             },
-            [s, n, l, c],
+            [a, n, l, c],
         );
     return (0, r.jsx)(h.Z, {
         role: "listbox",
@@ -278,23 +278,23 @@ let A = i.forwardRef(function (e, t) {
 });
 function L(e) {
     let { guildId: t, storedSearchQuery: n } = e,
-        [l, s] = i.useState(null != n ? n : ""),
-        [a, c] = i.useState(!1),
+        [l, a] = i.useState(null != n ? n : ""),
+        [s, c] = i.useState(!1),
         u = i.useCallback(() => {
             O.Z.setSection(I.pNK.SAFETY), (0, N.K)(E.u.DM_AND_SPAM_PROTECTION);
         }, []),
         g = i.useCallback((e) => {
-            s(e), 0 === e.trim().length && O.Z.setSearchQuery(e);
+            a(e), 0 === e.trim().length && O.Z.setSearchQuery(e);
         }, []),
         m = i.useCallback(() => {
-            s(""), O.Z.setSearchQuery("");
+            a(""), O.Z.setSearchQuery("");
         }, []),
         p = i.useCallback(async () => {
             if (0 === l.trim().length) {
                 O.Z.setSearchQuery(l), c(!1);
                 return;
             }
-            if (!a)
+            if (!s)
                 try {
                     c(!0);
                     let [e, n] = (0, x.C)(l),
@@ -303,64 +303,62 @@ function L(e) {
                 } catch (e) {
                     c(!1);
                 }
-        }, [t, a, l]),
+        }, [t, s, l]),
         f = i.useCallback(
             (e) => {
                 "Enter" === e.key && (e.preventDefault(), e.stopPropagation(), p());
             },
             [p],
         );
-    return (0, r.jsxs)(
-        o.hjN,
-        {
-            tag: o.RB0.H1,
-            title: S.intl.string(S.t["7OY0gI"]),
-            children: [
-                (0, r.jsx)("div", {
-                    className: T.settingsHeader,
-                    children: (0, r.jsx)(o.R94, {
-                        type: o.geA.DESCRIPTION,
-                        className: T.description,
-                        children: S.intl.format(S.t.JcZ36u, { onModerationClick: u }),
+    return (0, r.jsxs)("div", {
+        children: [
+            (0, r.jsx)(o.X6q, {
+                variant: "heading-lg/semibold",
+                children: S.intl.string(S.t["7OY0gI"]),
+            }),
+            (0, r.jsx)("div", {
+                className: T.settingsHeader,
+                children: (0, r.jsx)(o.Text, {
+                    variant: "text-sm/normal",
+                    className: T.description,
+                    children: S.intl.format(S.t.JcZ36u, { onModerationClick: u }),
+                }),
+            }),
+            (0, r.jsxs)("div", {
+                className: T.bansSearchContainer,
+                children: [
+                    (0, r.jsx)(o.E1j, {
+                        query: null != l ? l : "",
+                        placeholder: S.intl.string(S.t.MiqUmZ),
+                        "aria-label": S.intl.string(S.t.MiqUmZ),
+                        onChange: g,
+                        onKeyDown: f,
+                        onClear: m,
                     }),
-                }),
-                (0, r.jsxs)("div", {
-                    className: T.bansSearchContainer,
-                    children: [
-                        (0, r.jsx)(o.E1j, {
-                            query: null != l ? l : "",
-                            placeholder: S.intl.string(S.t.MiqUmZ),
-                            "aria-label": S.intl.string(S.t.MiqUmZ),
-                            onChange: g,
-                            onKeyDown: f,
-                            onClear: m,
+                    (0, r.jsx)("div", {
+                        "data-button-hoisted-classname-wrapper": !0,
+                        className: T.searchButton,
+                        children: (0, r.jsx)(o.zxk, {
+                            variant: "primary",
+                            text: S.intl.string(S.t["5h0QOD"]),
+                            onClick: p,
+                            disabled: s,
+                            loading: s,
                         }),
-                        (0, r.jsx)("div", {
-                            "data-button-hoisted-classname-wrapper": !0,
-                            className: T.searchButton,
-                            children: (0, r.jsx)(o.zxk, {
-                                variant: "primary",
-                                text: S.intl.string(S.t["5h0QOD"]),
-                                onClick: p,
-                                disabled: a,
-                                loading: a,
-                            }),
-                        }),
-                    ],
-                }),
-            ],
-        },
-        "bans-header",
-    );
+                    }),
+                ],
+            }),
+        ],
+    });
 }
 function k() {
     var e, t;
-    let { guild: c, searchQuery: u } = (0, a.e7)([y.Z], () => y.Z.getProps(), [], l.isEqual),
+    let { guild: c, searchQuery: u } = (0, s.e7)([y.Z], () => y.Z.getProps(), [], l.isEqual),
         p = null != u && u.trim().length > 0,
         f = (0, g.Z)(p),
         h = p !== f,
-        [b] = (0, a.e7)([y.Z], () => y.Z.getBans(), [], v.Q),
-        _ = null != (e = null == b ? void 0 : b.size) ? e : 0,
+        [b] = (0, s.e7)([y.Z], () => y.Z.getBans(), [], _.Q),
+        v = null != (e = null == b ? void 0 : b.size) ? e : 0,
         C = (0, m.ZP)(),
         O = null != (t = null == c ? void 0 : c.id) ? t : I.lds,
         N = i.useRef(null),
@@ -394,7 +392,7 @@ function k() {
             },
             [E],
         ),
-        R = i.useMemo(() => P(b, u, _), [b, P, u, _]),
+        R = i.useMemo(() => P(b, u, v), [b, P, u, v]),
         D = null != b,
         k = R.length % 1000 == 0 && R.length > 0 && D,
         G = 0 === R.length,
@@ -411,7 +409,7 @@ function k() {
             },
             [O],
         ),
-        F = i.useMemo(() => s().chunk(R, M.pageSize), [M.pageSize, R]),
+        F = i.useMemo(() => a().chunk(R, M.pageSize), [M.pageSize, R]),
         H = i.useCallback(
             (e) => {
                 var t, n, r;
@@ -429,7 +427,7 @@ function k() {
     i.useEffect(() => {
         B(z.current);
     }, [B]);
-    let W = i.useMemo(() => {
+    let V = i.useMemo(() => {
         var e;
         return null != (e = F[M.currentPage - 1]) ? e : [];
     }, [F, M.currentPage]);
@@ -449,7 +447,7 @@ function k() {
                               (0, r.jsx)(A, {
                                   guild: c,
                                   bans: b,
-                                  sortedBans: W,
+                                  sortedBans: V,
                                   ref: N,
                               }),
                           !k &&

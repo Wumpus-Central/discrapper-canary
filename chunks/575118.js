@@ -1,8 +1,4 @@
-n.d(t, {
-    o: () => b,
-    x: () => I,
-}),
-    n(388685);
+n.d(t, { x: () => I }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -187,7 +183,7 @@ function I(e) {
             children: l,
         }),
         D = null != n ? R : P,
-        L = (0, r.jsx)("header", {
+        x = (0, r.jsx)("header", {
             className: o()(m.section, m.header, { [m.headerCentered]: g }),
             children: (0, r.jsxs)(_.K, {
                 gap: 8,
@@ -214,9 +210,9 @@ function I(e) {
         ? (0, r.jsx)(c.$, {
               color: t,
               className: m.headerGradient,
-              children: L,
+              children: x,
           })
-        : L;
+        : x;
 }
 function T(e) {
     let { badge: t } = e;

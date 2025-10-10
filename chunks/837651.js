@@ -1,4 +1,4 @@
-r.d(t, { default: () => x }), r(388685);
+r.d(t, { default: () => f }), r(388685);
 var s = r(951288),
     i = r(647438),
     n = r(481060),
@@ -40,13 +40,13 @@ let p = (e) => {
                 justify: l.Z.Justify.CENTER,
                 children: (0, s.jsxs)("div", {
                     children: [
-                        (0, s.jsx)(n.vwX, {
-                            tag: "h5",
+                        (0, s.jsx)(n.X6q, {
+                            variant: "heading-sm/semibold",
                             className: u.headerSpacing,
                             children: r,
                         }),
-                        (0, s.jsx)(n.R94, {
-                            type: n.R94.Types.DESCRIPTION,
+                        (0, s.jsx)(n.Text, {
+                            variant: "text-md/normal",
                             children: i,
                         }),
                         a,
@@ -56,14 +56,14 @@ let p = (e) => {
         ],
     });
 };
-class f extends i.PureComponent {
+class x extends i.PureComponent {
     render() {
         var e;
         let { transitionState: t, onClose: i } = this.props,
-            { totpSecret: a, code: g, isVerifying: f } = this.state,
-            x = null == (e = o.default.getCurrentUser()) ? void 0 : e.email,
-            b = (0, d.U0)(null != x ? x : "", a),
-            m = (0, s.jsx)("form", {
+            { totpSecret: a, code: g, isVerifying: x } = this.state,
+            f = null == (e = o.default.getCurrentUser()) ? void 0 : e.email,
+            m = (0, d.U0)(null != f ? f : "", a),
+            b = (0, s.jsx)("form", {
                 onSubmit: this.handleActivate,
                 children: (0, s.jsxs)(l.Z, {
                     className: u.inputContainer,
@@ -86,7 +86,7 @@ class f extends i.PureComponent {
                                 variant: "primary",
                                 text: h.intl.string(h.t["/a5+YW"]),
                                 type: "submit",
-                                loading: f,
+                                loading: x,
                             }),
                         }),
                     ],
@@ -139,14 +139,14 @@ class f extends i.PureComponent {
                         }),
                         (0, s.jsx)(n.izJ, { className: u.divider }),
                         (0, s.jsx)(p, {
-                            image: (0, s.jsx)(c.ZP, { text: b }),
+                            image: (0, s.jsx)(c.ZP, { text: m }),
                             label: h.intl.string(h.t["91InFx"]),
                             text: h.intl.string(h.t.hFeBkp),
                             children: (0, s.jsxs)("div", {
                                 className: u.topSpacing,
                                 children: [
-                                    (0, s.jsx)(n.vwX, {
-                                        tag: "h5",
+                                    (0, s.jsx)(n.X6q, {
+                                        variant: "heading-sm/semibold",
                                         className: u.headerSpacing,
                                         children: h.intl.string(h.t["76IPws"]),
                                     }),
@@ -167,7 +167,7 @@ class f extends i.PureComponent {
                             }),
                             label: h.intl.string(h.t["SaD/LS"]),
                             text: h.intl.string(h.t.vI1ziY),
-                            children: m,
+                            children: b,
                         }),
                     ],
                 }),
@@ -205,4 +205,4 @@ class f extends i.PureComponent {
             });
     }
 }
-let x = f;
+let f = x;

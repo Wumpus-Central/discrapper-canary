@@ -106,9 +106,9 @@ function k(e) {
 let C = (e) => {
     let { title: t } = e;
     return (0, n.jsx)(
-        c.vwX,
+        c.X6q,
         {
-            tag: "h5",
+            variant: "heading-sm/semibold",
             className: i()(f.sectionTitle, f.rowHeight),
             children: t,
         },

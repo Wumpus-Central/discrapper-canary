@@ -22,33 +22,27 @@ class y extends r.PureComponent {
         l.Z.setTextWidgetOpacity((0, d.Z)(e / 100));
     }
     render() {
-        return (0, i.jsxs)("div", {
+        return (0, i.jsx)("div", {
             className: f.container,
-            children: [
-                (0, i.jsx)(o.vwX, {
-                    id: m,
-                    className: f.title,
-                    children: h.intl.string(h.t.OVovCQ),
+            children: (0, i.jsx)("div", {
+                className: f.sliderContainer,
+                children: (0, i.jsx)(o.iRW, {
+                    label: h.intl.string(h.t.OVovCQ),
+                    mini: !0,
+                    initialValue: this.initialValue,
+                    defaultValue: this.initialValue,
+                    minValue: g[0],
+                    maxValue: g[g.length - 1],
+                    handleSize: 10,
+                    onValueChange: this.handleUpdateBackgroundOpacity,
+                    asValueChanges: this.handlePreviewBackgroundOpacity,
+                    markers: g,
+                    onMarkerRender: p.dG4,
+                    equidistant: !0,
+                    stickToMarkers: !0,
+                    "aria-labelledby": m,
                 }),
-                (0, i.jsx)("div", {
-                    className: f.sliderContainer,
-                    children: (0, i.jsx)(o.iRW, {
-                        mini: !0,
-                        initialValue: this.initialValue,
-                        defaultValue: this.initialValue,
-                        minValue: g[0],
-                        maxValue: g[g.length - 1],
-                        handleSize: 10,
-                        onValueChange: this.handleUpdateBackgroundOpacity,
-                        asValueChanges: this.handlePreviewBackgroundOpacity,
-                        markers: g,
-                        onMarkerRender: p.dG4,
-                        equidistant: !0,
-                        stickToMarkers: !0,
-                        "aria-labelledby": m,
-                    }),
-                }),
-            ],
+            }),
         });
     }
     constructor(...e) {

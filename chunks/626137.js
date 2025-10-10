@@ -2,8 +2,8 @@ n.d(t, { Z: () => T }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(772848),
-    s = n(640358),
-    a = n(442837),
+    a = n(640358),
+    s = n(442837),
     o = n(544891),
     c = n(481060),
     d = n(497321),
@@ -16,8 +16,8 @@ var r = n(951288),
     x = n(626135),
     b = n(999382),
     j = n(798528),
-    _ = n(743676),
-    v = n(981631),
+    v = n(743676),
+    _ = n(981631),
     C = n(190378),
     O = n(388032),
     y = n(503562);
@@ -52,9 +52,9 @@ let E = function (e, t, n) {
         return (
             null == t || Number.isNaN(t)
                 ? (null == t || Number.isNaN(t)) && null != e && (i = O.intl.string(O.t.xO2msb))
-                : (i = O.intl.formatToPlainString(O.t.nskeMz, { percentage: (0, s.o)(Math.abs(t), n) })),
+                : (i = O.intl.formatToPlainString(O.t.nskeMz, { percentage: (0, a.o)(Math.abs(t), n) })),
             {
-                localizedNumber: null != e ? "".concat((0, s.o)(e, n)).concat(r ? "%" : "") : O.intl.string(O.t.jHpxws),
+                localizedNumber: null != e ? "".concat((0, a.o)(e, n)).concat(r ? "%" : "") : O.intl.string(O.t.jHpxws),
                 subtext: i,
                 isTrendingUp: t > 0,
                 isTrendingDown: t < 0,
@@ -63,7 +63,7 @@ let E = function (e, t, n) {
     },
     I = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return t || e === v.evJ.NOT_ENOUGH_GUILD_MEMBERS
+        return t || e === _.evJ.NOT_ENOUGH_GUILD_MEMBERS
             ? (0, r.jsx)(c.kzN, {
                   icon: c.d3s,
                   className: y.notEnoughMembersError,
@@ -79,7 +79,7 @@ let E = function (e, t, n) {
     },
     S = () => {
         let [e, t] = i.useState(!1),
-            n = (0, a.e7)([b.Z], () => b.Z.getGuildId());
+            n = (0, s.e7)([b.Z], () => b.Z.getGuildId());
         return (0, r.jsx)("div", {
             "data-button-hoisted-classname-wrapper": !0,
             className: y.developerPortalCta,
@@ -89,12 +89,12 @@ let E = function (e, t, n) {
                 onClick: () => {
                     t(!0),
                         (function (e) {
-                            x.default.track(v.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: e });
-                            let t = null == e ? v.E07.DEVELOPER_PORTAL : v.E07.DEVELOPER_PORTAL_GUILD_ANALYTICS(e),
+                            x.default.track(_.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: e });
+                            let t = null == e ? _.E07.DEVELOPER_PORTAL : _.E07.DEVELOPER_PORTAL_GUILD_ANALYTICS(e),
                                 n = (0, l.Z)();
                             return o.tn
                                 .post({
-                                    url: v.ANM.HANDOFF,
+                                    url: _.ANM.HANDOFF,
                                     body: { key: n },
                                     oldFormErrors: !0,
                                     rejectWithError: !0,
@@ -102,7 +102,7 @@ let E = function (e, t, n) {
                                 .then(
                                     (e) => {
                                         let r = e.body.handoff_token;
-                                        window.open(v.EYA.DEVELOPER_PORTAL_LOGIN_HANDOFF(n, r, t));
+                                        window.open(_.EYA.DEVELOPER_PORTAL_LOGIN_HANDOFF(n, r, t));
                                     },
                                     () => {
                                         window.open(t);
@@ -117,23 +117,23 @@ let E = function (e, t, n) {
         });
     },
     T = () => {
-        let e = (0, a.e7)([b.Z], () => b.Z.getGuildId()),
-            t = (0, a.e7)([p.Z], () => p.Z.getMemberCount(e)),
-            n = (0, a.e7)([f.Z], () => f.Z.getGuild(e)),
-            l = (0, a.e7)([m.default], () => m.default.locale),
-            { analytics: s, errorCode: o } = (0, a.cj)([_.Z], () => ({
-                analytics: null != e ? _.Z.getOverviewAnalytics(e) : null,
-                errorCode: _.Z.getError(),
+        let e = (0, s.e7)([b.Z], () => b.Z.getGuildId()),
+            t = (0, s.e7)([p.Z], () => p.Z.getMemberCount(e)),
+            n = (0, s.e7)([f.Z], () => f.Z.getGuild(e)),
+            l = (0, s.e7)([m.default], () => m.default.locale),
+            { analytics: a, errorCode: o } = (0, s.cj)([v.Z], () => ({
+                analytics: null != e ? v.Z.getOverviewAnalytics(e) : null,
+                errorCode: v.Z.getError(),
             })),
-            x = (0, a.e7)([h.Z], () => h.Z.getSettings().enabled),
+            x = (0, s.e7)([h.Z], () => h.Z.getSettings().enabled),
             T =
                 null == t ||
                 null == n ||
                 (null != t &&
                     t < 500 &&
                     null != n &&
-                    !n.features.has(v.oNc.PARTNERED) &&
-                    !n.features.has(v.oNc.VERIFIED));
+                    !n.features.has(_.oNc.PARTNERED) &&
+                    !n.features.has(_.oNc.VERIFIED));
         i.useEffect(() => {
             null == e || T || ((0, j.Vk)(e), (0, j.SR)(e), (0, j.xl)(e));
         }, [e, T]),
@@ -141,7 +141,7 @@ let E = function (e, t, n) {
                 (0, g.Kw)(C.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU);
             }, []);
         let P =
-            null != s
+            null != a
                 ? (0, r.jsx)("div", {
                       className: y.__invalid_guildAnalyticsOverviewWrapper,
                       children: (0, r.jsxs)("div", {
@@ -154,7 +154,7 @@ let E = function (e, t, n) {
                                           title: O.intl.string(O.t.i0Nora),
                                           tooltipText: O.intl.string(O.t.KiRbLC),
                                       },
-                                      E(s.visitors, s.visitorsChange, l),
+                                      E(a.visitors, a.visitorsChange, l),
                                   ),
                               ),
                               (0, r.jsx)(
@@ -164,12 +164,12 @@ let E = function (e, t, n) {
                                           title: O.intl.string(O.t.DDAHdX),
                                           tooltipText: O.intl.string(O.t.HxWUkZ),
                                       },
-                                      E(s.communicators, s.communicatorsChange, l),
+                                      E(a.communicators, a.communicatorsChange, l),
                                   ),
                               ),
                               (0, r.jsx)(
                                   u.Z,
-                                  N({ title: O.intl.string(O.t.hYeOqK) }, E(s.newMembers, s.newMembersChange, l)),
+                                  N({ title: O.intl.string(O.t.hYeOqK) }, E(a.newMembers, a.newMembersChange, l)),
                               ),
                               (0, r.jsx)(
                                   u.Z,
@@ -178,19 +178,21 @@ let E = function (e, t, n) {
                                           title: O.intl.string(O.t.jj7OPz),
                                           tooltipText: O.intl.string(O.t.MQCsl5),
                                       },
-                                      E(s.pctRetained, s.pctRetainedChange, l, !0),
+                                      E(a.pctRetained, a.pctRetainedChange, l, !0),
                                   ),
                               ),
                           ],
                       }),
                   })
                 : null;
-        return (0, r.jsxs)(c.hjN, {
-            tag: c.RB0.H1,
-            title: O.intl.string(O.t["0wWfUF"]),
+        return (0, r.jsxs)("div", {
             children: [
-                (0, r.jsx)(c.R94, {
-                    type: c.geA.DESCRIPTION,
+                (0, r.jsx)(c.X6q, {
+                    variant: "heading-lg/semibold",
+                    children: O.intl.string(O.t["0wWfUF"]),
+                }),
+                (0, r.jsx)(c.Text, {
+                    variant: "text-sm/normal",
                     children: O.intl.format(O.t.NIZ60d, {}),
                 }),
                 I(o, T),

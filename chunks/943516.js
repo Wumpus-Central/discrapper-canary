@@ -192,91 +192,73 @@ function q(e) {
               ],
           })
         : null != p
-          ? (0, r.jsxs)(s.xJW, {
-                title: g.intl.string(g.t.zIg9t7),
-                error: q,
-                titleClassName: f.roleHeader,
-                children: [
-                    (0, r.jsx)(s.Text, {
-                        variant: "text-xs/normal",
-                        color: "text-muted",
-                        children: g.intl.string(g.t.OfuEkJ),
-                    }),
-                    (0, r.jsx)(s.LZC, { size: 8 }),
-                    (0, r.jsx)(m, {
-                        role: b,
-                        onRemove: () => {
-                            a()(null != u, "productId cannot be null"),
-                                a()(null != b, "no role attached"),
-                                (function (e) {
-                                    let { onConfirm: t, roleName: n } = e;
-                                    (0, s.ZDy)(async () => {
-                                        let { default: e } = await A.e("73322").then(A.bind(A, 776045));
-                                        return (A) =>
-                                            (0, r.jsx)(
-                                                e,
-                                                (function (e) {
-                                                    for (var t = 1; t < arguments.length; t++) {
-                                                        var A = null != arguments[t] ? arguments[t] : {},
-                                                            r = Object.keys(A);
-                                                        "function" == typeof Object.getOwnPropertySymbols &&
-                                                            (r = r.concat(
-                                                                Object.getOwnPropertySymbols(A).filter(function (e) {
-                                                                    return Object.getOwnPropertyDescriptor(A, e)
-                                                                        .enumerable;
-                                                                }),
-                                                            )),
-                                                            r.forEach(function (t) {
-                                                                var r;
-                                                                (r = A[t]),
-                                                                    t in e
-                                                                        ? Object.defineProperty(e, t, {
-                                                                              value: r,
-                                                                              enumerable: !0,
-                                                                              configurable: !0,
-                                                                              writable: !0,
-                                                                          })
-                                                                        : (e[t] = r);
-                                                            });
-                                                    }
-                                                    return e;
-                                                })(
-                                                    {
-                                                        title: g.intl.string(g.t.Y3Hi3d),
-                                                        body: (0, r.jsx)(v, { roleName: n }),
-                                                        cta: g.intl.string(g.t.VawZV1),
-                                                        closeLabel: g.intl.string(g.t["6y+3Bw"]),
-                                                        onConfirm: t,
-                                                    },
-                                                    A,
-                                                ),
-                                            );
-                                    });
-                                })({
-                                    roleName: b.name,
-                                    onConfirm: () => n(null),
+          ? (0, r.jsx)(s.gNt, {
+                label: g.intl.string(g.t.zIg9t7),
+                description: g.intl.string(g.t.OfuEkJ),
+                errorMessage: q,
+                children: (0, r.jsx)(m, {
+                    role: b,
+                    onRemove: () => {
+                        a()(null != u, "productId cannot be null"),
+                            a()(null != b, "no role attached"),
+                            (function (e) {
+                                let { onConfirm: t, roleName: n } = e;
+                                (0, s.ZDy)(async () => {
+                                    let { default: e } = await A.e("73322").then(A.bind(A, 776045));
+                                    return (A) =>
+                                        (0, r.jsx)(
+                                            e,
+                                            (function (e) {
+                                                for (var t = 1; t < arguments.length; t++) {
+                                                    var A = null != arguments[t] ? arguments[t] : {},
+                                                        r = Object.keys(A);
+                                                    "function" == typeof Object.getOwnPropertySymbols &&
+                                                        (r = r.concat(
+                                                            Object.getOwnPropertySymbols(A).filter(function (e) {
+                                                                return Object.getOwnPropertyDescriptor(A, e).enumerable;
+                                                            }),
+                                                        )),
+                                                        r.forEach(function (t) {
+                                                            var r;
+                                                            (r = A[t]),
+                                                                t in e
+                                                                    ? Object.defineProperty(e, t, {
+                                                                          value: r,
+                                                                          enumerable: !0,
+                                                                          configurable: !0,
+                                                                          writable: !0,
+                                                                      })
+                                                                    : (e[t] = r);
+                                                        });
+                                                }
+                                                return e;
+                                            })(
+                                                {
+                                                    title: g.intl.string(g.t.Y3Hi3d),
+                                                    body: (0, r.jsx)(v, { roleName: n }),
+                                                    cta: g.intl.string(g.t.VawZV1),
+                                                    closeLabel: g.intl.string(g.t["6y+3Bw"]),
+                                                    onConfirm: t,
+                                                },
+                                                A,
+                                            ),
+                                        );
                                 });
-                        },
-                    }),
-                ],
+                            })({
+                                roleName: b.name,
+                                onConfirm: () => n(null),
+                            });
+                    },
+                }),
             })
           : (a()(null != t, "newRoleParams cannot be null at this point"),
-            (0, r.jsxs)(s.xJW, {
+            (0, r.jsx)(s.gNt, {
                 required: !0,
-                title: g.intl.string(g.t.xZvFpK),
-                error: q,
-                titleClassName: f.roleHeader,
-                children: [
-                    (0, r.jsx)(s.Text, {
-                        variant: "text-xs/normal",
-                        color: "text-muted",
-                        children: g.intl.string(g.t.CllC5u),
-                    }),
-                    (0, r.jsx)(s.LZC, { size: 8 }),
-                    (0, r.jsx)(c.Z, {
-                        newRoleParams: t,
-                        setNewRoleParams: n,
-                    }),
-                ],
+                label: g.intl.string(g.t.xZvFpK),
+                errorMessage: q,
+                children: (0, r.jsx)(c.Z, {
+                    newRoleParams: t,
+                    setNewRoleParams: n,
+                }),
             }));
 }

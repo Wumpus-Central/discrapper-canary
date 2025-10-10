@@ -28,9 +28,8 @@ function A(e) {
             },
             [n, A, t],
         );
-    return (0, r.jsx)(s.xJW, {
-        title: d.intl.string(d.t.vCn2Tk),
-        titleClassName: _.infoTitle,
+    return (0, r.jsx)(s.gNt, {
+        label: d.intl.string(d.t.vCn2Tk),
         children: (0, r.jsxs)(c.WM, {
             children: [
                 (0, r.jsx)(c._2, {

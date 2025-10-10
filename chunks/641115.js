@@ -9,8 +9,8 @@ var r = n(951288),
     d = n(755721),
     u = n(481060),
     f = n(410575),
-    m = n(2052),
-    h = n(924557),
+    h = n(2052),
+    m = n(924557),
     p = n(600164),
     g = n(436774),
     x = n(140465),
@@ -19,8 +19,8 @@ var r = n(951288),
     j = n(594174),
     b = n(74538),
     S = n(451467),
-    C = n(122186),
-    y = n(37113),
+    y = n(122186),
+    C = n(37113),
     O = n(981631),
     w = n(388032),
     Z = n(542257),
@@ -104,9 +104,9 @@ function A(e) {
             analyticsLocation: c,
             onClick: d,
             onClose: f,
-            setIsHovering: m,
+            setIsHovering: h,
         } = e,
-        { value: h, label: p } = i;
+        { value: m, label: p } = i;
     return (
         o
             ? ((t = (0, r.jsx)(u.DY3, {
@@ -116,8 +116,8 @@ function A(e) {
                   text: (0, r.jsx)(R, {}),
                   children: (0, r.jsx)("div", {
                       className: I.textContainer,
-                      onMouseEnter: () => m(!0),
-                      onMouseLeave: () => m(!1),
+                      onMouseEnter: () => h(!0),
+                      onMouseLeave: () => h(!1),
                       children: (0, r.jsx)(u.Text, {
                           variant: "text-xs/bold",
                           className: s()(I.selectorNitroText, I.enhancedSelectorNitroText),
@@ -138,7 +138,7 @@ function A(e) {
                       children: p,
                   }),
               })),
-              (n = () => d(h))),
+              (n = () => d(m))),
         {
             content: t,
             className: s()(I.selectorButton, {
@@ -168,20 +168,20 @@ function k(e) {
         }),
         L = (0, c.e7)([v.Z, _.Z], () => _.Z.getChannel(v.Z.getVoiceChannelId())),
         B = b.ZP.canStreamQuality(b.U2.MID, D),
-        { location: G } = (0, m.O)(),
-        U = (0, h.Zq)({ autoTrackExposure: !1 }),
+        { location: U } = (0, h.O)(),
+        G = (0, m.Zq)({ autoTrackExposure: !1 }),
         W = (0, x.B4)(),
-        z = !B && !U,
+        z = !B && !G,
         [F, H] = i.useState(!1),
-        V = M ? y.z8 : y.WC,
-        Y = T(N({}, G), { section: O.jXE.STREAM_SETTINGS }),
-        J = (0, r.jsx)(d.hE, {
+        V = M ? C.z8 : C.WC,
+        Y = T(N({}, U), { section: O.jXE.STREAM_SETTINGS }),
+        X = (0, r.jsx)(d.hE, {
             buttons: V.map((e) =>
                 A({
                     type: e,
                     selected: e.value === l,
                     needsPremium: !(0, S.Z)(n, e.value, s, D, k, L),
-                    needsDemo: W && e.value !== y.LY.RESOLUTION_720,
+                    needsDemo: W && e.value !== C.LY.RESOLUTION_720,
                     analyticsLocation: Y,
                     onClick: () => o(e.value),
                     onClose: t,
@@ -189,13 +189,13 @@ function k(e) {
                 }),
             ),
         }),
-        X = (0, r.jsx)(d.hE, {
-            buttons: y.k0.map((e) =>
+        J = (0, r.jsx)(d.hE, {
+            buttons: C.k0.map((e) =>
                 A({
                     type: e,
                     selected: e.value === s,
                     needsPremium: !(0, S.Z)(n, l, e.value, D, k, L),
-                    needsDemo: W && e.value === y.ws.FPS_60,
+                    needsDemo: W && e.value === C.ws.FPS_60,
                     analyticsLocation: Y,
                     onClick: () => g(e.value),
                     onClose: t,
@@ -205,31 +205,29 @@ function k(e) {
         }),
         K = [
             {
-                value: y.tI.PRESET_VIDEO,
+                value: C.tI.PRESET_VIDEO,
                 label: w.intl.string(w.t.HcwHc3),
             },
             ...(M
                 ? []
                 : [
                       {
-                          value: y.tI.PRESET_DOCUMENTS,
+                          value: C.tI.PRESET_DOCUMENTS,
                           label: w.intl.string(w.t["/RfohI"]),
                       },
                   ]),
             {
-                value: y.tI.PRESET_CUSTOM,
+                value: C.tI.PRESET_CUSTOM,
                 label: w.intl.string(w.t["+eOtrK"]),
             },
         ],
         q =
-            n === y.tI.PRESET_DOCUMENTS
+            n === C.tI.PRESET_DOCUMENTS
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(p.Z, {
-                              children: (0, r.jsx)(u.xJW, {
-                                  title: w.intl.string(w.t.rHyPXl),
-                                  titleClassName: Z.formItemTitleSlim,
-                                  className: I.documentModeGroup,
+                              children: (0, r.jsx)(u.gNt, {
+                                  label: w.intl.string(w.t.rHyPXl),
                                   children: (0, r.jsx)(u.Text, {
                                       variant: "text-xs/normal",
                                       children: w.intl.format(w.t["U+hmam"], { fps: s }),
@@ -237,54 +235,50 @@ function k(e) {
                               }),
                           }),
                           z
-                              ? (0, r.jsx)(C.Z, {
+                              ? (0, r.jsx)(y.Z, {
                                     message: w.intl.string(w.t.deDogI),
                                     onClose: t,
                                     openStreamUpsellModal: E,
                                 })
                               : null,
-                          W && (0, r.jsx)(C.c, {}),
+                          W && (0, r.jsx)(y.c, {}),
                       ],
                   })
-                : (0, r.jsxs)(r.Fragment, {
+                : (0, r.jsxs)(u.Kqy, {
+                      gap: 16,
                       children: [
-                          (0, r.jsxs)(p.Z, {
+                          (0, r.jsxs)(u.NIo, {
                               children: [
-                                  (0, r.jsx)(u.xJW, {
-                                      title: w.intl.string(w.t.rHyPXl),
-                                      className: I.settingsGroup,
-                                      titleClassName: Z.formItemTitleSlim,
-                                      children: J,
-                                  }),
-                                  (0, r.jsx)(u.xJW, {
-                                      title: w.intl.string(w.t.SkkeIi),
-                                      className: I.settingsGroup,
-                                      titleClassName: Z.formItemTitleSlim,
+                                  (0, r.jsx)(u.gNt, {
+                                      label: w.intl.string(w.t.rHyPXl),
                                       children: X,
+                                  }),
+                                  (0, r.jsx)(u.gNt, {
+                                      label: w.intl.string(w.t.SkkeIi),
+                                      children: J,
                                   }),
                               ],
                           }),
                           z
-                              ? (0, r.jsx)(C.Z, {
+                              ? (0, r.jsx)(y.Z, {
                                     onClose: t,
                                     openStreamUpsellModal: E,
                                     glow: F,
                                 })
                               : null,
-                          W && (0, r.jsx)(C.c, {}),
+                          W && (0, r.jsx)(y.c, {}),
                       ],
                   });
     return (0, r.jsx)(
         f.Z,
         T(N({}, Y), {
-            children: (0, r.jsx)(u.xJW, {
-                title: w.intl.string(w.t.ax4FnZ),
-                titleClassName: Z.formItemTitle,
+            children: (0, r.jsx)("div", {
                 className: Z.modalContent,
                 children: (0, r.jsxs)("div", {
                     className: I.qualitySettingsContainer,
                     children: [
                         (0, r.jsx)(u.q4e, {
+                            label: w.intl.string(w.t.ax4FnZ),
                             value: n,
                             className: P.marginTop8,
                             options: K,

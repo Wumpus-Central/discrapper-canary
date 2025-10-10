@@ -1,43 +1,39 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => m });
 var r = n(951288),
     i = n(647438),
     l = n(481060),
-    s = n(100527),
-    a = n(101017),
+    a = n(100527),
+    s = n(101017),
     o = n(441536),
     c = n(434404),
     d = n(353857),
     u = n(659854),
-    g = n(388032),
-    m = n(764009);
-function p(e) {
-    let { className: t, guildId: n, selectedBadge: p } = e,
-        f = i.useCallback(
+    g = n(388032);
+function m(e) {
+    let { className: t, guildId: n, selectedBadge: m } = e,
+        p = i.useCallback(
             (e) => {
                 c.Z.updateGuildProfile(n, { badge: e });
             },
             [n],
         ),
-        h = i.useCallback(() => {
-            (0, o.Z)(n, s.Z.GUILD_POWERUPS_GUILD_SETTINGS_TAGS, "guildTagsBadgePacks"), c.Z.close();
+        f = i.useCallback(() => {
+            (0, o.Z)(n, a.Z.GUILD_POWERUPS_GUILD_SETTINGS_TAGS, "guildTagsBadgePacks"), c.Z.close();
         }, [n]),
-        x = (0, a.Z)(),
-        b = i.useId();
-    return (0, r.jsxs)("div", {
+        h = (0, s.Z)(),
+        x = i.useId();
+    return (0, r.jsx)("div", {
         className: t,
-        children: [
-            (0, r.jsx)(l.vwX, {
-                id: b,
-                className: m.sectionTitle,
-                children: g.intl.string(u.default.pb7lpK),
+        children: (0, r.jsx)(l.gNt, {
+            label: g.intl.string(u.default.pb7lpK),
+            id: x,
+            children: (0, r.jsx)(d.g, {
+                badgeCollection: h,
+                handleBoostUpsellClick: f,
+                onBadgeClicked: p,
+                selectedBadge: m,
+                headingId: x,
             }),
-            (0, r.jsx)(d.g, {
-                badgeCollection: x,
-                handleBoostUpsellClick: h,
-                onBadgeClicked: f,
-                selectedBadge: p,
-                headingId: b,
-            }),
-        ],
+        }),
     });
 }

@@ -18,8 +18,8 @@ var r = n(951288),
     w = n(475271),
     y = n(530618),
     j = n(63954),
-    x = n(454585),
-    v = n(246946),
+    v = n(454585),
+    x = n(246946),
     O = n(572004),
     S = n(302221),
     A = n(617136),
@@ -147,7 +147,7 @@ function z(e) {
               children: (n) => {
                   var a, o;
                   return (0, r.jsx)(
-                      W,
+                      U,
                       ((a = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},
@@ -197,7 +197,7 @@ function z(e) {
           })
         : null;
 }
-function W(e) {
+function U(e) {
     var t;
     let {
             transitionState: n,
@@ -215,15 +215,15 @@ function W(e) {
         }),
         Z = D.r.build(l.config).rewardPlatforms,
         z = Z.length > 1,
-        [W, U] = a.useState(z ? null : Z[0]),
+        [U, W] = a.useState(z ? null : Z[0]),
         H = a.useRef(new s.qA()),
         F = a.useRef(null),
-        [$, Y] = a.useState(null),
-        X = (0, i.e7)([C.Z], () => C.Z.useReducedMotion),
-        G = (0, i.e7)([v.Z], () => v.Z.hidePersonalInformation),
+        [$, X] = a.useState(null),
+        Y = (0, i.e7)([C.Z], () => C.Z.useReducedMotion),
+        G = (0, i.e7)([x.Z], () => x.Z.hidePersonalInformation),
         {
-            questStoreRewardCode: J,
-            isFetchingRewardCode: V,
+            questStoreRewardCode: V,
+            isFetchingRewardCode: J,
             isClaimingReward: K,
         } = (0, i.cj)([N.Z], () => ({
             questStoreRewardCode: N.Z.getRewardCode(l.id),
@@ -232,7 +232,7 @@ function W(e) {
         })),
         ee = (0, A.O5)(),
         et = (0, T.oo)({ quest: l }),
-        en = !0 === S ? (0, j.b)(l) : J,
+        en = !0 === S ? (0, j.b)(l) : V,
         er = z && (null == (t = l.userStatus) ? void 0 : t.claimedAt) == null && null == en,
         {
             claimCode: ea,
@@ -241,15 +241,15 @@ function W(e) {
             setHasError: es,
         } = (0, E.uL)({
             isClaimingReward: K,
-            isFetchingRewardCode: V,
+            isFetchingRewardCode: J,
             quest: l,
             questContent: c,
             requiresPlatformSelection: er,
             rewardCode: en,
-            selectedPlatformType: W,
+            selectedPlatformType: U,
             preview: S,
         }),
-        ei = el && !K && !V;
+        ei = el && !K && !J;
     !(function (e) {
         let t = (0, g.Z)(e),
             n = w.default.useIsCaptchaModalOpen(),
@@ -305,12 +305,12 @@ function W(e) {
                       variant: "text-sm/normal",
                       color: "text-default",
                       className: B.bodyCopy,
-                      children: x.Z.parse(i, !1, { allowLinks: !0 }),
+                      children: v.Z.parse(i, !1, { allowLinks: !0 }),
                   })
                 : null;
         })({
             quest: l,
-            selectedPlatform: W,
+            selectedPlatform: U,
             requiresPlatformSelection: er,
             rewardCode: en,
             hasTieredRewardCodes: et,
@@ -325,44 +325,40 @@ function W(e) {
         ),
         em = null;
     er &&
-        (em = (0, r.jsxs)(p.xJW, {
-            title: M.intl.string(M.t.vVcTtL),
-            children: [
-                (0, r.jsx)(p.PhF, {
-                    placeholder: M.intl.string(M.t.EMrUHR),
-                    options: ep,
-                    select: (e) => {
-                        es(!1), U(e);
-                    },
-                    isSelected: (e) => e === W,
-                    serialize: (e) => (0, T.t2)(e),
-                    className: ei ? B.errorInput : "",
-                    isDisabled: K,
-                    renderLeading: (e) =>
-                        (function (e) {
-                            switch (e) {
-                                case R.y$.CROSS_PLATFORM:
-                                    return (0, r.jsx)(p.Che, { className: B.platformSelectionOptionIcon });
-                                case R.y$.PC:
-                                    return (0, r.jsx)(p.pzj, { className: B.platformSelectionOptionIcon });
-                                case R.y$.PLAYSTATION:
-                                    return (0, r.jsx)(p.Tsp, { className: B.platformSelectionOptionIcon });
-                                case R.y$.SWITCH:
-                                    return (0, r.jsx)(p.aPH, { className: B.platformSelectionOptionIcon });
-                                case R.y$.XBOX:
-                                    return (0, r.jsx)(p.Mko, { className: B.platformSelectionOptionIcon });
-                            }
-                        })(e.value),
-                }),
-                ei ? (0, r.jsx)(p.pdY, { error: M.intl.string(M.t.rbZBMT) }) : null,
-            ],
+        (em = (0, r.jsx)(p.PhF, {
+            label: M.intl.string(M.t.vVcTtL),
+            errorMessage: ei ? M.intl.string(M.t.rbZBMT) : void 0,
+            placeholder: M.intl.string(M.t.EMrUHR),
+            options: ep,
+            select: (e) => {
+                es(!1), W(e);
+            },
+            isSelected: (e) => e === U,
+            serialize: (e) => (0, T.t2)(e),
+            className: ei ? B.errorInput : "",
+            isDisabled: K,
+            renderLeading: (e) =>
+                (function (e) {
+                    switch (e) {
+                        case R.y$.CROSS_PLATFORM:
+                            return (0, r.jsx)(p.Che, { className: B.platformSelectionOptionIcon });
+                        case R.y$.PC:
+                            return (0, r.jsx)(p.pzj, { className: B.platformSelectionOptionIcon });
+                        case R.y$.PLAYSTATION:
+                            return (0, r.jsx)(p.Tsp, { className: B.platformSelectionOptionIcon });
+                        case R.y$.SWITCH:
+                            return (0, r.jsx)(p.aPH, { className: B.platformSelectionOptionIcon });
+                        case R.y$.XBOX:
+                            return (0, r.jsx)(p.Mko, { className: B.platformSelectionOptionIcon });
+                    }
+                })(e.value),
         }));
-    let ef = null == en && (V || K),
+    let ef = null == en && (J || K),
         eb = ef && !er ? (0, r.jsx)(p.$jN, {}) : null,
         eg = null;
     null != en
-        ? (eg = (0, r.jsx)(p.xJW, {
-              title: M.intl.string(M.t.srzsU1),
+        ? (eg = (0, r.jsx)(p.gNt, {
+              label: M.intl.string(M.t.srzsU1),
               children: (0, r.jsx)(m.Z, {
                   value: G ? M.intl.string(M.t["0n2u0t"]) : en.code,
                   delay: 1000,
@@ -417,26 +413,26 @@ function W(e) {
             questContent: c,
             questContentPosition: d,
             requiresPlatformSelection: er,
-            selectedPlatformType: W,
+            selectedPlatformType: U,
             redemptionLink: eC,
             sourceQuestContent: I,
         }),
         ey = er && K,
-        ej = !ey && ((er && null == W) || ef),
-        ex = null != eC && "" !== eC,
-        ev = M.intl.string(M.t["23SS+/"]);
+        ej = !ey && ((er && null == U) || ef),
+        ev = null != eC && "" !== eC,
+        ex = M.intl.string(M.t["23SS+/"]);
     er
-        ? (ev = M.intl.string(M.t.SLZMi4))
+        ? (ex = M.intl.string(M.t.SLZMi4))
         : !er && ei
-          ? (ev = M.intl.string(M.t.gNJHHh))
-          : ex && (ev = M.intl.string(M.t["+zx47e"]));
-    let eO = !X && null != en && !P && !ei,
+          ? (ex = M.intl.string(M.t.gNJHHh))
+          : ev && (ex = M.intl.string(M.t["+zx47e"]));
+    let eO = !Y && null != en && !P && !ei,
         eS = null != eb && et,
         eA = (0, _.Gd)(l.id);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.O_, {
-                ref: Y,
+                ref: X,
                 className: B.confettiCanvas,
                 environment: H.current,
             }),
@@ -499,7 +495,7 @@ function W(e) {
                                                         variant: "text-md/normal",
                                                         color: "text-default",
                                                         className: B.cosponsorRedemptionInstructions,
-                                                        children: x.Z.parse(
+                                                        children: v.Z.parse(
                                                             l.config.cosponsorMetadata.redemptionInstructions,
                                                             !1,
                                                             { allowLinks: !0 },
@@ -515,7 +511,7 @@ function W(e) {
                             "data-migration-pending": !0,
                             children: (0, r.jsx)(p.zxk, {
                                 variant: "primary",
-                                text: ev,
+                                text: ex,
                                 onClick: ew,
                                 loading: ey,
                                 disabled: ej,

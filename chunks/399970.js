@@ -62,11 +62,11 @@ function E(e) {
     function D() {
         return "localhost" !== T
             ? null
-            : (0, r.jsx)(s.xJW, {
+            : (0, r.jsx)("div", {
                   className: p.inputWrapper,
-                  title: _.intl.string(_.t.fF4zxs),
-                  required: !0,
                   children: (0, r.jsx)(s.oil, {
+                      required: !0,
+                      label: _.intl.string(_.t.fF4zxs),
                       value: v,
                       maxLength: 5,
                       onChange: (e) => I(e),
@@ -75,19 +75,19 @@ function E(e) {
               });
     }
     i.useEffect(() => () => l.Z.wait(() => c.q$()), []);
-    let L = null != u && u === y,
-        x = L ? N : C,
+    let x = null != u && u === y,
+        L = x ? N : C,
         M = i.useMemo(
             () => [
                 {
                     loading: b,
                     disabled: !A || 0 === y.length || ("localhost" === T && 0 === v.length),
-                    variant: L ? "critical-primary" : "active",
-                    text: L ? _.intl.string(_.t.d6TR3N) : _.intl.string(_.t.qwuK5O),
-                    onClick: x,
+                    variant: x ? "critical-primary" : "active",
+                    text: x ? _.intl.string(_.t.d6TR3N) : _.intl.string(_.t.qwuK5O),
+                    onClick: L,
                 },
             ],
-            [y.length, b, L, A, v.length, x, T],
+            [y.length, b, x, A, v.length, L, T],
         );
     return (0, r.jsxs)(a.Modal, {
         title: _.intl.string(_.t.f8fzk5),
@@ -101,11 +101,11 @@ function E(e) {
                 direction: d.Z.Direction.VERTICAL,
                 align: d.Z.Align.START,
                 children: [
-                    (0, r.jsx)(s.xJW, {
+                    (0, r.jsx)("div", {
                         className: p.inputWrapper,
-                        title: _.intl.string(_.t.P6TzgI),
-                        required: !0,
                         children: (0, r.jsx)(s.oil, {
+                            label: _.intl.string(_.t.P6TzgI),
+                            required: !0,
                             value: y,
                             maxLength: 19,
                             error: A ? null : _.intl.string(_.t.gPNgKC),
@@ -113,10 +113,10 @@ function E(e) {
                             disabled: b,
                         }),
                     }),
-                    (0, r.jsx)(s.xJW, {
+                    (0, r.jsx)("div", {
                         className: p.inputWrapper,
-                        title: _.intl.string(_.t["/GTqXF"]),
                         children: (0, r.jsx)(s.q4e, {
+                            label: _.intl.string(_.t["/GTqXF"]),
                             isDisabled: !A || "" === y,
                             value: T,
                             options: [

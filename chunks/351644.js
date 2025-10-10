@@ -27,8 +27,8 @@ var i = n(951288),
     P = n(51144),
     I = n(466070),
     E = n(585835),
-    Z = n(997787),
-    T = n(981631),
+    T = n(997787),
+    Z = n(981631),
     k = n(49898),
     A = n(388032),
     D = n(81187),
@@ -64,8 +64,8 @@ function W(e) {
             channel: H,
             applicationIntegrations: G,
             builtInIntegrations: z,
-            customWebhooks: F,
-            followedChannelWebhooks: K,
+            customWebhooks: K,
+            followedChannelWebhooks: F,
             isLoadingWebhooks: q,
             canCreateWebhook: V,
             onManageBuiltIn: Y,
@@ -88,9 +88,9 @@ function W(e) {
             [_.Z],
             () => ({
                 canManageWebhooks:
-                    (null != W && _.Z.can(T.Plq.MANAGE_WEBHOOKS, W)) ||
-                    (null != H && _.Z.can(T.Plq.MANAGE_WEBHOOKS, H)),
-                canManageGuild: null != W && null == H && _.Z.can(T.Plq.MANAGE_GUILD, W),
+                    (null != W && _.Z.can(Z.Plq.MANAGE_WEBHOOKS, W)) ||
+                    (null != H && _.Z.can(Z.Plq.MANAGE_WEBHOOKS, H)),
+                canManageGuild: null != W && null == H && _.Z.can(Z.Plq.MANAGE_GUILD, W),
             }),
             [W, H],
         ),
@@ -119,9 +119,9 @@ function W(e) {
                     showTwitchCard: !1,
                     showYoutubeCard: !1,
                 };
-            let e = null == W ? void 0 : W.features.has(T.oNc.COMMUNITY),
-                t = er.filter((e) => e.type === T.ABu.TWITCH).length > 0,
-                n = er.filter((e) => e.type === T.ABu.YOUTUBE).length > 0;
+            let e = null == W ? void 0 : W.features.has(Z.oNc.COMMUNITY),
+                t = er.filter((e) => e.type === Z.ABu.TWITCH).length > 0,
+                n = er.filter((e) => e.type === Z.ABu.YOUTUBE).length > 0;
             return {
                 showTwitchCard: ed > 0 || (!t && e),
                 showYoutubeCard: eu > 0 || (!n && e),
@@ -141,8 +141,8 @@ function W(e) {
                 );
             });
         }, [G, ef, et]),
-        ex = (0, c.e7)([Z.Z], () => {
-            if (null != W) return eh.find((e) => Z.Z.canShowOverviewTooltip(W.id, e.integration.id));
+        ex = (0, c.e7)([T.Z], () => {
+            if (null != W) return eh.find((e) => T.Z.canShowOverviewTooltip(W.id, e.integration.id));
         }, [eh, W]),
         ej = r.useMemo(
             () => (void 0 !== ex ? [ex, ...eh.filter((e) => e.integration.id !== ex.integration.id)] : eh),
@@ -187,10 +187,10 @@ function W(e) {
                         hasNextSection: !0,
                         onButtonClick: () => {
                             Q(r.id),
-                                C.default.track(T.rMx.APP_MANAGE_CTA_CLICKED, {
+                                C.default.track(Z.rMx.APP_MANAGE_CTA_CLICKED, {
                                     application_id: r.id,
                                     guild_id: null == W ? void 0 : W.id,
-                                    is_admin: null != W ? _.Z.can(T.Plq.ADMINISTRATOR, W) : void 0,
+                                    is_admin: null != W ? _.Z.can(Z.Plq.ADMINISTRATOR, W) : void 0,
                                 });
                         },
                         details: a,
@@ -266,13 +266,13 @@ function W(e) {
             return t > 0 ? l : a;
         })(ee, ef, null == W ? void 0 : W.id)),
         (eS = null));
-    let ew = S.Z.getArticleURL(T.BhN.INTEGRATIONS),
+    let ew = S.Z.getArticleURL(Z.BhN.INTEGRATIONS),
         eP = null != H ? A.t.YV0vh4 : A.t.FnZEJi,
         eI = [];
     if (el) {
         let e, t, r, a, o;
         eI.push(
-            ((n = F.length),
+            ((n = K.length),
             n > 0 ? (t = (0, i.jsx)(u.LJT, { size: "xs" })) : (e = A.intl.string(A.t.lOQqJC)),
             (0, i.jsx)(
                 E.Z,
@@ -289,14 +289,14 @@ function W(e) {
                 "webhooks",
             )),
         ),
-            (null == H ? void 0 : H.type) === T.d4z.GUILD_VOICE ||
-                ((null == H ? void 0 : H.type) != null && T.TPd.GUILD_THREADS_ONLY.has(H.type)) ||
+            (null == H ? void 0 : H.type) === Z.d4z.GUILD_VOICE ||
+                ((null == H ? void 0 : H.type) != null && Z.TPd.GUILD_THREADS_ONLY.has(H.type)) ||
                 eI.push(
-                    ((l = K.length),
+                    ((l = F.length),
                     l > 0
                         ? ((o = (0, i.jsx)(u.LJT, { size: "xs" })), (a = X))
                         : ((r = A.intl.string(A.t["ZwSt+f"])),
-                          (a = () => open(S.Z.getArticleURL(T.BhN.CHANNEL_FOLLOWING)))),
+                          (a = () => open(S.Z.getArticleURL(Z.BhN.CHANNEL_FOLLOWING)))),
                     (0, i.jsx)(
                         E.Z,
                         {
@@ -336,17 +336,17 @@ function W(e) {
                         l,
                         a,
                         o,
-                        s = b.Z.get(T.ABu.TWITCH);
+                        s = b.Z.get(Z.ABu.TWITCH);
                     return (
                         e > 0
                             ? ((o = (0, i.jsx)(u.LJT, { size: "xs" })),
                               (l = A.intl.formatToPlainString(A.t.FFpnT0, { count: t })),
-                              (a = () => n(T.ABu.TWITCH)))
+                              (a = () => n(Z.ABu.TWITCH)))
                             : ((r = A.intl.string(A.t.bkvGkp)),
                               (l = A.intl.string(A.t.Qq3X2N)),
                               (a = () =>
                                   (0, f.Z)({
-                                      platformType: T.ABu.TWITCH,
+                                      platformType: Z.ABu.TWITCH,
                                       location: "Integration Settings",
                                   }))),
                         (0, i.jsx)(
@@ -374,17 +374,17 @@ function W(e) {
                         l,
                         a,
                         o,
-                        s = b.Z.get(T.ABu.YOUTUBE);
+                        s = b.Z.get(Z.ABu.YOUTUBE);
                     return (
                         e > 0
                             ? ((o = (0, i.jsx)(u.LJT, { size: "xs" })),
                               (l = A.intl.formatToPlainString(A.t.b2g5vL, { count: t })),
-                              (a = () => n(T.ABu.YOUTUBE)))
+                              (a = () => n(Z.ABu.YOUTUBE)))
                             : ((r = A.intl.string(A.t.xEyQ3d)),
                               (l = A.intl.string(A.t.T0ivgY)),
                               (a = () =>
                                   (0, f.Z)({
-                                      platformType: T.ABu.YOUTUBE,
+                                      platformType: Z.ABu.YOUTUBE,
                                       location: "Integration Settings",
                                   }))),
                         (0, i.jsx)(
@@ -406,11 +406,11 @@ function W(e) {
                 })(eu, em, Y),
             );
     let eE = null != H && eo && null != es;
-    return (0, i.jsxs)(u.hjN, {
+    return (0, i.jsxs)("div", {
         className: a()(null != eS ? D.footerPlaceholder : null),
         children: [
-            (0, i.jsx)(u.R94, {
-                type: u.geA.DESCRIPTION,
+            (0, i.jsx)(u.Text, {
+                variant: "text-sm/normal",
                 children: A.intl.format(eP, { helpdeskArticle: ew }),
             }),
             (0, i.jsx)(u.izJ, { className: D.divider }),

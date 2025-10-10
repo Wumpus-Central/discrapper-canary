@@ -7,8 +7,8 @@ n.d(t, {
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    s = n.n(l),
-    a = n(392711),
+    a = n.n(l),
+    s = n(392711),
     o = n(442837),
     c = n(481060),
     d = n(497321),
@@ -21,8 +21,8 @@ var r = n(951288),
     x = n(594174),
     b = n(63063),
     j = n(78451),
-    _ = n(434404),
-    v = n(999382),
+    v = n(434404),
+    _ = n(999382),
     C = n(723136),
     O = n(532804),
     y = n(181339),
@@ -79,20 +79,20 @@ function P(e) {
             async (e) => {
                 let { value: n } = e;
                 try {
-                    await _.Z.saveGuild(t.id, { verificationLevel: n }), _.Z.updateGuild({ verificationLevel: n });
+                    await v.Z.saveGuild(t.id, { verificationLevel: n }), v.Z.updateGuild({ verificationLevel: n });
                 } catch (e) {
                     (0, c.showToast)((0, c.createToast)(E.intl.string(E.t["46Rs3t"]), c.ToastType.FAILURE));
                 }
             },
             [t],
         ),
-        s = i.useMemo(() => {
+        a = i.useMemo(() => {
             let e = (0, j.IF)(null == t ? void 0 : t.features.has(N.oNc.COMMUNITY)).map((e) =>
                 T(S({}, e), { tooltipPosition: "left" }),
             );
             return (0, j.LJ)(e);
         }, [t]),
-        a = i.useMemo(() => s.find((e) => e.value === (null == t ? void 0 : t.verificationLevel)), [t, s]);
+        s = i.useMemo(() => a.find((e) => e.value === (null == t ? void 0 : t.verificationLevel)), [t, a]);
     return (0, r.jsxs)("div", {
         className: I.setupContainer,
         children: [
@@ -113,8 +113,8 @@ function P(e) {
             }),
             (0, r.jsx)(O.Z, {
                 changeTitle: E.intl.string(E.t.TxESJC),
-                value: null == a ? void 0 : a.value,
-                options: s,
+                value: null == s ? void 0 : s.value,
+                options: a,
                 disabled: !n,
                 onChange: l,
             }),
@@ -123,13 +123,13 @@ function P(e) {
 }
 function w(e) {
     let { guild: t, className: n, withDivider: l = !0 } = e,
-        a = (0, o.e7)([f.Z], () => null != t && f.Z.can(N.Plq.MANAGE_GUILD, t), [t]),
+        s = (0, o.e7)([f.Z], () => null != t && f.Z.can(N.Plq.MANAGE_GUILD, t), [t]),
         d = i.useCallback(
             async (e) => {
                 let { value: n } = e;
                 try {
-                    await _.Z.saveGuild(t.id, { explicitContentFilter: n }),
-                        _.Z.updateGuild({ explicitContentFilter: n });
+                    await v.Z.saveGuild(t.id, { explicitContentFilter: n }),
+                        v.Z.updateGuild({ explicitContentFilter: n });
                 } catch (e) {
                     (0, c.showToast)((0, c.createToast)(E.intl.string(E.t["46Rs3t"]), c.ToastType.FAILURE));
                 }
@@ -147,7 +147,7 @@ function w(e) {
         children: [
             l && (0, r.jsx)(c.izJ, { className: I.divider }),
             (0, r.jsxs)("div", {
-                className: s()(I.setupContainer, n),
+                className: a()(I.setupContainer, n),
                 children: [
                     (0, r.jsxs)("div", {
                         className: I.switchItemTextContent,
@@ -170,7 +170,7 @@ function w(e) {
                         changeTitle: E.intl.string(E.t["eBd+Ul"]),
                         value: null == g ? void 0 : g.value,
                         options: u,
-                        disabled: !a,
+                        disabled: !s,
                         onChange: d,
                     }),
                 ],
@@ -185,22 +185,22 @@ async function Z(e, t) {
         t
             ? n.add(N.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)
             : n.delete(N.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY),
-        await _.Z.saveGuild(e.id, { features: n })
+        await v.Z.saveGuild(e.id, { features: n })
     );
 }
 function R(e) {
     let { guild: t } = e,
         n = (0, o.e7)([f.Z], () => null != t && f.Z.can(N.Plq.MANAGE_GUILD, t), [t]),
         l = t.features.has(N.oNc.COMMUNITY),
-        s = (0, u.n2)(t.id),
-        [a, d] = i.useState(t.features.has(N.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
+        a = (0, u.n2)(t.id),
+        [s, d] = i.useState(t.features.has(N.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
         g = i.useCallback(
             async (e) => {
                 d(e), await Z(t, e);
             },
             [t],
         );
-    return l || !s
+    return l || !a
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
@@ -211,7 +211,7 @@ function R(e) {
                               label: E.intl.string(E.t.jDarm5),
                               description: E.intl.string(E.t["/ee7yM"]),
                               badge: "beta",
-                              checked: a,
+                              checked: s,
                               onChange: g,
                               disabled: !n,
                           }),
@@ -229,25 +229,25 @@ function R(e) {
 function D(e) {
     let { guild: t, mfaLevel: n } = e,
         l = (0, o.e7)([f.Z], () => null != t && f.Z.can(N.Plq.MANAGE_GUILD, t), [t]),
-        s = (0, o.e7)([x.default], () => x.default.getCurrentUser()),
+        a = (0, o.e7)([x.default], () => x.default.getCurrentUser()),
         { isGuildOwnerWithMFA: d, showMFAUserTooltip: u } = i.useMemo(
             () =>
-                null == s
+                null == a
                     ? {
                           canChangeMFALevel: !1,
                           showMFAUserTooltip: !1,
                       }
                     : {
-                          isGuildOwnerWithMFA: (0, p.yn)(t, s),
-                          showMFAUserTooltip: !s.mfaEnabled && (0, p.eM)(t, s),
+                          isGuildOwnerWithMFA: (0, p.yn)(t, a),
+                          showMFAUserTooltip: !a.mfaEnabled && (0, p.eM)(t, a),
                       },
-            [s, t],
+            [a, t],
         ),
         h = n === N.BpS.ELEVATED,
-        b = (0, a.throttle)(async (e) => {
+        b = (0, s.throttle)(async (e) => {
             d &&
                 (u ||
-                    (await _.Z.updateMFALevel({
+                    (await v.Z.updateMFALevel({
                         guildId: t.id,
                         level: e ? N.BpS.ELEVATED : N.BpS.NONE,
                         isEnabled: !e,
@@ -284,17 +284,19 @@ function D(e) {
         : null;
 }
 function A() {
-    let { guild: e, mfaLevel: t } = (0, o.cj)([v.Z], () => v.Z.getProps(), []),
+    let { guild: e, mfaLevel: t } = (0, o.cj)([_.Z], () => _.Z.getProps(), []),
         n = (0, o.e7)([h.Z], () => h.Z.enabled, []);
     return null == e
         ? null
         : n
           ? (0, r.jsx)(d.Z, {})
-          : (0, r.jsxs)(c.hjN, {
-                title: E.intl.string(E.t["suhY+f"]),
-                tag: c.RB0.H1,
-                titleClassName: I.headerContainer,
+          : (0, r.jsxs)("div", {
                 children: [
+                    (0, r.jsx)(c.X6q, {
+                        className: I.headerContainer,
+                        variant: "heading-lg/semibold",
+                        children: E.intl.string(E.t["suhY+f"]),
+                    }),
                     (0, r.jsx)(C.z, { guild: e }),
                     (0, r.jsx)(R, { guild: e }),
                     (0, r.jsx)(P, { guild: e }),

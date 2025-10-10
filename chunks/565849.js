@@ -1,17 +1,16 @@
 n.d(t, { A: () => g });
-var r = n(951288);
-n(647438);
-var i = n(481060),
+var r = n(951288),
+    i = n(481060),
     l = n(63063),
-    s = n(937222),
-    a = n(269464),
+    a = n(937222),
+    s = n(269464),
     o = n(295051),
     c = n(981631),
     d = n(388032),
     u = n(64929);
 function g(e) {
     let { guild: t, canManageGuild: n } = e;
-    return (0, r.jsxs)(i.hjN, {
+    return (0, r.jsxs)("div", {
         className: u.container,
         children: [
             (0, r.jsxs)("div", {
@@ -35,7 +34,7 @@ function g(e) {
                             articleURL: l.Z.getArticleURL(c.BhN.GUILD_BANNER_SPLASH),
                         }),
                     }),
-                    (0, r.jsx)(s.F, {
+                    (0, r.jsx)(a.F, {
                         guild: t,
                         canManageGuild: n,
                         buttonClassName: u.button,
@@ -44,7 +43,7 @@ function g(e) {
             }),
             (0, r.jsx)("div", {
                 className: u.column,
-                children: (0, r.jsx)(a.O, {
+                children: (0, r.jsx)(s.O, {
                     guild: t,
                     canManageGuild: n,
                 }),

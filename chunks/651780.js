@@ -2,8 +2,8 @@ n.d(t, { Z: () => w });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    s = n(481060),
-    a = n(570140),
+    a = n(481060),
+    s = n(570140),
     o = n(355467),
     c = n(37234),
     d = n(821849),
@@ -16,8 +16,8 @@ var r = n(951288),
     x = n(174604),
     b = n(399829),
     j = n(428862),
-    _ = n(899667),
-    v = n(626135),
+    v = n(899667),
+    _ = n(626135),
     C = n(267642),
     O = n(63063),
     y = n(999382),
@@ -46,9 +46,9 @@ function T(e) {
         i = (0, C.gZ)(t, n),
         l = (0, C.nW)((0, C.Jh)(n));
     if (null == i || null == l) return null;
-    let a = (0, C._k)(t, n);
-    return (0, r.jsxs)(s.Wn, {
-        messageType: s.QYI.WARNING,
+    let s = (0, C._k)(t, n);
+    return (0, r.jsxs)(a.Wn, {
+        messageType: a.QYI.WARNING,
         children: [
             (0, r.jsx)("div", {
                 className: I.guildBoostingGracePeriodTitle,
@@ -56,14 +56,14 @@ function T(e) {
             }),
             (0, r.jsx)(S, {
                 endsAt: i,
-                appliedGuildBoostsToMaintain: a,
+                appliedGuildBoostsToMaintain: s,
                 tierName: l,
             }),
         ],
     });
 }
 let P = (e) => {
-    let { isAnimatedTo: t, onSetRef: n, subscriptionCount: i, tier: l, tiers: s, tierIndex: a, guildId: o } = e;
+    let { isAnimatedTo: t, onSetRef: n, subscriptionCount: i, tier: l, tiers: a, tierIndex: s, guildId: o } = e;
     return (0, r.jsx)(
         j.Z,
         {
@@ -71,7 +71,7 @@ let P = (e) => {
             tier: l,
             onSetRef: n,
             isAnimatedTo: t,
-            hasBottomMargin: a !== s.length - 1,
+            hasBottomMargin: s !== a.length - 1,
             guildId: o,
         },
         l.tier,
@@ -79,19 +79,19 @@ let P = (e) => {
 };
 function w() {
     i.useEffect(() => {
-        a.Z.wait(() => {
+        s.Z.wait(() => {
             (0, o.tZ)(), (0, d.Y2)();
         });
     }, []);
     let e = (0, l.e7)([y.Z], () => y.Z.getGuild()),
-        t = (0, l.e7)([_.Z], () => (null != e ? _.Z.getAppliedGuildBoostsForGuild(e.id) : null)),
+        t = (0, l.e7)([v.Z], () => (null != e ? v.Z.getAppliedGuildBoostsForGuild(e.id) : null)),
         n = (0, m.V)();
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)(i.Fragment, {
                 children: [
-                    (0, r.jsx)(s.vwX, {
-                        tag: s.RB0.H1,
+                    (0, r.jsx)(a.X6q, {
+                        variant: "heading-lg/semibold",
                         children: E.intl.string(E.t.nLovSU),
                     }),
                     null != t && null != e
@@ -100,9 +100,9 @@ function w() {
                               guildId: e.id,
                           })
                         : null,
-                    (0, r.jsx)(s.R94, {
-                        type: s.R94.Types.DESCRIPTION,
+                    (0, r.jsx)(a.Text, {
                         className: I.titleBlurb,
+                        variant: "text-sm/normal",
                         children: E.intl.format(E.t.hLOkp6, {
                             helpdeskArticle: O.Z.getArticleURL(N.BhN.GUILD_SUBSCRIPTIONS),
                         }),
@@ -125,7 +125,7 @@ function w() {
             n
                 ? (0, r.jsx)(p.Z, {
                       onOpenPremiumClick: () =>
-                          void v.default.track(N.rMx.PREMIUM_PROMOTION_OPENED, {
+                          void _.default.track(N.rMx.PREMIUM_PROMOTION_OPENED, {
                               location: {
                                   page: N.ZY5.GUILD_SETTINGS,
                                   section: N.jXE.NITRO_CROSS_PROMO_FROM_BOOSTING,

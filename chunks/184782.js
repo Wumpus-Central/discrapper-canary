@@ -1,4 +1,4 @@
-i.d(n, { default: () => w }), i(953529), i(539854);
+i.d(n, { default: () => P }), i(953529), i(539854);
 var a = i(951288),
     l = i(647438),
     o = i(793030),
@@ -81,7 +81,7 @@ let k = (e) => {
               })
             : null;
     },
-    w = (e) => {
+    P = (e) => {
         var n;
         let { onClose: i, transitionState: r, guildId: c, isPreview: m } = e,
             h = (0, t.e7)([N.Z], () => N.Z.getGuild(c)),
@@ -207,7 +207,8 @@ let k = (e) => {
                                       children: j.description,
                                   })
                                 : null,
-                            (0, a.jsx)(s.vwX, {
+                            (0, a.jsx)(s.X6q, {
+                                variant: "heading-sm/semibold",
                                 className: S.choiceHeader,
                                 children: T.intl.string(T.t["haj5+v"]),
                             }),

@@ -1,8 +1,6 @@
 e.exports = {
     description: "description__803f2",
-    groupTitle: "groupTitle__803f2",
     sessions: "sessions__803f2",
-    otherSessions: "otherSessions__803f2",
     session: "session__803f2",
     currentSession: "currentSession__803f2",
     sessionIcon: "sessionIcon__803f2",

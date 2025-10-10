@@ -3,7 +3,6 @@ e.exports = {
     subtitle: "subtitle__7c901",
     closeButton: "closeButton__7c901",
     content: "content__7c901",
-    smsInputContainer: "smsInputContainer__7c901",
     error: "error__7c901",
     listItemContainer: "listItemContainer__7c901",
     listItemText: "listItemText__7c901",

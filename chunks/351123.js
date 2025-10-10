@@ -23,8 +23,8 @@ var i = n(951288),
     N = n(192079),
     O = n(277053),
     Z = n(271383),
-    w = n(485386),
-    E = n(430824),
+    E = n(485386),
+    w = n(430824),
     T = n(496675),
     _ = n(594174),
     R = n(903386),
@@ -240,7 +240,7 @@ function W(e) {
 }
 function F(e) {
     let { guild: t, channel: l, permissionUpdates: r } = e,
-        c = (0, a.e7)([w.Z], () => w.Z.getSortedRoles(t.id)),
+        c = (0, a.e7)([E.Z], () => E.Z.getSortedRoles(t.id)),
         u = I.RZ(t, c, l, S.yP, r),
         h = (0, a.e7)([Z.ZP], () => I.cR(Z.ZP.getMemberIds(t.id), l, t, S.yP, r)),
         g = (0, C.nG)(l.id);
@@ -389,8 +389,8 @@ function z(e) {
                                         align: x.Z.Align.CENTER,
                                         className: V.folderHeader,
                                         children: [
-                                            (0, i.jsx)(d.vwX, {
-                                                tag: "h5",
+                                            (0, i.jsx)(d.X6q, {
+                                                variant: "heading-sm/semibold",
                                                 className: V.folderTitle,
                                                 children: f.formLabel,
                                             }),
@@ -435,15 +435,15 @@ function q(e) {
     return (0, i.jsxs)("div", {
         children: [
             (0, i.jsx)(d.izJ, { className: V.divider }),
-            (0, i.jsx)(d.vwX, {
+            (0, i.jsx)(d.X6q, {
+                variant: "heading-sm/semibold",
                 className: s()(V.folderTitle, V.sectionTitle),
-                tag: "h5",
                 children: t,
             }),
         ],
     });
 }
-let X = a.ZP.connectStores([O.Z, T.Z, Z.ZP, E.Z, w.Z], () => {
+let X = a.ZP.connectStores([O.Z, T.Z, Z.ZP, w.Z, E.Z], () => {
     let e,
         t = O.Z.channel,
         n = O.Z.category,
@@ -452,10 +452,10 @@ let X = a.ZP.connectStores([O.Z, T.Z, Z.ZP, E.Z, w.Z], () => {
         r = {},
         s = !1;
     if (null != t) {
-        e = E.Z.getGuild(t.getGuildId());
+        e = w.Z.getGuild(t.getGuildId());
         let n = Z.ZP.getMemberIds(null == e ? void 0 : e.id);
         if (null != e) {
-            let a = w.Z.getSortedRoles(e.id);
+            let a = E.Z.getSortedRoles(e.id);
             (r = O.Z.editedPermissionIds.reduce((e, t) => {
                 let n = O.Z.getPermissionOverwrite(t);
                 return null != n && (e[t] = n), e;

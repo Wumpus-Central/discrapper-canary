@@ -80,9 +80,12 @@ function b() {
                       t.id,
                   );
               });
-    return (0, a.jsxs)(i.hjN, {
+    return (0, a.jsxs)("div", {
         children: [
-            (0, a.jsx)(i.vwX, { children: "Selected Content" }),
+            (0, a.jsx)(i.X6q, {
+                variant: "heading-md/semibold",
+                children: "Selected Content",
+            }),
             null != o ? (0, a.jsx)("ul", { children: o }) : (0, a.jsx)("div", { children: "(none?)" }),
         ],
     });

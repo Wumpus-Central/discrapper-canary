@@ -6,8 +6,8 @@ var a = n(951288),
     o = n(392711),
     s = n.n(o),
     u = n(481060),
-    c = n(493773),
-    d = n(110924),
+    d = n(493773),
+    c = n(110924),
     b = n(600164),
     f = n(313201),
     O = n(572539),
@@ -76,37 +76,37 @@ function h(e) {
             onMount: o,
             onSubmit: h,
             onClose: S,
-            ratingHeader: N,
-            ratingBody: j,
-            ratingOptions: y,
+            ratingHeader: j,
+            ratingBody: y,
+            ratingOptions: N,
             ratingEmojiKind: C,
             initialRating: D = null,
             categoriesHeader: x,
             optionsTree: L,
             hideDontShowAgainCheckbox: I,
-            impression: T,
-            transitionState: M,
+            impression: M,
+            transitionState: P,
         } = e,
-        P = (0, d.Z)(L),
+        T = (0, c.Z)(L),
         [R, F] = l.useState(g(L));
     l.useEffect(() => {
-        s().isEqual(P, L) || F(g(L));
-    }, [L, P]);
+        s().isEqual(T, L) || F(g(L));
+    }, [L, T]);
     let A = (0, f.Dt)(),
         [k, Z] = l.useState(!1),
         [w, U] = l.useState(D),
-        [$, B] = l.useState(null),
-        [H, J] = l.useState(null),
-        [G, K] = l.useState("");
-    (0, c.ZP)(() => (null == o ? void 0 : o())),
-        (0, c.zq)(() => {
+        [$, H] = l.useState(null),
+        [B, G] = l.useState(null),
+        [J, K] = l.useState("");
+    (0, d.ZP)(() => (null == o ? void 0 : o())),
+        (0, d.zq)(() => {
             var e;
             h({
                 rating: w,
                 category: null != (e = null == $ ? void 0 : $.value) ? e : null,
-                problem: H,
+                problem: B,
                 dontShowAgain: k,
-                feedback: G,
+                feedback: J,
             });
         });
     let V = !0,
@@ -118,7 +118,7 @@ function h(e) {
                       (0, a.jsx)("div", {
                           className: r()(p.problemInfo, p.ratingSelectorContainer),
                           children: (0, a.jsx)(_.Z, {
-                              ratingOptions: y,
+                              ratingOptions: N,
                               emojiKind: C,
                               selectedRating: w,
                               onChangeRating: function (e) {
@@ -142,31 +142,25 @@ function h(e) {
               (V = !1))
             : w !== m.aZ.GOOD && null == $
               ? ((n = (0, a.jsx)(u.hzk, {
-                    className: p.__invalid_content,
-                    children: (0, a.jsx)(u.xJW, {
-                        title: x,
-                        titleClassName: p.noTitleCase,
-                        className: r()(p.problemInfo, p.presetList, { [p.marginBottom16]: I }),
+                    children: (0, a.jsx)(u.gNt, {
+                        label: x,
                         children: (0, a.jsx)(O.Z, {
                             options: R,
-                            onClick: B,
+                            onClick: H,
                             hideCaret: () => !0,
                         }),
                     }),
                 })),
                 (i = () => U(null)))
-              : null != $ && null == H
+              : null != $ && null == B
                 ? ((n = (0, a.jsx)(u.hzk, {
-                      className: p.__invalid_content,
-                      children: (0, a.jsx)(u.xJW, {
-                          title: $.problemsHeader,
-                          titleClassName: p.noTitleCase,
-                          className: r()(p.problemInfo, p.presetList, { [p.marginBottom16]: I }),
+                      children: (0, a.jsx)(u.gNt, {
+                          label: $.problemsHeader,
                           children: (0, a.jsx)(O.Z, {
                               options: $.problemOptions,
                               onClick: function (e) {
                                   var t;
-                                  J(e),
+                                  G(e),
                                       null != $ &&
                                           null != e &&
                                           (null == (t = $.freeformConfig) ? void 0 : t.value) !== e.value &&
@@ -180,29 +174,28 @@ function h(e) {
                           }),
                       }),
                   })),
-                  (i = () => B(null)))
+                  (i = () => H(null)))
                 : null != $ &&
-                  null != H &&
-                  (null == (t = $.freeformConfig) ? void 0 : t.value) === H.value &&
+                  null != B &&
+                  (null == (t = $.freeformConfig) ? void 0 : t.value) === B.value &&
                   ((n = (0, a.jsx)(u.hzk, {
-                      className: p.__invalid_content,
                       children: (0, a.jsx)(u.Kx8, {
                           label: E.intl.string(E.t.h95hcn),
                           helperText: $.freeformConfig.hideHelpdeskLink
                               ? void 0
                               : E.intl.format(E.t.ybi2tL, { helpdeskURL: v.Z.getSubmitRequestURL() }),
-                          value: G,
+                          value: J,
                           maxLength: m.iF,
                           onChange: K,
                       }),
                   })),
                   (i = () => {
-                      K(""), J(null);
+                      K(""), G(null);
                   }),
                   (z = !0)),
         (0, a.jsxs)(u.Y0X, {
-            impression: T,
-            transitionState: M,
+            impression: M,
+            transitionState: P,
             className: p.modalRoot,
             "aria-labelledby": A,
             parentComponent: "FeedbackModalV2",
@@ -215,13 +208,13 @@ function h(e) {
                             id: A,
                             variant: "heading-xl/extrabold",
                             color: "none",
-                            children: N,
+                            children: j,
                         }),
                         (0, a.jsx)(u.Text, {
                             variant: "text-md/normal",
                             color: "none",
                             className: p.ratingBody,
-                            children: j,
+                            children: y,
                         }),
                     ],
                 }),

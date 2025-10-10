@@ -1,5 +1,4 @@
 e.exports = {
-    divider: "divider__73000",
     upsellContainer: "upsellContainer__73000",
     upsellContent: "upsellContent__73000",
     upsellFooter: "upsellFooter__73000",

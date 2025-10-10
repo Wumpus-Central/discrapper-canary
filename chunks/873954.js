@@ -1,6 +1,7 @@
 n.d(t, {
-    FE: () => S,
+    FE: () => A,
     G5: () => v,
+    IW: () => I,
     yF: () => h,
 });
 var r = n(665012),
@@ -101,24 +102,35 @@ function v(e, t) {
         });
     return (r.displayName = t.name), r;
 }
-function I(e) {
+function I(e, t, n = T) {
+    let r = ({ node: e }) => t(e.props, e.props.ref, e),
+        i = (0, c.forwardRef)((t, i) => {
+            var a;
+            let o = n(t);
+            return null != (a = O(e, t, i, null, o, (e) => c.createElement(r, { node: e })))
+                ? a
+                : c.createElement(c.Fragment, null);
+        });
+    return (i.displayName = t.name), i;
+}
+function T(e) {
     return (0, a.H)({
         ...e,
         addIdAndValue: !0,
     });
 }
-let T = (0, c.createContext)(null);
-function S(e) {
-    let t = (0, c.useContext)(T),
+let S = (0, c.createContext)(null);
+function A(e) {
+    let t = (0, c.useContext)(S),
         n = ((null == t ? void 0 : t.dependencies) || []).concat(e.dependencies),
         r = e.idScope || (null == t ? void 0 : t.idScope),
-        i = I({
+        i = T({
             ...e,
             idScope: r,
             dependencies: n,
         });
     return (
-        (0, c.useContext)(p) && (i = c.createElement(A, null, i)),
+        (0, c.useContext)(p) && (i = c.createElement(C, null, i)),
         (t = (0, c.useMemo)(
             () => ({
                 dependencies: n,
@@ -126,10 +138,10 @@ function S(e) {
             }),
             [r, ...n],
         )),
-        c.createElement(T.Provider, { value: t }, i)
+        c.createElement(S.Provider, { value: t }, i)
     );
 }
-function A({ children: e }) {
+function C({ children: e }) {
     let t = (0, c.useContext)(p),
         n = (0, c.useMemo)(
             () => c.createElement(p.Provider, { value: null }, c.createElement(_.Provider, { value: !0 }, e)),

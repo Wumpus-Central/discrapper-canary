@@ -1,69 +1,70 @@
-n.d(i, { default: () => m });
-var a = n(951288);
-n(647438);
-var t = n(120356),
-    c = n.n(t),
-    o = n(481060),
-    r = n(388905),
-    l = n(313201),
-    d = n(659900),
-    _ = n(473855),
-    s = n(388032),
-    f = n(204078);
+a.d(n, { default: () => m });
+var i = a(951288);
+a(647438);
+var c = a(120356),
+    t = a.n(c),
+    o = a(481060),
+    r = a(388905),
+    l = a(313201),
+    d = a(659900),
+    s = a(473855),
+    _ = a(388032),
+    f = a(204078);
 function m(e) {
-    let { transitionState: i, onClose: n, guildTemplate: t } = e,
-        { form: m, preview: p, handleSubmit: h } = (0, d.Z)(t, !1),
-        C = (0, l.Dt)();
-    return (0, a.jsx)("div", {
-        children: (0, a.jsxs)(o.Y0X, {
+    let { transitionState: n, onClose: a, guildTemplate: c } = e,
+        { form: m, preview: h, handleSubmit: C } = (0, d.Z)(c, !1),
+        x = (0, l.Dt)();
+    return (0, i.jsx)("div", {
+        children: (0, i.jsxs)(o.Y0X, {
             size: o.CgR.DYNAMIC,
-            transitionState: i,
+            transitionState: n,
             className: f.modalRoot,
-            "aria-labelledby": C,
+            "aria-labelledby": x,
             parentComponent: "GuildTemplateModal",
             children: [
-                (0, a.jsxs)("div", {
+                (0, i.jsxs)("div", {
                     className: f.modalContainer,
                     children: [
-                        (0, a.jsx)("div", {
-                            className: c()(f.modalSection, f.ctaSection),
-                            children: (0, a.jsx)("div", {
+                        (0, i.jsx)("div", {
+                            className: t()(f.modalSection, f.ctaSection),
+                            children: (0, i.jsx)("div", {
                                 className: f.ctaContainer,
-                                children: (0, a.jsx)(_.Z, {
-                                    guildTemplate: t,
-                                    headerId: C,
+                                children: (0, i.jsx)(s.Z, {
+                                    guildTemplate: c,
+                                    headerId: x,
                                 }),
                             }),
                         }),
-                        (0, a.jsx)("div", {
-                            className: c()(f.modalSection, f.formSection),
-                            children: (0, a.jsxs)(o.Ttm, {
+                        (0, i.jsx)("div", {
+                            className: t()(f.modalSection, f.formSection),
+                            children: (0, i.jsxs)(o.Ttm, {
                                 className: f.formContainer,
                                 children: [
-                                    (0, a.jsx)(r.Dx, {
+                                    (0, i.jsx)(r.Dx, {
                                         className: f.header,
-                                        children: s.intl.string(s.t.UNFvtL),
+                                        children: _.intl.string(_.t.UNFvtL),
                                     }),
-                                    m,
-                                    p,
+                                    (0, i.jsxs)(o.C3N, {
+                                        children: [m, h],
+                                    }),
                                 ],
                             }),
                         }),
                     ],
                 }),
-                (0, a.jsxs)(o.mzw, {
+                (0, i.jsxs)(o.mzw, {
                     className: f.modalFooter,
                     children: [
-                        (0, a.jsx)(o.zxk, {
+                        (0, i.jsx)(o.zxk, {
                             variant: "secondary",
-                            text: s.intl.string(s.t.cpT0Cg),
-                            onClick: n,
+                            text: _.intl.string(_.t.cpT0Cg),
+                            onClick: a,
                         }),
-                        (0, a.jsx)(o.zxk, {
+                        (0, i.jsx)(o.zxk, {
                             variant: "active",
-                            text: s.intl.string(s.t.CumH4u),
+                            text: _.intl.string(_.t.CumH4u),
                             onClick: async () => {
-                                null != (await h()) && n();
+                                null != (await C()) && a();
                             },
                         }),
                     ],

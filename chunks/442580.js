@@ -22,10 +22,14 @@ class u extends a.PureComponent {
                     t,
                 );
         });
-        return (0, r.jsx)(o.hjN, {
-            tag: o.RB0.H2,
-            title: d.intl.string(d.t["gWbr/f"]),
-            children: (0, s.VE)(t),
+        return (0, r.jsxs)(o.Kqy, {
+            children: [
+                (0, r.jsx)(o.X6q, {
+                    variant: "heading-md/medium",
+                    children: d.intl.string(d.t["gWbr/f"]),
+                }),
+                (0, s.VE)(t),
+            ],
         });
     }
 }

@@ -28,5 +28,4 @@ e.exports = {
     lastActiveTimestamp: "lastActiveTimestamp_cba592",
     confirmInviteScroller: "confirmInviteScroller_cba592",
     subtitle: "subtitle_cba592",
-    footerText: "footerText_cba592",
 };

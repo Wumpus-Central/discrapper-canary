@@ -2,8 +2,8 @@ n.d(t, { Z: () => C }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    s = n.n(l),
-    a = n(392711),
+    a = n.n(l),
+    s = n(392711),
     o = n(100568),
     c = n(417865),
     d = n(793030),
@@ -92,8 +92,8 @@ function j(e) {
                 ? (0, r.jsxs)("div", {
                       className: h.containerPadding,
                       children: [
-                          (0, r.jsx)(g.vwX, {
-                              tag: "h3",
+                          (0, r.jsx)(d.xvT, {
+                              variant: "text-md/medium",
                               className: h.containerTitle,
                               children: t,
                           }),
@@ -103,8 +103,8 @@ function j(e) {
                 : (0, r.jsxs)("div", {
                       className: h.compactContainer,
                       children: [
-                          (0, r.jsx)(g.vwX, {
-                              tag: "h3",
+                          (0, r.jsx)(d.xvT, {
+                              variant: "text-md/medium",
                               className: h.compactTitle,
                               children: t,
                           }),
@@ -113,15 +113,15 @@ function j(e) {
                   }),
     });
 }
-let _ = "FORM_FIELD";
-function v(e) {
+let v = "FORM_FIELD";
+function _(e) {
     let { index: t, field: n, isDropHovered: l, onDrop: d, fieldStyle: m } = e,
-        f = (0, a.debounce)(async (e, t, n) => {
+        f = (0, s.debounce)(async (e, t, n) => {
             await d(e, t, n);
         }),
         b = i.useRef(null),
-        [, v] = (0, o.c)({
-            type: _,
+        [, _] = (0, o.c)({
+            type: v,
             item: {
                 index: t,
                 field: n,
@@ -131,16 +131,16 @@ function v(e) {
             },
         }),
         [, C] = (0, c.L)({
-            accept: _,
+            accept: v,
             hover: (e, n) => {
                 var r;
                 let { index: i } = e,
                     l = null == (r = b.current) ? void 0 : r.getBoundingClientRect(),
-                    s = n.getClientOffset();
-                if (null == l || null == s) return;
-                let a = (l.bottom - l.top) / 2,
-                    o = s.y - l.top;
-                (i < t && o < a) || (i > t && o < a) || i === t || f(e.field, t, !1);
+                    a = n.getClientOffset();
+                if (null == l || null == a) return;
+                let s = (l.bottom - l.top) / 2,
+                    o = a.y - l.top;
+                (i < t && o < s) || (i > t && o < s) || i === t || f(e.field, t, !1);
             },
             drop: (e) => {
                 f(e.field, t, !0);
@@ -149,20 +149,20 @@ function v(e) {
     return (
         i.useLayoutEffect(
             () => (
-                v(C(b)),
+                _(C(b)),
                 () => {
-                    C(null), v(null);
+                    C(null), _(null);
                 }
             ),
-            [v, C],
+            [_, C],
         ),
         (0, r.jsxs)("div", {
             ref: b,
             "data-dnd-name": "field-".concat(t),
-            className: s()(h.dragContainer, { [h.dropHovered]: l }),
+            className: a()(h.dragContainer, { [h.dropHovered]: l }),
             children: [
                 (0, r.jsx)("div", {
-                    className: s()(h.dragIconContainer, { [h.compact]: m === p.it.COMPACT }),
+                    className: a()(h.dragIconContainer, { [h.compact]: m === p.it.COMPACT }),
                     children: (0, r.jsx)(g.Vni, {
                         size: "xs",
                         className: h.dragIcon,
@@ -176,15 +176,15 @@ function v(e) {
 }
 function C(e) {
     return (0, r.jsxs)("div", {
-        className: s()(h.formFieldContainer, { [h.compact]: e.fieldStyle === p.it.COMPACT }),
+        className: a()(h.formFieldContainer, { [h.compact]: e.fieldStyle === p.it.COMPACT }),
         children: [
             (0, r.jsx)("div", {
                 className: h.spacingContainer,
-                children: e.isDragEnabled ? (0, r.jsx)(v, x({}, e)) : (0, r.jsx)(j, x({}, e)),
+                children: e.isDragEnabled ? (0, r.jsx)(_, x({}, e)) : (0, r.jsx)(j, x({}, e)),
             }),
             "side" === e.actionsLocation &&
                 (0, r.jsxs)("div", {
-                    className: s()(h.actionButtonsContainer, {
+                    className: a()(h.actionButtonsContainer, {
                         [h.compact]: e.fieldStyle === p.it.COMPACT,
                         [h.canRemove]: e.canRemove,
                     }),

@@ -12,7 +12,6 @@ e.exports = {
     reviewWarningMessage: "reviewWarningMessage_e4d803",
     trialPriceLine: "trialPriceLine_e4d803",
     afterTrialPriceLine: "afterTrialPriceLine_e4d803",
-    formTitle: "formTitle_e4d803",
     spinnerWrapper: "spinnerWrapper_e4d803",
     trialHeader: "trialHeader_e4d803",
     giftMainAnimation: "giftMainAnimation_e4d803",

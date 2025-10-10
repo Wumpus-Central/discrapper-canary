@@ -2,8 +2,8 @@ n.d(t, { Z: () => C }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    s = n.n(l),
-    a = n(866442),
+    a = n.n(l),
+    s = n(866442),
     o = n(755721),
     c = n(481060),
     d = n(499513),
@@ -57,16 +57,16 @@ function j(e, t) {
         e
     );
 }
-function _(e) {
+function v(e) {
     let { palette: t, badge: n, isSelected: i, onClick: l } = e,
-        a = (0, o.jm)({
+        s = (0, o.jm)({
             isSelected: i,
             label: (0, d.Z)(t.primary, t.secondary),
         });
     return (0, r.jsx)(
         c.P3F,
-        j(b({}, a), {
-            className: s()(x.pickerItem, { [x.pickerItemSelected]: i }),
+        j(b({}, s), {
+            className: a()(x.pickerItem, { [x.pickerItemSelected]: i }),
             onClick: l,
             children: (0, r.jsx)(g.v, {
                 badge: n,
@@ -78,7 +78,7 @@ function _(e) {
         }),
     );
 }
-function v(e) {
+function _(e) {
     let {
             badge: t,
             primary: n,
@@ -89,7 +89,7 @@ function v(e) {
             palettePopoutTargetRef: m,
             handleChange: f,
         } = e,
-        _ = (0, o.jm)({
+        v = (0, o.jm)({
             isSelected: l,
             label: h.intl.formatToPlainString(h.t.hr4D2d, {
                 primaryColor: n,
@@ -104,22 +104,22 @@ function v(e) {
             secondary: i,
         },
         onPrimaryColorChange: (e) => {
-            f({ primary: (0, a.Rf)(e) });
+            f({ primary: (0, s.Rf)(e) });
         },
         onSecondaryColorChange: (e) => {
-            f({ secondary: (0, a.Rf)(e) });
+            f({ secondary: (0, s.Rf)(e) });
         },
         shouldShow: d,
         onRequestClose: () => g(!1),
         children: (e) =>
             (0, r.jsx)(
                 c.P3F,
-                j(b({}, e, _), {
+                j(b({}, e, v), {
                     innerRef: m,
                     onClick: () => {
                         g((e) => !e);
                     },
-                    className: s()(x.pickerItem, { [x.pickerItemSelected]: l }),
+                    className: a()(x.pickerItem, { [x.pickerItemSelected]: l }),
                     children: (0, r.jsx)(c.ilE, {
                         size: "custom",
                         width: 20,
@@ -130,12 +130,12 @@ function v(e) {
     });
 }
 let C = function (e) {
-    let { className: t, guildId: n, badge: l, primaryColor: s, secondaryColor: a } = e,
+    let { className: t, guildId: n, badge: l, primaryColor: a, secondaryColor: s } = e,
         [d, u] = i.useState(!1),
         g = i.useRef(null),
         C = i.useId(),
         O = i.useId(),
-        y = i.useMemo(() => p.Ek.every((e) => e.primary !== s || e.secondary !== a), [s, a]),
+        y = i.useMemo(() => p.Ek.every((e) => e.primary !== a || e.secondary !== s), [a, s]),
         N = (0, o.Jb)({
             orientation: "horizontal",
             isDisabled: !1,
@@ -150,46 +150,47 @@ let C = function (e) {
     return (0, r.jsxs)("div", {
         className: t,
         children: [
-            (0, r.jsx)(c.vwX, {
+            (0, r.jsx)(c.gNt, {
+                label: h.intl.string(f.default.zSbMdX),
                 id: C,
-                className: x.sectionTitle,
-                children: h.intl.string(f.default.zSbMdX),
+                children: (e) =>
+                    (0, r.jsxs)(
+                        "div",
+                        j(b({}, N), {
+                            id: e.controlId,
+                            "aria-describedby": O,
+                            className: x.pickerGrid,
+                            children: [
+                                p.Ek.map((e) =>
+                                    (0, r.jsx)(
+                                        v,
+                                        {
+                                            palette: e,
+                                            badge: l,
+                                            isSelected: e.primary === a && e.secondary === s,
+                                            onClick: () => E(e),
+                                        },
+                                        "".concat(e.primary).concat(e.secondary),
+                                    ),
+                                ),
+                                (0, r.jsx)(_, {
+                                    badge: l,
+                                    primary: a,
+                                    secondary: s,
+                                    isSelected: y,
+                                    showColorPopout: d,
+                                    setShowColorPopout: u,
+                                    palettePopoutTargetRef: g,
+                                    handleChange: E,
+                                }),
+                            ],
+                        }),
+                    ),
             }),
             (0, r.jsx)(c.nn4, {
                 id: O,
                 children: h.intl.string(h.t.ovbW0d),
             }),
-            (0, r.jsxs)(
-                "div",
-                j(b({}, N), {
-                    "aria-describedby": O,
-                    className: x.pickerGrid,
-                    children: [
-                        p.Ek.map((e) =>
-                            (0, r.jsx)(
-                                _,
-                                {
-                                    palette: e,
-                                    badge: l,
-                                    isSelected: e.primary === s && e.secondary === a,
-                                    onClick: () => E(e),
-                                },
-                                "".concat(e.primary).concat(e.secondary),
-                            ),
-                        ),
-                        (0, r.jsx)(v, {
-                            badge: l,
-                            primary: s,
-                            secondary: a,
-                            isSelected: y,
-                            showColorPopout: d,
-                            setShowColorPopout: u,
-                            palettePopoutTargetRef: g,
-                            handleChange: E,
-                        }),
-                    ],
-                }),
-            ),
         ],
     });
 };

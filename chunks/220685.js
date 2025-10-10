@@ -2,9 +2,9 @@ n.d(t, { Z: () => T }), n(388685), n(35282);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    s = n.n(l),
-    a = n(512722),
-    o = n.n(a),
+    a = n.n(l),
+    s = n(512722),
+    o = n.n(s),
     c = n(442837),
     d = n(215569),
     u = n(481060),
@@ -16,8 +16,8 @@ var r = n(951288),
     x = n(999382),
     b = n(626135),
     j = n(730647),
-    _ = n(584825),
-    v = n(981631),
+    v = n(584825),
+    _ = n(981631),
     C = n(388032),
     O = n(737543);
 let y = [
@@ -29,17 +29,17 @@ let y = [
     E = y[4],
     I = (e) => {
         var t, n;
-        let { guild: l, canEnable: a } = e,
-            c = (0, _.YB)(l.id),
-            { loading: x, updateSubscriptionsSettings: j } = (0, _.QV)(),
-            [I, S] = i.useState(l.features.has(v.oNc.CREATOR_STORE_PAGE)),
+        let { guild: l, canEnable: s } = e,
+            c = (0, v.YB)(l.id),
+            { loading: x, updateSubscriptionsSettings: j } = (0, v.QV)(),
+            [I, S] = i.useState(l.features.has(_.oNc.CREATOR_STORE_PAGE)),
             [T, P] = i.useState(null != (t = null == c ? void 0 : c.store_page_primary_color) ? t : E),
             [w, Z] = i.useState(null == c ? void 0 : c.store_page_trailer_url),
             R = null == w || null != w.match(N),
             [D, A] = i.useState(null != (n = null == c ? void 0 : c.store_page_show_subscriber_count) && n),
             L = i.useRef(null == c ? void 0 : c.store_page_slug).current,
             k =
-                I !== l.features.has(v.oNc.CREATOR_STORE_PAGE) ||
+                I !== l.features.has(_.oNc.CREATOR_STORE_PAGE) ||
                 ((null == c ? void 0 : c.store_page_primary_color) == null && T !== E) ||
                 ((null == c ? void 0 : c.store_page_primary_color) != null &&
                     T !== (null == c ? void 0 : c.store_page_primary_color)) ||
@@ -48,7 +48,7 @@ let y = [
             G = async () => {
                 o()(null != c, "Settings must be defined");
                 let e = {};
-                I !== l.features.has(v.oNc.CREATOR_STORE_PAGE) && (e.store_page_enabled = I),
+                I !== l.features.has(_.oNc.CREATOR_STORE_PAGE) && (e.store_page_enabled = I),
                     (((null == c ? void 0 : c.store_page_primary_color) == null && T !== E) ||
                         ((null == c ? void 0 : c.store_page_primary_color) != null &&
                             T !== (null == c ? void 0 : c.store_page_primary_color))) &&
@@ -60,7 +60,7 @@ let y = [
                         (await j(l.id, e),
                         "store_page_enabled" in e &&
                             b.default.track(
-                                v.rMx.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_TOGGLED,
+                                _.rMx.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_TOGGLED,
                                 (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
@@ -88,16 +88,16 @@ let y = [
                                 })({ enabled: I }, (0, f.hH)(l.id)),
                             ));
             },
-            M = v.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(L),
+            M = _.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(L),
             U = null != w && w === (null == c ? void 0 : c.store_page_trailer_url),
             { shouldRestrictUpdatingCreatorMonetizationSettings: B } = (0, h.gX)(l.id),
             F = B || !R,
-            H = !I && !a;
+            H = !I && !s;
         return (0, r.jsxs)(u.Kqy, {
             gap: 24,
             children: [
-                (0, r.jsx)(u.vwX, {
-                    tag: "h1",
+                (0, r.jsx)(u.X6q, {
+                    variant: "heading-lg/semibold",
                     children: C.intl.string(C.t.N6Tg9P),
                 }),
                 (0, r.jsxs)(u.Kqy, {
@@ -119,13 +119,13 @@ let y = [
                     ],
                 }),
                 (0, r.jsx)(u.izJ, {}),
-                (0, r.jsxs)(u.xJW, {
-                    title: C.intl.string(C.t.N46WOj),
+                (0, r.jsxs)(u.gNt, {
+                    label: C.intl.string(C.t.N46WOj),
                     disabled: B,
                     children: [
                         (0, r.jsx)(g.Z, {
                             value: M,
-                            className: s()({ [O.disabled]: B }),
+                            className: a()({ [O.disabled]: B }),
                         }),
                         (0, r.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
@@ -200,7 +200,7 @@ let y = [
                                 submitting: x,
                                 onReset: () => {
                                     var e, t;
-                                    S(l.features.has(v.oNc.CREATOR_STORE_PAGE)),
+                                    S(l.features.has(_.oNc.CREATOR_STORE_PAGE)),
                                         P(null != (e = null == c ? void 0 : c.store_page_primary_color) ? e : E),
                                         Z(null == c ? void 0 : c.store_page_trailer_url),
                                         A(null != (t = null == c ? void 0 : c.store_page_show_subscriber_count) && t);
@@ -216,7 +216,7 @@ let y = [
 function S() {
     let e = (0, c.e7)([x.Z], () => x.Z.getGuild()),
         t = (0, j.f)(),
-        n = (0, _.qi)(null == e ? void 0 : e.id).some((e) => e.published);
+        n = (0, v.qi)(null == e ? void 0 : e.id).some((e) => e.published);
     return null != e && t
         ? (0, r.jsx)(I, {
               guild: e,

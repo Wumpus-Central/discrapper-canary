@@ -100,11 +100,11 @@ function S(e) {
                             ],
                         }),
                     !ei &&
-                        (0, r.jsxs)("div", {
+                        (0, r.jsx)("div", {
                             className: C.guildPickerContainer,
-                            children: [
-                                (0, r.jsx)(s.vwX, { children: O.intl.string(O.t["5qyruL"]) }),
-                                (0, r.jsxs)("div", {
+                            children: (0, r.jsx)(s.gNt, {
+                                label: O.intl.string(O.t["5qyruL"]),
+                                children: (0, r.jsxs)("div", {
                                     className: C.guildNameContainer,
                                     children: [
                                         (0, r.jsx)(s.Text, {
@@ -121,7 +121,7 @@ function S(e) {
                                         }),
                                     ],
                                 }),
-                            ],
+                            }),
                         }),
                     null == D
                         ? (0, r.jsx)(u.Z, {

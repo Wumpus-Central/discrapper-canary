@@ -124,12 +124,14 @@ class m extends i.PureComponent {
                         onBlur: l,
                     });
                 return (0, r.jsx)(
-                    s.hjN,
+                    "div",
                     {
                         className: o()(null == f ? void 0 : f(c)),
-                        title: m(),
-                        titleId: E,
-                        children: h(y, u),
+                        children: (0, r.jsx)(s.gNt, {
+                            id: E,
+                            label: m(),
+                            children: h(y, u),
+                        }),
                     },
                     g,
                 );

@@ -1,31 +1,26 @@
 n.d(t, { L: () => u });
-var r = n(951288);
-n(647438);
-var i = n(481060),
+var r = n(951288),
+    i = n(481060),
     l = n(962086),
-    s = n(225675),
-    a = n(434404),
+    a = n(225675),
+    s = n(434404),
     o = n(981631),
     c = n(388032),
     d = n(666921);
 function u(e) {
     let { guildId: t, role: n } = e;
-    return (0, r.jsxs)(i.xJW, {
-        title: c.intl.string(c.t.arFPfH),
+    return (0, r.jsx)("div", {
         className: d.container,
-        children: [
-            (0, r.jsx)(i.Text, {
-                variant: "text-sm/normal",
-                className: d.text,
-                children: c.intl.string(c.t["IT/0AA"]),
-            }),
-            (0, r.jsx)(i.zxk, {
+        children: (0, r.jsx)(i.gNt, {
+            label: c.intl.string(c.t.arFPfH),
+            description: c.intl.string(c.t["IT/0AA"]),
+            children: (0, r.jsx)(i.zxk, {
                 size: "sm",
                 variant: "secondary",
                 onClick: () => {
-                    a.Z.close(),
+                    s.Z.close(),
                         (0, l.iD)(t, {
-                            type: s.z.ROLES,
+                            type: a.z.ROLES,
                             roles: { [n.id]: n },
                             returnToSection: o.pNK.ROLES,
                         });
@@ -34,6 +29,6 @@ function u(e) {
                 icon: i.d4D,
                 iconPosition: "end",
             }),
-        ],
+        }),
     });
 }

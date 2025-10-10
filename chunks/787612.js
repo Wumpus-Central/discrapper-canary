@@ -1,17 +1,16 @@
 n.d(t, { A: () => g });
-var r = n(951288);
-n(647438);
-var i = n(481060),
+var r = n(951288),
+    i = n(481060),
     l = n(63063),
-    s = n(295051),
-    a = n(273282),
+    a = n(295051),
+    s = n(273282),
     o = n(194774),
     c = n(981631),
     d = n(388032),
     u = n(64929);
 function g(e) {
     let { guild: t, canManageGuild: n } = e;
-    return (0, r.jsxs)(i.hjN, {
+    return (0, r.jsxs)("div", {
         className: u.container,
         children: [
             (0, r.jsxs)("div", {
@@ -19,7 +18,7 @@ function g(e) {
                 children: [
                     (0, r.jsxs)(i.vwX, {
                         className: u.title,
-                        children: [d.intl.string(d.t.tzGY0t), (0, r.jsx)(s.hH, { guild: t })],
+                        children: [d.intl.string(d.t.tzGY0t), (0, r.jsx)(a.hH, { guild: t })],
                     }),
                     (0, r.jsx)(i.Text, {
                         variant: "text-sm/medium",
@@ -35,7 +34,7 @@ function g(e) {
                             articleURL: l.Z.getArticleURL(c.BhN.GUILD_INVITE_SPLASH),
                         }),
                     }),
-                    (0, r.jsx)(a.c, {
+                    (0, r.jsx)(s.c, {
                         guild: t,
                         canManageGuild: n,
                         buttonClassName: u.button,

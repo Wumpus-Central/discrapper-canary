@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M });
+n.d(t, { Z: () => U });
 var r = n(951288),
     l = n(647438),
     i = n(120356),
@@ -23,9 +23,8 @@ var r = n(951288),
     S = n(981631),
     C = n(388032),
     p = n(87437),
-    D = n(938556),
-    L = n(87819);
-function U(e) {
+    D = n(938556);
+function L(e) {
     var t, n;
     let { log: i, member: a, guild: d } = e,
         { analyticsLocations: m } = (0, _.ZP)(),
@@ -38,12 +37,12 @@ function U(e) {
             a.guildId,
             i.userId,
         ]),
-        v = (0, N.X7)(
+        b = (0, N.X7)(
             null == x ? void 0 : x.guildId,
             null == x ? void 0 : x.userId,
             null != (n = null == x ? void 0 : x.colorStrings) ? n : null,
         ),
-        b = l.useCallback(
+        v = l.useCallback(
             (e) => (t) => {
                 t.preventDefault(), t.stopPropagation(), null != e && (0, T.RE)(e, m);
             },
@@ -57,7 +56,7 @@ function U(e) {
                       asContainer: !0,
                       text: C.intl.string(C.t.mvsi9v),
                       children: (0, r.jsx)(E.P3F, {
-                          onClick: b(x),
+                          onClick: v(x),
                           tag: "span",
                           className: p.username,
                           children: (0, r.jsxs)(E.Text, {
@@ -68,13 +67,13 @@ function U(e) {
                                   (0, r.jsx)(E.PUh, {
                                       name: f.ZP.getName(a.guildId, null, i.user),
                                       colorString: null != (e = null == x ? void 0 : x.colorString) ? e : null,
-                                      colorStrings: v,
+                                      colorStrings: b,
                                   }),
                               ],
                           }),
                       }),
                   });
-        }, [b, i.user, a.guildId, x, v])();
+        }, [v, i.user, a.guildId, x, b])();
     return (0, r.jsxs)("div", {
         className: s()(D.modInfoItem, p.auditLogItem),
         children: [
@@ -163,7 +162,7 @@ function U(e) {
         ],
     });
 }
-function M(e) {
+function U(e) {
     let { member: t } = e,
         n = (0, u.e7)([O.Z], () => O.Z.getGuild(t.guildId), [t.guildId]),
         i = (0, u.e7)([m.Z], () => {
@@ -177,15 +176,14 @@ function M(e) {
     }, [t.guildId, t.userId]),
     null == n || 0 === i.length)
         ? null
-        : (0, r.jsx)(E.xJW, {
-              title: C.intl.string(C.t.flCxLi),
-              titleClassName: L.infoTitle,
+        : (0, r.jsx)(E.gNt, {
+              label: C.intl.string(C.t.flCxLi),
               children:
                   i.length > 0
                       ? (0, r.jsx)(R.WM, {
                             children: i.map((e) =>
                                 (0, r.jsx)(
-                                    U,
+                                    L,
                                     {
                                         log: e,
                                         member: t,

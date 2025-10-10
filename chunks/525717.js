@@ -1,5 +1,4 @@
 e.exports = {
-    container: "container_a429ea",
     row: "row_a429ea",
     revokeInvite: "revokeInvite_a429ea",
     boostZIndex: "boostZIndex_a429ea",

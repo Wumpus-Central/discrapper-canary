@@ -1,4 +1,17 @@
-function r(e, t, n) {
+n.d(t, {
+    Dw: () => p,
+    RM: () => m,
+    SC: () => h,
+    iA: () => E,
+    pj: () => _,
+    xD: () => g,
+});
+var r = n(951288);
+n(647438);
+var i = n(973801),
+    a = n(993365),
+    o = n(864978);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -11,7 +24,23 @@ function r(e, t, n) {
         e
     );
 }
-function i(e, t) {
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -23,7 +52,30 @@ function i(e, t) {
     }
     return n;
 }
-function a(e, t) {
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : c(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function d(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = f(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -32,4 +84,56 @@ function a(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-n(951288), n(647438), n(993365), n(481060), n(864978);
+function _(e) {
+    return (0, r.jsx)(i.bL, u(l({}, e), { className: o.cell }));
+}
+function p(e) {
+    var { children: t } = e,
+        n = d(e, ["children"]);
+    return (0, r.jsx)(
+        i.sg,
+        u(l({}, n), {
+            className: o.column,
+            children: (0, r.jsx)(a.x, {
+                variant: "eyebrow",
+                className: o.columnText,
+                children: t,
+            }),
+        }),
+    );
+}
+function h(e) {
+    return (0, r.jsx)(i.X2, u(l({}, e), { className: o.row }));
+}
+function m(e) {
+    return (0, r.jsx)(i.RM, u(l({}, e), { className: o.body }));
+}
+function g(e) {
+    return (0, r.jsx)(i.xD, u(l({}, e), { className: o.header }));
+}
+function E(e) {
+    var { header: t, footer: n, children: a } = e,
+        s = d(e, ["header", "footer", "children"]);
+    return (0, r.jsx)("div", {
+        className: o.container,
+        children: (0, r.jsxs)(
+            i.iA,
+            u(l({}, s), {
+                className: o.table,
+                children: [
+                    null != t &&
+                        (0, r.jsx)("div", {
+                            className: o.header,
+                            children: t,
+                        }),
+                    a,
+                    null != n &&
+                        (0, r.jsx)("div", {
+                            className: o.footer,
+                            children: n,
+                        }),
+                ],
+            }),
+        ),
+    });
+}

@@ -3,11 +3,10 @@ t.r(e),
         default: () => p,
         openInteractionModal: () => m,
     });
-var i = t(951288);
-t(647438);
-var a = t(793030),
-    r = t(481060),
-    s = t(970184),
+var i = t(951288),
+    a = t(793030),
+    s = t(481060),
+    r = t(970184),
     o = t(471073),
     l = t(293979),
     c = t(954654),
@@ -20,9 +19,9 @@ function p(n) {
             applicationIconURL: f,
             applicationName: b,
             submissionState: x,
-            error: h,
-            validators: j,
-            validationErrors: g,
+            error: g,
+            validators: h,
+            validationErrors: j,
             setValidationErrors: y,
             onSubmit: I,
         } = (0, l.X9)(n, t);
@@ -35,9 +34,9 @@ function p(n) {
             onClose: t,
             children: [
                 (0, i.jsx)(a.xBx, {
-                    leading: (0, i.jsx)(r.qEK, {
+                    leading: (0, i.jsx)(s.qEK, {
                         src: f,
-                        size: r.EFr.SIZE_24,
+                        size: s.EFr.SIZE_24,
                         "aria-label": b,
                         className: u.applicationIcon,
                     }),
@@ -46,24 +45,24 @@ function p(n) {
                 }),
                 (0, i.jsxs)(a.fef, {
                     children: [
-                        null != h && "" !== h
-                            ? (0, i.jsx)(r.Wn, {
-                                  messageType: r.QYI.ERROR,
+                        null != g && "" !== g
+                            ? (0, i.jsx)(s.Wn, {
+                                  messageType: s.QYI.ERROR,
                                   className: u.submissionWarning,
-                                  children: h,
+                                  children: g,
                               })
                             : null,
-                        (0, i.jsx)(r.Wn, {
-                            messageType: r.QYI.WARNING,
+                        (0, i.jsx)(s.Wn, {
+                            messageType: s.QYI.WARNING,
                             className: u.submissionWarning,
                             children: d.intl.format(d.t["dSTy//"], { applicationName: b }),
                         }),
-                        (0, i.jsx)(r.hjN, {
+                        (0, i.jsx)("div", {
                             className: u.components,
-                            children: (0, i.jsx)(s.Il, {
+                            children: (0, i.jsx)(r.Il, {
                                 modal: n,
-                                validators: j,
-                                validationErrors: g,
+                                validators: h,
+                                validationErrors: j,
                                 setValidationErrors: y,
                                 children: (0, c.xX)(m),
                             }),
@@ -91,7 +90,7 @@ function p(n) {
     });
 }
 function m(n) {
-    (0, r.h7j)(
+    (0, s.h7j)(
         (e) =>
             (0, i.jsx)(
                 p,

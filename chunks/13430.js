@@ -77,15 +77,14 @@ let x = i.forwardRef(function (e, t) {
             onFocus: v,
             onBlur: b,
             name: I,
-            labelTag: j,
         } = e,
         {
-            day: N,
-            setDay: S,
-            month: O,
-            setMonth: y,
-            year: C,
-            setYear: A,
+            day: j,
+            setDay: N,
+            month: S,
+            setMonth: O,
+            year: y,
+            setYear: C,
         } = (function (e) {
             let t = null,
                 n = null,
@@ -103,19 +102,19 @@ let x = i.forwardRef(function (e, t) {
                 setYear: u,
             };
         })(n),
-        T = i.useMemo(
+        A = i.useMemo(
             () =>
-                null != N && null != O && null != C
-                    ? o()("".concat(N, "/").concat(O, "/").concat(C), "DD/MM/YYYY")
+                null != j && null != S && null != y
+                    ? o()("".concat(j, "/").concat(S, "/").concat(y), "DD/MM/YYYY")
                     : null,
-            [N, O, C],
+            [j, S, y],
         );
     i.useEffect(() => {
-        a((null == T ? void 0 : T.isValid()) ? T : null);
-    }, [T, a]);
-    let Z = p;
-    null == T || T.isValid() || (Z = u.intl.string(u.t.udnqh4));
-    let P = (function () {
+        a((null == A ? void 0 : A.isValid()) ? A : null);
+    }, [A, a]);
+    let T = p;
+    null == A || A.isValid() || (T = u.intl.string(u.t.udnqh4));
+    let Z = (function () {
             let e = new Date().getFullYear(),
                 t = i.useRef(
                     Array.from(Array(150).keys()).map((t) => ({
@@ -133,44 +132,44 @@ let x = i.forwardRef(function (e, t) {
                 t.current
             );
         })(),
-        [R, L] = i.useState(x ? 0 : -1),
-        w = i.useMemo(_, []),
-        D = {
+        [P, R] = i.useState(x ? 0 : -1),
+        L = i.useMemo(_, []),
+        w = {
             onPopulated: h,
-            sortedInputs: w,
+            sortedInputs: L,
         },
-        k = i.useRef(D);
+        D = i.useRef(w);
     i.useEffect(() => {
-        k.current = D;
+        D.current = w;
     }),
         i.useEffect(() => {
-            let { onPopulated: e, sortedInputs: t } = k.current;
-            if (R >= t.length) {
+            let { onPopulated: e, sortedInputs: t } = D.current;
+            if (P >= t.length) {
                 null == e || e();
                 return;
             }
-        }, [R]);
-    let M = [];
+        }, [P]);
+    let k = [];
     for (let e = 0; e < 3; e++) {
-        let { type: t } = w[e];
+        let { type: t } = L[e];
         switch (t) {
             case "day":
-                M.push({
+                k.push({
                     key: "day",
                     input: (0, r.jsx)(f, {
                         options: g,
-                        selectOption: S,
+                        selectOption: N,
                         children: (0, r.jsx)(c.q4e, {
                             "aria-label": u.intl.string(u.t.Voklra),
                             popoutPosition: "top",
                             placeholder: u.intl.string(u.t.Voklra),
                             options: g,
-                            value: N,
+                            value: j,
                             onChange: (t) => {
-                                S(t), L(e + 1);
+                                N(t), R(e + 1);
                             },
                             maxVisibleItems: 6,
-                            autoFocus: R === e,
+                            autoFocus: P === e,
                             onOpen: () => (null == v ? void 0 : v("".concat(I, "_").concat(t))),
                             onClose: () => (null == b ? void 0 : b("".concat(I, "_").concat(t))),
                         }),
@@ -178,22 +177,22 @@ let x = i.forwardRef(function (e, t) {
                 });
                 break;
             case "month":
-                M.push({
+                k.push({
                     key: "month",
                     input: (0, r.jsx)(f, {
                         options: m,
-                        selectOption: y,
+                        selectOption: O,
                         children: (0, r.jsx)(c.q4e, {
                             "aria-label": u.intl.string(u.t.UDlN8f),
                             popoutPosition: "top",
                             placeholder: u.intl.string(u.t.UDlN8f),
                             options: m,
-                            value: O,
+                            value: S,
                             onChange: (t) => {
-                                y(t), L(e + 1);
+                                O(t), R(e + 1);
                             },
                             maxVisibleItems: 6,
-                            autoFocus: R === e,
+                            autoFocus: P === e,
                             onOpen: () => (null == v ? void 0 : v("".concat(I, "_").concat(t))),
                             onClose: () => (null == b ? void 0 : b("".concat(I, "_").concat(t))),
                         }),
@@ -201,22 +200,22 @@ let x = i.forwardRef(function (e, t) {
                 });
                 break;
             case "year":
-                M.push({
+                k.push({
                     key: "year",
                     input: (0, r.jsx)(f, {
-                        options: P,
-                        selectOption: A,
+                        options: Z,
+                        selectOption: C,
                         children: (0, r.jsx)(c.q4e, {
                             "aria-label": u.intl.string(u.t.ZWr5WF),
                             popoutPosition: "top",
                             placeholder: u.intl.string(u.t.ZWr5WF),
-                            options: P,
-                            value: C,
+                            options: Z,
+                            value: y,
                             onChange: (t) => {
-                                A(t), L(e + 1);
+                                C(t), R(e + 1);
                             },
                             maxVisibleItems: 6,
-                            autoFocus: R === e,
+                            autoFocus: P === e,
                             onOpen: () => (null == v ? void 0 : v("".concat(I, "_").concat(t))),
                             onClose: () => (null == b ? void 0 : b("".concat(I, "_").concat(t))),
                         }),
@@ -224,18 +223,15 @@ let x = i.forwardRef(function (e, t) {
                 });
         }
     }
-    return (0, r.jsxs)("fieldset", {
+    return (0, r.jsx)("fieldset", {
         className: s()(d.container, l),
-        children: [
-            (0, r.jsx)(c.vwX, {
-                tag: null != j ? j : "legend",
-                required: E,
-                error: Z,
-                children: u.intl.string(u.t.xNpFJy),
-            }),
-            (0, r.jsx)("div", {
+        children: (0, r.jsx)(c.gNt, {
+            label: u.intl.string(u.t.xNpFJy),
+            required: E,
+            errorMessage: null != T ? T : void 0,
+            children: (0, r.jsx)("div", {
                 className: d.inputs,
-                children: M.map((e, t) => {
+                children: k.map((e, t) => {
                     let { key: n, input: i } = e;
                     return (0, r.jsx)(
                         "div",
@@ -248,6 +244,6 @@ let x = i.forwardRef(function (e, t) {
                     );
                 }),
             }),
-        ],
+        }),
     });
 });

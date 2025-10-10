@@ -13,11 +13,13 @@ let u = () =>
         className: d.previewPanel,
         children: [
             (0, a.jsx)(o.a, { className: d.previewSection }),
-            (0, a.jsxs)(r.hjN, {
-                title: "Shop Overrides",
-                tag: "h1",
+            (0, a.jsxs)("div", {
                 className: d.previewSection,
                 children: [
+                    (0, a.jsx)(r.X6q, {
+                        variant: "heading-md/semibold",
+                        children: "Shop Overrides",
+                    }),
                     (0, a.jsx)(s.a, {}),
                     (0, a.jsx)(c.Z, { className: d.divider }),
                     (0, a.jsx)(l.Z, {}),

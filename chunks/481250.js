@@ -1,5 +1,5 @@
 n.d(t, {
-    VE: () => Z,
+    VE: () => x,
     lV: () => R,
 }),
     n(539854),
@@ -31,7 +31,7 @@ let C = {
     [D.Z.LOW]: "Low Quality Stream",
     [D.Z.HIGH]: "High Quality Stream",
 };
-function Z(e) {
+function x(e) {
     let t = [],
         n = 0;
     for (
@@ -61,7 +61,7 @@ function Z(e) {
         );
     return t;
 }
-let x = {
+let Z = {
     ssrc: 1,
     codec: 2,
 };
@@ -76,10 +76,10 @@ function R(e) {
             showUserInfo: N = !1,
             showSimulcastOverride: I = !1,
         } = e,
-        [k, B] = a.useState("0"),
-        w = (0, s.e7)([y.Z], () => (N ? y.Z.getGuildId() : null)),
+        [k, w] = a.useState("0"),
+        B = (0, s.e7)([y.Z], () => (N ? y.Z.getGuildId() : null)),
         A = (0, s.e7)([v.default], () => (N && null != R ? v.default.getUser(R) : null)),
-        L = (0, s.e7)([h.ZP], () => (N && null != w && null != R ? h.ZP.getNick(w, R) : null));
+        L = (0, s.e7)([h.ZP], () => (N && null != B && null != R ? h.ZP.getNick(B, R) : null));
     if (null == t || (N && null == R) || 0 === t.length) return (0, r.jsx)(c.$jN, { type: c.$jN.Type.SPINNING_CIRCLE });
     let T = F;
     N && null != A && (T = "".concat(F, " \u2014 ").concat(null != L ? L : E.ZP.getName(A)));
@@ -109,8 +109,8 @@ function R(e) {
         G = (function (e, t, n, a, i) {
             let o = [];
             for (let t of Object.keys(e).sort((e, t) => {
-                let n = x[e],
-                    r = x[t];
+                let n = Z[e],
+                    r = Z[t];
                 return n !== r
                     ? void 0 === n
                         ? 1
@@ -141,7 +141,7 @@ function R(e) {
                     );
             }
             return (0, r.jsxs)(
-                c.hjN,
+                "div",
                 {
                     className: j.marginBottom40,
                     children: [
@@ -164,7 +164,7 @@ function R(e) {
                                       })
                                     : null;
                             })(e, n, a, i),
-                        Z(o),
+                        x(o),
                     ],
                 },
                 "".concat(e.type, " + ").concat(e.ssrc),
@@ -178,35 +178,33 @@ function R(e) {
             null != S &&
             (0, r.jsx)(m.Z, {
                 className: j.marginBottom20,
-                children: (0, r.jsxs)(m.Z.Child, {
+                children: (0, r.jsx)(m.Z.Child, {
                     basis: "100%",
-                    children: [
-                        (0, r.jsx)(c.vwX, {
-                            className: j.marginBottom8,
-                            children: "Simulcast Override",
-                        }),
-                        (0, r.jsx)(c.q4e, {
-                            value: g.ZP.getSimulcastDebugOverride(R, n),
-                            onChange: (e) => {
-                                d.MS(R, n, e);
-                            },
-                            options: Object.values(D.Z).map((e) => ({
-                                value: e,
-                                label: C[e],
-                            })),
-                        }),
-                    ],
+                    children: (0, r.jsx)(c.q4e, {
+                        label: "Simulcast Override",
+                        value: g.ZP.getSimulcastDebugOverride(R, n),
+                        onChange: (e) => {
+                            d.MS(R, n, e);
+                        },
+                        options: Object.values(D.Z).map((e) => ({
+                            value: e,
+                            label: C[e],
+                        })),
+                    }),
                 }),
             });
-    return (0, r.jsxs)(c.hjN, {
-        tag: c.RB0.H2,
-        title: T,
+    return (0, r.jsxs)(c.Kqy, {
+        gap: 16,
         children: [
+            (0, r.jsx)(c.X6q, {
+                variant: "heading-md/medium",
+                children: T,
+            }),
             (0, r.jsx)(c.njP, {
                 type: "top",
                 look: "brand",
                 selectedItem: k,
-                onItemSelect: B,
+                onItemSelect: w,
                 className: P.tabBar,
                 children: O,
             }),

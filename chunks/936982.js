@@ -16,23 +16,29 @@ let f = () => {
     }, []),
     e)
         ? (0, r.jsx)(l.Z, {})
-        : (0, r.jsx)(o.hjN, {
-              tag: o.RB0.H1,
-              title: d.intl.string(d.t["Ig/XFR"]),
-              children: (0, r.jsxs)(o.ubH, {
-                  theme: t,
-                  children: [
-                      (0, r.jsx)(o.oxh, {
-                          darkSrc: n(703152),
-                          lightSrc: n(548617),
-                          width: 230,
-                          height: 220,
-                      }),
-                      (0, r.jsx)(o.OZU, {
-                          note: d.intl.string(d.t.WenGZ2),
-                          children: d.intl.string(d.t["aoLS8/"]),
-                      }),
-                  ],
-              }),
+        : (0, r.jsxs)(o.Kqy, {
+              gap: 16,
+              children: [
+                  (0, r.jsx)(o.X6q, {
+                      variant: "heading-lg/semibold",
+                      color: "header-primary",
+                      children: d.intl.string(d.t["Ig/XFR"]),
+                  }),
+                  (0, r.jsxs)(o.ubH, {
+                      theme: t,
+                      children: [
+                          (0, r.jsx)(o.oxh, {
+                              darkSrc: n(703152),
+                              lightSrc: n(548617),
+                              width: 230,
+                              height: 220,
+                          }),
+                          (0, r.jsx)(o.OZU, {
+                              note: d.intl.string(d.t.WenGZ2),
+                              children: d.intl.string(d.t["aoLS8/"]),
+                          }),
+                      ],
+                  }),
+              ],
           });
 };

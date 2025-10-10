@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(784620), n(973216);
+n.d(t, { Z: () => Z }), n(784620), n(973216);
 var r = n(951288),
     a = n(647438),
     i = n(392711),
@@ -21,7 +21,7 @@ var r = n(951288),
     P = n(388032),
     j = n(966117),
     C = n(197571);
-class Z extends a.PureComponent {
+class x extends a.PureComponent {
     render() {
         var e, t;
         let { transport: n, mediaSessionId: a, hidePersonalInformation: i, hostname: o } = this.props;
@@ -125,11 +125,13 @@ class Z extends a.PureComponent {
                     );
                 })(e.displayName, e.bitrate, e.lost),
             );
-        return (0, r.jsxs)(s.hjN, {
-            tag: s.RB0.H2,
-            title: P.intl.string(P.t.wU9INz) + (null != a ? " - " + a : ""),
+        return (0, r.jsxs)(s.Kqy, {
             className: j.allowSelection,
             children: [
+                (0, r.jsx)(s.X6q, {
+                    variant: "heading-md/medium",
+                    children: P.intl.string(P.t.wU9INz) + (null != a ? " - " + a : ""),
+                }),
                 (0, v.VE)(u),
                 0 === g.length ? null : (0, r.jsx)(s.izJ, { className: C.marginBottom20 }),
                 (0, v.VE)(g),
@@ -137,7 +139,7 @@ class Z extends a.PureComponent {
         });
     }
 }
-let x = o.ZP.connectStores([u.ZP, d.Z, h.Z, p.Z], (e) => {
+let Z = o.ZP.connectStores([u.ZP, d.Z, h.Z, p.Z], (e) => {
     var t;
     let { context: n, index: r } = e,
         a = u.ZP.getAllStats(n)[r],
@@ -154,4 +156,4 @@ let x = o.ZP.connectStores([u.ZP, d.Z, h.Z, p.Z], (e) => {
         mediaSessionId: d.Z.getMediaSessionId(),
         hostname: g.Z.getShortHostname(l),
     };
-})(Z);
+})(x);

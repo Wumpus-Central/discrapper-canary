@@ -66,7 +66,8 @@ function g(e) {
                     "div",
                     {
                         children: [
-                            (0, i.jsx)(l.vwX, {
+                            (0, i.jsx)(l.Text, {
+                                variant: "text-md/medium",
                                 className: b.groupHeader,
                                 children: m.intl.format(m.t.TKDIZm, {
                                     channelHook: () =>

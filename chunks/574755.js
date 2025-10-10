@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => O });
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -16,61 +16,60 @@ var r = n(951288),
     g = n(703288),
     E = n(491758),
     b = n(233685),
-    y = n(388032),
-    O = n(40435);
-function v(e) {
+    y = n(388032);
+function O(e) {
     let { className: t, showHeader: n = !0 } = e,
-        v = d.tU.useSetting(),
-        { enableViewerClipping: I } = u.Z.useExperiment({ location: "Clips Settings" }, { autoTrackExposure: !1 }),
-        { analyticsLocations: T } = (0, l.ZP)(),
-        S = (0, _.Go)(),
-        { viewerClipsEnabled: A } = (0, a.cj)([p.Z], () => p.Z.getSettings()),
-        C = (0, h.Z)(f.Z);
+        O = d.tU.useSetting(),
+        { enableViewerClipping: v } = u.Z.useExperiment({ location: "Clips Settings" }, { autoTrackExposure: !1 }),
+        { analyticsLocations: I } = (0, l.ZP)(),
+        T = (0, _.Go)(),
+        { viewerClipsEnabled: S } = (0, a.cj)([p.Z], () => p.Z.getSettings()),
+        A = (0, h.Z)(f.Z);
     return (
         i.useEffect(() => {
             (0, c.Q3)(o.z.CLIPS_SETTINGS_BETA_TAG);
         }),
         (0, r.jsx)(l.Gt, {
-            value: T,
+            value: I,
             children: (0, r.jsxs)(s.Kqy, {
                 gap: 20,
                 children: [
-                    (S || n) &&
-                        (0, r.jsx)(s.hjN, {
+                    (T || n) &&
+                        (0, r.jsxs)("div", {
                             className: t,
-                            tag: s.RB0.H1,
-                            title: n
-                                ? (0, r.jsxs)("div", {
-                                      className: O.headerContainer,
-                                      children: [y.intl.string(y.t.z2jK6e), (0, r.jsx)(g.Z, {})],
-                                  })
-                                : null,
-                            children:
-                                S &&
-                                (0, r.jsx)("form", {
-                                    onSubmit: (e) => e.preventDefault(),
-                                    children: (0, r.jsxs)(s.Kqy, {
-                                        gap: 24,
-                                        children: [(0, r.jsx)(E.Z, {}), (0, r.jsx)(b.Z, {})],
+                            children: [
+                                n
+                                    ? (0, r.jsxs)(s.X6q, {
+                                          variant: "heading-lg/semibold",
+                                          children: [y.intl.string(y.t.z2jK6e), " ", (0, r.jsx)(g.Z, {})],
+                                      })
+                                    : null,
+                                T &&
+                                    (0, r.jsx)("form", {
+                                        onSubmit: (e) => e.preventDefault(),
+                                        children: (0, r.jsxs)(s.Kqy, {
+                                            gap: 24,
+                                            children: [(0, r.jsx)(E.Z, {}), (0, r.jsx)(b.Z, {})],
+                                        }),
                                     }),
-                                }),
+                            ],
                         }),
-                    S && (0, r.jsx)(s.izJ, {}),
+                    T && (0, r.jsx)(s.izJ, {}),
                     (0, r.jsxs)(s.Kqy, {
                         gap: 16,
                         children: [
                             (0, r.jsx)(s.rsf, {
                                 label: y.intl.string(y.t.AGDDkJ),
                                 description: y.intl.string(y.t["wW9/zc"]),
-                                checked: v,
+                                checked: O,
                                 onChange: (e) => m.yg({ allowVoiceRecording: e }),
                             }),
-                            I &&
-                                C &&
+                            v &&
+                                A &&
                                 (0, r.jsx)(s.rsf, {
                                     label: y.intl.string(y.t.NWw7kZ),
                                     description: y.intl.string(y.t["0vjy8P"]),
-                                    checked: A,
+                                    checked: S,
                                     onChange: (e) =>
                                         m.yl({
                                             enabled: e,

@@ -8,7 +8,6 @@ e.exports = {
     flowerStar: "flowerStar__74a6a",
     descriptionWrapper: "descriptionWrapper__74a6a",
     divider: "divider__74a6a",
-    addChannelSubtext: "addChannelSubtext__74a6a",
     welcomeChannel: "welcomeChannel__74a6a",
     dragging: "dragging__74a6a",
     channelTitleIcon: "channelTitleIcon__74a6a",

@@ -92,9 +92,8 @@ function O() {
                     }),
                 ],
             })),
-        (0, r.jsxs)(d.xJW, {
-            title: m.intl.string(m.t["sqUm+v"]),
-            titleId: y,
+        (0, r.jsxs)(d.C3N, {
+            label: m.intl.string(m.t["sqUm+v"]),
             className: g.sensitivity,
             children: [
                 I &&

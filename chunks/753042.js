@@ -26,9 +26,8 @@ function g(e) {
     }, [t.guildId]),
     null == n)
         ? null
-        : (0, r.jsx)(s.xJW, {
-              title: I.intl.string(I.t["ldCE/v"]),
-              titleClassName: m.infoTitle,
+        : (0, r.jsx)(s.gNt, {
+              label: I.intl.string(I.t["ldCE/v"]),
               children: (0, r.jsxs)(A.WM, {
                   children: [
                       (0, r.jsx)(A._2, {

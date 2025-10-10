@@ -277,37 +277,39 @@ class y extends i.PureComponent {
     render() {
         let { installationPaths: e, installationPathsMetadata: t, defaultInstallationPath: n } = this.props,
             { editingPath: i } = this.state;
-        return (0, r.jsxs)(o.hjN, {
+        return (0, r.jsx)("div", {
             className: b.wrapper,
-            title: m.intl.string(m.t.aLszkJ),
-            children: [
-                e.map((e) => {
-                    let { path: l, label: a } = e;
-                    return (0, r.jsx)(
-                        E,
-                        {
-                            path: l,
-                            label: a,
-                            metadata: t[l],
-                            isDefault: n === l,
-                            editingPath: i,
-                            hasGamesInstalledInPath: p.Z.hasGamesInstalledInPath(l),
-                            onToggleEditing: this.handleToggleEditing,
-                        },
-                        l,
-                    );
-                }),
-                (0, r.jsx)("div", {
-                    className: b.buttonRowWrapper,
-                    children: (0, r.jsx)(o.zxk, {
-                        variant: "primary",
-                        size: "sm",
-                        text: m.intl.string(m.t.pnZ2ur),
-                        disabled: !h.isPlatformEmbedded,
-                        onClick: this.handleAddInstallationLocation,
+            children: (0, r.jsxs)(o.gNt, {
+                label: m.intl.string(m.t.aLszkJ),
+                children: [
+                    e.map((e) => {
+                        let { path: l, label: a } = e;
+                        return (0, r.jsx)(
+                            E,
+                            {
+                                path: l,
+                                label: a,
+                                metadata: t[l],
+                                isDefault: n === l,
+                                editingPath: i,
+                                hasGamesInstalledInPath: p.Z.hasGamesInstalledInPath(l),
+                                onToggleEditing: this.handleToggleEditing,
+                            },
+                            l,
+                        );
                     }),
-                }),
-            ],
+                    (0, r.jsx)("div", {
+                        className: b.buttonRowWrapper,
+                        children: (0, r.jsx)(o.zxk, {
+                            variant: "primary",
+                            size: "sm",
+                            text: m.intl.string(m.t.pnZ2ur),
+                            disabled: !h.isPlatformEmbedded,
+                            onClick: this.handleAddInstallationLocation,
+                        }),
+                    }),
+                ],
+            }),
         });
     }
     constructor(...e) {

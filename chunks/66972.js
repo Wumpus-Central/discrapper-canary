@@ -1,23 +1,21 @@
-n.d(t, { Z: () => f }), n(388685);
-var r = n(951288);
-n(647438);
-var i = n(481060),
+n.d(t, { Z: () => p }), n(388685);
+var r = n(951288),
+    i = n(481060),
     l = n(723047),
-    s = n(727843),
-    a = n(290348),
+    a = n(727843),
+    s = n(290348),
     o = n(783454),
     c = n(893729),
     d = n(619326),
     u = n(553204),
     g = n(388032),
-    m = n(605041),
-    p = n(549556);
-function f() {
-    let { editStateId: e, guildId: t } = (0, s.N)(),
-        [, f] = a.p9(e, t),
-        [h, x] = a.Ek(e, t),
-        b = a.qs(e, t);
-    function j() {
+    m = n(549556);
+function p() {
+    let { editStateId: e, guildId: t } = (0, a.N)(),
+        [, p] = s.p9(e, t),
+        [f, h] = s.Ek(e, t),
+        x = s.qs(e, t);
+    function b() {
         (0, i.ZDy)(async () => {
             let { default: e } = await n.e("22942").then(n.bind(n, 660727));
             return (n) => {
@@ -53,12 +51,12 @@ function f() {
                         {
                             guildId: t,
                             onUploadIcon: (e) =>
-                                f({
+                                p({
                                     icon: e,
                                     unicodeEmoji: null,
                                 }),
                             onSelectUnicodeEmoji: (e) =>
-                                f({
+                                p({
                                     icon: null,
                                     unicodeEmoji: e,
                                 }),
@@ -80,7 +78,7 @@ function f() {
             };
         });
     }
-    let _ = (0, l.mY)();
+    let j = (0, l.mY)();
     return (0, r.jsx)(o.Z, {
         title: g.intl.string(g.t["Ah+sQ0"]),
         description: g.intl.string(g.t.ixbWiI),
@@ -88,60 +86,53 @@ function f() {
             direction: "vertical",
             gap: 24,
             children: [
-                (0, r.jsx)(i.hjN, {
-                    title: g.intl.string(g.t["6OUqDQ"]),
-                    disabled: _,
+                (0, r.jsx)(i.gNt, {
+                    label: g.intl.string(g.t["6OUqDQ"]),
+                    disabled: j,
                     children: (0, r.jsx)(d.Z, {
-                        value: h,
-                        onChange: x,
-                        disabled: _,
+                        value: f,
+                        onChange: h,
+                        disabled: j,
                     }),
                 }),
-                (0, r.jsxs)(i.hjN, {
-                    title: g.intl.string(g.t["zn8/AQ"]),
-                    disabled: _,
-                    children: [
-                        (0, r.jsx)(i.R94, {
-                            type: i.R94.Types.DESCRIPTION,
-                            className: m.formDescription,
-                            disabled: _,
-                            children: g.intl.string(g.t.AqHUra),
-                        }),
-                        (0, r.jsxs)(i.Kqy, {
-                            direction: "horizontal",
-                            gap: 16,
-                            children: [
-                                (0, r.jsx)(u.Z, {
-                                    role: b,
-                                    "aria-label": g.intl.string(g.t.mD1oGB),
-                                    onClick: j,
-                                    disabled: _,
-                                }),
-                                (0, r.jsx)(i.zxk, {
-                                    variant: "secondary",
-                                    onClick: j,
-                                    disabled: _,
-                                    text: g.intl.string(g.t.mD1oGB),
-                                }),
-                            ],
-                        }),
-                    ],
+                (0, r.jsx)(i.gNt, {
+                    label: g.intl.string(g.t["zn8/AQ"]),
+                    disabled: j,
+                    description: g.intl.string(g.t.AqHUra),
+                    children: (0, r.jsxs)(i.Kqy, {
+                        direction: "horizontal",
+                        gap: 16,
+                        children: [
+                            (0, r.jsx)(u.Z, {
+                                role: x,
+                                "aria-label": g.intl.string(g.t.mD1oGB),
+                                onClick: b,
+                                disabled: j,
+                            }),
+                            (0, r.jsx)(i.zxk, {
+                                variant: "secondary",
+                                onClick: b,
+                                disabled: j,
+                                text: g.intl.string(g.t.mD1oGB),
+                            }),
+                        ],
+                    }),
                 }),
                 (0, r.jsx)(i.Rny, {
                     children: (0, r.jsxs)("div", {
-                        className: p.previewContainer,
+                        className: m.previewContainer,
                         "aria-hidden": !0,
                         children: [
                             (0, r.jsx)(c.Z, {
                                 guildId: t,
-                                role: b,
-                                className: p.messageContainer,
+                                role: x,
+                                className: m.messageContainer,
                                 theme: "light",
                             }),
                             (0, r.jsx)(c.Z, {
                                 guildId: t,
-                                role: b,
-                                className: p.messageContainer,
+                                role: x,
+                                className: m.messageContainer,
                                 theme: "dark",
                             }),
                         ],

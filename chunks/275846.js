@@ -1,4 +1,4 @@
-n.d(t, { i: () => _ }), n(781311);
+n.d(t, { i: () => f }), n(781311);
 var r = n(951288);
 n(647438);
 var i = n(49800),
@@ -6,10 +6,9 @@ var i = n(49800),
     o = n(434333),
     s = n(540863),
     l = n(383838),
-    c = n(789164),
-    u = n(512983),
-    d = n(231338);
-let f = {
+    c = n(512983),
+    u = n(231338);
+let d = {
         id: "formnotice",
         name: "FormNotice",
         component: function (e) {
@@ -71,10 +70,10 @@ let f = {
             },
         },
     },
-    _ = {
+    f = {
         title: "Form Components",
         stories: [
-            f,
+            d,
             {
                 id: "formitem",
                 name: "FormItem",
@@ -179,7 +178,7 @@ let f = {
                                             },
                                             children: [e, ":"],
                                         }),
-                                        (0, r.jsx)(u.v, {
+                                        (0, r.jsx)(c.v, {
                                             tag: e,
                                             disabled: n,
                                             required: i,
@@ -218,60 +217,6 @@ let f = {
                 },
             },
             {
-                id: "formsection",
-                name: "FormSection",
-                component: function (e) {
-                    let { title: t, disabled: n, tag: i } = e;
-                    return (0, r.jsxs)(c.h, {
-                        title: t,
-                        disabled: n,
-                        tag: i,
-                        children: [
-                            (0, r.jsx)(a.Text, {
-                                variant: "text-md/normal",
-                                children: "This is content within the form section.",
-                            }),
-                            (0, r.jsx)(a.oil, { placeholder: "Enter text here..." }),
-                        ],
-                    });
-                },
-                controls: {
-                    title: {
-                        type: "text",
-                        label: "Title",
-                        defaultValue: "Section Title",
-                    },
-                    disabled: {
-                        type: "boolean",
-                        label: "Disabled",
-                        defaultValue: !1,
-                    },
-                    tag: {
-                        type: "select",
-                        label: "Title Tag",
-                        defaultValue: "h5",
-                        options: [
-                            {
-                                label: "H1",
-                                value: "h1",
-                            },
-                            {
-                                label: "H2",
-                                value: "h2",
-                            },
-                            {
-                                label: "H3",
-                                value: "h3",
-                            },
-                            {
-                                label: "H5",
-                                value: "h5",
-                            },
-                        ],
-                    },
-                },
-            },
-            {
                 id: "formerrorblock",
                 name: "FormErrorBlock",
                 component: function (e) {
@@ -279,7 +224,7 @@ let f = {
                         l = "check" === s ? a.owK : a.Mgn;
                     return (0, r.jsx)(o.k, {
                         backgroundColor: n,
-                        onDismiss: i ? d.dG : void 0,
+                        onDismiss: i ? u.dG : void 0,
                         icon: l,
                         children: t,
                     });

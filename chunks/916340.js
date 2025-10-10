@@ -3,7 +3,6 @@ e.exports = {
     circular: "circular__1df30",
     spinner: "spinner__1df30",
     recentAvatarContainer: "recentAvatarContainer__1df30",
-    recentAvatarsHeading: "recentAvatarsHeading__1df30",
     recentAvatarSlots: "recentAvatarSlots__1df30",
     recentAvatarList: "recentAvatarList__1df30",
     recentAvatarButtonContainer: "recentAvatarButtonContainer__1df30",

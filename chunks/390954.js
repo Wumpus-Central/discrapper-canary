@@ -200,30 +200,21 @@ class T extends a.PureComponent {
             );
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(c.vwX, {
-                    tag: "h1",
-                    children: (0, i.jsxs)("div", {
-                        className: E.titleContainer,
-                        children: [
-                            (0, i.jsx)(c.ua7, {
-                                position: "left",
-                                text: g.intl.string(g.t.h6V3uL),
-                                children: (e) =>
-                                    (0, i.jsx)(
-                                        c.mBM,
-                                        y(
-                                            {
-                                                size: "md",
-                                                color: "currentColor",
-                                                className: E.lockIcon,
-                                            },
-                                            e,
-                                        ),
-                                    ),
-                            }),
-                            g.intl.string(g.t.W26xGR),
-                        ],
-                    }),
+                (0, i.jsxs)(c.X6q, {
+                    variant: "heading-lg/semibold",
+                    children: [
+                        (0, i.jsx)(c.mBM, {
+                            size: "sm",
+                            className: E.lockIcon,
+                        }),
+                        " ",
+                        g.intl.string(g.t.W26xGR),
+                    ],
+                }),
+                (0, i.jsx)(c.Text, {
+                    variant: "text-sm/normal",
+                    color: "text-secondary",
+                    children: g.intl.string(g.t.h6V3uL),
                 }),
                 f,
                 d !== l.length - 1 ? (0, i.jsx)(c.izJ, { className: E.__invalid_sourceDivider }) : null,

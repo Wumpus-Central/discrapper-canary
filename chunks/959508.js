@@ -2,8 +2,8 @@ n.d(t, { Z: () => O }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    s = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    s = n(442837),
     o = n(28664),
     c = n(481060),
     d = n(603211),
@@ -16,8 +16,8 @@ var r = n(951288),
     x = n(208665),
     b = n(976983),
     j = n(290511),
-    _ = n(388032),
-    v = n(814939);
+    v = n(388032),
+    _ = n(814939);
 let C = { optionErrors: [] };
 function O(e) {
     var t;
@@ -33,7 +33,7 @@ function O(e) {
             onPromptDragStart: T,
             onPromptDragReset: P,
         } = e,
-        w = (0, a.e7)([f.Z], () => f.Z.editedDefaultChannelIds),
+        w = (0, s.e7)([f.Z], () => f.Z.editedDefaultChannelIds),
         {
             drag: Z,
             dragSourcePosition: R,
@@ -47,7 +47,7 @@ function O(e) {
             onDragComplete: S,
             onDragReset: P,
         }),
-        L = (0, a.cj)([x.Z], () => {
+        L = (0, s.cj)([x.Z], () => {
             var e;
             return null != (e = x.Z.errors[b]) ? e : C;
         }),
@@ -57,16 +57,16 @@ function O(e) {
         F = L.config,
         H = l.options.length >= j.fY,
         z = (0, g.kl)(n.id, Array.from(w), [l]).length - w.size,
-        W = i.useRef(null),
-        V = i.useRef(b);
+        V = i.useRef(null),
+        W = i.useRef(b);
     return (i.useEffect(() => {
-        V.current = b;
+        W.current = b;
     }),
     i.useLayoutEffect(() => {
         setTimeout(() => {
-            if (0 === V.current && !u) {
+            if (0 === W.current && !u) {
                 var e;
-                null == (e = W.current) || e.focus();
+                null == (e = V.current) || e.focus();
             }
         }, 0);
     }, [u]),
@@ -77,29 +77,29 @@ function O(e) {
                   onFocus: () => U(!0),
                   onBlur: () => U(!1),
                   onMouseLeave: () => U(!1),
-                  className: s()(v.container, {
-                      [v.dropIndicatorBefore]: null != R && b < R,
-                      [v.dropIndicatorAfter]: null != R && b > R,
-                      [v.containerFocused]: M,
+                  className: a()(_.container, {
+                      [_.dropIndicatorBefore]: null != R && b < R,
+                      [_.dropIndicatorAfter]: null != R && b > R,
+                      [_.containerFocused]: M,
                   }),
                   ref: (e) => {
                       Z(D(e));
                   },
                   children: [
                       (0, r.jsx)("div", {
-                          className: v.dragContainer,
+                          className: _.dragContainer,
                           onMouseEnter: () => A(!0),
                           onMouseLeave: () => A(!1),
                           children: (0, r.jsx)(c.Vni, {
                               size: "xs",
                               color: "currentColor",
-                              className: v.dragIcon,
+                              className: _.dragIcon,
                           }),
                       }),
                       (0, r.jsx)(c.Text, {
                           variant: "text-xs/semibold",
                           color: "text-muted",
-                          children: _.intl.format(_.t.yjS3zs, { index: b + 1 }),
+                          children: v.intl.format(v.t.yjS3zs, { index: b + 1 }),
                       }),
                       (0, r.jsx)(c.Text, {
                           variant: "text-lg/semibold",
@@ -107,7 +107,7 @@ function O(e) {
                           children: l.title,
                       }),
                       (0, r.jsx)(c.P3F, {
-                          className: v.collapseButton,
+                          className: _.collapseButton,
                           onClick: () => G(!1),
                           children: (0, r.jsx)(m.Z, {
                               direction: m.Z.Directions.DOWN,
@@ -117,15 +117,15 @@ function O(e) {
                       }),
                       (0, r.jsx)(o.u, {
                           asContainer: !0,
-                          text: _.intl.string(_.t["Ku+86e"]),
+                          text: v.intl.string(v.t["Ku+86e"]),
                           children: (0, r.jsx)("div", {
-                              className: v.closeIcon,
+                              className: _.closeIcon,
                               children: (0, r.jsx)(c.hU, {
                                   size: "sm",
                                   icon: c.XHJ,
                                   variant: "icon-only",
                                   onClick: () => (0, h.fi)(n, l.id),
-                                  "aria-label": _.intl.string(_.t["Ku+86e"]),
+                                  "aria-label": v.intl.string(v.t["Ku+86e"]),
                               }),
                           }),
                       }),
@@ -137,34 +137,34 @@ function O(e) {
                   tabIndex: 0,
                   onFocus: () => U(!0),
                   onBlur: () => U(!1),
-                  className: s()(v.container, {
-                      [v.dropIndicatorBefore]: null != R && b < R,
-                      [v.dropIndicatorAfter]: null != R && b > R,
-                      [v.containerFocused]: M,
+                  className: a()(_.container, {
+                      [_.dropIndicatorBefore]: null != R && b < R,
+                      [_.dropIndicatorAfter]: null != R && b > R,
+                      [_.containerFocused]: M,
                   }),
                   ref: (e) => {
                       Z(D(e));
                   },
                   children: [
                       (0, r.jsx)("div", {
-                          className: v.dragContainer,
+                          className: _.dragContainer,
                           onMouseEnter: () => A(!0),
                           onMouseLeave: () => A(!1),
                           children: (0, r.jsx)(c.Vni, {
                               size: "xs",
                               color: "currentColor",
-                              className: v.dragIcon,
+                              className: _.dragIcon,
                           }),
                       }),
                       (0, r.jsxs)(c.Kqy, {
                           gap: 16,
                           children: [
                               (0, r.jsx)(c.oil, {
-                                  label: _.intl.formatToPlainString(_.t.yjS3zs, { index: b + 1 }),
-                                  inputRef: W,
+                                  label: v.intl.formatToPlainString(v.t.yjS3zs, { index: b + 1 }),
+                                  inputRef: V,
                                   value: l.title,
                                   onChange: (e) => (0, h.Kk)(n, l.id, { title: e }),
-                                  placeholder: _.intl.string(_.t.QMCuCg),
+                                  placeholder: v.intl.string(v.t.QMCuCg),
                                   maxLength: j.iU,
                                   error: L.title,
                               }),
@@ -172,39 +172,37 @@ function O(e) {
                                   prompt: l,
                                   guild: n,
                               }),
-                              (0, r.jsxs)(c.xJW, {
-                                  title: H
-                                      ? _.intl.formatToPlainString(_.t.AbvhZG, {
+                              (0, r.jsx)(c.gNt, {
+                                  errorMessage: B,
+                                  label: H
+                                      ? v.intl.formatToPlainString(v.t.AbvhZG, {
                                             count: l.options.length,
                                             total: j.qm,
                                         })
-                                      : _.intl.formatToPlainString(_.t.b7VxYW, {
+                                      : v.intl.formatToPlainString(v.t.b7VxYW, {
                                             count: l.options.length,
                                             total: j.qm,
                                         }),
-                                  children: [
-                                      (0, r.jsx)(N, {
-                                          guild: n,
-                                          prompt: l,
-                                          promptIndex: b,
-                                          errors: L,
-                                          singleColumn: I,
-                                      }),
-                                      null != B ? (0, r.jsx)(c.pdY, { error: B }) : null,
-                                  ],
+                                  children: (0, r.jsx)(N, {
+                                      guild: n,
+                                      prompt: l,
+                                      promptIndex: b,
+                                      errors: L,
+                                      singleColumn: I,
+                                  }),
                               }),
                           ],
                       }),
                       (0, r.jsxs)("div", {
-                          className: v.buttons,
+                          className: _.buttons,
                           children: [
                               (0, r.jsxs)("div", {
-                                  className: v.checkboxes,
+                                  className: _.checkboxes,
                                   children: [
                                       (0, r.jsx)(c.XZJ, {
                                           checked: !l.singleSelect,
                                           onChange: (e) => (0, h.Kk)(n, l.id, { singleSelect: !e }),
-                                          label: _.intl.string(_.t.uCebZW),
+                                          label: v.intl.string(v.t.uCebZW),
                                       }),
                                       l.inOnboarding
                                           ? (0, r.jsx)(c.XZJ, {
@@ -212,14 +210,14 @@ function O(e) {
                                                 onChange: (e) => (0, h.Kk)(n, l.id, { required: e }),
                                                 disabled: !l.inOnboarding,
                                                 label: E
-                                                    ? _.intl.formatToPlainString(_.t["0re8T0"], { count: z })
-                                                    : _.intl.string(_.t.Ur8Vrq),
+                                                    ? v.intl.formatToPlainString(v.t["0re8T0"], { count: z })
+                                                    : v.intl.string(v.t.Ur8Vrq),
                                             })
                                           : null,
                                   ],
                               }),
                               (0, r.jsx)(c.P3F, {
-                                  className: v.collapseButton,
+                                  className: _.collapseButton,
                                   onClick: () => G(!0),
                                   children: (0, r.jsx)(m.Z, {
                                       direction: m.Z.Directions.UP,
@@ -229,15 +227,15 @@ function O(e) {
                               }),
                               (0, r.jsx)(o.u, {
                                   asContainer: !0,
-                                  text: _.intl.string(_.t["Ku+86e"]),
+                                  text: v.intl.string(v.t["Ku+86e"]),
                                   children: (0, r.jsx)("div", {
-                                      className: v.closeIcon,
+                                      className: _.closeIcon,
                                       children: (0, r.jsx)(c.hU, {
                                           size: "sm",
                                           icon: c.XHJ,
                                           variant: "icon-only",
                                           onClick: () => (0, h.fi)(n, l.id),
-                                          "aria-label": _.intl.string(_.t["Ku+86e"]),
+                                          "aria-label": v.intl.string(v.t["Ku+86e"]),
                                       }),
                                   }),
                               }),
@@ -250,17 +248,17 @@ function O(e) {
 }
 function y(e) {
     let { prompt: t, guild: n } = e,
-        [l, s] = i.useState(!1);
+        [l, a] = i.useState(!1);
     if (
         (i.useEffect(() => {
-            !l && t.title.length > 0 && s(!0);
+            !l && t.title.length > 0 && a(!0);
         }, [l, t]),
         l)
     )
         return null;
-    function a(e) {
+    function s(e) {
         return (0, r.jsx)(c.P3F, {
-            className: v.example,
+            className: _.example,
             onClick: () => (0, h.Kk)(n, t.id, { title: e }),
             children: (0, r.jsx)(c.Text, {
                 variant: "text-xs/normal",
@@ -269,34 +267,34 @@ function y(e) {
         });
     }
     return (0, r.jsxs)("div", {
-        className: v.examplesSection,
+        className: _.examplesSection,
         children: [
             (0, r.jsx)(c.Text, {
                 variant: "text-xs/normal",
                 color: "text-muted",
-                children: _.intl.string(_.t.ECnSLi),
+                children: v.intl.string(v.t.ECnSLi),
             }),
             (0, r.jsxs)("div", {
-                className: v.examples,
+                className: _.examples,
                 children: [
-                    a(_.intl.string(_.t["7GZMJS"])),
-                    a(_.intl.string(_.t.nItydn)),
-                    a(_.intl.string(_.t.evuYbm)),
-                    a(_.intl.string(_.t.XWRuOj)),
+                    s(v.intl.string(v.t["7GZMJS"])),
+                    s(v.intl.string(v.t.nItydn)),
+                    s(v.intl.string(v.t.evuYbm)),
+                    s(v.intl.string(v.t.XWRuOj)),
                 ],
             }),
         ],
     });
 }
 function N(e) {
-    let { guild: t, prompt: n, promptIndex: i, singleColumn: l, errors: s } = e,
+    let { guild: t, prompt: n, promptIndex: i, singleColumn: l, errors: a } = e,
         {
-            handleDragStart: a,
+            handleDragStart: s,
             handleDragReset: o,
             handleDragComplete: c,
         } = (0, u.Z)(n.options, (e) => (0, h.Kk)(t, n.id, { options: e }));
     return (0, r.jsxs)("div", {
-        className: v.options,
+        className: _.options,
         children: [
             n.options.map((e, d) =>
                 (0, r.jsx)(
@@ -307,10 +305,10 @@ function N(e) {
                         promptIndex: i,
                         singleColumn: l,
                         option: e,
-                        onDragStart: a,
+                        onDragStart: s,
                         onDragComplete: c,
                         onDragReset: o,
-                        hasError: null != s.optionErrors[d],
+                        hasError: null != a.optionErrors[d],
                     },
                     e.id,
                 ),

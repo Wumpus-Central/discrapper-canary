@@ -29,11 +29,11 @@ var r = n(951288),
     P = n(984802),
     w = n(594174),
     D = n(358085),
-    L = n(210887),
-    x = n(740492),
+    x = n(210887),
+    L = n(740492),
     M = n(695346),
-    j = n(313789),
-    k = n(329013),
+    k = n(313789),
+    j = n(329013),
     U = n(333859),
     G = n(273313),
     B = n(947889),
@@ -199,66 +199,47 @@ let J = "cozy",
                         }),
                     ],
                 }),
-                (0, r.jsx)(k.g, {}),
+                (0, r.jsx)(j.g, {}),
             ],
         }),
     ea = () => {
         let e = (0, B.Z)();
         return Y.intl.format(Y.t.Jae48P, {
             onClick: () => {
-                e(j.n.ACCESSIBILITY_PANEL, { section: F.oAB.ACCESSIBILITY });
+                e(k.n.ACCESSIBILITY_PANEL, { section: F.oAB.ACCESSIBILITY });
             },
         });
     };
 class eo extends i.Component {
     renderZoomSlider() {
-        return D.isPlatformEmbedded
-            ? (0, r.jsxs)("div", {
-                  className: K.marginTop20,
-                  children: [
-                      (0, r.jsx)(d.vwX, {
-                          id: ee,
-                          className: o()(W.title, K.marginBottom8),
-                          children: Y.intl.string(Y.t.i19n5O),
-                      }),
-                      (0, r.jsx)(d.R94, {
-                          type: d.geA.DESCRIPTION,
-                          className: W.subtext,
-                          children: Y.intl.string(Y.t.ip0uSU),
-                      }),
-                      (0, r.jsx)(d.iRW, {
-                          className: o()(K.marginTop20, K.marginBottom4),
-                          initialValue: this.props.zoom,
-                          defaultValue: F.yqN.ZOOM_DEFAULT,
-                          markers: F.yqN.ZOOM_SCALES,
-                          stickToMarkers: !0,
-                          onValueChange: this.handleZoomChange,
-                          onValueRender: this.handleSliderRender,
-                          "aria-labelledby": ee,
-                      }),
-                      (0, r.jsx)(d.R94, {
-                          type: d.R94.Types.DESCRIPTION,
-                          children: Y.intl.format(Y.t.OMkSUl, { modKey: p.Z.modKey }),
-                      }),
-                  ],
-              })
-            : null;
+        return (
+            !D.isPlatformEmbedded,
+            (0, r.jsx)(d.iRW, {
+                label: Y.intl.string(Y.t.i19n5O),
+                description: Y.intl.string(Y.t.ip0uSU),
+                helperText: Y.intl.format(Y.t.OMkSUl, { modKey: p.Z.modKey }),
+                initialValue: this.props.zoom,
+                defaultValue: F.yqN.ZOOM_DEFAULT,
+                markers: F.yqN.ZOOM_SCALES,
+                stickToMarkers: !0,
+                onValueChange: this.handleZoomChange,
+                onValueRender: this.handleSliderRender,
+                "aria-labelledby": ee,
+            })
+        );
     }
     renderFontScaleSlider() {
-        return (0, r.jsx)("div", {
-            className: K.marginTop20,
-            children: (0, r.jsx)(d.iRW, {
-                label: Y.intl.string(Y.t.qPOqoK),
-                description: Y.intl.string(Y.t.XrtbPj),
-                initialValue: this.props.fontSize,
-                defaultValue: F.yqN.FONT_SIZE_DEFAULT,
-                markers: F.yqN.FONT_SIZES,
-                stickToMarkers: !0,
-                onValueChange: this.handleFontSizeChange,
-                onValueRender: this.handleSliderRenderPX,
-                onMarkerRender: this.handleSliderRenderPX,
-                getAriaValueText: this.handleSliderValueText,
-            }),
+        return (0, r.jsx)(d.iRW, {
+            label: Y.intl.string(Y.t.qPOqoK),
+            description: Y.intl.string(Y.t.XrtbPj),
+            initialValue: this.props.fontSize,
+            defaultValue: F.yqN.FONT_SIZE_DEFAULT,
+            markers: F.yqN.FONT_SIZES,
+            stickToMarkers: !0,
+            onValueChange: this.handleFontSizeChange,
+            onValueRender: this.handleSliderRenderPX,
+            onMarkerRender: this.handleSliderRenderPX,
+            getAriaValueText: this.handleSliderValueText,
         });
     }
     renderMessageGroupSpacingSlider() {
@@ -310,33 +291,19 @@ class eo extends i.Component {
     renderTheme() {
         let { useForcedColors: e } = this.props;
         return e
-            ? (0, r.jsx)(d.xJW, {
-                  className: o()(K.marginTop8, K.marginBottom40),
-                  title: (0, r.jsx)("div", {
-                      className: W.themeTitle,
-                      children: (0, r.jsx)("div", {
-                          className: W.title,
-                          children: Y.intl.string(Y.t.Ksh3io),
-                      }),
-                  }),
+            ? (0, r.jsx)(d.C3N, {
+                  label: Y.intl.string(Y.t.Ksh3io),
                   children: (0, r.jsx)(d.Wn, {
                       messageType: d.QYI.INFO,
                       children: (0, g.b)() ? (0, r.jsx)(ea, {}) : Y.intl.string(Y.t.AUMSZG),
                   }),
               })
-            : (0, r.jsxs)(d.Kqy, {
-                  gap: 24,
-                  children: [
-                      (0, r.jsx)(d.Text, {
-                          variant: "text-lg/medium",
-                          className: W.title,
-                          children: Y.intl.string(Y.t.Ksh3io),
-                      }),
-                      (0, r.jsx)(d.xJW, {
-                          title: (0, r.jsx)(ei, {}),
-                          children: (0, r.jsx)(k.i, {}),
-                      }),
-                  ],
+            : (0, r.jsx)(d.C3N, {
+                  label: Y.intl.string(Y.t.Ksh3io),
+                  children: (0, r.jsx)(d.xJW, {
+                      title: (0, r.jsx)(ei, {}),
+                      children: (0, r.jsx)(j.i, {}),
+                  }),
               });
     }
     renderTimestampHourCycle() {
@@ -461,13 +428,10 @@ class eo extends i.Component {
             s = (0, r.jsxs)(R.F, {
                 setting: Z.s6.APPEARANCE_SCALING_SPACING,
                 children: [
-                    (0, r.jsx)(d.Text, {
-                        variant: "text-lg/medium",
-                        className: W.title,
-                        children: Y.intl.string(Y.t["0Yh+ZW"]),
+                    (0, r.jsxs)(d.C3N, {
+                        label: Y.intl.string(Y.t["0Yh+ZW"]),
+                        children: [this.renderFontScaleSlider(), this.renderZoomSlider()],
                     }),
-                    this.renderFontScaleSlider(),
-                    this.renderZoomSlider(),
                     (0, r.jsx)(d.izJ, { className: W.divider }),
                 ],
             }),
@@ -533,16 +497,16 @@ function el() {
                 f && es(l.z.HALLOWEEN_APP_ICONS_APPEARANCE_SETTINGS_WEB_BADGE);
         }, [u, f]);
     let p = (0, P.A6)(),
-        h = (0, s.cj)([L.Z, x.ZP, m.Z, w.default, b.Z], () => {
+        h = (0, s.cj)([x.Z, L.ZP, m.Z, w.default, b.Z], () => {
             var e, t;
             return {
-                theme: L.Z.theme,
+                theme: x.Z.theme,
                 useForcedColors: m.Z.useForcedColors,
-                useSystemTheme: x.ZP.useSystemTheme,
+                useSystemTheme: L.ZP.useSystemTheme,
                 fontSize: m.Z.fontSize,
                 zoom: m.Z.zoom,
                 messageGroupSpacing: m.Z.messageGroupSpacing,
-                displayCompactAvatars: x.ZP.displayCompactAvatars,
+                displayCompactAvatars: L.ZP.displayCompactAvatars,
                 isStaff: null != (t = null == (e = w.default.getCurrentUser()) ? void 0 : e.isStaff) && t,
                 gradientPreset: b.Z.gradientPreset,
             };

@@ -10,8 +10,8 @@ var i = n(268146),
     d = n(992817),
     u = n(451467),
     f = n(672811),
-    m = n(891180),
-    h = n(544753),
+    h = n(891180),
+    m = n(544753),
     p = n(615161),
     g = n(156582),
     x = n(396678),
@@ -20,7 +20,7 @@ var i = n(268146),
     j = n(637824),
     b = n(388032),
     S = n(355669);
-let C = [
+let y = [
         {
             value: _.tI.PRESET_AUTO,
             canUse: (e) => e !== i.vA.CAMERA && (0, c.I)({ location: "StreamOptionsMenu" }).allowAutoQuality,
@@ -38,7 +38,7 @@ let C = [
             canUse: (e) => !0,
         },
     ],
-    y = [
+    C = [
         {
             value: _.LY.RESOLUTION_720,
             canUse: (e) => !0,
@@ -88,9 +88,9 @@ function Z(e) {
             M,
         ] = (0, p.E_)(),
         D = !(0, d.$s)(k, "StreamOptionsMenu"),
-        L = (0, h.Z)(),
-        [B, G] = null != (t = (0, x.Z)(_.tI.PRESET_VIDEO)) ? t : [_.LY.RESOLUTION_720, _.ws.FPS_30],
-        [U, W] = null != (n = (0, x.Z)(_.tI.PRESET_DOCUMENTS)) ? n : [_.LY.RESOLUTION_SOURCE, _.ws.FPS_15],
+        L = (0, m.Z)(),
+        [B, U] = null != (t = (0, x.Z)(_.tI.PRESET_VIDEO)) ? t : [_.LY.RESOLUTION_720, _.ws.FPS_30],
+        [G, W] = null != (n = (0, x.Z)(_.tI.PRESET_DOCUMENTS)) ? n : [_.LY.RESOLUTION_SOURCE, _.ws.FPS_15],
         z = (0, o.M)({
             deviceType: v.h7.AUDIO_INPUT,
             selectedDeviceId: Z,
@@ -121,47 +121,49 @@ function Z(e) {
         children: [
             (0, r.jsx)(l.kSQ, {
                 label: b.intl.string(j.default.P2pjm5),
-                children: C.filter((e) => {
-                    let { canUse: t } = e;
-                    return t(A);
-                }).map((e) => {
-                    let { value: t } = e;
-                    return (0, r.jsx)(
-                        l.k5B,
-                        {
-                            group: "preset",
-                            id: "stream-preset-".concat(t),
-                            checked: T === t,
-                            label: (0, f.L)(t),
-                            subtext: (function (e) {
-                                switch (e) {
-                                    case _.tI.PRESET_VIDEO:
-                                        return b.intl.format(j.default.G5O1Mz, {
-                                            resolution: (0, m.M)(B),
-                                            frameRate: G,
-                                        });
-                                    case _.tI.PRESET_DOCUMENTS:
-                                        return b.intl.format(j.default["8tcFLy"], {
-                                            resolution: (0, m.M)(U),
-                                            frameRate: W,
-                                        });
-                                    case _.tI.PRESET_AUTO:
-                                        return b.intl.string(j.default.m4jtlZ);
-                                    case _.tI.PRESET_CUSTOM:
-                                        return;
-                                    default:
-                                        throw Error("No case implemented for ".concat(e));
-                                }
-                            })(t),
-                            action: () =>
-                                M({
-                                    type: "set_preset",
-                                    preset: t,
-                                }),
-                        },
-                        t,
-                    );
-                }),
+                children: y
+                    .filter((e) => {
+                        let { canUse: t } = e;
+                        return t(A);
+                    })
+                    .map((e) => {
+                        let { value: t } = e;
+                        return (0, r.jsx)(
+                            l.k5B,
+                            {
+                                group: "preset",
+                                id: "stream-preset-".concat(t),
+                                checked: T === t,
+                                label: (0, f.L)(t),
+                                subtext: (function (e) {
+                                    switch (e) {
+                                        case _.tI.PRESET_VIDEO:
+                                            return b.intl.format(j.default.G5O1Mz, {
+                                                resolution: (0, h.M)(B),
+                                                frameRate: U,
+                                            });
+                                        case _.tI.PRESET_DOCUMENTS:
+                                            return b.intl.format(j.default["8tcFLy"], {
+                                                resolution: (0, h.M)(G),
+                                                frameRate: W,
+                                            });
+                                        case _.tI.PRESET_AUTO:
+                                            return b.intl.string(j.default.m4jtlZ);
+                                        case _.tI.PRESET_CUSTOM:
+                                            return;
+                                        default:
+                                            throw Error("No case implemented for ".concat(e));
+                                    }
+                                })(t),
+                                action: () =>
+                                    M({
+                                        type: "set_preset",
+                                        preset: t,
+                                    }),
+                            },
+                            t,
+                        );
+                    }),
             }),
             T === _.tI.PRESET_CUSTOM &&
                 (0, r.jsxs)(r.Fragment, {
@@ -170,41 +172,39 @@ function Z(e) {
                         (0, r.jsx)(l.sNh, {
                             id: "resolution",
                             label: b.intl.string(j.default.IG5n0d),
-                            children: y
-                                .filter((e) => {
-                                    let { canUse: t } = e;
-                                    return t(A);
-                                })
-                                .map((e) => {
-                                    let { value: t } = e;
-                                    return (0, r.jsx)(
-                                        l.k5B,
-                                        {
-                                            group: "resolution",
-                                            id: "stream-option-resolution-".concat(t),
-                                            checked: E === t,
-                                            label:
-                                                t !== _.LY.RESOLUTION_720
-                                                    ? (0, r.jsx)(w, { label: (0, m.M)(t) })
-                                                    : (0, m.M)(t),
-                                            action: () =>
-                                                (function (e) {
-                                                    if (!(0, u.Z)(T, e, R, a.default.getCurrentUser(), L))
-                                                        return (
-                                                            c(),
-                                                            (0, g.E)({
-                                                                analyticsLocation: s.Z.GO_LIVE_MODAL_SETTINGS_SELECTION,
-                                                            })
-                                                        );
-                                                    M({
-                                                        type: "set_resolution",
-                                                        resolution: e,
-                                                    });
-                                                })(t),
-                                        },
-                                        t,
-                                    );
-                                }),
+                            children: C.filter((e) => {
+                                let { canUse: t } = e;
+                                return t(A);
+                            }).map((e) => {
+                                let { value: t } = e;
+                                return (0, r.jsx)(
+                                    l.k5B,
+                                    {
+                                        group: "resolution",
+                                        id: "stream-option-resolution-".concat(t),
+                                        checked: E === t,
+                                        label:
+                                            t !== _.LY.RESOLUTION_720
+                                                ? (0, r.jsx)(w, { label: (0, h.M)(t) })
+                                                : (0, h.M)(t),
+                                        action: () =>
+                                            (function (e) {
+                                                if (!(0, u.Z)(T, e, R, a.default.getCurrentUser(), L))
+                                                    return (
+                                                        c(),
+                                                        (0, g.E)({
+                                                            analyticsLocation: s.Z.GO_LIVE_MODAL_SETTINGS_SELECTION,
+                                                        })
+                                                    );
+                                                M({
+                                                    type: "set_resolution",
+                                                    resolution: e,
+                                                });
+                                            })(t),
+                                    },
+                                    t,
+                                );
+                            }),
                         }),
                         (0, r.jsx)(l.sNh, {
                             id: "frame-rate",

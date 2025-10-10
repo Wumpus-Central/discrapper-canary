@@ -7,8 +7,6 @@ e.exports = {
     textContainer: "textContainer_c6d3dc",
     selectorNitroText: "selectorNitroText_c6d3dc",
     enhancedSelectorNitroText: "enhancedSelectorNitroText_c6d3dc",
-    settingsGroup: "settingsGroup_c6d3dc",
-    documentModeGroup: "documentModeGroup_c6d3dc",
     qualitySettingsContainer: "qualitySettingsContainer_c6d3dc",
     toolTipTextContainer: "toolTipTextContainer_c6d3dc",
     upsellText: "upsellText_c6d3dc",

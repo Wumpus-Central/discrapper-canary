@@ -30,9 +30,8 @@ function h(e) {
         S = (0, a.e7)([T.Z], () => T.Z.can(m.Plq.MANAGE_ROLES, n), [n]);
     return null == n
         ? null
-        : (0, r.jsx)(u.xJW, {
-              title: g.intl.string(g.t.LPJmLy),
-              titleClassName: N.infoTitle,
+        : (0, r.jsx)(u.gNt, {
+              label: g.intl.string(g.t.LPJmLy),
               children: (0, r.jsx)(I.WM, {
                   children: (0, r.jsx)(I._2, {
                       description:

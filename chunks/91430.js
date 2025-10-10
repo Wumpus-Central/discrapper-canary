@@ -35,11 +35,11 @@ var r = n(951288),
     P = n(212895),
     w = n(374649),
     D = n(140465),
-    L = n(160913),
-    x = n(331972),
+    x = n(160913),
+    L = n(331972),
     M = n(757861),
-    j = n(385251),
-    k = n(987997),
+    k = n(385251),
+    j = n(987997),
     U = n(393411),
     G = n(908951),
     B = n(592889),
@@ -105,7 +105,7 @@ function K(e) {
                         ],
                     }),
                     s &&
-                        (0, r.jsx)(k.Z, {
+                        (0, r.jsx)(j.Z, {
                             onClick: () =>
                                 (0, T.openUserSettings)(I.n.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, {
                                     section: F.oAB.GUILD_BOOSTING,
@@ -211,8 +211,8 @@ function Q(e) {
     return (0, r.jsxs)("div", {
         className: o()(Y.billingInformation, a),
         children: [
-            (0, r.jsx)(p.vwX, {
-                tag: "h3",
+            (0, r.jsx)(p.X6q, {
+                variant: "heading-md/semibold",
                 className: Y.detailBlockHeader,
                 children: H.intl.string(H.t.KXQjfX),
             }),
@@ -223,9 +223,9 @@ function Q(e) {
 function J() {
     return (0, r.jsxs)("div", {
         children: [
-            (0, r.jsx)(p.vwX, {
+            (0, r.jsx)(p.X6q, {
+                variant: "heading-lg/semibold",
                 className: Y.sectionTitle,
-                tag: "h1",
                 children: H.intl.string(H.t["/gs+Pz"]),
             }),
             (0, r.jsx)("p", {
@@ -291,21 +291,21 @@ function $(e) {
         [O] = (0, w.ED)(y);
     O = null != d ? d : O;
     let v = (0, b.Z)(),
-        I = (0, x.$)(),
+        I = (0, L.$)(),
         T = (0, D.lr)(),
         S = R.ZP.isBaseSubscriptionCanceled(t),
         A = (0, M.P)(t, i);
     if (null == E || null == O) return (0, r.jsx)(p.$jN, {});
     let C = A ? (0, D.Yi)(O) : null,
         N = null != C || (null != T && (T.discountId === Z.dT || T.discountId === Z.dB)),
-        L = A && ((S && null != I) || (!S && N));
+        x = A && ((S && null != I) || (!S && N));
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
                 className: Y.subscriptionRows,
                 children: [
-                    L
-                        ? (0, r.jsx)(j.Z, {
+                    x
+                        ? (0, r.jsx)(k.Z, {
                               subscription: t,
                               invoicePreview: O,
                               paymentSource: i,
@@ -332,11 +332,8 @@ function $(e) {
                 ],
             }),
             (0, r.jsx)("div", {
-                children: (0, r.jsx)(p.y5t, {
-                    component: (0, r.jsx)(p.vwX, {
-                        tag: "h5",
-                        children: H.intl.string(H.t.Sb6wIy),
-                    }),
+                children: (0, r.jsx)(p.C3N, {
+                    label: H.intl.string(H.t.Sb6wIy),
                     children: (0, r.jsxs)("div", {
                         className: Y.details,
                         children: [
@@ -347,20 +344,16 @@ function $(e) {
                                 fractionalPremiumInfo: v,
                                 openInvoice: f,
                             }),
-                            (0, r.jsxs)("div", {
+                            (0, r.jsx)("div", {
                                 className: o()(Y.detailsBlock, { [Y.redBorder]: l }),
-                                children: [
-                                    (0, r.jsx)(p.vwX, {
-                                        tag: "h3",
-                                        className: Y.detailBlockHeader,
-                                        children:
-                                            t.isPurchasedExternally && null != t.paymentGateway
-                                                ? H.intl.formatToPlainString(H.t.rTk9v7, {
-                                                      paymentGatewayName: F.Vzj[t.paymentGateway],
-                                                  })
-                                                : H.intl.string(H.t.iRzXKS),
-                                    }),
-                                    (0, r.jsx)(G.Z, {
+                                children: (0, r.jsx)(p.gNt, {
+                                    label:
+                                        t.isPurchasedExternally && null != t.paymentGateway
+                                            ? H.intl.formatToPlainString(H.t.rTk9v7, {
+                                                  paymentGatewayName: F.Vzj[t.paymentGateway],
+                                              })
+                                            : H.intl.string(H.t.iRzXKS),
+                                    children: (0, r.jsx)(G.Z, {
                                         subscription: t,
                                         onPaymentSourceAdded: P.i1,
                                         highlightAddPaymentMethodButton: c || l,
@@ -368,7 +361,7 @@ function $(e) {
                                         currentInvoicePreview: E,
                                         dropdownClassName: Y.paymentDropdown,
                                     }),
-                                ],
+                                }),
                             }),
                         ],
                     }),
@@ -415,7 +408,7 @@ function en(e) {
         } = e;
     null != o && null != o[0] && (a = o[0]);
     let { analyticsLocations: E } = (0, g.ZP)(m.Z.SUBSCRIPTION_DETAILS),
-        b = (0, x.$)(),
+        b = (0, L.$)(),
         y = null != o ? o.slice(1) : [],
         [O, v] = i.useState(0);
     i.useEffect(() => {
@@ -460,9 +453,9 @@ function en(e) {
             (7 >= R.diff(u()(), "days") || a.status === F.O0b.PAST_DUE) &&
             !N &&
             !a.isPurchasedExternally,
-        j = C && a.status === F.O0b.PAST_DUE && !N && !a.isPurchasedExternally,
-        k = (0, L.U)(),
-        U = !N && k,
+        k = C && a.status === F.O0b.PAST_DUE && !N && !a.isPurchasedExternally,
+        j = (0, x.U)(),
+        U = !N && j,
         G = (null == a ? void 0 : a.status) === F.O0b.PAST_DUE,
         Z = G ? u()().diff(u()(a.currentPeriodStart), "days") : 0,
         [V] = (0, w.Ox)({
@@ -480,78 +473,67 @@ function en(e) {
                   className: Y.renewalMutationNotice,
                   analyticsLocation: d,
               })),
-          (0, r.jsx)("div", {
-              children: (0, r.jsxs)(p.y5t, {
-                  component: (0, r.jsx)(p.vwX, {
-                      className: Y.sectionTitle,
-                      tag: "h1",
-                      children: H.intl.string(H.t["/gs+Pz"]),
-                  }),
-                  children: [
-                      M ? (0, r.jsx)(z, {}) : null,
-                      j ? (0, r.jsx)(q, {}) : null,
-                      U && null != V
-                          ? (0, r.jsx)(X, {
-                                daysPastDue: Z,
-                                subscription: a,
-                                openInvoiceId: V.id,
-                            })
-                          : null,
-                      n,
-                      (0, r.jsx)("div", {
-                          children: (0, r.jsx)("p", {
-                              className: Y.sectionDescription,
-                              children: H.intl.string(H.t.D8UpUl),
-                          }),
-                      }),
-                      (0, r.jsxs)("div", {
-                          children: [
-                              (0, r.jsx)("div", {
-                                  className: y.length > 0 ? Y.dupSubscriptionRow : Y.__invalid_singleSubscription,
-                                  children: (0, r.jsx)($, {
-                                      subscription: a,
-                                      analyticsLocation: d,
-                                      paymentSource: s,
-                                      busy: l,
-                                      fromStandaloneBillingPage: c,
-                                      showNoPaymentMethod: M,
-                                      showInvalidPaymentMethod: j,
-                                      fetchedCurrentInvoicePreview: I,
-                                      fetchedRenewalInvoicePreview: T,
-                                      fetchedOpenInvoice: V,
-                                  }),
+          (0, r.jsxs)(p.C3N, {
+              label: H.intl.string(H.t["/gs+Pz"]),
+              description: H.intl.string(H.t.D8UpUl),
+              children: [
+                  M ? (0, r.jsx)(z, {}) : null,
+                  k ? (0, r.jsx)(q, {}) : null,
+                  U && null != V
+                      ? (0, r.jsx)(X, {
+                            daysPastDue: Z,
+                            subscription: a,
+                            openInvoiceId: V.id,
+                        })
+                      : null,
+                  n,
+                  (0, r.jsxs)("div", {
+                      children: [
+                          (0, r.jsx)("div", {
+                              className: y.length > 0 ? Y.dupSubscriptionRow : Y.__invalid_singleSubscription,
+                              children: (0, r.jsx)($, {
+                                  subscription: a,
+                                  analyticsLocation: d,
+                                  paymentSource: s,
+                                  busy: l,
+                                  fromStandaloneBillingPage: c,
+                                  showNoPaymentMethod: M,
+                                  showInvalidPaymentMethod: k,
+                                  fetchedCurrentInvoicePreview: I,
+                                  fetchedRenewalInvoicePreview: T,
+                                  fetchedOpenInvoice: V,
                               }),
-                              y.map((e, t) =>
-                                  (0, r.jsxs)(
-                                      "div",
-                                      {
-                                          className: Y.dupSubscriptionRow,
-                                          children: [
-                                              (0, r.jsx)(p.vwX, {
-                                                  tag: "h2",
-                                                  className: Y.duplicateHeader,
-                                                  children: "Duplicate Subscriptions",
-                                              }),
-                                              (0, r.jsx)($, {
-                                                  subscription: e,
-                                                  analyticsLocation: d,
-                                                  paymentSource: s,
-                                                  busy: l,
-                                                  fromStandaloneBillingPage: c,
-                                                  showNoPaymentMethod: M,
-                                                  showInvalidPaymentMethod: j,
-                                                  fetchedCurrentInvoicePreview: null,
-                                                  fetchedRenewalInvoicePreview: null,
-                                                  fetchedOpenInvoice: null,
-                                              }),
-                                          ],
-                                      },
-                                      t,
-                                  ),
+                          }),
+                          y.map((e, t) =>
+                              (0, r.jsxs)(
+                                  "div",
+                                  {
+                                      className: Y.dupSubscriptionRow,
+                                      children: [
+                                          (0, r.jsx)(p.X6q, {
+                                              variant: "heading-md/semibold",
+                                              className: Y.duplicateHeader,
+                                              children: "Duplicate Subscriptions",
+                                          }),
+                                          (0, r.jsx)($, {
+                                              subscription: e,
+                                              analyticsLocation: d,
+                                              paymentSource: s,
+                                              busy: l,
+                                              fromStandaloneBillingPage: c,
+                                              showNoPaymentMethod: M,
+                                              showInvalidPaymentMethod: k,
+                                              fetchedCurrentInvoicePreview: null,
+                                              fetchedRenewalInvoicePreview: null,
+                                              fetchedOpenInvoice: null,
+                                          }),
+                                      ],
+                                  },
+                                  t,
                               ),
-                          ],
-                      }),
-                  ],
-              }),
+                          ),
+                      ],
+                  }),
+              ],
           }));
 }

@@ -1,7 +1,6 @@
 n.d(t, { Z: () => f });
-var r = n(951288);
-n(647438);
-var i = n(442837),
+var r = n(951288),
+    i = n(442837),
     a = n(481060),
     o = n(700582),
     s = n(987209),
@@ -18,27 +17,25 @@ let f = (e) => {
     let E = (e) => {
         n(e, t), g(e);
     };
-    return (0, r.jsxs)("div", {
+    return (0, r.jsx)("div", {
         className: f,
-        children: [
-            (0, r.jsx)(a.vwX, { children: d.intl.string(d.t.xFn72t) }),
-            (0, r.jsx)(a.VcW, {
-                wrapperClassName: _,
-                placeholder: d.intl.string(d.t.R0vK0N),
-                renderOptionPrefix: (e) =>
-                    (null == e ? void 0 : e.value) == null
-                        ? null
-                        : (0, r.jsx)(o.Z, {
-                              user: e.value,
-                              size: a.EFr.SIZE_20,
-                          }),
-                value: m,
-                onChange: E,
-                options: h.map((e) => ({
-                    value: e,
-                    label: "".concat(u.ZP.getUserTag(e)),
-                })),
-            }),
-        ],
+        children: (0, r.jsx)(a.VcW, {
+            wrapperClassName: _,
+            label: d.intl.string(d.t.xFn72t),
+            placeholder: d.intl.string(d.t.R0vK0N),
+            renderOptionPrefix: (e) =>
+                (null == e ? void 0 : e.value) == null
+                    ? null
+                    : (0, r.jsx)(o.Z, {
+                          user: e.value,
+                          size: a.EFr.SIZE_20,
+                      }),
+            value: m,
+            onChange: E,
+            options: h.map((e) => ({
+                value: e,
+                label: "".concat(u.ZP.getUserTag(e)),
+            })),
+        }),
     });
 };

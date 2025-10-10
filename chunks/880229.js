@@ -23,12 +23,12 @@ var i = n(951288),
     g = n(339085),
     p = n(518738),
     _ = n(131704),
-    b = n(345162),
-    v = n(324067),
+    v = n(345162),
+    b = n(324067),
     C = n(485386),
     w = n(430824),
-    N = n(259580),
-    I = n(624138),
+    I = n(259580),
+    N = n(624138),
     k = n(817460),
     y = n(166803),
     S = n(629262),
@@ -38,7 +38,7 @@ var i = n(951288),
     M = n(161270);
 let B = (0, j.hQ)(),
     E = (0, j.hQ)(),
-    P = (0, I.Mg)(d.Z.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
+    P = (0, N.Mg)(d.Z.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
 function R(e) {
     var t;
     let { emojiId: n, emojiName: l, className: r } = e,
@@ -99,10 +99,14 @@ function D(e) {
     let { title: t, selectAllText: n, benefits: l, dupeBenefits: r, selectedBenefits: o, onToggleBenefit: a } = e,
         s = l.every((e) => o.has(e));
     return l.length > 0
-        ? (0, i.jsxs)(m.hjN, {
-              title: t,
+        ? (0, i.jsxs)("div", {
               className: M.section,
               children: [
+                  (0, i.jsx)(m.X6q, {
+                      variant: "heading-md/semibold",
+                      color: "header-primary",
+                      children: t,
+                  }),
                   l.length - r.size > 1 &&
                       (0, i.jsx)("div", {
                           className: M.list,
@@ -174,13 +178,13 @@ function L(e) {
         g = l.useMemo(() => h.filter(k.lL), [h]),
         p = l.useMemo(() => new Set(j.filter((e) => r.some((t) => t.ref_id === e.ref_id))), [j, r]),
         _ = l.useMemo(() => new Set(g.filter((e) => o.some((t) => (0, c.Z)(e, t)))), [o, g]);
-    function b(e, t) {
+    function v(e, t) {
         x((n) => {
             let i = new Set(n);
             return t ? i.add(e) : i.delete(e), i;
         });
     }
-    function v(e) {
+    function b(e) {
         e.preventDefault();
         let t = h.filter((e) => u.has(e));
         s(
@@ -190,7 +194,7 @@ function L(e) {
             d();
     }
     return (0, i.jsx)("form", {
-        onSubmit: v,
+        onSubmit: b,
         children: (0, i.jsxs)(a.Modal, {
             transitionState: t,
             onClose: d,
@@ -205,7 +209,7 @@ function L(e) {
                     variant: "primary",
                     text: z.intl.string(z.t["27a219"]),
                     disabled: 0 === u.size,
-                    onClick: v,
+                    onClick: b,
                 },
             ],
             children: [
@@ -221,7 +225,7 @@ function L(e) {
                     benefits: j,
                     dupeBenefits: p,
                     selectedBenefits: u,
-                    onToggleBenefit: b,
+                    onToggleBenefit: v,
                 }),
                 (0, i.jsx)(D, {
                     title: z.intl.string(z.t.RdwKw8),
@@ -229,7 +233,7 @@ function L(e) {
                     benefits: g,
                     dupeBenefits: _,
                     selectedBenefits: u,
-                    onToggleBenefit: b,
+                    onToggleBenefit: v,
                 }),
             ],
         }),
@@ -305,7 +309,7 @@ function F(e) {
             }),
             (0, i.jsx)("div", {
                 className: M.rowCheckbox,
-                children: (0, i.jsx)(N.Z, { direction: N.Z.Directions.RIGHT }),
+                children: (0, i.jsx)(I.Z, { direction: I.Z.Directions.RIGHT }),
             }),
         ],
     });
@@ -313,7 +317,7 @@ function F(e) {
 function H(e) {
     let { guild: t, onSelect: n } = e,
         r = (0, s.e7)([C.Z], () => C.Z.getSortedRoles(t.id)),
-        o = (0, s.e7)([v.Z], () => v.Z.getCategories(t.id)),
+        o = (0, s.e7)([b.Z], () => b.Z.getCategories(t.id)),
         a = l.useMemo(
             () =>
                 o._categories.flatMap((e) =>
@@ -334,9 +338,9 @@ function H(e) {
                 r.flatMap((e) => {
                     var t;
                     if (
-                        (0, b.fI)(e) ||
+                        (0, v.fI)(e) ||
                         (null == (t = e.tags) ? void 0 : t.subscription_listing_id) != null ||
-                        (0, b._N)(e, Z.TC2)
+                        (0, v._N)(e, Z.TC2)
                     )
                         return [];
                     let n = (0, y.Z)(a, e).length;
@@ -370,7 +374,7 @@ function H(e) {
               children: z.intl.string(z.t.u09gKi),
           });
 }
-function K(e) {
+function q(e) {
     let { onClose: t, guildId: n, onSelect: l } = e,
         r = (0, s.e7)([w.Z], () => w.Z.getGuild(n));
     return null == r
@@ -403,13 +407,13 @@ function K(e) {
               ],
           });
 }
-function q(e) {
+function K(e) {
     let { onClose: t, guildId: n, role: r, onCancel: o, onImport: a } = e,
         s = l.useRef(r);
     null != r && (s.current = r);
     let c = null != r ? r : s.current,
         d = (0, u.Z)(() => {
-            let e = v.Z.getCategories(n);
+            let e = b.Z.getCategories(n);
             return e._categories.flatMap((t) =>
                 e[t.channel.id]
                     .filter((e) => {
@@ -542,7 +546,7 @@ function W(e) {
             children: [
                 (0, i.jsx)(m.Mi4, {
                     id: 0,
-                    children: (0, i.jsx)(K, {
+                    children: (0, i.jsx)(q, {
                         onClose: r,
                         guildId: n,
                         onSelect: s,
@@ -550,7 +554,7 @@ function W(e) {
                 }),
                 (0, i.jsx)(m.Mi4, {
                     id: 1,
-                    children: (0, i.jsx)(q, {
+                    children: (0, i.jsx)(K, {
                         onClose: r,
                         guildId: n,
                         role: a,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => L });
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -100,7 +100,7 @@ let D = () =>
         className: S.syncing,
         children: (0, r.jsx)(o.$jN, {}),
     });
-class L extends i.PureComponent {
+class x extends i.PureComponent {
     componentDidMount() {
         s.Z.wait(() => {
             l.tZ(), l.jg();
@@ -142,12 +142,16 @@ class L extends i.PureComponent {
                           setting: v.s6.BILLING_TRANSACTION_HISTORY,
                           children: (0, r.jsx)("div", {
                               className: S.paymentHistory,
-                              children: (0, r.jsxs)(o.y5t, {
-                                  component: (0, r.jsx)(o.vwX, {
-                                      tag: "h1",
-                                      children: T.intl.string(T.t.obLrcH),
-                                  }),
-                                  children: [(0, r.jsx)(f.oQ, {}), (0, r.jsx)(u.Z, { locale: a })],
+                              children: (0, r.jsxs)(o.Kqy, {
+                                  gap: 16,
+                                  children: [
+                                      (0, r.jsx)(o.X6q, {
+                                          variant: "heading-lg/semibold",
+                                          children: T.intl.string(T.t.obLrcH),
+                                      }),
+                                      (0, r.jsx)(f.oQ, {}),
+                                      (0, r.jsx)(u.Z, { locale: a }),
+                                  ],
                               }),
                           }),
                       }),
@@ -160,7 +164,7 @@ class L extends i.PureComponent {
               });
     }
 }
-function x() {
+function L() {
     let e = (0, a.cj)([b.default, m.Z, g.Z, h.default, p.Z, E.Z], () => {
             let e = E.Z.getPremiumTypeSubscription(),
                 t = h.default.getCurrentUser();
@@ -184,5 +188,5 @@ function x() {
     if (!e.shouldRenderBillingSettings) return (0, r.jsx)(D, {});
     let { shouldRenderBillingSettings: n } = e,
         i = P(e, ["shouldRenderBillingSettings"]);
-    return (0, r.jsx)(L, R(C({}, i), { navigateTo: t }));
+    return (0, r.jsx)(x, R(C({}, i), { navigateTo: t }));
 }

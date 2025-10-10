@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685), n(457542);
+n.d(t, { Z: () => u }), n(388685), n(457542);
 var l = n(951288),
     r = n(647438),
     i = n(658550),
@@ -6,18 +6,17 @@ var l = n(951288),
     a = n(481060),
     o = n(507453),
     d = n(981631),
-    c = n(388032),
-    u = n(357507);
-function h(e) {
-    let { mfaChallenge: t, finish: n, setSlide: h, onClose: f, isSlideReady: g, headerAlignStart: m } = e,
-        [p, x] = r.useState(!1),
-        [S, b] = r.useState(null),
-        [j, y] = r.useState(!1),
-        [v, C] = r.useState(null),
-        [Z, w] = r.useState(""),
-        k = r.useRef(null);
+    c = n(388032);
+function u(e) {
+    let { mfaChallenge: t, finish: n, setSlide: u, onClose: h, isSlideReady: f, headerAlignStart: g } = e,
+        [m, p] = r.useState(!1),
+        [x, b] = r.useState(null),
+        [S, j] = r.useState(!1),
+        [y, v] = r.useState(null),
+        [C, Z] = r.useState(""),
+        w = r.useRef(null);
     r.useEffect(() => {
-        x(!0),
+        p(!0),
             s.tn
                 .post({
                     url: d.ANM.LOGIN_SMS_SEND,
@@ -30,91 +29,86 @@ function h(e) {
                 })
                 .catch((e) => {
                     var t, n;
-                    C(null != (n = null == (t = e.body) ? void 0 : t.message) ? n : e.message);
+                    v(null != (n = null == (t = e.body) ? void 0 : t.message) ? n : e.message);
                 })
                 .finally(() => {
-                    x(!1);
+                    p(!1);
                 });
     }, [t.ticket]),
         r.useEffect(() => {
-            if (g) {
+            if (f) {
                 var e;
-                null == (e = k.current) || e.focus();
+                null == (e = w.current) || e.focus();
             }
-        }, [g]);
-    let E = null == S ? c.intl.string(c.t.LQdCQE) : c.intl.formatToPlainString(c.t["8r6h7+"], { phoneNumber: S });
+        }, [f]);
+    let k = null == x ? c.intl.string(c.t.LQdCQE) : c.intl.formatToPlainString(c.t["8r6h7+"], { phoneNumber: x });
     return (0, l.jsxs)("form", {
         onSubmit: (e) => {
             e.preventDefault(),
-                y(!0),
+                j(!0),
                 n({
                     mfaType: "sms",
-                    data: Z,
+                    data: C,
                 })
                     .catch((e) => {
                         var t, n;
-                        C(null != (n = e.message) ? n : null == (t = e.body) ? void 0 : t.message);
+                        v(null != (n = e.message) ? n : null == (t = e.body) ? void 0 : t.message);
                     })
                     .finally(() => {
-                        y(!1);
+                        j(!1);
                     });
         },
         children: [
             (0, l.jsx)(o.Z.SlideHeader, {
-                subtitle: E,
-                onClose: f,
-                headerAlignStart: m,
+                subtitle: k,
+                onClose: h,
+                headerAlignStart: g,
             }),
             (0, l.jsx)(o.Z.SlideContent, {
-                children: (0, l.jsxs)(a.xJW, {
-                    title: c.intl.string(c.t.HZPBOT),
+                children: (0, l.jsxs)(a.NIo, {
                     children: [
-                        (0, l.jsxs)("div", {
-                            className: u.smsInputContainer,
-                            children: [
-                                (0, l.jsx)(a.oil, {
-                                    inputRef: k,
-                                    onChange: w,
-                                    placeholder: c.intl.string(c.t.tARzgo),
-                                    maxLength: 10,
-                                    value: Z,
-                                    autoComplete: "one-time-code",
-                                    spellCheck: "false",
-                                    disabled: j,
-                                }),
-                                (0, l.jsx)(a.zxk, {
-                                    variant: "secondary",
-                                    text: c.intl.string(c.t.ZF29Ly),
-                                    loading: p,
-                                    onClick: () => {
-                                        s.tn
-                                            .post({
-                                                url: d.ANM.LOGIN_SMS_SEND,
-                                                body: { ticket: t.ticket },
-                                                oldFormErrors: !0,
-                                                rejectWithError: !1,
-                                            })
-                                            .then((e) => {
-                                                b(e.body.phone);
-                                            })
-                                            .catch((e) => {
-                                                var t;
-                                                C(e.message || (null == (t = e.body) ? void 0 : t.message));
-                                            });
-                                    },
-                                }),
-                            ],
+                        (0, l.jsx)(a.oil, {
+                            label: c.intl.string(c.t.HZPBOT),
+                            inputRef: w,
+                            onChange: Z,
+                            placeholder: c.intl.string(c.t.tARzgo),
+                            maxLength: 10,
+                            value: C,
+                            autoComplete: "one-time-code",
+                            spellCheck: "false",
+                            disabled: S,
+                            error: y,
                         }),
-                        (0, l.jsx)(o.Z.SlideError, { error: v }),
+                        (0, l.jsx)(a.zxk, {
+                            variant: "secondary",
+                            text: c.intl.string(c.t.ZF29Ly),
+                            loading: m,
+                            onClick: () => {
+                                s.tn
+                                    .post({
+                                        url: d.ANM.LOGIN_SMS_SEND,
+                                        body: { ticket: t.ticket },
+                                        oldFormErrors: !0,
+                                        rejectWithError: !1,
+                                    })
+                                    .then((e) => {
+                                        b(e.body.phone);
+                                    })
+                                    .catch((e) => {
+                                        var t;
+                                        v(e.message || (null == (t = e.body) ? void 0 : t.message));
+                                    });
+                            },
+                        }),
                     ],
                 }),
             }),
             (0, l.jsx)(o.Z.SlideFooter, {
                 mfaChallenge: t,
-                setSlide: h,
+                setSlide: u,
                 showConfirm: !0,
-                disabled: Z.length !== i.Gz,
-                submitting: j,
+                disabled: C.length !== i.Gz,
+                submitting: S,
             }),
         ],
     });

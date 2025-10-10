@@ -1,8 +1,8 @@
-t.d(n, { Z: () => N }), t(388685);
+t.d(n, { Z: () => C }), t(388685);
 var a = t(951288),
     l = t(647438),
-    i = t(120356),
-    r = t.n(i),
+    r = t(120356),
+    i = t.n(r),
     o = t(442837),
     s = t(481060),
     u = t(565138),
@@ -13,8 +13,8 @@ var a = t(951288),
     g = t(594174),
     h = t(267642),
     p = t(709054),
-    y = t(208049),
-    b = t(763296),
+    b = t(208049),
+    y = t(763296),
     v = t(710111),
     x = t(981631),
     j = t(388032),
@@ -22,7 +22,7 @@ var a = t(951288),
 function _(e) {
     let { availableSlots: n, className: t } = e;
     return (0, a.jsxs)(s.Text, {
-        className: r()(w.suffixNode, t),
+        className: i()(w.suffixNode, t),
         variant: "text-sm/medium",
         color: "text-primary",
         children: [
@@ -35,8 +35,8 @@ function _(e) {
         ],
     });
 }
-function N(e) {
-    let { value: n, className: t, onChange: i } = e,
+function C(e) {
+    let { label: n, value: t, className: r, onChange: C } = e,
         N = (0, o.cj)([m.ZP, f.Z, g.default, d.Z], () => {
             let e = {};
             for (let n of m.ZP.getFlattenedGuildIds()) {
@@ -45,81 +45,82 @@ function N(e) {
             }
             return e;
         }),
-        C = (0, o.cj)([b.Z], () => {
+        S = (0, o.cj)([y.Z], () => {
             let e = {};
             for (let [t, a] of p.default.entries(N)) {
                 var n;
-                let l = (0, h.yw)(a, null != (n = b.Z.getSoundsForGuild(t)) ? n : v.Hy, a.premiumTier);
+                let l = (0, h.yw)(a, null != (n = y.Z.getSoundsForGuild(t)) ? n : v.Hy, a.premiumTier);
                 e[t] = l;
             }
             return e;
         }, [N]);
     l.useEffect(() => {
-        (0, y.w)();
+        (0, b.w)();
     }, []);
-    let S = l.useMemo(
+    let O = l.useMemo(
             () =>
                 Object.values(N).map((e) => {
                     let { name: n, id: t } = e;
                     return {
                         label: n,
                         value: t,
-                        disabled: C[t] <= 0,
+                        disabled: S[t] <= 0,
                     };
                 }),
-            [N, C],
+            [N, S],
         ),
-        O = l.useCallback(
+        E = l.useCallback(
             (e) =>
                 null == e || "" === e.value
                     ? null
                     : (0, a.jsx)(u.Z, {
-                          className: r()(w.guildSelectOptionIcon, { [w.disabledOption]: e.disabled }),
+                          className: i()(w.guildSelectOptionIcon, { [w.disabledOption]: e.disabled }),
                           guild: N[e.value],
                           size: u.Z.Sizes.SMOL,
                           active: !0,
                       }),
             [N],
         ),
-        E = l.useCallback(
+        P = l.useCallback(
             (e) => {
                 let n = null == e ? void 0 : e.value;
                 return null == n || "" === n
                     ? null
                     : (0, a.jsx)(_, {
-                          className: r()({ [w.disabledOption]: null == e ? void 0 : e.disabled }),
-                          availableSlots: C[n],
+                          className: i()({ [w.disabledOption]: null == e ? void 0 : e.disabled }),
+                          availableSlots: S[n],
                       });
             },
-            [C],
+            [S],
         ),
-        P = l.useCallback(
+        I = l.useCallback(
             (e) =>
                 (0, a.jsx)("div", {
-                    className: r()({ [w.disabledOption]: e.disabled }),
+                    className: i()({ [w.disabledOption]: e.disabled }),
                     children: e.label,
                 }),
             [],
         ),
-        I = l.useCallback(
+        M = l.useCallback(
             (e) => {
-                C[e] <= 0 || i(e);
+                S[e] <= 0 || C(e);
             },
-            [C, i],
+            [S, C],
         ),
         Z = (() => {
-            let e = C[null != n ? n : x.lds];
-            return null == e || e > 0 ? n : void 0;
+            let e = S[null != t ? t : x.lds];
+            return null == e || e > 0 ? t : void 0;
         })();
     return (0, a.jsx)(s.VcW, {
-        className: t,
-        onChange: I,
+        label: n,
+        className: r,
+        onChange: M,
         value: Z,
         multi: !1,
-        options: S,
-        renderOptionPrefix: O,
-        renderOptionSuffix: E,
-        renderOptionLabel: P,
-        placeholder: 0 === S.length ? j.intl.string(j.t.O3i2gY) : j.intl.string(j.t.CunCMD),
+        options: O,
+        renderOptionPrefix: E,
+        renderOptionSuffix: P,
+        renderOptionLabel: I,
+        placeholder: 0 === O.length ? j.intl.string(j.t.O3i2gY) : j.intl.string(j.t.CunCMD),
     });
 }

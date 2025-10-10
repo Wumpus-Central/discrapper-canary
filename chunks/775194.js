@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(642613), n(539854), n(388685);
+n.d(t, { Z: () => m }), n(642613), n(539854), n(388685);
 var r = n(951288);
 n(647438);
 var a = n(392711),
@@ -7,9 +7,8 @@ var a = n(392711),
     o = n(481250),
     s = n(513547),
     c = n(388032),
-    d = n(966117),
-    u = n(197571);
-let m = {
+    d = n(197571);
+let u = {
     userId: 1,
     dataType: 2,
     savedKB: 3,
@@ -21,7 +20,7 @@ let m = {
     audioChannels: 9,
     sampleRate: 10,
 };
-function p(e) {
+function m(e) {
     let { clips: t } = e;
     if (null == t) return (0, r.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE });
     let n = i().map(t, (e, t) => {
@@ -46,18 +45,20 @@ function p(e) {
                 "framerate",
             ),
         ),
-        (0, r.jsxs)(l.hjN, {
-            tag: l.RB0.H2,
-            title: c.intl.string(c.t.MKrFKC),
+        (0, r.jsxs)(l.Kqy, {
             children: [
+                (0, r.jsx)(l.X6q, {
+                    variant: "heading-md/medium",
+                    children: c.intl.string(c.t.MKrFKC),
+                }),
                 (0, o.VE)(n),
                 (function (e) {
                     if (null != e.buffers)
                         return e.buffers.map((e) => {
                             let t = [];
                             for (let n of Object.keys(e).sort((e, t) => {
-                                let n = m[e],
-                                    r = m[t];
+                                let n = u[e],
+                                    r = u[t];
                                 return n !== r ? (void 0 === n ? 1 : void 0 === r ? -1 : n - r) : e > t ? 1 : -1;
                             })) {
                                 let a = e[n];
@@ -74,13 +75,17 @@ function p(e) {
                                         ),
                                     );
                             }
-                            return (0, r.jsx)(
-                                l.hjN,
+                            return (0, r.jsxs)(
+                                "div",
                                 {
-                                    className: u.marginBottom40,
-                                    title: "Buffer: ".concat(e.key),
-                                    titleClassName: d.title,
-                                    children: (0, o.VE)(t),
+                                    className: d.marginBottom40,
+                                    children: [
+                                        (0, r.jsx)(l.X6q, {
+                                            variant: "heading-md/medium",
+                                            children: "Buffer: ".concat(e.key),
+                                        }),
+                                        (0, o.VE)(t),
+                                    ],
                                 },
                                 "Buffer: ".concat(e.key),
                             );

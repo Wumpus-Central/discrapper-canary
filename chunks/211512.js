@@ -1,35 +1,23 @@
-n.d(t, { I: () => s });
+n.d(t, { I: () => o });
 var r = n(951288),
-    l = n(540863),
-    o = n(534542),
-    i = n(481060),
-    a = n(188639);
-function s(e) {
+    l = n(481060);
+function o(e) {
     let { node: t } = e,
-        { useLabel: n, useTitle: s, useSubtitle: c, useVariant: u, useDisabled: d, onClick: f } = t,
-        m = s(),
-        b = null == c ? void 0 : c(),
-        j = n(),
-        p = null == u ? void 0 : u(),
-        x = null == d ? void 0 : d();
-    return (0, r.jsx)(l.x, {
-        title: m,
-        className: a.settingButtonContainer,
-        children: (0, r.jsxs)("div", {
-            className: a.settingButtonContent,
-            children: [
-                null != b &&
-                    (0, r.jsx)(o.R, {
-                        type: o.g.DESCRIPTION,
-                        children: b,
-                    }),
-                (0, r.jsx)(i.zxk, {
-                    onClick: f,
-                    text: j,
-                    variant: p,
-                    disabled: x,
-                }),
-            ],
+        { useLabel: n, useTitle: o, useSubtitle: i, useVariant: a, useDisabled: s, onClick: c } = t,
+        u = o(),
+        d = null == i ? void 0 : i(),
+        f = n(),
+        b = null == a ? void 0 : a(),
+        m = null == s ? void 0 : s();
+    return (0, r.jsx)(l.gNt, {
+        label: u,
+        description: d,
+        disabled: m,
+        children: (0, r.jsx)(l.zxk, {
+            onClick: c,
+            text: f,
+            variant: b,
+            disabled: m,
         }),
     });
 }

@@ -357,25 +357,29 @@ function X(e) {
                                             className: a()(W.iconWrapper, V.iconWrapper),
                                             children: (0, r.jsx)(R, { className: W.icon }),
                                         }),
-                                        (0, r.jsx)($, {
-                                            parentChannel: t,
-                                            parentMessageId: n,
-                                            threadSettings: p,
-                                            updateThreadSettings: m,
-                                            error: I,
-                                            disabled: N,
-                                            isGeneratingAI: x,
-                                            enableAIFeatures: O,
-                                            getThreadNameInputAccessory: C,
+                                        (0, r.jsxs)(c.C3N, {
+                                            children: [
+                                                (0, r.jsx)($, {
+                                                    parentChannel: t,
+                                                    parentMessageId: n,
+                                                    threadSettings: p,
+                                                    updateThreadSettings: m,
+                                                    error: I,
+                                                    disabled: N,
+                                                    isGeneratingAI: x,
+                                                    enableAIFeatures: O,
+                                                    getThreadNameInputAccessory: C,
+                                                }),
+                                                t.type === B.d4z.GUILD_TEXT
+                                                    ? (0, r.jsx)(J, {
+                                                          startedFromMessage: null != n,
+                                                          threadSettings: p,
+                                                          updateThreadSettings: m,
+                                                          privateThreadMode: j,
+                                                      })
+                                                    : null,
+                                            ],
                                         }),
-                                        t.type === B.d4z.GUILD_TEXT
-                                            ? (0, r.jsx)(J, {
-                                                  startedFromMessage: null != n,
-                                                  threadSettings: p,
-                                                  updateThreadSettings: m,
-                                                  privateThreadMode: j,
-                                              })
-                                            : null,
                                     ],
                                 }),
                                 (0, r.jsx)(et, {
@@ -411,14 +415,7 @@ function X(e) {
 function J(e) {
     let { startedFromMessage: t, threadSettings: n, updateThreadSettings: i, privateThreadMode: l } = e,
         a = (0, k.oD)(n, l),
-        s = (0, r.jsx)("div", {
-            className: V.privateThreadFormTitle,
-            children: (0, r.jsx)("span", {
-                className: V.privateThreadFormTitleText,
-                children: z.intl.string(z.t.F1zyvb),
-            }),
-        }),
-        d = (0, r.jsx)(o.VL, {
+        s = (0, r.jsx)(o.VL, {
             className: V.checkbox,
             disabled: l === k.Jw.PrivateOnly,
             checked: a,
@@ -427,20 +424,10 @@ function J(e) {
         });
     return t || l === k.Jw.Disabled
         ? null
-        : (0, r.jsxs)(c.hjN, {
-              title: s,
-              className: V.formSection,
-              children: [
-                  d,
-                  a
-                      ? (0, r.jsx)(c.Text, {
-                            className: V.privateThreadDescription,
-                            variant: "text-xs/normal",
-                            color: "header-secondary",
-                            children: z.intl.string(z.t.EWXyc3),
-                        })
-                      : null,
-              ],
+        : (0, r.jsx)(c.gNt, {
+              label: z.intl.string(z.t.F1zyvb),
+              helperText: a ? z.intl.string(z.t.EWXyc3) : void 0,
+              children: s,
           });
 }
 function $(e) {

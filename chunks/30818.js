@@ -1,35 +1,15 @@
-n.d(t, { z: () => c });
-var r = n(951288);
-n(647438);
-var i = n(793030),
-    l = n(481060),
-    s = n(640175),
-    a = n(388032),
-    o = n(489550);
-function c(e) {
-    let { guildId: t, defaultSettings: n, canManageGuild: c } = e;
-    return (0, r.jsxs)(l.hjN, {
-        className: o.settings,
-        children: [
-            (0, r.jsxs)("div", {
-                className: o.halfWidth,
-                children: [
-                    (0, r.jsx)(l.vwX, { children: a.intl.string(a.t["23TVho"]) }),
-                    (0, r.jsxs)(i.xvT, {
-                        variant: "text-sm/medium",
-                        color: "text-secondary",
-                        children: [a.intl.string(a.t.U4LwWF), " ", a.intl.string(a.t.xdY0pK)],
-                    }),
-                ],
-            }),
-            (0, r.jsx)("div", {
-                className: o.halfWidth,
-                children: (0, r.jsx)(s.z, {
-                    guildId: t,
-                    defaultSettings: n,
-                    canManageGuild: c,
-                }),
-            }),
-        ],
+n.d(t, { z: () => a });
+var r = n(951288),
+    i = n(640175),
+    l = n(388032);
+function a(e) {
+    let { guildId: t, defaultSettings: n, canManageGuild: a } = e;
+    return (0, r.jsx)(i.z, {
+        label: l.intl.string(l.t["23TVho"]),
+        description: l.intl.string(l.t.U4LwWF),
+        helperText: l.intl.string(l.t.xdY0pK),
+        guildId: t,
+        defaultSettings: n,
+        canManageGuild: a,
     });
 }

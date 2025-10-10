@@ -11,8 +11,8 @@ function d() {
     return (0, r.jsxs)("header", {
         className: u.header,
         children: [
-            (0, r.jsx)(l.vwX, {
-                tag: "h1",
+            (0, r.jsx)(l.X6q, {
+                variant: "heading-lg/semibold",
                 className: u.title,
                 children: c.intl.string(c.t.w5uwoK),
             }),

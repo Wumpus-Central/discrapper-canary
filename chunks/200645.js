@@ -83,36 +83,41 @@ class g extends i.PureComponent {
     render() {
         let { openOnStartup: e, startMinimized: t, minimizeToTray: n } = this.state,
             i = (0, u.isLinux)() ? _.intl.string(_.t["7pPjTU"]) : _.intl.string(_.t.ZkDZoq);
-        return (0, r.jsx)(o.hjN, {
-            tag: o.RB0.H1,
-            title: i,
-            children: (0, r.jsxs)(o.Kqy, {
-                gap: 24,
-                children: [
-                    (0, r.jsx)(o.rsf, {
-                        label: _.intl.string(_.t.WQm4p6),
-                        description: _.intl.string(_.t["s/cQra"]),
-                        checked: e,
-                        onChange: this.handleToggleOpenOnStartup,
-                    }),
-                    (0, u.isWindows)()
-                        ? (0, r.jsx)(o.rsf, {
-                              label: _.intl.string(_.t.n7Yjen),
-                              description: _.intl.string(_.t.o2FSjI),
-                              checked: !!e && t,
-                              disabled: !e,
-                              onChange: this.handleToggleStartMinimized,
-                          })
-                        : null,
-                    (0, r.jsx)(o.rsf, {
-                        label: _.intl.string(_.t.abLFen),
-                        description: _.intl.string(_.t["mVuX+v"]),
-                        checked: n,
-                        onChange: this.handleToggleMinimizeToTray,
-                    }),
-                    (0, r.jsx)(m, {}),
-                ],
-            }),
+        return (0, r.jsxs)(o.Kqy, {
+            gap: 16,
+            children: [
+                (0, r.jsx)(o.X6q, {
+                    variant: "heading-lg/semibold",
+                    color: "header-primary",
+                    children: i,
+                }),
+                (0, r.jsxs)(o.C3N, {
+                    children: [
+                        (0, r.jsx)(o.rsf, {
+                            label: _.intl.string(_.t.WQm4p6),
+                            description: _.intl.string(_.t["s/cQra"]),
+                            checked: e,
+                            onChange: this.handleToggleOpenOnStartup,
+                        }),
+                        (0, u.isWindows)()
+                            ? (0, r.jsx)(o.rsf, {
+                                  label: _.intl.string(_.t.n7Yjen),
+                                  description: _.intl.string(_.t.o2FSjI),
+                                  checked: !!e && t,
+                                  disabled: !e,
+                                  onChange: this.handleToggleStartMinimized,
+                              })
+                            : null,
+                        (0, r.jsx)(o.rsf, {
+                            label: _.intl.string(_.t.abLFen),
+                            description: _.intl.string(_.t["mVuX+v"]),
+                            checked: n,
+                            onChange: this.handleToggleMinimizeToTray,
+                        }),
+                        (0, r.jsx)(m, {}),
+                    ],
+                }),
+            ],
         });
     }
     constructor(e) {

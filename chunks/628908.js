@@ -76,8 +76,8 @@ let O = (e) => {
         (r = r =
             {
                 children: [
-                    (0, n.jsx)(l.vwX, {
-                        tag: "h2",
+                    (0, n.jsx)(l.X6q, {
+                        variant: "heading-md/semibold",
                         children: s,
                     }),
                     null != i

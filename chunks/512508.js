@@ -409,9 +409,9 @@ function k(e) {
                                     let { section: t } = e;
                                     return 0 === t
                                         ? (0, r.jsx)(
-                                              u.vwX,
+                                              u.X6q,
                                               {
-                                                  tag: "h5",
+                                                  variant: "heading-sm/semibold",
                                                   className: o()(H.sectionTitle, H.sectionHeight),
                                                   children: O.intl.string(O.t.OGiMXF),
                                               },
@@ -419,9 +419,9 @@ function k(e) {
                                           )
                                         : 1 === t
                                           ? (0, r.jsx)(
-                                                u.vwX,
+                                                u.X6q,
                                                 {
-                                                    tag: "h5",
+                                                    variant: "heading-sm/semibold",
                                                     className: o()(H.sectionTitle, H.sectionHeight),
                                                     children: O.intl.string(O.t.LPJmLy),
                                                 },

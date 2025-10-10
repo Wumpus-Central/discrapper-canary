@@ -2,9 +2,9 @@ n.d(t, { Z: () => F }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    s = n.n(l),
-    a = n(525654),
-    o = n.n(a),
+    a = n.n(l),
+    s = n(525654),
+    o = n.n(s),
     c = n(442837),
     d = n(846519),
     u = n(28664),
@@ -16,8 +16,8 @@ var r = n(951288),
     x = n(906732),
     b = n(623624),
     j = n(357156),
-    _ = n(208049),
-    v = n(763296),
+    v = n(208049),
+    _ = n(763296),
     C = n(22382),
     O = n(747071),
     y = n(286654),
@@ -86,10 +86,15 @@ function F() {
         ? null
         : (0, r.jsx)(x.Gt, {
               value: t,
-              children: (0, r.jsx)(g.hjN, {
-                  tag: g.RB0.H1,
-                  title: k.intl.string(k.t.OWQNYm),
-                  children: (0, r.jsx)(K, { guild: e }),
+              children: (0, r.jsxs)(g.Kqy, {
+                  gap: 8,
+                  children: [
+                      (0, r.jsx)(g.X6q, {
+                          variant: "heading-lg/semibold",
+                          children: k.intl.string(k.t.OWQNYm),
+                      }),
+                      (0, r.jsx)(K, { guild: e }),
+                  ],
               }),
           });
 }
@@ -105,12 +110,12 @@ function H(e) {
 function z(e) {
     let { currentTier: t, availableSounds: n, guildId: i } = e,
         l = E.Z.getGuild(i),
-        s = null != l ? (0, P.nL)(l) : 0;
+        a = null != l ? (0, P.nL)(l) : 0;
     return 0 === t
         ? (0, r.jsx)(r.Fragment, {
               children: k.intl.format(k.t["7E9Hd3"], {
                   slots: n,
-                  totalSlots: s,
+                  totalSlots: a,
               }),
           })
         : (0, r.jsxs)(r.Fragment, {
@@ -134,15 +139,15 @@ function z(e) {
                   }),
                   k.intl.format(k.t.HHCdvb, {
                       slots: n,
-                      totalSlots: s,
+                      totalSlots: a,
                       boostLevel: t,
                   }),
               ],
           });
 }
-let W = (e) => {
+let V = (e) => {
         var { renderPopoutBody: t, renderPopoutChildren: n, popoutTargetRef: l } = e,
-            s = (function (e, t) {
+            a = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -163,7 +168,7 @@ let W = (e) => {
                 }
                 return i;
             })(e, ["renderPopoutBody", "renderPopoutChildren", "popoutTargetRef"]);
-        let [a, o] = i.useState(!1),
+        let [s, o] = i.useState(!1),
             c = i.useMemo(() => new d.V7(), []),
             u = i.useCallback(() => {
                 c.stop(), o(!0);
@@ -180,7 +185,7 @@ let W = (e) => {
             U(
                 M(
                     {
-                        shouldShow: a,
+                        shouldShow: s,
                         renderPopout: (e) =>
                             (0, r.jsx)(g.VqE, {
                                 className: G.browserUnsupportedDialog,
@@ -189,7 +194,7 @@ let W = (e) => {
                                 children: t(e),
                             }),
                     },
-                    s,
+                    a,
                 ),
                 {
                     targetElementRef: l,
@@ -198,9 +203,9 @@ let W = (e) => {
             ),
         );
     },
-    V = () => {
+    W = () => {
         let e = i.useRef(null);
-        return (0, r.jsx)(W, {
+        return (0, r.jsx)(V, {
             renderPopoutBody: () =>
                 (0, r.jsx)(g.Text, {
                     variant: "text-sm/normal",
@@ -226,23 +231,23 @@ let W = (e) => {
     };
 function K(e) {
     let { guild: t } = e,
-        [l, s] = (0, c.Wu)([v.Z], () => {
+        [l, a] = (0, c.Wu)([_.Z], () => {
             var e;
             return [
-                null != (e = v.Z.getSoundsForGuild(t.id)) ? e : L.Hy,
-                v.Z.isFetchingSounds() || v.Z.isFetchingDefaultSounds(),
+                null != (e = _.Z.getSoundsForGuild(t.id)) ? e : L.Hy,
+                _.Z.isFetchingSounds() || _.Z.isFetchingDefaultSounds(),
             ];
         }),
-        { canCreateExpressions: a } = (0, j.XJ)(t),
+        { canCreateExpressions: s } = (0, j.XJ)(t),
         o = i.useRef(null),
         d = (0, f.ZP)(),
         u = t.premiumTier,
         m = (0, P.yw)(t, l, u);
     i.useEffect(() => {
-        (0, _.w)();
+        (0, v.w)();
     }, []);
     let p = i.useMemo(() => l.reduce((e, t) => ((e[t.soundId] = new Audio((0, C.Z)(t.soundId))), e), {}), [l]),
-        h = 0 === l.length && !s;
+        h = 0 === l.length && !a;
     function x(e) {
         var t;
         null == (t = o.current) || t.pause();
@@ -257,7 +262,7 @@ function K(e) {
             },
             [],
         ),
-        s)
+        a)
     )
         return (0, r.jsx)(g.$jN, {});
     let b = B
@@ -270,9 +275,9 @@ function K(e) {
                       return (n) => (0, r.jsx)(e, U(M({}, n), { guildId: t.id }));
                   });
               },
-              disabled: m <= 0 || !a,
+              disabled: m <= 0 || !s,
           })
-        : (0, r.jsx)(V, {});
+        : (0, r.jsx)(W, {});
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
@@ -357,20 +362,20 @@ function K(e) {
     });
 }
 function Y(e) {
-    let { sound: t, isPlaying: l, onPlaySound: a, guild: o } = e,
-        { soundId: d, name: u, user: f, userId: h, emojiId: b, emojiName: v } = t,
+    let { sound: t, isPlaying: l, onPlaySound: s, guild: o } = e,
+        { soundId: d, name: u, user: f, userId: h, emojiId: b, emojiName: _ } = t,
         { analyticsLocations: C } = (0, x.ZP)(),
         O = (0, c.e7)([I.default], () => (null != f ? f : I.default.getUser(h)), [h, f]),
         { canManageGuildExpression: E } = (0, j.XJ)(o),
         S = i.useMemo(() => E(t), [t, E]),
-        P = null != b || null != v,
+        P = null != b || null != _,
         [w, R] = i.useState(!1),
         D = (0, y.z)(t, o.id);
     async function A() {
         if (!w) {
             R(!0);
             try {
-                await (0, _.AA)(o.id, d);
+                await (0, v.AA)(o.id, d);
             } catch (e) {
                 R(!1);
             }
@@ -392,12 +397,12 @@ function Y(e) {
         }, [O, o.id, C]),
         B = Z.ZP.useUserTag(O);
     return (0, r.jsxs)("div", {
-        className: s()(G.row, { [G.active]: l }),
+        className: a()(G.row, { [G.active]: l }),
         children: [
             P
                 ? (0, r.jsx)(p.Z, {
                       emojiId: b,
-                      emojiName: v,
+                      emojiName: _,
                       className: G.emoji,
                   })
                 : (0, r.jsx)(g.XBm, {
@@ -407,7 +412,7 @@ function Y(e) {
                   }),
             (0, r.jsx)(g.P3F, {
                 onClick: () => {
-                    w || a(t);
+                    w || s(t);
                 },
                 onContextMenu: D,
                 className: G.soundName,

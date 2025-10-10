@@ -41,33 +41,29 @@ function p(e) {
                     children: [
                         (0, i.jsx)("div", {
                             className: u.column,
-                            children: (0, i.jsx)(o.xJW, {
-                                title: c.intl.string(c.t.pSZKvL),
+                            children: (0, i.jsx)(o.Wrb, {
                                 required: !0,
-                                children: (0, i.jsx)(o.Wrb, {
-                                    value: m,
-                                    onSelect: (e) => {
-                                        g(e);
-                                    },
-                                    minDate: h,
-                                    maxDate: f,
-                                    disabled: !1,
-                                }),
+                                label: c.intl.string(c.t.pSZKvL),
+                                value: m,
+                                onSelect: (e) => {
+                                    g(e);
+                                },
+                                minDate: h,
+                                maxDate: f,
+                                disabled: !1,
                             }),
                         }),
                         (0, i.jsx)("div", {
                             className: u.column,
-                            children: (0, i.jsx)(o.xJW, {
-                                title: c.intl.string(c.t.GOmEb2),
+                            children: (0, i.jsx)(o.MGJ, {
+                                label: c.intl.string(c.t.GOmEb2),
                                 required: !0,
-                                children: (0, i.jsx)(o.MGJ, {
-                                    value: m,
-                                    onChange: (e) => {
-                                        e.isValid() && g(e);
-                                    },
-                                    hideValue: !1,
-                                    disabled: !1,
-                                }),
+                                value: m,
+                                onChange: (e) => {
+                                    e.isValid() && g(e);
+                                },
+                                hideValue: !1,
+                                disabled: !1,
                             }),
                         }),
                     ],

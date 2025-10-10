@@ -1,43 +1,42 @@
 n.d(i, { default: () => d });
-var e = n(951288);
-n(647438);
-var a = n(442837),
-    s = n(481060),
-    l = n(812206),
+var e = n(951288),
+    a = n(442837),
+    l = n(481060),
+    s = n(812206),
     r = n(600164),
     c = n(63063),
     o = n(981631),
     m = n(388032),
     p = n(281556);
 let x = c.Z.getArticleURL(o.BhN.MISSING_ENTITLEMENT),
-    d = a.ZP.connectStores([l.Z], (t) => {
+    d = a.ZP.connectStores([s.Z], (t) => {
         let { applicationId: i } = t;
-        return { application: l.Z.getApplication(i) };
+        return { application: s.Z.getApplication(i) };
     })(function (t) {
         let { application: i, transitionState: n, onClose: a } = t;
-        return (0, e.jsxs)(s.Y0X, {
+        return (0, e.jsxs)(l.Y0X, {
             transitionState: n,
-            size: s.CgR.MEDIUM,
+            size: l.CgR.MEDIUM,
             parentComponent: "MissingEntitlementModal",
             children: [
-                (0, e.jsxs)(s.xBx, {
+                (0, e.jsxs)(l.xBx, {
                     align: r.Z.Align.CENTER,
                     justify: r.Z.Justify.BETWEEN,
                     children: [
-                        (0, e.jsx)(s.vwX, {
-                            tag: s.RB0.H4,
+                        (0, e.jsx)(l.X6q, {
+                            variant: "heading-lg/semibold",
                             children:
                                 null != i
                                     ? m.intl.formatToPlainString(m.t.N2mILi, { applicationName: i.name })
                                     : m.intl.string(m.t.nS8PUV),
                         }),
-                        (0, e.jsx)(s.olH, { onClick: a }),
+                        (0, e.jsx)(l.olH, { onClick: a }),
                     ],
                 }),
-                (0, e.jsxs)(s.hzk, {
+                (0, e.jsxs)(l.hzk, {
                     children: [
                         (0, e.jsx)("div", { className: p.missingEntitlementImage }),
-                        (0, e.jsx)(s.Text, {
+                        (0, e.jsx)(l.Text, {
                             className: p.text,
                             variant: "text-md/normal",
                             children:
@@ -50,8 +49,8 @@ let x = c.Z.getArticleURL(o.BhN.MISSING_ENTITLEMENT),
                         }),
                     ],
                 }),
-                (0, e.jsx)(s.mzw, {
-                    children: (0, e.jsx)(s.zxk, {
+                (0, e.jsx)(l.mzw, {
+                    children: (0, e.jsx)(l.zxk, {
                         variant: "primary",
                         text: m.intl.string(m.t.BddRzc),
                         onClick: a,

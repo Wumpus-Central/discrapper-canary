@@ -3,9 +3,8 @@ n.d(t, {
     d: () => u,
 }),
     n(953529);
-var r = n(951288);
-n(647438);
-var i = n(692547),
+var r = n(951288),
+    i = n(692547),
     a = n(28664),
     o = n(481060),
     s = n(752657),
@@ -75,15 +74,17 @@ let d = (e) => {
                 className: c.fileIcon,
                 color: i.Z.unsafe_rawColors.PRIMARY_300.css,
             }),
-            (0, r.jsxs)(o.hjN, {
+            (0, r.jsxs)("div", {
                 className: c.fileInfo,
                 children: [
-                    (0, r.jsx)(o.vwX, {
+                    (0, r.jsx)(o.Text, {
+                        variant: "text-md/normal",
                         className: c.fileName,
                         children: u,
                     }),
-                    (0, r.jsx)(o.R94, {
-                        type: o.geA.DESCRIPTION,
+                    (0, r.jsx)(o.Text, {
+                        variant: "text-sm/normal",
+                        color: "text-secondary",
                         children: f,
                     }),
                 ],

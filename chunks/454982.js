@@ -104,23 +104,15 @@ let p = function (e) {
         children: (0, r.jsxs)("div", {
             children: [
                 (0, r.jsx)(s.izJ, { className: f.formDivider }),
-                (0, r.jsxs)(s.hjN, {
-                    title: d.intl.string(d.t.s9LFQk),
-                    className: f.formSection,
-                    children: [
-                        (0, r.jsx)(l.Z, {
-                            value: p,
-                            buttonColor: o.zx.Colors.BRAND,
-                            buttonLook: o.zx.Looks.FILLED,
-                            delay: 1000,
-                        }),
-                        (0, r.jsx)(s.Text, {
-                            variant: "text-xs/normal",
-                            color: "header-secondary",
-                            className: f.confirmationText,
-                            children: d.intl.string(d.t["F+nFTU"]),
-                        }),
-                    ],
+                (0, r.jsx)(a.gNt, {
+                    label: d.intl.string(d.t.s9LFQk),
+                    helperText: d.intl.string(d.t["F+nFTU"]),
+                    children: (0, r.jsx)(l.Z, {
+                        value: p,
+                        buttonColor: o.zx.Colors.BRAND,
+                        buttonLook: o.zx.Looks.FILLED,
+                        delay: 1000,
+                    }),
                 }),
             ],
         }),

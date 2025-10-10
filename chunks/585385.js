@@ -1,13 +1,12 @@
 n.d(t, { D: () => h }), n(997841);
-var l = n(951288);
-n(647438);
-var i = n(120356),
+var l = n(951288),
+    i = n(120356),
     s = n.n(i),
     r = n(481060),
     a = n(410030),
     o = n(948851),
-    u = n(868728),
-    d = n(388032),
+    d = n(868728),
+    u = n(388032),
     c = n(451964),
     g = n(197571);
 let h = (e) => {
@@ -24,7 +23,7 @@ let h = (e) => {
             onSetInviteFlags: f,
         } = e,
         N = (0, a.ZP)(),
-        { maxAgeOptions: S, maxAge: _, maxUses: j, temporary: b, flags: E } = i;
+        { maxAgeOptions: S, maxAge: _, maxUses: b, temporary: j, flags: E } = i;
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsxs)(r.xBx, {
@@ -35,11 +34,11 @@ let h = (e) => {
                     }),
                     (0, l.jsx)("div", {
                         className: c.headerContainer,
-                        children: (0, l.jsx)(r.vwX, {
+                        children: (0, l.jsx)(r.X6q, {
                             id: n,
-                            tag: "h2",
+                            variant: "heading-md/semibold",
                             className: s()(g.marginReset, c.headerCloseButtonSpacing, c.headerText),
-                            children: d.intl.string(d.t.Atdlys),
+                            children: u.intl.string(u.t.Atdlys),
                         }),
                     }),
                 ],
@@ -48,8 +47,8 @@ let h = (e) => {
                 shouldHideTemporaryInviteToggle: h,
                 maxAgeOptions: S,
                 maxAge: _,
-                maxUses: j,
-                temporary: b,
+                maxUses: b,
+                temporary: j,
                 onToggleTemporary: p,
                 onSelectMaxAge: v,
                 onSelectMaxUses: I,
@@ -60,7 +59,7 @@ let h = (e) => {
             }),
             (0, l.jsx)(r.mzw, {
                 className: c.settingsFooter,
-                children: (0, l.jsx)(u.Z, {
+                children: (0, l.jsx)(d.Z, {
                     theme: N,
                     onConfirm: () => {
                         m(), t();

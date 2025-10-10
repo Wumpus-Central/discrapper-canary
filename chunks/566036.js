@@ -1,21 +1,20 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(392711),
-    s = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    s = n(481060),
     o = n(510231),
     c = n(434404),
     d = n(383124),
     u = n(795691),
     g = n(388032),
-    m = n(448369),
-    p = n(270856);
-let f = () => null;
-function h(e) {
+    m = n(448369);
+let p = () => null;
+function f(e) {
     let { gameApplicationIds: t, handleChange: n, disabled: i } = e,
-        { options: l, matchSorterOptions: s } = (0, o.h)();
-    return (0, r.jsx)(a.VcW, {
+        { options: l, matchSorterOptions: a } = (0, o.h)();
+    return (0, r.jsx)(s.VcW, {
         multi: !0,
         hidePills: !0,
         wrapperClassName: m.selectWrapper,
@@ -24,13 +23,13 @@ function h(e) {
         placeholder: g.intl.string(g.t.JTLolJ),
         onChange: n,
         isDisabled: 20 === t.length || i,
-        matchSorterOptions: s,
+        matchSorterOptions: a,
         clearQueryOnSelect: !0,
         customPillContainerClassName: m.pills,
-        renderCustomPill: f,
+        renderCustomPill: p,
     });
 }
-function x(e) {
+function h(e) {
     let { gameApplicationIds: t, onRemoveGame: n, disabled: i } = e;
     return 0 === t.length
         ? null
@@ -50,60 +49,46 @@ function x(e) {
               ),
           });
 }
-let b = [];
-function j(e) {
+let x = [];
+function b(e) {
     var t;
     let { profile: n, canManageGuild: l } = e,
         o = n.id,
-        d = null != (t = null == n ? void 0 : n.gameApplicationIds) ? t : b,
-        f = i.useCallback(
+        d = null != (t = null == n ? void 0 : n.gameApplicationIds) ? t : x,
+        m = i.useCallback(
             (e) => {
                 c.Z.updateGuildProfile(o, { gameApplicationIds: e });
             },
             [o],
         ),
-        j = i.useCallback(
+        p = i.useCallback(
             (e) => {
                 let t = d.filter((t) => t !== e);
                 c.Z.updateGuildProfile(o, { gameApplicationIds: t });
             },
             [o, d],
         ),
-        _ = i.useRef(d),
-        v = i.useMemo(() => (s().isEqual(new Set(d), new Set(_.current)) || (_.current = [...d]), _.current), [d]);
-    return (0, r.jsxs)(a.hjN, {
-        className: p.section,
+        b = i.useRef(d),
+        j = i.useMemo(() => (a().isEqual(new Set(d), new Set(b.current)) || (b.current = [...d]), b.current), [d]);
+    return (0, r.jsxs)(s.C3N, {
+        label: g.intl.string(g.t.BR68vL),
+        description: g.intl.string(g.t.MobxiI),
         children: [
-            (0, r.jsxs)("div", {
-                className: p.sectionHeader,
-                children: [
-                    (0, r.jsx)(a.vwX, { children: g.intl.string(g.t.BR68vL) }),
-                    (0, r.jsx)(a.R94, {
-                        type: a.geA.DESCRIPTION,
-                        children: g.intl.string(g.t.MobxiI),
-                    }),
-                ],
+            (0, r.jsx)(f, {
+                gameApplicationIds: d,
+                handleChange: m,
+                disabled: !l,
             }),
-            (0, r.jsxs)("div", {
-                className: m.sectionBody,
-                children: [
-                    (0, r.jsx)(h, {
-                        gameApplicationIds: d,
-                        handleChange: f,
-                        disabled: !l,
-                    }),
-                    (0, r.jsx)(x, {
-                        gameApplicationIds: v,
-                        onRemoveGame: j,
-                        disabled: !l,
-                    }),
-                    (0, r.jsx)(u.Z, {
-                        guildId: o,
-                        selectedGameApplicationIds: d,
-                        onUpdateGames: f,
-                        disabled: !l,
-                    }),
-                ],
+            (0, r.jsx)(h, {
+                gameApplicationIds: j,
+                onRemoveGame: p,
+                disabled: !l,
+            }),
+            (0, r.jsx)(u.Z, {
+                guildId: o,
+                selectedGameApplicationIds: d,
+                onUpdateGames: m,
+                disabled: !l,
             }),
         ],
     });

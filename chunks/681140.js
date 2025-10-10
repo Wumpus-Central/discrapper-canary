@@ -319,16 +319,11 @@ function v() {
 function j() {
     let e = f.useField("state"),
         t = f.useField("error");
-    return (0, a.jsxs)(i.hjN, {
-        title: "Debug User State",
-        tag: i.RB0.H3,
+    return (0, a.jsxs)(i.C3N, {
+        label: "Debug User State",
+        description:
+            "Paste a user ID below to get a snapshot of client state for the user. This does not generate any logs.",
         children: [
-            (0, a.jsx)(i.Text, {
-                variant: "text-sm/normal",
-                className: x.subtitle,
-                children:
-                    "Paste a user ID below to get a snapshot of client state for the user. This does not generate any logs.",
-            }),
             (0, a.jsx)(v, {}),
             null != t &&
                 (0, a.jsx)(i.Text, {

@@ -16,21 +16,22 @@ function o(e) {
           });
 }
 let s = function (e) {
-    let { currencies: t, onChange: n, selectedCurrency: o, className: s, disabled: l = !1 } = e;
-    if (t.length < 2) return null;
-    let c = t.map((e, t) => ({
+    let { label: t, currencies: n, onChange: o, selectedCurrency: s, className: l, disabled: c = !1 } = e;
+    if (n.length < 2) return null;
+    let u = n.map((e, t) => ({
             key: t,
             value: e,
             label: "".concat(e.toUpperCase(), " - ").concat((0, a.T)(e)),
         })),
-        u = (e) => {
-            null != e && n(e);
+        d = (e) => {
+            null != e && o(e);
         };
     return (0, r.jsx)(i.q4e, {
-        value: o,
-        options: c,
-        onChange: u,
-        className: s,
-        isDisabled: l,
+        label: t,
+        value: s,
+        options: u,
+        onChange: d,
+        className: l,
+        isDisabled: c,
     });
 };

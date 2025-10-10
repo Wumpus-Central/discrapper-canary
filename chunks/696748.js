@@ -177,8 +177,8 @@ class v extends i.PureComponent {
                             className: E.closeButton,
                             onClick: this.onClose,
                         }),
-                        (0, r.jsx)(c.vwX, {
-                            tag: "h2",
+                        (0, r.jsx)(c.X6q, {
+                            variant: "heading-lg/semibold",
                             className: b.marginReset,
                             children: n,
                         }),

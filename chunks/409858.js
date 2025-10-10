@@ -19,15 +19,15 @@ var i = n(951288),
     v = n(583434),
     P = n(551425),
     j = n(832149),
-    S = n(745510),
-    x = n(313201),
+    x = n(745510),
+    S = n(313201),
     w = n(925329),
     _ = n(703656),
     I = n(164670),
     Z = n(435883),
     A = n(146779),
-    C = n(763296),
-    T = n(82142),
+    T = n(763296),
+    C = n(82142),
     E = n(283595),
     N = n(594174),
     k = n(509545),
@@ -45,8 +45,8 @@ var i = n(951288),
     K = n(215023),
     W = n(388032),
     q = n(269142),
-    X = n(167969),
-    Y = n(557256);
+    Y = n(167969),
+    X = n(557256);
 function $(e, t, n) {
     return (
         t in e
@@ -62,7 +62,7 @@ function $(e, t, n) {
 }
 let J = (e) => {
         let { openedGift: t } = e,
-            { createMultipleConfettiAt: n } = r.useContext(S.h);
+            { createMultipleConfettiAt: n } = r.useContext(x.h);
         return (
             r.useEffect(() => {
                 t && n(window.innerWidth / 2, window.innerHeight / 4);
@@ -76,7 +76,7 @@ let J = (e) => {
             r.useEffect(() => {
                 var e;
                 if (t !== V.wZ8.CONFIRM) return;
-                let i = C.Z.getSoundById(n);
+                let i = T.Z.getSoundById(n);
                 (0, A.playGiftSound)(n, null != (e = null == i ? void 0 : i.volume) ? e : 1);
             }, [t, n]),
             null
@@ -253,15 +253,15 @@ class ee extends r.Component {
                 accepted: O,
                 opened: v,
                 emojiURL: j,
-                isPremiumAppGift: S,
+                isPremiumAppGift: x,
             } = this.state,
-            x = N.default.getCurrentUser(),
+            S = N.default.getCurrentUser(),
             _ = this.step === V.wZ8.ERROR,
             A =
                 (null == l ? void 0 : l.userId) != null &&
-                null != x &&
-                (null == x ? void 0 : x.id) != null &&
-                l.userId === x.id;
+                null != S &&
+                (null == S ? void 0 : S.id) != null &&
+                l.userId === S.id;
         switch (this.step) {
             case V.wZ8.ERROR:
                 null == d || d(l, !1);
@@ -269,7 +269,7 @@ class ee extends r.Component {
             case V.wZ8.SUCCESS:
                 null == d || d(l, !0);
         }
-        let C = (0, I.K$)(e);
+        let T = (0, I.K$)(e);
         return (0, i.jsxs)("div", {
             ref: this.modalRef,
             children: [
@@ -304,7 +304,7 @@ class ee extends r.Component {
                                 [q.contentCustomGift]: b,
                             }),
                             children: [
-                                (!y && !S && (null == l.giftStyle || (b && O))) || C
+                                (!y && !x && (null == l.giftStyle || (b && O))) || T
                                     ? (0, i.jsx)(w.Z, {
                                           size: w.A.LARGE,
                                           game: t,
@@ -314,7 +314,7 @@ class ee extends r.Component {
                                 _ &&
                                     (0, i.jsx)("img", {
                                         alt: "",
-                                        src: g ? X : Y,
+                                        src: g ? Y : X,
                                     }),
                                 (0, i.jsxs)(c.X6q, {
                                     id: s,
@@ -364,18 +364,19 @@ class ee extends r.Component {
                                     !A &&
                                     (0, i.jsxs)(i.Fragment, {
                                         children: [
-                                            (0, i.jsx)(c.vwX, {
-                                                children: W.intl.format(W.t.DDO4W1, { sender: U.ZP.getName(h) }),
-                                            }),
                                             (0, i.jsx)(c.X6q, {
                                                 id: s,
+                                                variant: "heading-md/semibold",
+                                                children: W.intl.format(W.t.DDO4W1, { sender: U.ZP.getName(h) }),
+                                            }),
+                                            (0, i.jsx)(c.Text, {
                                                 className: q.customMessage,
-                                                variant: "heading-sm/bold",
+                                                variant: "text-md/semibold",
                                                 children: p,
                                             }),
                                         ],
                                     }),
-                                C &&
+                                T &&
                                     (0, i.jsx)(Z.q, {
                                         sku: e,
                                         className: a()({
@@ -458,7 +459,7 @@ class ee extends r.Component {
             });
     }
 }
-let et = o.ZP.connectStores([E.Z, R.Z, b.Z, T.Z, k.Z, f.Z, y.Z], (e) => {
+let et = o.ZP.connectStores([E.Z, R.Z, b.Z, C.Z, k.Z, f.Z, y.Z], (e) => {
         let { giftCode: t } = e,
             n = R.Z.get(t.skuId),
             i = null != n ? b.Z.getApplication(n.applicationId) : null,
@@ -471,7 +472,7 @@ let et = o.ZP.connectStores([E.Z, R.Z, b.Z, T.Z, k.Z, f.Z, y.Z], (e) => {
                     : null,
             application: i,
             subscriptionPlan: null != t.subscriptionPlanId ? (0, M.oE)(t.subscriptionPlanId) : null,
-            accepting: T.Z.getIsAccepting(t.code),
+            accepting: C.Z.getIsAccepting(t.code),
             useReducedMotion: r,
         };
     })(ee),
@@ -500,11 +501,11 @@ let et = o.ZP.connectStores([E.Z, R.Z, b.Z, T.Z, k.Z, f.Z, y.Z], (e) => {
                 }
                 return r;
             })(e, ["channelContext", "code", "customGiftMessage", "emojiName", "soundId", "onClose"]);
-        let h = (0, x.Dt)(),
-            b = (0, o.e7)([T.Z], () => T.Z.get(l)),
+        let h = (0, S.Dt)(),
+            b = (0, o.e7)([C.Z], () => C.Z.get(l)),
             y = (0, p.ZP)(),
             { analyticsLocations: P } = (0, g.ZP)(m.Z.GIFT_CODE_MODAL),
-            { product: S } = (0, v.T)(null == b ? void 0 : b.skuId, !0);
+            { product: x } = (0, v.T)(null == b ? void 0 : b.skuId, !0);
         return null == b
             ? null
             : (0, i.jsx)(
@@ -536,13 +537,13 @@ let et = o.ZP.connectStores([E.Z, R.Z, b.Z, T.Z, k.Z, f.Z, y.Z], (e) => {
                           analyticsLocations: P,
                           isThemeDark: (0, u.wj)(y),
                           onClose: d,
-                          collectiblesItemType: (0, O.$W)(S),
+                          collectiblesItemType: (0, O.$W)(x),
                           onAccept:
-                              null != S
+                              null != x
                                   ? () => {
                                         d(),
                                             (0, j.Z)({
-                                                product: S,
+                                                product: x,
                                                 analyticsLocations: P,
                                                 purchaseType: K.o8.GIFT,
                                             });

@@ -15,7 +15,6 @@ e.exports = {
     swatchIcon: "swatchIcon_f50ddc",
     errorBoundary: "errorBoundary_f50ddc",
     errorBoundaryIcon: "errorBoundaryIcon_f50ddc",
-    headingWithTooltip: "headingWithTooltip_f50ddc",
     errorMessageWrapper: "errorMessageWrapper_f50ddc",
     errorMessage: "errorMessage_f50ddc",
     questTile: "questTile_f50ddc",

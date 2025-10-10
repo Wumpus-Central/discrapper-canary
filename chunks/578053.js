@@ -1,14 +1,14 @@
 n.d(t, {
-    g: () => _,
-    u: () => v,
+    g: () => v,
+    u: () => _,
 }),
     n(290780),
     n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(106351),
-    s = n(442837),
-    a = n(481060),
+    a = n(442837),
+    s = n(481060),
     o = n(740504),
     c = n(933557),
     d = n(471445),
@@ -29,20 +29,20 @@ function b(e) {
 }
 function j(e) {
     let { option: t } = e,
-        { label: n, channel: l, category: s } = t,
+        { label: n, channel: l, category: a } = t,
         o = i.useMemo(() => (0, d.KS)(l), [l]),
         u = (0, c.ZP)(l);
-    return (0, r.jsx)(a.ZZ$, {
+    return (0, r.jsx)(s.ZZ$, {
         title: n,
         icon: o,
-        subtitle: null != s ? u : null,
+        subtitle: null != a ? u : null,
     });
 }
-function _(e) {
-    let { canManageGuild: t, guildId: n, afkChannelId: a } = e,
-        c = (0, s.e7)([g.Z], () => g.Z.getCategories(n)),
-        d = i.useMemo(() => {
-            let e = (0, o.Z)(c._categories, c)
+function v(e) {
+    let { canManageGuild: t, guildId: n, afkChannelId: s, label: c } = e,
+        d = (0, a.e7)([g.Z], () => g.Z.getCategories(n)),
+        u = i.useMemo(() => {
+            let e = (0, o.Z)(d._categories, d)
                 .filter((e) => {
                     let { channel: t } = e;
                     return t.type === l.d.GUILD_VOICE;
@@ -58,21 +58,22 @@ function _(e) {
                 }),
                 e
             );
-        }, [c]),
-        u = i.useCallback((e) => {
+        }, [d]),
+        m = i.useCallback((e) => {
             let t = e === x ? null : e;
             f.Z.updateGuild({ afkChannelId: t });
         }, []);
     return (0, r.jsx)(C, {
-        value: null != a ? a : x,
-        options: d,
+        label: c,
+        value: null != s ? s : x,
+        options: u,
         canManageGuild: t,
-        onChange: u,
+        onChange: m,
     });
 }
-function v(e) {
-    let { canManageGuild: t, guildId: n, systemChannelId: a, label: c, description: d, layout: u } = e,
-        m = (0, s.e7)([g.Z], () => g.Z.getCategories(n)),
+function _(e) {
+    let { canManageGuild: t, guildId: n, systemChannelId: s, label: c, description: d, layout: u } = e,
+        m = (0, a.e7)([g.Z], () => g.Z.getCategories(n)),
         p = i.useMemo(() => {
             let e = (0, o.Z)(m._categories, m)
                 .filter((e) => {
@@ -99,25 +100,25 @@ function v(e) {
         label: c,
         description: d,
         layout: u,
-        value: null != a ? a : x,
+        value: null != s ? s : x,
         options: p,
         canManageGuild: t,
         onChange: j,
     });
 }
 function C(e) {
-    let { value: t, options: n, canManageGuild: l, onChange: s, label: o, description: c, layout: d } = e,
+    let { value: t, options: n, canManageGuild: l, onChange: a, label: o, description: c, layout: d } = e,
         u = i.useCallback((e) => {
             if (null != e) return (0, r.jsx)(j, { option: e });
         }, []),
         g = i.useCallback((e) => u(e[0]), [u]);
-    return (0, r.jsx)(a.q4e, {
+    return (0, r.jsx)(s.q4e, {
         label: o,
         description: c,
         value: t,
         options: n,
         isDisabled: !l,
-        onChange: s,
+        onChange: a,
         renderOptionLabel: u,
         renderOptionValue: g,
         layout: d,

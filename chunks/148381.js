@@ -10,11 +10,11 @@ var r = n(951288),
     u = n(308300);
 function f(e) {
     let { title: t, scrollerClassName: n, scrollerInnerClassName: l, children: f } = e,
-        m = i.useRef(null),
-        [h, p] = i.useState(!1),
+        h = i.useRef(null),
+        [m, p] = i.useState(!1),
         [g, x] = i.useState(!1),
         _ = i.useCallback(() => {
-            let { current: e } = m;
+            let { current: e } = h;
             null != e && (p(!e.isScrolledToTop()), x(!e.isScrolledToBottom()));
         }, []);
     return (
@@ -24,17 +24,18 @@ function f(e) {
                 (0, r.jsxs)("div", {
                     className: s()(u.title, u.scrollWrapper),
                     children: [
-                        (0, r.jsx)(o.vwX, {
+                        (0, r.jsx)(o.Text, {
+                            variant: "text-md/medium",
                             className: d.formItemTitle,
                             children: t,
                         }),
-                        (0, r.jsx)(c.Z, { separator: h }),
+                        (0, r.jsx)(c.Z, { separator: m }),
                     ],
                 }),
                 (0, r.jsx)("div", {
                     className: n,
                     children: (0, r.jsx)(o.Den, {
-                        ref: m,
+                        ref: h,
                         className: s()(u.scrollerInner, l, { [u.bottomSeparator]: g }),
                         onScroll: _,
                         children: f,

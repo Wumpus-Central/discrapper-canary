@@ -35,11 +35,11 @@ var r = n(951288),
     P = n(110818),
     w = n(553797),
     D = n(741245),
-    L = n(346071),
-    x = n(314182),
+    x = n(346071),
+    L = n(314182),
     M = n(42818),
-    j = n(900683),
-    k = n(706454),
+    k = n(900683),
+    j = n(706454),
     U = n(246946),
     G = n(594174),
     B = n(351402),
@@ -162,13 +162,13 @@ function ed(e) {
         R = (0, N.Z)(),
         P = a.interval,
         D = a.intervalCount,
-        x = (0, u.e7)([F.Z], () => F.Z.getForSkuAndInterval((0, K.Wz)(J.Si.GUILD), P, D)),
+        L = (0, u.e7)([F.Z], () => F.Z.getForSkuAndInterval((0, K.Wz)(J.Si.GUILD), P, D)),
         M = (0, u.e7)([G.default], () => G.default.getCurrentUser()),
         U = (0, y.Z)({ forceFetch: !1 });
-    l()(null != x, "Missing guildBoostingSubscriptionPlan");
+    l()(null != L, "Missing guildBoostingSubscriptionPlan");
     let B = [
             {
-                planId: x.id,
+                planId: L.id,
                 quantity: 1,
             },
         ],
@@ -200,7 +200,7 @@ function ed(e) {
     let ep = !ei && null == ef && null == e_,
         eh = (null == (n = (0, C.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === J.Si.TIER_2,
         em = K.ZP.hasBoostDiscount(M, U.fractionalState),
-        eg = null == ef ? void 0 : ef.findInvoiceItemByPlanId(x.id),
+        eg = null == ef ? void 0 : ef.findInvoiceItemByPlanId(L.id),
         eE =
             null != eg
                 ? {
@@ -209,7 +209,7 @@ function ed(e) {
                       taxInclusive: !0,
                       currency: I.currency,
                   }
-                : K.ZP.getPrice(x.id, em, !1, I),
+                : K.ZP.getPrice(L.id, em, !1, I),
         eb = s * eE.amount,
         ey = (0, u.e7)([V.Z], () => V.Z.inReverseTrial() && K.ZP.hasBoostDiscount(M, U.fractionalState) && null != p),
         eO =
@@ -219,7 +219,7 @@ function ed(e) {
                 ? ee.intl.format(ee.t.hf6YOT, { planName: K.ZP.getDisplayPremiumType(p.planId) })
                 : ee.intl.format(eh ? ee.t["ba1L7+"] : ee.t.fkffDQ, {
                       onPremiumSubscriptionClick: m,
-                      discountPercentage: (0, W.T3)(k.default.locale, J.Rr / 100),
+                      discountPercentage: (0, W.T3)(j.default.locale, J.Rr / 100),
                       freeSubscriptionCount: J.cb,
                   }),
         ev = g.filter((e) => (0, H.tl)(e)).length,
@@ -231,7 +231,7 @@ function ed(e) {
         f(ep),
         (0, r.jsxs)("div", {
             children: [
-                eA && (0, r.jsx)(L.n, { fractionalPremiumInfo: U }),
+                eA && (0, r.jsx)(x.n, { fractionalPremiumInfo: U }),
                 ey && null != p
                     ? (0, r.jsx)(eu, { endDate: p.currentPeriodEnd })
                     : (0, r.jsx)("div", {
@@ -353,8 +353,8 @@ function ed(e) {
                     }),
                 }),
                 ey
-                    ? (0, r.jsx)(j.e, {})
-                    : (0, r.jsx)(j.Z, {
+                    ? (0, r.jsx)(k.e, {})
+                    : (0, r.jsx)(k.Z, {
                           text: eO,
                           color: O.JX.PREMIUM_TIER_2,
                       }),
@@ -485,10 +485,10 @@ function e_(e) {
         P = s.paymentSourceId,
         w = (0, I.$)(o, P),
         D = (0, u.e7)([Z.Z], () => (null != d ? Z.Z.getPaymentSource(d) : null)),
-        L = (0, u.e7)([U.Z], () => U.Z.hidePersonalInformation);
+        x = (0, u.e7)([U.Z], () => U.Z.hidePersonalInformation);
     n = null != l ? (0, K.Zx)(l, y[0].quantity, y[0].planId) : y;
     let { analyticsLocations: M } = (0, b.ZP)(),
-        [j] = (0, T.ED)({
+        [k] = (0, T.ED)({
             subscriptionId: null == l ? void 0 : l.id,
             items: n,
             renewal: !1,
@@ -498,7 +498,7 @@ function e_(e) {
             analyticsLocations: M,
             analyticsLocation: E.Z.GUILD_BOOSTING_REVIEW_PRORATED,
         }),
-        [k] = (0, T.ED)({
+        [j] = (0, T.ED)({
             subscriptionId: null == l ? void 0 : l.id,
             items: n,
             renewal: !0,
@@ -507,7 +507,7 @@ function e_(e) {
             analyticsLocations: M,
             analyticsLocation: E.Z.GUILD_BOOSTING_REVIEW_RENEWAL,
         }),
-        G = k;
+        G = j;
     null != G &&
         (a = {
             amount: G.subtotal,
@@ -518,46 +518,46 @@ function e_(e) {
     let F = c.M.EEA_COUNTRIES.has(B.Z.ipCountryCodeWithFallback);
     return (
         i.useEffect(() => {
-            R(j);
-        }, [R, j]),
+            R(k);
+        }, [R, k]),
         (0, r.jsxs)("div", {
             children: [
-                null != j && null != k
+                null != k && null != j
                     ? (0, r.jsx)(ef, {
                           premiumSubscription: l,
                           premiumSubscriptionPlan: h,
-                          proratedInvoicePreview: j,
-                          renewalInvoicePreview: k,
+                          proratedInvoicePreview: k,
+                          renewalInvoicePreview: j,
                           priceOptions: s,
                       })
                     : null,
-                (0, r.jsxs)("div", {
+                (0, r.jsx)("div", {
                     className: et.paymentSourceWrapper,
-                    children: [
-                        (0, r.jsx)(_.vwX, { children: ee.intl.string(ee.t.mmDvV1) }),
+                    children:
                         null != d
                             ? null != D
                                 ? (0, r.jsx)(f.u, {
                                       asContainer: !0,
                                       text: ee.intl.string(ee.t.XiuuV1),
                                       children: (0, r.jsx)(m.ZP, {
+                                          label: ee.intl.string(ee.t.mmDvV1),
                                           paymentSources: [D],
                                           selectedPaymentSourceId: D.id,
-                                          hidePersonalInformation: L,
+                                          hidePersonalInformation: x,
                                           disabled: !0,
                                       }),
                                   })
                                 : (0, r.jsx)("div", { children: (0, r.jsx)(_.$jN, {}) })
                             : (0, r.jsx)(m.ZP, {
+                                  label: ee.intl.string(ee.t.mmDvV1),
                                   paymentSources: Object.values(o),
                                   selectedPaymentSourceId: P,
                                   onChange: O,
                                   onPaymentSourceAdd: S,
-                                  hidePersonalInformation: L,
+                                  hidePersonalInformation: x,
                               }),
-                    ],
                 }),
-                (0, r.jsx)(x.Z, {
+                (0, r.jsx)(L.Z, {
                     isActive: N,
                     ref: C,
                     children:
@@ -568,12 +568,12 @@ function e_(e) {
                             finePrint: (0, r.jsx)(p.Z, {
                                 subscriptionPlan: h,
                                 paymentSourceType: w,
-                                proratedAmount: null != j ? j.total : void 0,
+                                proratedAmount: null != k ? k.total : void 0,
                                 basePrice: a,
                                 productLine: X.POd.BOOST,
                             }),
                             showPricingLink:
-                                (null != (t = null == j ? void 0 : j.currency) ? t : $.pK.USD) !== $.pK.USD,
+                                (null != (t = null == k ? void 0 : k.currency) ? t : $.pK.USD) !== $.pK.USD,
                             showWithdrawalWaiver: F,
                             subscriptionPlan: h,
                         }),

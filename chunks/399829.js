@@ -2,9 +2,9 @@ n.d(t, { Z: () => Z }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    s = n.n(l),
-    a = n(392711),
-    o = n.n(a),
+    a = n.n(l),
+    s = n(392711),
+    o = n.n(s),
     c = n(442837),
     d = n(28664),
     u = n(477690),
@@ -16,8 +16,8 @@ var r = n(951288),
     x = n(151494),
     b = n(733683),
     j = n(237583),
-    _ = n(899667),
-    v = n(271383),
+    v = n(899667),
+    _ = n(271383),
     C = n(430824),
     O = n(594174),
     y = n(267642),
@@ -55,12 +55,12 @@ class w extends i.Component {
         let { tierPositions: t } = this.state,
             { guildId: n, levelSubscriptionCount: i, currentTier: l } = this.props;
         if (null == t || null == n) return null;
-        let s = {
+        let a = {
                 numRequired: 0,
                 y: 0,
                 key: b.x,
             },
-            a = e.map((e) => {
+            s = e.map((e) => {
                 var n;
                 return {
                     numRequired: E.oCV[e.tier],
@@ -73,7 +73,7 @@ class w extends i.Component {
             currentTier: l,
             className: i > 0 ? S.progressWithSubscriptions : S.progress,
             progress: i,
-            tiers: [s, ...a],
+            tiers: [a, ...s],
             initialAnimationDelay: 500,
             onAnimatedTierMaker: this.handleAnimatedTier,
         });
@@ -83,9 +83,14 @@ class w extends i.Component {
             className: S.tierDefaultUnlocked,
             ref: this.defaultTierRef,
             children: [
-                (0, r.jsx)(g.vwX, { children: I.intl.string(I.t["76OoX1"]) }),
-                (0, r.jsx)(g.R94, {
-                    type: g.R94.Types.DESCRIPTION,
+                (0, r.jsx)(g.Text, {
+                    variant: "text-md/medium",
+                    color: "header-primary",
+                    children: I.intl.string(I.t["76OoX1"]),
+                }),
+                (0, r.jsx)(g.Text, {
+                    variant: "text-sm/normal",
+                    color: "header-secondary",
                     className: S.tierDefaultUnlockedDescription,
                     children: I.intl.string(I.t.DaYNQU),
                 }),
@@ -162,8 +167,8 @@ class w extends i.Component {
                 for (let [t, i] of Object.entries(this.tierRefs)) {
                     if (null == i) return;
                     let { top: l } = i.getBoundingClientRect(),
-                        s = e > 0 ? P : 0;
-                    r[t] = l - n + 32 - s;
+                        a = e > 0 ? P : 0;
+                    r[t] = l - n + 32 - a;
                 }
                 this.setState({ tierPositions: r });
             }),
@@ -189,7 +194,7 @@ class w extends i.Component {
                                   tabIndex: -1,
                                   "aria-label": e.user.username,
                                   src: null != e ? e.user.getAvatarURL(this.props.guildId, 32) : null,
-                                  className: s()(S.avatar, t, null != t ? S.subscriberMask : null),
+                                  className: a()(S.avatar, t, null != t ? S.subscriberMask : null),
                                   size: g.EFr.SIZE_32,
                               }),
                           },
@@ -282,17 +287,17 @@ class w extends i.Component {
             );
     }
 }
-let Z = c.ZP.connectStores([C.Z, h.Z, f.Z, _.Z, O.default, v.ZP], () => {
+let Z = c.ZP.connectStores([C.Z, h.Z, f.Z, v.Z, O.default, _.ZP], () => {
     var e, t;
     let n = f.Z.getGuildId(),
         r = null != (t = null == (e = C.Z.getGuild(n)) ? void 0 : e.premiumTier) ? t : E.Eu4.NONE,
         i = (0, x.I)(n),
-        l = null != n ? _.Z.getAppliedGuildBoostsForGuild(n) : null,
-        s = o()(null != l ? l : []).uniqBy((e) => e.userId),
-        a = s
+        l = null != n ? v.Z.getAppliedGuildBoostsForGuild(n) : null,
+        a = o()(null != l ? l : []).uniqBy((e) => e.userId),
+        s = a
             .map((e) => ({
                 user: O.default.getUser(e.userId),
-                nick: v.ZP.getNick(n, e.userId),
+                nick: _.ZP.getNick(n, e.userId),
             }))
             .filter((e) => null != e.user)
             .value();
@@ -300,7 +305,7 @@ let Z = c.ZP.connectStores([C.Z, h.Z, f.Z, _.Z, O.default, v.ZP], () => {
         guildId: n,
         currentTier: r,
         levelSubscriptionCount: i,
-        subscribers: a,
-        uniqueSubscriberCount: s.size(),
+        subscribers: s,
+        uniqueSubscriberCount: a.size(),
     };
 })(w);

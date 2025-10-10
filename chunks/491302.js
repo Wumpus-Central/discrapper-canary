@@ -133,28 +133,22 @@ function f(e) {
                                 direction: "horizontal",
                                 gap: 16,
                                 children: [
-                                    (0, i.jsx)(a.xJW, {
-                                        title: b.intl.string(b.t.I1o5gY),
-                                        className: g.formField,
-                                        children: (0, i.jsx)(a.oil, {
-                                            value: f.name,
-                                            onChange: (e) => {
-                                                s.Z.updateWebhook({ name: e });
-                                            },
-                                            maxLength: 80,
-                                            error: j.name,
-                                        }),
+                                    (0, i.jsx)(a.oil, {
+                                        label: b.intl.string(b.t.I1o5gY),
+                                        value: f.name,
+                                        onChange: (e) => {
+                                            s.Z.updateWebhook({ name: e });
+                                        },
+                                        maxLength: 80,
+                                        error: j.name,
                                     }),
-                                    (0, i.jsx)(a.xJW, {
-                                        title: b.intl.string(b.t["4TuWfX"]),
-                                        className: g.formField,
-                                        children: (0, i.jsx)(a.q4e, {
-                                            value: f.channel_id,
-                                            options: h,
-                                            onChange: (e) => {
-                                                s.Z.updateWebhook({ channelId: e });
-                                            },
-                                        }),
+                                    (0, i.jsx)(a.q4e, {
+                                        label: b.intl.string(b.t["4TuWfX"]),
+                                        value: f.channel_id,
+                                        options: h,
+                                        onChange: (e) => {
+                                            s.Z.updateWebhook({ channelId: e });
+                                        },
                                     }),
                                 ],
                             }),

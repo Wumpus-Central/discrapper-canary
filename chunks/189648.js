@@ -1,7 +1,6 @@
 n.d(t, { Z: () => d });
-var r = n(951288);
-n(647438);
-var a = n(392711),
+var r = n(951288),
+    a = n(392711),
     i = n.n(a),
     l = n(481060),
     o = n(481250),
@@ -21,9 +20,13 @@ function d(e) {
                 t,
             );
     });
-    return (0, r.jsx)(l.hjN, {
-        tag: l.RB0.H2,
-        title: c.intl.string(c.t["2AGBWF"]),
-        children: (0, o.VE)(n),
+    return (0, r.jsxs)(l.Kqy, {
+        children: [
+            (0, r.jsx)(l.X6q, {
+                variant: "heading-md/medium",
+                children: c.intl.string(c.t["2AGBWF"]),
+            }),
+            (0, o.VE)(n),
+        ],
     });
 }

@@ -56,12 +56,12 @@ function N() {
                       : null
                   : (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsxs)("div", {
+                            (0, r.jsxs)(d.Kqy, {
+                                gap: 24,
                                 className: C.sessions,
                                 children: [
-                                    (0, r.jsx)(d.hjN, {
-                                        title: A.intl.string(A.t.LLS19v),
-                                        titleClassName: C.groupTitle,
+                                    (0, r.jsx)(d.C3N, {
+                                        label: A.intl.string(A.t.LLS19v),
                                         children:
                                             null != t
                                                 ? (0, r.jsx)(R, {
@@ -72,10 +72,8 @@ function N() {
                                     }),
                                     !(n.length > 0) && (null == o ? void 0 : o.mfaEnabled)
                                         ? null
-                                        : (0, r.jsxs)(d.hjN, {
-                                              title: A.intl.string(A.t.xx1MWV),
-                                              titleClassName: C.groupTitle,
-                                              className: C.otherSessions,
+                                        : (0, r.jsxs)(d.C3N, {
+                                              label: A.intl.string(A.t.xx1MWV),
                                               children: [
                                                   n.map((e) =>
                                                       (0, r.jsx)(

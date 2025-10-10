@@ -2,8 +2,8 @@ n.d(t, { Z: () => j });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    s = n(28664),
-    a = n(481060),
+    a = n(28664),
+    s = n(481060),
     o = n(289393),
     c = n(723047),
     d = n(727843),
@@ -19,8 +19,8 @@ function j(e) {
     var t, n;
     let {
             allSubscriptionListings: j,
-            priceTiers: _,
-            loading: v,
+            priceTiers: v,
+            loading: _,
             error: C,
             handlePublishTier: O,
             onDeleteEditState: y,
@@ -35,8 +35,8 @@ function j(e) {
                     var t;
                     return null == (t = e.subscription_plans[0]) ? void 0 : t.price;
                 });
-            return null == _ ? void 0 : _.filter((t) => !e.includes(t));
-        }, [j, N, _]),
+            return null == v ? void 0 : v.filter((t) => !e.includes(t));
+        }, [j, N, v]),
         T = null == E,
         P = null != (t = null == E ? void 0 : E.published) && t,
         w = null != (n = null == E ? void 0 : E.archived) && n;
@@ -52,26 +52,26 @@ function j(e) {
                     children: [
                         (0, r.jsxs)("div", {
                             children: [
-                                (0, r.jsx)(a.X6q, {
+                                (0, r.jsx)(s.X6q, {
                                     variant: "heading-md/semibold",
                                     className: b.publishListingInfoHeader,
                                     children: x.intl.string(x.t.WOlcS0),
                                 }),
-                                (0, r.jsx)(a.R94, {
-                                    type: a.R94.Types.DESCRIPTION,
+                                (0, r.jsx)(s.Text, {
+                                    variant: "text-sm/normal",
                                     children: x.intl.string(x.t.rMulDQ),
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(s.u, {
+                        (0, r.jsx)(a.u, {
                             shouldShow: T,
                             text: x.intl.string(x.t.v7lRIi),
                             children: (0, r.jsx)("div", {
-                                children: (0, r.jsx)(a.zxk, {
+                                children: (0, r.jsx)(s.zxk, {
                                     disabled: T,
                                     variant: "secondary",
                                     onClick: O,
-                                    loading: v,
+                                    loading: _,
                                     text: x.intl.string(x.t.Lj6R5u),
                                 }),
                             }),

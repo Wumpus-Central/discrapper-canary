@@ -1,10 +1,9 @@
 n.d(t, { Z: () => M }), n(953529);
-var r = n(951288);
-n(647438);
-var i = n(442837),
+var r = n(951288),
+    i = n(442837),
     l = n(28664),
-    s = n(481060),
-    a = n(204875),
+    a = n(481060),
+    s = n(204875),
     o = n(715796),
     c = n(434404),
     d = n(999382),
@@ -17,8 +16,8 @@ var i = n(442837),
     x = n(594174),
     b = n(823379),
     j = n(730647),
-    _ = n(584825),
-    v = n(723047),
+    v = n(584825),
+    _ = n(723047),
     C = n(303737),
     O = n(568074),
     y = n(411667),
@@ -36,15 +35,15 @@ var i = n(442837),
     L = n(459560);
 function k(e) {
     let { application: t, guild: n } = e,
-        l = (0, _.YB)(n.id),
-        s = (0, _.qi)(n.id),
-        a = s.some(
+        l = (0, v.YB)(n.id),
+        a = (0, v.qi)(n.id),
+        s = a.some(
             (e) => null != e.name && null != e.subscription_plans[0] && null != e.description && null != e.image_asset,
         ),
-        o = (0, i.Wu)([h.Z], () => s.map((e) => h.Z.getRole(n.id, e.role_id)), [n.id, s]).some(
+        o = (0, i.Wu)([h.Z], () => a.map((e) => h.Z.getRole(n.id, e.role_id)), [n.id, a]).some(
             (e) => null != e && 0 !== e.color,
         ),
-        c = s.some((e) => e.role_benefits.benefits.length > 0),
+        c = a.some((e) => e.role_benefits.benefits.length > 0),
         d = null != t && n.features.has(Z.oNc.ROLE_SUBSCRIPTIONS_ENABLED),
         u = [
             {
@@ -78,7 +77,7 @@ function k(e) {
                 items: [
                     {
                         description: A.intl.string(A.t.pCxWKC),
-                        completed: a,
+                        completed: s,
                     },
                     {
                         description: A.intl.string(A.t["+amv5e"]),
@@ -105,11 +104,11 @@ function G(e) {
         l.includes(null == i ? void 0 : i.payout_account_status)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(s.LZC, { size: 16 }),
+                  (0, r.jsx)(a.LZC, { size: 16 }),
                   (0, r.jsx)(N.Z, {
                       children: A.intl.format(A.t.Yo0ZBw, { url: Z.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(i.id) }),
                   }),
-                  (0, r.jsx)(s.LZC, { size: 16 }),
+                  (0, r.jsx)(a.LZC, { size: 16 }),
               ],
           })
         : null;
@@ -117,15 +116,15 @@ function G(e) {
 function M(e) {
     let t,
         { guild: n, application: l } = e,
-        s = (0, i.e7)([d.Z], () => d.Z.getProps().subsection),
-        a = null != l && n.features.has(Z.oNc.ROLE_SUBSCRIPTIONS_ENABLED);
+        a = (0, i.e7)([d.Z], () => d.Z.getProps().subsection),
+        s = null != l && n.features.has(Z.oNc.ROLE_SUBSCRIPTIONS_ENABLED);
     return (
         (0, o.P)(n),
-        (t = a ? (s === Z.KsC.ROLE_SUBSCRIPTION_EMOJI ? P.ue.EMOJIS : P.ue.TIERS) : P.ue.PAYMENT),
+        (t = s ? (a === Z.KsC.ROLE_SUBSCRIPTION_EMOJI ? P.ue.EMOJIS : P.ue.TIERS) : P.ue.PAYMENT),
         (0, r.jsx)(j.l, {
             guildId: n.id,
             refetchOnMount: !0,
-            children: (0, r.jsx)(v.in, {
+            children: (0, r.jsx)(_.in, {
                 guildId: n.id,
                 children: (0, r.jsx)(P.M7, {
                     initialTab: t,
@@ -142,12 +141,12 @@ function U(e) {
     let t,
         { guild: n, application: o } = e,
         d = null != o && n.features.has(Z.oNc.ROLE_SUBSCRIPTIONS_ENABLED),
-        { currentTab: p, setCurrentTab: _ } = (0, P.dw)(),
-        v = (0, j.f)(),
+        { currentTab: p, setCurrentTab: v } = (0, P.dw)(),
+        _ = (0, j.f)(),
         N = (0, i.e7)([x.default], () => x.default.getCurrentUser()),
         S = (0, O.Z)(n.id),
         D = null != n && (0, f.eM)(n, N);
-    if (!v) return (0, r.jsx)(s.$jN, {});
+    if (!_) return (0, r.jsx)(a.$jN, {});
     switch (p) {
         case P.ue.BASIC_INFO:
             t = (0, r.jsx)(I.Z, { guild: n });
@@ -170,47 +169,52 @@ function U(e) {
             (0, r.jsxs)("div", {
                 className: L.mainContent,
                 children: [
-                    (0, r.jsx)(s.vwX, {
-                        tag: "h1",
-                        children: A.intl.string(A.t["KzCF//"]),
-                    }),
-                    (0, r.jsx)(s.R94, {
-                        type: s.R94.Types.DESCRIPTION,
-                        children: A.intl.string(A.t.KyGv0t),
+                    (0, r.jsxs)(a.Kqy, {
+                        gap: 8,
+                        children: [
+                            (0, r.jsx)(a.X6q, {
+                                variant: "heading-lg/semibold",
+                                children: A.intl.string(A.t["KzCF//"]),
+                            }),
+                            (0, r.jsx)(a.Text, {
+                                variant: "text-sm/normal",
+                                children: A.intl.string(A.t.KyGv0t),
+                            }),
+                        ],
                     }),
                     (0, r.jsx)(y.Z, { guild: n }),
                     d && (0, r.jsx)(G, { application: o }),
                     (0, r.jsxs)("div", {
                         className: L.tabBarContainer,
                         children: [
-                            (0, r.jsxs)(s.njP, {
+                            (0, r.jsxs)(a.njP, {
                                 className: L.tabBar,
                                 "aria-label": A.intl.string(A.t["+1H47u"]),
                                 selectedItem: p,
                                 type: "top",
                                 look: "brand",
-                                onItemSelect: _,
+                                onItemSelect: v,
                                 children: [
-                                    (0, r.jsx)(a.Z, {
+                                    (0, r.jsx)(s.Z, {
                                         id: P.ue.BASIC_INFO,
                                         disabledTooltip: A.intl.string(A.t.NVDuUV),
                                         disabled: !d,
                                         children: A.intl.string(A.t["/CfKoK"]),
                                     }),
-                                    (0, r.jsx)(a.Z, {
+                                    (0, r.jsx)(s.Z, {
                                         id: P.ue.TIERS,
                                         disabledTooltip: A.intl.string(A.t.NVDuUV),
                                         disabled: !d,
                                         children: A.intl.string(A.t.pXbGYW),
                                     }),
-                                    (0, r.jsx)(a.Z, {
+                                    (0, r.jsx)(s.Z, {
                                         id: P.ue.EMOJIS,
                                         disabledTooltip: A.intl.string(A.t.NVDuUV),
                                         disabled: !d,
                                         children: A.intl.string(A.t.XBkDoK),
                                     }),
                                     D
-                                        ? (0, r.jsx)(s.njP.Item, {
+                                        ? (0, r.jsx)(a.njP.Item, {
                                               className: L.__invalid_tabBarItem,
                                               id: P.ue.PAYMENT,
                                               children: A.intl.string(A.t.p2Rsdn),
@@ -223,7 +227,7 @@ function U(e) {
                                     className: L.previewButton,
                                     children: (0, r.jsx)(l.u, {
                                         text: A.intl.string(A.t["1wCH4O"]),
-                                        children: (0, r.jsx)(s.zxk, {
+                                        children: (0, r.jsx)(a.zxk, {
                                             disabled: S,
                                             onClick: () => {
                                                 let e = h.Z.getEveryoneRole(n);

@@ -29,11 +29,11 @@ var r = n(951288),
     P = n(74538),
     w = n(937615),
     D = n(479446),
-    L = n(374649),
-    x = n(104494),
+    x = n(374649),
+    L = n(104494),
     M = n(642530),
-    j = n(811334),
-    k = n(346071),
+    k = n(811334),
+    j = n(346071),
     U = n(314182),
     G = n(981632),
     B = n(396955),
@@ -111,10 +111,10 @@ function Q(e) {
             enablePremiumBrandRefresh: eP,
             premiumBrandRefreshBackgroundClassName: ew,
         } = (0, b.JL)(),
-        { isGift: eD, giftRecipient: eL, selectedGiftStyle: ex } = (0, E.wD)(),
-        eM = (0, x.Ng)(),
-        ej = null == eM || null == (t = eM.discount) ? void 0 : t.plan_ids.some((e) => Y.GP[e].skuId === eO),
-        ek = !eD && null != eM && null != eO && ej,
+        { isGift: eD, giftRecipient: ex, selectedGiftStyle: eL } = (0, E.wD)(),
+        eM = (0, L.Ng)(),
+        ek = null == eM || null == (t = eM.discount) ? void 0 : t.plan_ids.some((e) => Y.GP[e].skuId === eO),
+        ej = !eD && null != eM && null != eO && ek,
         eU = (0, u.e7)([A.Z], () => A.Z.get(J));
     l()(null != eU, "Missing plan");
     let eG = [
@@ -127,7 +127,7 @@ function Q(e) {
         eZ = null != eO ? eO : "",
         eF = (0, u.e7)([N.Z], () => N.Z.get(eZ), [eZ]),
         eV = null == eF ? void 0 : eF.eligiblePaymentGateways,
-        [eH, eY] = (0, L.ED)({
+        [eH, eY] = (0, x.ED)({
             items: eG,
             renewal: !1,
             preventFetch: eC || eD || eB,
@@ -137,7 +137,7 @@ function Q(e) {
             trialId: ec,
             metadata: ef,
         }),
-        [eW, eK] = (0, L.ED)({
+        [eW, eK] = (0, x.ED)({
             subscriptionId: null == ey ? void 0 : ey.id,
             items: eG,
             renewal: !0,
@@ -147,7 +147,7 @@ function Q(e) {
             currency: et.currency,
             metadata: ef,
         }),
-        [ez, eq] = (0, L.ED)({
+        [ez, eq] = (0, x.ED)({
             items: [
                 {
                     planId: Y.Xh.PREMIUM_MONTH_TIER_2,
@@ -155,13 +155,13 @@ function Q(e) {
                 },
             ],
             renewal: !0,
-            preventFetch: !ek,
+            preventFetch: !ej,
             trialId: ec,
             paymentSourceId: et.paymentSourceId,
             currency: et.currency,
             metadata: ef,
         }),
-        [eX, eQ] = (0, L.o5)({
+        [eX, eQ] = (0, x.o5)({
             paymentSourceId: et.paymentSourceId,
             skuId: eO,
             subscriptionPlanId: J,
@@ -169,7 +169,7 @@ function Q(e) {
             preventFetch: !eD || eB,
             loadId: eA.loadId,
         }),
-        eJ = eD && (0, R.pO)(eL),
+        eJ = eD && (0, R.pO)(ex),
         e$ = null != (a = null != (n = null != eY ? eY : eK) ? n : eq) ? a : eQ;
     i.useEffect(() => {
         eN(e$);
@@ -227,8 +227,8 @@ function Q(e) {
     else if (null != ti)
         Q = (0, r.jsxs)("div", {
             children: [
-                (0, r.jsx)(j.UN, { negativeMarginTop: !eC }),
-                (0, r.jsxs)(j.aO, {
+                (0, r.jsx)(k.UN, { negativeMarginTop: !eC }),
+                (0, r.jsxs)(k.aO, {
                     className: o()(q.invoice, ew),
                     children: [
                         (0, r.jsxs)("div", {
@@ -270,14 +270,14 @@ function Q(e) {
             (Q = (0, r.jsxs)(r.Fragment, {
                 children: [
                     tt &&
-                        (0, r.jsx)(k.n, {
+                        (0, r.jsx)(j.n, {
                             fractionalPremiumInfo: te,
                             enablePremiumBrandRefresh: eP,
                         }),
-                    (0, r.jsxs)(j.aO, {
+                    (0, r.jsxs)(k.aO, {
                         className: o()(q.invoice, ew),
                         children: [
-                            (0, r.jsx)(j.Z9, { children: z.intl.string(z.t["2eh+Cg"]) }),
+                            (0, r.jsx)(k.Z9, { children: z.intl.string(z.t["2eh+Cg"]) }),
                             (0, r.jsx)(F.Lu, {
                                 invoice: eH,
                                 newPlan: eU,
@@ -334,7 +334,7 @@ function Q(e) {
                   e6 &&
                       (0, r.jsxs)("div", {
                           children: [
-                              (0, r.jsx)(j.UN, {
+                              (0, r.jsx)(k.UN, {
                                   negativeMarginTop: !0,
                                   negativeMarginBottom: !0,
                               }),
@@ -347,10 +347,10 @@ function Q(e) {
                                   planGroup: $,
                                   subscriptionPeriodEnd: e7,
                                   showTotal: !1,
-                                  discountInvoiceItems: ek ? (null == ez ? void 0 : ez.invoiceItems) : void 0,
+                                  discountInvoiceItems: ej ? (null == ez ? void 0 : ez.invoiceItems) : void 0,
                                   handleClose: eE,
                               }),
-                              (0, r.jsx)(j.UN, {}),
+                              (0, r.jsx)(k.UN, {}),
                           ],
                       }),
                   eC &&
@@ -362,31 +362,31 @@ function Q(e) {
                               trialEnd: null == ey ? void 0 : ey.currentPeriodEnd,
                           }),
                       }),
-                  !em && "" !== tc && (0, r.jsx)(f.vwX, { children: tc }),
+                  !em &&
+                      "" !== tc &&
+                      (0, r.jsx)(f.X6q, {
+                          variant: "heading-md/semibold",
+                          children: tc,
+                      }),
                   eJ &&
-                      null != ex &&
+                      null != eL &&
                       (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(G.Z, {
                                   defaultAnimationState: D.SR.LOOP,
-                                  giftStyle: ex,
+                                  giftStyle: eL,
                                   shouldAnimate: !0,
                                   className: q.giftMainAnimation,
                               }),
-                              (0, r.jsx)(H.s, { giftRecipient: eL }),
+                              (0, r.jsx)(H.s, { giftRecipient: ex }),
                           ],
                       }),
                   Q,
                   (0, r.jsxs)("div", {
                       className: q.paymentSourceWrapper,
                       children: [
-                          em
-                              ? (0, r.jsx)(f.vwX, {
-                                    className: q.formTitle,
-                                    children: z.intl.string(z.t["YH7B+P"]),
-                                })
-                              : (0, r.jsx)(f.vwX, { children: z.intl.string(z.t.mmDvV1) }),
                           (0, r.jsx)(h.ZP, {
+                              label: em ? z.intl.string(z.t["YH7B+P"]) : z.intl.string(z.t.mmDvV1),
                               paymentSources: Object.values(ee),
                               selectedPaymentSourceId: e1,
                               prependOption:
@@ -411,17 +411,15 @@ function Q(e) {
                               : null,
                           eg
                               ? null
-                              : (0, r.jsxs)(_.b, {
+                              : (0, r.jsx)(_.b, {
                                     currencies: en,
                                     className: q.currencyWrapper,
-                                    children: [
-                                        (0, r.jsx)(f.vwX, { children: z.intl.string(z.t["/AAR09"]) }),
-                                        (0, r.jsx)(_.Z, {
-                                            selectedCurrency: et.currency,
-                                            currencies: en,
-                                            onChange: er,
-                                        }),
-                                    ],
+                                    children: (0, r.jsx)(_.Z, {
+                                        label: z.intl.string(z.t["/AAR09"]),
+                                        selectedCurrency: et.currency,
+                                        currencies: en,
+                                        onChange: er,
+                                    }),
                                 }),
                       ],
                   }),

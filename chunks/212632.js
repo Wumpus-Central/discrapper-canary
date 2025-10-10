@@ -73,8 +73,8 @@ function g(e) {
                     ),
                 }),
             }),
-            (0, i.jsx)(l.R94, {
-                type: l.geA.DESCRIPTION,
+            (0, i.jsx)(l.Text, {
+                variant: "text-sm/normal",
                 className: u.marginTop8,
                 children: g,
             }),

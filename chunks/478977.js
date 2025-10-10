@@ -50,36 +50,34 @@ function c(e, t) {
 let d = function (e) {
     let { colorKey: t, value: n, onChange: d, title: u } = e,
         p = s.useRef(null);
-    return (0, r.jsxs)(a.xJW, {
-        children: [
-            (0, r.jsx)(a.vwX, { children: u }),
-            (0, r.jsx)(a.yRy, {
-                targetElementRef: p,
-                renderPopout: (e) =>
-                    (0, r.jsx)(
-                        a.Z$W,
-                        c(l({}, e), {
-                            value: n,
-                            onChange: (e) => d(t, (0, o.Rf)(e)),
+    return (0, r.jsx)(a.gNt, {
+        label: u,
+        children: (0, r.jsx)(a.yRy, {
+            targetElementRef: p,
+            renderPopout: (e) =>
+                (0, r.jsx)(
+                    a.Z$W,
+                    c(l({}, e), {
+                        value: n,
+                        onChange: (e) => d(t, (0, o.Rf)(e)),
+                    }),
+                ),
+            children: (e) =>
+                (0, r.jsx)(
+                    a.P3F,
+                    c(l({}, e), {
+                        innerRef: p,
+                        tag: "span",
+                        "aria-label": "Select a color",
+                        className: i.swatchContainer,
+                        style: { backgroundColor: n },
+                        children: (0, r.jsx)(a.ilE, {
+                            size: "xs",
+                            color: "currentColor",
+                            className: i.swatchIcon,
                         }),
-                    ),
-                children: (e) =>
-                    (0, r.jsx)(
-                        a.P3F,
-                        c(l({}, e), {
-                            innerRef: p,
-                            tag: "span",
-                            "aria-label": "Select a color",
-                            className: i.swatchContainer,
-                            style: { backgroundColor: n },
-                            children: (0, r.jsx)(a.ilE, {
-                                size: "xs",
-                                color: "currentColor",
-                                className: i.swatchIcon,
-                            }),
-                        }),
-                    ),
-            }),
-        ],
+                    }),
+                ),
+        }),
     });
 };

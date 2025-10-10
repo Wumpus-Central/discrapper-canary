@@ -1,8 +1,8 @@
-t.d(n, { default: () => N }), t(388685), t(415506);
+t.d(n, { default: () => C }), t(388685), t(415506);
 var a = t(951288),
     l = t(647438),
-    i = t(512722),
-    r = t.n(i),
+    r = t(512722),
+    i = t.n(r),
     o = t(793030),
     s = t(481060),
     u = t(479531),
@@ -13,8 +13,8 @@ var a = t(951288),
     g = t(208049),
     h = t(671895),
     p = t(586826),
-    y = t(812613),
-    b = t(203437),
+    b = t(812613),
+    y = t(203437),
     v = t(710111),
     x = t(981631),
     j = t(388032),
@@ -25,48 +25,48 @@ let _ = [
         extensions: ["mp3", "wav", "ogg", "opus", "x-wav", "mp4"],
     },
 ];
-function N(e) {
-    var n, t, i, N;
-    let { guildId: C, sourceFile: S, existingSound: O, onClose: E, transitionState: P, showGuildPicker: I = !1 } = e,
-        [Z, k] = l.useState(
+function C(e) {
+    var n, t, r, C;
+    let { guildId: N, sourceFile: S, existingSound: O, onClose: E, transitionState: P, showGuildPicker: I = !1 } = e,
+        [M, Z] = l.useState(
             null != (t = null != (n = null == S ? void 0 : S.name) ? n : null == O ? void 0 : O.name) ? t : "",
         ),
-        [M, T] = l.useState(null != (i = null == O ? void 0 : O.volume) ? i : 1),
+        [k, T] = l.useState(null != (r = null == O ? void 0 : O.volume) ? r : 1),
         [F, D] = l.useState(null == O ? void 0 : O.emojiId),
         [R, B] = l.useState(null == O ? void 0 : O.emojiName),
-        { file: H, loadAudioFromFile: A, maxVolume: U, setMaxVolume: z } = (0, p.p)(),
+        { file: A, loadAudioFromFile: U, maxVolume: H, setMaxVolume: z } = (0, p.p)(),
         [L, G] = l.useState(!1),
-        [q, V] = l.useState(null),
+        [V, q] = l.useState(null),
         [W, Y] = l.useState(null),
         [J, K] = l.useState("ready"),
-        [X, Q] = l.useState(C);
+        [X, Q] = l.useState(N);
     async function $(e) {
         try {
-            await A(null != e ? e : null), K("ready"), V(null);
+            await U(null != e ? e : null), K("ready"), q(null);
         } catch (e) {
             ee(e);
         }
     }
     function ee(e) {
-        if (e instanceof u.Z) V(e);
+        if (e instanceof u.Z) q(e);
         else if (e instanceof Error) {
             let n = {
                 status: 500,
                 body: { message: e.message },
             };
-            V(new u.Z(n));
-        } else V(new u.Z(e));
+            q(new u.Z(n));
+        } else q(new u.Z(e));
     }
     l.useEffect(() => {
         (null == S ? void 0 : S.file) != null && e(S.file);
         async function e(e) {
             try {
-                await A(e), K("ready"), V(null);
+                await U(e), K("ready"), q(null);
             } catch (e) {
                 ee(e);
             }
         }
-    }, [null == S ? void 0 : S.file, A]);
+    }, [null == S ? void 0 : S.file, U]);
     let en = (function (e) {
             switch (e) {
                 case "encoding":
@@ -81,40 +81,40 @@ function N(e) {
         et = "uploading" === J || "encoding" === J,
         ea = null != O,
         el =
-            Z.length >= 2 &&
-            (ea || null != H) &&
+            M.length >= 2 &&
+            (ea || null != A) &&
             null != X &&
             (function (e) {
                 if (null == e) return !0;
                 let n = (e.endMs - e.startMs) / 1000;
                 return n > 0 && n <= v.YW;
             })(W),
-        ei = l.useCallback(async (e, n) => {
+        er = l.useCallback(async (e, n) => {
             K("encoding");
             try {
-                let t = await (0, y.kV)(e, n);
+                let t = await (0, b.kV)(e, n);
                 return K("ready"), t;
             } catch (e) {
                 throw (K("encoding-failed"), e);
             }
         }, []),
-        er = l.useCallback(async () => {
-            if (null == H) return;
-            r()(null != X, "Cannot submit soundboard sound with no guildId");
-            let e = H;
+        ei = l.useCallback(async () => {
+            if (null == A) return;
+            i()(null != X, "Cannot submit soundboard sound with no guildId");
+            let e = A;
             if (null != W) {
-                let n = await ei(H, W);
+                let n = await er(A, W);
                 if (null == n) return;
                 e = n;
             }
-            let n = (0, y.Zk)(e);
+            let n = (0, b.Zk)(e);
             K("uploading");
             try {
-                await (0, y.bb)({
+                await (0, b.bb)({
                     readPromise: n,
                     guildId: X,
-                    name: Z,
-                    volume: M,
+                    name: M,
+                    volume: k,
                     emojiId: F,
                     emojiName: R,
                 }),
@@ -122,20 +122,20 @@ function N(e) {
             } catch (e) {
                 throw new u.Z(e);
             }
-        }, [H, X, Z, ei, W, M, F, R]),
+        }, [A, X, M, er, W, k, F, R]),
         eo = l.useCallback(async () => {
-            r()(null != X, "Cannot submit soundboard sound with no guildId"), G(!0), V(null);
+            i()(null != X, "Cannot submit soundboard sound with no guildId"), G(!0), q(null);
             try {
                 ea
                     ? await (0, g.$d)({
                           guildId: X,
                           soundId: O.soundId,
-                          name: Z,
-                          volume: M,
+                          name: M,
+                          volume: k,
                           emojiId: F,
                           emojiName: R,
                       })
-                    : (await er(),
+                    : (await ei(),
                       (0, s.showToast)((0, s.createToast)(j.intl.string(j.t.T7dhBA), s.ToastType.SUCCESS))),
                     E();
             } catch (e) {
@@ -143,24 +143,24 @@ function N(e) {
             } finally {
                 K("ready"), G(!1), T(1), z(1);
             }
-        }, [ea, E, X, O, Z, M, F, R, er, z]);
+        }, [ea, E, X, O, M, k, F, R, ei, z]);
     (0, c.ZP)(() => {
-        A(null),
+        U(null),
             m.default.track(x.rMx.OPEN_MODAL, {
                 type: "Soundboard Upload Sound",
                 guild_id: X,
             });
     }),
         l.useEffect(() => {
-            T(Math.min(M, U));
-        }, [M, T, U]);
+            T(Math.min(k, H));
+        }, [k, T, H]);
     let es = (0, a.jsx)(d.Z, {
             guildId: X,
             emojiId: F,
             emojiName: R,
             setEmojiId: D,
             setEmojiName: B,
-            error: null == q ? void 0 : q.getFirstFieldErrorMessage("emoji"),
+            error: null == V ? void 0 : V.getFirstFieldErrorMessage("emoji"),
             isRequiredField: !1,
         }),
         eu = l.useMemo(
@@ -181,86 +181,71 @@ function N(e) {
             ],
             [eo, el, L, ea, E],
         );
-    return (0, a.jsxs)(o.Modal, {
+    return (0, a.jsx)(o.Modal, {
         onClose: E,
         transitionState: P,
         title: ea ? j.intl.string(j.t.HmsZGR) : j.intl.string(j.t["ioD/9P"]),
         actions: eu,
-        children: [
-            null != q &&
-                !q.hasFieldErrors() &&
-                (0, a.jsx)(s.kzN, {
-                    className: w.section,
-                    children: q.message,
-                }),
-            I
-                ? (0, a.jsx)(s.xJW, {
-                      required: !0,
-                      className: w.section,
-                      title: j.intl.string(j.t.UYt7iY),
-                      children: (0, a.jsx)(b.Z, {
+        children: (0, a.jsxs)(o.C3N, {
+            children: [
+                null != V &&
+                    !V.hasFieldErrors() &&
+                    (0, a.jsx)(s.kzN, {
+                        className: w.section,
+                        children: V.message,
+                    }),
+                I
+                    ? (0, a.jsx)(y.Z, {
+                          label: j.intl.string(j.t.UYt7iY),
                           value: X,
                           onChange: Q,
-                      }),
-                  })
-                : null,
-            (ea || null != H) &&
-                (0, a.jsx)(h.Z, {
-                    sound: O,
-                    volume: M,
-                    disabled: et,
-                    onChange: Y,
-                }),
-            ea || null != S
-                ? null
-                : (0, a.jsx)(s.xJW, {
-                      required: !0,
-                      error: null == q ? void 0 : q.getFirstFieldErrorMessage("sound"),
-                      className: w.section,
-                      title: j.intl.string(j.t.sSHaGx),
-                      children: (0, a.jsx)(f.Z, {
-                          filename: null != (N = null == H ? void 0 : H.name) ? N : "",
-                          buttonText: j.intl.string(j.t.zpi3XF),
-                          placeholder: j.intl.string(j.t["x+YULy"]),
-                          onFileSelect: $,
-                          filters: _,
-                      }),
-                  }),
-            (0, a.jsxs)("div", {
-                className: w.multiInput,
-                children: [
-                    (0, a.jsx)(s.oil, {
-                        required: !0,
-                        label: j.intl.string(j.t.NpJGaG),
-                        placeholder: j.intl.string(j.t.NpJGaG),
-                        error: null == q ? void 0 : q.getFirstFieldErrorMessage("name"),
-                        value: Z,
-                        onChange: k,
-                        maxLength: v.Ek,
+                      })
+                    : null,
+                (ea || null != A) &&
+                    (0, a.jsx)(h.Z, {
+                        sound: O,
+                        volume: k,
+                        disabled: et,
+                        onChange: Y,
                     }),
-                    es,
-                ],
-            }),
-            (0, a.jsx)(s.xJW, {
-                error: null == q ? void 0 : q.getFirstFieldErrorMessage("volume"),
-                className: w.section,
-                title: j.intl.string(j.t["3CJlb2"]),
-                children: (0, a.jsx)(s.iRW, {
-                    initialValue: M,
+                ea || null != S
+                    ? null
+                    : (0, a.jsx)(o.gNt, {
+                          required: !0,
+                          errorMessage: null == V ? void 0 : V.getFirstFieldErrorMessage("sound"),
+                          label: j.intl.string(j.t.sSHaGx),
+                          children: (0, a.jsx)(f.Z, {
+                              filename: null != (C = null == A ? void 0 : A.name) ? C : "",
+                              buttonText: j.intl.string(j.t.zpi3XF),
+                              placeholder: j.intl.string(j.t["x+YULy"]),
+                              onFileSelect: $,
+                              filters: _,
+                          }),
+                      }),
+                (0, a.jsxs)(o.NIo, {
+                    children: [
+                        (0, a.jsx)(s.oil, {
+                            required: !0,
+                            label: j.intl.string(j.t.NpJGaG),
+                            placeholder: j.intl.string(j.t.NpJGaG),
+                            error: null == V ? void 0 : V.getFirstFieldErrorMessage("name"),
+                            value: M,
+                            onChange: Z,
+                            maxLength: v.Ek,
+                        }),
+                        es,
+                    ],
+                }),
+                (0, a.jsx)(s.iRW, {
+                    label: j.intl.string(j.t["3CJlb2"]),
+                    errorMessage: null == V ? void 0 : V.getFirstFieldErrorMessage("volume"),
+                    helperText: null != en ? en : void 0,
+                    initialValue: k,
                     onValueChange: (e) => T(e),
                     minValue: 0,
-                    maxValue: U,
+                    maxValue: H,
                 }),
-            }),
-            null != en &&
-                (0, a.jsx)("div", {
-                    className: w.soundStateHint,
-                    children: (0, a.jsx)(s.Text, {
-                        variant: "text-xs/normal",
-                        color: "text-muted",
-                        children: en,
-                    }),
-                }),
-        ],
+            ],
+        }),
     });
 }

@@ -12,8 +12,6 @@ e.exports = {
     trialPlanSelectHeader: "trialPlanSelectHeader_d947e6",
     customGiftMessageWrapper: "customGiftMessageWrapper_d947e6",
     customGiftMessage: "customGiftMessage_d947e6",
-    selectGiftTitle: "selectGiftTitle_d947e6",
     equalDistantBackButton: "equalDistantBackButton_d947e6",
     compactSendGiftToUser: "compactSendGiftToUser_d947e6",
-    compactSelectGiftTitle: "compactSelectGiftTitle_d947e6",
 };

@@ -223,26 +223,28 @@ function eY() {
                 buttonColor: g.zx.Colors.PRIMARY,
                 location: { section: eL.jXE.NOISE_CANCELLATION_POPOUT },
             }),
-            (0, r.jsx)(m.vwX, {
+            (0, r.jsx)("div", {
                 className: a()(eB.marginBottom8, eB.marginTop20),
-                children: eU.intl.string(eU.t.k6h1Fx),
-            }),
-            (0, r.jsxs)(k.Z, {
-                justify: k.Z.Justify.BETWEEN,
-                className: eG.__invalid_footer,
-                children: [
-                    (0, r.jsx)(m.eee, {
-                        href: eL.EYA.KRISP,
-                        onClick: (e) => eq(e),
-                        children: (0, r.jsx)("div", { className: eG.krispLogo }),
+                children: (0, r.jsx)(m.gNt, {
+                    label: eU.intl.string(eU.t.k6h1Fx),
+                    children: (0, r.jsxs)(k.Z, {
+                        justify: k.Z.Justify.BETWEEN,
+                        className: eG.__invalid_footer,
+                        children: [
+                            (0, r.jsx)(m.eee, {
+                                href: eL.EYA.KRISP,
+                                onClick: (e) => eq(e),
+                                children: (0, r.jsx)("div", { className: eG.krispLogo }),
+                            }),
+                            (0, r.jsx)(m.eee, {
+                                href: ej.Z.getArticleURL(eL.BhN.NOISE_SUPPRESSION),
+                                className: eG.krispLink,
+                                onClick: (e) => eq(e),
+                                children: eU.intl.string(eU.t.hvVgAQ),
+                            }),
+                        ],
                     }),
-                    (0, r.jsx)(m.eee, {
-                        href: ej.Z.getArticleURL(eL.BhN.NOISE_SUPPRESSION),
-                        className: eG.krispLink,
-                        onClick: (e) => eq(e),
-                        children: eU.intl.string(eU.t.hvVgAQ),
-                    }),
-                ],
+                }),
             }),
         ],
     });

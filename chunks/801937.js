@@ -234,10 +234,12 @@ class w extends i.PureComponent {
             (0, r.jsxs)("div", {
                 children: [
                     p && (0, r.jsx)("hr", { className: O.SeparatorUpper }),
-                    (0, r.jsx)(c.hjN, {
-                        title: p ? y.intl.string(y.t.tywMsb) : y.intl.string(y.t["8lqkf3"]),
+                    (0, r.jsx)("div", {
                         className: i,
-                        children: S,
+                        children: (0, r.jsx)(c.gNt, {
+                            label: p ? y.intl.string(y.t.tywMsb) : y.intl.string(y.t["8lqkf3"]),
+                            children: S,
+                        }),
                     }),
                     p && (0, r.jsx)("hr", { className: O.SeparatorLower }),
                 ],

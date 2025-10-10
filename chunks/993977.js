@@ -84,10 +84,11 @@ function y(e) {
             e.key,
         );
     });
-    return (0, r.jsxs)(a.hjN, {
+    return (0, r.jsxs)("div", {
         className: _.hiddenLibraryApplications,
         children: [
-            (0, r.jsx)(a.vwX, {
+            (0, r.jsx)(a.X6q, {
+                variant: "heading-md/semibold",
                 className: _.hiddenLibraryApplicationsTitle,
                 children: b.intl.string(b.t["5PJtrK"]),
             }),

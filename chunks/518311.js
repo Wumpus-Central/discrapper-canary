@@ -200,7 +200,8 @@ let ef = (e) => {
                             variant: "text-md/normal",
                             children: er.intl.string(er.t.rIsSqK),
                         }),
-                        (0, r.jsx)(f.vwX, {
+                        (0, r.jsx)(f.Text, {
+                            variant: "text-md/normal",
                             className: el.selectExistingFormHeader,
                             children: er.intl.string(er.t.cjE7wM),
                         }),
@@ -500,38 +501,22 @@ class eg extends (i = l.PureComponent) {
         let { channel: e, invite: t, hideInstantInvites: n } = this.props,
             { copied: i } = this.state;
         if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return null;
-        let a = null != t ? (0, M.Z)(t.code) : "",
-            s = a.length > 0;
-        return (0, r.jsxs)(l.Fragment, {
-            children: [
-                (0, r.jsx)(f.vwX, {
-                    tag: "h5",
-                    className: ea.marginBottom8,
-                    children: er.intl.string(er.t.t3O2BQ),
-                }),
-                (0, r.jsx)(f.kO8, {
-                    supportsCopy: K.wS,
-                    placeholder: (0, M.Z)(er.intl.string(er.t.lPVBqK)),
-                    value: s ? (n ? er.intl.string(er.t["6HzNgY"]) : a) : "",
-                    buttonColor: h.zx.Colors.BRAND,
-                    text: s
-                        ? i
-                            ? er.intl.string(er.t.q30c5u)
-                            : er.intl.string(er.t.OpuAlJ)
-                        : er.intl.string(er.t.qzxqUV),
-                    mode: i ? f.uA3.SUCCESS : f.uA3.DEFAULT,
-                    onCopy: () => {
-                        s ? this.handleCopyInvite(a) : this.createInvite();
-                    },
-                }),
-                a.length > 0
-                    ? (0, r.jsx)(f.Text, {
-                          variant: "text-xs/normal",
-                          className: o()(ea.marginTop8, el.footerText),
-                          children: er.intl.format(er.t.ZVdJMz, { numHours: "".concat(24) }),
-                      })
-                    : null,
-            ],
+        let l = null != t ? (0, M.Z)(t.code) : "",
+            a = l.length > 0;
+        return (0, r.jsx)(f.gNt, {
+            label: er.intl.string(er.t.t3O2BQ),
+            helperText: l.length > 0 ? er.intl.format(er.t.ZVdJMz, { numHours: "".concat(24) }) : void 0,
+            children: (0, r.jsx)(f.kO8, {
+                supportsCopy: K.wS,
+                placeholder: (0, M.Z)(er.intl.string(er.t.lPVBqK)),
+                value: a ? (n ? er.intl.string(er.t["6HzNgY"]) : l) : "",
+                buttonColor: h.zx.Colors.BRAND,
+                text: a ? (i ? er.intl.string(er.t.q30c5u) : er.intl.string(er.t.OpuAlJ)) : er.intl.string(er.t.qzxqUV),
+                mode: i ? f.uA3.SUCCESS : f.uA3.DEFAULT,
+                onCopy: () => {
+                    a ? this.handleCopyInvite(l) : this.createInvite();
+                },
+            }),
         });
     }
     renderFooter() {

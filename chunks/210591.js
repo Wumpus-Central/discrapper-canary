@@ -2,8 +2,8 @@ n.d(t, { Z: () => f }), n(388685), n(361932), n(187205), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    s = n.n(l),
-    a = n(137317),
+    a = n.n(l),
+    s = n(137317),
     o = n(692547),
     c = n(481060),
     d = n(259580),
@@ -26,17 +26,17 @@ function p(e) {
                       size: "md",
                       color: "currentColor",
                       secondaryColor: o.Z.unsafe_rawColors.WHITE_500.css,
-                      className: s()(m.rowIcon, m.rowIconChecked),
+                      className: a()(m.rowIcon, m.rowIconChecked),
                   })
-                : (0, r.jsx)("div", { className: s()(m.rowIcon, m.rowIconEmpty) }),
+                : (0, r.jsx)("div", { className: a()(m.rowIcon, m.rowIconEmpty) }),
         ],
     });
 }
 function f(e) {
     let { children: t } = e,
         [n, l] = i.useState(!1),
-        s = t.flatMap((e) => e.items.map((e) => e.completed)),
-        o = s.filter((e) => e).length / s.length,
+        a = t.flatMap((e) => e.items.map((e) => e.completed)),
+        o = a.filter((e) => e).length / a.length,
         f = 1 === o,
         h = (0, c.q_F)({ width: "".concat(100 * o, "%") }),
         x = [
@@ -47,7 +47,7 @@ function f(e) {
         ],
         b = n
             ? null
-            : (0, r.jsxs)(r.Fragment, {
+            : (0, r.jsxs)(c.C3N, {
                   children: [
                       !f &&
                           t.map((e, t) => {
@@ -56,76 +56,83 @@ function f(e) {
                                   i.Fragment,
                                   {
                                       children: [
-                                          t > 0 && (0, r.jsx)(c.izJ, { className: m.divider }),
-                                          (0, r.jsx)(c.vwX, {
-                                              className: m.categoryTitle,
-                                              children: n,
+                                          t > 0 && (0, r.jsx)(c.izJ, {}),
+                                          (0, r.jsx)(c.gNt, {
+                                              label: n,
+                                              children: (0, r.jsx)(c.Kqy, {
+                                                  gap: 8,
+                                                  children: l.map((e, t) =>
+                                                      (0, r.jsx)(
+                                                          p,
+                                                          {
+                                                              children: e.description,
+                                                              checked: e.completed,
+                                                          },
+                                                          t,
+                                                      ),
+                                                  ),
+                                              }),
                                           }),
-                                          l.map((e, t) =>
-                                              (0, r.jsx)(
-                                                  p,
-                                                  {
-                                                      children: e.description,
-                                                      checked: e.completed,
-                                                  },
-                                                  t,
-                                              ),
-                                          ),
                                       ],
                                   },
                                   t,
                               );
                           }),
-                      (0, r.jsx)(c.izJ, { className: m.divider }),
-                      (0, r.jsx)(c.vwX, {
-                          className: m.categoryTitle,
-                          children: g.intl.string(g.t.FO0AIS),
+                      (0, r.jsx)(c.izJ, {}),
+                      (0, r.jsx)(c.gNt, {
+                          label: g.intl.string(g.t.FO0AIS),
+                          children: (0, r.jsx)(c.Kqy, {
+                              gap: 8,
+                              children: x.map((e, t) =>
+                                  (0, r.jsx)(
+                                      "div",
+                                      {
+                                          className: m.row,
+                                          children: (0, r.jsx)(c.Text, {
+                                              variant: "text-md/normal",
+                                              children: e,
+                                          }),
+                                      },
+                                      t,
+                                  ),
+                              ),
+                          }),
                       }),
-                      x.map((e, t) =>
-                          (0, r.jsx)(
-                              "div",
-                              {
-                                  className: m.row,
-                                  children: (0, r.jsx)(c.Text, {
-                                      variant: "text-md/normal",
-                                      children: e,
-                                  }),
-                              },
-                              t,
-                          ),
-                      ),
                   ],
               });
     return (0, r.jsx)("div", {
         className: m.checklist,
-        children: (0, r.jsxs)("div", {
+        children: (0, r.jsx)("div", {
             className: m.container,
-            children: [
-                (0, r.jsxs)(c.P3F, {
-                    className: m.headerBar,
-                    onClick: () => l((e) => !e),
-                    children: [
-                        (0, r.jsx)(c.X6q, {
-                            variant: "heading-md/semibold",
-                            className: m.headerText,
-                            children: g.intl.string(g.t["2Xbd/P"]),
-                        }),
-                        (0, r.jsx)(d.Z, {
-                            direction: n ? d.Z.Directions.DOWN : d.Z.Directions.UP,
-                            className: m.headerCaret,
-                        }),
-                    ],
-                }),
-                !f &&
-                    (0, r.jsx)("div", {
-                        className: m.progressBarOuter,
-                        children: (0, r.jsx)(a.animated.div, {
-                            className: m.progressBarInner,
-                            style: h,
-                        }),
+            children: (0, r.jsxs)(c.Kqy, {
+                gap: 16,
+                children: [
+                    (0, r.jsxs)(c.P3F, {
+                        className: m.headerBar,
+                        onClick: () => l((e) => !e),
+                        children: [
+                            (0, r.jsx)(c.X6q, {
+                                variant: "heading-md/semibold",
+                                className: m.headerText,
+                                children: g.intl.string(g.t["2Xbd/P"]),
+                            }),
+                            (0, r.jsx)(d.Z, {
+                                direction: n ? d.Z.Directions.DOWN : d.Z.Directions.UP,
+                                className: m.headerCaret,
+                            }),
+                        ],
                     }),
-                b,
-            ],
+                    !f &&
+                        (0, r.jsx)("div", {
+                            className: m.progressBarOuter,
+                            children: (0, r.jsx)(s.animated.div, {
+                                className: m.progressBarInner,
+                                style: h,
+                            }),
+                        }),
+                    b,
+                ],
+            }),
         }),
     });
 }

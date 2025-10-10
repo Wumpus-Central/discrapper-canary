@@ -1,54 +1,53 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => c });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
-    o = n(481060),
-    s = n(993413),
-    l = n(388032),
-    c = n(34747);
-function u(e) {
+    o = n(993413),
+    s = n(388032),
+    l = n(34747);
+function c(e) {
     let {
             children: t,
             className: n,
             layoutClassName: i,
-            profilePreview: u,
-            profilePreviewTitle: d,
-            nameplatePreview: f,
+            profilePreview: c,
+            profilePreviewTitle: u,
+            nameplatePreview: d,
         } = e,
-        _ = () =>
-            null != f
+        f = () =>
+            null != d
                 ? (0, r.jsxs)("div", {
                       children: [
-                          (0, r.jsx)(s.Z, {
-                              title: null != d ? d : l.intl.string(l.t.Zb06yM),
+                          (0, r.jsx)(o.Z, {
+                              title: null != u ? u : s.intl.string(s.t.Zb06yM),
                               hideDivider: !0,
-                              className: c.preview,
-                              children: u,
+                              className: l.preview,
+                              children: c,
                           }),
-                          null != f
-                              ? (0, r.jsx)(s.Z, {
-                                    title: l.intl.string(l.t["7KRt6e"]),
-                                    className: c.preview,
+                          null != d
+                              ? (0, r.jsx)(o.Z, {
+                                    title: s.intl.string(s.t["7KRt6e"]),
+                                    className: l.preview,
                                     hideDivider: !0,
-                                    children: f,
+                                    children: d,
                                 })
                               : null,
                       ],
                   })
-                : (0, r.jsx)(s.Z, {
-                      title: null != d ? d : l.intl.string(l.t.Zb06yM),
+                : (0, r.jsx)(o.Z, {
+                      title: null != u ? u : s.intl.string(s.t.Zb06yM),
                       hideDivider: !0,
-                      className: c.preview,
-                      children: u,
+                      className: l.preview,
+                      children: c,
                   });
     return (0, r.jsx)("div", {
         className: n,
-        children: (0, r.jsx)(o.hjN, {
-            className: c.profileCustomizationSection,
+        children: (0, r.jsx)("div", {
+            className: l.profileCustomizationSection,
             children: (0, r.jsxs)("div", {
-                className: a()(c.baseLayout, i),
-                children: [t, _()],
+                className: a()(l.baseLayout, i),
+                children: [t, f()],
             }),
         }),
     });

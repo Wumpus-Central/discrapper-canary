@@ -18,8 +18,8 @@ n.d(t, {
 var r = n(951288),
     i = n(647438),
     l = n(345074),
-    s = n(442837),
-    a = n(755721),
+    a = n(442837),
+    s = n(755721),
     o = n(481060),
     c = n(484614),
     d = n(852860),
@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(496675),
     b = n(768581),
     j = n(63063),
-    _ = n(434404),
-    v = n(999382),
+    v = n(434404),
+    _ = n(999382),
     C = n(718157),
     O = n(450474),
     y = n(328159),
@@ -47,19 +47,19 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
             guild: e,
             guildMetadata: t,
             submitting: n,
-        } = (0, s.cj)([v.Z], () => ({
-            submitting: v.Z.isSubmitting(),
-            guild: v.Z.getGuild(),
-            guildMetadata: v.Z.getMetadata(),
+        } = (0, a.cj)([_.Z], () => ({
+            submitting: _.Z.isSubmitting(),
+            guild: _.Z.getGuild(),
+            guildMetadata: _.Z.getMetadata(),
         }));
         return (0, r.jsx)(d.Z, {
             submitting: n,
             onReset: () => {
-                null != e && _.Z.init(e.id);
+                null != e && v.Z.init(e.id);
             },
             onSave: () => {
                 null != e &&
-                    (_.Z.saveGuild(e.id, {
+                    (v.Z.saveGuild(e.id, {
                         discoverySplash: e.discoverySplash,
                         description: e.description,
                     }),
@@ -81,15 +81,15 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
     w = () => {
         var e;
         let t = i.useRef(null),
-            d = (0, s.e7)([v.Z], () => v.Z.getGuild()),
+            d = (0, a.e7)([_.Z], () => _.Z.getGuild()),
             [P, w] = i.useState(!1);
         i.useEffect(() => {
             P || null == d || ((0, m.le)(), (0, m.aC)(d.id), (0, m.i3)(d.id), w(!0));
         }, [d, P]);
-        let { canManageGuild: Z } = (0, s.cj)([x.Z], () => ({ canManageGuild: x.Z.can(E.Plq.MANAGE_GUILD, d) })),
-            R = (0, s.e7)([v.Z], () => v.Z.isGuildMetadataLoaded()),
-            D = (0, s.e7)([v.Z], () => (null != d ? v.Z.getMetadata() : null)),
-            A = (0, s.e7)([v.Z], () => (null != d && (null == D ? void 0 : D.isPublished) ? v.Z.getSlug() : null)),
+        let { canManageGuild: Z } = (0, a.cj)([x.Z], () => ({ canManageGuild: x.Z.can(E.Plq.MANAGE_GUILD, d) })),
+            R = (0, a.e7)([_.Z], () => _.Z.isGuildMetadataLoaded()),
+            D = (0, a.e7)([_.Z], () => (null != d ? _.Z.getMetadata() : null)),
+            A = (0, a.e7)([_.Z], () => (null != d && (null == D ? void 0 : D.isPublished) ? _.Z.getSlug() : null)),
             [L, k] = i.useState([!0]),
             [G, M] = i.useState(!0),
             [U, B] = i.useState([!1]),
@@ -106,13 +106,13 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                 let l = new URL(e).hostname.split(".");
                                 if (3 === l.length && "bandcamp" === l[1].toLowerCase())
                                     return N.z.bandcamp.presentation;
-                                let s = null != (n = null == (t = l.shift()) ? void 0 : t.toLowerCase()) ? n : "";
+                                let a = null != (n = null == (t = l.shift()) ? void 0 : t.toLowerCase()) ? n : "";
                                 if (
-                                    ("www" === s &&
-                                        (s = null != (i = null == (r = l.shift()) ? void 0 : r.toLowerCase()) ? i : ""),
-                                    s in N.z)
+                                    ("www" === a &&
+                                        (a = null != (i = null == (r = l.shift()) ? void 0 : r.toLowerCase()) ? i : ""),
+                                    a in N.z)
                                 )
-                                    return N.z[s].presentation;
+                                    return N.z[a].presentation;
                                 return null;
                             } catch (e) {
                                 return null;
@@ -126,12 +126,12 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                     M(e.every((e) => !0 === e));
             }
         }, [D]);
-        let z = (0, s.e7)([v.Z], () => (null != d ? v.Z.getErrors() : null));
+        let z = (0, a.e7)([_.Z], () => (null != d ? _.Z.getErrors() : null));
         if (null == d || null == D) return null;
-        let W = (e) => {
-                _.Z.updateGuild({ discoverySplash: e });
+        let V = (e) => {
+                v.Z.updateGuild({ discoverySplash: e });
             },
-            V = (e) => {
+            W = (e) => {
                 let t = () => {
                     (0, m.W1)(d.id, e),
                         e
@@ -159,7 +159,7 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                   socialLinks: D.socialLinks,
                                   about: D.about,
                               }),
-                        _.Z.saveGuild(d.id, {
+                        v.Z.saveGuild(d.id, {
                             discoverySplash: d.discoverySplash,
                             description: d.description,
                         });
@@ -228,20 +228,19 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                             children: (0, r.jsxs)("div", {
                                 className: S.container,
                                 children: [
-                                    (0, r.jsxs)(o.hjN, {
+                                    (0, r.jsxs)("div", {
                                         className: S.mainContent,
-                                        title: (0, r.jsxs)("div", {
-                                            children: [
-                                                I.intl.string(I.t.kGlQGB),
-                                                " ",
-                                                (0, r.jsx)(u.Z, { className: S.betaTag }),
-                                            ],
-                                        }),
-                                        tag: o.RB0.H1,
                                         children: [
-                                            (0, r.jsxs)(o.R94, {
+                                            (0, r.jsxs)(o.X6q, {
+                                                variant: "heading-lg/semibold",
+                                                children: [
+                                                    I.intl.string(I.t.kGlQGB),
+                                                    (0, r.jsx)(u.Z, { className: S.betaTag }),
+                                                ],
+                                            }),
+                                            (0, r.jsxs)(o.Text, {
+                                                variant: "text-sm/normal",
                                                 className: S.tabMainDescription,
-                                                type: o.geA.DESCRIPTION,
                                                 children: [
                                                     I.intl.format(I.t["+ScrMT"], {
                                                         discordURL: window.GLOBAL_ENV.MARKETING_ENDPOINT,
@@ -326,19 +325,19 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                                     size: 512 * (0, p.x_)(),
                                                                                 }),
                                                                             disabled: !Z,
-                                                                            onChange: W,
+                                                                            onChange: V,
                                                                             hint: I.intl.string(I.t.uPvxqK),
                                                                             imageClassName: S.imageUploaderInnerSquare,
                                                                             hideSize: !0,
                                                                         }),
-                                                                        (0, r.jsxs)(a.zx, {
-                                                                            size: a.zx.Sizes.SMALL,
-                                                                            color: a.zx.Colors.PRIMARY,
+                                                                        (0, r.jsxs)(s.zx, {
+                                                                            size: s.zx.Sizes.SMALL,
+                                                                            color: s.zx.Colors.PRIMARY,
                                                                             children: [
                                                                                 I.intl.string(I.t.yG2pUl),
                                                                                 (0, r.jsx)(f.ZP, {
                                                                                     disabled: !Z,
-                                                                                    onChange: W,
+                                                                                    onChange: V,
                                                                                 }),
                                                                             ],
                                                                         }),
@@ -354,7 +353,7 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                         placeholder: I.intl.string(I.t.rFa9Ul),
                                                         onChange: (e) => {
                                                             var t;
-                                                            _.Z.updateGuild({
+                                                            v.Z.updateGuild({
                                                                 description:
                                                                     null !=
                                                                     (t = null == e ? void 0 : e.replaceAll("\n", ""))
@@ -573,7 +572,7 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                         variant: "critical-primary",
                                                                         size: "sm",
                                                                         text: I.intl.string(I.t["DCHd/P"]),
-                                                                        onClick: () => V(!1),
+                                                                        onClick: () => W(!1),
                                                                         disabled: !Z,
                                                                     }),
                                                                 }),
@@ -597,7 +596,7 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                 title: I.intl.string(I.t["2kCyn5"]),
                                                 children: Y,
                                                 buttonLabel: I.intl.string(I.t.tVK6S0),
-                                                buttonCallback: () => V(!0),
+                                                buttonCallback: () => W(!0),
                                                 disabled: !Z || !G,
                                             }),
                                         }),
@@ -609,4 +608,4 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
             }),
         });
     },
-    Z = () => (null == (0, s.e7)([v.Z], () => v.Z.getGuild()) ? null : (0, r.jsx)(w, {}));
+    Z = () => (null == (0, a.e7)([_.Z], () => _.Z.getGuild()) ? null : (0, r.jsx)(w, {}));

@@ -29,7 +29,7 @@ var r = n(951288),
     P = n(315091),
     w = n(149715),
     D = n(197571);
-function L(e, t, n) {
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ function L(e, t, n) {
         e
     );
 }
-function x(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,7 +53,7 @@ function x(e) {
                 }),
             )),
             r.forEach(function (t) {
-                L(e, t, n[t]);
+                x(e, t, n[t]);
             });
     }
     return e;
@@ -70,7 +70,7 @@ function M(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,7 +81,7 @@ function j(e, t) {
         e
     );
 }
-let k = s.ZP.connectStores([S.Z], () => ({ theme: S.Z.theme }))(u.ubH),
+let j = s.ZP.connectStores([S.Z], () => ({ theme: S.Z.theme }))(u.ubH),
     U = (0, T.isWindows)(),
     G = 18,
     B = "https://www.igdb.com/about";
@@ -148,8 +148,8 @@ function F(e) {
         })),
         P = (0, p.P6)("UserSettingsGameActivity"),
         D = (0, s.e7)([h.ZP], () => h.ZP.getVisibleGame()),
-        [L, M] = i.useState(!1),
-        k = i.useMemo(
+        [x, M] = i.useState(!1),
+        j = i.useMemo(
             () =>
                 (0, b.le)(T)
                     ? E
@@ -158,7 +158,7 @@ function F(e) {
                     : T.name,
             [T, E],
         ),
-        [B, Z] = i.useState(null != k ? k : "???"),
+        [B, Z] = i.useState(null != j ? j : "???"),
         V = o()(w.flexCenter, {
             [R.game]: !a,
             [R.activeGame]: a,
@@ -189,9 +189,9 @@ function F(e) {
                   return (t) =>
                       (0, r.jsx)(
                           e,
-                          j(x({}, t), {
-                              title: N.intl.formatToPlainString(N.t.PZ4fKS, { platform: k }),
-                              subtitle: N.intl.formatToPlainString(N.t.ZIQbfX, { platform: k }),
+                          k(L({}, t), {
+                              title: N.intl.formatToPlainString(N.t.PZ4fKS, { platform: j }),
+                              subtitle: N.intl.formatToPlainString(N.t.ZIQbfX, { platform: j }),
                               actions: [
                                   {
                                       text: N.intl.string(N.t["ETE/oK"]),
@@ -212,7 +212,7 @@ function F(e) {
             : d.Z.toggleDetection(T);
     }
     function q() {
-        if (L) return;
+        if (x) return;
         let e = null != T.id ? y.Z.getDetectableGame(T.id) : null;
         v.default.track(C.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
             application_id: null == e ? void 0 : e.id,
@@ -226,7 +226,7 @@ function F(e) {
                           var i, a, o;
                           return (0, r.jsx)(
                               t,
-                              j(x({}, n), {
+                              k(L({}, n), {
                                   detectedActivity: {
                                       name: null != (i = T.name) ? i : "",
                                       application_id:
@@ -253,7 +253,7 @@ function F(e) {
                   children: [
                       (0, r.jsx)("div", {
                           className: R.gameName,
-                          children: k,
+                          children: j,
                       }),
                       (0, r.jsx)(u.ua7, {
                           "data-migration-pending": !0,
@@ -261,8 +261,8 @@ function F(e) {
                           children: (e) =>
                               (0, r.jsx)(
                                   g.Z,
-                                  j(
-                                      x(
+                                  k(
+                                      L(
                                           {
                                               className: R.gameVerifiedIcon,
                                               size: G,
@@ -329,7 +329,7 @@ function F(e) {
                 ? (0, r.jsx)(u.ua7, {
                       "data-migration-pending": !0,
                       text: N.intl.string(N.t.Vfw2Ly),
-                      children: (e) => (0, r.jsx)("i", x({ className: R.overlayWarningIcon }, e)),
+                      children: (e) => (0, r.jsx)("i", L({ className: R.overlayWarningIcon }, e)),
                   })
                 : null;
         return (0, r.jsxs)("div", {
@@ -392,7 +392,7 @@ function F(e) {
         });
     }
     function ee() {
-        return L
+        return x
             ? null
             : (0, r.jsx)("div", {
                   className: o()(w.flexCenter, w.noWrap, w.justifyBetween, R.toggleContainer),
@@ -490,7 +490,7 @@ function V() {
 }
 function H(e) {
     let { children: t } = e;
-    return (0, r.jsxs)(k, {
+    return (0, r.jsxs)(j, {
         className: D.marginTop40,
         children: [
             (0, r.jsx)(u.oxh, {
@@ -526,30 +526,21 @@ let Y = (0, I.oH)(function () {
         function p() {
             return 0 === d.length
                 ? (0, r.jsx)(H, { children: (0, r.jsx)(u.OZU, { children: N.intl.string(N.t["1yiJws"]) }) })
-                : (0, r.jsxs)(u.hjN, {
+                : (0, r.jsx)(u.C3N, {
                       className: D.marginTop40,
-                      children: [
-                          (0, r.jsx)(u.vwX, {
-                              className: R.addedGamesTitle,
-                              children: N.intl.string(N.t.jCOdv7),
-                          }),
-                          (0, r.jsx)(u.R94, {
-                              className: R.addedGamesDescription,
-                              type: u.geA.DESCRIPTION,
-                              children: N.intl.format(N.t.KPA3m5, { igdbLink: B }),
-                          }),
-                          d.map((e) =>
-                              (0, r.jsx)(
-                                  F,
-                                  {
-                                      rawGame: e,
-                                      isOverride: c.has(e.exePath),
-                                      subgames: e.id === E.eB ? f : void 0,
-                                  },
-                                  (0, h.rH)(e),
-                              ),
+                      label: N.intl.string(N.t.jCOdv7),
+                      description: N.intl.format(N.t.KPA3m5, { igdbLink: B }),
+                      children: d.map((e) =>
+                          (0, r.jsx)(
+                              F,
+                              {
+                                  rawGame: e,
+                                  isOverride: c.has(e.exePath),
+                                  subgames: e.id === E.eB ? f : void 0,
+                              },
+                              (0, h.rH)(e),
                           ),
-                      ],
+                      ),
                   });
         }
         return (
@@ -585,7 +576,7 @@ let Y = (0, I.oH)(function () {
                                 children: (e) =>
                                     (0, r.jsx)(
                                         u.Avr,
-                                        j(x({}, e), {
+                                        k(L({}, e), {
                                             buttonRef: _,
                                             variant: "primary",
                                             textVariant: "text-sm/medium",

@@ -52,8 +52,8 @@ let I = r.memo(function (e) {
             guild: l,
             channel: I,
             integrations: E,
-            editedIntegration: Z,
-            webhooks: T,
+            editedIntegration: T,
+            webhooks: Z,
             editedWebhook: k,
             isFetchingWebhooks: A,
             refToScroller: D,
@@ -76,21 +76,21 @@ let I = r.memo(function (e) {
         ),
         H = null != I ? I : M,
         G = t === N.b4C.APPLICATION ? n : null,
-        [z, F] = r.useState(d.$x),
-        K = r.useCallback(
+        [z, K] = r.useState(d.$x),
+        F = r.useCallback(
             () =>
                 L()
                     ? (h.S.dispatch(N.CkL.SHAKE_APP, {
                           duration: 300,
                           intensity: z,
                       }),
-                      F(Math.min(z + d.d7, d.w6)),
+                      K(Math.min(z + d.d7, d.w6)),
                       h.S.dispatch(N.CkL.EMPHASIZE_NOTICE),
                       !1)
-                    : (F(d.$x), !0),
+                    : (K(d.$x), !0),
             [L, z],
         ),
-        q = r.useCallback((e) => !!K() && (c.Z.setSection(e), !0), [K]),
+        q = r.useCallback((e) => !!F() && (c.Z.setSection(e), !0), [F]),
         {
             applicationIntegrations: V,
             applicationBotIds: Y,
@@ -117,7 +117,7 @@ let I = r.memo(function (e) {
                                     (t[i.application.bot.id] = i.application.id);
                         }
                     } else i.type in n || (n[i.type] = []), n[i.type].push(i);
-            for (let t of T)
+            for (let t of Z)
                 (t.channel_id in B || t.channel_id in W) &&
                     (null != t.application_id && t.application_id in e
                         ? e[t.application_id].webhooks.push(t)
@@ -131,7 +131,7 @@ let I = r.memo(function (e) {
                 customWebhooks: i,
                 followedChannelWebhooks: r,
             };
-        }, [E, B, W, T]);
+        }, [E, B, W, Z]);
     r.useEffect(() => {
         if (!A)
             switch (t) {
@@ -163,7 +163,7 @@ let I = r.memo(function (e) {
                 ($ = (0, i.jsx)(v.Z, {
                     guild: l,
                     integrations: J[N.ABu.TWITCH],
-                    editedIntegration: Z,
+                    editedIntegration: T,
                     labelText: S.intl.string(S.t.q4pBGx),
                     platformType: N.ABu.TWITCH,
                     descriptionText: S.intl.string(S.t.V9kNqq),
@@ -176,7 +176,7 @@ let I = r.memo(function (e) {
                         helpdeskArticle: x.Z.getArticleURL(N.BhN.TWITCH_INTEGRATION),
                     }),
                     errors: R,
-                    canNavigate: K,
+                    canNavigate: F,
                 }));
             break;
         case N.b4C.YOUTUBE:
@@ -184,7 +184,7 @@ let I = r.memo(function (e) {
                 ($ = (0, i.jsx)(v.Z, {
                     guild: l,
                     integrations: J[N.ABu.YOUTUBE],
-                    editedIntegration: Z,
+                    editedIntegration: T,
                     labelText: S.intl.string(S.t.aS6cKy),
                     platformType: N.ABu.YOUTUBE,
                     descriptionText: S.intl.string(S.t["7Tv7JC"]),
@@ -193,7 +193,7 @@ let I = r.memo(function (e) {
                         helpdeskArticle: x.Z.getArticleURL(N.BhN.YOUTUBE_INTEGRATION),
                     }),
                     errors: R,
-                    canNavigate: K,
+                    canNavigate: F,
                 }));
             break;
         case N.b4C.APPLICATION:
@@ -206,7 +206,7 @@ let I = r.memo(function (e) {
                     editedWebhook: k,
                     selectableWebhookChannels: B,
                     errors: R,
-                    canNavigate: K,
+                    canNavigate: F,
                 }));
             break;
         case N.b4C.CHANNEL_FOLLOWING:
@@ -214,7 +214,7 @@ let I = r.memo(function (e) {
                 followedChannelWebhooks: Q,
                 editedWebhook: k,
                 selectableWebhookChannels: B,
-                canNavigate: K,
+                canNavigate: F,
                 errors: R,
             });
             break;
@@ -249,7 +249,7 @@ let I = r.memo(function (e) {
                     }
                     return e;
                 })({}, B, W),
-                canNavigate: K,
+                canNavigate: F,
                 refToScroller: D,
                 errors: R,
             });
@@ -297,8 +297,8 @@ let I = r.memo(function (e) {
                 className: w.breadcrumbs,
                 children:
                     t === N.b4C.OVERVIEW
-                        ? (0, i.jsx)(s.vwX, {
-                              tag: "h1",
+                        ? (0, i.jsx)(s.X6q, {
+                              variant: "heading-lg/semibold",
                               children: P(N.b4C.OVERVIEW),
                           })
                         : (0, i.jsx)(s.OoM, {
@@ -311,8 +311,8 @@ let I = r.memo(function (e) {
                                   t !== parseInt(e.id) && q(parseInt(e.id));
                               },
                               renderCustomBreadcrumb: (e, t) =>
-                                  (0, i.jsx)(s.vwX, {
-                                      tag: "h1",
+                                  (0, i.jsx)(s.X6q, {
+                                      variant: "heading-lg/semibold",
                                       className: t ? w.breadcrumbActive : w.breadcrumbInactive,
                                       children: e.label,
                                   }),
