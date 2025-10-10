@@ -8,6 +8,7 @@ var r = {
     outerRadioBase: "outerRadioBase__5a85a",
     outerRadioFill: "outerRadioFill__5a85a",
     radioGroupOption: "radioGroupOption__5a85a",
+    standaloneRadioIndicator: "standaloneRadioIndicator__5a85a",
     animateIn: "animateIn__5a85a",
     animateOut: "animateOut__5a85a",
     group: "group__5a85a",

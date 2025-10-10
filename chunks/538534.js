@@ -1,4 +1,7 @@
-n.d(t, { E: () => _ });
+n.d(t, {
+    E: () => _,
+    F: () => p,
+});
 var r = n(951288);
 n(647438);
 var i = n(877371),
@@ -111,4 +114,17 @@ function _(e) {
             onChange: null != e.onChange ? (t) => e.onChange(t.value) : void 0,
         });
     return (0, r.jsx)(o.Gu, l({}, c));
+}
+function p(e) {
+    let { disabled: t, checked: n, radioItemIconClassName: s } = e;
+    return (0, i.A)("RadioGroupIndicator")
+        ? (0, r.jsx)(a.M, {
+              disabled: t,
+              isSelected: n,
+          })
+        : (0, r.jsx)(o.DQ, {
+              checked: n,
+              disabled: t,
+              radioItemIconClassName: s,
+          });
 }

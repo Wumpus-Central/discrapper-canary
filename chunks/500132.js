@@ -1,4 +1,8 @@
-n.d(t, { C: () => b }), n(388685);
+n.d(t, {
+    C: () => y,
+    M: () => g,
+}),
+    n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -80,7 +84,27 @@ function m(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function g() {
+function g(e) {
+    let { disabled: t, isSelected: n } = e,
+        [a, s] = (0, i.useState)(void 0),
+        l = (0, i.useRef)(!1);
+    return (
+        (0, i.useEffect)(() => {
+            if (!l.current) {
+                l.current = !0;
+                return;
+            }
+            s(n ? "animateIn" : "animateOut");
+        }, [n]),
+        (0, r.jsx)("div", {
+            className: o()([u.standaloneRadioIndicator, "string" == typeof a && u[a]]),
+            "data-selected": n,
+            "data-disabled": t,
+            children: (0, r.jsx)(E, {}),
+        })
+    );
+}
+function E() {
     return (0, r.jsxs)("svg", {
         className: u.radioIndicator,
         width: 20,
@@ -110,11 +134,11 @@ function g() {
         ],
     });
 }
-function E(e) {
+function b(e) {
     let { desc: t, disabled: n, leadingIcon: a, name: d, value: f, isSelected: _ } = e,
         p = (0, i.useRef)(null),
         h = (0, i.useRef)(null),
-        [m, E] = (0, i.useState)(void 0),
+        [m, g] = (0, i.useState)(void 0),
         b = (0, i.useRef)(!1);
     return (
         (0, i.useEffect)(() => {
@@ -122,7 +146,7 @@ function E(e) {
                 b.current = !0;
                 return;
             }
-            E(_ ? "animateIn" : "animateOut");
+            g(_ ? "animateIn" : "animateOut");
         }, [_]),
         (0, r.jsx)(c.tEY, {
             focusTarget: p,
@@ -135,7 +159,7 @@ function E(e) {
                 inputRef: h,
                 ref: p,
                 children: [
-                    (0, r.jsx)(g, {}),
+                    (0, r.jsx)(E, {}),
                     (0, r.jsxs)(c.Kqy, {
                         gap: 4,
                         children: [
@@ -170,7 +194,7 @@ function E(e) {
         })
     );
 }
-function b(e) {
+function y(e) {
     var { onChange: t, options: n, value: i, disabled: a = !1, "aria-labelledby": o } = e,
         l = h(e, ["onChange", "options", "value", "disabled", "aria-labelledby"]);
     let d = null != t ? (e) => t(e) : void 0;
@@ -189,7 +213,7 @@ function b(e) {
                     "data-mana-component": "BaseRadioGroup",
                     value: i,
                     children: n.map((e, t) =>
-                        (0, r.jsx)(E, p(f({ index: t }, e), { isSelected: i === e.value }), e.value),
+                        (0, r.jsx)(b, p(f({ index: t }, e), { isSelected: i === e.value }), e.value),
                     ),
                 }),
         }),
