@@ -14,7 +14,6 @@ e.exports = {
     hasTags: "hasTags__5fa2f",
     comboBoxInput: "comboBoxInput__5fa2f",
     chevronButton: "chevronButton__5fa2f",
-    loadingSpinner: "loadingSpinner__5fa2f",
     chevronIcon: "chevronIcon__5fa2f",
     isOpen: "isOpen__5fa2f",
     clearButton: "clearButton__5fa2f",

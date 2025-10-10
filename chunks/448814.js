@@ -1,17 +1,20 @@
-n.d(t, { w: () => v }), n(388685);
+n.d(t, { w: () => S }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
     s = n(924826),
     l = n(91192),
-    c = n(571155),
-    u = n(652728),
-    d = n(715644),
-    f = n(777207),
-    _ = n(199197),
-    p = n(95632);
-function h(e, t, n) {
+    c = n(692547),
+    u = n(571155),
+    d = n(652728),
+    f = n(715644),
+    _ = n(131573),
+    p = n(777207),
+    h = n(194255),
+    m = n(199197),
+    g = n(95632);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +27,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,12 +38,12 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                E(e, t, n[t]);
             });
     }
     return e;
 }
-function g(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -52,22 +55,22 @@ function g(e, t) {
     }
     return n;
 }
-function E(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function b(e, t) {
+function v(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = y(e, t);
+        i = I(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -75,7 +78,7 @@ function b(e, t) {
     }
     return i;
 }
-function y(e, t) {
+function I(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -84,121 +87,145 @@ function y(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let O = 40;
-function v(e) {
-    let {
-            id: t,
-            required: n = !1,
-            disabled: a = !1,
-            selectionMode: c = "single",
-            items: u,
-            defaultSelectedItems: h,
-            selectedItems: g,
-            onSelectionChange: y,
-            activeDescendantIndex: v,
-            shouldFocusWrap: T = !1,
-            renderListItem: S,
-            renderEmptyState: A,
-            maxVisibleItems: C = 5,
+let T = c.Z.modules.select.OPTION_HEIGHT.resolve();
+function S(e) {
+    let t,
+        {
+            id: n,
+            required: a = !1,
+            disabled: c = !1,
+            selectionMode: u = "single",
+            items: d,
+            defaultSelectedItems: E,
+            selectedItems: y,
+            onSelectionChange: I,
+            activeDescendantIndex: S,
+            shouldFocusWrap: C = !1,
+            renderListItem: N,
+            renderEmptyState: R,
+            maxVisibleItems: P = 5,
+            loading: w = !1,
+            onBlur: D,
+            onFocus: L,
         } = e,
-        N = i.useId(),
-        R = null != t ? t : N,
-        [P, w] = i.useState(null != h ? h : []),
-        D = null != g,
-        L = D ? g : P,
-        x = (0, s.ZP)({
-            id: R,
+        x = i.useId(),
+        M = null != n ? n : x,
+        [j, k] = i.useState(null != E ? E : []),
+        U = null != y,
+        G = U ? y : j,
+        B = (0, s.ZP)({
+            id: M,
             async scrollToEnd() {},
             async scrollToStart() {},
-            isEnabled: !a,
-            wrap: T,
+            isEnabled: !c,
+            wrap: C,
             preserveFocusPosition: !0,
         }),
-        M = i.useCallback(
+        Z = i.useCallback(
             (e) => {
-                if (!0 === n && 1 === L.length && L.includes(e)) return;
-                let t = (0, _.cq)(c, L, e);
-                D || w(t), null == y || y(t);
+                if (!0 === a && 1 === G.length && G.includes(e)) return;
+                let t = (0, m.cq)(u, G, e);
+                U || k(t), null == I || I(t);
             },
-            [n, L, y, D, c],
+            [a, G, I, U, u],
         ),
-        j = i.useCallback(
+        F = i.useCallback(
             (e) =>
                 (0, r.jsx)("div", {
-                    className: p.listBoxItemContent,
-                    children: (0, r.jsx)(f.x, {
+                    className: g.listBoxItemContent,
+                    children: (0, r.jsx)(p.x, {
                         variant: "text-md/medium",
                         color: "currentColor",
-                        className: p.listBoxItemLabel,
+                        className: g.listBoxItemLabel,
                         children: e.label,
                     }),
                 }),
             [],
         );
+    if (w)
+        t = (0, r.jsx)("div", {
+            className: g.loadingSpinnerWrapper,
+            "aria-busy": !0,
+            children: (0, r.jsx)(_.$, {
+                type: _.R.PULSING_ELLIPSIS,
+                className: g.loadingSpinner,
+                itemClassName: g.loadingSpinnerInner,
+            }),
+        });
+    else if (d.length > 0)
+        t = (0, r.jsx)(f._2, {
+            style: { height: null != P ? "".concat(Math.min(d.length, P) * T, "px") : "100%" },
+            role: void 0,
+            rowHeight: T,
+            sections: [d.length],
+            sectionHeight: 0,
+            renderSection: () => null,
+            renderRow: (e) => {
+                var t;
+                let { row: n } = e,
+                    i = d[n],
+                    a = (0, m.cA)(M, n),
+                    o = 0 !== G.length && null != G.find((e) => e.id === i.id);
+                return (0, r.jsx)(
+                    A,
+                    O(b({}, i), {
+                        id: a,
+                        selectionMode: u,
+                        selected: o,
+                        disabled: c || i.disabled,
+                        focused: n === S,
+                        onClick: () => {
+                            c || i.disabled || Z(i);
+                        },
+                        children: null != (t = null == N ? void 0 : N(i)) ? t : F(i),
+                    }),
+                    i.id,
+                );
+            },
+        });
+    else {
+        var V;
+        t = null != (V = null == R ? void 0 : R()) ? V : (0, r.jsx)(h.z, {});
+    }
     return (0, r.jsx)(l.bG, {
-        navigator: x,
+        navigator: B,
         children: (0, r.jsx)(l.SJ, {
             children: (e) => {
-                var { ref: t } = e,
-                    n = b(e, ["ref"]);
+                var { ref: n } = e,
+                    i = v(e, ["ref"]);
                 return (0, r.jsx)(
                     "div",
-                    E(m({ ref: t }, n), {
-                        role: "listbox",
-                        "aria-multiselectable": "multiple" === c,
-                        className: o()(p.listBox, { [p.scrollable]: u.length > C }),
-                        "data-mana-component": "listbox",
-                        children:
-                            0 === u.length
-                                ? null == A
-                                    ? void 0
-                                    : A()
-                                : (0, r.jsx)(d._2, {
-                                      style: {
-                                          height: null != C ? "".concat(Math.min(u.length, C) * O, "px") : "100%",
-                                      },
-                                      role: void 0,
-                                      rowHeight: O,
-                                      sections: [u.length],
-                                      sectionHeight: 0,
-                                      renderSection: () => null,
-                                      renderRow: (e) => {
-                                          var t;
-                                          let { row: n } = e,
-                                              i = u[n],
-                                              o = (0, _.cA)(R, n),
-                                              s = 0 !== L.length && null != L.find((e) => e.id === i.id);
-                                          return (0, r.jsx)(
-                                              I,
-                                              E(m({}, i), {
-                                                  id: o,
-                                                  selectionMode: c,
-                                                  selected: s,
-                                                  disabled: a || i.disabled,
-                                                  focused: n === v,
-                                                  onClick: () => {
-                                                      a || i.disabled || M(i);
-                                                  },
-                                                  children: null != (t = null == S ? void 0 : S(i)) ? t : j(i),
-                                              }),
-                                              i.id,
-                                          );
-                                      },
-                                  }),
-                    }),
+                    O(
+                        b(
+                            {
+                                onBlur: D,
+                                onFocus: L,
+                                "aria-busy": w,
+                                ref: n,
+                            },
+                            i,
+                        ),
+                        {
+                            role: "listbox",
+                            "aria-multiselectable": "multiple" === u,
+                            className: o()(g.listBox, { [g.scrollable]: d.length > P }),
+                            "data-mana-component": "listbox",
+                            children: t,
+                        },
+                    ),
                 );
             },
         }),
     });
 }
-function I(e) {
-    let { children: t, id: n, selected: i, disabled: a, focused: o, selectionMode: s, onClick: d } = e,
+function A(e) {
+    let { children: t, id: n, selected: i, disabled: a, focused: o, selectionMode: s, onClick: c } = e,
         f = (0, l.JA)(n);
     function _() {
         return "multiple" === s
-            ? (0, r.jsx)(c.F, { checked: i })
+            ? (0, r.jsx)(u.F, { checked: i })
             : i
-              ? (0, r.jsx)(u.k, {
+              ? (0, r.jsx)(d.k, {
                     color: "currentColor",
                     size: "refresh_sm",
                 })
@@ -206,19 +233,19 @@ function I(e) {
     }
     return (0, r.jsxs)(
         "div",
-        E(m({}, f), {
+        O(b({}, f), {
             id: n,
-            className: p.listBoxItem,
+            className: g.listBoxItem,
             role: "option",
             tabIndex: f.tabIndex,
-            onClick: d,
+            onClick: c,
             "aria-disabled": a,
             "aria-selected": i,
             "data-focus-visible": o,
             children: [
                 t,
                 (0, r.jsx)("div", {
-                    className: p.selectedIcon,
+                    className: g.selectedIcon,
                     "aria-hidden": !0,
                     children: _(),
                 }),

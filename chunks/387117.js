@@ -115,5 +115,6 @@ let r = {
             WIDTH_MEDIUM: { resolve: () => 602 },
             WIDTH_SMALL: { resolve: () => 442 },
         },
+        select: { OPTION_HEIGHT: { resolve: () => 40 } },
     },
 };

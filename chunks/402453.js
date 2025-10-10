@@ -1,5 +1,6 @@
 n.d(t, {
     A: () => l,
+    KJ: () => o,
     ZF: () => s,
     kb: () => c,
 });
@@ -18,6 +19,8 @@ let a = {
             EARLY_ACCESS: "Early Access",
             BILLING_TRIAL_FREE_TRIAL_TEXT: "Free Trial",
             MODAL_DONT_SHOW_AGAIN: "Don't show again",
+            LISTBOX_EMPTY_STATE: "No items to show",
+            LISTBOX_EMPTY_STATE_WITH_QUERY: (e) => "No results for \u2018".concat(e, "\u2019"),
         },
         theme: "light",
         saturation: 0.5,

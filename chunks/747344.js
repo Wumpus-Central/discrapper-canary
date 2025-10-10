@@ -8,20 +8,20 @@ function a() {
     return r.useContext(o);
 }
 let o = r.createContext({
-    state: {
-        isInitialized: !1,
-        activeDescendantIndex: null,
-        listItems: [],
-        filteredItems: [],
-        selectedItems: [],
-        longestLabelCharCount: 5,
-        width: "0px",
-        dropDownHeight: "auto",
-    },
-    setState: i.dG4,
+    value: null,
+    options: [],
+    selectedOptions: [],
+    filteredOptions: [],
+    query: "",
+    setQuery: i.dG4,
+    activeDescendantIndex: null,
+    setActiveDescendantIndex: i.dG4,
+    loading: !1,
     selectionMode: "single",
     handleSelectionChange: i.dG4,
     onSelectionChange: i.dG4,
     isOpen: !1,
     setIsOpen: i.dG4,
+    isEditing: !1,
+    setIsEditing: i.dG4,
 });
