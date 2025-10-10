@@ -121,9 +121,9 @@ function N(e, t, n) {
     }
     return !1;
 }
-function R(e, t, n) {
-    if (e.overlayMethod !== c.gl.Hook || !n) return !1;
-    switch (t) {
+function R(e, t) {
+    if (!t) return !1;
+    switch (e) {
         case r.Jx.UNKNOWN:
         case r.Jx.MINIMIZED:
         case r.Jx.FULLSCREEN:
