@@ -1,59 +1,68 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => v });
 var r = n(951288);
 n(647438);
-var l = n(399606),
+var l = n(120356),
+    s = n.n(l),
+    i = n(399606),
     a = n(481060),
-    s = n(594174),
-    i = n(74538),
-    o = n(597688),
-    c = n(994587),
-    u = n(884697),
-    d = n(724994),
-    g = n(786040),
-    p = n(445794),
-    f = n(956472),
-    C = n(215023),
-    h = n(388032),
-    _ = n(944525);
-let m = (e) => {
-        let { product: t } = e,
-            n = (0, c.Nd)(),
-            g = null == n ? void 0 : n.tab,
-            { isPurchased: m, isPartiallyOwnedBundle: b } = (0, d.L)(t),
-            E = (0, l.e7)([o.Z], () => o.Z.getCategoryForProduct(t.skuId)),
-            S = (0, l.e7)([s.default], () => s.default.getCurrentUser()),
-            v = i.ZP.canUseCollectibles(S),
-            x = (0, p.Iw)(t),
-            { isOrbExclusive: O } = (0, f.Ip)({
+    o = n(594174),
+    c = n(74538),
+    u = n(597688),
+    d = n(994587),
+    g = n(884697),
+    f = n(724994),
+    p = n(786040),
+    C = n(445794),
+    h = n(956472),
+    _ = n(215023),
+    m = n(388032),
+    b = n(944525);
+let E = (e) => {
+        let { product: t, badgeOverride: n, className: l } = e,
+            E = (0, d.Nd)(),
+            v = null == E ? void 0 : E.tab,
+            { isPurchased: S, isPartiallyOwnedBundle: x } = (0, f.L)(t),
+            O = (0, i.e7)([u.Z], () => u.Z.getCategoryForProduct(t.skuId)),
+            y = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
+            T = c.ZP.canUseCollectibles(y),
+            j = (0, C.Iw)(t),
+            { isOrbExclusive: k } = (0, h.Ip)({
                 product: t,
-                isPremiumUser: v,
-                tab: g,
-                hasDiscountOffer: null != x,
+                isPremiumUser: T,
+                tab: v,
+                hasDiscountOffer: null != j,
             }),
-            y = (0, u.Yq)(t.skuId),
-            T = (null == E ? void 0 : E.skuId) === C.bu && (0, u.WW)(t.skuId);
-        return b || m || !y
-            ? O
-                ? (0, r.jsx)(a.IGR, {
-                      text: h.intl.string(h.t["0TmQRE"]),
-                      disableColor: !0,
-                      className: _.productCardBadge,
-                  })
-                : T
-                  ? (0, r.jsx)(a.IGR, {
-                        text: h.intl.string(h.t.S6kE9v),
-                        disableColor: !0,
-                        className: _.productCardBadge,
-                    })
-                  : null
+            L = (0, g.Yq)(t.skuId),
+            I = (null == O ? void 0 : O.skuId) === _.bu && (0, g.WW)(t.skuId);
+        if (n === p.Zh.NONE) return null;
+        let P = null;
+        return (n === p.Zh.NEW
+            ? (P = m.intl.string(m.t.y2b7CA))
+            : n === p.Zh.ORBS_EXCLUSIVE
+              ? (P = m.intl.string(m.t["0TmQRE"]))
+              : n === p.Zh.NEW_COLOR_VARIANT && (P = m.intl.string(m.t.S6kE9v)),
+        null == P &&
+            (x || S || !L
+                ? k
+                    ? (P = m.intl.string(m.t["0TmQRE"]))
+                    : I && (P = m.intl.string(m.t.S6kE9v))
+                : (P = m.intl.string(m.t.y2b7CA))),
+        null == P)
+            ? null
             : (0, r.jsx)(a.IGR, {
-                  text: h.intl.string(h.t.y2b7CA),
+                  text: P,
                   disableColor: !0,
-                  className: _.productCardBadge,
+                  className: s()(l, b.productCardBadge),
               });
     },
-    b = (e) => {
-        let { skuId: t } = e,
-            n = (0, g.LJ)(t);
-        return null == n ? null : (0, r.jsx)(m, { product: n });
+    v = (e) => {
+        let { skuId: t, badgeOverride: n, className: l } = e,
+            s = (0, p.LJ)(t);
+        return null == s
+            ? null
+            : (0, r.jsx)(E, {
+                  product: s,
+                  badgeOverride: n,
+                  className: l,
+              });
     };

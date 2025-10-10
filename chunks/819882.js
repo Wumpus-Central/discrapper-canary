@@ -1,60 +1,60 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => S });
 var r = n(951288);
 n(647438);
 var l = n(873546),
-    a = n(399606),
-    s = n(481060),
-    i = n(100527),
+    s = n(399606),
+    i = n(481060),
+    a = n(100527),
     o = n(594174),
     c = n(74538),
     u = n(381585),
     d = n(994587),
     g = n(884697),
-    p = n(724994),
-    f = n(680942),
+    f = n(724994),
+    p = n(680942),
     C = n(786040),
     h = n(58201),
     _ = n(445794),
     m = n(956472),
     b = n(215023),
     E = n(388032);
-let S = (e) => {
-        let { product: t, selectedVariantIndex: n, cardRef: h } = e,
-            S = (0, d.Nd)(),
-            v = null == S ? void 0 : S.tab,
-            x = (0, a.e7)([o.default], () => o.default.getCurrentUser()),
-            O = c.ZP.canUseCollectibles(x),
-            y = (0, u.sp)(),
-            { isPurchased: T, isPartiallyOwnedBundle: L } = (0, p.L)(t),
-            j = (0, g.rN)(t),
-            k = (0, g.G1)(t),
-            I = (0, g.ne)({
+let v = (e) => {
+        let { product: t, selectedVariantIndex: n, cardRef: h, onClick: v, icon: S } = e,
+            x = (0, d.Nd)(),
+            O = null == x ? void 0 : x.tab,
+            y = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
+            T = c.ZP.canUseCollectibles(y),
+            j = (0, u.sp)(),
+            { isPurchased: k, isPartiallyOwnedBundle: L } = (0, f.L)(t),
+            I = (0, g.rN)(t),
+            P = (0, g.G1)(t),
+            N = (0, g.ne)({
                 product: t,
                 isPartiallyOwnedBundle: L,
-                isPurchased: T,
+                isPurchased: k,
             }),
-            P = (0, _.Iw)(t),
-            { isOrbExclusive: N } = (0, m.Ip)({
+            B = (0, _.Iw)(t),
+            { isOrbExclusive: A } = (0, m.Ip)({
                 product: t,
-                isPremiumUser: O,
-                tab: v,
-                hasDiscountOffer: null != P,
+                isPremiumUser: T,
+                tab: O,
+                hasDiscountOffer: null != B,
             }),
-            B = (0, C.J7)(t, i.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON);
-        return k || l.tq || N || !I || v === b.AW.ORBS
+            R = (0, C.J7)(t, a.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON);
+        return P || l.tq || A || !N || O === b.AW.ORBS
             ? null
-            : j
-              ? (0, r.jsx)(s.hU, {
+            : I || null != v || null != S
+              ? (0, r.jsx)(i.hU, {
                     variant: "primary",
                     "aria-label": E.intl.string(E.t.SKNnqq),
-                    icon: s.tEF,
+                    icon: null != S ? S : i.tEF,
                     onClick: (e) => {
-                        e.stopPropagation(), B(e);
+                        e.stopPropagation(), null != v ? v(t.skuId) : R(e);
                     },
                 })
               : (0, r.jsx)(u.k0, {
-                    newValue: { pageCategory: v === b.AW.HOME || null == y ? void 0 : y.pageCategory },
-                    children: (0, r.jsx)(f.Z, {
+                    newValue: { pageCategory: O === b.AW.HOME || null == j ? void 0 : j.pageCategory },
+                    children: (0, r.jsx)(p.Z, {
                         primary: !0,
                         product: t,
                         selectedVariantIndex: n,
@@ -63,14 +63,16 @@ let S = (e) => {
                     }),
                 });
     },
-    v = (e) => {
-        let { skuId: t, cardRef: n, selectedVariantIndex: l } = e,
+    S = (e) => {
+        let { skuId: t, cardRef: n, selectedVariantIndex: l, onClick: s, icon: i } = e,
             a = (0, C.LJ)(t);
         if (null == a) return null;
-        let s = (0, h.W)(a, l);
-        return (0, r.jsx)(S, {
-            product: s,
+        let o = (0, h.W)(a, l);
+        return (0, r.jsx)(v, {
+            product: o,
             cardRef: n,
             selectedVariantIndex: l,
+            onClick: s,
+            icon: i,
         });
     };

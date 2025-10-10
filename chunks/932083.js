@@ -1,17 +1,19 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => u });
 var r = n(951288);
 n(647438);
-var l = n(481060),
+var l = n(120356),
+    s = n.n(l),
+    i = n(481060),
     a = n(786040),
-    s = n(29121),
-    i = n(59690);
-let o = (e) => {
-    let { skuId: t } = e,
-        n = (0, a.LJ)(t),
-        o = (0, s.To)(n);
-    return (0, r.jsx)(l.Text, {
+    o = n(29121),
+    c = n(59690);
+let u = (e) => {
+    let { skuId: t, className: n } = e,
+        l = (0, a.LJ)(t),
+        u = (0, o.To)(l);
+    return (0, r.jsx)(i.Text, {
         variant: "text-lg/bold",
-        className: i.productName,
-        children: o,
+        className: s()(n, c.productName),
+        children: u,
     });
 };
