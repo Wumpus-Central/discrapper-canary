@@ -313,6 +313,7 @@ let B = (0, p.$)(function (e) {
                         if (ec) {
                             var r;
                             return (0, i.jsx)(o.ua7, {
+                                "data-migration-pending": !0,
                                 text: null != (r = (0, b.Z)(eo)) ? r : M.intl.string(M.t.IyYqqa),
                                 children: (e) => {
                                     var { onClick: t, onContextMenu: r } = e,

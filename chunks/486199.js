@@ -99,6 +99,7 @@ function c(e) {
                                         t,
                                         u &&
                                             (0, i.jsx)(a.ua7, {
+                                                "data-migration-pending": !0,
                                                 text: o.intl.string(o.t.VFuFur),
                                                 children: (e) => {
                                                     var t, n;

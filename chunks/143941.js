@@ -133,6 +133,7 @@ let P = (e) => {
         return (
             G ? (e = h.intl.string(h.t.UfDp3N)) : z && (e = h.intl.string(h.t.KsFBMj)),
             (0, r.jsx)(c.ua7, {
+                "data-migration-pending": !0,
                 text: e,
                 children: (e) =>
                     (0, r.jsx)(
@@ -169,6 +170,7 @@ let P = (e) => {
               })
             : X;
     return (0, r.jsx)(c.ua7, {
+        "data-migration-pending": !0,
         text: q,
         "aria-label": X,
         children: (e) =>

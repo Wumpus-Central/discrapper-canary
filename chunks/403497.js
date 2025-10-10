@@ -93,6 +93,7 @@ function N(e) {
     return null == H || "" === H
         ? null
         : (0, r.jsx)(c.ua7, {
+              "data-migration-pending": !0,
               shouldShow: n,
               "aria-label": S.intl.string(S.t["7P/+q6"]),
               tooltipContentClassName: T.navigationTooltip,

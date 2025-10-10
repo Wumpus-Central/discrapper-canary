@@ -142,6 +142,7 @@ function I(e) {
                 R.start(y, () => I(0));
         };
     return (0, r.jsx)(s.ua7, {
+        "data-migration-pending": !0,
         text: L(),
         delay: h,
         "aria-label": _,

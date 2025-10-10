@@ -6,7 +6,7 @@ r.d(t, {
     d6: () => k,
     m8: () => w,
     nU: () => P,
-    tO: () => h,
+    tO: () => p,
 }),
     r(388685);
 var n = r(951288),
@@ -15,8 +15,8 @@ var n = r(951288),
     l = r.n(c),
     u = r(442837),
     s = r(481060),
-    o = r(493773),
-    i = r(38618),
+    i = r(493773),
+    o = r(38618),
     d = r(499504),
     f = r(451429);
 function m(e) {
@@ -62,8 +62,8 @@ function x(e, t) {
         e
     );
 }
-let h = 1000 / 60,
-    p = 1000 / 30,
+let p = 1000 / 60,
+    h = 1000 / 30,
     g = 5000,
     b = (1000 / 60) * 3,
     j = Math.ceil(3000 / (1000 / 60));
@@ -81,18 +81,18 @@ function v(e, t) {
                 null != c.current && u.current.cancelIdleCallback(c.current),
                 null != l.current && u.current.cancelAnimationFrame(l.current);
         }, []),
-        o = a.useCallback(() => {
+        i = a.useCallback(() => {
             n.current = u.current.setTimeout(() => {
                 (c.current = u.current.requestIdleCallback(e)),
                     (l.current = u.current.requestAnimationFrame(() => {
-                        t(), o();
+                        t(), i();
                     }));
             }, 12);
         }, [e, t]);
     return [
         a.useCallback(() => {
-            s(), o();
-        }, [s, o]),
+            s(), i();
+        }, [s, i]),
         s,
     ];
 }
@@ -105,10 +105,10 @@ function y(e) {
         u = e.dispatcher.getIsSchedulerBackgrounded(),
         s = a.useRef(u);
     s.current = u;
-    let o = a.useRef(u ? performance.now() : 0);
+    let i = a.useRef(u ? performance.now() : 0);
     return (
         a.useEffect(() => {
-            e.dispatcher.getIsSchedulerBackgrounded() && (o.current = performance.now());
+            e.dispatcher.getIsSchedulerBackgrounded() && (i.current = performance.now());
         }),
         [
             a.useCallback(function () {
@@ -140,15 +140,15 @@ function k(e, t) {
         l = a.useRef(0),
         u = a.useRef(0),
         s = a.useRef(0),
-        o = a.useRef(0),
         i = a.useRef(0),
+        o = a.useRef(0),
         d = a.useRef(0),
         f = a.useCallback(() => {
             n.current.fill(0),
                 (l.current = 0),
                 (u.current = 0),
-                (o.current = 0),
                 (i.current = 0),
+                (o.current = 0),
                 (c.current = performance.now()),
                 (s.current = 0);
         }, []),
@@ -158,30 +158,30 @@ function k(e, t) {
                     f = a - c.current;
                 if (((c.current = a), t.current && !r)) return;
                 if (
-                    ((u.current -= n.current[i.current]),
-                    (n.current[i.current] = f),
+                    ((u.current -= n.current[o.current]),
+                    (n.current[o.current] = f),
                     (u.current += f),
-                    o.current < j && (o.current += 1),
-                    (i.current = (i.current + 1) % j),
+                    i.current < j && (i.current += 1),
+                    (o.current = (o.current + 1) % j),
                     f > b)
                 ) {
-                    let t = 0 === o.current ? h : u.current / o.current,
-                        r = Math.min(2 * h, t),
-                        n = Math.floor(f / (e ? r : h));
+                    let t = 0 === i.current ? p : u.current / i.current,
+                        r = Math.min(2 * p, t),
+                        n = Math.floor(f / (e ? r : p));
                     n > 0 && (d.current = performance.now()), (l.current += n);
                 }
-                let m = 0 === o.current ? h : u.current / o.current;
+                let m = 0 === i.current ? p : u.current / i.current;
                 s.current += f / m;
             },
             [e, t, r],
         ),
-        x = 0 === o.current ? 0 : u.current / o.current;
+        x = 0 === i.current ? 0 : u.current / i.current;
     return {
-        currentFPS: 0 === x ? 0 : (h / x) * 60,
+        currentFPS: 0 === x ? 0 : (p / x) * 60,
         averageFrameTime: x,
         timeSinceLastDrop: (performance.now() - d.current) / 1000,
         droppedFramesRef: l,
-        bufferFramecountRef: o,
+        bufferFramecountRef: i,
         renderedFrameCount: s,
         frameCheckerEffect: m,
         onResetFrameData: f,
@@ -204,9 +204,9 @@ function O(e) {
         [c, l] = w(t),
         {
             currentFPS: u,
-            averageFrameTime: i,
+            averageFrameTime: o,
             timeSinceLastDrop: f,
-            onResetFrameData: p,
+            onResetFrameData: h,
             droppedFramesRef: b,
             renderedFrameCount: j,
             bufferFramecountRef: O,
@@ -215,8 +215,8 @@ function O(e) {
         [R, S, P] = y(t),
         [E, C] = v(R, T),
         F = performance.now() - l.current < g,
-        I = S(i, O.current);
-    (0, o.ZP)(
+        I = S(o, O.current);
+    (0, i.ZP)(
         () => (
             E(),
             () => {
@@ -225,8 +225,8 @@ function O(e) {
         ),
     );
     let D = a.useCallback(() => {
-        p(), P(), E();
-    }, [p, P, E]);
+        h(), P(), E();
+    }, [h, P, E]);
     return (0, n.jsxs)("div", {
         className: d.panelGroup,
         children: [
@@ -265,6 +265,7 @@ function O(e) {
                     }),
                     F &&
                         (0, n.jsx)(s.ua7, {
+                            "data-migration-pending": !0,
                             position: "left",
                             text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",
                             children: (e) =>
@@ -306,12 +307,13 @@ function O(e) {
                     (0, n.jsxs)(s.Text, {
                         tag: "span",
                         variant: "text-md/semibold",
-                        color: i > 1.1 * h ? "text-feedback-warning" : "text-secondary",
-                        children: [i.toFixed(2), "ms"],
+                        color: o > 1.1 * p ? "text-feedback-warning" : "text-secondary",
+                        children: [o.toFixed(2), "ms"],
                     }),
                 ],
             }),
             (0, n.jsx)(s.ua7, {
+                "data-migration-pending": !0,
                 position: "left",
                 text: "The average amount of 'lag' between us rendering a frame and being able to process background tasks. Values constantly above 1-2ms means our main thread is being burried by work and is taking all of its time in animation frames, most likely producing user interaciton blocking jank. (This doesn't work when the app is backgrounded though)",
                 children: (e) =>
@@ -332,6 +334,7 @@ function O(e) {
                                     }),
                                     F &&
                                         (0, n.jsx)(s.ua7, {
+                                            "data-migration-pending": !0,
                                             position: "left",
                                             text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",
                                             children: (e) =>
@@ -368,15 +371,15 @@ function O(e) {
 function T(e) {
     let { socket: t, isAverageFrameTime: r, onToggleAverageFrameTime: c } = e,
         [l, u] = a.useState(t.dispatcher.getIsRequestIdleCallbackEnabled()),
-        o = a.useRef(null);
+        i = a.useRef(null);
     return (
         a.useEffect(
             () => (
-                (o.current = setInterval(() => {
+                (i.current = setInterval(() => {
                     u(t.dispatcher.getIsRequestIdleCallbackEnabled());
-                }, p)),
+                }, h)),
                 () => {
-                    null != o.current && clearInterval(o.current);
+                    null != i.current && clearInterval(i.current);
                 }
             ),
             [t.dispatcher],
@@ -385,6 +388,7 @@ function T(e) {
             className: d.panelGroup,
             children: [
                 (0, n.jsx)(s.ua7, {
+                    "data-migration-pending": !0,
                     position: "left",
                     text: "Instead of using 60fps to calculate the number of dropped frames, we use the average framerate to more accurately determine the number of actual dropped frames. Turn this off when benchmarking to get better comparsion between two different runtimes, where higher FPS might result in a higher dropped frame count.",
                     children: (e) =>
@@ -481,17 +485,17 @@ function S(e) {
     let { socket: t } = e,
         r = t.dispatcher.getSchedulerTelemetry(),
         [c, u] = a.useState(r.isTelemetryEnabled),
-        [o, i] = a.useState(r.isTelemetryEnabled),
+        [i, o] = a.useState(r.isTelemetryEnabled),
         f = (e) => {
-            i(e), r.toggleTelemetry(e);
+            o(e), r.toggleTelemetry(e);
         };
     return (0, n.jsxs)("div", {
         className: d.panelGroup,
         children: [
             (0, n.jsx)(s.XZJ, {
                 label: "Enable Dispatch Telemetry",
-                checked: o,
-                onChange: () => f(!o),
+                checked: i,
+                onChange: () => f(!i),
             }),
             (0, n.jsx)("div", {
                 className: l()(c && d.topPanelToggle),
@@ -565,14 +569,14 @@ function P() {
     a.useEffect(() => {
         let t = setInterval(() => {
             e({});
-        }, p);
+        }, h);
         return () => {
             clearInterval(t);
         };
     }, []);
 }
 function E() {
-    let e = (0, u.e7)([i.Z], () => i.Z.getSocket()),
+    let e = (0, u.e7)([o.Z], () => o.Z.getSocket()),
         [t, r] = a.useState(!1);
     return (
         P(),

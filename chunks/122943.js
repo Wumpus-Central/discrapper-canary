@@ -101,6 +101,7 @@ function T(e) {
                       className: o()(b.icon, f),
                   })
                 : (0, r.jsx)(s.ua7, {
+                      "data-migration-pending": !0,
                       text: A,
                       "aria-label": (0, c.ZP)({ channel: t }),
                       delay: g.X,

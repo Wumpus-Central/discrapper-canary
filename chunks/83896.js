@@ -130,6 +130,7 @@ function S(e) {
             }),
             I
                 ? (0, i.jsx)(s.ua7, {
+                      "data-migration-pending": !0,
                       text: T ? void 0 : v.intl.string(v.t["0LMpW1"]),
                       children: (e) =>
                           (0, i.jsx)(

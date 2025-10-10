@@ -171,6 +171,7 @@ function N(e) {
                         checked: null != (t = null == n ? void 0 : n.enabled) && t,
                     }),
                     (0, r.jsx)(s.ua7, {
+                        "data-migration-pending": !0,
                         text: b.intl.string(b.t.UKOtz8),
                         position: "top",
                         "aria-label": b.intl.string(b.t.PdRCRk),
@@ -270,6 +271,7 @@ function I(e) {
                     }),
                     !n &&
                         (0, r.jsx)(s.ua7, {
+                            "data-migration-pending": !0,
                             text: b.intl.string(b.t.UKOtz8),
                             position: "top",
                             "aria-label": b.intl.string(b.t.PdRCRk),

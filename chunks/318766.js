@@ -139,6 +139,7 @@ let P = function (e) {
         K = i.useRef(null),
         z = null != P ? P : K;
     return (0, r.jsx)(u.ua7, {
+        "data-migration-pending": !0,
         targetElementRef: z,
         text: () => (0, r.jsx)(N, {}),
         "aria-label": E.intl.formatToMarkdownString(E.t["/7R4q6"], {}),

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => P }), n(388685);
 var r = n(951288),
     l = n(647438),
-    s = n(120356),
-    a = n.n(s),
+    a = n(120356),
+    s = n.n(a),
     i = n(442837),
     o = n(481060),
     c = n(782568),
@@ -31,7 +31,7 @@ let P = (e) => {
     var t;
     let {
             isLoading: n,
-            title: s,
+            title: a,
             sortedSkuIds: P,
             numVisibleItems: N,
             hasSorting: B,
@@ -75,7 +75,7 @@ let P = (e) => {
     return null == w
         ? null
         : (0, r.jsxs)("div", {
-              className: a()(I.popularPicksSection, I.centeredSection),
+              className: s()(I.popularPicksSection, I.centeredSection),
               children: [
                   (0, r.jsxs)("div", {
                       className: I.blockHeader,
@@ -85,10 +85,11 @@ let P = (e) => {
                               children: [
                                   (0, r.jsx)(o.X6q, {
                                       variant: "heading-lg/semibold",
-                                      children: s,
+                                      children: a,
                                   }),
                                   z &&
                                       (0, r.jsx)(o.ua7, {
+                                          "data-migration-pending": !0,
                                           text: j.intl.string(j.t["3taPdn"]),
                                           position: "top",
                                           "aria-label": j.intl.string(j.t["3taPdn"]),
@@ -155,7 +156,7 @@ let P = (e) => {
                           }),
                           B
                               ? (0, r.jsxs)("div", {
-                                    className: a()(I.headerRight, { [k.shopTakeOver]: F }),
+                                    className: s()(I.headerRight, { [k.shopTakeOver]: F }),
                                     children: [
                                         (0, r.jsx)(o.Text, {
                                             variant: "text-md/medium",
@@ -167,7 +168,7 @@ let P = (e) => {
                                                 options: U,
                                                 select: et,
                                                 className: I.sortSelect,
-                                                popoutClassName: a()({ [k.shopTakeOver]: F }),
+                                                popoutClassName: s()({ [k.shopTakeOver]: F }),
                                                 isSelected: (e) => e === D,
                                                 serialize: (e) => e,
                                             }),

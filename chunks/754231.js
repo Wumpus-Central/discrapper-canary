@@ -31,6 +31,7 @@ function v(e) {
                 }),
                 t = a.application.name;
             return (0, r.jsx)(c.ua7, {
+                "data-migration-pending": !0,
                 text: t,
                 position: "top",
                 children: () =>

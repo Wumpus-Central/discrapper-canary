@@ -62,6 +62,7 @@ function m(e) {
     return p
         ? (0, r.jsx)(l.Z, h({}, y))
         : (0, r.jsx)(s.ua7, {
+              "data-migration-pending": !0,
               targetElementRef: E,
               text: b,
               delay: m,

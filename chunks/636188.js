@@ -436,6 +436,7 @@ function W(e) {
                     (0, r.jsx)(
                         c.ua7,
                         {
+                            "data-migration-pending": !0,
                             text: (0, r.jsx)(F, {}),
                             "aria-label": N.intl.string(N.t["T+yRY2"]),
                             children: (t) => {

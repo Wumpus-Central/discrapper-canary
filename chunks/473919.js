@@ -68,6 +68,7 @@ function _(e) {
               className: a()(l.icon, c),
           })
         : (0, r.jsx)(o.ua7, {
+              "data-migration-pending": !0,
               text: n,
               "aria-label": i,
               tooltipContentClassName: l.container,

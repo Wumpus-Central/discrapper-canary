@@ -256,6 +256,7 @@ function F(e) {
                           children: k,
                       }),
                       (0, r.jsx)(u.ua7, {
+                          "data-migration-pending": !0,
                           text: N.intl.string(N.t["4PJP5u"]),
                           children: (e) =>
                               (0, r.jsx)(
@@ -326,6 +327,7 @@ function F(e) {
                   }),
             i = t
                 ? (0, r.jsx)(u.ua7, {
+                      "data-migration-pending": !0,
                       text: N.intl.string(N.t.Vfw2Ly),
                       children: (e) => (0, r.jsx)("i", x({ className: R.overlayWarningIcon }, e)),
                   })
@@ -335,6 +337,7 @@ function F(e) {
             children: [
                 i,
                 (0, r.jsx)(u.ua7, {
+                    "data-migration-pending": !0,
                     text: N.intl.string(N.t["1+O+Tk"]),
                     children: (t) => {
                         let { onMouseEnter: i, onMouseLeave: a } = t;
@@ -370,6 +373,7 @@ function F(e) {
         return (0, r.jsx)("div", {
             className: o()(w.flexCenter, w.noWrap, w.justifyBetween, R.toggleContainer),
             children: (0, r.jsx)(u.ua7, {
+                "data-migration-pending": !0,
                 text: N.intl.string(N.t.QmitzM),
                 children: (e) => {
                     let { onMouseEnter: n, onMouseLeave: i } = e;
@@ -393,6 +397,7 @@ function F(e) {
             : (0, r.jsx)("div", {
                   className: o()(w.flexCenter, w.noWrap, w.justifyBetween, R.toggleContainer),
                   children: (0, r.jsx)(u.ua7, {
+                      "data-migration-pending": !0,
                       text: N.intl.string(N.t["y0B+lp"]),
                       children: (e) => {
                           let { onMouseEnter: t, onMouseLeave: n } = e;

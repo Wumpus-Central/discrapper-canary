@@ -189,6 +189,7 @@ function eY() {
         className: eG.noiseCancellationPopout,
         children: [
             (0, r.jsx)(m.ua7, {
+                "data-migration-pending": !0,
                 text: eU.intl.formatToPlainString(eU.t["/tqmfH"], {
                     enabled: t ? "true" : "false",
                     inputProfile: n,
@@ -332,6 +333,7 @@ function eQ(e) {
                                     c = ez(e, ["onClick"]),
                                     { isShown: p } = l;
                                 return (0, r.jsx)(m.ua7, {
+                                    "data-migration-pending": !0,
                                     text: i,
                                     children: (e) =>
                                         (0, r.jsx)(
@@ -411,6 +413,7 @@ function eX(e) {
         { Component: _, events: O, play: E } = (0, Z.Z)("RTCConnection");
     return n
         ? (0, r.jsx)(m.ua7, {
+              "data-migration-pending": !0,
               text: p,
               children: (e) =>
                   (0, r.jsx)(M.Xf, {
@@ -531,6 +534,7 @@ function eJ(e) {
             var { onClick: n, onMouseEnter: i } = e,
                 l = ez(e, ["onClick", "onMouseEnter"]);
             return (0, r.jsx)(m.ua7, {
+                "data-migration-pending": !0,
                 text: N,
                 children: (e) =>
                     (0, r.jsx)(
@@ -641,6 +645,7 @@ class e$ extends i.PureComponent {
               ? (0, r.jsx)(eK, {})
               : !n && t
                 ? (0, r.jsx)(m.ua7, {
+                      "data-migration-pending": !0,
                       text: eU.intl.string(eU.t["i+SO/f"]),
                       tooltipClassName: eG.noiseCancellationTooltip,
                       forceOpen: !0,

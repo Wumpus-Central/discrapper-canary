@@ -24,6 +24,7 @@ class m extends r.PureComponent {
     }
     renderDisabledIndicator(e) {
         return (0, i.jsx)(a.ua7, {
+            "data-migration-pending": !0,
             text: e,
             position: "top",
             color: a.ua7.Colors.RED,

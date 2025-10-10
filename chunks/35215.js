@@ -182,6 +182,7 @@ let U = (e) => {
                     s();
             };
         return (0, r.jsx)(l.ua7, {
+            "data-migration-pending": !0,
             text: i.name,
             children: (e) =>
                 (0, r.jsx)(

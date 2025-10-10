@@ -127,6 +127,7 @@ function g(e) {
     return null == g
         ? y()
         : (0, r.jsx)(s.ua7, {
+              "data-migration-pending": !0,
               shouldShow: !_,
               "aria-label": E,
               text: g,

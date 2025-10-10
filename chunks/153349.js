@@ -201,6 +201,7 @@ let R = i.memo(function (e) {
                     className: T.buttonContainer,
                     children: [
                         (0, r.jsx)(d.ua7, {
+                            "data-migration-pending": !0,
                             text: D ? Z.intl.string(Z.t.h9rsTU) : Z.intl.string(Z.t.f0T7hI),
                             children: (e) =>
                                 (0, r.jsx)(
@@ -217,6 +218,7 @@ let R = i.memo(function (e) {
                                 ),
                         }),
                         (0, r.jsx)(d.ua7, {
+                            "data-migration-pending": !0,
                             text: Z.intl.string(Z.t.moABMz),
                             children: (e) =>
                                 (0, r.jsx)(

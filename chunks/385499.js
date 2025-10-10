@@ -132,12 +132,14 @@ let m = (e) => {
     switch (n) {
         case c.Hb.REMIX:
             return (0, r.jsx)(o.u, {
+                "data-migration-pending": !0,
                 text: u.intl.string(u.t.xb0str),
                 position: "top",
                 children: (e) => T(e),
             });
         case c.Hb.ORIGINAL_POSTER:
             return (0, r.jsx)(o.u, {
+                "data-migration-pending": !0,
                 text: u.intl.string(u.t.uN6Emp),
                 position: "top",
                 children: (e) => T(e),

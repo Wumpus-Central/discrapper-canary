@@ -278,6 +278,7 @@ class I extends (r = a.PureComponent) {
                                     (0, i.jsx)("div", {
                                         className: h.track,
                                         children: (0, i.jsx)(_.u, {
+                                            "data-migration-pending": !0,
                                             color: _.u.Colors.GREY,
                                             hideOnClick: !1,
                                             text: C || y ? null : X,

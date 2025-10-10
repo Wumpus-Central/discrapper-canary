@@ -324,6 +324,7 @@ function w(e) {
                 className: y.buttonWrapper,
                 children: [
                     (0, r.jsx)(c.ua7, {
+                        "data-migration-pending": !0,
                         "aria-label": H,
                         tooltipClassName: y.tooltip,
                         tooltipContentClassName: y.tooltipContent,
@@ -373,6 +374,7 @@ function w(e) {
                             }),
                     }),
                     (0, r.jsx)(c.ua7, {
+                        "data-migration-pending": !0,
                         shouldShow: k,
                         text: v.intl.string(v.t.UvMx7O),
                         children: (e) =>

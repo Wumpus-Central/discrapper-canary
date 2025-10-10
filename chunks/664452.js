@@ -10,9 +10,9 @@ var r = n(951288),
     u = n(162157),
     p = n(533244),
     b = n(487419),
-    f = n(821312),
-    O = n(676770),
-    g = n(981631),
+    g = n(821312),
+    f = n(676770),
+    O = n(981631),
     h = n(388032),
     _ = n(796668);
 function j(t) {
@@ -61,9 +61,9 @@ function x(t, e) {
 function y(t) {
     let { guildId: e, transitionState: n, onClose: y, analyticsData: v } = t,
         N = (0, a.e7)([o.Z], () => o.Z.getGuild(e), [e]),
-        m = !!(null == N ? void 0 : N.features.has(g.oNc.INVITES_DISABLED)),
+        m = !!(null == N ? void 0 : N.features.has(O.oNc.INVITES_DISABLED)),
         [E] = i.useState(!1),
-        [S, C] = i.useState(O.Fl),
+        [S, C] = i.useState(f.Fl),
         I = (0, a.e7)([b.Z], () => b.Z.getGuildIncident(e)),
         T = (0, u.BT)(N),
         D = (0, p.SG)(I) || m,
@@ -92,10 +92,10 @@ function y(t) {
                 onClick: () => {
                     (D || A) && !P && !R
                         ? ((0, d.n)(N.id, !1, !1),
-                          (0, s.ZDy)(() => Promise.resolve((t) => (0, r.jsx)(f.Z, x(j({}, t), { guildId: e })))))
+                          (0, s.ZDy)(() => Promise.resolve((t) => (0, r.jsx)(g.Z, x(j({}, t), { guildId: e })))))
                         : (0, d.n)(N.id, P, R, S);
                     let { source: t, alertType: n, messageId: i } = v;
-                    c.default.track(g.rMx.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
+                    c.default.track(O.rMx.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
                         guild_id: e,
                         source: t,
                         raid_alert_id: i,
@@ -116,7 +116,7 @@ function y(t) {
             children: [
                 (0, r.jsx)(s.PhF, {
                     placeholder: h.intl.string(h.t.vKYZzc),
-                    options: (0, O.c1)(),
+                    options: (0, f.c1)(),
                     select: (t) => {
                         C(t), G(!0);
                     },
@@ -142,6 +142,7 @@ function y(t) {
                             ],
                         }),
                         (0, r.jsx)(s.ua7, {
+                            "data-migration-pending": !0,
                             text: h.intl.string(h.t["9GPbsb"]),
                             shouldShow: m,
                             children: (t) =>

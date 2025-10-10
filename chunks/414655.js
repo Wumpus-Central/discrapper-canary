@@ -154,6 +154,7 @@ function C(e) {
                                     }),
                                     !x &&
                                         (0, r.jsx)(s.ua7, {
+                                            "data-migration-pending": !0,
                                             text: y.intl.string(y.t.RX7D9v),
                                             children: (e) =>
                                                 (0, r.jsx)(s.tEY, {
@@ -181,6 +182,7 @@ function C(e) {
                                     x &&
                                         P &&
                                         (0, r.jsx)(s.ua7, {
+                                            "data-migration-pending": !0,
                                             text: y.intl.string(y.t.d78ChY),
                                             children: (e) =>
                                                 (0, r.jsx)(s.tEY, {

@@ -262,6 +262,7 @@ function z(e) {
                                       }),
                                   }),
                             (0, i.jsx)(u.ua7, {
+                                "data-migration-pending": !0,
                                 text: L.intl.string(L.t.WqhZsr),
                                 children: (e) =>
                                     q

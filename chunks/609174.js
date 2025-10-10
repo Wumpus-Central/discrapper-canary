@@ -67,6 +67,7 @@ let m = s.Nx.binds["0"],
             className: f.backForwardButtons,
             children: [
                 (0, r.jsx)(o.ua7, {
+                    "data-migration-pending": !0,
                     "aria-label": p.intl.string(p.t.B9vzIC),
                     tooltipContentClassName: f.navigationTooltip,
                     shouldShow: i,
@@ -95,6 +96,7 @@ let m = s.Nx.binds["0"],
                         ),
                 }),
                 (0, r.jsx)(o.ua7, {
+                    "data-migration-pending": !0,
                     "aria-label": p.intl.string(p.t["9KJ29f"]),
                     tooltipContentClassName: f.navigationTooltip,
                     shouldShow: s,

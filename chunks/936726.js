@@ -213,6 +213,7 @@ function P(e) {
                                     (0, i.jsxs)(m.Z, {
                                         children: [
                                             (0, i.jsx)(c.ua7, {
+                                                "data-migration-pending": !0,
                                                 text: _.intl.string(_.t.wwdb3t),
                                                 forceOpen: T,
                                                 color: c.FGA.GREEN,

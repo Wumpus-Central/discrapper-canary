@@ -21,6 +21,7 @@ function f(e) {
             }
         };
     return (0, r.jsx)(a.ua7, {
+        "data-migration-pending": !0,
         text: d.intl.string(d.t.jTW019),
         children: (e) => {
             var t, n;

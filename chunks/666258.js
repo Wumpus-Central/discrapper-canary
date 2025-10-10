@@ -382,6 +382,7 @@ function F(e) {
                         applicationId: p,
                     }),
                     (0, l.jsx)(h.ua7, {
+                        "data-migration-pending": !0,
                         position: "top",
                         text: P.intl.string(P.t["4QuV7O"]),
                         children: (e) =>
@@ -415,6 +416,7 @@ function F(e) {
                                             children: P.intl.string(P.t.YlT5MT),
                                         }),
                                         (0, l.jsx)(h.ua7, {
+                                            "data-migration-pending": !0,
                                             position: "top",
                                             text: P.intl.string(P.t.efLzgY),
                                             children: (e) =>
@@ -457,6 +459,7 @@ function F(e) {
                                                 children: P.intl.string(P.t.EPIOl5),
                                             }),
                                             (0, l.jsx)(h.ua7, {
+                                                "data-migration-pending": !0,
                                                 position: "top",
                                                 text: P.intl.string(P.t["jvd/LC"]),
                                                 children: (e) =>
@@ -489,6 +492,7 @@ function F(e) {
                                                 children: P.intl.string(P.t.NKqlpq),
                                             }),
                                             (0, l.jsx)(h.ua7, {
+                                                "data-migration-pending": !0,
                                                 position: "top",
                                                 text: P.intl.string(P.t.pBOevb),
                                                 children: (e) =>
@@ -521,6 +525,7 @@ function F(e) {
                                                 children: P.intl.string(P.t.UL177u),
                                             }),
                                             (0, l.jsx)(h.ua7, {
+                                                "data-migration-pending": !0,
                                                 position: "top",
                                                 text: P.intl.string(P.t.cl1HNT),
                                                 children: (e) =>
@@ -547,6 +552,7 @@ function F(e) {
                 className: Z.buttonRow,
                 children: [
                     (0, l.jsx)(h.ua7, {
+                        "data-migration-pending": !0,
                         position: "top",
                         text: $,
                         shouldShow: null !== $ && !Y,

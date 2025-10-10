@@ -612,6 +612,7 @@ function M(e) {
                                     ],
                                 }),
                                 (0, n.jsx)(u.ua7, {
+                                    "data-migration-pending": !0,
                                     text: w.intl.string(w.t.E36Wd3),
                                     "aria-label": w.intl.string(w.t.LzFiKC),
                                     children: (e) => {

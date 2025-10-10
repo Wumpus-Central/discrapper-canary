@@ -132,6 +132,7 @@ let v = i.forwardRef(function (e, t) {
                             (0, n.jsx)("div", {
                                 className: S.legacyUsernameBadgeContainer,
                                 children: (0, n.jsx)(c.ua7, {
+                                    "data-migration-pending": !0,
                                     position: "top",
                                     text: b.intl.formatToPlainString(b.t.bhrgkJ, { legacyUsername: W }),
                                     spacing: 12,

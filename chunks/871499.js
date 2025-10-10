@@ -118,6 +118,7 @@ function I(e) {
     } = e;
     return (0, r.jsx)(_.Z, {
         children: (0, r.jsx)(c.ua7, {
+            "data-migration-pending": !0,
             position: S,
             text: t,
             "aria-label": P,

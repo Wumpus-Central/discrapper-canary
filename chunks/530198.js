@@ -100,6 +100,7 @@ function _(e) {
                 }),
             }),
             (0, r.jsx)(d.ua7, {
+                "data-migration-pending": !0,
                 text: h.intl.string(h.t.N86XcH),
                 children: (e) =>
                     (0, r.jsx)(

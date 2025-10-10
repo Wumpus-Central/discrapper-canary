@@ -161,6 +161,7 @@ class H extends i.PureComponent {
                             children: (0, r.jsx)("div", {
                                 className: M.switch,
                                 children: (0, r.jsx)(d.ua7, {
+                                    "data-migration-pending": !0,
                                     text: x.intl.string(x.t.uCD7qK),
                                     children: (e) =>
                                         (0, r.jsx)(

@@ -153,6 +153,7 @@ function L(e) {
         }, [t]),
         l = (0, h.bT)(t);
     return (0, r.jsx)(c.ua7, {
+        "data-migration-pending": !0,
         text: l,
         delay: 500,
         children: (e) =>

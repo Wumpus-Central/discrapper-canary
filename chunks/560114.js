@@ -498,6 +498,7 @@ class eI extends (l = s.PureComponent) {
                             }),
                         }),
                         (0, i.jsx)(x.ua7, {
+                            "data-migration-pending": !0,
                             text: er.intl.string(er.t.Yx4IiI),
                             children: (e) => {
                                 let { onMouseEnter: t, onMouseLeave: n } = e;

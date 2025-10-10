@@ -18,6 +18,7 @@ let c = (e) => {
         m =
             null != g
                 ? (0, r.jsx)(l.ua7, {
+                      "data-migration-pending": !0,
                       text: g,
                       position: "top",
                       "aria-label": "string" == typeof g ? g : t,

@@ -96,6 +96,7 @@ function p(e) {
         ? null
         : v
           ? (0, r.jsx)(s.ua7, {
+                "data-migration-pending": !0,
                 text: b(),
                 "aria-label": f,
                 tooltipContentClassName: o()(c.container, c.activitiesTooltip),

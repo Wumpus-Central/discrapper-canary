@@ -487,6 +487,7 @@ function er() {
                             r.Fragment,
                             {
                                 children: (0, a.jsx)(m.ua7, {
+                                    "data-migration-pending": !0,
                                     position: "left",
                                     text: i === y.d5.TRACK_FOCUS ? "Tracked Focus Event" : "Clear Focus Event",
                                     children: (e) => {
@@ -581,6 +582,7 @@ let ei = r.memo(function (e) {
                 [],
             ),
             (0, a.jsx)(m.ua7, {
+                "data-migration-pending": !0,
                 position: "left",
                 text: "The most recent screen types we've logged, indexed by pid",
                 children: (n) =>
@@ -713,6 +715,7 @@ let ei = r.memo(function (e) {
                 className: H.panelGroup,
                 children: [
                     (0, a.jsx)(m.ua7, {
+                        "data-migration-pending": !0,
                         position: "left",
                         text: "Enables a red border around click zones to help with debugging.",
                         children: (e) =>
@@ -729,6 +732,7 @@ let ei = r.memo(function (e) {
                             ),
                     }),
                     (0, a.jsx)(m.ua7, {
+                        "data-migration-pending": !0,
                         position: "left",
                         text: "Enables a border around any widgets that are rendered on screen that are pinned (even if they are hidden). Blue = pinned widgets, Gray = unpinned widgets",
                         children: (e) =>
@@ -745,6 +749,7 @@ let ei = r.memo(function (e) {
                             ),
                     }),
                     (0, a.jsx)(m.ua7, {
+                        "data-migration-pending": !0,
                         position: "left",
                         text: "Enables a border the overlay window",
                         children: (e) =>
@@ -761,6 +766,7 @@ let ei = r.memo(function (e) {
                             ),
                     }),
                     (0, a.jsx)(m.ua7, {
+                        "data-migration-pending": !0,
                         position: "left",
                         text: "Disables GPU Boost, which can help with performance when games compete for GPU resources.",
                         children: (e) =>
@@ -777,6 +783,7 @@ let ei = r.memo(function (e) {
                             ),
                     }),
                     (0, a.jsx)(m.ua7, {
+                        "data-migration-pending": !0,
                         position: "left",
                         text: "Forces GPU Boost, which can help with performance when games compete for GPU resources.",
                         children: (e) =>
@@ -794,6 +801,7 @@ let ei = r.memo(function (e) {
                             ),
                     }),
                     (0, a.jsx)(m.ua7, {
+                        "data-migration-pending": !0,
                         position: "left",
                         text: "Creates a widget that has a clickzone inside of it, which will show/hide every few seconds.",
                         children: (n) =>
@@ -810,6 +818,7 @@ let ei = r.memo(function (e) {
                             ),
                     }),
                     (0, a.jsx)(m.ua7, {
+                        "data-migration-pending": !0,
                         position: "left",
                         text: "Creates a widget that shows the overlay's window performance metrics.",
                         children: (e) =>
@@ -842,6 +851,7 @@ let ei = r.memo(function (e) {
             children: [
                 t.length > 0 &&
                     (0, a.jsx)(m.ua7, {
+                        "data-migration-pending": !0,
                         position: "left",
                         text: "Games that are running but not tracked by the overlay",
                         children: (e) =>
@@ -881,6 +891,7 @@ let ei = r.memo(function (e) {
                             ),
                     }),
                 (0, a.jsx)(m.ua7, {
+                    "data-migration-pending": !0,
                     position: "left",
                     text: "The current running games process information",
                     children: (t) =>
@@ -930,6 +941,7 @@ let ei = r.memo(function (e) {
                 },
             ].map((t) => Y(q({}, t), { label: "".concat(t.label, " ").concat(e === t.value ? "(current)" : "") }));
         return (0, a.jsx)(m.ua7, {
+            "data-migration-pending": !0,
             position: "left",
             text: "Override the overlay render mode",
             children: (e) =>

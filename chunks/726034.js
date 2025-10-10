@@ -241,6 +241,7 @@ function X(e) {
             });
         }, []);
     return (0, r.jsx)(f.ua7, {
+        "data-migration-pending": !0,
         text: k.intl.string(j.default.c9MBEB),
         children: (e) =>
             "with-text" === t

@@ -294,6 +294,7 @@ function Z(e) {
                             children: [et(), er()],
                         })
                       : (0, r.jsx)(u.ua7, {
+                            "data-migration-pending": !0,
                             tooltipContentClassName: o()(w.container, w.activitiesTooltip, w.hasMultipleActivities),
                             delay: N.X,
                             text: en(),

@@ -180,6 +180,7 @@ let y = 24,
         return (
             null == G && "string" == typeof I && (G = I),
             (0, r.jsx)(c.ua7, {
+                "data-migration-pending": !0,
                 text: I,
                 color: T,
                 position: S,
