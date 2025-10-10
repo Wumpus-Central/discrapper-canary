@@ -1,9 +1,11 @@
 e.exports = {
-    item: "item__740f2",
     keybindMessage: "keybindMessage__740f2",
+    item: "item__740f2",
     switch: "switch__740f2",
+    removeKeybindFloating: "removeKeybindFloating__740f2",
     removeKeybind: "removeKeybind__740f2",
     keybindGroup: "keybindGroup__740f2",
+    keybindGroupContent: "keybindGroupContent__740f2",
     defaultKeybind: "defaultKeybind__740f2",
     defaultKeybindGroup: "defaultKeybindGroup__740f2",
     defaultKeybindShortcutGroup: "defaultKeybindShortcutGroup__740f2",
