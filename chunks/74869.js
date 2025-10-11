@@ -1,16 +1,18 @@
-n.d(t, { Z: () => b }), n(804061), n(704826), n(35282), n(388685), n(781311);
+n.d(t, { Z: () => O }), n(804061), n(704826), n(35282), n(388685), n(781311);
 var r = n(951288),
     i = n(647438),
     a = n(658722),
     o = n.n(a),
     s = n(481060),
-    l = n(492435),
-    c = n(667344),
-    u = n(493075),
-    d = n(438159),
-    f = n(878209),
-    _ = n(388032);
-function p(e, t, n) {
+    l = n(887580),
+    c = n(492435),
+    u = n(667344),
+    d = n(493075),
+    f = n(438159),
+    _ = n(572004),
+    p = n(878209),
+    h = n(388032);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +25,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,12 +36,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -51,26 +53,26 @@ function m(e, t) {
     }
     return n;
 }
-function g(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : E(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function E(e) {
+function y(e) {
     let { id: t, experiment: n, currentBucket: i, system: a } = e,
-        o = (0, d.v)(n);
+        o = (0, f.v)(n);
     return (0, r.jsxs)(
         s.sNh,
         {
             id: t.replaceAll("--", "__"),
             label: n.title,
-            action: () => (0, l.rX)(a, t, null),
+            action: () => (0, c.rX)(a, t, null),
             children: [
                 o.map((e) =>
                     (0, r.jsx)(
@@ -79,34 +81,50 @@ function E(e) {
                             id: "".concat(e.id),
                             label: e.shortLabel,
                             checked: e.id === (null == i ? void 0 : i.variantId),
-                            action: () => (0, l.rX)(a, t, e.id),
+                            action: () => (0, c.rX)(a, t, e.id),
                         },
                         "".concat(e.id),
                     ),
                 ),
-                (0, r.jsx)(s.kSQ, {
-                    children:
+                (0, r.jsxs)(s.kSQ, {
+                    children: [
+                        _.wS &&
+                            (0, r.jsx)(s.sNh, {
+                                id: "copy-link",
+                                label: "Copy Link",
+                                action: () => {
+                                    let e = (0, l.sZ)(t);
+                                    (0, _.JG)(e, () => {
+                                        (0, s.showToast)({
+                                            id: "experiment-link-copied",
+                                            message: "Copied experiment link",
+                                            type: s.ToastType.SUCCESS,
+                                        });
+                                    });
+                                },
+                            }),
                         null != i &&
-                        (0, r.jsx)(s.sNh, {
-                            id: "clear-override",
-                            label: "Clear Override",
-                            color: "danger",
-                            icon: s.XHJ,
-                            action: () => (0, l.rX)(a, t, null),
-                        }),
+                            (0, r.jsx)(s.sNh, {
+                                id: "clear-override",
+                                label: "Clear Override",
+                                color: "danger",
+                                icon: s.XHJ,
+                                action: () => (0, c.rX)(a, t, null),
+                            }),
+                    ],
                 }),
             ],
         },
         t,
     );
 }
-function b() {
-    let { experiments: e, overridesInfo: t } = (0, u.s)(),
-        { experiments: n, overridesInfo: a } = (0, c.Q)(),
+function O() {
+    let { experiments: e, overridesInfo: t } = (0, d.s)(),
+        { experiments: n, overridesInfo: a } = (0, u.Q)(),
         l = i.useMemo(() => {
-            let r = h({}, e, n),
-                i = h({}, t, a);
-            return (0, f.Tc)((0, f.Cg)(r), i).map((e) => {
+            let r = g({}, e, n),
+                i = g({}, t, a);
+            return (0, p.Tc)((0, p.Cg)(r), i).map((e) => {
                 let { id: t, experiment: n } = e;
                 return {
                     id: t,
@@ -116,13 +134,13 @@ function b() {
                 };
             });
         }, [e, t, n, a]),
-        [d, p] = i.useState(""),
-        [m, b] = i.useState([]);
+        [c, f] = i.useState(""),
+        [_, m] = i.useState([]);
     i.useEffect(() => {
-        if (0 === d.trim().length) return void b(l);
-        b(l.filter((e) => o()(d, e.experiment.title.toLowerCase())));
-    }, [l, d]);
-    let y = i.useMemo(
+        if (0 === c.trim().length) return void m(l);
+        m(l.filter((e) => o()(c, e.experiment.title.toLowerCase())));
+    }, [l, c]);
+    let E = i.useMemo(
             () =>
                 l.filter((e) => {
                     let { currentBucket: t } = e;
@@ -132,14 +150,14 @@ function b() {
         ),
         O = i.useMemo(
             () =>
-                m.filter((e) => {
+                _.filter((e) => {
                     let { currentBucket: t } = e;
                     return null == t;
                 }),
-            [m],
+            [_],
         ),
-        v = i.useMemo(() => y.map(E), [y]),
-        I = i.useMemo(() => O.map(E), [O]),
+        v = i.useMemo(() => E.map(y), [E]),
+        I = i.useMemo(() => O.map(y), [O]),
         T = (0, r.jsx)(
             s.II_,
             {
@@ -147,11 +165,11 @@ function b() {
                 control: (e, t) =>
                     (0, r.jsx)(
                         s.ne,
-                        g(h({}, e), {
-                            query: d,
-                            onChange: p,
+                        b(g({}, e), {
+                            query: c,
+                            onChange: f,
                             ref: t,
-                            placeholder: _.intl.string(_.t["5h0QOD"]),
+                            placeholder: h.intl.string(h.t["5h0QOD"]),
                         }),
                     ),
             },
