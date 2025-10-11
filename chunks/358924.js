@@ -103,7 +103,7 @@ let ea = [14, 14, 12, 12, 10, 8, 6],
                 text: ei.intl.string(ei.t.JVwWvb),
                 children: (0, i.jsx)(f.Button, {
                     size: "sm",
-                    variant: "secondary",
+                    variant: "primary",
                     icon: f.v3n,
                     text: ei.intl.string(ei.t.YsIsPT),
                     onClick: t,
