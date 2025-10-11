@@ -15,4 +15,6 @@ e.exports = {
     nameplateBottomRight: "nameplateBottomRight__39b32",
     removeItemButton: "removeItemButton__39b32",
     overlay: "overlay__39b32",
+    itemIcon: "itemIcon__39b32",
+    itemIconHeart: "itemIconHeart__39b32",
 };

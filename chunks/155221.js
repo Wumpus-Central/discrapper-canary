@@ -61,7 +61,7 @@ function D(e) {
     }
     return e;
 }
-function L(e, t) {
+function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -73,12 +73,12 @@ function L(e, t) {
     }
     return n;
 }
-function x(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : L(Object(t)).forEach(function (n) {
+            : x(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -90,12 +90,12 @@ let M = (0, h.Un)({
         webpackId: 576184,
         name: "UnsupportedBrowser",
     }),
-    j = (0, h.Un)({
+    k = (0, h.Un)({
         createPromise: () => Promise.all([n.e("32996"), n.e("74023")]).then(n.bind(n, 431583)),
         webpackId: 431583,
         name: "DownloadApps",
     }),
-    k = (0, h.Un)({
+    j = (0, h.Un)({
         createPromise: () => n.e("81226").then(n.bind(n, 484097)),
         webpackId: 484097,
         name: "InviteProxy",
@@ -147,6 +147,7 @@ let M = (0, h.Un)({
                 n.e("63575"),
                 n.e("6915"),
                 n.e("33285"),
+                n.e("21145"),
                 n.e("46154"),
                 n.e("62856"),
                 n.e("64838"),
@@ -168,7 +169,7 @@ let M = (0, h.Un)({
                 n.e("22516"),
                 n.e("38319"),
                 n.e("37220"),
-                n.e("24975"),
+                n.e("14209"),
                 n.e("89442"),
                 n.e("22173"),
                 n.e("30634"),
@@ -186,7 +187,7 @@ let M = (0, h.Un)({
                 n.e("77803"),
                 n.e("69432"),
                 n.e("51727"),
-                n.e("81487"),
+                n.e("22981"),
                 n.e("69844"),
                 n.e("31553"),
                 n.e("95468"),
@@ -349,7 +350,7 @@ class ea extends i.Component {
                                   (0, r.jsx)(p.Z, {
                                       exact: !0,
                                       path: N.Z5c.APPS,
-                                      component: j,
+                                      component: k,
                                   }),
                                   (0, r.jsx)(o.AW, {
                                       path: ei(
@@ -368,7 +369,7 @@ class ea extends i.Component {
                                   }),
                                   (0, r.jsx)(p.Z, {
                                       path: N.Z5c.INVITE_PROXY(O.Hw.channelId()),
-                                      component: k,
+                                      component: j,
                                   }),
                                   (0, r.jsx)(o.l_, {
                                       from: N.Z5c.INVITE(""),
@@ -435,7 +436,7 @@ class ea extends i.Component {
                                   }),
                                   (0, r.jsx)(p.Z, {
                                       path: N.Z5c.INVITE_PROXY(O.Hw.channelId()),
-                                      component: k,
+                                      component: j,
                                   }),
                                   (0, r.jsx)(o.l_, {
                                       from: N.Z5c.GIFT_CODE(""),
@@ -550,7 +551,7 @@ class ea extends i.Component {
                                   }),
                                   (0, r.jsx)(o.l_, {
                                       from: N.Z5c.CONNECT_AUTHORIZE,
-                                      to: x(D({}, location), { pathname: N.Z5c.OAUTH2_AUTHORIZE }),
+                                      to: L(D({}, location), { pathname: N.Z5c.OAUTH2_AUTHORIZE }),
                                   }),
                                   (0, r.jsx)(o.AW, {
                                       path: [
@@ -607,7 +608,7 @@ function es(e) {
         n = (0, b.h)();
     return (0, r.jsx)(
         ea,
-        x(D({}, e), {
+        L(D({}, e), {
             skipsSettingDefaultPageTitle: t,
             shouldBlockBrowser: n,
         }),

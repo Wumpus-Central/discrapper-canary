@@ -93,7 +93,7 @@ function ea(e) {
         eP = (0, p.X)(eN),
         [eT, eA] = i.useState(!1),
         { defaultWishlistId: eE } = (0, o.cj)([A.Z], () => ({ defaultWishlistId: A.Z.getFirstWishlistId(t.id) }));
-    (0, b.k)(eE, t.id);
+    (0, b.kZ)(eE, t.id);
     let eS = (0, _.$m)(),
         eC = (0, s.q_F)({
             opacity: +(null != eS.interactionType),
