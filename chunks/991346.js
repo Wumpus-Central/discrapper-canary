@@ -392,7 +392,8 @@ function J(e) {
             return (
                 (n.section !== o.ID.CUSTOM || t === j.s6.TEMP_DEVELOPER_EDUCATION_SIDEBAR_ITEM) &&
                 null != n.searchableTitles &&
-                (null == n.predicate || n.predicate())
+                (null == n.predicate || n.predicate()) &&
+                (null == n.unsearchable || !1 === n.unsearchable)
             );
         }),
     );
