@@ -1,79 +1,72 @@
-n.d(t, { default: () => m }), n(388685);
-var i = n(951288);
-n(647438);
-var a = n(100527),
-    l = n(906732),
-    r = n(987209),
-    s = n(563132),
-    o = n(107998),
-    c = n(791785),
-    u = n(961830),
-    d = n(382263),
-    f = n(137440),
-    g = n(231338);
-let h = (e, t, n) =>
-    (0, i.jsx)(f.Z, {
-        step: n,
-        onClose: () => t(!1),
-    });
-function p(e) {
-    let { onClose: t, onComplete: n, transitionState: a, applicationId: r, analyticsLocationObject: o, skuId: u } = e,
+t.d(n, { default: () => p }), t(388685);
+var l = t(951288);
+t(647438);
+var i = t(100527),
+    a = t(906732),
+    r = t(987209),
+    s = t(563132),
+    o = t(107998),
+    c = t(791785),
+    u = t(961830),
+    d = t(382263),
+    f = t(231338);
+function g(e) {
+    let { onClose: n, onComplete: t, transitionState: i, applicationId: r, analyticsLocationObject: o, skuId: u } = e,
         {} = (0, s.JL)(),
-        { analyticsLocations: d } = (0, l.ZP)();
-    return (0, i.jsx)(c.PaymentModal, {
-        onClose: t,
-        onComplete: n,
+        { analyticsLocations: d } = (0, a.ZP)();
+    return (0, l.jsx)(c.PaymentModal, {
+        onClose: n,
+        onComplete: t,
         applicationId: r,
         skuId: u,
-        renderHeader: h,
         initialPlanId: null,
         analyticsObject: o,
         analyticsLocations: d,
-        transitionState: a,
+        transitionState: i,
     });
 }
-function m(e) {
-    let { loadId: t, applicationId: n, skuId: c, analyticsLocations: f, isGift: h = !1 } = e,
-        { analyticsLocations: m } = (0, l.ZP)(f, a.Z.PREMIUM_PAYMENT_MODAL);
-    return (0, i.jsx)(l.Gt, {
-        value: m,
-        children: (0, i.jsx)(s.PaymentContextProvider, {
-            loadId: t,
+function p(e) {
+    let { loadId: n, applicationId: t, skuId: c, analyticsLocations: p, isGift: m = !1 } = e,
+        { analyticsLocations: b } = (0, a.ZP)(p, i.Z.PREMIUM_PAYMENT_MODAL);
+    return (0, l.jsx)(a.Gt, {
+        value: b,
+        children: (0, l.jsx)(s.PaymentContextProvider, {
+            loadId: n,
             stepConfigs: (function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                 return [u.WA, ...(e ? [d.PT] : []), u.s2, ...u.yp, u.wo, u.F7];
-            })(h),
-            applicationId: n,
+            })(m),
+            applicationId: t,
             skuIDs: [c],
             activeSubscription: null,
-            purchaseType: g.GZ.ONE_TIME,
-            isGift: h,
-            children: (0, i.jsx)(o.c1, {
-                children: (0, i.jsx)(r.KB, {
-                    isGift: h,
-                    children: (0, i.jsx)(
-                        p,
+            purchaseType: f.GZ.ONE_TIME,
+            isGift: m,
+            children: (0, l.jsx)(o.c1, {
+                children: (0, l.jsx)(r.KB, {
+                    isGift: m,
+                    children: (0, l.jsx)(
+                        g,
                         (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    i = Object.keys(n);
+                            for (var n = 1; n < arguments.length; n++) {
+                                var t = null != arguments[n] ? arguments[n] : {},
+                                    l = Object.keys(t);
                                 "function" == typeof Object.getOwnPropertySymbols &&
-                                    (i = i.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    (l = l.concat(
+                                        Object.getOwnPropertySymbols(t).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(t, e).enumerable;
                                         }),
                                     )),
-                                    i.forEach(function (t) {
-                                        var i;
-                                        (i = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: i,
+                                    l.forEach(function (n) {
+                                        var l;
+                                        (l = t[n]),
+                                            n in e
+                                                ? Object.defineProperty(e, n, {
+                                                      value: l,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0,
                                                   })
-                                                : (e[t] = i);
+                                                : (e[n] = l);
                                     });
                             }
                             return e;

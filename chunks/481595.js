@@ -101,7 +101,9 @@ function U(e) {
                     X(e);
                 });
     }, [et, en, Z, er.applicationId, er.id, es, X, J]);
-    let ep = null != ei && ei.length > 0 && (Z === I.c || null === e_) && Q ? E.w.SELECT_PAYMENT_METHOD : void 0;
+    let ep = null != ei && ei.length > 0 && (Z === I.c || null === e_) && Q ? E.w.SELECT_PAYMENT_METHOD : void 0,
+        eh = er.productLine === x.POd.SOCIAL_LAYER_GAME_ITEM,
+        em = ee || eh;
     return (0, r.jsxs)("div", {
         className: j.stepBody,
         children: [
@@ -137,7 +139,7 @@ function U(e) {
                 sku: er,
                 isEmbeddedIAP: W,
             }),
-            ee && (0, r.jsx)(D.Z, { sku: er }),
+            em && (0, r.jsx)(D.Z, { sku: er }),
             null != $ ? (0, r.jsx)(b.s, { giftRecipient: $ }) : null,
             (0, r.jsx)(c.gNt, {
                 label: J ? M.intl.string(M.t.PEjaCw) : M.intl.string(M.t.sail9P),
@@ -146,6 +148,7 @@ function U(e) {
                         ? (0, r.jsx)(L.B, {
                               sku: er,
                               skuPricePreview: es,
+                              application: U,
                           })
                         : null == z
                           ? (0, r.jsx)(c.$jN, {
@@ -157,6 +160,22 @@ function U(e) {
                                 value: "",
                             }),
             }),
+            eh &&
+                (0, r.jsxs)("div", {
+                    className: j.socialLayerGameItemDisclaimer,
+                    children: [
+                        (0, r.jsx)(c.aNP, {
+                            size: "custom",
+                            width: 16,
+                            height: 16,
+                        }),
+                        (0, r.jsx)(c.Text, {
+                            variant: "text-xs/normal",
+                            color: "text-secondary",
+                            children: M.intl.string(M.t["6fBC//"]),
+                        }),
+                    ],
+                }),
             (0, r.jsx)(_.ZP, {
                 label: M.intl.string(M.t.mmDvV1),
                 paymentSources: Object.values(B),
@@ -188,6 +207,7 @@ function U(e) {
                         purchaseType: K,
                         productLine: er.productLine,
                         isGift: J,
+                        applicationName: U.name,
                     }),
                 }),
             }),

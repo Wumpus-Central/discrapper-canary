@@ -1,7 +1,9 @@
 n.d(t, {
+    Do: () => d,
     FE: () => u,
     K$: () => o,
     Uc: () => l,
+    a7: () => f,
     wK: () => s,
     x6: () => c,
 }),
@@ -79,4 +81,31 @@ function u(e, t) {
               primaryIconAsset: null != (o = i.Z.toURLSafe((0, r._W)(t, s.labelIconAssetId, 512, "png"))) ? o : void 0,
               primaryIconLabel: s.label,
           };
+}
+function d(e) {
+    var t, n, a;
+    let o = null == e ? void 0 : e.applicationId,
+        s =
+            null !=
+            (a =
+                null == e || null == (n = e.tenantMetadata) || null == (t = n.socialLayer)
+                    ? void 0
+                    : t.cardImageAssetId)
+                ? a
+                : null == e
+                  ? void 0
+                  : e.thumbnailAssetId;
+    if (null != s && null != o) return i.Z.toURLSafe((0, r._W)(o, s, 512, "png"));
+}
+function f(e) {
+    var t, n;
+    if (
+        (null == e || null == (n = e.tenantMetadata) || null == (t = n.socialLayer)
+            ? void 0
+            : t.cardBackgroundImageAssetId) != null &&
+        (null == e ? void 0 : e.applicationId) != null
+    )
+        return i.Z.toURLSafe(
+            (0, r._W)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, 1024, "png"),
+        );
 }
