@@ -1,12 +1,13 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => E });
 var r = n(570140),
     i = n(194359),
     a = n(855796),
     o = n(128064),
-    s = n(699516),
-    l = n(801195),
-    c = n(981631);
-function u(e, t, n) {
+    s = n(738155),
+    l = n(699516),
+    c = n(801195),
+    u = n(981631);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +20,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,12 +31,12 @@ function d(e) {
                 }),
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,18 +48,18 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function p(e) {
+function h(e) {
     let { userId: t, applicationId: n, location: r, confirmStrangerRequest: o = !1 } = e;
     return null != n
         ? a.Z.acceptGameFriendRequest({
@@ -71,15 +72,17 @@ function p(e) {
               context: { location: r },
           });
 }
-function h(e) {
+function m(e) {
     let { userId: t, applicationId: n, location: r, onConfirm: i, onCancel: a } = e,
-        c = (0, o.c_)("useFriendRequestActions"),
-        u = s.Z.isStranger(t);
-    return null == n && c && !1 !== u
-        ? u && c
-            ? void (0, l.c)({
+        u = (0, o.c_)("useFriendRequestActions"),
+        d = (0, s.q)(r),
+        f = u || d,
+        _ = l.Z.isStranger(t);
+    return null == n && f && !1 !== _
+        ? _ && f
+            ? void (0, c.c)({
                   onConfirm: () => {
-                      p({
+                      h({
                           userId: t,
                           applicationId: n,
                           location: r,
@@ -91,14 +94,14 @@ function h(e) {
                       null == a || a();
                   },
               })
-            : c
-              ? void p({
+            : f
+              ? void h({
                     userId: t,
                     applicationId: n,
                     location: r,
                 })
                     .then((e) => {
-                        m(e, {
+                        g(e, {
                             userId: t,
                             applicationId: n,
                             location: r,
@@ -109,7 +112,7 @@ function h(e) {
                             i();
                     })
                     .catch((e) => {
-                        m(e, {
+                        g(e, {
                             userId: t,
                             applicationId: n,
                             location: r,
@@ -118,7 +121,7 @@ function h(e) {
                         });
                     })
               : void 0
-        : p({
+        : h({
               userId: t,
               applicationId: n,
               location: r,
@@ -127,18 +130,18 @@ function h(e) {
               null == i || i();
           });
 }
-function m(e, t) {
+function g(e, t) {
     var n;
-    return (null == (n = e.body) ? void 0 : n.code) === c.evJ.RELATIONSHIP_INVALID_NO_CONFIRMATION
+    return (null == (n = e.body) ? void 0 : n.code) === u.evJ.RELATIONSHIP_INVALID_NO_CONFIRMATION
         ? (r.Z.dispatch({
               type: "UPDATE_STRANGER_STATUS",
               userId: t.userId,
               isStranger: !0,
           }),
-          (0, l.c)({
+          (0, c.c)({
               onConfirm: () => {
                   var e;
-                  p(_(d({}, t), { confirmStrangerRequest: !0 })), null == (e = t.onConfirm) || e.call(t);
+                  h(p(f({}, t), { confirmStrangerRequest: !0 })), null == (e = t.onConfirm) || e.call(t);
               },
               onCancel: () => {
                   var e;
@@ -154,7 +157,7 @@ function m(e, t) {
               }),
           !1);
 }
-let g = {
+let E = {
     removeFriend: function (e) {
         let { userId: t, applicationId: n, location: r } = e;
         null != n
@@ -173,6 +176,6 @@ let g = {
               })
             : i.Z.cancelFriendRequest(t, { location: r });
     },
-    acceptFriendRequest: p,
-    maybeConfirmFriendRequestAccept: h,
+    acceptFriendRequest: h,
+    maybeConfirmFriendRequestAccept: m,
 };
