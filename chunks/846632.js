@@ -99,7 +99,7 @@ function h(e) {
                                             (0, a.jsxs)("div", {
                                                 className: m.headerContainer,
                                                 children: [
-                                                    (0, a.jsx)(d.X6q, {
+                                                    (0, a.jsx)(d.Heading, {
                                                         variant: "heading-lg/bold",
                                                         children: p.intl.string(C.default.OvKPi4),
                                                     }),
@@ -124,7 +124,7 @@ function h(e) {
                                                     (0, a.jsx)(l.u, {
                                                         text: p.intl.string(C.default.WlENZm),
                                                         shouldShow: y,
-                                                        children: (0, a.jsx)(d.zxk, {
+                                                        children: (0, a.jsx)(d.Button, {
                                                             variant: "primary",
                                                             text: p.intl.string(p.t.jwEaiY),
                                                             fullWidth: !0,
@@ -133,7 +133,7 @@ function h(e) {
                                                             disabled: y,
                                                         }),
                                                     }),
-                                                    (0, a.jsx)(d.zxk, {
+                                                    (0, a.jsx)(d.Button, {
                                                         variant: "secondary",
                                                         text: p.intl.string(p.t.s5vZlZ),
                                                         fullWidth: !0,

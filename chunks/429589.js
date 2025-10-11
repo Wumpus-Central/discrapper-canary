@@ -79,7 +79,7 @@ function d(e) {
         {
             text: b,
             children: (0, r.jsx)(
-                a.zxk,
+                a.Button,
                 l(
                     {
                         variant: f,

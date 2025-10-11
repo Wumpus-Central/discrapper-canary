@@ -16,7 +16,7 @@ function u() {
             children: (0, o.jsx)(i.Text, {
                 variant: "text-sm/medium",
                 color: "header-secondary",
-                children: (0, o.jsx)(i.eee, {
+                children: (0, o.jsx)(i.Anchor, {
                     href: r.Z.getArticleURL(l.BhN.CRUNCHYROLL_CONNECTION),
                     children: a.intl.string(a.t.hvVgAQ),
                 }),

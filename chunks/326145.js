@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => v });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -17,9 +17,9 @@ var r = n(951288),
     _ = n(388032),
     O = n(76531),
     E = n(718215);
-function y(e) {
+function v(e) {
     let { guildId: t, channelId: n } = e,
-        { ref: l, width: y, height: v } = (0, c.ZP)(),
+        { ref: l, width: v, height: y } = (0, c.ZP)(),
         I = i.useCallback(() => {
             null != t &&
                 null != n &&
@@ -29,33 +29,33 @@ function y(e) {
                     returnChannelId: n,
                 }));
         }, [t, n]),
-        S = (0, o.e7)([f.Z], () => f.Z.getGuild(t)),
-        C = i.useMemo(
+        C = (0, o.e7)([f.Z], () => f.Z.getGuild(t)),
+        S = i.useMemo(
             () =>
-                null == S
+                null == C
                     ? null
                     : h.ZP.getGuildSplashURL({
-                          id: S.id,
-                          splash: S.splash,
+                          id: C.id,
+                          splash: C.splash,
                       }),
-            [S],
+            [C],
         ),
-        T = (0, d.N)(C);
+        T = (0, d.N)(S);
     return (0, r.jsxs)("div", {
-        className: a()(O.outerWrapping, E.main, { [E.fullBorderWithGradient]: null == C }),
+        className: a()(O.outerWrapping, E.main, { [E.fullBorderWithGradient]: null == S }),
         ref: l,
         children: [
-            null != C
+            null != S
                 ? (0, r.jsx)(u.Z, {
                       className: E.artwork,
-                      src: C,
-                      width: y,
-                      height: v,
+                      src: S,
+                      width: v,
+                      height: y,
                       imageClassName: E.cover,
                   })
                 : (0, r.jsx)(p.Z, {}),
             null != T &&
-                null != C &&
+                null != S &&
                 (0, r.jsx)("div", {
                     className: E.gradient,
                     style: {
@@ -64,14 +64,14 @@ function y(e) {
                             .concat((0, g.aD)(T, 1), " 100%)"),
                     },
                 }),
-            null != C && (0, r.jsx)("div", { className: E.gradient }),
+            null != S && (0, r.jsx)("div", { className: E.gradient }),
             (0, r.jsxs)("div", {
                 className: a()(O.explainerContainer, O.transparentBackground),
                 children: [
                     (0, r.jsxs)("div", {
                         className: O.header,
                         children: [
-                            (0, r.jsx)(s.X6q, {
+                            (0, r.jsx)(s.Heading, {
                                 variant: "heading-xxl/normal",
                                 color: "always-white",
                                 children: _.intl.string(_.t.CCmhpK),
@@ -83,7 +83,7 @@ function y(e) {
                             }),
                         ],
                     }),
-                    (0, r.jsx)(s.zxk, {
+                    (0, r.jsx)(s.Button, {
                         variant: "overlay-primary",
                         size: "md",
                         text: _.intl.string(_.t.VVFjAA),

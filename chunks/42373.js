@@ -172,13 +172,13 @@ let A = (e) => {
                                 null != P &&
                                     (0, r.jsx)("div", {
                                         className: B.badge,
-                                        children: (0, r.jsx)(d.X6q, {
+                                        children: (0, r.jsx)(d.Heading, {
                                             variant: "eyebrow",
                                             color: "always-white",
                                             children: P,
                                         }),
                                     }),
-                                (0, r.jsx)(d.X6q, {
+                                (0, r.jsx)(d.Heading, {
                                     variant: t,
                                     color: "header-primary",
                                     className: o()(B.header, !D && B["".concat(w)]),

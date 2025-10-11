@@ -282,7 +282,7 @@ function w(e) {
                                     (0, r.jsxs)("div", {
                                         className: A.bodyContent,
                                         children: [
-                                            (0, r.jsxs)(c.X6q, {
+                                            (0, r.jsxs)(c.Heading, {
                                                 className: o()(A.header, { [A.enhancedHeader]: ea }, F),
                                                 variant: "heading-xl/bold",
                                                 children: [R, $ ? (0, r.jsx)(_.Z, { className: A.betaTag }) : null],
@@ -322,7 +322,7 @@ function w(e) {
                         }),
                         !er &&
                             !ea &&
-                            (0, r.jsx)(c.zxk, {
+                            (0, r.jsx)(c.Button, {
                                 variant: "secondary",
                                 size: "sm",
                                 text: null != ei ? ei : S.intl.string(S.t["13/7kZ"]),

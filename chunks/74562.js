@@ -31,7 +31,7 @@ function p(e) {
                     }),
                 }),
             }),
-            (0, r.jsx)(l.X6q, {
+            (0, r.jsx)(l.Heading, {
                 color: "header-primary",
                 variant: "heading-xl/semibold",
                 className: g.title,

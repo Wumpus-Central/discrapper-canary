@@ -92,7 +92,7 @@ function m(e) {
         );
     return null == v
         ? null
-        : (0, r.jsx)(a.zxk, {
+        : (0, r.jsx)(a.Button, {
               variant: "active",
               size: "sm",
               text: v,

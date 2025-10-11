@@ -16,7 +16,7 @@ let c = (e) => {
             children: (0, r.jsxs)("div", {
                 className: l.awaitingWrapper,
                 children: [
-                    (0, r.jsx)(a.X6q, {
+                    (0, r.jsx)(a.Heading, {
                         variant: "heading-xl/bold",
                         children: s.intl.string(s.t.Q03WWV),
                     }),
@@ -39,7 +39,7 @@ let c = (e) => {
                                     "\xA0",
                                     n
                                         ? s.intl.string(s.t.StGVvL)
-                                        : (0, r.jsx)(a.eee, {
+                                        : (0, r.jsx)(a.Anchor, {
                                               onClick: i,
                                               children: s.intl.string(s.t.Ex7sk5),
                                           }),

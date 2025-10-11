@@ -404,7 +404,7 @@ let eL = i.memo(function () {
                         noticeType: em.kVF.SPOTIFY_AUTO_PAUSED,
                         children: ey.intl.string(ey.t.NiTd0d),
                     }),
-                    (0, r.jsx)(c.eee, {
+                    (0, r.jsx)(c.Anchor, {
                         className: eO.textLinkSmall,
                         href: ef.Z.getArticleURL(em.BhN.SPOTIFY_AUTO_PAUSED),
                         target: "_blank",
@@ -982,7 +982,7 @@ let eL = i.memo(function () {
                         target: "_blank",
                         children: ey.intl.string(ey.t.kvHdFB),
                     }),
-                    (0, r.jsx)(c.eee, {
+                    (0, r.jsx)(c.Anchor, {
                         href: ef.Z.getArticleURL(em.BhN.QUARANTINE),
                         target: "_blank",
                         className: eO.quarantineLearnMoreLink,

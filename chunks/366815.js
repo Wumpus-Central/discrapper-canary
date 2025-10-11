@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var r = n(951288);
 n(647438);
 var l = n(442837),
@@ -37,7 +37,7 @@ let d = () =>
             }),
         ],
     });
-function m(e) {
+function g(e) {
     let { onClick: t } = e;
     return (0, l.e7)([a.qc], () => !a.qc.hasHotspot(a.v6.STAGE_CHANNEL_UPSELL))
         ? null
@@ -50,7 +50,7 @@ function m(e) {
                           (0, r.jsxs)("div", {
                               className: c.textContainer,
                               children: [
-                                  (0, r.jsx)(i.X6q, {
+                                  (0, r.jsx)(i.Heading, {
                                       variant: "heading-md/semibold",
                                       children: o.intl.string(o.t.Sx8Ezs),
                                   }),
@@ -78,11 +78,11 @@ function m(e) {
                   }),
                   (0, r.jsx)("div", {
                       className: c.footer,
-                      children: (0, r.jsxs)(i.hE2, {
+                      children: (0, r.jsxs)(i.ButtonGroup, {
                           direction: "horizontal",
                           size: "sm",
                           children: [
-                              (0, r.jsx)(i.zxk, {
+                              (0, r.jsx)(i.Button, {
                                   onClick: t,
                                   variant: "secondary",
                                   text: o.intl.string(o.t["X/3SyM"]),

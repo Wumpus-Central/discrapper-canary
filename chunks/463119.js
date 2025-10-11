@@ -17,11 +17,11 @@ var r = n(951288),
     _ = n(243778),
     O = n(633302),
     E = n(567400),
-    y = n(153066),
-    v = n(335131),
+    v = n(153066),
+    y = n(335131),
     I = n(364111),
-    S = n(729700),
-    C = n(827360),
+    C = n(729700),
+    S = n(827360),
     T = n(681435),
     N = n(81136),
     j = n(302800),
@@ -141,23 +141,23 @@ let k = (e) => {
         let b = (0, l.JA)("shop"),
             _ = h.Z.HOME_PAGE_SHOP_TAB,
             { analyticsLocations: O } = (0, g.ZP)(_),
-            [E, y] = i.useState(!1),
+            [E, v] = i.useState(!1),
             I = i.useCallback(() => {
                 void 0 !== o && o(),
                     void 0 !== s &&
-                        (0, v.mK)({
+                        (0, y.mK)({
                             openInLayer: !1,
                             tab: s,
                             analyticsLocations: O,
                             analyticsSource: _,
                         }),
-                    y(!0),
-                    (0, v.Sm)({
+                    v(!0),
+                    (0, y.Sm)({
                         analyticsSource: _,
                         analyticsLocations: O,
                     });
-            }, [_, O, o, y, s]),
-            S = x.Z5c.COLLECTIBLES_SHOP;
+            }, [_, O, o, v, s]),
+            C = x.Z5c.COLLECTIBLES_SHOP;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 E && (0, r.jsx)(M, {}),
@@ -167,7 +167,7 @@ let k = (e) => {
                         L(
                             {
                                 selected: t,
-                                route: S,
+                                route: C,
                                 icon: null != a ? a : c.EOn,
                                 text: Z.intl.string(Z.t.pWG4zc),
                                 locationState: n,
@@ -210,7 +210,7 @@ let k = (e) => {
                 (0, r.jsxs)("div", {
                     className: w.shopMarketingTooltipText,
                     children: [
-                        (0, r.jsx)(c.X6q, {
+                        (0, r.jsx)(c.Heading, {
                             variant: u ? "heading-sm/medium" : "heading-sm/bold",
                             children: o,
                         }),
@@ -238,10 +238,10 @@ let k = (e) => {
             _,
             O,
             E,
-            v,
+            y,
             { displayOptions: I } = e,
-            S = D(e, ["displayOptions"]);
-        let C = (0, a.e7)([f.Z], () => f.Z.useReducedMotion),
+            C = D(e, ["displayOptions"]);
+        let S = (0, a.e7)([f.Z], () => f.Z.useReducedMotion),
             [T, N] = i.useState(0),
             [j, P] = i.useState(!1),
             x = (0, p.ZP)(),
@@ -256,7 +256,7 @@ let k = (e) => {
               ? ((t = null == (m = I.entryPointBackgroundAssets) ? void 0 : m.srcDark),
                 (n = null == (_ = I.entrypointBackgroundStyle) || null == (b = _.resting) ? void 0 : b.dark))
               : ((t = null == (O = I.entryPointBackgroundAssets) ? void 0 : O.srcLight),
-                (n = null == (v = I.entrypointBackgroundStyle) || null == (E = v.resting) ? void 0 : E.light));
+                (n = null == (y = I.entrypointBackgroundStyle) || null == (E = y.resting) ? void 0 : E.light));
         let M = i.useCallback(
                 (e) => {
                     I.assetIds.length > 0 && N((e) => (e + 1) % I.assetIds.length), P(!0), null == e || e();
@@ -272,7 +272,7 @@ let k = (e) => {
             text: (0, r.jsx)(B, {
                 displayOptions: I,
                 assetId: I.assetIds[T],
-                reducedMotion: C,
+                reducedMotion: S,
             }),
             tooltipClassName: w.marketingBadgeTooltip,
             position: "right",
@@ -289,9 +289,9 @@ let k = (e) => {
                                 L(
                                     {
                                         className:
-                                            null != I.entryPointClassName ? (0, y.l)(w, I.entryPointClassName) : void 0,
+                                            null != I.entryPointClassName ? (0, v.l)(w, I.entryPointClassName) : void 0,
                                     },
-                                    S,
+                                    C,
                                 ),
                                 { icon: I.entryPointIcon },
                             ),
@@ -385,7 +385,7 @@ let k = (e) => {
                         ],
                     }),
                 ),
-                (0, r.jsx)(S.Z, {
+                (0, r.jsx)(C.Z, {
                     displayOptions: l,
                     targetElementRef: c,
                     onClick: () => a(A.L.TAKE_ACTION),
@@ -407,7 +407,7 @@ let k = (e) => {
                         listItemRef: l,
                     }),
                 ),
-                (0, r.jsx)(C.Z, {
+                (0, r.jsx)(S.Z, {
                     targetElementRef: l,
                     onClick: () => t(A.L.TAKE_ACTION),
                     onRequestClose: () => t(A.L.USER_DISMISS),

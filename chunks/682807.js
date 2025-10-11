@@ -19,7 +19,7 @@ function h(e) {
         ? (0, r.jsxs)("div", {
               className: i()(m.container, l),
               children: [
-                  (0, r.jsx)(s.X6q, {
+                  (0, r.jsx)(s.Heading, {
                       variant: "heading-sm/semibold",
                       color: "header-primary",
                       children: p.intl.string(p.t.l6DP2t),

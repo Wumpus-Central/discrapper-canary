@@ -1,45 +1,45 @@
-r.d(t, { Z: () => p }), r(388685);
-var n = r(951288),
-    i = r(647438),
-    o = r(137317),
-    a = r(481060),
-    s = r(687158),
-    l = r(518596),
-    c = r(63063),
-    u = r(51144),
-    d = r(544508),
-    m = r(801461),
-    g = r(981631),
-    f = r(388032),
-    E = r(631936);
+n.d(t, { Z: () => p }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    o = n(137317),
+    a = n(481060),
+    s = n(687158),
+    l = n(518596),
+    c = n(63063),
+    u = n(51144),
+    d = n(544508),
+    m = n(801461),
+    g = n(981631),
+    f = n(388032),
+    E = n(631936);
 function p(e) {
     var t,
-        r,
+        n,
         { userRef: p, usernameSuggestionLoading: y = !1, oneClickFlow: O = !1 } = e,
         h = (function (e, t) {
             if (null == e) return {};
-            var r,
-                n,
+            var n,
+                r,
                 i = (function (e, t) {
                     if (null == e) return {};
-                    var r,
-                        n,
+                    var n,
+                        r,
                         i = {},
                         o = Object.keys(e);
-                    for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var o = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < o.length; n++)
-                    (r = o[n]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
+                for (r = 0; r < o.length; r++)
+                    (n = o[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ["userRef", "usernameSuggestionLoading", "oneClickFlow"]);
     let { user: b, editState: S, onClose: _ } = h,
         v = (0, s.ZP)(b.id),
-        j = (function (e, t, r) {
+        j = (function (e, t, n) {
             switch (e) {
                 case m.Wq.EDIT_USERNAME:
                     return {
@@ -56,7 +56,7 @@ function p(e) {
                         header: f.intl.formatToPlainString(f.t.XDHrcn, { displayName: t }),
                         subtitle: f.intl.format(f.t.bWE0ZG, {
                             onClick: () => {
-                                r(), (0, l.openUserSettings)();
+                                n(), (0, l.openUserSettings)();
                             },
                         }),
                     };
@@ -88,31 +88,31 @@ function p(e) {
                 },
             });
         }, [x, S]),
-        (0, n.jsxs)("div", {
+        (0, r.jsxs)("div", {
             className: E.displayNameContainer,
             children: [
-                (0, n.jsxs)(o.animated.div, {
+                (0, r.jsxs)(o.animated.div, {
                     style: {
                         opacity: N.opacity,
                         y: N.y,
                     },
                     children: [
-                        (0, n.jsx)(a.X6q, {
+                        (0, r.jsx)(a.Heading, {
                             className: E.title,
                             color: "header-primary",
                             variant: "heading-xl/extrabold",
                             children: j.header,
                         }),
-                        (0, n.jsxs)("div", {
+                        (0, r.jsxs)("div", {
                             className: E.subtitle,
                             children: [
-                                (0, n.jsx)(a.X6q, {
+                                (0, r.jsx)(a.Heading, {
                                     color: "header-secondary",
                                     variant: "heading-sm/medium",
                                     children: j.subtitle,
                                 }),
                                 null != j.link &&
-                                    (0, n.jsx)(a.Text, {
+                                    (0, r.jsx)(a.Text, {
                                         className: E.link,
                                         color: "header-secondary",
                                         variant: "text-sm/medium",
@@ -122,34 +122,34 @@ function p(e) {
                         }),
                     ],
                 }),
-                (0, n.jsx)(
+                (0, r.jsx)(
                     d.Z,
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
-                            var r = null != arguments[t] ? arguments[t] : {},
-                                n = Object.keys(r);
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
                             "function" == typeof Object.getOwnPropertySymbols &&
-                                (n = n.concat(
-                                    Object.getOwnPropertySymbols(r).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                     }),
                                 )),
-                                n.forEach(function (t) {
-                                    var n;
-                                    (n = r[t]),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
-                                                  value: n,
+                                                  value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0,
                                               })
-                                            : (e[t] = n);
+                                            : (e[t] = r);
                                 });
                         }
                         return e;
                     })({}, h)),
-                    (r = r =
+                    (n = n =
                         {
                             displayProfile: v,
                             ref: p,
@@ -157,16 +157,16 @@ function p(e) {
                             oneClickFlow: O,
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                         : (function (e, t) {
-                              var r = Object.keys(e);
+                              var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
-                                  var n = Object.getOwnPropertySymbols(e);
-                                  r.push.apply(r, n);
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
                               }
-                              return r;
-                          })(Object(r)).forEach(function (e) {
-                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                              return n;
+                          })(Object(n)).forEach(function (e) {
+                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                           }),
                     t),
                 ),

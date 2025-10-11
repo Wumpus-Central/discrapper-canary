@@ -26,14 +26,14 @@ function g() {
         N = (0, d.Ad)(O),
         P = (0, d.jT)(O),
         I = null == C || null == (e = C.avatarDecoration) ? void 0 : e.skuId,
-        k = null == C || null == (n = C.collectibles) || null == (t = n.nameplate) ? void 0 : t.skuId,
-        w = null != I && null != (v = N.find((e) => e.skuId === I)) ? v : null,
-        R = null != k && null != (j = P.find((e) => e.skuId === k)) ? j : null,
-        A = (0, r.e7)([o.Z], () => o.Z.getProduct(null == w ? void 0 : w.skuId)),
+        w = null == C || null == (n = C.collectibles) || null == (t = n.nameplate) ? void 0 : t.skuId,
+        k = null != I && null != (v = N.find((e) => e.skuId === I)) ? v : null,
+        R = null != w && null != (j = P.find((e) => e.skuId === w)) ? j : null,
+        A = (0, r.e7)([o.Z], () => o.Z.getProduct(null == k ? void 0 : k.skuId)),
         Z = (0, r.e7)([o.Z], () => o.Z.getProduct(null == R ? void 0 : R.skuId)),
         D = (0, r.e7)([s.Z], () => s.Z.fontSize),
-        L = (0, r.e7)([s.Z], () => s.Z.messageGroupSpacing),
-        M = p.YC.useSetting();
+        M = (0, r.e7)([s.Z], () => s.Z.messageGroupSpacing),
+        L = p.YC.useSetting();
     return (
         (0, x.ub)(),
         (0, a.jsxs)("div", {
@@ -41,7 +41,7 @@ function g() {
             children: [
                 (0, a.jsxs)("div", {
                     children: [
-                        (0, a.jsx)(l.X6q, {
+                        (0, a.jsx)(l.Heading, {
                             variant: "heading-lg/semibold",
                             children: "Randomize customization settings",
                         }),
@@ -50,19 +50,19 @@ function g() {
                             children:
                                 "Randomly sets appearance-related settings. Leaving this tab or closing devtools will reset to your initial state.",
                         }),
-                        (0, a.jsx)(l.zxk, {
+                        (0, a.jsx)(l.Button, {
                             variant: "primary",
                             size: "sm",
                             text: "Randomize Theme",
                             onClick: x.aB,
                         }),
-                        (0, a.jsx)(l.zxk, {
+                        (0, a.jsx)(l.Button, {
                             variant: "primary",
                             size: "sm",
                             text: "Randomize Collectibles",
                             onClick: x.th,
                         }),
-                        (0, a.jsx)(l.zxk, {
+                        (0, a.jsx)(l.Button, {
                             variant: "primary",
                             size: "sm",
                             text: "Randomize Appearance Settings",
@@ -72,7 +72,7 @@ function g() {
                 }),
                 (0, a.jsxs)("div", {
                     children: [
-                        (0, a.jsx)(l.X6q, {
+                        (0, a.jsx)(l.Heading, {
                             variant: "heading-lg/semibold",
                             children: "Current Settings",
                         }),
@@ -102,13 +102,13 @@ function g() {
                         }),
                         (0, a.jsxs)(l.Text, {
                             variant: "text-md/normal",
-                            children: ["Message Spacing: ", L],
+                            children: ["Message Spacing: ", M],
                         }),
                         (0, a.jsxs)(l.Text, {
                             variant: "text-md/normal",
                             children: [
                                 "UI Density: ",
-                                M,
+                                L,
                                 " (",
                                 (function (e) {
                                     switch (e) {
@@ -123,7 +123,7 @@ function g() {
                                         default:
                                             return "Unknown";
                                     }
-                                })(M),
+                                })(L),
                                 ")",
                             ],
                         }),

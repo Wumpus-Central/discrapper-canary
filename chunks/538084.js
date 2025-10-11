@@ -30,7 +30,7 @@ function p(e) {
             (0, i.jsx)(o.xBx, {
                 separator: !1,
                 className: u.header,
-                children: (0, i.jsx)(o.X6q, {
+                children: (0, i.jsx)(o.Heading, {
                     variant: "heading-xl/medium",
                     children: c.intl.string(c.t["3+ii4O"]),
                 }),
@@ -75,13 +75,13 @@ function p(e) {
                     (0, i.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
                         className: u.cancelButton,
-                        children: (0, i.jsx)(o.zxk, {
+                        children: (0, i.jsx)(o.Button, {
                             variant: "secondary",
                             text: c.intl.string(c.t["ETE/oK"]),
                             onClick: l,
                         }),
                     }),
-                    (0, i.jsx)(o.zxk, {
+                    (0, i.jsx)(o.Button, {
                         variant: "primary",
                         text: c.intl.string(c.t.iQ1Swc),
                         onClick: () => {

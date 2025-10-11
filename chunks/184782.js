@@ -14,8 +14,8 @@ var a = i(951288),
     p = i(372769),
     j = i(703656),
     x = i(592125),
-    N = i(430824),
-    g = i(496675),
+    g = i(430824),
+    N = i(496675),
     C = i(259580),
     b = i(626135),
     E = i(524329),
@@ -29,12 +29,12 @@ let k = (e) => {
         var n;
         let { channelData: i, onClose: l, trackOptionClick: o } = e,
             d = (0, t.e7)([x.Z], () => x.Z.getChannel(i.channel_id)),
-            u = (0, t.e7)([g.Z], () => null != d && g.Z.can(I.Pl.VIEW_CHANNEL, d)),
+            u = (0, t.e7)([N.Z], () => null != d && N.Z.can(I.Pl.VIEW_CHANNEL, d)),
             _ = (0, t.e7)([m.ZP], () => (null != i.emoji_id ? m.ZP.getCustomEmojiById(i.emoji_id) : null), [
                 i.emoji_id,
             ]),
             p = null != i.emoji_name ? h.ZP.getByName(h.ZP.convertSurrogateToName(i.emoji_name, !1)) : null,
-            N = null != (n = (0, c.KS)(d)) ? n : s.VL1;
+            g = null != (n = (0, c.KS)(d)) ? n : s.VL1;
         return null != d && u
             ? (0, a.jsxs)(s.P3F, {
                   className: S.optionContainer,
@@ -50,7 +50,7 @@ let k = (e) => {
                                 autoplay: !0,
                                 className: S.optionEmoji,
                             })
-                          : (0, a.jsx)(N, { className: S.channelIcon }),
+                          : (0, a.jsx)(g, { className: S.channelIcon }),
                       (0, a.jsxs)("div", {
                           className: S.optionTextContainer,
                           children: [
@@ -63,7 +63,7 @@ let k = (e) => {
                                   variant: "text-xs/normal",
                                   color: "header-secondary",
                                   children: [
-                                      (0, a.jsx)(N, {
+                                      (0, a.jsx)(g, {
                                           className: S.channelTitleIcon,
                                           size: "xxs",
                                           color: "currentColor",
@@ -84,11 +84,11 @@ let k = (e) => {
     P = (e) => {
         var n;
         let { onClose: i, transitionState: r, guildId: c, isPreview: m } = e,
-            h = (0, t.e7)([N.Z], () => N.Z.getGuild(c)),
+            h = (0, t.e7)([g.Z], () => g.Z.getGuild(c)),
             {
                 welcomeScreen: j,
                 fetching: x,
-                hasError: g,
+                hasError: N,
             } = (0, t.cj)([Z.Z], () => ({
                 welcomeScreen: Z.Z.get(c),
                 fetching: Z.Z.isFetching(),
@@ -99,8 +99,8 @@ let k = (e) => {
             null == j && (0, E.RM)(c);
         }, [c, j]),
             l.useEffect(() => {
-                !1 === x && !0 === g && null == j && i();
-            }, [x, g, i, j]),
+                !1 === x && !0 === N && null == j && i();
+            }, [x, N, i, j]),
             l.useEffect(() => {
                 j === Z.a && !1 === x && i();
             }, [i, j, x]),
@@ -172,7 +172,7 @@ let k = (e) => {
                                     tabIndex: -1,
                                 }),
                             }),
-                            (0, a.jsx)(s.X6q, {
+                            (0, a.jsx)(s.Heading, {
                                 variant: "heading-xl/semibold",
                                 className: S.header,
                                 id: C,
@@ -207,7 +207,7 @@ let k = (e) => {
                                       children: j.description,
                                   })
                                 : null,
-                            (0, a.jsx)(s.X6q, {
+                            (0, a.jsx)(s.Heading, {
                                 variant: "heading-sm/semibold",
                                 className: S.choiceHeader,
                                 children: T.intl.string(T.t["haj5+v"]),

@@ -4,17 +4,17 @@ e(647438);
 var i = e(392711),
     a = e.n(i),
     l = e(548680),
-    r = e(780384),
-    o = e(481060),
+    o = e(780384),
+    r = e(481060),
     d = e(410030),
     c = e(313201),
     g = e(388032),
-    m = e(360217),
-    u = e(755524),
+    u = e(360217),
+    m = e(755524),
     b = e(788572),
-    x = e(262529);
-let p = [e(4921), e(663416), e(838295)],
-    f = [u, b, x],
+    p = e(262529);
+let x = [e(4921), e(663416), e(838295)],
+    f = [m, b, p],
     v = [
         () => g.intl.string(g.t["w2o/6+"]),
         () => g.intl.string(g.t.FiAvKi),
@@ -30,37 +30,37 @@ let p = [e(4921), e(663416), e(838295)],
     h = (t) => {
         let { transitionState: s, onClose: e } = t,
             i = (0, d.ZP)(),
-            u = (0, c.Dt)(),
-            b = (0, r.wj)(i) ? f : p,
-            x = (0, l.Z)(() => a().sample(b), [b]),
+            m = (0, c.Dt)(),
+            b = (0, o.wj)(i) ? f : x,
+            p = (0, l.Z)(() => a().sample(b), [b]),
             h = (0, l.Z)(() => a().sample(v), []);
-        return (0, n.jsxs)(o.Y0X, {
+        return (0, n.jsxs)(r.Y0X, {
             transitionState: s,
-            className: m.root,
-            "aria-labelledby": u,
+            className: u.root,
+            "aria-labelledby": m,
             parentComponent: "FollowSuccessModal",
             children: [
                 (0, n.jsx)("img", {
                     alt: "",
-                    src: x,
-                    className: m.image,
+                    src: p,
+                    className: u.image,
                 }),
-                (0, n.jsxs)(o.hzk, {
-                    className: m.modal,
+                (0, n.jsxs)(r.hzk, {
+                    className: u.modal,
                     children: [
-                        (0, n.jsx)(o.X6q, {
+                        (0, n.jsx)(r.Heading, {
                             variant: "heading-xl/semibold",
-                            className: m.followSuccessHeader,
-                            id: u,
+                            className: u.followSuccessHeader,
+                            id: m,
                             children: h(),
                         }),
-                        (0, n.jsx)(o.Text, {
+                        (0, n.jsx)(r.Text, {
                             color: "text-muted",
                             variant: "text-md/medium",
-                            className: m.body,
+                            className: u.body,
                             children: g.intl.string(g.t["2QbSeX"]),
                         }),
-                        (0, n.jsx)(o.zxk, {
+                        (0, n.jsx)(r.Button, {
                             variant: "primary",
                             text: g.intl.string(g.t["+IrDzM"]),
                             onClick: e,

@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(91192),
     d = n(924826),
     u = n(873546),
-    p = n(442837),
-    h = n(481060),
+    h = n(442837),
+    p = n(481060),
     f = n(239091),
     g = n(144144),
     m = n(607070),
@@ -17,13 +17,13 @@ var r = n(951288),
     y = n(906732),
     _ = n(82295),
     j = n(91218),
-    x = n(623624),
-    O = n(518738),
+    O = n(623624),
+    x = n(518738),
     v = n(850020),
     C = n(965376),
     I = n(159299),
-    E = n(670188),
-    S = n(199902),
+    S = n(670188),
+    E = n(199902),
     Z = n(271383),
     T = n(485386),
     P = n(158776),
@@ -40,8 +40,8 @@ var r = n(951288),
     H = n(981631),
     F = n(388032),
     B = n(61722),
-    z = n(32482);
-function V(e) {
+    V = n(32482);
+function z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -71,25 +71,25 @@ let W = U.ZP.getEnableHardwareAcceleration(),
     q = i.memo(function (e) {
         let { channel: t, sectionId: l, userId: a, guildOwnerId: s } = e,
             o = i.useRef(null),
-            d = (0, p.e7)([R.Z], () => R.Z.isTyping(t.id, a)),
-            h = (0, p.e7)([Z.ZP], () => Z.ZP.getMember(t.guild_id, a)),
-            m = (0, p.e7)([T.Z], () => {
+            d = (0, h.e7)([R.Z], () => R.Z.isTyping(t.id, a)),
+            p = (0, h.e7)([Z.ZP], () => Z.ZP.getMember(t.guild_id, a)),
+            m = (0, h.e7)([T.Z], () => {
                 var e;
-                return (null == h ? void 0 : h.colorRoleId) != null
-                    ? null == (e = T.Z.getRole(t.guild_id, h.colorRoleId))
+                return (null == p ? void 0 : p.colorRoleId) != null
+                    ? null == (e = T.Z.getRole(t.guild_id, p.colorRoleId))
                         ? void 0
                         : e.name
                     : void 0;
-            }, [t.guild_id, h]),
-            b = (0, p.e7)([w.default], () => w.default.getUser(a)),
-            y = (0, p.e7)([w.default], () => w.default.getCurrentUser()),
+            }, [t.guild_id, p]),
+            b = (0, h.e7)([w.default], () => w.default.getUser(a)),
+            y = (0, h.e7)([w.default], () => w.default.getCurrentUser()),
             _ = (null == b ? void 0 : b.id) === (null == y ? void 0 : y.id),
-            j = (0, p.e7)([P.Z, N.Z], () => (_ ? N.Z.getStatus() : P.Z.getStatus(a, t.guild_id))),
-            O = (0, p.e7)([P.Z], () => P.Z.isMobileOnline(a)),
-            C = (0, p.e7)([P.Z, N.Z], () => (_ ? N.Z.getActivities() : P.Z.getActivities(a, t.guild_id))),
-            A = (0, p.e7)([S.Z], () => S.Z.getAnyStreamForUser(a)),
+            j = (0, h.e7)([P.Z, N.Z], () => (_ ? N.Z.getStatus() : P.Z.getStatus(a, t.guild_id))),
+            x = (0, h.e7)([P.Z], () => P.Z.isMobileOnline(a)),
+            C = (0, h.e7)([P.Z, N.Z], () => (_ ? N.Z.getActivities() : P.Z.getActivities(a, t.guild_id))),
+            A = (0, h.e7)([E.Z], () => E.Z.getAnyStreamForUser(a)),
             D = (0, c.JA)(a),
-            M = (0, p.e7)([I.Z], () => I.Z.canUserViewChannel(t.id, l, a)),
+            M = (0, h.e7)([I.Z], () => I.Z.canUserViewChannel(t.id, l, a)),
             U = (null == b ? void 0 : b.id) != null && b.id === s,
             B = i.useCallback(
                 (e) => {
@@ -102,7 +102,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                                 var i, l;
                                 return (0, r.jsx)(
                                     e,
-                                    ((i = V({}, n)),
+                                    ((i = z({}, n)),
                                     (l = l =
                                         {
                                             user: b,
@@ -128,7 +128,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                 },
                 [b, t],
             ),
-            z = i.useCallback(() => {
+            V = i.useCallback(() => {
                 if (null == b) return;
                 let e = "@".concat(k.ZP.getUserTag(b, { decoration: "never" })),
                     n = "<@".concat(b.id, ">");
@@ -142,7 +142,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             Y = i.useCallback(
                 (e) => {
                     e.stopPropagation(),
-                        (0, x.f)({
+                        (0, O.f)({
                             guildId: t.guild_id,
                             location: {
                                 section: H.jXE.THREAD_MEMBER_LIST,
@@ -159,15 +159,15 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             }),
             [K, Q] = i.useState(!1);
         if (null == b) return null;
-        let X = null == h ? void 0 : h.premiumSince;
-        return (0, r.jsx)(E.Z, {
+        let X = null == p ? void 0 : p.premiumSince;
+        return (0, r.jsx)(S.Z, {
             targetElementRef: o,
             user: b,
             guildId: t.guild_id,
             channelId: t.id,
             position: u.tq ? "window_center" : "left",
             spacing: 16,
-            onShiftClick: z,
+            onShiftClick: V,
             shouldShow: K,
             onRequestClose: () => Q(!1),
             children: (e) => {
@@ -197,23 +197,23 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                     })(e, ["onClick", "onMouseDown"]);
                 return (0, r.jsx)(
                     G.Z,
-                    V(
+                    z(
                         {
                             ref: o,
                             onContextMenu: B,
                             shouldAnimateStatus: W,
                             user: b,
                             currentUser: y,
-                            nick: null == h ? void 0 : h.nick,
+                            nick: null == p ? void 0 : p.nick,
                             status: j,
                             activities: C,
-                            colorString: null == h ? void 0 : h.colorString,
-                            colorStrings: null == h ? void 0 : h.colorStrings,
+                            colorString: null == p ? void 0 : p.colorString,
+                            colorStrings: null == p ? void 0 : p.colorStrings,
                             colorRoleName: m,
                             isTyping: d,
                             channel: t,
                             guildId: t.guild_id,
-                            isMobile: O,
+                            isMobile: x,
                             selected: K,
                             applicationStream: A,
                             premiumSince: null == X ? null : new Date(X),
@@ -223,7 +223,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                             isOwner: U,
                             nameplate: q,
                             onClick: (e) => {
-                                e.shiftKey ? null == z || z() : Q((e) => !e);
+                                e.shiftKey ? null == V || V() : Q((e) => !e);
                             },
                             onMouseDown: (e) => {
                                 K ? e.stopPropagation() : null == i || i(e);
@@ -237,24 +237,24 @@ let W = U.ZP.getEnableHardwareAcceleration(),
     }),
     K = i.memo(function (e) {
         let { id: t, label: n, count: i, guildId: l } = e,
-            a = (0, O.p9)({
+            a = (0, x.p9)({
                 roleId: t,
                 guildId: l,
                 size: 16,
             });
         return t === H.Skl.UNKNOWN
             ? (0, r.jsx)("div", {
-                  className: z.membersGroup,
-                  children: (0, r.jsx)("div", { className: z.memberGroupsPlaceholder }),
+                  className: V.membersGroup,
+                  children: (0, r.jsx)("div", { className: V.memberGroupsPlaceholder }),
               })
             : (0, r.jsxs)(_.Z, {
-                  className: z.membersGroup,
+                  className: V.membersGroup,
                   "aria-label": F.intl.formatToPlainString(F.t.UaqbkZ, {
                       title: n,
                       count: i,
                   }),
                   children: [
-                      null != a ? (0, r.jsx)(j.Z, V({ className: z.roleIcon }, a)) : null,
+                      null != a ? (0, r.jsx)(j.Z, z({ className: V.roleIcon }, a)) : null,
                       (0, r.jsxs)("span", {
                           "aria-hidden": !0,
                           children: [n, " \u2014 ", i],
@@ -268,12 +268,12 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)("div", { className: B.divider }),
-                      (0, r.jsxs)(h.Text, {
+                      (0, r.jsxs)(p.Text, {
                           variant: "text-xs/bold",
                           color: "header-secondary",
                           className: B.private,
                           children: [
-                              (0, r.jsx)(h.mBM, {
+                              (0, r.jsx)(p.mBM, {
                                   size: "xxs",
                                   color: "currentColor",
                               }),
@@ -281,7 +281,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                               F.intl.string(F.t.BTLTAg),
                           ],
                       }),
-                      (0, r.jsx)(h.Text, {
+                      (0, r.jsx)(p.Text, {
                           variant: "text-sm/normal",
                           color: "header-secondary",
                           className: B.instructions,
@@ -298,7 +298,7 @@ function X(e) {
         u = (0, C.D)(t.id, n),
         f = u.filter((e) => e.userIds.length > 0).reverse()[0],
         { navigator: g, listRef: _ } = (function (e, t) {
-            let n = (0, p.e7)([m.Z], () => m.Z.keyboardModeEnabled),
+            let n = (0, h.e7)([m.Z], () => m.Z.keyboardModeEnabled),
                 r = i.useRef(null),
                 l = i.useCallback(
                     (e, n) => {
@@ -368,22 +368,22 @@ function X(e) {
         j)
     )
         return (0, r.jsx)(J, { channel: t });
-    let x = o().omit(g.containerProps, ["ref"]),
-        O = M.iJ(n);
+    let O = o().omit(g.containerProps, ["ref"]),
+        x = M.iJ(n);
     return (0, r.jsx)(y.Gt, {
         value: s,
         children: (0, r.jsx)(c.bG, {
             navigator: g,
-            children: (0, r.jsx)(h.Wdt, {
+            children: (0, r.jsx)(p.Wdt, {
                 children: (e) =>
                     (0, r.jsx)("div", {
-                        className: a()(z.membersWrap, z.hiddenMembers, B.container),
+                        className: a()(V.membersWrap, V.hiddenMembers, B.container),
                         children: (0, r.jsx)(
-                            h.aVo,
-                            V(
+                            p.aVo,
+                            z(
                                 {
                                     ref: _,
-                                    className: z.members,
+                                    className: V.members,
                                     paddingTop: 0,
                                     sectionHeight: 40,
                                     renderSection: (e) => {
@@ -410,7 +410,7 @@ function X(e) {
                                                 channel: t,
                                                 sectionId: a,
                                                 userId: l[i],
-                                                guildOwnerId: O,
+                                                guildOwnerId: x,
                                             },
                                             l[i],
                                         );
@@ -423,7 +423,7 @@ function X(e) {
                                     sections: u.map((e) => e.userIds.length),
                                     fade: !0,
                                 },
-                                x,
+                                O,
                                 e,
                             ),
                             l,
@@ -436,9 +436,9 @@ function X(e) {
 function J(e) {
     let { channel: t } = e;
     return (0, r.jsxs)("div", {
-        className: a()(z.membersWrap, z.hiddenMembers, z.members, B.emptyState),
+        className: a()(V.membersWrap, V.hiddenMembers, V.members, B.emptyState),
         children: [
-            (0, r.jsx)(h.Text, {
+            (0, r.jsx)(p.Text, {
                 className: B.emptyStateHeader,
                 variant: "text-xs/bold",
                 color: "interactive-normal",
@@ -449,7 +449,7 @@ function J(e) {
                 children: [
                     (0, r.jsx)("div", {
                         className: B.emptyStateIcon,
-                        children: (0, r.jsx)(h.BFJ, {
+                        children: (0, r.jsx)(p.BFJ, {
                             size: "lg",
                             color: "currentColor",
                         }),
@@ -457,11 +457,11 @@ function J(e) {
                     (0, r.jsx)(A.Z, { className: B.emptyStateStars }),
                 ],
             }),
-            (0, r.jsx)(h.X6q, {
+            (0, r.jsx)(p.Heading, {
                 variant: "heading-md/semibold",
                 children: t.isForumPost() ? F.intl.string(F.t.p0UgNT) : F.intl.string(F.t["9/n5v7"]),
             }),
-            (0, r.jsx)(h.Text, {
+            (0, r.jsx)(p.Text, {
                 className: B.emptyStateSubtext,
                 variant: "text-sm/normal",
                 color: "header-secondary",

@@ -51,7 +51,7 @@ function x(e) {
                   color: "header-primary",
                   children: S.intl.string(S.t.nTI2mZ),
               })
-            : (0, l.jsx)(s.X6q, {
+            : (0, l.jsx)(s.Heading, {
                   variant: "heading-md/semibold",
                   children: S.intl.string(S.t.g1OQtr),
               }),
@@ -162,7 +162,7 @@ function _() {
                           (0, l.jsxs)("div", {
                               className: E.upsellHeaderText,
                               children: [
-                                  (0, l.jsx)(s.X6q, {
+                                  (0, l.jsx)(s.Heading, {
                                       variant: "heading-xl/semibold",
                                       children: S.intl.string(S.t.GnKOAw),
                                   }),
@@ -174,7 +174,7 @@ function _() {
                           }),
                           (0, l.jsx)("div", {
                               className: E.upsellButtons,
-                              children: (0, l.jsx)(s.zxk, {
+                              children: (0, l.jsx)(s.Button, {
                                   variant: "primary",
                                   text: S.intl.string(S.t.RzWDqa),
                                   onClick: function () {
@@ -253,7 +253,7 @@ function _() {
                                   (0, l.jsxs)("div", {
                                       className: E.valueText,
                                       children: [
-                                          (0, l.jsx)(s.X6q, {
+                                          (0, l.jsx)(s.Heading, {
                                               variant: "heading-md/semibold",
                                               children: S.intl.string(S.t.Z7kqKS),
                                           }),
@@ -271,7 +271,7 @@ function _() {
                                   (0, l.jsxs)("div", {
                                       className: E.valueText,
                                       children: [
-                                          (0, l.jsx)(s.X6q, {
+                                          (0, l.jsx)(s.Heading, {
                                               variant: "heading-md/semibold",
                                               children: S.intl.string(S.t.O4jYEh),
                                           }),
@@ -394,7 +394,7 @@ function _() {
                                   (0, l.jsxs)("div", {
                                       className: E.valueText,
                                       children: [
-                                          (0, l.jsx)(s.X6q, {
+                                          (0, l.jsx)(s.Heading, {
                                               variant: "heading-md/semibold",
                                               children: S.intl.string(S.t["3T9aHB"]),
                                           }),

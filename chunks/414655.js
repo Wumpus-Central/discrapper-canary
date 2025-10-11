@@ -114,7 +114,7 @@ function S(e) {
                         (0, r.jsxs)("div", {
                             className: y.emptyStateText,
                             children: [
-                                (0, r.jsx)(s.X6q, {
+                                (0, r.jsx)(s.Heading, {
                                     variant: "heading-md/medium",
                                     color: "header-primary",
                                     children: v.intl.string(v.t.HGnLLS),
@@ -127,7 +127,7 @@ function S(e) {
                             ],
                         }),
                         j &&
-                            (0, r.jsx)(s.zxk, {
+                            (0, r.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 icon: s.EOn,
@@ -213,7 +213,7 @@ function S(e) {
                                 ? (0, r.jsxs)("div", {
                                       className: y.headerActions,
                                       children: [
-                                          (0, r.jsx)(s.zxk, {
+                                          (0, r.jsx)(s.Button, {
                                               variant: "secondary",
                                               size: "sm",
                                               icon: s.qJs,
@@ -227,7 +227,7 @@ function S(e) {
                                           }),
                                       ],
                                   })
-                                : (0, r.jsx)(s.zxk, {
+                                : (0, r.jsx)(s.Button, {
                                       variant: "secondary",
                                       size: "sm",
                                       icon: s.EOn,

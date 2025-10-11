@@ -46,7 +46,7 @@ function I(t) {
                             className: E.header,
                             separator: !1,
                             children: [
-                                (0, i.jsx)(s.X6q, {
+                                (0, i.jsx)(s.Heading, {
                                     variant: "heading-md/semibold",
                                     children: x.intl.string(x.t.YBGjsr),
                                 }),

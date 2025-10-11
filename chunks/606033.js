@@ -15,9 +15,9 @@ var r = n(951288),
     m = n(982538);
 let b = function (e) {
     var t, n, b;
-    let { questId: _, setQuestId: O, quest: E, refreshQuest: y } = e,
-        [v, I] = i.useState(!1),
-        [S, C] = i.useState(!1),
+    let { questId: _, setQuestId: O, quest: E, refreshQuest: v } = e,
+        [y, I] = i.useState(!1),
+        [C, S] = i.useState(!1),
         T = i.useRef(null),
         N = (0, u.MP)(),
         j = (0, l.e7)([d.Z], () => (null != _ ? d.Z.getFetchQuestPreviewError(_) : null), [_]),
@@ -136,7 +136,7 @@ let b = function (e) {
                                             ),
                                     ),
                                     (0, r.jsx)(a.hU, {
-                                        onClick: y,
+                                        onClick: v,
                                         "aria-label": g.intl.string(g.t.wzzjk5),
                                         icon: a.DuK,
                                         loading: P,
@@ -151,34 +151,34 @@ let b = function (e) {
                 null != E &&
                 (0, r.jsx)("div", {
                     className: m.controlsSection,
-                    children: (0, r.jsxs)(a.hE2, {
+                    children: (0, r.jsxs)(a.ButtonGroup, {
                         className: m.controlButtons,
                         children: [
-                            (0, r.jsx)(a.zxk, {
+                            (0, r.jsx)(a.Button, {
                                 onClick: A,
-                                disabled: v,
-                                loading: v,
+                                disabled: y,
+                                loading: y,
                                 variant: "secondary",
                                 text: g.intl.string(g.t.jQEfRU),
                             }),
-                            (0, r.jsx)(a.zxk, {
+                            (0, r.jsx)(a.Button, {
                                 onClick: Z,
-                                disabled: v,
-                                loading: v,
+                                disabled: y,
+                                loading: y,
                                 variant: "secondary",
                                 text: g.intl.string(g.t.taqkwM),
                             }),
-                            (0, r.jsx)(a.zxk, {
+                            (0, r.jsx)(a.Button, {
                                 onClick: w,
-                                disabled: v,
-                                loading: v,
+                                disabled: y,
+                                loading: y,
                                 variant: "secondary",
                                 text: g.intl.string(g.t.cKSLr6),
                             }),
                             (0, r.jsx)(a.yRy, {
                                 targetElementRef: T,
-                                shouldShow: S,
-                                onRequestClose: () => C(!1),
+                                shouldShow: C,
+                                onRequestClose: () => S(!1),
                                 position: "bottom",
                                 align: "center",
                                 renderPopout: () =>
@@ -195,7 +195,7 @@ let b = function (e) {
                                 children: () =>
                                     (0, r.jsx)(a.hU, {
                                         buttonRef: T,
-                                        onClick: () => C(!S),
+                                        onClick: () => S(!C),
                                         "aria-label": g.intl.string(g.t.rNGQfH),
                                         icon: a.TIy,
                                         variant: "secondary",

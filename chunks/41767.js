@@ -1,19 +1,19 @@
-e.d(n, { default: () => A }), e(388685);
+e.d(n, { default: () => j }), e(388685);
 var l = e(951288),
     r = e(647438),
     i = e(793030),
-    u = e(481060),
-    a = e(556012),
+    a = e(481060),
+    u = e(556012),
     s = e(590433),
     c = e(388032);
-let j = (t) => {
+let o = (t) => {
     var n;
     let { duration: e, onSelectDuration: r } = t,
         i = (0, s.tr)(),
-        a = i.find((t) => t.value === e);
-    return (0, l.jsx)(u.VcW, {
+        u = i.find((t) => t.value === e);
+    return (0, l.jsx)(a.VcW, {
         required: !0,
-        value: null != (n = null == a ? void 0 : a.value) ? n : s.UK.DURATION_60_SEC,
+        value: null != (n = null == u ? void 0 : u.value) ? n : s.DisableCommunicationDuration.DURATION_60_SEC,
         options: i,
         onChange: (t) => {
             let n = i.find((n) => n.value === t);
@@ -22,38 +22,38 @@ let j = (t) => {
         placeholder: c.intl.string(c.t.k7yo6u),
     });
 };
-function A(t) {
-    let { action: n, triggerType: e, isEdit: u, onUpdateDuration: A, onClose: E, transitionState: d } = t,
-        [o, _] = r.useState(() =>
+function j(t) {
+    let { action: n, triggerType: e, isEdit: a, onUpdateDuration: j, onClose: A, transitionState: E } = t,
+        [d, _] = r.useState(() =>
             null != n.metadata.durationSeconds && n.metadata.durationSeconds > 0
                 ? n.metadata.durationSeconds
-                : s.UK.DURATION_60_SEC,
+                : s.DisableCommunicationDuration.DURATION_60_SEC,
         ),
-        N = (0, a.c)(n.type, n, e);
+        N = (0, u.c)(n.type, n, e);
     if (null == N) return null;
     let { headerText: S } = N;
     return (0, l.jsx)(i.Modal, {
-        onClose: E,
-        transitionState: d,
+        onClose: A,
+        transitionState: E,
         title: S,
         subtitle: c.intl.string(c.t.DWGBAg),
         actions: [
             {
                 text: c.intl.string(c.t["ETE/oK"]),
                 onClick: () => {
-                    E();
+                    A();
                 },
                 variant: "secondary",
             },
             {
-                text: u ? c.intl.string(c.t.bt75u7) : c.intl.string(c.t.R3BPHx),
+                text: a ? c.intl.string(c.t.bt75u7) : c.intl.string(c.t.R3BPHx),
                 onClick: () => {
-                    A(o);
+                    j(d);
                 },
             },
         ],
-        children: (0, l.jsx)(j, {
-            duration: o,
+        children: (0, l.jsx)(o, {
+            duration: d,
             onSelectDuration: (t) => {
                 _(t);
             },

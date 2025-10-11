@@ -12,8 +12,8 @@ var r = n(951288),
     f = n(823379),
     p = n(45966),
     h = n(637853),
-    x = n(968644),
-    g = n(104265),
+    g = n(968644),
+    x = n(104265),
     v = n(588632),
     j = n(290511),
     _ = n(981631),
@@ -90,7 +90,7 @@ function E(e) {
             currentPrompt: u,
             selectOption: m,
             gotoPrevPrompt: f,
-            gotoNextPrompt: g,
+            gotoNextPrompt: x,
             completeOnboarding: j,
         } = e,
         _ = (0, i.Wu)([p.Z], () => p.Z.getOnboardingResponsesForPrompt(n.id, u.id)),
@@ -99,7 +99,7 @@ function E(e) {
         E = (0, h.L6)(P),
         Z = (0, h.dX)(P),
         I = 0 === _.length,
-        { helpText: w, helpTextAdditional: T } = (0, x.Z)({
+        { helpText: w, helpTextAdditional: T } = (0, g.Z)({
             guild: n,
             prompt: u,
             selectedRoleIds: E,
@@ -107,8 +107,8 @@ function E(e) {
             itemHook: C,
         }),
         D = (0, d.Z)(n.id, 1000),
-        k = u.options.map((e) => y({ value: e.id }, e)),
-        S = u.options.filter((e) => _.includes(e.id)).map((e) => e.id);
+        S = u.options.map((e) => y({ value: e.id }, e)),
+        B = u.options.filter((e) => _.includes(e.id)).map((e) => e.id);
     return (0, r.jsx)("div", {
         className: O.prompt,
         children: (0, r.jsxs)("div", {
@@ -146,7 +146,7 @@ function E(e) {
                                     : null,
                             ],
                         }),
-                        (0, r.jsx)(o.X6q, {
+                        (0, r.jsx)(o.Heading, {
                             className: O.title,
                             variant: "heading-xl/semibold",
                             color: "header-primary",
@@ -154,8 +154,8 @@ function E(e) {
                             children: u.title,
                         }),
                         (0, r.jsx)(v.Z, {
-                            options: k,
-                            value: S,
+                            options: S,
+                            value: B,
                             onChange: (e) => {
                                 let t = e.find((e) => !_.includes(e.id)),
                                     n = e.map((e) => e.id);
@@ -180,7 +180,7 @@ function E(e) {
                             className: O.leftButtons,
                             children:
                                 l > 0 &&
-                                (0, r.jsx)(o.zxk, {
+                                (0, r.jsx)(o.Button, {
                                     variant: "secondary",
                                     size: "md",
                                     text: b.intl.string(b.t["13/7kZ"]),
@@ -201,7 +201,7 @@ function E(e) {
                                 (0, r.jsx)(a.u, {
                                     asContainer: !0,
                                     text: N ? b.intl.string(b.t.dA1dSU) : null,
-                                    children: (0, r.jsx)(o.zxk, {
+                                    children: (0, r.jsx)(o.Button, {
                                         variant: I ? "secondary" : "primary",
                                         size: "md",
                                         text: s
@@ -209,7 +209,7 @@ function E(e) {
                                             : I
                                               ? b.intl.string(b.t["5WxrcX"])
                                               : b.intl.string(b.t.PDTjLC),
-                                        onClick: () => (s ? j() : g(_.length)),
+                                        onClick: () => (s ? j() : x(_.length)),
                                         disabled: N,
                                         icon: s ? void 0 : o.d4D,
                                         iconPosition: "end",
@@ -242,7 +242,7 @@ function Z(e) {
         N = (0, h.L6)(y),
         P = (0, h.dX)(y),
         E = 0 === j.length,
-        { helpText: Z, helpTextAdditional: I } = (0, x.Z)({
+        { helpText: Z, helpTextAdditional: I } = (0, g.Z)({
             guild: n,
             prompt: u,
             selectedRoleIds: N,
@@ -286,7 +286,7 @@ function Z(e) {
                                     : null,
                             ],
                         }),
-                        (0, r.jsx)(o.X6q, {
+                        (0, r.jsx)(o.Heading, {
                             className: O.title,
                             variant: "heading-xl/semibold",
                             color: "header-primary",
@@ -297,7 +297,7 @@ function Z(e) {
                             className: O.promptOptions,
                             children: u.options.map((e) =>
                                 (0, r.jsx)(
-                                    g.Z,
+                                    x.Z,
                                     {
                                         guildId: n.id,
                                         option: e,
@@ -317,7 +317,7 @@ function Z(e) {
                             className: O.leftButtons,
                             children:
                                 l > 0 &&
-                                (0, r.jsx)(o.zxk, {
+                                (0, r.jsx)(o.Button, {
                                     variant: "secondary",
                                     size: "md",
                                     text: b.intl.string(b.t["13/7kZ"]),
@@ -338,7 +338,7 @@ function Z(e) {
                                 (0, r.jsx)(a.u, {
                                     asContainer: !0,
                                     text: _ ? b.intl.string(b.t.dA1dSU) : null,
-                                    children: (0, r.jsx)(o.zxk, {
+                                    children: (0, r.jsx)(o.Button, {
                                         variant: E ? "secondary" : "primary",
                                         size: "md",
                                         text: s
@@ -369,19 +369,19 @@ function I(e) {
             completeOnboarding: d,
             setCurrentStep: p,
             headerId: h,
-            disableTracking: x,
+            disableTracking: g,
         } = e,
-        g = (0, i.e7)([u.Z], () => u.Z.getRulesPrompt(t.id));
+        x = (0, i.e7)([u.Z], () => u.Z.getRulesPrompt(t.id));
     l.useEffect(() => {
         t.features.has(_.oNc.MEMBER_VERIFICATION_GATE_ENABLED) &&
             !t.features.has(_.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) &&
             c.ZP.fetchVerificationForm(t.id);
     }, [t]);
     let v = n[a],
-        b = a + 1 >= n.length && !P(t, g),
+        b = a + 1 >= n.length && !P(t, x),
         O = n[0].required;
     l.useEffect(() => {
-        x ||
+        g ||
             m.default.track(
                 _.rMx.GUILD_ONBOARDING_STEP_VIEWED,
                 N(y({}, (0, s.hH)(t.id)), {
@@ -389,9 +389,9 @@ function I(e) {
                     required: O,
                 }),
             );
-    }, [t.id, O, x]);
+    }, [t.id, O, g]);
     let C = (e) => {
-            !x &&
+            !g &&
                 (m.default.track(
                     _.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
                     N(y({}, (0, s.hH)(t.id)), {
@@ -411,10 +411,10 @@ function I(e) {
                             required: n[a + 1].required,
                         }),
                     )),
-                a + 1 < n.length ? p(a + 1) : P(t, g) && p("rules");
+                a + 1 < n.length ? p(a + 1) : P(t, x) && p("rules");
         },
         I = (e) => {
-            !x &&
+            !g &&
                 (m.default.track(
                     _.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
                     N(y({}, (0, s.hH)(t.id)), {

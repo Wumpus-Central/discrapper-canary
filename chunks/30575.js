@@ -5,19 +5,19 @@ var a = n(951288),
     r = n(481060),
     o = n(493773),
     c = n(626135),
-    s = n(326279),
-    d = n(533583),
+    d = n(326279),
+    s = n(533583),
     u = n(981631),
     m = n(388032),
     N = n(193183);
 function T(e) {
     switch (e) {
-        case d.Q.INPUT:
-            return d.a.INPUT;
-        case d.Q.OUTPUT:
-            return d.a.OUTPUT;
-        case d.Q.INPUT_AND_OUTPUT:
-            return d.a.INPUT_AND_OUTPUT;
+        case s.Q.INPUT:
+            return s.a.INPUT;
+        case s.Q.OUTPUT:
+            return s.a.OUTPUT;
+        case s.Q.INPUT_AND_OUTPUT:
+            return s.a.INPUT_AND_OUTPUT;
         default:
             return null;
     }
@@ -26,12 +26,12 @@ function p(e) {
     let t,
         { device: n, certifiedDeviceMetadata: p, onClose: f, transitionState: v } = e,
         [U, h] = (0, i.useState)(null != n ? T(n.type) : null),
-        x = (0, i.useRef)(!1);
-    function _() {
-        (x.current = !0), s.Wz(n.displayName);
+        _ = (0, i.useRef)(!1);
+    function x() {
+        (_.current = !0), d.Wz(n.displayName);
     }
     (0, o.zq)(() => {
-        x.current || _();
+        _.current || x();
     }),
         (0, i.useEffect)(() => {
             c.default.track(u.rMx.OPEN_MODAL, {
@@ -41,7 +41,7 @@ function p(e) {
         }, [n.displayName, p]);
     let D = null != p ? m.intl.string(m.t.kiqvHR) : m.intl.string(m.t.AbnGIy);
     switch (n.type) {
-        case d.Q.INPUT:
+        case s.Q.INPUT:
             t =
                 null != p
                     ? m.intl.format(m.t.NqNqy8, {
@@ -50,7 +50,7 @@ function p(e) {
                       })
                     : m.intl.format(m.t.stSaRk, { name: n.displayName });
             break;
-        case d.Q.OUTPUT:
+        case s.Q.OUTPUT:
             t =
                 null != p
                     ? m.intl.format(m.t.uPgqIC, {
@@ -72,12 +72,12 @@ function p(e) {
                         value: (function (e) {
                             if (null == e) return null;
                             switch (e) {
-                                case d.a.INPUT:
-                                    return d.Q.INPUT;
-                                case d.a.OUTPUT:
-                                    return d.Q.OUTPUT;
-                                case d.a.INPUT_AND_OUTPUT:
-                                    return d.Q.INPUT_AND_OUTPUT;
+                                case s.a.INPUT:
+                                    return s.Q.INPUT;
+                                case s.a.OUTPUT:
+                                    return s.Q.OUTPUT;
+                                case s.a.INPUT_AND_OUTPUT:
+                                    return s.Q.INPUT_AND_OUTPUT;
                                 default:
                                     return null;
                             }
@@ -86,15 +86,15 @@ function p(e) {
                         options: [
                             {
                                 name: m.intl.string(m.t.vhxqwc),
-                                value: d.Q.INPUT_AND_OUTPUT,
+                                value: s.Q.INPUT_AND_OUTPUT,
                             },
                             {
                                 name: m.intl.string(m.t["Kqs9+P"]),
-                                value: d.Q.INPUT,
+                                value: s.Q.INPUT,
                             },
                             {
                                 name: m.intl.string(m.t.GGlM3d),
-                                value: d.Q.OUTPUT,
+                                value: s.Q.OUTPUT,
                             },
                         ],
                     }),
@@ -108,7 +108,7 @@ function p(e) {
         children: [
             (0, a.jsx)(r.xBx, {
                 separator: !1,
-                children: (0, a.jsx)(r.X6q, {
+                children: (0, a.jsx)(r.Heading, {
                     variant: "heading-lg/semibold",
                     children: D,
                 }),
@@ -126,8 +126,8 @@ function p(e) {
                                     look: l.zx.Looks.LINK,
                                     color: l.zx.Colors.LINK,
                                     onClick: () => {
-                                        (x.current = !0),
-                                            s.Gl(n.displayName),
+                                        (_.current = !0),
+                                            d.Gl(n.displayName),
                                             c.default.track(u.rMx.MODAL_DISMISSED, {
                                                 type:
                                                     null != p
@@ -153,20 +153,20 @@ function p(e) {
                         (0, a.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
                             className: N.cancelButton,
-                            children: (0, a.jsx)(r.zxk, {
+                            children: (0, a.jsx)(r.Button, {
                                 variant: "secondary",
                                 text: m.intl.string(m.t.vPBgq6),
                                 onClick: () => {
-                                    _(), f();
+                                    x(), f();
                                 },
                             }),
                         }),
-                        (0, a.jsx)(r.zxk, {
+                        (0, a.jsx)(r.Button, {
                             variant: "primary",
                             text: m.intl.string(m.t.ydkoDQ),
                             onClick: () => {
-                                (x.current = !0),
-                                    null != U && s.mo(n.displayName, U, "New Audio Device Detected Modal"),
+                                (_.current = !0),
+                                    null != U && d.mo(n.displayName, U, "New Audio Device Detected Modal"),
                                     f();
                             },
                         }),

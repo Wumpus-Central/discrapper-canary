@@ -1,27 +1,27 @@
-r.d(t, { Z: () => v }), r(388685), r(704826), r(35282);
-var n = r(951288),
-    i = r(647438),
-    o = r(120356),
-    a = r.n(o),
-    s = r(137317),
-    l = r(399606),
-    c = r(481060),
-    u = r(607070),
-    d = r(745510),
-    m = r(899007),
-    g = r(867176),
-    f = r(51144),
-    E = r(346585),
-    p = r(81259),
-    y = r(119848),
-    O = r(801461),
-    h = r(671955),
-    b = r(388032),
-    S = r(631936),
-    _ = r(733469);
+n.d(t, { Z: () => v }), n(388685), n(704826), n(35282);
+var r = n(951288),
+    i = n(647438),
+    o = n(120356),
+    a = n.n(o),
+    s = n(137317),
+    l = n(399606),
+    c = n(481060),
+    u = n(607070),
+    d = n(745510),
+    m = n(899007),
+    g = n(867176),
+    f = n(51144),
+    E = n(346585),
+    p = n(81259),
+    y = n(119848),
+    O = n(801461),
+    h = n(671955),
+    b = n(388032),
+    S = n(631936),
+    _ = n(733469);
 let v = i.forwardRef(function (e, t) {
     let {
-            user: r,
+            user: n,
             error: o,
             formValues: v,
             displayProfile: j,
@@ -36,8 +36,8 @@ let v = i.forwardRef(function (e, t) {
         { username: R, globalName: w } = v,
         M = i.useRef(null),
         L = i.useRef(null),
-        k = i.useMemo(() => r.merge({ discriminator: "0000" }), [r]),
-        [D, Z] = (0, c.q_F)(() => ({
+        D = i.useMemo(() => n.merge({ discriminator: "0000" }), [n]),
+        [k, Z] = (0, c.q_F)(() => ({
             opacity: 0,
             y: 5,
         }));
@@ -72,7 +72,7 @@ let v = i.forwardRef(function (e, t) {
         i.useEffect(() => {
             !U &&
                 I === O.Wq.PREVIEW &&
-                r.username.includes(O.nA) &&
+                n.username.includes(O.nA) &&
                 (G(
                     window.innerWidth / 2 + 150,
                     0,
@@ -109,85 +109,85 @@ let v = i.forwardRef(function (e, t) {
                     },
                     15,
                 ));
-        }, [G, I, r, U]),
-        (0, n.jsxs)("div", {
+        }, [G, I, n, U]),
+        (0, r.jsxs)("div", {
             className: a()(S.userCardContainer, { [S.shinyCard]: I === O.Wq.PREVIEW }),
             children: [
-                (0, n.jsxs)("div", {
+                (0, r.jsxs)("div", {
                     className: S.profileCard,
                     children: [
-                        (0, n.jsx)(g.Z, {
-                            user: k,
+                        (0, r.jsx)(g.Z, {
+                            user: D,
                             displayProfile: j,
                             themeType: h.l.SIDEBAR,
                         }),
-                        (0, n.jsx)(m.Z, {
-                            user: k,
+                        (0, r.jsx)(m.Z, {
+                            user: D,
                             displayProfile: j,
                             themeType: h.l.SIDEBAR,
                             className: S.avatar,
                         }),
                         I === O.Wq.PREVIEW &&
                             null != W &&
-                            (0, n.jsx)("div", {
+                            (0, r.jsx)("div", {
                                 className: S.legacyUsernameBadgeContainer,
-                                children: (0, n.jsx)(c.ua7, {
+                                children: (0, r.jsx)(c.ua7, {
                                     "data-migration-pending": !0,
                                     position: "top",
                                     text: b.intl.formatToPlainString(b.t.bhrgkJ, { legacyUsername: W }),
                                     spacing: 12,
                                     children: (e) => {
-                                        var t, r;
-                                        return (0, n.jsx)(
-                                            c.eee,
+                                        var t, n;
+                                        return (0, r.jsx)(
+                                            c.Anchor,
                                             ((t = (function (e) {
                                                 for (var t = 1; t < arguments.length; t++) {
-                                                    var r = null != arguments[t] ? arguments[t] : {},
-                                                        n = Object.keys(r);
+                                                    var n = null != arguments[t] ? arguments[t] : {},
+                                                        r = Object.keys(n);
                                                     "function" == typeof Object.getOwnPropertySymbols &&
-                                                        (n = n.concat(
-                                                            Object.getOwnPropertySymbols(r).filter(function (e) {
-                                                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                                        (r = r.concat(
+                                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                                             }),
                                                         )),
-                                                        n.forEach(function (t) {
-                                                            var n;
-                                                            (n = r[t]),
+                                                        r.forEach(function (t) {
+                                                            var r;
+                                                            (r = n[t]),
                                                                 t in e
                                                                     ? Object.defineProperty(e, t, {
-                                                                          value: n,
+                                                                          value: r,
                                                                           enumerable: !0,
                                                                           configurable: !0,
                                                                           writable: !0,
                                                                       })
-                                                                    : (e[t] = n);
+                                                                    : (e[t] = r);
                                                         });
                                                 }
                                                 return e;
                                             })({}, e)),
-                                            (r = r =
+                                            (n = n =
                                                 {
                                                     onClick: e.onClick,
-                                                    children: (0, n.jsx)("img", {
+                                                    children: (0, r.jsx)("img", {
                                                         className: S.legacyUsernameBadge,
                                                         alt: "",
                                                         src: _,
                                                     }),
                                                 }),
                                             Object.getOwnPropertyDescriptors
-                                                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                                                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                                                 : (function (e, t) {
-                                                      var r = Object.keys(e);
+                                                      var n = Object.keys(e);
                                                       if (Object.getOwnPropertySymbols) {
-                                                          var n = Object.getOwnPropertySymbols(e);
-                                                          r.push.apply(r, n);
+                                                          var r = Object.getOwnPropertySymbols(e);
+                                                          n.push.apply(n, r);
                                                       }
-                                                      return r;
-                                                  })(Object(r)).forEach(function (e) {
+                                                      return n;
+                                                  })(Object(n)).forEach(function (e) {
                                                       Object.defineProperty(
                                                           t,
                                                           e,
-                                                          Object.getOwnPropertyDescriptor(r, e),
+                                                          Object.getOwnPropertyDescriptor(n, e),
                                                       );
                                                   }),
                                             t),
@@ -198,32 +198,32 @@ let v = i.forwardRef(function (e, t) {
                     ],
                 }),
                 I !== O.Wq.PREVIEW &&
-                    (0, n.jsxs)(s.animated.div, {
+                    (0, r.jsxs)(s.animated.div, {
                         style: {
-                            opacity: D.opacity,
-                            y: D.y,
+                            opacity: k.opacity,
+                            y: k.y,
                         },
                         className: S.inputContainer,
                         children: [
-                            (0, n.jsxs)(c.Kqy, {
+                            (0, r.jsxs)(c.Kqy, {
                                 gap: 16,
                                 children: [
                                     I === O.Wq.EDIT_DISPLAY_NAME &&
-                                        (0, n.jsx)(c.oil, {
+                                        (0, r.jsx)(c.oil, {
                                             label: b.intl.string(b.t["9AjdkJ"]),
                                             value: null != w ? w : "",
-                                            placeholder: f.ZP.getName(r),
+                                            placeholder: f.ZP.getName(n),
                                             maxLength: O.hy,
                                             onChange: (e) => N({ globalName: e }),
                                             onFocus: x,
                                             inputRef: L,
                                         }),
                                     (I === O.Wq.EDIT_USERNAME || I === O.Wq.SUGGESTION) &&
-                                        (0, n.jsx)(c.oil, {
+                                        (0, r.jsx)(c.oil, {
                                             label: b.intl.string(b.t.IEpCBQ),
                                             leading: "@",
                                             value: null != R ? R : "",
-                                            placeholder: r.username,
+                                            placeholder: n.username,
                                             maxLength: O.hy,
                                             onChange: (e) => N({ username: e.replace("@", "") }),
                                             onFocus: T,
@@ -231,28 +231,28 @@ let v = i.forwardRef(function (e, t) {
                                         }),
                                 ],
                             }),
-                            (0, n.jsx)("div", {
+                            (0, r.jsx)("div", {
                                 className: S.messageContainer,
                                 children: (() => {
                                     if (null != o)
-                                        return (0, n.jsx)(p.Z, {
+                                        return (0, r.jsx)(p.Z, {
                                             type: "error",
                                             children: o,
                                         });
                                     if (null != P) {
                                         if (I !== O.Wq.SUGGESTION)
-                                            return (0, n.jsx)(c.Text, {
+                                            return (0, r.jsx)(c.Text, {
                                                 variant: "text-sm/normal",
                                                 children: P,
                                             });
                                         else if (!C)
-                                            return (0, n.jsx)(p.Z, {
+                                            return (0, r.jsx)(p.Z, {
                                                 type: "success",
                                                 children: P,
                                             });
                                     }
                                     return null == P && null == o && (I === O.Wq.EDIT_USERNAME || I === O.Wq.SUGGESTION)
-                                        ? (0, n.jsx)(y.Z, {
+                                        ? (0, r.jsx)(y.Z, {
                                               username: R,
                                               oneClickFlow: A,
                                           })
@@ -262,24 +262,24 @@ let v = i.forwardRef(function (e, t) {
                         ],
                     }),
                 I === O.Wq.PREVIEW &&
-                    (0, n.jsxs)("div", {
+                    (0, r.jsxs)("div", {
                         className: S.userCard,
                         children: [
-                            (0, n.jsx)(c.X6q, {
+                            (0, r.jsx)(c.Heading, {
                                 color: "header-primary",
                                 variant: "heading-xl/bold",
-                                children: f.ZP.getName(r),
+                                children: f.ZP.getName(n),
                             }),
-                            (0, n.jsx)(c.X6q, {
+                            (0, r.jsx)(c.Heading, {
                                 color: "text-default",
                                 variant: "heading-lg/medium",
-                                children: r.username,
+                                children: n.username,
                             }),
-                            (0, n.jsx)(c.Text, {
+                            (0, r.jsx)(c.Text, {
                                 className: S.memberText,
                                 color: "text-muted",
                                 variant: "text-sm/medium",
-                                children: b.intl.format(b.t["9rfonp"], { date: (0, E.K9)(r.id) }),
+                                children: b.intl.format(b.t["9rfonp"], { date: (0, E.K9)(n.id) }),
                             }),
                         ],
                     }),

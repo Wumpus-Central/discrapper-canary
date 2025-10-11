@@ -1,6 +1,6 @@
 n.d(t, { Z: () => d }), n(388685);
-var l = n(951288),
-    i = n(647438),
+var i = n(951288),
+    l = n(647438),
     r = n(481060),
     a = n(626135),
     o = n(827498),
@@ -9,9 +9,9 @@ var l = n(951288),
     u = n(388032);
 function d(e) {
     let { botUserId: t, applicationId: n, analyticsLocations: d } = e,
-        [p, m] = i.useState(!1),
-        f = i.useRef(null),
-        h = i.useCallback(async () => {
+        [p, m] = l.useState(!1),
+        f = l.useRef(null),
+        h = l.useCallback(async () => {
             a.default.track(c.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
                 application_id: n,
                 button_action: o._y.OPEN_APP_DM,
@@ -26,7 +26,7 @@ function d(e) {
             } catch (e) {}
             clearTimeout(f.current), m(!1);
         }, [t, n, d]);
-    return (0, l.jsx)(r.zxk, {
+    return (0, i.jsx)(r.Button, {
         type: "submit",
         size: "md",
         variant: "secondary",

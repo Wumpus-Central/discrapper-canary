@@ -9,7 +9,7 @@ function o(e) {
     return (0, r.jsxs)("div", {
         className: a.container,
         children: [
-            (0, r.jsx)(i.X6q, {
+            (0, r.jsx)(i.Heading, {
                 className: a.header,
                 variant: "text-sm/semibold",
                 children: null != n ? n : l.intl.string(l.t["k+QA9P"]),

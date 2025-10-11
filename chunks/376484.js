@@ -34,7 +34,7 @@ function p(e) {
             }),
             (0, r.jsx)("div", {
                 className: _.actions,
-                children: (0, r.jsx)(o.zxk, {
+                children: (0, r.jsx)(o.Button, {
                     variant: "secondary",
                     text: f.intl.string(f.t.zdBCIi),
                     onClick: () => {

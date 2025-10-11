@@ -160,7 +160,7 @@ let Z = (e) => {
 };
 function w(e) {
     let { guild: t } = e;
-    return (0, r.jsx)(d.X6q, {
+    return (0, r.jsx)(d.Heading, {
         variant: "text-md/semibold",
         lineClamp: 1,
         className: C.name,
@@ -217,13 +217,15 @@ function R(e) {
         y = i.useCallback(() => {
             _
                 ? (0, d.ZDy)(async () => {
-                      let { default: e } = await Promise.all([n.e("7654"), n.e("54833")]).then(n.bind(n, 560114));
+                      let { default: e } = await Promise.all([n.e("74318"), n.e("7654"), n.e("54833")]).then(
+                          n.bind(n, 560114),
+                      );
                       return (t) =>
                           (0, r.jsx)(
                               e,
                               S(E({}, t), {
                                   guild: o,
-                                  source: v.t4x.GUILD_HEADER_INVITE_BUTTON,
+                                  source: v.InstantInviteSources.GUILD_HEADER_INVITE_BUTTON,
                               }),
                           );
                   })

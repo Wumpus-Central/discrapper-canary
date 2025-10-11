@@ -36,14 +36,14 @@ var r = n(951288),
     L = n(488131),
     F = n(433355),
     D = n(592125),
-    z = n(703558),
-    H = n(607744),
+    H = n(703558),
+    z = n(607744),
     B = n(944486),
     U = n(117530),
     V = n(451478),
     G = n(459273),
-    q = n(961675),
-    W = n(883429),
+    W = n(961675),
+    q = n(883429),
     X = n(238349),
     K = n(109434),
     Y = n(456269),
@@ -164,7 +164,7 @@ function eT(e) {
             "data-item-role": t,
             children: (0, r.jsx)("div", {
                 className: ep.emptyMainCard,
-                children: (0, r.jsx)(p.X6q, {
+                children: (0, r.jsx)(p.Heading, {
                     variant: "eyebrow",
                     className: ep.archivedDivider,
                     id: ey(i),
@@ -266,8 +266,8 @@ function eO(e) {
                 }
             );
         })(t),
-        H = m.length > 0,
-        U = H || f.length > 0,
+        z = m.length > 0,
+        U = z || f.length > 0,
         V = (0, S.Z)(t),
         { tagFilter: G, tagSetting: X } = (0, K.H)(t.id);
     (0, Y.ku)(t, G, X, u);
@@ -329,7 +329,7 @@ function eO(e) {
         { containerRef: eO, containerWidth: eR } = (0, eu.Z)();
     i.useEffect(
         () => () => {
-            null != t.id && W.Z.clearForumSearch(t.id);
+            null != t.id && q.Z.clearForumSearch(t.id);
         },
         [t.id],
     ),
@@ -351,15 +351,15 @@ function eO(e) {
             let e = Math.ceil(window.innerHeight / (0, ec.KW)(eC.getWidth(eR))) * eZ;
             return y ? e : 0;
         }, [eR, eZ, y]),
-        ez = i.useMemo(() => {
+        eH = i.useMemo(() => {
             let e = Math.ceil(window.innerHeight / (0, ec.KW)(eC.getWidth(eR))) * eZ;
             return I && e_ ? e : 0;
         }, [eR, eZ, I, e_]),
-        eH = i.useMemo(() => {
+        ez = i.useMemo(() => {
             if (eo)
                 if (!et && e_) return [1, 0];
                 else if (!en) return [1, m.length + eF, 0];
-                else if (e_) return [1, x.length + ez, 0];
+                else if (e_) return [1, x.length + eH, 0];
                 else if (eL && !eA) return [1, m.length + eF, 0];
                 else return [1, m.length + eF, f.length + eD];
             if (!et && e_) return [1, 1];
@@ -367,7 +367,7 @@ function eO(e) {
             if (e_) return [1, x.length, 0, ek];
             if (eL && !eA) return [1, m.length, 0, ek];
             else return [1, m.length, f.length, ek];
-        }, [eo, e_, m.length, f.length, et, en, ek, x, eF, eD, ez, eA, eL]),
+        }, [eo, e_, m.length, f.length, et, en, ek, x, eF, eD, eH, eA, eL]),
         eB = i.useMemo(
             () =>
                 !et && e_
@@ -397,14 +397,14 @@ function eO(e) {
             [t.guild_id, t.id, eT],
         ),
         [eV, eG] = i.useState(a + s - 24),
-        eq = i.useCallback(
+        eW = i.useCallback(
             (e, n, i) =>
                 0 === e
                     ? (0, r.jsx)(
                           eM,
                           {
                               channel: t,
-                              isEmpty: !H,
+                              isEmpty: !z,
                               isSearchLoading: I,
                               numResults: null == x ? void 0 : x.length,
                               coords: n,
@@ -416,7 +416,7 @@ function eO(e) {
                                       {
                                           channel: t,
                                           hasAnyThread: U,
-                                          hasActiveThreads: H,
+                                          hasActiveThreads: z,
                                       },
                                       t.id,
                                   ),
@@ -442,9 +442,9 @@ function eO(e) {
                             },
                             "archived-missing-reading-history-perm",
                         ),
-            [e_, en, x, et, t, H, I, T, U],
+            [e_, en, x, et, t, z, I, T, U],
         ),
-        eW = (0, g.e7)([q.Z], () => q.Z.hasHidden(t.id)),
+        eq = (0, g.e7)([W.Z], () => W.Z.hasHidden(t.id)),
         eX = {
             editorHeight: a,
             isGridLayout: eo,
@@ -458,8 +458,8 @@ function eO(e) {
             let { editorHeight: n, isGridLayout: r } = eK.current,
                 i = r ? e3 : ea,
                 a = null == (e = i.current) ? void 0 : e.getScrollerState();
-            null != a && !eW && a.scrollTop > n && (null == (t = i.current) || t.scrollTo({ to: 0 }));
-        }, [eW]);
+            null != a && !eq && a.scrollTop > n && (null == (t = i.current) || t.scrollTo({ to: 0 }));
+        }, [eq]);
     let {
             updateListScrollerRef: eY,
             renderListSection: eJ,
@@ -549,20 +549,20 @@ function eO(e) {
             };
         })({
             listRef: ea,
-            hasActiveThreads: H,
+            hasActiveThreads: z,
             threadIdsBySection: eB,
             listViewCardHeights: o,
             editorHeight: a,
             editorAdditionRowHeight: s,
-            renderSectionOrItem: eq,
+            renderSectionOrItem: eW,
             goToThread: eU,
             observePostVisibilityAnalytics: es,
             isShowingSearchResult: e_,
         }),
         e3 = i.useRef(null),
         {
-            updateMasonryListScrollerRef: e6,
-            getItemKey: e8,
+            updateMasonryListScrollerRef: e8,
+            getItemKey: e6,
             renderGridSection: e1,
             renderGridItem: e4,
             getGridSectionHeight: e9,
@@ -707,8 +707,8 @@ function eO(e) {
             masonryListScrollerRef: e3,
             threadIdsBySection: eB,
             goToThread: eU,
-            renderSectionOrItem: eq,
-            hasActiveThreads: H,
+            renderSectionOrItem: eW,
+            hasActiveThreads: z,
             isShowingSearchResult: e_,
             canSearchForumPosts: et,
             canViewArchivedPosts: en,
@@ -806,7 +806,7 @@ function eO(e) {
                         u &&
                             (0, r.jsx)(b.Z, {
                                 channel: t,
-                                draftType: z.d.FirstThreadMessage,
+                                draftType: H.d.FirstThreadMessage,
                                 className: ep.uploadArea,
                                 style: {
                                     right:
@@ -836,14 +836,14 @@ function eO(e) {
                                                       null != (t = null == e ? void 0 : e.getScrollerNode())
                                                           ? t
                                                           : null),
-                                                      e6(e);
+                                                      e8(e);
                                               },
                                               itemGutter: 16,
                                               padding: 24,
                                               className: ep.grid,
                                               columns: eZ,
-                                              sections: eH,
-                                              getItemKey: e8,
+                                              sections: ez,
+                                              getItemKey: e6,
                                               getSectionHeight: e9,
                                               getItemHeight: ti,
                                               renderSection: e1,
@@ -871,7 +871,7 @@ function eO(e) {
                                                       {
                                                           ref: eY(n),
                                                           className: ep.list,
-                                                          sections: eH,
+                                                          sections: ez,
                                                           sectionHeight: e$,
                                                           rowHeight: e0,
                                                           renderRow: eQ,
@@ -924,7 +924,7 @@ function eI(e) {
 function eE(e) {
     let { channel: t } = e,
         n = i.useCallback(() => {
-            W.Z.resort(t.id);
+            q.Z.resort(t.id);
         }, [t]),
         a = (0, g.e7)([X.Z], () => X.Z.getNewThreadCount());
     return 0 === a
@@ -974,9 +974,9 @@ function eM(e) {
             };
         }, c.X),
         { tagFilter: D, layoutType: B } = (0, K.H)(s.id),
-        q = (0, ei.AF)(),
+        W = (0, ei.AF)(),
         X = (0, K.v)(),
-        J = (0, g.e7)([H.Z], () => H.Z.canChatInGuild(s.guild_id)),
+        J = (0, g.e7)([z.Z], () => z.Z.canChatInGuild(s.guild_id)),
         Q = (0, Y.r_)(s),
         ee = (0, A.cD)(s),
         [er, el] = i.useState(ee),
@@ -993,15 +993,15 @@ function eM(e) {
     }, [O, ef]);
     let e_ = i.useCallback(() => {
         o()(() => {
-            null != eh.current && q.getState().setEditorHeight(eh.current.offsetHeight);
+            null != eh.current && W.getState().setEditorHeight(eh.current.offsetHeight);
         });
-    }, [eh, q]);
+    }, [eh, W]);
     i.useLayoutEffect(e_, [e_, b, eu, L]),
         (0, G.yp)({
             event: eg.CkL.REMEASURE_TARGET,
             handler: e_,
         });
-    let eC = (0, g.e7)([U.Z], () => U.Z.getUploads(s.id, z.d.FirstThreadMessage)),
+    let eC = (0, g.e7)([U.Z], () => U.Z.getUploads(s.id, H.d.FirstThreadMessage)),
         ey = (0, Y.ql)(s),
         eT = i.useRef(null),
         ew = i.useRef(null),
@@ -1049,8 +1049,8 @@ function eM(e) {
         }),
         eL = (0, d.JA)("forum-channel-header"),
         { role: eF, onFocus: eD } = eL,
-        ez = ev(eL, ["role", "onFocus"]),
-        eH = i.useRef(null),
+        eH = ev(eL, ["role", "onFocus"]),
+        ez = i.useRef(null),
         eB = (function () {
             let e = i.useRef(!1),
                 t = (0, g.e7)([v.Z], () => v.Z.keyboardModeEnabled),
@@ -1075,7 +1075,7 @@ function eM(e) {
             (e) => {
                 if ((eD(), e.target === eh.current && !eB.current)) {
                     var t;
-                    null == (t = eH.current) || t.focus();
+                    null == (t = ez.current) || t.focus();
                 }
             },
             [eD, eh, eB],
@@ -1090,7 +1090,7 @@ function eM(e) {
                     ref: eh,
                     onFocus: eU,
                 },
-                ez,
+                eH,
             ),
             {
                 style: ej(eb({}, N), {
@@ -1114,7 +1114,7 @@ function eM(e) {
                                 isSearchLoading: _,
                                 numResults: w,
                                 canCreatePost: eu,
-                                inputRef: eH,
+                                inputRef: ez,
                             }),
                         }),
                         (eM || ek) &&
@@ -1126,7 +1126,7 @@ function eM(e) {
                                         (0, r.jsxs)("div", {
                                             className: ep.matchingPosts,
                                             children: [
-                                                (0, r.jsx)(p.X6q, {
+                                                (0, r.jsx)(p.Heading, {
                                                     variant: "text-xs/normal",
                                                     color: "text-default",
                                                     children: _
@@ -1145,8 +1145,8 @@ function eM(e) {
                                                                 guildId: s.guild_id,
                                                                 channelId: s.id,
                                                             }),
-                                                                W.Z.clearForumSearch(s.id),
-                                                                q.getState().setName("");
+                                                                q.Z.clearForumSearch(s.id),
+                                                                W.getState().setName("");
                                                         },
                                                         children: (0, r.jsx)(p.Text, {
                                                             variant: "text-xs/semibold",

@@ -33,8 +33,8 @@ function p(e) {
         [O, S] = l.useState(!1),
         [T, N] = l.useState(null),
         E = !!(null == (t = d.default.getCurrentUser()) ? void 0 : t.isStaff()),
-        [M, G] = l.useState(E),
-        H = (0, c.Dt)(),
+        [M, H] = l.useState(E),
+        G = (0, c.Dt)(),
         U = l.useRef(null);
     l.useEffect(() => {
         var e;
@@ -60,7 +60,7 @@ function p(e) {
         ),
         w = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(s.zxk, {
+                (0, i.jsx)(s.Button, {
                     variant: "primary",
                     text: null != j ? C.intl.string(C.t.PDTjLC) : C.intl.string(C.t.CumH4u),
                     onClick: D,
@@ -83,7 +83,7 @@ function p(e) {
                     className: g.header,
                     separator: !1,
                     children: [
-                        (0, i.jsx)(s.X6q, {
+                        (0, i.jsx)(s.Heading, {
                             className: g.title,
                             variant: "heading-xl/semibold",
                             children: C.intl.string(C.t["2H6Nio"]),
@@ -124,14 +124,14 @@ function p(e) {
                                         maxLength: 100,
                                         onChange: v,
                                         inputRef: U,
-                                        id: H,
+                                        id: G,
                                     }),
                                     E &&
                                         (0, i.jsx)(s.rsf, {
                                             label: "Staff Only",
                                             description: C.intl.string(C.t.edQ5vb),
                                             checked: M,
-                                            onChange: (e) => G(e),
+                                            onChange: (e) => H(e),
                                         }),
                                     (0, i.jsx)(s.Text, {
                                         variant: "text-xs/normal",

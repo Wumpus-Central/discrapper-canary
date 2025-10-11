@@ -32,7 +32,7 @@ function f(e) {
                         ? u.intl.format(t, {
                               hook: (e, t) =>
                                   (0, r.jsx)(
-                                      s.eee,
+                                      s.Anchor,
                                       {
                                           onClick: g,
                                           children: e,
@@ -44,7 +44,7 @@ function f(e) {
                         : u.intl.format(t, {
                               hook: (e, t) =>
                                   (0, r.jsx)(
-                                      s.eee,
+                                      s.Anchor,
                                       {
                                           onClick: g,
                                           children: e,

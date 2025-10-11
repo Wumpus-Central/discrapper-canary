@@ -13,24 +13,24 @@ var n = r(951288),
     p = r(927923),
     x = r(981631),
     b = r(388032),
-    g = r(5511);
-function h(e) {
+    h = r(5511);
+function g(e) {
     let { step: t, instructions: r } = e;
     return (0, n.jsxs)("div", {
-        className: g.cardRow,
+        className: h.cardRow,
         children: [
             (0, n.jsx)("div", {
-                className: g.stepNumberContainer,
+                className: h.stepNumberContainer,
                 children: (0, n.jsx)(c.Text, {
                     variant: "text-sm/semibold",
-                    className: g.stepNumber,
+                    className: h.stepNumber,
                     children: t,
                 }),
             }),
             (0, n.jsx)(c.Text, {
                 variant: "text-sm/normal",
                 color: "header-primary",
-                className: g.instructions,
+                className: h.instructions,
                 children: r,
             }),
         ],
@@ -54,29 +54,29 @@ function C(e) {
             onClose: C,
             transitionState: r,
             children: (0, n.jsxs)("div", {
-                className: g.card,
+                className: h.card,
                 children: [
                     (0, n.jsxs)("div", {
-                        className: g.cardText,
+                        className: h.cardText,
                         children: [
                             (0, n.jsxs)(c.Text, {
                                 variant: "text-lg/semibold",
                                 color: "header-primary",
-                                className: g.cardRow,
-                                children: [(0, n.jsx)(l.Z, { className: g.cardHeaderIcon }), b.intl.string(b.t.ZNlYbG)],
+                                className: h.cardRow,
+                                children: [(0, n.jsx)(l.Z, { className: h.cardHeaderIcon }), b.intl.string(b.t.ZNlYbG)],
                             }),
-                            (0, n.jsx)(h, {
+                            (0, n.jsx)(g, {
                                 step: 1,
                                 instructions: b.intl.string(b.t.dDtkl5),
                             }),
-                            (0, n.jsx)(h, {
+                            (0, n.jsx)(g, {
                                 step: 2,
                                 instructions: b.intl.string(b.t.IWuXjI),
                             }),
                             (0, n.jsx)(c.Text, {
                                 variant: "text-sm/medium",
-                                children: (0, n.jsx)(c.eee, {
-                                    className: g.learnMore,
+                                children: (0, n.jsx)(c.Anchor, {
+                                    className: h.learnMore,
                                     href: d.Z.getArticleURL(x.BhN.XBOX_CONNECTION),
                                     children: b.intl.string(b.t.hvVgAQ),
                                 }),
@@ -84,7 +84,7 @@ function C(e) {
                         ],
                     }),
                     (0, n.jsx)(o.ZP, {
-                        className: g.qrCode,
+                        className: h.qrCode,
                         size: 120,
                         text: j,
                     }),

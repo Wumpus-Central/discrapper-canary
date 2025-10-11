@@ -22,7 +22,7 @@ function f() {
                   text: p.intl.format(p.t["TnH05+"], { count: n }),
                   color: o.ua7.Colors.RED,
                   children: (0, r.jsx)(
-                      o.eee,
+                      o.Anchor,
                       ((e = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},

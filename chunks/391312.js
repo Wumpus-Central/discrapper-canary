@@ -1,15 +1,15 @@
-r.d(t, { default: () => b }), r(388685);
+r.d(t, { default: () => f }), r(388685);
 var n = r(951288),
     o = r(647438),
     c = r(755721),
     i = r(481060),
-    a = r(43740),
+    l = r(43740),
     s = r(437152),
-    l = r(388032),
-    p = r(557313);
-function b(e) {
+    a = r(388032),
+    u = r(557313);
+function f(e) {
     var t, r;
-    let [b, u] = o.useState(!1);
+    let [f, b] = o.useState(!1);
     return (0, n.jsxs)(
         i.ConfirmModal,
         ((t = (function (e) {
@@ -39,25 +39,27 @@ function b(e) {
         })({}, e)),
         (r = r =
             {
-                header: l.intl.string(l.t.pjYu09),
-                confirmText: l.intl.string(l.t.zVZXRU),
-                cancelText: l.intl.string(l.t["ETE/oK"]),
+                header: a.intl.string(a.t.pjYu09),
+                confirmText: a.intl.string(a.t.zVZXRU),
+                cancelText: a.intl.string(a.t["ETE/oK"]),
                 onConfirm: () => {
-                    (0, a.l)(!0);
+                    (0, l.l)(!0);
                 },
                 confirmButtonColor: c.zx.Colors.BRAND,
                 children: [
                     (0, n.jsx)(i.Text, {
                         variant: "text-md/normal",
-                        children: l.intl.format(l.t["0eydys"], {}),
+                        children: a.intl.format(a.t["0eydys"], {}),
                     }),
-                    (0, n.jsx)(c.VL, {
-                        className: p.checkboxMargin,
-                        checked: b,
-                        onChange: () => {
-                            (0, s.E)(), u(!0);
-                        },
-                        label: l.intl.string(l.t["50TyjY"]),
+                    (0, n.jsx)("div", {
+                        className: u.checkboxMargin,
+                        children: (0, n.jsx)(i.Checkbox, {
+                            checked: f,
+                            onChange: () => {
+                                (0, s.E)(), b(!0);
+                            },
+                            label: a.intl.string(a.t["50TyjY"]),
+                        }),
                     }),
                 ],
             }),

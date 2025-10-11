@@ -98,7 +98,7 @@ function I(e) {
                           }),
                       ],
                   }),
-                  (0, r.jsx)(l.zxk, {
+                  (0, r.jsx)(l.Button, {
                       variant: "secondary",
                       text: b.intl.string(p ? b.t.XyHpKC : b.t["8wXU9P"]),
                       onClick: E,

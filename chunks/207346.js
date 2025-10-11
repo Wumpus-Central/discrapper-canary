@@ -19,7 +19,7 @@ function d(e) {
                 color: "currentColor",
                 className: u.icon,
             }),
-            (0, l.jsx)(r.X6q, {
+            (0, l.jsx)(r.Heading, {
                 className: u.title,
                 variant: "heading-xxl/bold",
                 children: c.intl.string(c.t.z2jK6e),

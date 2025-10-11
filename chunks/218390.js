@@ -106,7 +106,7 @@ function ed(e) {
                               : z.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
                       }),
                   (o || !s) && (0, r.jsx)("div", { className: en.rimGlowTier2 }),
-                  (0, r.jsx)(p.X6q, {
+                  (0, r.jsx)(p.Heading, {
                       variant: "heading-md/normal",
                       color: "always-white",
                       className: en.trialHeader,
@@ -144,7 +144,7 @@ function ef() {
                               className: en.fractionalPremiumTopRimPill,
                               colorOptions: z.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
                           }),
-                          (0, r.jsx)(p.X6q, {
+                          (0, r.jsx)(p.Heading, {
                               variant: "heading-md/normal",
                               color: "always-white",
                               className: en.fractionalPremiumSubheader,
@@ -171,7 +171,7 @@ function ef() {
                                       ? z.VE.PREMIUM_TIER_2_WHITE_FILL
                                       : z.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
                               }),
-                              (0, r.jsx)(p.X6q, {
+                              (0, r.jsx)(p.Heading, {
                                   variant: "heading-md/normal",
                                   color: "always-white",
                                   className: en.trialHeader,
@@ -282,7 +282,7 @@ function e_(e) {
             (0, r.jsxs)("div", {
                 className: en.giftInfoPromotion,
                 children: [
-                    (0, r.jsx)(p.X6q, {
+                    (0, r.jsx)(p.Heading, {
                         className: en.giftInfoTitlePromotion,
                         style: _,
                         variant: "text-lg/bold",
@@ -329,7 +329,7 @@ function ep() {
             (0, r.jsxs)("div", {
                 className: en.giftInfo,
                 children: [
-                    (0, r.jsx)(p.X6q, {
+                    (0, r.jsx)(p.Heading, {
                         className: en.giftTitle,
                         variant: "heading-xl/extrabold",
                         children: et.intl.string(et.t["3KomGR"]),

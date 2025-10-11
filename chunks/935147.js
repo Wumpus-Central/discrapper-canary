@@ -180,7 +180,7 @@ function W(e) {
                               children: [
                                   (0, r.jsxs)("div", {
                                       children: [
-                                          (0, r.jsx)(o.X6q, {
+                                          (0, r.jsx)(o.Heading, {
                                               variant: "heading-xl/extrabold",
                                               children: B.intl.string(B.t["2zGdAQ"]),
                                           }),

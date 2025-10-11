@@ -17,11 +17,11 @@ var r = n(951288),
     _ = n(335131),
     O = n(252618),
     E = n(70097),
-    y = n(632285),
-    v = n(979233),
+    v = n(632285),
+    y = n(979233),
     I = n(17845),
-    S = n(374939),
-    C = n(233374),
+    C = n(374939),
+    S = n(233374),
     T = n(611928),
     N = n(763433),
     j = n(283293),
@@ -43,8 +43,8 @@ var r = n(951288),
     F = n(110560),
     z = n(150560),
     W = n(672188),
-    q = n(558652),
-    Y = n(736683),
+    Y = n(558652),
+    q = n(736683),
     K = n(879438),
     Q = n(251360),
     X = n(466962),
@@ -180,7 +180,7 @@ function ef(e) {
                 (0, r.jsx)(I.Z, {
                     title: er.intl.string(er.t.z8YP2N),
                     titleColor: "always-white",
-                    button: (0, r.jsx)(d.zxk, {
+                    button: (0, r.jsx)(d.Button, {
                         variant: "overlay-primary",
                         text: er.intl.string(er.t.GURBQk),
                         onClick: u,
@@ -188,11 +188,11 @@ function ef(e) {
                     className: ei.redirectNoticeBannerContainer,
                     children: (0, r.jsx)(ep, { onLoadComplete: t }),
                 }),
-                (0, r.jsx)(S.Z, {
+                (0, r.jsx)(C.Z, {
                     children: (0, r.jsxs)("div", {
                         className: ei.redirectNoticeContainer,
                         children: [
-                            (0, r.jsx)(d.X6q, {
+                            (0, r.jsx)(d.Heading, {
                                 variant: "heading-xl/semibold",
                                 children: er.intl.string(er.t.z8YP2N),
                             }),
@@ -226,9 +226,9 @@ let eh = function (e) {
     i.useLayoutEffect(() => {
         E && w === k.e5.CLAIMED && G.Z.setState({ tab: k.e5.ALL });
     }, [E, w]);
-    let { onScroll: U, scrollPosition: F } = (0, v.M)(),
+    let { onScroll: U, scrollPosition: F } = (0, y.M)(),
         W = z.Z.getState().getUtmCurrentContext(),
-        el = (0, M._)({ location: $.dr.QUEST_HOME_DESKTOP }) ? Y.Z : Y.j,
+        el = (0, M._)({ location: $.dr.QUEST_HOME_DESKTOP }) ? q.Z : q.j,
         ea = (0, K.z)((e) => e.registerAssetLoad),
         eo = i.useRef(W);
     i.useEffect(() => {
@@ -274,7 +274,7 @@ let eh = function (e) {
         l && (0, p.Y)(ee.Z5c.QUEST_HOME_V2);
     }, [l]),
         i.useEffect(() => {
-            y.C.trigger();
+            v.C.trigger();
         }, []);
     let em = (0, H.T)({ location: $.dr.QUEST_PREVIEW_TOOL_2 });
     return (
@@ -330,9 +330,9 @@ let eh = function (e) {
                                                 title: eu,
                                                 description: ep,
                                                 button: es
-                                                    ? (0, r.jsxs)(d.hE2, {
+                                                    ? (0, r.jsxs)(d.ButtonGroup, {
                                                           children: [
-                                                              (0, r.jsx)(d.zxk, {
+                                                              (0, r.jsx)(d.Button, {
                                                                   variant: "overlay-primary",
                                                                   text: er.intl.string(er.t["1Wm129"]),
                                                                   onClick: () =>
@@ -344,14 +344,14 @@ let eh = function (e) {
                                                                               h.Z.INTRO_TO_ORBS_QUEST_BANNER,
                                                                       }),
                                                               }),
-                                                              (0, r.jsx)(d.zxk, {
+                                                              (0, r.jsx)(d.Button, {
                                                                   variant: "overlay-secondary",
                                                                   text: er.intl.string(er.t["7kTAgI"]),
                                                                   onClick: ec,
                                                               }),
                                                           ],
                                                       })
-                                                    : (0, r.jsx)(d.zxk, {
+                                                    : (0, r.jsx)(d.Button, {
                                                           variant: "overlay-primary",
                                                           text: er.intl.string(er.t.hvVgAQ),
                                                           onClick: ec,
@@ -366,13 +366,13 @@ let eh = function (e) {
                                                     (0, r.jsx)(ed, { onLoadComplete: ea }),
                                                 ],
                                             }),
-                                        (0, r.jsx)(S.Z, {
+                                        (0, r.jsx)(C.Z, {
                                             children:
                                                 w === k.e5.CLAIMED
                                                     ? (0, r.jsx)(el, { onSelectTab: L })
                                                     : w === k.e5.PREVIEW_TOOL
                                                       ? (0, r.jsx)(V.Z, {})
-                                                      : (0, r.jsx)(q.Z, {}),
+                                                      : (0, r.jsx)(Y.Z, {}),
                                         }),
                                     ],
                                 }),
@@ -397,7 +397,7 @@ let eh = function (e) {
                                             (0, r.jsxs)(I.Z, {
                                                 title: eu,
                                                 description: ep,
-                                                button: (0, r.jsx)(d.zxk, {
+                                                button: (0, r.jsx)(d.Button, {
                                                     variant: "overlay-primary",
                                                     text: er.intl.string(er.t.hvVgAQ),
                                                     onClick: ec,
@@ -412,11 +412,11 @@ let eh = function (e) {
                                                     (0, r.jsx)(ed, { onLoadComplete: ea }),
                                                 ],
                                             }),
-                                            (0, r.jsxs)(S.Z, {
+                                            (0, r.jsxs)(C.Z, {
                                                 children: [
                                                     (0, r.jsx)("div", {
                                                         className: ei.tabs,
-                                                        children: (0, r.jsx)(C.Z, {
+                                                        children: (0, r.jsx)(S.Z, {
                                                             tabs: D,
                                                             selectedTab: w,
                                                             onTabSelect: L,
@@ -426,7 +426,7 @@ let eh = function (e) {
                                                         ? (0, r.jsx)(el, { onSelectTab: L })
                                                         : w === k.e5.PREVIEW_TOOL
                                                           ? (0, r.jsx)(V.Z, {})
-                                                          : (0, r.jsx)(q.Z, {}),
+                                                          : (0, r.jsx)(Y.Z, {}),
                                                 ],
                                             }),
                                         ],

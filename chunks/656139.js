@@ -1,5 +1,5 @@
 n.d(t, {
-    K: () => R,
+    SelectFriendsModalScreens: () => R,
     default: () => P,
 }),
     n(388685);
@@ -79,7 +79,7 @@ let C = (e) => {
                               : S.intl.format(S.t.iW2str, { nTrials: p.size })),
                     (0, r.jsx)("div", {
                         className: o()(A.footer, A.footerSeparator),
-                        children: (0, r.jsx)(u.zxk, {
+                        children: (0, r.jsx)(u.Button, {
                             variant: "primary",
                             disabled: (0 === p.size && !s) || D,
                             text: i,
@@ -99,7 +99,7 @@ let C = (e) => {
                     ? (0, r.jsxs)("div", {
                           className: A.emptySearchResultsContainer,
                           children: [
-                              (0, r.jsx)(u.X6q, {
+                              (0, r.jsx)(u.Heading, {
                                   variant: "heading-md/semibold",
                                   color: "header-primary",
                                   children: S.intl.string(S.t["8+ywHB"]),
@@ -197,7 +197,7 @@ let C = (e) => {
                 (e = _.size <= 1 ? S.intl.string(S.t.ItpQxs) : S.intl.format(S.t.iW2str, { nTrials: _.size })),
                 (0, r.jsx)("div", {
                     className: o()(A.footer, A.footerSeparator),
-                    children: (0, r.jsx)(u.zxk, {
+                    children: (0, r.jsx)(u.Button, {
                         variant: "primary",
                         disabled: 0 === _.size || h,
                         text: e,

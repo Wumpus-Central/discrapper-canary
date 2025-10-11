@@ -1,18 +1,18 @@
-n.d(t, { g: () => a });
+n.d(t, { g: () => s });
 var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(388032),
-    s = n(595453);
-function a(e) {
+    a = n(595453);
+function s(e) {
     let { forceFetchGuildProfile: t } = e;
     return (0, r.jsxs)("main", {
-        className: s.container,
+        className: a.container,
         children: [
             (0, r.jsxs)("div", {
-                className: s.errorHeader,
+                className: a.errorHeader,
                 children: [
-                    (0, r.jsx)(i.X6q, {
+                    (0, r.jsx)(i.Heading, {
                         variant: "heading-xl/semibold",
                         children: l.intl.string(l.t["/n9Boa"]),
                     }),
@@ -22,7 +22,7 @@ function a(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(i.zxk, {
+            (0, r.jsx)(i.Button, {
                 variant: "primary",
                 text: l.intl.string(l.t.w3ND8P),
                 onClick: t,

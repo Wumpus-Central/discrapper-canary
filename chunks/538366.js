@@ -76,7 +76,7 @@ function g(e) {
     return (0, r.jsxs)("div", {
         className: h.container,
         children: [
-            (0, r.jsx)(l.X6q, {
+            (0, r.jsx)(l.Heading, {
                 className: h.header,
                 variant: "heading-md/semibold",
                 children: _ ? m.intl.formatToPlainString(m.t.lvPci4, { numTags: f.size }) : m.intl.string(m.t.PwTMGx),

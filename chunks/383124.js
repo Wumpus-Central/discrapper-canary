@@ -1,74 +1,70 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    s = n.n(l),
-    a = n(755721),
-    o = n(481060),
-    c = n(442837),
-    d = n(210753),
-    u = n(77498),
-    g = n(512622);
-function m(e) {
-    let { applicationId: t, selected: n, onClick: l, disabled: m } = e,
-        { isFetching: p, coverImageUrl: f } = (0, d.$)(t, {
+    a = n.n(l),
+    s = n(481060),
+    o = n(442837),
+    c = n(210753),
+    d = n(77498),
+    u = n(512622);
+function g(e) {
+    let { applicationId: t, selected: n, onClick: l, disabled: g } = e,
+        { isFetching: m, coverImageUrl: p } = (0, c.$)(t, {
             coverImageHeight: 336,
             coverImageWidth: 252,
         }),
-        h = (0, c.e7)([u.Z], () => {
+        f = (0, o.e7)([d.Z], () => {
             var e, n;
-            return null != (n = null == (e = u.Z.getDetectableGame(t)) ? void 0 : e.name) ? n : "";
+            return null != (n = null == (e = d.Z.getDetectableGame(t)) ? void 0 : e.name) ? n : "";
         }),
-        x = i.useCallback(() => {
+        h = i.useCallback(() => {
             null == l || l(t);
         }, [t, l]),
         b = i.useMemo(
             () =>
-                p
+                m
                     ? null
-                    : null == f
+                    : null == p
                       ? (0, r.jsx)("div", {
-                            className: g.gameUnknownImage,
-                            children: (0, r.jsx)(o.IMN, { size: "lg" }),
+                            className: u.gameUnknownImage,
+                            children: (0, r.jsx)(s.IMN, { size: "lg" }),
                         })
                       : (0, r.jsx)("img", {
-                            className: g.gameImage,
-                            alt: h,
-                            src: f,
+                            className: u.gameImage,
+                            alt: f,
+                            src: p,
                         }),
-            [f, p, h],
+            [p, m, f],
         );
     return (0, r.jsxs)("div", {
-        className: s()(g.selectedGame, {
-            [g.dimmed]: !n,
-            [g.disabled]: m,
+        className: a()(u.selectedGame, {
+            [u.dimmed]: !n,
+            [u.disabled]: g,
         }),
         children: [
-            (0, r.jsxs)(o.P3F, {
-                "aria-disabled": m,
-                tabIndex: m ? -1 : 0,
-                onClick: m ? void 0 : x,
-                className: s()(g.gameImageBackground, {
-                    [g.gameImageLoading]: p,
-                    [g.disabled]: m,
+            (0, r.jsxs)(s.P3F, {
+                "aria-disabled": g,
+                tabIndex: g ? -1 : 0,
+                onClick: g ? void 0 : h,
+                className: a()(u.gameImageBackground, {
+                    [u.gameImageLoading]: m,
+                    [u.disabled]: g,
                 }),
                 children: [
                     n &&
                         (0, r.jsx)("div", {
-                            className: g.checkBackground,
-                            children: (0, r.jsx)(a.$q, {
-                                displayOnly: !0,
-                                value: n,
-                            }),
+                            className: u.checkBackground,
+                            children: (0, r.jsx)(s.FZ5, { checked: n }),
                         }),
                     b,
                 ],
             }),
-            (0, r.jsx)(o.Text, {
-                className: g.gameName,
+            (0, r.jsx)(s.Text, {
+                className: u.gameName,
                 variant: "text-xs/medium",
                 color: "header-primary",
-                children: h,
+                children: f,
             }),
         ],
     });

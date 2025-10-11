@@ -46,7 +46,7 @@ function b(e) {
         };
     return (0, r.jsxs)("div", {
         children: [
-            (0, r.jsxs)(s.X6q, {
+            (0, r.jsxs)(s.Heading, {
                 variant: "heading-sm/semibold",
                 color: "text-default",
                 className: E.voiceChannelHeading,

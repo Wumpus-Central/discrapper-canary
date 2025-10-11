@@ -13,7 +13,7 @@ function s() {
             gap: 16,
             padding: 32,
             children: [
-                (0, r.jsx)(i.X6q, {
+                (0, r.jsx)(i.Heading, {
                     variant: "heading-xxl/normal",
                     color: "header-primary",
                     className: o.heading,

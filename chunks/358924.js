@@ -17,11 +17,11 @@ var r,
     _ = n(638880),
     O = n(655922),
     E = n(122810),
-    y = n(833664),
-    v = n(503438),
+    v = n(833664),
+    y = n(503438),
     I = n(420660),
-    S = n(74433),
-    C = n(206074),
+    C = n(74433),
+    S = n(206074),
     T = n(100527),
     N = n(906732),
     j = n(213609),
@@ -43,8 +43,8 @@ var r,
     F = n(359110),
     z = n(769654),
     W = n(849171),
-    q = n(601964),
-    Y = n(314897),
+    Y = n(601964),
+    q = n(314897),
     K = n(592125),
     Q = n(594174),
     X = n(395361),
@@ -101,7 +101,7 @@ let ea = [14, 14, 12, 12, 10, 8, 6],
             }),
             (0, i.jsx)(p.u, {
                 text: ei.intl.string(ei.t.JVwWvb),
-                children: (0, i.jsx)(f.zxk, {
+                children: (0, i.jsx)(f.Button, {
                     size: "sm",
                     variant: "secondary",
                     icon: f.v3n,
@@ -135,7 +135,7 @@ let ea = [14, 14, 12, 12, 10, 8, 6],
             let { isJoining: e, handleJoinRequest: t, buttonCTA: n, tooltip: l, isEnabled: a } = r;
             return (0, i.jsx)(p.u, {
                 text: l,
-                children: (0, i.jsx)(f.zxk, {
+                children: (0, i.jsx)(f.Button, {
                     size: "sm",
                     variant: "secondary",
                     icon: f.iWm,
@@ -154,7 +154,7 @@ let ea = [14, 14, 12, 12, 10, 8, 6],
         let { activity: t, analyticsLocations: n, hidden: r } = e,
             { application_id: l, name: a } = t,
             { data: o } = (0, P.IX)(l),
-            s = (0, C.Z)({
+            s = (0, S.Z)({
                 application: o,
                 analyticsLocations: n,
             }),
@@ -384,8 +384,8 @@ let eO = (e) => {
         let { guild: n, channel: r, partySize: a, members: s, onChannelContextMenu: c } = e,
             u = l.useRef(null),
             d = (0, A.ZP)(r, !0),
-            p = (0, q.EB)(n, 32),
-            g = (0, q.gM)(n);
+            p = (0, Y.EB)(n, 32),
+            g = (0, Y.gM)(n);
         return (0, i.jsx)(eu, {
             children: (0, i.jsxs)("div", {
                 className: el.voiceSection,
@@ -488,7 +488,7 @@ let eO = (e) => {
                 user: u,
             }),
             O = null != (r = null == (t = (0, L.T7)(p)) ? void 0 : t.src) ? r : n(211827),
-            I = (0, C.Z)({
+            I = (0, S.Z)({
                 application: p,
                 analyticsLocations: d,
             });
@@ -533,7 +533,7 @@ let eO = (e) => {
                                       null != g ? es(g) : null,
                                       (() => {
                                           let { timestamps: e } = s;
-                                          return null == e || !(0, y.Z)(s) || (0, v.Z)(s)
+                                          return null == e || !(0, v.Z)(s) || (0, y.Z)(s)
                                               ? null
                                               : es(
                                                     (0, E.Z)(s)
@@ -702,7 +702,7 @@ let eO = (e) => {
                     }),
                 ],
             }),
-            g = null != (n = null == (t = (0, S.Z)(r, a)) ? void 0 : t.activityText) ? n : ei.intl.string(ei.t.eXan7O);
+            g = null != (n = null == (t = (0, C.Z)(r, a)) ? void 0 : t.activityText) ? n : ei.intl.string(ei.t.eXan7O);
         return (0, i.jsxs)(eu, {
             children: [
                 (0, i.jsxs)("div", {
@@ -735,9 +735,9 @@ let eO = (e) => {
                     return s(t);
                 });
         }, [u]);
-        let d = (0, c.Wu)([Q.default, Y.default], () =>
+        let d = (0, c.Wu)([Q.default, q.default], () =>
                 Array.from(a)
-                    .map((e) => (Y.default.getId() === e ? null : Q.default.getUser(e)))
+                    .map((e) => (q.default.getId() === e ? null : Q.default.getUser(e)))
                     .filter(ee.lm),
             ),
             p = (0, m.O)(),
@@ -796,7 +796,7 @@ let eO = (e) => {
                                 }),
                                 (0, i.jsx)("div", {
                                     className: el.embeddedActivityJoinWrapper,
-                                    children: (0, i.jsx)(f.zxk, {
+                                    children: (0, i.jsx)(f.Button, {
                                         variant: "primary",
                                         size: "sm",
                                         text: ei.intl.string(ei.t.VJlc0d),

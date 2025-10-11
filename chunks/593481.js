@@ -1,7 +1,7 @@
 n.d(t, {
     QR: () => y,
     Yj: () => _,
-    ZP: () => v,
+    ZP: () => b,
 });
 var i,
     r = n(951288),
@@ -144,11 +144,11 @@ class O extends (i = s.PureComponent) {
                   {
                       children: [
                           (0, r.jsx)(m, {}),
-                          (0, r.jsxs)(a.hE2, {
+                          (0, r.jsxs)(a.ButtonGroup, {
                               fullWidth: !0,
                               children: [
                                   null != n
-                                      ? (0, r.jsx)(a.zxk, {
+                                      ? (0, r.jsx)(a.Button, {
                                             variant: "active",
                                             size: "sm",
                                             text: null != t ? t : d.intl.string(d.t.BddRzc),
@@ -156,7 +156,7 @@ class O extends (i = s.PureComponent) {
                                         })
                                       : null,
                                   null != i
-                                      ? (0, r.jsx)(a.zxk, {
+                                      ? (0, r.jsx)(a.Button, {
                                             variant: "secondary",
                                             size: "sm",
                                             text: null != e ? e : d.intl.string(d.t["ETE/oK"]),
@@ -266,4 +266,4 @@ h(O, "defaultProps", {
     expand: !1,
     disabled: !1,
 });
-let v = O;
+let b = O;

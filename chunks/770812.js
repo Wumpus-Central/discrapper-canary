@@ -67,7 +67,7 @@ function O(e) {
                         className: b.upsellImage,
                     }),
                     (0, r.jsx)(s.LZC, { size: 22 }),
-                    (0, r.jsx)(s.X6q, {
+                    (0, r.jsx)(s.Heading, {
                         color: "header-primary",
                         variant: "heading-lg/extrabold",
                         className: b.header,

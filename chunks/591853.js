@@ -359,7 +359,7 @@ function ey(e) {
                             children: [
                                 !x &&
                                     (0, r.jsx)(
-                                        _.zxk,
+                                        _.Button,
                                         {
                                             fullWidth: !0,
                                             variant: "secondary",
@@ -454,7 +454,7 @@ function ev(e) {
                         size: 8,
                         horizontal: !0,
                     }),
-                    (0, r.jsx)(_.X6q, {
+                    (0, r.jsx)(_.Heading, {
                         variant: "heading-sm/normal",
                         className: o()(eu.popoutUsernames, eu.popoutTextSecondary),
                         children: ec.intl.format(n, {
@@ -596,7 +596,7 @@ function eT(e) {
                                 children: [
                                     (0, r.jsx)(eI, {
                                         onClick: null != c ? c : T,
-                                        children: (0, r.jsx)(_.X6q, {
+                                        children: (0, r.jsx)(_.Heading, {
                                             variant: "heading-md/medium",
                                             className: o()(eu.popoutHeroTextPrimary, {
                                                 [eu.popoutHeroTextPrimaryShort]: null != d,
@@ -725,7 +725,7 @@ function eS(e) {
                                 children: [
                                     (0, r.jsx)(eI, {
                                         onClick: null != u ? u : T,
-                                        children: (0, r.jsx)(_.X6q, {
+                                        children: (0, r.jsx)(_.Heading, {
                                             variant: "heading-md/semibold",
                                             className: eu.popoutTextPrimary,
                                             lineClamp: 3,
@@ -957,7 +957,7 @@ function eC(e) {
                   hasRestrictedOrMutedVCParticipant: m,
                   children: (e) =>
                       (0, r.jsx)(
-                          _.zxk,
+                          _.Button,
                           ep(ef({}, e), {
                               onClick: b,
                               fullWidth: !0,

@@ -2,8 +2,8 @@ n.d(t, { Z: () => C }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    s = n.n(l),
-    a = n(399606),
+    a = n.n(l),
+    s = n(399606),
     o = n(481060),
     c = n(668781),
     d = n(603211),
@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(208665),
     f = n(959508),
     h = n(290511),
-    x = n(388032),
-    b = n(314160);
+    b = n(388032),
+    x = n(314160);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,7 +40,7 @@ function j(e) {
     }
     return e;
 }
-function _(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,16 +58,16 @@ function _(e, t) {
         e
     );
 }
-function v(e) {
+function _(e) {
     let { guild: t, prejoinOnly: n, postjoinOnly: l } = e,
-        c = (0, a.e7)([p.Z], () => p.Z.editedOnboardingPrompts),
+        c = (0, s.e7)([p.Z], () => p.Z.editedOnboardingPrompts),
         u = c.filter((e) => e.inOnboarding),
         g = u.length,
         {
             drag: f,
             drop: j,
-            dragSourcePosition: _,
-            setIsDraggable: v,
+            dragSourcePosition: v,
+            setIsDraggable: _,
         } = (0, d.Z)({
             type: "ONBOARDING_PROMPT_CARD",
             index: g,
@@ -79,34 +79,34 @@ function v(e) {
         C = i.useRef(null);
     return (
         i.useEffect(() => {
-            v(!1);
-        }, [v]),
+            _(!1);
+        }, [_]),
         i.useEffect(() => {
             f(j(C));
         }, [f, j, C]),
         (0, r.jsxs)("div", {
             ref: C,
-            className: s()(b.separatorSection, {
-                [b.dropIndicatorBefore]: null != _ && g < _,
-                [b.dropIndicatorAfter]: null != _ && g > _,
+            className: a()(x.separatorSection, {
+                [x.dropIndicatorBefore]: null != v && g < v,
+                [x.dropIndicatorAfter]: null != v && g > v,
             }),
             children: [
                 !l && u.length < h.b3
                     ? (0, r.jsxs)(o.P3F, {
-                          className: b.addPrompt,
+                          className: x.addPrompt,
                           onClick: () => (0, m.tS)(t, [...c, (0, h.yZ)(!0)], !1),
                           children: [
                               (0, r.jsx)(o.oFk, {
                                   size: "custom",
                                   color: "currentColor",
-                                  className: b.plusIcon,
+                                  className: x.plusIcon,
                                   width: 20,
                                   height: 20,
                               }),
                               (0, r.jsx)(o.Text, {
                                   variant: "text-md/medium",
                                   color: "text-brand",
-                                  children: x.intl.string(x.t.ujFqu7),
+                                  children: b.intl.string(b.t.ujFqu7),
                               }),
                           ],
                       })
@@ -115,16 +115,16 @@ function v(e) {
                     ? null
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)("div", { className: b.divider }),
-                              (0, r.jsx)(o.X6q, {
+                              (0, r.jsx)("div", { className: x.divider }),
+                              (0, r.jsx)(o.Heading, {
                                   variant: "heading-md/bold",
-                                  children: x.intl.string(x.t.tjrGcX),
+                                  children: b.intl.string(b.t.tjrGcX),
                               }),
                               (0, r.jsx)(o.Text, {
                                   variant: "text-sm/normal",
                                   color: "header-secondary",
-                                  className: b.subtitle,
-                                  children: x.intl.string(x.t.XFa6Q0),
+                                  className: x.subtitle,
+                                  children: b.intl.string(b.t.XFa6Q0),
                               }),
                           ],
                       }),
@@ -133,9 +133,9 @@ function v(e) {
     );
 }
 function C(e) {
-    let { guildId: t, prejoinOnly: n, postjoinOnly: i, includeCount: l, singleColumn: s } = e,
-        d = (0, a.e7)([g.Z], () => g.Z.getGuild(t)),
-        C = (0, a.e7)([p.Z], () => p.Z.editedOnboardingPrompts),
+    let { guildId: t, prejoinOnly: n, postjoinOnly: i, includeCount: l, singleColumn: a } = e,
+        d = (0, s.e7)([g.Z], () => g.Z.getGuild(t)),
+        C = (0, s.e7)([p.Z], () => p.Z.editedOnboardingPrompts),
         O = C.filter((e) => e.inOnboarding),
         y = C.filter((e) => !0 !== e.inOnboarding),
         N = [
@@ -158,17 +158,17 @@ function C(e) {
             handleDragComplete: S,
         } = (0, u.Z)(N, (e) => {
             let t = e.findIndex((e) => "separator" === e.id),
-                n = e.slice(0, t).map((e) => _(j({}, e.data), { inOnboarding: !0 })),
+                n = e.slice(0, t).map((e) => v(j({}, e.data), { inOnboarding: !0 })),
                 r = e.slice(t + 1).map((e) =>
-                    _(j({}, e.data), {
+                    v(j({}, e.data), {
                         inOnboarding: !1,
                         required: !1,
                     }),
                 );
             if (n.length > h.b3)
                 return void c.Z.show({
-                    title: x.intl.string(x.t["Cxtq5+"]),
-                    body: x.intl.formatToPlainString(x.t["pkbZ+f"], { numQuestions: h.b3 }),
+                    title: b.intl.string(b.t["Cxtq5+"]),
+                    body: b.intl.formatToPlainString(b.t["pkbZ+f"], { numQuestions: h.b3 }),
                 });
             (0, m.tS)(d, [...n, ...r]);
         });
@@ -184,15 +184,15 @@ function C(e) {
                                     ? null
                                     : (0, r.jsxs)("div", {
                                           children: [
-                                              (0, r.jsx)(o.X6q, {
+                                              (0, r.jsx)(o.Heading, {
                                                   variant: "heading-md/bold",
-                                                  children: x.intl.string(x.t["24Qm4O"]),
+                                                  children: b.intl.string(b.t["24Qm4O"]),
                                               }),
                                               (0, r.jsx)(o.Text, {
                                                   variant: "text-sm/normal",
                                                   color: "header-secondary",
-                                                  className: b.subtitle,
-                                                  children: x.intl.string(x.t.QvCcYW),
+                                                  className: x.subtitle,
+                                                  children: b.intl.string(b.t.QvCcYW),
                                               }),
                                           ],
                                       }),
@@ -204,7 +204,7 @@ function C(e) {
                                             prompt: e,
                                             disableAutofocus: n,
                                             includeCount: l,
-                                            singleColumn: s,
+                                            singleColumn: a,
                                             promptIndex: t,
                                             dragIndex: t,
                                             onPromptDragStart: E,
@@ -216,7 +216,7 @@ function C(e) {
                                 ),
                             ],
                         }),
-                  (0, r.jsx)(v, {
+                  (0, r.jsx)(_, {
                       guild: d,
                       prejoinOnly: n,
                       postjoinOnly: i,
@@ -242,20 +242,20 @@ function C(e) {
                                 ),
                                 C.length < h.YW
                                     ? (0, r.jsxs)(o.P3F, {
-                                          className: b.addPrompt,
+                                          className: x.addPrompt,
                                           onClick: () => (0, m.tS)(d, [...C, (0, h.yZ)(!1)], !1),
                                           children: [
                                               (0, r.jsx)(o.oFk, {
                                                   size: "custom",
                                                   color: "currentColor",
-                                                  className: b.plusIcon,
+                                                  className: x.plusIcon,
                                                   width: 20,
                                                   height: 20,
                                               }),
                                               (0, r.jsx)(o.Text, {
                                                   variant: "text-md/medium",
                                                   color: "text-brand",
-                                                  children: x.intl.string(x.t.ujFqu7),
+                                                  children: b.intl.string(b.t.ujFqu7),
                                               }),
                                           ],
                                       })

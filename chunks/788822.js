@@ -1,16 +1,16 @@
 n.d(t, { q: () => C });
 var r = n(951288),
     l = n(647438),
-    a = n(622535),
+    i = n(622535),
     s = n(481060),
-    i = n(626135),
+    a = n(626135),
     o = n(381585),
     c = n(597688),
     u = n(297651),
     d = n(794324),
     g = n(981631),
-    p = n(388032),
-    f = n(310582);
+    f = n(388032),
+    p = n(310582);
 let C = (e) => {
     var t, n, C;
     let h,
@@ -20,19 +20,19 @@ let C = (e) => {
             null == (t = c.Z.getCategoryByStoreListingId(null == m ? void 0 : m.categoryStoreListingId))
                 ? void 0
                 : t.skuId);
-    let S = null != (n = null != h ? h : null == _ ? void 0 : _.skuId) ? n : "",
-        { handleCardVisibilityChange: v } = (0, u.E)(S, "home", "marketing featured block"),
-        x = (0, d.YG)(_, m),
-        O = l.useRef(null),
+    let v = null != (n = null != h ? h : null == _ ? void 0 : _.skuId) ? n : "",
+        { handleCardVisibilityChange: S } = (0, u.E)(v, "home", "marketing featured block"),
+        O = (0, d.YG)(_, m),
+        x = l.useRef(null),
         y = null == m ? void 0 : m.bodyText,
-        T = (0, o.sp)();
-    return (0, r.jsx)(a.$, {
-        innerRef: O,
-        onChange: v,
+        j = (0, o.sp)();
+    return (0, r.jsx)(i.$, {
+        innerRef: x,
+        onChange: S,
         threshold: 0,
         children: (0, r.jsxs)(s.P3F, {
-            className: f.featuredBlock,
-            innerRef: O,
+            className: p.featuredBlock,
+            innerRef: x,
             style: (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -57,17 +57,17 @@ let C = (e) => {
                         });
                 }
                 return e;
-            })({}, null != x && { backgroundImage: "url(".concat(x, ")") }),
+            })({}, null != O && { backgroundImage: "url(".concat(O, ")") }),
             onClick: () => {
-                E("shop marketing tile", S),
-                    i.default.track(g.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                        collectibles_shop_session_id: null == T ? void 0 : T.sessionId,
-                        sku_id: S,
+                E("shop marketing tile", v),
+                    a.default.track(g.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                        collectibles_shop_session_id: null == j ? void 0 : j.sessionId,
+                        sku_id: v,
                         page_type: "home",
-                        page_section: null == T ? void 0 : T.pageSection,
-                        page_category: null == T ? void 0 : T.pageCategory,
+                        page_section: null == j ? void 0 : j.pageSection,
+                        page_category: null == j ? void 0 : j.pageCategory,
                         tile_type: "FEATURED_BLOCK",
-                        tile_position: String(null == T ? void 0 : T.tilePosition),
+                        tile_position: String(null == j ? void 0 : j.tilePosition),
                         cta_name: null,
                     });
             },
@@ -76,36 +76,36 @@ let C = (e) => {
                     (0, r.jsx)(s.IGR, {
                         disableColor: !0,
                         text: b,
-                        className: f.featuredBlockBadge,
+                        className: p.featuredBlockBadge,
                     }),
                 (0, r.jsx)("div", {
-                    className: f.featuredBlockTextContainer,
+                    className: p.featuredBlockTextContainer,
                     children:
                         null != y &&
-                        (0, r.jsx)(s.X6q, {
+                        (0, r.jsx)(s.Heading, {
                             lineClamp: 4,
-                            className: f.featuredBlockBodyText,
+                            className: p.featuredBlockBodyText,
                             style: { color: null != (C = null == m ? void 0 : m.bannerTextColor) ? C : "white" },
                             variant: "heading-md/medium",
                             children: y,
                         }),
                 }),
                 (0, r.jsx)("div", {
-                    className: f.featuredBlockButtonContainer,
-                    children: (0, r.jsx)(s.zxk, {
+                    className: p.featuredBlockButtonContainer,
+                    children: (0, r.jsx)(s.Button, {
                         variant: "overlay-primary",
-                        text: p.intl.string(p.t.jVcuVV),
+                        text: f.intl.string(f.t.jVcuVV),
                         onClick: (e) => {
-                            E("shop marketing take me there button", S),
+                            E("shop marketing take me there button", v),
                                 e.stopPropagation(),
-                                i.default.track(g.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                    collectibles_shop_session_id: null == T ? void 0 : T.sessionId,
-                                    sku_id: S,
+                                a.default.track(g.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                    collectibles_shop_session_id: null == j ? void 0 : j.sessionId,
+                                    sku_id: v,
                                     page_type: "home",
-                                    page_section: null == T ? void 0 : T.pageSection,
-                                    page_category: null == T ? void 0 : T.pageCategory,
+                                    page_section: null == j ? void 0 : j.pageSection,
+                                    page_category: null == j ? void 0 : j.pageCategory,
                                     tile_type: "FEATURED_BLOCK",
-                                    tile_position: String(null == T ? void 0 : T.tilePosition),
+                                    tile_position: String(null == j ? void 0 : j.tilePosition),
                                     cta_name: "Take me there button",
                                 });
                         },

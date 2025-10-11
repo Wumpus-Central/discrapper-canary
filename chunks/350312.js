@@ -60,12 +60,12 @@ function E(e) {
     return (0, r.jsxs)("div", {
         className: m.endScreenCtaTitleContainer,
         children: [
-            (0, r.jsx)(s.X6q, {
+            (0, r.jsx)(s.Heading, {
                 variant: "heading-md/semibold",
                 className: m.endScreenCtaTitle,
                 children: t,
             }),
-            (0, r.jsx)(s.X6q, {
+            (0, r.jsx)(s.Heading, {
                 variant: "heading-sm/normal",
                 className: m.endScreenCtaSubtitle,
                 children: n,
@@ -90,7 +90,7 @@ function g(e) {
         onBlur: p,
         onClick: o,
         children: [
-            (0, r.jsx)(s.X6q, {
+            (0, r.jsx)(s.Heading, {
                 variant: "heading-md/semibold",
                 className: m.endScreenCtaBtnTitle,
                 children: t,

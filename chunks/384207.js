@@ -16,7 +16,7 @@ let u = () =>
             (0, a.jsxs)("div", {
                 className: d.previewSection,
                 children: [
-                    (0, a.jsx)(r.X6q, {
+                    (0, a.jsx)(r.Heading, {
                         variant: "heading-md/semibold",
                         children: "Shop Overrides",
                     }),

@@ -36,7 +36,7 @@ function d() {
             (0, a.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,
                 className: c.button,
-                children: (0, a.jsx)(l.zxk, {
+                children: (0, a.jsx)(l.Button, {
                     variant: "primary",
                     text: "Clear all",
                     onClick: s.q,

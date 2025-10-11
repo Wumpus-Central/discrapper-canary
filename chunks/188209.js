@@ -16,8 +16,8 @@ var r = n(951288),
     j = n(624138),
     y = n(617136),
     x = n(509212),
-    v = n(569984),
-    g = n(497505),
+    g = n(569984),
+    v = n(497505),
     b = n(804127),
     _ = n(566078),
     w = n(602667),
@@ -73,7 +73,7 @@ function A(e) {
             }))
                 ? t
                 : "",
-        v = a.useMemo(() => {
+        g = a.useMemo(() => {
             var e;
             let t =
                 null ==
@@ -87,11 +87,11 @@ function A(e) {
             let r = null == d ? void 0 : d.code;
             return (0, j.Ew)(r) ? t : t.replace(T.Dp, encodeURIComponent(r));
         }, [n, null == d ? void 0 : d.code]),
-        g = (0, b.In)({
+        v = (0, b.In)({
             quest: n,
             questContent: o,
             questContentPosition: s,
-            redemptionLink: v,
+            redemptionLink: g,
             sourceQuestContent: c,
         });
     return (0, r.jsx)("div", {
@@ -100,11 +100,11 @@ function A(e) {
             size: "md",
             title: E.intl.string(E.t.NkZ7OT),
             actions: [
-                null != v
+                null != g
                     ? {
                           variant: "primary",
                           text: E.intl.string(E.t["+zx47e"]),
-                          onClick: g,
+                          onClick: v,
                       }
                     : {
                           variant: "primary",
@@ -157,7 +157,7 @@ function q(e) {
             (0, r.jsxs)("div", {
                 className: I.copyContainer,
                 children: [
-                    (0, r.jsx)(l.X6q, {
+                    (0, r.jsx)(l.Heading, {
                         variant: "heading-xl/semibold",
                         color: "header-primary",
                         className: I.heading,
@@ -185,15 +185,15 @@ function R(e) {
     let { quest: t, onClose: n, transitionState: i, preview: s, sourceQuestContent: c, questContentPosition: C } = e,
         f = _.r.build(t.config),
         h = f.rewardPlatforms[0],
-        j = g.jn.REWARD_MODAL,
+        j = v.jn.REWARD_MODAL,
         {
             questStoreRewardCode: y,
             isFetchingRewardCode: x,
             isClaimingReward: O,
-        } = (0, o.cj)([v.Z], () => ({
-            questStoreRewardCode: v.Z.getRewardCode(t.id),
-            isFetchingRewardCode: v.Z.isFetchingRewardCode(t.id),
-            isClaimingReward: v.Z.isClaimingReward(t.id),
+        } = (0, o.cj)([g.Z], () => ({
+            questStoreRewardCode: g.Z.getRewardCode(t.id),
+            isFetchingRewardCode: g.Z.isFetchingRewardCode(t.id),
+            isClaimingReward: g.Z.isClaimingReward(t.id),
         })),
         E = !0 === s ? (0, p.b)(t) : y,
         { hasError: I, setHasError: D } = (0, b.uL)({

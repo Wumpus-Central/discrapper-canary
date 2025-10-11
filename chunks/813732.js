@@ -29,11 +29,11 @@ var r = n(951288),
     P = n(351402),
     w = n(853872),
     D = n(78839),
-    x = n(580130),
-    L = n(626135),
+    L = n(580130),
+    x = n(626135),
     M = n(63063),
-    k = n(74538),
-    j = n(695349),
+    j = n(74538),
+    k = n(695349),
     U = n(391077),
     G = n(639056),
     B = n(52164),
@@ -65,7 +65,7 @@ function z() {
     });
 }
 function q() {
-    let e = (0, s.e7)([x.Z], () => x.Z.getForApplication(F.CL));
+    let e = (0, s.e7)([L.Z], () => L.Z.getForApplication(F.CL));
     return (
         i.useEffect(() => {
             (0, f.yD)(F.CL);
@@ -74,7 +74,7 @@ function q() {
             label: W.intl.string(W.t["2GKrvr"]),
             description: W.intl.string(W.t.kNEjGh),
             children:
-                null != e && k.ZP.hasAccountCredit(e)
+                null != e && j.ZP.hasAccountCredit(e)
                     ? (0, r.jsx)(G.Z, {
                           className: K.accountCredit,
                           entitlements: e,
@@ -86,7 +86,7 @@ function q() {
 function X(e, t) {
     return (0, r.jsxs)("section", {
         children: [
-            (0, r.jsx)(l.X6q, {
+            (0, r.jsx)(l.Heading, {
                 variant: "heading-md/bold",
                 className: K.accountCreditTitle,
                 children: W.intl.string(W.t.Obre8v),
@@ -121,19 +121,19 @@ let J = function () {
         f = (0, s.e7)([D.Z], () => D.Z.hasFetchedSubscriptions()),
         b = (0, s.e7)([P.Z], () => P.Z.isBusy),
         y = (0, E.V)(),
-        x = (0, s.e7)([R.Z], () => R.Z.getSubsection()),
+        L = (0, s.e7)([R.Z], () => R.Z.getSubsection()),
         M = (0, s.e7)([D.Z], () => {
             var e, t;
             return null != (t = null == (e = D.Z.getActiveApplicationSubscriptions()) ? void 0 : e.length) ? t : 0;
         }),
-        k = (0, s.e7)([D.Z], () => {
+        j = (0, s.e7)([D.Z], () => {
             var e;
             return Object.values(null != (e = D.Z.getSubscriptions()) ? e : {})
                 .filter((e) => e.type === V.NYc.GUILD)
                 .filter((e) => e.status !== V.O0b.ENDED).length;
         }),
         U = (0, m.Z)({ forceFetch: !0 }),
-        G = (0, j.W)(),
+        G = (0, k.W)(),
         W = null !== e ? e.currentPeriodEnd : void 0,
         z =
             !(G && !(U.unactivatedUnits.length > 0)) &&
@@ -153,9 +153,9 @@ let J = function () {
     N.Z.enabled)
         ? (0, r.jsx)(h.Z, {})
         : f && y
-          ? x === H.cP
+          ? L === H.cP
               ? (0, r.jsx)(v.Z, { onGoBack: () => p.Z.clearSubsection() })
-              : x === H.XZ
+              : L === H.XZ
                 ? (0, r.jsx)(T.Z, { onGoBack: () => p.Z.clearSubsection() })
                 : (0, r.jsx)("div", {
                       className: K.container,
@@ -176,12 +176,12 @@ let J = function () {
                                   setting: Y.s6.SUBSCRIPTIONS_CREDITS,
                                   children: (0, r.jsx)(q, {}),
                               }),
-                              k > 0 &&
+                              j > 0 &&
                                   (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(Q, {}),
                                           (0, r.jsx)(O.Z, {
-                                              count: k,
+                                              count: j,
                                               onClickManageSubscription: () =>
                                                   J(A.n.SUBSCRIPTIONS_PANEL, {
                                                       section: V.oAB.SUBSCRIPTIONS,
@@ -201,7 +201,7 @@ let J = function () {
                                                       section: V.oAB.SUBSCRIPTIONS,
                                                       subsection: H.XZ,
                                                   }),
-                                                      L.default.track(
+                                                      x.default.track(
                                                           V.rMx.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED,
                                                       );
                                               },

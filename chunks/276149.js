@@ -100,7 +100,7 @@ function b(e) {
                 );
         };
     return (0, r.jsx)(
-        a.zxk,
+        a.Button,
         p(
             {
                 text: y ? f.intl.string(f.t.BXxdl5) : f.intl.string(f.t["9C444u"]),

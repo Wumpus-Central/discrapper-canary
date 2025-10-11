@@ -170,7 +170,7 @@ let T = (e) => {
                         (0, r.jsxs)("div", {
                             className: E.bannerContentText,
                             children: [
-                                (0, r.jsx)(s.X6q, {
+                                (0, r.jsx)(s.Heading, {
                                     variant: "heading-lg/semibold",
                                     color: "header-primary",
                                     children: g.intl.string(g.t.USo4s7),
@@ -182,13 +182,13 @@ let T = (e) => {
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(s.zxk, {
+                        (0, r.jsx)(s.Button, {
                             variant: "primary",
                             disabled: !1 === l || !0 === d,
                             text: g.intl.string(g.t.Lm2nFR),
                             onClick: () =>
                                 T({
-                                    startingScreen: h.K.SELECT_FRIENDS,
+                                    startingScreen: h.SelectFriendsModalScreens.SELECT_FRIENDS,
                                     analyticsLocations: [],
                                 }),
                         }),

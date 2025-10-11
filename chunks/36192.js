@@ -102,7 +102,7 @@ function N() {
                                       children: (0, r.jsx)("div", {
                                           "data-button-hoisted-classname-wrapper": !0,
                                           className: C.logOutAllButton,
-                                          children: (0, r.jsx)(d.zxk, {
+                                          children: (0, r.jsx)(d.Button, {
                                               variant: "critical-secondary",
                                               size: "sm",
                                               text:
@@ -145,7 +145,7 @@ function N() {
                                 }),
                                 (0, r.jsx)(u.u, {
                                     text: "Triggers mobile and email suspicious session notifications for the current user",
-                                    children: (0, r.jsx)(d.zxk, {
+                                    children: (0, r.jsx)(d.Button, {
                                         variant: "secondary",
                                         size: "sm",
                                         text: "Trigger Suspicious Sessions Notification",
@@ -223,7 +223,7 @@ function R(e) {
                     : _
                       ? (0, r.jsx)("div", {
                             className: C.sessionCheckbox,
-                            children: (0, r.jsx)(d.XZJ, {
+                            children: (0, r.jsx)(d.Cnq, {
                                 onChange: (e) => {
                                     null == u || u(e);
                                 },

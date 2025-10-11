@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(85960),
     f = n(577330),
     h = n(65912),
-    x = n(51248),
-    b = n(546513),
+    b = n(51248),
+    x = n(546513),
     j = n(572456),
     v = n(273504),
     _ = n(981631),
@@ -85,7 +85,7 @@ function y(e) {
     let U = (0, p.Z6)(P);
     return (0, r.jsxs)("div", {
         children: [
-            (0, r.jsx)(s.X6q, {
+            (0, r.jsx)(s.Heading, {
                 variant: "heading-lg/semibold",
                 color: "header-primary",
                 children: C.intl.string(C.t.uRelg4),
@@ -167,7 +167,7 @@ function y(e) {
                                       children: n.map((e) => {
                                           var t;
                                           return (0, r.jsx)(
-                                              b.Z,
+                                              x.Z,
                                               {
                                                   guildId: P,
                                                   triggerType: e,
@@ -190,7 +190,7 @@ function y(e) {
                     withDivider: !1,
                     className: O.explicitContentFilterSection,
                 }),
-            (0, r.jsx)(x.Z, {
+            (0, r.jsx)(b.Z, {
                 guildId: P,
                 existingRules: A,
             }),

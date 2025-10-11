@@ -111,7 +111,7 @@ function C(e) {
                         (0, n.jsxs)("div", {
                             className: T.header,
                             children: [
-                                (0, n.jsx)(c.X6q, {
+                                (0, n.jsx)(c.Heading, {
                                     variant: "text-sm/bold",
                                     color: "header-primary",
                                     children: j.intl.string(j.t["/WPGnJ"]),
@@ -158,7 +158,7 @@ function C(e) {
             disabled: null == M || K,
             onClick: F ? G : L,
         },
-        $ = {
+        H = {
             text: j.intl.string(j.t["ETE/oK"]),
             onClick: I,
             variant: "secondary",
@@ -192,7 +192,7 @@ function C(e) {
         })({ onClose: I }, W)),
         (r = r =
             {
-                actions: [$, q],
+                actions: [H, q],
                 children: X,
             }),
         Object.getOwnPropertyDescriptors

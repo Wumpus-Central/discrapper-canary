@@ -15,7 +15,7 @@ function u(e) {
             (0, i.jsxs)("div", {
                 className: c.content,
                 children: [
-                    (0, i.jsx)(l.X6q, {
+                    (0, i.jsx)(l.Heading, {
                         variant: "heading-lg/normal",
                         children: s.intl.format(s.t.ilLVLi, {}),
                     }),

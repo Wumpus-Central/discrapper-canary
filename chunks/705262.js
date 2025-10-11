@@ -156,7 +156,7 @@ let Y = Object.freeze({
         return (0, r.jsxs)("div", {
             className: k.title,
             children: [
-                (0, r.jsx)(c.X6q, {
+                (0, r.jsx)(c.Heading, {
                     "aria-label": o,
                     className: k.titleText,
                     variant: "text-md/medium",
@@ -199,7 +199,7 @@ let Y = Object.freeze({
             )
             .with({ isPreview: !0 }, () => j.intl.format(j.t.DWIjJy, { onPremiumClick: () => m.z }))
             .otherwise(() => j.intl.string(j.t["np0X/v"]));
-        return (0, r.jsx)(c.X6q, {
+        return (0, r.jsx)(c.Heading, {
             variant: "text-sm/normal",
             className: k.subtext,
             children: l,
@@ -437,7 +437,7 @@ let Y = Object.freeze({
                     }),
                 t &&
                     a &&
-                    (0, r.jsx)(c.X6q, {
+                    (0, r.jsx)(c.Heading, {
                         className: k.upsellText,
                         variant: "heading-sm/semibold",
                         children: j.intl.string(j.t.POSLGR),

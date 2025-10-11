@@ -23,7 +23,7 @@ function f(e) {
         };
     return a
         ? (0, r.jsx)(
-              l.X6q,
+              l.Heading,
               {
                   className: d.gap,
                   "aria-hidden": !0,
@@ -55,7 +55,7 @@ function f(e) {
                 l.P3F,
                 {
                     onClick: () => u(!0),
-                    children: (0, r.jsx)(l.X6q, {
+                    children: (0, r.jsx)(l.Heading, {
                         className: o()(d.roundButton, d.gap),
                         "aria-hidden": !0,
                         variant: "heading-sm/semibold",
@@ -84,12 +84,12 @@ function _(e) {
     function y(e) {
         let { key: t, disabled: n, navigateToPage: i } = e;
         return (0, r.jsxs)(
-            s.zx,
+            s.Button,
             {
                 className: d.endButton,
                 innerClassName: d.endButtonInner,
-                look: s.zx.Looks.BLANK,
-                color: s.zx.Colors.TRANSPARENT,
+                look: s.Button.Looks.BLANK,
+                color: s.Button.Colors.TRANSPARENT,
                 onClick: i,
                 disabled: n,
                 rel: "prev",
@@ -109,12 +109,12 @@ function _(e) {
     function O(e) {
         let { key: t, disabled: n, navigateToPage: i } = e;
         return (0, r.jsxs)(
-            s.zx,
+            s.Button,
             {
                 className: d.endButton,
                 innerClassName: d.endButtonInner,
-                look: s.zx.Looks.BLANK,
-                color: s.zx.Colors.TRANSPARENT,
+                look: s.Button.Looks.BLANK,
+                color: s.Button.Colors.TRANSPARENT,
                 onClick: i,
                 disabled: n,
                 rel: "next",

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => X }), n(388685);
+n.d(t, { Z: () => J }), n(388685);
 var i = n(951288),
     l = n(647438),
     r = n(120356),
@@ -22,8 +22,8 @@ var i = n(951288),
     S = n(146085),
     N = n(192079),
     O = n(277053),
-    Z = n(271383),
-    E = n(485386),
+    E = n(271383),
+    Z = n(485386),
     w = n(430824),
     T = n(496675),
     _ = n(594174),
@@ -240,9 +240,9 @@ function W(e) {
 }
 function F(e) {
     let { guild: t, channel: l, permissionUpdates: r } = e,
-        c = (0, a.e7)([E.Z], () => E.Z.getSortedRoles(t.id)),
+        c = (0, a.e7)([Z.Z], () => Z.Z.getSortedRoles(t.id)),
         u = I.RZ(t, c, l, S.yP, r),
-        h = (0, a.e7)([Z.ZP], () => I.cR(Z.ZP.getMemberIds(t.id), l, t, S.yP, r)),
+        h = (0, a.e7)([E.ZP], () => I.cR(E.ZP.getMemberIds(t.id), l, t, S.yP, r)),
         g = (0, C.nG)(l.id);
     return (0, i.jsxs)("div", {
         className: s()(V.settingCard, V.active),
@@ -274,7 +274,7 @@ function F(e) {
                             (0, i.jsx)(o.u, {
                                 text: H.intl.string(H.t.arRuER),
                                 shouldShow: !g,
-                                children: (0, i.jsx)(d.zxk, {
+                                children: (0, i.jsx)(d.Button, {
                                     variant: "primary",
                                     size: "sm",
                                     text: H.intl.string(H.t.dMJ3Y2),
@@ -389,12 +389,12 @@ function z(e) {
                                         align: x.Z.Align.CENTER,
                                         className: V.folderHeader,
                                         children: [
-                                            (0, i.jsx)(d.X6q, {
+                                            (0, i.jsx)(d.Heading, {
                                                 variant: "heading-sm/semibold",
                                                 className: V.folderTitle,
                                                 children: f.formLabel,
                                             }),
-                                            (0, i.jsx)(d.zxk, {
+                                            (0, i.jsx)(d.Button, {
                                                 variant: "primary",
                                                 size: "sm",
                                                 text: H.intl.string(H.t.dMJ3Y2),
@@ -435,7 +435,7 @@ function q(e) {
     return (0, i.jsxs)("div", {
         children: [
             (0, i.jsx)(d.izJ, { className: V.divider }),
-            (0, i.jsx)(d.X6q, {
+            (0, i.jsx)(d.Heading, {
                 variant: "heading-sm/semibold",
                 className: s()(V.folderTitle, V.sectionTitle),
                 children: t,
@@ -443,7 +443,7 @@ function q(e) {
         ],
     });
 }
-let X = a.ZP.connectStores([O.Z, T.Z, Z.ZP, w.Z, E.Z], () => {
+let J = a.ZP.connectStores([O.Z, T.Z, E.ZP, w.Z, Z.Z], () => {
     let e,
         t = O.Z.channel,
         n = O.Z.category,
@@ -453,9 +453,9 @@ let X = a.ZP.connectStores([O.Z, T.Z, Z.ZP, w.Z, E.Z], () => {
         s = !1;
     if (null != t) {
         e = w.Z.getGuild(t.getGuildId());
-        let n = Z.ZP.getMemberIds(null == e ? void 0 : e.id);
+        let n = E.ZP.getMemberIds(null == e ? void 0 : e.id);
         if (null != e) {
-            let a = E.Z.getSortedRoles(e.id);
+            let a = Z.Z.getSortedRoles(e.id);
             (r = O.Z.editedPermissionIds.reduce((e, t) => {
                 let n = O.Z.getPermissionOverwrite(t);
                 return null != n && (e[t] = n), e;
@@ -498,7 +498,7 @@ let X = a.ZP.connectStores([O.Z, T.Z, Z.ZP, w.Z, E.Z], () => {
         s.isCategory() && ((b.title = H.intl.string(H.t["/uELTk"])), (b.subtitle = H.intl.string(H.t["8iAg3d"]))),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(d.X6q, {
+                (0, i.jsx)(d.Heading, {
                     variant: "heading-lg/semibold",
                     children: b.title,
                 }),

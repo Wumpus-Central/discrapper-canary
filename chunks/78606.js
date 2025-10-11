@@ -46,7 +46,7 @@ let u = function (e) {
         children: (e, t) => {
             var n, i;
             return (0, r.jsx)(
-                l.zxk,
+                l.Button,
                 ((n = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},

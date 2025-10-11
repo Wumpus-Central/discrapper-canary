@@ -40,7 +40,7 @@ function p() {
                                 t(parseInt(e));
                             },
                         }),
-                        (0, a.jsx)(i.zxk, {
+                        (0, a.jsx)(i.Button, {
                             variant: "primary",
                             size: "sm",
                             text: "Set",
@@ -59,7 +59,7 @@ function p() {
                             variant: "text-md/normal",
                             children: "Reset to API values",
                         }),
-                        (0, a.jsx)(i.zxk, {
+                        (0, a.jsx)(i.Button, {
                             variant: "primary",
                             size: "sm",
                             text: "Reset",
@@ -77,7 +77,7 @@ function p() {
                             children:
                                 "Pretend the native module is loading so when you close your app it'll look as if it crashed on load",
                         }),
-                        (0, a.jsx)(i.zxk, {
+                        (0, a.jsx)(i.Button, {
                             variant: "primary",
                             size: "sm",
                             text: "Pretend",
@@ -87,7 +87,7 @@ function p() {
                 }),
                 (0, a.jsx)("div", {
                     className: m.panelRow,
-                    children: (0, a.jsx)(i.zxk, {
+                    children: (0, a.jsx)(i.Button, {
                         variant: "primary",
                         size: "sm",
                         text: "Open voice filters panel",

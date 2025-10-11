@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => b });
 var r = n(951288),
     i = n(647438),
     l = n(512722),
@@ -13,13 +13,13 @@ var r = n(951288),
     p = n(783454),
     f = n(388032),
     h = n(654321);
-function x(e) {
+function b(e) {
     var t;
     let { onDeleteEditState: l } = e,
-        { editStateId: x, guildId: b, groupListingId: j } = (0, g.N)(),
-        v = (0, s.e7)([u.Z], () => u.Z.getSubscriptionListing(x)),
+        { editStateId: b, guildId: x, groupListingId: j } = (0, g.N)(),
+        v = (0, s.e7)([u.Z], () => u.Z.getSubscriptionListing(b)),
         _ = null == v ? void 0 : v.id,
-        C = (0, m.Z)(b),
+        C = (0, m.Z)(x),
         O = i.useMemo(() => {
             var e;
             return null != C && null != v && (null != (e = C[v.role_id]) ? e : 0);
@@ -29,7 +29,7 @@ function x(e) {
         E = null != (t = null == v ? void 0 : v.archived) && t,
         { error: I, deleteSubscriptionListing: S, submitting: T } = (0, d.r4)(),
         { error: P, archiveSubscriptionListing: w, submitting: Z } = (0, d._1)(),
-        { allowSelfRemoveMonetization: R } = (0, c.gX)(b);
+        { allowSelfRemoveMonetization: R } = (0, c.gX)(x);
     return null == v
         ? null
         : (0, r.jsx)(p.Z, {
@@ -63,14 +63,14 @@ function x(e) {
                                                     listingMemberCount: O,
                                                 }),
                                             }),
-                                        (0, r.jsx)(o.zxk, {
+                                        (0, r.jsx)(o.Button, {
                                             variant: "critical-primary",
                                             onClick: () => {
                                                 let e = async () => {
                                                     (N ||
                                                         (a()(null != j, "group listing doesnt exist"),
                                                         a()(null != _, "subscription listing doesnt exist"),
-                                                        await S(b, j, _))) &&
+                                                        await S(x, j, _))) &&
                                                         (null == l || l());
                                                 };
                                                 (0, o.ZDy)(async () => {
@@ -112,7 +112,7 @@ function x(e) {
                                 disabled: !R,
                                 label: f.intl.string(f.t["MS/4U1"]),
                                 description: f.intl.string(f.t["5/Jeg4"]),
-                                children: (0, r.jsx)(o.zxk, {
+                                children: (0, r.jsx)(o.Button, {
                                     variant: "critical-primary",
                                     onClick: () => {
                                         a()(null != j, "group listing doesnt exist"),
@@ -134,7 +134,7 @@ function x(e) {
                                                                 text: f.intl.string(f.t.RL0wjo),
                                                                 variant: "critical-primary",
                                                                 onClick: async () => {
-                                                                    await w(b, j, _), t.onClose();
+                                                                    await w(x, j, _), t.onClose();
                                                                 },
                                                             },
                                                         ],

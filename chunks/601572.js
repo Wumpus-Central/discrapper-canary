@@ -1,4 +1,4 @@
-a.d(t, { default: () => P }), a(388685);
+a.d(t, { default: () => O }), a(388685);
 var r = a(951288),
     n = a(647438),
     i = a(793030),
@@ -11,27 +11,27 @@ var r = a(951288),
     p = a(695346),
     g = a(932724),
     h = a(716161),
-    m = a(672339),
-    w = a(131951),
-    b = a(594174),
+    b = a(672339),
+    m = a(131951),
+    w = a(594174),
     f = a(626135),
     v = a(747545),
     C = a(981631),
-    E = a(388032),
-    O = a(142768);
-function P(e) {
-    let { transitionState: t, videoEnabled: a, onEnable: P, onClose: _ } = e,
-        k = w.Z.getCameraComponent(),
+    k = a(388032),
+    E = a(142768);
+function O(e) {
+    let { transitionState: t, videoEnabled: a, onEnable: O, onClose: P } = e,
+        _ = m.Z.getCameraComponent(),
         y = p.qF.useSetting(),
-        [j, S] = n.useState((0, g.P)(b.default.getCurrentUser())),
-        x = (0, s.O)(),
+        [j, x] = n.useState((0, g.P)(w.default.getCurrentUser())),
+        S = (0, s.O)(),
         { analyticsLocations: A } = (0, u.ZP)(d.Z.CAMERA_PREVIEW);
     n.useEffect(() => {
         f.default.track(C.rMx.OPEN_MODAL, { type: "Camera Preview Modal" });
     }, []);
     let M = n.useCallback(async () => {
             try {
-                await (0, m.wG)(j, {
+                await (0, b.wG)(j, {
                     location: (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var a = null != arguments[t] ? arguments[t] : {},
@@ -56,23 +56,23 @@ function P(e) {
                                 });
                         }
                         return e;
-                    })({ page: C.ZY5.PREVIEW_CAMERA_MODAL }, x.location),
+                    })({ page: C.ZY5.PREVIEW_CAMERA_MODAL }, S.location),
                 });
             } catch (e) {}
-            await _(), (0, h.Up)(j);
-        }, [j, x.location, _]),
-        Z = n.useCallback(async () => {
-            await M(), l.Z.setVideoEnabled(!0), null == P || P();
-        }, [M, P]),
-        I = n.useMemo(
+            await P(), (0, h.Up)(j);
+        }, [j, S.location, P]),
+        I = n.useCallback(async () => {
+            await M(), l.Z.setVideoEnabled(!0), null == O || O();
+        }, [M, O]),
+        L = n.useMemo(
             () => [
                 {
                     variant: "primary",
-                    text: a ? E.intl.string(E.t.KQENho) : E.intl.string(E.t.kgIe9f),
-                    onClick: a ? M : Z,
+                    text: a ? k.intl.string(k.t.KQENho) : k.intl.string(k.t.kgIe9f),
+                    onClick: a ? M : I,
                 },
             ],
-            [M, Z, a],
+            [M, I, a],
         );
     return (0, r.jsx)(u.Gt, {
         value: A,
@@ -80,9 +80,9 @@ function P(e) {
             page: C.ZY5.PREVIEW_CAMERA_MODAL,
             children: (0, r.jsx)(i.Modal, {
                 size: "md",
-                title: a ? E.intl.string(E.t.LAwwbW) : E.intl.string(E.t["/HITVF"]),
-                actionBarInput: (0, r.jsx)(c.XZJ, {
-                    label: E.intl.string(E.t["3Ppr1t"]),
+                title: a ? k.intl.string(k.t.LAwwbW) : k.intl.string(k.t["/HITVF"]),
+                actionBarInput: (0, r.jsx)(c.Checkbox, {
+                    label: k.intl.string(k.t["3Ppr1t"]),
                     labelType: "secondary",
                     checked: y,
                     onChange: () => {
@@ -90,8 +90,8 @@ function P(e) {
                             f.default.track(C.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: !y });
                     },
                 }),
-                actions: I,
-                onClose: _,
+                actions: L,
+                onClose: P,
                 transitionState: t,
                 children: (0, r.jsx)(v.Z, {
                     hidePreviewToggle: !0,
@@ -99,15 +99,15 @@ function P(e) {
                     hideDeviceHeader: !0,
                     hideCameraSettingsLink: !0,
                     selectedBackgroundOption: j,
-                    onSelectBackgroundOption: S,
+                    onSelectBackgroundOption: x,
                     hideDeviceSelector: a,
                     renderCamera: (e) =>
                         (0, r.jsxs)("div", {
-                            className: O.cameraPreview,
+                            className: E.cameraPreview,
                             children: [
                                 (0, r.jsx)("div", {
-                                    className: O.camera,
-                                    children: (0, r.jsx)(k, {
+                                    className: E.camera,
+                                    children: (0, r.jsx)(_, {
                                         disabled: !1,
                                         deviceId: e,
                                         width: 430,
@@ -117,7 +117,7 @@ function P(e) {
                                 (0, r.jsx)(v.S, {}),
                             ],
                         }),
-                    onLearnMore: _,
+                    onLearnMore: P,
                 }),
             }),
         }),

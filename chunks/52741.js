@@ -83,7 +83,7 @@ function v(e) {
                             numMonths: null != (i = null == L ? void 0 : L.duration) ? i : E.rt,
                         });
             };
-        return (0, r.jsx)(c.X6q, {
+        return (0, r.jsx)(c.Heading, {
             variant: N,
             color: R,
             className: a()(y.trialHeader, C),
@@ -97,7 +97,7 @@ function v(e) {
         );
         if (o === E.C.PREMIUM_TRIAL) {
             var G, B, Z, F;
-            return (0, r.jsx)(c.X6q, {
+            return (0, r.jsx)(c.Heading, {
                 variant: N,
                 color: R,
                 className: a()(y.trialHeader, C),
@@ -117,7 +117,7 @@ function v(e) {
             });
         }
         if (null != k)
-            return (0, r.jsx)(c.X6q, {
+            return (0, r.jsx)(c.Heading, {
                 variant: N,
                 color: R,
                 className: a()(y.trialHeader, C),

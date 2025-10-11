@@ -41,7 +41,7 @@ let p = (e) => {
         children: [
             (0, r.jsx)(s.xBx, {
                 separator: !1,
-                children: (0, r.jsxs)(s.X6q, {
+                children: (0, r.jsxs)(s.Heading, {
                     variant: "heading-lg/semibold",
                     children: [m.intl.string(m.t.zbyz7u), "\u2014", null != t ? t.name : ""],
                 }),
@@ -94,17 +94,17 @@ let p = (e) => {
                 ],
             }),
             (0, r.jsx)(s.mzw, {
-                children: (0, r.jsxs)(s.hE2, {
+                children: (0, r.jsxs)(s.ButtonGroup, {
                     direction: "horizontal-reverse",
                     children: [
-                        (0, r.jsx)(s.zxk, {
+                        (0, r.jsx)(s.Button, {
                             variant: "primary",
                             text: m.intl.string(m.t["2mIlKS"]),
                             onClick: () => {
                                 c.Z.prune(t.id, p, j), i();
                             },
                         }),
-                        (0, r.jsx)(s.zxk, {
+                        (0, r.jsx)(s.Button, {
                             variant: "secondary",
                             text: m.intl.string(m.t["ETE/oK"]),
                             onClick: i,

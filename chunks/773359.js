@@ -20,7 +20,7 @@ let d = (e) => {
         }),
         headerStyles: u.bannerHeader,
         containerStyles: u.bannerContainer,
-        children: (0, i.jsx)(l.zxk, {
+        children: (0, i.jsx)(l.Button, {
             variant: "secondary",
             size: "sm",
             text: c.intl.string(s.default["6quCi4"]),

@@ -59,7 +59,7 @@ let M = () => {
                     ? (0, r.jsxs)("div", {
                           className: x.tryItOutButtonsV2,
                           children: [
-                              (0, r.jsx)(l.zxk, {
+                              (0, r.jsx)(l.Button, {
                                   variant: "secondary",
                                   text: L.intl.string(L.t["E+COuL"]),
                                   onClick: () => M(),
@@ -78,7 +78,7 @@ let M = () => {
                     : (0, r.jsxs)("div", {
                           className: x.tryItOutButtons,
                           children: [
-                              (0, r.jsx)(l.zxk, {
+                              (0, r.jsx)(l.Button, {
                                   variant: "secondary",
                                   text: L.intl.string(L.t["E+COuL"]),
                                   onClick: () => M(),
@@ -106,7 +106,7 @@ let M = () => {
                     children: [
                         (0, r.jsx)("div", {
                             className: x.previewThemeButton,
-                            children: (0, r.jsx)(l.zxk, {
+                            children: (0, r.jsx)(l.Button, {
                                 variant: "secondary",
                                 fullWidth: !0,
                                 text: L.intl.string(L.t["E+COuL"]),
@@ -191,7 +191,7 @@ function k() {
 let U = () =>
     (0, a.e7)([_.Z], () => _.Z.isPreview)
         ? null
-        : (0, r.jsx)(l.zxk, {
+        : (0, r.jsx)(l.Button, {
               variant: "primary",
               text: L.intl.string(L.t.qYXrkZ),
               onClick: M,

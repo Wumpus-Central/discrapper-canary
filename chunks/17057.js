@@ -13,7 +13,7 @@ let c = function (e) {
         children: (0, r.jsxs)("div", {
             className: o.previewCard,
             children: [
-                (0, r.jsx)(i.X6q, {
+                (0, r.jsx)(i.Heading, {
                     variant: "heading-md/semibold",
                     children: a.intl.string(a.t.IcljUl),
                 }),

@@ -94,7 +94,7 @@ function O(e) {
                 (0, r.jsx)("div", {
                     className: y.metadataRefreshButton,
                     children: (0, r.jsx)(
-                        s.zxk,
+                        s.Button,
                         {
                             size: "sm",
                             variant: o ? "active" : "secondary",

@@ -37,7 +37,7 @@ function h() {
                     user: e.body,
                     analyticsToken: t ? e.body.analytics_token : void 0,
                 }),
-                new u.Z(e.body)
+                new u.default(e.body)
             ),
         );
 }

@@ -18,8 +18,8 @@ var r = n(951288),
     p = n(601964),
     f = n(496675),
     h = n(246946),
-    x = n(594174),
-    b = n(63063),
+    b = n(594174),
+    x = n(63063),
     j = n(78451),
     v = n(434404),
     _ = n(999382),
@@ -161,7 +161,7 @@ function w(e) {
                                 color: "header-secondary",
                                 variant: "text-sm/normal",
                                 children: E.intl.format(E.t.BI4ukJ, {
-                                    helpdeskArticle: b.Z.getArticleURL(N.BhN.SAFE_DIRECT_MESSAGING),
+                                    helpdeskArticle: x.Z.getArticleURL(N.BhN.SAFE_DIRECT_MESSAGING),
                                 }),
                             }),
                         ],
@@ -229,7 +229,7 @@ function R(e) {
 function D(e) {
     let { guild: t, mfaLevel: n } = e,
         l = (0, o.e7)([f.Z], () => null != t && f.Z.can(N.Plq.MANAGE_GUILD, t), [t]),
-        a = (0, o.e7)([x.default], () => x.default.getCurrentUser()),
+        a = (0, o.e7)([b.default], () => b.default.getCurrentUser()),
         { isGuildOwnerWithMFA: d, showMFAUserTooltip: u } = i.useMemo(
             () =>
                 null == a
@@ -244,7 +244,7 @@ function D(e) {
             [a, t],
         ),
         h = n === N.BpS.ELEVATED,
-        b = (0, s.throttle)(async (e) => {
+        x = (0, s.throttle)(async (e) => {
             d &&
                 (u ||
                     (await v.Z.updateMFALevel({
@@ -264,7 +264,7 @@ function D(e) {
                               label: E.intl.string(E.t.lbBfER),
                               description: E.intl.string(E.t.REr5AA),
                               checked: h,
-                              onChange: b,
+                              onChange: x,
                               disabled: !d,
                           }),
                           u &&
@@ -292,7 +292,7 @@ function A() {
           ? (0, r.jsx)(d.Z, {})
           : (0, r.jsxs)("div", {
                 children: [
-                    (0, r.jsx)(c.X6q, {
+                    (0, r.jsx)(c.Heading, {
                         className: I.headerContainer,
                         variant: "heading-lg/semibold",
                         children: E.intl.string(E.t["suhY+f"]),

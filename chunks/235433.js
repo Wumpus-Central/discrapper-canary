@@ -65,7 +65,7 @@ function v(e) {
             className: O.buttonsContainer,
             children: [
                 I &&
-                    (0, r.jsx)(o.zxk, {
+                    (0, r.jsx)(o.Button, {
                         variant: "primary",
                         size: "sm",
                         text: b.intl.string(y.default.vJqrIi),
@@ -73,7 +73,7 @@ function v(e) {
                     }),
                 null == n &&
                     k &&
-                    (0, r.jsx)(o.zxk, {
+                    (0, r.jsx)(o.Button, {
                         variant: "secondary",
                         size: "sm",
                         text: b.intl.string(y.default.ymq8WV),
@@ -81,7 +81,7 @@ function v(e) {
                     }),
                 null != n &&
                     null != U &&
-                    (0, r.jsx)(o.zxk, {
+                    (0, r.jsx)(o.Button, {
                         variant: "secondary",
                         size: "sm",
                         text: b.intl.string(y.default["j/KRxc"]),

@@ -185,7 +185,7 @@ function ee(e) {
                 children: (0, r.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
                     className: K.fieldButton,
-                    children: (0, r.jsx)(_.zxk, {
+                    children: (0, r.jsx)(_.Button, {
                         variant: "secondary",
                         size: "sm",
                         text: g ? W.intl.string(W.t["16kTw8"]) : W.intl.string(W.t.bt75u7),
@@ -263,7 +263,7 @@ function et(e) {
             (0, r.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,
                 className: K.fieldButton,
-                children: (0, r.jsx)(_.zxk, {
+                children: (0, r.jsx)(_.Button, {
                     variant: "secondary",
                     size: "sm",
                     text: h ? W.intl.string(W.t["16kTw8"]) : W.intl.string(W.t.bt75u7),
@@ -361,7 +361,7 @@ function er(e) {
             (0, r.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,
                 className: K.fieldButton,
-                children: (0, r.jsx)(_.zxk, {
+                children: (0, r.jsx)(_.Button, {
                     variant: "secondary",
                     size: "sm",
                     text: t.buttonText,
@@ -450,7 +450,7 @@ function ei(e) {
                         (0, r.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
                             className: K.fieldButton,
-                            children: (0, r.jsx)(_.zxk, {
+                            children: (0, r.jsx)(_.Button, {
                                 variant: "secondary",
                                 size: "sm",
                                 text: c ? W.intl.string(W.t.bt75u7) : W.intl.string(W.t.OYkgVl),
@@ -538,7 +538,7 @@ function eo(e) {
                 (0, r.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
                     className: K.fieldButton,
-                    children: (0, r.jsx)(_.zxk, {
+                    children: (0, r.jsx)(_.Button, {
                         variant: "secondary",
                         size: "sm",
                         text: a ? W.intl.string(W.t.KPGVWl) : W.intl.string(W.t.yNGjyM),
@@ -611,7 +611,7 @@ function es() {
                             }),
                         ],
                     }),
-                    (0, r.jsx)(_.zxk, {
+                    (0, r.jsx)(_.Button, {
                         variant: "primary",
                         size: "sm",
                         text: W.intl.string(W.t["2p2aY2"]),

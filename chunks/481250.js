@@ -170,7 +170,7 @@ function R(e) {
                 "".concat(e.type, " + ").concat(e.ssrc),
             );
         })(V, 0, i, R, S),
-        _ =
+        H =
             I &&
             "video" === V.type &&
             null != i &&
@@ -196,7 +196,7 @@ function R(e) {
     return (0, r.jsxs)(c.Kqy, {
         gap: 16,
         children: [
-            (0, r.jsx)(c.X6q, {
+            (0, r.jsx)(c.Heading, {
                 variant: "heading-md/medium",
                 children: T,
             }),
@@ -209,7 +209,7 @@ function R(e) {
                 children: O,
             }),
             G,
-            _,
+            H,
         ],
     });
 }

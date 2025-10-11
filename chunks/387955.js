@@ -1,91 +1,91 @@
-r.d(t, { Z: () => f });
-var n = r(951288);
-r(647438);
-var i = r(120356),
-    o = r.n(i),
-    a = r(481060),
-    s = r(63063),
-    l = r(773446),
-    c = r(572264),
-    u = r(981631),
-    d = r(388032),
-    m = r(631936),
-    g = r(849399);
+n.d(t, { Z: () => f });
+var r = n(951288);
+n(647438);
+var i = n(120356),
+    o = n.n(i),
+    a = n(481060),
+    s = n(63063),
+    l = n(773446),
+    c = n(572264),
+    u = n(981631),
+    d = n(388032),
+    m = n(631936),
+    g = n(849399);
 function f(e) {
     let { user: t } = e;
-    return (0, n.jsxs)("div", {
+    return (0, r.jsxs)("div", {
         className: m.infoContainer,
         children: [
-            (0, n.jsx)("img", {
+            (0, r.jsx)("img", {
                 className: m.infoPicture,
                 alt: "",
                 src: g,
             }),
-            (0, n.jsx)(a.X6q, {
+            (0, r.jsx)(a.Heading, {
                 className: m.title,
                 color: "header-primary",
                 variant: "heading-xl/bold",
                 children: d.intl.format(d.t["au+lPj"], { n: t.tag }),
             }),
-            (0, n.jsx)(a.Text, {
+            (0, r.jsx)(a.Text, {
                 className: m.subtitleInfo,
                 color: "header-secondary",
                 variant: "text-md/medium",
                 children: d.intl.format(d.t["5fwX5+"], {}),
             }),
-            (0, n.jsx)(a.Text, {
+            (0, r.jsx)(a.Text, {
                 className: m.prompt,
                 color: "header-secondary",
                 variant: "text-sm/medium",
                 children: d.intl.format(d.t["i2vB8/"], { helpdeskArticle: s.Z.getArticleURL(u.BhN.POMELO_FAQ) }),
             }),
-            (0, n.jsxs)("div", {
+            (0, r.jsxs)("div", {
                 className: o()([m.infoItem, m.infoItemSpacing]),
                 children: [
-                    (0, n.jsx)("div", {
+                    (0, r.jsx)("div", {
                         className: m.infoIcon,
-                        children: (0, n.jsx)(a.iFz, {
+                        children: (0, r.jsx)(a.iFz, {
                             size: "custom",
                             color: "currentColor",
                             width: 20,
                             height: 20,
                         }),
                     }),
-                    (0, n.jsx)(a.Text, {
+                    (0, r.jsx)(a.Text, {
                         color: "header-secondary",
                         variant: "text-sm/medium",
                         children: d.intl.format(d.t.SzUaZ2, {}),
                     }),
                 ],
             }),
-            (0, n.jsxs)("div", {
+            (0, r.jsxs)("div", {
                 className: o()([m.infoItem, m.infoItemSpacing]),
                 children: [
-                    (0, n.jsx)("div", {
+                    (0, r.jsx)("div", {
                         className: m.infoIcon,
-                        children: (0, n.jsx)(l.Z, {
+                        children: (0, r.jsx)(l.Z, {
                             width: 20,
                             height: 20,
                         }),
                     }),
-                    (0, n.jsx)(a.Text, {
+                    (0, r.jsx)(a.Text, {
                         color: "header-secondary",
                         variant: "text-sm/medium",
                         children: d.intl.format(d.t["UwPc+P"], {}),
                     }),
                 ],
             }),
-            (0, n.jsxs)("div", {
+            (0, r.jsxs)("div", {
                 className: m.infoItem,
                 children: [
-                    (0, n.jsx)("div", {
+                    (0, r.jsx)("div", {
                         className: m.infoIcon,
-                        children: (0, n.jsx)(c.Z, {
+                        children: (0, r.jsx)(c.Z, {
                             width: 20,
                             height: 20,
                         }),
                     }),
-                    (0, n.jsx)(a.Text, {
+                    (0, r.jsx)(a.Text, {
                         color: "header-secondary",
                         variant: "text-sm/medium",
                         children: d.intl.format(d.t.okLjjo, { username: t.tag }),

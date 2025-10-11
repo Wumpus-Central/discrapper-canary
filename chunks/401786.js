@@ -211,7 +211,7 @@ function M(e) {
                     align: h.Z.Align.CENTER,
                     justify: h.Z.Justify.BETWEEN,
                     children: [
-                        (0, r.jsx)(c.zxk, {
+                        (0, r.jsx)(c.Button, {
                             variant: "critical-primary",
                             text: P.intl.string(P.t["/AS/gI"]),
                             disabled: I,

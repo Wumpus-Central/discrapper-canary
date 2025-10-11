@@ -113,7 +113,7 @@ function b() {
             children: [
                 (0, a.jsxs)("div", {
                     children: [
-                        (0, a.jsx)(s.X6q, {
+                        (0, a.jsx)(s.Heading, {
                             variant: "heading-lg/semibold",
                             children: "Inbox",
                         }),
@@ -124,35 +124,32 @@ function b() {
                 }),
                 (0, a.jsxs)("div", {
                     children: [
-                        (0, a.jsx)(s.X6q, {
+                        (0, a.jsx)(s.Heading, {
                             variant: "heading-lg/semibold",
                             children: "Dev Overrides",
                         }),
-                        (0, a.jsxs)("div", {
+                        (0, a.jsx)("div", {
                             style: {
                                 display: "flex",
                                 alignItems: "center",
-                                gap: 8,
                                 marginTop: 8,
                             },
-                            children: [
-                                (0, a.jsx)("div", { children: "Nav On Click" }),
-                                (0, a.jsx)(s.XZJ, {
-                                    checked: E,
-                                    onChange: (e) => {
-                                        o.Z.dispatch({
-                                            type: "NOTIFICATIONS_INBOX_SET_DEV_OVERRIDES",
-                                            navOnClick: e,
-                                        });
-                                    },
-                                }),
-                            ],
+                            children: (0, a.jsx)(s.rsf, {
+                                label: "Nav On Click",
+                                checked: !!E,
+                                onChange: (e) => {
+                                    o.Z.dispatch({
+                                        type: "NOTIFICATIONS_INBOX_SET_DEV_OVERRIDES",
+                                        navOnClick: e,
+                                    });
+                                },
+                            }),
                         }),
                     ],
                 }),
                 (0, a.jsxs)("div", {
                     children: [
-                        (0, a.jsx)(s.X6q, {
+                        (0, a.jsx)(s.Heading, {
                             variant: "heading-lg/semibold",
                             children: "Unreads and Badging",
                         }),
@@ -179,7 +176,7 @@ function b() {
                 }),
                 (0, a.jsxs)("div", {
                     children: [
-                        (0, a.jsx)(s.X6q, {
+                        (0, a.jsx)(s.Heading, {
                             variant: "heading-lg/semibold",
                             children: "Store State",
                         }),
@@ -205,7 +202,7 @@ function b() {
                 }),
                 (0, a.jsxs)("div", {
                     children: [
-                        (0, a.jsx)(s.X6q, {
+                        (0, a.jsx)(s.Heading, {
                             variant: "heading-lg/semibold",
                             children: "Channel Info Map",
                         }),

@@ -524,7 +524,7 @@ class eh extends (r = a.PureComponent) {
                             z.intl.formatToPlainString(z.t["7dtXa2"], { daysSincePurchase: this.daysSincePurchase }),
                         ),
                 }),
-                (0, i.jsx)(p.eee, {
+                (0, i.jsx)(p.Anchor, {
                     href: ea(t),
                     children: z.intl.string(z.t.re5nOD),
                 }),

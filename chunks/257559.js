@@ -145,7 +145,7 @@ class N extends i.PureComponent {
                                             className: E.closeButton,
                                             onClick: p.onClose,
                                         }),
-                                        (0, r.jsx)(c.X6q, {
+                                        (0, r.jsx)(c.Heading, {
                                             variant: "heading-xl/bold",
                                             children: x.intl.string(x.t.MWMcg4),
                                         }),
@@ -154,7 +154,7 @@ class N extends i.PureComponent {
                             }),
                             (0, r.jsxs)(c.hzk, {
                                 children: [
-                                    (0, r.jsx)(c.X6q, {
+                                    (0, r.jsx)(c.Heading, {
                                         variant: "heading-md/medium",
                                         className: E.spacing,
                                         children: b,
@@ -164,7 +164,7 @@ class N extends i.PureComponent {
                             }),
                             (0, r.jsxs)(c.mzw, {
                                 children: [
-                                    (0, r.jsx)(c.zxk, {
+                                    (0, r.jsx)(c.Button, {
                                         variant: "critical-primary",
                                         size: "sm",
                                         text: x.intl.string(x.t.oyYWHB),
@@ -172,7 +172,7 @@ class N extends i.PureComponent {
                                         onClick: this.handleDelete,
                                     }),
                                     !e &&
-                                        (0, r.jsx)(c.XZJ, {
+                                        (0, r.jsx)(c.Checkbox, {
                                             checked: i,
                                             label: x.intl.string(C.default["8yIKen"]),
                                             onChange: (e) => this.handleToggleResolveFlag(e),

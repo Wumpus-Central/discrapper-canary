@@ -16,7 +16,7 @@ var i = n(481060),
     d = n(480872);
 let f = (e) => {
     let { listingName: t } = e;
-    return (0, r.jsx)(i.X6q, {
+    return (0, r.jsx)(i.Heading, {
         variant: "text-md/normal",
         color: "interactive-active",
         className: d.tierName,

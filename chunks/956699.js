@@ -248,7 +248,7 @@ class el extends i.Component {
     renderRefreshButton() {
         return !this.state.didSave || this.isDirty()
             ? null
-            : (0, r.jsx)(p.zxk, {
+            : (0, r.jsx)(p.Button, {
                   variant: "secondary",
                   text: "Reload App",
                   onClick: () => location.reload(),
@@ -273,13 +273,13 @@ class el extends i.Component {
         let { saving: e, buildOverrides: t } = this.state;
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(p.zxk, {
+                (0, r.jsx)(p.Button, {
                     variant: "critical-primary",
                     text: "Discard Changes",
                     onClick: this.handleDiscardChanges,
                     disabled: e,
                 }),
-                (0, r.jsx)(p.zxk, {
+                (0, r.jsx)(p.Button, {
                     variant: "primary",
                     text: "Save Build Overrides",
                     disabled: eo(null != t ? t : {}),
@@ -328,7 +328,7 @@ class el extends i.Component {
                         }),
                         o,
                         e,
-                        (0, r.jsxs)(p.hE2, {
+                        (0, r.jsxs)(p.ButtonGroup, {
                             justify: "end",
                             children: [this.renderRefreshButton(), this.renderLinkButton(), this.renderSaveButton()],
                         }),
@@ -971,12 +971,12 @@ function eh() {
                           (0, r.jsx)(M.F, {
                               setting: z.s6.DEVELOPER_OPTIONS_OVERRIDE_OPEN_OVERLAY,
                               children: l
-                                  ? (0, r.jsx)(p.zxk, {
+                                  ? (0, r.jsx)(p.Button, {
                                         variant: "primary",
                                         text: "Open Overlay",
                                         onClick: () => (0, x.f)(t),
                                     })
-                                  : (0, r.jsx)(p.zxk, {
+                                  : (0, r.jsx)(p.Button, {
                                         variant: "primary",
                                         text: "Open Overlay",
                                         onClick: () => window.open(o, "_blank"),
@@ -985,7 +985,7 @@ function eh() {
                           }),
                           (0, r.jsx)(M.F, {
                               setting: z.s6.DEVELOPER_OPTIONS_RESET_SOCKET,
-                              children: (0, r.jsx)(p.zxk, {
+                              children: (0, r.jsx)(p.Button, {
                                   variant: "primary",
                                   text: "Reset Socket",
                                   onClick: () => {
@@ -995,7 +995,7 @@ function eh() {
                           }),
                           (0, r.jsx)(M.F, {
                               setting: z.s6.DEVELOPER_OPTIONS_CLEAR_CACHES,
-                              children: (0, r.jsx)(p.zxk, {
+                              children: (0, r.jsx)(p.Button, {
                                   variant: "primary",
                                   text: "Clear Caches",
                                   onClick: () => {
@@ -1010,7 +1010,7 @@ function eh() {
                           }),
                           (0, r.jsx)(M.F, {
                               setting: z.s6.DEVELOPER_OPTIONS_SHOW_TOTP_SUCCESS,
-                              children: (0, r.jsx)(p.zxk, {
+                              children: (0, r.jsx)(p.Button, {
                                   variant: "primary",
                                   text: "Show TOTP Success",
                                   onClick: () => (0, K.Yn)(!0),
@@ -1077,12 +1077,12 @@ function eh() {
                                       ],
                                       onChange: (e) => (null != e ? ep(e) : void 0),
                                   }),
-                                  (0, r.jsx)(p.zxk, {
+                                  (0, r.jsx)(p.Button, {
                                       variant: "primary",
                                       text: "React Crash",
                                       onClick: () => a(!0),
                                   }),
-                                  (0, r.jsx)(p.zxk, {
+                                  (0, r.jsx)(p.Button, {
                                       variant: "primary",
                                       text: "onClick Throw",
                                       onClick: e_,
@@ -1117,7 +1117,7 @@ function em() {
                             value: t,
                             onChange: n,
                         }),
-                        (0, r.jsx)(p.zxk, {
+                        (0, r.jsx)(p.Button, {
                             variant: "primary",
                             text: "Save Override",
                             type: "submit",
@@ -1157,7 +1157,7 @@ function eg() {
                             value: n,
                             onChange: a,
                         }),
-                        (0, r.jsx)(p.zxk, {
+                        (0, r.jsx)(p.Button, {
                             variant: "primary",
                             text: "Update Changelog",
                             onClick: o,
@@ -1168,7 +1168,7 @@ function eg() {
                 (0, r.jsx)(c.gNt, {
                     label: "Reset Changelog",
                     description: "This will reset the changelog, so it will show again on the next startup.",
-                    children: (0, r.jsx)(p.zxk, {
+                    children: (0, r.jsx)(p.Button, {
                         variant: "primary",
                         text: "Reset Changelog",
                         onClick: s,

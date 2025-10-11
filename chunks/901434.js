@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(305325),
     d = n(281956),
     u = n(27457),
-    p = n(546247),
-    h = n(823379),
+    h = n(546247),
+    p = n(823379),
     f = n(5192),
     g = n(501655),
     m = n(504185),
@@ -19,18 +19,18 @@ let _ = (e, t) => f.ZP.getName(e.getGuildId(), e.id, t.user),
     j = function (e) {
         let { participants: t, channel: n, hasConnectPermission: f } = e,
             j = (0, d.J)(n.guild_id),
-            x = i.useCallback(() => {
+            O = i.useCallback(() => {
                 j
                     ? (0, c.hk)(n.guild_id, () => s.default.selectVoiceChannel(n.id))
                     : s.default.selectVoiceChannel(n.id);
             }, [n.id, n.guild_id, j]),
-            O = t.filter((e) => e.type === g.Ui.VOICE),
-            v = 4 === O.length ? 2 : 3,
-            C = (0, l.Wu)([o.Z], () => O.map((e) => o.Z.getParticipant(n.id, e.id)).filter(h.lm), [n.id, O]);
+            x = t.filter((e) => e.type === g.Ui.VOICE),
+            v = 4 === x.length ? 2 : 3,
+            C = (0, l.Wu)([o.Z], () => x.map((e) => o.Z.getParticipant(n.id, e.id)).filter(p.lm), [n.id, x]);
         return (0, r.jsxs)("div", {
             className: y.container,
             children: [
-                (0, r.jsx)(p.Z, {}),
+                (0, r.jsx)(h.Z, {}),
                 (0, r.jsx)("div", {
                     className: y.tiles,
                     style: { maxWidth: 168 * v },
@@ -50,7 +50,7 @@ let _ = (e, t) => f.ZP.getName(e.getGuildId(), e.id, t.user),
                         ),
                     ),
                 }),
-                (0, r.jsx)(a.X6q, {
+                (0, r.jsx)(a.Heading, {
                     className: y.channelName,
                     variant: "heading-xxl/normal",
                     children: n.name,
@@ -62,20 +62,20 @@ let _ = (e, t) => f.ZP.getName(e.getGuildId(), e.id, t.user),
                         color: "header-secondary",
                         variant: "heading-lg/normal",
                         children:
-                            0 === O.length
+                            0 === x.length
                                 ? b.intl.string(b.t.FUVhyM)
-                                : 1 === O.length
-                                  ? b.intl.formatToPlainString(b.t.EQwZlJ, { a: _(n, O[0]) })
-                                  : 2 === O.length
+                                : 1 === x.length
+                                  ? b.intl.formatToPlainString(b.t.EQwZlJ, { a: _(n, x[0]) })
+                                  : 2 === x.length
                                     ? b.intl.formatToPlainString(b.t.zBcKoK, {
-                                          a: _(n, O[0]),
-                                          b: _(n, O[1]),
+                                          a: _(n, x[0]),
+                                          b: _(n, x[1]),
                                       })
-                                    : O.length > 2
+                                    : x.length > 2
                                       ? b.intl.formatToPlainString(b.t["3AqFaG"], {
-                                            a: _(n, O[0]),
-                                            b: _(n, O[1]),
-                                            n: O.length - 2,
+                                            a: _(n, x[0]),
+                                            b: _(n, x[1]),
+                                            n: x.length - 2,
                                         })
                                       : void 0,
                     }),
@@ -85,10 +85,10 @@ let _ = (e, t) => f.ZP.getName(e.getGuildId(), e.id, t.user),
                     children: [
                         (0, r.jsx)("div", {
                             className: y.joinButton,
-                            children: (0, r.jsx)(a.zxk, {
+                            children: (0, r.jsx)(a.Button, {
                                 variant: "overlay-primary",
                                 text: f ? b.intl.string(b.t["7vb2cX"]) : b.intl.string(b.t.TVBCKS),
-                                onClick: x,
+                                onClick: O,
                                 disabled: !f,
                             }),
                         }),

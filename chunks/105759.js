@@ -10,5 +10,5 @@ function u() {
     let e = (0, l.w)(c.a7),
         t = (0, i.e7)([s.Z], () => s.Z.getReferrer(null == e ? void 0 : e.trial_id)),
         n = (0, i.e7)([o.Z], () => null == t || o.Z.isBlockedOrIgnored(t.id));
-    return r.useMemo(() => (n || null == t ? null : new a.Z(t)), [t, n]);
+    return r.useMemo(() => (n || null == t ? null : new a.default(t)), [t, n]);
 }

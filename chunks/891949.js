@@ -1,6 +1,6 @@
 n.d(t, { Z: () => u }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var i = n(951288),
+    r = n(647438),
     l = n(481060),
     a = n(312097),
     s = n(810568),
@@ -9,8 +9,8 @@ var r = n(951288),
     d = n(275914);
 function u(e) {
     let { detectedGame: t, trackAction: n } = e,
-        u = i.useRef(null),
-        m = i.useMemo(() => {
+        u = r.useRef(null),
+        m = r.useMemo(() => {
             let e = t.artwork.map((e) => ({
                 url: e,
                 type: "IMAGE",
@@ -34,23 +34,23 @@ function u(e) {
     }
     return 0 === m.length
         ? null
-        : (0, r.jsxs)("div", {
+        : (0, i.jsxs)("div", {
               children: [
-                  (0, r.jsx)(l.X6q, {
+                  (0, i.jsx)(l.Heading, {
                       className: c.sectionHeader,
                       variant: "text-md/semibold",
                       color: "header-primary",
                       children: o.intl.string(o.t["bNdK5+"]),
                   }),
-                  (0, r.jsxs)("div", {
+                  (0, i.jsxs)("div", {
                       className: f ? d.gameProfileMediaSmall : d.gameProfileMediaLarge,
                       children: [
-                          (0, r.jsx)(l.xVE, {
+                          (0, i.jsx)(l.xVE, {
                               ref: u,
                               className: d.imageScroller,
                               orientation: "horizontal",
                               children: m.map((e, t) =>
-                                  (0, r.jsx)(
+                                  (0, i.jsx)(
                                       l.P3F,
                                       {
                                           className: d.imageClickable,
@@ -67,7 +67,7 @@ function u(e) {
                                                       location: "GameProfileMedia",
                                                   });
                                           },
-                                          children: (0, r.jsx)("img", {
+                                          children: (0, i.jsx)("img", {
                                               src: e.url,
                                               className: d.gameArtwork,
                                               alt: o.intl.formatToPlainString(o.t.COYYrq, { game: name }),
@@ -78,23 +78,23 @@ function u(e) {
                               ),
                           }),
                           f &&
-                              (0, r.jsxs)("div", {
+                              (0, i.jsxs)("div", {
                                   className: d.mediaOverlay,
                                   children: [
-                                      (0, r.jsx)("div", { className: d.gradientLeft }),
-                                      (0, r.jsx)(l.P3F, {
+                                      (0, i.jsx)("div", { className: d.gradientLeft }),
+                                      (0, i.jsx)(l.P3F, {
                                           className: d.arrowClickable,
                                           onClick: () => p(-1),
-                                          children: (0, r.jsx)(l.whL, {
+                                          children: (0, i.jsx)(l.whL, {
                                               className: d.arrow,
                                               color: "currentColor",
                                           }),
                                       }),
-                                      (0, r.jsx)("div", { className: d.gradientRight }),
-                                      (0, r.jsx)(l.P3F, {
+                                      (0, i.jsx)("div", { className: d.gradientRight }),
+                                      (0, i.jsx)(l.P3F, {
                                           className: d.arrowClickable,
                                           onClick: () => p(1),
-                                          children: (0, r.jsx)(l.ZSh, {
+                                          children: (0, i.jsx)(l.ZSh, {
                                               className: d.arrow,
                                               color: "currentColor",
                                           }),

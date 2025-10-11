@@ -100,7 +100,7 @@ let h = [
                 (0, a.jsxs)("div", {
                     className: m.headingContainer,
                     children: [
-                        (0, a.jsx)(i.X6q, {
+                        (0, a.jsx)(i.Heading, {
                             variant: "heading-md/bold",
                             children: "Preview Profile Effect",
                         }),
@@ -141,7 +141,7 @@ let h = [
                   className: m.previewSelector,
                   children: [
                       (0, a.jsx)(i.LZC, { size: 16 }),
-                      (0, a.jsx)(i.X6q, {
+                      (0, a.jsx)(i.Heading, {
                           variant: "heading-md/bold",
                           children: "Preview Avatar Decorations",
                       }),
@@ -178,11 +178,11 @@ let h = [
                       (0, a.jsxs)("div", {
                           className: m.headingContainer,
                           children: [
-                              (0, a.jsx)(i.X6q, {
+                              (0, a.jsx)(i.Heading, {
                                   variant: "heading-lg/bold",
                                   children: "Uploaded Assets",
                               }),
-                              (0, a.jsx)(i.zxk, {
+                              (0, a.jsx)(i.Button, {
                                   variant: "critical-primary",
                                   size: "sm",
                                   onClick: p,
@@ -227,11 +227,11 @@ let h = [
                       (0, a.jsxs)("div", {
                           className: m.headingContainer,
                           children: [
-                              (0, a.jsx)(i.X6q, {
+                              (0, a.jsx)(i.Heading, {
                                   variant: "heading-lg/bold",
                                   children: "Ignored Files",
                               }),
-                              (0, a.jsx)(i.zxk, {
+                              (0, a.jsx)(i.Button, {
                                   variant: "primary",
                                   size: "sm",
                                   onClick: n,
@@ -286,7 +286,7 @@ let h = [
                                   color: h ? "text-feedback-warning" : "text-default",
                                   children: "".concat(d.length, " warnings"),
                               }),
-                              (0, a.jsx)(i.zxk, {
+                              (0, a.jsx)(i.Button, {
                                   variant: "primary",
                                   size: "sm",
                                   onClick: t,
@@ -302,7 +302,7 @@ let h = [
                 p &&
                     (0, a.jsxs)(a.Fragment, {
                         children: [
-                            (0, a.jsx)(i.X6q, {
+                            (0, a.jsx)(i.Heading, {
                                 variant: "heading-lg/bold",
                                 children: "Errors",
                             }),
@@ -348,7 +348,7 @@ let h = [
                 h &&
                     (0, a.jsxs)(a.Fragment, {
                         children: [
-                            (0, a.jsx)(i.X6q, {
+                            (0, a.jsx)(i.Heading, {
                                 variant: "heading-lg/bold",
                                 children: "Warnings",
                             }),

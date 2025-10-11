@@ -54,7 +54,7 @@ function h(e) {
                                           children: _.intl.format(_.t.PrtAq6, {
                                               unignoreHook: (e, n) =>
                                                   (0, r.jsx)(
-                                                      l.eee,
+                                                      l.Anchor,
                                                       {
                                                           onClick: () =>
                                                               c.Z.unignoreUser(t.id, "UserProfileRemediatedNotice"),

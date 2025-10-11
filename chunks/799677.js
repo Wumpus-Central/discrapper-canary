@@ -1,4 +1,4 @@
-i.d(e, { default: () => o });
+i.d(e, { default: () => c });
 var a = i(951288);
 i(647438);
 var n = i(481060),
@@ -6,23 +6,23 @@ var n = i(481060),
     s = i(39604),
     r = i(981631),
     d = i(388032),
-    c = i(827946);
-function o(t) {
-    let { transitionState: e, onClose: i, onBeforeDelete: o, onAfterDelete: h, clip: m } = t;
+    o = i(827946);
+function c(t) {
+    let { transitionState: e, onClose: i, onBeforeDelete: c, onAfterDelete: h, clip: m } = t;
     return (0, a.jsxs)(n.Y0X, {
         size: n.CgR.SMALL,
         transitionState: e,
-        className: c.__invalid_modal,
+        className: o.__invalid_modal,
         parentComponent: "ClipsDeleteModal",
         children: [
             (0, a.jsxs)(n.hzk, {
-                className: c.modalContent,
+                className: o.modalContent,
                 children: [
                     (0, a.jsxs)("div", {
-                        className: c.header,
+                        className: o.header,
                         children: [
-                            (0, a.jsx)(n.X6q, {
-                                className: c.__invalid_title,
+                            (0, a.jsx)(n.Heading, {
+                                className: o.__invalid_title,
                                 variant: "text-md/semibold",
                                 color: "header-primary",
                                 children: d.intl.string(d.t.Lzhui4),
@@ -33,17 +33,17 @@ function o(t) {
                     (0, a.jsx)(n.Text, {
                         variant: "text-md/medium",
                         color: "text-default",
-                        className: c.__invalid_body,
+                        className: o.__invalid_body,
                         children: d.intl.string(d.t.yxCBqq),
                     }),
                 ],
             }),
             (0, a.jsx)(n.mzw, {
-                children: (0, a.jsx)(n.zxk, {
+                children: (0, a.jsx)(n.Button, {
                     variant: "critical-primary",
                     text: d.intl.string(d.t.VRWPDg),
                     onClick: function () {
-                        null == o || o(), s.sS(m.filepath), h(), l.default.track(r.rMx.CLIP_DELETED);
+                        null == c || c(), s.sS(m.filepath), h(), l.default.track(r.rMx.CLIP_DELETED);
                     },
                 }),
             }),

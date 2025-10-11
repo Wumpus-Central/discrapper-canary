@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(35282);
+n.d(t, { Z: () => k }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(35282);
 var r = n(951288),
     a = n(647438),
     i = n(120356),
@@ -155,7 +155,7 @@ function w(e) {
               "aria-label": T.intl.string(T.t.NgXl3N),
               disabled: !d,
           })
-        : (0, r.jsx)(c.zxk, {
+        : (0, r.jsx)(c.Button, {
               variant: n,
               size: i,
               text: "small" === l ? T.intl.string(T.t.qRZ35u) : T.intl.string(T.t.NgXl3N),
@@ -163,7 +163,7 @@ function w(e) {
               disabled: !d,
           });
 }
-function k(e) {
+function D(e) {
     let { size: t, contentWidth: n, onClick: a, isSubmitting: i } = e;
     return "icon" === n
         ? (0, r.jsx)(c.hU, {
@@ -174,7 +174,7 @@ function k(e) {
               loading: i,
               "aria-label": T.intl.string(T.t.QO7rOz),
           })
-        : (0, r.jsx)(c.zxk, {
+        : (0, r.jsx)(c.Button, {
               variant: "primary",
               size: t,
               text: T.intl.string(T.t.QO7rOz),
@@ -182,7 +182,7 @@ function k(e) {
               loading: i,
           });
 }
-let D = a.forwardRef(function (e, t) {
+let k = a.forwardRef(function (e, t) {
     let { application: n, size: i } = e,
         s = h.J.useExperiment({ location: "UserSettingsAuthedApps" }, { autoTrackExposure: !0 }).enabled,
         { analyticsLocations: f } = (0, m.ZP)(),
@@ -213,7 +213,7 @@ let D = a.forwardRef(function (e, t) {
             label: T.intl.string(T.t["FfCL+/"]),
             onSuccess: () => (0, c.showToast)((0, c.createToast)(T.intl.string(T.t.eNjAam), c.ToastType.SUCCESS)),
         }),
-        D = (0, x.Z)({
+        k = (0, x.Z)({
             application: n,
             onItemClick: () => {
                 (0, P.zZ)(N.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id });
@@ -227,7 +227,7 @@ let D = a.forwardRef(function (e, t) {
                     onClose: t,
                     onSelect: void 0,
                     children: [
-                        s && (0, r.jsx)(c.kSQ, { children: D }),
+                        s && (0, r.jsx)(c.kSQ, { children: k }),
                         e
                             ? (0, r.jsx)(c.kSQ, {
                                   children: (0, r.jsx)(c.sNh, {
@@ -249,7 +249,7 @@ let D = a.forwardRef(function (e, t) {
                         null != L ? (0, r.jsx)(c.kSQ, { children: L }) : null,
                     ],
                 }),
-            [L, O, y, s, D],
+            [L, O, y, s, k],
         ),
         { onClickLaunchActivity: G, isSubmitting: B } = (function (e, t) {
             var n;
@@ -300,16 +300,16 @@ let D = a.forwardRef(function (e, t) {
                 isSubmitting: s,
             };
         })(n, f),
-        z = null != G,
-        U = z ? "secondary" : "primary";
+        U = null != G,
+        z = U ? "secondary" : "primary";
     return (0, r.jsxs)("div", {
         ref: t,
         children: [
             (0, r.jsxs)("div", {
                 className: l()(A.actionContainer, A.wide),
                 children: [
-                    z &&
-                        (0, r.jsx)(k, {
+                    U &&
+                        (0, r.jsx)(D, {
                             size: i,
                             contentWidth: "normal",
                             onClick: G,
@@ -319,7 +319,7 @@ let D = a.forwardRef(function (e, t) {
                         application: n,
                         size: i,
                         contentWidth: "normal",
-                        variant: U,
+                        variant: z,
                     }),
                     I.wS
                         ? (0, r.jsx)(c.hU, {
@@ -339,8 +339,8 @@ let D = a.forwardRef(function (e, t) {
             (0, r.jsxs)("div", {
                 className: l()(A.actionContainer, A.small),
                 children: [
-                    z &&
-                        (0, r.jsx)(k, {
+                    U &&
+                        (0, r.jsx)(D, {
                             size: i,
                             contentWidth: "small",
                             onClick: G,
@@ -350,7 +350,7 @@ let D = a.forwardRef(function (e, t) {
                         application: n,
                         size: i,
                         contentWidth: "small",
-                        variant: U,
+                        variant: z,
                     }),
                     (0, r.jsx)(Z, {
                         renderDropdown: (e) => M(I.wS, e),
@@ -361,8 +361,8 @@ let D = a.forwardRef(function (e, t) {
             (0, r.jsxs)("div", {
                 className: l()(A.actionContainer, A.tiny),
                 children: [
-                    z &&
-                        (0, r.jsx)(k, {
+                    U &&
+                        (0, r.jsx)(D, {
                             size: i,
                             contentWidth: "icon",
                             onClick: G,
@@ -372,7 +372,7 @@ let D = a.forwardRef(function (e, t) {
                         application: n,
                         size: i,
                         contentWidth: "icon",
-                        variant: U,
+                        variant: z,
                     }),
                     (0, r.jsx)(Z, {
                         renderDropdown: (e) => M(I.wS, e),

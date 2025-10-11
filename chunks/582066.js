@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    s = n(442837),
-    a = n(481060),
+    a = n(442837),
+    s = n(481060),
     o = n(204418),
     c = n(731722),
     d = n(172751),
@@ -14,36 +14,36 @@ var i = n(120356),
     p = n(5192),
     f = n(978088),
     h = n(659854),
-    x = n(388032),
-    b = n(65992);
+    b = n(388032),
+    x = n(65992);
 function j(e) {
     var t, n;
     let { guildId: i } = e,
-        j = (0, s.e7)([g.Z], () => g.Z.getGuild(i)),
-        _ = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
-        { onAdoptTag: v, isAdopting: C } = (0, u.Z)(i),
+        j = (0, a.e7)([g.Z], () => g.Z.getGuild(i)),
+        v = (0, a.e7)([m.default], () => m.default.getCurrentUser()),
+        { onAdoptTag: _, isAdopting: C } = (0, u.Z)(i),
         O =
-            (null == _ || null == (t = _.primaryGuild) ? void 0 : t.identityGuildId) === i &&
-            (null == _ || null == (n = _.primaryGuild) ? void 0 : n.identityEnabled) === !0;
-    if (null != _ && null != j && (0, c.jq)(j))
+            (null == v || null == (t = v.primaryGuild) ? void 0 : t.identityGuildId) === i &&
+            (null == v || null == (n = v.primaryGuild) ? void 0 : n.identityEnabled) === !0;
+    if (null != v && null != j && (0, c.jq)(j))
         return (0, r.jsxs)("div", {
-            className: b.container,
+            className: x.container,
             children: [
-                (0, r.jsx)(a.Text, {
-                    className: b.section,
+                (0, r.jsx)(s.Text, {
+                    className: x.section,
                     variant: "text-xs/medium",
                     color: "text-muted",
-                    children: O ? x.intl.string(h.default["6xBCpK"]) : x.intl.string(h.default.eSRKe3),
+                    children: O ? b.intl.string(h.default["6xBCpK"]) : b.intl.string(h.default.eSRKe3),
                 }),
-                (0, r.jsx)("div", { className: b.divider }),
+                (0, r.jsx)("div", { className: x.divider }),
                 (0, r.jsxs)("div", {
-                    className: l()(b.section, b.body),
+                    className: l()(x.section, x.body),
                     children: [
                         (0, r.jsx)(f.l, {
                             avatar: (0, r.jsx)(o.Z, {
-                                user: _,
+                                user: v,
                                 guildId: i,
-                                avatarSize: a.EFr.SIZE_40,
+                                avatarSize: s.EFr.SIZE_40,
                                 "aria-hidden": !0,
                             }),
                             decorations: (0, r.jsx)(d.m0, {
@@ -52,13 +52,13 @@ function j(e) {
                                 guildTag: j.profile.tag,
                                 inline: !1,
                             }),
-                            username: p.ZP.getName(i, null, _),
-                            message: x.intl.string(x.t["6OSasb"]),
+                            username: p.ZP.getName(i, null, v),
+                            message: b.intl.string(b.t["6OSasb"]),
                         }),
-                        (0, r.jsx)(a.zxk, {
+                        (0, r.jsx)(s.Button, {
                             variant: "primary",
-                            text: x.intl.string(x.t.cQDYRk),
-                            onClick: v,
+                            text: b.intl.string(b.t.cQDYRk),
+                            onClick: _,
                             loading: C,
                             disabled: O,
                             fullWidth: !0,

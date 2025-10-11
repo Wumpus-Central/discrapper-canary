@@ -49,7 +49,7 @@ let L = 24,
             : (0, r.jsxs)("div", {
                   className: D.benefitsSection,
                   children: [
-                      (0, r.jsx)(c.X6q, {
+                      (0, r.jsx)(c.Heading, {
                           variant: "text-xs/bold",
                           color: "header-secondary",
                           className: D.sectionHeader,
@@ -103,7 +103,7 @@ let L = 24,
             : (0, r.jsxs)("div", {
                   className: D.benefitsSection,
                   children: [
-                      (0, r.jsx)(c.X6q, {
+                      (0, r.jsx)(c.Heading, {
                           variant: "text-xs/bold",
                           color: "header-secondary",
                           className: D.sectionHeader,
@@ -149,7 +149,7 @@ let L = 24,
                   children: [
                       null != a &&
                           (0, r.jsxs)(c.y5t, {
-                              component: (0, r.jsx)(c.X6q, {
+                              component: (0, r.jsx)(c.Heading, {
                                   variant: "text-xs/bold",
                                   color: "header-secondary",
                                   className: D.sectionHeader,
@@ -275,7 +275,7 @@ let L = 24,
                                               children: [
                                                   Q && (0, r.jsx)("div", { className: D.divider }),
                                                   M
-                                                      ? (0, r.jsx)(c.zxk, {
+                                                      ? (0, r.jsx)(c.Button, {
                                                             disabled: !0,
                                                             fullWidth: !0,
                                                             variant: j ? "secondary" : "primary",
@@ -292,7 +292,7 @@ let L = 24,
                                                                           messageType: c.QYI.INFO,
                                                                           children: v,
                                                                       }),
-                                                                (0, r.jsx)(c.zxk, {
+                                                                (0, r.jsx)(c.Button, {
                                                                     fullWidth: !0,
                                                                     text: w.intl.string(w.t.fM5Zsb),
                                                                     disabled: !O || S,

@@ -176,7 +176,7 @@ function A(e) {
             }),
             (0, r.jsx)(l.u, {
                 text: "".concat(h.intl.string(h.t["1WjMbG"]), " ").concat(a),
-                children: (0, r.jsx)(c.eee, {
+                children: (0, r.jsx)(c.Anchor, {
                     className: m.downloadSection,
                     href: t,
                     target: "_blank",

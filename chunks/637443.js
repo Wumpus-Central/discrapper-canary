@@ -40,7 +40,7 @@ let o = "shop-assets-preview-instructions-modal",
                         variant: "text-md/normal",
                         children: "These are only visible to you. Reloading the app will reset the state.",
                     }),
-                    (0, a.jsx)(i.X6q, {
+                    (0, a.jsx)(i.Heading, {
                         variant: "heading-md/bold",
                         children: "Valid Upload Types",
                     }),
@@ -51,7 +51,7 @@ let o = "shop-assets-preview-instructions-modal",
                             (0, a.jsx)("li", { children: "A folder containing image or video files" }),
                         ],
                     }),
-                    (0, a.jsx)(i.X6q, {
+                    (0, a.jsx)(i.Heading, {
                         variant: "heading-md/bold",
                         children: "Valid File Names",
                     }),

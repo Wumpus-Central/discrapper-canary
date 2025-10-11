@@ -60,7 +60,7 @@ function x() {
                       (0, l.jsxs)("div", {
                           className: p.gameSection,
                           children: [
-                              (0, l.jsx)(s.X6q, {
+                              (0, l.jsx)(s.Heading, {
                                   variant: "heading-md/semibold",
                                   children: b.intl.string(f.default.BOWmmZ),
                               }),
@@ -85,7 +85,7 @@ function x() {
                       className: r()(p.gameSection, { [p.disabled]: h }),
                       children: [
                           P &&
-                              (0, l.jsx)(s.X6q, {
+                              (0, l.jsx)(s.Heading, {
                                   variant: "heading-md/semibold",
                                   children: b.intl.string(f.default.NIwDqa),
                               }),

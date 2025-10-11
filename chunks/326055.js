@@ -113,7 +113,7 @@ function j(e) {
                                     (0, r.jsxs)("div", {
                                         className: h.contentContainer,
                                         children: [
-                                            (0, r.jsx)(l.X6q, {
+                                            (0, r.jsx)(l.Heading, {
                                                 variant: "heading-xl/extrabold",
                                                 children: v.title,
                                             }),

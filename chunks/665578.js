@@ -23,8 +23,8 @@ var i = n(951288),
     C = n(981631),
     N = n(689079),
     S = n(388032),
-    w = n(591086);
-function P(e) {
+    P = n(591086);
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -96,8 +96,8 @@ function E(e) {
                 })
             );
         }, [j, R, k, A]),
-        U = null != l ? l : t,
-        [B, W] = r.useMemo(() => {
+        B = null != l ? l : t,
+        [U, W] = r.useMemo(() => {
             let e = {},
                 t = {};
             for (let [n, i] of Object.entries(E)) i.type === d.Kw.CHANNEL ? (e[n] = i) : (t[n] = i);
@@ -156,7 +156,7 @@ function E(e) {
             },
             [j, E],
         ),
-        z = r.useCallback(
+        K = r.useCallback(
             (e, n) => {
                 let i = {};
                 for (let [e, t] of Object.entries(E))
@@ -166,25 +166,25 @@ function E(e) {
                         type: t.type,
                     };
                 if (((i = Object.assign(i, e)), n.length > 0 && (i = a().omit(i, n)), !H(i))) return void G(e, n);
-                h.W4(t, U, i);
+                h.W4(t, B, i);
             },
-            [t, E, U, H, G],
+            [t, E, B, H, G],
         ),
         F = r.useCallback(() => {
-            let e = Object.keys(B);
+            let e = Object.keys(U);
             return (0, c.ZDy)(async () => {
                 let { default: t } = await n.e("64908").then(n.bind(n, 557944));
                 return (n) =>
                     (0, i.jsx)(
                         t,
-                        P(
+                        w(
                             {
-                                editPermissions: z,
+                                editPermissions: K,
                                 guildId: j,
                                 headerText: S.intl.string(S.t["i1c+kZ"]),
                                 hasMemberSearch: !1,
                                 overwrittenKeys: e,
-                                search: Z,
+                                search: T,
                                 searchPlaceholderText: S.intl.string(S.t["TLQo/v"]),
                                 selectedPermissionCount: D,
                             },
@@ -192,22 +192,22 @@ function E(e) {
                         ),
                     );
             });
-        }, [z, B, j, D]),
-        K = r.useCallback(() => {
+        }, [K, U, j, D]),
+        z = r.useCallback(() => {
             let e = Object.keys(W);
             return (0, c.ZDy)(async () => {
                 let { default: t } = await n.e("64908").then(n.bind(n, 557944));
                 return (n) =>
                     (0, i.jsx)(
                         t,
-                        P(
+                        w(
                             {
-                                editPermissions: z,
+                                editPermissions: K,
                                 guildId: j,
                                 hasMemberSearch: !0,
                                 headerText: S.intl.string(S.t["56jRn5"]),
                                 overwrittenKeys: e,
-                                search: T,
+                                search: Z,
                                 searchPlaceholderText: S.intl.string(S.t.wAfO5e),
                                 selectedPermissionCount: D,
                             },
@@ -215,7 +215,7 @@ function E(e) {
                         ),
                     );
             });
-        }, [z, j, W, D]),
+        }, [K, j, W, D]),
         q = r.useCallback(
             () =>
                 (0, c.ZDy)(async () => {
@@ -223,7 +223,7 @@ function E(e) {
                         t = R.defaultMemberPermissions;
                     return (
                         o.fS(t, u.BO) && (t = C.Plq.ADMINISTRATOR),
-                        (n) => (0, i.jsx)(e, I(P({}, n), { defaultMemberPermissions: t }))
+                        (n) => (0, i.jsx)(e, I(w({}, n), { defaultMemberPermissions: t }))
                     );
                 }),
             [R],
@@ -232,7 +232,7 @@ function E(e) {
         Y = V >= 0,
         J = [
             {
-                buttonClick: K,
+                buttonClick: z,
                 buttonText: S.intl.string(S.t["56jRn5"]),
                 noneSelectedText: S.intl.string(S.t.C0rYfn),
                 overwrites: W,
@@ -242,7 +242,7 @@ function E(e) {
                 buttonClick: F,
                 buttonText: S.intl.string(S.t["i1c+kZ"]),
                 noneSelectedText: S.intl.string(S.t.UBJhCw),
-                overwrites: B,
+                overwrites: U,
                 title: null == l ? S.intl.string(S.t.OGiMXF) : S.intl.string(S.t.Ujbaqq),
             },
         ];
@@ -256,18 +256,18 @@ function E(e) {
                 : null,
             L
                 ? (0, i.jsxs)("div", {
-                      className: w.requiredPermissionsBanner,
+                      className: P.requiredPermissionsBanner,
                       children: [
                           (0, i.jsx)(c.d3s, {
                               size: "sm",
                               color: "currentColor",
-                              className: w.icon,
+                              className: P.icon,
                           }),
                           (0, i.jsx)("span", {
-                              className: w.message,
+                              className: P.message,
                               children: S.intl.format(S.t["2889Gh"], {}),
                           }),
-                          (0, i.jsx)(c.zxk, {
+                          (0, i.jsx)(c.Button, {
                               variant: "secondary",
                               size: "sm",
                               onClick: q,
@@ -286,13 +286,13 @@ function E(e) {
                         _.Z,
                         {
                             bar: (0, i.jsx)(c.ua7, {
-                                tooltipClassName: w.tooltip,
+                                tooltipClassName: P.tooltip,
                                 text: n,
                                 shouldShow: null != n,
                                 children: (t) =>
                                     (0, i.jsx)(
-                                        c.zxk,
-                                        I(P({}, t), {
+                                        c.Button,
+                                        I(w({}, t), {
                                             variant: "secondary",
                                             disabled: Y || !M,
                                             onClick: e.buttonClick,
@@ -304,13 +304,13 @@ function E(e) {
                             inModal: v,
                             title: e.title,
                             children: (0, i.jsx)("div", {
-                                className: v ? void 0 : w.listContainer,
+                                className: v ? void 0 : P.listContainer,
                                 children: (0, i.jsx)(O.Z, {
                                     guildId: j,
                                     commandId: l,
                                     noneSelectedText: e.noneSelectedText,
                                     overwrites: e.overwrites,
-                                    editPermissions: z,
+                                    editPermissions: K,
                                     hasAccessToMutatePermissions: M,
                                 }),
                             }),
@@ -322,15 +322,15 @@ function E(e) {
         ],
     });
 }
-function Z(e) {
-    let t = (0, j.w)(e);
-    return I(P({}, t), { results: t.results.map((e) => I(P({}, e), { type: d.Kw.CHANNEL })) });
-}
 function T(e) {
+    let t = (0, j.w)(e);
+    return I(w({}, t), { results: t.results.map((e) => I(w({}, e), { type: d.Kw.CHANNEL })) });
+}
+function Z(e) {
     let t = (0, v.U)(e);
-    return I(P({}, t), {
+    return I(w({}, t), {
         results: t.results.roles
-            .map((e) => I(P({}, e), { type: d.Kw.ROLE }))
-            .concat(t.results.members.map((e) => I(P({}, e), { type: d.Kw.USER }))),
+            .map((e) => I(w({}, e), { type: d.Kw.ROLE }))
+            .concat(t.results.members.map((e) => I(w({}, e), { type: d.Kw.USER }))),
     });
 }

@@ -1,15 +1,14 @@
 n.d(t, {
     Ee: () => O,
-    L6: () => D,
+    L6: () => w,
     V7: () => I,
-    VF: () => w,
+    VF: () => P,
     b$: () => g,
-    d9: () => R,
+    d9: () => N,
     dF: () => v,
-    dX: () => L,
+    dX: () => D,
     iF: () => T,
-    kl: () => A,
-    mn: () => S,
+    kl: () => S,
     p3: () => b,
     wC: () => E,
 }),
@@ -110,23 +109,17 @@ function T(e) {
         (e.isForumChannel() ? f.Uu(p.Plq.SEND_MESSAGES_IN_THREADS, e) : f.Uu(p.Plq.SEND_MESSAGES, e))
     );
 }
-function S(e) {
-    return (0, r.e7)([o.Z], () => {
-        let t = o.Z.getChannel(e);
-        return (0, d.lm)(t) && T(t);
-    });
-}
-function A(e, t, n) {
+function S(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !0,
-        i = N(e, t, (e) => e.id, r);
+        i = C(e, t, (e) => e.id, r);
     return (
         n.forEach((t) => {
             var n, a;
             if (!t.required) return;
-            let o = N(e, null != (a = null == (n = t.options[0]) ? void 0 : n.channelIds) ? a : [], (e) => e.id),
+            let o = C(e, null != (a = null == (n = t.options[0]) ? void 0 : n.channelIds) ? a : [], (e) => e.id),
                 s = t.options.reduce((t, n) => {
                     if (null == n.channelIds) return [];
-                    let a = N(
+                    let a = C(
                         e,
                         n.channelIds,
                         (e) => e.id,
@@ -139,13 +132,13 @@ function A(e, t, n) {
         i
     );
 }
-function C(e, t) {
+function A(e, t) {
     return e.filter((e) => {
         var n;
         return T(null == (n = t[e]) ? void 0 : n.channel);
     });
 }
-function N(e, t) {
+function C(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : (e) => e,
         r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !0,
         i = s.ZP.getChannels(e)[s.sH],
@@ -160,13 +153,13 @@ function N(e, t) {
         }
     return a;
 }
-function R(e, t) {
-    let n = N(e, t),
+function N(e, t) {
+    let n = C(e, t),
         r = s.ZP.getChannels(e)[s.sH],
         i = {};
     for (let e of r) i[e.channel.id] = e;
     return [
-        C(
+        A(
             n.map((e) => {
                 let { id: t } = e;
                 return t;
@@ -176,10 +169,10 @@ function R(e, t) {
         n,
     ];
 }
-function P(e, t) {
+function R(e, t) {
     return e[0].length === t[0].length && e[1].length === t[1].length && (0, i.Z)(e[0], t[0]) && (0, i.Z)(e[1], t[1]);
 }
-function w(e, t) {
+function P(e, t) {
     return (0, r.e7)(
         [s.ZP],
         () => {
@@ -195,10 +188,10 @@ function w(e, t) {
             return [i, r];
         },
         [e, t],
-        P,
+        R,
     );
 }
-function D(e) {
+function w(e) {
     return new Set(
         e
             .map((e) => e.roleIds)
@@ -206,7 +199,7 @@ function D(e) {
             .filter(d.lm),
     );
 }
-function L(e) {
+function D(e) {
     return new Set(
         e
             .map((e) => e.channelIds)

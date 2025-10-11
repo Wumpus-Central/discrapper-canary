@@ -29,7 +29,7 @@ function x(e) {
                               game: r,
                               size: u.A.XSMALL,
                           }),
-                          (0, i.jsx)(o.X6q, {
+                          (0, i.jsx)(o.Heading, {
                               variant: "heading-md/semibold",
                               children: null == r ? void 0 : r.name,
                           }),

@@ -40,14 +40,14 @@ function g(e) {
                                   src: n,
                                   className: p.emptyStateImage,
                               }),
-                              (0, i.jsx)(l.X6q, {
+                              (0, i.jsx)(l.Heading, {
                                   variant: "heading-md/semibold",
                                   children: u.intl.string(u.t.gzuVHx),
                               }),
                               (0, i.jsx)("div", {
                                   "data-button-hoisted-classname-wrapper": !0,
                                   className: p.emptyStateButton,
-                                  children: (0, i.jsx)(l.zxk, {
+                                  children: (0, i.jsx)(l.Button, {
                                       variant: "primary",
                                       text: u.intl.string(u.t["ZwSt+f"]),
                                       onClick: t,

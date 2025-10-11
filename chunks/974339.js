@@ -106,7 +106,7 @@ function k(e) {
 let C = (e) => {
     let { title: t } = e;
     return (0, n.jsx)(
-        c.X6q,
+        c.Heading,
         {
             variant: "heading-sm/semibold",
             className: i()(f.sectionTitle, f.rowHeight),

@@ -2,8 +2,8 @@ n.d(t, { Z: () => I }), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    s = n(481060),
-    a = n(224706),
+    a = n(481060),
+    s = n(224706),
     o = n(100527),
     c = n(906732),
     d = n(314852),
@@ -13,11 +13,11 @@ var r = n(951288),
     p = n(434404),
     f = n(999382),
     h = n(12078),
-    x = n(934638),
-    b = n(566036),
+    b = n(934638),
+    x = n(566036),
     j = n(979664),
-    _ = n(343397),
-    v = n(509798),
+    v = n(343397),
+    _ = n(509798),
     C = n(75733),
     O = n(474024),
     y = n(981631),
@@ -49,14 +49,14 @@ let I = function () {
         I(!0);
     }, [I]);
     return (i.useEffect(() => {
-        a.Z.getDetectableGames();
+        s.Z.getDetectableGames();
     }, []),
     S === d.a.FETCHED && null == T)
-        ? (0, r.jsx)(v.g, { forceFetchGuildProfile: R })
+        ? (0, r.jsx)(_.g, { forceFetchGuildProfile: R })
         : S === d.a.NOT_FETCHED || S === d.a.FETCHING
           ? (0, r.jsx)("main", {
                 className: E.spinner,
-                children: (0, r.jsx)(s.$jN, {}),
+                children: (0, r.jsx)(a.$jN, {}),
             })
           : null == t || null == T
             ? null
@@ -70,12 +70,12 @@ let I = function () {
                               children: [
                                   (0, r.jsxs)("div", {
                                       children: [
-                                          (0, r.jsx)(s.X6q, {
+                                          (0, r.jsx)(a.Heading, {
                                               variant: "heading-lg/semibold",
                                               color: "header-primary",
                                               children: N.intl.string(N.t.txdaxc),
                                           }),
-                                          (0, r.jsx)(s.Text, {
+                                          (0, r.jsx)(a.Text, {
                                               variant: "text-sm/medium",
                                               color: "header-secondary",
                                               className: E.description,
@@ -83,7 +83,7 @@ let I = function () {
                                           }),
                                       ],
                                   }),
-                                  (0, r.jsx)(_.Z, {
+                                  (0, r.jsx)(v.Z, {
                                       profile: T,
                                       canManageGuild: P,
                                   }),
@@ -105,12 +105,12 @@ let I = function () {
                                       canManageGuild: P,
                                   }),
                                   (0, r.jsx)("div", { className: E.divider }),
-                                  (0, r.jsx)(x.Z, {
+                                  (0, r.jsx)(b.Z, {
                                       profile: T,
                                       canManageGuild: P,
                                   }),
                                   (0, r.jsx)("div", { className: E.divider }),
-                                  (0, r.jsx)(b.Z, {
+                                  (0, r.jsx)(x.Z, {
                                       profile: T,
                                       canManageGuild: P,
                                   }),
@@ -123,7 +123,7 @@ let I = function () {
                           }),
                           (0, r.jsx)("div", {
                               className: E.rightColumn,
-                              children: (0, r.jsx)(s.Ttm, {
+                              children: (0, r.jsx)(a.Ttm, {
                                   className: E.profilePreviewContainer,
                                   children: (0, r.jsx)(g.ZP, {
                                       className: E.profilePreview,

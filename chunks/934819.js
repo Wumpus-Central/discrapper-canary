@@ -67,7 +67,7 @@ function m() {
         description: "Click to generate a diff between the client user state and the user worker state.",
         children: (0, a.jsxs)("div", {
             children: [
-                (0, a.jsx)(i.zxk, {
+                (0, a.jsx)(i.Button, {
                     onClick: p,
                     text: "Diff User State",
                     loading: t,

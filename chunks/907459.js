@@ -68,7 +68,7 @@ let D = () => {
                 (0, r.jsxs)("div", {
                     className: w.title,
                     children: [
-                        (0, r.jsx)(u.X6q, {
+                        (0, r.jsx)(u.Heading, {
                             variant: "heading-lg/extrabold",
                             children: P.intl.string(P.t["hb/wEx"]),
                         }),

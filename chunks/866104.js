@@ -165,7 +165,7 @@ function R(e) {
                         children: [
                             (0, r.jsx)("div", {
                                 ref: L,
-                                children: (0, r.jsx)(l.X6q, {
+                                children: (0, r.jsx)(l.Heading, {
                                     variant: "heading-xl/semibold",
                                     color: "header-primary",
                                     lineClamp: 2,

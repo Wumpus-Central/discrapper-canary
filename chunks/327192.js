@@ -115,7 +115,7 @@ let z = (e) => {
     }
     return (
         null == (0, l.e7)([N.Z], () => N.Z.getGuild(a.guild.id), [a.guild.id]) &&
-            (i = (0, r.jsx)(_.zxk, {
+            (i = (0, r.jsx)(_.Button, {
                 size: "sm",
                 onClick: u,
                 disabled: o,
@@ -141,7 +141,7 @@ let z = (e) => {
                                     color: "header-primary",
                                     children: a.guild.name,
                                 }),
-                                (0, r.jsx)(_.eee, {
+                                (0, r.jsx)(_.Anchor, {
                                     href:
                                         null == (n = b.Z.get(a.type)) || null == (t = n.getPlatformUserUrl)
                                             ? void 0
@@ -351,7 +351,7 @@ function q(e) {
                     "div",
                     {
                         className: V.metadataRefreshButton,
-                        children: (0, r.jsx)(_.zxk, {
+                        children: (0, r.jsx)(_.Button, {
                             text: s,
                             variant: "secondary",
                             size: "sm",

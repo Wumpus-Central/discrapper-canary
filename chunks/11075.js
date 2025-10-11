@@ -12,7 +12,7 @@ let s = (e) => {
         : (0, a.jsxs)("div", {
               className: t,
               children: [
-                  (0, a.jsx)(i.X6q, {
+                  (0, a.jsx)(i.Heading, {
                       variant: "heading-md/semibold",
                       children: "Shop Marketing",
                   }),

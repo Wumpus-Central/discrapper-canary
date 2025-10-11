@@ -1,77 +1,77 @@
-n.d(t, { Z: () => b }), n(388685);
-var r = n(951288),
-    i = n(647438),
-    l = n(512722),
-    s = n.n(l),
-    o = n(392711),
-    a = n.n(o),
-    c = n(856901),
-    d = n(755721),
-    u = n(481060),
-    f = n(670863),
-    h = n(72897),
-    m = n(537135),
-    p = n(176940),
-    g = n(65154),
-    x = n(388032),
-    _ = n(591554),
-    v = n(542257),
-    j = n(197571);
-function b(e) {
-    let { selectedSource: t, onChangeVideoDeviceSource: n, onChangeAudioDevice: l } = e;
-    s()(null != t, "Camera capture device cannot be null");
-    let o = (0, p.Z)(),
-        [b, S] = (0, h.Ls)(g.h7.AUDIO_INPUT, { location: "CaptureDeviceConfig" }),
-        y = b.concat(S),
-        [C, O] = i.useState(
-            (function (e, t, n) {
-                var r;
-                let i = t.find((t) => t.id === e);
-                if (null == i) return null;
-                let l = a().reduce(n, (e, t) =>
-                    (0, c.stringSimilarity)(i.name, t.name) > (0, c.stringSimilarity)(i.name, e.name) ? t : e,
+t.d(n, { Z: () => N }), t(388685);
+var l = t(951288),
+    r = t(647438),
+    i = t(512722),
+    s = t.n(i),
+    a = t(392711),
+    c = t.n(a),
+    o = t(856901),
+    u = t(755721),
+    d = t(481060),
+    m = t(670863),
+    x = t(72897),
+    g = t(537135),
+    h = t(176940),
+    j = t(65154),
+    p = t(388032),
+    v = t(591554),
+    f = t(542257),
+    Z = t(197571);
+function N(e) {
+    let { selectedSource: n, onChangeVideoDeviceSource: t, onChangeAudioDevice: i } = e;
+    s()(null != n, "Camera capture device cannot be null");
+    let a = (0, h.Z)(),
+        [N, S] = (0, x.Ls)(j.h7.AUDIO_INPUT, { location: "CaptureDeviceConfig" }),
+        C = N.concat(S),
+        [b, P] = r.useState(
+            (function (e, n, t) {
+                var l;
+                let r = n.find((n) => n.id === e);
+                if (null == r) return null;
+                let i = c().reduce(t, (e, n) =>
+                    (0, o.stringSimilarity)(r.name, n.name) > (0, o.stringSimilarity)(r.name, e.name) ? n : e,
                 );
-                return null != (r = null == l ? void 0 : l.id) ? r : null;
-            })(t.id, o, y),
+                return null != (l = null == i ? void 0 : i.id) ? l : null;
+            })(n.id, a, C),
         );
     return (
-        null != C && l(C),
-        (0, r.jsxs)("div", {
-            className: v.modalContent,
+        null != b && i(b),
+        (0, l.jsxs)("div", {
+            className: f.modalContent,
             children: [
-                (0, r.jsx)(u.X6q, {
+                (0, l.jsx)(d.Heading, {
                     variant: "heading-md/semibold",
-                    className: v.formItemTitle,
+                    className: f.formItemTitle,
                     children: "Capture Device",
                 }),
-                (0, r.jsxs)(u.Kqy, {
+                (0, l.jsxs)(d.Kqy, {
                     gap: 8,
                     children: [
-                        (0, r.jsx)("div", {
-                            className: j.marginTop8,
-                            children: (0, r.jsxs)(m.Z, {
+                        (0, l.jsx)("div", {
+                            className: Z.marginTop8,
+                            children: (0, l.jsxs)(g.Z, {
                                 children: [
-                                    (0, r.jsx)("span", {
-                                        className: _.ellipsisText,
-                                        children: t.name,
+                                    (0, l.jsx)("span", {
+                                        className: v.ellipsisText,
+                                        children: n.name,
                                     }),
-                                    (0, r.jsx)(d.zx, {
-                                        className: _.changeButton,
-                                        color: d.zx.Colors.PRIMARY,
-                                        size: d.zx.Sizes.SMALL,
-                                        onClick: n,
-                                        children: x.intl.string(x.t.GEgsAw),
+                                    (0, l.jsx)(u.zx, {
+                                        className: v.changeButton,
+                                        color: u.zx.Colors.PRIMARY,
+                                        size: u.zx.Sizes.SMALL,
+                                        onClick: t,
+                                        children: p.intl.string(p.t.GEgsAw),
                                     }),
                                 ],
                             }),
                         }),
-                        (0, r.jsx)(f.j, {
-                            label: x.intl.string(x.t.y4ooen),
-                            deviceType: g.h7.AUDIO_INPUT,
+                        (0, l.jsx)(m.j, {
+                            label: p.intl.string(p.t.y4ooen),
+                            deviceType: j.h7.AUDIO_INPUT,
                             location: "CaptureDeviceConfig",
-                            className: j.__invalid_marginaTop8,
-                            selectedDeviceId: C,
-                            onSelectDevice: (e) => (O(e), l(e), !1),
+                            className: Z.__invalid_marginaTop8,
+                            selectedDeviceId: b,
+                            onSelectDevice: (e) => (P(e), i(e), !1),
                         }),
                     ],
                 }),

@@ -29,7 +29,7 @@ let d = function (e) {
             (0, r.jsxs)("div", {
                 className: l.content,
                 children: [
-                    (0, r.jsx)(o.X6q, {
+                    (0, r.jsx)(o.Heading, {
                         className: l.heading,
                         color: "always-white",
                         variant: "heading-xxl/bold",

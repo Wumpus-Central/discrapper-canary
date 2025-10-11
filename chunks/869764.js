@@ -162,7 +162,7 @@ function D(e) {
         : (0, l.jsxs)("div", {
               className: j.container,
               children: [
-                  (0, l.jsx)(o.X6q, {
+                  (0, l.jsx)(o.Heading, {
                       variant: "heading-lg/bold",
                       color: "header-primary",
                       children: _.intl.string(_.t.LhlgY2),

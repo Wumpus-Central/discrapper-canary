@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(35282), n(388685), n(539854);
+n.d(t, { Z: () => w }), n(35282), n(388685), n(539854);
 var i = n(951288),
     r = n(647438),
     l = n(120356),
@@ -64,7 +64,7 @@ function S(e, t) {
         e
     );
 }
-function w(e, t) {
+function P(e, t) {
     return null != t && /^data:/.test(t)
         ? t
         : (0, h.ov)({
@@ -73,21 +73,21 @@ function w(e, t) {
               discriminator: y.fo$,
           });
 }
-function P(e) {
+function w(e) {
     let {
             id: t,
             webhook: n,
             editedWebhook: l,
             channelOptions: h,
-            isExpanded: P,
+            isExpanded: w,
             isNew: I,
             errors: E,
-            onToggleExpand: Z,
+            onToggleExpand: T,
         } = e,
-        [T, k] = r.useState(!1),
+        [Z, k] = r.useState(!1),
         [A] = r.useState(new s.V7());
     r.useEffect(() => () => A.stop(), [A]);
-    let D = r.useMemo(() => w(n, n.avatar), [n]),
+    let D = r.useMemo(() => P(n, n.avatar), [n]),
         R = r.useCallback(() => {
             let e = "".concat((0, o.K0)(!1)).concat(y.ANM.WEBHOOK_INTEGRATION(n.id, n.token));
             (0, x.JG)(e);
@@ -129,7 +129,7 @@ function P(e) {
               text: _.intl.formatToPlainString(_.t["7EcUbm"], {
                   user: ((e) => {
                       if (null == e) return null;
-                      let t = new g.Z(e);
+                      let t = new g.default(e);
                       return v.ZP.getUserTag(t);
                   })(n.user),
                   timestamp: j.default.extractTimestamp(n.id),
@@ -139,11 +139,11 @@ function P(e) {
               icon: c.T39,
               text: _.intl.formatToPlainString(_.t["7mv59P"], { timestamp: j.default.extractTimestamp(n.id) }),
           });
-    let U = null;
+    let B = null;
     return (
-        P &&
+        w &&
             null != l &&
-            (U = (0, i.jsxs)("div", {
+            (B = (0, i.jsxs)("div", {
                 className: C.body,
                 children: [
                     (0, i.jsx)(c.izJ, { className: C.topDivider }),
@@ -161,7 +161,7 @@ function P(e) {
                                             onChange: (e) => {
                                                 u.Z.updateWebhook({ avatar: e });
                                             },
-                                            makeURL: (e) => w(n, e),
+                                            makeURL: (e) => P(n, e),
                                             imageClassName: C.avatarUploaderInner,
                                             showIcon: !0,
                                         }),
@@ -215,7 +215,7 @@ function P(e) {
                                             (0, i.jsx)(c.ua7, {
                                                 "data-migration-pending": !0,
                                                 text: _.intl.string(_.t.wwdb3t),
-                                                forceOpen: T,
+                                                forceOpen: Z,
                                                 color: c.FGA.GREEN,
                                                 disableTooltipPointerEvents: !0,
                                                 children: (e) => {
@@ -263,7 +263,7 @@ function P(e) {
                                                         "data-button-hoisted-classname-wrapper": !0,
                                                         className: C.copyButton,
                                                         children: (0, i.jsx)(
-                                                            c.zxk,
+                                                            c.Button,
                                                             S(
                                                                 N(
                                                                     {
@@ -289,7 +289,7 @@ function P(e) {
                                                     });
                                                 },
                                             }),
-                                            (0, i.jsx)(c.zxk, {
+                                            (0, i.jsx)(c.Button, {
                                                 variant: "critical-secondary",
                                                 size: "sm",
                                                 text: _.intl.string(_.t.jVrUnJ),
@@ -312,8 +312,8 @@ function P(e) {
                 children: [
                     (0, i.jsx)(c.P3F, {
                         className: C.header,
-                        "aria-expanded": P,
-                        onClick: Z,
+                        "aria-expanded": w,
+                        onClick: T,
                         children: (0, i.jsxs)(m.Z, {
                             align: m.Z.Align.CENTER,
                             children: [
@@ -324,13 +324,13 @@ function P(e) {
                                 }),
                                 (0, i.jsx)(f.Z, {
                                     className: C.expandIcon,
-                                    expanded: P,
+                                    expanded: w,
                                     "aria-hidden": !0,
                                 }),
                             ],
                         }),
                     }),
-                    U,
+                    B,
                 ],
             }),
         })

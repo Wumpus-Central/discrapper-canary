@@ -16,7 +16,7 @@ function s(e) {
               className: o.container,
               children: [
                   null != t &&
-                      (0, r.jsx)(l.X6q, {
+                      (0, r.jsx)(l.Heading, {
                           variant: "heading-sm/semibold",
                           color: "header-secondary",
                           className: o.header,

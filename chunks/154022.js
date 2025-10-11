@@ -29,11 +29,11 @@ var r = n(951288),
     P = n(441729),
     w = n(626135),
     D = n(63063),
-    x = n(695346),
-    L = n(313789),
+    L = n(695346),
+    x = n(313789),
     M = n(263937),
-    k = n(996073),
-    j = n(273313),
+    j = n(996073),
+    k = n(273313),
     U = n(947889),
     G = n(526761),
     B = n(726985),
@@ -111,7 +111,7 @@ function er(e) {
         n = O.fN.useExperiment({ location: "UserSettingsAccessibility" }).enabled,
         i = (0, b.A)("UserSettingsAccessibility"),
         a = (0, U.Z)();
-    return (0, r.jsx)(j.Z, {
+    return (0, r.jsx)(k.Z, {
         title: H.intl.string(H.t.G0neg4),
         children: (0, r.jsxs)(u.Kqy, {
             gap: 16,
@@ -177,7 +177,7 @@ function er(e) {
                         variant: "text-md/normal",
                         children: H.intl.format(H.t.DHpTjY, {
                             onAppearanceClick() {
-                                a(L.n.APPEARANCE_PANEL, { section: Z.oAB.APPEARANCE });
+                                a(x.n.APPEARANCE_PANEL, { section: Z.oAB.APPEARANCE });
                             },
                         }),
                     }),
@@ -187,7 +187,7 @@ function er(e) {
     });
 }
 function ei() {
-    let e = x.jU.useSetting(),
+    let e = L.jU.useSetting(),
         [t] = i.useState(() => {
             let e = "1337",
                 t = (0, I.e5)(
@@ -217,7 +217,7 @@ function ei() {
                 (0, r.jsxs)("div", {
                     className: W.previewHeader,
                     children: [
-                        (0, r.jsx)(u.zxk, {
+                        (0, r.jsx)(u.Button, {
                             variant: "primary",
                             size: "sm",
                             text: H.intl.string(H.t["2RHHg4"]),
@@ -384,7 +384,7 @@ function ed() {
 function ef() {
     let e = (0, s.e7)([_.Z], () => _.Z.syncProfileThemeWithUserTheme),
         t = i.useRef(null);
-    (0, k.Z)(t, G.rP.SYNC_PROFILE_THEME_WITH_USER_THEME);
+    (0, j.Z)(t, G.rP.SYNC_PROFILE_THEME_WITH_USER_THEME);
     let n = (0, U.Z)();
     return (0, r.jsx)("div", {
         ref: t,
@@ -396,7 +396,7 @@ function ef() {
                     label: H.intl.string(H.t["sSY+mJ"]),
                     description: H.intl.format(H.t.u6UjrK, {
                         onThemeClick() {
-                            n(L.n.APPEARANCE_PANEL, { section: Z.oAB.APPEARANCE });
+                            n(x.n.APPEARANCE_PANEL, { section: Z.oAB.APPEARANCE });
                         },
                     }),
                     checked: e,
@@ -440,8 +440,8 @@ function e_() {
     });
 }
 function ep() {
-    let e = x.QK.useSetting(),
-        t = x.Yk.useSetting(),
+    let e = L.QK.useSetting(),
+        t = L.Yk.useSetting(),
         {
             useReducedMotion: n,
             rawPrefersReducedMotion: a,
@@ -457,7 +457,7 @@ function ep() {
         })),
         d = "auto" === a,
         p = i.useRef(null);
-    (0, k.Z)(p, G.rP.REDUCED_MOTION);
+    (0, j.Z)(p, G.rP.REDUCED_MOTION);
     let h = i.useCallback(
             (e) => {
                 (0, f.Zt)(e ? "auto" : o);
@@ -475,7 +475,7 @@ function ep() {
             label: H.intl.string(H.t.e3TR1d),
             description: H.intl.format(H.t["2l9U2t"], { helpdeskArticle: D.Z.getArticleURL(Z.BhN.REDUCED_MOTION) }),
             children: [
-                (0, r.jsx)(u.XZJ, {
+                (0, r.jsx)(u.Checkbox, {
                     checked: d,
                     onChange: h,
                     label: H.intl.string(H.t["+Dx+HB"]),
@@ -494,7 +494,7 @@ function ep() {
                         label: H.intl.string(H.t.Iayoh4),
                         description: null != l ? (0, C.Z)(l) : void 0,
                         checked: e,
-                        onChange: x.QK.updateSetting,
+                        onChange: L.QK.updateSetting,
                     }),
                 }),
                 (0, r.jsx)(N.F, {
@@ -503,7 +503,7 @@ function ep() {
                         label: H.intl.string(H.t.iIaOlZ),
                         description: null != c ? (0, C.Z)(c) : void 0,
                         checked: t,
-                        onChange: x.Yk.updateSetting,
+                        onChange: L.Yk.updateSetting,
                     }),
                 }),
             ],
@@ -511,10 +511,10 @@ function ep() {
     });
 }
 function eh() {
-    let e = x.Wp.useSetting(),
+    let e = L.Wp.useSetting(),
         t = (0, s.e7)([M.Z], () => M.Z.getAppliedOverrideReasonKey("animateStickers")),
         n = i.useCallback((e) => {
-            x.Wp.updateSetting(e);
+            L.Wp.updateSetting(e);
         }, []);
     return (0, r.jsx)(c.E, {
         label: H.intl.string(H.t["6NtAuL"]),
@@ -540,10 +540,10 @@ function eh() {
 }
 function em() {
     let e = (0, s.e7)([_.Z], () => _.Z.isSubmitButtonEnabled),
-        t = x.dN.useSetting(),
+        t = L.dN.useSetting(),
         n = i.useRef(null);
     return (
-        (0, k.Z)(n, G.rP.LEGACY_CHAT_INPUT),
+        (0, j.Z)(n, G.rP.LEGACY_CHAT_INPUT),
         (0, r.jsx)("div", {
             ref: n,
             children: (0, r.jsxs)(u.C3N, {
@@ -568,7 +568,7 @@ function em() {
                                     enabled: e,
                                     location: { section: Z.jXE.SETTINGS_ACCESSIBILITY },
                                 }),
-                                    x.dN.updateSetting(e);
+                                    L.dN.updateSetting(e);
                             },
                         }),
                     }),
@@ -578,7 +578,7 @@ function em() {
     );
 }
 function eg() {
-    let e = x.OW.useSetting(),
+    let e = L.OW.useSetting(),
         t = (0, s.e7)([P.Z], () => P.Z.speechRate),
         [n, a] = i.useState(!1);
     if (!d.Zh) return null;
@@ -601,7 +601,7 @@ function eg() {
                     children: (0, r.jsx)(u.rsf, {
                         label: H.intl.string(H.t.qvTIwc),
                         checked: e,
-                        onChange: x.OW.updateSetting,
+                        onChange: L.OW.updateSetting,
                     }),
                 }),
                 (0, r.jsx)(N.F, {
@@ -643,7 +643,7 @@ function eg() {
                             }),
                             (0, r.jsx)("div", {
                                 className: W.ttsPreviewWrapper,
-                                children: (0, r.jsx)(u.zxk, {
+                                children: (0, r.jsx)(u.Button, {
                                     size: "sm",
                                     icon: n ? u.fpf : u.o1U,
                                     text: H.intl.string(H.t.hymc8v),

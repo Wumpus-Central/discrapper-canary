@@ -263,7 +263,7 @@ class N extends (r = i.PureComponent) {
                         break;
                     case f.s9s.IMG:
                         if ("errored" === this.state.status.get(e.src)) {
-                            let e = (0, a.jsx)(o.X6q, {
+                            let e = (0, a.jsx)(o.Heading, {
                                 variant: "heading-xl/semibold",
                                 children: b.intl.string(b.t.UvDfMz),
                             });

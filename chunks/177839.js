@@ -99,7 +99,7 @@ let v = (e) => (e ? E.intl.string(E.t.QX14gI) : E.intl.string(E.t.RGadQU)),
                     }),
                     (0, r.jsxs)("div", {
                         children: [
-                            (0, r.jsxs)(l.X6q, {
+                            (0, r.jsxs)(l.Heading, {
                                 variant: "heading-lg/extrabold",
                                 className: b.perkCardHeading,
                                 children: [t, " ", c],
@@ -147,7 +147,7 @@ let v = (e) => (e ? E.intl.string(E.t.QX14gI) : E.intl.string(E.t.RGadQU)),
                 [b.reducedMotion]: _,
             }),
             children: [
-                (0, r.jsx)(l.X6q, {
+                (0, r.jsx)(l.Heading, {
                     variant: "heading-xxl/extrabold",
                     className: b.perksTitle,
                     children: v(n),

@@ -1,4 +1,4 @@
-t.d(n, { ZP: () => L }), t(388685), t(953529);
+t.d(n, { ZP: () => H }), t(388685), t(953529);
 var l = t(951288),
     r = t(647438),
     a = t(120356),
@@ -19,8 +19,8 @@ var l = t(951288),
     C = t(984933),
     v = t(375954),
     _ = t(496675),
-    Z = t(451478),
-    I = t(768581),
+    I = t(451478),
+    Z = t(768581),
     y = t(526120),
     N = t(689981),
     O = t(825334),
@@ -28,8 +28,8 @@ var l = t(951288),
     w = t(388032),
     E = t(877762),
     S = t(430864),
-    k = t(931057);
-function A(e) {
+    A = t(931057);
+function k(e) {
     let n,
         t,
         { firstMedia: r, channelId: a } = e,
@@ -39,12 +39,12 @@ function A(e) {
             channel: c,
         }),
         m = (0, f.MC)(d),
-        p = (0, s.e7)([Z.Z], () => Z.Z.isFocused()),
+        p = (0, s.e7)([I.Z], () => I.Z.isFocused()),
         x = (0, h.d$)(r.src),
         C = b.QK.useSetting(),
-        { src: v, width: _, height: I, alt: y } = r;
+        { src: v, width: _, height: Z, alt: y } = r;
     return (
-        I > _ ? (t = 72) : (n = 72),
+        Z > _ ? (t = 72) : (n = 72),
         (0, l.jsxs)("div", {
             className: E.media,
             children: [
@@ -53,7 +53,7 @@ function A(e) {
                     maxHeight: n,
                     maxWidth: t,
                     width: _,
-                    height: I,
+                    height: Z,
                     alt: null != y && o && null != m ? m : y,
                     autoPlay: C,
                     animated: x && !o && p,
@@ -92,11 +92,11 @@ function M(e) {
         null == t || null == t.guild_id)
     )
         return null;
-    let C = I.ZP.getResourceChannelIconURL({
+    let C = Z.ZP.getResourceChannelIconURL({
             channelId: t.id,
             icon: n.icon,
         }),
-        Z = null == n.description || 0 === n.description.length;
+        I = null == n.description || 0 === n.description.length;
     return (0, l.jsxs)(c.P3F, {
         className: E.row,
         onClick: (e) => {
@@ -118,7 +118,7 @@ function M(e) {
                         color: "header-primary",
                         children: n.title,
                     }),
-                    Z &&
+                    I &&
                         null != f &&
                         (0, l.jsx)(c.Text, {
                             className: E.messageContent,
@@ -130,7 +130,7 @@ function M(e) {
                                 channelId: t.id,
                             }),
                         }),
-                    !Z &&
+                    !I &&
                         (0, l.jsx)(c.Text, {
                             className: i()(E.messageContent, S.markup),
                             variant: "text-sm/normal",
@@ -157,7 +157,7 @@ function M(e) {
                   })
                 : null,
             null == C && null != p
-                ? (0, l.jsx)(A, {
+                ? (0, l.jsx)(k, {
                       firstMedia: p,
                       channelId: n.channelId,
                   })
@@ -165,7 +165,7 @@ function M(e) {
         ],
     });
 }
-function L(e) {
+function H(e) {
     let { guild: n, isNewMember: t } = e,
         r = (0, O.Z)(n.id);
     return 0 === r.length
@@ -174,19 +174,19 @@ function L(e) {
             : (0, l.jsxs)("div", {
                   className: E.emptyContainer,
                   children: [
-                      (0, l.jsx)(c.X6q, {
+                      (0, l.jsx)(c.Heading, {
                           variant: "heading-xl/bold",
                           color: "header-primary",
                           children: w.intl.string(w.t.owvC9f),
                       }),
                       (0, l.jsx)("img", {
                           className: E.emptyStateImage,
-                          src: k,
+                          src: A,
                           alt: "",
                       }),
                       (0, l.jsx)("div", {
                           className: E.emptyStateButton,
-                          children: (0, l.jsx)(c.zxk, {
+                          children: (0, l.jsx)(c.Button, {
                               size: "md",
                               variant: "primary",
                               onClick: () => {
@@ -202,7 +202,7 @@ function L(e) {
         : (0, l.jsxs)("div", {
               className: E.container,
               children: [
-                  (0, l.jsx)(c.X6q, {
+                  (0, l.jsx)(c.Heading, {
                       variant: "heading-lg/bold",
                       color: "header-primary",
                       children: w.intl.string(w.t.xwY4LS),

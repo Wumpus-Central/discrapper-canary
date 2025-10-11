@@ -1,4 +1,4 @@
-n.d(e, { default: () => h });
+n.d(t, { default: () => h });
 var a = n(951288),
     c = n(647438),
     r = n(481060),
@@ -8,14 +8,14 @@ var a = n(951288),
     l = n(388032),
     d = n(773408),
     b = n(963705);
-function h(t) {
-    let { source: e, onClose: n, transitionState: h } = t;
+function h(e) {
+    let { source: t, onClose: n, transitionState: h } = e;
     c.useEffect(() => {
         o.default.track(i.rMx.OPEN_MODAL, {
             type: i.jXE.CONTACT_SYNC_NC_MODAL,
-            source: { location: e },
+            source: { location: t },
         });
-    }, [e]);
+    }, [t]);
     let u = (0, s.Dt)();
     return (0, a.jsxs)(r.Y0X, {
         className: d.contactSync,
@@ -30,7 +30,7 @@ function h(t) {
             (0, a.jsxs)("div", {
                 className: d.inner,
                 children: [
-                    (0, a.jsx)(r.X6q, {
+                    (0, a.jsx)(r.Heading, {
                         variant: "heading-xl/extrabold",
                         color: "header-primary",
                         className: d.header,

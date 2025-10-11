@@ -37,7 +37,7 @@ let O = () => {
                 return (0, r.jsxs)("div", {
                     className: e,
                     children: [
-                        (0, r.jsx)(a.zxk, {
+                        (0, r.jsx)(a.Button, {
                             variant: t ? "secondary" : "primary",
                             text: b.intl.string(b.t["hb/wEx"]),
                             onClick: () => O(),

@@ -1,25 +1,22 @@
-n.d(t, { Z: () => T }), n(539854);
+n.d(t, { Z: () => E }), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    s = n.n(l),
-    a = n(692547),
-    o = n(28664),
-    c = n(755721),
-    d = n(481060),
-    u = n(239091),
-    g = n(111028),
-    m = n(977258),
-    p = n(637853),
-    f = n(473403),
-    h = n(216306),
-    x = n(743475),
-    b = n(827907),
-    j = n(868814),
-    _ = n(981631),
-    v = n(388032),
-    C = n(813878);
-function O(e) {
+    a = n.n(l),
+    s = n(28664),
+    o = n(481060),
+    c = n(239091),
+    d = n(111028),
+    u = n(977258),
+    g = n(473403),
+    m = n(216306),
+    p = n(743475),
+    f = n(827907),
+    h = n(868814),
+    b = n(981631),
+    x = n(388032),
+    j = n(813878);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +41,7 @@ function O(e) {
     }
     return e;
 }
-function y(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -62,24 +59,24 @@ function y(e, t) {
         e
     );
 }
-function N(e) {
+function C(e) {
     let { guild: t, channel: i } = e,
-        l = (0, b.Mf)(i.id);
+        l = (0, f.Mf)(i.id);
     return "null" === i.id
         ? (0, r.jsx)("div", {
-              className: s()(C.categoryRow, C.uncategorized),
-              children: (0, r.jsx)(d.Text, {
-                  className: C.categoryText,
+              className: a()(j.categoryRow, j.uncategorized),
+              children: (0, r.jsx)(o.Text, {
+                  className: j.categoryText,
                   color: "text-muted",
                   variant: "text-xs/semibold",
                   lineClamp: 1,
                   children: i.name,
               }),
           })
-        : (0, r.jsxs)(d.P3F, {
-              className: s()(C.categoryRow, { [C.uncategorized]: "null" === i.id }),
+        : (0, r.jsxs)(o.P3F, {
+              className: a()(j.categoryRow, { [j.uncategorized]: "null" === i.id }),
               onContextMenu: (e) => {
-                  (0, u.jW)(e, async () => {
+                  (0, c.jW)(e, async () => {
                       let { default: e } = await Promise.all([
                           n.e("90508"),
                           n.e("24358"),
@@ -89,7 +86,7 @@ function N(e) {
                       return (n) =>
                           (0, r.jsx)(
                               e,
-                              y(O({}, n), {
+                              _(v({}, n), {
                                   channel: i,
                                   guild: t,
                               }),
@@ -98,14 +95,14 @@ function N(e) {
               },
               onClick: (e) => (
                   e.stopPropagation(),
-                  (0, m.s)(t.id, i.id)
-                      ? (0, x.pt)(i.id)
-                      : (0, d.ZDy)(async () => {
+                  (0, u.s)(t.id, i.id)
+                      ? (0, p.pt)(i.id)
+                      : (0, o.ZDy)(async () => {
                             let { default: e } = await n.e("35641").then(n.bind(n, 89216));
                             return (n) =>
                                 (0, r.jsx)(
                                     e,
-                                    y(O({}, n), {
+                                    _(v({}, n), {
                                         guildId: t.id,
                                         startingChannelId: i.id,
                                     }),
@@ -114,78 +111,71 @@ function N(e) {
                   !0
               ),
               children: [
-                  (0, r.jsx)(d.Text, {
-                      className: C.categoryText,
+                  (0, r.jsx)(o.Text, {
+                      className: j.categoryText,
                       color: "text-muted",
                       variant: "text-xs/semibold",
                       lineClamp: 1,
                       children: i.name,
                   }),
-                  (0, r.jsx)(c.$q, {
-                      "aria-checked": l,
-                      value: l,
-                      type: c.M0.INVERTED,
-                      className: C.checkbox,
-                      displayOnly: !0,
-                  }),
+                  (0, r.jsx)(o.FZ5, { checked: l }),
               ],
           });
 }
-let E = i.memo(function () {
-        return (0, r.jsx)("div", { className: C.separator });
+let O = i.memo(function () {
+        return (0, r.jsx)("div", { className: j.separator });
     }),
-    I = i.memo(function (e) {
+    y = i.memo(function (e) {
         let { index: t } = e;
         return (0, r.jsx)(
-            d.Text,
+            o.Text,
             {
                 variant: "text-xs/normal",
-                className: C.subtitleSeparator,
+                className: j.subtitleSeparator,
                 children: "\xB7",
             },
             "separator-".concat(t),
         );
     }),
-    S = i.memo(function (e) {
+    N = i.memo(function (e) {
         let {
                 channel: t,
                 category: i,
                 guild: l,
-                isFirstChannel: h,
-                isLastChannel: N,
-                tooltipDirection: S = "right",
+                isFirstChannel: m,
+                isLastChannel: C,
+                tooltipDirection: N = "right",
             } = e,
-            T = (0, b.Mf)(t.id, i.id),
-            P = (0, b.t4)(t.id, i.id),
-            w = (0, b.EH)(t.id, i.id),
-            Z = (0, b.lL)(l.id, i.id),
-            R = null != (0, j.Z)(l).find((e) => e.id === t.id),
-            D = (0, p.mn)(t.id);
+            E = (0, f.Mf)(t.id, i.id),
+            I = (0, f.t4)(t.id, i.id),
+            S = (0, f.EH)(t.id, i.id),
+            T = (0, f.lL)(l.id, i.id),
+            P = null != (0, h.Z)(l).find((e) => e.id === t.id);
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(o.u, {
+                (0, r.jsx)(s.u, {
                     asContainer: !0,
-                    __unsupportedReactNodeAsText: null != w ? w : Z,
+                    __unsupportedReactNodeAsText: null != S ? S : T,
                     delay: 500,
-                    position: S,
-                    children: (0, r.jsxs)(d.P3F, {
-                        className: s()(C.channelRow, {
-                            [C.firstChannel]: h,
-                            [C.lastChannel]: N,
-                            [C.disabled]: P,
+                    position: N,
+                    children: (0, r.jsxs)(o.P3F, {
+                        className: a()(j.channelRow, {
+                            [j.firstChannel]: m,
+                            [j.lastChannel]: C,
+                            [j.disabled]: I,
                         }),
                         onClick: (e) => {
-                            if (!P)
+                            if (!I)
                                 return (
                                     e.stopPropagation(),
-                                    (0, m.s)(l.id, t.id)
-                                        ? (0, x.pt)(t.id)
-                                        : (0, d.ZDy)(async () => {
+                                    (0, u.s)(l.id, t.id)
+                                        ? (0, p.pt)(t.id)
+                                        : (0, o.ZDy)(async () => {
                                               let { default: e } = await n.e("35641").then(n.bind(n, 89216));
                                               return (n) =>
                                                   (0, r.jsx)(
                                                       e,
-                                                      y(O({}, n), {
+                                                      _(v({}, n), {
                                                           guildId: l.id,
                                                           startingChannelId: t.id,
                                                       }),
@@ -196,7 +186,7 @@ let E = i.memo(function () {
                         },
                         onContextMenu: (e) => {
                             t.isGuildVocal()
-                                ? (0, u.jW)(e, async () => {
+                                ? (0, c.jW)(e, async () => {
                                       let { default: e } = await Promise.all([
                                           n.e("79695"),
                                           n.e("90508"),
@@ -208,13 +198,13 @@ let E = i.memo(function () {
                                       return (n) =>
                                           (0, r.jsx)(
                                               e,
-                                              y(O({}, n), {
+                                              _(v({}, n), {
                                                   channel: t,
                                                   guild: l,
                                               }),
                                           );
                                   })
-                                : (0, u.jW)(e, async () => {
+                                : (0, c.jW)(e, async () => {
                                       let { default: e } = await Promise.all([
                                           n.e("75387"),
                                           n.e("79695"),
@@ -237,12 +227,12 @@ let E = i.memo(function () {
                                           n.e("50118"),
                                           n.e("93077"),
                                           n.e("63373"),
-                                          n.e("93338"),
+                                          n.e("21684"),
                                       ]).then(n.bind(n, 373651));
                                       return (n) =>
                                           (0, r.jsx)(
                                               e,
-                                              y(O({}, n), {
+                                              _(v({}, n), {
                                                   channel: t,
                                                   guild: l,
                                               }),
@@ -251,33 +241,33 @@ let E = i.memo(function () {
                         },
                         children: [
                             (0, r.jsx)("div", {
-                                className: C.channelInfo,
+                                className: j.channelInfo,
                                 children: (0, r.jsxs)("div", {
-                                    className: C.channelName,
+                                    className: j.channelName,
                                     children: [
-                                        (0, r.jsx)(f._W, {
+                                        (0, r.jsx)(g._W, {
                                             channel: t,
                                             guild: l,
                                         }),
-                                        (0, r.jsx)(g.Z, {
-                                            className: C.__invalid_name,
-                                            children: (0, r.jsx)(d.Text, {
-                                                className: C.channelText,
+                                        (0, r.jsx)(d.Z, {
+                                            className: j.__invalid_name,
+                                            children: (0, r.jsx)(o.Text, {
+                                                className: j.channelText,
                                                 variant: "text-md/medium",
                                                 lineClamp: 1,
-                                                color: P ? "text-muted" : "text-default",
+                                                color: I ? "text-muted" : "text-default",
                                                 children: t.name,
                                             }),
                                         }),
-                                        R
+                                        P
                                             ? (0, r.jsxs)(r.Fragment, {
                                                   children: [
-                                                      (0, r.jsx)(I, { index: 0 }),
-                                                      (0, r.jsx)(d.Text, {
+                                                      (0, r.jsx)(y, { index: 0 }),
+                                                      (0, r.jsx)(o.Text, {
                                                           variant: "text-xs/medium",
-                                                          className: C.channelSubtitle,
+                                                          className: j.channelSubtitle,
                                                           color: "text-brand",
-                                                          children: v.intl.string(v.t.mPxmeH),
+                                                          children: x.intl.string(x.t.mPxmeH),
                                                       }),
                                                   ],
                                               })
@@ -286,41 +276,34 @@ let E = i.memo(function () {
                                 }),
                             }),
                             (0, r.jsx)("div", {
-                                className: C.channelActions,
-                                children: (0, m.s)(t.guild_id, t.id)
-                                    ? (0, r.jsx)(c.$q, {
-                                          "aria-checked": T,
-                                          value: T,
-                                          type: c.M0.INVERTED,
-                                          disabled: P,
-                                          color: D
-                                              ? a.Z.colors.BG_BRAND.css
-                                              : a.Z.colors.BUTTON_SECONDARY_BACKGROUND.css,
-                                          innerClassName: C.checkboxInner,
-                                          displayOnly: !0,
+                                className: j.channelActions,
+                                children: (0, u.s)(t.guild_id, t.id)
+                                    ? (0, r.jsx)(o.FZ5, {
+                                          checked: E,
+                                          disabled: I,
                                       })
-                                    : (0, r.jsx)(d.zxk, {
+                                    : (0, r.jsx)(o.Button, {
                                           size: "sm",
                                           variant: "secondary",
-                                          text: v.intl.string(v.t.zA9d1N),
-                                          icon: d.mBM,
-                                          onClick: _.dG4,
+                                          text: x.intl.string(x.t.zA9d1N),
+                                          icon: o.mBM,
+                                          onClick: b.dG4,
                                       }),
                             }),
                         ],
                     }),
                 }),
-                !N && (0, r.jsx)(E, {}),
+                !C && (0, r.jsx)(O, {}),
             ],
         });
     });
-function T(e) {
-    let { categories: t, guild: n, className: l, hasSidebar: s } = e,
-        a = i.useCallback(
+function E(e) {
+    let { categories: t, guild: n, className: l, hasSidebar: a } = e,
+        s = i.useCallback(
             (e) => {
                 let i = t._categories[e];
                 return (0, r.jsx)(
-                    N,
+                    C,
                     {
                         channel: i.channel,
                         guild: n,
@@ -333,29 +316,29 @@ function T(e) {
         o = i.useCallback(
             (e, i) => {
                 let l = t._categories[e],
-                    a = t[l.channel.id][i];
-                return null == a
+                    s = t[l.channel.id][i];
+                return null == s
                     ? null
                     : (0, r.jsx)(
-                          S,
+                          N,
                           {
                               category: l.channel,
-                              channel: a.channel,
+                              channel: s.channel,
                               guild: n,
                               isFirstChannel: 0 === i,
                               isLastChannel: t[l.channel.id].length - 1 === i,
-                              tooltipDirection: s ? "right" : "top",
+                              tooltipDirection: a ? "right" : "top",
                           },
-                          a.channel.id,
+                          s.channel.id,
                       );
             },
-            [t, n, s],
+            [t, n, a],
         ),
-        c = (0, h.tn)(n.id, t, 64);
+        c = (0, m.tn)(n.id, t, 64);
     return (0, r.jsx)("div", {
         className: l,
         children: c.map((e, t) => {
-            let n = a(t),
+            let n = s(t),
                 i = [],
                 l = e.rowCount;
             if (0 === l) return null;

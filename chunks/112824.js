@@ -1,13 +1,13 @@
 n.d(t, {
-    R: () => b,
+    R: () => x,
     Z: () => j,
 });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    s = n(149765),
-    a = n(442837),
+    a = n(149765),
+    s = n(442837),
     o = n(28664),
     c = n(481060),
     d = n(485386),
@@ -17,7 +17,7 @@ var i = n(120356),
     p = n(135899),
     f = n(388032),
     h = n(824804);
-function x(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,20 +42,20 @@ function x(e) {
     }
     return e;
 }
-function b(e) {
+function x(e) {
     return p.$X.filter((t) => (null == e ? void 0 : e.id) !== m._ && g.oz(t, e));
 }
 function j(e) {
     let { guild: t } = e,
-        i = (0, a.e7)([d.Z], () => d.Z.getEveryoneRole(t)),
-        g = b(t),
+        i = (0, s.e7)([d.Z], () => d.Z.getEveryoneRole(t)),
+        g = x(t),
         m = g.length > 0,
         j = p.$X.some((e) => {
             var n, r;
             return !u.Z.can(e, t, null, {
                 [i.id]:
-                    ((n = x({}, i)),
-                    (r = r = { permissions: s.Od(i.permissions, e) }),
+                    ((n = b({}, i)),
+                    (r = r = { permissions: a.Od(i.permissions, e) }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                         : (function (e, t) {
@@ -71,12 +71,12 @@ function j(e) {
                     n),
             });
         }),
-        _ = (0, r.jsxs)(r.Fragment, {
+        v = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)("div", {
                     className: h.itemContent,
                     children: [
-                        (0, r.jsx)(c.X6q, {
+                        (0, r.jsx)(c.Heading, {
                             variant: "text-md/semibold",
                             color: "header-primary",
                             children: f.intl.string(f.t["+vaUlJ"]),
@@ -113,21 +113,21 @@ function j(e) {
                   text: f.intl.string(f.t["E5v/a2"]),
                   children: (0, r.jsx)("div", {
                       className: l()(h.simpleItemWrapper, h.disabled),
-                      children: _,
+                      children: v,
                   }),
               })
             : (0, r.jsx)(c.P3F, {
                   onClick: () => {
                       (0, c.ZDy)(async () => {
                           let { default: e } = await n.e("39627").then(n.bind(n, 193845));
-                          return (n) => (0, r.jsx)(e, x({ guild: t }, n));
+                          return (n) => (0, r.jsx)(e, b({ guild: t }, n));
                       });
                   },
                   className: l()(h.simpleItemWrapper, h.clickable),
-                  children: _,
+                  children: v,
               })
         : (0, r.jsx)("div", {
               className: h.simpleItemWrapper,
-              children: _,
+              children: v,
           });
 }

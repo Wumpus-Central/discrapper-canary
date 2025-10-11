@@ -107,7 +107,7 @@ function x(e) {
                                                   warningType: h.pj.LIKELY_ATO,
                                                   cta: f.NM.USER_MODAL_LEARN_MORE,
                                               }),
-                                          children: (0, i.jsx)(a.X6q, {
+                                          children: (0, i.jsx)(a.Heading, {
                                               variant: "heading-sm/medium",
                                               color: "text-link",
                                               children: v.intl.format(v.t.UkH129, { learnMoreLink: C.D8 }),

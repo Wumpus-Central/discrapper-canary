@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(990547),
     l = n(481060),
-    s = n(213609),
-    a = n(787051),
+    a = n(213609),
+    s = n(787051),
     o = n(696936),
     c = n(539290),
     d = n(975464),
@@ -13,7 +13,7 @@ var i = n(990547),
     m = n(270395);
 function p(e) {
     let { config: t } = e,
-        { noticeText: n, ctaLabel: i, ctaClickable: s, onCtaClicked: a } = t;
+        { noticeText: n, ctaLabel: i, ctaClickable: a, onCtaClicked: s } = t;
     return (0, r.jsxs)("div", {
         className: g.__invalid_ctaContainer,
         children: [
@@ -25,7 +25,7 @@ function p(e) {
             (0, r.jsxs)("div", {
                 className: g.__invalid_ctaContent,
                 children: [
-                    (0, r.jsx)(l.X6q, {
+                    (0, r.jsx)(l.Heading, {
                         variant: "heading-xl/semibold",
                         color: "header-primary",
                         children: u.intl.string(u.t.PqYfh4),
@@ -43,8 +43,8 @@ function p(e) {
                         buttonPosition: c.E.RIGHT,
                         notice: n,
                         ctaLabel: i,
-                        ctaDisabled: !s,
-                        onClick: a,
+                        ctaDisabled: !a,
+                        onClick: s,
                     }),
                 ],
             }),
@@ -53,8 +53,8 @@ function p(e) {
 }
 function f(e) {
     let { guild: t, config: n } = e,
-        { isLoading: o, error: c, creatorMonetizationOnboardingMarketing: u } = (0, a.Z)(t.id);
-    return ((0, s.Z)({
+        { isLoading: o, error: c, creatorMonetizationOnboardingMarketing: u } = (0, s.Z)(t.id);
+    return ((0, a.Z)({
         type: i.ImpressionTypes.PANE,
         name: i.ImpressionNames.ENABLE_CREATOR_MONETIZATION_WAITLIST_LANDING,
         properties: { guild_id: t.id },

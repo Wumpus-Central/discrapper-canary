@@ -44,7 +44,7 @@ function c(e) {
                             }),
                         });
                     else
-                        return (0, i.jsx)(a.X6q, {
+                        return (0, i.jsx)(a.Heading, {
                             variant: "heading-md/semibold",
                             color: "text-brand",
                             className: o.number,

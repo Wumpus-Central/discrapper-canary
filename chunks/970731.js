@@ -114,7 +114,7 @@ function O(e) {
             S,
             null == r
                 ? null
-                : (0, l.jsx)(c.X6q, {
+                : (0, l.jsx)(c.Heading, {
                       color: _[t],
                       className: a()(i, p.upsellTooltipHeader),
                       variant: "heading-md/semibold",

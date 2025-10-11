@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(782568),
     f = n(367907),
     h = n(674180),
-    x = n(999382),
-    b = n(626135),
+    b = n(999382),
+    x = n(626135),
     j = n(730647),
     v = n(584825),
     _ = n(981631),
@@ -31,7 +31,7 @@ let y = [
         var t, n;
         let { guild: l, canEnable: s } = e,
             c = (0, v.YB)(l.id),
-            { loading: x, updateSubscriptionsSettings: j } = (0, v.QV)(),
+            { loading: b, updateSubscriptionsSettings: j } = (0, v.QV)(),
             [I, S] = i.useState(l.features.has(_.oNc.CREATOR_STORE_PAGE)),
             [T, P] = i.useState(null != (t = null == c ? void 0 : c.store_page_primary_color) ? t : E),
             [w, Z] = i.useState(null == c ? void 0 : c.store_page_trailer_url),
@@ -59,7 +59,7 @@ let y = [
                     Object.keys(e).length > 0 &&
                         (await j(l.id, e),
                         "store_page_enabled" in e &&
-                            b.default.track(
+                            x.default.track(
                                 _.rMx.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_TOGGLED,
                                 (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
@@ -96,7 +96,7 @@ let y = [
         return (0, r.jsxs)(u.Kqy, {
             gap: 24,
             children: [
-                (0, r.jsx)(u.X6q, {
+                (0, r.jsx)(u.Heading, {
                     variant: "heading-lg/semibold",
                     children: C.intl.string(C.t.N6Tg9P),
                 }),
@@ -130,7 +130,7 @@ let y = [
                         (0, r.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
                             className: O.openPageButton,
-                            children: (0, r.jsx)(u.zxk, {
+                            children: (0, r.jsx)(u.Button, {
                                 variant: "primary",
                                 text: C.intl.string(C.t.CaOYqa),
                                 onClick: () => (0, p.Z)(M),
@@ -197,7 +197,7 @@ let y = [
                         k &&
                         (0, r.jsx)(u.oXn, {
                             children: (0, r.jsx)(m.Z, {
-                                submitting: x,
+                                submitting: b,
                                 onReset: () => {
                                     var e, t;
                                     S(l.features.has(_.oNc.CREATOR_STORE_PAGE)),
@@ -214,7 +214,7 @@ let y = [
         });
     };
 function S() {
-    let e = (0, c.e7)([x.Z], () => x.Z.getGuild()),
+    let e = (0, c.e7)([b.Z], () => b.Z.getGuild()),
         t = (0, j.f)(),
         n = (0, v.qi)(null == e ? void 0 : e.id).some((e) => e.published);
     return null != e && t
@@ -225,7 +225,7 @@ function S() {
         : (0, r.jsx)(u.$jN, {});
 }
 function T() {
-    let e = (0, c.e7)([x.Z], () => x.Z.getGuild());
+    let e = (0, c.e7)([b.Z], () => b.Z.getGuild());
     return (0, r.jsx)(j.l, {
         guildId: null == e ? void 0 : e.id,
         refetchOnMount: !0,

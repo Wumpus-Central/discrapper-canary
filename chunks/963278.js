@@ -2,16 +2,16 @@ n.d(t, { Z: () => h });
 var r = n(951288);
 n(647438);
 var l = n(120356),
-    a = n.n(l),
+    i = n.n(l),
     s = n(442837),
-    i = n(481060),
+    a = n(481060),
     o = n(594174),
     c = n(381585),
     u = n(597688),
     d = n(128922),
     g = n(709999),
-    p = n(653126),
-    f = n(388032),
+    f = n(653126),
+    p = n(388032),
     C = n(310582);
 let h = (e) => {
     let { shelf: t, handleTransition: n, tab: l } = e,
@@ -20,18 +20,18 @@ let h = (e) => {
     return null == h
         ? null
         : (0, r.jsxs)("div", {
-              className: a()(C.shelfBlockContainer, C.centeredSection),
+              className: i()(C.shelfBlockContainer, C.centeredSection),
               children: [
                   (0, r.jsxs)("div", {
                       className: C.blockHeader,
                       children: [
-                          (0, r.jsx)(i.X6q, {
+                          (0, r.jsx)(a.Heading, {
                               variant: "heading-lg/semibold",
                               children: t.name,
                           }),
-                          (0, r.jsx)(i.zxk, {
+                          (0, r.jsx)(a.Button, {
                               variant: "secondary",
-                              text: f.intl.formatToPlainString(f.t.bc9RBA, { category_name: t.name }),
+                              text: p.intl.formatToPlainString(p.t.bc9RBA, { category_name: t.name }),
                               onClick: () => n("shelf block see all", t.categorySkuId),
                           }),
                       ],
@@ -40,9 +40,9 @@ let h = (e) => {
                       className: C.feed,
                       children: (0, r.jsx)(r.Fragment, {
                           children: t.rankedSkuIds.map((e, n) => {
-                              let a = u.Z.getCategoryForProduct(e),
+                              let i = u.Z.getCategoryForProduct(e),
                                   s = u.Z.getProduct(e);
-                              return null == a || null == s
+                              return null == i || null == s
                                   ? null
                                   : (0, r.jsx)(
                                         c.k0,
@@ -53,12 +53,12 @@ let h = (e) => {
                                                 categoryPosition: 2,
                                             },
                                             children: _
-                                                ? (0, r.jsx)(p.Z, { skuId: e }, e)
+                                                ? (0, r.jsx)(f.Z, { skuId: e }, e)
                                                 : (0, r.jsx)(
                                                       g.Z,
                                                       {
                                                           product: s,
-                                                          category: a,
+                                                          category: i,
                                                           user: h,
                                                           tab: l,
                                                       },

@@ -100,7 +100,7 @@ function _() {
                       }),
             );
         }, []),
-        k = (0, r.useCallback)(
+        w = (0, r.useCallback)(
             (e) => {
                 O(e);
             },
@@ -114,7 +114,7 @@ function _() {
                     (0, a.jsxs)("div", {
                         className: g.toggles,
                         children: [
-                            (0, a.jsx)(l.zxk, {
+                            (0, a.jsx)(l.Button, {
                                 size: "sm",
                                 onClick: () => {
                                     d(!1), i((e) => !e);
@@ -122,7 +122,7 @@ function _() {
                                 variant: "secondary",
                                 text: "Toggle Themes",
                             }),
-                            (0, a.jsx)(l.zxk, {
+                            (0, a.jsx)(l.Button, {
                                 size: "sm",
                                 onClick: () => {
                                     i(!1), d((e) => !e);
@@ -178,7 +178,7 @@ function _() {
                                         {
                                             src: t,
                                             onSetStatic: P,
-                                            removeAsset: k,
+                                            removeAsset: w,
                                         },
                                         t,
                                     );
@@ -295,7 +295,7 @@ function C(e) {
             }),
             (0, a.jsx)("div", {
                 className: g.uploadedControls,
-                children: (0, a.jsx)(l.zxk, {
+                children: (0, a.jsx)(l.Button, {
                     onClick: () => n(t),
                     size: "sm",
                     variant: "secondary",
@@ -314,7 +314,7 @@ function E(e) {
                 variant: "text-sm/normal",
                 children: "coming soon",
             }),
-            (0, a.jsx)(l.zxk, {
+            (0, a.jsx)(l.Button, {
                 variant: "secondary",
                 size: "sm",
                 text: t,

@@ -37,7 +37,7 @@ let f = () =>
                           (0, i.jsxs)("div", {
                               className: h.textContainer,
                               children: [
-                                  (0, i.jsx)(a.X6q, {
+                                  (0, i.jsx)(a.Heading, {
                                       variant: "heading-md/semibold",
                                       children: p.intl.string(p.t.OmBThI),
                                   }),

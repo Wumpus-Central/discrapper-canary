@@ -38,7 +38,7 @@ function m() {
             }),
             (0, a.jsx)("div", {
                 className: d.tenureBadgeControls,
-                children: (0, a.jsx)(s.zxk, {
+                children: (0, a.jsx)(s.Button, {
                     variant: "primary",
                     text: "Reset Level Up DC",
                     onClick: e,

@@ -106,7 +106,7 @@ function P(e) {
         j = h ? "critical-primary" : "primary";
     return (0, i.jsx)("div", {
         className: a()(x.entryPointAppCommandButtonContainer, v.Id),
-        children: (0, i.jsx)(c.zxk, {
+        children: (0, i.jsx)(c.Button, {
             variant: j,
             loading: d,
             onClick: O,

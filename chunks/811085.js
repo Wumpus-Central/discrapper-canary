@@ -101,7 +101,7 @@ function g() {
                     (0, r.jsxs)("div", {
                         className: h.title,
                         children: [
-                            (0, r.jsx)(l.X6q, {
+                            (0, r.jsx)(l.Heading, {
                                 color: "header-primary",
                                 variant: "heading-lg/normal",
                                 children: p.intl.format(O, {

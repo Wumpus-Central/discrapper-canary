@@ -13,25 +13,25 @@ var r = n(951288),
     p = n(424218),
     f = n(267642),
     h = n(63063),
-    x = n(999382),
-    b = n(981631),
+    b = n(999382),
+    x = n(981631),
     j = n(611480),
     v = n(388032),
     _ = n(96761);
 let C = {
-        page: b.ZY5.GUILD_SETTINGS,
-        section: b.jXE.GUILD_SETTINGS_STICKERS,
-        object: b.qAy.BOOSTING_BANNER,
+        page: x.ZY5.GUILD_SETTINGS,
+        section: x.jXE.GUILD_SETTINGS_STICKERS,
+        object: x.qAy.BOOSTING_BANNER,
     },
     O = (e) => {
         let { guild: t } = e,
             { analyticsLocations: n } = (0, s.ZP)(),
             i = (0, u.Z)(t.id).available,
-            a = b.oCV[b.Eu4.TIER_1] - i;
+            a = x.oCV[x.Eu4.TIER_1] - i;
         return (0, r.jsxs)("div", {
             className: _.upsellContainer,
             children: [
-                (0, r.jsx)(l.X6q, {
+                (0, r.jsx)(l.Heading, {
                     className: _.upsellHeader,
                     variant: "heading-xl/semibold",
                     children: v.intl.string(v.t.hzCkys),
@@ -41,10 +41,10 @@ let C = {
                     variant: "text-md/normal",
                     children: v.intl.string(v.t.jcesAA),
                 }),
-                (0, r.jsxs)(l.hE2, {
+                (0, r.jsxs)(l.ButtonGroup, {
                     className: _.upsellButtons,
                     children: [
-                        (0, r.jsx)(l.zxk, {
+                        (0, r.jsx)(l.Button, {
                             variant: "overlay-primary",
                             text: v.intl.string(v.t.Q5dbTk),
                             onClick: () =>
@@ -55,13 +55,13 @@ let C = {
                                     totalNumberOfSlotsToAssign: a,
                                 }),
                         }),
-                        (0, r.jsx)(l.zxk, {
+                        (0, r.jsx)(l.Button, {
                             variant: "overlay-primary",
                             text: v.intl.string(v.t.hvVgAQ),
                             onClick: () =>
                                 (0, o.f)({
                                     guildId: t.id,
-                                    location: { section: b.jXE.GUILD_SETTINGS_STICKERS },
+                                    location: { section: x.jXE.GUILD_SETTINGS_STICKERS },
                                 }),
                         }),
                     ],
@@ -83,7 +83,7 @@ let C = {
                 }),
                 (0, r.jsx)(l.Text, {
                     variant: "text-sm/normal",
-                    children: v.intl.format(v.t.UBj0aW, { articleUrl: h.Z.getArticleURL(b.BhN.STICKERS_UPLOAD) }),
+                    children: v.intl.format(v.t.UBj0aW, { articleUrl: h.Z.getArticleURL(x.BhN.STICKERS_UPLOAD) }),
                 }),
             ],
         }),
@@ -97,45 +97,45 @@ let C = {
             d = (0, f.FZ)(s),
             u = (0, f.A3)(s),
             g = a.length;
-        return null == d || s === b.Eu4.TIER_3 || o > 0
+        return null == d || s === x.Eu4.TIER_3 || o > 0
             ? null
             : (g > u
                   ? ((t = v.intl.formatToPlainString(v.t.ZtAY1d, { level: d })),
                     (n = v.intl.formatToPlainString(v.t["13hOWl"], { level: d })),
-                    (i = b.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL))
+                    (i = x.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL))
                   : ((t = v.intl.string(v.t.zT9Sxc)),
                     (n = v.intl.formatToPlainString(v.t.YaW9wM, {
                         level: d,
                         numAdditional: (0, f.ig)(d),
                     })),
-                    (i = b.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL)),
+                    (i = x.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL)),
               (0, r.jsx)(c.Z, {
                   header: t,
                   text: n,
                   guild: l,
                   analyticsLocation: {
-                      page: b.ZY5.GUILD_SETTINGS,
-                      section: b.jXE.GUILD_SETTINGS_STICKERS,
+                      page: x.ZY5.GUILD_SETTINGS,
+                      section: x.jXE.GUILD_SETTINGS_STICKERS,
                       object: i,
                       objectType: (0, f.ge)(d),
                   },
               }));
     },
     E = () => {
-        let e = (0, i.e7)([x.Z], () => x.Z.getGuild()),
+        let e = (0, i.e7)([b.Z], () => b.Z.getGuild()),
             t = (0, i.e7)([g.Z], () => {
                 var t;
                 return null != e && null != (t = g.Z.getStickersByGuildId(e.id)) ? t : [];
             }, [e]),
             { analyticsLocations: n } = (0, s.ZP)(a.Z.STICKERS);
         if (null == e) return null;
-        let o = e.premiumTier !== b.Eu4.NONE || t.length > 0;
+        let o = e.premiumTier !== x.Eu4.NONE || t.length > 0;
         return (0, r.jsx)(s.Gt, {
             value: n,
             children: (0, r.jsxs)(l.Kqy, {
                 gap: 16,
                 children: [
-                    (0, r.jsx)(l.X6q, {
+                    (0, r.jsx)(l.Heading, {
                         variant: "heading-lg/semibold",
                         children: v.intl.string(v.t.R5nQkZ),
                     }),

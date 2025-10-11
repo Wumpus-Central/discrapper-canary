@@ -64,7 +64,7 @@ let _ = (e) => {
             null == _ || _(), o.AC(t, n);
         };
     return (0, r.jsx)(
-        a.zxk,
+        a.Button,
         u(
             {
                 variant: c,

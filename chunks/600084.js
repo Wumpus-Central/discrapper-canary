@@ -32,9 +32,9 @@ var i = n(951288),
     w = n(184279),
     M = n(438306),
     R = n(544142),
-    k = n(128557),
-    L = n(981631),
-    D = n(176505),
+    L = n(128557),
+    D = n(981631),
+    k = n(176505),
     U = n(388032),
     B = n(963392),
     H = n(197571);
@@ -45,7 +45,7 @@ function V(e) {
     if ((0, h.Z)(n.id)) return null;
     if (n.isForumPost()) return (0, i.jsx)(P.Z, { channel: n });
     if (y.Ec.has(n.type)) return (0, i.jsx)(R.Z, { channel: n });
-    if (a) return (0, i.jsx)(k.Z, { channel: n });
+    if (a) return (0, i.jsx)(L.Z, { channel: n });
     if (r) return (0, i.jsx)(A.Z, { channel: n });
     return (0, i.jsx)(M.Z, { channel: n });
 }
@@ -57,27 +57,27 @@ function F(e) {
         P = (0, l.e7)([O.default], () => (p.isPrivate() ? O.default.getUser(p.getRecipientId()) : null)),
         A = j.ZP.useUserTag(P),
         { canManageRoles: M, canReadMessageHistory: R } = (0, l.cj)([x.Z], () => ({
-            canManageRoles: x.Z.can(L.Plq.MANAGE_ROLES, p),
-            canReadMessageHistory: x.Z.can(L.Plq.READ_MESSAGE_HISTORY, p),
+            canManageRoles: x.Z.can(D.Plq.MANAGE_ROLES, p),
+            canReadMessageHistory: x.Z.can(D.Plq.READ_MESSAGE_HISTORY, p),
         })),
-        k = (0, l.e7)([b.Z], () => (v === L.d4z.DM ? b.Z.getMutualGuilds(p.getRecipientId()) : null), [p, v]),
+        L = (0, l.e7)([b.Z], () => (v === D.d4z.DM ? b.Z.getMutualGuilds(p.getRecipientId()) : null), [p, v]),
         { systemDMRedesignEnabled: F } = g.Z.useExperiment(
             { location: "bf1a4f_1" },
             { autoTrackExposure: null != (t = p.isSystemDM()) && t },
         ),
-        G = (0, u.Z)(null != (n = null == P ? void 0 : P.id) ? n : L.lds),
+        G = (0, u.Z)(null != (n = null == P ? void 0 : P.id) ? n : D.lds),
         { authorizedAppToken: z, authorizedAppsFetchState: W } = (0, l.cj)([_.Z], () => ({
             authorizedAppToken: _.Z.getNewestTokenForApplication(null == G ? void 0 : G.id),
             authorizedAppsFetchState: _.Z.getFetchState(),
         })),
-        q = c.Z.useExperiment({ location: "EmptyMessages" }).enabledDesktop;
+        Y = c.Z.useExperiment({ location: "EmptyMessages" }).enabledDesktop;
     if (
         (r.useEffect(() => {
-            v === L.d4z.DM &&
-                null == k &&
+            v === D.d4z.DM &&
+                null == L &&
                 null != P &&
                 o.Z.wait(() => (0, C.Z)(p.getRecipientId(), P.getAvatarURL(null, 80), { withMutualGuilds: !0 }));
-        }, [k, v, p, P]),
+        }, [L, v, p, P]),
         r.useEffect(() => {
             (null == P ? void 0 : P.bot) && W === _.M.NOT_FETCHED && s.Z.fetch();
         }, [null == P ? void 0 : P.bot, W]),
@@ -89,7 +89,7 @@ function F(e) {
                   channel: p,
                   children: U.intl.string(U.t.Rzvnio),
               });
-    if (v === L.d4z.DM) {
+    if (v === D.d4z.DM) {
         let e;
         return (
             null != P && null != G
@@ -109,7 +109,7 @@ function F(e) {
                               channel: p,
                               oauth2Token: z,
                           }),
-                          q && (0, i.jsx)(f.Z, { channel: p }),
+                          Y && (0, i.jsx)(f.Z, { channel: p }),
                       ],
                   }))
                 : (e = (0, i.jsx)(E.Z, {
@@ -123,7 +123,7 @@ function F(e) {
                 children: [
                     null != P &&
                         !P.isProvisional &&
-                        (0, i.jsx)(a.X6q, {
+                        (0, i.jsx)(a.Heading, {
                             variant: "heading-xl/medium",
                             className: H.marginBottom20,
                             children: A,
@@ -144,7 +144,7 @@ function F(e) {
                     (0, i.jsx)(S.jz, { children: U.intl.string(U.t.M8Ao6O) }),
                 ],
             });
-        else if (p.hasFlag(D.zZ.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)) return (0, i.jsx)(I.Z, { channel: p });
+        else if (p.hasFlag(k.zZ.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)) return (0, i.jsx)(I.Z, { channel: p });
         else
             return (0, i.jsx)(N.Z, {
                 channel: p,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -78,7 +78,7 @@ function h(e) {
         ],
     });
 }
-function x() {
+function b() {
     let e = i.useMemo(
             () => [
                 {
@@ -216,7 +216,7 @@ function x() {
         })
     );
 }
-function b(e) {
+function x(e) {
     let { guild: t, everyoneRole: n, setEditRoleId: l } = e,
         [a, d] = i.useState(!1),
         g = async () => {
@@ -229,15 +229,15 @@ function b(e) {
         children: (0, r.jsxs)("div", {
             className: p.section,
             children: [
-                (0, r.jsx)(s.X6q, {
+                (0, r.jsx)(s.Heading, {
                     variant: "heading-lg/semibold",
                     children: m.intl.string(m.t.LPJmLy),
                 }),
                 (0, r.jsxs)("div", {
                     className: p.container,
                     children: [
-                        (0, r.jsx)(x, {}),
-                        (0, r.jsx)(s.X6q, {
+                        (0, r.jsx)(b, {}),
+                        (0, r.jsx)(s.Heading, {
                             variant: "heading-xl/semibold",
                             children: m.intl.string(m.t.ALlnbm),
                         }),
@@ -250,7 +250,7 @@ function b(e) {
                         (0, r.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
                             className: p.button,
-                            children: (0, r.jsx)(s.zxk, {
+                            children: (0, r.jsx)(s.Button, {
                                 variant: "primary",
                                 text: m.intl.string(m.t.JZZjQE),
                                 onClick: g,

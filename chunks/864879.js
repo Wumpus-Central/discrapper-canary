@@ -18,7 +18,7 @@ let d = i.forwardRef((e, t) => {
                 className: u.contentContainer,
                 children: [
                     (0, r.jsx)(l.Z, {}),
-                    (0, r.jsx)(a.X6q, {
+                    (0, r.jsx)(a.Heading, {
                         variant: "display-md",
                         color: "header-primary",
                         className: u.footerHeader,

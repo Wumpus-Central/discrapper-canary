@@ -25,7 +25,7 @@ function u(e) {
     let y = () => {
         null == f || f(), l.Z.closePrivateChannel(n.id, p);
     };
-    return (0, i.jsx)(r.zxk, {
+    return (0, i.jsx)(r.Button, {
         size: d,
         variant: "critical-primary",
         disabled: null == C,

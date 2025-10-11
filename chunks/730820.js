@@ -136,7 +136,7 @@ class U extends i.PureComponent {
                     variant: "text-sm/normal",
                     children: [
                         P.intl.format(P.t.PXVoEB, { phoneNumber: e }),
-                        (0, r.jsx)(c.eee, {
+                        (0, r.jsx)(c.Anchor, {
                             onClick: this.togglePhoneNumberVisibility,
                             className: w.phoneRevealer,
                             children: n ? P.intl.string(P.t.FfltIC) : P.intl.string(P.t.llArAg),
@@ -145,7 +145,7 @@ class U extends i.PureComponent {
                 });
             }
             if (l)
-                e = (0, r.jsx)(c.zxk, {
+                e = (0, r.jsx)(c.Button, {
                     variant: "critical-secondary",
                     size: "sm",
                     text: P.intl.string(P.t.KLWnio),
@@ -154,10 +154,10 @@ class U extends i.PureComponent {
                 });
             else {
                 let t = (0, S.c)(i);
-                e = (0, r.jsxs)(c.hE2, {
+                e = (0, r.jsxs)(c.ButtonGroup, {
                     size: "sm",
                     children: [
-                        (0, r.jsx)(c.zxk, {
+                        (0, r.jsx)(c.Button, {
                             variant: "primary",
                             size: "sm",
                             text: null != t ? t : P.intl.string(P.t.DZQe29),
@@ -166,7 +166,7 @@ class U extends i.PureComponent {
                             disabled: null != t,
                         }),
                         s
-                            ? (0, r.jsx)(c.zxk, {
+                            ? (0, r.jsx)(c.Button, {
                                   variant: "secondary",
                                   size: "sm",
                                   text: P.intl.string(P.t.Ulqq6O),
@@ -191,7 +191,7 @@ class U extends i.PureComponent {
             { backupCodes: t } = this.props,
             n = (0, r.jsx)(g.F, {
                 setting: C.s6.ACCOUNT_VIEW_BACKUP_CODES,
-                children: (0, r.jsx)(c.zxk, {
+                children: (0, r.jsx)(c.Button, {
                     variant: "primary",
                     size: "sm",
                     text: P.intl.string(P.t.xZEzbm),
@@ -203,7 +203,7 @@ class U extends i.PureComponent {
                 fileContents: this.getDownloadFileContents,
                 contentType: "text/plain",
                 fileName: "discord_backup_codes.txt",
-                children: (0, r.jsx)(c.zxk, {
+                children: (0, r.jsx)(c.Button, {
                     variant: "primary",
                     size: "sm",
                     text: P.intl.string(P.t.qZZUy8),
@@ -249,13 +249,13 @@ class U extends i.PureComponent {
                 (0, r.jsx)(c.gNt, {
                     label: P.intl.string(P.t.EPVq09),
                     description: P.intl.string(P.t.bQwxiY),
-                    children: (0, r.jsxs)(c.hE2, {
+                    children: (0, r.jsxs)(c.ButtonGroup, {
                         size: "sm",
                         children: [
                             n,
                             (0, r.jsx)(g.F, {
                                 setting: C.s6.ACCOUNT_REMOVE_2FA,
-                                children: (0, r.jsx)(c.zxk, {
+                                children: (0, r.jsx)(c.Button, {
                                     variant: "critical-secondary",
                                     size: "sm",
                                     text: P.intl.string(P.t["D+aE7u"]),
@@ -264,7 +264,7 @@ class U extends i.PureComponent {
                             }),
                             (0, r.jsx)(g.F, {
                                 setting: C.s6.ACCOUNT_ENABLE_2FA,
-                                children: (0, r.jsx)(c.zxk, {
+                                children: (0, r.jsx)(c.Button, {
                                     variant: "primary",
                                     size: "sm",
                                     text: P.intl.string(P.t.cDgKtb),
@@ -289,7 +289,7 @@ class U extends i.PureComponent {
                 (0, r.jsx)(c.gNt, {
                     label: P.intl.string(P.t.EPVq09),
                     description: P.intl.string(P.t["8aDa1t"]),
-                    children: (0, r.jsx)(c.zxk, {
+                    children: (0, r.jsx)(c.Button, {
                         variant: "primary",
                         size: "sm",
                         text: P.intl.string(P.t.cDgKtb),

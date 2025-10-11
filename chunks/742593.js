@@ -97,7 +97,7 @@ function v(e) {
             (0, r.jsxs)("div", {
                 className: a()({ [y.descriptionWithThumbnail]: null != u }),
                 children: [
-                    (0, r.jsx)(l.X6q, {
+                    (0, r.jsx)(l.Heading, {
                         variant: t,
                         selectable: !0,
                         className: y.eventName,

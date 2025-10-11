@@ -521,7 +521,7 @@ function X(e) {
     return (0, r.jsxs)(d.Gt, {
         value: o,
         children: [
-            (0, r.jsx)(l.X6q, {
+            (0, r.jsx)(l.Heading, {
                 ref: s,
                 className: k.applicationHomeTierCardSectionHeader,
                 variant: "display-md",

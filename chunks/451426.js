@@ -1,4 +1,4 @@
-i.d(n, { Z: () => N }), i(953529), i(388685);
+i.d(e, { Z: () => N }), i(953529), i(388685);
 var t = i(951288),
     a = i(647438),
     s = i(442837),
@@ -13,29 +13,29 @@ var t = i(951288),
     p = i(388032),
     u = i(545833),
     h = i(186425);
-function N(e) {
-    let { className: n, isDsaEligible: i, onClose: N, onNext: C, onBack: j } = e,
+function N(n) {
+    let { className: e, isDsaEligible: i, onClose: N, onNext: C, onBack: j } = n,
         _ = (0, s.e7)([d.Z], () => d.Z.getAppealClassificationId()),
         { classification: E } = (0, m.YG)(null != _ ? _ : g.lds),
         v = (0, x.c7)(null == E ? void 0 : E.description),
         I = (0, s.e7)([d.Z], () => d.Z.getIsSubmitting()),
         T = (0, s.e7)([d.Z], () => d.Z.getAppealSignal()),
         S = (0, s.e7)([d.Z], () => d.Z.getFreeTextAppealReason()),
-        [k, A] = a.useState(!1),
+        [A, k] = a.useState(!1),
         [Z, L] = a.useState(""),
-        P = a.useCallback((e) => {
+        P = a.useCallback((n) => {
             r.Z.dispatch({
                 type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
-                userInput: e,
+                userInput: n,
             });
         }, []),
         b = a.useCallback(async () => {
             if (null !== _)
                 try {
                     L(""), await c.uR(_, T, S), null == C || C();
-                } catch (n) {
-                    var e;
-                    L((0, x.Zs)(null == (e = n.body) ? void 0 : e.code));
+                } catch (e) {
+                    var n;
+                    L((0, x.Zs)(null == (n = e.body) ? void 0 : n.code));
                 }
         }, [_, T, S, C]);
     return (0, t.jsxs)(t.Fragment, {
@@ -46,7 +46,7 @@ function N(e) {
                 className: h.header,
                 separator: !1,
                 children: [
-                    (0, t.jsx)(l.X6q, {
+                    (0, t.jsx)(l.Heading, {
                         className: h.title,
                         variant: "heading-xl/semibold",
                         children: p.intl.string(p.t["C5q+pa"]),
@@ -67,14 +67,14 @@ function N(e) {
             }),
             (0, t.jsxs)(l.hzk, {
                 "data-migration-pending": !0,
-                className: n,
+                className: e,
                 paddingFix: !1,
                 children: [
                     (0, t.jsx)("ul", {
                         className: u.listContainer,
                         children: [(0, x.ox)(T), S]
-                            .filter((e) => e.length > 0)
-                            .map((e, n) =>
+                            .filter((n) => n.length > 0)
+                            .map((n, e) =>
                                 (0, t.jsx)(
                                     "li",
                                     {
@@ -82,26 +82,26 @@ function N(e) {
                                         children: (0, t.jsx)(l.Text, {
                                             tag: "span",
                                             variant: "text-md/normal",
-                                            children: e,
+                                            children: n,
                                         }),
                                     },
-                                    n,
+                                    e,
                                 ),
                             ),
                     }),
                     i &&
                         (0, t.jsx)("div", {
                             className: u.anchorContainer,
-                            children: (0, t.jsx)(l.eee, {
-                                onClick: () => A((e) => !e),
-                                children: (0, t.jsx)(l.X6q, {
+                            children: (0, t.jsx)(l.Anchor, {
+                                onClick: () => k((n) => !n),
+                                children: (0, t.jsx)(l.Heading, {
                                     variant: "heading-md/normal",
                                     color: "text-link",
                                     children: S.length > 0 ? p.intl.string(p.t.tnE3bW) : p.intl.string(p.t.uoQFIi),
                                 }),
                             }),
                         }),
-                    k &&
+                    A &&
                         i &&
                         (0, t.jsx)("div", {
                             className: u.inputContainer,
@@ -138,16 +138,16 @@ function N(e) {
                         }),
                     (0, t.jsx)("div", {
                         className: u.buttonContainer,
-                        children: (0, t.jsxs)(l.hE2, {
+                        children: (0, t.jsxs)(l.ButtonGroup, {
                             direction: "horizontal-reverse",
                             children: [
-                                (0, t.jsx)(l.zxk, {
+                                (0, t.jsx)(l.Button, {
                                     variant: "secondary",
                                     text: p.intl.string(p.t["13/7kZ"]),
                                     onClick: j,
                                     disabled: I,
                                 }),
-                                (0, t.jsx)(l.zxk, {
+                                (0, t.jsx)(l.Button, {
                                     variant: "critical-primary",
                                     text: p.intl.string(p.t.geKm7u),
                                     onClick: b,

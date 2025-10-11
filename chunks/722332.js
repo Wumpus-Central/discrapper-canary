@@ -69,7 +69,7 @@ let b = (e) => {
                                 (0, a.jsx)("span", {
                                     children: " You can pop out the DevTools to see the full layout. ",
                                 }),
-                                (0, a.jsx)(c.zxk, {
+                                (0, a.jsx)(c.Button, {
                                     size: "sm",
                                     icon: s.rgF,
                                     variant: "secondary",
@@ -95,7 +95,7 @@ let b = (e) => {
                             children: "ShopKeeper",
                         }),
                         0 !== e &&
-                            (0, a.jsx)(c.zxk, {
+                            (0, a.jsx)(c.Button, {
                                 variant: "primary",
                                 onClick: () => t(0),
                                 text: "Back",

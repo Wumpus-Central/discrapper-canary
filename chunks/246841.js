@@ -64,7 +64,7 @@ function d(e) {
     return (0, r.jsx)(i.u, {
         text: m,
         children: (0, r.jsx)(
-            a.zxk,
+            a.Button,
             l(
                 {
                     variant: d,

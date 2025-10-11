@@ -79,11 +79,11 @@ let C = (e) => {
         w = (0, y.kd)(C),
         D = i.useRef(null);
     if (null == C) return null;
-    let [x] = C.items;
-    l()(null != x, "Product item should not be empty");
-    let L = () => {
+    let [L] = C.items;
+    l()(null != L, "Product item should not be empty");
+    let x = () => {
             if ((null == C ? void 0 : C.type) === c.Z.BUNDLE) return null;
-            switch (x.type) {
+            switch (L.type) {
                 case c.Z.AVATAR_DECORATION:
                     return O.intl.string(O.t["7v0T9P"]);
                 case c.Z.PROFILE_EFFECT:
@@ -94,8 +94,8 @@ let C = (e) => {
                     return null;
             }
         },
-        M = null != N && N.id !== (null == P ? void 0 : P.id) && C.type !== c.Z.BUNDLE && x.type !== c.Z.NAMEPLATE,
-        k = () => {
+        M = null != N && N.id !== (null == P ? void 0 : P.id) && C.type !== c.Z.BUNDLE && L.type !== c.Z.NAMEPLATE,
+        j = () => {
             null != t && null != s && s(t);
         };
     return (0, r.jsxs)("div", {
@@ -119,8 +119,8 @@ let C = (e) => {
                                             A(T({}, e), {
                                                 user: N,
                                                 pendingAvatar: N.getAvatarURL(null, (0, d.pxk)(d.EFr.SIZE_80)),
-                                                pendingAvatarDecoration: (0, g.M)(x) ? x : null,
-                                                pendingProfileEffect: (0, E.H)(x) ? x : null,
+                                                pendingAvatarDecoration: (0, g.M)(L) ? L : null,
+                                                pendingProfileEffect: (0, E.H)(L) ? L : null,
                                                 canUsePremiumCustomization: !0,
                                                 disabledInputs: !0,
                                                 hideExampleButton: !0,
@@ -148,7 +148,7 @@ let C = (e) => {
                 }),
             (0, r.jsxs)(d.P3F, {
                 tag: "div",
-                onClick: k,
+                onClick: j,
                 className: o()(v.previewContainer, {
                     [v.previewContainerSelected]: n && null == R,
                     [v.previewContainerError]: n && null != R,
@@ -168,10 +168,10 @@ let C = (e) => {
                                         variant: "text-md/semibold",
                                         children: w,
                                     }),
-                                    (0, r.jsx)(d.X6q, {
+                                    (0, r.jsx)(d.Heading, {
                                         variant: "heading-sm/medium",
                                         color: "header-secondary",
-                                        children: L(),
+                                        children: x(),
                                     }),
                                 ],
                             }),

@@ -351,7 +351,7 @@ function ec(e) {
         [eY, eW] = i.useState(x.Hn),
         [eK, ez] = i.useState(!1),
         eq = i.useMemo(
-            () => ((null == eP ? void 0 : eP.user) != null ? new w.Z(eP.user) : null),
+            () => ((null == eP ? void 0 : eP.user) != null ? new w.default(eP.user) : null),
             [null == eP ? void 0 : eP.user],
         ),
         eX = (0, T.Z)(null != (t = null == eP ? void 0 : eP.application) ? t : null),

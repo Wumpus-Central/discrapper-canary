@@ -24,7 +24,7 @@ function v(e) {
     if (t)
         return (0, r.jsx)("div", {
             className: h.oneStepCheckoutTextWrapper,
-            children: (0, r.jsx)(o.X6q, {
+            children: (0, r.jsx)(o.Heading, {
                 variant: "heading-md/bold",
                 children: n,
             }),

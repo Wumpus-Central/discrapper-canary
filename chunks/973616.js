@@ -84,7 +84,7 @@ class h extends i.Z {
             f(u({}, e), {
                 coverImage: e.cover_image,
                 primarySkuId: e.primary_sku_id,
-                bot: null != e.bot ? new s.Z(e.bot) : null,
+                bot: null != e.bot ? new s.default(e.bot) : null,
                 thirdPartySkus: e.third_party_skus,
                 roleConnectionsVerificationUrl: e.role_connections_verification_url,
                 parentId: e.parent_id,
@@ -175,7 +175,7 @@ class m extends h {
             f(u({}, e), {
                 coverImage: e.cover_image,
                 primarySkuId: e.primary_sku_id,
-                bot: null != e.bot ? new s.Z(e.bot) : null,
+                bot: null != e.bot ? new s.default(e.bot) : null,
                 thirdPartySkus: e.third_party_skus,
                 roleConnectionsVerificationUrl: e.role_connections_verification_url,
                 overlayWarn: e.overlay_warn,

@@ -1,8 +1,8 @@
 n.d(t, { default: () => Y });
 var i = n(951288),
     r = n(647438),
-    l = n(512722),
-    a = n.n(l),
+    a = n(512722),
+    l = n.n(a),
     o = n(442837),
     c = n(481060),
     d = n(5036),
@@ -16,13 +16,13 @@ var i = n(951288),
     y = n(976192),
     j = n(887904),
     O = n(429824),
-    P = n(466330),
-    v = n(191471),
-    x = n(162157),
-    m = n(623624),
-    Z = n(894059),
-    D = n(434404),
-    I = n(978946),
+    v = n(466330),
+    P = n(191471),
+    m = n(162157),
+    x = n(623624),
+    I = n(894059),
+    Z = n(434404),
+    D = n(978946),
     N = n(731722),
     w = n(172751),
     S = n(343056),
@@ -84,9 +84,9 @@ function q(e, t) {
     );
 }
 let Y = r.memo(function (e) {
-    let { guild: t, onClose: l, onSelect: Y } = e,
+    let { guild: t, onClose: a, onSelect: Y } = e,
         V = (0, o.e7)([U.default], () => U.default.getCurrentUser());
-    a()(null != V, "GuildHeaderPopout: user cannot be undefined"),
+    l()(null != V, "GuildHeaderPopout: user cannot be undefined"),
         r.useEffect(() => {
             M.default.track(L.rMx.GUILD_DROPDOWN_MENU_VIEWED, { guild_id: t.id });
         });
@@ -104,17 +104,17 @@ let Y = r.memo(function (e) {
             }),
             [t],
         ),
-        K = (0, x.N8)(t),
+        K = (0, m.N8)(t),
         $ = (0, G.eM)(t, V),
         ee = (0, o.e7)([E.Z], () => E.Z.isLurking(t.id), [t.id]),
         et = (0, o.e7)([A.ZP], () => A.ZP.isCurrentUserGuest(t.id)),
-        en = (0, Z.Z)(t.id, !0),
+        en = (0, I.Z)(t.id, !0),
         ei = (0, b.ZP)(t),
-        er = (0, P.Z)({
-            source: L.t4x.GUILD_HEADER,
+        er = (0, v.Z)({
+            source: L.InstantInviteSources.GUILD_HEADER,
             guild: t,
         }),
-        el = (0, y.Z)({
+        ea = (0, y.Z)({
             guildId: t.id,
             userId: V.id,
             analyticsLocation: {
@@ -123,7 +123,7 @@ let Y = r.memo(function (e) {
             },
             icon: c.vdY,
         }),
-        ea = t.features.has(L.oNc.HUB),
+        el = t.features.has(L.oNc.HUB),
         eo = t.id === R._,
         ec = t.id === L.STv,
         ed = (0, k.Z)(t.id),
@@ -158,14 +158,14 @@ let Y = r.memo(function (e) {
               onSelect: Y,
               navId: "guild-header-popout",
               variant: "fixed",
-              onClose: l,
+              onClose: a,
               "aria-label": B.intl.string(B.t.HpQykZ),
               children: (0, i.jsx)(c.sNh, {
                   id: "leave-guild",
                   label: B.intl.string(B.t.J2TBi4),
                   icon: c.PBZ,
                   action: () => {
-                      D.Z.leaveGuild(t.id, !0);
+                      Z.Z.leaveGuild(t.id, !0);
                   },
               }),
           })
@@ -174,7 +174,7 @@ let Y = r.memo(function (e) {
                 onSelect: Y,
                 navId: "favorites-header-popout",
                 variant: "fixed",
-                onClose: l,
+                onClose: a,
                 "aria-label": B.intl.string(B.t.HpQykZ),
                 children: [
                     (0, i.jsxs)(c.kSQ, {
@@ -187,7 +187,7 @@ let Y = r.memo(function (e) {
                                     icon: c.oFk,
                                     action: () =>
                                         (0, c.ZDy)(async () => {
-                                            let { default: e } = await n.e("29608").then(n.bind(n, 610617));
+                                            let { default: e } = await n.e("63270").then(n.bind(n, 610617));
                                             return (t) => (0, i.jsx)(e, Q({}, t));
                                         }),
                                 }),
@@ -213,12 +213,12 @@ let Y = r.memo(function (e) {
                     }),
                 ],
             })
-          : ea
+          : el
             ? (0, i.jsxs)(c.v2r, {
                   onSelect: Y,
                   navId: "guild-header-popout",
                   variant: "fixed",
-                  onClose: l,
+                  onClose: a,
                   "aria-label": B.intl.string(B.t.HpQykZ),
                   children: [
                       (0, i.jsxs)(c.kSQ, {
@@ -229,7 +229,7 @@ let Y = r.memo(function (e) {
                                         label: B.intl.string(B.t["154/bG"]),
                                         icon: ep ? c.Ncx : c.ewm,
                                         action: () => {
-                                            D.Z.open(t.id, (0, I.r)());
+                                            Z.Z.open(t.id, (0, D.r)());
                                         },
                                     })
                                   : null,
@@ -244,7 +244,7 @@ let Y = r.memo(function (e) {
                                           return (n) => (0, i.jsx)(e, q(Q({}, n), { guild: t }));
                                       }),
                               }),
-                              el,
+                              ea,
                           ],
                       }),
                       $
@@ -266,7 +266,7 @@ let Y = r.memo(function (e) {
                     onSelect: Y,
                     navId: "guild-header-popout",
                     variant: "fixed",
-                    onClose: l,
+                    onClose: a,
                     "aria-label": B.intl.string(B.t.HpQykZ),
                     children: [
                         (0, i.jsxs)(c.kSQ, {
@@ -276,7 +276,7 @@ let Y = r.memo(function (e) {
                                     label: B.intl.string(B.t.VJEVbm),
                                     icon: c.Ucv,
                                     action: () => {
-                                        (0, m.f)({
+                                        (0, x.f)({
                                             guildId: t.id,
                                             location: { section: L.jXE.GUILD_HEADER_POPOUT },
                                         });
@@ -326,7 +326,7 @@ let Y = r.memo(function (e) {
                                           label: B.intl.string(B.t["154/bG"]),
                                           icon: ep ? c.Ncx : c.ewm,
                                           action: () => {
-                                              D.Z.open(t.id, (0, I.r)());
+                                              Z.Z.open(t.id, (0, D.r)());
                                           },
                                       })
                                     : null,
@@ -335,7 +335,7 @@ let Y = r.memo(function (e) {
                                           id: "insights",
                                           label: B.intl.string(B.t["0wWfUF"]),
                                           icon: c.IeX,
-                                          action: () => D.Z.open(t.id, L.pNK.ANALYTICS),
+                                          action: () => Z.Z.open(t.id, L.pNK.ANALYTICS),
                                       })
                                     : null,
                                 z
@@ -403,7 +403,7 @@ let Y = r.memo(function (e) {
                                     icon: c.Dkj,
                                     action: () =>
                                         (0, c.ZDy)(async () => {
-                                            let { default: e } = await Promise.all([n.e("15076"), n.e("90564")]).then(
+                                            let { default: e } = await Promise.all([n.e("15076"), n.e("38203")]).then(
                                                 n.bind(n, 907941),
                                             );
                                             return (n) => (0, i.jsx)(e, q(Q({}, n), { guildId: t.id }));
@@ -423,7 +423,7 @@ let Y = r.memo(function (e) {
                         }),
                         (0, i.jsxs)(c.kSQ, {
                             children: [
-                                el,
+                                ea,
                                 (0, i.jsx)(c.S89, {
                                     id: "hide-muted-channels",
                                     label: B.intl.string(B.t.UwOLJC),
@@ -441,7 +441,7 @@ let Y = r.memo(function (e) {
                                           label: B.intl.string(B.t.cswId3),
                                           icon: c.b7C,
                                           color: "danger",
-                                          action: () => (0, v.J)(t.id),
+                                          action: () => (0, P.J)(t.id),
                                       })
                                     : null,
                                 $

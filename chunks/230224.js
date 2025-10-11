@@ -4,7 +4,7 @@ n.d(t, {
     UM: () => A,
     V6: () => y,
     WT: () => b,
-    X7: () => I,
+    X7: () => j,
     jq: () => C,
     mx: () => x,
 }),
@@ -38,17 +38,17 @@ let x = 100,
         var t;
         return (null == (t = e.channel) ? void 0 : t.type) === m.d4z.GROUP_DM;
     },
-    I = (e) => null == e.channel && null == e.guild && null != e.inviter,
-    j = (e) => e.state === m.r2o.ACCEPTED,
+    j = (e) => null == e.channel && null == e.guild && null != e.inviter,
+    I = (e) => e.state === m.r2o.ACCEPTED,
     N = (e) => {
         let { guild_scheduled_event: t } = e;
         return null != t;
     },
     S = (e) =>
         !N(e) &&
-        (!!I(e) ||
+        (!!j(e) ||
             (null != e.inviter &&
-                !j(e) &&
+                !I(e) &&
                 !((e) => {
                     var t;
                     let n = E(e);
@@ -115,7 +115,7 @@ function C(e) {
     } else
         v(t) && null != t.target_user
             ? (s = f.intl.formatToPlainString(f.t.x2L32d, { username: t.target_user.username }))
-            : j(t)
+            : I(t)
               ? (s = f.intl.string(f.t["FDsl+P"]))
               : S(t) &&
                 null != t.inviter &&
@@ -167,7 +167,7 @@ function A(e) {
                                     guild: s,
                                     size: o.Vj.Sizes.SMALL,
                                 }),
-                                (0, r.jsx)(a.X6q, {
+                                (0, r.jsx)(a.Heading, {
                                     color: "header-primary",
                                     variant: "heading-xl/semibold",
                                     children: s.name,

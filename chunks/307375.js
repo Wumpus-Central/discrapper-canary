@@ -2,8 +2,8 @@ n.d(t, { h: () => f });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    s = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    s = n(442837),
     o = n(481060),
     c = n(496675),
     d = n(63063),
@@ -14,8 +14,8 @@ var r = n(951288),
 function f(e) {
     let { activeType: t, onTypePicked: n, guild: l } = e,
         f = l.features.has(g.oNc.COMMUNITY),
-        h = (0, a.e7)([c.Z], () => c.Z.can(g.Plq.ADMINISTRATOR, l)),
-        x = i.useMemo(() => {
+        h = (0, s.e7)([c.Z], () => c.Z.can(g.Plq.ADMINISTRATOR, l)),
+        b = i.useMemo(() => {
             let e = t === u.A.DISCOVERABLE && !h,
                 n = f && (t === u.A.DISCOVERABLE || h);
             return [
@@ -47,7 +47,7 @@ function f(e) {
         }, [t, f, h]);
     return (0, r.jsxs)("div", {
         children: [
-            (0, r.jsx)(o.X6q, {
+            (0, r.jsx)(o.Heading, {
                 color: "header-primary",
                 variant: "text-md/semibold",
                 children: m.intl.string(m.t["N+GnPz"]),
@@ -65,7 +65,7 @@ function f(e) {
                 onItemSelect: n,
                 orientation: "horizontal",
                 className: p.joinOptions,
-                children: x.map((e) => {
+                children: b.map((e) => {
                     let n = e.id === t;
                     return (0, r.jsx)(
                         o.njP.Item,
@@ -85,7 +85,7 @@ function f(e) {
                                 className: p.tooltipContainer,
                                 tooltipClassName: p.tooltip,
                                 children: (0, r.jsxs)("div", {
-                                    className: s()(p.joinOptionContent, {
+                                    className: a()(p.joinOptionContent, {
                                         [p.active]: n,
                                         [p.uninteractive]: !e.enabled,
                                     }),

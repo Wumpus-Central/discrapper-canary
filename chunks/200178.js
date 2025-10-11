@@ -60,7 +60,7 @@ function p() {
                                     onClear: () => t(""),
                                     placeholder: "Filter by words starting with...",
                                 }),
-                                (0, a.jsx)(o.zxk, {
+                                (0, a.jsx)(o.Button, {
                                     variant: "secondary",
                                     size: "sm",
                                     text: "Clear Statistics",

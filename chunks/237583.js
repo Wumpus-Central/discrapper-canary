@@ -75,7 +75,7 @@ class p extends (r = a.PureComponent) {
             f(this, "_ref", void 0),
             f(this, "defaultRenderUser", (e, t, n, r) => {
                 let { onClick: a, size: o, guildId: f } = this.props,
-                    _ = e instanceof c.Z ? e : null != e ? e.user : null;
+                    _ = e instanceof c.default ? e : null != e ? e.user : null;
                 return null == _
                     ? (0, i.jsx)("div", { className: s()(u.emptyUser, t) }, n)
                     : (0, i.jsx)(

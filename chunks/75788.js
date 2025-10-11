@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var a = n(951288),
     s = n(647438),
     r = n(442837),
@@ -7,10 +7,10 @@ var a = n(951288),
     o = n(393869),
     c = n(25990),
     d = n(388032),
-    m = n(780187);
-function x(e) {
+    u = n(780187);
+function m(e) {
     var t;
-    let { isSlideReady: n, error: x, setEmailToken: u, setError: _, onNext: E, onClose: N } = e,
+    let { isSlideReady: n, error: m, setEmailToken: x, setError: _, onNext: E, onClose: N } = e,
         [p, h] = s.useState(!1),
         [A, C] = s.useState(""),
         [f, j] = s.useState(!1),
@@ -26,7 +26,7 @@ function x(e) {
             e.preventDefault(), _(null), h(!0);
             try {
                 let { token: e } = await (0, o.w)(A);
-                u(e), E();
+                x(e), E();
             } catch (e) {
                 _(new l.Z(e).getAnyErrorMessage());
             } finally {
@@ -52,44 +52,44 @@ function x(e) {
         children: [
             (0, a.jsxs)(i.xBx, {
                 separator: !1,
-                className: m.header,
+                className: u.header,
                 children: [
-                    (0, a.jsx)(i.X6q, {
-                        className: m.title,
+                    (0, a.jsx)(i.Heading, {
+                        className: u.title,
                         variant: "heading-xl/extrabold",
                         children: d.intl.string(d.t.jMGc4O),
                     }),
                     (0, a.jsx)(i.Text, {
                         color: "header-secondary",
                         variant: "text-md/normal",
-                        className: m.subtitle,
+                        className: u.subtitle,
                         children: d.intl.string(d.t.SZJow8),
                     }),
                     (0, a.jsx)(i.olH, {
                         onClick: N,
-                        className: m.modalCloseButton,
+                        className: u.modalCloseButton,
                     }),
                 ],
             }),
             (0, a.jsxs)(i.hzk, {
-                className: m.content,
+                className: u.content,
                 children: [
                     (0, a.jsx)(i.oil, {
                         label: d.intl.string(d.t["8mZX6O"]),
-                        error: null != x ? x : null == g || null == (t = g.email_token) ? void 0 : t[0],
+                        error: null != m ? m : null == g || null == (t = g.email_token) ? void 0 : t[0],
                         value: A,
                         onChange: C,
                         inputRef: S,
                     }),
                     (0, a.jsx)(i.Text, {
-                        className: m.help,
+                        className: u.help,
                         variant: "text-sm/normal",
                         children: d.intl.format(d.t.P0sak5, { onResend: O }),
                     }),
                 ],
             }),
             (0, a.jsx)(i.mzw, {
-                children: (0, a.jsx)(i.zxk, {
+                children: (0, a.jsx)(i.Button, {
                     variant: "primary",
                     text: d.intl.string(d.t.PDTjLC),
                     type: "submit",

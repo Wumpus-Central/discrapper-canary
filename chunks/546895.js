@@ -403,7 +403,7 @@ function d() {
                         }),
                     ],
                 }),
-                (0, a.jsx)(s.zxk, {
+                (0, a.jsx)(s.Button, {
                     size: "sm",
                     disabled: null == e,
                     onClick: async () => {

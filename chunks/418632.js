@@ -124,7 +124,7 @@ function b(e) {
         d = i.useCallback(() => {
             c(!0), E(a).then(() => c(!1));
         }, [a]);
-    return (0, r.jsx)(u.zxk, {
+    return (0, r.jsx)(u.Button, {
         size: t,
         variant: n,
         onClick: d,

@@ -52,7 +52,7 @@ function g(e) {
         ? (0, r.jsxs)("div", {
               className: n,
               children: [
-                  (0, r.jsx)(l.X6q, {
+                  (0, r.jsx)(l.Heading, {
                       variant: "heading-sm/semibold",
                       color: "header-primary",
                       children: m.intl.string(m.t.KJEO29),

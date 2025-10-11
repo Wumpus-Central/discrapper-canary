@@ -156,7 +156,7 @@ function x(e) {
             };
             X.push(
                 (0, r.jsx)(
-                    l.zxk,
+                    l.Button,
                     {
                         variant: "primary",
                         size: "md",

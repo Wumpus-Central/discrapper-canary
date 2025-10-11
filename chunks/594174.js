@@ -111,7 +111,7 @@ function R(e) {
         r = O[e.id],
         i = void 0 !== e.id && e.id === m.default.getId();
     if (null == r)
-        void 0 !== (t = (r = new _.Z(e)).premiumType) && i && (r.premiumType = w((0, f.QI)(r), r.premiumType));
+        void 0 !== (t = (r = new _.default(e)).premiumType) && i && (r.premiumType = w((0, f.QI)(r), r.premiumType));
     else if (n) {
         var a;
         let n = C(e);
@@ -192,7 +192,7 @@ function x(e) {
             });
         }),
         null != O[m.default.getId()] &&
-            (O[I] = new _.Z({
+            (O[I] = new _.default({
                 id: I,
                 username: "Wumpus",
                 discriminator: "0",
@@ -220,7 +220,7 @@ function j(e) {
     return !("incomplete" in e);
 }
 function k(e) {
-    if (null != e.users) for (let t of e.users) (t.id in O && j(t)) || (O[t.id] = new _.Z(t));
+    if (null != e.users) for (let t of e.users) (t.id in O && j(t)) || (O[t.id] = new _.default(t));
 }
 function U(e) {
     let { user: t } = e;
@@ -466,7 +466,7 @@ function eb(e) {
 function ey(e) {
     let { users: t } = e;
     t.forEach((e) => {
-        null == O[e.id] && (O[e.id] = new _.Z(e));
+        null == O[e.id] && (O[e.id] = new _.default(e));
     });
 }
 function eO(e) {
@@ -556,8 +556,8 @@ class eM extends g.Z {
     }
     handleLoadCache(e) {
         let t = this.readSnapshot(eM.LATEST_SNAPSHOT_VERSION);
-        if (null != t) for (let e of t.users) O[e.id] = new _.Z(e);
-        if (null != e.users) for (let t of e.users) (t.id in O && j(t)) || (O[t.id] = new _.Z(t));
+        if (null != t) for (let e of t.users) O[e.id] = new _.default(e);
+        if (null != e.users) for (let t of e.users) (t.id in O && j(t)) || (O[t.id] = new _.default(t));
         for (let t of [e.privateChannels, e.initialGuildChannels])
             for (let e of t) {
                 var n;

@@ -19,7 +19,7 @@ function d(e) {
     return (0, r.jsxs)("div", {
         className: c.selectorGroup,
         children: [
-            (0, r.jsx)(o.X6q, {
+            (0, r.jsx)(o.Heading, {
                 variant: "heading-deprecated-12/semibold",
                 className: c.sectionLabel,
                 children: l.intl.string(l.t["1DXFFR"]),

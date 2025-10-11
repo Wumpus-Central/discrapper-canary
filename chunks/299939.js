@@ -15,7 +15,7 @@ var o = n(28664),
 function g(e) {
     let { onApply: t, onSurpriseMe: n, onClose: g, canApply: h } = e,
         x = (0, s.m)(u.PremiumTypes.TIER_2),
-        _ = (0, l.jsx)(r.zxk, {
+        _ = (0, l.jsx)(r.Button, {
             variant: "secondary",
             size: "md",
             onClick: n,
@@ -33,7 +33,7 @@ function g(e) {
                 (0, l.jsx)(o.u, {
                     text: m.intl.string(p.default.cVTpnp),
                     shouldShow: !h,
-                    children: (0, l.jsx)(r.zxk, {
+                    children: (0, l.jsx)(r.Button, {
                         onClick: t,
                         disabled: !h,
                         text: m.intl.string(m.t["1Qm829"]),

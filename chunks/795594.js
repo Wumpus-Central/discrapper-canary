@@ -229,7 +229,7 @@ let ef = (e) => {
                   className: er.tosPrivacy,
                   children: [
                       null != t.terms_of_service_url
-                          ? (0, r.jsxs)(g.eee, {
+                          ? (0, r.jsxs)(g.Anchor, {
                                 onClick: i,
                                 tabIndex: n ? 0 : -1,
                                 className: er.tos,
@@ -254,7 +254,7 @@ let ef = (e) => {
                                     null != t.terms_of_service_url
                                         ? (0, r.jsx)("div", { className: er.divider })
                                         : null,
-                                    (0, r.jsxs)(g.eee, {
+                                    (0, r.jsxs)(g.Anchor, {
                                         onClick: a,
                                         className: er.privacy,
                                         tabIndex: n ? 0 : -1,
@@ -377,7 +377,7 @@ let ef = (e) => {
                                             Q(!X), n(e);
                                         },
                                         children: [
-                                            (0, r.jsx)(g.X6q, {
+                                            (0, r.jsx)(g.Heading, {
                                                 variant: "heading-sm/medium",
                                                 color: "header-primary",
                                                 children: en.intl.string(en.t.xrmhRU),
@@ -440,7 +440,7 @@ let ef = (e) => {
                                       H(!V), t(e);
                                   },
                                   children: [
-                                      (0, r.jsx)(g.X6q, {
+                                      (0, r.jsx)(g.Heading, {
                                           variant: "heading-sm/medium",
                                           color: "header-primary",
                                           children: en.intl.string(en.t.fcYgiY),
@@ -484,7 +484,7 @@ let ef = (e) => {
                         (0, r.jsxs)("div", {
                             className: er.headerTextContainerV2,
                             children: [
-                                (0, r.jsx)(g.X6q, {
+                                (0, r.jsx)(g.Heading, {
                                     variant: "heading-md/semibold",
                                     className: o()(er.headerText, ea.marginBottom4),
                                     children: a.name,
@@ -548,7 +548,7 @@ let ef = (e) => {
                     ? (0, r.jsxs)("div", {
                           className: er.directMessagesSection,
                           children: [
-                              (0, r.jsx)(g.X6q, {
+                              (0, r.jsx)(g.Heading, {
                                   variant: "heading-sm/medium",
                                   color: "header-primary",
                                   className: er.dmSettingsHeader,
@@ -616,7 +616,7 @@ let ef = (e) => {
                               : null,
                         (0, r.jsx)("div", {
                             className: er.deauthorizeButton,
-                            children: (0, r.jsx)(g.zxk, {
+                            children: (0, r.jsx)(g.Button, {
                                 variant: "critical-secondary",
                                 size: "sm",
                                 text: en.intl.string(en.t.xUqheH),

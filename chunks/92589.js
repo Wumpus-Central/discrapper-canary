@@ -2,9 +2,9 @@ n.d(t, { Z: () => g });
 var r = n(951288);
 n(647438);
 var l = n(907331),
-    a = n(481060),
+    i = n(481060),
     s = n(168020),
-    i = n(794324),
+    a = n(794324),
     o = n(859788),
     c = n(388032),
     u = n(449177);
@@ -42,7 +42,7 @@ let g = (e) => {
             0.33,
             null != n,
         ),
-        { bannerUrl: p, bannerAnimatedUrl: f } = (0, i._M)(t),
+        { bannerUrl: f, bannerAnimatedUrl: p } = (0, a._M)(t),
         C = null != t.textColor ? { color: t.textColor } : void 0,
         h = null != t.body && "" !== t.body,
         _ = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
@@ -53,10 +53,10 @@ let g = (e) => {
             (0, r.jsx)("div", {
                 className: u.banner,
                 children:
-                    null != p &&
+                    null != f &&
                     (0, r.jsx)(o.Z, {
-                        bannerStatic: p,
-                        bannerAnimated: f,
+                        bannerStatic: f,
+                        bannerAnimated: p,
                     }),
             }),
             (0, r.jsx)("div", {
@@ -70,7 +70,7 @@ let g = (e) => {
                                   size: "lg",
                               })
                             : null,
-                        (0, r.jsx)(a.X6q, {
+                        (0, r.jsx)(i.Heading, {
                             variant: "heading-xxl/bold",
                             className: u.title,
                             color: "header-primary",
@@ -78,14 +78,14 @@ let g = (e) => {
                             children: t.title,
                         }),
                         h || _
-                            ? (0, r.jsxs)(a.Text, {
+                            ? (0, r.jsxs)(i.Text, {
                                   variant: "text-md/medium",
                                   style: d({}, C),
                                   children: [
                                       h && t.body,
                                       h && _ && " ",
                                       _ &&
-                                          (0, r.jsx)(a.eee, {
+                                          (0, r.jsx)(i.Anchor, {
                                               href: t.helpCenterUrl,
                                               className: u.learnMoreLink,
                                               style: d({}, C),

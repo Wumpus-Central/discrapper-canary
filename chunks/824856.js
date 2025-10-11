@@ -41,7 +41,7 @@ function g(e) {
                                   }),
                               (0, r.jsxs)("div", {
                                   children: [
-                                      (0, r.jsx)(c.X6q, {
+                                      (0, r.jsx)(c.Heading, {
                                           variant: "heading-md/bold",
                                           children: n.summary,
                                       }),

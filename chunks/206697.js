@@ -57,7 +57,7 @@ function v() {
                           className: g.image,
                           alt: "",
                       }),
-                      (0, r.jsx)(l.X6q, {
+                      (0, r.jsx)(l.Heading, {
                           className: g.header,
                           variant: "heading-xl/semibold",
                           color: "text-default",
@@ -82,7 +82,7 @@ function v() {
                               className: g.image,
                               alt: "",
                           }),
-                          (0, r.jsx)(l.X6q, {
+                          (0, r.jsx)(l.Heading, {
                               className: g.header,
                               variant: "heading-xl/semibold",
                               color: "text-default",

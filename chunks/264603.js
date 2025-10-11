@@ -72,7 +72,7 @@ function C() {
             (0, a.jsxs)("div", {
                 className: _.container,
                 children: [
-                    (0, a.jsx)(c.X6q, {
+                    (0, a.jsx)(c.Heading, {
                         variant: "heading-lg/normal",
                         children: "Settings",
                     }),
@@ -89,7 +89,7 @@ function C() {
             (0, a.jsxs)("div", {
                 className: _.container,
                 children: [
-                    (0, a.jsx)(c.X6q, {
+                    (0, a.jsx)(c.Heading, {
                         variant: "heading-lg/normal",
                         children: "Application",
                     }),
@@ -99,7 +99,7 @@ function C() {
                         onChange: i,
                     }),
                     null != o && null != o.id
-                        ? (0, a.jsx)(c.zxk, {
+                        ? (0, a.jsx)(c.Button, {
                               onClick: () => i(o.id),
                               variant: "primary",
                               text: "Use detected game: ".concat(o.name, " (").concat(o.id, ")"),
@@ -129,11 +129,11 @@ function C() {
             (0, a.jsxs)("div", {
                 className: _.container,
                 children: [
-                    (0, a.jsx)(c.X6q, {
+                    (0, a.jsx)(c.Heading, {
                         variant: "heading-lg/normal",
                         children: "Authorization",
                     }),
-                    (0, a.jsx)(c.zxk, {
+                    (0, a.jsx)(c.Button, {
                         disabled: !O.canStartAuthorization,
                         onClick: O.startAuthorization,
                         variant: "primary",
@@ -145,19 +145,19 @@ function C() {
                         children:
                             "This will start whichever authorization flow is available. RPC authorization takes precedence over web.",
                     }),
-                    (0, a.jsx)(c.zxk, {
+                    (0, a.jsx)(c.Button, {
                         disabled: !S.canStartAuthorization,
                         onClick: S.startAuthorization,
                         variant: "secondary",
                         text: "Start In-App Authorization",
                     }),
-                    (0, a.jsx)(c.zxk, {
+                    (0, a.jsx)(c.Button, {
                         disabled: !T.canStartAuthorization,
                         onClick: T.startAuthorization,
                         variant: "secondary",
                         text: "Start Web Authorization",
                     }),
-                    (0, a.jsx)(c.zxk, {
+                    (0, a.jsx)(c.Button, {
                         disabled: !N,
                         onClick: P,
                         variant: "critical-primary",

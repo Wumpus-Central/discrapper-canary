@@ -42,11 +42,11 @@ let S = function (e) {
                 null != t && t.paused && ((t.currentTime = M.current), null == (e = D.current) || e.play());
             }),
         ),
-        A = a.useCallback(() => {
+        H = a.useCallback(() => {
             let e = D.current;
             null != e && (e.pause(), (e.src = ""));
         }, []),
-        H = a.useCallback(() => {
+        A = a.useCallback(() => {
             var e;
             S(!0), null == (e = R.current) || e.delay();
         }, []),
@@ -86,8 +86,8 @@ let S = function (e) {
                   },
             className: i()(I.clipItem, { [I.disabled]: u }),
             onBlur: B,
-            onFocus: H,
-            onMouseOver: H,
+            onFocus: A,
+            onMouseOver: A,
             onMouseLeave: z,
             children: [
                 (0, l.jsx)(k, {
@@ -101,7 +101,7 @@ let S = function (e) {
                         (0, l.jsx)(Z, {
                             clip: o,
                             focused: N,
-                            onFocus: H,
+                            onFocus: A,
                         }),
                         (0, l.jsx)(b.Text, {
                             className: I.clipMetadata,
@@ -133,7 +133,7 @@ let S = function (e) {
                                             (null == r || null == (a = r.parentElement) || null == (l = a.parentElement)
                                                 ? void 0
                                                 : l.parentElement) !== i &&
-                                            H();
+                                            A();
                                     },
                                     "aria-label": E.intl.string(E.t.WTozwc),
                                 }),
@@ -142,7 +142,7 @@ let S = function (e) {
                                         clip: o,
                                         actionsDisabled: u,
                                         exporting: s,
-                                        onBeforeDelete: A,
+                                        onBeforeDelete: H,
                                         onDelete: f,
                                         onEdit: g,
                                         onShare: j,
@@ -258,13 +258,13 @@ function Z(e) {
               },
               children: [
                   c
-                      ? (0, l.jsx)(b.X6q, {
+                      ? (0, l.jsx)(b.Heading, {
                             className: I.clipTitle,
                             color: "text-muted",
                             variant: "heading-lg/medium",
                             children: E.intl.string(E.t["x+/nmJ"]),
                         })
-                      : (0, l.jsx)(b.X6q, {
+                      : (0, l.jsx)(b.Heading, {
                             className: I.clipTitle,
                             color: "text-default",
                             variant: "heading-lg/medium",

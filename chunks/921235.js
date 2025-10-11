@@ -91,7 +91,7 @@ function O(e) {
                       size: 160,
                       className: v.stickerExpanded,
                   }),
-                  (0, i.jsx)(s.zxk, {
+                  (0, i.jsx)(s.Button, {
                       fullWidth: !0,
                       variant: "primary",
                       size: "md",

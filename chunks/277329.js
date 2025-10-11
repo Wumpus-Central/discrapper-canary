@@ -45,7 +45,7 @@ function g() {
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(a.X6q, {
+            (0, r.jsx)(a.Heading, {
                 className: m.heading,
                 variant: "heading-xl/semibold",
                 children: h.intl.string(h.t.URyqtL),

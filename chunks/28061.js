@@ -1,12 +1,13 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => f });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
-    o = n(481060),
-    s = n(518950),
-    l = n(871952);
-function c(e, t, n) {
+    o = n(755721),
+    s = n(481060),
+    l = n(518950),
+    c = n(871952);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +20,7 @@ function c(e, t, n) {
         e
     );
 }
-function u(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,60 +31,60 @@ function u(e) {
                 }),
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                u(e, t, n[t]);
             });
     }
     return e;
 }
-function d(e) {
+function f(e) {
     var t;
-    let { user: n, checked: i, onChange: c, disabled: d } = e,
-        { avatarSrc: f, eventHandlers: _ } = (0, s.Z)({
+    let { user: n, checked: i, onChange: u, disabled: f } = e,
+        { avatarSrc: _, eventHandlers: p } = (0, l.Z)({
             userId: null == n ? void 0 : n.id,
-            size: o.EFr.SIZE_32,
+            size: s.EFr.SIZE_32,
         }),
-        p = null != (t = n.globalName) ? t : n.username;
+        h = null != (t = n.globalName) ? t : n.username;
     return (0, r.jsxs)("div", {
-        className: l.container,
+        className: c.container,
         children: [
             (0, r.jsx)("div", {
-                className: l.userAvatar,
+                className: c.userAvatar,
                 children: (0, r.jsx)(
-                    o.qEK,
-                    u(
+                    s.qEK,
+                    d(
                         {
-                            className: a()({ [l.muted]: d }),
-                            src: f,
-                            "aria-label": p,
-                            size: o.EFr.SIZE_32,
+                            className: a()({ [c.muted]: f }),
+                            src: _,
+                            "aria-label": h,
+                            size: s.EFr.SIZE_32,
                         },
-                        _,
+                        p,
                     ),
                 ),
             }),
             (0, r.jsxs)("div", {
-                className: l.usernameContainer,
+                className: c.usernameContainer,
                 children: [
-                    (0, r.jsx)(o.Text, {
-                        className: l.userName,
-                        color: d ? "text-muted" : "text-default",
+                    (0, r.jsx)(s.Text, {
+                        className: c.userName,
+                        color: f ? "text-muted" : "text-default",
                         variant: "text-md/semibold",
                         children: n.username,
                     }),
-                    (0, r.jsx)(o.Text, {
-                        className: l.userName,
-                        color: d ? "text-muted" : "text-secondary",
+                    (0, r.jsx)(s.Text, {
+                        className: c.userName,
+                        color: f ? "text-muted" : "text-secondary",
                         variant: "text-xs/normal",
-                        children: "@".concat(p),
+                        children: "@".concat(h),
                     }),
                 ],
             }),
             (0, r.jsx)("div", {
-                className: l.checkbox,
-                children: (0, r.jsx)(o.XZJ, {
-                    disabled: d,
-                    checked: i,
-                    onChange: (e) => c(n, e),
+                className: c.checkbox,
+                children: (0, r.jsx)(o.$q, {
+                    disabled: f,
+                    value: i,
+                    onChange: (e, t) => u(n, t),
                 }),
             }),
         ],

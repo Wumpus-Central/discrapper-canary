@@ -27,7 +27,7 @@ function N() {
                         width: 16,
                         height: 16,
                     }),
-                    (0, r.jsx)(a.X6q, {
+                    (0, r.jsx)(a.Heading, {
                         variant: "heading-md/semibold",
                         children: m.intl.string(m.t.cf5lgo),
                     }),

@@ -1,68 +1,51 @@
-n.d(e, { default: () => _ }), n(388685);
+n.d(e, { default: () => s }), n(388685);
 var r = n(951288),
-    i = n(647438),
-    c = n(793030),
-    l = n(755721),
-    o = n(481060),
-    a = n(369994),
-    s = n(781208),
-    u = n(388032),
-    d = n(66532);
-function _(t) {
-    let { guildId: e, transitionState: n, onClose: _ } = t,
-        [b, S] = i.useState([]),
-        f = i.useCallback(() => {
-            (0, a.KK)(e, b), (0, a.C4)(e), _();
-        }, [e, _, b]),
-        h = i.useCallback(
-            (t) => () => {
-                S((e) => (e.includes(t) ? e.filter((e) => e !== t) : [...e, t]));
-            },
+    l = n(647438),
+    i = n(793030),
+    u = n(709867),
+    o = n(369994),
+    c = n(781208),
+    a = n(388032);
+function s(t) {
+    let { guildId: e, transitionState: n, onClose: s } = t,
+        [d, S] = l.useState([]),
+        _ = l.useCallback(() => {
+            (0, o.KK)(e, d), (0, o.C4)(e), s();
+        }, [e, s, d]),
+        p = l.useCallback((t) => {
+            S(t);
+        }, []),
+        I = l.useCallback(() => {
+            open(c.RI);
+        }, []),
+        O = l.useMemo(
+            () =>
+                c.Ud.map((t) => ({
+                    label: String((0, c.$l)(t)),
+                    value: t,
+                })),
             [],
-        ),
-        p = i.useCallback(() => {
-            open(s.RI);
-        }, []);
-    return (0, r.jsx)(c.Modal, {
+        );
+    return (0, r.jsx)(i.Modal, {
         transitionState: n,
-        title: u.intl.string(u.t.uYPGsb),
-        subtitle: u.intl.format(u.t.Hg8Ee3, { onClick: p }),
+        title: a.intl.string(a.t.uYPGsb),
+        subtitle: a.intl.format(a.t.Hg8Ee3, { onClick: I }),
         actions: [
             {
-                text: u.intl.string(u.t["ETE/oK"]),
-                onClick: _,
+                text: a.intl.string(a.t["ETE/oK"]),
+                onClick: s,
                 variant: "secondary",
             },
             {
-                text: u.intl.string(u.t.geKm7u),
-                onClick: f,
+                text: a.intl.string(a.t.geKm7u),
+                onClick: _,
             },
         ],
-        onClose: _,
-        children: (0, r.jsx)(o.Kqy, {
-            gap: 8,
-            className: d.mainCheckboxContainer,
-            children: s.Ud.map((t) =>
-                (0, r.jsxs)(
-                    o.P3F,
-                    {
-                        className: d.checkboxContainer,
-                        onClick: h(t),
-                        children: [
-                            (0, r.jsx)(l.VL, {
-                                className: d.checkbox,
-                                checked: b.includes(t),
-                                isIndicator: !0,
-                            }),
-                            (0, r.jsx)(o.Text, {
-                                variant: "text-sm/normal",
-                                children: (0, s.$l)(t),
-                            }),
-                        ],
-                    },
-                    t,
-                ),
-            ),
+        onClose: s,
+        children: (0, r.jsx)(u.c, {
+            selectedValues: d,
+            onChange: p,
+            options: O,
         }),
     });
 }

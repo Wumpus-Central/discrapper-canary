@@ -1,5 +1,5 @@
 n.d(t, {
-    R: () => j,
+    R: () => I,
     Z: () => S,
 }),
     n(415506);
@@ -22,18 +22,18 @@ var r = n(951288),
     E = n(888592),
     v = n(245335),
     b = n(388032),
-    I = n(620838);
-let j = () =>
+    j = n(620838);
+let I = () =>
         (0, r.jsxs)(i.Fragment, {
             children: [
                 (0, r.jsx)(a.qE, {
                     src: null,
                     size: s.EFr.DEPRECATED_SIZE_100,
-                    className: I.avatar,
+                    className: j.avatar,
                 }),
                 (0, r.jsx)(a.DK, { children: b.intl.string(b.t["3rE1Pz"]) }),
                 (0, r.jsx)(a.Dx, {
-                    className: I.inviteResolvingGuildName,
+                    className: j.inviteResolvingGuildName,
                     children: b.intl.string(b.t.ZTNur6),
                 }),
             ],
@@ -42,22 +42,22 @@ let j = () =>
         let { guild: t, user: n, application: i, compact: l } = e;
         return null != i
             ? (0, r.jsx)(c.Z, {
-                  className: I.appIcon,
+                  className: j.appIcon,
                   game: i,
-                  size: I.appIconSize,
+                  size: j.appIconSize,
               })
             : null != n
               ? (0, r.jsx)(a.qE, {
                     src: null != n ? n.getAvatarURL(void 0, 80) : null,
                     size: s.EFr.SIZE_80,
-                    className: l ? I.compactAvatar : I.avatar,
+                    className: l ? j.compactAvatar : j.avatar,
                 })
               : null != t
                 ? (0, r.jsx)(o.ZP, {
                       mask: o.ZP.Masks.SQUIRCLE,
                       width: 64,
                       height: 64,
-                      className: I.guildIcon,
+                      className: j.guildIcon,
                       children: (0, r.jsx)(a.Vj, {
                           guild: t,
                           size: a.Vj.Sizes.LARGER,
@@ -73,7 +73,7 @@ let j = () =>
             o,
             {
                 invite: c,
-                disableUser: j = !1,
+                disableUser: I = !1,
                 error: S,
                 flatActivityCount: O = !1,
                 isRegister: y = !1,
@@ -84,7 +84,7 @@ let j = () =>
         let T = null != c.guild ? (f.lM(c.guild) ? c.guild : f.Qs(c.guild)) : null,
             Z = null != c.channel ? (0, g.jD)(c.channel) : null,
             P = null != c.target_application ? new h.ZP(c.target_application) : null,
-            R = j || null == c.inviter ? null : new m.Z(c.inviter),
+            R = I || null == c.inviter ? null : new m.default(c.inviter),
             L =
                 !(
                     (null != c.approximate_member_count && c.approximate_member_count > 100) ||
@@ -109,7 +109,7 @@ let j = () =>
                 L &&
                     null == P &&
                     (n = (0, r.jsx)(a.Vj, {
-                        className: I.icon,
+                        className: j.icon,
                         guild: T,
                         size: a.Vj.Sizes.SMALL,
                     })),
@@ -119,11 +119,11 @@ let j = () =>
                     (o = (0, r.jsxs)("div", {
                         children: [
                             (0, r.jsx)(a.DK, {
-                                className: I.appIn,
+                                className: j.appIn,
                                 children: b.intl.string(b.t["3gg9fH"]),
                             }),
                             (0, r.jsxs)("div", {
-                                className: I.guildContainer,
+                                className: j.guildContainer,
                                 children: [
                                     (0, r.jsx)(a.Vj, {
                                         guild: T,
@@ -133,7 +133,7 @@ let j = () =>
                                         tag: "span",
                                         variant: "text-lg/normal",
                                         color: "header-primary",
-                                        className: I.appGuildName,
+                                        className: j.appGuildName,
                                         children: T.name,
                                     }),
                                 ],
@@ -160,14 +160,14 @@ let j = () =>
                     null != S
                         ? null
                         : (0, r.jsx)(a.DK, {
-                              className: I.directInviteSubTitle,
+                              className: j.directInviteSubTitle,
                               children: y
                                   ? b.intl.format(b.t["6r4JiY"], { username: e })
                                   : b.intl.format(b.t.Quj7HR, { username: e }),
                           }));
         }
         return (0, r.jsxs)("div", {
-            className: I.container,
+            className: j.container,
             children: [
                 (0, r.jsx)(N, {
                     application: P,
@@ -186,12 +186,12 @@ let j = () =>
                           children: [
                               (0, r.jsx)(a.DK, { children: w }),
                               (0, r.jsxs)(a.Dx, {
-                                  className: I.title,
+                                  className: j.title,
                                   children: [
                                       null != T
                                           ? (0, r.jsx)(u.Z, {
                                                 guild: T,
-                                                className: I.guildBadge,
+                                                className: j.guildBadge,
                                                 tooltipPosition: "left",
                                             })
                                           : null,
@@ -205,7 +205,7 @@ let j = () =>
                 null != P || D || (null == c || null == (t = c.guild) ? void 0 : t.id) === E.fQ
                     ? null
                     : (0, r.jsx)(a.EJ, {
-                          className: I.activityCount,
+                          className: j.activityCount,
                           online: c.approximate_presence_count,
                           total: c.approximate_member_count,
                           flat: O,

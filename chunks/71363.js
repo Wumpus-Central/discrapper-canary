@@ -70,7 +70,7 @@ let A = (e) => {
                     (0, r.jsxs)("div", {
                         className: o()(T.column, { [T.premiumBrandRefresh]: N }),
                         children: [
-                            (0, r.jsx)(c.X6q, {
+                            (0, r.jsx)(c.Heading, {
                                 variant: "heading-xxl/extrabold",
                                 color: "header-primary",
                                 className: T.heading,
@@ -88,7 +88,7 @@ let A = (e) => {
                                 }),
                                 cardType: y.gM.CARD_CAROUSEL_FIRST_ROW,
                             }),
-                            (0, r.jsx)(c.X6q, {
+                            (0, r.jsx)(c.Heading, {
                                 variant: "heading-xxl/extrabold",
                                 color: "header-primary",
                                 className: T.heading,
@@ -106,7 +106,7 @@ let A = (e) => {
                                 }),
                                 cardType: y.gM.CARD_CAROUSEL_SECOND_ROW,
                             }),
-                            (0, r.jsx)(c.X6q, {
+                            (0, r.jsx)(c.Heading, {
                                 variant: "heading-xxl/extrabold",
                                 color: "header-primary",
                                 className: T.heading,

@@ -1,8 +1,8 @@
 t.d(a, { C: () => x });
 var r = t(951288);
 t(647438);
-var s = t(755721),
-    n = t(481060),
+var n = t(755721),
+    s = t(481060),
     l = t(600164),
     i = t(424071),
     o = t(388032),
@@ -12,7 +12,7 @@ function x(e) {
     let { onContinue: a, onClose: t, title: x, body: u } = e;
     return (0, r.jsxs)(i.Z, {
         children: [
-            (0, r.jsxs)(n.xBx, {
+            (0, r.jsxs)(s.xBx, {
                 direction: l.Z.Direction.VERTICAL,
                 className: c.header,
                 separator: !1,
@@ -24,37 +24,37 @@ function x(e) {
                         height: "127",
                         alt: "",
                     }),
-                    (0, r.jsx)(n.X6q, {
+                    (0, r.jsx)(s.Heading, {
                         className: c.title,
                         variant: "heading-xl/extrabold",
                         children: x,
                     }),
                     null != t &&
-                        (0, r.jsx)(n.olH, {
+                        (0, r.jsx)(s.olH, {
                             className: c.closeButton,
                             onClick: t,
                         }),
                 ],
             }),
-            (0, r.jsx)(n.hzk, {
+            (0, r.jsx)(s.hzk, {
                 className: c.body,
                 paddingFix: !1,
-                children: (0, r.jsx)(n.Text, {
+                children: (0, r.jsx)(s.Text, {
                     tag: "p",
                     variant: "text-md/normal",
                     color: "header-secondary",
                     children: u,
                 }),
             }),
-            (0, r.jsx)(n.mzw, {
+            (0, r.jsx)(s.mzw, {
                 className: c.footer,
-                children: (0, r.jsxs)(s.zx, {
+                children: (0, r.jsxs)(n.zx, {
                     className: c.footerButton,
-                    color: s.zx.Colors.BRAND,
+                    color: n.zx.Colors.BRAND,
                     onClick: a,
                     children: [
                         o.intl.string(o.t["7NqTJi"]),
-                        (0, r.jsx)(n.rgF, {
+                        (0, r.jsx)(s.rgF, {
                             color: "currentColor",
                             className: c.launchIcon,
                             size: "xs",

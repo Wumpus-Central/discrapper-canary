@@ -17,19 +17,19 @@ var r = n(951288),
     _ = n(933557),
     O = n(287746),
     E = n(388032),
-    y = n(10832),
-    v = n(419246);
+    v = n(10832),
+    y = n(419246);
 function I(e) {
     let { channel: t, baseChannelId: n } = e,
         I = (0, _.ZP)(t),
-        S = (0, p.K)(),
-        C = (0, p.V)(),
+        C = (0, p.K)(),
+        S = (0, p.V)(),
         T = (0, l.e7)([u.Z], () => u.Z.isMessageRequest(t.id)),
         N = (0, l.e7)([d.Z], () => d.Z.isSpam(t.id)),
         j = (0, h.V)(t.id, t.getRecipientId()),
         P = i.useCallback(() => {
-            m.Z.closeChannelSidebar(b.uZ), T && S && (0, g.Kh)(t.id), N && C && (0, g.Kh)(t.id);
-        }, [t.id, N, C, T, S]),
+            m.Z.closeChannelSidebar(b.uZ), T && C && (0, g.Kh)(t.id), N && S && (0, g.Kh)(t.id);
+        }, [t.id, N, S, T, C]),
         x = i.useCallback(() => {
             (0, a.showToast)((0, a.createToast)(E.intl.string(E.t.pIQ3h4), a.ToastType.FAILURE));
         }, []),
@@ -62,15 +62,15 @@ function I(e) {
             }),
             N &&
                 (0, r.jsxs)("div", {
-                    className: v.hamBanner,
+                    className: y.hamBanner,
                     children: [
                         (0, r.jsx)(a.Text, {
                             variant: "text-sm/normal",
                             children: E.intl.string(E.t.XVOKgo),
                         }),
                         (0, r.jsx)("div", {
-                            className: v.hamBannerButton,
-                            children: (0, r.jsx)(a.zxk, {
+                            className: y.hamBannerButton,
+                            children: (0, r.jsx)(a.Button, {
                                 size: "sm",
                                 onClick: () => A(t, j),
                                 text: E.intl.string(E.t.koqL3d),
@@ -79,7 +79,7 @@ function I(e) {
                     ],
                 }),
             (0, r.jsx)("div", {
-                className: y.chat,
+                className: v.chat,
                 children: (0, r.jsx)(
                     O.Z,
                     {

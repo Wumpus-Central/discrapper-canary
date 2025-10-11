@@ -22,7 +22,7 @@ function o(e) {
                     variant: "text-md/normal",
                     children: l.intl.string(l.t["Ny/0ur"]),
                 }),
-                (0, a.jsx)(r.zxk, {
+                (0, a.jsx)(r.Button, {
                     variant: "primary",
                     size: "sm",
                     text: l.intl.string(l.t.TYo739),

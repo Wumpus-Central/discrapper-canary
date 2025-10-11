@@ -111,7 +111,7 @@ function z(e) {
             (0, r.jsxs)("div", {
                 className: Z.coachmarkHeaderTextContainer,
                 children: [
-                    (0, r.jsx)(f.X6q, {
+                    (0, r.jsx)(f.Heading, {
                         variant: "heading-lg/extrabold",
                         children: B.intl.string(G.default["23QUzs"]),
                     }),

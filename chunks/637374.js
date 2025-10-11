@@ -131,13 +131,13 @@ class W extends i.PureComponent {
             ),
             Z(this, "renderActions", () =>
                 this.props.isSelfGift
-                    ? (0, r.jsx)(d.zxk, {
+                    ? (0, r.jsx)(d.Button, {
                           variant: "primary",
                           size: "sm",
                           text: G.intl.string(G.t["jcSP+v"]),
                           onClick: this.handleViewInventory,
                       })
-                    : (0, r.jsx)(d.zxk, {
+                    : (0, r.jsx)(d.Button, {
                           variant: "primary",
                           size: "sm",
                           text: G.intl.string(G.t.bUvv1d),
@@ -312,7 +312,7 @@ class K extends i.Component {
         return null != i ? G.intl.format(G.t["3HsdQ0"], { username: M.ZP.getUserTag(i) }) : G.intl.string(G.t.Jdnjjo);
     }
     renderPromotionActions() {
-        return (0, r.jsx)(d.zxk, {
+        return (0, r.jsx)(d.Button, {
             variant: "primary",
             size: "sm",
             text: G.intl.string(G.t["71nuwc"]),

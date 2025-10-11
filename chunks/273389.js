@@ -40,18 +40,18 @@ let c = (e) => {
         (0, r.jsx)(l.mzw, {
             "data-migration-pending": !0,
             direction: a.Z.Direction.HORIZONTAL,
-            children: (0, r.jsxs)(l.hE2, {
+            children: (0, r.jsxs)(l.ButtonGroup, {
                 fullWidth: h && f,
                 children: [
                     h &&
-                        (0, r.jsx)(l.zxk, {
+                        (0, r.jsx)(l.Button, {
                             onClick: m,
                             variant: "secondary",
                             disabled: c,
                             text: o.intl.string(o.t["13/7kZ"]),
                         }),
                     f &&
-                        (0, r.jsx)(l.zxk, {
+                        (0, r.jsx)(l.Button, {
                             onClick: () => {
                                 null != n && u(n);
                             },

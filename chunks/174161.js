@@ -31,7 +31,7 @@ function E(e) {
         ? (0, r.jsx)(o.u, {
               text: t.name,
               overflowOnly: !0,
-              children: (0, r.jsx)(s.X6q, {
+              children: (0, r.jsx)(s.Heading, {
                   className: g.guildName,
                   variant: "heading-md/semibold",
                   color: "header-primary",
@@ -44,7 +44,7 @@ function E(e) {
               children: (0, r.jsx)(o.u, {
                   text: t.name,
                   overflowOnly: !0,
-                  children: (0, r.jsx)(s.X6q, {
+                  children: (0, r.jsx)(s.Heading, {
                       className: g.guildName,
                       variant: "heading-md/semibold",
                       color: "header-primary",

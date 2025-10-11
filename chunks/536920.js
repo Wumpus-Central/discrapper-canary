@@ -12,8 +12,8 @@ var a = n(951288),
     _ = n(626135),
     h = n(837268),
     x = n(371651),
-    v = n(981631),
-    g = n(388032),
+    g = n(981631),
+    v = n(388032),
     p = n(361902);
 function j(e) {
     let { onClose: t, transitionState: n, clientSettingType: j, gameId: C } = e,
@@ -21,14 +21,14 @@ function j(e) {
         [b, f] = r.useState(""),
         [S, w] = r.useState(!1),
         [N, R] = r.useState(!1),
-        [z, Z] = r.useState(!1),
-        [P, A] = r.useState(!1),
-        B = (0, i.e7)([m.Z, u.ZP], () => {
+        [Z, z] = r.useState(!1),
+        [B, H] = r.useState(!1),
+        P = (0, i.e7)([m.Z, u.ZP], () => {
             var e;
             let t = null != C ? C : null == (e = u.ZP.getCurrentGameForAnalytics()) ? void 0 : e.id;
             return null == t ? null : m.Z.getDetectableGame(t);
         }),
-        H = (0, i.e7)([x.default], () => {
+        A = (0, i.e7)([x.default], () => {
             var e;
             let t =
                 null !=
@@ -39,34 +39,34 @@ function j(e) {
         }),
         M = r.useMemo(() => {
             let e = {
-                not_working: g.t.CHXHFR,
-                not_useful: g.t.a95skZ,
-                game_crashes_occurred: g.t.IFZ0SU,
-                poor_performance: g.t.exRczs,
-                too_many_notifications: g.t.XuBFBA,
-                multiple_monitors: g.t.p8Eky8,
-                in_the_way_of_game: g.t.YP7Pio,
-                other: g.t["YP/Ttr"],
+                not_working: v.t.CHXHFR,
+                not_useful: v.t.a95skZ,
+                game_crashes_occurred: v.t.IFZ0SU,
+                poor_performance: v.t.exRczs,
+                too_many_notifications: v.t.XuBFBA,
+                multiple_monitors: v.t.p8Eky8,
+                in_the_way_of_game: v.t.YP7Pio,
+                other: v.t["YP/Ttr"],
             };
             return Object.keys(e).map((t) => ({
-                name: g.intl.string(e[t]),
+                name: v.intl.string(e[t]),
                 value: t,
             }));
         }, []),
         Y = async () => {
             var e, n, a;
             if ("unreported" === y && 0 === b.length) {
-                Z(!0), await (0, s._v)(100), Z(!1), A(!0);
+                z(!0), await (0, s._v)(100), z(!1), H(!0);
                 return;
             }
             w(!0),
-                await _.default.track(v.rMx.OVERLAY_DISABLED_SURVEY, {
+                await _.default.track(g.rMx.OVERLAY_DISABLED_SURVEY, {
                     reason: y,
                     comment: b,
                     client_setting_type: j,
-                    application_id: null == B ? void 0 : B.id,
-                    application_name: null == B ? void 0 : B.name,
-                    most_recent_overlay_render_method: H,
+                    application_id: null == P ? void 0 : P.id,
+                    application_name: null == P ? void 0 : P.name,
+                    most_recent_overlay_render_method: A,
                     hardware_display_count:
                         null !=
                         (a = await (null === d.Z ||
@@ -86,11 +86,11 @@ function j(e) {
         };
     return (
         (0, c.ZP)(() => {
-            _.default.track(v.rMx.OPEN_MODAL, { type: "overlay_disabled_questionnaire_modal" });
+            _.default.track(g.rMx.OPEN_MODAL, { type: "overlay_disabled_questionnaire_modal" });
         }),
         (0, a.jsxs)(o.Y0X, {
             transitionState: n,
-            "aria-label": g.intl.string(g.t.bomhnZ),
+            "aria-label": v.intl.string(v.t.bomhnZ),
             size: o.CgR.DYNAMIC,
             className: p.root,
             parentComponent: "OverlayDisabledSurveyModal",
@@ -100,16 +100,16 @@ function j(e) {
                         (0, a.jsxs)("div", {
                             className: p.header,
                             children: [
-                                (0, a.jsx)(o.X6q, {
+                                (0, a.jsx)(o.Heading, {
                                     variant: "heading-lg/semibold",
                                     color: "header-primary",
-                                    children: g.intl.string(g.t["9JKzxc"]),
+                                    children: v.intl.string(v.t["9JKzxc"]),
                                 }),
                                 (0, a.jsx)(o.Text, {
                                     variant: "text-sm/medium",
                                     color: "text-secondary",
                                     className: p.description,
-                                    children: g.intl.string(g.t["2yjnmZ"]),
+                                    children: v.intl.string(v.t["2yjnmZ"]),
                                 }),
                             ],
                         }),
@@ -126,20 +126,20 @@ function j(e) {
                             (0, a.jsxs)("div", {
                                 children: [
                                     (0, a.jsx)(o.UkV, {
-                                        isShaking: z,
+                                        isShaking: Z,
                                         intensity: 1,
                                         className: p.radioHeader,
                                         children: (0, a.jsx)(o.Text, {
                                             variant: "text-sm/semibold",
-                                            color: P ? "text-danger" : "text-muted",
-                                            children: g.intl.string(g.t.yhUvdX),
+                                            color: B ? "text-danger" : "text-muted",
+                                            children: v.intl.string(v.t.yhUvdX),
                                         }),
                                     }),
                                     (0, a.jsx)(o.FXm, {
                                         value: y,
                                         options: M,
                                         onChange: (e) => {
-                                            k(e), A(!1), Z(!1);
+                                            k(e), H(!1), z(!1);
                                         },
                                     }),
                                 ],
@@ -151,14 +151,14 @@ function j(e) {
                                         variant: "text-sm/semibold",
                                         color: "text-muted",
                                         className: p.commentHeader,
-                                        children: g.intl.string(g.t.LYnrhY),
+                                        children: v.intl.string(v.t.LYnrhY),
                                     }),
                                     (0, a.jsx)(o.Kx8, {
                                         autosize: !0,
                                         value: b,
                                         maxLength: 1000,
                                         showRemainingCharacterCount: !1,
-                                        placeholder: g.intl.string(g.t["gU+bVF"]),
+                                        placeholder: v.intl.string(v.t["gU+bVF"]),
                                         onChange: f,
                                     }),
                                 ],
@@ -169,16 +169,16 @@ function j(e) {
                 (0, a.jsxs)(o.mzw, {
                     className: p.buttons,
                     children: [
-                        (0, a.jsx)(o.zxk, {
+                        (0, a.jsx)(o.Button, {
                             variant: "secondary",
-                            text: g.intl.string(g.t["5WxrcX"]),
+                            text: v.intl.string(v.t["5WxrcX"]),
                             disabled: S,
                             onClick: () => {
                                 t();
                             },
                         }),
                         (0, a.jsx)(o.UkV, {
-                            isShaking: z,
+                            isShaking: Z,
                             intensity: 1,
                             children: (0, a.jsx)(l.zx, {
                                 disabled: S,
@@ -188,7 +188,7 @@ function j(e) {
                                     switch (!0) {
                                         case N:
                                             return l.zx.Colors.GREEN;
-                                        case z:
+                                        case Z:
                                             return l.zx.Colors.PRIMARY;
                                         default:
                                             return l.zx.Colors.BRAND;
@@ -201,7 +201,7 @@ function j(e) {
                                         case S:
                                             return (0, a.jsx)(o.$jN, { type: o.RAz.PULSING_ELLIPSIS });
                                         default:
-                                            return g.intl.string(g.t.geKm7u);
+                                            return v.intl.string(v.t.geKm7u);
                                     }
                                 })(),
                             }),

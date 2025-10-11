@@ -1,125 +1,117 @@
-i.d(t, { default: () => K }), i(539854), i(388685);
-var n = i(951288),
+i.d(t, { default: () => Q }), i(539854), i(388685);
+var s = i(951288),
     l = i(647438),
-    s = i(120356),
-    a = i.n(s),
+    n = i(120356),
+    a = i.n(n),
     r = i(149765),
     o = i(442837),
     c = i(692547),
     d = i(28664),
     u = i(780384),
-    m = i(755721),
-    x = i(481060),
-    p = i(785697),
-    h = i(933557),
-    f = i(313201),
-    b = i(434404),
-    g = i(999382),
-    v = i(84058),
-    N = i(422559),
-    j = i(210887),
-    _ = i(984933),
-    C = i(485386),
-    S = i(430824),
+    x = i(755721),
+    m = i(481060),
+    h = i(785697),
+    g = i(933557),
+    p = i(313201),
+    f = i(434404),
+    v = i(999382),
+    N = i(84058),
+    j = i(422559),
+    b = i(210887),
+    C = i(984933),
+    S = i(485386),
+    E = i(430824),
     I = i(699516),
-    E = i(594174),
-    O = i(626135),
-    w = i(63063),
-    M = i(700785),
-    L = i(245315),
-    y = i(513796),
-    T = i(135899),
-    P = i(981631),
-    R = i(388032),
+    O = i(594174),
+    M = i(626135),
+    L = i(63063),
+    w = i(700785),
+    y = i(245315),
+    _ = i(513796),
+    P = i(135899),
+    T = i(981631),
+    k = i(388032),
     A = i(353302),
-    k = i(289575),
-    D = i(371411),
-    G = i(112847),
-    Z = i(516954),
-    q = i(674889),
-    F = i(162752),
+    G = i(289575),
+    R = i(371411),
+    Z = i(112847),
+    D = i(516954),
+    F = i(674889),
+    U = i(162752),
     B = i(438825);
-let U = (e) => {
+let H = (e) => {
         let {
                 guild: t,
                 onAcceptVerificationLevel: i,
                 onAcceptContentFilter: l,
-                disableContentFilter: s,
+                disableContentFilter: n,
                 disableVerificationLevel: a,
                 headerId: r,
                 theme: c,
             } = e,
-            d = (0, o.e7)([S.Z], () => S.Z.getGuild(t.id), [t.id]),
-            p = null != d && d.verificationLevel > P.sFg.NONE,
-            h = (null == d ? void 0 : d.explicitContentFilter) === P.lxg.ALL_MEMBERS,
-            f = (0, u.wj)(c) ? q : F;
-        return (0, n.jsxs)("div", {
+            d = (0, o.e7)([E.Z], () => E.Z.getGuild(t.id), [t.id]),
+            x = null != d && d.verificationLevel > T.sFg.NONE,
+            h = (null == d ? void 0 : d.explicitContentFilter) === T.lxg.ALL_MEMBERS,
+            g = (0, u.wj)(c) ? F : U;
+        return (0, s.jsxs)("div", {
             className: A.container,
             children: [
-                (0, n.jsxs)("div", {
+                (0, s.jsxs)("div", {
                     className: A.content,
                     children: [
-                        (0, n.jsx)("img", {
+                        (0, s.jsx)("img", {
                             alt: "",
-                            src: f,
+                            src: g,
                             width: 80,
                         }),
-                        (0, n.jsx)(x.X6q, {
+                        (0, s.jsx)(m.Heading, {
                             variant: "heading-xl/semibold",
                             className: A.header,
                             id: r,
-                            children: R.intl.string(R.t.QrjLYm),
+                            children: k.intl.string(k.t.QrjLYm),
                         }),
-                        (0, n.jsx)(x.Text, {
+                        (0, s.jsx)(m.Text, {
                             color: "none",
                             variant: "text-md/normal",
                             className: A.headerCaption,
-                            children: R.intl.string(R.t.i1STws),
+                            children: k.intl.string(k.t.i1STws),
                         }),
                     ],
                 }),
-                (0, n.jsx)("div", {
+                (0, s.jsx)("div", {
                     className: A.form,
-                    children: (0, n.jsx)(x.gNt, {
-                        label: R.intl.string(R.t.x4hbeX),
-                        description: p ? R.intl.string(R.t.k5crqq) : R.intl.string(R.t.fHiGAw),
-                        children: (0, n.jsx)(m.$q, {
-                            type: m.M0.ROW,
+                    children: (0, s.jsx)(m.gNt, {
+                        label: k.intl.string(k.t.x4hbeX),
+                        description: x ? k.intl.string(k.t.k5crqq) : k.intl.string(k.t.fHiGAw),
+                        children: (0, s.jsx)(m.Checkbox, {
                             disabled: a,
-                            value: t.verificationLevel > P.sFg.NONE,
+                            checked: t.verificationLevel > T.sFg.NONE,
                             onChange: i,
-                            children: (0, n.jsx)(x.Text, {
-                                variant: "text-sm/normal",
-                                children: R.intl.string(R.t.x4hbeX),
-                            }),
+                            label: k.intl.string(k.t.x4hbeX),
                         }),
                     }),
                 }),
-                (0, n.jsx)("div", {
+                (0, s.jsx)("div", {
                     className: A.form,
-                    children: (0, n.jsx)(x.gNt, {
-                        label: R.intl.string(R.t.COu4bm),
-                        description: h ? R.intl.string(R.t.qgQLpq) : R.intl.string(R.t.b0MaDQ),
-                        children: (0, n.jsx)(m.$q, {
-                            type: m.M0.ROW,
-                            disabled: s,
-                            value: t.explicitContentFilter === P.lxg.ALL_MEMBERS,
+                    children: (0, s.jsx)(m.gNt, {
+                        label: k.intl.string(k.t.COu4bm),
+                        description: h ? k.intl.string(k.t.qgQLpq) : k.intl.string(k.t.b0MaDQ),
+                        children: (0, s.jsx)(m.Checkbox, {
+                            disabled: n,
+                            checked: t.explicitContentFilter === T.lxg.ALL_MEMBERS,
                             onChange: l,
-                            children: (0, n.jsx)(x.Text, {
-                                variant: "text-sm/normal",
-                                children: R.intl.string(R.t.WAUiMj),
-                            }),
+                            label: k.intl.string(k.t.WAUiMj),
                         }),
                     }),
                 }),
             ],
         });
     },
-    W = (e) => {
+    Y = (e) => {
         let {
             selectableChannels: t,
             onRuleChannelChange: i,
-            ruleChannel: s,
+            ruleChannel: n,
             onPublicUpdatesChannelChange: a,
             publicUpdatesChannel: r,
             headerId: o,
@@ -127,54 +119,54 @@ let U = (e) => {
             guildId: d,
         } = e;
         l.useEffect(() => {
-            (0, L.BF)({
-                fromStep: T.IO.SAFETY_CHECK,
-                toStep: T.IO.BASICS,
+            (0, y.BF)({
+                fromStep: P.IO.SAFETY_CHECK,
+                toStep: P.IO.BASICS,
                 guildId: d,
             });
         }, [d]);
-        let m = (0, u.wj)(c) ? k : D;
-        return (0, n.jsxs)("div", {
+        let x = (0, u.wj)(c) ? G : R;
+        return (0, s.jsxs)("div", {
             className: A.container,
             children: [
-                (0, n.jsxs)("div", {
+                (0, s.jsxs)("div", {
                     className: A.content,
                     children: [
-                        (0, n.jsx)("img", {
+                        (0, s.jsx)("img", {
                             alt: "",
-                            src: m,
+                            src: x,
                             width: 80,
                         }),
-                        (0, n.jsx)(x.X6q, {
+                        (0, s.jsx)(m.Heading, {
                             variant: "heading-xl/semibold",
                             className: A.header,
                             id: o,
-                            children: R.intl.string(R.t.YtXpEh),
+                            children: k.intl.string(k.t.YtXpEh),
                         }),
-                        (0, n.jsx)(x.Text, {
+                        (0, s.jsx)(m.Text, {
                             color: "none",
                             variant: "text-md/normal",
                             className: A.headerCaption,
-                            children: R.intl.string(R.t["J/fYR0"]),
+                            children: k.intl.string(k.t["J/fYR0"]),
                         }),
                     ],
                 }),
-                (0, n.jsx)("div", {
+                (0, s.jsx)("div", {
                     className: A.form,
-                    children: (0, n.jsx)(x.VcW, {
-                        label: R.intl.string(R.t.dYrhCA),
-                        description: R.intl.string(R.t["+Af+V1"]),
+                    children: (0, s.jsx)(m.VcW, {
+                        label: k.intl.string(k.t.dYrhCA),
+                        description: k.intl.string(k.t["+Af+V1"]),
                         options: t,
                         onChange: i,
-                        value: s,
+                        value: n,
                         maxVisibleItems: 4,
                     }),
                 }),
-                (0, n.jsx)("div", {
+                (0, s.jsx)("div", {
                     className: A.form,
-                    children: (0, n.jsx)(x.VcW, {
-                        label: R.intl.string(R.t.vAyDGR),
-                        description: R.intl.string(R.t.ZFeonp),
+                    children: (0, s.jsx)(m.VcW, {
+                        label: k.intl.string(k.t.vAyDGR),
+                        description: k.intl.string(k.t.ZFeonp),
                         options: t,
                         onChange: a,
                         value: r,
@@ -185,73 +177,73 @@ let U = (e) => {
             ],
         });
     },
-    H = (e) => {
+    q = (e) => {
         let {
                 guild: t,
                 policyAccepted: i,
-                everyoneRolePermissionsAccepted: s,
+                everyoneRolePermissionsAccepted: n,
                 onAcceptPolicy: r,
                 onAcceptDefaultNotifications: o,
                 onAcceptEveryoneRolePermissions: c,
-                disableDefaultNotifications: p,
-                disableEveryoneRolePermissions: h,
-                headerId: f,
-                theme: b,
+                disableDefaultNotifications: h,
+                disableEveryoneRolePermissions: g,
+                headerId: p,
+                theme: f,
             } = e,
-            g = (0, u.wj)(b) ? G : Z;
+            v = (0, u.wj)(f) ? Z : D;
         return (
             l.useEffect(() => {
-                (0, L.BF)({
-                    fromStep: T.IO.BASICS,
-                    toStep: T.IO.FINISH,
+                (0, y.BF)({
+                    fromStep: P.IO.BASICS,
+                    toStep: P.IO.FINISH,
                     guildId: t.id,
                 });
             }, [t.id]),
-            (0, n.jsxs)("div", {
+            (0, s.jsxs)("div", {
                 className: A.container,
                 children: [
-                    (0, n.jsxs)("div", {
+                    (0, s.jsxs)("div", {
                         className: A.content,
                         children: [
-                            (0, n.jsx)("img", {
+                            (0, s.jsx)("img", {
                                 alt: "",
-                                src: g,
+                                src: v,
                                 width: 80,
                             }),
-                            (0, n.jsx)(x.X6q, {
+                            (0, s.jsx)(m.Heading, {
                                 variant: "heading-xl/semibold",
                                 className: A.header,
-                                id: f,
-                                children: R.intl.string(R.t["Pj/s/f"]),
+                                id: p,
+                                children: k.intl.string(k.t["Pj/s/f"]),
                             }),
-                            (0, n.jsx)(x.Text, {
+                            (0, s.jsx)(m.Text, {
                                 color: "none",
                                 variant: "text-md/normal",
                                 className: A.headerCaption,
-                                children: R.intl.string(R.t["IL7/np"]),
+                                children: k.intl.string(k.t["IL7/np"]),
                             }),
                         ],
                     }),
-                    (0, n.jsx)("div", {
+                    (0, s.jsx)("div", {
                         className: A.form,
-                        children: (0, n.jsx)(d.u, {
-                            text: p ? R.intl.string(R.t.PHjrpq) : null,
-                            "aria-label": !!p && R.intl.string(R.t.PHjrpq),
-                            children: (0, n.jsx)("div", {
-                                children: (0, n.jsx)(m.$q, {
-                                    type: m.M0.ROW,
-                                    disabled: p,
-                                    value: t.defaultMessageNotifications === P.bL.ONLY_MENTIONS,
-                                    onChange: o,
-                                    className: a()({ [A.disabled]: p }),
-                                    children: (0, n.jsx)(x.Text, {
+                        children: (0, s.jsx)(d.u, {
+                            text: h ? k.intl.string(k.t.PHjrpq) : null,
+                            "aria-label": !!h && k.intl.string(k.t.PHjrpq),
+                            children: (0, s.jsx)("div", {
+                                children: (0, s.jsx)(m.$qM, {
+                                    type: x.M0.ROW,
+                                    disabled: h,
+                                    value: t.defaultMessageNotifications === T.bL.ONLY_MENTIONS,
+                                    onChange: (e, t) => o(t),
+                                    className: a()({ [A.disabled]: h }),
+                                    children: (0, s.jsx)(m.Text, {
                                         variant: "text-sm/normal",
-                                        children: R.intl.format(R.t.K8Eg4O, {
+                                        children: k.intl.format(k.t.K8Eg4O, {
                                             infoHook: () =>
-                                                (0, n.jsx)(d.u, {
-                                                    text: R.intl.string(R.t["3h2WyM"]),
-                                                    "aria-label": R.intl.string(R.t["3h2WyM"]),
-                                                    children: (0, n.jsx)(x.d3s, {
+                                                (0, s.jsx)(d.u, {
+                                                    text: k.intl.string(k.t["3h2WyM"]),
+                                                    "aria-label": k.intl.string(k.t["3h2WyM"]),
+                                                    children: (0, s.jsx)(m.d3s, {
                                                         size: "xs",
                                                         color: "currentColor",
                                                         className: A.icon,
@@ -263,25 +255,24 @@ let U = (e) => {
                             }),
                         }),
                     }),
-                    (0, n.jsx)(d.u, {
-                        text: h ? R.intl.string(R.t.PHjrpq) : null,
-                        "aria-label": !!h && R.intl.string(R.t.PHjrpq),
-                        children: (0, n.jsx)("div", {
+                    (0, s.jsx)(d.u, {
+                        text: g ? k.intl.string(k.t.PHjrpq) : null,
+                        "aria-label": !!g && k.intl.string(k.t.PHjrpq),
+                        children: (0, s.jsx)("div", {
                             className: A.checkboxOption,
-                            children: (0, n.jsx)(m.$q, {
-                                type: m.M0.ROW,
-                                disabled: h,
-                                value: s,
-                                onChange: c,
-                                className: a()({ [A.disabled]: h }),
-                                children: (0, n.jsx)(x.Text, {
+                            children: (0, s.jsx)(m.$qM, {
+                                disabled: g,
+                                value: n,
+                                onChange: (e, t) => c(t),
+                                className: a()({ [A.disabled]: g }),
+                                children: (0, s.jsx)(m.Text, {
                                     variant: "text-sm/normal",
-                                    children: R.intl.format(R.t.v8qCoK, {
+                                    children: k.intl.format(k.t.v8qCoK, {
                                         infoHook: () =>
-                                            (0, n.jsx)(d.u, {
-                                                text: R.intl.string(R.t["+IyaiY"]),
-                                                "aria-label": R.intl.string(R.t["+IyaiY"]),
-                                                children: (0, n.jsx)(x.d3s, {
+                                            (0, s.jsx)(d.u, {
+                                                text: k.intl.string(k.t["+IyaiY"]),
+                                                "aria-label": k.intl.string(k.t["+IyaiY"]),
+                                                children: (0, s.jsx)(m.d3s, {
                                                     size: "xs",
                                                     color: "currentColor",
                                                     className: A.icon,
@@ -292,22 +283,18 @@ let U = (e) => {
                             }),
                         }),
                     }),
-                    (0, n.jsx)("div", {
+                    (0, s.jsx)("div", {
                         className: A.form,
-                        children: (0, n.jsx)(x.gNt, {
-                            label: R.intl.string(R.t["k+b2CQ"]),
-                            description: R.intl.format(R.t["BwbW/f"], {
-                                communityGuidelines: w.Z.getArticleURL(P.BhN.PUBLIC_GUILD_GUILDLINES),
-                                typesOfGuilds: w.Z.getArticleURL(P.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES),
+                        children: (0, s.jsx)(m.gNt, {
+                            label: k.intl.string(k.t["k+b2CQ"]),
+                            description: k.intl.format(k.t["BwbW/f"], {
+                                communityGuidelines: L.Z.getArticleURL(T.BhN.PUBLIC_GUILD_GUILDLINES),
+                                typesOfGuilds: L.Z.getArticleURL(T.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES),
                             }),
-                            children: (0, n.jsx)(m.$q, {
-                                type: m.M0.ROW,
-                                value: i,
+                            children: (0, s.jsx)(m.Checkbox, {
+                                checked: i,
                                 onChange: r,
-                                children: (0, n.jsx)(x.Text, {
-                                    variant: "text-sm/normal",
-                                    children: R.intl.string(R.t["9AG3wM"]),
-                                }),
+                                label: k.intl.string(k.t["9AG3wM"]),
                             }),
                         }),
                     }),
@@ -315,21 +302,21 @@ let U = (e) => {
             })
         );
     };
-function Y(e) {
+function z(e) {
     let { guild: t } = e,
-        { name: i, color: l } = (0, o.e7)([C.Z], () => C.Z.getEveryoneRole(t));
-    return (0, n.jsx)("div", {
+        { name: i, color: l } = (0, o.e7)([S.Z], () => S.Z.getEveryoneRole(t));
+    return (0, s.jsx)("div", {
         className: A.__invalid_role,
-        children: (0, n.jsxs)("span", {
+        children: (0, s.jsxs)("span", {
             className: A.roleRow,
             children: [
-                (0, n.jsx)(x.FhE, {
+                (0, s.jsx)(m.FhE, {
                     className: A.roleDot,
                     color: l.toString(),
                     background: !1,
                     tooltip: !1,
                 }),
-                (0, n.jsx)(x.Text, {
+                (0, s.jsx)(m.Text, {
                     className: A.roleName,
                     variant: "text-sm/medium",
                     color: "interactive-active",
@@ -339,27 +326,27 @@ function Y(e) {
         }),
     });
 }
-function z(e) {
+function W(e) {
     let { enabledPermissions: t, onGetPermisisonName: i } = e;
-    return (0, n.jsxs)("div", {
+    return (0, s.jsxs)("div", {
         className: A.tableContainer,
         children: [
-            (0, n.jsx)(x.Text, {
+            (0, s.jsx)(m.Text, {
                 className: A.tableHeader,
                 variant: "text-xs/semibold",
                 color: "text-muted",
-                children: R.intl.string(R.t.xU8RDg),
+                children: k.intl.string(k.t.xU8RDg),
             }),
-            (0, n.jsx)("div", {
+            (0, s.jsx)("div", {
                 className: A.permissionsTable,
                 children: t.map((e, t) =>
-                    (0, n.jsxs)(
+                    (0, s.jsxs)(
                         "div",
                         {
                             className: A.permissionRow,
                             children: [
-                                (0, n.jsx)("div", { className: A.bulletWarning }),
-                                (0, n.jsx)(x.Text, {
+                                (0, s.jsx)("div", { className: A.bulletWarning }),
+                                (0, s.jsx)(m.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-default",
                                     children: i(e),
@@ -375,28 +362,28 @@ function z(e) {
 }
 function X(e) {
     let { disabledPermissions: t, onGetPermisisonName: i } = e,
-        l = R.intl.string(R.t.Yo5qlp);
+        l = k.intl.string(k.t.Yo5qlp);
     return (
-        t.length === T.$X.length && (l = R.intl.string(R.t.FgMS6u)),
-        (0, n.jsxs)("div", {
+        t.length === P.$X.length && (l = k.intl.string(k.t.FgMS6u)),
+        (0, s.jsxs)("div", {
             className: A.tableContainer,
             children: [
-                (0, n.jsx)(x.Text, {
+                (0, s.jsx)(m.Text, {
                     className: A.tableHeader,
                     variant: "text-xs/semibold",
                     color: "text-muted",
                     children: l,
                 }),
-                (0, n.jsx)("div", {
+                (0, s.jsx)("div", {
                     className: A.permissionsTable,
                     children: t.map((e, t) =>
-                        (0, n.jsxs)(
+                        (0, s.jsxs)(
                             "div",
                             {
                                 className: A.permissionRow,
                                 children: [
-                                    (0, n.jsx)("div", { className: A.bullet }),
-                                    (0, n.jsx)(x.Text, {
+                                    (0, s.jsx)("div", { className: A.bullet }),
+                                    (0, s.jsx)(m.Text, {
                                         variant: "text-sm/normal",
                                         color: "text-muted",
                                         children: i(e),
@@ -415,49 +402,49 @@ function V(e) {
     let { permissions: t } = e,
         i = (e) => {
             switch (e.toString()) {
-                case P.Plq.MENTION_EVERYONE.toString():
-                    return R.intl.string(R.t.yCpsQ0);
-                case P.Plq.CREATE_GUILD_EXPRESSIONS.toString():
-                    return R.intl.string(R.t.vo2LdX);
-                case P.Plq.MANAGE_GUILD_EXPRESSIONS.toString():
-                    return R.intl.string(R.t.cmp2W1);
+                case T.Plq.MENTION_EVERYONE.toString():
+                    return k.intl.string(k.t.yCpsQ0);
+                case T.Plq.CREATE_GUILD_EXPRESSIONS.toString():
+                    return k.intl.string(k.t.vo2LdX);
+                case T.Plq.MANAGE_GUILD_EXPRESSIONS.toString():
+                    return k.intl.string(k.t.cmp2W1);
                 default:
-                    return (0, N.wt)(e);
+                    return (0, j.wt)(e);
             }
         },
-        { enabledPermissions: l, disabledPermissions: s } = t;
-    return (0, n.jsxs)("div", {
+        { enabledPermissions: l, disabledPermissions: n } = t;
+    return (0, s.jsxs)("div", {
         className: A.table,
         children: [
             0 !== l.length
-                ? (0, n.jsx)(z, {
+                ? (0, s.jsx)(W, {
                       enabledPermissions: l,
                       onGetPermisisonName: i,
                   })
                 : null,
-            (0, n.jsx)(X, {
-                disabledPermissions: s,
+            (0, s.jsx)(X, {
+                disabledPermissions: n,
                 onGetPermisisonName: i,
             }),
         ],
     });
 }
-let $ = (e) => {
-        let { guild: t, policyAccepted: i, onAcceptPolicy: s, headerId: a, theme: r } = e,
-            o = (0, u.wj)(r) ? G : Z;
+let K = (e) => {
+        let { guild: t, policyAccepted: i, onAcceptPolicy: n, headerId: a, theme: r } = e,
+            o = (0, u.wj)(r) ? Z : D;
         l.useEffect(() => {
-            (0, L.BF)({
-                fromStep: T.IO.BASICS,
-                toStep: T.IO.FINISH,
+            (0, y.BF)({
+                fromStep: P.IO.BASICS,
+                toStep: P.IO.FINISH,
                 guildId: t.id,
             });
         }, [t.id]);
-        let p = l.useMemo(() => {
+        let x = l.useMemo(() => {
             let e = [],
                 i = [];
             return (
-                T.$X.map((n) => {
-                    M.oz(n, t) ? e.push(n) : i.push(n);
+                P.$X.map((s) => {
+                    w.oz(s, t) ? e.push(s) : i.push(s);
                 }),
                 {
                     enabledPermissions: e,
@@ -465,47 +452,47 @@ let $ = (e) => {
                 }
             );
         }, [t]);
-        return (0, n.jsxs)("div", {
+        return (0, s.jsxs)("div", {
             className: A.container,
             children: [
-                (0, n.jsxs)("div", {
+                (0, s.jsxs)("div", {
                     className: A.content,
                     children: [
-                        (0, n.jsx)("img", {
+                        (0, s.jsx)("img", {
                             alt: "",
                             src: o,
                             width: 80,
                         }),
-                        (0, n.jsx)(x.X6q, {
+                        (0, s.jsx)(m.Heading, {
                             variant: "heading-xl/semibold",
                             className: A.updatedHeader,
                             id: a,
-                            children: R.intl.string(R.t["Pj/s/f"]),
+                            children: k.intl.string(k.t["Pj/s/f"]),
                         }),
                     ],
                 }),
-                (0, n.jsx)("div", {
+                (0, s.jsx)("div", {
                     className: A.updatedForm,
-                    children: (0, n.jsxs)(x.gNt, {
-                        label: R.intl.string(R.t["0q344e"]),
+                    children: (0, s.jsxs)(m.gNt, {
+                        label: k.intl.string(k.t["0q344e"]),
                         children: [
-                            (0, n.jsxs)("div", {
+                            (0, s.jsxs)("div", {
                                 className: A.checklistRow,
                                 children: [
-                                    (0, n.jsx)(x.owK, {
+                                    (0, s.jsx)(m.owK, {
                                         size: "md",
                                         className: A.checklistIcon,
                                         color: c.Z.unsafe_rawColors.GREEN_360.css,
                                         secondaryColor: c.Z.unsafe_rawColors.WHITE_500.css,
                                     }),
-                                    (0, n.jsx)(x.Text, {
+                                    (0, s.jsx)(m.Text, {
                                         variant: "text-md/normal",
-                                        children: R.intl.format(R.t.K8Eg4O, {
+                                        children: k.intl.format(k.t.K8Eg4O, {
                                             infoHook: () =>
-                                                (0, n.jsx)(d.u, {
-                                                    text: R.intl.string(R.t["3h2WyM"]),
-                                                    "aria-label": R.intl.string(R.t["3h2WyM"]),
-                                                    children: (0, n.jsx)(x.d3s, {
+                                                (0, s.jsx)(d.u, {
+                                                    text: k.intl.string(k.t["3h2WyM"]),
+                                                    "aria-label": k.intl.string(k.t["3h2WyM"]),
+                                                    children: (0, s.jsx)(m.d3s, {
                                                         size: "xs",
                                                         color: "currentColor",
                                                         className: A.icon,
@@ -515,218 +502,212 @@ let $ = (e) => {
                                     }),
                                 ],
                             }),
-                            (0, n.jsxs)("div", {
+                            (0, s.jsxs)("div", {
                                 className: A.checklistRow,
                                 children: [
-                                    (0, n.jsx)(x.owK, {
+                                    (0, s.jsx)(m.owK, {
                                         size: "md",
                                         className: A.checklistIcon,
                                         color: c.Z.unsafe_rawColors.GREEN_360.css,
                                         secondaryColor: c.Z.unsafe_rawColors.WHITE_500.css,
                                     }),
-                                    (0, n.jsx)(x.Text, {
+                                    (0, s.jsx)(m.Text, {
                                         variant: "text-md/normal",
-                                        children: R.intl.string(R.t.LfeFFh),
+                                        children: k.intl.string(k.t.LfeFFh),
                                     }),
-                                    (0, n.jsx)(Y, { guild: t }),
+                                    (0, s.jsx)(z, { guild: t }),
                                 ],
                             }),
-                            (0, n.jsx)(V, { permissions: p }),
+                            (0, s.jsx)(V, { permissions: x }),
                         ],
                     }),
                 }),
-                (0, n.jsx)("div", {
+                (0, s.jsx)("div", {
                     className: A.updatedForm,
-                    children: (0, n.jsx)(x.gNt, {
-                        label: R.intl.string(R.t["k+b2CQ"]),
-                        description: R.intl.format(R.t["BwbW/f"], {
-                            communityGuidelines: w.Z.getArticleURL(P.BhN.PUBLIC_GUILD_GUILDLINES),
-                            typesOfGuilds: w.Z.getArticleURL(P.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES),
+                    children: (0, s.jsx)(m.gNt, {
+                        label: k.intl.string(k.t["k+b2CQ"]),
+                        description: k.intl.format(k.t["BwbW/f"], {
+                            communityGuidelines: L.Z.getArticleURL(T.BhN.PUBLIC_GUILD_GUILDLINES),
+                            typesOfGuilds: L.Z.getArticleURL(T.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES),
                         }),
-                        children: (0, n.jsx)(m.$q, {
-                            type: m.M0.ROW,
-                            value: i,
-                            onChange: s,
-                            children: (0, n.jsx)(x.Text, {
-                                className: A.acceptText,
-                                variant: "text-md/medium",
-                                color: "header-primary",
-                                children: R.intl.string(R.t["9AG3wM"]),
-                            }),
+                        children: (0, s.jsx)(m.Checkbox, {
+                            label: k.intl.string(k.t["9AG3wM"]),
+                            checked: i,
+                            onChange: n,
                         }),
                     }),
                 }),
             ],
         });
     },
-    K = (e) => {
+    Q = (e) => {
         var t;
-        let { transitionState: i, onClose: s } = e;
+        let { transitionState: i, onClose: n } = e;
         l.useEffect(() => {
-            O.default.track(P.rMx.OPEN_MODAL, { type: T.tA });
+            M.default.track(T.rMx.OPEN_MODAL, { type: P.tA });
         }, []);
-        let { guild: a } = (0, o.cj)([g.Z], () => g.Z.getProps()),
-            c = (0, o.e7)([j.Z], () => j.Z.theme),
+        let { guild: a } = (0, o.cj)([v.Z], () => v.Z.getProps()),
+            c = (0, o.e7)([b.Z], () => b.Z.theme),
             [d, u] = l.useState(!1),
-            [m, x] = l.useState(!T.$X.some((e) => M.oz(e, a))),
-            [N, S] = l.useState(T.b4),
-            [w, L] = l.useState(T.b4),
-            [k] = l.useState(null == a ? void 0 : a.defaultMessageNotifications),
-            [D] = l.useState(null == a ? void 0 : a.verificationLevel),
-            [G] = l.useState(null == a ? void 0 : a.explicitContentFilter),
-            [Z] = l.useState(m),
-            q = (0, o.e7)([C.Z], () => (null != a ? C.Z.getEveryoneRole(a) : void 0)),
-            F = (0, o.e7)([_.ZP], () => (null != a ? _.ZP.getChannels(a.id) : null)),
-            Y = (0, f.Dt)(),
-            { enabled: z } = (0, p.D2)(null != (t = null == a ? void 0 : a.id) ? t : P.lds);
+            [x, m] = l.useState(!P.$X.some((e) => w.oz(e, a))),
+            [j, E] = l.useState(P.b4),
+            [L, y] = l.useState(P.b4),
+            [G] = l.useState(null == a ? void 0 : a.defaultMessageNotifications),
+            [R] = l.useState(null == a ? void 0 : a.verificationLevel),
+            [Z] = l.useState(null == a ? void 0 : a.explicitContentFilter),
+            [D] = l.useState(x),
+            F = (0, o.e7)([S.Z], () => (null != a ? S.Z.getEveryoneRole(a) : void 0)),
+            U = (0, o.e7)([C.ZP], () => (null != a ? C.ZP.getChannels(a.id) : null)),
+            z = (0, p.Dt)(),
+            { enabled: W } = (0, h.D2)(null != (t = null == a ? void 0 : a.id) ? t : T.lds);
         if (null == a) return null;
         let X = [
             {
-                value: T.b4,
-                label: R.intl.string(R.t.Cla0ra),
+                value: P.b4,
+                label: k.intl.string(k.t.Cla0ra),
             },
         ];
-        F[_.sH].forEach((e) => {
+        U[C.sH].forEach((e) => {
             let { channel: t } = e;
-            t.type === P.d4z.GUILD_TEXT &&
+            t.type === T.d4z.GUILD_TEXT &&
                 X.push({
                     value: t.id,
-                    label: (0, h.F6)(t, E.default, I.Z, !0),
+                    label: (0, g.F6)(t, O.default, I.Z, !0),
                 });
         });
-        let V = D !== P.sFg.NONE,
-            K = G === P.lxg.ALL_MEMBERS,
-            Q = k === P.bL.ONLY_MENTIONS,
+        let V = R !== T.sFg.NONE,
+            Q = Z === T.lxg.ALL_MEMBERS,
+            $ = G === T.bL.ONLY_MENTIONS,
             J = async () => {
                 var e, t;
-                if (null == q || !d) return;
+                if (null == F || !d) return;
                 let i = new Set(a.features);
-                i.add(P.oNc.COMMUNITY);
-                let n = m ? r.Od(q.permissions, T.mu) : q.permissions,
+                i.add(T.oNc.COMMUNITY);
+                let s = x ? r.Od(F.permissions, P.mu) : F.permissions,
                     l =
                         ((e = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var i = null != arguments[t] ? arguments[t] : {},
-                                    n = Object.keys(i);
+                                    s = Object.keys(i);
                                 "function" == typeof Object.getOwnPropertySymbols &&
-                                    (n = n.concat(
+                                    (s = s.concat(
                                         Object.getOwnPropertySymbols(i).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(i, e).enumerable;
                                         }),
                                     )),
-                                    n.forEach(function (t) {
-                                        var n;
-                                        (n = i[t]),
+                                    s.forEach(function (t) {
+                                        var s;
+                                        (s = i[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
-                                                      value: n,
+                                                      value: s,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0,
                                                   })
-                                                : (e[t] = n);
+                                                : (e[t] = s);
                                     });
                             }
                             return e;
-                        })({}, q)),
-                        (t = t = { permissions: n }),
+                        })({}, F)),
+                        (t = t = { permissions: s }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
                             : (function (e, t) {
                                   var i = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
-                                      var n = Object.getOwnPropertySymbols(e);
-                                      i.push.apply(i, n);
+                                      var s = Object.getOwnPropertySymbols(e);
+                                      i.push.apply(i, s);
                                   }
                                   return i;
                               })(Object(t)).forEach(function (i) {
                                   Object.defineProperty(e, i, Object.getOwnPropertyDescriptor(t, i));
                               }),
                         e);
-                n !== q.permissions && (await (0, v.Gf)(a.id, [l])),
-                    b.Z.updateGuild({
+                s !== F.permissions && (await (0, N.Gf)(a.id, [l])),
+                    f.Z.updateGuild({
                         features: i,
-                        rulesChannelId: N,
-                        publicUpdatesChannelId: w,
+                        rulesChannelId: j,
+                        publicUpdatesChannelId: L,
                     }),
-                    await b.Z.saveGuild(a.id, {
+                    await f.Z.saveGuild(a.id, {
                         features: i,
-                        rulesChannelId: N,
+                        rulesChannelId: j,
                         verificationLevel: a.verificationLevel,
                         explicitContentFilter: a.explicitContentFilter,
-                        publicUpdatesChannelId: w,
+                        publicUpdatesChannelId: L,
                         defaultMessageNotifications: a.defaultMessageNotifications,
                     }),
                     setTimeout(() => {
-                        s();
+                        n();
                     }, 0);
             },
-            ee = (0, n.jsx)(U, {
+            ee = (0, s.jsx)(H, {
                 guild: a,
                 disableVerificationLevel: V,
-                disableContentFilter: K,
-                onAcceptVerificationLevel: (e, t) => {
-                    if (!t) return void b.Z.updateGuild({ verificationLevel: D });
-                    t && b.Z.updateGuild({ verificationLevel: P.sFg.LOW });
+                disableContentFilter: Q,
+                onAcceptVerificationLevel: (e) => {
+                    if (!e) return void f.Z.updateGuild({ verificationLevel: R });
+                    e && f.Z.updateGuild({ verificationLevel: T.sFg.LOW });
                 },
-                onAcceptContentFilter: (e, t) => {
-                    if (!t) return void b.Z.updateGuild({ explicitContentFilter: G });
-                    b.Z.updateGuild({ explicitContentFilter: P.lxg.ALL_MEMBERS });
+                onAcceptContentFilter: (e) => {
+                    if (!e) return void f.Z.updateGuild({ explicitContentFilter: Z });
+                    f.Z.updateGuild({ explicitContentFilter: T.lxg.ALL_MEMBERS });
                 },
-                headerId: Y,
+                headerId: z,
                 theme: c,
             }),
-            et = (0, n.jsx)(W, {
+            et = (0, s.jsx)(Y, {
                 selectableChannels: X,
                 onRuleChannelChange: (e) => {
-                    S(e);
+                    E(e);
                 },
                 onPublicUpdatesChannelChange: (e) => {
-                    L(e);
+                    y(e);
                 },
-                ruleChannel: N,
-                publicUpdatesChannel: w,
-                headerId: Y,
+                ruleChannel: j,
+                publicUpdatesChannel: L,
+                headerId: z,
                 theme: c,
                 guildId: a.id,
             }),
-            ei = z
-                ? (0, n.jsx)($, {
+            ei = W
+                ? (0, s.jsx)(K, {
                       guild: a,
                       policyAccepted: d,
-                      onAcceptPolicy: (e, t) => {
-                          if (t) {
+                      onAcceptPolicy: (e) => {
+                          if (e) {
                               u(!0),
-                                  Q || b.Z.updateGuild({ defaultMessageNotifications: P.bL.ONLY_MENTIONS }),
-                                  m || null == q || x(!0);
+                                  $ || f.Z.updateGuild({ defaultMessageNotifications: T.bL.ONLY_MENTIONS }),
+                                  x || null == F || m(!0);
                               return;
                           }
-                          u(!1), Q && b.Z.updateGuild({ defaultMessageNotifications: k }), m && null != q && x(!1);
+                          u(!1), $ && f.Z.updateGuild({ defaultMessageNotifications: G }), x && null != F && m(!1);
                       },
-                      headerId: Y,
+                      headerId: z,
                       theme: c,
                   })
-                : (0, n.jsx)(H, {
+                : (0, s.jsx)(q, {
                       guild: a,
-                      disableDefaultNotifications: Q,
-                      disableEveryoneRolePermissions: Z,
+                      disableDefaultNotifications: $,
+                      disableEveryoneRolePermissions: D,
                       policyAccepted: d,
-                      everyoneRolePermissionsAccepted: m,
-                      onAcceptPolicy: (e, t) => {
-                          if (t) return void u(!0);
+                      everyoneRolePermissionsAccepted: x,
+                      onAcceptPolicy: (e) => {
+                          if (e) return void u(!0);
                           u(!1);
                       },
-                      onAcceptDefaultNotifications: (e, t) => {
-                          if (!t) return void b.Z.updateGuild({ defaultMessageNotifications: k });
-                          b.Z.updateGuild({ defaultMessageNotifications: P.bL.ONLY_MENTIONS });
+                      onAcceptDefaultNotifications: (e) => {
+                          if (!e) return void f.Z.updateGuild({ defaultMessageNotifications: G });
+                          f.Z.updateGuild({ defaultMessageNotifications: T.bL.ONLY_MENTIONS });
                       },
-                      onAcceptEveryoneRolePermissions: (e, t) => {
-                          null != q && (t ? x(!0) : x(!1));
+                      onAcceptEveryoneRolePermissions: (e) => {
+                          null != F && (e ? m(!0) : m(!1));
                       },
-                      headerId: Y,
+                      headerId: z,
                       theme: c,
                   }),
-            en = (0, n.jsx)("img", {
+            es = (0, s.jsx)("img", {
                 alt: "",
                 src: B,
                 className: A.footerImage,
@@ -736,30 +717,30 @@ let $ = (e) => {
                 {
                     modalContent: ee,
                     disableNextStep:
-                        a.explicitContentFilter !== P.lxg.ALL_MEMBERS || a.verificationLevel === P.sFg.NONE,
-                    overviewTitle: R.intl.string(R.t.PpYoSk),
+                        a.explicitContentFilter !== T.lxg.ALL_MEMBERS || a.verificationLevel === T.sFg.NONE,
+                    overviewTitle: k.intl.string(k.t.PpYoSk),
                 },
                 {
                     modalContent: et,
-                    disableNextStep: null == N || null == w,
-                    overviewTitle: R.intl.string(R.t["7MEtIS"]),
+                    disableNextStep: null == j || null == L,
+                    overviewTitle: k.intl.string(k.t["7MEtIS"]),
                 },
                 {
                     modalContent: ei,
                     disableNextStep: !d,
-                    overviewTitle: R.intl.string(R.t.Pj9P8P),
+                    overviewTitle: k.intl.string(k.t.Pj9P8P),
                 },
             ];
-        return (0, n.jsx)(y.Z, {
+        return (0, s.jsx)(_.Z, {
             stepData: el,
-            title: R.intl.string(R.t["6U5XTk"]),
+            title: k.intl.string(k.t["6U5XTk"]),
             transitionState: i,
             onClose: () => {
-                s(), O.default.track(P.rMx.MODAL_DISMISSED, { type: T.tA });
+                n(), M.default.track(T.rMx.MODAL_DISMISSED, { type: P.tA });
             },
-            completeButtonText: R.intl.string(R.t.XGl4bW),
+            completeButtonText: k.intl.string(k.t.XGl4bW),
             onComplete: J,
-            overviewFooter: en,
+            overviewFooter: es,
             sequencerClassName: A.container,
             autoCloseOnComplete: !1,
         });

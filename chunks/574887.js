@@ -56,7 +56,7 @@ function y(e) {
                                               children: t.name,
                                           }),
                                       })
-                                    : (0, l.jsx)(a.eee, {
+                                    : (0, l.jsx)(a.Anchor, {
                                           href: n,
                                           className: b.platformUrlAnchor,
                                           useDefaultUnderlineStyles: !1,

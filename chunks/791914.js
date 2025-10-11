@@ -36,7 +36,7 @@ function v(e) {
                         color: "currentColor",
                         className: O.inboxIcon,
                     }),
-                    (0, r.jsx)(o.X6q, {
+                    (0, r.jsx)(o.Heading, {
                         className: O.inboxTitle,
                         variant: "text-lg/semibold",
                         color: "interactive-active",

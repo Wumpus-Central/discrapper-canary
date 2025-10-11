@@ -20,7 +20,7 @@ function d(e) {
                     alt: s.intl.string(s.t["/UJaIy"]),
                 }),
             }),
-            (0, r.jsx)(l.X6q, {
+            (0, r.jsx)(l.Heading, {
                 variant: "heading-xl/semibold",
                 className: o.header,
                 children: t,

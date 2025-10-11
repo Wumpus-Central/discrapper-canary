@@ -52,7 +52,7 @@ function p(e) {
                     (0, r.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
                         className: _.removeButton,
-                        children: (0, r.jsx)(s.zxk, {
+                        children: (0, r.jsx)(s.Button, {
                             variant: "secondary",
                             size: "sm",
                             text: null != p ? f.intl.string(f.t.jHlJNT) : f.intl.string(f.t.tT9n7O),

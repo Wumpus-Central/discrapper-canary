@@ -88,7 +88,7 @@ let h = () => {
                                     color: "text-secondary",
                                     children: _.intl.string(f.default.RZqaJi),
                                 }),
-                                (0, r.jsx)(a.X6q, {
+                                (0, r.jsx)(a.Heading, {
                                     variant: "heading-xl/semibold",
                                     color: "header-primary",
                                     children: _.intl.string(e === d.dG.CONTENT_AND_SOCIAL ? _.t["+o1pDQ"] : _.t.OAuOHB),

@@ -127,7 +127,7 @@ function S() {
                 align: "center",
                 justify: "center",
                 children: [
-                    (0, r.jsx)(o.X6q, {
+                    (0, r.jsx)(o.Heading, {
                         className: y.header,
                         variant: "heading-md/medium",
                         children: C.intl.string(_.default.h6QNk5),

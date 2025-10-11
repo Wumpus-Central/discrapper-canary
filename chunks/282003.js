@@ -66,8 +66,8 @@ let g = () => {
                 return e.setMonth(e.getMonth() + 1), e;
             }),
             [N, P] = r.useState(null),
-            [I, k] = r.useState(!1),
-            [w, R] = r.useState(!1),
+            [I, w] = r.useState(!1),
+            [k, R] = r.useState(!1),
             [A, Z] = r.useState(!1);
         (0, r.useEffect)(() => {
             (0, l.Y2)();
@@ -184,7 +184,7 @@ let g = () => {
                                     intervalCount: 1,
                                 },
                                 errorOnCancel: I,
-                                errorOnRedeem: w,
+                                errorOnRedeem: k,
                                 setActiveStep: (e) => {
                                     g(e), t.onClose();
                                 },
@@ -214,14 +214,14 @@ let g = () => {
                             }),
                         ),
                 );
-        }, [e, j, y, N, I, w, n, T]);
+        }, [e, j, y, N, I, k, n, T]);
         return (
             (0, r.useEffect)(() => {
                 A && D();
             }, [n, A, D]),
             (0, a.jsxs)(d.$0, {
                 children: [
-                    (0, a.jsx)(i.X6q, {
+                    (0, a.jsx)(i.Heading, {
                         variant: "heading-xl/semibold",
                         children: "Cancellation Flow",
                     }),
@@ -317,7 +317,7 @@ let g = () => {
                                 ],
                             }),
                             (0, a.jsx)(d.BZ, {
-                                children: (0, a.jsx)(i.XZJ, {
+                                children: (0, a.jsx)(i.Checkbox, {
                                     checked: null !== j,
                                     onChange: () => {
                                         if (null === j) return void _(v());
@@ -327,19 +327,19 @@ let g = () => {
                                 }),
                             }),
                             (0, a.jsx)(d.BZ, {
-                                children: (0, a.jsx)(i.XZJ, {
-                                    checked: w,
+                                children: (0, a.jsx)(i.Checkbox, {
+                                    checked: k,
                                     onChange: () => {
-                                        R(!w);
+                                        R(!k);
                                     },
                                     label: "Error on Redeem Offer",
                                 }),
                             }),
                             (0, a.jsx)(d.BZ, {
-                                children: (0, a.jsx)(i.XZJ, {
+                                children: (0, a.jsx)(i.Checkbox, {
                                     checked: I,
                                     onChange: () => {
-                                        k(!I);
+                                        w(!I);
                                     },
                                     label: "Error on Cancel",
                                 }),
@@ -348,7 +348,7 @@ let g = () => {
                     }),
                     (0, a.jsx)(d.E_, {
                         label: "Cancellation Modal",
-                        children: (0, a.jsx)(i.zxk, {
+                        children: (0, a.jsx)(i.Button, {
                             onClick: () => {
                                 Z(!0);
                             },

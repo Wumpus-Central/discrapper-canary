@@ -29,7 +29,7 @@ var r = n(951288),
     P = n(315091),
     w = n(149715),
     D = n(197571);
-function x(e, t, n) {
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ function x(e, t, n) {
         e
     );
 }
-function L(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,7 +53,7 @@ function L(e) {
                 }),
             )),
             r.forEach(function (t) {
-                x(e, t, n[t]);
+                L(e, t, n[t]);
             });
     }
     return e;
@@ -70,7 +70,7 @@ function M(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,7 +81,7 @@ function k(e, t) {
         e
     );
 }
-let j = s.ZP.connectStores([S.Z], () => ({ theme: S.Z.theme }))(u.ubH),
+let k = s.ZP.connectStores([S.Z], () => ({ theme: S.Z.theme }))(u.ubH),
     U = (0, T.isWindows)(),
     G = 18,
     B = "https://www.igdb.com/about";
@@ -128,7 +128,7 @@ function Z(e) {
                         onClick: t,
                         children: N.intl.string(N.t["ETE/oK"]),
                     }),
-                    (0, r.jsx)(u.zxk, {
+                    (0, r.jsx)(u.Button, {
                         variant: "primary",
                         text: N.intl.string(N.t.GTCx0t),
                         disabled: null == a,
@@ -148,8 +148,8 @@ function F(e) {
         })),
         P = (0, p.P6)("UserSettingsGameActivity"),
         D = (0, s.e7)([h.ZP], () => h.ZP.getVisibleGame()),
-        [x, M] = i.useState(!1),
-        j = i.useMemo(
+        [L, M] = i.useState(!1),
+        k = i.useMemo(
             () =>
                 (0, b.le)(T)
                     ? E
@@ -158,7 +158,7 @@ function F(e) {
                     : T.name,
             [T, E],
         ),
-        [B, Z] = i.useState(null != j ? j : "???"),
+        [B, Z] = i.useState(null != k ? k : "???"),
         V = o()(w.flexCenter, {
             [R.game]: !a,
             [R.activeGame]: a,
@@ -189,9 +189,9 @@ function F(e) {
                   return (t) =>
                       (0, r.jsx)(
                           e,
-                          k(L({}, t), {
-                              title: N.intl.formatToPlainString(N.t.PZ4fKS, { platform: j }),
-                              subtitle: N.intl.formatToPlainString(N.t.ZIQbfX, { platform: j }),
+                          j(x({}, t), {
+                              title: N.intl.formatToPlainString(N.t.PZ4fKS, { platform: k }),
+                              subtitle: N.intl.formatToPlainString(N.t.ZIQbfX, { platform: k }),
                               actions: [
                                   {
                                       text: N.intl.string(N.t["ETE/oK"]),
@@ -212,7 +212,7 @@ function F(e) {
             : d.Z.toggleDetection(T);
     }
     function q() {
-        if (x) return;
+        if (L) return;
         let e = null != T.id ? y.Z.getDetectableGame(T.id) : null;
         v.default.track(C.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
             application_id: null == e ? void 0 : e.id,
@@ -226,7 +226,7 @@ function F(e) {
                           var i, a, o;
                           return (0, r.jsx)(
                               t,
-                              k(L({}, n), {
+                              j(x({}, n), {
                                   detectedActivity: {
                                       name: null != (i = T.name) ? i : "",
                                       application_id:
@@ -253,7 +253,7 @@ function F(e) {
                   children: [
                       (0, r.jsx)("div", {
                           className: R.gameName,
-                          children: j,
+                          children: k,
                       }),
                       (0, r.jsx)(u.ua7, {
                           "data-migration-pending": !0,
@@ -261,8 +261,8 @@ function F(e) {
                           children: (e) =>
                               (0, r.jsx)(
                                   g.Z,
-                                  k(
-                                      L(
+                                  j(
+                                      x(
                                           {
                                               className: R.gameVerifiedIcon,
                                               size: G,
@@ -329,7 +329,7 @@ function F(e) {
                 ? (0, r.jsx)(u.ua7, {
                       "data-migration-pending": !0,
                       text: N.intl.string(N.t.Vfw2Ly),
-                      children: (e) => (0, r.jsx)("i", L({ className: R.overlayWarningIcon }, e)),
+                      children: (e) => (0, r.jsx)("i", x({ className: R.overlayWarningIcon }, e)),
                   })
                 : null;
         return (0, r.jsxs)("div", {
@@ -392,7 +392,7 @@ function F(e) {
         });
     }
     function ee() {
-        return x
+        return L
             ? null
             : (0, r.jsx)("div", {
                   className: o()(w.flexCenter, w.noWrap, w.justifyBetween, R.toggleContainer),
@@ -490,7 +490,7 @@ function V() {
 }
 function H(e) {
     let { children: t } = e;
-    return (0, r.jsxs)(j, {
+    return (0, r.jsxs)(k, {
         className: D.marginTop40,
         children: [
             (0, r.jsx)(u.oxh, {
@@ -576,7 +576,7 @@ let Y = (0, I.oH)(function () {
                                 children: (e) =>
                                     (0, r.jsx)(
                                         u.Avr,
-                                        k(L({}, e), {
+                                        j(x({}, e), {
                                             buttonRef: _,
                                             variant: "primary",
                                             textVariant: "text-sm/medium",

@@ -1,4 +1,4 @@
-r.d(t, { default: () => f }), r(388685);
+r.d(t, { default: () => x }), r(388685);
 var s = r(951288),
     i = r(647438),
     n = r(481060),
@@ -40,7 +40,7 @@ let p = (e) => {
                 justify: l.Z.Justify.CENTER,
                 children: (0, s.jsxs)("div", {
                     children: [
-                        (0, s.jsx)(n.X6q, {
+                        (0, s.jsx)(n.Heading, {
                             variant: "heading-sm/semibold",
                             className: u.headerSpacing,
                             children: r,
@@ -56,13 +56,13 @@ let p = (e) => {
         ],
     });
 };
-class x extends i.PureComponent {
+class f extends i.PureComponent {
     render() {
         var e;
         let { transitionState: t, onClose: i } = this.props,
-            { totpSecret: a, code: g, isVerifying: x } = this.state,
-            f = null == (e = o.default.getCurrentUser()) ? void 0 : e.email,
-            m = (0, d.U0)(null != f ? f : "", a),
+            { totpSecret: a, code: g, isVerifying: f } = this.state,
+            x = null == (e = o.default.getCurrentUser()) ? void 0 : e.email,
+            m = (0, d.U0)(null != x ? x : "", a),
             b = (0, s.jsx)("form", {
                 onSubmit: this.handleActivate,
                 children: (0, s.jsxs)(l.Z, {
@@ -82,11 +82,11 @@ class x extends i.PureComponent {
                         (0, s.jsx)(l.Z.Child, {
                             grow: 0,
                             shrink: 0,
-                            children: (0, s.jsx)(n.zxk, {
+                            children: (0, s.jsx)(n.Button, {
                                 variant: "primary",
                                 text: h.intl.string(h.t["/a5+YW"]),
                                 type: "submit",
-                                loading: x,
+                                loading: f,
                             }),
                         }),
                     ],
@@ -105,7 +105,7 @@ class x extends i.PureComponent {
                             grow: 1,
                             shrink: 1,
                             children: [
-                                (0, s.jsx)(n.X6q, {
+                                (0, s.jsx)(n.Heading, {
                                     variant: "heading-lg/semibold",
                                     children: h.intl.string(h.t.cDgKtb),
                                 }),
@@ -145,7 +145,7 @@ class x extends i.PureComponent {
                             children: (0, s.jsxs)("div", {
                                 className: u.topSpacing,
                                 children: [
-                                    (0, s.jsx)(n.X6q, {
+                                    (0, s.jsx)(n.Heading, {
                                         variant: "heading-sm/semibold",
                                         className: u.headerSpacing,
                                         children: h.intl.string(h.t["76IPws"]),
@@ -205,4 +205,4 @@ class x extends i.PureComponent {
             });
     }
 }
-let f = x;
+let x = f;

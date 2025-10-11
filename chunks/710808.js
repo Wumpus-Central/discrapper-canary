@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -146,7 +146,7 @@ function D(e) {
         ),
     );
 }
-function x(e) {
+function L(e) {
     (0, s.h7j)((t) =>
         (0, r.jsx)(
             s.ConfirmModal,
@@ -171,7 +171,7 @@ function x(e) {
         ),
     );
 }
-function L() {
+function x() {
     let [e, t] = i.useState(!1),
         { debugLogging: n, aecDumpEnabled: o } = (0, a.cj)([g.Z], () => ({
             aecDumpSupported: g.Z.isAecDumpSupported(),
@@ -228,7 +228,7 @@ function L() {
                         children: (0, r.jsx)(f.Z.Child, {
                             grow: 0,
                             shrink: 0,
-                            children: (0, r.jsx)(s.zxk, {
+                            children: (0, r.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: T.intl.string(T.t.nJnOHB),
@@ -246,18 +246,18 @@ function L() {
                             label: T.intl.string(T.t["726JHB"]),
                             description: T.intl.string(T.t["/7ak9f"]),
                             checked: n,
-                            onChange: x,
+                            onChange: L,
                         }),
-                        (0, r.jsxs)(s.hE2, {
+                        (0, r.jsxs)(s.ButtonGroup, {
                             size: "sm",
                             children: [
-                                (0, r.jsx)(s.zxk, {
+                                (0, r.jsx)(s.Button, {
                                     variant: "primary",
                                     text: T.intl.string(T.t["3UB9aW"]),
                                     disabled: e,
                                     onClick: A,
                                 }),
-                                (0, r.jsx)(s.zxk, {
+                                (0, r.jsx)(s.Button, {
                                     variant: "primary",
                                     text: T.intl.string(T.t.nuPtYm),
                                     onClick: P,

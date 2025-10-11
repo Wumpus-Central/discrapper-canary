@@ -84,7 +84,7 @@ let O = (e) => {
                   (0, i.jsxs)("div", {
                       className: b.content,
                       children: [
-                          (0, i.jsx)(a.X6q, {
+                          (0, i.jsx)(a.Heading, {
                               variant: "heading-md/semibold",
                               id: O,
                               children: S,
@@ -101,7 +101,7 @@ let O = (e) => {
                                       ? (0, i.jsx)("div", {
                                             "data-button-hoisted-classname-wrapper": !0,
                                             className: b.primaryButton,
-                                            children: (0, i.jsx)(a.zxk, {
+                                            children: (0, i.jsx)(a.Button, {
                                                 variant: "primary",
                                                 text: P,
                                                 onClick: () => {

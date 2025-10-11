@@ -179,7 +179,7 @@ function L(e) {
             });
         },
         J = () =>
-            (0, r.jsx)(u.zxk, {
+            (0, r.jsx)(u.Button, {
                 fullWidth: !0,
                 variant: a ? "primary" : "secondary",
                 onClick: X,
@@ -188,11 +188,11 @@ function L(e) {
         $ = (e) => {
             l()(null != e.paymentGateway, "Expected payment gateway when managed externally");
             let t = (0, O.JE)(e.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT");
-            return (0, r.jsx)(u.eee, {
+            return (0, r.jsx)(u.Anchor, {
                 href: t,
                 useDefaultUnderlineStyles: !1,
                 className: C.externalLink,
-                children: (0, r.jsx)(u.zxk, {
+                children: (0, r.jsx)(u.Button, {
                     variant: "secondary",
                     text: A.intl.string(A.t.SgX7RU),
                     fullWidth: !0,

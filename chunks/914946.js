@@ -10,11 +10,11 @@ n.d(t, {
     aE: () => F,
     bu: () => er,
     kb: () => W,
-    s9: () => q,
+    s9: () => Y,
     t9: () => Q,
     tr: () => et,
     vv: () => $,
-    zM: () => Y,
+    zM: () => q,
     zy: () => K,
 }),
     n(35282),
@@ -45,11 +45,11 @@ var r,
     _ = n(430824),
     O = n(131951),
     E = n(375954),
-    y = n(158776),
-    v = n(594174),
+    v = n(158776),
+    y = n(594174),
     I = n(979651),
-    S = n(70956),
-    C = n(5192),
+    C = n(70956),
+    S = n(5192),
     T = n(226951),
     N = n(591759),
     j = n(996106),
@@ -110,7 +110,7 @@ let L = null != (i = null == (r = N.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT))
     D = new RegExp(
         "^".concat(T.Z.escape("https://"), "(?:[a-z]+\\.)?(").concat(T.Z.escape(R), "|discordapp.com|discord.com)$"),
     ),
-    k = +S.Z.Millis.MINUTE,
+    k = +C.Z.Millis.MINUTE,
     M = {};
 function U(e) {
     return (
@@ -150,7 +150,7 @@ function H(e, t) {
         Promise.all(n).then(() => {
             var n;
             let i =
-                    (!e.isNSFW() || (null == (n = v.default.getCurrentUser()) ? void 0 : n.nsfwAllowed) === !0) && t
+                    (!e.isNSFW() || (null == (n = y.default.getCurrentUser()) ? void 0 : n.nsfwAllowed) === !0) && t
                         ? E.Z.getMessages(e.id).toArray().map(V)
                         : [],
                 l = Object.values(I.Z.getVoiceStatesForChannel(e.id)).map((t) => F(r, e.id, t));
@@ -172,7 +172,7 @@ function H(e, t) {
 function V(e) {
     let t = p.Z.parseToAST(e.content, !0, { channelId: e.channel_id }).map(U),
         n = b.Z.getChannel(e.channel_id),
-        r = null != e.author ? new m.Z(e.author) : void 0,
+        r = null != e.author ? new m.default(e.author) : void 0,
         i = null != e.author ? (0, f.ij)(r, n) : void 0;
     return {
         id: e.id,
@@ -197,10 +197,10 @@ function V(e) {
 }
 function F(e, t, n) {
     let { mute: r, deaf: i, selfMute: l, selfDeaf: a, suppress: o, userId: s } = n,
-        c = v.default.getUser(s);
+        c = y.default.getUser(s);
     if (null == c) throw Error("Invalid user id: ".concat(s));
     return {
-        nick: C.ZP.getName(e, t, c),
+        nick: S.ZP.getName(e, t, c),
         mute: O.Z.isLocalMute(c.id),
         volume: O.Z.getLocalVolume(c.id),
         pan: O.Z.getLocalPan(c.id),
@@ -219,7 +219,7 @@ function z(e, t) {
         type: e,
         user: (0, P.Z)(t),
         presence: {
-            status: y.Z.getStatus(t.id, null),
+            status: v.Z.getStatus(t.id, null),
             activity: null,
         },
     };
@@ -230,11 +230,11 @@ function W(e, t) {
         ? e
         : w(Z({}, e), {
               presence: w(Z({}, e.presence), {
-                  activity: null != (n = y.Z.getApplicationActivity(e.user.id, t)) ? n : null,
+                  activity: null != (n = v.Z.getApplicationActivity(e.user.id, t)) ? n : null,
               }),
           });
 }
-function q(e) {
+function Y(e) {
     let t;
     if (null == e) return !1;
     let n = window.location.origin;
@@ -249,7 +249,7 @@ function q(e) {
         (null == e.match("staging") && !!(D.test(e) && D.test(n)))
     );
 }
-function Y(e, t, n) {
+function q(e, t, n) {
     let r = _.Z.getGuild(e.getGuildId());
     return (null != r ? r.application_id : e.getApplicationId()) === t || n.indexOf(a.x.MESSAGES_READ) > -1;
 }

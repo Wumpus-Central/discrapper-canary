@@ -36,25 +36,25 @@ function w(e) {
     var t, n, w, B;
     let { transitionState: Z, analyticsLocations: M, guildId: G, onClose: Y } = e,
         H = (0, s.e7)([C.default], () => C.default.getCurrentUser()),
-        z = null != (t = v.ZP.useName(H)) ? t : "",
-        F = (0, s.e7)([h.Z, S.Z, _.ZP], () => {
+        F = null != (t = v.ZP.useName(H)) ? t : "",
+        z = (0, s.e7)([h.Z, S.Z, _.ZP], () => {
             var e, t, n;
             return null != G
                 ? null != (t = null != (e = h.Z.getPendingNickname()) ? e : _.ZP.getNick(G, null == H ? void 0 : H.id))
                     ? t
-                    : z
+                    : F
                 : null != (n = S.Z.getPendingGlobalName())
                   ? n
-                  : z;
-        }, [G, H, z]),
+                  : F;
+        }, [G, H, F]),
         U = (0, s.e7)([b.Z], () => b.Z.getGuild(G)),
-        { userDisplayNameStyles: q, guildDisplayNameStyles: K, pendingDisplayNameStyles: X } = (0, x.mD)(H, G),
-        V = void 0 !== X ? X : null != K ? K : q,
-        [W, $] = o.useState(null != (n = null == V ? void 0 : V.fontId) ? n : a.C.DEFAULT),
-        [J, Q] = o.useState(null != (w = null == V ? void 0 : V.effectId) ? w : i.m.SOLID),
+        { userDisplayNameStyles: K, guildDisplayNameStyles: q, pendingDisplayNameStyles: V } = (0, x.mD)(H, G),
+        X = void 0 !== V ? V : null != q ? q : K,
+        [W, $] = o.useState(null != (n = null == X ? void 0 : X.fontId) ? n : a.C.DEFAULT),
+        [J, Q] = o.useState(null != (w = null == X ? void 0 : X.effectId) ? w : i.m.SOLID),
         ee = (0, D.R)(J),
         et = (0, D.R)(i.m.GRADIENT),
-        en = null != (B = null == V ? void 0 : V.colors) ? B : [],
+        en = null != (B = null == X ? void 0 : X.colors) ? B : [],
         [el, eo] = o.useState(en.length > 0 && J !== i.m.GRADIENT ? en[0] : ee.defaultColors[0]),
         [er, ei] = o.useState(en.length > 0 && J === i.m.GRADIENT ? en : et.defaultColors);
     (0, f.Z)(
@@ -69,11 +69,11 @@ function w(e) {
         ec = o.useMemo(() => {
             var e;
             return (
-                W !== (null == V ? void 0 : V.fontId) ||
-                J !== (null == V ? void 0 : V.effectId) ||
-                !(0, c.E)(es, null != (e = null == V ? void 0 : V.colors) ? e : [])
+                W !== (null == X ? void 0 : X.fontId) ||
+                J !== (null == X ? void 0 : X.effectId) ||
+                !(0, c.E)(es, null != (e = null == X ? void 0 : X.colors) ? e : [])
             );
-        }, [V, W, J, es]),
+        }, [X, W, J, es]),
         ed = o.useCallback(() => {
             if (ec) {
                 let e = es;
@@ -133,7 +133,7 @@ function w(e) {
                                               "data-migration-pending": !0,
                                               separator: !1,
                                               className: L.sectionHeader,
-                                              children: (0, l.jsx)(d.X6q, {
+                                              children: (0, l.jsx)(d.Heading, {
                                                   variant: "heading-lg/semibold",
                                                   children: I.intl.string(A.default.ZPMAlZ),
                                               }),
@@ -141,7 +141,7 @@ function w(e) {
                                           (0, l.jsx)(O.Z, {
                                               selectedFontId: W,
                                               setSelectedFontId: $,
-                                              displayName: F,
+                                              displayName: z,
                                               className: L.selectionSubSection,
                                           }),
                                           (0, l.jsx)(k.Z, {
@@ -161,7 +161,7 @@ function w(e) {
                                   (0, l.jsx)(E.Z, {
                                       user: H,
                                       guild: U,
-                                      displayName: F,
+                                      displayName: z,
                                       selectedFontId: W,
                                       selectedEffectId: J,
                                       selectedColors: J === i.m.SOLID && (0, c.E)(es, ee.defaultColors) ? [] : es,

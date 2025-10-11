@@ -30,7 +30,7 @@ class o extends r.Z {
             (this.managed = e.managed),
             (this.roles = e.roles),
             (this.requiredColons = e.requiredColons),
-            (this.user = new i.Z(e.user)),
+            (this.user = new i.default(e.user)),
             (this.animated = e.animated),
             (this.available = e.available);
     }

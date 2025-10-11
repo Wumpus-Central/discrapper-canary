@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(494620),
     f = n(496675),
     h = n(55935),
-    x = n(63063),
-    b = n(434404),
+    b = n(63063),
+    x = n(434404),
     j = n(714939),
     v = n(494831),
     _ = n(981631),
@@ -43,7 +43,7 @@ function E(e) {
     return (0, r.jsxs)("div", {
         ref: u,
         children: [
-            (0, r.jsx)(d.X6q, {
+            (0, r.jsx)(d.Heading, {
                 variant: "heading-lg/semibold",
                 children: y.intl.string(y.t.LPJmLy),
             }),
@@ -91,7 +91,7 @@ function I(e) {
                                 cancelText: y.intl.string(y.t["ETE/oK"]),
                                 confirmText: y.intl.string(y.t["cY+Ooa"]),
                                 onConfirm: () => {
-                                    b.Z.migratePinPermission(t.id);
+                                    x.Z.migratePinPermission(t.id);
                                 },
                             });
                         },
@@ -125,7 +125,7 @@ function S(e) {
                 className: N.helpText,
                 color: "header-secondary",
                 variant: "text-sm/normal",
-                children: y.intl.format(y.t.xkC3YW, { articleURL: x.Z.getArticleURL(_.BhN.PERMISSIONS_TUTORIAL) }),
+                children: y.intl.format(y.t.xkC3YW, { articleURL: b.Z.getArticleURL(_.BhN.PERMISSIONS_TUTORIAL) }),
             }),
             (0, r.jsx)("div", {
                 className: N.rolesTable,
@@ -177,7 +177,7 @@ function T(e) {
                     placeholder: y.intl.string(y.t.Sojqsr),
                     "aria-label": y.intl.string(y.t.Sojqsr),
                 }),
-                (0, r.jsx)(d.zxk, {
+                (0, r.jsx)(d.Button, {
                     size: "sm",
                     onClick: u,
                     loading: a,

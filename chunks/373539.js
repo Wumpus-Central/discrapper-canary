@@ -108,7 +108,7 @@ let b = function (e) {
                 (0, r.jsxs)("div", {
                     className: _.descriptionContainer,
                     children: [
-                        (0, r.jsx)(s.X6q, {
+                        (0, r.jsx)(s.Heading, {
                             variant: "heading-md/semibold",
                             color: "text-primary",
                             children: f.intl.format(f.t["3yZP0N"], { percent: h.discount.amount }),
@@ -124,7 +124,7 @@ let b = function (e) {
                         }),
                     ],
                 }),
-                (0, r.jsx)(s.zxk, {
+                (0, r.jsx)(s.Button, {
                     variant: "expressive",
                     icon: s.SrA,
                     size: "md",

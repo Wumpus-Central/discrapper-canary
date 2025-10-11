@@ -152,7 +152,7 @@ class L extends i.PureComponent {
                     variant: "text-md/normal",
                     children: C.intl.string(C.t.lELyPj),
                 }),
-                (0, r.jsx)(u.zxk, {
+                (0, r.jsx)(u.Button, {
                     variant: "primary",
                     size: "sm",
                     text: C.intl.string(C.t.Q3Qgur),

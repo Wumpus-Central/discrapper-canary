@@ -29,7 +29,7 @@ function b(e) {
                         width: 40,
                         height: 40,
                     }),
-                    (0, i.jsx)(c.X6q, {
+                    (0, i.jsx)(c.Heading, {
                         variant: "heading-xl/bold",
                         color: "header-primary",
                         children: j.intl.format(j.t.Wyk03t, { count: t }),

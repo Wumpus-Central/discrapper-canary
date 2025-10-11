@@ -34,7 +34,7 @@ function m() {
                             variant: "text-md/normal",
                             children: "Reset gift message cooldown",
                         }),
-                        (0, a.jsx)(l.zxk, {
+                        (0, a.jsx)(l.Button, {
                             variant: "primary",
                             size: "sm",
                             text: "Reset",
@@ -51,7 +51,7 @@ function m() {
                             variant: "text-md/normal",
                             children: "Reset badge cooldown",
                         }),
-                        (0, a.jsx)(l.zxk, {
+                        (0, a.jsx)(l.Button, {
                             variant: "primary",
                             size: "sm",
                             text: "Reset",
@@ -68,7 +68,7 @@ function m() {
                             variant: "text-md/normal",
                             children: "Clear last seen friend anniversaries in All Friends",
                         }),
-                        (0, a.jsx)(l.zxk, {
+                        (0, a.jsx)(l.Button, {
                             variant: "primary",
                             size: "sm",
                             text: "Clear",

@@ -220,7 +220,7 @@ function I(e) {
             }),
             (0, r.jsxs)("div", {
                 children: [
-                    (0, r.jsx)(d.X6q, {
+                    (0, r.jsx)(d.Heading, {
                         className: E.__invalid_tutorialHeader,
                         variant: "heading-md/semibold",
                         children: C.intl.string(C.t.vZPktL),
@@ -233,7 +233,7 @@ function I(e) {
                     (0, r.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
                         className: E.tutorialButton,
-                        children: (0, r.jsx)(d.zxk, {
+                        children: (0, r.jsx)(d.Button, {
                             variant: "primary",
                             size: "sm",
                             text: C.intl.string(C.t["+IrDzM"]),

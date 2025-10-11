@@ -1,8 +1,8 @@
 l.d(n, { default: () => f }), l(388685), l(953529);
 var a = l(951288),
-    r = l(647438),
-    i = l(658722),
-    t = l.n(i),
+    i = l(647438),
+    r = l(658722),
+    t = l.n(r),
     s = l(793030),
     o = l(399606),
     c = l(159691),
@@ -29,10 +29,10 @@ function b(e, n, l, a) {
 }
 function f(e) {
     var n, l;
-    let { transitionState: i, onClose: f, resourceChannel: _, guildId: N, onSave: Z, onDelete: y, onIconUpload: G } = e,
-        [S, X] = r.useState(null != (n = null == _ ? void 0 : _.title) ? n : ""),
-        [P, U] = r.useState(null != (l = null == _ ? void 0 : _.description) ? l : ""),
-        [B, R] = r.useState(
+    let { transitionState: r, onClose: f, resourceChannel: _, guildId: N, onSave: Z, onDelete: y, onIconUpload: G } = e,
+        [H, S] = i.useState(null != (n = null == _ ? void 0 : _.title) ? n : ""),
+        [P, U] = i.useState(null != (l = null == _ ? void 0 : _.description) ? l : ""),
+        [B, R] = i.useState(
             (function (e) {
                 if (null == e) return null;
                 let n = x.Z.getChannel(e.channelId);
@@ -48,47 +48,47 @@ function f(e) {
             var e;
             return null == (e = j.Z.getResourceChannel(null == _ ? void 0 : _.channelId)) ? void 0 : e.icon;
         }),
-        q = (0, o.Wu)([j.Z], () => {
+        K = (0, o.Wu)([j.Z], () => {
             var e, n;
             return (null != (n = null == (e = j.Z.getSettings()) ? void 0 : e.resourceChannels) ? n : []).map(
                 (e) => e.channelId,
             );
         }),
-        H = S.length < m.n || null == B,
-        K = r.useCallback(() => {
-            null == B || S.length <= 0 || (Z(b(B, S, P, W)), f());
-        }, [Z, f, S, B, W, P]),
-        L = r.useCallback(() => {
+        L = H.length < m.n || null == B,
+        O = i.useCallback(() => {
+            null == B || H.length <= 0 || (Z(b(B, H, P, W)), f());
+        }, [Z, f, H, B, W, P]),
+        E = i.useCallback(() => {
             null == y || y(), f();
         }, [y, f]),
-        O = r.useCallback(
+        J = i.useCallback(
             (e) => {
                 R(e);
             },
             [R],
         ),
-        E = r.useCallback(
+        T = i.useCallback(
             (e) =>
                 Promise.resolve(
                     p.ZP.getSelectableChannels(N)
-                        .filter((n) => (0, m.k3)(n.channel) && !q.includes(n.channel.id) && t()(e, n.channel.name))
+                        .filter((n) => (0, m.k3)(n.channel) && !K.includes(n.channel.id) && t()(e, n.channel.name))
                         .map((e) => ({
                             value: e.channel.id,
                             label: e.channel.name,
                         })),
                 ),
-            [N, q],
+            [N, K],
         ),
-        J = r.useCallback(
+        w = i.useCallback(
             (e) => {
                 if (null == e || null == N) return null;
                 let n = x.Z.getChannel(e.value),
                     l = g.Z.getGuild(N);
                 if (null == n || null == l) return null;
-                let r = (0, u.KS)(n, l);
-                return null == r
+                let i = (0, u.KS)(n, l);
+                return null == i
                     ? null
-                    : (0, a.jsx)(r, {
+                    : (0, a.jsx)(i, {
                           size: "xs",
                           color: "currentColor",
                           className: I.channelIcon,
@@ -96,13 +96,13 @@ function f(e) {
             },
             [N],
         ),
-        T = r.useCallback(
+        z = i.useCallback(
             (e) => {
-                null != G && null != B && G(b(B, S, P), e);
+                null != G && null != B && G(b(B, H, P), e);
             },
-            [B, S, G, P],
+            [B, H, G, P],
         ),
-        w = r.useCallback(
+        F = i.useCallback(
             () =>
                 null == W || null == B
                     ? null
@@ -112,7 +112,7 @@ function f(e) {
                       }),
             [B, W],
         ),
-        z = r.useMemo(
+        M = i.useMemo(
             () => [
                 {
                     variant: "secondary",
@@ -122,14 +122,14 @@ function f(e) {
                 {
                     variant: "primary",
                     text: k.intl.string(k.t.R3BPHx),
-                    onClick: K,
-                    disabled: H,
+                    onClick: O,
+                    disabled: L,
                 },
             ],
-            [K, H, f],
+            [O, L, f],
         );
     return (0, a.jsxs)(s.IX, {
-        transitionState: i,
+        transitionState: r,
         onClose: f,
         children: [
             (0, a.jsx)("div", {
@@ -143,7 +143,7 @@ function f(e) {
                         className: I.splitGroup,
                         children: (0, a.jsx)("div", {
                             className: I.header,
-                            children: (0, a.jsx)(d.X6q, {
+                            children: (0, a.jsx)(d.Heading, {
                                 variant: "heading-md/semibold",
                                 color: "header-primary",
                                 children: k.intl.string(k.t.iREYFB),
@@ -153,16 +153,16 @@ function f(e) {
                     (0, a.jsxs)("div", {
                         className: I.formGroup,
                         children: [
-                            (0, a.jsxs)(d.X6q, {
+                            (0, a.jsxs)(d.Heading, {
                                 variant: "heading-md/semibold",
                                 color: "header-primary",
                                 children: [k.intl.string(k.t.nPa4Ji), (0, a.jsx)(C.Z, {})],
                             }),
                             (0, a.jsx)(d.VcW, {
                                 value: B,
-                                renderOptionPrefix: J,
-                                options: E,
-                                onChange: O,
+                                renderOptionPrefix: w,
+                                options: T,
+                                onChange: J,
                             }),
                             (0, a.jsx)(d.Text, {
                                 variant: "text-xs/medium",
@@ -175,14 +175,14 @@ function f(e) {
                     (0, a.jsxs)("div", {
                         className: I.formGroup,
                         children: [
-                            (0, a.jsxs)(d.X6q, {
+                            (0, a.jsxs)(d.Heading, {
                                 variant: "heading-md/semibold",
                                 color: "header-primary",
                                 children: [k.intl.string(k.t["lFy+aW"]), (0, a.jsx)(C.Z, {})],
                             }),
                             (0, a.jsx)(d.oil, {
-                                value: S,
-                                onChange: X,
+                                value: H,
+                                onChange: S,
                                 placeholder: k.intl.string(k.t.XKUimJ),
                                 maxLength: m.am,
                             }),
@@ -192,7 +192,7 @@ function f(e) {
                     (0, a.jsxs)("div", {
                         className: I.formGroup,
                         children: [
-                            (0, a.jsx)(d.X6q, {
+                            (0, a.jsx)(d.Heading, {
                                 variant: "heading-md/semibold",
                                 color: "header-primary",
                                 children: k.intl.string(k.t.CnkilJ),
@@ -211,7 +211,7 @@ function f(e) {
                         children: [
                             (0, a.jsxs)("div", {
                                 children: [
-                                    (0, a.jsx)(d.X6q, {
+                                    (0, a.jsx)(d.Heading, {
                                         variant: "heading-md/semibold",
                                         color: "header-primary",
                                         children: k.intl.string(k.t.CB6dys),
@@ -228,13 +228,13 @@ function f(e) {
                                     className: I.uploader,
                                     imageClassName: I.uploadImage,
                                     image: W,
-                                    makeURL: w,
+                                    makeURL: F,
                                     icon: (0, a.jsx)(d.rG2, {
                                         size: "md",
                                         color: "currentColor",
                                     }),
                                     hideSize: !0,
-                                    onChange: T,
+                                    onChange: z,
                                     iconClassName: I.uploadImageIcon,
                                     showIcon: null == W,
                                 }),
@@ -244,13 +244,13 @@ function f(e) {
                 ],
             }),
             (0, a.jsx)(s.Go$, {
-                actions: z,
+                actions: M,
                 leading:
                     null != _
                         ? (0, a.jsx)(d.Avr, {
                               text: k.intl.string(k.t.N86XcH),
                               variant: "critical",
-                              onClick: L,
+                              onClick: E,
                           })
                         : void 0,
             }),

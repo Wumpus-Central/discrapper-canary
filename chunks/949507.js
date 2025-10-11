@@ -19,7 +19,7 @@ var a = n(120356),
 function x(e) {
     let { guild: t, className: n, onClick: a } = e,
         x = (0, s.ZP)(),
-        v = (0, m.Jh)({
+        v = (0, m.dangerouslyConstructGuildRecordFromUntypedObject)({
             name: t.name,
             icon: t.icon,
         }),
@@ -87,7 +87,7 @@ function x(e) {
                                 guild: t,
                                 tooltipColor: l.ua7.Colors.PRIMARY,
                             }),
-                            (0, r.jsx)(l.X6q, {
+                            (0, r.jsx)(l.Heading, {
                                 variant: "heading-md/semibold",
                                 className: _.guildName,
                                 children: t.name,

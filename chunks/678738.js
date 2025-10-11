@@ -44,7 +44,7 @@ function f(e) {
                             (0, r.jsxs)("div", {
                                 className: d.header,
                                 children: [
-                                    (0, r.jsx)(l.X6q, {
+                                    (0, r.jsx)(l.Heading, {
                                         variant: m,
                                         color: g,
                                         className: h,

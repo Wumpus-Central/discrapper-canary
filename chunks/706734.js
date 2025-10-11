@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => x });
 var a = n(951288),
     s = n(481060),
     r = n(488889),
@@ -7,10 +7,10 @@ var a = n(951288),
     o = n(981631),
     c = n(308569),
     d = n(388032),
-    m = n(583073),
-    x = n(780187);
-function u(e) {
-    let { onNext: t, onClose: n, reason: u, onReasonChange: _, freeTextResponse: E, setFreeTextResponse: N } = e,
+    u = n(583073),
+    m = n(780187);
+function x(e) {
+    let { onNext: t, onClose: n, reason: x, onReasonChange: _, freeTextResponse: E, setFreeTextResponse: N } = e,
         p = c.zf.map((e) => ({
             value: e,
             name: (0, r.S)(e),
@@ -21,23 +21,23 @@ function u(e) {
         children: [
             (0, a.jsxs)(s.xBx, {
                 separator: !1,
-                className: x.header,
+                className: m.header,
                 children: [
-                    (0, a.jsx)(s.X6q, {
+                    (0, a.jsx)(s.Heading, {
                         variant: "heading-xl/extrabold",
                         children: d.intl.string(d.t["41NIIi"]),
                     }),
                     (0, a.jsx)(s.olH, {
                         onClick: n,
-                        className: x.modalCloseButton,
+                        className: m.modalCloseButton,
                     }),
                 ],
             }),
             (0, a.jsxs)(s.hzk, {
-                className: m.content,
+                className: u.content,
                 children: [
                     (0, a.jsx)(s.FXm, {
-                        value: u,
+                        value: x,
                         options: p,
                         onChange: (e) => {
                             l.default.track(o.rMx.USER_ACCOUNT_EMAIL_CHANGE_REASON_SELECTED, {
@@ -50,7 +50,7 @@ function u(e) {
                         },
                     }),
                     h &&
-                        u === c.pw.SOMETHING_ELSE &&
+                        x === c.pw.SOMETHING_ELSE &&
                         (0, a.jsx)(s.Kx8, {
                             value: E,
                             maxLength: c.mF,
@@ -60,17 +60,17 @@ function u(e) {
                 ],
             }),
             (0, a.jsx)(s.mzw, {
-                className: x.modalFooter,
-                children: (0, a.jsxs)(s.hE2, {
+                className: m.modalFooter,
+                children: (0, a.jsxs)(s.ButtonGroup, {
                     direction: "horizontal-reverse",
                     children: [
-                        (0, a.jsx)(s.zxk, {
+                        (0, a.jsx)(s.Button, {
                             variant: "primary",
                             text: d.intl.string(d.t["3PatS0"]),
-                            disabled: null == u,
+                            disabled: null == x,
                             onClick: t,
                         }),
-                        (0, a.jsx)(s.zxk, {
+                        (0, a.jsx)(s.Button, {
                             variant: "secondary",
                             text: d.intl.string(d.t["ETE/oK"]),
                             onClick: n,

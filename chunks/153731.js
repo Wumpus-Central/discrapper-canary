@@ -21,8 +21,8 @@ var r = n(951288),
     P = n(775194),
     j = n(499848),
     C = n(724392),
-    Z = n(442580),
-    x = n(770800),
+    x = n(442580),
+    Z = n(770800),
     R = n(981631),
     S = n(65154),
     F = n(388032),
@@ -44,7 +44,7 @@ function I(e, t, n, a, i) {
             o.push({
                 section: (0, v.J$)(e, R._s_.TRANSPORT, n),
                 label: F.intl.string(F.t.wU9INz),
-                element: x.Z,
+                element: Z.Z,
                 elementProps: {
                     context: e,
                     index: n,
@@ -178,7 +178,7 @@ function k() {
                     p.push({
                         section: R._s_.SCREENSHARE,
                         label: F.intl.string(F.t["gWbr/f"]),
-                        element: Z.Z,
+                        element: x.Z,
                         elementProps: { screenshare: i },
                     })),
                 null != l &&
@@ -197,7 +197,7 @@ function k() {
                                   section: u.ID.CUSTOM,
                                   label: "Channel Name",
                                   element: () =>
-                                      (0, r.jsx)(s.X6q, {
+                                      (0, r.jsx)(s.Heading, {
                                           className: N.channelName,
                                           variant: "heading-lg/semibold",
                                           children: o.name,
@@ -209,7 +209,7 @@ function k() {
                         section: u.ID.CUSTOM,
                         label: "Connection State",
                         element: () =>
-                            (0, r.jsx)(s.X6q, {
+                            (0, r.jsx)(s.Heading, {
                                 className: N.channelName,
                                 variant: "heading-md/normal",
                                 children: c === R.hes.RTC_CONNECTED ? "Connected" : "Disconnected",

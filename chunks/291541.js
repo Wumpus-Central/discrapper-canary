@@ -124,7 +124,7 @@ let m = {
                                     : void 0,
                             }),
                         ),
-                        (0, r.jsx)(a.zxk, {
+                        (0, r.jsx)(a.Button, {
                             variant: "primary",
                             text: "Toggle Popover",
                             buttonRef: E,
@@ -271,7 +271,7 @@ let m = {
                                     : void 0,
                             }),
                         ),
-                        (0, r.jsx)(a.zxk, {
+                        (0, r.jsx)(a.Button, {
                             variant: "primary",
                             text: "Show Video Popover",
                             buttonRef: c,
@@ -350,7 +350,7 @@ let m = {
                             },
                             onStepChange: () => {},
                         }),
-                        (0, r.jsx)(a.zxk, {
+                        (0, r.jsx)(a.Button, {
                             variant: "primary",
                             text: "Show Multi-Step",
                             buttonRef: u,

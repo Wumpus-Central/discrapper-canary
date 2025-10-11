@@ -119,15 +119,15 @@ function M(e) {
         l = (0, s.e7)([y.Z], () => (null != t ? y.Z.getGuild(t.getGuildId()) : null), [t]),
         p = null != l && E.default.extractTimestamp(l.id) < Date.now() - P._8R,
         v = (0, s.e7)([C.default], () => (null == l ? void 0 : l.ownerId) === C.default.getId(), [l]),
-        { canInvite: M, canManageGuild: R, canMessage: k } = (0, f.TE)(t, l),
-        L = (0, s.e7)([_.default], () => {
+        { canInvite: M, canManageGuild: R, canMessage: L } = (0, f.TE)(t, l),
+        D = (0, s.e7)([_.default], () => {
             var e, t;
             return (
                 (null == (e = _.default.getCurrentUser()) ? void 0 : e.desktop) === !0 ||
                 (null == (t = _.default.getCurrentUser()) ? void 0 : t.mobile) === !0
             );
         }),
-        { guildPopulated: D, guildMessaged: U, guildPersonalized: B } = (0, f.h_)(l),
+        { guildPopulated: k, guildMessaged: U, guildPersonalized: B } = (0, f.h_)(l),
         {
             handleInvite: H,
             handleMessage: V,
@@ -142,15 +142,18 @@ function M(e) {
                     }),
                         null != e &&
                             (0, u.ZDy)(async () => {
-                                let { default: t } = await Promise.all([n.e("7654"), n.e("49049"), n.e("98953")]).then(
-                                    n.bind(n, 560114),
-                                );
+                                let { default: t } = await Promise.all([
+                                    n.e("74318"),
+                                    n.e("49049"),
+                                    n.e("7654"),
+                                    n.e("98953"),
+                                ]).then(n.bind(n, 560114));
                                 return (n) =>
                                     (0, i.jsx)(
                                         t,
                                         A(N({}, n), {
                                             guild: e,
-                                            source: P.t4x.CHANNEL_WELCOME,
+                                            source: P.InstantInviteSources.CHANNEL_WELCOME,
                                             analyticsLocation: { section: P.jXE.CHANNEL_WELCOME_CTA },
                                         }),
                                     );
@@ -210,8 +213,8 @@ function M(e) {
                 }, [e]),
             };
         })(l),
-        W = !(L || D || U || B),
-        { titleAnimatedStyle: q, opacities: Y } = (function (e) {
+        W = !(D || k || U || B),
+        { titleAnimatedStyle: Y, opacities: K } = (function (e) {
             let t = (0, d.Z)(() => new o.Z.Value(0)),
                 n = (0, d.Z)(() => new o.Z.Value(0)),
                 i = (0, d.Z)(() => [new o.Z.Value(0), new o.Z.Value(0), new o.Z.Value(0), new o.Z.Value(0)]);
@@ -266,8 +269,8 @@ function M(e) {
                 }
             );
         })(W),
-        [K, X] = r.useState([]),
-        J = K.length > 0;
+        [q, X] = r.useState([]),
+        J = q.length > 0;
     if (
         (r.useEffect(() => {
             (async () => {
@@ -289,11 +292,11 @@ function M(e) {
                     o.Z.div,
                     {
                         className: T.cardWrapper,
-                        style: W ? { opacity: Y[Q.length] } : {},
+                        style: W ? { opacity: K[Q.length] } : {},
                         children: (0, i.jsx)(w, {
                             iconUrl: u.YvY,
                             header: Z.intl.string(Z.t.q9n0TU),
-                            completed: D,
+                            completed: k,
                             onClick: H,
                         }),
                     },
@@ -306,7 +309,7 @@ function M(e) {
                     o.Z.div,
                     {
                         className: T.cardWrapper,
-                        style: W ? { opacity: Y[Q.length] } : {},
+                        style: W ? { opacity: K[Q.length] } : {},
                         children: (0, i.jsx)(w, {
                             iconUrl: u.$_T,
                             header: Z.intl.string(Z.t.c5kxPj),
@@ -317,13 +320,13 @@ function M(e) {
                     "customize",
                 ),
             ),
-        k &&
+        L &&
             Q.push(
                 (0, i.jsx)(
                     o.Z.div,
                     {
                         className: T.cardWrapper,
-                        style: W ? { opacity: Y[Q.length] } : {},
+                        style: W ? { opacity: K[Q.length] } : {},
                         children: (0, i.jsx)(w, {
                             iconUrl: u.qMX,
                             header: Z.intl.string(Z.t["SoP7+v"]),
@@ -340,11 +343,11 @@ function M(e) {
                     o.Z.div,
                     {
                         className: T.cardWrapper,
-                        style: W ? { opacity: Y[Q.length] } : {},
+                        style: W ? { opacity: K[Q.length] } : {},
                         children: (0, i.jsx)(w, {
                             iconUrl: u.yIb,
                             header: Z.intl.string(Z.t.pGVNIy),
-                            completed: L,
+                            completed: D,
                             onClick: G,
                         }),
                     },
@@ -356,7 +359,7 @@ function M(e) {
                 o.Z.div,
                 {
                     className: T.cardWrapper,
-                    style: W ? { opacity: Y[Q.length] } : {},
+                    style: W ? { opacity: K[Q.length] } : {},
                     children: (0, i.jsx)(w, {
                         iconUrl: u.Tg$,
                         header: Z.intl.string(Z.t.IhHDEB),
@@ -381,9 +384,9 @@ function M(e) {
                 className: T.inner,
                 children: [
                     (0, i.jsxs)(o.Z.div, {
-                        style: q,
+                        style: Y,
                         children: [
-                            (0, i.jsx)(u.X6q, {
+                            (0, i.jsx)(u.Heading, {
                                 className: T.titleName,
                                 variant: "heading-xxl/medium",
                                 children: Z.intl.format(Z.t.rkHVKS, { guildName: l.name }),

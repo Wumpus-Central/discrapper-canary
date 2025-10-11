@@ -42,7 +42,7 @@ function A(e) {
               textOptions: { textOverride: T.intl.string(T.t.pj0XBA) },
           })
         : a === y.y.JOIN_GUILD
-          ? (0, r.jsx)(c.zxk, {
+          ? (0, r.jsx)(c.Button, {
                 variant: "primary",
                 size: "sm",
                 text: T.intl.string(T.t.riu2R0),

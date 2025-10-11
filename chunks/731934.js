@@ -82,7 +82,7 @@ function L(e) {
         children: [
             (0, r.jsx)("div", {
                 className: A.stepNumber,
-                children: (0, r.jsx)(c.X6q, {
+                children: (0, r.jsx)(c.Heading, {
                     variant: "heading-md/semibold",
                     color: "text-brand",
                     children: (0, r.jsx)(c.y5t, { children: i }),
@@ -90,7 +90,7 @@ function L(e) {
             }),
             (0, r.jsxs)("div", {
                 children: [
-                    (0, r.jsx)(c.X6q, {
+                    (0, r.jsx)(c.Heading, {
                         variant: "heading-sm/bold",
                         children: (0, r.jsx)(c.y5t, { children: t }),
                     }),
@@ -113,7 +113,7 @@ function x() {
                 children: [
                     (0, r.jsxs)("div", {
                         children: [
-                            (0, r.jsx)(c.X6q, {
+                            (0, r.jsx)(c.Heading, {
                                 className: C.marginBottom8,
                                 variant: "heading-xl/medium",
                                 children: (0, r.jsx)(c.y5t, { children: T.intl.string(I.default.pHEnV1) }),
@@ -163,7 +163,7 @@ function M() {
         children: [
             (0, r.jsxs)("div", {
                 children: [
-                    (0, r.jsx)(c.X6q, {
+                    (0, r.jsx)(c.Heading, {
                         className: C.marginBottom8,
                         variant: "heading-xl/medium",
                         children: (0, r.jsx)(c.y5t, { children: T.intl.string(I.default.zUCWEB) }),
@@ -335,7 +335,7 @@ let k = () => {
             : (0, r.jsxs)("div", {
                   className: C.marginTop20,
                   children: [
-                      (0, r.jsx)(c.X6q, {
+                      (0, r.jsx)(c.Heading, {
                           className: A.supportHeader,
                           variant: "heading-sm/semibold",
                           children: (0, r.jsx)(c.y5t, { children: T.intl.string(I.default["7/tVho"]) }),

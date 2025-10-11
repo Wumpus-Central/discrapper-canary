@@ -16,7 +16,7 @@ function o(e) {
                     color: i.TVs.colors.INTERACTIVE_ACTIVE,
                 }),
             }),
-            (0, r.jsx)(i.X6q, {
+            (0, r.jsx)(i.Heading, {
                 variant: "heading-lg/semibold",
                 color: "header-primary",
                 children:
@@ -27,14 +27,14 @@ function o(e) {
             (0, r.jsxs)("div", {
                 className: a.incompleteButtonsContainer,
                 children: [
-                    (0, r.jsx)(i.zxk, {
+                    (0, r.jsx)(i.Button, {
                         fullWidth: !0,
                         onClick: n,
                         variant: "secondary",
                         size: "md",
                         text: l.intl.string(l.t.h3aGmp),
                     }),
-                    (0, r.jsx)(i.zxk, {
+                    (0, r.jsx)(i.Button, {
                         fullWidth: !0,
                         onClick: t,
                         variant: "critical-primary",

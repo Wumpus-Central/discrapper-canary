@@ -41,9 +41,9 @@ function b(e) {
                           }),
                       }),
                   }),
-                  (0, r.jsxs)(l.hE2, {
+                  (0, r.jsxs)(l.ButtonGroup, {
                       children: [
-                          (0, r.jsx)(l.zxk, {
+                          (0, r.jsx)(l.Button, {
                               variant: "secondary",
                               text: g.intl.string(g.t.ASZTf3),
                               icon: l.FmF,
@@ -62,7 +62,7 @@ function b(e) {
                                       });
                               },
                           }),
-                          (0, r.jsx)(l.zxk, {
+                          (0, r.jsx)(l.Button, {
                               variant: "secondary",
                               text: g.intl.string(g.t.gbrrAw),
                               icon:

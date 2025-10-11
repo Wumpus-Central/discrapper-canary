@@ -1,8 +1,8 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => B }), n(388685);
 var r = n(951288),
     l = n(647438),
-    s = n(120356),
-    i = n.n(s),
+    i = n(120356),
+    s = n.n(i),
     a = n(442837),
     o = n(481060),
     c = n(782568),
@@ -19,63 +19,63 @@ var r = n(951288),
     E = n(709999),
     v = n(653126),
     S = n(401975),
-    x = n(328626),
-    O = n(849275),
+    O = n(328626),
+    x = n(849275),
     y = n(619899),
     j = n(642909),
-    k = n(981631),
-    T = n(388032),
-    L = n(345213),
+    T = n(981631),
+    L = n(388032),
+    k = n(345213),
     I = n(310582);
-let P = (e) => {
+let B = (e) => {
     var t;
     let {
             isLoading: n,
-            title: s,
-            sortedSkuIds: P,
-            numVisibleItems: N,
-            hasSorting: B,
+            title: i,
+            sortedSkuIds: B,
+            numVisibleItems: P,
+            hasSorting: N,
             prioritizeUserDiscounts: A,
             tab: R,
             buttonContainerClassName: Z,
         } = e,
         w = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
-        F = C.ZP.canUseCollectibles(w),
-        H = (0, j.G)("FeedBlock"),
+        H = C.ZP.canUseCollectibles(w),
+        F = (0, j.G)("FeedBlock"),
         {
             sortType: D,
             setSortType: M,
             sortedItems: W,
             sortOptions: U,
             shuffleProducts: V,
-            showRecommendationOption: z,
-        } = (0, O.Z)(P, F, A),
-        G = (0, y.St)(W),
+            showRecommendationOption: G,
+        } = (0, x.Z)(B, H, A),
+        z = (0, y.St)(W),
         K = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
-        q = (0, a.e7)([g.Z], () => g.Z.isFocused()),
-        Y = !K && q,
-        { animationPhase: Q, startAnimation: X } = (0, x.y)(),
-        J = (0, h.sp)(),
-        $ = null != (t = null == J ? void 0 : J.sessionId) ? t : "",
+        Y = (0, a.e7)([g.Z], () => g.Z.isFocused()),
+        q = !K && Y,
+        { animationPhase: Q, startAnimation: J } = (0, O.y)(),
+        X = (0, h.sp)(),
+        $ = null != (t = null == X ? void 0 : X.sessionId) ? t : "",
         ee = l.useRef(null),
         et = l.useCallback(
             (e) => {
-                X({
+                J({
                     isShuffling: !1,
                     onOutroComplete: () => M(e),
                 }),
-                    f.default.track(k.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
+                    f.default.track(T.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
                         page_session_id: $,
                         sort_type: e,
                     });
             },
-            [X, M, $],
+            [J, M, $],
         ),
         en = m.Z.useConfig({ location: "FeedBlock" }).showCardsV2;
     return null == w
         ? null
         : (0, r.jsxs)("div", {
-              className: i()(I.popularPicksSection, I.centeredSection),
+              className: s()(I.popularPicksSection, I.centeredSection),
               children: [
                   (0, r.jsxs)("div", {
                       className: I.blockHeader,
@@ -83,16 +83,16 @@ let P = (e) => {
                           (0, r.jsxs)("div", {
                               className: I.headerLeft,
                               children: [
-                                  (0, r.jsx)(o.X6q, {
+                                  (0, r.jsx)(o.Heading, {
                                       variant: "heading-lg/semibold",
-                                      children: s,
+                                      children: i,
                                   }),
-                                  z &&
+                                  G &&
                                       (0, r.jsx)(o.ua7, {
                                           "data-migration-pending": !0,
-                                          text: T.intl.string(T.t["3taPdn"]),
+                                          text: L.intl.string(L.t["3taPdn"]),
                                           position: "top",
-                                          "aria-label": T.intl.string(T.t["3taPdn"]),
+                                          "aria-label": L.intl.string(L.t["3taPdn"]),
                                           children: (e) => {
                                               var t, n;
                                               return (0, r.jsx)(
@@ -127,7 +127,7 @@ let P = (e) => {
                                                       {
                                                           onClick: () =>
                                                               (0, c.Z)(
-                                                                  p.Z.getArticleURL(k.BhN.DATA_USED_FOR_RECOMMENDED),
+                                                                  p.Z.getArticleURL(T.BhN.DATA_USED_FOR_RECOMMENDED),
                                                               ),
                                                           className: I.informationIcon,
                                                           children: (0, r.jsx)(o.d3s, { size: "sm" }),
@@ -154,13 +154,13 @@ let P = (e) => {
                                       }),
                               ],
                           }),
-                          B
+                          N
                               ? (0, r.jsxs)("div", {
-                                    className: i()(I.headerRight, { [L.shopTakeOver]: H }),
+                                    className: s()(I.headerRight, { [k.shopTakeOver]: F }),
                                     children: [
                                         (0, r.jsx)(o.Text, {
                                             variant: "text-md/medium",
-                                            children: T.intl.string(T.t.uaX709),
+                                            children: L.intl.string(L.t.uaX709),
                                         }),
                                         (0, r.jsx)("div", {
                                             className: Z,
@@ -168,28 +168,28 @@ let P = (e) => {
                                                 options: U,
                                                 select: et,
                                                 className: I.sortSelect,
-                                                popoutClassName: i()({ [L.shopTakeOver]: H }),
+                                                popoutClassName: s()({ [k.shopTakeOver]: F }),
                                                 isSelected: (e) => e === D,
                                                 serialize: (e) => e,
                                             }),
                                         }),
                                         (0, r.jsx)("div", {
                                             className: Z,
-                                            children: (0, r.jsx)(o.zxk, {
+                                            children: (0, r.jsx)(o.Button, {
                                                 variant: "secondary",
-                                                text: T.intl.string(T.t.X3tnc3),
+                                                text: L.intl.string(L.t.X3tnc3),
                                                 buttonRef: ee,
                                                 onClick: () => {
-                                                    X({
+                                                    J({
                                                         isShuffling: !0,
                                                         onOutroComplete: V,
                                                         returnRef: ee,
                                                     }),
-                                                        f.default.track(k.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
+                                                        f.default.track(T.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
                                                             page_session_id: $,
                                                         });
                                                 },
-                                                disabled: Q !== x.g.MOUNTED && Q !== x.g.FINISHED,
+                                                disabled: Q !== O.g.MOUNTED && Q !== O.g.FINISHED,
                                             }),
                                         }),
                                     ],
@@ -205,12 +205,12 @@ let P = (e) => {
                                     en ? (0, r.jsx)(S.Z, {}, t + 1) : (0, r.jsx)(b.K, {}, t + 1),
                                 ),
                             })
-                          : G.slice(0, N).map((e, t) => {
+                          : z.slice(0, P).map((e, t) => {
                                 let n,
                                     l = _.Z.getCategoryForProduct(e.skuId);
                                 if (null == e || null == l) return null;
-                                if (Y)
-                                    if (Q === x.g.SHUFFLE_OUT)
+                                if (q)
+                                    if (Q === O.g.SHUFFLE_OUT)
                                         return en
                                             ? (0, r.jsx)(
                                                   "div",
@@ -229,11 +229,11 @@ let P = (e) => {
                                                   "".concat(e.skuId, "-").concat(t),
                                               );
                                     else
-                                        Q === x.g.SORT_OUT
+                                        Q === O.g.SORT_OUT
                                             ? (n = I.sortChangedOutro)
-                                            : Q === x.g.SHUFFLE_IN
+                                            : Q === O.g.SHUFFLE_IN
                                               ? (n = I.shuffleIntro)
-                                              : Q === x.g.SORT_IN && (n = I.sortChangedIntro);
+                                              : Q === O.g.SORT_IN && (n = I.sortChangedIntro);
                                 return (0, r.jsx)(
                                     h.k0,
                                     {

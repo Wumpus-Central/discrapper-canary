@@ -18,7 +18,7 @@ function b() {
             (0, o.jsxs)("div", {
                 className: p.getXboxAppBody,
                 children: [
-                    (0, o.jsxs)(r.X6q, {
+                    (0, o.jsxs)(r.Heading, {
                         className: p.getXboxAppHeading,
                         variant: "text-lg/semibold",
                         children: [
@@ -41,7 +41,7 @@ function b() {
                     (0, o.jsx)(r.Text, {
                         variant: "text-sm/medium",
                         color: "header-secondary",
-                        children: (0, o.jsx)(r.eee, {
+                        children: (0, o.jsx)(r.Anchor, {
                             href: a.Z.getArticleURL(c.BhN.XBOX_CONNECTION),
                             children: u.intl.string(u.t.hvVgAQ),
                         }),

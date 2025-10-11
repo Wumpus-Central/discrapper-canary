@@ -72,7 +72,7 @@ function y(e) {
                       className: m.channelTypeIcon,
                       size: "xxs",
                   }),
-            (0, r.jsx)(c.X6q, {
+            (0, r.jsx)(c.Heading, {
                 variant: "text-md/semibold",
                 color: "header-secondary",
                 children: s,

@@ -49,7 +49,7 @@ function h(e) {
 function m(e) {
     let { messageId: t, users: n, emoji: r, reactionType: i } = e,
         a = _.ensure(t, r, i);
-    n.forEach((e) => a.users.set(e.id, new l.Z(e)));
+    n.forEach((e) => a.users.set(e.id, new l.default(e)));
 }
 class g extends (r = i.ZP.Store) {
     getReactions(e, t, n, r, i) {

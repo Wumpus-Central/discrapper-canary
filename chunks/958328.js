@@ -79,7 +79,7 @@ function j() {
                 (0, a.jsxs)("section", {
                     className: b.section,
                     children: [
-                        (0, a.jsx)(o.X6q, {
+                        (0, a.jsx)(o.Heading, {
                             variant: "heading-md/semibold",
                             children: null != y ? "Permissions in ".concat(y) : "No channel selected",
                         }),
@@ -89,7 +89,7 @@ function j() {
                 (0, a.jsxs)("section", {
                     className: b.section,
                     children: [
-                        (0, a.jsx)(o.X6q, {
+                        (0, a.jsx)(o.Heading, {
                             variant: "heading-md/semibold",
                             children: null != r ? "Permissions in ".concat(r.name) : "No guild selected",
                         }),

@@ -1,35 +1,35 @@
-n.d(t, { default: () => o }), n(388685);
+n.d(e, { default: () => o }), n(388685);
 var a = n(951288),
     s = n(647438),
     l = n(481060),
     i = n(365007),
     r = n(388032),
     c = n(463373);
-function o(e) {
-    let { transitionState: t, onClose: n, credential: o } = e,
+function o(t) {
+    let { transitionState: e, onClose: n, credential: o } = t,
         [d, u] = s.useState(!1),
-        [h, x] = s.useState(""),
-        [m, p] = s.useState(void 0),
+        [h, m] = s.useState(""),
+        [x, p] = s.useState(void 0),
         g = s.useRef(null);
-    async function f(e) {
-        e.preventDefault(), u(!0);
+    async function f(t) {
+        t.preventDefault(), u(!0);
         try {
             await (0, i.WQ)(o.id, h), n();
-        } catch (e) {
-            p(e.message);
+        } catch (t) {
+            p(t.message);
         } finally {
             u(!1);
         }
     }
     return (
         s.useEffect(() => {
-            if (t === l.Dvm.ENTERED) {
-                var e;
-                null == (e = g.current) || e.focus();
+            if (e === l.Dvm.ENTERED) {
+                var t;
+                null == (t = g.current) || t.focus();
             }
-        }, [t]),
+        }, [e]),
         (0, a.jsxs)(l.Y0X, {
-            transitionState: t,
+            transitionState: e,
             parentComponent: "EditCredentialModal",
             children: [
                 (0, a.jsxs)(l.xBx, {
@@ -61,15 +61,15 @@ function o(e) {
                                 value: h,
                                 minLength: 1,
                                 maxLength: 32,
-                                onChange: x,
+                                onChange: m,
                                 autoFocus: !0,
                                 required: !0,
-                                error: m,
+                                error: x,
                             }),
                         }),
                         (0, a.jsxs)(l.mzw, {
                             children: [
-                                (0, a.jsx)(l.zxk, {
+                                (0, a.jsx)(l.Button, {
                                     variant: "primary",
                                     text: r.intl.string(r.t.i4jeWV),
                                     type: "submit",
@@ -79,7 +79,7 @@ function o(e) {
                                 (0, a.jsx)("div", {
                                     "data-button-hoisted-classname-wrapper": !0,
                                     className: c.cancel,
-                                    children: (0, a.jsx)(l.zxk, {
+                                    children: (0, a.jsx)(l.Button, {
                                         variant: "secondary",
                                         text: r.intl.string(r.t["ETE/oK"]),
                                         onClick: n,

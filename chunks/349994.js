@@ -21,7 +21,7 @@ function u(e) {
                 separator: !1,
                 className: _.headerContainer,
                 children: [
-                    (0, n.jsx)(o.X6q, {
+                    (0, n.jsx)(o.Heading, {
                         id: b,
                         variant: "heading-xl/extrabold",
                         color: "none",

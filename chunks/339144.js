@@ -158,7 +158,9 @@ let D = i.memo(function (e) {
                 let e = null != B && (0, C.vd)(B.type) ? B : null,
                     t = null != e ? e.getGuildId() : U;
                 (0, c.ZDy)(async () => {
-                    let { default: e } = await Promise.all([n.e("46746"), n.e("33641")]).then(n.bind(n, 60594));
+                    let { default: e } = await Promise.all([n.e("4093"), n.e("47863"), n.e("33641")]).then(
+                        n.bind(n, 60594),
+                    );
                     return (n) =>
                         (0, r.jsx)(
                             e,

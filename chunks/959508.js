@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(823379),
     f = n(889369),
     h = n(570961),
-    x = n(208665),
-    b = n(976983),
+    b = n(208665),
+    x = n(976983),
     j = n(290511),
     v = n(388032),
     _ = n(814939);
@@ -25,7 +25,7 @@ function O(e) {
             guild: n,
             prompt: l,
             disableAutofocus: u,
-            promptIndex: b,
+            promptIndex: x,
             dragIndex: O,
             includeCount: E,
             singleColumn: I,
@@ -47,24 +47,24 @@ function O(e) {
             onDragComplete: S,
             onDragReset: P,
         }),
-        L = (0, s.cj)([x.Z], () => {
+        L = (0, s.cj)([b.Z], () => {
             var e;
-            return null != (e = x.Z.errors[b]) ? e : C;
+            return null != (e = b.Z.errors[x]) ? e : C;
         }),
         [k, G] = i.useState(!1),
         [M, U] = i.useState(!1),
         B = null != (t = L.options) ? t : L.optionErrors.filter(p.lm)[0],
         F = L.config,
         H = l.options.length >= j.fY,
-        z = (0, g.kl)(n.id, Array.from(w), [l]).length - w.size,
+        W = (0, g.kl)(n.id, Array.from(w), [l]).length - w.size,
         V = i.useRef(null),
-        W = i.useRef(b);
+        z = i.useRef(x);
     return (i.useEffect(() => {
-        W.current = b;
+        z.current = x;
     }),
     i.useLayoutEffect(() => {
         setTimeout(() => {
-            if (0 === W.current && !u) {
+            if (0 === z.current && !u) {
                 var e;
                 null == (e = V.current) || e.focus();
             }
@@ -78,8 +78,8 @@ function O(e) {
                   onBlur: () => U(!1),
                   onMouseLeave: () => U(!1),
                   className: a()(_.container, {
-                      [_.dropIndicatorBefore]: null != R && b < R,
-                      [_.dropIndicatorAfter]: null != R && b > R,
+                      [_.dropIndicatorBefore]: null != R && x < R,
+                      [_.dropIndicatorAfter]: null != R && x > R,
                       [_.containerFocused]: M,
                   }),
                   ref: (e) => {
@@ -99,7 +99,7 @@ function O(e) {
                       (0, r.jsx)(c.Text, {
                           variant: "text-xs/semibold",
                           color: "text-muted",
-                          children: v.intl.format(v.t.yjS3zs, { index: b + 1 }),
+                          children: v.intl.format(v.t.yjS3zs, { index: x + 1 }),
                       }),
                       (0, r.jsx)(c.Text, {
                           variant: "text-lg/semibold",
@@ -138,8 +138,8 @@ function O(e) {
                   onFocus: () => U(!0),
                   onBlur: () => U(!1),
                   className: a()(_.container, {
-                      [_.dropIndicatorBefore]: null != R && b < R,
-                      [_.dropIndicatorAfter]: null != R && b > R,
+                      [_.dropIndicatorBefore]: null != R && x < R,
+                      [_.dropIndicatorAfter]: null != R && x > R,
                       [_.containerFocused]: M,
                   }),
                   ref: (e) => {
@@ -160,7 +160,7 @@ function O(e) {
                           gap: 16,
                           children: [
                               (0, r.jsx)(c.oil, {
-                                  label: v.intl.formatToPlainString(v.t.yjS3zs, { index: b + 1 }),
+                                  label: v.intl.formatToPlainString(v.t.yjS3zs, { index: x + 1 }),
                                   inputRef: V,
                                   value: l.title,
                                   onChange: (e) => (0, h.Kk)(n, l.id, { title: e }),
@@ -186,7 +186,7 @@ function O(e) {
                                   children: (0, r.jsx)(N, {
                                       guild: n,
                                       prompt: l,
-                                      promptIndex: b,
+                                      promptIndex: x,
                                       errors: L,
                                       singleColumn: I,
                                   }),
@@ -199,18 +199,18 @@ function O(e) {
                               (0, r.jsxs)("div", {
                                   className: _.checkboxes,
                                   children: [
-                                      (0, r.jsx)(c.XZJ, {
+                                      (0, r.jsx)(c.Checkbox, {
                                           checked: !l.singleSelect,
                                           onChange: (e) => (0, h.Kk)(n, l.id, { singleSelect: !e }),
                                           label: v.intl.string(v.t.uCebZW),
                                       }),
                                       l.inOnboarding
-                                          ? (0, r.jsx)(c.XZJ, {
-                                                checked: l.inOnboarding && l.required,
+                                          ? (0, r.jsx)(c.Checkbox, {
+                                                checked: !!(l.inOnboarding && l.required),
                                                 onChange: (e) => (0, h.Kk)(n, l.id, { required: e }),
                                                 disabled: !l.inOnboarding,
                                                 label: E
-                                                    ? v.intl.formatToPlainString(v.t["0re8T0"], { count: z })
+                                                    ? v.intl.formatToPlainString(v.t["0re8T0"], { count: W })
                                                     : v.intl.string(v.t.Ur8Vrq),
                                             })
                                           : null,
@@ -298,7 +298,7 @@ function N(e) {
         children: [
             n.options.map((e, d) =>
                 (0, r.jsx)(
-                    b.Z,
+                    x.Z,
                     {
                         guild: t,
                         prompt: n,
@@ -314,7 +314,7 @@ function N(e) {
                 ),
             ),
             n.options.length < j.qm
-                ? (0, r.jsx)(b.B, {
+                ? (0, r.jsx)(x.B, {
                       guild: t,
                       prompt: n,
                       promptIndex: i,

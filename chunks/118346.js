@@ -45,7 +45,7 @@ function d() {
               color: "text-feedback-positive",
               children: c.intl.string(c.t.H3Q7U1),
           })
-        : (0, r.jsx)(s.zxk, {
+        : (0, r.jsx)(s.Button, {
               variant: "primary",
               size: "sm",
               text: o ? c.intl.string(c.t.WnX4Jy) : c.intl.string(c.t["13ofGh"]),
@@ -63,7 +63,7 @@ function m() {
         children: (0, r.jsx)(i.u, {
             asContainer: !0,
             text: c.intl.string(c.t.mGlP39),
-            children: (0, r.jsx)(s.zxk, {
+            children: (0, r.jsx)(s.Button, {
                 variant: "primary",
                 size: "sm",
                 disabled: !0,

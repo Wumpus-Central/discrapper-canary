@@ -51,7 +51,7 @@ let I = function (e) {
                     (0, r.jsxs)("div", {
                         className: g.subBannerContent,
                         children: [
-                            (0, r.jsx)(s.X6q, {
+                            (0, r.jsx)(s.Heading, {
                                 className: g.bannerHeader,
                                 variant: "heading-md/extrabold",
                                 color: "header-primary",
@@ -92,7 +92,7 @@ let I = function (e) {
                         (0, r.jsxs)("div", {
                             className: g.settingsBannerContent,
                             children: [
-                                (0, r.jsx)(s.X6q, {
+                                (0, r.jsx)(s.Heading, {
                                     className: g.bannerHeader,
                                     variant: "heading-lg/extrabold",
                                     color: "header-primary",
@@ -150,7 +150,7 @@ let I = function (e) {
                         (0, r.jsxs)("div", {
                             className: g.bannerContent,
                             children: [
-                                (0, r.jsx)(s.X6q, {
+                                (0, r.jsx)(s.Heading, {
                                     className: g.bannerHeader,
                                     variant: "heading-xxl/extrabold",
                                     color: "header-primary",

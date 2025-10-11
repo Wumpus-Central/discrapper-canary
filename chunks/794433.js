@@ -202,7 +202,7 @@ class m extends (r = a.Component) {
                     ? f.forEach((e, t) =>
                           b.push(
                               (0, i.jsxs)(
-                                  l.eee,
+                                  l.Anchor,
                                   {
                                       focusProps: { offset: 4 },
                                       className: d.tag,
@@ -225,7 +225,7 @@ class m extends (r = a.Component) {
                       f.forEach((e, t) =>
                           b.push(
                               (0, i.jsxs)(
-                                  l.eee,
+                                  l.Anchor,
                                   {
                                       className: s()(d.tag, d.richTag),
                                       onClick: this.handleRemoveTag.bind(this, t),

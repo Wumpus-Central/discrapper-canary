@@ -17,9 +17,9 @@ function l(e, t, n) {
         e
     );
 }
-let c = o.tI.PRESET_VIDEO,
-    u = o.LY.RESOLUTION_720,
-    d = o.ws.FPS_30,
+let c = o.ApplicationStreamPresets.PRESET_VIDEO,
+    u = o.ApplicationStreamResolutions.RESOLUTION_720,
+    d = o.ApplicationStreamFPS.FPS_30,
     f = !0;
 function _(e) {
     let { settings: t } = e;
@@ -47,7 +47,7 @@ class h extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
             var t, n;
-            (c = null != (t = e.preset) ? t : o.tI.PRESET_VIDEO),
+            (c = null != (t = e.preset) ? t : o.ApplicationStreamPresets.PRESET_VIDEO),
                 (u = e.resolution),
                 (d = e.fps),
                 (f = null == (n = e.soundshareEnabled) || n);

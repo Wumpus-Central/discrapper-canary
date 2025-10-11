@@ -7,7 +7,7 @@ function l(e) {
     let { isUploading: t, isSuccess: n, errorMessage: l, onClick: s, title: o } = e;
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, a.jsx)(r.zxk, {
+            (0, a.jsx)(r.Button, {
                 variant: "primary",
                 onClick: s,
                 loading: t,

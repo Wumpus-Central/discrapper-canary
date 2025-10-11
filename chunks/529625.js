@@ -60,9 +60,9 @@ function h() {
                 messageType: i.QYI.INFO,
                 children: "When you are done, please remember to upload the logs.",
             }),
-            (0, a.jsxs)(i.hE2, {
+            (0, a.jsxs)(i.ButtonGroup, {
                 children: [
-                    (0, a.jsx)(i.zxk, {
+                    (0, a.jsx)(i.Button, {
                         variant: e ? "critical-primary" : "primary",
                         onClick: () => p.setState({ isRecording: !e }),
                         text: e ? "Stop Recording" : "Start Recording",

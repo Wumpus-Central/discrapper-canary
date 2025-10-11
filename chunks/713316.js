@@ -36,7 +36,7 @@ function h(e) {
             (0, r.jsxs)("div", {
                 className: p.confirmation,
                 children: [
-                    (0, r.jsx)(s.X6q, {
+                    (0, r.jsx)(s.Heading, {
                         variant: "heading-xxl/bold",
                         className: p.confirmationHeader,
                         children: "Success!",

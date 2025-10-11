@@ -10,9 +10,9 @@ var n = r(951288),
     u = r(769654),
     b = r(695346),
     m = r(430824),
-    h = r(88658),
-    p = r(401416),
-    g = r(920133),
+    g = r(88658),
+    h = r(401416),
+    p = r(920133),
     f = r(388032),
     x = r(956051),
     j = r(444812);
@@ -20,7 +20,7 @@ function y(e) {
     let { transitionState: t, guildId: y, onClose: O } = e,
         D = (0, i.e7)([m.Z], () => m.Z.getGuild(y));
     return (a.useEffect(() => {
-        (0, p.Y)(y), (0, g.L)(g.Q.MODAL_VIEWED, y), d.Z.increment({ name: s.V.DM_SETTINGS_UPSELL_VIEW });
+        (0, h.Y)(y), (0, p.L)(p.Q.MODAL_VIEWED, y), d.Z.increment({ name: s.V.DM_SETTINGS_UPSELL_VIEW });
     }, [y]),
     null == D)
         ? null
@@ -31,7 +31,7 @@ function y(e) {
               children: (0, n.jsxs)("form", {
                   onSubmit: (e) => {
                       e.preventDefault();
-                      let t = (0, h.YK)();
+                      let t = (0, g.YK)();
                       t.add(y),
                           b.h2
                               .updateSetting(Array.from(t))
@@ -39,7 +39,7 @@ function y(e) {
                                   (0, l.showToast)((0, l.createToast)(f.intl.string(f.t.rlYD1d), l.ToastType.SUCCESS)),
                               ),
                           O(),
-                          (0, g.L)(g.Q.MODAL_DISABLED_DMS, y);
+                          (0, p.L)(p.Q.MODAL_DISABLED_DMS, y);
                   },
                   children: [
                       (0, n.jsx)("img", {
@@ -51,7 +51,7 @@ function y(e) {
                           separator: !1,
                           className: x.header,
                           children: [
-                              (0, n.jsx)(l.X6q, {
+                              (0, n.jsx)(l.Heading, {
                                   variant: "heading-lg/bold",
                                   className: x.title,
                                   children: f.intl.string(f.t.w2BvnJ),
@@ -103,7 +103,7 @@ function y(e) {
                                           className: x.button,
                                           color: o.zx.Colors.PRIMARY,
                                           onClick: () => {
-                                              O(), (0, g.L)(g.Q.MODAL_DISMISSED, y);
+                                              O(), (0, p.L)(p.Q.MODAL_DISMISSED, y);
                                           },
                                           children: f.intl.string(f.t.PsWbcn),
                                       }),
@@ -185,7 +185,7 @@ function y(e) {
                                                               );
                                                           };
                                                       }),
-                                                      (0, g.L)(g.Q.MODAL_GUILD_SETTINGS_CLICKED, y);
+                                                      (0, p.L)(p.Q.MODAL_GUILD_SETTINGS_CLICKED, y);
                                               },
                                           }),
                                       }),

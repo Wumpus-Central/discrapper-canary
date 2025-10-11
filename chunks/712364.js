@@ -57,7 +57,7 @@ class f extends (r = a.PureComponent) {
                               (0, i.jsx)(l.P3F, {
                                   className: s()(u.spacing, u.__invalid_link),
                                   onClick: this.handleRetry,
-                                  children: (0, i.jsx)(l.eee, { children: h }),
+                                  children: (0, i.jsx)(l.Anchor, { children: h }),
                               }),
                           ],
                       })
@@ -80,7 +80,7 @@ class f extends (r = a.PureComponent) {
                 children: [
                     (0, i.jsx)(l.xBx, {
                         separator: !1,
-                        children: (0, i.jsx)(l.X6q, {
+                        children: (0, i.jsx)(l.Heading, {
                             variant: "heading-lg/semibold",
                             children: t,
                         }),
@@ -124,16 +124,16 @@ class f extends (r = a.PureComponent) {
                         ],
                     }),
                     (0, i.jsx)(l.mzw, {
-                        children: (0, i.jsxs)(l.hE2, {
+                        children: (0, i.jsxs)(l.ButtonGroup, {
                             direction: "horizontal-reverse",
                             children: [
-                                (0, i.jsx)(l.zxk, {
+                                (0, i.jsx)(l.Button, {
                                     variant: "primary",
                                     text: null != n ? n : c.intl.string(c.t["cY+Ooa"]),
                                     type: "submit",
                                     disabled: d || 0 === g.length,
                                 }),
-                                (0, i.jsx)(l.zxk, {
+                                (0, i.jsx)(l.Button, {
                                     variant: "secondary",
                                     text: c.intl.string(c.t["ETE/oK"]),
                                     onClick: this.handleCancel,

@@ -91,7 +91,7 @@ function I() {
             children: [
                 (0, a.jsx)("div", {
                     className: y.section,
-                    children: (0, a.jsx)(c.X6q, {
+                    children: (0, a.jsx)(c.Heading, {
                         variant: "heading-md/normal",
                         children: "Current guild: ".concat(t),
                     }),
@@ -104,7 +104,7 @@ function I() {
                             className: y.header,
                             children: "Reset Notification Indicators",
                         }),
-                        (0, a.jsx)(c.zxk, {
+                        (0, a.jsx)(c.Button, {
                             variant: "primary",
                             text: "Reset",
                             onClick: () => {
@@ -121,7 +121,7 @@ function I() {
                             className: y.header,
                             children: "Reset Progress Bar State",
                         }),
-                        (0, a.jsx)(c.zxk, {
+                        (0, a.jsx)(c.Button, {
                             variant: "primary",
                             text: "Reset",
                             onClick: m.q,
@@ -137,14 +137,14 @@ function I() {
                         }),
                         (0, a.jsxs)("div", {
                             children: [
-                                (0, a.jsx)(c.zxk, {
+                                (0, a.jsx)(c.Button, {
                                     variant: "primary",
                                     text: "Set Half Boosts expiring in 1 day",
                                     onClick: () => {
                                         N(e, r.slice(Math.floor(r.length / 2)), !1);
                                     },
                                 }),
-                                (0, a.jsx)(c.zxk, {
+                                (0, a.jsx)(c.Button, {
                                     variant: "primary",
                                     text: "Reset End Date",
                                     onClick: () => {
@@ -248,7 +248,7 @@ function I() {
                             className: y.header,
                             children: "Send Powerups System Message",
                         }),
-                        (0, a.jsx)(c.zxk, {
+                        (0, a.jsx)(c.Button, {
                             variant: "primary",
                             text: "Send System Message",
                             onClick: () => {
@@ -257,7 +257,7 @@ function I() {
                         }),
                     ],
                 }),
-                (0, a.jsx)(c.zxk, {
+                (0, a.jsx)(c.Button, {
                     variant: "primary",
                     text: "Reset GameServer ToS",
                     onClick: () => {

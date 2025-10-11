@@ -3,26 +3,26 @@ var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(293810),
-    s = n(388032),
-    a = n(964269),
+    a = n(388032),
+    s = n(964269),
     o = n(961618),
     c = n(217684),
     d = n(174618);
 function u(e) {
     let { imageSrc: t, description: n } = e;
     return (0, r.jsxs)("div", {
-        className: a.howItWorksCard,
+        className: s.howItWorksCard,
         children: [
             (0, r.jsx)("div", {
-                className: a.howItWorksImageContainer,
+                className: s.howItWorksImageContainer,
                 children: (0, r.jsx)("img", {
-                    className: a.howItWorksImage,
+                    className: s.howItWorksImage,
                     src: t,
                     alt: "",
                 }),
             }),
             (0, r.jsx)("div", {
-                className: a.howItWorksDescription,
+                className: s.howItWorksDescription,
                 children: (0, r.jsx)(i.Text, {
                     variant: "text-sm/normal",
                     color: "header-primary",
@@ -36,27 +36,27 @@ function g() {
     let e = [
         {
             imageSrc: d,
-            description: s.intl.string(s.t.lT0ZNT),
+            description: a.intl.string(a.t.lT0ZNT),
         },
         {
             imageSrc: o,
-            description: s.intl.string(s.t.ihN2WV),
+            description: a.intl.string(a.t.ihN2WV),
         },
         {
             imageSrc: c,
-            description: s.intl.string(s.t.c8krDQ),
+            description: a.intl.string(a.t.c8krDQ),
         },
     ];
     return (0, r.jsxs)("div", {
         children: [
-            (0, r.jsx)(i.X6q, {
+            (0, r.jsx)(i.Heading, {
                 variant: "heading-lg/semibold",
                 color: "header-primary",
-                children: s.intl.string(s.t.R9rNIi),
+                children: a.intl.string(a.t.R9rNIi),
             }),
             (0, r.jsx)(i.LZC, { size: 24 }),
             (0, r.jsx)("div", {
-                className: a.howItWorksContainer,
+                className: s.howItWorksContainer,
                 children: e.map((e) =>
                     (0, r.jsx)(
                         u,
@@ -72,7 +72,7 @@ function g() {
             (0, r.jsx)(i.Text, {
                 variant: "text-sm/normal",
                 color: "header-secondary",
-                children: s.intl.format(s.t.oxW30N, { creatorPortalUrl: l.C5 }),
+                children: a.intl.format(a.t.oxW30N, { creatorPortalUrl: l.C5 }),
             }),
         ],
     });

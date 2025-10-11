@@ -22,7 +22,7 @@ function s(e) {
             (0, n.jsxs)("div", {
                 className: c.title,
                 children: [
-                    (0, n.jsx)(a.X6q, {
+                    (0, n.jsx)(a.Heading, {
                         variant: "heading-sm/medium",
                         color: "text-default",
                         id: r,

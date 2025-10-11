@@ -1,127 +1,127 @@
-r.d(t, { default: () => k }), r(388685);
-var n = r(951288),
-    s = r(647438),
-    i = r(512722),
-    o = r.n(i),
-    a = r(442837),
-    l = r(481060),
-    c = r(570140),
-    d = r(23645),
-    h = r(600164),
-    p = r(454585),
-    u = r(365007),
-    m = r(15980),
-    f = r(325067),
-    x = r(594174),
-    b = r(63063),
-    j = r(981631),
-    C = r(388032),
-    g = r(505198);
-function y(e, t, r) {
+n.d(t, { default: () => k }), n(388685);
+var r = n(951288),
+    s = n(647438),
+    i = n(512722),
+    o = n.n(i),
+    a = n(442837),
+    l = n(481060),
+    c = n(570140),
+    d = n(23645),
+    h = n(600164),
+    u = n(454585),
+    p = n(365007),
+    m = n(15980),
+    f = n(325067),
+    b = n(594174),
+    x = n(63063),
+    g = n(981631),
+    j = n(388032),
+    C = n(505198);
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: r,
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (e[t] = r),
+            : (e[t] = n),
         e
     );
 }
 let O = (e) => {
     var t,
-        r,
+        n,
         { label: s, text: i, children: o } = e,
         a = (function (e, t) {
             if (null == e) return {};
-            var r,
-                n,
+            var n,
+                r,
                 s = (function (e, t) {
                     if (null == e) return {};
-                    var r,
-                        n,
+                    var n,
+                        r,
                         s = {},
                         i = Object.keys(e);
-                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (s[r] = e[r]);
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (s[n] = e[n]);
                     return s;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < i.length; n++)
-                    (r = i[n]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (s[r] = e[r]);
+                for (r = 0; r < i.length; r++)
+                    (n = i[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]);
             }
             return s;
         })(e, ["label", "text", "children"]);
-    return (0, n.jsxs)(
+    return (0, r.jsxs)(
         h.Z,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
-                var r = null != arguments[t] ? arguments[t] : {},
-                    n = Object.keys(r);
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
                 "function" == typeof Object.getOwnPropertySymbols &&
-                    (n = n.concat(
-                        Object.getOwnPropertySymbols(r).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
                         }),
                     )),
-                    n.forEach(function (t) {
-                        y(e, t, r[t]);
+                    r.forEach(function (t) {
+                        y(e, t, n[t]);
                     });
             }
             return e;
         })({ direction: h.Z.Direction.VERTICAL }, a)),
-        (r = r =
+        (n = n =
             {
                 children: [
-                    (0, n.jsx)(l.X6q, {
+                    (0, r.jsx)(l.Heading, {
                         variant: "heading-md/semibold",
                         children: s,
                     }),
                     null != i
-                        ? (0, n.jsx)(l.Text, {
+                        ? (0, r.jsx)(l.Text, {
                               variant: "text-md/normal",
-                              className: g.sectionBody,
+                              className: C.sectionBody,
                               children: i,
                           })
                         : null,
-                    (0, n.jsx)(h.Z.Child, {
+                    (0, r.jsx)(h.Z.Child, {
                         wrap: !0,
                         children: o,
                     }),
                 ],
             }),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
             : (function (e, t) {
-                  var r = Object.keys(e);
+                  var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      r.push.apply(r, n);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
-                  return r;
-              })(Object(r)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                  return n;
+              })(Object(n)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
               }),
         t),
     );
 };
 class P extends s.PureComponent {
     renderBackupCodesSection(e) {
-        return (0, n.jsx)(O, {
-            label: C.intl.string(C.t.qZZUy8),
+        return (0, r.jsx)(O, {
+            label: j.intl.string(j.t.qZZUy8),
             text: e,
-            children: (0, n.jsx)(d.Z, {
+            children: (0, r.jsx)(d.Z, {
                 fileContents: this.getDownloadFileContents,
                 contentType: "text/plain",
                 fileName: "discord_backup_codes.txt",
                 onDownload: () => c.Z.dispatch({ type: "MFA_SEEN_BACKUP_CODE_PROMPT" }),
-                children: (0, n.jsx)(l.zxk, {
+                children: (0, r.jsx)(l.Button, {
                     variant: "active",
                     size: "sm",
-                    text: C.intl.string(C.t.qZZUy8),
+                    text: j.intl.string(j.t.qZZUy8),
                 }),
             }),
         });
@@ -129,65 +129,65 @@ class P extends s.PureComponent {
     renderPasskeyCTASection() {
         return m.Z.hasCredentials
             ? null
-            : (0, n.jsxs)(O, {
-                  label: C.intl.string(C.t.xMDCHR),
-                  text: C.intl.string(C.t.okgGTk),
+            : (0, r.jsxs)(O, {
+                  label: j.intl.string(j.t.xMDCHR),
+                  text: j.intl.string(j.t.okgGTk),
                   children: [
-                      (0, n.jsx)(l.Text, {
+                      (0, r.jsx)(l.Text, {
                           variant: "text-md/normal",
-                          className: g.sectionBody,
-                          children: C.intl.format(C.t.OeGXVl, {
-                              learnMoreLink: b.Z.getArticleURL(j.BhN.SETTING_UP_TWO_FACTOR),
+                          className: C.sectionBody,
+                          children: j.intl.format(j.t.OeGXVl, {
+                              learnMoreLink: x.Z.getArticleURL(g.BhN.SETTING_UP_TWO_FACTOR),
                           }),
                       }),
-                      (0, n.jsx)(l.zxk, {
+                      (0, r.jsx)(l.Button, {
                           variant: "active",
                           size: "sm",
-                          text: C.intl.string(C.t.NIFmCA),
+                          text: j.intl.string(j.t.NIFmCA),
                           onClick: this.handleAddPasskey,
                       }),
                   ],
               });
     }
     renderHeader(e, t) {
-        return (0, n.jsxs)(l.xBx, {
+        return (0, r.jsxs)(l.xBx, {
             separator: !1,
             children: [
-                (0, n.jsxs)(h.Z.Child, {
+                (0, r.jsxs)(h.Z.Child, {
                     grow: 1,
                     shrink: 1,
                     children: [
-                        (0, n.jsx)(l.X6q, {
+                        (0, r.jsx)(l.Heading, {
                             variant: "heading-lg/semibold",
-                            className: g.header,
-                            children: p.Z.parse(e),
+                            className: C.header,
+                            children: u.Z.parse(e),
                         }),
-                        (0, n.jsx)(l.Text, {
+                        (0, r.jsx)(l.Text, {
                             variant: "text-xs/normal",
-                            className: g.subHeader,
+                            className: C.subHeader,
                             children: t,
                         }),
                     ],
                 }),
-                (0, n.jsx)(h.Z.Child, {
+                (0, r.jsx)(h.Z.Child, {
                     grow: 0,
-                    children: (0, n.jsx)(l.olH, { onClick: this.handleCloseModal }),
+                    children: (0, r.jsx)(l.olH, { onClick: this.handleCloseModal }),
                 }),
             ],
         });
     }
     renderConfirmModal(e) {
         let { onClose: t } = this.props;
-        return (0, n.jsx)(l.sYh, {
+        return (0, r.jsx)(l.sYh, {
             dismissable: !0,
-            header: C.intl.string(C.t.mwVXnJ),
-            confirmText: C.intl.string(C.t.MwSEo6),
-            cancelText: C.intl.string(C.t["ETE/oK"]),
+            header: j.intl.string(j.t.mwVXnJ),
+            confirmText: j.intl.string(j.t.MwSEo6),
+            cancelText: j.intl.string(j.t["ETE/oK"]),
             onCancel: () => this.setState({ showConfirmModal: !1 }),
             onConfirm: () => {
                 c.Z.dispatch({ type: "MFA_SEEN_BACKUP_CODE_PROMPT" }), t();
             },
-            children: (0, n.jsx)(l.Text, {
+            children: (0, r.jsx)(l.Text, {
                 variant: "text-md/normal",
                 color: "text-default",
                 children: e,
@@ -201,38 +201,38 @@ class P extends s.PureComponent {
     renderTotp() {
         let { transitionState: e } = this.props,
             { showConfirmModal: t } = this.state;
-        return (0, n.jsxs)(l.Y0X, {
+        return (0, r.jsxs)(l.Y0X, {
             transitionState: e,
-            className: g.modal,
+            className: C.modal,
             parentComponent: "MFAEnableSuccess",
             children: [
-                this.renderHeader(C.intl.string(C.t["681MPT"]), C.intl.format(C.t["/Nhi8f"], {})),
-                (0, n.jsxs)(l.hzk, {
-                    className: g.modalInner,
+                this.renderHeader(j.intl.string(j.t["681MPT"]), j.intl.format(j.t["/Nhi8f"], {})),
+                (0, r.jsxs)(l.hzk, {
+                    className: C.modalInner,
                     children: [
                         this.renderPasskeyCTASection(),
-                        (0, n.jsx)(l.izJ, { className: g.divider }),
-                        this.renderBackupCodesSection(C.intl.format(C.t.M0Dogo, {})),
+                        (0, r.jsx)(l.izJ, { className: C.divider }),
+                        this.renderBackupCodesSection(j.intl.format(j.t.M0Dogo, {})),
                     ],
                 }),
-                t && this.renderConfirmModal(C.intl.string(C.t.WJFPHB)),
+                t && this.renderConfirmModal(j.intl.string(j.t.WJFPHB)),
             ],
         });
     }
     renderWebAuthn() {
         let { transitionState: e } = this.props,
             { showConfirmModal: t } = this.state;
-        return (0, n.jsxs)(l.Y0X, {
+        return (0, r.jsxs)(l.Y0X, {
             transitionState: e,
-            className: g.modal,
+            className: C.modal,
             parentComponent: "MFAEnableSuccess",
             children: [
-                this.renderHeader(C.intl.string(C.t.x6ielJ), C.intl.format(C.t["/Nhi8f"], {})),
-                (0, n.jsx)(l.hzk, {
-                    className: g.modalInner,
-                    children: this.renderBackupCodesSection(C.intl.format(C.t.p59QLS, {})),
+                this.renderHeader(j.intl.string(j.t.x6ielJ), j.intl.format(j.t["/Nhi8f"], {})),
+                (0, r.jsx)(l.hzk, {
+                    className: C.modalInner,
+                    children: this.renderBackupCodesSection(j.intl.format(j.t.p59QLS, {})),
                 }),
-                t && this.renderConfirmModal(C.intl.string(C.t.aoNIXF)),
+                t && this.renderConfirmModal(j.intl.string(j.t.aoNIXF)),
             ],
         });
     }
@@ -244,25 +244,25 @@ class P extends s.PureComponent {
                 t ? e() : this.setState({ showConfirmModal: !0 });
             }),
             y(this, "handleAddPasskey", () => {
-                this.props.onClose(), u.ef();
+                this.props.onClose(), p.ef();
             }),
             y(this, "getDownloadFileContents", () => {
                 let e = this.props.backupCodes
                         .map((e) => {
-                            let { consumed: t, code: r } = e;
+                            let { consumed: t, code: n } = e;
                             return "* "
-                                .concat(r.substr(0, 4), "-")
-                                .concat(r.substr(4), " ")
-                                .concat(t ? "(".concat(C.intl.string(C.t["ycME+/"]), ")") : "");
+                                .concat(n.substr(0, 4), "-")
+                                .concat(n.substr(4), " ")
+                                .concat(t ? "(".concat(j.intl.string(j.t["ycME+/"]), ")") : "");
                         })
                         .join("\r\n"),
-                    t = C.intl.formatToPlainString(C.t.uYWwh4, { email: this.props.currentUser.email });
+                    t = j.intl.formatToPlainString(j.t.uYWwh4, { email: this.props.currentUser.email });
                 return "".concat(t, "\r\n\r\n").concat(e);
             });
     }
 }
-let k = a.ZP.connectStores([x.default, f.Z], () => {
-    let e = x.default.getCurrentUser();
+let k = a.ZP.connectStores([b.default, f.Z], () => {
+    let e = b.default.getCurrentUser();
     return (
         o()(null != e, "MFAEnableSuccess: currentUser cannot be undefined"),
         {

@@ -59,7 +59,7 @@ let c = () =>
                             children: (0, i.jsxs)("div", {
                                 className: s.manaContainer,
                                 children: [
-                                    (0, i.jsx)(l.X6q, {
+                                    (0, i.jsx)(l.Heading, {
                                         variant: "heading-lg/semibold",
                                         className: s.header,
                                         id: u,

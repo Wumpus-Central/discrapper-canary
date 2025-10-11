@@ -37,7 +37,7 @@ function g(e) {
                 (0, r.jsx)("div", { id: _ }),
                 (0, r.jsx)(o.xBx, {
                     separator: !1,
-                    children: (0, r.jsx)(o.X6q, {
+                    children: (0, r.jsx)(o.Heading, {
                         variant: "heading-lg/semibold",
                         children: f.intl.string(f.t["7glvXl"]),
                     }),
@@ -82,7 +82,7 @@ function g(e) {
                     ],
                 }),
                 (0, r.jsx)(o.mzw, {
-                    children: (0, r.jsx)(o.zxk, {
+                    children: (0, r.jsx)(o.Button, {
                         variant: "active",
                         text: f.intl.string(f.t["+TBKLy"]),
                         loading: m,

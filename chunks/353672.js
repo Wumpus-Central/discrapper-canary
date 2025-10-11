@@ -12,7 +12,7 @@ function o(t) {
         children: [
             (0, i.jsx)("div", {
                 className: a.tipsHeader,
-                children: (0, i.jsx)(l.X6q, {
+                children: (0, i.jsx)(l.Heading, {
                     variant: "heading-lg/bold",
                     className: a.headerText,
                     children: s,
@@ -26,7 +26,7 @@ function o(t) {
                         {
                             className: a.tipRow,
                             children: [
-                                (0, i.jsx)(l.X6q, {
+                                (0, i.jsx)(l.Heading, {
                                     variant: "heading-md/semibold",
                                     color: "text-brand",
                                     className: a.tipNumber,

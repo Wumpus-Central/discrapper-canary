@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(724757),
     f = n(210887),
     h = n(387667),
-    x = n(598077),
-    b = n(592125),
+    b = n(598077),
+    x = n(592125),
     j = n(430824),
     v = n(246946),
     _ = n(594174),
@@ -147,7 +147,7 @@ let G = i.forwardRef((e, t) => {
                       switch (t.targetType) {
                           case T.KFR.CHANNEL:
                           case T.KFR.CHANNEL_OVERWRITE:
-                              let i = b.Z.getChannel(t.targetId),
+                              let i = x.Z.getChannel(t.targetId),
                                   a = j.Z.getGuild(l);
                               if (null != i && null != a)
                                   return (0, g.jW)(e, async () => {
@@ -300,7 +300,7 @@ class U extends i.PureComponent {
                 (0, r.jsxs)("div", {
                     className: w.customHeader,
                     children: [
-                        (0, r.jsx)(d.X6q, {
+                        (0, r.jsx)(d.Heading, {
                             variant: "heading-lg/semibold",
                             children: P.intl.string(P.t.SPWLyc),
                         }),
@@ -431,7 +431,7 @@ class U extends i.PureComponent {
             }),
             D(this, "renderUserQuickSelectItem", (e, t) => {
                 var n;
-                if (e.user instanceof x.Z) {
+                if (e.user instanceof b.default) {
                     let t = e.user;
                     return (0, r.jsxs)(
                         d.lo1,
@@ -507,7 +507,7 @@ class U extends i.PureComponent {
                         value: null,
                     },
                     g = [u, ...s].map((e) =>
-                        e instanceof x.Z
+                        e instanceof b.default
                             ? (function (e) {
                                   return {
                                       label: e.username,
@@ -565,7 +565,7 @@ class U extends i.PureComponent {
                     return (0, r.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
                         className: w.loadMore,
-                        children: (0, r.jsx)(d.zxk, {
+                        children: (0, r.jsx)(d.Button, {
                             variant: "secondary",
                             text: P.intl.string(P.t["Q/LSXl"]),
                             onClick: this.handleFetchNextPage,

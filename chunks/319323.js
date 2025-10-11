@@ -63,7 +63,7 @@ function f(e) {
                 );
         });
     }, [t, s]);
-    return (0, r.jsx)(a.zxk, {
+    return (0, r.jsx)(a.Button, {
         size: "sm",
         onClick: c,
         icon: a.QJP,

@@ -116,7 +116,7 @@ function f(e) {
             parentComponent: "ChangeLog",
             children: (0, r.jsx)("div", {
                 className: g.empty,
-                children: (0, r.jsx)(o.X6q, {
+                children: (0, r.jsx)(o.Heading, {
                     variant: "heading-lg/medium",
                     children: u.intl.string(u.t.V9ospq),
                 }),

@@ -20,7 +20,7 @@ let b = function (e) {
         _ = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
         O = d.ZP.useName(_),
         E = (0, c.Z)(null == _ ? void 0 : _.id),
-        y = i.useCallback(
+        v = i.useCallback(
             (e) => {
                 var n, i;
                 return (0, r.jsx)(
@@ -86,7 +86,7 @@ let b = function (e) {
         children: (0, r.jsxs)("div", {
             className: g.previewCard,
             children: [
-                (0, r.jsx)(s.X6q, {
+                (0, r.jsx)(s.Heading, {
                     className: m.heading,
                     variant: "heading-md/semibold",
                     children: h.intl.string(h.t.jY7Zxs),
@@ -99,7 +99,7 @@ let b = function (e) {
                     className: m.memberListContainer,
                     children: (0, r.jsx)(s.yRy, {
                         targetElementRef: b,
-                        renderPopout: y,
+                        renderPopout: v,
                         position: "bottom",
                         shouldShow: n,
                         onRequestClose: () => l(!1),

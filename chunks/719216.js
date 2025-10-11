@@ -76,7 +76,7 @@ function f(e) {
     return (0, r.jsx)(r.Fragment, {
         children: t.buttons.map((e, a) =>
             (0, r.jsx)(
-                i.zxk,
+                i.Button,
                 c(
                     {
                         text: e,

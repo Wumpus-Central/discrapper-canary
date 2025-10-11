@@ -2,8 +2,8 @@ n.d(t, { Z: () => P });
 var r = n(951288),
     i = n(647438),
     l = n(580685),
-    s = n(442837),
-    a = n(704215),
+    a = n(442837),
+    s = n(704215),
     o = n(481060),
     c = n(100527),
     d = n(266454),
@@ -13,11 +13,11 @@ var r = n(951288),
     p = n(441536),
     f = n(494620),
     h = n(434404),
-    x = n(999382),
-    b = n(585961),
+    b = n(999382),
+    x = n(585961),
     j = n(910494),
-    _ = n(196902),
-    v = n(423087),
+    v = n(196902),
+    _ = n(423087),
     C = n(582066),
     O = n(978088),
     y = n(981631),
@@ -29,12 +29,12 @@ var r = n(951288),
 let P = function () {
     var e, t, n, P;
     (0, S.useSyncMessages)(I.messagesLoader);
-    let w = (0, s.e7)([x.Z], () => x.Z.getGuild()),
-        Z = (0, s.e7)([x.Z], () => x.Z.getGuildProfile()),
+    let w = (0, a.e7)([b.Z], () => b.Z.getGuild()),
+        Z = (0, a.e7)([b.Z], () => b.Z.getGuildProfile()),
         { fetchGuildProfile: R, fetchStatus: D } = (0, g.u)(null == w ? void 0 : w.id);
     if (
         (i.useEffect(() => {
-            (0, d.Q3)(a.z.GUILD_TAG_SERVER_SETTINGS_NEW_BADGE, { dismissAction: N.L.AUTO });
+            (0, d.Q3)(s.z.GUILD_TAG_SERVER_SETTINGS_NEW_BADGE, { dismissAction: N.L.AUTO });
         }, []),
         i.useEffect(() => {
             D === u.a.NOT_FETCHED && R();
@@ -54,7 +54,7 @@ let P = function () {
         U = null != (n = Z.badgeColorSecondary) ? n : E.Ek["0"].secondary,
         B = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(_.Z, {
+                (0, r.jsx)(v.Z, {
                     className: T.section,
                     guildId: w.id,
                     isDisabled: k,
@@ -68,7 +68,7 @@ let P = function () {
                     selectedBadge: G,
                     guildId: w.id,
                 }),
-                (0, r.jsx)(v.Z, {
+                (0, r.jsx)(_.Z, {
                     className: T.section,
                     guildId: w.id,
                     badge: G,
@@ -79,7 +79,7 @@ let P = function () {
         });
     return (0, r.jsxs)("div", {
         children: [
-            (0, r.jsx)(o.X6q, {
+            (0, r.jsx)(o.Heading, {
                 className: T.title,
                 variant: "heading-lg/semibold",
                 children: S.intl.string(I.default.mf2OwM),
@@ -149,7 +149,7 @@ let P = function () {
                                   })
                                 : (0, r.jsx)("div", {
                                       className: T.boostingLinkContainer,
-                                      children: (0, r.jsx)(b.P, {
+                                      children: (0, r.jsx)(x.P, {
                                           onClick: () => {
                                               (0, p.Z)(w.id, c.Z.GUILD_POWERUPS_GUILD_SETTINGS_TAGS), h.Z.close();
                                           },

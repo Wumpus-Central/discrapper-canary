@@ -88,7 +88,7 @@ function p(e) {
                                           options: c.options,
                                       }),
                                   "boolean" === c.type &&
-                                      (0, r.jsx)(l.XZJ, {
+                                      (0, r.jsx)(l.Checkbox, {
                                           checked: u,
                                           onChange: (e) => f(i, e),
                                           label: c.label,

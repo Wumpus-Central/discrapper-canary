@@ -110,7 +110,7 @@ function Z(e) {
                                 (0, l.jsxs)("div", {
                                     className: y.textContainer,
                                     children: [
-                                        (0, l.jsx)(r.X6q, {
+                                        (0, l.jsx)(r.Heading, {
                                             variant: "heading-xl/bold",
                                             color: "text-default",
                                             children: b.intl.string(b.t.b33pLC),

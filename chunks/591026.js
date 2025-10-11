@@ -1,9 +1,9 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(755721),
-    s = n(481060),
-    a = n(467319),
+    a = n(481060),
+    s = n(467319),
     o = n(456677),
     c = n(55889),
     d = n(300453),
@@ -54,11 +54,11 @@ function h(e, t) {
         e
     );
 }
-function x(e) {
+function b(e) {
     var t, n;
-    let { rule: x, onChangeRule: b } = e,
-        [j, _] = i.useState(null == (t = x.triggerMetadata) ? void 0 : t.mentionTotalLimit),
-        v = (0, a.a)(x.guildId, !1);
+    let { rule: b, onChangeRule: x } = e,
+        [j, v] = i.useState(null == (t = b.triggerMetadata) ? void 0 : t.mentionTotalLimit),
+        _ = (0, s.a)(b.guildId, !1);
     return (0, r.jsxs)("div", {
         className: p.cardContentsContainer,
         children: [
@@ -71,7 +71,7 @@ function x(e) {
                         children: [
                             (0, r.jsx)("div", {
                                 className: p.mentionLimitIconContainer,
-                                children: (0, r.jsx)(s.lOy, {
+                                children: (0, r.jsx)(a.lOy, {
                                     size: "md",
                                     color: "currentColor",
                                     className: p.mentionLimitIcon,
@@ -80,11 +80,11 @@ function x(e) {
                             (0, r.jsxs)("div", {
                                 className: p.mentionLimitTextContainer,
                                 children: [
-                                    (0, r.jsx)(s.X6q, {
+                                    (0, r.jsx)(a.Heading, {
                                         variant: "heading-sm/semibold",
                                         children: m.intl.string(m.t["s/26oa"]),
                                     }),
-                                    (0, r.jsx)(s.Text, {
+                                    (0, r.jsx)(a.Text, {
                                         color: "interactive-normal",
                                         variant: "text-xs/medium",
                                         className: p.descriptionHint,
@@ -94,13 +94,13 @@ function x(e) {
                             }),
                             (0, r.jsx)("div", {
                                 className: p.stepperContainer,
-                                children: (0, r.jsx)(s.FiK, {
+                                children: (0, r.jsx)(a.FiK, {
                                     value: j,
                                     onChange: (e) => {
-                                        _(e),
-                                            b(
-                                                h(f({}, x), {
-                                                    triggerMetadata: h(f({}, x.triggerMetadata), {
+                                        v(e),
+                                            x(
+                                                h(f({}, b), {
+                                                    triggerMetadata: h(f({}, b.triggerMetadata), {
                                                         mentionTotalLimit: e,
                                                     }),
                                                 }),
@@ -113,13 +113,13 @@ function x(e) {
                             }),
                         ],
                     }),
-                    v
+                    _
                         ? (0, r.jsxs)("div", {
                               className: p.mentionLimitContainer,
                               children: [
                                   (0, r.jsx)("div", {
                                       className: p.mentionLimitIconContainer,
-                                      children: (0, r.jsx)(s.S4f, {
+                                      children: (0, r.jsx)(a.S4f, {
                                           size: "md",
                                           color: "currentColor",
                                           className: p.mentionLimitIcon,
@@ -128,11 +128,11 @@ function x(e) {
                                   (0, r.jsxs)("div", {
                                       className: p.mentionLimitTextContainer,
                                       children: [
-                                          (0, r.jsx)(s.X6q, {
+                                          (0, r.jsx)(a.Heading, {
                                               variant: "heading-sm/semibold",
                                               children: m.intl.string(m.t.XnuC9v),
                                           }),
-                                          (0, r.jsx)(s.Text, {
+                                          (0, r.jsx)(a.Text, {
                                               color: "interactive-normal",
                                               variant: "text-xs/medium",
                                               className: p.descriptionHint,
@@ -141,19 +141,18 @@ function x(e) {
                                       ],
                                   }),
                                   (0, r.jsx)("div", {
-                                      children: (0, r.jsx)(l.VL, {
-                                          checked:
-                                              null == (n = x.triggerMetadata) ? void 0 : n.mentionRaidProtectionEnabled,
-                                          onChange: (e) => {
-                                              b(
-                                                  h(f({}, x), {
-                                                      triggerMetadata: h(f({}, x.triggerMetadata), {
-                                                          mentionRaidProtectionEnabled: e,
+                                      children: (0, r.jsx)(l.$q, {
+                                          value:
+                                              null == (n = b.triggerMetadata) ? void 0 : n.mentionRaidProtectionEnabled,
+                                          onChange: (e, t) => {
+                                              x(
+                                                  h(f({}, b), {
+                                                      triggerMetadata: h(f({}, b.triggerMetadata), {
+                                                          mentionRaidProtectionEnabled: t,
                                                       }),
                                                   }),
                                               );
                                           },
-                                          className: p.__invalid_actionCheckbox,
                                       }),
                                   }),
                               ],
@@ -166,8 +165,8 @@ function x(e) {
                 step: 2,
                 header: m.intl.string(m.t["18TOiY"]),
                 children: (0, r.jsx)(o.Z, {
-                    rule: x,
-                    onChangeRule: b,
+                    rule: b,
+                    onChangeRule: x,
                 }),
             }),
             (0, r.jsx)(u.Z, { type: u.Z.Type.CROSS }),
@@ -175,8 +174,8 @@ function x(e) {
                 step: 3,
                 header: m.intl.string(m.t.eq3gjo),
                 children: (0, r.jsx)(c.Z, {
-                    rule: x,
-                    onChangeRule: b,
+                    rule: b,
+                    onChangeRule: x,
                 }),
             }),
         ],

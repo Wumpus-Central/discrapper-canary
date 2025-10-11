@@ -42,7 +42,7 @@ class u extends (r = a.PureComponent) {
                 children: [
                     (0, i.jsx)(o.xBx, {
                         separator: !1,
-                        children: (0, i.jsx)(o.X6q, {
+                        children: (0, i.jsx)(o.Heading, {
                             variant: "heading-lg/semibold",
                             children: e,
                         }),
@@ -75,16 +75,16 @@ class u extends (r = a.PureComponent) {
                         ],
                     }),
                     (0, i.jsx)(o.mzw, {
-                        children: (0, i.jsxs)(o.hE2, {
+                        children: (0, i.jsxs)(o.ButtonGroup, {
                             direction: "horizontal-reverse",
                             children: [
-                                (0, i.jsx)(o.zxk, {
+                                (0, i.jsx)(o.Button, {
                                     variant: "primary",
                                     text: null != t ? t : s.intl.string(s.t["cY+Ooa"]),
                                     type: "submit",
                                     disabled: u || 0 === d.length,
                                 }),
-                                (0, i.jsx)(o.zxk, {
+                                (0, i.jsx)(o.Button, {
                                     variant: "secondary",
                                     text: s.intl.string(s.t["ETE/oK"]),
                                     onClick: this.handleCancel,

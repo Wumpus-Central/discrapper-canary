@@ -8,8 +8,8 @@ var n = r(951288),
     c = r(601964),
     d = r(485386),
     m = r(768581),
-    x = r(700785),
-    u = r(84058),
+    u = r(700785),
+    x = r(84058),
     p = r(981631),
     b = r(135899),
     h = r(388032),
@@ -42,7 +42,7 @@ function _(e) {
             (0, n.jsxs)("div", {
                 className: j.headerText,
                 children: [
-                    (0, n.jsx)(l.X6q, {
+                    (0, n.jsx)(l.Heading, {
                         variant: "heading-lg/extrabold",
                         color: "header-primary",
                         children: h.intl.string(h.t.MatO7O),
@@ -58,7 +58,7 @@ function _(e) {
     });
 }
 let f = (e) => (e.toString() === p.Plq.MENTION_EVERYONE.toString() ? h.intl.string(h.t.yCpsQ0) : (0, o.wt)(e));
-function v(e) {
+function g(e) {
     let { permissions: t } = e;
     return (0, n.jsxs)("div", {
         className: j.tableContainer,
@@ -92,7 +92,7 @@ function v(e) {
         ],
     });
 }
-function g(e) {
+function v(e) {
     let { permissions: t } = e;
     return (0, n.jsxs)("div", {
         className: j.tableContainer,
@@ -132,7 +132,7 @@ function y(e) {
     return (0, n.jsx)(l.hzk, {
         children: (0, n.jsxs)("div", {
             className: j.table,
-            children: [(0, n.jsx)(v, { permissions: r }), (0, n.jsx)(g, { permissions: s })],
+            children: [(0, n.jsx)(g, { permissions: r }), (0, n.jsx)(v, { permissions: s })],
         }),
     });
 }
@@ -141,7 +141,7 @@ function O(e) {
     return (0, n.jsxs)(l.mzw, {
         className: j.footer,
         children: [
-            (0, n.jsx)(l.zxk, {
+            (0, n.jsx)(l.Button, {
                 variant: "primary",
                 text: h.intl.string(h.t.iOSdAQ),
                 onClick: t,
@@ -166,7 +166,7 @@ function N(e) {
                 r = [];
             return (
                 b.$X.map((n) => {
-                    x.oz(n, t) ? e.push(n) : r.push(n);
+                    u.oz(n, t) ? e.push(n) : r.push(n);
                 }),
                 {
                     enabledPermissions: e,
@@ -180,7 +180,7 @@ function N(e) {
         let n = null != t ? d.Z.getEveryoneRole(t) : void 0;
         if (null == n) return;
         let s = i.Od(n.permissions, b.mu);
-        await (0, u.Gf)(t.id, [
+        await (0, x.Gf)(t.id, [
             ((e = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var r = null != arguments[t] ? arguments[t] : {},

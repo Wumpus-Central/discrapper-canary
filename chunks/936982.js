@@ -19,7 +19,7 @@ let f = () => {
         : (0, r.jsxs)(o.Kqy, {
               gap: 16,
               children: [
-                  (0, r.jsx)(o.X6q, {
+                  (0, r.jsx)(o.Heading, {
                       variant: "heading-lg/semibold",
                       color: "header-primary",
                       children: d.intl.string(d.t["Ig/XFR"]),

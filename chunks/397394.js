@@ -119,7 +119,7 @@ function M(e) {
             children: [
                 s ? (0, r.jsx)(f.$jN, {}) : null,
                 (0, r.jsx)("div", { className: o()(N.header, i) }),
-                (0, r.jsx)(f.X6q, {
+                (0, r.jsx)(f.Heading, {
                     variant: "heading-lg/bold",
                     className: N.text,
                     children: t,
@@ -288,7 +288,7 @@ function G(e) {
                     (0, r.jsxs)("div", {
                         className: N.authorizedSuccessExternalCopy,
                         children: [
-                            (0, r.jsx)(f.X6q, {
+                            (0, r.jsx)(f.Heading, {
                                 variant: "heading-xl/semibold",
                                 color: "header-primary",
                                 children: C.intl.format(C.t["1Q+p1t"], { appName: t.name }),

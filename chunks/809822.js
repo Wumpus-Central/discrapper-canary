@@ -11,6 +11,6 @@ e.exports = {
     channelIcon: "channelIcon_e6fa8e",
     selectableChannelRow: "selectableChannelRow_e6fa8e",
     selectAllContainer: "selectAllContainer_e6fa8e",
+    selectAllCheckbox: "selectAllCheckbox_e6fa8e",
     selectAllTitle: "selectAllTitle_e6fa8e",
-    selectAllButton: "selectAllButton_e6fa8e",
 };

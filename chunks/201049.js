@@ -29,15 +29,15 @@ function f(e) {
                   }
                 : null,
         ),
-        [E, I] = l.useState(null == O ? void 0 : O.moderated),
-        S = (0, a.e7)([m.ZP], () => ((null == w ? void 0 : w.id) != null ? m.ZP.getUsableCustomEmojiById(w.id) : null)),
-        _ =
+        [B, E] = l.useState(null == O ? void 0 : O.moderated),
+        I = (0, a.e7)([m.ZP], () => ((null == w ? void 0 : w.id) != null ? m.ZP.getUsableCustomEmojiById(w.id) : null)),
+        S =
             (null == O ? void 0 : O.name) !== P ||
             (null == O ? void 0 : O.emojiId) !== (null == w ? void 0 : w.id) ||
             (null == O ? void 0 : O.emojiName) !== (null == w ? void 0 : w.name) ||
-            E !== (null == O ? void 0 : O.moderated),
-        B = () => {
-            if (null != P && _) {
+            B !== (null == O ? void 0 : O.moderated),
+        _ = () => {
+            if (null != P && S) {
                 if (x) {
                     p.Z.updateForumTag(
                         {
@@ -45,7 +45,7 @@ function f(e) {
                             name: P,
                             emojiId: null == w ? void 0 : w.id,
                             emojiName: null == w ? void 0 : w.name,
-                            moderated: E,
+                            moderated: B,
                         },
                         h,
                     ),
@@ -57,7 +57,7 @@ function f(e) {
                         name: P,
                         emojiId: null == w ? void 0 : w.id,
                         emojiName: null == w ? void 0 : w.name,
-                        moderated: E,
+                        moderated: B,
                     },
                     h,
                 ),
@@ -86,13 +86,13 @@ function f(e) {
                 {
                     variant: "primary",
                     text: b.intl.string(b.t.R3BPHx),
-                    onClick: B,
-                    disabled: 0 === P.length || !_,
+                    onClick: _,
+                    disabled: 0 === P.length || !S,
                     autoFocus: !0,
                 },
             ],
             actionBarInput: x
-                ? (0, i.jsx)(r.zxk, {
+                ? (0, i.jsx)(r.Button, {
                       variant: "critical-secondary",
                       text: b.intl.string(b.t.huYSMj),
                       onClick: () => {
@@ -193,7 +193,7 @@ function f(e) {
                                                                       className: y.emoji,
                                                                       emojiId: w.id,
                                                                       emojiName: w.name,
-                                                                      animated: !!(null == S ? void 0 : S.animated),
+                                                                      animated: !!(null == I ? void 0 : I.animated),
                                                                   })
                                                             : null,
                                                 }),
@@ -220,7 +220,7 @@ function f(e) {
                             }),
                         },
                         onKeyDown: (e) => {
-                            e.keyCode === v.yXg.ENTER && P.length > 0 && (P.length > 0 && B(), e.preventDefault());
+                            e.keyCode === v.yXg.ENTER && P.length > 0 && (P.length > 0 && _(), e.preventDefault());
                         },
                         trailing:
                             P.length > 0 || null != w
@@ -235,9 +235,9 @@ function f(e) {
                     }),
                 }),
                 (0, i.jsx)(r.LZC, { size: 16 }),
-                (0, i.jsx)(r.XZJ, {
-                    checked: null != E && E,
-                    onChange: (e) => I(e || ((null == O ? void 0 : O.moderated) == null && void 0)),
+                (0, i.jsx)(r.Checkbox, {
+                    checked: null != B && B,
+                    onChange: (e) => E(e || ((null == O ? void 0 : O.moderated) == null && void 0)),
                     label: b.intl.string(b.t["rMH+rq"]),
                     labelType: "secondary",
                 }),

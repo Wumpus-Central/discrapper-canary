@@ -17,11 +17,11 @@ var r = n(951288),
     _ = n(766219),
     O = n(749681),
     E = n(49898),
-    y = n(981631),
-    v = n(46140),
+    v = n(981631),
+    y = n(46140),
     I = n(388032),
-    S = n(933767);
-function C(e) {
+    C = n(933767);
+function S(e) {
     let { tab: t } = e,
         { enabled: n } = c.c.useExperiment({ location: "GlobalDiscoverySidebar" }, { autoTrackExposure: !0 }),
         l = b.Z.useField("selectedTab"),
@@ -41,17 +41,17 @@ function C(e) {
                 })(t, n),
             [t, n],
         ),
-        C = i.useMemo(() => (0, _.s)(t), [t]),
+        S = i.useMemo(() => (0, _.s)(t), [t]),
         T = l === t,
         N = i.useCallback(() => {
             switch (t) {
                 case E.GlobalDiscoveryTab.QUESTS:
                     return (
                         T && g.Z.resetState(),
-                        m.default.track(y.rMx.DISCOVERY_QUEST_TAB_CLICKED, { client_ad_session_id: (0, u.Gy)().uuid }),
+                        m.default.track(v.rMx.DISCOVERY_QUEST_TAB_CLICKED, { client_ad_session_id: (0, u.Gy)().uuid }),
                         (0, O.transitionToGlobalDiscovery)({
                             tab: E.GlobalDiscoveryTab.QUESTS,
-                            location: v.dr.DISCOVERY_SIDEBAR,
+                            location: y.dr.DISCOVERY_SIDEBAR,
                             questContent: o.j.DISCOVERY_SIDEBAR,
                         })
                     );
@@ -76,34 +76,34 @@ function C(e) {
         }, [t, T]);
     return (0, r.jsxs)(s.P3F, {
         onClick: N,
-        className: a()(S.navItem, { [S.selected]: T }),
+        className: a()(C.navItem, { [C.selected]: T }),
         children: [
             (0, r.jsx)("div", {
-                className: S.navItemIcon,
+                className: C.navItemIcon,
                 children: I,
             }),
             (0, r.jsx)(s.Text, {
                 variant: "text-md/medium",
                 color: "none",
-                children: C,
+                children: S,
             }),
         ],
     });
 }
 let T = function () {
     return (0, r.jsxs)("div", {
-        className: S.container,
+        className: C.container,
         children: [
             (0, r.jsx)("div", {
-                className: S.header,
-                children: (0, r.jsx)(s.X6q, {
+                className: C.header,
+                children: (0, r.jsx)(s.Heading, {
                     variant: "text-lg/semibold",
                     children: I.intl.string(I.t["1KqYnp"]),
                 }),
             }),
             (0, r.jsx)("nav", {
-                className: S.nav,
-                children: E.GLOBAL_DISCOVERY_TABS.map((e) => (0, r.jsx)(C, { tab: e }, e)),
+                className: C.nav,
+                children: E.GLOBAL_DISCOVERY_TABS.map((e) => (0, r.jsx)(S, { tab: e }, e)),
             }),
         ],
     });

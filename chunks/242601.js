@@ -17,11 +17,11 @@ var r = n(951288),
     _ = n(110924),
     O = n(100527),
     E = n(906732),
-    y = n(785203),
-    v = n(211644),
+    v = n(785203),
+    y = n(211644),
     I = n(266454),
-    S = n(492162),
-    C = n(43740),
+    C = n(492162),
+    S = n(43740),
     T = n(596557),
     N = n(817520),
     j = n(999309),
@@ -43,8 +43,8 @@ var r = n(951288),
     F = n(430824),
     z = n(819640),
     W = n(496675),
-    q = n(878884),
-    Y = n(19780),
+    Y = n(878884),
+    q = n(19780),
     K = n(594174),
     Q = n(74538),
     X = n(374023),
@@ -256,7 +256,7 @@ class em extends i.PureComponent {
                         animation: f.yRy.Animation.SCALE,
                         shouldShow: n,
                         onRequestClose: () => {
-                            (0, C.l)(!1);
+                            (0, S.l)(!1);
                         },
                         spacing: 4,
                         children: (i) => {
@@ -380,7 +380,7 @@ class em extends i.PureComponent {
             }),
             eu(this, "handleHeaderMenuToggle", (e) => {
                 let { isHeaderPopoutOpen: t } = this.props;
-                e.stopPropagation(), (0, C.l)(!t), this.closeAllHeaderNotices();
+                e.stopPropagation(), (0, S.l)(!t), this.closeAllHeaderNotices();
             }),
             eu(this, "handleContextMenu", (e) => {
                 let { guild: t } = this.props;
@@ -395,15 +395,15 @@ class em extends i.PureComponent {
                 null != t &&
                     (0, g.jW)(e, async () => {
                         let { default: e } = await Promise.all([
+                            n.e("74318"),
                             n.e("36599"),
                             n.e("7654"),
-                            n.e("58175"),
                             n.e("76692"),
                             n.e("8271"),
                             n.e("15851"),
                             n.e("51453"),
                             n.e("845"),
-                            n.e("58511"),
+                            n.e("59077"),
                             n.e("6850"),
                             n.e("58227"),
                             n.e("44686"),
@@ -528,28 +528,28 @@ function eb(e) {
     let { guildId: n, hideSelectedChannel: l, selectedChannelId: a } = e,
         o = (0, c.e7)([F.Z], () => F.Z.getGuild(n));
     (0, b.J_)(n);
-    let d = (0, S.Z)(n),
+    let d = (0, C.Z)(n),
         p = (0, c.e7)([B.Z], () => B.Z.getGuildDimensions(n).scrollTo),
-        h = (0, c.e7)([Y.Z], () => Y.Z.getChannelId()),
+        h = (0, c.e7)([q.Z], () => q.Z.getChannelId()),
         g = (0, c.e7)([W.Z], () => W.Z.can(ei.Plq.MANAGE_GUILD, o)),
         m = (0, c.e7)([H.Z], () => H.Z.isUnavailable(n)),
         P = (0, c.e7)([K.default], () => K.default.getCurrentUser()),
         { enableStudyGroup: Z } = (0, A.s)(o),
-        w = (0, v.ZP)((e) => e.currentlyShown.has(u.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
+        w = (0, y.ZP)((e) => e.currentlyShown.has(u.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
         [k, M] = i.useState(!w),
         V = (0, _.Z)(n),
         { analyticsLocations: J } = (0, E.ZP)(O.Z.GUILD_HEADER);
     i.useEffect(() => {
         n !== V && M(!w);
     }, [n, V, w]);
-    let [$, ee] = (0, v.ZP)(
+    let [$, ee] = (0, y.ZP)(
             (e) => [
                 el.XN.some((t) => e.currentlyShown.has(t.dismissibleContentType)),
                 e.currentlyShownGroup.has(ea.R.GUILD_HEADER_TOOLTIPS),
             ],
             s.X,
         ),
-        et = (0, y.Z)(o),
+        et = (0, v.Z)(o),
         en = (0, f.s9z)(f.JQI),
         er = (0, c.e7)([z.Z], () => z.Z.hasLayers()),
         eo = (0, c.e7)([U.Z], () => U.Z.shouldShow(eh)),
@@ -566,17 +566,17 @@ function eb(e) {
             () => null != o && null != P && g && !z.Z.hasLayers() && x.Z.shouldShowGuildTemplateDirtyTooltip(n),
         ),
         ef = (0, c.e7)([G.Z], () => G.Z.getChannel(a)),
-        { isPopoutOpen: eg } = (0, C.y)(),
+        { isPopoutOpen: eg } = (0, S.y)(),
         eb = null != (t = null == o ? void 0 : o.features.has(ei.oNc.COMMUNITY)) && t,
         e_ = Q.ZP.isNewUser(P),
         eO = k && !e_;
     (0, T.Z)(o);
     let eE = (0, I.Nj)(u.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
-        ey = (0, L.Z)(n),
-        ev = (0, N.Z)(n),
-        eI = (0, c.e7)([Y.Z], () => Y.Z.getChannelId()),
-        eS = (0, c.e7)([q.Z], () => q.Z.desyncedVoiceStatesCount),
-        eC = (0, D.Z)(n);
+        ev = (0, L.Z)(n),
+        ey = (0, N.Z)(n),
+        eI = (0, c.e7)([q.Z], () => q.Z.getChannelId()),
+        eC = (0, c.e7)([Y.Z], () => Y.Z.desyncedVoiceStatesCount),
+        eS = (0, D.Z)(n);
     return (0, r.jsx)(em, {
         guildId: n,
         hideSelectedChannel: l,
@@ -587,7 +587,7 @@ function eb(e) {
         selectedVoiceChannelId: h,
         voiceStates: d,
         rtcConnectedChannelId: eI,
-        rtcDesyncedVoiceStatesCount: eS,
+        rtcDesyncedVoiceStatesCount: eC,
         isUnavailable: m,
         user: P,
         hasChannelNotice: null != et || $,
@@ -599,8 +599,8 @@ function eb(e) {
         showRoleSubscriptionUpsell: ec,
         showHubPrivacySettingsTooltip: eu,
         showNewUnreadsBar: eb,
-        showMediaChannelUpsell: ey,
-        showTierTemplatesUpsell: ev,
+        showMediaChannelUpsell: ev,
+        showTierTemplatesUpsell: ey,
         isHeaderPopoutOpen: eg,
         enableStudyGroup: Z,
         isGuildHeaderDismissibleTooltipShown: ee,
@@ -608,6 +608,6 @@ function eb(e) {
         headerAnalyticsLocations: J,
         isTutorialHighlightDismissed: eE,
         shouldRenderBurstCoachmark: eO,
-        shouldRenderGuildPowerupPerkCoachmark: !1 === eC,
+        shouldRenderGuildPowerupPerkCoachmark: !1 === eS,
     });
 }

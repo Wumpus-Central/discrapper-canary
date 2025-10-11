@@ -57,7 +57,7 @@ function p(e) {
     return (0, r.jsxs)("div", {
         className: g.guildInfoCard,
         children: [
-            (0, r.jsx)(l.X6q, {
+            (0, r.jsx)(l.Heading, {
                 className: g.presentedBy,
                 variant: "text-sm/medium",
                 children: h.intl.string(h.t.Eabu19),

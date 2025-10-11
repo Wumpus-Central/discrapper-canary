@@ -13,7 +13,7 @@ function c(e) {
     let m = () => {
         null == c || c(), l.Z.closePrivateChannel(t.id);
     };
-    return (0, i.jsx)(r.zxk, {
+    return (0, i.jsx)(r.Button, {
         variant: "critical-primary",
         size: "sm",
         disabled: null == f,

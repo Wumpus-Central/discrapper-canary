@@ -31,7 +31,7 @@ function p(e) {
 function h(e) {
     let { children: t } = e;
     return _()
-        ? (0, r.jsx)(s.X6q, {
+        ? (0, r.jsx)(s.Heading, {
               variant: "heading-md/semibold",
               color: "text-primary",
               className: o()(d.header, d.premiumRebrand),

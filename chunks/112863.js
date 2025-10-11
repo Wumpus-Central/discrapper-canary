@@ -34,7 +34,7 @@ function d() {
                     }),
                 ],
             }),
-            (0, r.jsx)(i.zxk, {
+            (0, r.jsx)(i.Button, {
                 variant: "secondary",
                 text: l.intl.string(l.t.JFlifn),
                 onClick: e,

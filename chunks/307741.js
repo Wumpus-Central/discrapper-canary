@@ -108,7 +108,7 @@ function T(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(u.zxk, {
+            (0, r.jsx)(u.Button, {
                 variant: "secondary",
                 size: "sm",
                 onClick: i,

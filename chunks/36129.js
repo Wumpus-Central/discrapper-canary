@@ -118,7 +118,7 @@ let A = (e) => e.map((e) => "#".concat(e)),
                       (0, r.jsxs)("div", {
                           className: S.sharedByContainer,
                           children: [
-                              (0, r.jsxs)(d.X6q, {
+                              (0, r.jsxs)(d.Heading, {
                                   variant: "heading-md/semibold",
                                   className: S.sharedTitle,
                                   children: [T.intl.string(I.default.KSBBpK), " ", (0, r.jsx)(l.SrA, {})],

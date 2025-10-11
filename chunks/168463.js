@@ -116,14 +116,14 @@ function m(e) {
                       (0, r.jsxs)("div", {
                           className: m ? u.buttonsVertical : u.buttonsHorizontal,
                           children: [
-                              (0, r.jsx)(a.zxk, {
+                              (0, r.jsx)(a.Button, {
                                   text: c.intl.string(c.t.p89ACg),
                                   size: "sm",
                                   variant: "secondary",
                                   onClick: g,
                                   fullWidth: m,
                               }),
-                              (0, r.jsx)(a.zxk, {
+                              (0, r.jsx)(a.Button, {
                                   text: c.intl.string(c.t.gm1Ven),
                                   size: "sm",
                                   variant: "secondary",

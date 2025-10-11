@@ -793,7 +793,7 @@ async function e_() {
         });
         c.Z.dispatch({
             type: "BILLING_NITRO_AFFINITY_FETCH_SUCCEEDED",
-            res: e.body.map((e) => new h.Z(e)),
+            res: e.body.map((e) => new h.default(e)),
         });
     } finally {
         c.Z.dispatch({ type: "BILLING_NITRO_AFFINITY_FETCHED" });

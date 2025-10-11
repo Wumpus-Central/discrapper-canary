@@ -1,8 +1,8 @@
 t.d(a, { t: () => v }), t(415506);
 var r = t(951288),
-    s = t(647438),
-    n = t(512722),
-    l = t.n(n),
+    n = t(647438),
+    s = t(512722),
+    l = t.n(s),
     i = t(478677),
     o = t(755721),
     c = t(481060),
@@ -19,29 +19,29 @@ function v(e) {
     let {
             platformType: a,
             isWaitingForConnection: t,
-            onWaitingForConnection: n,
+            onWaitingForConnection: s,
             expectedCallbackState: m,
             onAuthToken: v,
-            onError: k,
-            onClose: f,
+            onError: f,
+            onClose: k,
             img: b,
-            title: E,
-            body: T,
-            redirectDestination: g,
+            title: g,
+            body: E,
+            redirectDestination: T,
         } = e,
-        O = s.useCallback(async () => {
+        O = n.useCallback(async () => {
             let e;
             try {
                 if (((e = await (0, u.H)(a, { twoWayLinkType: i.g.DESKTOP })), null == e))
                     throw Error("missing authorizeURL");
             } catch (e) {
-                p.error("Error opening provider authorize page", e), k();
+                p.error("Error opening provider authorize page", e), f();
                 return;
             }
             let { state: t } = (0, x.xp)(e);
-            l()(null != t, "Authorize URL state query parameter must be present"), null == n || n(t);
-        }, [a, k, n]),
-        y = s.useCallback(
+            l()(null != t, "Authorize URL state query parameter must be present"), null == s || s(t);
+        }, [a, f, s]),
+        y = n.useCallback(
             (e) => {
                 let { callbackCode: t, callbackState: r } = e;
                 if (r !== m) return void p.warn("".concat(a, " link: received mismatching callback state!"));
@@ -53,7 +53,7 @@ function v(e) {
             [a, m, v],
         );
     return (
-        s.useEffect(
+        n.useEffect(
             () => (
                 d.Z.subscribe("USER_CONNECTIONS_LINK_CALLBACK", y),
                 () => {
@@ -82,15 +82,15 @@ function v(e) {
                             className: j.illustration,
                             children: [b, " "],
                         }),
-                        (0, r.jsx)(c.X6q, {
+                        (0, r.jsx)(c.Heading, {
                             className: j.title,
                             variant: "heading-xl/extrabold",
-                            children: E,
+                            children: g,
                         }),
-                        null != f &&
+                        null != k &&
                             (0, r.jsx)(c.olH, {
                                 className: j.closeButton,
-                                onClick: f,
+                                onClick: k,
                             }),
                     ],
                 }),
@@ -102,15 +102,15 @@ function v(e) {
                             tag: "p",
                             variant: "text-md/normal",
                             color: "header-secondary",
-                            children: T,
+                            children: E,
                         }),
                         !t &&
-                            null != g &&
+                            null != T &&
                             (0, r.jsx)(c.Text, {
                                 tag: "p",
                                 variant: "text-sm/normal",
                                 color: "header-secondary",
-                                children: C.intl.format(C.t.XhlYYm, { redirectUrl: g }),
+                                children: C.intl.format(C.t.XhlYYm, { redirectUrl: T }),
                             }),
                     ],
                 }),

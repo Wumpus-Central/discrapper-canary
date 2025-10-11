@@ -186,7 +186,7 @@ let X = (e, t, i) => {
                                             : W,
                                 }),
                             j &&
-                                (0, r.jsx)(l.zxk, {
+                                (0, r.jsx)(l.Button, {
                                     variant: "expressive",
                                     icon: l.SrA,
                                     size: "md",
@@ -232,7 +232,7 @@ let X = (e, t, i) => {
                     children: [
                         f,
                         O && null != p.expires_at && (0, r.jsx)(w.Z, { expiresAt: p.expires_at }),
-                        (0, r.jsx)(l.X6q, {
+                        (0, r.jsx)(l.Heading, {
                             variant: "display-lg",
                             color: "always-white",
                             className: O ? F.churnDiscountHeader : F.header,
@@ -267,7 +267,7 @@ let X = (e, t, i) => {
                                     (0, r.jsxs)("div", {
                                         className: F.churnEntrypointButtons,
                                         children: [
-                                            (0, r.jsx)(l.zxk, {
+                                            (0, r.jsx)(l.Button, {
                                                 variant: "expressive",
                                                 icon: l.SrA,
                                                 size: "md",
@@ -316,7 +316,7 @@ let X = (e, t, i) => {
                         className: F.contentV2,
                         children: [
                             t,
-                            (0, r.jsx)(l.X6q, {
+                            (0, r.jsx)(l.Heading, {
                                 variant: "display-lg",
                                 color: "always-white",
                                 className: F.header,
@@ -356,7 +356,7 @@ let X = (e, t, i) => {
                             className: F.reverseTrialHomeHeader,
                             children: [
                                 i,
-                                (0, r.jsx)(l.X6q, {
+                                (0, r.jsx)(l.Heading, {
                                     variant: "display-lg",
                                     color: "always-white",
                                     className: F.header,

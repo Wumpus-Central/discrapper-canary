@@ -51,21 +51,21 @@ let s = {
                             direction: "horizontal",
                             gap: "sm",
                             children: [
-                                (0, r.jsx)(o.zxk, {
+                                (0, r.jsx)(o.Button, {
                                     variant: "secondary",
                                     size: "sm",
                                     text: "Check",
                                     onClick: m,
                                     disabled: t || n,
                                 }),
-                                (0, r.jsx)(o.zxk, {
+                                (0, r.jsx)(o.Button, {
                                     variant: "secondary",
                                     size: "sm",
                                     text: "Uncheck",
                                     onClick: g,
                                     disabled: t || n,
                                 }),
-                                (0, r.jsx)(o.zxk, {
+                                (0, r.jsx)(o.Button, {
                                     variant: "primary",
                                     size: "sm",
                                     text: "Toggle",

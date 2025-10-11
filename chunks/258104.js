@@ -158,7 +158,7 @@ let N = (e) => {
                         }),
                     }),
                     (0, a.jsx)(x, { className: w.headerIcon }),
-                    (0, a.jsx)(c.X6q, {
+                    (0, a.jsx)(c.Heading, {
                         variant: "heading-lg/bold",
                         className: w.heading,
                         children: p,

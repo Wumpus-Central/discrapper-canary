@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(367907),
     f = n(906732),
     h = n(218867),
-    x = n(733026),
-    b = n(246946),
+    b = n(733026),
+    x = n(246946),
     j = n(594174),
     v = n(626135),
     _ = n(136015),
@@ -77,12 +77,12 @@ function R(e) {
     var t;
     let { transitionState: n, guild: l, user: a, ban: s, hideDiscriminator: c, onClose: g } = e,
         [m, h] = i.useState(!1),
-        [x, b] = i.useState(null),
+        [b, x] = i.useState(null),
         { analyticsLocations: j } = (0, f.ZP)(),
         _ = null != (t = null == j ? void 0 : j[0]) ? t : null;
     async function O() {
         if (null != l) {
-            b(null), h(!0);
+            x(null), h(!0);
             try {
                 await d.Z.unbanUser(l.id, a.id),
                     g(),
@@ -95,7 +95,7 @@ function R(e) {
                         }),
                     );
             } catch (e) {
-                b(new u.Z(e)), h(!1);
+                x(new u.Z(e)), h(!1);
             }
         }
     }
@@ -108,7 +108,7 @@ function R(e) {
                 className: T.header,
                 separator: !1,
                 children: [
-                    (0, r.jsx)(o.X6q, {
+                    (0, r.jsx)(o.Heading, {
                         variant: "heading-xl/semibold",
                         className: T.userUsername,
                         children: C.ZP.getUserTag(a, {
@@ -118,7 +118,7 @@ function R(e) {
                     }),
                     c || a.hasUniqueUsername()
                         ? null
-                        : (0, r.jsxs)(o.X6q, {
+                        : (0, r.jsxs)(o.Heading, {
                               variant: "heading-xl/semibold",
                               className: T.userDiscrim,
                               children: ["#", a.discriminator],
@@ -137,27 +137,27 @@ function R(e) {
                         color: "text-secondary",
                         children: null != s.reason && "" !== s.reason ? s.reason : S.intl.string(S.t["t+2Zcn"]),
                     }),
-                    null != x
+                    null != b
                         ? (0, r.jsx)(o.Text, {
                               className: T.error,
                               color: "text-danger",
                               variant: "text-sm/normal",
-                              children: x.getAnyErrorMessage(),
+                              children: b.getAnyErrorMessage(),
                           })
                         : null,
                 ],
             }),
             (0, r.jsx)(o.mzw, {
                 className: T.footer,
-                children: (0, r.jsxs)(o.hE2, {
+                children: (0, r.jsxs)(o.ButtonGroup, {
                     direction: "horizontal-reverse",
                     children: [
-                        (0, r.jsx)(o.zxk, {
+                        (0, r.jsx)(o.Button, {
                             variant: "primary",
                             text: S.intl.string(S.t.i4jeWV),
                             onClick: g,
                         }),
-                        (0, r.jsx)(o.zxk, {
+                        (0, r.jsx)(o.Button, {
                             variant: "critical-secondary",
                             text: S.intl.string(S.t.UPcIa2),
                             onClick: O,
@@ -228,7 +228,7 @@ class D extends i.PureComponent {
 }
 let A = i.forwardRef(function (e, t) {
     let { guild: n, sortedBans: l, bans: a } = e,
-        c = (0, s.e7)([b.Z], () => b.Z.hidePersonalInformation, []),
+        c = (0, s.e7)([x.Z], () => x.Z.hidePersonalInformation, []),
         d = i.useCallback(
             (e) => {
                 var t;
@@ -297,7 +297,7 @@ function L(e) {
             if (!s)
                 try {
                     c(!0);
-                    let [e, n] = (0, x.C)(l),
+                    let [e, n] = (0, b.C)(l),
                         r = e[0];
                     O.Z.setSearchQuery(l), await d.Z.searchGuildBans(t, r, n), c(!1);
                 } catch (e) {
@@ -312,7 +312,7 @@ function L(e) {
         );
     return (0, r.jsxs)("div", {
         children: [
-            (0, r.jsx)(o.X6q, {
+            (0, r.jsx)(o.Heading, {
                 variant: "heading-lg/semibold",
                 children: S.intl.string(S.t["7OY0gI"]),
             }),
@@ -338,7 +338,7 @@ function L(e) {
                     (0, r.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
                         className: T.searchButton,
-                        children: (0, r.jsx)(o.zxk, {
+                        children: (0, r.jsx)(o.Button, {
                             variant: "primary",
                             text: S.intl.string(S.t["5h0QOD"]),
                             onClick: p,
@@ -357,8 +357,8 @@ function k() {
         p = null != u && u.trim().length > 0,
         f = (0, g.Z)(p),
         h = p !== f,
-        [b] = (0, s.e7)([y.Z], () => y.Z.getBans(), [], _.Q),
-        v = null != (e = null == b ? void 0 : b.size) ? e : 0,
+        [x] = (0, s.e7)([y.Z], () => y.Z.getBans(), [], _.Q),
+        v = null != (e = null == x ? void 0 : x.size) ? e : 0,
         C = (0, m.ZP)(),
         O = null != (t = null == c ? void 0 : c.id) ? t : I.lds,
         N = i.useRef(null),
@@ -368,7 +368,7 @@ function k() {
                     ? (e) => null != e
                     : (t) => {
                           if (null == t || 0 === e.trim().length) return !1;
-                          let [[n], r] = (0, x.C)(e);
+                          let [[n], r] = (0, b.C)(e);
                           return (
                               !!r.includes(t.id) ||
                               (null != n &&
@@ -392,8 +392,8 @@ function k() {
             },
             [E],
         ),
-        R = i.useMemo(() => P(b, u, v), [b, P, u, v]),
-        D = null != b,
+        R = i.useMemo(() => P(x, u, v), [x, P, u, v]),
+        D = null != x,
         k = R.length % 1000 == 0 && R.length > 0 && D,
         G = 0 === R.length,
         [M, U] = i.useState({
@@ -417,15 +417,15 @@ function k() {
                     (e + 1) * M.pageSize > R.length &&
                         k &&
                         !p &&
-                        ((z.current = null != (r = null == (n = R[R.length - 1]) ? void 0 : n.id) ? r : null),
-                        B(z.current)),
+                        ((W.current = null != (r = null == (n = R[R.length - 1]) ? void 0 : n.id) ? r : null),
+                        B(W.current)),
                     (null != F[e - 1] || k) && U((t) => Z(w({}, t), { currentPage: e }));
             },
             [M.pageSize, R, k, F, B, p],
         ),
-        z = i.useRef(null);
+        W = i.useRef(null);
     i.useEffect(() => {
-        B(z.current);
+        B(W.current);
     }, [B]);
     let V = i.useMemo(() => {
         var e;
@@ -446,7 +446,7 @@ function k() {
                           !G &&
                               (0, r.jsx)(A, {
                                   guild: c,
-                                  bans: b,
+                                  bans: x,
                                   sortedBans: V,
                                   ref: N,
                               }),

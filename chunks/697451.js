@@ -342,7 +342,7 @@ function q(e) {
         j = (0, O.t0)(a),
         U =
             (null == j ? void 0 : j.type) === _.B8.APPLICATION_COMMAND && null != j.target_user
-                ? new T.Z(j.target_user)
+                ? new T.default(j.target_user)
                 : null,
         B =
             (null == j ? void 0 : j.type) === _.B8.APPLICATION_COMMAND &&

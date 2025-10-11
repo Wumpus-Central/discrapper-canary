@@ -20,7 +20,7 @@ let f = () =>
                 (0, r.jsxs)("div", {
                     className: u.coachtipTextContainer,
                     children: [
-                        (0, r.jsx)(s.X6q, {
+                        (0, r.jsx)(s.Heading, {
                             variant: "heading-lg/semibold",
                             children: c.intl.string(c.t.V5y3qa),
                         }),

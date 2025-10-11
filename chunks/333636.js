@@ -2,8 +2,8 @@ a.d(t, { default: () => c }), a(388685);
 var n = a(951288),
     s = a(647438),
     l = a(481060),
-    r = a(238675),
-    i = a(37291),
+    i = a(238675),
+    r = a(37291),
     o = a(75485);
 let c = function (e) {
     let { onClose: t, transitionState: a } = e,
@@ -15,7 +15,7 @@ let c = function (e) {
             if (c) {
                 p("");
                 try {
-                    await (0, r.qy)(c, {
+                    await (0, i.qy)(c, {
                         difficulty: null != u ? u : void 0,
                         should_serve_invisible: null != C ? C : void 0,
                     });
@@ -31,7 +31,7 @@ let c = function (e) {
             (0, n.jsxs)(l.xBx, {
                 className: o.header,
                 children: [
-                    (0, n.jsx)(l.X6q, {
+                    (0, n.jsx)(l.Heading, {
                         variant: "heading-lg/semibold",
                         children: "Captcha Test Tool",
                     }),
@@ -43,24 +43,24 @@ let c = function (e) {
                 children: [
                     (0, n.jsx)(l.q4e, {
                         value: c,
-                        options: i.p,
+                        options: r.p,
                         onChange: (e) => {
-                            e !== r.fw.HCAPTCHA_RQDATA && e !== r.fw.SMITE_RQDATA && T(null),
-                                e !== r.fw.HCAPTCHA_RQDATA && d(null),
+                            e !== i.fw.HCAPTCHA_RQDATA && e !== i.fw.SMITE_RQDATA && T(null),
+                                e !== i.fw.HCAPTCHA_RQDATA && d(null),
                                 A(e),
                                 p("");
                         },
                     }),
-                    c === r.fw.HCAPTCHA_RQDATA &&
+                    c === i.fw.HCAPTCHA_RQDATA &&
                         (0, n.jsx)(l.q4e, {
                             value: u,
-                            options: i.Z,
+                            options: r.Z,
                             onChange: (e) => {
-                                c === r.fw.HCAPTCHA_RQDATA && d(e);
+                                c === i.fw.HCAPTCHA_RQDATA && d(e);
                             },
                         }),
-                    (c === r.fw.HCAPTCHA_RQDATA || c === r.fw.SMITE_RQDATA) &&
-                        (0, n.jsx)(l.XZJ, {
+                    (c === i.fw.HCAPTCHA_RQDATA || c === i.fw.SMITE_RQDATA) &&
+                        (0, n.jsx)(l.Checkbox, {
                             checked: null != C && C,
                             onChange: (e) => T(e),
                             label: "Should serve invisible?",
@@ -70,7 +70,7 @@ let c = function (e) {
             (0, n.jsxs)(l.mzw, {
                 className: o.footer,
                 children: [
-                    (0, n.jsx)(l.zxk, {
+                    (0, n.jsx)(l.Button, {
                         variant: "primary",
                         text: "Trigger Captcha",
                         onClick: f,

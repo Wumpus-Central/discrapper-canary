@@ -49,7 +49,7 @@ var i,
     W = n(981631),
     z = n(388032),
     V = n(712103);
-function K(e) {
+function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -74,7 +74,7 @@ function K(e) {
     }
     return e;
 }
-function Q(e, t) {
+function K(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -92,7 +92,7 @@ function Q(e, t) {
         e
     );
 }
-function H(e, t) {
+function Q(e, t) {
     if (null == e) return {};
     var n,
         i,
@@ -152,7 +152,7 @@ let X = l.memo((e) => {
             animateOnHover: !0,
             guildId: null,
         }),
-        H = (0, s.JA)("".concat(u)),
+        Q = (0, s.JA)("".concat(u)),
         [Y, X] = l.useState(!1),
         [$, ee] = l.useState({}),
         et = i.filter((e) => e.type === W.IIU.PLAYING && (0, m.Z)(e, W.xjy.JOIN)),
@@ -195,7 +195,7 @@ let X = l.memo((e) => {
         eg = l.useCallback(() => {
             if (null != a) {
                 let e = a.traits,
-                    t = Q(K({}, a), { traits: e.slice(0, 3) });
+                    t = K(H({}, a), { traits: e.slice(0, 3) });
                 return (0, r.jsx)(_.Gk, {
                     location: _.Gt.FRIENDS_POPOUT,
                     className: V.badgesContainer,
@@ -240,7 +240,7 @@ let X = l.memo((e) => {
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                Q(K({}, n), {
+                                K(H({}, n), {
                                     user: t,
                                     appContext: w,
                                 }),
@@ -280,7 +280,7 @@ let X = l.memo((e) => {
                     null != n.application_id && "" !== n.application_id && !$[n.application_id])
                 )
                     try {
-                        ee((e) => Q(K({}, e), { [n.application_id]: !0 })),
+                        ee((e) => K(H({}, e), { [n.application_id]: !0 })),
                             await f.Z.sendActivityInviteUser({
                                 type: W.mFx.JOIN,
                                 userId: t.id,
@@ -288,9 +288,9 @@ let X = l.memo((e) => {
                                 location: W.Sbl.FRIENDS_POPOUT,
                             }),
                             null == T || T("send_activity_invite", t.id),
-                            ee((e) => Q(K({}, e), { [n.application_id]: !1 }));
+                            ee((e) => K(H({}, e), { [n.application_id]: !1 }));
                     } finally {
-                        ee((e) => Q(K({}, e), { [n.application_id]: !1 }));
+                        ee((e) => K(H({}, e), { [n.application_id]: !1 }));
                     }
             },
             [T, $, t.id],
@@ -303,7 +303,7 @@ let X = l.memo((e) => {
                     null != n.application_id && "" !== n.application_id && !$[n.application_id])
                 )
                     try {
-                        ee((e) => Q(K({}, e), { [n.application_id]: !0 })),
+                        ee((e) => K(H({}, e), { [n.application_id]: !0 })),
                             await f.Z.sendActivityInviteUser({
                                 type: W.mFx.JOIN_REQUEST,
                                 userId: t.id,
@@ -311,9 +311,9 @@ let X = l.memo((e) => {
                                 location: W.Sbl.FRIENDS_POPOUT,
                             }),
                             null == T || T("ask_to_join", t.id),
-                            ee((e) => Q(K({}, e), { [n.application_id]: !1 }));
+                            ee((e) => K(H({}, e), { [n.application_id]: !1 }));
                     } finally {
-                        ee((e) => Q(K({}, e), { [n.application_id]: !1 }));
+                        ee((e) => K(H({}, e), { [n.application_id]: !1 }));
                     }
             },
             [T, $, t.id],
@@ -332,7 +332,7 @@ let X = l.memo((e) => {
                 children: [
                     (0, r.jsx)(
                         S.Z,
-                        K(
+                        H(
                             {
                                 innerClassName: V.rowInner,
                                 onContextMenu: eh,
@@ -340,7 +340,7 @@ let X = l.memo((e) => {
                                 onMouseLeave: ep,
                                 avatar: (0, r.jsx)(
                                     d.qEK,
-                                    Q(K({}, q), {
+                                    K(H({}, q), {
                                         size: J,
                                         src: M,
                                         isMobile: es,
@@ -362,7 +362,7 @@ let X = l.memo((e) => {
                                 hovered: Y,
                             },
                             e,
-                            H,
+                            Q,
                         ),
                     ),
                     (0, r.jsxs)(C.ZP, {
@@ -603,7 +603,7 @@ let et = l.memo(function (e) {
                                 : d.length > 0
                                   ? r.activities.push(g)
                                   : u
-                                    ? r.activities.push(Q(K({}, g), { activities: s }))
+                                    ? r.activities.push(K(H({}, g), { activities: s }))
                                     : a === W.Skl.ONLINE || a === W.Skl.IDLE || a === W.Skl.DND
                                       ? r.online.push(g)
                                       : r.offline.push(g);
@@ -660,7 +660,7 @@ let et = l.memo(function (e) {
             };
         })(S),
         { searchQuery: P, setSearchQuery: C, clearSearch: Z } = I,
-        w = H(I, ["searchQuery", "setSearchQuery", "clearSearch"]),
+        w = Q(I, ["searchQuery", "setSearchQuery", "clearSearch"]),
         k = l.useCallback((e) => {
             b((t) => (t.includes(e) ? t.filter((t) => t !== e) : [...t, e]));
         }, []),
@@ -692,7 +692,7 @@ let et = l.memo(function (e) {
             (e) => {
                 (0, g.jW)(e, async () => {
                     let { default: e } = await n.e("23087").then(n.bind(n, 29131));
-                    return (t) => (0, r.jsx)(e, Q(K({}, t), { onClose: o }));
+                    return (t) => (0, r.jsx)(e, K(H({}, t), { onClose: o }));
                 }),
                     null == p || p("open_settings_modal");
             },
@@ -701,7 +701,7 @@ let et = l.memo(function (e) {
         J = l.useCallback(() => {
             (0, d.ZDy)(async () => {
                 let { default: e } = await n.e("49078").then(n.bind(n, 539725));
-                return (t) => (0, r.jsx)(e, K({}, t));
+                return (t) => (0, r.jsx)(e, H({}, t));
             }),
                 null == p || p("open_friend_modal");
         }, [p]),
@@ -797,7 +797,7 @@ let et = l.memo(function (e) {
                     ? null
                     : (0, r.jsx)(
                           X,
-                          Q(K({}, t), {
+                          K(H({}, t), {
                               index: e.row,
                               closeParentPopout: o,
                               isSuggestion: 3 === e.section,
@@ -834,7 +834,7 @@ let et = l.memo(function (e) {
                 : (0, r.jsxs)("div", {
                       className: V.header,
                       children: [
-                          (0, r.jsx)(d.X6q, {
+                          (0, r.jsx)(d.Heading, {
                               variant: "heading-lg/semibold",
                               children: z.intl.string(z.t.TdEu5e),
                           }),
@@ -889,12 +889,12 @@ let et = l.memo(function (e) {
                       children: (0, r.jsx)(s.SJ, {
                           children: (e) => {
                               var { ref: t, role: n } = e,
-                                  l = H(e, ["ref", "role"]);
+                                  l = Q(e, ["ref", "role"]);
                               return (0, r.jsx)(d.Wdt, {
                                   children: (e) =>
                                       (0, r.jsx)(
                                           d.aVo,
-                                          K(
+                                          H(
                                               {
                                                   innerRole: n,
                                                   innerAriaLabel: z.intl.string(z.t.TdEu5e),

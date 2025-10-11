@@ -96,13 +96,13 @@ class C extends i.PureComponent {
             { resultType: t } = this.state;
         switch (t) {
             case E.wI2.FAVORITES:
-                return (0, r.jsx)(c.X6q, {
+                return (0, r.jsx)(c.Heading, {
                     variant: "heading-md/semibold",
                     className: O.searchHeader,
                     children: y.intl.string(y.t.y3LQCA),
                 });
             case E.wI2.TRENDING_GIFS:
-                return (0, r.jsx)(c.X6q, {
+                return (0, r.jsx)(c.Heading, {
                     variant: "heading-md/semibold",
                     className: O.searchHeader,
                     children: y.intl.string(y.t.H6zNFx),

@@ -1,13 +1,13 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => a });
 var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(824804);
-function s(e) {
+function a(e) {
     let { title: t, settings: n } = e;
     return (0, r.jsxs)("div", {
         children: [
-            (0, r.jsx)(i.X6q, {
+            (0, r.jsx)(i.Heading, {
                 variant: "heading-lg/semibold",
                 color: "header-primary",
                 className: l.header,

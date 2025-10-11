@@ -235,7 +235,7 @@ let D = (0, s.animated)(u.CJ0),
                                                     (0, r.jsx)(c.u, {
                                                         __unsupportedReactNodeAsText: a.config.messages.questName,
                                                         shouldShow: er(),
-                                                        children: (0, r.jsx)(u.X6q, {
+                                                        children: (0, r.jsx)(u.Heading, {
                                                             ref: K,
                                                             variant:
                                                                 "lg" === P

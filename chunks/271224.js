@@ -38,7 +38,7 @@ function _(e) {
             }
             return r;
         })(e, ["guildId", "powerup", "onClose"]);
-    let [j, g] = r.useState(void 0),
+    let [g, j] = r.useState(void 0),
         v = (0, d.ZP)(a, _),
         x = v.type === b.A3.TIER_OVERRIDE_ACTIVATED,
         y = (0, l.Z)(a),
@@ -96,16 +96,16 @@ function _(e) {
                                 (0, n.jsxs)("div", {
                                     className: f.contentContainer,
                                     children: [
-                                        (0, n.jsx)(s.X6q, {
+                                        (0, n.jsx)(s.Heading, {
                                             variant: "heading-xl/extrabold",
                                             children: _.title,
                                         }),
                                         (0, n.jsx)(u.Z, { powerup: _ }),
-                                        null != j &&
+                                        null != g &&
                                             (0, n.jsx)(s.Text, {
                                                 color: "status-danger",
                                                 variant: "text-sm/semibold",
-                                                children: j,
+                                                children: g,
                                             }),
                                         (0, n.jsxs)("div", {
                                             className: c()(f.footer, { [f.disabled]: C }),
@@ -115,11 +115,11 @@ function _(e) {
                                                     (0, n.jsx)(p.ZP, {
                                                         guildId: a,
                                                         powerup: _,
-                                                        onError: g,
+                                                        onError: j,
                                                         grow: !1,
                                                         compact: !C,
                                                     }),
-                                                (0, n.jsx)(s.zxk, {
+                                                (0, n.jsx)(s.Button, {
                                                     variant: C ? "secondary" : "primary",
                                                     onClick: O,
                                                     text: m.intl.string(m.t.cpT0Cg),

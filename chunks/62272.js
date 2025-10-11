@@ -14,7 +14,7 @@ let c = (e) => {
         padding: s.h,
         className: o.container,
         children: [
-            (0, a.jsx)(i.X6q, {
+            (0, a.jsx)(i.Heading, {
                 variant: "heading-lg/semibold",
                 className: o.heading,
                 children: d,

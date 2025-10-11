@@ -103,7 +103,7 @@ function E() {
                 (0, a.jsxs)("div", {
                     className: j.headerWrapper,
                     children: [
-                        (0, a.jsx)(d.X6q, {
+                        (0, a.jsx)(d.Heading, {
                             variant: "heading-lg/semibold",
                             className: _.header,
                             children: null != e ? "Active Subscription" : "Subscription Type",
@@ -136,7 +136,7 @@ function E() {
                                     select: i,
                                     popoutLayerContext: f.O$,
                                 }),
-                                (0, a.jsx)(d.zxk, {
+                                (0, a.jsx)(d.Button, {
                                     variant: "primary",
                                     size: "sm",
                                     text: "Create Subscription",
@@ -150,14 +150,14 @@ function E() {
                         subscription: e,
                         onUpdated: T,
                     }),
-                (0, a.jsx)(d.X6q, {
+                (0, a.jsx)(d.Heading, {
                     variant: "heading-lg/semibold",
                     className: _.header,
                     children: "Bulk Actions",
                 }),
                 (0, a.jsx)("section", {
                     className: l()([j.section, j.buttons]),
-                    children: (0, a.jsx)(d.zxk, {
+                    children: (0, a.jsx)(d.Button, {
                         variant: "primary",
                         size: "sm",
                         text: "End All Subscriptions",
@@ -167,7 +167,7 @@ function E() {
                 O.length > 0 &&
                     (0, a.jsxs)(a.Fragment, {
                         children: [
-                            (0, a.jsx)(d.X6q, {
+                            (0, a.jsx)(d.Heading, {
                                 variant: "heading-lg/semibold",
                                 className: _.header,
                                 children: "Previous Subscriptions",

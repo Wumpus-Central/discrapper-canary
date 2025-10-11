@@ -307,7 +307,7 @@ function v() {
                 placeholder: "User ID",
                 onChange: e,
             }),
-            (0, a.jsx)(i.zxk, {
+            (0, a.jsx)(i.Button, {
                 onClick: t,
                 text: "Get Snapshot",
                 loading: n,

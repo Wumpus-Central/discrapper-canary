@@ -73,7 +73,7 @@ function j(e) {
         c = l ? A.h8.REVIEW : A.h8.ADD_PAYMENT_STEPS;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(a.zxk, {
+            (0, r.jsx)(a.Button, {
                 onClick: () => t(c),
                 disabled: o,
                 loading: s,
@@ -296,7 +296,7 @@ function U(e) {
                                     variant: "text-md/semibold",
                                     children: P.intl.string(P.t["1+Co8P"]),
                                 }),
-                                (0, r.jsx)(a.X6q, {
+                                (0, r.jsx)(a.Heading, {
                                     color: "header-secondary",
                                     variant: "heading-sm/medium",
                                     children: P.intl.string(P.t.nYn52N),

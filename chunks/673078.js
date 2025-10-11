@@ -8,21 +8,21 @@ var n = r(951288),
     s = r(668781),
     u = r(485386),
     d = r(495437),
-    f = r(240864),
-    g = r(981631),
+    g = r(240864),
+    f = r(981631),
     p = r(388032),
     b = r(696242);
 function m(t) {
     let { guildProductListing: e, guildId: r } = t,
         o = (0, c.e7)([u.Z], () => {
             var t;
-            return u.Z.getRole(r, null != (t = null == e ? void 0 : e.role_id) ? t : g.lds);
+            return u.Z.getRole(r, null != (t = null == e ? void 0 : e.role_id) ? t : f.lds);
         });
     return null == o
         ? null
         : (0, n.jsxs)(n.Fragment, {
               children: [
-                  (0, n.jsxs)(a.X6q, {
+                  (0, n.jsxs)(a.Heading, {
                       className: b.warningSectionHeader,
                       variant: "text-md/medium",
                       color: "text-default",
@@ -70,8 +70,8 @@ function O(t) {
             }
             return o;
         })(t, ["guildId", "productId"]);
-    let [g] = o.useState(() => f.Z.getGuildProduct(c));
-    l()(null != g, "guildProductListing cannot be null");
+    let [f] = o.useState(() => g.Z.getGuildProduct(c));
+    l()(null != f, "guildProductListing cannot be null");
     let [O, y] = o.useState(!1),
         j = async () => {
             try {
@@ -123,10 +123,10 @@ function O(t) {
                 children: [
                     (0, n.jsx)(a.Text, {
                         variant: "text-md/normal",
-                        children: p.intl.format(p.t.CPQsjo, { productName: g.name }),
+                        children: p.intl.format(p.t.CPQsjo, { productName: f.name }),
                     }),
                     (0, n.jsx)(m, {
-                        guildProductListing: g,
+                        guildProductListing: f,
                         guildId: i,
                     }),
                 ],

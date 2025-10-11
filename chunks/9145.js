@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(28664),
     d = n(481060),
     u = n(153867),
-    p = n(110924),
-    h = n(607070),
+    h = n(110924),
+    p = n(607070),
     f = n(367907),
     g = n(900211),
     m = n(740492),
@@ -17,13 +17,13 @@ var r = n(951288),
     y = n(402113),
     _ = n(800965),
     j = n(592125),
-    x = n(271383),
-    O = n(944486),
+    O = n(271383),
+    x = n(944486),
     v = n(594174),
     C = n(585483),
     I = n(51144),
-    E = n(566620),
-    S = n(317381),
+    S = n(566620),
+    E = n(317381),
     Z = n(389147),
     T = n(619915),
     P = n(988980),
@@ -40,7 +40,7 @@ var r = n(951288),
     H = n(981631),
     F = n(388032),
     B = n(33985);
-function z(e) {
+function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -65,7 +65,7 @@ function z(e) {
     }
     return e;
 }
-let V = D.u8.SIZE_32,
+let z = D.u8.SIZE_32,
     W = {
         [G.MI.NO_CHAT]: B.noChat,
         [G.MI.RESIZABLE]: B.resizable,
@@ -74,23 +74,23 @@ function Y(e) {
     var t, l, Y;
     let { maxHeight: q, connectedLocation: K, renderExternalHeader: Q } = e,
         X = (0, w.Z)(),
-        J = (0, s.Wu)([S.ZP], () => S.ZP.getEmbeddedActivitiesForLocation(K), [K]),
+        J = (0, s.Wu)([E.ZP], () => E.ZP.getEmbeddedActivitiesForLocation(K), [K]),
         $ = (0, N.p)(K),
         ee = (0, s.e7)([j.Z], () => j.Z.getChannel($)),
         et = (0, T.gb)(J),
         en = (0, T.uF)(et),
         er = i.useCallback(() => {
-            (0, E.tg)(G.Ez.PIP);
+            (0, S.tg)(G.Ez.PIP);
         }, []),
         ei = i.useRef(null),
-        el = (0, s.e7)([S.ZP], () => S.ZP.getFocusedLayout()),
+        el = (0, s.e7)([E.ZP], () => E.ZP.getFocusedLayout()),
         ea = el !== G.MI.NO_CHAT,
         [es, eo] = i.useState(null != (l = null != (t = m.ZP.activityPanelHeight) ? t : q) ? l : null),
         ec = i.useCallback((e) => {
             u.ZP.updatedUnsyncedSettings({ activityPanelHeight: e });
         }, []),
         ed = i.useRef(null),
-        [eu, ep] = i.useState({
+        [eu, eh] = i.useState({
             width: 0,
             height: 0,
         });
@@ -98,32 +98,32 @@ function Y(e) {
         if (null == ed.current) return;
         let e = new ResizeObserver(() => {
             var e, t, n, r;
-            ep({
+            eh({
                 width: null != (n = null == (e = ed.current) ? void 0 : e.clientWidth) ? n : 0,
                 height: null != (r = null == (t = ed.current) ? void 0 : t.clientHeight) ? r : 0,
             });
         });
         return e.observe(ed.current), () => e.disconnect();
     }, []);
-    let eh = eu.width / Math.max(eu.height, 1) < G.I0,
+    let ep = eu.width / Math.max(eu.height, 1) < G.I0,
         ef = 0,
         eg = 0,
         em = (0, P.Z)(null == X ? void 0 : X.id);
     if (!em) {
         let e = eu.width,
             t = eu.height;
-        eh
+        ep
             ? ((t = eu.width / G.I0) > eu.height && (e = (t = eu.height) * G.I0), (eg = (eu.height - t) / 2))
             : ((e = Math.min(eu.height * G.I0)) > eu.width && (t = (e = eu.width) / G.I0), (ef = (eu.width - e) / 2));
     }
     let eb = en.get(null != (Y = null == X ? void 0 : X.id) ? Y : ""),
-        ey = (0, s.e7)([O.Z], () => O.Z.getChannelId()),
-        e_ = (0, s.Wu)([x.ZP], () => {
+        ey = (0, s.e7)([x.Z], () => x.Z.getChannelId()),
+        e_ = (0, s.Wu)([O.ZP], () => {
             var e;
             return null == ee
                 ? []
                 : Array.from(null != (e = null == eb ? void 0 : eb.embeddedActivity.userIds) ? e : []).map((e) =>
-                      x.ZP.getMember(ee.guild_id, e),
+                      O.ZP.getMember(ee.guild_id, e),
                   );
         }, [eb, ee]),
         ej = i.useMemo(() => {
@@ -135,8 +135,8 @@ function Y(e) {
                 e
             );
         }, [e_]),
-        ex = (function (e, t, n) {
-            let r = (0, p.Z)(e),
+        eO = (function (e, t, n) {
+            let r = (0, h.Z)(e),
                 l = e !== r,
                 [a, s] = i.useState(!1);
             i.useEffect(() => {
@@ -144,7 +144,7 @@ function Y(e) {
                 let e = setTimeout(() => s(!1), 50);
                 return () => clearTimeout(e);
             }, [e]);
-            let o = !h.Z.useReducedMotion && (l || a);
+            let o = !p.Z.useReducedMotion && (l || a);
             return i.useMemo(() => {
                 var r, i;
                 let l = o
@@ -155,7 +155,7 @@ function Y(e) {
                       }
                     : void 0;
                 return e && null != t && null != n
-                    ? ((r = z({}, l)),
+                    ? ((r = V({}, l)),
                       (i = i =
                           {
                               minHeight: 200,
@@ -178,7 +178,7 @@ function Y(e) {
                     : l;
             }, [o, e, n, t]);
         })(ea, es, q),
-        eO = (0, k.y)(),
+        ex = (0, k.y)(),
         { data: ev } = (0, R.K)(Z.B);
     if (null == X) return null;
     let eC = null == ev ? void 0 : ev.isFortniteActivity(X.id),
@@ -187,7 +187,7 @@ function Y(e) {
         (eI = Array.from(eb.embeddedActivity.userIds)
             .map((e) => v.default.getUser(e))
             .filter((e) => null != e && void 0 !== e));
-    let eE = (e) => {
+    let eS = (e) => {
         var t;
         if (null == e || void 0 === e || e === D.ag) return null;
         let n = ej.get(e.id),
@@ -201,7 +201,7 @@ function Y(e) {
                 children: (0, r.jsx)(
                     "img",
                     {
-                        src: e.getAvatarURL(null == ee ? void 0 : ee.guild_id, V),
+                        src: e.getAvatarURL(null == ee ? void 0 : ee.guild_id, z),
                         alt: i,
                         className: B.avatar,
                     },
@@ -217,7 +217,7 @@ function Y(e) {
             (0, r.jsxs)("div", {
                 className: a()(B.wrapper, W[el], e),
                 ref: ei,
-                style: ex,
+                style: eO,
                 children: [
                     null == Q ? void 0 : Q(),
                     (0, r.jsxs)("div", {
@@ -255,9 +255,9 @@ function Y(e) {
                                           (0, r.jsx)(D.ZP, {
                                               renderIcon: !1,
                                               users: eI,
-                                              size: V,
+                                              size: z,
                                               max: 6,
-                                              renderUser: eE,
+                                              renderUser: eS,
                                           }),
                                           (0, r.jsxs)("div", {
                                               className: B.footerButtons,
@@ -289,14 +289,14 @@ function Y(e) {
                                           eC &&
                                               (0, r.jsx)("div", {
                                                   className: B.fortniteUpsellModalButton,
-                                                  children: (0, r.jsx)(d.zxk, {
+                                                  children: (0, r.jsx)(d.Button, {
                                                       onClick: () => {
                                                           (0, d.ZDy)(
                                                               async () => {
                                                                   let { FortniteUpsellModal: e } = await n
                                                                       .e("64152")
                                                                       .then(n.bind(n, 690804));
-                                                                  return (t) => (0, r.jsx)(e, z({}, t));
+                                                                  return (t) => (0, r.jsx)(e, V({}, t));
                                                               },
                                                               { modalKey: "activity-upsell-modal" },
                                                           );
@@ -305,7 +305,7 @@ function Y(e) {
                                                       variant: "color-mix",
                                                   }),
                                               }),
-                                          eO
+                                          ex
                                               ? (0, r.jsx)(_.Z, {
                                                     popoutOpen: !1,
                                                     onOpenPopout: () => {
@@ -314,8 +314,8 @@ function Y(e) {
                                                                 onConfirm: async () => {
                                                                     (null == X ? void 0 : X.id) != null &&
                                                                         null != $ &&
-                                                                        (await (0, E.nJ)(X.id, $)),
-                                                                        (0, E.Gj)();
+                                                                        (await (0, S.nJ)(X.id, $)),
+                                                                        (0, S.Gj)();
                                                                 },
                                                             });
                                                     },

@@ -4,29 +4,29 @@ n(647438);
 var o = n(120356),
     s = n.n(o),
     r = n(481060),
-    l = n(388032),
-    i = n(652410);
+    i = n(388032),
+    l = n(652410);
 function c(e) {
     let { onComplete: t } = e;
     return (0, a.jsxs)(r.P3F, {
-        className: i.container,
+        className: l.container,
         onClick: t,
         children: [
-            (0, a.jsx)(r.X6q, {
+            (0, a.jsx)(r.Heading, {
                 variant: "heading-xl/bold",
                 color: "always-white",
-                className: i.title,
-                children: l.intl.string(l.t["Deps4+"]),
+                className: l.title,
+                children: i.intl.string(i.t["Deps4+"]),
             }),
-            (0, a.jsx)(r.X6q, {
+            (0, a.jsx)(r.Heading, {
                 variant: "heading-lg/bold",
                 color: "always-white",
-                className: s()(i.title, i.subtitle),
-                children: l.intl.string(l.t.xv5g7O),
+                className: s()(l.title, l.subtitle),
+                children: i.intl.string(i.t.xv5g7O),
             }),
-            (0, a.jsx)(r.zxk, {
+            (0, a.jsx)(r.Button, {
                 variant: "overlay-primary",
-                text: l.intl.string(l.t["6X9YKC"]),
+                text: i.intl.string(i.t["6X9YKC"]),
                 onClick: t,
             }),
         ],

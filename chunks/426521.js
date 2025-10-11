@@ -39,7 +39,7 @@ function D(e) {
     let d =
             null != (a = b.default.getUser(null == (i = c.message) || null == (n = i.author) ? void 0 : n.id))
                 ? a
-                : new m.Z(null == (l = c.message) ? void 0 : l.author),
+                : new m.default(null == (l = c.message) ? void 0 : l.author),
         h = p.Z.parse(u);
     return (0, r.jsxs)("div", {
         className: T.messagePreviewContainer,

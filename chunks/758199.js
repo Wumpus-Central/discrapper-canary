@@ -205,7 +205,7 @@ function O(e) {
                                             {
                                                 className: g.buttonWithPossibleDisabledTextWrapper,
                                                 children: [
-                                                    (0, r.jsx)(c.zxk, {
+                                                    (0, r.jsx)(c.Button, {
                                                         variant: d ? "overlay-primary" : "overlay-secondary",
                                                         disabled: o || null != s,
                                                         loading: l,

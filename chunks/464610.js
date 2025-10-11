@@ -1,9 +1,9 @@
-n.d(t, { Z: () => x }), n(472816), n(794429);
+n.d(t, { Z: () => b }), n(472816), n(794429);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
-    s = n(727072),
-    a = n(85960),
+    a = n(727072),
+    s = n(85960),
     o = n(676317),
     c = n(823379),
     d = n(84613),
@@ -13,7 +13,7 @@ var r = n(951288),
     p = n(388032),
     f = n(687726);
 function h(e) {
-    let { title: t, subtitle: n, icon: i, page: s } = e;
+    let { title: t, subtitle: n, icon: i, page: a } = e;
     return (0, r.jsxs)("div", {
         className: f.safetyStepRow,
         children: [
@@ -27,7 +27,7 @@ function h(e) {
                     }),
                     (0, r.jsxs)("div", {
                         children: [
-                            (0, r.jsx)(l.X6q, {
+                            (0, r.jsx)(l.Heading, {
                                 variant: "heading-md/semibold",
                                 color: "header-primary",
                                 children: t,
@@ -41,30 +41,30 @@ function h(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(l.zxk, {
+            (0, r.jsx)(l.Button, {
                 size: "sm",
                 variant: "secondary",
-                onClick: () => (0, d.K)(s),
+                onClick: () => (0, d.K)(a),
                 text: p.intl.string(p.t.bt75u7),
             }),
         ],
     });
 }
-function x(e) {
+function b(e) {
     let { guild: t } = e;
-    (0, s.RD)(t.id);
-    let d = (0, a.Z6)(t.id),
-        { rulesByTriggerType: x } = (0, s.pH)(t.id),
-        { numEnabledRules: b, numRules: j } = i.useMemo(() => {
+    (0, a.RD)(t.id);
+    let d = (0, s.Z6)(t.id),
+        { rulesByTriggerType: b } = (0, a.pH)(t.id),
+        { numEnabledRules: x, numRules: j } = i.useMemo(() => {
             let e = 0,
                 t = 0;
             return (
-                null == x ||
+                null == b ||
                     Object.values(d)
                         .flat()
                         .forEach((n) => {
                             var r;
-                            let i = null == (r = x[n]) ? void 0 : r.filter(c.lm);
+                            let i = null == (r = b[n]) ? void 0 : r.filter(c.lm);
                             if (null == i || 0 === i.length) return void t++;
                             i.forEach((n) => {
                                 n.enabled && e++, t++;
@@ -75,15 +75,15 @@ function x(e) {
                     numRules: t,
                 }
             );
-        }, [d, x]),
-        _ = (0, m.Q)(t),
-        v = _[u.u.CAPTCHA_AND_RAID_PROTECTION],
-        C = _[u.u.DM_AND_SPAM_PROTECTION],
-        O = _[u.u.PERMISSIONS],
+        }, [d, b]),
+        v = (0, m.Q)(t),
+        _ = v[u.u.CAPTCHA_AND_RAID_PROTECTION],
+        C = v[u.u.DM_AND_SPAM_PROTECTION],
+        O = v[u.u.PERMISSIONS],
         y = (0, o.pr)(t.id);
     return (0, r.jsxs)("div", {
         children: [
-            (0, r.jsx)(l.X6q, {
+            (0, r.jsx)(l.Heading, {
                 variant: "heading-lg/semibold",
                 color: "header-primary",
                 className: f.header,
@@ -97,8 +97,8 @@ function x(e) {
                         icon: n(14215),
                         title: p.intl.string(p.t["53eF5u"]),
                         subtitle: p.intl.formatToPlainString(p.t.TG7NYG, {
-                            enabled: v.filter((e) => e.enabled).length,
-                            total: v.length,
+                            enabled: _.filter((e) => e.enabled).length,
+                            total: _.length,
                         }),
                         page: u.u.CAPTCHA_AND_RAID_PROTECTION,
                     }),
@@ -120,7 +120,7 @@ function x(e) {
                                     icon: n(145136),
                                     title: p.intl.string(p.t.uRelg4),
                                     subtitle: p.intl.formatToPlainString(p.t.TG7NYG, {
-                                        enabled: b,
+                                        enabled: x,
                                         total: j,
                                     }),
                                     page: u.u.AUTOMOD,

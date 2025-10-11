@@ -76,7 +76,7 @@ function x(e) {
                         }),
                     ],
                 }),
-                (0, i.jsx)(s.zxk, {
+                (0, i.jsx)(s.Button, {
                     loading: 1 === m,
                     disabled: b || 2 === m,
                     fullWidth: !0,

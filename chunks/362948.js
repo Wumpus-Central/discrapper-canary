@@ -152,7 +152,7 @@ function m(e) {
         className: o()(_.columnHeading, n),
         scope: "col",
         children: [
-            (0, r.jsx)(l.X6q, {
+            (0, r.jsx)(l.Heading, {
                 color: a,
                 variant: s,
                 children: t,
@@ -286,7 +286,7 @@ let O = function (e) {
         className: o,
         children: [
             !d &&
-                (0, r.jsx)(l.X6q, {
+                (0, r.jsx)(l.Heading, {
                     className: _.heading,
                     variant: "heading-xxl/extrabold",
                     children: f.intl.string(f.t["9GGb9v"]),

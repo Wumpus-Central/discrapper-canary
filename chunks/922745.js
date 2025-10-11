@@ -94,7 +94,7 @@ function v(e) {
                         width: 20,
                         height: 20,
                     }),
-                    (0, r.jsx)(l.X6q, {
+                    (0, r.jsx)(l.Heading, {
                         variant: "heading-md/normal",
                         className: g.headerText,
                         color: "always-white",

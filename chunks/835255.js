@@ -49,9 +49,9 @@ function D(e) {
         { analyticsLocations: F } = (0, h.ZP)(),
         z = (0, o.TH)(),
         W = V.type,
-        [q] = (0, u.Wu)([C.Z], () => [C.Z.hasSentGift(t.skuId, n.id)], [t.skuId, n.id]),
-        Y = !q && H,
-        K = q ? void 0 : t.skuName,
+        [Y] = (0, u.Wu)([C.Z], () => [C.Z.hasSentGift(t.skuId, n.id)], [t.skuId, n.id]),
+        q = !Y && H,
+        K = Y ? void 0 : t.skuName,
         Q = D ? L.t.FdGl5O : L.t.ilhtIS,
         X = D ? void 0 : p.OgN,
         J = (0, r.jsx)("div", {
@@ -66,7 +66,7 @@ function D(e) {
         }),
         $ = (0, r.jsx)("div", {
             className: R.overlay,
-            children: (0, r.jsx)(p.zxk, {
+            children: (0, r.jsx)(p.Button, {
                 focusProps: { ringTarget: B },
                 variant: "primary",
                 size: "sm",
@@ -112,7 +112,7 @@ function D(e) {
             )
                 ee();
             else {
-                if (q) return;
+                if (Y) return;
                 (0, v.Z)({
                     skuId: t.skuId,
                     isGift: !0,
@@ -134,7 +134,7 @@ function D(e) {
                     (0, r.jsxs)("div", {
                         ref: B,
                         className: a()(R.card, {
-                            [R.giftSent]: q,
+                            [R.giftSent]: Y,
                             [R.smallCard]: "sm" === k,
                             [R.largeCard]: "lg" === k,
                         }),
@@ -167,7 +167,7 @@ function D(e) {
                                                 className: R.profileEffectPreview,
                                                 children: (0, r.jsx)(y.Z, {
                                                     skuId: V.skuId,
-                                                    isHighlighted: Y,
+                                                    isHighlighted: q,
                                                     isPurchased: !1,
                                                     removeSetHeight: !0,
                                                 }),
@@ -178,7 +178,7 @@ function D(e) {
                                                 children: (0, r.jsx)(b.R, {
                                                     item: V,
                                                     user: n,
-                                                    isHighlighted: Y,
+                                                    isHighlighted: q,
                                                     isPurchased: !1,
                                                     avatarSize: p.EFr.SIZE_80,
                                                 }),
@@ -192,7 +192,7 @@ function D(e) {
                                                         children: (0, r.jsx)(_.Z, {
                                                             user: n,
                                                             nameplate: V,
-                                                            isHighlighted: Y,
+                                                            isHighlighted: q,
                                                             showPlaceholderUser: !0,
                                                             showStatus: !0,
                                                             isPurchased: !1,
@@ -206,7 +206,7 @@ function D(e) {
                                                         children: (0, r.jsx)(_.Z, {
                                                             user: n,
                                                             nameplate: V,
-                                                            isHighlighted: Y,
+                                                            isHighlighted: q,
                                                             showPlaceholderUser: !0,
                                                             showStatus: !0,
                                                             isPurchased: !1,
@@ -221,8 +221,8 @@ function D(e) {
                                     }
                                 })(),
                             }),
-                            q && J,
-                            !q && $,
+                            Y && J,
+                            !Y && $,
                         ],
                     }),
                     M

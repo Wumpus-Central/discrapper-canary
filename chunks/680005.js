@@ -175,11 +175,11 @@ function A(e) {
             }
             null == o || o(e);
         };
-    return (0, r.jsx)(a.zxk, b(g({}, s), { onClick: f }));
+    return (0, r.jsx)(a.Button, b(g({}, s), { onClick: f }));
 }
 function C(e) {
     let { text: t } = e;
-    return (0, r.jsx)(a.zxk, {
+    return (0, r.jsx)(a.Button, {
         text: t,
         disabled: !0,
         variant: "primary",

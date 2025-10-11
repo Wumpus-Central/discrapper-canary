@@ -89,7 +89,7 @@ function N(e) {
                                 width: "16px",
                                 color: l.Z.INTERACTIVE_NORMAL,
                             }),
-                            (0, r.jsx)(d.X6q, {
+                            (0, r.jsx)(d.Heading, {
                                 variant: "heading-sm/semibold",
                                 color: "interactive-normal",
                                 className: S.serverShopLabelText,
@@ -98,7 +98,7 @@ function N(e) {
                         ],
                     }),
                     (0, r.jsx)(d.LZC, { size: 16 }),
-                    (0, r.jsx)(d.X6q, {
+                    (0, r.jsx)(d.Heading, {
                         variant: "heading-md/semibold",
                         color: "text-default",
                         children: T.intl.format(T.t.NZeik5, { guildName: a.name }),

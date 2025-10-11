@@ -48,8 +48,8 @@ var r = t(951288),
     z = t(787528),
     B = t(768865),
     K = t(789155),
-    W = t(798769),
-    H = t(474936),
+    H = t(798769),
+    W = t(474936),
     Y = t(981631),
     q = t(388032),
     Q = t(616885),
@@ -76,14 +76,14 @@ function el() {
         }).apply(this, arguments);
 }
 let ec = {
-        [H.VU.PREMIUM_TENURE_1_MONTH]: Q.badgeGradientBronze,
-        [H.VU.PREMIUM_TENURE_3_MONTH]: Q.badgeGradientSilver,
-        [H.VU.PREMIUM_TENURE_6_MONTH]: Q.badgeGradientGold,
-        [H.VU.PREMIUM_TENURE_12_MONTH]: Q.badgeGradientPlatinum,
-        [H.VU.PREMIUM_TENURE_24_MONTH]: Q.badgeGradientDiamond,
-        [H.VU.PREMIUM_TENURE_36_MONTH]: Q.badgeGradientEmerald,
-        [H.VU.PREMIUM_TENURE_60_MONTH]: Q.badgeGradientRuby,
-        [H.VU.PREMIUM_TENURE_72_MONTH]: Q.badgeGradientOpal,
+        [W.VU.PREMIUM_TENURE_1_MONTH]: Q.badgeGradientBronze,
+        [W.VU.PREMIUM_TENURE_3_MONTH]: Q.badgeGradientSilver,
+        [W.VU.PREMIUM_TENURE_6_MONTH]: Q.badgeGradientGold,
+        [W.VU.PREMIUM_TENURE_12_MONTH]: Q.badgeGradientPlatinum,
+        [W.VU.PREMIUM_TENURE_24_MONTH]: Q.badgeGradientDiamond,
+        [W.VU.PREMIUM_TENURE_36_MONTH]: Q.badgeGradientEmerald,
+        [W.VU.PREMIUM_TENURE_60_MONTH]: Q.badgeGradientRuby,
+        [W.VU.PREMIUM_TENURE_72_MONTH]: Q.badgeGradientOpal,
     },
     eu = F.ZP.getEnableHardwareAcceleration() ? p.Xo$ : p.qEK,
     em = {
@@ -194,10 +194,10 @@ function eg(e) {
         { currentUser: t, premiumType: n, onClose: a } = e,
         i = (0, b.ZP)(t.id),
         o = (0, m.e7)([j.Z], () => j.Z.useReducedMotion),
-        l = n === H.PremiumTypes.TIER_1;
+        l = n === W.PremiumTypes.TIER_1;
     return (
         (s =
-            (null == i ? void 0 : i.premiumType) === H.PremiumTypes.TIER_2
+            (null == i ? void 0 : i.premiumType) === W.PremiumTypes.TIER_2
                 ? (0, r.jsxs)(P.Z, {
                       user: t,
                       displayProfile: i,
@@ -281,12 +281,12 @@ function ej(e) {
         { analyticsLocations: m } = (0, N.ZP)(C.Z.PREMIUM_UNCANCEL_MODAL),
         d = (0, D.GG)();
     if (!c || null == d) return null;
-    let f = null != (s = null == u ? void 0 : u.id) ? s : H.VU.PREMIUM_TENURE_1_MONTH,
+    let f = null != (s = null == u ? void 0 : u.id) ? s : W.VU.PREMIUM_TENURE_1_MONTH,
         x = null != (t = null == u ? void 0 : u.status) ? t : D.Vq.UPCOMING,
         g =
             null != (n = null == u ? void 0 : u.nameUnformatted)
                 ? n
-                : H.vK[H.VU.PREMIUM_TENURE_1_MONTH].nameUnformatted,
+                : W.vK[W.VU.PREMIUM_TENURE_1_MONTH].nameUnformatted,
         j = (0, z.J)(f),
         h = q.intl.string(g),
         E = x === D.Vq.EARNED,
@@ -333,7 +333,7 @@ function eC(e) {
             .slice(0, 3),
         a = (0, m.Wu)([T.Z], () => T.Z.stickerFrecencyWithoutFetchingLatest.frequently.slice(0, 3 - n.length)),
         i = ep().emojiStickersVisual,
-        o = s === H.PremiumTypes.TIER_1;
+        o = s === W.PremiumTypes.TIER_1;
     return (0, r.jsx)(ef, {
         description: o ? q.intl.format(q.t.couiKC, {}) : q.intl.format(q.t["0hUHi4"], {}),
         onLearnMore: () => {
@@ -418,7 +418,7 @@ function eN(e) {
         c = null != o && l > 0,
         d = ep().boostItemVisual;
     return (0, r.jsx)(ef, {
-        description: s === H.PremiumTypes.TIER_1 ? q.intl.format(q.t["K4Hv6+"], {}) : q.intl.format(q.t.wRxEDQ, {}),
+        description: s === W.PremiumTypes.TIER_1 ? q.intl.format(q.t["K4Hv6+"], {}) : q.intl.format(q.t.wRxEDQ, {}),
         onLearnMore: () => {
             t(),
                 (0, O.openUserSettings)(y.n.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, { section: Y.oAB.GUILD_BOOSTING }),
@@ -489,7 +489,7 @@ function eE(e) {
     let { premiumType: s } = e,
         t = ep().uploadsMessagesItemVisual;
     return (0, r.jsx)(ef, {
-        description: s === H.PremiumTypes.TIER_2 ? q.intl.format(q.t.GsOFRE, {}) : q.intl.format(q.t.wFWO6O, {}),
+        description: s === W.PremiumTypes.TIER_2 ? q.intl.format(q.t.GsOFRE, {}) : q.intl.format(q.t.wFWO6O, {}),
         onLearnMore: () => {
             window.open(V.Z.getArticleURL(Y.BhN.PREMIUM_DETAILS)),
                 w.default.track(Y.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "msgs_uploads" });
@@ -508,10 +508,10 @@ function e_(e) {
         c = n.useMemo(() => {
             let e = [];
             switch (t) {
-                case H.PremiumTypes.TIER_0:
+                case W.PremiumTypes.TIER_0:
                     e.push((0, r.jsx)(eC, { premiumType: t }), (0, r.jsx)(eE, { premiumType: t }));
                     break;
-                case H.PremiumTypes.TIER_1:
+                case W.PremiumTypes.TIER_1:
                     o
                         ? e.push(
                               (0, r.jsx)(
@@ -556,7 +556,7 @@ function e_(e) {
                               ),
                           );
                     break;
-                case H.PremiumTypes.TIER_2:
+                case W.PremiumTypes.TIER_2:
                     o
                         ? e.push(
                               (0, r.jsx)(
@@ -656,7 +656,7 @@ let eb = function (e) {
     f)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(W.Z, {
+                  (0, r.jsx)(H.Z, {
                       premiumType: s,
                       onClose: o,
                   }),
@@ -669,7 +669,7 @@ let eb = function (e) {
           })
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(W.Z, {
+                  (0, r.jsx)(H.Z, {
                       premiumType: s,
                       onClose: o,
                   }),
@@ -677,7 +677,7 @@ let eb = function (e) {
                       "data-migration-pending": !0,
                       className: Q.body,
                       children: [
-                          (0, r.jsx)(p.X6q, {
+                          (0, r.jsx)(p.Heading, {
                               variant: "heading-xl/semibold",
                               color: "header-primary",
                               className: Q.title,

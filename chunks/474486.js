@@ -29,7 +29,7 @@ let u = (e) => {
                     (0, r.jsxs)("div", {
                         className: c.coachtipContent,
                         children: [
-                            (0, r.jsx)(l.X6q, {
+                            (0, r.jsx)(l.Heading, {
                                 variant: "heading-sm/bold",
                                 children: s.intl.string(s.t.USo4s7),
                             }),

@@ -100,7 +100,7 @@ function f(e) {
                                     minWidth: 0,
                                     overflow: "hidden",
                                 },
-                                children: (0, r.jsx)(l.X6q, {
+                                children: (0, r.jsx)(l.Heading, {
                                     variant: "heading-md/semibold",
                                     color: "header-primary",
                                     className: g.appName,
@@ -146,7 +146,7 @@ let b = function (e) {
               className: g.sectionContainer,
               children: [
                   (0, r.jsx)("div", { className: g.divider }),
-                  (0, r.jsx)(l.X6q, {
+                  (0, r.jsx)(l.Heading, {
                       variant: "heading-sm/semibold",
                       color: "header-primary",
                       className: g.sectionHeader,

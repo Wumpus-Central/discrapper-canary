@@ -129,7 +129,7 @@ function z(e) {
               ],
           });
 }
-function W(e) {
+function H(e) {
     let { muted: t, messageNotifications: n, memberCount: s, handleRadioChange: l } = e;
     return (0, i.jsxs)("div", {
         className: R.spacing,
@@ -205,7 +205,7 @@ function V(e) {
                         disabled: o,
                         description: I.intl.string(I.t["Vw/Xn5"]),
                     }),
-                    (0, i.jsx)(m.eee, {
+                    (0, i.jsx)(m.Anchor, {
                         href: y.Z.getArticleURL(T.BhN.HIGHLIGHTS),
                         children: (0, i.jsx)(m.Text, {
                             variant: "text-sm/normal",
@@ -267,7 +267,7 @@ function Y(e) {
         }),
     });
 }
-function q(e) {
+function W(e) {
     let {
             newChannelOverrides: t,
             channelOverrides: n,
@@ -326,27 +326,27 @@ function q(e) {
                 (0, i.jsxs)("div", {
                     className: R.channelNotificationHeaders,
                     children: [
-                        (0, i.jsx)(m.X6q, {
+                        (0, i.jsx)(m.Heading, {
                             variant: "eyebrow",
                             className: R.headerName,
                             children: I.intl.string(I.t.uShwWl),
                         }),
-                        (0, i.jsx)(m.X6q, {
+                        (0, i.jsx)(m.Heading, {
                             variant: "eyebrow",
                             className: R.headerOption,
                             children: I.intl.string(I.t.e29Z19),
                         }),
-                        (0, i.jsx)(m.X6q, {
+                        (0, i.jsx)(m.Heading, {
                             variant: "eyebrow",
                             className: R.headerOption,
                             children: I.intl.string(I.t.DD6gNT),
                         }),
-                        (0, i.jsx)(m.X6q, {
+                        (0, i.jsx)(m.Heading, {
                             variant: "eyebrow",
                             className: R.headerOption,
                             children: I.intl.string(I.t.CtVGyc),
                         }),
-                        (0, i.jsx)(m.X6q, {
+                        (0, i.jsx)(m.Heading, {
                             variant: "eyebrow",
                             className: R.headerOption,
                             children: (0, i.jsx)(g.u, {
@@ -362,7 +362,7 @@ function q(e) {
         })
     );
 }
-function H(e) {
+function q(e) {
     let { guildId: t, onClose: n, transitionState: l } = e,
         r = (0, c.e7)([b.Z], () => b.Z.getCategories(t)),
         a = (0, c.e7)([O.Z], () => O.Z.getGuild(t)),
@@ -420,7 +420,7 @@ function H(e) {
                 guild: a,
                 handleCheckboxChange: P,
             }),
-            (0, i.jsx)(W, {
+            (0, i.jsx)(H, {
                 muted: p,
                 messageNotifications: f,
                 memberCount: o,
@@ -445,7 +445,7 @@ function H(e) {
                 channels: w,
                 categories: r,
             }),
-            (0, i.jsx)(q, {
+            (0, i.jsx)(W, {
                 newChannelOverrides: L,
                 channelOverrides: S,
                 channels: w,
@@ -466,5 +466,5 @@ function F(e) {
             return e;
         })(e),
     );
-    return (0, w.Mn)("NotificationSettingsModal") ? (0, i.jsx)(A.Z, k({}, t)) : (0, i.jsx)(H, k({}, t));
+    return (0, w.Mn)("NotificationSettingsModal") ? (0, i.jsx)(A.Z, k({}, t)) : (0, i.jsx)(q, k({}, t));
 }

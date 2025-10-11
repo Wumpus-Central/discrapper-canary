@@ -79,7 +79,7 @@ class Z extends r.PureComponent {
             children: [
                 (0, i.jsxs)(a.Z, {
                     children: [
-                        (0, i.jsx)(o.X6q, {
+                        (0, i.jsx)(o.Heading, {
                             variant: "heading-lg/semibold",
                             className: v.headerTitle,
                             children: b.intl.string(b.t["35G2Mj"]),

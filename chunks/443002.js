@@ -111,7 +111,7 @@ let T = function (e) {
                                             themeResponsive: !1,
                                             onButtonClick: L,
                                         }),
-                                        (0, r.jsx)(o.X6q, {
+                                        (0, r.jsx)(o.Heading, {
                                             className: I.heading,
                                             color: "always-white",
                                             variant: "display-lg",

@@ -23,7 +23,7 @@ function p(e) {
         : (0, r.jsxs)("div", {
               className: n,
               children: [
-                  (0, r.jsx)(i.X6q, {
+                  (0, r.jsx)(i.Heading, {
                       variant: "heading-sm/semibold",
                       color: "header-primary",
                       children: d.intl.string(d.t.s7ialZ),

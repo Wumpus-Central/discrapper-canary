@@ -16,7 +16,7 @@ function s(e) {
                 className: o.content,
                 children: a.intl.string(a.t.rdzeVF),
             }),
-            (0, r.jsx)(i.zxk, {
+            (0, r.jsx)(i.Button, {
                 variant: "overlay-primary",
                 text: a.intl.string(a.t["NX+WJC"]),
                 fullWidth: !0,

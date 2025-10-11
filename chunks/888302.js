@@ -1,15 +1,15 @@
 n.d(t, { Z: () => u });
 var r = n(951288),
     l = n(647438),
-    a = n(335818),
+    i = n(335818),
     s = n(481060),
-    i = n(501431),
+    a = n(501431),
     o = n(149705),
     c = n(388032);
 function u() {
-    let { itemTypeFilters: e, searchQuery: t } = (0, i.S)((e) => e),
+    let { itemTypeFilters: e, searchQuery: t } = (0, a.S)((e) => e),
         { totalCount: n, isFetchingResults: u } = (0, o.a)(),
-        d = (0, i.S)((e) => e.hasFilters()),
+        d = (0, a.S)((e) => e.hasFilters()),
         g = l.useCallback(() => {
             if (!d) return "";
             if (u) return c.intl.string(c.t["/FaMSE"]);
@@ -20,17 +20,17 @@ function u() {
                     search: e,
                 });
             }
-            return 1 === e.size && e.has(a.G.AVATAR_DECORATION)
+            return 1 === e.size && e.has(i.G.AVATAR_DECORATION)
                 ? c.intl.format(c.t.s1UzGR, { count: n })
-                : 1 === e.size && e.has(a.G.NAMEPLATE)
+                : 1 === e.size && e.has(i.G.NAMEPLATE)
                   ? c.intl.format(c.t.ZWGN9f, { count: n })
-                  : 1 === e.size && e.has(a.G.PROFILE_EFFECT)
+                  : 1 === e.size && e.has(i.G.PROFILE_EFFECT)
                     ? c.intl.format(c.t["v/7apq"], { count: n })
-                    : 1 === e.size && e.has(a.G.BUNDLE)
+                    : 1 === e.size && e.has(i.G.BUNDLE)
                       ? c.intl.format(c.t.fZ1rdn, { count: n })
                       : c.intl.format(c.t["/rPvmZ"], { count: n });
         }, [e, n, d, t, u]);
-    return (0, r.jsx)(s.X6q, {
+    return (0, r.jsx)(s.Heading, {
         variant: "heading-lg/semibold",
         children: g(),
     });

@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(596454),
     f = n(493773),
     h = n(607070),
-    x = n(933557),
-    b = n(471445),
+    b = n(933557),
+    x = n(471445),
     j = n(339085),
     v = n(565138),
     _ = n(372769),
@@ -83,8 +83,8 @@ let k = "WELCOME_CHANNEL",
             O = (0, u.e7)([N.Z], () => N.Z.getChannel(o.channel_id)),
             y = (0, u.e7)([j.ZP], () => (null != o.emoji_id ? j.ZP.getUsableCustomEmojiById(o.emoji_id) : null)),
             I = null != O && S.Uu(w.Plq.VIEW_CHANNEL, O),
-            T = null != (t = (0, b.KS)(O)) ? t : g.VL1,
-            P = (0, x.ZP)(O, !1),
+            T = null != (t = (0, x.KS)(O)) ? t : g.VL1,
+            P = (0, b.ZP)(O, !1),
             G = () => {
                 (0, g.ZDy)(
                     async () => {
@@ -210,13 +210,13 @@ let k = "WELCOME_CHANNEL",
             s = (0, u.e7)([h.Z], () => h.Z.useReducedMotion),
             [c, d] = i.useState(null),
             [m, p] = i.useState(!1),
-            [x, b] = i.useState(!1),
+            [b, x] = i.useState(!1),
             { description: j, channels: N, enabled: S } = l,
             Z = (e) => {
                 null != t && (o()(e, a.channels) || ((0, O.Es)(t.id, { channels: e }), p(!0)));
             },
             k = (e) => {
-                null != t && e !== a.enabled && ((0, O.Es)(t.id, { enabled: e }), b(!s), p(!0));
+                null != t && e !== a.enabled && ((0, O.Es)(t.id, { enabled: e }), x(!s), p(!0));
             },
             M = (e, t, n) => {
                 if (null == N) return;
@@ -259,7 +259,7 @@ let k = "WELCOME_CHANNEL",
             ? null
             : (0, r.jsxs)("div", {
                   children: [
-                      (0, r.jsx)(g.X6q, {
+                      (0, r.jsx)(g.Heading, {
                           variant: "heading-lg/semibold",
                           children: R.intl.string(R.t["2rkmDg"]),
                       }),
@@ -308,7 +308,7 @@ let k = "WELCOME_CHANNEL",
                                         k(!S);
                                     }
                                   : void 0,
-                          animateStatus: x,
+                          animateStatus: b,
                           firstLine: S ? R.intl.string(R.t.JbB7Qk) : R.intl.string(R.t["/bd0Qk"]),
                           secondLine: S ? R.intl.string(R.t["TA1g7+"]) : R.intl.string(R.t.nc6r1N),
                       }),
@@ -325,7 +325,7 @@ let k = "WELCOME_CHANNEL",
                                           animate: !0,
                                           tabIndex: -1,
                                       }),
-                                      (0, r.jsx)(g.X6q, {
+                                      (0, r.jsx)(g.Heading, {
                                           className: D.welcomeTitle,
                                           variant: "heading-xl/semibold",
                                           children: R.intl.format(R.t["0aydCA"], {

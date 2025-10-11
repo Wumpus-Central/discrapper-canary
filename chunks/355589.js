@@ -36,8 +36,8 @@ var r = n(951288),
     L = n(538366),
     F = n(470623),
     D = n(710352),
-    z = n(981631),
-    H = n(388032),
+    H = n(981631),
+    z = n(388032),
     B = n(951718);
 function U(e, t, n) {
     return (
@@ -86,11 +86,11 @@ function G(e, t) {
         e
     );
 }
-let q = {
+let W = {
         width: 28,
         height: 28,
     },
-    W = {
+    q = {
         width: 20,
         height: 20,
         borderRadius: 10,
@@ -116,14 +116,14 @@ let Y = (e) => {
         let { guild: t, roles: n } = e;
         return (0, r.jsx)("div", {
             className: B.rolesList,
-            "aria-label": H.intl.formatToPlainString(H.t.PCs0oq, { numRoles: n.length }),
+            "aria-label": z.intl.formatToPlainString(z.t.PCs0oq, { numRoles: n.length }),
             children: n.map((e) =>
                 (0, r.jsx)(
                     x.UB,
                     {
                         role: e,
                         canRemove: !1,
-                        onRemove: z.VqG,
+                        onRemove: H.VqG,
                         guildId: t.id,
                         className: B.rolePill,
                     },
@@ -143,7 +143,7 @@ let Y = (e) => {
         return (0, r.jsx)(g.P3F, {
             onClick: t,
             className: B.closeButton,
-            "aria-label": H.intl.string(H.t.WAI6xs),
+            "aria-label": z.intl.string(z.t.WAI6xs),
             children: (0, r.jsx)(g.Dio, {
                 size: "md",
                 color: "currentColor",
@@ -156,7 +156,7 @@ let Y = (e) => {
         return (0, r.jsx)(g.P3F, {
             onClick: n,
             className: B.closeButton,
-            "aria-label": t ? H.intl.string(H.t.iTcumZ) : H.intl.string(H.t.dcl9MT),
+            "aria-label": t ? z.intl.string(z.t.iTcumZ) : z.intl.string(z.t.dcl9MT),
             children: t
                 ? (0, r.jsx)(g.dOc, {
                       size: "xs",
@@ -230,8 +230,8 @@ let Y = (e) => {
                                     s.addStep(
                                         (function (e, t, i, a) {
                                             let l = (0, b.Z)(i)
-                                                    ? m.$e(z.Plq.VIEW_CHANNEL, z.Plq.SEND_MESSAGES)
-                                                    : z.Plq.SEND_MESSAGES,
+                                                    ? m.$e(H.Plq.VIEW_CHANNEL, H.Plq.SEND_MESSAGES)
+                                                    : H.Plq.SEND_MESSAGES,
                                                 s =
                                                     null != e
                                                         ? (0, R.E)(t, i, l).filter(
@@ -243,8 +243,8 @@ let Y = (e) => {
                                                 o = s.length > 0,
                                                 c = s.some((e) => (0, y.fI)(e));
                                             return {
-                                                name: H.intl.string(H.t["/Ax2go"]),
-                                                description: H.intl.string(H.t.gAIOfn),
+                                                name: z.intl.string(z.t["/Ax2go"]),
+                                                description: z.intl.string(z.t.gAIOfn),
                                                 isDone: o && c,
                                                 shouldWarn: o && !c,
                                                 children: o
@@ -276,7 +276,7 @@ let Y = (e) => {
                                                             },
                                                             {
                                                                 modalKey: "SEND_MESSAGE_ROLE_PERMISSION_FIX_MODAL_KEY",
-                                                                onCloseRequest: z.VqG,
+                                                                onCloseRequest: H.VqG,
                                                                 onCloseCallback: () => a(!1),
                                                             },
                                                         );
@@ -289,10 +289,10 @@ let Y = (e) => {
                                         ((e) => {
                                             let t = null != e.topic && e.topic.length > 0;
                                             return {
-                                                name: H.intl.string(H.t.UgJu1d),
-                                                description: H.intl.string(H.t["3C6/Gx"]),
+                                                name: z.intl.string(z.t.UgJu1d),
+                                                description: z.intl.string(z.t["3C6/Gx"]),
                                                 clickHandler: () => {
-                                                    X(D.ZI.GUIDELINES), f.ZP.open(e.id, void 0, z.ZfP.TOPIC);
+                                                    X(D.ZI.GUIDELINES), f.ZP.open(e.id, void 0, H.ZfP.TOPIC);
                                                 },
                                                 isDone: t,
                                             };
@@ -302,8 +302,8 @@ let Y = (e) => {
                                     ((e) => {
                                         let t = null != e.availableTags && e.availableTags.length > 0;
                                         return {
-                                            name: H.intl.string(H.t.xiBFCg),
-                                            description: H.intl.string(H.t.wCv4Oz),
+                                            name: z.intl.string(z.t.xiBFCg),
+                                            description: z.intl.string(z.t.wCv4Oz),
                                             clickHandler: () => {
                                                 X(D.ZI.TAGS),
                                                     f.ZP.open(e.id),
@@ -327,8 +327,8 @@ let Y = (e) => {
                                     ((e) => {
                                         let t = null != e.defaultReactionEmoji;
                                         return {
-                                            name: H.intl.string(H.t.QlyC9v),
-                                            description: H.intl.string(H.t["+50LJi"]),
+                                            name: z.intl.string(z.t.QlyC9v),
+                                            description: z.intl.string(z.t["+50LJi"]),
                                             clickHandler: () => {
                                                 X(D.ZI.DEFAULT_REACTION),
                                                     (0, g.ZDy)(async () => {
@@ -343,10 +343,10 @@ let Y = (e) => {
                                 s.addStep(
                                     ((i = null == e ? void 0 : e.id),
                                     {
-                                        name: H.intl.string(H.t["6A0O6+"]),
+                                        name: z.intl.string(z.t["6A0O6+"]),
                                         description: c
-                                            ? H.intl.string(H.t["8hI5vr"])
-                                            : H.intl.format(H.t.ysxcAw, {
+                                            ? z.intl.string(z.t["8hI5vr"])
+                                            : z.intl.format(z.t.ysxcAw, {
                                                   onClick: (e) => {
                                                       null != i &&
                                                           (e.preventDefault(),
@@ -361,7 +361,7 @@ let Y = (e) => {
                                                   },
                                               }),
                                         clickHandler: () => {
-                                            X(D.ZI.CREATE_POST), N.S.dispatch(z.CkL.FOCUS_COMPOSER_TITLE);
+                                            X(D.ZI.CREATE_POST), N.S.dispatch(H.CkL.FOCUS_COMPOSER_TITLE);
                                         },
                                         isDone: a,
                                     }),
@@ -415,7 +415,7 @@ let Y = (e) => {
             let { isAllDone: t, isVisible: n, canManageChannel: r, guildId: a, channel: l } = e,
                 s = (0, h.e7)([T.Z], () => (null != a ? T.Z.partitionVersion(a) : void 0)),
                 o = i.useCallback(() => {
-                    N.S.dispatch(z.CkL.REMEASURE_TARGET);
+                    N.S.dispatch(H.CkL.REMEASURE_TARGET);
                 }, []);
             i.useEffect(() => {
                 o();
@@ -460,15 +460,15 @@ let Y = (e) => {
                                                 (0, r.jsx)("div", {
                                                     className: B.headerRow,
                                                     children: (0, r.jsxs)(g.y5t, {
-                                                        component: (0, r.jsx)(g.X6q, {
+                                                        component: (0, r.jsx)(g.Heading, {
                                                             variant: "heading-md/semibold",
-                                                            children: H.intl.string(H.t.LhlgY2),
+                                                            children: z.intl.string(z.t.LhlgY2),
                                                         }),
                                                         children: [
-                                                            (0, r.jsx)(g.X6q, {
+                                                            (0, r.jsx)(g.Heading, {
                                                                 variant: "heading-md/medium",
                                                                 className: B.header,
-                                                                children: H.intl.format(H.t["9L+8b2"], {
+                                                                children: z.intl.format(z.t["9L+8b2"], {
                                                                     numCompleted: eo.completedSteps.toString(),
                                                                     numSteps: eo.steps.length.toString(),
                                                                 }),
@@ -482,7 +482,7 @@ let Y = (e) => {
                                                                         color: "currentColor",
                                                                         className: B.icon,
                                                                     }),
-                                                                    H.intl.string(H.t.znhX2d),
+                                                                    z.intl.string(z.t.znhX2d),
                                                                 ],
                                                             }),
                                                             (0, r.jsx)($, {
@@ -524,13 +524,13 @@ let Y = (e) => {
                                                                                               color: u.Z
                                                                                                   .STATUS_POSITIVE_BACKGROUND,
                                                                                               icon: g.dz2,
-                                                                                              style: W,
+                                                                                              style: q,
                                                                                               className: B.stepStatus,
                                                                                           })
                                                                                         : (0, r.jsx)(g.G2e, {
                                                                                               disableColor: !0,
                                                                                               icon: (0, g.GSL)(S.Z),
-                                                                                              style: q,
+                                                                                              style: W,
                                                                                               className: l()(
                                                                                                   B.stepStatus,
                                                                                                   B.completed,

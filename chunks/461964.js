@@ -1,7 +1,7 @@
-a.d(e, { default: () => u });
+a.d(e, { default: () => m });
 var n = a(951288),
-    r = a(647438),
-    i = a(481060),
+    i = a(647438),
+    r = a(481060),
     s = a(561716),
     l = a(721383),
     d = a(313201),
@@ -9,50 +9,50 @@ var n = a(951288),
     o = a(857595),
     h = a(981631),
     x = a(388032),
-    m = a(582914);
-function u(t) {
+    u = a(582914);
+function m(t) {
     let { transitionState: e, onClose: a } = t,
-        u = (0, d.Dt)();
+        m = (0, d.Dt)();
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             o.r_();
         }, []),
-        (0, n.jsxs)(i.Y0X, {
+        (0, n.jsxs)(r.Y0X, {
             transitionState: e,
             role: "alertdialog",
-            "aria-labelledby": u,
+            "aria-labelledby": m,
             parentComponent: "KeyboardNavigationModal",
             children: [
-                (0, n.jsxs)(i.hzk, {
-                    className: m.content,
+                (0, n.jsxs)(r.hzk, {
+                    className: u.content,
                     children: [
-                        (0, n.jsx)(i.X6q, {
+                        (0, n.jsx)(r.Heading, {
                             variant: "heading-xl/semibold",
-                            id: u,
-                            className: m.header,
+                            id: m,
+                            className: u.header,
                             children: x.intl.format(x.t.V4fxrq, {
                                 tab: (t, e) =>
                                     (0, n.jsx)(
-                                        i.M2$,
+                                        r.M2$,
                                         {
                                             shortcut: "tab",
-                                            className: m.headerShortcut,
+                                            className: u.headerShortcut,
                                         },
                                         e,
                                     ),
                             }),
                         }),
-                        (0, n.jsx)(i.Text, {
+                        (0, n.jsx)(r.Text, {
                             variant: "text-md/normal",
                             children: x.intl.string(x.t["oQA/OD"]),
                         }),
                         (0, n.jsxs)("ul", {
-                            className: m.tips,
+                            className: u.tips,
                             children: [
                                 (0, n.jsxs)("li", {
                                     children: [
-                                        (0, n.jsx)(i.M2$, { shortcut: l._.binds["0"] }),
-                                        (0, n.jsx)(i.Text, {
+                                        (0, n.jsx)(r.M2$, { shortcut: l._.binds["0"] }),
+                                        (0, n.jsx)(r.Text, {
                                             variant: "text-md/normal",
                                             children: x.intl.string(x.t["43Qn2t"]),
                                         }),
@@ -60,8 +60,8 @@ function u(t) {
                                 }),
                                 (0, n.jsxs)("li", {
                                     children: [
-                                        (0, n.jsx)(i.M2$, { shortcut: s.$.binds["0"] }),
-                                        (0, n.jsx)(i.Text, {
+                                        (0, n.jsx)(r.M2$, { shortcut: s.$.binds["0"] }),
+                                        (0, n.jsx)(r.Text, {
                                             variant: "text-md/normal",
                                             children: x.intl.string(x.t.zJg4FR),
                                         }),
@@ -69,14 +69,14 @@ function u(t) {
                                 }),
                             ],
                         }),
-                        (0, n.jsx)(i.Text, {
+                        (0, n.jsx)(r.Text, {
                             variant: "text-md/normal",
                             children: x.intl.format(x.t.EWFVSU, { link: c.Z.getArticleURL(h.BhN.KEYBOARD_NAVIGATION) }),
                         }),
                     ],
                 }),
-                (0, n.jsx)(i.mzw, {
-                    children: (0, n.jsx)(i.zxk, {
+                (0, n.jsx)(r.mzw, {
+                    children: (0, n.jsx)(r.Button, {
                         variant: "primary",
                         size: "sm",
                         text: x.intl.string(x.t.BddRzc),

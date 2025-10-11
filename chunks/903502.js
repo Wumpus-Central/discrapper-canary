@@ -126,9 +126,9 @@ function h() {
                         onChange: (e) => g(parseFloat(e)),
                     }),
                 }),
-                (0, a.jsxs)(l.hE2, {
+                (0, a.jsxs)(l.ButtonGroup, {
                     children: [
-                        (0, a.jsx)(l.zxk, {
+                        (0, a.jsx)(l.Button, {
                             variant: "critical-primary",
                             text: "Clear Override",
                             onClick: () =>
@@ -141,7 +141,7 @@ function h() {
                                 ),
                             disabled: !y,
                         }),
-                        (0, a.jsx)(l.zxk, {
+                        (0, a.jsx)(l.Button, {
                             variant: "primary",
                             text: "Update",
                             onClick: () =>

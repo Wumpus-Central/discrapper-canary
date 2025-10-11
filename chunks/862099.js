@@ -23,11 +23,11 @@ var r,
     _ = n(192079),
     O = n(427679),
     E = n(448206),
-    y = n(496675),
-    v = n(938475),
+    v = n(496675),
+    y = n(938475),
     I = n(626135),
-    S = n(823379),
-    C = n(15274),
+    C = n(823379),
+    S = n(15274),
     T = n(924301),
     N = n(504160),
     j = n(151864),
@@ -79,7 +79,7 @@ let B = l.memo(function (e) {
                         }),
                 ],
             }),
-            (0, i.jsx)(c.X6q, {
+            (0, i.jsx)(c.Heading, {
                 color: "header-primary",
                 variant: "heading-md/semibold",
                 className: G.eventName,
@@ -123,9 +123,9 @@ let B = l.memo(function (e) {
 function H(e) {
     let { guildEvent: t, channel: n } = e,
         r = (0, s.Wu)(
-            [v.ZP],
+            [y.ZP],
             () =>
-                v.ZP.getVoiceStatesForChannel(n).map((e) => {
+                y.ZP.getVoiceStatesForChannel(n).map((e) => {
                     let { user: t } = e;
                     return t;
                 }),
@@ -159,7 +159,7 @@ function V(e) {
         a = (0, s.e7)([P.Z], () => P.Z.getUpcomingNoticeSeenTime(t.id), [t.id]);
     return (
         l || null != a || (0, N._6)(t.id),
-        (0, i.jsx)(c.zxk, {
+        (0, i.jsx)(c.Button, {
             onClick: function () {
                 (0, D.Z)(t.id, null, t.guild_id, () => setTimeout(() => (0, N.L_)(t.id), 1000)),
                     I.default.track(M.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
@@ -207,7 +207,7 @@ function F(e) {
                     className: G.textBlock,
                     children: [
                         (0, i.jsx)(c.P3F, {
-                            onClick: () => (0, C.bO)({ eventId: n.id }),
+                            onClick: () => (0, S.bO)({ eventId: n.id }),
                             className: G.eventNameClickable,
                             children: (0, i.jsx)(c.Text, {
                                 color: "header-primary",
@@ -306,12 +306,12 @@ function z(e) {
 function W(e) {
     let { guildEvent: t } = e,
         n = l.useCallback(() => {
-            (0, C.bO)({ eventId: t.id });
+            (0, S.bO)({ eventId: t.id });
         }, [t]);
     return (0, i.jsx)("div", {
         "data-button-hoisted-classname-wrapper": !0,
         className: G.joinButton,
-        children: (0, i.jsx)(c.zxk, {
+        children: (0, i.jsx)(c.Button, {
             variant: "active",
             size: "sm",
             text: U.intl.string(U.t.z4FcDg),
@@ -320,12 +320,12 @@ function W(e) {
         }),
     });
 }
-function q(e) {
+function Y(e) {
     let { channel: t, label: n } = e;
     return (0, i.jsx)("div", {
         "data-button-hoisted-classname-wrapper": !0,
         className: G.joinButton,
-        children: (0, i.jsx)(c.zxk, {
+        children: (0, i.jsx)(c.Button, {
             variant: "active",
             size: "sm",
             text: n,
@@ -336,7 +336,7 @@ function q(e) {
         }),
     });
 }
-function Y(e) {
+function q(e) {
     let { stageInstance: t, channel: n } = e,
         r = (0, s.Wu)([m.Z], () => [...new Set(m.Z.getMutableParticipants(n.id, b.pV.SPEAKER).map((e) => e.user))], [
             n.id,
@@ -375,7 +375,7 @@ function Q(e) {
     let { channel: t, speakers: n, voiceType: r } = e,
         a = t.getGuildId(),
         d = l.useMemo(() => n.slice(0, 3), [n]),
-        p = (0, s.e7)([y.Z], () => y.Z.can(M.Plq.CONNECT, t)),
+        p = (0, s.e7)([v.Z], () => v.Z.can(M.Plq.CONNECT, t)),
         f = (0, E.Z)(t.id),
         h = U.intl.string(U.t.VJlc0d);
     switch (r) {
@@ -392,7 +392,7 @@ function Q(e) {
             h = U.intl.string(U.t.wBoE6O);
             break;
         default:
-            (0, S.vE)(r);
+            (0, C.vE)(r);
     }
     return null == a
         ? null
@@ -419,7 +419,7 @@ function Q(e) {
                       : null,
                   p &&
                       null == f &&
-                      (0, i.jsx)(q, {
+                      (0, i.jsx)(Y, {
                           channel: t,
                           label: h,
                       }),
@@ -446,12 +446,12 @@ let X = l.memo(function (e) {
     if (n) return (0, i.jsx)(f.Z, { guild: t });
     null == l || u
         ? h &&
-          (d = (0, i.jsx)(Y, {
+          (d = (0, i.jsx)(q, {
               stageInstance: o,
               channel: r,
           }))
         : l.entity_type === k.WX.STAGE_INSTANCE && h
-          ? (d = (0, i.jsx)(Y, {
+          ? (d = (0, i.jsx)(q, {
                 stageInstance: o,
                 channel: r,
             }))

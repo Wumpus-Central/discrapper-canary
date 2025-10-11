@@ -50,7 +50,7 @@ let h = function (e) {
                         }),
                         (0, r.jsxs)("div", {
                             children: [
-                                (0, r.jsx)(i.X6q, {
+                                (0, r.jsx)(i.Heading, {
                                     variant: "heading-md/semibold",
                                     className: p.header,
                                     children: _.intl.string(_.t["v/OYd3"]),
@@ -66,7 +66,7 @@ let h = function (e) {
                 (0, r.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
                     className: p.ctaButton,
-                    children: (0, r.jsx)(i.zxk, {
+                    children: (0, r.jsx)(i.Button, {
                         variant: "primary",
                         size: "sm",
                         text: _.intl.format(_.t["+xsVS0"], { username: n.author.username }),

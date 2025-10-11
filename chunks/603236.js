@@ -1,111 +1,111 @@
 n.d(t, {
-    I: () => S,
-    S: () => N,
+    I: () => y,
+    S: () => b,
 }),
     n(997841);
-var l = n(951288),
-    i = n(647438),
-    s = n(533800),
-    r = n(442837),
-    a = n(755721),
+var r = n(951288),
+    l = n(647438),
+    i = n(533800),
+    a = n(442837),
+    s = n(755721),
     o = n(481060),
-    u = n(484614),
-    d = n(914010),
-    c = n(246946),
+    c = n(484614),
+    u = n(914010),
+    d = n(246946),
     g = n(626135),
-    h = n(630388),
-    m = n(971130),
-    p = n(530436),
+    m = n(630388),
+    x = n(971130),
+    h = n(530436),
     v = n(245335),
-    I = n(981631),
-    x = n(388032),
+    p = n(981631),
+    j = n(388032),
     f = n(451964);
-let N = r.ZP.connectStores([c.Z], () => ({ hideValue: c.Z.hideInstantInvites }))((e) => {
-        let { value: t, autoFocus: n, hideValue: i, onCopy: s, disabled: r } = e;
-        return (0, l.jsx)(u.Z, {
+let b = a.ZP.connectStores([d.Z], () => ({ hideValue: d.Z.hideInstantInvites }))((e) => {
+        let { value: t, autoFocus: n, hideValue: l, onCopy: i, disabled: a } = e;
+        return (0, r.jsx)(c.Z, {
             value: t,
-            hideMessage: i ? x.intl.string(x.t["6HzNgY"]) : null,
-            buttonColor: a.zx.Colors.BRAND,
-            onCopy: s,
+            hideMessage: l ? j.intl.string(j.t["6HzNgY"]) : null,
+            buttonColor: s.zx.Colors.BRAND,
+            onCopy: i,
             autoFocus: n,
-            disabled: r,
+            disabled: a,
         });
     }),
-    S = (e) => {
+    y = (e) => {
         let {
                 guild: t,
                 noInvitesAvailable: n,
-                showFriends: r,
-                onClose: a,
-                modalState: u,
-                isApplicationBypassToggleEnabled: c,
-                setInviteFlags: S,
-                copyValue: _,
-                changePage: j,
-                inviteChannel: b,
-                source: E,
-                code: y,
-                guildScheduledEvent: T,
-                disabled: O,
-                application: C,
+                showFriends: a,
+                onClose: s,
+                modalState: c,
+                isApplicationBypassToggleEnabled: d,
+                setInviteFlags: y,
+                copyValue: O,
+                changePage: E,
+                inviteChannel: N,
+                source: C,
+                code: P,
+                guildScheduledEvent: S,
+                disabled: I,
+                application: T,
             } = e,
-            { maxAge: P, maxUses: Z, networkError: A, showVanityURL: M, flags: w } = u,
-            R = i.useCallback(() => {
-                g.default.track(I.rMx.COPY_INSTANT_INVITE, {
-                    server: d.Z.getGuildId(),
-                    channel: null == b ? void 0 : b.id,
-                    channel_type: null == b ? void 0 : b.type,
-                    location: E,
-                    code: y,
-                    guild_scheduled_event_id: null == T ? void 0 : T.id,
-                    application_id: null == C ? void 0 : C.id,
+            { maxAge: Z, maxUses: w, networkError: D, showVanityURL: k, flags: R } = c,
+            A = l.useCallback(() => {
+                g.default.track(p.rMx.COPY_INSTANT_INVITE, {
+                    server: u.Z.getGuildId(),
+                    channel: null == N ? void 0 : N.id,
+                    channel_type: null == N ? void 0 : N.type,
+                    location: C,
+                    code: P,
+                    guild_scheduled_event_id: null == S ? void 0 : S.id,
+                    application_id: null == T ? void 0 : T.id,
                 });
-            }, [null == C ? void 0 : C.id, b, E, y, T]);
-        return (0, l.jsxs)(o.Kqy, {
+            }, [null == T ? void 0 : T.id, N, C, P, S]);
+        return (0, r.jsxs)(o.Kqy, {
             gap: 16,
             children: [
-                (0, l.jsx)(N, {
-                    value: _,
-                    autoFocus: r,
-                    onCopy: R,
-                    disabled: O,
+                (0, r.jsx)(b, {
+                    value: O,
+                    autoFocus: a,
+                    onCopy: A,
+                    disabled: I,
                 }),
-                c &&
-                    (0, l.jsx)(o.rsf, {
-                        checked: (0, h.yE)(w, s.$.IS_APPLICATION_BYPASS),
-                        onChange: (e) => S((0, h.mB)(w, s.$.IS_APPLICATION_BYPASS, e)),
-                        disabled: O,
-                        label: x.intl.string(x.t["1i1bUl"]),
-                        description: x.intl.string(x.t["jvd/LC"]),
+                d &&
+                    (0, r.jsx)(o.rsf, {
+                        checked: (0, m.yE)(R, i.$.IS_APPLICATION_BYPASS),
+                        onChange: (e) => y((0, m.mB)(R, i.$.IS_APPLICATION_BYPASS, e)),
+                        disabled: I,
+                        label: j.intl.string(j.t["1i1bUl"]),
+                        description: j.intl.string(j.t["jvd/LC"]),
                     }),
-                n || M
+                n || k
                     ? null
-                    : (0, l.jsxs)(o.Text, {
+                    : (0, r.jsxs)(o.Text, {
                           variant: "text-xs/normal",
                           className: f.footerText,
                           children: [
-                              (0, m.Vg)(P, Z),
+                              (0, x.Vg)(Z, w),
                               " ",
-                              r
-                                  ? (0, l.jsx)(o.eee, {
-                                        onClick: () => j(v.RV.SETTINGS),
-                                        children: x.intl.string(x.t.VNe8Pz),
+                              a
+                                  ? (0, r.jsx)(o.Anchor, {
+                                        onClick: () => E(v.RV.SETTINGS),
+                                        children: j.intl.string(j.t.VNe8Pz),
                                     })
                                   : null,
                           ],
                       }),
-                !n && r && M
-                    ? (0, l.jsxs)(o.Text, {
+                !n && a && k
+                    ? (0, r.jsxs)(o.Text, {
                           variant: "text-xs/normal",
                           className: f.footerText,
-                          children: [x.intl.string(x.t["0M2U9/"]), " "],
+                          children: [j.intl.string(j.t["0M2U9/"]), " "],
                       })
                     : null,
-                null != A
-                    ? (0, l.jsx)(p.W, {
+                null != D
+                    ? (0, r.jsx)(h.W, {
                           guild: t,
-                          error: A,
-                          onClose: a,
+                          error: D,
+                          onClose: s,
                       })
                     : null,
             ],

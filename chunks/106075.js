@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(781311);
+n.d(t, { Z: () => C }), n(781311);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
@@ -17,13 +17,13 @@ var r = n(951288),
     _ = n(590771),
     O = n(273596),
     E = n(128449),
-    y = n(49898),
-    v = n(388032),
+    v = n(49898),
+    y = n(388032),
     I = n(301578);
-function S() {
+function C() {
     let e = i.useRef((0, f.PM)()),
-        { onScroll: t, scrollPosition: n, resetScrollPosition: S } = (0, a.M)(),
-        { tabs: C, selectedTab: T, setSelectedTab: N } = (0, b.Y)(),
+        { onScroll: t, scrollPosition: n, resetScrollPosition: C } = (0, a.M)(),
+        { tabs: S, selectedTab: T, setSelectedTab: N } = (0, b.Y)(),
         j = (0, f.lg)(T),
         P = !E.MU.has(T),
         {
@@ -55,12 +55,12 @@ function S() {
         H = i.useMemo(
             () =>
                 L
-                    ? C.filter((e) => {
+                    ? S.filter((e) => {
                           let { id: t } = e;
                           return !E.MU.has(t);
                       })
-                    : C,
-            [C, L],
+                    : S,
+            [S, L],
         ),
         V = i.useRef(new p.Z(j)),
         { onGuildCardSeen: F, onGuildCardClick: z } = (0, g.H)({
@@ -72,8 +72,8 @@ function S() {
             V.current.flushSeenGuilds(e.current);
         }, [j]),
         i.useEffect(() => {
-            S();
-        }, [T, S]),
+            C();
+        }, [T, C]),
         i.useEffect(() => {
             L || d.Z.setState({ scrollPosition: null });
         }, [L]),
@@ -99,21 +99,21 @@ function S() {
                                 onAvailableWidthChange: D,
                             }),
                         L &&
-                            (0, r.jsx)(l.X6q, {
+                            (0, r.jsx)(l.Heading, {
                                 variant: "heading-lg/semibold",
                                 color: "header-primary",
                                 className: I.searchResultsHeader,
-                                children: v.intl.format(v.t.zHdzqa, { query: G }),
+                                children: y.intl.format(y.t.zHdzqa, { query: G }),
                             }),
                         P &&
                             (0, r.jsx)(u.Z, {
                                 query: x,
-                                placeholder: v.intl.string(v.t["5h0QOD"]),
+                                placeholder: y.intl.string(y.t["5h0QOD"]),
                                 onTextChange: A,
                                 onClear: Z,
                                 onSubmit: w,
                                 onCollapsedClick: k,
-                                state: L ? y.GlobalDiscoverySearchBarState.DEFAULT : R,
+                                state: L ? v.GlobalDiscoverySearchBarState.DEFAULT : R,
                                 onBlur: M,
                             }),
                     ],

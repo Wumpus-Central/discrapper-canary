@@ -215,7 +215,7 @@ function K(e) {
         o = a.useContext(V);
     return (0, i.jsx)("div", {
         className: x.base,
-        children: (0, i.jsxs)(f.X6q, {
+        children: (0, i.jsxs)(f.Heading, {
             id: F(o.id),
             className: s()(x.contentTitle, n),
             variant: "heading-deprecated-12/semibold",

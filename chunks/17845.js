@@ -10,7 +10,7 @@ var r = n(951288),
     u = n(196073);
 function p(e) {
     let { title: t, betaTag: n, color: a = "header-primary" } = e;
-    return (0, r.jsxs)(o.X6q, {
+    return (0, r.jsxs)(o.Heading, {
         className: l()(u.title, u.uppercase),
         variant: "display-lg",
         color: a,

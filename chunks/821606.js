@@ -26,7 +26,7 @@ function d(t) {
                     direction: i.Z.Direction.VERTICAL,
                     justify: i.Z.Justify.CENTER,
                     children: [
-                        (0, n.jsx)(l.X6q, {
+                        (0, n.jsx)(l.Heading, {
                             id: x,
                             variant: "heading-lg/semibold",
                             className: c.title,
@@ -64,7 +64,7 @@ function d(t) {
                 }),
             }),
             (0, n.jsx)(l.mzw, {
-                children: (0, n.jsx)(l.zxk, {
+                children: (0, n.jsx)(l.Button, {
                     variant: "primary",
                     text: o.intl.string(o.t["/g10LC"]),
                     type: "button",

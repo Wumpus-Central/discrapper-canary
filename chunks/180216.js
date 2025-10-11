@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(584825),
     d = n(406074),
     u = n(660196),
-    p = n(36246),
-    h = n(305342),
+    h = n(36246),
+    p = n(305342),
     f = n(981631),
     g = n(388032),
     m = n(200813);
@@ -22,8 +22,8 @@ function b(e) {
         y = (0, c.GG)(t),
         _ = (0, c.YB)(t),
         j = (0, l.e7)([o.Z], () => o.Z.getGuild(t), [t]),
-        x = null == j ? void 0 : j.name,
-        O = (0, l.e7)([s.Z], () => s.Z.getChannel(n)),
+        O = null == j ? void 0 : j.name,
+        x = (0, l.e7)([s.Z], () => s.Z.getChannel(n)),
         v = i.useMemo(() => {
             let e = {};
             for (let t of y) for (let n of t.subscription_listings_ids) e[n] = t.id;
@@ -42,12 +42,12 @@ function b(e) {
         : (0, r.jsxs)(a.w0Z, {
               className: m.pageContainer,
               children: [
-                  (0, r.jsx)(a.X6q, {
+                  (0, r.jsx)(a.Heading, {
                       variant: "heading-xl/semibold",
                       className: m.joinCtaTitle,
                       children: g.intl.format(g.t.xHMpys, {
-                          serverName: x,
-                          channelName: null == O ? void 0 : O.name,
+                          serverName: O,
+                          channelName: null == x ? void 0 : x.name,
                       }),
                   }),
                   (0, r.jsx)(a.Text, {
@@ -56,13 +56,13 @@ function b(e) {
                       color: "header-secondary",
                       children: null == _ ? void 0 : _.description,
                   }),
-                  (0, r.jsx)(p.Z, {
+                  (0, r.jsx)(h.Z, {
                       guildId: t,
                       children: b
                           .filter((e) => null != v[e.id])
                           .map((e) =>
                               (0, r.jsx)(
-                                  h.Z,
+                                  p.Z,
                                   {
                                       guildId: t,
                                       listingId: e.id,

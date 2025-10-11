@@ -1,4 +1,4 @@
-n.d(i, { default: () => d });
+n.d(i, { default: () => x });
 var e = n(951288),
     a = n(442837),
     l = n(481060),
@@ -8,8 +8,8 @@ var e = n(951288),
     o = n(981631),
     m = n(388032),
     p = n(281556);
-let x = c.Z.getArticleURL(o.BhN.MISSING_ENTITLEMENT),
-    d = a.ZP.connectStores([s.Z], (t) => {
+let d = c.Z.getArticleURL(o.BhN.MISSING_ENTITLEMENT),
+    x = a.ZP.connectStores([s.Z], (t) => {
         let { applicationId: i } = t;
         return { application: s.Z.getApplication(i) };
     })(function (t) {
@@ -23,7 +23,7 @@ let x = c.Z.getArticleURL(o.BhN.MISSING_ENTITLEMENT),
                     align: r.Z.Align.CENTER,
                     justify: r.Z.Justify.BETWEEN,
                     children: [
-                        (0, e.jsx)(l.X6q, {
+                        (0, e.jsx)(l.Heading, {
                             variant: "heading-lg/semibold",
                             children:
                                 null != i
@@ -43,14 +43,14 @@ let x = c.Z.getArticleURL(o.BhN.MISSING_ENTITLEMENT),
                                 null != i
                                     ? m.intl.format(m.t["MM/7q6"], {
                                           applicationName: i.name,
-                                          supportArticleURL: x,
+                                          supportArticleURL: d,
                                       })
-                                    : m.intl.format(m.t.IfQUx8, { supportArticleURL: x }),
+                                    : m.intl.format(m.t.IfQUx8, { supportArticleURL: d }),
                         }),
                     ],
                 }),
                 (0, e.jsx)(l.mzw, {
-                    children: (0, e.jsx)(l.zxk, {
+                    children: (0, e.jsx)(l.Button, {
                         variant: "primary",
                         text: m.intl.string(m.t.BddRzc),
                         onClick: a,

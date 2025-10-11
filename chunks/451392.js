@@ -89,7 +89,7 @@ function E(e) {
                     (0, r.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
                         className: g.resetButton,
-                        children: (0, r.jsx)(c.zxk, {
+                        children: (0, r.jsx)(c.Button, {
                             variant: "secondary",
                             size: "sm",
                             text: m.intl.string(m.t["L+Gmoa"]),

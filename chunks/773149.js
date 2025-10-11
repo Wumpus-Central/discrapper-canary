@@ -83,7 +83,7 @@ function I(e) {
                       }),
                   }),
                   (0, r.jsx)(p.N4, {
-                      children: (0, r.jsx)(c.zxk, {
+                      children: (0, r.jsx)(c.Button, {
                           variant: "primary",
                           fullWidth: !0,
                           text: _.intl.string(x.default.PuvU5e),

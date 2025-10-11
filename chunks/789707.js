@@ -25,7 +25,7 @@ function l() {
                     (0, r.jsx)(a.Z, { className: s.stars }),
                 ],
             }),
-            (0, r.jsx)(i.X6q, {
+            (0, r.jsx)(i.Heading, {
                 className: s.header,
                 variant: "heading-xl/semibold",
                 children: o.intl.string(o.t.yJHJen),

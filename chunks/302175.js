@@ -167,7 +167,7 @@ function k(e) {
                         children: [
                             (0, r.jsx)("div", {
                                 className: D.button,
-                                children: (0, r.jsx)(f.zxk, {
+                                children: (0, r.jsx)(f.Button, {
                                     variant: "primary",
                                     text: P.intl.string(P.t["oPAx7+"]),
                                     onClick: B,
@@ -177,7 +177,7 @@ function k(e) {
                             T &&
                                 (0, r.jsx)("div", {
                                     className: D.button,
-                                    children: (0, r.jsx)(f.zxk, {
+                                    children: (0, r.jsx)(f.Button, {
                                         variant: "secondary",
                                         text: P.intl.string(P.t.GoCQxc),
                                         onClick: Z,

@@ -225,7 +225,7 @@ class R extends i.Component {
                                         ],
                                     }),
                                     !0 !== i &&
-                                        (0, r.jsx)(l.XZJ, {
+                                        (0, r.jsx)(l.Checkbox, {
                                             checked: a,
                                             onChange: (e) => this.setState({ hasSpoiler: e }),
                                             label: b.intl.string(b.t["gsI+xM"]),

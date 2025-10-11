@@ -98,7 +98,7 @@ let f = (e) => {
                         (0, a.jsxs)("div", {
                             className: x.section,
                             children: [
-                                (0, a.jsx)(l.X6q, {
+                                (0, a.jsx)(l.Heading, {
                                     variant: "heading-lg/semibold",
                                     children: "Product Configuration",
                                 }),
@@ -143,7 +143,7 @@ let f = (e) => {
                         (0, a.jsxs)("div", {
                             className: x.section,
                             children: [
-                                (0, a.jsx)(l.X6q, {
+                                (0, a.jsx)(l.Heading, {
                                     variant: "heading-lg/semibold",
                                     children: "Product Preview",
                                 }),
@@ -157,7 +157,7 @@ let f = (e) => {
                                                   category: T,
                                                   tab: h.AW.HOME,
                                               }),
-                                              (0, a.jsx)(l.zxk, {
+                                              (0, a.jsx)(l.Button, {
                                                   variant: "primary",
                                                   onClick: () => {
                                                       null != E &&

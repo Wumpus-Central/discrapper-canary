@@ -59,27 +59,27 @@ function O(e, t) {
     );
 }
 function E(e) {
-    var t, n, E, y;
-    let v,
-        { content: I, renderModalProps: S, analyticsLocations: C, analyticsLocation: T, isLightTheme: N } = e,
+    var t, n, E, v;
+    let y,
+        { content: I, renderModalProps: C, analyticsLocations: S, analyticsLocation: T, isLightTheme: N } = e,
         j = "AnnouncementModalVariant1_".concat(l.z[Number(I.dismissKey)]),
-        { onClose: P } = S,
-        x = null != (y = null == (t = I.button) ? void 0 : t.copy) ? y : m.intl.string(m.t.YScQSE),
+        { onClose: P } = C,
+        x = null != (v = null == (t = I.button) ? void 0 : t.copy) ? v : m.intl.string(m.t.YScQSE),
         A =
             (null == (n = I.button) ? void 0 : n.buttonAction) === a.Wc.OPEN_MARKETING_PAGE
                 ? "jump_to_mkt_button"
                 : "get_nitro_button";
     switch (null == (E = I.button) ? void 0 : E.buttonAction) {
         case a.Wc.OPEN_MARKETING_PAGE:
-            v = () => {
+            y = () => {
                 (0, u.uL)(g.Z5c.APPLICATION_STORE), P();
             };
             break;
         case a.Wc.OPEN_TIER_1_PAYMENT_MODAL:
-            v = () =>
+            y = () =>
                 (0, c.Z)({
                     subscriptionTier: h.Si.TIER_1,
-                    analyticsLocations: C,
+                    analyticsLocations: S,
                     analyticsObject: O(_({}, T), {
                         object: g.qAy.BUTTON_CTA,
                         objectType: g.Qqv.TIER_1,
@@ -92,10 +92,10 @@ function E(e) {
         case a.Wc.OPEN_TIER_2_PAYMENT_MODAL:
         case a.Wc.OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER:
         default:
-            v = () =>
+            y = () =>
                 (0, c.Z)({
                     subscriptionTier: h.Si.TIER_2,
-                    analyticsLocations: C,
+                    analyticsLocations: S,
                     analyticsObject: O(_({}, T), {
                         object: g.qAy.BUTTON_CTA,
                         objectType: g.Qqv.TIER_2,
@@ -111,7 +111,7 @@ function E(e) {
                       (0, r.jsxs)(r.Fragment, {
                           children: [
                               "\xA0",
-                              (0, r.jsx)(s.eee, {
+                              (0, r.jsx)(s.Anchor, {
                                   className: b.termsApplyAnchor,
                                   href: p.Z.getArticleURL(I.helpArticleId),
                                   children: m.intl.string(m.t["sBp+u7"]),
@@ -143,7 +143,7 @@ function E(e) {
                   })
             : void 0;
     return {
-        renderModalProps: S,
+        renderModalProps: C,
         header: I.header,
         modalTopExtra: L,
         subHeader: I.subheader,
@@ -169,7 +169,7 @@ function E(e) {
                         seconds_open: Math.round((Date.now() - e) / 1000),
                         target: j,
                     }),
-                        v();
+                        y();
                 },
                 text: x,
                 icon: i.SrA,

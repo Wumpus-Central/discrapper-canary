@@ -18,7 +18,7 @@ function c(e) {
                         height: 24,
                         width: 24,
                     }),
-                    (0, i.jsx)(o.X6q, {
+                    (0, i.jsx)(o.Heading, {
                         variant: "heading-md/semibold",
                         className: s.title,
                         children: l,

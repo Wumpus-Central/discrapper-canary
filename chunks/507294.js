@@ -24,11 +24,11 @@ var r = n(951288),
     _ = n(314897),
     O = n(271383),
     E = n(485386),
-    y = n(626135),
-    v = n(63063),
+    v = n(626135),
+    y = n(63063),
     I = n(225104),
-    S = n(981631),
-    C = n(388032),
+    C = n(981631),
+    S = n(388032),
     T = n(375563),
     N = n(245141);
 function j(e) {
@@ -82,8 +82,8 @@ let x = function (e) {
     if (
         (i.useEffect(() => {
             0 !== L.length &&
-                y.default.track(
-                    S.rMx.PASSPORT_ENTRY_VIEWED,
+                v.default.track(
+                    C.rMx.PASSPORT_ENTRY_VIEWED,
                     j(
                         {
                             role_ids: L.map((e) => {
@@ -104,9 +104,9 @@ let x = function (e) {
     let k = A.filter((e) => null === e.tags.guild_connections);
     return (0, r.jsx)(o.Modal, {
         transitionState: l,
-        title: C.intl.string(C.t.ghtnsr),
+        title: S.intl.string(S.t.ghtnsr),
         onClose: x,
-        subtitle: C.intl.format(C.t["Y+TsER"], { helpdeskArticleUrl: v.Z.getArticleURL(S.BhN.CONNECTION_DETAILS) }),
+        subtitle: S.intl.format(S.t["Y+TsER"], { helpdeskArticleUrl: y.Z.getArticleURL(C.BhN.CONNECTION_DETAILS) }),
         actions: [],
         children: (0, r.jsx)(u.Kqy, {
             children: k.map((e) => {
@@ -126,7 +126,7 @@ let x = function (e) {
                                 o =
                                     (null == i ? void 0 : i.bot) != null
                                         ? (0, r.jsx)("img", {
-                                              src: new b.Z(i.bot).getAvatarURL(t, 24),
+                                              src: new b.default(i.bot).getAvatarURL(t, 24),
                                               alt: "",
                                               className: a()(T.botAvatar, N.avatar),
                                           })

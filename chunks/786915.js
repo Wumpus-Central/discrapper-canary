@@ -97,16 +97,16 @@ function y(e) {
         { parentAnalyticsLocation: w } = (0, c.ZP)(),
         M = null == y ? void 0 : y.getGuildId(),
         R = (0, a.e7)([p.Z], () => (null != M ? p.Z.getGuild(M) : null), [M]),
-        k = (0, a.e7)([h.Z], () => (null != t ? h.Z.getApplicationActivity(t) : void 0)),
-        L = null == t || j ? o.ejJ : o.gQj,
-        D = null != t ? b.intl.string(b.t["OzOM/v"]) : b.intl.string(b.t["6F9ivr"]);
-    return null != k && E
+        L = (0, a.e7)([h.Z], () => (null != t ? h.Z.getApplicationActivity(t) : void 0)),
+        D = null == t || j ? o.ejJ : o.gQj,
+        k = null != t ? b.intl.string(b.t["OzOM/v"]) : b.intl.string(b.t["6F9ivr"]);
+    return null != L && E
         ? (0, i.jsx)(m.Z, {
               onClick: () => {
-                  null != w && (0, u.v)(w, u.d.INVITE), s.h7(k, !1, A);
+                  null != w && (0, u.v)(w, u.d.INVITE), s.h7(L, !1, A);
               },
-              iconComponent: L,
-              label: D,
+              iconComponent: D,
+              label: k,
               iconClassName: S,
               look: P,
               size: I,
@@ -137,8 +137,9 @@ function y(e) {
                                         (0, o.ZDy)(
                                             async () => {
                                                 let { default: e } = await Promise.all([
-                                                    n.e("7654"),
+                                                    n.e("74318"),
                                                     n.e("49049"),
+                                                    n.e("7654"),
                                                     n.e("98953"),
                                                 ]).then(n.bind(n, 560114));
                                                 return (n) => {
@@ -154,8 +155,8 @@ function y(e) {
                                                                 applicationId: a,
                                                                 analyticsLocation: u,
                                                                 source: r.isGuildStageVoice()
-                                                                    ? g.t4x.STAGE_CHANNEL
-                                                                    : g.t4x.STREAM_INVITE,
+                                                                    ? g.InstantInviteSources.STAGE_CHANNEL
+                                                                    : g.InstantInviteSources.STREAM_INVITE,
                                                                 guildScheduledEvent: d,
                                                             }),
                                                         Object.getOwnPropertyDescriptors
@@ -197,8 +198,8 @@ function y(e) {
                                     guildScheduledEvent: O,
                                 });
                         },
-                        iconComponent: L,
-                        label: D,
+                        iconComponent: D,
+                        label: k,
                         iconClassName: S,
                         look: P,
                         size: I,

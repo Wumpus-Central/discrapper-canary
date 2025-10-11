@@ -1,10 +1,10 @@
-n.d(t, { Z: () => b }), n(953529);
+n.d(t, { Z: () => x }), n(953529);
 var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(367907),
-    s = n(906732),
-    a = n(91218),
+    a = n(906732),
+    s = n(91218),
     o = n(807582),
     c = n(518738),
     d = n(26323),
@@ -38,7 +38,7 @@ function h(e) {
     }
     return e;
 }
-function x(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,20 +56,20 @@ function x(e, t) {
         e
     );
 }
-let b = function (e) {
-    let { guild: t, disabled: b, role: j } = e,
-        _ = (0, c.oC)(t.id, j),
-        { analyticsLocations: v } = (0, s.ZP)(),
+let x = function (e) {
+    let { guild: t, disabled: x, role: j } = e,
+        v = (0, c.oC)(t.id, j),
+        { analyticsLocations: _ } = (0, a.ZP)(),
         C = t.features.has(g.oNc.ROLE_ICONS),
         O = (e) => {
             C ||
                 ((0, l.yw)(g.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
-                    location: x(h({}, e), { section: g.jXE.CUSTOM_ROLE_ICONS_TOOLTIP }),
+                    location: b(h({}, e), { section: g.jXE.CUSTOM_ROLE_ICONS_TOOLTIP }),
                     guild_id: null == t ? void 0 : t.id,
-                    location_stack: v,
+                    location_stack: _,
                 }),
                 (0, d.Z)({
-                    analyticsLocations: v,
+                    analyticsLocations: _,
                     analyticsSourceLocation: {
                         page: g.ZY5.GUILD_SETTINGS,
                         section: g.jXE.GUILD_ROLE_EDIT_UPSELL_MODAL,
@@ -108,10 +108,10 @@ let b = function (e) {
                     (0, r.jsx)("div", {
                         className: f.previewContainer,
                         children:
-                            null != _
+                            null != v
                                 ? (0, r.jsx)(
-                                      a.Z,
-                                      x(h({}, _), {
+                                      s.Z,
+                                      b(h({}, v), {
                                           className: f.roleIconPreview,
                                           enableTooltip: !1,
                                       }),
@@ -124,7 +124,7 @@ let b = function (e) {
                                       className: f.preview,
                                   }),
                     }),
-                    (0, r.jsx)(i.zxk, {
+                    (0, r.jsx)(i.Button, {
                         onClick: () =>
                             t.features.has(g.oNc.ROLE_ICONS)
                                 ? void (0, i.ZDy)(async () => {
@@ -132,7 +132,7 @@ let b = function (e) {
                                       return (n) =>
                                           (0, r.jsx)(
                                               e,
-                                              x(h({}, n), {
+                                              b(h({}, n), {
                                                   guildId: t.id,
                                                   onUploadIcon: (e) => (0, u._l)(j.id, e, null),
                                                   onSelectUnicodeEmoji: (e) => (0, u._l)(j.id, null, e),
@@ -141,16 +141,16 @@ let b = function (e) {
                                   })
                                 : O({ object: g.qAy.UPLOAD_IMAGE }),
                         variant: "primary",
-                        disabled: b,
+                        disabled: x,
                         text: p.intl.string(p.t.mD1oGB),
                     }),
-                    null != _
-                        ? (0, r.jsx)(i.zxk, {
+                    null != v
+                        ? (0, r.jsx)(i.Button, {
                               onClick: () => {
                                   (0, u._l)(j.id, null, null);
                               },
                               variant: "critical-secondary",
-                              disabled: b,
+                              disabled: x,
                               text: p.intl.string(p.t["uY+Nk5"]),
                           })
                         : null,

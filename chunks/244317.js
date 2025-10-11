@@ -17,10 +17,10 @@ function m(e) {
         [m, b] = i.useState(!1),
         _ = i.useRef(!1),
         [O, E] = i.useState(null),
-        y = !u.isPlatformEmbedded && !a.tq && !m,
-        v = i.useMemo(() => (0, l.Z)(), []);
+        v = !u.isPlatformEmbedded && !a.tq && !m,
+        y = i.useMemo(() => (0, l.Z)(), []);
     return (i.useEffect(() => {
-        y &&
+        v &&
             !0 !== _.current &&
             (Promise.resolve()
                 .then(n.bind(n, 536285))
@@ -31,7 +31,7 @@ function m(e) {
                         params: {
                             applicationId: t,
                             url: location.href,
-                            attemptId: v,
+                            attemptId: y,
                         },
                     })
                         .then((e) => {
@@ -40,7 +40,7 @@ function m(e) {
                                 c.default.track(p.rMx.ACTIVITY_DEEP_LINK_ATTEMPTED, {
                                     application_id: t,
                                     source_url: location.href,
-                                    attempt_id: v,
+                                    attempt_id: y,
                                     rpc_success: n,
                                 });
                         })
@@ -49,20 +49,20 @@ function m(e) {
                                 c.default.track(p.rMx.ACTIVITY_DEEP_LINK_ATTEMPTED, {
                                     application_id: t,
                                     source_url: location.href,
-                                    attempt_id: v,
+                                    attempt_id: y,
                                     rpc_success: !1,
                                 });
                         })
                         .then(() => n.disconnect());
                 }),
             (_.current = !0));
-    }, [t, y, v]),
-    y && !1 !== O)
+    }, [t, v, y]),
+    v && !1 !== O)
         ? !0 === O
             ? (0, r.jsxs)("div", {
                   className: g.container,
                   children: [
-                      (0, r.jsx)(s.X6q, {
+                      (0, r.jsx)(s.Heading, {
                           variant: "heading-xxl/bold",
                           children: h.intl.string(h.t.csrAMD),
                       }),
@@ -80,7 +80,7 @@ function m(e) {
             : (0, r.jsxs)("div", {
                   className: g.container,
                   children: [
-                      (0, r.jsx)(s.X6q, {
+                      (0, r.jsx)(s.Heading, {
                           variant: "heading-xxl/bold",
                           children: h.intl.string(h.t["Z+hCVV"]),
                       }),

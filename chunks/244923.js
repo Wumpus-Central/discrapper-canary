@@ -23,7 +23,7 @@ let u = function (e) {
                 await a.tq(t, e, t.currency, (0, s.UX)(t.items, t.currency, t.paymentSourceId), _),
                 n());
         };
-    return (0, r.jsx)(i.zxk, {
+    return (0, r.jsx)(i.Button, {
         variant: "active",
         text: f,
         "data-testid": "purchase",

@@ -27,7 +27,7 @@ function p(e) {
                       (0, i.jsxs)("div", {
                           className: d.mainTitleContainer,
                           children: [
-                              (0, i.jsx)(o.X6q, {
+                              (0, i.jsx)(o.Heading, {
                                   variant: "heading-xl/medium",
                                   color: "header-primary",
                                   className: d.mainTitle,

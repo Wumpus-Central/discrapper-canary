@@ -21,15 +21,15 @@ function h(e) {
             popularProducts: h,
             isFetchingWishlist: m,
             isFetchingShopHome: x,
-            isFetchingCategories: b,
-            wishlistError: g,
+            isFetchingCategories: g,
+            wishlistError: b,
             fetchShopHomeError: j,
         } = (0, d.ZL)(t),
         { displayItems: y, wishlistLength: v } = (0, d.UD)({
             wishlist: u,
             defaultWishlistId: c,
             popularProducts: h,
-            wishlistError: g,
+            wishlistError: b,
             fetchShopHomeError: j,
         }),
         L = i.useCallback(() => {
@@ -38,7 +38,7 @@ function h(e) {
                 section: p.oh.WISHLIST,
             });
         }, [t.id]);
-    if (null == c || null != g || null != j) return null;
+    if (null == c || null != b || null != j) return null;
     let S = C.ZP.getName(t),
         w =
             null == n
@@ -62,7 +62,7 @@ function h(e) {
                     (0, r.jsxs)("div", {
                         className: f.wishlistBannerTitleContainer,
                         children: [
-                            (0, r.jsx)(a.X6q, {
+                            (0, r.jsx)(a.Heading, {
                                 variant: "display-md",
                                 className: f.wishlistBannerTitle,
                                 children: _.intl.string(_.t["7lZ31N"]),
@@ -74,7 +74,7 @@ function h(e) {
                             }),
                         ],
                     }),
-                    (0, r.jsx)(a.zxk, {
+                    (0, r.jsx)(a.Button, {
                         variant: "overlay-secondary",
                         text: _.intl.format(_.t["8uYD+P"], { username: S }),
                         onClick: L,
@@ -85,7 +85,7 @@ function h(e) {
             (0, r.jsx)("div", {
                 className: f.wishlistBannerGrid,
                 children:
-                    m || x || b || null == u || 0 === y.length
+                    m || x || g || null == u || 0 === y.length
                         ? (0, r.jsx)("div", {})
                         : y.map((e) => {
                               let { item: n, source: i } = e;

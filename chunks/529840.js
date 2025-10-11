@@ -1,27 +1,28 @@
-r.d(t, { Z: () => C });
+r.d(t, { Z: () => d });
 var a = r(951288);
 r(647438);
 var i = r(120356),
     s = r.n(i),
-    n = r(481060),
-    l = r(518950),
-    o = r(715156);
-function C(e) {
+    n = r(755721),
+    l = r(481060),
+    o = r(518950),
+    C = r(715156);
+function d(e) {
     var t;
-    let { user: r, checked: i, onChange: C, disabled: d } = e,
-        { avatarSrc: c, eventHandlers: x } = (0, l.Z)({
+    let { user: r, checked: i, onChange: d, disabled: c } = e,
+        { avatarSrc: x, eventHandlers: p } = (0, o.Z)({
             userId: null == r ? void 0 : r.id,
-            size: n.EFr.SIZE_32,
+            size: l.EFr.SIZE_32,
         }),
-        p = null != (t = r.globalName) ? t : r.username;
+        h = null != (t = r.globalName) ? t : r.username;
     return (0, a.jsxs)("div", {
-        className: o.container,
+        className: C.container,
         children: [
             (0, a.jsxs)("div", {
-                className: o.user,
+                className: C.user,
                 children: [
                     (0, a.jsx)(
-                        n.qEK,
+                        l.qEK,
                         (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var r = null != arguments[t] ? arguments[t] : {},
@@ -48,27 +49,27 @@ function C(e) {
                             return e;
                         })(
                             {
-                                className: s()({ [o.muted]: d }),
-                                src: c,
-                                "aria-label": p,
-                                size: n.EFr.SIZE_32,
+                                className: s()({ [C.muted]: c }),
+                                src: x,
+                                "aria-label": h,
+                                size: l.EFr.SIZE_32,
                             },
-                            x,
+                            p,
                         ),
                     ),
-                    (0, a.jsx)(n.Text, {
-                        color: d ? "text-muted" : "text-default",
+                    (0, a.jsx)(l.Text, {
+                        color: c ? "text-muted" : "text-default",
                         variant: "text-md/semibold",
-                        children: p,
+                        children: h,
                     }),
                 ],
             }),
             (0, a.jsx)("div", {
-                className: o.checkbox,
-                children: (0, a.jsx)(n.XZJ, {
-                    disabled: d,
-                    checked: i,
-                    onChange: (e) => C(r, e),
+                className: C.checkbox,
+                children: (0, a.jsx)(n.$q, {
+                    disabled: c,
+                    value: i,
+                    onChange: (e, t) => d(r, t),
                 }),
             }),
         ],

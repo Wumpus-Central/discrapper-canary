@@ -96,7 +96,7 @@ function b(e) {
                                                 className: N.gameTileImg,
                                             }),
                                         }),
-                                        (0, s.jsx)(r.X6q, {
+                                        (0, s.jsx)(r.Heading, {
                                             variant: "heading-lg/semibold",
                                             color: "text-default",
                                             className: N.headingText,
@@ -109,7 +109,7 @@ function b(e) {
                                 className: N.bodyText,
                                 children: j.intl.string(j.t.NweJIy),
                             }),
-                            (0, s.jsx)(r.zxk, {
+                            (0, s.jsx)(r.Button, {
                                 variant: "primary",
                                 text: j.intl.string(j.t.UQvCf3),
                                 fullWidth: !0,

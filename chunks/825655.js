@@ -83,7 +83,7 @@ function E(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(s.zxk, {
+            (0, r.jsx)(s.Button, {
                 variant: "secondary",
                 size: "sm",
                 text: p.intl.string(p.t["1iI46O"]),

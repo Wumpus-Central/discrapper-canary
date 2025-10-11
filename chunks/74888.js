@@ -14,7 +14,7 @@ var s = n(120356),
 function m(e) {
     return (0, i.jsx)("div", {
         className: g.sectionHeader,
-        children: (0, i.jsx)(a.X6q, {
+        children: (0, i.jsx)(a.Heading, {
             variant: "text-xs/bold",
             className: g.sectionHeaderTitle,
             color: "text-muted",

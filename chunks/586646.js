@@ -51,7 +51,7 @@ function E(e) {
             (0, l.jsxs)("div", {
                 className: p.header,
                 children: [
-                    (0, l.jsx)(a.X6q, {
+                    (0, l.jsx)(a.Heading, {
                         variant: "text-sm/bold",
                         color: "header-primary",
                         children: h.intl.string(h.t.cTQI5u),

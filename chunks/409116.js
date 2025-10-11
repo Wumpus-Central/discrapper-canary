@@ -103,7 +103,7 @@ let f = (e) => {
                       : null,
                 j,
                 O &&
-                    (0, r.jsxs)(o.X6q, {
+                    (0, r.jsxs)(o.Heading, {
                         variant: "heading-md/semibold",
                         className: p.discountPill,
                         children: [

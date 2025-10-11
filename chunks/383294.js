@@ -15,13 +15,13 @@ var r = n(951288),
     m = n(507808),
     h = n(43747),
     C = n(82856),
-    y = n(960919),
-    g = n(272008),
+    g = n(960919),
+    y = n(272008),
     E = n(497505),
-    x = n(46140),
-    v = n(981631),
-    j = n(215023),
-    R = n(388032),
+    v = n(46140),
+    j = n(981631),
+    R = n(215023),
+    x = n(388032),
     O = n(378658),
     A = n(557256),
     S = n(582425),
@@ -43,7 +43,7 @@ function Z() {
             null == (n = b.current) || n.play();
         }
     }, [t, e]);
-    let y = (0, l.q_F)({
+    let g = (0, l.q_F)({
         from: { y: 50 },
         to: { y: 0 },
         config: {
@@ -53,7 +53,7 @@ function Z() {
     });
     return (0, r.jsxs)(i.animated.div, {
         className: O.videoLayers,
-        style: y,
+        style: g,
         children: [
             !o && (0, r.jsx)("div", { className: O.videoPlaceholder }),
             (0, r.jsx)(_.Z, {
@@ -113,15 +113,15 @@ function T(e) {
                   ? (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(Z, {}),
-                            (0, r.jsx)(l.X6q, {
+                            (0, r.jsx)(l.Heading, {
                                 variant: "heading-lg/medium",
                                 className: O.title,
-                                children: R.intl.format(R.t["8l9H0t"], {
+                                children: x.intl.format(x.t["8l9H0t"], {
                                     balanceHook: () =>
                                         (0, r.jsxs)("span", {
                                             className: O.orbsBalance,
                                             children: [
-                                                (0, r.jsx)(y.Z, {
+                                                (0, r.jsx)(g.Z, {
                                                     shouldUseThemeColor: !0,
                                                     className: O.orbsBalanceIcon,
                                                 }),
@@ -133,25 +133,25 @@ function T(e) {
                             (0, r.jsx)(l.Text, {
                                 variant: "text-sm/normal",
                                 className: O.subtext,
-                                children: R.intl.string(R.t.EDUOIC),
+                                children: x.intl.string(x.t.EDUOIC),
                             }),
-                            (0, r.jsxs)(l.hE2, {
+                            (0, r.jsxs)(l.ButtonGroup, {
                                 className: O.buttonContainer,
                                 fullWidthContainer: !0,
                                 fullWidth: !0,
                                 direction: "vertical",
                                 children: [
-                                    (0, r.jsx)(l.zxk, {
+                                    (0, r.jsx)(l.Button, {
                                         variant: "primary",
                                         fullWidth: !0,
-                                        text: R.intl.string(R.t.WYchdX),
+                                        text: x.intl.string(x.t.WYchdX),
                                         onClick: a,
                                     }),
-                                    (0, r.jsx)(l.zxk, {
+                                    (0, r.jsx)(l.Button, {
                                         variant: "secondary",
                                         fullWidth: !0,
-                                        text: R.intl.string(R.t["7kTAgI"]),
-                                        onClick: () => window.open(v.EYA.PAID_TERMS_ORBS),
+                                        text: x.intl.string(x.t["7kTAgI"]),
+                                        onClick: () => window.open(j.EYA.PAID_TERMS_ORBS),
                                     }),
                                 ],
                             }),
@@ -168,24 +168,24 @@ function T(e) {
                             (0, r.jsxs)("div", {
                                 className: O.errorContentContainer,
                                 children: [
-                                    (0, r.jsx)(l.X6q, {
+                                    (0, r.jsx)(l.Heading, {
                                         variant: "heading-xl/medium",
                                         className: O.errorHeader,
-                                        children: R.intl.string(R.t.tWYWJy),
+                                        children: x.intl.string(x.t.tWYWJy),
                                     }),
                                     (0, r.jsx)(l.Text, {
                                         variant: "text-md/normal",
                                         color: "text-muted",
-                                        children: R.intl.string(R.t.JNQRU1),
+                                        children: x.intl.string(x.t.JNQRU1),
                                     }),
                                 ],
                             }),
                             (0, r.jsx)("div", {
                                 className: O.buttonContainer,
-                                children: (0, r.jsx)(l.zxk, {
+                                children: (0, r.jsx)(l.Button, {
                                     variant: "primary",
                                     fullWidth: !0,
-                                    text: R.intl.string(R.t.cpT0Cg),
+                                    text: x.intl.string(x.t.cpT0Cg),
                                     onClick: o,
                                 }),
                             }),
@@ -243,7 +243,7 @@ function w(e) {
                 !c && null != s && null != l && s > l && i(!0);
             }, [s, l, c]),
             a.useEffect(() => {
-                (0, g.QB)(e, E.y$.CROSS_PLATFORM, n)
+                (0, y.QB)(e, E.y$.CROSS_PLATFORM, n)
                     .then((e) => {
                         if ((null == e ? void 0 : e.claimedAt) != null) return void o("success");
                         o("error");
@@ -261,15 +261,15 @@ function w(e) {
         u = a.useCallback(() => {
             c(),
                 (0, m.Y)({
-                    pageType: v.ZY5.GLOBAL_DISCOVERY_QUESTS,
-                    sectionType: v.jXE.ORBS_REWARD_MODAL,
-                    ctaObject: v.qAy.CTA_TO_ORBS_SHOP,
+                    pageType: j.ZY5.GLOBAL_DISCOVERY_QUESTS,
+                    sectionType: j.jXE.ORBS_REWARD_MODAL,
+                    ctaObject: j.qAy.CTA_TO_ORBS_SHOP,
                 }),
                 (0, p.mK)({
                     openInLayer: !1,
-                    tab: j.AW.ORBS,
+                    tab: R.AW.ORBS,
                     analyticsLocations: [],
-                    analyticsSource: o.id === x.V6 ? b.Z.INTRO_TO_ORBS_QUEST : b.Z.QUEST_HOME_PAGE,
+                    analyticsSource: o.id === v.V6 ? b.Z.INTRO_TO_ORBS_QUEST : b.Z.QUEST_HOME_PAGE,
                 });
         }, [c, o.id]);
     return (0, r.jsxs)(r.Fragment, {

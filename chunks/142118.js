@@ -14,7 +14,7 @@ let a = l.memo(function (e) {
         (0, r.jsxs)(o.Kqy, {
             gap: 24,
             children: [
-                (0, r.jsx)(o.X6q, {
+                (0, r.jsx)(o.Heading, {
                     variant: "heading-lg/semibold",
                     children: c,
                 }),

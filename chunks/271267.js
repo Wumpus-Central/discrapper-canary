@@ -1,13 +1,13 @@
 n.d(t, {
     Q: () => m,
-    Z: () => x,
+    Z: () => b,
 }),
     n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
-    s = n(957011),
-    a = n(587431),
+    a = n(957011),
+    s = n(587431),
     o = n(756066),
     c = n(388032),
     d = n(52726),
@@ -39,8 +39,8 @@ function g(e) {
 }
 let m = "role_subscriptions_eligibility_modal";
 function p(e) {
-    let { guild: t, eligibility: i, eligibilityLoading: s, eligibilityError: a, refreshEligibility: o } = e;
-    return (0, r.jsx)(l.zxk, {
+    let { guild: t, eligibility: i, eligibilityLoading: a, eligibilityError: s, refreshEligibility: o } = e;
+    return (0, r.jsx)(l.Button, {
         variant: "expressive",
         onClick: function () {
             (0, l.ZDy)(
@@ -54,8 +54,8 @@ function p(e) {
                             (c = c =
                                 {
                                     eligibility: i,
-                                    eligibilityLoading: s,
-                                    eligibilityError: a,
+                                    eligibilityLoading: a,
+                                    eligibilityError: s,
                                     refreshEligibility: o,
                                     guildId: t.id,
                                 }),
@@ -85,11 +85,11 @@ function p(e) {
 }
 function f(e) {
     let { guild: t, checkboxText: n } = e,
-        { canSubmitAcceptance: o, error: d, loading: u, submitAcceptTermsRequest: g } = (0, s.Z)(t.id),
+        { canSubmitAcceptance: o, error: d, loading: u, submitAcceptTermsRequest: g } = (0, a.Z)(t.id),
         [m, p] = i.useState(!1);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(l.XZJ, {
+            (0, r.jsx)(l.Checkbox, {
                 onChange: function () {
                     p((e) => !e);
                 },
@@ -97,7 +97,7 @@ function f(e) {
                 label: n,
             }),
             (0, r.jsx)(l.LZC, { size: 24 }),
-            (0, r.jsx)(l.zxk, {
+            (0, r.jsx)(l.Button, {
                 disabled: !m || !o,
                 onClick: g,
                 loading: u,
@@ -106,7 +106,7 @@ function f(e) {
             }),
             null != d &&
                 (0, r.jsxs)(r.Fragment, {
-                    children: [(0, r.jsx)(l.LZC, { size: 24 }), (0, r.jsx)(a.Z, { children: d.getAnyErrorMessage() })],
+                    children: [(0, r.jsx)(l.LZC, { size: 24 }), (0, r.jsx)(s.Z, { children: d.getAnyErrorMessage() })],
                 }),
         ],
     });
@@ -116,8 +116,8 @@ function h(e) {
         {
             eligibilityLoading: i,
             eligibilityError: l,
-            refreshEligibility: s,
-            eligibility: a,
+            refreshEligibility: a,
+            eligibility: s,
             eligibleForMonetization: c,
             acceptTermsCheckboxText: d,
             wasRejectedInV1: u,
@@ -131,13 +131,13 @@ function h(e) {
               })
         : (0, r.jsx)(p, {
               guild: t,
-              eligibility: a,
+              eligibility: s,
               eligibilityLoading: i,
               eligibilityError: l,
-              refreshEligibility: s,
+              refreshEligibility: a,
           });
 }
-function x(e) {
+function b(e) {
     let { guild: t, monetizationEligibility: n } = e;
     return (0, r.jsxs)("div", {
         className: d.ctaContainer,
@@ -150,7 +150,7 @@ function x(e) {
             (0, r.jsxs)("div", {
                 className: d.ctaContent,
                 children: [
-                    (0, r.jsx)(l.X6q, {
+                    (0, r.jsx)(l.Heading, {
                         variant: "heading-xl/semibold",
                         color: "header-primary",
                         children: c.intl.string(c.t.PqYfh4),

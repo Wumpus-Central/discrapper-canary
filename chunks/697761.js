@@ -64,7 +64,7 @@ function _(e) {
         null == f || f(), new a.Z("UserActivityActions").log("notify", n.id, t);
     };
     return (0, r.jsx)(
-        i.zxk,
+        i.Button,
         u(
             {
                 text: l.intl.string(l.t.vwl1PD),

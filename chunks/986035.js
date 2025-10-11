@@ -12,19 +12,19 @@ let o = function (e) {
         disagreement: c,
         onAgree: d,
         onDisagree: u,
-        modalType: p,
-        channelId: h,
+        modalType: h,
+        channelId: p,
         guildId: f,
     } = e;
     i.useEffect(() => {
-        (0, a.YT)(p, h, f);
-    }, [p, h, f]);
+        (0, a.YT)(h, p, f);
+    }, [h, p, f]);
     let g = i.useCallback(() => {
-            (0, a.qd)(a.iP.NSFW_CHANNEL_DISAGREE_CTA, p, h, f), null == u || u();
-        }, [u, p, h, f]),
+            (0, a.qd)(a.iP.NSFW_CHANNEL_DISAGREE_CTA, h, p, f), null == u || u();
+        }, [u, h, p, f]),
         m = i.useCallback(() => {
-            (0, a.qd)(a.iP.NSFW_CHANNEL_AGREE_CTA, p, h, f), null == d || d();
-        }, [d, p, h, f]);
+            (0, a.qd)(a.iP.NSFW_CHANNEL_AGREE_CTA, h, p, f), null == d || d();
+        }, [d, h, p, f]);
     return (0, r.jsxs)(l.Kqy, {
         justify: "center",
         align: "center",
@@ -58,14 +58,14 @@ let o = function (e) {
                 gap: 16,
                 children: [
                     null != c && null != u
-                        ? (0, r.jsx)(l.zxk, {
+                        ? (0, r.jsx)(l.Button, {
                               variant: "secondary",
                               text: c,
                               onClick: g,
                           })
                         : null,
                     null != o && null != d
-                        ? (0, r.jsx)(l.zxk, {
+                        ? (0, r.jsx)(l.Button, {
                               onClick: m,
                               text: o,
                           })

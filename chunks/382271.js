@@ -97,7 +97,7 @@ let S = (e, t) => {
                           color: "text-primary",
                           children: l,
                       }),
-                (0, r.jsx)(u.zxk, {
+                (0, r.jsx)(u.Button, {
                     variant: "secondary",
                     size: "sm",
                     text: y.intl.string(y.t["g33r/P"]),

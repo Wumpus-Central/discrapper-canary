@@ -149,7 +149,7 @@ function I(e) {
                                 shouldUseThemeColor: !0,
                                 className: N.orbsIcon,
                             }),
-                            (0, a.jsx)(l.X6q, {
+                            (0, a.jsx)(l.Heading, {
                                 variant: "heading-xl/semibold",
                                 color: "header-primary",
                                 children: R.intl.formatToPlainString(R.t.YMor7u, { count: r }),
@@ -178,7 +178,7 @@ function I(e) {
                         : null,
                 ],
             }),
-            (0, a.jsx)(l.zxk, {
+            (0, a.jsx)(l.Button, {
                 variant: "secondary",
                 size: "sm",
                 text: R.intl.string(R.t.WYchdX),

@@ -50,8 +50,8 @@ let b = a().debounce(c.ZP.trackWithMetadata, 500),
             trackingSource: _,
             undismissable: O,
             onDismissed: E,
-            onClick: y,
-            cta: v,
+            onClick: v,
+            cta: y,
             ctaColor: I,
         } = e;
         i.useEffect(() => {
@@ -60,11 +60,11 @@ let b = a().debounce(c.ZP.trackWithMetadata, 500),
                 guild_id: t.id,
             });
         }, [t.id, d]);
-        let S = null;
-        "function" == typeof v
-            ? (S = v())
-            : null != v &&
-              (S = (0, r.jsx)(o.zx, {
+        let C = null;
+        "function" == typeof y
+            ? (C = y())
+            : null != y &&
+              (C = (0, r.jsx)(o.zx, {
                   className: g.btn,
                   size: o.zx.Sizes.SMALL,
                   onClick: () => {
@@ -74,13 +74,13 @@ let b = a().debounce(c.ZP.trackWithMetadata, 500),
                               guild_id: t.id,
                               notice_type: d,
                           }),
-                          null == y || y();
+                          null == v || v();
                   },
                   fullWidth: !0,
                   color: I,
-                  children: v,
+                  children: y,
               }));
-        let C = null != p ? "".concat(p, "px") : "16px";
+        let S = null != p ? "".concat(p, "px") : "16px";
         return (0, r.jsxs)("div", {
             className: g.channelNotice,
             children: [
@@ -102,8 +102,8 @@ let b = a().debounce(c.ZP.trackWithMetadata, 500),
                     className: g.imageContainer,
                     style: {
                         marginTop: "".concat(m, "px"),
-                        marginLeft: C,
-                        marginRight: C,
+                        marginLeft: S,
+                        marginRight: S,
                     },
                     children: (0, r.jsx)("img", {
                         className: g.image,
@@ -115,7 +115,7 @@ let b = a().debounce(c.ZP.trackWithMetadata, 500),
                     className: g.message,
                     children: [
                         null != n
-                            ? (0, r.jsx)(s.X6q, {
+                            ? (0, r.jsx)(s.Heading, {
                                   variant: "heading-md/semibold",
                                   className: g.title,
                                   children: n,
@@ -125,7 +125,7 @@ let b = a().debounce(c.ZP.trackWithMetadata, 500),
                             variant: "text-sm/normal",
                             children: l,
                         }),
-                        S,
+                        C,
                     ],
                 }),
             ],

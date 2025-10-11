@@ -48,13 +48,13 @@ function y(e) {
             (0, r.jsxs)("div", {
                 className: b.rowDetails,
                 children: [
-                    (0, r.jsx)(c.X6q, {
+                    (0, r.jsx)(c.Heading, {
                         variant: "heading-md/semibold",
                         children: E.intl.format(E.t.LzobT0, { planName: O }),
                     }),
                     n.hasFreePremium() || (null != s && s.isPurchasedExternally)
                         ? null
-                        : (0, r.jsx)(c.X6q, {
+                        : (0, r.jsx)(c.Heading, {
                               className: b.rowApplied,
                               variant: "heading-sm/semibold",
                               color: "header-secondary",

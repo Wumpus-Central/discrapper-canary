@@ -94,14 +94,16 @@ let g = [
             getName: () => p.intl.string(p.t.MJQOuL),
             handler: (e, t) =>
                 (0, l.ZDy)(async () => {
-                    let { default: i } = await Promise.all([n.e("7654"), n.e("54833")]).then(n.bind(n, 560114));
+                    let { default: i } = await Promise.all([n.e("74318"), n.e("7654"), n.e("54833")]).then(
+                        n.bind(n, 560114),
+                    );
                     return (n) =>
                         (0, r.jsx)(
                             i,
                             f(h({}, n), {
                                 guild: e,
                                 channel: t,
-                                source: d.t4x.HUB_SIDEBAR,
+                                source: d.InstantInviteSources.HUB_SIDEBAR,
                             }),
                         );
                 }),

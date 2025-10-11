@@ -63,7 +63,7 @@ function f(e) {
                         ),
                     ),
                 }),
-                (0, r.jsx)(i.X6q, {
+                (0, r.jsx)(i.Heading, {
                     variant: "heading-sm/normal",
                     className: l.textContainerRebranded,
                     color: "header-primary",

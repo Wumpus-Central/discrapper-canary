@@ -46,7 +46,7 @@ function h(e) {
                     (0, r.jsxs)("div", {
                         className: p.headerTextContainer,
                         children: [
-                            (0, r.jsx)(s.X6q, {
+                            (0, r.jsx)(s.Heading, {
                                 variant: "heading-lg/extrabold",
                                 color: "header-primary",
                                 children: _.intl.string(_.t["6jI0hY"]),

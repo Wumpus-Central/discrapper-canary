@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(37234),
     f = n(410030),
     h = n(607070),
-    x = n(100527),
-    b = n(663993),
+    b = n(100527),
+    x = n(663993),
     j = n(243778),
     v = n(518738),
     _ = n(753206),
@@ -40,9 +40,9 @@ var r = n(951288),
     B = n(989308),
     F = n(12574),
     H = n(21321),
-    z = n(179517),
+    W = n(179517),
     V = n(79829);
-let W = (0, b.Un)({
+let z = (0, x.Un)({
         createPromise: () => n.e("4848").then(n.bind(n, 797967)),
         webpackId: 797967,
     }),
@@ -72,9 +72,9 @@ function q(e) {
         o = (0, P.F)(U.intl.string(U.t.Mi9KbW)),
         d = (0, f.ZP)(),
         h = (0, v.oC)(n, t),
-        b = {
+        x = {
             dark: {
-                src: z,
+                src: W,
                 name: t.name,
             },
             light: {
@@ -83,7 +83,7 @@ function q(e) {
             },
         };
     function O() {
-        (0, y.Z)(n, x.Z.GUILD_POWERUPS_GUILD_SETTINGS_ROLE_EDIT), (0, p.xf)();
+        (0, y.Z)(n, b.Z.GUILD_POWERUPS_GUILD_SETTINGS_ROLE_EDIT), (0, p.xf)();
     }
     return (0, r.jsx)(j.ZP, {
         contentTypes: [u.z.GUILD_SETTINGS_ROLE_STYLES_NEW_BADGE],
@@ -122,7 +122,7 @@ function q(e) {
                                                     },
                                                     message: o,
                                                     preview: !0,
-                                                    roleIcon: null != h ? h : (0, g.ap)(d) ? b.light : b.dark,
+                                                    roleIcon: null != h ? h : (0, g.ap)(d) ? x.light : x.dark,
                                                     isGroupStart: !0,
                                                     disableInteraction: !0,
                                                     previewGuildId: n,
@@ -158,7 +158,7 @@ function q(e) {
                                         }),
                                     ],
                                 }),
-                                (0, r.jsx)(m.zxk, {
+                                (0, r.jsx)(m.Button, {
                                     onClick: O,
                                     variant: "expressive",
                                     icon: m.Ucv,
@@ -211,7 +211,7 @@ function X() {
         children: U.intl.string(B.default["+/IHLi"]),
     });
 }
-function J(e) {
+function Q(e) {
     var t, n;
     let { role: i, disabled: l, currentStyle: a, hasEnhancedRoleColors: s } = e;
     return (0, r.jsx)("div", {
@@ -220,7 +220,7 @@ function J(e) {
             label: U.intl.string(U.t["1F6FzM"]),
             description: U.intl.string(U.t["9UCxlZ"]),
             required: !0,
-            children: (0, r.jsx)(W, {
+            children: (0, r.jsx)(z, {
                 defaultColor: G.p6O,
                 colors: a === T.g.GRADIENT && s ? M.tl : G.pmI,
                 value: i.color,
@@ -259,7 +259,7 @@ function J(e) {
         }),
     });
 }
-function Q(e) {
+function J(e) {
     let { role: t, guildId: n, selectedStyle: i, disableInteraction: l } = e,
         s = (0, P.F)(U.intl.string(U.t.Mi9KbW)),
         o = {
@@ -271,7 +271,7 @@ function Q(e) {
             colorString: t.colorString,
         },
         c = {
-            src: z,
+            src: W,
             name: t.name,
         },
         d = {
@@ -351,8 +351,8 @@ function ee(e) {
         g = (0, E.fI)(n),
         p = i || g,
         f = (0, d.e7)([I.Z], () => I.Z.canImpersonateRole(t, n)),
-        { headerHeight: h, headerRef: x } = (0, w.Z)(0),
-        { scrolledToTop: b, handleScroll: j } = (0, R.V)();
+        { headerHeight: h, headerRef: b } = (0, w.Z)(0),
+        { scrolledToTop: x, handleScroll: j } = (0, R.V)();
     return (0, r.jsx)(m.yWw, {
         className: F.scroller,
         style: { scrollPaddingTop: h },
@@ -361,8 +361,8 @@ function ee(e) {
             className: H.contentWidth,
             children: [
                 (0, r.jsx)("div", {
-                    className: a()(H.header, H.stickyHeader, { [H.stickyHeaderElevated]: !b }),
-                    ref: x,
+                    className: a()(H.header, H.stickyHeader, { [H.stickyHeaderElevated]: !x }),
+                    ref: b,
                     children: (0, r.jsx)(R.Z, {
                         guild: t,
                         role: n,
@@ -390,7 +390,7 @@ function ee(e) {
                     }),
                 u !== T.g.HOLOGRAPHIC &&
                     null != u &&
-                    (0, r.jsx)(J, {
+                    (0, r.jsx)(Q, {
                         role: n,
                         disabled: p,
                         currentStyle: u,
@@ -409,7 +409,7 @@ function ee(e) {
                     disabled: p,
                     role: n,
                 }),
-                (0, r.jsx)(Q, {
+                (0, r.jsx)(J, {
                     role: n,
                     guildId: t.id,
                     selectedStyle: u,

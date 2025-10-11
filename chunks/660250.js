@@ -2,8 +2,8 @@ r.r(t), r.d(t, { default: () => j });
 var n = r(951288),
     o = r(647438),
     c = r(793030),
-    l = r(442837),
-    i = r(481060),
+    i = r(442837),
+    l = r(481060),
     s = r(959457),
     a = r(571826),
     u = r(630759),
@@ -16,7 +16,7 @@ var n = r(951288),
 let j = function (e) {
     var t, r;
     let { transitionState: j, streamKey: h, channelId: m, onClose: g } = e,
-        v = (0, l.e7)([s.Z], () => {
+        v = (0, i.e7)([s.Z], () => {
             var e;
             return null == (e = s.Z.getSecureFramesState(h)) ? void 0 : e.epochAuthenticator;
         }),
@@ -41,7 +41,7 @@ let j = function (e) {
                         (0, n.jsxs)("div", {
                             className: y.header,
                             children: [
-                                (0, n.jsx)(i.X6q, {
+                                (0, n.jsx)(l.Heading, {
                                     variant: "text-sm/bold",
                                     color: "header-primary",
                                     children: O.intl.string(O.t.cgBTyM),
@@ -50,7 +50,7 @@ let j = function (e) {
                                     (0, n.jsx)(p.H, {
                                         className: y.copyIcon,
                                         chunks: x,
-                                        color: i.TVs.colors.INTERACTIVE_NORMAL,
+                                        color: l.TVs.colors.INTERACTIVE_NORMAL,
                                         onCopy: P,
                                     }),
                             ],
@@ -62,7 +62,7 @@ let j = function (e) {
                         }),
                     ],
                 }),
-                (0, n.jsx)(i.Text, {
+                (0, n.jsx)(l.Text, {
                     className: y.footer,
                     variant: "text-sm/normal",
                     color: "text-muted",

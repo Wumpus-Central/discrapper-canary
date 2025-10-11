@@ -1,4 +1,4 @@
-i.d(n, { Z: () => h }), i(953529);
+i.d(e, { Z: () => h }), i(953529);
 var t = i(951288);
 i(647438);
 var a = i(120356),
@@ -13,8 +13,8 @@ var a = i(120356),
     g = i(800530),
     p = i(388032),
     u = i(186425);
-function h(e) {
-    var n, i;
+function h(n) {
+    var e, i;
     let {
             classification: a,
             isDsaEligible: h = !1,
@@ -24,12 +24,12 @@ function h(e) {
             className: _,
             onClose: E,
             onNext: v,
-        } = e,
+        } = n,
         I = (0, d.n)(),
-        T = null != (n = null == a ? void 0 : a.explainer_link) ? n : "",
+        T = null != (e = null == a ? void 0 : a.explainer_link) ? e : "",
         S = null != a && null != a.flagged_content && a.flagged_content.length > 0,
-        k = (0, c.c7)(null == a ? void 0 : a.description),
-        A = !N && !C && (null == j || j === o.j4.IN_APP),
+        A = (0, c.c7)(null == a ? void 0 : a.description),
+        k = !N && !C && (null == j || j === o.j4.IN_APP),
         Z = null != a && ((0, c.FB)(a) || S);
     return (0, t.jsxs)(t.Fragment, {
         children: [
@@ -39,7 +39,7 @@ function h(e) {
                 className: u.header,
                 separator: !1,
                 children: [
-                    (0, t.jsx)(l.X6q, {
+                    (0, t.jsx)(l.Heading, {
                         className: u.title,
                         variant: "heading-xl/semibold",
                         children: p.intl.string(p.t["C5q+pa"]),
@@ -74,7 +74,7 @@ function h(e) {
                         className: u.policyContainer,
                         children: (0, t.jsx)(l.Text, {
                             variant: "text-md/semibold",
-                            children: k,
+                            children: A,
                         }),
                     }),
                     C &&
@@ -96,7 +96,7 @@ function h(e) {
                             url: T,
                             onClick: () => I(g.n0.ClickLearnMoreLink),
                         }),
-                    A &&
+                    k &&
                         h &&
                         (0, t.jsx)(l.Text, {
                             className: u.learnMore,
@@ -105,10 +105,10 @@ function h(e) {
                         }),
                 ],
             }),
-            A &&
+            k &&
                 (0, t.jsx)(l.mzw, {
                     "data-migration-pending": !0,
-                    children: (0, t.jsx)(l.zxk, {
+                    children: (0, t.jsx)(l.Button, {
                         variant: "primary",
                         text: p.intl.string(p.t.PDTjLC),
                         onClick: v,

@@ -1,4 +1,4 @@
-t.d(n, { default: () => G }), t(457542), t(388685);
+t.d(n, { default: () => q }), t(457542), t(388685);
 var a = t(951288),
     o = t(647438),
     r = t(120356),
@@ -12,8 +12,8 @@ var a = t(951288),
     _ = t(235400),
     p = t(204418),
     f = t(975298),
-    x = t(583434),
-    g = t(530618),
+    g = t(583434),
+    x = t(530618),
     h = t(454585),
     C = t(732389),
     v = t(164946),
@@ -27,17 +27,17 @@ var a = t(951288),
     P = t(272008),
     S = t(113434),
     y = t(497505),
-    A = t(475595),
-    B = t(566078),
+    B = t(475595),
+    A = t(566078),
     E = t(968435),
     L = t(114732),
-    k = t(46140),
-    M = t(981631),
-    O = t(675654),
+    M = t(46140),
+    O = t(981631),
+    k = t(675654),
     Z = t(474936),
     D = t(388032),
-    z = t(824210);
-function F() {
+    F = t(824210);
+function z() {
     let e = b.Z.getAllPending(),
         n = (0, v.ED)(e);
     return (0, u.Mn)(n).finally(u.si);
@@ -52,7 +52,7 @@ function U(e) {
             reward: _,
             decoration: p,
             onUseNow: f,
-            preview: x,
+            preview: g,
         } = e,
         h = o.useRef(null),
         [C, v] = o.useState(null),
@@ -60,21 +60,21 @@ function U(e) {
         w = (0, d.e7)([m.Z], () => m.Z.useReducedMotion),
         N = (0, d.e7)([I.default], () => I.default.getCurrentUser()),
         b = (null == (n = s.userStatus) ? void 0 : n.claimedAt) != null,
-        [T, R] = o.useState(!0 === x || b ? "claimed" : "loading");
+        [T, R] = o.useState(!0 === g || b ? "claimed" : "loading");
     o.useEffect(() => {
         b ||
-            !0 === x ||
+            !0 === g ||
             (0, P.QB)(s.id, y.y$.CROSS_PLATFORM, u)
                 .then(() => R("claimed"))
                 .catch(() => R("error"));
-    }, [s, u, b, x]);
-    let S = !0 === x && null === p && (null == _ ? void 0 : _.skuId) !== "",
-        A = null == N || (null == p && !0 !== x) || S || "loading" === T;
+    }, [s, u, b, g]);
+    let S = !0 === g && null === p && (null == _ ? void 0 : _.skuId) !== "",
+        B = null == N || (null == p && !0 !== g) || S || "loading" === T;
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(l.O_, {
                 ref: v,
-                className: z.confettiCanvas,
+                className: F.confettiCanvas,
                 environment: j.current,
             }),
             (0, a.jsx)("div", {
@@ -83,15 +83,15 @@ function U(e) {
                     "data-migration-pending": !0,
                     transitionState: t,
                     size: c.CgR.DYNAMIC,
-                    className: i()(z.rootContainer, { [z.rootContainerLoading]: A }),
+                    className: i()(F.rootContainer, { [F.rootContainerLoading]: B }),
                     hideShadow: !0,
                     parentComponent: "QuestsRewardCollectibleModal",
                     children:
                         "error" === T
                             ? (0, a.jsx)(L.Z, { onClose: r })
-                            : A
+                            : B
                               ? (0, a.jsx)("div", {
-                                    className: z.loadingIndicatorWrapper,
+                                    className: F.loadingIndicatorWrapper,
                                     children: (0, a.jsx)(c.$jN, { type: c.$jN.Type.SPINNING_CIRCLE }),
                                 })
                               : (0, a.jsx)(W, {
@@ -109,26 +109,26 @@ function U(e) {
             !w &&
                 !b &&
                 "claimed" === T &&
-                (0, a.jsx)(g.Z, {
+                (0, a.jsx)(x.Z, {
                     confettiTarget: h.current,
                     confettiCanvas: C,
-                    sprites: O.CA,
-                    colors: O.Br,
+                    sprites: k.CA,
+                    colors: k.Br,
                 }),
         ],
     });
 }
-function q(e) {
+function H(e) {
     let { quest: n } = e,
-        t = o.useMemo(() => (0, A.fh)(n, A.eC.LOGO_TYPE, "dark"), [n]),
-        r = B.r.build(n.config).defaultRewardRedemptionInstructionsByPlatform[y.y$.CROSS_PLATFORM];
+        t = o.useMemo(() => (0, B.fh)(n, B.eC.LOGO_TYPE, "dark"), [n]),
+        r = A.r.build(n.config).defaultRewardRedemptionInstructionsByPlatform[y.y$.CROSS_PLATFORM];
     return (0, a.jsxs)("div", {
-        className: z.additionalRedemptionInstructions,
+        className: F.additionalRedemptionInstructions,
         children: [
             (0, a.jsx)("img", {
                 src: t.url,
                 alt: "",
-                className: z.sponsorLogo,
+                className: F.sponsorLogo,
             }),
             (0, a.jsx)(c.Text, {
                 variant: "text-sm/normal",
@@ -140,16 +140,16 @@ function q(e) {
 }
 function W(e) {
     let { quest: n, user: t, decoration: o, isSaving: r, onClose: i, onConfirm: l } = e,
-        s = (0, A.fh)(n, A.eC.REWARD).url,
+        s = (0, B.fh)(n, B.eC.REWARD).url,
         d = (0, R.f$)(n.config),
         { fractionalState: u } = (0, f.Z)(),
         m = u === Z.a$.FP_ONLY,
         _ = (0, S.Qy)(n.config);
     return (0, a.jsxs)("div", {
-        className: z.claimedRootContainer,
+        className: F.claimedRootContainer,
         children: [
             (0, a.jsxs)("div", {
-                className: z.headerContainer,
+                className: F.headerContainer,
                 children: [
                     (0, a.jsx)(E.Z, {
                         quest: n,
@@ -157,13 +157,13 @@ function W(e) {
                             width: 528,
                             height: 148,
                         },
-                        className: z.headerBackground,
+                        className: F.headerBackground,
                     }),
                     (0, a.jsx)("div", {
-                        className: z.headerForeground,
+                        className: F.headerForeground,
                         children: (0, a.jsx)(c.olH, {
                             "data-migration-pending": !0,
-                            className: z.close,
+                            className: F.close,
                             withCircleBackground: !0,
                             onClick: i,
                         }),
@@ -174,10 +174,10 @@ function W(e) {
                 "data-migration-pending": !0,
                 separator: !1,
                 children: (0, a.jsxs)("div", {
-                    className: z.footerBody,
+                    className: F.footerBody,
                     children: [
                         (0, a.jsx)("div", {
-                            className: z.previewContainer,
+                            className: F.previewContainer,
                             children: (0, a.jsx)(p.Z, {
                                 user: t,
                                 guildId: null,
@@ -186,35 +186,35 @@ function W(e) {
                                 questPreviewRewardAssetUrl: s,
                             }),
                         }),
-                        (0, a.jsx)(c.X6q, {
+                        (0, a.jsx)(c.Heading, {
                             variant: "heading-lg/bold",
                             color: "header-primary",
-                            className: z.heading,
+                            className: F.heading,
                             children: D.intl.string(D.t["0/Yz+f"]),
                         }),
                         (0, a.jsx)(c.Text, {
                             variant: "text-sm/normal",
                             color: "text-default",
-                            className: z.text,
+                            className: F.text,
                             children: _,
                         }),
-                        (0, a.jsx)(c.zxk, {
+                        (0, a.jsx)(c.Button, {
                             variant: "primary",
                             text: D.intl.string(D.t.MAS7uL),
                             loading: r,
                             onClick: l,
                         }),
-                        (0, R.zK)(n, k.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, a.jsx)(q, { quest: n }),
+                        (0, R.zK)(n, M.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, a.jsx)(H, { quest: n }),
                         d &&
                             !m &&
                             (0, a.jsx)(C.p, {
-                                className: z.upsell,
+                                className: F.upsell,
                                 upsellText: D.intl.format(D.t.VHXn7O, {
                                     onNitroClick: () => {
-                                        (0, N.openUserSettings)(w.n.NITRO_PANEL, { section: M.oAB.PREMIUM }), i();
+                                        (0, N.openUserSettings)(w.n.NITRO_PANEL, { section: O.oAB.PREMIUM }), i();
                                     },
                                 }),
-                                buttonAnalyticsObject: { section: M.jXE.PERMADECOS_MARKETING_UPSELL },
+                                buttonAnalyticsObject: { section: O.jXE.PERMADECOS_MARKETING_UPSELL },
                             }),
                     ],
                 }),
@@ -222,12 +222,12 @@ function W(e) {
         ],
     });
 }
-function G(e) {
+function q(e) {
     var n, t;
     let { quest: r, location: i, onClose: l, transitionState: d, preview: c } = e,
         m = o.useMemo(() => (0, R.xn)(r.config), [r]),
         [p, f] = (function (e) {
-            let { product: n, isFetching: t } = (0, x.T)(e),
+            let { product: n, isFetching: t } = (0, g.T)(e),
                 {} = (0, j.Z)({}),
                 a = o.useMemo(() => {
                     if (null == n || t) return null;
@@ -240,7 +240,7 @@ function G(e) {
                     null == a
                         ? (T.Z.addBreadcrumb({ message: "Error saving avatar decoration; it is null" }),
                           Promise.reject())
-                        : ((0, u.cV)(a), F()),
+                        : ((0, u.cV)(a), z()),
             ];
         })(null != (t = null == m ? void 0 : m.skuId) ? t : null);
     return null == m
@@ -248,7 +248,7 @@ function G(e) {
         : (null == (n = r.userStatus) ? void 0 : n.claimedAt) != null
           ? (0, a.jsx)(_.default, {
                 transitionState: d,
-                onCloseModal: F,
+                onCloseModal: z,
                 onClose: l,
                 analyticsLocations: [],
                 initialSelectedDecoration: p,

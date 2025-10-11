@@ -140,7 +140,7 @@ let C = (e) => {
                     children: (0, r.jsx)("td", {
                         className: y.labelCell,
                         colSpan: 3,
-                        children: (0, r.jsx)(l.X6q, {
+                        children: (0, r.jsx)(l.Heading, {
                             variant: "heading-lg/bold",
                             children: t,
                         }),
@@ -160,13 +160,13 @@ let C = (e) => {
                     className: y.planTitle,
                     children: [
                         (0, r.jsx)(l.SrA, { colorClass: y.nitroWheelIconColor }),
-                        (0, r.jsx)(l.X6q, {
+                        (0, r.jsx)(l.Heading, {
                             variant: "heading-sm/semibold",
                             children: i,
                         }),
                     ],
                 }),
-                (0, r.jsx)(l.X6q, {
+                (0, r.jsx)(l.Heading, {
                     variant: "heading-sm/semibold",
                     children: n,
                 }),
@@ -183,7 +183,7 @@ let C = (e) => {
                     (0, r.jsx)("th", {
                         scope: "col",
                         className: y.headerLabelCell,
-                        children: (0, r.jsx)(l.X6q, {
+                        children: (0, r.jsx)(l.Heading, {
                             variant: "heading-xl/bold",
                             children: b.intl.string(b.t.ED4UVF),
                         }),
@@ -236,7 +236,7 @@ let C = (e) => {
             children: (0, r.jsxs)("div", {
                 className: o()(y.root, a),
                 children: [
-                    (0, r.jsx)(l.X6q, {
+                    (0, r.jsx)(l.Heading, {
                         className: y.titleText,
                         variant: "display-md",
                         color: "header-primary",

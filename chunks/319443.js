@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => U }), n(388685), n(781311);
+n.r(t), n.d(t, { default: () => z }), n(388685), n(781311);
 var r = n(951288),
     a = n(647438),
     i = n(120356),
@@ -32,8 +32,8 @@ var r = n(951288),
     R = n(548514),
     Z = n(370648),
     w = n(569527),
-    k = n(979007),
-    D = n(981631),
+    D = n(979007),
+    k = n(981631),
     M = n(388032),
     G = n(813525);
 function B(e) {
@@ -53,7 +53,7 @@ function B(e) {
                     onClick: i,
                 }),
             }),
-            (0, r.jsx)(c.X6q, {
+            (0, r.jsx)(c.Heading, {
                 variant: "heading-lg/semibold",
                 color: "header-primary",
                 className: G.detailHeader,
@@ -78,7 +78,7 @@ function B(e) {
         ],
     });
 }
-function z() {
+function U() {
     let e = a.useCallback(() => {
             (0, P.qF)();
         }, []),
@@ -105,12 +105,12 @@ function z() {
                 children: [
                     (0, r.jsx)(c.NoS, {
                         onClick: e,
-                        noticeType: D.kVF.LOGIN,
+                        noticeType: k.kVF.LOGIN,
                         children: M.intl.string(M.t["825cFx"]),
                     }),
                     (0, r.jsx)(c.NoS, {
                         onClick: t,
-                        noticeType: D.kVF.REGISTER,
+                        noticeType: k.kVF.REGISTER,
                         minor: !0,
                         children: M.intl.string(M.t.HAkXzs),
                     }),
@@ -119,18 +119,18 @@ function z() {
         ],
     });
 }
-let U = function () {
+let z = function () {
     var e;
     let t = (0, o.e7)([b.default], () => !b.default.isAuthenticated()),
         { onScroll: n, scrollPosition: i, resetScrollPosition: y } = (0, u.M)(),
         R = (0, N.Xh)(),
-        U = (0, P.nu)(),
+        z = (0, P.nu)(),
         F = (null == R ? void 0 : R.type) === N.m_.CATEGORY ? R.categoryId : void 0,
-        { applicationId: V, section: H } = (null == R ? void 0 : R.type) === N.m_.APPLICATION ? R : {},
+        { applicationId: H, section: V } = (null == R ? void 0 : R.type) === N.m_.APPLICATION ? R : {},
         { query: Y, categoryId: W } = (null == R ? void 0 : R.type) === N.m_.SEARCH ? R : {},
-        X = (0, o.e7)([I.Z], () => I.Z.getCategories()),
-        q = a.useMemo(() => [(0, S.KQ)(), ...X], [X]),
-        K = a.useMemo(() => q.find((e) => e.id === Number(W)), [q, W]),
+        K = (0, o.e7)([I.Z], () => I.Z.getCategories()),
+        X = a.useMemo(() => [(0, S.KQ)(), ...K], [K]),
+        q = a.useMemo(() => X.find((e) => e.id === Number(W)), [X, W]),
         { tabs: Q, selectedTab: J, onSelectTab: $ } = (0, E.i)(null == F ? void 0 : F.toString()),
         [ee, et] = a.useState(!0),
         en = N.z8.useField("trackedOpenedFromExternalEntrypoint"),
@@ -139,7 +139,7 @@ let U = function () {
     a.useEffect(() => {
         if (!en && null == er) {
             let e = (0, _.PM)();
-            v.default.track(D.rMx.APP_DIRECTORY_OPENED, {
+            v.default.track(k.rMx.APP_DIRECTORY_OPENED, {
                 source: N.xF.EXTERNAL,
                 session_id: e,
                 user_id: null == ea ? void 0 : ea.id,
@@ -156,11 +156,11 @@ let U = function () {
             C.CP();
         }, []),
         a.useEffect(() => {
-            U && C.g5();
-        }, [U]),
+            z && C.g5();
+        }, [z]),
         a.useEffect(() => N.aQ.setState({ lastItem: R }), [R]);
     let { enabled: ei } = d.c.useExperiment({ location: "GlobalDiscoveryAppsRoot" }, { autoTrackExposure: !0 }),
-        el = null != V,
+        el = null != H,
         es = (null == R ? void 0 : R.type) === N.m_.SEARCH,
         {
             searchQuery: eo,
@@ -193,7 +193,7 @@ let U = function () {
         ev = (0, s.debounce)((e) => {
             let { scrollTop: t, offsetHeight: n, scrollHeight: r, location: a } = e;
             t > 0 &&
-                (0, P.zZ)(D.rMx.APP_DIRECTORY_PAGE_SCROLLED, {
+                (0, P.zZ)(k.rMx.APP_DIRECTORY_PAGE_SCROLLED, {
                     scroll_visible_percentile: (t + n) / r,
                     current_page: a,
                 });
@@ -214,7 +214,7 @@ let U = function () {
     return (0, r.jsxs)("div", {
         className: l()(G.outerContainer, { [G.loggedOutContainer]: t }),
         children: [
-            t ? (0, r.jsx)(z, {}) : null,
+            t ? (0, r.jsx)(U, {}) : null,
             (0, r.jsxs)("div", {
                 className: G.innerContainer,
                 children: [
@@ -224,7 +224,7 @@ let U = function () {
                             !eb && (0, r.jsx)(m.z6, { scrollPosition: i }),
                             el
                                 ? (0, r.jsx)(B, {
-                                      applicationId: V,
+                                      applicationId: H,
                                       hideDetailHeaderButtons: ee,
                                       onClickBack: ex,
                                   })
@@ -237,7 +237,7 @@ let U = function () {
                                                 })
                                               : (0, r.jsx)(m.aV, { icon: ej }),
                                           es
-                                              ? (0, r.jsx)(c.X6q, {
+                                              ? (0, r.jsx)(c.Heading, {
                                                     variant: "heading-lg/semibold",
                                                     color: "header-primary",
                                                     className: G.searchHeader,
@@ -246,7 +246,7 @@ let U = function () {
                                                             ? M.intl.formatToPlainString(M.t.zHdzqa, { query: Y })
                                                             : M.intl.formatToPlainString(M.t.Qhj5Bg, {
                                                                   categoryName:
-                                                                      null != (e = null == K ? void 0 : K.name)
+                                                                      null != (e = null == q ? void 0 : q.name)
                                                                           ? e
                                                                           : M.intl.string(M.t.E407b2),
                                                               }),
@@ -275,8 +275,8 @@ let U = function () {
                         ? (0, r.jsx)(L.Z, {
                               onScroll: (e) => eC(e, N.m_.APPLICATION),
                               onSelectApplication: ef,
-                              applicationId: V,
-                              initialTab: H,
+                              applicationId: H,
+                              initialTab: V,
                               onButtonsVisibilityChange: et,
                           })
                         : es
@@ -284,7 +284,7 @@ let U = function () {
                                 onSelectApplication: ef,
                                 onScroll: (e) => eC(e, N.m_.SEARCH),
                             })
-                          : J === k.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID.toString()
+                          : J === D.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID.toString()
                             ? (0, r.jsx)(Z.Z, {
                                   onScroll: (e) => eC(e, N.m_.HOME),
                                   onSelectApplication: ef,

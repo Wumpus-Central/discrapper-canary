@@ -34,7 +34,7 @@ function h() {
                         (0, a.jsxs)(s.Kqy, {
                             gap: 4,
                             children: [
-                                (0, a.jsx)(s.zxk, {
+                                (0, a.jsx)(s.Button, {
                                     variant: "primary",
                                     text: "Reset Daily Cap",
                                     onClick: () => (0, o.EG)(),

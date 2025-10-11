@@ -2,8 +2,8 @@ n.d(t, { c: () => m });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    s = n(481060),
-    a = n(999382),
+    a = n(481060),
+    s = n(999382),
     o = n(227380),
     c = n(976288),
     d = n(386885),
@@ -11,7 +11,7 @@ var r = n(951288),
     g = n(366869);
 function m(e) {
     let { fetchDiscoveryData: t, settingsView: n, requireTerms: m, rules: p } = e,
-        f = (0, l.e7)([a.Z], () => a.Z.getProps().guild);
+        f = (0, l.e7)([s.Z], () => s.Z.getProps().guild);
     if (
         (i.useEffect(() => {
             null != f && t(f.id);
@@ -26,7 +26,7 @@ function m(e) {
                 guildId: f.id,
                 headerContent: (0, r.jsxs)("div", {
                     children: [
-                        (0, r.jsx)(s.X6q, {
+                        (0, r.jsx)(a.Heading, {
                             variant: "text-md/semibold",
                             color: "header-primary",
                             className: g.header,
@@ -42,7 +42,7 @@ function m(e) {
                                     ),
                             }),
                         }),
-                        (0, r.jsx)(s.Text, {
+                        (0, r.jsx)(a.Text, {
                             variant: "text-sm/medium",
                             color: "text-secondary",
                             children: u.intl.string(u.t.Qgaw3d),
@@ -61,7 +61,7 @@ function m(e) {
             return (0, r.jsx)(o.Z, {
                 guild: f,
                 guildId: f.id,
-                headerContent: (0, r.jsx)(s.X6q, {
+                headerContent: (0, r.jsx)(a.Heading, {
                     variant: "heading-md/semibold",
                     children: u.intl.format(u.t["+6Hylp"], {
                         doesNotHook: (e, t) =>
@@ -77,6 +77,6 @@ function m(e) {
                 }),
             });
         default:
-            return (0, r.jsx)(s.$jN, {});
+            return (0, r.jsx)(a.$jN, {});
     }
 }

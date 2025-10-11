@@ -15,7 +15,7 @@ function _(e) {
             (0, r.jsxs)("div", {
                 className: f.errorBody,
                 children: [
-                    (0, r.jsx)(s.X6q, {
+                    (0, r.jsx)(s.Heading, {
                         variant: "heading-xl/semibold",
                         children: d.intl.string(d.t.iufib2),
                     }),
@@ -68,7 +68,7 @@ let p = function (e) {
             className: f.headerContainer,
             children: [
                 (0, r.jsx)("div", { className: f.art }),
-                (0, r.jsx)(s.X6q, {
+                (0, r.jsx)(s.Heading, {
                     variant: "heading-xl/semibold",
                     children: d.intl.string(d.t["23BfZm"]),
                 }),

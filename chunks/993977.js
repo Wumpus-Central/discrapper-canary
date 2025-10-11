@@ -44,7 +44,7 @@ function E(e) {
     }
     return e;
 }
-function y(e) {
+function v(e) {
     let { applicationViewItems: t, restoreApplication: n } = e;
     if (0 === t.length) return null;
     let i = t.map((e) => {
@@ -87,7 +87,7 @@ function y(e) {
     return (0, r.jsxs)("div", {
         className: _.hiddenLibraryApplications,
         children: [
-            (0, r.jsx)(a.X6q, {
+            (0, r.jsx)(a.Heading, {
                 variant: "heading-md/semibold",
                 className: _.hiddenLibraryApplicationsTitle,
                 children: b.intl.string(b.t["5PJtrK"]),
@@ -96,7 +96,7 @@ function y(e) {
         ],
     });
 }
-class v extends i.PureComponent {
+class y extends i.PureComponent {
     handleToggleShortcutDesktop(e) {
         c.Xc.updateSetting(e);
     }
@@ -137,7 +137,7 @@ class v extends i.PureComponent {
                           ],
                       })
                     : null,
-                (0, r.jsx)(y, {
+                (0, r.jsx)(v, {
                     restoreApplication: this.handleRestoreHiddenLibraryApplication,
                     applicationViewItems: e,
                 }),
@@ -169,5 +169,5 @@ function I() {
         installShortcutStartMenu: c.Pe.useSetting(),
         hiddenLibraryApplicationViewItems: (0, l.e7)([u.Z], () => u.Z.hiddenLibraryApplicationViewItems),
     };
-    return (0, r.jsx)(v, E({}, e));
+    return (0, r.jsx)(y, E({}, e));
 }

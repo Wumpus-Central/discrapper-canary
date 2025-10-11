@@ -78,7 +78,7 @@ function T(e, t) {
         e
     );
 }
-let S = new d.Z({
+let S = new d.default({
     id: "???",
     username: "???",
 });
@@ -87,10 +87,10 @@ function A(e) {
     return null == e.author
         ? S
         : null != e.webhook_id
-          ? new d.Z(e.author)
+          ? new d.default(e.author)
           : null != (t = p.default.getUser(e.author.id))
             ? t
-            : new d.Z(e.author);
+            : new d.default(e.author);
 }
 function C(e) {
     return !1;
@@ -205,7 +205,7 @@ function w(e, t) {
         null != t.embeds && (n = n.set("embeds", x(t))),
         null != t.message_snapshots && (n = n.set("messageSnapshots", j(t))),
         t.pinned !== n.pinned && (n = n.set("pinned", t.pinned)),
-        null != n.webhookId && null != t.author && (n = n.set("author", new d.Z(t.author))),
+        null != n.webhookId && null != t.author && (n = n.set("author", new d.default(t.author))),
         null != t.flags && t.flags !== n.flags && (n = n.set("flags", t.flags)),
         null != t.components && (n = n.set("components", (0, o.uZ)(t.components))),
         null != t.role_subscription_data && (n = n.set("roleSubscriptionData", t.role_subscription_data)),

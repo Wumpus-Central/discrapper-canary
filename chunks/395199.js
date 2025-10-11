@@ -159,17 +159,17 @@ function y(e) {
     let { confirmation: t, confirmationLabel: n, isModifyingSubscription: i, onConfirm: a, onCancel: o } = e;
     return (0, r.jsx)("div", {
         className: h.footer,
-        children: (0, r.jsxs)(u.hE2, {
+        children: (0, r.jsxs)(u.ButtonGroup, {
             direction: "horizontal-reverse",
             children: [
-                (0, r.jsx)(u.zxk, {
+                (0, r.jsx)(u.Button, {
                     variant: "primary",
                     text: t,
                     onClick: a,
                     loading: i,
                     "aria-label": n,
                 }),
-                (0, r.jsx)(u.zxk, {
+                (0, r.jsx)(u.Button, {
                     variant: "secondary",
                     text: p.intl.string(p.t["ETE/oK"]),
                     onClick: o,

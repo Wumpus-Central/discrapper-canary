@@ -46,7 +46,7 @@ function _() {
             }),
                 a.default.track(l.rMx.FAMILY_CENTER_ACTION, { action: s.YC.ShowQRCodeModal });
         };
-    return (0, r.jsx)(i.zxk, {
+    return (0, r.jsx)(i.Button, {
         icon: i.IkH,
         variant: "primary",
         text: e,

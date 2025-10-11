@@ -70,7 +70,7 @@ function _(e) {
         className: l()(d.linksContainer, c.listElementWrapper),
         children: [
             !i &&
-                (0, r.jsx)(a.X6q, {
+                (0, r.jsx)(a.Heading, {
                     variant: "heading-sm/semibold",
                     color: "header-secondary",
                     className: d.header,

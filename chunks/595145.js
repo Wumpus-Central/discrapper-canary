@@ -35,16 +35,16 @@ var l = t(951288),
     L = t(280885),
     M = t(537006),
     U = t(681837),
-    k = t(78806),
-    B = t(91433),
+    B = t(78806),
+    k = t(91433),
     F = t(451834),
     V = t(900927),
     G = t(944043),
     z = t(502762),
     W = t(530),
     K = t(4517),
-    Y = t(179828),
-    H = t(769321),
+    H = t(179828),
+    Y = t(769321),
     J = t(993160),
     q = t(574887),
     X = t(996921),
@@ -115,8 +115,8 @@ function ea(e) {
                       canAnimate: !1,
                       size: 1024,
                   }),
-        ek = (0, f.p)({ location: "UserProfileModalV2" }),
-        eB = i.useMemo(() => (null != ej ? ej : (0, h.Z)()), [ej]),
+        eB = (0, f.p)({ location: "UserProfileModalV2" }),
+        ek = i.useMemo(() => (null != ej ? ej : (0, h.Z)()), [ej]),
         eF = (0, et.Z)({
             user: t,
             currentUser: ea,
@@ -126,7 +126,7 @@ function ea(e) {
         ez = (0, C.Z)(t.id),
         eW = (0, S.Z)(t.id),
         eK = (0, m.Dt)(),
-        eY = eo.intl.format(eo.t.KRe1Fh, { name: eD });
+        eH = eo.intl.format(eo.t.KRe1Fh, { name: eD });
     return (
         i.useEffect(() => {
             let e = () => {
@@ -168,7 +168,7 @@ function ea(e) {
                                         ? (0, l.jsxs)("div", {
                                               className: es.previewBar,
                                               children: [
-                                                  (0, l.jsxs)(s.X6q, {
+                                                  (0, l.jsxs)(s.Heading, {
                                                       id: eK,
                                                       variant: "heading-sm/normal",
                                                       color: "text-primary",
@@ -176,7 +176,7 @@ function ea(e) {
                                                           (0, l.jsx)(s.nn4, {
                                                               children: ""
                                                                   .concat(eo.intl.string(eo.t.apViam), ": ")
-                                                                  .concat(eY),
+                                                                  .concat(eH),
                                                           }),
                                                           (0, l.jsx)("span", {
                                                               "aria-hidden": !0,
@@ -184,7 +184,7 @@ function ea(e) {
                                                           }),
                                                       ],
                                                   }),
-                                                  (0, l.jsx)(s.zxk, {
+                                                  (0, l.jsx)(s.Button, {
                                                       size: "sm",
                                                       variant: "secondary",
                                                       text: eo.intl.string(eo.t.ojM1xM),
@@ -196,7 +196,7 @@ function ea(e) {
                                         : (0, l.jsx)(s.nn4, {
                                               children: (0, l.jsx)(s.H, {
                                                   id: eK,
-                                                  children: eY,
+                                                  children: eH,
                                               }),
                                           }),
                                     (0, l.jsx)(s.y5t, {
@@ -250,7 +250,7 @@ function ea(e) {
                                                                     channelId: ed,
                                                                     themeType: er.l.MODAL_V2,
                                                                     hasEntered: ex === s.Dvm.ENTERED,
-                                                                    prompt: ek && t.id === ea.id ? eB : null,
+                                                                    prompt: eB && t.id === ea.id ? ek : null,
                                                                     disableToolbar: eI,
                                                                 }),
                                                             ],
@@ -283,7 +283,7 @@ function ea(e) {
                                                                 eR === ei.OGo.PENDING_INCOMING &&
                                                                     (0, l.jsx)(z.Z.Overlay, {
                                                                         className: es.profileOverlay,
-                                                                        children: (0, l.jsx)(B.Z, {
+                                                                        children: (0, l.jsx)(k.Z, {
                                                                             user: t,
                                                                             applicationId: eL,
                                                                             guildId:
@@ -302,7 +302,7 @@ function ea(e) {
                                                                         z.Z.Overlay,
                                                                         {
                                                                             className: es.profileOverlay,
-                                                                            children: (0, l.jsx)(B.Z, {
+                                                                            children: (0, l.jsx)(k.Z, {
                                                                                 user: t,
                                                                                 guildId:
                                                                                     null !=
@@ -369,7 +369,7 @@ function ea(e) {
                                                                 eV.length > 0 &&
                                                                     (0, l.jsx)(Q.Z, {
                                                                         heading: eo.intl.string(eo.t["Uv/eT0"]),
-                                                                        children: (0, l.jsx)(k.Z, {
+                                                                        children: (0, l.jsx)(B.Z, {
                                                                             applicationIds: eV,
                                                                         }),
                                                                     }),
@@ -382,7 +382,7 @@ function ea(e) {
                                                                     }),
                                                                 }),
                                                                 (null == ew ? void 0 : ew.guildId) != null &&
-                                                                    (0, l.jsx)(Y.Z, {
+                                                                    (0, l.jsx)(H.Z, {
                                                                         user: t,
                                                                         currentUser: ea,
                                                                         guildId: ew.guildId,
@@ -405,7 +405,7 @@ function ea(e) {
                                                                     (0, l.jsx)(Q.Z, {
                                                                         heading: eo.intl.string(eo.t.PHjkRE),
                                                                         scrollIntoView: eh === el.Tb.APPS,
-                                                                        children: (0, l.jsx)(H.Z, {
+                                                                        children: (0, l.jsx)(Y.Z, {
                                                                             applicationRoleConnections: eW,
                                                                             onClose: eg,
                                                                             className: es.profileAppConnections,

@@ -85,7 +85,7 @@ function y(t) {
                     }),
                     (0, r.jsxs)("div", {
                         children: [
-                            (0, r.jsx)(c.X6q, {
+                            (0, r.jsx)(c.Heading, {
                                 variant: "heading-xl/bold",
                                 color: "header-primary",
                                 children: b.intl.format(b.t.CIbzHR, { username: j.ZP.getName(d, y, e) }),

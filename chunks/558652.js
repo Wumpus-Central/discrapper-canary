@@ -32,14 +32,14 @@ function g() {
             g(h);
         }, []),
         E = i.useRef(null),
-        y = i.useRef(null),
-        v = (0, l.TH)(),
+        v = i.useRef(null),
+        y = (0, l.TH)(),
         I = (0, l.k6)();
     return (
         i.useEffect(() => {
-            if ("" !== v.hash && null != E.current && null != y.current) {
+            if ("" !== y.hash && null != E.current && null != v.current) {
                 var t, r;
-                (e !== E.current || n !== y.current) &&
+                (e !== E.current || n !== v.current) &&
                     I.replace(
                         ((t = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
@@ -65,7 +65,7 @@ function g() {
                                     });
                             }
                             return e;
-                        })({}, v)),
+                        })({}, y)),
                         (r = r = { hash: void 0 }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
@@ -82,12 +82,12 @@ function g() {
                         t),
                     );
             }
-        }, [e, n, v, I]),
+        }, [e, n, y, I]),
         i.useEffect(() => {
             E.current = e;
         }, [e]),
         i.useEffect(() => {
-            y.current = n;
+            v.current = n;
         }, [n]),
         (0, o.SU)({
             selectedSortMethod: e,
@@ -99,7 +99,7 @@ function g() {
                 (0, r.jsxs)("div", {
                     className: f.headingWrapper,
                     children: [
-                        (0, r.jsx)(a.X6q, {
+                        (0, r.jsx)(a.Heading, {
                             variant: "heading-lg/medium",
                             children: p.intl.string(p.t.giYD09),
                         }),

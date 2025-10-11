@@ -155,7 +155,7 @@ function L(e) {
         onIconClick: w,
         children: (0, r.jsx)("div", {
             className: R.openStoreButton,
-            children: (0, r.jsx)(l.zxk, {
+            children: (0, r.jsx)(l.Button, {
                 onClick: D,
                 text: N.intl.string(N.t.kRvlKC),
             }),
@@ -291,7 +291,7 @@ function x(e) {
         children: (0, r.jsxs)("div", {
             className: R.skuPurchaseButtons,
             children: [
-                (0, r.jsx)(l.zxk, {
+                (0, r.jsx)(l.Button, {
                     variant: "secondary",
                     onClick: V,
                     text: N.intl.string(N.t.DXYfjI),
@@ -308,7 +308,7 @@ function x(e) {
                               subscriptionPlan: g,
                               state: x,
                           })
-                        : (0, r.jsx)(l.zxk, {
+                        : (0, r.jsx)(l.Button, {
                               variant: "primary",
                               text: N.intl.string(N.t.uuzaAA),
                               onClick: G,

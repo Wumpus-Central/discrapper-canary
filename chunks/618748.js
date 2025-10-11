@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(577275),
     f = n(601964),
     h = n(485386),
-    x = n(594174),
-    b = n(823379),
+    b = n(594174),
+    x = n(823379),
     j = n(730647),
     v = n(584825),
     _ = n(723047),
@@ -143,7 +143,7 @@ function U(e) {
         d = null != o && n.features.has(Z.oNc.ROLE_SUBSCRIPTIONS_ENABLED),
         { currentTab: p, setCurrentTab: v } = (0, P.dw)(),
         _ = (0, j.f)(),
-        N = (0, i.e7)([x.default], () => x.default.getCurrentUser()),
+        N = (0, i.e7)([b.default], () => b.default.getCurrentUser()),
         S = (0, O.Z)(n.id),
         D = null != n && (0, f.eM)(n, N);
     if (!_) return (0, r.jsx)(a.$jN, {});
@@ -161,7 +161,7 @@ function U(e) {
             t = (0, r.jsx)(w.Z, { guild: n });
             break;
         default:
-            (0, b.vE)(p);
+            (0, x.vE)(p);
     }
     return (0, r.jsxs)("div", {
         className: L.container,
@@ -172,7 +172,7 @@ function U(e) {
                     (0, r.jsxs)(a.Kqy, {
                         gap: 8,
                         children: [
-                            (0, r.jsx)(a.X6q, {
+                            (0, r.jsx)(a.Heading, {
                                 variant: "heading-lg/semibold",
                                 children: A.intl.string(A.t["KzCF//"]),
                             }),
@@ -227,7 +227,7 @@ function U(e) {
                                     className: L.previewButton,
                                     children: (0, r.jsx)(l.u, {
                                         text: A.intl.string(A.t["1wCH4O"]),
-                                        children: (0, r.jsx)(a.zxk, {
+                                        children: (0, r.jsx)(a.Button, {
                                             disabled: S,
                                             onClick: () => {
                                                 let e = h.Z.getEveryoneRole(n);

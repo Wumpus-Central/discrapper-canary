@@ -1,6 +1,6 @@
 n.d(t, { Z: () => b }), n(388685);
-var l = n(951288),
-    i = n(647438),
+var i = n(951288),
+    l = n(647438),
     r = n(28664),
     a = n(481060),
     o = n(542094),
@@ -12,17 +12,17 @@ var l = n(951288),
     m = n(827498),
     f = n(160973),
     h = n(783097),
-    v = n(890280),
-    x = n(176412),
-    y = n(981631),
+    v = n(826405),
+    y = n(176412),
+    x = n(981631),
     g = n(388032);
 function b(e) {
     let { context: t, application: n, sectionName: b, primaryEntryPointCommand: N } = e,
-        j = i.useId(),
-        C = i.useCallback(() => {
+        j = l.useId(),
+        C = l.useCallback(() => {
             d.yT(m.ti.ACTIVITY);
         }, []),
-        E = i.useCallback(() => {
+        E = l.useCallback(() => {
             p.Z.shouldShowModal() && C();
         }, [C]),
         { submitting: P, wasSubmitting: A } = (0, v.Z)({
@@ -31,17 +31,17 @@ function b(e) {
             launchingComponentId: j,
             onSubmissionComplete: C,
         }),
-        [_, O] = i.useState(!1),
+        [_, O] = l.useState(!1),
         I = (0, o.Qv)({
             applicationId: n.id,
             context: t,
         }),
-        S = i.useMemo(() => (0, h.XZ)(N.displayName), [N.displayName]),
+        S = l.useMemo(() => (0, h.XZ)(N.displayName), [N.displayName]),
         {
             onActivityItemSelected: T,
             buttonVariant: L,
             buttonText: R,
-        } = (0, x.P7)({
+        } = (0, y.P7)({
             context: t,
             application: n,
             location: s.Vh.APP_LAUNCHER_APPLICATION_VIEW,
@@ -57,10 +57,10 @@ function b(e) {
             application: n,
             activityAction: I,
         });
-    return (0, l.jsx)(r.u, {
+    return (0, i.jsx)(r.u, {
         shouldShow: null != w,
         __unsupportedReactNodeAsText: w,
-        children: (0, l.jsx)(a.zxk, {
+        children: (0, i.jsx)(a.Button, {
             type: "submit",
             size: "md",
             variant: L,
@@ -69,7 +69,7 @@ function b(e) {
             onClick: () => {
                 O(!0),
                     T(),
-                    u.default.track(y.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
+                    u.default.track(x.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
                         application_id: n.id,
                         button_action: m._y.USE_APP_COMMAND,
                     });

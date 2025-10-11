@@ -14,7 +14,7 @@ function i(e) {
                       color: "text-primary",
                       children: t.title,
                   }),
-                  (0, a.jsx)(r.X6q, {
+                  (0, a.jsx)(r.Heading, {
                       variant: "heading-lg/semibold",
                       color: "text-secondary",
                       children: t.description,

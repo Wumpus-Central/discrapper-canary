@@ -8,15 +8,15 @@ var r = n(951288),
     c = n(400251),
     d = n(75666),
     u = n(231338),
-    p = n(388032),
-    h = n(806328),
+    h = n(388032),
+    p = n(806328),
     f = n(152013),
     g = n(584354),
     m = n(725060);
 let b = (e) => {
         let { searchQuery: t, setSearchQuery: n, handleClearSearch: i, handleSearchKeyPress: l } = e,
             { ref: c, width: d } = (0, o.ZP)(),
-            h = null != d && d <= 800;
+            p = null != d && d <= 800;
         return (0, r.jsxs)("div", {
             ref: c,
             className: f.header,
@@ -24,22 +24,22 @@ let b = (e) => {
                 (0, r.jsx)("img", {
                     alt: "",
                     className: f.headerImage,
-                    src: h ? m : g,
+                    src: p ? m : g,
                 }),
                 (0, r.jsx)("div", {
                     className: f.headerContentWrapper,
                     children: (0, r.jsxs)("div", {
-                        className: a()(f.headerContent, { [f.headerContentSmall]: h }),
+                        className: a()(f.headerContent, { [f.headerContentSmall]: p }),
                         children: [
-                            (0, r.jsx)(s.X6q, {
+                            (0, r.jsx)(s.Heading, {
                                 variant: "heading-xl/semibold",
                                 className: f.searchTitle,
-                                children: p.intl.string(p.t.IT7qoK),
+                                children: h.intl.string(h.t.IT7qoK),
                             }),
                             (0, r.jsx)(s.Text, {
                                 variant: "text-md/normal",
                                 className: f.searchSubtitle,
-                                children: p.intl.string(p.t["5PoYtr"]),
+                                children: h.intl.string(h.t["5PoYtr"]),
                             }),
                             (0, r.jsx)(s.f6W, {
                                 theme: u.BR.LIGHT,
@@ -48,8 +48,8 @@ let b = (e) => {
                                         className: a()(f.searchContainer, e),
                                         children: (0, r.jsx)(s.E1j, {
                                             query: t,
-                                            "aria-label": p.intl.string(p.t.nL2wKC),
-                                            placeholder: p.intl.string(p.t.nL2wKC),
+                                            "aria-label": h.intl.string(h.t.nL2wKC),
+                                            placeholder: h.intl.string(h.t.nL2wKC),
                                             onChange: n,
                                             onClear: i,
                                             onKeyDown: l,
@@ -75,12 +75,12 @@ let b = (e) => {
             handleSelectCategory: y,
             categoryCounts: _,
             allEntriesCount: j,
-            isLoading: x,
+            isLoading: O,
         } = e;
         return (0, r.jsx)("div", {
-            className: h.pageContainer,
+            className: p.pageContainer,
             children: (0, r.jsxs)(s.yWw, {
-                className: h.scroller,
+                className: p.scroller,
                 children: [
                     (0, r.jsx)(b, {
                         searchQuery: a,
@@ -104,7 +104,7 @@ let b = (e) => {
                                     {
                                         className: f.tabBarItem,
                                         id: d.AR.ALL,
-                                        children: "".concat(p.intl.string(p.t.hEAa2d), " (").concat(j, ")"),
+                                        children: "".concat(h.intl.string(h.t.hEAa2d), " (").concat(j, ")"),
                                     },
                                     d.AR.ALL,
                                 ),
@@ -125,8 +125,8 @@ let b = (e) => {
                             ],
                         }),
                     }),
-                    x && null == n
-                        ? (0, r.jsx)(s.$jN, { className: h.spinner })
+                    O && null == n
+                        ? (0, r.jsx)(s.$jN, { className: p.spinner })
                         : null == n
                           ? void 0
                           : n.map((e, t) =>
@@ -142,7 +142,7 @@ let b = (e) => {
                                                   })
                                                 : null,
                                             (0, r.jsxs)("div", {
-                                                className: h.cardsContainer,
+                                                className: p.cardsContainer,
                                                 children: [
                                                     e.entries.map((e) => (0, r.jsx)(c.Z, { entry: e }, e.guildId)),
                                                     e.appendEndCard && null != l

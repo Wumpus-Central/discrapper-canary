@@ -111,7 +111,7 @@ function j(e) {
                 children: l,
             }));
     }
-    return (0, r.jsx)(c.X6q, {
+    return (0, r.jsx)(c.Heading, {
         variant: "heading-sm/semibold",
         color: "header-primary",
         className: y.header,

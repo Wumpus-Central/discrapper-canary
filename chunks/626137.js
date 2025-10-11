@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(650774),
     f = n(430824),
     h = n(246946),
-    x = n(626135),
-    b = n(999382),
+    b = n(626135),
+    x = n(999382),
     j = n(798528),
     v = n(743676),
     _ = n(981631),
@@ -79,17 +79,17 @@ let E = function (e, t, n) {
     },
     S = () => {
         let [e, t] = i.useState(!1),
-            n = (0, s.e7)([b.Z], () => b.Z.getGuildId());
+            n = (0, s.e7)([x.Z], () => x.Z.getGuildId());
         return (0, r.jsx)("div", {
             "data-button-hoisted-classname-wrapper": !0,
             className: y.developerPortalCta,
-            children: (0, r.jsx)(c.zxk, {
+            children: (0, r.jsx)(c.Button, {
                 variant: "primary",
                 text: O.intl.string(O.t.Uskgx8),
                 onClick: () => {
                     t(!0),
                         (function (e) {
-                            x.default.track(_.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: e });
+                            b.default.track(_.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: e });
                             let t = null == e ? _.E07.DEVELOPER_PORTAL : _.E07.DEVELOPER_PORTAL_GUILD_ANALYTICS(e),
                                 n = (0, l.Z)();
                             return o.tn
@@ -117,7 +117,7 @@ let E = function (e, t, n) {
         });
     },
     T = () => {
-        let e = (0, s.e7)([b.Z], () => b.Z.getGuildId()),
+        let e = (0, s.e7)([x.Z], () => x.Z.getGuildId()),
             t = (0, s.e7)([p.Z], () => p.Z.getMemberCount(e)),
             n = (0, s.e7)([f.Z], () => f.Z.getGuild(e)),
             l = (0, s.e7)([m.default], () => m.default.locale),
@@ -125,7 +125,7 @@ let E = function (e, t, n) {
                 analytics: null != e ? v.Z.getOverviewAnalytics(e) : null,
                 errorCode: v.Z.getError(),
             })),
-            x = (0, s.e7)([h.Z], () => h.Z.getSettings().enabled),
+            b = (0, s.e7)([h.Z], () => h.Z.getSettings().enabled),
             T =
                 null == t ||
                 null == n ||
@@ -187,7 +187,7 @@ let E = function (e, t, n) {
                 : null;
         return (0, r.jsxs)("div", {
             children: [
-                (0, r.jsx)(c.X6q, {
+                (0, r.jsx)(c.Heading, {
                     variant: "heading-lg/semibold",
                     children: O.intl.string(O.t["0wWfUF"]),
                 }),
@@ -208,7 +208,7 @@ let E = function (e, t, n) {
                         (0, r.jsx)(S, {}),
                     ],
                 }),
-                x
+                b
                     ? (0, r.jsx)("div", {
                           className: y.streamerMode,
                           children: (0, r.jsx)(d.Z, {}),

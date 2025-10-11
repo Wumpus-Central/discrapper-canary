@@ -18,13 +18,13 @@ function m() {
                 (0, a.jsxs)("section", {
                     className: d.section,
                     children: [
-                        (0, a.jsx)(r.X6q, {
+                        (0, a.jsx)(r.Heading, {
                             variant: "heading-md/semibold",
                             children: "Verification Layer",
                         }),
                         (0, a.jsx)("div", {
                             className: d.inputRow,
-                            children: (0, a.jsx)(r.zxk, {
+                            children: (0, a.jsx)(r.Button, {
                                 variant: "primary",
                                 text: "Open Verification Layer",
                                 onClick: () => {
@@ -40,13 +40,13 @@ function m() {
                 (0, a.jsxs)("section", {
                     className: d.section,
                     children: [
-                        (0, a.jsx)(r.X6q, {
+                        (0, a.jsx)(r.Heading, {
                             variant: "heading-md/semibold",
                             children: "Safety Flow",
                         }),
                         (0, a.jsx)("div", {
                             className: d.inputRow,
-                            children: (0, a.jsx)(r.zxk, {
+                            children: (0, a.jsx)(r.Button, {
                                 variant: "primary",
                                 text: "Open Safety Flow",
                                 onClick: () => {
@@ -68,13 +68,13 @@ function m() {
                 (0, a.jsxs)("section", {
                     className: d.section,
                     children: [
-                        (0, a.jsx)(r.X6q, {
+                        (0, a.jsx)(r.Heading, {
                             variant: "heading-md/semibold",
                             children: "Layer Controls",
                         }),
                         (0, a.jsx)("div", {
                             className: d.inputRow,
-                            children: (0, a.jsx)(r.zxk, {
+                            children: (0, a.jsx)(r.Button, {
                                 variant: "primary",
                                 text: "Close All Layers",
                                 onClick: () => {

@@ -150,7 +150,7 @@ function T(e) {
         { analyticsLocations: F } = (0, l.ZP)();
     if (null != i || null != a || d) {
         let e = y && B ? "expressive" : "active";
-        return (0, r.jsx)(o.zxk, {
+        return (0, r.jsx)(o.Button, {
             variant: e,
             text: Z,
             disabled: !0,
@@ -161,7 +161,7 @@ function T(e) {
             text: g.intl.string(g.t.L7jbQU),
             children: (e) =>
                 (0, r.jsx)(
-                    o.zxk,
+                    o.Button,
                     O(
                         b(
                             {
@@ -183,7 +183,7 @@ function T(e) {
             text: g.intl.string(g.t.L7jbQU),
             children: (e) =>
                 (0, r.jsx)(
-                    o.zxk,
+                    o.Button,
                     O(
                         b(
                             {
@@ -205,7 +205,7 @@ function T(e) {
             text: g.intl.string(g.t.cjA5tr),
             children: (e) =>
                 (0, r.jsx)(
-                    o.zxk,
+                    o.Button,
                     O(
                         b(
                             {
@@ -223,7 +223,7 @@ function T(e) {
                 ),
         });
     if (A)
-        return (0, r.jsx)(o.zxk, {
+        return (0, r.jsx)(o.Button, {
             variant: "expressive",
             "data-testid": x ? "purchase" : "submitButton",
             text: Z,
@@ -237,7 +237,7 @@ function T(e) {
             text: g.intl.string(g.t.XdvBLS),
             children: (e) =>
                 (0, r.jsx)(
-                    o.zxk,
+                    o.Button,
                     O(
                         b(
                             {
@@ -264,7 +264,7 @@ function T(e) {
             analyticsLocations: F,
         });
     else if (y && B)
-        return (0, r.jsx)(o.zxk, {
+        return (0, r.jsx)(o.Button, {
             variant: "expressive",
             text: Z,
             "data-testid": "purchase",
@@ -272,7 +272,7 @@ function T(e) {
             loading: m,
         });
     else
-        return (0, r.jsx)(o.zxk, {
+        return (0, r.jsx)(o.Button, {
             variant: "active",
             text: Z,
             "data-testid": "purchase",

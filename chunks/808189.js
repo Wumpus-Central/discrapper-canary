@@ -148,7 +148,7 @@ let m = [
                             (0, r.jsxs)("div", {
                                 className: h.tierCardHeader,
                                 children: [
-                                    (0, r.jsx)(s.X6q, {
+                                    (0, r.jsx)(s.Heading, {
                                         className: h.tierCardHeading,
                                         variant: "heading-xxl/semibold",
                                         color: "always-white",

@@ -40,7 +40,7 @@ let p = (e) => {
             (0, r.jsxs)("div", {
                 className: d.statusTextContainer,
                 children: [
-                    (0, r.jsx)(o.X6q, {
+                    (0, r.jsx)(o.Heading, {
                         id: t,
                         variant: "heading-lg/semibold",
                         color: "header-primary",
@@ -71,7 +71,7 @@ let p = (e) => {
                         asContainer: !0,
                         text: _ ? u.intl.formatToPlainString(u.t.A0f0Pz, { days: O }) : null,
                         "aria-label": _ ? u.intl.formatToPlainString(u.t.A0f0Pz, { days: O }) : void 0,
-                        children: (0, r.jsx)(o.zxk, {
+                        children: (0, r.jsx)(o.Button, {
                             onClick: p,
                             variant: "secondary",
                             size: "md",
@@ -81,7 +81,7 @@ let p = (e) => {
                             fullWidth: !0,
                         }),
                     }),
-                    (0, r.jsx)(o.zxk, {
+                    (0, r.jsx)(o.Button, {
                         onClick: h,
                         variant: "critical-primary",
                         size: "md",

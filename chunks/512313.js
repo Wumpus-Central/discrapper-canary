@@ -81,7 +81,7 @@ function x() {
     return (0, a.jsxs)(i.zJl, {
         className: u.root,
         children: [
-            (0, a.jsx)(i.X6q, {
+            (0, a.jsx)(i.Heading, {
                 variant: "heading-lg/bold",
                 children: "Settings Tree",
             }),

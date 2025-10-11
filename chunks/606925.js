@@ -68,7 +68,7 @@ function _(e) {
             });
     };
     return (0, r.jsx)(
-        a.zxk,
+        a.Button,
         u(
             {
                 onClick: h,

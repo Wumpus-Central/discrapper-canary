@@ -43,13 +43,13 @@ function C(e) {
             var e;
             return new Set(null != (e = null == h ? void 0 : h.roleIds) ? e : []);
         }),
-        [z, J] = i.useState({}),
+        [z, H] = i.useState({}),
         F = i.useRef(null);
     i.useLayoutEffect(() => {
         var e;
         return null == (e = F.current) ? void 0 : e.focus();
     }, []);
-    let H = i.useCallback(() => {
+    let J = i.useCallback(() => {
             var e;
             let t = {
                     id: null != (e = null == h ? void 0 : h.id) ? e : "".concat(Date.now()),
@@ -65,7 +65,7 @@ function C(e) {
                     let r = (0, p.en)(e, t, n, l);
                     return null != r && (i.roles = r), i;
                 })(C, x.Z.editedOnboardingPrompts, I, t);
-            J(l), o().isEmpty(l) && (r(t), n());
+            H(l), o().isEmpty(l) && (r(t), n());
         }, [T, R, E, C, n, r, null == h ? void 0 : h.id, I, D, k]),
         K = i.useMemo(
             () => [
@@ -76,11 +76,11 @@ function C(e) {
                 },
                 {
                     text: y.intl.string(y.t.R3BPHx),
-                    onClick: H,
+                    onClick: J,
                     variant: "primary",
                 },
             ],
-            [H, n],
+            [J, n],
         );
     return (0, l.jsxs)(s.IX, {
         transitionState: t,
@@ -99,7 +99,7 @@ function C(e) {
                         color: "text-muted",
                         children: y.intl.format(y.t.yjS3zs, { index: P + 1 }),
                     }),
-                    (0, l.jsx)(u.X6q, {
+                    (0, l.jsx)(u.Heading, {
                         id: S,
                         variant: "heading-lg/semibold",
                         children: null != I.title && I.title.length > 0 ? I.title : y.intl.string(y.t.vY91Cw),
@@ -127,8 +127,8 @@ function C(e) {
                         ],
                     }),
                     (0, l.jsx)(u.izJ, {}),
-                    (0, l.jsxs)(u.xJW, {
-                        title: y.intl.string(y.t.TtIbPD),
+                    (0, l.jsxs)(s.gNt, {
+                        label: y.intl.string(y.t.TtIbPD),
                         children: [
                             (0, l.jsxs)(u.Kqy, {
                                 gap: 8,

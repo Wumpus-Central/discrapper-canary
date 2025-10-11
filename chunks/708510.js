@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(682255),
     f = n(888429),
     h = n(217472),
-    x = n(202905),
-    b = n(44867),
+    b = n(202905),
+    x = n(44867),
     j = n(557359),
     v = n(658666),
     _ = n(307375),
@@ -43,9 +43,9 @@ function E(e) {
                 rules: t.termRules,
             });
         case C.A.APPLY:
-            return (0, r.jsx)(x.r, { pendingFields: t.pendingVerificationFields });
+            return (0, r.jsx)(b.r, { pendingFields: t.pendingVerificationFields });
         case C.A.DISCOVERABLE:
-            return (0, r.jsx)(b.c, {
+            return (0, r.jsx)(x.c, {
                 fetchDiscoveryData: l,
                 settingsView: t.settingsView,
                 requireTerms: t.requireTerms,
@@ -112,7 +112,7 @@ function T() {
     return (0, r.jsxs)(a.Kqy, {
         gap: 32,
         children: [
-            (0, r.jsx)(a.X6q, {
+            (0, r.jsx)(a.Heading, {
                 color: "header-primary",
                 variant: "heading-lg/semibold",
                 children: y.intl.string(y.t.YJlvBA),

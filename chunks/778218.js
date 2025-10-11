@@ -27,7 +27,7 @@ let c = {
                     direction: "vertical",
                     gap: "md",
                     children: [
-                        (0, r.jsx)(l.XZJ, {
+                        (0, r.jsx)(l.Checkbox, {
                             checked: f,
                             onChange: (e) => _(e),
                             disabled: c,

@@ -1,84 +1,84 @@
-t.d(n, { default: () => h }), t(388685);
-var a = t(951288),
-    l = t(647438),
-    i = t(120356),
-    o = t.n(i),
-    s = t(481060),
-    r = t(788080),
-    c = t(81643),
-    d = t(469775),
-    u = t(398158),
-    f = t(388032),
-    m = t(179835),
-    p = t(248319);
-let h = function (e) {
-    let { onClose: n, onComplete: t, transitionState: i, webviewUrl: h } = e,
-        b = (0, r.GE)(),
-        [x, C] = l.useState(0),
-        _ = l.useCallback(() => {
-            t(), n();
-        }, [t, n]),
-        k = l.useCallback(() => {
-            (0, s.nfh)(d.zJ) && _();
-        }, [_]);
-    (0, c.F5)(k);
-    let g = l.useCallback(
+n.d(t, { default: () => b }), n(388685);
+var a = n(951288),
+    l = n(647438),
+    i = n(120356),
+    o = n.n(i),
+    s = n(481060),
+    r = n(788080),
+    c = n(81643),
+    d = n(469775),
+    u = n(398158),
+    f = n(388032),
+    p = n(179835),
+    m = n(248319);
+let b = function (e) {
+    let { onClose: t, onComplete: n, transitionState: i, webviewUrl: b } = e,
+        h = (0, r.GE)(),
+        [C, _] = l.useState(0),
+        x = l.useCallback(() => {
+            n(), t();
+        }, [n, t]),
+        g = l.useCallback(() => {
+            (0, s.nfh)(d.zJ) && x();
+        }, [x]);
+    (0, c.F5)(g);
+    let k = l.useCallback(
             (e) => {
-                if (b && "" !== h) {
-                    var n;
-                    (null == e || null == (n = e.data) ? void 0 : n.eventType) === "Verification.Result" && _();
+                if (h && "" !== b) {
+                    var t;
+                    (null == e || null == (t = e.data) ? void 0 : t.eventType) === "Verification.Result" && x();
                 }
             },
-            [h, _, b],
+            [b, x, h],
         ),
         v = l.useCallback(() => {
-            C(x + 1);
-        }, [x]);
+            _(C + 1);
+        }, [C]);
     return (
         l.useEffect(
             () => (
-                window.addEventListener("message", g),
+                window.addEventListener("message", k),
                 () => {
-                    window.removeEventListener("message", g);
+                    window.removeEventListener("message", k);
                 }
             ),
-            [g],
+            [k],
         ),
         (0, a.jsxs)(s.Y0X, {
             "data-migration-pending": !0,
             transitionState: i,
-            className: o()(p.root, m.fullbleedContent),
+            className: o()(m.root, p.fullbleedContent),
             parentComponent: "AgeVerificationExpressiveModal",
             size: s.CgR.MEDIUM,
             children: [
                 (0, a.jsx)(s.hzk, {
                     "data-migration-pending": !0,
-                    className: o()(p.content, p.fullbleed),
+                    className: o()(m.content, m.fullbleed),
                     scrollbarType: "none",
                     children: (0, a.jsx)(
                         "iframe",
                         {
                             id: "frame",
-                            src: h,
-                            className: p.iframe,
+                            src: b,
+                            className: m.iframe,
                             allow: "camera; microphone",
                         },
-                        x,
+                        C,
                     ),
                 }),
                 (0, a.jsx)(s.mzw, {
                     "data-migration-pending": !0,
-                    children: (0, a.jsxs)(s.hE2, {
+                    children: (0, a.jsxs)(s.ButtonGroup, {
                         fullWidth: !0,
                         children: [
-                            (0, a.jsx)(s.zxk, {
+                            (0, a.jsx)(s.Button, {
                                 fullWidth: !0,
                                 variant: "secondary",
                                 icon: s.j9r,
                                 text: f.intl.string(u.default.b7Oqdn),
-                                onClick: n,
+                                onClick: t,
                             }),
-                            (0, a.jsx)(s.zxk, {
+                            (0, a.jsx)(s.Button, {
                                 fullWidth: !0,
                                 variant: "secondary",
                                 icon: s.DuK,

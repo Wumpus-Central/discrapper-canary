@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685), n(642613);
+n.d(t, { Z: () => j }), n(388685), n(642613);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -29,10 +29,10 @@ var r = n(951288),
     P = n(987209),
     w = n(981631),
     D = n(474936),
-    x = n(388032),
-    L = n(769212);
+    L = n(388032),
+    x = n(769212);
 let M = 1500;
-function k(e) {
+function j(e) {
     let {
             giftCode: t,
             application: n,
@@ -47,7 +47,7 @@ function k(e) {
         } = e,
         [O, I] = i.useState(f.kO8.Modes.DEFAULT),
         S = (0, c.e7)([T.Z], () => T.Z.enabled),
-        k = _ || (null != l && null != p),
+        j = _ || (null != l && null != p),
         U = (null == a ? void 0 : a.productLine) === w.POd.COLLECTIBLES,
         G = (0, E.Z)(),
         { selectedGiftingPromotionReward: B } = (0, P.wD)(),
@@ -58,32 +58,32 @@ function k(e) {
         Y = () => {
             let e;
             return null != g
-                ? x.intl.string(x.t.qB8ayc)
+                ? L.intl.string(L.t.qB8ayc)
                 : null == s
                   ? null
                   : ((e =
                         s.interval === D.rV.MONTH
-                            ? k
+                            ? j
                                 ? V
                                     ? Z.monthGiftText
-                                    : x.t["4ZJ+7e"]
-                                : x.t["P+z55e"]
-                            : k
+                                    : L.t["4ZJ+7e"]
+                                : L.t["P+z55e"]
+                            : j
                               ? V
                                   ? Z.yearGiftText
-                                  : x.t.p0pZXF
-                              : x.t.bXqk3t),
-                    x.intl.format(e, {
+                                  : L.t.p0pZXF
+                              : L.t.bXqk3t),
+                    L.intl.format(e, {
                         skuName: (0, N.aq)(s.id),
                         intervalCount: s.intervalCount,
                     }));
         },
         W = () =>
             null != p || (_ && null == g)
-                ? x.intl.string(x.t.zOmK9P)
+                ? L.intl.string(L.t.zOmK9P)
                 : null != g
-                  ? x.intl.string(x.t.d1lrmZ)
-                  : x.intl.string(x.t["/s1xR0"]),
+                  ? L.intl.string(L.t.d1lrmZ)
+                  : L.intl.string(L.t["/s1xR0"]),
         K = (e, t) => {
             null != a &&
                 (0, C.dM)(
@@ -107,35 +107,35 @@ function k(e) {
             if (null == t) return null;
             switch (O) {
                 case f.kO8.Modes.SUCCESS:
-                    e = x.intl.string(x.t.XVvPjY);
+                    e = L.intl.string(L.t.XVvPjY);
                     break;
                 case f.kO8.Modes.ERROR:
-                    e = x.intl.string(x.t.i4GM3N);
+                    e = L.intl.string(L.t.i4GM3N);
                     break;
                 default:
-                    e = x.intl.string(x.t.OpuAlJ);
+                    e = L.intl.string(L.t.OpuAlJ);
             }
             return (0, r.jsxs)("div", {
-                className: L.giftCodeSection,
+                className: x.giftCodeSection,
                 children: [
                     null != t &&
                         (0, r.jsx)(f.gNt, {
-                            label: x.intl.string(x.t["/dG4ND"]),
+                            label: L.intl.string(L.t["/dG4ND"]),
                             children: (0, r.jsx)(f.kO8, {
-                                hideMessage: S ? x.intl.string(x.t["0RLn4+"]) : null,
+                                hideMessage: S ? L.intl.string(L.t["0RLn4+"]) : null,
                                 value: (0, C.Nz)(t),
                                 mode: O,
                                 text: e,
                                 onCopy: (e) => K(e, t),
                                 supportsCopy: A.wS,
-                                className: L.__invalid_copyInput,
+                                className: x.__invalid_copyInput,
                                 buttonColor: d.Tt.LINK,
                                 buttonLook: d.iL.LINK,
                             }),
                         }),
                     (0, r.jsx)("div", {
-                        className: L.subtext,
-                        children: x.intl.string(x.t.QWKUpq),
+                        className: x.subtext,
+                        children: L.intl.string(L.t.QWKUpq),
                     }),
                 ],
             });
@@ -144,15 +144,15 @@ function k(e) {
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)("div", {
-                        className: L.blurb,
+                        className: x.blurb,
                         children: Y(),
                     }),
                     null == g &&
-                        (0, r.jsx)(j, {
+                        (0, r.jsx)(k, {
                             giftCode: t,
                             onClose: u,
                         }),
-                    (0, r.jsx)("div", { className: L.divider }),
+                    (0, r.jsx)("div", { className: x.divider }),
                     z(),
                 ],
             }),
@@ -160,21 +160,21 @@ function k(e) {
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsxs)("div", {
-                        className: L.giftRecipientContainer,
+                        className: x.giftRecipientContainer,
                         children: [
                             (0, r.jsx)(h.Z, {
                                 user: p,
                                 size: f.EFr.SIZE_40,
                             }),
                             (0, r.jsxs)("div", {
-                                className: L.giftRecipientTextContainer,
+                                className: x.giftRecipientTextContainer,
                                 children: [
-                                    (0, r.jsx)(f.X6q, {
+                                    (0, r.jsx)(f.Heading, {
                                         variant: "heading-md/semibold",
                                         children: R.ZP.getName(p),
                                     }),
                                     (0, r.jsxs)("div", {
-                                        className: L.giftRecipientTag,
+                                        className: x.giftRecipientTag,
                                         children: [" ", R.ZP.getUserTag(p)],
                                     }),
                                 ],
@@ -182,19 +182,19 @@ function k(e) {
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        className: L.giftSentMessage,
+                        className: x.giftSentMessage,
                         children: Y(),
                     }),
                 ],
             });
     return y
         ? (0, r.jsxs)("div", {
-              className: L.confirmation,
+              className: x.confirmation,
               children: [
                   null != n
                       ? (0, r.jsx)(m.Z, {
                             game: n,
-                            className: L.__invalid_icon,
+                            className: x.__invalid_icon,
                             size: m.A.LARGE,
                             skuId: H(),
                         })
@@ -203,29 +203,29 @@ function k(e) {
               ],
           })
         : (0, r.jsxs)("div", {
-              className: o()(L.confirmation, { [L.seasonalConfirmationPadding]: V }),
+              className: o()(x.confirmation, { [x.seasonalConfirmationPadding]: V }),
               children: [
                   null != n
                       ? (0, r.jsx)(m.Z, {
                             game: n,
-                            className: L.__invalid_icon,
+                            className: x.__invalid_icon,
                             size: m.A.LARGE,
                             skuId: H(),
                         })
                       : null,
-                  (0, r.jsx)(f.X6q, {
+                  (0, r.jsx)(f.Heading, {
                       variant: "heading-lg/semibold",
                       className: o()({
-                          [L.header]: null == l && !U,
-                          [L.headerCustomGifting]: null != l && !U,
+                          [x.header]: null == l && !U,
+                          [x.headerCustomGifting]: null != l && !U,
                       }),
                       children: W(),
                   }),
-                  (_ && null != p && null == g) || k ? X() : q(),
+                  (_ && null != p && null == g) || j ? X() : q(),
               ],
           });
 }
-let j = (e) => {
+let k = (e) => {
     let { giftCode: t, onClose: n } = e;
     i.useEffect(() => {
         p.Z.fetchRelationships(), (0, y._)();
@@ -245,16 +245,16 @@ let j = (e) => {
     if (null == P || 0 === P.length) return null;
     let w = l().sortBy(P, (e) => N.indexOf(e.id));
     return (0, r.jsxs)("div", {
-        className: L.giftRecipientSection,
+        className: x.giftRecipientSection,
         children: [
             (0, r.jsxs)("div", {
-                className: L.giftRecipient,
+                className: x.giftRecipient,
                 children: [
                     (0, r.jsx)(f.VcW, {
-                        label: x.intl.string(x.t.MJw05e),
-                        placeholder: x.intl.string(x.t.J019jY),
-                        wrapperClassName: L.giftRecipientInputWrapper,
-                        className: s ? L.giftRecipientInputError : void 0,
+                        label: L.intl.string(L.t.MJw05e),
+                        placeholder: L.intl.string(L.t.J019jY),
+                        wrapperClassName: x.giftRecipientInputWrapper,
+                        className: s ? x.giftRecipientInputError : void 0,
                         renderOptionPrefix: (e) =>
                             (null == e ? void 0 : e.value) == null
                                 ? null
@@ -285,13 +285,13 @@ let j = (e) => {
                                         d(!0), E(!1);
                                     });
                         },
-                        text: x.intl.string(x.t["+EgwQk"]),
+                        text: L.intl.string(L.t["+EgwQk"]),
                     }),
                 ],
             }),
             (0, r.jsx)("div", {
-                className: s ? L.subtextError : L.subtext,
-                children: s ? x.intl.string(x.t.jo5Vbm) : x.intl.string(x.t["8/N3v7"]),
+                className: s ? x.subtextError : x.subtext,
+                children: s ? L.intl.string(L.t.jo5Vbm) : L.intl.string(L.t["8/N3v7"]),
             }),
         ],
     });

@@ -22,7 +22,7 @@ let h = () => {
                 (0, r.jsxs)("div", {
                     className: p.actionSection,
                     children: [
-                        (0, r.jsx)(o.X6q, {
+                        (0, r.jsx)(o.Heading, {
                             variant: "text-md/medium",
                             className: p.sectionHeader,
                             children: _.intl.string(f.default.BxbvS0),
@@ -57,7 +57,7 @@ let h = () => {
                 (0, r.jsxs)("div", {
                     className: p.actionSection,
                     children: [
-                        (0, r.jsx)(o.X6q, {
+                        (0, r.jsx)(o.Heading, {
                             variant: "text-md/medium",
                             className: p.sectionHeader,
                             children: _.intl.string(f.default.Lq9Sen),

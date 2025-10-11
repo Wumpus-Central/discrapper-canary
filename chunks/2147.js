@@ -1,6 +1,6 @@
 n.d(t, {
     G: () => eS,
-    Z: () => eZ,
+    Z: () => eE,
 }),
     n(997841),
     n(290780);
@@ -27,9 +27,9 @@ var i = n(951288),
     S = n(541716),
     N = n(752305),
     O = n(893718),
-    Z = n(409513),
-    w = n(600164),
-    E = n(313201),
+    E = n(409513),
+    Z = n(600164),
+    w = n(313201),
     T = n(318766),
     _ = n(907040),
     R = n(906411),
@@ -49,9 +49,9 @@ var i = n(951288),
     F = n(430824),
     z = n(496675),
     q = n(903223),
-    X = n(594174),
-    J = n(934415),
-    Y = n(55935),
+    J = n(594174),
+    Y = n(934415),
+    X = n(55935),
     Q = n(70956),
     K = n(630388),
     $ = n(63063),
@@ -114,9 +114,9 @@ function ep(e, t) {
         e
     );
 }
-let em = (0, E.hQ)(),
-    ef = (0, E.hQ)(),
-    eb = (0, E.hQ)(),
+let em = (0, w.hQ)(),
+    ef = (0, w.hQ)(),
+    eb = (0, w.hQ)(),
     ex = (0, V.createChannelRecord)({
         id: "1",
         type: el.d4z.DM,
@@ -137,7 +137,7 @@ let em = (0, E.hQ)(),
     },
     ey = "AUTOMATIC_RTC_REGION",
     eC = {
-        breakingChangeDate: (0, Y.vc)(o()(el.zQD), "LL"),
+        breakingChangeDate: (0, X.vc)(o()(el.zQD), "LL"),
         helpCenterLink: $.Z.getArticleURL(el.BhN.SLOWMODE),
     },
     eS = h.ZP.connectStores([W.Z], () => {
@@ -296,14 +296,14 @@ class eO extends l.PureComponent {
                 isThreadModerator: v,
                 canManageThread: C,
                 guild: N,
-                isForumPost: w,
-                isOwner: E,
+                isForumPost: Z,
+                isOwner: w,
                 showAdvancedSlowModeSetting: T,
             } = this.props,
             _ = V.Ec.has(e.type),
             R = e.isForumLikeChannel(),
             I = R && (null == (n = e.availableTags) ? void 0 : n.every((e) => e.moderated)),
-            D = (null == (l = X.default.getCurrentUser()) ? void 0 : l.isStaff()) === !0,
+            D = (null == (l = J.default.getCurrentUser()) ? void 0 : l.isStaff()) === !0,
             k = V.TK.has(e.type)
                 ? (0, i.jsx)(p.gNt, {
                       label: R ? ec.intl.string(ec.t.yR6Hwc) : ec.intl.string(ec.t.X8jMDg),
@@ -358,7 +358,7 @@ class eO extends l.PureComponent {
                               id: em,
                               children: (0, i.jsx)(L.Z, { channel: e }),
                           }),
-                          (0, i.jsx)(p.XZJ, {
+                          (0, i.jsx)(p.Checkbox, {
                               disabled: !x || I,
                               checked: e.hasFlag(er.zZ.REQUIRE_TAG),
                               onChange: (e) => this.handleRequireTagChanged(e),
@@ -379,7 +379,7 @@ class eO extends l.PureComponent {
                                   children: [
                                       (0, i.jsx)("div", {
                                           className: s()(ed.settingsLeft, ed.settingsDefaultReaction),
-                                          children: (0, i.jsxs)(p.hE2, {
+                                          children: (0, i.jsxs)(p.ButtonGroup, {
                                               align: "center",
                                               children: [
                                                   (0, i.jsx)(p.yRy, {
@@ -390,7 +390,7 @@ class eO extends l.PureComponent {
                                                       align: "center",
                                                       children: (e) =>
                                                           (0, i.jsx)(
-                                                              p.zxk,
+                                                              p.Button,
                                                               ep(eg({}, e), {
                                                                   buttonRef: this.defaultReactionButtonRef,
                                                                   text: ec.intl.string(ec.t["59QgaG"]),
@@ -490,10 +490,10 @@ class eO extends l.PureComponent {
                       onChange: this.handleChangeDefaultTagSetting,
                   })
                 : null,
-            J = _ ? v : x,
-            Y =
+            Y = _ ? v : x,
+            X =
                 null ==
-                (r = Z.Z.getCurrentConfig({
+                (r = E.Z.getCurrentConfig({
                     guildId: e.guild_id,
                     location: "ChannelSettingsOverview",
                 }))
@@ -503,19 +503,19 @@ class eO extends l.PureComponent {
                 !0 === T
                     ? (0, i.jsx)(et.Z, {
                           label: ec.intl.string(ec.t["tTHx9/"]),
-                          helperText: this.getSlowmodeHelpText(Y),
+                          helperText: this.getSlowmodeHelpText(X),
                           channel: e,
                           onChange: this.handleChangeSlowmode,
                       })
                     : (0, i.jsx)(p.iRW, {
                           label: ec.intl.string(ec.t["tTHx9/"]),
-                          helperText: this.getSlowmodeHelpText(Y),
+                          helperText: this.getSlowmodeHelpText(X),
                           initialValue: e.rateLimitPerUser,
                           markers: el.BiE,
                           stickToMarkers: !0,
                           onValueChange: this.handleChangeSlowmode,
                           onMarkerRender: this.getCooldownSliderMarker,
-                          disabled: !J,
+                          disabled: !Y,
                           equidistant: !0,
                           "aria-labelledby": ef,
                           "aria-describedby": eb,
@@ -531,13 +531,13 @@ class eO extends l.PureComponent {
                                       Q,
                                       (0, i.jsx)(p.iRW, {
                                           label: ec.intl.string(ec.t["fkY5+v"]),
-                                          helperText: Y ? ec.intl.format(ec.t.nZSuEh, eC) : ec.intl.string(ec.t.kdZU6O),
+                                          helperText: X ? ec.intl.format(ec.t.nZSuEh, eC) : ec.intl.string(ec.t.kdZU6O),
                                           initialValue: null != (h = e.defaultThreadRateLimitPerUser) ? h : 0,
                                           markers: el.BiE,
                                           stickToMarkers: !0,
                                           onValueChange: this.handleChangeThreadMessageSlowmode,
                                           onMarkerRender: this.getCooldownSliderMarker,
-                                          disabled: !J,
+                                          disabled: !Y,
                                           equidistant: !0,
                                           "aria-labelledby": ef,
                                           "aria-describedby": eb,
@@ -557,7 +557,7 @@ class eO extends l.PureComponent {
                               isDisabled: !C,
                               autoArchiveDuration: null != (g = e.threadMetadata.autoArchiveDuration) ? g : eo.AX,
                               onChange: this.handleAutoArchiveDurationChanged,
-                              helperText: w ? ec.intl.string(ec.t["3aJN9P"]) : ec.intl.string(ec.t.YUXr4e),
+                              helperText: Z ? ec.intl.string(ec.t["3aJN9P"]) : ec.intl.string(ec.t.YUXr4e),
                           }),
                       })
                     : null,
@@ -661,7 +661,7 @@ class eO extends l.PureComponent {
               : _
                 ? ((f = ec.intl.string(ec.t.j3XWjI)), (m = "thread-name"))
                 : ((f = ec.intl.string(ec.t.PVbHDg)), (m = "channel-name"));
-        let eO = E ? j : x;
+        let eO = w ? j : x;
         return (0, i.jsxs)(p.Kqy, {
             gap: 24,
             children: [
@@ -712,7 +712,7 @@ class eO extends l.PureComponent {
     renderVoiceBitrate(e, t) {
         let { canManageChannels: n } = this.props;
         if (!this.showVoiceSettings()) return null;
-        let l = (0, J.g7)(t, e),
+        let l = (0, Y.g7)(t, e),
             r = this.getError("bitrate");
         return (0, i.jsx)(p.iRW, {
             label: ec.intl.string(ec.t.w2d0vb),
@@ -826,8 +826,8 @@ class eO extends l.PureComponent {
                     : (0, g.wj)(l)
                       ? n(316491)
                       : n(301358)),
-            (0, i.jsx)(w.Z, {
-                justify: w.Z.Justify.CENTER,
+            (0, i.jsx)(Z.Z, {
+                justify: Z.Z.Justify.CENTER,
                 className: eu.marginTop60,
                 children: (0, i.jsx)("img", {
                     alt: "",
@@ -894,7 +894,7 @@ class eO extends l.PureComponent {
                 var t, n;
                 let { channel: i } = this.props;
                 if (null == i) return;
-                i.isThread() ? (e = (0, k.Z)(e, !1)) : el.TPd.LIMITED_CHANNEL_NAME.has(i.type) && (e = (0, J.Nj)(e));
+                i.isThread() ? (e = (0, k.Z)(e, !1)) : el.TPd.LIMITED_CHANNEL_NAME.has(i.type) && (e = (0, Y.Nj)(e));
                 let l = null != (n = null == (t = this.nameInputRef.current) ? void 0 : t.selectionStart) ? n : 0;
                 (0, m.pW)({ name: e }),
                     setTimeout(() => {
@@ -1025,7 +1025,7 @@ class eO extends l.PureComponent {
         };
     }
 }
-function eZ() {
+function eE() {
     let { errors: e, channel: t, submitting: n, subsection: r } = (0, h.cj)([W.Z], () => W.Z.getProps()),
         s = (0, h.e7)([q.Z], () => {
             var e;

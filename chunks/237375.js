@@ -64,7 +64,7 @@ function g(e) {
             c.length > 0
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)(l.X6q, {
+                          (0, r.jsx)(l.Heading, {
                               className: p.optionalHeader,
                               variant: "heading-deprecated-12/semibold",
                               children: _.intl.string(_.t["5C107O"]),

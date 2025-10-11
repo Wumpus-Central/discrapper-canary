@@ -136,7 +136,7 @@ function S(e) {
                           (0, i.jsx)(
                               "div",
                               E(j({}, e), {
-                                  children: (0, i.jsx)(s.zxk, {
+                                  children: (0, i.jsx)(s.Button, {
                                       size: "sm",
                                       variant: "secondary",
                                       text: v.intl.string(v.t["0eHzpq"]),
@@ -147,7 +147,7 @@ function S(e) {
                           ),
                   })
                 : Z &&
-                  (0, i.jsx)(s.zxk, {
+                  (0, i.jsx)(s.Button, {
                       size: "sm",
                       variant: "secondary",
                       text: v.intl.string(v.t["B/dHXF"]),

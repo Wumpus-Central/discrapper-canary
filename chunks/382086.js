@@ -16,14 +16,14 @@ var l = e(755721),
 let p = 0.5 > Math.random();
 function u(t) {
     let { onClose: n, onBack: e, onCreationIntentChosen: u, hasFooter: _ = !0 } = t,
-        L = (0, i.jsx)(l.zx, {
+        g = (0, i.jsx)(l.zx, {
             className: C.backButton,
             look: l.zx.Looks.BLANK,
             size: l.zx.Sizes.MIN,
             onClick: e,
             children: m.intl.string(m.t["13/7kZ"]),
         });
-    function g(t) {
+    function L(t) {
         r.default.track(o.rMx.GUILD_CREATION_INTENT_SELECTED, {
             skipped: null == t,
             is_community: t === c.lr.COMMUNITY,
@@ -38,7 +38,7 @@ function u(t) {
                     className: C.header,
                     separator: !1,
                     children: [
-                        (0, i.jsx)(a.X6q, {
+                        (0, i.jsx)(a.Heading, {
                             className: C.title,
                             variant: "heading-xl/semibold",
                             children: m.intl.string(m.t.f3MvGR),
@@ -65,12 +65,12 @@ function u(t) {
                                       (0, i.jsx)(d.Z, {
                                           icon: a.Nye,
                                           message: m.intl.string(m.t.uE7zcn),
-                                          onClick: () => g(c.lr.FRIENDS),
+                                          onClick: () => L(c.lr.FRIENDS),
                                       }),
                                       (0, i.jsx)(d.Z, {
                                           icon: a.q3d,
                                           message: m.intl.string(m.t.h9Q1lJ),
-                                          onClick: () => g(c.lr.COMMUNITY),
+                                          onClick: () => L(c.lr.COMMUNITY),
                                       }),
                                   ],
                               })
@@ -79,12 +79,12 @@ function u(t) {
                                       (0, i.jsx)(d.Z, {
                                           icon: a.q3d,
                                           message: m.intl.string(m.t.h9Q1lJ),
-                                          onClick: () => g(c.lr.COMMUNITY),
+                                          onClick: () => L(c.lr.COMMUNITY),
                                       }),
                                       (0, i.jsx)(d.Z, {
                                           icon: a.Nye,
                                           message: m.intl.string(m.t.uE7zcn),
-                                          onClick: () => g(c.lr.FRIENDS),
+                                          onClick: () => L(c.lr.FRIENDS),
                                       }),
                                   ],
                               }),
@@ -92,18 +92,18 @@ function u(t) {
                             className: C.skip,
                             color: "header-secondary",
                             variant: "text-sm/normal",
-                            children: m.intl.format(m.t["SMc+Gx"], { onSkip: () => g(null) }),
+                            children: m.intl.format(m.t["SMc+Gx"], { onSkip: () => L(null) }),
                         }),
                     ],
                 }),
                 _ &&
                     (0, i.jsx)(a.mzw, {
                         justify: s.Z.Justify.BETWEEN,
-                        children: L,
+                        children: g,
                     }),
             ],
         }),
-        footer: L,
+        footer: g,
     };
 }
 function _(t) {

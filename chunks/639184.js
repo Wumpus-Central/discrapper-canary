@@ -74,7 +74,7 @@ function x(e) {
                 children: [
                     (0, r.jsxs)("div", {
                         children: [
-                            (0, r.jsx)(l.X6q, {
+                            (0, r.jsx)(l.Heading, {
                                 className: a()(g.__invalid_channelName, h.title),
                                 variant: "heading-lg/semibold",
                                 color: "header-primary",

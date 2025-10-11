@@ -9,8 +9,8 @@ var i = n(951288),
     d = n(313201),
     u = n(455708),
     f = n(222062),
-    _ = n(530329),
-    g = n(626135),
+    g = n(530329),
+    _ = n(626135),
     p = n(488499),
     m = n(58384),
     N = n(981631),
@@ -77,7 +77,7 @@ function b(e) {
             );
     }
     a.useEffect(() => {
-        g.default.track(N.rMx.OPEN_MODAL, {
+        _.default.track(N.rMx.OPEN_MODAL, {
             type: N.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
             location_stack: I,
             location: { page: E },
@@ -105,7 +105,7 @@ function b(e) {
                     className: A.modalHeader,
                     separator: !1,
                     children: [
-                        (0, i.jsx)(l.X6q, {
+                        (0, i.jsx)(l.Heading, {
                             className: A.titleCase,
                             variant: "heading-lg/semibold",
                             children: h.intl.string(h.t["xsC+//"]),
@@ -129,7 +129,7 @@ function b(e) {
                 }),
                 v &&
                     w &&
-                    (0, i.jsx)(_.Z, {
+                    (0, i.jsx)(g.Z, {
                         uploadType: P,
                         analyticsSource: Z,
                         showUpsell: !0,

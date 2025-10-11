@@ -3,8 +3,8 @@ var i = n(951288),
     a = n(647438),
     l = n(120356),
     o = n.n(l),
-    s = n(286379),
-    r = n(692547),
+    r = n(286379),
+    s = n(692547),
     c = n(481060),
     d = n(442837),
     u = n(797614),
@@ -79,7 +79,7 @@ let T = (e) => {
                       ? A.intl.format(A.t.X1ngSU, w(C({}, e), { guildName: null == n ? void 0 : n.name }))
                       : A.intl.format(A.t.rmpEPD, w(C({}, e), { guildName: null == n ? void 0 : n.name }));
             }, [t, n]);
-        return (0, i.jsx)(c.X6q, {
+        return (0, i.jsx)(c.Heading, {
             variant: "heading-xl/normal",
             children: l,
         });
@@ -144,7 +144,7 @@ let T = (e) => {
     },
     N = (e) => {
         let { classificationTypeText: t, policyExplainerLink: n } = e;
-        return (0, i.jsxs)(c.eee, {
+        return (0, i.jsxs)(c.Anchor, {
             href: n,
             className: P.classificationPolicyCard,
             useDefaultUnderlineStyles: !1,
@@ -153,7 +153,7 @@ let T = (e) => {
                     className: P.classificationPolicyCardIcon,
                     children: (0, i.jsx)(c.b7C, {
                         size: "md",
-                        color: r.Z.colors.FOCUS_PRIMARY,
+                        color: s.Z.colors.FOCUS_PRIMARY,
                     }),
                 }),
                 (0, i.jsx)("div", {
@@ -167,7 +167,7 @@ let T = (e) => {
                     className: P.classificationPolicyLinkIcon,
                     children: (0, i.jsx)(c.Fbu, {
                         size: "md",
-                        color: r.Z.colors.INTERACTIVE_NORMAL,
+                        color: s.Z.colors.INTERACTIVE_NORMAL,
                     }),
                 }),
             ],
@@ -186,7 +186,7 @@ let T = (e) => {
             children: A.intl.format(A.t.IFxUaW, {
                 letUsKnowHook: (t, n) =>
                     (0, i.jsx)(
-                        c.eee,
+                        c.Anchor,
                         {
                             href: e.isAppealEligible ? void 0 : e.appealLink,
                             onClick: e.letUsKnowClick,
@@ -240,7 +240,7 @@ let T = (e) => {
     },
     Z = (e) => {
         var t;
-        let { classificationId: n, source: l, onError: r, onClose: c } = e,
+        let { classificationId: n, source: l, onError: s, onClose: c } = e,
             {
                 classification: m,
                 classificationRequestState: A,
@@ -288,7 +288,7 @@ let T = (e) => {
                 });
         }, [Z]),
         null == m && A === h.OY.FAILED)
-            ? (r(), null)
+            ? (s(), null)
             : null == m
               ? null
               : (0, i.jsxs)("div", {
@@ -329,7 +329,7 @@ let T = (e) => {
                                                 M
                                                     ? f.Z.open(n, c)
                                                     : C &&
-                                                      (u.Z.increment({ name: s.V.APPEAL_INGESTION_VIEW }), x.Z.open(n));
+                                                      (u.Z.increment({ name: r.V.APPEAL_INGESTION_VIEW }), x.Z.open(n));
                                         },
                                         isAppealEligible: C || M,
                                     }),

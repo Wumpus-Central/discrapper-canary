@@ -140,7 +140,7 @@ function I(e) {
                       }),
                   }),
                   null != P
-                      ? (0, r.jsx)(o.zxk, {
+                      ? (0, r.jsx)(o.Button, {
                             fullWidth: !0,
                             variant: D ? "critical-primary" : "primary",
                             text: D ? "Clear Treatment ".concat(P.value) : "Apply Treatment ".concat(P.value),

@@ -285,7 +285,7 @@ function eB(e) {
                 let a = U.Z.getChannel(null == (i = t.messageReference) ? void 0 : i.channel_id);
                 null != a &&
                     (0, s.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e("90508"), n.e("46154"), n.e("89381")]).then(
+                        let { default: e } = await Promise.all([n.e("90508"), n.e("46154"), n.e("44141")]).then(
                             n.bind(n, 422200),
                         );
                         return (t) => (0, r.jsx)(e, eL(ew({}, t), { channel: a }));
@@ -612,7 +612,7 @@ function e1(e) {
                 usernameHook: u,
             }),
             h
-                ? (0, r.jsx)(o.zxk, {
+                ? (0, r.jsx)(o.Button, {
                       variant: "secondary",
                       onClick: f,
                       text: eR.intl.string(eR.t.f0T7hI),

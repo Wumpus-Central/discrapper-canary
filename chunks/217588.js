@@ -29,10 +29,10 @@ var r = n(951288),
     P = n(688179),
     w = n(981631),
     D = n(474936),
-    x = n(388032),
-    L = n(564651),
+    L = n(388032),
+    x = n(564651),
     M = n(975900);
-function k(e, t, n) {
+function j(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function k(e, t, n) {
         e
     );
 }
-function j(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function j(e) {
                 }),
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                j(e, t, n[t]);
             });
     }
     return e;
@@ -92,8 +92,8 @@ let B = 80,
     Y = 12,
     W = (e, t) =>
         t
-            ? x.intl.format(x.t.auckX1, { stickerPackName: e.name })
-            : x.intl.format(x.t.OzB6e3, { stickerPackName: e.name }),
+            ? L.intl.format(L.t.auckX1, { stickerPackName: e.name })
+            : L.intl.format(L.t.OzB6e3, { stickerPackName: e.name }),
     K = (e) => {
         let { sticker: t, stickerPack: n } = e;
         return i.useMemo(
@@ -171,7 +171,7 @@ let X = (e) => {
                 let { channel: e } = m.current;
                 T.default.track(
                     w.rMx.OPEN_POPOUT,
-                    j(
+                    k(
                         {
                             type: w.jXE.STICKER_POPOUT,
                             guild_id: e.getGuildId(),
@@ -183,7 +183,7 @@ let X = (e) => {
             }, [n.pack_id]),
             c || null == l)
         )
-            return (0, r.jsx)(b.SE, { className: L.popoutLoader });
+            return (0, r.jsx)(b.SE, { className: x.popoutLoader });
         let g = d,
             E = () => {
                 g &&
@@ -194,9 +194,9 @@ let X = (e) => {
                     t();
             };
         return (0, r.jsxs)(b.W_, {
-            className: L.popoutContent,
+            className: x.popoutContent,
             children: [
-                (0, r.jsx)(u.X6q, {
+                (0, r.jsx)(u.Heading, {
                     variant: "heading-md/semibold",
                     children: n.name,
                 }),
@@ -205,7 +205,7 @@ let X = (e) => {
                     children: W(l, d),
                 }),
                 (0, r.jsx)("ul", {
-                    className: L.stickersList,
+                    className: x.stickersList,
                     children: f.map((e) =>
                         (0, r.jsx)(
                             R.Z,
@@ -220,13 +220,13 @@ let X = (e) => {
                 }),
                 d &&
                     (0, r.jsx)("div", {
-                        className: L.packActions,
+                        className: x.packActions,
                         children: (0, r.jsx)(
-                            u.zxk,
+                            u.Button,
                             {
                                 variant: "secondary",
                                 size: "sm",
-                                text: x.intl.string(x.t.GPy3Ag),
+                                text: L.intl.string(L.t.GPy3Ag),
                                 onClick: E,
                             },
                             "view-sticker-pack",
@@ -240,8 +240,8 @@ let X = (e) => {
             { sticker: n, channel: a, closePopout: h, refreshPositionKey: y } = e,
             [A, C] = i.useState(null),
             [N, P] = i.useState(!1),
-            k = I.default.getCurrentUser(),
-            U = S.ZP.canUseCustomStickersEverywhere(k),
+            j = I.default.getCurrentUser(),
+            U = S.ZP.canUseCustomStickersEverywhere(j),
             B = (0, s.e7)([v.Z], () => v.Z.getGuild(n.guild_id)),
             Z = null != B,
             [H, W] = i.useState(!1),
@@ -253,7 +253,7 @@ let X = (e) => {
                 }),
                 [a.guild_id],
             ),
-            { current: J } = i.useRef(j({ guild_id: a.getGuildId() }, (0, _.v_)(a))),
+            { current: J } = i.useRef(k({ guild_id: a.getGuildId() }, (0, _.v_)(a))),
             $ = {
                 stickerSourceGuild: B,
                 refreshPositionKey: y,
@@ -275,18 +275,18 @@ let X = (e) => {
         U
             ? (t = Z
                   ? et
-                      ? x.intl.string(x.t.fZ0DiI)
-                      : x.intl.string(x.t["1f6D9v"])
+                      ? L.intl.string(L.t.fZ0DiI)
+                      : L.intl.string(L.t["1f6D9v"])
                   : en
-                    ? x.intl.string(x.t.yHmoR0)
-                    : x.intl.string(x.t.vZaScH))
+                    ? L.intl.string(L.t.yHmoR0)
+                    : L.intl.string(L.t.vZaScH))
             : Z
-              ? ((t = et ? x.intl.string(x.t.jNphpq) : x.intl.string(x.t.lyD5ZW)),
+              ? ((t = et ? L.intl.string(L.t.jNphpq) : L.intl.string(L.t.lyD5ZW)),
                 (er = !0),
                 (ei = "Custom Sticker Popout (Upsell)"))
               : en
-                ? ((t = x.intl.string(x.t.IuXYcn)), (er = !0), (ei = "Custom Sticker Popout (Upsell)"))
-                : ((t = x.intl.format(x.t.hGWuxc, {
+                ? ((t = L.intl.string(L.t.IuXYcn)), (er = !0), (ei = "Custom Sticker Popout (Upsell)"))
+                : ((t = L.intl.format(L.t.hGWuxc, {
                       openPremiumSettings: () => {
                           z(a), h();
                       },
@@ -299,11 +299,11 @@ let X = (e) => {
                 e();
             }, [N, A]),
             (0, f.ZP)(() => {
-                T.default.track(w.rMx.OPEN_POPOUT, j({ type: ei }, J));
+                T.default.track(w.rMx.OPEN_POPOUT, k({ type: ei }, J));
             }),
             !N)
         )
-            return (0, r.jsx)(b.SE, { className: L.popoutLoader });
+            return (0, r.jsx)(b.SE, { className: x.popoutLoader });
         {
             let e = () => {
                     let e = async () => {
@@ -327,7 +327,7 @@ let X = (e) => {
                                     subscriptionTier: D.Si.TIER_2,
                                     size: c.zx.Sizes.SMALL,
                                     fullWidth: !0,
-                                    textOptions: { textOverride: x.intl.string(x.t["gl/XHB"]) },
+                                    textOptions: { textOverride: L.intl.string(L.t["gl/XHB"]) },
                                     onSubscribeModalClose: (t) => (t ? e() : h()),
                                     postSuccessGuild: Z || null == A ? void 0 : A,
                                     premiumModalAnalyticsLocation: Q,
@@ -336,10 +336,10 @@ let X = (e) => {
                                 (0, r.jsx)("div", {
                                     "data-button-hoisted-classname-wrapper": !0,
                                     className: M.ctaButton,
-                                    children: (0, r.jsx)(u.zxk, {
+                                    children: (0, r.jsx)(u.Button, {
                                         variant: "primary",
                                         size: "sm",
-                                        text: x.intl.string(x.t.riu2R0),
+                                        text: L.intl.string(L.t.riu2R0),
                                         fullWidth: !0,
                                         onClick: e,
                                     }),
@@ -365,7 +365,7 @@ let X = (e) => {
                                 variant: "text-sm/normal",
                                 color: "text-secondary",
                                 className: M.guildTitle,
-                                children: Z ? x.intl.string(x.t.kx6pEB) : x.intl.string(x.t.pDE7GR),
+                                children: Z ? L.intl.string(L.t.kx6pEB) : L.intl.string(L.t.pDE7GR),
                             }),
                             (0, r.jsx)(E.Oe, {
                                 expressionSourceGuild: a,
@@ -384,7 +384,7 @@ let X = (e) => {
                                                         className: M.__invalid_showMoreEmojisLabel,
                                                         variant: "text-xs/normal",
                                                         color: "none",
-                                                        children: x.intl.string(x.t.vtH5ho),
+                                                        children: L.intl.string(L.t.vtH5ho),
                                                     }),
                                                     (0, r.jsx)(u.CJ0, {
                                                         size: "md",
@@ -405,12 +405,12 @@ let X = (e) => {
                                                 children: t.map((e) =>
                                                     (0, r.jsx)(
                                                         l.u,
-                                                        G(j({ text: e.name }, b.b_), {
+                                                        G(k({ text: e.name }, b.b_), {
                                                             children: (0, r.jsx)(
                                                                 "div",
                                                                 {
                                                                     className: o()(M.otherEmoji, {
-                                                                        [L.nonInteractingSticker]:
+                                                                        [x.nonInteractingSticker]:
                                                                             null != K && K !== e.id,
                                                                     }),
                                                                     onMouseEnter: () => {
@@ -449,10 +449,10 @@ let X = (e) => {
 function J(e) {
     let { channel: t, closePopout: n, sticker: i } = e;
     return (0, r.jsx)(b.W_, {
-        className: L.popoutContent,
+        className: x.popoutContent,
         children: (0, r.jsx)(q, {
             sticker: i,
-            description: x.intl.format(x.t.hGWuxc, {
+            description: L.intl.format(L.t.hGWuxc, {
                 openPremiumSettings: () => {
                     n(), z(t);
                 },

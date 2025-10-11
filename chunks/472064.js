@@ -57,7 +57,7 @@ class S extends n.Component {
     renderButton() {
         let { buildId: t } = this.props,
             { hasError: e, hasAcceptedNeccessaryTerms: s } = this.state;
-        return (0, l.jsx)(i.zxk, {
+        return (0, l.jsx)(i.Button, {
             variant: "active",
             text: Z.intl.string(Z.t.nL0WvL),
             disabled: e || null == t || !s,
@@ -85,7 +85,7 @@ class S extends n.Component {
                     children: [
                         (0, l.jsx)(I.Z.Child, {
                             grow: 1,
-                            children: (0, l.jsx)(i.X6q, {
+                            children: (0, l.jsx)(i.Heading, {
                                 variant: "heading-lg/semibold",
                                 children: Z.intl.string(Z.t.PphjtL),
                             }),

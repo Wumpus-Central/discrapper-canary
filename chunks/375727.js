@@ -183,7 +183,7 @@ let A = (e) => {
             ? (0, r.jsxs)("main", {
                   className: T.main,
                   children: [
-                      (0, r.jsx)(u.X6q, {
+                      (0, r.jsx)(u.Heading, {
                           variant: "heading-lg/medium",
                           color: "header-primary",
                           className: T.heading,
@@ -202,7 +202,7 @@ let A = (e) => {
             : (0, r.jsxs)("main", {
                   className: a()(T.main, { [T.checkerboard]: null != Z }),
                   children: [
-                      (0, r.jsx)(u.X6q, {
+                      (0, r.jsx)(u.Heading, {
                           variant: "heading-lg/medium",
                           color: "header-primary",
                           className: T.heading,
@@ -286,7 +286,7 @@ let A = (e) => {
                                               variant: "text-sm/normal",
                                               color: "text-danger",
                                           }),
-                                      (0, r.jsx)(u.zxk, {
+                                      (0, r.jsx)(u.Button, {
                                           text: ec,
                                           onClick: ei,
                                           disabled: null == Z || null == F || Y.length < 2 || null != V,

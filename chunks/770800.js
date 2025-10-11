@@ -128,7 +128,7 @@ class x extends a.PureComponent {
         return (0, r.jsxs)(s.Kqy, {
             className: j.allowSelection,
             children: [
-                (0, r.jsx)(s.X6q, {
+                (0, r.jsx)(s.Heading, {
                     variant: "heading-md/medium",
                     children: P.intl.string(P.t.wU9INz) + (null != a ? " - " + a : ""),
                 }),

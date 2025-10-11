@@ -4,14 +4,14 @@ t(647438);
 var o = t(481060),
     i = t(198952),
     s = t(329242),
-    c = t(345909),
-    a = t(388032),
+    a = t(345909),
+    c = t(388032),
     l = t(167154);
 let d = (e) => {
     var r,
         t,
         { children: i, className: s } = e,
-        c = (function (e, r) {
+        a = (function (e, r) {
             if (null == e) return {};
             var t,
                 n,
@@ -63,7 +63,7 @@ let d = (e) => {
                 "data-migration-pending": !0,
                 className: s,
             },
-            c,
+            a,
         )),
         (t = t =
             {
@@ -93,23 +93,23 @@ let d = (e) => {
     });
 }),
     (d.Header = (e) => {
-        let { icon: r, currentUser: t, otherUser: c, header: a } = e;
+        let { icon: r, currentUser: t, otherUser: a, header: c } = e;
         return (0, n.jsxs)("div", {
             className: l.header,
             children: [
                 (0, n.jsx)(i.Z, {
                     currentUser: t,
-                    otherUser: c,
+                    otherUser: a,
                     children: r,
                 }),
                 (0, n.jsxs)("div", {
                     className: l.heading,
                     children: [
-                        (0, n.jsx)(o.X6q, {
+                        (0, n.jsx)(o.Heading, {
                             variant: "text-lg/bold",
-                            children: a,
+                            children: c,
                         }),
-                        (0, n.jsx)(s.Z, { user: c }),
+                        (0, n.jsx)(s.Z, { user: a }),
                     ],
                 }),
             ],
@@ -130,7 +130,7 @@ let d = (e) => {
                 (0, n.jsx)(o.Text, {
                     variant: "eyebrow",
                     color: "header-primary",
-                    children: a.intl.string(c.default.cXgKMD),
+                    children: c.intl.string(a.default.cXgKMD),
                 }),
                 (0, n.jsx)(o.Text, {
                     variant: "text-sm/normal",

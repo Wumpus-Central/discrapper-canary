@@ -50,7 +50,7 @@ class v extends (r = l.PureComponent) {
                     let {
                             body: { user: n },
                         } = e,
-                        r = new g.Z(n);
+                        r = new g.default(n);
                     this.setState({
                         success: !0,
                         busy: !1,

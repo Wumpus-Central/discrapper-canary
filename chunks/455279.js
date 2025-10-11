@@ -86,7 +86,7 @@ class b extends i.PureComponent {
                             }),
                             (0, r.jsx)("div", {
                                 className: h.buttonContainer,
-                                children: (0, r.jsx)(d.zxk, {
+                                children: (0, r.jsx)(d.Button, {
                                     size: "sm",
                                     variant: "RECORDING" === this.props.mode ? "critical-secondary" : "secondary",
                                     text: e,

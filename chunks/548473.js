@@ -228,13 +228,13 @@ function L(e) {
                             o
                                 ? (0, l.jsx)(d.$jN, { className: b.__invalid_subtitle })
                                 : i === O.uX.NOT_APPLICABLE
-                                  ? (0, l.jsx)(d.X6q, {
+                                  ? (0, l.jsx)(d.Heading, {
                                         className: b.__invalid_subtitle,
                                         variant: "heading-xxl/normal",
                                         color: "always-white",
                                         children: v.intl.string(v.t.Q5ibtb),
                                     })
-                                  : (0, l.jsx)(d.X6q, {
+                                  : (0, l.jsx)(d.Heading, {
                                         className: b.__invalid_subtitle,
                                         variant: "heading-xxl/normal",
                                         color: "always-white",

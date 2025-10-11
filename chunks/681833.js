@@ -13,7 +13,7 @@ function f(e) {
     let { onClickManageSubscription: t, count: n } = e;
     return (0, r.jsxs)("div", {
         children: [
-            (0, r.jsx)(o.X6q, {
+            (0, r.jsx)(o.Heading, {
                 variant: "heading-md/bold",
                 children: l.intl.string(l.t["48ywCg"]),
             }),
@@ -35,7 +35,7 @@ function f(e) {
                     (0, r.jsxs)("div", {
                         className: c.textContainer,
                         children: [
-                            (0, r.jsx)(o.X6q, {
+                            (0, r.jsx)(o.Heading, {
                                 variant: "heading-xl/semibold",
                                 className: c.header,
                                 children: l.intl.string(l.t["48ywCg"]),

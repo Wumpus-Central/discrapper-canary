@@ -60,7 +60,7 @@ let d = (e) => {
         className: c.headerContainer,
         children: [
             null != d && "" !== d
-                ? (0, r.jsx)(l.X6q, {
+                ? (0, r.jsx)(l.Heading, {
                       variant: "heading-xl/semibold",
                       color: "header-primary",
                       children: d,

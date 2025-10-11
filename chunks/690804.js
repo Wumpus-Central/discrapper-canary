@@ -1,44 +1,44 @@
-i.d(t, { FortniteUpsellModal: () => g });
+i.d(n, { FortniteUpsellModal: () => h });
 var e = i(951288);
 i(647438);
 var s = i(990547),
     a = i(793030),
     r = i(481060),
-    c = i(782568),
-    o = i(213609),
+    o = i(782568),
+    c = i(213609),
     l = i(728345),
     d = i(626135),
     x = i(768581),
     m = i(981631),
     p = i(388032),
-    h = i(625771);
-function g(n) {
-    let { onClose: t, transitionState: i } = n,
-        { data: g } = (0, l.IX)("1402418703554842694"),
-        { data: j } = (0, l.IX)("1417968406048673952"),
-        u =
+    u = i(625771);
+function h(t) {
+    let { onClose: n, transitionState: i } = t,
+        { data: h } = (0, l.IX)("1402418703554842694"),
+        { data: g } = (0, l.IX)("1417968406048673952"),
+        j =
+            null != h
+                ? x.ZP.getApplicationIconURL({
+                      id: h.id,
+                      icon: h.icon,
+                  })
+                : null,
+        b =
             null != g
                 ? x.ZP.getApplicationIconURL({
                       id: g.id,
                       icon: g.icon,
                   })
-                : null,
-        b =
-            null != j
-                ? x.ZP.getApplicationIconURL({
-                      id: j.id,
-                      icon: j.icon,
-                  })
                 : null;
     return (
-        (0, o.Z)({
+        (0, c.Z)({
             name: s.ImpressionNames.FORTNITE_GET_GAME_MODAL,
             type: s.ImpressionTypes.MODAL,
         }),
         (0, e.jsxs)(a.IX, {
             size: "lg",
             transitionState: i,
-            onClose: t,
+            onClose: n,
             children: [
                 (0, e.jsx)(a.xBx, {
                     graphic: void 0,
@@ -50,21 +50,21 @@ function g(n) {
                 }),
                 (0, e.jsx)(a.fef, {
                     children: (0, e.jsxs)("div", {
-                        className: h.body,
+                        className: u.body,
                         children: [
                             (0, e.jsxs)("div", {
-                                className: h.container,
+                                className: u.container,
                                 children: [
                                     (0, e.jsxs)("div", {
-                                        className: h.text,
+                                        className: u.text,
                                         children: [
                                             (0, e.jsx)("div", {
-                                                className: h.iconContainer,
+                                                className: u.iconContainer,
                                                 children:
-                                                    null != u &&
+                                                    null != j &&
                                                     (0, e.jsx)("div", {
-                                                        className: h.icon,
-                                                        style: { backgroundImage: "url(".concat(u, ")") },
+                                                        className: u.icon,
+                                                        style: { backgroundImage: "url(".concat(j, ")") },
                                                     }),
                                             }),
                                             (0, e.jsxs)("div", {
@@ -83,12 +83,12 @@ function g(n) {
                                             }),
                                         ],
                                     }),
-                                    (0, e.jsx)(r.zxk, {
+                                    (0, e.jsx)(r.Button, {
                                         icon: () => (0, e.jsx)(r.Gr1, {}),
                                         iconPosition: "end",
                                         onClick: () => {
                                             d.default.track(m.rMx.FORTNITE_DOWNLOAD_CLICKED),
-                                                (0, c.Z)("https://fn.gg/GetGame");
+                                                (0, o.Z)("https://fn.gg/GetGame");
                                         },
                                         text: p.intl.string(p.t.ZDtJ19),
                                         variant: "secondary",
@@ -96,17 +96,17 @@ function g(n) {
                                 ],
                             }),
                             (0, e.jsxs)("div", {
-                                className: h.container,
+                                className: u.container,
                                 children: [
                                     (0, e.jsxs)("div", {
-                                        className: h.text,
+                                        className: u.text,
                                         children: [
                                             (0, e.jsx)("div", {
-                                                className: h.iconContainer,
+                                                className: u.iconContainer,
                                                 children:
                                                     null != b &&
                                                     (0, e.jsx)("div", {
-                                                        className: h.icon,
+                                                        className: u.icon,
                                                         style: { backgroundImage: "url(".concat(b, ")") },
                                                     }),
                                             }),
@@ -126,12 +126,12 @@ function g(n) {
                                             }),
                                         ],
                                     }),
-                                    (0, e.jsx)(r.zxk, {
+                                    (0, e.jsx)(r.Button, {
                                         icon: () => (0, e.jsx)(r.Gr1, {}),
                                         iconPosition: "end",
                                         onClick: () => {
                                             d.default.track(m.rMx.FORTNITE_GFNJOIN_CLICKED),
-                                                (0, c.Z)(
+                                                (0, o.Z)(
                                                     "https://www.nvidia.com/en-us/geforce-now/discord?ncid=partn-874834",
                                                 );
                                         },

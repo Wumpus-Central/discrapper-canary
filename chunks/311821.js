@@ -11,7 +11,7 @@ var i = n(120356),
     l = n(831371);
 let c = (e) => {
         let { className: t, onClick: n, children: i } = e;
-        return (0, r.jsx)(o.eee, {
+        return (0, r.jsx)(o.Anchor, {
             onClick: n,
             className: a()(l.link, t),
             children: i,

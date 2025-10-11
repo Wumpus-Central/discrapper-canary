@@ -1,8 +1,8 @@
 n.d(t, { PT: () => v });
 var i = n(951288);
 n(647438);
-var l = n(442837),
-    a = n(481060),
+var a = n(442837),
+    l = n(481060),
     r = n(225657),
     s = n(600164),
     o = n(927699),
@@ -16,8 +16,8 @@ var l = n(442837),
     m = n(409813),
     b = n(614277),
     j = n(474936),
-    x = n(388032),
-    y = n(323261);
+    y = n(388032),
+    x = n(323261);
 let v = {
     key: m.h8.GIFT_CUSTOMIZATION,
     renderStep: (e) =>
@@ -51,22 +51,22 @@ let v = {
         ),
     options: {
         isLargeModal: !0,
-        useBreadcrumbLabel: () => x.intl.string(x.t["W685+f"]),
+        useBreadcrumbLabel: () => y.intl.string(y.t["W685+f"]),
     },
 };
 function C(e) {
-    let { onStepChange: t, onBackClick: n, showBackButton: l = !1, disabled: r = !1, loading: s = !1 } = e,
+    let { onStepChange: t, onBackClick: n, showBackButton: a = !1, disabled: r = !1, loading: s = !1 } = e,
         { hasPaymentSources: o } = (0, p.JL)(),
         u = o ? m.h8.REVIEW : m.h8.ADD_PAYMENT_STEPS;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(a.zxk, {
+            (0, i.jsx)(l.Button, {
                 onClick: () => t(u),
                 disabled: r,
                 loading: s,
-                text: x.intl.string(x.t.XiOHRU),
+                text: y.intl.string(y.t.XiOHRU),
             }),
-            l ? (0, i.jsx)(c.Z, { onClick: n }) : null,
+            a ? (0, i.jsx)(c.Z, { onClick: n }) : null,
         ],
     });
 }
@@ -75,9 +75,9 @@ function O(e) {
     let { handleStepChange: n, handleClose: c } = e,
         { customGiftMessage: m = "", setCustomGiftMessage: v, giftRecipient: O } = (0, h.wD)(),
         { selectedSkuId: I } = (0, p.JL)(),
-        T = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
-        _ = (0, l.e7)([d.Z], () => (null != I ? d.Z.get(I) : null), [I]),
-        E = (0, l.e7)([f.Z], () => (null != I ? f.Z.getForSKU(I) : null), [I]),
+        T = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
+        _ = (0, a.e7)([d.Z], () => (null != I ? d.Z.get(I) : null), [I]),
+        E = (0, a.e7)([f.Z], () => (null != I ? f.Z.getForSKU(I) : null), [I]),
         P =
             (null == E ? void 0 : E.headerBackground) != null && (null == _ ? void 0 : _.applicationId) != null
                 ? (0, g._W)(_.applicationId, E.headerBackground, 256)
@@ -87,13 +87,13 @@ function O(e) {
         children: [
             (0, i.jsx)(b.C3, {
                 children: (0, i.jsxs)("div", {
-                    className: y.stepBody,
+                    className: x.stepBody,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: y.bodyColumnLeft,
+                            className: x.bodyColumnLeft,
                             children: [
                                 (null == _ ? void 0 : _.name) != null &&
-                                    (0, i.jsx)(a.X6q, {
+                                    (0, i.jsx)(l.Heading, {
                                         variant: "heading-lg/semibold",
                                         color: "header-primary",
                                         children: _.name,
@@ -102,25 +102,25 @@ function O(e) {
                                     (0, i.jsx)("img", {
                                         src: P,
                                         alt: null != (t = null == _ ? void 0 : _.name) ? t : "",
-                                        className: y.skuImage,
+                                        className: x.skuImage,
                                     }),
                             ],
                         }),
                         (0, i.jsxs)("div", {
-                            className: y.bodyColumnRight,
+                            className: x.bodyColumnRight,
                             children: [
                                 (0, i.jsx)(r.Z, {
                                     selectedSkuId: I,
                                     validateSelectedGift: k,
                                 }),
                                 (0, i.jsx)(o.Z, {
-                                    sectionTitle: x.intl.string(x.t.B3miEx),
+                                    sectionTitle: y.intl.string(y.t.B3miEx),
                                     onTextChange: (e) => (null == v ? void 0 : v(e)),
                                     pendingText: m,
                                     currentText: m,
                                     disableThemedBackground: !0,
-                                    className: y.customGiftMessageWrapper,
-                                    innerClassName: y.customGiftMessage,
+                                    className: x.customGiftMessageWrapper,
+                                    innerClassName: x.customGiftMessage,
                                 }),
                             ],
                         }),
@@ -128,7 +128,7 @@ function O(e) {
                 }),
             }),
             (0, i.jsx)(b.O3, {
-                children: (0, i.jsx)(a.mzw, {
+                children: (0, i.jsx)(l.mzw, {
                     "data-migration-pending": !0,
                     justify: s.Z.Justify.BETWEEN,
                     align: s.Z.Align.CENTER,

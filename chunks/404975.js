@@ -14,8 +14,8 @@ var r = n(951288),
     p = n(845435);
 function j(e) {
     let { root: t, header: n, footer: o, onClose: b, emptyState: j } = e,
-        { showNavigationMobile: x } = (0, d.t)(),
-        y = l.useMemo(() => {
+        { showNavigationMobile: y } = (0, d.t)(),
+        x = l.useMemo(() => {
             let e = [];
             return (
                 t.layout.forEach((t) => {
@@ -52,13 +52,13 @@ function j(e) {
         theme: O,
         children: (e) =>
             (0, r.jsx)(c.ZP, {
-                contentTypes: y,
+                contentTypes: x,
                 children: (t) => {
                     let { visibleContent: l } = t;
                     return (0, r.jsxs)("div", {
                         className: i()(p.sidebar, e, {
                             [p.mobile]: a.tq,
-                            [p.mobileNavigationOpen]: x,
+                            [p.mobileNavigationOpen]: y,
                         }),
                         children: [
                             (0, r.jsxs)("div", {
@@ -127,7 +127,7 @@ function v(e) {
             null != o &&
                 (0, r.jsx)("div", {
                     className: p.sectionLabel,
-                    children: (0, r.jsx)(s.X6q, {
+                    children: (0, r.jsx)(s.Heading, {
                         className: p.label,
                         variant: "heading-sm/medium",
                         color: "text-tertiary",

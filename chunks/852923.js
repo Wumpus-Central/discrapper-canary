@@ -58,16 +58,16 @@ function m() {
               children: [
                   f.intl.string(f.t.Ul1RJS),
                   (0, r.jsx)(h, { channelId: e.id }),
-                  (0, r.jsxs)(o.hE2, {
+                  (0, r.jsxs)(o.ButtonGroup, {
                       size: "sm",
                       className: _.buttonGroup,
                       children: [
-                          (0, r.jsx)(o.zxk, {
+                          (0, r.jsx)(o.Button, {
                               variant: "overlay-primary",
                               text: f.intl.string(f.t.MpO0p6),
                               onClick: () => p(!1),
                           }),
-                          (0, r.jsx)(o.zxk, {
+                          (0, r.jsx)(o.Button, {
                               variant: "secondary",
                               onClick: () => p(!0),
                               text: f.intl.string(f.t["1YDv7e"]),

@@ -30,7 +30,7 @@ function d(e) {
               className: u.headerContainerGift,
               separator: t !== s.h8.CONFIRM,
               children: [
-                  (0, r.jsx)(a.X6q, {
+                  (0, r.jsx)(a.Heading, {
                       variant: "heading-lg/semibold",
                       children: _,
                   }),

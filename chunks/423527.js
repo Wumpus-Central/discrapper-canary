@@ -18,8 +18,8 @@ var r,
     E = n(13430),
     v = n(213609),
     b = n(882037),
-    I = n(254942),
-    j = n(481230),
+    j = n(254942),
+    I = n(481230),
     N = n(388905),
     S = n(853268),
     O = n(639946),
@@ -37,8 +37,8 @@ var r,
     M = n(807369),
     U = n(180529),
     G = n(703656),
-    F = n(108427),
-    B = n(314897),
+    B = n(108427),
+    F = n(314897),
     z = n(480294),
     V = n(896797),
     K = n(626135),
@@ -126,7 +126,7 @@ class eu extends (r = l.PureComponent) {
             { flush: !0 },
         ),
             null == this.props.consentRequired && p.Z.getLocationMetadata(),
-            (0, F.e)("register");
+            (0, B.e)("register");
     }
     componentWillUnmount() {
         this._retryTimer.stop();
@@ -191,7 +191,7 @@ class eu extends (r = l.PureComponent) {
             });
         try {
             this.inGuildOrChannelInviteFlow()
-                ? await (0, j.ZP)({
+                ? await (0, I.ZP)({
                       consent: i,
                       invite: d,
                       giftCodeSKUId: h,
@@ -199,7 +199,7 @@ class eu extends (r = l.PureComponent) {
                       globalName: _,
                       birthday: l,
                   })
-                : await (0, j.R$)({
+                : await (0, I.R$)({
                       email: e,
                       username: p,
                       globalName: _,
@@ -215,7 +215,7 @@ class eu extends (r = l.PureComponent) {
                 null == c || c();
         } catch (t) {
             if ((this.setState({ registering: !1 }), !(t instanceof f.Hx))) return;
-            let e = (0, I.F)(t);
+            let e = (0, j.F)(t);
             this.setState({ apiErrors: e });
         }
     }
@@ -226,7 +226,7 @@ class eu extends (r = l.PureComponent) {
         let { consent: e } = this.state,
             { consentRequired: t } = this.props;
         return t
-            ? (0, i.jsx)(S.Z, {
+            ? (0, i.jsx)(S.default, {
                   value: e,
                   onChange: (e) => this.setState({ consent: e }),
                   subText: er.intl.format(er.t.qMDAPz, {
@@ -439,7 +439,7 @@ class eu extends (r = l.PureComponent) {
                 passwordClientError: f,
                 dateOfBirthClientError: _,
                 registering: x,
-                apiErrors: { email: v, username: b, global_name: I, password: j, date_of_birth: S } = {},
+                apiErrors: { email: v, username: b, global_name: j, password: I, date_of_birth: S } = {},
             } = this.state,
             { consentRequired: O, authBoxClassName: C, hasLoggedInAccounts: A } = this.props,
             T = this.renderErrorMessage(),
@@ -501,7 +501,7 @@ class eu extends (r = l.PureComponent) {
                         name: "global_name",
                         value: s,
                         onChange: (e) => this.setState({ globalName: e }),
-                        error: ec(I),
+                        error: ec(j),
                         maxLength: en.hy,
                         autoComplete: "off",
                         setRef: (e) => {
@@ -556,7 +556,7 @@ class eu extends (r = l.PureComponent) {
                                 password: e,
                                 passwordClientError: 0 === e.length ? er.intl.string(er.t.EkokLy) : null,
                             }),
-                        error: null != f ? f : ec(j),
+                        error: null != f ? f : ec(I),
                         type: "password",
                         autoComplete: "new-password",
                         setRef: (e) => {
@@ -776,9 +776,9 @@ class eu extends (r = l.PureComponent) {
     }
 }
 function ed(e) {
-    let t = (0, d.cj)([z.Z, B.default, _.Z, L.Z, P.Z], () => ({
+    let t = (0, d.cj)([z.Z, F.default, _.Z, L.Z, P.Z], () => ({
             consentRequired: z.Z.getAuthenticationConsentRequired(),
-            authenticated: B.default.isAuthenticated(),
+            authenticated: F.default.isAuthenticated(),
             isUnderage: _.Z.isUnderageAnonymous(),
             country: L.Z.getCountryCode(),
             hasLoggedInAccounts: P.Z.getHasLoggedInAccounts(),

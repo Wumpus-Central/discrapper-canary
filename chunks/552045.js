@@ -25,7 +25,7 @@ let b = () => {
             : (0, r.jsx)("div", {
                   className: h.button,
                   children: t
-                      ? (0, r.jsx)(o.zxk, {
+                      ? (0, r.jsx)(o.Button, {
                             variant: "primary",
                             text: p.intl.string(p.t.LhlgY2),
                             onClick: () => n(f.dG.REQUESTS),
@@ -53,7 +53,7 @@ let b = () => {
                             children: (0, r.jsxs)("div", {
                                 className: h.headerText,
                                 children: [
-                                    (0, r.jsx)(o.X6q, {
+                                    (0, r.jsx)(o.Heading, {
                                         variant: "heading-xl/medium",
                                         children: (0, r.jsx)(o.y5t, { children: t }),
                                     }),

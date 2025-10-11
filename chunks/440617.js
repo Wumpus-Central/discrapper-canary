@@ -1,24 +1,24 @@
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => a });
 var r = n(951288),
     l = n(481060),
-    a = n(388032),
+    i = n(388032),
     s = n(634804);
-function i() {
+function a() {
     return (0, r.jsxs)("div", {
         className: s.container,
         children: [
             (0, r.jsx)("img", {
                 src: "https://cdn.discordapp.com/assets/content/a72233587aaf964fc327663677974641a235719ad6445da58f931094cb799f66.png",
-                alt: a.intl.string(a.t.oezC39),
+                alt: i.intl.string(i.t.oezC39),
                 className: s.img,
             }),
-            (0, r.jsx)(l.X6q, {
+            (0, r.jsx)(l.Heading, {
                 variant: "heading-xl/semibold",
-                children: a.intl.string(a.t.oezC39),
+                children: i.intl.string(i.t.oezC39),
             }),
             (0, r.jsx)(l.Text, {
                 variant: "text-md/medium",
-                children: a.intl.string(a.t["Tc/Ndn"]),
+                children: i.intl.string(i.t["Tc/Ndn"]),
             }),
         ],
     });

@@ -76,7 +76,7 @@ function b(e) {
                         className: E.headerLine,
                         children: [
                             (0, r.jsx)(u.Z.Icon, {
-                                user: new d.Z(n.inviter),
+                                user: new d.default(n.inviter),
                                 onClick: S ? N : void 0,
                             }),
                             (0, r.jsx)(u.Z.Info, {

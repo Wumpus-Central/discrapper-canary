@@ -251,7 +251,7 @@ function eJ(e) {
         let e,
             r,
             f = n[m];
-        f instanceof M.Z
+        f instanceof M.default
             ? ((r = f), (e = null == (b = Z.ZP.getNick(c, r.id)) ? void 0 : b.toLocaleLowerCase()))
             : ((e = null == (y = f.nick) ? void 0 : y.toLocaleLowerCase()), (r = l[f.userId]));
         let h = null == (E = es.ZP.getGlobalName(r)) ? void 0 : E.toLocaleLowerCase();
@@ -1241,7 +1241,7 @@ let e7 = (0, $.oH)((e, t, n) => {
                 var p, h, m, g;
                 let t, o;
                 if (_.length >= r) break;
-                e instanceof M.Z
+                e instanceof M.default
                     ? ((o = e), (t = null == (m = Z.ZP.getNick(c, o.id)) ? void 0 : m.toLocaleLowerCase()))
                     : ((t = null == (g = e.nick) ? void 0 : g.toLocaleLowerCase()), (o = l[e.userId]));
                 let f = null == (p = K.Z.getNickname(o.id)) ? void 0 : p.toLocaleLowerCase(),

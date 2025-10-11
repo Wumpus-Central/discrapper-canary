@@ -1,15 +1,14 @@
-r.d(t, { default: () => b }), r(388685);
+r.d(t, { default: () => a }), r(388685);
 var n = r(951288),
     o = r(647438),
-    c = r(755721),
-    i = r(481060),
-    l = r(388032),
-    a = r(905935);
-function b(e) {
+    c = r(481060),
+    i = r(388032),
+    l = r(905935);
+function a(e) {
     var t,
         r,
-        { header: b, body: s, onSubmit: u } = e,
-        p = (function (e, t) {
+        { header: a, body: b, onSubmit: s } = e,
+        u = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -30,9 +29,9 @@ function b(e) {
             }
             return o;
         })(e, ["header", "body", "onSubmit"]);
-    let [f, O] = o.useState(!1);
+    let [p, f] = o.useState(!1);
     return (0, n.jsxs)(
-        i.ConfirmModal,
+        c.ConfirmModal,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
@@ -59,28 +58,30 @@ function b(e) {
             return e;
         })(
             {
-                header: b,
-                confirmText: l.intl.string(l.t["26C4oq"]),
-                cancelText: l.intl.string(l.t["ETE/oK"]),
+                header: a,
+                confirmText: i.intl.string(i.t["26C4oq"]),
+                cancelText: i.intl.string(i.t["ETE/oK"]),
                 onConfirm: () => {
-                    u(null, f);
+                    s(null, p);
                 },
             },
-            p,
+            u,
         )),
         (r = r =
             {
                 children: [
-                    (0, n.jsx)(i.Text, {
+                    (0, n.jsx)(c.Text, {
                         variant: "text-md/normal",
-                        children: s,
+                        children: b,
                     }),
-                    (0, n.jsx)(c.VL, {
-                        checked: f,
-                        onChange: () => O((e) => !e),
-                        className: a.checkbox,
-                        label: l.intl.string(l.t.bq3JXl),
-                        labelType: "secondary",
+                    (0, n.jsx)("div", {
+                        className: l.checkbox,
+                        children: (0, n.jsx)(c.Checkbox, {
+                            checked: p,
+                            onChange: () => f((e) => !e),
+                            label: i.intl.string(i.t.bq3JXl),
+                            labelType: "secondary",
+                        }),
                     }),
                 ],
             }),

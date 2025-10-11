@@ -86,15 +86,15 @@ function D() {
             clipsQuality: P,
         } = (0, s.cj)([E.Z], () => E.Z.getSettings()),
         D = (0, s.e7)([E.Z], () => E.Z.getHardwareClassification()),
-        x = (0, s.e7)([m.ZP], () => m.ZP.getKeybindForAction(I.kg4.SAVE_CLIP, !0)),
-        L = E.Z.isDecoupledGameClippingEnabled(),
+        L = (0, s.e7)([m.ZP], () => m.ZP.getKeybindForAction(I.kg4.SAVE_CLIP, !0)),
+        x = E.Z.isDecoupledGameClippingEnabled(),
         M = (0, y.Z)(h.Z),
-        { showClipsHeaderEntrypoint: k } = g.NV.useExperiment(
+        { showClipsHeaderEntrypoint: j } = g.NV.useExperiment(
             { location: "clips_recording_settings" },
             { autoTrackExposure: !1 },
         );
-    o()(null != x, "Save clip keybind unset");
-    let j = (0, s.e7)([d.default], () => d.default.locale),
+    o()(null != L, "Save clip keybind unset");
+    let k = (0, s.e7)([d.default], () => d.default.locale),
         U = i.useMemo(
             () => [
                 {
@@ -110,55 +110,63 @@ function D() {
                     label: A.intl.formatToPlainString(A.t.ICo9Nj, { count: 2 }),
                 },
             ],
-            [j],
+            [k],
         ),
         G = i.useMemo(
             () => [
                 {
-                    value: T.LY.RESOLUTION_480,
-                    label: A.intl.formatToPlainString(A.t.TEOC0N, { resolution: T.LY.RESOLUTION_480 }),
+                    value: T.ApplicationStreamResolutions.RESOLUTION_480,
+                    label: A.intl.formatToPlainString(A.t.TEOC0N, {
+                        resolution: T.ApplicationStreamResolutions.RESOLUTION_480,
+                    }),
                 },
                 {
-                    value: T.LY.RESOLUTION_720,
-                    label: A.intl.formatToPlainString(A.t.TEOC0N, { resolution: T.LY.RESOLUTION_720 }),
+                    value: T.ApplicationStreamResolutions.RESOLUTION_720,
+                    label: A.intl.formatToPlainString(A.t.TEOC0N, {
+                        resolution: T.ApplicationStreamResolutions.RESOLUTION_720,
+                    }),
                 },
                 {
-                    value: T.LY.RESOLUTION_1080,
-                    label: A.intl.formatToPlainString(A.t.TEOC0N, { resolution: T.LY.RESOLUTION_1080 }),
+                    value: T.ApplicationStreamResolutions.RESOLUTION_1080,
+                    label: A.intl.formatToPlainString(A.t.TEOC0N, {
+                        resolution: T.ApplicationStreamResolutions.RESOLUTION_1080,
+                    }),
                 },
                 {
-                    value: T.LY.RESOLUTION_1440,
-                    label: A.intl.formatToPlainString(A.t.TEOC0N, { resolution: T.LY.RESOLUTION_1440 }),
+                    value: T.ApplicationStreamResolutions.RESOLUTION_1440,
+                    label: A.intl.formatToPlainString(A.t.TEOC0N, {
+                        resolution: T.ApplicationStreamResolutions.RESOLUTION_1440,
+                    }),
                 },
                 {
-                    value: T.LY.RESOLUTION_SOURCE,
+                    value: T.ApplicationStreamResolutions.RESOLUTION_SOURCE,
                     label: A.intl.string(A.t.XjXqzs),
                 },
             ],
-            [j],
+            [k],
         ),
         B = i.useMemo(
             () => [
                 {
-                    value: T.ws.FPS_15,
-                    label: A.intl.formatToPlainString(A.t.Qb44XF, { fps: T.ws.FPS_15 }),
+                    value: T.ApplicationStreamFPS.FPS_15,
+                    label: A.intl.formatToPlainString(A.t.Qb44XF, { fps: T.ApplicationStreamFPS.FPS_15 }),
                 },
                 {
-                    value: T.ws.FPS_30,
-                    label: A.intl.formatToPlainString(A.t.Qb44XF, { fps: T.ws.FPS_30 }),
+                    value: T.ApplicationStreamFPS.FPS_30,
+                    label: A.intl.formatToPlainString(A.t.Qb44XF, { fps: T.ApplicationStreamFPS.FPS_30 }),
                 },
                 {
-                    value: T.ws.FPS_60,
-                    label: A.intl.formatToPlainString(A.t.Qb44XF, { fps: T.ws.FPS_60 }),
+                    value: T.ApplicationStreamFPS.FPS_60,
+                    label: A.intl.formatToPlainString(A.t.Qb44XF, { fps: T.ApplicationStreamFPS.FPS_60 }),
                 },
             ],
-            [j],
+            [k],
         ),
         Z = i.useCallback(
             (e) => {
-                c.Z.setKeybind(w(R({}, x), { shortcut: e }));
+                c.Z.setKeybind(w(R({}, L), { shortcut: e }));
             },
-            [x],
+            [L],
         );
     return (0, r.jsxs)(l.Kqy, {
         gap: 24,
@@ -193,7 +201,7 @@ function D() {
                     }),
             }),
             e && (0, r.jsx)(_.Z, { children: A.intl.string(A.t["Z+Mfqa"]) }),
-            L &&
+            x &&
                 M &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
@@ -211,7 +219,7 @@ function D() {
                         }),
                     ],
                 }),
-            k &&
+            j &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(l.izJ, {}),
@@ -263,7 +271,7 @@ function D() {
                         children: (0, r.jsx)("div", {
                             className: C.keyRecorder,
                             children: (0, r.jsx)(u.Z, {
-                                defaultValue: x.shortcut,
+                                defaultValue: L.shortcut,
                                 onChange: Z,
                             }),
                         }),

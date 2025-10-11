@@ -17,11 +17,11 @@ var r = n(951288),
     _ = n(617136),
     O = n(113434),
     E = n(497505),
-    y = n(475595),
-    v = n(352084),
+    v = n(475595),
+    y = n(352084),
     I = n(125011),
-    S = n(685613),
-    C = n(981631),
+    C = n(685613),
+    S = n(981631),
     T = n(388032),
     N = n(199679);
 let j = (0, i.memo)(function (e) {
@@ -41,11 +41,11 @@ let j = (0, i.memo)(function (e) {
             day: "numeric",
         }),
         W = null != (P = null == (n = A.userStatus) ? void 0 : n.claimedTier) ? P : 0,
-        q = A.config.rewards[W],
-        Y = (null == q ? void 0 : q.type) === s.w.FRACTIONAL_PREMIUM,
-        K = (null == q ? void 0 : q.type) === s.w.COLLECTIBLE,
-        Q = (null == q ? void 0 : q.type) === s.w.VIRTUAL_CURRENCY,
-        X = null == q || null == (j = q.collectibleProduct) || null == (l = j.items) ? void 0 : l[0],
+        Y = A.config.rewards[W],
+        q = (null == Y ? void 0 : Y.type) === s.w.FRACTIONAL_PREMIUM,
+        K = (null == Y ? void 0 : Y.type) === s.w.COLLECTIBLE,
+        Q = (null == Y ? void 0 : Y.type) === s.w.VIRTUAL_CURRENCY,
+        X = null == Y || null == (j = Y.collectibleProduct) || null == (l = j.items) ? void 0 : l[0],
         J = (null == X ? void 0 : X.type) === o.Z.AVATAR_DECORATION ? X : null;
     (0, p.PM)(M, (e) => {
         let { height: t } = e;
@@ -57,7 +57,7 @@ let j = (0, i.memo)(function (e) {
     });
     let $ = (0, u.wj)(F),
         ee = (0, i.useMemo)(() => null != A.config.cosponsorMetadata, [A]),
-        et = (0, i.useMemo)(() => (0, y.fh)(A, y.eC.REWARD), [A]),
+        et = (0, i.useMemo)(() => (0, v.fh)(A, v.eC.REWARD), [A]),
         en = Z ? V + 8 : 0,
         er = (0, _.mH)(E.jn.TROPHY_CASE_CARD),
         { content_position: ei, row_index: el } = er,
@@ -85,7 +85,7 @@ let j = (0, i.memo)(function (e) {
         eo = () => {
             w(!0),
                 b.default.track(
-                    C.rMx.QUEST_HOVER,
+                    S.rMx.QUEST_HOVER,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -116,13 +116,13 @@ let j = (0, i.memo)(function (e) {
         es = () => w(!1),
         ec = (e) => {
             k(!0),
-                b.default.track(C.rMx.QUEST_ASSET_LOADING_FAILURE, {
+                b.default.track(S.rMx.QUEST_ASSET_LOADING_FAILURE, {
                     source: e,
                     asset_id: e,
                     quest_id: A.id,
                 });
         };
-    return null == q || D
+    return null == Y || D
         ? null
         : (0, r.jsx)(d.tEY, {
               children: (0, r.jsxs)("div", {
@@ -147,8 +147,8 @@ let j = (0, i.memo)(function (e) {
                                   guildId: null,
                               }),
                           }),
-                      Y
-                          ? (0, r.jsx)(v.Z, { className: N.image })
+                      q
+                          ? (0, r.jsx)(y.Z, { className: N.image })
                           : Q
                             ? (0, r.jsx)(I.Z, { className: N.image })
                             : et.isAnimated
@@ -177,7 +177,7 @@ let j = (0, i.memo)(function (e) {
                           ref: U,
                           className: N.logoContainer,
                           style: { transform: "translateY(-".concat(en, "px)") },
-                          children: (0, r.jsx)(S.ZP, {
+                          children: (0, r.jsx)(C.ZP, {
                               logotypeClassName: a()(N.logo, { [N.logoWithCosponsor]: ee }),
                               quest: A,
                               withGameTile: !1,
@@ -187,7 +187,7 @@ let j = (0, i.memo)(function (e) {
                           ref: H,
                           className: N.details,
                           children: [
-                              (0, r.jsx)(d.X6q, {
+                              (0, r.jsx)(d.Heading, {
                                   className: N.title,
                                   variant: "heading-md/semibold",
                                   color: "always-white",
@@ -198,7 +198,7 @@ let j = (0, i.memo)(function (e) {
                                   color: $ ? "text-muted" : "always-white",
                                   style: { opacity: $ ? 1 : 0.75 },
                                   children: T.intl.format(T.t.kXVcV1, {
-                                      reward: q.name,
+                                      reward: Y.name,
                                       claimedDate: z,
                                   }),
                               }),

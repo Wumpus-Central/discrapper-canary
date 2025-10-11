@@ -51,7 +51,7 @@ let b = i.memo(function (e) {
                       (0, r.jsxs)("div", {
                           className: x.headerContainer,
                           children: [
-                              (0, r.jsxs)(c.X6q, {
+                              (0, r.jsxs)(c.Heading, {
                                   variant: "heading-lg/semibold",
                                   className: x.guidelinesHeader,
                                   children: [

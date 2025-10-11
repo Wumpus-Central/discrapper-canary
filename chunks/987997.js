@@ -85,7 +85,7 @@ function p(e) {
         "data-button-hoisted-classname-wrapper": !0,
         className: a()(s.buttonWrapper, n),
         children: (0, r.jsx)(
-            o.zxk,
+            o.Button,
             d(c({}, l), {
                 variant: "overlay-primary",
                 size: "sm",

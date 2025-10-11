@@ -1,6 +1,8 @@
 n.d(t, {
+    ApplicationStreamFPS: () => l,
+    ApplicationStreamPresets: () => c,
+    ApplicationStreamResolutions: () => o,
     L9: () => u,
-    LY: () => o,
     ND: () => f,
     WC: () => p,
     aW: () => s,
@@ -9,8 +11,6 @@ n.d(t, {
     km: () => g,
     no: () => d,
     o6: () => m,
-    tI: () => c,
-    ws: () => l,
     z8: () => h,
 }),
     n(415506);

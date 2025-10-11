@@ -27,22 +27,22 @@ let o = {
     },
     SlideFooter: function (e) {
         let { mfaChallenge: t, setSlide: n, leadingButton: i, showConfirm: a = !1, disabled: o, submitting: d } = e,
-            c = t.methods.length > 1;
-        return null != i || c || a
+            u = t.methods.length > 1;
+        return null != i || u || a
             ? (0, l.jsx)(r.mzw, {
-                  children: (0, l.jsxs)(r.hE2, {
+                  children: (0, l.jsxs)(r.ButtonGroup, {
                       fullWidth: !0,
                       direction: "vertical",
                       children: [
                           i,
-                          c &&
-                              (0, l.jsx)(r.zxk, {
+                          u &&
+                              (0, l.jsx)(r.Button, {
                                   variant: "secondary",
                                   text: s.intl.string(s.t.Tot4EB),
                                   onClick: () => n("select"),
                               }),
                           a &&
-                              (0, l.jsx)(r.zxk, {
+                              (0, l.jsx)(r.Button, {
                                   type: "submit",
                                   variant: "primary",
                                   text: s.intl.string(s.t["cY+Ooa"]),
@@ -62,7 +62,7 @@ let o = {
             separator: !1,
             align: o ? i.Z.Align.START : void 0,
             children: [
-                (0, l.jsx)(r.X6q, {
+                (0, l.jsx)(r.Heading, {
                     variant: "heading-xl/semibold",
                     color: "header-primary",
                     children: s.intl.string(s.t.saHocH),

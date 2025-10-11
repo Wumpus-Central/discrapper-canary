@@ -80,7 +80,7 @@ function Z() {
                     children: [
                         (0, r.jsxs)("div", {
                             children: [
-                                (0, r.jsx)(f.X6q, {
+                                (0, r.jsx)(f.Heading, {
                                     variant: "heading-lg/semibold",
                                     children: i,
                                 }),

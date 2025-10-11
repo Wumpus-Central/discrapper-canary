@@ -94,7 +94,7 @@ function d(e) {
                                         (0, r.jsxs)("div", {
                                             className: f.contentContainer,
                                             children: [
-                                                (0, r.jsx)(c.X6q, {
+                                                (0, r.jsx)(c.Heading, {
                                                     variant: "heading-xl/extrabold",
                                                     children: d,
                                                 }),

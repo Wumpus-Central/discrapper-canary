@@ -92,7 +92,7 @@ function c(e) {
                         return (0, i.jsxs)(a.Kqy, {
                             gap: 0,
                             children: [
-                                (0, i.jsxs)(a.X6q, {
+                                (0, i.jsxs)(a.Heading, {
                                     variant: d ? "heading-xl/semibold" : "heading-md/medium",
                                     className: d ? s.header : s.secondaryHeader,
                                     children: [

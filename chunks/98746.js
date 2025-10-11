@@ -48,8 +48,8 @@ function x() {
         },
     ];
 }
-let O = x()[1].value,
-    C = x()[0].value;
+let C = x()[1].value,
+    O = x()[0].value;
 function S(t) {
     let {
             guildId: e,
@@ -58,15 +58,15 @@ function S(t) {
             userIds: b,
             onBanMultiple: S,
             transitionState: R,
-            onClose: Z,
-            canBulkBan: k = !1,
-            modReportId: y,
+            onClose: k,
+            canBulkBan: y = !1,
+            modReportId: E,
         } = t,
-        [E, M] = r.useState(null != y ? C : O),
+        [M, Z] = r.useState(null != E ? O : C),
         [T, _] = r.useState(""),
         [P, A] = r.useState(null),
         { isModReportClosed: K, isModReport: N } = (0, o.cj)([v.Z], () => {
-            let t = v.Z.getChannel(y);
+            let t = v.Z.getChannel(E);
             return {
                 isModReportClosed: null == t ? void 0 : t.isArchivedThread(),
                 isModReport: null == t ? void 0 : t.isModeratorReportChannel(),
@@ -82,31 +82,31 @@ function S(t) {
         I = r.useCallback(() => {
             let t = null != P ? P : T;
             if (null != S) {
-                if (!(null != b && (null == b ? void 0 : b.size) > 0 && k) || w) return;
+                if (!(null != b && (null == b ? void 0 : b.size) > 0 && y) || w) return;
                 if ("" === T.trim() && !w) return void D(!0);
-                S(e, [...b], E, t);
+                S(e, [...b], M, t);
             } else {
                 if (null == n) return;
-                c.Z.banUser(e, null == n ? void 0 : n.id, E, t, y).then(() => {
-                    F && null != y && g.Z.resolveFlag(y);
+                c.Z.banUser(e, null == n ? void 0 : n.id, M, t, E).then(() => {
+                    F && null != E && g.Z.resolveFlag(E);
                 });
             }
-            Y(d.jQ.BAN), Z();
-        }, [P, T, S, Y, Z, b, k, w, e, E, n, y, F]),
+            Y(d.jQ.BAN), k();
+        }, [P, T, S, Y, k, b, y, w, e, M, n, E, F]),
         X = r.useCallback((t) => {
-            M(t);
+            Z(t);
         }, []),
         q = r.useCallback((t) => {
             _(t), D(!1), A(null);
         }, []),
-        J = r.useCallback(
+        L = r.useCallback(
             (t) => {
                 A(t), w && D(!1);
             },
             [w],
         ),
-        L = N && !K && null != y,
-        W = [
+        W = N && !K && null != E,
+        B = [
             {
                 name: f.intl.string(f.t.tamLhY),
                 value: f.intl.string(f.t.tamLhY),
@@ -124,19 +124,19 @@ function S(t) {
                 value: "other",
             },
         ],
-        B = (() => {
+        H = (() => {
             if (null != S && null != b)
                 return f.intl.formatToPlainString(f.t.HVJexc, { count: null == b ? void 0 : b.size });
             if (null == n) return "";
             let t = h.ZP.getName(e, null, n);
-            return f.intl.formatToPlainString(null != y ? f.t.WDR8XV : f.t.jeKpoq, { username: "@".concat(t) });
+            return f.intl.formatToPlainString(null != E ? f.t.WDR8XV : f.t.jeKpoq, { username: "@".concat(t) });
         })(),
-        H = null == y ? null : f.intl.string(f.t.pQjhIC);
+        J = null == E ? null : f.intl.string(f.t.pQjhIC);
     return (0, l.jsx)(u.Modal, {
-        onClose: Z,
+        onClose: k,
         transitionState: R,
-        title: B,
-        subtitle: null != H ? H : void 0,
+        title: H,
+        subtitle: null != J ? J : void 0,
         actions: (() => {
             let t = [];
             return (
@@ -144,7 +144,7 @@ function S(t) {
                     t.push({
                         variant: "secondary",
                         text: f.intl.string(f.t["ETE/oK"]),
-                        onClick: Z,
+                        onClick: k,
                     }),
                 t.push({
                     variant: "critical-primary",
@@ -154,8 +154,8 @@ function S(t) {
                 t
             );
         })(),
-        actionBarInput: L
-            ? (0, l.jsx)(s.XZJ, {
+        actionBarInput: W
+            ? (0, l.jsx)(s.Checkbox, {
                   checked: F,
                   onChange: (t) => U(t),
                   label: f.intl.string(j.default["8yIKen"]),
@@ -176,9 +176,9 @@ function S(t) {
                             }),
                         (0, l.jsx)(s.FXm, {
                             required: !0,
-                            label: f.intl.string(null != y ? f.t["+KCLVl"] : f.t.w4Ivys),
+                            label: f.intl.string(null != E ? f.t["+KCLVl"] : f.t.w4Ivys),
                             value: T,
-                            options: W.map((t) =>
+                            options: B.map((t) =>
                                 (function (t) {
                                     for (var e = 1; e < arguments.length; e++) {
                                         var n = null != arguments[e] ? arguments[e] : {},
@@ -211,7 +211,7 @@ function S(t) {
                             className: a()(m.reasonFreeText, { [m.hidden]: "other" !== T }),
                             children: (0, l.jsx)(s.Kx8, {
                                 maxLength: p.GNZ,
-                                onChange: J,
+                                onChange: L,
                                 value: null != P ? P : "",
                                 rows: 5,
                                 autoFocus: !0,
@@ -220,9 +220,9 @@ function S(t) {
                     ],
                 }),
                 (0, l.jsx)(s.q4e, {
-                    label: f.intl.string(null != y ? f.t.ERSM8P : f.t["8l3W09"]),
+                    label: f.intl.string(null != E ? f.t.ERSM8P : f.t["8l3W09"]),
                     options: x(),
-                    value: E,
+                    value: M,
                     onChange: X,
                 }),
             ],

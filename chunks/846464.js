@@ -15,8 +15,8 @@ var r = n(951288),
     h = n(409813),
     m = n(614223),
     x = n(48175),
-    b = n(474936),
-    g = n(388032),
+    g = n(474936),
+    b = n(388032),
     j = n(360026);
 function y(e) {
     let { handleStepChange: t, handleClose: n, referralTrialOfferId: i } = e,
@@ -26,7 +26,7 @@ function y(e) {
             startedPaymentFlowWithPaymentSourcesRef: d,
             setSelectedPlanId: c,
             priceOptions: u,
-            defaultPlanId: g,
+            defaultPlanId: b,
         } = (0, f.JL)(),
         { isGift: j, claimableRewards: y } = (0, _.wD)(),
         L = j && null != y && y.length > 0,
@@ -50,7 +50,7 @@ function y(e) {
                 r(n);
                 let C = h.h8.PLAN_SELECT,
                     c = (0, p.k5)(t);
-                (c !== b.Si.TIER_1 && c !== b.Si.TIER_2) || n !== b.Si.TIER_0 || a || (C = h.h8.WHAT_YOU_LOSE);
+                (c !== g.Si.TIER_1 && c !== g.Si.TIER_2) || n !== g.Si.TIER_0 || a || (C = h.h8.WHAT_YOU_LOSE);
                 let u = (0, x.T)({
                         userTrialOffer: l,
                         isGift: a,
@@ -73,7 +73,7 @@ function y(e) {
                 userTrialOffer: S,
                 startedPaymentFlowWithPaymentSources: d.current,
                 setSelectedPlanId: c,
-                defaultPlanId: g,
+                defaultPlanId: b,
             }),
         onClose: n,
         isGift: j,
@@ -94,13 +94,13 @@ function v(e) {
             enablePremiumBrandRefresh: f,
         } = e,
         h = f
-            ? (0, r.jsx)(l.X6q, {
+            ? (0, r.jsx)(l.Heading, {
                   variant: "heading-lg/bold",
-                  children: g.intl.string(g.t["r+SebW"]),
+                  children: b.intl.string(b.t["r+SebW"]),
               })
-            : (0, r.jsx)(l.X6q, {
+            : (0, r.jsx)(l.Heading, {
                   variant: "heading-md/semibold",
-                  children: g.intl.string(g.t["r+SebW"]),
+                  children: b.intl.string(b.t["r+SebW"]),
               }),
         { giftRecipient: m } = (0, _.wD)(),
         x = (0, d.y)({ location: "PremiumPaymentSelect" }) && i && null != m;

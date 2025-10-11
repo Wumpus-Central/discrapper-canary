@@ -64,7 +64,7 @@ let d = function (e) {
                                                       }),
                                                   ],
                                               }),
-                                              (0, r.jsx)(i.zxk, {
+                                              (0, r.jsx)(i.Button, {
                                                   variant: "primary",
                                                   text: l.intl.string(l.t["3PatS0"]),
                                                   onClick: () => (null == d ? void 0 : d()),

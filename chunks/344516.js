@@ -8,8 +8,8 @@ var l = n(951288),
     d = n(825209),
     h = n(600164),
     u = n(670863),
-    c = n(382577),
-    g = n(131951),
+    g = n(382577),
+    c = n(131951),
     p = n(36703),
     x = n(981631),
     m = n(65154),
@@ -82,20 +82,20 @@ function Z(e) {
         { mediaEngineContext: n, speaking: i = !1 } = e,
         {
             inputVolume: h,
-            outputVolume: c,
+            outputVolume: g,
             inputMode: j,
             shortcut: C,
             vadThreshold: T,
             vadAutoThreshold: Z,
             delay: M,
-        } = (0, s.cj)([g.Z], () => ({
-            inputVolume: g.Z.getInputVolume(),
-            outputVolume: g.Z.getOutputVolume(),
-            inputMode: g.Z.getMode(n),
-            shortcut: g.Z.getModeOptions(n).shortcut,
-            vadThreshold: g.Z.getModeOptions(n).threshold,
-            vadAutoThreshold: g.Z.getModeOptions(n).autoThreshold,
-            delay: g.Z.getModeOptions(n).delay,
+        } = (0, s.cj)([c.Z], () => ({
+            inputVolume: c.Z.getInputVolume(),
+            outputVolume: c.Z.getOutputVolume(),
+            inputMode: c.Z.getMode(n),
+            shortcut: c.Z.getModeOptions(n).shortcut,
+            vadThreshold: c.Z.getModeOptions(n).threshold,
+            vadAutoThreshold: c.Z.getModeOptions(n).autoThreshold,
+            delay: c.Z.getModeOptions(n).delay,
         })),
         v = [
             {
@@ -167,7 +167,7 @@ function Z(e) {
                 }),
                 (0, l.jsx)(o.iRW, {
                     label: V.intl.string(V.t.eATD2N),
-                    initialValue: (0, p.P)(c),
+                    initialValue: (0, p.P)(g),
                     maxValue: 200,
                     asValueChanges: (e) => r.Z.setOutputVolume((0, p.A)(e)),
                 }),
@@ -185,7 +185,7 @@ function Z(e) {
 function M(e) {
     var t;
     return (
-        (0, c.Z)(() => {
+        (0, g.Z)(() => {
             null != x.e3s && e.onClose();
         }),
         (0, l.jsxs)(o.Y0X, {
@@ -197,7 +197,7 @@ function M(e) {
                     children: [
                         (0, l.jsxs)(h.Z.Child, {
                             children: [
-                                (0, l.jsx)(o.X6q, {
+                                (0, l.jsx)(o.Heading, {
                                     variant: "heading-lg/semibold",
                                     className: C.marginReset,
                                     children: V.intl.string(V.t.NiTd0d),

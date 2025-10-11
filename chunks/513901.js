@@ -75,7 +75,7 @@ function y(e) {
                     (0, r.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
                         className: b.removeButton,
-                        children: (0, r.jsx)(l.zxk, {
+                        children: (0, r.jsx)(l.Button, {
                             variant: "secondary",
                             size: "sm",
                             text: D ? E.intl.string(E.t.CHf9iI) : E.intl.string(E.t.uMuafH),

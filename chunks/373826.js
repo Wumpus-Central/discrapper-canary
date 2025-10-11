@@ -104,7 +104,7 @@ function h(e) {
         : m();
 }
 function m(e) {
-    return (0, r.jsx)(h, u({ component: i.X6q }, e));
+    return (0, r.jsx)(h, u({ component: i.Heading }, e));
 }
 function g(e) {
     return (0, r.jsx)(h, u({ component: i.Text }, e));

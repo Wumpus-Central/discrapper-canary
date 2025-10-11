@@ -60,7 +60,7 @@ function d(e) {
     let { heading: t, description: n, label: s, isEnabled: l } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(i.X6q, {
+            (0, r.jsx)(i.Heading, {
                 className: o.topPerksCardHeading,
                 variant: "heading-lg/extrabold",
                 children: t,

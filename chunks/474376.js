@@ -24,7 +24,7 @@ function _(e) {
         _ = (0, r.e7)([o.Z], () => (0, i.wj)(o.Z.theme)),
         { multiAccountUsers: y } = (0, f.L)(),
         C = y.map((r) => {
-            let i = new c.Z(r),
+            let i = new c.default(r),
                 o = i.id === (null == t ? void 0 : t.id),
                 d = r.tokenStatus === x.q.INVALID,
                 u = n ? null : "#".concat(i.discriminator);

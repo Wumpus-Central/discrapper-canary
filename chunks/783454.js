@@ -13,7 +13,7 @@ function m(e) {
     let { intiallyExpanded: t = !1, title: n, description: l, children: m } = e,
         [p, f] = i.useState(t),
         h = () => f((e) => !e),
-        x = (0, o.Dt)();
+        b = (0, o.Dt)();
     return (0, r.jsxs)("div", {
         className: g.container,
         children: [
@@ -24,14 +24,14 @@ function m(e) {
                     let { areaRef: t, handleStopPropagation: i } = e;
                     return (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(s.X6q, {
+                            (0, r.jsx)(s.Heading, {
                                 variant: "heading-md/semibold",
                                 children: n,
                             }),
                             (0, r.jsx)(s.P3F, {
                                 onClick: i(h),
                                 "aria-label": u.intl.string(u.t.e5eQOz),
-                                "aria-controls": x,
+                                "aria-controls": b,
                                 "aria-expanded": p,
                                 focusProps: { ringTarget: t },
                                 children: (0, r.jsx)(c.Z, {
@@ -45,7 +45,7 @@ function m(e) {
             }),
             p &&
                 (0, r.jsxs)("div", {
-                    id: x,
+                    id: b,
                     children: [
                         null != l &&
                             (0, r.jsx)(s.Text, {

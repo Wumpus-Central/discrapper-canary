@@ -13,7 +13,7 @@ let d = (e) => {
         className: c.container,
         children: [
             (0, r.jsx)("div", { className: c.topImage }),
-            (0, r.jsx)(a.X6q, {
+            (0, r.jsx)(a.Heading, {
                 className: i()(c.centerText, c.header),
                 variant: "heading-xl/semibold",
                 children: o.intl.string(o.t.OaloU1),

@@ -117,7 +117,7 @@ function b(e) {
                 children: [
                     (0, r.jsx)("div", {
                         className: f.headerContainer,
-                        children: (0, r.jsx)(a.X6q, {
+                        children: (0, r.jsx)(a.Heading, {
                             color: n,
                             variant: "heading-md/bold",
                             children: t,

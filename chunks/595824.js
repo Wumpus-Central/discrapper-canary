@@ -1,14 +1,15 @@
 n.d(t, {
-    X: () => f,
-    h: () => _,
-});
-var r = n(951288);
-n(647438);
-var i = n(402453),
-    a = n(777207),
-    o = n(982125),
-    s = n(910989);
-function l(e, t, n) {
+    X: () => _,
+    h: () => p,
+}),
+    n(953529);
+var r = n(951288),
+    i = n(647438),
+    a = n(402453),
+    o = n(777207),
+    s = n(982125),
+    l = n(910989);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +22,7 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,12 +33,12 @@ function c(e) {
                 }),
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                c(e, t, n[t]);
             });
     }
     return e;
 }
-function u(e, t) {
+function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,36 +50,64 @@ function u(e, t) {
     }
     return n;
 }
-function d(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
+            : d(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function f(e) {
-    return (0, i.A)("Checkbox") ? (0, r.jsx)(o.C, c({}, e)) : (0, r.jsx)(_, c({}, e));
-}
 function _(e) {
-    let { label: t, checked: n, onChange: i, labelType: o = "primary" } = e,
-        l =
+    return (0, a.A)("Checkbox") ? (0, r.jsx)(s.C, u({}, e)) : (0, r.jsx)(p, u({}, e));
+}
+function p(e) {
+    let { label: t, checked: n, onChange: a, labelType: s = "primary", description: c, leadingIcon: d } = e,
+        _ =
             null != t && "" !== t
-                ? (0, r.jsx)(a.x, {
-                      variant: "text-md/normal",
-                      color: "primary" === o ? "text-primary" : "text-secondary",
-                      children: t,
+                ? (0, r.jsxs)("div", {
+                      children: [
+                          (0, r.jsxs)("div", {
+                              style: {
+                                  display: "flex",
+                                  alignItems: "center",
+                                  gap: "8px",
+                              },
+                              children: [
+                                  null != d &&
+                                      i.createElement(d, {
+                                          size: "sm",
+                                          color: "currentColor",
+                                          "aria-hidden": !0,
+                                          focusable: !1,
+                                      }),
+                                  (0, r.jsx)(o.x, {
+                                      variant: "text-md/normal",
+                                      color: "primary" === s ? "text-primary" : "text-secondary",
+                                      children: t,
+                                  }),
+                              ],
+                          }),
+                          null != c &&
+                              "" !== c &&
+                              (0, r.jsx)(o.x, {
+                                  variant: "text-sm/normal",
+                                  color: "text-secondary",
+                                  style: { marginTop: "4px" },
+                                  children: c,
+                              }),
+                      ],
                   })
                 : null;
     return (0, r.jsx)(
-        s.$q,
-        d(c({}, e), {
+        l.$q,
+        f(u({}, e), {
             value: n,
-            onChange: (e, t) => (null == i ? void 0 : i(t)),
-            children: l,
+            onChange: (e, t) => (null == a ? void 0 : a(t)),
+            children: _,
         }),
     );
 }

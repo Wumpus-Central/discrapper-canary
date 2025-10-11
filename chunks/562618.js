@@ -45,7 +45,7 @@ function f(e) {
             (0, r.jsxs)("div", {
                 children: [
                     (0, r.jsx)(_, { badge: o }),
-                    (0, r.jsx)(l.X6q, {
+                    (0, r.jsx)(l.Heading, {
                         variant: "heading-md/semibold",
                         className: c.title,
                         children: n,

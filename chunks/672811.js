@@ -4,13 +4,13 @@ var r = n(37113),
     l = n(388032);
 function s(e) {
     switch (e) {
-        case r.tI.PRESET_CUSTOM:
+        case r.ApplicationStreamPresets.PRESET_CUSTOM:
             return l.intl.string(l.t["+eOtrK"]);
-        case r.tI.PRESET_DOCUMENTS:
+        case r.ApplicationStreamPresets.PRESET_DOCUMENTS:
             return l.intl.string(l.t["rCa/jI"]);
-        case r.tI.PRESET_VIDEO:
+        case r.ApplicationStreamPresets.PRESET_VIDEO:
             return l.intl.string(i.default["G+k1q6"]);
-        case r.tI.PRESET_AUTO:
+        case r.ApplicationStreamPresets.PRESET_AUTO:
             return l.intl.string(i.default.VQ3gwc);
         default:
             throw Error("Not case implemented for ".concat(e));

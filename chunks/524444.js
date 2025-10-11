@@ -437,7 +437,7 @@ let ec = (e) => {
                               null != n
                                   ? (0, r.jsx)(d.tEY, {
                                         offset: -2,
-                                        children: (0, r.jsx)(d.zxk, {
+                                        children: (0, r.jsx)(d.Button, {
                                             variant: "primary",
                                             size: "sm",
                                             text: el(t),
@@ -846,7 +846,7 @@ function ef(e) {
                                                       width: 18,
                                                       height: 20,
                                                   }),
-                                                  (0, r.jsx)(d.X6q, {
+                                                  (0, r.jsx)(d.Heading, {
                                                       variant: "heading-md/bold",
                                                       color: "header-primary",
                                                       lineClamp: 1,
@@ -1172,7 +1172,7 @@ function eh(e) {
                                                       width: 18,
                                                       height: 20,
                                                   }),
-                                                  (0, r.jsx)(d.X6q, {
+                                                  (0, r.jsx)(d.Heading, {
                                                       variant: "heading-md/bold",
                                                       color: "header-primary",
                                                       lineClamp: 1,

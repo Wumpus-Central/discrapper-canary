@@ -32,7 +32,7 @@ function h(e) {
                 }),
                 await g();
         },
-        y = async () => {
+        v = async () => {
             c.default.track(d.rMx.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: n }),
                 u.ZP.setEnableHardwareAcceleration(!0),
                 await E();
@@ -43,7 +43,7 @@ function h(e) {
         onClose: E,
         "aria-label": p.intl.string(p.t.NQkK4u),
         title: p.intl.string(p.t.NQkK4u),
-        actionBarInput: (0, r.jsx)(a.XZJ, {
+        actionBarInput: (0, r.jsx)(a.Checkbox, {
             checked: m,
             onChange: () => b(!m),
             label: p.intl.string(p.t["5E9SBw"]),
@@ -58,7 +58,7 @@ function h(e) {
             {
                 variant: "primary",
                 text: p.intl.string(p.t["/wlDqq"]),
-                onClick: y,
+                onClick: v,
             },
         ],
         children: (0, r.jsx)(a.Text, {

@@ -22,7 +22,7 @@ function b(e) {
     return (0, i.jsx)("div", {
         "data-button-hoisted-classname-wrapper": !0,
         className: g.goOnlineButton,
-        children: (0, i.jsx)(s.zxk, {
+        children: (0, i.jsx)(s.Button, {
             variant: "primary",
             size: "sm",
             text: f.intl.string(h.default.Poezn5),
@@ -116,7 +116,7 @@ function v(e) {
                 gap: 0,
                 style: { marginBottom: 8 },
                 children: [
-                    (0, i.jsx)(s.X6q, {
+                    (0, i.jsx)(s.Heading, {
                         variant: "heading-sm/semibold",
                         color: "header-primary",
                         className: g.controlTitle,

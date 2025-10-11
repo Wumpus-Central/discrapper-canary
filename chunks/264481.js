@@ -1,7 +1,7 @@
 n.d(t, {
-    P9: () => C,
+    P9: () => S,
     Uf: () => N,
-    b0: () => S,
+    b0: () => C,
     s_: () => I,
 }),
     n(388685);
@@ -52,7 +52,7 @@ let _ = [
         () => m.intl.string(m.t.HQPAVV),
         () => m.intl.string(m.t.YolGh4),
     ],
-    y = [
+    v = [
         g.ABu.STEAM,
         g.ABu.PLAYSTATION,
         g.ABu.XBOX,
@@ -67,7 +67,7 @@ let _ = [
         g.ABu.CRUNCHYROLL,
         g.ABu.BUNGIE,
     ];
-function v(e) {
+function y(e) {
     let { heading: t, bodyText: n, children: i } = e;
     return (0, r.jsxs)("div", {
         className: b.empty,
@@ -75,7 +75,7 @@ function v(e) {
             (0, r.jsxs)("div", {
                 className: b.textContainer,
                 children: [
-                    (0, r.jsx)(a.X6q, {
+                    (0, r.jsx)(a.Heading, {
                         variant: "heading-md/medium",
                         color: "header-primary",
                         children: t,
@@ -97,23 +97,23 @@ function I() {
             var e;
             return (null != (e = (0, l.sample)(_)) ? e : _[0])();
         });
-    return (0, r.jsx)(v, {
+    return (0, r.jsx)(y, {
         heading: e,
         bodyText: t,
     });
 }
-function S() {
+function C() {
     let e = m.intl.string(m.t.bFgqYG),
         [t] = i.useState(() => {
             var e;
             return (null != (e = (0, l.sample)(O)) ? e : O[0])();
         });
-    return (0, r.jsx)(v, {
+    return (0, r.jsx)(y, {
         heading: e,
         bodyText: t,
     });
 }
-function C(e) {
+function S(e) {
     let { user: t, guildId: n, channelId: s, onClose: c } = e,
         u = f.ZP.getName(n, s, t),
         d = m.intl.formatToPlainString(m.t.sjSitL, { name: u }),
@@ -124,7 +124,7 @@ function C(e) {
         g = i.useCallback(() => {
             o.Z.openPrivateChannel({ recipientIds: t.id }), null == c || c();
         }, [t.id, c]);
-    return (0, r.jsx)(v, {
+    return (0, r.jsx)(y, {
         heading: d,
         bodyText: p,
         children: (0, r.jsx)("div", {
@@ -141,7 +141,7 @@ function T() {
     let e = (0, s.ZP)();
     return (0, r.jsx)("div", {
         className: b.connectionPlatforms,
-        children: y.map((t, n) => {
+        children: v.map((t, n) => {
             let i = c.Z.get(t);
             if (null == i) return null;
             let l = (0, a.wjy)(e) ? i.icon.darkPNG : i.icon.lightPNG;
@@ -204,7 +204,7 @@ function N(e) {
                     );
             });
         }, []);
-    return (0, r.jsxs)(v, {
+    return (0, r.jsxs)(y, {
         heading: m.intl.string(m.t.VB6LWV),
         bodyText: m.intl.string(m.t.KpjsU1),
         children: [

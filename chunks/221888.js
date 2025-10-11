@@ -92,7 +92,7 @@ function P(e) {
         children: (0, r.jsxs)(d.Ttm, {
             className: I.scroller,
             children: [
-                (0, r.jsx)(d.X6q, {
+                (0, r.jsx)(d.Heading, {
                     variant: "heading-deprecated-12/semibold",
                     className: I.memberListHeader,
                     children: c,

@@ -102,7 +102,7 @@ let m = (e) => {
                         children: [
                             (0, r.jsx)("div", {
                                 className: _.filenameLinkWrapper,
-                                children: (0, r.jsx)(c.eee, {
+                                children: (0, r.jsx)(c.Anchor, {
                                     className: _.fileNameLink,
                                     href: n,
                                     onClick: s,

@@ -12,7 +12,7 @@ function u() {
     return (0, a.jsx)("div", {
         ref: e,
         className: l()(d.panel, c.panel),
-        children: (0, a.jsx)(s.zxk, {
+        children: (0, a.jsx)(s.Button, {
             variant: "primary",
             size: "sm",
             text: "Reset Uploaded Key Versions Cache",

@@ -19,7 +19,7 @@ let u = function () {
                 style: { marginBottom: "8px" },
                 children: "Click the button below to clear your Minor Reward Capping History.",
             }),
-            (0, a.jsx)(r.zxk, {
+            (0, a.jsx)(r.Button, {
                 onClick: () => {
                     (0, l.it)(), (0, i.uL)(e ? c.Z5c.QUEST_HOME_V2 : c.Z5c.QUEST_HOME);
                 },

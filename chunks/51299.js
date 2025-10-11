@@ -1,30 +1,30 @@
-a.d(t, { default: () => h }), a(953529);
-var i = a(951288);
-a(647438);
-var e = a(512722),
-    l = a.n(e),
-    o = a(793030),
-    c = a(481060),
-    s = a(99690),
-    r = a(23551),
-    p = a(122021),
-    d = a(388032),
-    u = a(122048);
+i.d(a, { default: () => h }), i(953529);
+var t = i(951288);
+i(647438);
+var e = i(512722),
+    l = i.n(e),
+    o = i(793030),
+    c = i(481060),
+    s = i(99690),
+    r = i(23551),
+    p = i(122021),
+    d = i(388032),
+    u = i(122048);
 function m(n) {
-    let { onComplete: t, excludedPlatformTypes: a, includedPlatformTypes: e } = n,
+    let { onComplete: a, excludedPlatformTypes: i, includedPlatformTypes: e } = n,
         l = (0, p.fq)();
-    return (0, i.jsx)("div", {
+    return (0, t.jsx)("div", {
         className: u.connectionsContainer,
         children: l
-            .filter((n) => !(null == a ? void 0 : a.has(n.type)) && (null == e || e.has(n.type)))
+            .filter((n) => !(null == i ? void 0 : i.has(n.type)) && (null == e || e.has(n.type)))
             .map((n) =>
-                (0, i.jsx)(
+                (0, t.jsx)(
                     r.Z,
                     {
                         type: n.type,
                         className: u.accountBtn,
                         innerClassName: u.accountBtnInner,
-                        onConnect: () => t(n.type),
+                        onConnect: () => a(n.type),
                     },
                     n.type,
                 ),
@@ -32,54 +32,54 @@ function m(n) {
     });
 }
 function x(n) {
-    let { integrations: t, onCompleteApplication: a } = n;
-    if (null == t || null == a) return null;
-    let e = t.filter((n) => {
-        var t;
-        return (null == (t = n.application) ? void 0 : t.roleConnectionsVerificationUrl) != null;
+    let { integrations: a, onCompleteApplication: i } = n;
+    if (null == a || null == i) return null;
+    let e = a.filter((n) => {
+        var a;
+        return (null == (a = n.application) ? void 0 : a.roleConnectionsVerificationUrl) != null;
     });
     return 0 === e.length
         ? null
-        : (0, i.jsxs)(i.Fragment, {
+        : (0, t.jsxs)(t.Fragment, {
               children: [
-                  (0, i.jsx)(c.Text, {
+                  (0, t.jsx)(c.Text, {
                       variant: "text-sm/medium",
                       color: "interactive-normal",
                       className: u.applicationsHeader,
                       children: d.intl.string(d.t.PHjkRE),
                   }),
-                  (0, i.jsx)("div", {
+                  (0, t.jsx)("div", {
                       className: u.applicationsContainer,
                       children: e.map((n) => {
-                          let t = n.application;
-                          l()(null != t, "application is null");
-                          let e = null == t ? void 0 : t.bot;
+                          let a = n.application;
+                          l()(null != a, "application is null");
+                          let e = null == a ? void 0 : a.bot;
                           return (
                               l()(null != e, "bot is null"),
-                              (0, i.jsxs)(
+                              (0, t.jsxs)(
                                   c.P3F,
                                   {
-                                      onClick: () => a(t.id),
+                                      onClick: () => i(a.id),
                                       className: u.application,
                                       children: [
-                                          (0, i.jsx)(s.Z, {
+                                          (0, t.jsx)(s.Z, {
                                               user: e,
                                               className: u.applicationIcon,
                                           }),
-                                          (0, i.jsxs)("div", {
+                                          (0, t.jsxs)("div", {
                                               className: u.applicationNameContainer,
                                               children: [
-                                                  (0, i.jsx)(c.X6q, {
+                                                  (0, t.jsx)(c.Heading, {
                                                       variant: "heading-sm/semibold",
                                                       className: u.applicationNameText,
-                                                      children: t.name,
+                                                      children: a.name,
                                                   }),
-                                                  null != t.description && t.description.length > 0
-                                                      ? (0, i.jsx)(c.Text, {
+                                                  null != a.description && a.description.length > 0
+                                                      ? (0, t.jsx)(c.Text, {
                                                             variant: "text-xs/normal",
                                                             color: "header-secondary",
                                                             className: u.applicationNameText,
-                                                            children: t.description,
+                                                            children: a.description,
                                                         })
                                                       : null,
                                               ],
@@ -96,28 +96,28 @@ function x(n) {
 }
 function h(n) {
     let {
-        transitionState: t,
-        onComplete: a,
+        transitionState: a,
+        onComplete: i,
         onClose: e,
         excludedPlatformTypes: l,
         includedPlatformTypes: c,
         integrations: s,
         onCompleteApplication: r,
     } = n;
-    return (0, i.jsxs)(o.Modal, {
+    return (0, t.jsxs)(o.Modal, {
         title: d.intl.string(d.t.syl6HR),
-        transitionState: t,
+        transitionState: a,
         onClose: e,
         actions: [],
         children: [
-            (0, i.jsx)(m, {
+            (0, t.jsx)(m, {
                 onComplete: function (n) {
-                    a(n), e();
+                    i(n), e();
                 },
                 excludedPlatformTypes: l,
                 includedPlatformTypes: c,
             }),
-            (0, i.jsx)(x, {
+            (0, t.jsx)(x, {
                 integrations: s,
                 onCompleteApplication:
                     null != r

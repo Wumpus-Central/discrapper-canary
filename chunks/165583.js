@@ -180,7 +180,7 @@ function B(e) {
                 text: D.intl.string(D.t["8CVUra"]),
                 colorOptions: R.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL,
             }),
-            (0, r.jsx)(h.X6q, {
+            (0, r.jsx)(h.Heading, {
                 variant: "heading-md/semibold",
                 color: "text-default",
                 children: D.intl.format(D.t["fF+cgY"], { onClick: () => (0, A.z)() }),
@@ -205,7 +205,7 @@ function Z(e) {
     return (0, r.jsxs)("div", {
         className: L.contentContainer,
         children: [
-            (0, r.jsx)(h.X6q, {
+            (0, r.jsx)(h.Heading, {
                 variant: "heading-xl/semibold",
                 children: t,
             }),
@@ -258,7 +258,7 @@ function F(e) {
                                 src: x,
                                 alt: D.intl.string(D.t.do7AoK),
                             }),
-                            (0, r.jsx)(h.X6q, {
+                            (0, r.jsx)(h.Heading, {
                                 variant: "heading-xl/bold",
                                 color: "header-primary",
                                 children: D.intl.string(D.t.HEm04O),
@@ -298,7 +298,7 @@ function F(e) {
                                     src: x,
                                     alt: D.intl.string(D.t.do7AoK),
                                 }),
-                                (0, r.jsx)(h.X6q, {
+                                (0, r.jsx)(h.Heading, {
                                     variant: "heading-xl/bold",
                                     color: "header-primary",
                                     children: D.intl.string(D.t.jJG1pq),
@@ -339,7 +339,7 @@ function F(e) {
                                 className: L.upsellImage,
                                 src: R,
                             }),
-                            (0, r.jsx)(h.X6q, {
+                            (0, r.jsx)(h.Heading, {
                                 variant: "heading-xl/bold",
                                 color: "header-primary",
                                 children: D.intl.string(D.t["1SsvhY"]),
@@ -409,7 +409,7 @@ function F(e) {
                 (0, r.jsxs)("div", {
                     className: L.contentContainer,
                     children: [
-                        (0, r.jsx)(h.X6q, {
+                        (0, r.jsx)(h.Heading, {
                             variant: "heading-xl/bold",
                             color: "header-primary",
                             children: t,
@@ -430,7 +430,7 @@ function F(e) {
             return (0, r.jsxs)("div", {
                 className: L.contentContainer,
                 children: [
-                    (0, r.jsx)(h.X6q, {
+                    (0, r.jsx)(h.Heading, {
                         variant: "heading-xl/bold",
                         color: "header-primary",
                         children: t,
@@ -479,7 +479,7 @@ function F(e) {
                         color: "status-danger",
                         children: i,
                     }),
-                    (0, r.jsx)(h.X6q, {
+                    (0, r.jsx)(h.Heading, {
                         variant: "heading-lg/extrabold",
                         color: "header-primary",
                         className: L.messageLengthUpsellHeader,

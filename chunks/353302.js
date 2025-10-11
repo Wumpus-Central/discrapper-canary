@@ -22,5 +22,4 @@ e.exports = {
     permissionRow: "permissionRow_ef2eb4",
     bullet: "bullet_ef2eb4",
     bulletWarning: "bulletWarning_ef2eb4 bullet_ef2eb4",
-    acceptText: "acceptText_ef2eb4",
 };

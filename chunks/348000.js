@@ -112,7 +112,7 @@ let h = {
                             h,
                         ),
                         {
-                            children: (0, r.jsx)(a.zxk, {
+                            children: (0, r.jsx)(a.Button, {
                                 variant: "primary",
                                 text: "Hover me",
                             }),
@@ -284,7 +284,7 @@ let h = {
                             E,
                         ),
                         {
-                            children: (0, r.jsx)(a.zxk, {
+                            children: (0, r.jsx)(a.Button, {
                                 variant: "primary",
                                 text: "Hover me (rich)",
                             }),

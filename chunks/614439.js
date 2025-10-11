@@ -29,8 +29,8 @@ var r = n(951288),
     p = n(134432),
     f = n(813197),
     h = n(208567),
-    x = n(496675),
-    b = n(768581),
+    b = n(496675),
+    x = n(768581),
     j = n(63063),
     v = n(434404),
     _ = n(999382),
@@ -86,7 +86,7 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
         i.useEffect(() => {
             P || null == d || ((0, m.le)(), (0, m.aC)(d.id), (0, m.i3)(d.id), w(!0));
         }, [d, P]);
-        let { canManageGuild: Z } = (0, a.cj)([x.Z], () => ({ canManageGuild: x.Z.can(E.Plq.MANAGE_GUILD, d) })),
+        let { canManageGuild: Z } = (0, a.cj)([b.Z], () => ({ canManageGuild: b.Z.can(E.Plq.MANAGE_GUILD, d) })),
             R = (0, a.e7)([_.Z], () => _.Z.isGuildMetadataLoaded()),
             D = (0, a.e7)([_.Z], () => (null != d ? _.Z.getMetadata() : null)),
             A = (0, a.e7)([_.Z], () => (null != d && (null == D ? void 0 : D.isPublished) ? _.Z.getSlug() : null)),
@@ -126,12 +126,12 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                     M(e.every((e) => !0 === e));
             }
         }, [D]);
-        let z = (0, a.e7)([_.Z], () => (null != d ? _.Z.getErrors() : null));
+        let W = (0, a.e7)([_.Z], () => (null != d ? _.Z.getErrors() : null));
         if (null == d || null == D) return null;
         let V = (e) => {
                 v.Z.updateGuild({ discoverySplash: e });
             },
-            W = (e) => {
+            z = (e) => {
                 let t = () => {
                     (0, m.W1)(d.id, e),
                         e
@@ -231,7 +231,7 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                     (0, r.jsxs)("div", {
                                         className: S.mainContent,
                                         children: [
-                                            (0, r.jsxs)(o.X6q, {
+                                            (0, r.jsxs)(o.Heading, {
                                                 variant: "heading-lg/semibold",
                                                 children: [
                                                     I.intl.string(I.t.kGlQGB),
@@ -264,7 +264,7 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                     label: I.intl.string(I.t.safBZ2),
                                                                     children: (0, r.jsx)(c.Z, { value: e }),
                                                                 }),
-                                                                (0, r.jsx)(o.zxk, {
+                                                                (0, r.jsx)(o.Button, {
                                                                     variant: "primary",
                                                                     size: "sm",
                                                                     text: I.intl.string(I.t.NI8iGB),
@@ -291,12 +291,12 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                         guildMetadata: D,
                                                                         disabled: !Z,
                                                                     }),
-                                                                    (null == z ? void 0 : z.category) != null
+                                                                    (null == W ? void 0 : W.category) != null
                                                                         ? (0, r.jsx)(o.Text, {
                                                                               color: "text-danger",
                                                                               className: S.error,
                                                                               variant: "text-sm/normal",
-                                                                              children: z.category,
+                                                                              children: W.category,
                                                                           })
                                                                         : null,
                                                                 ],
@@ -309,8 +309,8 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                 label: I.intl.string(I.t["8bT/Cg"]),
                                                                 description: I.intl.string(I.t.WCWT7O),
                                                                 errorMessage:
-                                                                    (null == z ? void 0 : z.discovery_splash) != null
-                                                                        ? z.discovery_splash
+                                                                    (null == W ? void 0 : W.discovery_splash) != null
+                                                                        ? W.discovery_splash
                                                                         : void 0,
                                                                 layout: "horizontal",
                                                                 children: (0, r.jsxs)(o.Kqy, {
@@ -319,7 +319,7 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                         (0, r.jsx)(h.Z, {
                                                                             image: d.discoverySplash,
                                                                             makeURL: (e) =>
-                                                                                b.ZP.getGuildDiscoverySplashURL({
+                                                                                x.ZP.getGuildDiscoverySplashURL({
                                                                                     id: d.id,
                                                                                     splash: e,
                                                                                     size: 512 * (0, p.x_)(),
@@ -378,8 +378,8 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                             label: I.intl.string(I.t.vUmXsb),
                                                             description: I.intl.string(I.t.esnBnZ),
                                                             errorMessage:
-                                                                (null == z ? void 0 : z.reasons_to_join) != null
-                                                                    ? z.reasons_to_join
+                                                                (null == W ? void 0 : W.reasons_to_join) != null
+                                                                    ? W.reasons_to_join
                                                                     : void 0,
                                                             children: (0, r.jsx)(y.Z, {
                                                                 reasonMinLength: 10,
@@ -396,8 +396,8 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                             label: I.intl.string(I.t["lu+BmJ"]),
                                                             description: I.intl.string(I.t.ozSi8v),
                                                             error:
-                                                                (null == z ? void 0 : z.about) != null
-                                                                    ? z.about
+                                                                (null == W ? void 0 : W.about) != null
+                                                                    ? W.about
                                                                     : void 0,
                                                             showCharacterCount: !0,
                                                             rows: 10,
@@ -419,8 +419,8 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                         label: I.intl.string(I.t.V5mNyc),
                                                         description: I.intl.string(I.t.d3kA9f),
                                                         errorMessage:
-                                                            (null == z ? void 0 : z.social_links) != null
-                                                                ? z.social_links
+                                                            (null == W ? void 0 : W.social_links) != null
+                                                                ? W.social_links
                                                                 : void 0,
                                                         children: [
                                                             D.socialLinks.map((e, t) => {
@@ -540,14 +540,14 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                     "social-container-" + t,
                                                                 );
                                                             }),
-                                                            (null == z ? void 0 : z.social_links) != null
+                                                            (null == W ? void 0 : W.social_links) != null
                                                                 ? (0, r.jsx)(o.Text, {
                                                                       color: "text-danger",
                                                                       variant: "text-sm/normal",
-                                                                      children: z.social_links,
+                                                                      children: W.social_links,
                                                                   })
                                                                 : null,
-                                                            (0, r.jsx)(o.zxk, {
+                                                            (0, r.jsx)(o.Button, {
                                                                 variant: "secondary",
                                                                 size: "sm",
                                                                 text: I.intl.string(I.t.QvovjY),
@@ -568,21 +568,21 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                 (0, r.jsx)(o.gNt, {
                                                                     label: I.intl.string(I.t["5yF7e3"]),
                                                                     description: I.intl.string(I.t.eOFvqa),
-                                                                    children: (0, r.jsx)(o.zxk, {
+                                                                    children: (0, r.jsx)(o.Button, {
                                                                         variant: "critical-primary",
                                                                         size: "sm",
                                                                         text: I.intl.string(I.t["DCHd/P"]),
-                                                                        onClick: () => W(!1),
+                                                                        onClick: () => z(!1),
                                                                         disabled: !Z,
                                                                     }),
                                                                 }),
                                                             ],
                                                         }),
-                                                    (null == z ? void 0 : z.is_published) != null
+                                                    (null == W ? void 0 : W.is_published) != null
                                                         ? (0, r.jsx)(o.Text, {
                                                               color: "text-danger",
                                                               variant: "text-sm/normal",
-                                                              children: z.is_published,
+                                                              children: W.is_published,
                                                           })
                                                         : null,
                                                 ],
@@ -596,7 +596,7 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                 title: I.intl.string(I.t["2kCyn5"]),
                                                 children: Y,
                                                 buttonLabel: I.intl.string(I.t.tVK6S0),
-                                                buttonCallback: () => W(!0),
+                                                buttonCallback: () => z(!0),
                                                 disabled: !Z || !G,
                                             }),
                                         }),

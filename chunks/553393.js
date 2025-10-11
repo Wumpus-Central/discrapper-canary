@@ -262,7 +262,7 @@ function k(e) {
                         (0, r.jsxs)("div", {
                             className: w.left,
                             children: [
-                                (0, r.jsx)(u.X6q, {
+                                (0, r.jsx)(u.Heading, {
                                     variant: "heading-sm/semibold",
                                     children: em.headerText,
                                 }),

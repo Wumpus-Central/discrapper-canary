@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => x });
 var r = n(951288),
     l = n(647438),
     o = n(120356),
@@ -9,11 +9,11 @@ var r = n(951288),
     u = n(31336),
     d = n(906467),
     f = n(63063),
-    m = n(604227),
-    b = n(924983),
-    j = n(981631),
-    p = n(388032),
-    x = n(989281);
+    b = n(604227),
+    m = n(924983),
+    p = n(981631),
+    j = n(388032),
+    v = n(989281);
 function y(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(a.v2r, {
@@ -25,63 +25,63 @@ function y(e) {
             children: [
                 (0, r.jsx)(a.sNh, {
                     id: "changelog",
-                    label: p.intl.string(p.t.LRmNAg),
+                    label: j.intl.string(j.t.LRmNAg),
                     action: () => (0, c.Z)(!0),
                 }),
                 (0, r.jsx)(a.sNh, {
                     id: "acknowledgements",
-                    label: p.intl.string(p.t["0nUKy8"]),
-                    action: () => (0, s.Z)(j.EYA.ACKNOWLEDGEMENTS),
+                    label: j.intl.string(j.t["0nUKy8"]),
+                    action: () => (0, s.Z)(p.EYA.ACKNOWLEDGEMENTS),
                 }),
                 (0, r.jsx)(a.sNh, {
                     id: "support",
-                    label: p.intl.string(p.t["Yl/Rio"]),
+                    label: j.intl.string(j.t["Yl/Rio"]),
                     action: () => (0, s.Z)(f.w),
                 }),
             ],
         }),
     });
 }
-function v() {
+function x() {
     let e = l.useRef(null),
         t = d.Z.isDeveloper;
     return (0, r.jsxs)("div", {
         children: [
             t &&
                 (0, r.jsx)(a.P3F, {
-                    className: x.devToolsEducation,
+                    className: v.devToolsEducation,
                     onClick: () => (0, u.d8)(),
-                    children: (0, r.jsx)(b.$, { legacy: !1 }),
+                    children: (0, r.jsx)(m.$, { legacy: !1 }),
                 }),
-            (0, r.jsx)(m.Z, { compact: !0 }),
+            (0, r.jsx)(b.Z, { compact: !0 }),
             (0, r.jsxs)("div", {
-                className: x.links,
+                className: v.links,
                 children: [
-                    (0, r.jsx)(a.eee, {
-                        href: j.EYA.PRIVACY,
+                    (0, r.jsx)(a.Anchor, {
+                        href: p.EYA.PRIVACY,
                         children: (0, r.jsx)(a.Text, {
                             tag: "span",
                             variant: "text-xxs/normal",
                             color: "currentColor",
-                            children: p.intl.string(p.t["Knf/f3"]),
+                            children: j.intl.string(j.t["Knf/f3"]),
                         }),
                     }),
                     (0, r.jsx)("span", {
-                        className: x.bullet,
+                        className: v.bullet,
                         "aria-hidden": "true",
                         children: "\u2022",
                     }),
-                    (0, r.jsx)(a.eee, {
-                        href: j.EYA.TERMS,
+                    (0, r.jsx)(a.Anchor, {
+                        href: p.EYA.TERMS,
                         children: (0, r.jsx)(a.Text, {
                             tag: "span",
                             variant: "text-xxs/normal",
                             color: "currentColor",
-                            children: p.intl.string(p.t.uFSTGh),
+                            children: j.intl.string(j.t.uFSTGh),
                         }),
                     }),
                     (0, r.jsx)("span", {
-                        className: x.bullet,
+                        className: v.bullet,
                         "aria-hidden": "true",
                         children: "\u2022",
                     }),
@@ -98,7 +98,7 @@ function v() {
                         children: (t, n) => {
                             var l, o;
                             return (0, r.jsx)(
-                                a.eee,
+                                a.Anchor,
                                 ((l = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
@@ -128,12 +128,12 @@ function v() {
                                     {
                                         ref: e,
                                         useDefaultUnderlineStyles: !1,
-                                        className: i()(x.moreButton, { [x.active]: n.isShown }),
+                                        className: i()(v.moreButton, { [v.active]: n.isShown }),
                                         children: (0, r.jsx)(a.Text, {
                                             tag: "span",
                                             variant: "text-xxs/normal",
                                             color: "currentColor",
-                                            children: p.intl.string(p.t.UKOtz8),
+                                            children: j.intl.string(j.t.UKOtz8),
                                         }),
                                     }),
                                 Object.getOwnPropertyDescriptors

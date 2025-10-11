@@ -11,7 +11,7 @@ let s = (e) => {
     return (0, r.jsxs)("div", {
         className: o.counter,
         children: [
-            (0, r.jsx)(i.X6q, {
+            (0, r.jsx)(i.Heading, {
                 variant: "heading-xxl/medium",
                 color: s,
                 children: (0, r.jsx)(i.y5t, { children: l }),

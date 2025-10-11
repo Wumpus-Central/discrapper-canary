@@ -59,7 +59,7 @@ let P = (e, t) => {
                             className: A.marketingPageTextContainer,
                             children: [
                                 M && (0, r.jsx)(I.Z, {}),
-                                (0, r.jsx)(c.X6q, {
+                                (0, r.jsx)(c.Heading, {
                                     className: A.marketingPageHeading,
                                     variant: "display-sm",
                                     color: "header-primary",

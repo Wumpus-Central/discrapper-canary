@@ -55,7 +55,7 @@ function _() {
             }),
             (0, a.jsx)("div", {
                 className: i()(g.buttonsContainer, v.marginBottom8),
-                children: (0, a.jsx)(s.zxk, {
+                children: (0, a.jsx)(s.Button, {
                     variant: "primary",
                     size: "sm",
                     text: "Launch MFA",
@@ -64,7 +64,7 @@ function _() {
             }),
             (0, a.jsx)("div", {
                 className: i()(g.buttonsContainer, v.marginBottom8),
-                children: (0, a.jsx)(s.zxk, {
+                children: (0, a.jsx)(s.Button, {
                     variant: "primary",
                     size: "sm",
                     text: "Launch Vibing Wumpus",
@@ -76,7 +76,7 @@ function _() {
                     children: [
                         (0, a.jsx)("div", {
                             className: i()(g.buttonsContainer, v.marginBottom8),
-                            children: (0, a.jsx)(s.zxk, {
+                            children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: "Launch Clicker Game",
@@ -85,7 +85,7 @@ function _() {
                         }),
                         (0, a.jsx)("div", {
                             className: i()(g.buttonsContainer, v.marginBottom8),
-                            children: (0, a.jsx)(s.zxk, {
+                            children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: "Launch Captcha Test Tool",
@@ -94,7 +94,7 @@ function _() {
                         }),
                         (0, a.jsx)("div", {
                             className: i()(g.buttonsContainer, v.marginBottom8),
-                            children: (0, a.jsx)(s.zxk, {
+                            children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: "Launch Age Verification Test Tool",
@@ -103,7 +103,7 @@ function _() {
                         }),
                         (0, a.jsx)("div", {
                             className: i()(g.buttonsContainer, v.marginBottom8),
-                            children: (0, a.jsx)(s.zxk, {
+                            children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: "Launch Age Verification Modal",
@@ -115,7 +115,7 @@ function _() {
                         }),
                         (0, a.jsx)("div", {
                             className: i()(g.buttonsContainer, v.marginBottom8),
-                            children: (0, a.jsx)(s.zxk, {
+                            children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: "Reset Hang Status State",
@@ -124,7 +124,7 @@ function _() {
                         }),
                         (0, a.jsx)("div", {
                             className: i()(g.buttonsContainer, v.marginBottom8),
-                            children: (0, a.jsx)(s.zxk, {
+                            children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: "Force libdiscore Crash",

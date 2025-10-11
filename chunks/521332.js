@@ -42,7 +42,7 @@ function x(e) {
         : (0, r.jsxs)("div", {
               className: h.container,
               children: [
-                  (0, r.jsx)(a.X6q, {
+                  (0, r.jsx)(a.Heading, {
                       variant: "text-sm/semibold",
                       className: h.header,
                       children: f.intl.string(f.t["1yxTIC"]),

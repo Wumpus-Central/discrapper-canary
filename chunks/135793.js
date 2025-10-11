@@ -251,7 +251,7 @@ let F = (e) => {
                         (0, r.jsxs)("div", {
                             className: P.heading,
                             children: [
-                                (0, r.jsx)(c.X6q, {
+                                (0, r.jsx)(c.Heading, {
                                     variant: "heading-lg/bold",
                                     children: R.intl.string(R.t["5/knv7"]),
                                 }),
@@ -372,7 +372,7 @@ let F = (e) => {
         return (0, r.jsxs)("div", {
             className: P.footer,
             children: [
-                (0, r.jsx)(c.zxk, {
+                (0, r.jsx)(c.Button, {
                     variant: "secondary",
                     text: R.intl.string(R.t.w2Qbd3),
                     onClick: () => {
@@ -447,7 +447,7 @@ let F = (e) => {
             shouldShow: !!s,
             children: (e) =>
                 (0, r.jsx)(
-                    c.zxk,
+                    c.Button,
                     M(L({}, e), {
                         onClick: o,
                         disabled: s,

@@ -116,7 +116,7 @@ function y(e) {
                       ],
                   })
                 : null,
-            (0, r.jsx)(s.X6q, {
+            (0, r.jsx)(s.Heading, {
                 variant: "text-sm/semibold",
                 color: "text-secondary",
                 className: o()(h.truncatedText, h.usersHeader),

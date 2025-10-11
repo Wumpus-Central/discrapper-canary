@@ -33,7 +33,7 @@ function f(e) {
             (0, n.jsxs)(o.xBx, {
                 justify: i.Z.Justify.BETWEEN,
                 children: [
-                    (0, n.jsx)(o.X6q, {
+                    (0, n.jsx)(o.Heading, {
                         variant: "heading-lg/semibold",
                         children: b,
                     }),

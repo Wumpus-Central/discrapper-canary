@@ -47,12 +47,12 @@ function _(e) {
         ? (0, r.jsxs)("div", {
               className: d.downloadInvoice,
               children: [
-                  (0, r.jsx)(o.eee, {
+                  (0, r.jsx)(o.Anchor, {
                       onClick: () => p(!1),
                       children: u.intl.formatToPlainString(u.t.R0xzCA, {}),
                   }),
                   t.hasRefundInvoiceURLs
-                      ? (0, r.jsx)(o.eee, {
+                      ? (0, r.jsx)(o.Anchor, {
                             className: d.downloadRefundInvoice,
                             onClick: () => p(!0),
                             children: u.intl.formatToPlainString(u.t["3x6NGx"], {}),
@@ -65,14 +65,14 @@ function _(e) {
           ? (0, r.jsxs)("div", {
                 className: d.downloadInvoice,
                 children: [
-                    (0, r.jsx)(o.eee, {
+                    (0, r.jsx)(o.Anchor, {
                         href: g,
                         children: u.intl.formatToPlainString(u.t.R0xzCA, {}),
                     }),
                     null != E
                         ? E.map((e, t) =>
                               (0, r.jsx)(
-                                  o.eee,
+                                  o.Anchor,
                                   {
                                       className: d.downloadRefundInvoice,
                                       href: e,
@@ -88,7 +88,7 @@ function _(e) {
           : m
             ? (0, r.jsx)("div", {
                   className: d.downloadInvoice,
-                  children: (0, r.jsx)(o.eee, {
+                  children: (0, r.jsx)(o.Anchor, {
                       onClick: () => {
                           h(t, t.paymentSource);
                       },

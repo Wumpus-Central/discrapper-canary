@@ -82,7 +82,7 @@ let _ = i.memo(function (e) {
                             (0, r.jsxs)("div", {
                                 className: m.progressBarText,
                                 children: [
-                                    (0, r.jsx)(a.X6q, {
+                                    (0, r.jsx)(a.Heading, {
                                         variant: "heading-sm/bold",
                                         children: g.intl.string(g.t.SnrR39),
                                     }),

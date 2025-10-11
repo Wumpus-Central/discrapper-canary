@@ -41,7 +41,7 @@ let g = Object.freeze({
                         (0, i.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
                             className: p.button,
-                            children: (0, i.jsx)(s.zxk, {
+                            children: (0, i.jsx)(s.Button, {
                                 variant: "primary",
                                 text: d.intl.string(d.t.w5uwoK),
                                 onClick: e,
@@ -75,7 +75,7 @@ let g = Object.freeze({
                     children: [
                         (0, i.jsx)(s.OZU, { note: d.intl.string(d.t["aCYQ+P"]) }),
                         null != e &&
-                            (0, i.jsx)(s.zxk, {
+                            (0, i.jsx)(s.Button, {
                                 variant: "secondary",
                                 text: t ? d.intl.string(d.t.R40bU1) : d.intl.string(d.t.rXl8fn),
                                 onClick: e,

@@ -332,10 +332,10 @@ let Y = function (e) {
             let { status: e } = i;
             if (i.isPurchasedExternally) {
                 let e = (0, y.JE)(i.paymentGateway, "SUBSCRIPTION_MANAGEMENT");
-                return (0, r.jsx)(l.eee, {
+                return (0, r.jsx)(l.Anchor, {
                     href: e,
                     useDefaultUnderlineStyles: !1,
-                    children: (0, r.jsx)(l.zxk, {
+                    children: (0, r.jsx)(l.Button, {
                         variant: "overlay-primary",
                         size: "sm",
                         loading: C,
@@ -397,7 +397,7 @@ let Y = function (e) {
                 return (0, r.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
                     className: L.toolsButton,
-                    children: (0, r.jsx)(l.zxk, {
+                    children: (0, r.jsx)(l.Button, {
                         variant: "overlay-primary",
                         size: "sm",
                         text: D.intl.string(D.t.iIvF29),
@@ -407,7 +407,7 @@ let Y = function (e) {
                 });
             switch (e) {
                 case w.O0b.BILLING_RETRY:
-                    return (0, r.jsx)(l.zxk, {
+                    return (0, r.jsx)(l.Button, {
                         variant: "overlay-primary",
                         size: "sm",
                         onClick: et,
@@ -431,7 +431,7 @@ let Y = function (e) {
                             (0, r.jsx)("div", {
                                 "data-button-hoisted-classname-wrapper": !0,
                                 className: L.toolsButton,
-                                children: (0, r.jsx)(l.zxk, {
+                                children: (0, r.jsx)(l.Button, {
                                     variant: "overlay-primary",
                                     size: "sm",
                                     text: D.intl.string(D.t.TgV5QU),
@@ -469,7 +469,7 @@ let Y = function (e) {
                             (0, r.jsx)("div", {
                                 "data-button-hoisted-classname-wrapper": !0,
                                 className: L.toolsButton,
-                                children: (0, r.jsx)(l.zxk, {
+                                children: (0, r.jsx)(l.Button, {
                                     variant: "overlay-primary",
                                     size: "sm",
                                     text: D.intl.string(D.t.zpi5pq),

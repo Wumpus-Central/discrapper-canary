@@ -21,7 +21,7 @@ function d() {
         children: (0, r.jsx)(l.u, {
             asContainer: !0,
             text: c.intl.string(c.t.mGlP39),
-            children: (0, r.jsx)(i.zxk, {
+            children: (0, r.jsx)(i.Button, {
                 variant: "primary",
                 size: "sm",
                 disabled: !0,
@@ -39,7 +39,7 @@ function m(e) {
         text: l,
         footnote: c.intl.string(c.t["jMh+TU"]),
         meetsRequirement: t,
-        children: (0, r.jsx)(i.zxk, {
+        children: (0, r.jsx)(i.Button, {
             variant: "primary",
             size: "sm",
             text: c.intl.string(c.t["13ofGh"]),

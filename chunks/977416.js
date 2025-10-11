@@ -126,7 +126,7 @@ function y(e) {
                             color: "currentColor",
                         }),
                     }),
-                    (0, n.jsx)(c.X6q, {
+                    (0, n.jsx)(c.Heading, {
                         id: u,
                         variant: "text-xs/medium",
                         color: "text-secondary",

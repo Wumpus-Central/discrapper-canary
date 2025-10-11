@@ -115,7 +115,7 @@ let O = {
                             variant: "text-md/normal",
                             children: "Click the button below to open the modal",
                         }),
-                        (0, r.jsx)(u.zxk, {
+                        (0, r.jsx)(u.Button, {
                             variant: "primary",
                             text: "Open Modal",
                             onClick: () =>
@@ -326,7 +326,7 @@ let O = {
                             variant: "text-md/normal",
                             children: "Click the button below to open the expressive modal",
                         }),
-                        (0, r.jsx)(u.zxk, {
+                        (0, r.jsx)(u.Button, {
                             variant: "primary",
                             text: "Open ExpressiveModal",
                             onClick: () =>
@@ -474,7 +474,7 @@ let O = {
                             children:
                                 "This example demonstrates the DynamicGraphic component rendering a React component inside the modal header.",
                         }),
-                        (0, r.jsx)(u.zxk, {
+                        (0, r.jsx)(u.Button, {
                             variant: "primary",
                             text: "Open Dynamic Graphic Modal",
                             onClick: () =>
@@ -595,7 +595,7 @@ let O = {
                             variant: "text-md/normal",
                             children: "Click the button below to open the layer modal",
                         }),
-                        (0, r.jsx)(u.zxk, {
+                        (0, r.jsx)(u.Button, {
                             variant: "primary",
                             text: "Open Layer Modal",
                             onClick: () =>

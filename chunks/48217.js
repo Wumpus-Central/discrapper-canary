@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(269128),
-    s = n(358555),
-    a = n(267642),
+    a = n(358555),
+    s = n(267642),
     o = n(26323),
     c = n(30513),
     d = n(981631),
@@ -18,11 +18,11 @@ function m(e) {
         children: (0, r.jsxs)("div", {
             className: g.guildHeader,
             children: [
-                (0, r.jsx)(s.Z, {
+                (0, r.jsx)(a.Z, {
                     guild: t,
                     isBannerVisible: !0,
                 }),
-                (0, r.jsx)(i.X6q, {
+                (0, r.jsx)(i.Heading, {
                     className: g.guildName,
                     variant: "heading-md/semibold",
                     children: t.name,
@@ -36,8 +36,8 @@ function m(e) {
     });
 }
 function p(e) {
-    let { analyticsLocations: t, analyticsLocation: n, guild: i, isGIF: l, banner: s } = e,
-        g = l ? (0, a._p)(d.oNc.ANIMATED_BANNER) : (0, a._p)(d.oNc.BANNER);
+    let { analyticsLocations: t, analyticsLocation: n, guild: i, isGIF: l, banner: a } = e,
+        g = l ? (0, s._p)(d.oNc.ANIMATED_BANNER) : (0, s._p)(d.oNc.BANNER);
     null != g &&
         (0, o.Z)({
             analyticsLocations: t,
@@ -46,14 +46,14 @@ function p(e) {
             headerProps: {
                 title: u.intl.string(u.t["rv2H+/"]),
                 subtitle: (function (e, t) {
-                    let n = (0, a.nW)(e);
+                    let n = (0, s.nW)(e);
                     return t
                         ? u.intl.formatToPlainString(u.t["TR/Uys"], { targetLevelOrPlan: n })
                         : u.intl.formatToPlainString(u.t.B253V1, { targetLevelOrPlan: n });
                 })(g, l),
                 image: (0, r.jsx)(m, {
                     guild: i,
-                    banner: s,
+                    banner: a,
                 }),
             },
             perkIntro: u.intl.string(u.t.ZuItcH),

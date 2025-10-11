@@ -46,7 +46,7 @@ function S(e) {
     (b = !0), y.start(r, () => (0, f.lx)());
 }
 function A(e) {
-    a = new _.Z(e.user);
+    a = new _.default(e.user);
 }
 function C() {
     v();

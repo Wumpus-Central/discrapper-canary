@@ -43,7 +43,7 @@ function g(e) {
 }
 function E(e) {
     let { media: t } = e;
-    return (0, r.jsx)(c.X6q, {
+    return (0, r.jsx)(c.Heading, {
         variant: "text-md/medium",
         className: h.question,
         scaleFontToUserSetting: !0,
@@ -110,7 +110,7 @@ function O(e) {
         ? null
         : "button" === t.presentation || "secondaryButton" === t.presentation
           ? (0, r.jsx)(
-                c.zxk,
+                c.Button,
                 {
                     buttonRef: l,
                     onClick: f,

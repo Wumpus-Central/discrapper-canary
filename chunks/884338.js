@@ -82,7 +82,7 @@ let b = {
     T = "user-icon";
 function S(e, t) {
     if (e === T) return "user-icon-".concat(t);
-    let n = e instanceof d.Z ? e : null != e ? e.user : null;
+    let n = e instanceof d.default ? e : null != e ? e.user : null;
     return null != n ? n.id : "user-".concat(t);
 }
 function A(e) {
@@ -206,7 +206,7 @@ class P extends (r = a.PureComponent) {
                 className: s()(e, p.container, N(t)),
                 children: [this.renderIcon(), this.renderUsers()],
             });
-        let c = n.find((e) => e instanceof d.Z && e.id === l),
+        let c = n.find((e) => e instanceof d.default && e.id === l),
             _ = o && null == f.default.getUser(l);
         return (0, i.jsx)(u.Z, {
             targetElementRef: this._ref,

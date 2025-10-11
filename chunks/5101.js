@@ -27,10 +27,11 @@ function d(e) {
                 },
             },
         ],
-        actionBarInput: (0, i.jsx)(o.XZJ, {
+        actionBarInput: (0, i.jsx)(o.Checkbox, {
             checked: p,
             onChange: (e) => h(e),
             label: c.intl.string(s.default["3puq5e"]),
+            labelType: "secondary",
         }),
     });
 }

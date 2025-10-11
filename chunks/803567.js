@@ -87,7 +87,7 @@ function T() {
                             height: 40,
                         },
                         align: c.Z.Align.CENTER,
-                        body: (0, r.jsx)(s.eee, {
+                        body: (0, r.jsx)(s.Anchor, {
                             href: p.Z.getArticleURL(E.BhN.NOISE_SUPPRESSION),
                             onClick: I,
                             children: b.intl.string(b.t.hvVgAQ),

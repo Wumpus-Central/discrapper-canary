@@ -23,7 +23,7 @@ function s(e) {
                     c ? null : (0, r.jsx)(l.Z, { className: a.stars }),
                 ],
             }),
-            (0, r.jsx)(i.X6q, {
+            (0, r.jsx)(i.Heading, {
                 className: a.header,
                 variant: "heading-xl/semibold",
                 children: n,

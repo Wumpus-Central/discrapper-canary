@@ -27,8 +27,8 @@ var a = n(951288),
     N = n(789086),
     P = n(206583),
     I = n(680027),
-    k = n(451429);
-let w = [
+    w = n(451429);
+let k = [
     {
         key: "type",
         cellClassName: l()(I.cell, I.cellType),
@@ -67,7 +67,7 @@ function R(e) {
     let { type: r } = e,
         i = (0, u.e7)([S.Z], () => S.Z.getFilters()),
         l = null != (n = null == i || null == (t = i.types) ? void 0 : t.has(r)) && n;
-    return (0, a.jsx)(p.XZJ, {
+    return (0, a.jsx)(p.rsf, {
         checked: l,
         onChange: function () {
             l
@@ -113,12 +113,12 @@ function A() {
                     ? void 0
                     : t.id;
         }, [R]),
-        L = (0, j.Z)({
+        M = (0, j.Z)({
             applicationId: D,
             location: "DevToolsContentInventory",
             source: v.m1.DevTools,
         }),
-        M = Object.entries(null != (t = m.K.get("GameProfileModal")) ? t : {})
+        L = Object.entries(null != (t = m.K.get("GameProfileModal")) ? t : {})
             .filter((e) => {
                 let [t, n] = e;
                 return n;
@@ -127,10 +127,10 @@ function A() {
                 let [t] = e;
                 return t;
             }),
-        U = (0, f.Z)(M).filter(y.lm),
+        U = (0, f.Z)(L).filter(y.lm),
         F = (0, u.e7)([C.Z], () => C.Z.getFakeGameToShow());
     return (0, a.jsx)("div", {
-        className: k.panel,
+        className: w.panel,
         children: (0, a.jsxs)(p.zJl, {
             className: I.content,
             children: [
@@ -143,11 +143,11 @@ function A() {
                         }),
                         s.length > 0 &&
                             (0, a.jsx)(g.Z, {
-                                columns: w,
+                                columns: k,
                                 data: s,
                             }),
                         (0, a.jsx)(N.Z, {}),
-                        (0, a.jsx)(p.zxk, {
+                        (0, a.jsx)(p.Button, {
                             variant: "primary",
                             text: "Refresh Now",
                             fullWidth: !0,
@@ -169,7 +169,7 @@ function A() {
                             variant: "text-md/semibold",
                             children: "Impression Capping",
                         }),
-                        (0, a.jsx)(p.zxk, {
+                        (0, a.jsx)(p.Button, {
                             variant: "primary",
                             text: "Clear Impressions",
                             fullWidth: !0,
@@ -177,7 +177,7 @@ function A() {
                                 h.Z.dispatch({ type: "CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS" });
                             },
                         }),
-                        (0, a.jsx)(p.zxk, {
+                        (0, a.jsx)(p.Button, {
                             variant: "primary",
                             text: "Log Impressions",
                             fullWidth: !0,
@@ -185,7 +185,7 @@ function A() {
                                 h.Z.dispatch({ type: "CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS" });
                             },
                         }),
-                        (0, a.jsx)(p.zxk, {
+                        (0, a.jsx)(p.Button, {
                             variant: "primary",
                             text: i ? "Enable Impression Capping" : "Disable Impression Capping",
                             fullWidth: !0,
@@ -193,7 +193,7 @@ function A() {
                                 h.Z.dispatch({ type: "CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING" });
                             },
                         }),
-                        (0, a.jsx)(p.zxk, {
+                        (0, a.jsx)(p.Button, {
                             variant: "primary",
                             text: l ? "Disable Fast Impression Capping" : "Enable Fast Impression Capping",
                             fullWidth: !0,
@@ -217,13 +217,13 @@ function A() {
                             onChange: (e) => (0 === e.length || e.length >= 18) && A(e),
                             onKeyDown: (e) => {
                                 "Enter" === e.key &&
-                                    (R === e.currentTarget.value ? null == L || L(e) : A(e.currentTarget.value));
+                                    (R === e.currentTarget.value ? null == M || M(e) : A(e.currentTarget.value));
                             },
                             error:
-                                R.length > 0 && null == L
+                                R.length > 0 && null == M
                                     ? "No game profile for ".concat(null != D ? D : R + " - try by id", ".")
                                     : void 0,
-                            successMessage: null != L ? "Game profile found" : void 0,
+                            successMessage: null != M ? "Game profile found" : void 0,
                         }),
                         (0, a.jsx)("ul", {
                             children: U.map((e) =>

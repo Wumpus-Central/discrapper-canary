@@ -200,7 +200,7 @@ class z extends i.PureComponent {
                     : null,
                 (0, r.jsx)(b.F, {
                     setting: k.s6.ACCOUNT_CHANGE_PASSWORD,
-                    children: (0, r.jsx)(c.zxk, {
+                    children: (0, r.jsx)(c.Button, {
                         variant: "primary",
                         size: "sm",
                         text: B.intl.string(B.t["FRep5+"]),

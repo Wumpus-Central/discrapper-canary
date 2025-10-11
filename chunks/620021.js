@@ -5,20 +5,20 @@ var t = e(951288),
     a = e(544891),
     s = e(755721),
     u = e(481060),
-    d = e(493773),
-    o = e(910693),
+    o = e(493773),
+    d = e(910693),
     c = e(314897),
     x = e(271383),
     h = e(430824),
     N = e(496675),
     g = e(594174),
-    k = e(626135),
-    m = e(51144),
+    m = e(626135),
+    k = e(51144),
     v = e(981631),
     C = e(388032),
     E = e(120526);
 function p(l) {
-    let { disabled: n = !1, user: e, setNickname: i, nickname: a, error: d, hasNick: o } = l,
+    let { disabled: n = !1, user: e, setNickname: i, nickname: a, error: o, hasNick: d } = l,
         x = r.useRef(null),
         h = r.useCallback(() => {
             var l;
@@ -42,19 +42,19 @@ function p(l) {
                 inputRef: x,
                 maxLength: v.l$U,
                 value: a,
-                placeholder: m.ZP.getName(e),
+                placeholder: k.ZP.getName(e),
                 onChange: i,
                 autoFocus: !0,
             }),
-            null != d
+            null != o
                 ? (0, t.jsx)(u.Text, {
                       variant: "text-xs/normal",
                       color: "text-danger",
                       className: E.nickError,
-                      children: d,
+                      children: o,
                   })
                 : null,
-            o && !n
+            d && !n
                 ? (0, t.jsx)(s.zx, {
                       look: s.zx.Looks.LINK,
                       color: s.zx.Colors.LINK,
@@ -69,7 +69,7 @@ function p(l) {
 }
 let _ = function (l) {
     var n;
-    let { transitionState: e, user: s, guildId: c, onClose: m, analyticsSource: _, analyticsLocations: j } = l,
+    let { transitionState: e, user: s, guildId: c, onClose: k, analyticsSource: _, analyticsLocations: j } = l,
         b = (0, i.e7)([x.ZP], () => (null != c ? x.ZP.getMember(c, s.id) : null)),
         A = (0, i.e7)([N.Z, g.default, h.Z], () => {
             var l;
@@ -83,28 +83,28 @@ let _ = function (l) {
         }),
         [f, y] = r.useState(!1),
         [I, M] = r.useState(null != (n = null == b ? void 0 : b.nick) ? n : ""),
-        [Z, z] = r.useState({});
-    (0, d.ZP)(() => {
-        k.default.track(v.rMx.OPEN_MODAL, {
+        [Z, P] = r.useState({});
+    (0, o.ZP)(() => {
+        m.default.track(v.rMx.OPEN_MODAL, {
             type: "Change Server Identity",
             location: v.ZY5.GUILD_CHANNEL,
             source: _,
         });
     });
-    let P = (0, o.sE)(c, {
+    let G = (0, d.sE)(c, {
             location: null == j ? void 0 : j[0],
             targetUserId: s.id,
         }),
         S = r.useCallback(
             async (l) => {
-                var n, e, t, r, i, u, d, x, h;
+                var n, e, t, r, i, u, o, x, h;
                 l.preventDefault();
                 let N = null;
                 if (
                     (I !== (null != (n = null == b ? void 0 : b.nick) ? n : "") && ((N = null != N ? N : {}).nick = I),
                     null == N)
                 )
-                    return void m();
+                    return void k();
                 try {
                     y(!0),
                         await a.tn.patch({
@@ -112,8 +112,8 @@ let _ = function (l) {
                             body: N,
                             rejectWithError: !1,
                         }),
-                        P(o.jQ.CHANGE_NICKNAME),
-                        m();
+                        G(d.jQ.CHANGE_NICKNAME),
+                        k();
                 } catch (a) {
                     let l;
                     y(!1);
@@ -125,13 +125,13 @@ let _ = function (l) {
                                   : r.message) || C.intl.string(C.t.xex86u))
                         : (null == n ? void 0 : n.username) != null &&
                           (l =
-                              (null == (h = n.username) || null == (x = h._errors) || null == (d = x[0])
+                              (null == (h = n.username) || null == (x = h._errors) || null == (o = x[0])
                                   ? void 0
-                                  : d.message) || C.intl.string(C.t.xex86u)),
-                        z({ nick: l });
+                                  : o.message) || C.intl.string(C.t.xex86u)),
+                        P({ nick: l });
                 }
             },
-            [c, I, m, s, b, P],
+            [c, I, k, s, b, G],
         );
     return (0, t.jsx)(u.Y0X, {
         "aria-label": C.intl.string(C.t["PKQB/P"]),
@@ -142,7 +142,7 @@ let _ = function (l) {
             children: [
                 (0, t.jsx)(u.xBx, {
                     separator: !1,
-                    children: (0, t.jsx)(u.X6q, {
+                    children: (0, t.jsx)(u.Heading, {
                         variant: "heading-lg/semibold",
                         children: C.intl.string(C.t.dilOFx),
                     }),
@@ -159,19 +159,19 @@ let _ = function (l) {
                     }),
                 }),
                 (0, t.jsx)(u.mzw, {
-                    children: (0, t.jsxs)(u.hE2, {
+                    children: (0, t.jsxs)(u.ButtonGroup, {
                         direction: "horizontal-reverse",
                         children: [
-                            (0, t.jsx)(u.zxk, {
+                            (0, t.jsx)(u.Button, {
                                 variant: "primary",
                                 text: C.intl.string(C.t.R3BPHx),
                                 type: "submit",
                                 disabled: f,
                             }),
-                            (0, t.jsx)(u.zxk, {
+                            (0, t.jsx)(u.Button, {
                                 variant: "secondary",
                                 text: C.intl.string(C.t["ETE/oK"]),
-                                onClick: m,
+                                onClick: k,
                             }),
                         ],
                     }),

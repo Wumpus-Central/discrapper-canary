@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(951288),
     l = n(647438),
     i = n(399606),
@@ -36,7 +36,7 @@ function h(e) {
     }
     return e;
 }
-function x(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -54,11 +54,11 @@ function x(e, t) {
         e
     );
 }
-function g(e) {
+function x(e) {
     var t;
     let {
             guild: n,
-            prompts: g,
+            prompts: x,
             completeOnboarding: v,
             setCurrentStep: j,
             disableTracking: _,
@@ -75,7 +75,7 @@ function g(e) {
                 try {
                     await s.ZP.submitVerificationForm(
                         n.id,
-                        x(h({}, P), { formFields: [x(h({}, y), { response: N })] }),
+                        g(h({}, P), { formFields: [g(h({}, y), { response: N })] }),
                     );
                 } catch (e) {}
                 v();
@@ -116,7 +116,7 @@ function g(e) {
                                   color: "text-muted",
                                   children: f.intl.string(f.t["b1JC+v"]),
                               }),
-                              (0, r.jsx)(a.X6q, {
+                              (0, r.jsx)(a.Heading, {
                                   variant: "heading-xl/semibold",
                                   children: f.intl.string(f.t.prJqwc),
                               }),
@@ -157,7 +157,7 @@ function g(e) {
                                   className: p.leftButtons,
                                   children:
                                       -1 !== b &&
-                                      (0, r.jsx)(a.zxk, {
+                                      (0, r.jsx)(a.Button, {
                                           variant: "secondary",
                                           size: "md",
                                           text: f.intl.string(f.t["13/7kZ"]),
@@ -165,7 +165,7 @@ function g(e) {
                                               !_ &&
                                                   (d.default.track(
                                                       m.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
-                                                      x(h({}, (0, o.hH)(n.id)), {
+                                                      g(h({}, (0, o.hH)(n.id)), {
                                                           step: -1,
                                                           skipped: !1,
                                                           back: !0,
@@ -177,9 +177,9 @@ function g(e) {
                                                   b >= 0 &&
                                                       d.default.track(
                                                           m.rMx.GUILD_ONBOARDING_STEP_VIEWED,
-                                                          x(h({}, (0, o.hH)(n.id)), {
+                                                          g(h({}, (0, o.hH)(n.id)), {
                                                               step: b,
-                                                              required: g[b].required,
+                                                              required: x[b].required,
                                                           }),
                                                       )),
                                                   j(b);
@@ -197,7 +197,7 @@ function g(e) {
                                           color: "text-muted",
                                           children: N ? f.intl.string(f.t.arAe3N) : f.intl.string(f.t.D0CVAQ),
                                       }),
-                                      (0, r.jsx)(a.zxk, {
+                                      (0, r.jsx)(a.Button, {
                                           variant: "primary",
                                           size: "md",
                                           text: "".concat(f.intl.string(f.t["8SuVoK"]), " \uD83C\uDF89"),

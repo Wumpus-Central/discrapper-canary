@@ -23,7 +23,7 @@ function m(e) {
     return (0, r.jsxs)("div", {
         className: u.sectionContainer,
         children: [
-            (0, r.jsx)(i.X6q, {
+            (0, r.jsx)(i.Heading, {
                 variant: "heading-lg/semibold",
                 color: "header-primary",
                 children: d.intl.string(d.t.QzDgMj),
@@ -35,7 +35,7 @@ function m(e) {
                         (0, r.jsxs)("ul", {
                             className: u.intentsList,
                             children: [
-                                (0, r.jsx)(i.X6q, {
+                                (0, r.jsx)(i.Heading, {
                                     variant: "heading-md/semibold",
                                     color: "header-secondary",
                                     children: d.intl.string(d.t.U6KH5e),
@@ -89,7 +89,7 @@ function h(e) {
             (0, r.jsxs)("div", {
                 className: u.intentTextContainer,
                 children: [
-                    (0, r.jsx)(i.X6q, {
+                    (0, r.jsx)(i.Heading, {
                         variant: "heading-md/semibold",
                         color: "header-secondary",
                         children: n,

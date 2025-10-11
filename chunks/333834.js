@@ -41,7 +41,7 @@ function T(e) {
             direction: "horizontal",
             align: "center",
             children: [
-                (0, r.jsx)(p.X6q, {
+                (0, r.jsx)(p.Heading, {
                     variant: "text-sm/medium",
                     color: "text-secondary",
                     className: Z.messagesGroupHeader,

@@ -96,7 +96,7 @@ let Z = () => {
     F = () =>
         (0, r.jsx)("div", {
             className: D.mostPopularPill,
-            children: (0, r.jsx)(u.X6q, {
+            children: (0, r.jsx)(u.Heading, {
                 className: D.mostPopularText,
                 variant: "heading-deprecated-12/extrabold",
                 children: w.intl.string(w.t["o/oRJC"]),
@@ -211,7 +211,7 @@ let Z = () => {
         if (!G || !W) return null;
         let eu = ec ? w.intl.string(w.t.XXENra) : w.intl.string(w.t.ED4UVF),
             ed = {
-                label: (0, r.jsx)(u.X6q, {
+                label: (0, r.jsx)(u.Heading, {
                     className: D.__invalid_textColor,
                     variant: "heading-lg/extrabold",
                     children: eu,
@@ -309,7 +309,7 @@ let Z = () => {
                 className: o()(D.root, a),
                 "data-testid": "v2-marketing-page-comparison-table",
                 children: [
-                    (0, r.jsx)(u.X6q, {
+                    (0, r.jsx)(u.Heading, {
                         className: o()(D.titleText, D.__invalid_textColor),
                         variant: "heading-xxl/extrabold",
                         children: null != L ? L : w.intl.string(w.t.FIbMh4),

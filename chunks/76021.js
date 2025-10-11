@@ -65,7 +65,9 @@ function m(e, t) {
 function g(e, t, _) {
     if (d.isPlatformEmbedded)
         (0, i.ZDy)(async () => {
-            let { default: t } = await Promise.all([n.e("38697"), n.e("46746"), n.e("53448")]).then(n.bind(n, 60594));
+            let { default: t } = await Promise.all([n.e("38697"), n.e("4093"), n.e("47863"), n.e("53448")]).then(
+                n.bind(n, 60594),
+            );
             return (n) => {
                 var i;
                 return (0, r.jsx)(
@@ -82,9 +84,9 @@ function g(e, t, _) {
         var h;
         let n = s.Z.getChannel(t),
             r = (0, o.Z)(
-                f.tI.PRESET_CUSTOM,
-                f.LY.RESOLUTION_1080,
-                f.ws.FPS_30,
+                f.ApplicationStreamPresets.PRESET_CUSTOM,
+                f.ApplicationStreamResolutions.RESOLUTION_1080,
+                f.ApplicationStreamFPS.FPS_30,
                 u.default.getCurrentUser(),
                 null == (h = l.Z.getGuild(e)) ? void 0 : h.premiumTier,
                 n,

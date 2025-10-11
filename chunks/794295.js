@@ -94,7 +94,7 @@ let g = 1,
             ),
             I = o().sanitizeUrl(d);
         return (0, r.jsx)(
-            s.eee,
+            s.Anchor,
             p(f({}, b), {
                 title: a,
                 target: "_blank",

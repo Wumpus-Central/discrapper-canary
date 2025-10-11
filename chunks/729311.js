@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    s = n(481060),
-    a = n(852860),
+    a = n(481060),
+    s = n(852860),
     o = n(111028),
     c = n(977258),
     d = n(45966),
@@ -17,11 +17,11 @@ var r = n(951288),
     p = n(958832),
     f = n(324067),
     h = n(984933),
-    x = n(259580),
-    b = n(999382),
+    b = n(259580),
+    x = n(999382),
     j = n(743475),
-    _ = n(889369),
-    v = n(570961),
+    v = n(889369),
+    _ = n(570961),
     C = n(208665),
     O = n(868814),
     y = n(974513),
@@ -33,21 +33,21 @@ var r = n(951288),
     P = n(430864);
 function w(e) {
     let { guild: t } = e,
-        a = (0, l.e7)([d.Z], () => d.Z.getEnabled(t.id)),
+        s = (0, l.e7)([d.Z], () => d.Z.getEnabled(t.id)),
         f = (0, l.e7)([p.Z], () => p.Z.hasFetched(t.id)),
         h = (0, O.Z)(t),
-        x = (0, l.e7)([_.Z], () => _.Z.editedDefaultChannelIds),
-        b = h.filter((e) => !x.has(e.id)),
-        [v, C] = i.useState(!1);
+        b = (0, l.e7)([v.Z], () => v.Z.editedDefaultChannelIds),
+        x = h.filter((e) => !b.has(e.id)),
+        [_, C] = i.useState(!1);
     return (i.useEffect(() => {
-        f || a || (0, m.S)(t.id);
-    }, [t.id, f, a]),
-    v || 0 === b.length)
+        f || s || (0, m.S)(t.id);
+    }, [t.id, f, s]),
+    _ || 0 === x.length)
         ? null
         : (0, r.jsxs)("div", {
               className: T.recommendations,
               children: [
-                  (0, r.jsx)(s.Text, {
+                  (0, r.jsx)(a.Text, {
                       variant: "text-md/medium",
                       color: "header-primary",
                       children: S.intl.string(S.t.NN7rDw),
@@ -55,21 +55,21 @@ function w(e) {
                   (0, r.jsxs)("div", {
                       className: T.recsSubheader,
                       children: [
-                          (0, r.jsx)(s.Text, {
+                          (0, r.jsx)(a.Text, {
                               variant: "text-xs/normal",
                               color: "text-muted",
                               children: S.intl.string(S.t["3Uuql5"]),
                           }),
-                          (0, r.jsxs)(s.P3F, {
+                          (0, r.jsxs)(a.P3F, {
                               className: T.dismissAll,
                               onClick: () => C(!0),
                               children: [
-                                  (0, r.jsx)(s.dz2, {
+                                  (0, r.jsx)(a.dz2, {
                                       size: "xxs",
                                       color: "currentColor",
                                       className: T.checkmark,
                                   }),
-                                  (0, r.jsx)(s.Text, {
+                                  (0, r.jsx)(a.Text, {
                                       className: T.dismissAllText,
                                       variant: "text-xs/medium",
                                       color: "text-brand",
@@ -81,7 +81,7 @@ function w(e) {
                   }),
                   (0, r.jsx)("div", {
                       className: T.recommendedChannels,
-                      children: b.map((e, i) =>
+                      children: x.map((e, i) =>
                           (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsxs)("div", {
@@ -99,7 +99,7 @@ function w(e) {
                                                           }),
                                                           (0, r.jsx)(o.Z, {
                                                               className: T.__invalid_name,
-                                                              children: (0, r.jsx)(s.Text, {
+                                                              children: (0, r.jsx)(a.Text, {
                                                                   className: T.__invalid_channelText,
                                                                   variant: "text-md/medium",
                                                                   lineClamp: 1,
@@ -114,7 +114,7 @@ function w(e) {
                                                             o.Z,
                                                             {
                                                                 className: P.markup,
-                                                                children: (0, r.jsx)(s.Text, {
+                                                                children: (0, r.jsx)(a.Text, {
                                                                     className: T.topic,
                                                                     variant: "text-xs/normal",
                                                                     children: g.Z.parseTopic(e.topic, !0, {
@@ -128,28 +128,28 @@ function w(e) {
                                               ],
                                           }),
                                           (0, c.s)(t.id, e.id)
-                                              ? (0, r.jsx)(s.zxk, {
+                                              ? (0, r.jsx)(a.Button, {
                                                     size: "sm",
                                                     variant: "primary",
                                                     text: S.intl.string(S.t.OYkgVl),
                                                     onClick: () => (0, j.pt)(e.id),
                                                 })
-                                              : (0, r.jsx)(s.zxk, {
+                                              : (0, r.jsx)(a.Button, {
                                                     size: "sm",
                                                     variant: "secondary",
                                                     text: S.intl.string(S.t.zA9d1N),
-                                                    icon: s.mBM,
+                                                    icon: a.mBM,
                                                     iconPosition: "start",
                                                     onClick: () => {
                                                         var i;
                                                         return (
                                                             (i = e.id),
-                                                            void (0, s.ZDy)(async () => {
+                                                            void (0, a.ZDy)(async () => {
                                                                 let { default: e } = await n
                                                                     .e("35641")
                                                                     .then(n.bind(n, 89216));
                                                                 return (n) => {
-                                                                    var l, s;
+                                                                    var l, a;
                                                                     return (0, r.jsx)(
                                                                         e,
                                                                         ((l = (function (e) {
@@ -192,7 +192,7 @@ function w(e) {
                                                                             }
                                                                             return e;
                                                                         })({}, n)),
-                                                                        (s = s =
+                                                                        (a = a =
                                                                             {
                                                                                 guildId: t.id,
                                                                                 startingChannelId: i,
@@ -200,7 +200,7 @@ function w(e) {
                                                                         Object.getOwnPropertyDescriptors
                                                                             ? Object.defineProperties(
                                                                                   l,
-                                                                                  Object.getOwnPropertyDescriptors(s),
+                                                                                  Object.getOwnPropertyDescriptors(a),
                                                                               )
                                                                             : (function (e, t) {
                                                                                   var n = Object.keys(e);
@@ -212,12 +212,12 @@ function w(e) {
                                                                                       n.push.apply(n, r);
                                                                                   }
                                                                                   return n;
-                                                                              })(Object(s)).forEach(function (e) {
+                                                                              })(Object(a)).forEach(function (e) {
                                                                                   Object.defineProperty(
                                                                                       l,
                                                                                       e,
                                                                                       Object.getOwnPropertyDescriptor(
-                                                                                          s,
+                                                                                          a,
                                                                                           e,
                                                                                       ),
                                                                                   );
@@ -231,7 +231,7 @@ function w(e) {
                                                 }),
                                       ],
                                   }),
-                                  i < b.length - 1 ? (0, r.jsx)("div", { className: T.separator }) : null,
+                                  i < x.length - 1 ? (0, r.jsx)("div", { className: T.separator }) : null,
                               ],
                           }),
                       ),
@@ -242,25 +242,25 @@ function w(e) {
 }
 function Z(e) {
     let { saveOnClose: t = !1 } = e,
-        n = (0, l.e7)([b.Z], () => b.Z.getGuild()),
-        a = (0, l.e7)([d.Z], () => d.Z.isLoading()),
+        n = (0, l.e7)([x.Z], () => x.Z.getGuild()),
+        s = (0, l.e7)([d.Z], () => d.Z.isLoading()),
         o = (0, l.e7)([h.ZP], () => h.ZP.getChannels(null == n ? void 0 : n.id)),
         c = (0, l.e7)([f.Z], () => f.Z.getCategories(null == n ? void 0 : n.id)),
         u = (0, l.e7)([C.Z], () => C.Z.advancedMode),
         g = i.useRef(null),
         [m, p] = i.useState(!1),
-        _ = i.useRef(n);
+        v = i.useRef(n);
     return (i.useEffect(() => {
-        _.current = n;
+        v.current = n;
     }),
     i.useEffect(() => {
         if (t) {
-            let { current: e } = _;
+            let { current: e } = v;
             return () => {
                 null != e &&
                     (0, j.DO)(e)
                         .then(() => {
-                            u && (0, v.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
+                            u && (0, _.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
                         })
                         .catch(() => {});
             };
@@ -268,29 +268,29 @@ function Z(e) {
     }, [t, u]),
     null == n)
         ? null
-        : a
-          ? (0, r.jsx)(s.$jN, {})
+        : s
+          ? (0, r.jsx)(a.$jN, {})
           : (0, r.jsxs)("div", {
                 className: T.columns,
                 children: [
                     (0, r.jsxs)("div", {
                         className: T.channelBrowser,
                         children: [
-                            (0, r.jsx)(s.P3F, {
+                            (0, r.jsx)(a.P3F, {
                                 className: T.collapseButton,
                                 onClick: () => p((e) => !e),
-                                children: (0, r.jsx)(x.Z, {
-                                    direction: m ? x.Z.Directions.DOWN : x.Z.Directions.UP,
+                                children: (0, r.jsx)(b.Z, {
+                                    direction: m ? b.Z.Directions.DOWN : b.Z.Directions.UP,
                                     height: 16,
                                     width: 16,
                                 }),
                             }),
-                            (0, r.jsx)(s.X6q, {
+                            (0, r.jsx)(a.Heading, {
                                 className: T.header,
                                 variant: "heading-lg/extrabold",
                                 children: S.intl.string(S.t["4GSygo"]),
                             }),
-                            (0, r.jsx)(s.Text, {
+                            (0, r.jsx)(a.Text, {
                                 variant: "text-sm/normal",
                                 color: "header-secondary",
                                 children: S.intl.string(S.t.Kq7FAQ),
@@ -317,12 +317,12 @@ function Z(e) {
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)("div", { className: T.largeSeparator }),
-                                        (0, r.jsx)(s.X6q, {
+                                        (0, r.jsx)(a.Heading, {
                                             className: T.prejoinHeader,
                                             variant: "heading-lg/extrabold",
                                             children: S.intl.string(S.t.g2Rnpa),
                                         }),
-                                        (0, r.jsx)(s.Text, {
+                                        (0, r.jsx)(a.Text, {
                                             className: T.prejoinSubHeader,
                                             variant: "text-sm/normal",
                                             color: "header-secondary",
@@ -352,16 +352,16 @@ function Z(e) {
             });
 }
 function R() {
-    let e = (0, l.e7)([b.Z], () => b.Z.getProps().guild),
-        t = (0, l.e7)([_.Z], () => _.Z.submitting),
+    let e = (0, l.e7)([x.Z], () => x.Z.getProps().guild),
+        t = (0, l.e7)([v.Z], () => v.Z.submitting),
         n = (0, l.e7)([C.Z], () => C.Z.advancedMode);
     return null == e
         ? null
-        : (0, r.jsx)(a.Z, {
+        : (0, r.jsx)(s.Z, {
               onSave: () => {
                   (0, j.DO)(e)
                       .then(() => {
-                          n && (0, v.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
+                          n && (0, _.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
                       })
                       .catch(() => {});
               },

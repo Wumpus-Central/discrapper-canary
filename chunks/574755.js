@@ -39,7 +39,7 @@ function O(e) {
                             className: t,
                             children: [
                                 n
-                                    ? (0, r.jsxs)(s.X6q, {
+                                    ? (0, r.jsxs)(s.Heading, {
                                           variant: "heading-lg/semibold",
                                           children: [y.intl.string(y.t.z2jK6e), " ", (0, r.jsx)(g.Z, {})],
                                       })

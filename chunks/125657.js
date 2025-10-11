@@ -19,7 +19,7 @@ function j(e) {
     var t;
     let { guild: n, applicationIntegration: j } = e,
         { application: v } = j,
-        O = null != v.bot ? new b.Z(v.bot) : null,
+        O = null != v.bot ? new b.default(v.bot) : null,
         y = (0, a.e7)([g.ZP], () => (null != O ? g.ZP.getMember(n.id, O.id) : null), [O, n]),
         _ = (0, a.e7)([f.Z], () => f.Z.getEveryoneRole(n)),
         C = (0, a.Wu)([f.Z], () => {

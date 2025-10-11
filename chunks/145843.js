@@ -22,7 +22,7 @@ function u(e) {
         null == d || d();
     };
     return (0, r.jsx)(
-        a.zxk,
+        a.Button,
         {
             variant: "primary",
             size: "md",

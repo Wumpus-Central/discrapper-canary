@@ -108,7 +108,7 @@ function O() {
                                 : null,
                             (0, r.jsx)("div", {
                                 className: b.button,
-                                children: (0, r.jsx)(l.zxk, {
+                                children: (0, r.jsx)(l.Button, {
                                     variant: "primary",
                                     text: E.intl.string(E.t.dmBSKi),
                                     disabled: v,

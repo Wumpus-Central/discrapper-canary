@@ -12,7 +12,6 @@ e.exports = {
     recipientLabels: "recipientLabels__28554",
     recipientLabel: "recipientLabel__28554",
     recipientSublabel: "recipientSublabel__28554",
-    checkbox: "checkbox__28554",
     disabled: "disabled__28554",
     footer: "footer__28554",
     footerContent: "footerContent__28554",

@@ -41,7 +41,7 @@ class I extends o.Z {
             g = d.Z.getGoLiveSource();
         if (null == o || null == g) return;
         let I = l.Z.getState();
-        if (I.preset !== m.tI.PRESET_AUTO) return;
+        if (I.preset !== m.ApplicationStreamPresets.PRESET_AUTO) return;
         if ((null == (e = c.Z.getStreamerActiveStreamMetadata()) ? void 0 : e.id) != null)
             return void O.info("Skipping auto quality checker for game stream.");
         let T = s.Z.getAccumulatedPerformanceStats(o.getMediaEngineConnectionId(), r.ownerId, "long");
@@ -49,20 +49,21 @@ class I extends o.Z {
         let S = _.default.getCurrentUser(),
             A = u.Z.getGuild(r.guildId),
             [C, N] =
-                null != (t = (0, h.Z)(m.tI.PRESET_DOCUMENTS, S, null == A ? void 0 : A.premiumTier))
+                null !=
+                (t = (0, h.Z)(m.ApplicationStreamPresets.PRESET_DOCUMENTS, S, null == A ? void 0 : A.premiumTier))
                     ? t
-                    : [m.LY.RESOLUTION_SOURCE, m.ws.FPS_5],
+                    : [m.ApplicationStreamResolutions.RESOLUTION_SOURCE, m.ApplicationStreamFPS.FPS_5],
             [R, P] =
-                null != (n = (0, h.Z)(m.tI.PRESET_VIDEO, S, null == A ? void 0 : A.premiumTier))
+                null != (n = (0, h.Z)(m.ApplicationStreamPresets.PRESET_VIDEO, S, null == A ? void 0 : A.premiumTier))
                     ? n
-                    : [m.LY.RESOLUTION_720, m.ws.FPS_30],
+                    : [m.ApplicationStreamResolutions.RESOLUTION_720, m.ApplicationStreamFPS.FPS_30],
             w = null;
         if (
             (T.entropy < E && (I.resolution !== C || I.fps !== N)
                 ? (O.info("Low entropy average, switching to screenshare preset."),
                   (w = {
                       qualityOptions: {
-                          preset: m.tI.PRESET_AUTO,
+                          preset: m.ApplicationStreamPresets.PRESET_AUTO,
                           resolution: C,
                           frameRate: N,
                       },
@@ -73,7 +74,7 @@ class I extends o.Z {
                   (O.info("High entropy average, switching to video preset."),
                   (w = {
                       qualityOptions: {
-                          preset: m.tI.PRESET_AUTO,
+                          preset: m.ApplicationStreamPresets.PRESET_AUTO,
                           resolution: R,
                           frameRate: P,
                       },

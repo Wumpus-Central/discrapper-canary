@@ -133,7 +133,7 @@ let A = (e) => {
             },
             react: (e, t, n) =>
                 (0, r.jsx)(
-                    c.eee,
+                    c.Anchor,
                     {
                         href: l().sanitizeUrl(e.target),
                         title: e.title,

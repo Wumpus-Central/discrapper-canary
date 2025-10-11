@@ -31,7 +31,7 @@ function m(e) {
     return {
         key: e.suggested_user.id,
         name: null == (t = l().first(e.reasons)) ? void 0 : t.name,
-        user: new o.Z(e.suggested_user),
+        user: new o.default(e.suggested_user),
         mutualFriendsCount: e.mutual_friends_count,
         contactNames: n,
     };

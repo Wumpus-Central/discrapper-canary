@@ -39,14 +39,14 @@ function E(e) {
             className: _.modalFooter,
             children: [
                 (null != i && (!(0, u.qS)(i) || d)) || null === f
-                    ? (0, r.jsx)(o.zxk, {
+                    ? (0, r.jsx)(o.Button, {
                           variant: "primary",
                           text: O.intl.string(O.t.Jh8fJy),
                           onClick: l,
                           disabled: a,
                       })
                     : null == i && (d || !(0, u.G1)(n))
-                      ? (0, r.jsx)(o.zxk, {
+                      ? (0, r.jsx)(o.Button, {
                             variant: "primary",
                             text: O.intl.string(O.t.fYfGgI),
                             onClick: () => c(null == f ? void 0 : f.skuId),
@@ -67,7 +67,7 @@ function E(e) {
                           product: n,
                           onClose: s,
                       })
-                    : (0, r.jsx)(o.zxk, {
+                    : (0, r.jsx)(o.Button, {
                           variant: "secondary",
                           text: O.intl.string(O.t["ETE/oK"]),
                           onClick: s,
@@ -115,8 +115,8 @@ function C(e) {
             ];
         }, [C, P, v]),
         { product: w, purchase: N } = (0, d.Z)(null == S ? void 0 : S.skuId),
-        k = i.useRef(null),
-        Z = b.ZP.canUseCollectibles(t),
+        Z = i.useRef(null),
+        k = b.ZP.canUseCollectibles(t),
         D =
             void 0 === x
                 ? (null == C ? void 0 : C.skuId) === (null == m ? void 0 : m.skuId)
@@ -145,7 +145,7 @@ function C(e) {
                 separator: !1,
                 className: _.modalHeader,
                 children: [
-                    (0, r.jsx)(o.X6q, {
+                    (0, r.jsx)(o.Heading, {
                         variant: "heading-lg/semibold",
                         children: O.intl.string(O.t["/6nv6O"]),
                     }),
@@ -164,7 +164,7 @@ function C(e) {
                         user: t,
                         guild: n,
                         pendingProfileEffect: C,
-                        selectedProfileEffectRef: k,
+                        selectedProfileEffectRef: Z,
                         onSelect: T,
                         onOpenShop: U,
                     }),
@@ -187,7 +187,7 @@ function C(e) {
                 onOpenShop: U,
                 product: w,
                 purchase: N,
-                canUseCollectibles: Z,
+                canUseCollectibles: k,
                 selectedProfileEffect: C,
                 disableApplyButton: D,
                 analyticsLocations: h,

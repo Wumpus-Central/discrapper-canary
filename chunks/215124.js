@@ -15,7 +15,7 @@ function g(e) {
         p = (0, c.qi)(t, { includeSoftDeleted: !0 }),
         f = (0, s.ue)(t, { publishedOnly: !1 }),
         { allowSelfRemoveMonetization: h } = (0, a.gX)(t),
-        x = g.filter((e) => {
+        b = g.filter((e) => {
             var t;
             let n = Object.values(null != (t = e.ppgs) ? t : {})[0];
             return (
@@ -23,9 +23,9 @@ function g(e) {
                 (null == n ? void 0 : n.status) === d.x_.PAYOUT_DEFERRED
             );
         }),
-        b = p.length > 0,
+        x = p.length > 0,
         j = f.length > 0,
-        v = x.length > 0;
+        v = b.length > 0;
     return null == m
         ? null
         : (0, r.jsxs)("div", {
@@ -35,10 +35,10 @@ function g(e) {
                       children: u.intl.format(u.t.fvOn6O, { guildName: m.name }),
                   }),
                   (0, r.jsx)(l.LZC, { size: 16 }),
-                  (0, r.jsx)(l.zxk, {
+                  (0, r.jsx)(l.Button, {
                       variant: "critical-primary",
                       text: u.intl.string(u.t.FrOFSk),
-                      disabled: !h || b || j || v,
+                      disabled: !h || x || j || v,
                       onClick: () => {
                           (0, l.ZDy)(async () => {
                               let { default: e } = await n.e("35282").then(n.bind(n, 157429));

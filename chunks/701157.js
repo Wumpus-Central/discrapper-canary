@@ -28,7 +28,7 @@ let _ = 3,
                   className: f.wrapper,
                   children: [
                       t &&
-                          (0, r.jsx)(o.X6q, {
+                          (0, r.jsx)(o.Heading, {
                               variant: "heading-lg/semibold",
                               className: f.header,
                               children: d.intl.string(d.t.r90Wgo),

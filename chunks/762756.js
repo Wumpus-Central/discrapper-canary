@@ -41,7 +41,7 @@ class g extends (a = i.PureComponent) {
                           t,
                       )
                     : (0, r.jsx)(
-                          c.zxk,
+                          c.Button,
                           {
                               onClick: () => this.handleClick(e),
                               text: m.Z.getButtonTitle(e),
@@ -81,7 +81,7 @@ class g extends (a = i.PureComponent) {
                                     direction: "vertical",
                                     justify: "center",
                                     children: [
-                                        (0, r.jsx)(c.X6q, {
+                                        (0, r.jsx)(c.Heading, {
                                             variant: "heading-xl/normal",
                                             children: h.intl.string(h.t.Iz0kDg),
                                         }),

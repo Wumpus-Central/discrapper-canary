@@ -63,7 +63,7 @@ let c = {
                     }),
                     g =
                         n &&
-                        (0, r.jsx)(s.zxk, {
+                        (0, r.jsx)(s.Button, {
                             disabled: f.length === d.length,
                             text: "Reset",
                             onClick: h,

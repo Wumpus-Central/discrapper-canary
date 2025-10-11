@@ -131,7 +131,7 @@ let P = (e, t) =>
             en =
                 null == X
                     ? null
-                    : (0, r.jsx)(o.zxk, {
+                    : (0, r.jsx)(o.Button, {
                           variant: "primary",
                           size: "md",
                           fullWidth: !0,
@@ -143,7 +143,7 @@ let P = (e, t) =>
             ei =
                 null != en || x
                     ? null
-                    : (0, r.jsx)(o.zxk, {
+                    : (0, r.jsx)(o.Button, {
                           variant: "primary",
                           size: "md",
                           fullWidth: !0,

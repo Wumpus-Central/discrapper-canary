@@ -78,7 +78,7 @@ function P(e, t) {
 let w = () =>
         (0, r.jsx)("div", {
             className: v.comparisonTablePill,
-            children: (0, r.jsx)(c.X6q, {
+            children: (0, r.jsx)(c.Heading, {
                 className: v.mostPopularText,
                 variant: "text-xs/bold",
                 children: O.intl.string(O.t.TR2B4e),
@@ -87,7 +87,7 @@ let w = () =>
     D = () =>
         (0, r.jsx)("div", {
             className: v.comparisonTablePill,
-            children: (0, r.jsx)(c.X6q, {
+            children: (0, r.jsx)(c.Heading, {
                 className: v.mostPopularText,
                 variant: "heading-deprecated-12/extrabold",
                 children: O.intl.string(O.t.IBYG5e),
@@ -205,7 +205,7 @@ let w = () =>
                     (0, r.jsx)("th", {
                         scope: "col",
                         className: v.headerLabelCell,
-                        children: (0, r.jsx)(c.X6q, {
+                        children: (0, r.jsx)(c.Heading, {
                             className: v.__invalid_textColor,
                             variant: "heading-xl/semibold",
                             children: O.intl.string(O.t.XXENra),

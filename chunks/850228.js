@@ -30,7 +30,7 @@ class _ extends i.PureComponent {
                 c
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(o.X6q, {
+                              (0, r.jsx)(o.Heading, {
                                   variant: l.length < 25 ? "heading-xl/bold" : "heading-lg/bold",
                                   className: f.connectionInstructions,
                                   children: d.intl.format(d.t["ze/1yM"], { cashtag: l }),

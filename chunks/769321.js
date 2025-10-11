@@ -26,7 +26,7 @@ function g(e) {
                 children:
                     null != n.application.bot
                         ? (0, l.jsx)(a.Z, {
-                              user: new p.Z(n.application.bot),
+                              user: new p.default(n.application.bot),
                               size: s.EFr.SIZE_16,
                           })
                         : (0, l.jsx)(s.IMN, {

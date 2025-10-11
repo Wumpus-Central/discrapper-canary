@@ -14,7 +14,7 @@ let d = (e) => {
     return (0, a.jsxs)("div", {
         className: c.container,
         children: [
-            (0, a.jsx)(i.X6q, {
+            (0, a.jsx)(i.Heading, {
                 variant: "heading-lg/bold",
                 className: c.title,
                 children: o.intl.string(s.default.v52itr),
@@ -28,7 +28,7 @@ let d = (e) => {
             (0, a.jsx)(i.Kqy, {
                 direction: "horizontal",
                 justify: "end",
-                children: (0, a.jsx)(i.zxk, {
+                children: (0, a.jsx)(i.Button, {
                     variant: "primary",
                     text: o.intl.string(s.default.GDsHl5),
                     onClick: d,

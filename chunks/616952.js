@@ -8,7 +8,7 @@ var i = n(882037),
 function o() {
     let { required: e, checked: t } = (0, i.MD)();
     return e
-        ? (0, r.jsx)(l.Z, {
+        ? (0, r.jsx)(l.default, {
               value: t,
               subText: s.intl.string(s.t["0p3R09"]),
               onChange: i.ZJ,

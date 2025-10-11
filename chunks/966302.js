@@ -371,7 +371,7 @@ function es(e) {
                                 ? (0, r.jsx)("div", {
                                       "data-button-hoisted-classname-wrapper": !0,
                                       className: z.previewButton,
-                                      children: (0, r.jsx)(c.zxk, {
+                                      children: (0, r.jsx)(c.Button, {
                                           variant: "secondary",
                                           size: "sm",
                                           text: W.intl.string(W.t["8B0UDg"]),

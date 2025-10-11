@@ -80,7 +80,7 @@ function f() {
             () =>
                 Object.values(i.V).map((e) =>
                     (0, a.jsx)(
-                        s.zxk,
+                        s.Button,
                         {
                             variant: "primary",
                             text: e,
@@ -113,7 +113,7 @@ function f() {
               children: [
                   (0, a.jsx)("div", {
                       className: p.section,
-                      children: (0, a.jsx)(s.X6q, {
+                      children: (0, a.jsx)(s.Heading, {
                           variant: "heading-md/normal",
                           children: "Current guild: ".concat(t),
                       }),
@@ -135,7 +135,7 @@ function f() {
                           }),
                           (0, a.jsx)("div", {
                               className: p.buttonContainer,
-                              children: (0, a.jsx)(s.zxk, {
+                              children: (0, a.jsx)(s.Button, {
                                   variant: "primary",
                                   text: "Remove IP Address & Game Server Panel URL",
                                   onClick: v,
@@ -145,7 +145,7 @@ function f() {
                               variant: "eyebrow",
                               children: "Reset server",
                           }),
-                          (0, a.jsx)(s.zxk, {
+                          (0, a.jsx)(s.Button, {
                               variant: "primary",
                               text: "Reset",
                               onClick: () => {

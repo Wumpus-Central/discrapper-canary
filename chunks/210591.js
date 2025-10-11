@@ -39,13 +39,13 @@ function f(e) {
         o = a.filter((e) => e).length / a.length,
         f = 1 === o,
         h = (0, c.q_F)({ width: "".concat(100 * o, "%") }),
-        x = [
+        b = [
             g.intl.format(g.t.wtQtXl, { promoPageGuideUrl: u.iv.PROMO_PAGE_GUIDE }),
             g.intl.format(g.t["0Fo0wc"], { caseStudiesUrl: u.iv.CASE_STUDIES }),
             g.intl.format(g.t["7JdzjI"], { subscriptionOfferingGuideUrl: u.iv.SUBSCRIPTION_OFFERING_GUIDE }),
             g.intl.format(g.t.zkXN6O, { tierStructureGuideUrl: u.iv.TIER_STRUCTURE_GUIDE }),
         ],
-        b = n
+        x = n
             ? null
             : (0, r.jsxs)(c.C3N, {
                   children: [
@@ -83,7 +83,7 @@ function f(e) {
                           label: g.intl.string(g.t.FO0AIS),
                           children: (0, r.jsx)(c.Kqy, {
                               gap: 8,
-                              children: x.map((e, t) =>
+                              children: b.map((e, t) =>
                                   (0, r.jsx)(
                                       "div",
                                       {
@@ -111,7 +111,7 @@ function f(e) {
                         className: m.headerBar,
                         onClick: () => l((e) => !e),
                         children: [
-                            (0, r.jsx)(c.X6q, {
+                            (0, r.jsx)(c.Heading, {
                                 variant: "heading-md/semibold",
                                 className: m.headerText,
                                 children: g.intl.string(g.t["2Xbd/P"]),
@@ -130,7 +130,7 @@ function f(e) {
                                 style: h,
                             }),
                         }),
-                    b,
+                    x,
                 ],
             }),
         }),

@@ -766,20 +766,20 @@ function b() {
                                 popoutWidth: 200,
                                 isDisabled: b,
                             }),
-                            (0, a.jsx)(s.zxk, {
+                            (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: "Create Stripe Credit Card",
                                 onClick: C,
                             }),
                             _.length > 0 &&
-                                (0, a.jsx)(s.zxk, {
+                                (0, a.jsx)(s.Button, {
                                     variant: "primary",
                                     size: "sm",
                                     text: "Delete All Payment Sources",
                                     onClick: E,
                                 }),
-                            (0, a.jsx)(s.zxk, {
+                            (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: "Reset API Rate limits and reload app",

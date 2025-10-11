@@ -93,7 +93,7 @@ let V = () =>
             }),
             (0, i.jsx)("div", {
                 className: U.emptyStateCTA,
-                children: (0, i.jsx)(d.eee, {
+                children: (0, i.jsx)(d.Anchor, {
                     href: w.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
                     children: k.intl.string(k.t["4iPfEB"]),
                 }),
@@ -325,15 +325,15 @@ class Q extends l.PureComponent {
                     case g.h8.GUILD:
                         return (0, p.jW)(e, async () => {
                             let { default: e } = await Promise.all([
+                                n.e("74318"),
                                 n.e("36599"),
                                 n.e("7654"),
-                                n.e("58175"),
                                 n.e("76692"),
                                 n.e("8271"),
                                 n.e("15851"),
                                 n.e("51453"),
                                 n.e("845"),
-                                n.e("58511"),
+                                n.e("59077"),
                                 n.e("6850"),
                                 n.e("58227"),
                                 n.e("44686"),

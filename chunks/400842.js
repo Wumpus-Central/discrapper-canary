@@ -35,7 +35,7 @@ let d = (e) => {
                 (0, n.jsxs)("div", {
                     className: c()(a.__invalid_checklistText, r && a.ineligibleRow),
                     children: [
-                        (0, n.jsx)(o.X6q, {
+                        (0, n.jsx)(o.Heading, {
                             variant: "heading-md/semibold",
                             className: a.checklistItemName,
                             children: t,
@@ -50,7 +50,7 @@ let d = (e) => {
                 null != d &&
                     (0, n.jsx)("div", {
                         className: a.eligibilityActionContainer,
-                        children: (0, n.jsx)(o.zxk, {
+                        children: (0, n.jsx)(o.Button, {
                             variant: "primary",
                             onClick: h,
                             text: d,

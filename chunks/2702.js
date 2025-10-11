@@ -29,9 +29,9 @@ function _(e) {
         [A, P] = i.useState(!1),
         C = (0, l.e7)([m.Z], () => m.Z.getErrors()),
         U = O.hasUniqueUsername(),
-        x = (0, g.a)(p, U, !1, O.username),
-        N = i.useRef(null),
-        w = i.useMemo(() => {
+        N = (0, g.a)(p, U, !1, O.username),
+        w = i.useRef(null),
+        x = i.useMemo(() => {
             var e, t, n;
             return null != (n = null == C || null == (e = C.username) ? void 0 : e[0])
                 ? n
@@ -42,11 +42,11 @@ function _(e) {
     i.useEffect(() => {
         if (a === u.Dvm.ENTERED) {
             var e;
-            null == (e = N.current) || e.focus();
+            null == (e = w.current) || e.focus();
         }
     }, [a]);
-    let k = L !== O.discriminator;
-    async function I(e) {
+    let I = L !== O.discriminator;
+    async function k(e) {
         e.preventDefault(), P(!0);
         let t = await (0, d.Mn)({
             username: p,
@@ -63,7 +63,7 @@ function _(e) {
                 separator: !1,
                 className: v.header,
                 children: [
-                    (0, r.jsx)(u.X6q, {
+                    (0, r.jsx)(u.Heading, {
                         color: "header-primary",
                         variant: "heading-xl/bold",
                         className: v.title,
@@ -82,7 +82,7 @@ function _(e) {
                 ],
             }),
             (0, r.jsxs)("form", {
-                onSubmit: I,
+                onSubmit: k,
                 children: [
                     (0, r.jsx)(u.hzk, {
                         className: v.content,
@@ -127,16 +127,16 @@ function _(e) {
                                                     })(
                                                         {
                                                             label: S.intl.string(S.t.TWzdWl),
-                                                            error: w,
+                                                            error: x,
                                                             name: "username",
                                                             value: p,
                                                             maxLength: h.l$U,
                                                             onChange: T,
-                                                            inputRef: N,
+                                                            inputRef: w,
                                                             fullWidth: !0,
                                                         },
                                                         ((n = O.hasUniqueUsername()),
-                                                        (0, o.EQ)(x)
+                                                        (0, o.EQ)(N)
                                                             .with(
                                                                 {
                                                                     type: c.K.ERROR,
@@ -168,7 +168,7 @@ function _(e) {
                                                     }),
                                             ],
                                         }),
-                                        k
+                                        I
                                             ? (0, r.jsx)(u.Text, {
                                                   variant: "text-xs/normal",
                                                   color: "header-secondary",
@@ -190,7 +190,7 @@ function _(e) {
                     }),
                     (0, r.jsxs)(u.mzw, {
                         children: [
-                            (0, r.jsx)(u.zxk, {
+                            (0, r.jsx)(u.Button, {
                                 variant: "primary",
                                 text: S.intl.string(S.t.i4jeWV),
                                 type: "submit",
@@ -199,7 +199,7 @@ function _(e) {
                             (0, r.jsx)("div", {
                                 "data-button-hoisted-classname-wrapper": !0,
                                 className: v.cancel,
-                                children: (0, r.jsx)(u.zxk, {
+                                children: (0, r.jsx)(u.Button, {
                                     variant: "secondary",
                                     text: S.intl.string(S.t["ETE/oK"]),
                                     onClick: _,

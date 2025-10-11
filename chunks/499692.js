@@ -57,7 +57,7 @@ function I(e) {
     return (0, r.jsxs)("div", {
         ref: o,
         children: [
-            (0, r.jsx)(m.X6q, {
+            (0, r.jsx)(m.Heading, {
                 className: l()(j.sectionTitle, { [j.titleExtraPadding]: 0 === n }),
                 variant: "heading-lg/semibold",
                 color: "header-primary",

@@ -19,7 +19,7 @@ let f = (e) => {
     return (0, r.jsxs)("div", {
         className: d.confirmationContainer,
         children: [
-            (0, r.jsx)(o.X6q, {
+            (0, r.jsx)(o.Heading, {
                 className: d.confirmationHeader,
                 variant: "heading-lg/extrabold",
                 children: u.intl.format(u.t.I5dYFh, {

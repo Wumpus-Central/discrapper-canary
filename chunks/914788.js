@@ -136,7 +136,7 @@ function G(e) {
     D = e.reduce((e, t) => {
         var n;
         return p(f({}, e), {
-            [t.id]: p(f({}, (0, o.Jh)(t)), {
+            [t.id]: p(f({}, (0, o.dangerouslyConstructGuildRecordFromUntypedObject)(t)), {
                 approximateMemberCount: null != (n = t.approximate_member_count) ? n : 0,
             }),
         });

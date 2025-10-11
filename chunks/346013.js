@@ -304,7 +304,7 @@ function G(e) {
                                             (0, r.jsx)(u.P3F, {
                                                 onClick: eu,
                                                 className: L.channelName,
-                                                children: (0, r.jsx)(u.X6q, {
+                                                children: (0, r.jsx)(u.Heading, {
                                                     variant: "heading-md/semibold",
                                                     color: "header-primary",
                                                     children: null != (M = V.channelName) ? M : V.guildName,
@@ -325,12 +325,12 @@ function G(e) {
                                 ],
                             }),
                             V.canAccess
-                                ? (0, r.jsx)(u.zxk, {
+                                ? (0, r.jsx)(u.Button, {
                                       variant: "primary",
                                       onClick: eu,
                                       text: V.ctaText,
                                   })
-                                : (0, r.jsx)(u.zxk, {
+                                : (0, r.jsx)(u.Button, {
                                       onClick: eu,
                                       variant: "primary",
                                       text: V.ctaText,

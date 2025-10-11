@@ -139,7 +139,7 @@ function B(e) {
                                     }),
                                     (0, r.jsxs)("div", {
                                         children: [
-                                            (0, r.jsx)(d.X6q, {
+                                            (0, r.jsx)(d.Heading, {
                                                 variant: "heading-md/semibold",
                                                 children: C,
                                             }),
@@ -232,7 +232,7 @@ let Z = function () {
                 let { subscriptionPlanId: t } = e;
                 return t === L.Xh.PREMIUM_YEAR_TIER_2;
             }),
-            u = (0, r.jsx)(d.X6q, {
+            u = (0, r.jsx)(d.Heading, {
                 variant: "heading-md/semibold",
                 children: k ? x.intl.string(x.t.wFsj3N) : void 0,
             }),
@@ -370,7 +370,7 @@ let Z = function () {
                   (0, r.jsx)("div", {
                       className: M.marginContainer,
                       children: (0, r.jsxs)(d.y5t, {
-                          component: (0, r.jsx)(d.X6q, {
+                          component: (0, r.jsx)(d.Heading, {
                               variant: "heading-md/semibold",
                               children: x.intl.string(x.t["9KeUbW"]),
                           }),

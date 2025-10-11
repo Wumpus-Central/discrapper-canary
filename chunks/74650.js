@@ -33,7 +33,7 @@ function x(e) {
                 }),
                 (0, a.jsxs)("div", {
                     children: [
-                        (0, a.jsx)(l.X6q, {
+                        (0, a.jsx)(l.Heading, {
                             variant: "heading-md/semibold",
                             color: "text-primary",
                             className: p.title,
@@ -47,7 +47,7 @@ function x(e) {
                     ],
                 }),
                 f
-                    ? (0, a.jsx)(l.zxk, {
+                    ? (0, a.jsx)(l.Button, {
                           text: m.intl.string(m.t.LhcHi4),
                           fullWidth: !0,
                           onClick: () => {

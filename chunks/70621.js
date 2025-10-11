@@ -12,7 +12,7 @@ let c = (e) => {
         children: (0, r.jsxs)("div", {
             className: s.previewCard,
             children: [
-                (0, r.jsx)(i.X6q, {
+                (0, r.jsx)(i.Heading, {
                     className: s.heading,
                     variant: "heading-md/semibold",
                     children: o.intl.string(o.t["5wnpFx"]),

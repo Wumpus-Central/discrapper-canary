@@ -2,8 +2,8 @@ n.d(t, { Z: () => D }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(137317),
-    s = n(442837),
-    a = n(692547),
+    a = n(442837),
+    s = n(692547),
     o = n(215569),
     c = n(780384),
     d = n(481060),
@@ -13,11 +13,11 @@ var r = n(951288),
     p = n(585483),
     f = n(999382),
     h = n(743475),
-    x = n(983135),
-    b = n(8426),
+    b = n(983135),
+    x = n(8426),
     j = n(969632),
-    _ = n(570961),
-    v = n(208665),
+    v = n(570961),
+    _ = n(208665),
     C = n(359191),
     O = n(84658),
     y = n(142961),
@@ -72,24 +72,24 @@ function R(e, t) {
     );
 }
 function D() {
-    let e = (0, s.e7)([f.Z], () => f.Z.getGuild());
+    let e = (0, a.e7)([f.Z], () => f.Z.getGuild());
     return null == e ? null : (0, r.jsx)(A, { guild: e });
 }
 function A(e) {
     let { guild: t } = e,
         f = t.id,
-        D = (0, s.e7)([C.Z], () => C.Z.getCurrentPage()),
+        D = (0, a.e7)([C.Z], () => C.Z.getCurrentPage()),
         A = (0, y.Z)(f),
         {
             hasChanges: L,
             hasConfiguredAnythingForCurrentStep: k,
             hasErrors: G,
-        } = (0, s.cj)([C.Z], () => ({
+        } = (0, a.cj)([C.Z], () => ({
             hasChanges: C.Z.hasChanges(),
             hasConfiguredAnythingForCurrentStep: C.Z.hasConfiguredAnythingForCurrentStep(),
             hasErrors: C.Z.hasErrors(),
         })),
-        M = (0, s.e7)([C.Z], () => {
+        M = (0, a.e7)([C.Z], () => {
             let e = (0, O.lg)(D);
             return null != e && !C.Z.isEducationUpsellDismissed(e);
         }),
@@ -115,12 +115,12 @@ function A(e) {
             }
         );
     }, [H]);
-    let z = (0, d.dQu)(a.Z.colors.BACKGROUND_SURFACE_HIGH).hex(),
-        W = (0, d.dQu)(a.Z.unsafe_rawColors.PRIMARY_160).hex(),
-        V = (0, c.wj)(U) ? z : W,
+    let W = (0, d.dQu)(s.Z.colors.BACKGROUND_SURFACE_HIGH).hex(),
+        V = (0, d.dQu)(s.Z.unsafe_rawColors.PRIMARY_160).hex(),
+        z = (0, c.wj)(U) ? W : V,
         K = F.to({
             range: [0, 1],
-            output: [V, (0, d.dQu)(a.Z.colors.STATUS_DANGER).hex()],
+            output: [z, (0, d.dQu)(s.Z.colors.STATUS_DANGER).hex()],
         });
     if (A) {
         if (D === O.PG.DEFAULT_CHANNELS) return (0, r.jsx)(E.j, {});
@@ -130,17 +130,17 @@ function A(e) {
     }
     let Y = D === O.xh[O.xh.length - 1],
         q = async () => {
-            let e = v.Z.advancedMode;
+            let e = _.Z.advancedMode;
             if (L)
                 try {
                     if (D === O.PG.DEFAULT_CHANNELS)
                         await (0, h.DO)(t).then(() =>
-                            e ? (0, _.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve(),
+                            e ? (0, v.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve(),
                         );
-                    else if (D === O.PG.CUSTOMIZATION_QUESTIONS) await (0, _.rS)(t, { ignoreDefaultPrompt: !0 });
+                    else if (D === O.PG.CUSTOMIZATION_QUESTIONS) await (0, v.rS)(t, { ignoreDefaultPrompt: !0 });
                     else if (D === O.PG.HOME_SETTINGS) {
                         let e = j.Z.getSettings();
-                        await (0, b.oo)(t.id, e);
+                        await (0, x.oo)(t.id, e);
                     }
                 } catch (e) {
                     return !1;
@@ -156,10 +156,10 @@ function A(e) {
                     skip: !L,
                 }),
             ),
-                (0, x.Nb)((0, O.lg)(D)),
-                (await q()) && (0, x.IG)(f, D);
+                (0, b.Nb)((0, O.lg)(D)),
+                (await q()) && (0, b.IG)(f, D);
         },
-        J = async () => {
+        Q = async () => {
             m.default.track(
                 T.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
                 R(Z({}, (0, g.hH)(f)), {
@@ -168,30 +168,30 @@ function A(e) {
                     skip: !1,
                 }),
             ),
-                (await q()) && (0, x.Wy)(f, D);
+                (await q()) && (0, b.Wy)(f, D);
         },
-        Q = null;
+        J = null;
     M &&
         (D === O.PG.SAFETY_CHECK
-            ? (Q = (0, r.jsx)(N.j7, {}))
+            ? (J = (0, r.jsx)(N.j7, {}))
             : D === O.PG.DEFAULT_CHANNELS
-              ? (Q = (0, r.jsx)(N.Io, {}))
+              ? (J = (0, r.jsx)(N.Io, {}))
               : D === O.PG.CUSTOMIZATION_QUESTIONS
-                ? (Q = (0, r.jsx)(N.cZ, {}))
-                : D === O.PG.HOME_SETTINGS && (Q = (0, r.jsx)(N.g6, {})));
+                ? (J = (0, r.jsx)(N.cZ, {}))
+                : D === O.PG.HOME_SETTINGS && (J = (0, r.jsx)(N.g6, {})));
     let $ = (0, r.jsx)("div", {
             className: M ? w.hidden : void 0,
-            children: (0, r.jsx)(d.zxk, {
+            children: (0, r.jsx)(d.Button, {
                 size: "sm",
                 variant: "secondary",
                 text: P.intl.string(P.t["13/7kZ"]),
                 icon: d.whL,
                 iconPosition: "start",
-                onClick: J,
+                onClick: Q,
                 disabled: M || G,
             }),
         }),
-        ee = (0, r.jsx)(d.zxk, {
+        ee = (0, r.jsx)(d.Button, {
             size: "sm",
             variant: k ? "primary" : "secondary",
             text: k ? P.intl.string(P.t.PDTjLC) : P.intl.string(P.t["5WxrcX"]),
@@ -222,7 +222,7 @@ function A(e) {
                                       }),
                                       (0, r.jsxs)("div", {
                                           className: w.educationUpsell,
-                                          children: [Q, (0, r.jsx)("div", { className: w.educationUpsellArrow })],
+                                          children: [J, (0, r.jsx)("div", { className: w.educationUpsellArrow })],
                                       }),
                                   ],
                               })

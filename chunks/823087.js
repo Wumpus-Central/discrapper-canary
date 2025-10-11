@@ -23,7 +23,7 @@ function p() {
                   captionNoVoice: (0, r.jsxs)(r.Fragment, {
                       children: [
                           f.intl.string(f.t["MA+OZm"]),
-                          (0, r.jsx)(o.eee, {
+                          (0, r.jsx)(o.Anchor, {
                               className: _.micTestHelpLink,
                               href: c.Z.getArticleURL(u.BhN.NO_INPUT_DETECTED),
                               children: f.intl.string(f.t.RYKKo6),

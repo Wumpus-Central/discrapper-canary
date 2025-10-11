@@ -271,7 +271,7 @@ function w(e) {
                                                 color: "header-primary",
                                                 children: "\u2014",
                                             }),
-                                            (0, r.jsx)(c.X6q, {
+                                            (0, r.jsx)(c.Heading, {
                                                 variant: "text-md/semibold",
                                                 color: "header-primary",
                                                 children: b.intl.string(p.default["95qQRE"]),

@@ -33,7 +33,7 @@ let y = (e, t) => {
                     ref: t,
                     className: o()(m.container, n),
                     children: [
-                        (0, r.jsx)(s.X6q, {
+                        (0, r.jsx)(s.Heading, {
                             className: m.footerHeader,
                             variant: "display-md",
                             color: "header-primary",

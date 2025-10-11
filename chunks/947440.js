@@ -7,8 +7,8 @@ var l = i(442837),
     d = i(224706),
     r = i(2052),
     c = i(906732),
-    u = i(835473),
-    s = i(768419),
+    s = i(835473),
+    u = i(768419),
     p = i(300020),
     I = i(456190),
     b = i(239470),
@@ -19,9 +19,9 @@ var l = i(442837),
     j = i(650774),
     O = i(430824),
     h = i(496675),
-    N = i(158776),
-    g = i(699516),
-    S = i(944486),
+    S = i(158776),
+    N = i(699516),
+    g = i(944486),
     E = i(885110),
     m = i(594174),
     _ = i(979651),
@@ -50,7 +50,7 @@ function J(t, e) {
                 (t) => null == t.application_id || !(null == X ? void 0 : X.has(t.application_id)),
             ),
         ),
-        $ = (0, l.Wu)([N.Z], () => (null != e ? N.Z.getActivities(e.id, null == t ? void 0 : t.getGuildId()) : []), [
+        $ = (0, l.Wu)([S.Z], () => (null != e ? S.Z.getActivities(e.id, null == t ? void 0 : t.getGuildId()) : []), [
             e,
             t,
         ]),
@@ -74,13 +74,13 @@ function J(t, e) {
             ],
             [$, z],
         ),
-        K = (0, u.Z)([
+        K = (0, s.Z)([
             ...$.filter((t) => (null == t ? void 0 : t.application_id) != null).map((t) => t.application_id),
             ...z.map((t) => t.applicationId),
         ]),
         Q = null == t ? void 0 : t.id,
         tt = (0, l.Wu)(
-            [Z.Z, O.Z, j.Z, g.Z, S.Z, _.Z, h.Z],
+            [Z.Z, O.Z, j.Z, N.Z, g.Z, _.Z, h.Z],
             () => [
                 ...$.map((t) =>
                     (0, L.Z)({
@@ -93,8 +93,8 @@ function J(t, e) {
                         ChannelStore: Z.Z,
                         GuildStore: O.Z,
                         GuildMemberCountStore: j.Z,
-                        RelationshipStore: g.Z,
-                        SelectedChannelStore: S.Z,
+                        RelationshipStore: N.Z,
+                        SelectedChannelStore: g.Z,
                         VoiceStateStore: _.Z,
                         PermissionStore: h.Z,
                     }),
@@ -120,8 +120,8 @@ function J(t, e) {
             [$, K, Q, W, z, e],
         ),
         te = (0, l.Wu)(
-            [s.Z, v.default],
-            () => $.map((t) => (t.type === M.IIU.LISTENING && null != e ? (0, b.Z)(s.Z, v.default, e, t) : void 0)),
+            [u.Z, v.default],
+            () => $.map((t) => (t.type === M.IIU.LISTENING && null != e ? (0, b.Z)(u.Z, v.default, e, t) : void 0)),
             [e, $],
         ),
         ti = (0, r.O)();
@@ -144,7 +144,7 @@ function J(t, e) {
         },
         tl = async (t) => {
             let i = (0, D.Z)(t, M.xjy.EMBEDDED),
-                n = S.Z.getVoiceChannelId(),
+                n = g.Z.getVoiceChannelId(),
                 l = Z.Z.getChannel(n);
             if (
                 (await d.Z.join({
@@ -210,15 +210,18 @@ function J(t, e) {
                                                     channelId: d.id,
                                                     applicationId: o,
                                                     userId: e.id,
-                                                    location: M.t4x.CONTEXT_MENU,
-                                                    inviteAnalyticsMetadata: { source: M.t4x.ACTIVITY_INVITE },
+                                                    location: M.InstantInviteSources.CONTEXT_MENU,
+                                                    inviteAnalyticsMetadata: {
+                                                        source: M.InstantInviteSources.ACTIVITY_INVITE,
+                                                    },
                                                 });
                                             if (null != t && t.type === M.d4z.GUILD_VOICE)
                                                 return (0, a.ZDy)(
                                                     async () => {
                                                         let { default: e } = await Promise.all([
-                                                            i.e("7654"),
+                                                            i.e("74318"),
                                                             i.e("49049"),
+                                                            i.e("7654"),
                                                             i.e("98953"),
                                                         ]).then(i.bind(i, 560114));
                                                         return (i) => {
@@ -268,7 +271,7 @@ function J(t, e) {
                                                                             t.type === M.d4z.GUILD_VOICE
                                                                                 ? M.ZY5.GUILD_CHANNEL
                                                                                 : M.ZY5.DM_CHANNEL,
-                                                                        source: M.t4x.ACTIVITY_INVITE,
+                                                                        source: M.InstantInviteSources.ACTIVITY_INVITE,
                                                                     }),
                                                                 Object.getOwnPropertyDescriptors
                                                                     ? Object.defineProperties(
@@ -300,8 +303,10 @@ function J(t, e) {
                                                     activityChannelId: d.id,
                                                     invitedChannelId: t.id,
                                                     applicationId: o,
-                                                    location: M.t4x.CONTEXT_MENU,
-                                                    inviteAnalyticsMetadata: { source: M.t4x.ACTIVITY_INVITE },
+                                                    location: M.InstantInviteSources.CONTEXT_MENU,
+                                                    inviteAnalyticsMetadata: {
+                                                        source: M.InstantInviteSources.ACTIVITY_INVITE,
+                                                    },
                                                 });
                                         }
                                     })((0, w.p)(l.location), l.applicationId);

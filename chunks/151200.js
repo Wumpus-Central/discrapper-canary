@@ -98,7 +98,7 @@ function I(e) {
                     id: l,
                     children: e,
                 }),
-                (0, r.jsx)(o.eee, {
+                (0, r.jsx)(o.Anchor, {
                     className: a()(t, n),
                     href: c,
                     "aria-describedby": l,
@@ -187,7 +187,7 @@ function S(e) {
                                 (0, r.jsx)(T, {
                                     clickable: b,
                                     className: h.clickableText,
-                                    children: (0, r.jsx)(o.X6q, {
+                                    children: (0, r.jsx)(o.Heading, {
                                         id: A,
                                         variant: "heading-md/medium",
                                         lineClamp: 1,

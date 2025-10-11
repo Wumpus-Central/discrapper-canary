@@ -109,7 +109,7 @@ let w = (e, t) => (n) => {
                                 (0, r.jsx)(l.P3F, {
                                     className: P.guildNameClickable,
                                     onClick: g,
-                                    children: (0, r.jsx)(l.X6q, {
+                                    children: (0, r.jsx)(l.Heading, {
                                         className: u ? P.guildNameLinkable : P.guildName,
                                         variant: "text-sm/medium",
                                         children: _.name,
@@ -154,35 +154,35 @@ let w = (e, t) => (n) => {
         return c
             ? a
                 ? u
-                    ? (0, r.jsx)(l.zxk, {
+                    ? (0, r.jsx)(l.Button, {
                           text: R.intl.string(R.t.GoCQxc),
                           variant: "secondary",
                       })
-                    : (0, r.jsx)(l.zxk, {
+                    : (0, r.jsx)(l.Button, {
                           text: R.intl.string(R.t.XpeFYm),
                           onClick: h,
                           variant: "active",
                       })
                 : o
-                  ? (0, r.jsx)(l.zxk, {
+                  ? (0, r.jsx)(l.Button, {
                         text: R.intl.string(R.t.Pj7Xrq),
                         variant: "secondary",
                         disabled: !0,
                     })
                   : _
-                    ? (0, r.jsx)(l.zxk, {
+                    ? (0, r.jsx)(l.Button, {
                           text: R.intl.string(R.t.DlcqlZ),
                           onClick: p,
                           variant: "active",
                           icon: l.dz2,
                       })
-                    : (0, r.jsx)(l.zxk, {
+                    : (0, r.jsx)(l.Button, {
                           text: R.intl.string(R.t.DlcqlZ),
                           onClick: p,
                           variant: "secondary",
                           icon: l.Dkj,
                       })
-            : (0, r.jsx)(l.zxk, {
+            : (0, r.jsx)(l.Button, {
                   text: R.intl.string(R.t.XpeFYm),
                   onClick: h,
                   variant: "active",

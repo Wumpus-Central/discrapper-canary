@@ -93,18 +93,18 @@ function h(e) {
         s().isEqual(T, L) || F(g(L));
     }, [L, T]);
     let A = (0, f.Dt)(),
-        [k, Z] = l.useState(!1),
-        [w, U] = l.useState(D),
-        [$, H] = l.useState(null),
-        [B, G] = l.useState(null),
+        [k, w] = l.useState(!1),
+        [Z, U] = l.useState(D),
+        [$, B] = l.useState(null),
+        [H, G] = l.useState(null),
         [J, K] = l.useState("");
     (0, d.ZP)(() => (null == o ? void 0 : o())),
         (0, d.zq)(() => {
             var e;
             h({
-                rating: w,
+                rating: Z,
                 category: null != (e = null == $ ? void 0 : $.value) ? e : null,
-                problem: B,
+                problem: H,
                 dontShowAgain: k,
                 feedback: J,
             });
@@ -112,7 +112,7 @@ function h(e) {
     let V = !0,
         z = !1;
     return (
-        null == w
+        null == Z
             ? ((n = (0, a.jsxs)(a.Fragment, {
                   children: [
                       (0, a.jsx)("div", {
@@ -120,7 +120,7 @@ function h(e) {
                           children: (0, a.jsx)(_.Z, {
                               ratingOptions: N,
                               emojiKind: C,
-                              selectedRating: w,
+                              selectedRating: Z,
                               onChangeRating: function (e) {
                                   U(e), e === m.aZ.GOOD && S();
                               },
@@ -130,9 +130,9 @@ function h(e) {
                           (0, a.jsx)(u.mzw, {
                               className: p.footer,
                               direction: b.Z.Direction.HORIZONTAL,
-                              children: (0, a.jsx)(u.XZJ, {
+                              children: (0, a.jsx)(u.Checkbox, {
                                   checked: k,
-                                  onChange: () => Z(!k),
+                                  onChange: () => w(!k),
                                   label: E.intl.string(E.t["5E9SBw"]),
                                   labelType: "secondary",
                               }),
@@ -140,19 +140,19 @@ function h(e) {
                   ],
               })),
               (V = !1))
-            : w !== m.aZ.GOOD && null == $
+            : Z !== m.aZ.GOOD && null == $
               ? ((n = (0, a.jsx)(u.hzk, {
                     children: (0, a.jsx)(u.gNt, {
                         label: x,
                         children: (0, a.jsx)(O.Z, {
                             options: R,
-                            onClick: H,
+                            onClick: B,
                             hideCaret: () => !0,
                         }),
                     }),
                 })),
                 (i = () => U(null)))
-              : null != $ && null == B
+              : null != $ && null == H
                 ? ((n = (0, a.jsx)(u.hzk, {
                       children: (0, a.jsx)(u.gNt, {
                           label: $.problemsHeader,
@@ -174,10 +174,10 @@ function h(e) {
                           }),
                       }),
                   })),
-                  (i = () => H(null)))
+                  (i = () => B(null)))
                 : null != $ &&
-                  null != B &&
-                  (null == (t = $.freeformConfig) ? void 0 : t.value) === B.value &&
+                  null != H &&
+                  (null == (t = $.freeformConfig) ? void 0 : t.value) === H.value &&
                   ((n = (0, a.jsx)(u.hzk, {
                       children: (0, a.jsx)(u.Kx8, {
                           label: E.intl.string(E.t.h95hcn),
@@ -204,7 +204,7 @@ function h(e) {
                     separator: !1,
                     className: p.headerContainer,
                     children: [
-                        (0, a.jsx)(u.X6q, {
+                        (0, a.jsx)(u.Heading, {
                             id: A,
                             variant: "heading-xl/extrabold",
                             color: "none",
@@ -224,14 +224,14 @@ function h(e) {
                         className: p.footer,
                         direction: b.Z.Direction.HORIZONTAL,
                         children: [
-                            (0, a.jsx)(u.zxk, {
+                            (0, a.jsx)(u.Button, {
                                 variant: "secondary",
                                 size: "sm",
                                 text: E.intl.string(E.t["13/7kZ"]),
                                 onClick: i,
                             }),
                             z &&
-                                (0, a.jsx)(u.zxk, {
+                                (0, a.jsx)(u.Button, {
                                     variant: "primary",
                                     size: "sm",
                                     text: E.intl.string(E.t.geKm7u),

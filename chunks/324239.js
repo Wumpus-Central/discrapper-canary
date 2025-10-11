@@ -44,7 +44,7 @@ function S(e) {
                 separator: !1,
                 children: [
                     (0, r.jsx)("div", { className: g.formImage }),
-                    (0, r.jsx)(i.X6q, {
+                    (0, r.jsx)(i.Heading, {
                         className: g.formTitle,
                         variant: "heading-xl/semibold",
                         children: _.intl.string(_.t.uQShv7),

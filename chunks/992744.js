@@ -8,17 +8,17 @@ var r = n(951288),
     c = n(984370),
     d = n(981631),
     u = n(388032),
-    p = n(503484),
-    h = n(66737),
+    h = n(503484),
+    p = n(66737),
     f = n(525377);
 let g = () => {
     let e = (0, s.ZP)();
     i.useEffect(() => {
         o.ZP.trackWithMetadata(d.rMx.GUILD_OUTAGE_VIEWED, {});
     }, []);
-    let t = (0, l.wj)(e) ? h : f;
+    let t = (0, l.wj)(e) ? p : f;
     return (0, r.jsxs)("div", {
-        className: p.container,
+        className: h.container,
         children: [
             (0, r.jsxs)(c.Z, {
                 toolbar: (0, r.jsx)(i.Fragment, {}),
@@ -31,20 +31,20 @@ let g = () => {
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: p.content,
+                className: h.content,
                 children: [
                     (0, r.jsx)("img", {
                         alt: "",
-                        className: p.splashImage,
+                        className: h.splashImage,
                         src: t,
                     }),
-                    (0, r.jsx)(a.X6q, {
-                        className: p.splashHeader,
+                    (0, r.jsx)(a.Heading, {
+                        className: h.splashHeader,
                         variant: "heading-lg/medium",
                         children: u.intl.string(u.t.m9gRVF),
                     }),
                     (0, r.jsx)(a.Text, {
-                        className: p.splashText,
+                        className: h.splashText,
                         variant: "text-md/normal",
                         children: u.intl.string(u.t["wC3j5+"]),
                     }),

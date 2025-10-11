@@ -139,7 +139,7 @@ let A = () => {
                 variant: "text-sm/normal",
                 children: D,
             }),
-            (0, r.jsx)(c.zxk, {
+            (0, r.jsx)(c.Button, {
                 variant: "overlay-primary",
                 size: "sm",
                 onClick: x,

@@ -54,7 +54,7 @@ function _(e) {
                     separator: !1,
                     className: f.header,
                     children: [
-                        (0, r.jsx)(o.X6q, {
+                        (0, r.jsx)(o.Heading, {
                             color: "header-primary",
                             variant: "heading-xl/bold",
                             className: f.title,
@@ -121,7 +121,7 @@ function _(e) {
                         }),
                         (0, r.jsxs)(o.mzw, {
                             children: [
-                                (0, r.jsx)(o.zxk, {
+                                (0, r.jsx)(o.Button, {
                                     variant: "primary",
                                     text: d.intl.string(d.t.i4jeWV),
                                     type: "submit",
@@ -131,7 +131,7 @@ function _(e) {
                                     (0, r.jsx)("div", {
                                         "data-button-hoisted-classname-wrapper": !0,
                                         className: f.cancel,
-                                        children: (0, r.jsx)(o.zxk, {
+                                        children: (0, r.jsx)(o.Button, {
                                             variant: "secondary",
                                             text: d.intl.string(d.t["ETE/oK"]),
                                             onClick: g,

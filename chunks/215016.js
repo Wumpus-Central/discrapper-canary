@@ -368,12 +368,12 @@ class G extends i.PureComponent {
                                                     className: I.endText,
                                                     children: v.intl.string(v.t["3JGJo6"]),
                                                 }),
-                                                (0, r.jsx)(f.hE2, {
+                                                (0, r.jsx)(f.ButtonGroup, {
                                                     size: "sm",
                                                     className: I.searchSuggestions,
                                                     children: o.map((e) =>
                                                         (0, r.jsx)(
-                                                            f.zxk,
+                                                            f.Button,
                                                             {
                                                                 variant: "secondary",
                                                                 onClick: () => {

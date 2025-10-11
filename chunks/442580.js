@@ -24,7 +24,7 @@ class u extends a.PureComponent {
         });
         return (0, r.jsxs)(o.Kqy, {
             children: [
-                (0, r.jsx)(o.X6q, {
+                (0, r.jsx)(o.Heading, {
                     variant: "heading-md/medium",
                     children: d.intl.string(d.t["gWbr/f"]),
                 }),

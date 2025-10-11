@@ -20,7 +20,7 @@ function u(e) {
                     children: s.intl.format(s.t.P6Y2Nz, {}),
                 }),
             }),
-            (0, i.jsx)(r.zxk, {
+            (0, i.jsx)(r.Button, {
                 variant: "secondary",
                 text: s.intl.string(s.t.KyUKhY),
                 icon: r.UEU,

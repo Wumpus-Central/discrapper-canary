@@ -126,7 +126,7 @@ let v = 440,
         return (0, r.jsxs)("div", {
             className: O.confirmationContainer,
             children: [
-                (0, r.jsx)(l.X6q, {
+                (0, r.jsx)(l.Heading, {
                     className: O.confirmationHeader,
                     variant: "heading-xl/semibold",
                     color: "header-secondary",

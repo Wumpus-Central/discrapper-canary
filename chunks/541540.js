@@ -95,7 +95,7 @@ class b extends i.Component {
                                 : null,
                             fullWidth: !0,
                         }),
-                        (0, r.jsx)(o.zxk, {
+                        (0, r.jsx)(o.Button, {
                             variant: "primary",
                             text: _.intl.string(_.t.KIpp7O),
                             type: "submit",

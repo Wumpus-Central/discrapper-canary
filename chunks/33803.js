@@ -391,7 +391,7 @@ function ei(e) {
         ey = i.useCallback(() => {
             (0, b.Xx)(s.id, l, m.d.DELETE_USER_MESSAGE);
         }, [l, s.id]),
-        eO = (0, B.L9)(Number(eo)),
+        eO = (0, B.getFriendlyDurationString)(Number(eo)),
         ev = null != es,
         eI = Y && null != ea && (null == el || !el.actions.hasOwnProperty(m.d.DELETE_USER_MESSAGE)),
         eT =

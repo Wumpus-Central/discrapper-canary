@@ -2,9 +2,9 @@ n.d(t, { Z: () => P }), n(388685), n(539854), n(472816), n(794429);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    s = n.n(l),
-    a = n(392711),
-    o = n.n(a),
+    a = n.n(l),
+    s = n(392711),
+    o = n.n(s),
     c = n(442837),
     d = n(538534),
     u = n(481060),
@@ -13,11 +13,11 @@ var r = n(951288),
     p = n(63063),
     f = n(243730),
     h = n(84058),
-    x = n(103576),
-    b = n(95242),
+    b = n(103576),
+    x = n(95242),
     j = n(530198),
-    _ = n(420966),
-    v = n(203377),
+    v = n(420966),
+    _ = n(203377),
     C = n(981631),
     O = n(856651),
     y = n(388032),
@@ -60,7 +60,7 @@ function T(e) {
     return (0, r.jsxs)("div", {
         className: N.headerNoConfigContainer,
         children: [
-            (0, r.jsx)(u.X6q, {
+            (0, r.jsx)(u.Heading, {
                 className: N.headerHeading,
                 variant: "eyebrow",
                 children: y.intl.string(y.t.nMir29),
@@ -73,7 +73,7 @@ function T(e) {
                     helpdeskArticleUrl: p.Z.getArticleURL(C.BhN.CONNECTION_DETAILS_ADMIN),
                 }),
             }),
-            (0, r.jsx)(u.zxk, {
+            (0, r.jsx)(u.Button, {
                 disabled: n,
                 onClick: t,
                 text: y.intl.string(y.t["OSvW5+"]),
@@ -84,16 +84,16 @@ function T(e) {
     });
 }
 function P(e) {
-    let { guild: t, role: n, locked: l, setSelectedSection: a, integrations: o } = e,
-        { headerHeight: P, headerRef: w } = (0, b.Z)(0),
-        { scrolledToTop: Z, handleScroll: R } = (0, _.V)(),
+    let { guild: t, role: n, locked: l, setSelectedSection: s, integrations: o } = e,
+        { headerHeight: P, headerRef: w } = (0, x.Z)(0),
+        { scrolledToTop: Z, handleScroll: R } = (0, v.V)(),
         D = (0, c.e7)([f.Z], () => {
             var e;
             return null == (e = f.Z.getRoleMemberCount(t.id)) ? void 0 : e[n.id];
         }, [n.id, t.id]),
-        A = (0, c.Wu)([x.Z], () => {
+        A = (0, c.Wu)([b.Z], () => {
             var e;
-            return null != (e = x.Z.getEditedRoleConnectionConfigurationsMap().get(n.id)) ? e : [];
+            return null != (e = b.Z.getEditedRoleConnectionConfigurationsMap().get(n.id)) ? e : [];
         }),
         L = A.length > 1 ? m.O1.OR : m.O1.AND,
         k = i.useMemo(() => (L === m.O1.OR ? A.flat() : null != A && A.length > 0 ? A[0] : []), [L, A]),
@@ -129,7 +129,7 @@ function P(e) {
         var F;
         let e = null;
         k.length < 10 &&
-            (e = (0, r.jsx)(u.zxk, {
+            (e = (0, r.jsx)(u.Button, {
                 disabled: l,
                 onClick: U,
                 text: y.intl.string(y.t["OSvW5+"]),
@@ -147,7 +147,7 @@ function P(e) {
                                 children: [
                                     (0, r.jsx)("div", {
                                         className: N.headerTitleTextContainer,
-                                        children: (0, r.jsx)(u.X6q, {
+                                        children: (0, r.jsx)(u.Heading, {
                                             variant: "eyebrow",
                                             children: y.intl.string(y.t.nMir29),
                                         }),
@@ -170,7 +170,7 @@ function P(e) {
                         ],
                     })),
                     (function (e, t, n, i, l) {
-                        let s = S(i, m.O1.OR);
+                        let a = S(i, m.O1.OR);
                         return (0, r.jsx)(d.E, {
                             label: y.intl.string(y.t.Xs7PHR),
                             options: [
@@ -185,11 +185,11 @@ function P(e) {
                             ],
                             onChange: (e) => l(i, e),
                             value: n,
-                            disabled: e || s.length < 2,
+                            disabled: e || a.length < 2,
                         });
                     })(l, n.id, L, k, (e, t) => (0, h.d_)(n.id, S(e, t))),
                     (function (e, t, n, i, l) {
-                        function s(n, r) {
+                        function a(n, r) {
                             let i = [];
                             for (let t of e) i.push(I({}, t));
                             if (null == n) {
@@ -205,25 +205,25 @@ function P(e) {
                             } else -1 === r ? i.push(n) : r >= 0 && (i[r] = n);
                             t(i);
                         }
-                        let a = new Map();
+                        let s = new Map();
                         for (let t of (e.forEach((e, t) => {
                             let n = "".concat(e.connectionType, ":").concat(e.applicationId);
-                            if (a.has(n)) {
-                                let r = a.get(n);
+                            if (s.has(n)) {
+                                let r = s.get(n);
                                 null == r ||
                                     r.push({
                                         index: t,
                                         configuration: e,
                                     });
                             } else
-                                a.set(n, [
+                                s.set(n, [
                                     {
                                         index: t,
                                         configuration: e,
                                     },
                                 ]);
                         }),
-                        a.values())) {
+                        s.values())) {
                             if (
                                 t.some((e) => {
                                     let { configuration: t } = e;
@@ -261,12 +261,12 @@ function P(e) {
                         }
                         return (0, r.jsx)("div", {
                             className: N.configurationsContainer,
-                            children: Array.from(a.values()).map((e) =>
+                            children: Array.from(s.values()).map((e) =>
                                 (0, r.jsx)(
                                     j.Z,
                                     {
                                         configurationItems: e,
-                                        onConfigurationChange: s,
+                                        onConfigurationChange: a,
                                         locked: n,
                                         integrations: l,
                                     },
@@ -287,13 +287,13 @@ function P(e) {
             className: E.contentWidth,
             children: [
                 (0, r.jsx)("div", {
-                    className: s()(E.header, E.stickyHeader, { [E.stickyHeaderElevated]: !Z }),
+                    className: a()(E.header, E.stickyHeader, { [E.stickyHeaderElevated]: !Z }),
                     ref: w,
-                    children: (0, r.jsx)(_.Z, {
+                    children: (0, r.jsx)(v.Z, {
                         guild: t,
                         role: n,
-                        selectedSection: v.ZI.VERIFICATIONS,
-                        setSelectedSection: a,
+                        selectedSection: _.ZI.VERIFICATIONS,
+                        setSelectedSection: s,
                     }),
                 }),
                 (null != D ? D : 0) > 0

@@ -70,7 +70,7 @@ let b = 1000,
             (0, r.jsxs)("div", {
                 className: E.body,
                 children: [
-                    (0, r.jsx)(a.X6q, {
+                    (0, r.jsx)(a.Heading, {
                         variant: "heading-xl/bold",
                         children: g.intl.string(g.t.C4HYf3),
                     }),

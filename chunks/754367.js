@@ -18,7 +18,7 @@ function _() {
             (0, r.jsx)(o.F, {
                 setting: d.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS,
                 children: (0, r.jsx)(i.xJW, {
-                    children: (0, r.jsx)(i.zxk, {
+                    children: (0, r.jsx)(i.Button, {
                         variant: "critical-secondary",
                         size: "sm",
                         text: f.intl.string(f.t["4iKQ//"]),

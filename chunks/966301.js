@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    s = n(481060),
-    a = n(852860),
+    a = n(481060),
+    s = n(852860),
     o = n(471445),
     c = n(45966),
     d = n(637853),
@@ -17,82 +17,82 @@ var r = n(951288),
     p = n(570961),
     f = n(208665),
     h = n(974513),
-    x = n(716130),
-    b = n(981631),
+    b = n(716130),
+    x = n(981631),
     j = n(290511),
-    _ = n(388032),
-    v = n(314160);
+    v = n(388032),
+    _ = n(314160);
 function C(e) {
     let { guildId: t, prompts: n } = e,
-        a = (0, l.e7)([g.Z], () => g.Z.editedDefaultChannelIds),
-        [c, u] = (0, d.dF)(t, n, [...a]),
+        s = (0, l.e7)([g.Z], () => g.Z.editedDefaultChannelIds),
+        [c, u] = (0, d.dF)(t, n, [...s]),
         m = c.length,
         p = c.length + u.length,
         f = (m / p) * 100,
         h = Math.max(Math.ceil((85 * p) / 100) - m, 0),
-        [x, b] = i.useState(!1),
-        j = x ? s.CJ0 : s.u04;
+        [b, x] = i.useState(!1),
+        j = b ? a.CJ0 : a.u04;
     return (0, r.jsxs)("div", {
-        className: v.channelCoverage,
+        className: _.channelCoverage,
         children: [
-            (0, r.jsxs)(s.P3F, {
-                className: v.coverageHeader,
-                onClick: () => b(!x),
+            (0, r.jsxs)(a.P3F, {
+                className: _.coverageHeader,
+                onClick: () => x(!b),
                 children: [
                     (0, r.jsxs)("div", {
-                        className: v.warningTextContainer,
+                        className: _.warningTextContainer,
                         children: [
                             f <= 85 &&
-                                (0, r.jsx)(s.Mgn, {
+                                (0, r.jsx)(a.Mgn, {
                                     size: "xs",
                                     color: "currentColor",
-                                    className: v.warning,
+                                    className: _.warning,
                                 }),
-                            (0, r.jsx)(s.Text, {
-                                className: v.coverageTitle,
+                            (0, r.jsx)(a.Text, {
+                                className: _.coverageTitle,
                                 variant: "text-xs/medium",
                                 color: "text-muted",
-                                children: _.intl.format(_.t.nMVKCQ, { numChannelsMissing: p - m }),
+                                children: v.intl.format(v.t.nMVKCQ, { numChannelsMissing: p - m }),
                             }),
                         ],
                     }),
                     (0, r.jsxs)("div", {
-                        className: v.progressContainer,
+                        className: _.progressContainer,
                         children: [
-                            (0, r.jsx)(s.Exd, {
-                                className: v.coverageProgress,
+                            (0, r.jsx)(a.Exd, {
+                                className: _.coverageProgress,
                                 foregroundColor: f > 85 ? "var(--status-positive)" : "var(--status-warning)",
                                 percent: f,
                             }),
                             (0, r.jsx)(j, {
                                 size: "md",
                                 color: "currentColor",
-                                className: v.caret,
+                                className: _.caret,
                             }),
                         ],
                     }),
                 ],
             }),
-            x
+            b
                 ? (0, r.jsxs)("div", {
-                      className: v.channelCoverageDetails,
+                      className: _.channelCoverageDetails,
                       children: [
-                          (0, r.jsx)(s.Text, {
+                          (0, r.jsx)(a.Text, {
                               variant: "text-xs/semibold",
                               color: "text-muted",
-                              children: _.intl.string(_.t["0FM4i4"]),
+                              children: v.intl.string(v.t["0FM4i4"]),
                           }),
                           (0, r.jsx)("div", {
-                              className: v.channels,
+                              className: _.channels,
                               children: u.map((e) => {
                                   var t;
-                                  let n = null != (t = (0, o.KS)(e)) ? t : s.VL1;
+                                  let n = null != (t = (0, o.KS)(e)) ? t : a.VL1;
                                   return (0, r.jsx)(
                                       "div",
                                       {
-                                          className: v.channelPill,
-                                          children: (0, r.jsxs)(s.Text, {
-                                              className: v.channel,
+                                          className: _.channelPill,
+                                          children: (0, r.jsxs)(a.Text, {
+                                              className: _.channel,
                                               variant: "text-xs/normal",
                                               color: "interactive-active",
                                               children: [
@@ -109,26 +109,26 @@ function C(e) {
                               }),
                           }),
                           (0, r.jsx)("div", {
-                              className: v.channelCoverageHint,
+                              className: _.channelCoverageHint,
                               children:
                                   h > 0
                                       ? (0, r.jsxs)(r.Fragment, {
                                             children: [
-                                                (0, r.jsx)(s.Mgn, {
+                                                (0, r.jsx)(a.Mgn, {
                                                     size: "xs",
                                                     color: "currentColor",
                                                 }),
-                                                (0, r.jsx)(s.Text, {
+                                                (0, r.jsx)(a.Text, {
                                                     variant: "text-xs/normal",
                                                     color: "text-muted",
-                                                    children: _.intl.format(_.t["sX889/"], { numChannels: h }),
+                                                    children: v.intl.format(v.t["sX889/"], { numChannels: h }),
                                                 }),
                                             ],
                                         })
-                                      : (0, r.jsx)(s.Text, {
+                                      : (0, r.jsx)(a.Text, {
                                             variant: "text-xs/normal",
                                             color: "text-muted",
-                                            children: _.intl.string(_.t.o4s29v),
+                                            children: v.intl.string(v.t.o4s29v),
                                         }),
                           }),
                       ],
@@ -149,12 +149,12 @@ function O(e) {
 }
 function y(e) {
     let { guild: t, saveOnClose: n } = e,
-        a = (0, l.e7)([c.Z], () => c.Z.isLoading()),
+        s = (0, l.e7)([c.Z], () => c.Z.isLoading()),
         o = (0, l.e7)([f.Z], () => f.Z.editedOnboardingPrompts),
         d = (0, l.e7)([f.Z], () => f.Z.advancedMode),
         u = i.useRef(!1);
     i.useEffect(() => {
-        a || u.current || ((u.current = !0), d || 0 !== o.length || (0, p.tS)(t, [(0, j.ae)()], !1));
+        s || u.current || ((u.current = !0), d || 0 !== o.length || (0, p.tS)(t, [(0, j.ae)()], !1));
     });
     let g = i.useRef(t);
     if (
@@ -177,38 +177,38 @@ function y(e) {
     };
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(s.X6q, {
-                className: v.header,
+            (0, r.jsx)(a.Heading, {
+                className: _.header,
                 variant: "heading-lg/extrabold",
-                children: d ? _.intl.string(_.t.AGjtFh) : _.intl.string(_.t.dqCzoa),
+                children: d ? v.intl.string(v.t.AGjtFh) : v.intl.string(v.t.dqCzoa),
             }),
-            (0, r.jsx)(s.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: "text-sm/normal",
                 color: "header-secondary",
-                children: _.intl.string(_.t["q/6MLC"]),
+                children: v.intl.string(v.t["q/6MLC"]),
             }),
             (0, r.jsxs)("div", {
-                className: v.links,
+                className: _.links,
                 children: [
-                    (0, r.jsx)(s.eee, {
+                    (0, r.jsx)(a.Anchor, {
                         target: "_blank",
-                        href: b.EYA.GUILD_ONBOARDING_EXAMPLES,
-                        children: (0, r.jsx)(s.Text, {
+                        href: x.EYA.GUILD_ONBOARDING_EXAMPLES,
+                        children: (0, r.jsx)(a.Text, {
                             variant: "text-sm/medium",
                             color: "text-link",
-                            children: _.intl.string(_.t.Ok55Ki),
+                            children: v.intl.string(v.t.Ok55Ki),
                         }),
                     }),
-                    (0, r.jsx)("div", { className: v.dot }),
-                    (0, r.jsx)(s.eee, {
+                    (0, r.jsx)("div", { className: _.dot }),
+                    (0, r.jsx)(a.Anchor, {
                         onClick: O,
-                        children: (0, r.jsx)(s.Text, {
+                        children: (0, r.jsx)(a.Text, {
                             variant: "text-sm/medium",
                             color: "text-link",
-                            children: _.intl.string(_.t["6gsjdH"]),
+                            children: v.intl.string(v.t["6gsjdH"]),
                         }),
                     }),
-                    (0, r.jsx)("div", { className: v.dot }),
+                    (0, r.jsx)("div", { className: _.dot }),
                     (0, r.jsx)(h.Wu, { guildId: t.id }),
                 ],
             }),
@@ -217,10 +217,10 @@ function y(e) {
                 prompts: o,
             }),
             (0, r.jsx)("div", {
-                className: v.prompts,
-                children: a
-                    ? (0, r.jsx)(s.$jN, {})
-                    : (0, r.jsx)(x.Z, {
+                className: _.prompts,
+                children: s
+                    ? (0, r.jsx)(a.$jN, {})
+                    : (0, r.jsx)(b.Z, {
                           postjoinOnly: d,
                           guildId: t.id,
                       }),
@@ -233,7 +233,7 @@ function N() {
         t = (0, l.e7)([f.Z], () => f.Z.submitting);
     return null == e
         ? null
-        : (0, r.jsx)(a.Z, {
+        : (0, r.jsx)(s.Z, {
               onSave: () => {
                   try {
                       (0, p.rS)(e);
@@ -241,6 +241,6 @@ function N() {
               },
               onReset: p.NB,
               submitting: t,
-              onSaveText: _.intl.string(_.t.R3BPHx),
+              onSaveText: v.intl.string(v.t.R3BPHx),
           });
 }

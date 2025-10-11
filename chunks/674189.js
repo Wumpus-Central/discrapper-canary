@@ -62,7 +62,7 @@ function f(e) {
                 className: m.modalHeader,
                 separator: !1,
                 children: [
-                    (0, n.jsx)(s.X6q, {
+                    (0, n.jsx)(s.Heading, {
                         id: f,
                         variant: "heading-lg/medium",
                         children: O,
@@ -92,7 +92,7 @@ function f(e) {
                                             isGuildIncluded: _,
                                         }),
                                     }),
-                                    (0, n.jsx)(s.zxk, {
+                                    (0, n.jsx)(s.Button, {
                                         variant: "primary",
                                         text: E,
                                         onClick: () => {

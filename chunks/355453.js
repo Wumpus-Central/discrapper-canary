@@ -1,4 +1,4 @@
-n.d(t, { default: () => g }), n(388685);
+n.d(t, { default: () => y }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(793030),
@@ -6,24 +6,24 @@ var r = n(951288),
     c = n(481060),
     s = n(660216),
     l = n(825209),
-    u = n(714338),
-    b = n(556296),
-    d = n(13140),
+    d = n(714338),
+    u = n(556296),
+    b = n(13140),
     p = n(710111),
-    O = n(981631),
-    f = n(388032),
-    y = n(687213);
-function g(e) {
+    g = n(981631),
+    O = n(388032),
+    f = n(687213);
+function y(e) {
     var t;
-    let { transitionState: n, onClose: g } = e,
-        m = (0, o.e7)([b.ZP], () => b.ZP.getKeybindForAction(O.kg4.SOUNDBOARD_HOLD)),
-        [h, j] = i.useState(null != (t = null == m ? void 0 : m.shortcut) ? t : []),
+    let { transitionState: n, onClose: y } = e,
+        h = (0, o.e7)([u.ZP], () => u.ZP.getKeybindForAction(g.kg4.SOUNDBOARD_HOLD)),
+        [m, j] = i.useState(null != (t = null == h ? void 0 : h.shortcut) ? t : []),
         v = i.useCallback(() => {
-            if (0 === h.length) return null != m && s.Z.deleteKeybind(m.id), g();
-            if (null == m)
+            if (0 === m.length) return null != h && s.Z.deleteKeybind(h.id), y();
+            if (null == h)
                 s.Z.addKeybind({
-                    action: O.kg4.SOUNDBOARD_HOLD,
-                    shortcut: h,
+                    action: g.kg4.SOUNDBOARD_HOLD,
+                    shortcut: m,
                     enabled: !0,
                     params: {},
                 });
@@ -54,8 +54,8 @@ function g(e) {
                                 });
                         }
                         return e;
-                    })({}, m)),
-                    (t = t = { shortcut: h }),
+                    })({}, h)),
+                    (t = t = { shortcut: m }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
                         : (function (e, t) {
@@ -71,13 +71,13 @@ function g(e) {
                     e),
                 );
             }
-            g();
-        }, [m, g, h]);
+            y();
+        }, [h, y, m]);
     i.useEffect(
         () => (
-            u.Z.disable(),
+            d.Z.disable(),
             () => {
-                u.Z.enable();
+                d.Z.enable();
             }
         ),
         [],
@@ -85,59 +85,59 @@ function g(e) {
     let w = i.useMemo(
         () => [
             {
-                text: f.intl.string(f.t["ETE/oK"]),
-                onClick: g,
+                text: O.intl.string(O.t["ETE/oK"]),
+                onClick: y,
                 variant: "secondary",
             },
             {
-                text: f.intl.string(f.t.R3BPHx),
+                text: O.intl.string(O.t.R3BPHx),
                 onClick: v,
                 variant: "primary",
             },
         ],
-        [g, v],
+        [y, v],
     );
     return (0, r.jsxs)(a.Modal, {
         transitionState: n,
-        title: f.intl.string(f.t["0Osu39"]),
+        title: O.intl.string(O.t["0Osu39"]),
         actions: w,
-        onClose: g,
+        onClose: y,
         children: [
             (0, r.jsx)(c.Wn, {
-                className: y.warning,
+                className: f.warning,
                 messageType: c.QYI.WARNING,
-                children: f.intl.string(f.t["O2v/eH"]),
+                children: O.intl.string(O.t["O2v/eH"]),
             }),
-            (0, r.jsx)(c.X6q, {
-                className: y.formHeader,
+            (0, r.jsx)(c.Heading, {
+                className: f.formHeader,
                 variant: "eyebrow",
                 color: "header-secondary",
-                children: f.intl.string(f.t.UUpADw),
+                children: O.intl.string(O.t.UUpADw),
             }),
             (0, r.jsx)(c.Text, {
-                className: y.action,
+                className: f.action,
                 variant: "text-md/normal",
-                children: f.intl.string(f.t["1xFbPz"]),
+                children: O.intl.string(O.t["1xFbPz"]),
             }),
             (0, r.jsx)(c.Text, {
-                className: y.actionDescription,
+                className: f.actionDescription,
                 variant: "text-sm/normal",
-                children: f.intl.string(f.t.laNlTk),
+                children: O.intl.string(O.t.laNlTk),
             }),
-            (0, r.jsx)(c.X6q, {
-                className: y.formHeader,
+            (0, r.jsx)(c.Heading, {
+                className: f.formHeader,
                 variant: "eyebrow",
                 color: "header-secondary",
-                children: f.intl.string(f.t["1La4tL"]),
+                children: O.intl.string(O.t["1La4tL"]),
             }),
             (0, r.jsx)(l.Z, {
-                defaultValue: h,
+                defaultValue: m,
                 onChange: j,
             }),
-            (0, r.jsx)(c.eee, {
-                className: y.resetButton,
-                onClick: () => j((0, d.Kd)(p.D_)),
-                children: f.intl.string(f.t["s7+2ra"]),
+            (0, r.jsx)(c.Anchor, {
+                className: f.resetButton,
+                onClick: () => j((0, b.Kd)(p.D_)),
+                children: O.intl.string(O.t["s7+2ra"]),
             }),
         ],
     });

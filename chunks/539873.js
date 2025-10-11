@@ -128,7 +128,7 @@ function A(e) {
                                             (0, r.jsxs)("div", {
                                                 className: E.title,
                                                 children: [
-                                                    (0, r.jsx)(s.X6q, {
+                                                    (0, r.jsx)(s.Heading, {
                                                         className: E.titleText,
                                                         variant: "text-lg/medium",
                                                         children: g.intl.string(g.t.NThqT0),
@@ -136,7 +136,7 @@ function A(e) {
                                                     (0, r.jsx)(u.Z, { className: E.premiumIcon }),
                                                 ],
                                             }),
-                                        (0, r.jsx)(s.X6q, {
+                                        (0, r.jsx)(s.Heading, {
                                             variant: "text-sm/normal",
                                             className: b.subtext,
                                             children: g.intl.string(g.t.IgENJi),

@@ -63,7 +63,7 @@ function O(e) {
                         color: "currentColor",
                         className: b.nitroWheel,
                     }),
-                    (0, r.jsx)(s.X6q, {
+                    (0, r.jsx)(s.Heading, {
                         variant: "heading-sm/bold",
                         children: E.intl.string(E.t.dTbAx8),
                     }),
@@ -74,7 +74,7 @@ function O(e) {
                 children: v,
             }),
             I
-                ? (0, r.jsx)(s.zxk, {
+                ? (0, r.jsx)(s.Button, {
                       onClick: T,
                       text: E.intl.string(E.t.RzWDqa),
                       fullWidth: !0,

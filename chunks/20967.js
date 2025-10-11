@@ -30,7 +30,7 @@ let p = (e) => {
                         alt: "",
                         className: c.errorPageIllo,
                     }),
-                    (0, i.jsx)(a.X6q, {
+                    (0, i.jsx)(a.Heading, {
                         variant: "heading-xl/extrabold",
                         className: c.errorPageTitle,
                         children: "guild_not_eligible" === t ? s.intl.string(s.t.atZQVV) : s.intl.string(s.t.gAdWBg),

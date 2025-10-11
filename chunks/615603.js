@@ -300,7 +300,7 @@ let j = function (e) {
                                     (0, r.jsxs)("div", {
                                         className: C.__invalid_headerCopy,
                                         children: [
-                                            (0, r.jsx)(c.X6q, {
+                                            (0, r.jsx)(c.Heading, {
                                                 className: C.headerHeading,
                                                 variant: "heading-lg/bold",
                                                 children: t,
@@ -323,7 +323,7 @@ let j = function (e) {
                                     "aria-label": a.toString(),
                                     children: (e) =>
                                         (0, r.jsx)(
-                                            c.zxk,
+                                            c.Button,
                                             w(
                                                 R(
                                                     {

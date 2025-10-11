@@ -83,7 +83,7 @@ function I() {
                                     src: b,
                                     className: E.icon,
                                 }),
-                                (0, r.jsx)(s.X6q, {
+                                (0, r.jsx)(s.Heading, {
                                     variant: "heading-lg/bold",
                                     color: "always-white",
                                     children: g.intl.string(g.t.z8YP2N),
@@ -97,7 +97,7 @@ function I() {
                         }),
                     ],
                 }),
-                (0, r.jsx)(s.zxk, {
+                (0, r.jsx)(s.Button, {
                     variant: e ? "primary" : "overlay-primary",
                     text: g.intl.string(g.t.GURBQk),
                     onClick: n,

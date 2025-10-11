@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(442837),
     l = n(481060),
-    s = n(98278),
-    a = n(823188),
+    a = n(98278),
+    s = n(823188),
     o = n(594174),
     c = n(74538),
     d = n(474936),
@@ -15,28 +15,28 @@ let m = (e) => {
             n = (0, r.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,
                 className: g.tier0Button,
-                children: (0, r.jsx)(l.zxk, {
+                children: (0, r.jsx)(l.Button, {
                     variant: "overlay-primary",
                     size: "md",
                     fullWidth: !0,
                     text: u.intl.string(u.t.hvVgAQ),
                     onClick: () => {
-                        (0, s.z)(), null != t && t();
+                        (0, a.z)(), null != t && t();
                     },
                 }),
             });
         return (0, r.jsxs)("div", {
             className: g.tier0Container,
             children: [
-                (0, r.jsx)(l.X6q, {
+                (0, r.jsx)(l.Heading, {
                     className: g.tier0Heading,
                     variant: "heading-xxl/extrabold",
                     children: u.intl.string(u.t["qUl+Ky"]),
                 }),
-                (0, r.jsx)(a.wp, {
+                (0, r.jsx)(s.wp, {
                     className: g.tier0Card,
                     ctaButton: n,
-                    featureSet: a.uZ.BOOSTING,
+                    featureSet: s.uZ.BOOSTING,
                     showWumpus: !0,
                     showYearlyPrice: !0,
                 }),

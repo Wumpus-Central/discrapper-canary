@@ -313,7 +313,7 @@ function z(e) {
                           color: p.TVs.colors.INTERACTIVE_ACTIVE,
                       }),
                   }),
-                  (0, r.jsx)(p.X6q, {
+                  (0, r.jsx)(p.Heading, {
                       variant: "text-md/semibold",
                       color: "header-secondary",
                       children: null != t.saveData.dueAt ? M.intl.string(M.t["wuQm+v"]) : M.intl.string(M.t.o572FR),

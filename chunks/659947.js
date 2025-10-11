@@ -118,7 +118,7 @@ function P(e) {
             (0, o.ZDy)(
                 async () => (e) =>
                     (0, r.jsx)(
-                        x,
+                        L,
                         O(b({}, e), {
                             onSelect: (e) => {
                                 d(e), s.Z.setKeybind(O(b({}, l.current), { params: { channelId: e } }));
@@ -136,12 +136,12 @@ function P(e) {
                 children: [
                     (0, r.jsx)("div", {
                         className: g.selectedVoiceChannel,
-                        children: (0, r.jsx)(L, { channelId: u }),
+                        children: (0, r.jsx)(x, { channelId: u }),
                     }),
                     (0, r.jsx)(c.Z.Child, {
                         grow: 0,
                         shrink: 0,
-                        children: (0, r.jsx)(o.zxk, {
+                        children: (0, r.jsx)(o.Button, {
                             variant: "primary",
                             text: m.intl.string(m.t.Dm8O4e),
                             onClick: f,
@@ -180,7 +180,7 @@ function D(e) {
         }
     );
 }
-function x(e) {
+function L(e) {
     let { transitionState: t, onClose: n, onSelect: a } = e,
         s = i.useId(),
         c = i.useRef(null),
@@ -205,8 +205,8 @@ function x(e) {
                 row: S,
             });
     }, [S]);
-    let x = null != v ? v.length : O.length;
-    function L(e) {
+    let L = null != v ? v.length : O.length;
+    function x(e) {
         let { row: t } = e,
             i = (() => {
                 if (null != v) return v[t];
@@ -257,13 +257,13 @@ function x(e) {
                     break;
                 }
                 case "arrowup":
-                    0 === S ? P(x - 1) : P(S - 1);
+                    0 === S ? P(L - 1) : P(S - 1);
                     break;
                 case "arrowdown":
-                    S >= x - 1 ? P(0) : P(S + 1);
+                    S >= L - 1 ? P(0) : P(S + 1);
             }
     }
-    let k = (() => {
+    let j = (() => {
         if (null != v) {
             var e;
             return null == (e = v[S]) ? void 0 : e.id;
@@ -288,21 +288,21 @@ function x(e) {
                         placeholder: m.intl.string(m.t.tG0r7u),
                         role: "combobox",
                         "aria-controls": s,
-                        "aria-expanded": x > 0,
-                        "aria-activedescendant": x > 0 && null != k ? k : void 0,
+                        "aria-expanded": L > 0,
+                        "aria-activedescendant": L > 0 && null != j ? j : void 0,
                         "aria-autocomplete": "list",
                         spellCheck: !1,
                     }),
                 }),
-                0 === x && "" !== b && (0, r.jsx)(N, {}),
-                (x > 0 || "" === b) &&
+                0 === L && "" !== b && (0, r.jsx)(N, {}),
+                (L > 0 || "" === b) &&
                     (0, r.jsx)(o.Tvr, {
                         innerId: s,
                         innerRole: "listbox",
                         "aria-label": m.intl.string(m.t["+N3fW1"]),
                         ref: c,
-                        sections: [x],
-                        renderRow: L,
+                        sections: [L],
+                        renderRow: x,
                         renderListHeader: C,
                         renderFooter: A,
                         sectionHeight: 0,
@@ -315,7 +315,7 @@ function x(e) {
         }),
     });
 }
-function L(e) {
+function x(e) {
     let { channelId: t } = e,
         {
             channel: n,

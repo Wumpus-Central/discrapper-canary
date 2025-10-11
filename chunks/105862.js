@@ -1,6 +1,6 @@
-n.d(t, { Z: () => x });
-var l = n(951288),
-    i = n(647438),
+n.d(t, { Z: () => y });
+var i = n(951288),
+    l = n(647438),
     r = n(780384),
     a = n(481060),
     o = n(410030),
@@ -13,11 +13,11 @@ var l = n(951288),
     f = n(431048),
     h = n(983008),
     v = n(478408);
-function x(e) {
+function y(e) {
     let { showImage: t = !0, padding: n = !1 } = e,
-        x = (0, o.ZP)(),
-        y = (0, r.ap)(x) ? v : h,
-        g = i.useCallback(() => {
+        y = (0, o.ZP)(),
+        x = (0, r.ap)(y) ? v : h,
+        g = l.useCallback(() => {
             (0, s.Z)(c.Z.getAppsSupportURL(p.BhN.APPS_LEARN_MORE));
         }, []),
         { trackSectionImpressionRef: b } = (0, d.Z)({
@@ -25,37 +25,37 @@ function x(e) {
             numItems: 1,
             numVisibleItems: 1,
         });
-    return (0, l.jsx)("div", {
+    return (0, i.jsx)("div", {
         className: n ? f.containerPadding : void 0,
-        children: (0, l.jsxs)("div", {
+        children: (0, i.jsxs)("div", {
             ref: (e) => {
                 b.current = e;
             },
             className: f.container,
             children: [
                 t &&
-                    (0, l.jsx)("img", {
+                    (0, i.jsx)("img", {
                         className: f.image,
-                        src: y,
+                        src: x,
                         alt: "",
                         "aria-hidden": !0,
                     }),
-                (0, l.jsxs)("div", {
+                (0, i.jsxs)("div", {
                     className: f.body,
                     children: [
-                        (0, l.jsx)(a.X6q, {
+                        (0, i.jsx)(a.Heading, {
                             variant: "heading-lg/bold",
                             color: "header-primary",
                             children: m.intl.string(m.t["kw8/ER"]),
                         }),
-                        (0, l.jsx)(a.Text, {
+                        (0, i.jsx)(a.Text, {
                             variant: "text-xs/normal",
                             color: "text-default",
                             children: m.intl.string(m.t.GZoV1N),
                         }),
                     ],
                 }),
-                (0, l.jsx)(a.zxk, {
+                (0, i.jsx)(a.Button, {
                     variant: "primary",
                     text: m.intl.string(m.t.Ye51oa),
                     "aria-label": m.intl.formatToPlainString(m.t.xx5Sur, {

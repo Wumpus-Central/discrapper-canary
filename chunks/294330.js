@@ -23,11 +23,11 @@ var r = n(951288),
     _ = n(768581),
     O = n(356164),
     E = n(826946),
-    y = n(981631),
-    v = n(388032),
+    v = n(981631),
+    y = n(388032),
     I = n(972725),
-    S = n(129512),
-    C = n(330065),
+    C = n(129512),
+    S = n(330065),
     T = n(755386);
 function N(e) {
     let { guild: t, onClick: l, onView: o } = e,
@@ -103,7 +103,7 @@ function N(e) {
             [t],
         ),
         L = (0, d.ZP)(),
-        R = t.features.has(y.oNc.HUB),
+        R = t.features.has(v.oNc.HUB),
         D = i.useMemo(() => {
             let e = _.ZP.getGuildDiscoverySplashURL({
                 id: t.id,
@@ -113,10 +113,10 @@ function N(e) {
             if (null != e) return e;
             if (R) return T;
             switch (L) {
-                case y.BRd.DARK:
-                    return S;
-                case y.BRd.LIGHT:
+                case v.BRd.DARK:
                     return C;
+                case v.BRd.LIGHT:
+                    return S;
             }
         }, [t.discoverySplash, t.id, R, L]),
         k = i.useMemo(
@@ -150,7 +150,7 @@ function N(e) {
                     onClick: A,
                     disabled: O,
                     onContextMenu: w,
-                    "aria-label": v.intl.string(v.t["M9wQ+f"]),
+                    "aria-label": y.intl.string(y.t["M9wQ+f"]),
                     children: [
                         (0, r.jsxs)("div", {
                             className: I.header,
@@ -202,7 +202,7 @@ function N(e) {
                                             guild: t,
                                             tooltipColor: c.ua7.Colors.PRIMARY,
                                         }),
-                                        (0, r.jsx)(c.X6q, {
+                                        (0, r.jsx)(c.Heading, {
                                             variant: "heading-md/semibold",
                                             className: I.guildName,
                                             children: t.name,
@@ -227,7 +227,7 @@ function N(e) {
                                                         className: I.memberDetailsText,
                                                         variant: "text-xs/normal",
                                                         color: "header-secondary",
-                                                        children: v.intl.format(v.t["LC+S+v"], {
+                                                        children: y.intl.format(y.t["LC+S+v"], {
                                                             membersOnline: t.presenceCount,
                                                         }),
                                                     }),
@@ -242,7 +242,7 @@ function N(e) {
                                                         className: I.memberDetailsText,
                                                         variant: "text-xs/normal",
                                                         color: "header-secondary",
-                                                        children: v.intl.format(v.t.zRl6XV, { count: t.memberCount }),
+                                                        children: y.intl.format(y.t.zRl6XV, { count: t.memberCount }),
                                                     }),
                                                 ],
                                             }),

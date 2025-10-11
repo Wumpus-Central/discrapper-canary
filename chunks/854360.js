@@ -80,8 +80,8 @@ function m(e) {
             return l;
         })(e, ["guildId", "user", "location", "modReportId"]);
     let [v, h] = l.useState(""),
-        [M, A] = l.useState(!1),
-        C = (0, u.sE)(t, {
+        [M, C] = l.useState(!1),
+        A = (0, u.sE)(t, {
             location: m,
             targetUserId: n.id,
         }),
@@ -97,13 +97,13 @@ function m(e) {
                 (c.Z.kickUser(t, n.id, v, y).then(() => {
                     M && null != y && s.Z.resolveFlag(y);
                 }),
-                C(u.jQ.KICK),
+                A(u.jQ.KICK),
                 null != y)
             ) {
                 var e;
                 null == (e = j.onClose) || e.call(j);
             }
-        }, [t, n.id, v, C, y, M, j]),
+        }, [t, n.id, v, A, y, M, j]),
         I = l.useCallback((e) => {
             h(e);
         }, []);
@@ -123,10 +123,10 @@ function m(e) {
                   ],
                   actionBarInput: S
                       ? void 0
-                      : (0, r.jsx)(a.XZJ, {
+                      : (0, r.jsx)(a.Checkbox, {
                             checked: M,
                             onChange: (e) => {
-                                A(e);
+                                C(e);
                             },
                             label: g.intl.string(b.default["8yIKen"]),
                         }),

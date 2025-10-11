@@ -16,8 +16,8 @@ var t = n(951288),
     x = n(981631),
     b = n(179839),
     j = n(388032),
-    E = n(883287);
-function N(e) {
+    N = n(883287);
+function E(e) {
     for (var r = 1; r < arguments.length; r++) {
         var n = null != arguments[r] ? arguments[r] : {},
             t = Object.keys(n);
@@ -42,7 +42,7 @@ function N(e) {
     }
     return e;
 }
-function O(e, r) {
+function g(e, r) {
     return (
         (r = null != r ? r : {}),
         Object.getOwnPropertyDescriptors
@@ -60,7 +60,7 @@ function O(e, r) {
         e
     );
 }
-let g = function () {
+let O = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : f.default.locale;
     return "https://".concat(x.xr4, "/hc/").concat(e.toLowerCase(), "/requests/new?ticket_form_id=360000168511");
 };
@@ -68,9 +68,9 @@ function T(e) {
     let { guild: r, toUser: f, fromUser: T, onClose: y, transitionState: I } = e,
         [v, w] = i.useState(!1),
         A = r.features.has(x.oNc.VERIFIED) || r.features.has(x.oNc.PARTNERED),
-        R = A ? j.intl.format(j.t.A37vwM, { ticketUrl: g() }) : null,
-        k = r.features.has(x.oNc.CREATOR_MONETIZABLE) || r.features.has(x.oNc.CREATOR_MONETIZABLE_PROVISIONAL);
-    async function S(e) {
+        R = A ? j.intl.format(j.t.A37vwM, { ticketUrl: O() }) : null,
+        S = r.features.has(x.oNc.CREATOR_MONETIZABLE) || r.features.has(x.oNc.CREATOR_MONETIZABLE_PROVISIONAL);
+    async function k(e) {
         await m.Z.transferOwnership(r.id, f.id, b.X.EMAIL, e);
     }
     async function P() {
@@ -87,8 +87,8 @@ function T(e) {
                       return (r) =>
                           (0, t.jsx)(
                               e,
-                              O(N({}, r), {
-                                  onFormSubmit: S,
+                              g(E({}, r), {
+                                  onFormSubmit: k,
                                   onResend: P,
                                   onSuccess: o.xf,
                                   headerText: j.intl.string(j.t.Z5s7PD),
@@ -105,7 +105,7 @@ function T(e) {
                 (0, c.h7j)((e) =>
                     (0, t.jsx)(
                         c.ConfirmModal,
-                        O(N({}, e), {
+                        g(E({}, e), {
                             header: j.intl.string(j.t["m+nQlp"]),
                             confirmText: j.intl.string(j.t["NX+WJC"]),
                             confirmButtonColor: s.zx.Colors.BRAND,
@@ -128,7 +128,7 @@ function T(e) {
         D = f.hasAvatarForGuild(r.id),
         L = () =>
             (0, t.jsxs)("span", {
-                className: E.guildTransfer,
+                className: N.guildTransfer,
                 children: [
                     null != r.icon
                         ? (0, t.jsx)(c.qEK, {
@@ -138,12 +138,12 @@ function T(e) {
                                   size: 16,
                               }),
                               size: c.EFr.SIZE_16,
-                              className: E.miniGuildIcon,
+                              className: N.miniGuildIcon,
                               "aria-hidden": !0,
                           })
                         : null,
                     (0, t.jsx)(c.Text, {
-                        className: E.guildName,
+                        className: N.guildName,
                         variant: "text-sm/bold",
                         children: r.name,
                     }),
@@ -157,9 +157,9 @@ function T(e) {
             children: [
                 (0, t.jsx)(c.xBx, {
                     separator: !1,
-                    children: (0, t.jsx)(c.X6q, {
+                    children: (0, t.jsx)(c.Heading, {
                         variant: "heading-lg/semibold",
-                        className: E.header,
+                        className: N.header,
                         children: j.intl.string(j.t.Z5s7PD),
                     }),
                 }),
@@ -167,7 +167,7 @@ function T(e) {
                     children: [
                         (0, t.jsx)(c.Text, {
                             variant: "text-sm/normal",
-                            className: E.subHeader,
+                            className: N.subHeader,
                             children:
                                 null != C || D
                                     ? j.intl.format(j.t.E90vgo, {
@@ -175,23 +175,23 @@ function T(e) {
                                           user: (0, h.W5)(f),
                                           AKAHook: function () {
                                               return (0, t.jsxs)("span", {
-                                                  className: E.akaTransfer,
+                                                  className: N.akaTransfer,
                                                   children: [
                                                       (0, t.jsx)(c.IGR, {
                                                           text: j.intl.string(j.t.l1QVfn),
                                                           disableColor: !0,
-                                                          className: E.akaBadge,
+                                                          className: N.akaBadge,
                                                       }),
                                                       D
                                                           ? (0, t.jsx)(c.qEK, {
                                                                 src: f.getAvatarURL(r.id, 16, !0),
                                                                 size: c.EFr.SIZE_16,
-                                                                className: E.miniAvatar,
+                                                                className: N.miniAvatar,
                                                                 "aria-hidden": !0,
                                                             })
                                                           : null,
                                                       (0, t.jsx)(c.Text, {
-                                                          className: E.nickname,
+                                                          className: N.nickname,
                                                           variant: "text-sm/normal",
                                                           children: null != C ? C : h.ZP.getName(f),
                                                       }),
@@ -205,18 +205,18 @@ function T(e) {
                                       }),
                         }),
                         (0, t.jsxs)(u.Z, {
-                            className: E.fromToWrapper,
+                            className: N.fromToWrapper,
                             justify: u.Z.Justify.CENTER,
                             children: [
                                 (0, t.jsx)("div", {
-                                    className: E.from,
+                                    className: N.from,
                                     children: (0, t.jsx)(l.Z, {
                                         user: T,
                                         size: c.EFr.SIZE_80,
                                     }),
                                 }),
                                 (0, t.jsx)("div", {
-                                    className: E.to,
+                                    className: N.to,
                                     children: (0, t.jsx)(l.Z, {
                                         user: f,
                                         size: c.EFr.SIZE_80,
@@ -224,15 +224,15 @@ function T(e) {
                                 }),
                             ],
                         }),
-                        k &&
+                        S &&
                             (0, t.jsx)(c.Wn, {
                                 messageType: c.QYI.INFO,
-                                className: E.roleSubscriptionText,
+                                className: N.roleSubscriptionText,
                                 children: j.intl.format(j.t.LAlucX, {
                                     server_subscription_owner_transfer_article: x.T23,
                                 }),
                             }),
-                        (0, t.jsx)(c.XZJ, {
+                        (0, t.jsx)(c.Checkbox, {
                             label: j.intl.format(j.t.xm6ACA, { username: (0, h.W5)(f) }),
                             disabled: A,
                             checked: v,
@@ -248,16 +248,16 @@ function T(e) {
                     ],
                 }),
                 (0, t.jsx)(c.mzw, {
-                    children: (0, t.jsxs)(c.hE2, {
+                    children: (0, t.jsxs)(c.ButtonGroup, {
                         direction: "horizontal-reverse",
                         children: [
-                            (0, t.jsx)(c.zxk, {
+                            (0, t.jsx)(c.Button, {
                                 variant: "critical-primary",
                                 text: j.intl.string(j.t.Z5s7PD),
                                 type: "submit",
                                 disabled: !v,
                             }),
-                            (0, t.jsx)(c.zxk, {
+                            (0, t.jsx)(c.Button, {
                                 variant: "secondary",
                                 text: j.intl.string(j.t["ETE/oK"]),
                                 onClick: y,

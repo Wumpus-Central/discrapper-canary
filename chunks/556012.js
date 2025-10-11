@@ -79,7 +79,7 @@ function E(e, t, n) {
                                       null != (f = null == t || null == (r = t.metadata) ? void 0 : r.durationSeconds)
                                           ? f
                                           : 0,
-                                  n = (0, s.L9)(e);
+                                  n = (0, s.getFriendlyDurationString)(e);
                               if (null == n) return null;
                               return c.intl.format(c.t.AFmbfX, { duration: n });
                           }

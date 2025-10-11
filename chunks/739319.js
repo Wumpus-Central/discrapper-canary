@@ -20,7 +20,7 @@ function _(e) {
         ? (0, r.jsxs)("div", {
               className: u.container,
               children: [
-                  (0, r.jsx)(o.X6q, {
+                  (0, r.jsx)(o.Heading, {
                       variant: "heading-sm/semibold",
                       color: "header-secondary",
                       className: u.header,
@@ -44,7 +44,7 @@ function _(e) {
                               (0, r.jsx)("div", {
                                   "data-button-hoisted-classname-wrapper": !0,
                                   className: u.__invalid_trailingButton,
-                                  children: (0, r.jsx)(o.zxk, {
+                                  children: (0, r.jsx)(o.Button, {
                                       variant: "secondary",
                                       size: "sm",
                                       text: m ? d.intl.string(d.t["t5VZ8/"]) : d.intl.string(d.t.OpuAlJ),

@@ -29,7 +29,7 @@ let g = () => {
         borderType: f.Y.LIMITED,
         showBorder: n,
         hasBackground: n,
-        children: (0, r.jsx)(o.zxk, {
+        children: (0, r.jsx)(o.Button, {
             text: h.intl.string(h.t.Geikws),
             onClick: () => {
                 n && t(_.L.TAKE_ACTION),

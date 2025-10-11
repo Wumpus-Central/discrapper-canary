@@ -23,7 +23,7 @@ let c = (e) => {
             }),
             (0, r.jsxs)("div", {
                 children: [
-                    (0, r.jsx)(o.X6q, {
+                    (0, r.jsx)(o.Heading, {
                         variant: "heading-md/bold",
                         className: l.header,
                         children: (0, r.jsx)(o.y5t, { children: i }),

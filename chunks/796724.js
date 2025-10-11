@@ -126,9 +126,9 @@ function y() {
                 : [];
         }, [n]),
         D = (0, v.Z)(),
-        z = null != l,
-        L = (0, b.Z)(G),
-        H = null != G && null != _.nd[G] ? _.nd[G] : "";
+        H = null != l,
+        z = (0, b.Z)(G),
+        L = null != G && null != _.nd[G] ? _.nd[G] : "";
     return null == n
         ? (0, r.jsx)("div", {
               className: N.spinnerContainer,
@@ -149,7 +149,7 @@ function y() {
                                           (0, r.jsxs)("div", {
                                               className: N.sectionHeader,
                                               children: [
-                                                  (0, r.jsx)(c.X6q, {
+                                                  (0, r.jsx)(c.Heading, {
                                                       className: N.headerText,
                                                       variant: "heading-sm/semibold",
                                                       color: "text-secondary",
@@ -180,7 +180,7 @@ function y() {
                                           (0, r.jsxs)("div", {
                                               className: N.sectionHeader,
                                               children: [
-                                                  (0, r.jsx)(c.X6q, {
+                                                  (0, r.jsx)(c.Heading, {
                                                       className: N.headerText,
                                                       variant: "heading-sm/semibold",
                                                       color: "text-secondary",
@@ -214,7 +214,7 @@ function y() {
                                           (0, r.jsx)(c.PhF, {
                                               serialize: (e) => e.id,
                                               isSelected: (e) => e.id === t,
-                                              isDisabled: w || z,
+                                              isDisabled: w || H,
                                               options: M,
                                               optionClassName: N.option,
                                               select: (e) => a(e.id),
@@ -247,7 +247,7 @@ function y() {
                                           (0, r.jsxs)("div", {
                                               className: N.sectionHeader,
                                               children: [
-                                                  (0, r.jsx)(c.X6q, {
+                                                  (0, r.jsx)(c.Heading, {
                                                       className: N.headerText,
                                                       variant: "heading-sm/semibold",
                                                       color: "text-secondary",
@@ -314,9 +314,9 @@ function y() {
                       variant: "text-sm/medium",
                       children:
                           null != G &&
-                          E.intl.format(z ? C.default.num0a2 : C.default.p5KZDg, {
-                              provider: L,
-                              termsOfServiceUrl: () => (0, u.q)({ href: H }),
+                          E.intl.format(H ? C.default.num0a2 : C.default.p5KZDg, {
+                              provider: z,
+                              termsOfServiceUrl: () => (0, u.q)({ href: L }),
                               helpCenterUrl: "https://google.com/help-center",
                           }),
                   }),

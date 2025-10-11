@@ -203,7 +203,7 @@ function I(e, t, n, r) {
         );
 }
 function T(e, t) {
-    let n = new o.Z({});
+    let n = new o.default({});
     D(l.BM.USER, { reported_user_id: n.id }),
         (0, u.m)(
             {
@@ -220,7 +220,7 @@ function T(e, t) {
         );
 }
 function S(e, t) {
-    let n = (0, s.Jh)({});
+    let n = (0, s.dangerouslyConstructGuildRecordFromUntypedObject)({});
     D(l.BM.GUILD, { guild_id: n.id }),
         (0, u.m)(
             {

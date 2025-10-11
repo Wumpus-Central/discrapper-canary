@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => h });
 var r = n(951288);
 n(647438);
 var i = n(481060),
@@ -9,7 +9,7 @@ var i = n(481060),
     c = n(388032),
     d = n(941057),
     u = n(497224);
-function p(e) {
+function h(e) {
     let { guildId: t } = e;
     return (0, r.jsx)("div", {
         className: d.upsellPage,
@@ -23,7 +23,7 @@ function p(e) {
                 (0, r.jsxs)("div", {
                     className: d.upsellContent,
                     children: [
-                        (0, r.jsx)(i.X6q, {
+                        (0, r.jsx)(i.Heading, {
                             variant: "heading-xl/semibold",
                             children: c.intl.string(c.t["8gJGPj"]),
                         }),
@@ -35,7 +35,7 @@ function p(e) {
                         (0, r.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
                             className: d.__invalid_button,
-                            children: (0, r.jsx)(i.zxk, {
+                            children: (0, r.jsx)(i.Button, {
                                 variant: "primary",
                                 text: c.intl.string(c.t["I/XhUl"]),
                                 onClick: () => {

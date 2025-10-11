@@ -119,7 +119,7 @@ class O extends o.PureComponent {
                     className: b.buttonContainer,
                     justify: h ? f.Z.Justify.BETWEEN : f.Z.Justify.CENTER,
                     children: [
-                        (0, a.jsx)(p.zxk, {
+                        (0, a.jsx)(p.Button, {
                             variant: "primary",
                             size: "sm",
                             text: g.intl.string(g.t["+IrDzM"]),

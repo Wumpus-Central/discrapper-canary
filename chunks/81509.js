@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    s = n(481060),
-    a = n(596454),
+    a = n(481060),
+    s = n(596454),
     o = n(782568),
     c = n(377171),
     d = n(565138),
@@ -14,14 +14,14 @@ var i = n(120356),
     p = n(549631),
     f = n(388032),
     h = n(980989);
-function x(e) {
+function b(e) {
     let { subscribers: t } = e;
     return (0, r.jsxs)("div", {
         className: h.guildSubscriberCount,
         children: [
             (0, r.jsx)("div", {
                 className: h.subscriberCountValue,
-                children: (0, r.jsx)(s.Text, {
+                children: (0, r.jsx)(a.Text, {
                     variant: "text-md/normal",
                     color: "always-white",
                     children: t,
@@ -31,7 +31,7 @@ function x(e) {
                 className: h.subscriberCountText,
                 children: [
                     (0, r.jsx)(p.Z, { color: c.Z.WHITE }),
-                    (0, r.jsx)(s.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: "text-md/normal",
                         color: "always-white",
                         children: f.intl.string(f.t["3NNXPT"]),
@@ -41,9 +41,9 @@ function x(e) {
         ],
     });
 }
-function b(e) {
+function x(e) {
     let { guildName: t, guildIcon: n, guildAvatarUrl: i, subscriberCount: l } = e,
-        a = (0, u.Jh)({
+        s = (0, u.dangerouslyConstructGuildRecordFromUntypedObject)({
             name: t,
             icon: n,
         });
@@ -53,18 +53,18 @@ function b(e) {
             (0, r.jsx)(d.Z, {
                 className: h.guildCardHeaderAvatar,
                 iconSrc: i,
-                guild: a,
+                guild: s,
                 size: d.Z.Sizes.LARGE,
             }),
             (0, r.jsxs)("div", {
                 className: h.guildCardHeaderTitle,
                 children: [
-                    (0, r.jsx)(s.X6q, {
+                    (0, r.jsx)(a.Heading, {
                         variant: "heading-lg/semibold",
                         color: "header-primary",
                         children: t,
                     }),
-                    null != l && (0, r.jsx)(x, { subscribers: l }),
+                    null != l && (0, r.jsx)(b, { subscribers: l }),
                 ],
             }),
         ],
@@ -75,12 +75,12 @@ function j(e) {
     return (0, r.jsxs)("div", {
         className: h.guildCardQuote,
         children: [
-            (0, r.jsx)(s.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: "text-lg/normal",
                 color: "interactive-active",
                 children: t,
             }),
-            (0, r.jsx)(s.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: "text-md/normal",
                 color: "interactive-active",
                 children: f.intl.format(f.t.m0b6Ki, {
@@ -91,7 +91,7 @@ function j(e) {
         ],
     });
 }
-function _(e) {
+function v(e) {
     let { emojisToShow: t, notShownEmojiCount: n, storePageUrl: i } = e,
         c = null != t && t.length > 0,
         d = () => {
@@ -102,7 +102,7 @@ function _(e) {
         children: c
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)(s.Text, {
+                      (0, r.jsx)(a.Text, {
                           variant: "text-xs/semibold",
                           color: "header-primary",
                           className: h.premiumEmojisTitle,
@@ -116,7 +116,7 @@ function _(e) {
                                   children: [
                                       t.map((e) =>
                                           (0, r.jsx)(
-                                              a.Z,
+                                              s.Z,
                                               {
                                                   className: h.emoji,
                                                   emojiId: e.id,
@@ -129,7 +129,7 @@ function _(e) {
                                       null != n &&
                                           (0, r.jsx)("div", {
                                               className: h.extraEmojiCount,
-                                              children: (0, r.jsxs)(s.Text, {
+                                              children: (0, r.jsxs)(a.Text, {
                                                   variant: "text-md/semibold",
                                                   color: "text-default",
                                                   children: ["+", n],
@@ -139,7 +139,7 @@ function _(e) {
                               }),
                               (0, r.jsx)("div", {
                                   className: h.viewServerButtonContainer,
-                                  children: (0, r.jsx)(s.zxk, {
+                                  children: (0, r.jsx)(a.Button, {
                                       variant: "secondary",
                                       disabled: null == i,
                                       onClick: d,
@@ -153,7 +153,7 @@ function _(e) {
               })
             : (0, r.jsx)("div", {
                   className: h.viewServerButtonContainer,
-                  children: (0, r.jsx)(s.zxk, {
+                  children: (0, r.jsx)(a.Button, {
                       variant: "secondary",
                       disabled: null == i,
                       onClick: d,
@@ -163,15 +163,15 @@ function _(e) {
               }),
     });
 }
-function v(e) {
+function _(e) {
     let { highlightedCreatorGuild: t } = e,
-        { guild_id: n, quote: i, quote_attribution: l, quote_attribution_title: a } = t,
+        { guild_id: n, quote: i, quote_attribution: l, quote_attribution_title: s } = t,
         o = (0, g.Z)(n, 4, 60),
         { isLoading: c, hasAllImperativeDetails: d } = o;
     if (c)
         return (0, r.jsx)("div", {
             className: h.guildCard,
-            children: (0, r.jsx)(s.$jN, {}),
+            children: (0, r.jsx)(a.$jN, {}),
         });
     if (!d) return null;
     let {
@@ -179,14 +179,14 @@ function v(e) {
         guildName: m,
         guildAvatarUrl: p,
         subscriberCount: f,
-        emojisToShow: x,
-        notShownEmojiCount: v,
+        emojisToShow: b,
+        notShownEmojiCount: _,
         storePageUrl: C,
     } = o.details;
     return (0, r.jsxs)("div", {
         className: h.guildCard,
         children: [
-            (0, r.jsx)(b, {
+            (0, r.jsx)(x, {
                 guildIcon: u,
                 guildName: m,
                 guildAvatarUrl: p,
@@ -195,11 +195,11 @@ function v(e) {
             (0, r.jsx)(j, {
                 quote: i,
                 quoteAttribution: l,
-                quoteAttributionTitle: a,
+                quoteAttributionTitle: s,
             }),
-            (0, r.jsx)(_, {
-                emojisToShow: x,
-                notShownEmojiCount: v,
+            (0, r.jsx)(v, {
+                emojisToShow: b,
+                notShownEmojiCount: _,
                 storePageUrl: C,
             }),
         ],
@@ -209,16 +209,16 @@ function C(e) {
     let { highlightedCreators: t } = e;
     return (0, r.jsxs)("div", {
         children: [
-            (0, r.jsx)(s.X6q, {
+            (0, r.jsx)(a.Heading, {
                 variant: "heading-lg/semibold",
                 color: "header-primary",
                 children: f.intl.string(f.t["tJp+QU"]),
             }),
-            (0, r.jsx)(s.LZC, { size: 24 }),
+            (0, r.jsx)(a.LZC, { size: 24 }),
             (0, r.jsx)(m.Z, {
                 carouselClassName: h.creatorGuildCarousel,
                 items: t,
-                renderItem: (e) => (0, r.jsx)(v, { highlightedCreatorGuild: e }),
+                renderItem: (e) => (0, r.jsx)(_, { highlightedCreatorGuild: e }),
                 intervalBetweenAutomaticItemRotations: 7000,
             }),
         ],

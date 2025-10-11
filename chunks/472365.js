@@ -103,7 +103,7 @@ function U(e) {
                 className: M.errorContent,
                 children: [
                     (0, i.jsx)(O, { className: M.errorImage }),
-                    (0, i.jsx)(c.X6q, {
+                    (0, i.jsx)(c.Heading, {
                         id: t,
                         variant: "heading-xl/semibold",
                         color: "header-primary",
@@ -161,8 +161,8 @@ function y(e) {
         null != j && L.Z.acceptInvite(j);
     }
     let { guild: V, channel: W, inviter: B, target_application: w } = j,
-        Y = null != V,
-        H = null == j.guild && null == j.channel && null != j.inviter;
+        H = null != V,
+        Y = null == j.guild && null == j.channel && null != j.inviter;
     if (null != w) (t = null == V ? void 0 : V.name), (a = f.ZP.createFromServer(w).getCoverImageURL(1024));
     else if (null != V)
         (t = V.name),
@@ -174,7 +174,7 @@ function y(e) {
         throw Error("no name for group DM invite");
     let K = (0, E.yU)();
     return (
-        (r = H
+        (r = Y
             ? Z.intl.string(Z.t["e/6Ogo"])
             : Z.intl.format(Z.t["9sWQNT"], { usernameHook: () => (0, i.jsx)("span", { children: O }) })),
         (0, i.jsx)(_.Gt, {
@@ -204,7 +204,7 @@ function y(e) {
                                     id: y,
                                     children: (0, i.jsx)(u.Z, {
                                         invite: j,
-                                        disableUser: Y,
+                                        disableUser: H,
                                         error: S,
                                     }),
                                 }),

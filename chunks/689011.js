@@ -94,7 +94,7 @@ function g(e) {
                 width: 300,
                 height: 126,
             }),
-            (0, r.jsx)(i.X6q, {
+            (0, r.jsx)(i.Heading, {
                 className: f.confirmationTitle,
                 variant: "heading-xl/extrabold",
                 color: "header-primary",

@@ -57,7 +57,7 @@ function d(e, t) {
                             : (0, r.jsx)("div", {
                                   "data-button-hoisted-classname-wrapper": !0,
                                   className: u.button,
-                                  children: (0, r.jsx)(i.zxk, {
+                                  children: (0, r.jsx)(i.Button, {
                                       variant: "primary",
                                       text: c.intl.string(c.t.cpT0Cg),
                                       onClick: n.onClose,

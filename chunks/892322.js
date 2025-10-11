@@ -24,7 +24,7 @@ function m(e) {
                                 size: o.Z.Sizes.XLARGE,
                                 active: !0,
                             }),
-                            (0, i.jsx)(a.X6q, {
+                            (0, i.jsx)(a.Heading, {
                                 className: u.title,
                                 variant: "heading-xl/semibold",
                                 children: d.intl.string(d.t.CueiPT),

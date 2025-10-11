@@ -17,7 +17,7 @@ function g(e) {
     return (0, r.jsxs)(s.Z, {
         className: l()(h.card, t),
         children: [
-            (0, r.jsx)(a.X6q, {
+            (0, r.jsx)(a.Heading, {
                 variant: "heading-md/semibold",
                 className: h.header,
                 children: f.intl.string(f.t.HcbnMD),
@@ -33,14 +33,14 @@ function g(e) {
             (0, r.jsxs)("div", {
                 className: h.buttonContainer,
                 children: [
-                    (0, r.jsx)(a.zxk, {
+                    (0, r.jsx)(a.Button, {
                         variant: "primary",
                         size: "sm",
                         fullWidth: !0,
                         text: f.intl.string(f.t.ebojgI),
                         onClick: () => (0, o.g)([d.pjP.PERSONALIZATION], []),
                     }),
-                    (0, r.jsx)(a.zxk, {
+                    (0, r.jsx)(a.Button, {
                         variant: "secondary",
                         size: "sm",
                         fullWidth: !0,

@@ -15,15 +15,15 @@ let j = (e) => {
         [g, O] = o.useState(null != (j = v.defaultReactionEmoji) ? j : null),
         [N, w] = o.useState(!1),
         [E, P] = o.useState(!1),
-        k = o.useRef(null),
-        _ =
+        _ = o.useRef(null),
+        k =
             (null != (p = null == (t = v.defaultReactionEmoji) ? void 0 : t.emojiId) ? p : null) !==
             (null != (b = null == g ? void 0 : g.emojiId) ? b : null),
         R =
             (null != (x = null == (n = v.defaultReactionEmoji) ? void 0 : n.emojiName) ? x : null) !==
             (null != (h = null == g ? void 0 : g.emojiName) ? h : null),
-        C = _ || R,
-        I = (e) => {
+        C = k || R,
+        B = (e) => {
             O(
                 null == e
                     ? null
@@ -32,7 +32,7 @@ let j = (e) => {
                       : { emojiName: e.optionallyDiverseSequence },
             );
         },
-        S = async () => {
+        I = async () => {
             if (C) {
                 w(!0), P(!1);
                 try {
@@ -60,18 +60,18 @@ let j = (e) => {
                 text: u.intl.string(u.t.R3BPHx),
                 loading: N,
                 disabled: !C,
-                onClick: S,
+                onClick: I,
                 autoFocus: !0,
             },
         ],
         children: [
             (0, i.jsx)(s.Z, { reactionEmoji: g }),
-            (0, i.jsxs)(r.hE2, {
+            (0, i.jsxs)(r.ButtonGroup, {
                 size: "sm",
                 className: m.buttonRow,
                 children: [
                     (0, i.jsx)(r.yRy, {
-                        targetElementRef: k,
+                        targetElementRef: _,
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
                             return (0, i.jsx)(c.Z, {
@@ -79,7 +79,7 @@ let j = (e) => {
                                 closePopout: t,
                                 onSelectEmoji: (e) => {
                                     let { emoji: n, willClose: i } = e;
-                                    I(n), i && t();
+                                    B(n), i && t();
                                 },
                                 pickerIntention: d.Hz.COMMUNITY_CONTENT,
                                 channel: v,
@@ -91,7 +91,7 @@ let j = (e) => {
                         children: (e) => {
                             var t, n;
                             return (0, i.jsx)(
-                                r.zxk,
+                                r.Button,
                                 ((t = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
@@ -119,7 +119,7 @@ let j = (e) => {
                                 })({}, e)),
                                 (n = n =
                                     {
-                                        buttonRef: k,
+                                        buttonRef: _,
                                         text: u.intl.string(u.t["59QgaG"]),
                                         variant: "primary",
                                         onClick: (t) => {
@@ -144,10 +144,10 @@ let j = (e) => {
                         },
                     }),
                     null != g &&
-                        (0, i.jsx)(r.zxk, {
+                        (0, i.jsx)(r.Button, {
                             text: u.intl.string(u.t.N86XcH),
                             variant: "critical-secondary",
-                            onClick: () => I(null),
+                            onClick: () => B(null),
                         }),
                 ],
             }),

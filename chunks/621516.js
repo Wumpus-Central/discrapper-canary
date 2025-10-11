@@ -62,7 +62,7 @@ function P(e) {
                     ],
                 }),
             }),
-            (0, r.jsx)(d.X6q, {
+            (0, r.jsx)(d.Heading, {
                 variant: "heading-md/extrabold",
                 className: y.title,
                 color: "header-primary",
@@ -160,17 +160,17 @@ let I = (e) => {
         D = () => {
             p.Z.open(a.guild_id, _.pNK.ROLE_SUBSCRIPTIONS);
         },
-        z =
+        H =
             null != (t = null == E ? void 0 : E.features.has(_.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) && t
                 ? C.intl.string(C.t.n0q7sL)
                 : C.intl.string(C.t.QoYdiY),
-        H =
+        z =
             null !=
                 (n =
                     (null == E ? void 0 : E.features.has(_.oNc.CREATOR_MONETIZABLE)) ||
                     (null == E ? void 0 : E.features.has(_.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) && n,
-        B = H ? C.intl.string(C.t["G/7ciY"]) : C.intl.string(C.t.IFOiio),
-        U = H ? C.intl.string(C.t.GjgQOz) : C.intl.string(C.t.E7AO6u);
+        B = z ? C.intl.string(C.t["G/7ciY"]) : C.intl.string(C.t.IFOiio),
+        U = z ? C.intl.string(C.t.GjgQOz) : C.intl.string(C.t.E7AO6u);
     return (0, r.jsx)(r.Fragment, {
         children: Z((e, t) =>
             t
@@ -200,7 +200,7 @@ let I = (e) => {
                               className: y.contentContainer,
                               children: [
                                   (0, r.jsxs)("div", {
-                                      className: l()(y.contentRow, H && y.contentRowOne),
+                                      className: l()(y.contentRow, z && y.contentRowOne),
                                       children: [
                                           (0, r.jsx)("div", {
                                               className: y.contentMediaContainer,
@@ -243,7 +243,7 @@ let I = (e) => {
                                           (0, r.jsxs)("article", {
                                               className: y.contentTextContainer,
                                               children: [
-                                                  (0, r.jsx)(d.X6q, {
+                                                  (0, r.jsx)(d.Heading, {
                                                       variant: "heading-lg/semibold",
                                                       color: "header-primary",
                                                       children: B,
@@ -292,7 +292,7 @@ let I = (e) => {
                                           }),
                                       ],
                                   }),
-                                  H &&
+                                  z &&
                                       (0, r.jsxs)("div", {
                                           className: l()(y.contentRow, y.contentRowTwo),
                                           children: [
@@ -331,7 +331,7 @@ let I = (e) => {
                                                           ],
                                                       }),
                                                       (0, r.jsx)(d.LZC, { size: 10 }),
-                                                      (0, r.jsx)(d.X6q, {
+                                                      (0, r.jsx)(d.Heading, {
                                                           variant: "heading-lg/semibold",
                                                           color: "header-primary",
                                                           children: C.intl.string(C.t["N/TRra"]),
@@ -360,10 +360,10 @@ let I = (e) => {
                                                       }),
                                                       (0, r.jsx)(d.LZC, { size: 16 }),
                                                       0 === M.length &&
-                                                          (0, r.jsx)(d.zxk, {
+                                                          (0, r.jsx)(d.Button, {
                                                               variant: "primary",
                                                               onClick: D,
-                                                              text: z,
+                                                              text: H,
                                                           }),
                                                   ],
                                               }),

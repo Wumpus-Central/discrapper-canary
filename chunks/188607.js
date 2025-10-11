@@ -28,7 +28,7 @@ let p = function (e) {
                 src: u,
                 className: d.image,
             }),
-            (0, r.jsx)(l.X6q, {
+            (0, r.jsx)(l.Heading, {
                 variant: "heading-xl/semibold",
                 className: d.header,
                 children: h,

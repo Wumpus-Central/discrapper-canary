@@ -75,7 +75,7 @@ function _(e) {
     null == s || s(),
         (0, u.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("7654"), n.e("49049"), n.e("98953")]).then(
+                let { default: e } = await Promise.all([n.e("74318"), n.e("49049"), n.e("7654"), n.e("98953")]).then(
                     n.bind(n, 560114),
                 );
                 return (n) =>
@@ -87,7 +87,9 @@ function _(e) {
                             streamUserId: l,
                             applicationId: a,
                             analyticsLocation: c,
-                            source: r.isGuildStageVoice() ? m.t4x.STAGE_CHANNEL : m.t4x.STREAM_INVITE,
+                            source: r.isGuildStageVoice()
+                                ? m.InstantInviteSources.STAGE_CHANNEL
+                                : m.InstantInviteSources.STREAM_INVITE,
                             guildScheduledEvent: d,
                         }),
                     );

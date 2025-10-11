@@ -23,7 +23,7 @@ function d(e) {
                     "li",
                     {
                         className: u.permission,
-                        children: (0, r.jsx)(s.XZJ, {
+                        children: (0, r.jsx)(s.Checkbox, {
                             checked: n,
                             onChange: (t) => f(t, e),
                             label: t,

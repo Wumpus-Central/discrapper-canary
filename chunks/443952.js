@@ -18,11 +18,11 @@ var i = n(243814),
     _ = n(728285),
     O = n(928518),
     E = n(23750),
-    y = n(592125),
-    v = n(293273),
+    v = n(592125),
+    y = n(293273),
     I = n(885110),
-    S = n(451478),
-    C = n(630388),
+    C = n(451478),
+    S = n(630388),
     T = n(823379),
     N = n(709054),
     j = n(591759),
@@ -38,7 +38,7 @@ var i = n(243814),
     M = n(701488);
 async function U(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
-        l = v.Z.getApplicationActivity(t);
+        l = y.Z.getApplicationActivity(t);
     if (null == l || null == l.secrets || !(0, A.t9)(r, l.party, l.secrets))
         throw new x.Z(
             { errorCode: k.lTL.NO_ELIGIBLE_ACTIVITY },
@@ -88,7 +88,7 @@ let G = {
             let {
                     args: { user_id: t },
                 } = e,
-                n = y.Z.getDMFromUserId(t);
+                n = v.Z.getDMFromUserId(t);
             null != n &&
                 (0, u.In)(
                     n,
@@ -182,7 +182,7 @@ let G = {
             if (((0, P.Pr)({}, null == d ? void 0 : d.document), null != c)) {
                 if (c.applicationId !== i.id)
                     throw new x.Z({ errorCode: k.lTL.INVALID_COMMAND }, "Application is not currently mounted.");
-                let e = v.Z.getApplicationActivity(i.id);
+                let e = y.Z.getApplicationActivity(i.id);
                 if (null != e) (0, s.h7)(e, !1, p);
                 else
                     throw new x.Z(
@@ -192,7 +192,9 @@ let G = {
             } else
                 (0, a.ZDy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("7654"), n.e("54833")]).then(n.bind(n, 560114));
+                        let { default: e } = await Promise.all([n.e("74318"), n.e("7654"), n.e("54833")]).then(
+                            n.bind(n, 560114),
+                        );
                         return (t) => {
                             var n, a;
                             return (0, r.jsx)(
@@ -228,7 +230,7 @@ let G = {
                                         channel: l,
                                         applicationId: i.id,
                                         analyticsLocation: k.Sbl.ACTIVITY_RPC,
-                                        source: k.t4x.ACTIVITY_INVITE,
+                                        source: k.InstantInviteSources.ACTIVITY_INVITE,
                                     }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
@@ -266,7 +268,7 @@ let G = {
                     if ((0, p.R)()) n = O.Z.getWindow(k.KJ3.ACTIVITY_POPOUT);
                     else {
                         var r;
-                        let e = S.Z.getLastFocusedWindowId();
+                        let e = C.Z.getLastFocusedWindowId();
                         n = null == e ? null : null == (r = (0, _.g0)(e)) ? void 0 : r.renderWindow;
                     }
                     if (null == n) throw new x.Z({ errorCode: k.lTL.UNKNOWN_ERROR }, "No valid window found");
@@ -317,7 +319,7 @@ let G = {
             (0, A.bu)(n.transport);
             let i = n.application.id;
             if (null == i) throw new x.Z({ errorCode: k.lTL.INVALID_COMMAND }, "No application.");
-            if (!(0, C.yE)(null != (t = n.application.flags) ? t : 0, k.udG.EMBEDDED))
+            if (!(0, S.yE)(null != (t = n.application.flags) ? t : 0, k.udG.EMBEDDED))
                 throw new x.Z({ errorCode: k.lTL.INVALID_COMMAND }, "This application cannot access this API");
             let l = (0, w.Z)();
             if (!j.Z.isDiscordCdnUrl(r))
@@ -351,7 +353,7 @@ let G = {
                 p = r.application.id;
             if (null == p) throw new x.Z({ errorCode: k.lTL.INVALID_COMMAND }, "No application.");
             if (!M.Cr.includes(p)) throw new x.Z({ errorCode: k.lTL.INVALID_COMMAND }, "Unsupported application.");
-            if (!(0, C.yE)(null != (t = r.application.flags) ? t : 0, k.udG.EMBEDDED))
+            if (!(0, S.yE)(null != (t = r.application.flags) ? t : 0, k.udG.EMBEDDED))
                 throw new x.Z({ errorCode: k.lTL.INVALID_COMMAND }, "This application cannot access this API");
             let f = (0, w.Z)();
             if (null == f && s) throw new x.Z({ errorCode: k.lTL.INVALID_COMMAND }, "No channel found");

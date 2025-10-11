@@ -132,7 +132,7 @@ let I = async (e, t) => {
         o.Z.dispatch({
             type: "GUILD_STICKERS_FETCH_SUCCESS",
             guildId: e,
-            stickers: t.map((e) => (null != e.user ? v(y({}, e), { user: new d.Z(e.user) }) : e)),
+            stickers: t.map((e) => (null != e.user ? v(y({}, e), { user: new d.default(e.user) }) : e)),
         });
     },
     C = async (e) => {

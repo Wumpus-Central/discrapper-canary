@@ -169,7 +169,7 @@ function T(e) {
     return (0, r.jsxs)("div", {
         className: S.channelNameSection,
         children: [
-            (0, r.jsx)(s.X6q, {
+            (0, r.jsx)(s.Heading, {
                 variant: "heading-md/semibold",
                 className: S.channelNameHeader,
                 children: (0, r.jsxs)(s.P3F, {

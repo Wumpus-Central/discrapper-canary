@@ -38,7 +38,7 @@ function O(e) {
                 className: b.title,
                 children: [
                     (0, a.jsx)(M, { className: b.titleImage }),
-                    (0, a.jsx)(p.X6q, {
+                    (0, a.jsx)(p.Heading, {
                         variant: "heading-xl/bold",
                         children: S.intl.string(S.t.Lm2nFR),
                     }),
@@ -58,7 +58,7 @@ function U() {
         children: [
             (0, a.jsx)("div", {
                 className: b.title,
-                children: (0, a.jsx)(p.X6q, {
+                children: (0, a.jsx)(p.Heading, {
                     variant: "heading-xl/bold",
                     children: S.intl.string(S.t["PFp+aG"]),
                 }),
@@ -92,7 +92,7 @@ function R(e) {
                 children: [
                     (0, a.jsx)("div", {
                         className: b.title,
-                        children: (0, a.jsx)(p.X6q, {
+                        children: (0, a.jsx)(p.Heading, {
                             variant: "heading-xl/bold",
                             children: S.intl.string(S.t.a9HOKi),
                         }),
@@ -153,7 +153,7 @@ function B(e) {
                             className: b.title,
                             children: [
                                 (0, a.jsx)(M, { className: b.titleImage }),
-                                (0, a.jsx)(p.X6q, {
+                                (0, a.jsx)(p.Heading, {
                                     variant: "heading-xl/bold",
                                     children: S.intl.string(S.t.SY9tyM),
                                 }),

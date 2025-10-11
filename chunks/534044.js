@@ -1,4 +1,4 @@
-i.d(n, { Z: () => u });
+i.d(e, { Z: () => u });
 var t = i(951288);
 i(647438);
 var a = i(120356),
@@ -12,8 +12,8 @@ var a = i(120356),
     m = i(691196),
     g = i(186425),
     p = i(160557);
-function u(e) {
-    let { className: n, onNext: i, onClose: a } = e,
+function u(n) {
+    let { className: e, onNext: i, onClose: a } = n,
         u = (0, o.n)();
     return (0, t.jsxs)(t.Fragment, {
         children: [
@@ -31,12 +31,12 @@ function u(e) {
                             className: m.icon,
                         }),
                     }),
-                    (0, t.jsx)(l.X6q, {
+                    (0, t.jsx)(l.Heading, {
                         className: g.title,
                         variant: "heading-xl/semibold",
                         children: x.intl.string(x.t.QMbTSk),
                     }),
-                    (0, t.jsx)(l.X6q, {
+                    (0, t.jsx)(l.Heading, {
                         className: g.subtitle,
                         color: "header-secondary",
                         variant: "text-md/normal",
@@ -52,10 +52,10 @@ function u(e) {
             }),
             (0, t.jsxs)(l.hzk, {
                 "data-migration-pending": !0,
-                className: s()(m.modalContent, n),
+                className: s()(m.modalContent, e),
                 paddingFix: !1,
                 children: [
-                    (0, t.jsx)(l.X6q, {
+                    (0, t.jsx)(l.Heading, {
                         variant: "heading-md/bold",
                         color: "header-primary",
                         className: m.actionsHeader,
@@ -75,7 +75,7 @@ function u(e) {
             }),
             (0, t.jsx)(l.mzw, {
                 "data-migration-pending": !0,
-                children: (0, t.jsx)(l.zxk, {
+                children: (0, t.jsx)(l.Button, {
                     variant: "primary",
                     text: x.intl.string(x.t.i4jeWV),
                     onClick: i,

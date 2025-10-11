@@ -34,7 +34,7 @@ let x = s.forwardRef(function (e, t) {
                         width: 40,
                         height: 40,
                     }),
-                    (0, i.jsx)(c.X6q, {
+                    (0, i.jsx)(c.Heading, {
                         variant: "heading-xl/semibold",
                         color: "header-primary",
                         children: d.intl.string(d.t.c0Fhpa),

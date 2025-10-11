@@ -34,7 +34,7 @@ function f(e, t, n, f) {
             O();
         },
         onConfirmClick: (e, t) => {
-            (0, l.Z)((0, o.getPID)(), { preset: d.tI.PRESET_VIDEO }),
+            (0, l.Z)((0, o.getPID)(), { preset: d.ApplicationStreamPresets.PRESET_VIDEO }),
                 v("request-to-stream"),
                 i.Z.updateNotificationStatus(t);
         },

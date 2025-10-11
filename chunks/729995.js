@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(442837),
     l = n(481060),
-    s = n(2052),
-    a = n(367907),
+    a = n(2052),
+    s = n(367907),
     o = n(45966),
     c = n(734893),
     d = n(661824),
@@ -14,11 +14,11 @@ var i = n(442837),
     p = n(8426),
     f = n(969632),
     h = n(570961),
-    x = n(84658),
-    b = n(974513),
+    b = n(84658),
+    x = n(974513),
     j = n(677892),
-    _ = n(981631),
-    v = n(388032),
+    v = n(981631),
+    _ = n(388032),
     C = n(820983);
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -66,16 +66,16 @@ function y(e, t) {
 function N(e) {
     let { guildId: t, completed: n } = e,
         l = (0, i.e7)([o.Z], () => o.Z.getEnabled(t)),
-        { location: c } = (0, s.O)();
-    c.object = n ? _.qAy.ONBOARDING_EDIT : _.qAy.ONBOARDING_REVIEW;
+        { location: c } = (0, a.O)();
+    c.object = n ? v.qAy.ONBOARDING_EDIT : v.qAy.ONBOARDING_REVIEW;
     let u = async function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
             l
                 ? (await (0, h.$y)(t, !1),
                   g.default.track(
-                      _.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
-                      y(O({}, (0, a.hH)(t)), {
-                          action_taken: x.W$[x.W$.TOGGLE_DISABLED],
+                      v.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
+                      y(O({}, (0, s.hH)(t)), {
+                          action_taken: b.W$[b.W$.TOGGLE_DISABLED],
                           location: c,
                       }),
                   ))
@@ -83,16 +83,16 @@ function N(e) {
                   e && (0, p.To)(t, !0),
                   n
                       ? g.default.track(
-                            _.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
-                            y(O({}, (0, a.hH)(t)), {
-                                action_taken: x.W$[x.W$.TOGGLE_ENABLED],
+                            v.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
+                            y(O({}, (0, s.hH)(t)), {
+                                action_taken: b.W$[b.W$.TOGGLE_ENABLED],
                                 location: c,
                             }),
                         )
                       : g.default.track(
-                            _.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
-                            y(O({}, (0, a.hH)(t)), {
-                                step: x.PG[x.PG.REVIEW],
+                            v.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
+                            y(O({}, (0, s.hH)(t)), {
+                                step: b.PG[b.PG.REVIEW],
                                 back: !1,
                                 skip: !1,
                                 completed: !0,
@@ -101,27 +101,27 @@ function N(e) {
         },
         f = () => {
             g.default.track(
-                _.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
-                y(O({}, (0, a.hH)(t)), {
-                    action_taken: x.W$[x.W$.PREVIEW],
+                v.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
+                y(O({}, (0, s.hH)(t)), {
+                    action_taken: b.W$[b.W$.PREVIEW],
                     location: c,
                 }),
             ),
                 (0, m.di)(t);
         },
-        b = (0, r.jsxs)(r.Fragment, {
+        x = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(j.ku, {
                     guildId: t,
                     onEdit: () => {
                         g.default.track(
-                            _.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
-                            y(O({}, (0, a.hH)(t)), {
-                                action_taken: x.W$[x.W$.EDIT_DEFAULT_CHANNELS],
+                            v.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
+                            y(O({}, (0, s.hH)(t)), {
+                                action_taken: b.W$[b.W$.EDIT_DEFAULT_CHANNELS],
                                 location: c,
                             }),
                         ),
-                            (0, m.$K)(x.PG.DEFAULT_CHANNELS);
+                            (0, m.$K)(b.PG.DEFAULT_CHANNELS);
                     },
                     disableGoodStatus: n,
                 }),
@@ -130,13 +130,13 @@ function N(e) {
                     guildId: t,
                     onEdit: () => {
                         g.default.track(
-                            _.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
-                            y(O({}, (0, a.hH)(t)), {
-                                action_taken: x.W$[x.W$.EDIT_CUSTOMIZATION_QUESTIONS],
+                            v.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
+                            y(O({}, (0, s.hH)(t)), {
+                                action_taken: b.W$[b.W$.EDIT_CUSTOMIZATION_QUESTIONS],
                                 location: c,
                             }),
                         ),
-                            (0, m.$K)(x.PG.CUSTOMIZATION_QUESTIONS);
+                            (0, m.$K)(b.PG.CUSTOMIZATION_QUESTIONS);
                     },
                     disableGoodStatus: n,
                 }),
@@ -145,13 +145,13 @@ function N(e) {
                     guildId: t,
                     onEdit: () => {
                         g.default.track(
-                            _.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
-                            y(O({}, (0, a.hH)(t)), {
-                                action_taken: x.W$[x.W$.EDIT_HOME_SETTINGS],
+                            v.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
+                            y(O({}, (0, s.hH)(t)), {
+                                action_taken: b.W$[b.W$.EDIT_HOME_SETTINGS],
                                 location: c,
                             }),
                         ),
-                            (0, m.$K)(x.PG.HOME_SETTINGS);
+                            (0, m.$K)(b.PG.HOME_SETTINGS);
                     },
                     disableGoodStatus: n,
                 }),
@@ -172,7 +172,7 @@ function N(e) {
                               guildId: t,
                               handleOnboardingToggle: u,
                           }),
-                          b,
+                          x,
                       ],
                   }),
               ],
@@ -187,7 +187,7 @@ function N(e) {
                               handleOnboardingToggle: u,
                               handlePreview: f,
                           }),
-                          b,
+                          x,
                       ],
                   }),
                   (0, r.jsx)(P, { guildId: t }),
@@ -198,41 +198,41 @@ function E(e) {
     let { guildId: t, handlePreview: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(l.X6q, {
+            (0, r.jsx)(l.Heading, {
                 variant: "heading-lg/semibold",
                 color: "header-primary",
                 className: C.header,
-                children: v.intl.string(v.t.mhxUsL),
+                children: _.intl.string(_.t.mhxUsL),
             }),
             (0, r.jsx)(l.Text, {
                 variant: "text-md/normal",
                 color: "header-secondary",
                 className: C.subheader,
-                children: v.intl.string(v.t.GtWdQE),
+                children: _.intl.string(_.t.GtWdQE),
             }),
             (0, r.jsxs)("div", {
                 className: C.help,
                 children: [
-                    (0, r.jsx)(l.eee, {
+                    (0, r.jsx)(l.Anchor, {
                         target: "_blank",
-                        href: _.EYA.GUILD_ONBOARDING_EXAMPLES,
+                        href: v.EYA.GUILD_ONBOARDING_EXAMPLES,
                         children: (0, r.jsx)(l.Text, {
                             variant: "text-sm/medium",
                             color: "text-link",
-                            children: v.intl.string(v.t.Ok55Ki),
+                            children: _.intl.string(_.t.Ok55Ki),
                         }),
                     }),
                     (0, r.jsx)("div", { className: C.helpSeparator }),
-                    (0, r.jsx)(l.eee, {
+                    (0, r.jsx)(l.Anchor, {
                         onClick: n,
                         children: (0, r.jsx)(l.Text, {
                             variant: "text-sm/medium",
                             color: "text-link",
-                            children: v.intl.string(v.t["6gsjdH"]),
+                            children: _.intl.string(_.t["6gsjdH"]),
                         }),
                     }),
                     (0, r.jsx)("div", { className: C.helpSeparator }),
-                    (0, r.jsx)(b.Wu, { guildId: t }),
+                    (0, r.jsx)(x.Wu, { guildId: t }),
                 ],
             }),
         ],
@@ -250,21 +250,21 @@ function I() {
             }),
             (0, r.jsxs)("div", {
                 children: [
-                    (0, r.jsx)(l.X6q, {
+                    (0, r.jsx)(l.Heading, {
                         variant: "heading-md/semibold",
                         color: "header-primary",
                         className: C.header,
-                        children: v.intl.string(v.t.WslWRE),
+                        children: _.intl.string(_.t.WslWRE),
                     }),
                     (0, r.jsxs)(l.Text, {
                         variant: "text-sm/medium",
                         color: "header-secondary",
-                        children: [e, v.intl.string(v.t.z9k21N)],
+                        children: [e, _.intl.string(_.t.z9k21N)],
                     }),
                     (0, r.jsxs)(l.Text, {
                         variant: "text-sm/medium",
                         color: "header-secondary",
-                        children: [e, v.intl.string(v.t.t1LelZ)],
+                        children: [e, _.intl.string(_.t.t1LelZ)],
                     }),
                 ],
             }),
@@ -273,22 +273,22 @@ function I() {
 }
 function S(e) {
     let { guildId: t, handleOnboardingToggle: n } = e,
-        s = (0, j.$$)(t),
-        a = (0, i.e7)([o.Z], () => o.Z.getEnabled(t));
+        a = (0, j.$$)(t),
+        s = (0, i.e7)([o.Z], () => o.Z.getEnabled(t));
     return (0, r.jsx)("div", {
         className: C.review,
         children: (0, r.jsx)(l.rsf, {
-            label: a ? v.intl.string(v.t.MBdTCQ) : v.intl.string(v.t.Wslim5),
-            description: a ? v.intl.string(v.t.LokpLi) : v.intl.string(v.t.nBIyJi),
-            checked: a,
+            label: s ? _.intl.string(_.t.MBdTCQ) : _.intl.string(_.t.Wslim5),
+            description: s ? _.intl.string(_.t.LokpLi) : _.intl.string(_.t.nBIyJi),
+            checked: s,
             onChange: () => n(!1),
-            disabled: !a && !s,
+            disabled: !s && !a,
         }),
     });
 }
 function T(e) {
-    let { guildId: t, handleOnboardingToggle: n, handlePreview: s } = e,
-        a = (0, j.$$)(t),
+    let { guildId: t, handleOnboardingToggle: n, handlePreview: a } = e,
+        s = (0, j.$$)(t),
         o = (0, i.e7)([f.Z], () => f.Z.getSettings()),
         d = (0, c.uo)(o);
     return (0, r.jsxs)("div", {
@@ -297,31 +297,31 @@ function T(e) {
             (0, r.jsxs)("div", {
                 className: C.reviewHeaderText,
                 children: [
-                    (0, r.jsx)(l.X6q, {
+                    (0, r.jsx)(l.Heading, {
                         variant: "heading-md/semibold",
-                        children: a ? v.intl.string(v.t.FcIcT0) : v.intl.string(v.t.R09tJy),
+                        children: s ? _.intl.string(_.t.FcIcT0) : _.intl.string(_.t.R09tJy),
                     }),
                     (0, r.jsx)(l.Text, {
                         variant: "text-xs/normal",
-                        children: a ? v.intl.string(v.t.ockHVV) : v.intl.string(v.t["u/ji09"]),
+                        children: s ? _.intl.string(_.t.ockHVV) : _.intl.string(_.t["u/ji09"]),
                     }),
                 ],
             }),
             (0, r.jsxs)("div", {
                 className: C.reviewActions,
                 children: [
-                    (0, r.jsx)(l.zxk, {
+                    (0, r.jsx)(l.Button, {
                         size: "sm",
                         variant: "secondary",
-                        onClick: s,
-                        text: v.intl.string(v.t["6gsjdH"]),
+                        onClick: a,
+                        text: _.intl.string(_.t["6gsjdH"]),
                     }),
-                    (0, r.jsx)(l.zxk, {
+                    (0, r.jsx)(l.Button, {
                         variant: "primary",
                         size: "sm",
-                        text: v.intl.string(v.t.Yz7hsL),
+                        text: _.intl.string(_.t.Yz7hsL),
                         onClick: () => n(d),
-                        disabled: !a,
+                        disabled: !s,
                     }),
                 ],
             }),
@@ -331,7 +331,7 @@ function T(e) {
 function P(e) {
     let { guildId: t } = e,
         n = (0, i.e7)([u.Z], () => u.Z.getGuild(t));
-    return null == n || n.verificationLevel < _.sFg.VERY_HIGH
+    return null == n || n.verificationLevel < v.sFg.VERY_HIGH
         ? null
         : (0, r.jsxs)("div", {
               className: C.rolesWarning,
@@ -344,7 +344,7 @@ function P(e) {
                   (0, r.jsx)(l.Text, {
                       variant: "text-sm/medium",
                       color: "text-muted",
-                      children: v.intl.string(v.t.HVoKZ2),
+                      children: _.intl.string(_.t.HVoKZ2),
                   }),
               ],
           });

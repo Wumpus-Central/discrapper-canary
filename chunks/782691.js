@@ -84,12 +84,12 @@ let C = {
             [S, T] = r.useState(!0),
             O = r.useRef(null),
             [N, P] = r.useState(!1),
-            [I, k] = r.useState(!1),
-            [w, R] = r.useState([]),
+            [I, w] = r.useState(!1),
+            [k, R] = r.useState([]),
             [A, Z] = r.useState(C),
             D = r.useRef([]),
-            [L, M] = r.useState(t.name),
-            U = L.toLowerCase().replace(/\s+/g, "_"),
+            [M, L] = r.useState(t.name),
+            U = M.toLowerCase().replace(/\s+/g, "_"),
             F = r.useMemo(
                 () => ({
                     id: E,
@@ -99,17 +99,17 @@ let C = {
                     accessibilityLabel: E,
                     reducedMotionSrc: "",
                     thumbnailPreviewSrc: "",
-                    effects: w,
+                    effects: k,
                     animationType: s.y.ANIMATION_TYPE_UNSPECIFIED,
                 }),
-                [w],
+                [k],
             ),
-            G = (e) => {
+            B = (e) => {
                 let t = e.currentTarget.files;
                 return null == t ? null : t[0];
             },
-            z = (e, t) => {
-                let n = G(t);
+            G = (e, t) => {
+                let n = B(t);
                 null != n &&
                     (0, f.i0)(n, (t) => {
                         Z((a) => y(_({}, a), { [e]: (0, f.z)(t, n) }));
@@ -139,26 +139,26 @@ let C = {
                         }
                     });
             }, [t.config.stillFrames]);
-        let B = {
+        let z = {
                 effect: t,
                 upsertConfig: n,
             },
-            V = r.useRef(B);
+            V = r.useRef(z);
         return (r.useEffect(() => {
-            V.current = B;
+            V.current = z;
         }),
         r.useEffect(() => {
             let { effect: e, upsertConfig: t } = V.current;
             e.readonly ||
                 t({
                     skuId: e.skuId,
-                    name: L,
+                    name: M,
                     config: {
-                        effects: w,
+                        effects: k,
                         stillFrames: A,
                     },
                 });
-        }, [w, A, L]),
+        }, [k, A, M]),
         r.useEffect(
             () => () => {
                 D.current.forEach((e) => {
@@ -198,10 +198,10 @@ let C = {
                                           }),
                                           (0, a.jsx)("input", {
                                               type: "text",
-                                              value: L,
+                                              value: M,
                                               className: g.input,
                                               onChange: (e) => {
-                                                  M(e.target.value);
+                                                  L(e.target.value);
                                               },
                                           }),
                                       ],
@@ -238,7 +238,7 @@ let C = {
                                                       checked: I,
                                                       className: g.checkBox,
                                                       onChange: () => {
-                                                          k(!I);
+                                                          w(!I);
                                                       },
                                                   }),
                                               ],
@@ -255,10 +255,10 @@ let C = {
                                                   (0, a.jsx)(m.Z, {
                                                       ref: O,
                                                       onChange: (e) => {
-                                                          let t = G(e);
+                                                          let t = B(e);
                                                           null != t &&
                                                               (0, f.i0)(t, async (e) => {
-                                                                  let n = await (0, f.Xv)(e, t, w.length);
+                                                                  let n = await (0, f.Xv)(e, t, k.length);
                                                                   R((e) => [...e, n]);
                                                               });
                                                       },
@@ -281,7 +281,7 @@ let C = {
                                                   "Upload thumbnail.png",
                                                   (0, a.jsx)(m.Z, {
                                                       ref: O,
-                                                      onChange: (e) => z(f.cq.THUMBNAIL, e),
+                                                      onChange: (e) => G(f.cq.THUMBNAIL, e),
                                                       multiple: !1,
                                                   }),
                                               ],
@@ -292,7 +292,7 @@ let C = {
                                                   "Upload static.png",
                                                   (0, a.jsx)(m.Z, {
                                                       ref: O,
-                                                      onChange: (e) => z(f.cq.STATIC, e),
+                                                      onChange: (e) => G(f.cq.STATIC, e),
                                                       multiple: !1,
                                                   }),
                                               ],
@@ -303,7 +303,7 @@ let C = {
                                                   "Upload reduced_motion.png",
                                                   (0, a.jsx)(m.Z, {
                                                       ref: O,
-                                                      onChange: (e) => z(f.cq.REDUCED_MOTION, e),
+                                                      onChange: (e) => G(f.cq.REDUCED_MOTION, e),
                                                       multiple: !1,
                                                   }),
                                               ],
@@ -314,7 +314,7 @@ let C = {
                                       className: g.bottomControls,
                                       children: (0, a.jsx)("div", {
                                           className: g.row,
-                                          children: (0, a.jsx)(d.zxk, {
+                                          children: (0, a.jsx)(d.Button, {
                                               variant: "primary",
                                               text: "Replay Animation",
                                               onClick: () => {
@@ -339,10 +339,10 @@ let C = {
                                               className: g.row,
                                               children: [
                                                   (0, a.jsx)(u.Z, {
-                                                      fileContents: () => (0, f.yR)(w),
+                                                      fileContents: () => (0, f.yR)(k),
                                                       contentType: "text/plain",
                                                       fileName: "".concat(U, "_timing_config.txt"),
-                                                      children: (0, a.jsx)(d.zxk, {
+                                                      children: (0, a.jsx)(d.Button, {
                                                           variant: "primary",
                                                           size: "sm",
                                                           text: "Download Timing Config",
@@ -352,16 +352,16 @@ let C = {
                                                       fileContents: () =>
                                                           JSON.stringify(
                                                               y(_({}, t), {
-                                                                  name: L,
+                                                                  name: M,
                                                                   config: y(_({}, t.config), {
-                                                                      effects: w,
+                                                                      effects: k,
                                                                       stillFrames: A,
                                                                   }),
                                                               }),
                                                           ),
                                                       contentType: "text/plain",
                                                       fileName: "".concat(U, "_config.txt"),
-                                                      children: (0, a.jsx)(d.zxk, {
+                                                      children: (0, a.jsx)(d.Button, {
                                                           variant: "primary",
                                                           size: "sm",
                                                           text: "Download Full Config",
@@ -374,7 +374,7 @@ let C = {
                                   (0, a.jsxs)("div", {
                                       className: g.section,
                                       children: [
-                                          (0, a.jsx)(d.X6q, {
+                                          (0, a.jsx)(d.Heading, {
                                               variant: "heading-lg/bold",
                                               children: "Still Frames",
                                           }),
@@ -387,7 +387,7 @@ let C = {
                                                       {
                                                           className: g.stillFramePreviewContainer,
                                                           children: [
-                                                              (0, a.jsx)(d.X6q, {
+                                                              (0, a.jsx)(d.Heading, {
                                                                   variant: "heading-sm/bold",
                                                                   children: t,
                                                               }),
@@ -414,7 +414,7 @@ let C = {
                                           }),
                                       ],
                                   }),
-                                  w.some((e) => {
+                                  k.some((e) => {
                                       var t;
                                       return (null != (t = e.randomizedSources) ? t : []).length > 0;
                                   }) &&
@@ -471,7 +471,7 @@ let C = {
                               children: [
                                   (0, a.jsx)("div", {
                                       className: g.dangerControls,
-                                      children: (0, a.jsx)(d.zxk, {
+                                      children: (0, a.jsx)(d.Button, {
                                           variant: "critical-secondary",
                                           text: "Clear Assets",
                                           onClick: () => {
@@ -479,7 +479,7 @@ let C = {
                                           },
                                       }),
                                   }),
-                                  w.map((e, t) =>
+                                  k.map((e, t) =>
                                       (0, a.jsxs)(
                                           "div",
                                           {
@@ -488,7 +488,7 @@ let C = {
                                                   (0, a.jsxs)("div", {
                                                       className: g.layerPreviewContainer,
                                                       children: [
-                                                          (0, a.jsx)(d.X6q, {
+                                                          (0, a.jsx)(d.Heading, {
                                                               variant: "heading-md/bold",
                                                               children: e.name,
                                                           }),
@@ -500,7 +500,7 @@ let C = {
                                                           null != e.randomizedSources &&
                                                               (0, a.jsxs)(a.Fragment, {
                                                                   children: [
-                                                                      (0, a.jsx)(d.X6q, {
+                                                                      (0, a.jsx)(d.Heading, {
                                                                           variant: "heading-md/bold",
                                                                           children: "Alternatives",
                                                                       }),
@@ -511,7 +511,7 @@ let C = {
                                                                               {
                                                                                   children: [
                                                                                       null != e.filename &&
-                                                                                          (0, a.jsx)(d.X6q, {
+                                                                                          (0, a.jsx)(d.Heading, {
                                                                                               variant:
                                                                                                   "heading-sm/semibold",
                                                                                               children: e.filename,
@@ -665,7 +665,7 @@ let C = {
                                                                       ref: O,
                                                                       onChange: (e) =>
                                                                           ((e, t) => {
-                                                                              let n = G(e);
+                                                                              let n = B(e);
                                                                               null != n &&
                                                                                   (0, f.i0)(n, (e) => {
                                                                                       R((a) => {
@@ -692,7 +692,7 @@ let C = {
                                                                   }),
                                                               ],
                                                           }),
-                                                          (0, a.jsx)(d.zxk, {
+                                                          (0, a.jsx)(d.Button, {
                                                               variant: "critical-secondary",
                                                               text: "Remove Layer",
                                                               onClick: () => {

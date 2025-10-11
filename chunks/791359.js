@@ -17,24 +17,24 @@ var r = n(951288),
     _ = n(626135),
     O = n(70956),
     E = n(225559),
-    y = n(910436),
-    v = n(203028),
+    v = n(910436),
+    y = n(203028),
     I = n(358924),
-    S = n(292140),
-    C = n(525296),
+    C = n(292140),
+    S = n(525296),
     T = n(981631),
     N = n(46140),
     j = n(388032),
     P = n(559909);
 let x = 15 * O.Z.Millis.MINUTE,
-    A = (0, C.Z)(function (e) {
+    A = (0, S.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
             o = i.useRef(null),
-            c = (0, r.jsx)(v.Z, {
+            c = (0, r.jsx)(y.Z, {
                 party: t,
                 onUserContextMenu: n,
             }),
-            d = (0, r.jsx)(y.Z, {
+            d = (0, r.jsx)(v.Z, {
                 party: t,
                 onChannelContextMenu: l,
                 quest: a,
@@ -44,7 +44,7 @@ let x = 15 * O.Z.Millis.MINUTE,
             b = f.length,
             O = h.length,
             E = g.length > 0,
-            C = i.useCallback(() => {
+            S = i.useCallback(() => {
                 let e = h
                     .filter((e) => {
                         var t, n;
@@ -62,14 +62,14 @@ let x = 15 * O.Z.Millis.MINUTE,
                     games_detected: e,
                 });
             }, [m, b, O, E, h]),
-            N = s()(C, x);
+            N = s()(S, x);
         return null != c || null != d
             ? (0, r.jsx)(u.yRy, {
                   targetElementRef: o,
                   position: "left",
                   renderPopout: (e) => {
                       let { closePopout: n } = e;
-                      return (0, r.jsx)(S.Z, {
+                      return (0, r.jsx)(C.Z, {
                           party: t,
                           close: n,
                       });
@@ -185,7 +185,7 @@ function w() {
                   : (0, r.jsxs)("div", {
                         className: P.emptyCard,
                         children: [
-                            (0, r.jsx)(u.X6q, {
+                            (0, r.jsx)(u.Heading, {
                                 variant: "heading-md/semibold",
                                 className: P.emptyHeader,
                                 children: j.intl.string(j.t["ngJ/5u"]),

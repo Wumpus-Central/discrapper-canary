@@ -13,8 +13,8 @@ let u = (e) => {
         {
             searchQuery: n,
             setSearchQuery: u,
-            mostRecentQuery: p,
-            handleClearSearch: h,
+            mostRecentQuery: h,
+            handleClearSearch: p,
             handleSearchKeyPress: f,
             handleCreateOrAddGuild: g,
             searchResults: m,
@@ -31,7 +31,7 @@ let u = (e) => {
                 ? s.intl.format(s.t.qWFupq, {
                       addServerHook: function (e, t) {
                           return (0, r.jsx)(
-                              i.eee,
+                              i.Anchor,
                               {
                                   onClick: g,
                                   children: e,
@@ -49,7 +49,7 @@ let u = (e) => {
                     alt: "",
                     src: d,
                 }),
-                (0, r.jsx)(i.X6q, {
+                (0, r.jsx)(i.Heading, {
                     variant: "heading-xl/semibold",
                     color: "header-primary",
                     className: c.emptySearchTitle,
@@ -80,16 +80,16 @@ let u = (e) => {
                             className: c.headerTitleWrapper,
                             children: [
                                 (0, r.jsx)(i.P3F, {
-                                    onClick: h,
+                                    onClick: p,
                                     className: c.arrow,
                                     children: (0, r.jsx)(l.Z, { direction: l.Z.Directions.LEFT }),
                                 }),
-                                (0, r.jsx)(i.X6q, {
+                                (0, r.jsx)(i.Heading, {
                                     variant: "heading-xl/semibold",
                                     className: c.searchPageTitle,
                                     children: s.intl.format(s.t.UkOHRU, {
                                         numResults: m.length,
-                                        query: p,
+                                        query: h,
                                     }),
                                 }),
                             ],
@@ -99,7 +99,7 @@ let u = (e) => {
                             "aria-label": s.intl.string(s.t.nL2wKC),
                             placeholder: s.intl.string(s.t.nL2wKC),
                             onChange: u,
-                            onClear: h,
+                            onClear: p,
                             onKeyDown: f,
                         }),
                     ],

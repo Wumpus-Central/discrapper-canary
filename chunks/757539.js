@@ -38,14 +38,14 @@ function u(e) {
             }),
             (0, i.jsxs)(a.hE2, {
                 children: [
-                    (0, i.jsx)(o.zxk, {
+                    (0, i.jsx)(o.Button, {
                         variant: b ? "primary" : "critical-secondary",
                         text: b ? c.intl.string(c.t["/dbw3N"]) : c.intl.string(c.t.Uwsjn5),
                         onClick: u,
                         disabled: !m,
                     }),
                     !0 === g
-                        ? (0, i.jsx)(o.zxk, {
+                        ? (0, i.jsx)(o.Button, {
                               variant: "primary",
                               text: c.intl.string(c.t.KmK3q6),
                               onClick: p,

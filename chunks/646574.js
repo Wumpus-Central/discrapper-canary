@@ -35,7 +35,7 @@ function y(e) {
                         className: g.nitroWheel,
                     }),
                     a
-                        ? (0, r.jsx)(u.X6q, {
+                        ? (0, r.jsx)(u.Heading, {
                               color: null != i ? i : "text-default",
                               variant: "heading-sm/semibold",
                               children: n,

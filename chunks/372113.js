@@ -56,7 +56,7 @@ function D(e) {
     }
     return e;
 }
-function x(e, t) {
+function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -68,12 +68,12 @@ function x(e, t) {
     }
     return n;
 }
-function L(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : x(Object(t)).forEach(function (n) {
+            : L(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -87,7 +87,7 @@ let M = (e, t, n) =>
           : "sm" === t
             ? "text-sm/medium"
             : "text-xs/medium";
-function k(e) {
+function j(e) {
     let { containerSize: t, onClick: n, text: i, tabIndex: a } = e;
     return "xs" === t
         ? (0, r.jsx)(u.P3F, {
@@ -101,7 +101,7 @@ function k(e) {
                   children: i,
               }),
           })
-        : (0, r.jsx)(u.zxk, {
+        : (0, r.jsx)(u.Button, {
               fullWidth: !0,
               tabIndex: a,
               variant: "secondary",
@@ -109,7 +109,7 @@ function k(e) {
               text: i,
           });
 }
-function j(e) {
+function k(e) {
     var t, n, r, i, a;
     let {
             quest: o,
@@ -205,8 +205,8 @@ function U(e) {
                           tooltipProps: e,
                       })
                     : (0, r.jsx)(
-                          u.zxk,
-                          L(D({}, e), {
+                          u.Button,
+                          x(D({}, e), {
                               fullWidth: !0,
                               variant: "primary",
                               disabled: null == b.onClick,
@@ -231,7 +231,7 @@ function G(e) {
               className: o()({ [P.fullWidthShinyCtaButtonWrapper]: d }),
               children: (0, r.jsx)(
                   u.gtL,
-                  L(D({}, a), {
+                  x(D({}, a), {
                       "data-migration-pending": !0,
                       fullWidth: !0,
                       wrapperClassName: P.ctaButtonWrapper,
@@ -243,8 +243,8 @@ function G(e) {
               ),
           })
         : (0, r.jsx)(
-              u.zxk,
-              L(D({}, a), {
+              u.Button,
+              x(D({}, a), {
                   fullWidth: !0,
                   variant: "primary",
                   disabled: null == i.onClick,
@@ -273,8 +273,8 @@ let B = (e) => {
             day: "numeric",
         }),
         D = N >= g.OH.ACCEPTED,
-        x = N >= g.OH.COMPLETED,
-        L = (0, m.Xv)(n.config),
+        L = N >= g.OH.COMPLETED,
+        x = (0, m.Xv)(n.config),
         G = p || y,
         B = (0, g.t5)(n, C.dr.QUESTS_CARD, a, A),
         Z = (0, h.O5)(),
@@ -302,7 +302,7 @@ let B = (e) => {
                 });
         },
         K = (0, s.e7)([f.default], () => f.default.locale),
-        z = _ && !x;
+        z = _ && !L;
     return (0, r.jsx)("div", {
         className: P.root,
         children: (0, r.jsxs)("div", {
@@ -354,7 +354,7 @@ let B = (e) => {
                         (0, r.jsx)(u.Text, {
                             variant: "lg" === c ? "text-sm/medium" : "text-xs/medium",
                             color: "text-muted",
-                            children: j({
+                            children: k({
                                 quest: n,
                                 locale: K,
                                 isQuestExpired: _,
@@ -366,30 +366,30 @@ let B = (e) => {
                     ],
                 }),
                 Y
-                    ? (0, r.jsxs)(u.hE2, {
+                    ? (0, r.jsxs)(u.ButtonGroup, {
                           direction: "horizontal",
                           align: "center",
                           fullWidth: "lg" !== c,
                           children: [
-                              (0, r.jsx)(u.zxk, {
+                              (0, r.jsx)(u.Button, {
                                   variant: "secondary",
                                   disabled: !0,
                                   text: R.intl.string(R.t.V293qq),
                               }),
-                              (0, r.jsx)(u.zxk, {
+                              (0, r.jsx)(u.Button, {
                                   variant: "primary",
                                   onClick: () => (0, T.openQuestMinorEnrollmentBlockModal)(n, a, A),
                                   text: R.intl.string(R.t.vY9GgI),
                               }),
                           ],
                       })
-                    : (0, r.jsxs)(u.hE2, {
+                    : (0, r.jsxs)(u.ButtonGroup, {
                           direction: "horizontal",
                           align: "center",
                           justify: "end",
                           fullWidth: "lg" !== c,
                           children: [
-                              (0, r.jsx)(k, {
+                              (0, r.jsx)(j, {
                                   containerSize: c,
                                   onClick: W,
                                   text: R.intl.string(R.t.LLLLPD),
@@ -398,7 +398,7 @@ let B = (e) => {
                                   (0, r.jsx)(U, {
                                       quest: n,
                                       progressState: N,
-                                      isCollectibleQuest: L,
+                                      isCollectibleQuest: x,
                                       questContent: a,
                                       sourceQuestContent: A,
                                   }),

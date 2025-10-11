@@ -93,7 +93,7 @@ function S(e, t) {
                     if (null != A) {
                         let e = {
                             qualityOptions: {
-                                preset: g.tI.PRESET_CUSTOM,
+                                preset: g.ApplicationStreamPresets.PRESET_CUSTOM,
                                 resolution: n,
                                 frameRate: r,
                             },
@@ -123,10 +123,10 @@ function S(e, t) {
             [t, R, S, A],
         );
     if (null == e) return null;
-    let D = n === g.tI.PRESET_DOCUMENTS ? g.ws.FPS_30 : v,
+    let D = n === g.ApplicationStreamPresets.PRESET_DOCUMENTS ? g.ApplicationStreamFPS.FPS_30 : v,
         L = g.af.map((e) => {
             let { value: t, label: n } = e,
-                i = (0, c.Z)(g.tI.PRESET_CUSTOM, y, t, C, N, P);
+                i = (0, c.Z)(g.ApplicationStreamPresets.PRESET_CUSTOM, y, t, C, N, P);
             return (0, r.jsx)(
                 o.k5B,
                 {
@@ -141,7 +141,7 @@ function S(e, t) {
         }),
         x = g.km.map((e) => {
             let { value: t, label: n } = e,
-                i = (0, c.Z)(g.tI.PRESET_CUSTOM, t, D, C, N, P);
+                i = (0, c.Z)(g.ApplicationStreamPresets.PRESET_CUSTOM, t, D, C, N, P);
             return (0, r.jsx)(
                 o.k5B,
                 {

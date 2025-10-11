@@ -68,7 +68,7 @@ function O(e, t) {
 }
 let v = (e) => {
         let { showAllPerksButton: t, leftAlignHeaders: n, title: i, headerClassname: a } = e,
-            o = (0, r.jsx)(s.X6q, {
+            o = (0, r.jsx)(s.Heading, {
                 variant: "heading-xxl/extrabold",
                 color: "header-primary",
                 className: null != a ? a : g.heading,

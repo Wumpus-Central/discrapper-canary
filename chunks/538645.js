@@ -39,7 +39,7 @@ let f = "Make sure you're only uploading text files!",
                             variant: "text-md/bold",
                             children: i.name,
                         }),
-                        (0, a.jsx)(c.zxk, {
+                        (0, a.jsx)(c.Button, {
                             variant: "critical-secondary",
                             text: "Delete",
                             onClick: (e) => {
@@ -99,7 +99,7 @@ function g() {
                             children: [
                                 (0, a.jsx)("div", {
                                     className: x.section,
-                                    children: (0, a.jsx)(c.X6q, {
+                                    children: (0, a.jsx)(c.Heading, {
                                         variant: "heading-xl/bold",
                                         children: "Custom Profile Effects",
                                     }),
@@ -139,7 +139,7 @@ function g() {
                                         }),
                                     ],
                                 }),
-                                (0, a.jsx)(c.zxk, {
+                                (0, a.jsx)(c.Button, {
                                     variant: "primary",
                                     text: "Create New Effect",
                                     onClick: () => {
@@ -156,7 +156,7 @@ function g() {
                         (0, a.jsxs)("div", {
                             className: x.section,
                             children: [
-                                (0, a.jsx)(c.X6q, {
+                                (0, a.jsx)(c.Heading, {
                                     variant: "heading-xl/bold",
                                     children: "All Effects",
                                 }),

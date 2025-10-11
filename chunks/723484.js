@@ -8,7 +8,7 @@ let o = (e) => {
     let { className: t } = e;
     return (0, r.jsx)("div", {
         className: t,
-        children: (0, r.jsx)(i.X6q, {
+        children: (0, r.jsx)(i.Heading, {
             variant: "heading-md/semibold",
             children: a.intl.string(a.t.eALkIS),
         }),

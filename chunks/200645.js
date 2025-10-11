@@ -63,7 +63,7 @@ function m() {
                         : null,
                 ],
             }),
-            (0, r.jsx)(o.zxk, {
+            (0, r.jsx)(o.Button, {
                 variant: u ? "critical-secondary" : "primary",
                 loading: t,
                 onClick: m,
@@ -86,7 +86,7 @@ class g extends i.PureComponent {
         return (0, r.jsxs)(o.Kqy, {
             gap: 16,
             children: [
-                (0, r.jsx)(o.X6q, {
+                (0, r.jsx)(o.Heading, {
                     variant: "heading-lg/semibold",
                     color: "header-primary",
                     children: i,

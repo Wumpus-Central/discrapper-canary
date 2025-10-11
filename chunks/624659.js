@@ -35,9 +35,9 @@ function I(e) {
             body: o,
             problems: h,
             transitionState: I,
-            feedbackProblems: L = {},
-            otherKey: y,
-            hasCloseButton: D,
+            feedbackProblems: y = {},
+            otherKey: D,
+            hasCloseButton: L,
             onSubmit: T,
             onClose: x,
             canDismissForever: M = !0,
@@ -52,20 +52,20 @@ function I(e) {
         G = (0, f.Dt)(),
         J = (0, d.Z)(j),
         Y = (0, d.Z)(P),
-        z = (0, d.Z)(T),
-        K = (0, d.Z)(F),
+        K = (0, d.Z)(T),
+        z = (0, d.Z)(F),
         Q = (0, d.Z)(w),
-        X = null != P ? L[P] : null,
-        V = null != X;
+        V = null != P ? y[P] : null,
+        X = null != V;
     return (
         a.useEffect(() => {
-            u().isEqual(R, h) || $((0, g.Bi)(h, y));
-        }, [h, R, y]),
+            u().isEqual(R, h) || $((0, g.Bi)(h, D));
+        }, [h, R, D]),
         (0, c.ZP)(() => () => {
-            z.current({
+            K.current({
                 problem: Y.current,
                 dontShowAgain: J.current,
-                feedback: K.current,
+                feedback: z.current,
                 closeClicked: Q.current,
             });
         }),
@@ -79,7 +79,7 @@ function I(e) {
                     separator: !1,
                     className: r()(m.headerContainer, p.headerContainer),
                     children: [
-                        (0, l.jsx)(b.X6q, {
+                        (0, l.jsx)(b.Heading, {
                             id: G,
                             variant: "heading-xl/bold",
                             color: "header-primary",
@@ -90,9 +90,9 @@ function I(e) {
                             variant: "text-sm/medium",
                             color: "header-secondary",
                             className: r()(m.ratingBody, p.headerBody),
-                            children: null != (t = null == X ? void 0 : X.subheader) ? t : o,
+                            children: null != (t = null == V ? void 0 : V.subheader) ? t : o,
                         }),
-                        D
+                        L
                             ? (0, l.jsx)(b.olH, {
                                   className: m.modalCloseButton,
                                   onClick: function () {
@@ -105,7 +105,7 @@ function I(e) {
                 (0, l.jsxs)(b.hzk, {
                     className: p.modalContent,
                     children: [
-                        V
+                        X
                             ? null
                             : (0, l.jsx)("div", {
                                   className: m.problemInfo,
@@ -113,11 +113,11 @@ function I(e) {
                                       options: U,
                                       onClick: function (e) {
                                           let { value: t } = e;
-                                          B(t), Object.keys(L).includes(t) || x();
+                                          B(t), Object.keys(y).includes(t) || x();
                                       },
                                   }),
                               }),
-                        V
+                        X
                             ? (0, l.jsxs)("div", {
                                   className: m.problemInfo,
                                   children: [
@@ -125,7 +125,7 @@ function I(e) {
                                           value: F,
                                           maxLength: S.iF,
                                           onChange: Z,
-                                          placeholder: null != (n = X.hint) ? n : N.intl.string(N.t.h95hcn),
+                                          placeholder: null != (n = V.hint) ? n : N.intl.string(N.t.h95hcn),
                                       }),
                                       k ? (0, l.jsx)(C, {}) : null,
                                   ],
@@ -133,11 +133,11 @@ function I(e) {
                             : null,
                     ],
                 }),
-                M || V
+                M || X
                     ? (0, l.jsx)(b.mzw, {
-                          className: r()(m.footer, V ? p.submitFooter : p.modalFooter),
+                          className: r()(m.footer, X ? p.submitFooter : p.modalFooter),
                           direction: O.Z.Direction.HORIZONTAL,
-                          children: V
+                          children: X
                               ? (0, l.jsxs)(l.Fragment, {
                                     children: [
                                         (0, l.jsx)(s.zx, {
@@ -150,7 +150,7 @@ function I(e) {
                                             },
                                             children: N.intl.string(N.t["13/7kZ"]),
                                         }),
-                                        (0, l.jsx)(b.zxk, {
+                                        (0, l.jsx)(b.Button, {
                                             variant: "primary",
                                             size: "sm",
                                             text: N.intl.string(N.t.geKm7u),
@@ -159,7 +159,7 @@ function I(e) {
                                     ],
                                 })
                               : M
-                                ? (0, l.jsx)(b.XZJ, {
+                                ? (0, l.jsx)(b.Checkbox, {
                                       checked: j,
                                       onChange: () => A(!j),
                                       label: N.intl.string(N.t.lkWab2),

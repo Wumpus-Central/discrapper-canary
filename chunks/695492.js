@@ -19,9 +19,12 @@ function d(e) {
             onCTAClick: () =>
                 (0, r.ZDy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("7654"), n.e("49049"), n.e("98953")]).then(
-                            n.bind(n, 560114),
-                        );
+                        let { default: e } = await Promise.all([
+                            n.e("74318"),
+                            n.e("49049"),
+                            n.e("7654"),
+                            n.e("98953"),
+                        ]).then(n.bind(n, 560114));
                         return (n) => {
                             var r, l;
                             return (0, i.jsx)(
@@ -55,7 +58,7 @@ function d(e) {
                                     {
                                         guild: d,
                                         channel: t,
-                                        source: o.t4x.CHANNEL_CALL,
+                                        source: o.InstantInviteSources.CHANNEL_CALL,
                                     }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))

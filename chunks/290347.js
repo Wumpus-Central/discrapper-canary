@@ -17,10 +17,10 @@ var r = n(951288),
     _ = n(626135),
     O = n(960048),
     E = n(981631),
-    y = n(921944),
-    v = n(388032),
+    v = n(921944),
+    y = n(388032),
     I = n(188784);
-function S(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,7 +45,7 @@ function S(e) {
     }
     return e;
 }
-function C(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -90,7 +90,7 @@ let T = [],
                 (0, r.jsxs)("div", {
                     className: I.featureCardTextGroup,
                     children: [
-                        (0, r.jsx)(c.X6q, {
+                        (0, r.jsx)(c.Heading, {
                             variant: "heading-md/bold",
                             className: I.featureCardTextHeader,
                             children: t,
@@ -127,13 +127,13 @@ function P(e) {
         H = R.length % 2 == 0,
         V = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
         [F, z] = i.useState(Date.now()),
-        [W, q] = i.useState(0),
-        [Y, K] = i.useState(0),
+        [W, Y] = i.useState(0),
+        [q, K] = i.useState(0),
         [Q, X] = i.useState(!1),
         [J, $] = i.useState(!0),
         ee = i.useRef(F),
         et = i.useRef(W),
-        en = i.useRef(Y),
+        en = i.useRef(q),
         er = i.useRef(Q),
         ei = i.useRef(J),
         [el, ea] = i.useState(T),
@@ -143,7 +143,7 @@ function P(e) {
             t = e - ee.current,
             n = et.current,
             r = en.current;
-        return er.current && (q((n += t)), ei.current || K((r += t))), z(e), [n, r];
+        return er.current && (Y((n += t)), ei.current || K((r += t))), z(e), [n, r];
     }
     return (
         i.useEffect(() => {
@@ -160,7 +160,7 @@ function P(e) {
                                   let n = await t.text(),
                                       r = new Blob([n], { type: "text/vtt" }),
                                       i = URL.createObjectURL(r);
-                                  return C(S({}, e), { src: i });
+                                  return S(C({}, e), { src: i });
                               });
                     ea(await Promise.all(t));
                 } catch (e) {
@@ -179,8 +179,8 @@ function P(e) {
             [el],
         ),
         i.useEffect(() => {
-            (ee.current = F), (et.current = W), (en.current = Y), (er.current = Q), (ei.current = J);
-        }, [F, W, Y, Q, J]),
+            (ee.current = F), (et.current = W), (en.current = q), (er.current = Q), (ei.current = J);
+        }, [F, W, q, Q, J]),
         i.useEffect(
             () => () => {
                 if ("video" === l.type || "embed" === l.type) {
@@ -207,7 +207,7 @@ function P(e) {
                         change_log_id: D,
                         seconds_open: Math.round((Date.now() - e) / 1000),
                     }),
-                        null != P && (0, g.Q3)(P, { dismissAction: y.L.DISMISS });
+                        null != P && (0, g.Q3)(P, { dismissAction: v.L.DISMISS });
                 }
             );
         }, [P, D]),
@@ -232,7 +232,7 @@ function P(e) {
                         "data-migration-pending": !0,
                         className: I.content,
                         children: [
-                            (0, r.jsx)(c.X6q, {
+                            (0, r.jsx)(c.Heading, {
                                 variant: "display-md",
                                 className: a()(I.headerText, Z),
                                 children: A,
@@ -267,7 +267,7 @@ function P(e) {
                                           null == el
                                               ? void 0
                                               : el.map((e) => {
-                                                    let t = (0, v.getLanguages)().find((t) => t.code === e.locale);
+                                                    let t = (0, y.getLanguages)().find((t) => t.code === e.locale);
                                                     return null == t
                                                         ? null
                                                         : (0, r.jsx)(
@@ -315,7 +315,7 @@ function P(e) {
                             }),
                             null != M &&
                                 "" !== M &&
-                                (0, r.jsx)(c.X6q, {
+                                (0, r.jsx)(c.Heading, {
                                     variant: "heading-lg/semibold",
                                     className: I.bodyText,
                                     children: M,
@@ -326,7 +326,7 @@ function P(e) {
                                     children: R.map((e, t) =>
                                         (0, r.jsx)(
                                             j,
-                                            C(S({}, e), { wideStyle: H }),
+                                            S(C({}, e), { wideStyle: H }),
                                             "".concat(e.header, "_").concat(t),
                                         ),
                                     ),

@@ -262,12 +262,12 @@ function x(e) {
     });
 }
 function M(e) {
-    return (0, r.jsx)(f.zx, {
+    return (0, r.jsx)(f.Button, {
         "data-migration-pending": !0,
         focusProps: e.focusProps,
         "aria-label": b.intl.string(b.t.cpT0Cg),
-        look: f.zx.Looks.BLANK,
-        size: f.zx.Sizes.NONE,
+        look: f.Button.Looks.BLANK,
+        size: f.Button.Sizes.NONE,
         onClick: e.onClick,
         innerClassName: o()(e.innerClassName, { [y.closeWithCircleBackground]: e.withCircleBackground }),
         className: o()(e.className, {

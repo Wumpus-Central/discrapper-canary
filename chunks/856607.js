@@ -20,7 +20,7 @@ function d() {
                 alt: "",
                 className: c.image,
             }),
-            (0, r.jsx)(i.X6q, {
+            (0, r.jsx)(i.Heading, {
                 className: c.topSpacing,
                 variant: "heading-lg/extrabold",
                 children: l.intl.string(l.t.Z1OZCQ),
@@ -33,7 +33,7 @@ function d() {
             (0, r.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,
                 className: c.topSpacing,
-                children: (0, r.jsx)(i.zxk, {
+                children: (0, r.jsx)(i.Button, {
                     variant: "primary",
                     text: l.intl.string(l.t.jQ3pqq),
                     onClick: e,

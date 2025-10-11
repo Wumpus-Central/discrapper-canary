@@ -6,7 +6,7 @@ var r = n(951288),
     s = n(589518);
 let l = (e) => {
     let { className: t, color: n = "header-primary", responsive: i = !0, children: l } = e;
-    return (0, r.jsx)(o.X6q, {
+    return (0, r.jsx)(o.Heading, {
         className: a()(s.header, t, i && s.responsive),
         variant: "display-md",
         color: n,

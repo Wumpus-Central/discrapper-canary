@@ -73,7 +73,7 @@ function f(e) {
         onClick: n,
     });
     return (0, r.jsx)(
-        a.zxk,
+        a.Button,
         l(
             {
                 onClick: u,

@@ -102,7 +102,7 @@ function p(e) {
                 }),
             }),
             (0, r.jsx)(
-                a.zxk,
+                a.Button,
                 d(c({}, h), {
                     disabled: u,
                     onClick: g,

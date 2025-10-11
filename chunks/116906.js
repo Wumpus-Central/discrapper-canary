@@ -38,14 +38,14 @@ function O(e) {
         }),
         M = E.length > 0 || null != C,
         U = T && null == C && null == w && null != _,
-        k = !L && (M || U),
-        B = S.length > 0;
-    return k || B || !D
+        B = !L && (M || U),
+        k = S.length > 0;
+    return B || k || !D
         ? (0, l.jsxs)(r.zJl, {
               className: I.scroller,
               fade: !0,
               children: [
-                  k
+                  B
                       ? (0, l.jsx)(f.Z, {
                             "aria-label": y.intl.string(y.t.J6STd3),
                             children: (0, l.jsxs)("ul", {
@@ -88,14 +88,14 @@ function O(e) {
                             }),
                         })
                       : null,
-                  B
+                  k
                       ? (0, l.jsx)(f.Z, {
                             heading: y.intl.string(y.t.M0zgnZ),
                             introText: R
                                 ? y.intl.format(y.t["4bk9Ag"], {
                                       learnMoreHook: (e, n) =>
                                           (0, l.jsx)(
-                                              r.eee,
+                                              r.Anchor,
                                               {
                                                   href: d.Z.getArticleURL(b.BhN.ACTIVITY_STATUS_SETTINGS),
                                                   children: e,

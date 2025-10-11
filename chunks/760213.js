@@ -22,8 +22,8 @@ var r,
     E = n(480387),
     v = n(726745),
     b = n(251423),
-    I = n(981631),
-    j = n(388032),
+    j = n(981631),
+    I = n(388032),
     N = n(878709),
     S =
         (((r = {})[(r.LOGIN_REQUIRED = 0)] = "LOGIN_REQUIRED"),
@@ -41,7 +41,7 @@ function O(e) {
             hidePrivateData: p.Z.hidePersonalInformation,
             isAuthenticated: m.default.isAuthenticated(),
         })),
-        S = new g.Z(n),
+        S = new g.default(n),
         O = b && (null == l ? void 0 : l.id) === S.id,
         y = n.tokenStatus === v.q.INVALID,
         C = s || S.hasUniqueUsername() ? null : "#".concat(S.discriminator),
@@ -53,14 +53,14 @@ function O(e) {
                   variant: "text-sm/semibold",
                   className: N.hintText,
                   color: "text-feedback-positive",
-                  children: j.intl.string(j.t.seV8ys),
+                  children: I.intl.string(I.t.seV8ys),
               }))
             : y &&
               (A = (0, i.jsx)(c.Text, {
                   variant: "text-sm/semibold",
                   className: N.hintText,
                   color: "text-danger",
-                  children: j.intl.string(j.t.tYX2pq),
+                  children: I.intl.string(I.t.tYX2pq),
               })),
         (0, i.jsx)("div", {
             className: N.accountCard,
@@ -101,13 +101,13 @@ function O(e) {
                         className: N.userActions,
                         children: [
                             !O &&
-                                (0, i.jsx)(c.zxk, {
+                                (0, i.jsx)(c.Button, {
                                     variant: "secondary",
-                                    text: y ? j.intl.string(j.t["DSN+h4"]) : t,
+                                    text: y ? I.intl.string(I.t["DSN+h4"]) : t,
                                     onClick: function () {
                                         if (y) return void r(0, n.id);
-                                        _.default.track(I.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
-                                            location: { section: I.jXE.MANAGE_ACCOUNTS_MODAL },
+                                        _.default.track(j.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
+                                            location: { section: j.jXE.MANAGE_ACCOUNTS_MODAL },
                                         }),
                                             E.yD(n.id),
                                             r(1, n.id);
@@ -119,22 +119,22 @@ function O(e) {
                                     (0, d.vq)(e, (e) => {
                                         let { onSelect: t } = e;
                                         return (0, i.jsx)(c.v2r, {
-                                            "aria-label": j.intl.string(j.t["41qiDQ"]),
+                                            "aria-label": I.intl.string(I.t["41qiDQ"]),
                                             navId: "manage-multi-account",
                                             onClose: d.Zy,
                                             onSelect: t,
                                             children: (0, i.jsx)(c.sNh, {
                                                 id: "remove-account",
-                                                label: j.intl.string(j.t.lSLMaW),
+                                                label: I.intl.string(I.t.lSLMaW),
                                                 action: () => {
                                                     u.Z.logout("multi_accounts_list", null, n.id).finally(() => {
                                                         E.Zd(n.id);
                                                     });
                                                     let e = {};
                                                     null != l
-                                                        ? (e.section = I.jXE.MANAGE_ACCOUNTS_MODAL)
-                                                        : (e.page = I.Usc.LOGIN),
-                                                        _.default.track(I.rMx.MULTI_ACCOUNT_ACCOUNT_REMOVE, {
+                                                        ? (e.section = j.jXE.MANAGE_ACCOUNTS_MODAL)
+                                                        : (e.page = j.Usc.LOGIN),
+                                                        _.default.track(j.rMx.MULTI_ACCOUNT_ACCOUNT_REMOVE, {
                                                             location: e,
                                                         }),
                                                         r(2, n.id),
@@ -145,7 +145,7 @@ function O(e) {
                                         });
                                     });
                                 },
-                                "aria-label": j.intl.string(j.t.PdRCRk),
+                                "aria-label": I.intl.string(I.t.PdRCRk),
                                 variant: "icon-only",
                             }),
                         ],

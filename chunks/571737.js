@@ -58,7 +58,7 @@ let m = function (e) {
                     (0, r.jsxs)("div", {
                         className: p.metadataContainer,
                         children: [
-                            (0, r.jsx)(l.X6q, {
+                            (0, r.jsx)(l.Heading, {
                                 variant: "heading-xxl/bold",
                                 color: "header-primary",
                                 lineClamp: 1,

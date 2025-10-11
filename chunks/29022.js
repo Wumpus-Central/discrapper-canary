@@ -62,7 +62,7 @@ function y(e) {
             (0, i.jsxs)("div", {
                 className: b.headerText,
                 children: [
-                    (0, i.jsx)(_.X6q, {
+                    (0, i.jsx)(_.Heading, {
                         variant: "heading-lg/extrabold",
                         color: "header-primary",
                         children: a,
@@ -260,7 +260,7 @@ function G(e) {
     return (0, i.jsxs)(_.mzw, {
         className: b.footer,
         children: [
-            (0, i.jsx)(_.zxk, {
+            (0, i.jsx)(_.Button, {
                 variant: "primary",
                 text: 0 === o ? (a ? g.intl.string(g.t.R7GC7e) : g.intl.string(g.t.iOSdAQ)) : g.intl.string(g.t.mVuDq6),
                 onClick: t,

@@ -192,7 +192,7 @@ let R = i.memo((e) => {
                                 }),
                                 (0, r.jsx)("div", {
                                     className: T.flipCardButtonContainer,
-                                    children: (0, r.jsx)(u.zxk, {
+                                    children: (0, r.jsx)(u.Button, {
                                         variant: "primary",
                                         text: I.intl.string(I.t.dcztdX),
                                         onClick: () => w(!0),

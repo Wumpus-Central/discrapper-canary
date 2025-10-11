@@ -1,8 +1,8 @@
 t.d(a, { h: () => C }), t(388685);
 var r = t(951288),
-    s = t(647438),
-    n = t(512722),
-    l = t.n(n),
+    n = t(647438),
+    s = t(512722),
+    l = t.n(s),
     i = t(481060),
     o = t(457330),
     c = t(600164),
@@ -16,22 +16,22 @@ function C(e) {
     let {
             platformType: a,
             clientId: t,
-            scopes: n,
+            scopes: s,
             authToken: d,
             onContinue: C,
             onError: j,
             onClose: p,
             redirectUri: v,
         } = e,
-        [k, f] = s.useState(!1),
-        b = s.useCallback(
+        [f, k] = n.useState(!1),
+        b = n.useCallback(
             async (e) => {
                 let t,
                     r,
-                    { location: s } = e,
-                    { callbackCode: n, callbackState: l } = d;
+                    { location: n } = e,
+                    { callbackCode: s, callbackState: l } = d;
                 try {
-                    t = await o.Z.completeTwoWayLink(a, s, n, l);
+                    t = await o.Z.completeTwoWayLink(a, n, s, l);
                 } catch (e) {
                     var i;
                     N.error("".concat(a, " link error:"), e), (r = null == (i = e.body) ? void 0 : i.code);
@@ -41,13 +41,13 @@ function C(e) {
             [a, d, C, j],
         ),
         {
-            header: E,
-            body: T,
-            appDetails: g,
+            header: g,
+            body: E,
+            appDetails: T,
             sendAuthorize: O,
         } = (0, x.useOAuth2AuthorizeForm)({
             clientId: t,
-            scopes: n,
+            scopes: s,
             responseType: "code",
             callback: b,
             isTrustedName: !0,
@@ -55,8 +55,8 @@ function C(e) {
             redirectUri: v,
             isTwoWayLinkDiscordConsent: !0,
         }),
-        y = s.useCallback(() => {
-            l()(null != O, "sendAuthorize not available"), f(!0), O(!0);
+        y = n.useCallback(() => {
+            l()(null != O, "sendAuthorize not available"), k(!0), O(!0);
         }, [O]);
     return (0, r.jsxs)(u.Z, {
         children: [
@@ -87,10 +87,10 @@ function C(e) {
                 children: [
                     (0, r.jsx)("div", {
                         className: m.consentHeader,
-                        children: E,
+                        children: g,
                     }),
+                    E,
                     T,
-                    g,
                 ],
             }),
             (0, r.jsx)(i.mzw, {
@@ -98,10 +98,10 @@ function C(e) {
                 children: (0, r.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
                     className: m.footerButton,
-                    children: (0, r.jsx)(i.zxk, {
+                    children: (0, r.jsx)(i.Button, {
                         variant: "primary",
                         text: h.intl.string(h.t.ZN4hkZ),
-                        loading: k,
+                        loading: f,
                         onClick: y,
                     }),
                 }),

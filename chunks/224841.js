@@ -20,7 +20,7 @@ let u = () =>
                     className: c.subtitle,
                     children: o.intl.format(o.t.KQgoxM, { underageMessage: o.intl.string(o.t.WqEH4O) }),
                 }),
-                (0, r.jsx)(i.zxk, {
+                (0, r.jsx)(i.Button, {
                     icon: i.Gr1,
                     text: o.intl.string(o.t.hvVgAQ),
                     onClick: () => window.open(s.Z.getArticleURL(a.BhN.AGE_GATE), "_blank"),

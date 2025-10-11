@@ -144,7 +144,7 @@ let y = function (e) {
                                                         direction: "vertical",
                                                         gap: 4,
                                                         children: [
-                                                            (0, a.jsx)(i.X6q, {
+                                                            (0, a.jsx)(i.Heading, {
                                                                 variant: "heading-xl/semibold",
                                                                 children: g.intl.string(g.t.c6kn6O),
                                                             }),
@@ -160,7 +160,7 @@ let y = function (e) {
                                                         justify: "center",
                                                         align: "center",
                                                         children: [
-                                                            (0, a.jsx)(i.zxk, {
+                                                            (0, a.jsx)(i.Button, {
                                                                 fullWidth: !0,
                                                                 variant: "secondary",
                                                                 text: g.intl.string(g.t["2jxGen"]),
@@ -168,7 +168,7 @@ let y = function (e) {
                                                                     (0, p.R)("safety_flows_modal");
                                                                 },
                                                             }),
-                                                            (0, a.jsx)(i.zxk, {
+                                                            (0, a.jsx)(i.Button, {
                                                                 fullWidth: !0,
                                                                 text: g.intl.string(g.t["7NqTJi"]),
                                                                 onClick: () => {

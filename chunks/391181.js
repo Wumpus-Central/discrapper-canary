@@ -277,7 +277,7 @@ function I(e) {
                     (0, r.jsxs)("div", {
                         className: h.productInfoContent,
                         children: [
-                            (0, r.jsx)(s.X6q, {
+                            (0, r.jsx)(s.Heading, {
                                 variant: "text-md/semibold",
                                 color: "header-primary",
                                 className: h.productName,

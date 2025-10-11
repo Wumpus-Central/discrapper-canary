@@ -28,7 +28,7 @@ let u = () =>
                         text: l.intl.string(l.t.oMx98P),
                         children: (0, r.jsx)("div", { className: c.staffBadge }),
                     }),
-                    (0, r.jsx)(a.X6q, {
+                    (0, r.jsx)(a.Heading, {
                         className: c.header,
                         variant: "heading-md/semibold",
                         children: l.intl.string(l.t.xfAlNz),

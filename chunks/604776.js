@@ -177,7 +177,7 @@ function _() {
                                 select: i,
                                 popoutLayerContext: m.O$,
                             }),
-                            (0, a.jsx)(c.zxk, {
+                            (0, a.jsx)(c.Button, {
                                 variant: "primary",
                                 text: "Grant Fractional Nitro",
                                 onClick: () => E(n),

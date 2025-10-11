@@ -17,11 +17,11 @@ var r = n(951288),
     _ = n(497656),
     O = n(554747),
     E = n(230900),
-    y = n(954313),
-    v = n(703656),
+    v = n(954313),
+    y = n(703656),
     I = n(922482),
-    S = n(565799),
-    C = n(501655),
+    C = n(565799),
+    S = n(501655),
     T = n(427679),
     N = n(448206),
     j = n(670188),
@@ -46,8 +46,8 @@ function D(e) {
             [j, d],
         ),
         U = null == l ? void 0 : l.id,
-        G = (0, o.Wu)([S.Z], () => [...new Set(S.Z.getMutableParticipants(U, C.pV.SPEAKER).map((e) => e.user))], [U]),
-        B = (0, o.e7)([S.Z], () => (null != U ? S.Z.getParticipantCount(U, C.pV.AUDIENCE) : 0), [U]),
+        G = (0, o.Wu)([C.Z], () => [...new Set(C.Z.getMutableParticipants(U, S.pV.SPEAKER).map((e) => e.user))], [U]),
+        B = (0, o.e7)([C.Z], () => (null != U ? C.Z.getParticipantCount(U, S.pV.AUDIENCE) : 0), [U]),
         H = (0, o.e7)([P.Z], () => P.Z.can(Z.Plq.CONNECT, l)),
         V = (0, N.Z)(null == l ? void 0 : l.id),
         F = null == d ? void 0 : d.creator_id,
@@ -57,8 +57,8 @@ function D(e) {
     }, [F]);
     let {
         noticeType: W,
-        title: q,
-        location: Y,
+        title: Y,
+        location: q,
         locationIcon: K,
         canListenIn: Q,
         buttonText: X,
@@ -82,7 +82,7 @@ function D(e) {
                         isStudyRoomNotice: m,
                     } = e,
                     _ = null != n && null != i && !f,
-                    O = null != t ? (0, y.DK)(t) : null;
+                    O = null != t ? (0, v.DK)(t) : null;
                 if (m && null != i) {
                     let e = (0, p.KS)(i);
                     return {
@@ -345,7 +345,7 @@ function D(e) {
                       variant: "text-md/medium",
                       color: "header-primary",
                       className: a()(R.title, R.live),
-                      children: q,
+                      children: Y,
                   }),
                   (0, r.jsxs)("div", {
                       className: R.locationContainer,
@@ -355,7 +355,7 @@ function D(e) {
                               variant: "text-xs/normal",
                               color: "text-muted",
                               className: R.location,
-                              children: Y,
+                              children: q,
                           }),
                       ],
                   }),
@@ -363,7 +363,7 @@ function D(e) {
                       ? (0, r.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
                             className: R.button,
-                            children: (0, r.jsx)(c.zxk, {
+                            children: (0, r.jsx)(c.Button, {
                                 variant: "active",
                                 size: "sm",
                                 text: X,
@@ -371,7 +371,7 @@ function D(e) {
                                     if (Q)
                                         null != l &&
                                             null != l.getGuildId() &&
-                                            ((0, I.Cq)(l), (0, v.XU)(l.getGuildId(), l.id));
+                                            ((0, I.Cq)(l), (0, y.XU)(l.getGuildId(), l.id));
                                     else {
                                         if (null == d) return;
                                         (0, f.bO)({ eventId: d.id });

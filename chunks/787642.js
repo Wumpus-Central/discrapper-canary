@@ -49,7 +49,7 @@ function m() {
             (0, r.jsxs)("header", {
                 className: h.header,
                 children: [
-                    (0, r.jsx)(l.X6q, {
+                    (0, r.jsx)(l.Heading, {
                         variant: "heading-lg/semibold",
                         color: "header-primary",
                         children: f.intl.string(f.t.IuMx1d),

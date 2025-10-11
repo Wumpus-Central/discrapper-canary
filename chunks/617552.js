@@ -113,7 +113,7 @@ function m(e) {
                     variant: "primary",
                 },
             ],
-            actionBarInput: (0, r.jsx)(o.XZJ, {
+            actionBarInput: (0, r.jsx)(o.Checkbox, {
                 checked: u,
                 onChange: (e) => f(e),
                 label: c.intl.string(c.t.wGAwOT),

@@ -47,7 +47,7 @@ function h(e) {
               separator: !1,
               "data-migration-pending": !0,
               children: [
-                  (0, r.jsx)(a.X6q, {
+                  (0, r.jsx)(a.Heading, {
                       variant: "heading-lg/semibold",
                       children: C(),
                   }),

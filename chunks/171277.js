@@ -27,7 +27,7 @@ function p(e) {
                 shouldAnimate: !r,
                 className: l()(d.art, { [d.hidden]: t <= 280 }),
             }),
-            (0, i.jsx)(o.X6q, {
+            (0, i.jsx)(o.Heading, {
                 className: d.header,
                 variant: "heading-md/bold",
                 children: u.intl.string(u.t["C+tj1d"]),

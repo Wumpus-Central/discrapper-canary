@@ -1,8 +1,8 @@
 n.d(t, { W: () => p });
-var l = n(951288);
+var i = n(951288);
 n(647438);
-var i = n(120356),
-    r = n.n(i),
+var l = n(120356),
+    r = n.n(l),
     a = n(399606),
     o = n(481060),
     s = n(337682),
@@ -12,7 +12,7 @@ var i = n(120356),
 function p(e) {
     let { hideSearch: t, className: n } = e,
         {
-            activityUrlOverride: i,
+            activityUrlOverride: l,
             useActivityUrlOverride: p,
             filter: m,
         } = (0, a.cj)(
@@ -24,27 +24,27 @@ function p(e) {
             }),
             [],
         );
-    return (0, l.jsxs)("div", {
+    return (0, i.jsxs)("div", {
         className: r()(d.container, n),
         children: [
-            (0, l.jsx)(o.XZJ, {
+            (0, i.jsx)(o.Checkbox, {
                 checked: p,
                 onChange: s.Y$,
                 label: u.intl.string(u.t["3TSGuL"]),
             }),
             p
-                ? (0, l.jsx)(o.oil, {
+                ? (0, i.jsx)(o.oil, {
                       label: u.intl.string(u.t["9rnmen"]),
                       disabled: !p,
-                      value: null != i ? i : void 0,
+                      value: null != l ? l : void 0,
                       onChange: s.jS,
                       placeholder: "https://localhost:3000",
                   })
                 : null,
             !0 === t
                 ? null
-                : (0, l.jsx)("div", {
-                      children: (0, l.jsx)(o.E1j, {
+                : (0, i.jsx)("div", {
+                      children: (0, i.jsx)(o.E1j, {
                           size: "sm",
                           query: m,
                           onChange: s.a8,

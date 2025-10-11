@@ -28,7 +28,7 @@ let p = {
                     direction: "vertical",
                     justify: "space-between",
                     children: [
-                        (0, a.jsx)(r.X6q, {
+                        (0, a.jsx)(r.Heading, {
                             variant: "display-md",
                             className: m.title,
                             children: u.intl.string(d.default["/OpRAA"]),

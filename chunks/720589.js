@@ -55,17 +55,17 @@ class O extends r.PureComponent {
     renderFooter() {
         let { selectedGuildId: e, selectedChannelId: t, submitting: n } = this.state,
             { onClose: r } = this.props;
-        return (0, l.jsxs)(o.hE2, {
+        return (0, l.jsxs)(o.ButtonGroup, {
             direction: "horizontal-reverse",
             children: [
-                (0, l.jsx)(o.zxk, {
+                (0, l.jsx)(o.Button, {
                     variant: "primary",
                     text: Z.intl.string(Z.t["3aOv+v"]),
                     loading: n,
                     onClick: this.handleFollow,
                     disabled: null == e || null == t,
                 }),
-                (0, l.jsx)(o.zxk, {
+                (0, l.jsx)(o.Button, {
                     variant: "secondary",
                     text: Z.intl.string(Z.t["ETE/oK"]),
                     onClick: r,
@@ -151,7 +151,7 @@ class O extends r.PureComponent {
         return (0, l.jsxs)("div", {
             className: S.body,
             children: [
-                (0, l.jsx)(o.X6q, {
+                (0, l.jsx)(o.Heading, {
                     variant: "heading-lg/semibold",
                     id: this.state.headerId,
                     children: Z.intl.string(Z.t.mvPFbG),

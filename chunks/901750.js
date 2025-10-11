@@ -30,7 +30,7 @@ let l = function (e) {
             (0, r.jsxs)("div", {
                 className: o.gradient,
                 children: [
-                    (0, r.jsx)(i.X6q, {
+                    (0, r.jsx)(i.Heading, {
                         variant: "display-md",
                         className: o.heading,
                         children: s({

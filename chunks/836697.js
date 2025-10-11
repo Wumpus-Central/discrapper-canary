@@ -54,7 +54,7 @@ function y(e) {
                                         (0, r.jsxs)("div", {
                                             className: _.coachmarkTextContainer,
                                             children: [
-                                                (0, r.jsx)(o.X6q, {
+                                                (0, r.jsx)(o.Heading, {
                                                     variant: "heading-md/medium",
                                                     children: b.intl.string(b.t["0YV0YG"]),
                                                 }),
@@ -65,7 +65,7 @@ function y(e) {
                                                 }),
                                             ],
                                         }),
-                                        (0, r.jsx)(o.zxk, {
+                                        (0, r.jsx)(o.Button, {
                                             variant: "primary",
                                             size: "sm",
                                             text: b.intl.string(b.t["4r+amZ"]),

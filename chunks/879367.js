@@ -10,8 +10,8 @@ var a = t(951288),
     f = t(388032),
     u = t(248319);
 let m = function (e) {
-    let { onClose: n, onComplete: t, onCancel: r, transitionState: m, webviewUrl: g, useV1: h = !1 } = e,
-        p = (0, o.GE)(),
+    let { onClose: n, onComplete: t, onCancel: r, transitionState: m, webviewUrl: g, useV1: p = !1 } = e,
+        h = (0, o.GE)(),
         x = i.useCallback(() => {
             t(), n();
         }, [t, n]),
@@ -21,12 +21,12 @@ let m = function (e) {
     (0, c.F5)(v);
     let j = i.useCallback(
         (e) => {
-            if (p && "" !== g) {
+            if (h && "" !== g) {
                 var n;
                 (null == e || null == (n = e.data) ? void 0 : n.eventType) === "Verification.Result" && x();
             }
         },
-        [g, x, p],
+        [g, x, h],
     );
     return (
         i.useEffect(
@@ -47,11 +47,11 @@ let m = function (e) {
             children: [
                 (0, a.jsxs)(l.hzk, {
                     "data-migration-pending": !0,
-                    className: s()(u.content, { [u.fullbleed]: !h }),
+                    className: s()(u.content, { [u.fullbleed]: !p }),
                     scrollbarType: "none",
                     children: [
-                        h &&
-                            (0, a.jsx)(l.X6q, {
+                        p &&
+                            (0, a.jsx)(l.Heading, {
                                 variant: "heading-xl/bold",
                                 children: f.intl.string(f.t.tYNaXF),
                             }),
@@ -65,14 +65,14 @@ let m = function (e) {
                 }),
                 (0, a.jsx)(l.mzw, {
                     "data-migration-pending": !0,
-                    children: h
+                    children: p
                         ? (0, a.jsx)(l.Avr, {
                               text: f.intl.string(f.t["4gTnU1"]),
                               onClick: n,
                           })
                         : (0, a.jsx)("div", {
                               className: u.footer,
-                              children: (0, a.jsxs)(l.hE2, {
+                              children: (0, a.jsxs)(l.ButtonGroup, {
                                   justify: "space-between",
                                   fullWidthContainer: !0,
                                   children: [

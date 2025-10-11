@@ -73,7 +73,7 @@ function S() {
                         },
                         popoutLayerContext: _.O$,
                     }),
-                    (0, a.jsx)(c.zxk, {
+                    (0, a.jsx)(c.Button, {
                         variant: "primary",
                         size: "sm",
                         text: j ? "Clear NUX Flag" : "Set NUX Flag",
@@ -89,7 +89,7 @@ function T() {
     let e = r.useCallback(() => {
         d.Z.openPrivateChannel({ recipientIds: [y.I] });
     }, []);
-    return (0, a.jsx)(c.zxk, {
+    return (0, a.jsx)(c.Button, {
         variant: "primary",
         size: "sm",
         text: "Open System DM",

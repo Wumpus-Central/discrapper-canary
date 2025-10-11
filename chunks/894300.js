@@ -15,7 +15,7 @@ function u(e) {
               className: t,
               children: (0, r.jsx)(i.Wn, {
                   messageType: i.QYI.WARNING,
-                  action: (0, r.jsx)(i.zxk, {
+                  action: (0, r.jsx)(i.Button, {
                       variant: "secondary",
                       size: "sm",
                       text: l.intl.string(l.t["1iI46O"]),

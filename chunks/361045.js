@@ -34,7 +34,7 @@ function c(e) {
                     }),
                     (0, a.jsxs)("div", {
                         children: [
-                            (0, a.jsxs)(r.X6q, {
+                            (0, a.jsxs)(r.Heading, {
                                 variant: "heading-md/semibold",
                                 color: "header-primary",
                                 className: o.heading,
@@ -47,7 +47,7 @@ function c(e) {
                             }),
                         ],
                     }),
-                    (0, a.jsx)(r.zxk, {
+                    (0, a.jsx)(r.Button, {
                         variant: "primary",
                         text: s.intl.string(s.t["9WdoBw"]),
                         fullWidth: !0,

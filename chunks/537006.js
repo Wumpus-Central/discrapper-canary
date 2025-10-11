@@ -117,7 +117,7 @@ function D(e) {
         g)
     )
         return null;
-    let y = (0, r.jsx)(u.X6q, {
+    let y = (0, r.jsx)(u.Heading, {
             variant: "text-sm/normal",
             id: c,
             children: N.intl.string(N.t.EIYbj4),

@@ -52,7 +52,7 @@ let m = () => {
             (0, r.jsxs)("div", {
                 className: h.mainColumn,
                 children: [
-                    (0, r.jsx)(a.X6q, {
+                    (0, r.jsx)(a.Heading, {
                         variant: "heading-lg/extrabold",
                         color: O ? "redesign-button-overlay-text" : "currentColor",
                         className: h.title,
@@ -65,7 +65,7 @@ let m = () => {
                     }),
                 ],
             }),
-            (0, r.jsx)(a.zxk, {
+            (0, r.jsx)(a.Button, {
                 onClick: T,
                 variant: "overlay-primary",
                 text: p.intl.string(p.t.fYfGgI),

@@ -13,12 +13,12 @@ function c(e) {
         children: (0, r.jsx)(i.gNt, {
             label: s.intl.string(s.t.ZKsIkp),
             description: d ? s.intl.string(s.t.TIh3Ym) : s.intl.string(s.t.czsGAw),
-            children: (0, r.jsxs)(i.hE2, {
+            children: (0, r.jsxs)(i.ButtonGroup, {
                 size: "sm",
                 className: l.buttonContainer,
                 children: [
                     d
-                        ? (0, r.jsx)(i.zxk, {
+                        ? (0, r.jsx)(i.Button, {
                               variant: "critical-primary",
                               size: "sm",
                               text: s.intl.string(s.t.jf5GGR),
@@ -28,7 +28,7 @@ function c(e) {
                         : null,
                     (0, r.jsx)(a.F, {
                         setting: o.s6.ACCOUNT_DELETE_ACCOUNT,
-                        children: (0, r.jsx)(i.zxk, {
+                        children: (0, r.jsx)(i.Button, {
                             variant: "critical-secondary",
                             size: "sm",
                             text: s.intl.string(s.t["8lQ2ra"]),

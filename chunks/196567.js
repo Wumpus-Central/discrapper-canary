@@ -39,7 +39,7 @@ function l(e) {
                             color: o.TVs.colors.TEXT_INVERT,
                             className: s.nitroIcon,
                         }),
-                    (0, r.jsx)(o.X6q, {
+                    (0, r.jsx)(o.Heading, {
                         className: a()(s.textHeader, { [s.textHeaderWithIcon]: !c }),
                         color: l,
                         variant: "heading-md/bold",

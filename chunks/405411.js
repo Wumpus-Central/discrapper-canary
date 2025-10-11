@@ -26,7 +26,7 @@ function d(e) {
         : (0, r.jsxs)("div", {
               className: c.sectionContainer,
               children: [
-                  (0, r.jsx)(i.X6q, {
+                  (0, r.jsx)(i.Heading, {
                       variant: "heading-lg/semibold",
                       color: "header-primary",
                       children: o.intl.string(o.t.swIgTE),

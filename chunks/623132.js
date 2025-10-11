@@ -96,9 +96,9 @@ function E(e) {
         trackEntryPointImpression: !0,
     });
     return null == o
-        ? (0, n.jsx)(s.X6q, S(I({}, a), { children: i }))
+        ? (0, n.jsx)(s.Heading, S(I({}, a), { children: i }))
         : (0, n.jsx)(
-              s.X6q,
+              s.Heading,
               S(I({}, a), {
                   children: (0, n.jsx)(s.P3F, {
                       onClick: o,
@@ -277,7 +277,7 @@ function C(e) {
                       className: P.details,
                       children: [
                           l
-                              ? (0, n.jsx)(s.X6q, S(I({}, m), { children: u }))
+                              ? (0, n.jsx)(s.Heading, S(I({}, m), { children: u }))
                               : (0, n.jsx)(
                                     E,
                                     I(

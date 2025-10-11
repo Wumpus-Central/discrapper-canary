@@ -39,7 +39,7 @@ function v() {
         };
     return (0, a.jsxs)(h.$0, {
         children: [
-            (0, a.jsx)(l.X6q, {
+            (0, a.jsx)(l.Heading, {
                 variant: "heading-xl/semibold",
                 children: "Balance Widget Components",
             }),
@@ -147,7 +147,7 @@ function j() {
     let [e, t] = r.useState("1144308439720394944");
     return (0, a.jsxs)(h.$0, {
         children: [
-            (0, a.jsx)(l.X6q, {
+            (0, a.jsx)(l.Heading, {
                 variant: "heading-xl/semibold",
                 children: "Orb Checkout Components",
             }),
@@ -197,7 +197,7 @@ function _() {
     let { resetOnboardingExperience: e } = (0, s.Z)();
     return (0, a.jsxs)(h.$0, {
         children: [
-            (0, a.jsx)(l.X6q, {
+            (0, a.jsx)(l.Heading, {
                 variant: "heading-xl/semibold",
                 children: "Onboarding Components",
             }),

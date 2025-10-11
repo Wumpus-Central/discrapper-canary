@@ -131,7 +131,7 @@ function S(e) {
                                         alt: "",
                                         className: g.asset,
                                     }),
-                                    (0, r.jsx)(l.X6q, {
+                                    (0, r.jsx)(l.Heading, {
                                         variant: "heading-lg/semibold",
                                         children: n.title,
                                     }),
@@ -170,7 +170,7 @@ function S(e) {
                                         alt: "",
                                         className: g.asset,
                                     }),
-                                    (0, r.jsx)(l.X6q, {
+                                    (0, r.jsx)(l.Heading, {
                                         variant: "heading-lg/semibold",
                                         children: m.intl.string(m.t.KTjjrK),
                                     }),
@@ -186,7 +186,7 @@ function S(e) {
                                 children: (0, r.jsxs)("div", {
                                     className: g.closeButtonContainer,
                                     children: [
-                                        (0, r.jsx)(l.zxk, {
+                                        (0, r.jsx)(l.Button, {
                                             variant: "primary",
                                             text: m.intl.string(m.t.cpT0Cg),
                                             onClick: o,

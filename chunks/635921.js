@@ -95,7 +95,7 @@ let I = (e) => {
                     (0, r.jsxs)("div", {
                         className: S ? v.fullscreenTextContainer : v.settingsTextContainer,
                         children: [
-                            (0, r.jsx)(c.X6q, {
+                            (0, r.jsx)(c.Heading, {
                                 variant: S ? "display-lg" : "display-md",
                                 color: "always-white",
                                 children: R,

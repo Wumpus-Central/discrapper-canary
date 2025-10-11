@@ -111,7 +111,7 @@ function T(e) {
                                                 user: t,
                                                 guildId: n,
                                             }),
-                                            (0, r.jsx)(o.X6q, {
+                                            (0, r.jsx)(o.Heading, {
                                                 variant: "heading-lg/bold",
                                                 children: b.intl.string(b.t.b33pLC),
                                             }),

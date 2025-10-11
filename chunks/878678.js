@@ -55,7 +55,7 @@ function _(e) {
             bodyClassName: b,
             transitionState: y,
             loading: O = !1,
-            confirmButtonColor: v = s.zx.Colors.RED,
+            confirmButtonColor: v = s.Button.Colors.RED,
             focusCancel: I = !1,
             impression: T,
         } = e,
@@ -70,13 +70,13 @@ function _(e) {
         }, [I]),
         i.useLayoutEffect(() => () => (null == E ? void 0 : E())),
         null != _ &&
-            (t = (0, r.jsx)(s.zx, {
+            (t = (0, r.jsx)(s.Button, {
                 "data-migration-pending": !0,
                 type: "button",
-                look: s.zx.Looks.FILLED,
-                color: s.zx.Colors.PRIMARY,
+                look: s.Button.Looks.FILLED,
+                color: s.Button.Colors.PRIMARY,
                 className: u.cancelButton,
-                size: s.zx.Sizes.MEDIUM,
+                size: s.Button.Sizes.MEDIUM,
                 disabled: O,
                 onClick: () => {
                     null == m || m(), g();
@@ -85,11 +85,11 @@ function _(e) {
                 children: _,
             })),
         null != f &&
-            (n = (0, r.jsx)(s.zx, {
+            (n = (0, r.jsx)(s.Button, {
                 "data-migration-pending": !0,
                 buttonRef: S,
                 type: "submit",
-                size: s.zx.Sizes.MEDIUM,
+                size: s.Button.Sizes.MEDIUM,
                 color: v,
                 submitting: O,
                 onClick: async () => {
@@ -112,7 +112,7 @@ function _(e) {
                     ? (0, r.jsx)(c.xB, {
                           "data-migration-pending": !0,
                           separator: !1,
-                          children: (0, r.jsx)(l.X6q, {
+                          children: (0, r.jsx)(l.Heading, {
                               variant: "heading-lg/semibold",
                               children: a,
                           }),

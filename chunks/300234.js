@@ -22,7 +22,7 @@ let v = l.memo(function (e) {
         onClick: (e) => l(c, e.shiftKey),
         onContextMenu: (e) =>
             (0, o.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e("90508"), n.e("46154"), n.e("89381")]).then(
+                let { default: e } = await Promise.all([n.e("90508"), n.e("46154"), n.e("44141")]).then(
                     n.bind(n, 422200),
                 );
                 return (t) => {
@@ -75,7 +75,7 @@ let v = l.memo(function (e) {
             (0, r.jsxs)("div", {
                 className: j.left,
                 children: [
-                    (0, r.jsxs)(s.X6q, {
+                    (0, r.jsxs)(s.Heading, {
                         className: j.threadNameLine,
                         variant: "heading-md/semibold",
                         children: [

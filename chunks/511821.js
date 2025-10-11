@@ -1,7 +1,7 @@
-n.d(t, { jM: () => E });
+n.d(t, { jM: () => k });
 var i = n(951288),
-    l = n(647438),
-    a = n(442837),
+    a = n(647438),
+    l = n(442837),
     r = n(481060),
     s = n(728345),
     o = n(225657),
@@ -13,8 +13,8 @@ var i = n(951288),
     m = n(614277),
     p = n(927699),
     v = n(96848),
-    x = n(311821),
-    h = n(703656),
+    h = n(311821),
+    x = n(703656),
     C = n(321051),
     b = n(430824),
     j = n(594174),
@@ -27,8 +27,8 @@ var i = n(951288),
     T = n(474936),
     S = n(231338),
     O = n(388032),
-    k = n(397263);
-let E = {
+    E = n(397263);
+let k = {
     key: f.h8.GIFT_CUSTOMIZATION,
     renderStep: (e) =>
         (0, i.jsx)(
@@ -65,26 +65,26 @@ let E = {
     },
 };
 function M(e) {
-    let { onStepChange: t, onBackClick: n, showBackButton: l = !1, disabled: a = !1, loading: s = !1 } = e,
+    let { onStepChange: t, onBackClick: n, showBackButton: a = !1, disabled: l = !1, loading: s = !1 } = e,
         { hasPaymentSources: o } = (0, g.JL)(),
         d = o ? f.h8.REVIEW : f.h8.ADD_PAYMENT_STEPS;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(r.zxk, {
+            (0, i.jsx)(r.Button, {
                 onClick: () => t(d),
-                disabled: a,
+                disabled: l,
                 loading: s,
                 text: O.intl.string(O.t.XiOHRU),
             }),
-            l ? (0, i.jsx)(x.Z, { onClick: n }) : null,
+            a ? (0, i.jsx)(h.Z, { onClick: n }) : null,
         ],
     });
 }
 function Z(e) {
-    var t, n, f, x, h;
+    var t, n, f, h, x;
     let { handleStepChange: y, handleClose: N } = e,
         {
-            customGiftMessage: E = "",
+            customGiftMessage: k = "",
             setCustomGiftMessage: Z,
             giftRecipient: A,
             emojiConfetti: B,
@@ -93,11 +93,11 @@ function Z(e) {
             setSoundEffect: R,
         } = (0, u.wD)(),
         { selectedSkuId: D, application: U } = (0, g.JL)(),
-        F = (0, a.e7)([j.default], () => j.default.getCurrentUser()),
-        H = (0, a.e7)([_.Z], () => (null != D ? _.Z.get(D) : null), [D]),
+        F = (0, l.e7)([j.default], () => j.default.getCurrentUser()),
+        H = (0, l.e7)([_.Z], () => (null != D ? _.Z.get(D) : null), [D]),
         J = null == U ? void 0 : U.guildId,
-        z = (0, a.e7)([b.Z], () => (null != J ? b.Z.getGuild(J) : null), [J]);
-    l.useEffect(() => {
+        z = (0, l.e7)([b.Z], () => (null != J ? b.Z.getGuild(J) : null), [J]);
+    a.useEffect(() => {
         null == z && null != H && s.ZP.fetchApplication(H.applicationId, !0);
     }, [z, H]);
     let K =
@@ -107,36 +107,36 @@ function Z(e) {
                 ? w.Z.toURLSafe((0, P._W)(H.applicationId, H.tenantMetadata.socialLayer.cardImageAssetId, 512, "png"))
                 : void 0,
         V =
-            (null == H || null == (x = H.tenantMetadata) || null == (f = x.socialLayer)
+            (null == H || null == (h = H.tenantMetadata) || null == (f = h.socialLayer)
                 ? void 0
                 : f.cardBackgroundImageAssetId) != null && (null == H ? void 0 : H.applicationId) != null
                 ? w.Z.toURLSafe(
                       (0, P._W)(H.applicationId, H.tenantMetadata.socialLayer.cardBackgroundImageAssetId, 1024, "png"),
                   )
                 : void 0,
-        X = async (e, t) => {};
+        Y = async (e, t) => {};
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(m.C3, {
                 children: (0, i.jsxs)("div", {
-                    className: k.stepBody,
+                    className: E.stepBody,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: k.bodyColumnLeft,
+                            className: E.bodyColumnLeft,
                             children: [
                                 null != K &&
                                     (0, i.jsx)("div", {
-                                        className: k.cardContainer,
+                                        className: E.cardContainer,
                                         style:
                                             null != V ? { backgroundImage: "url(".concat(V.toString(), ")") } : void 0,
                                         children: (0, i.jsx)("img", {
                                             src: K.toString(),
-                                            alt: null != (h = null == H ? void 0 : H.name) ? h : "",
-                                            className: k.skuImage,
+                                            alt: null != (x = null == H ? void 0 : H.name) ? x : "",
+                                            className: E.skuImage,
                                         }),
                                     }),
                                 (0, i.jsxs)("div", {
-                                    className: k.giftEffectsContainer,
+                                    className: E.giftEffectsContainer,
                                     children: [
                                         (0, i.jsx)(C.Z, {
                                             sound: L,
@@ -153,45 +153,45 @@ function Z(e) {
                             ],
                         }),
                         (0, i.jsxs)("div", {
-                            className: k.bodyColumnRight,
+                            className: E.bodyColumnRight,
                             children: [
                                 (0, i.jsx)(o.Z, {
                                     selectedSkuId: D,
-                                    validateSelectedGift: X,
-                                    searchableSelectWrapperClassName: k.recipientPickerSelectWrapper,
+                                    validateSelectedGift: Y,
+                                    searchableSelectWrapperClassName: E.recipientPickerSelectWrapper,
                                 }),
                                 (0, i.jsx)(p.Z, {
                                     sectionTitle: O.intl.string(O.t.B3miEx),
                                     onTextChange: (e) => (null == Z ? void 0 : Z(e)),
-                                    pendingText: E,
-                                    currentText: E,
+                                    pendingText: k,
+                                    currentText: k,
                                     disableThemedBackground: !0,
-                                    className: k.customGiftMessageWrapper,
-                                    innerClassName: k.customGiftMessage,
+                                    className: E.customGiftMessageWrapper,
+                                    innerClassName: E.customGiftMessage,
                                 }),
                                 (() => {
-                                    var e, t, n, l;
+                                    var e, t, n, a;
                                     if (null == H) return null;
-                                    let a = (0, I.T4)(
+                                    let l = (0, I.T4)(
                                         null != (n = null == (e = H.price) ? void 0 : e.amount) ? n : 0,
-                                        null != (l = null == (t = H.price) ? void 0 : t.currency) ? l : S.pK.USD,
+                                        null != (a = null == (t = H.price) ? void 0 : t.currency) ? a : S.pK.USD,
                                     );
                                     return (0, i.jsxs)("div", {
-                                        className: k.giftPreviewContainer,
+                                        className: E.giftPreviewContainer,
                                         children: [
                                             (0, i.jsx)(r.vwX, {
-                                                className: k.giftPreviewTitle,
+                                                className: E.giftPreviewTitle,
                                                 children: O.intl.string(O.t.PpoJzs),
                                             }),
                                             (0, i.jsxs)("div", {
-                                                className: k.giftPreviewContent,
+                                                className: E.giftPreviewContent,
                                                 children: [
                                                     (0, i.jsx)("div", {
-                                                        className: k.giftPreviewImageContainer,
+                                                        className: E.giftPreviewImageContainer,
                                                         children:
                                                             null != K &&
                                                             (0, i.jsx)("div", {
-                                                                className: k.giftPreviewCardContainer,
+                                                                className: E.giftPreviewCardContainer,
                                                                 style:
                                                                     null != V
                                                                         ? {
@@ -204,16 +204,16 @@ function Z(e) {
                                                                 children: (0, i.jsx)("img", {
                                                                     src: K.toString(),
                                                                     alt: H.name,
-                                                                    className: k.giftPreviewImage,
+                                                                    className: E.giftPreviewImage,
                                                                 }),
                                                             }),
                                                     }),
                                                     (0, i.jsxs)("div", {
-                                                        className: k.giftPreviewTextContainer,
+                                                        className: E.giftPreviewTextContainer,
                                                         children: [
                                                             null != z &&
                                                                 (0, i.jsxs)("div", {
-                                                                    className: k.guildNameContainer,
+                                                                    className: E.guildNameContainer,
                                                                     children: [
                                                                         (0, i.jsx)(c.Z, {
                                                                             guild: z,
@@ -236,7 +236,7 @@ function Z(e) {
                                                     }),
                                                     (0, i.jsx)(r.Text, {
                                                         variant: "text-md/semibold",
-                                                        children: a,
+                                                        children: l,
                                                     }),
                                                 ],
                                             }),
@@ -259,11 +259,11 @@ function Z(e) {
                     "data-migration-pending": !0,
                     justify: d.Z.Justify.BETWEEN,
                     align: d.Z.Align.CENTER,
-                    className: k.footer,
+                    className: E.footer,
                     children: (0, i.jsx)(M, {
                         onStepChange: y,
                         onBackClick: N,
-                        disabled: null == A || A.id === (null == F ? void 0 : F.id) || E.length > T.$n,
+                        disabled: null == A || A.id === (null == F ? void 0 : F.id) || k.length > T.$n,
                     }),
                 }),
             }),
@@ -273,11 +273,11 @@ function Z(e) {
 function G(e) {
     let { handleClose: t, guild: n } = e;
     return (0, i.jsx)("div", {
-        className: k.viewItemButton,
+        className: E.viewItemButton,
         children: (0, i.jsx)(r.Avr, {
             text: O.intl.string(O.t.ImioFB),
             onClick: function () {
-                t(), (0, r.pTH)(), (0, h.uL)(y.Z5c.CHANNEL(n.id, N.oC.GUILD_SHOP));
+                t(), (0, r.pTH)(), (0, x.uL)(y.Z5c.CHANNEL(n.id, N.oC.GUILD_SHOP));
             },
             textVariant: "text-sm/medium",
             lineClamp: void 0,

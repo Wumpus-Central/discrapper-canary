@@ -92,7 +92,7 @@ function A(e, t) {
 }
 let C = (e) => {
         let { text: t, extra: n } = e;
-        return (0, r.jsxs)(l.X6q, {
+        return (0, r.jsxs)(l.Heading, {
             variant: "heading-md/semibold",
             className: y.header,
             children: [t, n],
@@ -162,7 +162,7 @@ let C = (e) => {
     },
     P = (e) => {
         let { title: t, onClick: n, expired: i, children: a } = e,
-            o = (0, r.jsx)(l.X6q, {
+            o = (0, r.jsx)(l.Heading, {
                 variant: "heading-md/semibold",
                 className: (0, E.l)(y, "inviteDestination", i ? "Expired" : null != n ? "Joined" : ""),
                 children: t,
@@ -254,7 +254,7 @@ let C = (e) => {
                   ],
               });
     },
-    x = (e) => {
+    L = (e) => {
         var { children: t, onClick: n, className: i, isDisabled: a } = e,
             l = S(e, ["children", "onClick", "className", "isDisabled"]);
         return (0, r.jsx)(
@@ -268,13 +268,13 @@ let C = (e) => {
             }),
         );
     };
-(x.Colors = s.zx.Colors),
-    (x.Looks = s.zx.Looks),
-    (x.defaultProps = {
+(L.Colors = s.zx.Colors),
+    (L.Looks = s.zx.Looks),
+    (L.defaultProps = {
         className: null,
         isDisabled: !1,
     });
-let L = (e) => {
+let x = (e) => {
         let { children: t, className: n, containerRef: i } = e;
         return (0, r.jsx)("div", {
             ref: i,
@@ -302,7 +302,7 @@ let L = (e) => {
                   }),
               });
     },
-    k = (e) => {
+    j = (e) => {
         let { guild: t, ref: n } = e;
         return (0, r.jsx)("div", {
             className: y.guildNameWrapper,
@@ -313,7 +313,7 @@ let L = (e) => {
             }),
         });
     },
-    j = (e) => {
+    k = (e) => {
         let { guildTemplate: t } = e;
         return (0, r.jsx)("div", {
             className: y.guildNameWrapper,
@@ -323,24 +323,24 @@ let L = (e) => {
             }),
         });
     };
-(L.Header = C),
-    (L.Body = N),
-    (L.Icon = R),
-    (L.Info = P),
-    (L.Data = w),
-    (L.Channel = D),
-    (L.Button = x),
-    (L.GuildSplash = M),
-    (L.GuildName = k),
-    (L.GuildTemplateName = j),
+(x.Header = C),
+    (x.Body = N),
+    (x.Icon = R),
+    (x.Info = P),
+    (x.Data = w),
+    (x.Channel = D),
+    (x.Button = L),
+    (x.GuildSplash = M),
+    (x.GuildName = j),
+    (x.GuildTemplateName = k),
     (C.displayName = "InviteButton.Header"),
     (N.displayName = "InviteButton.Body"),
     (R.displayName = "InviteButton.Icon"),
     (P.displayName = "InviteButton.Info"),
     (w.displayName = "InviteButton.Data"),
     (D.displayName = "InviteButton.Channel"),
-    (x.displayName = "InviteButton.Button"),
+    (L.displayName = "InviteButton.Button"),
     (M.displayName = "InviteButton.GuildSplash"),
-    (k.displayName = "InviteButton.GuildName"),
-    (j.displayName = "InviteButton.GuildTemplateName");
-let U = L;
+    (j.displayName = "InviteButton.GuildName"),
+    (k.displayName = "InviteButton.GuildTemplateName");
+let U = x;

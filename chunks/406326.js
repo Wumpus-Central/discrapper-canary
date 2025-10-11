@@ -17,8 +17,8 @@ var r = n(951288),
     y = n(611004),
     _ = n(770092),
     j = n(125085),
-    x = n(981631),
-    O = n(921944),
+    O = n(981631),
+    x = n(921944),
     v = n(388032),
     C = n(865239);
 function I(e) {
@@ -77,11 +77,11 @@ function E(e) {
         } = e,
         y = (0, m.nP)({ location: "SearchHeader" }),
         j = (0, m.KS)({ location: "SearchHeader" }),
-        O = y || j,
+        x = y || j,
         E = (0, _.I)(t),
         { totalFilters: T } = (0, b.p4)(E, t),
         P = i.useMemo(() => {
-            if (t.type === x.aib.DMS) {
+            if (t.type === O.aib.DMS) {
                 var e, n;
                 let t = null != (n = null == (e = (0, f.$G)(E).channel_id) ? void 0 : e.length) ? n : 0;
                 return t > 0 ? v.intl.format(v.t.A2dqWF, { filterCount: t }) : v.intl.string(v.t.tc619f);
@@ -96,14 +96,14 @@ function E(e) {
         }, [t]),
         R = i.useMemo(() => (T > 0 ? v.intl.format(v.t.uaR4sL, { filterCount: T }) : v.intl.string(v.t.UdhTtr)), [T]),
         D = (0, g.u5)({ location: "SearchHeader" }),
-        L = t.type === x.aib.DMS || t.type === x.aib.CHANNEL,
+        L = t.type === O.aib.DMS || t.type === O.aib.CHANNEL,
         M = i.useMemo(
             () =>
-                O && D
+                x && D
                     ? (0, r.jsxs)("div", {
                           className: C.searchModeAndFiltersContainer,
                           children: [
-                              (0, r.jsx)(d.zxk, {
+                              (0, r.jsx)(d.Button, {
                                   variant: "secondary",
                                   onClick: N,
                                   text: R,
@@ -122,11 +122,11 @@ function E(e) {
                                   }),
                           ],
                       })
-                    : O
+                    : x
                       ? (0, r.jsxs)("div", {
                             className: C.searchModeAndFiltersContainer,
                             children: [
-                                (0, r.jsx)(d.zxk, {
+                                (0, r.jsx)(d.Button, {
                                     variant: "secondary",
                                     onClick: N,
                                     text: R,
@@ -163,22 +163,22 @@ function E(e) {
                               children: [
                                   (0, r.jsx)(d.njP.Item, {
                                       className: C.searchHeaderTab,
-                                      id: x.QIO.NEWEST,
+                                      id: O.QIO.NEWEST,
                                       children: v.intl.string(v.t.rLjqbW),
                                   }),
                                   (0, r.jsx)(d.njP.Item, {
                                       className: C.searchHeaderTab,
-                                      id: x.QIO.OLDEST,
+                                      id: O.QIO.OLDEST,
                                       children: v.intl.string(v.t.a1BaUl),
                                   }),
                                   (0, r.jsx)(d.njP.Item, {
                                       className: C.searchHeaderTab,
-                                      id: x.QIO.MOST_RELEVANT,
+                                      id: O.QIO.MOST_RELEVANT,
                                       children: v.intl.string(v.t.FtR97u),
                                   }),
                               ],
                           }),
-            [R, N, O, u, D, L, s, t, l, p],
+            [R, N, x, u, D, L, s, t, l, p],
         );
     return (0, r.jsxs)("header", {
         className: a()(C.searchHeader, { [C.searchHeaderWithSubtitle]: null != P }),
@@ -230,9 +230,9 @@ function P(e) {
                 (0, r.jsx)(d.Text, {
                     variant: "text-md/medium",
                     color: "text-muted",
-                    children: (0, r.jsx)(d.eee, {
+                    children: (0, r.jsx)(d.Anchor, {
                         className: C.helpdeskLink,
-                        href: p.Z.getArticleURL(x.BhN.SEARCH_INDEXING),
+                        href: p.Z.getArticleURL(O.BhN.SEARCH_INDEXING),
                         children: v.intl.string(v.t["G3EA+/"]),
                     }),
                 }),
@@ -285,7 +285,7 @@ function w(e) {
             (e) => {
                 if (m !== e) {
                     if (e) {
-                        let e = { type: x.aib.DMS };
+                        let e = { type: O.aib.DMS };
                         y.Z.transitionQueryStateToSearchContext(n, e, (t) => {
                             y.Z.fetchCrossDMMessages({
                                 searchContext: e,
@@ -295,7 +295,7 @@ function w(e) {
                         });
                     } else {
                         let e = {
-                            type: x.aib.CHANNEL,
+                            type: O.aib.CHANNEL,
                             channelId: l,
                         };
                         y.Z.transitionQueryStateToSearchContext(n, e, (t) => {
@@ -319,7 +319,7 @@ function w(e) {
         [E, Z] = (0, u.US)(_),
         T = i.useCallback(
             (e) => {
-                Z("user:explicit" === e ? O.L.USER_DISMISS : O.L.AUTO_DISMISS);
+                Z("user:explicit" === e ? x.L.USER_DISMISS : x.L.AUTO_DISMISS);
             },
             [Z],
         );
@@ -398,15 +398,15 @@ function A(e) {
             () => [
                 {
                     label: v.intl.string(v.t.CbaapK),
-                    value: x.QIO.NEWEST,
+                    value: O.QIO.NEWEST,
                 },
                 {
                     label: v.intl.string(v.t.OukXZm),
-                    value: x.QIO.OLDEST,
+                    value: O.QIO.OLDEST,
                 },
                 {
                     label: v.intl.string(v.t["q8gB5+"]),
-                    value: x.QIO.MOST_RELEVANT,
+                    value: O.QIO.MOST_RELEVANT,
                 },
             ],
             [],

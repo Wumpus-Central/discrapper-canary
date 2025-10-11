@@ -1,14 +1,14 @@
 n.d(t, {
-    O4: () => x,
+    O4: () => b,
     OA: () => h,
-    Wu: () => b,
+    Wu: () => x,
 }),
     n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(399606),
-    s = n(755721),
-    a = n(481060),
+    a = n(755721),
+    s = n(481060),
     o = n(45966),
     c = n(637853),
     d = n(983135),
@@ -62,7 +62,7 @@ function h(e, t) {
     let n = (0, l.Wu)([u.Z], () => (0, c.kl)(e, t, u.Z.editedOnboardingPrompts));
     return [(0, l.Wu)([u.Z], () => (0, c.kl)(e, t, u.Z.editedOnboardingPrompts, c.V7)), n];
 }
-function x(e) {
+function b(e) {
     let t = (0, l.e7)([o.Z], () => o.Z.isAdvancedMode(e)),
         [n, r] = (function (e) {
             let t = (0, l.Wu)([o.Z], () => (0, c.kl)(e, o.Z.getDefaultChannelIds(e), o.Z.getOnboardingPrompts(e)));
@@ -73,28 +73,28 @@ function x(e) {
         })(e);
     return !!t && r.length >= g.md && n.length >= g.X;
 }
-function b(e) {
+function x(e) {
     let { guildId: t, className: n } = e,
         c = (0, l.e7)([o.Z], () => o.Z.isAdvancedMode(t)),
         u = i.useCallback(() => {
             let e = c ? g.Un.ONBOARDING_DEFAULT : g.Un.ONBOARDING_ADVANCED;
             c
-                ? (0, a.h7j)((n) =>
+                ? (0, s.h7j)((n) =>
                       (0, r.jsx)(
-                          a.ConfirmModal,
+                          s.ConfirmModal,
                           f(
                               p(
                                   {
                                       header: m.intl.string(m.t["49+ONj"]),
                                       confirmText: m.intl.string(m.t.R9GHyc),
                                       cancelText: m.intl.string(m.t["ETE/oK"]),
-                                      confirmButtonColor: s.zx.Colors.BRAND,
+                                      confirmButtonColor: a.zx.Colors.BRAND,
                                       onConfirm: () => (0, d.Ts)(t, e),
                                   },
                                   n,
                               ),
                               {
-                                  children: (0, r.jsx)(a.Text, {
+                                  children: (0, r.jsx)(s.Text, {
                                       variant: "text-md/normal",
                                       children: m.intl.string(m.t.TLkoOj),
                                   }),
@@ -102,22 +102,22 @@ function b(e) {
                           ),
                       ),
                   )
-                : (0, a.h7j)((n) =>
+                : (0, s.h7j)((n) =>
                       (0, r.jsx)(
-                          a.ConfirmModal,
+                          s.ConfirmModal,
                           f(
                               p(
                                   {
                                       header: m.intl.string(m.t.YB9xUF),
                                       confirmText: m.intl.string(m.t.ts6u6u),
                                       cancelText: m.intl.string(m.t["ETE/oK"]),
-                                      confirmButtonColor: s.zx.Colors.BRAND,
+                                      confirmButtonColor: a.zx.Colors.BRAND,
                                       onConfirm: () => (0, d.Ts)(t, e),
                                   },
                                   n,
                               ),
                               {
-                                  children: (0, r.jsx)(a.Text, {
+                                  children: (0, r.jsx)(s.Text, {
                                       variant: "text-md/normal",
                                       children: m.intl.string(m.t.BcGGVl),
                                   }),
@@ -128,9 +128,9 @@ function b(e) {
         }, [t, c]);
     return (0, r.jsx)("div", {
         className: n,
-        children: (0, r.jsx)(a.eee, {
+        children: (0, r.jsx)(s.Anchor, {
             onClick: u,
-            children: (0, r.jsx)(a.Text, {
+            children: (0, r.jsx)(s.Text, {
                 variant: "text-sm/medium",
                 color: "text-link",
                 children: c ? m.intl.string(m.t.OmpxW1) : m.intl.string(m.t.ozsQBA),

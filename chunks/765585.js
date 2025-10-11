@@ -80,7 +80,7 @@ let b = i.forwardRef(function (e, t) {
                     (0, r.jsxs)("div", {
                         className: m.body,
                         children: [
-                            (0, r.jsxs)(s.X6q, {
+                            (0, r.jsxs)(s.Heading, {
                                 className: o()(S ? m.headerWithPremiumIcon : m.header, _),
                                 variant: "heading-md/bold",
                                 color: "always-white",

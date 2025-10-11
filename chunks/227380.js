@@ -2,9 +2,9 @@ n.d(t, { Z: () => I }), n(953529), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    s = n.n(l),
-    a = n(498607),
-    o = n.n(a),
+    a = n.n(l),
+    s = n(498607),
+    o = n.n(s),
     c = n(913527),
     d = n.n(c),
     u = n(442837),
@@ -13,11 +13,11 @@ var r = n(951288),
     p = n(481060),
     f = n(984933),
     h = n(63063),
-    x = n(709054),
-    b = n(434404),
+    b = n(709054),
+    x = n(434404),
     j = n(733895),
-    _ = n(981631),
-    v = n(388032),
+    v = n(981631),
+    _ = n(388032),
     C = n(213798);
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -68,22 +68,22 @@ let N = (e) => {
             failingName: n,
             description: i,
             checked: l,
-            pending: s,
-            pendingDescription: a,
+            pending: a,
+            pendingDescription: s,
             failingDescription: o,
         } = e,
         c = t,
         d = null,
         u = null;
     return (
-        s
+        a
             ? ((d = (0, r.jsx)(p.Mgn, {
                   size: "custom",
                   color: g.Z.unsafe_rawColors.YELLOW_300.css,
                   width: 20,
                   height: 20,
               })),
-              (u = null != a ? a : i))
+              (u = null != s ? s : i))
             : l
               ? ((d = (0, r.jsx)(m.$q, {
                     readOnly: !0,
@@ -111,7 +111,7 @@ let N = (e) => {
                 (0, r.jsxs)("div", {
                     className: C.checklistText,
                     children: [
-                        (0, r.jsx)(p.X6q, {
+                        (0, r.jsx)(p.Heading, {
                             variant: "heading-md/semibold",
                             children: c,
                         }),
@@ -143,10 +143,10 @@ function E(e, t) {
     );
 }
 let I = (e) => {
-    let { guild: t, guildId: l, className: a, headerContent: o, failedItemsOnly: c = !1 } = e,
+    let { guild: t, guildId: l, className: s, headerContent: o, failedItemsOnly: c = !1 } = e,
         [g, I] = (0, u.Wu)([j.ZP], () => [j.ZP.getDiscoveryChecklist(l), j.ZP.isLoading()], [l]),
         { nsfwProperties: S } = null != g ? g : {},
-        T = null == t ? void 0 : t.features.has(_.oNc.PARTNERED),
+        T = null == t ? void 0 : t.features.has(v.oNc.PARTNERED),
         P = null == S ? void 0 : S.channels_banned_keywords,
         w = (0, u.e7)(
             [f.ZP],
@@ -174,77 +174,77 @@ let I = (e) => {
         );
     if (I || null == g)
         return (0, r.jsxs)("div", {
-            className: s()(C.container, C.loaderContainer, a),
+            className: a()(C.container, C.loaderContainer, s),
             children: [
-                (0, r.jsx)(p.X6q, {
+                (0, r.jsx)(p.Heading, {
                     className: C.loadingText,
                     variant: "heading-md/semibold",
                     color: "header-secondary",
-                    children: v.intl.string(v.t.e1gm0d),
+                    children: _.intl.string(_.t.e1gm0d),
                 }),
                 (0, r.jsx)(p.$jN, { className: C.__invalid_spinner }),
             ],
         });
-    let Z = T ? v.t["WH+1Y2"] : v.t.a4MYDA,
+    let Z = T ? _.t["WH+1Y2"] : _.t.a4MYDA,
         R = [
             {
-                name: v.intl.string(v.t.yvk9p6),
-                failingName: v.intl.string(v.t["IY/UT0"]),
-                description: v.intl.string(v.t.hSLSMz),
-                failingDescription: v.intl.format(v.t.odsGg4, {
-                    termsURL: _.EYA.TERMS,
-                    guidelinesURL: h.Z.getArticleURL(_.BhN.PUBLIC_GUILD_GUILDLINES),
+                name: _.intl.string(_.t.yvk9p6),
+                failingName: _.intl.string(_.t["IY/UT0"]),
+                description: _.intl.string(_.t.hSLSMz),
+                failingDescription: _.intl.format(_.t.odsGg4, {
+                    termsURL: v.EYA.TERMS,
+                    guidelinesURL: h.Z.getArticleURL(v.BhN.PUBLIC_GUILD_GUILDLINES),
                 }),
                 checked: null == g ? void 0 : g.safeEnvironment,
             },
             {
-                name: v.intl.formatToPlainString(v.t.NYovAw, { minMembers: g.minimumGuildSize }),
-                failingName: v.intl.formatToPlainString(v.t.wvJwYm, {
+                name: _.intl.formatToPlainString(_.t.NYovAw, { minMembers: g.minimumGuildSize }),
+                failingName: _.intl.formatToPlainString(_.t.wvJwYm, {
                     minMembers: g.minimumGuildSize.toLocaleString(),
                 }),
                 description: null,
-                failingDescription: v.intl.format(Z, { minMembers: g.minimumGuildSize.toLocaleString() }),
+                failingDescription: _.intl.format(Z, { minMembers: g.minimumGuildSize.toLocaleString() }),
                 checked: null == g ? void 0 : g.size,
             },
             {
-                name: v.intl.string(v.t.PtxOCA),
-                failingName: v.intl.string(v.t.JPF5IC),
-                description: v.intl.formatToPlainString(v.t.VT0bQE, {
+                name: _.intl.string(_.t.PtxOCA),
+                failingName: _.intl.string(_.t.JPF5IC),
+                description: _.intl.formatToPlainString(_.t.VT0bQE, {
                     minimumGuildAge: Math.ceil(g.minimumGuildAge / 7),
                 }),
-                failingDescription: v.intl.formatToPlainString(v.t.jYwM1d, {
+                failingDescription: _.intl.formatToPlainString(_.t.jYwM1d, {
                     minimumGuildAge: Math.ceil(g.minimumGuildAge / 7),
-                    passDate: d()(x.default.extractTimestamp(l)).add(g.minimumGuildAge, "days").format("LL"),
+                    passDate: d()(b.default.extractTimestamp(l)).add(g.minimumGuildAge, "days").format("LL"),
                 }),
                 checked: null == g ? void 0 : g.age,
             },
             {
                 name: (null == g ? void 0 : g.healthScorePending)
-                    ? v.intl.string(v.t.G77ud3)
-                    : v.intl.string(v.t["95nW0N"]),
-                failingName: v.intl.string(v.t["+GHxPz"]),
-                description: v.intl.string(v.t.rTWJwc),
+                    ? _.intl.string(_.t.G77ud3)
+                    : _.intl.string(_.t["95nW0N"]),
+                failingName: _.intl.string(_.t["+GHxPz"]),
+                description: _.intl.string(_.t.rTWJwc),
                 failingDescription: (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(p.Text, {
                             color: "text-muted",
                             className: C.healthFailingDescription,
                             variant: "text-sm/normal",
-                            children: v.intl.string(v.t.LjqS0N),
+                            children: _.intl.string(_.t.LjqS0N),
                         }),
                         (null == g ? void 0 : g.engagementHealthy)
                             ? null
                             : (0, r.jsx)(p.Text, {
                                   color: "text-danger",
                                   variant: "text-sm/normal",
-                                  children: v.intl.string(v.t["X8Lt7+"]),
+                                  children: _.intl.string(_.t["X8Lt7+"]),
                               }),
                         (null == g ? void 0 : g.retentionHealthy)
                             ? null
                             : (0, r.jsx)(p.Text, {
                                   color: "text-danger",
                                   variant: "text-sm/normal",
-                                  children: v.intl.string(v.t["esdy8/"]),
+                                  children: _.intl.string(_.t["esdy8/"]),
                               }),
                         (() => {
                             if (null == g || null == g.healthScore) return !1;
@@ -266,12 +266,12 @@ let I = (e) => {
                                         let { default: e } = await n.e("23401").then(n.bind(n, 666599));
                                         return (t) => (0, r.jsx)(e, y(O({}, t), { guildChecklist: g }));
                                     }),
-                                children: v.intl.string(v.t.qyiTHx),
+                                children: _.intl.string(_.t.qyiTHx),
                             }),
                     ],
                 }),
                 pendingDescription: (null == g ? void 0 : g.size)
-                    ? v.intl.format(v.t.ALtXIC, {
+                    ? _.intl.format(_.t.ALtXIC, {
                           checkBackHook: (e, t) =>
                               (0, r.jsx)(
                                   "strong",
@@ -282,21 +282,21 @@ let I = (e) => {
                                   t,
                               ),
                       })
-                    : v.intl.formatToPlainString(v.t["6S/96O"], { minMembers: 200 }),
+                    : _.intl.formatToPlainString(_.t["6S/96O"], { minMembers: 200 }),
                 checked: null == g ? void 0 : g.healthy,
                 pending: null == g ? void 0 : g.healthScorePending,
             },
             {
-                name: v.intl.string(v.t["/cghSE"]),
-                failingName: v.intl.string(v.t["0HJNa2"]),
-                description: v.intl.string(v.t.Pbu9AQ),
+                name: _.intl.string(_.t["/cghSE"]),
+                failingName: _.intl.string(_.t["0HJNa2"]),
+                description: _.intl.string(_.t.Pbu9AQ),
                 failingDescription: (0, r.jsxs)(r.Fragment, {
                     children: [
                         (null == S ? void 0 : S.channels) != null
                             ? (0, r.jsx)(p.Text, {
                                   color: "text-muted",
                                   variant: "text-sm/normal",
-                                  children: v.intl.format(v.t["T+DQYW"], {
+                                  children: _.intl.format(_.t["T+DQYW"], {
                                       channelHook: (e, t) =>
                                           (0, r.jsx)(
                                               "span",
@@ -332,7 +332,7 @@ let I = (e) => {
                             ? (0, r.jsx)(p.Text, {
                                   color: "text-muted",
                                   variant: "text-sm/normal",
-                                  children: v.intl.format(v.t.KVD8Ex, {
+                                  children: _.intl.format(_.t.KVD8Ex, {
                                       nameHook: (e, t) =>
                                           (0, r.jsx)(
                                               "span",
@@ -349,7 +349,7 @@ let I = (e) => {
                             ? (0, r.jsx)(p.Text, {
                                   color: "text-muted",
                                   variant: "text-sm/normal",
-                                  children: v.intl.format(v.t["/W9Ken"], {
+                                  children: _.intl.format(_.t["/W9Ken"], {
                                       descriptionHook: (e, t) =>
                                           (0, r.jsx)(
                                               "span",
@@ -366,7 +366,7 @@ let I = (e) => {
                             ? (0, r.jsx)(p.Text, {
                                   color: "text-muted",
                                   variant: "text-sm/normal",
-                                  children: v.intl.format(v.t["4E4/Vl"], {
+                                  children: _.intl.format(_.t["4E4/Vl"], {
                                       iconHook: (e, t) =>
                                           (0, r.jsx)(
                                               "span",
@@ -383,7 +383,7 @@ let I = (e) => {
                             ? (0, r.jsx)(p.Text, {
                                   color: "text-muted",
                                   variant: "text-sm/normal",
-                                  children: v.intl.format(v.t.PKoNy8, {
+                                  children: _.intl.format(_.t.PKoNy8, {
                                       discoveryHook: (e, t) =>
                                           (0, r.jsx)(
                                               "span",
@@ -401,17 +401,17 @@ let I = (e) => {
                 checked: null == S || 0 === Object.keys(S).length,
             },
             {
-                name: v.intl.string(v.t.lSXnLy),
-                failingName: v.intl.string(v.t.awA3PT),
-                description: v.intl.string(v.t.QbBJ7e),
-                failingDescription: v.intl.format(v.t.kBXInZ, {
-                    onClick: () => b.Z.setSection(_.pNK.SAFETY, _.KsC.SAFETY_PERMISSIONS),
+                name: _.intl.string(_.t.lSXnLy),
+                failingName: _.intl.string(_.t.awA3PT),
+                description: _.intl.string(_.t.QbBJ7e),
+                failingDescription: _.intl.format(_.t.kBXInZ, {
+                    onClick: () => x.Z.setSection(v.pNK.SAFETY, v.KsC.SAFETY_PERMISSIONS),
                 }),
                 checked: null == g ? void 0 : g.protected,
             },
         ];
     return (0, r.jsxs)("div", {
-        className: s()(C.container, a),
+        className: a()(C.container, s),
         children: [
             (() => {
                 let e = (null == g ? void 0 : g.sufficient) ? n(909425) : n(177266);

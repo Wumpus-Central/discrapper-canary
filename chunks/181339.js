@@ -17,8 +17,8 @@ var r = n(951288),
     p = n(290719),
     f = n(177862),
     h = n(11265),
-    x = n(592125),
-    b = n(984933),
+    b = n(592125),
+    x = n(984933),
     j = n(496675),
     v = n(699516),
     _ = n(594174),
@@ -30,20 +30,20 @@ var r = n(951288),
 function I(e) {
     let { guild: t, isExpanded: n, selectedChannelId: l, className: s } = e,
         h = (0, m.BT)(t),
-        b = (0, p.Z)(t),
-        [j, v] = i.useState(b),
-        _ = (0, o.e7)([x.Z], () => x.Z.getChannel(l), [l]),
+        x = (0, p.Z)(t),
+        [j, v] = i.useState(x),
+        _ = (0, o.e7)([b.Z], () => b.Z.getChannel(l), [l]),
         C = (0, u.ZP)(_),
         I = async () => {
             v(!j);
             try {
                 var e;
-                await (0, g.f6)(t, !b);
+                await (0, g.f6)(t, !x);
                 let n = null != (e = null != l ? l : t.safetyAlertsChannelId) ? e : null;
                 if (null != n) {
                     let e = {
                         raid_alert_type: f.wR.JOIN_RAID,
-                        enabled: !b,
+                        enabled: !x,
                         raid_alert_channel_id: n,
                         guild_id: t.id,
                         channel_id: n,
@@ -51,7 +51,7 @@ function I(e) {
                     (0, d.yw)(y.rMx.GUILD_RAID_ALERTS_SETUP, e);
                 }
             } catch (e) {
-                (0, c.showToast)((0, c.createToast)(N.intl.string(N.t["46Rs3t"]), c.ToastType.FAILURE)), v(!b);
+                (0, c.showToast)((0, c.createToast)(N.intl.string(N.t["46Rs3t"]), c.ToastType.FAILURE)), v(!x);
             }
         };
     return (0, r.jsxs)("div", {
@@ -60,7 +60,7 @@ function I(e) {
             (0, r.jsxs)("div", {
                 className: E.itemContent,
                 children: [
-                    (0, r.jsx)(c.X6q, {
+                    (0, r.jsx)(c.Heading, {
                         variant: "text-md/semibold",
                         color: "header-primary",
                         children: N.intl.string(N.t.Qp98s7),
@@ -99,9 +99,9 @@ function S(e) {
     var t;
     let { guild: n, selectedChannelId: i, setSelectedChannelId: l, className: g } = e,
         m = null != (t = n.safetyAlertsChannelId) ? t : null,
-        h = (0, o.Wu)([b.ZP, _.default, v.Z, j.Z], () => {
-            let e = b.ZP.getChannels(n.id)
-                [b.sH].filter((e) => {
+        h = (0, o.Wu)([x.ZP, _.default, v.Z, j.Z], () => {
+            let e = x.ZP.getChannels(n.id)
+                [x.sH].filter((e) => {
                     let { channel: t } = e;
                     return t.type === s.d.GUILD_TEXT && j.Z.can(y.Plq.SEND_MESSAGES, t);
                 })
@@ -114,7 +114,7 @@ function S(e) {
                 });
             return null != m ? e : [...e];
         }, [n.id, m]),
-        x = async (e) => {
+        b = async (e) => {
             l(e);
             try {
                 if (
@@ -145,7 +145,7 @@ function S(e) {
                 label: N.intl.string(N.t.sMkYEx),
                 helperText: N.intl.string(N.t["1QxN9P"]),
                 options: h,
-                onChange: x,
+                onChange: b,
                 value: i,
                 maxVisibleItems: 5,
             }),

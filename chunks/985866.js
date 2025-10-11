@@ -34,8 +34,8 @@ var r = n(951288),
     Z = n(644646),
     k = n(78826),
     L = n(46140),
-    q = n(675654),
-    M = n(388032),
+    M = n(675654),
+    q = n(388032),
     B = n(777738);
 function Q(e) {
     var t;
@@ -62,7 +62,7 @@ function Q(e) {
             var t, n, r, a;
             let { quest: o, rewardCode: l, hasTieredRewardCodes: s } = e,
                 i = (null == (t = o.userStatus) ? void 0 : t.claimedAt) != null || null != l,
-                c = s ? "" : M.intl.string(M.t.UUKbio),
+                c = s ? "" : q.intl.string(q.t.UUKbio),
                 d = s
                     ? (0, T.o9)({
                           quest: o,
@@ -76,9 +76,9 @@ function Q(e) {
                     : null,
                 u = D.r.build(o.config),
                 p = null != d && null != (a = d.messages.name) ? a : u.defaultRewardName,
-                m = s ? M.intl.string(M.t.cfY4PD) : u.defaultRewardName;
+                m = s ? q.intl.string(q.t.cfY4PD) : u.defaultRewardName;
             return {
-                subHeader: i ? M.intl.string(M.t.YpswQk) : c,
+                subHeader: i ? q.intl.string(q.t.YpswQk) : c,
                 header: i ? p : m,
             };
         })({
@@ -128,7 +128,7 @@ function Q(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(p.X6q, {
+            (0, r.jsx)(p.Heading, {
                 variant: "display-sm",
                 color: "header-primary",
                 className: B.rewardHeading,
@@ -147,7 +147,7 @@ function z(e) {
               children: (n) => {
                   var a, o;
                   return (0, r.jsx)(
-                      U,
+                      H,
                       ((a = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},
@@ -197,7 +197,7 @@ function z(e) {
           })
         : null;
 }
-function U(e) {
+function H(e) {
     var t;
     let {
             transitionState: n,
@@ -215,14 +215,14 @@ function U(e) {
         }),
         Z = D.r.build(l.config).rewardPlatforms,
         z = Z.length > 1,
-        [U, W] = a.useState(z ? null : Z[0]),
-        H = a.useRef(new s.qA()),
+        [H, U] = a.useState(z ? null : Z[0]),
+        W = a.useRef(new s.qA()),
         F = a.useRef(null),
-        [$, X] = a.useState(null),
-        Y = (0, i.e7)([C.Z], () => C.Z.useReducedMotion),
-        G = (0, i.e7)([x.Z], () => x.Z.hidePersonalInformation),
+        [$, Y] = a.useState(null),
+        G = (0, i.e7)([C.Z], () => C.Z.useReducedMotion),
+        V = (0, i.e7)([x.Z], () => x.Z.hidePersonalInformation),
         {
-            questStoreRewardCode: V,
+            questStoreRewardCode: X,
             isFetchingRewardCode: J,
             isClaimingReward: K,
         } = (0, i.cj)([N.Z], () => ({
@@ -232,7 +232,7 @@ function U(e) {
         })),
         ee = (0, A.O5)(),
         et = (0, T.oo)({ quest: l }),
-        en = !0 === S ? (0, j.b)(l) : V,
+        en = !0 === S ? (0, j.b)(l) : X,
         er = z && (null == (t = l.userStatus) ? void 0 : t.claimedAt) == null && null == en,
         {
             claimCode: ea,
@@ -246,7 +246,7 @@ function U(e) {
             questContent: c,
             requiresPlatformSelection: er,
             rewardCode: en,
-            selectedPlatformType: U,
+            selectedPlatformType: H,
             preview: S,
         }),
         ei = el && !K && !J;
@@ -263,13 +263,13 @@ function U(e) {
     });
     let ec = null;
     P && null != en
-        ? (ec = M.intl.string(M.t.srzsU1))
+        ? (ec = q.intl.string(q.t.srzsU1))
         : null != en
-          ? (ec = M.intl.string(M.t.PJBpdX))
-          : er && (ec = M.intl.string(M.t.JRU8dn));
+          ? (ec = q.intl.string(q.t.PJBpdX))
+          : er && (ec = q.intl.string(q.t.JRU8dn));
     let ed =
             null != ec
-                ? (0, r.jsx)(p.X6q, {
+                ? (0, r.jsx)(p.Heading, {
                       variant: "heading-xl/semibold",
                       color: "header-primary",
                       className: B.heading,
@@ -291,8 +291,8 @@ function U(e) {
                     color: "text-default",
                     className: B.bodyCopy,
                     children: l
-                        ? M.intl.format(M.t.m0btAQ, {})
-                        : M.intl.format(M.t["ZUA/Ul"], { rewardName: s.defaultRewardName }),
+                        ? q.intl.format(q.t.m0btAQ, {})
+                        : q.intl.format(q.t["ZUA/Ul"], { rewardName: s.defaultRewardName }),
                 });
             let i = (0, T.C1)({
                 quest: t,
@@ -310,7 +310,7 @@ function U(e) {
                 : null;
         })({
             quest: l,
-            selectedPlatform: U,
+            selectedPlatform: H,
             requiresPlatformSelection: er,
             rewardCode: en,
             hasTieredRewardCodes: et,
@@ -326,14 +326,14 @@ function U(e) {
         em = null;
     er &&
         (em = (0, r.jsx)(p.PhF, {
-            label: M.intl.string(M.t.vVcTtL),
-            errorMessage: ei ? M.intl.string(M.t.rbZBMT) : void 0,
-            placeholder: M.intl.string(M.t.EMrUHR),
+            label: q.intl.string(q.t.vVcTtL),
+            errorMessage: ei ? q.intl.string(q.t.rbZBMT) : void 0,
+            placeholder: q.intl.string(q.t.EMrUHR),
             options: ep,
             select: (e) => {
-                es(!1), W(e);
+                es(!1), U(e);
             },
-            isSelected: (e) => e === U,
+            isSelected: (e) => e === H,
             serialize: (e) => (0, T.t2)(e),
             className: ei ? B.errorInput : "",
             isDisabled: K,
@@ -358,13 +358,13 @@ function U(e) {
         eg = null;
     null != en
         ? (eg = (0, r.jsx)(p.gNt, {
-              label: M.intl.string(M.t.srzsU1),
+              label: q.intl.string(q.t.srzsU1),
               children: (0, r.jsx)(m.Z, {
-                  value: G ? M.intl.string(M.t["0n2u0t"]) : en.code,
+                  value: V ? q.intl.string(q.t["0n2u0t"]) : en.code,
                   delay: 1000,
                   buttonColor: u.zx.Colors.BRAND,
                   onCopy: () => {
-                      G && (0, O.JG)(en.code),
+                      V && (0, O.JG)(en.code),
                           ee({
                               questId: l.id,
                               questContent: c,
@@ -378,9 +378,9 @@ function U(e) {
         : ei &&
           !er &&
           (eg = (0, r.jsx)(p.oil, {
-              label: M.intl.string(M.t.srzsU1),
+              label: q.intl.string(q.t.srzsU1),
               disabled: !0,
-              error: M.intl.string(M.t.rbZBMT),
+              error: q.intl.string(q.t.rbZBMT),
           }));
     let eh = a.useMemo(
             () =>
@@ -413,28 +413,28 @@ function U(e) {
             questContent: c,
             questContentPosition: d,
             requiresPlatformSelection: er,
-            selectedPlatformType: U,
+            selectedPlatformType: H,
             redemptionLink: eC,
             sourceQuestContent: I,
         }),
         ey = er && K,
-        ej = !ey && ((er && null == U) || ef),
+        ej = !ey && ((er && null == H) || ef),
         ev = null != eC && "" !== eC,
-        ex = M.intl.string(M.t["23SS+/"]);
+        ex = q.intl.string(q.t["23SS+/"]);
     er
-        ? (ex = M.intl.string(M.t.SLZMi4))
+        ? (ex = q.intl.string(q.t.SLZMi4))
         : !er && ei
-          ? (ex = M.intl.string(M.t.gNJHHh))
-          : ev && (ex = M.intl.string(M.t["+zx47e"]));
-    let eO = !Y && null != en && !P && !ei,
+          ? (ex = q.intl.string(q.t.gNJHHh))
+          : ev && (ex = q.intl.string(q.t["+zx47e"]));
+    let eO = !G && null != en && !P && !ei,
         eS = null != eb && et,
         eA = (0, _.Gd)(l.id);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.O_, {
-                ref: X,
+                ref: Y,
                 className: B.confettiCanvas,
-                environment: H.current,
+                environment: W.current,
             }),
             (0, r.jsx)("div", {
                 ref: (e) => {
@@ -487,7 +487,7 @@ function U(e) {
                                                         variant: "text-sm/medium",
                                                         color: "text-muted",
                                                         className: B.cosponsorName,
-                                                        children: M.intl.format(M.t.CSf4ER, {
+                                                        children: q.intl.format(q.t.CSf4ER, {
                                                             cosponsorName: l.config.cosponsorMetadata.name,
                                                         }),
                                                     }),
@@ -509,7 +509,7 @@ function U(e) {
                         }),
                         (0, r.jsx)(p.mzw, {
                             "data-migration-pending": !0,
-                            children: (0, r.jsx)(p.zxk, {
+                            children: (0, r.jsx)(p.Button, {
                                 variant: "primary",
                                 text: ex,
                                 onClick: ew,
@@ -524,8 +524,8 @@ function U(e) {
                 (0, r.jsx)(y.Z, {
                     confettiTarget: F.current,
                     confettiCanvas: $,
-                    sprites: q.CA,
-                    colors: q.Br,
+                    sprites: M.CA,
+                    colors: M.Br,
                 }),
         ],
     });

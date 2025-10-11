@@ -25,34 +25,34 @@ function d() {
                       children: (0, a.jsxs)("div", {
                           className: c.buttonGroup,
                           children: [
-                              (0, a.jsx)(i.zxk, {
+                              (0, a.jsx)(i.Button, {
                                   variant: "primary",
                                   text: "Add Favorite Game",
                                   onClick: () => t(r.l.FAVORITE_GAMES),
                               }),
-                              (0, a.jsx)(i.zxk, {
+                              (0, a.jsx)(i.Button, {
                                   variant: "primary",
                                   text: "Add Current Game",
                                   onClick: () => t(r.l.CURRENT_GAMES),
                               }),
-                              (0, a.jsx)(i.zxk, {
+                              (0, a.jsx)(i.Button, {
                                   variant: "primary",
                                   text: "Add Want to Play Game",
                                   onClick: () => t(r.l.WANT_TO_PLAY_GAMES),
                               }),
-                              (0, a.jsx)(i.zxk, {
+                              (0, a.jsx)(i.Button, {
                                   variant: "primary",
                                   text: "Add Played Game",
                                   onClick: () => t(r.l.PLAYED_GAMES),
                               }),
-                              (0, a.jsx)(i.zxk, {
+                              (0, a.jsx)(i.Button, {
                                   variant: "active",
                                   text: "Show Empty State",
                                   onClick: () => {
                                       l.Z.setPendingWidgets([]);
                                   },
                               }),
-                              (0, a.jsx)(i.zxk, {
+                              (0, a.jsx)(i.Button, {
                                   variant: "critical-primary",
                                   text: "Clear Pending Changes",
                                   onClick: () => {
@@ -65,12 +65,12 @@ function d() {
                   (0, a.jsxs)(i.C3N, {
                       label: "Backend integration",
                       children: [
-                          (0, a.jsx)(i.zxk, {
+                          (0, a.jsx)(i.Button, {
                               variant: "active",
                               text: "Save Widgets State",
                               onClick: () => (0, s.X6)(),
                           }),
-                          (0, a.jsx)(i.zxk, {
+                          (0, a.jsx)(i.Button, {
                               variant: "critical-primary",
                               text: "Clear Saved Widgets",
                               onClick: () => (0, s.tk)(),

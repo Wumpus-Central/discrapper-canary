@@ -1,6 +1,6 @@
 n.d(t, { Z: () => d });
-var l = n(951288),
-    i = n(647438),
+var i = n(951288),
+    l = n(647438),
     r = n(120356),
     a = n.n(r),
     o = n(442837),
@@ -9,24 +9,24 @@ var l = n(951288),
     u = n(75243);
 function d() {
     let e = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
-        { styleLarge: t, styleSmall: n } = i.useMemo(
+        { styleLarge: t, styleSmall: n } = l.useMemo(
             () => ({
                 styleLarge: { width: "".concat(10 + 50 * Math.random(), "%") },
                 styleSmall: { width: "".concat(30 + 60 * Math.random(), "%") },
             }),
             [],
         );
-    return (0, l.jsxs)("div", {
+    return (0, i.jsxs)("div", {
         className: a()(u.container, { [u.noAnimation]: e }),
         children: [
-            (0, l.jsx)("div", { className: u.iconPlaceholder }),
-            (0, l.jsxs)("div", {
+            (0, i.jsx)("div", { className: u.iconPlaceholder }),
+            (0, i.jsxs)("div", {
                 className: u.textContainer,
                 children: [
-                    (0, l.jsx)("div", {
+                    (0, i.jsx)("div", {
                         className: u.textPlaceholder,
                         style: t,
-                        children: (0, l.jsx)(s.X6q, {
+                        children: (0, i.jsx)(s.Heading, {
                             className: u.hidden,
                             variant: "heading-md/semibold",
                             color: "header-primary",
@@ -34,10 +34,10 @@ function d() {
                             children: "_",
                         }),
                     }),
-                    (0, l.jsx)("div", {
+                    (0, i.jsx)("div", {
                         className: u.textPlaceholder,
                         style: n,
-                        children: (0, l.jsx)(s.Text, {
+                        children: (0, i.jsx)(s.Text, {
                             className: u.hidden,
                             variant: "text-sm/normal",
                             color: "text-secondary",
@@ -47,7 +47,7 @@ function d() {
                     }),
                 ],
             }),
-            (0, l.jsx)("div", { className: u.underline }),
+            (0, i.jsx)("div", { className: u.underline }),
         ],
     });
 }

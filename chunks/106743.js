@@ -38,7 +38,7 @@ function d(e) {
             (0, r.jsxs)("div", {
                 className: u.transcriptHeader,
                 children: [
-                    (0, r.jsx)(i.X6q, {
+                    (0, r.jsx)(i.Heading, {
                         variant: "heading-md/semibold",
                         color: "currentColor",
                         children: "Transcript",
@@ -62,7 +62,7 @@ function d(e) {
                                       className: u.transcriptBodySpinner,
                                       children: (0, r.jsx)(i.$jN, { type: i.$jN.Type.WANDERING_CUBES }),
                                   })
-                                : (0, r.jsx)(i.X6q, {
+                                : (0, r.jsx)(i.Heading, {
                                       variant: "heading-md/normal",
                                       color: "text-muted",
                                       children: f.map((e, t) => (0, r.jsx)("p", { children: e }, t)),

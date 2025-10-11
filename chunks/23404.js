@@ -17,11 +17,11 @@ var r = n(951288),
     _ = n(566078),
     O = n(602667),
     E = n(611855),
-    y = n(110560),
-    v = n(670638),
+    v = n(110560),
+    y = n(670638),
     I = n(667105),
-    S = n(860151),
-    C = n(46140),
+    C = n(860151),
+    S = n(46140),
     T = n(981631),
     N = n(388032),
     j = n(408228);
@@ -69,7 +69,7 @@ function x(e) {
             (0, r.jsxs)("div", {
                 className: j.headingCopy,
                 children: [
-                    (0, r.jsx)(s.X6q, {
+                    (0, r.jsx)(s.Heading, {
                         variant: "heading-md/semibold",
                         color: "header-primary",
                         children: d
@@ -114,7 +114,7 @@ function A(e) {
                     questContentCTA: u.jZ.TRACK_PROGRESS,
                     sourceQuestContent: g.jn.ACTIVITY_PANEL,
                 }),
-                (0, y.navigateToQuestHome)({
+                (0, v.navigateToQuestHome)({
                     fromContent: g.jn.ACTIVITY_PANEL,
                     questId: b.id,
                 }));
@@ -126,7 +126,7 @@ function A(e) {
                 questContentCTA: u.jZ.LEARN_MORE,
                 sourceQuestContent: g.jn.ACTIVITY_PANEL,
             }),
-                (0, y.navigateToQuestHome)({
+                (0, v.navigateToQuestHome)({
                     fromContent: g.jn.ACTIVITY_PANEL,
                     questId: b.id,
                 });
@@ -142,7 +142,7 @@ function A(e) {
         H = (0, m.DD)({
             quest: b,
             taskDetails: B,
-            location: C.dr.ACTIVITY_PANEL,
+            location: S.dr.ACTIVITY_PANEL,
             questContent: g.jn.ACTIVITY_PANEL,
             sourceQuestContent: g.jn.ACTIVITY_PANEL,
         }),
@@ -165,7 +165,7 @@ function A(e) {
                 className: j.utils,
                 children: [
                     U ? (0, r.jsx)(x, { quest: b }) : (0, r.jsx)(E.Z, {}),
-                    (0, r.jsx)(v.r, {
+                    (0, r.jsx)(y.r, {
                         quest: b,
                         questContent: g.jn.ACTIVITY_PANEL,
                         shouldShowDisclosure: (null == (l = b.userStatus) ? void 0 : l.enrolledAt) == null,
@@ -219,12 +219,12 @@ function A(e) {
                 }),
             U &&
                 !G &&
-                (0, r.jsx)(S.Z, {
+                (0, r.jsx)(C.Z, {
                     autoplay: T,
                     className: j.rewardTileWithInstructions,
                     quest: b,
                     questContent: g.jn.ACTIVITY_PANEL,
-                    location: C.dr.ACTIVITY_PANEL,
+                    location: S.dr.ACTIVITY_PANEL,
                     taskDetails: B,
                     sourceQuestContent: g.jn.ACTIVITY_PANEL,
                 }),
@@ -232,17 +232,17 @@ function A(e) {
                 className: j.ctas,
                 children: [
                     !U &&
-                        (0, r.jsxs)(s.hE2, {
+                        (0, r.jsxs)(s.ButtonGroup, {
                             size: "sm",
                             direction: V ? "vertical" : "horizontal",
                             fullWidth: !0,
                             children: [
-                                (0, r.jsx)(s.zxk, {
+                                (0, r.jsx)(s.Button, {
                                     variant: "secondary",
                                     text: N.intl.string(N.t.LLLLPD),
                                     onClick: k,
                                 }),
-                                (0, r.jsx)(s.zxk, {
+                                (0, r.jsx)(s.Button, {
                                     variant: "primary",
                                     text: z,
                                     onClick: R,
@@ -253,7 +253,7 @@ function A(e) {
                         }),
                     U &&
                         !G &&
-                        (0, r.jsx)(s.zxk, {
+                        (0, r.jsx)(s.Button, {
                             variant: "primary",
                             size: "sm",
                             fullWidth: !0,
@@ -261,7 +261,7 @@ function A(e) {
                             onClick: D,
                         }),
                     G &&
-                        (0, r.jsx)(s.zxk, {
+                        (0, r.jsx)(s.Button, {
                             variant: "primary",
                             size: "sm",
                             fullWidth: !0,

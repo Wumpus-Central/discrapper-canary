@@ -72,7 +72,7 @@ function a(e) {
                     }),
                     (0, n.jsxs)(c.mzw, {
                         children: [
-                            (0, n.jsx)(c.zxk, {
+                            (0, n.jsx)(c.Button, {
                                 variant: "secondary",
                                 text: l.intl.string(l.t["ETE/oK"]),
                                 onClick: c.pTH,

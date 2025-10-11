@@ -2,8 +2,8 @@ n.d(t, { Z: () => c }), n(784620), n(973216);
 var r = n(951288);
 n(647438);
 var s = n(481060),
-    o = n(113434),
-    a = n(388032),
+    a = n(113434),
+    o = n(388032),
     i = n(603558);
 function l(e) {
     let { header: t, children: n } = e;
@@ -20,7 +20,7 @@ function l(e) {
                         width: 16,
                         height: 16,
                     }),
-                    (0, r.jsx)(s.X6q, {
+                    (0, r.jsx)(s.Heading, {
                         color: "text-default",
                         variant: "heading-sm/medium",
                         children: t,
@@ -38,18 +38,18 @@ function l(e) {
 }
 let c = function (e) {
     let { quest: t } = e,
-        n = (0, o.qb)(t);
+        n = (0, a.qb)(t);
     if (0 === n.length) return null;
     let s = n.at(0);
-    return s === a.intl.string(a.t.BV6xDg)
+    return s === o.intl.string(o.t.BV6xDg)
         ? (0, r.jsx)(l, {
-              header: a.intl.string(a.t.onh6cn),
-              children: a.intl.string(a.t.arVHRE),
+              header: o.intl.string(o.t.onh6cn),
+              children: o.intl.string(o.t.arVHRE),
           })
-        : s === a.intl.string(a.t.MFGxFB)
+        : s === o.intl.string(o.t.MFGxFB)
           ? (0, r.jsx)(l, {
-                header: a.intl.string(a.t.JPihZG),
-                children: a.intl.string(a.t.MFGxFB),
+                header: o.intl.string(o.t.JPihZG),
+                children: o.intl.string(o.t.MFGxFB),
             })
           : null;
 };

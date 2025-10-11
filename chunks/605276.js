@@ -1,4 +1,4 @@
-t.d(n, { Z: () => I });
+t.d(n, { Z: () => Z });
 var l = t(951288),
     r = t(647438),
     a = t(399606),
@@ -38,17 +38,17 @@ let v = r.memo(function (e) {
             j = (0, a.e7)([f.Z], () => f.Z.can(b.Plq.VIEW_CHANNEL, d)),
             v = x.first(),
             _ = (0, c.zy)(v, !1),
-            Z = (null == _ ? void 0 : _.length) > 0 ? _[0] : null,
-            I = null != d && null == v && !x.loadingMore && !x.ready && !x.hasFetched && j;
+            I = (null == _ ? void 0 : _.length) > 0 ? _[0] : null,
+            Z = null != d && null == v && !x.loadingMore && !x.ready && !x.hasFetched && j;
         return (
             r.useEffect(() => {
-                I &&
+                Z &&
                     s.Z.fetchMessages({
                         channelId: n,
                         after: n,
                         limit: 5,
                     });
-            }, [n, I]),
+            }, [n, Z]),
             (0, l.jsx)(
                 i.P3F,
                 {
@@ -76,11 +76,11 @@ let v = r.memo(function (e) {
                                           alt: "",
                                           "aria-hidden": !0,
                                       })
-                                    : null != Z
+                                    : null != I
                                       ? (0, l.jsx)("img", {
                                             className: C.resourceImage,
-                                            src: Z.src,
-                                            alt: Z.alt,
+                                            src: I.src,
+                                            alt: I.alt,
                                         })
                                       : (0, l.jsx)("div", {
                                             className: C.placeholderImage,
@@ -103,7 +103,7 @@ let v = r.memo(function (e) {
             )
         );
     },
-    Z = r.memo(function (e) {
+    I = r.memo(function (e) {
         let { guild: n } = e,
             t = (0, x.Z)(n.id);
         return 0 === t.length
@@ -113,7 +113,7 @@ let v = r.memo(function (e) {
                   children: (0, l.jsxs)("div", {
                       className: C.sidebarCard,
                       children: [
-                          (0, l.jsx)(i.X6q, {
+                          (0, l.jsx)(i.Heading, {
                               className: C.sidebarCardHeader,
                               variant: "heading-md/bold",
                               color: "header-primary",
@@ -137,10 +137,10 @@ let v = r.memo(function (e) {
                   }),
               });
     }),
-    I = r.memo(function (e) {
+    Z = r.memo(function (e) {
         let { guild: n, isNewMember: t } = e;
         return (0, l.jsxs)("aside", {
             className: C.sidebar,
-            children: [(0, l.jsx)(v, { guild: n }), t && (0, l.jsx)(Z, { guild: n })],
+            children: [(0, l.jsx)(v, { guild: n }), t && (0, l.jsx)(I, { guild: n })],
         });
     });

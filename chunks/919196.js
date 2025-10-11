@@ -113,18 +113,18 @@ function S(e) {
             applicationIntegration: s,
             selectableWebhookChannels: d,
             editedWebhook: S,
-            errors: w,
-            canNavigate: P,
+            errors: P,
+            canNavigate: w,
         } = e,
-        { application: I, integration: E, webhooks: Z } = s,
-        [T, k] = (0, a.Wu)(
+        { application: I, integration: E, webhooks: T } = s,
+        [Z, k] = (0, a.Wu)(
             [m.Z],
             () => [m.Z.can(O.Plq.MANAGE_ROLES, n), null == I.bot || m.Z.canManageUser(O.Plq.MANAGE_GUILD, I.bot.id, n)],
             [I.bot, n],
         ),
         A = (0, a.e7)([m.Z], () => m.Z.can(O.Plq.MANAGE_WEBHOOKS, n), [n]),
         D = r.useCallback(() => {
-            P() &&
+            w() &&
                 (0, o.h7j)((e) =>
                     (0, i.jsx)(
                         N,
@@ -138,7 +138,7 @@ function S(e) {
                         ),
                     ),
                 );
-        }, [I, P, n, E]),
+        }, [I, w, n, E]),
         R = r.useMemo(() => {
             let e = [
                 {
@@ -186,10 +186,10 @@ function S(e) {
                       className: _.headerDescription,
                   })
                 : null,
-            T
+            Z
                 ? (0, i.jsx)(u.Z, {
                       application: I,
-                      canNavigate: P,
+                      canNavigate: w,
                       guildId: n.id,
                   })
                 : null,
@@ -219,13 +219,13 @@ function S(e) {
                         }),
                         title: y.intl.string(y.t["t9ZX/P"]),
                     }),
-                    Z.length > 0
+                    T.length > 0
                         ? (0, i.jsx)(v.Z, {
-                              webhooks: Z,
+                              webhooks: T,
                               editedWebhook: S,
                               selectableWebhookChannels: d,
-                              errors: w,
-                              canNavigate: P,
+                              errors: P,
+                              canNavigate: w,
                           })
                         : (0, i.jsx)(o.Zbd, {
                               className: _.emptyCard,
@@ -252,7 +252,7 @@ function S(e) {
                     (0, i.jsx)(c.Z.Child, {
                         grow: 0,
                         shrink: 0,
-                        children: (0, i.jsx)(o.zxk, {
+                        children: (0, i.jsx)(o.Button, {
                             variant: "critical-primary",
                             size: "sm",
                             text: y.intl.string(y.t.ebGf4u),

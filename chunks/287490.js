@@ -78,7 +78,7 @@ function T() {
                   })
                 : (0, r.jsx)("div", {
                       className: O.emptyState,
-                      children: (0, r.jsx)(l.X6q, {
+                      children: (0, r.jsx)(l.Heading, {
                           variant: "heading-md/semibold",
                           children: "No Experiments Found",
                       }),

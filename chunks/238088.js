@@ -128,7 +128,7 @@ function S(e) {
                 ),
             ),
             c &&
-                (0, n.jsx)(u.zxk, {
+                (0, n.jsx)(u.Button, {
                     variant: "secondary",
                     fullWidth: !0,
                     text: E.intl.string(E.t.iP9YpK),
@@ -258,10 +258,10 @@ function v(e) {
             handleFocusFilter: Z,
         } = (0, C.HJ)(a, m.dCx.FILTER_FROM, O[m.dCx.FILTER_FROM]),
         {
-            options: z,
+            options: B,
             query: J,
             setQuery: W,
-            setQueryString: B,
+            setQueryString: z,
             handleClearFilter: X,
             getApplyQueryString: K,
             handleFocusFilter: G,
@@ -469,8 +469,8 @@ function v(e) {
                             value: J,
                             onChange: W,
                             onFocus: G,
-                            onSearchChange: B,
-                            options: z,
+                            onSearchChange: z,
+                            options: B,
                             filterType: m.dCx.FILTER_MENTIONS,
                             validateFilter: eA,
                         },

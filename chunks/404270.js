@@ -1,10 +1,10 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => x });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    s = n(442837),
-    a = n(481060),
+    a = n(442837),
+    s = n(481060),
     o = n(706454),
     c = n(594174),
     d = n(509545),
@@ -14,37 +14,37 @@ var i = n(120356),
     p = n(937615),
     f = n(474936),
     h = n(388032),
-    x = n(723116);
-let b = (e) => {
+    b = n(723116);
+let x = (e) => {
     var t;
     let { className: n } = e,
-        i = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
-        b = (0, s.e7)([o.default], () => o.default.locale),
-        j = (0, s.e7)([u.Z], () => u.Z.getPremiumTypeSubscription()),
-        _ = (0, s.e7)([d.Z], () => (null != j ? d.Z.get(j.planId) : void 0)),
-        v =
+        i = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
+        x = (0, a.e7)([o.default], () => o.default.locale),
+        j = (0, a.e7)([u.Z], () => u.Z.getPremiumTypeSubscription()),
+        v = (0, a.e7)([d.Z], () => (null != j ? d.Z.get(j.planId) : void 0)),
+        _ =
             null !=
-            (t = (0, s.e7)([d.Z], () =>
-                null != _ ? d.Z.getForSkuAndInterval((0, m.Wz)(f.Si.GUILD), _.interval, _.intervalCount) : void 0,
+            (t = (0, a.e7)([d.Z], () =>
+                null != v ? d.Z.getForSkuAndInterval((0, m.Wz)(f.Si.GUILD), v.interval, v.intervalCount) : void 0,
             ))
                 ? t
                 : f.GP[f.Xh.PREMIUM_MONTH_GUILD];
     return (0, r.jsxs)("div", {
-        className: l()(x.wrapper, n),
+        className: l()(b.wrapper, n),
         children: [
-            (0, r.jsx)(a.X6q, {
-                className: x.heading,
+            (0, r.jsx)(s.Heading, {
+                className: b.heading,
                 variant: "heading-xl/semibold",
                 children: h.intl.string(h.t["3x1PFB"]),
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(s.Text, {
                 variant: "text-md/normal",
                 children: (function (e) {
-                    let { currentUser: t, locale: n, guildBoostingPlanId: i, interval: l, intervalCount: s } = e,
-                        a = m.ZP.getDefaultPrice(i, m.ZP.isPremium(t)),
+                    let { currentUser: t, locale: n, guildBoostingPlanId: i, interval: l, intervalCount: a } = e,
+                        s = m.ZP.getDefaultPrice(i, m.ZP.isPremium(t)),
                         o = m.ZP.getDefaultPrice(i, !1),
-                        c = (0, p.og)((0, p.T4)(a.amount, a.currency), l, s),
-                        d = (0, p.og)((0, p.T4)(o.amount, o.currency), l, s);
+                        c = (0, p.og)((0, p.T4)(s.amount, s.currency), l, a),
+                        d = (0, p.og)((0, p.T4)(o.amount, o.currency), l, a);
                     return m.ZP.isPremium(t, f.PremiumTypes.TIER_2)
                         ? h.intl.format(h.t.N3Icb2, {
                               price: c,
@@ -53,7 +53,7 @@ let b = (e) => {
                                   (0, r.jsx)(
                                       "span",
                                       {
-                                          className: x.originalPrice,
+                                          className: b.originalPrice,
                                           children: e,
                                       },
                                       t,
@@ -69,7 +69,7 @@ let b = (e) => {
                                     (0, r.jsx)(
                                         "span",
                                         {
-                                            className: x.originalPrice,
+                                            className: b.originalPrice,
                                             children: e,
                                         },
                                         t,
@@ -79,10 +79,10 @@ let b = (e) => {
                           : h.intl.format(h.t.Mmf63N, { price: c });
                 })({
                     currentUser: i,
-                    locale: b,
-                    guildBoostingPlanId: v.id,
-                    interval: v.interval,
-                    intervalCount: v.intervalCount,
+                    locale: x,
+                    guildBoostingPlanId: _.id,
+                    interval: _.interval,
+                    intervalCount: _.intervalCount,
                 }),
             }),
         ],

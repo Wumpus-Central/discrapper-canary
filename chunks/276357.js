@@ -72,7 +72,7 @@ function b(e) {
                     children: (0, r.jsxs)("div", {
                         className: x.headerLeft,
                         children: [
-                            (0, r.jsx)(o.X6q, {
+                            (0, r.jsx)(o.Heading, {
                                 color: "interactive-normal",
                                 variant: "heading-md/semibold",
                                 className: x.headerText,

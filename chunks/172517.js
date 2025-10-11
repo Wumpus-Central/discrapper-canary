@@ -90,7 +90,7 @@ async function p(e, t) {
     let n = (t = await g(e, t)).match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
     if (null == n) throw Error("Invalid encoded user record.");
     let [, r, i, s, a] = n;
-    return new l.Z({
+    return new l.default({
         id: r,
         discriminator: i,
         avatar: "0" === s ? null : s,

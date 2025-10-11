@@ -23,7 +23,7 @@ function c(e) {
                     }),
                     (0, i.jsxs)("div", {
                         children: [
-                            (0, i.jsx)(l.X6q, {
+                            (0, i.jsx)(l.Heading, {
                                 variant: "heading-md/semibold",
                                 color: "text-primary",
                                 children: t,
@@ -45,7 +45,7 @@ function c(e) {
                         : u.map((e, t) => {
                               var n;
                               return (0, i.jsx)(
-                                  l.zxk,
+                                  l.Button,
                                   {
                                       text: e.text,
                                       variant: null != (n = e.variant) ? n : "secondary",

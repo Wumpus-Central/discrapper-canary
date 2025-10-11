@@ -25,18 +25,18 @@ function h(e) {
         {
             acceptMessageRequest: O,
             rejectMessageRequest: E,
-            isAcceptLoading: y,
-            isRejectLoading: v,
+            isAcceptLoading: v,
+            isRejectLoading: y,
             isUserProfileLoading: I,
-            isOptimisticAccepted: S,
-            isOptimisticRejected: C,
+            isOptimisticAccepted: C,
+            isOptimisticRejected: S,
         } = (0, u.m)({
             user: n,
             onAcceptSuccess: _,
             onRejectSuccess: b,
             onError: m,
         }),
-        T = y || v || I || S || C;
+        T = v || y || I || C || S;
     return (0, r.jsxs)("div", {
         className: f.container,
         children: [
@@ -51,7 +51,7 @@ function h(e) {
                     (0, r.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
                         className: f.button,
-                        children: (0, r.jsx)(l.zxk, {
+                        children: (0, r.jsx)(l.Button, {
                             variant: "secondary",
                             size: "sm",
                             text: p.intl.string(p.t.B2nygY),
@@ -59,13 +59,13 @@ function h(e) {
                                 e.stopPropagation(), E(h.id);
                             },
                             disabled: T,
-                            loading: v || C,
+                            loading: y || S,
                         }),
                     }),
                     (0, r.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
                         className: f.button,
-                        children: (0, r.jsx)(l.zxk, {
+                        children: (0, r.jsx)(l.Button, {
                             variant: "primary",
                             size: "sm",
                             text: p.intl.string(p.t.Kz8Pws),
@@ -73,7 +73,7 @@ function h(e) {
                                 e.stopPropagation(), O(h.id);
                             },
                             disabled: T,
-                            loading: y || I || S,
+                            loading: v || I || C,
                         }),
                     }),
                 ],

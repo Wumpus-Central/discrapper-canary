@@ -73,7 +73,7 @@ async function f(e) {
     ).body.map((e) =>
         d(c({}, e), {
             application: "application" in e && null != e.application ? a.ZN.createFromServer(e.application) : void 0,
-            user: "user" in e && null != e.user ? new o.Z(e.user) : void 0,
+            user: "user" in e && null != e.user ? new o.default(e.user) : void 0,
         }),
     );
     return (

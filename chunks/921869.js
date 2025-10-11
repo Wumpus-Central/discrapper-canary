@@ -1,7 +1,7 @@
 t.d(a, { m: () => h });
 var r = t(951288),
-    s = t(647438),
-    n = t(442837),
+    n = t(647438),
+    s = t(442837),
     l = t(481060),
     i = t(600164),
     o = t(553795),
@@ -21,7 +21,7 @@ function h(e) {
             learnMoreLink: p,
             valueProps: v,
         } = e,
-        k = (0, n.e7)([o.Z], () => {
+        f = (0, s.e7)([o.Z], () => {
             let e = o.Z.getAccount(null, a);
             return (null == e ? void 0 : e.twoWayLink) === !1;
         });
@@ -36,10 +36,10 @@ function h(e) {
                         className: u.illustration,
                         children: [m, " "],
                     }),
-                    (0, r.jsx)(l.X6q, {
+                    (0, r.jsx)(l.Heading, {
                         className: u.title,
                         variant: "heading-xl/extrabold",
-                        children: k && null != C ? C : N,
+                        children: f && null != C ? C : N,
                     }),
                     (0, r.jsx)(l.olH, {
                         className: u.closeButton,
@@ -59,16 +59,16 @@ function h(e) {
                     (0, r.jsx)("div", {
                         className: u.valueProps,
                         children: v.map((e, a) => {
-                            let { label: t, subLabel: n, icon: l } = e;
+                            let { label: t, subLabel: s, icon: l } = e;
                             return (0, r.jsxs)(
-                                s.Fragment,
+                                n.Fragment,
                                 {
                                     children: [
                                         (0, r.jsx)(
                                             d.Z,
                                             {
                                                 label: t,
-                                                subLabel: n,
+                                                subLabel: s,
                                                 icon: l,
                                             },
                                             t,
@@ -95,7 +95,7 @@ function h(e) {
                 children: (0, r.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
                     className: u.footerButton,
-                    children: (0, r.jsx)(l.zxk, {
+                    children: (0, r.jsx)(l.Button, {
                         variant: "primary",
                         text: x.intl.string(x.t["3PatS0"]),
                         onClick: t,

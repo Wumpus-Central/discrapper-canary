@@ -9,9 +9,9 @@ var l = n(442837),
     c = n(939863),
     u = n(984933),
     d = n(430824),
-    m = n(341165),
-    x = n(626135),
-    g = n(572004),
+    g = n(341165),
+    m = n(626135),
+    x = n(572004),
     h = n(971130),
     v = n(230900),
     p = n(981631),
@@ -28,21 +28,21 @@ function O(e) {
         }, [C]),
         S = (0, l.e7)([d.Z], () => d.Z.getGuild(C), [C]),
         { channel_id: I, id: T } = null != N ? N : {},
-        Z = (0, l.e7)([m.Z], () => {
+        Z = (0, l.e7)([g.Z], () => {
             let e = null != I ? I : P;
-            return null == e ? null : m.Z.getInvite(e);
+            return null == e ? null : g.Z.getInvite(e);
         }, [I, P]);
     if (null == N) return E(), null;
     let w = null != (t = null == S ? void 0 : S.vanityURLCode) ? t : null == Z ? void 0 : Z.code,
-        k =
+        D =
             null != w
                 ? (0, a.tV)({
                       baseCode: w,
                       guildScheduledEventId: T,
                   })
                 : null,
-        D = null == k || null == Z,
-        R = (0, s.Z)(null != k ? k : ""),
+        k = null == D || null == Z,
+        R = (0, s.Z)(null != D ? D : ""),
         A = null != (n = null == Z ? void 0 : Z.maxAge) ? n : b.value,
         _ = null != (O = null == Z ? void 0 : Z.maxUses) ? O : y.value;
     return (0, r.jsxs)("div", {
@@ -69,7 +69,7 @@ function O(e) {
                     }),
                 }),
             }),
-            (0, r.jsx)(i.X6q, {
+            (0, r.jsx)(i.Heading, {
                 variant: "heading-xl/semibold",
                 className: f.header,
                 children: j.intl.string(j.t.UzNv7u),
@@ -87,14 +87,14 @@ function O(e) {
                         value: R,
                         autoFocus: !1,
                         onCopy: (e) => {
-                            if (D) return;
-                            (0, g.JG)(e);
+                            if (k) return;
+                            (0, x.JG)(e);
                             let t = (0, v.xC)(N.entity_type);
-                            x.default.track(p.rMx.COPY_INSTANT_INVITE, {
+                            m.default.track(p.rMx.COPY_INSTANT_INVITE, {
                                 server: N.guild_id,
                                 channel: I,
                                 channel_type: t,
-                                location: p.t4x.GUILD_EVENTS,
+                                location: p.InstantInviteSources.GUILD_EVENTS,
                                 code: Z.code,
                                 guild_scheduled_event_id: null == N ? void 0 : N.id,
                             });

@@ -70,7 +70,7 @@ function f(e) {
               className: d.applicationEducation,
               children: [
                   null != t
-                      ? (0, r.jsx)(o.X6q, {
+                      ? (0, r.jsx)(o.Heading, {
                             variant: "heading-sm/normal",
                             className: d.sectionLabel,
                             children: t,

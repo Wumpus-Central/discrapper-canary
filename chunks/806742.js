@@ -1,9 +1,9 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => x });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    s = n.n(l),
-    a = n(399606),
+    a = n.n(l),
+    s = n(399606),
     o = n(28664),
     c = n(481060),
     d = n(734893),
@@ -13,19 +13,19 @@ var r = n(951288),
     p = n(969632),
     f = n(535907),
     h = n(388032),
-    x = n(197530);
-let b = function (e) {
+    b = n(197530);
+let x = function (e) {
     let { guildId: t } = e,
-        l = (0, a.cj)([p.Z], () => {
+        l = (0, s.cj)([p.Z], () => {
             var e;
             return null != (e = p.Z.getSettings().welcomeMessage) ? e : f.z;
         }),
-        b = i.useCallback(
+        x = i.useCallback(
             () =>
                 (0, c.ZDy)(async () => {
                     let { default: e } = await n.e("36371").then(n.bind(n, 893626));
                     return (n) => {
-                        var i, s;
+                        var i, a;
                         return (0, r.jsx)(
                             e,
                             ((i = (function (e) {
@@ -53,14 +53,14 @@ let b = function (e) {
                                 }
                                 return e;
                             })({}, n)),
-                            (s = s =
+                            (a = a =
                                 {
                                     guildId: t,
                                     welcomeMessage: l,
                                     onSave: (e) => (0, m._N)(e),
                                 }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
+                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
                                 : (function (e, t) {
                                       var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
@@ -68,8 +68,8 @@ let b = function (e) {
                                           n.push.apply(n, r);
                                       }
                                       return n;
-                                  })(Object(s)).forEach(function (e) {
-                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
+                                  })(Object(a)).forEach(function (e) {
+                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
                                   }),
                             i),
                         );
@@ -77,17 +77,17 @@ let b = function (e) {
                 }),
             [t, l],
         ),
-        j = (0, a.e7)([g.default], () => g.default.getId());
+        j = (0, s.e7)([g.default], () => g.default.getId());
     return (0, d.pw)(l)
-        ? (0, r.jsx)(c.zxk, {
+        ? (0, r.jsx)(c.Button, {
               variant: "primary",
               size: "sm",
               text: h.intl.string(h.t["9Z+aEB"]),
-              onClick: b,
+              onClick: x,
           })
         : (0, r.jsxs)(c.P3F, {
-              className: x.editWelcomeSection,
-              onClick: b,
+              className: b.editWelcomeSection,
+              onClick: x,
               children: [
                   (0, r.jsx)(u.Z, {
                       guildId: t,
@@ -99,7 +99,7 @@ let b = function (e) {
                   (0, r.jsx)(o.u, {
                       text: h.intl.string(h.t.bt75u7),
                       children: (0, r.jsxs)("div", {
-                          className: s()(x.actionItemEditButton, x.editWelcomeButton),
+                          className: a()(b.actionItemEditButton, b.editWelcomeButton),
                           children: [
                               (0, r.jsx)(c.vdY, {
                                   size: "md",

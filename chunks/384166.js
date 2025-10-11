@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685), n(361932), n(187205);
+n.d(t, { Z: () => v }), n(388685), n(361932), n(187205);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -17,20 +17,20 @@ var r = n(951288),
     _ = n(981631),
     O = n(388032),
     E = n(461671);
-function y(e) {
+function v(e) {
     let { className: t } = e,
         { trackUserProfileEditSaved: n } = (0, p.KZ)(),
-        [l, y] = i.useState(!1),
-        v = (0, s.Wu)([g.Z], () => {
+        [l, v] = i.useState(!1),
+        y = (0, s.Wu)([g.Z], () => {
             var e;
             return null != (e = g.Z.getSaveablePendingWidgets()) ? e : [];
         }),
         I = (0, s.Wu)([g.Z], () => g.Z.getChangedWidgets()),
-        S = (0, s.Wu)([g.Z], () => g.Z.getRemovedWidgets()),
-        C = (0, s.e7)([g.Z], () => g.Z.hasSaveablePendingChanges()),
+        C = (0, s.Wu)([g.Z], () => g.Z.getRemovedWidgets()),
+        S = (0, s.e7)([g.Z], () => g.Z.hasSaveablePendingChanges()),
         T = (0, s.e7)([g.Z], () => g.Z.isSubmitting),
         N = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
-        j = (0, c.Yzy)(C, {
+        j = (0, c.Yzy)(S, {
             from: {
                 opacity: 0,
                 y: 80 * !N,
@@ -47,7 +47,7 @@ function y(e) {
     i.useEffect(() => {
         let e = null;
         function t() {
-            y(!0), (e = setTimeout(() => y(!1), 500));
+            v(!0), (e = setTimeout(() => v(!1), 500));
         }
         return (
             d.S.subscribe(_.CkL.EMPHASIZE_NOTICE, t),
@@ -57,11 +57,11 @@ function y(e) {
         );
     }, []),
         i.useEffect(() => {
-            C && c.uvj.announce(O.intl.string(O.t["0Y/qkJ"]));
-        }, [C]);
+            S && c.uvj.announce(O.intl.string(O.t["0Y/qkJ"]));
+        }, [S]);
     let P = i.useCallback(async () => {
             try {
-                await h.Z.savePendingWidgets(v);
+                await h.Z.savePendingWidgets(y);
             } catch (e) {
                 (0, m.L$)(b.qb.WIDGET_SAVE_FAILURE);
                 return;
@@ -85,12 +85,12 @@ function y(e) {
                     }, 0))),
                     n(t);
             }
-            for (let e of S)
+            for (let e of C)
                 n({
                     widgetEdited: e.type,
                     isWidgetRemoved: !0,
                 });
-        }, [v, I, S, n]),
+        }, [y, I, C, n]),
         x = i.useCallback(() => {
             h.Z.clearPendingWidgets();
         }, []);
@@ -112,20 +112,20 @@ function y(e) {
                           (0, r.jsxs)("div", {
                               className: E.actions,
                               children: [
-                                  (0, r.jsx)(c.zxk, {
+                                  (0, r.jsx)(c.Button, {
                                       size: "sm",
                                       variant: "secondary",
                                       text: O.intl.string(O.t.yBZMsb),
                                       onClick: x,
-                                      disabled: !C || T,
+                                      disabled: !S || T,
                                   }),
-                                  (0, r.jsx)(c.zxk, {
+                                  (0, r.jsx)(c.Button, {
                                       size: "sm",
                                       variant: "primary",
                                       text: O.intl.string(O.t.R3BPHx),
                                       onClick: P,
                                       loading: T,
-                                      disabled: !C || T,
+                                      disabled: !S || T,
                                   }),
                               ],
                           }),

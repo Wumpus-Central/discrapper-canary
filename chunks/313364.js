@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(6025),
     f = n(892001),
     h = n(433355),
-    x = n(430824),
-    b = n(893966),
+    b = n(430824),
+    x = n(893966),
     j = n(527379),
     v = n(305473),
     _ = n(113679),
@@ -30,7 +30,7 @@ var r = n(951288),
     w = n(630016);
 function Z(e) {
     let { guildId: t } = e,
-        n = (0, s.e7)([x.Z], () => x.Z.getGuild(t)),
+        n = (0, s.e7)([b.Z], () => b.Z.getGuild(t)),
         { analyticsLocations: l } = (0, d.ZP)(c.Z.GUILD_SETTINGS_MEMBERS_PAGE),
         Z = (0, u.m)(t),
         R = (0, s.e7)([h.ZP], () => h.ZP.getGuildSidebarState(t), [t]),
@@ -38,7 +38,7 @@ function Z(e) {
             p.Z.closeGuildSidebar(t);
         }, [t]),
         A = !1 == !!(null == n ? void 0 : n.features.has(S.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
-        L = (0, s.e7)([b.Z], () => b.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
+        L = (0, s.e7)([x.Z], () => x.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
         k = i.useCallback(
             (e) => {
                 null != e &&
@@ -83,7 +83,7 @@ function Z(e) {
                                         "div",
                                         {
                                             className: P.header,
-                                            children: (0, r.jsx)(o.X6q, {
+                                            children: (0, r.jsx)(o.Heading, {
                                                 variant: "heading-lg/semibold",
                                                 children: T.intl.string(T.t["S40K6+"]),
                                             }),

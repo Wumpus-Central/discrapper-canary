@@ -43,7 +43,7 @@ let B = () =>
                 className: G.bannerUpsell,
                 children: [
                     (0, r.jsx)(I.Z, { className: G.premiumIcon }),
-                    (0, r.jsx)(f.X6q, {
+                    (0, r.jsx)(f.Heading, {
                         variant: "heading-md/bold",
                         color: "always-white",
                         children: U.intl.string(U.t.POSLGR),
@@ -69,7 +69,7 @@ let B = () =>
                         className: G.closeCircle,
                     }),
                 }),
-                (0, r.jsx)(f.X6q, {
+                (0, r.jsx)(f.Heading, {
                     variant: "heading-lg/extrabold",
                     children: U.intl.string(U.t["xSR+a2"]),
                 }),

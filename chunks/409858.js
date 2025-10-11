@@ -21,33 +21,33 @@ var i = n(951288),
     j = n(832149),
     x = n(745510),
     S = n(313201),
-    w = n(925329),
-    _ = n(703656),
+    _ = n(925329),
+    w = n(703656),
     I = n(164670),
     Z = n(435883),
-    A = n(146779),
-    T = n(763296),
-    C = n(82142),
-    E = n(283595),
-    N = n(594174),
-    k = n(509545),
-    R = n(55563),
+    C = n(146779),
+    A = n(763296),
+    T = n(82142),
+    N = n(283595),
+    E = n(594174),
+    R = n(509545),
+    k = n(55563),
     G = n(626135),
     D = n(176354),
     L = n(669079),
     M = n(296848),
-    U = n(51144),
-    H = n(479446),
-    F = n(715627),
-    B = n(981632),
+    H = n(51144),
+    U = n(479446),
+    B = n(715627),
+    F = n(981632),
     z = n(474936),
     V = n(981631),
     K = n(215023),
     W = n(388032),
     q = n(269142),
     Y = n(167969),
-    X = n(557256);
-function $(e, t, n) {
+    $ = n(557256);
+function J(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -60,7 +60,7 @@ function $(e, t, n) {
         e
     );
 }
-let J = (e) => {
+let Q = (e) => {
         let { openedGift: t } = e,
             { createMultipleConfettiAt: n } = r.useContext(x.h);
         return (
@@ -70,14 +70,14 @@ let J = (e) => {
             null
         );
     },
-    Q = (e) => {
+    X = (e) => {
         let { step: t, soundId: n } = e;
         return (
             r.useEffect(() => {
                 var e;
                 if (t !== V.wZ8.CONFIRM) return;
-                let i = T.Z.getSoundById(n);
-                (0, A.playGiftSound)(n, null != (e = null == i ? void 0 : i.volume) ? e : 1);
+                let i = A.Z.getSoundById(n);
+                (0, C.playGiftSound)(n, null != (e = null == i ? void 0 : i.volume) ? e : 1);
             }, [t, n]),
             null
         );
@@ -124,14 +124,14 @@ class ee extends r.Component {
         if (i)
             if (!t)
                 return W.intl.formatToPlainString(W.t.xHzRub, {
-                    recipientDisplayName: U.ZP.getName(N.default.getCurrentUser()),
+                    recipientDisplayName: H.ZP.getName(E.default.getCurrentUser()),
                 });
             else {
                 var c, d;
                 if (n) return W.intl.string(W.t["+BNMcH"]);
-                let e = N.default.getUser(r.userId);
+                let e = E.default.getUser(r.userId);
                 return W.intl.formatToPlainString(W.t["2tBYtL"], {
-                    sender: U.ZP.getName(e),
+                    sender: H.ZP.getName(e),
                     skuName: null != (c = null == o ? void 0 : o.name) ? c : "item",
                     applicationName: null != (d = null == u ? void 0 : u.name) ? d : "an application",
                 });
@@ -139,11 +139,11 @@ class ee extends r.Component {
         if (e && !n)
             if (!t)
                 return W.intl.formatToPlainString(W.t.xHzRub, {
-                    recipientDisplayName: U.ZP.getName(N.default.getCurrentUser()),
+                    recipientDisplayName: H.ZP.getName(E.default.getCurrentUser()),
                 });
             else {
-                let e = N.default.getUser(r.userId),
-                    t = U.ZP.getName(e);
+                let e = E.default.getUser(r.userId),
+                    t = H.ZP.getName(e);
                 if (null != a)
                     switch (a) {
                         case s.Z.AVATAR_DECORATION:
@@ -167,20 +167,20 @@ class ee extends r.Component {
     }
     get secondHeaderText() {
         if (!this.state.isCustomGift || this.state.opened || this.state.accepted) return null;
-        let e = N.default.getUser(this.props.giftCode.userId);
-        return W.intl.formatToPlainString(W.t.DDO4W1, { sender: U.ZP.getName(e) });
+        let e = E.default.getUser(this.props.giftCode.userId);
+        return W.intl.formatToPlainString(W.t.DDO4W1, { sender: H.ZP.getName(e) });
     }
     get bodyText() {
         let { sku: e, accepting: t, libraryApplication: n, subscriptionPlan: i, giftCode: r } = this.props;
         if (null == e) return null;
         let { error: l, accepted: a, isCustomGift: s, opened: o, isPremiumAppGift: u } = this.state;
         if (u) {
-            let e = N.default.getUser(r.userId);
+            let e = E.default.getUser(r.userId);
             return o
                 ? a
                     ? W.intl.string(W.t.fLHIp6)
                     : null
-                : W.intl.formatToPlainString(W.t.DDO4W1, { sender: U.ZP.getName(e) });
+                : W.intl.formatToPlainString(W.t.DDO4W1, { sender: H.ZP.getName(e) });
         }
         return !o && s
             ? null
@@ -246,7 +246,7 @@ class ee extends r.Component {
                 soundId: m,
                 isThemeDark: g,
             } = this.props,
-            h = N.default.getUser(l.userId),
+            h = E.default.getUser(l.userId),
             {
                 isCustomGift: b,
                 isCollectiblesGift: y,
@@ -255,9 +255,9 @@ class ee extends r.Component {
                 emojiURL: j,
                 isPremiumAppGift: x,
             } = this.state,
-            S = N.default.getCurrentUser(),
-            _ = this.step === V.wZ8.ERROR,
-            A =
+            S = E.default.getCurrentUser(),
+            w = this.step === V.wZ8.ERROR,
+            C =
                 (null == l ? void 0 : l.userId) != null &&
                 null != S &&
                 (null == S ? void 0 : S.id) != null &&
@@ -269,7 +269,7 @@ class ee extends r.Component {
             case V.wZ8.SUCCESS:
                 null == d || d(l, !0);
         }
-        let T = (0, I.K$)(e);
+        let A = (0, I.K$)(e);
         return (0, i.jsxs)("div", {
             ref: this.modalRef,
             children: [
@@ -284,7 +284,7 @@ class ee extends r.Component {
                         null != l.giftStyle &&
                             !b &&
                             !y &&
-                            (0, i.jsx)(B.Z, {
+                            (0, i.jsx)(F.Z, {
                                 defaultAnimationState: this.getDefaultAnimationStatus(),
                                 idleAnimationState: this.getIdleAnimationStatus(),
                                 giftStyle: l.giftStyle,
@@ -304,19 +304,19 @@ class ee extends r.Component {
                                 [q.contentCustomGift]: b,
                             }),
                             children: [
-                                (!y && !x && (null == l.giftStyle || (b && O))) || T
-                                    ? (0, i.jsx)(w.Z, {
-                                          size: w.A.LARGE,
+                                (!y && !x && (null == l.giftStyle || (b && O))) || A
+                                    ? (0, i.jsx)(_.Z, {
+                                          size: _.A.LARGE,
                                           game: t,
                                           skuId: l.skuId,
                                       })
                                     : null,
-                                _ &&
+                                w &&
                                     (0, i.jsx)("img", {
                                         alt: "",
-                                        src: g ? Y : X,
+                                        src: g ? Y : $,
                                     }),
-                                (0, i.jsxs)(c.X6q, {
+                                (0, i.jsxs)(c.Heading, {
                                     id: s,
                                     className: a()({
                                         [q.customGiftHeader]: b && !O,
@@ -341,15 +341,15 @@ class ee extends r.Component {
                                     !y &&
                                     null != l.giftStyle &&
                                     !O &&
-                                    !_ &&
-                                    (0, i.jsx)(B.Z, {
+                                    !w &&
+                                    (0, i.jsx)(F.Z, {
                                         defaultAnimationState: this.getDefaultAnimationStatus(),
                                         idleAnimationState: this.getIdleAnimationStatus(),
                                         className: q.giftAnimation,
                                         giftStyle: l.giftStyle,
                                     }),
-                                this.state.opened && !_ && y && (0, i.jsx)(P.Z, { giftCode: l }),
-                                _ &&
+                                this.state.opened && !w && y && (0, i.jsx)(P.Z, { giftCode: l }),
+                                w &&
                                     (0, i.jsx)(c.Text, {
                                         className: q.body,
                                         variant: "text-md/normal",
@@ -358,16 +358,16 @@ class ee extends r.Component {
                                 b &&
                                     this.state.opened &&
                                     !this.state.accepted &&
-                                    !_ &&
+                                    !w &&
                                     null != p &&
                                     "" !== p &&
-                                    !A &&
+                                    !C &&
                                     (0, i.jsxs)(i.Fragment, {
                                         children: [
-                                            (0, i.jsx)(c.X6q, {
+                                            (0, i.jsx)(c.Heading, {
                                                 id: s,
                                                 variant: "heading-md/semibold",
-                                                children: W.intl.format(W.t.DDO4W1, { sender: U.ZP.getName(h) }),
+                                                children: W.intl.format(W.t.DDO4W1, { sender: H.ZP.getName(h) }),
                                             }),
                                             (0, i.jsx)(c.Text, {
                                                 className: q.customMessage,
@@ -376,7 +376,7 @@ class ee extends r.Component {
                                             }),
                                         ],
                                     }),
-                                T &&
+                                A &&
                                     (0, i.jsx)(Z.q, {
                                         sku: e,
                                         className: a()({
@@ -384,7 +384,7 @@ class ee extends r.Component {
                                             [q.gameItemImageGiftOpened]: this.state.opened,
                                         }),
                                     }),
-                                (0, i.jsx)(c.zxk, {
+                                (0, i.jsx)(c.Button, {
                                     variant: "primary",
                                     text: this.buttonText,
                                     loading: n,
@@ -403,8 +403,8 @@ class ee extends r.Component {
                     !n &&
                     v &&
                     (null == f || null == j
-                        ? (0, i.jsx)(J, { openedGift: v && !O && !n })
-                        : (0, i.jsx)(F.Z, {
+                        ? (0, i.jsx)(Q, { openedGift: v && !O && !n })
+                        : (0, i.jsx)(B.Z, {
                               confettiTarget: this.modalRef.current,
                               emojiURL: j,
                           })),
@@ -412,7 +412,7 @@ class ee extends r.Component {
                     !n &&
                     v &&
                     null != m &&
-                    (0, i.jsx)(Q, {
+                    (0, i.jsx)(X, {
                         soundId: m,
                         step: this.step,
                     }),
@@ -421,7 +421,7 @@ class ee extends r.Component {
     }
     constructor(...e) {
         super(...e),
-            $(this, "state", {
+            J(this, "state", {
                 error: null,
                 accepted: !1,
                 opened: !1,
@@ -431,11 +431,11 @@ class ee extends r.Component {
                 emojiURL: void 0,
                 isPremiumAppGift: !1,
             }),
-            $(this, "modalRef", r.createRef()),
-            $(this, "handleOpen", () => {
+            J(this, "modalRef", r.createRef()),
+            J(this, "handleOpen", () => {
                 this.setState({ opened: !0 });
             }),
-            $(this, "handleAccept", async () => {
+            J(this, "handleAccept", async () => {
                 let { giftCode: e, channelContext: t, onAccept: n } = this.props;
                 if (null == e) throw Error("GiftCode is null at acceptance.");
                 try {
@@ -449,30 +449,30 @@ class ee extends r.Component {
                     this.setState({ error: e });
                 }
             }),
-            $(this, "handleGoToLibrary", () => {
+            J(this, "handleGoToLibrary", () => {
                 let { onClose: e, libraryApplication: t } = this.props;
-                (0, _.uL)(V.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } }), e();
+                (0, w.uL)(V.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } }), e();
             }),
-            $(this, "getDefaultAnimationStatus", () => (this.step === V.wZ8.OPEN ? H.SR.IDLE : H.SR.ACTION)),
-            $(this, "getIdleAnimationStatus", () => {
-                if (this.step !== V.wZ8.OPEN) return H.SR.LOOP;
+            J(this, "getDefaultAnimationStatus", () => (this.step === V.wZ8.OPEN ? U.SR.IDLE : U.SR.ACTION)),
+            J(this, "getIdleAnimationStatus", () => {
+                if (this.step !== V.wZ8.OPEN) return U.SR.LOOP;
             });
     }
 }
-let et = o.ZP.connectStores([E.Z, R.Z, b.Z, C.Z, k.Z, f.Z, y.Z], (e) => {
+let et = o.ZP.connectStores([N.Z, k.Z, b.Z, T.Z, R.Z, f.Z, y.Z], (e) => {
         let { giftCode: t } = e,
-            n = R.Z.get(t.skuId),
+            n = k.Z.get(t.skuId),
             i = null != n ? b.Z.getApplication(n.applicationId) : null,
             r = f.Z.useReducedMotion;
         return {
             sku: n,
             libraryApplication:
                 null != n && (null == t ? void 0 : t.entitlementBranches) != null
-                    ? (0, L.z2)(t.entitlementBranches, n, E.Z)
+                    ? (0, L.z2)(t.entitlementBranches, n, N.Z)
                     : null,
             application: i,
             subscriptionPlan: null != t.subscriptionPlanId ? (0, M.oE)(t.subscriptionPlanId) : null,
-            accepting: C.Z.getIsAccepting(t.code),
+            accepting: T.Z.getIsAccepting(t.code),
             useReducedMotion: r,
         };
     })(ee),
@@ -502,7 +502,7 @@ let et = o.ZP.connectStores([E.Z, R.Z, b.Z, C.Z, k.Z, f.Z, y.Z], (e) => {
                 return r;
             })(e, ["channelContext", "code", "customGiftMessage", "emojiName", "soundId", "onClose"]);
         let h = (0, S.Dt)(),
-            b = (0, o.e7)([C.Z], () => C.Z.get(l)),
+            b = (0, o.e7)([T.Z], () => T.Z.get(l)),
             y = (0, p.ZP)(),
             { analyticsLocations: P } = (0, g.ZP)(m.Z.GIFT_CODE_MODAL),
             { product: x } = (0, v.T)(null == b ? void 0 : b.skuId, !0);
@@ -521,7 +521,7 @@ let et = o.ZP.connectStores([E.Z, R.Z, b.Z, C.Z, k.Z, f.Z, y.Z], (e) => {
                                   }),
                               )),
                               i.forEach(function (t) {
-                                  $(e, t, n[t]);
+                                  J(e, t, n[t]);
                               });
                       }
                       return e;

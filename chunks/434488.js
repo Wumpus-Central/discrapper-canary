@@ -122,7 +122,7 @@ function T(e) {
     function f() {
         (0, u.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("7654"), n.e("49049"), n.e("98953")]).then(
+                let { default: e } = await Promise.all([n.e("74318"), n.e("49049"), n.e("7654"), n.e("98953")]).then(
                     n.bind(n, 560114),
                 );
                 return (n) => {
@@ -158,7 +158,7 @@ function T(e) {
                             {
                                 guild: l,
                                 channel: t,
-                                source: j.t4x.ACTIVITY_ENTRY_POINT_TILE,
+                                source: j.InstantInviteSources.ACTIVITY_ENTRY_POINT_TILE,
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
@@ -208,11 +208,11 @@ function T(e) {
                             className: S.art,
                             alt: "",
                         }),
-                        (0, i.jsxs)(u.hE2, {
+                        (0, i.jsxs)(u.ButtonGroup, {
                             justify: "center",
                             align: "center",
                             children: [
-                                (0, i.jsx)(u.zxk, {
+                                (0, i.jsx)(u.Button, {
                                     variant: "secondary",
                                     icon: v,
                                     text: d.isInCallEntrypointEnabled
@@ -220,7 +220,7 @@ function T(e) {
                                         : E.intl.string(E.t["6Qgren"]),
                                     onClick: f,
                                 }),
-                                (0, i.jsx)(u.zxk, {
+                                (0, i.jsx)(u.Button, {
                                     variant: "secondary",
                                     icon: y,
                                     text: E.intl.string(E.t.qnFavb),

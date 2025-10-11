@@ -13,6 +13,4 @@ e.exports = {
     subtitleSeparator: "subtitleSeparator__1ea09",
     channelName: "channelName__1ea09",
     separator: "separator__1ea09",
-    checkbox: "checkbox__1ea09",
-    checkboxInner: "checkboxInner__1ea09",
 };

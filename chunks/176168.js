@@ -15,7 +15,7 @@ let p = function (e) {
         children: (0, r.jsxs)("div", {
             className: u.barCard,
             children: [
-                (0, r.jsx)(i.X6q, {
+                (0, r.jsx)(i.Heading, {
                     className: u.barHeading,
                     variant: "heading-md/semibold",
                     children: s.intl.string(s.t.rjVPdH),

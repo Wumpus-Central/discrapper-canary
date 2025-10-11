@@ -58,24 +58,24 @@ function E(e, t) {
         e
     );
 }
-let y = n(349181),
-    v = {
+let v = n(349181),
+    y = {
         canSend: !1,
         hint: null,
         success: null,
         error: null,
     },
     I = (0, p.hQ)(),
-    S = "".concat(I, "-decription"),
-    C = "".concat(I, "-error");
+    C = "".concat(I, "-decription"),
+    S = "".concat(I, "-error");
 function T(e, t) {
     switch (t.type) {
         case "RESET":
-            return v;
+            return y;
         case "SUCCESS":
-            return E(O({}, v), { success: t.text });
+            return E(O({}, y), { success: t.text });
         case "HINT":
-            return E(O({}, v), {
+            return E(O({}, y), {
                 canSend: !0,
                 hint: t.text,
             });
@@ -90,7 +90,7 @@ function N(e) {
     let { placeholder: t = m.intl.string(m.t["Rn/sLi"]) } = e,
         n = i.useRef(null),
         l = i.useRef(null),
-        [o, p] = i.useReducer(T, v),
+        [o, p] = i.useReducer(T, y),
         { canSend: O, hint: E, error: N, success: j } = o;
     return (
         i.useEffect(() => {
@@ -139,7 +139,7 @@ function N(e) {
                             children: m.intl.string(m.t["Rn/sLi"]),
                         }),
                         (0, r.jsx)("img", {
-                            src: y,
+                            src: v,
                             alt: "Wumpus Waving",
                         }),
                     ],
@@ -196,7 +196,7 @@ function N(e) {
                                 placeholder: t,
                                 "aria-label": t,
                                 "aria-invalid": null != N || void 0,
-                                "aria-describedby": null != N ? C : S,
+                                "aria-describedby": null != N ? S : C,
                             }),
                             null != E &&
                                 (0, r.jsx)("div", {
@@ -204,7 +204,7 @@ function N(e) {
                                     "aria-hidden": !0,
                                     children: E,
                                 }),
-                            (0, r.jsx)(u.zxk, {
+                            (0, r.jsx)(u.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: m.intl.string(m.t["PMsq/f"]),
@@ -218,7 +218,7 @@ function N(e) {
                     (0, r.jsx)("div", {
                         role: "alert",
                         children: (0, r.jsx)(u.Text, {
-                            id: C,
+                            id: S,
                             variant: "text-sm/normal",
                             className: _.marginTop8,
                             color: "text-feedback-critical",

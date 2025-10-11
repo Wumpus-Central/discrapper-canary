@@ -60,7 +60,7 @@ function f(e) {
     let _ = null != t.guild ? (0, o.Qs)(t.guild) : null,
         x = null != t.channel ? (0, s.jD)(t.channel) : null,
         E = null != t.target_application ? new l.ZP(t.target_application) : null,
-        v = f || null == t.inviter ? null : new a.Z(t.inviter),
+        v = f || null == t.inviter ? null : new a.default(t.inviter),
         b =
             !(
                 (null != t.approximate_member_count && t.approximate_member_count > c.mx) ||
@@ -68,7 +68,7 @@ function f(e) {
             ) &&
             null != v &&
             (0, c.WT)(t),
-        I = ((e) => {
+        j = ((e) => {
             let { state: t } = e;
             switch (t) {
                 case d.r2o.ACCEPTING:
@@ -78,7 +78,7 @@ function f(e) {
                     return !1;
             }
         })(t),
-        j = {
+        I = {
             invite: t,
             user: v,
             guild: _,
@@ -89,7 +89,7 @@ function f(e) {
         ? (0, r.jsx)(u.Z, {
               invite: t,
               channel: x,
-              isSubmitting: I,
+              isSubmitting: j,
               onAcceptInvite: n,
           })
         : (0, r.jsxs)("div", {
@@ -100,12 +100,12 @@ function f(e) {
                       guild: _,
                       user: b || (0, c.X7)(t) ? v : null,
                   }),
-                  (0, c.X7)(t) ? null : (0, r.jsx)(c.jq, p(m({}, j), { showBigUserIcon: b })),
-                  (0, r.jsx)(c.UM, p(m({}, j), { showBigUserIcon: b })),
-                  (0, r.jsx)(c.V6, m({}, j)),
+                  (0, c.X7)(t) ? null : (0, r.jsx)(c.jq, p(m({}, I), { showBigUserIcon: b })),
+                  (0, r.jsx)(c.UM, p(m({}, I), { showBigUserIcon: b })),
+                  (0, r.jsx)(c.V6, m({}, I)),
                   (0, r.jsx)(i.zx, {
                       onClick: n,
-                      submitting: I,
+                      submitting: j,
                       className: g.acceptButton,
                       children: h.intl.string(h.t.ohMvm5),
                   }),

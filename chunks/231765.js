@@ -388,7 +388,7 @@ function B(e) {
                 (0, r.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
                     className: v.hideButton,
-                    children: (0, r.jsx)(l.zxk, {
+                    children: (0, r.jsx)(l.Button, {
                         variant: "primary",
                         size: "sm",
                         text: O.intl.string(O.t.qz65yc),
@@ -416,7 +416,7 @@ function Z(e) {
             (0, r.jsxs)("div", {
                 className: v.achievementTextContainer,
                 children: [
-                    (0, r.jsx)(l.X6q, {
+                    (0, r.jsx)(l.Heading, {
                         variant: "heading-md/semibold",
                         color: "header-primary",
                         children: O.intl.string(O.t["6jI0hY"]),
@@ -497,7 +497,7 @@ function V(e) {
         (0, r.jsxs)(l.Kqy, {
             gap: 24,
             children: [
-                (0, r.jsx)(l.X6q, {
+                (0, r.jsx)(l.Heading, {
                     variant: "heading-lg/semibold",
                     children: O.intl.string(O.t.AtCukJ),
                 }),

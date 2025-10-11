@@ -18,7 +18,7 @@ let l = (e) => {
     } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(o.X6q, {
+            (0, r.jsx)(o.Heading, {
                 variant: "heading-xl/extrabold",
                 className: a()(s.cardHeading, _),
                 children: c,

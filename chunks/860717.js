@@ -17,11 +17,11 @@ var r = n(951288),
     _ = n(676149),
     O = n(861529),
     E = n(768494),
-    y = n(124347),
-    v = n(929677),
+    v = n(124347),
+    y = n(929677),
     I = n(77498),
-    S = n(823379),
-    C = n(621853),
+    C = n(823379),
+    S = n(621853),
     T = n(750312),
     N = n(919498),
     j = n(388032),
@@ -261,7 +261,7 @@ function M(e) {
             L(i)
                 ? (0, r.jsx)("div", {
                       className: P.heroImageContainer,
-                      children: (0, r.jsx)(y.ZP, {
+                      children: (0, r.jsx)(v.ZP, {
                           src: i.proxyUrl,
                           alt: "",
                           width: i.width,
@@ -314,7 +314,7 @@ function H(e) {
         o = L(n)
             ? (0, r.jsx)("div", {
                   className: a()(P.image, l.className),
-                  children: (0, r.jsx)(y.ZP, {
+                  children: (0, r.jsx)(v.ZP, {
                       src: n.proxyUrl,
                       alt: "",
                       width: n.width,
@@ -342,11 +342,11 @@ function V(e) {
 }
 function F() {
     let e = (function () {
-            let e = i.useContext(q);
+            let e = i.useContext(Y);
             if (null == e) throw Error("ApplicationWidgetContext provider not found");
             return e;
         })(),
-        { game: t } = Y(e.widget);
+        { game: t } = q(e.widget);
     return null == t
         ? null
         : (0, r.jsx)(N.Z, {
@@ -387,14 +387,14 @@ function W(e, t) {
     let l = t.variables[i];
     return null == l || "unfurled_media" !== l.type ? null : l.media;
 }
-let q = i.createContext(null);
-function Y(e) {
-    return (0, o.cj)([p.Z, C.Z, I.Z], () => {
+let Y = i.createContext(null);
+function q(e) {
+    return (0, o.cj)([p.Z, S.Z, I.Z], () => {
         let t = p.Z.getApplication(e.applicationId);
         return {
             application: t,
             game: null != t ? I.Z.getGameByApplication(t) : null,
-            config: C.Z.getApplicationWidgetApplicationConfig(e.applicationId),
+            config: S.Z.getApplicationWidgetApplicationConfig(e.applicationId),
         };
     });
 }
@@ -426,7 +426,7 @@ function Q(e) {
             (0, r.jsxs)(c.Kqy, {
                 gap: 4,
                 children: [
-                    (0, r.jsx)(c.X6q, {
+                    (0, r.jsx)(c.Heading, {
                         variant: "heading-sm/medium",
                         color: "text-default",
                         children: e.heading,
@@ -452,9 +452,9 @@ function Q(e) {
 let X = Object.assign(
     function (e) {
         let { user: t, widget: n, containerClassName: l, cta: o } = e,
-            { application: u, game: p, config: g } = Y(n),
+            { application: u, game: p, config: g } = q(n),
             m = null == u ? void 0 : u.getIconURL(16),
-            b = (0, v.O)(t.id).data,
+            b = (0, y.O)(t.id).data,
             _ = null == b ? void 0 : b.find((e) => e.application_id === n.applicationId),
             O = (0, h.Z)({
                 location: "UserProfileApplicationWidget",
@@ -463,8 +463,8 @@ let X = Object.assign(
                 sourceUserId: t.id,
                 trackEntryPointImpression: !0,
             }),
-            { loading: y, hasAlreadyLinked: I, canStartAuthorization: C, startAuthorization: N } = (0, d.FG)(u),
-            Z = null == o && !y && !I && C,
+            { loading: v, hasAlreadyLinked: I, canStartAuthorization: S, startAuthorization: N } = (0, d.FG)(u),
+            Z = null == o && !v && !I && S,
             L = (0, r.jsxs)(r.Fragment, {
                 children: [
                     null != m
@@ -520,7 +520,7 @@ let X = Object.assign(
                                           null == (i = e.profile) || null == (r = i.data) ? void 0 : r.primary,
                                       ),
                                   )
-                                      .filter(S.V5)
+                                      .filter(C.V5)
                                       .map((e) => {
                                           let [t, n] = e;
                                           if ("object" == typeof n) {
@@ -550,7 +550,7 @@ let X = Object.assign(
                                               ];
                                           return null;
                                       })
-                                      .filter(S.lm),
+                                      .filter(C.lm),
                               ),
                               config: t,
                           });
@@ -611,7 +611,7 @@ let X = Object.assign(
                           })
                         : null,
                 children: [
-                    (0, r.jsx)(q.Provider, {
+                    (0, r.jsx)(Y.Provider, {
                         value: e,
                         children: (0, r.jsx)(K, {
                             widget: n,
@@ -638,7 +638,7 @@ let X = Object.assign(
                                 ? (0, r.jsx)(Q, {
                                       heading: j.intl.string(j.t.UDPRLC),
                                       content: j.intl.string(j.t["OW/2am"]),
-                                      buttons: (0, r.jsx)(c.zxk, {
+                                      buttons: (0, r.jsx)(c.Button, {
                                           text: j.intl.string(j.t.S0W8Z2),
                                           onClick: N,
                                       }),

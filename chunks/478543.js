@@ -87,7 +87,7 @@ function I(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(c.zxk, {
+            (0, r.jsx)(c.Button, {
                 text: s,
                 loading: u,
                 variant: a,
@@ -159,7 +159,7 @@ function A(e, t, n) {
                         ? E.intl.formatToPlainString(E.t.bFj63d, { releaseChannel: e.releaseChannel })
                         : E.intl.string(E.t.Wj3LW1),
             }),
-            (0, r.jsx)(c.eee, {
+            (0, r.jsx)(c.Anchor, {
                 className: b.infoLink,
                 href: p.Z.getArticleURL(g.BhN.BUILD_OVERRIDE_EMBED),
                 target: "_blank",

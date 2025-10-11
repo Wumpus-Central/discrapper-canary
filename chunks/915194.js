@@ -6,14 +6,14 @@ var t = i(442837),
     e = i(481060),
     a = i(812206),
     s = i(600164),
-    c = i(922156),
-    d = i(63063),
+    d = i(922156),
+    c = i(63063),
     u = i(388032),
     p = i(534084);
 let h = (l) => {
     let { onClose: n, transitionState: i } = l,
-        { error: h, applicationName: x } = (0, t.cj)([c.Z, a.Z], () => {
-            let l = c.Z.getLastError(),
+        { error: h, applicationName: x } = (0, t.cj)([d.Z, a.Z], () => {
+            let l = d.Z.getLastError(),
                 n = null;
             if (null != l && null != l.applicationId) {
                 let i = a.Z.getApplication(l.applicationId);
@@ -36,7 +36,7 @@ let h = (l) => {
                 children: [
                     (0, r.jsx)(s.Z.Child, {
                         grow: 1,
-                        children: (0, r.jsx)(e.X6q, {
+                        children: (0, r.jsx)(e.Heading, {
                             variant: "heading-lg/semibold",
                             children: u.intl.string(u.t["6kHRYG"]),
                         }),
@@ -88,11 +88,11 @@ let h = (l) => {
             }),
             (0, r.jsxs)(e.mzw, {
                 children: [
-                    (0, r.jsx)(e.zxk, {
+                    (0, r.jsx)(e.Button, {
                         variant: "primary",
                         text: u.intl.string(u.t.VdyWmJ),
                         onClick: () => {
-                            window.open(d.Z.getSubmitRequestURL());
+                            window.open(c.Z.getSubmitRequestURL());
                         },
                     }),
                     (0, r.jsx)(o.zx, {

@@ -103,7 +103,7 @@ let y = 24,
             } = e,
             h = (0, r.jsx)(c.y5t, {
                 forceLevel: f,
-                children: (0, r.jsx)(c.X6q, {
+                children: (0, r.jsx)(c.Heading, {
                     variant: "text-md/medium",
                     color: d ? "header-secondary" : void 0,
                     className: o()(t, _.title, { [_.titleClickable]: null != s }),

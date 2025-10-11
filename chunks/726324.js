@@ -33,7 +33,7 @@ function u(e) {
                     size: l.Z.Sizes.XLARGE,
                 }),
             }),
-            (0, r.jsx)(i.X6q, {
+            (0, r.jsx)(i.Heading, {
                 variant: "heading-xl/semibold",
                 className: c.ctaTitle,
                 children: n,

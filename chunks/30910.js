@@ -43,7 +43,7 @@ function g(e) {
 function f(e) {
     let { onNext: t } = (0, u.JL)();
     return (0, l.jsx)(
-        c.zxk,
+        c.Button,
         g(
             {
                 variant: "primary",
@@ -68,7 +68,7 @@ function b(e) {
                       : m.intl.string(d.default["cmSy/f"])
                 : m.intl.string(m.t.K344S0);
     return (0, l.jsx)(
-        c.zxk,
+        c.Button,
         g(
             {
                 variant: s || r > 0 ? "expressive" : "primary",
@@ -110,7 +110,7 @@ function j(e) {
     return (
         s()(null != i, "Invalid stepType ".concat(d)),
         (0, l.jsx)(
-            c.zxk,
+            c.Button,
             ((n = g({}, e)),
             (a = a =
                 {

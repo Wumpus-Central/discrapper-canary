@@ -74,7 +74,7 @@ let _ = /^discord.gg\/[a-zA-Z0-9-]+/,
                     },
                     react: (e, t, n) =>
                         (0, i.jsx)(
-                            o.eee,
+                            o.Anchor,
                             {
                                 onClick: (t) => {
                                     t.preventDefault(), e.onClick();

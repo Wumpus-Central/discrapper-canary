@@ -221,7 +221,7 @@ function h(e) {
                 }),
                 (0, i.jsxs)(a.mzw, {
                     children: [
-                        (0, i.jsx)(c.X6q, {
+                        (0, i.jsx)(c.Heading, {
                             variant: "heading-lg/semibold",
                             className: C.footerTitle,
                             children: x.intl.string(x.t.pgCZRE),

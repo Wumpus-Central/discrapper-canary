@@ -116,7 +116,7 @@ function h(e) {
                         (0, r.jsxs)("div", {
                             className: f.productDetailContent,
                             children: [
-                                (0, r.jsx)(o.X6q, {
+                                (0, r.jsx)(o.Heading, {
                                     variant: "text-md/medium",
                                     color: "header-primary",
                                     className: f.productName,

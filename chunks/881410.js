@@ -165,7 +165,7 @@ function g(e) {
             (0, n.jsx)("div", {
                 ref: O,
                 children: (0, n.jsx)(
-                    o.zxk,
+                    o.Button,
                     f(
                         {
                             variant: "secondary",

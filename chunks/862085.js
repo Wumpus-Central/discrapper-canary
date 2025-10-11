@@ -3,13 +3,13 @@ var r = n(951288);
 n(647438);
 var i = n(755721),
     l = n(481060),
-    s = n(556012),
-    a = n(388032),
+    a = n(556012),
+    s = n(388032),
     o = n(464992);
 function c(e) {
     let { action: t, triggerType: n, toggled: c, onToggleAction: d } = e,
         u = (e) => () => d(e),
-        g = (0, s.c)(t.type, t, n);
+        g = (0, a.c)(t.type, t, n);
     if (null == g) return null;
     let { headerText: m, descriptionText: p, icon: f } = g;
     return (0, r.jsxs)("div", {
@@ -26,7 +26,7 @@ function c(e) {
             (0, r.jsxs)("div", {
                 className: o.actionTextContainer,
                 children: [
-                    (0, r.jsx)(l.X6q, {
+                    (0, r.jsx)(l.Heading, {
                         variant: "heading-sm/semibold",
                         children: m,
                     }),
@@ -40,13 +40,13 @@ function c(e) {
                               color: "text-muted",
                               variant: "text-xs/medium",
                               children: [
-                                  a.intl.string(a.t.Oa9oWF),
+                                  s.intl.string(s.t.Oa9oWF),
                                   (0, r.jsx)(l.P3F, {
                                       onClick: u(!0),
                                       className: o.editChannel,
                                       tag: "span",
                                       role: "link",
-                                      children: a.intl.string(a.t.QupmYW),
+                                      children: s.intl.string(s.t.QupmYW),
                                   }),
                               ],
                           })
@@ -54,8 +54,8 @@ function c(e) {
                 ],
             }),
             (0, r.jsx)("div", {
-                children: (0, r.jsx)(i.VL, {
-                    checked: c,
+                children: (0, r.jsx)(i.$q, {
+                    value: c,
                     onChange: u(!1),
                     className: o.__invalid_actionCheckbox,
                 }),

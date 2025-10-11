@@ -2,8 +2,8 @@ n.d(t, { Z: () => g }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
-    s = n(457414),
-    a = n(311173),
+    a = n(457414),
+    s = n(311173),
     o = n(388032),
     c = n(97247);
 function d(e) {
@@ -56,18 +56,18 @@ function g(e) {
         h = i.useCallback(() => {
             f(!p);
         }, [p, f]),
-        x = i.useCallback(
+        b = i.useCallback(
             (e) => {
                 g(u(d({}, n), { triggerMetadata: u(d({}, n.triggerMetadata), { regexPatterns: e }) }));
             },
             [g, n],
         );
-    return (0, s.S)(n.triggerType)
+    return (0, a.S)(n.triggerType)
         ? (0, r.jsx)(l.zF9, {
               isExpanded: p,
-              collapsibleContent: (0, r.jsx)(a.Z, {
+              collapsibleContent: (0, r.jsx)(s.Z, {
                   rule: n,
-                  onChangeText: x,
+                  onChangeText: b,
                   className: c.textAreaContainer,
                   initialValue: null == (t = n.triggerMetadata) ? void 0 : t.regexPatterns,
               }),
@@ -81,7 +81,7 @@ function g(e) {
                       children: (0, r.jsxs)("div", {
                           className: c.header,
                           children: [
-                              (0, r.jsx)(l.X6q, {
+                              (0, r.jsx)(l.Heading, {
                                   variant: "text-sm/medium",
                                   children: o.intl.string(o.t.dnunm5),
                               }),

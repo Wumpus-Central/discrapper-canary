@@ -134,7 +134,7 @@ class U extends i.Component {
             className: P.buttonContainer,
             children: [
                 (0, r.jsx)("div", {
-                    children: (0, r.jsx)(c.zxk, {
+                    children: (0, r.jsx)(c.Button, {
                         variant: "primary",
                         disabled: e,
                         size: "sm",
@@ -214,14 +214,17 @@ class U extends i.Component {
                     }),
                 ],
             }),
-            n = (0, r.jsx)(c.zxk, {
+            n = (0, r.jsx)(c.Button, {
                 variant: "primary",
                 disabled: !1,
                 size: "md",
                 onClick: () =>
                     k({
                         analyticsLocations: [],
-                        startingScreen: this.referralsSent.size === I.Q ? T.K.REMINDER : T.K.SELECT_FRIENDS,
+                        startingScreen:
+                            this.referralsSent.size === I.Q
+                                ? T.SelectFriendsModalScreens.REMINDER
+                                : T.SelectFriendsModalScreens.SELECT_FRIENDS,
                     }),
                 text: R.intl.string(R.t.Lm2nFR),
             }),
@@ -257,7 +260,7 @@ class U extends i.Component {
                                 (0, r.jsxs)("div", {
                                     className: P.contentTextDMEmbedXP,
                                     children: [
-                                        (0, r.jsx)(c.X6q, {
+                                        (0, r.jsx)(c.Heading, {
                                             variant: "heading-md/semibold",
                                             color: "header-primary",
                                             children: o,

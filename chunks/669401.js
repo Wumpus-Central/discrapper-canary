@@ -19,7 +19,7 @@ let u = function (e) {
         ? (0, r.jsxs)("div", {
               className: d.sectionContainer,
               children: [
-                  (0, r.jsx)(l.X6q, {
+                  (0, r.jsx)(l.Heading, {
                       variant: "heading-lg/semibold",
                       color: "header-primary",
                       children: c.intl.string(c.t.runNFx),

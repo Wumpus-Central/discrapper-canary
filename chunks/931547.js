@@ -46,7 +46,7 @@ function l(e) {
                 size: 16,
                 horizontal: !0,
             }),
-            (0, r.jsx)(o.zxk, {
+            (0, r.jsx)(o.Button, {
                 variant: "critical-secondary",
                 size: "sm",
                 onClick: i,

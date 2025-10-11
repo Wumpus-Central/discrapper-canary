@@ -98,12 +98,12 @@ class v extends (i = l.PureComponent) {
                 className: C,
                 imageClassName: N,
                 iconClassName: S,
-                iconWrapperClassName: w,
-                icon: P,
+                iconWrapperClassName: P,
+                icon: w,
                 hideSize: I,
                 imageStyle: E,
-                showRemoveButton: Z,
-                maxFileSizeBytes: T,
+                showRemoveButton: T,
+                maxFileSizeBytes: Z,
                 onFileSizeError: k,
                 onOpenImageSelectModal: A,
                 "aria-label": D,
@@ -112,7 +112,7 @@ class v extends (i = l.PureComponent) {
             (null != (t = null != a && /^data:/.test(a) ? a : f(a))
                 ? (n = 'url("'.concat(t, '")'))
                 : null != c &&
-                  (i = (0, r.jsx)(d.X6q, {
+                  (i = (0, r.jsx)(d.Heading, {
                       variant: "heading-xxl/normal",
                       color: "always-white",
                       className: g.imageUploaderAcronym,
@@ -130,13 +130,13 @@ class v extends (i = l.PureComponent) {
                         _ &&
                             (0, r.jsx)("div", {
                                 className: o()(g.imageUploaderIcon, g.imageUploaderIconDisabled, S),
-                                children: P,
+                                children: w,
                             }),
                     ],
                 }),
             });
         null != a
-            ? (l = (0, r.jsx)(d.eee, {
+            ? (l = (0, r.jsx)(d.Anchor, {
                   className: g.removeButton,
                   onClick: this.handleRemove,
                   children: b.intl.string(b.t.N86XcH),
@@ -153,7 +153,7 @@ class v extends (i = l.PureComponent) {
                 (0, r.jsx)(d.tEY, {
                     within: !0,
                     children: (0, r.jsxs)("div", {
-                        className: y ? o()(g.imageUploaderIconWrapper, w) : void 0,
+                        className: y ? o()(g.imageUploaderIconWrapper, P) : void 0,
                         children: [
                             (0, r.jsxs)("div", {
                                 className: o()(g.imageUploaderInner, N),
@@ -175,7 +175,7 @@ class v extends (i = l.PureComponent) {
                                               className: g.imageUploaderFileInput,
                                               "aria-label": R,
                                               tabIndex: 0,
-                                              maxFileSizeBytes: T,
+                                              maxFileSizeBytes: Z,
                                               onFileSizeError: k,
                                           }),
                                 ],
@@ -189,12 +189,12 @@ class v extends (i = l.PureComponent) {
                             y &&
                                 (0, r.jsx)(j, {
                                     className: S,
-                                    icon: P,
+                                    icon: w,
                                 }),
                         ],
                     }),
                 }),
-                Z ? l : null,
+                T ? l : null,
             ],
         });
     }

@@ -174,7 +174,7 @@ function V(e) {
                                                   ],
                                               })
                                             : (0, r.jsx)(g.Z, {
-                                                  children: (0, r.jsx)(u.X6q, {
+                                                  children: (0, r.jsx)(u.Heading, {
                                                       variant: "text-md/semibold",
                                                       style: { color: null != O ? O : void 0 },
                                                       className: G.username,

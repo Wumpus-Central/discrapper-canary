@@ -62,7 +62,7 @@ c.Action = (e) => {
         className: l.action,
         children: [
             "\u2014",
-            (0, r.jsx)(o.eee, {
+            (0, r.jsx)(o.Anchor, {
                 onClick: t,
                 className: l.actionAnchor,
                 children: n,

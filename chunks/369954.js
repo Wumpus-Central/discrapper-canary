@@ -34,7 +34,7 @@ let v = (e) => {
                     variant: "text-md/medium",
                     children: t,
                 }),
-                (0, r.jsx)(o.zxk, {
+                (0, r.jsx)(o.Button, {
                     text: n,
                     onClick: i,
                     variant: "secondary",
@@ -71,7 +71,7 @@ let v = (e) => {
                             children: y.intl.format(b.default.X9rW0t, {
                                 openSettingsHook: (e, t) =>
                                     (0, r.jsx)(
-                                        o.eee,
+                                        o.Anchor,
                                         {
                                             onClick: n,
                                             children: e,
@@ -82,7 +82,7 @@ let v = (e) => {
                         }),
                     ],
                 }),
-                (0, r.jsx)(o.zxk, {
+                (0, r.jsx)(o.Button, {
                     text: y.intl.formatToPlainString(b.default.ggcjPT, { count: e.length }),
                     onClick: t,
                     variant: "secondary",

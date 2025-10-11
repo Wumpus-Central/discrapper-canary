@@ -1,8 +1,8 @@
 r.d(t, { Z: () => f });
 var n = r(951288);
 r(647438);
-var o = r(442837),
-    c = r(481060),
+var c = r(442837),
+    o = r(481060),
     i = r(666657),
     a = r(533244),
     l = r(487419),
@@ -11,11 +11,11 @@ var o = r(442837),
     s = r(388032);
 function f(e, t) {
     let f = t === b.IlC.POPOUT,
-        O = (0, o.e7)([u.Z], () => u.Z.getGuild(e), [e]),
-        p = (0, o.e7)([l.Z], () => (null != O ? l.Z.getGuildIncident(O.id) : null));
+        O = (0, c.e7)([u.Z], () => u.Z.getGuild(e), [e]),
+        p = (0, c.e7)([l.Z], () => (null != O ? l.Z.getGuildIncident(O.id) : null));
     return f
         ? null
-        : (0, n.jsx)(c.sNh, {
+        : (0, n.jsx)(o.sNh, {
               id: "nav-security-actions",
               label: s.intl.string(s.t.UgXhdn),
               action: () => {
@@ -23,13 +23,13 @@ function f(e, t) {
                       source: i.Zu.MESSAGE,
                       alertType: (0, a.T1)(p),
                   };
-                  (0, c.ZDy)(async () => {
-                      let { default: o } = await Promise.all([r.e("58175"), r.e("54255")]).then(r.bind(r, 664452));
+                  (0, o.ZDy)(async () => {
+                      let { default: c } = await r.e("58175").then(r.bind(r, 664452));
                       return (r) => {
-                          var c, i;
+                          var o, i;
                           return (0, n.jsx)(
-                              o,
-                              ((c = (function (e) {
+                              c,
+                              ((o = (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var r = null != arguments[t] ? arguments[t] : {},
                                           n = Object.keys(r);
@@ -60,7 +60,7 @@ function f(e, t) {
                                       analyticsData: t,
                                   }),
                               Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(c, Object.getOwnPropertyDescriptors(i))
+                                  ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(i))
                                   : (function (e, t) {
                                         var r = Object.keys(e);
                                         if (Object.getOwnPropertySymbols) {
@@ -69,9 +69,9 @@ function f(e, t) {
                                         }
                                         return r;
                                     })(Object(i)).forEach(function (e) {
-                                        Object.defineProperty(c, e, Object.getOwnPropertyDescriptor(i, e));
+                                        Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(i, e));
                                     }),
-                              c),
+                              o),
                           );
                       };
                   });

@@ -66,7 +66,7 @@ function h(e) {
     return (0, r.jsxs)("div", {
         className: a()(_.scopes, E ? _.noDivider : void 0),
         children: [
-            (0, r.jsx)(c.X6q, {
+            (0, r.jsx)(c.Heading, {
                 variant: "heading-sm/normal",
                 className: _.sectionLabel,
                 children: f.intl.format(O, { application: null != (t = null == n ? void 0 : n.name) ? t : "" }),

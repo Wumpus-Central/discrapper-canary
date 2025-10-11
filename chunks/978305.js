@@ -15,8 +15,8 @@ var n = t(951288),
     x = t(292352),
     b = t(981631),
     g = t(345909),
-    h = t(388032),
-    y = t(352258),
+    y = t(388032),
+    h = t(352258),
     v = t(197571);
 let _ = (e) => {
     let { transitionState: r, onClose: t } = e,
@@ -27,7 +27,7 @@ let _ = (e) => {
         N = (0, p.gU)(),
         z = o.useRef(N);
     l()(!a, "FamilyCenterQRCodeModal should only be rendered for teens.");
-    let k = () => {
+    let S = () => {
         _(
             (e) => (
                 f.default.track(b.rMx.FAMILY_CENTER_ACTION, { action: i ? x.YC.HideQRCode : x.YC.RevealQRCode }), !e
@@ -44,75 +44,75 @@ let _ = (e) => {
         o.useEffect(() => {
             N > z.current && t();
         }, [z, N, t]);
-    let S = i && !O && null != q;
+    let k = i && !O && null != q;
     return (0, n.jsxs)(c.Y0X, {
         "data-migration-pending": !0,
-        className: y.modalRoot,
+        className: h.modalRoot,
         transitionState: r,
         parentComponent: "FamilyCenterQRCodeModal",
         children: [
             (0, n.jsxs)(c.qXd, {
-                className: y.notice,
+                className: h.notice,
                 color: c.DM8.WARNING,
                 children: [
                     (0, n.jsx)(c.d3s, {
                         size: "sm",
                         color: "currentColor",
                     }),
-                    h.intl.string(g.default.iHYMAw),
+                    y.intl.string(g.default.iHYMAw),
                 ],
             }),
             (0, n.jsxs)(c.hzk, {
                 "data-migration-pending": !0,
-                className: y.content,
+                className: h.content,
                 children: [
                     (0, n.jsx)(c.Text, {
                         className: v.marginBottom8,
                         variant: "text-lg/bold",
                         color: "header-primary",
-                        children: h.intl.string(g.default.AVTZaG),
+                        children: y.intl.string(g.default.AVTZaG),
                     }),
                     (0, n.jsx)(c.Text, {
                         className: v.marginBottom20,
                         variant: "text-sm/normal",
                         color: "header-secondary",
-                        children: h.intl.format(g.default.LyyCsL, {
+                        children: y.intl.format(g.default.LyyCsL, {
                             link: "https://support.discord.com/hc/articles/14155060633623",
                         }),
                     }),
                     (0, n.jsx)("div", {
-                        className: y.qrCodeContainer,
+                        className: h.qrCodeContainer,
                         children: (0, n.jsx)(c.P3F, {
-                            className: s()(y.qrCodeObscure, { [y.visible]: S }),
-                            onClick: k,
+                            className: s()(h.qrCodeObscure, { [h.visible]: k }),
+                            onClick: S,
                             children: (0, n.jsx)(u.c2, {
                                 size: 272,
-                                text: S ? q : x.vH,
+                                text: k ? q : x.vH,
                                 overlaySize: u.cK.SIZE_60,
-                                className: y.qrCodeOverlay,
+                                className: h.qrCodeOverlay,
                             }),
                         }),
                     }),
                     (0, n.jsx)(c.Text, {
-                        className: y.reminder,
+                        className: h.reminder,
                         variant: "text-xs/semibold",
                         color: "header-secondary",
-                        children: h.intl.string(g.default.goDyoa),
+                        children: y.intl.string(g.default.goDyoa),
                     }),
                     (0, n.jsx)("div", {
-                        className: s()(y.buttonContainer, v.marginTop20),
-                        children: (0, n.jsxs)(c.hE2, {
+                        className: s()(h.buttonContainer, v.marginTop20),
+                        children: (0, n.jsxs)(c.ButtonGroup, {
                             fullWidth: !0,
                             children: [
-                                (0, n.jsx)(c.zxk, {
+                                (0, n.jsx)(c.Button, {
                                     variant: "secondary",
-                                    text: h.intl.string(h.t.cpT0Cg),
+                                    text: y.intl.string(y.t.cpT0Cg),
                                     onClick: t,
                                 }),
-                                (0, n.jsx)(c.zxk, {
+                                (0, n.jsx)(c.Button, {
                                     variant: "primary",
-                                    text: i ? h.intl.string(g.default.wg2xwc) : h.intl.string(g.default["10dX6e"]),
-                                    onClick: k,
+                                    text: i ? y.intl.string(g.default.wg2xwc) : y.intl.string(g.default["10dX6e"]),
+                                    onClick: S,
                                     loading: i && O,
                                 }),
                             ],

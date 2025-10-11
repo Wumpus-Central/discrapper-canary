@@ -1,6 +1,6 @@
 n.d(t, {
-    As: () => k,
-    By: () => j,
+    As: () => j,
+    By: () => k,
     Lu: () => U,
     e9: () => Y,
     hG: () => Z,
@@ -91,7 +91,7 @@ let D = (e, t) => {
         var n;
         return !!(null == (n = e.discounts) ? void 0 : n.some((e) => e.type === t));
     },
-    x = (e, t) => {
+    L = (e, t) => {
         var n, r, i;
         return (
             e.subscriptionPlanPrice -
@@ -100,7 +100,7 @@ let D = (e, t) => {
                 : 0)
         );
     };
-function L(e, t, n, r) {
+function x(e, t, n, r) {
     let i = D(e, d.eW.PREMIUM_TRIAL);
     switch (e.subscriptionPlanId) {
         case T.Xh.PREMIUM_MONTH_LEGACY:
@@ -152,7 +152,7 @@ function M(e) {
         h = (0, c.e7)([p.Z], () => p.Z.get(n.subscriptionPlanId)),
         m = null == (t = (0, O.N)(f)) ? void 0 : t.subscription_trial;
     l()(null != h, "Missing subscriptionPlan");
-    let b = L(
+    let b = x(
         n,
         h,
         d,
@@ -203,7 +203,7 @@ function M(e) {
         inTrialPeriod: _,
     });
 }
-function k(e) {
+function j(e) {
     let { label: t, tooltipText: n, tooltipAriaLabel: i } = e;
     return (0, r.jsxs)("div", {
         className: C.invoiceItemLabelWithIcon,
@@ -232,7 +232,7 @@ function k(e) {
         ],
     });
 }
-function j(e) {
+function k(e) {
     let { invoice: t, isPrepaidPaymentSource: n } = e,
         i = (0, y.j)(t.invoiceItems),
         a = i.find((e) => !(0, g.Z8)(e.subscriptionPlanId) && e.amount >= 0),
@@ -284,7 +284,7 @@ function U(e) {
                 e.discounts.find((e) => e.type === d.eW.PREMIUM_LEGACY_UPGRADE_PROMOTION),
         ),
         f = D(s, d.eW.PREMIUM_TRIAL),
-        _ = x(s, d.eW.SUBSCRIPTION_PLAN),
+        _ = L(s, d.eW.SUBSCRIPTION_PLAN),
         p = s.quantity * _,
         h = s.amount + (null != c ? c.amount : 0) - p + (null != u ? u.amount : 0),
         m = o
@@ -306,7 +306,7 @@ function U(e) {
             0 === h || f
                 ? null
                 : (0, r.jsx)(v.B1, {
-                      label: (0, r.jsx)(k, {
+                      label: (0, r.jsx)(j, {
                           label: A.intl.formatToPlainString(A.t.ZSVgeX, {
                               planName: (0, g.PV)(n.id) ? (0, g.aq)(n.id) : n.name,
                           }),
@@ -316,7 +316,7 @@ function U(e) {
                   }),
             0 !== m
                 ? (0, r.jsx)(v.B1, {
-                      label: (0, r.jsx)(k, {
+                      label: (0, r.jsx)(j, {
                           label: A.intl.string(A.t["+as5ZW"]),
                           tooltipText: A.intl.format(A.t.UDop9f, {}),
                           tooltipAriaLabel: A.intl.string(A.t.P68ePD),
@@ -550,7 +550,7 @@ function Y(e) {
         (0, r.jsxs)("div", {
             className: i,
             children: [
-                (0, r.jsx)(u.X6q, {
+                (0, r.jsx)(u.Heading, {
                     variant: "heading-md/semibold",
                     children: A.intl.string(A.t.PEjaCw),
                 }),
@@ -581,7 +581,7 @@ function Y(e) {
                               }),
                           ],
                       })
-                    : (0, r.jsx)(u.X6q, {
+                    : (0, r.jsx)(u.Heading, {
                           variant: "text-md/normal",
                           children: "".concat(t, " - ").concat(h),
                       }),

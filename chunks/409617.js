@@ -1,4 +1,4 @@
-i.d(n, { Z: () => C }), i(388685);
+i.d(e, { Z: () => C }), i(388685);
 var t = i(951288),
     a = i(647438),
     s = i(120356),
@@ -14,8 +14,8 @@ var t = i(951288),
     u = i(388032),
     h = i(707489),
     N = i(186425);
-function C(e) {
-    let { className: n, isDsaEligible: i = !1, onClose: s, onNext: C, onBack: j } = e,
+function C(n) {
+    let { className: e, isDsaEligible: i = !1, onClose: s, onNext: C, onBack: j } = n,
         _ = (0, g.U0)(),
         E = (0, r.e7)([x.Z], () => x.Z.getFreeTextAppealReason()),
         [v, I] = a.useState(""),
@@ -23,9 +23,9 @@ function C(e) {
     a.useEffect(() => {
         I(null != E ? E : ""), S(_ === p.bK.SOMETHING_ELSE);
     }, [E, _, i]);
-    let k = p.RY.map((e) => ({
-        value: e,
-        name: (0, m.ox)(e),
+    let A = p.RY.map((n) => ({
+        value: n,
+        name: (0, m.ox)(n),
     }));
     return (0, t.jsxs)(t.Fragment, {
         children: [
@@ -35,7 +35,7 @@ function C(e) {
                 className: N.header,
                 separator: !1,
                 children: [
-                    (0, t.jsx)(o.X6q, {
+                    (0, t.jsx)(o.Heading, {
                         className: N.title,
                         variant: "heading-xl/semibold",
                         children: u.intl.string(u.t["C5q+pa"]),
@@ -56,15 +56,15 @@ function C(e) {
             }),
             (0, t.jsxs)(o.hzk, {
                 "data-migration-pending": !0,
-                className: l()(h.modalContent, n),
+                className: l()(h.modalContent, e),
                 paddingFix: !1,
                 children: [
                     (0, t.jsx)(o.FXm, {
                         value: _,
-                        options: k,
-                        onChange: (e) => {
-                            S(e === p.bK.SOMETHING_ELSE),
-                                e !== p.bK.SOMETHING_ELSE &&
+                        options: A,
+                        onChange: (n) => {
+                            S(n === p.bK.SOMETHING_ELSE),
+                                n !== p.bK.SOMETHING_ELSE &&
                                     (I(""),
                                     c.Z.dispatch({
                                         type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
@@ -72,7 +72,7 @@ function C(e) {
                                     })),
                                 c.Z.dispatch({
                                     type: "SAFETY_HUB_APPEAL_SIGNAL_SELECT",
-                                    signal: e,
+                                    signal: n,
                                 });
                         },
                     }),
@@ -104,10 +104,10 @@ function C(e) {
             }),
             (0, t.jsx)(o.mzw, {
                 "data-migration-pending": !0,
-                children: (0, t.jsxs)(o.hE2, {
+                children: (0, t.jsxs)(o.ButtonGroup, {
                     direction: "horizontal-reverse",
                     children: [
-                        (0, t.jsx)(o.zxk, {
+                        (0, t.jsx)(o.Button, {
                             variant: "primary",
                             text: u.intl.string(u.t.PDTjLC),
                             onClick: () => {
@@ -118,7 +118,7 @@ function C(e) {
                                     null == C || C();
                             },
                         }),
-                        (0, t.jsx)(o.zxk, {
+                        (0, t.jsx)(o.Button, {
                             variant: "secondary",
                             text: u.intl.string(u.t["13/7kZ"]),
                             onClick: () => {

@@ -69,7 +69,7 @@ function f(e) {
                 onClick: t,
                 variant: "icon-only",
             }),
-            (0, r.jsx)(o.X6q, {
+            (0, r.jsx)(o.Heading, {
                 variant: "heading-lg/semibold",
                 children: n,
             }),

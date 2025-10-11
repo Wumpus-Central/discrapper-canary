@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(596454),
     f = n(410030),
     h = n(100527),
-    x = n(906732),
-    b = n(623624),
+    b = n(906732),
+    x = n(623624),
     j = n(357156),
     v = n(208049),
     _ = n(763296),
@@ -81,15 +81,15 @@ function U(e, t) {
 let B = w.isPlatformEmbedded || "Safari" !== o().name;
 function F() {
     let e = (0, c.e7)([R.Z], () => R.Z.getProps().guild),
-        { analyticsLocations: t } = (0, x.ZP)(h.Z.GUILD_SETTINGS_SOUNDBOARD);
+        { analyticsLocations: t } = (0, b.ZP)(h.Z.GUILD_SETTINGS_SOUNDBOARD);
     return null == e
         ? null
-        : (0, r.jsx)(x.Gt, {
+        : (0, r.jsx)(b.Gt, {
               value: t,
               children: (0, r.jsxs)(g.Kqy, {
                   gap: 8,
                   children: [
-                      (0, r.jsx)(g.X6q, {
+                      (0, r.jsx)(g.Heading, {
                           variant: "heading-lg/semibold",
                           children: k.intl.string(k.t.OWQNYm),
                       }),
@@ -100,14 +100,14 @@ function F() {
 }
 function H(e) {
     let { children: t } = e;
-    return (0, r.jsx)(g.X6q, {
+    return (0, r.jsx)(g.Heading, {
         className: G.tableHeader,
         variant: "heading-sm/semibold",
         color: "header-secondary",
         children: t,
     });
 }
-function z(e) {
+function W(e) {
     let { currentTier: t, availableSounds: n, guildId: i } = e,
         l = E.Z.getGuild(i),
         a = null != l ? (0, P.nL)(l) : 0;
@@ -125,7 +125,7 @@ function z(e) {
                       children: (0, r.jsx)(g.P3F, {
                           className: G.boostingIconWrapper,
                           onClick: () => {
-                              (0, b.f)({
+                              (0, x.f)({
                                   guildId: i,
                                   location: {
                                       section: A.jXE.GUILD_SETTINGS_SOUNDBOARD,
@@ -203,7 +203,7 @@ let V = (e) => {
             ),
         );
     },
-    W = () => {
+    z = () => {
         let e = i.useRef(null);
         return (0, r.jsx)(V, {
             renderPopoutBody: () =>
@@ -217,7 +217,7 @@ let V = (e) => {
                     "div",
                     U(M({ ref: e }, n), {
                         children: (0, r.jsx)(
-                            g.zxk,
+                            g.Button,
                             U(M({}, t), {
                                 disabled: !0,
                                 variant: "primary",
@@ -248,7 +248,7 @@ function K(e) {
     }, []);
     let p = i.useMemo(() => l.reduce((e, t) => ((e[t.soundId] = new Audio((0, C.Z)(t.soundId))), e), {}), [l]),
         h = 0 === l.length && !a;
-    function x(e) {
+    function b(e) {
         var t;
         null == (t = o.current) || t.pause();
         let n = p[e.soundId];
@@ -265,8 +265,8 @@ function K(e) {
         a)
     )
         return (0, r.jsx)(g.$jN, {});
-    let b = B
-        ? (0, r.jsx)(g.zxk, {
+    let x = B
+        ? (0, r.jsx)(g.Button, {
               variant: "primary",
               text: k.intl.string(k.t["/uNYPD"]),
               onClick: function () {
@@ -277,7 +277,7 @@ function K(e) {
               },
               disabled: m <= 0 || !s,
           })
-        : (0, r.jsx)(W, {});
+        : (0, r.jsx)(z, {});
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
@@ -290,7 +290,7 @@ function K(e) {
                     }),
                     (0, r.jsx)("div", {
                         className: G.buttons,
-                        children: !h && b,
+                        children: !h && x,
                     }),
                 ],
             }),
@@ -310,17 +310,17 @@ function K(e) {
                               noteClassName: G.emptyText,
                               children: k.intl.string(k.t.I6P1p6),
                           }),
-                          b,
+                          x,
                       ],
                   })
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(g.izJ, { className: G.divider }),
-                          (0, r.jsx)(g.X6q, {
+                          (0, r.jsx)(g.Heading, {
                               className: G.tableTitle,
                               variant: "heading-md/bold",
                               color: "header-primary",
-                              children: (0, r.jsx)(z, {
+                              children: (0, r.jsx)(W, {
                                   guildId: t.id,
                                   currentTier: u,
                                   availableSounds: m,
@@ -349,7 +349,7 @@ function K(e) {
                                               sound: e,
                                               isPlaying: !1,
                                               guild: t,
-                                              onPlaySound: x,
+                                              onPlaySound: b,
                                           },
                                           e.soundId,
                                       ),
@@ -363,12 +363,12 @@ function K(e) {
 }
 function Y(e) {
     let { sound: t, isPlaying: l, onPlaySound: s, guild: o } = e,
-        { soundId: d, name: u, user: f, userId: h, emojiId: b, emojiName: _ } = t,
-        { analyticsLocations: C } = (0, x.ZP)(),
+        { soundId: d, name: u, user: f, userId: h, emojiId: x, emojiName: _ } = t,
+        { analyticsLocations: C } = (0, b.ZP)(),
         O = (0, c.e7)([I.default], () => (null != f ? f : I.default.getUser(h)), [h, f]),
         { canManageGuildExpression: E } = (0, j.XJ)(o),
         S = i.useMemo(() => E(t), [t, E]),
-        P = null != b || null != _,
+        P = null != x || null != _,
         [w, R] = i.useState(!1),
         D = (0, y.z)(t, o.id);
     async function A() {
@@ -401,7 +401,7 @@ function Y(e) {
         children: [
             P
                 ? (0, r.jsx)(p.Z, {
-                      emojiId: b,
+                      emojiId: x,
                       emojiName: _,
                       className: G.emoji,
                   })

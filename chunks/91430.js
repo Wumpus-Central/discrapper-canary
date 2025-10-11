@@ -35,11 +35,11 @@ var r = n(951288),
     P = n(212895),
     w = n(374649),
     D = n(140465),
-    x = n(160913),
-    L = n(331972),
+    L = n(160913),
+    x = n(331972),
     M = n(757861),
-    k = n(385251),
-    j = n(987997),
+    j = n(385251),
+    k = n(987997),
     U = n(393411),
     G = n(908951),
     B = n(592889),
@@ -105,7 +105,7 @@ function K(e) {
                         ],
                     }),
                     s &&
-                        (0, r.jsx)(j.Z, {
+                        (0, r.jsx)(k.Z, {
                             onClick: () =>
                                 (0, T.openUserSettings)(I.n.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, {
                                     section: F.oAB.GUILD_BOOSTING,
@@ -211,7 +211,7 @@ function Q(e) {
     return (0, r.jsxs)("div", {
         className: o()(Y.billingInformation, a),
         children: [
-            (0, r.jsx)(p.X6q, {
+            (0, r.jsx)(p.Heading, {
                 variant: "heading-md/semibold",
                 className: Y.detailBlockHeader,
                 children: H.intl.string(H.t.KXQjfX),
@@ -223,7 +223,7 @@ function Q(e) {
 function J() {
     return (0, r.jsxs)("div", {
         children: [
-            (0, r.jsx)(p.X6q, {
+            (0, r.jsx)(p.Heading, {
                 variant: "heading-lg/semibold",
                 className: Y.sectionTitle,
                 children: H.intl.string(H.t["/gs+Pz"]),
@@ -291,21 +291,21 @@ function $(e) {
         [O] = (0, w.ED)(y);
     O = null != d ? d : O;
     let v = (0, b.Z)(),
-        I = (0, L.$)(),
+        I = (0, x.$)(),
         T = (0, D.lr)(),
         S = R.ZP.isBaseSubscriptionCanceled(t),
         A = (0, M.P)(t, i);
     if (null == E || null == O) return (0, r.jsx)(p.$jN, {});
     let C = A ? (0, D.Yi)(O) : null,
         N = null != C || (null != T && (T.discountId === Z.dT || T.discountId === Z.dB)),
-        x = A && ((S && null != I) || (!S && N));
+        L = A && ((S && null != I) || (!S && N));
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
                 className: Y.subscriptionRows,
                 children: [
-                    x
-                        ? (0, r.jsx)(k.Z, {
+                    L
+                        ? (0, r.jsx)(j.Z, {
                               subscription: t,
                               invoicePreview: O,
                               paymentSource: i,
@@ -408,7 +408,7 @@ function en(e) {
         } = e;
     null != o && null != o[0] && (a = o[0]);
     let { analyticsLocations: E } = (0, g.ZP)(m.Z.SUBSCRIPTION_DETAILS),
-        b = (0, L.$)(),
+        b = (0, x.$)(),
         y = null != o ? o.slice(1) : [],
         [O, v] = i.useState(0);
     i.useEffect(() => {
@@ -453,9 +453,9 @@ function en(e) {
             (7 >= R.diff(u()(), "days") || a.status === F.O0b.PAST_DUE) &&
             !N &&
             !a.isPurchasedExternally,
-        k = C && a.status === F.O0b.PAST_DUE && !N && !a.isPurchasedExternally,
-        j = (0, x.U)(),
-        U = !N && j,
+        j = C && a.status === F.O0b.PAST_DUE && !N && !a.isPurchasedExternally,
+        k = (0, L.U)(),
+        U = !N && k,
         G = (null == a ? void 0 : a.status) === F.O0b.PAST_DUE,
         Z = G ? u()().diff(u()(a.currentPeriodStart), "days") : 0,
         [V] = (0, w.Ox)({
@@ -478,7 +478,7 @@ function en(e) {
               description: H.intl.string(H.t.D8UpUl),
               children: [
                   M ? (0, r.jsx)(z, {}) : null,
-                  k ? (0, r.jsx)(q, {}) : null,
+                  j ? (0, r.jsx)(q, {}) : null,
                   U && null != V
                       ? (0, r.jsx)(X, {
                             daysPastDue: Z,
@@ -498,7 +498,7 @@ function en(e) {
                                   busy: l,
                                   fromStandaloneBillingPage: c,
                                   showNoPaymentMethod: M,
-                                  showInvalidPaymentMethod: k,
+                                  showInvalidPaymentMethod: j,
                                   fetchedCurrentInvoicePreview: I,
                                   fetchedRenewalInvoicePreview: T,
                                   fetchedOpenInvoice: V,
@@ -510,7 +510,7 @@ function en(e) {
                                   {
                                       className: Y.dupSubscriptionRow,
                                       children: [
-                                          (0, r.jsx)(p.X6q, {
+                                          (0, r.jsx)(p.Heading, {
                                               variant: "heading-md/semibold",
                                               className: Y.duplicateHeader,
                                               children: "Duplicate Subscriptions",
@@ -522,7 +522,7 @@ function en(e) {
                                               busy: l,
                                               fromStandaloneBillingPage: c,
                                               showNoPaymentMethod: M,
-                                              showInvalidPaymentMethod: k,
+                                              showInvalidPaymentMethod: j,
                                               fetchedCurrentInvoicePreview: null,
                                               fetchedRenewalInvoicePreview: null,
                                               fetchedOpenInvoice: null,

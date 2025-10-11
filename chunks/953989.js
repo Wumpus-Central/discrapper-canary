@@ -34,7 +34,7 @@ function m(e) {
     return (0, r.jsxs)("div", {
         className: n,
         children: [
-            (0, r.jsx)(o.X6q, {
+            (0, r.jsx)(o.Heading, {
                 variant: "heading-sm/semibold",
                 color: "header-primary",
                 children: d.intl.string(d.t.Fbjlu7),

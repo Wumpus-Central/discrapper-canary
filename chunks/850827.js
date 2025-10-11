@@ -85,7 +85,7 @@ let D = (0, u.Z)((e) => {
                         source: x,
                         onAction: k,
                     });
-                return (0, r.jsxs)(c.hE2, {
+                return (0, r.jsxs)(c.ButtonGroup, {
                     size: "sm",
                     fullWidth: !0,
                     children: [n, e],

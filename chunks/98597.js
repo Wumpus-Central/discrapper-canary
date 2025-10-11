@@ -192,7 +192,9 @@ function R(e) {
                             (e) => e.state !== C.jm8.ENDED && e.channelId === t.id,
                         );
                         (0, u.ZDy)(async () => {
-                            let { default: r } = await Promise.all([n.e("7654"), n.e("54833")]).then(n.bind(n, 560114));
+                            let { default: r } = await Promise.all([n.e("74318"), n.e("7654"), n.e("54833")]).then(
+                                n.bind(n, 560114),
+                            );
                             return (n) =>
                                 (0, i.jsx)(
                                     r,
@@ -200,7 +202,7 @@ function R(e) {
                                         guild: x,
                                         channel: t,
                                         streamUserId: 1 === e.length ? e[0].ownerId : null,
-                                        source: C.t4x.GUILD_CHANNELS,
+                                        source: C.InstantInviteSources.GUILD_CHANNELS,
                                         guildScheduledEvent: Z,
                                     }),
                                 );

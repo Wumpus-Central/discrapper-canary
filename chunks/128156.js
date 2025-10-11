@@ -18,11 +18,11 @@ var i = n(442837),
     _ = n(151545),
     O = n(527790),
     E = n(769140),
-    y = n(864141),
-    v = n(264481),
+    v = n(864141),
+    y = n(264481),
     I = n(693408),
-    S = n(661462),
-    C = n(228168),
+    C = n(661462),
+    S = n(228168),
     T = n(981631),
     N = n(388032),
     j = n(158069);
@@ -44,10 +44,10 @@ function P(e) {
         }),
         z = k.length > 0 || null != U,
         W = L && null == U && null == B && null != G,
-        q = !F && (z || W),
-        Y = M.length > 0,
+        Y = !F && (z || W),
+        q = M.length > 0,
         K = k.some((e) => (0, a.Z)(e));
-    if (!q && !Y && H)
+    if (!Y && !q && H)
         return (0, r.jsx)("div", {
             className: j.cards,
             children: Array.from({ length: 8 }).map((e, t) =>
@@ -70,24 +70,24 @@ function P(e) {
                 ),
             ),
         });
-    if (!q && !Y && !H) {
+    if (!Y && !q && !H) {
         var Q;
         return V
-            ? (0, r.jsx)(v.Uf, { onClose: w })
-            : (0, r.jsx)(v.P9, {
+            ? (0, r.jsx)(y.Uf, { onClose: w })
+            : (0, r.jsx)(y.P9, {
                   user: t,
                   guildId: null != (Q = null == P ? void 0 : P.guildId) ? Q : x,
                   channelId: A,
                   onClose: w,
               });
     }
-    return (0, r.jsxs)(S.F, {
+    return (0, r.jsxs)(C.F, {
         className: j.scroller,
         fade: !0,
         children: [
             (() => {
                 let e = V && D && !K;
-                return q
+                return Y
                     ? (0, r.jsx)(I.Z, {
                           heading: N.intl.string(N.t.J6STd3),
                           children: (0, r.jsxs)("ul", {
@@ -97,7 +97,7 @@ function P(e) {
                                   !R &&
                                       W &&
                                       (0, r.jsx)("li", {
-                                          children: (0, r.jsx)(y.Z, {
+                                          children: (0, r.jsx)(v.Z, {
                                               user: t,
                                               currentUser: n,
                                               voiceChannel: G,
@@ -130,7 +130,7 @@ function P(e) {
                                   R &&
                                       W &&
                                       (0, r.jsx)("li", {
-                                          children: (0, r.jsx)(y.Z, {
+                                          children: (0, r.jsx)(v.Z, {
                                               user: t,
                                               currentUser: n,
                                               voiceChannel: G,
@@ -147,14 +147,14 @@ function P(e) {
                         })
                       : null;
             })(),
-            Y
+            q
                 ? (0, r.jsx)(I.Z, {
                       heading: N.intl.string(N.t.jzgEoK),
                       introText: V
                           ? N.intl.format(N.t["4bk9Ag"], {
                                 learnMoreHook: (e, t) =>
                                     (0, r.jsx)(
-                                        l.eee,
+                                        l.Anchor,
                                         {
                                             href: f.Z.getArticleURL(T.BhN.ACTIVITY_STATUS_SETTINGS),
                                             children: e,
@@ -163,7 +163,7 @@ function P(e) {
                                     ),
                             })
                           : void 0,
-                      scrollIntoView: Z === C.Tb.RECENT_ACTIVITY,
+                      scrollIntoView: Z === S.Tb.RECENT_ACTIVITY,
                       children: (0, r.jsx)("ul", {
                           className: j.cards,
                           children: M.map((e) =>

@@ -195,7 +195,7 @@ class $ extends (r = a.PureComponent) {
             (0, i.jsxs)("div", {
                 className: F.headerContainer,
                 children: [
-                    (0, i.jsx)(d.X6q, {
+                    (0, i.jsx)(d.Heading, {
                         className: s()((0, w.l)(F, "headerText", e ? "EmptyBody" : "Normal")),
                         variant: a ? "text-xs/semibold" : "eyebrow",
                         children: (0, i.jsx)(g.Z, { children: t }),
@@ -253,7 +253,7 @@ class $ extends (r = a.PureComponent) {
                       })
                     : null;
         if (p)
-            h = (0, i.jsx)(d.eee, {
+            h = (0, i.jsx)(d.Anchor, {
                 onClick: this.handleOpenSpotifyAlbum,
                 children: h,
             });
@@ -298,7 +298,7 @@ class $ extends (r = a.PureComponent) {
                             }),
                         ],
                     }),
-                    (0, i.jsx)(d.eee, {
+                    (0, i.jsx)(d.Anchor, {
                         className: F.twitchBackgroundImage,
                         href: e.url,
                         children: h,
@@ -383,7 +383,7 @@ class $ extends (r = a.PureComponent) {
                 ((c = a),
                 (u = a),
                 (0, M.Z)(e) && null != e.sync_id && null != a
-                    ? (u = (0, i.jsx)(d.eee, {
+                    ? (u = (0, i.jsx)(d.Anchor, {
                           className: F.bodyLink,
                           onClick: this.handleOpenSpotifyTrack,
                           children: a,
@@ -526,7 +526,7 @@ class $ extends (r = a.PureComponent) {
             let t = (t, n) =>
                 null != e.sync_id && null != u
                     ? (0, i.jsx)(
-                          d.eee,
+                          d.Anchor,
                           {
                               className: F.bodyLink,
                               onClick: this.handleOpenSpotifyAlbum,

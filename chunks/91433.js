@@ -65,13 +65,13 @@ function E(e) {
                   (0, r.jsxs)("div", {
                       className: g.buttonContainer,
                       children: [
-                          (0, r.jsx)(s.zxk, {
+                          (0, r.jsx)(s.Button, {
                               variant: v ? "secondary" : "primary",
                               size: "sm",
                               onClick: N,
                               text: m.intl.string(m.t.ZcibdX),
                           }),
-                          (0, r.jsx)(s.zxk, {
+                          (0, r.jsx)(s.Button, {
                               variant: "secondary",
                               size: "sm",
                               onClick: R,

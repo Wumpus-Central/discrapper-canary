@@ -1,4 +1,4 @@
-t.d(r, { default: () => h }), t(388685);
+t.d(r, { default: () => p }), t(388685);
 var n = t(951288),
     o = t(647438),
     i = t(512722),
@@ -10,9 +10,9 @@ var n = t(951288),
     u = t(345909),
     b = t(388032),
     f = t(544723);
-let h = (e) => {
-    let { currentUser: r, otherUser: t, transitionState: i, onClose: h } = e,
-        [p, j] = o.useState(!1),
+let p = (e) => {
+    let { currentUser: r, otherUser: t, transitionState: i, onClose: p } = e,
+        [h, j] = o.useState(!1),
         m = o.useCallback(() => {
             j(!0);
         }, []),
@@ -20,8 +20,8 @@ let h = (e) => {
             j(!1);
         }, []),
         y = o.useCallback(() => {
-            h();
-        }, [h]),
+            p();
+        }, [p]),
         g = (0, a.Z)(),
         { declineLinkRequest: O, isDeclineLoading: v } = (0, l.G)({
             onError: m,
@@ -37,7 +37,7 @@ let h = (e) => {
                 },
                 children: [
                     (0, n.jsx)(d.Z.Error, {
-                        error: p ? b.intl.string(u.default.tJAUys) : void 0,
+                        error: h ? b.intl.string(u.default.tJAUys) : void 0,
                         onDismiss: x,
                     }),
                     (0, n.jsxs)(c.hzk, {
@@ -61,18 +61,18 @@ let h = (e) => {
                     (0, n.jsx)(c.mzw, {
                         "data-migration-pending": !0,
                         children: (0, n.jsx)(d.Z.ButtonFooter, {
-                            children: (0, n.jsxs)(c.hE2, {
+                            children: (0, n.jsxs)(c.ButtonGroup, {
                                 direction: "horizontal-reverse",
                                 children: [
-                                    (0, n.jsx)(c.zxk, {
+                                    (0, n.jsx)(c.Button, {
                                         variant: "secondary",
                                         size: "sm",
                                         text: b.intl.string(b.t["ETE/oK"]),
                                         type: "button",
                                         disabled: v,
-                                        onClick: h,
+                                        onClick: p,
                                     }),
-                                    (0, n.jsx)(c.zxk, {
+                                    (0, n.jsx)(c.Button, {
                                         variant: "critical-primary",
                                         size: "sm",
                                         text: b.intl.string(u.default.dKxFcn),

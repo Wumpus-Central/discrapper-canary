@@ -200,7 +200,7 @@ class T extends a.PureComponent {
             );
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsxs)(c.X6q, {
+                (0, i.jsxs)(c.Heading, {
                     variant: "heading-lg/semibold",
                     children: [
                         (0, i.jsx)(c.mBM, {

@@ -224,7 +224,7 @@ let y = () => 80,
                             height: "".concat(16, "px"),
                             position: "absolute",
                         }),
-                        children: (0, r.jsx)(c.X6q, {
+                        children: (0, r.jsx)(c.Heading, {
                             variant: "heading-md/medium",
                             children: n,
                         }),

@@ -46,7 +46,7 @@ function E(e) {
         t ? (N = g.intl.string(g.t.XvBdeX)) : A && (N = g.intl.string(g.t.JH1SJy)),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(o.zxk, {
+                (0, r.jsx)(o.Button, {
                     size: "sm",
                     variant: A ? "secondary" : "active",
                     icon: o.hGI,

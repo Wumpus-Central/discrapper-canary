@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(774380),
     f = n(404270),
     h = n(441536),
-    x = n(174604),
-    b = n(399829),
+    b = n(174604),
+    x = n(399829),
     j = n(428862),
     v = n(899667),
     _ = n(626135),
@@ -90,7 +90,7 @@ function w() {
         children: [
             (0, r.jsxs)(i.Fragment, {
                 children: [
-                    (0, r.jsx)(a.X6q, {
+                    (0, r.jsx)(a.Heading, {
                         variant: "heading-lg/semibold",
                         children: E.intl.string(E.t.nLovSU),
                     }),
@@ -110,13 +110,13 @@ function w() {
                 ],
             }),
             null != e &&
-                (0, r.jsx)(x.Z, {
+                (0, r.jsx)(b.Z, {
                     guild: e,
                     onButtonClick: function () {
                         null != e && ((0, c.xf)(), (0, h.Z)(e.id, g.Z.GUILD_POWERUPS_GUILD_SETTINGS_PREMIUM));
                     },
                 }),
-            (0, r.jsx)(b.Z, {
+            (0, r.jsx)(x.Z, {
                 tiers: (0, C.cP)(null != e && e.features.has(N.oNc.COMMUNITY) && e.maxStageVideoChannelUsers >= N.B9o),
                 renderTier: P,
             }),

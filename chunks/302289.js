@@ -25,7 +25,7 @@ let p = () => {
             (0, r.jsxs)(o.Kqy, {
                 gap: 8,
                 children: [
-                    (0, r.jsx)(o.X6q, {
+                    (0, r.jsx)(o.Heading, {
                         variant: "heading-md/bold",
                         children: (0, r.jsx)(o.y5t, { children: e }),
                     }),

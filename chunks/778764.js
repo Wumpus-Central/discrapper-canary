@@ -118,7 +118,7 @@ function R(e) {
                 className: T.header,
                 separator: !1,
                 children: [
-                    (0, r.jsxs)(l.X6q, {
+                    (0, r.jsxs)(l.Heading, {
                         id: S,
                         variant: "heading-lg/semibold",
                         children: [
@@ -169,7 +169,7 @@ function R(e) {
                                 ],
                             }),
                             (0, r.jsx)(l.mzw, {
-                                children: (0, r.jsx)(l.zxk, {
+                                children: (0, r.jsx)(l.Button, {
                                     variant: "primary",
                                     text: I.intl.string(I.t.oibaQU),
                                     onClick: j,
@@ -199,7 +199,7 @@ function R(e) {
                                 ],
                             }),
                             (0, r.jsx)(l.mzw, {
-                                children: (0, r.jsx)(l.zxk, {
+                                children: (0, r.jsx)(l.Button, {
                                     variant: "primary",
                                     text: "",
                                     loading: !0,
@@ -253,16 +253,16 @@ function R(e) {
                                 }),
                                 (0, r.jsx)(l.mzw, {
                                     className: T.footer,
-                                    children: (0, r.jsxs)(l.hE2, {
+                                    children: (0, r.jsxs)(l.ButtonGroup, {
                                         direction: "horizontal-reverse",
                                         children: [
-                                            (0, r.jsx)(l.zxk, {
+                                            (0, r.jsx)(l.Button, {
                                                 variant: "primary",
                                                 text: I.intl.string(I.t["5dyZ1d"]),
                                                 type: "submit",
                                                 disabled: N,
                                             }),
-                                            (0, r.jsx)(l.zxk, {
+                                            (0, r.jsx)(l.Button, {
                                                 variant: "secondary",
                                                 text: I.intl.string(I.t["13/7kZ"]),
                                                 onClick: () => {
@@ -298,10 +298,10 @@ function R(e) {
                             }),
                             (0, r.jsx)(l.mzw, {
                                 className: T.footer,
-                                children: (0, r.jsxs)(l.hE2, {
+                                children: (0, r.jsxs)(l.ButtonGroup, {
                                     direction: "horizontal-reverse",
                                     children: [
-                                        (0, r.jsx)(l.zxk, {
+                                        (0, r.jsx)(l.Button, {
                                             variant: "primary",
                                             text: I.intl.string(I.t.MubYGx),
                                             onClick: () => {
@@ -311,7 +311,7 @@ function R(e) {
                                                     });
                                             },
                                         }),
-                                        (0, r.jsx)(l.zxk, {
+                                        (0, r.jsx)(l.Button, {
                                             variant: "secondary",
                                             text: I.intl.string(I.t.i4jeWV),
                                             onClick: o,
@@ -442,7 +442,7 @@ function w() {
                         ),
                     }),
                 (0, r.jsx)("div", {
-                    children: (0, r.jsx)(l.zxk, {
+                    children: (0, r.jsx)(l.Button, {
                         variant: "primary",
                         size: "sm",
                         text: I.intl.string(I.t.vrOCCg),

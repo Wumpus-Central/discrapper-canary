@@ -83,7 +83,7 @@ function I(e) {
 }
 function Z() {
     return (0, l.jsx)(I, {
-        children: (0, l.jsx)(o.X6q, {
+        children: (0, l.jsx)(o.Heading, {
             color: "header-primary",
             variant: "heading-xl/semibold",
             className: p.title,
@@ -93,7 +93,7 @@ function Z() {
 }
 function y() {
     return (0, l.jsx)(I, {
-        children: (0, l.jsx)(o.X6q, {
+        children: (0, l.jsx)(o.Heading, {
             color: "header-secondary",
             variant: "heading-md/semibold",
             className: p.errorTitle,

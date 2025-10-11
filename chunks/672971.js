@@ -81,7 +81,7 @@ class y extends i.Component {
                   className: c,
                   children: [
                       v &&
-                          (0, r.jsx)(d.X6q, {
+                          (0, r.jsx)(d.Heading, {
                               variant: "heading-md/semibold",
                               className: g.formTitle,
                               children: m.intl.string(m.t.Ogvn5u),

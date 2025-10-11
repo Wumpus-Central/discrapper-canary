@@ -1,39 +1,39 @@
-n.d(t, {
+t.d(n, {
     Z: () => C,
     q: () => _,
 }),
-    n(953529);
-var l = n(951288);
-n(647438);
-var r = n(120356),
-    i = n.n(r),
-    a = n(704215),
-    o = n(481060),
-    s = n(266454),
-    c = n(605236),
-    d = n(434404),
-    u = n(707076),
-    m = n(398758),
-    h = n(981631),
-    p = n(921944),
-    f = n(388032),
-    g = n(886461),
-    x = n(697611);
+    t(953529);
+var l = t(951288);
+t(647438);
+var r = t(120356),
+    i = t.n(r),
+    a = t(704215),
+    o = t(481060),
+    s = t(266454),
+    c = t(605236),
+    d = t(434404),
+    u = t(707076),
+    m = t(398758),
+    h = t(981631),
+    p = t(921944),
+    f = t(388032),
+    g = t(886461),
+    x = t(697611);
 function _(e) {
     return (0, m.te)(e) ? 250 : 152;
 }
 function C(e) {
-    let { guild: t } = e,
-        n = (0, m.te)(t.id),
+    let { guild: n } = e,
+        t = (0, m.te)(n.id),
         r = (0, s.Nj)(a.z.GUILD_HEADER_COMMUNITY_ONBOARDING_ADMIN_UPSELL),
-        _ = n && !r ? a.z.GUILD_HEADER_COMMUNITY_ONBOARDING_ADMIN_UPSELL : a.z.CHANNEL_BROWSER_NUX;
+        _ = t && !r ? a.z.GUILD_HEADER_COMMUNITY_ONBOARDING_ADMIN_UPSELL : a.z.CHANNEL_BROWSER_NUX;
     (0, c.kk)(_);
-    let C = n
+    let C = t
         ? (0, l.jsxs)(l.Fragment, {
               children: [
                   (0, l.jsxs)("div", {
                       children: [
-                          (0, l.jsx)(o.X6q, {
+                          (0, l.jsx)(o.Heading, {
                               className: g.heading,
                               color: "always-white",
                               variant: "heading-lg/semibold",
@@ -45,10 +45,10 @@ function C(e) {
                               color: "always-white",
                               children: f.intl.string(f.t.CXh95e),
                           }),
-                          (0, l.jsx)(o.zxk, {
+                          (0, l.jsx)(o.Button, {
                               variant: "overlay-primary",
                               onClick: () => {
-                                  d.Z.open(t.id, h.pNK.ONBOARDING), (0, s.Q3)(_, { dismissAction: p.L.PRIMARY });
+                                  d.Z.open(n.id, h.pNK.ONBOARDING), (0, s.Q3)(_, { dismissAction: p.L.PRIMARY });
                               },
                               text: f.intl.string(f.t["+OtO4e"]),
                           }),
@@ -69,7 +69,7 @@ function C(e) {
                   }),
                   (0, l.jsxs)("div", {
                       children: [
-                          (0, l.jsx)(o.X6q, {
+                          (0, l.jsx)(o.Heading, {
                               className: g.heading,
                               variant: "heading-lg/semibold",
                               color: "header-primary",
@@ -91,7 +91,7 @@ function C(e) {
               ],
           });
     return (0, l.jsxs)("div", {
-        className: i()(g.container, { [g.adminUpsell]: n }),
+        className: i()(g.container, { [g.adminUpsell]: t }),
         children: [
             (0, l.jsx)(o.P3F, {
                 className: g.closeButton,

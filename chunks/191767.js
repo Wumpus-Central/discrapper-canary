@@ -77,8 +77,8 @@ function E() {
                         "Payment-method-specific components and views may not appear for you unless your browser is supported for that payment method and they have been configured on your browser.",
                 }),
                 (0, a.jsx)(T, {}),
-                (0, a.jsx)(k, {}),
-                (0, a.jsx)(M, {}),
+                (0, a.jsx)(w, {}),
+                (0, a.jsx)(L, {}),
             ],
         }),
     });
@@ -87,7 +87,7 @@ function S() {
     let [e, t] = r.useState("discord://".concat(location.host, "/feature/apple-payment-link"));
     return (0, a.jsxs)(b.$0, {
         children: [
-            (0, a.jsx)(c.X6q, {
+            (0, a.jsx)(c.Heading, {
                 variant: "heading-xl/semibold",
                 children: "Deeplinking",
             }),
@@ -120,7 +120,7 @@ function S() {
 function T() {
     return (0, a.jsxs)(b.$0, {
         children: [
-            (0, a.jsx)(c.X6q, {
+            (0, a.jsx)(c.Heading, {
                 variant: "heading-xl/semibold",
                 children: "Payment Request Components - Google Pay",
             }),
@@ -139,7 +139,7 @@ function T() {
                 label: "Google Pay - Add Payment Step Body Connector View",
                 children: (0, a.jsx)(P, { paymentRequestWallet: "googlePay" }),
             }),
-            (0, a.jsx)(c.X6q, {
+            (0, a.jsx)(c.Heading, {
                 variant: "heading-xl/semibold",
                 children: "Payment Request Components - Apple Pay",
             }),
@@ -232,7 +232,7 @@ function I(e) {
         }),
     });
 }
-function k() {
+function w() {
     let e = {
         onChooseType: () => {},
         onStripePaymentMethodReceived: (e) => {
@@ -242,7 +242,7 @@ function k() {
     };
     return (0, a.jsxs)(b.$0, {
         children: [
-            (0, a.jsx)(c.X6q, {
+            (0, a.jsx)(c.Heading, {
                 variant: "heading-xl/semibold",
                 children: "Choose Payment Source Type Component",
             }),
@@ -299,7 +299,7 @@ function k() {
         ],
     });
 }
-let w = {
+let k = {
         DEFAULT: "Express Checkout Element - Default (No Config)",
         GPAY_FILTERED: "Express Checkout Element - Filtered for Google Pay",
         APPLE_PAY_FILTERED: "Express Checkout Element - Filtered for Apple Pay",
@@ -347,7 +347,7 @@ let w = {
         buttonHeight: 40,
     },
     D = (e) => (void 0 !== e ? JSON.stringify(e, null, 2) : "undefined");
-function L() {
+function M() {
     let [e, t] = r.useState(D(A)),
         [n, l] = r.useState(A),
         [s, d] = r.useState(D(Z)),
@@ -355,7 +355,7 @@ function L() {
         [h, x] = r.useState(null),
         [f, g] = r.useState(
             (0, a.jsx)(b.DS, {
-                errorLabel: w.CONFIGURABLE,
+                errorLabel: k.CONFIGURABLE,
                 elementOptions: A,
                 children: (0, a.jsx)(i.ExpressCheckoutElement, {
                     onConfirm: (e) => {
@@ -450,7 +450,7 @@ function L() {
                                                 children: ["Element updated at: ", new Date().toString()],
                                             }),
                                             (0, a.jsx)(b.DS, {
-                                                errorLabel: w.CONFIGURABLE,
+                                                errorLabel: k.CONFIGURABLE,
                                                 elementOptions: t,
                                                 children: (0, a.jsx)(i.ExpressCheckoutElement, {
                                                     onConfirm: (e) => {
@@ -494,18 +494,18 @@ function L() {
         ],
     });
 }
-function M() {
+function L() {
     return (0, a.jsxs)(b.$0, {
         children: [
-            (0, a.jsx)(c.X6q, {
+            (0, a.jsx)(c.Heading, {
                 variant: "heading-xl/semibold",
                 children: "Stripe Express Checkout Buttons",
             }),
             (0, a.jsx)(b.E_, {
-                label: w.DEFAULT,
+                label: k.DEFAULT,
                 children: (0, a.jsx)("div", {
                     children: (0, a.jsx)(b.DS, {
-                        errorLabel: w.DEFAULT,
+                        errorLabel: k.DEFAULT,
                         children: (0, a.jsx)(i.ExpressCheckoutElement, {
                             onConfirm: (e) => {
                                 console.log("ExpressCheckoutElement onConfirm event: ", e);
@@ -516,7 +516,7 @@ function M() {
                 }),
             }),
             ["GPAY_FILTERED", "APPLE_PAY_FILTERED", "APPLE_AND_GPAY_DISABLED"].map((e) => {
-                let t = w[e];
+                let t = k[e];
                 return (0, a.jsx)(
                     b.E_,
                     {
@@ -548,8 +548,8 @@ function M() {
                 );
             }),
             (0, a.jsx)(b.E_, {
-                label: w.CONFIGURABLE,
-                children: (0, a.jsx)(L, {}),
+                label: k.CONFIGURABLE,
+                children: (0, a.jsx)(M, {}),
             }),
         ],
     });

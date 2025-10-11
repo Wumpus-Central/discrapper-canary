@@ -41,7 +41,7 @@ function m(e) {
                         (0, r.jsxs)("div", {
                             className: h.cta,
                             children: [
-                                (0, r.jsx)(l.X6q, {
+                                (0, r.jsx)(l.Heading, {
                                     color: "none",
                                     variant: "small" === b ? "heading-md/normal" : "heading-lg/normal",
                                     className: h.header,

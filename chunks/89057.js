@@ -27,7 +27,7 @@ function E(e) {
     return (0, r.jsxs)("div", {
         className: a()(h.container, t),
         children: [
-            (0, r.jsx)(l.X6q, {
+            (0, r.jsx)(l.Heading, {
                 className: h.header,
                 variant: "heading-xl/semibold",
                 children: p.intl.string(p.t.vwMEHR),

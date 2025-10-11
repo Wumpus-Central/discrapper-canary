@@ -17,10 +17,10 @@ var n = s(951288),
     g = s(570908),
     b = s(346486),
     y = s(600164),
-    Z = s(210887),
-    C = s(758449),
-    w = s(598077),
-    f = s(592125),
+    C = s(210887),
+    Z = s(758449),
+    f = s(598077),
+    w = s(592125),
     I = s(246946),
     N = s(626135),
     E = s(981631),
@@ -78,7 +78,7 @@ function R(e, t) {
 class T extends r.PureComponent {
     render() {
         let { invite: e, hideDiscriminator: t, hideInviteCode: s } = this.props,
-            r = new w.Z(e.inviter);
+            r = new f.default(e.inviter);
         return (0, n.jsxs)(y.Z, {
             className: a()(_.row, k.card),
             children: [
@@ -157,7 +157,7 @@ class A extends r.PureComponent {
             .then((e) => {
                 let t = e.body.map(
                     (e) =>
-                        new C.Z(
+                        new Z.Z(
                             R(S({}, e), {
                                 maxUses: e.max_uses,
                                 maxAge: e.max_age,
@@ -172,7 +172,7 @@ class A extends r.PureComponent {
             }),
             N.default.track(
                 E.rMx.OPEN_MODAL,
-                R(S({}, (0, v.v_)(f.Z.getChannel(e))), {
+                R(S({}, (0, v.v_)(w.Z.getChannel(e))), {
                     type: "Group DM Invites",
                     source: "Group DM Menu",
                 }),
@@ -207,7 +207,7 @@ class A extends r.PureComponent {
                 (0, n.jsx)(u.RMI, {
                     items: i,
                     children: (e) => {
-                        let t = new w.Z(e.inviter);
+                        let t = new f.default(e.inviter);
                         return (0, n.jsxs)(u.SCH, {
                             id: e.code,
                             children: [
@@ -333,8 +333,8 @@ class A extends r.PureComponent {
             });
     }
 }
-let M = c.ZP.connectStores([I.Z, Z.Z], () => ({
+let M = c.ZP.connectStores([I.Z, C.Z], () => ({
     hideDiscriminators: I.Z.hidePersonalInformation,
     hideInviteCodes: I.Z.hideInstantInvites,
-    theme: Z.Z.theme,
+    theme: C.Z.theme,
 }))(A);

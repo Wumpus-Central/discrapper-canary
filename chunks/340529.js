@@ -161,7 +161,7 @@ function _(e) {
     return (0, n.jsxs)("div", {
         className: v.container,
         children: [
-            (0, n.jsx)(c.X6q, {
+            (0, n.jsx)(c.Heading, {
                 variant: "heading-sm/bold",
                 className: v.header,
                 children: m.intl.string(m.t.GF433N),

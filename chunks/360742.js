@@ -55,7 +55,7 @@ function l(e, t) {
 }
 class c extends r.Z {
     static createFromServer(e) {
-        return new c(l(o({}, e), { user: new i.Z(e.user) }));
+        return new c(l(o({}, e), { user: new i.default(e.user) }));
     }
     constructor(e) {
         var t;

@@ -105,13 +105,13 @@ class v extends i.PureComponent {
                                     (0, r.jsx)("div", {
                                         "data-button-hoisted-classname-wrapper": !0,
                                         className: E.retryButton,
-                                        children: (0, r.jsx)(c.zxk, {
+                                        children: (0, r.jsx)(c.Button, {
                                             variant: "secondary",
                                             text: g.intl.string(g.t["5911LS"]),
                                             onClick: () => this.handlePlay(),
                                         }),
                                     }),
-                                    (0, r.jsx)(c.zxk, {
+                                    (0, r.jsx)(c.Button, {
                                         variant: "primary",
                                         text: g.intl.string(g.t["359PbW"]),
                                         onClick: () => this.handlePlay(!1),
@@ -177,7 +177,7 @@ class v extends i.PureComponent {
                             className: E.closeButton,
                             onClick: this.onClose,
                         }),
-                        (0, r.jsx)(c.X6q, {
+                        (0, r.jsx)(c.Heading, {
                             variant: "heading-lg/semibold",
                             className: b.marginReset,
                             children: n,

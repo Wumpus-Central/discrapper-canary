@@ -38,7 +38,7 @@ function s(e) {
                             (0, d.K)(t, n);
                         },
                         className: l()(c.pageTitleContainer, { [c.selectedPageIndicator]: r === n }),
-                        children: (0, a.jsx)(i.X6q, {
+                        children: (0, a.jsx)(i.Heading, {
                             variant: "heading-md/semibold",
                             color: "text-default",
                             lineClamp: 1,

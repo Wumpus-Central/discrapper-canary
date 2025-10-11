@@ -24,7 +24,7 @@ function C(n) {
             (0, l.jsxs)("div", {
                 className: x.titleDescriptionContainer,
                 children: [
-                    (0, l.jsx)(o.X6q, {
+                    (0, l.jsx)(o.Heading, {
                         variant: "heading-xl/bold",
                         color: "header-primary",
                         lineClamp: 2,
@@ -37,7 +37,7 @@ function C(n) {
                     }),
                 ],
             }),
-            (0, l.jsx)(o.X6q, {
+            (0, l.jsx)(o.Heading, {
                 variant: "heading-md/semibold",
                 color: "header-primary",
                 children: c,
@@ -45,7 +45,7 @@ function C(n) {
             (0, l.jsxs)("div", {
                 className: x.buttonsContainer,
                 children: [
-                    (0, l.jsx)(o.zxk, {
+                    (0, l.jsx)(o.Button, {
                         variant: "primary",
                         onClick: () => {
                             (0, d.P)(r, { isGift: !1 });
@@ -53,7 +53,7 @@ function C(n) {
                         text: m.intl.string(m.t.boqtTE),
                         fullWidth: !0,
                     }),
-                    (0, l.jsx)(o.zxk, {
+                    (0, l.jsx)(o.Button, {
                         icon: o.OgN,
                         variant: "secondary",
                         onClick: () => {

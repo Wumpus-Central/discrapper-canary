@@ -101,7 +101,7 @@ function _(e) {
                                               children: N,
                                           }),
                                       }),
-                                      (0, s.jsx)(c.zxk, {
+                                      (0, s.jsx)(c.Button, {
                                           variant: "primary",
                                           text: h.intl.string(h.t.OpuAlJ),
                                           onClick: j,

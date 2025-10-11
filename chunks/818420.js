@@ -37,14 +37,14 @@ function p(e) {
         children: (0, r.jsxs)("div", {
             className: _.section,
             children: [
-                (0, r.jsx)(a.zxk, {
+                (0, r.jsx)(a.Button, {
                     variant: "primary",
                     size: "sm",
                     text: f.intl.string(f.t.BwdeMz),
                     onClick: v,
                 }),
                 O &&
-                    (0, r.jsx)(a.zxk, {
+                    (0, r.jsx)(a.Button, {
                         variant: "secondary",
                         size: "sm",
                         text: m ? f.intl.string(f.t.CHf9iI) : f.intl.string(f.t["9zwziY"]),

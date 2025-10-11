@@ -203,7 +203,7 @@ function U(e) {
                     "aria-label": e.description,
                     forceOpen: null != M && M(e.id),
                     delay: A.vB,
-                    children: (0, r.jsx)(o.eee, {
+                    children: (0, r.jsx)(o.Anchor, {
                         onClick: y,
                         onMouseEnter: v,
                         href: e.link,

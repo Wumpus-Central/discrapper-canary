@@ -9,19 +9,19 @@ var r = n(951288),
     d = n(231239),
     u = n(881052),
     m = n(686546),
-    f = n(565138),
-    p = n(768581),
-    h = n(411198),
-    g = n(888592),
-    v = n(388032),
-    _ = n(642480),
+    g = n(565138),
+    f = n(768581),
+    p = n(411198),
+    h = n(888592),
+    _ = n(388032),
+    v = n(642480),
     x = n(216019);
 function N(e) {
     var t, n, l;
     let { guildInfo: i, onClick: a, submitting: s } = e,
         o =
             null !=
-            (t = p.ZP.getGuildIconURL({
+            (t = f.ZP.getGuildIconURL({
                 id: i.id,
                 icon: i.icon,
                 size: 40,
@@ -29,17 +29,17 @@ function N(e) {
                 ? t
                 : void 0;
     return (0, r.jsxs)(c.P3F, {
-        className: _.clickableGuildInfoRow,
+        className: v.clickableGuildInfoRow,
         onClick: a,
         children: [
             (0, r.jsx)(m.ZP, {
                 mask: m.ZP.Masks.AVATAR_DEFAULT,
                 width: 40,
                 height: 40,
-                children: (0, r.jsx)(f.Z, {
-                    className: _.guildIcon,
+                children: (0, r.jsx)(g.Z, {
+                    className: v.guildIcon,
                     iconSrc: o,
-                    guild: (0, h.yS)(
+                    guild: (0, p.yS)(
                         ((n = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -80,18 +80,18 @@ function N(e) {
                               }),
                         n),
                     ),
-                    size: f.Z.Sizes.MEDIUM,
+                    size: g.Z.Sizes.MEDIUM,
                 }),
             }),
             (0, r.jsx)(c.Text, {
-                className: _.guildName,
+                className: v.guildName,
                 variant: "text-md/semibold",
                 children: i.name,
             }),
             s
                 ? (0, r.jsx)(c.$jN, { type: c.$jN.Type.PULSING_ELLIPSIS })
                 : (0, r.jsx)("img", {
-                      className: _.__invalid_arrow,
+                      className: v.__invalid_arrow,
                       alt: "",
                       src: x,
                   }),
@@ -100,43 +100,43 @@ function N(e) {
 }
 let E = (e) => {
     let { setStep: t, email: n, guildsInfo: i, setGuildId: s, forceGuildScrollHeight: m } = e,
-        [f, p] = l.useState(null),
-        [h, x] = l.useState(void 0),
+        [g, f] = l.useState(null),
+        [p, x] = l.useState(void 0),
         [E, y] = l.useState(null),
-        S = () => t(g.tF.SUBMIT_SCHOOL),
+        S = () => t(h.tF.SUBMIT_SCHOOL),
         j = i;
     return (
-        null != h && "" !== h && (j = i.filter((e) => o()(h.toLowerCase(), e.name.toLowerCase()))),
+        null != p && "" !== p && (j = i.filter((e) => o()(p.toLowerCase(), e.name.toLowerCase()))),
         (0, r.jsxs)("div", {
-            className: _.container,
+            className: v.container,
             children: [
-                (0, r.jsx)(c.X6q, {
-                    className: a()(_.centerText, _.header),
+                (0, r.jsx)(c.Heading, {
+                    className: a()(v.centerText, v.header),
                     variant: "heading-xl/semibold",
-                    children: v.intl.string(v.t.mOMeiY),
+                    children: _.intl.string(_.t.mOMeiY),
                 }),
                 (0, r.jsx)("div", {
-                    className: _.description,
+                    className: v.description,
                     children: (0, r.jsx)(c.Text, {
-                        className: _.centerText,
+                        className: v.centerText,
                         variant: "text-sm/normal",
                         color: "header-secondary",
-                        children: v.intl.format(v.t.dZeiTE, { onJoinWaitlist: S }),
+                        children: _.intl.format(_.t.dZeiTE, { onJoinWaitlist: S }),
                     }),
                 }),
                 (0, r.jsxs)("div", {
-                    className: a()(_.guildList, { [_.forcedHeight]: m }),
+                    className: a()(v.guildList, { [v.forcedHeight]: m }),
                     children: [
                         (0, r.jsxs)("div", {
-                            className: _.searchContainer,
+                            className: v.searchContainer,
                             children: [
                                 (0, r.jsx)(c.E1j, {
-                                    placeholder: v.intl.string(v.t["5h0QOD"]),
+                                    placeholder: _.intl.string(_.t["5h0QOD"]),
                                     onChange: (e) => {
                                         x(e);
                                     },
-                                    "aria-label": v.intl.string(v.t["5h0QOD"]),
-                                    query: null != h ? h : "",
+                                    "aria-label": _.intl.string(_.t["5h0QOD"]),
+                                    query: null != p ? p : "",
                                     onClear: () => {
                                         x(void 0);
                                     },
@@ -144,13 +144,13 @@ let E = (e) => {
                                 (0, r.jsx)(c.Text, {
                                     color: "text-danger",
                                     variant: "text-xs/normal",
-                                    children: null == f ? void 0 : f.getAnyErrorMessage(),
+                                    children: null == g ? void 0 : g.getAnyErrorMessage(),
                                 }),
                             ],
                         }),
                         j.length > 0
                             ? (0, r.jsx)(c.zJl, {
-                                  className: _.scroller,
+                                  className: v.scroller,
                                   children: j.map((e) => {
                                       let l;
                                       return void 0 === e
@@ -162,12 +162,12 @@ let E = (e) => {
                                                     onClick:
                                                         ((l = e.id),
                                                         async () => {
-                                                            p(null), s(l), y(l);
+                                                            f(null), s(l), y(l);
                                                             try {
                                                                 await d.Z.sendVerificationEmail(n, !0, l),
-                                                                    t(g.tF.VERIFY_PIN);
+                                                                    t(h.tF.VERIFY_PIN);
                                                             } catch (e) {
-                                                                p(new u.Hx(e));
+                                                                f(new u.Hx(e));
                                                             } finally {
                                                                 y(null);
                                                             }
@@ -179,20 +179,20 @@ let E = (e) => {
                                   }),
                               })
                             : (0, r.jsx)("div", {
-                                  className: _.noResultsContainer,
+                                  className: v.noResultsContainer,
                                   children: (0, r.jsxs)("div", {
-                                      className: _.noResultsContent,
+                                      className: v.noResultsContent,
                                       children: [
-                                          (0, r.jsx)("div", { className: _.noResultsImage }),
-                                          (0, r.jsx)(c.X6q, {
-                                              className: a()(_.centerText, _.header),
+                                          (0, r.jsx)("div", { className: v.noResultsImage }),
+                                          (0, r.jsx)(c.Heading, {
+                                              className: a()(v.centerText, v.header),
                                               variant: "heading-xl/semibold",
-                                              children: v.intl.string(v.t["1eUrDQ"]),
+                                              children: _.intl.string(_.t["1eUrDQ"]),
                                           }),
                                           (0, r.jsx)(c.Text, {
-                                              className: _.centerText,
+                                              className: v.centerText,
                                               variant: "text-md/normal",
-                                              children: v.intl.format(v.t.flgDKC, { onJoinWaitlist: S }),
+                                              children: _.intl.format(_.t.flgDKC, { onJoinWaitlist: S }),
                                           }),
                                       ],
                                   }),

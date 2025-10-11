@@ -281,7 +281,7 @@ function eN(e) {
         code: e.code,
         temporary: e.temporary,
         revoked: e.revoked,
-        inviter: null != e.inviter ? new C.Z(e.inviter) : null,
+        inviter: null != e.inviter ? new C.default(e.inviter) : null,
         channel: (0, T.jD)(e.channel),
         guild: null != e.guild ? (0, P.Qs)(e.guild) : null,
         uses: e.uses,

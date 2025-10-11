@@ -86,7 +86,7 @@ function m(e) {
                     color: a,
                     children: b,
                 })
-              : (0, r.jsx)(l.X6q, {
+              : (0, r.jsx)(l.Heading, {
                     variant: "heading-xl/medium",
                     color: a,
                     children: b,

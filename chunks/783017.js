@@ -37,7 +37,7 @@ let g = (e) => {
     return (0, s.jsxs)("div", {
         className: h.container,
         children: [
-            (0, s.jsx)(C.X6q, {
+            (0, s.jsx)(C.Heading, {
                 className: h.header,
                 variant: "display-md",
                 color: "header-primary",

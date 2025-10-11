@@ -1,4 +1,4 @@
-n.d(e, { default: () => m }), n(388685);
+n.d(e, { default: () => x }), n(388685);
 var i = n(951288),
     s = n(647438),
     l = n(481060),
@@ -22,7 +22,7 @@ function p(t, e, n) {
         t
     );
 }
-class x extends s.Component {
+class m extends s.Component {
     componentDidMount() {
         let { pid: t } = this.props,
             e = null != t ? o.ZP.getGameForPID(t) : null;
@@ -43,7 +43,7 @@ class x extends s.Component {
                     justify: a.Z.Justify.BETWEEN,
                     separator: !1,
                     children: [
-                        (0, i.jsx)(l.X6q, {
+                        (0, i.jsx)(l.Heading, {
                             variant: "heading-lg/semibold",
                             children: h.intl.string(h.t["4xSkEB"]),
                         }),
@@ -59,15 +59,15 @@ class x extends s.Component {
                     }),
                 }),
                 (0, i.jsx)(l.mzw, {
-                    children: (0, i.jsxs)(l.hE2, {
+                    children: (0, i.jsxs)(l.ButtonGroup, {
                         direction: "horizontal-reverse",
                         children: [
-                            (0, i.jsx)(l.zxk, {
+                            (0, i.jsx)(l.Button, {
                                 variant: "primary",
                                 text: h.intl.string(h.t.taPRcH),
                                 onClick: this.handleRequestElevated,
                             }),
-                            (0, i.jsx)(l.zxk, {
+                            (0, i.jsx)(l.Button, {
                                 variant: "secondary",
                                 text: h.intl.string(h.t.of0VoK),
                                 onClick: this.handleStreamWithoutSound,
@@ -94,4 +94,4 @@ class x extends s.Component {
             });
     }
 }
-let m = x;
+let x = m;

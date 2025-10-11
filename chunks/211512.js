@@ -13,7 +13,7 @@ function o(e) {
         label: u,
         description: d,
         disabled: m,
-        children: (0, r.jsx)(l.zxk, {
+        children: (0, r.jsx)(l.Button, {
             onClick: c,
             text: f,
             variant: b,

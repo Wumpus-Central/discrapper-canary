@@ -134,7 +134,7 @@ function I(e) {
         (0, l.jsxs)("div", {
             className: O.container,
             children: [
-                (0, l.jsx)(a.X6q, {
+                (0, l.jsx)(a.Heading, {
                     className: O.title,
                     variant: "heading-lg/bold",
                     color: "header-primary",

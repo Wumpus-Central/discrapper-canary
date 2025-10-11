@@ -51,7 +51,7 @@ let S = (e, t) => {
                                 }),
                             (0, r.jsx)("div", {
                                 className: T.marketingPageTextContainer,
-                                children: (0, r.jsx)(l.X6q, {
+                                children: (0, r.jsx)(l.Heading, {
                                     variant: "display-md",
                                     color: "header-primary",
                                     className: T.header,

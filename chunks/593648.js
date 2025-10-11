@@ -29,11 +29,11 @@ var r = n(951288),
     P = n(9156),
     w = n(912101),
     D = n(709054),
-    x = n(45640),
-    L = n(695346),
+    L = n(45640),
+    x = n(695346),
     M = n(675478),
-    k = n(273313),
-    j = n(33656),
+    j = n(273313),
+    k = n(33656),
     U = n(726985),
     G = n(981631),
     B = n(468788),
@@ -369,7 +369,7 @@ class X extends i.PureComponent {
                 notifyMessagesInSelectedChannel: l,
                 focusMode: c,
             } = this.props,
-            d = x.Z.getCurrentConfig({ location: "Messages" }).enabled || 0 === t ? 0 : 1,
+            d = L.Z.getCurrentConfig({ location: "Messages" }).enabled || 0 === t ? 0 : 1,
             f = o()
                 .range(d, 11)
                 .map((e) => ({
@@ -377,7 +377,7 @@ class X extends i.PureComponent {
                     label:
                         0 === e ? Z.intl.string(Z.t["0QN7cX"]) : Z.intl.formatToPlainString(Z.t.iXLF9f, { minutes: e }),
                 }));
-        return (0, r.jsx)(k.Z, {
+        return (0, r.jsx)(j.Z, {
             title: Z.intl.string(Z.t.HcoRu7),
             children: (0, r.jsxs)(u.Kqy, {
                 gap: 16,
@@ -422,7 +422,7 @@ class X extends i.PureComponent {
                                 label: Z.intl.string(Z.t.TTvjd3),
                                 description: Z.intl.string(Z.t.Xytv9P),
                                 value: t,
-                                onChange: L.CM.updateSetting,
+                                onChange: x.CM.updateSetting,
                                 options: f,
                             }),
                             (0, r.jsx)(u.izJ, { gap: 16 }),
@@ -436,7 +436,7 @@ class X extends i.PureComponent {
                         disableAllSounds: s,
                         notifyMessagesInSelectedChannel: l,
                     }),
-                    (0, r.jsx)(j.Z, {}),
+                    (0, r.jsx)(k.Z, {}),
                 ],
             }),
         });
@@ -558,7 +558,7 @@ function $() {
                                   children: [
                                       (0, r.jsx)(A.F, {
                                           setting: U.s6.NOTIFICATIONS_RESTORE_MOST_RECENT_SNAPSHOT,
-                                          children: (0, r.jsx)(u.zxk, {
+                                          children: (0, r.jsx)(u.Button, {
                                               variant: "primary",
                                               text: "Restore most recent snapshot",
                                               onClick: y.KP,
@@ -566,7 +566,7 @@ function $() {
                                       }),
                                       (0, r.jsx)(A.F, {
                                           setting: U.s6.NOTIFICATIONS_LAUNCH_MIGRATION,
-                                          children: (0, r.jsx)(u.zxk, {
+                                          children: (0, r.jsx)(u.Button, {
                                               variant: "primary",
                                               text: "Launch Migration",
                                               onClick: () => {
@@ -622,10 +622,10 @@ function en() {
         ttsType: R.Z.getTTSType(),
         notifyMessagesInSelectedChannel: R.Z.getNotifyMessagesInSelectedChannel(),
     }));
-    return (0, r.jsx)(et, Y(V({}, e), { afkTimeout: L.CM.useSetting() }));
+    return (0, r.jsx)(et, Y(V({}, e), { afkTimeout: x.CM.useSetting() }));
 }
 function er() {
-    let e = L.fz.useSetting(),
+    let e = x.fz.useSetting(),
         t = [
             {
                 name: Z.intl.string(Z.t["9x/Rtb"]),
@@ -660,8 +660,8 @@ function er() {
         : null;
 }
 function ei() {
-    let e = L.d8.useSetting(),
-        t = L.JN.useSetting();
+    let e = x.d8.useSetting(),
+        t = x.JN.useSetting();
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(A.F, {
@@ -680,7 +680,7 @@ function ei() {
                     label: Z.intl.string(Z.t.pW4TMj),
                     description: Z.intl.string(Z.t["H+WYqa"]),
                     checked: t,
-                    onChange: L.JN.updateSetting,
+                    onChange: x.JN.updateSetting,
                 }),
             }),
         ],

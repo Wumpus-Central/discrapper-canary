@@ -198,7 +198,7 @@ function el(e) {
                         className: q.sectionHeaderContent,
                         children: [
                             l(),
-                            (0, r.jsx)(c.X6q, {
+                            (0, r.jsx)(c.Heading, {
                                 variant: "text-sm/semibold",
                                 color: "none",
                                 className: q.sectionTitle,

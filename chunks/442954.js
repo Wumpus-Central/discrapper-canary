@@ -376,6 +376,922 @@ let v = {
         let { default: e } = await Promise.all([n.e("65652"), n.e("37931")]).then(n.bind(n, 208265));
         return (t) => (0, a.jsx)(e, g(b({}, t), { classificationId: "123456789" }));
     },
+    CreateTagModal: async () => {
+        let { default: e } = await n.e("21971").then(n.bind(n, 201049));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                g(b({}, t), {
+                    channelId: "123456789",
+                    guildId: "987654321",
+                }),
+            );
+    },
+    CreateTagModalEdit: async () => {
+        let { default: e } = await n.e("21971").then(n.bind(n, 201049)),
+            t = {
+                id: "tag-123",
+                name: "Bug Report",
+                emojiId: "123456789",
+                emojiName: "\uD83D\uDC1B",
+                moderated: !0,
+            };
+        return (n) =>
+            (0, a.jsx)(
+                e,
+                g(b({}, n), {
+                    channelId: "123456789",
+                    guildId: "987654321",
+                    tag: t,
+                }),
+            );
+    },
+    ConfirmModal: async () => {
+        let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 878678)),
+            { Text: t } = await Promise.resolve().then(n.bind(n, 481060));
+        return (n) =>
+            (0, a.jsx)(
+                e,
+                g(b({}, n), {
+                    header: "Confirm Action",
+                    confirmText: "Confirm",
+                    cancelText: "Cancel",
+                    onConfirm: () => console.log("ConfirmModal: Confirmed"),
+                    onCancel: () => console.log("ConfirmModal: Cancelled"),
+                    children: (0, a.jsx)(t, {
+                        variant: "text-md/normal",
+                        children: "Are you sure you want to perform this action? This action cannot be undone.",
+                    }),
+                }),
+            );
+    },
+    ConfirmModalDanger: async () => {
+        let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 878678)),
+            { Text: t } = await Promise.resolve().then(n.bind(n, 481060)),
+            { Button: r } = await Promise.resolve().then(n.bind(n, 693789));
+        return (n) =>
+            (0, a.jsx)(
+                e,
+                g(b({}, n), {
+                    header: "Delete Item",
+                    confirmText: "Delete",
+                    cancelText: "Cancel",
+                    confirmButtonColor: r.Colors.RED,
+                    onConfirm: () => console.log("ConfirmModalDanger: Deleted"),
+                    onCancel: () => console.log("ConfirmModalDanger: Cancelled"),
+                    children: (0, a.jsx)(t, {
+                        variant: "text-md/normal",
+                        children:
+                            "Are you sure you want to delete this item? This action is permanent and cannot be undone.",
+                    }),
+                }),
+            );
+    },
+    ConfirmModalNoCancel: async () => {
+        let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 878678)),
+            { Text: t } = await Promise.resolve().then(n.bind(n, 481060));
+        return (n) =>
+            (0, a.jsx)(
+                e,
+                g(b({}, n), {
+                    header: "Information",
+                    confirmText: "Got it",
+                    onConfirm: () => console.log("ConfirmModalNoCancel: Acknowledged"),
+                    children: (0, a.jsx)(t, {
+                        variant: "text-md/normal",
+                        children: 'This is an informational message. Click "Got it" to continue.',
+                    }),
+                }),
+            );
+    },
+    AlertModal: async () => {
+        let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                g(b({}, t), {
+                    title: "Alert",
+                    body: "This is an alert message with a single action.",
+                    confirmText: "OK",
+                    onConfirm: () => console.log("AlertModal: Confirmed"),
+                }),
+            );
+    },
+    AlertModalWithCancel: async () => {
+        let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                g(b({}, t), {
+                    title: "Confirm Action",
+                    body: "Are you sure you want to proceed with this action?",
+                    confirmText: "Yes",
+                    cancelText: "No",
+                    onConfirm: () => console.log("AlertModalWithCancel: Confirmed"),
+                    onCancel: () => console.log("AlertModalWithCancel: Cancelled"),
+                }),
+            );
+    },
+    AlertModalWithSecondary: async () => {
+        let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                g(b({}, t), {
+                    title: "Settings Change",
+                    body: "This will change your account settings.",
+                    confirmText: "Apply",
+                    cancelText: "Cancel",
+                    secondaryConfirmText: "Don't show this again",
+                    onConfirm: () => console.log("AlertModalWithSecondary: Confirmed"),
+                    onCancel: () => console.log("AlertModalWithSecondary: Cancelled"),
+                    onConfirmSecondary: () => console.log("AlertModalWithSecondary: Secondary action confirmed"),
+                }),
+            );
+    },
+    GoLiveConfirmModal: async () => {
+        let { default: e } = await Promise.all([n.e("38697"), n.e("4093"), n.e("2318")]).then(n.bind(n, 399299)),
+            {
+                ApplicationStreamPresets: t,
+                ApplicationStreamResolutions: r,
+                ApplicationStreamFPS: i,
+            } = await Promise.resolve().then(n.bind(n, 37113)),
+            l = {
+                id: "screen:0:0",
+                name: "Entire Screen",
+                thumbnail:
+                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==",
+                url: "screen:0:0",
+            };
+        return (n) =>
+            (0, a.jsx)(
+                e,
+                g(b({}, n), {
+                    selectedSource: l,
+                    selectedPreset: t.PRESET_VIDEO,
+                    selectedResolution: r.RESOLUTION_1080,
+                    selectedFPS: i.FPS_60,
+                    sound: !0,
+                    previewDisabled: !1,
+                    selectedChannelId: "987654321",
+                    sourceChanged: !1,
+                    selectGuild: !1,
+                    selectSource: !1,
+                    selectedGuildId: "123456789",
+                    targetGuildPremiumTier: 2,
+                    onChangeSelectedChannelId: (e) => console.log("Channel changed:", e),
+                    onChangeSelectedFPS: (e) => console.log("FPS changed:", e),
+                    onChangeSelectedPreset: (e) => console.log("Preset changed:", e),
+                    onChangeSelectedResolution: (e) => console.log("Resolution changed:", e),
+                    onChangeSelectedSource: (e, t) => console.log("Source changed:", e, t),
+                    onChangeSource: () => console.log("Change source clicked"),
+                    onChangeAudioDevice: (e) => console.log("Audio device changed:", e),
+                    onChangeGuild: () => console.log("Change guild clicked"),
+                    onChangeSound: (e) => console.log("Sound changed:", e),
+                    onChangePreviewDisabled: (e) => console.log("Preview disabled changed:", e),
+                    onClose: () => console.log("Go Live Confirm modal closed"),
+                }),
+            );
+    },
+    GuildDisableCommunicationModal: async () => {
+        let {
+                Button: e,
+                Text: t,
+                Heading: r,
+                Checkbox: i,
+                ButtonGroup: l,
+            } = await Promise.resolve().then(n.bind(n, 481060)),
+            { DisableCommunicationDuration: s, getFriendlyDurationString: o } = await Promise.resolve().then(
+                n.bind(n, 590433),
+            ),
+            c = await Promise.resolve().then(n.t.bind(n, 647438, 19)),
+            d = "TestUser";
+        function u(n) {
+            let [u, m] = c.useState(s.DURATION_60_SEC),
+                [p, h] = c.useState(""),
+                [x, f] = c.useState(!1),
+                [b, g] = c.useState(!1),
+                v = [
+                    {
+                        value: s.DURATION_60_SEC,
+                        label: o(s.DURATION_60_SEC),
+                    },
+                    {
+                        value: s.DURATION_5_MIN,
+                        label: o(s.DURATION_5_MIN),
+                    },
+                    {
+                        value: s.DURATION_10_MIN,
+                        label: o(s.DURATION_10_MIN),
+                    },
+                    {
+                        value: s.DURATION_1_HOUR,
+                        label: o(s.DURATION_1_HOUR),
+                    },
+                    {
+                        value: s.DURATION_1_DAY,
+                        label: o(s.DURATION_1_DAY),
+                    },
+                    {
+                        value: s.DURATION_1_WEEK,
+                        label: o(s.DURATION_1_WEEK),
+                    },
+                ],
+                j = c.useCallback(async () => {
+                    f(!0),
+                        console.log("GuildDisableCommunicationModal: Timing out user", {
+                            user: d,
+                            duration: o(u),
+                            reason: null != p ? p : "No reason provided",
+                            resolveFlag: b,
+                        }),
+                        await new Promise((e) => setTimeout(e, 1000)),
+                        f(!1),
+                        n.onClose();
+                }, [u, p, b, n]);
+            return (0, a.jsxs)("div", {
+                style: {
+                    padding: "20px",
+                    maxWidth: "500px",
+                },
+                children: [
+                    (0, a.jsxs)(r, {
+                        variant: "heading-lg/semibold",
+                        className: "mb-2",
+                        children: ["Disable Communication for ", d, "#", "0001"],
+                    }),
+                    (0, a.jsx)(t, {
+                        variant: "text-sm/normal",
+                        className: "mb-4",
+                        color: "text-secondary",
+                        children: "This will temporarily disable the user's ability to communicate in this server.",
+                    }),
+                    (0, a.jsxs)("div", {
+                        className: "mb-4",
+                        children: [
+                            (0, a.jsx)(r, {
+                                variant: "heading-sm/semibold",
+                                className: "mb-2",
+                                children: "Duration",
+                            }),
+                            (0, a.jsx)(l, {
+                                children: v.map((t) =>
+                                    (0, a.jsx)(
+                                        e,
+                                        {
+                                            variant: u === t.value ? "primary" : "secondary",
+                                            size: "sm",
+                                            text: t.label,
+                                            onClick: () => m(t.value),
+                                        },
+                                        t.value,
+                                    ),
+                                ),
+                            }),
+                        ],
+                    }),
+                    (0, a.jsxs)("div", {
+                        className: "mb-4",
+                        children: [
+                            (0, a.jsx)(r, {
+                                variant: "heading-sm/semibold",
+                                className: "mb-2",
+                                children: "Reason (Optional)",
+                            }),
+                            (0, a.jsx)("textarea", {
+                                value: p,
+                                onChange: (e) => h(e.target.value),
+                                placeholder: "Enter reason for timeout...",
+                                style: {
+                                    width: "100%",
+                                    minHeight: "80px",
+                                    padding: "8px",
+                                    border: "1px solid var(--background-modifier-accent)",
+                                    borderRadius: "4px",
+                                    backgroundColor: "var(--background-primary)",
+                                    color: "var(--text-primary)",
+                                    resize: "vertical",
+                                },
+                            }),
+                        ],
+                    }),
+                    (0, a.jsx)("div", {
+                        className: "mb-4",
+                        children: (0, a.jsx)(i, {
+                            checked: b,
+                            onChange: g,
+                            label: "Resolve associated mod report",
+                        }),
+                    }),
+                    (0, a.jsxs)("div", {
+                        style: {
+                            display: "flex",
+                            gap: "8px",
+                            justifyContent: "flex-end",
+                        },
+                        children: [
+                            (0, a.jsx)(e, {
+                                variant: "secondary",
+                                text: "Cancel",
+                                onClick: n.onClose,
+                            }),
+                            (0, a.jsx)(e, {
+                                variant: "primary",
+                                text: "Timeout User",
+                                onClick: j,
+                                disabled: x,
+                            }),
+                        ],
+                    }),
+                ],
+            });
+        }
+        return (e) => (0, a.jsx)(u, b({}, e));
+    },
+    GuildPowerupDeactivateModal: async () => {
+        let { Button: e, Text: t, Heading: r, Checkbox: i } = await Promise.resolve().then(n.bind(n, 481060)),
+            l = await Promise.resolve().then(n.t.bind(n, 647438, 19)),
+            s = "Level 3 Server Boost",
+            o = 200,
+            c = 60,
+            d = 8;
+        function u(n) {
+            let [u, m] = l.useState(!1),
+                [p, h] = l.useState(!1),
+                x = l.useCallback(async () => {
+                    h(!0),
+                        console.log("GuildPowerupDeactivateModal: Deactivating powerup", {
+                            powerup: s,
+                            guildId: "123456789",
+                        }),
+                        await new Promise((e) => setTimeout(e, 2000)),
+                        h(!1),
+                        n.onClose();
+                }, [n]);
+            return (0, a.jsxs)("div", {
+                style: {
+                    padding: "20px",
+                    maxWidth: "500px",
+                },
+                children: [
+                    (0, a.jsxs)(r, {
+                        variant: "heading-lg/semibold",
+                        className: "mb-2",
+                        children: ["Deactivate ", s],
+                    }),
+                    (0, a.jsxs)(t, {
+                        variant: "text-sm/normal",
+                        className: "mb-4",
+                        color: "text-secondary",
+                        children: [
+                            "This will remove the ",
+                            s,
+                            " from your server and disable all associated features.",
+                        ],
+                    }),
+                    (0, a.jsxs)("div", {
+                        className: "mb-4",
+                        style: {
+                            backgroundColor: "var(--background-secondary)",
+                            padding: "16px",
+                            borderRadius: "8px",
+                            border: "1px solid var(--background-modifier-accent)",
+                        },
+                        children: [
+                            (0, a.jsx)(r, {
+                                variant: "heading-sm/semibold",
+                                className: "mb-2",
+                                children: "Current Features",
+                            }),
+                            (0, a.jsxs)("div", {
+                                style: {
+                                    display: "grid",
+                                    gridTemplateColumns: "1fr 1fr",
+                                    gap: "8px",
+                                },
+                                children: [
+                                    (0, a.jsxs)(t, {
+                                        variant: "text-sm/normal",
+                                        color: "text-secondary",
+                                        children: ["\u2022 ", o, " emoji slots"],
+                                    }),
+                                    (0, a.jsxs)(t, {
+                                        variant: "text-sm/normal",
+                                        color: "text-secondary",
+                                        children: ["\u2022 ", c, " sticker slots"],
+                                    }),
+                                    (0, a.jsxs)(t, {
+                                        variant: "text-sm/normal",
+                                        color: "text-secondary",
+                                        children: ["\u2022 ", d, " sound slots"],
+                                    }),
+                                    (0, a.jsx)(t, {
+                                        variant: "text-sm/normal",
+                                        color: "text-secondary",
+                                        children: "\u2022 Custom server banner",
+                                    }),
+                                ],
+                            }),
+                        ],
+                    }),
+                    (0, a.jsxs)("div", {
+                        className: "mb-4",
+                        style: {
+                            backgroundColor: "var(--background-danger)",
+                            padding: "16px",
+                            borderRadius: "8px",
+                            border: "1px solid var(--status-danger)",
+                        },
+                        children: [
+                            (0, a.jsxs)(t, {
+                                variant: "eyebrow",
+                                color: "text-danger",
+                                className: "mb-2",
+                                children: [
+                                    (0, a.jsx)("span", {
+                                        role: "img",
+                                        "aria-label": "Warning",
+                                        children: "\u26A0️",
+                                    }),
+                                    " ",
+                                    "Warning",
+                                ],
+                            }),
+                            (0, a.jsx)(t, {
+                                variant: "text-sm/medium",
+                                color: "text-danger",
+                                children:
+                                    "Deactivating this powerup will immediately remove all Level 3 features from your server. Members will lose access to custom emojis, stickers, and other premium features. This action cannot be undone.",
+                            }),
+                        ],
+                    }),
+                    (0, a.jsx)("div", {
+                        className: "mb-4",
+                        children: (0, a.jsx)(i, {
+                            checked: u,
+                            onChange: m,
+                            label: "I understand that deactivating this powerup will remove all Level 3 features from my server",
+                            labelType: "secondary",
+                        }),
+                    }),
+                    (0, a.jsxs)("div", {
+                        style: {
+                            display: "flex",
+                            gap: "8px",
+                            justifyContent: "flex-end",
+                        },
+                        children: [
+                            (0, a.jsx)(e, {
+                                variant: "secondary",
+                                text: "Cancel",
+                                onClick: n.onClose,
+                            }),
+                            (0, a.jsx)(e, {
+                                variant: "critical-primary",
+                                text: "Deactivate Level",
+                                onClick: x,
+                                disabled: !u,
+                                loading: p,
+                            }),
+                        ],
+                    }),
+                ],
+            });
+        }
+        return (e) => (0, a.jsx)(u, b({}, e));
+    },
+    DataHarvestModal: async () => {
+        let { default: e } = await n.e("25120").then(n.bind(n, 926281));
+        return (t) =>
+            (0, a.jsx)(e, {
+                modalProps: t,
+                onConfirm: (e) => {
+                    console.log("DataHarvestModal: Requesting data export for:", e),
+                        setTimeout(() => {
+                            console.log("DataHarvestModal: Data export request submitted successfully");
+                        }, 1000);
+                },
+            });
+    },
+    EnableCommunityModal: async () => {
+        let { default: e } = await Promise.all([n.e("57486"), n.e("10438")]).then(n.bind(n, 87026));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                g(b({}, t), {
+                    onClose: () => {
+                        console.log("EnableCommunityModal: Closed"), t.onClose();
+                    },
+                }),
+            );
+    },
+    DeprivateModal: async () => {
+        let e = (await Promise.all([n.e("38697"), n.e("82140")]).then(n.bind(n, 89216))).default;
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                g(b({}, t), {
+                    guildId: "123456789012345678",
+                    startingChannelId: "987654321098765432",
+                }),
+            );
+    },
+    CameraPreviewModal: async () => {
+        let { default: e } = await n.e("91018").then(n.bind(n, 601572));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                g(b({}, t), {
+                    videoEnabled: !1,
+                    onEnable: () => console.log("Camera enabled"),
+                }),
+            );
+    },
+    CameraPreviewModalWithVideo: async () => {
+        let { default: e } = await n.e("91018").then(n.bind(n, 601572));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                g(b({}, t), {
+                    videoEnabled: !0,
+                    onEnable: () => console.log("Camera enabled"),
+                }),
+            );
+    },
+    ModeratorReportResolveConfirmModal: async () => {
+        let { default: e } = await n.e("52282").then(n.bind(n, 5101));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                g(b({}, t), {
+                    handleResolveFlag: () => console.log("ModeratorReportResolveConfirmModal: Flag resolved"),
+                }),
+            );
+    },
+    SelectFriendsModal: async () => {
+        let { default: e, SelectFriendsModalScreens: t } = await Promise.resolve().then(n.bind(n, 656139));
+        return (n) =>
+            (0, a.jsx)(e, {
+                onClose: async () => {
+                    console.log("SelectFriendsModal: Closed"), await n.onClose();
+                },
+                startingScreen: t.SELECT_FRIENDS,
+            });
+    },
+    SelectFriendsModalReminder: async () => {
+        let { default: e, SelectFriendsModalScreens: t } = await Promise.resolve().then(n.bind(n, 656139));
+        return (n) =>
+            (0, a.jsx)(e, {
+                onClose: async () => {
+                    console.log("SelectFriendsModalReminder: Closed"), await n.onClose();
+                },
+                startingScreen: t.REMINDER,
+            });
+    },
+    AddFavoriteChannelModal: async () => {
+        let { default: e } = await n.e("95257").then(n.bind(n, 610617));
+        return (t) => (0, a.jsx)(e, g(b({}, t), { parentId: null }));
+    },
+    ActivityShareMomentModal: async () => {
+        let { default: e } = await Promise.all([n.e("49049"), n.e("4530"), n.e("44469")]).then(n.bind(n, 899201));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                g(b({}, t), {
+                    applicationId: "123456789",
+                    mediaUrl: "https://picsum.photos/400/300.jpg",
+                }),
+            );
+    },
+    CallUserConfirmationModal: async () => {
+        let { default: e } = await n.e("27157").then(n.bind(n, 736454));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                g(b({}, t), {
+                    onSubmit: () => {
+                        console.log("CallUserConfirmationModal: Call confirmed"), t.onClose();
+                    },
+                }),
+            );
+    },
+    FamilyCenterDisconnectLinkModal: async () => {
+        let { default: e } = await n.e("50872").then(n.bind(n, 442673)),
+            t = await Promise.resolve().then(n.bind(n, 598077)),
+            r = new t.default({
+                id: "123456789",
+                username: "ParentUser",
+                discriminator: "1234",
+                avatar: null,
+                bot: !1,
+                verified: !0,
+                mfaEnabled: !1,
+                mobile: !1,
+                desktop: !0,
+                premiumType: null,
+                flags: 0,
+                publicFlags: 0,
+                purchasedFlags: 0,
+                premiumUsageFlags: 0,
+                phone: null,
+                nsfwAllowed: null,
+                ageVerificationStatus: null,
+                guildMemberAvatars: {},
+                hasBouncedEmail: !1,
+                personalConnectionId: null,
+                globalName: null,
+                primaryGuild: null,
+                collectibles: null,
+                displayNameStyles: null,
+                premiumState: null,
+            }),
+            i = new t.default({
+                id: "987654321",
+                username: "TeenUser",
+                discriminator: "5678",
+                avatar: null,
+                bot: !1,
+                verified: !0,
+                mfaEnabled: !1,
+                mobile: !0,
+                desktop: !1,
+                premiumType: null,
+                flags: 0,
+                publicFlags: 0,
+                purchasedFlags: 0,
+                premiumUsageFlags: 0,
+                phone: null,
+                nsfwAllowed: null,
+                ageVerificationStatus: null,
+                guildMemberAvatars: {},
+                hasBouncedEmail: !1,
+                personalConnectionId: null,
+                globalName: null,
+                primaryGuild: null,
+                collectibles: null,
+                displayNameStyles: null,
+                premiumState: null,
+            });
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                g(b({}, t), {
+                    currentUser: r,
+                    otherUser: i,
+                }),
+            );
+    },
+    OptInReorderAttemptModal: async () => {
+        let { default: e } = await n.e("82560").then(n.bind(n, 391312));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                g(b({}, t), { onClose: () => (console.log("OptInReorderAttemptModal: Modal closed"), t.onClose()) }),
+            );
+    },
+    GuildAntiRaidReportModal: async () => {
+        let { default: e } = await n.e("9354").then(n.bind(n, 461533));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                g(b({}, t), {
+                    guildId: "123456789",
+                    onClose: () => (console.log("GuildAntiRaidReportModal: Modal closed"), t.onClose()),
+                }),
+            );
+    },
+    InstantInviteRefreshModal: async () => {
+        let { InstantInviteRefreshModal: e } = await Promise.all([n.e("74318"), n.e("49049"), n.e("71177")]).then(
+                n.bind(n, 265452),
+            ),
+            { dangerouslyConstructGuildRecordFromUntypedObject: t } = await Promise.resolve().then(n.bind(n, 411198)),
+            { createChannelRecord: r } = await Promise.resolve().then(n.bind(n, 131704)),
+            { InstantInviteSources: i } = await Promise.resolve().then(n.bind(n, 981631)),
+            l = t({
+                id: "123456789",
+                name: "Test Server",
+                description: "A test server for development",
+                ownerId: "987654321",
+                icon: null,
+                splash: null,
+                banner: null,
+                homeHeader: null,
+                features: [],
+                preferredLocale: "en-US",
+                afkChannelId: null,
+                afkTimeout: 300,
+                systemChannelId: null,
+                verificationLevel: 0,
+                joinedAt: new Date(),
+                defaultMessageNotifications: 0,
+                mfaLevel: 0,
+                application_id: null,
+                explicitContentFilter: 0,
+                vanityURLCode: null,
+                premiumTier: 0,
+                premiumSubscriberCount: 0,
+                premiumProgressBarEnabled: !1,
+                systemChannelFlags: 0,
+                discoverySplash: null,
+                rulesChannelId: null,
+                safetyAlertsChannelId: null,
+                publicUpdatesChannelId: null,
+                maxStageVideoChannelUsers: 10,
+                maxVideoChannelUsers: 25,
+                maxMembers: 500000,
+                nsfwLevel: 0,
+                ownerConfiguredContentLevel: null,
+                hubType: null,
+                latestOnboardingQuestionId: null,
+                profile: null,
+                premiumFeatures: null,
+                moderatorReporting: null,
+            }),
+            s = r({
+                id: "987654321",
+                name: "general",
+                type: 0,
+                guild_id: "123456789",
+                position: 0,
+                permissionOverwrites: {},
+                parent_id: null,
+                nsfw: !1,
+                topic: void 0,
+                lastMessageId: null,
+                bitrate: void 0,
+                userLimit: void 0,
+                rateLimitPerUser: 0,
+                icon: null,
+                ownerId: null,
+                application_id: null,
+                lastPinTimestamp: null,
+                rtcRegion: null,
+                videoQualityMode: null,
+                messageCount: 0,
+                memberCount: 0,
+                threadMetadata: void 0,
+                member: void 0,
+                defaultAutoArchiveDuration: void 0,
+                flags: 0,
+                totalMessageSent: 0,
+                availableTags: [],
+                appliedTags: [],
+                defaultReactionEmoji: null,
+                defaultThreadRateLimitPerUser: 0,
+                defaultSortOrder: null,
+                defaultForumLayout: 0,
+            });
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                g(b({}, t), {
+                    guild: l,
+                    channel: s,
+                    source: i.GUILD_HEADER,
+                    analyticsLocation: "dev-tools",
+                    onClose: () => (console.log("InstantInviteRefreshModal: Modal closed"), t.onClose()),
+                }),
+            );
+    },
+    ConsentCheckBoxModal: async () => {
+        let { default: e } = await n.e("63490").then(n.bind(n, 853268)),
+            { ConfirmModal: t } = await Promise.resolve().then(n.bind(n, 878678)),
+            { Text: r, Heading: i, Anchor: l } = await Promise.resolve().then(n.bind(n, 481060)),
+            s = await Promise.resolve().then(n.t.bind(n, 647438, 19));
+        function o(n) {
+            let [o, c] = s.useState(!1),
+                [d, u] = s.useState(!1);
+            return (0, a.jsx)(
+                t,
+                g(b({}, n), {
+                    header: "Consent CheckBox Examples",
+                    confirmText: "Close",
+                    cancelText: "",
+                    onConfirm: () => (console.log("ConsentCheckBoxModal: Modal closed"), n.onClose()),
+                    onCancel: () => {},
+                    children: (0, a.jsxs)("div", {
+                        style: {
+                            padding: "20px",
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: "20px",
+                        },
+                        children: [
+                            (0, a.jsxs)("div", {
+                                children: [
+                                    (0, a.jsx)(i, {
+                                        variant: "heading-md/semibold",
+                                        style: { marginBottom: "12px" },
+                                        children: "Terms of Service Consent",
+                                    }),
+                                    (0, a.jsx)(e, {
+                                        value: o,
+                                        onChange: c,
+                                        subText: (0, a.jsxs)("span", {
+                                            children: [
+                                                "I agree to Discord's",
+                                                " ",
+                                                (0, a.jsx)(l, {
+                                                    href: "https://discord.com/terms",
+                                                    target: "_blank",
+                                                    rel: "noopener noreferrer",
+                                                    children: "Terms of Service",
+                                                }),
+                                                " ",
+                                                "and",
+                                                " ",
+                                                (0, a.jsx)(l, {
+                                                    href: "https://discord.com/privacy",
+                                                    target: "_blank",
+                                                    rel: "noopener noreferrer",
+                                                    children: "Privacy Policy",
+                                                }),
+                                            ],
+                                        }),
+                                    }),
+                                    (0, a.jsxs)(r, {
+                                        variant: "text-sm/normal",
+                                        color: "text-secondary",
+                                        style: { marginTop: "8px" },
+                                        children: ["Consent status: ", o ? "Agreed" : "Not agreed"],
+                                    }),
+                                ],
+                            }),
+                            (0, a.jsxs)("div", {
+                                children: [
+                                    (0, a.jsx)(i, {
+                                        variant: "heading-md/semibold",
+                                        style: { marginBottom: "12px" },
+                                        children: "Promotional Email Consent",
+                                    }),
+                                    (0, a.jsx)(e, {
+                                        value: d,
+                                        onChange: u,
+                                        subText:
+                                            "I would like to receive promotional emails from Discord about new features, events, and other updates.",
+                                        muted: !0,
+                                    }),
+                                    (0, a.jsxs)(r, {
+                                        variant: "text-sm/normal",
+                                        color: "text-secondary",
+                                        style: { marginTop: "8px" },
+                                        children: ["Promo consent status: ", d ? "Opted in" : "Not opted in"],
+                                    }),
+                                ],
+                            }),
+                            (0, a.jsxs)("div", {
+                                children: [
+                                    (0, a.jsx)(i, {
+                                        variant: "heading-md/semibold",
+                                        style: { marginBottom: "12px" },
+                                        children: "Custom Styled Consent",
+                                    }),
+                                    (0, a.jsx)(e, {
+                                        value: !1,
+                                        onChange: () => {},
+                                        subText:
+                                            "This is a custom styled consent checkbox with different styling options.",
+                                        marginTopStyle: "margin-top-16",
+                                        subtextClassName: "custom-consent-text",
+                                    }),
+                                ],
+                            }),
+                        ],
+                    }),
+                }),
+            );
+        }
+        return (o.displayName = "ConsentCheckBoxModalContent"), (e) => (0, a.jsx)(o, b({}, e));
+    },
+    GuildRaidLockdownFeedbackModal: async () => {
+        let { default: e } = await n.e("53324").then(n.bind(n, 821312));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                g(b({}, t), {
+                    guildId: "123456789",
+                    onClose: () => (console.log("GuildRaidLockdownFeedbackModal: Modal closed"), t.onClose()),
+                }),
+            );
+    },
+    EmojiAddModal: async () => {
+        let { EmojiAddModal: e } = await n.e("21112").then(n.bind(n, 301160));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                g(b({}, t), {
+                    guildId: "123456789",
+                    initialTierEmojiIds: new Set(["emoji1"]),
+                    onSubmit: (e) => {
+                        console.log("EmojiAddModal: Selected emojis:", Array.from(e));
+                    },
+                    transitionToManageEmoji: () => {
+                        console.log("EmojiAddModal: Transition to manage emoji clicked");
+                    },
+                    onClose: () => (console.log("EmojiAddModal: Modal closed"), t.onClose()),
+                }),
+            );
+    },
 };
 function j() {
     let e = r.useMemo(
@@ -397,7 +1313,7 @@ function j() {
                 (0, a.jsxs)("section", {
                     className: x.section,
                     children: [
-                        (0, a.jsx)(s.X6q, {
+                        (0, a.jsx)(s.Heading, {
                             variant: "heading-md/semibold",
                             children: "Open a Modal",
                         }),
@@ -412,7 +1328,7 @@ function j() {
                                     select: (e) => n(e),
                                     popoutLayerContext: u.O$,
                                 }),
-                                (0, a.jsx)(s.zxk, {
+                                (0, a.jsx)(s.Button, {
                                     variant: "primary",
                                     text: "Open",
                                     onClick: () => (0, s.ZDy)(v[t]),
@@ -424,13 +1340,13 @@ function j() {
                 (0, a.jsxs)("section", {
                     className: x.section,
                     children: [
-                        (0, a.jsx)(s.X6q, {
+                        (0, a.jsx)(s.Heading, {
                             variant: "heading-md/semibold",
                             children: "Wow moment",
                         }),
                         (0, a.jsx)("div", {
                             className: x.inputRow,
-                            children: (0, a.jsx)(s.zxk, {
+                            children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 text: "Open",
                                 onClick: () => {

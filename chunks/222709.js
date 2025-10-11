@@ -32,7 +32,7 @@ let f = (e) => {
                               color: "currentColor",
                               className: d.icon,
                           }),
-                          (0, r.jsx)(o.X6q, {
+                          (0, r.jsx)(o.Heading, {
                               variant: "heading-sm/normal",
                               className: d.tagline,
                               children: u.intl.string(u.t.hasZoa),

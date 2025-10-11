@@ -115,30 +115,30 @@ function y(e) {
             },
             [_],
         ),
-        N = l.useCallback(
+        H = l.useCallback(
             (e) => {
                 _((n) => j(x({}, n), { message: null != e ? e : "" }));
             },
             [_],
         ),
-        L = l.useCallback(() => {
+        N = l.useCallback(() => {
             P(C), k();
         }, [k, P, C]),
-        T = l.useCallback(() => {
+        L = l.useCallback(() => {
             P(null), k();
         }, [P, k]),
-        U = null != (n = C.authorIds[0]) ? n : "",
-        E = (0, s.e7)([m.ZP], () => (null != O ? m.ZP.getMember(O, U) : null)),
-        H = (0, s.e7)([p.default], () => (null != E ? p.default.getUser(E.userId) : null)),
-        M = null != (a = null != (r = null == E ? void 0 : E.nick) ? r : null == H ? void 0 : H.username) ? a : "",
-        X = (function (e) {
+        T = null != (n = C.authorIds[0]) ? n : "",
+        U = (0, s.e7)([m.ZP], () => (null != O ? m.ZP.getMember(O, T) : null)),
+        E = (0, s.e7)([p.default], () => (null != U ? p.default.getUser(U.userId) : null)),
+        M = null != (a = null != (r = null == U ? void 0 : U.nick) ? r : null == E ? void 0 : E.username) ? a : "",
+        R = (function (e) {
             if (null == e.message || 0 === e.message.length) return null;
             if (null == e.authorIds || 0 === e.authorIds.length)
                 if (e.message.length < d.ZR) return b.intl.formatToPlainString(b.t.Lj831N, { minLength: d.ZR });
                 else return b.intl.string(b.t["4m7gtr"]);
             return e.message.length < d.ZR ? b.intl.formatToPlainString(b.t.TJGHXl, { minLength: d.ZR }) : null;
         })(C),
-        R = l.useMemo(
+        X = l.useMemo(
             () => [
                 {
                     text: b.intl.string(b.t["ETE/oK"]),
@@ -147,12 +147,12 @@ function y(e) {
                 },
                 {
                     text: b.intl.string(b.t.R3BPHx),
-                    onClick: L,
+                    onClick: N,
                     variant: "primary",
-                    disabled: 0 === C.message.length || null != X,
+                    disabled: 0 === C.message.length || null != R,
                 },
             ],
-            [X, L, k, C.message.length],
+            [R, N, k, C.message.length],
         );
     return (0, t.jsxs)(i.IX, {
         transitionState: y,
@@ -168,7 +168,7 @@ function y(e) {
                     (0, t.jsxs)("div", {
                         className: v.formGroup,
                         children: [
-                            (0, t.jsxs)(c.X6q, {
+                            (0, t.jsxs)(c.Heading, {
                                 variant: "heading-md/semibold",
                                 color: "header-primary",
                                 children: [b.intl.string(b.t.zNQfQ0), (0, t.jsx)(f.Z, {})],
@@ -180,7 +180,7 @@ function y(e) {
                             }),
                             (0, t.jsx)(c.VcW, {
                                 value: {
-                                    value: U,
+                                    value: T,
                                     label: M,
                                 },
                                 renderOptionPrefix: S,
@@ -194,7 +194,7 @@ function y(e) {
                     (0, t.jsxs)("div", {
                         className: v.formGroup,
                         children: [
-                            (0, t.jsx)(c.X6q, {
+                            (0, t.jsx)(c.Heading, {
                                 variant: "heading-md/semibold",
                                 color: "header-primary",
                                 children: b.intl.string(b.t.SHQcv7),
@@ -207,14 +207,14 @@ function y(e) {
                             (0, t.jsx)(c.Kx8, {
                                 placeholder: b.intl.string(b.t["kX/Sb2"]),
                                 value: C.message,
-                                onChange: N,
+                                onChange: H,
                                 maxLength: d.W4,
                             }),
-                            null != X
+                            null != R
                                 ? (0, t.jsx)(c.Text, {
                                       variant: "text-xs/normal",
                                       color: "text-danger",
-                                      children: X,
+                                      children: R,
                                   })
                                 : null,
                         ],
@@ -222,10 +222,10 @@ function y(e) {
                 ],
             }),
             (0, t.jsx)(i.Go$, {
-                actions: R,
+                actions: X,
                 leading: (0, t.jsx)(c.Avr, {
                     text: b.intl.string(b.t.N86XcH),
-                    onClick: T,
+                    onClick: L,
                     variant: "critical",
                 }),
             }),

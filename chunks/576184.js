@@ -40,7 +40,7 @@ class u extends o.Component {
         return (
             (e =
                 null != o
-                    ? (0, t.jsx)(c.eee, {
+                    ? (0, t.jsx)(c.Anchor, {
                           className: p.btn,
                           href: o,
                           children: m.intl.string(m.t["1WjMbG"]),

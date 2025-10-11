@@ -14,7 +14,7 @@ function u(e) {
         children: (0, r.jsx)(i.gNt, {
             label: c.intl.string(c.t.arFPfH),
             description: c.intl.string(c.t["IT/0AA"]),
-            children: (0, r.jsx)(i.zxk, {
+            children: (0, r.jsx)(i.Button, {
                 size: "sm",
                 variant: "secondary",
                 onClick: () => {

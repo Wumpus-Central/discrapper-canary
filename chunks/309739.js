@@ -66,7 +66,7 @@ function E() {
                     (0, r.jsxs)("div", {
                         className: m.myServersHeaderContainer,
                         children: [
-                            (0, r.jsx)(o.X6q, {
+                            (0, r.jsx)(o.Heading, {
                                 className: m.myServersTitle,
                                 variant: "heading-md/medium",
                                 color: "header-primary",

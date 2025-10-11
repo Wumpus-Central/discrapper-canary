@@ -204,7 +204,7 @@ function P(e) {
     return (0, r.jsx)(o.u, {
         text: i,
         position: "top",
-        children: (0, r.jsx)(l.zxk, {
+        children: (0, r.jsx)(l.Button, {
             size: "sm",
             variant: "secondary",
             onClick: f,

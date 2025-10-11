@@ -38,16 +38,16 @@ var l = i(951288),
     w = i(290175),
     R = i(724994),
     Z = i(297651),
-    H = i(390698),
-    W = i(813083),
-    B = i(680942),
+    B = i(390698),
+    H = i(813083),
+    W = i(680942),
     G = i(409116),
     M = i(237031),
     U = i(508925),
     D = i(453713),
     V = i(325834),
-    z = i(143941),
-    F = i(616066),
+    F = i(143941),
+    z = i(616066),
     K = i(216541),
     q = i(22267),
     Y = i(67409),
@@ -105,7 +105,7 @@ let eu = (e) => {
         let { isHighlighted: t, isPurchased: i, user: n, item: r } = e;
         return (0, l.jsx)("div", {
             className: eo.avatarContainer,
-            children: (0, l.jsx)(F.R, {
+            children: (0, l.jsx)(z.R, {
                 item: r,
                 user: n,
                 isPurchased: i,
@@ -280,13 +280,13 @@ function ev(e) {
             isPartiallyOwnedBundle: C,
             isPurchased: x,
         }),
-        { handleUseNow: W, isApplying: M } = (0, N.W)({ product: n }),
+        { handleUseNow: H, isApplying: M } = (0, N.W)({ product: n }),
         U = u(v.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
         D = (0, X.Iw)(t),
         V = null != D,
         {
-            displayPrices: z,
-            checkoutEligiblePrices: F,
+            displayPrices: F,
+            checkoutEligiblePrices: z,
             isOrbExclusive: K,
             shouldCheckoutWithOrbs: q,
             hasSufficientOrbs: Q,
@@ -296,9 +296,9 @@ function ev(e) {
             tab: i,
             hasDiscountOffer: V,
         });
-    if (0 === z.length) return null;
+    if (0 === F.length) return null;
     let J = () =>
-        (0, l.jsx)(h.zxk, {
+        (0, l.jsx)(h.Button, {
             variant: "primary",
             onClick: (e) => {
                 e.stopPropagation(), U(e);
@@ -320,7 +320,7 @@ function ev(e) {
                           children: es.intl.string(es.t.wu4gyc),
                       })
                     : x || C
-                      ? (0, l.jsx)(H.U, {
+                      ? (0, l.jsx)(B.U, {
                             className: eo.priceTag,
                             isPartiallyPurchased: C,
                         })
@@ -332,7 +332,7 @@ function ev(e) {
                           })
                         : (0, l.jsx)("div", {
                               className: eo.priceLine,
-                              children: z.map((e, t) =>
+                              children: F.map((e, t) =>
                                   (0, l.jsx)(
                                       G.F,
                                       {
@@ -351,7 +351,7 @@ function ev(e) {
             }),
             (0, l.jsx)("div", {
                 className: eo.innerHover,
-                children: (0, l.jsxs)(h.hE2, {
+                children: (0, l.jsxs)(h.ButtonGroup, {
                     wrap: !1,
                     fullWidth: !0,
                     children: [
@@ -370,10 +370,10 @@ function ev(e) {
                                 });
                             if (!Z || y) return J();
                             if (x)
-                                return (0, l.jsx)(h.zxk, {
+                                return (0, l.jsx)(h.Button, {
                                     variant: "primary",
                                     onClick: (e) => {
-                                        e.stopPropagation(), W();
+                                        e.stopPropagation(), H();
                                     },
                                     loading: M,
                                     text: es.intl.string(es.t.MAS7uL),
@@ -402,7 +402,7 @@ function ev(e) {
                                                 purchaseType: en.o8.PREMIUM_PURCHASE,
                                             });
                                     };
-                                    return (0, l.jsx)(h.zxk, {
+                                    return (0, l.jsx)(h.Button, {
                                         variant: "primary",
                                         onClick: (t) => {
                                             t.stopPropagation(), e();
@@ -417,10 +417,10 @@ function ev(e) {
                                 }
                                 if (q)
                                     if (Q)
-                                        return (0, l.jsx)(h.zxk, {
+                                        return (0, l.jsx)(h.Button, {
                                             variant: "primary",
                                             text: es.intl.format(es.t.kAgx5O, {
-                                                orbPrice: F[0].amount,
+                                                orbPrice: z[0].amount,
                                                 orbIconHook: () => (0, l.jsx)(O.Z, { className: eo.orbIconAligned }),
                                             }),
                                             onClick: (e) => {
@@ -469,13 +469,13 @@ function ev(e) {
                                                     });
                                             },
                                             "aria-label": es.intl.formatToPlainString(es.t["fNG/09"], {
-                                                orbPrice: F[0].amount,
+                                                orbPrice: z[0].amount,
                                             }),
                                             fullWidth: !0,
                                         });
                                     else return J();
                                 if (i === en.AW.ORBS)
-                                    return (0, l.jsx)(h.zxk, {
+                                    return (0, l.jsx)(h.Button, {
                                         variant: "primary",
                                         onClick: (e) => {
                                             e.stopPropagation(), U(e);
@@ -486,7 +486,7 @@ function ev(e) {
                                 let e = V
                                     ? es.intl.formatToPlainString(es.t["5U5RBw"], { discountOfferAmount: D })
                                     : es.intl.formatToPlainString(es.t["cNSL/v"], { price: R });
-                                return (0, l.jsx)(h.zxk, {
+                                return (0, l.jsx)(h.Button, {
                                     variant: "primary",
                                     onClick: (e) => {
                                         e.stopPropagation(),
@@ -532,7 +532,7 @@ function ev(e) {
                                 })
                               : (0, l.jsx)(j.k0, {
                                     newValue: { pageCategory: i === en.AW.HOME || null == I ? void 0 : I.pageCategory },
-                                    children: (0, l.jsx)(B.Z, {
+                                    children: (0, l.jsx)(W.Z, {
                                         primary: !0,
                                         product: t,
                                         selectedVariantIndex: r,
@@ -565,10 +565,10 @@ let ex = n.memo(function (e) {
             { analyticsLocations: k } = (0, x.ZP)([v.Z.COLLECTIBLES_SHOP_CARD]),
             N = (0, j.sp)(),
             Z = (0, el.G)("CollectiblesShopTallCard"),
-            H = null != T && T === u.z.HERO && Z ? en.Ch.THUMBNAIL : en.Ch.DEFAULT,
-            B = (0, P.Y)({ location: "CollectiblesShopTallCard" }),
+            B = null != T && T === u.z.HERO && Z ? en.Ch.THUMBNAIL : en.Ch.DEFAULT,
+            W = (0, P.Y)({ location: "CollectiblesShopTallCard" }),
             { isHoveringOrFocusing: G } = (0, C.Z)(c),
-            F = (0, ee.To)(t),
+            z = (0, ee.To)(t),
             q = (0, p.e7)([m.Z], () => m.Z.useReducedMotion),
             Y = S.ZP.canUseCollectibles(i),
             Q = n.useMemo(() => (0, L.BH)(t, Y), [t, Y]),
@@ -641,14 +641,14 @@ let ex = n.memo(function (e) {
                             analyticsSource: e,
                             returnRef: ef,
                             tab: o,
-                            variantType: H,
+                            variantType: B,
                         });
                 },
-                [t, r, o, k, N, H],
+                [t, r, o, k, N, B],
             ),
             eO = eI(v.Z.COLLECTIBLES_SHOP_CARD);
         if (0 === ey.length || ((0, L.x6)(t) && null != Q && Q.discountPercentage < 0)) return null;
-        let eb = a()(eo.badge, { [eo.badgeLeftAligned]: B });
+        let eb = a()(eo.badge, { [eo.badgeLeftAligned]: W });
         return (0, l.jsx)(h.tEY, {
             children: (0, l.jsxs)(h.kL8, {
                 className: a()(A, J ? eo.shopCardDark : eo.shopCard, {
@@ -672,7 +672,7 @@ let ex = n.memo(function (e) {
                                     ((t = ed({}, e)),
                                     (i = i =
                                         {
-                                            className: a()(eo.premiumWheelBadge, { [eo.badgeLeftAligned]: B }),
+                                            className: a()(eo.premiumWheelBadge, { [eo.badgeLeftAligned]: W }),
                                             text: (0, l.jsx)(h.SrA, {
                                                 size: "md",
                                                 color: "currentColor",
@@ -695,14 +695,14 @@ let ex = n.memo(function (e) {
                                 );
                             },
                         }),
-                    (0, l.jsx)(W.Z, {
+                    (0, l.jsx)(H.Z, {
                         category: r,
-                        className: a()(eo.limitedTimeBadge, { [eo.badgeLeftAligned]: B }),
-                        display: W.k.CARD,
+                        className: a()(eo.limitedTimeBadge, { [eo.badgeLeftAligned]: W }),
+                        display: H.k.CARD,
                         shopBlockType: T,
                     }),
-                    B &&
-                        (0, l.jsx)(z.a, {
+                    W &&
+                        (0, l.jsx)(F.a, {
                             product: t,
                             selectedVariantIndex: f,
                             className: eo.wishlistButton,
@@ -728,7 +728,7 @@ let ex = n.memo(function (e) {
                               className: eb,
                           }),
                     (0, l.jsx)("div", {
-                        className: a()(eo.preview, { [eo.previewThumbnailVariant]: H === en.Ch.THUMBNAIL }),
+                        className: a()(eo.preview, { [eo.previewThumbnailVariant]: B === en.Ch.THUMBNAIL }),
                         children: (0, s.EQ)(t.type)
                             .with(d.Z.PROFILE_EFFECT, d.Z.AVATAR_DECORATION, d.Z.NAMEPLATE, () => e_(_, G, ea))
                             .with(d.Z.BUNDLE, () =>
@@ -773,16 +773,16 @@ let ex = n.memo(function (e) {
                     (0, l.jsxs)("div", {
                         className: a()(eo.cardText, J ? eo.darkCardBackground : eo.lightCardBackground, {
                             [eo.variantsGroup]: t.type === d.Z.VARIANTS_GROUP,
-                            [eo.thumbnailVariant]: t.type === d.Z.VARIANTS_GROUP && H === en.Ch.THUMBNAIL,
+                            [eo.thumbnailVariant]: t.type === d.Z.VARIANTS_GROUP && B === en.Ch.THUMBNAIL,
                         }),
                         children: [
-                            (0, l.jsx)(h.X6q, {
+                            (0, l.jsx)(h.Heading, {
                                 variant: "text-lg/bold",
                                 className: eo.productName,
-                                children: F,
+                                children: z,
                             }),
                             t.type === d.Z.VARIANTS_GROUP
-                                ? H === en.Ch.DEFAULT
+                                ? B === en.Ch.DEFAULT
                                     ? (0, l.jsx)(D.P, {
                                           variantGroupProduct: t,
                                           previewingVariantIndexProps: {

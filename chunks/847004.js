@@ -1,15 +1,15 @@
 n.d(t, { Z: () => _ }), n(388685);
 var a = n(951288),
-    r = n(647438),
-    l = n(120356),
-    i = n.n(l),
+    i = n(647438),
+    r = n(120356),
+    l = n.n(r),
     s = n(481060),
     c = n(44315),
     o = n(937615),
     d = n(981631),
     m = n(388032),
     x = n(575076);
-function p(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
@@ -34,7 +34,7 @@ function p(e) {
     }
     return e;
 }
-function u(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,10 +53,10 @@ function u(e, t) {
     );
 }
 function f(e) {
-    let { price: t, selected: n, onClick: r } = e;
+    let { price: t, selected: n, onClick: i } = e;
     return (0, a.jsxs)(s.P3F, {
-        className: i()(x.priceRow, { [x.selected]: n }),
-        onClick: r,
+        className: l()(x.priceRow, { [x.selected]: n }),
+        onClick: i,
         children: [
             n
                 ? (0, a.jsx)(s.owK, {
@@ -95,15 +95,15 @@ function f(e) {
     });
 }
 function _(e) {
-    let { selectedTemplate: t, handleSelectTemplate: n, newPricesToPick: l } = e,
-        [i, c] = r.useState(0);
+    let { selectedTemplate: t, handleSelectTemplate: n, newPricesToPick: r } = e,
+        [l, c] = i.useState(0);
     return (0, a.jsxs)("div", {
         className: x.container,
         children: [
             (0, a.jsxs)("div", {
                 className: x.content,
                 children: [
-                    (0, a.jsx)(s.X6q, {
+                    (0, a.jsx)(s.Heading, {
                         variant: "heading-md/semibold",
                         children: m.intl.format(m.t["5WZ9Cg"], { tierName: t.listings[0].name }),
                     }),
@@ -114,12 +114,12 @@ function _(e) {
                             price: (0, o.T4)(t.listings[0].price_tier, d.pKx.USD),
                         }),
                     }),
-                    l.map((e, t) =>
+                    r.map((e, t) =>
                         (0, a.jsx)(
                             f,
                             {
                                 price: e,
-                                selected: t === i,
+                                selected: t === l,
                                 onClick: () => c(t),
                             },
                             e,
@@ -127,11 +127,11 @@ function _(e) {
                     ),
                 ],
             }),
-            (0, a.jsx)(s.zxk, {
+            (0, a.jsx)(s.Button, {
                 variant: "primary",
                 text: m.intl.string(m.t["1W7mCg"]),
                 onClick: () => {
-                    n(u(p({}, t), { listings: [u(p({}, t.listings[0]), { price_tier: l[i] })] }));
+                    n(p(u({}, t), { listings: [p(u({}, t.listings[0]), { price_tier: r[l] })] }));
                 },
             }),
         ],

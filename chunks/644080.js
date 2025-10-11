@@ -1,4 +1,4 @@
-t.d(n, { Z: () => Z });
+t.d(n, { Z: () => I });
 var l = t(951288),
     r = t(647438),
     a = t(120356),
@@ -37,7 +37,7 @@ function _(e) {
               };
     return (0, l.jsx)("div", {
         className: j.editButtonContainer,
-        children: (0, l.jsx)(c.zxk, {
+        children: (0, l.jsx)(c.Button, {
             variant: t,
             icon: r,
             text: a,
@@ -47,9 +47,9 @@ function _(e) {
         }),
     });
 }
-let Z = r.memo(function (e) {
+let I = r.memo(function (e) {
     let { guild: n, titleClassName: a } = e,
-        { homeHeaderImage: h, isHomeHeaderImageSet: Z } = ((e) => {
+        { homeHeaderImage: h, isHomeHeaderImageSet: I } = ((e) => {
             let n = r.useMemo(
                 () =>
                     null == e
@@ -66,7 +66,7 @@ let Z = r.memo(function (e) {
                 homeHeaderScroll: 200 * (null != n),
             };
         })(n),
-        I = (0, m.b$)(n.id),
+        Z = (0, m.b$)(n.id),
         y = (0, s.e7)([g.Z], () => (0, f.b)(g.Z, n)),
         N = (0, o.ZP)();
     return (0, l.jsxs)("div", {
@@ -76,10 +76,10 @@ let Z = r.memo(function (e) {
                 className: j.headerArtWrapper,
                 children: [
                     (0, l.jsx)("div", {
-                        className: i()(j.headerArt, { [j.headerArtPlaceholder]: !Z }),
-                        style: { backgroundImage: "url(".concat(Z ? h : "dark" === N ? C : v, ")") },
+                        className: i()(j.headerArt, { [j.headerArtPlaceholder]: !I }),
+                        style: { backgroundImage: "url(".concat(I ? h : "dark" === N ? C : v, ")") },
                     }),
-                    I && (0, l.jsx)(_, { guild: n }),
+                    Z && (0, l.jsx)(_, { guild: n }),
                 ],
             }),
             (0, l.jsx)("div", {
@@ -97,7 +97,7 @@ let Z = r.memo(function (e) {
                             children: (0, l.jsxs)("div", {
                                 className: j.headerName,
                                 children: [
-                                    (0, l.jsx)(c.X6q, {
+                                    (0, l.jsx)(c.Heading, {
                                         className: j.headerName,
                                         variant: "heading-xxl/bold",
                                         children: n.name,
@@ -112,12 +112,13 @@ let Z = r.memo(function (e) {
                                         (0, l.jsx)("div", {
                                             "data-button-hoisted-classname-wrapper": !0,
                                             className: j.inviteButton,
-                                            children: (0, l.jsx)(c.zxk, {
+                                            children: (0, l.jsx)(c.Button, {
                                                 variant: "secondary",
                                                 text: b.intl.string(b.t.VINpSE),
                                                 onClick: () =>
                                                     (0, c.ZDy)(async () => {
                                                         let { default: e } = await Promise.all([
+                                                            t.e("74318"),
                                                             t.e("7654"),
                                                             t.e("54833"),
                                                         ]).then(t.bind(t, 560114));
@@ -162,7 +163,7 @@ let Z = r.memo(function (e) {
                                                                 (a = a =
                                                                     {
                                                                         guild: n,
-                                                                        source: x.t4x.GUILD_HOME,
+                                                                        source: x.InstantInviteSources.GUILD_HOME,
                                                                     }),
                                                                 Object.getOwnPropertyDescriptors
                                                                     ? Object.defineProperties(

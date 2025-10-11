@@ -42,7 +42,7 @@ let m = function (e) {
                     ),
                 ),
             }),
-            (0, i.jsx)(l.X6q, {
+            (0, i.jsx)(l.Heading, {
                 className: f.channelName,
                 variant: "heading-xxl/semibold",
                 children: n.name,
@@ -73,7 +73,7 @@ let m = function (e) {
             }),
             (0, i.jsx)("div", {
                 className: f.joinButton,
-                children: (0, i.jsx)(l.zxk, {
+                children: (0, i.jsx)(l.Button, {
                     variant: "overlay-primary",
                     text: m ? h.intl.string(h.t["96ANUF"]) : h.intl.string(h.t.TVBCKS),
                     onClick: C,

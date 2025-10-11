@@ -57,7 +57,7 @@ function g(e, t) {
 function m() {
     return (0, i.jsx)("div", {
         className: h.footer,
-        children: (0, i.jsx)(r.zxk, {
+        children: (0, i.jsx)(r.Button, {
             variant: "active",
             size: "sm",
             text: p.intl.string(p.t.U76Ft7),
@@ -92,7 +92,9 @@ function y(e) {
                         return;
                     let u = c ? { contextKey: r.u1M } : void 0;
                     (0, r.ZDy)(async () => {
-                        let { default: e } = await Promise.all([n.e("46746"), n.e("33641")]).then(n.bind(n, 60594));
+                        let { default: e } = await Promise.all([n.e("4093"), n.e("47863"), n.e("33641")]).then(
+                            n.bind(n, 60594),
+                        );
                         return (t) =>
                             (0, i.jsx)(
                                 e,
@@ -130,7 +132,9 @@ function y(e) {
                     l ? s.Z.setInputLocked(!1, (0, a.getPID)()) : s.Z.setInstanceLocked(!1);
                     let c = l ? { contextKey: r.u1M } : void 0;
                     (0, r.ZDy)(async () => {
-                        let { default: e } = await Promise.all([n.e("46746"), n.e("33641")]).then(n.bind(n, 60594));
+                        let { default: e } = await Promise.all([n.e("4093"), n.e("47863"), n.e("33641")]).then(
+                            n.bind(n, 60594),
+                        );
                         return (t) =>
                             (0, i.jsx)(
                                 e,

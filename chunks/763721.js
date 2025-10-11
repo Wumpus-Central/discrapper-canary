@@ -172,7 +172,7 @@ let h = [
                                 }),
                             ),
                             "tags" === t
-                                ? (0, r.jsx)(o.zxk, {
+                                ? (0, r.jsx)(o.Button, {
                                       text: "Reset Tags",
                                       size: "sm",
                                       variant: "secondary",

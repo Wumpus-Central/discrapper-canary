@@ -38,7 +38,7 @@ let O = "hTKzmak",
                 }),
                 (0, l.jsxs)("div", {
                     children: [
-                        (0, l.jsx)(s.X6q, {
+                        (0, l.jsx)(s.Heading, {
                             className: I.rowText,
                             variant: "heading-md/semibold",
                             children: f.intl.string(f.t.DwDxDQ),
@@ -63,10 +63,10 @@ function C(e) {
         [o, d] = i.useState(""),
         [m, N] = i.useState(!1),
         [T, C] = i.useState(null),
-        x = i.useRef(null);
+        g = i.useRef(null);
     i.useEffect(() => {
         var e;
-        r && (null == (e = x.current) || e.focus());
+        r && (null == (e = g.current) || e.focus());
     }, [r]);
     let h = (e) => {
         e.preventDefault();
@@ -109,7 +109,7 @@ function C(e) {
                 direction: _.Z.Direction.VERTICAL,
                 separator: !1,
                 children: [
-                    (0, l.jsx)(s.X6q, {
+                    (0, l.jsx)(s.Heading, {
                         className: I.title,
                         variant: "heading-xl/semibold",
                         children: f.intl.string(f.t.riOUtL),
@@ -138,7 +138,7 @@ function C(e) {
                             value: o,
                             onChange: d,
                             placeholder: "".concat(S).concat(O),
-                            inputRef: x,
+                            inputRef: g,
                         }),
                     }),
                     (0, l.jsx)(s.Text, {
@@ -166,7 +166,7 @@ function C(e) {
             (0, l.jsxs)(s.mzw, {
                 className: I.footer,
                 children: [
-                    (0, l.jsx)(s.zxk, {
+                    (0, l.jsx)(s.Button, {
                         variant: "primary",
                         text: f.intl.string(f.t["Ts/9AQ"]),
                         loading: m,

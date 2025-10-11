@@ -81,7 +81,7 @@ let E = function (e) {
                             color: s.zx.Colors.PRIMARY,
                             buttonText: m.intl.string(m.t.aBHecH),
                         })
-                      : (0, r.jsx)(l.zxk, {
+                      : (0, r.jsx)(l.Button, {
                             variant: "secondary",
                             text: m.intl.string(m.t.KLOhbG),
                             onClick: () => {

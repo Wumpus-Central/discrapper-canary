@@ -51,7 +51,7 @@ let p = function (e) {
             ],
         });
     }
-    return (0, r.jsx)(l.X6q, {
+    return (0, r.jsx)(l.Heading, {
         color: g ? "none" : "always-white",
         variant: null != h ? h : "heading-md/medium",
         className: a()(_.pricePerInterval, i),

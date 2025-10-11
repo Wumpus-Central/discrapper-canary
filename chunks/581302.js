@@ -15,7 +15,7 @@ let c = function () {
             description: "Click the button below to reset your onboarding state for Virtual Currency.",
             children: [
                 (0, a.jsx)("div", {
-                    children: (0, a.jsx)(r.zxk, {
+                    children: (0, a.jsx)(r.Button, {
                         text: "Reset Onboarding State",
                         onClick: () => {
                             e(), t(), (0, i.uL)(s.Z5c.APP);

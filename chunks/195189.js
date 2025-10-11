@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(28664),
     l = n(481060),
-    s = n(449226),
-    a = n(231338),
+    a = n(449226),
+    s = n(231338),
     o = n(388032),
     c = n(824804);
 function d(e) {
@@ -15,7 +15,7 @@ function d(e) {
             (0, r.jsxs)("div", {
                 className: c.itemContent,
                 children: [
-                    (0, r.jsx)(l.X6q, {
+                    (0, r.jsx)(l.Heading, {
                         variant: "text-md/semibold",
                         color: "header-primary",
                         children: t,
@@ -31,10 +31,10 @@ function d(e) {
             }),
             (0, r.jsx)(i.u, {
                 text: o.intl.string(o.t.NQ4nCg),
-                children: (0, r.jsx)(s.Z, {
+                children: (0, r.jsx)(a.Z, {
                     checked: !0,
                     disabled: !0,
-                    onChange: a.dG,
+                    onChange: s.dG,
                     className: c.bringToFront,
                 }),
             }),

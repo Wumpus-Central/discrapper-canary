@@ -91,7 +91,7 @@ let m = () => {
                     className: u.inner,
                     children: [
                         (0, a.jsx)(o.Z, { icons: d.J6 }),
-                        (0, a.jsx)(s.X6q, {
+                        (0, a.jsx)(s.Heading, {
                             variant: "heading-lg/bold",
                             children: "Upload Shop Assets",
                         }),

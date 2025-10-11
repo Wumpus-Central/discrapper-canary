@@ -16,7 +16,7 @@ function s() {
                     alt: l.intl.string(l.t.MvLOqq),
                 }),
                 (0, r.jsx)(i.LZC, { size: 12 }),
-                (0, r.jsx)(i.X6q, {
+                (0, r.jsx)(i.Heading, {
                     className: a.header,
                     variant: "heading-lg/semibold",
                     children: l.intl.string(l.t.t18lFh),

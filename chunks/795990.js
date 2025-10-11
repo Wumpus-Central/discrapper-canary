@@ -21,7 +21,7 @@ function p() {
             (0, r.jsxs)("div", {
                 className: d.textContainer,
                 children: [
-                    (0, r.jsx)(l.X6q, {
+                    (0, r.jsx)(l.Heading, {
                         variant: "heading-md/medium",
                         color: "header-primary",
                         children: u.intl.string(u.t.oqalCw),

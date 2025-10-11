@@ -8,27 +8,27 @@ var r = n(951288),
     c = n(592125),
     u = n(430824),
     d = n(594174),
-    m = n(236373),
-    x = n(230900),
-    g = n(405613),
+    g = n(236373),
+    m = n(230900),
+    x = n(405613),
     h = n(460838),
     v = n(388032),
     p = n(492718);
 function j(e) {
     var t, n;
     let { guildId: j, guildEvent: f, guildEventId: b, error: y } = e,
-        O = l.useMemo(() => (0, m.Gb)(f, j), [f, j]),
+        O = l.useMemo(() => (0, g.Gb)(f, j), [f, j]),
         { channel_id: E, name: N, image: C, description: P } = O,
         S = (0, i.e7)([c.Z], () => c.Z.getChannel(E), [E]),
         I = (0, i.e7)([u.Z], () => u.Z.getGuild(j), [j]),
-        T = (0, x.cS)(O),
+        T = (0, m.cS)(O),
         Z = (0, i.e7)(
             [d.default],
             () => (null != f.creatorId ? d.default.getUser(f.creatorId) : d.default.getCurrentUser()),
             [f.creatorId],
         ),
         w = (0, i.e7)([o.Z], () => o.Z.isLurking(j), [j]),
-        k = (0, s.KS)(S, I);
+        D = (0, s.KS)(S, I);
     return (0, r.jsxs)("div", {
         className: p.content,
         children: [
@@ -41,8 +41,8 @@ function j(e) {
                 name: N,
                 description: P,
                 imageSource:
-                    ((n = (0, m.Gb)(f, j, b)),
-                    null == C && null == n.image ? null : null != C && /^data:/.test(C) ? C : (0, g.Z)(n)),
+                    ((n = (0, g.Gb)(f, j, b)),
+                    null == C && null == n.image ? null : null != C && /^data:/.test(C) ? C : (0, x.Z)(n)),
                 isActive: !1,
                 isUserLurking: w,
                 speakers: [],
@@ -54,7 +54,7 @@ function j(e) {
             (0, r.jsxs)("div", {
                 className: p.textContainer,
                 children: [
-                    (0, r.jsx)(a.X6q, {
+                    (0, r.jsx)(a.Heading, {
                         variant: "heading-xl/semibold",
                         children: v.intl.string(v.t.yBsFEx),
                     }),
@@ -72,8 +72,8 @@ function j(e) {
                                           return (0, r.jsxs)("div", {
                                               className: p.channelName,
                                               children: [
-                                                  null != k
-                                                      ? (0, r.jsx)(k, {
+                                                  null != D
+                                                      ? (0, r.jsx)(D, {
                                                             size: "custom",
                                                             color: "currentColor",
                                                             width: 20,

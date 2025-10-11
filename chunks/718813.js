@@ -17,10 +17,10 @@ var r,
     _ = n(819640),
     O = n(585483),
     E = n(981631),
-    y = n(388032),
-    v = n(484718),
+    v = n(388032),
+    y = n(484718),
     I = n(256076);
-function S(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function S(e, t, n) {
         e
     );
 }
-function C(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function C(e) {
                 }),
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                C(e, t, n[t]);
             });
     }
     return e;
@@ -83,7 +83,7 @@ let N = (0, g.Un)({
     }),
     x = (0, g.Un)({
         createPromise: () =>
-            Promise.all([n.e("36599"), n.e("7654"), n.e("58175"), n.e("58511"), n.e("86915")]).then(n.bind(n, 869779)),
+            Promise.all([n.e("74318"), n.e("36599"), n.e("7654"), n.e("59077"), n.e("86915")]).then(n.bind(n, 869779)),
         webpackId: 869779,
         name: "ChannelSettings",
     }),
@@ -95,15 +95,15 @@ let N = (0, g.Un)({
     Z = (0, g.Un)({
         createPromise: () =>
             Promise.all([
+                n.e("74318"),
                 n.e("36599"),
                 n.e("7654"),
-                n.e("58175"),
                 n.e("76692"),
                 n.e("8271"),
                 n.e("15851"),
                 n.e("51453"),
                 n.e("845"),
-                n.e("58511"),
+                n.e("59077"),
                 n.e("6850"),
                 n.e("58227"),
                 n.e("44686"),
@@ -158,7 +158,7 @@ class M extends (r = l.PureComponent) {
     animateIn(e) {
         c.ZP.Emitter.pause(500);
         let { opacity: t, scale: n } = this.state;
-        s.Z.parallel([s.Z.spring(t, C({ toValue: 1 }, D)), s.Z.spring(n, C({ toValue: 1 }, D))]).start(() =>
+        s.Z.parallel([s.Z.spring(t, S({ toValue: 1 }, D)), s.Z.spring(n, S({ toValue: 1 }, D))]).start(() =>
             this.animateComplete(e),
         );
     }
@@ -166,14 +166,14 @@ class M extends (r = l.PureComponent) {
         c.ZP.Emitter.pause(500);
         let { opacity: t, scale: n } = this.state;
         O.S.dispatch(E.CkL.LAYER_POP_START),
-            s.Z.parallel([s.Z.spring(t, C({ toValue: 0 }, D)), s.Z.spring(n, C({ toValue: 1.1 }, D))]).start(() => {
+            s.Z.parallel([s.Z.spring(t, S({ toValue: 0 }, D)), s.Z.spring(n, S({ toValue: 1.1 }, D))]).start(() => {
                 e(), O.S.dispatch(E.CkL.LAYER_POP_COMPLETE);
             });
     }
     animateUnder() {
         c.ZP.Emitter.pause(500);
         let { opacity: e, scale: t } = this.state;
-        s.Z.parallel([s.Z.spring(e, C({ toValue: 0 }, D)), s.Z.spring(t, C({ toValue: 0.93 }, D))]).start(() =>
+        s.Z.parallel([s.Z.spring(e, S({ toValue: 0 }, D)), s.Z.spring(t, S({ toValue: 0.93 }, D))]).start(() =>
             this.animateComplete(),
         );
     }
@@ -211,7 +211,7 @@ class M extends (r = l.PureComponent) {
             h = (0, i.jsx)(
                 s.Z.div,
                 T(
-                    C(
+                    S(
                         {
                             ref: (e) => (this.containerRef.current = null != e ? e.componentRef : void 0),
                             "data-layer": null != n ? n : "base",
@@ -221,15 +221,15 @@ class M extends (r = l.PureComponent) {
                                 ? (function (e) {
                                       switch (e) {
                                           case E.S9g.USER_SETTINGS:
-                                              return y.intl.string(y.t.cduTBA);
+                                              return v.intl.string(v.t.cduTBA);
                                           case E.S9g.CHANNEL_SETTINGS:
-                                              return y.intl.string(y.t.XPDhcX);
+                                              return v.intl.string(v.t.XPDhcX);
                                           case E.S9g.COLLECTIBLES_SHOP:
-                                              return y.intl.string(y.t.pWG4zc);
+                                              return v.intl.string(v.t.pWG4zc);
                                           case E.S9g.MANA_PLAYGROUND:
                                               return "Component Playground";
                                           case E.S9g.CHECKPOINT:
-                                              return y.intl.string(v.default["CdU/PD"]);
+                                              return v.intl.string(y.default["CdU/PD"]);
                                           default:
                                               return "";
                                       }
@@ -265,7 +265,7 @@ class M extends (r = l.PureComponent) {
         };
     }
     constructor(e) {
-        super(e), S(this, "containerRef", l.createRef());
+        super(e), C(this, "containerRef", l.createRef());
         let t = 1,
             n = 1;
         e.mode === R && ((t = 0.93), (n = 0)),
@@ -277,7 +277,7 @@ class M extends (r = l.PureComponent) {
             });
     }
 }
-S(M, "defaultProps", { baseLayer: !1 }), S(M, "contextType", d.Sfi);
+C(M, "defaultProps", { baseLayer: !1 }), C(M, "contextType", d.Sfi);
 class U extends l.PureComponent {
     componentDidMount() {
         O.S.subscribe(E.CkL.LAYER_POP_ESCAPE_KEY, p.xf);
@@ -345,7 +345,7 @@ function G(e) {
         r = (0, m.QP)((e) => e.fullScreenLayers.length > 0);
     return (0, i.jsx)(
         U,
-        T(C({}, e), {
+        T(S({}, e), {
             sidebarTheme: t,
             layers: n,
             hasFullScreenLayer: r,

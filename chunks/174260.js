@@ -13,7 +13,7 @@ function d(e) {
               className: o.sectionContainer,
               children: [
                   null != d &&
-                      (0, a.jsx)(r.X6q, {
+                      (0, a.jsx)(r.Heading, {
                           variant: "heading-lg/semibold",
                           color: "header-primary",
                           lineClamp: 1,

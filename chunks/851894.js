@@ -162,7 +162,7 @@ function Z(e) {
                                       },
                                   }),
                                   (0, r.jsx)(E.Z, {
-                                      profilePreviewTitle: (0, r.jsx)(l.X6q, {
+                                      profilePreviewTitle: (0, r.jsx)(l.Heading, {
                                           variant: "heading-md/medium",
                                           className: L.profilePreviewTitle,
                                           children: D.intl.formatToPlainString(D.t.Tc0slJ, {

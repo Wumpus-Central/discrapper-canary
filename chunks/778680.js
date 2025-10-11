@@ -13,7 +13,7 @@ function c(e) {
     return (0, r.jsxs)("div", {
         className: s.container,
         children: [
-            (0, r.jsx)(l.X6q, {
+            (0, r.jsx)(l.Heading, {
                 variant: "heading-xl/semibold",
                 color: "header-primary",
                 children: o.intl.string(o.t.BDUDam),

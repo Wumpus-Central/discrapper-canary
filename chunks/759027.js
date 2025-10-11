@@ -77,11 +77,11 @@ function E(e) {
     var t, n, i, s, b, E, S;
     let { subscription: T, onUpdated: O } = e,
         [N, P] = r.useState(!1),
-        [I, k] = r.useState(!1),
-        [w, R] = r.useState(!1),
+        [I, w] = r.useState(!1),
+        [k, R] = r.useState(!1),
         [A, Z] = r.useState(!1),
-        [D, L] = r.useState(null),
-        M = (e) => ((null == e && (e = T.status), e in _) ? _[e] : "Unknown status ".concat(e)),
+        [D, M] = r.useState(null),
+        L = (e) => ((null == e && (e = T.status), e in _) ? _[e] : "Unknown status ".concat(e)),
         U = (e) => {
             let t = new Date(e);
             return p.default.fromTimestamp(t.getTime());
@@ -124,7 +124,7 @@ function E(e) {
             }),
                 O();
         },
-        G = async () => {
+        B = async () => {
             try {
                 await c.tn.post({
                     url: "/debug/subscriptions/".concat(T.id, "/transition"),
@@ -137,52 +137,52 @@ function E(e) {
                     rejectWithError: !1,
                 });
             } catch (e) {
-                L(e.body.message);
+                M(e.body.message);
             }
             O();
         },
-        z = (null == (t = g.GP[T.planIdFromItems]) ? void 0 : t.premiumType) === g.PremiumTypes.TIER_0,
-        B = null == (n = T.metadata) ? void 0 : n.ended_at,
-        V = null != B ? new Date(B).toISOString().substring(0, 10) : "",
-        W = [
+        G = (null == (t = g.GP[T.planIdFromItems]) ? void 0 : t.premiumType) === g.PremiumTypes.TIER_0,
+        z = null == (n = T.metadata) ? void 0 : n.ended_at,
+        V = null != z ? new Date(z).toISOString().substring(0, 10) : "",
+        H = [
             {
                 id: "id",
                 label: "ID: ".concat(T.id),
             },
             {
                 id: "status",
-                label: "Status: ".concat(M()),
+                label: "Status: ".concat(L()),
             },
         ],
-        H = T.hasActiveTrial,
+        W = T.hasActiveTrial,
         K = (null == (i = T.metadata) ? void 0 : i.active_discount_id) != null;
     return (
-        H &&
-            W.push({
+        W &&
+            H.push({
                 id: "trial",
                 label: "Has Trial",
             }),
         K &&
-            W.push({
+            H.push({
                 id: "active-discount",
                 label: "Has Active Discount",
             }),
         T.status !== f.O0b.ACTIVE &&
-            W.push({
+            H.push({
                 id: "dates",
                 label: "Dates: "
                     .concat((0, m.vc)(T.createdAt, "LL"), " - ")
                     .concat((0, m.vc)(T.currentPeriodEnd, "LL")),
             }),
         T.status === f.O0b.PAUSED &&
-            W.push({
+            H.push({
                 id: "pause-reason",
                 label: "Pause Reason: ".concat(
                     T.pauseReason in y ? y[T.pauseReason] : "Unknown pause reason ".concat(T.pauseReason),
                 ),
             }),
         (0, a.jsx)("div", {
-            className: l()(v.card, z ? v.gradientWrapperTier0 : v.gradientWrapperTier2),
+            className: l()(v.card, G ? v.gradientWrapperTier0 : v.gradientWrapperTier2),
             children: (0, a.jsxs)(d.C3N, {
                 label: "Type: ".concat(
                     (() => {
@@ -193,16 +193,16 @@ function E(e) {
                 className: j.fieldset,
                 children: [
                     (0, a.jsx)(d.QSK, {
-                        items: W,
+                        items: H,
                         label: "Tags",
                     }),
-                    H &&
+                    W &&
                         (0, a.jsxs)("div", {
                             className: j.collapsablePane,
                             children: [
                                 (0, a.jsxs)(d.P3F, {
                                     onClick: () => {
-                                        R(!w);
+                                        R(!k);
                                     },
                                     className: j.collapsablePaneHeader,
                                     children: [
@@ -212,10 +212,10 @@ function E(e) {
                                                 children: "Trial Info",
                                             }),
                                         }),
-                                        (0, a.jsx)(u.Z, { direction: w ? u.Z.Directions.UP : u.Z.Directions.DOWN }),
+                                        (0, a.jsx)(u.Z, { direction: k ? u.Z.Directions.UP : u.Z.Directions.DOWN }),
                                     ],
                                 }),
-                                w &&
+                                k &&
                                     (0, a.jsxs)("ul", {
                                         className: j.collapsiblePaneList,
                                         children: [
@@ -363,7 +363,7 @@ function E(e) {
                         children: [
                             (0, a.jsxs)(d.P3F, {
                                 onClick: () => {
-                                    k(!I);
+                                    w(!I);
                                 },
                                 className: j.collapsablePaneHeader,
                                 children: [
@@ -382,7 +382,7 @@ function E(e) {
                                     children: [
                                         (0, a.jsx)(d.PhF, {
                                             label: "Status",
-                                            serialize: (e) => M(e),
+                                            serialize: (e) => L(e),
                                             isSelected: (e) => e === T.status,
                                             options: C,
                                             select: (e) => F({ status: e }),
@@ -390,16 +390,16 @@ function E(e) {
                                         }),
                                         (0, a.jsxs)("div", {
                                             children: [
-                                                (0, a.jsx)(d.zxk, {
+                                                (0, a.jsx)(d.Button, {
                                                     variant: "primary",
                                                     size: "sm",
                                                     text: "Renew Subscription",
-                                                    onClick: (e) => G(),
+                                                    onClick: (e) => B(),
                                                 }),
                                                 null !== D &&
                                                     (0, a.jsx)(d.kzN, {
                                                         className: j.error,
-                                                        onDismiss: () => L(null),
+                                                        onDismiss: () => M(null),
                                                         children: D,
                                                     }),
                                             ],

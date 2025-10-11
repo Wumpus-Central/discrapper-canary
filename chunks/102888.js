@@ -10,7 +10,9 @@ let d = (e) => {
     let { guild: t, onAddGuild: d } = e,
         u = i.useCallback(() => {
             (0, l.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e("7654"), n.e("81404")]).then(n.bind(n, 560114));
+                let { default: e } = await Promise.all([n.e("74318"), n.e("7654"), n.e("81404")]).then(
+                    n.bind(n, 560114),
+                );
                 return (n) => {
                     var i, l;
                     return (0, r.jsx)(
@@ -43,7 +45,7 @@ let d = (e) => {
                         (l = l =
                             {
                                 guild: t,
-                                source: s.t4x.HUB_DIRECTORY,
+                                source: s.InstantInviteSources.HUB_DIRECTORY,
                                 analyticsLocation: { section: s.jXE.HUB_WELCOME_CTA },
                             }),
                         Object.getOwnPropertyDescriptors
@@ -71,7 +73,7 @@ let d = (e) => {
                 alt: "",
                 src: n(705845),
             }),
-            (0, r.jsx)(l.X6q, {
+            (0, r.jsx)(l.Heading, {
                 className: c.emptyTitle,
                 variant: "heading-xl/semibold",
                 children: o.intl.format(o.t.vyvrpK, { guildName: t.name }),

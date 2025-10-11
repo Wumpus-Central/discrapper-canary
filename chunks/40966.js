@@ -22,7 +22,7 @@ function u() {
                 children: l.intl.format(l.t.RCYeBA, {
                     blogHook: (e, t) =>
                         (0, r.jsx)(
-                            i.eee,
+                            i.Anchor,
                             {
                                 onClick: c,
                                 target: "_blank",

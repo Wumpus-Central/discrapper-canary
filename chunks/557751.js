@@ -1,33 +1,33 @@
-e.d(n, { default: () => s });
-var r = e(951288),
-    i = e(793030),
-    a = e(481060),
-    o = e(701488),
-    l = e(388032);
+r.d(n, { default: () => s });
+var e = r(951288),
+    i = r(793030),
+    a = r(481060),
+    o = r(701488),
+    l = r(388032);
 function s(t) {
-    var { application: n, onCancel: e, onClose: s, onConfirm: c } = t,
+    var { application: n, onCancel: r, onClose: s, onConfirm: c } = t,
         u = (function (t, n) {
             if (null == t) return {};
-            var e,
-                r,
+            var r,
+                e,
                 i = (function (t, n) {
                     if (null == t) return {};
-                    var e,
-                        r,
+                    var r,
+                        e,
                         i = {},
                         a = Object.keys(t);
-                    for (r = 0; r < a.length; r++) (e = a[r]), n.indexOf(e) >= 0 || (i[e] = t[e]);
+                    for (e = 0; e < a.length; e++) (r = a[e]), n.indexOf(r) >= 0 || (i[r] = t[r]);
                     return i;
                 })(t, n);
             if (Object.getOwnPropertySymbols) {
                 var a = Object.getOwnPropertySymbols(t);
-                for (r = 0; r < a.length; r++)
-                    (e = a[r]),
-                        !(n.indexOf(e) >= 0) && Object.prototype.propertyIsEnumerable.call(t, e) && (i[e] = t[e]);
+                for (e = 0; e < a.length; e++)
+                    (r = a[e]),
+                        !(n.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(t, r) && (i[r] = t[r]);
             }
             return i;
         })(t, ["application", "onCancel", "onClose", "onConfirm"]);
-    return (0, r.jsx)(i.Modal, {
+    return (0, e.jsx)(i.Modal, {
         transitionState: u.transitionState,
         onClose: s,
         title: l.intl.string(l.t["06YebG"]),
@@ -35,7 +35,7 @@ function s(t) {
             {
                 text: l.intl.string(l.t["ETE/oK"]),
                 onClick: () => {
-                    e(), s();
+                    r(), s();
                 },
                 variant: "secondary",
             },
@@ -47,15 +47,15 @@ function s(t) {
                 variant: "primary",
             },
         ],
-        children: (0, r.jsxs)(a.Kqy, {
+        children: (0, e.jsxs)(a.Kqy, {
             children: [
-                (0, r.jsxs)(a.Text, {
+                (0, e.jsxs)(a.Text, {
                     variant: "text-sm/normal",
                     children: [l.intl.format(l.t["s+WDGx"], { activityName: n.name }), " "],
                 }),
-                (0, r.jsx)(a.Text, {
+                (0, e.jsx)(a.Text, {
                     variant: "text-sm/normal",
-                    children: (0, r.jsx)(a.eee, {
+                    children: (0, e.jsx)(a.Anchor, {
                         href: o.OF,
                         children: l.intl.string(l.t.E0gf5u),
                     }),

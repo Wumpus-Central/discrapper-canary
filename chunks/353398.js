@@ -20,8 +20,8 @@ var r,
     p = n(570140),
     f = n(484614),
     h = n(852860),
-    x = n(881052),
-    b = n(751189),
+    b = n(881052),
+    x = n(751189),
     j = n(409059),
     v = n(518936),
     _ = n(999382),
@@ -79,7 +79,7 @@ class I extends (r = d.ZP.Store) {
                 (this.error = e), this.emitChange();
             }),
             E(this, "save", async () => {
-                await b.Z.updateGuildTemplate(
+                await x.Z.updateGuildTemplate(
                     _.Z.getProps().guild.id,
                     this.getTemplate().code,
                     this.name,
@@ -110,7 +110,7 @@ function w() {
     return (0, i.jsx)("div", {
         className: N.marginBottom4,
         children: (0, i.jsxs)(m.y5t, {
-            component: (0, i.jsx)(m.X6q, {
+            component: (0, i.jsx)(m.Heading, {
                 variant: "heading-lg/semibold",
                 children: O.intl.string(O.t.KUw7Sk),
             }),
@@ -139,9 +139,9 @@ function Z() {
                     !(async function () {
                         n(!0);
                         try {
-                            await b.Z.loadTemplatesForGuild(e), n(!1);
+                            await x.Z.loadTemplatesForGuild(e), n(!1);
                         } catch (e) {
-                            S.setError(new x.Hx(e));
+                            S.setError(new b.Hx(e));
                         }
                     })();
                 }, [e]),
@@ -204,7 +204,7 @@ function R() {
             (0, i.jsxs)("div", {
                 className: y.descriptionSection,
                 children: [
-                    (0, i.jsx)(m.X6q, {
+                    (0, i.jsx)(m.Heading, {
                         variant: "eyebrow",
                         children: O.intl.string(O.t["f8u+VF"]),
                     }),
@@ -249,7 +249,7 @@ function R() {
             (0, i.jsxs)("div", {
                 className: y.descriptionSection,
                 children: [
-                    (0, i.jsx)(m.X6q, {
+                    (0, i.jsx)(m.Heading, {
                         variant: "eyebrow",
                         children: O.intl.string(O.t["8zhJEh"]),
                     }),
@@ -405,13 +405,13 @@ function k(e) {
         s = async () => {
             S.setError(null), a(!0);
             try {
-                await b.Z.createGuildTemplate(t.id, S.name, S.description);
+                await x.Z.createGuildTemplate(t.id, S.name, S.description);
             } catch (e) {
-                S.setError(new x.Hx(e));
+                S.setError(new b.Hx(e));
             }
             a(!1);
         };
-    return (0, i.jsx)(m.zxk, {
+    return (0, i.jsx)(m.Button, {
         variant: "primary",
         text: O.intl.string(O.t.Wxdi8P),
         loading: r,
@@ -425,16 +425,16 @@ function G(e) {
         s = async () => {
             S.setError(null), a(!0);
             try {
-                await b.Z.syncGuildTemplate(t.id, n.code);
+                await x.Z.syncGuildTemplate(t.id, n.code);
             } catch (e) {
-                S.setError(new x.Hx(e));
+                S.setError(new b.Hx(e));
             }
             a(!1);
         };
     return (0, i.jsx)("div", {
         "data-button-hoisted-classname-wrapper": !0,
         className: y.button,
-        children: (0, i.jsx)(m.zxk, {
+        children: (0, i.jsx)(m.Button, {
             variant: "primary",
             text: O.intl.string(O.t["Nw+0Y2"]),
             loading: r,
@@ -448,9 +448,9 @@ function M(e) {
         s = async () => {
             S.setError(null);
             try {
-                await b.Z.deleteGuildTemplate(t.id, n.code), S.setName(""), S.setDescription("");
+                await x.Z.deleteGuildTemplate(t.id, n.code), S.setName(""), S.setDescription("");
             } catch (e) {
-                S.setError(new x.Hx(e));
+                S.setError(new b.Hx(e));
             }
             a(!1);
         };
@@ -459,7 +459,7 @@ function M(e) {
             (0, i.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,
                 className: y.button,
-                children: (0, i.jsx)(m.zxk, {
+                children: (0, i.jsx)(m.Button, {
                     variant: "critical-secondary",
                     text: O.intl.string(O.t["cN/RFB"]),
                     onClick: () => a(!0),
@@ -479,7 +479,7 @@ function U(e) {
     return (0, i.jsx)("div", {
         "data-button-hoisted-classname-wrapper": !0,
         className: y.button,
-        children: (0, i.jsx)(m.zxk, {
+        children: (0, i.jsx)(m.Button, {
             variant: "secondary",
             text: O.intl.string(O.t.YI3iV1),
             onClick: () =>

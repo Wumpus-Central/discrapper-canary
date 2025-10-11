@@ -31,7 +31,7 @@ function f(e) {
                                     size: a.Z.Sizes.SMOL,
                                     className: h.guildIcon,
                                 }),
-                                (0, i.jsx)(l.X6q, {
+                                (0, i.jsx)(l.Heading, {
                                     variant: "heading-sm/semibold",
                                     color: "header-primary",
                                     children: s.name,
@@ -39,7 +39,7 @@ function f(e) {
                             ],
                         }),
                     null != c &&
-                        (0, i.jsx)(l.X6q, {
+                        (0, i.jsx)(l.Heading, {
                             variant: "heading-xl/semibold",
                             color: "header-primary",
                             children: p.intl.format(p.t.jDV3i4, { username: c.globalName }),

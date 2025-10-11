@@ -1,4 +1,4 @@
-n.d(e, { Z: () => h });
+n.d(e, { Z: () => g });
 var i = n(951288);
 n(647438);
 var r = n(481060),
@@ -9,36 +9,36 @@ var r = n(481060),
     l = n(955708),
     d = n(850165),
     u = n(388032),
-    x = n(394968),
-    p = n(282668);
-function h(t) {
-    let { senderId: e, trackAnalyticsEvent: n, onNavigate: h } = t,
-        m = (0, s.e7)([a.default], () => {
+    p = n(394968),
+    x = n(282668);
+function g(t) {
+    let { senderId: e, trackAnalyticsEvent: n, onNavigate: g } = t,
+        h = (0, s.e7)([a.default], () => {
             let t = a.default.getUser(e);
             return o.ZP.getName(t);
         });
     return (0, i.jsx)(d.Z, {
         header: u.intl.string(u.t.sSMgCw),
-        description: u.intl.formatToPlainString(u.t.q2QrTU, { username: m }),
-        heroImageSrc: p,
+        description: u.intl.formatToPlainString(u.t.q2QrTU, { username: h }),
+        heroImageSrc: x,
         heroImageAlt: u.intl.string(u.t["3QhxXF"]),
         children: (0, i.jsxs)("div", {
-            className: x.buttonContainer,
+            className: p.buttonContainer,
             children: [
-                (0, i.jsx)(r.zxk, {
+                (0, i.jsx)(r.Button, {
                     text: u.intl.string(u.t["+o4Q7e"]),
                     variant: "primary",
                     fullWidth: !0,
                     onClick: () => {
-                        h(l.x.TAKE_ACTION), n(c.NM.USER_TAKEOVER_MODAL_TAKE_ACTION);
+                        g(l.x.TAKE_ACTION), n(c.NM.USER_TAKEOVER_MODAL_TAKE_ACTION);
                     },
                 }),
-                (0, i.jsx)(r.zxk, {
+                (0, i.jsx)(r.Button, {
                     text: u.intl.string(u.t.xLkGzM),
                     variant: "secondary",
                     fullWidth: !0,
                     onClick: () => {
-                        h(l.x.SAFETY_TIPS), n(c.NM.USER_TAKEOVER_MODAL_SAFETY_TIPS);
+                        g(l.x.SAFETY_TIPS), n(c.NM.USER_TAKEOVER_MODAL_SAFETY_TIPS);
                     },
                 }),
             ],

@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(442837),
     l = n(28664),
-    s = n(755721),
-    a = n(481060),
+    a = n(755721),
+    s = n(481060),
     o = n(430824),
     c = n(496675),
     d = n(556012),
@@ -15,14 +15,14 @@ var i = n(442837),
     f = n(464992);
 function h(e) {
     var t;
-    let { action: n, triggerType: h, guildId: x, toggled: b, onToggleAction: j } = e,
-        _ = (e) => () => j(e),
-        v = (0, d.c)(n.type, n, h),
+    let { action: n, triggerType: h, guildId: b, toggled: x, onToggleAction: j } = e,
+        v = (e) => () => j(e),
+        _ = (0, d.c)(n.type, n, h),
         C = null == (t = n.metadata) ? void 0 : t.durationSeconds,
-        O = null != C ? (0, m.L9)(C) : null,
-        y = (0, i.e7)([c.Z, o.Z], () => c.Z.can(g.Plq.MODERATE_MEMBERS, o.Z.getGuild(x)), [x]);
-    if (null == v) return null;
-    let { headerText: N, descriptionText: E, icon: I } = v;
+        O = null != C ? (0, m.getFriendlyDurationString)(C) : null,
+        y = (0, i.e7)([c.Z, o.Z], () => c.Z.can(g.Plq.MODERATE_MEMBERS, o.Z.getGuild(b)), [b]);
+    if (null == _) return null;
+    let { headerText: N, descriptionText: E, icon: I } = _;
     return (0, r.jsxs)("div", {
         className: f.actionContainer,
         children: [
@@ -37,17 +37,17 @@ function h(e) {
             (0, r.jsxs)("div", {
                 className: f.actionTextContainer,
                 children: [
-                    (0, r.jsx)(a.X6q, {
+                    (0, r.jsx)(s.Heading, {
                         variant: "heading-sm/semibold",
                         children: N,
                     }),
-                    (0, r.jsx)(a.Text, {
+                    (0, r.jsx)(s.Text, {
                         color: "interactive-normal",
                         variant: "text-xs/medium",
                         children: E,
                     }),
-                    b &&
-                        (0, r.jsxs)(a.Text, {
+                    x &&
+                        (0, r.jsxs)(s.Text, {
                             color: "interactive-normal",
                             variant: "text-xs/medium",
                             children: [
@@ -57,8 +57,8 @@ function h(e) {
                                       ? p.intl.format(p.t.i3lsKC, { friendlyDurationString: O })
                                       : p.intl.format(p.t.mvHxzc, { friendlyDurationString: O }),
                                 y &&
-                                    (0, r.jsx)(a.P3F, {
-                                        onClick: _(!0),
+                                    (0, r.jsx)(s.P3F, {
+                                        onClick: v(!0),
                                         className: f.editChannel,
                                         tag: "span",
                                         role: "link",
@@ -73,10 +73,10 @@ function h(e) {
                 "aria-label": p.intl.formatToMarkdownString(p.t.wx6Vb2, {}),
                 shouldShow: !y,
                 children: (0, r.jsx)("div", {
-                    children: (0, r.jsx)(s.$q, {
-                        type: s.M0.INVERTED,
-                        value: b,
-                        onChange: _(!1),
+                    children: (0, r.jsx)(a.$q, {
+                        type: a.M0.INVERTED,
+                        value: x,
+                        onChange: v(!1),
                         disabled: !y,
                         className: f.__invalid_actionCheckbox,
                     }),

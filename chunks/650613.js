@@ -82,7 +82,7 @@ function b() {
               });
     return (0, a.jsxs)("div", {
         children: [
-            (0, a.jsx)(i.X6q, {
+            (0, a.jsx)(i.Heading, {
                 variant: "heading-md/semibold",
                 children: "Selected Content",
             }),

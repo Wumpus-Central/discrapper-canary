@@ -25,7 +25,7 @@ function u(e) {
             (0, l.jsxs)("div", {
                 className: d.rowText,
                 children: [
-                    (0, l.jsx)(o.X6q, {
+                    (0, l.jsx)(o.Heading, {
                         variant: "text-xs/semibold",
                         children: t,
                     }),

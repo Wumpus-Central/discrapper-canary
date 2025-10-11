@@ -1,7 +1,7 @@
 n.d(t, {
-    PI: () => k,
-    TB: () => R,
-    ZP: () => v,
+    PI: () => v,
+    TB: () => k,
+    ZP: () => R,
 }),
     n(388685),
     n(415506);
@@ -84,8 +84,8 @@ function P(e) {
         children: t,
     });
 }
-var k = (((s = {}).DEEPLINK_TO_DESKTOP_APP = "deeplink_to_desktop_app"), s);
-function v(e) {
+var v = (((s = {}).DEEPLINK_TO_DESKTOP_APP = "deeplink_to_desktop_app"), s);
+function R(e) {
     let t,
         n,
         {
@@ -94,9 +94,9 @@ function v(e) {
             startingPremiumSubscriptionPlanId: L,
             onClose: o,
             followupSKUInfo: H,
-            isDowngrade: k,
-            hideClose: v,
-            postSuccessGuild: R,
+            isDowngrade: v,
+            hideClose: R,
+            postSuccessGuild: k,
             paymentSourceType: j,
             startingFractionalPremiumEndsAt: b,
             customCTAType: U,
@@ -136,7 +136,7 @@ function v(e) {
             className: T.text,
             children: I.intl.format(I.t.tsQOs7, { skuName: X.name }),
         });
-    else if (y && !k) {
+    else if (y && !v) {
         let e = M.Z.get(s);
         r()(null != e, "Missing plan"),
             e.skuId === x.Si.TIER_0
@@ -168,7 +168,7 @@ function v(e) {
             planId: s,
             startingPremiumSubscriptionPlanId: L,
         });
-    else if (null != R) {
+    else if (null != k) {
         let e = M.Z.get(s);
         r()(null != e, "Missing plan"),
             (t = (0, l.jsxs)(l.Fragment, {
@@ -179,7 +179,7 @@ function v(e) {
                     }),
                     (0, l.jsx)("div", {
                         className: T.text,
-                        children: I.intl.format(I.t["6aZ0NT"], { guildName: R.name }),
+                        children: I.intl.format(I.t["6aZ0NT"], { guildName: k.name }),
                     }),
                 ],
             }));
@@ -202,9 +202,9 @@ function v(e) {
             ? I.intl.string(I.t.qXV2XV)
             : null != X
               ? I.intl.formatToPlainString(I.t["1qGgm5"], { skuName: X.name })
-              : k
+              : v
                 ? I.intl.string(I.t.QJ9EyM)
-                : null != R
+                : null != k
                   ? I.intl.string(I.t.ta3cXV)
                   : I.intl.string(I.t.TkTvBw);
     let W = () =>
@@ -218,7 +218,7 @@ function v(e) {
               type: W(),
               text: t,
               buttonText: n,
-              hideClose: v,
+              hideClose: R,
               onClose: Q,
               buttonLoading: B,
           })
@@ -237,12 +237,12 @@ function v(e) {
                             type: W(),
                         }),
                   t,
-                  v
+                  R
                       ? null
                       : (0, l.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
                             className: T.button,
-                            children: (0, l.jsx)(c.zxk, {
+                            children: (0, l.jsx)(c.Button, {
                                 variant: "primary",
                                 text: n,
                                 onClick: Q,
@@ -252,7 +252,7 @@ function v(e) {
               ],
           });
 }
-function R(e) {
+function k(e) {
     let { planId: t, onClose: n } = e,
         {
             giftRecipient: s,

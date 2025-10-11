@@ -14,17 +14,17 @@ var i = n(951288),
     _ = n(328355);
 let E = function (t) {
     let { onClose: e, channelId: n } = t,
-        [E, A] = s.useState(!1),
-        O = s.useCallback(() => {
+        [E, g] = s.useState(!1),
+        A = s.useCallback(() => {
             (0, a.openUserSettings)(l.n.CONTENT_AND_SOCIAL_PANEL, {
                 section: u.oAB.CONTENT_AND_SOCIAL,
                 scrollPosition: S.FY.DM_SAFETY_ALERTS_V2,
             }),
                 e();
         }, [e]),
-        h = s.useCallback(() => {
+        O = s.useCallback(() => {
             E ||
-                (A(!0),
+                (g(!0),
                 (0, c.Uj)(n)
                     .then(() => {
                         e(),
@@ -34,7 +34,7 @@ let E = function (t) {
                             });
                     })
                     .catch(() => {
-                        A(!1), (0, r.showToast)((0, r.createToast)(x.intl.string(x.t.R0RpRU), r.ToastType.FAILURE));
+                        g(!1), (0, r.showToast)((0, r.createToast)(x.intl.string(x.t.R0RpRU), r.ToastType.FAILURE));
                     }));
         }, [n, e, E]);
     return (0, i.jsxs)(T.Z, {
@@ -47,8 +47,8 @@ let E = function (t) {
             }),
             (0, i.jsxs)("div", {
                 children: [
-                    (0, i.jsx)(r.zxk, {
-                        onClick: O,
+                    (0, i.jsx)(r.Button, {
+                        onClick: A,
                         fullWidth: !0,
                         text: x.intl.string(x.t.qpWnyM),
                     }),
@@ -63,7 +63,7 @@ let E = function (t) {
                                     {
                                         className: _.reportFalsePositiveButton,
                                         tag: "span",
-                                        onClick: h,
+                                        onClick: O,
                                         children: t,
                                     },
                                     e,

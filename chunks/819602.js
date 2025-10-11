@@ -80,7 +80,7 @@ function A(e) {
               className: r()(T.__invalid_connectedAccountOpenIconContainer, T.connectedAccountHideIcon),
           }))
         : null != L &&
-          (j = (0, l.jsx)(c.eee, {
+          (j = (0, l.jsx)(c.Anchor, {
               href: L,
               "aria-label":
                   (null == R ? void 0 : R.name) != null
@@ -108,7 +108,7 @@ function A(e) {
           }));
     let M = (0, c.dQu)(o.Z.colors.INTERACTIVE_MUTED).hex(),
         U = (0, c.dQu)(o.Z.colors.INTERACTIVE_ACTIVE).hex(),
-        k = v.verified
+        B = v.verified
             ? (0, l.jsx)(x.Z, {
                   className: T.connectedAccountVerifiedIcon,
                   color: null != d ? d : M,
@@ -160,7 +160,7 @@ function A(e) {
                                                     children: v.name,
                                                 }),
                                             }),
-                                            k,
+                                            B,
                                         ],
                                     }),
                                     j,
@@ -257,7 +257,7 @@ function E(e) {
                                     children: [
                                         null != n.application.bot
                                             ? (0, l.jsx)(d.Z, {
-                                                  user: new g.Z(n.application.bot),
+                                                  user: new g.default(n.application.bot),
                                                   size: c.EFr.SIZE_16,
                                               })
                                             : null,

@@ -63,7 +63,7 @@ function O(e) {
                               !t &&
                                   (0, i.jsx)("div", {
                                       className: y.measurementCheckbox,
-                                      children: (0, i.jsx)(u.XZJ, {
+                                      children: (0, i.jsx)(u.rsf, {
                                           checked: V,
                                           onChange: (e) => z(e),
                                       }),
@@ -97,7 +97,7 @@ function O(e) {
                               !t &&
                                   (0, i.jsx)("div", {
                                       className: y.measurementCheckbox,
-                                      children: (0, i.jsx)(u.XZJ, {
+                                      children: (0, i.jsx)(u.rsf, {
                                           checked: U,
                                           onChange: (e) => W(e),
                                       }),
@@ -126,7 +126,7 @@ function O(e) {
                               !t &&
                                   (0, i.jsx)("div", {
                                       className: y.measurementCheckbox,
-                                      children: (0, i.jsx)(u.XZJ, {
+                                      children: (0, i.jsx)(u.rsf, {
                                           checked: G,
                                           onChange: (e) => F(e),
                                       }),
@@ -163,7 +163,7 @@ function O(e) {
                               !t &&
                                   (0, i.jsx)("div", {
                                       className: y.measurementCheckbox,
-                                      children: (0, i.jsx)(u.XZJ, {
+                                      children: (0, i.jsx)(u.rsf, {
                                           checked: H,
                                           onChange: (e) => B(e),
                                       }),
@@ -192,7 +192,7 @@ function O(e) {
                               !t &&
                                   (0, i.jsx)("div", {
                                       className: y.measurementCheckbox,
-                                      children: (0, i.jsx)(u.XZJ, {
+                                      children: (0, i.jsx)(u.rsf, {
                                           checked: Y,
                                           onChange: (e) => Q(e),
                                       }),
@@ -244,7 +244,7 @@ function O(e) {
                       (0, i.jsx)("div", {
                           className: y.bottomPanelButton,
                           children: (0, i.jsx)(f.Z, {
-                              children: (0, i.jsx)(u.zxk, {
+                              children: (0, i.jsx)(u.Button, {
                                   variant: "primary",
                                   text: "Reset Frame Data",
                                   onClick: M,

@@ -33,7 +33,7 @@ let u = (e) => {
                         className: l.__invalid_contentContainer,
                         children: (0, r.jsx)("div", {
                             className: l.content,
-                            children: (0, r.jsx)(o.X6q, {
+                            children: (0, r.jsx)(o.Heading, {
                                 variant: "display-lg",
                                 color: "always-white",
                                 children: s.intl.string(s.t.hqjDX1),

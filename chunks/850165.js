@@ -19,7 +19,7 @@ function a(t) {
                     (0, i.jsxs)("div", {
                         className: s.textContainer,
                         children: [
-                            (0, i.jsx)(r.X6q, {
+                            (0, i.jsx)(r.Heading, {
                                 variant: "heading-xl/semibold",
                                 color: "header-primary",
                                 children: o,

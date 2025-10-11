@@ -42,7 +42,7 @@ function b(e) {
                         }),
                     }),
                     (0, i.jsx)(a.LZC, { size: 4 }),
-                    (0, i.jsx)(a.zxk, {
+                    (0, i.jsx)(a.Button, {
                         text: m.intl.string(m.t.C5UQCw),
                         variant: "primary",
                         icon: a.xPt,
