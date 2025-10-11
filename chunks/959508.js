@@ -51,8 +51,8 @@ function O(e) {
             var e;
             return null != (e = b.Z.errors[x]) ? e : C;
         }),
-        [k, G] = i.useState(!1),
-        [M, U] = i.useState(!1),
+        [k, M] = i.useState(!1),
+        [G, U] = i.useState(!1),
         B = null != (t = L.options) ? t : L.optionErrors.filter(p.lm)[0],
         F = L.config,
         H = l.options.length >= j.fY,
@@ -80,7 +80,7 @@ function O(e) {
                   className: a()(_.container, {
                       [_.dropIndicatorBefore]: null != R && x < R,
                       [_.dropIndicatorAfter]: null != R && x > R,
-                      [_.containerFocused]: M,
+                      [_.containerFocused]: G,
                   }),
                   ref: (e) => {
                       Z(D(e));
@@ -108,7 +108,7 @@ function O(e) {
                       }),
                       (0, r.jsx)(c.P3F, {
                           className: _.collapseButton,
-                          onClick: () => G(!1),
+                          onClick: () => M(!1),
                           children: (0, r.jsx)(m.Z, {
                               direction: m.Z.Directions.DOWN,
                               height: 16,
@@ -140,7 +140,7 @@ function O(e) {
                   className: a()(_.container, {
                       [_.dropIndicatorBefore]: null != R && x < R,
                       [_.dropIndicatorAfter]: null != R && x > R,
-                      [_.containerFocused]: M,
+                      [_.containerFocused]: G,
                   }),
                   ref: (e) => {
                       Z(D(e));
@@ -218,7 +218,7 @@ function O(e) {
                               }),
                               (0, r.jsx)(c.P3F, {
                                   className: _.collapseButton,
-                                  onClick: () => G(!0),
+                                  onClick: () => M(!0),
                                   children: (0, r.jsx)(m.Z, {
                                       direction: m.Z.Directions.UP,
                                       height: 16,

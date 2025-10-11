@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685), n(953529), n(781311), n(539854);
+n.d(t, { Z: () => G }), n(388685), n(953529), n(781311), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -75,7 +75,7 @@ function L(e, t) {
     );
 }
 let k = "WELCOME_CHANNEL",
-    G = (e) => {
+    M = (e) => {
         var t;
         let l,
             { guildId: s, welcomeChannel: o, onEdit: f, onChannelReorder: h, isDropHovered: v, index: _ } = e,
@@ -85,7 +85,7 @@ let k = "WELCOME_CHANNEL",
             I = null != O && S.Uu(w.Plq.VIEW_CHANNEL, O),
             T = null != (t = (0, x.KS)(O)) ? t : g.VL1,
             P = (0, b.ZP)(O, !1),
-            G = () => {
+            M = () => {
                 (0, g.ZDy)(
                     async () => {
                         let { default: e } = await n.e("73196").then(n.bind(n, 514698));
@@ -103,7 +103,7 @@ let k = "WELCOME_CHANNEL",
                     { onCloseRequest: () => Z.Vq },
                 );
             },
-            [, M] = (0, c.c)({
+            [, G] = (0, c.c)({
                 type: k,
                 item: {
                     channel: o,
@@ -125,12 +125,12 @@ let k = "WELCOME_CHANNEL",
         return (
             i.useLayoutEffect(
                 () => (
-                    M(U(C)),
+                    G(U(C)),
                     () => {
-                        M(null), U(null);
+                        G(null), U(null);
                     }
                 ),
-                [M, U],
+                [G, U],
             ),
             (l = I
                 ? null != y || null != o.emoji_name
@@ -163,7 +163,7 @@ let k = "WELCOME_CHANNEL",
                                     guildId: s,
                                     welcomeChannel: o,
                                     onChannelReorder: h,
-                                    onShowDeleteModal: G,
+                                    onShowDeleteModal: M,
                                     index: _,
                                 }),
                             );
@@ -198,13 +198,13 @@ let k = "WELCOME_CHANNEL",
                         variant: "icon-only",
                         icon: g.XHJ,
                         "aria-label": R.intl.string(R.t.JYBc3N),
-                        onClick: G,
+                        onClick: M,
                     }),
                 ],
             })
         );
     },
-    M = (e) => {
+    G = (e) => {
         let { guild: t } = e,
             { welcomeSettings: l, originalWelcomeSettings: a } = (0, u.e7)([y.Z], () => y.Z.getSettingsProps()),
             s = (0, u.e7)([h.Z], () => h.Z.useReducedMotion),
@@ -218,7 +218,7 @@ let k = "WELCOME_CHANNEL",
             k = (e) => {
                 null != t && e !== a.enabled && ((0, O.Es)(t.id, { enabled: e }), x(!s), p(!0));
             },
-            M = (e, t, n) => {
+            G = (e, t, n) => {
                 if (null == N) return;
                 let r = N.indexOf(e),
                     i = [...N];
@@ -381,7 +381,7 @@ let k = "WELCOME_CHANNEL",
                                               ? void 0
                                               : N.map((e, n) =>
                                                     (0, r.jsx)(
-                                                        G,
+                                                        M,
                                                         {
                                                             guildId: t.id,
                                                             welcomeChannel: e,
@@ -394,7 +394,7 @@ let k = "WELCOME_CHANNEL",
                                                                         S &&
                                                                         ((0, O.VP)({ enabled: !1 }), k(!1));
                                                             },
-                                                            onChannelReorder: M,
+                                                            onChannelReorder: G,
                                                             isDropHovered: n === c,
                                                             index: n,
                                                         },

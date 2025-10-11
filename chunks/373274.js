@@ -41,11 +41,11 @@ var r,
     L = n(734307),
     M = n(854444),
     k = n(113544),
-    U = n(761091),
-    G = n(301342),
+    G = n(761091),
+    U = n(301342),
     B = n(906817),
-    F = n(429122),
-    V = n(285573),
+    V = n(429122),
+    F = n(285573),
     H = n(995993),
     z = n(910595),
     W = n(120818),
@@ -477,7 +477,7 @@ class eh extends (r = l.PureComponent) {
                     optInEnabled: l,
                     guildChannelsVersion: o,
                 } = this.props;
-                return (0, F.dt)({
+                return (0, V.dt)({
                     sectionIndex: e,
                     guildChannels: t,
                     guildChannelsVersion: o,
@@ -667,7 +667,7 @@ class eh extends (r = l.PureComponent) {
                             );
                         case er.z.GUILD_DIRECTORY:
                             return (0, i.jsx)(
-                                V.Z,
+                                F.Z,
                                 {
                                     guild: r,
                                     selectedChannelId: a,
@@ -801,7 +801,7 @@ class eh extends (r = l.PureComponent) {
                         );
                     case el.d4z.GUILD_CATEGORY:
                         if (t !== u.voiceChannelsSectionNumber) return null;
-                        return (0, i.jsx)(G.kw, { channel: j }, "readonly-".concat(j.id));
+                        return (0, i.jsx)(U.kw, { channel: j }, "readonly-".concat(j.id));
                     case el.d4z.PUBLIC_THREAD:
                     case el.d4z.PRIVATE_THREAD:
                         return (0, i.jsx)(
@@ -836,7 +836,7 @@ class eh extends (r = l.PureComponent) {
                         guildId: c,
                     } = this.props;
                 return (0, i.jsx)(
-                    F.ZP,
+                    V.ZP,
                     {
                         guildId: c,
                         guildChannels: n,
@@ -847,7 +847,7 @@ class eh extends (r = l.PureComponent) {
                         selectedVoiceChannelId: a,
                         optInEnabled: s,
                     },
-                    (0, F.eo)(t, n, s),
+                    (0, V.eo)(t, n, s),
                 );
             }),
             ec(this, "getAnchorId", (e, t) => {
@@ -977,7 +977,7 @@ function eg(e) {
     );
 }
 function em(e) {
-    let t = (0, U.Z)(e.guild),
+    let t = (0, G.Z)(e.guild),
         n = (0, u.cj)([L.Z], () => L.Z.getGuild(e.guildId, { guildActionRows: t })),
         { density: r } = (0, d.TCT)();
     return (0, i.jsx)(ef, ed(eu({}, e, n), { density: r }));

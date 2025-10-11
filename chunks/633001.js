@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eS }), n(388685), n(583741), n(539854), n(49124), n(35282), n(781311);
+n.d(t, { Z: () => eE }), n(388685), n(583741), n(539854), n(49124), n(35282), n(781311);
 var a = n(951288),
     r = n(647438),
     i = n(120356),
@@ -20,8 +20,8 @@ var a = n(951288),
     _ = n(427860),
     y = n(837268),
     C = n(371651),
-    E = n(829907),
-    S = n(610394),
+    S = n(829907),
+    E = n(610394),
     T = n(556809),
     O = n(886118),
     N = n(301801),
@@ -196,7 +196,7 @@ let $ = r.memo(function (e) {
                 (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
                     color: "text-default",
-                    children: ["fullscreenType: ", (0, E.sS)(t.fullscreenType)],
+                    children: ["fullscreenType: ", (0, S.sS)(t.fullscreenType)],
                 }),
                 (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
@@ -229,7 +229,7 @@ let $ = r.memo(function (e) {
                         (0, a.jsxs)(m.Text, {
                             variant: "text-sm/normal",
                             color: "text-default",
-                            children: ["overlayMethod: ", (0, E.P_)(t.overlayMethod)],
+                            children: ["overlayMethod: ", (0, S.P_)(t.overlayMethod)],
                         }),
                     ],
                 }),
@@ -255,7 +255,7 @@ let $ = r.memo(function (e) {
                             (0, a.jsxs)(m.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                children: ["raw overlayMethod: ", (0, E.P_)(i.overlayMethod)],
+                                children: ["raw overlayMethod: ", (0, S.P_)(i.overlayMethod)],
                             }),
                         ],
                     }),
@@ -444,7 +444,7 @@ let ea = r.memo(function (e) {
     );
 });
 function er() {
-    let e = (0, d.e7)([S.ZP], () => S.ZP.hasRenderDebugMode(y.GO.TrackFocusPIDs)),
+    let e = (0, d.e7)([E.ZP], () => E.ZP.hasRenderDebugMode(y.GO.TrackFocusPIDs)),
         t = (0, d.Wu)([C.default], () => C.default.getDevToolsFocusedPidsWithTimestamp());
     return (0, a.jsxs)("div", {
         className: W.panelGroup,
@@ -456,7 +456,7 @@ function er() {
                         checked: e,
                         onChange: () =>
                             void x.Z.setRenderDebugMode(
-                                !S.ZP.hasRenderDebugMode(y.GO.TrackFocusPIDs),
+                                !E.ZP.hasRenderDebugMode(y.GO.TrackFocusPIDs),
                                 y.GO.TrackFocusPIDs,
                             ),
                         label: "Track Focus Pids",
@@ -535,7 +535,7 @@ let ei = r.memo(function (e) {
             variant: "text-sm/normal",
             color: "text-secondary",
             tag: "span",
-            children: ["Original Screen Type: ", null != n ? (0, E.sS)(n) : "Unknown"],
+            children: ["Original Screen Type: ", null != n ? (0, S.sS)(n) : "Unknown"],
         });
     }),
     el = r.memo(function () {
@@ -549,7 +549,7 @@ let ei = r.memo(function (e) {
                         let e = v.ZP.getRunningGames(),
                             t = [],
                             a = Date.now();
-                        for (let n of e) t.push((0, E.hj)(n.pid, 0).then((e) => [n.pid, e, a]));
+                        for (let n of e) t.push((0, S.hj)(n.pid, 0).then((e) => [n.pid, e, a]));
                         let r = await Promise.all(t);
                         n((e) =>
                             r.reduce(
@@ -617,7 +617,7 @@ let ei = r.memo(function (e) {
                                                                     color: "text-default",
                                                                     children: ""
                                                                         .concat(n, ":")
-                                                                        .concat((0, E.sS)(n), " @ ")
+                                                                        .concat((0, S.sS)(n), " @ ")
                                                                         .concat(en(r)),
                                                                 },
                                                                 "".concat(e.pid, "-").concat(n, "-").concat(r),
@@ -693,14 +693,14 @@ let ei = r.memo(function (e) {
     eo = r.memo(function () {
         let [e, t] = et(z.Odu.CLICK_ZONE_DEBUG),
             [n, i] = et(z.Odu.PERFORMANCE_DEBUG),
-            l = (0, d.e7)([S.ZP], () => S.ZP.hasRenderDebugMode(y.GO.ClickZones)),
-            s = (0, d.e7)([S.ZP], () => S.ZP.hasRenderDebugMode(y.GO.WidgetAreas)),
-            o = (0, d.e7)([S.ZP], () => S.ZP.hasRenderDebugMode(y.GO.WindowContainer)),
-            c = (0, d.e7)([S.ZP], () => S.ZP.hasRenderDebugMode(y.GO.DisabledGPUBoost)),
-            u = (0, d.e7)([S.ZP], () => S.ZP.hasRenderDebugMode(y.GO.ForceGPUBoost)),
-            p = (0, d.e7)([S.ZP], () => S.ZP.hasRenderDebugMode(y.GO.OverlayRafManagerForceEnabled)),
+            l = (0, d.e7)([E.ZP], () => E.ZP.hasRenderDebugMode(y.GO.ClickZones)),
+            s = (0, d.e7)([E.ZP], () => E.ZP.hasRenderDebugMode(y.GO.WidgetAreas)),
+            o = (0, d.e7)([E.ZP], () => E.ZP.hasRenderDebugMode(y.GO.WindowContainer)),
+            c = (0, d.e7)([E.ZP], () => E.ZP.hasRenderDebugMode(y.GO.DisabledGPUBoost)),
+            u = (0, d.e7)([E.ZP], () => E.ZP.hasRenderDebugMode(y.GO.ForceGPUBoost)),
+            p = (0, d.e7)([E.ZP], () => E.ZP.hasRenderDebugMode(y.GO.OverlayRafManagerForceEnabled)),
             h = (e) => {
-                x.Z.setRenderDebugMode(!S.ZP.hasRenderDebugMode(e), e);
+                x.Z.setRenderDebugMode(!E.ZP.hasRenderDebugMode(e), e);
             },
             [f, b] = r.useState({});
         return (
@@ -1222,12 +1222,12 @@ let eb = ["__webpack_require__", "fn"],
     };
 function e_() {
     let { ref: e, height: t } = (0, b.ZP)(),
-        n = (0, d.e7)([S.ZP], () => S.ZP.DEV_isOverlayModuleLoggingEnabled()),
+        n = (0, d.e7)([E.ZP], () => E.ZP.DEV_isOverlayModuleLoggingEnabled()),
         [i, s] = r.useState(n),
         [o, c] = r.useState(!1),
         [u, p] = r.useState(null),
         [h, f] = r.useState(Object.keys(em)),
-        [g, v] = (0, d.e7)([S.ZP], () => S.ZP.DEV_getOverlayLoggingBreadcrumbs(), [], D.Q),
+        [g, v] = (0, d.e7)([E.ZP], () => E.ZP.DEV_getOverlayLoggingBreadcrumbs(), [], D.Q),
         [j, _] = r.useState(null),
         y = null != j ? j : g,
         C = null != j ? -1 : v;
@@ -1237,7 +1237,7 @@ function e_() {
                 ? p(y.reduce((e, t) => ("game_tracking_starting" === t.name ? Math.max(e, t.timestamp) : e), 0))
                 : p(null));
     }, [o, y, C]);
-    let [E, T] = r.useState(""),
+    let [S, T] = r.useState(""),
         O = r.useMemo(
             () =>
                 0 === C
@@ -1259,7 +1259,7 @@ function e_() {
             I(e);
         }, []),
         { renderSelectedTab: M } = (0, G.ZP)({ tabs: ev }, []);
-    (0, N.BO)(E, O, Z, ej, [y]);
+    (0, N.BO)(S, O, Z, ej, [y]);
     let L = r.useCallback((e) => {
             s(e), x.Z.setModuleLogging(e);
         }, []),
@@ -1382,7 +1382,7 @@ function e_() {
                     (0, a.jsx)("div", {
                         className: W.toolbar,
                         children: (0, a.jsx)(m.E1j, {
-                            query: E,
+                            query: S,
                             onChange: T,
                             onClear: () => T(""),
                             placeholder: "Regex search by breadcrumb name and data",
@@ -1413,7 +1413,7 @@ function e_() {
     });
 }
 let ey = r.memo(function () {
-        let e = (0, d.e7)([S.ZP], () => S.ZP.getInitializationStages());
+        let e = (0, d.e7)([E.ZP], () => E.ZP.getInitializationStages());
         return (0, a.jsxs)("div", {
             className: W.panelGroup,
             children: [
@@ -1434,8 +1434,8 @@ let ey = r.memo(function () {
         });
     }),
     eC = r.memo(function () {
-        let e = (0, d.e7)([S.ZP], () => S.ZP.DEV_isStateDebuggingEnabled()),
-            t = (0, d.e7)([S.ZP], () => S.ZP.DEV_getDebuggingState());
+        let e = (0, d.e7)([E.ZP], () => E.ZP.DEV_isStateDebuggingEnabled()),
+            t = (0, d.e7)([E.ZP], () => E.ZP.DEV_getDebuggingState());
         return (
             r.useEffect(
                 () => (
@@ -1466,7 +1466,7 @@ let ey = r.memo(function () {
             })
         );
     });
-function eE() {
+function eS() {
     return (0, a.jsx)(m.w0Z, {
         children: (0, a.jsxs)("div", {
             className: l()(K.panel, W.subPanel),
@@ -1483,7 +1483,7 @@ function eE() {
         }),
     });
 }
-function eS() {
+function eE() {
     let [e, t] = r.useState("state");
     return (
         r.useEffect(
@@ -1527,7 +1527,7 @@ function eS() {
                         }),
                     ],
                 }),
-                "state" === e && (0, a.jsx)(eE, {}),
+                "state" === e && (0, a.jsx)(eS, {}),
                 "logging" === e && (0, a.jsx)(e_, {}),
             ],
         })

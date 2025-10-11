@@ -26,14 +26,14 @@ let C = [
         o.z.GUILD_TAG_AVAILABLE_COACHMARK,
         o.z.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK,
     ],
-    E = [
+    S = [
         o.C.GUILD_POWERUP_LEVEL_1_COACHMARK,
         o.C.GUILD_POWERUP_LEVEL_2_COACHMARK,
         o.C.GUILD_POWERUP_LEVEL_3_COACHMARK,
         o.C.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK,
         o.C.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK,
     ],
-    S = [o.C.ADOPT_CLAN_IDENTITY_NOTICE],
+    E = [o.C.ADOPT_CLAN_IDENTITY_NOTICE],
     T = [
         o.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION,
         o.z.VANITY_URL_POWERUP_ROLLBACK_MODAL,
@@ -80,7 +80,7 @@ function I() {
             var t;
             return null == (t = v.Z.getGuild(e)) ? void 0 : t.name;
         }),
-        n = (0, l.Wu)([b.Z], () => [...E, ...S].filter((t) => null != e && (0, p.OY)(t, e))),
+        n = (0, l.Wu)([b.Z], () => [...S, ...E].filter((t) => null != e && (0, p.OY)(t, e))),
         r = (0, l.Wu)([g.Z], () => {
             var t;
             return null != e && null != (t = g.Z.getAppliedGuildBoostsForGuild(e)) ? t : [];
@@ -182,7 +182,7 @@ function I() {
                     className: y.section,
                     children: (0, a.jsx)(c.C3N, {
                         label: "Reset Guild Level DCs",
-                        children: E.map((t) =>
+                        children: S.map((t) =>
                             (0, a.jsx)(
                                 c.rsf,
                                 {
@@ -203,7 +203,7 @@ function I() {
                     className: y.section,
                     children: (0, a.jsx)(c.C3N, {
                         label: "Reset Server Tag Guild Level DCs",
-                        children: S.map((t) =>
+                        children: E.map((t) =>
                             (0, a.jsx)(
                                 c.rsf,
                                 {

@@ -1,7 +1,7 @@
 n.d(t, {
     _Y: () => T,
-    aB: () => E,
-    th: () => S,
+    aB: () => S,
+    th: () => E,
     ub: () => O,
 }),
     n(388685),
@@ -29,7 +29,7 @@ let _ = [g.BRd.DARK, g.BRd.LIGHT, g.BRd.DARKER, g.BRd.MIDNIGHT],
 function C(e) {
     return e[Math.floor(Math.random() * e.length)];
 }
-async function E() {
+async function S() {
     let e = (function () {
             let e = f.default.getCurrentUser();
             return b.ZP.canUseClientThemes(e) ? Object.keys(v.qt).map((e) => Number(e)) : [];
@@ -66,7 +66,7 @@ async function E() {
         }
     } catch (e) {}
 }
-async function S() {
+async function E() {
     let e = c.Z.purchases,
         t = (0, d.Ad)(e),
         n = (0, d.jT)(e),
@@ -107,10 +107,10 @@ function O() {
             _ = (0, d.jT)(v),
             y = m.Z.theme,
             C = g.backgroundGradientPresetId,
-            E = null == b || null == (e = b.avatarDecoration) ? void 0 : e.skuId,
-            S = null == b || null == (n = b.collectibles) || null == (t = n.nameplate) ? void 0 : t.skuId,
-            T = null != E && null != (a = j.find((e) => e.skuId === E)) ? a : null,
-            O = null != S && null != (r = _.find((e) => e.skuId === S)) ? r : null,
+            S = null == b || null == (e = b.avatarDecoration) ? void 0 : e.skuId,
+            E = null == b || null == (n = b.collectibles) || null == (t = n.nameplate) ? void 0 : t.skuId,
+            T = null != S && null != (a = j.find((e) => e.skuId === S)) ? a : null,
+            O = null != E && null != (r = _.find((e) => e.skuId === E)) ? r : null,
             N = o.Z.fontSize,
             P = o.Z.messageGroupSpacing,
             I = p.YC.getSetting();

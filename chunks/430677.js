@@ -42,8 +42,8 @@ let v = function (e) {
         k = null;
     null != w && (0, m.kb)(w) ? A || (k = x.intl.string(x.t.wAkIZW)) : (k = x.intl.string(x.t.CbTEKC));
     let {
-            drag: G,
-            dragSourcePosition: M,
+            drag: M,
+            dragSourcePosition: G,
             drop: U,
             setIsDraggable: B,
         } = (0, u.Z)({
@@ -118,12 +118,12 @@ let v = function (e) {
         children: [
             (0, r.jsxs)("div", {
                 className: a()(j.actionItem, {
-                    [j.dropIndicatorBefore]: null != M && N < M,
-                    [j.dropIndicatorAfter]: null != M && N > M,
+                    [j.dropIndicatorBefore]: null != G && N < G,
+                    [j.dropIndicatorAfter]: null != G && N > G,
                     [j.actionItemError]: null != k,
                 }),
                 ref: (e) => {
-                    G(U(e));
+                    M(U(e));
                 },
                 children: [
                     (0, r.jsx)("div", {

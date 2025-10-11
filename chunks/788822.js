@@ -25,7 +25,7 @@ let C = (e) => {
         O = (0, d.YG)(_, m),
         x = l.useRef(null),
         y = null == m ? void 0 : m.bodyText,
-        T = (0, a.sp)();
+        j = (0, a.sp)();
     return (0, r.jsx)(i.$, {
         innerRef: x,
         onChange: S,
@@ -61,13 +61,13 @@ let C = (e) => {
             onClick: () => {
                 E("shop marketing tile", v),
                     o.default.track(g.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                        collectibles_shop_session_id: null == T ? void 0 : T.sessionId,
+                        collectibles_shop_session_id: null == j ? void 0 : j.sessionId,
                         sku_id: v,
                         page_type: "home",
-                        page_section: null == T ? void 0 : T.pageSection,
-                        page_category: null == T ? void 0 : T.pageCategory,
+                        page_section: null == j ? void 0 : j.pageSection,
+                        page_category: null == j ? void 0 : j.pageCategory,
                         tile_type: "FEATURED_BLOCK",
-                        tile_position: String(null == T ? void 0 : T.tilePosition),
+                        tile_position: String(null == j ? void 0 : j.tilePosition),
                         cta_name: null,
                     });
             },
@@ -99,13 +99,13 @@ let C = (e) => {
                             E("shop marketing take me there button", v),
                                 e.stopPropagation(),
                                 o.default.track(g.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                    collectibles_shop_session_id: null == T ? void 0 : T.sessionId,
+                                    collectibles_shop_session_id: null == j ? void 0 : j.sessionId,
                                     sku_id: v,
                                     page_type: "home",
-                                    page_section: null == T ? void 0 : T.pageSection,
-                                    page_category: null == T ? void 0 : T.pageCategory,
+                                    page_section: null == j ? void 0 : j.pageSection,
+                                    page_category: null == j ? void 0 : j.pageCategory,
                                     tile_type: "FEATURED_BLOCK",
-                                    tile_position: String(null == T ? void 0 : T.tilePosition),
+                                    tile_position: String(null == j ? void 0 : j.tilePosition),
                                     cta_name: "Take me there button",
                                 });
                         },

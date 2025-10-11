@@ -104,10 +104,10 @@ function k(e) {
             (e) => {
                 var i;
                 let { row: l } = e;
-                if (0 === b.length) return (0, r.jsx)(G, {}, "empty-role");
+                if (0 === b.length) return (0, r.jsx)(M, {}, "empty-role");
                 let o = b[l];
                 return (0, r.jsx)(
-                    M,
+                    G,
                     {
                         role: o,
                         guild: n,
@@ -135,7 +135,7 @@ function k(e) {
         renderRow: T,
     });
 }
-function G() {
+function M() {
     return (0, r.jsxs)("div", {
         className: Z.emptyRoles,
         children: [
@@ -153,7 +153,7 @@ function G() {
         ],
     });
 }
-function M(e) {
+function G(e) {
     var t, l, c;
     let {
             role: d,
@@ -170,8 +170,8 @@ function M(e) {
             setSelectedSection: P,
         } = e,
         k = (0, I.T)(p, h, d),
-        G = null != k,
-        [M, B] = i.useState(!1),
+        M = null != k,
+        [G, B] = i.useState(!1),
         F = i.useMemo(
             () => ({
                 type: L,
@@ -182,7 +182,7 @@ function M(e) {
                         position: j,
                     }
                 ),
-                canDrag: () => M && !G,
+                canDrag: () => G && !M,
                 collect: (e) => ({ isDragging: e.isDragging() }),
                 end: (e, t) => {
                     let n = t.getDropResult();
@@ -190,13 +190,13 @@ function M(e) {
                     y(n.roleId);
                 },
             }),
-            [d, C, O, y, G, M, j],
+            [d, C, O, y, M, G, j],
         ),
         [{ isDragging: H }, W] = (0, s.c)(F),
         V = i.useMemo(
             () => ({
                 accept: L,
-                canDrop: () => !G,
+                canDrop: () => !M,
                 collect: (e) => {
                     let t = e.getItem();
                     return null != t && e.isOver() && e.canDrop()
@@ -205,7 +205,7 @@ function M(e) {
                 },
                 drop: () => ({ roleId: d.id }),
             }),
-            [G, d],
+            [M, d],
         ),
         [{ dragSourcePosition: z }, K] = (0, o.L)(V),
         Y = i.useCallback(
@@ -253,7 +253,7 @@ function M(e) {
         }),
         children: [
             (0, r.jsx)("div", {
-                className: a()(Z.dragIcon, R.dragSpacing, { [Z.dragIconHidden]: G || E }),
+                className: a()(Z.dragIcon, R.dragSpacing, { [Z.dragIconHidden]: M || E }),
                 onMouseEnter: () => B(!0),
                 onMouseLeave: () => B(!1),
                 children: (0, r.jsx)(g.Vni, {
@@ -326,11 +326,11 @@ function M(e) {
                 className: a()(Z.buttonsContainer, R.buttonsSpacing),
                 children: [
                     (0, r.jsx)(u.u, {
-                        text: G ? w.intl.string(w.t["HO/oXl"]) : w.intl.string(w.t.bt75u7),
+                        text: M ? w.intl.string(w.t["HO/oXl"]) : w.intl.string(w.t.bt75u7),
                         children: (0, r.jsx)(g.hU, {
                             variant: "secondary",
-                            "aria-label": G ? w.intl.string(w.t["HO/oXl"]) : w.intl.string(w.t.bt75u7),
-                            icon: G ? g.tEF : g.vdY,
+                            "aria-label": M ? w.intl.string(w.t["HO/oXl"]) : w.intl.string(w.t.bt75u7),
+                            icon: M ? g.tEF : g.vdY,
                             onClick: X,
                         }),
                     }),

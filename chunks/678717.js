@@ -2,7 +2,7 @@ n.r(t),
     n.d(t, {
         default: () => eI,
         openDevToolsPopout: () => eT,
-        useDevToolsTabConfig: () => eE,
+        useDevToolsTabConfig: () => eS,
     }),
     n(539854),
     n(388685);
@@ -27,9 +27,9 @@ var a = n(951288),
     _ = n(259580),
     y = n(31336),
     C = n(19759),
-    E = n(432877);
+    S = n(432877);
 n(381996);
-var S = n(392750),
+var E = n(392750),
     T = n(926976),
     O = n(789654),
     N = n(866730),
@@ -82,7 +82,7 @@ var S = n(392750),
     e_ = n(388032),
     ey = n(552883),
     eC = n(451429);
-function eE() {
+function eS() {
     return r.useMemo(() => {
         let e = [
             {
@@ -212,7 +212,7 @@ function eE() {
                 id: "overlays",
                 name: "Dev Overlays",
                 group: eg.v0.DEVELOPMENT,
-                render: () => (0, a.jsx)(D.Z, { devSettingsCategory: E.zU.OVERLAYS }),
+                render: () => (0, a.jsx)(D.Z, { devSettingsCategory: S.zU.OVERLAYS }),
             }),
             e.push({
                 id: "messaging",
@@ -224,7 +224,7 @@ function eE() {
                 id: "reporting",
                 name: "Reporting",
                 group: eg.v0.EXPERIMENTS,
-                render: () => (0, a.jsx)(D.Z, { devSettingsCategory: E.zU.REPORTING }),
+                render: () => (0, a.jsx)(D.Z, { devSettingsCategory: S.zU.REPORTING }),
             }),
             e.push({
                 id: "permissions",
@@ -248,7 +248,7 @@ function eE() {
                 id: "affinity",
                 name: "Affinity",
                 group: eg.v0.USERS,
-                render: () => (0, a.jsx)(S.Z, {}),
+                render: () => (0, a.jsx)(E.Z, {}),
             }),
             e.push({
                 id: "widgets",
@@ -401,7 +401,7 @@ function eE() {
         );
     }, []);
 }
-function eS(e) {
+function eE(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: r } = e,
         i = (0, d.Z)({
             minDimension: C.h,
@@ -437,7 +437,7 @@ function eT() {
 function eO(e) {
     var t;
     let { isPopout: n = !1 } = e,
-        r = eE(),
+        r = eS(),
         {
             TabBar: i,
             renderSelectedTab: l,
@@ -512,7 +512,7 @@ function eN() {
               },
               "data-app-right-panel": !0,
               children: [
-                  (0, a.jsx)(eS, {
+                  (0, a.jsx)(eE, {
                       resizableNode: e,
                       onResize: i,
                       onResizeEnd: l,

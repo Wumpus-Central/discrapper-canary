@@ -83,13 +83,13 @@ function A(e) {
         {
             hasChanges: L,
             hasConfiguredAnythingForCurrentStep: k,
-            hasErrors: G,
+            hasErrors: M,
         } = (0, a.cj)([C.Z], () => ({
             hasChanges: C.Z.hasChanges(),
             hasConfiguredAnythingForCurrentStep: C.Z.hasConfiguredAnythingForCurrentStep(),
             hasErrors: C.Z.hasErrors(),
         })),
-        M = (0, a.e7)([C.Z], () => {
+        G = (0, a.e7)([C.Z], () => {
             let e = (0, O.lg)(D);
             return null != e && !C.Z.isEducationUpsellDismissed(e);
         }),
@@ -171,7 +171,7 @@ function A(e) {
                 (await q()) && (0, b.Wy)(f, D);
         },
         J = null;
-    M &&
+    G &&
         (D === O.PG.SAFETY_CHECK
             ? (J = (0, r.jsx)(N.j7, {}))
             : D === O.PG.DEFAULT_CHANNELS
@@ -180,7 +180,7 @@ function A(e) {
                 ? (J = (0, r.jsx)(N.cZ, {}))
                 : D === O.PG.HOME_SETTINGS && (J = (0, r.jsx)(N.g6, {})));
     let $ = (0, r.jsx)("div", {
-            className: M ? w.hidden : void 0,
+            className: G ? w.hidden : void 0,
             children: (0, r.jsx)(d.Button, {
                 size: "sm",
                 variant: "secondary",
@@ -188,7 +188,7 @@ function A(e) {
                 icon: d.whL,
                 iconPosition: "start",
                 onClick: Q,
-                disabled: M || G,
+                disabled: G || M,
             }),
         }),
         ee = (0, r.jsx)(d.Button, {
@@ -198,7 +198,7 @@ function A(e) {
             icon: d.ZSh,
             iconPosition: "end",
             onClick: X,
-            disabled: M || G,
+            disabled: G || M,
         });
     return (0, r.jsx)(o.W, {
         component: "div",
@@ -211,7 +211,7 @@ function A(e) {
                     className: w.flexContainer,
                     ref: B,
                     children: [
-                        M
+                        G
                             ? (0, r.jsxs)("div", {
                                   className: w.educationUpsellRoot,
                                   children: [
@@ -236,7 +236,7 @@ function A(e) {
                                     (0, r.jsxs)("div", {
                                         className: w.next,
                                         children: [
-                                            G
+                                            M
                                                 ? (0, r.jsx)(d.Text, {
                                                       variant: "text-sm/normal",
                                                       color: "status-warning",

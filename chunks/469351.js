@@ -36,7 +36,7 @@ function w(e) {
         { loading: A } = (0, c.H)(t),
         [L, k] = i.useState(n ? "manage_listings" : "payment");
     (0, g.P)(Z);
-    let G = i.useCallback(() => {
+    let M = i.useCallback(() => {
         if (null == Z) return;
         let e = j.Z.getEveryoneRole(Z);
         p.Z.close();
@@ -51,7 +51,7 @@ function w(e) {
     }, [Z]);
     if (!w || A) return (0, r.jsx)(o.$jN, {});
     if (null == Z) return null;
-    let M = (0, r.jsxs)(r.Fragment, {
+    let G = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(o.Heading, {
                     variant: "heading-lg/semibold",
@@ -99,7 +99,7 @@ function w(e) {
                           children: (0, r.jsx)(s.zxk, {
                               text: T.intl.string(T.t.vM81yc),
                               variant: "secondary",
-                              onClick: G,
+                              onClick: M,
                               size: "sm",
                           }),
                       })
@@ -120,7 +120,7 @@ function w(e) {
     return (0, r.jsxs)(d.AL, {
         guildId: t,
         children: [
-            M,
+            G,
             (0, r.jsx)(m.Z, { guild: Z }),
             (0, r.jsx)("div", {
                 className: P.tabBarContainer,

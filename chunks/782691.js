@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }),
+n.d(t, { Z: () => E }),
     n(388685),
     n(704826),
     n(35282),
@@ -76,12 +76,12 @@ let C = {
         [f.cq.STATIC]: null,
         [f.cq.REDUCED_MOTION]: null,
     },
-    E = "debug",
-    S = (e) => {
+    S = "debug",
+    E = (e) => {
         let { effect: t } = e,
             { upsertConfig: n } = (0, x.n6)(),
             i = (0, o.e7)([h.default], () => h.default.getCurrentUser()),
-            [S, T] = r.useState(!0),
+            [E, T] = r.useState(!0),
             O = r.useRef(null),
             [N, P] = r.useState(!1),
             [I, w] = r.useState(!1),
@@ -92,11 +92,11 @@ let C = {
             U = M.toLowerCase().replace(/\s+/g, "_"),
             F = r.useMemo(
                 () => ({
-                    id: E,
-                    skuId: E,
-                    title: E,
-                    description: E,
-                    accessibilityLabel: E,
+                    id: S,
+                    skuId: S,
+                    title: S,
+                    description: S,
+                    accessibilityLabel: S,
                     reducedMotionSrc: "",
                     thumbnailPreviewSrc: "",
                     effects: R,
@@ -183,7 +183,7 @@ let C = {
                                       alt: "",
                                       width: 450,
                                   }),
-                                  S && (0, a.jsx)(b.Z, { config: F }),
+                                  E && (0, a.jsx)(b.Z, { config: F }),
                               ],
                           }),
                           (0, a.jsxs)("div", {

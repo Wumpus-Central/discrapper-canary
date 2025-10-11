@@ -22,7 +22,7 @@ var r = n(951288),
     O = n(619899),
     x = n(215023),
     y = n(887353);
-function T(e) {
+function j(e) {
     let { products: t, header: n, category: l } = e,
         i = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
         s = (0, O.St)(t),
@@ -66,11 +66,11 @@ function T(e) {
               ],
           });
 }
-function j(e) {
+function T(e) {
     let { category: t } = e,
         n = (0, C.l)(t.products),
         l = (0, p.a)()(n);
-    return (0, r.jsx)(T, {
+    return (0, r.jsx)(j, {
         products: l,
         category: t,
     });
@@ -87,7 +87,7 @@ function L(e) {
     return (0, r.jsxs)("div", {
         className: y.categoryWrapper,
         ref: a,
-        children: [(0, r.jsx)(_.Z, { category: t }), (0, r.jsx)(j, { category: t })],
+        children: [(0, r.jsx)(_.Z, { category: t }), (0, r.jsx)(T, { category: t })],
     });
 }
 function k(e) {
@@ -133,11 +133,11 @@ function k(e) {
                     cacheDisabled: _,
                 });
         }, [C, o, b, _, p, O.length]);
-    let T = (0, f.FF)("CollectiblesBrowse");
+    let j = (0, f.FF)("CollectiblesBrowse");
     return p
         ? (0, r.jsx)(m.Z, {})
         : (0, r.jsxs)("div", {
-              className: s()(y.categories, { [y.categoriesNoFilter]: !T }),
+              className: s()(y.categories, { [y.categoriesNoFilter]: !j }),
               children: [
                   O.map((e, t) =>
                       (0, r.jsx)(

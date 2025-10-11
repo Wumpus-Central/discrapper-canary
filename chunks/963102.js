@@ -22,8 +22,8 @@ var r = n(951288),
     O = n(471731),
     x = n(335131),
     y = n(870289),
-    T = n(304742),
-    j = n(554067),
+    j = n(304742),
+    T = n(554067),
     L = n(215023),
     k = n(981631),
     I = n(228168),
@@ -72,7 +72,7 @@ function A(e) {
             },
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, r.jsx)(T.Z, {
+                return (0, r.jsx)(j.Z, {
                     handleTransition: o,
                     onClose: t,
                 });
@@ -150,7 +150,7 @@ function A(e) {
 }
 function R(e) {
     let { isFullScreen: t, isLayer: n, onClose: i, selectedTab: f, handleTransition: p } = e,
-        T = (0, g.ZP)(),
+        j = (0, g.ZP)(),
         R = (0, a.e7)([S.default], () => S.default.getCurrentUser()),
         Z = (null == R ? void 0 : R.isStaff()) || (null == R ? void 0 : R.isStaffPersonal()) || !1,
         { enabled: w } = (0, E.WX)({ location: "collectibles_shop_header_bar" }),
@@ -191,7 +191,7 @@ function R(e) {
                 });
         }, [null == R ? void 0 : R.id]);
     return (0, r.jsx)(c.f6W, {
-        theme: T,
+        theme: j,
         children: (e) =>
             (0, r.jsxs)(C.Z, {
                 disableDoubleClick: !0,
@@ -240,7 +240,7 @@ function R(e) {
                             className: N.alignedRightContent,
                             children: [
                                 U &&
-                                    (0, r.jsx)(j.Z, {
+                                    (0, r.jsx)(T.Z, {
                                         handleTransition: p,
                                         selectedTab: f,
                                     }),

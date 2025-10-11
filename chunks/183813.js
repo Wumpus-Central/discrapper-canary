@@ -31,10 +31,10 @@ function L(e) {
         } = (0, h.wD)(),
         k = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
         T = (0, c.ZP)(O, E, P),
-        [A, M] = i.useState(null != (n = null == T ? void 0 : T.defaultCategory) ? n : c.KN.Trick),
+        [M, A] = i.useState(null != (n = null == T ? void 0 : T.defaultCategory) ? n : c.KN.Trick),
         [Z, B] = i.useState(null == T || null == (t = T.defaultHighlightedReward) ? void 0 : t.skuId),
         [N, R] = i.useState(!1),
-        G = i.useRef(A),
+        G = i.useRef(M),
         F = i.useMemo(
             () =>
                 null == E
@@ -69,7 +69,7 @@ function L(e) {
                                             });
                                     }
                                     return e;
-                                })({}, e.variants[A])),
+                                })({}, e.variants[M])),
                                 (n = n = { name: e.name }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -85,14 +85,14 @@ function L(e) {
                                       }),
                                 t);
                       }),
-            [E, O, A],
+            [E, O, M],
         );
     i.useEffect(() => {
         let e = null == T ? void 0 : T.defaultHighlightedReward;
         !N && null == P && null != e && null != e && F.some((t) => t.skuId === e.skuId) && (I(e), B(e.skuId));
     }, [T, N, P, F, I]),
         i.useEffect(() => {
-            (null == T ? void 0 : T.defaultCategory) == null || N || M(T.defaultCategory);
+            (null == T ? void 0 : T.defaultCategory) == null || N || A(T.defaultCategory);
         }, [null == T ? void 0 : T.defaultCategory, N]),
         l()(null != v, "Expected plan to selected"),
         l()(null != S, "Expected selectedSkuId"),
@@ -108,8 +108,8 @@ function L(e) {
         (H && F.some((e) => e.skuId === Z)) || null == Z || (B(void 0), I(void 0));
     }, [F, H, Z, I]),
         i.useEffect(() => {
-            G.current === A || U || (I(void 0), B(void 0)), (G.current = A);
-        }, [A, U, I]);
+            G.current === M || U || (I(void 0), B(void 0)), (G.current = M);
+        }, [M, U, I]);
     let z = (e) => {
             I(F.find((t) => t.skuId === e)), B(e), R(!0);
         },
@@ -126,7 +126,7 @@ function L(e) {
                     user: k,
                     onSelect: z,
                     selectedSkuId: Z,
-                    category: A,
+                    category: M,
                 },
                 e.skuId,
             );
@@ -191,8 +191,8 @@ function L(e) {
                         null != E &&
                             E.length > 1 &&
                             (0, r.jsx)(u.Z, {
-                                defaultCategory: A,
-                                onCategoryChange: M,
+                                defaultCategory: M,
+                                onCategoryChange: A,
                             }),
                         (0, r.jsx)("div", {
                             className: y.giftRewardShopCardsGrid,

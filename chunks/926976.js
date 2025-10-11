@@ -20,8 +20,8 @@ var a = n(951288),
     _ = n(257785),
     y = n(484036),
     C = n(681619),
-    E = n(621060),
-    S = n(388032),
+    S = n(621060),
+    E = n(388032),
     T = n(599832),
     O = n(451429);
 let N = [
@@ -90,7 +90,7 @@ let w = new Set(["client_performance_cpu", "client_performance_memory"]),
         {
             id: "details",
             name: "Details",
-            group: E.v0.NONE,
+            group: S.v0.NONE,
             render: (e) => {
                 let {
                         loggedEvent: { event: t, properties: n, timestamp: r, fingerprint: i },
@@ -320,7 +320,7 @@ function Z() {
         }),
         [b, g] = r.useState(void 0),
         _ = f.find((e) => e.key === b),
-        { TabBar: P, renderSelectedTab: I } = (0, E.ZP)({ tabs: R }, []);
+        { TabBar: P, renderSelectedTab: I } = (0, S.ZP)({ tabs: R }, []);
     return (0, a.jsxs)("div", {
         ref: e,
         className: l()(O.panel, T.panel),
@@ -334,11 +334,11 @@ function Z() {
                         size: d.zx.Sizes.ICON,
                         onClick: j.Zw,
                         children: (0, a.jsx)("span", {
-                            title: S.intl.string(S.t.VkKicX),
+                            title: E.intl.string(E.t.VkKicX),
                             children: (0, a.jsx)(u.XHJ, {
                                 size: "md",
                                 color: "currentColor",
-                                "aria-label": S.intl.string(S.t.VkKicX),
+                                "aria-label": E.intl.string(E.t.VkKicX),
                             }),
                         }),
                     }),

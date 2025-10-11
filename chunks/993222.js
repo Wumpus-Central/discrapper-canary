@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var l = n(120356),
     i = n.n(l),
-    o = n(399606),
-    s = n(481060),
+    s = n(399606),
+    o = n(481060),
     a = n(594174),
     c = n(74538),
     u = n(597688),
@@ -18,19 +18,19 @@ var l = n(120356),
     m = n(944525);
 let b = (e) => {
         let { product: t, badgeOverride: n, className: l, prioritizedCurrency: b } = e,
-            { isPurchased: E, isPartiallyOwnedBundle: S } = (0, g.L)(t),
-            v = (0, o.e7)([u.Z], () => u.Z.getCategoryForProduct(t.skuId)),
-            O = (0, o.e7)([a.default], () => a.default.getCurrentUser()),
+            { isPurchased: E, isPartiallyOwnedBundle: v } = (0, g.L)(t),
+            S = (0, s.e7)([u.Z], () => u.Z.getCategoryForProduct(t.skuId)),
+            O = (0, s.e7)([a.default], () => a.default.getCurrentUser()),
             x = c.ZP.canUseCollectibles(O),
             y = (0, p.Iw)(t),
-            { isOrbExclusive: T } = (0, C.Ip)({
+            { isOrbExclusive: j } = (0, C.Ip)({
                 product: t,
                 isPremiumUser: x,
                 prioritizedCurrency: b,
                 hasDiscountOffer: null != y,
             }),
-            j = (0, d.Yq)(t.skuId),
-            L = (null == v ? void 0 : v.skuId) === h.bu && (0, d.WW)(t.skuId);
+            T = (0, d.Yq)(t.skuId),
+            L = (null == S ? void 0 : S.skuId) === h.bu && (0, d.WW)(t.skuId);
         if (n === f.Zh.NONE) return null;
         let k = null;
         return (n === f.Zh.NEW
@@ -39,14 +39,14 @@ let b = (e) => {
               ? (k = _.intl.string(_.t["0TmQRE"]))
               : n === f.Zh.NEW_COLOR_VARIANT && (k = _.intl.string(_.t.S6kE9v)),
         null == k &&
-            (S || E || !j
-                ? T
+            (v || E || !T
+                ? j
                     ? (k = _.intl.string(_.t["0TmQRE"]))
                     : L && (k = _.intl.string(_.t.S6kE9v))
                 : (k = _.intl.string(_.t.y2b7CA))),
         null == k)
             ? null
-            : (0, r.jsx)(s.IGR, {
+            : (0, r.jsx)(o.IGR, {
                   text: k,
                   disableColor: !0,
                   className: i()(l, m.productCardBadge),
@@ -54,11 +54,11 @@ let b = (e) => {
     },
     E = (e) => {
         let { skuId: t, badgeOverride: n, className: l, prioritizedCurrency: i } = e,
-            o = (0, f.LJ)(t);
-        return null == o
+            s = (0, f.LJ)(t);
+        return null == s
             ? null
             : (0, r.jsx)(b, {
-                  product: o,
+                  product: s,
                   badgeOverride: n,
                   className: l,
                   prioritizedCurrency: i,

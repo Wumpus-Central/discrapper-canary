@@ -64,8 +64,8 @@ let S = new Set(),
     A = new Set(),
     L = new Map(),
     k = new Map(),
-    G = new Map();
-function M() {
+    M = new Map();
+function G() {
     return null == r || null == Z
         ? []
         : j.ZP.calculatePositionDeltas({
@@ -88,7 +88,7 @@ function B() {
         (w = !1),
         (l = void 0),
         S.clear(),
-        G.clear(),
+        M.clear(),
         (T = O.QZA.OPEN),
         (R = [...(Z = null != r ? [...x.Z.getSortedRoles(r.id)] : [])]),
         F(null == r ? void 0 : r.id, R),
@@ -133,7 +133,7 @@ function F(e, t) {
                 tertiary_color: null != (s = t.colors.tertiary_color) ? s : null,
             };
         }
-        G.set(t.id, {
+        M.set(t.id, {
             currentStyle: n,
             styleColors: i,
         });
@@ -141,7 +141,7 @@ function F(e, t) {
 }
 let H = c().debounce(() => {
     let e = !1;
-    w && ((w = M().length > 0) || (e = !0)),
+    w && ((w = G().length > 0) || (e = !0)),
         [...S].forEach((t) => {
             var n;
             c().isEqual(
@@ -188,13 +188,13 @@ function z(e) {
         0 === S.size && (P = !1);
     let i = new Map();
     S.forEach((e) => {
-        let t = G.get(e);
+        let t = M.get(e);
         null != t && i.set(e, t);
     }),
-        G.clear(),
+        M.clear(),
         F(t, n),
         i.forEach((e, t) => {
-            G.set(t, e);
+            M.set(t, e);
         }),
         (w = !1),
         (Z = [...n]);
@@ -207,7 +207,7 @@ class K extends (a = g.ZP.Store) {
         return P || w || D;
     }
     getRoleStyleData(e) {
-        return G.get(e);
+        return M.get(e);
     }
     get errorMessage() {
         return l;
@@ -234,7 +234,7 @@ class K extends (a = g.ZP.Store) {
         return T;
     }
     getSortDeltas() {
-        return M();
+        return G();
     }
     showNotice() {
         return this.hasChanges();
@@ -295,7 +295,7 @@ let Y = new K(
                           r = 0 === n ? null : (0, u.Rf)(n),
                           i = V(t);
                       if (null == i) return !1;
-                      let l = G.get(t);
+                      let l = M.get(t);
                       return (
                           null != l &&
                           ((l.currentStyle = "solid"),
@@ -304,7 +304,7 @@ let Y = new K(
                               secondary_color: null,
                               tertiary_color: null,
                           }),
-                          G.set(t, E({}, l)),
+                          M.set(t, E({}, l)),
                           W(i, {
                               color: n,
                               colorString: r,
@@ -329,12 +329,12 @@ let Y = new K(
                           i = V(t);
                       if (null == i) return !1;
                       let l = (0, h.DX)(n),
-                          a = G.get(t);
+                          a = M.get(t);
                       return (
                           null != a &&
                           ((a.styleColors[r] = n),
                           (a.currentStyle = r),
-                          G.set(t, E({}, a)),
+                          M.set(t, E({}, a)),
                           W(i, {
                               color: n.primary_color,
                               colors: n,
@@ -377,9 +377,9 @@ let Y = new K(
                       let { id: n, currentStyle: r } = e,
                           i = V(n);
                       if (null == i) return !1;
-                      let l = G.get(n);
+                      let l = M.get(n);
                       if (null == l) return !1;
-                      G.set(n, {
+                      M.set(n, {
                           currentStyle: r,
                           styleColors: l.styleColors,
                       });
@@ -411,7 +411,7 @@ let Y = new K(
                           (R = Z = []),
                           L.clear(),
                           S.clear(),
-                          G.clear(),
+                          M.clear(),
                           k.clear(),
                           (A = new Set()),
                           (P = !1),

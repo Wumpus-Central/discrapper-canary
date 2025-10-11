@@ -52,7 +52,7 @@ function y(e) {
             let { isInEditMode: e, setEditingRule: t } = k.current;
             e && t(null);
         }, [P]);
-    let G = i.useCallback(
+    let M = i.useCallback(
             (e, t) => {
                 if (null != e) {
                     var n, r;
@@ -72,16 +72,16 @@ function y(e) {
             },
             [A],
         ),
-        M = i.useMemo(() => {
+        G = i.useMemo(() => {
             var e, t;
-            return G(
+            return M(
                 null != (e = null == E ? void 0 : E.id) ? e : null,
                 null != (t = null == E ? void 0 : E.triggerType) ? t : null,
             );
-        }, [G, E]);
+        }, [M, E]);
     i.useEffect(() => {
-        N(w, (0, j.af)(M));
-    }, [N, w, M]);
+        N(w, (0, j.af)(G));
+    }, [N, w, G]);
     let U = (0, p.Z6)(P);
     return (0, r.jsxs)("div", {
         children: [

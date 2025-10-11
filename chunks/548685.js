@@ -1,9 +1,9 @@
-n.d(t, { Z: () => A }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(951288),
     l = n(647438),
     i = n(120356),
-    o = n.n(i),
-    s = n(442837),
+    s = n.n(i),
+    o = n(442837),
     a = n(481060),
     c = n(782568),
     u = n(607070),
@@ -17,33 +17,33 @@ var r = n(951288),
     m = n(128922),
     b = n(38900),
     E = n(709999),
-    S = n(653126),
-    v = n(786040),
+    v = n(653126),
+    S = n(786040),
     O = n(401975),
     x = n(328626),
     y = n(849275),
-    T = n(619899),
-    j = n(642909),
+    j = n(619899),
+    T = n(642909),
     L = n(215023),
     k = n(981631),
     I = n(388032),
     B = n(345213),
     N = n(310582);
-let A = (e) => {
+let P = (e) => {
     var t;
     let {
             isLoading: n,
             title: i,
-            sortedSkuIds: A,
-            numVisibleItems: P,
+            sortedSkuIds: P,
+            numVisibleItems: A,
             prioritizeUserDiscounts: R,
             tab: Z,
             buttonContainerClassName: w,
             orbsSupportedOnly: H,
         } = e,
-        F = (0, s.e7)([d.default], () => d.default.getCurrentUser()),
+        F = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
         D = C.ZP.canUseCollectibles(F),
-        M = (0, j.G)("FeedBlock"),
+        M = (0, T.G)("FeedBlock"),
         {
             sortType: W,
             setSortType: U,
@@ -52,14 +52,14 @@ let A = (e) => {
             shuffleProducts: G,
             showRecommendationOption: K,
         } = (0, y.Z)({
-            sortedSkuIds: A,
+            sortedSkuIds: P,
             isPremiumUser: D,
             prioritizeUserDiscounts: R,
             orbsSupportedOnly: H,
         }),
-        Y = (0, T.St)(V),
-        q = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
-        Q = (0, s.e7)([g.Z], () => g.Z.isFocused()),
+        Y = (0, j.St)(V),
+        q = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
+        Q = (0, o.e7)([g.Z], () => g.Z.isFocused()),
         J = !q && Q,
         { animationPhase: X, startAnimation: $ } = (0, x.y)(),
         ee = (0, h.sp)(),
@@ -82,7 +82,7 @@ let A = (e) => {
     return null == F
         ? null
         : (0, r.jsxs)("div", {
-              className: o()(N.popularPicksSection, N.centeredSection),
+              className: s()(N.popularPicksSection, N.centeredSection),
               children: [
                   (0, r.jsxs)("div", {
                       className: N.blockHeader,
@@ -162,7 +162,7 @@ let A = (e) => {
                               ],
                           }),
                           (0, r.jsxs)("div", {
-                              className: o()(N.headerRight, { [B.shopTakeOver]: M }),
+                              className: s()(N.headerRight, { [B.shopTakeOver]: M }),
                               children: [
                                   (0, r.jsx)(a.Text, {
                                       variant: "text-md/medium",
@@ -174,7 +174,7 @@ let A = (e) => {
                                           options: z,
                                           select: er,
                                           className: N.sortSelect,
-                                          popoutClassName: o()({ [B.shopTakeOver]: M }),
+                                          popoutClassName: s()({ [B.shopTakeOver]: M }),
                                           isSelected: (e) => e === W,
                                           serialize: (e) => e,
                                       }),
@@ -210,7 +210,7 @@ let A = (e) => {
                                     el ? (0, r.jsx)(O.Z, {}, t + 1) : (0, r.jsx)(b.K, {}, t + 1),
                                 ),
                             })
-                          : Y.slice(0, P).map((e, t) => {
+                          : Y.slice(0, A).map((e, t) => {
                                 let n,
                                     l = _.Z.getCategoryForProduct(e.skuId);
                                 if (null == e || null == l) return null;
@@ -251,9 +251,9 @@ let A = (e) => {
                                             el && (null == e ? void 0 : e.skuId) != null
                                                 ? (0, r.jsx)("div", {
                                                       className: n,
-                                                      children: (0, r.jsx)(S.Z, {
+                                                      children: (0, r.jsx)(v.Z, {
                                                           skuId: null == e ? void 0 : e.skuId,
-                                                          prioritizedCurrency: Z === L.AW.ORBS ? v.tA.ORBS : void 0,
+                                                          prioritizedCurrency: Z === L.AW.ORBS ? S.tA.ORBS : void 0,
                                                       }),
                                                   })
                                                 : (0, r.jsx)(E.Z, {

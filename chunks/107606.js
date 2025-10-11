@@ -19,9 +19,9 @@ function g() {
     var e, t, n, g, v, j, _, y;
     (0, u.mw)();
     let C = (0, r.e7)([h.default], () => h.default.getCurrentUser()),
-        E = p.L1.useSetting(),
-        S = (0, r.e7)([m.Z], () => m.Z.theme),
-        T = E.backgroundGradientPresetId,
+        S = p.L1.useSetting(),
+        E = (0, r.e7)([m.Z], () => m.Z.theme),
+        T = S.backgroundGradientPresetId,
         O = (0, r.e7)([c.Z], () => c.Z.purchases),
         N = (0, d.Ad)(O),
         P = (0, d.jT)(O),
@@ -78,7 +78,7 @@ function g() {
                         }),
                         (0, a.jsxs)(l.Text, {
                             variant: "text-md/normal",
-                            children: ["Theme: ", S],
+                            children: ["Theme: ", E],
                         }),
                         (0, a.jsxs)(l.Text, {
                             variant: "text-md/normal",

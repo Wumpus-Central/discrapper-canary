@@ -34,8 +34,8 @@ var r = n(951288),
     E = n(846464),
     k = n(184160),
     T = n(48175),
-    A = n(981631),
-    M = n(474936),
+    M = n(981631),
+    A = n(474936),
     Z = n(388032),
     B = n(867983);
 function N(e) {
@@ -105,7 +105,7 @@ function G(e) {
             analyticsLocation: t,
             analyticsObject: n,
             analyticsSourceLocation: a,
-            analyticsSubscriptionType: A.NYc.PREMIUM,
+            analyticsSubscriptionType: M.NYc.PREMIUM,
             onComplete: s,
             transitionState: C,
             initialPlanId: c,
@@ -116,7 +116,7 @@ function G(e) {
             isGift: H,
             trialFooterMessageOverride: b,
             reviewWarningMessage: y,
-            planGroup: M.Y1,
+            planGroup: A.Y1,
             openInvoiceId: L,
             onSubscriptionConfirmation: v,
             renderPurchaseConfirmation: w,
@@ -251,7 +251,7 @@ let H = function () {
     U = H();
 function D(e) {
     let t = (0, a.e7)([_.Z], () => _.Z.getPremiumTypeSubscription()),
-        n = (0, C.Vi)() ? M.Xh.PREMIUM_MONTH_TIER_2 : void 0,
+        n = (0, C.Vi)() ? A.Xh.PREMIUM_MONTH_TIER_2 : void 0,
         { analyticsLocations: i } = (0, d.ZP)(e.analyticsLocations, s.Z.PREMIUM_PAYMENT_MODAL),
         {
             confirmationFooter: l,
@@ -266,7 +266,7 @@ function D(e) {
             referralCode: L,
             subscriptionTier: v,
         } = e;
-    if (null != v && !Object.values(M.Si).includes(v)) throw Error("subscriptionTier must be a premium subscription");
+    if (null != v && !Object.values(A.Si).includes(v)) throw Error("subscriptionTier must be a premium subscription");
     let S = (0, c.y)({ location: "PremiumPaymentSelect" }) && null != f && j;
     return (0, r.jsx)(d.Gt, {
         value: i,
@@ -274,7 +274,7 @@ function D(e) {
             loadId: b,
             activeSubscription: null != e.subscription ? e.subscription : t,
             stepConfigs: H(S),
-            skuIDs: [...M.YQ],
+            skuIDs: [...A.YQ],
             isGift: j,
             defaultPlanId: null != n ? n : o,
             referralCode: L,

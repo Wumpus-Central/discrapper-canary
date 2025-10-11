@@ -42,7 +42,7 @@ function C() {
         [n, i] = r.useState(""),
         o = (0, s.e7)([h.ZP, g.Z], () => (0, x.Z)(h.ZP, g.Z)),
         C = (0, p.q)(n),
-        E = (0, s.Wu)([m.Z], () => {
+        S = (0, s.Wu)([m.Z], () => {
             var e, t;
             return null !=
                 (t =
@@ -52,7 +52,7 @@ function C() {
                 ? t
                 : [];
         }),
-        S = (0, u.FG)(C, { allowedFlows: [u.ro.RPC] }),
+        E = (0, u.FG)(C, { allowedFlows: [u.ro.RPC] }),
         T = (0, u.FG)(C, { allowedFlows: [u.ro.WEB] }),
         O = (0, u.FG)(C),
         { canDeauthorize: N, deauthorize: P } = (function (e) {
@@ -114,8 +114,8 @@ function C() {
                         children: [
                             "Linked Games:",
                             " ",
-                            E.length > 0
-                                ? E.map((e) => {
+                            S.length > 0
+                                ? S.map((e) => {
                                       var t;
                                       return (null == (t = (0, u.ju)(C)) ? void 0 : t.id) === e.id
                                           ? "".concat(e.name, "*")
@@ -146,8 +146,8 @@ function C() {
                             "This will start whichever authorization flow is available. RPC authorization takes precedence over web.",
                     }),
                     (0, a.jsx)(c.Button, {
-                        disabled: !S.canStartAuthorization,
-                        onClick: S.startAuthorization,
+                        disabled: !E.canStartAuthorization,
+                        onClick: E.startAuthorization,
                         variant: "secondary",
                         text: "Start In-App Authorization",
                     }),

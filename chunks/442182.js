@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => G }), n(781311), n(642613), n(388685);
+n.d(t, { ZP: () => M }), n(781311), n(642613), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -314,7 +314,7 @@ function k(e) {
         ],
     });
 }
-function G(e) {
+function M(e) {
     let { guild: t, role: l, locked: s, setSelectedSection: c } = e,
         [u, g] = i.useState(""),
         { headerHeight: m, headerRef: p } = (0, O.Z)(0),

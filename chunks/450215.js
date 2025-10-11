@@ -38,8 +38,8 @@ function y(e) {
         [D, A] = i.useState(R),
         L = null == Z ? void 0 : Z.subscription_plans[0],
         k = null != (t = null == Z ? void 0 : Z.published) && t,
-        G = null != (n = null == Z ? void 0 : Z.archived) && n,
-        M = !G && !k && void 0 !== Z,
+        M = null != (n = null == Z ? void 0 : Z.archived) && n,
+        G = !M && !k && void 0 !== Z,
         U = void 0 === Z,
         B = (0, h.mY)(),
         [F] = x._T(P),
@@ -84,13 +84,13 @@ function y(e) {
                             (0, r.jsxs)("div", {
                                 className: O.headerDescriptionContainer,
                                 children: [
-                                    M &&
+                                    G &&
                                         (0, r.jsx)(d.IGR, {
                                             color: (0, u.Lq)(_.Ilk.YELLOW_300),
                                             text: C.intl.string(C.t.vosPk5),
                                             className: O.draftBadge,
                                         }),
-                                    G &&
+                                    M &&
                                         (0, r.jsx)(d.IGR, {
                                             color: (0, u.Lq)(_.Ilk.PRIMARY_500),
                                             text: C.intl.string(C.t.nhbtEh),

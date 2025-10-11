@@ -107,17 +107,17 @@ function D(e) {
         D = (0, O.fJ)(),
         L = i.useRef(null),
         M = (0, h.Z)(P, L),
-        { entrypoint: k, notificationCenterVariant: U } = (0, y.pN)({ location: "NotificationsInboxSidebarList" }),
+        { entrypoint: k, notificationCenterVariant: G } = (0, y.pN)({ location: "NotificationsInboxSidebarList" }),
         {
-            isLoading: G,
+            isLoading: U,
             isLoadingComplete: B,
-            hasLoadedEver: F,
+            hasLoadedEver: V,
         } = (0, u.cj)([j.Z], () => ({
             isLoading: j.Z.isLoading,
             isLoadingComplete: j.Z.isLoadingComplete,
             hasLoadedEver: j.Z.hasLoadedEver,
         })),
-        V = !F && G,
+        F = !V && U,
         { messageCategoryOpenStates: H, toggleOpenState: z } = (0, v.Z)(),
         W = (function () {
             let e = (0, u.Wu)([j.Z], () => {
@@ -205,7 +205,7 @@ function D(e) {
             );
         }, [t, n]),
         q = 0 === t.length && 0 === n.length && B,
-        X = 0 === t.length && 0 === n.length && !F && G,
+        X = 0 === t.length && 0 === n.length && !V && U,
         Q = i.useMemo(() => {
             let e = [];
             return (
@@ -247,7 +247,7 @@ function D(e) {
     i.useEffect(() => {
         X || ee(0 === Y.UNREAD.length);
     }, [Y, X, ee]);
-    let et = (t.length > 0 || n.length > 0) && null != l && G;
+    let et = (t.length > 0 || n.length > 0) && null != l && U;
     !(function (e) {
         let { loadingInitial: t, messagesByCategory: n } = e,
             r = i.useRef(!1),
@@ -258,7 +258,7 @@ function D(e) {
         }, [o, l, t]);
     })({
         messagesByCategory: Y,
-        loadingInitial: V,
+        loadingInitial: F,
     });
     let en = i.useCallback(() => {
         var e;
@@ -267,8 +267,8 @@ function D(e) {
         return null == n ? 0 : Math.max(0, Math.ceil(n.offsetHeight / 64) - t);
     }, [H, Y]);
     i.useEffect(() => {
-        X || G || 0 >= en() || ((!$ || W) && (null == l || l(S.X.FILL_SCROLLER)));
-    }, [en, l, X, G, $, W]);
+        X || U || 0 >= en() || ((!$ || W) && (null == l || l(S.X.FILL_SCROLLER)));
+    }, [en, l, X, U, $, W]);
     let er = i.useMemo(() => {
         let e = Math.min(Math.max(2, en()), 20);
         return (0, r.jsx)(E.Z, {
@@ -278,7 +278,7 @@ function D(e) {
     }, [en]);
     return (
         (0, O.vU)({
-            notificationCenterVariant: U,
+            notificationCenterVariant: G,
             entrypoint: k,
             messages: t,
             unreadMessages: n,

@@ -20,8 +20,8 @@ var a = n(951288),
     _ = n(680295),
     y = n(785717),
     C = n(880421),
-    E = n(209698),
-    S = n(687158),
+    S = n(209698),
+    E = n(687158),
     T = n(612600),
     O = n(892001),
     N = n(899007),
@@ -94,7 +94,7 @@ function ec(e) {
             guildProfileEnabled: ep,
         } = e,
         eh = __OVERLAY__,
-        ex = (0, S.ZP)(t.id, em),
+        ex = (0, E.ZP)(t.id, em),
         { analyticsLocations: ef } = (0, m.ZP)(u.Z.USER_PROFILE_ACCOUNT_POPOUT),
         eb = (0, y.ZB)({
             layout: "ACCOUNT_POPOUT",
@@ -110,11 +110,11 @@ function ec(e) {
     let e_ = (0, s.e7)([G.Z], () => G.Z.getStatus(t.id)),
         ey = B.Cr.useSetting(),
         eC = (0, $.F)(ey),
-        { expiringStatusProfileFeedback: eE } = b.Y.useExperiment(
+        { expiringStatusProfileFeedback: eS } = b.Y.useExperiment(
             { location: "UserProfileAccountPopout" },
             { autoTrackExposure: !1 },
         ),
-        eS = (0, s.e7)([z.Z], () => z.Z.hidePersonalInformation),
+        eE = (0, s.e7)([z.Z], () => z.Z.hidePersonalInformation),
         eT = (0, g.p)(),
         eO = B.Sb.useSetting(),
         eN = (0, $.I)(e_),
@@ -122,7 +122,7 @@ function ec(e) {
         eI = (0, j.Z)({ analyticsLocations: ef }),
         ew = (0, W.I5)(t),
         eR = (0, h.p)({ location: "UserProfileAccountPopout" }),
-        ek = (0, E.b)({ location: "UserProfileAccountPopout" }),
+        ek = (0, S.b)({ location: "UserProfileAccountPopout" }),
         eA = r.useRef(null),
         eZ = r.useRef(null),
         eD = r.useRef((0, K.Z)((e) => e.shouldRenderTenureLevelUp)),
@@ -232,7 +232,7 @@ function ec(e) {
                                     (0, a.jsx)(F.Z, {
                                         user: t,
                                         bio: null == ex ? void 0 : ex.bio,
-                                        hidePersonalInformation: eS,
+                                        hidePersonalInformation: eE,
                                         onClose: n,
                                     }),
                                     eB &&
@@ -294,7 +294,7 @@ function ec(e) {
                                                         (0, a.jsx)(X.V4, {
                                                             action: "PRESS_SET_STATUS",
                                                             label: (0, a.jsx)(Q.Z, {}),
-                                                            sublabel: eE && null != eC && eC,
+                                                            sublabel: eS && null != eC && eC,
                                                             icon: () =>
                                                                 (0, a.jsx)(c.qbd, {
                                                                     status: e_,

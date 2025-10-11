@@ -32,12 +32,12 @@ let f = {
                 className: _,
             } = e,
             { balance: y } = (0, c.A)(),
-            [C, E] = r.useState(d.b.DEFAULT),
-            [S, T] = r.useState(!1),
+            [C, S] = r.useState(d.b.DEFAULT),
+            [E, T] = r.useState(!1),
             [O, N] = r.useState(!1),
             P = r.useRef(null),
             I = r.useCallback(() => {
-                let e = !S;
+                let e = !E;
                 e &&
                     null != g &&
                     (0, o.Y)({
@@ -45,12 +45,12 @@ let f = {
                         sectionType: p.jXE.ORBS_BALANCE_MENU,
                         ctaObject: p.qAy.OPEN_ORB_BALANCE_MENU_FROM_PILL,
                     }),
-                    E(e ? d.b.SELECTED : d.b.DEFAULT),
+                    S(e ? d.b.SELECTED : d.b.DEFAULT),
                     T(e);
-            }, [S, g]),
+            }, [E, g]),
             w = r.useCallback(() => {
-                S && I();
-            }, [S, I]),
+                E && I();
+            }, [E, I]),
             R = (0, s.Z)(null, w),
             k = r.useMemo(
                 () =>
@@ -81,7 +81,7 @@ let f = {
                     onClick: I,
                     showNotificationBadge: t,
                 }),
-                S &&
+                E &&
                     (0, a.jsx)("div", {
                         className: l()(x.cardContainer, j, {
                             [x.hidden]: O,

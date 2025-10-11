@@ -20,8 +20,8 @@ var a = n(951288),
     _ = n(308569),
     y = n(981631),
     C = n(815660),
-    E = n(388032);
-function S(e) {
+    S = n(388032);
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
@@ -89,7 +89,7 @@ function O() {
             (0, o.ZDy)(
                 async () => {
                     let { default: e } = await n.e("35401").then(n.bind(n, 284549));
-                    return (t) => (0, a.jsx)(e, S({}, t));
+                    return (t) => (0, a.jsx)(e, E({}, t));
                 },
                 {
                     modalKey: _.F0,
@@ -116,10 +116,10 @@ function O() {
                         return (t) =>
                             (0, a.jsx)(
                                 e,
-                                T(S({}, t), {
-                                    title: E.intl.string(E.t.KLnLIC),
-                                    body: E.intl.string(E.t.XGbCq6),
-                                    confirmText: E.intl.string(E.t["3oK4q6"]),
+                                T(E({}, t), {
+                                    title: S.intl.string(S.t.KLnLIC),
+                                    body: S.intl.string(S.t.XGbCq6),
+                                    confirmText: S.intl.string(S.t["3oK4q6"]),
                                 }),
                             );
                     },
@@ -155,7 +155,7 @@ function O() {
                               return (t) =>
                                   (0, a.jsx)(
                                       e,
-                                      S(
+                                      E(
                                           {
                                               layerContext: x.mK,
                                               reason: f.L.USER_ACTION_REQUIRED,
@@ -178,11 +178,11 @@ function O() {
                             (0, a.jsx)(
                                 e,
                                 T(
-                                    S(
+                                    E(
                                         {
-                                            header: E.intl.string(E.t["2jxGen"]),
-                                            confirmText: E.intl.string(E.t["2jxGen"]),
-                                            cancelText: E.intl.string(E.t["ETE/oK"]),
+                                            header: S.intl.string(S.t["2jxGen"]),
+                                            confirmText: S.intl.string(S.t["2jxGen"]),
+                                            cancelText: S.intl.string(S.t["ETE/oK"]),
                                             onConfirm: () => c.Z.logout("verification"),
                                         },
                                         n,
@@ -190,7 +190,7 @@ function O() {
                                     {
                                         children: (0, a.jsx)(t, {
                                             variant: "text-md/normal",
-                                            children: E.intl.string(E.t.SUnWBA),
+                                            children: S.intl.string(S.t.SUnWBA),
                                         }),
                                     },
                                 ),

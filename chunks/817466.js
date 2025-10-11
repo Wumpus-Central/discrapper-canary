@@ -20,7 +20,7 @@ var a = n(780384),
     _ = n(943323),
     y = n(958657),
     C = n(605493);
-let E = {
+let S = {
         [s.VU.PREMIUM_TENURE_1_MONTH]: {
             dark: " #D76C1F, #F79C53",
             light: " #8E2A0B, #D4681C",
@@ -54,7 +54,7 @@ let E = {
             light: " #6881D4, #956CB8, #5491A0",
         },
     },
-    S = {
+    E = {
         [s.VU.PREMIUM_TENURE_1_MONTH]: {
             dark: o.Z,
             light: f.Z,
@@ -92,8 +92,8 @@ function T() {
     let e = (0, l.Z)(),
         t = (0, a.wj)((0, r.ZP)());
     if (!e) return null;
-    let n = E[e],
-        o = S[e],
+    let n = S[e],
+        o = E[e],
         c = {
             currentBadge: (0, i.fv)(e),
             currentBadgeTextGradient: t ? (null == n ? void 0 : n.dark) : null == n ? void 0 : n.light,
@@ -102,7 +102,7 @@ function T() {
         d = s.Qh.indexOf(e);
     if (d > 0) {
         let e = s.Qh[d - 1],
-            n = E[e];
+            n = S[e];
         (c.prevBadge = (0, i.fv)(e)),
             (c.prevBadgeTextGradient = t ? (null == n ? void 0 : n.dark) : null == n ? void 0 : n.light);
     }

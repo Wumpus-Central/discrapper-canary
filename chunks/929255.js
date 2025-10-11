@@ -58,7 +58,7 @@ function y(e) {
                         className: x.shopScroll,
                         ref: p,
                         onScroll: h,
-                        children: (0, r.jsx)(T, {
+                        children: (0, r.jsx)(j, {
                             isFullScreen: t,
                             isSmallScreen: S,
                             filterBarOpen: E,
@@ -81,7 +81,7 @@ function y(e) {
         })
     );
 }
-let T = (e) => {
+let j = (e) => {
     let {
             isFullScreen: t,
             isSmallScreen: n,
@@ -89,8 +89,8 @@ let T = (e) => {
             setFilterBarOpen: a,
             tab: C,
             scrollerRef: y,
-            sortedCategories: T,
-            setCategoryRef: j,
+            sortedCategories: j,
+            setCategoryRef: T,
         } = e,
         L = (0, d.FF)("CollectiblesBrowse"),
         k = l.useRef(null),
@@ -98,7 +98,7 @@ let T = (e) => {
         B = (0, u.sp)(),
         { handlePageChange: N, currentPage: P } = (0, m.h)({
             scrollerRef: y,
-            sortedCategories: T,
+            sortedCategories: j,
         }),
         A = l.useCallback(
             (e) => {
@@ -227,8 +227,8 @@ let T = (e) => {
                                 newValue: { pageIndex: P },
                                 children: (0, r.jsx)(p.Z, {
                                     isFullScreen: t,
-                                    sortedCategories: T,
-                                    setCategoryRef: j,
+                                    sortedCategories: j,
+                                    setCategoryRef: T,
                                     currentPage: P,
                                     handlePageChange: A,
                                 }),

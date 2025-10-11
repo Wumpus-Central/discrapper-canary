@@ -79,7 +79,7 @@ function g() {
             },
             [t],
         ),
-        E = r.useCallback(
+        S = r.useCallback(
             (e) => {
                 var t;
                 if ((null == (t = e.currentTarget) ? void 0 : t.files) == null)
@@ -134,7 +134,7 @@ function g() {
                                         }),
                                         (0, a.jsx)(d.Z, {
                                             ref: g,
-                                            onChange: E,
+                                            onChange: S,
                                             multiple: !1,
                                         }),
                                     ],

@@ -20,12 +20,12 @@ var a = n(951288),
     _ = n(681619),
     y = n(621060),
     C = n(388032),
-    E = n(599832),
-    S = n(451429);
+    S = n(599832),
+    E = n(451429);
 let T = [
         {
             key: "id",
-            cellClassName: E.eventColumn,
+            cellClassName: S.eventColumn,
             render(e) {
                 let { experimentId: t } = e;
                 return t;
@@ -33,7 +33,7 @@ let T = [
         },
         {
             key: "bucket",
-            cellClassName: E.locationColumn,
+            cellClassName: S.locationColumn,
             render(e) {
                 let { descriptor: t } = e;
                 return t.bucket;
@@ -41,7 +41,7 @@ let T = [
         },
         {
             key: "timestamp",
-            cellClassName: E.locationColumn,
+            cellClassName: S.locationColumn,
             render(e) {
                 let { timestamp: t } = e;
                 return t.toLocaleString();
@@ -69,7 +69,7 @@ let T = [
                 return (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsxs)(x.ZP, {
-                            className: l()(S.headerBar, E.subPanelHeaderBar),
+                            className: l()(E.headerBar, S.subPanelHeaderBar),
                             children: [
                                 (0, a.jsx)(x.ZP.Icon, {
                                     icon: p.IeX,
@@ -79,7 +79,7 @@ let T = [
                             ],
                         }),
                         (0, a.jsxs)(v.E, {
-                            className: E.commonProperties,
+                            className: S.commonProperties,
                             children: [
                                 (0, a.jsx)(v.Z9, {
                                     name: "Timestamp (local)",
@@ -153,10 +153,10 @@ function N() {
         I = N ? "Stop Tracking" : "Start Tracking";
     return (0, a.jsxs)("div", {
         ref: n,
-        className: l()(S.panel, E.panel),
+        className: l()(E.panel, S.panel),
         children: [
             (0, a.jsxs)("div", {
-                className: E.toolbar,
+                className: S.toolbar,
                 children: [
                     (0, a.jsx)(m.u, {
                         text: I,
@@ -192,7 +192,7 @@ function N() {
             }),
             null != x &&
                 (0, a.jsxs)(j.Z, {
-                    className: E.subPanel,
+                    className: S.subPanel,
                     minHeight: 100,
                     initialHeight: null != n.current ? n.current.clientHeight / 2 : 300,
                     children: [(0, a.jsx)(f, {}), v({ loggedTrigger: x })],

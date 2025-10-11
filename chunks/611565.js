@@ -105,7 +105,7 @@ function b() {
             }, {}),
         ),
         C = (0, l.e7)([u.Z], () => u.Z.getInboxMessages()),
-        E = (0, l.e7)([u.Z], () => u.Z.getDevOverrides().navOnClick);
+        S = (0, l.e7)([u.Z], () => u.Z.getDevOverrides().navOnClick);
     return (0, a.jsx)("div", {
         className: h.panel,
         children: (0, a.jsxs)(s.zJl, {
@@ -136,7 +136,7 @@ function b() {
                             },
                             children: (0, a.jsx)(s.rsf, {
                                 label: "Nav On Click",
-                                checked: !!E,
+                                checked: !!S,
                                 onChange: (e) => {
                                     o.Z.dispatch({
                                         type: "NOTIFICATIONS_INBOX_SET_DEV_OVERRIDES",

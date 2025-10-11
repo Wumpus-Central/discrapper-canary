@@ -395,33 +395,33 @@ function k() {
         R = i.useMemo(() => P(x, u, v), [x, P, u, v]),
         D = null != x,
         k = R.length % 1000 == 0 && R.length > 0 && D,
-        G = 0 === R.length,
-        [M, U] = i.useState({
+        M = 0 === R.length,
+        [G, U] = i.useState({
             currentPage: 1,
             pageSize: 100,
         });
     i.useEffect(() => {
-        h && 1 !== M.currentPage && U((e) => Z(w({}, e), { currentPage: 1 }));
-    }, [h, M.currentPage]);
+        h && 1 !== G.currentPage && U((e) => Z(w({}, e), { currentPage: 1 }));
+    }, [h, G.currentPage]);
     let B = i.useCallback(
             (e) => {
                 d.Z.fetchGuildBansBatch(O, 1000, e);
             },
             [O],
         ),
-        F = i.useMemo(() => a().chunk(R, M.pageSize), [M.pageSize, R]),
+        F = i.useMemo(() => a().chunk(R, G.pageSize), [G.pageSize, R]),
         H = i.useCallback(
             (e) => {
                 var t, n, r;
                 null == (t = N.current) || t.scrollToSectionTop(0),
-                    (e + 1) * M.pageSize > R.length &&
+                    (e + 1) * G.pageSize > R.length &&
                         k &&
                         !p &&
                         ((W.current = null != (r = null == (n = R[R.length - 1]) ? void 0 : n.id) ? r : null),
                         B(W.current)),
                     (null != F[e - 1] || k) && U((t) => Z(w({}, t), { currentPage: e }));
             },
-            [M.pageSize, R, k, F, B, p],
+            [G.pageSize, R, k, F, B, p],
         ),
         W = i.useRef(null);
     i.useEffect(() => {
@@ -429,8 +429,8 @@ function k() {
     }, [B]);
     let V = i.useMemo(() => {
         var e;
-        return null != (e = F[M.currentPage - 1]) ? e : [];
-    }, [F, M.currentPage]);
+        return null != (e = F[G.currentPage - 1]) ? e : [];
+    }, [F, G.currentPage]);
     return null == c
         ? null
         : (0, r.jsxs)("div", {
@@ -443,7 +443,7 @@ function k() {
                   (0, r.jsxs)("div", {
                       className: T.scrollerContainer,
                       children: [
-                          !G &&
+                          !M &&
                               (0, r.jsx)(A, {
                                   guild: c,
                                   bans: x,
@@ -451,7 +451,7 @@ function k() {
                                   ref: N,
                               }),
                           !k &&
-                              G &&
+                              M &&
                               (0, r.jsxs)(o.ubH, {
                                   theme: C,
                                   className: T.emptyState,
@@ -474,9 +474,9 @@ function k() {
                   (0, r.jsx)("div", {
                       children: (0, r.jsx)(o.DsT, {
                           className: T.paginationInput,
-                          totalCount: R.length + (k ? M.pageSize : 0),
-                          pageSize: M.pageSize,
-                          currentPage: M.currentPage,
+                          totalCount: R.length + (k ? G.pageSize : 0),
+                          pageSize: G.pageSize,
+                          currentPage: G.currentPage,
                           onPageChange: H,
                           maxVisiblePages: 9,
                       }),

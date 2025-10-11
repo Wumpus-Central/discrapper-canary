@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685), n(35282);
+n.d(t, { Z: () => j }), n(388685), n(35282);
 var r = n(951288),
     l = n(647438),
     i = n(120356),
@@ -22,9 +22,9 @@ var r = n(951288),
     O = n(440617),
     x = n(981631),
     y = n(891131);
-function T(e) {
+function j(e) {
     var t;
-    let { isFetchingCategories: n, isFullScreen: i, scrollerRef: T, tab: j } = e,
+    let { isFetchingCategories: n, isFullScreen: i, scrollerRef: j, tab: T } = e,
         L = (0, d.sp)(),
         k = null != (t = null == L ? void 0 : L.sessionId) ? t : "",
         { noCache: I, includeUnpublished: B } = (0, S.Z)(),
@@ -33,8 +33,8 @@ function T(e) {
         w = (0, o.Wu)([g.Z], () => g.Z.getProductsBySkus(P)),
         H = l.useCallback(() => {
             var e;
-            null == T || null == (e = T.current) || e.scrollToTop({ animate: !0 });
-        }, [T]),
+            null == j || null == (e = j.current) || e.scrollToTop({ animate: !0 });
+        }, [j]),
         F = null == P ? void 0 : P.join("");
     l.useEffect(() => {
         H();
@@ -46,21 +46,21 @@ function T(e) {
             (0, _.n)({
                 sessionId: k,
                 checkpoint: _.a.SHOP_RENDERED,
-                tab: j,
+                tab: T,
                 isFullScreen: i,
                 unpublishedCategoriesShown: B,
                 cacheDisabled: I,
             });
-    }, [k, i, B, I, n, j]);
+    }, [k, i, B, I, n, T]);
     let W = l.useRef(null),
-        { setQueryPageSize: U, setQueryPageOffset: V, queryPageSize: G } = (0, C.S)(),
-        [z, K] = l.useState(!1),
+        { setQueryPageSize: U, setQueryPageOffset: V, queryPageSize: z } = (0, C.S)(),
+        [G, K] = l.useState(!1),
         Y = n || Z || null == N;
     l.useEffect(() => {
         if (Y) return void K(!1);
         M.length > 0 && K(!0);
     }, [Y, M.length]);
-    let q = G > 0 && !Y && 0 === M.length;
+    let q = z > 0 && !Y && 0 === M.length;
     l.useEffect(() => {
         let e = new ResizeObserver(() => {
             null != W.current && U(Math.floor(5 * getComputedStyle(W.current).gridTemplateColumns.split(/\s+/).length));
@@ -74,13 +74,13 @@ function T(e) {
                     page_section: null == L ? void 0 : L.pageSection,
                     page_category: null == L ? void 0 : L.pageCategory,
                     page_index: e,
-                    page_size: G,
+                    page_size: z,
                     cta_name: "filter results page ".concat(e),
                     page_type: "catalog",
                 }),
-                    V((e - 1) * G);
+                    V((e - 1) * z);
             },
-            [L, G, V],
+            [L, z, V],
         ),
         J = f.Z.useConfig({ location: "CollectiblesFilterableShop" }).showCardsV2;
     return (0, r.jsxs)(r.Fragment, {
@@ -90,10 +90,10 @@ function T(e) {
                 children: [
                     q && (0, r.jsx)(O.Z, {}),
                     (0, r.jsxs)("div", {
-                        className: s()(y.products, { [y.loadIn]: z }),
+                        className: s()(y.products, { [y.loadIn]: G }),
                         ref: W,
                         children: [
-                            Y && [...Array(G)].map((e, t) => (J ? (0, r.jsx)(v.Z, {}, t) : (0, r.jsx)(m.K, {}, t))),
+                            Y && [...Array(z)].map((e, t) => (J ? (0, r.jsx)(v.Z, {}, t) : (0, r.jsx)(m.K, {}, t))),
                             !Y &&
                                 M.map((e, t) => {
                                     let n = g.Z.getCategory(e.categorySkuId);
@@ -111,7 +111,7 @@ function T(e) {
                                                                 product: e,
                                                                 user: N,
                                                                 category: n,
-                                                                tab: j,
+                                                                tab: T,
                                                             },
                                                             e.skuId,
                                                         ),
@@ -123,14 +123,14 @@ function T(e) {
                     }),
                 ],
             }),
-            R > G &&
+            R > z &&
                 (0, r.jsx)("div", {
                     className: y.paginationContainer,
                     children: (0, r.jsx)("div", {
                         children: (0, r.jsx)(a.DsT, {
                             currentPage: A,
                             totalCount: R,
-                            pageSize: G,
+                            pageSize: z,
                             onPageChange: Q,
                             disablePaginationGap: !0,
                         }),

@@ -25,8 +25,8 @@ var a = n(951288),
     _ = n(980591),
     y = n(468363),
     C = n(326255),
-    E = n(771173),
-    S = n(963056),
+    S = n(771173),
+    E = n(963056),
     T = n(570928),
     O = n(100527),
     N = n(906732),
@@ -79,8 +79,8 @@ var a = n(951288),
     e_ = n(875527),
     ey = n(702977),
     eC = n(56848),
-    eE = n(940315),
-    eS = n(378441),
+    eS = n(940315),
+    eE = n(378441),
     eT = n(358820),
     eO = n(723547),
     eN = n(361045),
@@ -199,8 +199,8 @@ function tm(e) {
         }),
         C = (0, q.Z)(),
         {
-            updateOpenPopoutRef: E,
-            highlightBadge: S,
+            updateOpenPopoutRef: S,
+            highlightBadge: E,
             setHighlightBadge: T,
         } = (function () {
             let e = r.useRef(null),
@@ -253,7 +253,7 @@ function tm(e) {
                 let { closePopout: n, setPopoutRef: r } = e;
                 return (0, a.jsx)(en.Z, {
                     currentUser: s,
-                    highlightBadge: S,
+                    highlightBadge: E,
                     openedAt: t,
                     onClose: () => {
                         null == n || n();
@@ -273,7 +273,7 @@ function tm(e) {
                 d(), T(void 0);
             },
             children: (e) => (
-                E(e),
+                S(e),
                 (0, a.jsxs)(
                     f.P3F,
                     ts(
@@ -371,7 +371,7 @@ class tp extends r.PureComponent {
             return (0, a.jsx)(T.Z, {
                 hoverText: l,
                 forceHover: e,
-                children: (0, a.jsx)(E.Z, {
+                children: (0, a.jsx)(S.Z, {
                     location: "Account",
                     user: r,
                     activities: t,
@@ -402,7 +402,7 @@ class tp extends r.PureComponent {
               ? (0, a.jsx)(T.Z, {
                     hoverText: l,
                     forceHover: e,
-                    children: (0, a.jsx)(S.Z, { text: e0.ZP.humanizeStatus(i) }),
+                    children: (0, a.jsx)(E.Z, { text: e0.ZP.humanizeStatus(i) }),
                 })
               : l;
     }
@@ -755,12 +755,12 @@ function th(e) {
             accountContainerRef: _,
             shouldShowInputDeviceChangedTooltip: y = !1,
             shouldShowOutputDeviceChangedTooltip: C = !1,
-            dismissTooltips: E,
+            dismissTooltips: S,
         } = e,
-        S = (0, er.A)(j);
+        E = (0, er.A)(j);
     return (0, a.jsxs)("div", {
         className: tr.buttons,
-        style: S,
+        style: E,
         children: [
             (0, a.jsx)(tg, {
                 accountContainerRef: _,
@@ -776,7 +776,7 @@ function th(e) {
                 nameplate: j,
                 shouldShowInputDeviceChangedTooltip: y,
                 shouldShowSpeakingWhileMutedTooltip: o,
-                dismissTooltips: E,
+                dismissTooltips: S,
             }),
             (0, a.jsx)(tv, {
                 selfDeaf: t,
@@ -787,7 +787,7 @@ function th(e) {
                 iconForeground: null != j ? tr.iconForeground : void 0,
                 nameplate: j,
                 shouldShowOutputDeviceChangedTooltip: C,
-                dismissTooltips: E,
+                dismissTooltips: S,
             }),
             (0, a.jsx)(tb, {
                 isEligibleForPomelo: c,
@@ -869,8 +869,8 @@ function tf() {
             return null != e ? eZ.Z.getChannel(e) : null;
         }),
         { mute: g, selfMute: j, suppress: _ } = (0, ej.Z)(b),
-        { selfDeaf: C, deaf: E } = (0, ev.Z)(b),
-        S = (0, d.e7)([R.C], () => {
+        { selfDeaf: C, deaf: S } = (0, ev.Z)(b),
+        E = (0, d.e7)([R.C], () => {
             var e;
             return (0, k.fD)()
                 ? null == (e = R.C.getCurrentBuildOverride().overrides)
@@ -950,14 +950,14 @@ function tf() {
             premiumSubscription: T,
             selfDeaf: C,
             selfMute: j,
-            serverDeaf: E,
+            serverDeaf: S,
             serverMute: g,
             speaking: p,
             speakingWhileMuted: w,
             status: c,
             streaming: s,
             suppress: _,
-            webBuildOverride: S,
+            webBuildOverride: E,
             awaitingRemote: U,
             isEligibleForPomelo: L,
             voiceActivityStatusEnabled: Y,
@@ -1055,12 +1055,12 @@ function tg(e) {
             shouldShowInputDeviceChangedTooltip: y,
             dismissTooltips: C,
         } = e,
-        E = n || s || i,
-        S = r.useRef(null),
+        S = n || s || i,
+        E = r.useRef(null),
         T = r.useRef(null),
-        P = (0, eR.b)(E),
-        { activeVoice: I, mostRecentlyRequestedVoiceId: w, lastInitAttemptMayHaveCrashed: R } = (0, eS.o)(),
-        { showSilentLagWarning: k } = (0, eE.Y)(),
+        P = (0, eR.b)(S),
+        { activeVoice: I, mostRecentlyRequestedVoiceId: w, lastInitAttemptMayHaveCrashed: R } = (0, eE.o)(),
+        { showSilentLagWarning: k } = (0, eS.Y)(),
         A = null != I,
         Z = (0, eC.z)(I),
         U = (0, d.e7)([eU.Z], () => eU.Z.isConnected()),
@@ -1096,7 +1096,7 @@ function tg(e) {
             location: O.Z.AUDIO_INPUT_BUTTON,
             autoTrackExposure: !0,
         });
-    r.useEffect(() => () => z(), [E, z]);
+    r.useEffect(() => () => z(), [S, z]);
     let X = r.useCallback(
             (e) => {
                 g(e, q);
@@ -1108,7 +1108,7 @@ function tg(e) {
             var t;
             if (
                 (0, c.kK)(null == e ? void 0 : e.target, Node) &&
-                (null == (t = S.current) ? void 0 : t.contains(e.target))
+                (null == (t = E.current) ? void 0 : t.contains(e.target))
             )
                 return x.F;
             $(!1);
@@ -1136,8 +1136,8 @@ function tg(e) {
     let er = r.useCallback(() => {
             R || (0, eT.r5)();
         }, [R]),
-        ei = E ? f.TVs.colors.STATUS_DANGER : k ? f.TVs.colors.STATUS_WARNING : "currentColor",
-        el = E || k,
+        ei = S ? f.TVs.colors.STATUS_DANGER : k ? f.TVs.colors.STATUS_WARNING : "currentColor",
+        el = S || k,
         es = (0, eo.Z)({ location: "Account" }),
         { name: ec } = (0, et.p6)(tn.h7.AUDIO_INPUT),
         { showRefreshedAudioContextMenu: ed } = (0, e4.e)({ location: "MicrophoneButton" }),
@@ -1146,7 +1146,7 @@ function tg(e) {
         ? (0, a.jsx)(N.Gt, {
               value: q,
               children: (0, a.jsx)(f.yRy, {
-                  targetElementRef: S,
+                  targetElementRef: E,
                   renderPopout: (e) => {
                       let { closePopout: t } = e;
                       return (
@@ -1184,14 +1184,14 @@ function tg(e) {
                           { isShown: i } = n,
                           s = i ? f.u04 : f.CJ0;
                       return (0, a.jsxs)("div", {
-                          ref: S,
+                          ref: E,
                           className: l()(tr.micButtonParent, {
                               [tr.hasColorGlow]: el,
                               [tr.popoutOpen]: i,
                           }),
                           children: [
                               (0, a.jsx)(e2.Z, {
-                                  "aria-checked": E,
+                                  "aria-checked": S,
                                   "aria-label": ta.intl.string(ta.t["w4m94+"]),
                                   className: l()({ [tr.micButtonWithMenu]: !0 }),
                                   disabled: o,
@@ -1212,7 +1212,7 @@ function tg(e) {
                                   },
                                   orangeGlow: k,
                                   plated: null != v,
-                                  redGlow: E,
+                                  redGlow: S,
                                   role: "switch",
                                   tooltipColor: _ ? f.r6K.GREEN : void 0,
                                   tooltipForceOpen: _,
@@ -1237,7 +1237,7 @@ function tg(e) {
                                   onMouseLeave: h,
                                   orangeGlow: k,
                                   plated: null != v,
-                                  redGlow: E,
+                                  redGlow: S,
                                   tooltipClassName: tr.accountButtonsTooltip,
                                   tooltipColor: y ? f.r6K.GREEN : void 0,
                                   tooltipContentClassName: tr.accountButtonsTooltipContent,
@@ -1258,7 +1258,7 @@ function tg(e) {
         : (0, a.jsx)(N.Gt, {
               value: q,
               children: (0, a.jsxs)("div", {
-                  ref: S,
+                  ref: E,
                   className: l()(tr.micButtonParent, { [tr.hasColorGlow]: el }),
                   children: [
                       (0, a.jsx)(e2.Z, {
@@ -1284,9 +1284,9 @@ function tg(e) {
                           role: "switch",
                           className: l()({ [tr.micButtonWithMenu]: Y }),
                           orangeGlow: k,
-                          redGlow: E,
+                          redGlow: S,
                           "aria-label": ta.intl.string(ta.t["w4m94+"]),
-                          "aria-checked": E,
+                          "aria-checked": S,
                           disabled: o,
                       }),
                       Y &&
@@ -1404,7 +1404,7 @@ function tg(e) {
                                                                   role: "button",
                                                                   className: tr.buttonChevron,
                                                                   orangeGlow: k,
-                                                                  redGlow: E,
+                                                                  redGlow: S,
                                                                   "aria-label": ta.intl.string(ta.t.Hapb4O),
                                                                   disabled: o,
                                                                   onClick: (e) => {
@@ -1462,26 +1462,26 @@ function tv(e) {
         { name: _ } = (0, et.p6)(tn.h7.AUDIO_OUTPUT),
         { showRefreshedAudioContextMenu: y } = (0, e4.e)({ location: "HeadphonesButton" }),
         C = (0, Z.Z)(t, n, i),
-        { analyticsLocations: E } = (0, N.ZP)(O.Z.AUDIO_OUTPUT_BUTTON),
-        S = r.useRef(null);
+        { analyticsLocations: S } = (0, N.ZP)(O.Z.AUDIO_OUTPUT_BUTTON),
+        E = r.useRef(null);
     r.useEffect(() => () => b(), [h, b]);
     let T = r.useCallback(
         (e) => {
-            o(e, E);
+            o(e, S);
         },
-        [o, E],
+        [o, S],
     );
     return y
         ? (0, a.jsx)(N.Gt, {
-              value: E,
+              value: S,
               children: (0, a.jsx)(f.yRy, {
-                  targetElementRef: S,
+                  targetElementRef: E,
                   renderPopout: (e) => {
                       let { closePopout: t } = e;
                       return (
                           m(),
                           (0, a.jsx)(N.Gt, {
-                              value: E,
+                              value: S,
                               children: (0, a.jsx)(L.Z, {
                                   onInteraction: (0, G.u)("AudioDeviceMenu", O.Z.ACCOUNT),
                                   onClose: t,
@@ -1501,7 +1501,7 @@ function tv(e) {
                           { isShown: o } = t,
                           m = o ? f.u04 : f.CJ0;
                       return (0, a.jsxs)("div", {
-                          ref: S,
+                          ref: E,
                           className: l()(tr.micButtonParent, {
                               [tr.hasColorGlow]: h,
                               [tr.popoutOpen]: o,
@@ -1565,7 +1565,7 @@ function tv(e) {
               }),
           })
         : (0, a.jsx)(N.Gt, {
-              value: E,
+              value: S,
               children: (0, a.jsx)(e2.Z, {
                   plated: null != d,
                   tooltipText: C,

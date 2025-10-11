@@ -34,8 +34,8 @@ var r = n(951288),
     A = n(275296),
     L = n(203377),
     k = n(494831),
-    G = n(981631),
-    M = n(141006),
+    M = n(981631),
+    G = n(141006),
     U = n(388032),
     B = n(989308),
     F = n(12574),
@@ -59,7 +59,7 @@ function Y(e) {
             required: !0,
             type: "text",
             value: l,
-            maxLength: G.VKK,
+            maxLength: M.VKK,
             onChange: function (e) {
                 a(e), K(t.id, e);
             },
@@ -174,7 +174,7 @@ function q(e) {
 function X() {
     let e = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
         { gradientStyle: t, gradientClassname: n } = (0, m.JUn)({
-            colorStrings: (0, C.DX)(M.SK),
+            colorStrings: (0, C.DX)(G.SK),
             useReducedMotion: e,
             roleStyle: "username",
             includeConvenienceGlow: !0,
@@ -221,8 +221,8 @@ function Q(e) {
             description: U.intl.string(U.t["9UCxlZ"]),
             required: !0,
             children: (0, r.jsx)(z, {
-                defaultColor: G.p6O,
-                colors: a === T.g.GRADIENT && s ? M.tl : G.pmI,
+                defaultColor: M.p6O,
+                colors: a === T.g.GRADIENT && s ? G.tl : M.pmI,
                 value: i.color,
                 disabled: l,
                 onChange: (e) => {
@@ -231,8 +231,8 @@ function Q(e) {
                         (t = e),
                         void (
                             i.color !== t &&
-                            (t !== G.p6O || 0 !== i.color) &&
-                            (t === G.p6O && (t = 0), (0, S.OW)(i.id, t))
+                            (t !== M.p6O || 0 !== i.color) &&
+                            (t === M.p6O && (t = 0), (0, S.OW)(i.id, t))
                         )
                     );
                 },
@@ -279,7 +279,7 @@ function J(e) {
             name: t.name,
         },
         u = (0, v.oC)(n, t),
-        p = [G.BRd.DARK, G.BRd.DARKER, G.BRd.MIDNIGHT, G.BRd.LIGHT];
+        p = [M.BRd.DARK, M.BRd.DARKER, M.BRd.MIDNIGHT, M.BRd.LIGHT];
     return (0, r.jsx)(m.Rny, {
         children: (0, r.jsx)("div", {
             className: a()(F.previewContainer, { [F.disableInteraction]: l }),
@@ -304,7 +304,7 @@ function J(e) {
                                             isGroupStart: !0,
                                         }),
                                     }),
-                                    e === G.BRd.LIGHT &&
+                                    e === M.BRd.LIGHT &&
                                         i !== T.g.SOLID &&
                                         (0, r.jsx)(m.Text, {
                                             variant: "text-xs/medium",

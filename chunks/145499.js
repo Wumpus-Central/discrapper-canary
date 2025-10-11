@@ -131,7 +131,7 @@ let w = (e) => {
             l)
         )
             return (0, r.jsx)(d.$jN, {});
-        let G = [
+        let M = [
             {
                 tier: I.Eu4.NONE,
                 title: (0, r.jsx)(w, {
@@ -170,18 +170,18 @@ let w = (e) => {
             },
         ];
         return (0, r.jsx)(N.Z, {
-            tiers: G,
+            tiers: M,
             renderTier: (e) => {
                 var i;
                 let l,
                     s,
                     { isAnimatedTo: m, onSetRef: x, tier: j, tiers: C, tierIndex: O } = e,
                     { canCreateExpressions: N, canManageGuildExpression: w } = (0, h.Gw)(t),
-                    G = C[O - 1],
-                    M = null != G ? (0, _.A3)(G.tier) : 0,
+                    M = C[O - 1],
+                    G = null != M ? (0, _.A3)(M.tier) : 0,
                     U = (0, _.A3)(j.tier, t),
                     B = (0, _.ig)(j.tier),
-                    F = g.slice(M, U),
+                    F = g.slice(G, U),
                     H = F.length > 0,
                     W = A < j.tier,
                     V =
@@ -198,7 +198,7 @@ let w = (e) => {
                                   : I.Eu4.NONE),
                     z = N && !W && V === j.tier && U !== F.length,
                     K = z || F.length > 0,
-                    Y = U - M,
+                    Y = U - G,
                     q = n(872732),
                     X = B - F.length,
                     Q = z ? Math.min(5 - ((F.length + 0) % 5), X) : 0,

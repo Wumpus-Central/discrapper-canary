@@ -41,17 +41,17 @@ function N(e) {
             muted: M,
             resolvedUnreadSetting: k,
         } = e,
-        U = (0, i.e7)([m.ZP], () => m.ZP.getMentionCount(n.id)),
-        G = (0, i.e7)([m.ZP], () => m.ZP.getIsMentionLowImportance(n.id)),
+        G = (0, i.e7)([m.ZP], () => m.ZP.getMentionCount(n.id)),
+        U = (0, i.e7)([m.ZP], () => m.ZP.getIsMentionLowImportance(n.id)),
         B = (0, a.ZP)(n),
-        F = (0, i.e7)([g.Z], () => !g.Z.can(E.Plq.CONNECT, n)),
-        V = (0, s.P)(n),
+        V = (0, i.e7)([g.Z], () => !g.Z.can(E.Plq.CONNECT, n)),
+        F = (0, s.P)(n),
         H = (0, i.e7)([b.Z], () => b.Z.hasVideo(n.id)),
         z = (0, p.PK)(n.id) && n.isGuildStageVoice(),
         W = (0, v.ZP)({
             channel: n,
-            locked: F,
-            video: (H || z) && null == V,
+            locked: V,
+            video: (H || z) && null == F,
             selected: N,
         }),
         K = (0, i.e7)([h.Z], () => h.Z.getNewThreadCount(n.guild_id, n.id)),
@@ -60,10 +60,10 @@ function N(e) {
             var e, t;
             return null != (t = null == (e = f.Z.getGuild(n.guild_id)) ? void 0 : e.features.has(E.oNc.COMMUNITY)) && t;
         });
-    if ((0, O.Z)(U))
+    if ((0, O.Z)(G))
         return (0, r.jsx)(C.Z, {
-            mentionsCount: U,
-            isMentionLowImportance: G,
+            mentionsCount: G,
+            isMentionLowImportance: U,
         });
     if ((0, d.O)(R)) return (0, r.jsx)(d.Z, { locked: D });
     if (L)
@@ -96,10 +96,10 @@ function N(e) {
                 text: I.intl.string(I.t.dI3q4u),
                 color: l.Z.unsafe_rawColors.RED_400.css,
             })
-          : null != V
+          : null != F
             ? (0, r.jsx)(c.x3, {
                   textColor: "text-feedback-positive",
-                  entry: { start: V },
+                  entry: { start: F },
               })
             : null != A && A && (0, y.u)(B)
               ? (0, r.jsx)(j.Z, {

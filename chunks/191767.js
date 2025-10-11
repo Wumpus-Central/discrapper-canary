@@ -1,4 +1,4 @@
-n.d(t, { f: () => E }), n(388685), n(49124);
+n.d(t, { f: () => S }), n(388685), n(49124);
 var a = n(951288),
     r = n(647438),
     i = n(289008),
@@ -61,14 +61,14 @@ function C(e, t) {
         e
     );
 }
-function E() {
+function S() {
     return (0, a.jsx)(p.PaymentContextProvider, {
         stepConfigs: [],
         skuIDs: [],
         activeSubscription: null,
         children: (0, a.jsxs)("div", {
             children: [
-                (0, a.jsx)(S, {}),
+                (0, a.jsx)(E, {}),
                 (0, a.jsx)(c.Text, {
                     variant: "text-md/normal",
                     color: "text-feedback-info",
@@ -83,7 +83,7 @@ function E() {
         }),
     });
 }
-function S() {
+function E() {
     let [e, t] = r.useState("discord://".concat(location.host, "/feature/apple-payment-link"));
     return (0, a.jsxs)(b.$0, {
         children: [

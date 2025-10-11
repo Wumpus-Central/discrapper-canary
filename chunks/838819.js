@@ -22,8 +22,8 @@ var r = n(951288),
     O = n(994587),
     x = n(780475),
     y = n(223143),
-    T = n(298228),
-    j = n(908430),
+    j = n(298228),
+    T = n(908430),
     L = n(99767),
     k = n(501431),
     I = n(98535),
@@ -53,7 +53,7 @@ let M = (e) => {
     },
     W = function (e) {
         let { isFullScreen: t = !0, tab: n = Z.AW.HOME } = e;
-        (0, C.z)(p.f), (0, j.f)();
+        (0, C.z)(p.f), (0, T.f)();
         let i = (0, g.Z)((0, o.Z)()),
             c = (0, a.e7)([E.default], () => E.default.getCurrentUser()),
             { userProfile: H, wishlistId: W } = (0, a.cj)(
@@ -70,8 +70,8 @@ let M = (e) => {
             (0, m.kZ)(W, null == c ? void 0 : c.id);
         let U = (0, R.G)("CollectiblesShop"),
             { onClose: V } = (0, P.Db)(),
-            { currentTab: G, hasFilters: z } = (0, k.S)(),
-            K = l.useMemo(() => (n === Z.AW.HOME && G && z() ? G : n), [n, G, z]),
+            { currentTab: z, hasFilters: G } = (0, k.S)(),
+            K = l.useMemo(() => (n === Z.AW.HOME && z && G() ? z : n), [n, z, G]),
             { categories: Y, refreshCategories: q } = (0, y.ZP)(
                 { logPerf: !0 },
                 {
@@ -80,7 +80,7 @@ let M = (e) => {
                     isFullScreen: t,
                 },
             ),
-            Q = (0, T.O)(Y),
+            Q = (0, j.O)(Y),
             [J, X] = l.useState(),
             $ = (0, a.e7)([S.Z], () => {
                 var e;

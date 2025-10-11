@@ -1,4 +1,4 @@
-n.d(t, { Z: () => G }), n(388685);
+n.d(t, { Z: () => U }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -298,8 +298,8 @@ class k extends P.ZP {
             });
     }
 }
-let U = (0, d.B)(k);
-function G(e) {
+let G = (0, d.B)(k);
+function U(e) {
     let { channel: t, guild: n, disableSorting: i, isFavoriteCategory: l, muted: o, selected: s } = e,
         { hasActiveThreads: c, hasMoreActiveThreads: u } = (0, O.JQ)(t),
         d = (0, a.cj)([C.ZP], () => ({
@@ -336,7 +336,7 @@ function G(e) {
         }),
         R = (0, h.ZP)(t);
     return (0, r.jsx)(
-        U,
+        G,
         M(L({}, d, m, e), {
             hasActiveThreads: c,
             hasMoreActiveThreads: u,

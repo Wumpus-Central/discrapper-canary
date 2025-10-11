@@ -30,13 +30,13 @@ function v(e) {
         v = S();
     O(v);
     let x = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
-        [y, T] = l.useState(void 0),
-        j = l.useCallback(
+        [y, j] = l.useState(void 0),
+        T = l.useCallback(
             async (e, t, r) => {
                 u(e, t);
                 let l = r && !n && !x,
                     i = (0, d.$2)(t) ? b.AW.ORBS : b.AW.CATALOG;
-                T(t), await a(i, l);
+                j(t), await a(i, l);
             },
             [n, x, a, u],
         ),
@@ -53,7 +53,7 @@ function v(e) {
           : E.includes(t)
             ? (0, r.jsx)(_.Z, {
                   isFullScreen: n,
-                  handleTransition: j,
+                  handleTransition: T,
                   tab: t,
                   transitionState: c,
               })
@@ -62,7 +62,7 @@ function v(e) {
                   tab: t,
                   sortedCategories: o,
                   initialCategoryId: y,
-                  onUnmount: () => T(void 0),
+                  onUnmount: () => j(void 0),
               });
 }
 let S = () =>

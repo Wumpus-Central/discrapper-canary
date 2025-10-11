@@ -48,7 +48,7 @@ let y = function (e) {
         [n, u] = r.useState(null),
         [h, x] = r.useState(!0),
         [y, C] = r.useState(null),
-        [E, S] = r.useState(!1),
+        [S, E] = r.useState(!1),
         T = r.useCallback(async () => {
             x(!0), C(null);
             try {
@@ -82,7 +82,7 @@ let y = function (e) {
         O = r.useCallback(
             async (e) => {
                 if (null !== n) {
-                    S(!0);
+                    E(!0);
                     try {
                         let t = {
                             task_id: n.task_id,
@@ -93,7 +93,7 @@ let y = function (e) {
                     } catch (e) {
                         C(g.intl.string(b.default["+QRSxc"]));
                     } finally {
-                        S(!1);
+                        E(!1);
                     }
                 }
             },
@@ -184,7 +184,7 @@ let y = function (e) {
                                             (0, a.jsx)(_, {
                                                 task: n,
                                                 handleSubmit: O,
-                                                disabled: E,
+                                                disabled: S,
                                             }),
                                     ],
                                 }),

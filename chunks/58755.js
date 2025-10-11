@@ -148,8 +148,8 @@ function j(e) {
             useP3ColorSpace: _,
             steps: C = 26,
         } = t,
-        E = (0, p.XM)(t),
-        S = (0, p.W6)(E, c);
+        S = (0, p.XM)(t),
+        E = (0, p.W6)(S, c);
     return (0, a.jsxs)(d.Kqy, {
         gap: 20,
         children: [
@@ -167,7 +167,7 @@ function j(e) {
                     }),
                     (0, a.jsx)(d.P3F, {
                         onClick: function () {
-                            let e = Object.entries(E).reduce((e, t) => {
+                            let e = Object.entries(S).reduce((e, t) => {
                                 let [n, a] = t;
                                 return (
                                     (e[n] = {
@@ -273,11 +273,11 @@ function j(e) {
                     (0, a.jsx)("div", {
                         className: h.paletteOverrides,
                         "data-columnar": g,
-                        children: Object.entries(E).map((e, n) => {
+                        children: Object.entries(S).map((e, n) => {
                             let [r, c] = e,
                                 u = (0, p.HI)(c),
                                 m = (0, s.Z)((0, o.Z)("black"), c) > 4.5 ? "black" : "white",
-                                h = S[r];
+                                h = E[r];
                             return (0, a.jsxs)(
                                 "div",
                                 {

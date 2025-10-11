@@ -20,8 +20,8 @@ var a = n(951288),
     _ = n(77498),
     y = n(823379),
     C = n(550532),
-    E = n(71585),
-    S = n(146282),
+    S = n(71585),
+    E = n(146282),
     T = n(780106),
     O = n(650613),
     N = n(789086),
@@ -65,7 +65,7 @@ let R = [
 function k(e) {
     var t, n;
     let { type: r } = e,
-        i = (0, u.e7)([S.Z], () => S.Z.getFilters()),
+        i = (0, u.e7)([E.Z], () => E.Z.getFilters()),
         l = null != (n = null == i || null == (t = i.types) ? void 0 : t.has(r)) && n;
     return (0, a.jsx)(p.rsf, {
         checked: l,
@@ -84,9 +84,9 @@ function k(e) {
 }
 function A() {
     var e, t;
-    let n = (0, u.e7)([S.Z], () => S.Z.getFeed(P.YN.GLOBAL_FEED)),
-        i = (0, u.e7)([S.Z], () => S.Z.getDebugImpressionCappingDisabled()),
-        l = (0, u.e7)([E.Z], () => E.Z.getDebugFastImpressionCappingEnabled()),
+    let n = (0, u.e7)([E.Z], () => E.Z.getFeed(P.YN.GLOBAL_FEED)),
+        i = (0, u.e7)([E.Z], () => E.Z.getDebugImpressionCappingDisabled()),
+        l = (0, u.e7)([S.Z], () => S.Z.getDebugFastImpressionCappingEnabled()),
         s = (function (e) {
             let t = o().groupBy(e, (e) => e.content_type);
             return Object.keys(t).map((e) => {
@@ -98,9 +98,9 @@ function A() {
                 };
             });
         })(null == n || null == (e = n.entries) ? void 0 : e.map((e) => e.content)),
-        c = (0, u.e7)([S.Z], () => {
+        c = (0, u.e7)([E.Z], () => {
             var e;
-            return (null == (e = S.Z.getFeedState(P.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
+            return (null == (e = E.Z.getFeedState(P.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
         }),
         [k, A] = r.useState(""),
         D = (0, u.e7)([_.Z, x.Z], () => {

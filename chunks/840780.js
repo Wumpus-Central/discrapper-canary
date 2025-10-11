@@ -35,11 +35,11 @@ var r = n(951288),
     L = n(243778),
     M = n(48131),
     k = n(591472),
-    U = n(594190),
-    G = n(925329),
+    G = n(594190),
+    U = n(925329),
     B = n(102172),
-    F = n(74299),
-    V = n(914923),
+    V = n(74299),
+    F = n(914923),
     H = n(662304),
     z = n(989941),
     W = n(690221),
@@ -276,7 +276,7 @@ class eN extends i.PureComponent {
     }
     renderScreenshare() {
         let { isStreaming: e, streamMetadata: t, streamQualityIndicator: n } = this.props,
-            { title: i, sanitizedTitle: l } = (0, V.Z)(t);
+            { title: i, sanitizedTitle: l } = (0, F.Z)(t);
         return (0, r.jsxs)("div", {
             className: eC.gameWrapper,
             ref: this.accountLinkUpsellTargetRef,
@@ -350,10 +350,10 @@ class eN extends i.PureComponent {
             }),
             h = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(G.Z, {
+                    (0, r.jsx)(U.Z, {
                         className: eC.gameIcon,
                         game: t,
-                        size: G.A.SMALL,
+                        size: U.A.SMALL,
                         ref: this.accountLinkUpsellTargetRef,
                     }),
                     (0, r.jsx)(S.j, {
@@ -389,10 +389,10 @@ class eN extends i.PureComponent {
             }),
             l = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(G.Z, {
+                    (0, r.jsx)(U.Z, {
                         className: eC.gameIcon,
                         game: e,
-                        size: G.A.SMALL,
+                        size: U.A.SMALL,
                         ref: this.accountLinkUpsellTargetRef,
                     }),
                     (0, r.jsxs)("div", {
@@ -510,7 +510,7 @@ let eZ = (0, O.Z)(function (e) {
             return i;
         })(e, ["guildId"]);
     let o = (0, u.e7)([$.default], () => $.default.getId()),
-        a = (0, u.e7)([U.ZP, ec.Z], () => (0, z.Z)(U.ZP, ec.Z)),
+        a = (0, u.e7)([G.ZP, ec.Z], () => (0, z.Z)(G.ZP, ec.Z)),
         s = (0, u.e7)([ea.Z, ee.Z], () => ee.Z.getChannel(ea.Z.getVoiceChannelId())),
         d = (0, u.e7)([C.ZP], () => C.ZP.getConnectedActivityChannelId()),
         p = (0, u.e7)([ee.Z], () => ee.Z.getChannel(d)),
@@ -540,12 +540,12 @@ let eZ = (0, O.Z)(function (e) {
         x = (0, u.e7)([R.Z], () => R.Z.getFakeGameData()),
         S = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
         Z = (0, E.Z)() && null != S && (0, j.R)(),
-        w = (0, u.e7)([er.Z], () => (0, F.Z)(er.Z) && (0, ep.isWindows)()),
+        w = (0, u.e7)([er.Z], () => (0, V.Z)(er.Z) && (0, ep.isWindows)()),
         A = (0, u.e7)([el.Z], () => (null != o ? el.Z.findActivity(o, (e) => e.type === e_.IIU.PLAYING) : null)),
         D = null != f && f.ownerId === o && f.state !== e_.jm8.ENDED,
         L = (0, u.e7)([es.default, eo.Z], () => (null != p ? (0, T.F6)(p, es.default, eo.Z) : void 0)),
         M = (0, Y.Z)(),
-        [G, V] = i.useState(!1),
+        [U, F] = i.useState(!1),
         H = (0, u.e7)([K.Z], () => K.Z.getWindowOpen(e_.KJ3.ACTIVITY_POPOUT)),
         {
             hasAlreadyLinked: W,
@@ -585,8 +585,8 @@ let eZ = (0, O.Z)(function (e) {
             channelName: L,
             guildForConnectedChannel: h,
             streamQualityIndicator: M,
-            isForceShowSharingPopout: G,
-            setIsForceShowSharingPopout: V,
+            isForceShowSharingPopout: U,
+            setIsForceShowSharingPopout: F,
             isActivityPopoutOpen: H,
             hasAlreadyLinked: W,
             blockAccountLinkDismissibleContent: !eg || !ef,

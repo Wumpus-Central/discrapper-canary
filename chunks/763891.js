@@ -22,8 +22,8 @@ var r = n(951288),
     O = n(981631),
     x = n(388032),
     y = n(887353),
-    T = n(558513),
-    j = n(662128),
+    j = n(558513),
+    T = n(662128),
     L = n(676790),
     k = n(665195),
     I = n(42742),
@@ -39,20 +39,20 @@ function A(e) {
         M = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
         W = (0, s.e7)([f.Z], () => f.Z.productsWithVariantsAsGroup),
         [U, V] = l.useState(1),
-        G = (0, c.Fg)(),
-        z = (0, o.ap)(G),
+        z = (0, c.Fg)(),
+        G = (0, o.ap)(z),
         [K, Y, q] = l.useMemo(() => {
             switch (Z) {
                 case S.AW.AVATAR_DECORATIONS:
-                    return [x.intl.string(x.t.dRZYND), z ? k.Z : L.Z, i.Z.AVATAR_DECORATION];
+                    return [x.intl.string(x.t.dRZYND), G ? k.Z : L.Z, i.Z.AVATAR_DECORATION];
                 case S.AW.PROFILE_EFFECTS:
-                    return [x.intl.string(x.t["1cNjt7"]), z ? P.Z : N.Z, i.Z.PROFILE_EFFECT];
+                    return [x.intl.string(x.t["1cNjt7"]), G ? P.Z : N.Z, i.Z.PROFILE_EFFECT];
                 case S.AW.NAMEPLATES:
-                    return [x.intl.string(x.t.V68Fq6), z ? B.Z : I.Z, i.Z.NAMEPLATE];
+                    return [x.intl.string(x.t.V68Fq6), G ? B.Z : I.Z, i.Z.NAMEPLATE];
                 case S.AW.BUNDLES:
-                    return [x.intl.string(x.t.FYFppq), z ? j.Z : T.Z, i.Z.BUNDLE];
+                    return [x.intl.string(x.t.FYFppq), G ? T.Z : j.Z, i.Z.BUNDLE];
             }
-        }, [Z, z]),
+        }, [Z, G]),
         Q = (0, C.a)(),
         J = l.useMemo(
             () =>

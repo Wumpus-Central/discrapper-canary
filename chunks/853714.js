@@ -97,7 +97,7 @@ function k(e, t) {
     }
     return i;
 }
-let G = i.forwardRef((e, t) => {
+let M = i.forwardRef((e, t) => {
     var { onHeaderClick: i, guildId: l, guild: a } = e,
         s = k(e, ["onHeaderClick", "guildId", "guild"]);
     return null == l
@@ -185,7 +185,7 @@ let G = i.forwardRef((e, t) => {
               }),
           );
 });
-function M(e) {
+function G(e) {
     let {
             logs: t,
             guildId: n,
@@ -218,7 +218,7 @@ function M(e) {
                                 i = o === e.id,
                                 s = t ? d : i ? u : null;
                             return (0, r.jsx)(
-                                G,
+                                M,
                                 {
                                     guildId: n,
                                     guild: l,
@@ -240,7 +240,7 @@ function M(e) {
         }),
     });
 }
-G.displayName = "AuditLogClickWrap";
+M.displayName = "AuditLogClickWrap";
 class U extends i.PureComponent {
     componentDidMount() {
         (0, u.bY)(this.props.guildId), document.addEventListener("click", this.handleOutsideClick);
@@ -349,7 +349,7 @@ class U extends i.PureComponent {
                 ],
             });
         }
-        return (0, r.jsx)(M, {
+        return (0, r.jsx)(G, {
             logs: i,
             guildId: u,
             guild: g,

@@ -60,7 +60,7 @@ let g = () => {
             [n, g] = r.useState(s.R.WHAT_YOU_LOSE),
             [j, _] = r.useState(null),
             [y, C] = r.useState(h.Xh.PREMIUM_MONTH_TIER_0),
-            [E, S] = r.useState([]),
+            [S, E] = r.useState([]),
             [T, O] = r.useState(() => {
                 let e = new Date();
                 return e.setMonth(e.getMonth() + 1), e;
@@ -90,7 +90,7 @@ let g = () => {
             (0, r.useEffect)(() => {
                 switch (e) {
                     case h.PremiumTypes.TIER_0:
-                        S([
+                        E([
                             {
                                 label: "Nitro Basic Monthly",
                                 value: h.Xh.PREMIUM_MONTH_TIER_0,
@@ -103,7 +103,7 @@ let g = () => {
                             C(h.Xh.PREMIUM_MONTH_TIER_0);
                         break;
                     case h.PremiumTypes.TIER_1:
-                        S([
+                        E([
                             {
                                 label: "Nitro Classic Monthly",
                                 value: h.Xh.PREMIUM_MONTH_TIER_1,
@@ -116,7 +116,7 @@ let g = () => {
                             C(h.Xh.PREMIUM_MONTH_TIER_1);
                         break;
                     case h.PremiumTypes.TIER_2:
-                        S([
+                        E([
                             {
                                 label: "Nitro Monthly",
                                 value: h.Xh.PREMIUM_MONTH_TIER_2,
@@ -258,7 +258,7 @@ let g = () => {
                                     }),
                                 ],
                             }),
-                            E.length > 0 &&
+                            S.length > 0 &&
                                 (0, a.jsxs)(d.BZ, {
                                     children: [
                                         (0, a.jsx)(i.Text, {
@@ -272,7 +272,7 @@ let g = () => {
                                             },
                                             isSelected: (e) => y === e,
                                             serialize: (e) => e,
-                                            options: E,
+                                            options: S,
                                             popoutLayerContext: c.O$,
                                         }),
                                     ],

@@ -80,8 +80,8 @@ function p(e) {
         [j, _] = r.useState(!1),
         y = r.useRef(null),
         C = null != b ? b : y,
-        E = null != f,
-        S = E && g,
+        S = null != f,
+        E = S && g,
         T = {
             offset: {
                 top: -8,
@@ -132,7 +132,7 @@ function p(e) {
         I = (e) => {
             let t;
             return (
-                (t = S
+                (t = E
                     ? (0, a.jsxs)(a.Fragment, {
                           children: [
                               (0, a.jsx)(l.P3F, {
@@ -163,7 +163,7 @@ function p(e) {
                               ),
                           ],
                       })
-                    : E
+                    : S
                       ? (0, a.jsxs)(
                             l.P3F,
                             u(d({ className: c.menuItemContent }, e), {
@@ -194,7 +194,7 @@ function p(e) {
                 })
             );
         };
-    return E
+    return S
         ? (0, a.jsx)("li", {
               className: c.menuItem,
               onMouseEnter: O,

@@ -98,11 +98,11 @@ let D = i.memo(function (e) {
             {
                 stream: M,
                 canGoLive: k,
-                guildId: U,
-                isStreaming: G,
+                guildId: G,
+                isStreaming: U,
                 channel: B,
-                canStream: F,
-                runningGame: V,
+                canStream: V,
+                runningGame: F,
                 embeddedActivity: H,
                 frame: z,
                 activity: W,
@@ -123,7 +123,7 @@ let D = i.memo(function (e) {
                 o()(null != W, "Received null activity"),
                     S.default.track(N.rMx.ACTIVITY_PANEL_BUTTON_CLICKED, {
                         action_type: "invite_to_game",
-                        game_id: null != (e = null == V ? void 0 : V.id) ? e : null,
+                        game_id: null != (e = null == F ? void 0 : F.id) ? e : null,
                         application_id: W.application_id,
                     }),
                     (0, _.v)(J, _.d.INVITE),
@@ -133,7 +133,7 @@ let D = i.memo(function (e) {
                         location: Y.location,
                     }),
                     (0, u.h7)(W, !1);
-            }, [W, Y, J, V]),
+            }, [W, Y, J, F]),
             en = i.useCallback(
                 (e, t) => () => {
                     (0, _.v)(J, _.d.LEAVE_ACTIVITY),
@@ -156,7 +156,7 @@ let D = i.memo(function (e) {
             }, [M]),
             el = i.useCallback(() => {
                 let e = null != B && (0, C.vd)(B.type) ? B : null,
-                    t = null != e ? e.getGuildId() : U;
+                    t = null != e ? e.getGuildId() : G;
                 (0, c.ZDy)(async () => {
                     let { default: e } = await Promise.all([n.e("4093"), n.e("47863"), n.e("33641")]).then(
                         n.bind(n, 60594),
@@ -165,14 +165,14 @@ let D = i.memo(function (e) {
                         (0, r.jsx)(
                             e,
                             A(T({}, n), {
-                                sourcePID: null == V ? void 0 : V.pid,
+                                sourcePID: null == F ? void 0 : F.pid,
                                 selectSource: !!Q && null != E.Z.getVoiceChannelId(),
                                 guildId: t,
                                 analyticsLocation: N.Sbl.ACTIVITY_PANEL,
                             }),
                         );
                 });
-            }, [B, U, V, Q]),
+            }, [B, G, F, Q]),
             eo = i.useCallback(
                 (e) => {
                     (0, d.jW)(
@@ -205,23 +205,23 @@ let D = i.memo(function (e) {
                 ec && (ef(!1), null != ep.current && (clearTimeout(ep.current), (ep.current = null)));
             }, [ec]);
         let eg =
-                (null != V || null == H || (0, p.R)()) && (G || k)
-                    ? (G
+                (null != F || null == H || (0, p.R)()) && (U || k)
+                    ? (U
                           ? ((l = !1),
                             (a = () => {
                                 ei(), (0, _.v)(J, _.d.STREAM, !1);
                             }),
                             (h = c.g5r),
                             (D = Z.intl.string(Z.t.S5anIS)))
-                          : F
+                          : V
                             ? ((l = !1),
                               (a = () => {
                                   el(), (0, _.v)(J, _.d.STREAM, !0);
                               }),
                               (h = c.hGI),
                               (D =
-                                  null != V
-                                      ? Z.intl.formatToPlainString(Z.t.AB5gT0, { game: V.name })
+                                  null != F
+                                      ? Z.intl.formatToPlainString(Z.t.AB5gT0, { game: F.name })
                                       : Z.intl.string(Z.t.FeUKeH)))
                             : ((l = !0),
                               (a = null),
@@ -229,7 +229,7 @@ let D = i.memo(function (e) {
                               (D =
                                   null != B && (0, C.vd)(B.type)
                                       ? Z.intl.string(Z.t.uQn9Bw)
-                                      : null != U
+                                      : null != G
                                         ? Z.intl.string(Z.t.fBXEoK)
                                         : Z.intl.string(Z.t.n3feND))),
                       (0, r.jsx)("div", {
@@ -271,7 +271,7 @@ let D = i.memo(function (e) {
             eO =
                 ed && ea && !ec
                     ? (0, r.jsx)(L, {
-                          runningGame: V,
+                          runningGame: F,
                           startAuthorization: () => {
                               ef(!0),
                                   null != ep.current && clearTimeout(ep.current),

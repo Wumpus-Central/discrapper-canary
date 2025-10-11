@@ -34,13 +34,13 @@ let _ = (e) => {
         );
     }, []);
     let y = null != E ? E : "",
-        { handleCardVisibilityChange: T } = (0, d.E)(y, "home", "marketing wide banner"),
-        { bannerURL: j } = (0, g.UI)(_);
-    if (null == j) return null;
+        { handleCardVisibilityChange: j } = (0, d.E)(y, "home", "marketing wide banner"),
+        { bannerURL: T } = (0, g.UI)(_);
+    if (null == T) return null;
     let L = b === f.AW.ORBS;
     return (0, r.jsx)(o.$, {
         innerRef: v,
-        onChange: T,
+        onChange: j,
         threshold: 0,
         children: (0, r.jsxs)("div", {
             ref: v,
@@ -50,7 +50,7 @@ let _ = (e) => {
                     className: s()(h.wideBannerBackgroundImg, { [h.extraRounded]: L }),
                     children: (0, r.jsx)("img", {
                         ref: S,
-                        src: j,
+                        src: T,
                         alt: _.title,
                         className: s()(h.wideBannerArt, { [h.wideBannerArtOrbs]: L }),
                         style: { height: null != O ? "".concat(O, "px") : "auto" },

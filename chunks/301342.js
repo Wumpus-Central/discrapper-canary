@@ -132,9 +132,9 @@ let N = i.memo(function (e) {
                             );
                     });
             }, [l]),
-            U = (0, a.JA)(l.id),
-            { role: G, tabIndex: B } = U,
-            F = (function (e, t) {
+            G = (0, a.JA)(l.id),
+            { role: U, tabIndex: B } = G,
+            V = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -154,15 +154,15 @@ let N = i.memo(function (e) {
                             !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                 }
                 return i;
-            })(U, ["role", "tabIndex"]),
-            V = i.useRef(null),
+            })(G, ["role", "tabIndex"]),
+            F = i.useRef(null),
             H = i.useRef(null),
             z = (0, r.jsxs)("li", {
                 className: t,
                 "data-dnd-name": l.name,
                 children: [
                     (0, r.jsx)(d.tEY, {
-                        focusTarget: V,
+                        focusTarget: F,
                         ringTarget: H,
                         offset: {
                             left: 4,
@@ -182,11 +182,11 @@ let N = i.memo(function (e) {
                                     I(
                                         S(
                                             {
-                                                innerRef: V,
+                                                innerRef: F,
                                                 className: E.mainContent,
                                                 tabIndex: B,
                                             },
-                                            F,
+                                            V,
                                         ),
                                         {
                                             onClick: L,

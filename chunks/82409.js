@@ -61,7 +61,7 @@ function M(e) {
     return e;
 }
 let k = [],
-    U = {
+    G = {
         controller: new a.Controller({
             value: 1,
             immediate: !0,
@@ -74,7 +74,7 @@ let k = [],
         hasGuildSubheader: !1,
         disableBannerAnimation: !0,
     };
-function G(e) {
+function U(e) {
     var t, n;
     let { includePanelSpacing: l } = e,
         a = (0, C.fJ)(),
@@ -105,7 +105,7 @@ function G(e) {
                     }) || (0, I.Tj)(e, S.Z.selectedItemInfo),
             ),
         ),
-        G = i.useCallback(
+        U = i.useCallback(
             (e) => {
                 h !== A.V5.BOOKMARKS &&
                     x.Z.loadMoreInbox({
@@ -120,8 +120,8 @@ function G(e) {
             canLoadMore: S.Z.canLoadMore({}),
         }));
     i.useEffect(() => {
-        W && !B && G(A.X.ON_OPEN);
-    }, [W, B, G]),
+        W && !B && U(A.X.ON_OPEN);
+    }, [W, B, U]),
         (function (e) {
             let { unreadChannelIds: t } = (0, I.O4)();
             i.useEffect(() => {
@@ -168,8 +168,8 @@ function G(e) {
                 }),
             [K],
         ),
-        q = F(Z, h, P),
-        X = F(D, h, null);
+        q = V(Z, h, P),
+        X = V(D, h, null);
     (0, p.ZP)(() => {
         var e;
         u.Z.dispatch({ type: "NOTIFICATIONS_INBOX_OPEN" });
@@ -235,7 +235,7 @@ function G(e) {
                         hasSubheader: !0,
                         guild: ee,
                     },
-                    U,
+                    G,
                 )),
                 (n = n =
                     {
@@ -269,18 +269,18 @@ function G(e) {
                     messages: h === A.V5.BOOKMARKS ? Y : q,
                     unreadMessages: h === A.V5.BOOKMARKS ? [] : X,
                     listName: "notifications-inbox",
-                    renderLoadingState: V,
+                    renderLoadingState: F,
                     ignoreGrouping: h === A.V5.BOOKMARKS,
-                    loadMore: G,
+                    loadMore: U,
                 }),
             ],
         }),
     });
 }
 function B(e) {
-    return (0, r.jsx)(C.HP, { children: (0, r.jsx)(G, M({}, e)) });
+    return (0, r.jsx)(C.HP, { children: (0, r.jsx)(U, M({}, e)) });
 }
-function F(e, t, n) {
+function V(e, t, n) {
     return i.useMemo(
         () =>
             0 === e.length || t === A.V5.BOOKMARKS
@@ -294,7 +294,7 @@ function F(e, t, n) {
         [e, t, n],
     );
 }
-function V() {
+function F() {
     return (0, r.jsx)(N.Z, {});
 }
 function H(e, t) {

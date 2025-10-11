@@ -108,11 +108,11 @@ function M(e, t) {
 let k = i.memo(function (e) {
     var t, n, l, f, k;
     let {
-            guildNode: U,
-            setRef: G,
+            guildNode: G,
+            setRef: U,
             onDragStart: B,
-            onDragEnd: F,
-            route: V,
+            onDragEnd: V,
+            route: F,
             guild: H,
             animatable: z,
             selected: W = !1,
@@ -130,7 +130,7 @@ let k = i.memo(function (e) {
             "aria-setsize": ei,
             "aria-posinset": el,
         } = e,
-        { id: eo, parentId: ea } = U,
+        { id: eo, parentId: ea } = G,
         es = null != (t = e.upperBadge) ? t : q ? (0, Z.Ny)() : null != Y ? (0, Z.Or)(Y) : void 0,
         ec = null != (n = e.lowerBadge) ? n : void 0;
     null == ec && X > 0
@@ -144,12 +144,12 @@ let k = i.memo(function (e) {
                     null == B || B();
                 }),
                 {
-                    type: U.type,
-                    nodeId: U.id,
+                    type: G.type,
+                    nodeId: G.id,
                 }
             ),
             end() {
-                null == F || F(), (0, g.V1)(j.ZP.getCompatibleGuildFolders());
+                null == V || V(), (0, g.V1)(j.ZP.getCompatibleGuildFolders());
             },
             collect: (e) => ({ dragging: e.isDragging() }),
         }),
@@ -161,14 +161,14 @@ let k = i.memo(function (e) {
         [ev] = i.useState(() => new d.sW(70, () => eO(!0)));
     i.useEffect(() => () => ev.cancel(), [ev]);
     let ej = i.useCallback(() => {
-            if (null != V) return void (0, _.uL)(V, { state: L });
+            if (null != F) return void (0, _.uL)(F, { state: L });
             (0, y.X)(eo, { state: L });
-        }, [eo, V]),
+        }, [eo, F]),
         ex = i.useCallback(() => {
-            if (null != V || null == H || q || !et) return;
+            if (null != F || null == H || q || !et) return;
             let e = (0, b.V)(H.id);
             null != e && h.Z.preload(H.id, e);
-        }, [V, H, q, et]),
+        }, [F, H, q, et]),
         eC = (0, u.e7)([v.ZP], () => v.ZP.isCurrentUserGuest(eo)),
         eE = i.useCallback(
             (e) => {
@@ -194,9 +194,9 @@ let k = i.memo(function (e) {
         ),
         eP = i.useCallback(
             (e) => {
-                null == G || G(eo, e);
+                null == U || U(eo, e);
             },
-            [eo, G],
+            [eo, U],
         ),
         eN = (0, p.dQu)(p.TVs.modules.guildbar.AVATAR_SIZE);
     if (null == H) return null;
@@ -287,7 +287,7 @@ let k = i.memo(function (e) {
             $
                 ? (0, r.jsx)(S.ZP, {
                       name: H.name,
-                      targetNode: U,
+                      targetNode: G,
                       onDragOverChanged: eI,
                   })
                 : null,

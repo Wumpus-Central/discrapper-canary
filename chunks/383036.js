@@ -71,16 +71,16 @@ let f = (e) => {
             j = b ? t : v,
             _ = b || (!g && j.size > 0),
             [y, C] = r.useState(""),
-            [E, S] = r.useState(null),
+            [S, E] = r.useState(null),
             [T, O] = r.useState(null);
         return (r.useEffect(() => {
             if ("" === y.trim() || !_) {
-                S(null), O(null);
+                E(null), O(null);
                 return;
             }
             let e = c.Z.getProduct(y),
                 t = c.Z.getCategoryForProduct(y);
-            null != e && null != t ? (S(e), O(t)) : (S(null), O(null));
+            null != e && null != t ? (E(e), O(t)) : (E(null), O(null));
         }, [y, _]),
         g)
             ? (0, a.jsx)(l.Text, {
@@ -124,17 +124,17 @@ let f = (e) => {
                                             }),
                                         _ &&
                                             "" !== y.trim() &&
-                                            null == E &&
+                                            null == S &&
                                             (0, a.jsx)(l.Text, {
                                                 variant: "text-sm/normal",
                                                 className: x.errorText,
                                                 children: "Product not found",
                                             }),
-                                        null != E &&
+                                        null != S &&
                                             (0, a.jsxs)(l.Text, {
                                                 variant: "text-sm/normal",
                                                 className: x.successText,
-                                                children: ["Found: ", E.name],
+                                                children: ["Found: ", S.name],
                                             }),
                                     ],
                                 }),
@@ -147,12 +147,12 @@ let f = (e) => {
                                     variant: "heading-lg/semibold",
                                     children: "Product Preview",
                                 }),
-                                null != E && null != T
+                                null != S && null != T
                                     ? (0, a.jsxs)("div", {
                                           className: x.previewContainer,
                                           children: [
                                               (0, a.jsx)(f, {
-                                                  product: E,
+                                                  product: S,
                                                   user: e,
                                                   category: T,
                                                   tab: h.AW.HOME,
@@ -160,10 +160,10 @@ let f = (e) => {
                                               (0, a.jsx)(l.Button, {
                                                   variant: "primary",
                                                   onClick: () => {
-                                                      null != E &&
+                                                      null != S &&
                                                           null != e &&
                                                           (0, p.Z)({
-                                                              product: E,
+                                                              product: S,
                                                               analyticsLocations: [s.Z.COLLECTIBLES_SHOP_CARD],
                                                           });
                                                   },

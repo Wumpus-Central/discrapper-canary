@@ -1,4 +1,4 @@
-n.d(t, { U: () => G }), n(35282);
+n.d(t, { U: () => U }), n(35282);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -101,7 +101,7 @@ function k(e) {
         n = (0, l.e7)([u.Z], () => u.Z.getApplication(t));
     return null == n ? (0, r.jsx)("div", {}) : (0, r.jsx)(h.Z, { application: n }, n.id);
 }
-let U = i.memo(function (e) {
+let G = i.memo(function (e) {
         var t;
         let { item: l, ackedBeforeId: s } = e,
             { analyticsLocations: u } = (0, c.ZP)(),
@@ -226,7 +226,7 @@ let U = i.memo(function (e) {
             ],
         });
     }),
-    G = i.memo(function (e) {
+    U = i.memo(function (e) {
         let { items: t } = e,
             n = g.d$.useSetting();
         return (
@@ -234,7 +234,7 @@ let U = i.memo(function (e) {
             (0, r.jsx)(r.Fragment, {
                 children: t.map((e) =>
                     (0, r.jsx)(
-                        U,
+                        G,
                         {
                             item: e,
                             ackedBeforeId: n,

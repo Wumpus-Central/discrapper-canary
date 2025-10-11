@@ -99,8 +99,8 @@ function _() {
         [_, y] = r.useState([]),
         {
             refreshEntitlementList: C,
-            grantFractionalPremium: E,
-            deleteFractionalPremium: S,
+            grantFractionalPremium: S,
+            deleteFractionalPremium: E,
             triggerNextEntitlementFulfillment: T,
             entitlements: O,
             loading: N,
@@ -180,7 +180,7 @@ function _() {
                             (0, a.jsx)(c.Button, {
                                 variant: "primary",
                                 text: "Grant Fractional Nitro",
-                                onClick: () => E(n),
+                                onClick: () => S(n),
                             }),
                         ],
                     }),
@@ -212,7 +212,7 @@ function _() {
                                                 size: o.zx.Sizes.TINY,
                                                 color: o.zx.Colors.RED,
                                                 look: o.zx.Looks.OUTLINED,
-                                                onClick: () => S(),
+                                                onClick: () => E(),
                                                 children: "Delete all",
                                             }),
                                             (0, a.jsx)(o.zx, {
@@ -247,7 +247,7 @@ function _() {
                                                     {
                                                         entitlement: e,
                                                         active: !0,
-                                                        onDelete: () => S(e.id),
+                                                        onDelete: () => E(e.id),
                                                     },
                                                     e.id,
                                                 ),

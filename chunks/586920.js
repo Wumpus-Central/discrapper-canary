@@ -22,11 +22,11 @@ let h = () => {
             discountedPrice: P,
         } = (0, u.a)(),
         C = (0, r.useRef)(null),
-        [v, y] = (0, r.useState)(!1),
+        [y, v] = (0, r.useState)(!1),
         T = (0, l.e7)([s.Z], () => s.Z.useReducedMotion);
     if (
         ((0, r.useEffect)(() => {
-            null !== C.current && null !== P && y(!0);
+            null !== C.current && null !== P && v(!0);
         }, [C, P]),
         null === x)
     )
@@ -53,7 +53,7 @@ let h = () => {
                 }),
             }),
             !T &&
-                v &&
+                y &&
                 (0, i.jsx)(o.Z, {
                     confettiTarget: C.current,
                     confettiCanvas: h,

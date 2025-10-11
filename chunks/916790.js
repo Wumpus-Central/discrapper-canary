@@ -20,8 +20,8 @@ var a = n(951288),
     _ = n(257785),
     y = n(484036),
     C = n(681619),
-    E = n(621060),
-    S = n(981631),
+    S = n(621060),
+    E = n(981631),
     T = n(687278),
     O = n(451429);
 function N(e) {
@@ -66,7 +66,7 @@ let w = [
     {
         id: "action",
         name: "Action",
-        group: E.v0.NONE,
+        group: S.v0.NONE,
         render(e) {
             var t;
             let { actionLog: n } = e,
@@ -101,7 +101,7 @@ let w = [
     {
         id: "traces",
         name: "Store Handlers",
-        group: E.v0.NONE,
+        group: S.v0.NONE,
         render(e) {
             let { actionLog: t } = e;
             return (0, a.jsx)(I, { actionLog: t });
@@ -120,7 +120,7 @@ function R(e) {
                               name: (0, a.jsxs)(a.Fragment, {
                                   children: [(0, a.jsx)(b.Z, { className: T.errorIcon }), "Error"],
                               }),
-                              group: E.v0.NONE,
+                              group: S.v0.NONE,
                               render(e) {
                                   let { actionLog: t } = e;
                                   return (0, a.jsxs)(a.Fragment, {
@@ -149,7 +149,7 @@ function R(e) {
                     : w,
             [t],
         ),
-        { TabBar: s, renderSelectedTab: o } = (0, E.ZP)({ tabs: i }, [i]);
+        { TabBar: s, renderSelectedTab: o } = (0, S.ZP)({ tabs: i }, [i]);
     return (0, a.jsxs)(y.Z, {
         className: T.subPanel,
         minHeight: 100,
@@ -176,7 +176,7 @@ function R(e) {
                             let n = JSON.stringify(
                                 Object.keys((e = t.action)).reduce((t, n) => {
                                     var a;
-                                    return (t[n] = ((a = e[n]), S.Jn9.test(a) ? "REDACTED" : a)), t;
+                                    return (t[n] = ((a = e[n]), E.Jn9.test(a) ? "REDACTED" : a)), t;
                                 }, {}),
                                 null,
                                 2,
@@ -279,8 +279,8 @@ function Z() {
             },
             [o],
         ),
-        E = t.trim().length > 0,
-        S = r.useMemo(() => (E ? h : b ? c : o), [o, h, E, b, c]),
+        S = t.trim().length > 0,
+        E = r.useMemo(() => (S ? h : b ? c : o), [o, h, S, b, c]),
         N = b ? "Enable Event Tracking" : "Pause Event Tracking";
     return (0, a.jsxs)("div", {
         ref: e,
@@ -310,7 +310,7 @@ function Z() {
             }),
             (0, a.jsx)(C.Z, {
                 columns: k,
-                data: S,
+                data: E,
                 selectedRowKey: null == v ? void 0 : v.id.toString(),
                 onClickRow: (e) => j(e.actionLog),
             }),

@@ -50,10 +50,10 @@ function Z(e) {
             },
             [l],
         ),
-        G = i.useRef(null),
-        M = i.useCallback(() => {
+        M = i.useRef(null),
+        G = i.useCallback(() => {
             var e;
-            null == (e = G.current) || e.resetSearchText();
+            null == (e = M.current) || e.resetSearchText();
         }, []);
     if (null == n) return null;
     let U = (0, O.xb)(!1, !1, L);
@@ -104,14 +104,14 @@ function Z(e) {
                                                               children: [
                                                                   (0, r.jsx)(E.Z, {
                                                                       guild: n,
-                                                                      ref: G,
+                                                                      ref: M,
                                                                   }),
                                                                   (0, r.jsx)(y.Z, {
                                                                       guild: n,
                                                                       searchState: U,
                                                                       compact: !0,
                                                                       onSelectRow: k,
-                                                                      onResetForNewMembers: M,
+                                                                      onResetForNewMembers: G,
                                                                   }),
                                                                   U !== O.po.SUCCESS_STILL_INDEXING &&
                                                                       (0, r.jsx)(N.Z, { guildId: n.id }),

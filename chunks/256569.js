@@ -89,10 +89,10 @@ function h(e) {
             state: { value: Z, tags: R, selections: D, isSelecting: A },
         } = _,
         L = (0, o.Z)(R),
-        [k, G] = i.useState(!1),
-        M = i.useCallback(() => {
+        [k, M] = i.useState(!1),
+        G = i.useCallback(() => {
             var e;
-            G(!1), P(), null == (e = x.current) || e.focus({ preventScroll: !0 });
+            M(!1), P(), null == (e = x.current) || e.focus({ preventScroll: !0 });
         }, [P]);
     i.useEffect(() => {
         L !== R && l(R);
@@ -103,9 +103,9 @@ function h(e) {
     let U = i.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                e && M(), G(!1);
+                e && G(), M(!1);
             },
-            [M],
+            [G],
         ),
         B = i.useCallback(
             (e) => (t) => {
@@ -124,7 +124,7 @@ function h(e) {
                                           return null == (e = j.current) ? void 0 : e.focus();
                                       }, 16);
                               }));
-                } else T(e, !0), G(!0);
+                } else T(e, !0), M(!0);
             },
             [S, T, D, R],
         );
@@ -136,7 +136,7 @@ function h(e) {
         children: [
             (0, r.jsxs)(f, {
                 ref: v,
-                onClick: M,
+                onClick: G,
                 children: [
                     R.map((e, t) =>
                         (0, r.jsx)(

@@ -1,8 +1,8 @@
 n.d(t, {
-    As: () => F,
+    As: () => V,
     ZP: () => Q,
     hC: () => H,
-    jd: () => V,
+    jd: () => F,
 }),
     n(539854),
     n(388685);
@@ -42,7 +42,7 @@ var r,
     L = n(709054),
     M = n(981631),
     k = n(124368);
-function U(e, t, n) {
+function G(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -55,7 +55,7 @@ function U(e, t, n) {
         e
     );
 }
-function G(e) {
+function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -66,7 +66,7 @@ function G(e) {
                 }),
             )),
             r.forEach(function (t) {
-                U(e, t, n[t]);
+                G(e, t, n[t]);
             });
     }
     return e;
@@ -89,7 +89,7 @@ function B(e, t) {
         e
     );
 }
-var F =
+var V =
         (((r = {})[(r.Favorite = 0)] = "Favorite"),
         (r[(r.PrivateChannel = 1)] = "PrivateChannel"),
         (r[(r.HighImportanceMentioned = 2)] = "HighImportanceMentioned"),
@@ -100,7 +100,7 @@ var F =
         (r[(r.NoNotifications = 7)] = "NoNotifications"),
         (r[(r.ReallyOldChannel = 8)] = "ReallyOldChannel"),
         r),
-    V = (((i = {}).Loading = "loading"), (i.Loaded = "loaded"), (i.Done = "done"), i);
+    F = (((i = {}).Loading = "loading"), (i.Loaded = "loaded"), (i.Done = "done"), i);
 let H = 25;
 class z extends o.EventEmitter {
     loadMore() {
@@ -110,7 +110,7 @@ class z extends o.EventEmitter {
             r = t.map((e) => {
                 if (e.isFullyLoaded || e.deleted || n) return e;
                 if (e.collapsed)
-                    if (!e.hasLoadedAnything) return B(G({}, e), { hasLoadedAnything: !0 });
+                    if (!e.hasLoadedAnything) return B(U({}, e), { hasLoadedAnything: !0 });
                     else return e;
                 return (
                     (e = this.populateInitialStateFromStore(e)).isFullyLoaded ||
@@ -128,13 +128,13 @@ class z extends o.EventEmitter {
     populateInitialStateFromStore(e) {
         if ("messages" === e.type) return W(e, !1);
         if ("nsfw" === e.type)
-            return B(G({}, e), {
+            return B(U({}, e), {
                 isFullyLoaded: !0,
                 hasLoadedAnything: !0,
             });
         if ("forum" === e.type) {
             let t = O.Z.hasLoaded(e.guildId);
-            return B(G({}, e), {
+            return B(U({}, e), {
                 isFullyLoaded: t,
                 hasLoadedAnything: !0,
             });
@@ -167,7 +167,7 @@ class z extends o.EventEmitter {
                             let n = W(e, !0);
                             return (
                                 (0 === n.messages.length || n.messages.length === e.messages.length) &&
-                                    (n = B(G({}, n), {
+                                    (n = B(U({}, n), {
                                         hasLoadedAnything: !0,
                                         isFullyLoaded: !0,
                                         hasError: !t,
@@ -184,7 +184,7 @@ class z extends o.EventEmitter {
                             var t;
                             return (
                                 s()("messages" === e.type, "channel cannot change type"),
-                                B(G({}, W(e, !0)), {
+                                B(U({}, W(e, !0)), {
                                     isFullyLoaded: !0,
                                     hasError: !0,
                                     hasLoadedAnything: !0,
@@ -205,27 +205,27 @@ class z extends o.EventEmitter {
     setState(e) {
         for (let t in e)
             if (e[t] !== this.state[t]) {
-                (this.state = G({}, this.state, e)), this.emit("change", this.state);
+                (this.state = U({}, this.state, e)), this.emit("change", this.state);
                 return;
             }
     }
     constructor(e, t) {
         super(),
-            U(this, "state", void 0),
-            U(this, "scrollerRef", void 0),
-            U(this, "undoStack", void 0),
-            U(this, "maybeLoadMore", void 0),
-            U(this, "reloadMessages", void 0),
-            U(this, "getNumUnreadChannels", void 0),
-            U(this, "markChannelRead", void 0),
-            U(this, "undoMarkChannelRead", void 0),
-            U(this, "markGuildRead", void 0),
-            U(this, "deleteChannel", void 0),
-            U(this, "markAllRead", void 0),
-            U(this, "toggle", void 0),
-            U(this, "handleUserGuildSettingsStoreChange", void 0),
-            U(this, "handleJoinedThreadsStoreChange", void 0),
-            U(this, "handleActiveThreadsStoreChange", void 0),
+            G(this, "state", void 0),
+            G(this, "scrollerRef", void 0),
+            G(this, "undoStack", void 0),
+            G(this, "maybeLoadMore", void 0),
+            G(this, "reloadMessages", void 0),
+            G(this, "getNumUnreadChannels", void 0),
+            G(this, "markChannelRead", void 0),
+            G(this, "undoMarkChannelRead", void 0),
+            G(this, "markGuildRead", void 0),
+            G(this, "deleteChannel", void 0),
+            G(this, "markAllRead", void 0),
+            G(this, "toggle", void 0),
+            G(this, "handleUserGuildSettingsStoreChange", void 0),
+            G(this, "handleJoinedThreadsStoreChange", void 0),
+            G(this, "handleActiveThreadsStoreChange", void 0),
             (this.state = e),
             (this.scrollerRef = t),
             (this.undoStack = []),
@@ -260,7 +260,7 @@ class z extends o.EventEmitter {
                 let r = this.state.channels.find((e) => e.channelId === t);
                 if ((null != r && this.undoStack.push(r), 1 === this.state.channels.length))
                     return void this.deleteChannel(t);
-                this.setState({ channels: this.updateChannel(t, (e) => B(G({}, e), { deleted: !0 })) }),
+                this.setState({ channels: this.updateChannel(t, (e) => B(U({}, e), { deleted: !0 })) }),
                     f.Z.useReducedMotion && this.deleteChannel(t),
                     this.maybeLoadMore();
             }),
@@ -327,7 +327,7 @@ class z extends o.EventEmitter {
                         scrollToChannelIndex: o,
                         collapsedChannels: i,
                         loadState: "done" !== l || s || a.isFullyLoaded ? l : "loaded",
-                        channels: this.updateChannel(t, (e) => B(G({}, e), { collapsed: s })),
+                        channels: this.updateChannel(t, (e) => B(U({}, e), { collapsed: s })),
                     }),
                     a.collapsed ? a.isFullyLoaded || this.loadMore() : this.maybeLoadMore();
             }),
@@ -347,7 +347,7 @@ class z extends o.EventEmitter {
                     {
                         if (!e.hasLoadedAnything) return e;
                         let t = O.Z.hasLoaded(e.guildId);
-                        return B(G({}, e), {
+                        return B(U({}, e), {
                             isFullyLoaded: t,
                             hasLoadedAnything: !0,
                         });
@@ -375,7 +375,7 @@ function W(e, t) {
             (null == (n = l[0]) ? void 0 : n.id) === e.oldestUnreadMessageId,
         a = l[l.length - 1],
         s = L.default.compare(null == a ? void 0 : a.id, e.newestUnreadMessageId) >= 0 || l.length >= H;
-    return B(G({}, e), {
+    return B(U({}, e), {
         messages: l,
         hasLoadedAnything: e.hasLoadedAnything || o || t,
         hasLoadedFirst: e.hasLoadedFirst || o || t,
@@ -483,11 +483,11 @@ function Y(e, t, n, r) {
         order: 0,
     };
     (0, g.Y3)(i)
-        ? t.push(B(G({}, u), { type: "nsfw" }))
+        ? t.push(B(U({}, u), { type: "nsfw" }))
         : i.isForumLikeChannel()
-          ? t.push(B(G({}, u), { type: "forum" }))
+          ? t.push(B(U({}, u), { type: "forum" }))
           : t.push(
-                B(G({}, u), {
+                B(U({}, u), {
                     type: "messages",
                     messages: [],
                 }),

@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => U,
+    Z: () => G,
     x: () => x,
 }),
     n(388685);
@@ -206,7 +206,7 @@ class k extends (r = s.ZP.Store) {
           writable: !0,
       })
     : (k[l] = "ChannelListUnreadsStore");
-let U = new k(c.Z, {
+let G = new k(c.Z, {
     UPDATE_CHANNEL_LIST_DIMENSIONS: function (e) {
         let { guildId: t, channelIds: n } = e,
             r = g.Z.getGuild(t);

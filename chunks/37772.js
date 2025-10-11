@@ -35,7 +35,7 @@ var r = n(951288),
     L = n(388032),
     M = n(378661),
     k = n(360514);
-function U(e) {
+function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +60,7 @@ function U(e) {
     }
     return e;
 }
-function G(e, t) {
+function U(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -87,7 +87,7 @@ let B = i.memo(function e(t) {
             compact: R = !1,
             className: M,
             onContextMenu: B,
-            onClick: V,
+            onClick: F,
             disableInteraction: H = !1,
             hasThread: z,
             treatSpam: W,
@@ -132,7 +132,7 @@ let B = i.memo(function e(t) {
     return ea
         ? (0, r.jsx)(
               e,
-              G(U({}, t), {
+              U(G({}, t), {
                   message: Y.message,
                   channel: q,
                   hasThread: !1,
@@ -144,7 +144,7 @@ let B = i.memo(function e(t) {
                   ? (i = L.t.VFWjc3)
                   : (0, O.DQ)(s) && W && (i = L.t.xfkfTE),
             void 0 !== i)
-          ? (0, r.jsx)(F, {
+          ? (0, r.jsx)(V, {
                 className: M,
                 compact: R,
                 count: 1,
@@ -159,7 +159,7 @@ let B = i.memo(function e(t) {
                 }),
                 childrenRepliedMessage: (0, A.Z)(s, l, K, Y, R),
                 childrenHeader: (0, Z.Z)(
-                    G(U({}, t), {
+                    U(G({}, t), {
                         author: el,
                         guildId: l.guild_id,
                     }),
@@ -191,7 +191,7 @@ let B = i.memo(function e(t) {
                 childrenMessageContent: (0, N.Z)(t, er),
                 childrenSystemMessage: (0, w.Z)(t),
                 onContextMenu: B,
-                onClick: V,
+                onClick: F,
                 hasThread: !1 !== z && null != eo && s.hasFlag(D.iLy.HAS_THREAD),
                 hasReply: s.type === D.uaV.REPLY,
                 isSystemMessage: (0, v.Z)(s),
@@ -201,7 +201,7 @@ let B = i.memo(function e(t) {
                 "aria-roledescription": L.intl.string(L.t.BAB0yM),
             });
 });
-function F(e) {
+function V(e) {
     let { className: t, count: n, compact: i, collapsedReason: l } = e;
     return (0, r.jsx)(C.Z, {
         className: t,

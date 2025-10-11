@@ -20,7 +20,7 @@ var a = n(951288),
     _ = n(474936),
     y = n(711322),
     C = n(451429);
-let E = async () => {
+let S = async () => {
         try {
             let { body: e } = await s.tn.get({
                 url: j.ANM.USER_OFFER_IDS,
@@ -31,7 +31,7 @@ let E = async () => {
             return [];
         }
     },
-    S = async (e, t) => {
+    E = async (e, t) => {
         try {
             await s.tn.post({
                 url: j.ANM.CREATE_USER_OFFER(e, t),
@@ -89,7 +89,7 @@ function I(e) {
     var t, n, i, o, m;
     let { offer: p, offerOptions: b, forceRefetch: g } = e,
         [v, C] = r.useState(!1),
-        [E, S] = r.useState(!1),
+        [S, E] = r.useState(!1),
         [O, N] = r.useState(!1),
         [P, I] = r.useState(!1);
     r.useEffect(() => {
@@ -170,15 +170,15 @@ function I(e) {
                 clearTimeout(e);
             };
         }
-        if (E) {
+        if (S) {
             let e = setTimeout(() => {
-                S(!1);
+                E(!1);
             }, 3000);
             return () => {
                 clearTimeout(e);
             };
         }
-    }, [v, E]);
+    }, [v, S]);
     let z = "Active";
     return (
         L && (z = "Acked"),
@@ -221,7 +221,7 @@ function I(e) {
                 (0, a.jsxs)(c.P3F, {
                     className: l()(y.row, y.idRow),
                     onClick: () => {
-                        (0, h.JG)(A, () => S(!0));
+                        (0, h.JG)(A, () => E(!0));
                     },
                     children: [
                         (0, a.jsxs)(c.Text, {
@@ -229,7 +229,7 @@ function I(e) {
                             color: "always-white",
                             children: ["Trial: ", A],
                         }),
-                        E
+                        S
                             ? (0, a.jsx)(c.dz2, {
                                   size: "md",
                                   color: "currentColor",
@@ -340,17 +340,17 @@ function w(e) {
         [p, f] = r.useState(!1),
         [b, g] = r.useState(!1),
         [v, _] = r.useState(!1),
-        [C, E] = r.useState(!1);
+        [C, S] = r.useState(!1);
     r.useEffect(() => {
-        v && E(!0);
+        v && S(!0);
         let e = setTimeout(() => {
-            E(!1);
+            S(!1);
         }, 500);
         return () => {
             clearTimeout(e);
         };
     }, [v]);
-    let { id: S, expires_at: O, applied_at: N, discount_id: P, discount: I } = i,
+    let { id: E, expires_at: O, applied_at: N, discount_id: P, discount: I } = i,
         w =
             null !=
             (n =
@@ -373,7 +373,7 @@ function w(e) {
             _(!0);
             try {
                 await s.tn.patch({
-                    url: j.ANM.UPDATE_USER_OFFER(S, "discount"),
+                    url: j.ANM.UPDATE_USER_OFFER(E, "discount"),
                     body: { expires_at: t },
                     rejectWithError: !0,
                 });
@@ -416,7 +416,7 @@ function w(e) {
                         }),
                         (0, a.jsx)(c.P3F, {
                             onClick: async () => {
-                                _(!0), await T(S, "discount"), m(), _(!1);
+                                _(!0), await T(E, "discount"), m(), _(!1);
                             },
                             children: (0, a.jsx)(c.XHJ, {
                                 size: "md",
@@ -429,13 +429,13 @@ function w(e) {
                 (0, a.jsxs)(c.P3F, {
                     className: l()(y.row, y.idRow),
                     onClick: () => {
-                        (0, h.JG)(S, () => f(!0));
+                        (0, h.JG)(E, () => f(!0));
                     },
                     children: [
                         (0, a.jsxs)(c.Text, {
                             variant: "eyebrow",
                             color: "text-default",
-                            children: ["Offer: ", S],
+                            children: ["Offer: ", E],
                         }),
                         p
                             ? (0, a.jsx)(c.dz2, {
@@ -551,7 +551,7 @@ function R() {
         }, [L]),
         r.useEffect(() => {
             (0 === e.length || 0 === n.length || R) &&
-                E().then((e) => {
+                S().then((e) => {
                     let n = Object.keys(e.trial).map((t) => ({
                             label: t,
                             value: e.trial[t],
@@ -574,10 +574,10 @@ function R() {
                 }));
         }, [R]);
     let B = async () => {
-            null != l && (await S(l, "trial"), k(!0));
+            null != l && (await E(l, "trial"), k(!0));
         },
         G = async () => {
-            null != d && (await S(d, "discount"), k(!0));
+            null != d && (await E(d, "discount"), k(!0));
         },
         z = async () => {
             await N(), k(!0);

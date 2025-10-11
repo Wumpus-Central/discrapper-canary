@@ -65,14 +65,14 @@ function R() {
     let l = (0, a.Ie)("favorites"),
         { favoriteAdded: R, clearFavoriteAdded: D } = (0, E.up)(),
         [L, M] = i.useState(!1),
-        { favoriteServerMuted: k, favoriteChannels: U } = (0, s.cj)([C.Z], () => ({
+        { favoriteServerMuted: k, favoriteChannels: G } = (0, s.cj)([C.Z], () => ({
             favoriteChannels: C.Z.getFavoriteChannels(),
             favoriteServerMuted: C.Z.favoriteServerMuted,
         })),
-        G = (0, s.e7)([v.Z], () => v.Z.getChannelId(N.I_8)),
-        B = (0, s.e7)([O.Z], () => O.Z.getChannel(G)),
-        F = (0, _.Z)((e) => e.guildId) === N.I_8,
-        { badge: V, unread: H } = (0, S.Z)(U),
+        U = (0, s.e7)([v.Z], () => v.Z.getChannelId(N.I_8)),
+        B = (0, s.e7)([O.Z], () => O.Z.getChannel(U)),
+        V = (0, _.Z)((e) => e.guildId) === N.I_8,
+        { badge: F, unread: H } = (0, S.Z)(G),
         z = (function (e) {
             let t = (0, s.e7)([v.Z], () => v.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
@@ -109,15 +109,15 @@ function R() {
                     activity: g,
                 })
             );
-        })(U),
-        W = V > 0 ? (0, b.N)(V) : null,
+        })(G),
+        W = F > 0 ? (0, b.N)(F) : null,
         K = i.useCallback(() => {
             D();
         }, [D]);
     return (0, r.jsxs)(g.H, {
         children: [
             (0, r.jsx)(f.Z, {
-                selected: F,
+                selected: V,
                 hovered: L,
                 unread: H && !k,
                 className: w.pill,
@@ -136,14 +136,14 @@ function R() {
                                 {
                                     ariaLabel: Z.intl.formatToPlainString(Z.t["/uzRsr"], {
                                         guildName: Z.intl.string(Z.t.wMWycn),
-                                        mentions: V,
+                                        mentions: F,
                                     }),
-                                    "aria-selected": F,
+                                    "aria-selected": V,
                                     to: {
-                                        pathname: N.Z5c.CHANNEL(N.I_8, G),
+                                        pathname: N.Z5c.CHANNEL(N.I_8, U),
                                         state: A,
                                     },
-                                    selected: F || L,
+                                    selected: V || L,
                                     onMouseEnter: () => M(!0),
                                     onMouseLeave: () => M(!1),
                                     onMouseDown: function () {

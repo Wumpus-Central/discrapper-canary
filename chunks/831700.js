@@ -35,11 +35,11 @@ var r = n(951288),
     L = n(592125),
     M = n(430824),
     k = n(607744),
-    U = n(496675),
-    G = n(306680),
+    G = n(496675),
+    U = n(306680),
     B = n(9156),
-    F = n(979651),
-    V = n(934415),
+    V = n(979651),
+    F = n(934415),
     H = n(98597),
     z = n(648501),
     W = n(473403),
@@ -108,7 +108,7 @@ class er extends H.ZP {
     }
     isFull() {
         let { channel: e } = this.props;
-        return (0, V.rY)(e, F.Z, M.Z);
+        return (0, F.rY)(e, V.Z, M.Z);
     }
     getModeClass() {
         let { position: e, sortingPosition: t, isUserOver: n } = this.props;
@@ -418,27 +418,27 @@ function el(e) {
             collapsed: s,
             voiceStates: c,
         } = e,
-        u = (0, a.cj)([G.ZP], () => ({
-            unread: G.ZP.hasUnread(n.id),
-            mentionCount: G.ZP.getMentionCount(n.id),
+        u = (0, a.cj)([U.ZP], () => ({
+            unread: U.ZP.hasUnread(n.id),
+            mentionCount: U.ZP.getMentionCount(n.id),
         })),
         d = (0, a.e7)([B.ZP], () => B.ZP.resolveUnreadSetting(n)),
-        p = (0, a.cj)([L.Z, k.Z, U.Z], () => {
+        p = (0, a.cj)([L.Z, k.Z, G.Z], () => {
             let e = L.Z.getChannel(n.parent_id),
                 r = k.Z.getCheck(n.guild_id);
             return {
-                canManageChannel: U.Z.can(X.Plq.MANAGE_CHANNELS, n),
+                canManageChannel: G.Z.can(X.Plq.MANAGE_CHANNELS, n),
                 canReorderChannel:
                     !0 !== i &&
                     (t.id === Q._ ||
-                        (null != e ? U.Z.can(X.Plq.MANAGE_CHANNELS, e) : U.Z.can(X.Plq.MANAGE_CHANNELS, t))),
-                canMoveMembers: U.Z.can(X.Plq.MOVE_MEMBERS, n),
-                locked: !U.Z.can(X.Plq.CONNECT, n),
-                bypassLimit: U.Z.can(X.Plq.MOVE_MEMBERS, n),
+                        (null != e ? G.Z.can(X.Plq.MANAGE_CHANNELS, e) : G.Z.can(X.Plq.MANAGE_CHANNELS, t))),
+                canMoveMembers: G.Z.can(X.Plq.MOVE_MEMBERS, n),
+                locked: !G.Z.can(X.Plq.CONNECT, n),
+                bypassLimit: G.Z.can(X.Plq.MOVE_MEMBERS, n),
                 unverifiedAccount: !r.canChat,
             };
         }),
-        h = (0, a.e7)([F.Z], () => F.Z.hasVideo(n.id)),
+        h = (0, a.e7)([V.Z], () => V.Z.hasVideo(n.id)),
         f = (0, g.ZP)(n),
         m = (0, v.ZP)(n),
         y = (0, P.qY)(n.id),
@@ -472,7 +472,7 @@ function el(e) {
             enableConnectedUserLimit: !0,
             enableActivities: !0,
         }),
-        V = w && null == M;
+        F = w && null == M;
     return (0, r.jsx)(
         ei,
         en(
@@ -493,7 +493,7 @@ function el(e) {
             {
                 connected: w,
                 isFavoriteSuggestion: l && !N,
-                forceShowButtons: V,
+                forceShowButtons: F,
                 channelInfo: M,
                 resolvedUnreadSetting: d,
                 enableHangStatus: A,

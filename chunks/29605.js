@@ -40,8 +40,8 @@ var r = n(951288),
     A = n(768581),
     L = n(176354),
     k = n(267642),
-    G = n(51144),
-    M = n(434404),
+    M = n(51144),
+    G = n(434404),
     U = n(471613),
     B = n(999382),
     F = n(806774),
@@ -108,7 +108,7 @@ let q = d().throttle(x.OQ, 1000),
                 }),
                 d ? "respect-motion-settings" : "animate-never",
             ),
-            O = G.ZP.useUserTag(s.user);
+            O = M.ZP.useUserTag(s.user);
         return (0, r.jsxs)("div", {
             className: a()(z.emojiRow, K.card),
             role: "row",
@@ -431,7 +431,7 @@ let q = d().throttle(x.OQ, 1000),
             {
                 maxEmojiSlots: L,
                 availableEmojiSlots: k,
-                staticEmoji: G,
+                staticEmoji: M,
                 totalStaticEmoji: W,
                 animatedEmoji: K,
                 totalAnimatedEmoji: X,
@@ -571,7 +571,7 @@ let q = d().throttle(x.OQ, 1000),
                                         messageType: h.QYI.INFO,
                                         children: V.intl.format(V.t.uMkfTk, {
                                             onClick: () =>
-                                                M.Z.open(
+                                                G.Z.open(
                                                     t.id,
                                                     H.pNK.ROLE_SUBSCRIPTIONS,
                                                     void 0,
@@ -632,7 +632,7 @@ let q = d().throttle(x.OQ, 1000),
                         }),
                         (0, r.jsx)(Q, {
                             isLoading: null == p,
-                            staticEmoji: G,
+                            staticEmoji: M,
                             animatedEmoji: K,
                             guild: t,
                             theme: s,

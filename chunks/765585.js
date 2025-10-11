@@ -39,11 +39,11 @@ let b = i.forwardRef(function (e, t) {
             pointerClassName: L,
             dismissIconClassName: M,
             dismissIcon: k,
-            onDismissIconClick: U,
-            tryItButtonColor: G,
+            onDismissIconClick: G,
+            tryItButtonColor: U,
         } = e,
         B = I ? a.zx.Sizes.LARGE : a.zx.Sizes.MAX,
-        [F, V] = i.useState(!1),
+        [V, F] = i.useState(!1),
         { ref: H, width: z } = (0, c.ZP)();
     function W(e) {
         if ((0, u.lg)(N)) return void (0, p.bj)(N, { dismissAction: e });
@@ -53,8 +53,8 @@ let b = i.forwardRef(function (e, t) {
         i.useEffect(() => {
             var e, t;
             let n = (null != (t = null == (e = H.current) ? void 0 : e.scrollWidth) ? t : 0) + 64;
-            !F && n > R && V(!0);
-        }, [F, z, H, R]),
+            !V && n > R && F(!0);
+        }, [V, z, H, R]),
         i.useEffect(() => {
             (0, p.kk)(N);
         }, [N]),
@@ -69,7 +69,7 @@ let b = i.forwardRef(function (e, t) {
                 children: [
                     null != k &&
                         (0, r.jsx)(s.P3F, {
-                            onClick: U,
+                            onClick: G,
                             className: M,
                             children: k,
                         }),
@@ -126,7 +126,7 @@ let b = i.forwardRef(function (e, t) {
                     }),
                     (0, r.jsx)("div", {
                         ref: H,
-                        className: F || !I ? m.buttonContainerVertical : m.buttonContainerHorizontal,
+                        className: V || !I ? m.buttonContainerVertical : m.buttonContainerHorizontal,
                         children:
                             null != j
                                 ? (0, r.jsxs)(r.Fragment, {
@@ -138,8 +138,8 @@ let b = i.forwardRef(function (e, t) {
                                                   null == x || x(e), j(e), W(f.L.PRIMARY);
                                               },
                                               color:
-                                                  null != G
-                                                      ? G
+                                                  null != U
+                                                      ? U
                                                       : S || A
                                                         ? a.zx.Colors.BRAND_INVERTED
                                                         : a.zx.Colors.WHITE,

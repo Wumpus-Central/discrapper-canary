@@ -45,7 +45,7 @@ let y = [
                     T !== (null == c ? void 0 : c.store_page_primary_color)) ||
                 w !== (null == c ? void 0 : c.store_page_trailer_url) ||
                 (null != D && D !== (null == c ? void 0 : c.store_page_show_subscriber_count)),
-            G = async () => {
+            M = async () => {
                 o()(null != c, "Settings must be defined");
                 let e = {};
                 I !== l.features.has(_.oNc.CREATOR_STORE_PAGE) && (e.store_page_enabled = I),
@@ -88,7 +88,7 @@ let y = [
                                 })({ enabled: I }, (0, f.hH)(l.id)),
                             ));
             },
-            M = _.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(L),
+            G = _.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(L),
             U = null != w && w === (null == c ? void 0 : c.store_page_trailer_url),
             { shouldRestrictUpdatingCreatorMonetizationSettings: B } = (0, h.gX)(l.id),
             F = B || !R,
@@ -124,7 +124,7 @@ let y = [
                     disabled: B,
                     children: [
                         (0, r.jsx)(g.Z, {
-                            value: M,
+                            value: G,
                             className: a()({ [O.disabled]: B }),
                         }),
                         (0, r.jsx)("div", {
@@ -133,7 +133,7 @@ let y = [
                             children: (0, r.jsx)(u.Button, {
                                 variant: "primary",
                                 text: C.intl.string(C.t.CaOYqa),
-                                onClick: () => (0, p.Z)(M),
+                                onClick: () => (0, p.Z)(G),
                                 disabled: B,
                             }),
                         }),
@@ -205,7 +205,7 @@ let y = [
                                         Z(null == c ? void 0 : c.store_page_trailer_url),
                                         A(null != (t = null == c ? void 0 : c.store_page_show_subscriber_count) && t);
                                 },
-                                onSave: G,
+                                onSave: M,
                                 disabled: F,
                             }),
                         }),

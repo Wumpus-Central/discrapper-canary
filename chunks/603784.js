@@ -103,8 +103,8 @@ let w = i.forwardRef((e, t) => {
             onUserContextMenu: L,
             theme: k,
         } = e,
-        G = i.useRef(null),
-        M = (function () {
+        M = i.useRef(null),
+        G = (function () {
             let { changes: e } = l;
             return (
                 (l.actionType !== N.vB8.DELETE ||
@@ -116,7 +116,7 @@ let w = i.forwardRef((e, t) => {
             );
         })(),
         U = I.headerDefault;
-    f ? (U = I.headerExpanded) : M && (U = I.headerClickable);
+    f ? (U = I.headerExpanded) : G && (U = I.headerClickable);
     let B = l.timestampStart.calendar(),
         F = l.timestampEnd.calendar();
     n =
@@ -131,7 +131,7 @@ let w = i.forwardRef((e, t) => {
                   variant: "text-sm/normal",
                   children: [B, "\u2014", F],
               });
-    let H = M ? D : N.dG4;
+    let H = G ? D : N.dG4;
     return (0, r.jsx)(s.mh, {
         id: l.id,
         children: (e) =>
@@ -165,7 +165,7 @@ let w = i.forwardRef((e, t) => {
                                         } = l;
                                         if (null != e && null != t)
                                             return (0, r.jsx)(p.Z, {
-                                                targetElementRef: G,
+                                                targetElementRef: M,
                                                 user: e,
                                                 guildId: _,
                                                 newAnalyticsLocations: [g.Z.AVATAR],
@@ -174,7 +174,7 @@ let w = i.forwardRef((e, t) => {
                                                     return (0, r.jsx)(
                                                         d.qEK,
                                                         T(S({}, e), {
-                                                            ref: G,
+                                                            ref: M,
                                                             onClick: (t) => {
                                                                 t.stopPropagation(), e.onClick(t);
                                                             },
@@ -287,7 +287,7 @@ let w = i.forwardRef((e, t) => {
                                             n,
                                         ],
                                     }),
-                                    M
+                                    G
                                         ? (0, r.jsx)(j.Z, {
                                               className: I.expand,
                                               foreground: I.expandForeground,

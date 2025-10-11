@@ -1,7 +1,7 @@
 n.d(t, {
     FB: () => _,
-    Jt: () => S,
-    OC: () => E,
+    Jt: () => E,
+    OC: () => S,
     Sr: () => C,
     V_: () => O,
     lG: () => y,
@@ -174,7 +174,7 @@ function C() {
         v(),
         g.info("END Frecency\n");
 }
-function E() {
+function S() {
     let e = l.Z.getProps();
     g.info("START Quick Switcher State"),
         g.info("Query: ".concat(e.query)),
@@ -228,7 +228,7 @@ function E() {
         }),
         g.info("END Quick Switcher State\n");
 }
-async function S() {
+async function E() {
     g.info("START User Search Worker State");
     let e = await a.Z.requestDebugState();
     if (null == e) return void g.info("Unable to get debug state from User Search Worker");

@@ -22,15 +22,15 @@ var r = n(951288),
     O = n(963278),
     x = n(531864),
     y = n(384067),
-    T = n(215023),
-    j = n(981631),
+    j = n(215023),
+    T = n(981631),
     L = n(388032),
     k = n(310582);
 let I = (e) => {
         var t;
         let { handleTransition: n, numVisibleItems: i, isFetchingCategories: a, tab: c, isFullScreen: u } = e,
             { noCache: h, includeUnpublished: x } = (0, _.Z)(),
-            [j, I] = l.useState(!1),
+            [T, I] = l.useState(!1),
             B = (0, d.sp)(),
             N = null != (t = null == B ? void 0 : B.sessionId) ? t : "";
         l.useEffect(() => {
@@ -100,7 +100,7 @@ let I = (e) => {
                         }),
                         (0, r.jsx)(E.Z, {
                             isLoading: P,
-                            title: c === T.AW.ORBS ? L.intl.string(L.t.dFgeub) : L.intl.string(L.t.NSv5KS),
+                            title: c === j.AW.ORBS ? L.intl.string(L.t.dFgeub) : L.intl.string(L.t.NSv5KS),
                             numVisibleItems: i,
                             tab: c,
                         }),
@@ -142,7 +142,7 @@ let I = (e) => {
                                         E.Z,
                                         {
                                             title:
-                                                c === T.AW.ORBS ? L.intl.string(L.t.dFgeub) : L.intl.string(L.t.NSv5KS),
+                                                c === j.AW.ORBS ? L.intl.string(L.t.dFgeub) : L.intl.string(L.t.NSv5KS),
                                             isLoading: P || a,
                                             numVisibleItems: i,
                                             sortedSkuIds: p,
@@ -150,9 +150,9 @@ let I = (e) => {
                                                 (null == t ? void 0 : t.type) === o.z.IMMERSIVE_BANNER
                                                     ? k.feedblockInteractiveBackground
                                                     : void 0,
-                                            prioritizeUserDiscounts: c === T.AW.HOME,
+                                            prioritizeUserDiscounts: c === j.AW.HOME,
                                             tab: c,
-                                            orbsSupportedOnly: c === T.AW.ORBS,
+                                            orbsSupportedOnly: c === j.AW.ORBS,
                                         },
                                         l,
                                     );
@@ -184,7 +184,7 @@ let I = (e) => {
                                         m.J,
                                         {
                                             countdownTimerBlock: e,
-                                            isVisible: j,
+                                            isVisible: T,
                                             isFullScreen: u,
                                         },
                                         l,
@@ -227,7 +227,7 @@ let I = (e) => {
             { handleScroll: g } = (0, c.z)(o, i),
             f = (0, h.R)(),
             p = (0, d.sp)(),
-            [C, _] = l.useState(T.IV),
+            [C, _] = l.useState(j.IV),
             [m, b] = l.useState(!1);
         return (
             l.useEffect(() => {
@@ -235,7 +235,7 @@ let I = (e) => {
                     let e = () => {
                             if (null == o.current) return;
                             let e = o.current.getDistanceFromBottom();
-                            C >= 36 ? b(e < 20) : e <= 200 && _((e) => e + T.IV);
+                            C >= 36 ? b(e < 20) : e <= 200 && _((e) => e + j.IV);
                         },
                         t = o.current.getScrollerNode();
                     return (
@@ -263,7 +263,7 @@ let I = (e) => {
                                     tab: i,
                                     isFullScreen: t,
                                 }),
-                                i !== T.AW.CATALOG &&
+                                i !== j.AW.CATALOG &&
                                     C >= 36 &&
                                     (0, r.jsxs)("div", {
                                         className: k.endOfFeed,
@@ -277,12 +277,12 @@ let I = (e) => {
                                                 text: L.intl.string(L.t.AfrvRE),
                                                 onClick: () => {
                                                     n("shop all button", void 0, !0),
-                                                        u.default.track(j.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                                        u.default.track(T.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                             collectibles_shop_session_id:
                                                                 null == p ? void 0 : p.sessionId,
                                                             page_type: i,
                                                             page_category:
-                                                                i === T.AW.HOME || null == p ? void 0 : p.pageCategory,
+                                                                i === j.AW.HOME || null == p ? void 0 : p.pageCategory,
                                                             cta_name: "browse the shop button",
                                                         });
                                                 },
@@ -297,12 +297,12 @@ let I = (e) => {
                                 children: [
                                     (0, r.jsx)(x.Z, {
                                         peaking: m,
-                                        transitioning: s === T.f7.OUT,
+                                        transitioning: s === j.f7.OUT,
                                     }),
                                     (0, r.jsx)(x.Z, {
                                         style: { left: 1850 },
                                         peaking: m,
-                                        transitioning: s === T.f7.OUT,
+                                        transitioning: s === j.f7.OUT,
                                     }),
                                 ],
                             }),

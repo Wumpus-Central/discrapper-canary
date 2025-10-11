@@ -23,11 +23,11 @@ function u(e, t) {
     if (null != t) return t;
     switch (e) {
         case "warn":
-            return o.Mgn;
+            return o.aNP;
         case "info":
             return o.d3s;
         case "danger":
-            return o.k$p;
+            return o.Mgn;
         case "positive":
             return o.dz2;
         case "preview":

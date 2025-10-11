@@ -305,10 +305,10 @@ let D = i.memo(function (e) {
         } = e,
         M = j.features.has(v.oNc.ANIMATED_BANNER),
         k = (0, p.Z)(j),
-        U = !k && (0, y.Z)(j),
-        G = !k && A,
+        G = !k && (0, y.Z)(j),
+        U = !k && A,
         B = (0, _.xR)(x) && M && !g,
-        [F, V] = i.useState(!1),
+        [V, F] = i.useState(!1),
         H = i.useRef(!1),
         z = i.useRef(null),
         W = null != t ? t : z,
@@ -317,9 +317,9 @@ let D = i.memo(function (e) {
     i.useEffect(() => {
         if (B && n && !H.current && Y)
             return (
-                V(!0),
+                F(!0),
                 (K.current = setTimeout(() => {
-                    V(!1);
+                    F(!1);
                 }, 5000)),
                 () => {
                     clearTimeout(K.current);
@@ -359,7 +359,7 @@ let D = i.memo(function (e) {
                             [C.hasBanner]: q(),
                             [C.bannerVisible]: n,
                             [e]: !1,
-                            [C.communityInfoVisible]: G || (D && U),
+                            [C.communityInfoVisible]: U || (D && G),
                             [C.invitesRefresh]: X.isGuildEntrypointEnabled,
                         }),
                         onMouseDown: f,
@@ -375,7 +375,7 @@ let D = i.memo(function (e) {
                                             ? (0, r.jsx)(R, S(E({}, Q), { children: Z }))
                                             : (0, r.jsx)(T, S(E({}, Q), { children: Z })),
                                     }),
-                                    U &&
+                                    G &&
                                         (0, r.jsx)(P, {
                                             guild: j,
                                             controller: l,
@@ -389,7 +389,7 @@ let D = i.memo(function (e) {
                                       guild: j,
                                       controller: l,
                                       guildBanner: x,
-                                      animate: F,
+                                      animate: V,
                                   })
                                 : null,
                             (0, r.jsx)(L, { controller: l }),
@@ -399,9 +399,9 @@ let D = i.memo(function (e) {
                         ? (0, r.jsx)("div", {
                               className: C.animatedBannerHoverLayer,
                               onMouseEnter: () => {
-                                  V(!0), clearTimeout(K.current);
+                                  F(!0), clearTimeout(K.current);
                               },
-                              onMouseLeave: () => V(!1),
+                              onMouseLeave: () => F(!1),
                               style: { height: N },
                           })
                         : null,

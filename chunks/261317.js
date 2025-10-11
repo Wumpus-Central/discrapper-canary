@@ -49,8 +49,8 @@ let P = function () {
     let A = l.Y.VISIBLE.has(Z.visibility),
         L = (0, m.up)(w),
         k = !L || (null == Z ? void 0 : Z.tag) == null,
-        G = null != (e = Z.badge) ? e : E.QV["0"],
-        M = null != (t = Z.badgeColorPrimary) ? t : E.Ek["0"].primary,
+        M = null != (e = Z.badge) ? e : E.QV["0"],
+        G = null != (t = Z.badgeColorPrimary) ? t : E.Ek["0"].primary,
         U = null != (n = Z.badgeColorSecondary) ? n : E.Ek["0"].secondary,
         B = (0, r.jsxs)(r.Fragment, {
             children: [
@@ -59,20 +59,20 @@ let P = function () {
                     guildId: w.id,
                     isDisabled: k,
                     tag: null != (P = Z.tag) ? P : "",
-                    badge: G,
-                    primaryColor: M,
+                    badge: M,
+                    primaryColor: G,
                     secondaryColor: U,
                 }),
                 (0, r.jsx)(j.Z, {
                     className: T.section,
-                    selectedBadge: G,
+                    selectedBadge: M,
                     guildId: w.id,
                 }),
                 (0, r.jsx)(_.Z, {
                     className: T.section,
                     guildId: w.id,
-                    badge: G,
-                    primaryColor: M,
+                    badge: M,
+                    primaryColor: G,
                     secondaryColor: U,
                 }),
             ],
@@ -138,8 +138,8 @@ let P = function () {
                                                       var e;
                                                       h.Z.updateGuildProfile(w.id, {
                                                           tag: null != (e = Z.tag) ? e : "",
-                                                          badge: G,
-                                                          badgeColorPrimary: M,
+                                                          badge: M,
+                                                          badgeColorPrimary: G,
                                                           badgeColorSecondary: U,
                                                       });
                                                   } else h.Z.updateGuildProfile(w.id, { tag: null });
@@ -171,8 +171,8 @@ let P = function () {
                             (0, r.jsx)(O.Z, {
                                 guildId: w.id,
                                 tag: Z.tag,
-                                badge: G,
-                                primaryColor: M,
+                                badge: M,
+                                primaryColor: G,
                                 secondaryColor: U,
                             }),
                             !k && (0, r.jsx)(C.Z, { guildId: w.id }),

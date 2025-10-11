@@ -91,7 +91,7 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
             D = (0, a.e7)([_.Z], () => (null != d ? _.Z.getMetadata() : null)),
             A = (0, a.e7)([_.Z], () => (null != d && (null == D ? void 0 : D.isPublished) ? _.Z.getSlug() : null)),
             [L, k] = i.useState([!0]),
-            [G, M] = i.useState(!0),
+            [M, G] = i.useState(!0),
             [U, B] = i.useState([!1]),
             [F, H] = i.useState([""]);
         i.useEffect(() => {
@@ -123,7 +123,7 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                 }),
                     H(t),
                     k(e),
-                    M(e.every((e) => !0 === e));
+                    G(e.every((e) => !0 === e));
             }
         }, [D]);
         let W = (0, a.e7)([_.Z], () => (null != d ? _.Z.getErrors() : null));
@@ -473,7 +473,7 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                                             (i[t] = !0),
                                                                                             k(i),
                                                                                             H(r),
-                                                                                            M(i.every((e) => !0 === e)),
+                                                                                            G(i.every((e) => !0 === e)),
                                                                                             (0, m.t$)(d.id, n);
                                                                                     })(e, t),
                                                                                 isDisabled: !Z,
@@ -597,7 +597,7 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                 children: Y,
                                                 buttonLabel: I.intl.string(I.t.tVK6S0),
                                                 buttonCallback: () => z(!0),
-                                                disabled: !Z || !G,
+                                                disabled: !Z || !M,
                                             }),
                                         }),
                                 ],

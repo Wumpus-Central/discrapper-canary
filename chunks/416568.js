@@ -35,11 +35,11 @@ var r = n(951288),
     L = n(316243),
     M = n(727258),
     k = n(605951),
-    U = n(474109),
-    G = n(741616),
+    G = n(474109),
+    U = n(741616),
     B = n(187835),
-    F = n(118122),
-    V = n(193154),
+    V = n(118122),
+    F = n(193154),
     H = n(602147),
     z = n(222059),
     W = n(751277),
@@ -240,7 +240,7 @@ function ea(e) {
             d === I.u3.SERVER_RAIL_TOP && (0, r.jsx)(P.Z, {}),
             l ? (0, r.jsx)(C.Z, {}) : null,
             (0, r.jsx)(W.Z, { isOnHubVerificationRoute: a }),
-            !t && (0, r.jsx)(G.Z, {}),
+            !t && (0, r.jsx)(U.Z, {}),
             u.map((e) => (0, r.jsx)(J.Z, { guildId: e }, e)),
             (0, r.jsx)(Q.Z, { onActivate: n }),
         ],
@@ -255,7 +255,7 @@ function es(e) {
         s = a.getRoots(),
         c = (0, p.Wu)([w.Z], () => w.Z.getGeoRestrictedGuilds()).map((e) =>
             (0, r.jsx)(
-                V.Z,
+                F.Z,
                 {
                     id: e.id,
                     name: e.name,
@@ -276,7 +276,7 @@ function es(e) {
             (0, r.jsx)(Y.Z, {}),
             i
                 ? null
-                : (0, r.jsx)(F.Z, {
+                : (0, r.jsx)(V.Z, {
                       disableTooltip: o.length > 0,
                       lastTargetNode: s[s.length - 1],
                   }),
@@ -298,10 +298,10 @@ function ec(e) {
         w = i.useRef(!1),
         [T] = i.useState(() => new f.V7()),
         A = i.useRef(null),
-        G = i.useRef(null),
+        U = i.useRef(null),
         B = (0, u.OP)(),
-        { ref: F } = B,
-        V = (function (e, t) {
+        { ref: V } = B,
+        F = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -350,7 +350,7 @@ function ec(e) {
                 $.dG4,
                 () => {
                     var e, t;
-                    null == (e = A.current) || e.calculateState(), null == (t = G.current) || t.calculateState();
+                    null == (e = A.current) || e.calculateState(), null == (t = U.current) || t.calculateState();
                 },
                 e,
             );
@@ -450,7 +450,7 @@ function ec(e) {
                     className: o()(et.wrapper, l, e, { [et.hidden]: b }),
                     "aria-label": ee.intl.string(ee.t.PjnF2t),
                     children: [
-                        (0, r.jsx)(U.Z, {
+                        (0, r.jsx)(G.Z, {
                             ref: A,
                             isVisible: eh.isItemVisible,
                             onJumpTo: eh.handleJumpToGuild,
@@ -459,7 +459,7 @@ function ec(e) {
                         }),
                         (0, r.jsx)(
                             "ul",
-                            ((i = er({ ref: F }, V, z)),
+                            ((i = er({ ref: V }, F, z)),
                             (a = a =
                                 {
                                     role: "tree",
@@ -518,9 +518,9 @@ function ec(e) {
                                   }),
                             i),
                         ),
-                        (0, r.jsx)(U.Z, {
+                        (0, r.jsx)(G.Z, {
                             reverse: !0,
-                            ref: G,
+                            ref: U,
                             isVisible: eh.isItemVisible,
                             onJumpTo: eh.handleJumpToGuild,
                             className: o()(et.unreadMentionsIndicatorBottom, {

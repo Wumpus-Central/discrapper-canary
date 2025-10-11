@@ -34,7 +34,7 @@ function S(e) {
         [R, D] = (0, j.ZP)(A),
         { loadState: L, channels: M } = R,
         { maybeLoadMore: k } = D,
-        U = (0, u.e7)([f.Z], () => f.Z.messageGroupSpacing);
+        G = (0, u.e7)([f.Z], () => f.Z.messageGroupSpacing);
     (t = A),
         (n = R),
         (l = D),
@@ -101,7 +101,7 @@ function S(e) {
                 }
             ),
         );
-    let G = (0, g.Z)("unreads", A);
+    let U = (0, g.Z)("unreads", A);
     if (0 === M.length) {
         return (0, r.jsx)(O.Z, {
             Icon: d.xx7,
@@ -113,7 +113,7 @@ function S(e) {
         });
     }
     return (0, r.jsx)(c.bG, {
-        navigator: G,
+        navigator: U,
         children: (0, r.jsx)(c.SJ, {
             children: (e) => {
                 var t,
@@ -181,7 +181,7 @@ function S(e) {
                     (n = n =
                         {
                             onScroll: L === j.jd.Done ? void 0 : k,
-                            className: o()(E.scroller, "group-spacing-".concat(U)),
+                            className: o()(E.scroller, "group-spacing-".concat(G)),
                             children: [
                                 Z ? (0, r.jsx)(I, { setSeenTutorial: w }) : null,
                                 (0, v.Z)(M, D, N),

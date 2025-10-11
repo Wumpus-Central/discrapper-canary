@@ -374,14 +374,14 @@ function L(e) {
                       className: s()(N.marginTop20, y.buttonContainer),
                       children: [
                           n.isDirty &&
-                              (0, i.jsx)(G, {
+                              (0, i.jsx)(M, {
                                   guild: t,
                                   guildTemplate: n,
                               }),
                           (0, i.jsxs)("div", {
                               className: y.rightButtonContainer,
                               children: [
-                                  (0, i.jsx)(M, {
+                                  (0, i.jsx)(G, {
                                       guild: t,
                                       guildTemplate: n,
                                   }),
@@ -419,7 +419,7 @@ function k(e) {
         onClick: s,
     });
 }
-function G(e) {
+function M(e) {
     let { guild: t, guildTemplate: n } = e,
         [r, a] = l.useState(!1),
         s = async () => {
@@ -442,7 +442,7 @@ function G(e) {
         }),
     });
 }
-function M(e) {
+function G(e) {
     let { guild: t, guildTemplate: n } = e,
         [r, a] = l.useState(!1),
         s = async () => {

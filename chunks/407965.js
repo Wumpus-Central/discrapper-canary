@@ -1,4 +1,4 @@
-n.d(e, { n: () => v }), n(539854);
+n.d(e, { n: () => y }), n(539854);
 var i = n(951288),
     r = n(647438),
     a = n(512722),
@@ -24,7 +24,7 @@ let C = (t) => {
                   children: (0, i.jsx)(p.o, { userDiscountOffer: e }),
               });
     },
-    v = () => {
+    y = () => {
         let {
                 transitionState: t,
                 onClose: e,
@@ -33,15 +33,15 @@ let C = (t) => {
                 churnUserDiscountOffer: p,
                 isFetchingChurnDiscountOffer: P,
             } = (0, h.a)(),
-            v = (0, o.e7)([d.default], () => {
+            y = (0, o.e7)([d.default], () => {
                 let t = d.default.getCurrentUser();
                 return l()(null != t, "ProfileItem: currentUser cannot be undefined"), t;
             });
         r.useEffect(() => {
-            (0, u.Z)(v.id, v.getAvatarURL(null, 80));
-        }, [v]);
-        let y = (0, m.Z)(),
-            T = "US" === y.ipCountryCode && "CA" === y.ipSubdivisionCode;
+            (0, u.Z)(y.id, y.getAvatarURL(null, 80));
+        }, [y]);
+        let v = (0, m.Z)(),
+            T = "US" === v.ipCountryCode && "CA" === v.ipSubdivisionCode;
         if (P)
             return (0, i.jsx)(s.Modal, {
                 transitionState: t,
@@ -78,7 +78,7 @@ let C = (t) => {
                 preview: null !== p && (0, i.jsx)(C, { churnUserDiscountOffer: p }),
                 onClose: async () => e(),
                 children: (0, i.jsx)(f.g, {
-                    currentUser: v,
+                    currentUser: y,
                     premiumType: n,
                     onClose: e,
                     isDowngrade: !1,

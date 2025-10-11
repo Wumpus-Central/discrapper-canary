@@ -184,7 +184,7 @@ function _() {
                                     );
                                 }),
                             }),
-                            (0, a.jsx)(S, {
+                            (0, a.jsx)(E, {
                                 label: "gradient override",
                                 onChange: (e) =>
                                     I({
@@ -193,7 +193,7 @@ function _() {
                                         lightBackground: e,
                                     }),
                             }),
-                            (0, a.jsx)(E, {
+                            (0, a.jsx)(S, {
                                 label: "set",
                                 onClick: () => {},
                             }),
@@ -305,7 +305,7 @@ function C(e) {
         ],
     });
 }
-function E(e) {
+function S(e) {
     let { label: t, onClick: n } = e;
     return (0, a.jsxs)("div", {
         className: g.flex,
@@ -324,7 +324,7 @@ function E(e) {
         ],
     });
 }
-function S(e) {
+function E(e) {
     let { label: t, onChange: n } = e;
     return (0, a.jsxs)("div", {
         className: g.hexInput,

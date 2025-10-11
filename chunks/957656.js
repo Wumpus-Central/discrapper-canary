@@ -1,39 +1,39 @@
 r.d(t, { Z: () => u });
 var n = r(951288);
 r(647438);
-var o = r(481060),
-    i = r(198952),
-    c = r(329242),
-    a = r(345909),
-    s = r(388032),
-    l = r(167154);
+var i = r(481060),
+    o = r(198952),
+    a = r(329242),
+    s = r(345909),
+    l = r(388032),
+    c = r(167154);
 let d = (e) => {
     var t,
         r,
-        { children: i, className: c } = e,
-        a = (function (e, t) {
+        { children: o, className: a } = e,
+        s = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
-                o = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var r,
                         n,
-                        o = {},
-                        i = Object.keys(e);
-                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
-                    return o;
+                        i = {},
+                        o = Object.keys(e);
+                    for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < i.length; n++)
-                    (r = i[n]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+                var o = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < o.length; n++)
+                    (r = o[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
-            return o;
+            return i;
         })(e, ["children", "className"]);
     return (0, n.jsx)(
-        o.Y0X,
+        i.Y0X,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
@@ -61,14 +61,14 @@ let d = (e) => {
         })(
             {
                 "data-migration-pending": !0,
-                className: c,
+                className: a,
             },
-            a,
+            s,
         )),
         (r = r =
             {
                 parentComponent: "FamilyCenterCommonModal",
-                children: i,
+                children: o,
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
@@ -88,28 +88,28 @@ let d = (e) => {
 (d.ButtonFooter = (e) => {
     let { children: t } = e;
     return (0, n.jsx)("div", {
-        className: l.footer,
+        className: c.footer,
         children: t,
     });
 }),
     (d.Header = (e) => {
-        let { icon: t, currentUser: r, otherUser: a, header: s } = e;
+        let { icon: t, currentUser: r, otherUser: s, header: l } = e;
         return (0, n.jsxs)("div", {
-            className: l.header,
+            className: c.header,
             children: [
-                (0, n.jsx)(i.Z, {
+                (0, n.jsx)(o.Z, {
                     currentUser: r,
-                    otherUser: a,
+                    otherUser: s,
                     children: t,
                 }),
                 (0, n.jsxs)("div", {
-                    className: l.heading,
+                    className: c.heading,
                     children: [
-                        (0, n.jsx)(o.Heading, {
+                        (0, n.jsx)(i.Heading, {
                             variant: "text-lg/bold",
-                            children: s,
+                            children: l,
                         }),
-                        (0, n.jsx)(c.Z, { user: a }),
+                        (0, n.jsx)(a.Z, { user: s }),
                     ],
                 }),
             ],
@@ -118,21 +118,21 @@ let d = (e) => {
     (d.Content = (e) => {
         let { children: t } = e;
         return (0, n.jsx)("div", {
-            className: l.content,
+            className: c.content,
             children: t,
         });
     }),
     (d.Notice = (e) => {
         let { notice: t } = e;
         return (0, n.jsxs)("div", {
-            className: l.notice,
+            className: c.notice,
             children: [
-                (0, n.jsx)(o.Text, {
+                (0, n.jsx)(i.Text, {
                     variant: "eyebrow",
                     color: "header-primary",
-                    children: s.intl.string(a.default.cXgKMD),
+                    children: l.intl.string(s.default.cXgKMD),
                 }),
-                (0, n.jsx)(o.Text, {
+                (0, n.jsx)(i.Text, {
                     variant: "text-sm/normal",
                     color: "header-secondary",
                     children: t,

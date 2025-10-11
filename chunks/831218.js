@@ -1,4 +1,4 @@
-n.d(t, { Z: () => V }), n(388685);
+n.d(t, { Z: () => F }), n(388685);
 var r,
     i = n(951288),
     l = n(647438),
@@ -47,7 +47,7 @@ function k(e, t, n) {
         e
     );
 }
-function U(e) {
+function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -63,7 +63,7 @@ function U(e) {
     }
     return e;
 }
-function G(e, t) {
+function U(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -229,7 +229,7 @@ let B = l.memo(function () {
         ],
     });
 });
-class F extends (r = l.Component) {
+class V extends (r = l.Component) {
     static getDerivedStateFromProps(e) {
         let { children: t, privateChannelIds: n } = e;
         if (null == t)
@@ -309,7 +309,7 @@ class F extends (r = l.Component) {
                     children: (r) =>
                         (0, i.jsx)(
                             f.aVo,
-                            U(
+                            G(
                                 {
                                     fade: !0,
                                     innerRole: o,
@@ -371,7 +371,7 @@ class F extends (r = l.Component) {
                 (this.hasReportedAnalytics = !0),
                     _.ZP.trackWithMetadata(
                         D.rMx.DM_LIST_VIEWED,
-                        G(U({}, u, (0, O.X)()), {
+                        U(G({}, u, (0, O.X)()), {
                             visible_user_ids: s.filter((e) => null != e),
                             changelog_dm_visible: c,
                         }),
@@ -485,8 +485,8 @@ class F extends (r = l.Component) {
             });
     }
 }
-k(F, "defaultProps", { padding: 8 });
-let V = (e) => {
+k(V, "defaultProps", { padding: 8 });
+let F = (e) => {
     let { density: t } = (0, f.TCT)(),
         { version: n, theme: r, children: o, showDMHeader: a, listScrollerRef: s, createDMCTAButtonVariant: c } = e,
         h = l.Children.count(o),
@@ -549,7 +549,7 @@ let V = (e) => {
             [D],
         ),
         B = (0, x.Dt)(),
-        V = (0, d.ZP)({
+        F = (0, d.ZP)({
             id: "private-channels-".concat(B),
             isEnabled: S,
             scrollToStart: M,
@@ -560,10 +560,10 @@ let V = (e) => {
     return (0, i.jsx)(y.Gt, {
         value: v,
         children: (0, i.jsx)(u.bG, {
-            navigator: V,
+            navigator: F,
             children: (0, i.jsx)(
-                F,
-                G(U({}, e), {
+                V,
+                U(G({}, e), {
                     density: t,
                     channels: _,
                     privateChannelIds: O,

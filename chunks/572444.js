@@ -115,8 +115,8 @@ function y() {
         [i, l] = r.useState([]),
         j = (0, s.e7)([x.Z], () => x.Z.getKrispSuppressionLevel()),
         [y, C] = r.useState(null),
-        E = r.useRef(null),
         S = r.useRef(null),
+        E = r.useRef(null),
         [T, O] = r.useState(0.5),
         {
             krispModels: N,
@@ -151,7 +151,7 @@ function y() {
         G = (0, m.N)(),
         z = r.useCallback(() => {
             var e;
-            null == (e = E.current) || e.stop(), (E.current = null), C(null);
+            null == (e = S.current) || e.stop(), (S.current = null), C(null);
         }, []);
     function V() {
         x.Z.getMediaEngine().stopRecordingRawSamples();
@@ -160,13 +160,13 @@ function y() {
         if ((t && V(), z(), null == G)) return;
         let n = G.createBufferSource();
         (n.buffer = e.audioBuffer),
-            (S.current = G.createGain()),
-            (S.current.gain.value = T),
-            n.connect(S.current),
-            S.current.connect(G.destination),
+            (E.current = G.createGain()),
+            (E.current.gain.value = T),
+            n.connect(E.current),
+            E.current.connect(G.destination),
             (n.loop = !0),
             n.start(),
-            (E.current = n),
+            (S.current = n),
             C(e);
     }
     r.useEffect(() => {
@@ -341,7 +341,7 @@ function y() {
                         label: "Volume",
                         initialValue: T,
                         asValueChanges: function (e) {
-                            null != S.current && ((S.current.gain.value = e), O(e));
+                            null != E.current && ((E.current.gain.value = e), O(e));
                         },
                         minValue: 0,
                         maxValue: 1,

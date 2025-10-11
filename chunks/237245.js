@@ -88,7 +88,7 @@ function E(e) {
                 w(!1);
             }
         }, []),
-        G = i.useCallback(
+        M = i.useCallback(
             async (e) => {
                 try {
                     await f.Z.saveGuild(T, e, { throwErr: !0 });
@@ -103,7 +103,7 @@ function E(e) {
             },
             [T],
         ),
-        M = i.useCallback(
+        G = i.useCallback(
             async (e, t, n) => {
                 try {
                     await d.ZP.updateVerificationForm(T, e, t, n);
@@ -126,9 +126,9 @@ function E(e) {
                               },
                           ]
                         : [];
-                await M(r, e, n);
+                await G(r, e, n);
             },
-            [M],
+            [G],
         ),
         B = i.useCallback(
             (e) => {
@@ -136,7 +136,7 @@ function E(e) {
                     (l.isAgeRestricted !== (E.ownerConfiguredContentLevel === _.V_K.AGE_RESTRICTED) &&
                         k(async () => {
                             let e = l.isAgeRestricted ? _.V_K.AGE_RESTRICTED : _.V_K.DEFAULT;
-                            await G({ ownerConfiguredContentLevel: e });
+                            await M({ ownerConfiguredContentLevel: e });
                         }),
                     l.joinType === j.A.INVITE)
                 ) {
@@ -145,7 +145,7 @@ function E(e) {
                     k(async () => {
                         if (E.features.has(_.oNc.DISCOVERABLE)) {
                             let e = new Set(E.features);
-                            e.delete(_.oNc.DISCOVERABLE), await G({ features: e });
+                            e.delete(_.oNc.DISCOVERABLE), await M({ features: e });
                         }
                         h.verificationDirty && (await U(t, r, e));
                     });
@@ -155,9 +155,9 @@ function E(e) {
                     k(async () => {
                         if (E.features.has(_.oNc.DISCOVERABLE)) {
                             let e = new Set(E.features);
-                            e.delete(_.oNc.DISCOVERABLE), await G({ features: e });
+                            e.delete(_.oNc.DISCOVERABLE), await M({ features: e });
                         }
-                        h.verificationDirty && (await M([...t], !0, e)),
+                        h.verificationDirty && (await G([...t], !0, e)),
                             h.profileDirty && null != S && (await (0, p.pV)(E.id, { visibility: S.visibility }));
                     });
                 } else if (l.joinType === j.A.DISCOVERABLE) {
@@ -169,7 +169,7 @@ function E(e) {
                             let e = new Set(E.features);
                             e.add(_.oNc.DISCOVERABLE),
                                 e.delete(_.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
-                                await G({
+                                await M({
                                     features: e,
                                     discoverySplash: E.discoverySplash,
                                     description: E.description,
@@ -184,7 +184,7 @@ function E(e) {
                     });
                 }
             },
-            [l, k, E, h, G, U, S, M, x, I],
+            [l, k, E, h, M, U, S, G, x, I],
         ),
         F = i.useCallback(() => {
             var e;

@@ -108,8 +108,8 @@ function E(e) {
                     : S();
         }, [t, T, S, l, A, D]),
         k = x.Lo(R),
-        G = i.useCallback(() => R.forEach(x.GM), [R]),
-        M = (0, b.mY)(),
+        M = i.useCallback(() => R.forEach(x.GM), [R]),
+        G = (0, b.mY)(),
         U = (0, o.e7)([g.Z], () => g.Z.getProps().subsection);
     return (
         i.useEffect(
@@ -146,9 +146,9 @@ function E(e) {
                             ),
                         ),
                         (0, r.jsxs)(d.P3F, {
-                            onClick: M ? void 0 : L,
-                            className: a()(C.createTierButton, { [C.disabled]: M }),
-                            "aria-disabled": M,
+                            onClick: G ? void 0 : L,
+                            className: a()(C.createTierButton, { [C.disabled]: G }),
+                            "aria-disabled": G,
                             children: [
                                 (0, r.jsx)(d.oFk, {
                                     size: "xs",
@@ -167,7 +167,7 @@ function E(e) {
                 (0, r.jsx)(c.W, {
                     component: "div",
                     className: C.contentRegion,
-                    children: k && (0, r.jsx)(d.oXn, { children: (0, r.jsx)(u.Z, { onReset: G }) }),
+                    children: k && (0, r.jsx)(d.oXn, { children: (0, r.jsx)(u.Z, { onReset: M }) }),
                 }),
             ],
         })

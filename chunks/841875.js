@@ -69,7 +69,7 @@ function S() {
                 ],
             }),
             (0, r.jsx)(x, { trackFilterAction: u }),
-            (0, r.jsx)(j, { trackFilterAction: u }),
+            (0, r.jsx)(T, { trackFilterAction: u }),
             o &&
                 (0, r.jsx)(d.Button, {
                     variant: "secondary",
@@ -191,7 +191,7 @@ let O = (e) => {
             children: t.map((e) => {
                 let { color: t, label: s, enum: o } = e;
                 return (0, r.jsx)(
-                    T,
+                    j,
                     {
                         color: t,
                         label: s,
@@ -205,7 +205,7 @@ let O = (e) => {
             }),
         });
     },
-    T = (e) => {
+    j = (e) => {
         let { color: t, label: n, enum: l, isToggled: i, onToggleColor: o, trackFilterAction: a } = e;
         return (0, r.jsx)(
             u.u,
@@ -237,7 +237,7 @@ let O = (e) => {
             n,
         );
     },
-    j = (e) => {
+    T = (e) => {
         let { trackFilterAction: t } = e,
             { themeFilters: n, onToggleTheme: i } = (0, h.S)(),
             o = (0, g.ZP)() === b.BR.DARK,
