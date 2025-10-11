@@ -1,7 +1,7 @@
 n.d(t, {
-    HR: () => E,
-    L5: () => m,
-    ZP: () => b,
+    HR: () => b,
+    L5: () => g,
+    ZP: () => y,
 });
 var r = n(951288),
     i = n(647438),
@@ -10,53 +10,54 @@ var r = n(951288),
     s = n(653603),
     l = n.n(s),
     c = n(902704),
-    u = n(453687),
-    d = n(328966),
-    f = n(981631),
-    _ = n(388032),
-    p = n(724913),
-    h = n(430864);
-function m(e, t) {
-    return e.type === f.uaV.VOICE_HANGOUT_INVITE
+    u = n(569504),
+    d = n(453687),
+    f = n(328966),
+    _ = n(981631),
+    p = n(388032),
+    h = n(724913),
+    m = n(430864);
+function g(e, t) {
+    return e.type === _.uaV.VOICE_HANGOUT_INVITE
         ? ""
-        : e.hasFlag(f.iLy.SOURCE_MESSAGE_DELETED)
-          ? _.intl.string(_.t.JOtgS0)
+        : e.hasFlag(_.iLy.SOURCE_MESSAGE_DELETED)
+          ? p.intl.string(p.t.JOtgS0)
           : t;
 }
-function g(e) {
+function E(e) {
     var t;
-    let { className: n, message: a, children: s, content: c, onUpdate: _, contentRef: g, compact: E } = e,
-        b = a.state === f.yb.SEND_FAILED,
-        y = a.state === f.yb.SENDING,
-        O = a.isCommandType(),
-        v = null == (t = a.editedTimestamp) ? void 0 : t.toString(),
-        I = i.useRef(!1);
-    return (
-        i.useLayoutEffect(() => {
-            I.current ? null != _ && _() : (I.current = !0);
-        }, [_, a.content, c, v, s]),
-        (0, r.jsxs)("div", {
-            id: (0, u.ut)(a),
-            ref: g,
-            className: o()(n, h.markup, {
-                [p.messageContent]: !0,
-                [p.isSending]: y && !O,
-                [p.markupRtl]: "rtl" === l()(a.content),
-                [p.isFailed]: b,
-                [p.isUnsupported]: a.isUnsupported,
+    let { className: n, message: a, children: s, content: c, onUpdate: p, contentRef: E, compact: b } = e,
+        y = a.state === _.yb.SEND_FAILED,
+        O = a.state === _.yb.SENDING,
+        v = a.isCommandType(),
+        I = null == (t = a.editedTimestamp) ? void 0 : t.toString(),
+        T = i.useRef(!1);
+    i.useLayoutEffect(() => {
+        T.current ? null != p && p() : (T.current = !0);
+    }, [p, a.content, c, I, s]);
+    let S = u.Y.useConfig({ location: "MessageContent" }).alignMessagesStart;
+    return (0, r.jsxs)("div", {
+        id: (0, d.ut)(a),
+        ref: E,
+        className: o()(n, m.markup, {
+            [h.messageContent]: !0,
+            [h.isSending]: O && !v,
+            [h.markupBidi]: S,
+            [h.markupRtl]: !S && "rtl" === l()(a.content),
+            [h.isFailed]: y,
+            [h.isUnsupported]: a.isUnsupported,
+        }),
+        children: [
+            null != s ? s : g(a, c),
+            (0, r.jsx)(f.Z, {
+                message: a,
+                compact: b,
+                location: f.H.WITH_CONTENT,
             }),
-            children: [
-                null != s ? s : m(a, c),
-                (0, r.jsx)(d.Z, {
-                    message: a,
-                    compact: E,
-                    location: d.H.WITH_CONTENT,
-                }),
-            ],
-        })
-    );
+        ],
+    });
 }
-function E(e, t) {
+function b(e, t) {
     var n, r;
     let { message: i } = t,
         { message: a } = e;
@@ -68,4 +69,4 @@ function E(e, t) {
             (null == (r = a.editedTimestamp) ? void 0 : r.toString())
     );
 }
-let b = i.memo(g, E);
+let y = i.memo(E, b);
