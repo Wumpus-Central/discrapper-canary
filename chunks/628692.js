@@ -122,6 +122,7 @@ let A = function (e) {
                 )
               : (0, r.jsx)(l.u, {
                     "aria-label": O.name,
+                    "data-pending-richtooltip-migration": !0,
                     __unsupportedReactNodeAsText: (0, r.jsx)(p.Dp, { sound: O }),
                     position: "top",
                     delay: 500,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => A }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -6,25 +6,26 @@ var r = n(951288),
     o = n(399606),
     s = n(704215),
     c = n(582019),
-    u = n(755721),
-    d = n(481060),
-    p = n(239091),
-    f = n(100527),
-    h = n(906732),
-    g = n(522651),
-    m = n(795318),
-    b = n(706140),
-    _ = n(294629),
-    O = n(131951),
-    E = n(459273),
+    u = n(28664),
+    d = n(755721),
+    p = n(481060),
+    f = n(239091),
+    h = n(100527),
+    g = n(906732),
+    m = n(522651),
+    b = n(795318),
+    _ = n(706140),
+    O = n(294629),
+    E = n(131951),
+    v = n(459273),
     y = n(242291),
-    v = n(792165),
-    I = n(603074),
+    I = n(792165),
+    C = n(603074),
     S = n(981631),
-    C = n(921944),
-    T = n(388032),
-    N = n(890332);
-function j(e) {
+    T = n(921944),
+    N = n(388032),
+    j = n(890332);
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -49,7 +50,7 @@ function j(e) {
     }
     return e;
 }
-function P(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -67,7 +68,7 @@ function P(e, t) {
         e
     );
 }
-function x(e) {
+function A(e) {
     var { channel: t } = e,
         l = (function (e, t) {
             if (null == e) return {};
@@ -90,135 +91,129 @@ function x(e) {
             }
             return i;
         })(e, ["channel"]);
-    let x = i.useRef(null),
-        { mute: A, suppress: Z } = (0, _.Z)(t),
-        w = (0, o.e7)([O.Z], () => O.Z.isDeaf()),
-        L = A || Z || w,
-        [R, D] = i.useState(!1),
-        k = t.getGuildId(),
-        M = (0, y.sR)({ isSoundboardButtonDisabled: L }),
-        [U, G] = (0, b.cv)(M),
-        { analyticsLocations: B, parentAnalyticsLocation: H } = (0, h.ZP)(f.Z.SOUNDBOARD_BUTTON);
-    function V(e) {
-        null != k &&
-            (0, p.jW)(e, async () => {
+    let A = i.useRef(null),
+        { mute: Z, suppress: w } = (0, O.Z)(t),
+        L = (0, o.e7)([E.Z], () => E.Z.isDeaf()),
+        R = Z || w || L,
+        [D, k] = i.useState(!1),
+        M = t.getGuildId(),
+        U = (0, y.sR)({ isSoundboardButtonDisabled: R }),
+        [G, B] = (0, _.cv)(U),
+        { analyticsLocations: H, parentAnalyticsLocation: V } = (0, g.ZP)(h.Z.SOUNDBOARD_BUTTON);
+    function F(e) {
+        null != M &&
+            (0, f.jW)(e, async () => {
                 let { default: e } = await n.e("56049").then(n.bind(n, 338991));
                 return (t) =>
                     (0, r.jsx)(
                         e,
-                        P(
-                            j(
+                        x(
+                            P(
                                 {
-                                    guildId: k,
-                                    sourceAnalyticsLocations: B,
+                                    guildId: M,
+                                    sourceAnalyticsLocations: H,
                                 },
                                 t,
                             ),
-                            { onInteraction: (0, m.u)("SoundboardContextMenu", f.Z.RTC_PANEL) },
+                            { onInteraction: (0, b.u)("SoundboardContextMenu", h.Z.RTC_PANEL) },
                         ),
                     );
             });
     }
     let {
-            Component: F,
-            play: z,
-            events: { onMouseEnter: W, onMouseLeave: q },
+            Component: z,
+            play: W,
+            events: { onMouseEnter: Y, onMouseLeave: q },
         } = (0, c.j)(),
-        Y = i.useCallback(() => {
-            L || D(!R);
-        }, [L, R]);
+        K = i.useCallback(() => {
+            R || k(!D);
+        }, [R, D]);
     return (
-        (0, E.yp)({
+        (0, v.yp)({
             event: S.CkL.TOGGLE_SOUNDBOARD,
-            handler: Y,
+            handler: K,
         }),
-        (0, r.jsx)(h.Gt, {
-            value: B,
-            children: (0, r.jsx)(d.ua7, {
-                targetElementRef: x,
-                text: A
-                    ? T.intl.string(T.t["Ox4/zc"])
-                    : Z
-                      ? T.intl.string(T.t["+YBKYG"])
-                      : w
-                        ? T.intl.string(T.t.X1lQlp)
-                        : T.intl.string(T.t["6EJvHh"]),
-                children: (e) =>
-                    (0, r.jsx)(d.yRy, {
-                        targetElementRef: x,
-                        animation: d.yRy.Animation.FADE,
-                        shouldShow: R,
-                        position: "top",
-                        onRequestClose: () => D(!1),
-                        renderPopout: (e) => {
-                            let { closePopout: n } = e;
-                            return (0, r.jsx)(I.Z, {
-                                guildId: k,
-                                channel: t,
-                                onClose: n,
-                                gridNotice:
-                                    U === s.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
-                                    (0, r.jsx)(v.o, {
-                                        onClose: n,
-                                        markAsDismissed: G,
-                                    }),
-                                analyticsSource: "rtc panel",
-                            });
-                        },
-                        children: (t) =>
-                            (0, r.jsx)("div", {
-                                ref: x,
-                                children: (0, r.jsx)(
-                                    u.zx,
+        (0, r.jsx)(g.Gt, {
+            value: H,
+            children: (0, r.jsx)(u.u, {
+                targetElementRef: A,
+                text: Z
+                    ? N.intl.string(N.t["Ox4/zc"])
+                    : w
+                      ? N.intl.string(N.t["+YBKYG"])
+                      : L
+                        ? N.intl.string(N.t.X1lQlp)
+                        : N.intl.string(N.t["6EJvHh"]),
+                asContainer: !0,
+                children: (0, r.jsx)(p.yRy, {
+                    targetElementRef: A,
+                    animation: p.yRy.Animation.FADE,
+                    shouldShow: D,
+                    position: "top",
+                    onRequestClose: () => k(!1),
+                    renderPopout: (e) => {
+                        let { closePopout: n } = e;
+                        return (0, r.jsx)(C.Z, {
+                            guildId: M,
+                            channel: t,
+                            onClose: n,
+                            gridNotice:
+                                G === s.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
+                                (0, r.jsx)(I.o, {
+                                    onClose: n,
+                                    markAsDismissed: B,
+                                }),
+                            analyticsSource: "rtc panel",
+                        });
+                    },
+                    children: (e) =>
+                        (0, r.jsx)("div", {
+                            ref: A,
+                            children: (0, r.jsx)(
+                                d.zx,
+                                x(
                                     P(
-                                        j(
-                                            P(j({ "data-migration-pending": !0 }, e, t), {
-                                                className: a()(N.button, N.buttonColor, {
-                                                    [N.greyButtonActive]: R,
-                                                    [N.disabled]: L,
-                                                }),
-                                                wrapperClassName: N.button,
-                                                innerClassName: N.buttonContents,
-                                                disabled: L,
-                                                onClick: () => {
-                                                    var t;
-                                                    null != U &&
-                                                        U !== s.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
-                                                        G(C.L.UNKNOWN),
-                                                        null == e || null == (t = e.onClick) || t.call(e),
-                                                        D(!R),
-                                                        z(),
-                                                        (0, g.v)(H, g.d.SOUNDBOARD);
-                                                },
-                                                onMouseEnter: (t) => {
-                                                    var n, r;
-                                                    null == (n = l.onMouseEnter) || n.call(l, t),
-                                                        null == e || null == (r = e.onMouseEnter) || r.call(e),
-                                                        W();
-                                                },
-                                                onMouseLeave: (t) => {
-                                                    var n, r;
-                                                    null == (n = l.onMouseLeave) || n.call(l, t),
-                                                        null == e || null == (r = e.onMouseLeave) || r.call(e),
-                                                        q();
-                                                },
-                                                onContextMenu: V,
-                                                fullWidth: !0,
-                                                size: u.zx.Sizes.MEDIUM,
+                                        x(P({}, e), {
+                                            className: a()(j.button, j.buttonColor, {
+                                                [j.greyButtonActive]: D,
+                                                [j.disabled]: R,
                                             }),
-                                            l,
-                                        ),
-                                        {
-                                            children: (0, r.jsx)(F, {
-                                                className: N.buttonIcon,
-                                                size: "sm",
-                                                color: "currentColor",
-                                            }),
-                                        },
+                                            wrapperClassName: j.button,
+                                            innerClassName: j.buttonContents,
+                                            disabled: R,
+                                            onClick: () => {
+                                                null != G &&
+                                                    G !== s.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
+                                                    B(T.L.UNKNOWN),
+                                                    k(!D),
+                                                    W(),
+                                                    (0, m.v)(V, m.d.SOUNDBOARD);
+                                            },
+                                            onMouseEnter: (e) => {
+                                                var t;
+                                                null == (t = l.onMouseEnter) || t.call(l, e), Y();
+                                            },
+                                            onMouseLeave: (e) => {
+                                                var t;
+                                                null == (t = l.onMouseLeave) || t.call(l, e), q();
+                                            },
+                                            onContextMenu: F,
+                                            fullWidth: !0,
+                                            size: d.zx.Sizes.MEDIUM,
+                                        }),
+                                        l,
                                     ),
+                                    {
+                                        children: (0, r.jsx)(z, {
+                                            className: j.buttonIcon,
+                                            size: "sm",
+                                            color: "currentColor",
+                                        }),
+                                    },
                                 ),
-                            }),
-                    }),
+                            ),
+                        }),
+                }),
             }),
         })
     );

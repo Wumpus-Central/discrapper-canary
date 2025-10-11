@@ -1,11 +1,11 @@
 n.d(t, {
-    GY: () => x,
-    PI: () => A,
-    RT: () => M,
-    XM: () => D,
-    bc: () => C,
-    ls: () => L,
-    xZ: () => N,
+    GY: () => w,
+    PI: () => I,
+    RT: () => D,
+    XM: () => R,
+    bc: () => T,
+    ls: () => P,
+    xZ: () => S,
 }),
     n(388685);
 var r = n(951288),
@@ -14,94 +14,43 @@ var r = n(951288),
     o = n.n(a),
     s = n(442837),
     l = n(692547),
-    c = n(481060),
-    u = n(765250),
-    d = n(13245),
-    f = n(493773),
-    _ = n(355863),
-    p = n(237997),
-    h = n(145597),
-    m = n(444295),
-    g = n(333031),
-    E = n(618373),
-    b = n(620954),
-    y = n(388032),
-    O = n(962967);
-function v(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
+    c = n(28664),
+    u = n(481060),
+    d = n(765250),
+    f = n(13245),
+    _ = n(493773),
+    p = n(355863),
+    h = n(237997),
+    m = n(145597),
+    g = n(444295),
+    E = n(333031),
+    b = n(618373),
+    y = n(620954),
+    O = n(388032),
+    v = n(962967);
 function I(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                v(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function T(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function S(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : T(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function A(e) {
     let { children: t } = e;
     return (0, r.jsx)("div", {
-        className: O.titleWrapper,
-        children: (0, r.jsx)(c.Text, {
+        className: v.titleWrapper,
+        children: (0, r.jsx)(u.Text, {
             variant: "text-xs/semibold",
             color: "header-primary",
             children: t,
         }),
     });
 }
-let C = 7000;
-function N(e, t) {
-    return P(
-        (0, s.e7)([_.Z], () => _.Z.getWidget(e), [e]),
+let T = 7000;
+function S(e, t) {
+    return C(
+        (0, s.e7)([p.Z], () => p.Z.getWidget(e), [e]),
         t,
     );
 }
-let R = (e, t) => Date.now() - e < t;
-function P(e, t) {
+let A = (e, t) => Date.now() - e < t;
+function C(e, t) {
     let n = i.useRef(null == e ? void 0 : e.showExtrasHintTimestamp),
         [r, a] = i.useState(!1),
-        o = (0, s.e7)([p.default], () => p.default.isLocked((0, h.getPID)())),
+        o = (0, s.e7)([h.default], () => h.default.isLocked((0, m.getPID)())),
         l = i.useRef(void 0);
     return (
         i.useEffect(() => {
@@ -113,11 +62,11 @@ function P(e, t) {
                     a(!1);
                 }, t)));
         }, [t, null == e ? void 0 : e.showExtrasHintTimestamp]),
-        (0, f.ZP)(() => {
+        (0, _.ZP)(() => {
             let n = null == e ? void 0 : e.showExtrasHintTimestamp;
             return (
                 null != n &&
-                    R(n, t) &&
+                    A(n, t) &&
                     (a(!0),
                     (l.current = setTimeout(() => {
                         a(!1);
@@ -130,122 +79,106 @@ function P(e, t) {
         r && o
     );
 }
-let w = 8000;
-function D(e) {
+let N = 8000;
+function R(e) {
     let { children: t, widgetId: n } = e,
-        i = (0, s.e7)([_.Z], () => _.Z.getWidget(n), [n]),
-        a = P(i, w),
+        i = (0, s.e7)([p.Z], () => p.Z.getWidget(n), [n]),
+        a = C(i, N),
         o = () =>
-            (0, E.Q)((0, b.P)(), y.t["1XA04e"], y.intl.string(y.t.uZZGzc), {
+            (0, b.Q)((0, y.P)(), O.t["1XA04e"], O.intl.string(O.t.uZZGzc), {
                 useFlexboxLayout: !0,
                 highlightAdminWarningIfElevated: !1,
-                keybindClassName: O.keybind,
+                keybindClassName: v.keybind,
             });
     return a
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(g.Z, {
-                      className: O.titleWrapperWithHint,
-                      children: (0, r.jsx)(c.P3F, {
-                          className: O.titleWrapperClickable,
+                  (0, r.jsx)(E.Z, {
+                      className: v.titleWrapperWithHint,
+                      children: (0, r.jsx)(u.P3F, {
+                          className: v.titleWrapperClickable,
                           onClick: () => {
                               null != i &&
-                                  (d.Z.setInputLocked(!1, (0, h.getPID)()),
-                                  (0, m.Ws)(i.type, {
-                                      type: m.Qu.KEYBIND_HINT,
-                                      value: m.bk.OVERLAY_UNLOCKED,
+                                  (f.Z.setInputLocked(!1, (0, m.getPID)()),
+                                  (0, g.Ws)(i.type, {
+                                      type: g.Qu.KEYBIND_HINT,
+                                      value: g.bk.OVERLAY_UNLOCKED,
                                   }));
                           },
-                          children: (0, r.jsx)(c.Text, {
+                          children: (0, r.jsx)(u.Text, {
                               variant: "text-xs/semibold",
                               color: "header-primary",
                               children: o(),
                           }),
                       }),
                   }),
-                  (0, r.jsx)("div", { className: O.extrasEmptySpace }),
+                  (0, r.jsx)("div", { className: v.extrasEmptySpace }),
               ],
           })
         : (0, r.jsx)("div", {
-              className: O.titleWrapper,
-              children: (0, r.jsx)(c.Text, {
+              className: v.titleWrapper,
+              children: (0, r.jsx)(u.Text, {
                   variant: "text-xs/semibold",
                   color: "header-primary",
                   children: t,
               }),
           });
 }
-function L(e) {
+function P(e) {
     let { onClick: t } = e;
-    if ((0, s.e7)([p.default], () => p.default.isLocked((0, h.getPID)()))) return null;
-    let n = y.intl.string(y.t["3D5yo6"]);
-    return (0, r.jsx)(c.ua7, {
-        "data-migration-pending": !0,
+    if ((0, s.e7)([h.default], () => h.default.isLocked((0, m.getPID)()))) return null;
+    let n = O.intl.string(O.t["3D5yo6"]);
+    return (0, r.jsx)(c.u, {
         text: n,
         "aria-label": n,
-        children: (e) =>
-            (0, r.jsx)(
-                c.P3F,
-                S(I({}, e), {
-                    className: O.button,
-                    onClick: t,
-                    children: (0, r.jsx)(c.ewm, {
-                        size: "xxs",
-                        color: l.Z.colors.INTERACTIVE_ACTIVE,
-                    }),
-                }),
-            ),
+        children: (0, r.jsx)(u.P3F, {
+            className: v.button,
+            onClick: t,
+            children: (0, r.jsx)(u.ewm, {
+                size: "xxs",
+                color: l.Z.colors.INTERACTIVE_ACTIVE,
+            }),
+        }),
     });
 }
-function x(e) {
+function w(e) {
     let { widgetId: t, showAllStreams: n } = e,
-        i = n ? y.intl.string(y.t.q2B3rq) : y.intl.string(y.t.JKGi6u),
+        i = n ? O.intl.string(O.t.q2B3rq) : O.intl.string(O.t.JKGi6u),
         a = () => {
-            (0, u.zG)(t, { showAllStreams: !n });
+            (0, d.zG)(t, { showAllStreams: !n });
         };
-    return (0, s.e7)([p.default], () => p.default.isLocked((0, h.getPID)()))
+    return (0, s.e7)([h.default], () => h.default.isLocked((0, m.getPID)()))
         ? null
-        : (0, r.jsx)(c.ua7, {
-              "data-migration-pending": !0,
+        : (0, r.jsx)(c.u, {
               text: i,
               "aria-label": i,
-              children: (e) =>
-                  (0, r.jsx)(
-                      c.P3F,
-                      S(I({}, e), {
-                          className: o()(O.button, n && O.active),
-                          onClick: a,
-                          children: (0, r.jsx)(c.pzj, {
-                              size: "xxs",
-                              color: n ? l.Z.colors.BG_BRAND : l.Z.colors.INTERACTIVE_ACTIVE,
-                          }),
-                      }),
-                  ),
+              children: (0, r.jsx)(u.P3F, {
+                  className: o()(v.button, n && v.active),
+                  onClick: a,
+                  children: (0, r.jsx)(u.pzj, {
+                      size: "xxs",
+                      color: n ? l.Z.colors.BG_BRAND : l.Z.colors.INTERACTIVE_ACTIVE,
+                  }),
+              }),
           });
 }
-function M(e) {
+function D(e) {
     let { id: t, pinned: n } = e,
-        i = n ? y.intl.string(y.t.cSu80t) : y.intl.string(y.t.cM8Vnp),
-        a = (0, s.e7)([p.default], () => p.default.isLocked((0, h.getPID)()));
-    return (0, r.jsx)(c.ua7, {
-        "data-migration-pending": !0,
+        i = n ? O.intl.string(O.t.cSu80t) : O.intl.string(O.t.cM8Vnp),
+        a = (0, s.e7)([h.default], () => h.default.isLocked((0, m.getPID)()));
+    return (0, r.jsx)(c.u, {
         text: i,
         "aria-label": i,
-        children: (e) =>
-            (0, r.jsx)(
-                "div",
-                S(I({}, e), {
-                    children: (0, r.jsx)(c.P3F, {
-                        className: o()(O.button, n && O.active),
-                        onClick: () => {
-                            a || (0, u.xh)(t);
-                        },
-                        children: (0, r.jsx)(c.k5M, {
-                            size: "xxs",
-                            color: n ? l.Z.colors.BG_BRAND : l.Z.colors.INTERACTIVE_ACTIVE,
-                        }),
-                    }),
-                }),
-            ),
+        asContainer: !0,
+        children: (0, r.jsx)(u.P3F, {
+            className: o()(v.button, n && v.active),
+            onClick: () => {
+                a || (0, d.xh)(t);
+            },
+            children: (0, r.jsx)(u.k5M, {
+                size: "xxs",
+                color: n ? l.Z.colors.BG_BRAND : l.Z.colors.INTERACTIVE_ACTIVE,
+            }),
+        }),
     });
 }

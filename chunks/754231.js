@@ -19,31 +19,30 @@ var r = n(951288),
 let O = p.u8.SIZE_24;
 function v(e) {
     var t, n;
-    let { activity: l, user: o, embeddedApp: a, onOpenSpotifyAlbum: s } = e,
-        d = null == l ? void 0 : l.assets,
-        p = null == l ? void 0 : l.application_id;
-    if (null == l || null == d || (null == d.large_image && null == d.small_image))
-        if (null == a) return null;
+    let { activity: i, user: l, embeddedApp: o, onOpenSpotifyAlbum: a } = e,
+        d = null == i ? void 0 : i.assets,
+        p = null == i ? void 0 : i.application_id;
+    if (null == i || null == d || (null == d.large_image && null == d.small_image))
+        if (null == o) return null;
         else {
             let e = m.ZP.getApplicationIconURL({
-                    id: a.application.id,
-                    icon: a.application.icon,
+                    id: o.application.id,
+                    icon: o.application.icon,
                 }),
-                t = a.application.name;
-            return (0, r.jsx)(c.ua7, {
-                "data-migration-pending": !0,
+                t = o.application.name;
+            return (0, r.jsx)(s.u, {
                 text: t,
                 position: "top",
-                children: () =>
-                    (0, r.jsx)("img", {
-                        alt: t,
-                        src: e,
-                        className: y.applicationLargeImage,
-                    }),
+                asContainer: !0,
+                children: (0, r.jsx)("img", {
+                    alt: t,
+                    src: e,
+                    className: y.applicationLargeImage,
+                }),
             });
         }
     let h = null != (t = d.large_image) ? t : d.small_image,
-        f = (0, u.Z)(l),
+        f = (0, u.Z)(i),
         b = f ? y.spotifyLargeImage : y.applicationLargeImage,
         _ =
             null != h
@@ -53,44 +52,18 @@ function v(e) {
                       className: b,
                   })
                 : null;
-    return f && null != s
+    return f && null != a
         ? ((_ = (0, r.jsx)(c.P3F, {
               className: y.clickable,
               onClick: () => {
-                  s(l, o.id);
+                  a(i, l.id);
               },
               children: _,
           })),
-          (0, r.jsx)(c.ua7, {
+          (0, r.jsx)(s.u, {
               text: null != d.large_text ? d.large_text : null,
               position: "top",
-              children: (e) => {
-                  let { onClick: t } = e,
-                      n = (function (e, t) {
-                          if (null == e) return {};
-                          var n,
-                              r,
-                              i = (function (e, t) {
-                                  if (null == e) return {};
-                                  var n,
-                                      r,
-                                      i = {},
-                                      l = Object.keys(e);
-                                  for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                                  return i;
-                              })(e, t);
-                          if (Object.getOwnPropertySymbols) {
-                              var l = Object.getOwnPropertySymbols(e);
-                              for (r = 0; r < l.length; r++)
-                                  (n = l[r]),
-                                      !(t.indexOf(n) >= 0) &&
-                                          Object.prototype.propertyIsEnumerable.call(e, n) &&
-                                          (i[n] = e[n]);
-                          }
-                          return i;
-                      })(e, ["onClick"]);
-                  return null != _ ? i.cloneElement(_, n) : null;
-              },
+              children: _,
           }))
         : _;
 }

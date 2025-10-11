@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ee }), n(388685);
+n.d(t, { Z: () => X }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -35,59 +35,7 @@ var r = n(951288),
     j = n(119475),
     k = n(388032),
     U = n(461917);
-function G(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function B(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                G(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function Z(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function F(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : Z(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function V(e) {
+function G(e) {
     let [t, n] = i.useState(0),
         [r, a] = i.useState(!1),
         o = i.useRef(e);
@@ -101,7 +49,7 @@ function V(e) {
         }
     );
 }
-function H(e) {
+function B(e) {
     let { markAsDismissed: t } = e;
     return (0, r.jsx)("div", {
         className: U.closeButton,
@@ -113,7 +61,7 @@ function H(e) {
         }),
     });
 }
-function Y() {
+function Z() {
     return (0, r.jsxs)("div", {
         className: U.headerContainer,
         children: [
@@ -130,19 +78,19 @@ function Y() {
                     colorClass: U.nitroIcon,
                 }),
             }),
-            (0, r.jsx)(H, {}),
+            (0, r.jsx)(B, {}),
         ],
     });
 }
-function W(e) {
+function F(e) {
     let { markAsDismissed: t, isCoachmark: n } = e;
     return (0, E.Nj)(l.z.CUSTOM_THEME_COACHMARK)
         ? n
-            ? (0, r.jsx)(K, { markAsDismissed: t })
-            : (0, r.jsx)(Y, {})
-        : (0, r.jsx)(K, { markAsDismissed: () => (0, E.Q3)(l.z.CUSTOM_THEME_COACHMARK) });
+            ? (0, r.jsx)(V, { markAsDismissed: t })
+            : (0, r.jsx)(Z, {})
+        : (0, r.jsx)(V, { markAsDismissed: () => (0, E.Q3)(l.z.CUSTOM_THEME_COACHMARK) });
 }
-function K(e) {
+function V(e) {
     let { markAsDismissed: t } = e,
         n = (0, O.m)(M.PremiumTypes.TIER_2);
     return (0, r.jsxs)("div", {
@@ -152,7 +100,7 @@ function K(e) {
                 className: U.badgeAndCloseRow,
                 children: [
                     (0, r.jsx)(f.lBU, { text: k.intl.string(k.t.oW0eUV) }),
-                    (0, r.jsx)(H, { markAsDismissed: t }),
+                    (0, r.jsx)(B, { markAsDismissed: t }),
                 ],
             }),
             (0, r.jsxs)("div", {
@@ -173,9 +121,9 @@ function K(e) {
         ],
     });
 }
-function z(e) {
+function H(e) {
     let { gradientAngle: t, setGradientAngle: n } = e,
-        { key: i, handleInternalChange: a } = V(t);
+        { key: i, handleInternalChange: a } = G(t);
     return (0, r.jsxs)("div", {
         className: o()(U.sliderContainer, U.gradientDirectionSliderContainer),
         children: [
@@ -201,9 +149,9 @@ function z(e) {
         ],
     });
 }
-function q(e) {
+function Y(e) {
     let { chassisMixAmount: t, setChassisMixAmount: n } = e,
-        { key: i, handleInternalChange: a } = V(t);
+        { key: i, handleInternalChange: a } = G(t);
     return (0, r.jsxs)("div", {
         className: U.sliderContainer,
         children: [
@@ -228,7 +176,7 @@ function q(e) {
         ],
     });
 }
-function X(e) {
+function W(e) {
     let { type: t } = e,
         n = i.useCallback(() => {
             var e;
@@ -240,37 +188,30 @@ function X(e) {
                 chassisMixAmount: t.intensity,
             });
         }, []);
-    return (0, r.jsx)(f.ua7, {
-        "data-migration-pending": !0,
+    return (0, r.jsx)(c.u, {
         text: k.intl.string(j.default.c9MBEB),
-        children: (e) =>
+        children:
             "with-text" === t
-                ? (0, r.jsx)(
-                      u.zxk,
-                      F(B({}, e), {
-                          variant: "secondary",
-                          onClick: n,
-                          icon: f.T$Z,
-                          text: k.intl.string(j.default.c9MBEB),
-                          fullWidth: !0,
-                      }),
-                  )
+                ? (0, r.jsx)(u.zxk, {
+                      variant: "secondary",
+                      onClick: n,
+                      icon: f.T$Z,
+                      text: k.intl.string(j.default.c9MBEB),
+                      fullWidth: !0,
+                  })
                 : (0, r.jsx)("div", {
                       className: U.surpriseMeButton,
-                      children: (0, r.jsx)(
-                          u.hU,
-                          F(B({}, e), {
-                              variant: "icon-only",
-                              size: "md",
-                              onClick: n,
-                              icon: f.T$Z,
-                              "aria-label": k.intl.string(j.default.c9MBEB),
-                          }),
-                      ),
+                      children: (0, r.jsx)(u.hU, {
+                          variant: "icon-only",
+                          size: "md",
+                          onClick: n,
+                          icon: f.T$Z,
+                          "aria-label": k.intl.string(j.default.c9MBEB),
+                      }),
                   }),
     });
 }
-function Q(e) {
+function K(e) {
     let { onApply: t, disabled: n, fullWidth: i } = e;
     return (0, r.jsx)(c.u, {
         text: k.intl.string(j.default.SFyHIC),
@@ -284,7 +225,7 @@ function Q(e) {
         }),
     });
 }
-function J(e) {
+function z(e) {
     let { onSaveTheme: t, canApply: n } = e,
         i = (0, O.m)(M.PremiumTypes.TIER_2);
     return (
@@ -292,9 +233,9 @@ function J(e) {
         (0, r.jsxs)("div", {
             className: U.coachmarkFooterContainer,
             children: [
-                (0, r.jsx)(X, { type: "with-text" }),
+                (0, r.jsx)(W, { type: "with-text" }),
                 i
-                    ? (0, r.jsx)(Q, {
+                    ? (0, r.jsx)(K, {
                           disabled: !n,
                           onApply: t,
                           fullWidth: !0,
@@ -313,7 +254,7 @@ function J(e) {
         })
     );
 }
-function $(e) {
+function q(e) {
     let { onSaveTheme: t, canApply: n, metadata: i } = e,
         a = (0, O.m)(M.PremiumTypes.TIER_2);
     (0, P.hf)(a, h.Z.CUSTOM_THEMES_EDITOR);
@@ -329,14 +270,14 @@ function $(e) {
     return (0, r.jsxs)("div", {
         className: U.footerContainer,
         children: [
-            (0, r.jsx)(X, { type: "no-text" }),
+            (0, r.jsx)(W, { type: "no-text" }),
             (0, r.jsx)(u.Avr, {
                 variant: "secondary",
                 onClick: o,
                 text: k.intl.string(k.t["13/7kZ"]),
             }),
             a
-                ? (0, r.jsx)(Q, {
+                ? (0, r.jsx)(K, {
                       disabled: !n,
                       onApply: t,
                   })
@@ -354,7 +295,7 @@ function $(e) {
         ],
     });
 }
-function ee(e) {
+function X(e) {
     var t;
     let { metadata: n, markAsDismissed: a, isCoachmark: c, isMobile: d } = e,
         b = R.Mc.useExperiment({ location: "ClientThemeColorPickerTools" }).enabled,
@@ -370,9 +311,9 @@ function ee(e) {
         } = (0, A.Ig)(),
         [G, B] = i.useState(null != (t = T[0]) ? t : A.Dp),
         Z = (0, s.e7)([I.Z], () => I.Z.theme),
-        F = (0, E.Nj)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
-        { analyticsLocations: V } = (0, m.ZP)(h.Z.CUSTOM_THEMES_EDITOR),
-        H = async () => {
+        V = (0, E.Nj)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
+        { analyticsLocations: W } = (0, m.ZP)(h.Z.CUSTOM_THEMES_EDITOR),
+        K = async () => {
             (O.current = !0),
                 await (0, _.ZI)({
                     theme: Z,
@@ -383,16 +324,16 @@ function ee(e) {
                         baseMix: S,
                     },
                 }),
-                (0, P.u7)(T, S, C, Z, V),
+                (0, P.u7)(T, S, C, Z, W),
                 null == a || a(x.L.TAKE_ACTION),
-                F || (0, E.Q3)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
+                V || (0, E.Q3)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
                 (0, g.Ll)(),
                 (0, v.UD)();
         },
-        Y = () => {
+        X = () => {
             y(N._m.RESET_BUTTON), (0, P.uf)();
         },
-        K = T.length > 0;
+        Q = T.length > 0;
     return (i.useEffect(
         () => () => {
             O.current || y(N._m.EDITOR_CLOSE);
@@ -413,7 +354,7 @@ function ee(e) {
                           children: (0, r.jsxs)("div", {
                               className: o()(U.editorBody, { [U.mobileEditorBody]: d }),
                               children: [
-                                  (0, r.jsx)(W, {
+                                  (0, r.jsx)(F, {
                                       markAsDismissed: a,
                                       isCoachmark: c,
                                   }),
@@ -427,11 +368,11 @@ function ee(e) {
                                       setColors: L,
                                   }),
                                   T.length > 1 &&
-                                      (0, r.jsx)(z, {
+                                      (0, r.jsx)(H, {
                                           gradientAngle: C,
                                           setGradientAngle: j,
                                       }),
-                                  (0, r.jsx)(q, {
+                                  (0, r.jsx)(Y, {
                                       chassisMixAmount: S,
                                       setChassisMixAmount: (e) => {
                                           M(e), 0 === T.length && (0, N.lT)(T, G, L);
@@ -439,7 +380,7 @@ function ee(e) {
                                   }),
                                   (0, r.jsx)(u.zxk, {
                                       variant: "secondary",
-                                      onClick: Y,
+                                      onClick: X,
                                       icon: f.Oe7,
                                       text: k.intl.string(k.t.yBZMsb),
                                       fullWidth: !0,
@@ -448,13 +389,13 @@ function ee(e) {
                           }),
                       }),
                       c
-                          ? (0, r.jsx)(J, {
-                                onSaveTheme: H,
-                                canApply: K,
+                          ? (0, r.jsx)(z, {
+                                onSaveTheme: K,
+                                canApply: Q,
                             })
-                          : (0, r.jsx)($, {
-                                onSaveTheme: H,
-                                canApply: K,
+                          : (0, r.jsx)(q, {
+                                onSaveTheme: K,
+                                canApply: Q,
                                 metadata: n,
                             }),
                   ],

@@ -37,6 +37,7 @@ function O(e) {
     let { channel: t, onClick: n, beforeTransition: s, className: l, openChatWithoutConnecting: d } = e,
         f = (0, i.e7)([m.default, h.Z], () => (null == t ? "" : (0, c.F6)(t, m.default, h.Z)), [t]);
     return (0, r.jsx)(a.u, {
+        "data-pending-richtooltip-migration": !0,
         __unsupportedReactNodeAsText: f,
         position: "top",
         children: (0, r.jsx)(u.Z, {

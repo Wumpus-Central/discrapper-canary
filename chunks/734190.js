@@ -1,35 +1,36 @@
-n.d(t, { Z: () => M });
+n.d(t, { Z: () => k });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     o = n.n(l),
     a = n(91192),
     s = n(442837),
-    c = n(481060),
-    u = n(493683),
-    d = n(239091),
-    p = n(99690),
-    h = n(471445),
-    f = n(111028),
-    g = n(569471),
-    m = n(488131),
-    b = n(592125),
-    _ = n(306680),
-    y = n(594174),
-    O = n(979651),
-    v = n(938475),
-    j = n(990734),
-    x = n(714794),
-    C = n(876548),
-    E = n(25601),
-    S = n(207055),
-    I = n(981631),
-    P = n(124368),
-    N = n(388032),
-    Z = n(55940),
-    w = n(509612),
-    T = n(113914);
-function A(e) {
+    c = n(28664),
+    u = n(481060),
+    d = n(493683),
+    p = n(239091),
+    h = n(99690),
+    f = n(471445),
+    g = n(111028),
+    m = n(569471),
+    b = n(488131),
+    _ = n(592125),
+    y = n(306680),
+    O = n(594174),
+    v = n(979651),
+    j = n(938475),
+    x = n(990734),
+    C = n(714794),
+    E = n(876548),
+    S = n(25601),
+    I = n(207055),
+    P = n(981631),
+    N = n(124368),
+    Z = n(388032),
+    w = n(55940),
+    T = n(509612),
+    A = n(113914);
+function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,7 +55,7 @@ function A(e) {
     }
     return e;
 }
-function R(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -72,18 +73,18 @@ function R(e, t) {
         e
     );
 }
-function D(e) {
+function L(e) {
     let { style: t, withGuildIcon: n, inverted: i } = e,
         l = {
-            className: o()(T.spine, { [T.spineWithGuildIcon]: n }, { [T.invertedSpine]: i }),
+            className: o()(A.spine, { [A.spineWithGuildIcon]: n }, { [A.invertedSpine]: i }),
             style: t,
         },
-        { density: a } = (0, c.TCT)();
+        { density: a } = (0, u.TCT)();
     switch (a) {
         case "cozy":
             return (0, r.jsxs)(
                 "svg",
-                R(A({}, l), {
+                D(R({}, l), {
                     width: "10",
                     height: "20",
                     viewBox: "0 0 10 20",
@@ -104,7 +105,7 @@ function D(e) {
         case "compact":
             return (0, r.jsxs)(
                 "svg",
-                R(A({}, l), {
+                D(R({}, l), {
                     width: "10",
                     height: "19",
                     viewBox: "0 0 10 19",
@@ -125,7 +126,7 @@ function D(e) {
         default:
             return (0, r.jsxs)(
                 "svg",
-                R(A({}, l), {
+                D(R({}, l), {
                     width: "10",
                     height: "19",
                     viewBox: "0 0 10 19",
@@ -145,64 +146,60 @@ function D(e) {
             );
     }
 }
-function L(e) {
+function M(e) {
     let { thread: t } = e,
         n = i.useMemo(() => {
             var e;
-            return null != (e = (0, h.KS)(t)) ? e : c.or_;
+            return null != (e = (0, f.KS)(t)) ? e : u.or_;
         }, [t]),
-        l = (0, h.bT)(t);
-    return (0, r.jsx)(c.ua7, {
-        "data-migration-pending": !0,
+        l = (0, f.bT)(t);
+    return (0, r.jsx)(c.u, {
         text: l,
         delay: 500,
-        children: (e) =>
-            (0, r.jsx)(
-                "div",
-                R(A({}, e), {
-                    role: "img",
-                    "aria-label": "".concat(l, " icon"),
-                    className: w.iconContainer,
-                    children: (0, r.jsx)(n, {
-                        className: w.icon,
-                        color: "currentColor",
-                    }),
-                }),
-            ),
+        asContainer: !0,
+        children: (0, r.jsx)("div", {
+            role: "img",
+            "aria-label": "".concat(l, " icon"),
+            className: T.iconContainer,
+            children: (0, r.jsx)(n, {
+                className: T.icon,
+                color: "currentColor",
+            }),
+        }),
     });
 }
-let M = i.memo(function (e) {
-    let { thread: t, isSelectedChannel: l, isSelectedVoice: h, isLast: T, withGuildIcon: M } = e,
-        k = (0, s.e7)([v.ZP], () => v.ZP.getVoiceStatesForChannel(t), [t]),
-        U = (0, s.e7)([O.Z], () => O.Z.hasVideo(t.id)),
+let k = i.memo(function (e) {
+    let { thread: t, isSelectedChannel: l, isSelectedVoice: c, isLast: f, withGuildIcon: A } = e,
+        k = (0, s.e7)([j.ZP], () => j.ZP.getVoiceStatesForChannel(t), [t]),
+        U = (0, s.e7)([v.Z], () => v.Z.hasVideo(t.id)),
         {
             unread: G,
             mentionCount: B,
             isMentionLowImportance: F,
-        } = (0, s.cj)([_.ZP], () => ({
-            unread: _.ZP.hasUnread(t.id),
-            mentionCount: _.ZP.getMentionCount(t.id),
-            isMentionLowImportance: _.ZP.getIsMentionLowImportance(t.id),
+        } = (0, s.cj)([y.ZP], () => ({
+            unread: y.ZP.hasUnread(t.id),
+            mentionCount: y.ZP.getMentionCount(t.id),
+            isMentionLowImportance: y.ZP.getIsMentionLowImportance(t.id),
         })),
-        V = (0, s.e7)([g.Z], () => g.Z.isMuted(t.id)),
-        H = (0, j.p)({ location: "GuildSidebarThreadListEntry" }),
-        z = (0, s.e7)([y.default], () => y.default.getUser(t.ownerId)),
+        V = (0, s.e7)([m.Z], () => m.Z.isMuted(t.id)),
+        H = (0, x.p)({ location: "GuildSidebarThreadListEntry" }),
+        z = (0, s.e7)([O.default], () => O.default.getUser(t.ownerId)),
         W = i.useCallback(
             (e) => {
-                (0, m.ok)(t, !e.shiftKey, P.on.CHANNEL_LIST);
+                (0, b.ok)(t, !e.shiftKey, N.on.CHANNEL_LIST);
             },
             [t],
         ),
         K = i.useCallback(() => {
-            u.Z.preload(t.guild_id, t.id);
+            d.Z.preload(t.guild_id, t.id);
         }, [t.guild_id, t.id]),
         Y = i.useCallback(
             (e) => {
-                let i = b.Z.getChannel(t.id);
+                let i = _.Z.getChannel(t.id);
                 null != i &&
-                    (0, d.jW)(e, async () => {
+                    (0, p.jW)(e, async () => {
                         let { default: e } = await n.e("40157").then(n.bind(n, 422200));
-                        return (t) => (0, r.jsx)(e, R(A({}, t), { channel: i }));
+                        return (t) => (0, r.jsx)(e, D(R({}, t), { channel: i }));
                     });
             },
             [t.id],
@@ -234,26 +231,26 @@ let M = i.memo(function (e) {
         $ = i.useRef(null),
         ee =
             B > 0
-                ? N.intl.formatToPlainString(N.t["ZL7+Iy"], {
+                ? Z.intl.formatToPlainString(Z.t["ZL7+Iy"], {
                       channelName: t.name,
                       mentionCount: B,
                   })
                 : G
-                  ? N.intl.formatToPlainString(N.t.YlVvmZ, { channelName: t.name })
-                  : N.intl.formatToPlainString(N.t["0nZpiI"], { channelName: t.name });
+                  ? Z.intl.formatToPlainString(Z.t.YlVvmZ, { channelName: t.name })
+                  : Z.intl.formatToPlainString(Z.t["0nZpiI"], { channelName: t.name });
     return (0, r.jsxs)("li", {
         role: Q,
-        className: o()(Z.containerDefault, { [Z.selected]: l }),
+        className: o()(w.containerDefault, { [w.selected]: l }),
         children: [
-            (0, r.jsx)(D, { withGuildIcon: M }),
-            T
+            (0, r.jsx)(L, { withGuildIcon: A }),
+            f
                 ? null
-                : (0, r.jsx)(D, {
-                      withGuildIcon: M,
+                : (0, r.jsx)(L, {
+                      withGuildIcon: A,
                       inverted: !0,
                       style: { transform: "rotateX(180deg) translateY(-9px)" },
                   }),
-            (0, r.jsx)(c.tEY, {
+            (0, r.jsx)(u.tEY, {
                 focusTarget: $,
                 ringTarget: $,
                 offset: {
@@ -262,62 +259,62 @@ let M = i.memo(function (e) {
                     right: 4,
                 },
                 children: (0, r.jsxs)("div", {
-                    className: o()(Z.iconVisibility, w.wrapper, w.typeThread, {
-                        [w.modeSelected]: l,
-                        [w.modeMuted]: !l && V,
-                        [w.modeUnreadImportant]: !V && !l && G,
-                        [w.withGuildIcon]: M,
-                        [w.threadsInChannelListQoLExperiment]: H.enabled,
-                        [w.withThreadAvatar]: "icon-with-avatar" === H.variant,
-                        [w.withThreadIconInBubble]: "icon-in-bubble" === H.variant,
+                    className: o()(w.iconVisibility, T.wrapper, T.typeThread, {
+                        [T.modeSelected]: l,
+                        [T.modeMuted]: !l && V,
+                        [T.modeUnreadImportant]: !V && !l && G,
+                        [T.withGuildIcon]: A,
+                        [T.threadsInChannelListQoLExperiment]: H.enabled,
+                        [T.withThreadAvatar]: "icon-with-avatar" === H.variant,
+                        [T.withThreadIconInBubble]: "icon-in-bubble" === H.variant,
                     }),
                     onMouseDown: K,
                     onContextMenu: Y,
                     children: [
-                        !G || V || l ? null : (0, r.jsx)("div", { className: o()(w.unread, w.unreadImportant) }),
+                        !G || V || l ? null : (0, r.jsx)("div", { className: o()(T.unread, T.unreadImportant) }),
                         (0, r.jsx)(
-                            c.P3F,
-                            R(A({}, J), {
+                            u.P3F,
+                            D(R({}, J), {
                                 innerRef: $,
-                                className: w.link,
+                                className: T.link,
                                 onClick: W,
                                 "aria-label": ee,
                                 focusProps: { enabled: !1 },
                                 children: (0, r.jsxs)("div", {
-                                    className: o()(w.linkTop, w.__invalid_threadMainContent),
+                                    className: o()(T.linkTop, T.__invalid_threadMainContent),
                                     children: [
                                         "icon-with-avatar" === H.variant
                                             ? (0, r.jsxs)("div", {
-                                                  className: w.threadIconWithAvatar,
+                                                  className: T.threadIconWithAvatar,
                                                   children: [
-                                                      (0, r.jsx)(L, { thread: t }),
+                                                      (0, r.jsx)(M, { thread: t }),
                                                       null == z
                                                           ? null
-                                                          : (0, r.jsx)(p.Z, {
+                                                          : (0, r.jsx)(h.Z, {
                                                                 user: z,
-                                                                size: c.EFr.SIZE_16,
+                                                                size: u.EFr.SIZE_16,
                                                             }),
                                                   ],
                                               })
                                             : null,
-                                        "icon-in-bubble" === H.variant ? (0, r.jsx)(L, { thread: t }) : null,
-                                        (0, r.jsx)(f.Z, {
-                                            className: w.name,
+                                        "icon-in-bubble" === H.variant ? (0, r.jsx)(M, { thread: t }) : null,
+                                        (0, r.jsx)(g.Z, {
+                                            className: T.name,
                                             "aria-hidden": !0,
                                             children: t.name,
                                         }),
                                         (0, r.jsxs)("div", {
-                                            className: w.children,
+                                            className: T.children,
                                             children: [
                                                 q > 0 && t.userLimit > 0
-                                                    ? (0, r.jsx)(C.Z, {
+                                                    ? (0, r.jsx)(E.Z, {
                                                           userCount: q,
                                                           video: U,
                                                           channel: t,
                                                       })
                                                     : null,
-                                                (0, x.Z)(B)
-                                                    ? (0, r.jsx)(E.Z, {
+                                                (0, C.Z)(B)
+                                                    ? (0, r.jsx)(S.Z, {
                                                           mentionsCount: B,
                                                           isMentionLowImportance: F,
                                                       })
@@ -331,12 +328,12 @@ let M = i.memo(function (e) {
                     ],
                 }),
             }),
-            (0, r.jsx)(S.Z, {
+            (0, r.jsx)(I.Z, {
                 channel: t,
-                collapsed: !h,
+                collapsed: !c,
                 collapsedMax: 6,
                 voiceStates: k,
-                location: I.Sbl.GUILD_CHANNEL_LIST,
+                location: P.Sbl.GUILD_CHANNEL_LIST,
             }),
         ],
     });

@@ -1,38 +1,39 @@
-n.d(t, { Z: () => c }), n(953529);
+n.d(t, { Z: () => d }), n(953529);
 var i = n(951288);
 n(647438);
 var r = n(120356),
     l = n.n(r),
-    a = n(481060),
-    o = n(388032),
-    s = n(961174);
-function c(e) {
+    a = n(28664),
+    o = n(481060),
+    s = n(388032),
+    c = n(961174);
+function d(e) {
     let {
         name: t,
         description: n,
         icon: r,
-        imageSrc: c,
-        iconBackgroundColor: d,
-        iconClassName: u,
-        iconWrapperClassName: p,
-        details: m,
-        detailsClassName: b,
-        isHeader: g,
-        isPremium: f,
-        children: h,
+        imageSrc: d,
+        iconBackgroundColor: u,
+        iconClassName: p,
+        iconWrapperClassName: m,
+        details: b,
+        detailsClassName: g,
+        isHeader: f,
+        isPremium: h,
+        children: x,
     } = e;
-    return (0, i.jsxs)(a.Kqy, {
+    return (0, i.jsxs)(o.Kqy, {
         direction: "horizontal",
         fullWidth: !0,
         gap: 16,
         children: [
-            null != r || null != c
+            null != r || null != d
                 ? (function (e, t, n, r, a) {
                       if (null != t)
                           return (0, i.jsx)("img", {
                               alt: "",
                               src: t,
-                              className: l()(s.iconWrapper, r),
+                              className: l()(c.iconWrapper, r),
                           });
                       let o = null;
                       return (
@@ -42,26 +43,26 @@ function c(e) {
                                       ? (0, i.jsx)("img", {
                                             alt: "",
                                             src: e,
-                                            className: l()(s.icon, r),
+                                            className: l()(c.icon, r),
                                         })
                                       : (0, i.jsx)(e, {
-                                            className: l()(s.icon, r),
+                                            className: l()(c.icon, r),
                                             color: "currentColor",
                                         })),
                           (0, i.jsx)("div", {
                               style: { backgroundColor: n },
-                              className: l()(s.iconWrapper, a),
+                              className: l()(c.iconWrapper, a),
                               children: o,
                           })
                       );
-                  })(r, c, d, u, p)
+                  })(r, d, u, p, m)
                 : null,
-            (0, i.jsxs)(a.Kqy, {
+            (0, i.jsxs)(o.Kqy, {
                 justify: "center",
                 children: [
                     (function (e) {
-                        let { name: t, description: n, details: r, detailsClassName: c, isHeader: d, isPremium: u } = e,
-                            p =
+                        let { name: t, description: n, details: r, detailsClassName: d, isHeader: u, isPremium: p } = e,
+                            m =
                                 null == r
                                     ? void 0
                                     : r.map((e, t) => {
@@ -69,19 +70,19 @@ function c(e) {
                                           return (0, i.jsxs)(
                                               "div",
                                               {
-                                                  className: l()(s.detailsWrapper, d ? s.headerDetailsWrapper : null),
+                                                  className: l()(c.detailsWrapper, u ? c.headerDetailsWrapper : null),
                                                   children: [
                                                       null != n
                                                           ? (0, i.jsx)(n, {
                                                                 size: "xs",
                                                                 color: "currentColor",
-                                                                className: s.detailsIcon,
+                                                                className: c.detailsIcon,
                                                             })
                                                           : null,
-                                                      (0, i.jsx)(a.Text, {
+                                                      (0, i.jsx)(o.Text, {
                                                           variant: "text-xs/normal",
                                                           color: "header-secondary",
-                                                          className: c,
+                                                          className: d,
                                                           children: r,
                                                       }),
                                                   ],
@@ -89,106 +90,47 @@ function c(e) {
                                               t,
                                           );
                                       });
-                        return (0, i.jsxs)(a.Kqy, {
+                        return (0, i.jsxs)(o.Kqy, {
                             gap: 0,
                             children: [
-                                (0, i.jsxs)(a.Heading, {
-                                    variant: d ? "heading-xl/semibold" : "heading-md/medium",
-                                    className: d ? s.header : s.secondaryHeader,
+                                (0, i.jsxs)(o.Heading, {
+                                    variant: u ? "heading-xl/semibold" : "heading-md/medium",
+                                    className: u ? c.header : c.secondaryHeader,
                                     children: [
                                         t,
-                                        u &&
-                                            (0, i.jsx)(a.ua7, {
-                                                "data-migration-pending": !0,
-                                                text: o.intl.string(o.t.VFuFur),
-                                                children: (e) => {
-                                                    var t, n;
-                                                    return (0, i.jsx)(
-                                                        a.Prq,
-                                                        ((t = (function (e) {
-                                                            for (var t = 1; t < arguments.length; t++) {
-                                                                var n = null != arguments[t] ? arguments[t] : {},
-                                                                    i = Object.keys(n);
-                                                                "function" == typeof Object.getOwnPropertySymbols &&
-                                                                    (i = i.concat(
-                                                                        Object.getOwnPropertySymbols(n).filter(
-                                                                            function (e) {
-                                                                                return Object.getOwnPropertyDescriptor(
-                                                                                    n,
-                                                                                    e,
-                                                                                ).enumerable;
-                                                                            },
-                                                                        ),
-                                                                    )),
-                                                                    i.forEach(function (t) {
-                                                                        var i;
-                                                                        (i = n[t]),
-                                                                            t in e
-                                                                                ? Object.defineProperty(e, t, {
-                                                                                      value: i,
-                                                                                      enumerable: !0,
-                                                                                      configurable: !0,
-                                                                                      writable: !0,
-                                                                                  })
-                                                                                : (e[t] = i);
-                                                                    });
-                                                            }
-                                                            return e;
-                                                        })(
-                                                            {
-                                                                size: "xs",
-                                                                color: "currentColor",
-                                                            },
-                                                            e,
-                                                        )),
-                                                        (n = n = { className: s.premiumIcon }),
-                                                        Object.getOwnPropertyDescriptors
-                                                            ? Object.defineProperties(
-                                                                  t,
-                                                                  Object.getOwnPropertyDescriptors(n),
-                                                              )
-                                                            : (function (e, t) {
-                                                                  var n = Object.keys(e);
-                                                                  if (Object.getOwnPropertySymbols) {
-                                                                      var i = Object.getOwnPropertySymbols(e);
-                                                                      n.push.apply(n, i);
-                                                                  }
-                                                                  return n;
-                                                              })(Object(n)).forEach(function (e) {
-                                                                  Object.defineProperty(
-                                                                      t,
-                                                                      e,
-                                                                      Object.getOwnPropertyDescriptor(n, e),
-                                                                  );
-                                                              }),
-                                                        t),
-                                                    );
-                                                },
+                                        p &&
+                                            (0, i.jsx)(a.u, {
+                                                text: s.intl.string(s.t.VFuFur),
+                                                children: (0, i.jsx)(o.Prq, {
+                                                    size: "xs",
+                                                    color: "currentColor",
+                                                    className: c.premiumIcon,
+                                                }),
                                             }),
                                     ],
                                 }),
                                 null != n
-                                    ? (0, i.jsx)(a.Text, {
+                                    ? (0, i.jsx)(o.Text, {
                                           variant: "text-sm/normal",
                                           color: "header-secondary",
                                           children: n,
                                       })
                                     : null,
-                                (0, i.jsx)(a.Kqy, {
+                                (0, i.jsx)(o.Kqy, {
                                     direction: "horizontal",
-                                    children: p,
+                                    children: m,
                                 }),
                             ],
                         });
                     })({
                         name: t,
                         description: n,
-                        details: m,
-                        detailsClassName: b,
-                        isHeader: g,
-                        isPremium: f,
+                        details: b,
+                        detailsClassName: g,
+                        isHeader: f,
+                        isPremium: h,
                     }),
-                    h,
+                    x,
                 ],
             }),
         ],
