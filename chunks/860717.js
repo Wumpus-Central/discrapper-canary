@@ -20,8 +20,8 @@ var r = n(951288),
     v = n(124347),
     y = n(929677),
     I = n(77498),
-    C = n(823379),
-    S = n(621853),
+    S = n(823379),
+    C = n(621853),
     T = n(750312),
     N = n(919498),
     j = n(388032),
@@ -389,12 +389,12 @@ function W(e, t) {
 }
 let Y = i.createContext(null);
 function q(e) {
-    return (0, o.cj)([p.Z, S.Z, I.Z], () => {
+    return (0, o.cj)([p.Z, C.Z, I.Z], () => {
         let t = p.Z.getApplication(e.applicationId);
         return {
             application: t,
             game: null != t ? I.Z.getGameByApplication(t) : null,
-            config: S.Z.getApplicationWidgetApplicationConfig(e.applicationId),
+            config: C.Z.getApplicationWidgetApplicationConfig(e.applicationId),
         };
     });
 }
@@ -463,8 +463,8 @@ let X = Object.assign(
                 sourceUserId: t.id,
                 trackEntryPointImpression: !0,
             }),
-            { loading: v, hasAlreadyLinked: I, canStartAuthorization: S, startAuthorization: N } = (0, d.FG)(u),
-            Z = null == o && !v && !I && S,
+            { fetched: v, hasAlreadyLinked: I, canStartAuthorization: C, startAuthorization: N } = (0, d.FG)(u),
+            Z = null == o && v && !I && C,
             L = (0, r.jsxs)(r.Fragment, {
                 children: [
                     null != m
@@ -520,7 +520,7 @@ let X = Object.assign(
                                           null == (i = e.profile) || null == (r = i.data) ? void 0 : r.primary,
                                       ),
                                   )
-                                      .filter(C.V5)
+                                      .filter(S.V5)
                                       .map((e) => {
                                           let [t, n] = e;
                                           if ("object" == typeof n) {
@@ -550,7 +550,7 @@ let X = Object.assign(
                                               ];
                                           return null;
                                       })
-                                      .filter(C.lm),
+                                      .filter(S.lm),
                               ),
                               config: t,
                           });

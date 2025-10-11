@@ -53,7 +53,7 @@ function f(e) {
 function h(e) {
     let { applicationId: t, size: n = "default" } = e,
         i = (0, c.q)(t),
-        { hasAlreadyLinked: l, canStartAuthorization: o, startAuthorization: u, loading: f } = (0, s.FG)(i);
+        { hasAlreadyLinked: l, canStartAuthorization: o, startAuthorization: u, fetched: f } = (0, s.FG)(i);
     return "default" !== n || null == i
         ? null
         : (0, r.jsxs)("div", {
@@ -64,12 +64,12 @@ function h(e) {
                       variant: "text-sm/medium",
                       color: "text-secondary",
                       children: f
-                          ? (0, r.jsx)("div", { className: p.footerPlaceholder })
-                          : l
-                            ? d.intl.format(d.t.wiyuGx, { applicationName: i.name })
-                            : o
-                              ? d.intl.format(d.t.RNWFOT, { onConnect: u })
-                              : d.intl.string(d.t["9TX4UV"]),
+                          ? l
+                              ? d.intl.format(d.t.wiyuGx, { applicationName: i.name })
+                              : o
+                                ? d.intl.format(d.t.RNWFOT, { onConnect: u })
+                                : d.intl.string(d.t["9TX4UV"])
+                          : (0, r.jsx)("div", { className: p.footerPlaceholder }),
                   }),
               ],
           });

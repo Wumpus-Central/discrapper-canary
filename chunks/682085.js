@@ -20,8 +20,8 @@ function E() {
     let { trackUserProfileEditAction: e } = (0, p.KZ)(),
         t = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
         { application: E, config: v } = (0, h.G)(),
-        { token: y, loading: I } = (0, c.o)(null == v ? void 0 : v.application_id),
-        C = i.useMemo(
+        { token: y, fetched: I } = (0, c.o)(null == v ? void 0 : v.application_id),
+        S = i.useMemo(
             () =>
                 (null == v ? void 0 : v.application_id) != null
                     ? new f.q({
@@ -31,7 +31,7 @@ function E() {
                     : null,
             [null == v ? void 0 : v.application_id],
         ),
-        S = i.useCallback(() => {
+        C = i.useCallback(() => {
             e({ action: "PRESS_ADD_WIDGET" }),
                 (0, s.ZDy)(
                     async () => {
@@ -85,7 +85,7 @@ function E() {
                     { stackingBehavior: "stack" },
                 );
         }, [e]);
-    if (null == t || null == E || null == C || I)
+    if (null == t || null == E || null == S || !I)
         return (0, r.jsx)("div", {
             className: O.loading,
             children: (0, r.jsx)(s.$jN, {}),
@@ -140,7 +140,7 @@ function E() {
                                 text: _.intl.string(_.t.lBG2s7),
                                 size: "md",
                                 color: "secondary",
-                                onClick: S,
+                                onClick: C,
                             }),
                         ],
                     });

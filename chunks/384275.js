@@ -24,6 +24,32 @@ let o = {
                         }),
                 );
     },
+    fetchByApplicationId(e) {
+        i.Z.dispatch({
+            type: "USER_AUTHORIZED_APPS_REQUEST_BY_ID",
+            applicationId: e,
+        }),
+            r.tn
+                .get({
+                    url: a.ANM.GET_APPLICATION_TOKENS(e),
+                    oldFormErrors: !0,
+                    rejectWithError: !0,
+                })
+                .then(
+                    (t) =>
+                        i.Z.dispatch({
+                            type: "USER_AUTHORIZED_APPS_UPDATE_BY_ID",
+                            tokens: t.body,
+                            applicationId: e,
+                        }),
+                    () =>
+                        i.Z.dispatch({
+                            type: "USER_AUTHORIZED_APPS_UPDATE_BY_ID",
+                            tokens: [],
+                            applicationId: e,
+                        }),
+                );
+    },
     delete(e) {
         r.tn
             .del({

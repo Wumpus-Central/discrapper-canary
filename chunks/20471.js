@@ -41,10 +41,10 @@ function f(e) {
         l = t.includes("rpc") && r,
         s = t.includes("web") && (null == n ? void 0 : n.connectionEntrypointUrl) != null,
         d = l || s,
-        { token: p, loading: f } = (0, u.o)(null == n ? void 0 : n.id, { disableFetch: !d });
+        { token: p, fetched: f } = (0, u.o)(null == n ? void 0 : n.id);
     return {
-        loading: f,
-        hasAlreadyLinked: !f && null != p,
+        fetched: f,
+        hasAlreadyLinked: f && null != p,
         canStartAuthorization: d,
         startAuthorization: i.useCallback(
             () =>

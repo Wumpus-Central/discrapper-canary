@@ -1922,6 +1922,7 @@ let em = "@me",
         APEX_EXPERIMENTS_METADATA: "/apex/experiments/metadata",
         APEX_EXPERIMENTS: "/apex/experiments",
         GUILD_MIGRATE_PIN_PERMISSION: (e) => "/guilds/".concat(e, "/migrate-pin-permission"),
+        GET_APPLICATION_TOKENS: (e) => "/oauth2/applications/".concat(e, "/tokens"),
     }),
     eA = Object.freeze({
         INDEX: "/",

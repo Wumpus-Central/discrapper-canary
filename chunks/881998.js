@@ -1,8 +1,9 @@
 n.d(t, {
     M: () => u,
-    Z: () => y,
+    Z: () => I,
 }),
-    n(388685);
+    n(388685),
+    n(539854);
 var r,
     i = n(442837),
     a = n(570140),
@@ -28,19 +29,33 @@ var u = (function (e) {
 let d = new Map(),
     f = [],
     _ = [],
-    p = "NOT_FETCHED";
-function h() {
-    p = "FETCHING";
+    p = "NOT_FETCHED",
+    h = new Map();
+function m() {
+    (p = "FETCHING"), h.clear();
 }
-function m(e) {
+function g(e) {
+    h.set(e.applicationId, "FETCHING");
+}
+function E(e) {
+    h.set(e.applicationId, "FETCHED"),
+        e.tokens.forEach((e) => {
+            (f = f.filter((t) => t.id !== e.id)),
+                d.set(e.application.id, e),
+                f.push(e),
+                null == e.application.parent_id && _.push(e);
+        });
+}
+function b(e) {
     (p = "FETCHED"),
+        h.clear(),
         (d = new Map(e.tokens.map((e) => [e.application.id, e]))),
         (_ = (f = e.tokens).filter((e) => {
             let { application: t } = e;
             return null == t.parent_id;
         }));
 }
-function g(e) {
+function y(e) {
     let { id: t, application: n, scopes: r } = e,
         i = d.get(n.id);
     null != i &&
@@ -59,7 +74,7 @@ function g(e) {
     };
     d.set(a.application.id, a), (f = [...f, a]), null == a.application.parent_id && (_ = [..._, a]);
 }
-function E(e) {
+function O(e) {
     let { id: t, applicationId: n } = e,
         r = d.get(n);
     if (null == r || r.id !== t) return !1;
@@ -73,7 +88,7 @@ function E(e) {
             return t !== r.id;
         }));
 }
-class b extends (r = i.ZP.Store) {
+class v extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(o.Z, s.Z, l.Z);
     }
@@ -90,11 +105,17 @@ class b extends (r = i.ZP.Store) {
     getFetchState() {
         return p;
     }
+    getFetchStateForApplication(e) {
+        var t;
+        return "FETCHED" === p ? p : null != (t = h.get(e)) ? t : p;
+    }
 }
-c(b, "displayName", "AuthorizedAppsStore");
-let y = new b(a.Z, {
-    USER_AUTHORIZED_APPS_REQUEST: h,
-    USER_AUTHORIZED_APPS_UPDATE: m,
-    OAUTH2_TOKEN_CREATE: g,
-    OAUTH2_TOKEN_DELETE: E,
+c(v, "displayName", "AuthorizedAppsStore");
+let I = new v(a.Z, {
+    USER_AUTHORIZED_APPS_REQUEST: m,
+    USER_AUTHORIZED_APPS_REQUEST_BY_ID: g,
+    USER_AUTHORIZED_APPS_UPDATE: b,
+    USER_AUTHORIZED_APPS_UPDATE_BY_ID: E,
+    OAUTH2_TOKEN_CREATE: y,
+    OAUTH2_TOKEN_DELETE: O,
 });

@@ -20,15 +20,14 @@ function g(e) {
         [v, j] = r.useState(!1),
         _ = (0, i.e7)([h.default], () => h.default.getId()),
         { config: y, application: C } = (0, u.G)(),
-        { loading: S, hasAlreadyLinked: E, canStartAuthorization: T, startAuthorization: O } = (0, o.FG)(C),
+        { fetched: S, hasAlreadyLinked: E, canStartAuthorization: T, startAuthorization: O } = (0, o.FG)(C),
         N = (0, m.ZP)(_),
         P =
             null == N || null == (t = N.widgets)
                 ? void 0
                 : t.some((e) => e instanceof d.q && e.applicationId === (null == C ? void 0 : C.id));
-    return null == y || null == y.edit_profile_upsell_image || null == C || S
-        ? null
-        : (0, a.jsx)(c.ZP, {
+    return null != y && null != y.edit_profile_upsell_image && null != C && S
+        ? (0, a.jsx)(c.ZP, {
               contentTypes: E
                   ? P
                       ? []
@@ -86,5 +85,6 @@ function g(e) {
                       ],
                   });
               },
-          });
+          })
+        : null;
 }
