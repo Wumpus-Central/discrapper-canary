@@ -320,7 +320,13 @@ let H = (0, h.$)(function (e) {
                         }
                         let c = () => null;
                         return (
-                            eb && eZ ? (c = ek) : ee ? (c = eB) : eT && h.id !== I.default.getId() && (c = eU),
+                            eb && eZ
+                                ? (c = ek)
+                                : ee
+                                  ? (c = eB)
+                                  : eT && h.id !== I.default.getId()
+                                    ? (c = eU)
+                                    : eb && (c = ek),
                             (0, i.jsx)(s.yRy, {
                                 targetElementRef: eC,
                                 position: "right",
