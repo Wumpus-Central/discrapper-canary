@@ -220,7 +220,8 @@ async function j(e) {
             sourceQuestContent: d,
         } = e,
         f = m.Z.getQuest(t),
-        p = await (0, a.S)(R(n));
+        p = await (0, a.S)(R(n)),
+        g = (0, h.jY)(n);
     x({
         questId: t,
         event: v.rMx.QUEST_CONTENT_CLICKED,
@@ -231,6 +232,7 @@ async function j(e) {
             apple_advertising_id: null != p && (0, _.isIOS)() ? p.advertisingId : null,
             android_advertising_id: null != p && (0, _.isAndroid)() ? p.advertisingId : null,
             click_id: (0, i.Z)(),
+            metadata_raw: null != g ? g : null,
         }),
         trackGuildAndChannelMetadata: u,
         shouldExtendSession: (0, h.VB)(n),
@@ -274,7 +276,8 @@ function G() {
                     trackGuildAndChannelMetadata: u = !1,
                     sourceQuestContent: d,
                 } = t,
-                f = m.Z.getQuest(n);
+                f = m.Z.getQuest(n),
+                p = (0, h.jY)(r);
             (0, a.S)(R(r)).then((t) => {
                 e({
                     questId: n,
@@ -285,6 +288,7 @@ function G() {
                         click_id: (0, i.Z)(),
                         apple_advertising_id: null != t && (0, _.isIOS)() ? t.advertisingId : null,
                         android_advertising_id: null != t && (0, _.isAndroid)() ? t.advertisingId : null,
+                        metadata_raw: null != p ? p : null,
                     }),
                     trackGuildAndChannelMetadata: u,
                     shouldExtendSession: (0, h.VB)(r),

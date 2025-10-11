@@ -273,15 +273,18 @@ async function U(e, t) {
         questId: e,
     });
     try {
-        let n = await i.tn.post({
-            url: T.ANM.QUESTS_ENROLL(e),
-            body: C({ location: t.questContent }, (0, g.qe)(e, t.questContent)),
-            rejectWithError: !0,
-        });
+        let n = (0, g.jY)(t.questContent),
+            r = await i.tn.post({
+                url: T.ANM.QUESTS_ENROLL(e),
+                body: R(C({ location: t.questContent }, (0, g.qe)(e, t.questContent)), {
+                    metadata_raw: null != n ? n : null,
+                }),
+                rejectWithError: !0,
+            });
         return (
             a.Z.dispatch({
                 type: "QUESTS_ENROLL_SUCCESS",
-                enrolledQuestUserStatus: (0, g.U3)(n.body),
+                enrolledQuestUserStatus: (0, g.U3)(r.body),
             }),
             { type: "success" }
         );
@@ -302,31 +305,35 @@ async function G(e, t, n) {
             questId: e,
         });
         try {
-            let r = await i.tn.post({
+            let r = (0, g.jY)(n),
+                o = await i.tn.post({
                     url: T.ANM.QUESTS_CLAIM_REWARD(e),
-                    body: C(
-                        {
-                            platform: t,
-                            location: n,
-                        },
-                        (0, g.qe)(e, n),
+                    body: R(
+                        C(
+                            {
+                                platform: t,
+                                location: n,
+                            },
+                            (0, g.qe)(e, n),
+                        ),
+                        { metadata_raw: null != r ? r : null },
                     ),
                     rejectWithError: !1,
                 }),
-                o = (0, g.Xh)(r.body);
+                s = (0, g.Xh)(o.body);
             return (
-                0 === o.errors.length
+                0 === s.errors.length
                     ? a.Z.dispatch({
                           type: "QUESTS_CLAIM_REWARD_SUCCESS",
                           questId: e,
-                          entitlements: o,
+                          entitlements: s,
                       })
                     : a.Z.dispatch({
                           type: "QUESTS_CLAIM_REWARD_FAILURE",
-                          error: o.errors,
+                          error: s.errors,
                           questId: e,
                       }),
-                o
+                s
             );
         } catch (t) {
             throw (

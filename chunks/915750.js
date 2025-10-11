@@ -284,25 +284,29 @@ class x {
                     (this.minViewTimeReachedTimeoutId = window.setTimeout(
                         this.onMinViewTimeReached,
                         1000 * this.minViewTimeSeconds,
-                    )),
-                    this.quests.forEach((e) => {
-                        (0, T.T)().info(
-                            ""
-                                .concat(e.config.messages.questName, " Quest became visible at ")
-                                .concat((0, b._b)(this.questContent)),
-                            { impressionId: this.id },
-                        ),
-                            (0, b.dA)({
-                                questId: e.id,
-                                event: S.rMx.QUEST_CONTENT_LOADED,
-                                properties: C(
-                                    { triggered_by_status_change: this.triggeredByStatusChange },
-                                    this.commonProperties(e),
-                                ),
-                                trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata,
-                                sourceQuestContent: this.sourceQuestContent,
-                            });
-                    }),
+                    ));
+                let e = (0, y.jY)(this.questContent);
+                this.quests.forEach((t) => {
+                    (0, T.T)().info(
+                        ""
+                            .concat(t.config.messages.questName, " Quest became visible at ")
+                            .concat((0, b._b)(this.questContent)),
+                        { impressionId: this.id },
+                    ),
+                        (0, b.dA)({
+                            questId: t.id,
+                            event: S.rMx.QUEST_CONTENT_LOADED,
+                            properties: C(
+                                {
+                                    triggered_by_status_change: this.triggeredByStatusChange,
+                                    metadata_raw: null != e ? e : null,
+                                },
+                                this.commonProperties(t),
+                            ),
+                            trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata,
+                            sourceQuestContent: this.sourceQuestContent,
+                        });
+                }),
                     (0, I.a)("QuestImpressionTracker") &&
                         _.Z.increment({
                             name: o.V.QUEST_CONTENT_IMPRESSION,
