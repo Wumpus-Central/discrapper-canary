@@ -14,7 +14,6 @@ e.exports = {
     promotionCard: "promotionCard_d4883c",
     mainPromotionCardContainer: "mainPromotionCardContainer_d4883c",
     promotionCardLeftContainer: "promotionCardLeftContainer_d4883c",
-    promotionCardButton: "promotionCardButton_d4883c",
     promotionIcon: "promotionIcon_d4883c",
     promotionIconImage: "promotionIconImage_d4883c",
     promotionLegalese: "promotionLegalese_d4883c",

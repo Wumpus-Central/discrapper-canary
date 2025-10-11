@@ -21,7 +21,6 @@ e.exports = {
     subgame: "subgame_cc46f0",
     border: "border_cc46f0",
     detectedApplication: "detectedApplication_cc46f0",
-    cancelButton: "cancelButton_cc46f0",
     toggleIconOn: "toggleIconOn_cc46f0",
     gameHasSubgame: "gameHasSubgame_cc46f0",
     subgameContainer: "subgameContainer_cc46f0",

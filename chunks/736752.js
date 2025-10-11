@@ -114,12 +114,11 @@ class z extends i.PureComponent {
                         className: Z.accountWarningBodyText,
                         children: B.intl.string(B.t.qKs3vr),
                     }),
-                    (0, r.jsx)(l.zx, {
-                        look: l.iL.OUTLINED,
-                        size: l.Ph.SMALL,
-                        color: l.zx.Colors.WHITE,
+                    (0, r.jsx)(c.Button, {
+                        variant: "secondary",
+                        size: "sm",
+                        text: B.intl.string(B.t["7psymp"]),
                         onClick: () => p.Z.openClaimAccountModal(),
-                        children: B.intl.string(B.t["7psymp"]),
                     }),
                 ],
             });

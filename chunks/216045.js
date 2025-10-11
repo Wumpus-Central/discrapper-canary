@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Q }), n(388685);
+n.d(t, { Z: () => X }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(512722),
@@ -6,40 +6,39 @@ var r = n(951288),
     s = n(442837),
     l = n(704215),
     c = n(622535),
-    u = n(755721),
-    d = n(481060),
-    f = n(570140),
-    _ = n(809206),
-    p = n(497321),
-    h = n(100527),
-    m = n(906732),
-    g = n(475977),
-    E = n(22267),
-    b = n(266454),
-    y = n(243778),
-    O = n(957730),
-    v = n(53691),
-    I = n(267717),
-    T = n(296810),
-    S = n(678135),
-    A = n(610794),
-    C = n(935147),
-    N = n(643879),
-    R = n(373230),
-    P = n(246946),
-    w = n(25990),
-    D = n(594174),
-    L = n(626135),
-    x = n(74538),
-    M = n(413182),
-    j = n(695346),
-    k = n(265159),
-    U = n(532495),
-    G = n(981631),
-    B = n(921944),
-    Z = n(388032),
-    F = n(391371);
-function V(e, t, n) {
+    u = n(481060),
+    d = n(570140),
+    f = n(809206),
+    _ = n(497321),
+    p = n(100527),
+    h = n(906732),
+    m = n(475977),
+    g = n(22267),
+    E = n(266454),
+    b = n(243778),
+    y = n(957730),
+    O = n(53691),
+    v = n(267717),
+    I = n(296810),
+    T = n(678135),
+    S = n(610794),
+    A = n(935147),
+    C = n(643879),
+    N = n(373230),
+    R = n(246946),
+    P = n(25990),
+    w = n(594174),
+    D = n(626135),
+    L = n(74538),
+    x = n(413182),
+    M = n(695346),
+    j = n(265159),
+    k = n(532495),
+    U = n(981631),
+    G = n(921944),
+    B = n(388032),
+    Z = n(391371);
+function F(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -52,7 +51,7 @@ function V(e, t, n) {
         e
     );
 }
-function H(e) {
+function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -63,12 +62,12 @@ function H(e) {
                 }),
             )),
             r.forEach(function (t) {
-                V(e, t, n[t]);
+                F(e, t, n[t]);
             });
     }
     return e;
 }
-function Y(e, t) {
+function H(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -80,22 +79,22 @@ function Y(e, t) {
     }
     return n;
 }
-function W(e, t) {
+function Y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : Y(Object(t)).forEach(function (n) {
+            : H(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function K(e, t) {
+function W(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = z(e, t);
+        i = K(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -103,7 +102,7 @@ function K(e, t) {
     }
     return i;
 }
-function z(e, t) {
+function K(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -112,131 +111,119 @@ function z(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function q() {
-    let e = (0, R.T)({ location: "UserSettingsProfileCustomization" }),
-        t = (0, b.Nj)(l.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE),
+function z() {
+    let e = (0, N.T)({ location: "UserSettingsProfileCustomization" }),
+        t = (0, E.Nj)(l.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE),
         n = e && !t;
     i.useEffect(() => {
-        n && (0, b.Q3)(l.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE, { forceTrack: !0 });
+        n && (0, E.Q3)(l.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE, { forceTrack: !0 });
     }, [n]);
 }
-function X() {
-    let [e, t] = (0, y.US)([l.z.DISPLAY_NAME_STYLES_NEW_BADGE]),
+function q() {
+    let [e, t] = (0, b.US)([l.z.DISPLAY_NAME_STYLES_NEW_BADGE]),
         n = e === l.z.DISPLAY_NAME_STYLES_NEW_BADGE;
     i.useEffect(() => {
-        n && t(B.L.TAKE_ACTION);
+        n && t(G.L.TAKE_ACTION);
     }, [n, t]);
 }
-function Q() {
-    let e = (0, s.e7)([D.default], () => {
-            let e = D.default.getCurrentUser();
+function X() {
+    let e = (0, s.e7)([w.default], () => {
+            let e = w.default.getCurrentUser();
             return o()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e;
         }),
-        t = (0, s.e7)([P.Z], () => P.Z.hidePersonalInformation),
-        n = (0, s.cj)([w.Z], () => w.Z.getAllPending()),
-        { pendingBio: a, pendingAvatar: l, pendingNameplate: b } = n,
-        y = K(n, ["pendingBio", "pendingAvatar", "pendingNameplate"]),
-        R = (0, N.SD)({
+        t = (0, s.e7)([R.Z], () => R.Z.hidePersonalInformation),
+        n = (0, s.cj)([P.Z], () => P.Z.getAllPending()),
+        { pendingBio: a, pendingAvatar: l, pendingNameplate: E } = n,
+        b = W(n, ["pendingBio", "pendingAvatar", "pendingNameplate"]),
+        N = (0, C.SD)({
             userId: e.id,
             image: l,
         }),
-        B = (0, s.e7)([w.Z], () => w.Z.showNotice()),
-        V = j.dN.useSetting() && null != a ? O.ZP.parse(void 0, a).content : a,
-        Y = x.ZP.canUsePremiumProfileCustomization(e),
-        { analyticsLocations: z, newestAnalyticsLocation: Q } = (0, m.ZP)(h.Z.USER_SETTINGS_USER_PROFILE);
-    q(), X(), i.useEffect(() => () => f.Z.wait(_.W3), []);
-    let [J, $] = i.useState(!1),
-        { showRedesign: ee } = M.b.useExperiment({ location: "profile customization" }),
-        et = !Y,
-        en = i.useRef(null);
+        G = (0, s.e7)([P.Z], () => P.Z.showNotice()),
+        F = M.dN.useSetting() && null != a ? y.ZP.parse(void 0, a).content : a,
+        H = L.ZP.canUsePremiumProfileCustomization(e),
+        { analyticsLocations: K, newestAnalyticsLocation: X } = (0, h.ZP)(p.Z.USER_SETTINGS_USER_PROFILE);
+    z(), q(), i.useEffect(() => () => d.Z.wait(f.W3), []);
+    let [Q, J] = i.useState(!1),
+        { showRedesign: $ } = x.b.useExperiment({ location: "profile customization" }),
+        ee = !H,
+        et = i.useRef(null);
     return t
-        ? (0, r.jsx)(p.Z, {})
-        : (0, r.jsxs)(m.Gt, {
-              value: z,
+        ? (0, r.jsx)(_.Z, {})
+        : (0, r.jsxs)(h.Gt, {
+              value: K,
               children: [
-                  (0, r.jsx)(g.Z, {}),
-                  (0, r.jsx)(T.Z, {
+                  (0, r.jsx)(m.Z, {}),
+                  (0, r.jsx)(I.Z, {
                       profilePreview: (0, r.jsx)(
-                          S.Z,
-                          W(
-                              H(
+                          T.Z,
+                          Y(
+                              V(
                                   {
                                       user: e,
-                                      canUsePremiumCustomization: Y,
-                                      onUpsellClick: k.Z,
-                                      pendingBio: V,
+                                      canUsePremiumCustomization: H,
+                                      onUpsellClick: j.Z,
+                                      pendingBio: F,
                                   },
-                                  y,
+                                  b,
                               ),
-                              { pendingAvatar: R },
+                              { pendingAvatar: N },
                           ),
                       ),
                       nameplatePreview: (0, r.jsx)(
-                          E.Z,
-                          W(
-                              H(
+                          g.Z,
+                          Y(
+                              V(
                                   {
                                       user: e,
-                                      nameplate: b,
-                                      nameplateData: void 0 === b ? e.nameplate : void 0,
+                                      nameplate: E,
+                                      nameplateData: void 0 === E ? e.nameplate : void 0,
                                   },
-                                  y,
+                                  b,
                               ),
                               {
-                                  className: F.nameplatePreview,
+                                  className: Z.nameplatePreview,
                                   isHighlighted: !0,
                               },
                           ),
                       ),
-                      children: (0, r.jsx)(U.Z, {}),
+                      children: (0, r.jsx)(k.Z, {}),
                   }),
-                  ee && (0, r.jsx)(A.Z, {}),
+                  $ && (0, r.jsx)(S.Z, {}),
                   (0, r.jsx)(c.$, {
-                      innerRef: en,
-                      onChange: (e) => $(e),
+                      innerRef: et,
+                      onChange: (e) => J(e),
                       threshold: 0.25,
-                      active: et,
+                      active: ee,
                       children: (0, r.jsx)("div", {
-                          ref: en,
-                          children: (0, r.jsx)(C.Z, {
+                          ref: et,
+                          children: (0, r.jsx)(A.Z, {
                               user: e,
-                              shouldShow: et,
-                              isVisible: J,
+                              shouldShow: ee,
+                              isVisible: Q,
                           }),
                       }),
                   }),
-                  et &&
-                      !B &&
-                      (0, r.jsx)(v.p, {
-                          className: F.floatingNitroUpsell,
-                          showUpsell: et && !J,
-                          text: Z.intl.format(Z.t.TmfgIy, { onClick: () => (0, I.y)({ analyticsSource: Q }) }),
+                  ee &&
+                      !G &&
+                      (0, r.jsx)(O.p, {
+                          className: Z.floatingNitroUpsell,
+                          showUpsell: ee && !Q,
+                          text: B.intl.format(B.t.TmfgIy, { onClick: () => (0, v.y)({ analyticsSource: X }) }),
                           textVariant: "heading-md/medium",
-                          button: (0, r.jsxs)(d.gtL, {
-                              className: F.floatingNitroButton,
-                              innerClassName: F.floatingNitroButtonInner,
+                          button: (0, r.jsx)(u.Button, {
+                              variant: "expressive",
                               onClick: () => {
                                   var e;
-                                  L.default.track(G.rMx.TRY_IT_OUT_PRESET_CLICKED, {
+                                  D.default.track(U.rMx.TRY_IT_OUT_PRESET_CLICKED, {
                                       cta_variant: "floating_action_button",
                                   }),
-                                      null == en ||
-                                          null == (e = en.current) ||
+                                      null == et ||
+                                          null == (e = et.current) ||
                                           e.scrollIntoView({ behavior: "smooth" });
                               },
-                              color: u.zx.Colors.GREEN,
-                              size: u.Ph.MEDIUM,
-                              children: [
-                                  (0, r.jsx)(d.SrA, {
-                                      size: "sm",
-                                      color: "currentColor",
-                                  }),
-                                  (0, r.jsx)(d.Text, {
-                                      variant: "text-sm/medium",
-                                      color: "currentColor",
-                                      children: Z.intl.string(Z.t.uw9zIy),
-                                  }),
-                              ],
+                              text: B.intl.string(B.t.uw9zIy),
+                              icon: u.SrA,
                           }),
                       }),
               ],
