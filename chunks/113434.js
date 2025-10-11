@@ -372,17 +372,19 @@ function ef(e, t, n) {
     return !l || !!u;
 }
 function e_(e) {
-    return r.useMemo(
-        () =>
-            (0, C.q8)(e) ||
-            (0, C.Pb)(e) ||
-            (0, C.pO)(e) ||
-            (0, C.Vl)(e) ||
-            e.config.features.includes(k.S7.NON_GAMING_PLAY_QUEST)
-                ? B.intl.string(B.t.hvVgAQ)
-                : B.intl.string(B.t.lwQdjI),
-        [e],
-    );
+    return r.useMemo(() => {
+        var t;
+        let n = null == (t = e.config.ctaConfig) ? void 0 : t.buttonLabel;
+        return null != n
+            ? n
+            : (0, C.q8)(e) ||
+                (0, C.Pb)(e) ||
+                (0, C.pO)(e) ||
+                (0, C.Vl)(e) ||
+                e.config.features.includes(k.S7.NON_GAMING_PLAY_QUEST)
+              ? B.intl.string(B.t.hvVgAQ)
+              : B.intl.string(B.t.lwQdjI);
+    }, [e]);
 }
 function ep(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { dateStyle: "short" },

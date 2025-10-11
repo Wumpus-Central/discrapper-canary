@@ -1,11 +1,12 @@
 n.d(t, {
-    Q: () => o,
-    s: () => s,
+    Q: () => s,
+    s: () => l,
 });
-var r = n(418793),
-    i = n(460597),
-    a = n(608591);
-let o = (e) => ({
+var r = n(666977),
+    i = n(418793),
+    a = n(460597),
+    o = n(608591);
+let s = (e) => ({
     id: e.id,
     configVersion: 2,
     startsAt: e.starts_at,
@@ -37,13 +38,14 @@ let o = (e) => ({
         gameTitle: e.messages.game_title,
         gamePublisher: e.messages.game_publisher,
     },
-    taskConfigV2: (0, i._)(e.task_config_v2),
-    rewardsConfig: (0, r.v)(e.rewards_config),
-    videoMetadata: (0, a.FG)(e.video_metadata),
-    cosponsorMetadata: s(e.cosponsor_metadata),
+    taskConfigV2: (0, a._)(e.task_config_v2),
+    rewardsConfig: (0, i.v)(e.rewards_config),
+    videoMetadata: (0, o.FG)(e.video_metadata),
+    cosponsorMetadata: l(e.cosponsor_metadata),
     sharePolicy: e.share_policy,
+    ctaConfig: (0, r.D)(e.cta_config),
 });
-function s(e) {
+function l(e) {
     if (null != e)
         return {
             name: e.name,

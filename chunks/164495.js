@@ -19,10 +19,10 @@ var r = n(951288),
     m = n(110560),
     h = n(667105),
     C = n(35215),
-    y = n(46140),
-    b = n(215023),
-    O = n(388032),
-    v = n(165016);
+    b = n(46140),
+    y = n(215023),
+    v = n(388032),
+    O = n(165016);
 function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -88,10 +88,15 @@ function E(e) {
 let N = (e) => {
         let { quest: t, sourceQuestContent: n } = e,
             s = (0, d.aM)(),
-            l =
-                (0, p.pO)(t) || t.config.features.includes(y.S7.NON_GAMING_PLAY_QUEST)
-                    ? O.intl.string(O.t.hvVgAQ)
-                    : O.intl.string(O.t.lwQdjI);
+            l = (() => {
+                var e;
+                let n = null == (e = t.config.ctaConfig) ? void 0 : e.buttonLabel;
+                return null != n
+                    ? n
+                    : (0, p.pO)(t) || t.config.features.includes(b.S7.NON_GAMING_PLAY_QUEST)
+                      ? v.intl.string(v.t.hvVgAQ)
+                      : v.intl.string(v.t.lwQdjI);
+            })();
         return (0, r.jsx)(o.zxk, {
             size: "sm",
             fullWidth: !0,
@@ -122,7 +127,7 @@ let N = (e) => {
                     },
                 ),
             size: "sm",
-            text: O.intl.string(O.t.csptqa),
+            text: v.intl.string(v.t.csptqa),
         });
     },
     _ = (e) => {
@@ -165,7 +170,7 @@ let N = (e) => {
                             variant: "secondary",
                             fullWidth: !0,
                             size: "sm",
-                            text: O.intl.string(O.t["93PTEh"]),
+                            text: v.intl.string(v.t["93PTEh"]),
                         },
                         e,
                     ),
@@ -181,7 +186,7 @@ let N = (e) => {
                 isExpanded: j,
                 className: m,
                 ctaLabel: C,
-                onClick: y,
+                onClick: b,
                 questContent: E = x.jn.QUEST_BAR_V2,
                 sourceQuestContent: N,
             } = e,
@@ -224,17 +229,17 @@ let N = (e) => {
             z = s.useCallback(
                 (e) => {
                     var t;
-                    null == y || y(e),
+                    null == b || b(e),
                         (0, p.xN)(d.config) && (null == (t = d.userStatus) ? void 0 : t.claimedAt) != null
                             ? (0, c.mK)({
                                   openInLayer: !1,
-                                  tab: b.AW.ORBS,
+                                  tab: y.AW.ORBS,
                                   analyticsLocations: [],
                                   analyticsSource: a.Z.QUEST_HOME_PAGE,
                               })
                             : P();
                 },
-                [y, d.config, null == (n = d.userStatus) ? void 0 : n.claimedAt, P],
+                [b, d.config, null == (n = d.userStatus) ? void 0 : n.claimedAt, P],
             ),
             { shouldUseShinyButton: A } = g.Z.useConfig({ location: (0, u._b)(N) + "- CtaButton" });
         return A
@@ -248,12 +253,12 @@ let N = (e) => {
                               onClick: z,
                               pauseAnimation: f || (!j && !_),
                               className: m,
-                              buttonShineClassName: v.shine,
+                              buttonShineClassName: O.shine,
                               "data-migration-pending": !0,
                           },
                           w,
                       ),
-                      { children: null != C ? C : O.intl.string(O.t.cfY4PD) },
+                      { children: null != C ? C : v.intl.string(v.t.cfY4PD) },
                   ),
               )
             : (0, r.jsx)(
@@ -263,7 +268,7 @@ let N = (e) => {
                           {
                               fullWidth: !0,
                               onClick: z,
-                              text: null != C ? C : O.intl.string(O.t.cfY4PD),
+                              text: null != C ? C : v.intl.string(v.t.cfY4PD),
                           },
                           w,
                       ),
@@ -290,30 +295,30 @@ let N = (e) => {
             m = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
             h = (0, p.q8)(n),
             C = u !== x.LI.SELECT && !a && !c,
-            y = null;
+            b = null;
         return (
             m
-                ? (y = (0, r.jsx)(z, {
+                ? (b = (0, r.jsx)(z, {
                       quest: n,
                       sourceQuestContent: s,
                       useReducedMotion: o,
                       isExpanded: l,
                   }))
                 : h
-                  ? (y = (0, r.jsx)(E, {
+                  ? (b = (0, r.jsx)(E, {
                         quest: n,
                         sourceQuestContent: s,
                         taskDetails: d,
                     }))
                   : (0, p.Rt)(n)
-                    ? (y = (0, r.jsx)(_, { quest: n }))
+                    ? (b = (0, r.jsx)(_, { quest: n }))
                     : u === x.LI.CONSOLE && i
-                      ? (y = (0, r.jsx)(w, {
+                      ? (b = (0, r.jsx)(w, {
                             quest: n,
                             sourceQuestContent: s,
                         }))
                       : C && (0, p.Pb)(n)
-                        ? (y = (0, r.jsx)(P, {
+                        ? (b = (0, r.jsx)(P, {
                               quest: n,
                               sourceQuestContent: s,
                               taskDetails: d,
@@ -322,28 +327,28 @@ let N = (e) => {
                               onGameSheetClosed: j,
                           }))
                         : C &&
-                          (y = (0, r.jsx)(N, {
+                          (b = (0, r.jsx)(N, {
                               quest: n,
                               sourceQuestContent: s,
                           })),
-            null == y
+            null == b
                 ? null
                 : (0, r.jsx)("div", {
-                      className: v.cta,
-                      children: y,
+                      className: O.cta,
+                      children: b,
                   })
         );
     };
 function B(e) {
     let t = s.useRef(null);
     return (0, r.jsxs)("div", {
-        className: v.ctaButtons,
+        className: O.ctaButtons,
         ref: t,
         children: [
             e.showBackButton &&
                 (0, r.jsx)(o.hU, {
                     size: "sm",
-                    "aria-label": O.intl.string(O.t["13/7kZ"]),
+                    "aria-label": v.intl.string(v.t["13/7kZ"]),
                     onClick: e.onBack,
                     icon: i.V7D,
                     variant: "secondary",

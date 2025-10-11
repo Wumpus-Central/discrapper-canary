@@ -90,6 +90,10 @@ class d {
             ? t
             : null;
     }
+    get ctaLink() {
+        var e, t;
+        return null != (t = null == (e = this.quest.ctaConfig) ? void 0 : e.link) ? t : this.application.link;
+    }
     get rewardPlatforms() {
         return this.quest.rewardsConfig.platforms;
     }

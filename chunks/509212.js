@@ -542,7 +542,7 @@ function eF(e) {
     return r.type === c.w.REWARD_CODE ? r : null;
 }
 function eV(e, t) {
-    let n = x.r.build(e.config).application.link;
+    let n = x.r.build(e.config).ctaLink;
     (0, N._3)({
         questId: e.id,
         questContent: t.content,
@@ -940,16 +940,22 @@ function tw(e, t) {
     return e <= 0 || t <= 0 ? 0 : e >= t ? 1 : Math.min(1, Math.round((e / t) * 100) / 100);
 }
 function tD(e) {
-    var t, n;
-    let r = x.r.build(e).defaultWatchVideoTask;
+    var t, n, r, i;
+    let a = x.r.build(e).defaultWatchVideoTask;
     return null !=
-        (n =
-            null != (t = null == r ? void 0 : r.messages.videoEndCtaButtonLabel)
-                ? t
-                : null == r
+        (i =
+            null !=
+            (r =
+                null != (n = null == (t = e.ctaConfig) ? void 0 : t.buttonLabel)
+                    ? n
+                    : null == a
+                      ? void 0
+                      : a.messages.videoEndCtaButtonLabel)
+                ? r
+                : null == a
                   ? void 0
-                  : r.messages.videoEndCtaTitle)
-        ? n
+                  : a.messages.videoEndCtaTitle)
+        ? i
         : G.intl.string(G.t.iiTtpK);
 }
 function tL(e, t) {
