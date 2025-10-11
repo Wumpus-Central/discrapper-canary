@@ -34,10 +34,7 @@ function g() {
                         showHeader: !1,
                     });
                 case _.Z.ACTIVITY_PRIVACY:
-                    return (0, r.jsx)(c.Z, {
-                        className: m.body,
-                        showHeader: !1,
-                    });
+                    return (0, r.jsx)(c.Z, {});
                 case _.Z.MY_GAMES:
                 default:
                     return (0, r.jsx)(u.Z, {

@@ -1,6 +1,6 @@
 n.d(t, {
-    I: () => E,
-    NK: () => C,
+    I: () => C,
+    NK: () => x,
 }),
     n(388685);
 var r,
@@ -12,21 +12,20 @@ var r,
     c = n(246133),
     u = n(695346),
     d = n(885110),
-    p = n(316496),
-    h = n(223730),
-    f = n(933554),
-    g = n(388032),
-    m = n(87587),
-    b = n(354810);
-function _(e) {
+    p = n(223730),
+    h = n(933554),
+    f = n(388032),
+    g = n(87587),
+    m = n(354810);
+function b(e) {
     let { closePopout: t } = e;
     return (0, i.jsx)("div", {
         "data-button-hoisted-classname-wrapper": !0,
-        className: m.goOnlineButton,
+        className: g.goOnlineButton,
         children: (0, i.jsx)(s.zxk, {
             variant: "primary",
             size: "sm",
-            text: g.intl.string(f.default.Poezn5),
+            text: f.intl.string(h.default.Poezn5),
             onClick: () => {
                 t(), (0, c.Z)({ nextStatus: s.Skl.ONLINE });
             },
@@ -34,23 +33,23 @@ function _(e) {
         }),
     });
 }
-function y(e) {
+function _(e) {
     let { showCurrentGame: t, shouldShowStatus: n = !1 } = e,
         r = (0, o.e7)([d.Z], () => d.Z.getStatus());
     return (0, i.jsxs)("div", {
-        className: m.toggleContainer,
+        className: g.toggleContainer,
         children: [
             (0, i.jsxs)("div", {
-                className: m.toggleContainerText,
+                className: g.toggleContainerText,
                 children: [
                     (0, i.jsx)(s.Text, {
                         variant: "text-sm/medium",
                         color: "header-primary",
-                        children: g.intl.string(f.default.WhdCGB),
+                        children: f.intl.string(h.default.WhdCGB),
                     }),
                     n &&
                         (0, i.jsxs)("div", {
-                            className: m.toggleContainerOnlineRow,
+                            className: g.toggleContainerOnlineRow,
                             children: [
                                 (0, i.jsx)(s.qbd, {
                                     status: s.Skl.ONLINE,
@@ -61,8 +60,8 @@ function y(e) {
                                     color: "text-secondary",
                                     children:
                                         r === s.Skl.INVISIBLE
-                                            ? g.intl.string(f.default.a3AofX)
-                                            : g.intl.string(g.t.WbGtnJ),
+                                            ? f.intl.string(h.default.a3AofX)
+                                            : f.intl.string(f.t.WbGtnJ),
                                 }),
                             ],
                         }),
@@ -77,43 +76,40 @@ function y(e) {
         ],
     });
 }
-function O(e) {
+function y(e) {
     let { children: t } = e,
         n = (0, l.useRef)(null);
     return (
         (0, s.Tbt)(n),
         (0, i.jsx)("div", {
-            className: m.wrapper,
+            className: g.wrapper,
             ref: n,
             children: (0, i.jsx)("div", {
-                className: m.content,
+                className: g.content,
                 children: t,
             }),
         })
     );
 }
-function v(e) {
+function O(e) {
     let { closePopout: t } = e,
-        n = u.G6.useSetting(),
-        { showLinkToSettings: r } = (0, p.D)("popout");
-    return (0, i.jsxs)(O, {
+        n = u.G6.useSetting();
+    return (0, i.jsxs)(y, {
         children: [
-            (0, i.jsx)(y, { showCurrentGame: n }),
+            (0, i.jsx)(_, { showCurrentGame: n }),
             (0, i.jsx)(s.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: g.intl.string(f.default["7cfFoa"]),
+                children: f.intl.string(h.default["7cfFoa"]),
             }),
-            r &&
-                (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(s.izJ, { className: m.divider }), (0, i.jsx)(h.yj, { onClosePopout: t })],
-                }),
+            (0, i.jsx)(s.izJ, { className: g.divider }),
+            (0, i.jsx)(p.yj, { onClosePopout: t }),
         ],
     });
 }
-function j(e) {
+function v(e) {
     let { closePopout: t } = e;
-    return (0, i.jsxs)(O, {
+    return (0, i.jsxs)(y, {
         children: [
             (0, i.jsxs)(s.Kqy, {
                 align: "start",
@@ -123,11 +119,11 @@ function j(e) {
                     (0, i.jsx)(s.X6q, {
                         variant: "heading-sm/semibold",
                         color: "header-primary",
-                        className: m.controlTitle,
-                        children: g.intl.string(f.default["5YsmGB"]),
+                        className: g.controlTitle,
+                        children: f.intl.string(h.default["5YsmGB"]),
                     }),
                     (0, i.jsxs)("div", {
-                        className: m.toggleContainerOnlineRow,
+                        className: g.toggleContainerOnlineRow,
                         children: [
                             (0, i.jsx)(s.qbd, {
                                 status: s.Skl.ONLINE,
@@ -136,7 +132,7 @@ function j(e) {
                             (0, i.jsx)(s.Text, {
                                 variant: "text-xs/normal",
                                 color: "text-secondary",
-                                children: g.intl.string(f.default.U8MFdX),
+                                children: f.intl.string(h.default.U8MFdX),
                             }),
                         ],
                     }),
@@ -145,35 +141,32 @@ function j(e) {
             (0, i.jsx)(s.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: g.intl.string(f.default.Yl0mh4),
+                children: f.intl.string(h.default.Yl0mh4),
             }),
-            (0, i.jsx)(_, { closePopout: t }),
+            (0, i.jsx)(b, { closePopout: t }),
         ],
     });
 }
-function x(e) {
+function j(e) {
     let { closePopout: t } = e,
-        n = u.G6.useSetting(),
-        { showLinkToSettings: r } = (0, p.D)("popout");
-    return (0, i.jsxs)(O, {
+        n = u.G6.useSetting();
+    return (0, i.jsxs)(y, {
         children: [
-            (0, i.jsx)(y, {
+            (0, i.jsx)(_, {
                 showCurrentGame: n,
                 shouldShowStatus: !0,
             }),
             (0, i.jsx)(s.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: g.intl.string(f.default["7cfFoa"]),
+                children: f.intl.string(h.default["7cfFoa"]),
             }),
-            r &&
-                (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(s.izJ, { className: m.divider }), (0, i.jsx)(h.yj, { onClosePopout: t })],
-                }),
+            (0, i.jsx)(s.izJ, { className: g.divider }),
+            (0, i.jsx)(p.yj, { onClosePopout: t }),
         ],
     });
 }
-var C =
+var x =
     (((r = {})[(r.ActivityNux = 0)] = "ActivityNux"),
     (r[(r.StatusNux = 1)] = "StatusNux"),
     (r[(r.ActivityAndStatusNux = 2)] = "ActivityAndStatusNux"),
@@ -181,9 +174,9 @@ var C =
     (r[(r.Status = 4)] = "Status"),
     (r[(r.ActivityAndStatus = 5)] = "ActivityAndStatus"),
     r);
-function E(e) {
+function C(e) {
     let { showPopout: t, popoutState: n, handleClose: r, popoutTargetRef: o, children: d } = e,
-        [p, m] = (0, l.useState)(n),
+        [g, b] = (0, l.useState)(n),
         _ = (0, l.useRef)(null),
         y = (function (e) {
             if (null === e) return null;
@@ -191,26 +184,26 @@ function E(e) {
                 case 0:
                     return {
                         type: "popover",
-                        title: g.intl.string(f.default.vxVbGB),
-                        body: [g.intl.string(f.default["7cfFoa"])],
+                        title: f.intl.string(h.default.vxVbGB),
+                        body: [f.intl.string(h.default["7cfFoa"])],
                         action: {
-                            text: g.intl.string(f.default.k4tCg4),
+                            text: f.intl.string(h.default.k4tCg4),
                             onClick: () => {
                                 u.G6.updateSetting(!0);
                             },
                         },
                         textLink: {
-                            text: g.intl.string(g.t["ZrN+DQ"]),
-                            onClick: h.S$,
+                            text: f.intl.string(f.t["ZrN+DQ"]),
+                            onClick: p.S$,
                         },
                     };
                 case 1:
                     return {
                         type: "popover",
-                        title: g.intl.string(f.default.qKDqen),
-                        body: [g.intl.string(f.default.Yl0mh4)],
+                        title: f.intl.string(h.default.qKDqen),
+                        body: [f.intl.string(h.default.Yl0mh4)],
                         action: {
-                            text: g.intl.string(f.default.Poezn5),
+                            text: f.intl.string(h.default.Poezn5),
                             onClick: () => {
                                 (0, c.Z)({ nextStatus: s.Skl.ONLINE });
                             },
@@ -219,42 +212,42 @@ function E(e) {
                 case 2:
                     return {
                         type: "popover",
-                        title: g.intl.string(f.default["6cA8HR"]),
-                        body: [g.intl.string(f.default["7cfFoa"])],
+                        title: f.intl.string(h.default["6cA8HR"]),
+                        body: [f.intl.string(h.default["7cfFoa"])],
                         action: {
-                            text: g.intl.string(f.default.k4tCg4),
+                            text: f.intl.string(h.default.k4tCg4),
                             onClick: () => {
                                 u.G6.updateSetting(!0), (0, c.Z)({ nextStatus: s.Skl.ONLINE });
                             },
                         },
                         textLink: {
-                            text: g.intl.string(g.t["ZrN+DQ"]),
-                            onClick: h.S$,
+                            text: f.intl.string(f.t["ZrN+DQ"]),
+                            onClick: p.S$,
                         },
                     };
                 case 3:
                     return {
                         type: "popout",
-                        children: v,
+                        children: O,
                     };
                 case 4:
                     return {
                         type: "popout",
-                        children: j,
+                        children: v,
                     };
                 case 5:
                     return {
                         type: "popout",
-                        children: x,
+                        children: j,
                     };
                 default:
                     return null;
             }
-        })(p),
-        O = (0, l.useRef)(t);
+        })(g),
+        x = (0, l.useRef)(t);
     if (
         ((0, l.useEffect)(() => {
-            t && !O.current && m(n), t !== O.current && (O.current = t);
+            t && !x.current && b(n), t !== x.current && (x.current = t);
         }, [n, t]),
         null == y || !t)
     )
@@ -276,7 +269,7 @@ function E(e) {
                     gradientColor: "purple",
                     graphic: {
                         type: "image",
-                        src: b.Z,
+                        src: m.Z,
                     },
                     actions: [
                         ((C = (function (e) {

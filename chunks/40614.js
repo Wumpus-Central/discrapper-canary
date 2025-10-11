@@ -1,64 +1,27 @@
-n.d(t, { V: () => y }), n(388685);
+n.d(t, { V: () => d });
 var r = n(951288),
-    i = n(647438),
-    l = n(442837),
-    o = n(481060),
-    a = n(550532),
-    s = n(371991),
-    c = n(561308),
-    u = n(594190),
-    d = n(695346),
-    p = n(885110),
-    h = n(316496),
-    f = n(933554),
-    g = n(388032),
-    m = n(973543);
-function b(e) {
+    i = n(442837),
+    l = n(481060),
+    o = n(695346),
+    a = n(885110),
+    s = n(388032),
+    c = n(973543);
+function u(e) {
     let { onClick: t } = e;
-    return (0, r.jsx)(o.P3F, {
-        className: m.container,
+    return (0, r.jsx)(l.P3F, {
+        className: c.container,
         onClick: t,
-        children: (0, r.jsx)(o.Text, {
-            className: m.textContent,
+        children: (0, r.jsx)(l.Text, {
+            className: c.textContent,
             variant: "text-xs/medium",
             color: "text-secondary",
-            children: g.intl.string(g.t.jfrLLS),
+            children: s.intl.string(s.t.jfrLLS),
         }),
     });
 }
-function _(e) {
-    var t;
-    let { onClick: n } = e,
-        p = (0, l.e7)([a.Z], () => a.Z.getFakeGameData()),
-        h = (0, l.e7)([u.ZP], () => u.ZP.getVisibleGame()),
-        b = null != (t = null == p ? void 0 : p.start) ? t : null == h ? void 0 : h.start,
-        _ = d.SE.useSetting().length > 0,
-        { now: y } = (0, s.tS)(),
-        O = (0, i.useMemo)(() => (null == b ? null : (0, c.T_)({ start: b }, y)), [b, y]);
-    if (null == b) return null;
-    let v = [...(_ ? [g.intl.string(f.default.jfDsyM)] : []), g.intl.string(g.t.BMTj29), O];
-    return (0, r.jsx)(o.P3F, {
-        className: m.container,
-        onClick: n,
-        children: (0, r.jsx)(o.Text, {
-            className: m.textContent,
-            variant: "text-xs/medium",
-            color: "text-feedback-positive",
-            lineClamp: 1,
-            children: v.join(" \xB7 "),
-        }),
-    });
-}
-function y(e) {
+function d(e) {
     let { onClick: t } = e,
-        { isEnabled: n, showActivitySharingIndicatorWhenSharing: i } = (0, h.D)("not sharing link"),
-        a = d.G6.useSetting(),
-        s = (0, l.e7)([p.Z], () => p.Z.getStatus());
-    return !n || __OVERLAY__
-        ? null
-        : a && s !== o.Skl.INVISIBLE
-          ? i
-              ? (0, r.jsx)(_, { onClick: t })
-              : null
-          : (0, r.jsx)(b, { onClick: t });
+        n = o.G6.useSetting(),
+        s = (0, i.e7)([a.Z], () => a.Z.getStatus());
+    return __OVERLAY__ || (n && s !== l.Skl.INVISIBLE) ? null : (0, r.jsx)(u, { onClick: t });
 }
