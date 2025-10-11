@@ -1,7 +1,7 @@
 n.d(t, { Z: () => f }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(981729);
+    a = n(506802);
 function o(e, t, n) {
     return (
         t in e
@@ -93,7 +93,7 @@ function f(e) {
         onMouseEnter: 0 !== t ? h : () => {},
         onMouseLeave: 0 !== t ? m : () => {},
         children: (0, r.jsx)(
-            a.u,
+            a.aM,
             c(
                 s(
                     {

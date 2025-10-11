@@ -9,7 +9,7 @@ var r,
     u = n(599273),
     d = n(374470),
     f = n(793030),
-    _ = n(981729),
+    _ = n(506802),
     p = n(607070),
     h = n(89079);
 function m(e, t, n) {
@@ -277,9 +277,9 @@ class I extends (r = a.PureComponent) {
                                     v,
                                     (0, i.jsx)("div", {
                                         className: h.track,
-                                        children: (0, i.jsx)(_.u, {
+                                        children: (0, i.jsx)(_.aM, {
                                             "data-migration-pending": !0,
-                                            color: _.u.Colors.GREY,
+                                            color: _.aM.Colors.GREY,
                                             hideOnClick: !1,
                                             text: C || y ? null : X,
                                             forceOpen: n || (r && p.Z.keyboardModeEnabled),

@@ -252,7 +252,7 @@ function Z(e) {
                           className: N.gameName,
                           children: G,
                       }),
-                      (0, r.jsx)(c.ua7, {
+                      (0, r.jsx)(c.aML, {
                           "data-migration-pending": !0,
                           text: C.intl.string(C.t["4PJP5u"]),
                           children: (e) =>
@@ -323,7 +323,7 @@ function Z(e) {
                       colorClass: N.fill,
                   }),
             i = t
-                ? (0, r.jsx)(c.ua7, {
+                ? (0, r.jsx)(c.aML, {
                       "data-migration-pending": !0,
                       text: C.intl.string(C.t.Vfw2Ly),
                       children: (e) => (0, r.jsx)("i", L({ className: N.overlayWarningIcon }, e)),
@@ -333,20 +333,24 @@ function Z(e) {
             className: o()(P.flexCenter, P.noWrap, P.justifyBetween, N.toggleContainer),
             children: [
                 i,
-                (0, r.jsx)(c.ua7, {
+                (0, r.jsx)(c.aML, {
                     "data-migration-pending": !0,
                     text: C.intl.string(C.t["1+O+Tk"]),
-                    children: (t) => {
-                        let { onMouseEnter: i, onMouseLeave: a } = t;
-                        return (0, r.jsx)(c.P3F, {
-                            "aria-label": C.intl.string(C.t["1+O+Tk"]),
-                            className: N.toggleIcon,
-                            onClick: () => K(!e),
-                            onMouseEnter: i,
-                            onMouseLeave: a,
-                            children: n,
-                        });
-                    },
+                    children: (t) =>
+                        (0, r.jsx)(
+                            c.P3F,
+                            M(
+                                L(
+                                    {
+                                        "aria-label": C.intl.string(C.t["1+O+Tk"]),
+                                        className: N.toggleIcon,
+                                        onClick: () => K(!e),
+                                    },
+                                    t,
+                                ),
+                                { children: n },
+                            ),
+                        ),
                 }),
             ],
         });
@@ -369,22 +373,26 @@ function Z(e) {
                       });
         return (0, r.jsx)("div", {
             className: o()(P.flexCenter, P.noWrap, P.justifyBetween, N.toggleContainer),
-            children: (0, r.jsx)(c.ua7, {
+            children: (0, r.jsx)(c.aML, {
                 "data-migration-pending": !0,
                 text: C.intl.string(C.t.QmitzM),
-                children: (e) => {
-                    let { onMouseEnter: n, onMouseLeave: i } = e;
-                    return S
-                        ? (0, r.jsx)(c.P3F, {
-                              "aria-label": C.intl.string(C.t.QmitzM),
-                              className: N.toggleIcon,
-                              onClick: z,
-                              onMouseEnter: n,
-                              onMouseLeave: i,
-                              children: t,
-                          })
-                        : t;
-                },
+                children: (e) =>
+                    S
+                        ? (0, r.jsx)(
+                              c.P3F,
+                              M(
+                                  L(
+                                      {
+                                          "aria-label": C.intl.string(C.t.QmitzM),
+                                          className: N.toggleIcon,
+                                          onClick: z,
+                                      },
+                                      e,
+                                  ),
+                                  { children: t },
+                              ),
+                          )
+                        : t,
             }),
         });
     }
@@ -393,25 +401,31 @@ function Z(e) {
             ? null
             : (0, r.jsx)("div", {
                   className: o()(P.flexCenter, P.noWrap, P.justifyBetween, N.toggleContainer),
-                  children: (0, r.jsx)(c.ua7, {
+                  children: (0, r.jsx)(c.aML, {
                       "data-migration-pending": !0,
                       text: C.intl.string(C.t["y0B+lp"]),
-                      children: (e) => {
-                          let { onMouseEnter: t, onMouseLeave: n } = e;
-                          return (0, r.jsx)(c.P3F, {
-                              "aria-label": C.intl.string(C.t["y0B+lp"]),
-                              className: N.toggleIcon,
-                              onClick: q,
-                              onMouseEnter: t,
-                              onMouseLeave: n,
-                              children: (0, r.jsx)(c.U65, {
-                                  size: "md",
-                                  color: "currentColor",
-                                  className: N.toggleIconOn,
-                                  colorClass: N.fill,
-                              }),
-                          });
-                      },
+                      children: (e) =>
+                          (0, r.jsx)(
+                              c.P3F,
+                              M(
+                                  L(
+                                      {
+                                          "aria-label": C.intl.string(C.t["y0B+lp"]),
+                                          className: N.toggleIcon,
+                                          onClick: q,
+                                      },
+                                      e,
+                                  ),
+                                  {
+                                      children: (0, r.jsx)(c.U65, {
+                                          size: "md",
+                                          color: "currentColor",
+                                          className: N.toggleIconOn,
+                                          colorClass: N.fill,
+                                      }),
+                                  },
+                              ),
+                          ),
                   }),
               });
     }
