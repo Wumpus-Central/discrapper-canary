@@ -84,20 +84,18 @@ function p(e) {
             hideLabel: n,
             hideTags: l,
             placeholder: u,
-            required: _,
-            description: p,
-            helperText: h,
-            errorMessage: m,
-            successMessage: g,
-            wrapTags: E,
-            maxOptionsVisible: b = 5,
+            description: _,
+            helperText: p,
+            errorMessage: h,
+            successMessage: m,
+            wrapTags: g,
+            maxOptionsVisible: E = 5,
         } = e,
-        y = f(e, [
+        b = f(e, [
             "label",
             "hideLabel",
             "hideTags",
             "placeholder",
-            "required",
             "description",
             "helperText",
             "errorMessage",
@@ -105,7 +103,7 @@ function p(e) {
             "wrapTags",
             "maxOptionsVisible",
         ]);
-    let { disabled: O } = y,
+    let { disabled: y, required: O } = b,
         {
             isOpen: v,
             setIsOpen: I,
@@ -119,7 +117,7 @@ function p(e) {
         });
     return (0, r.jsxs)(
         a.uz,
-        d(c({}, y), {
+        d(c({}, b), {
             isCollapsible: !0,
             isOpen: v,
             setIsOpen: I,
@@ -132,13 +130,13 @@ function p(e) {
                             hideLabel: n,
                             hideTags: l,
                             placeholder: u,
-                            required: _,
-                            disabled: O,
-                            description: p,
-                            helperText: h,
-                            errorMessage: m,
-                            successMessage: g,
-                            wrapTags: E,
+                            required: O,
+                            disabled: y,
+                            description: _,
+                            helperText: p,
+                            errorMessage: h,
+                            successMessage: m,
+                            wrapTags: g,
                             showChevronButton: !0,
                             ref: T.setReference,
                         },
@@ -160,7 +158,7 @@ function p(e) {
                             {
                                 children: (0, r.jsx)(a.px, {
                                     renderListItem: (e) => (0, r.jsx)(o.W, c({}, e)),
-                                    maxVisibleItems: b,
+                                    maxVisibleItems: E,
                                 }),
                             },
                         ),

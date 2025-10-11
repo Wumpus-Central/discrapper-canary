@@ -102,8 +102,7 @@ function l(e) {
                 return "function" == typeof n ? n(_) : Promise.resolve(n);
             }
             return (
-                t &&
-                    null !== _ &&
+                ((t && null !== _ && o) || !o) &&
                     r().then((t) => {
                         e ||
                             (null != i && (t = t.map(i)),
@@ -118,7 +117,7 @@ function l(e) {
                     e = !0;
                 }
             );
-        }, [t, n, _, i]),
+        }, [t, n, _, i, o]),
         {
             options: u,
             loading: d,

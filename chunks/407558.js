@@ -30,7 +30,11 @@ function s(e) {
                 (0, a.dp)({
                     apply(e) {
                         let { rects: t, elements: n } = e;
-                        h.current && Object.assign(n.floating.style, { minWidth: "".concat(t.reference.width, "px") }),
+                        h.current &&
+                            Object.assign(n.floating.style, {
+                                minWidth: "".concat(t.reference.width, "px"),
+                                width: "".concat(t.reference.width, "px"),
+                            }),
                             null != p.current &&
                                 Object.assign(n.floating.style, { width: "".concat(p.current(t.reference), "px") }),
                             null != _.current &&
