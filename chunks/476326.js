@@ -1,9 +1,10 @@
 n.d(t, {
     BS: () => f,
-    ZP: () => _,
+    ZP: () => p,
     ow: () => u,
     rG: () => d,
 }),
+    n(35282),
     n(953529);
 var r = n(836560),
     i = n(392711),
@@ -33,7 +34,33 @@ function d(e) {
 var f = (function (e) {
     return (e[(e.FILE_ATTACHMENT = 0)] = "FILE_ATTACHMENT"), (e[(e.IMAGE_PICKER = 1)] = "IMAGE_PICKER"), e;
 })({});
-class _ extends r.EventEmitter {
+function _(e) {
+    var t;
+    let n = e.toLowerCase().split(".").pop();
+    return null !=
+        (t = {
+            png: "image/png",
+            jpg: "image/jpeg",
+            jpeg: "image/jpeg",
+            gif: "image/gif",
+            webp: "image/webp",
+            bmp: "image/bmp",
+            svg: "image/svg+xml",
+            ico: "image/x-icon",
+            mp4: "video/mp4",
+            webm: "video/webm",
+            mov: "video/quicktime",
+            avi: "video/x-msvideo",
+            mp3: "audio/mpeg",
+            wav: "audio/wav",
+            ogg: "audio/ogg",
+            pdf: "application/pdf",
+            txt: "text/plain",
+        }[null != n ? n : ""])
+        ? t
+        : "";
+}
+class p extends r.EventEmitter {
     cancel() {}
     resetState() {
         return this;
@@ -83,7 +110,7 @@ class _ extends r.EventEmitter {
                 (this.isImage = "image" === this.classification),
                 (this.isVideo = "video" === this.classification),
                 (this.filename = e.file.name),
-                (this.mimeType = e.file.type),
+                (this.mimeType = "" !== e.file.type ? e.file.type : _(e.file.name)),
                 (this.origin = e.origin);
         (this.isThumbnail = e.isThumbnail),
             (this.clip = e.clip),
