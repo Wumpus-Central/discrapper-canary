@@ -1,7 +1,7 @@
 n.d(t, {
     AJ: () => V,
     Bs: () => J,
-    ES: () => G,
+    ES: () => x,
     IN: () => B,
     J$: () => et,
     MC: () => W,
@@ -11,7 +11,7 @@ n.d(t, {
     eZ: () => ei,
     iM: () => Y,
     jR: () => eu,
-    kF: () => H,
+    kF: () => G,
     kn: () => el,
     ku: () => eo,
     mX: () => X,
@@ -63,7 +63,7 @@ var r = n(647438),
     D = n(981631),
     q = n(176505),
     L = n(124368);
-function G(e, t, n, l) {
+function x(e, t, n, l) {
     let u = (0, a.e7)([E.Z], () => E.Z.hasLoaded(e.guild_id));
     r.useEffect(() => {
         if (!u) return;
@@ -84,7 +84,7 @@ function G(e, t, n, l) {
             });
     }, [e.id, e.guild_id, u, n, t, l]);
 }
-function H(e) {
+function G(e) {
     return (0, a.e7)([E.Z, M.Z], () => {
         let t = u()(E.Z.getThreadsForParent(e.guild_id, e.parent_id))
             .keys()
@@ -96,7 +96,7 @@ function H(e) {
         return M.Z.getChannel(t);
     });
 }
-let x = [];
+let H = [];
 function Q(e) {
     let t = (function (e) {
         let t = null == e ? void 0 : e.parent_id;
@@ -155,7 +155,7 @@ function Q(e) {
             null !=
             (l = null == e || null == (r = e.appliedTags) || null == (n = r.map((e) => t[e])) ? void 0 : n.filter(T.lm))
                 ? l
-                : x;
+                : H;
         return (null == e ? void 0 : e.isModeratorReportChannel()) ? (0, h.iq)(u) : u;
     }, [t, e]);
 }
@@ -258,10 +258,11 @@ function W(e) {
     };
 }
 function X(e) {
-    let { firstMessage: t, formatInline: n = !0, noStyleAndInteraction: l = !0 } = e,
-        u = (0, g.p)(),
-        i = f.d.useExperiment({ location: "modules/forums/ForumHooks" }).enabled,
-        { hasSpoilerEmbeds: a, content: o } = r.useMemo(
+    let { firstMessage: t, formatInline: n = !0, noStyleAndInteraction: l = !0, hasUnreads: u = !0 } = e,
+        i = (0, g.p)(),
+        a = f.d.useExperiment({ location: "modules/forums/ForumHooks" }).enabled,
+        o = u ? "text-normal" : "text-muted",
+        { hasSpoilerEmbeds: d, content: s } = r.useMemo(
             () =>
                 (null == t ? void 0 : t.content) != null && "" !== t.content
                     ? (0, Z.ZP)(t, {
@@ -269,22 +270,23 @@ function X(e) {
                           noStyleAndInteraction: l,
                           allowHeading: !0,
                           allowList: !0,
-                          allowGameMentions: i,
-                          shouldFilterKeywords: u,
+                          allowGameMentions: a,
+                          shouldFilterKeywords: i,
+                          textColor: o,
                       })
                     : {
                           hasSpoilerEmbeds: !1,
                           content: null,
                       },
-            [t, n, l, u, i],
+            [t, n, l, i, a, o],
         ),
-        d = (0, y.eL)(t, a),
-        s = (0, y.vg)(t, a);
+        c = (0, y.eL)(t, d),
+        m = (0, y.vg)(t, d);
     return {
-        hasSpoilerEmbeds: a,
-        content: o,
-        firstMedia: d,
-        firstMediaIsEmbed: s,
+        hasSpoilerEmbeds: d,
+        content: s,
+        firstMedia: c,
+        firstMediaIsEmbed: m,
     };
 }
 function $(e) {

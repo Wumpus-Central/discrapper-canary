@@ -108,6 +108,7 @@ function g(e) {
         unknownUserMentionPlaceholder: !0,
         viewingChannelId: r.viewingChannelId,
         forceWhite: !!r.forceWhite,
+        textColor: r.textColor,
     };
 }
 function E(e, t, n) {
