@@ -297,7 +297,7 @@ function A(e) {
                                                                 (0, N.Z)({
                                                                     provider: t.providerType,
                                                                     onAccept: () => {
-                                                                        A(S.L.TAKE_ACTION), (0, I.Z)(n, t);
+                                                                        A(S.L.TAKE_ACTION), z();
                                                                     },
                                                                 });
                                                             },
