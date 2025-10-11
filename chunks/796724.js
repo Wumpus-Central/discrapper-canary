@@ -1,4 +1,4 @@
-t.d(n, { Z: () => y }), t(642613);
+t.d(n, { Z: () => I }), t(642613);
 var r = t(951288),
     i = t(647438),
     l = t(120356),
@@ -11,28 +11,29 @@ var r = t(951288),
     g = t(905551),
     m = t(802659),
     f = t(241306),
-    p = t(343312),
-    x = t(30910),
+    x = t(343312),
+    p = t(30910),
     v = t(281014),
     h = t(837329),
-    j = t(133091),
-    b = t(669460),
-    _ = t(619733),
-    C = t(948208),
-    E = t(388032),
-    N = t(817121);
-function S(e) {
+    j = t(531508),
+    b = t(133091),
+    _ = t(669460),
+    C = t(619733),
+    E = t(948208),
+    N = t(388032),
+    S = t(817121);
+function O(e) {
     let { plan: n, selected: t, className: i } = e;
     return null == n
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)("div", {
-                      className: a()(N.optionContainer, i),
+                      className: a()(S.optionContainer, i),
                       children: [
                           (0, r.jsx)("span", { children: n.name }),
                           (0, r.jsxs)("div", {
-                              className: N.labelContainer,
+                              className: S.labelContainer,
                               children: [
                                   (0, r.jsx)(c.Ucv, {
                                       size: "xs",
@@ -40,17 +41,17 @@ function S(e) {
                                   }),
                                   (0, r.jsx)(c.Text, {
                                       variant: "text-xs/medium",
-                                      children: E.intl.format(C.default.kOMlHh, { boostCount: n.cost }),
+                                      children: N.intl.format(E.default.kOMlHh, { boostCount: n.cost }),
                                   }),
                               ],
                           }),
                       ],
                   }),
-                  !t && (0, r.jsx)("div", { className: N.optionSpacer }),
+                  !t && (0, r.jsx)("div", { className: S.optionSpacer }),
               ],
           });
 }
-function O(e) {
+function y(e) {
     let { region: n, selected: t, disabled: i, className: l } = e,
         { pingText: o, pingCircleStyle: s } = (0, h.u)(n.pingUrl);
     return null == n
@@ -58,17 +59,17 @@ function O(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)("div", {
-                      className: a()(N.optionContainer, { [N.disabled]: i }, l),
+                      className: a()(S.optionContainer, { [S.disabled]: i }, l),
                       children: [
                           (0, r.jsx)("span", { children: n.name }),
                           (0, r.jsx)("div", {
-                              className: N.labelContainer,
+                              className: S.labelContainer,
                               children: i
-                                  ? (0, r.jsx)("span", { children: E.intl.string(C.default.aCyHe3) })
+                                  ? (0, r.jsx)("span", { children: N.intl.string(E.default.aCyHe3) })
                                   : "" !== n.pingUrl
                                     ? (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              (0, r.jsx)("div", { className: a()(N.pingCircle, s) }),
+                                              (0, r.jsx)("div", { className: a()(S.pingCircle, s) }),
                                               (0, r.jsx)(c.Text, {
                                                   variant: "text-xs/medium",
                                                   children: o,
@@ -79,11 +80,11 @@ function O(e) {
                           }),
                       ],
                   }),
-                  !t && (0, r.jsx)("div", { className: N.optionSpacer }),
+                  !t && (0, r.jsx)("div", { className: S.optionSpacer }),
               ],
           });
 }
-function y() {
+function I() {
     let {
         guildId: e,
         currentGame: n,
@@ -91,30 +92,32 @@ function y() {
         gameServerInstance: l,
         setRegionId: a,
         name: h,
-        setName: y,
-        planId: T,
-        setPlanId: P,
-        planCost: I,
-        stepLoading: w,
-        error: R,
-        gameProvider: G,
-    } = (0, p.JL)();
+        setName: I,
+        planId: P,
+        setPlanId: T,
+        planCost: w,
+        stepLoading: Z,
+        error: G,
+        gameProvider: R,
+    } = (0, x.JL)();
     i.useEffect(() => {
         (0, g._k)(e);
     }, [e]);
-    let Z = (0, o.e7)([m.Z], () => m.Z.getRegions()),
-        k = (0, o.e7)([m.Z], () => m.Z.getRegionState()),
-        M = i.useMemo(() => {
+    let k = (0, o.e7)([m.Z], () => m.Z.getRegions()),
+        M = (0, o.e7)([m.Z], () => m.Z.getRegionState()),
+        B = i.useMemo(() => {
             var e;
             return null !=
-                (e = Z.sort((e, n) => (0, j.Z)(e, n, k)).map((e) => ({
-                    value: e,
-                    label: e.name,
-                })))
+                (e = k
+                    .sort((e, n) => (0, b.Z)(e, n, M))
+                    .map((e) => ({
+                        value: e,
+                        label: e.name,
+                    })))
                 ? e
                 : [];
-        }, [k, Z]),
-        B = i.useMemo(() => {
+        }, [M, k]),
+        L = i.useMemo(() => {
             var e;
             return null !=
                 (e =
@@ -127,41 +130,42 @@ function y() {
                 ? e
                 : [];
         }, [n]),
-        D = (0, v.Z)(),
-        H = null != l,
-        z = (0, b.Z)(G),
-        L = null != G && null != _.nd[G] ? _.nd[G] : "";
+        z = (0, v.Z)(),
+        D = null != l,
+        H = (0, j.Z)(l),
+        F = (0, _.Z)(R),
+        U = null != R && null != C.nd[R] ? C.nd[R] : "";
     return null == n
         ? (0, r.jsx)("div", {
-              className: N.spinnerContainer,
+              className: S.spinnerContainer,
               children: (0, r.jsx)(c.$jN, { type: c.RAz.SPINNING_CIRCLE }),
           })
         : (0, r.jsxs)("div", {
-              className: N.container,
+              className: S.container,
               children: [
                   (0, r.jsxs)("div", {
-                      className: N.contentContainer,
+                      className: S.contentContainer,
                       children: [
                           (0, r.jsxs)("div", {
-                              className: N.settingsContainer,
+                              className: S.settingsContainer,
                               children: [
                                   (0, r.jsxs)("div", {
-                                      className: N.sectionContainer,
+                                      className: S.sectionContainer,
                                       children: [
                                           (0, r.jsxs)("div", {
-                                              className: N.sectionHeader,
+                                              className: S.sectionHeader,
                                               children: [
                                                   (0, r.jsx)(c.Heading, {
-                                                      className: N.headerText,
+                                                      className: S.headerText,
                                                       variant: "heading-sm/semibold",
                                                       color: "text-secondary",
-                                                      children: E.intl.string(C.default.rOMEZW),
+                                                      children: N.intl.string(E.default.rOMEZW),
                                                   }),
                                                   (0, r.jsx)(s.u, {
                                                       position: "top",
-                                                      text: E.intl.string(C.default.THJY1t),
+                                                      text: N.intl.string(E.default.THJY1t),
                                                       children: (0, r.jsx)(c.idN, {
-                                                          className: N.sectionHeaderIcon,
+                                                          className: S.sectionHeaderIcon,
                                                           size: "xs",
                                                       }),
                                                   }),
@@ -169,43 +173,43 @@ function y() {
                                           }),
                                           (0, r.jsx)(c.oil, {
                                               value: h,
-                                              onChange: y,
-                                              placeholder: E.intl.string(C.default.ElVYr6),
-                                              maxLength: _.Sg,
-                                              disabled: w,
+                                              onChange: I,
+                                              placeholder: N.intl.string(E.default.ElVYr6),
+                                              maxLength: C.Sg,
+                                              disabled: Z || !H,
                                           }),
                                       ],
                                   }),
                                   (0, r.jsxs)("div", {
-                                      className: N.sectionContainer,
+                                      className: S.sectionContainer,
                                       children: [
                                           (0, r.jsxs)("div", {
-                                              className: N.sectionHeader,
+                                              className: S.sectionHeader,
                                               children: [
                                                   (0, r.jsx)(c.Heading, {
-                                                      className: N.headerText,
+                                                      className: S.headerText,
                                                       variant: "heading-sm/semibold",
                                                       color: "text-secondary",
-                                                      children: E.intl.string(C.default.nB5OZ2),
+                                                      children: N.intl.string(E.default.nB5OZ2),
                                                   }),
                                                   (0, r.jsx)(s.u, {
                                                       position: "top",
-                                                      text: E.intl.string(
-                                                          null != l ? C.default["7mX0gI"] : C.default["61N+Pz"],
+                                                      text: N.intl.string(
+                                                          null != l ? E.default["7mX0gI"] : E.default["61N+Pz"],
                                                       ),
                                                       children: (0, r.jsx)(c.idN, {
-                                                          className: N.sectionHeaderIcon,
+                                                          className: S.sectionHeaderIcon,
                                                           size: "xs",
                                                       }),
                                                   }),
                                                   (0, r.jsx)("div", {
-                                                      className: N.refresh,
+                                                      className: S.refresh,
                                                       children: (0, r.jsx)(s.u, {
                                                           asContainer: !0,
                                                           position: "top",
-                                                          text: E.intl.string(C.default.kGkE7e),
+                                                          text: N.intl.string(E.default.kGkE7e),
                                                           children: (0, r.jsx)(c.P3F, {
-                                                              className: N.sectionHeaderIcon,
+                                                              className: S.sectionHeaderIcon,
                                                               onClick: () => (0, g.UM)(),
                                                               children: (0, r.jsx)(c.DuK, { size: "xs" }),
                                                           }),
@@ -216,14 +220,14 @@ function y() {
                                           (0, r.jsx)(c.PhF, {
                                               serialize: (e) => e.id,
                                               isSelected: (e) => e.id === t,
-                                              isDisabled: w || H,
-                                              options: M,
-                                              optionClassName: N.option,
+                                              isDisabled: Z || D || !H,
+                                              options: B,
+                                              optionClassName: S.option,
                                               select: (e) => a(e.id),
-                                              placeholder: E.intl.string(C.default["k+RTIi"]),
+                                              placeholder: N.intl.string(E.default["k+RTIi"]),
                                               renderOptionLabel: (e) => {
                                                   var n;
-                                                  return (0, r.jsx)(O, {
+                                                  return (0, r.jsx)(y, {
                                                       region: e.value,
                                                       selected: e.value.id === t,
                                                       disabled: null != (n = e.disabled) && n,
@@ -233,33 +237,33 @@ function y() {
                                                   var n;
                                                   return null == e[0]
                                                       ? null
-                                                      : (0, r.jsx)(O, {
+                                                      : (0, r.jsx)(y, {
                                                             region: e[0].value,
                                                             selected: e[0].value.id === t,
                                                             disabled: null != (n = e[0].disabled) && n,
-                                                            className: N.value,
+                                                            className: S.value,
                                                         });
                                               },
                                           }),
                                       ],
                                   }),
                                   (0, r.jsxs)("div", {
-                                      className: N.sectionContainer,
+                                      className: S.sectionContainer,
                                       children: [
                                           (0, r.jsxs)("div", {
-                                              className: N.sectionHeader,
+                                              className: S.sectionHeader,
                                               children: [
                                                   (0, r.jsx)(c.Heading, {
-                                                      className: N.headerText,
+                                                      className: S.headerText,
                                                       variant: "heading-sm/semibold",
                                                       color: "text-secondary",
-                                                      children: E.intl.string(C.default["K+zMYm"]),
+                                                      children: N.intl.string(E.default["K+zMYm"]),
                                                   }),
                                                   (0, r.jsx)(s.u, {
                                                       position: "top",
-                                                      text: E.intl.string(C.default["/wD5IC"]),
+                                                      text: N.intl.string(E.default["/wD5IC"]),
                                                       children: (0, r.jsx)(c.idN, {
-                                                          className: N.sectionHeaderIcon,
+                                                          className: S.sectionHeaderIcon,
                                                           size: "xs",
                                                       }),
                                                   }),
@@ -267,27 +271,27 @@ function y() {
                                           }),
                                           (0, r.jsx)(c.PhF, {
                                               serialize: (e) => e.id,
-                                              isSelected: (e) => e.id === T,
-                                              isDisabled: w,
-                                              options: B,
-                                              optionClassName: N.option,
-                                              select: (e) => P(e.id),
-                                              placeholder: E.intl.string(C.default.JdMW0t),
+                                              isSelected: (e) => e.id === P,
+                                              isDisabled: Z || !H,
+                                              options: L,
+                                              optionClassName: S.option,
+                                              select: (e) => T(e.id),
+                                              placeholder: N.intl.string(E.default.JdMW0t),
                                               renderOptionValue: (e) => {
                                                   var n, t, i;
-                                                  return (0, r.jsx)(S, {
+                                                  return (0, r.jsx)(O, {
                                                       plan: null == (n = e[0]) ? void 0 : n.value,
                                                       selected:
                                                           (null == (i = e[0]) || null == (t = i.value)
                                                               ? void 0
-                                                              : t.id) === T,
-                                                      className: N.value,
+                                                              : t.id) === P,
+                                                      className: S.value,
                                                   });
                                               },
                                               renderOptionLabel: (e) =>
-                                                  (0, r.jsx)(S, {
+                                                  (0, r.jsx)(O, {
                                                       plan: e.value,
-                                                      selected: e.value.id === T,
+                                                      selected: e.value.id === P,
                                                   }),
                                           }),
                                       ],
@@ -295,43 +299,52 @@ function y() {
                               ],
                           }),
                           (0, r.jsx)("div", {
-                              className: N.gameDetailsContainer,
+                              className: S.gameDetailsContainer,
                               children: (0, r.jsx)(f.Z, {}),
                           }),
                       ],
                   }),
                   null != l &&
-                      0 !== I &&
+                      0 !== w &&
                       (0, r.jsx)(d.Z, {
-                          className: N.infoBox,
+                          className: S.infoBox,
                           children: (0, r.jsx)(c.Text, {
                               variant: "text-xs/medium",
                               children:
-                                  I < 0
-                                      ? E.intl.format(C.default.SorKam, { boostCount: Math.abs(I) })
-                                      : E.intl.format(C.default.n2wpys, { boostCount: I }),
+                                  w < 0
+                                      ? N.intl.format(E.default.SorKam, { boostCount: Math.abs(w) })
+                                      : N.intl.format(E.default.n2wpys, { boostCount: w }),
+                          }),
+                      }),
+                  !H &&
+                      (0, r.jsx)(d.Z, {
+                          className: S.infoBox,
+                          look: d.z.WARNING,
+                          children: (0, r.jsx)(c.Text, {
+                              variant: "text-xs/medium",
+                              children: N.intl.string(E.default["/JNPWV"]),
                           }),
                       }),
                   (0, r.jsx)(c.Text, {
                       variant: "text-sm/medium",
                       children:
-                          null != G &&
-                          E.intl.format(H ? C.default.num0a2 : C.default.p5KZDg, {
-                              provider: z,
-                              termsOfServiceUrl: () => (0, u.q)({ href: L }),
+                          null != R &&
+                          N.intl.format(D ? E.default.num0a2 : E.default.p5KZDg, {
+                              provider: F,
+                              termsOfServiceUrl: () => (0, u.q)({ href: U }),
                               helpCenterUrl: "https://google.com/help-center",
                           }),
                   }),
-                  null != R &&
+                  null != G &&
                       (0, r.jsx)(c.Text, {
                           variant: "text-xs/medium",
                           color: "text-danger",
-                          children: R,
+                          children: G,
                       }),
-                  (0, r.jsxs)(x.o2, {
-                      step: _.EK.SERVER_SETTINGS,
-                      className: N.footerContainer,
-                      children: [(0, r.jsx)(x.c_, {}), (0, r.jsx)(x.$b, { disabled: !D })],
+                  (0, r.jsxs)(p.o2, {
+                      step: C.EK.SERVER_SETTINGS,
+                      className: S.footerContainer,
+                      children: [(0, r.jsx)(p.c_, {}), (0, r.jsx)(p.$b, { disabled: !z })],
                   }),
               ],
           });
