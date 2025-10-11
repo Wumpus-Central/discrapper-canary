@@ -1,18 +1,21 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => i });
 var r = n(951288),
-    l = n(755721);
-function o(e) {
+    l = n(755721),
+    o = n(550964);
+function i(e) {
     let { node: t } = e,
-        { useValue: n, setValue: o, useTitle: i, useSubtitle: a, useOptions: s } = t,
-        c = i(),
-        u = null == a ? void 0 : a(),
-        d = n(),
-        f = s();
-    return (0, r.jsx)(l.Gu, {
-        label: c,
-        description: u,
-        options: f,
-        value: d,
-        onChange: (e) => o(e.value),
+        { useValue: n, setValue: i, useTitle: a, useSubtitle: s, useOptions: c } = t,
+        u = a(),
+        d = null == s ? void 0 : s(),
+        f = n(),
+        m = c();
+    return (0, r.jsx)(o.X, {
+        children: (0, r.jsx)(l.Gu, {
+            label: u,
+            description: d,
+            options: m,
+            value: f,
+            onChange: (e) => i(e.value),
+        }),
     });
 }
