@@ -1,109 +1,109 @@
-n.d(t, { Z: () => B }), n(539854);
-var l = n(951288),
-    r = n(647438),
-    i = n(442837),
-    a = n(481060),
-    o = n(239091),
-    s = n(561472),
-    c = n(36311),
-    d = n(622822),
-    u = n(367907),
-    m = n(188471),
-    h = n(541716),
-    p = n(526120),
-    f = n(563534),
-    g = n(736052),
-    x = n(665149),
-    _ = n(442336),
-    C = n(910611),
-    b = n(41776),
-    j = n(703656),
-    v = n(6025),
-    y = n(592125),
-    O = n(703558),
-    N = n(430824),
-    Z = n(375954),
-    I = n(933557),
-    w = n(287746),
-    P = n(981631),
-    E = n(388032),
-    S = n(10832);
+t.d(n, { Z: () => A }), t(539854);
+var l = t(951288),
+    r = t(647438),
+    i = t(442837),
+    a = t(481060),
+    o = t(239091),
+    s = t(561472),
+    c = t(36311),
+    d = t(622822),
+    u = t(367907),
+    m = t(188471),
+    h = t(541716),
+    p = t(526120),
+    f = t(563534),
+    g = t(736052),
+    x = t(665149),
+    _ = t(442336),
+    C = t(910611),
+    b = t(41776),
+    j = t(703656),
+    v = t(6025),
+    y = t(592125),
+    O = t(703558),
+    N = t(430824),
+    Z = t(375954),
+    I = t(933557),
+    w = t(287746),
+    P = t(981631),
+    E = t(388032),
+    S = t(10832);
 function T(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            l = Object.keys(n);
+    for (var n = 1; n < arguments.length; n++) {
+        var t = null != arguments[n] ? arguments[n] : {},
+            l = Object.keys(t);
         "function" == typeof Object.getOwnPropertySymbols &&
             (l = l.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                Object.getOwnPropertySymbols(t).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
                 }),
             )),
-            l.forEach(function (t) {
+            l.forEach(function (n) {
                 var l;
-                (l = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
+                (l = t[n]),
+                    n in e
+                        ? Object.defineProperty(e, n, {
                               value: l,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = l);
+                        : (e[n] = l);
             });
     }
     return e;
 }
-function k(e, t) {
+function B(e, n) {
     return (
-        (t = null != t ? t : {}),
+        (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
+            : (function (e, n) {
+                  var t = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
                       var l = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, l);
+                      t.push.apply(t, l);
                   }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                  return t;
+              })(Object(n)).forEach(function (t) {
+                  Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
               }),
         e
     );
 }
-function B(e) {
-    let { channelId: t, baseChannelId: B, channelViewSource: A = "Split View", isResourceChannelView: R } = e,
-        D = (0, i.e7)([y.Z], () => y.Z.getChannel(t)),
+function A(e) {
+    let { channelId: n, baseChannelId: A, channelViewSource: R = "Split View", isResourceChannelView: k } = e,
+        D = (0, i.e7)([y.Z], () => y.Z.getChannel(n)),
         L = (0, i.e7)([N.Z], () => N.Z.getGuild(null == D ? void 0 : D.getGuildId())),
         M = (0, I.ZP)(D),
         H = (0, i.e7)([b.Z], () => (null == L ? void 0 : L.id) != null && b.Z.isLurking(L.id), [L]),
-        U = (0, g.Z)(t),
+        U = (0, g.Z)(n),
         G = (0, i.e7)([f.Z], () => {
             var e;
-            return null == (e = f.Z.getResourceForChannel(null == L ? void 0 : L.id, t)) ? void 0 : e.title;
+            return null == (e = f.Z.getResourceForChannel(null == L ? void 0 : L.id, n)) ? void 0 : e.title;
         }),
         W = (0, d.$5)(D),
-        q = r.useRef(!1);
+        F = r.useRef(!1);
     if (
         (r.useEffect(() => {
             null == D ||
-                q.current ||
-                ((q.current = !0),
-                (0, u.yw)(P.rMx.CHANNEL_OPENED, k(T({}, (0, u.$H)(D.id)), { channel_view: A })),
+                F.current ||
+                ((F.current = !0),
+                (0, u.yw)(P.rMx.CHANNEL_OPENED, B(T({}, (0, u.$H)(D.id)), { channel_view: R })),
                 (0, m.a)(P.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: D.id }));
-        }, [D, A]),
+        }, [D, R]),
         null == D || null == L)
     )
         return null;
-    let F = [];
-    return (H || F.push((0, l.jsx)(_.Z, { channel: D }, "notifications")),
-    F.push(
+    let q = [];
+    return (H || q.push((0, l.jsx)(_.Z, { channel: D }, "notifications")),
+    q.push(
         (0, l.jsx)(
             x.ZP.Icon,
             {
                 icon: a.Dio,
                 tooltip: E.intl.string(E.t.cpT0Cg),
-                onClick: () => v.Z.closeChannelSidebar(B),
+                onClick: () => v.Z.closeChannelSidebar(A),
             },
             "close",
         ),
@@ -120,7 +120,7 @@ function B(e) {
                       draftType: O.d.ChannelMessage,
                   }),
                   (0, l.jsx)(x.ZP, {
-                      toolbar: F,
+                      toolbar: q,
                       "aria-label": E.intl.string(E.t.BIYAqa),
                       children: (0, C.ud)({
                           channel: D,
@@ -129,13 +129,13 @@ function B(e) {
                           inSidebar: !0,
                           handleContextMenu: (e) => {
                               (0, o.jW)(e, async () => {
-                                  let { default: e } = await Promise.all([n.e("24783"), n.e("41815")]).then(
-                                      n.bind(n, 439635),
+                                  let { default: e } = await Promise.all([t.e("24783"), t.e("41815")]).then(
+                                      t.bind(t, 439635),
                                   );
-                                  return (t) =>
+                                  return (n) =>
                                       (0, l.jsx)(
                                           e,
-                                          k(T({}, t), {
+                                          B(T({}, n), {
                                               channel: D,
                                               guild: L,
                                           }),
@@ -144,7 +144,7 @@ function B(e) {
                           },
                           handleClick: () => {
                               let e = Z.Z.getMessages(D.id);
-                              if (R) {
+                              if (k) {
                                   (0, j.uL)(P.Z5c.CHANNEL(D.guild_id, D.id)), (0, p.C3)(D.guild_id, null);
                                   return;
                               }
@@ -161,7 +161,7 @@ function B(e) {
                               guild: L,
                               chatInputType: h.Ie.SIDEBAR,
                           },
-                          t,
+                          n,
                       ),
                   }),
               ],

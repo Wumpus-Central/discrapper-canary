@@ -2,27 +2,27 @@ n.d(t, { Z: () => u });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    s = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    s = n(481060),
     o = n(730671),
     c = n(388032),
     d = n(554867);
 function u(e) {
     let { onChangeText: t, maxWordCount: n, className: l, textAreaClassName: u, subtitleText: g, initialValue: m } = e,
         p = i.useMemo(() => (null != m ? m : []), [m]),
-        { value: f, onChange: h, errorMessage: x } = (0, o.Z)(t, m, n);
+        { value: f, onChange: h, errorMessage: b } = (0, o.Z)(t, m, n);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: s()(d.keywordsContainer, l),
+                className: a()(d.keywordsContainer, l),
                 children: [
-                    (0, r.jsx)(a.lcI, {
-                        className: s()(d.keywordsTextArea, u),
+                    (0, r.jsx)(s.lcI, {
+                        className: a()(d.keywordsTextArea, u),
                         value: f,
                         onChange: h,
                         placeholder: c.intl.string(c.t.UyaxJy),
                     }),
-                    (0, r.jsx)(a.Text, {
+                    (0, r.jsx)(s.Text, {
                         className: d.keywordsCounter,
                         variant: "text-xs/normal",
                         color: "text-muted",
@@ -30,14 +30,14 @@ function u(e) {
                     }),
                 ],
             }),
-            null != x
-                ? (0, r.jsx)(a.Text, {
-                      className: s()(d.paddingTop, d.errorText),
+            null != b
+                ? (0, r.jsx)(s.Text, {
+                      className: a()(d.paddingTop, d.errorText),
                       variant: "text-xs/medium",
                       color: "text-danger",
-                      children: x,
+                      children: b,
                   })
-                : (0, r.jsx)(a.Text, {
+                : (0, r.jsx)(s.Text, {
                       className: d.paddingTop,
                       variant: "text-xs/normal",
                       color: "header-secondary",

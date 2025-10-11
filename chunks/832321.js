@@ -2,8 +2,8 @@ n.d(t, { k: () => g });
 var r = n(951288),
     i = n(647438),
     l = n(772848),
-    s = n(442837),
-    a = n(339085),
+    a = n(442837),
+    s = n(339085),
     o = n(231053),
     c = n(183023),
     d = n(650774),
@@ -11,7 +11,7 @@ var r = n(951288),
 function g(e) {
     let { guild: t, discoverableGuild: n } = e,
         g = null == t ? void 0 : t.id,
-        { memberCount: m, onlineCount: p } = (0, s.cj)([d.Z], () => {
+        { memberCount: m, onlineCount: p } = (0, a.cj)([d.Z], () => {
             var e, t;
             return {
                 memberCount: null != (e = d.Z.getMemberCount(g)) ? e : 1234,
@@ -23,7 +23,7 @@ function g(e) {
             var e, r;
             if (null != n) return o.JO.createFromDiscoverableGuild(n);
             if (null == t) return null;
-            let i = a.ZP.getGuildEmoji(t.id);
+            let i = s.ZP.getGuildEmoji(t.id);
             return o.JO.createFromDiscoverableGuild(
                 ((e = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
@@ -73,7 +73,7 @@ function g(e) {
                 e),
             );
         }, [n, t, m, p]),
-        x = i.useMemo(() => {
+        b = i.useMemo(() => {
             var e;
             let t = null == h || null == (e = h.emojis) ? void 0 : e[0];
             return null != t
@@ -90,7 +90,7 @@ function g(e) {
               sourceType: o.w6.GUILD,
               expressionSourceApplication: null,
               expressionSourceGuild: h,
-              node: x,
+              node: b,
               closePopout: u.dG,
               nonce: f.current,
               demoMode: !0,

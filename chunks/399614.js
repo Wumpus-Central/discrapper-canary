@@ -1,9 +1,9 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => b });
 var r = n(951288),
     i = n(647438),
     l = n(399606),
-    s = n(481060),
-    a = n(710344),
+    a = n(481060),
+    s = n(710344),
     o = n(734893),
     c = n(8426),
     d = n(969632),
@@ -54,14 +54,14 @@ function f(e, t) {
     );
 }
 let h = [],
-    x = function (e) {
+    b = function (e) {
         let { guildId: t } = e,
-            x = (0, l.Wu)([d.Z], () => {
+            b = (0, l.Wu)([d.Z], () => {
                 var e;
                 return null != (e = d.Z.getSettings().resourceChannels) ? e : h;
             }),
-            b = i.useMemo(() => x.map((e) => f(p({}, e), { id: e.channelId })), [x]),
-            { handleDragStart: j, handleDragReset: _, handleDragComplete: v } = (0, a.Z)(b, c.lq),
+            x = i.useMemo(() => b.map((e) => f(p({}, e), { id: e.channelId })), [b]),
+            { handleDragStart: j, handleDragReset: v, handleDragComplete: _ } = (0, s.Z)(x, c.lq),
             C = i.useCallback(
                 (e, n) => {
                     let r = d.Z.getSettings();
@@ -75,7 +75,7 @@ let h = [],
             ),
             O = i.useCallback(() => {
                 if (null != t)
-                    return (0, s.ZDy)(async () => {
+                    return (0, a.ZDy)(async () => {
                         let { default: e } = await n.e("84725").then(n.bind(n, 462499));
                         return (n) =>
                             (0, r.jsx)(
@@ -91,7 +91,7 @@ let h = [],
         return (0, r.jsxs)("div", {
             className: m.editResources,
             children: [
-                x.map((e, n) =>
+                b.map((e, n) =>
                     (0, r.jsx)(
                         u.Z,
                         {
@@ -99,22 +99,22 @@ let h = [],
                             resourceChannel: e,
                             index: n,
                             onDragStart: j,
-                            onDragReset: _,
-                            onDragComplete: v,
+                            onDragReset: v,
+                            onDragComplete: _,
                         },
                         e.channelId,
                     ),
                 ),
-                x.length < o.x3 &&
-                    (0, r.jsxs)(s.P3F, {
+                b.length < o.x3 &&
+                    (0, r.jsxs)(a.P3F, {
                         className: m.addActionItem,
                         onClick: O,
                         children: [
-                            (0, r.jsx)(s.oFk, {
+                            (0, r.jsx)(a.oFk, {
                                 size: "xs",
                                 color: "currentColor",
                             }),
-                            (0, r.jsx)(s.Text, {
+                            (0, r.jsx)(a.Text, {
                                 variant: "text-md/normal",
                                 color: "none",
                                 children: g.intl.string(g.t["w9/qGR"]),

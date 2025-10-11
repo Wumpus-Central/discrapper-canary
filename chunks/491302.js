@@ -14,7 +14,7 @@ var i = n(951288),
     g = n(941678);
 function f(e) {
     let { webhook: t, editedWebhook: f, channelOptions: h, isExpanded: x, errors: j, onToggleExpand: v } = e,
-        O = r.useMemo(() => {
+        y = r.useMemo(() => {
             var e;
             return null != (e = t.avatar) && /^data:/.test(e)
                 ? e
@@ -24,7 +24,7 @@ function f(e) {
                       discriminator: m.fo$,
                   });
         }, [t]),
-        y = r.useCallback(() => {
+        O = r.useCallback(() => {
             (0, a.ZDy)(async () => {
                 let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 878678));
                 return (n) => {
@@ -154,7 +154,7 @@ function f(e) {
                             }),
                             (0, i.jsx)(a.izJ, { className: g.bottomDivider }),
                             (0, i.jsx)(l.Avr, {
-                                onClick: y,
+                                onClick: O,
                                 size: "sm",
                                 variant: "critical",
                                 text: b.intl.string(b.t.CMy0Cg),
@@ -179,7 +179,7 @@ function f(e) {
                             children: [
                                 (0, i.jsx)(p.Z, {
                                     name: t.name,
-                                    imageSrc: O,
+                                    imageSrc: y,
                                     details: _,
                                 }),
                                 (0, i.jsx)(d.Z, {

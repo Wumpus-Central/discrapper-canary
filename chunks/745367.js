@@ -1,4 +1,4 @@
-t.d(e, { default: () => h });
+t.d(e, { default: () => _ });
 var o = t(951288);
 t(647438);
 var i = t(481060),
@@ -10,9 +10,9 @@ var i = t(481060),
     d = t(573703),
     u = t(798930),
     C = t(981631),
-    _ = t(771831);
-function h(n) {
-    let { transitionState: e, onClose: t, analyticsLocation: h } = n,
+    h = t(771831);
+function _(n) {
+    let { transitionState: e, onClose: t, analyticsLocation: _ } = n,
         {
             slide: p,
             gotoNext: x,
@@ -21,9 +21,9 @@ function h(n) {
             handleAuthToken: f,
             expectedCallbackState: v,
             callbackData: j,
-        } = (0, r.k)(h, C.ABu.CRUNCHYROLL);
+        } = (0, r.k)(_, C.ABu.CRUNCHYROLL);
     return (0, o.jsx)(i.Y0X, {
-        className: _.modal,
+        className: h.modal,
         transitionState: e,
         disableTrack: !0,
         parentComponent: "CrunchyrollLinkModal",

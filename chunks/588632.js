@@ -1,64 +1,64 @@
-n.d(t, { Z: () => u }), n(388685), n(539854);
-var l = n(951288),
-    r = n(647438),
-    i = n(692547),
-    a = n(481060),
-    o = n(596454),
-    s = n(388032),
-    c = n(870269);
+t.d(n, { Z: () => u }), t(388685), t(539854);
+var l = t(951288),
+    r = t(647438),
+    i = t(692547),
+    a = t(481060),
+    o = t(596454),
+    s = t(388032),
+    c = t(870269);
 function d(e) {
     return null != e && (null != e.id || null != e.name);
 }
 function u(e) {
-    let { options: t, value: n, onChange: u, canBeNew: m, memberCounts: h } = e,
+    let { options: n, value: t, onChange: u, canBeNew: m, memberCounts: h } = e,
         p = r.useMemo(() => {
             let e = new Map();
             return (
-                t.forEach((t) => {
-                    e.set(t.id, t);
+                n.forEach((n) => {
+                    e.set(n.id, n);
                 }),
                 e
             );
-        }, [t]),
+        }, [n]),
         f = r.useMemo(() => {
             let e = [];
             return (
-                t.forEach((t) => {
+                n.forEach((n) => {
                     e.push({
-                        value: t.id,
-                        label: t.title,
-                        key: t.id,
+                        value: n.id,
+                        label: n.title,
+                        key: n.id,
                     });
                 }),
                 e
             );
-        }, [t]),
+        }, [n]),
         g = r.useCallback(
             (e) => {
-                var t, n, r, i;
+                var n, t, r, i;
                 if (null == e) return;
                 let a = p.get(e.value);
                 if (null != a && d(a.emoji))
                     return (0, l.jsx)(o.Z, {
-                        emojiId: null == (t = a.emoji) ? void 0 : t.id,
-                        emojiName: null == (n = a.emoji) ? void 0 : n.name,
+                        emojiId: null == (n = a.emoji) ? void 0 : n.id,
+                        emojiName: null == (t = a.emoji) ? void 0 : t.name,
                         animated: null != (i = null == (r = a.emoji) ? void 0 : r.animated) && i,
                     });
             },
             [p],
         ),
         x = r.useCallback(
-            (e, t) => {
-                if (null == e || t.inPill) return;
-                let n = p.get(e.value);
-                if (null == n || !d(n.emoji)) return;
-                let r = null == h || null == n.roleIds ? 0 : Math.max(...n.roleIds.map((e) => h[e])),
+            (e, n) => {
+                if (null == e || n.inPill) return;
+                let t = p.get(e.value);
+                if (null == t || !d(t.emoji)) return;
+                let r = null == h || null == t.roleIds ? 0 : Math.max(...t.roleIds.map((e) => h[e])),
                     o = null != h && r > 0;
                 return (0, l.jsxs)("div", {
                     className: c.suffix,
                     children: [
                         m &&
-                            n.isUnseen &&
+                            t.isUnseen &&
                             (0, l.jsx)(a.IGR, {
                                 color: i.Z.unsafe_rawColors.BRAND_260.css,
                                 text: s.intl.string(s.t.y2b7CA),
@@ -81,12 +81,12 @@ function u(e) {
         ),
         _ = r.useCallback(
             (e) => {
-                let t = [];
+                let n = [];
                 e.forEach((e) => {
-                    let n = p.get(e);
-                    null != n && t.push(n);
+                    let t = p.get(e);
+                    null != t && n.push(t);
                 }),
-                    u(t);
+                    u(n);
             },
             [u, p],
         );
@@ -94,7 +94,7 @@ function u(e) {
         multi: !0,
         options: f,
         onChange: _,
-        value: n,
+        value: t,
         closeOnSelect: !1,
         renderOptionSuffix: x,
         renderOptionPrefix: g,

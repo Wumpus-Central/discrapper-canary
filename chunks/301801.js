@@ -1,18 +1,18 @@
-r.d(t, { BO: () => o }), r(190126), r(368063), r(65234), r(111804), r(490233), r(97749), r(388685), r(781311);
+r.d(t, { BO: () => i }), r(190126), r(368063), r(65234), r(111804), r(490233), r(97749), r(388685), r(781311);
 var n = r(647438),
     a = r(348327),
     c = r.n(a),
     l = r(392711),
     u = r(823379),
     s = r(886118);
-let i = new Worker(new URL("/assets/" + r.u("56558"), r.b));
-function o(e, t, r, a) {
-    let o = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
+let o = new Worker(new URL("/assets/" + r.u("56558"), r.b));
+function i(e, t, r, a) {
+    let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
         d = n.useRef(null),
         f = n.useRef(null),
         m = n.useRef(r),
         { searchStringGenerator: x } = a,
-        p = (function (e) {
+        h = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
                 [r, a] = n.useState(e),
                 l = n.useRef(e);
@@ -28,8 +28,8 @@ function o(e, t, r, a) {
                 }, t),
                 r
             );
-        })(t.map(x), [t, x, ...o]),
-        h = (function (e) {
+        })(t.map(x), [t, x, ...i]),
+        p = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
                 [r, a] = n.useState(e),
                 l = n.useRef(e);
@@ -60,7 +60,7 @@ function o(e, t, r, a) {
                         var a;
                         let c = null != (a = n.promiseUuid) ? a : (0, l.uniqueId)(),
                             {
-                                searchType: o = s.S.FUZZY,
+                                searchType: i = s.S.FUZZY,
                                 sortType: d = s.E.NONE,
                                 jaroWinklerSearchThreshold: f = 0.85,
                             } = n;
@@ -71,15 +71,15 @@ function o(e, t, r, a) {
                                 } = t;
                                 c === r &&
                                     (n(l.map((t) => e[t]).filter(u.lm)),
-                                    null == i || i.removeEventListener("message", a));
+                                    null == o || o.removeEventListener("message", a));
                             };
-                            null == i || i.addEventListener("message", a),
-                                null == i ||
-                                    i.postMessage({
+                            null == o || o.addEventListener("message", a),
+                                null == o ||
+                                    o.postMessage({
                                         id: c,
                                         searchTerm: t,
                                         searchStrings: r,
-                                        searchType: o,
+                                        searchType: i,
                                         sortType: d,
                                         jaroWinklerSearchThreshold: f,
                                     });
@@ -127,13 +127,13 @@ function o(e, t, r, a) {
     }, [a]);
     return (
         n.useEffect(() => {
-            g(e, h, p);
-        }, [g, e, h, p, ...o]),
+            g(e, p, h);
+        }, [g, e, p, h, ...i]),
         n.useEffect(
             () => () => {
                 null != f.current && f.current.cancel(), (f.current = null), (d.current = null);
             },
-            [p, r, a],
+            [h, r, a],
         ),
         g
     );

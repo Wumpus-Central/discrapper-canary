@@ -2,8 +2,8 @@ n.d(t, { Z: () => h }), n(953529);
 var r,
     i = n(442837),
     l = n(570140),
-    s = n(430824),
-    a = n(981631);
+    a = n(430824),
+    s = n(981631);
 function o(e, t, n) {
     return (
         t in e
@@ -28,20 +28,20 @@ let c = {
     m = c;
 function p(e) {
     let { welcomeScreen: t, guildId: n } = e,
-        r = s.Z.getGuild(n);
+        r = a.Z.getGuild(n);
     if (null != t) {
         var i, l;
         m = d = {
             description: null != (i = t.description) ? i : "",
             channels: null != (l = t.welcome_channels) ? l : [],
-            enabled: null == r ? void 0 : r.features.has(a.oNc.WELCOME_SCREEN_ENABLED),
+            enabled: null == r ? void 0 : r.features.has(s.oNc.WELCOME_SCREEN_ENABLED),
         };
     } else m = d = c;
     g = !1;
 }
 class f extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(s.Z);
+        this.waitFor(a.Z);
     }
     get() {
         return m;

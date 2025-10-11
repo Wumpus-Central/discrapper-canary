@@ -1,10 +1,10 @@
-n.d(t, { S: () => l });
+n.d(t, { S: () => a });
 var r = n(442837),
-    a = n(482207);
-function l() {
-    return (0, r.cj)([a.Z], () => ({
-        avatars: a.Z.getAvatars(),
-        loading: a.Z.isFetching,
-        error: a.Z.fetchError,
+    l = n(482207);
+function a() {
+    return (0, r.cj)([l.Z], () => ({
+        avatars: l.Z.getAvatars(),
+        loading: l.Z.isFetching,
+        error: l.Z.fetchError,
     }));
 }

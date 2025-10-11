@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(168107),
     d = n(480916),
     u = n(622822),
-    p = n(986035),
-    h = n(388032),
+    h = n(986035),
+    p = n(388032),
     f = n(118177);
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -77,7 +77,7 @@ function m(e) {
                 {
                     guildId: null == l ? void 0 : l.id,
                     channelId: a,
-                    disagreement: h.intl.string(h.t["/g10LC"]),
+                    disagreement: p.intl.string(p.t["/g10LC"]),
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -96,7 +96,7 @@ function m(e) {
         case d.it.NSFW_CHANNEL_AGE_VERIFY:
         case d.it.GUILD_LARGE_SERVER:
             return (0, r.jsx)(
-                p.Z,
+                h.Z,
                 g(
                     {
                         onAgree: _,
@@ -108,7 +108,7 @@ function m(e) {
             );
         default:
             return (0, r.jsx)(
-                p.Z,
+                h.Z,
                 g(
                     {
                         onAgree: y,

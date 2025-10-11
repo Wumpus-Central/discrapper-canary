@@ -38,11 +38,11 @@ var r = n(951288),
     k = n(685244),
     A = n(16829),
     U = n(256003),
-    F = n(472596),
-    B = n(285173),
+    B = n(472596),
+    F = n(285173),
     q = n(981631),
-    z = n(176505),
-    G = n(50493),
+    G = n(176505),
+    z = n(50493),
     Y = n(388032),
     W = n(266631);
 let K = l.memo(function (e) {
@@ -113,8 +113,8 @@ let K = l.memo(function (e) {
             i = (0, u.e7)([S.Z], () => S.Z.getGuild(t.guildId), [t.guildId]),
             a = t.roles.length - 1,
             s = l.useMemo(() => new Intl.NumberFormat(Y.intl.currentLocale).format(a), [a]),
-            c = (0, F.vN)(t),
-            d = (0, F.vN)(t, !0),
+            c = (0, B.vN)(t),
+            d = (0, B.vN)(t, !0),
             m = (0, u.e7)([N.Z], () => N.Z.can(q.Plq.MANAGE_ROLES, i), [i]);
         return null == i
             ? null
@@ -122,7 +122,7 @@ let K = l.memo(function (e) {
                   className: W.roleContainer,
                   children: [
                       null != n &&
-                          (0, r.jsx)(B.Z, {
+                          (0, r.jsx)(F.Z, {
                               className: o()(W.roleTooltipItem, W.highestRole),
                               role: n,
                               guildId: t.guildId,
@@ -158,7 +158,7 @@ let K = l.memo(function (e) {
                   ],
               });
     }),
-    X = l.memo(function (e) {
+    J = l.memo(function (e) {
         var t, n;
         let { member: l, user: i } = e,
             o = (0, _.X7)(
@@ -210,7 +210,7 @@ let K = l.memo(function (e) {
                   ],
               });
     });
-function J(e) {
+function X(e) {
     return {
         short: null == e ? null : (0, V.fv)(e, V.jq.JOINED_AT),
         long: new Date(null != e ? e : 0).toLocaleDateString(Y.intl.currentLocale, V.UG),
@@ -220,10 +220,10 @@ function $(e) {
     let { member: t, showLongDate: n, isSortedBy: i } = e,
         [o, a] = l.useState(null);
     l.useEffect(() => {
-        a(J(t.joinedAtTimestamp));
+        a(X(t.joinedAtTimestamp));
     }, [t.joinedAtTimestamp]),
         (0, f.Z)(() => {
-            a(J(t.joinedAtTimestamp));
+            a(X(t.joinedAtTimestamp));
         }, 10000);
     let s = i ? "text-brand" : "text-default";
     return (null == o ? void 0 : o.short) == null
@@ -334,7 +334,7 @@ let ee = l.memo(function (e) {
                     }),
                 (0, r.jsx)("td", {
                     className: o()({ [W.compact]: p }),
-                    children: (0, r.jsx)(X, {
+                    children: (0, r.jsx)(J, {
                         member: t,
                         user: n,
                     }),
@@ -434,10 +434,10 @@ let ee = l.memo(function (e) {
             p = (0, u.e7)([w.ZP], () => w.ZP.getGuildSidebarState(n), [n]),
             f = (null == p ? void 0 : p.details.userId) === t,
             g = (0, u.e7)([T.Z], () => T.Z.getEnhancedMember(n, t), [n, t]),
-            j = (0, F.zq)(g),
+            j = (0, B.zq)(g),
             x = (0, u.e7)([Z.default], () => Z.default.getUser(t), [t]),
             O = (0, y.m)(n),
-            H = (0, F.RN)(null != g ? g : void 0),
+            H = (0, B.RN)(null != g ? g : void 0),
             _ = l.useCallback(
                 (e) => {
                     e.stopPropagation(), e.preventDefault(), H(e);
@@ -446,7 +446,7 @@ let ee = l.memo(function (e) {
             ),
             S = l.useCallback(
                 (e) => {
-                    e.stopPropagation(), e.preventDefault(), null != g && (0, F.RE)(g, b);
+                    e.stopPropagation(), e.preventDefault(), null != g && (0, B.RE)(g, b);
                 },
                 [g, b],
             ),
@@ -456,8 +456,8 @@ let ee = l.memo(function (e) {
                         e.preventDefault(),
                         null != g &&
                             (O
-                                ? (0, v.r)(g.guildId, g.userId, z.oC.MEMBER_SAFETY, { modViewPanel: G.k.INFO })
-                                : (0, F.RE)(g, b));
+                                ? (0, v.r)(g.guildId, g.userId, G.oC.MEMBER_SAFETY, { modViewPanel: z.k.INFO })
+                                : (0, B.RE)(g, b));
                 },
                 [g, b, O],
             ),

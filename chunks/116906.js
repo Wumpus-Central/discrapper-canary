@@ -18,8 +18,8 @@ var i = t(442837),
     v = t(864141),
     g = t(228168),
     b = t(981631),
-    y = t(388032),
-    I = t(7994),
+    I = t(388032),
+    y = t(7994),
     Z = t(878449);
 function O(e) {
     let { user: n, currentUser: t, guildId: O, subsection: N, onClose: P } = e,
@@ -38,18 +38,18 @@ function O(e) {
         }),
         M = E.length > 0 || null != C,
         U = T && null == C && null == w && null != _,
-        B = !L && (M || U),
-        k = S.length > 0;
-    return B || k || !D
+        k = !L && (M || U),
+        B = S.length > 0;
+    return k || B || !D
         ? (0, l.jsxs)(r.zJl, {
-              className: I.scroller,
+              className: y.scroller,
               fade: !0,
               children: [
-                  B
+                  k
                       ? (0, l.jsx)(f.Z, {
-                            "aria-label": y.intl.string(y.t.J6STd3),
+                            "aria-label": I.intl.string(I.t.J6STd3),
                             children: (0, l.jsxs)("ul", {
-                                className: I.activityList,
+                                className: y.activityList,
                                 children: [
                                     !A &&
                                         U &&
@@ -88,11 +88,11 @@ function O(e) {
                             }),
                         })
                       : null,
-                  k
+                  B
                       ? (0, l.jsx)(f.Z, {
-                            heading: y.intl.string(y.t.M0zgnZ),
+                            heading: I.intl.string(I.t.M0zgnZ),
                             introText: R
-                                ? y.intl.format(y.t["4bk9Ag"], {
+                                ? I.intl.format(I.t["4bk9Ag"], {
                                       learnMoreHook: (e, n) =>
                                           (0, l.jsx)(
                                               r.Anchor,
@@ -106,7 +106,7 @@ function O(e) {
                                 : void 0,
                             scrollIntoView: N === g.Tb.RECENT_ACTIVITY,
                             children: (0, l.jsx)("ul", {
-                                className: I.activityList,
+                                className: y.activityList,
                                 children: S.map((e) =>
                                     (0, l.jsx)(
                                         "li",

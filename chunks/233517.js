@@ -1,6 +1,6 @@
 a.d(e, {
     Qy: () => O,
-    TM: () => g,
+    TM: () => D,
     Tb: () => s,
     YA: () => A,
     av: () => T,
@@ -86,15 +86,15 @@ function P(t) {
             ...t,
         }),
         I = a.getSession();
-    return I && "ok" === I.status && (0, c.CT)(I, { status: "exited" }), g(), a.setSession(l), r.setSession(l), l;
+    return I && "ok" === I.status && (0, c.CT)(I, { status: "exited" }), D(), a.setSession(l), r.setSession(l), l;
 }
-function g() {
+function D() {
     let t = (0, o.aF)(),
         e = (0, o.nZ)(),
         a = e.getSession() || t.getSession();
-    a && (0, c.RJ)(a), D(), t.setSession(), e.setSession();
+    a && (0, c.RJ)(a), g(), t.setSession(), e.setSession();
 }
-function D() {
+function g() {
     let t = (0, o.aF)(),
         e = (0, o.nZ)(),
         a = (0, o.s3)(),
@@ -102,6 +102,6 @@ function D() {
     r && a && a.captureSession(r);
 }
 function C(t = !1) {
-    if (t) return void g();
-    D();
+    if (t) return void D();
+    g();
 }

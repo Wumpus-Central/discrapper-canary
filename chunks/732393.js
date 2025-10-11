@@ -1,8 +1,8 @@
 e.d(n, { Z: () => b }), e(388685);
 var i = e(951288);
 e(647438);
-var a = e(442837),
-    l = e(481060),
+var l = e(442837),
+    a = e(481060),
     r = e(239091),
     o = e(596454),
     s = e(339085),
@@ -11,18 +11,18 @@ var a = e(442837),
     c = e(665906),
     f = e(592125),
     h = e(710352),
-    v = e(388032),
-    g = e(433307);
+    g = e(388032),
+    v = e(433307);
 function Z(t) {
     let { tag: n } = t,
-        { name: e, emojiId: l, emojiName: r } = n,
-        d = (0, a.e7)([s.ZP], () => (null != l ? s.ZP.getUsableCustomEmojiById(l) : null));
+        { name: e, emojiId: a, emojiName: r } = n,
+        d = (0, l.e7)([s.ZP], () => (null != a ? s.ZP.getUsableCustomEmojiById(a) : null));
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            null != r || null != l
+            null != r || null != a
                 ? (0, i.jsx)(o.Z, {
-                      className: g.emoji,
-                      emojiId: l,
+                      className: v.emoji,
+                      emojiId: a,
                       emojiName: r,
                       animated: !!(null == d ? void 0 : d.animated),
                   })
@@ -32,12 +32,12 @@ function Z(t) {
     });
 }
 function b(t) {
-    let n = (0, a.e7)([f.Z], () => f.Z.getChannel(t), [t]),
+    let n = (0, l.e7)([f.Z], () => f.Z.getChannel(t), [t]),
         e = (0, c.C7)(n),
-        o = (0, a.e7)([f.Z], () => f.Z.getChannel(null == n ? void 0 : n.parent_id), [n]),
+        o = (0, l.e7)([f.Z], () => f.Z.getChannel(null == n ? void 0 : n.parent_id), [n]),
         s = (0, u.Vm)(o),
-        g = (0, u.eV)(n),
-        b = g.length >= h.Cn,
+        v = (0, u.eV)(n),
+        b = v.length >= h.Cn,
         p = (0, c.$R)(n);
     if (null == n) return (0, r.Zy)(), null;
     if (
@@ -53,16 +53,16 @@ function b(t) {
         null == s
             ? void 0
             : s.map((t) => {
-                  let e = g.includes(t);
+                  let e = v.includes(t);
                   return (0, i.jsx)(
-                      l.S89,
+                      a.S89,
                       {
                           id: t.id,
                           label: (0, i.jsx)(Z, { tag: t }),
                           disabled: b && !e,
                           action: () =>
                               ((t) => {
-                                  let e = new Set(g);
+                                  let e = new Set(v);
                                   if (e.has(t)) e.delete(t);
                                   else {
                                       if (b) return;
@@ -76,9 +76,9 @@ function b(t) {
                       t.id,
                   );
               });
-    return (0, i.jsx)(l.sNh, {
+    return (0, i.jsx)(a.sNh, {
         id: "edit-tags",
-        label: v.intl.string(v.t["436ZFx"]),
+        label: g.intl.string(g.t["436ZFx"]),
         children: m,
     });
 }

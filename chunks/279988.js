@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    s = n(692547),
-    a = n(481060),
+    a = n(692547),
+    s = n(481060),
     o = n(259580),
     c = n(196345),
     d = n(137158),
@@ -19,11 +19,11 @@ let m = function (e) {
             isDropHovered: p,
             onDrop: f,
             onEdit: h,
-            onRemove: x,
-            canRemove: b,
+            onRemove: b,
+            canRemove: x,
             title: j,
-            actionsLocation: _,
-            fieldStyle: v,
+            actionsLocation: v,
+            fieldStyle: _,
         } = e,
         C = n.values,
         O = C.slice(0, 1),
@@ -35,22 +35,22 @@ let m = function (e) {
         isDropHovered: p,
         onDrop: f,
         onEdit: h,
-        onRemove: x,
+        onRemove: b,
         title: j,
-        canRemove: b,
-        actionsLocation: _,
-        fieldStyle: v,
+        canRemove: x,
+        actionsLocation: v,
+        fieldStyle: _,
         children: [
             (0, r.jsx)(c.EK, {
                 terms: O,
                 channelId: t,
             }),
             0 !== y &&
-                (0, r.jsxs)(a.P3F, {
+                (0, r.jsxs)(s.P3F, {
                     className: l()(g.fieldFooterContainer, g.clickable),
                     onClick: h,
                     children: [
-                        (0, r.jsx)(a.Text, {
+                        (0, r.jsx)(s.Text, {
                             variant: "text-md/normal",
                             className: g.clickable,
                             children: u.intl.format(u.t.jnhD0d, { count: y }),
@@ -59,7 +59,7 @@ let m = function (e) {
                             className: g.termsFieldCaretIcon,
                             height: 14,
                             width: 14,
-                            color: s.Z.unsafe_rawColors.WHITE_500.css,
+                            color: a.Z.unsafe_rawColors.WHITE_500.css,
                         }),
                     ],
                 }),

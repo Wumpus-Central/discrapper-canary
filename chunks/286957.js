@@ -1,13 +1,13 @@
-r.d(t, {
+n.d(t, {
     XV: () => l,
     aE: () => u,
     kd: () => s,
     zK: () => c,
 });
-var n,
-    i = r(379405),
-    a = r(481060),
-    o = r(388032);
+var r,
+    i = n(379405),
+    a = n(481060),
+    o = n(388032);
 let l = {
         [i._.BETTER_THAN_YOU]: {
             getText: () => o.intl.string(o.t.jbIRBA),
@@ -62,7 +62,7 @@ let l = {
         let t = l[e];
         return null != t ? t : null;
     };
-var s = (((n = {}).RADIO = "radio"), (n.CHECKBOX = "checkbox"), n);
+var s = (((r = {}).RADIO = "radio"), (r.CHECKBOX = "checkbox"), r);
 let u = {
     skill_level: {
         getLabel: () => o.intl.string(o.t.MKqADA),

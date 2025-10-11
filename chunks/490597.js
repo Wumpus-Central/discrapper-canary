@@ -1,11 +1,11 @@
 n.d(t, {
-    P5: () => a,
-    UA: () => s,
+    P5: () => s,
+    UA: () => a,
 });
 var r = n(626135),
     i = n(929834),
     l = n(981631);
-function s(e, t) {
+function a(e, t) {
     let n = !1,
         i = {
             guild_id: e.id,
@@ -18,7 +18,7 @@ function s(e, t) {
         (null == t || e.rulesChannelId !== t.rulesChannelId) && ((i.rules_channel_id = e.rulesChannelId), (n = !0)),
         n && r.default.track(l.rMx.GUILD_SETTINGS_DISCOVERY_UPDATED, i);
 }
-function a(e) {
+function s(e) {
     var t, n;
     return null != (n = null == (t = i.U2[e]) ? void 0 : t.map((e) => e())) ? n : [];
 }

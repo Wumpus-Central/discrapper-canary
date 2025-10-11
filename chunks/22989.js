@@ -20,7 +20,7 @@ function j(e) {
     var t, n, j, y, _, w, C, k;
     let { clip: O, channelId: P, transitionState: S, onClose: N } = e,
         [E, R] = r.useState(!0),
-        [L, T] = r.useState(null),
+        [T, L] = r.useState(null),
         [D, F] = r.useState(null),
         { analyticsLocations: A } = (0, c.ZP)(u.Z.CLIPS_EDITOR);
     r.useEffect(() => {
@@ -39,14 +39,14 @@ function j(e) {
             let t = await (0, m.w)(e.data.buffer),
                 n = URL.createObjectURL(new Blob([t], { type: "audio/mp4" })),
                 a = URL.createObjectURL(new Blob([e.data], { type: "video/mp4" }));
-            F(n), T(a);
+            F(n), L(a);
         })();
     }, [O.filepath, N]),
         r.useEffect(
             () => () => {
-                null != L && URL.revokeObjectURL(L);
+                null != T && URL.revokeObjectURL(T);
             },
-            [L],
+            [T],
         ),
         r.useEffect(
             () => () => {
@@ -79,11 +79,11 @@ function j(e) {
             applicationAudio: M,
         },
     };
-    let X = (0, f.l)(O);
+    let Y = (0, f.l)(O);
     r.useEffect(() => {
         async function e() {
             let e = {};
-            null != X && (e = { thumbnail: await (0, p.R)(X, V.current.editMetadata.start) }),
+            null != Y && (e = { thumbnail: await (0, p.R)(Y, V.current.editMetadata.start) }),
                 (0, d.Tm)(
                     O.id,
                     (function (e) {
@@ -116,11 +116,11 @@ function j(e) {
         return () => {
             e();
         };
-    }, [O.id, X]);
-    let Y = r.useRef(null),
+    }, [O.id, Y]);
+    let X = r.useRef(null),
         G = r.useMemo(
             () => ({
-                videoPlayerRef: Y,
+                videoPlayerRef: X,
                 applicationAudioEnabled: M,
                 setApplicationAudioEnabled: B,
                 voiceAudioEnabled: I,
@@ -143,7 +143,7 @@ function j(e) {
                 children: (0, a.jsx)(g.Q.Provider, {
                     value: G,
                     children:
-                        null == L || null == D
+                        null == T || null == D
                             ? (0, a.jsx)("div", {
                                   className: b.spinnerContainer,
                                   children: (0, a.jsx)(i.$jN, {}),
@@ -151,7 +151,7 @@ function j(e) {
                             : (0, a.jsxs)(a.Fragment, {
                                   children: [
                                       (0, a.jsx)(v.Z, {
-                                          videoURL: L,
+                                          videoURL: T,
                                           isLoading: E,
                                           onDoneLoading: () => R(!1),
                                           audioURL: D,

@@ -68,9 +68,9 @@ function N(e, t) {
     );
 }
 function E(e) {
-    let { clip: t, channelId: l, clipName: E, onSetClipName: R, onClose: L } = e,
+    let { clip: t, channelId: l, clipName: E, onSetClipName: R, onClose: T } = e,
         {
-            videoPlayerRef: T,
+            videoPlayerRef: L,
             cropData: D,
             voiceAudioEnabled: F,
             setVoiceAudioEnabled: A,
@@ -85,7 +85,7 @@ function E(e) {
     async function H() {
         var e;
         let r = p.Z.getChannel(l);
-        B("export"), null == (e = T.current) || e.pause();
+        B("export"), null == (e = L.current) || e.pause();
         try {
             let e = await (0, x.rO)(
                 t,
@@ -120,7 +120,7 @@ function E(e) {
     }
     async function W() {
         var e;
-        B("export"), null == (e = T.current) || e.pause();
+        B("export"), null == (e = L.current) || e.pause();
         try {
             let e = await (0, x.rO)(
                     t,
@@ -138,7 +138,7 @@ function E(e) {
     }
     function U() {
         var e;
-        null == (e = T.current) || e.pause(),
+        null == (e = L.current) || e.pause(),
             (0, u.ZDy)(async () => {
                 let { default: e } = await n.e("15915").then(n.bind(n, 799677));
                 return (n) =>
@@ -149,7 +149,7 @@ function E(e) {
                                 await n.onClose();
                             },
                             onAfterDelete: async () => {
-                                await n.onClose(), L();
+                                await n.onClose(), T();
                             },
                         }),
                     );
@@ -224,7 +224,7 @@ function E(e) {
                         disabled: null != M,
                         wrapperClassName: i()(O.clipFormFooterButton, { [O.submittingWrapperFix]: null != M }),
                         color: s.zx.Colors.PRIMARY,
-                        onClick: L,
+                        onClick: T,
                         children: k.intl.string(k.t.K344S0),
                     }),
                     (0, a.jsx)(s.zx, {

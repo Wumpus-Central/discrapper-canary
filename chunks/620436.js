@@ -1,28 +1,28 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => s });
 var r,
     i = n(951288);
 n(647438);
 var l = n(481060),
-    s = n(211870);
-function a(e) {
+    a = n(211870);
+function s(e) {
     let { type: t } = e;
     return (0, i.jsx)("div", {
-        className: s.dividerContainer,
+        className: a.dividerContainer,
         children: (0, i.jsx)("div", {
-            className: s.dividerIconContainer,
+            className: a.dividerIconContainer,
             children: (function (e) {
                 switch (e) {
                     case "arrow_down":
                         return (0, i.jsx)(l.cQm, {
                             size: "md",
                             color: "currentColor",
-                            className: s.dividierIcon,
+                            className: a.dividierIcon,
                         });
                     case "cross":
                         return (0, i.jsx)(l.Dio, {
                             size: "md",
                             color: "currentColor",
-                            className: s.dividierIcon,
+                            className: a.dividierIcon,
                         });
                     default:
                         return null;
@@ -31,4 +31,4 @@ function a(e) {
         }),
     });
 }
-a.Type = (((r = {}).ARROW_DOWN = "arrow_down"), (r.CROSS = "cross"), r);
+s.Type = (((r = {}).ARROW_DOWN = "arrow_down"), (r.CROSS = "cross"), r);

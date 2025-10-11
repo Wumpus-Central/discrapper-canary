@@ -1,4 +1,4 @@
-e.d(t, { default: () => g });
+e.d(t, { default: () => E });
 var l = e(951288);
 e(647438);
 var i = e(442837),
@@ -6,29 +6,29 @@ var i = e(442837),
     o = e(239091),
     u = e(109764),
     c = e(367722),
-    a = e(522474),
-    s = e(788983),
+    s = e(522474),
+    a = e(788983),
     d = e(695346),
     p = e(393431),
     b = e(430824),
     f = e(981631),
-    E = e(388032);
-function g(n) {
-    let { channel: t, onSelect: e, onInteraction: g } = n,
-        y = (0, p.Z)(),
-        h = d.Fg.useSetting(),
-        j = (function (n) {
-            let t = (0, i.e7)([a.Z], () => a.Z.getWindow(f.KJ3.CHANNEL_CALL_POPOUT));
+    v = e(388032);
+function E(n) {
+    let { channel: t, onSelect: e, onInteraction: E } = n,
+        g = (0, p.Z)(),
+        y = d.Fg.useSetting(),
+        h = (function (n) {
+            let t = (0, i.e7)([s.Z], () => s.Z.getWindow(f.KJ3.CHANNEL_CALL_POPOUT));
             return null == n || null != t
                 ? null
                 : (0, l.jsx)(r.sNh, {
                       id: "popout-call",
-                      label: E.intl.string(E.t.JzWez8),
+                      label: v.intl.string(v.t.JzWez8),
                       icon: r.rgF,
-                      action: () => s.hP(n),
+                      action: () => a.hP(n),
                   });
         })(null != t ? t : void 0),
-        O = (function (n) {
+        j = (function (n) {
             let t = (0, i.e7)([b.Z], () => b.Z.getGuild(null == n ? void 0 : n.guild_id)),
                 e = (0, c.Z)(null != n ? n : null, null != t ? t : null),
                 o = (0, u.Z)(null != n ? n : null);
@@ -40,21 +40,21 @@ function g(n) {
         })(t);
     return (0, l.jsxs)(r.v2r, {
         navId: "rtc-channel",
-        "aria-label": E.intl.string(E.t.ogxXGh),
+        "aria-label": v.intl.string(v.t.ogxXGh),
         onClose: o.Zy,
         onSelect: e,
-        onInteraction: g,
+        onInteraction: E,
         children: [
-            y,
-            O,
+            g,
+            j,
             (0, l.jsxs)(r.kSQ, {
                 children: [
-                    j,
+                    h,
                     (0, l.jsx)(r.S89, {
                         id: "show-voice-states",
-                        checked: h,
-                        action: () => d.Fg.updateSetting(!h),
-                        label: E.intl.string(E.t.vkbSBw),
+                        checked: y,
+                        action: () => d.Fg.updateSetting(!y),
+                        label: v.intl.string(v.t.vkbSBw),
                     }),
                 ],
             }),

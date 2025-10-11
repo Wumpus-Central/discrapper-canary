@@ -22,23 +22,23 @@ function h(e) {
             isFetchingWishlist: m,
             isFetchingShopHome: x,
             isFetchingCategories: g,
-            wishlistError: b,
-            fetchShopHomeError: j,
+            wishlistError: j,
+            fetchShopHomeError: b,
         } = (0, d.ZL)(t),
-        { displayItems: y, wishlistLength: v } = (0, d.UD)({
+        { displayItems: y, wishlistLength: L } = (0, d.UD)({
             wishlist: u,
             defaultWishlistId: c,
             popularProducts: h,
-            wishlistError: b,
-            fetchShopHomeError: j,
+            wishlistError: j,
+            fetchShopHomeError: b,
         }),
-        L = i.useCallback(() => {
+        v = i.useCallback(() => {
             (0, o.openUserProfileModal)({
                 userId: t.id,
                 section: p.oh.WISHLIST,
             });
         }, [t.id]);
-    if (null == c || null != b || null != j) return null;
+    if (null == c || null != j || null != b) return null;
     let S = C.ZP.getName(t),
         w =
             null == n
@@ -77,7 +77,7 @@ function h(e) {
                     (0, r.jsx)(a.Button, {
                         variant: "overlay-secondary",
                         text: _.intl.format(_.t["8uYD+P"], { username: S }),
-                        onClick: L,
+                        onClick: v,
                         disabled: (null == t ? void 0 : t.id) == null,
                     }),
                 ],
@@ -97,7 +97,7 @@ function h(e) {
                                       wishlistId: c,
                                       isOwner: !1,
                                       size: "sm",
-                                      showIcons: v < d.zL,
+                                      showIcons: L < d.zL,
                                       collectibleSource: i,
                                   },
                                   n.skuId,

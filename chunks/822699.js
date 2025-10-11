@@ -18,8 +18,8 @@ var r = n(951288),
     E = n(698177),
     v = n(353926),
     b = n(409059),
-    I = n(962220),
-    j = n(637776),
+    j = n(962220),
+    I = n(637776),
     N = n(264229),
     S = n(677760),
     O = n(893607),
@@ -47,8 +47,8 @@ var r = n(951288),
     q = n(424044),
     Y = n(479495),
     J = n(264873),
-    X = n(909223),
-    Q = n(455502),
+    Q = n(909223),
+    X = n(455502),
     $ = n(981631),
     ee = n(188785),
     et = n(245335);
@@ -109,16 +109,16 @@ let el = (0, w.Z)(V.Z),
     ed = (0, w.Z)(W.Z),
     eh = (0, w.Z)(J.Z),
     eg = (0, w.Z)(k.Z),
-    em = (0, w.Z)(Q.Z),
+    em = (0, w.Z)(X.Z),
     ep = (0, w.Z)(E.Z),
     ef = (0, w.Z)(Y.Z),
     e_ = (0, w.Z)(U.Z),
     ex = (0, w.Z)(x.Z),
-    eE = (0, w.Z)(j.Z),
+    eE = (0, w.Z)(I.Z),
     ev = (0, w.Z)(M.Z),
     eb = (0, w.Z)(H.Z),
-    eI = (0, w.Z)(X.Z),
-    ej = (0, w.Z)(q.Z),
+    ej = (0, w.Z)(Q.Z),
+    eI = (0, w.Z)(q.Z),
     eN = (0, w.Z)(p.Z);
 class eS extends i.PureComponent {
     static getDerivedStateFromProps(e, t) {
@@ -199,8 +199,8 @@ class eS extends i.PureComponent {
                 },
                 { flush: !0 },
             ),
-            I.Z.resolveGuildTemplate(e),
-            I.Z.openNativeAppModal(e));
+            j.Z.resolveGuildTemplate(e),
+            j.Z.openNativeAppModal(e));
     }
     resolveGiftCode() {
         let { giftCode: e } = this.props;
@@ -349,11 +349,11 @@ class eS extends i.PureComponent {
                 }),
                 (0, r.jsx)(f.Z, {
                     path: $.Z5c.REPORT,
-                    render: (e) => (0, r.jsx)(eI, er({}, e)),
+                    render: (e) => (0, r.jsx)(ej, er({}, e)),
                 }),
                 (0, r.jsx)(f.Z, {
                     path: $.Z5c.REPORT_SECOND_LOOK,
-                    render: (e) => (0, r.jsx)(ej, er({}, e)),
+                    render: (e) => (0, r.jsx)(eI, er({}, e)),
                 }),
                 (0, r.jsx)(f.Z, {
                     path: $.Z5c.ACCOUNT_REVERT(":token"),

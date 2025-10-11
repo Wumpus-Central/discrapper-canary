@@ -3,7 +3,7 @@ a.d(e, {
     Fv: () => h,
     Jk: () => O,
     PR: () => p,
-    f7: () => g,
+    f7: () => D,
     sn: () => P,
 });
 var n = a(696486),
@@ -141,7 +141,7 @@ function P() {
         }
     });
 }
-function g(t) {
+function D(t) {
     let e = (0, N.QV)();
     if (!e || !R.m.performance.getEntries || !E.Z1) return;
     u.X && l.kg.log("[Tracing] Adding & adjusting spans using Performance API");
@@ -161,12 +161,12 @@ function g(t) {
                             (c = a),
                             ["unloadEvent", "redirect", "domContentLoadedEvent", "loadEvent", "connect"].forEach(
                                 (t) => {
-                                    D(n, o, t, c);
+                                    g(n, o, t, c);
                                 },
                             ),
-                            D(n, o, "secureConnection", c, "TLS/SSL", "connectEnd"),
-                            D(n, o, "fetch", c, "cache", "domainLookupStart"),
-                            D(n, o, "domainLookup", c, "DNS"),
+                            g(n, o, "secureConnection", c, "TLS/SSL", "connectEnd"),
+                            g(n, o, "fetch", c, "cache", "domainLookupStart"),
+                            g(n, o, "domainLookup", c, "DNS"),
                             (function (t, e, a) {
                                 let r = a + (0, N.XL)(e.requestStart),
                                     _ = a + (0, N.XL)(e.responseEnd),
@@ -310,7 +310,7 @@ function g(t) {
     }
     (r = void 0), (_ = void 0), (L = {});
 }
-function D(t, e, a, r, _, n) {
+function g(t, e, a, r, _, n) {
     let o = n ? e[n] : e[`${a}End`],
         c = e[`${a}Start`];
     c &&

@@ -3,8 +3,8 @@ var r = n(951288),
     l = n(647438),
     i = n(622535),
     s = n(481060),
-    a = n(626135),
-    o = n(381585),
+    o = n(626135),
+    a = n(381585),
     c = n(597688),
     u = n(297651),
     d = n(794324),
@@ -25,7 +25,7 @@ let C = (e) => {
         O = (0, d.YG)(_, m),
         x = l.useRef(null),
         y = null == m ? void 0 : m.bodyText,
-        j = (0, o.sp)();
+        T = (0, a.sp)();
     return (0, r.jsx)(i.$, {
         innerRef: x,
         onChange: S,
@@ -60,14 +60,14 @@ let C = (e) => {
             })({}, null != O && { backgroundImage: "url(".concat(O, ")") }),
             onClick: () => {
                 E("shop marketing tile", v),
-                    a.default.track(g.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                        collectibles_shop_session_id: null == j ? void 0 : j.sessionId,
+                    o.default.track(g.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                        collectibles_shop_session_id: null == T ? void 0 : T.sessionId,
                         sku_id: v,
                         page_type: "home",
-                        page_section: null == j ? void 0 : j.pageSection,
-                        page_category: null == j ? void 0 : j.pageCategory,
+                        page_section: null == T ? void 0 : T.pageSection,
+                        page_category: null == T ? void 0 : T.pageCategory,
                         tile_type: "FEATURED_BLOCK",
-                        tile_position: String(null == j ? void 0 : j.tilePosition),
+                        tile_position: String(null == T ? void 0 : T.tilePosition),
                         cta_name: null,
                     });
             },
@@ -98,14 +98,14 @@ let C = (e) => {
                         onClick: (e) => {
                             E("shop marketing take me there button", v),
                                 e.stopPropagation(),
-                                a.default.track(g.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                    collectibles_shop_session_id: null == j ? void 0 : j.sessionId,
+                                o.default.track(g.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                    collectibles_shop_session_id: null == T ? void 0 : T.sessionId,
                                     sku_id: v,
                                     page_type: "home",
-                                    page_section: null == j ? void 0 : j.pageSection,
-                                    page_category: null == j ? void 0 : j.pageCategory,
+                                    page_section: null == T ? void 0 : T.pageSection,
+                                    page_category: null == T ? void 0 : T.pageCategory,
                                     tile_type: "FEATURED_BLOCK",
-                                    tile_position: String(null == j ? void 0 : j.tilePosition),
+                                    tile_position: String(null == T ? void 0 : T.tilePosition),
                                     cta_name: "Take me there button",
                                 });
                         },

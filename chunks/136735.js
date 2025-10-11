@@ -13,8 +13,8 @@ var n = l(951288),
     f = l(594174),
     p = l(626135),
     j = l(424218),
-    x = l(63063),
-    v = l(956664),
+    v = l(63063),
+    x = l(956664),
     h = l(268350),
     b = l(373228),
     y = l(378233),
@@ -67,11 +67,11 @@ let Z = (e) => {
     });
 };
 async function T(e) {
-    let t = await (0, v.fD)(e),
+    let t = await (0, x.fD)(e),
         l = new Image();
     (l.src = t), await l.decode();
     let n = (0, s.Ae)(l, 320, 320);
-    return (0, v.Bo)(n, e.name, "image/png");
+    return (0, x.Bo)(n, e.name, "image/png");
 }
 function R(e) {
     var t, l, s, C, O, R, _, z;
@@ -116,7 +116,7 @@ function R(e) {
                 });
             let n = e;
             if ("image/jpeg" === l || "image/jpg" === l) n = await T(e);
-            else if ("image/png" === l && e.size > M && !(await (0, v.c0)(e))) {
+            else if ("image/png" === l && e.size > M && !(await (0, x.c0)(e))) {
                 let t = (n = await T(e)).size > M;
                 p.default.track(I.rMx.STICKER_FILE_RESIZED, {
                     original_file_size_bytes: e.size,
@@ -139,7 +139,7 @@ function R(e) {
             if (i === b.u3.LOTTIE) {
                 if (!es)
                     return void ei({
-                        message: w.intl.format(w.t.RNNjy8, { articleURL: x.Z.getArticleURL(I.BhN.STICKERS_UPLOAD) }),
+                        message: w.intl.format(w.t.RNNjy8, { articleURL: v.Z.getArticleURL(I.BhN.STICKERS_UPLOAD) }),
                         isBlocking: !0,
                     });
                 let e = new FileReader();
@@ -153,7 +153,7 @@ function R(e) {
                 }),
                     e.readAsText(n);
             } else {
-                let e = await (0, v.fD)(n);
+                let e = await (0, x.fD)(n);
                 Y({
                     id: (0, r.Z)(),
                     formatType: i,

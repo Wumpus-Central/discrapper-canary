@@ -1,6 +1,6 @@
 n.d(t, {
     i: () => l,
-    p: () => s,
+    p: () => a,
 });
 var r = n(981631),
     i = n(388032);
@@ -22,7 +22,7 @@ function l(e) {
             return i.intl.string(i.t.ckQidX);
     }
 }
-function s(e) {
+function a(e) {
     return (
         e.features.has(r.oNc.VANITY_URL) || (e.features.has(r.oNc.GUILD_WEB_PAGE_VANITY_URL) && null != e.vanityURLCode)
     );

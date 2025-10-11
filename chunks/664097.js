@@ -1,10 +1,10 @@
 n.d(t, { o: () => o }), n(642613);
-var l = n(647438),
-    i = n(442837),
+var i = n(647438),
+    l = n(442837),
     r = n(115130),
     a = n(701488);
 let o = () => {
-    let { isEnabled: e, lastUsedObject: t } = (0, i.cj)(
+    let { isEnabled: e, lastUsedObject: t } = (0, l.cj)(
             [r.Z],
             () => ({
                 isEnabled: r.Z.getIsEnabled(),
@@ -12,8 +12,8 @@ let o = () => {
             }),
             [],
         ),
-        n = (0, i.Wu)([r.Z], () => r.Z.getDeveloperShelfItems(), []);
-    return l.useMemo(
+        n = (0, l.Wu)([r.Z], () => r.Z.getDeveloperShelfItems(), []);
+    return i.useMemo(
         () =>
             e
                 ? n
@@ -25,24 +25,24 @@ let o = () => {
                                   ((t = (function (e) {
                                       for (var t = 1; t < arguments.length; t++) {
                                           var n = null != arguments[t] ? arguments[t] : {},
-                                              l = Object.keys(n);
+                                              i = Object.keys(n);
                                           "function" == typeof Object.getOwnPropertySymbols &&
-                                              (l = l.concat(
+                                              (i = i.concat(
                                                   Object.getOwnPropertySymbols(n).filter(function (e) {
                                                       return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                                   }),
                                               )),
-                                              l.forEach(function (t) {
-                                                  var l;
-                                                  (l = n[t]),
+                                              i.forEach(function (t) {
+                                                  var i;
+                                                  (i = n[t]),
                                                       t in e
                                                           ? Object.defineProperty(e, t, {
-                                                                value: l,
+                                                                value: i,
                                                                 enumerable: !0,
                                                                 configurable: !0,
                                                                 writable: !0,
                                                             })
-                                                          : (e[t] = l);
+                                                          : (e[t] = i);
                                               });
                                       }
                                       return e;
@@ -53,8 +53,8 @@ let o = () => {
                                       : (function (e, t) {
                                             var n = Object.keys(e);
                                             if (Object.getOwnPropertySymbols) {
-                                                var l = Object.getOwnPropertySymbols(e);
-                                                n.push.apply(n, l);
+                                                var i = Object.getOwnPropertySymbols(e);
+                                                n.push.apply(n, i);
                                             }
                                             return n;
                                         })(Object(n)).forEach(function (e) {
@@ -64,9 +64,9 @@ let o = () => {
                           };
                       })
                       .sort((e, n) => {
-                          let l = t[e.application.id],
-                              i = t[n.application.id];
-                          return null == l ? 1 : null == i ? -1 : i - l;
+                          let i = t[e.application.id],
+                              l = t[n.application.id];
+                          return null == i ? 1 : null == l ? -1 : l - i;
                       })
                 : [],
         [n, e, t],

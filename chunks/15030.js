@@ -2,8 +2,8 @@ n.d(t, { Z: () => j });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    s = n(704215),
-    a = n(481060),
+    a = n(704215),
+    s = n(481060),
     o = n(725803),
     c = n(266454),
     d = n(999382),
@@ -13,16 +13,16 @@ var r = n(951288),
     p = n(500395),
     f = n(975464),
     h = n(981631),
-    x = n(674563),
-    b = n(423887);
+    b = n(674563),
+    x = n(423887);
 function j() {
     let e,
         t = (0, l.e7)([d.Z], () => d.Z.getGuild()),
-        { application: n, loading: j } = (0, o.Z)(null == t ? void 0 : t.id, x.wW.GUILD_ROLE_SUBSCRIPTIONS),
-        _ = i.useRef(null),
-        v = (0, u.Z)(null != t ? t : void 0);
+        { application: n, loading: j } = (0, o.Z)(null == t ? void 0 : t.id, b.wW.GUILD_ROLE_SUBSCRIPTIONS),
+        v = i.useRef(null),
+        _ = (0, u.Z)(null != t ? t : void 0);
     i.useEffect(() => {
-        null != t && (0, g.sO)(t) && (0, c.Q3)(s.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE);
+        null != t && (0, g.sO)(t) && (0, c.Q3)(a.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE);
     }, [t]);
     let C =
         (null == t ? void 0 : t.features.has(h.oNc.CREATOR_MONETIZABLE)) === !1 &&
@@ -30,11 +30,11 @@ function j() {
     return (
         (e =
             null == t || j
-                ? (0, r.jsx)(a.$jN, {})
-                : null != v
+                ? (0, r.jsx)(s.$jN, {})
+                : null != _
                   ? (0, r.jsx)(p.Z, {
                         guild: t,
-                        config: v,
+                        config: _,
                     })
                   : C
                     ? (0, r.jsx)(f.Z, { guild: t })
@@ -43,16 +43,16 @@ function j() {
                           application: n,
                       })),
         (0, r.jsx)("div", {
-            className: b.settingsColumn,
+            className: x.settingsColumn,
             children: (0, r.jsx)("div", {
-                className: b.settingsContainer,
-                children: (0, r.jsx)(a.w0Z, {
-                    className: b.settingsScroller,
+                className: x.settingsContainer,
+                children: (0, r.jsx)(s.w0Z, {
+                    className: x.settingsScroller,
                     children: (0, r.jsx)("main", {
-                        ref: _,
-                        className: b.settingsContent,
-                        children: (0, r.jsx)(a.JcV, {
-                            containerRef: _,
+                        ref: v,
+                        className: x.settingsContent,
+                        children: (0, r.jsx)(s.JcV, {
+                            containerRef: v,
                             children: e,
                         }),
                     }),

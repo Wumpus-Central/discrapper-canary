@@ -1,4 +1,4 @@
-n.d(t, { a: () => i });
+n.d(t, { a: () => o });
 var r = n(191336);
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -25,7 +25,7 @@ function l(e) {
     }
     return e;
 }
-function a(e, t) {
+function i(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -51,14 +51,14 @@ let s = {
         searchError: null,
         isFetchingResults: !1,
     },
-    i = (0, r.U)((e) =>
-        a(l({}, s), {
+    o = (0, r.U)((e) =>
+        i(l({}, s), {
             onSetResponse: (t) => {
                 let n = Math.floor(t.pageOffset / t.pageLimit) + 1;
-                e(a(l({}, t), { currentPage: n }));
+                e(i(l({}, t), { currentPage: n }));
             },
             setSearchError: (t) => {
-                e(a(l({}, s), { searchError: t }));
+                e(i(l({}, s), { searchError: t }));
             },
             setIsFetchingResults: (t) => {
                 e({ isFetchingResults: t });

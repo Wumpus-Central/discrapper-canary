@@ -23,8 +23,8 @@ var i = t(120356),
     v = t(258971),
     g = t(598077),
     b = t(671533),
-    y = t(49012),
-    I = t(652853),
+    I = t(49012),
+    y = t(652853),
     Z = t(981631),
     O = t(856651),
     N = t(49898),
@@ -38,7 +38,7 @@ function A(e) {
         {
             connectedAccount: v,
             theme: g,
-            locale: I,
+            locale: y,
             userId: N,
             className: A,
             showMetadata: E,
@@ -46,7 +46,7 @@ function A(e) {
         } = e;
     null == E && (E = !0);
     let C = null != (t = v.metadata) ? t : {},
-        _ = E ? (0, f.FI)(C[O.PC.CREATED_AT], I) : null,
+        _ = E ? (0, f.FI)(C[O.PC.CREATED_AT], y) : null,
         w = (0, c.dQu)(o.Z.unsafe_rawColors.TWITTER).hex(),
         D = P.intl.string(P.t["6H6h1t"]);
     if (E)
@@ -93,7 +93,7 @@ function A(e) {
                           platform_type: n,
                           other_user_id: N,
                       }),
-                      (0, y.q)(
+                      (0, I.q)(
                           {
                               href: L,
                               trusted: (null == R ? void 0 : R.type) !== Z.ABu.DOMAIN,
@@ -108,7 +108,7 @@ function A(e) {
           }));
     let M = (0, c.dQu)(o.Z.colors.INTERACTIVE_MUTED).hex(),
         U = (0, c.dQu)(o.Z.colors.INTERACTIVE_ACTIVE).hex(),
-        B = v.verified
+        k = v.verified
             ? (0, l.jsx)(x.Z, {
                   className: T.connectedAccountVerifiedIcon,
                   color: null != d ? d : M,
@@ -160,7 +160,7 @@ function A(e) {
                                                     children: v.name,
                                                 }),
                                             }),
-                                            B,
+                                            k,
                                         ],
                                     }),
                                     j,
@@ -277,7 +277,7 @@ function E(e) {
 }
 function S(e) {
     let { connectedAccounts: n, locale: t, className: i, userId: o } = e,
-        { theme: s } = (0, I.z)();
+        { theme: s } = (0, y.z)();
     if (null == n || 0 === n.length) return null;
     let a = n.map((e) =>
             (0, l.jsx)(

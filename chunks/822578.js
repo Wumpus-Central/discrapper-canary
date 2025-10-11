@@ -70,18 +70,18 @@ function u(t, e, a, u, d, N) {
     })(u, a.captureContext);
     a.mechanism && (0, r.EG)(p, a.mechanism);
     let P = d ? d.getEventProcessors() : [],
-        g = (0, E.lW)().getScopeData();
+        D = (0, E.lW)().getScopeData();
     if (N) {
         let t = N.getScopeData();
-        (0, I.yo)(g, t);
+        (0, I.yo)(D, t);
     }
     if (O) {
         let t = O.getScopeData();
-        (0, I.yo)(g, t);
+        (0, I.yo)(D, t);
     }
-    let D = [...(a.attachments || []), ...g.attachments];
-    D.length && (a.attachments = D), (0, I.gi)(p, g);
-    let C = [...P, ...g.eventProcessors];
+    let g = [...(a.attachments || []), ...D.attachments];
+    g.length && (a.attachments = g), (0, I.gi)(p, D);
+    let C = [...P, ...D.eventProcessors];
     return (0, s.R)(C, p, a).then((t) =>
         (t &&
             (function (t) {

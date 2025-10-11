@@ -96,8 +96,8 @@ function C(e) {
             tileWidth: Q,
             tileHeight: K,
             widgetWidth: X,
-            widgetHeight: J,
-            containerRef: q,
+            widgetHeight: q,
+            containerRef: J,
             containerMinMaxSizes: $,
         } = (0, S.Bz)({
             tileCount: B,
@@ -116,12 +116,12 @@ function C(e) {
             widgetMinMaxSizes: $,
             containerSize: {
                 width: X,
-                height: J,
+                height: q,
             },
             orientedPosition: {
                 top: 0,
                 left: 0,
-                bottom: null != (t = null == Y ? void 0 : Y.height) ? t : J,
+                bottom: null != (t = null == Y ? void 0 : Y.height) ? t : q,
                 right: null != (n = null == Y ? void 0 : Y.width) ? n : X,
             },
             locked: w,
@@ -154,7 +154,7 @@ function C(e) {
           : (0, i.jsx)("div", {
                 className: I.goLiveGridContainer,
                 style: { opacity: P },
-                ref: q,
+                ref: J,
                 children: (0, i.jsx)(v.Z, {
                     widgetId: C,
                     tileWidth: Q,

@@ -1,67 +1,67 @@
-r.d(t, { Z: () => o });
-var n = r(951288);
-r(647438);
-var i = r(623132),
-    a = r(112794);
+n.d(t, { Z: () => o });
+var r = n(951288);
+n(647438);
+var i = n(623132),
+    a = n(112794);
 function o(e) {
-    var { games: t, widgetType: r } = e,
+    var { games: t, widgetType: n } = e,
         o = (function (e, t) {
             if (null == e) return {};
-            var r,
-                n,
+            var n,
+                r,
                 i = (function (e, t) {
                     if (null == e) return {};
-                    var r,
-                        n,
+                    var n,
+                        r,
                         i = {},
                         a = Object.keys(e);
-                    for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var a = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < a.length; n++)
-                    (r = a[n]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
+                for (r = 0; r < a.length; r++)
+                    (n = a[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ["games", "widgetType"]);
-    return (0, n.jsx)("ul", {
+    return (0, r.jsx)("ul", {
         className: a.cardList,
         children: t.map((e, t) =>
-            (0, n.jsx)(
+            (0, r.jsx)(
                 "li",
                 {
-                    children: (0, n.jsx)(
+                    children: (0, r.jsx)(
                         i.Z,
                         (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
-                                var r = null != arguments[t] ? arguments[t] : {},
-                                    n = Object.keys(r);
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    r = Object.keys(n);
                                 "function" == typeof Object.getOwnPropertySymbols &&
-                                    (n = n.concat(
-                                        Object.getOwnPropertySymbols(r).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                    (r = r.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                         }),
                                     )),
-                                    n.forEach(function (t) {
-                                        var n;
-                                        (n = r[t]),
+                                    r.forEach(function (t) {
+                                        var r;
+                                        (r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
-                                                      value: n,
+                                                      value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0,
                                                   })
-                                                : (e[t] = n);
+                                                : (e[t] = r);
                                     });
                             }
                             return e;
                         })(
                             {
                                 game: e,
-                                widgetType: r,
+                                widgetType: n,
                             },
                             o,
                         ),

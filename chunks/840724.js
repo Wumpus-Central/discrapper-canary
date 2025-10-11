@@ -38,13 +38,13 @@ let E = [
 var R = (((a = {})[(a.SMALL = 0)] = "SMALL"), (a[(a.MEDIUM = 1)] = "MEDIUM"), (a[(a.LARGE = 2)] = "LARGE"), a);
 function T(e) {
     var t, n, a, i, d, s, R, T, N, P, Z, w, D, M, G, F;
-    let { applicationId: U, skuId: Y, variant: H = 0, guildId: K } = e,
+    let { applicationId: U, skuId: H, variant: Y = 0, guildId: K } = e,
         W = l.useRef(null),
-        B = (0, f.e7)([h.Z], () => h.Z.get(Y)),
-        q = (0, f.e7)([_.Z], () => (0, g.wjy)(_.Z.theme)),
-        z = (0, f.e7)([m.Z], () => m.Z.useReducedMotion),
-        { isHoveringOrFocusing: X } = (0, I.Z)(W),
-        { primaryIconAsset: $, primaryIconLabel: J } = l.useMemo(() => (0, j.FE)(B, U), [B, U]),
+        B = (0, f.e7)([h.Z], () => h.Z.get(H)),
+        z = (0, f.e7)([_.Z], () => (0, g.wjy)(_.Z.theme)),
+        $ = (0, f.e7)([m.Z], () => m.Z.useReducedMotion),
+        { isHoveringOrFocusing: q } = (0, I.Z)(W),
+        { primaryIconAsset: J, primaryIconLabel: X } = l.useMemo(() => (0, j.FE)(B, U), [B, U]),
         Q = l.useMemo(() => {
             var e, t;
             if (
@@ -75,13 +75,13 @@ function T(e) {
         en = l.useMemo(() => {
             let e = o()(ee).darken(1.5).alpha(0.9).hex(),
                 t = o()(ee).alpha(0).hex(),
-                [n, a] = E[H];
+                [n, a] = E[Y];
             return "linear-gradient(to top, "
                 .concat(e, " ")
                 .concat(30 + n, "%, ")
                 .concat(t, " ")
                 .concat(30 + a, "%)");
-        }, [ee, H]);
+        }, [ee, Y]);
     if (null == B) return null;
     let ea =
         (null == (s = B.tenantMetadata) || null == (d = s.socialLayer) ? void 0 : d.cardImageAssetId) != null &&
@@ -93,17 +93,17 @@ function T(e) {
             onClick: () => {
                 null != K &&
                     (0, S.g)({
-                        skuId: Y,
+                        skuId: H,
                         applicationId: U,
                         guildId: K,
                     });
             },
             className: c()(A.card, {
-                [A.cardAnimation]: !z,
-                [A.cardDark]: q,
-                [q ? A.cardDarkHighlighted : A.cardHighlighted]: X,
-                [A.cardLarge]: 2 === H,
-                [A.cardMedium]: 1 === H,
+                [A.cardAnimation]: !$,
+                [A.cardDark]: z,
+                [z ? A.cardDarkHighlighted : A.cardHighlighted]: q,
+                [A.cardLarge]: 2 === Y,
+                [A.cardMedium]: 1 === Y,
             }),
             ref: W,
             "aria-label": B.name,
@@ -141,7 +141,7 @@ function T(e) {
                           }),
                       }),
                 (0, r.jsx)("div", {
-                    className: c()(A.bottomGradient, { [A.bottomGradientLarge]: 2 === H }),
+                    className: c()(A.bottomGradient, { [A.bottomGradientLarge]: 2 === Y }),
                     style: { background: en },
                 }),
                 (0, r.jsxs)("div", {
@@ -159,10 +159,10 @@ function T(e) {
                         (0, r.jsxs)("div", {
                             className: A.descriptionContainer,
                             children: [
-                                null != $ &&
+                                null != J &&
                                     (0, r.jsx)("img", {
-                                        src: $.toString(),
-                                        alt: J,
+                                        src: J.toString(),
+                                        alt: X,
                                         className: A.iconAsset,
                                     }),
                                 (0, r.jsx)(p.Text, {

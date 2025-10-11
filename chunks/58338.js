@@ -19,7 +19,7 @@ function f(e) {
         label: h.intl.string(h.t.HcoRu7),
         action: () => {
             (0, l.ZDy)(async () => {
-                let { default: t } = await Promise.all([n.e("15076"), n.e("62113")]).then(n.bind(n, 907941));
+                let { default: t } = await Promise.all([n.e("15076"), n.e("21784")]).then(n.bind(n, 907941));
                 return (n) => {
                     var r, s;
                     return (0, i.jsx)(

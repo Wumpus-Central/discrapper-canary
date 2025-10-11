@@ -21,15 +21,15 @@ var r = n(951288),
     f = n(695346),
     R = n(131704),
     S = n(592125),
-    C = n(430824),
-    p = n(496675),
+    p = n(430824),
+    C = n(496675),
     D = n(699516),
     L = n(944486),
     U = n(594174),
     M = n(607802),
     x = n(101695),
-    v = n(683101),
-    b = n(981631),
+    b = n(683101),
+    v = n(981631),
     P = n(388032),
     j = n(858283);
 function y(e) {
@@ -86,14 +86,14 @@ function G(e) {
         w = l.useCallback((e) => {
             if (e === L.Z.getChannelId()) return;
             let t = S.Z.getChannel(e);
-            null != t && (p.Z.can(b.Plq.VIEW_CHANNEL, t) || t.isPrivate()) && (0, O.Kh)(t.id);
+            null != t && (C.Z.can(v.Plq.VIEW_CHANNEL, t) || t.isPrivate()) && (0, O.Kh)(t.id);
         }, []),
         z = null != s ? (0, _.F6)(s, U.default, D.Z, !1) : "???",
-        V = G && null != s.guild_id ? (null == (t = C.Z.getGuild(s.guild_id)) ? void 0 : t.name) : null,
+        V = G && null != s.guild_id ? (null == (t = p.Z.getGuild(s.guild_id)) ? void 0 : t.name) : null,
         Z = (null == s ? void 0 : s.parent_id) != null ? S.Z.getChannel(s.parent_id) : null,
         B = null != (n = null == Z ? void 0 : Z.name) ? n : null,
         H = null != (i = (0, A.KS)(s)) ? i : u.VL1,
-        K = p.Z.can(b.Plq.MANAGE_MESSAGES, s),
+        K = C.Z.can(v.Plq.MANAGE_MESSAGES, s),
         { content: W } = (0, g.ZP)(
             {
                 content: z,
@@ -148,7 +148,7 @@ function G(e) {
                 a.map((e, t) => {
                     let n = E + t;
                     return (0, r.jsx)(
-                        v.Z,
+                        b.Z,
                         {
                             ref: (e) => {
                                 d.current[n] = e;
@@ -184,21 +184,21 @@ let k = l.memo(function (e) {
             paginationTotalCount: O,
             renderPageWrapper: f,
             onBlockedResultsClick: R,
-            searchRequestAnalyticsId: C,
-            searchResultsQuery: p,
+            searchRequestAnalyticsId: p,
+            searchResultsQuery: C,
             isFavoritesSearch: L,
         } = e,
-        { offset: U, totalResults: v, isSearching: y, showBlockedResults: k } = s,
+        { offset: U, totalResults: b, isSearching: y, showBlockedResults: k } = s,
         F = l.useCallback(
             (e, t) => {
                 if ((null == g || g(e, t), (0, N.Z)(e))) {
                     let t = S.Z.getChannel(e.channel_id),
                         n = null != t ? t.getGuildId() : null;
-                    c.Z.trackJump(e.channel_id, e.id, "Search Results", { search_id: C }),
-                        (0, h.uL)(b.Z5c.CHANNEL(n, e.channel_id, e.id));
+                    c.Z.trackJump(e.channel_id, e.id, "Search Results", { search_id: p }),
+                        (0, h.uL)(v.Z5c.CHANNEL(n, e.channel_id, e.id));
                 }
             },
-            [g, C],
+            [g, p],
         ),
         w = l.useMemo(() => {
             let e,
@@ -248,7 +248,7 @@ let k = l.memo(function (e) {
             setFocus: Z,
             onSelect: B,
         }),
-        K = (0, E.nC)(null != (t = (0, M.UP)(p)) ? t : ""),
+        K = (0, E.nC)(null != (t = (0, M.UP)(C)) ? t : ""),
         W = w.map((e) => {
             let { channel: t, messages: n, startIndex: l } = e;
             return (0, r.jsx)(
@@ -259,7 +259,7 @@ let k = l.memo(function (e) {
                     highlighter: K,
                     startIndex: l,
                     resultRefs: z,
-                    totalResults: v,
+                    totalResults: b,
                     scrollTo: _,
                     renderEmbeds: o,
                     offset: U,
@@ -357,8 +357,8 @@ let k = l.memo(function (e) {
                     renderPageWrapper: f,
                     onPageChange: m,
                     offset: U,
-                    totalCount: null != O ? O : v,
-                    pageSize: b.vpv,
+                    totalCount: null != O ? O : b,
+                    pageSize: v.vpv,
                 }),
         ],
     });

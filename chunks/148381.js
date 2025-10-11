@@ -1,44 +1,44 @@
-n.d(t, { Z: () => f }), n(388685);
-var r = n(951288),
-    i = n(647438),
-    l = n(120356),
-    s = n.n(l),
-    o = n(481060),
-    a = n(493773),
-    c = n(958707),
-    d = n(542257),
-    u = n(308300);
-function f(e) {
-    let { title: t, scrollerClassName: n, scrollerInnerClassName: l, children: f } = e,
-        h = i.useRef(null),
-        [m, p] = i.useState(!1),
-        [g, x] = i.useState(!1),
-        _ = i.useCallback(() => {
-            let { current: e } = h;
-            null != e && (p(!e.isScrolledToTop()), x(!e.isScrolledToBottom()));
+t.d(n, { Z: () => m }), t(388685);
+var l = t(951288),
+    r = t(647438),
+    i = t(120356),
+    s = t.n(i),
+    a = t(481060),
+    c = t(493773),
+    o = t(958707),
+    u = t(542257),
+    d = t(308300);
+function m(e) {
+    let { title: n, scrollerClassName: t, scrollerInnerClassName: i, children: m } = e,
+        x = r.useRef(null),
+        [g, h] = r.useState(!1),
+        [j, p] = r.useState(!1),
+        v = r.useCallback(() => {
+            let { current: e } = x;
+            null != e && (h(!e.isScrolledToTop()), p(!e.isScrolledToBottom()));
         }, []);
     return (
-        (0, a.Ng)(() => _()),
-        (0, r.jsxs)(r.Fragment, {
+        (0, c.Ng)(() => v()),
+        (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, r.jsxs)("div", {
-                    className: s()(u.title, u.scrollWrapper),
+                (0, l.jsxs)("div", {
+                    className: s()(d.title, d.scrollWrapper),
                     children: [
-                        (0, r.jsx)(o.Text, {
+                        (0, l.jsx)(a.Text, {
                             variant: "text-md/medium",
-                            className: d.formItemTitle,
-                            children: t,
+                            className: u.formItemTitle,
+                            children: n,
                         }),
-                        (0, r.jsx)(c.Z, { separator: m }),
+                        (0, l.jsx)(o.Z, { separator: g }),
                     ],
                 }),
-                (0, r.jsx)("div", {
-                    className: n,
-                    children: (0, r.jsx)(o.Den, {
-                        ref: h,
-                        className: s()(u.scrollerInner, l, { [u.bottomSeparator]: g }),
-                        onScroll: _,
-                        children: f,
+                (0, l.jsx)("div", {
+                    className: t,
+                    children: (0, l.jsx)(a.Den, {
+                        ref: x,
+                        className: s()(d.scrollerInner, i, { [d.bottomSeparator]: j }),
+                        onScroll: v,
+                        children: m,
                     }),
                 }),
             ],

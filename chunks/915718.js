@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(26151),
     d = n(287734),
     u = n(607070),
-    p = n(451576),
-    h = n(358221),
+    h = n(451576),
+    p = n(358221),
     f = n(266454),
     g = n(243778),
     m = n(590293),
@@ -17,13 +17,13 @@ var r = n(951288),
     y = n(560688),
     _ = n(173507),
     j = n(523746),
-    x = n(819640),
-    O = n(131951),
+    O = n(819640),
+    x = n(131951),
     v = n(699516),
     C = n(594174),
     I = n(979651),
-    E = n(585483),
-    S = n(665149),
+    S = n(585483),
+    E = n(665149),
     Z = n(981631),
     T = n(701488),
     P = n(921944),
@@ -44,10 +44,10 @@ function w(e, t, n) {
 }
 class A extends i.PureComponent {
     componentDidMount() {
-        E.S.subscribe(Z.CkL.CALL_START, this.handleVoiceClick);
+        S.S.subscribe(Z.CkL.CALL_START, this.handleVoiceClick);
     }
     componentWillUnmount() {
-        E.S.unsubscribe(Z.CkL.CALL_START, this.handleVoiceClick);
+        S.S.unsubscribe(Z.CkL.CALL_START, this.handleVoiceClick);
     }
     renderVideoCallButton() {
         let e,
@@ -63,25 +63,25 @@ class A extends i.PureComponent {
             } = this.props;
         if (n || (i && c === Z.WtW.VOICE)) return null;
         let u = s.isManaged(),
-            p = null,
-            h = !1;
+            h = null,
+            p = !1;
         return (
             d
-                ? ((h = !0), (p = R.intl.string(R.t.izMR7u)), (e = o.ua7.Colors.RED))
-                : O.Z.supports(N.AN.VIDEO)
+                ? ((p = !0), (h = R.intl.string(R.t.izMR7u)), (e = o.ua7.Colors.RED))
+                : x.Z.supports(N.AN.VIDEO)
                   ? a
-                      ? ((p = R.intl.string(R.t.PHzjvb)), (e = o.ua7.Colors.RED), (h = !0))
+                      ? ((h = R.intl.string(R.t.PHzjvb)), (e = o.ua7.Colors.RED), (p = !0))
                       : i && c === Z.WtW.VIDEO
                         ? ((t = this.handleJoinVideoCall),
-                          (p = u ? R.intl.string(R.t.S0W8Z2) : R.intl.string(R.t.W68MhI)))
+                          (h = u ? R.intl.string(R.t.S0W8Z2) : R.intl.string(R.t.W68MhI)))
                         : ((t = this.handleStartVideoCall),
-                          (p = u ? R.intl.string(R.t.S0W8Z2) : R.intl.string(R.t.oCqlGB)))
-                  : ((h = !0), (t = this.handleBrowserNotSupported), (p = R.intl.string(R.t.UVpg3d))),
-            (0, r.jsx)(S.ZP.Icon, {
+                          (h = u ? R.intl.string(R.t.S0W8Z2) : R.intl.string(R.t.oCqlGB)))
+                  : ((p = !0), (t = this.handleBrowserNotSupported), (h = R.intl.string(R.t.UVpg3d))),
+            (0, r.jsx)(E.ZP.Icon, {
                 icon: o.Odl,
                 onClick: t,
-                disabled: h || l,
-                tooltip: p,
+                disabled: p || l,
+                tooltip: h,
                 tooltipColor: e,
             })
         );
@@ -96,25 +96,25 @@ class A extends i.PureComponent {
                 isBlocked: c,
                 channel: d,
                 dismissibleContentTypes: u,
-                isProvisional: p,
+                isProvisional: h,
             } = this.props;
         if (n) return null;
-        let h = d.isManaged(),
+        let p = d.isManaged(),
             f = !1;
-        p
+        h
             ? ((f = !0), (e = R.intl.string(R.t.izMR7u)), (t = o.ua7.Colors.RED))
             : l
-              ? ((e = h ? R.intl.string(R.t.LW2Gho) : R.intl.string(R.t.rF7lNz)), (t = o.ua7.Colors.RED), (f = !0))
+              ? ((e = p ? R.intl.string(R.t.LW2Gho) : R.intl.string(R.t.rF7lNz)), (t = o.ua7.Colors.RED), (f = !0))
               : c
                 ? ((e = R.intl.string(R.t.PHzjvb)), (t = o.ua7.Colors.RED), (f = !0))
                 : (e = i
-                      ? h
+                      ? p
                           ? R.intl.string(R.t.S0W8Z2)
                           : R.intl.string(R.t.fdEeb2)
-                      : h
+                      : p
                         ? R.intl.string(R.t.S0W8Z2)
                         : R.intl.string(R.t.focH1t));
-        let m = (0, r.jsx)(S.ZP.Icon, {
+        let m = (0, r.jsx)(E.ZP.Icon, {
             ref: this.iconRef,
             icon: o.Csw,
             onClick: this.handleVoiceClick,
@@ -189,7 +189,7 @@ function D(e) {
     var t;
     let { channel: n } = e,
         i = (0, m.Z)(),
-        s = (0, l.e7)([h.Z], () => h.Z.getMode(n.id)),
+        s = (0, l.e7)([p.Z], () => p.Z.getMode(n.id)),
         o = (0, l.e7)([I.Z], () => I.Z.isInChannel(n.id)),
         c = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
         { callActive: d, callUnavailable: f } = (0, l.cj)([j.Z], () => ({
@@ -201,24 +201,24 @@ function D(e) {
             notFriend: n.type === Z.d4z.DM && null != g && !v.Z.isFriend(g),
             isBlocked: n.type === Z.d4z.DM && null != g && v.Z.isBlocked(g),
         })),
-        O = (0, l.e7)([C.default], () => C.default.getUser(g)),
-        E = (0, b.bp)(),
-        S = [],
-        T = (0, p.Z)(n.id),
-        P = (0, l.e7)([x.Z], () => x.Z.hasLayers());
-    return (T && !P && S.push(a.z.ACTIVITY_GDM_CALL_TOOLTIP), i || (null == O ? void 0 : O.bot))
+        x = (0, l.e7)([C.default], () => C.default.getUser(g)),
+        S = (0, b.bp)(),
+        E = [],
+        T = (0, h.Z)(n.id),
+        P = (0, l.e7)([O.Z], () => O.Z.hasLayers());
+    return (T && !P && E.push(a.z.ACTIVITY_GDM_CALL_TOOLTIP), i || (null == x ? void 0 : x.bot))
         ? null
         : (0, r.jsx)(A, {
               channel: n,
               mode: s,
               inCall: o,
               callActive: d,
-              isProvisional: null != (t = null == O ? void 0 : O.isProvisional) && t,
+              isProvisional: null != (t = null == x ? void 0 : x.isProvisional) && t,
               callUnavailable: f,
               notFriend: y,
               isBlocked: _,
-              appContext: E,
-              dismissibleContentTypes: S,
+              appContext: S,
+              dismissibleContentTypes: E,
               useReducedMotion: c,
           });
 }

@@ -3,8 +3,8 @@ a.d(e, {
     Iw: () => m,
     V0: () => P,
     _d: () => C,
-    qp: () => g,
-    yn: () => D,
+    qp: () => D,
+    yn: () => g,
 });
 var r = a(370541),
     _ = a(731889),
@@ -102,7 +102,7 @@ function P(t, e) {
         }),
     );
 }
-function g(t) {
+function D(t) {
     let e = y();
     if (e.startInactiveSpan) return e.startInactiveSpan(t);
     let a = S(t),
@@ -120,7 +120,7 @@ function g(t) {
               });
     });
 }
-let D = ({ sentryTrace: t, baggage: e }, a) =>
+let g = ({ sentryTrace: t, baggage: e }, a) =>
     (0, i.$e)((_) => {
         let n = (0, r.pT)(t, e);
         return _.setPropagationContext(n), a();

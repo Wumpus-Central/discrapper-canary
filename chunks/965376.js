@@ -1,4 +1,4 @@
-n.d(t, { D: () => h }), n(539854);
+n.d(t, { D: () => p }), n(539854);
 var r = n(647438),
     i = n(442837),
     l = n(941028),
@@ -8,19 +8,19 @@ var r = n(647438),
     c = n(159299),
     d = n(231338),
     u = n(388032);
-let p = [];
-function h(e, t) {
+let h = [];
+function p(e, t) {
     (0, a.ZP)(() => {
         (null == t ? void 0 : t.id) != null && (0, l.b8)(t.id, e, s.KV);
     });
     let n = (0, i.e7)([o.Z], () => (null != t ? o.Z.getSortedRoles(t.id) : [])),
-        { version: h, members: f } = (0, i.cj)([c.Z], () => ({
+        { version: p, members: f } = (0, i.cj)([c.Z], () => ({
             version: c.Z.getMemberListVersion(e),
             members: c.Z.getMemberListSections(e),
         })),
         g = null == t,
         m = r.useMemo(() => {
-            if (g) return p;
+            if (g) return h;
             let e = n
                 .filter((e) => e.hoist)
                 .map((e) => ({
@@ -49,6 +49,6 @@ function h(e, t) {
                     };
                 })
             );
-        }, [n, f, h, g]);
-    return null != f ? m : p;
+        }, [n, f, p, g]);
+    return null != f ? m : h;
 }

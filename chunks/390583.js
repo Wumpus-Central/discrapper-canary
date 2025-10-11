@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(481060);
 n(674180);
-var s = n(723047),
-    a = n(727843),
+var a = n(723047),
+    s = n(727843),
     o = n(290348),
     c = n(764163),
     d = n(861345),
@@ -54,23 +54,23 @@ function p(e, t) {
     );
 }
 function f() {
-    let { editStateId: e, guildId: t } = (0, a.N)(),
+    let { editStateId: e, guildId: t } = (0, s.N)(),
         [n, f] = o.UE(e),
         h = i.useMemo(() => new Set(n.map((e) => e.ref_id)), [n]);
-    function x(e, t) {
-        let { channelId: r, description: i, emojiId: l, emojiName: s } = e,
-            a = [...n],
+    function b(e, t) {
+        let { channelId: r, description: i, emojiId: l, emojiName: a } = e,
+            s = [...n],
             o = {
                 name: "",
                 description: i,
                 emoji_id: l,
-                emoji_name: s,
+                emoji_name: a,
                 ref_type: u.Qs.CHANNEL,
                 ref_id: r,
             };
-        null != t ? (a[t] = o) : a.push(o), f(a);
+        null != t ? (s[t] = o) : s.push(o), f(s);
     }
-    let b = (0, s.mY)();
+    let x = (0, a.mY)();
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(d.p, {
@@ -83,7 +83,7 @@ function f() {
                                 guildId: t,
                                 omitChannelIds: h,
                                 initialData: n[e],
-                                onSave: (t) => x(t, e),
+                                onSave: (t) => b(t, e),
                                 onDelete: () =>
                                     (function (e) {
                                         let t = [...n];
@@ -109,12 +109,12 @@ function f() {
                             p(m({}, e), {
                                 guildId: t,
                                 omitChannelIds: h,
-                                onSave: (e) => x(e),
+                                onSave: (e) => b(e),
                             }),
                         ),
                     );
                 },
-                disabled: b,
+                disabled: x,
                 children: g.intl.string(g.t.PLSCUl),
             }),
         ],

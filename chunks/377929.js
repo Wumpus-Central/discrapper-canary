@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(392711),
@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(32750),
     d = n(109764),
     u = n(323597),
-    p = n(438536),
-    h = n(251746),
+    h = n(438536),
+    p = n(251746),
     f = n(193987),
     g = n(933793),
     m = n(13736),
@@ -17,8 +17,8 @@ var r = n(951288),
     y = n(137591),
     _ = n(299206),
     j = n(665149),
-    x = n(695346),
-    O = n(979651),
+    O = n(695346),
+    x = n(979651),
     v = n(488131),
     C = n(388032);
 function I(e) {
@@ -46,7 +46,7 @@ function I(e) {
     }
     return e;
 }
-function E(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,7 +64,7 @@ function E(e, t) {
         e
     );
 }
-function S(e) {
+function E(e) {
     let { channel: t } = e,
         [n, l] = i.useState(!1),
         a = i.useRef(null);
@@ -81,13 +81,13 @@ function S(e) {
         autoInvert: !1,
         onRequestClose: () => l(!1),
         renderPopout: function (e) {
-            return (0, r.jsx)(Z, E(I({}, e), { channel: t }));
+            return (0, r.jsx)(Z, S(I({}, e), { channel: t }));
         },
         children: (e, t) => {
             let { isShown: n } = t;
             return (0, r.jsx)(
                 j.ZP.Icon,
-                E(I({}, e), {
+                S(I({}, e), {
                     ref: a,
                     onClick: s,
                     tooltip: n ? null : c,
@@ -104,19 +104,19 @@ function Z(e) {
         l = (0, c.Z)(t),
         j = (0, f.Z)(t),
         I = (0, b.Z)(t.id),
-        E = (0, m.Z)(t),
-        S = (0, _.Z)({
+        S = (0, m.Z)(t),
+        E = (0, _.Z)({
             id: t.id,
             label: C.intl.string(C.t.DQ797u),
         }),
         Z = (0, d.Z)(t),
         T = (0, u.Z)(t),
-        P = (0, p.Z)(t, "Toolbar Overflow"),
+        P = (0, h.Z)(t, "Toolbar Overflow"),
         N = (0, g.Z)(t),
-        R = (0, h.Z)(t),
+        R = (0, p.Z)(t),
         w = (0, y.Z)(t),
-        A = x.vF.useSetting(),
-        D = (0, s.e7)([O.Z], () => !a().isEmpty(O.Z.getVoiceStatesForChannel(t.id)));
+        A = O.vF.useSetting(),
+        D = (0, s.e7)([x.Z], () => !a().isEmpty(x.Z.getVoiceStatesForChannel(t.id)));
     return (0, r.jsxs)(o.v2r, {
         navId: "thread-context",
         onClose: n,
@@ -128,7 +128,7 @@ function Z(e) {
             }),
             (0, r.jsxs)(o.kSQ, {
                 children: [
-                    E,
+                    S,
                     N,
                     I,
                     A && !D
@@ -146,7 +146,7 @@ function Z(e) {
                 children: [w, l, j, T],
             }),
             (0, r.jsxs)(o.kSQ, {
-                children: [Z, S],
+                children: [Z, E],
             }),
         ],
     });

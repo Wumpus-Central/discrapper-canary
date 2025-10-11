@@ -84,7 +84,7 @@ function O() {
         {},
         [O.toString()],
     );
-    let k = () => {
+    let w = () => {
         (0, u.FD)(),
             (0, o.ZDy)(
                 async () => {
@@ -126,7 +126,7 @@ function O() {
                     {
                         modalKey: _.HR,
                         Layer: x.ZP,
-                        onCloseCallback: k,
+                        onCloseCallback: w,
                     },
                 );
         }, [O, I]),
@@ -148,7 +148,7 @@ function O() {
             theme: t,
             onClick: (e) => {
                 e === y.PUi.EMAIL_OR_PHONE || e === y.PUi.EMAIL || e === y.PUi.REVERIFY_EMAIL
-                    ? k()
+                    ? w()
                     : (0, o.ZDy)(
                           async () => {
                               let { default: e } = await Promise.resolve().then(n.bind(n, 607018));

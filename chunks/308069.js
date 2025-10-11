@@ -1,9 +1,9 @@
 n.d(t, { Z: () => C });
 var r = n(951288),
     s = n(647438),
-    o = n(120356),
-    a = n.n(o),
-    i = n(137317),
+    a = n(120356),
+    o = n.n(a),
+    i = n(599273),
     l = n(481060),
     c = n(617136),
     d = n(915750),
@@ -16,13 +16,13 @@ var r = n(951288),
     x = n(303385),
     _ = n(46140),
     b = n(388032),
-    v = n(579605);
-let j = (0, i.animated)(g.ZP),
+    j = n(579605);
+let v = (0, i.animated)(g.ZP),
     C = (e) => {
         let {
                 quest: t,
                 expansionSpring: n,
-                onCtxMenuSelect: o,
+                onCtxMenuSelect: a,
                 onCtxMenuOpen: g,
                 onCtxMenuClose: C,
                 useReducedMotion: y,
@@ -50,14 +50,14 @@ let j = (0, i.animated)(g.ZP),
                     sourceQuestContent: p.jn.QUEST_BAR_V2,
                 });
             }, [S, t]),
-            A = E && O,
-            R = (0, r.jsx)(l.P3F, {
+            R = E && O,
+            A = (0, r.jsx)(l.P3F, {
                 onClick: N,
-                className: a()(v.clickable, { [v.logo]: A }),
-                children: (0, r.jsx)(j, {
+                className: o()(j.clickable, { [j.logo]: R }),
+                children: (0, r.jsx)(v, {
                     quest: t,
                     withGameTile: !1,
-                    logotypeClassName: v.partnerBranding,
+                    logotypeClassName: j.partnerBranding,
                     logotypeStyle: {
                         height: w ? 32 : 24,
                         maxWidth: w ? 130 : 92,
@@ -74,7 +74,7 @@ let j = (0, i.animated)(g.ZP),
                 }),
             });
         return (0, r.jsxs)(i.animated.div, {
-            className: a()(v.wrapper, v.rewardHighlightWrapper, { [v.interactable]: A }),
+            className: o()(j.wrapper, j.rewardHighlightWrapper, { [j.interactable]: R }),
             style: {
                 transform: (0, i.to)(
                     [
@@ -88,7 +88,7 @@ let j = (0, i.animated)(g.ZP),
             },
             children: [
                 (0, r.jsx)(i.animated.div, {
-                    className: v.opaqueExpandedBackground,
+                    className: j.opaqueExpandedBackground,
                     style: {
                         opacity: n.to({
                             range: [0, 1],
@@ -99,12 +99,12 @@ let j = (0, i.animated)(g.ZP),
                 (0, r.jsx)(x.Z, {
                     quest: t,
                     expansionSpring: n,
-                    isFullyExpanded: A,
-                    partnerBranding: R,
+                    isFullyExpanded: R,
+                    partnerBranding: A,
                     useReducedMotion: y,
                 }),
                 (0, r.jsxs)(i.animated.div, {
-                    className: v.promotedBadgeWrapper,
+                    className: j.promotedBadgeWrapper,
                     style: {
                         opacity: n.to({
                             range: [0, 1],
@@ -113,7 +113,7 @@ let j = (0, i.animated)(g.ZP),
                     },
                     children: [
                         (0, r.jsxs)(l.P3F, {
-                            className: v.promotedBadge,
+                            className: j.promotedBadge,
                             onClick: P,
                             children: [
                                 (0, r.jsx)(l.Text, {
@@ -123,14 +123,14 @@ let j = (0, i.animated)(g.ZP),
                                 }),
                                 (0, r.jsx)(l.idN, {
                                     color: l.TVs.colors.WHITE,
-                                    className: v.promotedBadgeIcon,
+                                    className: j.promotedBadgeIcon,
                                 }),
                             ],
                         }),
                         (0, r.jsx)(h.r, {
                             onOpen: g,
                             onClose: C,
-                            onSelect: o,
+                            onSelect: a,
                             questContent: p.jn.QUEST_BAR_V2,
                             quest: t,
                             shouldShowDisclosure: !0,
@@ -167,12 +167,12 @@ let j = (0, i.animated)(g.ZP),
                                     })({}, e)),
                                     (n = n =
                                         {
-                                            className: v.submenuWrapper,
+                                            className: j.submenuWrapper,
                                             "aria-label": b.intl.string(b.t.DEoVWV),
                                             children: (0, r.jsx)(l.xhG, {
                                                 size: "md",
                                                 color: "currentColor",
-                                                className: a()(v.submenuIcon, v.white),
+                                                className: o()(j.submenuIcon, j.white),
                                             }),
                                         }),
                                     Object.getOwnPropertyDescriptors

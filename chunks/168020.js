@@ -1,19 +1,19 @@
-n.d(t, { R: () => o }), n(35282);
+n.d(t, { R: () => a }), n(35282);
 var r = n(951288);
 n(647438);
 var l = n(481060),
-    a = n(774078),
+    i = n(774078),
     s = n(388032),
-    i = n(64092);
-let o = (e) => {
+    o = n(64092);
+let a = (e) => {
     let { endDate: t, size: n = "md" } = e,
-        { days: o, hours: c, minutes: u } = (0, a.Z)(t),
+        { days: a, hours: c, minutes: u } = (0, i.Z)(t),
         d = (function (e, t, n) {
             let r = (e) => "".concat(e.toString().padStart(2, "0"));
             return [r(e), r(t), r(n)].join(":");
-        })(o, c, u);
+        })(a, c, u);
     return (0, r.jsxs)("div", {
-        className: i.container,
+        className: o.container,
         role: "timer",
         children: [
             d.split("").map((e, t) =>
@@ -23,7 +23,7 @@ let o = (e) => {
                           {
                               color: "none",
                               variant: "md" === n ? "heading-lg/extrabold" : "heading-xxl/extrabold",
-                              className: i.delineator,
+                              className: o.delineator,
                               "aria-hidden": !0,
                               tag: "div",
                               children: e,
@@ -35,7 +35,7 @@ let o = (e) => {
                           {
                               color: "always-white",
                               variant: "md" === n ? "heading-md/bold" : "heading-xl/bold",
-                              className: i.number,
+                              className: o.number,
                               "aria-hidden": !0,
                               tag: "div",
                               children: e,
@@ -45,7 +45,7 @@ let o = (e) => {
             ),
             (0, r.jsx)(l.nn4, {
                 children: s.intl.format(s.t.j6IyVV, {
-                    days: o,
+                    days: a,
                     hours: c,
                     minutes: u,
                 }),

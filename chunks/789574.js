@@ -1,13 +1,13 @@
 n.d(t, {
-    Z: () => b,
+    Z: () => x,
     j: () => j,
 });
 var r = n(951288);
 n(647438);
 var i = n(13107),
     l = n(442837),
-    s = n(481060),
-    a = n(139387),
+    a = n(481060),
+    s = n(139387),
     o = n(852860),
     c = n(490655),
     d = n(496675),
@@ -17,14 +17,14 @@ var i = n(13107),
     p = n(821864),
     f = n(905753),
     h = n(981631),
-    x = n(388032);
-function b(e) {
+    b = n(388032);
+function x(e) {
     let { refToScroller: t } = e,
         n = (0, l.e7)([g.Z], () => g.Z.getGuild()),
         {
             section: i,
-            sectionId: s,
-            integrations: a,
+            sectionId: a,
+            integrations: s,
             editedIntegration: o,
             webhooks: d,
             editedWebhook: u,
@@ -45,8 +45,8 @@ function b(e) {
         : (0, r.jsx)(c.Z, {
               guild: n,
               section: i,
-              sectionId: s,
-              integrations: a,
+              sectionId: a,
+              integrations: s,
               webhooks: d,
               editedIntegration: o,
               editedWebhook: u,
@@ -63,33 +63,33 @@ function j() {
             submitting: g.Z.isSubmitting(),
         })),
         c = (0, l.e7)([d.Z], () => d.Z.can(h.Plq.KICK_MEMBERS, t)),
-        b = !1,
+        x = !1,
         j = null;
     return (
         c ||
             (null == (e = m.default.editedIntegration) ? void 0 : e.expire_behavior) !== i.l.KICK ||
-            ((b = !0),
-            (j = (0, r.jsx)(s.Text, {
+            ((x = !0),
+            (j = (0, r.jsx)(a.Text, {
                 color: "text-danger",
                 variant: "text-md/normal",
-                children: x.intl.string(x.t["mrO/ZW"]),
+                children: b.intl.string(b.t["mrO/ZW"]),
             }))),
         (0, r.jsx)(o.Z, {
             submitting: n,
-            disabled: b,
+            disabled: x,
             errorMessage: j,
             onReset: () => {
-                a.Z.init(), p.Ui(), null != t && u.Z.init(t.id);
+                s.Z.init(), p.Ui(), null != t && u.Z.init(t.id);
             },
             onSave: () => {
                 if (null != t) {
-                    if (null != m.default.editedIntegration) a.Z.saveIntegration(t.id, m.default.editedIntegration);
-                    else if (null != m.default.editedWebhook) a.Z.saveWebhook(t.id, m.default.editedWebhook);
+                    if (null != m.default.editedIntegration) s.Z.saveIntegration(t.id, m.default.editedIntegration);
+                    else if (null != m.default.editedWebhook) s.Z.saveWebhook(t.id, m.default.editedWebhook);
                     else if (null != m.default.editedCommandId) {
                         let e = m.default.getSectionId(),
                             n = f.Z.getEditedApplication();
                         if (null == e || null == n) return;
-                        a.Z.saveApplicationPermissions(e, t.id, Object.values(n));
+                        s.Z.saveApplicationPermissions(e, t.id, Object.values(n));
                     }
                     g.Z.hasChanges() && u.Z.saveGuild(t.id, { features: t.features });
                 }

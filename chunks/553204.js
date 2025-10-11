@@ -2,8 +2,8 @@ n.d(t, { Z: () => h });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    s = n.n(l),
-    a = n(477690),
+    a = n.n(l),
+    s = n(477690),
     o = n(481060),
     c = n(91218),
     d = n(518738),
@@ -11,13 +11,13 @@ var r = n(951288),
     g = n(624138),
     m = n(388032),
     p = n(257466);
-let f = (0, g.Mg)(a.Z.ROLE_ICON_UPLOADER_ICON_SIZE);
+let f = (0, g.Mg)(s.Z.ROLE_ICON_UPLOADER_ICON_SIZE);
 function h(e) {
-    let { role: t, "aria-label": n = m.intl.string(m.t["MsUY/f"]), className: l, onClick: a, disabled: g = !1 } = e,
+    let { role: t, "aria-label": n = m.intl.string(m.t["MsUY/f"]), className: l, onClick: s, disabled: g = !1 } = e,
         h = i.useRef(null),
-        x = i.useMemo(() => (0, d.Kz)(t, f), [t]),
-        b =
-            null != x
+        b = i.useMemo(() => (0, d.Kz)(t, f), [t]),
+        x =
+            null != b
                 ? (0, r.jsx)(
                       c.Z,
                       (function (e) {
@@ -49,7 +49,7 @@ function h(e) {
                               enableTooltip: !1,
                               className: p.icon,
                           },
-                          x,
+                          b,
                       ),
                   )
                 : (0, r.jsx)(o.FmF, {
@@ -61,16 +61,16 @@ function h(e) {
         ringTarget: h,
         children: (0, r.jsxs)(o.P3F, {
             "aria-label": n,
-            className: s()(p.container, l, { [p.disabled]: g }),
-            onClick: g ? void 0 : a,
+            className: a()(p.container, l, { [p.disabled]: g }),
+            onClick: g ? void 0 : s,
             "aria-disabled": g,
             children: [
                 (0, r.jsx)("div", {
                     ref: h,
                     className: p.preview,
-                    children: b,
+                    children: x,
                 }),
-                null != x ? (0, r.jsx)(u.S, { className: p.uploaderIcon }) : null,
+                null != b ? (0, r.jsx)(u.S, { className: p.uploaderIcon }) : null,
             ],
         }),
     });

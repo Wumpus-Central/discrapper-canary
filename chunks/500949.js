@@ -2,12 +2,12 @@ n.d(t, {
     $R: () => K,
     A0: () => et,
     GU: () => Y,
-    H8: () => J,
-    HI: () => X,
-    HW: () => G,
+    H8: () => X,
+    HI: () => J,
+    HW: () => B,
     Ib: () => eo,
     KB: () => eu,
-    S2: () => W,
+    S2: () => H,
     W6: () => ea,
     XM: () => er,
     YC: () => ep,
@@ -15,7 +15,7 @@ n.d(t, {
     h9: () => es,
     iw: () => en,
     jC: () => V,
-    jQ: () => z,
+    jQ: () => G,
     lT: () => q,
     rd: () => ed,
     t4: () => ec,
@@ -54,14 +54,14 @@ var a,
     N = n(375924),
     P = n(596136),
     I = n(341901),
-    k = n(856308),
-    w = n(665352),
+    w = n(856308),
+    k = n(665352),
     R = n(394900),
     A = n(661105),
     Z = n(525169),
     D = n(433517),
-    L = n(521904),
-    M = n(231338);
+    M = n(521904),
+    L = n(231338);
 function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -105,7 +105,7 @@ function F(e, t) {
         e
     );
 }
-let G = {
+let B = {
         sRGB: l.Z,
         A98RGB: s.Z,
         ACEScc: o.Z,
@@ -131,14 +131,14 @@ let G = {
         REC_2100_HLG: N.Z,
         REC_2100_PQ: P.Z,
         XYZ_D50: I.Z,
-        XYZ_D65: k.Z,
+        XYZ_D65: w.Z,
     },
-    z = Object.fromEntries(Object.keys(G).map((e) => [e, e]));
-Object.values(G).forEach((e) => w.Z.register(e));
-let { SemanticColors: B } = L.V,
-    V = B,
-    W = CSS.supports("color", "color(display-p3 1 0 0)") && CSS.supports("color", "color(display-p3 1 0 0 / 1)");
-function H(e, t) {
+    G = Object.fromEntries(Object.keys(B).map((e) => [e, e]));
+Object.values(B).forEach((e) => k.Z.register(e));
+let { SemanticColors: z } = M.V,
+    V = z,
+    H = CSS.supports("color", "color(display-p3 1 0 0)") && CSS.supports("color", "color(display-p3 1 0 0 / 1)");
+function W(e, t) {
     let [n, a] = i.useState(() => {
         let n = D.K.get(e);
         return null != n ? n : t;
@@ -155,7 +155,7 @@ function K(e) {
     return {
         name: e,
         colors: Object.fromEntries(
-            Object.values(M.BR).map((e) => [
+            Object.values(L.BR).map((e) => [
                 e,
                 {
                     color: t[e].raw,
@@ -181,14 +181,14 @@ function q(e, t, n, a, r) {
 function Y(e) {
     return F(U({}, e), { highlight: !e.highlight });
 }
-function X(e) {
+function J(e) {
     return (0, R.Z)((0, A.Z)(e, l.Z), { format: "hex" });
 }
-var J = (((a = {}).TOKENS = "Tokens"), (a.PALETTES = "Palettes"), a);
+var X = (((a = {}).TOKENS = "Tokens"), (a.PALETTES = "Palettes"), a);
 function Q() {
     return (function (e, t) {
-        let [n, a] = H("".concat(e, "-states"), [t]),
-            [r, l] = H("".concat(e, "-index"), 0),
+        let [n, a] = W("".concat(e, "-states"), [t]),
+            [r, l] = W("".concat(e, "-index"), 0),
             s = n[r],
             o = i.useCallback(
                 (e) => {
@@ -240,7 +240,7 @@ function ea(e, t) {
 }
 function er(e) {
     let { name: t, base: n, steps: a = 26, darkness: r, lightness: i, easingStrength: s = 1 } = e,
-        o = G[e.colorSpace],
+        o = B[e.colorSpace],
         c = (0, A.Z)(n, o),
         d = (0, Z.CD)(c, "white", 1 - r, {
             space: o,

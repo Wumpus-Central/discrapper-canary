@@ -18,8 +18,8 @@ var l = t(370523),
 function g(e) {
     let { user: n, currentUser: t } = e,
         { mutualFriendsCount: g, mutualGuilds: b } = (0, p.Z)(n),
-        y = null == b ? void 0 : b.length,
-        I = (0, m.Z)(n),
+        I = null == b ? void 0 : b.length,
+        y = (0, m.Z)(n),
         Z = (0, d.Z)({ location: "useUserProfileModalV2TabBarItems" }),
         O = (0, u.Z)({ location: "useUserProfileModalV2TabBarItems" }),
         N = (0, f.Z)(n.id),
@@ -55,14 +55,14 @@ function g(e) {
                 subsection: void 0,
             }),
         n.id !== (null == t ? void 0 : t.id) &&
-            I &&
+            y &&
             (E.push({
                 text: (0, h.Z)(g),
                 section: j.oh.MUTUAL_FRIENDS,
                 subsection: void 0,
             }),
             E.push({
-                text: (0, x.Z)(y),
+                text: (0, x.Z)(I),
                 section: j.oh.MUTUAL_GUILDS,
                 subsection: void 0,
             })),

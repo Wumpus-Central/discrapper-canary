@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => h });
 var r = n(647438),
     i = n(442837),
     l = n(445384),
@@ -8,7 +8,7 @@ var r = n(647438),
     c = n(594174),
     d = n(981631),
     u = n(440493);
-function p(e) {
+function h(e) {
     let t = (0, i.e7)([o.Z, a.Z, c.default, s.ZP], () => {
         let t = o.Z.getGuild(e);
         if (

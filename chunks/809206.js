@@ -4,7 +4,7 @@ n.d(t, {
     I5: () => O,
     Mn: () => b,
     NI: () => N,
-    OU: () => L,
+    OU: () => x,
     P6: () => D,
     Rx: () => S,
     S2: () => E,
@@ -15,7 +15,7 @@ n.d(t, {
     b9: () => R,
     cV: () => T,
     e1: () => I,
-    iR: () => x,
+    iR: () => L,
     s4: () => C,
     si: () => P,
     ss: () => g,
@@ -265,9 +265,9 @@ function w() {
 function D() {
     o.Z.dispatch({ type: "USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM" });
 }
-function x() {
+function L() {
     o.Z.dispatch({ type: "USER_SETTINGS_ACCOUNT_RESET_PENDING_LEGACY_USERNAME_DISABLED" });
 }
-function L() {
+function x() {
     o.Z.dispatch({ type: "USER_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES" });
 }

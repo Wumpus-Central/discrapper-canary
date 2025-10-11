@@ -94,12 +94,12 @@ function j(e) {
         [T, N] = r.useState(null),
         A = r.useRef(null),
         { roles: w, members: M, getRichTag: R } = (0, g.Q)(a, d, d.accessPermissions, j),
-        k = m.Z.useSections({
+        L = m.Z.useSections({
             roles: w,
             members: M,
         }),
-        L = h && 0 === Object.keys(S).length;
-    async function D() {
+        D = h && 0 === Object.keys(S).length;
+    async function k() {
         if (null == d || 0 === Object.keys(S).length) return void p();
         Z(!0);
         try {
@@ -185,9 +185,9 @@ function j(e) {
                         renderSection: m.Z.renderSection,
                         rowHeight: m.Z.ROW_HEIGHT,
                         renderRow: m.Z.renderRow,
-                        sections: k,
+                        sections: L,
                     },
-                    actions: L
+                    actions: D
                         ? [
                               {
                                   variant: "secondary",
@@ -204,7 +204,7 @@ function j(e) {
                               {
                                   variant: "primary",
                                   text: y.intl.string(y.t.i4jeWV),
-                                  onClick: D,
+                                  onClick: k,
                                   loading: I,
                               },
                           ],

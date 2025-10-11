@@ -40,7 +40,7 @@ function E(e) {
             itemCount: n,
         }),
         { itemCount: R, focusedIndex: S } = O,
-        [C] = r.useState(() => (0, s.P2)(f, 16));
+        [p] = r.useState(() => (0, s.P2)(f, 16));
     return (
         r.useEffect(() => {
             f({
@@ -71,7 +71,7 @@ function E(e) {
             r.useEffect(() => {
                 S.current = N;
             }, [N]);
-            let [C, p] = r.useState(!1),
+            let [p, C] = r.useState(!1),
                 [D] = r.useState(
                     () =>
                         new s.$o((e) => () => {
@@ -109,7 +109,7 @@ function E(e) {
                     },
                     [h, E, A, T, t, L],
                 ),
-                v = r.useCallback(
+                b = r.useCallback(
                     (e) => {
                         if (!S.current) return;
                         if (
@@ -152,18 +152,18 @@ function E(e) {
                     },
                     [h, t, T, E, x, d],
                 ),
-                b = r.useCallback(() => {
-                    C || p(!0);
-                }, [C]),
+                v = r.useCallback(() => {
+                    p || C(!0);
+                }, [p]),
                 P = r.useCallback(() => {
-                    C || (I ? L(h(t, E), E) : x(!0));
-                }, [h, t, L, I, C, E, x]),
+                    p || (I ? L(h(t, E), E) : x(!0));
+                }, [h, t, L, I, p, E, x]),
                 j = r.useCallback(
                     (e) => {
                         e.currentTarget.contains(e.relatedTarget) ||
                             requestAnimationFrame(() => {
                                 if (null == u(o(h, t, E))) return void L(t);
-                                p(!1);
+                                C(!1);
                             });
                     },
                     [h, t, E, L],
@@ -173,25 +173,25 @@ function E(e) {
                 let e = y.current;
                 if (null != e)
                     return (
-                        e.addEventListener("focusin", b),
+                        e.addEventListener("focusin", v),
                         e.addEventListener("focus", P),
                         e.addEventListener("focusout", j),
                         () => {
-                            e.removeEventListener("focusin", b),
+                            e.removeEventListener("focusin", v),
                                 e.removeEventListener("focus", P),
                                 e.removeEventListener("focusout", j);
                         }
                     );
-            }, [P, b, j]);
+            }, [P, v, j]);
             let G = r.useCallback(
                     () => ({
                         role: "list",
-                        tabIndex: C && I ? -1 : 0,
+                        tabIndex: p && I ? -1 : 0,
                         id: t,
-                        onKeyDown: v,
+                        onKeyDown: b,
                         ref: y,
                     }),
-                    [t, C, v, I],
+                    [t, p, b, I],
                 ),
                 k = r.useCallback(
                     (e) => {
@@ -219,7 +219,7 @@ function E(e) {
             navId: t,
             itemCount: R,
             focusedIndex: S,
-            dispatch: C,
+            dispatch: p,
             onSelect: d,
             setFocus: _,
             getNewFocusIndex: A,

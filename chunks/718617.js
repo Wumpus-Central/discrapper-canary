@@ -1,7 +1,7 @@
 n.d(t, { Z: () => N });
 var r = n(951288),
     l = n(647438),
-    i = n(137317),
+    i = n(599273),
     s = n(872175),
     a = n(442837),
     o = n(481060),
@@ -34,9 +34,9 @@ function N(e) {
     let { userId: n, guildId: N, onClose: h, analyticsLocation: O, className: f } = e,
         R = (0, a.e7)([E.ZP], () => E.ZP.getGuildSidebarState(N), [N]),
         S = null != (t = null == R ? void 0 : R.details.modViewPanel) ? t : I.k.INFO,
-        C = (0, u.Z)(n),
-        p = null == S ? null : S === I.k.INFO ? "backwards" : "forwards",
-        D = (0, s.Z)(p),
+        p = (0, u.Z)(n),
+        C = null == S ? null : S === I.k.INFO ? "backwards" : "forwards",
+        D = (0, s.Z)(C),
         { reducedMotion: L } = l.useContext(o.Sfi),
         U = l.useCallback(
             (e) => {
@@ -63,7 +63,7 @@ function N(e) {
             enter: { value: 0 },
             leave: { value: -1 },
         },
-        C !== n ? "animate-never" : "animate-always",
+        p !== n ? "animate-never" : "animate-always",
     );
     return (0, r.jsx)(i.animated.div, {
         style: {

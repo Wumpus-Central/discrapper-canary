@@ -17,11 +17,11 @@ var r = n(951288),
     _ = n(785547),
     O = n(730749),
     E = n(112724),
-    y = n(812206),
-    v = n(44315),
+    v = n(812206),
+    y = n(44315),
     I = n(600164),
-    S = n(167533),
-    C = n(925329),
+    C = n(167533),
+    S = n(925329),
     T = n(707409),
     N = n(210887),
     j = n(283595),
@@ -230,7 +230,7 @@ function W(e) {
     }
     throw Error("Invalid Dispatch stage");
 }
-class q extends i.PureComponent {
+class Y extends i.PureComponent {
     get isFocused() {
         let { cellProps: e } = this.props;
         return null != e && e.isFocused;
@@ -243,8 +243,8 @@ class q extends i.PureComponent {
                 (0, r.jsx)(h.Exd, {
                     percent: t,
                     size: h.Exd.Sizes.SMALL,
-                    foregroundColor: (0, v.Lq)(n),
-                    foregroundGradientColor: null != i ? [(0, v.Lq)(i[0]), (0, v.Lq)(i[1])] : void 0,
+                    foregroundColor: (0, y.Lq)(n),
+                    foregroundGradientColor: null != i ? [(0, y.Lq)(i[0]), (0, y.Lq)(i[1])] : void 0,
                     animate: this.isFocused,
                 }),
                 (0, r.jsx)("div", {
@@ -414,7 +414,7 @@ class q extends i.PureComponent {
             });
     }
 }
-let Y = () =>
+let q = () =>
         (0, r.jsx)(H, {
             icon: h.o1U,
             tooltip: k.intl.string(k.t.YGm6SU),
@@ -450,10 +450,10 @@ let Y = () =>
                 (0, r.jsxs)(I.Z, {
                     align: I.Z.Align.CENTER,
                     children: [
-                        (0, r.jsx)(C.Z, {
+                        (0, r.jsx)(S.Z, {
                             game: e.application,
                             className: M.__invalid_gameIcon,
-                            size: C.A.SMALL,
+                            size: S.A.SMALL,
                         }),
                         (0, r.jsx)("div", {
                             className: M.nameCellText,
@@ -468,7 +468,7 @@ let Y = () =>
             headerCellClassName: M.progressCellHeader,
             bodyCellClassName: M.progressCellBody,
             render: (e, t) =>
-                (0, r.jsx)(q, {
+                (0, r.jsx)(Y, {
                     item: e,
                     cellProps: t,
                 }),
@@ -495,7 +495,7 @@ let Y = () =>
                                 e.index > 0
                                     ? (0, r.jsx)(Q, { item: e })
                                     : null != t && t.paused
-                                      ? (0, r.jsx)(Y, {})
+                                      ? (0, r.jsx)(q, {})
                                       : (0, r.jsx)(K, { item: e })),
                             (i = (0, r.jsx)(X, { item: e })))
                           : (i = (0, r.jsx)(X, { item: e })),
@@ -551,7 +551,7 @@ class $ extends i.PureComponent {
                               }),
                           ],
                       }),
-                      (0, r.jsx)(S.Z, {
+                      (0, r.jsx)(C.Z, {
                           hasHeader: !1,
                           columns: J,
                           data: e,
@@ -659,8 +659,8 @@ function ee(e, t, n, r) {
     }, []);
 }
 let et = (0, E.Z)(
-    c.ZP.connectStores([y.Z, P.Z, x.Z, N.Z, A.Z], () => ({
-        applications: [...ee(x.Z.activeItems, !1, y.Z, P.Z), ...ee(x.Z.finishedItems, !0, y.Z, P.Z)],
+    c.ZP.connectStores([v.Z, P.Z, x.Z, N.Z, A.Z], () => ({
+        applications: [...ee(x.Z.activeItems, !1, v.Z, P.Z), ...ee(x.Z.finishedItems, !0, v.Z, P.Z)],
         paused: x.Z.paused,
         isFocused: A.Z.isFocused(),
         theme: N.Z.theme,

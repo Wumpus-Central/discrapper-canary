@@ -67,11 +67,11 @@ let O = (0, f.Z)(
                 parsedPermissions: f,
                 responseType: O,
                 redirectUri: E,
-                codeChallenge: y,
-                codeChallengeMethod: v,
+                codeChallenge: v,
+                codeChallengeMethod: y,
                 state: I,
-                guildId: S,
-                channelId: C,
+                guildId: C,
+                channelId: S,
                 prompt: T,
                 disableGuildSelect: N,
                 disclosures: j,
@@ -79,7 +79,7 @@ let O = (0, f.Z)(
                 pid: x,
                 signal: A,
             } = e,
-            Z = "OAuth2Authorize_".concat(n, "_").concat(S, "_").concat(C),
+            Z = "OAuth2Authorize_".concat(n, "_").concat(C, "_").concat(S),
             w = null != P ? (null == u ? void 0 : u.get(P)) : void 0,
             L = null != (t = null == w ? void 0 : w.application) ? t : a.Z.getApplication(n);
         return new Promise((e, t) => {
@@ -89,7 +89,7 @@ let O = (0, f.Z)(
             null !=
                 (0, l.ZP)({
                     application: L,
-                    channelId: C,
+                    channelId: S,
                 })
                 ? (w = i.u1M)
                 : a.context === g.IlC.POPOUT && (w = i.u1M);
@@ -164,12 +164,12 @@ let O = (0, f.Z)(
                             callback: D,
                             responseType: O,
                             redirectUri: E,
-                            codeChallenge: y,
-                            codeChallengeMethod: v,
+                            codeChallenge: v,
+                            codeChallengeMethod: y,
                             state: I,
                             permissions: f,
-                            guildId: S,
-                            channelId: C,
+                            guildId: C,
+                            channelId: S,
                             prompt: T,
                             disableGuildSelect: "boolean" == typeof N ? N : "true" === N,
                             integrationType: P,

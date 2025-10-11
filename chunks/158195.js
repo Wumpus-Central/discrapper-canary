@@ -1,8 +1,8 @@
 r.d(t, { default: () => p });
 var n = r(951288);
 r(647438);
-var o = r(481060),
-    c = r(239091),
+var c = r(481060),
+    o = r(239091),
     i = r(883385),
     a = r(108843),
     l = r(100527),
@@ -18,14 +18,14 @@ let p = (0, a.Z)(
                 a = (0, b.Z)(t, r),
                 l = (0, s.Z)(t, r),
                 f = (0, u.Z)(t, r);
-            return (0, n.jsxs)(o.v2r, {
+            return (0, n.jsxs)(c.v2r, {
                 navId: "moderation-raid-context",
-                onClose: c.Zy,
+                onClose: o.Zy,
                 "aria-label": O.intl.string(O.t.liqwPD),
                 onSelect: i,
                 children: [
-                    (0, n.jsx)(o.kSQ, { children: l }),
-                    (0, n.jsxs)(o.kSQ, {
+                    (0, n.jsx)(c.kSQ, { children: l }),
+                    (0, n.jsxs)(c.kSQ, {
                         children: [f, a],
                     }),
                 ],

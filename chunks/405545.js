@@ -1,14 +1,14 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => s });
 var r = n(951288);
 n(647438);
 var i = n(186078),
     l = n(137158),
-    s = n(31829);
-let a = function (e) {
+    a = n(31829);
+let s = function (e) {
     let {
             formField: t,
             index: n,
-            isDragEnabled: a,
+            isDragEnabled: s,
             isDropHovered: o,
             onDrop: c,
             onEdit: d,
@@ -21,7 +21,7 @@ let a = function (e) {
     return (0, r.jsx)(l.Z, {
         field: t,
         index: n,
-        isDragEnabled: a,
+        isDragEnabled: s,
         isDropHovered: o,
         onDrop: c,
         onEdit: d,
@@ -33,7 +33,7 @@ let a = function (e) {
         children: (0, r.jsx)(i.BO, {
             field: t,
             value: void 0,
-            radioItemClassName: s.multipleChoiceFixedTextColor,
+            radioItemClassName: a.multipleChoiceFixedTextColor,
             disabled: !1,
         }),
     });

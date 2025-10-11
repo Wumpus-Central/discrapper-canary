@@ -1,11 +1,11 @@
 n.d(t, {
-    g: () => a,
+    g: () => i,
     y: () => s,
 }),
     n(388685);
 var r,
     l = n(647438),
-    a =
+    i =
         (((r = {}).MOUNTED = "mounted"),
         (r.SORT_OUT = "sort-out"),
         (r.SORT_IN = "sort-in"),
@@ -16,16 +16,16 @@ var r,
 let s = () => {
     let [e, t] = l.useState("mounted"),
         [n, r] = l.useState(!1),
-        a = l.useRef(null);
+        i = l.useRef(null);
     return (
         l.useEffect(() => {
-            n && "finished" === e && (null !== a.current && a.current.focus(), r(!1));
+            n && "finished" === e && (null !== i.current && i.current.focus(), r(!1));
         }, [e, n]),
         {
             animationPhase: e,
             startAnimation: l.useCallback((e) => {
                 let { isShuffling: n, onOutroComplete: l, returnRef: s } = e;
-                (null == s ? void 0 : s.current) != null && ((a.current = s.current), r(!0)),
+                (null == s ? void 0 : s.current) != null && ((i.current = s.current), r(!0)),
                     t(n ? "shuffle-out" : "sort-out"),
                     setTimeout(
                         () => {

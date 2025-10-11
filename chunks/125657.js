@@ -19,19 +19,19 @@ function j(e) {
     var t;
     let { guild: n, applicationIntegration: j } = e,
         { application: v } = j,
-        O = null != v.bot ? new b.default(v.bot) : null,
-        y = (0, a.e7)([g.ZP], () => (null != O ? g.ZP.getMember(n.id, O.id) : null), [O, n]),
+        y = null != v.bot ? new b.default(v.bot) : null,
+        O = (0, a.e7)([g.ZP], () => (null != y ? g.ZP.getMember(n.id, y.id) : null), [y, n]),
         _ = (0, a.e7)([f.Z], () => f.Z.getEveryoneRole(n)),
         C = (0, a.Wu)([f.Z], () => {
             var e;
-            return f.Z.getManyRoles(n.id, null != (e = null == y ? void 0 : y.roles) ? e : []);
+            return f.Z.getManyRoles(n.id, null != (e = null == O ? void 0 : O.roles) ? e : []);
         }),
-        N = null == O ? void 0 : O.id;
+        N = null == y ? void 0 : y.id;
     r.useEffect(() => {
         null != N && s.Z.requestMembersById(n.id, N);
     }, [n.id, N]);
     let S = r.useMemo(() => l.$e(_.permissions, ...C.map((e) => e.permissions)), [C, _]);
-    return null == O
+    return null == y
         ? null
         : (0, i.jsx)(o.Zbd, {
               editable: !0,
@@ -44,17 +44,17 @@ function j(e) {
                           children: [
                               (0, i.jsx)("img", {
                                   alt: "",
-                                  src: O.getAvatarURL(n.id, 32),
+                                  src: y.getAvatarURL(n.id, 32),
                                   className: x.iconWrapper,
                               }),
                               (0, i.jsx)(o.Text, {
                                   color: "header-primary",
                                   variant: "text-sm/normal",
-                                  children: h.intl.format(h.t.GyhzGx, { user: O.toString() }),
+                                  children: h.intl.format(h.t.GyhzGx, { user: y.toString() }),
                               }),
                               (0, i.jsx)(u.Z, {
                                   className: x.tag,
-                                  verified: O.isVerifiedBot(),
+                                  verified: y.isVerifiedBot(),
                               }),
                           ],
                       }),
@@ -88,7 +88,7 @@ function j(e) {
                                       : null,
                               ],
                           });
-                      })(O, n, null != (t = null == y ? void 0 : y.roles) ? t : [], S),
+                      })(y, n, null != (t = null == O ? void 0 : O.roles) ? t : [], S),
                   ],
               }),
           });

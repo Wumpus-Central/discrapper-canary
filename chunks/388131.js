@@ -1,6 +1,6 @@
 n.d(t, {
     A: () => f,
-    default: () => E,
+    default: () => O,
 }),
     n(388685),
     n(953529);
@@ -19,8 +19,8 @@ var r = n(951288),
     m = n(700785),
     C = n(146085),
     b = n(71080),
-    x = n(388032),
-    N = n(878713);
+    N = n(388032),
+    x = n(878713);
 function f(e, t) {
     return {
         id: e,
@@ -29,11 +29,11 @@ function f(e, t) {
         allow: C.yP,
     };
 }
-function E(e) {
+function O(e) {
     var t,
         n,
-        { channelId: m, onClose: E } = e,
-        O = (function (e, t) {
+        { channelId: m, onClose: O } = e,
+        E = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -82,7 +82,7 @@ function E(e) {
                     });
                 return (0, o.hw)(e.id, n, !0);
             })(j, S),
-                E();
+                O();
         } catch (t) {
             let e = new c.Hx(t);
             _(!1), P(e);
@@ -123,20 +123,20 @@ function E(e) {
                         });
                 }
                 return e;
-            })({}, O)),
+            })({}, E)),
             (n = n =
                 {
-                    title: x.intl.string(x.t.dMJ3Y2),
-                    onClose: E,
+                    title: N.intl.string(N.t.dMJ3Y2),
+                    onClose: O,
                     input: (0, r.jsxs)("div", {
                         children: [
                             (0, r.jsxs)(a.Text, {
-                                className: N.channelName,
+                                className: x.channelName,
                                 variant: "text-lg/normal",
                                 color: "header-secondary",
                                 children: [
                                     (0, r.jsx)(a.ewx, {
-                                        className: N.channelIcon,
+                                        className: x.channelIcon,
                                         size: "sm",
                                         color: "currentColor",
                                     }),
@@ -146,19 +146,19 @@ function E(e) {
                             j.isGuildStageVoice() &&
                                 (0, r.jsx)(a.Text, {
                                     color: "header-secondary",
-                                    className: N.description,
+                                    className: x.description,
                                     variant: "text-sm/normal",
-                                    children: x.intl.string(x.t.f7VbhI),
+                                    children: N.intl.string(N.t.f7VbhI),
                                 }),
-                            (0, r.jsx)(h.Z.SearchBox, { placeholderText: x.intl.string(x.t.iezLLi) }),
+                            (0, r.jsx)(h.Z.SearchBox, { placeholderText: N.intl.string(N.t.iezLLi) }),
                             (0, r.jsx)(a.Text, {
-                                className: N.subtext,
+                                className: x.subtext,
                                 variant: "text-xs/normal",
-                                children: x.intl.string(x.t["rwFx8/"]),
+                                children: N.intl.string(N.t["rwFx8/"]),
                             }),
                             null != D
                                 ? (0, r.jsx)(a.Text, {
-                                      className: N.subtext,
+                                      className: x.subtext,
                                       variant: "text-xs/normal",
                                       color: "text-danger",
                                       children: D.getAnyErrorMessage(),
@@ -177,12 +177,12 @@ function E(e) {
                     actions: [
                         {
                             variant: "secondary",
-                            text: x.intl.string(x.t["ETE/oK"]),
-                            onClick: E,
+                            text: N.intl.string(N.t["ETE/oK"]),
+                            onClick: O,
                         },
                         {
                             variant: "primary",
-                            text: x.intl.string(x.t.OYkgVl),
+                            text: N.intl.string(N.t.OYkgVl),
                             onClick: M,
                             loading: A,
                         },

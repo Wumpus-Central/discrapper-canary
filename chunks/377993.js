@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(144144),
     d = n(100527),
     u = n(906732),
-    p = n(385499),
-    h = n(545957),
+    h = n(385499),
+    p = n(545957),
     f = n(82295),
     g = n(850020),
     m = n(670188),
@@ -17,13 +17,13 @@ var r = n(951288),
     y = n(699516),
     _ = n(111583),
     j = n(594174),
-    x = n(626135),
-    O = n(585483),
+    O = n(626135),
+    x = n(585483),
     v = n(233870),
     C = n(51144),
     I = n(998502),
-    E = n(276264),
-    S = n(981631),
+    S = n(276264),
+    E = n(981631),
     Z = n(388032),
     T = n(32482);
 function P(e) {
@@ -55,11 +55,11 @@ let N = [],
     R = I.ZP.getEnableHardwareAcceleration();
 function w(e) {
     let { user: t, channel: s, status: d, activities: u } = e,
-        p = (0, a.e7)([_.Z], () => null != _.Z.getTypingUsers(s.id)[t.id]),
+        h = (0, a.e7)([_.Z], () => null != _.Z.getTypingUsers(s.id)[t.id]),
         f = (0, a.e7)([j.default], () => j.default.getCurrentUser()),
-        x = (0, a.e7)([b.Z], () => b.Z.isMobileOnline(t.id)),
+        O = (0, a.e7)([b.Z], () => b.Z.isMobileOnline(t.id)),
         v = (0, a.e7)([y.Z], () => y.Z.getNickname(t.id)),
-        I = (0, h.Z)(t.id),
+        I = (0, p.Z)(t.id),
         T = i.useRef(null),
         N = (e) => {
             (0, o.jW)(e, async () => {
@@ -96,8 +96,8 @@ function w(e) {
         w = () => {
             let e = "@".concat(C.ZP.getUserTag(t, { decoration: "never" })),
                 n = "<@".concat(t.id, ">");
-            O.S.dispatch(S.CkL.TEXTAREA_FOCUS, { channelId: s.id }),
-                O.S.dispatchToLastSubscribed(S.CkL.INSERT_TEXT, {
+            x.S.dispatch(E.CkL.TEXTAREA_FOCUS, { channelId: s.id }),
+                x.S.dispatchToLastSubscribed(E.CkL.INSERT_TEXT, {
                     plainText: e,
                     rawText: n,
                 }),
@@ -140,7 +140,7 @@ function w(e) {
                     return i;
                 })(e, ["onClick", "onMouseDown"]);
             return (0, r.jsx)(
-                E.Z,
+                S.Z,
                 P(
                     {
                         ref: T,
@@ -149,14 +149,14 @@ function w(e) {
                         isOwner: t.id === s.ownerId,
                         ownerTooltipText: Z.intl.string(Z.t["MRXZ+/"]),
                         shouldAnimateStatus: R,
-                        isTyping: p,
+                        isTyping: h,
                         status: d,
                         activities: u,
                         applicationStream: I,
                         channel: s,
                         onContextMenu: N,
                         selected: D,
-                        isMobile: x,
+                        isMobile: O,
                         nick: v,
                         nameplate: A,
                         onClick: (e) => {
@@ -196,11 +196,11 @@ function D(e) {
                     var r, i, l;
                     y.Z.isFriend(t.id) || t.id === (null == (r = j.default.getCurrentUser()) ? void 0 : r.id)
                         ? (n[t.id] = {
-                              status: null != (i = b.Z.getStatus(t.id)) ? i : S.Skl.OFFLINE,
+                              status: null != (i = b.Z.getStatus(t.id)) ? i : E.Skl.OFFLINE,
                               activities: null != (l = b.Z.getActivities(t.id)) ? l : N,
                           })
                         : (n[t.id] = {
-                              status: S.Skl.OFFLINE,
+                              status: E.Skl.OFFLINE,
                               activities: N,
                           });
                 }
@@ -219,13 +219,13 @@ function D(e) {
             A,
         );
     i.useEffect(() => {
-        x.default.track(S.rMx.MEMBER_LIST_VIEWED, {
+        O.default.track(E.rMx.MEMBER_LIST_VIEWED, {
             channel_id: t.id,
             channel_type: t.type,
             guild_id: t.guild_id,
         });
     }, [t.guild_id, t.id, t.type]);
-    let h = l && c.every((e) => e.user.isStaff());
+    let p = l && c.every((e) => e.user.isStaff());
     return (0, r.jsx)(u.Gt, {
         value: o,
         children: (0, r.jsx)("div", {
@@ -240,7 +240,7 @@ function D(e) {
                             className: T.membersGroup,
                             children: [
                                 "".concat(Z.intl.string(Z.t["9Oq93t"]), "\u2014").concat(c.length, " "),
-                                h && (0, r.jsx)(p.Z, { type: p.Z.Types.STAFF_ONLY_DM }),
+                                p && (0, r.jsx)(h.Z, { type: h.Z.Types.STAFF_ONLY_DM }),
                             ],
                         }),
                         c.map((e) =>

@@ -8,7 +8,7 @@ var r = n(951288),
     c = n(99325),
     d = n(683818),
     u = n(388032);
-function p(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,7 +33,7 @@ function p(e) {
     }
     return e;
 }
-function h(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -62,15 +62,15 @@ function f(e) {
     i.useEffect(() => {
         y || _ || null != j || (0, a.Zy)();
     });
-    let x = () => {
+    let O = () => {
         c.kx(t.channelId, t.guildId);
     };
-    function O() {
+    function x() {
         (0, a.Zy)(), null == g || g();
     }
     return (0, r.jsxs)(l.v2r, {
         navId: "guild-entry-context",
-        onClose: O,
+        onClose: x,
         "aria-label": u.intl.string(u.t.HpQykZ),
         onSelect: f,
         children: [
@@ -83,9 +83,9 @@ function f(e) {
                               action: function () {
                                   (0, l.ZDy)(async () => {
                                       let { default: e } = await n.e("34191").then(n.bind(n, 303647));
-                                      return (n) => (0, r.jsx)(e, h(p({}, n), { entry: t }));
+                                      return (n) => (0, r.jsx)(e, p(h({}, n), { entry: t }));
                                   }),
-                                      O();
+                                      x();
                               },
                           })
                         : null,
@@ -97,13 +97,13 @@ function f(e) {
                                   (0, l.h7j)((e) =>
                                       (0, r.jsx)(
                                           l.ConfirmModal,
-                                          h(
-                                              p(
+                                          p(
+                                              h(
                                                   {
                                                       header: u.intl.string(u.t.KUxYWF),
                                                       confirmText: u.intl.string(u.t.N86XcH),
                                                       cancelText: u.intl.string(u.t["ETE/oK"]),
-                                                      onConfirm: x,
+                                                      onConfirm: O,
                                                   },
                                                   e,
                                               ),
@@ -116,7 +116,7 @@ function f(e) {
                                           ),
                                       ),
                                   ),
-                                      O();
+                                      x();
                               },
                               color: "danger",
                           })
@@ -127,7 +127,7 @@ function f(e) {
                               id: "report-server-listing",
                               label: u.intl.string(u.t.Aen9en),
                               action: function () {
-                                  null != t && ((0, o.sq)(t), O());
+                                  null != t && ((0, o.sq)(t), x());
                               },
                               icon: l.U65,
                               color: "danger",

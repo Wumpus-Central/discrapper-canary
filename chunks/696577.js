@@ -17,8 +17,8 @@ var r = n(951288),
     _ = n(170245),
     O = n(981631),
     E = n(388032),
-    y = n(507694);
-function v(e) {
+    v = n(507694);
+function y(e) {
     var t;
     let { user: n, applicationId: l, isGameRelationship: s, active: c } = e,
         u = (null == (t = f.default.getCurrentUser()) ? void 0 : t.isStaff()) && (null == n ? void 0 : n.isStaff()),
@@ -44,7 +44,7 @@ function v(e) {
         children: [
             u &&
                 (0, r.jsx)("div", {
-                    className: y.staffIndicator,
+                    className: v.staffIndicator,
                     children: (0, r.jsx)(o.IGR, {
                         color: a.Z.unsafe_rawColors.BRAND_500.css,
                         text: E.intl.string(E.t.oMx98P),
@@ -89,12 +89,12 @@ function I(e) {
         shouldHighlight: a,
     });
 }
-function S(e) {
+function C(e) {
     let { isGameRelationship: t, applicationId: n, userTag: a, isProvisional: s } = e,
         p = i.useMemo(() => (t ? E.intl.string(E.t["Uv/eT0"]) : a), [t, a]),
         f = (0, l.e7)([c.Z], () => (null != n ? c.Z.getApplication(n) : null));
     return (0, r.jsxs)("div", {
-        className: y.applicationSublabel,
+        className: v.applicationSublabel,
         children: [
             !s &&
                 (0, r.jsx)(o.Text, {
@@ -124,7 +124,7 @@ function S(e) {
         ],
     });
 }
-function C(e) {
+function S(e) {
     let { user: t, hovered: n, status: i, isGameRelationship: l, applicationId: a } = e,
         o = h.ZP.useUserTag(t);
     return (0, r.jsx)(_.Z, {
@@ -132,7 +132,7 @@ function C(e) {
         hovered: n,
         status: i,
         showAccountIdentifier: !l && !t.isProvisional,
-        subText: (0, r.jsx)(S, {
+        subText: (0, r.jsx)(C, {
             isGameRelationship: l,
             isProvisional: t.isProvisional,
             applicationId: a,
@@ -158,9 +158,9 @@ function T(e) {
         onClick: f,
         children: (e) =>
             (0, r.jsxs)("div", {
-                className: y.listItemContents,
+                className: v.listItemContents,
                 children: [
-                    (0, r.jsx)(C, {
+                    (0, r.jsx)(S, {
                         user: t,
                         hovered: e,
                         status: d,
@@ -168,10 +168,10 @@ function T(e) {
                         applicationId: o,
                     }),
                     (0, r.jsx)("div", {
-                        className: y.actions,
+                        className: v.actions,
                         children:
                             n === O.OGo.PENDING_INCOMING
-                                ? (0, r.jsx)(v, {
+                                ? (0, r.jsx)(y, {
                                       user: t,
                                       applicationId: o,
                                       isGameRelationship: c,

@@ -2,8 +2,8 @@ n.d(t, { Z: () => f });
 var r = n(951288);
 n(647438);
 var i = n(120356),
-    o = n.n(i),
-    a = n(481060),
+    a = n.n(i),
+    o = n(481060),
     s = n(63063),
     l = n(773446),
     c = n(572264),
@@ -21,37 +21,37 @@ function f(e) {
                 alt: "",
                 src: g,
             }),
-            (0, r.jsx)(a.Heading, {
+            (0, r.jsx)(o.Heading, {
                 className: m.title,
                 color: "header-primary",
                 variant: "heading-xl/bold",
                 children: d.intl.format(d.t["au+lPj"], { n: t.tag }),
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(o.Text, {
                 className: m.subtitleInfo,
                 color: "header-secondary",
                 variant: "text-md/medium",
                 children: d.intl.format(d.t["5fwX5+"], {}),
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(o.Text, {
                 className: m.prompt,
                 color: "header-secondary",
                 variant: "text-sm/medium",
                 children: d.intl.format(d.t["i2vB8/"], { helpdeskArticle: s.Z.getArticleURL(u.BhN.POMELO_FAQ) }),
             }),
             (0, r.jsxs)("div", {
-                className: o()([m.infoItem, m.infoItemSpacing]),
+                className: a()([m.infoItem, m.infoItemSpacing]),
                 children: [
                     (0, r.jsx)("div", {
                         className: m.infoIcon,
-                        children: (0, r.jsx)(a.iFz, {
+                        children: (0, r.jsx)(o.iFz, {
                             size: "custom",
                             color: "currentColor",
                             width: 20,
                             height: 20,
                         }),
                     }),
-                    (0, r.jsx)(a.Text, {
+                    (0, r.jsx)(o.Text, {
                         color: "header-secondary",
                         variant: "text-sm/medium",
                         children: d.intl.format(d.t.SzUaZ2, {}),
@@ -59,7 +59,7 @@ function f(e) {
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: o()([m.infoItem, m.infoItemSpacing]),
+                className: a()([m.infoItem, m.infoItemSpacing]),
                 children: [
                     (0, r.jsx)("div", {
                         className: m.infoIcon,
@@ -68,7 +68,7 @@ function f(e) {
                             height: 20,
                         }),
                     }),
-                    (0, r.jsx)(a.Text, {
+                    (0, r.jsx)(o.Text, {
                         color: "header-secondary",
                         variant: "text-sm/medium",
                         children: d.intl.format(d.t["UwPc+P"], {}),
@@ -85,7 +85,7 @@ function f(e) {
                             height: 20,
                         }),
                     }),
-                    (0, r.jsx)(a.Text, {
+                    (0, r.jsx)(o.Text, {
                         color: "header-secondary",
                         variant: "text-sm/medium",
                         children: d.intl.format(d.t.okLjjo, { username: t.tag }),

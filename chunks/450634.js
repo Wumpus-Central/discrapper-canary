@@ -1,4 +1,4 @@
-n.d(e, { default: () => f });
+n.d(t, { default: () => f });
 var i = n(951288),
     a = n(647438),
     o = n(481060),
@@ -10,41 +10,41 @@ var i = n(951288),
     s = n(701488),
     u = n(981631),
     b = n(531578),
-    m = n(388032);
-let p = [s.K8.OTHER, s.K8.ADS, s.K8.NOT_FUN];
-function f(t) {
-    var e;
+    p = n(388032);
+let m = [s.K8.OTHER, s.K8.ADS, s.K8.NOT_FUN];
+function f(e) {
+    var t;
     let {
         channel: f,
-        embeddedActivityLocation: g,
-        activityApplication: v,
+        embeddedActivityLocation: v,
+        activityApplication: g,
         onClose: y,
         transitionState: h,
         analyticsData: O,
-    } = t;
+    } = e;
     a.useEffect(() => {
         r.default.track(u.rMx.OPEN_MODAL, {
             type: "Activity Feedback Modal",
-            application_id: v.id,
-            application_name: v.name,
-            game_id: v.id,
+            application_id: g.id,
+            application_name: g.name,
+            game_id: g.id,
             source: "Activity End",
         });
-    }, [v]);
-    let T = (null == (e = v.embeddedActivityConfig) ? void 0 : e.displays_advertisements) === !0;
+    }, [g]);
+    let T = (null == (t = g.embeddedActivityConfig) ? void 0 : t.displays_advertisements) === !0;
     return (0, i.jsx)(c.Z, {
         modalType: "activity",
-        header: m.intl.formatToPlainString(m.t.QXYwoK, { applicationName: v.name }),
-        body: m.intl.string(m.t["9hk2KC"]),
-        problemTitle: m.intl.string(m.t.g1q5fn),
+        header: p.intl.formatToPlainString(p.t.QXYwoK, { applicationName: g.name }),
+        body: p.intl.string(p.t["9hk2KC"]),
+        problemTitle: p.intl.string(p.t.g1q5fn),
         problems: (0, _.Z)(!0, T),
-        freeformNeededProblems: p,
-        onSubmit: function (t) {
-            var e;
-            let { rating: a, problem: c, dontShowAgain: _, feedback: s } = t;
+        freeformNeededProblems: m,
+        onSubmit: function (e) {
+            var t;
+            let { rating: a, problem: c, dontShowAgain: _, feedback: s } = e;
             _ &&
                 (r.default.track(u.rMx.ACTIVITY_REPORT_DONT_SHOW, {
-                    application_id: v.id,
+                    application_id: g.id,
                     rating: a,
                 }),
                 (0, l.Uv)({
@@ -53,46 +53,46 @@ function f(t) {
                 })),
                 null != a &&
                     ((0, d.Z)({
-                        problem: null != (e = null == c ? void 0 : c.value) ? e : null,
+                        problem: null != (t = null == c ? void 0 : c.value) ? t : null,
                         channel: f,
-                        embeddedActivityLocation: g,
+                        embeddedActivityLocation: v,
                         feedback: s,
-                        activityApplication: v,
+                        activityApplication: g,
                         analyticsData: O,
                         location: "Activity End",
                         rating: a,
                     }),
                     null != c &&
                         (0, o.ZDy)(async () => {
-                            let { default: t } = await n.e("14466").then(n.bind(n, 729328));
-                            return (e) =>
+                            let { default: e } = await n.e("14466").then(n.bind(n, 729328));
+                            return (t) =>
                                 (0, i.jsx)(
-                                    t,
-                                    (function (t) {
-                                        for (var e = 1; e < arguments.length; e++) {
-                                            var n = null != arguments[e] ? arguments[e] : {},
+                                    e,
+                                    (function (e) {
+                                        for (var t = 1; t < arguments.length; t++) {
+                                            var n = null != arguments[t] ? arguments[t] : {},
                                                 i = Object.keys(n);
                                             "function" == typeof Object.getOwnPropertySymbols &&
                                                 (i = i.concat(
-                                                    Object.getOwnPropertySymbols(n).filter(function (t) {
-                                                        return Object.getOwnPropertyDescriptor(n, t).enumerable;
+                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                                     }),
                                                 )),
-                                                i.forEach(function (e) {
+                                                i.forEach(function (t) {
                                                     var i;
-                                                    (i = n[e]),
-                                                        e in t
-                                                            ? Object.defineProperty(t, e, {
+                                                    (i = n[t]),
+                                                        t in e
+                                                            ? Object.defineProperty(e, t, {
                                                                   value: i,
                                                                   enumerable: !0,
                                                                   configurable: !0,
                                                                   writable: !0,
                                                               })
-                                                            : (t[e] = i);
+                                                            : (e[t] = i);
                                                 });
                                         }
-                                        return t;
-                                    })({ body: m.intl.string(m.t["zuHR+/"]) }, e),
+                                        return e;
+                                    })({ body: p.intl.string(p.t["zuHR+/"]) }, t),
                                 );
                         }));
         },

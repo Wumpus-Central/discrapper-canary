@@ -17,11 +17,11 @@ var r = n(570140),
     _ = n(641015),
     O = n(183584),
     E = n(383451),
-    y = n(199902),
-    v = n(131951),
+    v = n(199902),
+    y = n(131951),
     I = n(246946),
-    S = n(556296),
-    C = n(808506),
+    C = n(556296),
+    S = n(808506),
     T = n(237997),
     N = n(626135),
     j = n(554174),
@@ -43,7 +43,7 @@ function L(e, t, n) {
         }).enableLatching
     ) {
         let e = A._M,
-            { pttLatchingEnabled: t = !1 } = v.Z.getModeOptions(l);
+            { pttLatchingEnabled: t = !1 } = y.Z.getModeOptions(l);
         if (!n.latched && !0 === t && i < n.pressedTime + e) {
             n.latched = !0;
             return;
@@ -55,7 +55,7 @@ function L(e, t, n) {
     let o = a.get(t);
     null == o && ((o = new Set()), a.set(t, o)), e ? o.add(n.id) : o.delete(n.id);
     let s = o.size > 0;
-    v.Z.getMediaEngine().eachConnection((e) => e.setForceAudioInput(s, t), l);
+    y.Z.getMediaEngine().eachConnection((e) => e.setForceAudioInput(s, t), l);
 }
 let R = {
         [x.kg4.TOGGLE_PRIORITY_SPEAKER]: {
@@ -68,7 +68,7 @@ let R = {
         },
         [x.kg4.PUSH_TO_TALK]: {
             onTrigger(e, t) {
-                v.Z.getMode(t.context) === x.pM4.PUSH_TO_TALK && ((R[x.kg4.PUSH_TO_TALK].isPressed = e), L(e, !1, t));
+                y.Z.getMode(t.context) === x.pM4.PUSH_TO_TALK && ((R[x.kg4.PUSH_TO_TALK].isPressed = e), L(e, !1, t));
             },
             keyEvents: {
                 keyup: !0,
@@ -78,7 +78,7 @@ let R = {
         },
         [x.kg4.PUSH_TO_TALK_PRIORITY]: {
             onTrigger(e, t) {
-                (v.Z.getMode() === x.pM4.PUSH_TO_TALK || P.Z.getCurrentConfig({ location: "keybinds" }).onPTTKeybind) &&
+                (y.Z.getMode() === x.pM4.PUSH_TO_TALK || P.Z.getCurrentConfig({ location: "keybinds" }).onPTTKeybind) &&
                     ((R[x.kg4.PUSH_TO_TALK_PRIORITY].isPressed = e), L(e, !0, t));
             },
             keyEvents: {
@@ -89,7 +89,7 @@ let R = {
         },
         [x.kg4.VAD_PRIORITY]: {
             onTrigger(e, t) {
-                v.Z.getMode() === x.pM4.VOICE_ACTIVITY &&
+                y.Z.getMode() === x.pM4.VOICE_ACTIVITY &&
                     P.Z.getCurrentConfig({ location: "keybinds" }).separateKeybind &&
                     ((R[x.kg4.VAD_PRIORITY].isPressed = e), L(e, !0, t));
             },
@@ -101,7 +101,7 @@ let R = {
         },
         [x.kg4.PUSH_TO_MUTE]: {
             onTrigger(e) {
-                v.Z.getMode() === x.pM4.VOICE_ACTIVITY &&
+                y.Z.getMode() === x.pM4.VOICE_ACTIVITY &&
                     ((R[x.kg4.PUSH_TO_MUTE].isPressed = e), i.Z.setTemporarySelfMute(e));
             },
             keyEvents: {
@@ -141,7 +141,7 @@ let R = {
         },
         [x.kg4.TOGGLE_VOICE_MODE]: {
             onTrigger() {
-                let e = v.Z.getMode() === x.pM4.PUSH_TO_TALK ? x.pM4.VOICE_ACTIVITY : x.pM4.PUSH_TO_TALK;
+                let e = y.Z.getMode() === x.pM4.PUSH_TO_TALK ? x.pM4.VOICE_ACTIVITY : x.pM4.PUSH_TO_TALK;
                 i.Z.setMode(e);
             },
             keyEvents: {
@@ -158,7 +158,7 @@ let R = {
         },
         [x.kg4.TOGGLE_OVERLAY_INPUT_LOCK]: {
             onTrigger(e, t) {
-                if (!(0, S.I1)(t.shortcut)) return;
+                if (!(0, C.I1)(t.shortcut)) return;
                 let n = (0, j.Z)();
                 null != n && l.Z.setInputLocked(!T.default.isLocked(n), n);
             },
@@ -169,13 +169,13 @@ let R = {
         },
         [x.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET]: {
             onTrigger() {
-                let e = C.default.getFocusedPID(),
+                let e = S.default.getFocusedPID(),
                     t = null != e;
                 null != e &&
                     t &&
                     T.default.isPinned(x.Odu.TEXT) &&
                     T.default.isLocked(e) &&
-                    C.default.isReady(e) &&
+                    S.default.isReady(e) &&
                     l.Z.activateRegion(x.O0n.TEXT_WIDGET);
             },
             keyEvents: {
@@ -185,7 +185,7 @@ let R = {
         },
         [x.kg4.TOGGLE_GO_LIVE_STREAMING]: {
             onTrigger() {
-                let e = y.Z.getCurrentUserActiveStream();
+                let e = v.Z.getCurrentUserActiveStream();
                 if (null != e) return (0, o.g)((0, g.V9)(e));
                 (0, m.Z)(!0, [d.Z.GO_LIVE_KEYBIND]);
             },
@@ -290,7 +290,7 @@ let R = {
     D = null;
 function k() {
     w.clear(),
-        v.Z.getMediaEngine().eachConnection((e) => {
+        y.Z.getMediaEngine().eachConnection((e) => {
             e.setForceAudioInput(!1, !1), e.setForceAudioInput(!1, !0);
         }, Z.Yn.DEFAULT);
 }

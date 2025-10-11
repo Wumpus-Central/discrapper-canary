@@ -1,38 +1,38 @@
-r.d(t, {
+n.d(t, {
     FX: () => b,
     ZP: () => g,
     kN: () => p,
     kO: () => d,
     qU: () => f,
 }),
-    r(388685);
-var n = r(647438),
-    i = r(442837),
-    a = r(224706),
-    o = r(669764),
-    l = r(77498),
-    c = r(836197);
+    n(388685);
+var r = n(647438),
+    i = n(442837),
+    a = n(224706),
+    o = n(669764),
+    l = n(77498),
+    c = n(836197);
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var r = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(r);
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            n.forEach(function (t) {
-                var n;
-                (n = r[t]),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: n,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = n);
+                        : (e[t] = r);
             });
     }
     return e;
@@ -43,14 +43,14 @@ function u(e, t) {
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
             : (function (e, t) {
-                  var r = Object.keys(e);
+                  var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      r.push.apply(r, n);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
-                  return r;
-              })(Object(t)).forEach(function (r) {
-                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
@@ -59,7 +59,7 @@ function d(e) {
     return (0, i.e7)([o.Z], () => o.Z.isFetching(e));
 }
 function f(e) {
-    n.useEffect(() => {
+    r.useEffect(() => {
         if (e.length > 0) {
             let t = e.filter((e) => o.Z.canFetch(e));
             t.length > 0 && a.Z.getDetectableGamesSupplemental(t);
@@ -68,7 +68,7 @@ function f(e) {
 }
 function g(e) {
     f(
-        n.useMemo(
+        r.useMemo(
             () =>
                 (function (e) {
                     let t = new Set();
@@ -86,8 +86,8 @@ function g(e) {
     );
 }
 function p(e) {
-    let [t, r] = (0, i.Wu)([o.Z], () => [o.Z.numNoDataAvailable(), o.Z.numSupplementalGames()]);
-    return n.useMemo(() => {
+    let [t, n] = (0, i.Wu)([o.Z], () => [o.Z.numNoDataAvailable(), o.Z.numSupplementalGames()]);
+    return r.useMemo(() => {
         let t = {};
         return (
             e.forEach((e) => {
@@ -95,23 +95,23 @@ function p(e) {
             }),
             t
         );
-    }, [e, t, r]);
+    }, [e, t, n]);
 }
 function b(e) {
     let t = p(e.games.map((e) => e.applicationId));
-    return n.useMemo(
+    return r.useMemo(
         () =>
             new c.zy(
                 u(s({}, e), {
                     games: e.games.map((e) => {
-                        let r = t[e.applicationId];
-                        if (null != r)
+                        let n = t[e.applicationId];
+                        if (null != n)
                             return u(s({}, e), {
-                                gameName: r.name,
-                                imageSrc: r.coverImageUrl,
+                                gameName: n.name,
+                                imageSrc: n.coverImageUrl,
                             });
-                        let n = l.Z.getDetectableGame(e.applicationId);
-                        return u(s({}, e), { gameName: null == n ? void 0 : n.name });
+                        let r = l.Z.getDetectableGame(e.applicationId);
+                        return u(s({}, e), { gameName: null == r ? void 0 : r.name });
                     }),
                 }),
             ),

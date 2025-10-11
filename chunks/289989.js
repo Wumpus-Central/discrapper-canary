@@ -10,12 +10,12 @@ var i = n(120356),
     d = n(579806),
     u = n(358085),
     f = n(960861),
-    m = n(39540),
+    p = n(39540),
     h = n(152165),
-    p = n(615161),
-    g = n(70722),
-    x = n(231338),
-    _ = n(388032),
+    m = n(615161),
+    _ = n(70722),
+    g = n(231338),
+    x = n(388032),
     v = n(341338);
 function j(e) {
     let { id: t, text: n, icon: i, selected: s, onClick: o } = e;
@@ -40,9 +40,9 @@ function j(e) {
 }
 function b(e) {
     let { onSourceSelect: t } = e;
-    (0, f.UB)(), (0, m.Z)(t, x.Vq);
-    let [{ nativeSourceType: n }, i] = (0, p.E_)(),
-        l = (0, u.isMac)() && o().satisfies(null === d.Z || void 0 === d.Z ? void 0 : d.Z.os.release, g.jR);
+    (0, f.UB)(), (0, p.Z)(t, g.Vq);
+    let [{ nativeSourceType: n }, i] = (0, m.E_)(),
+        l = (0, u.isMac)() && o().satisfies(null === d.Z || void 0 === d.Z ? void 0 : d.Z.os.release, _.jR);
     return (0, r.jsxs)("div", {
         className: v.root,
         children: [
@@ -50,7 +50,7 @@ function b(e) {
                 className: v.header,
                 variant: "heading-lg/semibold",
                 color: "text-default",
-                children: _.intl.string(_.t.XyYoFR),
+                children: x.intl.string(x.t.XyYoFR),
             }),
             l
                 ? (0, r.jsxs)(r.Fragment, {
@@ -59,7 +59,7 @@ function b(e) {
                               className: v.body,
                               variant: "text-sm/medium",
                               color: "text-secondary",
-                              children: _.intl.format(_.t.sbbPhY, { buttonName: _.intl.string(_.t.FiBjwc) }),
+                              children: x.intl.format(x.t.sbbPhY, { buttonName: x.intl.string(x.t.FiBjwc) }),
                           }),
                           (0, r.jsx)(h.Z, {}),
                       ],
@@ -76,7 +76,7 @@ function b(e) {
                                   });
                               },
                               id: "screen",
-                              text: _.intl.string(_.t.cVUFXV),
+                              text: x.intl.string(x.t.cVUFXV),
                               icon: c.pzj,
                           }),
                           (0, r.jsx)(j, {
@@ -88,7 +88,7 @@ function b(e) {
                                   });
                               },
                               id: "window",
-                              text: _.intl.string(_.t.dG2A1N),
+                              text: x.intl.string(x.t.dG2A1N),
                               icon: c.GON,
                           }),
                       ],

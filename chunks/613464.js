@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(951288),
     l = n(647438),
     i = n(120356),
@@ -21,13 +21,13 @@ var r = n(951288),
     f = n(718617),
     R = n(327250),
     S = n(345226);
-function C(e) {
-    let { userId: t, guildId: n, onClose: i, className: C, infoPanelClassName: p, style: D } = e,
+function p(e) {
+    let { userId: t, guildId: n, onClose: i, className: p, infoPanelClassName: C, style: D } = e,
         L = (0, O.m)(n),
         U = (0, a.e7)([h.default], () => h.default.getUser(t), [t]),
         M = (0, a.e7)([N.ZP], () => N.ZP.getMember(n, t), [n, t]),
-        [x, v] = l.useState(null == U || null == M),
-        b = (0, c.Z)(M),
+        [x, b] = l.useState(null == U || null == M),
+        v = (0, c.Z)(M),
         P = l.useRef(null),
         { analyticsLocations: j } = (0, A.ZP)(_.Z.GUILD_MEMBER_MOD_VIEW),
         y = (0, I.ZP)(t, n),
@@ -36,10 +36,10 @@ function C(e) {
         L || i();
     }, [L, i]),
     l.useEffect(() => {
-        null == b || null != M || x || i();
-    }, [x, M, i, b]),
+        null == v || null != M || x || i();
+    }, [x, M, i, v]),
     l.useEffect(() => {
-        null != U && null != M && v(!1);
+        null != U && null != M && b(!1);
     }, [U, M]),
     l.useEffect(() => {
         let e = null == M;
@@ -61,13 +61,13 @@ function C(e) {
                     dispatchWait: !0,
                 }),
             ];
-            await Promise.all(e), v(!1);
+            await Promise.all(e), b(!1);
         })();
     }, [n, t]),
     L)
         ? x || null == U || null == M
             ? (0, r.jsx)("div", {
-                  className: s()(S.sidebarContainer, S.loadingContainer, C),
+                  className: s()(S.sidebarContainer, S.loadingContainer, p),
                   style: D,
                   children: (0, r.jsx)(o.$jN, {
                       animated: !0,
@@ -77,7 +77,7 @@ function C(e) {
             : (0, r.jsx)(A.Gt, {
                   value: j,
                   children: (0, r.jsx)("div", {
-                      className: s()(S.sidebarContainer, C),
+                      className: s()(S.sidebarContainer, p),
                       style: D,
                       children: (0, r.jsx)(g.Z, {
                           user: U,
@@ -98,7 +98,7 @@ function C(e) {
                                       userId: t,
                                       guildId: n,
                                       onClose: i,
-                                      className: p,
+                                      className: C,
                                   }),
                               ],
                           }),

@@ -62,7 +62,7 @@ function g(e, t, n, r) {
         boosters: b,
         onlyExactMatch: h,
     });
-    return u || p !== a.eq.MENTION_SUGGESTIONS || !(E.length < _) || v.some((e) => "exact" === e.matchType)
+    return u || p === a.eq.MENTION_SUGGESTIONS || !(E.length < _) || v.some((e) => "exact" === e.matchType)
         ? {
               results: {
                   suggestions: v,

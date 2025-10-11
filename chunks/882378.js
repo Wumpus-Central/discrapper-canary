@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(378298),
     d = n(444957),
     u = n(276618),
-    p = n(367408),
-    h = n(473092),
+    h = n(367408),
+    p = n(473092),
     f = n(819640),
     g = n(665149),
     m = n(134612),
@@ -19,53 +19,53 @@ let _ = i.memo(function (e) {
     let { channel: t } = e,
         _ = (0, d.h)(t.id),
         j = (0, u.o)(t.id),
-        x = (0, p.M)(t.id),
-        O = (0, a.f9)(),
+        O = (0, h.M)(t.id),
+        x = (0, a.f9)(),
         v = (0, l.e7)([f.Z], () => f.Z.hasLayers()),
         C = i.useCallback(
-            () => (j ? b.intl.string(b.t["16QyDg"]) : null != x ? b.intl.string(b.t.kCN9i4) : null),
-            [j, x],
+            () => (j ? b.intl.string(b.t["16QyDg"]) : null != O ? b.intl.string(b.t.kCN9i4) : null),
+            [j, O],
         ),
-        I = i.useMemo(() => (j || null != x) && !O && !v, [j, x, O, v]),
-        [E, S] = i.useState(C());
+        I = i.useMemo(() => (j || null != O) && !x && !v, [j, O, x, v]),
+        [S, E] = i.useState(C());
     i.useEffect(() => {
-        null != x &&
+        null != O &&
             null != _ &&
             (s.uvj.announce(b.intl.string(b.t.acsXuL)),
             setTimeout(() => {
-                (0, c.T)(t.id, [x.id]);
+                (0, c.T)(t.id, [O.id]);
             }, 5000),
-            (0, h.KQ)({
+            (0, p.KQ)({
                 channelId: t.id,
                 senderId: t.getRecipientId(),
-                warningId: x.id,
-                warningType: x.type,
-                isNudgeWarning: null != x,
-                viewName: h.pb.SAFETY_TOOLS_NUDGE_TOOLTIP,
+                warningId: O.id,
+                warningType: O.type,
+                isNudgeWarning: null != O,
+                viewName: p.pb.SAFETY_TOOLS_NUDGE_TOOLTIP,
             })),
             j &&
                 (s.uvj.announce(b.intl.string(b.t["1dxCqK"])),
                 setTimeout(() => {
                     (0, c.Ot)(t.id);
                 }, 5000));
-    }, [t, x, _, j]),
+    }, [t, O, _, j]),
         (0, o.ZP)(() => {
             null != _ &&
-                (0, h.KQ)({
+                (0, p.KQ)({
                     channelId: t.id,
                     senderId: t.getRecipientId(),
                     warningId: _.id,
                     warningType: _.type,
-                    isNudgeWarning: null != x,
-                    viewName: h.pb.SAFETY_TOOLS_BUTTON,
+                    isNudgeWarning: null != O,
+                    viewName: p.pb.SAFETY_TOOLS_BUTTON,
                 });
         }),
         i.useEffect(() => {
             let e = C();
-            null != e && S(e);
-        }, [j, x, C]);
+            null != e && E(e);
+        }, [j, O, C]);
     let Z = i.useCallback(() => {
-        null != x && (0, c.T)(t.id, [x.id]),
+        null != O && (0, c.T)(t.id, [O.id]),
             null != _ &&
                 ((0, s.ZDy)(
                     async () => {
@@ -86,21 +86,21 @@ let _ = i.memo(function (e) {
                     },
                     { modalKey: m.X_ },
                 ),
-                (0, h.qc)({
+                (0, p.qc)({
                     channelId: t.id,
                     senderId: t.getRecipientId(),
                     warningId: _.id,
                     warningType: _.type,
-                    cta: h.NM.USER_SAFETY_TOOLS_BUTTON_CLICK,
-                    isNudgeWarning: null != x,
+                    cta: p.NM.USER_SAFETY_TOOLS_BUTTON_CLICK,
+                    isNudgeWarning: null != O,
                 }));
-    }, [x, _, t]);
+    }, [O, _, t]);
     return null == _
         ? null
         : (0, r.jsx)(s.ua7, {
               "data-migration-pending": !0,
               forceOpen: I,
-              text: E,
+              text: S,
               color: s.FGA.BRAND,
               position: "bottom",
               tooltipClassName: y.tooltip,
@@ -110,7 +110,7 @@ let _ = i.memo(function (e) {
                       icon: s.b7C,
                       onClick: Z,
                       tooltip: b.intl.string(b.t.rpc2qq),
-                      tooltipDisabled: null != x,
+                      tooltipDisabled: null != O,
                   }),
           });
 });

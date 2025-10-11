@@ -29,11 +29,11 @@ var r = n(951288),
     P = n(984802),
     w = n(594174),
     D = n(358085),
-    x = n(210887),
-    L = n(740492),
+    L = n(210887),
+    x = n(740492),
     M = n(695346),
-    k = n(313789),
-    j = n(329013),
+    j = n(313789),
+    k = n(329013),
     U = n(333859),
     G = n(273313),
     B = n(947889),
@@ -199,14 +199,14 @@ let J = "cozy",
                         }),
                     ],
                 }),
-                (0, r.jsx)(j.g, {}),
+                (0, r.jsx)(k.g, {}),
             ],
         }),
     ea = () => {
         let e = (0, B.Z)();
         return Y.intl.format(Y.t.Jae48P, {
             onClick: () => {
-                e(k.n.ACCESSIBILITY_PANEL, { section: F.oAB.ACCESSIBILITY });
+                e(j.n.ACCESSIBILITY_PANEL, { section: F.oAB.ACCESSIBILITY });
             },
         });
     };
@@ -302,7 +302,7 @@ class eo extends i.Component {
                   label: Y.intl.string(Y.t.Ksh3io),
                   children: (0, r.jsx)(d.xJW, {
                       title: (0, r.jsx)(ei, {}),
-                      children: (0, r.jsx)(j.i, {}),
+                      children: (0, r.jsx)(k.i, {}),
                   }),
               });
     }
@@ -497,16 +497,16 @@ function el() {
                 f && es(l.z.HALLOWEEN_APP_ICONS_APPEARANCE_SETTINGS_WEB_BADGE);
         }, [u, f]);
     let p = (0, P.A6)(),
-        h = (0, s.cj)([x.Z, L.ZP, m.Z, w.default, b.Z], () => {
+        h = (0, s.cj)([L.Z, x.ZP, m.Z, w.default, b.Z], () => {
             var e, t;
             return {
-                theme: x.Z.theme,
+                theme: L.Z.theme,
                 useForcedColors: m.Z.useForcedColors,
-                useSystemTheme: L.ZP.useSystemTheme,
+                useSystemTheme: x.ZP.useSystemTheme,
                 fontSize: m.Z.fontSize,
                 zoom: m.Z.zoom,
                 messageGroupSpacing: m.Z.messageGroupSpacing,
-                displayCompactAvatars: L.ZP.displayCompactAvatars,
+                displayCompactAvatars: x.ZP.displayCompactAvatars,
                 isStaff: null != (t = null == (e = w.default.getCurrentUser()) ? void 0 : e.isStaff) && t,
                 gradientPreset: b.Z.gradientPreset,
             };

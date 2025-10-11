@@ -85,8 +85,8 @@ function I(e) {
         })
     );
 }
-let k = new Set(["client_performance_cpu", "client_performance_memory"]),
-    w = [
+let w = new Set(["client_performance_cpu", "client_performance_memory"]),
+    k = [
         {
             id: "details",
             name: "Details",
@@ -205,7 +205,7 @@ let k = new Set(["client_performance_cpu", "client_performance_memory"]),
                         (0, a.jsx)(P, {
                             children: Object.entries(n).map((e) => {
                                 let [n, r] = e,
-                                    i = k.has(n)
+                                    i = w.has(n)
                                         ? ((e, t, n) => {
                                               let a = e.filter((e) => e.event === t);
                                               if (0 === a.length)
@@ -320,7 +320,7 @@ function Z() {
         }),
         [b, g] = r.useState(void 0),
         _ = f.find((e) => e.key === b),
-        { TabBar: P, renderSelectedTab: I } = (0, E.ZP)({ tabs: w }, []);
+        { TabBar: P, renderSelectedTab: I } = (0, E.ZP)({ tabs: k }, []);
     return (0, a.jsxs)("div", {
         ref: e,
         className: l()(O.panel, T.panel),

@@ -5,19 +5,19 @@ n.d(t, {
 var r = n(951288),
     i = n(481060),
     l = n(37234),
-    s = n(749681),
-    a = n(258971),
+    a = n(749681),
+    s = n(258971),
     o = n(49898),
     c = n(388032),
     d = n(912743);
 function u(e) {
     let { guildId: t, section: n } = e;
-    (0, s.transitionToGlobalDiscovery)({
+    (0, a.transitionToGlobalDiscovery)({
         tab: o.GlobalDiscoveryTab.APPS,
         newSessionState: {
             guildId: t,
             entrypoint: {
-                name: a.xF.GUILD_SETTINGS,
+                name: s.xF.GUILD_SETTINGS,
                 guildSettingsSection: n,
             },
         },

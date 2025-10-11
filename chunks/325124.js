@@ -40,7 +40,7 @@ let p = {
                 enableLongAnimationFrame: d,
                 _experiments: { enableInteractions: N },
                 beforeStartSpan: h,
-                idleTimeout: D,
+                idleTimeout: g,
                 finalTimeout: C,
                 childSpanTimeout: m,
                 markBackgroundSpan: v,
@@ -70,7 +70,7 @@ let p = {
                 n = _.attributes || {};
             e.name !== _.name && ((n[c.Zj] = "custom"), (_.attributes = n)), (M.name = _.name), (M.source = n[c.Zj]);
             let i = (0, o.R)(_, {
-                idleTimeout: D,
+                idleTimeout: g,
                 finalTimeout: C,
                 childSpanTimeout: m,
                 disableAutoFinish: a,
@@ -115,8 +115,8 @@ let p = {
                             !(0, s.XU)(h).timestamp &&
                             (A.X && I.kg.log(`[Tracing] Finishing current root span with op: ${((0, s.XU))(h).op}`),
                             h.end());
-                        let r = a.sentryTrace || g("sentry-trace"),
-                            _ = a.baggage || g("baggage"),
+                        let r = a.sentryTrace || D("sentry-trace"),
+                            _ = a.baggage || D("baggage"),
                             n = (0, u.pT)(r, _);
                         (0, E.nZ)().setPropagationContext(n),
                             (h = B(t, {
@@ -163,7 +163,7 @@ let p = {
                             })),
                     v && (0, f.j)(),
                     N &&
-                        ((a = D),
+                        ((a = g),
                         (r = C),
                         (i = m),
                         (d = M),
@@ -233,7 +233,7 @@ function P(t, e) {
     let a = (0, s.HN)();
     return "navigation" === (a && (0, s.XU)(a).op) ? a : void 0;
 }
-function g(t) {
+function D(t) {
     let e = (0, N.qT)(`meta[name=${t}]`);
     return e ? e.getAttribute("content") : void 0;
 }

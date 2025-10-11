@@ -2,8 +2,8 @@ n.d(t, { V: () => j }), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    s = n(481060),
-    a = n(497321),
+    a = n(481060),
+    s = n(497321),
     o = n(158638),
     c = n(246946),
     d = n(63063),
@@ -13,16 +13,16 @@ var r = n(951288),
     p = n(295051),
     f = n(383793),
     h = n(981631),
-    x = n(388032),
-    b = n(977422);
+    b = n(388032),
+    x = n(977422);
 function j(e) {
     let { guild: t } = e,
         n = i.useRef(null),
         j = (0, o.g1)(t.id, "GuildSettingsBoostPerks"),
-        _ = (0, l.e7)([c.Z], () => c.Z.hideInstantInvites);
+        v = (0, l.e7)([c.Z], () => c.Z.hideInstantInvites);
     (0, u.Z)(n, h.KsC.BOOST_PERKS_VANITY_URL);
     let {
-            vanityURLCode: v,
+            vanityURLCode: _,
             vanityURLUses: C,
             originalVanityURLCode: O,
             errorDetails: y,
@@ -40,30 +40,30 @@ function j(e) {
     }, [N, E]),
     null == t)
         ? null
-        : _
-          ? (0, r.jsx)(a.Z, {})
-          : (0, r.jsxs)(s.hjN, {
+        : v
+          ? (0, r.jsx)(s.Z, {})
+          : (0, r.jsxs)("div", {
                 ref: n,
                 children: [
-                    (0, r.jsxs)(s.vwX, {
-                        className: b.title,
-                        children: [x.intl.string(x.t["5XZKy8"]), (0, r.jsx)(p.xl, { guild: t })],
+                    (0, r.jsxs)(a.vwX, {
+                        className: x.title,
+                        children: [b.intl.string(b.t["5XZKy8"]), (0, r.jsx)(p.xl, { guild: t })],
                     }),
-                    (0, r.jsx)(s.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: "text-sm/medium",
                         color: "text-secondary",
-                        className: b.description,
+                        className: x.description,
                         children: j
-                            ? x.intl.format(x.t["J/v84O"], {
+                            ? b.intl.format(b.t["J/v84O"], {
                                   helpCenterArticle: d.Z.getArticleURL(h.BhN.GUILD_VANITY_URL),
                               })
-                            : x.intl.format(x.t.koklFB, {
+                            : b.intl.format(b.t.koklFB, {
                                   helpCenterArticle: d.Z.getArticleURL(h.BhN.GUILD_VANITY_URL),
                               }),
                     }),
                     (0, r.jsx)(f.z, {
                         guild: t,
-                        vanityURLCode: v,
+                        vanityURLCode: _,
                         vanityURLUses: C,
                         originalVanityURLCode: O,
                         errorDetails: y,

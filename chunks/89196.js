@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r,
     i = n(442837),
     a = n(570140);
@@ -42,7 +42,7 @@ class d extends (r = i.ZP.PersistedStore) {
     }
 }
 l(d, "displayName", "SentGiftsStore"), l(d, "persistKey", "SentGiftsStore");
-let c = new d(a.Z, {
+let C = new d(a.Z, {
     WISHLIST_GIFT_SENT: function (e) {
         let t = s(e.skuId, e.recipientId),
             n = new Date(),

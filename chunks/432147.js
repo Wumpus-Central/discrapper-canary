@@ -70,7 +70,7 @@ function I(e) {
     }
     function p(e) {
         (0, l.jW)(e, async () => {
-            let { default: e } = await Promise.all([n.e("90508"), n.e("46154"), n.e("89381")]).then(n.bind(n, 422200));
+            let { default: e } = await Promise.all([n.e("90508"), n.e("46154"), n.e("44141")]).then(n.bind(n, 422200));
             return (n) => (0, r.jsx)(e, O({ channel: t }, n));
         });
     }

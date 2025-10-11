@@ -1,6 +1,6 @@
 n.d(t, {
     TS: () => H,
-    ud: () => L,
+    ud: () => D,
     v0: () => U,
 }),
     n(388685);
@@ -37,7 +37,7 @@ var i = n(951288),
     w = n(921944),
     M = n(388032),
     R = n(97009);
-function k(e) {
+function L(e) {
     var t;
     let { channel: n, children: r } = e,
         l = (0, d.q)(null == (t = n.linkedLobby) ? void 0 : t.application_id),
@@ -115,7 +115,7 @@ function k(e) {
         a,
     );
 }
-function L(e) {
+function D(e) {
     let {
             channel: t,
             channelName: n,
@@ -203,7 +203,7 @@ function L(e) {
         case A.d4z.GUILD_FORUM:
         case A.d4z.GUILD_MEDIA:
             return null != t.linkedLobby
-                ? (0, i.jsxs)(k, {
+                ? (0, i.jsxs)(L, {
                       channel: t,
                       children: [
                           B(
@@ -331,7 +331,7 @@ function L(e) {
             return null;
     }
 }
-let D = (e) => {
+let k = (e) => {
     var t, n, l;
     let { channel: a } = e,
         s = (0, o.e7)([O.default], () => O.default.getCurrentUser()),
@@ -361,7 +361,7 @@ function U(e, t) {
     switch (e.type) {
         case A.d4z.DM:
             return (0, i.jsxs)(i.Fragment, {
-                children: [(0, i.jsx)(D, { channel: e }), (0, i.jsx)(P.Z, { channel: e }, e.id)],
+                children: [(0, i.jsx)(k, { channel: e }), (0, i.jsx)(P.Z, { channel: e }, e.id)],
             });
         case A.d4z.GUILD_ANNOUNCEMENT:
         case A.d4z.GUILD_TEXT:

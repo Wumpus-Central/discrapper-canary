@@ -94,8 +94,8 @@ let _ = (e) => {
         B = Z || Y ? v.wishlistedOrHoveredIconColor : v.normalIconColor,
         { isPurchased: V } = (0, g.L)(k),
         z = (0, O.fp)(k),
-        G = (0, O.x6)(k),
-        H = (0, O.G1)(k),
+        H = (0, O.x6)(k),
+        G = (0, O.G1)(k),
         K = l.useCallback(
             async (e) => {
                 if ((e.stopPropagation(), Z && null != R)) {
@@ -128,10 +128,10 @@ let _ = (e) => {
             [L, Z, w, k, I, N, R, U],
         );
     if ((!C && !Z) || null == T || V) return null;
-    if (z || G || H) {
+    if (z || H || G) {
         let e = h.intl.string(h.t["50TX9v"]);
         return (
-            G ? (e = h.intl.string(h.t.UfDp3N)) : z && (e = h.intl.string(h.t.KsFBMj)),
+            H ? (e = h.intl.string(h.t.UfDp3N)) : z && (e = h.intl.string(h.t.KsFBMj)),
             (0, r.jsx)(c.ua7, {
                 "data-migration-pending": !0,
                 text: e,
@@ -155,7 +155,7 @@ let _ = (e) => {
         );
     }
     let X = Z ? h.intl.string(h.t.yr9TTU) : h.intl.string(h.t["8DkMER"]),
-        q = I
+        J = I
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)(c.Text, {
@@ -171,7 +171,7 @@ let _ = (e) => {
             : X;
     return (0, r.jsx)(c.ua7, {
         "data-migration-pending": !0,
-        text: q,
+        text: J,
         "aria-label": X,
         children: (e) =>
             (0, r.jsx)(

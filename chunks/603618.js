@@ -95,7 +95,7 @@ function X(e, t) {
         e
     );
 }
-function J(e) {
+function q(e) {
     let { entry: t, currentUserActivity: n, idx: l } = e,
         a = (0, c.e7)([L.default], () => L.default.getUser(t.author_id)),
         [s, u] = r.useState("unsent"),
@@ -210,7 +210,7 @@ function J(e) {
         }),
     });
 }
-function q(e) {
+function J(e) {
     var t;
     let { entry: n, currentUserActivity: l } = e,
         o = (0, c.e7)([L.default], () => L.default.getUser(n.author_id)),
@@ -320,12 +320,12 @@ function $(e) {
                           }),
                       ],
                   }),
-                  (0, i.jsx)(q, {
+                  (0, i.jsx)(J, {
                       entry: t,
                       currentUserActivity: n,
                       idx: r,
                   }),
-                  (0, i.jsx)(J, {
+                  (0, i.jsx)(q, {
                       entry: t,
                       currentUserActivity: n,
                       idx: r,

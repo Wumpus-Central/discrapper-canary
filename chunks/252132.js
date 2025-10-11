@@ -13,8 +13,8 @@ function s(e) {
             className: c,
             focused: d,
             children: u,
-            inCall: p,
-            inPopout: h,
+            inCall: h,
+            inPopout: p,
             noBorder: f,
             onClick: g,
             onContextMenu: m,
@@ -22,8 +22,8 @@ function s(e) {
             onVideoResize: y,
             paused: _,
             pulseSpeakingIndicator: j,
-            participant: x,
-            width: O,
+            participant: O,
+            width: x,
         } = e,
         v = (function (e, t) {
             if (null == e) return {};
@@ -67,7 +67,7 @@ function s(e) {
         ]);
     let C = l.Z.getVideoComponent();
     return (0, r.jsx)("div", {
-        style: { width: O },
+        style: { width: x },
         className: a.spaceBetweenTiles,
         children: (0, r.jsxs)("div", {
             className: a.tileSizer,
@@ -106,18 +106,18 @@ function s(e) {
                             channel: o,
                             className: c,
                             focused: d,
-                            inCall: p,
-                            inPopout: h,
+                            inCall: h,
+                            inPopout: p,
                             noBorder: f,
                             onClick: g,
                             onContextMenu: m,
                             onDoubleClick: b,
                             onVideoResize: y,
-                            participant: x,
+                            participant: O,
                             paused: _,
                             pulseSpeakingIndicator: j,
                             videoComponent: C,
-                            width: O,
+                            width: x,
                         },
                         v,
                     ),

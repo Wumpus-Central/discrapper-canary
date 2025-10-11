@@ -19,11 +19,11 @@ function _(e) {
         O = (0, f.Z)(u.Z),
         { showClipsHeaderEntrypoint: E } = d.NV.useExperiment({ location: "ClipsButton" }, { autoTrackExposure: !1 }),
         {
-            hasClips: y,
-            hasNewClips: v,
+            hasClips: v,
+            hasNewClips: y,
             lastClipsSession: I,
-            remindersEnabled: S,
-            hasAnyClipAnimations: C,
+            remindersEnabled: C,
+            hasAnyClipAnimations: S,
         } = (0, l.cj)([p.Z], () => ({
             hasClips: p.Z.hasClips(),
             hasNewClips: p.Z.getNewClipIds().length > 0,
@@ -73,12 +73,12 @@ function _(e) {
             { modalKey: m.Qr },
         );
     }
-    return (i.useEffect(() => (C ? x() : A(), () => A()), [C, x, A]), E && O && y)
+    return (i.useEffect(() => (S ? x() : A(), () => A()), [S, x, A]), E && O && v)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   null != N &&
                       t &&
-                      S &&
+                      C &&
                       T &&
                       !(0, a.$sL)() &&
                       !P &&
@@ -92,7 +92,7 @@ function _(e) {
                       children: (0, r.jsx)(o.JO, {
                           className: _,
                           icon: a.AlX,
-                          showBadge: v,
+                          showBadge: y,
                           tooltip: b.intl.string(b.t.MXaLEB),
                           onClick: Z,
                       }),

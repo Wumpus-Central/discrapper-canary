@@ -1,10 +1,10 @@
 a.d(e, {
     Eg: () => m,
     Jd: () => S,
-    S1: () => D,
+    S1: () => g,
     jp: () => C,
     lA: () => v,
-    nV: () => g,
+    nV: () => D,
 });
 var r = a(636361),
     _ = a(502990),
@@ -28,14 +28,14 @@ var r = a(636361),
     h = a(42367),
     O = a(297117),
     P = a(387486);
-function g(t) {
+function D(t) {
     return [(0, r.S)(), (0, _.C)(), (0, f.t)(), (0, T.f)(), (0, L.k)(), (0, h.O)(), (0, n.R)(), (0, p.s)()];
 }
-function D(t = {}) {
+function g(t = {}) {
     let e = (function (t = {}) {
         return {
             ...{
-                defaultIntegrations: g(),
+                defaultIntegrations: D(),
                 release:
                     "string" == typeof __SENTRY_RELEASE__
                         ? __SENTRY_RELEASE__

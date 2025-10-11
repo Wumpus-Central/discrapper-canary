@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => C });
 var r = n(951288);
 n(647438);
 var i = n(442837),
@@ -18,19 +18,19 @@ var i = n(442837),
     _ = n(332712),
     O = n(81471),
     E = n(388032),
-    y = n(79072);
-let v = (e) => {
+    v = n(79072);
+let y = (e) => {
         let { userId: t } = e,
             n = (0, _.O)(t);
         return null == n || 0 === n.length
             ? (0, r.jsx)(l.Text, {
-                  className: y.mutualGuilds,
+                  className: v.mutualGuilds,
                   variant: "text-sm/normal",
                   color: "text-muted",
                   children: E.intl.string(E.t.jpY0X1),
               })
             : (0, r.jsxs)("div", {
-                  className: y.mutualGuildsContainer,
+                  className: v.mutualGuildsContainer,
                   children: [
                       (0, r.jsx)(f.Z, {
                           guilds: n,
@@ -39,7 +39,7 @@ let v = (e) => {
                           hideOverflowCount: !0,
                       }),
                       (0, r.jsx)(l.Text, {
-                          className: y.mutualGuilds,
+                          className: v.mutualGuilds,
                           variant: "text-sm/normal",
                           color: "text-muted",
                           children: E.intl.format(E.t.eE3oen, { count: n.length }),
@@ -48,13 +48,13 @@ let v = (e) => {
               });
     },
     I = m.ZP.getEnableHardwareAcceleration() ? l.Xo$ : l.qEK;
-function S(e) {
+function C(e) {
     var t;
     let { channel: n, otherUser: c, active: f } = e,
         m = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
         _ = (0, i.e7)([h.Z], () => (null == c ? null : h.Z.getNickname(c.id))),
-        S = !m && f,
-        C = (0, b.c)(n),
+        C = !m && f,
+        S = (0, b.c)(n),
         { avatarDecorationSrc: T } = (0, d.Z)({
             user: c,
             size: (0, u.y9)(l.EFr.SIZE_40),
@@ -63,38 +63,38 @@ function S(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(I, {
-                className: y.avatar,
-                src: (0, p.x)(n, 40, S),
+                className: v.avatar,
+                src: (0, p.x)(n, 40, C),
                 avatarDecoration: T,
                 size: l.EFr.SIZE_40,
                 "aria-label": null != (t = null == c ? void 0 : c.username) ? t : E.intl.string(E.t["30mdIy"]),
             }),
             (0, r.jsxs)("div", {
-                className: y.userPreview,
+                className: v.userPreview,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: y.userContainerWithPreview,
+                        className: v.userContainerWithPreview,
                         children: [
                             (0, r.jsx)(a.Z, {
                                 nick: _,
                                 user: c,
                                 showAccountIdentifier: !0,
-                                className: y.tagContainer,
-                                usernameClass: y.username,
-                                discriminatorClass: null != g.ZP.getGlobalName(c) ? y.globalName : y.discriminator,
+                                className: v.tagContainer,
+                                usernameClass: v.username,
+                                discriminatorClass: null != g.ZP.getGlobalName(c) ? v.globalName : v.discriminator,
                             }),
                             (0, r.jsx)(l.Text, {
-                                className: y.timestampWithPreview,
+                                className: v.timestampWithPreview,
                                 color: "text-muted",
                                 variant: "text-xs/normal",
-                                children: C,
+                                children: S,
                             }),
                         ],
                     }),
                     (0, r.jsx)(s.Z, {
                         hoverText: (0, r.jsx)(O.Z, { channel: n }),
                         forceHover: f,
-                        children: (0, r.jsx)(v, { userId: c.id }),
+                        children: (0, r.jsx)(y, { userId: c.id }),
                     }),
                 ],
             }),

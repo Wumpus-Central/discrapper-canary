@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(223892),
     i = n(738774),
     l = n(676317),
-    s = n(923726),
-    a = n(144507),
+    a = n(923726),
+    s = n(144507),
     o = n(823379),
     c = n(146305),
     d = n(981631),
@@ -21,21 +21,21 @@ function f(e) {
             guild: c,
             canManageGuild: f,
             canViewAuditLog: h,
-            canManageRoles: x,
-            canManageBans: b,
+            canManageRoles: b,
+            canManageBans: x,
             canAccessMembersPage: j,
-            canViewGuildAnalytics: _,
-            isOwner: v,
+            canViewGuildAnalytics: v,
+            isOwner: _,
             isGuildAdmin: C,
             canManageGuildExpressions: O,
         } = e,
         y = () =>
-            (0, a.X$)({
+            (0, s.X$)({
                 guild: c,
-                isOwner: v,
-                canManageGuildRoleSubscriptions: (0, a.H2)(c),
+                isOwner: _,
+                canManageGuildRoleSubscriptions: (0, s.H2)(c),
                 isMonetizationWaitlistEnabledForGuild: (0, r.mG)(c.id),
-                isGuildEligibleForRoleSubscriptions: (0, s.kT)(c.id),
+                isGuildEligibleForRoleSubscriptions: (0, a.kT)(c.id),
                 isExpeditedMonetizationOnboardingGuild: (0, r.Rw)(c),
                 isUserInCreatorMonetizationEligibleCountry: (0, r.DB)(),
                 shouldRestrictUpdatingRoleSubscriptionSettings: (0, i.cu)(c.id),
@@ -98,7 +98,7 @@ function f(e) {
             E.push(g(d.pNK.EMOJI, N)),
             E.push(g(d.pNK.STICKERS, N)),
             E.push(g(d.pNK.SOUNDBOARD, N))),
-        (f || x || j || C) &&
+        (f || b || j || C) &&
             (E.push({ section: p }),
             E.push({
                 section: m,
@@ -116,7 +116,7 @@ function f(e) {
         E.push(g(d.pNK.INTEGRATIONS, N)),
         E.push(g(d.pNK.APP_DIRECTORY, N));
     let I = !c.features.has(d.oNc.COMMUNITY) && ((0, l.Nb)(c.id) || (0, l.ze)(c.id));
-    (f || h || b || I) &&
+    (f || h || x || I) &&
         (E.push({ section: p }),
         E.push({
             section: m,
@@ -127,7 +127,7 @@ function f(e) {
         E.push(g(d.pNK.AUDIT_LOG, N)),
         E.push(g(d.pNK.BANS, N)),
         E.push(g(d.pNK.GUILD_AUTOMOD, N)));
-    let S = c.features.has(d.oNc.COMMUNITY) && _,
+    let S = c.features.has(d.oNc.COMMUNITY) && v,
         T = y();
     return (
         (f || S || T) &&

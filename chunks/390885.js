@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => I });
 var r = n(191336),
     i = n(180059),
     l = n(731965),
@@ -162,7 +162,7 @@ function b(e, t) {
             });
         });
 }
-function I() {
+function j() {
     return null != E.getState().activeFlow();
 }
 E.subscribe(
@@ -204,11 +204,11 @@ E.subscribe(
         }
     },
 );
-let j = {
+let I = {
     flowStart: v,
     flowStepOrStart: function (e, t) {
-        I() ? b(e, t) : v(e, t);
+        j() ? b(e, t) : v(e, t);
     },
     flowStep: b,
-    hasActiveFlow: I,
+    hasActiveFlow: j,
 };

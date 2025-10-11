@@ -87,16 +87,16 @@ let h = (e) => {
                 onLeave: x,
             } = e,
             { isPurchased: E } = (0, f.L)(n),
-            P = (0, o.JA)("shop-variants-group-".concat(t.storeListingId, "-").concat(i)),
-            { onFocus: _ } = P,
-            C = j(P, ["onFocus"]),
-            S = l.useCallback(
+            _ = (0, o.JA)("shop-variants-group-".concat(t.storeListingId, "-").concat(i)),
+            { onFocus: P } = _,
+            C = j(_, ["onFocus"]),
+            A = l.useCallback(
                 (e) => {
-                    e.preventDefault(), e.stopPropagation(), (0, p.$)(t, i), _();
+                    e.preventDefault(), e.stopPropagation(), (0, p.$)(t, i), P();
                 },
-                [_, t, i],
+                [P, t, i],
             ),
-            A = (0, b.SQ)(n);
+            S = (0, b.SQ)(n);
         return (0, r.jsx)(c.u, {
             asContainer: !0,
             text: y.intl.string(y.t["6cfuDg"]),
@@ -118,19 +118,19 @@ let h = (e) => {
                     onBlur: () => {
                         x();
                     },
-                    onClick: S,
+                    onClick: A,
                     onKeyDown: (e) => {
-                        e.key === s.R8.ENTER && S(e);
+                        e.key === s.R8.ENTER && A(e);
                     },
                     className: m.thumbnailVariant,
                     children: (0, r.jsxs)("div", {
                         className: a()(m.thumbnailImage, { [m.selected]: i === h }),
                         style: { zIndex: d - i },
                         children: [
-                            null != A &&
-                                "" !== A &&
+                            null != S &&
+                                "" !== S &&
                                 (0, r.jsx)("img", {
-                                    src: A,
+                                    src: S,
                                     alt: n.variantLabel,
                                     className: m.thumbnailImg,
                                     onError: (e) => {

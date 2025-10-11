@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => x });
 var r = n(951288),
     i = n(159691),
     l = n(481060),
@@ -13,17 +13,17 @@ var r = n(951288),
     p = n(391181),
     f = n(388032),
     h = n(82917);
-function x(e) {
+function b(e) {
     let { guildId: t, handleCreateOrEditProduct: i } = e,
         g = (0, d.ue)(t, { publishedOnly: !1 }),
-        { shouldRestrictUpdatingCreatorMonetizationSettings: x } = (0, s.gX)(t),
-        b = g.length > 0;
+        { shouldRestrictUpdatingCreatorMonetizationSettings: b } = (0, s.gX)(t),
+        x = g.length > 0;
     return (0, r.jsx)("div", {
         className: h.productListingsHeader,
         children: (0, r.jsx)(l.gNt, {
-            label: b ? f.intl.string(f.t.RwuStb) : f.intl.string(f.t.WKMcMT),
+            label: x ? f.intl.string(f.t.RwuStb) : f.intl.string(f.t.WKMcMT),
             children: (e) =>
-                b
+                x
                     ? (0, r.jsx)("ul", {
                           className: h.productListings,
                           id: e.controlId,
@@ -101,7 +101,7 @@ function x(e) {
                                                   productId: e.id,
                                               }),
                                           onReportProduct: () => {},
-                                          disabled: x,
+                                          disabled: b,
                                       }),
                                   },
                                   e.id,
@@ -116,7 +116,7 @@ function x(e) {
         }),
     });
 }
-function b(e) {
+function x(e) {
     let { guildId: t } = e,
         { shouldRestrictUpdatingCreatorMonetizationSettings: n } = (0, s.gX)(t),
         a = (e) => {
@@ -131,7 +131,7 @@ function b(e) {
                 disabled: n,
             }),
             (0, r.jsx)(l.LZC, { size: 24 }),
-            (0, r.jsx)(x, {
+            (0, r.jsx)(b, {
                 guildId: t,
                 handleCreateOrEditProduct: a,
             }),

@@ -1,11 +1,11 @@
-n.d(t, { Z: () => i }), n(388685);
-var r = n(131951);
-function i() {
-    return Object.entries(r.Z.getVideoDevices()).map((e) => {
-        let [t, n] = e;
+t.d(n, { Z: () => r }), t(388685);
+var l = t(131951);
+function r() {
+    return Object.entries(l.Z.getVideoDevices()).map((e) => {
+        let [n, t] = e;
         return {
-            id: "camera:" + n.id,
-            name: n.name,
+            id: "camera:" + t.id,
+            name: t.name,
             url: "",
         };
     });

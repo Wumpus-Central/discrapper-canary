@@ -17,16 +17,16 @@ var i = n(951288),
     x = n(225433),
     j = n(129861),
     v = n(493544),
-    O = n(700582),
-    y = n(410030),
+    y = n(700582),
+    O = n(410030),
     _ = n(835473),
     C = n(933557),
     N = n(346486),
     S = n(600164),
-    P = n(925329),
-    w = n(666657),
-    I = n(664452),
-    E = n(560114),
+    I = n(925329),
+    E = n(666657),
+    P = n(664452),
+    w = n(560114),
     T = n(685929),
     Z = n(592125),
     k = n(699516),
@@ -104,7 +104,7 @@ function F(e) {
                 className: U.text,
                 children: [
                     null != n &&
-                        (0, i.jsx)(O.Z, {
+                        (0, i.jsx)(y.Z, {
                             user: n,
                             size: g.EFr.SIZE_24,
                             className: U.avatar,
@@ -229,9 +229,9 @@ function q(e) {
         inviteSource: (0, i.jsxs)("div", {
             className: U.linkedChannelJoinSource,
             children: [
-                (0, i.jsx)(P.Z, {
+                (0, i.jsx)(I.Z, {
                     game: o,
-                    size: P.A.XXSMALL,
+                    size: I.A.XXSMALL,
                 }),
                 (0, i.jsx)(g.Text, {
                     className: U.linkedChannelJoinSourceText,
@@ -274,10 +274,10 @@ function V(e) {
         loading: f = !1,
     } = e;
     s()(null != l, "guild is required");
-    let h = (0, y.ZP)(),
+    let h = (0, O.ZP)(),
         x = (0, R.MQ)(l),
         j = (0, R.O4)(l),
-        O = r.useMemo(
+        y = r.useMemo(
             () =>
                 null == t || f
                     ? []
@@ -297,7 +297,7 @@ function V(e) {
                 f
                     ? []
                     : [
-                          ...O.map((e) => ({
+                          ...y.map((e) => ({
                               type: "invite",
                               data: e,
                           })),
@@ -306,13 +306,13 @@ function V(e) {
                               data: e,
                           })),
                       ],
-            [O, _, f],
+            [y, _, f],
         ),
         N = () => {
             (0, g.ZDy)(
                 async () => (e) =>
                     (0, i.jsx)(
-                        E.default,
+                        w.default,
                         K(G({}, e), {
                             channel: u,
                             guild: l,
@@ -321,13 +321,13 @@ function V(e) {
                     ),
             );
         },
-        [P, T] = r.useState(62),
+        [I, T] = r.useState(62),
         k = () => {
-            let e = { source: w.Zu.GUILD_SETTINGS };
+            let e = { source: E.Zu.GUILD_SETTINGS };
             (0, g.ZDy)(
                 async () => (t) =>
                     (0, i.jsx)(
-                        I.default,
+                        P.default,
                         K(G({}, t), {
                             guildId: l.id,
                             analyticsData: e,
@@ -464,7 +464,7 @@ function V(e) {
                 return (0, i.jsx)(
                     L.Y,
                     {
-                        hasInvites: O.length > 0,
+                        hasInvites: y.length > 0,
                         setHeight: T,
                         onShowDisableInvites: k,
                         onShowInviteModal: N,
@@ -520,7 +520,7 @@ function V(e) {
                 : 1 === e
                   ? 109
                   : 2 === e
-                    ? P
+                    ? I
                     : 3 === e
                       ? 0 === C.length && 0 === t && f
                           ? 62

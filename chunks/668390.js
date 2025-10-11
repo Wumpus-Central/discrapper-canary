@@ -104,7 +104,7 @@ function f(e) {
             onContextMenu: N,
             "aria-label": O,
         } = e,
-        Z = (0, g._f)(s.id, r, null == r ? void 0 : r.colorStrings);
+        E = (0, g._f)(s.id, r, null == r ? void 0 : r.colorStrings);
     return u
         ? (0, i.jsx)("div", { className: p.dragged })
         : (0, i.jsx)(c.njP.Item, {
@@ -121,14 +121,14 @@ function f(e) {
                       "dot" === S
                           ? (0, i.jsx)(c.FhE, {
                                 color: null != t ? t : void 0,
-                                colors: Z,
+                                colors: E,
                                 className: p.roleDot,
                                 background: !1,
                                 tooltip: !1,
                             })
                           : (0, i.jsx)(c.xko, {
                                 color: null != t ? t : null,
-                                colors: Z,
+                                colors: E,
                                 className: p.roleCircle,
                             }),
                       (function () {

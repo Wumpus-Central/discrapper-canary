@@ -23,11 +23,11 @@ var r = n(951288),
     _ = n(703656),
     O = n(108427),
     E = n(911314),
-    y = n(429899),
-    v = n(843445),
+    v = n(429899),
+    y = n(843445),
     I = n(981631),
-    S = n(388032),
-    C = n(430355);
+    C = n(388032),
+    S = n(430355);
 function T(e, t, n) {
     return (
         t in e
@@ -46,7 +46,7 @@ let N = (0, m.Un)({
     webpackId: 496691,
 });
 function j(e) {
-    return e < v.x ? v.b.SMALL : v.b.LARGE;
+    return e < y.x ? y.b.SMALL : y.b.LARGE;
 }
 o.ZP.initialize();
 class P extends i.PureComponent {
@@ -70,8 +70,8 @@ class P extends i.PureComponent {
     renderCustomErrorMessage() {
         return (0, r.jsxs)("div", {
             children: [
-                (0, r.jsx)("p", { children: S.intl.string(S.t["1PZdFx"]) }),
-                (0, r.jsx)("p", { children: S.intl.string(S.t.CvQlAA) }),
+                (0, r.jsx)("p", { children: C.intl.string(C.t["1PZdFx"]) }),
+                (0, r.jsx)("p", { children: C.intl.string(C.t.CvQlAA) }),
             ],
         });
     }
@@ -79,11 +79,11 @@ class P extends i.PureComponent {
         let { isAuthenticated: e, location: t } = this.props,
             n = e
                 ? (0, r.jsx)("div", {
-                      className: C.applicationStore,
+                      className: S.applicationStore,
                       children: this.renderContent(),
                   })
                 : (0, r.jsx)(N, {
-                      className: C.applicationStore,
+                      className: S.applicationStore,
                       location: t,
                       render: this.renderContent,
                   });
@@ -107,7 +107,7 @@ class P extends i.PureComponent {
                 return (0, r.jsx)(u.Z, {
                     page: I.ZY5.STORE_LISTING,
                     root: !0,
-                    children: (0, r.jsx)(y.Z, {
+                    children: (0, r.jsx)(v.Z, {
                         skuId: t,
                         applicationId: n,
                         slug: i,

@@ -6,11 +6,11 @@ var l = n(951288),
     a = n(507453),
     o = n(388032);
 function d(e) {
-    let { mfaChallenge: t, finish: n, setSlide: d, onClose: c, isSlideReady: u, headerAlignStart: h } = e,
+    let { mfaChallenge: t, finish: n, setSlide: d, onClose: u, isSlideReady: c, headerAlignStart: h } = e,
         [f, g] = r.useState(!1),
         [m, p] = r.useState(null),
-        [x, S] = r.useState(""),
-        b = r.useRef(null),
+        [b, S] = r.useState(""),
+        x = r.useRef(null),
         j = o.intl.string(o.t["C/ZAw8"]),
         y = o.intl.string(o.t.fZSi1N),
         v = r.useCallback(
@@ -21,18 +21,18 @@ function d(e) {
         );
     return (
         r.useEffect(() => {
-            if (u) {
+            if (c) {
                 var e;
-                null == (e = b.current) || e.focus();
+                null == (e = x.current) || e.focus();
             }
-        }, [u]),
+        }, [c]),
         (0, l.jsxs)("form", {
             onSubmit: (e) => {
                 e.preventDefault(),
                     g(!0),
                     n({
                         mfaType: "backup",
-                        data: x.replace(/-/g, ""),
+                        data: b.replace(/-/g, ""),
                     })
                         .catch((e) => {
                             var t, n;
@@ -44,19 +44,19 @@ function d(e) {
             },
             children: [
                 (0, l.jsx)(a.Z.SlideHeader, {
-                    onClose: c,
+                    onClose: u,
                     headerAlignStart: h,
                 }),
                 (0, l.jsxs)(a.Z.SlideContent, {
                     children: [
                         (0, l.jsx)(s.oil, {
                             label: j,
-                            inputRef: b,
+                            inputRef: x,
                             onChange: v,
                             placeholder: y,
                             maxLength: i.tL,
                             minLength: i.th,
-                            value: x,
+                            value: b,
                             spellCheck: "false",
                             disabled: f,
                         }),
@@ -67,7 +67,7 @@ function d(e) {
                     mfaChallenge: t,
                     setSlide: d,
                     showConfirm: !0,
-                    disabled: x.length < 8,
+                    disabled: b.length < 8,
                     submitting: f,
                 }),
             ],

@@ -62,12 +62,12 @@ let g = function (e) {
             isFocused: _,
             isActive: O,
             onOtherHover: E,
-            className: y,
+            className: v,
         } = e,
-        [v, I] = i.useState(!1),
-        [S, C] = i.useState(!1),
+        [y, I] = i.useState(!1),
+        [C, S] = i.useState(!1),
         T = () => {
-            I(!0), !_ || O || S || null == E || E();
+            I(!0), !_ || O || C || null == E || E();
         },
         N = () => {
             I(!1);
@@ -85,13 +85,13 @@ let g = function (e) {
                     h(
                         f(
                             {
-                                className: a()(p.messageRequestItem, y, {
-                                    [p.active]: O || S,
+                                className: a()(p.messageRequestItem, v, {
+                                    [p.active]: O || C,
                                     [p.firstItem]: 0 === t,
                                 }),
                                 onContextMenu: (e) => {
                                     null != g &&
-                                        (C(!0),
+                                        (S(!0),
                                         (0, u.jW)(
                                             e,
                                             async () => {
@@ -103,7 +103,7 @@ let g = function (e) {
                                             },
                                             {
                                                 onClose: () => {
-                                                    C(!1);
+                                                    S(!1);
                                                 },
                                             },
                                         ));
@@ -118,7 +118,7 @@ let g = function (e) {
                             },
                             e,
                         ),
-                        { children: l(v || O || S) },
+                        { children: l(y || O || C) },
                     ),
                 ),
             }),

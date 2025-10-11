@@ -8,9 +8,9 @@ a.d(e, {
     Tt: () => p,
     XU: () => L,
     _4: () => h,
-    ed: () => D,
+    ed: () => g,
     i0: () => R,
-    j5: () => g,
+    j5: () => D,
     ve: () => u,
     wy: () => N,
     yc: () => S,
@@ -104,11 +104,11 @@ function h(t) {
 }
 let O = "_sentryChildSpans",
     P = "_sentryRootSpan";
-function g(t, e) {
+function D(t, e) {
     let a = t[P] || t;
     (0, r.xp)(e, P, a), t[O] ? t[O].add(e) : (0, r.xp)(t, O, new Set([e]));
 }
-function D(t, e) {
+function g(t, e) {
     t[O] && t[O].delete(e);
 }
 function C(t) {

@@ -7,9 +7,9 @@ var r = n(951288),
     s = n(157283),
     c = n(328171),
     u = n(332664),
-    m = n(13137),
-    d = n(538211),
-    b = n(698066),
+    d = n(13137),
+    b = n(538211),
+    m = n(698066),
     f = n(626135),
     p = n(981631),
     _ = n(531578),
@@ -18,7 +18,7 @@ var r = n(951288),
     y = n(805388);
 let v = [g.kr.OTHER];
 function j(e) {
-    let { isStreamer: t, stream: j, streamApplication: h, onClose: x, transitionState: E, analyticsData: S } = e;
+    let { isStreamer: t, stream: j, streamApplication: h, onClose: E, transitionState: x, analyticsData: S } = e;
     l.useEffect(() => {
         f.default.track(p.rMx.OPEN_MODAL, {
             type: "Stream Problem Report",
@@ -29,8 +29,8 @@ function j(e) {
             source: "Stream End",
         });
     }, [j.ownerId, h]);
-    let { showRefreshedStreamTaxonomy: C } = (0, s.u)({ location: "StreamFeedback" }),
-        { surveyEmojiKind: k } = (0, c.R)({ location: "StreamFeedback" });
+    let { showRefreshedStreamTaxonomy: k } = (0, s.u)({ location: "StreamFeedback" }),
+        { surveyEmojiKind: C } = (0, c.R)({ location: "StreamFeedback" });
     function w(e) {
         var t, l, i;
         let { dontShowAgain: s, rating: c, feedback: u } = e;
@@ -42,9 +42,9 @@ function j(e) {
                 }),
             null != c)
         ) {
-            if (C) {
+            if (k) {
                 let { category: n, problem: r } = e;
-                (0, b.Z)({
+                (0, m.Z)({
                     problem: null != (t = null == r ? void 0 : r.value) ? t : null,
                     category: n,
                     variant: null != (l = null == r ? void 0 : r.variant) ? l : null,
@@ -57,7 +57,7 @@ function j(e) {
                 });
             } else {
                 let { problem: t } = e;
-                (0, b.Z)({
+                (0, m.Z)({
                     problem: null != (i = null == t ? void 0 : t.value) ? i : null,
                     stream: j,
                     feedback: u,
@@ -105,7 +105,7 @@ function j(e) {
     let P = O.intl.string(O.t["5smP3d"]),
         R = O.intl.string(O.t["0uxA2d"]),
         T = O.intl.string(O.t.CqjnLC),
-        L = {
+        F = {
             impressionName: i.ImpressionNames.STREAM_FEEDBACK_MODAL,
             impressionProperties: {
                 media_session_id: S.media_session_id,
@@ -113,7 +113,7 @@ function j(e) {
                 parent_media_session_id: S.parent_media_session_id,
             },
         };
-    if (C) {
+    if (k) {
         let e = {
                 value: _.tX.CONNECTION,
                 label: O.intl.string(y.default.FVhMw8),
@@ -164,33 +164,33 @@ function j(e) {
                     label: O.intl.string(O.t["emlT9/"]),
                 },
             };
-        return (0, r.jsx)(m.Z, {
+        return (0, r.jsx)(d.Z, {
             onSubmit: w,
-            onClose: x,
+            onClose: E,
             ratingHeader: P,
-            ratingEmojiKind: k,
+            ratingEmojiKind: C,
             ratingBody: t ? R : T,
             categoriesHeader: O.intl.string(y.default["tq859/"]),
             optionsTree: [e, n, l, o, i],
-            impression: L,
-            transitionState: E,
+            impression: F,
+            transitionState: x,
         });
     }
     return (0, r.jsx)(u.Z, {
         modalType: "stream",
         header: P,
-        ratingEmojiKind: k,
-        impression: L,
+        ratingEmojiKind: C,
+        impression: F,
         body: t ? R : T,
         problemTitle: O.intl.string(O.t["6Y1t5O"]),
-        problems: (0, d.Z)({
+        problems: (0, b.Z)({
             isStreamer: t,
             isEndStream: !0,
         }),
         freeformNeededProblems: v,
         onSubmit: w,
-        onClose: x,
-        transitionState: E,
+        onClose: E,
+        transitionState: x,
         otherKey: g.kr.OTHER,
     });
 }

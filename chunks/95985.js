@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var r = n(951288);
 n(647438);
 var s = n(481060),
-    o = n(113434),
-    a = n(497505),
+    a = n(113434),
+    o = n(497505),
     i = n(644646),
     l = n(613087),
     c = n(472144),
@@ -21,12 +21,12 @@ let p = (e) => {
             onGameSheetOpened: x,
             onGameSheetClosed: _,
         } = e,
-        b = (0, o.eQ)(n),
-        v = (0, o.vf)({
+        b = (0, a.eQ)(n),
+        j = (0, a.vf)({
             quest: n,
             isExpanded: m,
             activeScreen: f,
-            sourceQuestContent: a.jn.QUEST_BAR_V2,
+            sourceQuestContent: o.jn.QUEST_BAR_V2,
             popoutTargetElementRef: h,
             onGameSheetOpened: x,
             onGameSheetClosed: _,
@@ -48,10 +48,10 @@ let p = (e) => {
                         children: (0, r.jsx)(i.Z, {
                             className: u.questProgressRewardTile,
                             quest: n,
-                            questContent: a.jn.QUEST_BAR_V2,
+                            questContent: o.jn.QUEST_BAR_V2,
                             autoplay: !1,
                             location: d.dr.QUESTS_BAR,
-                            sourceQuestContent: a.jn.QUEST_BAR_V2,
+                            sourceQuestContent: o.jn.QUEST_BAR_V2,
                         }),
                     }),
             }),
@@ -80,7 +80,7 @@ let p = (e) => {
                                 className: u.questProgressHint,
                                 color: "text-muted",
                                 variant: "text-xs/normal",
-                                children: v,
+                                children: j,
                             }),
                     }),
                 ],

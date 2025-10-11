@@ -1,9 +1,9 @@
 n.d(t, { Z: () => u }), n(953529);
-var i = n(951288);
+var r = n(951288);
 n(647438);
-var r = n(388905),
-    s = n(837748),
-    l = n(306453),
+var i = n(388905),
+    l = n(837748),
+    s = n(306453),
     a = n(260539),
     c = n(947885);
 let d = {
@@ -24,22 +24,22 @@ function u(e) {
         o = d[u];
     if (null != o) {
         var C;
-        let { header: e, description: d, author: m } = (0, s.Z)(u);
-        return (0, i.jsxs)("div", {
+        let { header: e, description: d, author: m } = (0, l.Z)(u);
+        return (0, r.jsxs)("div", {
             children: [
-                (0, i.jsx)("img", {
+                (0, r.jsx)("img", {
                     className: c.image,
                     src: o,
                     alt: "",
                 }),
-                (0, i.jsx)(r.Dx, {
+                (0, r.jsx)(i.Dx, {
                     className: c.header,
                     id: t,
                     children: e,
                 }),
-                (0, i.jsx)(r.DK, { children: d }),
+                (0, r.jsx)(i.DK, { children: d }),
                 n.state === a.Rj.RESOLVED
-                    ? (0, i.jsx)(l.D, {
+                    ? (0, r.jsx)(s.D, {
                           className: c.usagePill,
                           count: null != (C = n.usageCount) ? C : 0,
                           verifiedName: m,
@@ -48,7 +48,7 @@ function u(e) {
             ],
         });
     }
-    return (0, i.jsx)(l.Z, {
+    return (0, r.jsx)(s.Z, {
         pillClassName: c.usagePill,
         guildTemplate: n,
         tall: !0,

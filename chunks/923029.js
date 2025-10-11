@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(911560),
     d = n(210887),
     u = n(914010),
-    p = n(981631),
-    h = n(388032),
+    h = n(981631),
+    p = n(388032),
     f = n(529834);
 function g(e) {
     let t,
@@ -17,19 +17,19 @@ function g(e) {
     i.useEffect(() => {
         c.Z.loadThread(g);
     });
-    let m = (0, a.e7)([u.Z], () => u.Z.getGuildId()) === p.I_8,
+    let m = (0, a.e7)([u.Z], () => u.Z.getGuildId()) === h.I_8,
         b = (0, a.e7)([d.Z], () => d.Z.theme);
     return (
         (t = m
             ? (0, r.jsx)(s.OZU, {
-                  note: h.intl.string(h.t["D5SN5+"]),
-                  children: h.intl.string(h.t.xVTAdX),
+                  note: p.intl.string(p.t["D5SN5+"]),
+                  children: p.intl.string(p.t.xVTAdX),
               })
             : null != g
               ? (0, r.jsx)(s.$jN, { type: s.$jN.Type.SPINNING_CIRCLE })
               : (0, r.jsx)(s.OZU, {
-                    note: h.intl.string(h.t["LTr+x8"]),
-                    children: h.intl.string(h.t.ai6Lbm),
+                    note: p.intl.string(p.t["LTr+x8"]),
+                    children: p.intl.string(p.t.ai6Lbm),
                 })),
         (0, r.jsxs)("div", {
             className: f.noChannel,

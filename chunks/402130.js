@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(788111),
     d = n(60577),
     u = n(184301),
-    p = n(124823),
-    h = n(550818),
+    h = n(124823),
+    p = n(550818),
     f = n(983559),
     g = n(388032);
 function m(e) {
@@ -43,7 +43,7 @@ function b(e) {
         b = (0, l.e7)([s.default], () => s.default.getUser(n)),
         y = (0, l.e7)([s.default], () => s.default.getCurrentUser()),
         _ = (0, d.Z)(),
-        [j, x] = (0, c.Z)(n);
+        [j, O] = (0, c.Z)(n);
     if (
         (i.useEffect(() => {
             (0, u.Z)(null != b ? b : n, {
@@ -57,32 +57,32 @@ function b(e) {
         null == b || null == y || !_)
     )
         return null;
-    let O = "user-profile-sidebar-heading-".concat(b.id),
+    let x = "user-profile-sidebar-heading-".concat(b.id),
         v = o.ZP.getName(null, t.id, b);
     return (0, r.jsx)("aside", {
-        "aria-labelledby": O,
+        "aria-labelledby": x,
         children: (0, r.jsx)(a.y5t, {
             component: (0, r.jsx)(a.nn4, {
                 children: (0, r.jsx)(a.H, {
-                    id: O,
+                    id: x,
                     children: g.intl.format(g.t.KRe1Fh, { name: v }),
                 }),
             }),
             children: j
                 ? (0, r.jsx)(
-                      h.Z,
+                      p.Z,
                       m(
                           {
                               user: b,
                               currentUser: y,
-                              onHide: x,
+                              onHide: O,
                           },
                           e,
                       ),
                   )
                 : b.isNonUserBot()
                   ? (0, r.jsx)(
-                        p.Z,
+                        h.Z,
                         m(
                             {
                                 user: b,

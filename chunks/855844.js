@@ -60,11 +60,11 @@ function E(e) {
         Y = (0, o.e7)([v.Z], () => v.Z.getActiveInputProfile()),
         H = (0, b.Z)(V),
         z = (0, f.Z)(V),
-        q = (0, g.Z)(V),
-        B = l.Yn.DEFAULT,
-        W = v.Z.isSelfDeaf(B),
-        X = (0, o.e7)([v.Z], () => v.Z.getMode()),
-        K = X === x.pM4.VOICE_ACTIVITY ? x.pM4.PUSH_TO_TALK : x.pM4.VOICE_ACTIVITY,
+        B = (0, g.Z)(V),
+        q = l.Yn.DEFAULT,
+        W = v.Z.isSelfDeaf(q),
+        K = (0, o.e7)([v.Z], () => v.Z.getMode()),
+        X = K === x.pM4.VOICE_ACTIVITY ? x.pM4.PUSH_TO_TALK : x.pM4.VOICE_ACTIVITY,
         G = (0, o.e7)([v.Z, j.ZP], () => {
             var e;
             let t = (null == (e = v.Z.getModeOptions().shortcut) ? void 0 : e.length) > 0,
@@ -103,17 +103,17 @@ function E(e) {
                                         notchClassName: C.customNotches,
                                     }),
                             }),
-                        Z && q,
+                        Z && B,
                     ],
                 }),
                 (0, r.jsxs)(a.kSQ, {
                     children: [
                         T && O.isPlatformEmbedded && G
                             ? (0, r.jsx)(a.S89, {
-                                  checked: X === x.pM4.PUSH_TO_TALK,
+                                  checked: K === x.pM4.PUSH_TO_TALK,
                                   id: "input-mode",
                                   label: w.intl.string(w.t.Q8gkVF),
-                                  action: () => s.Z.setMode(K, void 0, void 0, { analyticsLocations: V }),
+                                  action: () => s.Z.setMode(X, void 0, void 0, { analyticsLocations: V }),
                                   disabled: Y === P._.STUDIO,
                               })
                             : null,
@@ -125,7 +125,7 @@ function E(e) {
                                     label: w.intl.string(w.t.wjcRFR),
                                     action: () =>
                                         s.Z.toggleSelfDeaf({
-                                            context: B,
+                                            context: q,
                                             location: "AudioDeviceMenu",
                                         }),
                                     checked: W,

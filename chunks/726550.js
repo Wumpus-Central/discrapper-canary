@@ -4,7 +4,7 @@ var r = {
     checkDraw: "checkDraw__714a9",
     checkUndraw: "checkUndraw__714a9",
     checkboxOption: "checkboxOption__714a9",
-    padding: "padding__714a9",
+    spacing: "spacing__714a9",
     checkboxIndicator: "checkboxIndicator__714a9",
     checkStroke: "checkStroke__714a9",
     checkmark: "checkmark__714a9",

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(951288),
     i = n(442837),
     l = n(481060),
@@ -37,7 +37,7 @@ function h(e) {
     }
     return e;
 }
-function x(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -55,19 +55,19 @@ function x(e, t) {
         e
     );
 }
-function b() {
+function x() {
     let { editStateId: e, guildId: t } = (0, o.N)(),
-        [b, j] = c.XZ(e, t),
+        [x, j] = c.XZ(e, t),
         v = (0, u.Z)(t, e),
         { setCurrentTab: _ } = (0, p.dw)(),
         C = () => _(p.ue.EMOJIS),
         O = (0, i.e7)([a.Z], () => a.Z.getGuild(t)),
         y = null != O ? (0, d.Z)(O) : void 0;
     function N(e) {
-        null == b ? j(new Set(e)) : j(new Set([...b, ...e]));
+        null == x ? j(new Set(e)) : j(new Set([...x, ...e]));
     }
     function E(e) {
-        let t = new Set(b);
+        let t = new Set(x);
         t.delete(e), j(t);
     }
     let I = (0, s.mY)();
@@ -78,7 +78,7 @@ function b() {
         disabled: I,
         children: [
             (0, r.jsx)(m.E, {
-                tierEmojiIds: b,
+                tierEmojiIds: x,
                 guildId: t,
                 onRemoveEmoji: function (e) {
                     e.roles.filter((e) => e !== (null == v ? void 0 : v.id)).length > 0
@@ -88,7 +88,7 @@ function b() {
                               return (n) =>
                                   (0, r.jsx)(
                                       t,
-                                      x(h({}, n), {
+                                      b(h({}, n), {
                                           onConfirmDelete: () => {
                                               E(e.id), n.onClose();
                                           },
@@ -97,7 +97,7 @@ function b() {
                           });
                 },
             }),
-            null != b && b.size > 0 ? (0, r.jsx)(l.LZC, { size: 8 }) : null,
+            null != x && x.size > 0 ? (0, r.jsx)(l.LZC, { size: 8 }) : null,
             (0, r.jsx)(g.s, {
                 onClick: function () {
                     (0, l.ZDy)(async () => {
@@ -105,9 +105,9 @@ function b() {
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                x(h({}, n), {
+                                b(h({}, n), {
                                     guildId: t,
-                                    initialTierEmojiIds: b,
+                                    initialTierEmojiIds: x,
                                     onSubmit: N,
                                     transitionToManageEmoji: () => {
                                         C(), n.onClose();

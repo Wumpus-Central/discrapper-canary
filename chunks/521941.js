@@ -1,19 +1,19 @@
-n.d(t, { Z: () => a }), n(539854);
-var l = n(647438),
-    r = n(399606),
-    i = n(45966);
+t.d(n, { Z: () => a }), t(539854);
+var l = t(647438),
+    r = t(399606),
+    i = t(45966);
 function a(e) {
-    let t = (0, r.Wu)([i.Z], () => i.Z.getEnabledOnboardingPrompts(e));
+    let n = (0, r.Wu)([i.Z], () => i.Z.getEnabledOnboardingPrompts(e));
     return l.useMemo(() => {
         let e = 0,
-            n = [],
+            t = [],
             l = [],
             r = [],
             i = [];
-        for (var a = 0; a < t.length; a++) {
-            let o = t[a];
+        for (var a = 0; a < n.length; a++) {
+            let o = n[a];
             o.isNew
-                ? n.push(o)
+                ? t.push(o)
                 : o.hasNewAnswers
                   ? (l.push(o), (e += o.options.filter((e) => e.isUnseen).length))
                   : o.inOnboarding
@@ -21,11 +21,11 @@ function a(e) {
                     : r.push(o);
         }
         return {
-            onboardingPromptsRaw: t,
-            newOnboardingPrompts: n,
+            onboardingPromptsRaw: n,
+            newOnboardingPrompts: t,
             onboardingPromptsWithNewAnswers: l,
             newAnswersCount: e,
             onboardingPrompts: r.concat(i),
         };
-    }, [t]);
+    }, [n]);
 }

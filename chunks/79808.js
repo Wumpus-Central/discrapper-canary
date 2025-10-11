@@ -54,22 +54,22 @@ function f(e) {
     let {
             root: m,
             directory: b,
-            target: j,
-            onClose: p,
+            target: p,
+            onClose: j,
             sidebarHeader: x,
-            sidebarFooter: y,
-            onPanelChange: v,
-            emptyState: g,
+            sidebarFooter: v,
+            onPanelChange: y,
+            emptyState: h,
         } = e,
-        [h, O] = l.useState(!0),
-        [C, _] = l.useState(null == (t = b.entry(j)) ? void 0 : t.targetPanel),
-        [S, P] = l.useState(() => b.typedGet(C)),
-        N = l.useCallback(() => T(void 0), []),
-        [E, T] = l.useState({
-            target: j,
-            targetAccordion: null == (n = b.entry(j)) ? void 0 : n.parentAccordion,
+        [g, O] = l.useState(!0),
+        [C, S] = l.useState(null == (t = b.entry(p)) ? void 0 : t.targetPanel),
+        [_, P] = l.useState(() => b.typedGet(C)),
+        E = l.useCallback(() => T(void 0), []),
+        [N, T] = l.useState({
+            target: p,
+            targetAccordion: null == (n = b.entry(p)) ? void 0 : n.parentAccordion,
             animateScroll: !1,
-            complete: N,
+            complete: E,
         }),
         { navigateWithValidation: k } = (0, a.Cu)(),
         w = l.useMemo(
@@ -81,22 +81,22 @@ function f(e) {
                     let n = {
                         target: e,
                         targetAccordion: t.parentAccordion,
-                        complete: N,
+                        complete: E,
                     };
                     if (t.targetPanel.key !== (null == C ? void 0 : C.key)) {
                         let e = t.targetPanel;
                         k(() => {
-                            T(d(u({}, n), { animateScroll: !1 })), P(e), _(e), null == v || v(e.key);
+                            T(d(u({}, n), { animateScroll: !1 })), P(e), S(e), null == y || y(e.key);
                         });
                     } else T(d(u({}, n), { animateScroll: !0 }));
                 },
-                navTransition: E,
-                showNavigationMobile: h,
+                navTransition: N,
+                showNavigationMobile: g,
                 setShowNavigationMobile: O,
             }),
-            [b, C, E, h, N, k, v],
+            [b, C, N, g, E, k, y],
         ),
-        I = () => k(p);
+        Z = () => k(j);
     return (0, r.jsx)(s.j.Provider, {
         value: w,
         children: (0, r.jsxs)("div", {
@@ -105,13 +105,13 @@ function f(e) {
                 (0, r.jsx)(i.P, {
                     root: m,
                     header: x,
-                    footer: y,
-                    onClose: I,
-                    emptyState: g,
+                    footer: v,
+                    onClose: Z,
+                    emptyState: h,
                 }),
                 (0, r.jsx)(o.Z, {
-                    onClose: I,
-                    setting: null != (f = w.currentPanel) ? f : S,
+                    onClose: Z,
+                    setting: null != (f = w.currentPanel) ? f : _,
                 }),
             ],
         }),

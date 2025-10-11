@@ -1,4 +1,4 @@
-n.d(t, { default: () => O }), n(388685);
+n.d(t, { default: () => y }), n(388685);
 var i = n(951288),
     r = n(647438),
     l = n(793030),
@@ -58,22 +58,22 @@ function v(e, t) {
         e
     );
 }
-function O(e) {
-    let { guildId: t, transitionState: n, onClose: O, analyticsData: y } = e,
+function y(e) {
+    let { guildId: t, transitionState: n, onClose: y, analyticsData: O } = e,
         _ = (0, a.e7)([s.Z], () => s.Z.getGuild(t), [t]),
         C = !!(null == _ ? void 0 : _.features.has(f.oNc.INVITES_DISABLED)),
         [N] = r.useState(!1),
-        [S, P] = r.useState(g.Fl),
-        w = (0, a.e7)([m.Z], () => m.Z.getGuildIncident(t)),
-        I = (0, u.BT)(_),
-        E = (0, p.SG)(w) || C,
-        T = (0, p.sN)(w),
-        [Z, k] = r.useState(E),
+        [S, I] = r.useState(g.Fl),
+        E = (0, a.e7)([m.Z], () => m.Z.getGuildIncident(t)),
+        P = (0, u.BT)(_),
+        w = (0, p.SG)(E) || C,
+        T = (0, p.sN)(E),
+        [Z, k] = r.useState(w),
         [A, D] = r.useState(T),
         [R, L] = r.useState(!1),
-        M = Z !== E || A !== T || R,
-        B = C && !I;
-    if (null == _) return O(), null;
+        M = Z !== w || A !== T || R,
+        B = C && !P;
+    if (null == _) return y(), null;
     function U() {
         k((e) => !e);
     }
@@ -83,18 +83,18 @@ function O(e) {
         actions: [
             {
                 text: h.intl.string(h.t["ETE/oK"]),
-                onClick: O,
+                onClick: y,
                 variant: "secondary",
                 disabled: N,
             },
             {
                 text: h.intl.string(h.t["pwm/z8"]),
                 onClick: () => {
-                    (E || T) && !Z && !A
+                    (w || T) && !Z && !A
                         ? ((0, d.n)(_.id, !1, !1),
                           (0, o.ZDy)(() => Promise.resolve((e) => (0, i.jsx)(b.default, v(j({}, e), { guildId: t })))))
                         : (0, d.n)(_.id, Z, A, S);
-                    let { source: e, alertType: n, messageId: r } = y;
+                    let { source: e, alertType: n, messageId: r } = O;
                     c.default.track(f.rMx.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
                         guild_id: t,
                         source: e,
@@ -104,13 +104,13 @@ function O(e) {
                         intervention_type_disabled: (0, p.lk)(Z, A),
                         duration: 60 * S,
                     }),
-                        O();
+                        y();
                 },
                 loading: N,
                 disabled: !M,
             },
         ],
-        onClose: O,
+        onClose: y,
         children: (0, i.jsxs)("div", {
             className: x.mainContainer,
             children: [
@@ -118,7 +118,7 @@ function O(e) {
                     placeholder: h.intl.string(h.t.vKYZzc),
                     options: (0, g.c1)(),
                     select: (e) => {
-                        P(e), L(!0);
+                        I(e), L(!0);
                     },
                     isSelected: (e) => e === S,
                     serialize: (e) => String(e),

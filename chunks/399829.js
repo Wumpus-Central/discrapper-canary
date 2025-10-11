@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(129861),
     f = n(999382),
     h = n(905128),
-    x = n(151494),
-    b = n(733683),
+    b = n(151494),
+    x = n(733683),
     j = n(237583),
     v = n(899667),
     _ = n(271383),
@@ -58,7 +58,7 @@ class w extends i.Component {
         let a = {
                 numRequired: 0,
                 y: 0,
-                key: b.x,
+                key: x.x,
             },
             s = e.map((e) => {
                 var n;
@@ -69,7 +69,7 @@ class w extends i.Component {
                     key: e.tier,
                 };
             });
-        return (0, r.jsx)(b.Z, {
+        return (0, r.jsx)(x.Z, {
             currentTier: l,
             className: i > 0 ? S.progressWithSubscriptions : S.progress,
             progress: i,
@@ -291,7 +291,7 @@ let Z = c.ZP.connectStores([C.Z, h.Z, f.Z, v.Z, O.default, _.ZP], () => {
     var e, t;
     let n = f.Z.getGuildId(),
         r = null != (t = null == (e = C.Z.getGuild(n)) ? void 0 : e.premiumTier) ? t : E.Eu4.NONE,
-        i = (0, x.I)(n),
+        i = (0, b.I)(n),
         l = null != n ? v.Z.getAppliedGuildBoostsForGuild(n) : null,
         a = o()(null != l ? l : []).uniqBy((e) => e.userId),
         s = a

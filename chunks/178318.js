@@ -35,11 +35,11 @@ try {
         r = p.ZP.requireModule("erlpack");
     } catch (e) {}
 }
-let y = p.ZP.requireModule("discord_rpc").RPCWebSocket,
-    v = window.GLOBAL_ENV.MARKETING_ENDPOINT,
+let v = p.ZP.requireModule("discord_rpc").RPCWebSocket,
+    y = window.GLOBAL_ENV.MARKETING_ENDPOINT,
     I = new c.Z("RPCServer:WSS"),
-    S = [];
-function C(e) {
+    C = [];
+function S(e) {
     return "function" == typeof e ? e() : e;
 }
 function T() {
@@ -48,7 +48,7 @@ function T() {
             e > 0
                 ? void 0
                 : () => {
-                      if (!C(i.listening)) return;
+                      if (!S(i.listening)) return;
                       let e = i.address().port;
                       I.info("Starting on ".concat(e)),
                           s.Z.dispatch({
@@ -62,9 +62,9 @@ function N(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 200,
         i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
         l =
-            null != C(e.headers).origin
+            null != S(e.headers).origin
                 ? {
-                      "Access-Control-Allow-Origin": C(e.headers).origin,
+                      "Access-Control-Allow-Origin": S(e.headers).origin,
                       "Access-Control-Allow-Credentials": "true",
                       "Access-Control-Allow-Methods": "POST, GET, PUT, PATCH, DELETE",
                       "Access-Control-Allow-Headers": "Content-Type, Authorization",
@@ -142,26 +142,26 @@ class x extends g.Z {
 }
 class A extends l.EventEmitter {
     handleRequest(e, t) {
-        let [n, r] = C(e.url).split("?"),
-            i = C(e.method);
+        let [n, r] = S(e.url).split("?"),
+            i = S(e.method);
         if ("/rpc" === n && "OPTIONS" === i) return void N(e, t, { body: "" });
         let l = "POST" === i;
         if ("/rpc" === n && ("GET" === i || l)) {
             let n = new URLSearchParams(r),
-                i = l ? C(e.headers)["content-type"].split("/")[1] : "json",
+                i = l ? S(e.headers)["content-type"].split("/")[1] : "json",
                 o = function () {
                     var e, r;
                     let { protocol: i, host: l } =
                         null != (r = d.Z.toURLSafe(null != (e = n.get("callback")) ? e : "")) ? r : {};
                     i === location.protocol && l === location.host
                         ? t.setHeader("Location", n.get("callback"))
-                        : t.setHeader("Location", v),
+                        : t.setHeader("Location", y),
                         t.writeHead(301),
                         t.end();
                 },
                 s = new x(!l ? o : N.bind(null, e, t), !l ? o : j.bind(null, e, t, 400), Number(n.get("v")), i);
             if (l)
-                (0, m.em)(s, C(e.headers).origin, n.get("client_id"))
+                (0, m.em)(s, S(e.headers).origin, n.get("client_id"))
                     .then(() => {
                         let n = "";
                         e.on("data", (e) => (n += e)),
@@ -184,8 +184,8 @@ class A extends l.EventEmitter {
     handleConnection(e) {
         var t, n;
         let r,
-            i = new URLSearchParams(C(e.upgradeReq).url.split("?")[1]),
-            l = null != (t = C(e.upgradeReq).headers.origin) ? t : "";
+            i = new URLSearchParams(S(e.upgradeReq).url.split("?")[1]),
+            l = null != (t = S(e.upgradeReq).headers.origin) ? t : "";
         try {
             r = new P(e, Number(i.get("v")), null != (n = i.get("encoding")) ? n : "json");
         } catch (t) {
@@ -196,12 +196,12 @@ class A extends l.EventEmitter {
             e.on("error", (e) => I.error("WS Error: ".concat(e.message))),
             e.on("close", (e, t) => {
                 I.info("Socket Closed: ".concat(r.id, ", code ").concat(e, ", message ").concat(t)),
-                    o().remove(S, (e) => e === r),
+                    o().remove(C, (e) => e === r),
                     this.emit("disconnect", r);
             }),
             (0, m.em)(r, l, i.get("client_id"))
                 .then(() => {
-                    S.push(r), e.on("message", (e) => this.handleMessage(r, e)), this.emit("connect", r);
+                    C.push(r), e.on("message", (e) => this.handleMessage(r, e)), this.emit("connect", r);
                 })
                 .catch((e) => {
                     let { code: t, message: n } = e;
@@ -226,7 +226,7 @@ class A extends l.EventEmitter {
         var e;
         super();
         let t = 0;
-        (i = y.http.createServer()).on("error", (e) => {
+        (i = v.http.createServer()).on("error", (e) => {
             I.error("Error: ".concat(e.message)),
                 ("EADDRINUSE" === e.code || e.message.includes("EADDRINUSE")) && setTimeout(() => T(++t), 1000);
         }),
@@ -236,7 +236,7 @@ class A extends l.EventEmitter {
             instanceId: null != (e = i.instanceId) ? e : 0,
             server: i,
         };
-        new y.ws.Server(n).on("connection", (e) => this.handleConnection(e));
+        new v.ws.Server(n).on("connection", (e) => this.handleConnection(e));
     }
 }
 let Z = new A();

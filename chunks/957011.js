@@ -2,20 +2,20 @@ n.d(t, { Z: () => u }), n(388685);
 var r = n(647438),
     i = n(442837),
     l = n(479531),
-    s = n(601964),
-    a = n(430824),
+    a = n(601964),
+    s = n(430824),
     o = n(594174),
     c = n(53365),
     d = n(223892);
 function u(e, t) {
-    let n = (0, i.e7)([a.Z], () => a.Z.getGuild(e)),
+    let n = (0, i.e7)([s.Z], () => s.Z.getGuild(e)),
         [u, g] = r.useState(),
         [m, p] = r.useState(!1),
         f = (0, d.Ob)(n);
     return {
         canSubmitAcceptance: (0, i.e7)([o.default], () => {
             let e = o.default.getCurrentUser();
-            return null != n && (0, s.eM)(n, e);
+            return null != n && (0, a.eM)(n, e);
         }, [n]),
         error: u,
         loading: m,

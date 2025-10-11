@@ -2,8 +2,8 @@ n.d(t, { Z: () => o }), n(388685), n(781311);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
-    s = n(981631),
-    a = n(388032);
+    a = n(981631),
+    s = n(388032);
 let o = (e) => {
     var t,
         n,
@@ -17,9 +17,9 @@ let o = (e) => {
             maxTaxLength: p,
             maxTags: f,
             disabled: h,
-            placeholder: x,
+            placeholder: b,
         } = e,
-        b = (function (e, t) {
+        x = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -51,32 +51,32 @@ let o = (e) => {
             "disabled",
             "placeholder",
         ]);
-    let [j, _] = i.useState(null != d ? d : ""),
-        v = i.useCallback(() => {
+    let [j, v] = i.useState(null != d ? d : ""),
+        _ = i.useCallback(() => {
             let e = j.trim();
             if (0 !== e.length) {
                 if (null != f && o.length >= f) {
-                    null == m || m(a.intl.string(a.t.Xx7XeH));
+                    null == m || m(s.intl.string(s.t.Xx7XeH));
                     return;
                 }
-                g(e), _("");
+                g(e), v("");
             }
         }, [j, f, g, m, o.length]),
         C = i.useCallback(
             (e) => {
                 switch (e.keyCode) {
-                    case s.yXg.BACKSPACE:
+                    case a.yXg.BACKSPACE:
                         0 === j.length &&
                             o.length > 0 &&
                             (e.preventDefault(), e.stopPropagation(), null == u || u(new Set([o[o.length - 1].id])));
                         break;
-                    case s.yXg.ENTER:
-                    case s.yXg.TAB:
-                    case s.yXg.COMMA:
-                        e.preventDefault(), e.stopPropagation(), v();
+                    case a.yXg.ENTER:
+                    case a.yXg.TAB:
+                    case a.yXg.COMMA:
+                        e.preventDefault(), e.stopPropagation(), _();
                 }
             },
-            [v, j.length, u, o],
+            [_, j.length, u, o],
         );
     return (0, r.jsx)(
         l.oil,
@@ -113,17 +113,17 @@ let o = (e) => {
                     onRemove: u,
                 },
             },
-            b,
+            x,
         )),
         (n = n =
             {
                 value: j,
                 onKeyDown: C,
-                onChange: _,
+                onChange: v,
                 maxLength: p,
                 disabled: h,
-                onBlur: v,
-                placeholder: x,
+                onBlur: _,
+                placeholder: b,
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

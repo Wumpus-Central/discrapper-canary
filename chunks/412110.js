@@ -1,7 +1,7 @@
 A.d(t, { V: () => o });
-var r = A(951288);
+var n = A(951288);
 A(647438);
-var n = A(952265),
+var r = A(952265),
     a = A(871388),
     l = A(981631),
     i = A(388032);
@@ -18,32 +18,32 @@ function o(e, t, o) {
             (0, a.B)(i.intl.string(i.t.MeXDxs), i.t["5q146O"]);
             break;
         case l.evJ.MONETIZATION_TERMS_NOT_ACCEPTED:
-            (0, n.ZD)(async () => {
+            (0, r.ZD)(async () => {
                 let { default: e } = await A.e("31835").then(A.bind(A, 393809));
                 return (A) =>
-                    (0, r.jsx)(
+                    (0, n.jsx)(
                         e,
                         (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var A = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(A);
+                                    n = Object.keys(A);
                                 "function" == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
+                                    (n = n.concat(
                                         Object.getOwnPropertySymbols(A).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(A, e).enumerable;
                                         }),
                                     )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        (r = A[t]),
+                                    n.forEach(function (t) {
+                                        var n;
+                                        (n = A[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
-                                                      value: r,
+                                                      value: n,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0,
                                                   })
-                                                : (e[t] = r);
+                                                : (e[t] = n);
                                     });
                             }
                             return e;

@@ -1,7 +1,7 @@
 n.d(t, {
     ZP: () => S,
-    dL: () => p,
-    hC: () => h,
+    dL: () => h,
+    hC: () => p,
     hl: () => m,
     qx: () => g,
 }),
@@ -18,7 +18,7 @@ var r = n(392711),
     d = n(823379),
     f = n(41837),
     b = n(981631);
-function p(e) {
+function h(e) {
     let t = u.Z.getChannel(e);
     return (null == t ? void 0 : t.type) === b.d4z.DM
         ? {
@@ -30,7 +30,7 @@ function p(e) {
               id: e,
           };
 }
-function h(e) {
+function p(e) {
     return "".concat(e.type, "-").concat(e.id);
 }
 function m(e) {
@@ -104,12 +104,12 @@ function S(e) {
     } = e;
     if (n) return x(v(t, f));
     let b = null != c && c.length > 0 ? c.map((e) => y(e)) : [],
-        p = s.Z.getChannelHistory(),
-        h = p.length > 0 ? p.map((e) => (0, i.Z)(e)) : [],
+        h = s.Z.getChannelHistory(),
+        p = h.length > 0 ? h.map((e) => (0, i.Z)(e)) : [],
         m = a.length > 0 ? a.map((e) => (0, i.Z)(e.id)) : [],
-        g = v([...b, null != u ? y(u) : null, ...h, ...m], f),
+        g = v([...b, null != u ? y(u) : null, ...p, ...m], f),
         S = (null == o ? void 0 : o.find((e) => (0, r.isEqual)(e, d))) != null,
-        E = null == d || S ? [] : [d.id];
-    return null != l ? x(g.filter((e) => e.type === l)) : x(g, E).slice(0, 15);
+        j = null == d || S ? [] : [d.id];
+    return null != l ? x(g.filter((e) => e.type === l)) : x(g, j).slice(0, 15);
 }
 n(388032);

@@ -139,16 +139,16 @@ let I = r.memo(function (e) {
                     : null,
             [t, l, T, I],
         ),
-        J = (0, a.e7)([O.ZP], () => O.ZP.hasRenderDebugMode(g.GO.WidgetAreas)),
-        q = r.useMemo(() => {
+        q = (0, a.e7)([O.ZP], () => O.ZP.hasRenderDebugMode(g.GO.WidgetAreas)),
+        J = r.useMemo(() => {
             if (null != C) return (e) => C(j(x({}, e), { widget: t }));
         }, [C, t]);
     return (0, i.jsx)(y.Z, {
         className: o()(
             {
-                [b.debug]: J,
-                [b.debugUnpinned]: J && !L,
-                [b.debugPinned]: J && L,
+                [b.debug]: q,
+                [b.debugUnpinned]: q && !L,
+                [b.debugPinned]: q && L,
             },
             N,
         ),
@@ -175,7 +175,7 @@ let I = r.memo(function (e) {
         targetWindow: P,
         forceShowExtras: T,
         renderExtras: X,
-        resizeValidation: q,
+        resizeValidation: J,
         children: K,
     });
 });

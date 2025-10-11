@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(431328),
     d = n(501655),
     u = n(27931),
-    p = n(260979),
-    h = n(766015),
+    h = n(260979),
+    p = n(766015),
     f = n(755515),
     g = n(12779),
     m = n(450369),
@@ -20,9 +20,9 @@ function _(e) {
 }
 let j = (0, a.Z)((e) => {
     var t, n;
-    let { channel: a, width: j, onScroll: x } = e,
+    let { channel: a, width: j, onScroll: O } = e,
         {
-            selectedParticipantId: O,
+            selectedParticipantId: x,
             largeStream: v,
             chatOpen: C,
         } = (0, l.cj)(
@@ -35,8 +35,8 @@ let j = (0, a.Z)((e) => {
             [a.id],
         ),
         I = (0, c.Io)(a.id),
-        E = (0, c.Rk)(a.id, d.pV.AUDIENCE),
-        S = (0, l.e7)([o.Z], () => (null != O ? o.Z.getParticipant(a.id, O) : null)),
+        S = (0, c.Rk)(a.id, d.pV.AUDIENCE),
+        E = (0, l.e7)([o.Z], () => (null != x ? o.Z.getParticipant(a.id, x) : null)),
         Z = (0, c.w8)(a.id, d.pV.SPEAKER),
         T = Z.filter(_),
         P = null != Z.find((e) => e.type === d.Ui.STREAM),
@@ -59,10 +59,10 @@ let j = (0, a.Z)((e) => {
             };
         })(j, R),
         G = v ? j - 32 : Math.min(j - 64, 3 * k + 8),
-        H = (e) => e === D.length - 1 || (0 === E && 1 === e),
+        H = (e) => e === D.length - 1 || (0 === S && 1 === e),
         [F, B] = i.useState(!1),
-        [z, V] = i.useState(!1);
-    return (0, r.jsx)(h.Z, {
+        [V, z] = i.useState(!1);
+    return (0, r.jsx)(p.Z, {
         sections: M,
         renderSection: (e) => {
             let { section: t } = e;
@@ -84,16 +84,16 @@ let j = (0, a.Z)((e) => {
                           "speaker-header-".concat(t),
                       )
                 : 2 === t
-                  ? 0 === E
+                  ? 0 === S
                       ? null
                       : (0, r.jsx)(
                             g.Z,
                             {
-                                participantCount: E,
+                                participantCount: S,
                                 label: b.intl.string(b.t["3foUu7"]),
                                 className: y.header,
-                                onClick: () => V(!z),
-                                collapsed: z,
+                                onClick: () => z(!V),
+                                collapsed: V,
                                 channel: a,
                             },
                             "audience-header-".concat(t),
@@ -129,15 +129,15 @@ let j = (0, a.Z)((e) => {
                                 tileWidth: k,
                                 channel: a,
                                 participants: l,
-                                selectedParticipant: S,
+                                selectedParticipant: E,
                             }),
                         },
                         "speakers-".concat(t, "-").concat(n),
                     );
                 case 2:
-                    if (z) return null;
+                    if (V) return null;
                     return (0, r.jsx)(
-                        p.Z,
+                        h.Z,
                         {
                             channel: a,
                             participants: l,
@@ -149,7 +149,7 @@ let j = (0, a.Z)((e) => {
                     return null;
             }
         },
-        rowHeight: (e) => (null == L[e][0] ? 0 : 0 === e ? G / m.Q + 8 : 1 === e ? (F ? 0 : U) : 98 * !z),
+        rowHeight: (e) => (null == L[e][0] ? 0 : 0 === e ? G / m.Q + 8 : 1 === e ? (F ? 0 : U) : 98 * !V),
         renderFooter: (e) => {
             let { section: t } = e;
             return H(t) ? (0, r.jsx)("div", { className: y.spacer }, "bottom-spacer") : null;
@@ -157,6 +157,6 @@ let j = (0, a.Z)((e) => {
         footerHeight: (e) => (1 === e ? 8 : 0 === e ? 12 : 88 * !!H(e)),
         className: y.scroller,
         chunkSize: 60,
-        onScroll: x,
+        onScroll: O,
     });
 });

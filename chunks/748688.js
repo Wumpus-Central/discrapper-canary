@@ -3,7 +3,7 @@ a.d(e, {
     AJ: () => O,
     Ei: () => C,
     GC: () => U,
-    WU: () => D,
+    WU: () => g,
     db: () => h,
     dz: () => b,
     nm: () => v,
@@ -70,8 +70,8 @@ function O(t) {
         })
         .catch((t) => void 0);
 let P = new WeakMap(),
-    g = !1,
-    D = 30000;
+    D = !1,
+    g = 30000;
 function C() {
     let t = I.m9.Profiler;
     if ("function" != typeof t) {
@@ -81,7 +81,7 @@ function C() {
             );
         return;
     }
-    let e = Math.floor(D / 10);
+    let e = Math.floor(g / 10);
     try {
         return new t({
             sampleInterval: 10,
@@ -93,11 +93,11 @@ function C() {
                 "[Profiling] Failed to initialize the Profiling constructor, this is likely due to a missing 'Document-Policy': 'js-profiling' header.",
             ),
             o.kg.log("[Profiling] Disabling profiling for current user session.")),
-            (g = !0);
+            (D = !0);
     }
 }
 function m(t) {
-    if (g)
+    if (D)
         return (
             l.X && o.kg.log("[Profiling] Profiling has been disabled for the duration of the current user session."), !1
         );

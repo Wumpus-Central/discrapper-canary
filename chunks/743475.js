@@ -1,14 +1,14 @@
 n.d(t, {
     BG: () => f,
-    DO: () => x,
+    DO: () => b,
     pt: () => h,
 }),
     n(388685);
 var r = n(570140),
     i = n(668781),
     l = n(881052),
-    s = n(45966),
-    a = n(637853),
+    a = n(45966),
+    s = n(637853),
     o = n(592125),
     c = n(823379),
     d = n(889369),
@@ -25,15 +25,15 @@ function h(e) {
         channelId: e,
     });
 }
-async function x(e) {
+async function b(e) {
     let t = Array.from(d.Z.editedDefaultChannelIds).filter((e) => null != o.Z.getChannel(e)),
         n = g.Z.advancedMode,
-        [f, h] = (0, a.d9)(e.id, [...t]),
-        x = (0, a.kl)(e.id, t, g.Z.editedOnboardingPrompts),
-        b = (0, a.kl)(e.id, t, g.Z.editedOnboardingPrompts, a.V7);
+        [f, h] = (0, s.d9)(e.id, [...t]),
+        b = (0, s.kl)(e.id, t, g.Z.editedOnboardingPrompts),
+        x = (0, s.kl)(e.id, t, g.Z.editedOnboardingPrompts, s.V7);
     if (
-        s.Z.getEnabled(e.id) &&
-        ((!n && (h.length < m.md || f.length < m.X)) || (n && (x.length < m.md || b.length < m.X)))
+        a.Z.getEnabled(e.id) &&
+        ((!n && (h.length < m.md || f.length < m.X)) || (n && (b.length < m.md || x.length < m.X)))
     )
         return void i.Z.show({
             title: p.intl.string(p.t.iLdiqa),

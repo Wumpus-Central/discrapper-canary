@@ -2,8 +2,8 @@ n.d(t, { Z: () => f }), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    s = n(481060),
-    a = n(596454),
+    a = n(481060),
+    s = n(596454),
     o = n(318766),
     c = n(907040),
     d = n(456268),
@@ -19,22 +19,22 @@ let p = (e) => {
                 onSelectEmoji: p,
                 onClearPressed: f,
                 reasonMinLength: h,
-                reasonMaxLength: x,
-                placeholder: b,
+                reasonMaxLength: b,
+                placeholder: x,
                 position: j,
             } = e,
-            _ = i.useRef(null),
-            [v, C] = i.useState(!1),
+            v = i.useRef(null),
+            [_, C] = i.useState(!1),
             O = (0, l.e7)([u.Z], () => u.Z.isGuildMetadataLoaded()),
-            y = (0, r.jsx)(s.yRy, {
-                targetElementRef: _,
+            y = (0, r.jsx)(a.yRy, {
+                targetElementRef: v,
                 onRequestClose: () => {
                     C(!1);
                 },
-                shouldShow: v,
+                shouldShow: _,
                 position: "right",
                 align: "top",
-                animation: s.yRy.Animation.NONE,
+                animation: a.yRy.Animation.NONE,
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (0, r.jsx)(c.Z, {
@@ -56,21 +56,21 @@ let p = (e) => {
                         renderButtonContents:
                             null != d
                                 ? () =>
-                                      (0, r.jsx)(a.Z, {
+                                      (0, r.jsx)(s.Z, {
                                           emojiName: d,
                                           animated: !1,
                                       })
                                 : null,
-                        ref: _,
+                        ref: v,
                     }),
             });
         return (0, r.jsx)(
-            s.oil,
+            a.oil,
             {
-                placeholder: b,
+                placeholder: x,
                 value: n,
                 minLength: h,
-                maxLength: x,
+                maxLength: b,
                 defaultDirty: (null == n ? void 0 : n.length) > 0,
                 leading: {
                     type: "emoji",
@@ -87,7 +87,7 @@ let p = (e) => {
     },
     f = (e) => {
         let { reasonMinLength: t, reasonMaxLength: n, guildId: i, reasons: l } = e,
-            a = [
+            s = [
                 m.intl.string(m.t["9dhBGh"]),
                 m.intl.string(m.t["8RmhKC"]),
                 m.intl.string(m.t["2t0V8/"]),
@@ -143,7 +143,7 @@ let p = (e) => {
                         })(
                             {
                                 position: e,
-                                placeholder: a[e],
+                                placeholder: s[e],
                             },
                             l[e],
                         ),
@@ -173,7 +173,7 @@ let p = (e) => {
                     "reasonListItem-" + e,
                 ),
             );
-        return (0, r.jsx)(s.Kqy, {
+        return (0, r.jsx)(a.Kqy, {
             gap: 16,
             children: o,
         });

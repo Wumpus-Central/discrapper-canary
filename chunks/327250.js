@@ -22,14 +22,14 @@ var l = n(120356),
     f = n(158776),
     R = n(944486),
     S = n(885110),
-    C = n(594174),
-    p = n(572004),
+    p = n(594174),
+    C = n(572004),
     D = n(5192),
     L = n(51144),
     U = n(131085),
     M = n(388032),
     x = n(428331);
-function v(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,7 +54,7 @@ function v(e) {
     }
     return e;
 }
-function b(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -170,7 +170,7 @@ function j(e) {
         text: n,
         children: (0, r.jsx)(
             o.P3F,
-            b(v({}, c), {
+            v(b({}, c), {
                 tag: t,
                 "aria-label": n,
                 className: i()(x.bottomRowAction, { [x.bottomRowActionDisabled]: l }),
@@ -191,11 +191,11 @@ function y(e) {
             canBanUser: N,
             canModerateMembers: f,
         } = (0, s.cj)(
-            [O.Z, C.default, h.Z],
+            [O.Z, p.default, h.Z],
             () => ({
                 canKickUser: (0, A.BK)(t, a),
                 canBanUser: (0, A.mm)(t, a),
-                canModerateMembers: null != a && (0, _.F)(a.id, t.id, [C.default, h.Z, O.Z]),
+                canModerateMembers: null != a && (0, _.F)(a.id, t.id, [p.default, h.Z, O.Z]),
             }),
             [t, a],
         ),
@@ -238,7 +238,7 @@ function y(e) {
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                b(v({}, n), {
+                                v(b({}, n), {
                                     location: L,
                                     guildId: i,
                                     user: t,
@@ -263,7 +263,7 @@ function y(e) {
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                b(v({}, n), {
+                                v(b({}, n), {
                                     location: L,
                                     guildId: i,
                                     user: t,
@@ -306,9 +306,9 @@ function y(e) {
             (0, r.jsx)(j, {
                 text: M.intl.string(M.t.IHTjzM),
                 onClick: () => {
-                    U(T.jQ.COPY_ID), (0, p.JG)(t.id);
+                    U(T.jQ.COPY_ID), (0, C.JG)(t.id);
                 },
-                disabled: !p.wS,
+                disabled: !C.wS,
                 children: (0, r.jsx)(o.VuL, {
                     size: "custom",
                     width: 24,
@@ -321,7 +321,7 @@ function y(e) {
 }
 function G(e) {
     let { userId: t, guildId: n, onClose: l } = e,
-        i = (0, s.e7)([C.default], () => C.default.getUser(t), [t]),
+        i = (0, s.e7)([p.default], () => p.default.getUser(t), [t]),
         a = (0, s.e7)([N.ZP], () => N.ZP.getMember(n, t), [n, t]);
     return null == i || null == a
         ? null

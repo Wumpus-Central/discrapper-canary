@@ -1,6 +1,6 @@
 n.d(e, {
     default: () => _,
-    x: () => g,
+    x: () => m,
 }),
     n(388685);
 var i,
@@ -12,9 +12,9 @@ var i,
     l = n(684471),
     d = n(745982),
     u = n(463439),
-    x = n(388032),
-    p = n(35853);
-function h(t) {
+    p = n(388032),
+    x = n(35853);
+function g(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             i = Object.keys(n);
@@ -39,7 +39,7 @@ function h(t) {
     }
     return t;
 }
-function m(t, e) {
+function h(t, e) {
     return (
         (e = null != e ? e : {}),
         Object.getOwnPropertyDescriptors
@@ -57,13 +57,13 @@ function m(t, e) {
         t
     );
 }
-var g =
+var m =
     (((i = {})[(i.INTRO = 0)] = "INTRO"),
     (i[(i.SAFETY_TIPS = 1)] = "SAFETY_TIPS"),
     (i[(i.TAKE_ACTION = 2)] = "TAKE_ACTION"),
     i);
 let _ = (t) => {
-    let { warningId: e, warningType: n, senderId: i, modalProps: g, channelId: _ } = t,
+    let { warningId: e, warningType: n, senderId: i, modalProps: m, channelId: _ } = t,
         [f, b] = s.useState(0),
         O = s.useMemo(
             () => ({
@@ -76,11 +76,11 @@ let _ = (t) => {
             [_, i, e, n],
         );
     s.useEffect(() => {
-        (0, c.KQ)(m(h({}, O), { viewName: c.pb.SAFETY_TAKEOVER_MODAL }));
+        (0, c.KQ)(h(g({}, O), { viewName: c.pb.SAFETY_TAKEOVER_MODAL }));
     }, [O]);
     let v = s.useCallback(
             (t) => {
-                (0, c.qc)(m(h({}, O), { cta: t }));
+                (0, c.qc)(h(g({}, O), { cta: t }));
             },
             [O],
         ),
@@ -90,11 +90,11 @@ let _ = (t) => {
     }
     return (0, r.jsxs)(a.Y0X, {
         "data-migration-pending": !0,
-        transitionState: g.transitionState,
+        transitionState: m.transitionState,
         parentComponent: "InappropriateConversationModal",
         children: [
             (0, r.jsx)("div", {
-                className: p.container,
+                className: x.container,
                 children: (0, r.jsxs)(a.MyZ, {
                     width: 440,
                     activeSlide: f,
@@ -137,14 +137,14 @@ let _ = (t) => {
             }),
             (0, r.jsxs)(a.mzw, {
                 "data-migration-pending": !0,
-                className: p.footer,
+                className: x.footer,
                 children: [
                     (0, r.jsx)(a.Avr, {
                         variant: "secondary",
                         size: "sm",
-                        text: x.intl.string(x.t.cpT0Cg),
+                        text: p.intl.string(p.t.cpT0Cg),
                         onClick: function () {
-                            g.onClose(), (0, o.T)(_, [e]), v(c.NM.USER_TAKEOVER_MODAL_DISMISS);
+                            m.onClose(), (0, o.T)(_, [e]), v(c.NM.USER_TAKEOVER_MODAL_DISMISS);
                         },
                         textVariant: "text-sm/normal",
                     }),
@@ -152,7 +152,7 @@ let _ = (t) => {
                         (0, r.jsx)(a.Avr, {
                             variant: "secondary",
                             size: "sm",
-                            text: x.intl.string(x.t["13/7kZ"]),
+                            text: p.intl.string(p.t["13/7kZ"]),
                             textVariant: "text-sm/normal",
                             onClick: () => E(0),
                         }),

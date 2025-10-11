@@ -17,11 +17,11 @@ var r = n(913527),
     _ = n(430824),
     O = n(131951),
     E = n(292959),
-    y = n(699516),
-    v = n(944486),
+    v = n(699516),
+    y = n(944486),
     I = n(9156),
-    S = n(594174),
-    C = n(51144),
+    C = n(594174),
+    S = n(51144),
     T = n(196051),
     N = n(441729),
     j = n(653477),
@@ -38,8 +38,8 @@ function D(e, t, n, r) {
             .replace(R, x.intl.string(x.t["F+x38P"]))
             .replace(/<@!?(\d+)>/g, (e, t) => {
                 var r;
-                let i = S.default.getUser(t);
-                return null == i ? e : null != (r = m.ZP.getNick(n, i.id)) ? r : C.ZP.getName(i);
+                let i = C.default.getUser(t);
+                return null == i ? e : null != (r = m.ZP.getNick(n, i.id)) ? r : S.ZP.getName(i);
             })
             .replace(/<@&?(\d+)>/g, (e, t) => {
                 let n = null != l ? b.Z.getRole(l.id, t) : null;
@@ -47,7 +47,7 @@ function D(e, t, n, r) {
             })
             .replace(/<#(\d+)>/g, (e, t) => {
                 let n = g.Z.getChannel(t);
-                return null == n ? e : (0, s.F6)(n, S.default, y.Z);
+                return null == n ? e : (0, s.F6)(n, C.default, v.Z);
             })
             .replace(/<a?:(\w+):(\d+)>/g, (e, t) => "".concat(x.intl.string(x.t.sMOuub), " ").concat(t))
             .replace(/<\/([^\s]+?):(\d+)>/g, (e, t) => "/".concat(t))
@@ -115,10 +115,10 @@ function H(e) {
             null != o
                 ? null != (n = m.ZP.getNick(l.guild_id, null == o ? void 0 : o.id))
                     ? n
-                    : C.ZP.getName(o)
+                    : S.ZP.getName(o)
                 : null,
         c = l.getGuildId(),
-        d = null != (r = m.ZP.getNick(c, i.author.id)) ? r : C.ZP.getName(i.author);
+        d = null != (r = m.ZP.getNick(c, i.author.id)) ? r : S.ZP.getName(i.author);
     return U(D(i.content, d, c, s), !0, l.id, i.id), !0;
 }
 function V(e) {
@@ -127,26 +127,26 @@ function V(e) {
     if (c || O.Z.isSelfDeaf()) return !1;
     let u = g.Z.getChannel(o);
     if (null == u) return !1;
-    let d = v.Z.getChannelId(),
+    let d = y.Z.getChannelId(),
         b = h.ZP.getCurrentSidebarChannelId(d),
         _ = o === d || o === b,
-        S = p.OW.getSetting() && s.tts && _,
+        C = p.OW.getSetting() && s.tts && _,
         T = E.Z.getTTSType(),
         N =
             (null == (t = s.author) ? void 0 : t.id) !== f.default.getId() &&
             (T === P.PrB.ALL_CHANNELS || (T === P.PrB.SELECTED_CHANNEL && _));
-    if ((S || N) && !y.Z.isBlockedOrIgnoredForMessage(s)) {
+    if ((C || N) && !v.Z.isBlockedOrIgnoredForMessage(s)) {
         if (A.indexOf(s.id) >= 0) return !1;
         A.unshift(s.id) > 10 && A.pop();
         let e = u.getGuildId();
         if (null != e && I.ZP.getMutedChannels(e).has(o)) return !1;
         let t =
                 null !=
-                (l = null != (i = m.ZP.getNick(e, null == (n = s.author) ? void 0 : n.id)) ? i : C.ZP.getName(s.author))
+                (l = null != (i = m.ZP.getNick(e, null == (n = s.author) ? void 0 : n.id)) ? i : S.ZP.getName(s.author))
                     ? l
                     : "",
             c = s.type === P.uaV.REPLY ? (null == (r = s.referenced_message) ? void 0 : r.author) : null,
-            d = null != c ? (null != (a = m.ZP.getNick(e, null == c ? void 0 : c.id)) ? a : C.ZP.getName(c)) : null;
+            d = null != c ? (null != (a = m.ZP.getNick(e, null == c ? void 0 : c.id)) ? a : S.ZP.getName(c)) : null;
         U(D(s.content, t, e, d), !1, u.id, s.id, j.f);
     }
     return !1;

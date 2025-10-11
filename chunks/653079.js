@@ -1,44 +1,44 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => f });
 var i = n(951288),
     r = n(120356),
-    a = n.n(r),
-    l = n(442837),
-    o = n(481060),
-    s = n(884697),
-    c = n(449217),
-    d = n(709999),
+    l = n.n(r),
+    a = n(442837),
+    s = n(481060),
+    o = n(884697),
+    d = n(449217),
+    c = n(709999),
     u = n(22267),
     p = n(29121),
     _ = n(25990),
-    m = n(74538),
-    h = n(388032),
+    h = n(74538),
+    m = n(388032),
     g = n(763740);
-let b = (e) => {
+let f = (e) => {
     let { user: t, guildId: n, selectedNameplate: r } = e,
-        b = (0, l.e7)([_.Z], () => _.Z.getPendingGlobalName()),
-        { product: v, purchase: x } = (0, c.Z)(null == r ? void 0 : r.skuId),
-        C = (0, p.kd)(v),
-        f = m.ZP.canUseCollectibles(t),
-        I = (0, s.qS)(x),
-        P = (0, s.G1)(v),
-        y = !f && I,
-        w = null == x || y;
+        f = (0, a.e7)([_.Z], () => _.Z.getPendingGlobalName()),
+        { product: I, purchase: b } = (0, d.Z)(null == r ? void 0 : r.skuId),
+        v = (0, p.kd)(I),
+        S = h.ZP.canUseCollectibles(t),
+        x = (0, o.qS)(b),
+        C = (0, o.G1)(I),
+        E = !S && x,
+        y = null == b || E;
     return (0, i.jsxs)("div", {
-        className: a()(g.previewBorder, { [g.upsell]: null != r && w }),
+        className: l()(g.previewBorder, { [g.upsell]: null != r && y }),
         children: [
             (0, i.jsx)("div", {
                 className: g.previewBox,
                 role: "img",
-                "aria-label": h.intl.string(h.t.SZeUdX),
+                "aria-label": m.intl.string(m.t.SZeUdX),
                 children: (0, i.jsxs)("div", {
                     className: g.previewContents,
                     "aria-hidden": !0,
                     children: [
-                        (0, i.jsx)(d.d, {
+                        (0, i.jsx)(c.d, {
                             width: 124,
                             opacity: 0.9,
                         }),
-                        (0, i.jsx)(d.d, {
+                        (0, i.jsx)(c.d, {
                             width: 124,
                             opacity: 0.9,
                         }),
@@ -46,14 +46,14 @@ let b = (e) => {
                             user: t,
                             guildId: n,
                             nameplate: r,
-                            pendingGlobalName: b,
+                            pendingGlobalName: f,
                             isHighlighted: !0,
                         }),
-                        (0, i.jsx)(d.d, {
+                        (0, i.jsx)(c.d, {
                             width: 124,
                             opacity: 0.9,
                         }),
-                        (0, i.jsx)(d.d, {
+                        (0, i.jsx)(c.d, {
                             width: 124,
                             opacity: 0.9,
                         }),
@@ -64,20 +64,20 @@ let b = (e) => {
                 (0, i.jsxs)("div", {
                     className: g.previewDescription,
                     children: [
-                        (0, i.jsx)(o.Text, {
+                        (0, i.jsx)(s.Text, {
                             variant: "text-sm/semibold",
-                            children: C,
+                            children: v,
                         }),
-                        w &&
-                            (0, i.jsx)(o.Text, {
+                        y &&
+                            (0, i.jsx)(s.Text, {
                                 variant: "text-sm/normal",
-                                children: y
-                                    ? h.intl.string(h.t.nD78oa)
-                                    : P && f
-                                      ? h.intl.string(h.t.hmyYKy)
-                                      : P
-                                        ? h.intl.string(h.t.JY1i0t)
-                                        : h.intl.string(h.t.fEGjVV),
+                                children: E
+                                    ? m.intl.string(m.t.nD78oa)
+                                    : C && S
+                                      ? m.intl.string(m.t.hmyYKy)
+                                      : C
+                                        ? m.intl.string(m.t.JY1i0t)
+                                        : m.intl.string(m.t.fEGjVV),
                             }),
                     ],
                 }),

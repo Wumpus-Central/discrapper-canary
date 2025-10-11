@@ -52,8 +52,8 @@ function c(e, t) {
 }
 let d = [],
     u = {},
-    p = {};
-class h extends (r = i.ZP.Store) {
+    h = {};
+class p extends (r = i.ZP.Store) {
     getSearchState(e) {
         var t;
         return null != (t = u[e])
@@ -65,16 +65,16 @@ class h extends (r = i.ZP.Store) {
     }
     getSearchResults(e, t) {
         var n, r, i;
-        return null != (i = null == (r = p[e]) || null == (n = r[t]) ? void 0 : n.results) ? i : d;
+        return null != (i = null == (r = h[e]) || null == (n = r[t]) ? void 0 : n.results) ? i : d;
     }
     shouldFetch(e, t) {
         var n, r;
-        let i = null == (r = p[e]) || null == (n = r[t]) ? void 0 : n.lastSearchedAt;
+        let i = null == (r = h[e]) || null == (n = r[t]) ? void 0 : n.lastSearchedAt;
         return null == i || Date.now() - i > 120000;
     }
 }
-s(h, "displayName", "GuildDirectorySearchStore");
-let f = new h(l.Z, {
+s(p, "displayName", "GuildDirectorySearchStore");
+let f = new p(l.Z, {
     GUILD_DIRECTORY_SEARCH_START: function (e) {
         let { channelId: t, query: n } = e;
         u[t] = {
@@ -90,7 +90,7 @@ let f = new h(l.Z, {
             let t = (0, a.MQ)(e);
             i.push(t);
         }),
-            (p[t] = c(o({}, p[t]), {
+            (h[t] = c(o({}, h[t]), {
                 [n]: {
                     results: (0, a.Th)(i),
                     lastSearchedAt: Date.now(),
@@ -120,9 +120,9 @@ let f = new h(l.Z, {
         let { channelId: n, guildId: r } = e,
             i = null == (t = u[n]) ? void 0 : t.mostRecentQuery;
         if (null == i) return;
-        let l = p[n][i];
+        let l = h[n][i];
         if (null == l) return;
         let a = l.results.filter((e) => e.guildId !== r);
-        p[n] = c(o({}, p[n]), { [u[n].mostRecentQuery]: c(o({}, l), { results: a }) });
+        h[n] = c(o({}, h[n]), { [u[n].mostRecentQuery]: c(o({}, l), { results: a }) });
     },
 });

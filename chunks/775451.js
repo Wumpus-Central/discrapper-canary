@@ -48,10 +48,10 @@ let f = {
                     E(e ? d.b.SELECTED : d.b.DEFAULT),
                     T(e);
             }, [S, g]),
-            k = r.useCallback(() => {
+            w = r.useCallback(() => {
                 S && I();
             }, [S, I]),
-            w = (0, s.Z)(null, k),
+            k = (0, s.Z)(null, w),
             R = r.useMemo(
                 () =>
                     (0, a.jsx)(u.L, {
@@ -87,7 +87,7 @@ let f = {
                             [x.hidden]: O,
                             [x.visible]: !O,
                         }),
-                        ref: w,
+                        ref: k,
                         children: R,
                     }),
             ],

@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var r,
     i,
     l = n(442837),
-    s = n(570140),
-    a = n(999382),
+    a = n(570140),
+    s = n(999382),
     o = n(740903),
     c = n(981631);
 let d = o.u.OVERVIEW,
@@ -41,10 +41,10 @@ class m extends (i = l.ZP.Store) {
           writable: !0,
       })
     : (m[r] = "GuildSettingsSafetyStore");
-let p = new m(s.Z, {
+let p = new m(a.Z, {
     GUILD_SETTINGS_INIT: function () {
-        if (a.Z.getGuildId() === u) return !1;
-        u = a.Z.getGuildId();
+        if (s.Z.getGuildId() === u) return !1;
+        u = s.Z.getGuildId();
     },
     GUILD_SETTINGS_SET_SECTION: g,
     GUILD_SETTINGS_SAFETY_SET_SUBSECTION: g,

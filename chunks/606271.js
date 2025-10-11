@@ -17,11 +17,11 @@ var r = n(442837),
     _ = n(823379),
     O = n(358085),
     E = n(914946),
-    y = n(238679),
-    v = n(863141),
+    v = n(238679),
+    y = n(863141),
     I = n(981631),
-    S = n(701488),
-    C = n(408491),
+    C = n(701488),
+    S = n(408491),
     T = n(65154);
 function N(e, t, n) {
     return (
@@ -225,7 +225,7 @@ class j {
             N(this, "handleActivityLayoutModeUpdate", (e) => {
                 let { applicationId: t, layoutMode: n } = e;
                 if (0 === this.rpcServer.subscriptions.length) return;
-                let r = n !== S.cE.FOCUSED;
+                let r = n !== C.cE.FOCUSED;
                 this.rpcServer.dispatchToSubscriptions(
                     I.zMe.ACTIVITY_PIP_MODE_UPDATE,
                     (e) => e.socket.application.id === t,
@@ -240,8 +240,8 @@ class j {
             N(this, "handleFrameUpdateLayoutMode", (e) => {
                 let { applicationId: t, layoutMode: n } = e;
                 if (0 === this.rpcServer.subscriptions.length) return;
-                let r = n === C.U.PIP ? S.cE.PIP : S.cE.FOCUSED,
-                    i = r !== S.cE.FOCUSED;
+                let r = n === S.U.PIP ? C.cE.PIP : C.cE.FOCUSED,
+                    i = r !== C.cE.FOCUSED;
                 this.rpcServer.dispatchToSubscriptions(
                     I.zMe.ACTIVITY_PIP_MODE_UPDATE,
                     (e) => e.socket.application.id === t,
@@ -270,7 +270,7 @@ class j {
             }),
             N(this, "handleEmbeddedActivityUpdate", () => {
                 if (0 === this.rpcServer.subscriptions.length) return;
-                let e = (0, y.dO)();
+                let e = (0, v.dO)();
                 this.rpcServer.dispatchToSubscriptions(I.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {}, e);
             }),
             N(this, "handleActivityMessage", (e) => {
@@ -295,7 +295,7 @@ class j {
                             I.zMe.ACTIVITY_INVITE,
                             (e) => e.socket.application.id === c,
                             {
-                                user: (0, v.Z)(a),
+                                user: (0, y.Z)(a),
                                 activity: s,
                                 type: l.type,
                                 channel_id: n,
@@ -308,7 +308,7 @@ class j {
                             I.zMe.ACTIVITY_JOIN_REQUEST,
                             (e) => e.socket.application.id === c,
                             {
-                                user: (0, v.Z)(a),
+                                user: (0, y.Z)(a),
                                 activity: s,
                                 type: l.type,
                                 channel_id: n,

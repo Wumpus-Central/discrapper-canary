@@ -1,13 +1,13 @@
 a.d(t, {
-    fw: () => i,
+    fw: () => r,
     qy: () => c,
     sJ: () => o,
 });
 var n,
     s,
     l = a(544891),
-    r = a(981631),
-    i =
+    i = a(981631),
+    r =
         (((n = {}).HCAPTCHA_RQDATA = "hCaptchaRqdata"),
         (n.SMITE_RQDATA = "SmiteRqdata"),
         (n.RECAPTCHA = "Recaptcha"),
@@ -21,7 +21,7 @@ var n,
         s);
 async function c(e, t) {
     await l.tn.post({
-        url: r.ANM.CAPTCHA_TEST,
+        url: i.ANM.CAPTCHA_TEST,
         body: {
             decider: e,
             options: t,

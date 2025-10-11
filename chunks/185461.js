@@ -27,8 +27,8 @@ let E = n.n,
     h = "Name",
     O = "Thank you for your report!",
     P = "(required)",
-    g = "Add a screenshot",
-    D = "Remove screenshot",
+    D = "Add a screenshot",
+    g = "Remove screenshot",
     C = (t, e = { includeReplay: !0 }) => {
         if (!t.message) throw Error("Unable to submit feedback with empty message");
         let a = (0, r.s3)();
@@ -159,7 +159,7 @@ let W =
         colorScheme: K = "system",
         themeLight: k = {},
         themeDark: x = {},
-        addScreenshotButtonLabel: F = g,
+        addScreenshotButtonLabel: F = D,
         cancelButtonLabel: V = u,
         confirmButtonLabel: j = d,
         emailLabel: X = T,
@@ -170,7 +170,7 @@ let W =
         messagePlaceholder: Z = f,
         nameLabel: Q = h,
         namePlaceholder: tt = p,
-        removeScreenshotButtonLabel: te = D,
+        removeScreenshotButtonLabel: te = g,
         submitButtonLabel: ta = R,
         successMessageText: tr = O,
         triggerLabel: t_ = I,
@@ -824,20 +824,20 @@ function tc(t, e, a, r, _, n, o, i, c, E) {
         h,
         O,
         P,
-        g = e.type;
+        D = e.type;
     if (void 0 !== e.constructor) return null;
     128 & a.__u && ((c = !!(32 & a.__u)), (n = [(i = e.__e = a.__e)])), (s = B.__b) && s(e);
-    e: if ("function" == typeof g)
+    e: if ("function" == typeof D)
         try {
             if (
                 ((A = e.props),
-                (T = (s = g.contextType) && r[s.__c]),
+                (T = (s = D.contextType) && r[s.__c]),
                 (f = s ? (T ? T.props.value : s.__) : r),
                 a.__c
                     ? (N = (l = e.__c = a.__c).__ = l.__E)
-                    : ("prototype" in g && g.prototype.render
-                          ? (e.__c = l = new g(A, f))
-                          : ((e.__c = l = new Q(A, f)), (l.constructor = g), (l.render = tI)),
+                    : ("prototype" in D && D.prototype.render
+                          ? (e.__c = l = new D(A, f))
+                          : ((e.__c = l = new Q(A, f)), (l.constructor = D), (l.render = tI)),
                       T && T.sub(l),
                       (l.props = A),
                       l.state || (l.state = {}),
@@ -847,18 +847,18 @@ function tc(t, e, a, r, _, n, o, i, c, E) {
                       (l.__h = []),
                       (l._sb = [])),
                 null == l.__s && (l.__s = l.state),
-                null != g.getDerivedStateFromProps &&
-                    (l.__s == l.state && (l.__s = $({}, l.__s)), $(l.__s, g.getDerivedStateFromProps(A, l.__s))),
+                null != D.getDerivedStateFromProps &&
+                    (l.__s == l.state && (l.__s = $({}, l.__s)), $(l.__s, D.getDerivedStateFromProps(A, l.__s))),
                 (u = l.props),
                 (R = l.state),
                 (l.__v = e),
                 I)
             )
-                null == g.getDerivedStateFromProps && null != l.componentWillMount && l.componentWillMount(),
+                null == D.getDerivedStateFromProps && null != l.componentWillMount && l.componentWillMount(),
                     null != l.componentDidMount && l.__h.push(l.componentDidMount);
             else {
                 if (
-                    (null == g.getDerivedStateFromProps &&
+                    (null == D.getDerivedStateFromProps &&
                         A !== u &&
                         null != l.componentWillReceiveProps &&
                         l.componentWillReceiveProps(A, f),
@@ -894,7 +894,7 @@ function tc(t, e, a, r, _, n, o, i, c, E) {
                 (l.__e = !1),
                 (p = B.__r),
                 (h = 0),
-                "prototype" in g && g.prototype.render)
+                "prototype" in D && D.prototype.render)
             ) {
                 for (
                     l.state = l.__s, l.__d = !1, p && p(e), s = l.render(l.props, l.state, l.context), O = 0;
@@ -1112,8 +1112,8 @@ var tu,
     th = tL.__r,
     tO = tL.diffed,
     tP = tL.__c,
-    tg = tL.unmount,
-    tD = tL.__;
+    tD = tL.unmount,
+    tg = tL.__;
 function tC(t, e) {
     tL.__h && tL.__h(tR, t, tA || e), (tA = 0);
     var a =
@@ -1208,7 +1208,7 @@ function tb() {
     (tR = null), tp && tp(t);
 }),
     (tL.__ = function (t, e) {
-        e.__k && e.__k.__m && (t.__m = e.__k.__m), tD && tD(t, e);
+        e.__k && e.__k.__m && (t.__m = e.__k.__m), tg && tg(t, e);
     }),
     (tL.__r = function (t) {
         th && th(t), (tu = 0);
@@ -1264,7 +1264,7 @@ function tb() {
             tP && tP(t, e);
     }),
     (tL.unmount = function (t) {
-        tg && tg(t);
+        tD && tD(t);
         var e,
             a = t.__c;
         a &&
@@ -1457,7 +1457,7 @@ function tF({
             submitButtonLabel: O,
             isRequiredLabel: P,
         } = t,
-        [g, D] = tm(null),
+        [D, g] = tm(null),
         [C, v] = tm(!1),
         S = s && s.input,
         [y, U] = tm(null),
@@ -1482,7 +1482,7 @@ function tF({
                     nameLabel: p,
                 });
                 return (
-                    e.length > 0 ? D(`Please enter in the following required fields: ${e.join(", ")}`) : D(null),
+                    e.length > 0 ? g(`Please enter in the following required fields: ${e.join(", ")}`) : g(null),
                     0 === e.length
                 );
             },
@@ -1518,7 +1518,7 @@ function tF({
                             ),
                                 n(r);
                         } catch (t) {
-                            m && i.kg.error(t), D(t), o(t);
+                            m && i.kg.error(t), g(t), o(t);
                         }
                     } catch (t) {}
                 },
@@ -1561,7 +1561,7 @@ function tF({
                         lineNumber: 150,
                     },
                 },
-                g
+                D
                     ? z(
                           "div",
                           {
@@ -1572,7 +1572,7 @@ function tF({
                                   lineNumber: 151,
                               },
                           },
-                          g,
+                          D,
                       )
                     : null,
                 E

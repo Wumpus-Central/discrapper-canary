@@ -6,8 +6,8 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    s = n(28664),
-    a = n(481060),
+    a = n(28664),
+    s = n(481060),
     o = n(264451),
     c = n(75775),
     d = n(388032),
@@ -15,12 +15,12 @@ var i = n(120356),
 let g = (e) => {
         let { value: t, isPercent: n } = e;
         if (null == t) return null;
-        let { formattedValue: i, isPositive: s } = (0, o.m5)(t, n);
+        let { formattedValue: i, isPositive: a } = (0, o.m5)(t, n);
         return (0, r.jsxs)("div", {
             className: u.trendContainer,
             children: [
-                (0, r.jsx)(c.Z, { className: l()(u.chartLineIcon, { [u.chartLineIconNegative]: !s }) }),
-                (0, r.jsx)(a.Text, {
+                (0, r.jsx)(c.Z, { className: l()(u.chartLineIcon, { [u.chartLineIconNegative]: !a }) }),
+                (0, r.jsx)(s.Text, {
                     variant: "text-md/normal",
                     className: u.trendDescription,
                     children: d.intl.format(d.t.OTHOvb, { value: i }),
@@ -38,22 +38,22 @@ let g = (e) => {
                         (0, r.jsxs)("div", {
                             className: u.labelContainer,
                             children: [
-                                (0, r.jsx)(a.Text, {
+                                (0, r.jsx)(s.Text, {
                                     variant: "text-xs/medium",
                                     className: u.label,
                                     children: t,
                                 }),
                                 null != o &&
-                                    (0, r.jsx)(s.u, {
+                                    (0, r.jsx)(a.u, {
                                         text: o,
-                                        children: (0, r.jsx)(a.d3s, {
+                                        children: (0, r.jsx)(s.d3s, {
                                             size: "xs",
                                             color: "currentColor",
                                             className: u.labelTooltipIcon,
                                         }),
                                     }),
                                 null != n
-                                    ? (0, r.jsx)(a.Text, {
+                                    ? (0, r.jsx)(s.Text, {
                                           variant: "text-xs/normal",
                                           className: u.sublabel,
                                           children: n,
@@ -61,7 +61,7 @@ let g = (e) => {
                                     : null,
                             ],
                         }),
-                        (0, r.jsx)(a.Text, {
+                        (0, r.jsx)(s.Text, {
                             className: u.value,
                             variant: "text-sm/normal",
                             children: i,

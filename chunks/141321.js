@@ -19,26 +19,26 @@ var r = n(951288),
 function E(e) {
     let { onOpen: t, onClose: n, "data-jump-section": l } = e,
         E = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
-        y = i.useRef(null),
-        v = (0, o.e7)(
+        v = i.useRef(null),
+        y = (0, o.e7)(
             [h.ZP],
             () => (null == E ? void 0 : E.id) != null && h.ZP.getMentionCount(E.id, b.W.NOTIFICATION_CENTER) > 0,
         ),
-        { titlebarIconSize: I, titlebarHoverHighlight: S } = (0, p.T)({ location: "RecentsButton" }),
-        C = "sm" === I ? "refresh_sm" : "md",
+        { titlebarIconSize: I, titlebarHoverHighlight: C } = (0, p.T)({ location: "RecentsButton" }),
+        S = "sm" === I ? "refresh_sm" : "md",
         T = i.useMemo(
             () =>
                 (0, r.jsx)(u.xx7, {
-                    size: C,
+                    size: S,
                     color: "currentColor",
                 }),
-            [C],
+            [S],
         );
     return (0, r.jsx)(m.k, {
-        targetElementRef: y,
+        targetElementRef: v,
         onOpen: t,
         onClose: n,
-        badgeState: { badgeForYou: v },
+        badgeState: { badgeForYou: y },
         popoutPosition: "bottom",
         popoutAlign: "right",
         children: (e, t, n, i) => {
@@ -46,7 +46,7 @@ function E(e) {
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(c.u, {
-                        targetElementRef: y,
+                        targetElementRef: v,
                         shouldShow: !t,
                         text: _.intl.string(_.t.GSmTKC),
                         children: (0, r.jsx)(
@@ -79,23 +79,23 @@ function E(e) {
                             (p = p =
                                 {
                                     tag: "div",
-                                    innerRef: y,
+                                    innerRef: v,
                                     onClick: e,
                                     "data-jump-section": l,
                                     "aria-label": _.intl.string(_.t.GSmTKC),
-                                    className: a()(O.clickable, { [O.withHighlight]: S }),
+                                    className: a()(O.clickable, { [O.withHighlight]: C }),
                                     children:
-                                        v || i
+                                        y || i
                                             ? (0, r.jsxs)(r.Fragment, {
                                                   children: [
                                                       (0, r.jsx)(d.ZP, {
                                                           mask: d.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
-                                                          height: s.Z[C],
-                                                          width: s.Z[C],
+                                                          height: s.Z[S],
+                                                          width: s.Z[S],
                                                           children: T,
                                                       }),
                                                       (0, r.jsx)("span", {
-                                                          className: a()(O.badge, { [O.smol]: "refresh_sm" === C }),
+                                                          className: a()(O.badge, { [O.smol]: "refresh_sm" === S }),
                                                       }),
                                                   ],
                                               })
@@ -118,7 +118,7 @@ function E(e) {
                     }),
                     (0, r.jsx)(f.U, {
                         location: "inbox-button",
-                        targetElementRef: y,
+                        targetElementRef: v,
                     }),
                 ],
             });

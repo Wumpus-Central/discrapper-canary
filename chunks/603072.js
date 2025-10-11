@@ -1,38 +1,38 @@
-n.r(t), n.d(t, { default: () => w }), n(388685);
-var l = n(951288),
-    r = n(647438),
-    i = n(120356),
-    a = n.n(i),
-    o = n(442837),
-    s = n(704215),
-    c = n(692547),
-    d = n(481060),
-    u = n(252618),
-    m = n(266454),
-    h = n(984370),
-    p = n(216306),
-    f = n(104155),
-    g = n(22082),
-    x = n(433355),
-    _ = n(430824),
-    C = n(31445),
-    b = n(59350),
-    j = n(290511),
-    v = n(176505),
-    y = n(921944),
-    O = n(388032),
-    N = n(126512),
-    Z = n(97009);
+t.r(n), t.d(n, { default: () => w }), t(388685);
+var l = t(951288),
+    r = t(647438),
+    i = t(120356),
+    a = t.n(i),
+    o = t(442837),
+    s = t(704215),
+    c = t(692547),
+    d = t(481060),
+    u = t(252618),
+    m = t(266454),
+    h = t(984370),
+    p = t(216306),
+    f = t(104155),
+    g = t(22082),
+    x = t(433355),
+    _ = t(430824),
+    C = t(31445),
+    b = t(59350),
+    j = t(290511),
+    v = t(176505),
+    y = t(921944),
+    O = t(388032),
+    N = t(126512),
+    Z = t(97009);
 function I(e) {
-    let { guild: t } = e,
-        n = (0, C.Z)(t);
+    let { guild: n } = e,
+        t = (0, C.Z)(n);
     r.useEffect(() => {
         (0, m.Q3)(s.z.CHANNEL_BROWSER_NEW_BADGE_NUX, { dismissAction: y.L.DISMISS });
     });
-    let i = n
-            ? O.intl.formatToPlainString(O.t.uqZgYW, { guildName: t.name })
-            : O.intl.formatToPlainString(O.t.velJeX, { guildName: t.name }),
-        a = n ? O.intl.string(O.t.h9mGOD) : O.intl.string(O.t.et6wam);
+    let i = t
+            ? O.intl.formatToPlainString(O.t.uqZgYW, { guildName: n.name })
+            : O.intl.formatToPlainString(O.t.velJeX, { guildName: n.name }),
+        a = t ? O.intl.string(O.t.h9mGOD) : O.intl.string(O.t.et6wam);
     return (
         (0, u.Tt)({ location: i }),
         (0, l.jsxs)(h.Z, {
@@ -40,7 +40,7 @@ function I(e) {
             innerClassname: N.innerHeader,
             hideSearch: !0,
             channelId: v.oC.CUSTOMIZE_COMMUNITY,
-            guildId: t.id,
+            guildId: n.id,
             children: [
                 (0, l.jsx)(h.Z.Icon, {
                     icon: d.H$4,
@@ -52,17 +52,17 @@ function I(e) {
     );
 }
 function w(e) {
-    let { guildId: t, selectedSection: n } = e,
-        i = (0, o.e7)([_.Z], () => _.Z.getGuild(t)),
+    let { guildId: n, selectedSection: t } = e,
+        i = (0, o.e7)([_.Z], () => _.Z.getGuild(n)),
         s = (0, C.Z)(i),
-        [u, m] = r.useState(null != n ? n : j.l7.CUSTOMIZE);
+        [u, m] = r.useState(null != t ? t : j.l7.CUSTOMIZE);
     r.useEffect(() => {
-        null != n && m(n);
-    }, [n]);
+        null != t && m(t);
+    }, [t]);
     let h = (0, o.e7)([x.ZP], () => x.ZP.getCurrentSidebarChannelId(v.oC.CHANNEL_BROWSER)),
         y = null != h && u === j.l7.BROWSE,
-        w = (0, o.e7)([g.Z], () => g.Z.getNewChannelIds(t).size > 0),
-        P = (0, p.fU)(t);
+        w = (0, o.e7)([g.Z], () => g.Z.getNewChannelIds(n).size > 0),
+        P = (0, p.fU)(n);
     return null == i
         ? null
         : (0, l.jsxs)(l.Fragment, {
@@ -116,12 +116,12 @@ function w(e) {
                                       switch (u) {
                                           case j.l7.CUSTOMIZE:
                                               return (0, l.jsx)(b.Z, {
-                                                  guildId: t,
+                                                  guildId: n,
                                                   onBrowseChannels: () => m(j.l7.BROWSE),
                                               });
                                           case j.l7.BROWSE:
                                           default:
-                                              return (0, l.jsx)(f.Z, { guildId: t });
+                                              return (0, l.jsx)(f.Z, { guildId: n });
                                       }
                                   })(),
                               ],

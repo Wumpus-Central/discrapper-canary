@@ -1,7 +1,7 @@
 t.d(n, {
     V3: () => l,
-    bp: () => r,
-    hp: () => i,
+    bp: () => i,
+    hp: () => r,
     nl: () => a,
 }),
     t(49124),
@@ -20,5 +20,5 @@ let a = {
             .concat(e.byteLength);
         return "".concat(t, "-").concat(JSON.stringify(n));
     },
-    i = (e) => "".concat(e.name, "-").concat(e.size, "-").concat(e.lastModified),
-    r = new Set(["audio/mpeg", "audio/mp3", "audio/wav", "audio/x-wav", "audio/ogg", "video/mp4"]);
+    r = (e) => "".concat(e.name, "-").concat(e.size, "-").concat(e.lastModified),
+    i = new Set(["audio/mpeg", "audio/mp3", "audio/wav", "audio/x-wav", "audio/ogg", "video/mp4"]);

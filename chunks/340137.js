@@ -17,15 +17,15 @@ var r = n(951288),
     _ = n(370774),
     O = n(128008),
     E = n(961040),
-    y = n(981631),
-    v = n(388032),
+    v = n(981631),
+    y = n(388032),
     I = n(445202);
-let S = {
+let C = {
         cozy: 0,
         default: 0,
         compact: 0,
     },
-    C = {
+    S = {
         cozy: 36,
         default: 24,
         compact: 14,
@@ -38,7 +38,7 @@ let S = {
 function N(e) {
     var t, n;
     let { onClick: l, selectedOverride: o = !1, popoutProps: s, ref: g, focusSectionProps: b } = e,
-        [E, y] = i.useState(!1),
+        [E, v] = i.useState(!1),
         N = (0, _.D)(),
         j = o || N,
         P = o || j,
@@ -55,7 +55,7 @@ function N(e) {
         { badge: L, badgeType: R } = (0, O.h6)({ isSelected: j }),
         D = (0, m.isDesktop)() && x,
         k = (0, h.A)(),
-        M = (0, m.isMac)() ? S[k] : D ? C[k] : T[k];
+        M = (0, m.isMac)() ? C[k] : D ? S[k] : T[k];
     return (0, r.jsxs)(d.Kqy, {
         gap: 0,
         direction: "horizontal",
@@ -67,7 +67,7 @@ function N(e) {
             (0, r.jsx)(u.u, {
                 asContainer: !0,
                 shouldShow: !P,
-                text: v.intl.string(v.t.HcoRu7),
+                text: y.intl.string(y.t.HcoRu7),
                 children: (0, r.jsxs)(
                     d.P3F,
                     ((t = (function (e) {
@@ -105,10 +105,10 @@ function N(e) {
                     (n = n =
                         {
                             onMouseEnter: () => {
-                                y(!0);
+                                v(!0);
                             },
                             onMouseLeave: () => {
-                                y(!1);
+                                v(!1);
                             },
                             onClick: () => {
                                 var e;
@@ -158,7 +158,7 @@ function j() {
         t = i.useRef(null),
         { notificationCenterVariant: n } = (0, b.pN)({ location: "NotificationsInboxButton" }),
         l = (0, s.e7)([g.Z], () => g.Z.getChannelId()),
-        a = i.useMemo(() => y.Z5c.CHANNEL(y.STv, null != l ? l : void 0), [l]),
+        a = i.useMemo(() => v.Z5c.CHANNEL(v.STv, null != l ? l : void 0), [l]),
         c = (0, O.mv)();
     return n === b.jP.SIDEBAR
         ? (0, r.jsx)(N, {

@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    s = n(780384),
-    a = n(481060),
+    a = n(780384),
+    s = n(481060),
     o = n(410030),
     c = n(44315),
     d = n(208567),
@@ -61,11 +61,11 @@ function h(e) {
             return i;
         })(e, ["enabled", "imageClassName", "iconWrapperClassName"]);
     let h = (0, o.ZP)(),
-        x = (0, s.wj)(h) ? p : f,
-        b = {
+        b = (0, a.wj)(h) ? p : f,
+        x = {
             height: 18,
             width: 18,
-            color: (0, c.Lq)(x),
+            color: (0, c.Lq)(b),
         };
     return (0, r.jsx)(
         d.Z,
@@ -78,8 +78,8 @@ function h(e) {
                 imageClassName: l()(n, g.avatarUploaderInnerSquare, { [g.avatarUploaderInnerSquareDisabled]: !t }),
                 icon:
                     null != u.image && "" !== u.image
-                        ? (0, r.jsx)(a.vdY, m({ size: "custom" }, b))
-                        : (0, r.jsx)(a.FmF, m({ size: "custom" }, b)),
+                        ? (0, r.jsx)(s.vdY, m({ size: "custom" }, x))
+                        : (0, r.jsx)(s.FmF, m({ size: "custom" }, x)),
                 iconClassName: l()(g.avatarUploadIcon, g.hideDefaultIcon),
                 iconWrapperClassName: i,
                 showIcon: !0,

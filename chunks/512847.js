@@ -17,11 +17,11 @@ var r = n(951288),
     _ = n(314897),
     O = n(592125),
     E = n(430824),
-    y = n(131951),
-    v = n(292959),
+    v = n(131951),
+    y = n(292959),
     I = n(19780),
-    S = n(944486),
-    C = n(606304),
+    C = n(944486),
+    S = n(606304),
     T = n(979651),
     N = n(938475),
     j = n(823379),
@@ -32,7 +32,7 @@ function x(e, t, n, r) {
             l = new a.Fh(e, () => {
                 let e = t(),
                     l = n(i, e);
-                null == l || v.Z.isSoundDisabled(l) || (0, f.GN)(l, null != r ? r : 0.4), (i = e);
+                null == l || y.Z.isSoundDisabled(l) || (0, f.GN)(l, null != r ? r : 0.4), (i = e);
             });
         return l.attach("useSound"), () => l.detach();
     });
@@ -40,13 +40,13 @@ function x(e, t, n, r) {
 function A() {
     return (
         x(
-            [y.Z, S.Z],
+            [v.Z, C.Z],
             () => ({
-                inVoiceChannel: null != S.Z.getVoiceChannelId(),
-                selfMute: y.Z.isSelfMute(),
-                selfDeaf: y.Z.isSelfDeaf(),
-                audioPermissionReady: y.Z.isNativeAudioPermissionReady(),
-                shouldSkipMuteUnmuteSound: y.Z.shouldSkipMuteUnmuteSound(),
+                inVoiceChannel: null != C.Z.getVoiceChannelId(),
+                selfMute: v.Z.isSelfMute(),
+                selfDeaf: v.Z.isSelfDeaf(),
+                audioPermissionReady: v.Z.isNativeAudioPermissionReady(),
+                shouldSkipMuteUnmuteSound: v.Z.shouldSkipMuteUnmuteSound(),
             }),
             (e, t) => {
                 let {
@@ -58,7 +58,7 @@ function A() {
                 } = t;
                 if (e.selfDeaf !== i) return i ? "deafen" : "undeafen";
                 if (l && (n || e.audioPermissionReady) && e.selfMute !== r)
-                    return a ? void y.Z.notifyMuteUnmuteSoundWasSkipped() : r ? "mute" : "unmute";
+                    return a ? void v.Z.notifyMuteUnmuteSoundWasSkipped() : r ? "mute" : "unmute";
             },
         ),
         null
@@ -67,10 +67,10 @@ function A() {
 function Z() {
     return (
         x(
-            [y.Z, S.Z],
+            [v.Z, C.Z],
             () => ({
-                videoEnabled: y.Z.isVideoEnabled(),
-                inVoiceChannel: null != S.Z.getVoiceChannelId(),
+                videoEnabled: v.Z.isVideoEnabled(),
+                inVoiceChannel: null != C.Z.getVoiceChannelId(),
             }),
             (e, t) => {
                 let { videoEnabled: n, inVoiceChannel: r } = t;
@@ -85,9 +85,9 @@ function Z() {
 function w() {
     return (
         x(
-            [O.Z, I.Z, S.Z, u.default],
+            [O.Z, I.Z, C.Z, u.default],
             () => {
-                let e = O.Z.getChannel(S.Z.getVoiceChannelId()),
+                let e = O.Z.getChannel(C.Z.getVoiceChannelId()),
                     t = null == e ? void 0 : e.type,
                     n = null == e ? void 0 : e.getGuildId(),
                     r = I.Z.getWasEverRtcConnected(),
@@ -122,12 +122,12 @@ function w() {
 function L() {
     return (
         x(
-            [C.Z],
-            () => C.Z.isCurrentUserSpeaking(),
+            [S.Z],
+            () => S.Z.isCurrentUserSpeaking(),
             (e, t) => {
                 if (e !== t) {
-                    let e = y.Z.isSelfMute();
-                    if (y.Z.getMode() === P.pM4.PUSH_TO_TALK && !e) return t ? "ptt_start" : "ptt_stop";
+                    let e = v.Z.isSelfMute();
+                    if (v.Z.getMode() === P.pM4.PUSH_TO_TALK && !e) return t ? "ptt_start" : "ptt_stop";
                 }
             },
         ),
@@ -137,8 +137,8 @@ function L() {
 function R() {
     return (
         x(
-            [y.Z],
-            () => y.Z.getActiveVoiceFilter(),
+            [v.Z],
+            () => v.Z.getActiveVoiceFilter(),
             (e, t) => {
                 if (e !== t)
                     if (null != t) return null != e ? "voice_filter_swap" : "voice_filter_on";
@@ -151,12 +151,12 @@ function R() {
 function D() {
     return (
         x(
-            [y.Z],
-            () => y.Z.isSelfMutedTemporarily(),
+            [v.Z],
+            () => v.Z.isSelfMutedTemporarily(),
             (e, t) => {
                 if (e !== t) {
-                    let e = y.Z.isSelfMute();
-                    if (y.Z.getMode() === P.pM4.VOICE_ACTIVITY && !e) return t ? "ptt_stop" : "ptt_start";
+                    let e = v.Z.isSelfMute();
+                    if (v.Z.getMode() === P.pM4.VOICE_ACTIVITY && !e) return t ? "ptt_stop" : "ptt_start";
                 }
             },
         ),
@@ -166,12 +166,12 @@ function D() {
 function k() {
     return (
         x(
-            [C.Z],
-            () => C.Z.isCurrentUserPrioritySpeaker(),
+            [S.Z],
+            () => S.Z.isCurrentUserPrioritySpeaker(),
             (e, t) => {
                 if (e !== t) {
-                    let e = y.Z.isSelfMute();
-                    if (y.Z.getMode() === P.pM4.VOICE_ACTIVITY && !e) return t ? "ptt_start" : "ptt_stop";
+                    let e = v.Z.isSelfMute();
+                    if (v.Z.getMode() === P.pM4.VOICE_ACTIVITY && !e) return t ? "ptt_start" : "ptt_stop";
                 }
             },
         ),
@@ -193,9 +193,9 @@ function M() {
 function U() {
     return (
         x(
-            [S.Z, T.Z],
+            [C.Z, T.Z],
             () => {
-                let e = S.Z.getVoiceChannelId();
+                let e = C.Z.getVoiceChannelId();
                 if (null == e) return g.xO.NONE;
                 let t = T.Z.getVoiceStateForChannel(e);
                 return (0, g.gf)(t);
@@ -210,11 +210,11 @@ function U() {
 function G() {
     return (
         x(
-            [S.Z, b.Z, _.default, T.Z, O.Z],
+            [C.Z, b.Z, _.default, T.Z, O.Z],
             () => {
                 let e,
                     t,
-                    n = S.Z.getVoiceChannelId(),
+                    n = C.Z.getVoiceChannelId(),
                     r = _.default.getId(),
                     i = [],
                     l = null,
@@ -300,10 +300,10 @@ function G() {
 function B() {
     return (
         x(
-            [S.Z, o.ZP, c.Z, _.default],
+            [C.Z, o.ZP, c.Z, _.default],
             () => {
-                let e = S.Z.getVoiceChannelId(),
-                    t = S.Z.getChannelId(),
+                let e = C.Z.getVoiceChannelId(),
+                    t = C.Z.getChannelId(),
                     n = o.ZP.getConnectedActivityLocation(),
                     r = (0, s.p)(n),
                     i = _.default.getId(),
@@ -389,12 +389,12 @@ function B() {
 function H() {
     return (
         x(
-            [p.Z, S.Z],
+            [p.Z, C.Z],
             () => ({
                 hangStatus: p.Z.getCurrentHangStatus(),
                 customHangStatus: p.Z.getCustomHangStatus(),
                 gameActivityHangStatus: p.Z.getGameActivityHangStatus(),
-                inVoice: null != S.Z.getVoiceChannelId(),
+                inVoice: null != C.Z.getVoiceChannelId(),
             }),
             (e, t) => {
                 var n, r;

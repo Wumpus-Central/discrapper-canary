@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(239091),
-    s = n(838221),
-    a = n(246364),
+    a = n(838221),
+    s = n(246364),
     o = n(540457),
     c = n(700833),
     d = n(388032),
@@ -21,28 +21,28 @@ function g(e) {
             children: [
                 (0, r.jsx)(i.sNh, {
                     id: "text-input",
-                    icon: (0, i.GSL)(s.Z),
+                    icon: (0, i.GSL)(a.Z),
                     label: d.intl.string(d.t.w6Q9w8),
-                    action: () => (0, c.Md)(a.QJ.TEXT_INPUT, t, o),
+                    action: () => (0, c.Md)(s.QJ.TEXT_INPUT, t, o),
                 }),
                 (0, r.jsx)(i.sNh, {
                     id: "paragraph",
                     icon: i.OvV,
                     label: d.intl.string(d.t.gG0JBA),
-                    action: () => (0, c.Md)(a.QJ.PARAGRAPH, t, o),
+                    action: () => (0, c.Md)(s.QJ.PARAGRAPH, t, o),
                 }),
                 (0, r.jsx)(i.sNh, {
                     id: "multiple-choice",
                     icon: i.jE$,
                     label: d.intl.string(d.t.ooKh3t),
-                    action: () => (0, c.Md)(a.QJ.MULTIPLE_CHOICE, t, o),
+                    action: () => (0, c.Md)(s.QJ.MULTIPLE_CHOICE, t, o),
                 }),
                 g &&
                     (0, r.jsx)(i.sNh, {
                         id: "terms",
                         icon: i.snC,
                         label: d.intl.string(d.t["3pz9t7"]),
-                        action: () => (0, c.Md)(a.QJ.TERMS, t, o),
+                        action: () => (0, c.Md)(s.QJ.TERMS, t, o),
                     }),
             ],
         }),
@@ -57,7 +57,7 @@ let m = function (e) {
             (0, l.vq)(
                 e,
                 (e) => {
-                    var l, s;
+                    var l, a;
                     return (0, r.jsx)(
                         g,
                         ((l = (function (e) {
@@ -85,14 +85,14 @@ let m = function (e) {
                             }
                             return e;
                         })({}, e)),
-                        (s = s =
+                        (a = a =
                             {
                                 addFormField: t,
                                 guild: n,
                                 allowTerms: i,
                             }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(s))
+                            ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -100,8 +100,8 @@ let m = function (e) {
                                       n.push.apply(n, r);
                                   }
                                   return n;
-                              })(Object(s)).forEach(function (e) {
-                                  Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(s, e));
+                              })(Object(a)).forEach(function (e) {
+                                  Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
                               }),
                         l),
                     );

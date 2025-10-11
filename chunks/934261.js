@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => A });
 var r = n(951288);
 n(647438);
 var i = n(392711),
@@ -48,7 +48,7 @@ function C(e) {
     }
     return e;
 }
-let S = (e) => {
+let I = (e) => {
         let { effectIsOwned: t, pendingProfileEffectRecord: n, product: u, purchase: d } = e,
             p = (0, l.e7)([P.default], () => P.default.getCurrentUser()),
             m = (0, l.e7)([s.Z], () => s.Z.getProduct(null == n ? void 0 : n.skuId)),
@@ -58,10 +58,10 @@ let S = (e) => {
             y = (0, c.G1)(u),
             j = !h && b,
             C = (null == d ? void 0 : d.expiresAt) != null ? (0, v.TD)(Date.now(), d.expiresAt) : null,
-            S = (0, a.ag)(d),
-            w = (0, a.kd)(m),
-            A = (0, f.M)(!y || h),
-            N = I(j, y, h, A);
+            I = (0, a.ag)(d),
+            A = (0, a.kd)(m),
+            w = (0, f.M)(!y || h),
+            N = S(j, y, h, w);
         return null != n
             ? (0, r.jsx)("div", {
                   className: t ? E.effectDescriptionNoGradient : E.effectDescriptionBorderWithGradient,
@@ -72,7 +72,7 @@ let S = (e) => {
                               color: "header-primary",
                               variant: "text-sm/semibold",
                               className: E.effectName,
-                              children: (0, i.isEmpty)(S) ? w : S,
+                              children: (0, i.isEmpty)(I) ? A : I,
                           }),
                           null != d
                               ? null
@@ -130,7 +130,7 @@ let S = (e) => {
               })
             : null;
     },
-    I = (e, t, n, r) =>
+    S = (e, t, n, r) =>
         e
             ? _.intl.string(_.t["1UPza2"])
             : t && n
@@ -140,7 +140,7 @@ let S = (e) => {
                     ? _.intl.string(_.t.meldu7)
                     : _.intl.string(_.t.JtAKws)
                 : _.intl.string(_.t.fEGjVV),
-    w = (e) => {
+    A = (e) => {
         var t, n;
         let {
                 user: i,
@@ -155,9 +155,9 @@ let S = (e) => {
                 pendingNickname: P,
                 pendingPronouns: v,
                 pendingBio: _,
-                pendingBanner: I,
-                pendingAvatar: w,
-                pendingAvatarDecoration: A,
+                pendingBanner: S,
+                pendingAvatar: A,
+                pendingAvatarDecoration: w,
                 pendingThemeColors: N,
                 pendingAccentColor: Z,
             } = (0, l.cj)([u.Z, j.Z], () =>
@@ -174,20 +174,20 @@ let S = (e) => {
             D = O.ZP.canUsePremiumProfileCustomization(i),
             T = (0, h.ZP)(i.id),
             U = !!(null == T ? void 0 : T.getPreviewBio(_).value),
-            L = {
+            B = {
                 user: i,
                 guild: f,
                 pendingGlobalName: x,
                 pendingNickname: P,
                 pendingPronouns: v,
                 pendingBio: b.dN.useSetting() && null != _ ? d.ZP.parse(void 0, _).content : _,
-                pendingBanner: I,
+                pendingBanner: S,
                 useLargeBanner: !0,
                 pendingAvatar: (0, m.SD)({
                     userId: i.id,
-                    image: w,
+                    image: A,
                 }),
-                pendingAvatarDecoration: A,
+                pendingAvatarDecoration: w,
                 pendingThemeColors: N,
                 pendingAccentColor: Z,
                 pendingProfileEffect: null != o ? o : null,
@@ -201,7 +201,7 @@ let S = (e) => {
             children: [
                 (0, r.jsx)(
                     p.Z,
-                    ((t = C({}, L)),
+                    ((t = C({}, B)),
                     (n = n =
                         {
                             disabledInputs: !0,
@@ -222,7 +222,7 @@ let S = (e) => {
                     t),
                 ),
                 !1,
-                (0, r.jsx)(S, {
+                (0, r.jsx)(I, {
                     effectIsOwned: s,
                     pendingProfileEffectRecord: o,
                     product: c,

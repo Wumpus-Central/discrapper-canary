@@ -17,11 +17,11 @@ var r = n(951288),
     _ = n(730647),
     O = n(772021),
     E = n(396828),
-    y = n(293423),
-    v = n(20967),
+    v = n(293423),
+    y = n(20967),
     I = n(504762),
-    S = n(807152),
-    C = n(176505),
+    C = n(807152),
+    S = n(176505),
     T = n(388032),
     N = n(183261);
 function j(e) {
@@ -45,12 +45,12 @@ function j(e) {
             s.jg();
         }, []),
         i.useEffect(() => {
-            D && !l.tq && (0, d.M)(t, C.oC.ROLE_SUBSCRIPTIONS);
+            D && !l.tq && (0, d.M)(t, S.oC.ROLE_SUBSCRIPTIONS);
         }, [t, D]),
         l.tq && D)
     ) {
-        let e = null == n ? v.J.NOT_GUILD_MEMBER : v.J.GUILD_NOT_ELIGIBLE;
-        return (0, r.jsx)(v.z, { errorType: e });
+        let e = null == n ? y.J.NOT_GUILD_MEMBER : y.J.GUILD_NOT_ELIGIBLE;
+        return (0, r.jsx)(y.z, { errorType: e });
     }
     return (0, r.jsxs)("div", {
         className: N.container,
@@ -66,7 +66,7 @@ function j(e) {
                     (0, r.jsx)(g.Z.Title, { children: T.intl.string(T.t["KzCF//"]) }),
                 ],
             }),
-            (0, r.jsx)("div", { id: S.v }),
+            (0, r.jsx)("div", { id: C.v }),
             (0, r.jsx)("div", {
                 className: N.content,
                 children: P
@@ -74,7 +74,7 @@ function j(e) {
                           className: N.scroller,
                           children: (0, r.jsx)("div", {
                               className: N.scrollerContent,
-                              children: R ? (0, r.jsx)(o.$jN, {}) : (0, r.jsx)(y.Z, { guild: n }),
+                              children: R ? (0, r.jsx)(o.$jN, {}) : (0, r.jsx)(v.Z, { guild: n }),
                           }),
                       })
                     : (0, r.jsx)(I.Z, {}),

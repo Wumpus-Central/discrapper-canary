@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(392711),
@@ -49,12 +49,12 @@ function h(e) {
               ),
           });
 }
-let x = [];
-function b(e) {
+let b = [];
+function x(e) {
     var t;
     let { profile: n, canManageGuild: l } = e,
         o = n.id,
-        d = null != (t = null == n ? void 0 : n.gameApplicationIds) ? t : x,
+        d = null != (t = null == n ? void 0 : n.gameApplicationIds) ? t : b,
         m = i.useCallback(
             (e) => {
                 c.Z.updateGuildProfile(o, { gameApplicationIds: e });
@@ -68,8 +68,8 @@ function b(e) {
             },
             [o, d],
         ),
-        b = i.useRef(d),
-        j = i.useMemo(() => (a().isEqual(new Set(d), new Set(b.current)) || (b.current = [...d]), b.current), [d]);
+        x = i.useRef(d),
+        j = i.useMemo(() => (a().isEqual(new Set(d), new Set(x.current)) || (x.current = [...d]), x.current), [d]);
     return (0, r.jsxs)(s.C3N, {
         label: g.intl.string(g.t.BR68vL),
         description: g.intl.string(g.t.MobxiI),

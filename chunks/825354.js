@@ -1,36 +1,36 @@
-r.d(t, { Z: () => f });
-var n = r(951288),
-    i = r(647438),
-    a = r(120356),
-    o = r.n(a),
-    l = r(481060),
-    c = r(239091),
-    s = r(726521),
-    u = r(388032),
-    d = r(595342);
+n.d(t, { Z: () => f });
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    l = n(481060),
+    c = n(239091),
+    s = n(726521),
+    u = n(388032),
+    d = n(595342);
 function f(e) {
-    let { widget: t, userId: r, className: a, menuItems: f } = e,
+    let { widget: t, userId: n, className: a, menuItems: f } = e,
         g = i.useRef(null),
         p = () => {
-            (0, s.G1)(r, t);
+            (0, s.G1)(n, t);
         };
-    return (0, n.jsx)(l.yRy, {
+    return (0, r.jsx)(l.yRy, {
         targetElementRef: g,
         align: "top",
         position: "right",
         disablePointerEvents: !1,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, n.jsx)(l.v2r, {
+            return (0, r.jsx)(l.v2r, {
                 navId: "user-profile-widget-context-menu",
                 onClose: () => {
                     (0, c.Zy)(), t();
                 },
                 onSelect: () => {},
                 "aria-label": u.intl.string(u.t.xpSHSk),
-                children: (0, n.jsxs)(l.kSQ, {
+                children: (0, r.jsxs)(l.kSQ, {
                     children: [
-                        (0, n.jsx)(
+                        (0, r.jsx)(
                             l.sNh,
                             {
                                 id: "flag-widget",
@@ -47,55 +47,55 @@ function f(e) {
             });
         },
         children: (e) => {
-            var t, r;
-            return (0, n.jsx)(
+            var t, n;
+            return (0, r.jsx)(
                 l.P3F,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
-                        var r = null != arguments[t] ? arguments[t] : {},
-                            n = Object.keys(r);
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
                         "function" == typeof Object.getOwnPropertySymbols &&
-                            (n = n.concat(
-                                Object.getOwnPropertySymbols(r).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 }),
                             )),
-                            n.forEach(function (t) {
-                                var n;
-                                (n = r[t]),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: n,
+                                              value: r,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (e[t] = n);
+                                        : (e[t] = r);
                             });
                     }
                     return e;
                 })({}, e)),
-                (r = r =
+                (n = n =
                     {
                         innerRef: g,
                         "aria-label": u.intl.string(u.t.xpSHSk),
                         className: o()(d.button, a),
-                        children: (0, n.jsx)(l.xhG, {
+                        children: (0, r.jsx)(l.xhG, {
                             size: "sm",
                             color: "currentColor",
                         }),
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                     : (function (e, t) {
-                          var r = Object.keys(e);
+                          var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var n = Object.getOwnPropertySymbols(e);
-                              r.push.apply(r, n);
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
                           }
-                          return r;
-                      })(Object(r)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                          return n;
+                      })(Object(n)).forEach(function (e) {
+                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                       }),
                 t),
             );

@@ -1,10 +1,10 @@
 n.d(t, {
-    QH: () => i,
-    pj: () => a,
+    QH: () => o,
+    pj: () => i,
 });
 var r,
     l = n(427164),
-    a =
+    i =
         (((r = {}).NO_BADGE = "no_badge"),
         (r.FIRST_BLOCK_ONLY = "first_block_only"),
         (r.RIGHT_BLOCK_ONLY = "right_block_only"),
@@ -21,4 +21,4 @@ let s = (0, l.le)({
             3: { variant: "both_blocks" },
         },
     }),
-    i = (e) => s.useConfig({ location: e }).variant;
+    o = (e) => s.useConfig({ location: e }).variant;

@@ -1,6 +1,6 @@
 o.d(t, { default: () => p });
-var r = o(951288),
-    n = o(647438),
+var n = o(951288),
+    r = o(647438),
     c = o(481060),
     a = o(957115),
     i = o(332664),
@@ -11,24 +11,24 @@ var r = o(951288),
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var o = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(o);
+            n = Object.keys(o);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (n = n.concat(
                 Object.getOwnPropertySymbols(o).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(o, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = o[t]),
+            n.forEach(function (t) {
+                var n;
+                (n = o[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: n,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = r);
+                        : (e[t] = n);
             });
     }
     return e;
@@ -37,10 +37,10 @@ let d = ["OTHER"];
 function p(e) {
     let { analyticsData: t, transitionState: p, onClose: m } = e;
     return (
-        n.useEffect(() => {
+        r.useEffect(() => {
             l.default.track(_.rMx.OPEN_MODAL, { type: "Video Background Feedback" });
         }, []),
-        (0, r.jsx)(i.Z, {
+        (0, n.jsx)(i.Z, {
             modalType: "video_background",
             header: s.intl.string(s.t.Wl8qXl),
             body: s.intl.string(s.t.vPw6j4),
@@ -69,7 +69,7 @@ function p(e) {
             ],
             freeformNeededProblems: d,
             onSubmit: function (e) {
-                var n, i, d, p;
+                var r, i, d, p;
                 let { rating: m, problem: f, dontShowAgain: O, feedback: y } = e;
                 O &&
                     (0, a.Uv)({
@@ -77,7 +77,7 @@ function p(e) {
                         location: "VideoBackgroundFeedbackModal",
                     }),
                     null != m &&
-                        ((i = null != (n = null == f ? void 0 : f.value) ? n : null),
+                        ((i = null != (r = null == f ? void 0 : f.value) ? r : null),
                         l.default.track(
                             _.rMx.VIDEO_BACKGROUND_FEEDBACK,
                             ((d = u({}, t)),
@@ -92,8 +92,8 @@ function p(e) {
                                 : (function (e, t) {
                                       var o = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
-                                          var r = Object.getOwnPropertySymbols(e);
-                                          o.push.apply(o, r);
+                                          var n = Object.getOwnPropertySymbols(e);
+                                          o.push.apply(o, n);
                                       }
                                       return o;
                                   })(Object(p)).forEach(function (e) {
@@ -104,7 +104,7 @@ function p(e) {
                         null != f &&
                             (0, c.ZDy)(async () => {
                                 let { default: e } = await o.e("14466").then(o.bind(o, 729328));
-                                return (t) => (0, r.jsx)(e, u({ body: s.intl.string(s.t.aHB11d) }, t));
+                                return (t) => (0, n.jsx)(e, u({ body: s.intl.string(s.t.aHB11d) }, t));
                             }));
             },
             onClose: m,

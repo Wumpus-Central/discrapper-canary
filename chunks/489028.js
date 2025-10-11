@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(577275),
     f = n(601964),
     h = n(594174),
-    x = n(451478),
-    b = n(626135),
+    b = n(451478),
+    x = n(626135),
     j = n(584825),
     v = n(723047),
     _ = n(416867),
@@ -51,7 +51,7 @@ function P(e) {
                 })),
             [n],
         ),
-        x = async () => {
+        b = async () => {
             (await u(t, o, N.wW.GUILD_ROLE_SUBSCRIPTIONS)) &&
                 (p(t.id),
                 (0, _.B)({
@@ -75,7 +75,7 @@ function P(e) {
                     }),
                     (0, r.jsx)(a.zxk, {
                         text: I.intl.string(I.t["9HU3ZW"]),
-                        onClick: x,
+                        onClick: b,
                         loading: g,
                         disabled: null == o || f || !l,
                     }),
@@ -95,7 +95,7 @@ let w = (e) => {
         n = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
         a = (0, f.eM)(t, n),
         d = (0, c.Ob)(t),
-        j = (0, l.e7)([x.Z], () => x.Z.isFocused()),
+        j = (0, l.e7)([b.Z], () => b.Z.isFocused()),
         { teams: v, loading: _ } = (0, p.Z)({ refreshOnDepChange: j }),
         N = i.useMemo(
             () =>
@@ -110,7 +110,7 @@ let w = (e) => {
         ),
         w = N.length > 0,
         Z = i.useCallback(async () => {
-            b.default.track(y.rMx.GUILD_ROLE_SUBSCRIPTION_TEAM_SETUP_CLICKED, {
+            x.default.track(y.rMx.GUILD_ROLE_SUBSCRIPTION_TEAM_SETUP_CLICKED, {
                 is_onboarding_v2: d,
                 has_eligible_team: w,
                 guild_id: t.id,

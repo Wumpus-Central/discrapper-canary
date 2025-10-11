@@ -1,27 +1,27 @@
-n.d(t, { B: () => d }), n(388685);
+n.d(t, { B: () => c }), n(388685);
 var l = n(647438),
     i = n(442837),
-    s = n(247272),
+    a = n(247272),
     r = n(751771),
-    a = n(938475),
+    s = n(938475),
     o = n(245335),
     u = n(981631);
-function d(e) {
-    let { guild: t, inviteChannel: n, inviteTargetType: d, applicationId: c } = e,
-        [g, h, m, p] = (0, i.Wu)(
-            [r.Z, a.ZP],
+function c(e) {
+    let { guild: t, inviteChannel: n, inviteTargetType: c, applicationId: d } = e,
+        [g, m, I, p] = (0, i.Wu)(
+            [r.Z, s.ZP],
             () => [
                 r.Z.getInviteSuggestionRows(),
                 r.Z.getTotalSuggestionsCount() >= 1,
                 r.Z.getInitialCounts(),
-                null == n ? null : a.ZP.getVoiceStatesForChannel(n),
+                null == n ? null : s.ZP.getVoiceStatesForChannel(n),
             ],
             [n],
         ),
-        v = l.useMemo(() => {
+        f = l.useMemo(() => {
             let e = new Set();
             return (
-                d === o.Iq.STREAM &&
+                c === o.Iq.STREAM &&
                     null != p &&
                     p.forEach((t) => {
                         let { user: n } = t;
@@ -32,18 +32,18 @@ function d(e) {
         }, [n]);
     return (
         l.useEffect(() => {
-            (0, s.x)({
-                omitUserIds: v,
+            (0, a.x)({
+                omitUserIds: f,
                 guild: t,
                 channel: n,
-                applicationId: c,
-                inviteTargetType: d,
+                applicationId: d,
+                inviteTargetType: c,
             }).catch(u.VqG);
-        }, [v, t, n, c, d]),
+        }, [f, t, n, d, c]),
         {
             rows: g,
-            showFriends: h,
-            initialCounts: m,
+            showFriends: m,
+            initialCounts: I,
         }
     );
 }

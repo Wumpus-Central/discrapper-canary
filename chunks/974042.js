@@ -17,10 +17,10 @@ var r,
     _ = n(430824),
     O = n(158776),
     E = n(699516),
-    y = n(594174),
-    v = n(981631),
+    v = n(594174),
+    y = n(981631),
     I = n(474936);
-function S(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function S(e, t, n) {
         e
     );
 }
-function C(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function C(e) {
                 }),
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                C(e, t, n[t]);
             });
     }
     return e;
@@ -68,7 +68,7 @@ function T(e, t) {
     );
 }
 function N(e) {
-    let t = y.default.getUser(e);
+    let t = v.default.getUser(e);
     return {
         user: t,
         usernameLower: null != t ? t.username.toLowerCase() : null,
@@ -117,23 +117,23 @@ class x extends c.Z {
     constructor(e) {
         var t;
         super(),
-            S(this, "key", void 0),
-            S(this, "userId", void 0),
-            S(this, "type", void 0),
-            S(this, "status", void 0),
-            S(this, "isMobile", void 0),
-            S(this, "activities", void 0),
-            S(this, "applicationStream", void 0),
-            S(this, "user", void 0),
-            S(this, "usernameLower", void 0),
-            S(this, "mutualGuildsLength", void 0),
-            S(this, "mutualGuilds", void 0),
-            S(this, "nickname", void 0),
-            S(this, "spam", void 0),
-            S(this, "giftIntentType", void 0),
-            S(this, "ignoredUser", void 0),
-            S(this, "applicationId", void 0),
-            S(this, "isGameRelationship", void 0),
+            C(this, "key", void 0),
+            C(this, "userId", void 0),
+            C(this, "type", void 0),
+            C(this, "status", void 0),
+            C(this, "isMobile", void 0),
+            C(this, "activities", void 0),
+            C(this, "applicationStream", void 0),
+            C(this, "user", void 0),
+            C(this, "usernameLower", void 0),
+            C(this, "mutualGuildsLength", void 0),
+            C(this, "mutualGuilds", void 0),
+            C(this, "nickname", void 0),
+            C(this, "spam", void 0),
+            C(this, "giftIntentType", void 0),
+            C(this, "ignoredUser", void 0),
+            C(this, "applicationId", void 0),
+            C(this, "isGameRelationship", void 0),
             (this.key = e.key),
             (this.userId = e.userId),
             (this.type = e.type),
@@ -159,10 +159,10 @@ class A {
             t = Array.from(E.Z.getMutableRelationships().entries()).map((t) => {
                 let [n, r] = t;
                 return (
-                    r === v.OGo.FRIEND && e.add(n),
+                    r === y.OGo.FRIEND && e.add(n),
                     new x(
                         T(
-                            C(
+                            S(
                                 {
                                     key: n,
                                     type: r,
@@ -177,7 +177,7 @@ class A {
                                 spam: E.Z.isSpam(n),
                                 ignoredUser: E.Z.isIgnored(n),
                                 giftIntentType:
-                                    r === v.OGo.FRIEND && g.Z.isTopAffinityFriendAnniversary({ userId: n })
+                                    r === y.OGo.FRIEND && g.Z.isTopAffinityFriendAnniversary({ userId: n })
                                         ? I.hX.FRIEND_ANNIVERSARY
                                         : void 0,
                                 applicationId: E.Z.getOriginApplicationId(n),
@@ -191,13 +191,13 @@ class A {
             i = new Set();
         r.forEach((t) => {
             let { id: r, applicationId: l, type: a } = t;
-            !(a === v.OGo.FRIEND && e.has(r)) &&
-                ((a === v.OGo.FRIEND && i.has(r)) ||
-                    (a === v.OGo.FRIEND && i.add(r),
+            !(a === y.OGo.FRIEND && e.has(r)) &&
+                ((a === y.OGo.FRIEND && i.has(r)) ||
+                    (a === y.OGo.FRIEND && i.add(r),
                     n.push(
                         new x(
                             T(
-                                C(
+                                S(
                                     {
                                         key: "".concat(r, "-").concat(l),
                                         type: a,
@@ -222,7 +222,7 @@ class A {
             p.Z.getSuggestions(),
             (e) =>
                 new x(
-                    C(
+                    S(
                         {
                             key: e.key,
                             userId: e.key,
@@ -263,22 +263,22 @@ class A {
             })
             .filter((t) => {
                 switch (e) {
-                    case v.pJs.ONLINE:
-                        return t.type === v.OGo.FRIEND && t.status !== v.Skl.OFFLINE;
-                    case v.pJs.PENDING:
+                    case y.pJs.ONLINE:
+                        return t.type === y.OGo.FRIEND && t.status !== y.Skl.OFFLINE;
+                    case y.pJs.PENDING:
                         return (
-                            (t.type === v.OGo.PENDING_INCOMING && !t.spam && !t.ignoredUser) ||
-                            t.type === v.OGo.PENDING_OUTGOING
+                            (t.type === y.OGo.PENDING_INCOMING && !t.spam && !t.ignoredUser) ||
+                            t.type === y.OGo.PENDING_OUTGOING
                         );
-                    case v.pJs.SPAM:
-                        return t.type === v.OGo.PENDING_INCOMING && t.spam;
-                    case v.pJs.PENDING_IGNORED:
-                        return t.type === v.OGo.PENDING_INCOMING && t.ignoredUser;
-                    case v.pJs.SUGGESTIONS:
+                    case y.pJs.SPAM:
+                        return t.type === y.OGo.PENDING_INCOMING && t.spam;
+                    case y.pJs.PENDING_IGNORED:
+                        return t.type === y.OGo.PENDING_INCOMING && t.ignoredUser;
+                    case y.pJs.SUGGESTIONS:
                         return 99 === t.type;
-                    case v.pJs.ALL:
+                    case y.pJs.ALL:
                     default:
-                        return t.type === v.OGo.FRIEND;
+                        return t.type === y.OGo.FRIEND;
                 }
             })
             .sortBy((e) => e.comparator)
@@ -286,11 +286,11 @@ class A {
     }
     getRelationshipCounts() {
         let e = {
-            [v.OGo.FRIEND]: 0,
-            [v.OGo.PENDING_INCOMING]: 0,
-            [v.OGo.PENDING_OUTGOING]: 0,
+            [y.OGo.FRIEND]: 0,
+            [y.OGo.PENDING_INCOMING]: 0,
+            [y.OGo.PENDING_OUTGOING]: 0,
             99: 0,
-            [v.OGo.BLOCKED]: 0,
+            [y.OGo.BLOCKED]: 0,
         };
         return (
             this._rows.forEach((t) => {
@@ -300,25 +300,25 @@ class A {
         );
     }
     constructor(e = []) {
-        S(this, "_rows", void 0), (this._rows = e);
+        C(this, "_rows", void 0), (this._rows = e);
     }
 }
 let Z = !0,
     w = !1,
-    L = v.pJs.ONLINE,
+    L = y.pJs.ONLINE,
     R = new A(),
     D = !0,
     k = !1;
 function M() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    Z && (e || (L !== v.pJs.ONLINE && L !== v.pJs.ADD_FRIEND)) && !w && ((Z = !1), (w = !0), s.Z.fetchRelationships());
+    Z && (e || (L !== y.pJs.ONLINE && L !== y.pJs.ADD_FRIEND)) && !w && ((Z = !1), (w = !0), s.Z.fetchRelationships());
 }
 function U() {
     if (((Z = !0), D ? (w = !1) : M(), (R = R.reset()), k)) return;
     let e = R.getRelationshipCounts();
-    0 === e[v.OGo.FRIEND]
-        ? (L = 0 !== e[v.OGo.PENDING_INCOMING] ? v.pJs.PENDING : v.pJs.ADD_FRIEND)
-        : ((L = v.pJs.ONLINE), h.o.getConfig({ location: "friendstore" }).removeFriends && (L = v.pJs.YOU));
+    0 === e[y.OGo.FRIEND]
+        ? (L = 0 !== e[y.OGo.PENDING_INCOMING] ? y.pJs.PENDING : y.pJs.ADD_FRIEND)
+        : ((L = y.pJs.ONLINE), h.o.getConfig({ location: "friendstore" }).removeFriends && (L = y.pJs.YOU));
 }
 function G() {
     R = D ? new A() : R.reset();
@@ -330,12 +330,12 @@ function B(e) {
 }
 class H extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(E.Z, O.Z, y.default, _.Z, b.ZP, m.Z, p.Z, u.Z, d.Z),
+        this.waitFor(E.Z, O.Z, v.default, _.Z, b.ZP, m.Z, p.Z, u.Z, d.Z),
             this.syncWith([E.Z], G),
             this.syncWith([f.Z], G),
             this.syncWith([p.Z], G),
             this.syncWith([g.Z], G),
-            this.syncWith([y.default], B(N)),
+            this.syncWith([v.default], B(N)),
             this.syncWith([O.Z, m.Z], B(j)),
             U();
     }
@@ -347,7 +347,7 @@ class H extends (r = a.ZP.Store) {
         };
     }
 }
-S(H, "displayName", "FriendsStore");
+C(H, "displayName", "FriendsStore");
 let V = new H(o.Z, {
     CONNECTION_OPEN: function () {
         U();

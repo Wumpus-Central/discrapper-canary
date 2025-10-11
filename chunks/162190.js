@@ -1,13 +1,13 @@
-n.d(t, { Z: () => r });
-var l = n(442837),
-    a = n(77498),
-    i = n(768581);
+a.d(t, { Z: () => r });
+var c = a(442837),
+    n = a(77498),
+    i = a(768581);
 function r(e, t) {
-    let n = (0, l.e7)([a.Z], () => a.Z.getDetectableGame(null != e ? e : ""));
-    if (null == n) return;
-    let r = "cover" === t ? n.cover_image_hash : n.icon;
+    let a = (0, c.e7)([n.Z], () => n.Z.getDetectableGame(null != e ? e : ""));
+    if (null == a) return;
+    let r = "cover" === t ? a.cover_image_hash : a.icon;
     return i.ZP.getApplicationIconURL({
-        id: n.id,
+        id: a.id,
         icon: r,
         keepAspectRatio: !0,
     });

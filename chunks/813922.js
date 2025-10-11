@@ -1,9 +1,9 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => b });
 var r = n(951288),
     i = n(647438),
     l = n(536982),
-    s = n(456677),
-    a = n(951665),
+    a = n(456677),
+    s = n(951665),
     o = n(428760),
     c = n(55889),
     d = n(300453),
@@ -54,20 +54,20 @@ function h(e, t) {
         e
     );
 }
-function x(e) {
-    var t, n, x, b, j, _;
-    let { rule: v, onChangeRule: C } = e,
+function b(e) {
+    var t, n, b, x, j, v;
+    let { rule: _, onChangeRule: C } = e,
         O = i.useCallback(
             (e) => {
-                C(h(f({}, v), { triggerMetadata: h(f({}, v.triggerMetadata), { keywordFilter: e }) }));
+                C(h(f({}, _), { triggerMetadata: h(f({}, _.triggerMetadata), { keywordFilter: e }) }));
             },
-            [C, v],
+            [C, _],
         ),
         y = i.useCallback(
             (e) => {
-                C(h(f({}, v), { triggerMetadata: h(f({}, v.triggerMetadata), { allowList: e }) }));
+                C(h(f({}, _), { triggerMetadata: h(f({}, _.triggerMetadata), { allowList: e }) }));
             },
-            [C, v],
+            [C, _],
         );
     return (0, r.jsxs)("div", {
         className: p.cardContentsContainer,
@@ -79,22 +79,22 @@ function x(e) {
                     (0, r.jsx)(o.Z, {
                         onChangeText: O,
                         maxWordCount: g.RH,
-                        initialValue: null == (t = v.triggerMetadata) ? void 0 : t.keywordFilter,
+                        initialValue: null == (t = _.triggerMetadata) ? void 0 : t.keywordFilter,
                     }),
-                    (0, r.jsx)(a.Z, {
-                        rule: v,
+                    (0, r.jsx)(s.Z, {
+                        rule: _,
                         onChangeRule: C,
                         collapsed:
-                            (null == v || null == (n = v.triggerMetadata) ? void 0 : n.regexPatterns) == null ||
-                            (null == v || null == (x = v.triggerMetadata) ? void 0 : x.regexPatterns.length) === 0,
+                            (null == _ || null == (n = _.triggerMetadata) ? void 0 : n.regexPatterns) == null ||
+                            (null == _ || null == (b = _.triggerMetadata) ? void 0 : b.regexPatterns.length) === 0,
                     }),
                     (0, r.jsx)(l.Z, {
                         onChange: y,
-                        initialValue: null == (b = v.triggerMetadata) ? void 0 : b.allowList,
+                        initialValue: null == (x = _.triggerMetadata) ? void 0 : x.allowList,
                         maxWordCount: g.n4,
                         collapsed:
-                            (null == (j = v.triggerMetadata) ? void 0 : j.allowList) == null ||
-                            (null == (_ = v.triggerMetadata) ? void 0 : _.allowList.length) === 0,
+                            (null == (j = _.triggerMetadata) ? void 0 : j.allowList) == null ||
+                            (null == (v = _.triggerMetadata) ? void 0 : v.allowList.length) === 0,
                     }),
                 ],
             }),
@@ -102,8 +102,8 @@ function x(e) {
             (0, r.jsx)(d.Z, {
                 step: 2,
                 header: m.intl.string(m.t["18TOiY"]),
-                children: (0, r.jsx)(s.Z, {
-                    rule: v,
+                children: (0, r.jsx)(a.Z, {
+                    rule: _,
                     onChangeRule: C,
                 }),
             }),
@@ -112,7 +112,7 @@ function x(e) {
                 step: 3,
                 header: m.intl.string(m.t.u5xPPT),
                 children: (0, r.jsx)(c.Z, {
-                    rule: v,
+                    rule: _,
                     onChangeRule: C,
                     onlyRoles: !0,
                 }),

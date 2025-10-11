@@ -17,11 +17,11 @@ var r = n(951288),
     _ = n(298213),
     O = n(321488),
     E = n(417183),
-    y = n(825682),
-    v = n(170245),
+    v = n(825682),
+    y = n(170245),
     I = n(981631),
-    S = n(65154),
-    C = n(388032),
+    C = n(65154),
+    S = n(388032),
     T = n(934422);
 function N(e, t, n) {
     return (
@@ -59,41 +59,41 @@ function j(e) {
             });
         }, [n, l, t.id]),
         m = i.useCallback(() => {
-            let e = l ? C.intl.string(C.t["RLcE6+"]) : C.intl.string(C.t.cvSt1N);
+            let e = l ? S.intl.string(S.t["RLcE6+"]) : S.intl.string(S.t.cvSt1N);
             c.Z.show({
-                title: C.intl.formatToPlainString(C.t.fPLvZW, { name: b.ZP.getName(t) }),
-                body: C.intl.formatToPlainString(C.t.l5FFq6, { name: b.ZP.getName(t) }),
+                title: S.intl.formatToPlainString(S.t.fPLvZW, { name: b.ZP.getName(t) }),
+                body: S.intl.formatToPlainString(S.t.l5FFq6, { name: b.ZP.getName(t) }),
                 confirmText: e,
                 confirmVariant: "critical-primary",
-                cancelText: C.intl.string(C.t["ETE/oK"]),
+                cancelText: S.intl.string(S.t["ETE/oK"]),
                 onConfirm: h,
             });
         }, [h, l, t]),
-        O = (0, o.e7)([g.Z], () => g.Z.supports(S.AN.VIDEO)),
+        O = (0, o.e7)([g.Z], () => g.Z.supports(C.AN.VIDEO)),
         E = t.isProvisional,
-        y = l ? C.intl.string(C.t["RLcE6+"]) : C.intl.string(C.t.cvSt1N);
+        v = l ? S.intl.string(S.t["RLcE6+"]) : S.intl.string(S.t.cvSt1N);
     return (0, r.jsxs)(s.v2r, {
         navId: "friend-row",
-        "aria-label": C.intl.string(C.t.liqwPD),
+        "aria-label": S.intl.string(S.t.liqwPD),
         onClose: d.Zy,
         onSelect: a,
         children: [
             !E && O
                 ? (0, r.jsx)(s.sNh, {
                       id: "start-video-call",
-                      label: C.intl.string(C.t.oCqlGB),
+                      label: S.intl.string(S.t.oCqlGB),
                       action: f,
                   })
                 : null,
             !E &&
                 (0, r.jsx)(s.sNh, {
                     id: "start-voice-call",
-                    label: C.intl.string(C.t.focH1t),
+                    label: S.intl.string(S.t.focH1t),
                     action: p,
                 }),
             (0, r.jsx)(s.sNh, {
                 id: "remove-friend",
-                label: y,
+                label: v,
                 action: m,
                 color: "danger",
             }),
@@ -130,11 +130,11 @@ class P extends i.PureComponent {
                 (0, r.jsxs)("div", {
                     className: T.listItemContents,
                     children: [
-                        (0, r.jsx)(v.Z, {
+                        (0, r.jsx)(y.Z, {
                             user: e,
                             status: l,
                             isMobile: a,
-                            subText: (0, r.jsx)(y.Z, {
+                            subText: (0, r.jsx)(v.Z, {
                                 hovered: t,
                                 activities: n,
                                 applicationStream: i,
@@ -157,13 +157,13 @@ class P extends i.PureComponent {
                                     }),
                                 (0, r.jsx)(O.Z, {
                                     icon: s.kBi,
-                                    tooltip: C.intl.string(C.t["g33r/P"]),
+                                    tooltip: S.intl.string(S.t["g33r/P"]),
                                     onClick: this.handleOpenPrivateChannel,
                                     shouldHighlight: t,
                                 }),
                                 (0, r.jsx)(O.Z, {
                                     icon: s.Huf,
-                                    tooltip: C.intl.string(C.t.UKOtz8),
+                                    tooltip: S.intl.string(S.t.UKOtz8),
                                     onClick: this.handleOpenActionsMenu,
                                     shouldHighlight: t,
                                 }),

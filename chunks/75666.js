@@ -2,9 +2,9 @@ n.d(t, {
     AR: () => f,
     C2: () => u,
     Pp: () => m,
-    VX: () => p,
+    VX: () => h,
     b7: () => g,
-    sE: () => h,
+    sE: () => p,
 });
 var r,
     i,
@@ -15,14 +15,14 @@ var r,
     c = n(981631),
     d = n(388032),
     u = (((r = {})[(r.GUILD = 0)] = "GUILD"), (r[(r.GUILD_SCHEDULED_EVENT = 1)] = "GUILD_SCHEDULED_EVENT"), r),
-    p =
+    h =
         (((i = {}).GUILD_TEMPLATES = "guild-templates"),
         (i.CUSTOMIZE_NEW_GUILD = "customize-new-guild"),
         (i.CHOOSE_GUILD = "choose-guild"),
         (i.CUSTOMIZE_EXISTING_GUILD = "customize-existing-guild"),
         (i.CONFIRMATION = "confirmation"),
         i),
-    h =
+    p =
         (((l = {}).CREATE = "CREATE"),
         (l.HUB_SCHOOL_CLUB = "HUB_SCHOOL_CLUB"),
         (l.HUB_STUDY = "HUB_STUDY"),

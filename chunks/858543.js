@@ -2,10 +2,10 @@ n.d(t, {
     DM: () => x,
     ZP: () => j,
 });
-var l = n(951288);
+var a = n(951288);
 n(647438);
-var a = n(120356),
-    s = n.n(a),
+var l = n(120356),
+    s = n.n(l),
     r = n(692547),
     i = n(28664),
     o = n(481060),
@@ -18,23 +18,23 @@ var a = n(120356),
     f = n(240778);
 function x(e) {
     let { channel: t, isNew: n } = e,
-        l = (0, u.eV)(t),
-        a = l.slice(void 0, 3),
-        s = l.slice(3),
-        r = l.length > 3 ? l.length - 3 : 0,
+        a = (0, u.eV)(t),
+        l = a.slice(void 0, 3),
+        s = a.slice(3),
+        r = a.length > 3 ? a.length - 3 : 0,
         i = t.hasFlag(m.zZ.PINNED),
-        o = a.length > 0 || i || n;
+        o = l.length > 0 || i || n;
     return {
-        shownTags: a,
+        shownTags: l,
         remainingTags: s,
         moreTagsCount: r,
         isPinned: i,
         shouldRenderTagsRow: o,
-        forumPostContainsTags: l.length > 0,
+        forumPostContainsTags: a.length > 0,
     };
 }
 function j(e) {
-    let { channel: t, isNew: n, tagsClassName: a, className: u } = e,
+    let { channel: t, isNew: n, tagsClassName: l, className: u } = e,
         {
             shownTags: m,
             remainingTags: j,
@@ -47,22 +47,22 @@ function j(e) {
         }),
         { tagFilter: N } = (0, c.H)(t.id);
     return v
-        ? (0, l.jsxs)("div", {
+        ? (0, a.jsxs)("div", {
               className: s()(f.tags, u),
               children: [
                   n
-                      ? (0, l.jsx)(o.IGR, {
+                      ? (0, a.jsx)(o.IGR, {
                             className: s()(g.newBadge, g.inTagsRow),
                             color: r.Z.unsafe_rawColors.BRAND_260.css,
                             text: h.intl.string(h.t.y2b7CA),
                         })
                       : null,
                   p &&
-                      (0, l.jsx)("div", {
+                      (0, a.jsx)("div", {
                           className: f.pinIcon,
-                          children: (0, l.jsx)(i.u, {
+                          children: (0, a.jsx)(i.u, {
                               text: h.intl.string(h.t["1QLRYW"]),
-                              children: (0, l.jsx)(o.qQX, {
+                              children: (0, a.jsx)(o.qQX, {
                                   size: "custom",
                                   width: 16,
                                   height: 16,
@@ -71,18 +71,18 @@ function j(e) {
                           }),
                       }),
                   m.map((e) =>
-                      (0, l.jsx)(
+                      (0, a.jsx)(
                           d.Z,
                           {
                               tag: e,
                               size: d.Z.Sizes.SMALL,
-                              className: s()(a, { [f.tagFiltered]: N.has(e.id) }),
+                              className: s()(l, { [f.tagFiltered]: N.has(e.id) }),
                           },
                           e.id,
                       ),
                   ),
                   b > 0
-                      ? (0, l.jsx)(d.f, {
+                      ? (0, a.jsx)(d.f, {
                             tags: j,
                             count: b,
                             size: d.Z.Sizes.SMALL,

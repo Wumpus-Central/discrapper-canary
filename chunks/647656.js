@@ -100,17 +100,17 @@ let _ = ["1402418171662569542"],
                         }),
                         Promise.resolve(O)
                     );
-                let y = {};
+                let v = {};
                 O.name || (O.name = a.application.name);
-                let v = a.application.id;
-                O.application_id = v;
+                let y = a.application.id;
+                O.application_id = y;
                 let I = a.transport === m.He.POST_MESSAGE;
                 O.platform = I ? b.M7m.EMBEDDED : b.M7m.DESKTOP;
-                let S = c.Z.getApplication(null != v ? v : void 0),
-                    C = null != (r = O.instance) && r,
+                let C = c.Z.getApplication(null != y ? y : void 0),
+                    S = null != (r = O.instance) && r,
                     T = null == (t = O.party) ? void 0 : t.privacy;
                 delete O.instance, null == (n = O.party) || delete n.privacy;
-                let N = (0, s.S)(O, C, I, null != S && (0, u.g)(S) && I, T);
+                let N = (0, s.S)(O, S, I, null != C && (0, u.g)(C) && I, T);
                 N > 0 && (O.flags = N);
                 let { assets: j, party: P, secrets: x, timestamps: A, buttons: Z, type: w } = O;
                 if ((null == w && (O.type = b.IIU.PLAYING), null != x)) {
@@ -131,8 +131,8 @@ let _ = ["1402418171662569542"],
                         );
                 }
                 if (
-                    (null != Z && ((y.button_urls = Z.map((e) => e.url)), (O.buttons = Z.map((e) => e.label))),
-                    (O.metadata = y),
+                    (null != Z && ((v.button_urls = Z.map((e) => e.url)), (O.buttons = Z.map((e) => e.label))),
+                    (O.metadata = v),
                     null != A)
                 )
                     for (let e of Object.keys(A))

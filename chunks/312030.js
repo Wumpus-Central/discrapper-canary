@@ -1,34 +1,34 @@
 n.d(t, { h: () => s }), n(388685);
 var r = n(647438),
     l = n(884697),
-    a = n(215023);
+    i = n(215023);
 let s = (e) => {
     let { scrollerRef: t, sortedCategories: n } = e,
-        [s, i] = r.useState(1),
-        o = r.useCallback(
+        [s, o] = r.useState(1),
+        a = r.useCallback(
             (e) => {
                 let t = n.findIndex((t) => t.skuId === e);
-                return -1 === t ? 1 : Math.floor(t / a.kN) + 1;
+                return -1 === t ? 1 : Math.floor(t / i.kN) + 1;
             },
             [n],
         ),
         c = r.useCallback(
             (e) => {
                 if (null != e && !(0, l.$2)(e)) {
-                    let t = o(e);
-                    t !== s && i(t);
+                    let t = a(e);
+                    t !== s && o(t);
                 }
             },
-            [o, s, i],
+            [a, s, o],
         );
     return {
         currentPage: s,
         handlePageChange: r.useCallback(
             (e) => {
                 var n;
-                i(e), null == (n = t.current) || n.scrollTo({ to: 0 });
+                o(e), null == (n = t.current) || n.scrollTo({ to: 0 });
             },
-            [t, i],
+            [t, o],
         ),
         scrollToCategory: c,
     };

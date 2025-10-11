@@ -1,9 +1,9 @@
-n.d(t, { Z: () => x }), n(953529);
+n.d(t, { Z: () => b }), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    s = n.n(l),
-    a = n(28664),
+    a = n.n(l),
+    s = n(28664),
     o = n(481060),
     c = n(603211),
     d = n(734893),
@@ -13,9 +13,9 @@ var r = n(951288),
     p = n(969632),
     f = n(388032),
     h = n(197530);
-let x = function (e) {
-    let { guildId: t, resourceChannel: l, index: x, onDragComplete: b, onDragStart: j, onDragReset: _ } = e,
-        { title: v, channelId: C, description: O } = l,
+let b = function (e) {
+    let { guildId: t, resourceChannel: l, index: b, onDragComplete: x, onDragStart: j, onDragReset: v } = e,
+        { title: _, channelId: C, description: O } = l,
         y = u.Z.getChannel(C),
         N = null;
     (null != y && (0, d.k3)(y)) || (N = f.intl.string(f.t.kTdL8f));
@@ -32,10 +32,10 @@ let x = function (e) {
         } = (0, c.Z)({
             type: "RESOURCE_CHANNEL",
             optionId: l.channelId,
-            index: x,
+            index: b,
             onDragStart: j,
-            onDragComplete: b,
-            onDragReset: _,
+            onDragComplete: x,
+            onDragReset: v,
         }),
         Z = i.useCallback(
             (e) => {
@@ -59,7 +59,7 @@ let x = function (e) {
                 (0, o.ZDy)(async () => {
                     let { default: e } = await n.e("84725").then(n.bind(n, 462499));
                     return (n) => {
-                        var i, s;
+                        var i, a;
                         return (0, r.jsx)(
                             e,
                             ((i = (function (e) {
@@ -87,7 +87,7 @@ let x = function (e) {
                                 }
                                 return e;
                             })({}, n)),
-                            (s = s =
+                            (a = a =
                                 {
                                     guildId: t,
                                     resourceChannel: l,
@@ -96,7 +96,7 @@ let x = function (e) {
                                     onIconUpload: R,
                                 }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
+                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
                                 : (function (e, t) {
                                       var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
@@ -104,8 +104,8 @@ let x = function (e) {
                                           n.push.apply(n, r);
                                       }
                                       return n;
-                                  })(Object(s)).forEach(function (e) {
-                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
+                                  })(Object(a)).forEach(function (e) {
+                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
                                   }),
                             i),
                         );
@@ -119,9 +119,9 @@ let x = function (e) {
               className: h.resourceChannelContainer,
               children: [
                   (0, r.jsxs)("div", {
-                      className: s()(h.resourceChannel, {
-                          [h.dropIndicatorBefore]: null != T && x < T,
-                          [h.dropIndicatorAfter]: null != T && x > T,
+                      className: a()(h.resourceChannel, {
+                          [h.dropIndicatorBefore]: null != T && b < T,
+                          [h.dropIndicatorAfter]: null != T && b > T,
                           [h.resourceChannelError]: null != N,
                       }),
                       ref: (e) => {
@@ -157,7 +157,7 @@ let x = function (e) {
                                       className: h.resourceChannelTitle,
                                       variant: "text-md/semibold",
                                       color: "header-primary",
-                                      children: v,
+                                      children: _,
                                   }),
                                   !E &&
                                       (0, r.jsx)(o.Text, {
@@ -169,7 +169,7 @@ let x = function (e) {
                                       }),
                               ],
                           }),
-                          (0, r.jsx)(a.u, {
+                          (0, r.jsx)(s.u, {
                               text: f.intl.string(f.t.bt75u7),
                               children: (0, r.jsx)(o.hU, {
                                   icon: o.vdY,

@@ -1,4 +1,4 @@
-t.d(n, { Z: () => I });
+t.d(n, { Z: () => y });
 var l = t(951288);
 t(647438);
 var i = t(120356),
@@ -18,23 +18,23 @@ var i = t(120356),
     v = t(856651),
     g = t(388032),
     b = t(20163);
-function y(e) {
+function I(e) {
     var n;
     let { account: t, locale: i, userId: r } = e,
         o = null != (n = t.metadata) ? n : {},
         h = (0, m.FI)(o[v.PC.CREATED_AT], i),
-        y = c.Z.get((0, u.rR)(t.type));
+        I = c.Z.get((0, u.rR)(t.type));
     return (0, l.jsxs)("li", {
         className: b.connection,
         children: [
             (0, l.jsx)(s.u, {
-                __unsupportedReactNodeAsText: null == y ? void 0 : y.name,
+                __unsupportedReactNodeAsText: null == I ? void 0 : I.name,
                 children: (0, l.jsx)("div", {
                     className: b.platformIconContainer,
                     children: (0, l.jsx)("img", {
-                        alt: g.intl.formatToPlainString(g.t.rtm15O, { name: null == y ? void 0 : y.name }),
+                        alt: g.intl.formatToPlainString(g.t.rtm15O, { name: null == I ? void 0 : I.name }),
                         className: b.platformIcon,
-                        src: null == y ? void 0 : y.icon.lightPNG,
+                        src: null == I ? void 0 : I.icon.lightPNG,
                     }),
                 }),
             }),
@@ -45,7 +45,7 @@ function y(e) {
                         children: [
                             (() => {
                                 var e;
-                                let n = null == y || null == (e = y.getPlatformUserUrl) ? void 0 : e.call(y, t);
+                                let n = null == I || null == (e = I.getPlatformUserUrl) ? void 0 : e.call(I, t);
                                 return null == n
                                     ? (0, l.jsx)(s.u, {
                                           overflowOnly: !0,
@@ -61,9 +61,9 @@ function y(e) {
                                           className: b.platformUrlAnchor,
                                           useDefaultUnderlineStyles: !1,
                                           "aria-label":
-                                              (null == y ? void 0 : y.name) != null
+                                              (null == I ? void 0 : I.name) != null
                                                   ? ""
-                                                        .concat(y.name, ", ")
+                                                        .concat(I.name, ", ")
                                                         .concat(t.name, ", ")
                                                         .concat(g.intl.string(g.t.q5jLJC))
                                                   : "".concat(t.name, ", ").concat(g.intl.string(g.t.q5jLJC)),
@@ -75,7 +75,7 @@ function y(e) {
                                                   (0, x.q)(
                                                       {
                                                           href: n,
-                                                          trusted: (null == y ? void 0 : y.type) !== j.ABu.DOMAIN,
+                                                          trusted: (null == I ? void 0 : I.type) !== j.ABu.DOMAIN,
                                                       },
                                                       e,
                                                   );
@@ -129,7 +129,7 @@ function y(e) {
         ],
     });
 }
-function I(e) {
+function y(e) {
     let { connections: n, userId: t, className: i } = e,
         s = (0, o.e7)([h.default], () => h.default.locale);
     return 0 === n.length
@@ -138,7 +138,7 @@ function I(e) {
               className: r()(b.container, i),
               children: n.map((e) =>
                   (0, l.jsx)(
-                      y,
+                      I,
                       {
                           account: e,
                           userId: t,

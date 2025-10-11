@@ -11,7 +11,7 @@ function i(e) {
         location: s,
         rating: c = null,
         category: u,
-        variant: m,
+        variant: d,
     } = e;
     r.default.track(
         l.rMx.STREAM_REPORT_PROBLEM,
@@ -43,7 +43,7 @@ function i(e) {
             {
                 reason: t,
                 category: u,
-                reason_variant: m,
+                reason_variant: d,
                 streamer_user_id: n.ownerId,
                 stream_channel_id: n.channelId,
                 guild_id: n.guildId,

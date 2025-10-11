@@ -2,8 +2,8 @@ n.d(t, { G: () => h }), n(35282);
 var r = n(36793),
     i = n(481060),
     l = n(668781),
-    s = n(80932),
-    a = n(426642),
+    a = n(80932),
+    s = n(426642),
     o = n(626135),
     c = n(176354),
     d = n(956664),
@@ -17,23 +17,23 @@ let f = (e, t, n, r) => (
             file_size: t,
             upload_id: r,
         }),
-        a.d.TOO_BIG
+        s.d.TOO_BIG
     ),
     h = async (e) => {
         let {
                 data: t,
                 file: n,
                 guildId: h,
-                uploadId: x,
-                roles: b,
+                uploadId: b,
+                roles: x,
                 image: j,
-                hideErrorModal: _,
-                analyticsLocation: v,
+                hideErrorModal: v,
+                analyticsLocation: _,
             } = e,
             C = c.ZP.sanitizeEmojiName(n.name.split(".")[0]);
         if (c.ZP.isFileTooBig(n)) {
             if ("image/gif" === n.type || "image/webp" === n.type || "image/avif" === n.type)
-                return f(n.name, n.size, h, x);
+                return f(n.name, n.size, h, b);
             else if (null != j) {
                 var O, y;
                 let e;
@@ -41,7 +41,7 @@ let f = (e, t, n, r) => (
                 try {
                     e = c.ZP.isDataTooBig(t);
                 } catch (e) {
-                    return f(n.name, n.size, h, x);
+                    return f(n.name, n.size, h, b);
                 }
                 if (
                     ((O = t),
@@ -55,48 +55,48 @@ let f = (e, t, n, r) => (
                     }),
                     e)
                 )
-                    return f(n.name, n.size, h, x);
+                    return f(n.name, n.size, h, b);
             }
         }
         try {
-            let e = await (0, s.rS)({
+            let e = await (0, a.rS)({
                 guildId: h,
                 image: t,
                 name: C,
-                roles: b,
-                analyticsLocation: v,
+                roles: x,
+                analyticsLocation: _,
             });
             return (
                 o.default.track(g.rMx.EMOJI_UPLOAD_COMPLETED, {
                     guild_id: h,
-                    upload_id: x,
+                    upload_id: b,
                 }),
                 (0, i.showToast)((0, i.createToast)(m.intl.string(m.t.r0w9m5), i.ToastType.SUCCESS)),
                 e
             );
-        } catch (s) {
+        } catch (a) {
             let e,
                 n,
-                { body: r, status: i } = s;
+                { body: r, status: i } = a;
             return (
                 null != r &&
                     (r.code === g.evJ.TOO_MANY_EMOJI
-                        ? ((e = m.intl.string(m.t["jP/Rqq"])), (n = a.d.TOO_MANY_EMOJI))
+                        ? ((e = m.intl.string(m.t["jP/Rqq"])), (n = s.d.TOO_MANY_EMOJI))
                         : r.code === g.evJ.TOO_MANY_ANIMATED_EMOJI
-                          ? ((e = m.intl.string(m.t["6v5dPz"])), (n = a.d.TOO_MANY_ANIMATED_EMOJI))
+                          ? ((e = m.intl.string(m.t["6v5dPz"])), (n = s.d.TOO_MANY_ANIMATED_EMOJI))
                           : null != r.image || r.code === g.evJ.INVALID_FILE_ASSET_SIZE
                             ? (o.default.track(g.rMx.EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, {
                                   guild_id: h,
                                   file_size: p.byteLength(t),
-                                  upload_id: x,
+                                  upload_id: b,
                               }),
                               (e = m.intl.formatToPlainString(m.t.kIO9j4, { maxSize: u.xG })),
-                              (n = a.d.TOO_BIG))
+                              (n = s.d.TOO_BIG))
                             : (null != r.image || r.code === g.evJ.INVALID_FILE_ASSET_SIZE_RESIZE_GIF) &&
-                              (n = a.d.RESIZE_GIF)),
-                429 === i && ((e = m.intl.string(m.t["Whhv4+"])), (n = a.d.RATE_LIMIT)),
+                              (n = s.d.RESIZE_GIF)),
+                429 === i && ((e = m.intl.string(m.t["Whhv4+"])), (n = s.d.RATE_LIMIT)),
                 null == e ||
-                    _ ||
+                    v ||
                     l.Z.show({
                         title: m.intl.string(m.t.iufib2),
                         body: e,

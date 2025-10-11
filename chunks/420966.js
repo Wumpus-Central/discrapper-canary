@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    s = n(481060),
-    a = n(239091),
+    a = n(481060),
+    s = n(239091),
     o = n(741247),
     c = n(345162),
     d = n(243730),
@@ -25,39 +25,39 @@ function f() {
     };
 }
 function h(e) {
-    let { guild: t, role: f, selectedSection: h, setSelectedSection: x } = e,
-        b = i.useCallback(
+    let { guild: t, role: f, selectedSection: h, setSelectedSection: b } = e,
+        x = i.useCallback(
             (e) => {
-                x(e);
+                b(e);
             },
-            [x],
+            [b],
         ),
         j = (0, l.e7)([d.Z], () => {
             var e;
             return null == (e = d.Z.getRoleMemberCount(t.id)) ? void 0 : e[f.id];
         }, [f.id, t.id]),
-        _ = (0, c.fI)(f),
-        v = (0, u.Z)(t.id, f);
+        v = (0, c.fI)(f),
+        _ = (0, u.Z)(t.id, f);
     i.useEffect(() => {
-        _ && x(g.ZI.PERMISSIONS);
-    }, [_, x]);
+        v && b(g.ZI.PERMISSIONS);
+    }, [v, b]);
     let C = (0, o.e)(t, f);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
                 className: p.titleContainer,
                 children: [
-                    (0, r.jsx)(s.Text, {
+                    (0, r.jsx)(a.Text, {
                         className: p.titleText,
                         color: "header-primary",
                         variant: "text-md/semibold",
                         children: m.intl.format(m.t.BUdGkJ, { roleName: f.name }),
                     }),
                     C
-                        ? (0, r.jsx)(s.P3F, {
+                        ? (0, r.jsx)(a.P3F, {
                               className: p.menu,
                               onClick: function (e) {
-                                  (0, a.jW)(e, async () => {
+                                  (0, s.jW)(e, async () => {
                                       let { default: e } = await Promise.resolve().then(n.bind(n, 741247));
                                       return (n) => {
                                           var i, l;
@@ -116,7 +116,7 @@ function h(e) {
                                   });
                               },
                               "aria-label": m.intl.string(m.t.PdRCRk),
-                              children: (0, r.jsx)(s.xhG, {
+                              children: (0, r.jsx)(a.xhG, {
                                   size: "md",
                                   color: "currentColor",
                               }),
@@ -124,42 +124,42 @@ function h(e) {
                         : null,
                 ],
             }),
-            null != v
-                ? (0, r.jsx)(s.Wn, {
-                      messageType: s.QYI.WARNING,
-                      children: v,
+            null != _
+                ? (0, r.jsx)(a.Wn, {
+                      messageType: a.QYI.WARNING,
+                      children: _,
                   })
                 : null,
-            (0, r.jsxs)(s.njP, {
+            (0, r.jsxs)(a.njP, {
                 className: p.tabBar,
                 "aria-label": m.intl.string(m.t["+1H47u"]),
                 selectedItem: h,
                 type: "top",
                 look: "brand",
-                onItemSelect: b,
+                onItemSelect: x,
                 children: [
-                    (0, r.jsx)(s.njP.Item, {
+                    (0, r.jsx)(a.njP.Item, {
                         className: p.tabBarItem,
                         id: g.ZI.DISPLAY,
-                        disabled: _,
+                        disabled: v,
                         children: m.intl.string(m.t.hmdom5),
                     }),
-                    (0, r.jsx)(s.njP.Item, {
+                    (0, r.jsx)(a.njP.Item, {
                         className: p.tabBarItem,
                         id: g.ZI.PERMISSIONS,
                         children: m.intl.string(m.t.WIDE1N),
                     }),
-                    (0, r.jsx)(s.njP.Item, {
+                    (0, r.jsx)(a.njP.Item, {
                         className: p.tabBarItem,
                         id: g.ZI.VERIFICATIONS,
-                        disabled: _,
+                        disabled: v,
                         children: m.intl.string(m.t["5//Mur"]),
                     }),
-                    (0, r.jsx)(s.njP.Item, {
+                    (0, r.jsx)(a.njP.Item, {
                         className: p.tabBarItem,
                         id: g.ZI.MEMBERS,
-                        disabled: _,
-                        children: _
+                        disabled: v,
+                        children: v
                             ? m.intl.string(m.t["kg//+/"])
                             : m.intl.formatToPlainString(m.t.bHnZWV, { numMembers: String(j) }),
                     }),

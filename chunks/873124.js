@@ -5,18 +5,18 @@ var l = n(951288),
     s = n(507453),
     a = n(388032);
 function o(e) {
-    let { mfaChallenge: t, finish: n, setSlide: o, onClose: d, isSlideReady: c, headerAlignStart: u } = e,
+    let { mfaChallenge: t, finish: n, setSlide: o, onClose: d, isSlideReady: u, headerAlignStart: c } = e,
         [h, f] = r.useState(!1),
         [g, m] = r.useState(null),
-        [p, x] = r.useState(""),
+        [p, b] = r.useState(""),
         S = r.useRef(null);
     return (
         r.useEffect(() => {
-            if (c) {
+            if (u) {
                 var e;
                 null == (e = S.current) || e.focus();
             }
-        }, [c]),
+        }, [u]),
         (0, l.jsxs)("form", {
             onSubmit: (e) => {
                 e.preventDefault(),
@@ -36,14 +36,14 @@ function o(e) {
             children: [
                 (0, l.jsx)(s.Z.SlideHeader, {
                     onClose: d,
-                    headerAlignStart: u,
+                    headerAlignStart: c,
                 }),
                 (0, l.jsxs)(s.Z.SlideContent, {
                     children: [
                         (0, l.jsx)(i.oil, {
                             label: a.intl.string(a.t["CIGa+/"]),
                             inputRef: S,
-                            onChange: x,
+                            onChange: b,
                             value: p,
                             type: "password",
                             autoComplete: "password",

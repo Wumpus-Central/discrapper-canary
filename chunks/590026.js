@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(647438),
     i = n(876215),
     l = n(442837),
@@ -8,7 +8,7 @@ var r = n(647438),
     c = n(520951),
     d = n(897674),
     u = n(206583);
-let p = new Set([
+let h = new Set([
     i.s.PLAYED_GAME,
     i.s.WATCHED_MEDIA,
     i.s.TOP_GAME,
@@ -16,14 +16,14 @@ let p = new Set([
     i.s.LISTENED_SESSION,
     i.s.LAUNCHED_ACTIVITY,
 ]);
-function h(e) {
+function p(e) {
     let t = (0, d.Z)({ id: u.YN.GLOBAL_FEED });
     (t = (0, o.Z)({
         entries: t,
         channelId: e,
     })),
         (t = (0, s.Z)({ entries: t })),
-        (t = r.useMemo(() => (null == t ? void 0 : t.filter((e) => p.has(e.content_type))), [t]));
+        (t = r.useMemo(() => (null == t ? void 0 : t.filter((e) => h.has(e.content_type))), [t]));
     let { entries: n, filteredIds: i } = (0, c.Z)(t);
     return (
         (t = n),

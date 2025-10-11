@@ -2,8 +2,8 @@ n.d(t, { A: () => h }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    s = n.n(l),
-    a = n(793030),
+    a = n.n(l),
+    s = n(793030),
     o = n(442837),
     c = n(481060),
     d = n(296991),
@@ -16,14 +16,14 @@ function h(e) {
     let { requireTerms: t, rules: n } = e,
         l = (0, o.e7)([u.Z], () => u.Z.getProps().guild),
         h = null == l ? void 0 : l.id,
-        x = i.useCallback(
+        b = i.useCallback(
             (e) => {
                 if (null == h || null == n) return null;
                 g.Z.setPendingInviteRules(h, e, [...n]);
             },
             [h, n],
         ),
-        b = i.useCallback(
+        x = i.useCallback(
             (e) => {
                 if (null == h) return null;
                 g.Z.setPendingInviteRules(h, t, e);
@@ -39,16 +39,16 @@ function h(e) {
                     (0, r.jsx)(c.rsf, {
                         label: p.intl.string(p.t.d21uOj),
                         description: p.intl.string(p.t.SzpUBA),
-                        onChange: x,
+                        onChange: b,
                         checked: t,
                     }),
                     t && (0, r.jsx)(m.c, { guildId: l.id }),
                     (0, r.jsx)("div", {
-                        className: s()(f.rules, { [f.disabled]: !t }),
+                        className: a()(f.rules, { [f.disabled]: !t }),
                         children: (0, r.jsxs)("div", {
                             inert: t ? void 0 : "",
                             children: [
-                                (0, r.jsx)(a.X6q, {
+                                (0, r.jsx)(s.X6q, {
                                     variant: "text-xs/bold",
                                     color: "text-muted",
                                     className: f.rulesHeader,
@@ -57,7 +57,7 @@ function h(e) {
                                 (0, r.jsx)(d.k, {
                                     guild: l,
                                     rules: n,
-                                    setRules: b,
+                                    setRules: x,
                                     disabled: !t,
                                 }),
                             ],

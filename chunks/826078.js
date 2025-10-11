@@ -65,8 +65,8 @@ let y = function (e) {
         [E, R] = r.useState(
             ((k = !(null == (n = P.current) || null == (t = n.videoElement) ? void 0 : t.paused)), true, k),
         ),
-        L = r.useRef(null),
-        [T, D] = r.useState(null),
+        T = r.useRef(null),
+        [L, D] = r.useState(null),
         [F, A] = r.useState(),
         I = r.useRef(null),
         Z = r.useRef(null),
@@ -100,13 +100,13 @@ let y = function (e) {
             }
         );
     }, [P]);
-    let { ref: X, width: Y = 0, height: G = 0 } = (0, c.ZP)(),
+    let { ref: Y, width: X = 0, height: G = 0 } = (0, c.ZP)(),
         K = (0, s.e7)([p.Z], () => p.Z.windowSize());
     r.useMemo(() => {
         K.width, K.height;
-        let e = X.current;
+        let e = Y.current;
         null != e && U(e.getBoundingClientRect());
-    }, [K.width, K.height, Y, X]);
+    }, [K.width, K.height, X, Y]);
     let Q = r.useRef(null),
         J = r.useRef({}),
         $ = r.useCallback(
@@ -134,7 +134,7 @@ let y = function (e) {
                 if (null == W) return null;
                 let r = (((0, o.clamp)(e, W.left, W.right) - W.left) / W.width) * F,
                     l = (0, o.clamp)(r, 0, F),
-                    i = T;
+                    i = L;
                 if (
                     (null == i &&
                         t &&
@@ -151,7 +151,7 @@ let y = function (e) {
                     null == (a = P.current) || a.seek(e);
                 }
             },
-            [F, W, T, S.start, S.end, P, E, $, q],
+            [F, W, L, S.start, S.end, P, E, $, q],
         ),
         et = r.useCallback(
             (e) => {
@@ -221,15 +221,15 @@ let y = function (e) {
         r.useEffect(() => {
             !(async function () {
                 var e;
-                let t = X.current,
-                    n = L.current;
+                let t = Y.current,
+                    n = T.current;
                 if (null == t || null == n || null == F) return;
-                (t.height = G), (t.width = Y);
+                (t.height = G), (t.width = X);
                 let a = t.getContext("2d");
                 if (null == a) return;
-                (a.fillStyle = "#000"), a.fillRect(0, 0, Y, G);
+                (a.fillStyle = "#000"), a.fillRect(0, 0, X, G);
                 let r = Math.ceil(G * (n.videoWidth / n.videoHeight)),
-                    l = Math.ceil(Y / r),
+                    l = Math.ceil(X / r),
                     i = Q.current;
                 if (null == i) return;
                 (i.width = r), (i.height = G);
@@ -247,10 +247,10 @@ let y = function (e) {
                             let i = o.getImageData(0, 0, r, G);
                             null == s[l] && (s[l] = []), (s[l][e] = i), t();
                         }),
-                            (n.currentTime = (r / Y) * F * e);
+                            (n.currentTime = (r / X) * F * e);
                     });
             })();
-        }, [Y, G, X, F, Q]);
+        }, [X, G, Y, F, Q]);
     let ei = M - S.start,
         eo = null == (l = P.current) ? void 0 : l.videoElement;
     return (0, a.jsx)("div", {
@@ -287,7 +287,7 @@ let y = function (e) {
                     }),
                 }),
                 (0, a.jsxs)("div", {
-                    className: i()(x.timeline, { [x.timelineDragging]: null != T }),
+                    className: i()(x.timeline, { [x.timelineDragging]: null != L }),
                     onMouseDown: ea,
                     children: [
                         (0, a.jsx)("canvas", {
@@ -296,7 +296,7 @@ let y = function (e) {
                         }),
                         (0, a.jsx)("canvas", {
                             className: x.timelineBackground,
-                            ref: X,
+                            ref: Y,
                         }),
                         (0, a.jsx)(u.tEY, {
                             children: (0, a.jsx)("div", {
@@ -309,7 +309,7 @@ let y = function (e) {
                         (0, a.jsx)(m.Z, {
                             preload: "auto",
                             onLoadedMetadata: function () {
-                                let e = L.current;
+                                let e = T.current;
                                 if (null != e) {
                                     if ((A(e.duration), 0 === S.start && (0 === S.end || S.end === e.duration))) {
                                         var t;
@@ -319,7 +319,7 @@ let y = function (e) {
                                 }
                             },
                             className: x.timelineVideo,
-                            ref: L,
+                            ref: T,
                             src: O,
                             muted: !0,
                         }),
@@ -352,7 +352,7 @@ let y = function (e) {
                                 }),
                                 (0, a.jsx)(u.tEY, {
                                     children: (0, a.jsx)("button", {
-                                        className: i()(x.dragHandleLeft, { [x.dragging]: "start" === T }),
+                                        className: i()(x.dragHandleLeft, { [x.dragging]: "start" === L }),
                                         onMouseDown: ea,
                                         onKeyDown: et,
                                         role: "slider",
@@ -367,7 +367,7 @@ let y = function (e) {
                                 }),
                                 (0, a.jsx)(u.tEY, {
                                     children: (0, a.jsx)("button", {
-                                        className: i()(x.dragHandleRight, { [x.dragging]: "end" === T }),
+                                        className: i()(x.dragHandleRight, { [x.dragging]: "end" === L }),
                                         onMouseDown: ea,
                                         onKeyDown: en,
                                         role: "slider",

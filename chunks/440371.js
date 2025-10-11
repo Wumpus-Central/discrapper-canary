@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => m });
 var r = n(951288);
 n(647438);
 var l = n(913527),
@@ -33,7 +33,7 @@ function d(e) {
     }
     return e;
 }
-function m(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -51,13 +51,13 @@ function m(e, t) {
         e
     );
 }
-function x(e) {
+function m(e) {
     let {
         className: t,
         onScheduleChange: n,
         onRecurrenceChange: l,
-        onTimeChange: x,
-        timeSelected: g = !0,
+        onTimeChange: m,
+        timeSelected: x = !0,
         schedule: h,
         recurrenceRule: v,
         showEndDate: p = !1,
@@ -72,7 +72,7 @@ function x(e) {
         N = i()().add(s.Ib, "days");
     null != v && (E.add(s.hn, "years"), N.add(s.hn, "years"));
     let C = (e) => {
-        n(m(d({}, h), { endDate: e }));
+        n(g(d({}, h), { endDate: e }));
     };
     return (
         p &&
@@ -138,7 +138,7 @@ function x(e) {
                             required: !0,
                             value: h.startDate,
                             onSelect: (e) => {
-                                n(m(d({}, h), { startDate: e }));
+                                n(g(d({}, h), { startDate: e }));
                             },
                             minDate: O,
                             maxDate: E,
@@ -149,9 +149,9 @@ function x(e) {
                             required: !0,
                             value: h.startDate,
                             onChange: (e) => {
-                                e.isValid() && (null == x || x(!0), n(m(d({}, h), { startDate: e })));
+                                e.isValid() && (null == m || m(!0), n(g(d({}, h), { startDate: e })));
                             },
-                            hideValue: !g,
+                            hideValue: !x,
                             disabled: f,
                         }),
                     ],

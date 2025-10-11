@@ -17,11 +17,11 @@ var r = n(951288),
     _ = n(325708),
     O = n(320149),
     E = n(82295),
-    y = n(252618),
-    v = n(605236),
+    v = n(252618),
+    y = n(605236),
     I = n(243778),
-    S = n(984370),
-    C = n(797614),
+    C = n(984370),
+    S = n(797614),
     T = n(359110),
     N = n(6025),
     j = n(897473),
@@ -43,8 +43,8 @@ var r = n(951288),
     F = n(177033),
     z = n(355350),
     W = n(307947),
-    q = n(96479),
-    Y = n(480874),
+    Y = n(96479),
+    q = n(480874),
     K = n(687683),
     Q = n(981631),
     X = n(921944),
@@ -118,7 +118,7 @@ function ei() {
                     c = null == (i = n[o + 1]) || null == (t = i.channel) ? void 0 : t.id,
                     u = s.channel.id;
                 return (0, r.jsx)(
-                    q.Z,
+                    Y.Z,
                     {
                         index: o,
                         className: a()({
@@ -167,7 +167,7 @@ function ei() {
                 ),
             [t, m, c],
         );
-    return (n.length !== t && C.Z.increment({ name: s.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
+    return (n.length !== t && S.Z.increment({ name: s.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
         ? (0, r.jsx)(W.Z, { section: K.pS.REQUESTS })
         : (0, r.jsx)(o.bG, {
               navigator: f,
@@ -247,7 +247,7 @@ function el(e) {
 let ea = (e) => {
     let t = (0, U.Z)();
     return (i.useEffect(() => {
-        (0, v.kk)(u.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
+        (0, y.kk)(u.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
     }, []),
     null == e.targetElementRef.current || R.Z.hasLayers() || (0, p.$sL)())
         ? e.children
@@ -316,7 +316,7 @@ let ea = (e) => {
 };
 function eo(e) {
     let { section: t } = e;
-    return t === K.pS.SPAM ? (0, r.jsx)(Y.Z, {}) : (0, r.jsx)(ei, {});
+    return t === K.pS.SPAM ? (0, r.jsx)(q.Z, {}) : (0, r.jsx)(ei, {});
 }
 let es = (0, h.Z)(function (e) {
     let { width: t } = e,
@@ -325,7 +325,7 @@ let es = (0, h.Z)(function (e) {
         f.Y(Q.Z5c.MESSAGE_REQUESTS),
             (0, P.e)("message-requests"),
             D.default.track(Q.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }),
-            C.Z.increment({ name: s.V.MESSAGE_REQUEST_VIEW });
+            S.Z.increment({ name: s.V.MESSAGE_REQUEST_VIEW });
     });
     let l = (0, c.e7)([x.Z], () => x.Z.theme),
         o = (0, z.w)(),
@@ -342,12 +342,12 @@ let es = (0, h.Z)(function (e) {
     i.useEffect(() => {
         null != g && !_ && O && b && ((0, T.Kh)(g), N.Z.closeChannelSidebar(w.uZ));
     }, [g, O, b, _]);
-    let [v, I] = i.useState(K.pS.REQUESTS),
+    let [y, I] = i.useState(K.pS.REQUESTS),
         A = (e) => {
             I(e);
         };
     return (
-        (0, y.Tt)({ location: $.intl.string($.t.e7GWjY) }),
+        (0, v.Tt)({ location: $.intl.string($.t.e7GWjY) }),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)("div", {
@@ -359,25 +359,25 @@ let es = (0, h.Z)(function (e) {
                         (0, r.jsx)(p.f6W, {
                             theme: l,
                             children: (e) =>
-                                (0, r.jsxs)(S.Z, {
+                                (0, r.jsxs)(C.Z, {
                                     className: e,
                                     toolbar: !0,
                                     children: [
-                                        (0, r.jsx)(S.Z.Icon, {
+                                        (0, r.jsx)(C.Z.Icon, {
                                             icon: p._XJ,
                                             "aria-hidden": !0,
                                         }),
                                         (0, r.jsx)(ea, {
                                             targetElementRef: E,
-                                            children: (0, r.jsx)(S.Z.Title, {
+                                            children: (0, r.jsx)(C.Z.Title, {
                                                 ref: E,
                                                 children: $.intl.string($.t.e7GWjY),
                                             }),
                                         }),
-                                        (0, r.jsx)(S.Z.Divider, {}),
+                                        (0, r.jsx)(C.Z.Divider, {}),
                                         (0, r.jsxs)(p.njP, {
                                             "aria-label": $.intl.string($.t.e7GWjY),
-                                            selectedItem: v,
+                                            selectedItem: y,
                                             type: "top-pill",
                                             onItemSelect: A,
                                             children: [
@@ -401,7 +401,7 @@ let es = (0, h.Z)(function (e) {
                         }),
                         (0, r.jsx)("div", {
                             className: et.content,
-                            children: (0, r.jsx)(eo, { section: v }),
+                            children: (0, r.jsx)(eo, { section: y }),
                         }),
                     ],
                 }),

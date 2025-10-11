@@ -15,12 +15,12 @@ let c = l.memo(function (e) {
         (null == m || null == (e = m.targetAccordion) ? void 0 : e.key) === t.key && f(!0);
     }, [null == m ? void 0 : m.targetAccordion, t.key]);
     let b = null == n ? void 0 : n(d),
-        j = null == u ? void 0 : u();
+        p = null == u ? void 0 : u();
     return (0, r.jsx)("div", {
         className: s.accordion,
         children: (0, r.jsx)(a.I, {
             title: b,
-            subtitle: j,
+            subtitle: p,
             isOpen: d,
             setIsOpen: f,
             children: c.map((e) => (0, r.jsx)(i.Z, { node: e }, e.key)),

@@ -8,7 +8,7 @@ var r = n(951288),
     c = n(871499),
     d = n(388032),
     u = n(6762);
-function p(e) {
+function h(e) {
     let { width: t = 24, height: n = 24, isBadged: l = !1 } = e,
         [a] = i.useState(() => (0, s.Z)());
     return (0, r.jsxs)("svg", {
@@ -42,13 +42,13 @@ function p(e) {
         ],
     });
 }
-function h(e) {
+function p(e) {
     let { className: t, numRequestToSpeak: n } = e,
         i = n > 0;
     return (0, r.jsxs)("div", {
         className: a()(u.raisedHandIcon, t),
         children: [
-            (0, r.jsx)(p, { isBadged: i }),
+            (0, r.jsx)(h, { isBadged: i }),
             i
                 ? (0, r.jsx)(o.Text, {
                       className: u.raisedHandCount,
@@ -129,7 +129,7 @@ function f(e) {
                 label: n ? d.intl.string(d.t.gKGz7O) : d.intl.string(d.t.ImQ4dX),
                 className: l,
                 iconComponent: () =>
-                    (0, r.jsx)(h, {
+                    (0, r.jsx)(p, {
                         numRequestToSpeak: a,
                         className: l,
                     }),

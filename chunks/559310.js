@@ -1,6 +1,6 @@
 n.d(t, {
     am: () => r,
-    s6: () => s,
+    s6: () => a,
 });
 var l = n(973285);
 let i = (0, n(818083).B)({
@@ -16,15 +16,15 @@ let i = (0, n(818083).B)({
         },
     ],
 });
-function s(e) {
-    let { autoTrackExposure: t, location: n, guildId: s } = e,
+function a(e) {
+    let { autoTrackExposure: t, location: n, guildId: a } = e,
         { enabled: r } = l.W.getCurrentConfig({
-            guildId: s,
+            guildId: a,
             location: n,
         });
     return i.getCurrentConfig(
         {
-            guildId: s,
+            guildId: a,
             location: n,
         },
         {
@@ -34,14 +34,14 @@ function s(e) {
     );
 }
 function r(e) {
-    let { autoTrackExposure: t, location: n, guildId: s } = e,
+    let { autoTrackExposure: t, location: n, guildId: a } = e,
         { enabled: r } = l.W.useExperiment({
-            guildId: s,
+            guildId: a,
             location: n,
         });
     return i.useExperiment(
         {
-            guildId: s,
+            guildId: a,
             location: n,
         },
         {

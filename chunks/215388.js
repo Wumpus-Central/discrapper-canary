@@ -1,6 +1,6 @@
 A.d(t, { Z: () => C }), A(388685);
-var r = A(951288),
-    n = A(647438),
+var n = A(951288),
+    r = A(647438),
     a = A(120356),
     l = A.n(a),
     i = A(772848),
@@ -28,11 +28,11 @@ function q() {
 }
 function b(e) {
     var t;
-    let { hasError: A, maxLength: n, text: a } = e;
-    return (0, r.jsxs)("div", {
+    let { hasError: A, maxLength: r, text: a } = e;
+    return (0, n.jsxs)("div", {
         className: l()(m.maxLength, { [m.errorOverflow]: A }),
         "aria-hidden": "true",
-        children: [null != (t = null == a ? void 0 : a.length) ? t : 0, " ", null != n && "/ ".concat(n)],
+        children: [null != (t = null == a ? void 0 : a.length) ? t : 0, " ", null != r && "/ ".concat(r)],
     });
 }
 function C(e) {
@@ -46,8 +46,8 @@ function C(e) {
             onChange: m,
             onSubmit: C,
             showCharacterCount: j = !1,
-            placeholder: x,
-            required: U,
+            placeholder: U,
+            required: x,
             value: V,
             enableThemedBackground: O = !1,
             parentModalKey: P,
@@ -55,14 +55,14 @@ function C(e) {
             errorMessage: y,
         } = e,
         I = (0, o.Gc0)(),
-        [N, T] = n.useState(() => (0, s.JM)(V)),
-        K = n.useRef(!0 === c),
+        [N, K] = r.useState(() => (0, s.JM)(V)),
+        T = r.useRef(!0 === c),
         Z = null != A ? A : null == I ? void 0 : I.titleId,
         W = null != (t = null == I ? void 0 : I.errorId) ? t : h;
     function X(e, t, A) {
-        m(t), T(A);
+        m(t), K(A);
     }
-    let Q = n.useMemo(
+    let Q = r.useMemo(
         () => ({
             analyticsName: "simple",
             autocomplete: {
@@ -80,14 +80,14 @@ function C(e) {
         }),
         [c],
     );
-    return (0, r.jsx)(o.gNt, {
+    return (0, n.jsx)(o.gNt, {
         label: F,
         errorMessage: y,
         id: i,
-        required: U,
+        required: x,
         children: (e) => {
             var t, A;
-            return (0, r.jsxs)(d.ZP, {
+            return (0, n.jsxs)(d.ZP, {
                 id: null != (t = null == e ? void 0 : e.controlId) ? t : i,
                 "aria-describedby": null != (A = null == e ? void 0 : e.describedById) ? A : W,
                 "aria-labelledby": Z,
@@ -97,32 +97,32 @@ function C(e) {
                 innerClassName: l()(a, p.textAreaInner),
                 maxCharacterCount: g,
                 onChange: X,
-                placeholder: x,
-                required: U,
+                placeholder: U,
+                required: x,
                 channel: v,
                 textValue: V,
                 richValue: N,
                 type: Q,
                 onBlur: () => {
-                    K.current = !1;
+                    T.current = !1;
                 },
                 onFocus: () => {
-                    K.current = !0;
+                    T.current = !0;
                 },
-                focused: K.current,
+                focused: T.current,
                 onSubmit: null != C ? C : q,
                 disableThemedBackground: !O,
                 parentModalKey: P,
                 emojiPickerCloseOnModalOuterClick: !0,
                 children: [
                     !0 === j &&
-                        (0, r.jsx)(b, {
+                        (0, n.jsx)(b, {
                             hasError: null != I.error || (null != g && V.length > g),
                             text: V,
                             maxLength: g,
                         }),
                     null != g &&
-                        (0, r.jsx)(o.nn4, {
+                        (0, n.jsx)(o.nn4, {
                             id: h,
                             children: f.intl.format(f.t["+DFxLS"], { maxLength: g }),
                         }),

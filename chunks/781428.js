@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => $,
-    q: () => X,
+    q: () => Q,
 }),
     n(35282);
 var r,
@@ -22,8 +22,8 @@ var r,
     E = n(600164),
     v = n(100159),
     b = n(473855),
-    I = n(124860),
-    j = n(86779),
+    j = n(124860),
+    I = n(86779),
     N = n(726745),
     S = n(913583),
     O = n(144114),
@@ -95,10 +95,10 @@ function J(e, t) {
         e
     );
 }
-function X() {
+function Q() {
     return (0, i.jsx)(_.ZP, { children: (0, i.jsx)(d.$jN, {}) });
 }
-class Q extends (r = l.PureComponent) {
+class X extends (r = l.PureComponent) {
     static getDerivedStateFromProps(e) {
         let { handoffAvailable: t, authenticated: n } = e;
         return t || n ? null : { checkingHandoff: !1 };
@@ -510,7 +510,7 @@ class Q extends (r = l.PureComponent) {
                     expanded: !0,
                     children: this.renderDefaultForm(!0),
                 }),
-                t && (0, i.jsx)(j.Z, {}),
+                t && (0, i.jsx)(I.Z, {}),
             ],
         });
     }
@@ -529,7 +529,7 @@ class Q extends (r = l.PureComponent) {
         };
         return (0, i.jsx)(_.ZP, {
             style: { padding: 0 },
-            children: (0, i.jsx)(I.Cd, {
+            children: (0, i.jsx)(j.Cd, {
                 mfaFinish: this.handleTokenSubmitMFA,
                 mfaChallenge: e,
                 onEarlyClose: () => {
@@ -578,7 +578,7 @@ class Q extends (r = l.PureComponent) {
     render() {
         let { authenticated: e, invite: t, guildTemplate: n, loginStatus: r, handoffAvailable: l } = this.props,
             { checkingHandoff: s, redirecting: a } = this.state;
-        if (a || s) return (0, i.jsx)(X, {});
+        if (a || s) return (0, i.jsx)(Q, {});
         if (l) return this.renderHandOffAvailable();
         if (e && s) return this.renderHandOffContinue();
         switch (r) {
@@ -804,7 +804,7 @@ class Q extends (r = l.PureComponent) {
         };
     }
 }
-q(Q, "defaultProps", { transitionTo: (e) => n.g.location.assign(e) });
+q(X, "defaultProps", { transitionTo: (e) => n.g.location.assign(e) });
 let $ = function (e) {
     (0, T.M)();
     let t = (0, u.cj)([L.Z, w.Z, R.default, N.Z, y.Z], () => ({
@@ -818,5 +818,5 @@ let $ = function (e) {
         country: y.Z.getCountryCode(),
         hasLoggedInAccounts: N.Z.getHasLoggedInAccounts(),
     }));
-    return (0, i.jsx)(Q, Y({}, e, t));
+    return (0, i.jsx)(X, Y({}, e, t));
 };

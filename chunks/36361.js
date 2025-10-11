@@ -12,8 +12,8 @@ var l = n(28682),
     f = n(142118),
     m = n(409322),
     b = n(670304),
-    j = n(357660);
-function p(e) {
+    p = n(357660);
+function j(e) {
     let { node: t } = e;
     switch (t.type) {
         case l.Jq.ROOT:
@@ -21,7 +21,7 @@ function p(e) {
         case l.Jq.SIDEBAR_ITEM:
             throw Error("".concat(t.type, " nodes should never be rendered directly"));
         case l.Jq.PANEL:
-            return (0, r.jsx)(j.T, { node: t });
+            return (0, r.jsx)(p.T, { node: t });
         case l.Jq.PANE:
             return (0, r.jsx)(b.Z, { node: t });
         case l.Jq.LIST:
@@ -46,9 +46,9 @@ function p(e) {
 function x(e) {
     let { node: t } = e;
     return t.type === l.Jq.PANEL || t.type === l.Jq.PANE
-        ? (0, r.jsx)(p, { node: t })
+        ? (0, r.jsx)(j, { node: t })
         : (0, r.jsx)(o.Z, {
               node: t,
-              children: (0, r.jsx)(p, { node: t }),
+              children: (0, r.jsx)(j, { node: t }),
           });
 }

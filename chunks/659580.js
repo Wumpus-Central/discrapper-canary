@@ -60,9 +60,9 @@ function w(e) {
         Y = (0, f.Z)(M),
         H = (0, g.Z)(M),
         z = l.Yn.DEFAULT,
-        q = v.Z.isSelfDeaf(z),
-        B = (0, o.e7)([v.Z], () => v.Z.getMode()),
-        W = B === O.pM4.VOICE_ACTIVITY ? O.pM4.PUSH_TO_TALK : O.pM4.VOICE_ACTIVITY;
+        B = v.Z.isSelfDeaf(z),
+        q = (0, o.e7)([v.Z], () => v.Z.getMode()),
+        W = q === O.pM4.VOICE_ACTIVITY ? O.pM4.PUSH_TO_TALK : O.pM4.VOICE_ACTIVITY;
     return (0, r.jsx)(c.Z, {
         object: O.qAy.CONTEXT_MENU,
         children: (0, r.jsxs)(a.v2r, {
@@ -99,14 +99,14 @@ function w(e) {
                                               context: z,
                                               location: "AudioDeviceMenu",
                                           }),
-                                      checked: q,
+                                      checked: B,
                                   },
                                   "self-deafen",
                               )
                             : null,
                         N && w && y.isPlatformEmbedded
                             ? (0, r.jsx)(a.S89, {
-                                  checked: B === O.pM4.PUSH_TO_TALK,
+                                  checked: q === O.pM4.PUSH_TO_TALK,
                                   id: "input-mode",
                                   label: P.intl.string(P.t.Q8gkVF),
                                   action: () => s.Z.setMode(W, void 0, void 0, { analyticsLocations: M }),

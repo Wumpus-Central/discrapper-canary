@@ -2,8 +2,8 @@ n.d(t, { Z: () => h });
 var r = n(647438),
     i = n(399606),
     l = n(674180),
-    s = n(601964),
-    a = n(594174),
+    a = n(601964),
+    s = n(594174),
     o = n(63063),
     c = n(223892),
     d = n(58259),
@@ -16,12 +16,12 @@ function h(e) {
     let t,
         n = (0, c.Ob)(e),
         h = null == e ? void 0 : e.features.has(p.oNc.CREATOR_MONETIZABLE_PROVISIONAL),
-        x = null == e ? void 0 : e.features.has(p.oNc.CREATOR_MONETIZABLE),
-        b = (0, i.e7)([a.default], () => {
-            let t = a.default.getCurrentUser();
-            return null != e && (0, s.eM)(e, t);
+        b = null == e ? void 0 : e.features.has(p.oNc.CREATOR_MONETIZABLE),
+        x = (0, i.e7)([s.default], () => {
+            let t = s.default.getCurrentUser();
+            return null != e && (0, a.eM)(e, t);
         }),
-        { error: j, loading: _, createEnableRequest: v, submittedRequest: C } = (0, d.Z)(null == e ? void 0 : e.id),
+        { error: j, loading: v, createEnableRequest: _, submittedRequest: C } = (0, d.Z)(null == e ? void 0 : e.id),
         { loading: O, error: y, refresh: N, eligibility: E } = (0, u.Z)(null == e ? void 0 : e.id),
         { isApplicationRejected: I, requestCooldownDuration: S } = (0, g.Z)(E),
         T =
@@ -42,19 +42,19 @@ function h(e) {
               requestCooldownDuration: S,
               creatorRevenuePolicyUrl: o.Z.getArticleURL(p.BhN.CREATOR_POLICY),
           }));
-    let D = n && b && !1 === x,
+    let D = n && x && !1 === b,
         A = n && !1 === h,
         L = (0, m.f)(),
-        k = I && Z && b ? f.intl.format(f.t.wbVIUF, {}) : void 0;
+        k = I && Z && x ? f.intl.format(f.t.wbVIUF, {}) : void 0;
     return (
         r.useEffect(() => {
             D && N();
         }, [N, D]),
         {
-            resubmittingEnableRequest: _,
+            resubmittingEnableRequest: v,
             resubmissionError: j,
-            isGuildOwner: b,
-            createEnableRequest: v,
+            isGuildOwner: x,
+            createEnableRequest: _,
             resubmittedRequest: C,
             eligibilityLoading: O,
             eligibilityError: y,

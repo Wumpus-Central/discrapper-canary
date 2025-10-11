@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => h });
 var r = n(951288),
     i = n(647438),
     l = n(657707),
@@ -23,12 +23,12 @@ function u(e) {
         }),
     });
 }
-let p = function (e) {
+let h = function (e) {
     let { searchContext: t, dismissFeedbackEntrypoint: l } = e;
     i.useEffect(() => {
         (0, s.bo)({ searchContext: t });
     }, [t]);
-    let p = i.useCallback(
+    let h = i.useCallback(
         (e) => {
             l(),
                 (0, a.ZDy)(async () => {
@@ -99,11 +99,11 @@ let p = function (e) {
                 children: [
                     (0, r.jsx)(u, {
                         rating: o.aZ.GOOD,
-                        onClick: p,
+                        onClick: h,
                     }),
                     (0, r.jsx)(u, {
                         rating: o.aZ.BAD,
-                        onClick: p,
+                        onClick: h,
                     }),
                 ],
             }),

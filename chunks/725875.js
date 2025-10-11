@@ -42,7 +42,7 @@ function g(e) {
                 }
             return Object.values(e).sort((e, t) => e.channel.name.localeCompare(t.channel.name));
         }, [n, t]),
-        O = r.useCallback(
+        y = r.useCallback(
             (e) => {
                 x() && (e === (null == f ? void 0 : f.id) ? a.Z.stopEditingWebhook() : a.Z.startEditingWebhook(e));
             },
@@ -122,7 +122,7 @@ function g(e) {
                 lastCreatedWebhookId: g,
                 editedWebhook: f,
                 errors: h,
-                toggleWebhookExpand: O,
+                toggleWebhookExpand: y,
             });
         }),
     });

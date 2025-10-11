@@ -1,10 +1,10 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => v });
 var r = n(951288),
     l = n(647438),
-    s = n(399606),
-    a = n(481060),
-    i = n(594174),
-    o = n(74538),
+    i = n(399606),
+    s = n(481060),
+    o = n(594174),
+    a = n(74538),
     c = n(994587),
     u = n(884697),
     d = n(290175),
@@ -20,44 +20,44 @@ let E = (e) => {
         let { product: t } = e,
             n = (0, c.Nd)(),
             p = null == n ? void 0 : n.tab,
-            E = (0, s.e7)([i.default], () => i.default.getCurrentUser()),
-            S = o.ZP.canUseCollectibles(E),
-            { isDisabled: v } = (0, d.G)(t.skuId),
-            { isPurchased: x, isPartiallyOwnedBundle: O } = (0, g.L)(t),
+            E = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
+            v = a.ZP.canUseCollectibles(E),
+            { isDisabled: S } = (0, d.G)(t.skuId),
+            { isPurchased: O, isPartiallyOwnedBundle: x } = (0, g.L)(t),
             y = (0, u.G1)(t),
             T = (0, u.rN)(t),
-            L = l.useMemo(() => (0, u.BH)(t, S), [t, S]),
-            j = (0, C.Iw)(t),
+            j = l.useMemo(() => (0, u.BH)(t, v), [t, v]),
+            L = (0, C.Iw)(t),
             { displayPrices: k, hasSufficientOrbs: I } = (0, h.Ip)({
                 product: t,
-                isPremiumUser: S,
+                isPremiumUser: v,
                 tab: p,
-                hasDiscountOffer: null != j,
+                hasDiscountOffer: null != L,
             }),
-            P = y && !S;
-        return v
-            ? (0, r.jsx)(a.Text, {
+            B = y && !v;
+        return S
+            ? (0, r.jsx)(s.Text, {
                   variant: "text-md/semibold",
                   color: "header-muted",
                   children: m.intl.string(m.t.wu4gyc),
               })
-            : O
-              ? (0, r.jsx)(a.Text, {
+            : x
+              ? (0, r.jsx)(s.Text, {
                     variant: "text-md/semibold",
                     children: m.intl.string(m.t.BEjTio),
                 })
-              : x && !P
-                ? (0, r.jsx)(a.Text, {
+              : O && !B
+                ? (0, r.jsx)(s.Text, {
                       variant: "text-md/semibold",
                       children: m.intl.string(m.t["6cfuDg"]),
                   })
                 : T
-                  ? (0, r.jsx)(a.Text, {
+                  ? (0, r.jsx)(s.Text, {
                         variant: "text-md/semibold",
                         children: m.intl.string(m.t.nBtvYG),
                     })
                   : y
-                    ? (0, r.jsx)(a.Text, {
+                    ? (0, r.jsx)(s.Text, {
                           variant: "text-md/semibold",
                           children: m.intl.string(m.t.rt69oq),
                       })
@@ -65,14 +65,14 @@ let E = (e) => {
                       ? null
                       : (0, r.jsx)(f.F, {
                             price: k[0],
-                            discount: L,
-                            nitroIconType: S ? "default" : void 0,
+                            discount: j,
+                            nitroIconType: v ? "default" : void 0,
                             nitroIconSize: "sm",
-                            discountOfferAmount: j,
+                            discountOfferAmount: L,
                             className: k[0].currency !== _.pK.DISCORD_ORB || I ? void 0 : b.insufficientOrbs,
                         });
     },
-    S = (e) => {
+    v = (e) => {
         let { skuId: t } = e,
             n = (0, p.LJ)(t);
         return null == n ? null : (0, r.jsx)(E, { product: n });

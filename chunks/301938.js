@@ -17,7 +17,7 @@ var r = n(951288),
 function x(e) {
     let { setOriginalEmail: t, setSlide: l, ready: x, token: E } = e,
         [v, b] = i.useState(!1),
-        [I, j] = i.useState(null),
+        [j, I] = i.useState(null),
         [N, S] = i.useState(null),
         [O, y] = i.useState(""),
         C = i.useRef(null);
@@ -53,7 +53,7 @@ function x(e) {
                             className: _.marginBottom20,
                             value: O,
                             onChange: y,
-                            error: I,
+                            error: j,
                             autoComplete: "new-password",
                             maxLength: 72,
                             placeholder: p.intl.string(p.t["yY/PXV"]),
@@ -63,12 +63,12 @@ function x(e) {
                             onClick: () => {
                                 if (!v) {
                                     if (0 === O.length) {
-                                        j(p.intl.string(p.t.R98xDw)), d.S.dispatch(m.CkL.WAVE_EMPHASIZE);
+                                        I(p.intl.string(p.t.R98xDw)), d.S.dispatch(m.CkL.WAVE_EMPHASIZE);
                                         return;
                                     }
                                     return (
                                         null != N && S(null),
-                                        null != I && j(null),
+                                        null != j && I(null),
                                         t(""),
                                         b(!0),
                                         h.Z.post({
@@ -96,7 +96,7 @@ function x(e) {
                                                 else {
                                                     let t = new c.Z(e);
                                                     t.hasFieldErrors()
-                                                        ? j(t.getAnyErrorMessage())
+                                                        ? I(t.getAnyErrorMessage())
                                                         : S(
                                                               (function (e) {
                                                                   switch (e) {

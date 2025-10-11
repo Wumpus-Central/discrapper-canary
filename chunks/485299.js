@@ -11,7 +11,7 @@ var r = n(951288),
 function f(e) {
     let { hideBackButton: t = !1 } = e,
         [{ selectedSource: n }, f] = (0, d.E_)(),
-        [m, h] = i.useState(null);
+        [p, h] = i.useState(null);
     return (
         i.useEffect(() => {
             var e;
@@ -39,10 +39,10 @@ function f(e) {
         (0, r.jsxs)("div", {
             className: u.root,
             children: [
-                null == m
+                null == p
                     ? (0, r.jsx)(o.$jN, {})
                     : (0, r.jsx)("img", {
-                          src: m,
+                          src: p,
                           alt: "",
                           className: u.largePreview,
                       }),

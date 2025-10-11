@@ -32,9 +32,9 @@ var i = n(951288),
     w = n(921944),
     M = n(388032),
     R = n(787267),
-    k = n(334405),
-    L = n(977007);
-function D(e) {
+    L = n(334405),
+    D = n(977007);
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -84,17 +84,17 @@ function B(e) {
         G = (0, u.e7)([_.Z], () => _.Z.getCustomHangStatus()),
         z = (0, E.Z)(),
         W = (0, u.e7)([_.Z], () => _.Z.getFavoritedStatuses()),
-        { defaultStatusVariant: q, allowPermanentClear: Y } = (0, y.bN)({
+        { defaultStatusVariant: Y, allowPermanentClear: K } = (0, y.bN)({
             guildId: B.guild_id,
             location: "HangStatusPicker",
         }),
-        K = (0, v.V)(q),
+        q = (0, v.V)(Y),
         X = r.useRef(null),
         [J, Q] = r.useState(null != (n = null == G ? void 0 : G.status) ? n : ""),
         [$, ee] = r.useState(null != (l = null == G ? void 0 : G.emoji) ? l : null),
         [et, en] = r.useState(!1),
         ei = (0, u.e7)([_.Z], () => _.Z.getCurrentHangStatus()),
-        er = K[ei],
+        er = q[ei],
         el = W.length > 0,
         ea = null == J || "" === J.trim(),
         eo = (0, j.Z)(B),
@@ -108,7 +108,7 @@ function B(e) {
     r.useEffect(() => {
         b.default.track(
             A.rMx.HANG_STATUS_PICKER_OPENED,
-            U(D({}, (0, x.Z)(B.id)), {
+            U(k({}, (0, x.Z)(B.id)), {
                 num_favorites: W.length,
                 num_recents: z.length,
             }),
@@ -199,7 +199,7 @@ function B(e) {
                 let n = (0, O.Z)(t);
                 (!ed || e) &&
                     ((0, C.tg)(n ? t : t.status, n ? null : t.emoji),
-                    b.default.track(A.rMx.HANG_STATUS_FAVORITE_CLICKED, U(D({}, (0, x.Z)(B.id)), { favorited: !e })));
+                    b.default.track(A.rMx.HANG_STATUS_FAVORITE_CLICKED, U(k({}, (0, x.Z)(B.id)), { favorited: !e })));
             },
             [B.id, ed],
         ),
@@ -214,7 +214,7 @@ function B(e) {
             (e, t, n) => {
                 var r;
                 let l = (0, O.Z)(e),
-                    a = l ? K[e] : null,
+                    a = l ? q[e] : null,
                     o = _.Z.isFavorited(e),
                     s = l
                         ? (0, i.jsx)(I.Z, {
@@ -224,7 +224,7 @@ function B(e) {
                                   type: A.IIU.HANG_STATUS,
                                   state: e,
                               },
-                              fallbackVariant: q,
+                              fallbackVariant: Y,
                               className: R.icon,
                           })
                         : null != e.emoji &&
@@ -247,11 +247,11 @@ function B(e) {
                     "".concat(n, "-").concat(t),
                 );
             },
-            [q, eb, em, K, e_],
+            [Y, eb, em, q, e_],
         ),
         ej = r.useCallback(() => {
-            (0, C.Sc)(!0, Y), ee(null), Q(""), en(!1);
-        }, [Y]),
+            (0, C.Sc)(!0, K), ee(null), Q(""), en(!1);
+        }, [K]),
         eE = r.useCallback((e) => {
             en(!0), Q(e.substring(0, N.s0));
         }, []);
@@ -260,7 +260,7 @@ function B(e) {
         role: "menu",
         id: "hang-status-picker",
         tabIndex: -1,
-        className: a()(k.menu, R.container),
+        className: a()(L.menu, R.container),
         children: [
             (0, i.jsx)(p.J2, {
                 title: M.intl.string(M.t.waaIiI),
@@ -269,17 +269,17 @@ function B(e) {
                 shouldShow: eh === d.z.HANG_STATUS_POPOVER_NUX,
                 graphic: {
                     type: "image",
-                    src: L.Z,
+                    src: D.Z,
                 },
                 targetElementRef: X,
                 onRequestClose: () => ef(w.L.DISMISS),
             }),
             (0, i.jsx)("div", {
                 role: "group",
-                className: a()(k.groupLabel, R.inputGroup),
+                className: a()(L.groupLabel, R.inputGroup),
                 children: (0, i.jsxs)("form", {
                     onSubmit: eC,
-                    className: a()(k.item, R.input),
+                    className: a()(L.item, R.input),
                     children: [
                         (0, i.jsxs)("div", {
                             className: R.inputRow,
@@ -297,7 +297,7 @@ function B(e) {
                                             customStatusEmoji: $,
                                             setCustomStatusEmoji: ee,
                                             selectedDefaultStatus: et || ep ? null : ei,
-                                            defaultStatusVariant: q,
+                                            defaultStatusVariant: Y,
                                         }),
                                     },
                                     trailing:
@@ -337,7 +337,7 @@ function B(e) {
             (0, i.jsxs)(h.Ttm, {
                 fade: !0,
                 role: "group",
-                className: a()(k.groupLabel, R.group, R.scroller),
+                className: a()(L.groupLabel, R.group, R.scroller),
                 children: [
                     (0, i.jsx)(Z.d, {
                         guildId: B.guild_id,

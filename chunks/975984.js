@@ -1,7 +1,7 @@
 n.d(t, {
     Lz: () => u,
     MQ: () => o,
-    TR: () => p,
+    TR: () => h,
     Th: () => d,
     _N: () => c,
 }),
@@ -42,6 +42,6 @@ function u(e) {
     var t;
     return ((t = e.filter((e) => e.featurableInDirectory)), a().orderBy(t, [(e) => e.createdAt], ["desc"])).slice(0, c);
 }
-function p(e) {
+function h(e) {
     return d(e);
 }

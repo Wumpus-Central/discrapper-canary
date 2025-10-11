@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    s = n(481060),
-    a = n(824804);
+    a = n(481060),
+    s = n(824804);
 function o(e) {
     var t, n;
     let { checked: i, onChange: o, disabled: c, className: d, tooltipProps: u } = e,
@@ -12,7 +12,7 @@ function o(e) {
             e.stopPropagation(), e.preventDefault();
         };
     return (0, r.jsx)(
-        s.P3F,
+        a.P3F,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -42,13 +42,13 @@ function o(e) {
                 onClick: g,
                 onMouseDown: g,
                 onMouseUp: g,
-                className: l()(a.switch, d),
+                className: l()(s.switch, d),
             },
             u,
         )),
         (n = n =
             {
-                children: (0, r.jsx)(s.rsf, {
+                children: (0, r.jsx)(a.rsf, {
                     checked: i,
                     onChange: o,
                     disabled: c,

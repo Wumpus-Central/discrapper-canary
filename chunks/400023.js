@@ -1,9 +1,9 @@
-n.d(t, { Z: () => K }), n(388685);
+n.d(t, { Z: () => q }), n(388685);
 var i = n(951288),
     r = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(137317),
+    o = n(599273),
     s = n(91192),
     c = n(442837),
     u = n(481060),
@@ -32,9 +32,9 @@ var i = n(951288),
     w = n(459273),
     M = n(255269),
     R = n(47481),
-    k = n(977391),
-    L = n(959258),
-    D = n(73274),
+    L = n(977391),
+    D = n(959258),
+    k = n(73274),
     U = n(419388),
     B = n(406534),
     H = n(981631),
@@ -103,8 +103,8 @@ function W(e, t) {
     }
     return r;
 }
-let q = (0, o.animated)(u.eTT),
-    Y = r.memo(
+let Y = (0, o.animated)(u.eTT),
+    K = r.memo(
         function (e) {
             var t, n;
             let {
@@ -128,11 +128,11 @@ let q = (0, o.animated)(u.eTT),
                     jumpBarClassName: M,
                     typingGradient: R,
                 } = e,
-                [L, Y] = r.useState(null != (n = E.Z.isAtBottom(m.id)) && n),
-                K = r.useMemo(
+                [D, K] = r.useState(null != (n = E.Z.isAtBottom(m.id)) && n),
+                q = r.useMemo(
                     () =>
                         y
-                            ? (0, k.aJ)({
+                            ? (0, L.aJ)({
                                   compact: !0,
                                   messageGroups: 30,
                                   groupRange: 4,
@@ -140,7 +140,7 @@ let q = (0, o.animated)(u.eTT),
                                   fontSize: P,
                                   groupSpacing: o,
                               })
-                            : (0, k.aJ)({
+                            : (0, L.aJ)({
                                   compact: !1,
                                   messageGroups: 26,
                                   groupRange: 4,
@@ -156,13 +156,13 @@ let q = (0, o.animated)(u.eTT),
                     compact: y,
                     hasUnreads: j,
                     focusId: S,
-                    placeholderHeight: K.totalHeight,
+                    placeholderHeight: q.totalHeight,
                     canLoadMore: null == T,
-                    handleScrollToBottom: r.useCallback(() => Y(!0), [Y]),
-                    handleScrollFromBottom: r.useCallback(() => Y(!1), [Y]),
+                    handleScrollToBottom: r.useCallback(() => K(!0), [K]),
+                    handleScrollFromBottom: r.useCallback(() => K(!1), [K]),
                     additionalMessagePadding: 48,
                 }),
-                J = (0, D.Z)({
+                J = (0, k.Z)({
                     scrollerRef: X.ref,
                     isEditing: null != S,
                     keyboardModeEnabled: I,
@@ -187,7 +187,7 @@ let q = (0, o.animated)(u.eTT),
                     uploads: x,
                     loadMore: X.loadMore,
                     scrollManager: X,
-                    specs: K,
+                    specs: q,
                     filterAfterTimestamp: null != T ? T : Q,
                     showingQuarantineBanner: N,
                     hideSummaries: A,
@@ -243,12 +243,12 @@ let q = (0, o.animated)(u.eTT),
                     );
                 }),
                 eu = r.useMemo(
-                    () => (R ? (L ? F.chatTypingGradientAtBottom : F.chatTypingGradientNotAtBottom) : F.chatGradient),
-                    [R, L],
+                    () => (R ? (D ? F.chatTypingGradientAtBottom : F.chatTypingGradientNotAtBottom) : F.chatGradient),
+                    [R, D],
                 ),
                 ed = r.useMemo(
-                    () => (R ? (L ? F.typingGradientAtBottom : F.typingGradientNotAtBottom) : F.gradientDefault),
-                    [R, L],
+                    () => (R ? (D ? F.typingGradientAtBottom : F.typingGradientNotAtBottom) : F.gradientDefault),
+                    [R, D],
                 );
             return (0, i.jsxs)(s.bG, {
                 navigator: J,
@@ -259,7 +259,7 @@ let q = (0, o.animated)(u.eTT),
                         children: [
                             null == ei && ee,
                             (0, i.jsxs)(
-                                q,
+                                Y,
                                 z(
                                     G(
                                         {
@@ -332,7 +332,7 @@ let q = (0, o.animated)(u.eTT),
         },
         (e, t) => null != e.isHidden && null != t.isHidden && e.isHidden && t.isHidden,
     ),
-    K = r.memo(function (e) {
+    q = r.memo(function (e) {
         var {
                 channel: t,
                 showingQuarantineBanner: n,
@@ -374,8 +374,8 @@ let q = (0, o.animated)(u.eTT),
                 messageGroupSpacing: O,
                 fontSize: E,
                 messageDisplayCompact: w,
-                renderSpoilers: k,
-                keyboardModeEnabled: D,
+                renderSpoilers: L,
+                keyboardModeEnabled: k,
             } = (function () {
                 let e = x.jU.useSetting(),
                     t = x.cC.useSetting(),
@@ -461,10 +461,10 @@ let q = (0, o.animated)(u.eTT),
                 };
             })(t);
         return (0, i.jsx)(b.aQ.Provider, {
-            value: (0, M.Z)(k, d),
-            children: (0, i.jsx)(L.v, {
+            value: (0, M.Z)(L, d),
+            children: (0, i.jsx)(D.v, {
                 children: (0, i.jsx)(
-                    Y,
+                    K,
                     z(G({}, u), {
                         messageGroupSpacing: O,
                         showNewMessagesBar: !0,
@@ -479,7 +479,7 @@ let q = (0, o.animated)(u.eTT),
                         canChat: _,
                         editingMessageId: F,
                         fontSize: E,
-                        keyboardModeEnabled: D,
+                        keyboardModeEnabled: k,
                         showingQuarantineBanner: n,
                         hideSummaries: l,
                         typingGradient: s,

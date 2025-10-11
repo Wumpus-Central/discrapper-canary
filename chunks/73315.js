@@ -1,8 +1,8 @@
 n.d(t, { Z: () => c });
-var l = n(951288);
+var a = n(951288);
 n(647438);
-var a = n(120356),
-    s = n.n(a),
+var l = n(120356),
+    s = n.n(l),
     r = n(481060),
     i = n(936141),
     o = n(836956);
@@ -11,12 +11,12 @@ let c = (e) => {
     switch (t) {
         case i.wk.EXPLICIT_CONTENT:
         case i.wk.GORE_CONTENT:
-            return (0, l.jsx)(r.fFY, {
+            return (0, a.jsx)(r.fFY, {
                 className: s()(n, o.obscuredIcon),
                 color: "white",
             });
         case i.wk.SPOILER:
-            return (0, l.jsx)(r.tEF, {
+            return (0, a.jsx)(r.tEF, {
                 size: "md",
                 color: "currentColor",
                 className: n,

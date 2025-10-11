@@ -9,8 +9,8 @@ var i = n(81897),
     c = n(806729),
     d = n(857302),
     u = n(892001),
-    p = n(483517),
-    h = n(252417),
+    h = n(483517),
+    p = n(252417),
     f = n(821179),
     g = n(502762),
     m = n(686625),
@@ -20,15 +20,15 @@ function _(e) {
     let { user: t, channelId: n } = e,
         { analyticsLocations: _ } = (0, l.ZP)(),
         { context: j } = (0, o.KZ)(),
-        x = (0, i.Z)(),
-        { mutualFriendsCount: O, mutualFriends: v, mutualGuilds: C } = (0, c.Z)(t),
-        I = !t.bot && null != O && O > 0,
-        E = null != C && C.length > 0;
-    return I || E
+        O = (0, i.Z)(),
+        { mutualFriendsCount: x, mutualFriends: v, mutualGuilds: C } = (0, c.Z)(t),
+        I = !t.bot && null != x && x > 0,
+        S = null != C && C.length > 0;
+    return I || S
         ? (0, r.jsxs)(g.Z.Overlay, {
               className: y.overlay,
               children: [
-                  E &&
+                  S &&
                       (0, r.jsx)(m.Z, {
                           section: "MUTUAL_GUILDS",
                           header: b.intl.string(b.t["4lTDZm"]),
@@ -47,16 +47,16 @@ function _(e) {
                               );
                           }),
                       }),
-                  E && I && (0, r.jsx)(p.Z, { className: y.divider }),
+                  S && I && (0, r.jsx)(h.Z, { className: y.divider }),
                   I &&
                       (0, r.jsx)(m.Z, {
                           section: "MUTUAL_FRIENDS",
                           header: b.intl.string(b.t["0mTJ3t"]),
                           listClassName: y.list,
-                          onExpand: () => (0, d.Z)(t.id, x),
+                          onExpand: () => (0, d.Z)(t.id, O),
                           items:
                               null == v
-                                  ? Array.from({ length: O }).map((e, t) =>
+                                  ? Array.from({ length: x }).map((e, t) =>
                                         (0, r.jsxs)(
                                             "div",
                                             {
@@ -78,7 +78,7 @@ function _(e) {
                                   : v.map((e) => {
                                         let { key: t, user: i, status: l } = e;
                                         return (0, r.jsx)(
-                                            h.Z,
+                                            p.Z,
                                             {
                                                 user: i,
                                                 status: l,

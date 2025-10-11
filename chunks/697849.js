@@ -107,7 +107,7 @@ let R = (e) => {
         [z, U] = r.useState(k.fL.EVENT_INFO),
         G = (0, p.Z)(L, Z),
         V = (0, j.Z)(B, L, Z),
-        [X, { loading: W, error: q }] = (0, f.Z)(() => x.Z.getGuildEventUsers(null == R ? void 0 : R.id, Z, B));
+        [H, { loading: X, error: W }] = (0, f.Z)(() => x.Z.getGuildEventUsers(null == R ? void 0 : R.id, Z, B));
     r.useEffect(() => {
         null == R
             ? v()
@@ -116,27 +116,27 @@ let R = (e) => {
                   guild_id: R.guild_id,
               });
     }, [R, v]);
-    let H = r.useRef(null),
-        [J, K] = r.useState(680);
+    let J = r.useRef(null),
+        [K, Q] = r.useState(680);
     r.useLayoutEffect(() => {
         let e = new ResizeObserver((e) => {
-            e.length > 0 && K(e[0].contentRect.width);
+            e.length > 0 && Q(e[0].contentRect.width);
         });
-        return null != H.current && e.observe(H.current), () => e.disconnect();
-    }, [H]);
-    let Q = r.useRef(null),
-        [$, Y] = r.useState(0);
+        return null != J.current && e.observe(J.current), () => e.disconnect();
+    }, [J]);
+    let $ = r.useRef(null),
+        [q, Y] = r.useState(0);
     if (
         (r.useLayoutEffect(() => {
             var e, n;
             let t = 16 * ((null == R ? void 0 : R.recurrence_rule) != null);
-            Y((null != (n = null == Q || null == (e = Q.current) ? void 0 : e.offsetHeight) ? n : 0) + t);
-        }, [Q, null == R ? void 0 : R.recurrence_rule]),
+            Y((null != (n = null == $ || null == (e = $.current) ? void 0 : e.offsetHeight) ? n : 0) + t);
+        }, [$, null == R ? void 0 : R.recurrence_rule]),
         null == R || null == D)
     )
         return null;
     let ee = (e) => {
-            e !== z && (e === k.fL.RSVP_LIST && X(), U(e));
+            e !== z && (e === k.fL.RSVP_LIST && H(), U(e));
         },
         en = null != Z ? Z : (0, N.DK)(R);
     return (0, l.jsx)(a.Gt, {
@@ -160,10 +160,10 @@ let R = (e) => {
                     }),
                     children: (0, l.jsx)("div", {
                         className: T.container,
-                        ref: H,
+                        ref: J,
                         children: (0, l.jsxs)(c.MyZ, {
                             activeSlide: z,
-                            width: J,
+                            width: K,
                             centered: !1,
                             children: [
                                 (0, l.jsx)(c.Mi4, {
@@ -175,7 +175,7 @@ let R = (e) => {
                                         headerId: A,
                                         onClose: v,
                                         onClickInterestedCount: () => ee(k.fL.RSVP_LIST),
-                                        containerRef: Q,
+                                        containerRef: $,
                                         recurrenceId: en,
                                         setRecurrenceId: E,
                                     }),
@@ -186,9 +186,9 @@ let R = (e) => {
                                         guildEvent: R,
                                         recurrenceId: en,
                                         eventUsers: G,
-                                        loading: W,
-                                        containerHeight: $,
-                                        error: q,
+                                        loading: X,
+                                        containerHeight: q,
+                                        error: W,
                                     }),
                                 }),
                             ],

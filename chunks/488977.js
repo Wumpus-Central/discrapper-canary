@@ -1,6 +1,6 @@
 n.d(t, { Z: () => L }), n(997841);
-var l = n(951288),
-    i = n(647438),
+var i = n(951288),
+    l = n(647438),
     r = n(120356),
     a = n.n(r),
     o = n(442837),
@@ -13,8 +13,8 @@ var l = n(951288),
     f = n(299206),
     h = n(726521),
     v = n(973616),
-    x = n(914010),
-    y = n(594174),
+    y = n(914010),
+    x = n(594174),
     g = n(626135),
     b = n(572004),
     N = n(630388),
@@ -29,24 +29,24 @@ var l = n(951288),
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            l = Object.keys(n);
+            i = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (l = l.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            l.forEach(function (t) {
-                var l;
-                (l = n[t]),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: l,
+                              value: i,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = l);
+                        : (e[t] = i);
             });
     }
     return e;
@@ -59,8 +59,8 @@ function T(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var l = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, l);
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -72,38 +72,38 @@ function T(e, t) {
 function L(e) {
     var t;
     let { application: r, context: L, className: R, sectionName: Z } = e,
-        w = i.useRef(null),
+        w = l.useRef(null),
         k = (0, o.e7)([C.Z], () => C.Z.entrypoint()),
         M = (0, E.L1)(r),
         U = (0, m.Eb)(M),
         D = (0, d.R)(r.id),
-        H = (0, o.e7)([x.Z], () => {
+        H = (0, o.e7)([y.Z], () => {
             var e;
-            return null != (e = x.Z.getGuildId()) ? e : void 0;
+            return null != (e = y.Z.getGuildId()) ? e : void 0;
         }, []),
-        V = {
+        B = {
             location: u.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU,
             application_id: r.id,
             section_name: Z,
             source: C.Z.lastShownEntrypoint(),
         },
-        B = y.default.getCurrentUser(),
+        V = x.default.getCurrentUser(),
         W = (0, f.Z)({
             id: r.id,
             label: O.intl.string(O.t["+NP/b2"]),
         }),
         F = (0, P.P)({ application: r }),
         G = (0, N.yE)(null != (t = r.flags) ? t : 0, _.udG.EMBEDDED),
-        q = "channel" === L.type ? L.channel : void 0;
-    return (0, l.jsxs)("div", {
+        Y = "channel" === L.type ? L.channel : void 0;
+    return (0, i.jsxs)("div", {
         className: I.container,
         children: [
-            (0, l.jsx)(s.P3F, {
+            (0, i.jsx)(s.P3F, {
                 onClick: () => {
                     let e = G
                         ? (0, p.H)({
                               applicationId: r.id,
-                              referrerId: null == B ? void 0 : B.id,
+                              referrerId: null == V ? void 0 : V.id,
                           })
                         : (0, p.J)(S({ id: r.id }, M));
                     (0, b.JG)(e, () =>
@@ -116,26 +116,26 @@ function L(e) {
                 },
                 className: a()(I.clickable, R),
                 "aria-label": O.intl.string(O.t.WqhZsr),
-                children: (0, l.jsx)(s.xPt, {
+                children: (0, i.jsx)(s.xPt, {
                     size: "sm",
                     color: s.TVs.colors.INTERACTIVE_ACTIVE,
                 }),
             }),
-            (0, l.jsx)(s.yRy, {
+            (0, i.jsx)(s.yRy, {
                 targetElementRef: w,
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
-                    return (0, l.jsxs)(s.v2r, {
+                    return (0, i.jsxs)(s.v2r, {
                         className: A.NN,
                         navId: "app-details-more-menu",
                         onClose: t,
                         "aria-label": O.intl.string(O.t.AXIHpa),
                         onSelect: void 0,
                         children: [
-                            (0, l.jsxs)(s.kSQ, {
+                            (0, i.jsxs)(s.kSQ, {
                                 children: [
                                     D &&
-                                        (0, l.jsx)(s.sNh, {
+                                        (0, i.jsx)(s.sNh, {
                                             id: "open-storefront",
                                             label: O.intl.string(O.t.kRvlKC),
                                             action: () => {
@@ -145,7 +145,7 @@ function L(e) {
                                                         n.e("42124"),
                                                     ]).then(n.bind(n, 7225));
                                                     return (t) =>
-                                                        (0, l.jsx)(e, {
+                                                        (0, i.jsx)(e, {
                                                             transitionState: t.transitionState,
                                                             onClose: t.onClose,
                                                             appId: r.id,
@@ -155,12 +155,12 @@ function L(e) {
                                             },
                                         }),
                                     U
-                                        ? (0, l.jsx)(s.sNh, {
+                                        ? (0, i.jsx)(s.sNh, {
                                               id: "add-app",
                                               label: O.intl.string(O.t.NgXl3N),
                                               action: () => {
                                                   null == M.customInstallUrl &&
-                                                      (0, c.yw)(_.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, V),
+                                                      (0, c.yw)(_.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, B),
                                                       (0, j.L)(
                                                           T(S({}, M), {
                                                               oauth2Callback: (e) => {
@@ -168,7 +168,7 @@ function L(e) {
                                                                   null != t &&
                                                                       (0, c.yw)(
                                                                           _.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED,
-                                                                          V,
+                                                                          B,
                                                                       );
                                                               },
                                                               source: "app_launcher_app_details",
@@ -178,7 +178,7 @@ function L(e) {
                                           })
                                         : null,
                                     r instanceof v.ZP
-                                        ? (0, l.jsx)(s.sNh, {
+                                        ? (0, i.jsx)(s.sNh, {
                                               id: "report-app",
                                               color: "danger",
                                               label: O.intl.string(O.t.jhJze3),
@@ -188,10 +188,10 @@ function L(e) {
                                                       application: r,
                                                       entrypoint: "app_launcher",
                                                       contextualGuildId:
-                                                          null != (e = null == q ? void 0 : q.getGuildId())
+                                                          null != (e = null == Y ? void 0 : Y.getGuildId())
                                                               ? e
                                                               : void 0,
-                                                      contextualChannelId: null == q ? void 0 : q.id,
+                                                      contextualChannelId: null == Y ? void 0 : Y.id,
                                                   });
                                               },
                                           })
@@ -199,20 +199,20 @@ function L(e) {
                                     F,
                                 ],
                             }),
-                            (0, l.jsx)(s.kSQ, { children: W }),
+                            (0, i.jsx)(s.kSQ, { children: W }),
                         ],
                     });
                 },
                 align: "right",
                 position: "bottom",
                 children: (e) =>
-                    (0, l.jsx)(
+                    (0, i.jsx)(
                         s.P3F,
                         T(S({ innerRef: w }, e), {
                             onClick: e.onClick,
                             className: a()(I.clickable, R),
                             "aria-label": O.intl.string(O.t.UKOtz8),
-                            children: (0, l.jsx)(s.xhG, {
+                            children: (0, i.jsx)(s.xhG, {
                                 size: "sm",
                                 color: s.TVs.colors.INTERACTIVE_ACTIVE,
                             }),

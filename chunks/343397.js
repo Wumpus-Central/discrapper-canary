@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    s = n(481060),
-    a = n(434404),
+    a = n(481060),
+    s = n(434404),
     o = n(999382),
     c = n(388032);
 function d(e) {
@@ -12,11 +12,11 @@ function d(e) {
         u = (0, l.e7)([o.Z], () => o.Z.getError("name")),
         g = i.useCallback(
             (e) => {
-                a.Z.updateGuild({ name: e }), a.Z.updateGuildProfile(d, { name: e });
+                s.Z.updateGuild({ name: e }), s.Z.updateGuildProfile(d, { name: e });
             },
             [d],
         );
-    return (0, r.jsx)(s.oil, {
+    return (0, r.jsx)(a.oil, {
         label: c.intl.string(c.t.X56QcH),
         type: "text",
         disabled: !n,

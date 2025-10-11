@@ -1,8 +1,8 @@
 n.d(t, { M: () => d });
 var r = n(951288),
     i = n(442837),
-    a = n(678135),
-    l = n(643879),
+    l = n(678135),
+    a = n(643879),
     o = n(25990),
     s = n(74538),
     c = n(755419),
@@ -12,8 +12,8 @@ let d = (e) => {
     let { user: d } = e,
         m = s.ZP.canUsePremiumProfileCustomization(d),
         p = (0, i.cj)([o.Z], () => o.Z.getAllPending()),
-        { pendingAvatar: v } = p,
-        f = (function (e, t) {
+        { pendingAvatar: f } = p,
+        h = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -22,26 +22,26 @@ let d = (e) => {
                     var n,
                         r,
                         i = {},
-                        a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++)
-                    (n = a[r]),
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(p, ["pendingAvatar"]),
-        h = (0, l.SD)({
+        v = (0, a.SD)({
             userId: d.id,
-            image: v,
+            image: f,
         });
     return (0, r.jsx)("div", {
         className: u.container,
         children: (0, r.jsx)(
-            a.Z,
+            l.Z,
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -66,10 +66,10 @@ let d = (e) => {
                         });
                 }
                 return e;
-            })({}, f)),
+            })({}, h)),
             (n = n =
                 {
-                    pendingAvatar: h,
+                    pendingAvatar: v,
                     user: d,
                     pendingBadges: [(0, c.X)()],
                     canUsePremiumCustomization: m,

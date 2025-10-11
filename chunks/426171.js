@@ -1,7 +1,7 @@
 n.d(t, {
-    Kp: () => v,
-    u9: () => S,
-    xV: () => x,
+    Kp: () => S,
+    u9: () => v,
+    xV: () => O,
 }),
     n(413496),
     n(433524),
@@ -10,23 +10,23 @@ n.d(t, {
     n(388685);
 var r = n(647438),
     l = n(843611),
-    a = n(442837),
+    i = n(442837),
     s = n(607070),
-    i = n(100527),
-    o = n(906732),
+    o = n(100527),
+    a = n(906732),
     c = n(819640),
     u = n(597688),
     d = n(328347),
     g = n(429368),
-    p = n(410127),
-    f = n(237031),
+    f = n(410127),
+    p = n(237031),
     C = n(258939),
     h = n(956472),
     _ = n(981631);
 let m = "".concat("#").concat("itemSkuId", "="),
     b = new RegExp("^".concat(m, "(\\d+)$")),
     E = [_.Z5c.COLLECTIBLES_SHOP, _.Z5c.COLLECTIBLES_SHOP_FULLSCREEN],
-    S = (e) => {
+    v = (e) => {
         let t = (0, l.TH)();
         r.useEffect(() => {
             if (null != e && E.includes(t.pathname))
@@ -35,82 +35,82 @@ let m = "".concat("#").concat("itemSkuId", "="),
                 };
         }, [e, t.pathname]);
     },
-    v = () => {
-        let e = (0, a.e7)([c.Z], () => c.Z.getLayers().includes(_.S9g.COLLECTIBLES_SHOP)),
+    S = () => {
+        let e = (0, i.e7)([c.Z], () => c.Z.getLayers().includes(_.S9g.COLLECTIBLES_SHOP)),
             t = (0, C.R)(),
             n = r.useRef(null),
             s = (0, l.TH)(),
             m =
                 s.pathname === _.Z5c.COLLECTIBLES_SHOP
-                    ? i.Z.HOME_PAGE_SHOP_TAB
+                    ? o.Z.HOME_PAGE_SHOP_TAB
                     : s.pathname === _.Z5c.COLLECTIBLES_SHOP_FULLSCREEN
-                      ? i.Z.COLLECTIBLES_SHOP_FULLSCREEN
-                      : i.Z.COLLECTIBLES_SHOP,
-            { analyticsLocations: E } = (0, o.ZP)(m),
-            S = (0, p.Z)();
+                      ? o.Z.COLLECTIBLES_SHOP_FULLSCREEN
+                      : o.Z.COLLECTIBLES_SHOP,
+            { analyticsLocations: E } = (0, a.ZP)(m),
+            v = (0, f.Z)();
         r.useEffect(() => {
             if (e) return;
             let t = b.exec(s.hash);
             null != t ? (n.current = t[1]) : (n.current = null);
-        }, [S, e, s.hash]);
-        let v = (0, a.e7)([d.Z], () => d.Z.initialProductSkuId);
+        }, [v, e, s.hash]);
+        let S = (0, i.e7)([d.Z], () => d.Z.initialProductSkuId);
         r.useEffect(() => {
             if (t) return;
             let r = null;
-            if (null != (r = e ? v : n.current)) {
+            if (null != (r = e ? S : n.current)) {
                 let e = setTimeout(() => {
                     ((e) => {
                         let { productSkuId: t, analyticsLocations: n, analyticsSource: r, tab: l } = e,
-                            a = u.Z.getProduct(t),
+                            i = u.Z.getProduct(t),
                             s = u.Z.getCategoryForProduct(t);
-                        if (null != a && null != s) {
-                            let e = a,
-                                o = (0, h.oQ)({ product: a }),
+                        if (null != i && null != s) {
+                            let e = i,
+                                a = (0, h.oQ)({ product: i }),
                                 c = document.getElementById("shop-item-".concat(e.skuId));
                             if (
                                 (c !== document.activeElement && (null == c || c.focus()),
-                                null != a.variantGroupStoreListingId)
+                                null != i.variantGroupStoreListingId)
                             ) {
-                                let n = u.Z.getProductByStoreListingId(a.variantGroupStoreListingId);
+                                let n = u.Z.getProductByStoreListingId(i.variantGroupStoreListingId);
                                 if (null != n) {
-                                    var i;
+                                    var o;
                                     e = n;
-                                    let r = null == (i = n.variants) ? void 0 : i.findIndex((e) => e.skuId === t);
+                                    let r = null == (o = n.variants) ? void 0 : o.findIndex((e) => e.skuId === t);
                                     null != r && r > -1 && (0, g.$)(n, r);
                                 }
                             }
-                            (0, f.T)({
+                            (0, p.T)({
                                 product: e,
                                 category: s,
                                 analyticsSource: r,
                                 analyticsLocations: n,
                                 tab: l,
-                                shouldCheckoutWithOrbs: o,
+                                shouldCheckoutWithOrbs: a,
                             });
                         }
                     })({
                         productSkuId: r,
                         analyticsLocations: E,
                         analyticsSource: m,
-                        tab: S,
+                        tab: v,
                     });
                 }, 250);
                 return () => clearTimeout(e);
             }
-        }, [e, E, m, t, v, S]);
+        }, [e, E, m, t, S, v]);
     },
-    x = (e) => {
+    O = (e) => {
         let t = r.useRef({}),
-            n = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
-            l = (0, a.e7)([u.Z], () => u.Z.isFetchingCategories),
-            [i, o] = r.useState(null),
+            n = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
+            l = (0, i.e7)([u.Z], () => u.Z.isFetchingCategories),
+            [o, a] = r.useState(null),
             c = r.useCallback((e, n) => {
                 t.current[e] = n;
             }, []),
             d = r.useCallback(
                 (r) => {
                     l
-                        ? o(r)
+                        ? a(r)
                         : setTimeout(() => {
                               let l = t.current[r];
                               null != l &&
@@ -123,12 +123,12 @@ let m = "".concat("#").concat("itemSkuId", "="),
                                       }));
                           }, 100);
                 },
-                [e, n, l, o],
+                [e, n, l, a],
             );
         return (
             r.useEffect(() => {
-                l || null == i || (d(i), o(null));
-            }, [l, d, i, o]),
+                l || null == o || (d(o), a(null));
+            }, [l, d, o, a]),
             {
                 setCategoryRef: c,
                 handleScrollToCategory: d,

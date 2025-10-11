@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(728285),
     d = n(306680),
     u = n(585483),
-    p = n(665149),
-    h = n(981631),
+    h = n(665149),
+    p = n(981631),
     f = n(388032);
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -60,25 +60,25 @@ let b = function (e) {
         [b, y] = i.useState(!1),
         _ = (0, l.e7)([d.ZP], () => d.ZP.hasUnreadPins(t.id), [t]),
         j = (0, c.Aq)(),
-        x = i.useRef(null),
-        O = i.useCallback(() => {
+        O = i.useRef(null),
+        x = i.useCallback(() => {
             n || y((e) => !e);
         }, [n]);
     function v(e) {
-        (null == e ? void 0 : e.shiftKey) || j.dispatch(h.CkL.POPOUT_CLOSE);
+        (null == e ? void 0 : e.shiftKey) || j.dispatch(p.CkL.POPOUT_CLOSE);
     }
     return (
         i.useEffect(
             () => (
-                u.S.subscribe(h.CkL.TOGGLE_CHANNEL_PINS, O),
+                u.S.subscribe(p.CkL.TOGGLE_CHANNEL_PINS, x),
                 () => {
-                    u.S.unsubscribe(h.CkL.TOGGLE_CHANNEL_PINS, O);
+                    u.S.unsubscribe(p.CkL.TOGGLE_CHANNEL_PINS, x);
                 }
             ),
-            [O],
+            [x],
         ),
         (0, r.jsx)(a.yRy, {
-            targetElementRef: x,
+            targetElementRef: O,
             shouldShow: b,
             animation: a.yRy.Animation.NONE,
             position: "bottom",
@@ -99,10 +99,10 @@ let b = function (e) {
             children: (e, t) => {
                 let { isShown: i } = t;
                 return (0, r.jsx)(
-                    p.JO,
+                    h.JO,
                     m(g({}, e), {
-                        ref: x,
-                        onClick: O,
+                        ref: O,
+                        onClick: x,
                         tooltip: i ? null : f.intl.string(f.t["mp1N//"]),
                         icon: a.qQX,
                         iconSize: 20,

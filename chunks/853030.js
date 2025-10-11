@@ -9,7 +9,7 @@ var r = n(951288),
     d = n(38242);
 function u(e) {
     let { mainCTADisabled: t, mainCTAOnClick: n, align: l, ctaText: u, hideOptionsButton: f } = e,
-        m = i.useRef(null);
+        p = i.useRef(null);
     return (0, r.jsxs)("div", {
         className: d.root,
         children: [
@@ -22,7 +22,7 @@ function u(e) {
             }),
             !f &&
                 (0, r.jsx)(a.yRy, {
-                    targetElementRef: m,
+                    targetElementRef: p,
                     position: "top",
                     align: l,
                     renderPopout: (e) => {
@@ -64,7 +64,7 @@ function u(e) {
                                 {
                                     size: o.zx.Sizes.LARGE,
                                     className: d.optionsButton,
-                                    buttonRef: m,
+                                    buttonRef: p,
                                 },
                                 e,
                             )),

@@ -19,33 +19,33 @@ function f(e) {
 function m(e) {
     let { node: t, visibleContent: n } = e,
         { currentPanel: o, navigateTo: i, setShowNavigationMobile: m } = (0, s.t)(),
-        { useTitle: b, stronglyDiscouragedCustomComponent: j, icon: p, trailing: x } = t,
-        y = l.useMemo(() => t.layout[0], [t]),
-        v = null != o && o.key === (null == y ? void 0 : y.key),
-        g = b(),
-        h =
-            null != y
+        { useTitle: b, stronglyDiscouragedCustomComponent: p, icon: j, trailing: x } = t,
+        v = l.useMemo(() => t.layout[0], [t]),
+        y = null != o && o.key === (null == v ? void 0 : v.key),
+        h = b(),
+        g =
+            null != v
                 ? () => {
-                      i(y.key), m(!1);
+                      i(v.key), m(!1);
                   }
                 : t.onClick,
         O = l.useMemo(() => {
             var e;
-            return null != (e = null == y ? void 0 : y.layout.flatMap((e) => e.layout)) ? e : [];
-        }, [y]);
-    return null != j
+            return null != (e = null == v ? void 0 : v.layout.flatMap((e) => e.layout)) ? e : [];
+        }, [v]);
+    return null != p
         ? (0, r.jsxs)(f, {
-              onClick: h,
-              active: v,
+              onClick: g,
+              active: y,
               children: [
-                  (0, r.jsx)(j, {}),
+                  (0, r.jsx)(p, {}),
                   null != x &&
                       (0, r.jsx)("div", {
                           className: d.itemContent,
                           children: (0, r.jsx)(c.W, {
                               trailing: x,
                               visibleContent: n,
-                              isSelected: v,
+                              isSelected: y,
                           }),
                       }),
               ],
@@ -53,13 +53,13 @@ function m(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)(f, {
-                      onClick: h,
-                      active: v,
+                      onClick: g,
+                      active: y,
                       children: [
                           (0, r.jsxs)("div", {
                               className: d.itemContent,
                               children: [
-                                  (0, r.jsx)(p, {
+                                  (0, r.jsx)(j, {
                                       color: "currentColor",
                                       size: "refresh_sm",
                                       className: d.icon,
@@ -67,7 +67,7 @@ function m(e) {
                                   (0, r.jsx)(a.Text, {
                                       variant: "text-md/medium",
                                       color: "currentColor",
-                                      children: g,
+                                      children: h,
                                   }),
                               ],
                           }),
@@ -77,12 +77,12 @@ function m(e) {
                                   children: (0, r.jsx)(c.W, {
                                       trailing: x,
                                       visibleContent: n,
-                                      isSelected: v,
+                                      isSelected: y,
                                   }),
                               }),
                       ],
                   }),
-                  v && O.length > 1 && (0, r.jsx)(u.Z, { categories: O }),
+                  y && O.length > 1 && (0, r.jsx)(u.Z, { categories: O }),
               ],
           });
 }

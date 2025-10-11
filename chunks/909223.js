@@ -42,7 +42,7 @@ function b(e) {
     }
     return e;
 }
-function I(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,7 +61,7 @@ function I(e, t) {
     );
 }
 s.ZP.initialize();
-let j = {
+let I = {
         [h.BM.MESSAGE]: x.t.fuqnBA,
         [h.BM.USER]: x.t.F4jrRU,
         [h.BM.GUILD]: x.t.gH3aMj,
@@ -87,7 +87,7 @@ let j = {
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                I(b({}, n), {
+                                j(b({}, n), {
                                     onFormSubmit: s,
                                     onResend: t,
                                     onSuccess: o,
@@ -106,7 +106,7 @@ let j = {
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            I(b({}, t), {
+                            j(b({}, t), {
                                 onSuccess: s,
                                 headerText: x.intl.string(x.t.ZLRYGR),
                                 confirmButtonText: x.intl.string(x.t.PDTjLC),
@@ -176,12 +176,12 @@ let j = {
                           (0, r.jsx)("div", {
                               className: E.container,
                               children: n.map((e) =>
-                                  null == j[e]
+                                  null == I[e]
                                       ? null
                                       : (0, r.jsx)(
                                             N,
                                             {
-                                                title: x.intl.string(j[e]),
+                                                title: x.intl.string(I[e]),
                                                 menuType: e,
                                             },
                                             e,

@@ -11,7 +11,7 @@ function a(e, n, t) {
         e
     );
 }
-t.d(n, { Z: () => i }),
+t.d(n, { Z: () => r }),
     t(410992),
     t(227481),
     t(730884),
@@ -84,13 +84,13 @@ class l {
             (this._pageSequenceNumber >> 16) & 255,
             (this._pageSequenceNumber >> 24) & 255,
         ]);
-        let i = this._offset;
+        let r = this._offset;
         for (let n of (this.appendBytes([0, 0, 0, 0, e.segments.length]),
         this.appendBytes(e.segments.map((e) => e.length)),
         e.segments))
             this.appendBytes(n);
-        let o = this._buffer.subarray(a, this._offset).reduce((e, n) => ((e << 8) >>> 0) ^ r[(e >>> 24) ^ n], 0) >>> 0;
-        this._buffer.set([255 & o, (o >> 8) & 255, (o >> 16) & 255, (o >> 24) & 255], i), this._pageSequenceNumber++;
+        let o = this._buffer.subarray(a, this._offset).reduce((e, n) => ((e << 8) >>> 0) ^ i[(e >>> 24) ^ n], 0) >>> 0;
+        this._buffer.set([255 & o, (o >> 8) & 255, (o >> 16) & 255, (o >> 24) & 255], r), this._pageSequenceNumber++;
     }
     finalize(e) {
         this.addPage({
@@ -108,7 +108,7 @@ class l {
         a(this, "_buffer", new Uint8Array(4096)), a(this, "_pageSequenceNumber", 0), a(this, "_offset", 0);
     }
 }
-function i(e, n) {
+function r(e, n) {
     let t = new Uint8Array([
             79,
             112,
@@ -131,16 +131,16 @@ function i(e, n) {
             n.channelMappingFamily,
         ]),
         a = new Uint8Array([79, 112, 117, 115, 84, 97, 103, 115, 0, 0, 0, 0, 0, 0, 0, 0]),
-        i = new l();
-    i.addPage({
+        r = new l();
+    r.addPage({
         pageType: 2,
         granulePosition: 0,
         segments: [t],
     });
-    let r = 0;
-    for (let n of (i.addPage({
+    let i = 0;
+    for (let n of (r.addPage({
         pageType: 0,
-        granulePosition: r,
+        granulePosition: i,
         segments: [a],
     }),
     e)) {
@@ -149,21 +149,21 @@ function i(e, n) {
                 t = [];
             for (let a = 0; a <= n; a++) {
                 let l = 0 === a ? 0 : 255 * a,
-                    i = a === n ? e.length : (a + 1) * 255;
-                t.push(e.slice(l, i));
+                    r = a === n ? e.length : (a + 1) * 255;
+                t.push(e.slice(l, r));
             }
             return t;
         })(n.buffer);
-        (r += n.numSamples),
-            i.addPage({
+        (i += n.numSamples),
+            r.addPage({
                 pageType: 0,
-                granulePosition: r,
+                granulePosition: i,
                 segments: e,
             });
     }
-    return i.finalize(r);
+    return r.finalize(i);
 }
-let r = (function () {
+let i = (function () {
     let e = new Uint32Array(256);
     for (let n = 256; n > 0; n--) {
         let t = n << 24;

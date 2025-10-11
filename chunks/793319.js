@@ -10,7 +10,7 @@ var i = n(951288),
     a = n.n(l),
     o = n(512722),
     s = n.n(o),
-    c = n(137317),
+    c = n(599273),
     u = n(442837),
     d = n(704215),
     p = n(481060),
@@ -37,9 +37,9 @@ var i = n(951288),
     w = n(74299),
     M = n(803647),
     R = n(554747),
-    k = n(95764),
-    L = n(459502),
-    D = n(728285),
+    L = n(95764),
+    D = n(459502),
+    k = n(728285),
     U = n(853170),
     B = n(140465),
     H = n(800966),
@@ -48,9 +48,9 @@ var i = n(951288),
     G = n(390322),
     z = n(791592),
     W = n(136995),
-    q = n(402113),
-    Y = n(197016),
-    K = n(386000),
+    Y = n(402113),
+    K = n(197016),
+    q = n(386000),
     X = n(331197),
     J = n(698877),
     Q = n(25827),
@@ -138,7 +138,7 @@ function ej(e, t) {
 function eE(e) {
     let { channel: t, currentUser: n, exitFullScreen: l, canGoLive: a, hasPermission: o, disabled: s } = e,
         { parentAnalyticsLocation: c, analyticsLocations: h } = (0, v.ZP)(),
-        f = (0, D.bp)(),
+        f = (0, k.bp)(),
         m = (0, u.Wu)([et.Z], () => et.Z.getAllActiveStreams()),
         g = m.find((e) => e.ownerId === n.id),
         b = r.useRef(null),
@@ -371,7 +371,7 @@ let eP = r.memo(function (e) {
                         case "ACTIVITY":
                             if (null == s || null == t || s.type !== eC.fO.ACTIVITY || null == a) return;
                             return (0, i.jsx)(
-                                q.Z,
+                                Y.Z,
                                 eO(ex({}, c), {
                                     applicationId: s.applicationId,
                                     color: "disconnect",
@@ -395,7 +395,7 @@ let eP = r.memo(function (e) {
                             );
                         case "CALL":
                             return (0, i.jsx)(
-                                Y.Z,
+                                K.Z,
                                 eO(ex({}, c), {
                                     color: "disconnect",
                                     onClick: () => {
@@ -405,7 +405,7 @@ let eP = r.memo(function (e) {
                                 }),
                             );
                         case "EVENT":
-                            return (0, i.jsx)(k.Z, {
+                            return (0, i.jsx)(L.Z, {
                                 channelId: l.id,
                                 onClick: () => {
                                     (0, P.v)(o, P.d.DISCONNECT), m.default.disconnect(), null == n || n();
@@ -419,7 +419,7 @@ let eP = r.memo(function (e) {
 });
 function eI(e) {
     let { channel: t, cameraUnavailable: n, hasCameraPermission: l, currentUser: a } = e,
-        o = (0, D.bp)(),
+        o = (0, k.bp)(),
         { parentAnalyticsLocation: s } = (0, v.ZP)(),
         { reachedLimit: c, limit: d } = (0, eo.Z)(t),
         p = r.useCallback(() => {
@@ -482,17 +482,17 @@ let eT = function (e) {
         I = (0, es.Z)(n),
         { suppress: Z, selfMute: A, mute: M } = (0, ec.Z)(n),
         { canGoLive: R } = (0, u.cj)([ei.Z], () => ({ canGoLive: (0, w.Z)(ei.Z) })),
-        k = (0, N.Z)(),
-        D = (0, u.e7)([T.default], () => null != T.default.getAwaitingRemoteSessionInfo()),
-        B = null != k,
+        L = (0, N.Z)(),
+        k = (0, u.e7)([T.default], () => null != T.default.getAwaitingRemoteSessionInfo()),
+        B = null != L,
         H = (0, u.e7)([er.Z], () => {
             var e;
-            return (null != (e = null == k ? void 0 : k.channelId) ? e : er.Z.getVoiceChannelId()) === n.id;
+            return (null != (e = null == L ? void 0 : L.channelId) ? e : er.Z.getVoiceChannelId()) === n.id;
         }),
         F = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
         { reachedLimit: z, limit: W } = (0, eo.Z)(n),
-        { analyticsLocations: q } = (0, v.ZP)(_.Z.VOICE_CONTROL_TRAY),
-        Y = (0, $.Hu)({
+        { analyticsLocations: Y } = (0, v.ZP)(_.Z.VOICE_CONTROL_TRAY),
+        K = (0, $.Hu)({
             location: _.Z.VOICE_CONTROL_TRAY,
             autoTrackExposure: !0,
         }),
@@ -500,7 +500,7 @@ let eT = function (e) {
         et = (0, V.Z)(n),
         en = r.useRef(null),
         eu = r.useRef(null),
-        ep = Y
+        ep = K
             ? (e) => {
                   (0, f.jW)(e, () =>
                       Promise.resolve(() =>
@@ -521,13 +521,13 @@ let eT = function (e) {
             : void 0;
     return H
         ? (0, i.jsx)(v.Gt, {
-              value: q,
+              value: Y,
               children: (0, i.jsxs)(b.Z, {
                   section: eb.jXE.VOICE_CONTROL_TRAY,
                   children: [
                       (0, i.jsx)("div", {
                           className: e_.eventPromptsContainer,
-                          children: (0, i.jsx)(L.Z, { channelId: n.id }),
+                          children: (0, i.jsx)(D.Z, { channelId: n.id }),
                       }),
                       (0, i.jsxs)("div", {
                           ref: h,
@@ -542,7 +542,7 @@ let eT = function (e) {
                                               let t,
                                                   { closePopout: n } = e;
                                               return (
-                                                  (t = Y
+                                                  (t = K
                                                       ? (0, i.jsx)(ee.l, {
                                                             wide: !0,
                                                             showOutputDevices: !0,
@@ -585,7 +585,7 @@ let eT = function (e) {
                                           children: (e, t) => {
                                               let { onClick: n } = e,
                                                   { isShown: r } = t;
-                                              return (0, i.jsx)(K.Z, {
+                                              return (0, i.jsx)(q.Z, {
                                                   ref: en,
                                                   centerButton: !0,
                                                   onPopoutClick: B ? null : n,
@@ -593,7 +593,7 @@ let eT = function (e) {
                                                   serverMute: M,
                                                   suppress: Z,
                                                   popoutOpen: r,
-                                                  awaitingRemote: D,
+                                                  awaitingRemote: k,
                                                   onClick: () => (0, S.Z)(M, Z, eb.jXE.VOICE_CONTROL_TRAY),
                                                   onContextMenu: ep,
                                               });
@@ -681,7 +681,7 @@ let eT = function (e) {
               }),
           })
         : (0, i.jsx)(v.Gt, {
-              value: q,
+              value: Y,
               children: (0, i.jsx)(eI, {
                   channel: n,
                   cameraUnavailable: x,

@@ -7,8 +7,8 @@ var i = n(481060),
     l = n(108843),
     s = n(947440),
     c = n(100527),
-    u = n(299206),
-    d = n(916069),
+    d = n(299206),
+    u = n(916069),
     b = n(895563),
     p = n(212205),
     f = n(478035),
@@ -58,14 +58,14 @@ function T(e) {
         o = (0, O.Z)(t),
         l = (0, _.Z)(t),
         c = (0, b.l)(t),
-        d = (0, b.P)(t),
+        u = (0, b.P)(t),
         g = (0, p.Z)(t),
         v = (0, f.Z)(t),
         j = (0, h.Z)(t),
         x = (0, P.ZP)(t),
         k = (0, C.Z)(t),
         Z = (0, y.Z)(t),
-        S = (0, u.Z)({
+        S = (0, d.Z)({
             id: t.id,
             label: I.intl.string(I.t.gFHI3t),
         }),
@@ -87,7 +87,7 @@ function T(e) {
             }),
             (0, r.jsx)(i.kSQ, { children: Z }),
             (0, r.jsx)(i.kSQ, { children: N }),
-            (0, r.jsx)(i.kSQ, { children: d }),
+            (0, r.jsx)(i.kSQ, { children: u }),
             (0, r.jsx)(i.kSQ, { children: l }),
             (0, r.jsx)(i.kSQ, { children: S }),
         ],
@@ -97,7 +97,7 @@ function E(e) {
     let { channel: t, guild: n, onSelect: o } = e,
         l = (0, O.Z)(t),
         c = (0, _.Z)(t),
-        d = (0, b.l)(t),
+        u = (0, b.l)(t),
         p = (0, b.P)(t),
         f = (0, Z.Z)(t),
         h = (0, P.ZP)(t),
@@ -106,11 +106,11 @@ function E(e) {
         T = (0, g.Z)(t, n),
         E = (0, v.Z)(t, n),
         M = (0, j.Z)(t),
-        D = (0, u.Z)({
+        A = (0, d.Z)({
             id: t.id,
             label: I.intl.string(I.t.gFHI3t),
         }),
-        A = (0, s.Z)(t),
+        D = (0, s.Z)(t),
         L = (0, k.Z)(t, "list_text_channel_context_menu"),
         U = (0, C.Z)(t),
         F = (0, w.ZP)(t),
@@ -124,7 +124,7 @@ function E(e) {
             (0, r.jsxs)(
                 i.kSQ,
                 {
-                    children: [l, d],
+                    children: [l, u],
                 },
                 "mark-as-read-or-favorite",
             ),
@@ -149,16 +149,16 @@ function E(e) {
                 },
                 "admin-actions",
             ),
-            (0, r.jsx)(i.kSQ, { children: A }),
+            (0, r.jsx)(i.kSQ, { children: D }),
             (0, r.jsx)(i.kSQ, { children: p }),
-            (0, r.jsx)(i.kSQ, { children: D }, "developer-actions"),
+            (0, r.jsx)(i.kSQ, { children: A }, "developer-actions"),
         ],
     });
 }
 let M = (0, l.Z)(
     (0, o.Z)(
         function (e) {
-            return (0, d.Z)() ? (0, r.jsx)(T, N({}, e)) : (0, r.jsx)(E, N({}, e));
+            return (0, u.Z)() ? (0, r.jsx)(T, N({}, e)) : (0, r.jsx)(E, N({}, e));
         },
         { object: S.qAy.CONTEXT_MENU },
     ),

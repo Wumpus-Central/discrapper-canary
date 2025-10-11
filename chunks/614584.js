@@ -78,9 +78,9 @@ let S = r.memo(function (e) {
         } = e,
         M = S.state === f.Y.LOADED ? S.message : void 0,
         R = (0, C.Uj)(M),
-        k = (0, u.p)(),
-        L = s.d.useExperiment({ location: "repliedMessage" }).enabled,
-        D = (0, d.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
+        L = (0, u.p)(),
+        D = s.d.useExperiment({ location: "repliedMessage" }).enabled,
+        k = (0, d.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
         U = r.useMemo(() => {
             if (null == M) return null;
             let e = (0, o.Z)(M);
@@ -126,25 +126,25 @@ let S = r.memo(function (e) {
                 let t = {
                         formatInline: !0,
                         allowLinks: !0,
-                        shouldFilterKeywords: k,
+                        shouldFilterKeywords: L,
                     },
                     n = e.isFirstMessageInForumPost(P)
                         ? E(j({}, t), {
                               noStyleAndInteraction: !0,
                               allowHeading: !0,
                               allowList: !0,
-                              allowGameMentions: L,
+                              allowGameMentions: D,
                           })
                         : E(j({}, t), {
                               formatInline: !0,
-                              allowHeading: D,
-                              allowList: D,
-                              allowGameMentions: L,
+                              allowHeading: k,
+                              allowList: k,
+                              allowGameMentions: D,
                           });
                 return (0, b.ZP)(e, n).content;
             }
             return null;
-        }, [M, R, P, D, k, L]),
+        }, [M, R, P, k, L, D]),
         { isReplyAuthorBlocked: B, isReplyAuthorIgnored: H } = (0, l.cj)(
             [m.Z],
             () => ({
@@ -163,12 +163,12 @@ let S = r.memo(function (e) {
                 referencedAvatarProfile: !1,
             });
         }, [N]),
-        q = (0, C.Uj)(n);
+        Y = (0, C.Uj)(n);
     return (0, i.jsx)(y.Z, {
         repliedAuthor: R,
         baseMessage: n,
         channel: P,
-        baseAuthor: q,
+        baseAuthor: Y,
         referencedMessage: S,
         content: U,
         compact: I,

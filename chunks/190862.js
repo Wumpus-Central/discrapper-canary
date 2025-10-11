@@ -1,101 +1,101 @@
-r.d(t, { Z: () => x });
-var n = r(951288),
-    i = r(296009),
-    a = r(442837),
-    o = r(314897),
-    l = r(86419),
-    c = r(747101),
-    s = r(556045),
-    u = r(881410),
-    d = r(985748),
-    f = r(566007),
-    g = r(173951),
-    p = r(455731),
-    b = r(272289),
-    m = r(39642);
+n.d(t, { Z: () => x });
+var r = n(951288),
+    i = n(296009),
+    a = n(442837),
+    o = n(314897),
+    l = n(86419),
+    c = n(747101),
+    s = n(556045),
+    u = n(881410),
+    d = n(985748),
+    f = n(566007),
+    g = n(173951),
+    p = n(455731),
+    b = n(272289),
+    m = n(39642);
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var r = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(r);
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            n.forEach(function (t) {
-                var n;
-                (n = r[t]),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: n,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = n);
+                        : (e[t] = r);
             });
     }
     return e;
 }
 function y(e, t) {
     if (null == e) return {};
-    var r,
-        n,
+    var n,
+        r,
         i = (function (e, t) {
             if (null == e) return {};
-            var r,
-                n,
+            var n,
+                r,
                 i = {},
                 a = Object.keys(e);
-            for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+            for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
-        for (n = 0; n < a.length; n++)
-            (r = a[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
 let j = (e) => {
         var { widget: t } = e,
-            r = y(e, ["widget"]);
+            n = y(e, ["widget"]);
         switch (t.type) {
             case i.l.FAVORITE_GAMES:
-                return (0, n.jsx)(f.Z, O({ widget: t }, r));
+                return (0, r.jsx)(f.Z, O({ widget: t }, n));
             case i.l.CURRENT_GAMES:
-                return (0, n.jsx)(d.Z, O({ widget: t }, r));
+                return (0, r.jsx)(d.Z, O({ widget: t }, n));
             case i.l.WANT_TO_PLAY_GAMES:
-                return (0, n.jsx)(p.Z, O({ widget: t }, r));
+                return (0, r.jsx)(p.Z, O({ widget: t }, n));
             case i.l.PLAYED_GAMES:
-                return (0, n.jsx)(g.Z, O({ widget: t }, r));
+                return (0, r.jsx)(g.Z, O({ widget: t }, n));
             default:
                 return null;
         }
     },
     x = (e) => {
-        var { widget: t, user: r, disableInteraction: i } = e,
+        var { widget: t, user: n, disableInteraction: i } = e,
             d = y(e, ["widget", "user", "disableInteraction"]);
         let f = (0, c.FX)(t),
             { shouldShowSuggestions: g, handleDismissSuggestions: p } = (0, s.h)(f),
-            x = (0, a.e7)([o.default], () => o.default.getId() === r.id),
+            x = (0, a.e7)([o.default], () => o.default.getId() === n.id),
             v = x && !i && g,
             h = (0, l.mR)(f),
             _ = (0, l.Hy)(f, { isCurrentUser: x }),
             w = (0, l.kQ)(f);
-        return (0, n.jsx)(
+        return (0, r.jsx)(
             j,
             O(
                 {
                     widget: f,
-                    user: r,
+                    user: n,
                     disableInteraction: i,
                     headerTitle: h,
                     headerSubtitle: _,
                     headerActionButtons: x
                         ? [
-                              (0, n.jsx)(
+                              (0, r.jsx)(
                                   u.Z,
                                   {
                                       disabled: w,
@@ -108,8 +108,8 @@ let j = (e) => {
                         : void 0,
                     trailingContent:
                         v &&
-                        (0, n.jsx)(b.Z, {
-                            userId: r.id,
+                        (0, r.jsx)(b.Z, {
+                            userId: n.id,
                             widgetType: f.type,
                             onDismiss: p,
                             className: m.suggestedGames,

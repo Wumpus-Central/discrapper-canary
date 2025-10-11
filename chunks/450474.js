@@ -2,8 +2,8 @@ n.d(t, { Z: () => d }), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    s = n(481060),
-    a = n(456268),
+    a = n(481060),
+    s = n(456268),
     o = n(526429),
     c = n(203377);
 let d = (e) => {
@@ -21,18 +21,18 @@ let d = (e) => {
             [m],
         );
     return 0 === p.length
-        ? (0, r.jsx)(s.$jN, {})
-        : (0, r.jsx)(s.VcW, {
+        ? (0, r.jsx)(a.$jN, {})
+        : (0, r.jsx)(a.VcW, {
               label: t,
               description: n,
               value: u.secondaryCategoryIds,
               options: p,
               onChange: (e) => {
                   let { secondaryCategoryIds: t } = u;
-                  if (e.length < t.length) t.filter((t) => !e.includes(t)).forEach((e) => (0, a.K0)(d.id, e));
+                  if (e.length < t.length) t.filter((t) => !e.includes(t)).forEach((e) => (0, s.K0)(d.id, e));
                   else {
                       if (t.length >= c.Pg) return;
-                      e.filter((e) => !t.includes(e)).forEach((e) => (0, a.Kq)(d.id, e));
+                      e.filter((e) => !t.includes(e)).forEach((e) => (0, s.Kq)(d.id, e));
                   }
               },
               isDisabled: g,

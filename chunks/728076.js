@@ -63,8 +63,8 @@ function b(e, t, n, b) {
                 : [(0, u.Uu)(), (0, u.Uu)()];
         }),
         [P, w] = r.useState(null != (j = null == b ? void 0 : b.initialQuestion) ? j : ""),
-        [k, C] = r.useState(!1),
-        [x, R] = r.useState(null != (O = null == b ? void 0 : b.initialDuration) ? O : f.lc.ONE_DAY),
+        [C, k] = r.useState(!1),
+        [R, x] = r.useState(null != (O = null == b ? void 0 : b.initialDuration) ? O : f.lc.ONE_DAY),
         [E, _] = r.useState({}),
         [S, D] = r.useState(!1),
         A = h.filter((e) => (0, u.cS)(e)),
@@ -192,12 +192,12 @@ function b(e, t, n, b) {
                 channel: e,
                 question: P,
                 answers: A,
-                allowMultiSelect: k,
-                duration: x,
+                allowMultiSelect: C,
+                duration: R,
                 layout: l.C.DEFAULT,
                 onClose: t,
             });
-        }, [P, A, k, x, U, e, t]),
+        }, [P, A, C, R, U, e, t]),
         Q = r.useCallback(() => {
             !T && X() && J();
         }, [J, T, X]);
@@ -205,10 +205,10 @@ function b(e, t, n, b) {
         answers: h,
         question: P,
         setQuestion: w,
-        allowMultiSelect: k,
-        setAllowMultiSelect: C,
-        duration: x,
-        setDuration: R,
+        allowMultiSelect: C,
+        setAllowMultiSelect: k,
+        duration: R,
+        setDuration: x,
         canPost: N,
         canAddMoreAnswers: Z,
         canRemoveMoreAnswers: B,

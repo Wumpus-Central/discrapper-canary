@@ -29,9 +29,9 @@ function P(e) {
         T = (0, p.KF)(t.id),
         N = (0, p.g5)(T),
         A = T !== p.jy.CAN_LAUNCH || Z,
-        { isHovered: w, setIsHovered: M, onMouseEnter: R, onMouseLeave: k } = (0, v.Z)(200, 300),
-        L = (0, d.p)({ surface: c.eR.VOICE_LAUNCHER }),
-        D = (0, l.e7)(
+        { isHovered: w, setIsHovered: M, onMouseEnter: R, onMouseLeave: L } = (0, v.Z)(200, 300),
+        D = (0, d.p)({ surface: c.eR.VOICE_LAUNCHER }),
+        k = (0, l.e7)(
             [u.ZP],
             () => null != u.ZP.getSelfEmbeddedActivityForLocation(u.ZP.getConnectedActivityLocation()),
         ),
@@ -63,7 +63,7 @@ function P(e) {
         (0, h.Z)(t.id) && !A && z.push(a.z.ACTIVITY_GDM_ROCKET_SPARKLE),
         A || z.push(a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP);
     let W = r.useRef(!1),
-        q = r.useRef(null);
+        Y = r.useRef(null);
     return (0, i.jsx)(y.ZP, {
         contentTypes: z,
         children: (e) => {
@@ -73,7 +73,7 @@ function P(e) {
                 W.current && !c && l(E.L.AUTO_DISMISS),
                 W.current !== c && (W.current = c),
                 (0, i.jsx)(s.yRy, {
-                    targetElementRef: q,
+                    targetElementRef: Y,
                     fixed: !0,
                     shouldShow: w && (P === O.D.ACTIVITY || null == P),
                     animation: s.yRy.Animation.FADE,
@@ -94,7 +94,7 @@ function P(e) {
                                   channel: t,
                                   closePopout: n,
                                   onMouseEnter: R,
-                                  onMouseLeave: k,
+                                  onMouseLeave: L,
                                   isHovered: w,
                                   onClick: () => l(E.L.UNKNOWN),
                               })
@@ -103,7 +103,7 @@ function P(e) {
                     children: () =>
                         (0, i.jsx)(y.Xf, {
                             contentType: a.z.ACTIVITIES_VOICE_LAUNCHER_BADGE,
-                            latestVersion: L,
+                            latestVersion: D,
                             children: (e) => {
                                 let { visibleContent: t, markAsDismissed: n } = e;
                                 return (0, i.jsxs)(i.Fragment, {
@@ -113,12 +113,12 @@ function P(e) {
                                             forceOpen: !0,
                                             shouldShow: c,
                                             children: (0, i.jsx)("div", {
-                                                ref: q,
+                                                ref: Y,
                                                 children: (0, i.jsx)(x.Z, {
                                                     disabled: A,
                                                     "aria-label": N,
                                                     label: U ? void 0 : N,
-                                                    isActivityActive: D,
+                                                    isActivityActive: k,
                                                     onClick: () => {
                                                         G(),
                                                             (r === a.z.ACTIVITIES_MINI_SHELF_SPARKLES ||
@@ -137,7 +137,7 @@ function P(e) {
                                                                 n(E.L.TAKE_ACTION);
                                                     },
                                                     onMouseEnter: B,
-                                                    onMouseLeave: k,
+                                                    onMouseLeave: L,
                                                 }),
                                             }),
                                         }),

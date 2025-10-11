@@ -1,5 +1,5 @@
-n.d(t, { R: () => r });
-var i = n(837748);
-function r(e) {
-    return (0, i.Z)(e).author;
+n.d(t, { R: () => i });
+var r = n(837748);
+function i(e) {
+    return (0, r.Z)(e).author;
 }

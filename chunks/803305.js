@@ -3,17 +3,17 @@ var r = n(951288);
 n(647438);
 var i = n(755721),
     l = n(372444),
-    s = n(267642),
-    a = n(981631),
+    a = n(267642),
+    s = n(981631),
     o = n(474936),
     c = n(388032),
     d = n(693536);
 function u(e) {
     let { guild: t, numSounds: n, isOutOfSlots: u } = e,
         g = t.premiumTier,
-        m = (0, s.FZ)(g),
+        m = (0, a.FZ)(g),
         p = o._k[g] - 2;
-    if (null == m || g === a.Eu4.TIER_3 || n < p) return null;
+    if (null == m || g === s.Eu4.TIER_3 || n < p) return null;
     let f = u
         ? {
               color: i.Tt.GREEN,
@@ -25,17 +25,17 @@ function u(e) {
         header: c.intl.string(c.t.zT9Sxc),
         text: c.intl.formatToPlainString(c.t.OKqEAQ, {
             level: m,
-            numAdditional: (0, s.Je)(m),
+            numAdditional: (0, a.Je)(m),
         }),
         headerColor: "header-primary",
         textColor: "text-default",
         buttonProps: f,
         guild: t,
         analyticsLocation: {
-            page: a.ZY5.GUILD_SETTINGS,
-            section: a.jXE.GUILD_SETTINGS_SOUNDBOARD,
-            object: a.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL,
-            objectType: (0, s.ge)(m),
+            page: s.ZY5.GUILD_SETTINGS,
+            section: s.jXE.GUILD_SETTINGS_SOUNDBOARD,
+            object: s.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL,
+            objectType: (0, a.ge)(m),
         },
         className: d.container,
     });

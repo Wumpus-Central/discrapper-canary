@@ -17,11 +17,11 @@ var r = n(951288),
     _ = n(199104),
     O = n(108427),
     E = n(210887),
-    y = n(974042),
-    v = n(365113),
+    v = n(974042),
+    y = n(365113),
     I = n(849862),
-    S = n(666286),
-    C = n(596957),
+    C = n(666286),
+    S = n(596957),
     T = n(576360),
     N = n(981631),
     j = n(723359),
@@ -54,7 +54,7 @@ let Z = function (e) {
         }, []);
     let b = (0, s.e7)([E.Z], () => E.Z.theme),
         Z = (0, I.If)(),
-        { section: w, rows: L } = (0, s.cj)([y.ZP], () => y.ZP.getState()),
+        { section: w, rows: L } = (0, s.cj)([v.ZP], () => v.ZP.getState()),
         R = (0, s.e7)([g.Z], () => g.Z.getSuggestionCount()),
         D = i.useMemo(() => L.getRelationshipCounts(), [L]);
     i.useEffect(() => {
@@ -122,7 +122,7 @@ let Z = function (e) {
                 className: a()(x.item, x.addFriend),
             },
         ],
-        B = v.o.useConfig({ location: "friendstore" }).landOnProfilePage;
+        B = y.o.useConfig({ location: "friendstore" }).landOnProfilePage;
     B &&
         G.unshift({
             id: N.pJs.YOU,
@@ -137,7 +137,7 @@ let Z = function (e) {
         });
     return (
         w === N.pJs.ADD_FRIEND
-            ? (H = (0, r.jsx)(S.Z, {}))
+            ? (H = (0, r.jsx)(C.Z, {}))
             : w === N.pJs.YOU
               ? B
                   ? (H = (0, r.jsx)(T.Z, {}))
@@ -149,7 +149,7 @@ let Z = function (e) {
                         }),
                     })),
                     (V = null))
-              : (H = (0, r.jsx)(C.Z, { titleId: U })),
+              : (H = (0, r.jsx)(S.Z, { titleId: U })),
         (0, r.jsxs)("main", {
             className: x.container,
             "aria-label": P.intl.string(P.t.TdEu5e),

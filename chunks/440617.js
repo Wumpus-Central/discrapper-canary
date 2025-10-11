@@ -1,9 +1,9 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(951288),
     l = n(481060),
     i = n(388032),
     s = n(634804);
-function a() {
+function o() {
     return (0, r.jsxs)("div", {
         className: s.container,
         children: [

@@ -2,8 +2,8 @@ n.d(t, { Z: () => j }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
-    s = n(596454),
-    a = n(318766),
+    a = n(596454),
+    s = n(318766),
     o = n(907040),
     c = n(176354),
     d = n(434404),
@@ -46,7 +46,7 @@ function h(e) {
                     : function () {
                           var e;
                           let n = c.ZP.isCustomEmoji(t) ? t.name : t.surrogates;
-                          return (0, r.jsx)(s.Z, {
+                          return (0, r.jsx)(a.Z, {
                               animated: null != (e = t.animated) && e,
                               emojiId: t.id,
                               emojiName: n,
@@ -55,7 +55,7 @@ function h(e) {
             [t],
         );
     return n
-        ? (0, r.jsx)(a.Z, {
+        ? (0, r.jsx)(s.Z, {
               tabIndex: -1,
               active: !1,
               renderButtonContents: m,
@@ -75,7 +75,7 @@ function h(e) {
                   var n, i;
                   let { isShown: l } = t;
                   return (0, r.jsx)(
-                      a.Z,
+                      s.Z,
                       ((n = p({}, e)),
                       (i = i =
                           {
@@ -101,26 +101,26 @@ function h(e) {
               },
           });
 }
-function x(e) {
-    let { guildId: t, trait: n, index: s, onTraitUpdate: a, disabled: o } = e,
+function b(e) {
+    let { guildId: t, trait: n, index: a, onTraitUpdate: s, disabled: o } = e,
         c = i.useCallback(() => {
-            a(t, s, {
+            s(t, a, {
                 emoji: void 0,
                 label: "",
             });
-        }, [t, s, a]),
+        }, [t, a, s]),
         d = i.useCallback(
             (e) => (n) => {
                 let { emoji: r, willClose: i } = n;
-                a(t, s, { emoji: null != r ? r : void 0 }), i && e();
+                s(t, a, { emoji: null != r ? r : void 0 }), i && e();
             },
-            [t, s, a],
+            [t, a, s],
         ),
         u = i.useCallback(
             (e) => {
-                a(t, s, { label: e });
+                s(t, a, { label: e });
             },
-            [t, s, a],
+            [t, a, s],
         ),
         g = i.useMemo(() => n.emoji, [n.emoji]),
         p = (null != n.label && n.label.length > 0) || null != n.emoji;
@@ -144,31 +144,31 @@ function x(e) {
         }),
     });
 }
-let b = [0, 1, 2, 3, 4];
+let x = [0, 1, 2, 3, 4];
 function j(e) {
     let { profile: t, canManageGuild: n } = e,
-        s = i.useMemo(() => t.traits, [t]),
-        a = i.useCallback(
+        a = i.useMemo(() => t.traits, [t]),
+        s = i.useCallback(
             (e, t, n) => {
-                let r = [...s];
-                (r[t] = p({}, s[t], n)), d.Z.updateGuildProfile(e, { traits: r });
+                let r = [...a];
+                (r[t] = p({}, a[t], n)), d.Z.updateGuildProfile(e, { traits: r });
             },
-            [s],
+            [a],
         );
     return (0, r.jsx)(l.gNt, {
         label: g.intl.string(g.t.S6JNrq),
         description: g.intl.string(g.t.l7Ig5e),
         children: (0, r.jsx)("div", {
             className: m.grid,
-            children: b.map((e) => {
+            children: x.map((e) => {
                 var i;
                 return (0, r.jsx)(
-                    x,
+                    b,
                     {
                         guildId: t.id,
-                        trait: null != (i = s[e]) ? i : f,
+                        trait: null != (i = a[e]) ? i : f,
                         index: e,
-                        onTraitUpdate: a,
+                        onTraitUpdate: s,
                         disabled: !n,
                     },
                     "trait-".concat(e),

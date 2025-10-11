@@ -43,10 +43,10 @@ async function d(e) {
             width: t,
             height: n,
         }),
-        m = (0, o._)(),
-        h = await m,
-        p = await f,
-        g = p
+        p = (0, o._)(),
+        h = await p,
+        m = await f,
+        _ = m
             .filter((e) => e.id.startsWith(i.vA.SCREEN))
             .map((e) => {
                 var t, n;
@@ -97,7 +97,7 @@ async function d(e) {
                     t
                 );
             }),
-        x = (function (e, t) {
+        g = (function (e, t) {
             let n = {};
             return (
                 t.forEach((e) => {
@@ -109,13 +109,13 @@ async function d(e) {
                 Object.values(n)
             );
         })(
-            p.filter((e) => e.id.startsWith(i.vA.WINDOW)),
+            m.filter((e) => e.id.startsWith(i.vA.WINDOW)),
             h,
         ),
-        _ = [];
+        x = [];
     return (
         d.includes(i.vA.CAMERA) &&
-            (_ = Object.entries(u)
+            (x = Object.entries(u)
                 .filter((e) => {
                     let [t, n] = e;
                     return !n.disabled;
@@ -132,9 +132,9 @@ async function d(e) {
                     };
                 })),
         {
-            windowSources: x,
-            screenSources: g,
-            cameraSources: _,
+            windowSources: g,
+            screenSources: _,
+            cameraSources: x,
         }
     );
 }

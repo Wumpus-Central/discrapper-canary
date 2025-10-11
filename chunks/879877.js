@@ -1,22 +1,22 @@
-r.d(t, { Z: () => O }), r(388685);
-var n = r(951288),
-    i = r(647438),
-    a = r(120356),
-    o = r.n(a),
-    l = r(624238),
-    c = r(28664),
-    s = r(481060),
-    u = r(259580),
-    d = r(785717),
-    f = r(86419),
-    g = r(978369),
-    p = r(286957),
-    b = r(388032),
-    m = r(44258);
+n.d(t, { Z: () => O }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    l = n(624238),
+    c = n(28664),
+    s = n(481060),
+    u = n(259580),
+    d = n(785717),
+    f = n(86419),
+    g = n(978369),
+    p = n(286957),
+    b = n(388032),
+    m = n(44258);
 function O(e) {
     var t;
-    let { tags: r, isCurrentUser: a, widgetType: c, applicationId: s, className: u, disableInteraction: O = !1 } = e,
-        h = null != (t = null == r ? void 0 : r.filter((e) => null != (0, p.zK)(e))) ? t : [],
+    let { tags: n, isCurrentUser: a, widgetType: c, applicationId: s, className: u, disableInteraction: O = !1 } = e,
+        h = null != (t = null == n ? void 0 : n.filter((e) => null != (0, p.zK)(e))) ? t : [],
         _ = h.length > 0,
         w = l.qH,
         P = a && !O && (0, f.M8)(c) && h.length < w,
@@ -42,17 +42,17 @@ function O(e) {
     )
         return null;
     let A = N ? h : h.slice(0, h.length - D);
-    return (0, n.jsxs)("div", {
+    return (0, r.jsxs)("div", {
         className: o()(m.tagListContainer, u),
         children: [
             _ &&
-                (0, n.jsxs)(n.Fragment, {
+                (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, n.jsx)("ul", {
+                        (0, r.jsx)("ul", {
                             className: m.tagList,
                             "aria-label": b.intl.string(b.t.EfjTi4),
                             children: A.map((e) =>
-                                (0, n.jsx)(
+                                (0, r.jsx)(
                                     y,
                                     {
                                         tag: e,
@@ -70,12 +70,12 @@ function O(e) {
                         }),
                         D > 0 &&
                             (N
-                                ? (0, n.jsx)(x, {
+                                ? (0, r.jsx)(x, {
                                       onClick: () => {
                                           C(!1), I({ action: "COLLAPSE_GAME_TAGS" });
                                       },
                                   })
-                                : (0, n.jsx)(j, {
+                                : (0, r.jsx)(j, {
                                       numHidden: D,
                                       onClick: () => {
                                           C(!0), I({ action: "EXPAND_GAME_TAGS" });
@@ -86,8 +86,8 @@ function O(e) {
                     ],
                 }),
             P &&
-                (0, n.jsx)(g.Z, {
-                    tags: r,
+                (0, r.jsx)(g.Z, {
+                    tags: n,
                     widgetType: c,
                     applicationId: s,
                     ref: T,
@@ -96,26 +96,26 @@ function O(e) {
     });
 }
 let y = (e) => {
-        let { tag: t, isCurrentUser: r, applicationId: i, widgetType: a, disableInteraction: o, ref: l } = e,
+        let { tag: t, isCurrentUser: n, applicationId: i, widgetType: a, disableInteraction: o, ref: l } = e,
             { trackUserProfileEditAction: u } = (0, d.KZ)(),
             g = (0, p.zK)(t);
         if (null == g) return null;
         let { getText: O, icon: y } = g;
-        return (0, n.jsxs)("li", {
+        return (0, r.jsxs)("li", {
             className: m.tag,
             ref: l,
             children: [
-                (0, n.jsx)(y, { size: "xxs" }),
-                (0, n.jsx)(s.Text, {
+                (0, r.jsx)(y, { size: "xxs" }),
+                (0, r.jsx)(s.Text, {
                     variant: "text-xxs/medium",
                     color: "text-secondary",
                     children: O(),
                 }),
-                r &&
+                n &&
                     !o &&
-                    (0, n.jsx)(c.u, {
+                    (0, r.jsx)(c.u, {
                         text: b.intl.string(b.t.Otv9fH),
-                        children: (0, n.jsx)(s.P3F, {
+                        children: (0, r.jsx)(s.P3F, {
                             onClick: () => {
                                 (0, f.RZ)(a, i, t),
                                     u({
@@ -126,7 +126,7 @@ let y = (e) => {
                             },
                             className: m.removeButton,
                             "aria-label": b.intl.formatToPlainString(b.t.GCn1nZ, { tag: O() }),
-                            children: (0, n.jsx)(s.Dio, {
+                            children: (0, r.jsx)(s.Dio, {
                                 size: "xxs",
                                 color: "currentColor",
                             }),
@@ -136,25 +136,25 @@ let y = (e) => {
         });
     },
     j = (e) => {
-        let { numHidden: t, onClick: r, disableInteraction: i, ref: a } = e;
+        let { numHidden: t, onClick: n, disableInteraction: i, ref: a } = e;
         return i
-            ? (0, n.jsx)("div", {
+            ? (0, r.jsx)("div", {
                   className: m.expandButton,
-                  children: (0, n.jsx)(s.Text, {
+                  children: (0, r.jsx)(s.Text, {
                       variant: "text-xxs/medium",
                       color: "none",
                       children: "+".concat(t),
                   }),
               })
-            : (0, n.jsx)(c.u, {
+            : (0, r.jsx)(c.u, {
                   asContainer: !0,
                   text: b.intl.string(b.t.mriLXF),
-                  children: (0, n.jsx)(s.P3F, {
-                      onClick: r,
+                  children: (0, r.jsx)(s.P3F, {
+                      onClick: n,
                       className: m.expandButton,
                       innerRef: a,
                       "aria-label": b.intl.string(b.t.mriLXF),
-                      children: (0, n.jsx)(s.Text, {
+                      children: (0, r.jsx)(s.Text, {
                           variant: "text-xxs/medium",
                           color: "none",
                           children: "+".concat(t),
@@ -164,14 +164,14 @@ let y = (e) => {
     },
     x = (e) => {
         let { onClick: t } = e;
-        return (0, n.jsx)(c.u, {
+        return (0, r.jsx)(c.u, {
             asContainer: !0,
             text: b.intl.string(b.t.z9VPra),
-            children: (0, n.jsx)(s.P3F, {
+            children: (0, r.jsx)(s.P3F, {
                 onClick: t,
                 className: m.collapseButton,
                 "aria-label": b.intl.string(b.t.z9VPra),
-                children: (0, n.jsx)(u.Z, {
+                children: (0, r.jsx)(u.Z, {
                     direction: u.Z.Directions.LEFT,
                     width: 12,
                     height: 12,
@@ -180,30 +180,30 @@ let y = (e) => {
             }),
         });
     },
-    v = (e, t, r, n, a) =>
+    v = (e, t, n, r, a) =>
         (0, i.useCallback)(() => {
             var i, o, l, c;
-            if (null == r) return void a(0);
+            if (null == n) return void a(0);
             let s = null != (l = null == (i = e.current) ? void 0 : i.getBoundingClientRect().width) ? l : 0,
                 u = null != (c = null == (o = t.current) ? void 0 : o.getBoundingClientRect().width) ? c : 0,
                 d = u > 0 ? 8 : 4,
                 f = 0,
                 g = 0,
-                p = n.current;
-            for (let e = 0; e < r.length; e++) {
-                let t = p.get(r[e]);
+                p = r.current;
+            for (let e = 0; e < n.length; e++) {
+                let t = p.get(n[e]);
                 if (null != t) {
                     if ((g += t.offsetWidth + 4) > 296) break;
                     f++;
                 }
             }
             g = 0;
-            for (let e = f; e < r.length; e++) {
-                let t = p.get(r[e]);
+            for (let e = f; e < n.length; e++) {
+                let t = p.get(n[e]);
                 if (null != t) {
                     if ((g += t.offsetWidth + 4) > 296 - s - u - d) break;
                     f++;
                 }
             }
-            a(r.length - f);
-        }, [e, t, null == r ? void 0 : r.join(""), n, a]);
+            a(n.length - f);
+        }, [e, t, null == n ? void 0 : n.join(""), r, a]);

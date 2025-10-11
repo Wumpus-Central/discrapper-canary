@@ -9,13 +9,13 @@ var r = n(951288),
     u = n(984802),
     d = n(59662),
     f = n(28682),
-    b = n(854014),
-    m = n(388032),
+    m = n(854014),
+    b = n(388032),
     p = n(845435);
 function j(e) {
-    let { root: t, header: n, footer: o, onClose: b, emptyState: j } = e,
-        { showNavigationMobile: y } = (0, d.t)(),
-        x = l.useMemo(() => {
+    let { root: t, header: n, footer: o, onClose: m, emptyState: j } = e,
+        { showNavigationMobile: v } = (0, d.t)(),
+        y = l.useMemo(() => {
             let e = [];
             return (
                 t.layout.forEach((t) => {
@@ -52,13 +52,13 @@ function j(e) {
         theme: O,
         children: (e) =>
             (0, r.jsx)(c.ZP, {
-                contentTypes: x,
+                contentTypes: y,
                 children: (t) => {
                     let { visibleContent: l } = t;
                     return (0, r.jsxs)("div", {
                         className: i()(p.sidebar, e, {
                             [p.mobile]: a.tq,
-                            [p.mobileNavigationOpen]: y,
+                            [p.mobileNavigationOpen]: v,
                         }),
                         children: [
                             (0, r.jsxs)("div", {
@@ -69,16 +69,16 @@ function j(e) {
                                             className: p.mobileCloseButton,
                                             children: (0, r.jsx)(s.hU, {
                                                 icon: s.Uz9,
-                                                onClick: b,
+                                                onClick: m,
                                                 variant: "icon-only",
                                                 size: "sm",
-                                                "aria-label": m.intl.string(m.t.cpT0Cg),
+                                                "aria-label": b.intl.string(b.t.cpT0Cg),
                                             }),
                                         }),
                                     (0, r.jsx)("div", {
                                         children: h.map((e) =>
                                             (0, r.jsx)(
-                                                v,
+                                                x,
                                                 {
                                                     section: e,
                                                     visibleContent: l,
@@ -99,7 +99,7 @@ function j(e) {
                                         className: p.nav,
                                         children: g.map((e) =>
                                             (0, r.jsx)(
-                                                v,
+                                                x,
                                                 {
                                                     section: e,
                                                     visibleContent: l,
@@ -117,7 +117,7 @@ function j(e) {
             }),
     });
 }
-function v(e) {
+function x(e) {
     var t;
     let { section: n, visibleContent: l } = e,
         o = null == (t = n.useLabel) ? void 0 : t.call(n);
@@ -138,7 +138,7 @@ function v(e) {
                 (0, r.jsx)(
                     "li",
                     {
-                        children: (0, r.jsx)(b.y, {
+                        children: (0, r.jsx)(m.y, {
                             node: e,
                             visibleContent: l,
                         }),

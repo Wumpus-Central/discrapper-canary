@@ -18,11 +18,11 @@ var i = n(772848),
     _ = n(962220),
     O = n(69580),
     E = n(113434),
-    y = n(937797),
-    v = n(36243),
+    v = n(937797),
+    y = n(36243),
     I = n(703656),
-    S = n(553795),
-    C = n(594174),
+    C = n(553795),
+    S = n(594174),
     T = n(626135),
     N = n(585483),
     j = n(591759),
@@ -83,7 +83,7 @@ let k = {
             let {
                 args: { code: t },
             } = e;
-            if (null == C.default.getCurrentUser()) return;
+            if (null == S.default.getCurrentUser()) return;
             let { guildTemplate: i } = await _.Z.resolveGuildTemplate(t);
             if (null == i)
                 throw new x.Z({ errorCode: w.lTL.INVALID_GUILD_TEMPLATE }, "Invalid guild template id: ".concat(t));
@@ -199,7 +199,7 @@ let k = {
                         D(n.fingerprint, (0, Z.O)(t)));
                     break;
                 case Z.jE.QUEST_HOME: {
-                    let { enabled: e } = y.m8.getConfig({ location: L.dr.QUEST_DEEP_LINK_UTIL });
+                    let { enabled: e } = v.m8.getConfig({ location: L.dr.QUEST_DEEP_LINK_UTIL });
                     null != n
                         ? ((0, I.dL)({
                               pathname: e ? w.Z5c.QUEST_HOME_V2 : w.Z5c.QUEST_HOME,
@@ -210,7 +210,7 @@ let k = {
                     break;
                 }
                 case Z.jE.QUEST_PREVIEW_TOOL:
-                    if ((0, v.T)({ location: L.dr.QUEST_PREVIEW_TOOL_2 }) && null != n) {
+                    if ((0, y.T)({ location: L.dr.QUEST_PREVIEW_TOOL_2 }) && null != n) {
                         let e = new URLSearchParams();
                         e.set(E.tR.TAB, E.e5.PREVIEW_TOOL),
                             null != n.questId && e.set(E.tR.QUEST_ID, n.questId),
@@ -325,14 +325,14 @@ let k = {
             let {
                 args: { providerType: t, code: n, openid_params: r, iss: i, state: l },
             } = e;
-            if (!S.Z.hasPendingAuthorizedState(l))
+            if (!C.Z.hasPendingAuthorizedState(l))
                 throw new x.Z(
                     { errorCode: w.lTL.INVALID_CONNECTION_CALLBACK_STATE },
                     "Provider authorization did not originate from this discord client",
                 );
             try {
                 return (
-                    S.Z.deletePendingAuthorizedState(l),
+                    C.Z.deletePendingAuthorizedState(l),
                     await d.Z.callback(t, {
                         code: n,
                         openid_params: r,

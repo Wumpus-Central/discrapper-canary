@@ -16,11 +16,11 @@ function h(e) {
         { mutualFriends: j } = (0, c.Z)(n),
         { analyticsLocations: v } = (0, s.ZP)(),
         { context: g, trackUserProfileAction: b } = (0, a.KZ)(),
-        y = (0, o.Z)();
+        I = (0, o.Z)();
     return (
         i.useEffect(() => {
-            (0, d.Z)(n.id, y);
-        }, [n.id, y]),
+            (0, d.Z)(n.id, I);
+        }, [n.id, I]),
         (0, l.jsx)(r.zJl, {
             className: f.listScroller,
             fade: !0,

@@ -18,7 +18,7 @@ var i = n(481060),
     _ = n(49230),
     O = n(981631),
     E = n(65154);
-function y(e, t, n) {
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function y(e, t, n) {
         e
     );
 }
-class v extends p.Z {
+class y extends p.Z {
     _initialize() {
         super._initialize(),
             __OVERLAY__ ||
@@ -52,8 +52,8 @@ class v extends p.Z {
         var t;
         super(...e),
             (t = this),
-            y(this, "playingSoundsWeb", new Map()),
-            y(this, "_stopAndClearSounds", () => {
+            v(this, "playingSoundsWeb", new Map()),
+            v(this, "_stopAndClearSounds", () => {
                 c.Z.supports(E.AN.SAMPLE_PLAYBACK) &&
                     c.Z.getMediaEngine().eachConnection((e) => {
                         e.stopAllSamplesLocalPlayback();
@@ -63,7 +63,7 @@ class v extends p.Z {
                     }),
                     (this.playingSoundsWeb = new Map());
             }),
-            y(this, "_playSound", async function (e) {
+            v(this, "_playSound", async function (e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
                     r = arguments.length > 2 ? arguments[2] : void 0,
                     i = arguments.length > 3 ? arguments[3] : void 0,
@@ -81,10 +81,10 @@ class v extends p.Z {
                         (0, f.R)(e, r);
                     }
             }),
-            y(this, "_handleOverlaySoundboardSoundsFetchRequest", () => {
+            v(this, "_handleOverlaySoundboardSoundsFetchRequest", () => {
                 (0, f.w)();
             }),
-            y(this, "_handleOpenEducationModal", (e, t) => {
+            v(this, "_handleOpenEducationModal", (e, t) => {
                 if (null == e) return;
                 let l = s.Z.getChannel(t),
                     c = d.ZP.getKeybindForAction(O.kg4.SOUNDBOARD_HOLD);
@@ -126,7 +126,7 @@ class v extends p.Z {
                                                     }),
                                                 )),
                                                 r.forEach(function (t) {
-                                                    y(e, t, n[t]);
+                                                    v(e, t, n[t]);
                                                 });
                                         }
                                         return e;
@@ -142,4 +142,4 @@ class v extends p.Z {
             });
     }
 }
-let I = new v();
+let I = new y();

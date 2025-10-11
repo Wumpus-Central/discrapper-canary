@@ -2,8 +2,8 @@ n.d(t, { z: () => f }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    s = n(481060),
-    a = n(953252),
+    a = n(481060),
+    s = n(953252),
     o = n(496675),
     c = n(434404),
     d = n(981631),
@@ -17,8 +17,8 @@ function f(e) {
     let { guild: t } = e,
         n = (0, l.e7)([o.Z], () => null != t && o.Z.can(d.Plq.MANAGE_GUILD, t), [t]),
         c = t.features.has(d.oNc.REPORT_TO_MOD_PILOT),
-        [f, h] = i.useState((0, a.Z)(t) && c),
-        x = i.useCallback(
+        [f, h] = i.useState((0, s.Z)(t) && c),
+        b = i.useCallback(
             async (e) => {
                 h(e), await p(t, e);
             },
@@ -29,16 +29,16 @@ function f(e) {
               children: [
                   (0, r.jsx)("div", {
                       className: m.setupContainer,
-                      children: (0, r.jsx)(s.rsf, {
+                      children: (0, r.jsx)(a.rsf, {
                           label: u.intl.string(g.default["/xIz7O"]),
                           description: u.intl.string(g.default.uUMXys),
                           badge: "beta",
                           checked: f,
-                          onChange: x,
+                          onChange: b,
                           disabled: !n,
                       }),
                   }),
-                  (0, r.jsx)(s.izJ, { className: m.divider }),
+                  (0, r.jsx)(a.izJ, { className: m.divider }),
               ],
           })
         : null;

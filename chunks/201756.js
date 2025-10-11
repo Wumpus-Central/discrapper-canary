@@ -142,19 +142,19 @@ function R(e) {
             P.requireUsernameQuarantined,
         A = P.selectedRoleIds.size > 0,
         U = null != P.selectedJoinDateOption.afterDate,
-        F = P.selectedSort === p.d$.ORDER_BY_GUILD_JOINED_AT_ASC,
-        B = null != P.selectedAccountAgeOption.afterDate,
+        B = P.selectedSort === p.d$.ORDER_BY_GUILD_JOINED_AT_ASC,
+        F = null != P.selectedAccountAgeOption.afterDate,
         q = P.selectedSort === p.d$.ORDER_BY_USER_ID_ASC || P.selectedSort === p.d$.ORDER_BY_USER_ID_DESC,
-        z = null != P.selectedSourceInviteCode && "" !== P.selectedSourceInviteCode,
-        G = null != P.selectedJoinSourceType,
-        Y = z || G,
+        G = null != P.selectedSourceInviteCode && "" !== P.selectedSourceInviteCode,
+        z = null != P.selectedJoinSourceType,
+        Y = G || z,
         W = (0, f.xC)(t),
         K = l.useMemo(() => n.filter((e) => (0, f.rX)(t, W, e)), [W, n, t]),
         Q = K.length > 0,
-        X = 0 === K.filter((e) => !M.has(e)).length,
-        J = l.useCallback(() => {
-            Q && (X ? T() : E(K));
-        }, [Q, X, T, E, K]);
+        J = 0 === K.filter((e) => !M.has(e)).length,
+        X = l.useCallback(() => {
+            Q && (J ? T() : E(K));
+        }, [Q, J, T, E, K]);
     return (0, r.jsx)("thead", {
         children: (0, r.jsxs)("tr", {
             className: w.tableHeaderRow,
@@ -166,11 +166,11 @@ function R(e) {
                             shouldShow: !Q,
                             text: _.intl.string(_.t.tJEY0N),
                             children: (0, r.jsx)(C.P3F, {
-                                onClick: J,
+                                onClick: X,
                                 className: w.tableHeaderCell,
                                 children: (0, r.jsx)(d.$q, {
                                     type: d.M0.INVERTED,
-                                    value: X,
+                                    value: J,
                                     disabled: !Q,
                                 }),
                             }),
@@ -202,7 +202,7 @@ function R(e) {
                                                   label: _.intl.string(_.t.xcKP1N),
                                                   onFilter: t,
                                                   isFiltered: U,
-                                                  isSorted: F,
+                                                  isSorted: B,
                                                   className: S.smallCol,
                                               },
                                               n,
@@ -231,7 +231,7 @@ function R(e) {
                                                   ref: a,
                                                   label: _.intl.string(_.t.sPph4O),
                                                   onFilter: t,
-                                                  isFiltered: B,
+                                                  isFiltered: F,
                                                   isSorted: q,
                                                   className: S.smallCol,
                                               },

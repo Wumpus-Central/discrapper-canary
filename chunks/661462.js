@@ -154,7 +154,7 @@ function E(e) {
             onClose: h,
         } = e,
         { trackUserProfileAction: _ } = (0, s.KZ)(),
-        [{ section: E, subsection: y, text: v }, I] = i.useState(
+        [{ section: E, subsection: v, text: y }, I] = i.useState(
             b(
                 m(
                     {},
@@ -207,10 +207,10 @@ function E(e) {
             }),
             (0, r.jsx)(o.njP.Panel, {
                 id: E,
-                "aria-label": v,
+                "aria-label": y,
                 className: g.tabBarPanel,
                 children: (0, r.jsx)(o.y5t, {
-                    component: (0, r.jsx)(o.nn4, { children: (0, r.jsx)(o.H, { children: v }) }),
+                    component: (0, r.jsx)(o.nn4, { children: (0, r.jsx)(o.H, { children: y }) }),
                     children: (0, r.jsx)(O, {
                         user: n,
                         currentUser: l,
@@ -218,7 +218,7 @@ function E(e) {
                         guildId: c,
                         channelId: u,
                         section: E,
-                        subsection: y,
+                        subsection: v,
                         onClose: h,
                     }),
                 }),

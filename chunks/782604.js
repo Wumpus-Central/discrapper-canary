@@ -2,8 +2,8 @@ n.d(t, { Z: () => g }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    s = n(481060),
-    a = n(570140),
+    a = n(481060),
+    s = n(570140),
     o = n(524329),
     c = n(823379),
     d = n(999382),
@@ -14,7 +14,7 @@ let g = () => {
     switch (
         (i.useEffect(() => {
             null != e &&
-                a.Z.wait(() => {
+                s.Z.wait(() => {
                     (0, o.RM)(e.id).then(() => {
                         n(1);
                     });
@@ -23,7 +23,7 @@ let g = () => {
         t)
     ) {
         case 0:
-            return (0, r.jsx)(s.$jN, { type: s.$jN.Type.SPINNING_CIRCLE });
+            return (0, r.jsx)(a.$jN, { type: a.$jN.Type.SPINNING_CIRCLE });
         case 1:
             return (0, r.jsx)(u.Z, { guild: e });
         default:

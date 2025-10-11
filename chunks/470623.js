@@ -14,8 +14,8 @@ var r = n(951288),
     c = n(430742),
     d = n(752305),
     u = n(592125),
-    p = n(703558),
-    h = n(883429),
+    h = n(703558),
+    p = n(883429),
     f = n(228392);
 function g(e, t, n) {
     return (
@@ -133,7 +133,7 @@ class m {
                 this.set({ submitting: e });
             }),
             (this.setFormOpen = (e) => {
-                this.set({ formOpen: e }), h.Z.clearForumSearch(this.channelId);
+                this.set({ formOpen: e }), p.Z.clearForumSearch(this.channelId);
             }),
             (this.setOnboardingExpanded = (e) => {
                 this.set({ onboardingExpanded: e });
@@ -148,7 +148,7 @@ class m {
                 this.set({ name: e }), c.Z.changeThreadSettings(this.channelId, { name: e });
             }),
             (this.setTextAreaState = (e) => {
-                this.set({ textAreaState: e }), c.Z.saveDraft(this.channelId, e.textValue, p.d.FirstThreadMessage);
+                this.set({ textAreaState: e }), c.Z.saveDraft(this.channelId, e.textValue, h.d.FirstThreadMessage);
             }),
             (this.setHasClickedForm = (e) => {
                 this.set({ hasClickedForm: e });
@@ -162,7 +162,7 @@ class m {
                     appliedTags: new Set(),
                     hasClickedForm: !1,
                 }),
-                    h.Z.clearForumSearch(this.channelId);
+                    p.Z.clearForumSearch(this.channelId);
             }),
             (this.setFormOpenFromUserAction = () => {
                 if (this.hasClickedForm) return;
@@ -176,13 +176,13 @@ class m {
                         hasClickedForm: !0,
                         formOpen: !0,
                     }),
-                    h.Z.clearForumSearch(this.channelId);
+                    p.Z.clearForumSearch(this.channelId);
             });
         let a = u.Z.getChannel(e);
         if (null == a) return;
-        let s = null != (r = p.Z.getThreadSettings(a.id)) ? r : {},
+        let s = null != (r = h.Z.getThreadSettings(a.id)) ? r : {},
             m = null == a.template ? "" : a.template.trim(),
-            b = p.Z.getDraft(a.id, p.d.FirstThreadMessage),
+            b = h.Z.getDraft(a.id, h.d.FirstThreadMessage),
             y = (0, d.eK)(null != b && "" !== b.trim() ? b : m);
         (this.name = null != (i = s.name) ? i : ""),
             (l = new Set(s.appliedTags)),

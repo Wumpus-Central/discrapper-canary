@@ -1,11 +1,11 @@
 n.d(t, { Z: () => b }), n(388685);
 var r = n(951288),
     s = n(647438),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     i = n(238651),
     l = n(603113),
-    c = n(137317),
+    c = n(599273),
     d = n(442837),
     u = n(110924),
     p = n(607070),
@@ -17,7 +17,7 @@ var r = n(951288),
 let _ = ["#51BC9D"],
     b = (e) => {
         var t;
-        let { expansionSpring: n, overlayRef: o, quest: b, progressBarRef: v, isExpanded: j, isHovered: C } = e,
+        let { expansionSpring: n, overlayRef: a, quest: b, progressBarRef: j, isExpanded: v, isHovered: C } = e,
             { completionSpring: y, startCompletionAnimation: E } = (0, g.G)(),
             O = (null == (t = b.userStatus) ? void 0 : t.completedAt) != null,
             S = s.useRef(!1),
@@ -25,7 +25,7 @@ let _ = ["#51BC9D"],
             w = s.useRef(null),
             P = (0, d.e7)([m.Z], () => m.Z.hasLayers()),
             N = (0, u.Z)(P),
-            [A, R] = s.useState(null),
+            [R, A] = s.useState(null),
             [B, k] = s.useState(null),
             I = s.useRef(
                 new i.qA({
@@ -33,21 +33,21 @@ let _ = ["#51BC9D"],
                     wind: 0,
                 }),
             ),
-            q = (0, i.uR)(A, B),
+            q = (0, i.uR)(R, B),
             D = s.useCallback(() => {
                 if (T) return;
-                let e = v.current,
+                let e = j.current,
                     t = w.current;
                 if (null != t && null != e && q.isReady) {
-                    var n, r, s, o, a, i;
+                    var n, r, s, a, o, i;
                     let { x: l, y: c } = e.getBoundingClientRect(),
                         { x: d, y: u } = t.getBoundingClientRect();
                     q.createMultipleConfetti(
                         ((n = l - d),
                         (r = c - u),
                         (s = e.clientHeight),
-                        (o = e.clientWidth),
-                        (a = (function (e) {
+                        (a = e.clientWidth),
+                        (o = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
@@ -82,7 +82,7 @@ let _ = ["#51BC9D"],
                                     },
                                     maxValue: {
                                         x: n + s,
-                                        y: r + o,
+                                        y: r + a,
                                     },
                                 },
                                 velocity: {
@@ -112,7 +112,7 @@ let _ = ["#51BC9D"],
                                 },
                             }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(i))
+                            ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(i))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -121,17 +121,17 @@ let _ = ["#51BC9D"],
                                   }
                                   return n;
                               })(Object(i)).forEach(function (e) {
-                                  Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(i, e));
+                                  Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(i, e));
                               }),
-                        a),
+                        o),
                         100,
                     );
                 }
-            }, [v, w, q, T]),
-            L = (0, u.Z)(j);
+            }, [j, w, q, T]),
+            L = (0, u.Z)(v);
         return (s.useEffect(() => {
-            O && j && !L && (E(), D());
-        }, [j, O, E, D, L]),
+            O && v && !L && (E(), D());
+        }, [v, O, E, D, L]),
         s.useEffect(() => {
             O &&
                 !P &&
@@ -158,7 +158,7 @@ let _ = ["#51BC9D"],
                           style: { opacity: y },
                       }),
                       (0, r.jsx)(c.animated.div, {
-                          className: a()(h.borders, h.bordersTopLeft),
+                          className: o()(h.borders, h.bordersTopLeft),
                           style: { opacity: y },
                       }),
                       (0, r.jsxs)(c.animated.div, {
@@ -173,7 +173,7 @@ let _ = ["#51BC9D"],
                           },
                           children: [
                               (0, r.jsx)(i.O_, {
-                                  ref: R,
+                                  ref: A,
                                   className: h.confetti,
                                   environment: I.current,
                               }),
@@ -184,13 +184,13 @@ let _ = ["#51BC9D"],
                                   spriteWidth: f.Ko,
                                   spriteHeight: f.Ko,
                               }),
-                              null != o.current &&
+                              null != a.current &&
                                   (0, l.createPortal)(
                                       (0, r.jsx)(c.animated.div, {
-                                          className: a()(h.borders, h.bordersBottom),
+                                          className: o()(h.borders, h.bordersBottom),
                                           style: { opacity: y },
                                       }),
-                                      o.current,
+                                      a.current,
                                   ),
                           ],
                       }),

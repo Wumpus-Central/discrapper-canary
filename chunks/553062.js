@@ -31,9 +31,9 @@ function d(t, e = {}) {
             childSpanTimeout: O = R.childSpanTimeout,
             beforeSpanEnd: P,
         } = e,
-        g = (0, n.s3)();
-    if (!g || !(0, c.z)()) return new l.b();
-    let D = (0, n.nZ)(),
+        D = (0, n.s3)();
+    if (!D || !(0, c.z)()) return new l.b();
+    let g = (0, n.nZ)(),
         C = (0, s.HN)(),
         m = (function (t) {
             let e = (0, u.qp)(t);
@@ -54,7 +54,7 @@ function d(t, e = {}) {
         }, O);
     }
     function U(t) {
-        (A = !0), N.clear(), L.forEach((t) => t()), (0, E.D)(D, C);
+        (A = !0), N.clear(), L.forEach((t) => t()), (0, E.D)(g, C);
         let e = (0, s.XU)(m),
             { start_timestamp: a } = e;
         if (!a) return;
@@ -99,7 +99,7 @@ function d(t, e = {}) {
             },
         })),
         L.push(
-            g.on("spanStart", (t) => {
+            D.on("spanStart", (t) => {
                 var e;
                 A ||
                     t === m ||
@@ -109,7 +109,7 @@ function d(t, e = {}) {
             }),
         ),
         L.push(
-            g.on("spanEnd", (t) => {
+            D.on("spanEnd", (t) => {
                 if (!A) {
                     var e;
                     (e = t.spanContext().spanId), N.has(e) && N.delete(e), 0 === N.size && S((0, r.ph)() + p / 1000);
@@ -117,7 +117,7 @@ function d(t, e = {}) {
             }),
         ),
         L.push(
-            g.on("idleSpanEnableAutoFinish", (t) => {
+            D.on("idleSpanEnableAutoFinish", (t) => {
                 t === m && ((f = !0), S(), N.size && y());
             }),
         ),

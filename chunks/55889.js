@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(951288),
     i = n(647438),
     l = n(481060),
-    s = n(941524),
-    a = n(563115),
+    a = n(941524),
+    s = n(563115),
     o = n(388032),
     c = n(482908);
 function d(e) {
@@ -51,7 +51,7 @@ function u(e, t) {
 }
 let g = i.memo(function (e) {
     let { rule: t, onlyRoles: n = !1, onChangeRule: i } = e,
-        g = (0, r.jsx)(s.Z, {
+        g = (0, r.jsx)(a.Z, {
             guildId: t.guildId,
             selectedChannelIds: t.exemptChannels,
             selectedRoleIds: t.exemptRoles,
@@ -67,7 +67,7 @@ let g = i.memo(function (e) {
         });
     return (
         n &&
-            (g = (0, r.jsx)(a.Z, {
+            (g = (0, r.jsx)(s.Z, {
                 guildId: t.guildId,
                 selectedRoleIds: t.exemptRoles,
                 onChange: (e) => i(u(d({}, t), { exemptRoles: e })),

@@ -76,10 +76,10 @@ let x = i.forwardRef(function (e, t) {
             required: E,
             onFocus: v,
             onBlur: b,
-            name: I,
+            name: j,
         } = e,
         {
-            day: j,
+            day: I,
             setDay: N,
             month: S,
             setMonth: O,
@@ -104,10 +104,10 @@ let x = i.forwardRef(function (e, t) {
         })(n),
         A = i.useMemo(
             () =>
-                null != j && null != S && null != y
-                    ? o()("".concat(j, "/").concat(S, "/").concat(y), "DD/MM/YYYY")
+                null != I && null != S && null != y
+                    ? o()("".concat(I, "/").concat(S, "/").concat(y), "DD/MM/YYYY")
                     : null,
-            [j, S, y],
+            [I, S, y],
         );
     i.useEffect(() => {
         a((null == A ? void 0 : A.isValid()) ? A : null);
@@ -164,14 +164,14 @@ let x = i.forwardRef(function (e, t) {
                             popoutPosition: "top",
                             placeholder: u.intl.string(u.t.Voklra),
                             options: g,
-                            value: j,
+                            value: I,
                             onChange: (t) => {
                                 N(t), R(e + 1);
                             },
                             maxVisibleItems: 6,
                             autoFocus: P === e,
-                            onOpen: () => (null == v ? void 0 : v("".concat(I, "_").concat(t))),
-                            onClose: () => (null == b ? void 0 : b("".concat(I, "_").concat(t))),
+                            onOpen: () => (null == v ? void 0 : v("".concat(j, "_").concat(t))),
+                            onClose: () => (null == b ? void 0 : b("".concat(j, "_").concat(t))),
                         }),
                     }),
                 });
@@ -193,8 +193,8 @@ let x = i.forwardRef(function (e, t) {
                             },
                             maxVisibleItems: 6,
                             autoFocus: P === e,
-                            onOpen: () => (null == v ? void 0 : v("".concat(I, "_").concat(t))),
-                            onClose: () => (null == b ? void 0 : b("".concat(I, "_").concat(t))),
+                            onOpen: () => (null == v ? void 0 : v("".concat(j, "_").concat(t))),
+                            onClose: () => (null == b ? void 0 : b("".concat(j, "_").concat(t))),
                         }),
                     }),
                 });
@@ -216,8 +216,8 @@ let x = i.forwardRef(function (e, t) {
                             },
                             maxVisibleItems: 6,
                             autoFocus: P === e,
-                            onOpen: () => (null == v ? void 0 : v("".concat(I, "_").concat(t))),
-                            onClose: () => (null == b ? void 0 : b("".concat(I, "_").concat(t))),
+                            onOpen: () => (null == v ? void 0 : v("".concat(j, "_").concat(t))),
+                            onClose: () => (null == b ? void 0 : b("".concat(j, "_").concat(t))),
                         }),
                     }),
                 });

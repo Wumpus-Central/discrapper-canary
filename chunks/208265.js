@@ -1,4 +1,4 @@
-i.d(n, { default: () => h }), i(388685);
+i.d(e, { default: () => h }), i(388685);
 var t = i(951288),
     a = i(647438),
     s = i(990547),
@@ -12,10 +12,10 @@ var t = i(951288),
     g = i(800530),
     p = i(981631),
     u = i(149390);
-function h(e) {
-    let { classificationId: n, transitionState: i, initialSlide: h = g.Cs.SPEED_BUMP, onClose: N } = e,
+function h(n) {
+    let { classificationId: e, transitionState: i, initialSlide: h = g.Cs.SPEED_BUMP, onClose: N } = n,
         [C, j] = a.useState(h),
-        { classification: _, isDsaEligible: E } = (0, r.YG)(null != n ? n : p.lds),
+        { classification: _, isDsaEligible: E } = (0, r.YG)(null != e ? e : p.lds),
         v = (null == _ ? void 0 : _.is_spam) || !1,
         I = (null == _ ? void 0 : _.is_coppa) || !1,
         T = null == _ ? void 0 : _.appeal_ingestion_type;
@@ -25,15 +25,15 @@ function h(e) {
     let S = a.useCallback(() => {
             d.Z.close(), N();
         }, [N]),
-        k = a.useCallback(() => {
-            var e;
-            let n = null == (e = g.JQ[C]) ? void 0 : e.next;
-            n ? j(n) : S();
-        }, [C, S]),
         A = a.useCallback(() => {
-            var e;
-            let n = null == (e = g.JQ[C]) ? void 0 : e.prev;
-            n ? j(n) : S();
+            var n;
+            let e = null == (n = g.JQ[C]) ? void 0 : n.next;
+            e ? j(e) : S();
+        }, [C, S]),
+        k = a.useCallback(() => {
+            var n;
+            let e = null == (n = g.JQ[C]) ? void 0 : n.prev;
+            e ? j(e) : S();
         }, [C, S]);
     return (0, t.jsx)(l.Y0X, {
         "data-migration-pending": !0,
@@ -54,7 +54,7 @@ function h(e) {
                         children: (0, t.jsx)(m.Z, {
                             classification: _,
                             onClose: S,
-                            onNext: k,
+                            onNext: A,
                             isSpam: v,
                             isCoppa: I,
                             appealIngestionType: T,
@@ -68,8 +68,8 @@ function h(e) {
                         children: (0, t.jsx)(o.Z, {
                             isDsaEligible: E,
                             onClose: S,
-                            onNext: k,
-                            onBack: A,
+                            onNext: A,
+                            onBack: k,
                         }),
                     }),
                     (0, t.jsx)(l.Mi4, {
@@ -79,15 +79,15 @@ function h(e) {
                         children: (0, t.jsx)(c.Z, {
                             isDsaEligible: E,
                             onClose: S,
-                            onNext: k,
-                            onBack: A,
+                            onNext: A,
+                            onBack: k,
                         }),
                     }),
                     (0, t.jsx)(l.Mi4, {
                         id: g.Cs.REQUEST_SENT,
                         impressionName: s.ImpressionNames.APPEAL_INGESTION_REQUEST_SENT,
                         impressionProperties: g.ZW,
-                        children: (0, t.jsx)(x.Z, { onNext: k }),
+                        children: (0, t.jsx)(x.Z, { onNext: A }),
                     }),
                 ],
             }),

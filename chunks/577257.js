@@ -12,13 +12,13 @@ function f(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         { previewSizeMultiplier: i } = (0, a.j)({ location: "usePollSources" }),
         f = (0, l.e7)([o.ZP], () => o.ZP.getRunningGames().length > 0),
-        m = r.useRef(0),
+        p = r.useRef(0),
         h = f ? 2000 : 1000,
-        p = r.useRef(new s.V7());
+        m = r.useRef(new s.V7());
     r.useEffect(() => {
         if (n) return;
-        let r = p.current,
-            l = m.current,
+        let r = m.current,
+            l = p.current,
             s = {
                 width: 376 * i,
                 height: 212 * i,
@@ -26,7 +26,7 @@ function f(e, t) {
             };
         async function o() {
             let { screenSources: e, windowSources: n, cameraSources: i } = await (0, c.t)(s);
-            m.current > l ||
+            p.current > l ||
                 (t({
                     type: "set_source_candidates",
                     screenSources: e,
@@ -38,7 +38,7 @@ function f(e, t) {
         return (
             o(),
             () => {
-                (m.current += 1), r.stop();
+                (p.current += 1), r.stop();
             }
         );
     }, [t, h, e, n, i]);

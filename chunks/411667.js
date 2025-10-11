@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(346163),
     l = n(587431),
-    s = n(539290),
-    a = n(981631),
+    a = n(539290),
+    s = n(981631),
     o = n(388032),
     c = n(515444);
 function d(e) {
@@ -18,28 +18,28 @@ function d(e) {
             requestRejectedNoticeText: p,
             reapplyNoticeText: f,
         } = (0, i.Z)(n),
-        h = n.features.has(a.oNc.CREATOR_MONETIZABLE_RESTRICTED),
-        x = n.features.has(a.oNc.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING);
+        h = n.features.has(s.oNc.CREATOR_MONETIZABLE_RESTRICTED),
+        b = n.features.has(s.oNc.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING);
     if (null != u)
         return (0, r.jsx)(l.Z, {
             className: c.noticeContainer,
             children: u.getAnyErrorMessage(),
         });
-    let b = null;
+    let x = null;
     return (
         null != p
-            ? (b = p)
+            ? (x = p)
             : m
-              ? (b = o.intl.string(o.t.MyJpJS))
+              ? (x = o.intl.string(o.t.MyJpJS))
               : null != f
-                ? ((b = f), (t = o.intl.string(o.t["YKw/NT"])))
-                : x
-                  ? (b = o.intl.string(o.t.e2g9sb))
-                  : h && (b = o.intl.string(o.t.rxI9sr)),
-        null != b
-            ? (0, r.jsx)(s.Z, {
+                ? ((x = f), (t = o.intl.string(o.t["YKw/NT"])))
+                : b
+                  ? (x = o.intl.string(o.t.e2g9sb))
+                  : h && (x = o.intl.string(o.t.rxI9sr)),
+        null != x
+            ? (0, r.jsx)(a.Z, {
                   className: c.noticeContainer,
-                  notice: b,
+                  notice: x,
                   ctaLabel: t,
                   ctaLoading: d,
                   onClick: g,

@@ -18,10 +18,10 @@ var i = n(873546),
     _ = n(104494),
     O = n(29920),
     E = n(346497),
-    y = n(727310),
-    v = n(318199),
+    v = n(727310),
+    y = n(318199),
     I = n(474936);
-function S(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function S(e, t, n) {
         e
     );
 }
-let C = "PremiumServerDriveAnnouncementModal";
+let S = "PremiumServerDriveAnnouncementModal";
 class T extends s.Z {
     _initialize() {
         o.Z.subscribe("PREMIUM_MARKETING_DATA_READY", this.mayShowAnnouncementModal),
@@ -46,8 +46,8 @@ class T extends s.Z {
     }
     constructor(...e) {
         super(...e),
-            S(this, "maybeOpenServerDriveAnnouncementModal", async (e, t) => {
-                let i = (0, v.r)({
+            C(this, "maybeOpenServerDriveAnnouncementModal", async (e, t) => {
+                let i = (0, y.r)({
                     content: e,
                     isPreview: t,
                 });
@@ -56,7 +56,7 @@ class T extends s.Z {
                         (!1 !== t ||
                             (null == i ? void 0 : i.contentIdentifier) !== "summer_bogo_content" ||
                             !!(await (0, E.k)())) &&
-                        ((0, a.Mr3)(C),
+                        ((0, a.Mr3)(S),
                         (0, a.ZDy)(
                             async () => {
                                 let { default: e } = await Promise.resolve().then(n.bind(n, 318199));
@@ -66,17 +66,17 @@ class T extends s.Z {
                                         properties: i,
                                     });
                             },
-                            { modalKey: C },
+                            { modalKey: S },
                         ),
                         !0)
                     );
                 return !1;
             }),
-            S(this, "handlePreview", (e) => {
+            C(this, "handlePreview", (e) => {
                 let { properties: t } = e;
                 this.maybeOpenServerDriveAnnouncementModal(t, !0);
             }),
-            S(this, "getOfferFromStore", () => {
+            C(this, "getOfferFromStore", () => {
                 let e = u.default.getCurrentUser();
                 if ((0, p.I5)(e)) return {};
                 let t = [I.hs, I.RU, I.rB, I.ih]
@@ -87,7 +87,7 @@ class T extends s.Z {
                 let n = (0, g.J0)();
                 return null != n ? { userTrialOffer: n } : {};
             }),
-            S(this, "mayShowAnnouncementModal", async () => {
+            C(this, "mayShowAnnouncementModal", async () => {
                 if ((await (0, h.l2)(), f.s.isDisallowPopupsSet())) return;
                 let e = this.getOfferFromStore(),
                     t = b.Z.getCurrentConfig({ location: "announcementManager" }, { autoTrackExposure: !1 }).enabled,
@@ -99,7 +99,7 @@ class T extends s.Z {
                         (0, a.$sL)() ||
                         (0, p.I5)(r) ||
                         ((await (0, m.G)(e.userTrialOffer)) &&
-                            (0, y.Z)({ upsellType: I.cd.REVERSE_TRIAL_FOLLOWUP_UPSELL })),
+                            (0, v.Z)({ upsellType: I.cd.REVERSE_TRIAL_FOLLOWUP_UPSELL })),
                     (null == r || r.verified) && !(0, a.$sL)() && !i.tq)
                 ) {
                     for (let t of await (0, O.He)(e))

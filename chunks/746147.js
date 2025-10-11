@@ -1,27 +1,27 @@
-o.d(t, { default: () => m });
+o.d(t, { default: () => d });
 var n = o(951288),
     r = o(647438),
     c = o(481060),
     a = o(211266),
     i = o(332664),
-    _ = o(626135),
-    l = o(867003),
-    s = o(987562),
-    b = o(981631),
+    l = o(626135),
+    _ = o(867003),
+    b = o(987562),
+    s = o(981631),
     u = o(388032);
-function m(e) {
-    let { onClose: t, transitionState: m } = e,
-        d = (0, a.Z)(s.Me),
-        p = r.useMemo(() => d.map((e) => e.value), [d]);
+function d(e) {
+    let { onClose: t, transitionState: d } = e,
+        m = (0, a.Z)(b.Me),
+        p = r.useMemo(() => m.map((e) => e.value), [m]);
     r.useEffect(() => {
-        _.default.track(b.rMx.OPEN_MODAL, { type: "Ignore User Feedback" });
+        l.default.track(s.rMx.OPEN_MODAL, { type: "Ignore User Feedback" });
     }, []);
     let f = r.useCallback((e) => {
         var t;
         let { rating: r, problem: a, feedback: i } = e,
-            _ = null == r;
-        (0, l.wT)(r, i, null != (t = null == a ? void 0 : a.value) ? t : null, _),
-            _ ||
+            l = null == r;
+        (0, _.wT)(r, i, null != (t = null == a ? void 0 : a.value) ? t : null, l),
+            l ||
                 (0, c.ZDy)(async () => {
                     let { default: e } = await o.e("14466").then(o.bind(o, 729328));
                     return (t) =>
@@ -60,15 +60,15 @@ function m(e) {
         header: u.intl.string(u.t.Ib6biY),
         body: u.intl.string(u.t["uW0/nZ"]),
         problemTitle: u.intl.string(u.t.avs5Vl),
-        problems: d,
+        problems: m,
         freeformNeededProblems: p,
         onSubmit: f,
         onClose: t,
-        transitionState: m,
-        otherKey: s.XL.SOMETHING_ELSE,
+        transitionState: d,
+        otherKey: b.XL.SOMETHING_ELSE,
         hideHelpDeskLink: !0,
         hideDontShowAgainCheckbox: !0,
         freeformDescription: (e) =>
-            null == e ? null : e.value === s.XL.SOMETHING_ELSE ? u.intl.string(u.t.h95hcn) : u.intl.string(u.t.wRGel5),
+            null == e ? null : e.value === b.XL.SOMETHING_ELSE ? u.intl.string(u.t.h95hcn) : u.intl.string(u.t.wRGel5),
     });
 }

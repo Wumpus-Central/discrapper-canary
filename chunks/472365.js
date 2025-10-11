@@ -14,10 +14,10 @@ var i = t(951288),
     x = t(600164),
     g = t(436774),
     N = t(313201),
-    h = t(731971),
-    E = t(451603),
-    I = t(885714),
-    f = t(973616),
+    f = t(978986),
+    h = t(451603),
+    E = t(885714),
+    I = t(973616),
     v = t(594174),
     j = t(855981),
     S = t(55543),
@@ -25,8 +25,8 @@ var i = t(951288),
     A = t(768581),
     T = t(358085),
     P = t(998502),
-    L = t(379164),
-    b = t(590965),
+    b = t(379164),
+    L = t(590965),
     R = t(981631),
     z = t(474936),
     Z = t(388032),
@@ -44,7 +44,7 @@ function k() {
         }, [n]),
         (0, i.jsxs)(c.P3F, {
             onClick: () =>
-                (0, I.Z)({
+                (0, E.Z)({
                     analyticsSource: { page: R.Sbl.EXTERNAL_INVITE_LINK_MODAL },
                     analyticsLocation: {
                         page: R.Sbl.EXTERNAL_INVITE_LINK_MODAL,
@@ -115,7 +115,7 @@ function U(e) {
                     }),
                     (0, i.jsx)(p.zx, {
                         size: p.zx.Sizes.LARGE,
-                        onClick: () => L.Z.close(),
+                        onClick: () => b.Z.close(),
                         color: p.zx.Colors.BRAND,
                         children: Z.intl.string(Z.t.wcqOoK),
                     }),
@@ -134,12 +134,12 @@ function y(e) {
         var e;
         return null == (e = v.default.getCurrentUser()) ? void 0 : e.premiumType;
     });
-    let I = (0, o.e7)([v.default], () => v.default.getCurrentUser()),
-        { invite: j, error: S, submitting: z } = (0, o.cj)([b.Z], () => b.Z.getProps());
+    let E = (0, o.e7)([v.default], () => v.default.getCurrentUser()),
+        { invite: j, error: S, submitting: z } = (0, o.cj)([L.Z], () => L.Z.getProps());
     l.useEffect(() => {
         if (null != j && null != j.guild) {
             var e;
-            (0, h.pB)(null != (e = j.approximate_member_count) ? e : 0, j.code, j.guild.id);
+            (0, f.pB)(null != (e = j.approximate_member_count) ? e : 0, j.code, j.guild.id);
         }
     }, [
         j,
@@ -147,23 +147,23 @@ function y(e) {
         null == j ? void 0 : j.code,
         null == j || null == (n = j.guild) ? void 0 : n.id,
     ]);
-    let O = (0, h.yr)();
+    let O = (0, f.yr)();
     l.useEffect(() => {
         !__OVERLAY__ && T.isPlatformEmbedded && ((0, T.isWindows)() ? P.ZP.minimize() : P.ZP.restore(), P.ZP.focus());
     }, []);
     let y = (0, N.Dt)(),
         { analyticsLocations: F } = (0, _.ZP)(m.Z.INVITE_MODAL);
-    if (null == j || null == I) return null;
+    if (null == j || null == E) return null;
     if (j.state === R.r2o.EXPIRED || j.state === R.r2o.BANNED || j.state === R.r2o.ERROR)
         return (0, i.jsx)(U, { transitionState: g });
     if (null == j.channel) return null;
     function G() {
-        null != j && L.Z.acceptInvite(j);
+        null != j && b.Z.acceptInvite(j);
     }
     let { guild: V, channel: W, inviter: B, target_application: w } = j,
         H = null != V,
         Y = null == j.guild && null == j.channel && null != j.inviter;
-    if (null != w) (t = null == V ? void 0 : V.name), (a = f.ZP.createFromServer(w).getCoverImageURL(1024));
+    if (null != w) (t = null == V ? void 0 : V.name), (a = I.ZP.createFromServer(w).getCoverImageURL(1024));
     else if (null != V)
         (t = V.name),
             (a = A.ZP.getGuildSplashURL({
@@ -172,7 +172,7 @@ function y(e) {
             }));
     else if (((null == (t = W.name) || "" === t) && null != B && (t = B.username), null == t))
         throw Error("no name for group DM invite");
-    let K = (0, E.yU)();
+    let K = (0, h.yU)();
     return (
         (r = Y
             ? Z.intl.string(Z.t["e/6Ogo"])
@@ -235,7 +235,7 @@ function y(e) {
                                                                         (0, i.jsx)(d.Z, {
                                                                             "aria-hidden": !0,
                                                                             size: c.EFr.SIZE_16,
-                                                                            user: I,
+                                                                            user: E,
                                                                             className: M.acceptAsAvatar,
                                                                         }),
                                                                         (0, i.jsx)("span", {
@@ -277,7 +277,7 @@ function y(e) {
                                                         invite_code: null == j ? void 0 : j.code,
                                                         guild_id: null == j || null == (e = j.guild) ? void 0 : e.id,
                                                     }),
-                                                        L.Z.close();
+                                                        b.Z.close();
                                                 },
                                                 color: p.zx.Colors.TRANSPARENT,
                                                 children: Z.intl.string(Z.t.ndsK4e),

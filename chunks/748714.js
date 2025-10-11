@@ -1,8 +1,8 @@
 n.d(t, {
     A3: () => I,
     f4: () => N,
-    f9: () => T,
-    gY: () => A,
+    f9: () => L,
+    gY: () => S,
 });
 var r = n(951288),
     l = n(74655),
@@ -66,7 +66,7 @@ function E(e, t) {
         e
     );
 }
-let P = (e) => {
+let _ = (e) => {
         let { orbAmount: t } = e;
         return (0, r.jsxs)(a.Text, {
             variant: "text-md/semibold",
@@ -80,7 +80,7 @@ let P = (e) => {
             ],
         });
     },
-    _ = (e) => {
+    P = (e) => {
         var { orbBalance: t, orbPriceAmount: n, loading: l, onClick: o } = e,
             s = (function (e, t) {
                 if (null == e) return {};
@@ -149,10 +149,10 @@ let P = (e) => {
               })
             : (0, r.jsx)(y.E, {
                   sku: i,
-                  value: (0, r.jsx)(P, { orbAmount: t }),
+                  value: (0, r.jsx)(_, { orbAmount: t }),
               });
     },
-    S = (e) => {
+    A = (e) => {
         let { orbBalance: t } = e;
         return (0, r.jsx)(a.gNt, {
             label: h.intl.string(h.t.mmDvV1),
@@ -167,13 +167,13 @@ let P = (e) => {
                     (0, r.jsx)(a.Text, {
                         className: v.displayFlex,
                         variant: "text-md/medium",
-                        children: (0, r.jsx)(P, { orbAmount: t }),
+                        children: (0, r.jsx)(_, { orbAmount: t }),
                     }),
                 ],
             }),
         });
     },
-    A = (e) => {
+    S = (e) => {
         let { error: t } = e;
         if (null == t) return;
         let n = "";
@@ -208,7 +208,7 @@ let P = (e) => {
                         orbPriceAmount: n,
                     }),
                 }),
-                (0, r.jsx)(S, { orbBalance: l }),
+                (0, r.jsx)(A, { orbBalance: l }),
                 (0, r.jsx)(s.Z, {
                     forceShow: !0,
                     onChange: j.dG4,
@@ -221,13 +221,13 @@ let P = (e) => {
             ],
         });
     },
-    T = (e) => {
+    L = (e) => {
         let { orbPriceAmount: t, orbBalance: n, isSubmitting: l, onClickCheckout: i } = e;
         return (0, r.jsxs)(a.mzw, {
             align: d.Z.Align.CENTER,
             "data-migration-pending": !0,
             children: [
-                (0, r.jsx)(_, {
+                (0, r.jsx)(P, {
                     orbBalance: n,
                     orbPriceAmount: t,
                     loading: l,

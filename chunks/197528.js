@@ -13,9 +13,9 @@ var a = n(951288),
     p = n(314897),
     x = n(643366),
     m = n(94628),
-    v = n(659154),
-    b = n(581690),
-    g = n(902928),
+    g = n(659154),
+    v = n(581690),
+    b = n(902928),
     _ = n(521937),
     C = n(981631),
     y = n(298899);
@@ -75,7 +75,7 @@ function w() {
         O = !0;
     switch (n.type) {
         case "handoff":
-            (e = (0, a.jsx)(b.c, { code: n.code })), (O = !1);
+            (e = (0, a.jsx)(v.c, { code: n.code })), (O = !1);
             break;
         case "user-code-input":
             e = (0, a.jsx)(_.v, {
@@ -93,13 +93,13 @@ function w() {
                 (O = !1);
             break;
         case "success":
-            e = (0, a.jsx)(g.u, {
+            e = (0, a.jsx)(b.u, {
                 onComplete: () => (0, h.uL)(C.Z5c.ME),
                 data: n.userCodeData,
             });
             break;
         case "error":
-            e = (0, a.jsx)(v.c, { onTryAgain: N });
+            e = (0, a.jsx)(g.c, { onTryAgain: N });
             break;
         default:
             e = null;

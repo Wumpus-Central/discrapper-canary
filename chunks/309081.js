@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => k }), n(388685);
 var r = n(951288),
     l = n(647438),
     a = n(120356),
@@ -89,7 +89,7 @@ function w(e) {
         }),
     });
 }
-function k(e) {
+function C(e) {
     let {
             channelId: t,
             localCreationAnswerId: n,
@@ -98,11 +98,11 @@ function k(e) {
             onEmojiRemove: f,
             answerIndex: m,
             shouldShowEmojiPicker: g,
-            toggleEmojiPicker: k,
-            containerRef: C,
+            toggleEmojiPicker: C,
+            containerRef: k,
         } = e,
-        x = l.useRef(null),
-        R = (0, o.e7)([d.Z], () => d.Z.getChannel(t)),
+        R = l.useRef(null),
+        x = (0, o.e7)([d.Z], () => d.Z.getChannel(t)),
         {
             emoji: E,
             isLoadingMedia: _,
@@ -139,7 +139,7 @@ function k(e) {
                 return (0, r.jsx)("div", {
                     className: h.emojiPicker,
                     children: (0, r.jsx)(u.Z, {
-                        channel: R,
+                        channel: x,
                         pickerIntention: j.Hz.POLLS,
                         closePopout: t,
                         onNavigateAway: t,
@@ -150,19 +150,19 @@ function k(e) {
                     }),
                 });
             },
-            [R, s, m],
+            [x, s, m],
         ),
         T = l.useCallback(
             (e) => {
                 let { closePopout: t } = e;
                 return (0, r.jsx)(w, {
                     onSelect: t,
-                    onEditMedia: k,
+                    onEditMedia: C,
                     onDeleteMedia: N,
                     closePopout: t,
                 });
             },
-            [N, k],
+            [N, C],
         ),
         Z = _
             ? (0, r.jsx)(c.$jN, { className: h.spinnerWrapperDefault })
@@ -181,10 +181,10 @@ function k(e) {
               }),
         B = i()(O.CT, h.expressionPickerButtonDefault, { [h.canEditMedia]: I });
     return (0, r.jsx)(c.yRy, {
-        targetElementRef: C,
+        targetElementRef: k,
         renderPopout: L,
         shouldShow: g,
-        onRequestClose: k,
+        onRequestClose: C,
         animation: c.yRy.Animation.NONE,
         position: "bottom",
         spacing: 2,
@@ -193,7 +193,7 @@ function k(e) {
             return (
                 v(e, ["aria-controls", "aria-expanded"]),
                 (0, r.jsx)(c.yRy, {
-                    targetElementRef: x,
+                    targetElementRef: R,
                     animation: c.yRy.Animation.NONE,
                     position: "bottom",
                     renderPopout: T,
@@ -228,11 +228,11 @@ function k(e) {
                                         });
                                 }
                                 return e;
-                            })({ innerRef: x }, u)),
+                            })({ innerRef: R }, u)),
                             (a = a =
                                 {
                                     className: B,
-                                    onClick: I && !g ? i : k,
+                                    onClick: I && !g ? i : C,
                                     "aria-label": U,
                                     "aria-controls": null != t ? t : o,
                                     "aria-expanded": n || s,
@@ -267,7 +267,7 @@ function k(e) {
         },
     });
 }
-function C(e) {
+function k(e) {
     let {
             channelId: t,
             answer: n,
@@ -286,7 +286,7 @@ function C(e) {
         } = e,
         P = l.useRef(null),
         w = l.useRef(null),
-        C = l.useRef(null);
+        k = l.useRef(null);
     l.useImperativeHandle(h, () => ({
         focusDeleteButton: () => {
             var e;
@@ -294,12 +294,12 @@ function C(e) {
         },
         focusInput: () => {
             var e;
-            return null == (e = C.current) ? void 0 : e.focus();
+            return null == (e = k.current) ? void 0 : e.focus();
         },
     }));
-    let [x, R] = l.useState(!1),
+    let [R, x] = l.useState(!1),
         E = l.useCallback(() => {
-            R((e) => !e);
+            x((e) => !e);
         }, []),
         _ = l.useCallback(
             (e) => {
@@ -319,7 +319,7 @@ function C(e) {
             },
             [b, n, v, a, i, j, E],
         ),
-        S = (0, r.jsx)(k, {
+        S = (0, r.jsx)(C, {
             containerRef: P,
             channelId: t,
             buttonImage: n.image,
@@ -327,7 +327,7 @@ function C(e) {
             onEmojiRemove: u,
             localCreationAnswerId: n.localCreationAnswerId,
             answerIndex: a,
-            shouldShowEmojiPicker: x,
+            shouldShowEmojiPicker: R,
             toggleEmojiPicker: E,
         });
     return (0, r.jsx)("div", {
@@ -357,7 +357,7 @@ function C(e) {
                 }),
             onKeyDown: _,
             maxLength: g.WA,
-            inputRef: C,
+            inputRef: k,
         }),
     });
 }

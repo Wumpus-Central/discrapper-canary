@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -29,7 +29,7 @@ function E(e, t, n) {
         e
     );
 }
-function y(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,7 +45,7 @@ function y(e) {
     }
     return e;
 }
-function v(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -147,7 +147,7 @@ class I extends i.PureComponent {
                                     text: n,
                                     children: (0, i.createElement)(
                                         s.qEK,
-                                        v(y({}, l), {
+                                        y(v({}, l), {
                                             key: e.id,
                                             src: e.getAvatarURL(void 0, 24),
                                             size: s.EFr.SIZE_24,
@@ -175,7 +175,7 @@ class I extends i.PureComponent {
                                 text: _.intl.string(_.t.Zf4NPT),
                                 children: (0, r.jsx)(
                                     "div",
-                                    v(y({}, n), {
+                                    y(v({}, n), {
                                         ref: this.partyMemberOverflowRef,
                                         className: a()(O.overflow, t),
                                         children: e,
@@ -188,4 +188,4 @@ class I extends i.PureComponent {
             });
     }
 }
-let S = I;
+let C = I;

@@ -60,8 +60,8 @@ function u(e) {
         (t = "applePay" === _ ? (0, r.jsx)(a.Ch, c({}, p)) : (0, r.jsx)(a.Tr, c({}, p))),
         (0, r.jsx)("div", {
             className: s.body,
-            children: (0, r.jsx)(i.hjN, {
-                title: o.intl.string(o.t.eQ2bLi),
+            children: (0, r.jsx)(i.gNt, {
+                label: o.intl.string(o.t.eQ2bLi),
                 children: t,
             }),
         })

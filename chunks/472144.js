@@ -3,7 +3,7 @@ var r = n(951288),
     s = n(647438),
     o = n(120356),
     l = n.n(o),
-    i = n(137317),
+    i = n(599273),
     a = n(481060),
     c = n(569379),
     u = n(642145),
@@ -23,12 +23,12 @@ let p = s.forwardRef((e, t) => {
         h = o / 2,
         C = o / 2 - p / 2,
         y = 2 * Math.PI * C,
-        v = y - s * y,
+        b = y - s * y,
         O = {
             strokeDasharray: "".concat(y, " ").concat(y),
-            strokeDashoffset: v,
+            strokeDashoffset: b,
         },
-        b = {
+        v = {
             strokeDasharray: "".concat(y, " ").concat(y),
             strokeDashoffset: -s * y,
         },
@@ -112,7 +112,7 @@ let p = s.forwardRef((e, t) => {
                         cx: h,
                         cy: h,
                         stroke: "url(#linear)",
-                        style: b,
+                        style: v,
                     }),
                     (0, r.jsx)("circle", {
                         className: d.progress,

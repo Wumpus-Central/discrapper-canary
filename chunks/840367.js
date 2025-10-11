@@ -1,42 +1,42 @@
-r.d(t, { Z: () => s });
-var n = r(951288);
-r(647438);
-var i = r(442837),
-    a = r(481060),
-    o = r(314897),
-    l = r(825354),
-    c = r(635318);
+n.d(t, { Z: () => s });
+var r = n(951288);
+n(647438);
+var i = n(442837),
+    a = n(481060),
+    o = n(314897),
+    l = n(825354),
+    c = n(635318);
 function s(e) {
     let {
         userId: t,
-        headingId: r,
+        headingId: n,
         widget: i,
         disableInteraction: o = !1,
         title: l,
         subtitle: s,
         actionButtons: d = [],
     } = e;
-    return (0, n.jsxs)("div", {
+    return (0, r.jsxs)("div", {
         className: c.headerRow,
         children: [
-            (0, n.jsxs)("div", {
+            (0, r.jsxs)("div", {
                 className: c.title,
                 children: [
-                    (0, n.jsx)(a.Heading, {
+                    (0, r.jsx)(a.Heading, {
                         variant: "heading-sm/medium",
                         color: "text-default",
-                        id: r,
+                        id: n,
                         children: l,
                     }),
                     null != s &&
-                        (0, n.jsx)(a.Text, {
+                        (0, r.jsx)(a.Text, {
                             variant: "text-xs/normal",
                             color: "text-secondary",
                             children: s,
                         }),
                 ],
             }),
-            (0, n.jsx)(u, {
+            (0, r.jsx)(u, {
                 widget: i,
                 actionButtons: d,
                 disabledInteraction: o,
@@ -46,19 +46,19 @@ function s(e) {
     });
 }
 function u(e) {
-    let { widget: t, actionButtons: r, disabledInteraction: a, userId: s } = e,
+    let { widget: t, actionButtons: n, disabledInteraction: a, userId: s } = e,
         u = (0, i.e7)([o.default], () => o.default.getId());
     return a
         ? null
-        : null != r && r.length > 0
-          ? (0, n.jsx)("div", {
+        : null != n && n.length > 0
+          ? (0, r.jsx)("div", {
                 className: c.actions,
-                children: r,
+                children: n,
             })
           : u !== s
-            ? (0, n.jsx)("div", {
+            ? (0, r.jsx)("div", {
                   className: c.actions,
-                  children: (0, n.jsx)(l.Z, {
+                  children: (0, r.jsx)(l.Z, {
                       widget: t,
                       userId: s,
                       className: c.menuButton,

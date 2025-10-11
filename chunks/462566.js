@@ -101,7 +101,7 @@ let y = function (e) {
         let e = y.cardNumber && y.cardExpiry && y.cardCvc && 0 === Object.keys(w(!0)).length;
         a.current({ name: v.name }, !!e);
     }, [y, v, w]);
-    let x = [
+    let L = [
         {
             fields: [
                 {
@@ -166,7 +166,7 @@ let y = function (e) {
             ],
         },
     ];
-    function L(e, t) {
+    function x(e, t) {
         if ("name" !== t && "country" !== t && "postalCode" !== t) return;
         let n = g({}, v),
             r = g({}, T),
@@ -210,11 +210,11 @@ let y = function (e) {
         children: [
             M(),
             (0, r.jsx)(d.Z, {
-                form: x,
+                form: L,
                 errors: A,
                 formError: n,
                 values: v,
-                onFieldChange: L,
+                onFieldChange: x,
                 onFieldBlur: D,
             }),
         ],

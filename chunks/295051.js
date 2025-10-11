@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(951288),
     i = n(647438),
     l = n(906732),
-    s = n(807582),
-    a = n(821458),
+    a = n(807582),
+    s = n(821458),
     o = n(981631),
     c = n(30513),
     d = n(829930);
@@ -25,7 +25,7 @@ function u(e) {
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
-                    (0, a.E6)({
+                    (0, s.E6)({
                         guild: t,
                         analyticsLocations: m,
                         analyticsSection: o,
@@ -36,7 +36,7 @@ function u(e) {
             },
             [m, c, o, t, u, g],
         );
-    return (0, r.jsx)(s.Z, {
+    return (0, r.jsx)(a.Z, {
         guild: t,
         guildFeature: n,
         className: d.guildFeatureAvailabilityIndicator,

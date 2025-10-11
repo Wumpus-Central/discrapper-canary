@@ -1,7 +1,7 @@
 n.d(t, { Z: () => L }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(137317),
+    l = n(599273),
     s = n(442837),
     a = n(481060),
     o = n(447543),
@@ -18,8 +18,8 @@ var r = n(951288),
     E = n(230224),
     v = n(617730),
     b = n(258356),
-    I = n(981631),
-    j = n(388032),
+    j = n(981631),
+    I = n(388032),
     N = n(271922);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -75,18 +75,18 @@ let C = (e) => {
     if (null == e || null == e.state || t) return 0;
     let n = e.state;
     switch (n) {
-        case I.r2o.RESOLVED:
-        case I.r2o.ACCEPTED:
-        case I.r2o.APP_NOT_OPENED:
-        case I.r2o.APP_OPENED:
-        case I.r2o.ACCEPTING:
-        case I.r2o.APP_OPENING:
+        case j.r2o.RESOLVED:
+        case j.r2o.ACCEPTED:
+        case j.r2o.APP_NOT_OPENED:
+        case j.r2o.APP_OPENED:
+        case j.r2o.ACCEPTING:
+        case j.r2o.APP_OPENING:
             return 1;
-        case I.r2o.EXPIRED:
-        case I.r2o.BANNED:
-        case I.r2o.ERROR:
+        case j.r2o.EXPIRED:
+        case j.r2o.BANNED:
+        case j.r2o.ERROR:
             return 2;
-        case I.r2o.RESOLVING:
+        case j.r2o.RESOLVING:
             return 0;
         default:
             (0, _.vE)(n);
@@ -94,15 +94,15 @@ let C = (e) => {
 };
 function A(e) {
     let { invite: t, onAcceptInvite: n } = e;
-    return (null == t ? void 0 : t.state) === I.r2o.BANNED
+    return (null == t ? void 0 : t.state) === j.r2o.BANNED
         ? (0, r.jsx)(c.u, {
-              text: j.intl.string(j.t["5AkWAQ"]),
-              buttonCta: j.intl.string(j.t["8osdkp"]),
+              text: I.intl.string(I.t["5AkWAQ"]),
+              buttonCta: I.intl.string(I.t["8osdkp"]),
               onClick: n,
           })
         : (0, r.jsx)(c.u, {
-              text: j.intl.string(j.t["usP+MT"]),
-              buttonCta: j.intl.string(j.t["8osdkp"]),
+              text: I.intl.string(I.t["usP+MT"]),
+              buttonCta: I.intl.string(I.t["8osdkp"]),
               onClick: n,
           });
 }
@@ -222,7 +222,7 @@ function R(e) {
         null != e && ((l.backgroundImage = "url(".concat(e, ")")), (l.backgroundSize = "cover"));
     }
     return (0, r.jsxs)(d.ZP, {
-        theme: I.BRd.DARK,
+        theme: j.BRd.DARK,
         className: N.splashBackground,
         style: l,
         contentClassName: N.centerAuthBoxContent,
@@ -238,9 +238,9 @@ function L(e) {
         }, []),
         i.useEffect(() => {
             null != l &&
-                l.state === I.r2o.RESOLVED &&
+                l.state === j.r2o.RESOLVED &&
                 p.default.track(
-                    I.rMx.INVITE_VIEWED,
+                    j.rMx.INVITE_VIEWED,
                     {
                         invite_code: t,
                         friends_count: null == l ? void 0 : l.friends_count,
@@ -254,13 +254,13 @@ function L(e) {
                 !(function (e, t, n) {
                     var r, i, l;
                     null == e || e.preventDefault(),
-                        p.default.track(I.rMx.INVITE_APP_OPENED, {
+                        p.default.track(j.rMx.INVITE_APP_OPENED, {
                             invite_code: (0, x.jX)(t),
                             guild_id: null == n || null == (r = n.guild) ? void 0 : r.id,
                             channel_id: null == n || null == (i = n.channel) ? void 0 : i.id,
                             inviter_id: null == n || null == (l = n.inviter) ? void 0 : l.id,
                         });
-                    let s = null != n && n.state !== I.r2o.EXPIRED && n.state !== I.r2o.BANNED ? t : void 0,
+                    let s = null != n && n.state !== j.r2o.EXPIRED && n.state !== j.r2o.BANNED ? t : void 0,
                         a = g.default.getFingerprint(),
                         c = null != a ? a : g.default.getId(),
                         u =

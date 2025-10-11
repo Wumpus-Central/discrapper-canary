@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r = n(951288),
-    a = n(647438),
-    l = n(120356),
-    i = n.n(l),
+    l = n(647438),
+    a = n(120356),
+    i = n.n(a),
     s = n(53691),
     o = n(378879),
     c = n(981631),
@@ -10,35 +10,35 @@ var r = n(951288),
     d = n(388032),
     f = n(463339);
 function p(e) {
-    var { uploadType: t, analyticsSource: n, className: l } = e,
+    var { uploadType: t, analyticsSource: n, className: a } = e,
         p = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                a = (function (e, t) {
+                l = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        a = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
-                    return a;
+                        l = {},
+                        a = Object.keys(e);
+                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                    return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
+                var a = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < a.length; r++)
+                    (n = a[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
-            return a;
+            return l;
         })(e, ["uploadType", "analyticsSource", "className"]);
-    let g = a.useCallback(() => {
+    let g = l.useCallback(() => {
             (0, o.s)({
                 uploadType: t,
                 analyticsSource: n,
             });
         }, [t, n]),
-        m = a.useMemo(() => {
+        m = l.useMemo(() => {
             switch (t) {
                 case u.pC.AVATAR:
                     return d.intl.format(d.t["pvw/HB"], { onClick: g });
@@ -81,7 +81,7 @@ function p(e) {
                       text: m,
                       button: d.intl.string(d.t.BmJkbW),
                       buttonAnalyticsObject: { section: c.jXE.USER_PROFILE },
-                      className: i()(f.container, l),
+                      className: i()(f.container, a),
                   },
                   p,
               ),

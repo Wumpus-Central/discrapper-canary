@@ -1,6 +1,6 @@
 n.d(t, { Z: () => c });
-var l = n(647438),
-    i = n(990547),
+var i = n(647438),
+    l = n(990547),
     r = n(442837),
     a = n(213609),
     o = n(541099),
@@ -16,10 +16,10 @@ function c(e) {
             numFriendsWhoPlay: m,
         } = e,
         f = (0, r.e7)([o.Z], () => o.Z.entrypoint()),
-        h = l.useCallback(() => {
+        h = i.useCallback(() => {
             (0, a.h)({
-                type: i.ImpressionTypes.VIEW,
-                name: i.ImpressionNames.APP_LAUNCHER_ITEM,
+                type: l.ImpressionTypes.VIEW,
+                name: l.ImpressionNames.APP_LAUNCHER_ITEM,
                 properties: {
                     application_id: t,
                     application_flags: n,

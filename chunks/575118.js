@@ -183,7 +183,7 @@ function I(e) {
             children: l,
         }),
         D = null != n ? R : P,
-        x = (0, r.jsx)("header", {
+        L = (0, r.jsx)("header", {
             className: o()(m.section, m.header, { [m.headerCentered]: g }),
             children: (0, r.jsxs)(_.K, {
                 gap: 8,
@@ -210,9 +210,9 @@ function I(e) {
         ? (0, r.jsx)(c.$, {
               color: t,
               className: m.headerGradient,
-              children: x,
+              children: L,
           })
-        : x;
+        : L;
 }
 function T(e) {
     let { badge: t } = e;

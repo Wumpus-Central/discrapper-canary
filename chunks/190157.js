@@ -1,21 +1,21 @@
-n.d(t, { gT: () => a });
+n.d(t, { gT: () => i });
 var r = n(951288);
 n(647438);
 let l = (e) => {
         var t;
         let { clientX: n, clientY: r, currentTarget: l } = e;
         l.style.pointerEvents = "none";
-        let a = document.elementFromPoint(n, r);
+        let i = document.elementFromPoint(n, r);
         return (
             (l.style.pointerEvents = "auto"),
             {
-                elementBelow: a,
-                button: null != (t = null == a ? void 0 : a.closest("button")) ? t : null,
+                elementBelow: i,
+                button: null != (t = null == i ? void 0 : i.closest("button")) ? t : null,
             }
         );
     },
-    a = (e) => {
-        let { isCustomCursorEnabled: t, className: n, riveEventTargetRef: a } = e,
+    i = (e) => {
+        let { isCustomCursorEnabled: t, className: n, riveEventTargetRef: i } = e,
             s = (e) => {
                 let { button: n } = l(e),
                     r = e.currentTarget;
@@ -24,7 +24,7 @@ let l = (e) => {
                     : (r.style.cursor = null != n ? "pointer" : "default");
             };
         return (0, r.jsx)("div", {
-            ref: a,
+            ref: i,
             className: n,
             onMouseMove: s,
             onMouseDown: (e) => {

@@ -3,40 +3,40 @@ A.d(t, {
     W: () => o,
 }),
     A(415506);
-var r = A(951288),
-    n = A(647438),
+var n = A(951288),
+    r = A(647438),
     a = A(828762);
-let l = n.createContext(void 0);
+let l = r.createContext(void 0);
 function i() {
-    let e = n.useContext(l);
+    let e = r.useContext(l);
     if (null == e) throw Error("No GuildProductAttachmentManagerContextProvider found");
     return e;
 }
 function o(e) {
     var { children: t, guildId: A } = e,
-        n = (function (e, t) {
+        r = (function (e, t) {
             if (null == e) return {};
             var A,
-                r,
-                n = (function (e, t) {
+                n,
+                r = (function (e, t) {
                     if (null == e) return {};
                     var A,
-                        r,
-                        n = {},
+                        n,
+                        r = {},
                         a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) (A = a[r]), t.indexOf(A) >= 0 || (n[A] = e[A]);
-                    return n;
+                    for (n = 0; n < a.length; n++) (A = a[n]), t.indexOf(A) >= 0 || (r[A] = e[A]);
+                    return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++)
-                    (A = a[r]),
-                        !(t.indexOf(A) >= 0) && Object.prototype.propertyIsEnumerable.call(e, A) && (n[A] = e[A]);
+                for (n = 0; n < a.length; n++)
+                    (A = a[n]),
+                        !(t.indexOf(A) >= 0) && Object.prototype.propertyIsEnumerable.call(e, A) && (r[A] = e[A]);
             }
-            return n;
+            return r;
         })(e, ["children", "guildId"]);
-    let i = (0, a.Z)(A, n);
-    return (0, r.jsx)(l.Provider, {
+    let i = (0, a.Z)(A, r);
+    return (0, n.jsx)(l.Provider, {
         value: i,
         children: t,
     });

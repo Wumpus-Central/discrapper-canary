@@ -17,11 +17,11 @@ var r = n(951288),
     _ = n(512384),
     O = n(670188),
     E = n(314897),
-    y = n(131951),
-    v = n(51144),
+    v = n(131951),
+    y = n(51144),
     I = n(524484),
-    S = n(388032),
-    C = n(720711);
+    C = n(388032),
+    S = n(720711);
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -70,27 +70,27 @@ let j = { offset: 2 },
         serverDeaf: {
             icon: c.Vm4,
             colorize: !0,
-            getStatus: () => S.intl.string(S.t.btxSdH),
+            getStatus: () => C.intl.string(C.t.btxSdH),
         },
         serverMute: {
             icon: c.v0G,
             colorize: !0,
-            getStatus: () => S.intl.string(S.t.uLddbW),
+            getStatus: () => C.intl.string(C.t.uLddbW),
         },
         deaf: {
             icon: c.wE8,
             colorize: !1,
-            getStatus: () => S.intl.string(S.t.NjmiOD),
+            getStatus: () => C.intl.string(C.t.NjmiOD),
         },
         mute: {
             icon: c.nRN,
             colorize: !1,
-            getStatus: () => S.intl.string(S.t.tjtv3N),
+            getStatus: () => C.intl.string(C.t.tjtv3N),
         },
         localMute: {
             icon: c.v0G,
             colorize: !1,
-            getStatus: () => S.intl.string(S.t["9F+xJS"]),
+            getStatus: () => C.intl.string(C.t["9F+xJS"]),
         },
     };
 function x(e) {
@@ -98,14 +98,14 @@ function x(e) {
     let p = i.useRef(null),
         { parentAnalyticsLocation: f } = (0, g.ZP)(),
         { channel: E, user: x, nick: A, mute: Z, deaf: w, serverMute: L, serverDeaf: R } = e,
-        D = (0, o.e7)([y.Z], () => y.Z.isLocalMute(x.id)),
+        D = (0, o.e7)([v.Z], () => v.Z.isLocalMute(x.id)),
         k = (0, d.Z)({
             userId: x.id,
             checkSoundSharing: !0,
         }),
         M = null != (t = E.getGuildId()) ? t : void 0,
         U = x.getAvatarURL(E.guild_id, 24),
-        G = null != A ? A : v.ZP.getName(x),
+        G = null != A ? A : y.ZP.getName(x),
         {
             icon: B,
             colorize: H,
@@ -129,7 +129,7 @@ function x(e) {
             : {},
         F =
             null != V
-                ? S.intl.formatToPlainString(S.t["1+MVBA"], {
+                ? C.intl.formatToPlainString(C.t["1+MVBA"], {
                       userName: G,
                       status: V(),
                   })
@@ -186,19 +186,19 @@ function x(e) {
                     onClick: (t) => {
                         e.onClick(t), (0, m.v)(f, m.d.VOICE_USER);
                     },
-                    className: C.avatarContainer,
+                    className: S.avatarContainer,
                     onContextMenu: z,
                     focusProps: j,
                     children: (0, r.jsx)(_.Z, {
                         shakeLocation: I.oZ.VOICE_USER,
                         isShaking: k,
                         children: (0, r.jsx)("div", {
-                            className: a()(C.avatar, { [C.speaking]: k }),
+                            className: a()(S.avatar, { [S.speaking]: k }),
                             style: { backgroundImage: "url(".concat(U, ")") },
                             children:
                                 null != B
                                     ? (0, r.jsx)(B, {
-                                          className: a()(C.avatarIconOverlay, { [C.avatarIconRed]: H }),
+                                          className: a()(S.avatarIconOverlay, { [S.avatarIconRed]: H }),
                                           color: "currentColor",
                                           size: "xs",
                                       })
@@ -244,26 +244,26 @@ function A(e) {
             onClick: () => u(!s),
             color: c.YX$.PRIMARY,
             size: c.tT7.SIZE_24,
-            tooltip: s ? S.intl.string(S.t["Z/Tya2"]) : S.intl.string(S.t.XR5BAQ),
+            tooltip: s ? C.intl.string(C.t["Z/Tya2"]) : C.intl.string(C.t.XR5BAQ),
             icon: (0, r.jsx)(_, {
                 size: "xs",
                 color: "currentColor",
             }),
             focusProps: j,
         }),
-        y = b && s ? t : m;
-    return y.length <= 0
+        v = b && s ? t : m;
+    return v.length <= 0
         ? null
         : (0, r.jsx)(c.zJl, {
-              className: a()(C.scroller, l),
+              className: a()(S.scroller, l),
               fade: !0,
               children: (0, r.jsxs)("div", {
                   ref: h,
-                  className: a()(C.voiceUsers, !s && C.collapsed),
+                  className: a()(S.voiceUsers, !s && S.collapsed),
                   role: "group",
-                  "aria-label": S.intl.string(S.t["/ZgaVV"]),
+                  "aria-label": C.intl.string(C.t["/ZgaVV"]),
                   children: [
-                      y.map((e) => {
+                      v.map((e) => {
                           let { user: t, nick: i, voiceState: l } = e;
                           return t.id !== d
                               ? (0, r.jsx)(

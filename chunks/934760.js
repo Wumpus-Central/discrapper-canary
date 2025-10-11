@@ -1,12 +1,12 @@
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => o });
 var r = n(647438),
     l = n(557816),
-    a = n.n(l),
+    i = n.n(l),
     s = n(597688);
-function i() {
+function o() {
     return (0, r.useCallback)(
         (e) =>
-            a()(
+            i()(
                 e
                     .map((e) => {
                         let t = s.Z.getProduct(e);

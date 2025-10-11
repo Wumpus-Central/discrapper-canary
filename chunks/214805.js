@@ -5,8 +5,8 @@ var i = t(120356),
     l = t.n(i),
     s = t(67136),
     o = t(793030),
-    u = t(316492),
-    a = t(494933);
+    a = t(316492),
+    u = t(494933);
 function c(e) {
     let {
         title: n,
@@ -20,7 +20,7 @@ function c(e) {
     } = e;
     return (0, r.jsx)(s.tE, {
         children: (0, r.jsxs)("div", {
-            className: l()(u.wrapper, a.hoverCard),
+            className: l()(a.wrapper, u.hoverCard),
             tabIndex: 0,
             onClick: () => {
                 null != c ? c() : null != d && d();
@@ -30,7 +30,7 @@ function c(e) {
             },
             children: [
                 (0, r.jsx)("div", {
-                    className: u.cardHeaderImg,
+                    className: a.cardHeaderImg,
                     style:
                         null != i ? { backgroundImage: null != i ? "url(".concat(i.toString(), ")") : void 0 } : void 0,
                     children:
@@ -43,7 +43,7 @@ function c(e) {
                         }),
                 }),
                 (0, r.jsxs)("div", {
-                    className: u.details,
+                    className: a.details,
                     children: [
                         (0, r.jsx)(o.xvT, {
                             color: "header-primary",
@@ -52,7 +52,7 @@ function c(e) {
                         }),
                         null != t &&
                             (0, r.jsx)(o.xvT, {
-                                className: u.description,
+                                className: a.description,
                                 color: "text-muted",
                                 variant: "text-sm/normal",
                                 children: t,
@@ -61,7 +61,7 @@ function c(e) {
                 }),
                 (null != p || null != m) &&
                     (0, r.jsxs)("div", {
-                        className: u.footer,
+                        className: a.footer,
                         children: [
                             null != p &&
                                 (0, r.jsx)(o.xvT, {
@@ -70,7 +70,7 @@ function c(e) {
                                     children: b,
                                 }),
                             (0, r.jsxs)("div", {
-                                className: u.buttonGroup,
+                                className: a.buttonGroup,
                                 children: [
                                     null != p &&
                                         (0, r.jsx)(p, {

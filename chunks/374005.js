@@ -1,4 +1,4 @@
-n.d(t, { b: () => S });
+n.d(t, { b: () => C });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -17,8 +17,8 @@ var r = n(951288),
     _ = n(316173),
     O = n(410575),
     E = n(981631),
-    y = n(388032),
-    v = n(981028);
+    v = n(388032),
+    y = n(981028);
 function I(e) {
     var t, n;
     let { analyticsLocations: i } = (0, u.ZP)(c.Z.ACTIVITY_PANEL),
@@ -72,7 +72,7 @@ function I(e) {
         ),
     });
 }
-let S = i.memo(function () {
+let C = i.memo(function () {
     let e = i.useRef(null);
     (0, s.PM)(
         e,
@@ -85,8 +85,8 @@ let S = i.memo(function () {
     let { isSorting: t } = (0, d.Z)();
     return (0, r.jsx)("section", {
         ref: e,
-        className: a()(v.panels, { [v.disablePointersWhileSorting]: t }),
-        "aria-label": y.intl.string(y.t.StREWF),
+        className: a()(y.panels, { [y.disablePointersWhileSorting]: t }),
+        "aria-label": v.intl.string(v.t.StREWF),
         children: (0, r.jsxs)(o.JcV, {
             containerRef: e,
             children: [
@@ -95,7 +95,7 @@ let S = i.memo(function () {
                 (0, r.jsx)(h.Z, {}),
                 (0, r.jsx)(O.Z, {
                     section: E.jXE.ACTIVITY_PANEL,
-                    children: (0, r.jsx)(I, { className: v.activityPanel }),
+                    children: (0, r.jsx)(I, { className: y.activityPanel }),
                 }),
                 (0, r.jsx)(O.Z, {
                     section: E.jXE.RTC_CONNECTION_PANEL,

@@ -2831,19 +2831,19 @@ let { Themes: r } = n(15202).V,
             CHECKBOX_BACKGROUND_ACTIVE: {
                 category: "generic",
                 [r.DARK]: {
-                    raw: "BLURPLE_50",
+                    raw: "BLURPLE_65",
                     opacity: 1,
                 },
                 [r.LIGHT]: {
-                    raw: "BLURPLE_50",
+                    raw: "BLURPLE_65",
                     opacity: 1,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "BLURPLE_50",
+                    raw: "BLURPLE_65",
                     opacity: 1,
                 },
                 [r.DARKER]: {
-                    raw: "BLURPLE_50",
+                    raw: "BLURPLE_65",
                     opacity: 1,
                 },
             },
@@ -8069,19 +8069,19 @@ let { Themes: r } = n(15202).V,
             RADIO_BACKGROUND_ACTIVE: {
                 category: "generic",
                 [r.DARK]: {
-                    raw: "BLURPLE_50",
+                    raw: "BLURPLE_65",
                     opacity: 1,
                 },
                 [r.LIGHT]: {
-                    raw: "BLURPLE_50",
+                    raw: "BLURPLE_65",
                     opacity: 1,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "BLURPLE_50",
+                    raw: "BLURPLE_65",
                     opacity: 1,
                 },
                 [r.DARKER]: {
-                    raw: "BLURPLE_50",
+                    raw: "BLURPLE_65",
                     opacity: 1,
                 },
             },
@@ -9934,19 +9934,19 @@ let { Themes: r } = n(15202).V,
             SWITCH_BACKGROUND_ACTIVE: {
                 category: "generic",
                 [r.DARK]: {
-                    raw: "BLURPLE_50",
+                    raw: "BLURPLE_65",
                     opacity: 1,
                 },
                 [r.LIGHT]: {
-                    raw: "BLURPLE_50",
+                    raw: "BLURPLE_65",
                     opacity: 1,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "BLURPLE_50",
+                    raw: "BLURPLE_65",
                     opacity: 1,
                 },
                 [r.DARKER]: {
-                    raw: "BLURPLE_50",
+                    raw: "BLURPLE_65",
                     opacity: 1,
                 },
             },

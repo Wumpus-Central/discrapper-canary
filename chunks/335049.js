@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => P });
 var i = n(951288),
     r = n(647438),
     l = n(120356),
@@ -17,13 +17,13 @@ var i = n(951288),
     x = n(592125),
     j = n(271383),
     v = n(485386),
-    O = n(246946),
-    y = n(594174),
+    y = n(246946),
+    O = n(594174),
     _ = n(51144),
     C = n(981631),
     N = n(388032),
     S = n(243226);
-function w(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -48,7 +48,7 @@ function w(e) {
     }
     return e;
 }
-function P(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -66,7 +66,7 @@ function P(e, t) {
         e
     );
 }
-function I(e) {
+function P(e) {
     let { guild: t, id: l, type: a, isLocked: o, lockTooltipText: c } = e,
         d = !o || null != c;
     s()(d, "No lockTooltipText provided while isLocked=true");
@@ -77,7 +77,7 @@ function I(e) {
                 return (t) =>
                     (0, i.jsx)(
                         e,
-                        P(w({}, t), {
+                        E(I({}, t), {
                             id: l,
                             label: N.intl.string(N.t.oJ1Mu7),
                         }),
@@ -88,7 +88,7 @@ function I(e) {
     );
     switch (a) {
         case m.Kw.CHANNEL:
-            return (0, i.jsx)(E, {
+            return (0, i.jsx)(w, {
                 guild: t,
                 id: l,
                 isLocked: o,
@@ -96,7 +96,7 @@ function I(e) {
                 openEntryContextMenu: u,
             });
         case m.Kw.ROLE:
-            return (0, i.jsx)(Z, {
+            return (0, i.jsx)(T, {
                 guild: t,
                 id: l,
                 isLocked: o,
@@ -104,7 +104,7 @@ function I(e) {
                 openEntryContextMenu: u,
             });
         case m.Kw.USER:
-            return (0, i.jsx)(T, {
+            return (0, i.jsx)(Z, {
                 guild: t,
                 id: l,
                 isLocked: o,
@@ -113,7 +113,7 @@ function I(e) {
             });
     }
 }
-function E(e) {
+function w(e) {
     let { guild: t, id: n, isLocked: l, lockTooltipText: o, openEntryContextMenu: s } = e,
         d = (0, b.bD)(t.id),
         {
@@ -170,7 +170,7 @@ function E(e) {
               ],
           });
 }
-function Z(e) {
+function T(e) {
     var t;
     let { guild: l, id: o, isLocked: s, lockTooltipText: d } = e,
         m = (0, c.e7)([v.Z], () => v.Z.getRole(l.id, o)),
@@ -188,7 +188,7 @@ function Z(e) {
                         return (t) =>
                             (0, i.jsx)(
                                 e,
-                                P(w({}, t), {
+                                E(I({}, t), {
                                     guild: l,
                                     role: m,
                                 }),
@@ -204,7 +204,7 @@ function Z(e) {
               className: S.identifier,
               children: [
                   null != b
-                      ? (0, i.jsx)(f.Z, w({ className: a()(S.__invalid_icon, S.image) }, b))
+                      ? (0, i.jsx)(f.Z, I({ className: a()(S.__invalid_icon, S.image) }, b))
                       : (0, i.jsx)(u.lZ8, {
                             size: "custom",
                             width: 23,
@@ -222,14 +222,14 @@ function Z(e) {
               ],
           });
 }
-function T(e) {
+function Z(e) {
     let { guild: t, id: n, isLocked: r, lockTooltipText: l, openEntryContextMenu: a } = e,
-        o = (0, c.e7)([y.default], () => y.default.getUser(n)),
+        o = (0, c.e7)([O.default], () => O.default.getUser(n)),
         s = (0, c.e7)([j.ZP], () => {
             var e;
             return null == (e = j.ZP.getMember(t.id, n)) ? void 0 : e.nick;
         }, [t.id, n]),
-        d = (0, c.e7)([O.Z], () => O.Z.hidePersonalInformation);
+        d = (0, c.e7)([y.Z], () => y.Z.hidePersonalInformation);
     return null == o
         ? null
         : (0, i.jsxs)("div", {

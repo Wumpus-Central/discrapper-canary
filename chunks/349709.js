@@ -1,8 +1,8 @@
 t.d(n, { Z: () => x });
 var a = t(951288),
     l = t(647438),
-    i = t(442837),
-    r = t(74655),
+    r = t(442837),
+    i = t(74655),
     o = t(481060),
     s = t(596454),
     u = t(225433),
@@ -13,8 +13,8 @@ var a = t(951288),
     g = t(903749),
     h = t(185923),
     p = t(388032),
-    y = t(239336);
-function b(e) {
+    b = t(239336);
+function y(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             a = Object.keys(t);
@@ -65,24 +65,24 @@ function x(e) {
             emojiId: j,
             emojiName: w,
             isRequiredField: _ = !0,
-            shouldUpdateBothEmojiFields: N = !1,
-            setEmojiId: C,
+            shouldUpdateBothEmojiFields: C = !1,
+            setEmojiId: N,
             setEmojiName: S,
         } = e,
         O = (0, g.Z)({
             emojiId: j,
             emojiName: w,
         }),
-        E = (0, i.e7)([m.ZP], () => (null != t ? m.ZP.getDefaultChannel(t) : null)),
+        E = (0, r.e7)([m.ZP], () => (null != t ? m.ZP.getDefaultChannel(t) : null)),
         P = l.useRef(null),
         { isHoveringOrFocusing: I } = (0, c.Z)(P),
-        Z = () => {
-            S(void 0), C(void 0);
+        M = () => {
+            S(void 0), N(void 0);
         },
-        k = (e) => {
-            e.stopPropagation(), Z();
+        Z = (e) => {
+            e.stopPropagation(), M();
         },
-        M = l.useMemo(() => {
+        k = l.useMemo(() => {
             let e = null != j && "" !== j,
                 n = null != w && "" !== w,
                 t = null != O && "" !== O,
@@ -94,7 +94,7 @@ function x(e) {
                 isDeletedCustomEmoji: a,
             };
         }, [j, w, O]),
-        T = !M.isDeletedCustomEmoji && M.hasEmojiDisplayName;
+        T = !k.isDeletedCustomEmoji && k.hasEmojiDisplayName;
     return (0, a.jsx)("div", {
         className: n,
         children: (0, a.jsx)(o.gNt, {
@@ -114,10 +114,10 @@ function x(e) {
                         onSelectEmoji: (e) => {
                             let { emoji: t, willClose: a } = e,
                                 l = (null == t ? void 0 : t.id) == null;
-                            Z(),
+                            M(),
                                 l
                                     ? S(null == t ? void 0 : t.optionallyDiverseSequence)
-                                    : (N && S(null == t ? void 0 : t.name), C(null == t ? void 0 : t.id)),
+                                    : (C && S(null == t ? void 0 : t.name), N(null == t ? void 0 : t.id)),
                                 a && n();
                         },
                         guildId: t,
@@ -127,16 +127,16 @@ function x(e) {
                 children: (e, n) => {
                     let { isShown: t } = n;
                     return (0, a.jsxs)(
-                        r.U,
-                        v(b({}, e), {
-                            className: y.emojiInput,
+                        i.U,
+                        v(y({}, e), {
+                            className: b.emojiInput,
                             ref: P,
                             children: [
                                 (0, a.jsx)(d.Z, {
                                     active: t,
                                     tabIndex: 0,
                                     renderButtonContents:
-                                        !M.isDeletedCustomEmoji && (M.hasEmojiId || M.hasEmojiName)
+                                        !k.isDeletedCustomEmoji && (k.hasEmojiId || k.hasEmojiName)
                                             ? () =>
                                                   (0, a.jsx)(s.Z, {
                                                       emojiName: w,
@@ -150,7 +150,7 @@ function x(e) {
                                     color: T ? "text-default" : "text-muted",
                                     children: T ? ":".concat(O, ":") : p.intl.string(p.t.QTK0TE),
                                 }),
-                                T && I && (0, a.jsx)(u.Z, v(b({}, e), { onClick: k })),
+                                T && I && (0, a.jsx)(u.Z, v(y({}, e), { onClick: Z })),
                             ],
                         }),
                     );

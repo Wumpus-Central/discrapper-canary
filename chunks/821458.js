@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(951288),
     i = n(481060),
     l = n(367907),
-    s = n(48217),
-    a = n(26323),
+    a = n(48217),
+    s = n(26323),
     o = n(267642),
     c = n(434404),
     d = n(981631);
@@ -15,8 +15,8 @@ function u(e) {
     let {
         uploadType: t,
         maxFileSizeBytes: l,
-        onComplete: s,
-        showUpsellHeader: a = !0,
+        onComplete: a,
+        showUpsellHeader: s = !0,
         analyticsLocation: o,
         analyticsLocations: c,
     } = e;
@@ -52,9 +52,9 @@ function u(e) {
                 })(
                     {
                         maxFileSizeBytes: l,
-                        onComplete: s,
+                        onComplete: a,
                         uploadType: t,
-                        showUpsellHeader: a,
+                        showUpsellHeader: s,
                         analyticsLocation: o,
                         analyticsLocations: c,
                     },
@@ -69,7 +69,7 @@ function g(e) {
         analyticsLocations: n,
         analyticsSection: r,
         analyticsObject: i,
-        perks: s,
+        perks: a,
         targetPremiumGuildTier: c,
     } = e;
     (0, l.yw)(d.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
@@ -81,7 +81,7 @@ function g(e) {
         guild_id: t.id,
         location_stack: n,
     }),
-        (0, a.Z)({
+        (0, s.Z)({
             analyticsLocations: n,
             analyticsSourceLocation: {
                 section: r,
@@ -89,7 +89,7 @@ function g(e) {
                 page: d.ZY5.GUILD_SETTINGS,
             },
             guild: t,
-            perks: s,
+            perks: a,
         });
 }
 function m(e, t, n, r) {
@@ -103,7 +103,7 @@ function m(e, t, n, r) {
         if ("image/gif" !== i || e.features.has(d.oNc.ANIMATED_BANNER)) {
             if (!e.features.has(d.oNc.BANNER)) {
                 (l.object = d.qAy.IMAGE_CROPPING_MODAL),
-                    (0, s.c)({
+                    (0, a.c)({
                         guild: e,
                         analyticsLocations: t,
                         analyticsLocation: l,
@@ -114,7 +114,7 @@ function m(e, t, n, r) {
             }
         } else {
             (l.object = d.qAy.GIF_CROPPING_MODAL),
-                (0, s.c)({
+                (0, a.c)({
                     guild: e,
                     analyticsLocations: t,
                     analyticsLocation: l,

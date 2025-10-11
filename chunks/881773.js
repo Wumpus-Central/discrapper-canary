@@ -3,7 +3,7 @@ var r = n(951288),
     l = n(647438),
     o = n(120356),
     i = n.n(o),
-    a = n(137317),
+    a = n(599273),
     s = n(442837),
     c = n(692547),
     u = n(561779),
@@ -191,13 +191,13 @@ function x(e) {
         Z = (0, f.km)((e) => e.volume),
         B = (0, f.km)((e) => e.setVolume),
         F = (0, f.km)((e) => e.muted),
-        q = (0, f.km)((e) => e.setMuted),
-        U = (0, f.km)((e) => e.transcriptEnabled),
+        U = (0, f.km)((e) => e.setMuted),
+        q = (0, f.km)((e) => e.transcriptEnabled),
         H = (0, f.km)((e) => e.captionEnabled),
-        Q = (0, f.km)((e) => e.fullScreenEnabled),
-        Y = (0, s.e7)([m.Z], () => m.Z.useReducedMotion),
+        Y = (0, f.km)((e) => e.fullScreenEnabled),
+        Q = (0, s.e7)([m.Z], () => m.Z.useReducedMotion),
         G = (0, s.e7)([m.Z], () => m.Z.keyboardModeEnabled),
-        [z, W] = l.useState(F ? 0 : Z),
+        [W, z] = l.useState(F ? 0 : Z),
         [K, X] = l.useState(!1),
         [$, J] = l.useState(!1),
         [{ volumeAnimSpring: ee }, et] = (0, d.q_F)(() => ({
@@ -212,13 +212,13 @@ function x(e) {
         er = (0, p.ZS)(P),
         el = l.useCallback(
             (e) => {
-                null != o.current && (e !== o.current.volume && (o.current.volume = e), e !== z && W(e));
+                null != o.current && (e !== o.current.volume && (o.current.volume = e), e !== W && z(e));
             },
-            [o, z],
+            [o, W],
         ),
         eo = l.useCallback(() => {
-            null != o.current && (0 === z ? (el(Z), q(!1), V(Z)) : (B(z), el(0), q(!0), V(0)));
-        }, [o, z, el, Z, q, B, V]),
+            null != o.current && (0 === W ? (el(Z), U(!1), V(Z)) : (B(W), el(0), U(!0), V(0)));
+        }, [o, W, el, Z, U, B, V]),
         ei = () => {
             X(!0);
         },
@@ -259,13 +259,13 @@ function x(e) {
             () => (
                 et({
                     volumeAnimSpring: $ || K ? 1 : 0,
-                    immediate: Y,
+                    immediate: Q,
                 }),
                 () => {
                     ee.stop();
                 }
             ),
-            [$, K, et, Y, ee],
+            [$, K, et, Q, ee],
         ),
         l.useEffect(
             () => (
@@ -276,7 +276,7 @@ function x(e) {
             ),
             [es],
         );
-    let ec = 0 === z ? d.OyP : z < 0.5 ? d.X2j : d.gj8,
+    let ec = 0 === W ? d.OyP : W < 0.5 ? d.X2j : d.gj8,
         { icon: eu, label: ed } = _[b];
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -374,12 +374,12 @@ function x(e) {
                                 },
                                 children: (0, r.jsx)(u.i, {
                                     mini: !0,
-                                    initialValue: z,
+                                    initialValue: W,
                                     keyboardStep: 0.1,
                                     minValue: 0,
                                     maxValue: 1,
                                     onValueChange: (e) => {
-                                        el(e), B(e), V(e), $ && (J(!1), M(!1)), F && e > 0 && q(!1);
+                                        el(e), B(e), V(e), $ && (J(!1), M(!1)), F && e > 0 && U(!1);
                                     },
                                     asValueChanges: (e) => {
                                         el(e), $ || (J(!0), M(!0));
@@ -406,7 +406,7 @@ function x(e) {
                             animationTime: C,
                             visible: x,
                             onClick: N,
-                            active: U && b !== O.rq.ENDED,
+                            active: q && b !== O.rq.ENDED,
                             disabled: b === O.rq.ENDED,
                             ariaLabel: h.intl.string(h.t.KCzjTk),
                             tooltipLabel: h.intl.string(h.t.KCzjTk),
@@ -423,7 +423,7 @@ function x(e) {
                             shortcut: O.Y1.CAPTION,
                         }),
                     (0, r.jsx)(j, {
-                        iconComponent: Q ? d.wvt : d.NpZ,
+                        iconComponent: Y ? d.wvt : d.NpZ,
                         animationTime: C,
                         visible: x,
                         onClick: w,

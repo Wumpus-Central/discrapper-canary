@@ -2,25 +2,25 @@ n.d(t, { Z: () => C }), n(388685);
 var r = n(951288);
 n(647438);
 var l = n(120356),
-    a = n.n(l),
+    i = n.n(l),
     s = n(87290),
-    i = n(960048),
-    o = n(381585),
+    o = n(960048),
+    a = n(381585),
     c = n(953528),
     u = n(788822),
     d = n(388032),
     g = n(310582);
-let p = (e) => {
+let f = (e) => {
         let { handleTransition: t, featuredBlockRecord: n } = e,
             l = (0, c.QH)("collectibles_featured_block");
         return (0, r.jsx)("div", {
-            className: a()(g.col2, g.centeredSection),
+            className: i()(g.col2, g.centeredSection),
             children:
                 null == n
                     ? void 0
                     : n.subblocks.map((e, n) => {
                           if (e.type === s.O.CATEGORY) {
-                              let a =
+                              let i =
                                   null != e.unpublishedAt
                                       ? d.intl.string(d.t["h/uBCQ"])
                                       : ((e) => {
@@ -40,7 +40,7 @@ let p = (e) => {
                                         ? d.intl.string(d.t["soka7+"])
                                         : void 0;
                               return (0, r.jsx)(
-                                  o.k0,
+                                  a.k0,
                                   {
                                       newValue: {
                                           categoryPosition: 1,
@@ -52,7 +52,7 @@ let p = (e) => {
                                           u.q,
                                           {
                                               subblock: e,
-                                              badgeText: a,
+                                              badgeText: i,
                                               handleTransition: t,
                                           },
                                           e.categoryStoreListingId,
@@ -65,13 +65,13 @@ let p = (e) => {
                       }),
         });
     },
-    f = (e) => {
+    p = (e) => {
         let { handleTransition: t, categories: n } = e,
             l = (0, c.QH)("collectibles_featured_block");
         if (null == n || n.length < 2)
-            return i.Z.captureMessage("Collectible Featured Block requires at least 2 categories"), null;
-        let [s, p] = n,
-            f =
+            return o.Z.captureMessage("Collectible Featured Block requires at least 2 categories"), null;
+        let [s, f] = n,
+            p =
                 (null == s ? void 0 : s.unpublishedAt) != null
                     ? d.intl.string(d.t["h/uBCQ"])
                     : (() => {
@@ -88,7 +88,7 @@ let p = (e) => {
                       ? d.intl.string(d.t["soka7+"])
                       : void 0,
             C =
-                (null == p ? void 0 : p.unpublishedAt) != null
+                (null == f ? void 0 : f.unpublishedAt) != null
                     ? d.intl.string(d.t["h/uBCQ"])
                     : (() => {
                             switch (l) {
@@ -99,16 +99,16 @@ let p = (e) => {
                                     return !1;
                             }
                         })() &&
-                        (null == p ? void 0 : p.storeListingId) != null &&
-                        "" !== p.storeListingId
+                        (null == f ? void 0 : f.storeListingId) != null &&
+                        "" !== f.storeListingId
                       ? d.intl.string(d.t["soka7+"])
                       : d.intl.string(d.t["o/oRJC"]);
         return (0, r.jsx)("div", {
-            className: a()(g.col2, g.centeredSection),
-            children: (0, r.jsxs)(o.k0, {
+            className: i()(g.col2, g.centeredSection),
+            children: (0, r.jsxs)(a.k0, {
                 newValue: {
                     categoryPosition: 1,
-                    pageCategory: null != s ? s.name : null == p ? void 0 : p.name,
+                    pageCategory: null != s ? s.name : null == f ? void 0 : f.name,
                     pageSection: "featured_block",
                     tilePosition: +(null == s),
                 },
@@ -116,12 +116,12 @@ let p = (e) => {
                     null != s &&
                         (0, r.jsx)(u.q, {
                             category: s,
-                            badgeText: f,
+                            badgeText: p,
                             handleTransition: t,
                         }),
-                    null != p &&
+                    null != f &&
                         (0, r.jsx)(u.q, {
-                            category: p,
+                            category: f,
                             badgeText: C,
                             handleTransition: t,
                         }),
@@ -133,25 +133,25 @@ let p = (e) => {
         let { isLoading: t, handleTransition: n, categories: l, featuredBlockRecord: s } = e;
         return t
             ? (0, r.jsxs)("div", {
-                  className: a()(g.col2, g.centeredSection),
+                  className: i()(g.col2, g.centeredSection),
                   children: [
                       (0, r.jsx)("div", {
-                          className: a()(g.skeleton, g.featuredBlock),
+                          className: i()(g.skeleton, g.featuredBlock),
                           children: (0, r.jsx)("div", { className: g.skeletonBody }),
                       }),
                       (0, r.jsx)("div", {
-                          className: a()(g.skeleton, g.featuredBlock),
+                          className: i()(g.skeleton, g.featuredBlock),
                           children: (0, r.jsx)("div", { className: g.skeletonBody }),
                       }),
                   ],
               })
             : null != s
-              ? (0, r.jsx)(p, {
+              ? (0, r.jsx)(f, {
                     featuredBlockRecord: s,
                     handleTransition: n,
                     isLoading: !1,
                 })
-              : (0, r.jsx)(f, {
+              : (0, r.jsx)(p, {
                     categories: l,
                     handleTransition: n,
                     isLoading: !1,

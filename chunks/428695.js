@@ -23,11 +23,11 @@ let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
             imageMarginX: _,
             imageMarginTop: O,
             trackingSource: E,
-            undismissable: y,
-            onDismissed: v,
+            undismissable: v,
+            onDismissed: y,
             onClick: I,
-            cta: S,
-            ctaColor: C,
+            cta: C,
+            ctaColor: S,
             centerText: T,
             className: N,
         } = e;
@@ -38,9 +38,9 @@ let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
             });
         }, [t.id, m]);
         let j = null;
-        "function" == typeof S
-            ? (j = S())
-            : null != S &&
+        "function" == typeof C
+            ? (j = C())
+            : null != C &&
               (j = (0, r.jsx)(s.zx, {
                   className: h.button,
                   size: s.zx.Sizes.SMALL,
@@ -54,8 +54,8 @@ let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
                           null == I || I();
                   },
                   fullWidth: !0,
-                  color: C,
-                  children: S,
+                  color: S,
+                  children: C,
               }));
         let P = null;
         "function" == typeof n
@@ -81,11 +81,11 @@ let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
         return (0, r.jsxs)("div", {
             className: a()(h.container, N),
             children: [
-                !0 === y
+                !0 === v
                     ? null
                     : (0, r.jsx)(c.P3F, {
                           onClick: () => {
-                              u.ZP.trackWithMetadata(p.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: m }), null == v || v();
+                              u.ZP.trackWithMetadata(p.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: m }), null == y || y();
                           },
                           className: h.close,
                           "aria-label": f.intl.string(f.t.WAI6xs),

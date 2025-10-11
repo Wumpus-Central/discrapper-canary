@@ -5,8 +5,8 @@ n.d(t, {
 var r,
     i = n(951288),
     l = n(647438),
-    s = n(120356),
-    a = n.n(s),
+    a = n(120356),
+    s = n.n(a),
     o = n(748780),
     c = n(215569),
     d = n(248881);
@@ -85,15 +85,15 @@ class f extends l.PureComponent {
     }
 }
 let h = (e) => {
-    let { children: t, step: n, direction: r, className: l, onAnimationStart: s, onAnimationEnd: o } = e;
+    let { children: t, step: n, direction: r, className: l, onAnimationStart: a, onAnimationEnd: o } = e;
     return (0, i.jsx)(c.W, {
         component: "div",
-        className: a()(d.animator, l),
+        className: s()(d.animator, l),
         children: (0, i.jsx)(
             f,
             {
                 direction: r,
-                onAnimationStart: s,
+                onAnimationStart: a,
                 onAnimationEnd: o,
                 children: t,
             },

@@ -1,19 +1,19 @@
 n.d(t, {
-    Z: () => h,
-    m: () => c,
+    Z: () => m,
+    m: () => d,
 });
 var l,
     i = n(493683),
-    s = n(904245),
+    a = n(904245),
     r = n(710845),
-    a = n(592125),
+    s = n(592125),
     o = n(70956),
     u = n(651655);
-let d = +o.Z.Millis.SECOND + 10;
-var c = (((l = {})[(l.GROUP_DM = 0)] = "GROUP_DM"), (l[(l.USER = 1)] = "USER"), (l[(l.CHANNEL = 2)] = "CHANNEL"), l);
+let c = +o.Z.Millis.SECOND + 10;
+var d = (((l = {})[(l.GROUP_DM = 0)] = "GROUP_DM"), (l[(l.USER = 1)] = "USER"), (l[(l.CHANNEL = 2)] = "CHANNEL"), l);
 class g extends u.Z {
     _sendInvite(e, t, n, l, i) {
-        s.Z.sendInvite(e.id, t, n, l).then(
+        a.Z.sendInvite(e.id, t, n, l).then(
             () => i(null, !0),
             () => i(null, !1),
         );
@@ -28,15 +28,15 @@ class g extends u.Z {
             case 1:
                 i.Z.ensurePrivateChannel(e.user.id).then(
                     (i) => {
-                        let s = a.Z.getChannel(i);
-                        null != s && this._sendInvite(s, e.inviteKey, n, l, t);
+                        let a = s.Z.getChannel(i);
+                        null != a && this._sendInvite(a, e.inviteKey, n, l, t);
                     },
                     () => t(null, !1),
                 );
         }
     }
     constructor() {
-        super(new r.Z("InviteQueue"), d);
+        super(new r.Z("InviteQueue"), c);
     }
 }
-let h = new g();
+let m = new g();

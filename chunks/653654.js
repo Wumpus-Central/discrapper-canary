@@ -1,9 +1,9 @@
-n.d(t, { y: () => i });
+n.d(t, { y: () => o });
 var r = n(544891),
     l = n(343817),
-    a = n(411700),
+    i = n(411700),
     s = n(981631);
-let i = async (e) => {
+let o = async (e) => {
     try {
         return (
             await r.tn.get({
@@ -14,6 +14,6 @@ let i = async (e) => {
         ).body;
     } catch (t) {
         let e = new l.Hx(t);
-        throw ((0, a.G)(e), e);
+        throw ((0, i.G)(e), e);
     }
 };

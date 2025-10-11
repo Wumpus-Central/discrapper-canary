@@ -1,9 +1,9 @@
 n.d(t, { Z: () => h }), n(388685);
 var r = n(951288),
     s = n(647438),
-    o = n(120356),
-    a = n.n(o),
-    i = n(137317),
+    a = n(120356),
+    o = n.n(a),
+    i = n(599273),
     l = n(113434),
     c = n(497505),
     d = n(164495),
@@ -13,26 +13,26 @@ var r = n(951288),
     g = n(743294),
     f = n(557579);
 let h = s.forwardRef(function (e, t) {
-    var n, o;
+    var n, a;
     let {
             className: h,
             expansionSpring: x,
             isExpanded: _,
             isExpansionAnimationComplete: b,
-            quest: v,
-            taskDetails: j,
+            quest: j,
+            taskDetails: v,
             useReducedMotion: C,
             onCtxMenuOpen: y,
             onCtxMenuClose: E,
             onCtxMenuSelect: O,
             overlayRef: S,
         } = e,
-        T = (null == (n = v.userStatus) ? void 0 : n.completedAt) != null,
-        w = (0, l.Jf)(v),
+        T = (null == (n = j.userStatus) ? void 0 : n.completedAt) != null,
+        w = (0, l.Jf)(j),
         P = s.useRef(null),
-        N = (null == (o = v.userStatus) ? void 0 : o.enrolledAt) != null,
-        A = null != w ? w.percentComplete : j.percentComplete,
-        [R, B] = s.useState(!1);
+        N = (null == (a = j.userStatus) ? void 0 : a.enrolledAt) != null,
+        R = null != w ? w.percentComplete : v.percentComplete,
+        [A, B] = s.useState(!1);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             T &&
@@ -40,14 +40,14 @@ let h = s.forwardRef(function (e, t) {
                     expansionSpring: x,
                     overlayRef: S,
                     progressBarRef: P,
-                    quest: v,
+                    quest: j,
                     isExpanded: _,
-                    isHovered: R,
+                    isHovered: A,
                 }),
             (0, r.jsx)(i.animated.div, {
                 ref: t,
                 "aria-hidden": _ && b,
-                className: a()(h, f.contentCollapsed, {
+                className: o()(h, f.contentCollapsed, {
                     [f.contentCollapsedExpanded]: _,
                     [f.contentCollapsedAccepted]: N,
                 }),
@@ -67,7 +67,7 @@ let h = s.forwardRef(function (e, t) {
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)(m.Z, {
-                                        quest: v,
+                                        quest: j,
                                         onCtxMenuOpen: y,
                                         onCtxMenuClose: E,
                                         onCtxMenuSelect: O,
@@ -78,15 +78,15 @@ let h = s.forwardRef(function (e, t) {
                         N
                             ? (0, r.jsx)(p.Z, {
                                   contentLocation: "collapsed",
-                                  quest: v,
+                                  quest: j,
                                   progressBarRef: P,
                                   isExpanded: !1,
-                                  percentComplete: A,
+                                  percentComplete: R,
                               })
                             : null,
                         T &&
                             (0, r.jsx)(d.y, {
-                                quest: v,
+                                quest: j,
                                 useReducedMotion: C,
                                 isExpanded: !1,
                                 awaitingConsoleConnections: !1,
@@ -95,7 +95,7 @@ let h = s.forwardRef(function (e, t) {
                                 activeScreen: c.LI.DESKTOP,
                                 showBackButton: !1,
                                 onBack: () => {},
-                                taskDetails: j,
+                                taskDetails: v,
                                 sourceQuestContent: c.jn.QUEST_BAR_V2,
                             }),
                     ],

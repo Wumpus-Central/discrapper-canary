@@ -16,13 +16,13 @@ function _(e, t) {
     let n = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
         _ = (0, u.$R)(t),
         g = (0, l.e7)([c.Z], () => c.Z.can(f.Plq.MANAGE_MESSAGES, t), [t]),
-        { firstMessage: N } = (0, l.e7)([o.Z], () => o.Z.getMessage(t.id), [t.id]),
-        S = g || (null != n && e.canDeleteOwnMessage(n.id));
+        { firstMessage: S } = (0, l.e7)([o.Z], () => o.Z.getMessage(t.id), [t.id]),
+        N = g || (null != n && e.canDeleteOwnMessage(n.id));
     return e.state === f.yb.SENDING ||
-        !S ||
+        !N ||
         f.V$x.UNDELETABLE.has(e.type) ||
         !_ ||
-        (t.isModeratorReportChannel() && (e.id === (null == N ? void 0 : N.id) || (0, E.Z)(e)))
+        (t.isModeratorReportChannel() && (e.id === (null == S ? void 0 : S.id) || (0, E.Z)(e)))
         ? null
         : (0, i.jsx)(s.sNh, {
               id: "delete",

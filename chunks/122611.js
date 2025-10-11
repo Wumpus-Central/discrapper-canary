@@ -17,11 +17,11 @@ var r = n(951288),
     _ = n(374023),
     O = n(661599),
     E = n(617899),
-    y = n(8521),
-    v = n(760326),
+    v = n(8521),
+    y = n(760326),
     I = n(785203),
-    S = n(652785),
-    C = n(921944);
+    C = n(652785),
+    S = n(921944);
 let T = new Set([a.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, a.z.CHANNEL_NOTICE_GUILD_BANNER]);
 function N(e) {
     e.stopPropagation();
@@ -29,11 +29,11 @@ function N(e) {
 function j(e) {
     var t;
     let { guild: n } = e,
-        [p, h] = i.useState(null != (t = o.K.get(S.Iv)) ? t : 0),
+        [p, h] = i.useState(null != (t = o.K.get(C.Iv)) ? t : 0),
         g = (0, l.Wu)(
-            S.HG,
+            C.HG,
             () =>
-                S.XN.filter((e) => {
+                C.XN.filter((e) => {
                     let { dismissibleContentType: t, store: r } = e;
                     return !0 === (null == r ? void 0 : r.channelNoticePredicate(n, p)) && !T.has(t);
                 }).map((e) => e.dismissibleContentType),
@@ -41,12 +41,12 @@ function j(e) {
         );
     return (0, r.jsx)(c.ZP, {
         contentTypes: g,
-        groupName: C.R.CHANNEL_NOTICES,
+        groupName: S.R.CHANNEL_NOTICES,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: i } = e,
                 l = () => {
                     var e;
-                    (e = Date.now()), o.K.set(S.Iv, e), h(e), i(C.L.UNKNOWN);
+                    (e = Date.now()), o.K.set(C.Iv, e), h(e), i(S.L.UNKNOWN);
                 },
                 c = (() => {
                     switch (t) {
@@ -66,7 +66,7 @@ function j(e) {
                                 markAsDismissed: l,
                             });
                         case a.z.CHANNEL_NOTICE_QUICKSWITCHER:
-                            return (0, r.jsx)(v.Z, {
+                            return (0, r.jsx)(y.Z, {
                                 guild: n,
                                 markAsDismissed: l,
                             });
@@ -78,7 +78,7 @@ function j(e) {
                         case a.z.LINKED_ROLE_ADMIN_GUILD:
                             return (0, r.jsx)(s.Z, {
                                 guild: n,
-                                markAsDismissed: () => i(C.L.UNKNOWN),
+                                markAsDismissed: () => i(S.L.UNKNOWN),
                             });
                         default:
                             return null;
@@ -99,7 +99,7 @@ let P = (e) => {
         case I.R.ENABLE_PUBLIC_GUILD:
             return (0, r.jsx)(b.Z, { guild: t });
         case I.R.MAX_MEMBER_COUNT:
-            return (0, r.jsx)(y.Z, { guild: t });
+            return (0, r.jsx)(v.Z, { guild: t });
         case I.R.GUILD_LIVE_CHANNEL:
             return (0, r.jsx)(p.ZP, { guild: t });
         case I.R.GUILD_MFA_WARNING:

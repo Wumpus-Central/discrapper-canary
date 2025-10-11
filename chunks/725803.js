@@ -2,10 +2,10 @@ n.d(t, { Z: () => o }), n(388685);
 var r = n(647438),
     i = n(442837),
     l = n(881052),
-    s = n(728345),
-    a = n(812206);
+    a = n(728345),
+    s = n(812206);
 function o(e, t) {
-    let n = (0, i.e7)([a.Z], () => a.Z.getGuildApplication(e, t)),
+    let n = (0, i.e7)([s.Z], () => s.Z.getGuildApplication(e, t)),
         [o, c] = r.useState(null == n),
         [d, u] = r.useState(),
         [g, m] = r.useState(!1),
@@ -13,7 +13,7 @@ function o(e, t) {
             if (null == n && null != e) {
                 m(!0), c(!0);
                 try {
-                    await s.ZP.getApplicationsForGuild(e, {
+                    await a.ZP.getApplicationsForGuild(e, {
                         type: t,
                         includeTeam: !0,
                     });

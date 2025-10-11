@@ -21,11 +21,11 @@ var r = n(951288),
     _ = n(314451),
     O = n(35583),
     E = n(821020),
-    y = n(340137),
-    v = n(522474),
+    v = n(340137),
+    y = n(522474),
     I = n(141321),
-    S = n(984802),
-    C = n(451478),
+    C = n(984802),
+    S = n(451478),
     T = n(998502),
     N = n(228488),
     j = n(403497),
@@ -55,8 +55,8 @@ let L = i.memo(function () {
     i.useLayoutEffect(() => {
         T.ZP.setMinimumSize(x.J, x.N);
     }, []);
-    let R = (0, S.Ll)(),
-        D = (0, s.e7)([C.Z, v.Z], () => (0, N.rB)()),
+    let R = (0, C.Ll)(),
+        D = (0, s.e7)([S.Z, y.Z], () => (0, N.rB)()),
         k = (function (e) {
             let {
                 showBackForwardButtons: t,
@@ -99,7 +99,7 @@ let L = i.memo(function () {
                                     (0, r.jsx)(h.Z, {
                                         firstElementFocusJumpSectionProps: "BACK_FORWARD_NAVIGATION" === k ? e : void 0,
                                     }),
-                                Z && (0, r.jsx)(y.Z, { focusSectionProps: "NOTIFICATIONS_INBOX" === k ? e : void 0 }),
+                                Z && (0, r.jsx)(v.Z, { focusSectionProps: "NOTIFICATIONS_INBOX" === k ? e : void 0 }),
                             ],
                         }),
                         title: (0, r.jsx)(w, {

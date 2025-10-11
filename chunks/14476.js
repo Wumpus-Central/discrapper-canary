@@ -21,15 +21,15 @@ let h = (e) => {
             onSelect: m,
             productName: x,
             a11yLabel: g,
-            selectedSkuId: b,
-            category: j,
+            selectedSkuId: j,
+            category: b,
         } = e,
         y = i.useRef(null),
-        { isHoveringOrFocusing: v } = (0, c.Z)(y),
-        L = !h && v,
+        { isHoveringOrFocusing: L } = (0, c.Z)(y),
+        v = !h && L,
         S = (0, C.ZP)(),
         w = (0, s.wj)(S),
-        O = {
+        I = {
             type: o.Z.AVATAR_DECORATION,
             label: g,
             asset: n,
@@ -43,20 +43,20 @@ let h = (e) => {
             },
             className: l()(w ? f.shopCardDark : f.shopCard, {
                 [f.shopCardAnimation]: !h,
-                [w ? f.shopCardDarkHighlighted : f.shopCardHighlighted]: L,
-                [f.shopCardSelected]: b === t,
+                [w ? f.shopCardDarkHighlighted : f.shopCardHighlighted]: v,
+                [f.shopCardSelected]: j === t,
             }),
             children: [
                 (0, r.jsx)("div", {
                     className: l()(f.preview, {
-                        [f.previewTrick]: j === u.KN.Trick,
-                        [f.previewTreat]: j === u.KN.Treat,
+                        [f.previewTrick]: b === u.KN.Trick,
+                        [f.previewTreat]: b === u.KN.Treat,
                         [f.shopCardClaimed]: h,
                     }),
                     children: (0, r.jsx)(p.R, {
-                        item: O,
+                        item: I,
                         user: a,
-                        isHighlighted: L,
+                        isHighlighted: v,
                         avatarSize: d.EFr.SIZE_120,
                         isPurchased: h,
                     }),

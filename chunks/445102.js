@@ -3,7 +3,7 @@ var a = n(311473),
     l = n(131951),
     i = n(626135);
 async function r(e, t) {
-    let { rating: n, category: r, reasonCode: o, reasonDescription: s, variant: u, feedback: c, analyticsData: d } = t,
+    let { rating: n, category: r, reasonCode: o, reasonDescription: s, variant: u, feedback: d, analyticsData: c } = t,
         b = l.Z.getSettings(),
         f = l.Z.getInputDeviceId(),
         O = l.Z.getInputDevices()[f],
@@ -48,7 +48,7 @@ async function r(e, t) {
                 reason_code: o,
                 reason_description: s,
                 reason_variant: u,
-                feedback: c,
+                feedback: d,
                 audio_input_mode: b.mode,
                 automatic_audio_input_sensitivity_enabled: b.modeOptions.autoThreshold,
                 audio_input_sensitivity: b.modeOptions.threshold,
@@ -66,7 +66,7 @@ async function r(e, t) {
                 automatic_audio_subsystem: b.automaticAudioSubsystem,
                 krisp_nc_model: S,
             },
-            d,
+            c,
         ),
     );
 }

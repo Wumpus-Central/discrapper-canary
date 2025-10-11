@@ -62,7 +62,7 @@ function I(e) {
         }),
     });
 }
-let k = [
+let w = [
     {
         id: "action",
         name: "Action",
@@ -108,13 +108,13 @@ let k = [
         },
     },
 ];
-function w(e) {
+function k(e) {
     let { actionLog: t, initialHeight: n } = e,
         i = r.useMemo(
             () =>
                 t.error
                     ? [
-                          ...k,
+                          ...w,
                           {
                               id: "error",
                               name: (0, a.jsxs)(a.Fragment, {
@@ -146,7 +146,7 @@ function w(e) {
                               },
                           },
                       ]
-                    : k,
+                    : w,
             [t],
         ),
         { TabBar: s, renderSelectedTab: o } = (0, E.ZP)({ tabs: i }, [i]);
@@ -315,7 +315,7 @@ function Z() {
                 onClickRow: (e) => j(e.actionLog),
             }),
             null != v &&
-                (0, a.jsx)(w, {
+                (0, a.jsx)(k, {
                     actionLog: v,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
                 }),

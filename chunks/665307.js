@@ -17,11 +17,11 @@ var r,
     _ = n(785547),
     O = n(600164),
     E = n(167533),
-    y = n(925329),
-    v = n(707409),
+    v = n(925329),
+    y = n(707409),
     I = n(490983),
-    S = n(799777),
-    C = n(626135),
+    C = n(799777),
+    S = n(626135),
     T = n(780570),
     N = n(624138),
     j = n(645818),
@@ -101,9 +101,9 @@ let R = (0, N.Mg)(p.Z.GAME_LIST_ROW_MIN_HEIGHT),
                 (0, i.jsxs)(O.Z, {
                     align: O.Z.Align.CENTER,
                     children: [
-                        (0, i.jsx)(y.Z, {
+                        (0, i.jsx)(v.Z, {
                             game: e.application,
-                            size: y.A.SMALL,
+                            size: v.A.SMALL,
                             className: A.gameIcon,
                         }),
                         (0, i.jsxs)("div", {
@@ -160,9 +160,9 @@ let R = (0, N.Mg)(p.Z.GAME_LIST_ROW_MIN_HEIGHT),
                         : e.isNew
                           ? x.intl.string(x.t["+F0Tho"])
                           : 0 !== e.lastPlayed
-                            ? (0, i.jsx)(v.ZP, {
+                            ? (0, i.jsx)(y.ZP, {
                                   end: e.lastPlayed,
-                                  location: v.ZP.Locations.GAME_LIBRARY_LAST_PLAYED,
+                                  location: y.ZP.Locations.GAME_LIBRARY_LAST_PLAYED,
                               })
                             : x.intl.string(x.t.EoWLrq)),
                     (0, i.jsx)(O.Z, {
@@ -349,7 +349,7 @@ class B extends (r = l.PureComponent) {
             }
             e.num_applications_total++;
         }
-        C.default.track(P.rMx.LIBRARY_VIEWED, L(w({}, e), { load_id: t.loadId }));
+        S.default.track(P.rMx.LIBRARY_VIEWED, L(w({}, e), { load_id: t.loadId }));
     }
     handleSort(e, t) {
         b.fS(e, t);
@@ -476,7 +476,7 @@ class B extends (r = l.PureComponent) {
     }
 }
 function H(e) {
-    let t = l.useContext(C.AnalyticsContext),
+    let t = l.useContext(S.AnalyticsContext),
         n = (0, s.TH)(),
         {
             applicationViewItems: r,
@@ -492,11 +492,11 @@ function H(e) {
             sortDirection: d,
             activeRowKey: p,
             isNavigatingByKeyboard: f,
-        } = (0, c.cj)([S.Z], () => ({
-            sortKey: S.Z.sortKey,
-            sortDirection: S.Z.sortDirection,
-            activeRowKey: S.Z.activeRowKey,
-            isNavigatingByKeyboard: S.Z.isNavigatingByKeyboard,
+        } = (0, c.cj)([C.Z], () => ({
+            sortKey: C.Z.sortKey,
+            sortDirection: C.Z.sortDirection,
+            activeRowKey: C.Z.activeRowKey,
+            isNavigatingByKeyboard: C.Z.isNavigatingByKeyboard,
         }));
     return (0, i.jsx)(
         B,

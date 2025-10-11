@@ -110,8 +110,8 @@ function d(e) {
                 groupId: n,
             };
             n === e.id && (d = w);
-            let { jumpSequenceId: M, jumpFlash: R, jumpTargetId: k } = h;
-            R && e.id === k && null != M && (w.flashKey = M),
+            let { jumpSequenceId: M, jumpFlash: R, jumpTargetId: L } = h;
+            R && e.id === L && null != M && (w.flashKey = M),
                 h.jumpTargetId === e.id && (w.jumpTarget = !0),
                 null != b &&
                     e.id === b.startId &&

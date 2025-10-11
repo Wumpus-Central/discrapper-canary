@@ -1,6 +1,6 @@
 n.d(t, { Z: () => g }), n(388685), n(482853);
-var l = n(951288),
-    i = n(647438),
+var i = n(951288),
+    l = n(647438),
     r = n(481060),
     a = n(100527),
     o = n(367907),
@@ -13,23 +13,23 @@ var l = n(951288),
     f = n(314734),
     h = n(981631),
     v = n(487303);
-let x = {
+let y = {
         width: f.Gy,
         height: f.lv,
     },
-    y = { height: f.lv },
-    g = i.memo(
-        i.forwardRef(function (e, t) {
+    x = { height: f.lv },
+    g = l.memo(
+        l.forwardRef(function (e, t) {
             let { context: n, entrypoint: r, initHistory: u } = e,
                 { analyticsLocations: d } = (0, s.ZP)(a.Z.APP_LAUNCHER);
             return (
-                i.useEffect(() => {
+                l.useEffect(() => {
                     (0, o.yw)(h.rMx.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
                         source: r,
                         location: "app_launcher",
                     });
                 }, [r]),
-                i.useEffect(() => {
+                l.useEffect(() => {
                     let e = Date.now();
                     return () => {
                         (0, o.yw)(h.rMx.APP_LAUNCHER_CLOSED, {
@@ -39,17 +39,17 @@ let x = {
                         });
                     };
                 }, [r]),
-                (0, l.jsx)("div", {
+                (0, i.jsx)("div", {
                     className: v.drawerSizingWrapper,
                     ref: t,
-                    style: x,
-                    children: (0, l.jsx)("div", {
+                    style: y,
+                    children: (0, i.jsx)("div", {
                         className: v.contentWrapper,
-                        children: (0, l.jsx)(s.Gt, {
+                        children: (0, i.jsx)(s.Gt, {
                             value: d,
-                            children: (0, l.jsx)(b, {
+                            children: (0, i.jsx)(b, {
                                 initHistory: u,
-                                children: (0, l.jsx)(N, {
+                                children: (0, i.jsx)(N, {
                                     context: n,
                                     entrypoint: r,
                                 }),
@@ -62,69 +62,69 @@ let x = {
     );
 function b(e) {
     let { initHistory: t, children: n } = e,
-        [r, a] = i.useState(null != t ? t : [{ type: u.gc.HOME }]),
-        [o, s] = i.useState({}),
+        [r, a] = l.useState(null != t ? t : [{ type: u.gc.HOME }]),
+        [o, s] = l.useState({}),
         c = r[r.length - 1],
-        [d, p] = i.useState(!1),
-        m = i.useCallback((e) => {
+        [d, p] = l.useState(!1),
+        m = l.useCallback((e) => {
             a((t) => [...t, e]);
         }, []),
-        f = i.useCallback(() => {
+        f = l.useCallback(() => {
             let e = null;
             a((t) => (t.length <= 1 ? t : ((e = t[t.length - 1]), t.slice(0, -1)))),
                 s((t) => {
-                    var n, l;
+                    var n, i;
                     return null == e
                         ? t
                         : ((n = (function (e) {
                               for (var t = 1; t < arguments.length; t++) {
                                   var n = null != arguments[t] ? arguments[t] : {},
-                                      l = Object.keys(n);
+                                      i = Object.keys(n);
                                   "function" == typeof Object.getOwnPropertySymbols &&
-                                      (l = l.concat(
+                                      (i = i.concat(
                                           Object.getOwnPropertySymbols(n).filter(function (e) {
                                               return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                           }),
                                       )),
-                                      l.forEach(function (t) {
-                                          var l;
-                                          (l = n[t]),
+                                      i.forEach(function (t) {
+                                          var i;
+                                          (i = n[t]),
                                               t in e
                                                   ? Object.defineProperty(e, t, {
-                                                        value: l,
+                                                        value: i,
                                                         enumerable: !0,
                                                         configurable: !0,
                                                         writable: !0,
                                                     })
-                                                  : (e[t] = l);
+                                                  : (e[t] = i);
                                       });
                               }
                               return e;
                           })({}, t)),
-                          (l = l = { [e.type]: e }),
+                          (i = i = { [e.type]: e }),
                           Object.getOwnPropertyDescriptors
-                              ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
+                              ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                               : (function (e, t) {
                                     var n = Object.keys(e);
                                     if (Object.getOwnPropertySymbols) {
-                                        var l = Object.getOwnPropertySymbols(e);
-                                        n.push.apply(n, l);
+                                        var i = Object.getOwnPropertySymbols(e);
+                                        n.push.apply(n, i);
                                     }
                                     return n;
-                                })(Object(l)).forEach(function (e) {
-                                    Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
+                                })(Object(i)).forEach(function (e) {
+                                    Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                                 }),
                           n);
                 });
         }, []),
-        h = i.useCallback(
+        h = l.useCallback(
             (e) => {
                 var t;
                 return null != (t = r.findLast((t) => t.type === e)) ? t : o[e];
             },
             [r, o],
         );
-    return (0, l.jsx)(u.uX.Provider, {
+    return (0, i.jsx)(u.uX.Provider, {
         value: {
             history: r,
             discard: o,
@@ -140,16 +140,16 @@ function b(e) {
 }
 function N(e) {
     let { context: t, entrypoint: n } = e,
-        [a, o] = i.useState(""),
+        [a, o] = l.useState(""),
         { setScroller: s, isCloseToBottom: c } = (function (e) {
-            let [t, n] = i.useState(null),
-                [l, r] = i.useState(!1),
-                a = i.useRef(0);
+            let [t, n] = l.useState(null),
+                [i, r] = l.useState(!1),
+                a = l.useRef(0);
             return (
-                i.useEffect(() => {
+                l.useEffect(() => {
                     null == t || t.scrollTo(0, 0);
                 }, [t, e]),
-                i.useEffect(() => {
+                l.useEffect(() => {
                     if (null != t)
                         return (
                             t.scrollTo(0, a.current),
@@ -166,31 +166,31 @@ function N(e) {
                 }, [t]),
                 {
                     setScroller: n,
-                    isCloseToBottom: l,
+                    isCloseToBottom: i,
                 }
             );
         })(a),
-        { currentView: h, getMostRecentHistoryItemByType: x, setSlideReady: g } = (0, u.hH)();
-    i.useEffect(() => {
+        { currentView: h, getMostRecentHistoryItemByType: y, setSlideReady: g } = (0, u.hH)();
+    l.useEffect(() => {
         g(!1);
     }, [null == h ? void 0 : h.type, g]);
-    let b = i.useCallback(() => {
+    let b = l.useCallback(() => {
         g(!0);
     }, [g]);
     if (null == h) return null;
-    let N = x(u.gc.LIST),
-        j = x(u.gc.APPLICATION);
-    return (0, l.jsxs)(r.MyZ, {
+    let N = y(u.gc.LIST),
+        j = y(u.gc.APPLICATION);
+    return (0, i.jsxs)(r.MyZ, {
         activeSlide: h.type,
         width: f.Gy,
         onSlideReady: b,
         children: [
-            (0, l.jsx)(r.Mi4, {
+            (0, i.jsx)(r.Mi4, {
                 id: u.gc.HOME,
-                children: (0, l.jsx)("div", {
+                children: (0, i.jsx)("div", {
                     className: v.slideContent,
-                    style: y,
-                    children: (0, l.jsx)(p.Z, {
+                    style: x,
+                    children: (0, i.jsx)(p.Z, {
                         isScrollCloseToBottom: c,
                         setScroller: s,
                         context: t,
@@ -200,14 +200,14 @@ function N(e) {
                     }),
                 }),
             }),
-            (0, l.jsx)(r.Mi4, {
+            (0, i.jsx)(r.Mi4, {
                 id: u.gc.LIST,
-                children: (0, l.jsx)("div", {
+                children: (0, i.jsx)("div", {
                     className: v.slideContent,
-                    style: y,
+                    style: x,
                     children:
                         null != N &&
-                        (0, l.jsx)(m.Z, {
+                        (0, i.jsx)(m.Z, {
                             context: t,
                             entrypoint: n,
                             title: N.title,
@@ -218,14 +218,14 @@ function N(e) {
                         }),
                 }),
             }),
-            (0, l.jsx)(r.Mi4, {
+            (0, i.jsx)(r.Mi4, {
                 id: u.gc.APPLICATION,
-                children: (0, l.jsx)("div", {
+                children: (0, i.jsx)("div", {
                     className: v.slideContent,
-                    style: y,
+                    style: x,
                     children:
                         null != j &&
-                        (0, l.jsx)(d.Z, {
+                        (0, i.jsx)(d.Z, {
                             context: t,
                             application: j.application,
                             sectionName: j.sectionName,

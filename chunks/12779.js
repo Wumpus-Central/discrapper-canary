@@ -14,15 +14,15 @@ let u = i.memo(function (e) {
         onClick: i,
         className: l,
         collapsed: u,
-        speakers: p,
-        channel: h,
+        speakers: h,
+        channel: p,
         isStreamLive: f,
     } = e;
     return (0, r.jsxs)(s.P3F, {
         onClick: i,
         className: a()(d.container, l),
         children: [
-            null == p
+            null == h
                 ? (0, r.jsx)(s.BFJ, {
                       size: "custom",
                       color: "currentColor",
@@ -44,14 +44,14 @@ let u = i.memo(function (e) {
                 children: [t, " \u2014 ", n],
             }),
             u &&
-                null != h &&
                 null != p &&
-                p.length > 0 &&
+                null != h &&
+                h.length > 0 &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(c.Z, {
-                            channel: h,
-                            speakers: p,
+                            channel: p,
+                            speakers: h,
                         }),
                         f && (0, r.jsx)(o.ZP, {}),
                     ],

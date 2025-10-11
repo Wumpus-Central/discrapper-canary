@@ -1,9 +1,9 @@
 n.d(t, { Z: () => h }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(137317),
-    s = n(722770),
-    a = n(481060),
+    l = n(599273),
+    a = n(722770),
+    s = n(481060),
     o = n(236413),
     c = n(85960),
     d = n(65912),
@@ -56,29 +56,29 @@ function f(e, t) {
 function h(e) {
     let { guildId: t, triggerType: n } = e,
         h = i.useMemo(() => () => (0, o.ep)(t, n), [t, n]),
-        [x] = i.useState(h),
-        [b, j] = i.useState(!1),
-        { editingRule: _, createNewEditingRule: v } = (0, d.V)(),
+        [b] = i.useState(h),
+        [x, j] = i.useState(!1),
+        { editingRule: v, createNewEditingRule: _ } = (0, d.V)(),
         { getDefaultRuleName: C } = c.I6[n],
-        O = !(0, o.Vb)(_) && (null == _ ? void 0 : _.triggerType) === n,
-        [y, N] = i.useState(O ? _ : x),
-        E = (0, a.q_F)({
+        O = !(0, o.Vb)(v) && (null == v ? void 0 : v.triggerType) === n,
+        [y, N] = i.useState(O ? v : b),
+        E = (0, s.q_F)({
             opacity: +!O,
             pointerEvents: O ? "none" : "all",
             config: f(p({}, l.config.stiff), { clamp: !0 }),
         }),
-        I = (0, a.q_F)({
+        I = (0, s.q_F)({
             opacity: +!!O,
             pointerEvents: O ? "all" : "none",
             config: f(p({}, l.config.stiff), { clamp: !0 }),
             onStart: () => {
-                N(O ? _ : x);
+                N(O ? v : b);
             },
             onRest: () => {
-                N(O ? _ : x), j(O);
+                N(O ? v : b), j(O);
             },
         });
-    return null == _ || O
+    return null == v || O
         ? (0, r.jsxs)("div", {
               className: m.mainRuleContainer,
               style: { height: O ? "auto" : "60px" },
@@ -88,26 +88,26 @@ function h(e) {
                       style: I,
                       children: (0, r.jsx)(u.Z, {
                           rule: y,
-                          persistEdit: b,
+                          persistEdit: x,
                       }),
                   }),
                   (0, r.jsx)(l.animated.div, {
                       className: m.animatedNewRuleContainer,
                       style: E,
-                      children: (0, r.jsxs)(a.P3F, {
+                      children: (0, r.jsxs)(s.P3F, {
                           className: m.addAnotherRuleCardContainer,
                           onClick: () => {
-                              v(t, n);
+                              _(t, n);
                           },
                           children: [
-                              (0, r.jsx)(a.oFk, {
+                              (0, r.jsx)(s.oFk, {
                                   size: "custom",
                                   width: 20,
                                   height: 20,
-                                  color: s.Z.BLUE_345,
+                                  color: a.Z.BLUE_345,
                                   className: m.plusIcon,
                               }),
-                              (0, r.jsx)(a.Text, {
+                              (0, r.jsx)(s.Text, {
                                   variant: "text-md/semibold",
                                   color: "text-link",
                                   children: g.intl.format(g.t.dNjRAQ, { ruleName: C() }),

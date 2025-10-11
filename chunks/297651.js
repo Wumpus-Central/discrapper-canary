@@ -43,7 +43,7 @@ function p(e, t) {
             e,
             i,
         ]),
-        f = l.useCallback(
+        C = l.useCallback(
             (e) => {
                 e
                     ? null === v.current &&
@@ -61,6 +61,6 @@ function p(e, t) {
             },
             [],
         ),
-        { handleCardVisibilityChange: f }
+        { handleCardVisibilityChange: C }
     );
 }

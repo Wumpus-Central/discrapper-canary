@@ -1,18 +1,18 @@
 n.d(t, { Z: () => o }), n(642613), n(388685);
-var l = n(647438),
-    i = n(471518),
+var i = n(647438),
+    l = n(471518),
     r = n(70956),
     a = n(314734);
 function o(e) {
     let { sectionId: t, commandsByActiveSection: n } = e,
-        [o, s] = l.useState(a.bS.ALPHABETICAL),
-        c = l.useMemo(() => {
-            var e, l;
-            return null != (l = null == (e = n.find((e) => e.section.id === t)) ? void 0 : e.data) ? l : [];
+        [o, s] = i.useState(a.bS.ALPHABETICAL),
+        c = i.useMemo(() => {
+            var e, i;
+            return null != (i = null == (e = n.find((e) => e.section.id === t)) ? void 0 : e.data) ? i : [];
         }, [n, t]),
         { popularSortedCommands: u, canSort: d } = (function (e) {
             let { alphabeticalSortedCommands: t } = e;
-            return l.useMemo(() => {
+            return i.useMemo(() => {
                 if (t.length <= 1)
                     return {
                         popularSortedCommands: t,
@@ -31,11 +31,11 @@ function o(e) {
                 return e
                     ? (n.sort((e, t) => {
                           let n = e.command.global_popularity_rank,
-                              l = t.command.global_popularity_rank;
-                          if (null != n && null != l) {
-                              if (n !== l) return n - l;
+                              i = t.command.global_popularity_rank;
+                          if (null != n && null != i) {
+                              if (n !== i) return n - i;
                           } else if (null != n) return -1;
-                          else if (null != l) return 1;
+                          else if (null != i) return 1;
                           return e.alphabeticalSortIndex - t.alphabeticalSortIndex;
                       }),
                       {
@@ -51,10 +51,10 @@ function o(e) {
                       };
             }, [t]);
         })({ alphabeticalSortedCommands: c });
-    l.useEffect(() => {
-        i.i6(t, { dontRefetchMs: r.Z.Millis.DAY });
+    i.useEffect(() => {
+        l.i6(t, { dontRefetchMs: r.Z.Millis.DAY });
     }, [t]),
-        l.useLayoutEffect(() => {
+        i.useLayoutEffect(() => {
             d && s(a.bS.POPULAR);
         }, [d]);
     let p = c;

@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(951288),
     s = n(120356),
-    o = n.n(s),
-    a = n(780384),
+    a = n.n(s),
+    o = n(780384),
     i = n(410030),
     l = n(633459);
 let c = n(17702),
@@ -13,9 +13,9 @@ let c = n(17702),
     u = (e) => {
         let { customSize: t, shouldUseThemeColor: n = !1, loading: s, className: u } = e,
             p = (0, i.ZP)(),
-            m = n && (0, a.ap)(p) ? d : c;
+            m = n && (0, o.ap)(p) ? d : c;
         return (0, r.jsx)("img", {
-            className: o()(l.orbIconSVG, u, { [l.loading]: s }),
+            className: a()(l.orbIconSVG, u, { [l.loading]: s }),
             src: m,
             alt: "",
             style: void 0 !== t ? { height: t } : void 0,

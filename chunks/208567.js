@@ -1,6 +1,6 @@
 n.d(t, {
     S: () => j,
-    Z: () => O,
+    Z: () => y,
 }),
     n(35282),
     n(388685);
@@ -92,16 +92,16 @@ class v extends (i = l.PureComponent) {
                 name: c,
                 makeURL: f,
                 disabled: v,
-                onChange: O,
-                showIcon: y,
+                onChange: y,
+                showIcon: O,
                 showIconDisabled: _,
                 className: C,
                 imageClassName: N,
                 iconClassName: S,
-                iconWrapperClassName: P,
-                icon: w,
-                hideSize: I,
-                imageStyle: E,
+                iconWrapperClassName: I,
+                icon: E,
+                hideSize: P,
+                imageStyle: w,
                 showRemoveButton: T,
                 maxFileSizeBytes: Z,
                 onFileSizeError: k,
@@ -124,13 +124,13 @@ class v extends (i = l.PureComponent) {
                 className: o()(g.imageUploader, g.disabled, C),
                 children: (0, r.jsxs)("div", {
                     className: o()(g.imageUploaderInner, N),
-                    style: x(h({}, E), { backgroundImage: n }),
+                    style: x(h({}, w), { backgroundImage: n }),
                     children: [
                         i,
                         _ &&
                             (0, r.jsx)("div", {
                                 className: o()(g.imageUploaderIcon, g.imageUploaderIconDisabled, S),
-                                children: w,
+                                children: E,
                             }),
                     ],
                 }),
@@ -141,7 +141,7 @@ class v extends (i = l.PureComponent) {
                   onClick: this.handleRemove,
                   children: b.intl.string(b.t.N86XcH),
               }))
-            : I ||
+            : P ||
               (l = (0, r.jsx)("small", {
                   className: g.sizeInfo,
                   children: b.intl.format(b.t.AH4c7e, { size: m.IXf }),
@@ -153,11 +153,11 @@ class v extends (i = l.PureComponent) {
                 (0, r.jsx)(d.tEY, {
                     within: !0,
                     children: (0, r.jsxs)("div", {
-                        className: y ? o()(g.imageUploaderIconWrapper, P) : void 0,
+                        className: O ? o()(g.imageUploaderIconWrapper, I) : void 0,
                         children: [
                             (0, r.jsxs)("div", {
                                 className: o()(g.imageUploaderInner, N),
-                                style: x(h({}, E), { backgroundImage: n }),
+                                style: x(h({}, w), { backgroundImage: n }),
                                 children: [
                                     (0, r.jsx)("span", {
                                         "aria-hidden": !0,
@@ -171,7 +171,7 @@ class v extends (i = l.PureComponent) {
                                           })
                                         : (0, r.jsx)(p.ZP, {
                                               ref: this.inputRef,
-                                              onChange: O,
+                                              onChange: y,
                                               className: g.imageUploaderFileInput,
                                               "aria-label": R,
                                               tabIndex: 0,
@@ -186,10 +186,10 @@ class v extends (i = l.PureComponent) {
                                     "aria-hidden": "true",
                                     children: s,
                                 }),
-                            y &&
+                            O &&
                                 (0, r.jsx)(j, {
                                     className: S,
-                                    icon: w,
+                                    icon: E,
                                 }),
                         ],
                     }),
@@ -216,4 +216,4 @@ f(v, "defaultProps", {
     maxFileSizeBytes: 1 / 0,
     icon: null,
 });
-let O = v;
+let y = v;

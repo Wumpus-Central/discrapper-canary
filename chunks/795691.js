@@ -2,13 +2,13 @@ n.d(t, { Z: () => d }), n(388685), n(457542), n(642613);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
-    s = n(279881),
-    a = n(383124),
+    a = n(279881),
+    s = n(383124),
     o = n(388032),
     c = n(661656);
 function d(e) {
     let { guildId: t, selectedGameApplicationIds: n, onUpdateGames: d, disabled: u } = e,
-        { topGames: g, tryFetchTopGames: m } = (0, s.I)(),
+        { topGames: g, tryFetchTopGames: m } = (0, a.I)(),
         p = g.get(t),
         [f, h] = i.useState(!1);
     i.useEffect(() => {
@@ -17,7 +17,7 @@ function d(e) {
                 h(!1);
             });
     }, [t, m]);
-    let x = i.useMemo(
+    let b = i.useMemo(
             () =>
                 null == p
                     ? []
@@ -26,7 +26,7 @@ function d(e) {
                           .sort((e, t) => p[t].score - p[e].score),
             [p, n],
         ),
-        b = i.useCallback(
+        x = i.useCallback(
             (e) => {
                 n.includes(e) ? d(n.filter((t) => t !== e)) : d([...n, e]);
             },
@@ -34,7 +34,7 @@ function d(e) {
         );
     return f && null == p
         ? (0, r.jsx)(l.$jN, {})
-        : null == x || 0 === x.length
+        : null == b || 0 === b.length
           ? null
           : (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -49,13 +49,13 @@ function d(e) {
                             }),
                             (0, r.jsx)("div", {
                                 className: c.gamesList,
-                                children: x.map((e) =>
+                                children: b.map((e) =>
                                     (0, r.jsx)(
-                                        a.Z,
+                                        s.Z,
                                         {
                                             applicationId: e,
                                             selected: !1,
-                                            onClick: b,
+                                            onClick: x,
                                             disabled: u,
                                         },
                                         e,

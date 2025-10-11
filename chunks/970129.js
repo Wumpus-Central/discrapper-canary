@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    s = n(28664),
-    a = n(481060),
+    a = n(28664),
+    s = n(481060),
     o = n(496675),
     c = n(388032);
 function d(e, t, n) {
@@ -19,11 +19,11 @@ function d(e, t, n) {
 }
 function u(e) {
     let { className: t, tooltipText: n, width: i = 16, height: l = 16 } = e;
-    return (0, r.jsx)(s.u, {
+    return (0, r.jsx)(a.u, {
         text: n,
         children: (0, r.jsx)("div", {
             className: t,
-            children: (0, r.jsx)(a.mBM, {
+            children: (0, r.jsx)(s.mBM, {
                 size: "custom",
                 color: "currentColor",
                 width: i,

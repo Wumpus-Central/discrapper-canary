@@ -1,8 +1,8 @@
 e.d(n, { Z: () => c });
 var i = e(951288);
 e(647438);
-var a = e(442837),
-    l = e(481060),
+var l = e(442837),
+    a = e(481060),
     r = e(569471),
     o = e(346479),
     s = e(723170),
@@ -10,26 +10,26 @@ var a = e(442837),
     u = e(388032);
 function c(t) {
     let n = (0, s.B)(t);
-    return (0, a.e7)([r.Z], () => r.Z.hasJoined(t.id))
-        ? (0, i.jsx)(l.sNh, {
+    return (0, l.e7)([r.Z], () => r.Z.hasJoined(t.id))
+        ? (0, i.jsx)(a.sNh, {
               id: "thread-notifications",
               label: u.intl.string(u.t.h850Sk),
               children: (0, d.zb)().map((e) => {
-                  let { setting: a, label: r } = e;
+                  let { setting: l, label: r } = e;
                   return (0, i.jsx)(
-                      l.k5B,
+                      a.k5B,
                       {
                           group: "thread-notifications",
-                          id: "".concat(a),
+                          id: "".concat(l),
                           label: r,
-                          action: () => o.Z.setNotificationSettings(t, { flags: a }),
-                          checked: a === n,
+                          action: () => o.Z.setNotificationSettings(t, { flags: l }),
+                          checked: l === n,
                       },
-                      a,
+                      l,
                   );
               }),
           })
-        : (0, i.jsx)(l.sNh, {
+        : (0, i.jsx)(a.sNh, {
               id: "notifications-disabled",
               label: u.intl.string(u.t.h850Sk),
               disabled: !0,

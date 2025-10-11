@@ -27,7 +27,7 @@ function p(e) {
             },
             [x, p.id],
         ),
-        O = r.useCallback(
+        y = r.useCallback(
             (e) => {
                 x() &&
                     (e.id === (null == n ? void 0 : n.id) && a.Z.stopEditingIntegration(),
@@ -35,7 +35,7 @@ function p(e) {
             },
             [x, n, p.id],
         ),
-        y = r.useCallback(
+        O = r.useCallback(
             (e) => {
                 x() &&
                     (e === (null == n ? void 0 : n.id) ? a.Z.stopEditingIntegration() : a.Z.startEditingIntegration(e));
@@ -69,8 +69,8 @@ function p(e) {
                         guild: p,
                         isExpanded: (null == n ? void 0 : n.id) === e.id,
                         onEnable: v,
-                        onDisable: O,
-                        onToggleExpand: () => y(e.id),
+                        onDisable: y,
+                        onToggleExpand: () => O(e.id),
                     },
                     e.id,
                 ),

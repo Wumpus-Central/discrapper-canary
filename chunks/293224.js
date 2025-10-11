@@ -56,8 +56,8 @@ var i = n(951288),
     Q = n(19780),
     K = n(944486),
     X = n(594174),
-    J = n(979651),
-    q = n(145597),
+    q = n(979651),
+    J = n(145597),
     $ = n(444295),
     ee = n(371053),
     et = n(624864),
@@ -437,7 +437,7 @@ function eh(e) {
         h = (0, l.cj)([Y.Z], () => (0, C.Z)(Y.Z)),
         p = (0, l.e7)([F.Z], () => F.Z.getCurrentUserActiveStream()),
         f = (0, ee.P)({
-            pid: (0, q.getPID)(),
+            pid: (0, J.getPID)(),
             allowOneClickGoLive: !0,
             analyticsLocation: ei.Sbl.UNLOCKED_OVERLAY,
         }),
@@ -756,7 +756,7 @@ function ey(e) {
             state: Q.Z.getState(),
             lastPing: Q.Z.getLastPing(),
         })),
-        s = (0, l.e7)([J.Z], () => null != o && J.Z.hasVideo(o), [o]);
+        s = (0, l.e7)([q.Z], () => null != o && q.Z.hasVideo(o), [o]);
     return (
         null != o &&
         null != r &&

@@ -73,8 +73,8 @@ function N(e) {
         L = a.useDeferredValue(N),
         M = (0, u.e7)([h.Z], () => h.Z.getClips()),
         R = (0, u.e7)([h.Z], () => h.Z.getPendingClips()),
-        A = (0, u.e7)([h.Z], () => h.Z.getSettings().storageLocation),
-        H = (0, u.Wu)([h.Z], () => h.Z.getNewClipIds()),
+        H = (0, u.e7)([h.Z], () => h.Z.getSettings().storageLocation),
+        A = (0, u.Wu)([h.Z], () => h.Z.getNewClipIds()),
         { analyticsLocations: z } = (0, f.ZP)(m.Z.CLIPS_GALLERY),
         B = a.useMemo(() => [...R, ...M], [M, R]);
     (0, g.Z)(
@@ -121,12 +121,12 @@ function N(e) {
         !(async function () {
             k(!0);
             try {
-                await x.jv(A);
+                await x.jv(H);
             } finally {
                 k(!1);
             }
         })();
-    }, [A]);
+    }, [H]);
     let F = a.useCallback(
             (e) => {
                 (0, p.ZDy)(
@@ -178,7 +178,7 @@ function N(e) {
                                 {
                                     actionsDisabled: null != Z || t,
                                     exporting: Z === e.id,
-                                    isNew: H.includes(e.id),
+                                    isNew: A.includes(e.id),
                                     onDelete: K,
                                     onEdit: F,
                                     onShare: (e) =>
@@ -195,7 +195,7 @@ function N(e) {
                     "clips-gallery-".concat(t),
                 );
             },
-            [V, H, Z, G, K, F],
+            [V, A, Z, G, K, F],
         ),
         U =
             S || 0 !== V.length

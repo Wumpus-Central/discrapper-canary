@@ -1,27 +1,27 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => s });
 var r = n(951288);
 n(647438);
 var i = n(587431),
     l = n(539290),
-    s = n(388032);
-function a(e) {
+    a = n(388032);
+function s(e) {
     let t,
         {
             resubmittingEnableRequest: n,
-            resubmissionError: a,
+            resubmissionError: s,
             createEnableRequest: o,
             requestRejectedNoticeText: c,
             reapplyNoticeText: d,
             isApplicationPending: u,
         } = e;
-    if (null != a) return (0, r.jsx)(i.Z, { children: a.getAnyErrorMessage() });
+    if (null != s) return (0, r.jsx)(i.Z, { children: s.getAnyErrorMessage() });
     let g = null;
     return (
         u
-            ? (g = s.intl.string(s.t.OrkTBg))
+            ? (g = a.intl.string(a.t.OrkTBg))
             : null != c
               ? (g = c)
-              : null != d && ((g = d), (t = s.intl.string(s.t["YKw/NT"]))),
+              : null != d && ((g = d), (t = a.intl.string(a.t["YKw/NT"]))),
         null != g
             ? (0, r.jsx)(l.Z, {
                   notice: g,

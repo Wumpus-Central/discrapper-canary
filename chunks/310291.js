@@ -1,17 +1,17 @@
-n.d(t, { Z: () => a }), n(388685);
+n.d(t, { Z: () => s }), n(388685);
 var r = n(647438),
     i = n(392711),
     l = n.n(i),
-    s = n(232473);
-let a = (e, t) => {
+    a = n(232473);
+let s = (e, t) => {
     let { groupType: n, teamId: i } = t,
-        [a, o] = r.useState(!0),
+        [s, o] = r.useState(!0),
         [c, d] = r.useState([]),
         u = r.useCallback(async () => {
             if ((d([]), null == e)) return void o(!1);
             try {
                 o(!0);
-                let t = await s.C(e, { grouping_type: n });
+                let t = await a.C(e, { grouping_type: n });
                 d(t);
             } catch (e) {
             } finally {
@@ -41,7 +41,7 @@ let a = (e, t) => {
                 }
                 return l().orderBy(Object.values(t), ["periodStartingAt"], ["desc"]);
             }, [c, i]),
-            loading: a,
+            loading: s,
         }
     );
 };

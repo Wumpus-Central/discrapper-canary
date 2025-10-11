@@ -1,8 +1,8 @@
 n.d(t, { default: () => A }), n(388685);
 var r = n(951288),
     i = n(647438),
-    o = n(512722),
-    a = n.n(o),
+    a = n(512722),
+    o = n.n(a),
     s = n(990547),
     l = n(399606),
     c = n(755721),
@@ -13,17 +13,17 @@ var r = n(951288),
     f = n(484459),
     E = n(594174),
     p = n(626135),
-    y = n(51144),
-    O = n(986197),
-    h = n(135200),
-    b = n(346585),
-    S = n(361117),
+    h = n(51144),
+    y = n(986197),
+    O = n(135200),
+    S = n(346585),
+    b = n(361117),
     _ = n(108793),
-    v = n(635774),
-    j = n(387955),
-    N = n(801461),
-    x = n(448624),
-    T = n(981631),
+    N = n(635774),
+    v = n(387955),
+    x = n(801461),
+    T = n(448624),
+    j = n(981631),
     I = n(388032),
     P = n(770718);
 function C(e) {
@@ -53,23 +53,23 @@ function C(e) {
 }
 function A(e) {
     let t,
-        { source: n, transitionState: o, onClose: A, oneClickFlow: w = !1 } = e,
-        [M, L] = i.useState(w ? x.A.SUGGESTIONS : x.A.INFO),
+        { source: n, transitionState: a, onClose: A, oneClickFlow: M = !1 } = e,
+        [w, L] = i.useState(M ? T.A.SUGGESTIONS : T.A.INFO),
         [D, k] = i.useState(!1),
         [Z, U] = i.useState(null),
-        [G, W] = i.useState(w ? N.Wq.SUGGESTION : N.Wq.NONE),
+        [G, W] = i.useState(M ? x.Wq.SUGGESTION : x.Wq.NONE),
         [F, q] = i.useState(!1),
         [B, z] = i.useState(!1),
         H = i.useRef(null),
-        V = (0, l.e7)([h.Z], () => h.Z.isCurrentUsernameInvalid()),
+        V = (0, l.e7)([O.Z], () => O.Z.isCurrentUsernameInvalid()),
         K = (0, l.e7)([E.default], () => {
             let e = E.default.getCurrentUser();
-            return a()(null != e, "PomeloModal: user cannot be undefined"), e;
+            return o()(null != e, "PomeloModal: user cannot be undefined"), e;
         }),
-        { usernameSuggestion: Y, usernameSuggestionLoading: X } = (0, S.G)(w ? N.en : void 0);
+        { usernameSuggestion: Y, usernameSuggestionLoading: X } = (0, b.G)(M ? x.en : void 0);
     i.useEffect(() => {
-        G === N.Wq.EDIT_USERNAME && z(!0),
-            p.default.track(T.rMx.POMELO_EDIT_STEP_VIEWED, {
+        G === x.Wq.EDIT_USERNAME && z(!0),
+            p.default.track(j.rMx.POMELO_EDIT_STEP_VIEWED, {
                 source: n,
                 step: G,
             });
@@ -101,8 +101,8 @@ function A(e) {
                 });
         }, [Y, B, F]);
     let [Q, $] = i.useState({
-            username: (0, b.e$)(K),
-            globalName: y.ZP.getName(K),
+            username: (0, S.e$)(K),
+            globalName: h.ZP.getName(K),
         }),
         J = (e) => {
             U(null), null != e.username && q(!0), $((t) => C({}, t, e));
@@ -110,28 +110,28 @@ function A(e) {
         ee = i.useMemo(
             () => [
                 {
-                    slideId: x.A.INFO,
-                    next: x.A.EDIT_SCREEN,
+                    slideId: T.A.INFO,
+                    next: T.A.EDIT_SCREEN,
                     footerButtons: ["REMIND_ME_LATER", "GET_STARTED"],
                 },
                 {
-                    slideId: x.A.EDIT_SCREEN,
-                    next: x.A.FINISH_LATER,
-                    back: x.A.INFO,
+                    slideId: T.A.EDIT_SCREEN,
+                    next: T.A.FINISH_LATER,
+                    back: T.A.INFO,
                     footerButtons: [
-                        G === N.Wq.PREVIEW ? "GOT_IT" : "BACK",
-                        G === N.Wq.PREVIEW ? "GOT_IT" : G === N.Wq.EDIT_USERNAME ? "SUBMIT" : "NEXT",
+                        G === x.Wq.PREVIEW ? "GOT_IT" : "BACK",
+                        G === x.Wq.PREVIEW ? "GOT_IT" : G === x.Wq.EDIT_USERNAME ? "SUBMIT" : "NEXT",
                     ],
                 },
                 {
-                    slideId: x.A.FINISH_LATER,
-                    back: x.A.EDIT_SCREEN,
+                    slideId: T.A.FINISH_LATER,
+                    back: T.A.EDIT_SCREEN,
                 },
                 {
-                    slideId: x.A.SUGGESTIONS,
-                    footerButtons: [G === N.Wq.PREVIEW ? "GOT_IT" : "UPDATE"],
+                    slideId: T.A.SUGGESTIONS,
+                    footerButtons: [G === x.Wq.PREVIEW ? "GOT_IT" : "UPDATE"],
                 },
-                { slideId: x.A.FINISH_LATER },
+                { slideId: T.A.FINISH_LATER },
             ],
             [G],
         ),
@@ -143,19 +143,19 @@ function A(e) {
                     maxNum: 32,
                 });
                 U(e),
-                    p.default.track(T.rMx.POMELO_ERRORS, {
+                    p.default.track(j.rMx.POMELO_ERRORS, {
                         reason: e,
                         display_name_error: !0,
                         location: "modal",
                     });
                 return;
             }
-            if (y.ZP.getGlobalName(K) === Q.globalName) return void W(N.Wq.EDIT_USERNAME);
+            if (h.ZP.getGlobalName(K) === Q.globalName) return void W(x.Wq.EDIT_USERNAME);
             try {
-                U(null), k(!0), await (0, m.S2)({ global_name: Q.globalName }), W(N.Wq.EDIT_USERNAME);
+                U(null), k(!0), await (0, m.S2)({ global_name: Q.globalName }), W(x.Wq.EDIT_USERNAME);
             } catch (t) {
                 let e = new g.Z(t).getAnyErrorMessage();
-                p.default.track(T.rMx.POMELO_ERRORS, {
+                p.default.track(j.rMx.POMELO_ERRORS, {
                     reason: e,
                     display_name_error: !0,
                     location: "modal",
@@ -169,9 +169,9 @@ function A(e) {
             try {
                 U(null),
                     k(!0),
-                    await O.Z.createPomelo({ username: (0, b.R_)(Q.username) }, w),
+                    await y.Z.createPomelo({ username: (0, S.R_)(Q.username) }, M),
                     await (0, d.In)(K.id),
-                    W(N.Wq.PREVIEW);
+                    W(x.Wq.PREVIEW);
             } catch (n) {
                 let e = new g.Z(n),
                     t =
@@ -179,53 +179,53 @@ function A(e) {
                             ? e.getAnyErrorMessage()
                             : I.intl.string(I.t.R0RpRU);
                 U(t),
-                    p.default.track(T.rMx.POMELO_ERRORS, {
+                    p.default.track(j.rMx.POMELO_ERRORS, {
                         reason: t,
                         username_error: !0,
                         location: "modal",
-                        one_click_flow: w,
+                        one_click_flow: M,
                     });
             } finally {
                 k(!1);
             }
-        }, [Q, K.id, w]),
-        ei = V || (0, b.NX)(K),
-        eo = i.useCallback(() => {
-            W(ei ? N.Wq.EDIT_USERNAME : N.Wq.EDIT_DISPLAY_NAME), L(ee[Math.min(et - 1, M + 1)].slideId);
-        }, [M, ee, et, ei]),
+        }, [Q, K.id, M]),
+        ei = V || (0, S.NX)(K),
         ea = i.useCallback(() => {
+            W(ei ? x.Wq.EDIT_USERNAME : x.Wq.EDIT_DISPLAY_NAME), L(ee[Math.min(et - 1, w + 1)].slideId);
+        }, [w, ee, et, ei]),
+        eo = i.useCallback(() => {
             U(null),
-                M === x.A.EDIT_SCREEN
-                    ? G === N.Wq.EDIT_USERNAME
+                w === T.A.EDIT_SCREEN
+                    ? G === x.Wq.EDIT_USERNAME
                         ? ei
-                            ? (W(N.Wq.NONE), L(ee[Math.max(0, M - 1)].slideId))
-                            : W(N.Wq.EDIT_DISPLAY_NAME)
-                        : G === N.Wq.EDIT_DISPLAY_NAME
-                          ? (W(N.Wq.NONE), L(ee[Math.max(0, M - 1)].slideId))
-                          : G === N.Wq.PREVIEW && W(N.Wq.EDIT_USERNAME)
-                    : L(ee[Math.max(0, M - 1)].slideId);
-        }, [ee, M, G, ei]),
+                            ? (W(x.Wq.NONE), L(ee[Math.max(0, w - 1)].slideId))
+                            : W(x.Wq.EDIT_DISPLAY_NAME)
+                        : G === x.Wq.EDIT_DISPLAY_NAME
+                          ? (W(x.Wq.NONE), L(ee[Math.max(0, w - 1)].slideId))
+                          : G === x.Wq.PREVIEW && W(x.Wq.EDIT_USERNAME)
+                    : L(ee[Math.max(0, w - 1)].slideId);
+        }, [ee, w, G, ei]),
         es = i.useCallback(() => {
-            L(x.A.FINISH_LATER);
+            L(T.A.FINISH_LATER);
         }, []),
         el = i.useMemo(
             () =>
-                M === x.A.EDIT_SCREEN && G === N.Wq.EDIT_DISPLAY_NAME
+                w === T.A.EDIT_SCREEN && G === x.Wq.EDIT_DISPLAY_NAME
                     ? en
-                    : M === x.A.EDIT_SCREEN && G === N.Wq.EDIT_USERNAME
+                    : w === T.A.EDIT_SCREEN && G === x.Wq.EDIT_USERNAME
                       ? er
-                      : M === x.A.SUGGESTIONS && G === N.Wq.SUGGESTION
+                      : w === T.A.SUGGESTIONS && G === x.Wq.SUGGESTION
                         ? er
-                        : eo,
-            [M, G, en, er, eo],
+                        : ea,
+            [w, G, en, er, ea],
         ),
         ec = i.useMemo(() => {
             var e, t;
             return R(
-                null != (t = null == (e = ee.find((e) => e.slideId === M)) ? void 0 : e.footerButtons) ? t : [],
+                null != (t = null == (e = ee.find((e) => e.slideId === w)) ? void 0 : e.footerButtons) ? t : [],
                 {
                     handleNext: el,
-                    handleBack: ea,
+                    handleBack: eo,
                     handleRemindMeLater: es,
                     onClose: A,
                 },
@@ -233,8 +233,8 @@ function A(e) {
                 X,
                 F,
             );
-        }, [ea, es, el, A, ee, M, D, X, F]),
-        eu = i.useMemo(() => (0, b.zV)(K), [K]);
+        }, [eo, es, el, A, ee, w, D, X, F]),
+        eu = i.useMemo(() => (0, S.zV)(K), [K]);
     return (
         i.useLayoutEffect(() => {
             (0, f.Z)(K.id, eu);
@@ -242,19 +242,19 @@ function A(e) {
         i.useEffect(() => {
             var e, t;
             switch (G) {
-                case N.Wq.EDIT_DISPLAY_NAME:
+                case x.Wq.EDIT_DISPLAY_NAME:
                     null == (e = H.current) || e.focusDisplayName();
                     break;
-                case N.Wq.EDIT_USERNAME:
-                case N.Wq.SUGGESTION:
+                case x.Wq.EDIT_USERNAME:
+                case x.Wq.SUGGESTION:
                     null == (t = H.current) || t.focusUsername();
             }
         }, [G]),
         !F &&
             null == Z &&
-            (G === N.Wq.EDIT_USERNAME
+            (G === x.Wq.EDIT_USERNAME
                 ? (t = I.intl.formatToPlainString(I.t.AJh8BQ, { source: K.username }))
-                : G === N.Wq.SUGGESTION && (X || null != Y) && (t = I.intl.string(I.t["i/2SgI"]))),
+                : G === x.Wq.SUGGESTION && (X || null != Y) && (t = I.intl.string(I.t["i/2SgI"]))),
         (0, r.jsxs)(u.Y0X, {
             className: P.modalRoot,
             impression: {
@@ -262,16 +262,16 @@ function A(e) {
                 impressionProperties: {
                     source: n,
                     impression_group: s.ImpressionGroups.POMELO_FLOW,
-                    one_click_flow: w,
+                    one_click_flow: M,
                 },
             },
-            transitionState: o,
+            transitionState: a,
             size: u.CgR.DYNAMIC,
             parentComponent: "PomeloModal",
             children: [
                 (0, r.jsx)(c.zx, {
                     onClick: () => {
-                        M === x.A.SUGGESTIONS || M === x.A.EDIT_SCREEN ? L(x.A.FINISH_LATER) : A();
+                        w === T.A.SUGGESTIONS || w === T.A.EDIT_SCREEN ? L(T.A.FINISH_LATER) : A();
                     },
                     size: c.zx.Sizes.MIN,
                     look: c.zx.Looks.BLANK,
@@ -288,15 +288,15 @@ function A(e) {
                 (0, r.jsx)(u.hzk, {
                     className: P.contentContainer,
                     children: (0, r.jsxs)(u.MyZ, {
-                        activeSlide: M,
+                        activeSlide: w,
                         width: 480,
                         children: [
                             (0, r.jsx)(u.Mi4, {
-                                id: x.A.INFO,
-                                children: (0, r.jsx)(j.Z, { user: K }),
+                                id: T.A.INFO,
+                                children: (0, r.jsx)(v.Z, { user: K }),
                             }),
                             (0, r.jsx)(u.Mi4, {
-                                id: x.A.EDIT_SCREEN,
+                                id: T.A.EDIT_SCREEN,
                                 children: (0, r.jsx)(_.Z, {
                                     user: K,
                                     error: Z,
@@ -305,17 +305,17 @@ function A(e) {
                                     formValues: Q,
                                     footerNotice: t,
                                     onChangeFormValue: J,
-                                    onFocusUsername: () => W(N.Wq.EDIT_USERNAME),
-                                    onFocusDisplayName: () => W(N.Wq.EDIT_DISPLAY_NAME),
+                                    onFocusUsername: () => W(x.Wq.EDIT_USERNAME),
+                                    onFocusDisplayName: () => W(x.Wq.EDIT_DISPLAY_NAME),
                                     onClose: A,
                                 }),
                             }),
                             (0, r.jsx)(u.Mi4, {
-                                id: x.A.FINISH_LATER,
-                                children: (0, r.jsx)(v.Z, { onClose: A }),
+                                id: T.A.FINISH_LATER,
+                                children: (0, r.jsx)(N.Z, { onClose: A }),
                             }),
                             (0, r.jsx)(u.Mi4, {
-                                id: x.A.SUGGESTIONS,
+                                id: T.A.SUGGESTIONS,
                                 children: (0, r.jsx)(_.Z, {
                                     user: K,
                                     error: Z,
@@ -324,11 +324,11 @@ function A(e) {
                                     formValues: Q,
                                     footerNotice: t,
                                     onChangeFormValue: J,
-                                    onFocusUsername: () => W(N.Wq.SUGGESTION),
-                                    onFocusDisplayName: () => W(N.Wq.EDIT_DISPLAY_NAME),
+                                    onFocusUsername: () => W(x.Wq.SUGGESTION),
+                                    onFocusDisplayName: () => W(x.Wq.EDIT_DISPLAY_NAME),
                                     onClose: A,
                                     usernameSuggestionLoading: X,
-                                    oneClickFlow: w,
+                                    oneClickFlow: M,
                                 }),
                             }),
                         ],
@@ -339,7 +339,7 @@ function A(e) {
         })
     );
 }
-let R = (e, t, n, i, o) =>
+let R = (e, t, n, i, a) =>
     0 === e.length
         ? null
         : (0, r.jsxs)(u.mzw, {
@@ -398,7 +398,7 @@ let R = (e, t, n, i, o) =>
                                   size: "sm",
                                   text: I.intl.string(I.t.VZANAA),
                                   type: "button",
-                                  disabled: i && !o,
+                                  disabled: i && !a,
                                   loading: n,
                                   onClick: t.handleNext,
                               }),

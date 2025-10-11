@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    s = n(167533),
-    a = n(73346),
+    a = n(167533),
+    s = n(73346),
     o = n(169903),
     c = n(67152),
     d = n(388032),
@@ -22,7 +22,7 @@ let m = [
                     let e =
                         (null == n ? void 0 : n.image_asset) == null
                             ? void 0
-                            : (0, a._W)(n.application_id, n.image_asset, 128);
+                            : (0, s._W)(n.application_id, n.image_asset, 128);
                     t = (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)("img", {
@@ -60,12 +60,12 @@ let m = [
     ],
     p = (e) => {
         let { totalPayoutsForPeriod: t, guildId: n, className: i } = e,
-            a = (0, o.Z)(n, t);
+            s = (0, o.Z)(n, t);
         return (0, r.jsx)("div", {
             className: l()(g.tableContainer, i),
-            children: (0, r.jsx)(s.Z, {
+            children: (0, r.jsx)(a.Z, {
                 columns: m,
-                data: a,
+                data: s,
                 className: l()(g.table, u.table),
                 rowClassName: u.row,
                 headerClassName: l()(g.header, u.header),

@@ -16,7 +16,7 @@ let g = (e) => {
     let { targetElementRef: t, discountOffer: g, premiumSubscription: m, dismissCoachmark: b, children: _ } = e,
         { analyticsLocations: O } = (0, o.ZP)(a.Z.CHURN_DISCOUNT_POPOVER),
         E = (0, c.W7)(d.Xh.PREMIUM_MONTH_TIER_2, g, m),
-        y = (0, r.jsx)(i.Z, {
+        v = (0, r.jsx)(i.Z, {
             targetElementRef: t,
             position: "right",
             align: "top",
@@ -104,6 +104,6 @@ let g = (e) => {
             },
         });
     return (0, r.jsxs)(r.Fragment, {
-        children: [(0, r.jsx)("div", { children: _ }), y],
+        children: [(0, r.jsx)("div", { children: _ }), v],
     });
 };

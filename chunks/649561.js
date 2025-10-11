@@ -16,8 +16,8 @@ var i = n(951288),
     y = n(703656),
     _ = n(254761),
     O = n(70956),
-    v = n(145597),
-    b = n(41534),
+    b = n(145597),
+    v = n(41534),
     E = n(837268),
     x = n(692546),
     S = n(518084),
@@ -40,8 +40,8 @@ function P(e, t, n) {
 }
 let w = 10 * O.Z.Millis.SECOND;
 function N() {
-    let e = (0, v.getPID)(),
-        t = (0, v.getRPCAuthToken)();
+    let e = (0, b.getPID)(),
+        t = (0, b.getRPCAuthToken)();
     (0, f.lW)({
         type: C.BmY.DISPATCH,
         pid: e,
@@ -169,11 +169,11 @@ class k extends r.PureComponent {
             error: e,
             info: t,
         });
-        let i = (0, v.getPID)(),
-            r = (0, v.getRPCAuthToken)();
+        let i = (0, b.getPID)(),
+            r = (0, b.getRPCAuthToken)();
         (0, f.lW)({
             type: C.BmY.DISPATCH,
-            pid: (0, v.getPID)(),
+            pid: (0, b.getPID)(),
             token: r,
             payloads: [
                 {
@@ -189,7 +189,7 @@ class k extends r.PureComponent {
             ],
         }),
             setImmediate(() => window.addEventListener("click", N));
-        let s = (0, b.V6)(e, E.gl.Hook, { extra: t });
+        let s = (0, v.V6)(e, E.gl.Hook, { extra: t });
         h.Z.track(C.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,

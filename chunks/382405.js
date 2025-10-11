@@ -18,11 +18,11 @@ var i = n(120356),
     _ = n(297781),
     O = n(797342),
     E = n(313201),
-    y = n(810568),
-    v = n(168524),
+    v = n(810568),
+    y = n(168524),
     I = n(960870),
-    S = n(139793),
-    C = n(502762),
+    C = n(139793),
+    S = n(502762),
     T = n(652853),
     N = n(576759),
     j = n(336383),
@@ -66,10 +66,10 @@ function D(e) {
             showCoverImage: !1,
         }),
         { appName: x, activity: Z } = (0, O.n)(n),
-        R = (0, v.Z)({
+        R = (0, y.Z)({
             location: "UserProfileRecentActivityCard",
             applicationId: n.extra.application_id,
-            source: y.m1.UserProfile,
+            source: v.m1.UserProfile,
             sourceUserId: t.id,
             trackEntryPointImpression: !0,
         }),
@@ -80,14 +80,14 @@ function D(e) {
             entry: n,
             analyticsLocations: D,
         }),
-        M = (0, S.Z)({
+        M = (0, C.Z)({
             userId: t.id,
             onAction: k,
         });
     return null == R
         ? (0, r.jsx)("article", {
               "aria-labelledby": f,
-              children: (0, r.jsxs)(C.Z.Overlay, {
+              children: (0, r.jsxs)(S.Z.Overlay, {
                   className: l()(L.card, u),
                   ref: M,
                   children: [
@@ -194,7 +194,7 @@ function k(e) {
             entry: n,
             analyticsLocations: g,
         }),
-        O = (0, S.Z)({
+        O = (0, C.Z)({
             userId: t.id,
             onAction: m,
         });
@@ -287,12 +287,12 @@ function M(e) {
             entry: l,
             analyticsLocations: m,
         }),
-        O = (0, S.Z)({
+        O = (0, C.Z)({
             userId: i.id,
             onAction: b,
         }),
-        y = null == (t = l.extra.entries[0]) ? void 0 : t.media;
-    return null == y
+        v = null == (t = l.extra.entries[0]) ? void 0 : t.media;
+    return null == v
         ? null
         : (0, r.jsxs)(j.Z, {
               ref: O,
@@ -315,7 +315,7 @@ function M(e) {
                                   onClick: (e) => {
                                       e.stopPropagation(),
                                           b({ action: "OPEN_SPOTIFY_ALBUM" }),
-                                          (0, p.o)(Z.Hw.ALBUM, y.external_parent_id);
+                                          (0, p.o)(Z.Hw.ALBUM, v.external_parent_id);
                                   },
                               }),
                               (0, r.jsxs)("div", {
@@ -325,22 +325,22 @@ function M(e) {
                                           children: [
                                               (0, r.jsx)(P.f, {
                                                   variant: "heading-sm/semibold",
-                                                  text: y.title,
+                                                  text: v.title,
                                                   onClick: () => {
                                                       b({ action: "OPEN_SPOTIFY_TRACK" }),
-                                                          (0, p.o)(Z.Hw.TRACK, y.external_id);
+                                                          (0, p.o)(Z.Hw.TRACK, v.external_id);
                                                   },
                                                   id: f,
                                               }),
                                               (0, r.jsx)(P.Z, {
                                                   variant: "text-xs/normal",
-                                                  text: null == (n = y.artists[0]) ? void 0 : n.name,
+                                                  text: null == (n = v.artists[0]) ? void 0 : n.name,
                                                   onClick: () => {
                                                       var e;
                                                       b({ action: "OPEN_SPOTIFY_ARTIST" }),
                                                           (0, p.o)(
                                                               Z.Hw.ARTIST,
-                                                              null == (e = y.artists[0]) ? void 0 : e.external_id,
+                                                              null == (e = v.artists[0]) ? void 0 : e.external_id,
                                                           );
                                                   },
                                               }),
@@ -373,7 +373,7 @@ function U(e) {
             entry: n,
             analyticsLocations: p,
         }),
-        g = (0, S.Z)({
+        g = (0, C.Z)({
             userId: t.id,
             onAction: h,
         }),

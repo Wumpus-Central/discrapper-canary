@@ -1,6 +1,6 @@
 n.d(t, {
     H: () => i,
-    p: () => s,
+    p: () => a,
 });
 var l = n(971130);
 let i = [
@@ -10,7 +10,7 @@ let i = [
         l.ZP.INVITE_OPTIONS_7_DAYS,
         l.ZP.INVITE_OPTIONS_FOREVER,
     ],
-    s = [
+    a = [
         l.ZP.INVITE_OPTIONS_UNLIMITED,
         l.ZP.INVITE_OPTIONS_ONCE,
         l.ZP.INVITE_OPTIONS_10_TIMES,

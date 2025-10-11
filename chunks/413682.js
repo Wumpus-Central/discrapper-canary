@@ -2,8 +2,8 @@ n.d(t, { w: () => m });
 var r = n(951288),
     i = n(647438),
     l = n(780384),
-    s = n(481060),
-    a = n(410030),
+    a = n(481060),
+    s = n(410030),
     o = n(434404),
     c = n(388032),
     d = n(317351),
@@ -11,16 +11,16 @@ var r = n(951288),
     g = n(449874);
 function m(e) {
     let { canManageGuild: t, premiumProgressBarEnabled: n } = e,
-        m = (0, a.ZP)(),
+        m = (0, s.ZP)(),
         p = i.useCallback((e) => {
             o.Z.updateGuild({ premiumProgressBarEnabled: e });
         }, []);
-    return (0, r.jsxs)(s.hjN, {
+    return (0, r.jsxs)("div", {
         className: d.container,
         children: [
             (0, r.jsx)("div", {
                 className: d.column,
-                children: (0, r.jsx)(s.rsf, {
+                children: (0, r.jsx)(a.rsf, {
                     label: c.intl.string(c.t.Dl4mJS),
                     description: c.intl.string(c.t.xzHcoa),
                     checked: n,

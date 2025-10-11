@@ -10,32 +10,32 @@ var r = n(951288),
     d = n(957730),
     f = n(987509),
     b = n(72214),
-    p = n(592125),
-    h = n(594174),
+    h = n(592125),
+    p = n(594174),
     m = n(572004),
     g = n(823379),
     y = n(479713),
     x = n(207003),
     v = n(959517),
     S = n(388032),
-    E = n(834505),
-    j = n(621054);
+    j = n(834505),
+    E = n(621054);
 function Z(e) {
     let {
             applicationId: t,
             customId: n,
             linkId: Z,
-            message: O,
-            onClose: P,
-            onCopyLink: _,
+            message: P,
+            onClose: _,
+            onCopyLink: O,
             onShare: C,
             transitionState: L,
         } = e,
         [T] = (0, c.Z)([t]),
-        N = (0, i.e7)([h.default], () => h.default.getCurrentUser()),
+        N = (0, i.e7)([p.default], () => p.default.getCurrentUser()),
         [w, D] = l.useState(!1),
-        [R, M] = l.useState(""),
-        [k, A] = l.useState("");
+        [R, k] = l.useState(""),
+        [M, A] = l.useState("");
     l.useEffect(() => {
         A(
             (0, o.H)({
@@ -48,27 +48,27 @@ function Z(e) {
     }, [t, N, n, Z, A]);
     let I = l.useRef(0),
         [U, H] = l.useState([]),
-        q = U.length,
-        F = q >= 5;
+        F = U.length,
+        q = F >= 5;
     l.useEffect(() => {
         if ("" === R) {
             var e;
-            null == (e = G.current) || e.focus();
+            null == (e = z.current) || e.focus();
         }
     }, [R]);
-    let z = l.useCallback(() => {
-            M("");
-        }, [M]),
-        G = l.useRef(null),
-        { results: V, updateSearchText: W } = (0, b.s)({
+    let G = l.useCallback(() => {
+            k("");
+        }, [k]),
+        z = l.useRef(null),
+        { results: W, updateSearchText: V } = (0, b.s)({
             selectedDestinations: U,
             includeMissingDMs: !0,
         }),
         Q = l.useCallback(
             (e) => {
-                M(e), W(e);
+                k(e), V(e);
             },
-            [M, W],
+            [k, V],
         ),
         X = l.useCallback(
             (e) => {
@@ -77,20 +77,20 @@ function Z(e) {
                         let { type: n, id: r } = t;
                         return n === e.type && r === e.id;
                     });
-                    if (-1 === n) return F ? t : (M(""), (I.current += 1), [e, ...t]);
+                    if (-1 === n) return q ? t : (k(""), (I.current += 1), [e, ...t]);
                     let r = [...t];
                     return r.splice(n, 1), (I.current += 1), r;
                 });
             },
-            [F],
+            [q],
         ),
         J = l.useCallback(
             async (e) => {
                 if (null == T) return;
-                let t = (0, y.P)(O, T, k);
+                let t = (0, y.P)(P, T, M);
                 D(!0),
                     (await Promise.all(e.map(f.qx))).filter(g.lm).forEach(async (e) => {
-                        let n = p.Z.getChannel(e);
+                        let n = h.Z.getChannel(e);
                         null != n &&
                             (await u.Z.sendMessage(e, d.ZP.parse(n, t), !1, { location: v.dy.ACTIVITY_SHARE }));
                     }),
@@ -101,31 +101,31 @@ function Z(e) {
                         ),
                     ),
                     C(!0),
-                    P();
+                    _();
             },
-            [O, k, P, C, T],
+            [P, M, _, C, T],
         ),
         B = l.useCallback(() => {
-            (0, m.JG)(k, () => {
-                _(), (0, s.showToast)((0, s.createToast)(S.intl.string(S.t["t5VZ8/"]), s.ToastType.SUCCESS));
+            (0, m.JG)(M, () => {
+                O(), (0, s.showToast)((0, s.createToast)(S.intl.string(S.t["t5VZ8/"]), s.ToastType.SUCCESS));
             });
-        }, [k, _]),
+        }, [M, O]),
         K =
-            V.length > 0
+            W.length > 0
                 ? (0, r.jsx)(x.Q, {
                       paddingBottom: 8,
                       paddingTop: 8,
-                      rowData: V,
+                      rowData: W,
                       handleToggleDestination: X,
                       selectedDestinations: U,
-                      disableSelection: F,
+                      disableSelection: q,
                   })
                 : (0, r.jsxs)("div", {
-                      className: E.noResults,
+                      className: j.noResults,
                       children: [
                           (0, r.jsx)("img", {
-                              className: E.noResultsImg,
-                              src: j,
+                              className: j.noResultsImg,
+                              src: E,
                               alt: "",
                           }),
                           (0, r.jsx)(s.Text, {
@@ -137,15 +137,15 @@ function Z(e) {
                   });
     return (0, r.jsx)(a.Modal, {
         transitionState: L,
-        onClose: P,
+        onClose: _,
         title: S.intl.string(S.t.r9qKo6),
-        subtitle: O,
+        subtitle: P,
         size: "md",
         input: (0, r.jsx)(s.E1j, {
-            ref: G,
+            ref: z,
             query: R,
             onChange: Q,
-            onClear: z,
+            onClear: G,
             placeholder: S.intl.string(S.t["5h0QOD"]),
             "aria-label": S.intl.string(S.t["5h0QOD"]),
             autoFocus: !0,
@@ -161,7 +161,7 @@ function Z(e) {
                 variant: "primary",
                 onClick: () => J(U),
                 loading: w,
-                disabled: !(q > 0),
+                disabled: !(F > 0),
             },
         ],
         children: K,

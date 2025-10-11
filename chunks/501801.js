@@ -1,6 +1,6 @@
 n.d(t, {
     mp: () => x,
-    tP: () => v,
+    tP: () => b,
     xO: () => D,
 }),
     n(539854),
@@ -27,16 +27,16 @@ var r = n(951288),
     f = n(51144),
     R = n(909746),
     S = n(981631),
-    C = n(388032),
-    p = n(404211);
+    p = n(388032),
+    C = n(404211);
 function D(e, t) {
     let n = R.vc[e.targetType];
     return null != n && !0 === n[t.key];
 }
 let L = {
-    [S.vB8.CREATE]: p.typeCreate,
-    [S.vB8.UPDATE]: p.typeUpdate,
-    [S.vB8.DELETE]: p.typeDelete,
+    [S.vB8.CREATE]: C.typeCreate,
+    [S.vB8.UPDATE]: C.typeUpdate,
+    [S.vB8.DELETE]: C.typeDelete,
 };
 function U(e) {
     let { applicationId: t } = e,
@@ -52,7 +52,7 @@ function M(e, t) {
     return (0, r.jsx)(
         "div",
         {
-            className: p.colorHook,
+            className: C.colorHook,
             style: { backgroundColor: t },
         },
         e,
@@ -61,50 +61,50 @@ function M(e, t) {
 class x extends l.PureComponent {
     render() {
         let { actionType: e, targetType: t, action: n, themeOverride: l } = this.props,
-            i = null != l ? p["themeOverride".concat((0, O.De)(l))] : null,
+            i = null != l ? C["themeOverride".concat((0, O.De)(l))] : null,
             a = s()(
-                p.icon,
+                C.icon,
                 L[e],
                 n === S.rsA.MESSAGE_DELETE
-                    ? p.targetMessage
+                    ? C.targetMessage
                     : n === S.rsA.AUTO_MODERATION_BLOCK_MESSAGE ||
                         n === S.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL ||
                         n === S.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED ||
                         n === S.rsA.AUTO_MODERATION_QUARANTINE_USER
-                      ? p.autoModerationBlockMessage
+                      ? C.autoModerationBlockMessage
                       : {
-                            [S.KFR.ALL]: p.targetAll,
-                            [S.KFR.GUILD]: p.targetGuild,
-                            [S.KFR.CHANNEL]: p.targetChannel,
-                            [S.KFR.CHANNEL_OVERWRITE]: p.targetChannel,
-                            [S.KFR.USER]: p.targetMember,
-                            [S.KFR.ROLE]: p.targetRole,
-                            [S.KFR.ONBOARDING_PROMPT]: p.targetOnboarding,
-                            [S.KFR.GUILD_ONBOARDING]: p.targetOnboarding,
-                            [S.KFR.HOME_SETTINGS]: p.targetOnboarding,
-                            [S.KFR.INTEGRATION]: p.targetIntegration,
-                            [S.KFR.INVITE]: p.targetInvite,
-                            [S.KFR.WEBHOOK]: p.targetWebhook,
-                            [S.KFR.EMOJI]: p.targetEmoji,
-                            [S.KFR.STICKER]: p.targetSticker,
-                            [S.KFR.STAGE_INSTANCE]: p.targetStageInstance,
-                            [S.KFR.GUILD_SCHEDULED_EVENT]: p.targetGuildScheduledEvent,
-                            [S.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION]: p.targetGuildScheduledEvent,
-                            [S.KFR.THREAD]: p.thread,
-                            [S.KFR.APPLICATION_COMMAND]: p.applicationCommand,
-                            [S.KFR.AUTO_MODERATION_RULE]: p.autoModerationRule,
-                            [S.KFR.GUILD_HOME]: p.targetGuildHome,
-                            [S.KFR.GUILD_SOUNDBOARD]: p.targetGuildSoundboard,
-                            [S.KFR.VOICE_CHANNEL_STATUS]: p.targetChannel,
-                            [S.KFR.GUILD_MEMBER_VERIFICATION]: p.targetMember,
-                            [S.KFR.GUILD_PROFILE]: p.targetGuild,
+                            [S.KFR.ALL]: C.targetAll,
+                            [S.KFR.GUILD]: C.targetGuild,
+                            [S.KFR.CHANNEL]: C.targetChannel,
+                            [S.KFR.CHANNEL_OVERWRITE]: C.targetChannel,
+                            [S.KFR.USER]: C.targetMember,
+                            [S.KFR.ROLE]: C.targetRole,
+                            [S.KFR.ONBOARDING_PROMPT]: C.targetOnboarding,
+                            [S.KFR.GUILD_ONBOARDING]: C.targetOnboarding,
+                            [S.KFR.HOME_SETTINGS]: C.targetOnboarding,
+                            [S.KFR.INTEGRATION]: C.targetIntegration,
+                            [S.KFR.INVITE]: C.targetInvite,
+                            [S.KFR.WEBHOOK]: C.targetWebhook,
+                            [S.KFR.EMOJI]: C.targetEmoji,
+                            [S.KFR.STICKER]: C.targetSticker,
+                            [S.KFR.STAGE_INSTANCE]: C.targetStageInstance,
+                            [S.KFR.GUILD_SCHEDULED_EVENT]: C.targetGuildScheduledEvent,
+                            [S.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION]: C.targetGuildScheduledEvent,
+                            [S.KFR.THREAD]: C.thread,
+                            [S.KFR.APPLICATION_COMMAND]: C.applicationCommand,
+                            [S.KFR.AUTO_MODERATION_RULE]: C.autoModerationRule,
+                            [S.KFR.GUILD_HOME]: C.targetGuildHome,
+                            [S.KFR.GUILD_SOUNDBOARD]: C.targetGuildSoundboard,
+                            [S.KFR.VOICE_CHANNEL_STATUS]: C.targetChannel,
+                            [S.KFR.GUILD_MEMBER_VERIFICATION]: C.targetMember,
+                            [S.KFR.GUILD_PROFILE]: C.targetGuild,
                         }[t],
                 i,
             );
         return (0, r.jsx)("div", { className: a });
     }
 }
-function v(e) {
+function b(e) {
     let { log: t, guild: n, onContentClick: i, className: a } = e,
         u = l.useCallback(
             (e) => {
@@ -153,7 +153,7 @@ function v(e) {
                                                           (0, r.jsx)(
                                                               "div",
                                                               {
-                                                                  className: p.subListItem,
+                                                                  className: C.subListItem,
                                                                   children: e.name,
                                                               },
                                                               e.id,
@@ -173,7 +173,7 @@ function v(e) {
                                                           (0, r.jsx)(
                                                               "div",
                                                               {
-                                                                  className: p.subListItem,
+                                                                  className: C.subListItem,
                                                                   children: R.hQ(e, t),
                                                               },
                                                               n,
@@ -194,7 +194,7 @@ function v(e) {
                                                             (0, r.jsx)(
                                                                 "div",
                                                                 {
-                                                                    className: p.subListItem,
+                                                                    className: C.subListItem,
                                                                     children: R.cT(e),
                                                                 },
                                                                 e,
@@ -207,7 +207,7 @@ function v(e) {
                                                             (0, r.jsx)(
                                                                 "div",
                                                                 {
-                                                                    className: p.subListItem,
+                                                                    className: C.subListItem,
                                                                     children: R.em(e),
                                                                 },
                                                                 e,
@@ -252,7 +252,7 @@ function v(e) {
                                                 return (0, r.jsxs)(
                                                     "ul",
                                                     {
-                                                        className: p.onboardingChangeLogContainer,
+                                                        className: C.onboardingChangeLogContainer,
                                                         children: [
                                                             E.map((e) => {
                                                                 let {
@@ -269,7 +269,7 @@ function v(e) {
                                                                         children: [
                                                                             (0, r.jsxs)("div", {
                                                                                 className:
-                                                                                    p.onboardingChangeLogItemTitle,
+                                                                                    C.onboardingChangeLogItemTitle,
                                                                                 children: [
                                                                                     (0, r.jsx)(x, {
                                                                                         actionType: S.vB8.CREATE,
@@ -278,8 +278,8 @@ function v(e) {
                                                                                     }),
                                                                                     (0, r.jsx)(d.Text, {
                                                                                         variant: "text-md/normal",
-                                                                                        children: C.intl.format(
-                                                                                            C.t.CZ1tys,
+                                                                                        children: p.intl.format(
+                                                                                            p.t.CZ1tys,
                                                                                             { title: i },
                                                                                         ),
                                                                                     }),
@@ -287,21 +287,21 @@ function v(e) {
                                                                             }),
                                                                             (0, r.jsxs)("div", {
                                                                                 className:
-                                                                                    p.onboardingChangeLogItemChanges,
+                                                                                    C.onboardingChangeLogItemChanges,
                                                                                 children: [
                                                                                     u.length > 0 &&
                                                                                         (0, r.jsx)(d.Text, {
                                                                                             variant: "text-md/normal",
-                                                                                            children: C.intl.format(
-                                                                                                C.t["gt/5z8"],
+                                                                                            children: p.intl.format(
+                                                                                                p.t["gt/5z8"],
                                                                                                 { roles: u.join(", ") },
                                                                                             ),
                                                                                         }),
                                                                                     c.length > 0 &&
                                                                                         (0, r.jsx)(d.Text, {
                                                                                             variant: "text-md/normal",
-                                                                                            children: C.intl.format(
-                                                                                                C.t["4q006e"],
+                                                                                            children: p.intl.format(
+                                                                                                p.t["4q006e"],
                                                                                                 {
                                                                                                     channels:
                                                                                                         c.join(", "),
@@ -320,7 +320,7 @@ function v(e) {
                                                                     "li",
                                                                     {
                                                                         children: (0, r.jsxs)("div", {
-                                                                            className: p.onboardingChangeLogItemTitle,
+                                                                            className: C.onboardingChangeLogItemTitle,
                                                                             children: [
                                                                                 (0, r.jsx)(x, {
                                                                                     actionType: S.vB8.DELETE,
@@ -329,8 +329,8 @@ function v(e) {
                                                                                 }),
                                                                                 (0, r.jsx)(d.Text, {
                                                                                     variant: "text-md/normal",
-                                                                                    children: C.intl.format(
-                                                                                        C.t["m3dt+P"],
+                                                                                    children: p.intl.format(
+                                                                                        p.t["m3dt+P"],
                                                                                         { title: e.title },
                                                                                     ),
                                                                                 }),
@@ -368,7 +368,7 @@ function v(e) {
                                                                                   children: [
                                                                                       (0, r.jsxs)("div", {
                                                                                           className:
-                                                                                              p.onboardingChangeLogItemTitle,
+                                                                                              C.onboardingChangeLogItemTitle,
                                                                                           children: [
                                                                                               (0, r.jsx)(x, {
                                                                                                   actionType:
@@ -381,8 +381,8 @@ function v(e) {
                                                                                                   variant:
                                                                                                       "text-md/normal",
                                                                                                   children:
-                                                                                                      C.intl.format(
-                                                                                                          C.t["WZO+iY"],
+                                                                                                      p.intl.format(
+                                                                                                          p.t["WZO+iY"],
                                                                                                           { title: l },
                                                                                                       ),
                                                                                               }),
@@ -390,15 +390,15 @@ function v(e) {
                                                                                       }),
                                                                                       (0, r.jsxs)("div", {
                                                                                           className:
-                                                                                              p.onboardingChangeLogItemChanges,
+                                                                                              C.onboardingChangeLogItemChanges,
                                                                                           children: [
                                                                                               A.length > 0 &&
                                                                                                   (0, r.jsx)(d.Text, {
                                                                                                       variant:
                                                                                                           "text-md/normal",
                                                                                                       children:
-                                                                                                          C.intl.format(
-                                                                                                              C.t[
+                                                                                                          p.intl.format(
+                                                                                                              p.t[
                                                                                                                   "R+km+f"
                                                                                                               ],
                                                                                                               {
@@ -413,8 +413,8 @@ function v(e) {
                                                                                                       variant:
                                                                                                           "text-md/normal",
                                                                                                       children:
-                                                                                                          C.intl.format(
-                                                                                                              C.t
+                                                                                                          p.intl.format(
+                                                                                                              p.t
                                                                                                                   .xIVRoa,
                                                                                                               {
                                                                                                                   roles: T.join(
@@ -428,8 +428,8 @@ function v(e) {
                                                                                                       variant:
                                                                                                           "text-md/normal",
                                                                                                       children:
-                                                                                                          C.intl.format(
-                                                                                                              C.t
+                                                                                                          p.intl.format(
+                                                                                                              p.t
                                                                                                                   .iYowX1,
                                                                                                               {
                                                                                                                   channels:
@@ -444,8 +444,8 @@ function v(e) {
                                                                                                       variant:
                                                                                                           "text-md/normal",
                                                                                                       children:
-                                                                                                          C.intl.format(
-                                                                                                              C.t
+                                                                                                          p.intl.format(
+                                                                                                              p.t
                                                                                                                   .JLdJpK,
                                                                                                               {
                                                                                                                   channels:
@@ -462,8 +462,8 @@ function v(e) {
                                                                                                           variant:
                                                                                                               "text-md/normal",
                                                                                                           children:
-                                                                                                              C.intl.format(
-                                                                                                                  C.t[
+                                                                                                              p.intl.format(
+                                                                                                                  p.t[
                                                                                                                       "0698zc"
                                                                                                                   ],
                                                                                                                   {
@@ -520,11 +520,11 @@ function v(e) {
                                                                         ? (0, r.jsx)("li", {
                                                                               children: (0, r.jsx)("div", {
                                                                                   className:
-                                                                                      p.onboardingChangeLogItemTitle,
+                                                                                      C.onboardingChangeLogItemTitle,
                                                                                   children: (0, r.jsx)(d.Text, {
                                                                                       variant: "text-md/normal",
-                                                                                      children: C.intl.format(
-                                                                                          C.t.PrOzAw,
+                                                                                      children: p.intl.format(
+                                                                                          p.t.PrOzAw,
                                                                                           {
                                                                                               oldUser:
                                                                                                   null !=
@@ -533,8 +533,8 @@ function v(e) {
                                                                                                           ? void 0
                                                                                                           : o.username)
                                                                                                       ? i
-                                                                                                      : C.intl.string(
-                                                                                                            C.t.PoWNfX,
+                                                                                                      : p.intl.string(
+                                                                                                            p.t.PoWNfX,
                                                                                                         ),
                                                                                               newUser:
                                                                                                   null !=
@@ -543,8 +543,8 @@ function v(e) {
                                                                                                           ? void 0
                                                                                                           : u.username)
                                                                                                       ? s
-                                                                                                      : C.intl.string(
-                                                                                                            C.t.PoWNfX,
+                                                                                                      : p.intl.string(
+                                                                                                            p.t.PoWNfX,
                                                                                                         ),
                                                                                           },
                                                                                       ),
@@ -557,11 +557,11 @@ function v(e) {
                                                                         ? (0, r.jsx)("li", {
                                                                               children: (0, r.jsx)("div", {
                                                                                   className:
-                                                                                      p.onboardingChangeLogItemTitle,
+                                                                                      C.onboardingChangeLogItemTitle,
                                                                                   children: (0, r.jsx)(d.Text, {
                                                                                       variant: "text-md/normal",
-                                                                                      children: C.intl.format(
-                                                                                          C.t.oB7rBQ,
+                                                                                      children: p.intl.format(
+                                                                                          p.t.oB7rBQ,
                                                                                           {
                                                                                               oldMessage:
                                                                                                   null !=
@@ -570,8 +570,8 @@ function v(e) {
                                                                                                           ? void 0
                                                                                                           : t.message)
                                                                                                       ? a
-                                                                                                      : C.intl.string(
-                                                                                                            C.t.PoWNfX,
+                                                                                                      : p.intl.string(
+                                                                                                            p.t.PoWNfX,
                                                                                                         ),
                                                                                               newMessage: e.message,
                                                                                           },
@@ -600,7 +600,7 @@ function v(e) {
                                                                             {
                                                                                 children: (0, r.jsxs)("div", {
                                                                                     className:
-                                                                                        p.onboardingChangeLogItemTitle,
+                                                                                        C.onboardingChangeLogItemTitle,
                                                                                     children: [
                                                                                         (0, r.jsx)(x, {
                                                                                             actionType: S.vB8.CREATE,
@@ -609,8 +609,8 @@ function v(e) {
                                                                                         }),
                                                                                         (0, r.jsx)(d.Text, {
                                                                                             variant: "text-md/normal",
-                                                                                            children: C.intl.format(
-                                                                                                C.t["oFSu6+"],
+                                                                                            children: p.intl.format(
+                                                                                                p.t["oFSu6+"],
                                                                                                 { name: e.title },
                                                                                             ),
                                                                                         }),
@@ -626,7 +626,7 @@ function v(e) {
                                                                             {
                                                                                 children: (0, r.jsxs)("div", {
                                                                                     className:
-                                                                                        p.onboardingChangeLogItemTitle,
+                                                                                        C.onboardingChangeLogItemTitle,
                                                                                     children: [
                                                                                         (0, r.jsx)(x, {
                                                                                             actionType: S.vB8.DELETE,
@@ -635,8 +635,8 @@ function v(e) {
                                                                                         }),
                                                                                         (0, r.jsx)(d.Text, {
                                                                                             variant: "text-md/normal",
-                                                                                            children: C.intl.format(
-                                                                                                C.t.GssWam,
+                                                                                            children: p.intl.format(
+                                                                                                p.t.GssWam,
                                                                                                 { name: e.title },
                                                                                             ),
                                                                                         }),
@@ -665,7 +665,7 @@ function v(e) {
                                                                             {
                                                                                 children: (0, r.jsxs)("div", {
                                                                                     className:
-                                                                                        p.onboardingChangeLogItemTitle,
+                                                                                        C.onboardingChangeLogItemTitle,
                                                                                     children: [
                                                                                         (0, r.jsx)(x, {
                                                                                             actionType: S.vB8.CREATE,
@@ -674,8 +674,8 @@ function v(e) {
                                                                                         }),
                                                                                         (0, r.jsx)(d.Text, {
                                                                                             variant: "text-md/normal",
-                                                                                            children: C.intl.format(
-                                                                                                C.t.HlGndH,
+                                                                                            children: p.intl.format(
+                                                                                                p.t.HlGndH,
                                                                                                 { name: e.title },
                                                                                             ),
                                                                                         }),
@@ -691,7 +691,7 @@ function v(e) {
                                                                             {
                                                                                 children: (0, r.jsxs)("div", {
                                                                                     className:
-                                                                                        p.onboardingChangeLogItemTitle,
+                                                                                        C.onboardingChangeLogItemTitle,
                                                                                     children: [
                                                                                         (0, r.jsx)(x, {
                                                                                             actionType: S.vB8.DELETE,
@@ -700,8 +700,8 @@ function v(e) {
                                                                                         }),
                                                                                         (0, r.jsx)(d.Text, {
                                                                                             variant: "text-md/normal",
-                                                                                            children: C.intl.format(
-                                                                                                C.t["7pysg4"],
+                                                                                            children: p.intl.format(
+                                                                                                p.t["7pysg4"],
                                                                                                 { name: e.title },
                                                                                             ),
                                                                                         }),
@@ -733,7 +733,7 @@ function v(e) {
                                         change: A,
                                     } = e;
                                     if (null == i) return console.warn("No change string for", A), null;
-                                    let I = C.intl.format(i, {
+                                    let I = p.intl.format(i, {
                                         oldValue: u,
                                         newValue: c,
                                         count: Array.isArray(c) ? c.length : null,
@@ -753,7 +753,7 @@ function v(e) {
                                                             {
                                                                 children: [
                                                                     (0, r.jsx)("span", {
-                                                                        className: p.colorsHook,
+                                                                        className: C.colorsHook,
                                                                         children: ""
                                                                             .concat(n > 0 ? ", " : "")
                                                                             .concat((0, E.Rf)(e).toUpperCase(), " "),
@@ -810,14 +810,14 @@ function v(e) {
                                         : (0, r.jsxs)(
                                               "div",
                                               {
-                                                  className: p.detail,
+                                                  className: C.detail,
                                                   style: {
                                                       position: "relative",
                                                       top: 1,
                                                   },
                                                   children: [
                                                       (0, r.jsxs)(d.Text, {
-                                                          className: p.prefix,
+                                                          className: C.prefix,
                                                           variant: "code",
                                                           color: (function (e) {
                                                               switch (e) {
@@ -832,16 +832,16 @@ function v(e) {
                                                           children: [
                                                               a < 10 ? "0".concat(a) : a,
                                                               (0, r.jsx)("span", {
-                                                                  className: p.dash,
+                                                                  className: C.dash,
                                                                   children: "\u2014",
                                                               }),
                                                           ],
                                                       }),
                                                       (0, r.jsxs)("div", {
-                                                          className: p.change,
+                                                          className: C.change,
                                                           children: [
                                                               (0, r.jsx)("div", {
-                                                                  className: p.changeStr,
+                                                                  className: C.changeStr,
                                                                   children: I,
                                                               }),
                                                               null != s ? (0, r.jsx)("div", { children: s }) : null,
@@ -865,7 +865,7 @@ function v(e) {
                         .filter(h.lm);
                 return (0, r.jsx)(d.P3F, {
                     onClick: i,
-                    className: s()(p.changeDetails, a),
+                    className: s()(C.changeDetails, a),
                     children: A,
                 });
             },

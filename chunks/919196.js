@@ -17,8 +17,8 @@ var i = n(951288),
     x = n(366598),
     j = n(125657),
     v = n(725875),
-    O = n(981631),
-    y = n(388032),
+    y = n(981631),
+    O = n(388032),
     _ = n(85541);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -75,20 +75,20 @@ function N(e) {
         ((t = C({}, c)),
         (n = n =
             {
-                header: y.intl.formatToPlainString(y.t["rL9d//"], { applicationName: r.name }),
-                confirmText: y.intl.string(y.t.ebGf4u),
-                cancelText: y.intl.string(y.t["ETE/oK"]),
+                header: O.intl.formatToPlainString(O.t["rL9d//"], { applicationName: r.name }),
+                confirmText: O.intl.string(O.t.ebGf4u),
+                cancelText: O.intl.string(O.t["ETE/oK"]),
                 onConfirm: () => {
                     d.Z.disableIntegration(l.id, a.id).catch(() => {
                         s.Z.show({
-                            title: y.intl.string(y.t.wYqMmJ),
-                            body: y.intl.string(y.t.A4Mnsr),
+                            title: O.intl.string(O.t.wYqMmJ),
+                            body: O.intl.string(O.t.A4Mnsr),
                         });
                     });
                 },
                 children: (0, i.jsx)(o.Text, {
                     variant: "text-md/normal",
-                    children: y.intl.format(y.t.FGE8yc, { applicationName: r.name }),
+                    children: O.intl.format(O.t.FGE8yc, { applicationName: r.name }),
                 }),
             }),
         Object.getOwnPropertyDescriptors
@@ -113,51 +113,51 @@ function S(e) {
             applicationIntegration: s,
             selectableWebhookChannels: d,
             editedWebhook: S,
-            errors: P,
-            canNavigate: w,
+            errors: I,
+            canNavigate: E,
         } = e,
-        { application: I, integration: E, webhooks: T } = s,
+        { application: P, integration: w, webhooks: T } = s,
         [Z, k] = (0, a.Wu)(
             [m.Z],
-            () => [m.Z.can(O.Plq.MANAGE_ROLES, n), null == I.bot || m.Z.canManageUser(O.Plq.MANAGE_GUILD, I.bot.id, n)],
-            [I.bot, n],
+            () => [m.Z.can(y.Plq.MANAGE_ROLES, n), null == P.bot || m.Z.canManageUser(y.Plq.MANAGE_GUILD, P.bot.id, n)],
+            [P.bot, n],
         ),
-        A = (0, a.e7)([m.Z], () => m.Z.can(O.Plq.MANAGE_WEBHOOKS, n), [n]),
+        A = (0, a.e7)([m.Z], () => m.Z.can(y.Plq.MANAGE_WEBHOOKS, n), [n]),
         D = r.useCallback(() => {
-            w() &&
+            E() &&
                 (0, o.h7j)((e) =>
                     (0, i.jsx)(
                         N,
                         C(
                             {
                                 guild: n,
-                                application: I,
-                                integration: E,
+                                application: P,
+                                integration: w,
                             },
                             e,
                         ),
                     ),
                 );
-        }, [I, w, n, E]),
+        }, [P, E, n, w]),
         R = r.useMemo(() => {
             let e = [
                 {
                     icon: o.T39,
-                    text: y.intl.formatToPlainString(y.t.gcdJ8P, { timestamp: g.default.extractTimestamp(E.id) }),
+                    text: O.intl.formatToPlainString(O.t.gcdJ8P, { timestamp: g.default.extractTimestamp(w.id) }),
                 },
             ];
             return (
-                null != E.user &&
+                null != w.user &&
                     e.push({
                         icon: o.tBG,
-                        text: y.intl.formatToPlainString(y.t.qE7oqq, { user: f.ZP.getUserTag(E.user) }),
+                        text: O.intl.formatToPlainString(O.t.qE7oqq, { user: f.ZP.getUserTag(w.user) }),
                     }),
                 e
             );
-        }, [E.id, E.user]),
+        }, [w.id, w.user]),
         L = r.useMemo(() => {
             var e;
-            return null != I.bot && (null == (e = E.scopes) ? void 0 : e.includes(l.x.BOT))
+            return null != P.bot && (null == (e = w.scopes) ? void 0 : e.includes(l.x.BOT))
                 ? (0, i.jsx)(j.Z, {
                       guild: n,
                       applicationIntegration: s,
@@ -168,33 +168,33 @@ function S(e) {
                       children: (0, i.jsx)(o.Text, {
                           color: "text-muted",
                           variant: "text-sm/normal",
-                          children: y.intl.string(y.t.pfLnzc),
+                          children: O.intl.string(O.t.pfLnzc),
                       }),
                   });
-        }, [I.bot, s, n, E.scopes]);
+        }, [P.bot, s, n, w.scopes]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(h.Z, {
-                name: I.name,
-                imageSrc: null != (t = I.getIconURL(32)) ? t : b.pK["0"],
+                name: P.name,
+                imageSrc: null != (t = P.getIconURL(32)) ? t : b.pK["0"],
                 details: R,
                 isHeader: !0,
             }),
-            (null == I ? void 0 : I.description) != null
+            (null == P ? void 0 : P.description) != null
                 ? (0, i.jsx)(p.Z, {
-                      userBio: I.description,
+                      userBio: P.description,
                       className: _.headerDescription,
                   })
                 : null,
             Z
                 ? (0, i.jsx)(u.Z, {
-                      application: I,
-                      canNavigate: w,
+                      application: P,
+                      canNavigate: E,
                       guildId: n.id,
                   })
                 : null,
             (0, i.jsx)(o.izJ, { className: _.headerDivider }),
-            null != I.bot
+            null != P.bot
                 ? (0, i.jsxs)("div", {
                       className: _.section,
                       children: [
@@ -203,7 +203,7 @@ function S(e) {
                                   size: "xs",
                                   color: "currentColor",
                               }),
-                              title: y.intl.string(y.t.AOdOYm),
+                              title: O.intl.string(O.t.AOdOYm),
                           }),
                           L,
                       ],
@@ -217,15 +217,15 @@ function S(e) {
                             size: "md",
                             color: "currentColor",
                         }),
-                        title: y.intl.string(y.t["t9ZX/P"]),
+                        title: O.intl.string(O.t["t9ZX/P"]),
                     }),
                     T.length > 0
                         ? (0, i.jsx)(v.Z, {
                               webhooks: T,
                               editedWebhook: S,
                               selectableWebhookChannels: d,
-                              errors: P,
-                              canNavigate: w,
+                              errors: I,
+                              canNavigate: E,
                           })
                         : (0, i.jsx)(o.Zbd, {
                               className: _.emptyCard,
@@ -233,7 +233,7 @@ function S(e) {
                               children: (0, i.jsx)(o.Text, {
                                   color: "text-muted",
                                   variant: "text-sm/normal",
-                                  children: A ? y.intl.string(y.t.ahPd2d) : y.intl.string(y.t.axqYMj),
+                                  children: A ? O.intl.string(O.t.ahPd2d) : O.intl.string(O.t.axqYMj),
                               }),
                           }),
                 ],
@@ -247,7 +247,7 @@ function S(e) {
                     (0, i.jsx)(o.Text, {
                         color: "header-secondary",
                         variant: "text-sm/normal",
-                        children: k ? y.intl.string(y.t.hdneLy) : y.intl.string(y.t.xRCMq6),
+                        children: k ? O.intl.string(O.t.hdneLy) : O.intl.string(O.t.xRCMq6),
                     }),
                     (0, i.jsx)(c.Z.Child, {
                         grow: 0,
@@ -255,7 +255,7 @@ function S(e) {
                         children: (0, i.jsx)(o.Button, {
                             variant: "critical-primary",
                             size: "sm",
-                            text: y.intl.string(y.t.ebGf4u),
+                            text: O.intl.string(O.t.ebGf4u),
                             disabled: !k,
                             onClick: D,
                         }),

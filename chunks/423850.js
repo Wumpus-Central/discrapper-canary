@@ -32,10 +32,10 @@ function d() {
                 h = p ? (0, _.Gx)(p) : void 0,
                 O = (null != u ? R.get(u) : void 0) || h,
                 P = O ? (0, _.XU)(O).description : L.getScopeData().transactionName,
-                g = L.getUser(),
-                D = a.getIntegrationByName("Replay"),
-                C = D && D.getReplayId(),
-                m = void 0 !== g ? g.email || g.id || g.ip_address : void 0;
+                D = L.getUser(),
+                g = a.getIntegrationByName("Replay"),
+                C = g && g.getReplayId(),
+                m = void 0 !== D ? D.email || D.id || D.ip_address : void 0;
             try {
                 e = L.getScopeData().contexts.profile.profile_id;
             } catch (t) {}

@@ -1,6 +1,6 @@
 n.d(t, {
     U2: () => i,
-    jb: () => s,
+    jb: () => a,
 });
 var r = n(388032);
 let i = {
@@ -181,7 +181,7 @@ let i = {
         ],
     },
     l = ["en-GB"];
-function s() {
+function a() {
     return (0, r.getAvailableLocales)()
         .map((e) => {
             let t,

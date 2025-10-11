@@ -24,7 +24,7 @@ function u(e) {
             ],
             [f],
         ),
-        x = i.useCallback((e) => {
+        b = i.useCallback((e) => {
             o.Z.updateGuild({ defaultMessageNotifications: e });
         }, []);
     return (0, r.jsx)(a.E, {
@@ -34,6 +34,6 @@ function u(e) {
         options: h,
         value: m,
         disabled: !p,
-        onChange: x,
+        onChange: b,
     });
 }

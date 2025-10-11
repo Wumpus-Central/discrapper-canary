@@ -1,4 +1,4 @@
-n.d(t, { m: () => D }), n(997841), n(953529);
+n.d(t, { m: () => k }), n(997841), n(953529);
 var i = n(951288),
     r = n(647438),
     l = n(120356),
@@ -32,8 +32,8 @@ var i = n(951288),
     w = n(388032),
     M = n(201512);
 let R = c.Y.APP_LAUNCHER_IN_VOICE_BANNER,
-    k = "vc-activities-".concat((0, o.Z)());
-function L(e) {
+    L = "vc-activities-".concat((0, o.Z)());
+function D(e) {
     var t;
     let n,
         { channel: l, openInPopout: a, onClick: o } = e,
@@ -109,7 +109,7 @@ function L(e) {
               ],
           }));
 }
-let D = r.forwardRef(function (e, t) {
+let k = r.forwardRef(function (e, t) {
     var n;
     let { channel: l, isHovered: o, closePopout: s, onMouseEnter: c, onMouseLeave: u, onClick: g, className: b } = e,
         _ = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
@@ -124,7 +124,7 @@ let D = r.forwardRef(function (e, t) {
             o || s();
         }, [s, o]);
     let E = (0, O.bp)(),
-        { analyticsLocations: R, newestAnalyticsLocation: D } = (0, m.ZP)(f.Z.ACTIVITIES_MINI_SHELF),
+        { analyticsLocations: R, newestAnalyticsLocation: k } = (0, m.ZP)(f.Z.ACTIVITIES_MINI_SHELF),
         U = E === A.IlC.POPOUT,
         B = ((n = l.getGuildId()), (0, Z.Z)({ guildId: n }).slice(0, 5));
     r.useEffect(() => {
@@ -142,11 +142,11 @@ let D = r.forwardRef(function (e, t) {
                           }
                         : { type: "contextless" },
                 openInPopout: U,
-                analyticsLocation: D,
+                analyticsLocation: k,
             }),
                 u(),
                 g();
-        }, [l, D, g, u, U]),
+        }, [l, k, g, u, U]),
         F = r.useCallback(
             (e) => {
                 c(),
@@ -163,14 +163,14 @@ let D = r.forwardRef(function (e, t) {
         children: (0, i.jsx)(j.Z, {
             children: (0, i.jsxs)(p.VqE, {
                 ref: t,
-                "aria-labelledby": k,
+                "aria-labelledby": L,
                 className: b,
                 children: [
                     (0, i.jsx)(p.y5t, {
                         forceLevel: 2,
                         children: (0, i.jsx)(p.nn4, {
                             children: (0, i.jsx)(p.H, {
-                                id: k,
+                                id: L,
                                 children: w.intl.string(w.t["2lnYtL"]),
                             }),
                         }),
@@ -216,7 +216,7 @@ let D = r.forwardRef(function (e, t) {
                                     }),
                                 ],
                             }),
-                            (0, i.jsx)(L, {
+                            (0, i.jsx)(D, {
                                 openInPopout: U,
                                 channel: l,
                                 onClick: () => {

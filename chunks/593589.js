@@ -6,8 +6,8 @@ var r = n(951288),
     l = n(238246),
     s = n(788983),
     c = n(207035),
-    u = n(823748),
-    d = n(981631),
+    d = n(823748),
+    u = n(981631),
     b = n(815523);
 function p(e) {
     let { windowKey: t, channel: n } = e;
@@ -19,7 +19,7 @@ function p(e) {
         contentClassName: b.popoutContent,
         children: (0, r.jsx)(o.Z.Provider, {
             value: n.guild_id,
-            children: (0, r.jsx)(u.Z, { providedChannel: n }),
+            children: (0, r.jsx)(d.Z, { providedChannel: n }),
         }),
     });
 }
@@ -27,7 +27,7 @@ function f(e, t) {
     let n = (0, c.P)(t),
         o = i.useCallback(() => {
             s.bA(
-                "".concat(d.KJ3.CHANNEL_POPOUT, "-").concat(e.id),
+                "".concat(u.KJ3.CHANNEL_POPOUT, "-").concat(e.id),
                 (t) =>
                     (0, r.jsx)(p, {
                         windowKey: t,

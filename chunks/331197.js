@@ -31,9 +31,9 @@ function j(e) {
         A = t.getGuildId(),
         { mute: w, suppress: M } = (0, C.Z)(t),
         R = (0, l.e7)([y.Z], () => y.Z.isDeaf()),
-        k = w || M || R,
-        L = (0, m.sR)({ isSoundboardButtonDisabled: k }),
-        [D, U] = (0, h.cv)(L),
+        L = w || M || R,
+        D = (0, m.sR)({ isSoundboardButtonDisabled: L }),
+        [k, U] = (0, h.cv)(D),
         { analyticsLocations: B } = (0, u.ZP)(),
         { isHovered: H, setIsHovered: V, onMouseEnter: F, onMouseLeave: G } = (0, f.Z)(200, 300);
     function z(e) {
@@ -99,9 +99,9 @@ function j(e) {
                 ? (null == S || S(void 0), G())
                 : (null != E ? (Z(), F()) : Z(), null == S || S(x.D.SOUNDBOARD));
     }
-    let q = r.useRef(null);
+    let Y = r.useRef(null);
     return (0, i.jsx)(s.y, {
-        targetElementRef: q,
+        targetElementRef: Y,
         shouldShow: (H && (E === x.D.SOUNDBOARD || null == E)) || E === x.D.SOUNDBOARD,
         animation: s.y.Animation.FADE,
         animationPosition: "top",
@@ -113,7 +113,7 @@ function j(e) {
         },
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return k
+            return L
                 ? null
                 : (0, i.jsx)(_.Z, {
                       children: (0, i.jsx)("div", {
@@ -124,7 +124,7 @@ function j(e) {
                               channel: t,
                               onClose: n,
                               gridNotice:
-                                  D === a.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
+                                  k === a.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
                                   (0, i.jsx)(g.o, {
                                       onClose: n,
                                       markAsDismissed: U,
@@ -136,7 +136,7 @@ function j(e) {
         },
         children: () =>
             (0, i.jsx)(v.d, {
-                ref: q,
+                ref: Y,
                 isTrayButton: !0,
                 themeable: j,
                 label: w
@@ -147,7 +147,7 @@ function j(e) {
                         ? O.intl.string(O.t.X1lQlp)
                         : void 0,
                 iconComponent: I,
-                disabled: k,
+                disabled: L,
                 onContextMenu: z,
                 onClick: W,
                 onMouseEnter: () => {

@@ -21,10 +21,10 @@ var l = n(951288),
     v = n(622822),
     T = n(13430),
     G = n(723359),
-    O = n(981631),
-    R = n(388032),
-    x = n(736056);
-function N(t) {
+    N = n(981631),
+    O = n(388032),
+    R = n(736056);
+function x(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             l = Object.keys(n);
@@ -56,7 +56,7 @@ function C(t) {
         [C, S] = r.useState(null),
         [k, j] = r.useState(null),
         [w, I] = r.useState(!1),
-        [D, M] = r.useState(0),
+        [M, D] = r.useState(0),
         P = r.useRef(null),
         L = r.useRef(null),
         U = n === G.L0.FAMILY_CENTER,
@@ -79,32 +79,32 @@ function C(t) {
             else {
                 var t;
                 (null == e || null == (t = e.body) ? void 0 : t.username) != null
-                    ? j(R.intl.string(R.t["TGg/2t"]))
+                    ? j(O.intl.string(O.t["TGg/2t"]))
                     : j(null == e ? void 0 : e.body.message),
                     I(!1);
             }
         }
     }
     async function H() {
-        if ((i()(null != q, "Cannot submit if we haven't been able to calculate age."), q < 18)) return void M(1);
+        if ((i()(null != q, "Cannot submit if we haven't been able to calculate age."), q < 18)) return void D(1);
         await Q();
     }
     async function J(t) {
         t.preventDefault(), w || null == C || (await H());
     }
-    async function X() {
-        null == (await Q()) && M(0);
+    async function z() {
+        null == (await Q()) && D(0);
     }
     r.useEffect(() => {
         (null == a ? void 0 : a.nsfwAllowed) !== !0 || F || (0, g.qq)(n);
     }),
         r.useEffect(() => {
-            h.default.track(O.rMx.AGE_GATE_ACTION, {
+            h.default.track(N.rMx.AGE_GATE_ACTION, {
                 source: n,
                 action: G.Al.AGE_GATE_OPEN,
             });
         }, [n]);
-    let z = r.useCallback(
+    let X = r.useCallback(
             (t) => {
                 S(t);
             },
@@ -122,25 +122,25 @@ function C(t) {
             onClose: K,
             graphic: {
                 type: "image",
-                src: x.Z,
+                src: R.Z,
             },
             gradientColor: "blue",
         };
     return F
         ? (0, l.jsx)(
               u.ExpressiveModal,
-              N(
+              x(
                   {
                       title: Y,
                       subtitle: V,
                       actions: [
                           {
-                              text: R.intl.string(R.t.f3Pet7),
+                              text: O.intl.string(O.t.f3Pet7),
                               onClick: K,
                               variant: "secondary",
                           },
                           {
-                              text: null != Z ? Z : R.intl.string(R.t["5B+npK"]),
+                              text: null != Z ? Z : O.intl.string(O.t["5B+npK"]),
                               onClick: tt,
                           },
                       ],
@@ -155,15 +155,15 @@ function C(t) {
         : (null == a ? void 0 : a.nsfwAllowed) === !1 && (W || B) && !U
           ? (0, l.jsx)(
                 u.ExpressiveModal,
-                N(
+                x(
                     {
-                        title: R.intl.string(B ? R.t["H0SG/v"] : R.t.NEabBQ),
-                        subtitle: R.intl.format(B ? R.t["6++3cX"] : R.t["2kHZen"], {
-                            helpURL: m.Z.getArticleURL(O.BhN.AGE_GATE),
+                        title: O.intl.string(B ? O.t["H0SG/v"] : O.t.NEabBQ),
+                        subtitle: O.intl.format(B ? O.t["6++3cX"] : O.t["2kHZen"], {
+                            helpURL: m.Z.getArticleURL(N.BhN.AGE_GATE),
                         }),
                         actions: [
                             {
-                                text: R.intl.string(R.t["/g10LC"]),
+                                text: O.intl.string(O.t["/g10LC"]),
                                 onClick: K,
                                 variant: "secondary",
                             },
@@ -176,7 +176,7 @@ function C(t) {
                     te,
                 ),
             )
-          : 0 === D
+          : 0 === M
             ? (function () {
                   var t, e;
                   let r = (() => {
@@ -184,39 +184,39 @@ function C(t) {
                               case G.L0.NSFW_SERVER:
                               case G.L0.NSFW_SERVER_INVITE:
                               case G.L0.NSFW_SERVER_INVITE_EMBED:
-                                  return R.intl.string(R.t.vAymlJ);
+                                  return O.intl.string(O.t.vAymlJ);
                               case G.L0.FAMILY_CENTER:
-                                  return R.intl.string(R.t.M7mt7u);
+                                  return O.intl.string(O.t.M7mt7u);
                               default:
-                                  return R.intl.string(R.t.F8otRk);
+                                  return O.intl.string(O.t.F8otRk);
                           }
                       })(),
                       a = (() => {
                           switch (n) {
                               case G.L0.FAMILY_CENTER:
-                                  return R.intl.string(R.t.mhUrKS);
+                                  return O.intl.string(O.t.mhUrKS);
                               case G.L0.DEEP_LINK_PROMPT:
-                                  return R.intl.format(R.t.iyhg2t, { helpURL: m.Z.getArticleURL(O.BhN.AGE_GATE) });
+                                  return O.intl.format(O.t.iyhg2t, { helpURL: m.Z.getArticleURL(N.BhN.AGE_GATE) });
                               default:
-                                  return R.intl.format(R.t.n3QjDA, { helpURL: m.Z.getArticleURL(O.BhN.AGE_GATE) });
+                                  return O.intl.format(O.t.n3QjDA, { helpURL: m.Z.getArticleURL(N.BhN.AGE_GATE) });
                           }
                       })();
                   return (0, l.jsx)("form", {
                       onSubmit: J,
                       children: (0, l.jsx)(
                           u.ExpressiveModal,
-                          ((t = N(
+                          ((t = x(
                               {
                                   title: r,
                                   subtitle: a,
                                   actions: [
                                       {
-                                          text: R.intl.string(R.t["1MrpWF"]),
+                                          text: O.intl.string(O.t["1MrpWF"]),
                                           onClick: K,
                                           variant: "secondary",
                                       },
                                       {
-                                          text: R.intl.string(R.t.uBFuoq),
+                                          text: O.intl.string(O.t.uBFuoq),
                                           onClick: H,
                                           loading: w,
                                           disabled: null == C,
@@ -228,9 +228,9 @@ function C(t) {
                           (e = e =
                               {
                                   children: (0, l.jsx)(T.Z, {
-                                      label: R.intl.string(R.t.rhBeKS),
+                                      label: O.intl.string(O.t.rhBeKS),
                                       name: "date_of_birth",
-                                      onChange: z,
+                                      onChange: X,
                                       onPopulated: $,
                                       error: k,
                                       value: C,
@@ -257,17 +257,17 @@ function C(t) {
             : (0, l.jsx)(u.Modal, {
                   transitionState: e,
                   onClose: K,
-                  title: R.intl.formatToPlainString(R.t.wumolZ, { age: q }),
-                  subtitle: R.intl.formatToPlainString(R.t.n3QjDA, { helpURL: m.Z.getArticleURL(O.BhN.AGE_GATE) }),
+                  title: O.intl.formatToPlainString(O.t.wumolZ, { age: q }),
+                  subtitle: O.intl.formatToPlainString(O.t.n3QjDA, { helpURL: m.Z.getArticleURL(N.BhN.AGE_GATE) }),
                   actions: [
                       {
-                          text: R.intl.string(R.t.cfYCra),
-                          onClick: () => M(0),
+                          text: O.intl.string(O.t.cfYCra),
+                          onClick: () => D(0),
                           variant: "secondary",
                       },
                       {
-                          text: R.intl.string(R.t["6tahio"]),
-                          onClick: X,
+                          text: O.intl.string(O.t["6tahio"]),
+                          onClick: z,
                       },
                   ],
               });

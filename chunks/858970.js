@@ -17,8 +17,8 @@ var l = t(951288),
     v = t(981631),
     g = t(671955),
     b = t(388032),
-    y = t(220566);
-function I(e) {
+    I = t(220566);
+function y(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             l = Object.keys(t);
@@ -91,7 +91,7 @@ function Z(e) {
             children: (0, l.jsx)(r.Y0X, {
                 "data-migration-pending": !0,
                 transitionState: P,
-                className: y.root,
+                className: I.root,
                 "aria-label": M,
                 parentComponent: "RestrictedUserProfileModalV2",
                 children: (0, l.jsxs)(h.Z, {
@@ -99,16 +99,16 @@ function Z(e) {
                     displayProfile: R,
                     themeType: g.l.MODAL_V2,
                     children: [
-                        (0, l.jsx)("div", { className: y.background }),
+                        (0, l.jsx)("div", { className: I.background }),
                         (0, l.jsxs)("div", {
-                            className: y.content,
+                            className: I.content,
                             children: [
                                 (0, l.jsx)(f.Z, {
                                     user: n,
                                     guildId: S,
                                 }),
                                 (0, l.jsxs)("div", {
-                                    className: y.textContainer,
+                                    className: I.textContainer,
                                     children: [
                                         (0, l.jsx)(r.Heading, {
                                             variant: "heading-xl/bold",
@@ -123,7 +123,7 @@ function Z(e) {
                                     ],
                                 }),
                                 (0, l.jsx)("div", {
-                                    className: y.safetyTable,
+                                    className: I.safetyTable,
                                     children: D.map((e, n) => {
                                         let { icon: t, description: i } = e;
                                         return (0, l.jsx)(
@@ -147,7 +147,7 @@ function Z(e) {
                                             onClick: () => {
                                                 A(),
                                                     (0, m.pQ)(
-                                                        I(
+                                                        y(
                                                             {
                                                                 action: C
                                                                     ? "VIEW_BLOCKED_PROFILE"
@@ -164,7 +164,7 @@ function Z(e) {
                                             onClick: () => {
                                                 A(),
                                                     (0, m.pQ)(
-                                                        I(
+                                                        y(
                                                             {
                                                                 action: "DONT_SHOW_AGAIN_IGNORED_PROFILE",
                                                                 analyticsLocations: _,

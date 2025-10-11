@@ -12,8 +12,8 @@ var r = n(951288),
 function m(e) {
     var t,
         n,
-        { root: m, directory: b, target: j, onPanelChange: p, sidebarHeader: x, sidebarFooter: y, emptyState: v } = e,
-        g = (function (e, t) {
+        { root: m, directory: b, target: p, onPanelChange: j, sidebarHeader: x, sidebarFooter: v, emptyState: y } = e,
+        h = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -34,31 +34,31 @@ function m(e) {
             }
             return l;
         })(e, ["root", "directory", "target", "onPanelChange", "sidebarHeader", "sidebarFooter", "emptyState"]);
-    let [h, O] = l.useState(!1),
-        [C, _] = l.useState(1.4),
-        S = l.useRef(null),
+    let [g, O] = l.useState(!1),
+        [C, S] = l.useState(1.4),
+        _ = l.useRef(null),
         P = (0, o.e7)([s.Z], () => s.Z.useReducedMotion),
-        N = (0, o.e7)([c.Z], () => c.Z.isFocused());
+        E = (0, o.e7)([c.Z], () => c.Z.isFocused());
     return (
         l.useEffect(() => {
             let e = (e) => {
                 let { intensity: t, duration: n } = e;
                 !P &&
-                    N &&
+                    E &&
                     (O(!0),
-                    _(null != t ? t : 1.4),
-                    clearTimeout(S.current),
-                    (S.current = setTimeout(() => O(!1), null != n ? n : 1000)));
+                    S(null != t ? t : 1.4),
+                    clearTimeout(_.current),
+                    (_.current = setTimeout(() => O(!1), null != n ? n : 1000)));
             };
             return (
                 u.S.subscribe(f.CkL.SHAKE_SETTINGS_MODAL, e),
                 () => {
-                    u.S.unsubscribe(f.CkL.SHAKE_SETTINGS_MODAL, e), clearTimeout(S.current);
+                    u.S.unsubscribe(f.CkL.SHAKE_SETTINGS_MODAL, e), clearTimeout(_.current);
                 }
             );
-        }, [P, N]),
+        }, [P, E]),
         (0, r.jsx)(a.UkV, {
-            isShaking: h,
+            isShaking: g,
             intensity: C,
             children: (0, r.jsx)(
                 i.A,
@@ -86,18 +86,18 @@ function m(e) {
                             });
                     }
                     return e;
-                })({}, g)),
+                })({}, h)),
                 (n = n =
                     {
                         children: (0, r.jsx)(d.Z, {
-                            onClose: g.onClose,
+                            onClose: h.onClose,
                             root: m,
                             directory: b,
-                            target: j,
-                            onPanelChange: p,
+                            target: p,
+                            onPanelChange: j,
                             sidebarHeader: x,
-                            emptyState: v,
-                            sidebarFooter: y,
+                            emptyState: y,
+                            sidebarFooter: v,
                         }),
                     }),
                 Object.getOwnPropertyDescriptors

@@ -1,14 +1,14 @@
 n.d(t, { Z: () => o }), n(642613);
-var l = n(647438),
-    i = n(700089),
+var i = n(647438),
+    l = n(700089),
     r = n(654455),
     a = n(496158);
 function o(e) {
     let { context: t, commands: n, limit: o = n.length } = e,
         s = (0, a.D)(t),
-        c = (0, i.R)(s),
-        u = l.useMemo(() => n.reduce((e, t) => ((e[t.id] = t), e), {}), [n]);
-    return l.useMemo(
+        c = (0, l.R)(s),
+        u = i.useMemo(() => n.reduce((e, t) => ((e[t.id] = t), e), {}), [n]);
+    return i.useMemo(
         () =>
             c
                 .map((e) => u[e])

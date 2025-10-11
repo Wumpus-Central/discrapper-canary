@@ -18,8 +18,8 @@ var r = n(951288),
     p = n(594174),
     f = n(434404),
     h = n(388032);
-let x = "NO_CHANNEL";
-function b(e) {
+let b = "NO_CHANNEL";
+function x(e) {
     return {
         value: e.id,
         label: (0, c.F6)(e, p.default, m.Z),
@@ -49,23 +49,23 @@ function v(e) {
                 })
                 .map((e) => {
                     let { channel: t } = e;
-                    return b(t);
+                    return x(t);
                 });
             return (
                 e.unshift({
-                    value: x,
+                    value: b,
                     label: h.intl.string(h.t.wGiHkJ),
                 }),
                 e
             );
         }, [d]),
         m = i.useCallback((e) => {
-            let t = e === x ? null : e;
+            let t = e === b ? null : e;
             f.Z.updateGuild({ afkChannelId: t });
         }, []);
     return (0, r.jsx)(C, {
         label: c,
-        value: null != s ? s : x,
+        value: null != s ? s : b,
         options: u,
         canManageGuild: t,
         onChange: m,
@@ -82,25 +82,25 @@ function _(e) {
                 })
                 .map((e) => {
                     let { channel: t } = e;
-                    return b(t);
+                    return x(t);
                 });
             return (
                 e.unshift({
-                    value: x,
+                    value: b,
                     label: h.intl.string(h.t.ibUhoa),
                 }),
                 e
             );
         }, [m]),
         j = i.useCallback((e) => {
-            let t = e === x ? null : e;
+            let t = e === b ? null : e;
             f.Z.updateGuild({ systemChannelId: t });
         }, []);
     return (0, r.jsx)(C, {
         label: c,
         description: d,
         layout: u,
-        value: null != s ? s : x,
+        value: null != s ? s : b,
         options: p,
         canManageGuild: t,
         onChange: j,

@@ -1,7 +1,7 @@
 A.d(t, { B: () => i });
-var r = A(951288);
+var n = A(951288);
 A(647438);
-var n = A(481060),
+var r = A(481060),
     a = A(120651),
     l = A(388032);
 function i(e, t) {
@@ -16,31 +16,31 @@ function i(e, t) {
                       (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var A = null != arguments[t] ? arguments[t] : {},
-                                  r = Object.keys(A);
+                                  n = Object.keys(A);
                               "function" == typeof Object.getOwnPropertySymbols &&
-                                  (r = r.concat(
+                                  (n = n.concat(
                                       Object.getOwnPropertySymbols(A).filter(function (e) {
                                           return Object.getOwnPropertyDescriptor(A, e).enumerable;
                                       }),
                                   )),
-                                  r.forEach(function (t) {
-                                      var r;
-                                      (r = A[t]),
+                                  n.forEach(function (t) {
+                                      var n;
+                                      (n = A[t]),
                                           t in e
                                               ? Object.defineProperty(e, t, {
-                                                    value: r,
+                                                    value: n,
                                                     enumerable: !0,
                                                     configurable: !0,
                                                     writable: !0,
                                                 })
-                                              : (e[t] = r);
+                                              : (e[t] = n);
                                   });
                           }
                           return e;
                       })(
                           {
                               highlightHook: (e) =>
-                                  (0, r.jsx)(n.Text, {
+                                  (0, n.jsx)(r.Text, {
                                       variant: "text-md/normal",
                                       color: "text-default",
                                       style: { display: "inline" },

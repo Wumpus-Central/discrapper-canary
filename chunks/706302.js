@@ -1,13 +1,13 @@
 n.d(t, { Z: () => r });
-var l = n(812236),
-    i = n(989573);
+var i = n(812236),
+    l = n(989573);
 function r(e) {
     let { context: t, application: n, botUserId: r } = e,
-        a = (0, l.ms)({
+        a = (0, i.ms)({
             context: t,
             applicationId: n.id,
             botUserId: r,
         }),
-        o = (0, i.Z)("channel" === t.type ? t.channel : void 0);
+        o = (0, l.Z)("channel" === t.type ? t.channel : void 0);
     return a && null != r && !o;
 }

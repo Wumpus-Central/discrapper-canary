@@ -28,11 +28,11 @@ let o = {
                 onAnimationEnd: v,
             } = e,
             [P, j] = r.useState(null),
-            { confettiCanvas: S } = r.useContext(a.h),
-            x = (0, l.uR)(null != b ? b : S, P),
-            [w, _] = r.useState(!1);
+            { confettiCanvas: x } = r.useContext(a.h),
+            S = (0, l.uR)(null != b ? b : x, P),
+            [_, w] = r.useState(!1);
         r.useEffect(() => {
-            w && (null == v || v());
+            _ && (null == v || v());
         });
         let I = r.useMemo(() => {
             if (null != c)
@@ -50,7 +50,7 @@ let o = {
                 return (
                     (e = e.map((n, i) =>
                         setTimeout(() => {
-                            x.createMultipleConfetti(
+                            S.createMultipleConfetti(
                                 (function (e, t, n, i, r) {
                                     var l, a;
                                     let c = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : o,
@@ -137,14 +137,14 @@ let o = {
                                 })(t.getBoundingClientRect(), f, m, g, h, y, O),
                                 null != p ? p : 50,
                             ),
-                                i === e.length - 1 && null != v && _(!0);
+                                i === e.length - 1 && null != v && w(!0);
                         }, 60 * i),
                     )),
                     () => {
                         for (let t of e) clearTimeout(t);
                     }
                 );
-            }, [x, t, d, p, f, m, g, h, y, O, v]),
+            }, [S, t, d, p, f, m, g, h, y, O, v]),
             (0, i.jsx)(l.Ji, {
                 ref: j,
                 sprites: null != I ? I : s.CA,

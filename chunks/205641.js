@@ -1,10 +1,10 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r,
     i,
     l = n(951288),
-    s = n(647438),
-    a = n(120356),
-    o = n.n(a),
+    a = n(647438),
+    s = n(120356),
+    o = n.n(s),
     c = n(392711),
     d = n.n(c),
     u = n(82923),
@@ -71,7 +71,7 @@ function h(e, t, n, r) {
         ),
     );
 }
-class x extends (r = s.Component) {
+class b extends (r = a.Component) {
     componentDidMount() {
         this.startAnimation();
     }
@@ -105,12 +105,12 @@ class x extends (r = s.Component) {
             r = n ? f.HOVERING.FIRE_MIN_INTENSITY_FALLING : f.HOVERING.FIRE_MIN_INTENSITY_RISING,
             i = n ? f.HOVERING.FIRE_MAX_INTENSITY_FALLING : f.HOVERING.FIRE_MAX_INTENSITY_RISING,
             l = this.createFireAnimation(f.HOVERING.FIRE_COUNT, f.HOVERING.Y_DURATION, r, i),
-            s = u.Z.timing(this.y, {
+            a = u.Z.timing(this.y, {
                 toValue: e,
                 duration: f.HOVERING.Y_DURATION,
                 easing: u.Z.Easing.inOut(u.Z.Easing.ease),
             });
-        (this.currentAnimation = u.Z.parallel([s, l])),
+        (this.currentAnimation = u.Z.parallel([a, l])),
             await (null == (t = this.currentAnimation) ? void 0 : t.start()),
             this.hoverAnimate(e * f.HOVERING.Y_VALUE_MODIFIER);
     }
@@ -133,13 +133,13 @@ class x extends (r = s.Component) {
                 duration: f.STAGING.DURATION,
             }),
             l = this.createShakeAnimation(f.STAGING.SHAKE_COUNT, f.STAGING.DURATION, f.STAGING.SHAKE_INTENSITY),
-            s = this.createFireAnimation(
+            a = this.createFireAnimation(
                 f.STAGING.FIRE_COUNT,
                 f.STAGING.DURATION,
                 f.STAGING.FIRE_MIN_INTENSITY,
                 f.STAGING.FIRE_MAX_INTENSITY,
             ),
-            a = u.Z.parallel([i, l, s]),
+            s = u.Z.parallel([i, l, a]),
             o = u.Z.timing(this.y, {
                 toValue: f.FLYING.Y_VALUE,
                 duration: f.FLYING.DURATION,
@@ -163,7 +163,7 @@ class x extends (r = s.Component) {
             ),
             m = u.Z.parallel([o, c, d, g]);
         if (
-            ((this.currentAnimation = u.Z.sequence([r, a, m])),
+            ((this.currentAnimation = u.Z.sequence([r, s, m])),
             await (null == (e = this.currentAnimation) ? void 0 : e.start()),
             !this.isUnmounted)
         ) {
@@ -242,5 +242,5 @@ class x extends (r = s.Component) {
             m(this, "isUnmounted", !1);
     }
 }
-m(x, "Stages", p);
-let b = x;
+m(b, "Stages", p);
+let x = b;

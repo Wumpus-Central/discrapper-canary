@@ -194,11 +194,11 @@ function S(e) {
             leading: P,
             trailing: w,
             validateOn: D = "change",
-            size: x = "md",
-            fullWidth: L = !1,
+            size: L = "md",
+            fullWidth: x = !1,
             clearable: M = !1,
-            helperText: k,
-            showCharacterCount: j = !1,
+            helperText: j,
+            showCharacterCount: k = !1,
             successMessage: U,
             label: G,
             description: B,
@@ -272,21 +272,21 @@ function S(e) {
     let et = null;
     ("boolean" == typeof M ? M && null != O && "" !== O && !ee : M.show)
         ? (et = (0, r.jsx)(T, {
-              inputSize: x,
+              inputSize: L,
               onClick: J,
           }))
         : null != w &&
           (et = (0, r.jsx)(I, {
               accessory: w,
-              inputSize: x,
+              inputSize: L,
           }));
     let en = null;
     null != P &&
         (en = (0, r.jsx)(I, {
             accessory: P,
-            inputSize: x,
+            inputSize: L,
         }));
-    let er = j
+    let er = k
         ? (0, r.jsx)(d.H, {
               value: O,
               maxLength: E,
@@ -298,7 +298,7 @@ function S(e) {
         required: F,
         description: B,
         hideLabel: Z,
-        helperText: k,
+        helperText: j,
         errorMessage: Y.hasError && null != (t = Y.errorMessage) ? t : void 0,
         successMessage: U,
         trailingContent: er,
@@ -306,9 +306,9 @@ function S(e) {
             ref: $,
             disabled: n,
             validation: Y,
-            fullWidth: L,
+            fullWidth: x,
             readOnly: ee,
-            className: o()(h.container, h[x], {
+            className: o()(h.container, h[L], {
                 [h.hasLeading]: null != en,
                 [h.hasTrailing]: null != et,
                 [h.hasTags]: z,

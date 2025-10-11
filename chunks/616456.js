@@ -19,8 +19,8 @@ var E,
     h = a(233517),
     O = a(822578),
     P = a(696486),
-    g = a(988097),
-    D = a(820754),
+    D = a(988097),
+    g = a(820754),
     C = a(899517),
     m = a(202811),
     v = a(370336),
@@ -287,11 +287,11 @@ function tP(t, e, a, r, _, n) {
     else if ("object" === e && "data" === a) return th(t, r);
     return "function" == typeof n ? n(a, r, _) : r;
 }
-function tg(t, e, a) {
+function tD(t, e, a) {
     return ("video" === t || "audio" === t) && "autoplay" === e;
 }
-function tD(t, e, a = 1 / 0, r = 0) {
-    return !t || t.nodeType !== t.ELEMENT_NODE || r > a ? -1 : e(t) ? r : tD(t.parentNode, e, a, r + 1);
+function tg(t, e, a = 1 / 0, r = 0) {
+    return !t || t.nodeType !== t.ELEMENT_NODE || r > a ? -1 : e(t) ? r : tg(t.parentNode, e, a, r + 1);
 }
 function tC(t, e) {
     return (a) => {
@@ -340,11 +340,11 @@ function tm(t, e, a, r, _, n) {
         let i = -1,
             c = -1;
         if (n) {
-            if ((c = tD(o, tC(r, _))) < 0) return !0;
-            i = tD(o, tC(e, a), c >= 0 ? c : 1 / 0);
+            if ((c = tg(o, tC(r, _))) < 0) return !0;
+            i = tg(o, tC(e, a), c >= 0 ? c : 1 / 0);
         } else {
-            if ((i = tD(o, tC(e, a))) < 0) return !1;
-            c = tD(o, tC(r, _), i >= 0 ? i : 1 / 0);
+            if ((i = tg(o, tC(e, a))) < 0) return !1;
+            c = tg(o, tC(r, _), i >= 0 ? i : 1 / 0);
         }
         return i >= 0 ? !(c >= 0) || i <= c : !(c >= 0) && !!n;
     } catch (t) {}
@@ -375,8 +375,8 @@ function tS(t, e) {
             slimDOMOptions: h,
             dataURLOptions: O = {},
             inlineImages: P = !1,
-            recordCanvas: g = !1,
-            onSerialize: D,
+            recordCanvas: D = !1,
+            onSerialize: g,
             onIframeLoad: C,
             iframeLoadTimeout: m = 5000,
             onStylesheetLoad: v,
@@ -408,7 +408,7 @@ function tS(t, e) {
                     keepIframeSrcFn: O,
                     newlyAddedElement: P = !1,
                 } = e,
-                g = (function (t, e) {
+                D = (function (t, e) {
                     if (!e.hasNode(t)) return;
                     let a = e.getId(t);
                     return 1 === a ? void 0 : a;
@@ -431,7 +431,7 @@ function tS(t, e) {
                         name: t.name,
                         publicId: t.publicId,
                         systemId: t.systemId,
-                        rootId: g,
+                        rootId: D,
                     };
                 case t.ELEMENT_NODE:
                     return (function (t, e) {
@@ -457,7 +457,7 @@ function tS(t, e) {
                                 maskTextSelector: O,
                                 unmaskTextSelector: P,
                             } = e,
-                            g = (function (t, e, a, r) {
+                            D = (function (t, e, a, r) {
                                 try {
                                     if (r && t.matches(r)) return !1;
                                     if ("string" == typeof e) {
@@ -471,7 +471,7 @@ function tS(t, e) {
                                 } catch (t) {}
                                 return !1;
                             })(t, o, i, c),
-                            D = (function (t) {
+                            g = (function (t) {
                                 if (t instanceof HTMLFormElement) return "form";
                                 let e = ta(t.tagName);
                                 return tu.test(e) ? "div" : e;
@@ -480,20 +480,20 @@ function tS(t, e) {
                             m = t.attributes.length;
                         for (let e = 0; e < m; e++) {
                             let a = t.attributes[e];
-                            a.name && !tg(D, a.name, a.value) && (C[a.name] = tP(n, D, ta(a.name), a.value, t, l));
+                            a.name && !tD(g, a.name, a.value) && (C[a.name] = tP(n, g, ta(a.name), a.value, t, l));
                         }
-                        if ("link" === D && E) {
+                        if ("link" === g && E) {
                             let e = Array.from(n.styleSheets).find((e) => e.href === t.href),
                                 a = null;
                             e && (a = J(e)), a && (delete C.rel, delete C.href, (C._cssText = tf(a, e.href)));
                         }
-                        if ("style" === D && t.sheet && !(t.innerText || t.textContent || "").trim().length) {
+                        if ("style" === g && t.sheet && !(t.innerText || t.textContent || "").trim().length) {
                             let e = J(t.sheet);
                             e && (C._cssText = tf(e, tO()));
                         }
-                        if ("input" === D || "textarea" === D || "select" === D || "option" === D) {
+                        if ("input" === g || "textarea" === g || "select" === g || "option" === g) {
                             let e = tn(t),
-                                a = to(t, tr(D), e),
+                                a = to(t, tr(g), e),
                                 r = t.checked;
                             if ("submit" !== e && "button" !== e && a) {
                                 let r = tm(
@@ -504,7 +504,7 @@ function tS(t, e) {
                                     P,
                                     tt({
                                         type: e,
-                                        tagName: tr(D),
+                                        tagName: tr(g),
                                         maskInputOptions: s,
                                     }),
                                 );
@@ -518,8 +518,8 @@ function tS(t, e) {
                             r && (C.checked = r);
                         }
                         if (
-                            ("option" === D && (t.selected && !s.select ? (C.selected = !0) : delete C.selected),
-                            "canvas" === D && N)
+                            ("option" === g && (t.selected && !s.select ? (C.selected = !0) : delete C.selected),
+                            "canvas" === g && N)
                         ) {
                             if ("2d" === t.__context)
                                 !(function (t) {
@@ -551,7 +551,7 @@ function tS(t, e) {
                                     e !== a.toDataURL(u.type, u.quality) && (C.rr_dataURL = e);
                             }
                         }
-                        if ("img" === D && R) {
+                        if ("img" === g && R) {
                             r || (_ = (r = n.createElement("canvas")).getContext("2d"));
                             let e = t.crossOrigin;
                             t.crossOrigin = "anonymous";
@@ -570,13 +570,13 @@ function tS(t, e) {
                             t.complete && 0 !== t.naturalWidth ? a() : t.addEventListener("load", a);
                         }
                         if (
-                            (("audio" === D || "video" === D) &&
+                            (("audio" === g || "video" === g) &&
                                 ((C.rr_mediaState = t.paused ? "paused" : "played"),
                                 (C.rr_mediaCurrentTime = t.currentTime)),
                             !T &&
                                 (t.scrollLeft && (C.rr_scrollLeft = t.scrollLeft),
                                 t.scrollTop && (C.rr_scrollTop = t.scrollTop)),
-                            g)
+                            D)
                         ) {
                             let { width: e, height: a } = t.getBoundingClientRect();
                             C = {
@@ -585,17 +585,17 @@ function tS(t, e) {
                                 rr_height: `${a}px`,
                             };
                         }
-                        "iframe" !== D || A(C.src) || (g || t.contentDocument || (C.rr_src = C.src), delete C.src);
+                        "iframe" !== g || A(C.src) || (D || t.contentDocument || (C.rr_src = C.src), delete C.src);
                         try {
-                            customElements.get(D) && (a = !0);
+                            customElements.get(g) && (a = !0);
                         } catch (t) {}
                         return {
                             type: d.Element,
-                            tagName: D,
+                            tagName: g,
                             attributes: C,
                             childNodes: [],
                             isSVG: !!("svg" === t.tagName || t.ownerSVGElement) || void 0,
-                            needBlock: g,
+                            needBlock: D,
                             rootId: f,
                             isCustom: a,
                         };
@@ -613,7 +613,7 @@ function tS(t, e) {
                         recordCanvas: h,
                         keepIframeSrcFn: O,
                         newlyAddedElement: P,
-                        rootId: g,
+                        rootId: D,
                         maskAllText: E,
                         maskTextClass: l,
                         unmaskTextClass: I,
@@ -697,19 +697,19 @@ function tS(t, e) {
                         maskTextFn: T,
                         maskInputOptions: A,
                         maskInputFn: f,
-                        rootId: g,
+                        rootId: D,
                     });
                 case t.CDATA_SECTION_NODE:
                     return {
                         type: d.CDATA,
                         textContent: "",
-                        rootId: g,
+                        rootId: D,
                     };
                 case t.COMMENT_NODE:
                     return {
                         type: d.Comment,
                         textContent: t.textContent || "",
-                        rootId: g,
+                        rootId: D,
                     };
                 default:
                     return !1;
@@ -732,7 +732,7 @@ function tS(t, e) {
             maskInputFn: p,
             dataURLOptions: O,
             inlineImages: P,
-            recordCanvas: g,
+            recordCanvas: D,
             keepIframeSrcFn: y,
             newlyAddedElement: U,
         });
@@ -813,7 +813,7 @@ function tS(t, e) {
           : -2;
     let W = Object.assign(G, { id: a });
     if ((o.add(t, W), -2 === a)) return null;
-    D && D(t);
+    g && g(t);
     let w = !N;
     if (W.type === d.Element) {
         (w = w && !W.needBlock), delete W.needBlock;
@@ -842,9 +842,9 @@ function tS(t, e) {
             slimDOMOptions: h,
             dataURLOptions: O,
             inlineImages: P,
-            recordCanvas: g,
+            recordCanvas: D,
             preserveWhiteSpace: b,
-            onSerialize: D,
+            onSerialize: g,
             onIframeLoad: C,
             iframeLoadTimeout: m,
             onStylesheetLoad: v,
@@ -913,9 +913,9 @@ function tS(t, e) {
                             slimDOMOptions: h,
                             dataURLOptions: O,
                             inlineImages: P,
-                            recordCanvas: g,
+                            recordCanvas: D,
                             preserveWhiteSpace: b,
-                            onSerialize: D,
+                            onSerialize: g,
                             onIframeLoad: C,
                             iframeLoadTimeout: m,
                             onStylesheetLoad: v,
@@ -973,9 +973,9 @@ function tS(t, e) {
                             slimDOMOptions: h,
                             dataURLOptions: O,
                             inlineImages: P,
-                            recordCanvas: g,
+                            recordCanvas: D,
                             preserveWhiteSpace: b,
-                            onSerialize: D,
+                            onSerialize: g,
                             onIframeLoad: C,
                             iframeLoadTimeout: m,
                             onStylesheetLoad: v,
@@ -1139,9 +1139,9 @@ function tk(t, e, a, r, _) {
         let t = r && n.matches(r);
         return o(n) && !t;
     }
-    let i = tD(n, o),
+    let i = tg(n, o),
         c = -1;
-    return !(i < 0) && (r && (c = tD(n, tC(null, r))), (i > -1 && c < 0) || i < c);
+    return !(i < 0) && (r && (c = tg(n, tC(null, r))), (i > -1 && c < 0) || i < c);
 }
 function tx(t, e) {
     return -2 === e.getId(t);
@@ -1571,7 +1571,7 @@ class t5 {
                                     "INPUT" === e.tagName &&
                                     "password" === (t.oldValue || "").toLowerCase() &&
                                     e.setAttribute("data-rr-is-password", "true"),
-                                !tg(e.tagName, a) &&
+                                !tD(e.tagName, a) &&
                                     ((_.attributes[a] = tP(this.doc, ta(e.tagName), ta(a), r, e, this.maskAttributeFn)),
                                     "style" === a))
                             ) {
@@ -3022,8 +3022,8 @@ function eP(t = {}) {
             slimDOMOptions: h,
             maskAttributeFn: O,
             maskInputFn: P,
-            maskTextFn: g,
-            maxCanvasSize: D = null,
+            maskTextFn: D,
+            maxCanvasSize: g = null,
             packFn: C,
             sampling: m = {},
             dataURLOptions: v = {},
@@ -3214,7 +3214,7 @@ function eP(t = {}) {
             blockClass: c,
             blockSelector: E,
             unblockSelector: s,
-            maxCanvasSize: D,
+            maxCanvasSize: g,
             sampling: m.canvas,
             dataURLOptions: v,
             errorHandler: K,
@@ -3239,7 +3239,7 @@ function eP(t = {}) {
                           maskInputOptions: j,
                           dataURLOptions: v,
                           maskAttributeFn: O,
-                          maskTextFn: g,
+                          maskTextFn: D,
                           maskInputFn: P,
                           recordCanvas: U,
                           inlineImages: M,
@@ -3294,8 +3294,8 @@ function eP(t = {}) {
                     onIframeLoad: h,
                     iframeLoadTimeout: O,
                     onStylesheetLoad: P,
-                    stylesheetLoadTimeout: g,
-                    keepIframeSrcFn: D = () => !1,
+                    stylesheetLoadTimeout: D,
+                    keepIframeSrcFn: g = () => !1,
                 } = e || {};
                 return tS(t, {
                     doc: t,
@@ -3360,8 +3360,8 @@ function eP(t = {}) {
                     onIframeLoad: h,
                     iframeLoadTimeout: O,
                     onStylesheetLoad: P,
-                    stylesheetLoadTimeout: g,
-                    keepIframeSrcFn: D,
+                    stylesheetLoadTimeout: D,
+                    keepIframeSrcFn: g,
                     newlyAddedElement: !1,
                 });
             })(document, {
@@ -3378,7 +3378,7 @@ function eP(t = {}) {
                 maskAllInputs: j,
                 maskAttributeFn: O,
                 maskInputFn: P,
-                maskTextFn: g,
+                maskTextFn: D,
                 slimDOM: X,
                 dataURLOptions: v,
                 recordCanvas: U,
@@ -3520,7 +3520,7 @@ function eP(t = {}) {
                         doc: t,
                         maskAttributeFn: O,
                         maskInputFn: P,
-                        maskTextFn: g,
+                        maskTextFn: D,
                         keepIframeSrcFn: Y,
                         blockSelector: E,
                         unblockSelector: s,
@@ -3603,10 +3603,10 @@ function eP(t = {}) {
         console.warn(t);
     }
 }
-function eg(t) {
+function eD(t) {
     return t > 9999999999 ? t : 1000 * t;
 }
-function eD(t) {
+function eg(t) {
     return t > 9999999999 ? t / 1000 : t;
 }
 function eC(t, e) {
@@ -3698,7 +3698,7 @@ class ey {
         )
             return;
         let n = {
-            timestamp: eD(t.timestamp),
+            timestamp: eg(t.timestamp),
             clickBreadcrumb: t,
             clickCount: 0,
             node: e,
@@ -3707,10 +3707,10 @@ class ey {
             (this._clicks.push(n), 1 === this._clicks.length && this._scheduleCheckClicks());
     }
     registerMutation(t = Date.now()) {
-        this._lastMutation = eD(t);
+        this._lastMutation = eg(t);
     }
     registerScroll(t = Date.now()) {
-        this._lastScroll = eD(t);
+        this._lastScroll = eg(t);
     }
     registerClick(t) {
         let e = em(t);
@@ -4037,7 +4037,7 @@ class eJ {
     }
     getEarliestTimestamp() {
         let t = this.events.map((t) => t.timestamp).sort()[0];
-        return t ? eg(t) : null;
+        return t ? eD(t) : null;
     }
 }
 class eZ {
@@ -4110,7 +4110,7 @@ class eQ {
         this._worker.destroy();
     }
     addEvent(t) {
-        let e = eg(t.timestamp);
+        let e = eD(t.timestamp);
         (!this._earliestTimestamp || e < this._earliestTimestamp) && (this._earliestTimestamp = e);
         let a = JSON.stringify(t);
         return ((this._totalSize += a.length), this._totalSize > 20000000)
@@ -4308,7 +4308,7 @@ async function ae(t, e, a) {
 }
 function aa(t, e) {
     if (!t.eventBuffer || t.isPaused() || !t.isEnabled()) return !1;
-    let a = eg(e.timestamp);
+    let a = eD(e.timestamp);
     return (
         !(a + t.timeouts.sessionIdlePause < Date.now()) &&
         (!(a > t.getContext().initialTimestamp + t.getOptions().maxReplayDuration) ||
@@ -4552,7 +4552,7 @@ async function ap(t) {
             await ((a = e),
             new Promise((t, e) => {
                 let r = (0, Y.iK)(() => e(Error("Timeout while trying to read response body")), 500);
-                ag(a)
+                aD(a)
                     .then(
                         (e) => t(e),
                         (t) => e(t),
@@ -4581,10 +4581,10 @@ function aP(t, e) {
     let a = t.headers;
     return a ? (a instanceof Headers ? aO(a, e) : Array.isArray(a) ? {} : ad(a, e)) : {};
 }
-async function ag(t) {
+async function aD(t) {
     return await t.text();
 }
-async function aD(t, e, a) {
+async function ag(t, e, a) {
     try {
         let r = (function (t, e, a) {
                 let r = Date.now(),
@@ -5241,7 +5241,7 @@ class aG {
     getCurrentRoute() {
         let t = this.lastActiveSpan || (0, P.HN)(),
             e = t && (0, P.Gx)(t),
-            a = ((e && (0, P.XU)(e).data) || {})[g.Zj];
+            a = ((e && (0, P.XU)(e).data) || {})[D.Zj];
         if (e && a && ["route", "custom"].includes(a)) return (0, P.XU)(e).description;
     }
     _initializeRecording() {
@@ -5482,7 +5482,7 @@ class aG {
                                                             void 0 !== _ && (t.data.request_body_size = _),
                                                                 void 0 !== n && (t.data.response_body_size = n);
                                                         })(e, a),
-                                                        aD(e, a, t)),
+                                                        ag(e, a, t)),
                                                     (n = e),
                                                     "fetch" === n.category && (o = a) && o.response)
                                                 ) {
@@ -5918,8 +5918,8 @@ class aH {
         unmask: h = [],
         block: O = [],
         unblock: P = [],
-        ignore: g = [],
-        maskFn: D,
+        ignore: D = [],
+        maskFn: g,
         beforeAddRecordingEvent: C,
         beforeErrorSampling: m,
     } = {}) {
@@ -5937,15 +5937,15 @@ class aH {
             unmask: h,
             block: O,
             unblock: P,
-            ignore: g,
+            ignore: D,
         });
         if (
             ((this._recordingOptions = {
                 maskAllInputs: E,
                 maskAllText: c,
                 maskInputOptions: { password: !0 },
-                maskTextFn: D,
-                maskInputFn: D,
+                maskTextFn: g,
+                maskInputFn: g,
                 maskAttributeFn: (t, e, a) =>
                     (function ({ el: t, key: e, maskAttributes: a, maskAllText: r, privacyOptions: _, value: n }) {
                         return !r || (_.unmaskTextSelector && t.matches(_.unmaskTextSelector))
@@ -6049,8 +6049,8 @@ class aH {
                     errorSampleRate: 0,
                     ...(0, v.Jr)(t),
                 },
-                _ = (0, D.o)(a.replaysSessionSampleRate),
-                n = (0, D.o)(a.replaysOnErrorSampleRate);
+                _ = (0, g.o)(a.replaysSessionSampleRate),
+                n = (0, g.o)(a.replaysOnErrorSampleRate);
             return (
                 null == _ &&
                     null == n &&

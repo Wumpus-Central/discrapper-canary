@@ -1,6 +1,6 @@
 n.d(t, {
-    H: () => h,
-    default: () => p,
+    H: () => p,
+    default: () => f,
 });
 var r = n(951288),
     l = n(647438),
@@ -12,15 +12,15 @@ var r = n(951288),
     d = n(161836),
     u = n(630724),
     m = n(388032),
-    f = n(759137);
-function p(e) {
-    let { transitionState: t, onClose: n, isNUXFlow: p } = e;
+    g = n(759137);
+function f(e) {
+    let { transitionState: t, onClose: n, isNUXFlow: f } = e;
     return (
         l.useEffect(() => {
-            o.Z.hideHubUpsell(), p && s.Z.flowStep(u.MK.ORGANIC, u.EW.HUB_CONNECTION);
-        }, [p]),
+            o.Z.hideHubUpsell(), f && s.Z.flowStep(u.MK.ORGANIC, u.EW.HUB_CONNECTION);
+        }, [f]),
         (0, r.jsx)(a.Y0X, {
-            className: f.modalRoot,
+            className: g.modalRoot,
             transitionState: t,
             "aria-label": m.intl.string(m.t["3khS8P"]),
             impression: { impressionName: i.ImpressionNames.HUB_EMAIL_SIGNUP },
@@ -31,23 +31,23 @@ function p(e) {
                     paddingRight: "0px",
                 },
                 paddingFix: !1,
-                className: f.modalContent,
+                className: g.modalContent,
                 children: (0, r.jsxs)("div", {
-                    className: f.container,
+                    className: g.container,
                     children: [
                         (0, r.jsx)("div", {
-                            className: f.sidebarContainer,
+                            className: g.sidebarContainer,
                             children: (0, r.jsx)(d.Z, {}),
                         }),
                         (0, r.jsxs)("div", {
-                            className: f.contentContainer,
+                            className: g.contentContainer,
                             children: [
                                 (0, r.jsx)(a.olH, {
                                     onClick: n,
-                                    className: f.closeButton,
+                                    className: g.closeButton,
                                 }),
                                 (0, r.jsx)(c.Z, {
-                                    isNUXFlow: p,
+                                    isNUXFlow: f,
                                     onClose: n,
                                 }),
                             ],
@@ -58,17 +58,17 @@ function p(e) {
         })
     );
 }
-let h = (e) => {
+let p = (e) => {
     let { invite: t } = e;
     return (0, r.jsxs)("div", {
-        className: f.container,
+        className: g.container,
         children: [
             (0, r.jsx)("div", {
-                className: f.sidebarContainer,
+                className: g.sidebarContainer,
                 children: (0, r.jsx)(d.Z, {}),
             }),
             (0, r.jsx)("div", {
-                className: f.contentContainer,
+                className: g.contentContainer,
                 children: (0, r.jsx)(c.Z, { invite: t }),
             }),
         ],

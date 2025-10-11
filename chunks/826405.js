@@ -1,6 +1,6 @@
 n.d(t, { Z: () => u });
-var l = n(647438),
-    i = n(442837),
+var i = n(647438),
+    l = n(442837),
     r = n(110924),
     a = n(317381),
     o = n(835473),
@@ -9,12 +9,12 @@ var l = n(647438),
 function u(e) {
     let { applicationId: t, context: n, launchingComponentId: u, onSubmissionComplete: d } = e,
         p = (0, o.q)(t),
-        m = (0, i.e7)([a.ZP], () => a.ZP.getLaunchState(t, "channel" === n.type ? n.channel.id : void 0)),
-        f = (0, i.e7)([s.Z], () => s.Z.isLaunchingFrame(t)),
+        m = (0, l.e7)([a.ZP], () => a.ZP.getLaunchState(t, "channel" === n.type ? n.channel.id : void 0)),
+        f = (0, l.e7)([s.Z], () => s.Z.isLaunchingFrame(t)),
         h = null != p && (0, c.g)(p) ? f : null != m && m.isLaunching && m.componentId === u,
         v = (0, r.Z)(h);
     return (
-        l.useEffect(() => {
+        i.useEffect(() => {
             !h && v && (null == d || d());
         }, [h, v, d]),
         {

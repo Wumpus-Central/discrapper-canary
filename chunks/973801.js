@@ -37,7 +37,7 @@ var r = n(267603),
     w = n(328289),
     D = n(647438);
 n(603113);
-class x extends l.M {
+class L extends l.M {
     addNode(e) {
         super.addNode(e),
             this.columnsDirty || (this.columnsDirty = "column" === e.type),
@@ -146,10 +146,10 @@ class x extends l.M {
             (this.columnsDirty = !0);
     }
 }
-let L = (0, D.createContext)(null),
+let x = (0, D.createContext)(null),
     M = (0, D.createContext)(null),
-    k = (0, D.createContext)(null),
     j = (0, D.createContext)(null),
+    k = (0, D.createContext)(null),
     U = (0, D.forwardRef)(function (e, t) {
         var n;
         [e, t] = (0, o.pE)(e, t, M);
@@ -170,7 +170,7 @@ let L = (0, D.createContext)(null),
             c.yF,
             {
                 content: d,
-                createCollection: () => new x(),
+                createCollection: () => new L(),
             },
             (n) =>
                 D.createElement(G, {
@@ -186,7 +186,7 @@ function G({ props: e, forwardedRef: t, selectionState: n, collection: r }) {
     let l,
         c,
         u,
-        d = (0, D.useContext)(L);
+        d = (0, D.useContext)(x);
     t = (0, C.B)(
         (0, D.useMemo)(() => (0, N.l)(t, null == d ? void 0 : d.tableRef), [t, null == d ? void 0 : d.tableRef]),
     );
@@ -212,7 +212,7 @@ function G({ props: e, forwardedRef: t, selectionState: n, collection: r }) {
         P = !!(null == I ? void 0 : I.useDroppableCollectionState);
     (0, D.useRef)(A), (0, D.useRef)(P), (0, D.useEffect)(() => {}, [A, P]);
     let w = !1,
-        x = null,
+        L = null,
         M = (0, D.useRef)(null);
     if (A && I) {
         (l = I.useDraggableCollectionState({
@@ -222,7 +222,7 @@ function G({ props: e, forwardedRef: t, selectionState: n, collection: r }) {
         })),
             I.useDraggableCollection({}, l, t);
         let e = I.DragPreview;
-        x = I.renderDragPreview ? D.createElement(e, { ref: M }, I.renderDragPreview) : null;
+        L = I.renderDragPreview ? D.createElement(e, { ref: M }, I.renderDragPreview) : null;
     }
     if (P && I) {
         c = I.useDroppableCollectionState({
@@ -276,8 +276,8 @@ function G({ props: e, forwardedRef: t, selectionState: n, collection: r }) {
         o.zt,
         {
             values: [
-                [k, f],
-                [j, Y],
+                [j, f],
+                [k, Y],
                 [
                     s.Ed,
                     {
@@ -312,7 +312,7 @@ function G({ props: e, forwardedRef: t, selectionState: n, collection: r }) {
                 }),
             ),
         ),
-        x,
+        L,
     );
 }
 function B(e) {
@@ -323,7 +323,7 @@ let Z = (0, D.createContext)(null),
     F = (0, c.IW)(
         "tableheader",
         (e, t) => {
-            let n = (0, D.useContext)(k).collection,
+            let n = (0, D.useContext)(j).collection,
                 r = (0, u.H)({
                     items: n.headerRows,
                     children: (0, D.useCallback)((e) => {
@@ -367,7 +367,7 @@ let Z = (0, D.createContext)(null),
     );
 function V({ item: e }) {
     let t = (0, D.useRef)(null),
-        n = (0, D.useContext)(k),
+        n = (0, D.useContext)(j),
         { isVirtualized: r, CollectionBranch: s } = (0, D.useContext)(a.Qk),
         { rowProps: l } = (0, O.Q)(
             {
@@ -400,7 +400,7 @@ function V({ item: e }) {
 let H = (0, c.G5)("column", (e, t, n) => {
         var r, i;
         let s = (0, C.B)(t),
-            l = (0, D.useContext)(k),
+            l = (0, D.useContext)(j),
             { isVirtualized: c } = (0, D.useContext)(a.Qk),
             { columnHeaderProps: u } = (0, I.W)(
                 {
@@ -411,7 +411,7 @@ let H = (0, c.G5)("column", (e, t, n) => {
                 s,
             ),
             { isFocused: d, isFocusVisible: f, focusProps: _ } = (0, m.F)(),
-            p = (0, D.useContext)(j),
+            p = (0, D.useContext)(k),
             h = !1;
         p && (h = p.resizingColumn === n.key);
         let { hoverProps: g, isHovered: b } = (0, y.X)({ isDisabled: !e.allowsSorting }),
@@ -489,7 +489,7 @@ let H = (0, c.G5)("column", (e, t, n) => {
     W = (0, c.IW)("tablebody", (e, t) => {
         var n;
         let r,
-            i = (0, D.useContext)(k),
+            i = (0, D.useContext)(j),
             { isVirtualized: l } = (0, D.useContext)(a.Qk),
             c = i.collection,
             { CollectionBranch: u } = (0, D.useContext)(a.Qk),
@@ -559,7 +559,7 @@ let H = (0, c.G5)("column", (e, t, n) => {
             let l,
                 c,
                 u = (0, C.B)(t),
-                d = (0, D.useContext)(k),
+                d = (0, D.useContext)(j),
                 { dragAndDropHooks: f, dragState: _, dropState: p } = (0, D.useContext)(s.Ed),
                 { isVirtualized: h, CollectionBranch: g } = (0, D.useContext)(a.Qk),
                 { rowProps: b, ...O } = (0, T.U)(
@@ -573,7 +573,7 @@ let H = (0, c.G5)("column", (e, t, n) => {
                 ),
                 { isFocused: I, isFocusVisible: A, focusProps: N } = (0, m.F)(),
                 { isFocusVisible: P, focusProps: w } = (0, m.F)({ within: !0 }),
-                { hoverProps: x, isHovered: L } = (0, y.X)({
+                { hoverProps: L, isHovered: x } = (0, y.X)({
                     isDisabled: !O.allowsSelection && !O.hasAction,
                     onHoverStart: e.onHoverStart,
                     onHoverChange: e.onHoverChange,
@@ -589,7 +589,7 @@ let H = (0, c.G5)("column", (e, t, n) => {
                     },
                     _,
                 ));
-            let j = (0, D.useRef)(null),
+            let k = (0, D.useRef)(null),
                 { visuallyHiddenProps: U } = (0, S.S)();
             p &&
                 f &&
@@ -602,7 +602,7 @@ let H = (0, c.G5)("column", (e, t, n) => {
                         },
                     },
                     p,
-                    j,
+                    k,
                 ));
             let G = (0, D.useRef)(null);
             (0, D.useEffect)(() => {
@@ -616,7 +616,7 @@ let H = (0, c.G5)("column", (e, t, n) => {
                     defaultClassName: "react-aria-Row",
                     values: {
                         ...O,
-                        isHovered: L,
+                        isHovered: x,
                         isFocused: I,
                         isFocusVisible: A,
                         selectionMode: d.selectionManager.selectionMode,
@@ -655,18 +655,18 @@ let H = (0, c.G5)("column", (e, t, n) => {
                                     role: "button",
                                     ...U,
                                     ...c.dropIndicatorProps,
-                                    ref: j,
+                                    ref: k,
                                 }),
                             ),
                         ),
                     D.createElement(
                         Y,
                         {
-                            ...(0, E.d)(K, H, b, N, x, null == l ? void 0 : l.dragProps, w),
+                            ...(0, E.d)(K, H, b, N, L, null == l ? void 0 : l.dragProps, w),
                             ref: u,
                             "data-disabled": O.isDisabled || void 0,
                             "data-selected": O.isSelected || void 0,
-                            "data-hovered": L || void 0,
+                            "data-hovered": x || void 0,
                             "data-focused": O.isFocused || void 0,
                             "data-focus-visible": A || void 0,
                             "data-pressed": O.isPressed || void 0,
@@ -732,7 +732,7 @@ let H = (0, c.G5)("column", (e, t, n) => {
     ),
     z = (0, c.G5)("cell", (e, t, n) => {
         let r = (0, C.B)(t),
-            i = (0, D.useContext)(k),
+            i = (0, D.useContext)(j),
             { dragState: l } = (0, D.useContext)(s.Ed),
             { isVirtualized: c } = (0, D.useContext)(a.Qk);
         n.column = i.collection.columns[n.index];
@@ -793,7 +793,7 @@ function q(e, t) {
 }
 function X(e, t) {
     let { dropIndicatorProps: n, isDropTarget: r, buttonRef: i, ...a } = e,
-        s = (0, D.useContext)(k),
+        s = (0, D.useContext)(j),
         { visuallyHiddenProps: l } = (0, S.S)(),
         c = (0, o.aX)({
             ...a,
@@ -830,7 +830,7 @@ function X(e, t) {
 }
 let Q = (0, D.forwardRef)(X);
 function J() {
-    let e = (0, D.useContext)(k),
+    let e = (0, D.useContext)(j),
         { dragAndDropHooks: t, dropState: n } = (0, D.useContext)(s.Ed),
         r = (0, D.useRef)(null),
         { dropIndicatorProps: i } = t.useDropIndicator({ target: { type: "root" } }, n, r),
@@ -864,7 +864,7 @@ function J() {
           );
 }
 (0, c.G5)("loader", function (e, t, n) {
-    let r = (0, D.useContext)(k),
+    let r = (0, D.useContext)(j),
         { isVirtualized: i } = (0, D.useContext)(a.Qk),
         { isLoading: s, onLoadMore: l, scrollOffset: c, ...u } = e,
         d = r.collection.columns.length,

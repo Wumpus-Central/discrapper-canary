@@ -2,9 +2,9 @@ n.d(t, { Z: () => Z }), n(388685), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    s = n.n(l),
-    a = n(512722),
-    o = n.n(a),
+    a = n.n(l),
+    s = n(512722),
+    o = n.n(s),
     c = n(780384),
     d = n(481060),
     u = n(99690),
@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(981631),
     f = n(856651),
     h = n(388032),
-    x = n(890644);
-function b(e) {
+    b = n(890644);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,42 +57,42 @@ function j(e, t) {
         e
     );
 }
-function _(e) {
+function v(e) {
     var t, n;
     let i,
-        { theme: l, platform: a, integration: g, onRemove: m, locked: p } = e;
+        { theme: l, platform: s, integration: g, onRemove: m, locked: p } = e;
     if ((null == g ? void 0 : g.application) != null)
         o()(null != g.application.bot, "bot is null"),
             (i = (0, r.jsx)(u.Z, {
                 size: d.EFr.SIZE_24,
                 user: g.application.bot,
-                className: x.verifiedIcon,
+                className: b.verifiedIcon,
             }));
-    else if (null != a) {
-        let e = (0, c.ap)(l) ? a.icon.lightSVG : a.icon.darkSVG;
+    else if (null != s) {
+        let e = (0, c.ap)(l) ? s.icon.lightSVG : s.icon.darkSVG;
         i = (0, r.jsx)("img", {
-            className: x.verifiedIcon,
+            className: b.verifiedIcon,
             src: e,
-            alt: h.intl.formatToPlainString(h.t.rtm15O, { name: a.name }),
+            alt: h.intl.formatToPlainString(h.t.rtm15O, { name: s.name }),
         });
     }
     return (0, r.jsxs)("div", {
-        className: s()(
-            x.verifiedRow,
-            (null == a ? void 0 : a.hasMetadata) === !0 ||
+        className: a()(
+            b.verifiedRow,
+            (null == s ? void 0 : s.hasMetadata) === !0 ||
                 ((null == g ? void 0 : g.role_connections_metadata) != null &&
                     (null == g ? void 0 : g.role_connections_metadata.length) > 0)
-                ? x.verifiedRowWithMetadata
+                ? b.verifiedRowWithMetadata
                 : null,
         ),
         children: [
             i,
             (0, r.jsx)(d.Text, {
                 variant: "text-md/medium",
-                className: x.verifiedText,
+                className: b.verifiedText,
                 children: h.intl.format(h.t.Nj0a3t, {
                     platformName:
-                        null != (n = null == a ? void 0 : a.name)
+                        null != (n = null == s ? void 0 : s.name)
                             ? n
                             : null == g || null == (t = g.application)
                               ? void 0
@@ -105,7 +105,7 @@ function _(e) {
                 children: (e) =>
                     (0, r.jsx)(
                         "div",
-                        j(b({}, e), {
+                        j(x({}, e), {
                             children: (0, r.jsx)(d.hU, {
                                 "aria-label": h.intl.string(h.t.N86XcH),
                                 variant: "icon-only",
@@ -120,13 +120,13 @@ function _(e) {
         ],
     });
 }
-function v(e) {
+function _(e) {
     let {
             titleText: t,
             fieldText: n,
             metadataField: l,
-            existingPendingConfiguration: s,
-            platform: a,
+            existingPendingConfiguration: a,
+            platform: s,
             applicationId: o,
             onConfigurationChange: c,
             locked: u,
@@ -135,7 +135,7 @@ function v(e) {
     return (0, r.jsxs)(
         "tr",
         {
-            className: x.ruleContainer,
+            className: b.ruleContainer,
             children: [
                 (0, r.jsx)("th", {
                     scope: "row",
@@ -147,7 +147,7 @@ function v(e) {
                     }),
                 }),
                 (0, r.jsxs)("td", {
-                    className: x.ruleContainerLabel,
+                    className: b.ruleContainerLabel,
                     children: [
                         (0, r.jsx)(d.Text, {
                             variant: "text-md/bold",
@@ -155,7 +155,7 @@ function v(e) {
                             children: t,
                         }),
                         (0, r.jsx)("div", {
-                            className: x.numericalRuleSubItemContainer,
+                            className: b.numericalRuleSubItemContainer,
                             children: (0, r.jsx)(d.Text, {
                                 variant: "text-md/normal",
                                 children: n,
@@ -167,19 +167,19 @@ function v(e) {
                 (0, r.jsx)("td", {
                     children: (0, r.jsx)(d.rsf, {
                         id: g,
-                        checked: (null == s ? void 0 : s.configuration.value) === "1",
+                        checked: (null == a ? void 0 : a.configuration.value) === "1",
                         onChange: (e) => {
                             var t, n;
                             let r = null;
                             e &&
                                 (r = {
-                                    connectionType: null != (t = null == a ? void 0 : a.type) ? t : f.Kt,
+                                    connectionType: null != (t = null == s ? void 0 : s.type) ? t : f.Kt,
                                     applicationId: o,
                                     connectionMetadataField: l,
                                     operator: f.iO.EQUAL,
                                     value: "1",
                                 }),
-                                c(r, null != (n = null == s ? void 0 : s.index) ? n : -1);
+                                c(r, null != (n = null == a ? void 0 : a.index) ? n : -1);
                         },
                         disabled: u,
                     }),
@@ -193,42 +193,42 @@ function C(e) {
     var t, n;
     let {
             titleText: l,
-            fieldText: s,
-            fieldTextHook: a,
+            fieldText: a,
+            fieldTextHook: s,
             metadataField: o,
             existingPendingConfiguration: c,
             platform: u,
             applicationId: g,
             onConfigurationChange: m,
             locked: p,
-            operator: b,
+            operator: x,
         } = e,
         j = (null == c ? void 0 : c.configuration) != null,
-        _ = null != (n = null == c ? void 0 : c.index) ? n : -1,
-        [v, C] = (function (e, t) {
+        v = null != (n = null == c ? void 0 : c.index) ? n : -1,
+        [_, C] = (function (e, t) {
             let n = null != t ? t : f.iO.GREATER_THAN,
                 r = Math.round(Number(null != e ? e : 0));
             return (
                 n === f.iO.GREATER_THAN ? (r = Math.max(1, r + 1)) : n === f.iO.LESS_THAN && (r = Math.max(0, r - 1)),
                 [r.toString(), n]
             );
-        })(null == c || null == (t = c.configuration) ? void 0 : t.value, b),
-        [O, y] = i.useState(v),
+        })(null == c || null == (t = c.configuration) ? void 0 : t.value, x),
+        [O, y] = i.useState(_),
         N =
-            null != a
-                ? h.intl.format(a, {
+            null != s
+                ? h.intl.format(s, {
                       count: O,
                       metadataHook: () => O,
                   })
                 : (0, r.jsx)("span", {
-                      className: x.fieldText,
-                      children: s,
+                      className: b.fieldText,
+                      children: a,
                   }),
         E = i.useId();
     return (0, r.jsxs)(
         "tr",
         {
-            className: x.ruleContainer,
+            className: b.ruleContainer,
             children: [
                 (0, r.jsx)("th", {
                     scope: "row",
@@ -240,7 +240,7 @@ function C(e) {
                     }),
                 }),
                 (0, r.jsxs)("td", {
-                    className: x.ruleContainerLabel,
+                    className: b.ruleContainerLabel,
                     children: [
                         (0, r.jsx)(d.Text, {
                             variant: "text-md/bold",
@@ -248,7 +248,7 @@ function C(e) {
                             children: l,
                         }),
                         (0, r.jsx)("div", {
-                            className: x.numericalRuleSubItemContainer,
+                            className: b.numericalRuleSubItemContainer,
                             children: (0, r.jsx)(d.Text, {
                                 variant: "text-md/normal",
                                 children: N,
@@ -258,7 +258,7 @@ function C(e) {
                 }),
                 (0, r.jsx)("td", {
                     children: (0, r.jsx)("div", {
-                        className: x.numericalRuleInput,
+                        className: b.numericalRuleInput,
                         children: (0, r.jsx)(d.oil, {
                             "aria-label": h.intl.string(h.t["FTmi9/"]),
                             type: "number",
@@ -274,7 +274,7 @@ function C(e) {
                                             : n === f.iO.LESS_THAN && (r = Math.max(1, r + 1)),
                                         [r.toString(), n]
                                     );
-                                })(e, b);
+                                })(e, x);
                                 if ("" !== e) {
                                     var r;
                                     m(
@@ -285,7 +285,7 @@ function C(e) {
                                             operator: n,
                                             value: t,
                                         },
-                                        _,
+                                        v,
                                     );
                                 }
                             },
@@ -321,7 +321,7 @@ function C(e) {
 function O(e) {
     let { children: t } = e;
     return (0, r.jsxs)("table", {
-        className: x.rulesTable,
+        className: b.rulesTable,
         children: [
             (0, r.jsx)("thead", {
                 children: (0, r.jsxs)("tr", {
@@ -457,7 +457,7 @@ function E(e) {
                 onConfigurationChange: n,
                 locked: i,
             }),
-            (0, r.jsx)(v, {
+            (0, r.jsx)(_, {
                 titleText: h.intl.string(h.t.yz2CIC),
                 fieldText: h.intl.string(h.t.E2iT8P),
                 metadataField: f.PC.TWITTER_VERIFIED,
@@ -492,7 +492,7 @@ function I(e) {
                 onConfigurationChange: n,
                 locked: i,
             }),
-            (0, r.jsx)(v, {
+            (0, r.jsx)(_, {
                 titleText: h.intl.string(h.t.oWM95O),
                 fieldText: h.intl.string(h.t["0cKdkZ"]),
                 metadataField: f.PC.REDDIT_MOD,
@@ -501,7 +501,7 @@ function I(e) {
                 onConfigurationChange: n,
                 locked: i,
             }),
-            (0, r.jsx)(v, {
+            (0, r.jsx)(_, {
                 titleText: h.intl.string(h.t["06rDHR"]),
                 fieldText: h.intl.string(h.t["kCAN5+"]),
                 metadataField: f.PC.REDDIT_GOLD,
@@ -527,7 +527,7 @@ function S(e) {
                 onConfigurationChange: n,
                 locked: i,
             }),
-            (0, r.jsx)(v, {
+            (0, r.jsx)(_, {
                 titleText: h.intl.string(h.t.IhXLy8),
                 fieldText: h.intl.string(h.t["0JyE8P"]),
                 metadataField: f.PC.PAYPAL_VERIFIED,
@@ -581,7 +581,7 @@ function T(e) {
                 locked: i,
                 operator: f.iO.LESS_THAN,
             }),
-            (0, r.jsx)(v, {
+            (0, r.jsx)(_, {
                 titleText: h.intl.string(h.t.TEEYwc),
                 fieldText: h.intl.string(h.t["39wASE"]),
                 metadataField: f.PC.EBAY_TOP_RATED_SELLER,
@@ -598,7 +598,7 @@ function P(e) {
         l = m.Z.get(p.ABu.TIKTOK);
     return (0, r.jsxs)(O, {
         children: [
-            (0, r.jsx)(v, {
+            (0, r.jsx)(_, {
                 titleText: h.intl.string(h.t.QHHwRU),
                 fieldText: h.intl.string(h.t.E2iT8P),
                 metadataField: f.PC.TIKTOK_VERIFIED,
@@ -642,7 +642,7 @@ function w(e) {
     return null == l || null == l.role_connections_metadata
         ? null
         : l.role_connections_metadata.map((e) => {
-              var s, a;
+              var a, s;
               let o;
               switch (e.type) {
                   case f.xn.INTEGER_LESS_THAN_EQUAL:
@@ -682,14 +682,14 @@ function w(e) {
                               onConfigurationChange: n,
                               locked: i,
                               operator: o,
-                              applicationId: null == (s = l.application) ? void 0 : s.id,
+                              applicationId: null == (a = l.application) ? void 0 : a.id,
                           },
                           e.key,
                       );
                   case f.xn.BOOLEAN_EQUAL:
                   case f.xn.BOOLEAN_NOT_EQUAL:
                       return (0, r.jsx)(
-                          v,
+                          _,
                           {
                               titleText: e.name,
                               fieldText: e.description,
@@ -699,7 +699,7 @@ function w(e) {
                               onConfigurationChange: n,
                               locked: i,
                               operator: o,
-                              applicationId: null == (a = l.application) ? void 0 : a.id,
+                              applicationId: null == (s = l.application) ? void 0 : s.id,
                           },
                           e.key,
                       );
@@ -708,15 +708,15 @@ function w(e) {
 }
 function Z(e) {
     let t,
-        { configurationItems: n, onConfigurationChange: i, locked: l, integrations: s } = e,
-        a = (0, g.ZP)();
+        { configurationItems: n, onConfigurationChange: i, locked: l, integrations: a } = e,
+        s = (0, g.ZP)();
     if (n.length < 1) return null;
     let o = n[0].configuration.applicationId,
         c =
             null != o
-                ? null == s
+                ? null == a
                     ? void 0
-                    : s.find((e) => {
+                    : a.find((e) => {
                           var t;
                           return (null == (t = e.application) ? void 0 : t.id) === o;
                       })
@@ -743,34 +743,34 @@ function Z(e) {
         h = null;
     switch (null == d ? void 0 : d.type) {
         case p.ABu.STEAM:
-            h = (0, r.jsx)(N, b({}, f));
+            h = (0, r.jsx)(N, x({}, f));
             break;
         case p.ABu.TWITTER:
-            h = (0, r.jsx)(E, b({}, f));
+            h = (0, r.jsx)(E, x({}, f));
             break;
         case p.ABu.REDDIT:
-            h = (0, r.jsx)(I, b({}, f));
+            h = (0, r.jsx)(I, x({}, f));
             break;
         case p.ABu.BLUESKY:
-            h = (0, r.jsx)(y, b({}, f));
+            h = (0, r.jsx)(y, x({}, f));
             break;
         case p.ABu.PAYPAL:
-            h = (0, r.jsx)(S, b({}, f));
+            h = (0, r.jsx)(S, x({}, f));
             break;
         case p.ABu.EBAY:
-            h = (0, r.jsx)(T, b({}, f));
+            h = (0, r.jsx)(T, x({}, f));
             break;
         case p.ABu.TIKTOK:
-            h = (0, r.jsx)(P, b({}, f));
+            h = (0, r.jsx)(P, x({}, f));
             break;
         default:
-            h = (0, r.jsx)(w, j(b({}, f), { integration: c }));
+            h = (0, r.jsx)(w, j(x({}, f), { integration: c }));
     }
     return (0, r.jsxs)("div", {
-        className: x.container,
+        className: b.container,
         children: [
-            (0, r.jsx)(_, {
-                theme: a,
+            (0, r.jsx)(v, {
+                theme: s,
                 platform: d,
                 integration: c,
                 onRemove: () => i(null, t.index),

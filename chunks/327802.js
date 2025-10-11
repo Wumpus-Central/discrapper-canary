@@ -7,8 +7,8 @@ var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(372129),
-    s = n(205822),
-    a = n(731994),
+    a = n(205822),
+    s = n(731994),
     o = n(388032);
 let c = (e) => {
         let { className: t, onSuccess: c, onError: d } = e,
@@ -23,11 +23,11 @@ let c = (e) => {
                     d(Error("Failed to read file", { cause: e }));
                 }
             };
-        return (0, r.jsx)(s.Z, {
+        return (0, r.jsx)(a.Z, {
             className: t,
             title: o.intl.string(o.t.DU0dy8),
             description: o.intl.string(o.t.bpycfH),
-            icons: a.pA,
+            icons: s.pA,
             onDrop: (e) => {
                 let t = null == e ? void 0 : e[0];
                 null != t &&
@@ -68,12 +68,12 @@ let c = (e) => {
     },
     d = function (e) {
         let { className: t, style: n, onDrop: i } = e;
-        return (0, r.jsx)(s.Z, {
+        return (0, r.jsx)(a.Z, {
             className: t,
             style: n,
             title: o.intl.string(o.t.DU0dy8),
             description: o.intl.string(o.t.bpycfH),
-            icons: a.pA,
+            icons: s.pA,
             onDrop: i,
         });
     };

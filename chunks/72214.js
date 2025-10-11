@@ -1,4 +1,4 @@
-n.d(t, { s: () => p }), n(388685), n(35282);
+n.d(t, { s: () => h }), n(388685), n(35282);
 var r = n(647438),
     l = n(442837),
     a = n(38618),
@@ -22,28 +22,28 @@ function b(e) {
         }
     );
 }
-function p(e) {
+function h(e) {
     let { targetDestination: t, selectedDestinations: n, originDestination: i, includeMissingDMs: f = !1 } = e,
-        p = (0, l.e7)([u.default], () => u.default.getId()),
-        h = r.useMemo(
+        h = (0, l.e7)([u.default], () => u.default.getId()),
+        p = r.useMemo(
             () => ({
                 searchOptions: {
-                    blacklist: new Set(["user:".concat(p)]),
+                    blacklist: new Set(["user:".concat(h)]),
                     frecencyBoosters: !0,
                     userFilters: null,
                 },
             }),
-            [p],
+            [h],
         ),
-        { search: m, query: g, results: y } = (0, d.Z)(h),
+        { search: m, query: g, results: y } = (0, d.Z)(p),
         [x, v] = r.useState(b("")),
         S = r.useCallback((e) => v(b(e)), [v]),
-        { queryMode: E } = x,
-        j = r.useRef(null),
+        { queryMode: j } = x,
+        E = r.useRef(null),
         Z = r.useRef(n),
-        O = g !== j.current ? n : Z.current;
+        P = g !== E.current ? n : Z.current;
     r.useEffect(() => {
-        g !== j.current && (Z.current = n), (j.current = g);
+        g !== E.current && (Z.current = n), (E.current = g);
     }, [g, n]),
         r.useLayoutEffect(() => {
             let { query: e, resultTypes: t } = x;
@@ -53,8 +53,8 @@ function p(e) {
             });
         }, [m, x]),
         (0, s.D)();
-    let P = (0, l.e7)([o.Z], () => o.Z.getFrequentlyWithoutFetchingLatest()),
-        _ = (0, l.e7)([a.Z], () => a.Z.isConnected()),
+    let _ = (0, l.e7)([o.Z], () => o.Z.getFrequentlyWithoutFetchingLatest()),
+        O = (0, l.e7)([a.Z], () => a.Z.isConnected()),
         C = "" !== g;
     return {
         results: r.useMemo(
@@ -62,16 +62,16 @@ function p(e) {
                 (0, c.ZP)({
                     results: y,
                     hasQuery: C,
-                    queryMode: E,
+                    queryMode: j,
                     targetDestination: t,
-                    frequentChannels: P,
+                    frequentChannels: _,
                     selectedDestinations: n,
-                    pinnedDestinations: O,
+                    pinnedDestinations: P,
                     originDestination: i,
                     includeMissingDMs: f,
-                    isConnected: _,
+                    isConnected: O,
                 }),
-            [y, C, E, t, P, n, O, i, f, _],
+            [y, C, j, t, _, n, P, i, f, O],
         ),
         updateSearchText: S,
     };

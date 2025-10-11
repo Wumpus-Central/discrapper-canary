@@ -17,15 +17,15 @@ var r = n(951288),
     _ = n(944486),
     O = n(48131),
     E = n(214143),
-    y = n(610278),
-    v = n(408491),
+    v = n(610278),
+    y = n(408491),
     I = n(981631),
-    S = n(918559),
-    C = n(388032),
+    C = n(918559),
+    S = n(388032),
     T = n(909357);
 let N = {
-    [S.MI.NO_CHAT]: T.noChat,
-    [S.MI.RESIZABLE]: T.resizable,
+    [C.MI.NO_CHAT]: T.noChat,
+    [C.MI.RESIZABLE]: T.resizable,
 };
 function j(e) {
     let { frame: t } = e,
@@ -47,7 +47,7 @@ function j(e) {
         k = i.useCallback(() => {
             O.Z.updateFrameLayoutMode({
                 applicationId: t.applicationId,
-                layoutMode: v.U.PIP,
+                layoutMode: y.U.PIP,
             });
         }, [t.applicationId]),
         M = i.useCallback(() => {
@@ -71,7 +71,7 @@ function j(e) {
                     l ||
                     O.Z.updateFrameLayoutMode({
                         applicationId: t.applicationId,
-                        layoutMode: v.U.PIP,
+                        layoutMode: y.U.PIP,
                     });
             };
             return (
@@ -81,7 +81,7 @@ function j(e) {
                 }
             );
         }, [t.applicationId, l]);
-    let U = R.width / Math.max(R.height, 1) < S.I0,
+    let U = R.width / Math.max(R.height, 1) < C.I0,
         G = 0,
         B = 0,
         H = (0, p.Z)(null == n ? void 0 : n.id);
@@ -89,13 +89,13 @@ function j(e) {
         let e = R.width,
             t = R.height;
         U
-            ? ((t = R.width / S.I0) > R.height && (e = (t = R.height) * S.I0), (B = (R.height - t) / 2))
-            : ((e = Math.min(R.height * S.I0)) > R.width && (t = (e = R.width) / S.I0), (G = (R.width - e) / 2));
+            ? ((t = R.width / C.I0) > R.height && (e = (t = R.height) * C.I0), (B = (R.height - t) / 2))
+            : ((e = Math.min(R.height * C.I0)) > R.width && (t = (e = R.width) / C.I0), (G = (R.width - e) / 2));
     }
-    let V = S.MI.NO_CHAT;
+    let V = C.MI.NO_CHAT;
     if (null == n) return null;
     let F = (null != A ? A : I.$Y6) + Z,
-        z = (0, y.ro)(t);
+        z = (0, v.ro)(t);
     return (0, r.jsx)(u.f6W, {
         theme: I.BRd.DARK,
         children: (e) =>
@@ -132,7 +132,7 @@ function j(e) {
                                 iconClassName: T.inviteButtonIcon,
                                 size: c.zx.Sizes.MEDIUM,
                                 look: c.zx.Looks.FILLED,
-                                buttonText: C.intl.string(C.t["6F9ivr"]),
+                                buttonText: S.intl.string(S.t["6F9ivr"]),
                                 color: c.zx.Colors.TRANSPARENT,
                             }),
                             (0, r.jsxs)("div", {
@@ -142,7 +142,7 @@ function j(e) {
                                         className: T.buttonSection,
                                         children: (0, r.jsx)(m.d, {
                                             isTrayButton: !0,
-                                            label: C.intl.string(C.t.brPQ5e),
+                                            label: S.intl.string(S.t.brPQ5e),
                                             onClick: k,
                                             iconComponent: u.dOc,
                                             themeable: !0,
@@ -150,7 +150,7 @@ function j(e) {
                                     }),
                                     (0, r.jsx)(m.d, {
                                         isTrayButton: !1,
-                                        label: C.intl.string(C.t["R/FK4O"]),
+                                        label: S.intl.string(S.t["R/FK4O"]),
                                         onClick: M,
                                         iconComponent: u.PBZ,
                                         color: "disconnect",

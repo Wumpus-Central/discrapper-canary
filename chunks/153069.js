@@ -13,8 +13,8 @@ var n,
     f = r(893776),
     g = r(479495),
     m = r(213609),
-    _ = r(254942),
-    b = r(388905),
+    b = r(254942),
+    _ = r(388905),
     C = r(379760),
     y = r(124860),
     w = r(144114),
@@ -114,7 +114,7 @@ class Z extends (n = s.PureComponent) {
             n = !this.hasError("email") && this.hasError("password");
         return (0, o.jsx)("div", {
             className: L.mainLoginContainer,
-            children: (0, o.jsxs)(b.gO, {
+            children: (0, o.jsxs)(_.gO, {
                 children: [
                     (0, o.jsx)(x.Z, {
                         alpha2: e.alpha2,
@@ -136,7 +136,7 @@ class Z extends (n = s.PureComponent) {
                         autoFocus: !n,
                         required: !0,
                     }),
-                    (0, o.jsx)(b.II, {
+                    (0, o.jsx)(_.II, {
                         label: T.intl.string(T.t["CIGa+/"]),
                         error: this.renderError("password"),
                         onChange: (t) => this.setState({ password: t }),
@@ -152,13 +152,13 @@ class Z extends (n = s.PureComponent) {
                     (0, o.jsxs)("div", {
                         className: l()(F.marginTop4, L.buttonsContainer),
                         children: [
-                            (0, o.jsx)(b.zx, {
+                            (0, o.jsx)(_.zx, {
                                 onClick: this.handleForgotPassword,
                                 look: h.zx.Looks.LINK,
                                 color: h.zx.Colors.LINK,
                                 children: T.intl.string(T.t.wWIufn),
                             }),
-                            (0, o.jsx)(b.zx, {
+                            (0, o.jsx)(_.zx, {
                                 onClick: () =>
                                     (function (t) {
                                         let e =
@@ -370,7 +370,7 @@ class Z extends (n = s.PureComponent) {
                         ),
                     );
                 } catch (e) {
-                    let t = (0, _.p)(e);
+                    let t = (0, b.p)(e);
                     this.setState({ errors: t });
                 }
             }),
@@ -385,7 +385,7 @@ class Z extends (n = s.PureComponent) {
                         isMultiAccount: !0,
                     });
                 } catch (e) {
-                    let t = (0, _.p)(e);
+                    let t = (0, b.p)(e);
                     this.setState({ errors: t });
                 }
             }),

@@ -9,8 +9,8 @@ var i = n(951288),
     d = n(411477),
     u = n(594174),
     f = n(626135),
-    _ = n(74538),
-    g = n(981631),
+    g = n(74538),
+    _ = n(981631),
     p = n(486324),
     m = n(474936),
     N = n(388032),
@@ -18,19 +18,19 @@ var i = n(951288),
 function h(e) {
     let { analyticsSection: t, type: n } = e,
         h = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
-        A = _.ZP.canUseAnimatedAvatar(h),
-        P = _.ZP.canUsePremiumProfileCustomization(h),
-        b = (n === p.pC.BANNER && P) || (n === p.pC.AVATAR && A),
+        A = g.ZP.canUseAnimatedAvatar(h),
+        b = g.ZP.canUsePremiumProfileCustomization(h),
+        P = (n === p.pC.BANNER && b) || (n === p.pC.AVATAR && A),
         { sourceAnalyticsLocations: v } = (0, c.ZP)(l.Z.PREMIUM_PREVIEW_UPSELL_HEADER);
     if (
         (a.useEffect(() => {
-            b ||
-                f.default.track(g.rMx.PREMIUM_UPSELL_VIEWED, {
+            P ||
+                f.default.track(_.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: t,
                     location_stack: v,
                 });
-        }, [b, t, v]),
-        b)
+        }, [P, t, v]),
+        P)
     )
         return null;
     let E = (0, i.jsx)(s.Z, {
@@ -43,7 +43,7 @@ function h(e) {
         showIcon: !1,
         premiumModalAnalyticsLocation: {
             section: t,
-            object: g.qAy.BUTTON_CTA,
+            object: _.qAy.BUTTON_CTA,
         },
         disableShine: !0,
     });

@@ -21,8 +21,8 @@ var r = n(951288),
     f = n(5192),
     R = n(776767),
     S = n(981631),
-    C = n(388032),
-    p = n(87437),
+    p = n(388032),
+    C = n(87437),
     D = n(938556);
 function L(e) {
     var t, n;
@@ -54,11 +54,11 @@ function L(e) {
                 ? null
                 : (0, r.jsx)(c.u, {
                       asContainer: !0,
-                      text: C.intl.string(C.t.mvsi9v),
+                      text: p.intl.string(p.t.mvsi9v),
                       children: (0, r.jsx)(E.P3F, {
                           onClick: v(x),
                           tag: "span",
-                          className: p.username,
+                          className: C.username,
                           children: (0, r.jsxs)(E.Text, {
                               variant: "text-sm/medium",
                               tag: "span",
@@ -75,13 +75,13 @@ function L(e) {
                   });
         }, [v, i.user, a.guildId, x, b])();
     return (0, r.jsxs)("div", {
-        className: s()(D.modInfoItem, p.auditLogItem),
+        className: s()(D.modInfoItem, C.auditLogItem),
         children: [
             (0, r.jsxs)("div", {
-                className: p.auditLogItemTitleContainer,
+                className: C.auditLogItemTitleContainer,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: p.auditLogItemTitle,
+                        className: C.auditLogItemTitle,
                         children: [
                             null != O &&
                                 (0, r.jsx)(E.Text, {
@@ -98,7 +98,7 @@ function L(e) {
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        className: p.auditLogItemDate,
+                        className: C.auditLogItemDate,
                         children: (0, r.jsx)(E.Text, {
                             variant: "text-sm/medium",
                             color: "header-primary",
@@ -109,9 +109,9 @@ function L(e) {
             }),
             null != L &&
                 (0, r.jsx)("div", {
-                    className: p.auditLogSecondaryContainer,
+                    className: C.auditLogSecondaryContainer,
                     children: (0, r.jsxs)("div", {
-                        className: p.auditLogReason,
+                        className: C.auditLogReason,
                         children: [
                             P,
                             (0, r.jsx)(E.Text, {
@@ -126,9 +126,9 @@ function L(e) {
             null == L &&
                 null != U &&
                 (0, r.jsx)("div", {
-                    className: p.auditLogSecondaryContainer,
+                    className: C.auditLogSecondaryContainer,
                     children: (0, r.jsxs)("div", {
-                        className: p.auditLogSecondary,
+                        className: C.auditLogSecondary,
                         children: [
                             P,
                             (0, r.jsx)(E.Text, {
@@ -143,9 +143,9 @@ function L(e) {
             null == L &&
                 null == U &&
                 (0, r.jsx)("div", {
-                    className: p.auditLogSecondaryContainer,
+                    className: C.auditLogSecondaryContainer,
                     children: (0, r.jsx)("div", {
-                        className: p.auditLogSecondary,
+                        className: C.auditLogSecondary,
                         children: (0, r.jsx)(E.Text, {
                             variant: "text-sm/normal",
                             color: "text-muted",
@@ -154,7 +154,7 @@ function L(e) {
                                 log: i,
                                 guild: d,
                                 onContentClick: () => {},
-                                className: p.auditLogExpandedChangeDetails,
+                                className: C.auditLogExpandedChangeDetails,
                             }),
                         }),
                     }),
@@ -177,7 +177,7 @@ function U(e) {
     null == n || 0 === i.length)
         ? null
         : (0, r.jsx)(E.gNt, {
-              label: C.intl.string(C.t.flCxLi),
+              label: p.intl.string(p.t.flCxLi),
               children:
                   i.length > 0
                       ? (0, r.jsx)(R.WM, {

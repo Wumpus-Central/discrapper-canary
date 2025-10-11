@@ -1,6 +1,6 @@
 n.d(t, {
-    H: () => O,
-    T: () => x,
+    H: () => x,
+    T: () => O,
 }),
     n(388685);
 var r = n(647438),
@@ -12,8 +12,8 @@ var r = n(647438),
     c = n(451478),
     d = n(626135),
     u = n(162461),
-    p = n(71585),
-    h = n(34586),
+    h = n(71585),
+    p = n(34586),
     f = n(69259),
     g = n(590026),
     m = n(178762),
@@ -21,32 +21,32 @@ var r = n(647438),
     y = n(809017),
     _ = n(981631),
     j = n(388032);
-let x = 0;
-function O(e) {
+let O = 0;
+function x(e) {
     let {
-            memberStoreProps: { groups: t, rows: n, version: x },
-            channelId: O,
+            memberStoreProps: { groups: t, rows: n, version: O },
+            channelId: x,
             guildId: v,
         } = e,
         [C, I] = r.useState(!1),
-        { requestId: E, entries: S, impressionCappedEntryIds: Z } = (0, g.Z)(O),
-        T = (0, i.e7)([p.Z], () => p.Z.hidden),
+        { requestId: S, entries: E, impressionCappedEntryIds: Z } = (0, g.Z)(x),
+        T = (0, i.e7)([h.Z], () => h.Z.hidden),
         P = (0, i.e7)([c.Z], () => c.Z.isFocused()),
-        N = (0, i.e7)([s.Z], () => s.Z.getChannel(O)),
+        N = (0, i.e7)([s.Z], () => s.Z.getChannel(x)),
         R = (0, i.e7)([o.Z], () => o.Z.getGuild(v), [v]),
-        w = (0, h.E)(R),
+        w = (0, p.E)(R),
         A = null != w && w && (null == N ? void 0 : N.isForumChannel()) === !1,
         [D, L, M, k] = r.useMemo(() => {
             let e;
-            if (null == S || 0 === S.length || null == E || !A) return [t, n, x];
-            let r = C ? S.length : 3,
-                i = S.slice(0, r);
+            if (null == E || 0 === E.length || null == S || !A) return [t, n, O];
+            let r = C ? E.length : 3,
+                i = E.slice(0, r);
             e = T
                 ? [{ type: a.so.HIDDEN_CONTENT_INVENTORY }]
                 : i.map((e) => ({
                       type: a.so.CONTENT_INVENTORY,
                       entry: e,
-                      requestId: E,
+                      requestId: S,
                   }));
             let l = {
                 id: y.G,
@@ -60,7 +60,7 @@ function O(e) {
                         let t = !e;
                         return (
                             d.default.track(_.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
-                                channel_id: O,
+                                channel_id: x,
                                 guild_id: v,
                                 expanded: t,
                             }),
@@ -69,13 +69,13 @@ function O(e) {
                     });
                 },
                 expanded: C,
-                expandedCount: S.length,
+                expandedCount: E.length,
                 feedHeight: e.map(m.iZ).reduce((e, t) => e + t, 0),
             };
             return [[l, ...t], [...n, l, ...e], Math.random(), e];
-        }, [O, S, C, t, v, E, n, x, T, A]),
+        }, [x, E, C, t, v, S, n, O, T, A]),
         U = r.useRef(0),
-        G = r.useRef(S),
+        G = r.useRef(E),
         H = r.useRef(void 0),
         F = r.useRef({ impressionCappedEntryIds: Z }),
         B = r.useCallback(
@@ -89,8 +89,8 @@ function O(e) {
         );
     return (
         r.useEffect(() => {
-            G.current = S;
-        }, [S]),
+            G.current = E;
+        }, [E]),
         r.useEffect(() => {
             F.current = { impressionCappedEntryIds: Z };
         }, [Z]),
@@ -100,18 +100,18 @@ function O(e) {
                 (H.current = Date.now()),
                 () => {
                     var e, t;
-                    if (null == E || null == H.current || Date.now() - H.current < 3000) return;
+                    if (null == S || null == H.current || Date.now() - H.current < 3000) return;
                     let n = null != (t = null == (e = G.current) ? void 0 : e.map((e) => e.id)) ? t : [],
                         r = n.slice(0, U.current);
                     !T &&
                         P &&
                         A &&
                         ((0, f.e)(_.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
-                            request_id: E,
+                            request_id: S,
                             first_shown_at: H.current,
                             item_ids: r,
                             surface_type: b.Kd.GUILD_MEMBER_LIST,
-                            channel_id: O,
+                            channel_id: x,
                             guild_id: v,
                             all_item_ids: n,
                             impression_capped_item_ids: [...F.current.impressionCappedEntryIds],
@@ -123,7 +123,7 @@ function O(e) {
                             }));
                 }
             ),
-            [E, O, v, T, P, A],
+            [S, x, v, T, P, A],
         ),
         {
             groups: D,

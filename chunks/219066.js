@@ -1,7 +1,7 @@
 n.d(t, { Z: () => p }), n(388685);
-var l = n(647438),
-    i = n(392711),
-    r = n.n(i),
+var i = n(647438),
+    l = n(392711),
+    r = n.n(l),
     a = n(911969),
     o = n(254711),
     s = n(213459),
@@ -11,8 +11,8 @@ var l = n(647438),
 function p(e) {
     var t;
     let { context: n } = e,
-        i = "channel" === n.type ? n.channel : void 0,
-        p = (0, s.LD)(null == i ? void 0 : i.guild_id, !0),
+        l = "channel" === n.type ? n.channel : void 0,
+        p = (0, s.LD)(null == l ? void 0 : l.guild_id, !0),
         { commandsByActiveSection: m, loading: f } = c.wi({
             context: n,
             filters: {
@@ -25,15 +25,15 @@ function p(e) {
             },
             allowFetch: !0,
         }),
-        h = l.useMemo(
+        h = i.useMemo(
             () =>
                 m.reduce((e, t) => {
-                    let { section: n, data: l } = t;
-                    return l.length > 0 && e.add(n.id), e;
+                    let { section: n, data: i } = t;
+                    return i.length > 0 && e.add(n.id), e;
                 }, new Set()),
             [m],
         ),
-        v = l.useMemo(() => {
+        v = i.useMemo(() => {
             var e, t;
             return Object.values(null != (t = null == (e = p.result) ? void 0 : e.sections) ? t : {})
                 .map((e) => {
@@ -42,19 +42,19 @@ function p(e) {
                 })
                 .filter((e) => !(e.id in o.Tm) && h.has(e.id));
         }, [null == (t = p.result) ? void 0 : t.sections, h]),
-        x = (0, u.h)(v);
+        y = (0, u.h)(v);
     return {
-        appsInThisServer: l.useMemo(
+        appsInThisServer: i.useMemo(
             () =>
                 r()
                     .compact(
-                        x.map((e) => {
+                        y.map((e) => {
                             let { application: t } = e;
                             return t;
                         }),
                     )
                     .map((e) => ({ application: e })),
-            [x],
+            [y],
         ),
         isLoading: p.fetchState.fetching || f,
     };

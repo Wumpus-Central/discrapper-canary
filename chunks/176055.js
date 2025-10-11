@@ -17,11 +17,11 @@ var r = n(951288),
     _ = n(703656),
     O = n(769654),
     E = n(430824),
-    y = n(411198),
-    v = n(843445),
+    v = n(411198),
+    y = n(843445),
     I = n(981631),
-    S = n(388032),
-    C = n(295265);
+    C = n(388032),
+    S = n(295265);
 function T(e, t, n) {
     return (
         t in e
@@ -41,18 +41,18 @@ class N extends i.PureComponent {
         return null == e || null == t
             ? null
             : (0, r.jsxs)(g.Z, {
-                  className: C.memberInfo,
+                  className: S.memberInfo,
                   align: g.Z.Align.CENTER,
                   children: [
-                      (0, r.jsx)("div", { className: C.dotOnline }),
+                      (0, r.jsx)("div", { className: S.dotOnline }),
                       (0, r.jsx)("span", {
-                          className: C.memberText,
-                          children: S.intl.format(S.t["LC+S+v"], { membersOnline: t }),
+                          className: S.memberText,
+                          children: C.intl.format(C.t["LC+S+v"], { membersOnline: t }),
                       }),
-                      (0, r.jsx)("div", { className: C.dotOffline }),
+                      (0, r.jsx)("div", { className: S.dotOffline }),
                       (0, r.jsx)("span", {
-                          className: C.memberText,
-                          children: S.intl.format(S.t.zRl6XV, { count: e }),
+                          className: S.memberText,
+                          children: C.intl.format(C.t.zRl6XV, { count: e }),
                       }),
                   ],
               });
@@ -68,8 +68,8 @@ class N extends i.PureComponent {
             pageSize: s,
         } = this.props;
         if (t && n) return null;
-        let d = (0, y.B3)(e),
-            p = S.intl.string(S.t.pxwdrK),
+        let d = (0, v.B3)(e),
+            p = C.intl.string(C.t.pxwdrK),
             f = this.handleJoinOrView,
             b = c.zx.Looks.FILLED,
             _ = c.zx.Colors.PRIMARY;
@@ -77,41 +77,41 @@ class N extends i.PureComponent {
             l
                 ? n
                     ? ((b = c.zx.Looks.OUTLINED),
-                      (_ = C.buttonColorInGuild),
+                      (_ = S.buttonColorInGuild),
                       (p = (0, r.jsxs)(g.Z, {
                           align: g.Z.Align.CENTER,
                           children: [
-                              (0, r.jsx)("div", { children: S.intl.string(S.t.cEnaW1) }),
+                              (0, r.jsx)("div", { children: C.intl.string(C.t.cEnaW1) }),
                               (0, r.jsx)(u.dz2, {
                                   size: "md",
                                   color: "currentColor",
-                                  className: C.joinedCheckmark,
+                                  className: S.joinedCheckmark,
                               }),
                           ],
                       })))
-                    : i && t && (p = S.intl.string(S.t.XpeFYm))
-                : ((p = S.intl.string(S.t.dKhVQE)), (f = this.handleLogin)),
+                    : i && t && (p = C.intl.string(C.t.XpeFYm))
+                : ((p = C.intl.string(C.t.dKhVQE)), (f = this.handleLogin)),
             (0, r.jsxs)("div", {
-                className: a()(o, s === v.b.SMALL ? C.inviteSmall : C.inviteLarge),
+                className: a()(o, s === y.b.SMALL ? S.inviteSmall : S.inviteLarge),
                 children: [
-                    (0, r.jsx)(h.Z, { children: S.intl.string(S.t.s1KcLi) }),
+                    (0, r.jsx)(h.Z, { children: C.intl.string(C.t.s1KcLi) }),
                     (0, r.jsxs)("div", {
-                        className: C.content,
+                        className: S.content,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: C.info,
+                                className: S.info,
                                 children: [
                                     (0, r.jsx)(m.Z, {
                                         guild: d,
                                         active: !0,
                                         size: m.Z.Sizes.LARGE,
-                                        className: C.guildIcon,
+                                        className: S.guildIcon,
                                     }),
                                     (0, r.jsxs)("div", {
-                                        className: C.infoText,
+                                        className: S.infoText,
                                         children: [
                                             (0, r.jsx)("div", {
-                                                className: C.name,
+                                                className: S.name,
                                                 children: e.name,
                                             }),
                                             this.renderMemberInfo(),
@@ -121,7 +121,7 @@ class N extends i.PureComponent {
                             }),
                             (0, r.jsx)(c.zx, {
                                 size: c.zx.Sizes.SMALL,
-                                className: C.actionButton,
+                                className: S.actionButton,
                                 fullWidth: !0,
                                 color: _,
                                 look: b,

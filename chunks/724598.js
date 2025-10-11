@@ -1,10 +1,10 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => b });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    s = n(159691),
-    a = n(481060),
+    a = n(159691),
+    s = n(481060),
     o = n(367907),
     c = n(357352),
     d = n(434404),
@@ -22,7 +22,7 @@ function h(e) {
                 "div",
                 {
                     className: f.pill,
-                    children: (0, r.jsx)(a.Text, {
+                    children: (0, r.jsx)(s.Text, {
                         variant: "text-sm/normal",
                         children: e,
                     }),
@@ -32,9 +32,9 @@ function h(e) {
         ),
     });
 }
-function x(e) {
+function b(e) {
     let { guildId: t, showCTA: n, responsive: i = !0 } = e,
-        x = [
+        b = [
             [p.intl.string(p.t["73h51N"]), p.intl.string(p.t["gbjs//"])],
             [p.intl.string(p.t.mCoH0d), p.intl.string(p.t["l/BuSE"])],
             [p.intl.string(p.t.psQktr), p.intl.string(p.t.nMhIZW)],
@@ -50,20 +50,20 @@ function x(e) {
                     children: [
                         (0, r.jsx)("div", {
                             className: f.pillContainer,
-                            children: x.map((e, t) => (0, r.jsx)(h, { pills: e }, "pill-row-".concat(t))),
+                            children: b.map((e, t) => (0, r.jsx)(h, { pills: e }, "pill-row-".concat(t))),
                         }),
                         (0, r.jsxs)("div", {
                             className: f.ctaContent,
                             children: [
-                                (0, r.jsx)(a.Text, {
+                                (0, r.jsx)(s.Text, {
                                     variant: "text-lg/medium",
                                     color: "header-primary",
                                     children: p.intl.string(p.t["67arYG"]),
                                 }),
                                 n &&
-                                    (0, r.jsx)(s.zxk, {
+                                    (0, r.jsx)(a.zxk, {
                                         text: p.intl.string(p.t.oyzLpK),
-                                        icon: a.ZSh,
+                                        icon: s.ZSh,
                                         iconPosition: "end",
                                         size: "md",
                                         onClick: () => {

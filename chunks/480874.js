@@ -17,11 +17,11 @@ var r = n(951288),
     _ = n(488634),
     O = n(727813),
     E = n(355350),
-    y = n(307947),
-    v = n(125855),
+    v = n(307947),
+    y = n(125855),
     I = n(687683),
-    S = n(981631),
-    C = n(388032),
+    C = n(981631),
+    S = n(388032),
     T = n(393272);
 function N() {
     let e = i.useRef(null),
@@ -32,14 +32,14 @@ function N() {
         j = (0, p.Z)("message-requests-spam-list"),
         { channelId: P } = (0, _._)(),
         x = i.useCallback(() => {
-            (0, c.showToast)((0, c.createToast)(C.intl.string(C.t.EDYbS0), c.ToastType.FAILURE));
+            (0, c.showToast)((0, c.createToast)(S.intl.string(S.t.EDYbS0), c.ToastType.FAILURE));
         }, []),
         { rejectAll: A } = (0, b.m)({ onError: x }),
         Z = i.useCallback(() => {
             A(t.map((e) => e.channel.id));
         }, [t, A]);
     (0, d.ZP)(() => {
-        g.default.track(S.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }),
+        g.default.track(C.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }),
             h.Z.increment({ name: s.V.SPAM_MESSAGE_REQUEST_VIEW });
     });
     let w = i.useCallback(
@@ -50,7 +50,7 @@ function N() {
                     c = null == (i = t[o + 1]) || null == (n = i.channel) ? void 0 : n.id,
                     u = s.channel.id;
                 return (0, r.jsx)(
-                    v.Z,
+                    y.Z,
                     {
                         index: o,
                         className: a()({
@@ -73,7 +73,7 @@ function N() {
                     {
                         className: T.sectionTitle,
                         children: [
-                            C.intl.format(C.t.C79Edn, { count: n }),
+                            S.intl.format(S.t.C79Edn, { count: n }),
                             N && n > 0
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
@@ -86,9 +86,9 @@ function N() {
                                           }),
                                           (0, r.jsx)(c.Avr, {
                                               textVariant: "text-sm/normal",
-                                              text: C.intl.string(C.t.p6t7RE),
+                                              text: S.intl.string(S.t.p6t7RE),
                                               onClick: Z,
-                                              "aria-label": C.intl.string(C.t.p6t7RE),
+                                              "aria-label": S.intl.string(S.t.p6t7RE),
                                           }),
                                       ],
                                   })
@@ -100,7 +100,7 @@ function N() {
             [n, Z, N],
         );
     return 0 === t.length
-        ? (0, r.jsx)(y.Z, { section: I.pS.SPAM })
+        ? (0, r.jsx)(v.Z, { section: I.pS.SPAM })
         : (0, r.jsx)(o.bG, {
               navigator: j,
               children: (0, r.jsx)(o.SJ, {
@@ -159,7 +159,7 @@ function N() {
                               {
                                   className: T.list,
                                   innerRole: l,
-                                  innerAriaLabel: C.intl.string(C.t.e7GWjY),
+                                  innerAriaLabel: S.intl.string(S.t.e7GWjY),
                                   ref: (t) => {
                                       var n;
                                       (e.current = t),

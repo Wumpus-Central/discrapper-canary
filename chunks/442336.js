@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(585483),
     d = n(621600),
     u = n(665149),
-    p = n(110255),
-    h = n(981631),
+    h = n(110255),
+    p = n(981631),
     f = n(388032);
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -66,18 +66,18 @@ function b(e) {
     i.useEffect(() => {
         let e = () => j(!0);
         return (
-            c.S.subscribe(h.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e),
+            c.S.subscribe(p.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e),
             () => {
-                c.S.unsubscribe(h.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e);
+                c.S.unsubscribe(p.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e);
             }
         );
     }, []);
-    let x = (e) => {
+    let O = (e) => {
             e.shiftKey
                 ? s.Z.updateChannelOverrideSettings(t.guild_id, t.id, { muted: !b }, d.UE.muted(!b))
                 : j((e) => !e);
         },
-        O = f.intl.string(f.t.h850Sk);
+        x = f.intl.string(f.t.h850Sk);
     return (0, r.jsx)(a.yRy, {
         targetElementRef: n,
         shouldShow: _,
@@ -88,7 +88,7 @@ function b(e) {
         onRequestClose: () => j(!1),
         renderPopout: (e) =>
             (0, r.jsx)(
-                p.Z,
+                h.Z,
                 m(g({}, e), {
                     channel: t,
                     navId: "channel-context",
@@ -102,10 +102,10 @@ function b(e) {
                 u.ZP.Icon,
                 m(g({}, e), {
                     ref: n,
-                    onClick: x,
-                    tooltip: i ? null : O,
-                    icon: b || y !== h.bL.ALL_MESSAGES ? a.owu : a.Dkj,
-                    "aria-label": O,
+                    onClick: O,
+                    tooltip: i ? null : x,
+                    icon: b || y !== p.bL.ALL_MESSAGES ? a.owu : a.Dkj,
+                    "aria-label": x,
                     selected: i,
                 }),
             );

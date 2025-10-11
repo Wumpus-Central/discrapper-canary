@@ -1,10 +1,10 @@
-n.d(t, { Z: () => a }), n(388685);
+n.d(t, { Z: () => s }), n(388685);
 var r = n(647438),
     i = n(768581),
     l = n(776155),
-    s = n(981631);
-function a(e, t, n) {
-    var a, o;
+    a = n(981631);
+function s(e, t, n) {
+    var s, o;
     let { isLoading: c, error: d, highlightedCreatorDetails: u } = (0, l.Z)(e),
         g = null == u ? void 0 : u.store_page,
         m = r.useMemo(() => {
@@ -33,24 +33,24 @@ function a(e, t, n) {
             size: n,
         }),
         h = r.useMemo(() => (null != m && m.length > t ? m.slice(0, t) : m), [m, t]),
-        x = null != m && m.length > t ? m.length - t : null,
-        b = null == u ? void 0 : u.slug,
-        j = null != b ? s.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(b) : void 0,
-        _ = null == g || null == (a = g.guild) ? void 0 : a.name,
-        v = null == g || null == (o = g.role_subscription) ? void 0 : o.subscriber_count,
-        C = !c && null != _ && null != p && null != f;
+        b = null != m && m.length > t ? m.length - t : null,
+        x = null == u ? void 0 : u.slug,
+        j = null != x ? a.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(x) : void 0,
+        v = null == g || null == (s = g.guild) ? void 0 : s.name,
+        _ = null == g || null == (o = g.role_subscription) ? void 0 : o.subscriber_count,
+        C = !c && null != v && null != p && null != f;
     return C
         ? {
               hasAllImperativeDetails: C,
               isLoading: c,
               details: {
-                  guildName: _,
+                  guildName: v,
                   guildIcon: p,
                   guildAvatarUrl: f,
                   storePageUrl: j,
-                  subscriberCount: v,
+                  subscriberCount: _,
                   emojisToShow: h,
-                  notShownEmojiCount: x,
+                  notShownEmojiCount: b,
               },
           }
         : {

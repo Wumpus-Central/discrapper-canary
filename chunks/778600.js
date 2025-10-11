@@ -155,7 +155,7 @@ for (
     P++
 )
     O[h.charCodeAt(P)] = P;
-var g = function (t) {
+var D = function (t) {
     var e,
         a = new Uint8Array(t),
         r = a.length,
@@ -170,12 +170,12 @@ var g = function (t) {
         _
     );
 };
-let D = new Map(),
+let g = new Map(),
     C = (t, e, a) => {
         let r;
         if (!t || !(v(t, e) || "object" == typeof t)) return;
         let _ = t.constructor.name,
-            n = ((r = D.get(a)) || ((r = new Map()), D.set(a, r)), r.has(_) || r.set(_, []), r.get(_)),
+            n = ((r = g.get(a)) || ((r = new Map()), g.set(a, r)), r.has(_) || r.set(_, []), r.get(_)),
             o = n.indexOf(t);
         return -1 === o && ((o = n.length), n.push(t)), o;
     },
@@ -202,7 +202,7 @@ let D = new Map(),
                 else if (e instanceof ArrayBuffer)
                     return {
                         rr_type: e.constructor.name,
-                        base64: g(e),
+                        base64: D(e),
                     };
                 else if (e instanceof DataView)
                     return {

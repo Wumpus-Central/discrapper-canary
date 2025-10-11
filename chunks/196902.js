@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => x });
 var r = n(951288),
     i = n(120356),
     l = n.n(i),
@@ -13,9 +13,9 @@ var r = n(951288),
     p = n(981631),
     f = n(659854),
     h = n(388032),
-    x = n(764009);
-let b = function (e) {
-    let { className: t, guildId: n, tag: i, badge: b, primaryColor: j, secondaryColor: v, isDisabled: _ = !1 } = e,
+    b = n(764009);
+let x = function (e) {
+    let { className: t, guildId: n, tag: i, badge: x, primaryColor: j, secondaryColor: v, isDisabled: _ = !1 } = e,
         C = (0, a.e7)([m.Z], () => m.Z.getProps().originalProfile),
         O = null != C && C.tag !== i;
     function y(e) {
@@ -28,19 +28,19 @@ let b = function (e) {
                 label: h.intl.string(f.default["tN+8pK"]),
                 children: (e) =>
                     (0, r.jsxs)("div", {
-                        className: x.tagContainer,
+                        className: b.tagContainer,
                         children: [
                             (0, r.jsx)("div", {
-                                className: x.tagInputContainer,
+                                className: b.tagInputContainer,
                                 children: (0, r.jsx)(s.Is, {
                                     id: e.controlId,
-                                    className: x.tagInputWrapper,
-                                    inputClassName: l()(x.tagInput, "heading-sm/semibold"),
+                                    className: b.tagInputWrapper,
+                                    inputClassName: l()(b.tagInput, "heading-sm/semibold"),
                                     maxLength: 4,
                                     autoFocus: !0,
                                     placeholder: "WUMP",
                                     prefixElement: (0, r.jsx)(c.v, {
-                                        badge: b,
+                                        badge: x,
                                         width: 40,
                                         height: 40,
                                         primaryTintColor: j,
@@ -52,7 +52,7 @@ let b = function (e) {
                                 }),
                             }),
                             (0, r.jsx)("div", {
-                                className: x.tagTooltip,
+                                className: b.tagTooltip,
                                 children: (0, r.jsx)(o.Text, {
                                     variant: "text-xs/medium",
                                     color: "text-muted",
@@ -64,7 +64,7 @@ let b = function (e) {
             }),
             O &&
                 (0, r.jsx)(d.Z, {
-                    className: x.tagChangeInfoBox,
+                    className: b.tagChangeInfoBox,
                     children: (0, r.jsx)(o.Text, {
                         variant: "text-xs/medium",
                         children: h.intl.format(f.default["4ZKDXl"], {

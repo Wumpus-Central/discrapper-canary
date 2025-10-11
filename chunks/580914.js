@@ -3,8 +3,8 @@ var r = n(951288),
     l = n(647438),
     i = n(120356),
     s = n.n(i),
-    a = n(907331),
-    o = n(636977),
+    o = n(907331),
+    a = n(636977),
     c = n(685816),
     u = n(442837),
     d = n(481060),
@@ -22,14 +22,14 @@ var r = n(951288),
     O = n(254690),
     x = n(655283),
     y = n(370039),
-    j = n(937510),
-    T = n(38900),
+    T = n(937510),
+    j = n(38900),
     L = n(709999),
     k = n(653126),
     I = n(401975),
     B = n(794324),
-    P = n(934760),
-    N = n(619899),
+    N = n(934760),
+    P = n(619899),
     A = n(190157),
     R = n(642909),
     Z = n(859788),
@@ -52,7 +52,7 @@ let M = (0, E.IC)(90),
     U = (e) => {
         var t;
         let { isLoading: n, handleTransition: i, category: U, heroBlock: V, tab: G, onVisibilityChange: z } = e,
-            K = (0, a.O)(
+            K = (0, o.O)(
                 (e) => {
                     null == z || z(e);
                 },
@@ -62,7 +62,7 @@ let M = (0, E.IC)(90),
             Y = l.useRef(null),
             q = (0, R.G)("HeroBlock"),
             Q = (0, u.e7)([h.default], () => h.default.getCurrentUser()),
-            J = (0, P.Z)(),
+            J = (0, N.Z)(),
             X = (0, m.sp)(),
             $ = O.Z.useConfig({ location: "HeroBlock" }).showButtonLeftAligned && G !== w.AW.ORBS,
             ee = (0, x.x)("HeroBlock"),
@@ -95,11 +95,11 @@ let M = (0, E.IC)(90),
                 heroLogo: el,
                 heroBannerStatic: ei,
                 heroBannerAnimated: es,
-                heroBannerRive: ea,
+                heroBannerRive: eo,
             } = (0, B.hr)(et),
-            eo = null != (t = null == en ? void 0 : en.responsive) && t,
+            ea = null != (t = null == en ? void 0 : en.responsive) && t,
             ec = null == en ? void 0 : en.backgroundStyle,
-            eu = null != ea,
+            eu = null != eo,
             ed = (0, u.e7)([b.Z], () => b.Z.products),
             eg = l.useMemo(() => (n ? [] : ed.size > 0 ? J(et.rankedSkuIds) : []), [n, J, et.rankedSkuIds, ed]),
             ef = l.useMemo(
@@ -136,8 +136,8 @@ let M = (0, E.IC)(90),
                 };
             })(G !== w.AW.ORBS),
             eh = (0, y.a)()(eg),
-            e_ = (0, j.l)(eh).slice(0, eC),
-            em = (0, N.St)(e_),
+            e_ = (0, T.l)(eh).slice(0, eC),
+            em = (0, P.St)(e_),
             eb =
                 G === w.AW.ORBS
                     ? F.intl.string(F.t["1CdL8f"])
@@ -156,7 +156,7 @@ let M = (0, E.IC)(90),
                           sectionType: H.jXE.ORBS_SHOP_HERO_BLOCK,
                           ctaObject: H.qAy.CTA_TO_QUEST_HOME,
                       }),
-                      (0, p.navigateToQuestHome)({ fromContent: o.j.ORBS_SHOP_HERO_CTA }))
+                      (0, p.navigateToQuestHome)({ fromContent: a.j.ORBS_SHOP_HERO_CTA }))
                     : (i("shop latest category hero", !eE || ev ? et.categorySkuId : void 0),
                       _.default.track(H.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                           collectibles_shop_session_id: null == X ? void 0 : X.sessionId,
@@ -187,8 +187,8 @@ let M = (0, E.IC)(90),
                               (0, r.jsx)(Z.Z, {
                                   bannerStatic: ei,
                                   bannerAnimated: es,
-                                  bannerRive: ea,
-                                  isResponsive: eo,
+                                  bannerRive: eo,
+                                  isResponsive: ea,
                                   eventTargetRef: Y,
                               }),
                       }),
@@ -208,7 +208,7 @@ let M = (0, E.IC)(90),
                                     })
                                   : (0, r.jsxs)("div", {
                                         className: s()($ ? D.heroHeaderContainerStacked : D.heroHeaderContainer, {
-                                            [D.responsive]: eo,
+                                            [D.responsive]: ea,
                                         }),
                                         children: [
                                             n
@@ -287,7 +287,7 @@ let M = (0, E.IC)(90),
                                       n || ef
                                           ? (0, r.jsx)(r.Fragment, {
                                                 children: [...Array(eC)].map((e, t) =>
-                                                    eS ? (0, r.jsx)(I.Z, {}, t) : (0, r.jsx)(T.K, {}, t),
+                                                    eS ? (0, r.jsx)(I.Z, {}, t) : (0, r.jsx)(j.K, {}, t),
                                                 ),
                                             })
                                           : (0, r.jsx)(r.Fragment, {

@@ -32,8 +32,8 @@ var r = n(951288),
     L = n(293273),
     x = n(158776),
     M = n(885110),
-    k = n(594174),
-    j = n(181106),
+    j = n(594174),
+    k = n(181106),
     U = n(768581),
     G = n(823379),
     B = n(358085),
@@ -345,11 +345,11 @@ function eg(e) {
         } = e,
         x = (0, v.A)(S),
         M = (0, p.ye)(S),
-        { bot: k } = S,
+        { bot: j } = S,
         G = U.ZP.getApplicationIconURL({
             id: S.id,
             icon: S.icon,
-            bot: k,
+            bot: j,
         }),
         { staticBannerSrc: B, videoBannerSrc: Z, bannerAspectRatio: Y } = (0, E.E)(S),
         z = em({
@@ -394,9 +394,9 @@ function eg(e) {
         ey = (0, K.g)(N, L),
         eO = (0, H.L)(L, P, S, C),
         ev = (0, l.e7)(
-            [j.Z],
+            [k.Z],
             () =>
-                null != L && null != L.application_id && j.Z.getState(L.application_id, ei.mFx.JOIN) === ei.OcF.LOADING,
+                null != L && null != L.application_id && k.Z.getState(L.application_id, ei.mFx.JOIN) === ei.OcF.LOADING,
         ),
         eI = i.useMemo(
             () =>
@@ -637,7 +637,7 @@ function eE(e) {
         y = i.useMemo(
             () =>
                 m.map((e) => {
-                    let t = k.default.getUser(e);
+                    let t = j.default.getUser(e);
                     return null != t ? t : en.ag;
                 }),
             [m],

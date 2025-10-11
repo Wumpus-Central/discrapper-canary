@@ -1,4 +1,4 @@
-n.d(t, { default: () => _ }), n(388685);
+n.d(t, { default: () => S }), n(388685);
 var r = n(951288),
     l = n(647438),
     o = n(442837),
@@ -11,17 +11,17 @@ var r = n(951288),
     f = n(131051),
     m = n(663389),
     b = n(594174),
-    j = n(88658),
-    p = n(996733),
+    p = n(88658),
+    j = n(996733),
     x = n(313789),
-    y = n(914578),
-    v = n(920952),
-    g = n(518596),
-    h = n(388032),
+    v = n(914578),
+    y = n(920952),
+    h = n(518596),
+    g = n(388032),
     O = n(942408);
 function C(e) {
     let { destinationPanel: t, originPanel: n } = e;
-    (0, j.QB)({
+    (0, p.QB)({
         destinationPane: t,
         originPane: n,
         subsection: m.Z.getSubsection(),
@@ -29,7 +29,7 @@ function C(e) {
         locationStack: m.Z.getAnalyticsLocations(),
     });
 }
-function _(e) {
+function S(e) {
     var t,
         { target: n } = e,
         i = (function (e, t) {
@@ -53,10 +53,10 @@ function _(e) {
             }
             return l;
         })(e, ["target"]);
-    let a = p.Z.useField("query"),
-        { node: c, directory: u } = (0, f.Z)(v.Z, a),
-        j = ((t = x.n.ACCOUNT_PANEL), null == u.entry(n) ? t : n),
-        h = l.useRef(null);
+    let a = j.Z.useField("query"),
+        { node: c, directory: u } = (0, f.Z)(y.Z, a),
+        p = ((t = x.n.ACCOUNT_PANEL), null == u.entry(n) ? t : n),
+        g = l.useRef(null);
     return ((0, s.ZP)(() => {
         let e = m.Z.getSection();
         null != e &&
@@ -64,7 +64,7 @@ function _(e) {
                 destinationPanel: e,
                 originPanel: null,
             }),
-            (h.current = e));
+            (g.current = e));
     }),
     (0, o.e7)([b.default], () => null != b.default.getCurrentUser()))
         ? (0, r.jsx)(
@@ -97,33 +97,33 @@ function _(e) {
                   {
                       root: c,
                       directory: u,
-                      sidebarHeader: S,
+                      sidebarHeader: _,
                       emptyState: P,
-                      sidebarFooter: y.Z,
+                      sidebarFooter: v.Z,
                       onPanelChange: (e) => {
-                          let t = (0, g.getUserSettingsSectionsByWebUserSettings)().get(e);
+                          let t = (0, h.getUserSettingsSectionsByWebUserSettings)().get(e);
                           null != t &&
                               (C({
                                   destinationPanel: t,
-                                  originPanel: h.current,
+                                  originPanel: g.current,
                               }),
-                              (h.current = t));
+                              (g.current = t));
                       },
-                      target: j,
+                      target: p,
                   },
                   i,
               ),
           )
         : null;
 }
-function S() {
-    let e = p.Z.useField("query"),
+function _() {
+    let e = j.Z.useField("query"),
         t = l.useRef(null),
         [n, o] = (0, c.US)([i.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER]),
         s = l.useMemo(
             () => ({
-                title: h.intl.string(h.t.Kv519f),
-                body: h.intl.string(h.t.cTGJBQ),
+                title: g.intl.string(g.t.Kv519f),
+                body: g.intl.string(g.t.cTGJBQ),
                 badge: "new",
                 position: "right",
                 align: "center",
@@ -132,10 +132,10 @@ function S() {
             [],
         ),
         d = l.useCallback((e) => {
-            p.Z.setState({ query: e });
+            j.Z.setState({ query: e });
         }, []),
         f = l.useCallback(() => {
-            p.Z.setState({ query: "" });
+            j.Z.setState({ query: "" });
         }, []);
     return (0, r.jsx)("div", {
         children: (0, r.jsxs)("div", {
@@ -169,12 +169,12 @@ function P() {
             (0, r.jsx)(a.Text, {
                 variant: "text-sm/semibold",
                 color: "text-primary",
-                children: h.intl.string(h.t.zihbmp),
+                children: g.intl.string(g.t.zihbmp),
             }),
             (0, r.jsx)(a.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: h.intl.string(h.t.XclvsL),
+                children: g.intl.string(g.t.XclvsL),
             }),
         ],
     });

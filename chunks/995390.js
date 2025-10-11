@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(539854), n(388685), n(467055);
+n.d(t, { Z: () => O }), n(539854), n(388685), n(467055);
 var i = n(647438),
     r = n(512722),
     l = n.n(r),
@@ -17,7 +17,7 @@ var i = n(647438),
     x = n(905753),
     j = n(399860),
     v = n(981631);
-function O(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -42,12 +42,12 @@ function O(e) {
     }
     return e;
 }
-function y(e, t, n) {
+function O(e, t, n) {
     let r = (0, s.e7)([x.Z], () => x.Z.getApplicationPermissions()),
         a = i.useMemo(
             () =>
                 (function (e, t) {
-                    let n = O({}, t),
+                    let n = y({}, t),
                         i = (0, u.bD)(e),
                         r = (0, j.rE)(i, d.Kw.CHANNEL),
                         l = (0, j.rE)(e, d.Kw.ROLE);
@@ -69,7 +69,7 @@ function y(e, t, n) {
                 })(e, null != r ? r : {}),
             [r, e],
         ),
-        y = (0, s.e7)([x.Z], () => {
+        O = (0, s.e7)([x.Z], () => {
             var e;
             if (null == n) return;
             let t = x.Z.getCommand(n);
@@ -84,17 +84,17 @@ function y(e, t, n) {
                   : e.permissions;
         }, [n]),
         C = null != n ? n : t,
-        N = null != n ? y : a,
-        S = i.useMemo(() => (null != _ ? _ : O({}, null != N ? N : {})), [_, N]),
-        w = i.useMemo(() => Object.keys(S).length, [S]),
-        P = i.useMemo(() => (null == N || null == S ? null : !o().isEqual(N, S)), [N, S]);
+        N = null != n ? O : a,
+        S = i.useMemo(() => (null != _ ? _ : y({}, null != N ? N : {})), [_, N]),
+        I = i.useMemo(() => Object.keys(S).length, [S]),
+        E = i.useMemo(() => (null == N || null == S ? null : !o().isEqual(N, S)), [N, S]);
     return (
         i.useEffect(() => {
-            C === t && (P ? c.Z.startEditingCommandPermissions(C) : c.Z.stopEditingCommandPermissions(C));
-        }, [t, P, C]),
+            C === t && (E ? c.Z.startEditingCommandPermissions(C) : c.Z.stopEditingCommandPermissions(C));
+        }, [t, E, C]),
         {
             originalApplicationPermissions: a,
-            originalCommandPermissions: y,
+            originalCommandPermissions: O,
             editedTargetPermissions: (function (e, t) {
                 let n = (0, s.e7)([b.Z], () => b.Z.getGuild(e), [e]);
                 l()(null != n, "guild must be present to be editing its integration settings");
@@ -125,7 +125,7 @@ function y(e, t, n) {
                             userIds: i,
                         };
                     }, [t]),
-                    y = (0, s.cj)(
+                    O = (0, s.cj)(
                         [p.Z],
                         () =>
                             Object.fromEntries(
@@ -167,7 +167,7 @@ function y(e, t, n) {
                             c = !1;
                         if (s.type === d.Kw.CHANNEL) {
                             let e = s.id === i,
-                                n = y[s.id];
+                                n = O[s.id];
                             (t = e || g.Z.can(v.Plq.VIEW_CHANNEL, n)), (c = !0);
                         } else if (s.type === d.Kw.ROLE) {
                             let i = s.id === e,
@@ -195,16 +195,16 @@ function y(e, t, n) {
                                       }),
                                 e
                             );
-                        })(O({}, s), {
+                        })(y({}, s), {
                             canRead: t,
                             canWrite: c,
                         });
                     }
                     return l;
-                }, [y, n, r, o, t, _, C]);
+                }, [O, n, r, o, t, _, C]);
             })(e, S),
-            hasChanges: P,
-            selectedPermissionCount: w,
+            hasChanges: E,
+            selectedPermissionCount: I,
         }
     );
 }

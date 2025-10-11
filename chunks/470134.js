@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -25,11 +25,11 @@ function u(e) {
         ],
     });
 }
-function p(e) {
+function h(e) {
     let [t, n] = i.useState(),
         [l, a] = i.useState(),
         [s, d] = i.useState(!1),
-        [p, h] = i.useState(!1),
+        [h, p] = i.useState(!1),
         { enabled: f } = (0, o.s1)(e);
     return (
         i.useEffect(() => {
@@ -41,12 +41,12 @@ function p(e) {
                     s
                         ? (0, r.jsx)(u, {
                               text: c.intl.string(c.t.RfAAHx),
-                              hasScrolled: p,
+                              hasScrolled: h,
                           })
                         : null,
-                [s, p],
+                [s, h],
             ),
-            handleScroll: () => h(!0),
+            handleScroll: () => p(!0),
             handleSetScrollerRef: (e) => {
                 var t;
                 return a(null == e || null == (t = e.getScrollerState()) ? void 0 : t.scrollWidth);

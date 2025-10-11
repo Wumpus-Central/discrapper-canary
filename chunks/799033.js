@@ -33,7 +33,7 @@ function P(t, e) {
             traceXHR: _,
             shouldCreateSpanForRequest: N,
             enableHTTPTimings: P,
-            tracePropagationTargets: D,
+            tracePropagationTargets: g,
         } = {
             traceFetch: O.traceFetch,
             traceXHR: O.traceXHR,
@@ -57,7 +57,7 @@ function P(t, e) {
                     let a = !!t.match(/^\/(?!\/)/);
                     return e ? (0, A.U0)(t, e) : a;
                 }
-            })(t, D),
+            })(t, g),
         S = {};
     a &&
         (t.addEventProcessor(
@@ -89,7 +89,7 @@ function P(t, e) {
                     "server.address": r,
                 });
             }
-            P && e && g(e);
+            P && e && D(e);
         })),
         _ &&
             (0, r.UK)((t) => {
@@ -151,10 +151,10 @@ function P(t, e) {
                         h
                     );
                 })(t, m, v, S);
-                P && e && g(e);
+                P && e && D(e);
             });
 }
-function g(t) {
+function D(t) {
     let { url: e } = (0, o.XU)(t).data || {};
     if (!e || "string" != typeof e) return;
     let a = (0, _._j)("resource", ({ entries: r }) => {
@@ -192,16 +192,16 @@ function g(t) {
                     return (r.push(["network.protocol.version", a], ["network.protocol.name", e]), N.Z1)
                         ? [
                               ...r,
-                              ["http.request.redirect_start", D(t.redirectStart)],
-                              ["http.request.fetch_start", D(t.fetchStart)],
-                              ["http.request.domain_lookup_start", D(t.domainLookupStart)],
-                              ["http.request.domain_lookup_end", D(t.domainLookupEnd)],
-                              ["http.request.connect_start", D(t.connectStart)],
-                              ["http.request.secure_connection_start", D(t.secureConnectionStart)],
-                              ["http.request.connection_end", D(t.connectEnd)],
-                              ["http.request.request_start", D(t.requestStart)],
-                              ["http.request.response_start", D(t.responseStart)],
-                              ["http.request.response_end", D(t.responseEnd)],
+                              ["http.request.redirect_start", g(t.redirectStart)],
+                              ["http.request.fetch_start", g(t.fetchStart)],
+                              ["http.request.domain_lookup_start", g(t.domainLookupStart)],
+                              ["http.request.domain_lookup_end", g(t.domainLookupEnd)],
+                              ["http.request.connect_start", g(t.connectStart)],
+                              ["http.request.secure_connection_start", g(t.secureConnectionStart)],
+                              ["http.request.connection_end", g(t.connectEnd)],
+                              ["http.request.request_start", g(t.requestStart)],
+                              ["http.request.response_start", g(t.responseStart)],
+                              ["http.request.response_end", g(t.responseEnd)],
                           ]
                         : r;
                 })(r).forEach((e) => t.setAttribute(...e)),
@@ -209,7 +209,7 @@ function g(t) {
         });
     });
 }
-function D(t = 0) {
+function g(t = 0) {
     return ((N.Z1 || performance.timeOrigin) + t) / 1000;
 }
 function C(t) {

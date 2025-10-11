@@ -2,13 +2,13 @@ n.d(t, {
     XL: () => d,
     jw: () => c,
     uw: () => o,
-    x_: () => a,
+    x_: () => s,
 });
 var r,
     i,
     l,
-    s,
-    a =
+    a,
+    s =
         (((r = {})[(r.OPEN = 1)] = "OPEN"),
         (r[(r.PAYOUT_CREATED = 2)] = "PAYOUT_CREATED"),
         (r[(r.CANCELED = 3)] = "CANCELED"),
@@ -36,9 +36,9 @@ var r,
         (l[(l.PENDING_FUNDS = 13)] = "PENDING_FUNDS"),
         l),
     d =
-        (((s = {})[(s.MINIMUM_NOT_REACHED = 1)] = "MINIMUM_NOT_REACHED"),
-        (s[(s.BILLING_PROFILE_INACTIVE = 2)] = "BILLING_PROFILE_INACTIVE"),
-        (s[(s.PAYOUT_FAILED = 3)] = "PAYOUT_FAILED"),
-        (s[(s.APPLICATION_NOT_APPROVED = 4)] = "APPLICATION_NOT_APPROVED"),
-        (s[(s.PAYOUT_SEIZED = 5)] = "PAYOUT_SEIZED"),
-        s);
+        (((a = {})[(a.MINIMUM_NOT_REACHED = 1)] = "MINIMUM_NOT_REACHED"),
+        (a[(a.BILLING_PROFILE_INACTIVE = 2)] = "BILLING_PROFILE_INACTIVE"),
+        (a[(a.PAYOUT_FAILED = 3)] = "PAYOUT_FAILED"),
+        (a[(a.APPLICATION_NOT_APPROVED = 4)] = "APPLICATION_NOT_APPROVED"),
+        (a[(a.PAYOUT_SEIZED = 5)] = "PAYOUT_SEIZED"),
+        a);

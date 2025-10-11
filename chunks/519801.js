@@ -1,6 +1,6 @@
 n.d(t, { Z: () => v }), n(997841);
-var r = n(951288),
-    i = n(647438),
+var i = n(951288),
+    r = n(647438),
     l = n(131388),
     a = n(607070),
     o = n(745510),
@@ -28,7 +28,7 @@ function v(e) {
             application: k,
         } = (0, d.JL)(),
         E = (0, l.Z)(g.i),
-        { createMultipleConfettiAt: _ } = i.useContext(o.h),
+        { createMultipleConfettiAt: _ } = r.useContext(o.h),
         w = null != (t = null == N ? void 0 : N.name) ? t : "",
         Z = () => {
             O(), null == C || C();
@@ -42,7 +42,7 @@ function v(e) {
     return (
         y
             ? E
-                ? (v = (0, r.jsx)(u.h, {
+                ? (v = (0, i.jsx)(u.h, {
                       title: x.intl.format(x.t.ea6tZm, { tierName: w }),
                       subtitle:
                           null != T && T.benefits.length > 0
@@ -53,7 +53,7 @@ function v(e) {
                   }))
                 : ((v =
                       null != T && null != k
-                          ? (0, r.jsx)(c.Oc, {
+                          ? (0, i.jsx)(c.Oc, {
                                 icon: T.thumbnail,
                                 storeListingBenefits: T.benefits,
                                 application: k,
@@ -63,32 +63,32 @@ function v(e) {
                                     ? x.intl.format(x.t.MAtQk5, { applicationName: null == k ? void 0 : k.name })
                                     : x.intl.format(x.t.vHkMFx, { tier: w }),
                             })
-                          : (0, r.jsx)(f.Z, {})),
-                  (j = (0, r.jsx)(p.Z, {
+                          : (0, i.jsx)(f.Z, {})),
+                  (j = (0, i.jsx)(p.Z, {
                       onPrimary: Z,
                       primaryCTA: p.g.CONTINUE,
                       primaryText: x.intl.string(x.t["JtWl+f"]),
                   })))
             : (v = E
-                  ? (0, r.jsx)(u.m, {
+                  ? (0, i.jsx)(u.m, {
                         tierName: w,
                         onConfirm: Z,
                         subscription: S,
                     })
-                  : (0, r.jsx)(c.xe, {
+                  : (0, i.jsx)(c.xe, {
                         tierName: w,
                         onConfirm: Z,
                         subscription: S,
                     })),
-        i.useEffect(() => {
+        r.useEffect(() => {
             a.Z.useReducedMotion && D && _(window.innerWidth / 2, window.innerHeight / 2);
         }, [_, D]),
-        (0, r.jsxs)(r.Fragment, {
+        (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsxs)(b.C3, {
-                    children: [(0, r.jsx)(h.Z, {}), v],
+                (0, i.jsxs)(b.C3, {
+                    children: [(0, i.jsx)(h.Z, {}), v],
                 }),
-                null != j && (0, r.jsx)(b.O3, { children: j }),
+                null != j && (0, i.jsx)(b.O3, { children: j }),
             ],
         })
     );

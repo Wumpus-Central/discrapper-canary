@@ -62,7 +62,7 @@ function c(e, t) {
 function u() {
     return new Promise((e) => {
         (0, i.ZDy)(async () => {
-            let { default: t } = await Promise.all([n.e("20680"), n.e("23746")]).then(n.bind(n, 837651));
+            let { default: t } = await Promise.all([n.e("16408"), n.e("23746")]).then(n.bind(n, 837651));
             return (n) => (0, r.jsx)(t, c(s({}, n), { handleEnableMFASuccess: e }));
         });
     });

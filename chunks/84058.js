@@ -1,15 +1,15 @@
 n.d(t, {
-    Gf: () => x,
+    Gf: () => b,
     Jf: () => m,
     OW: () => u,
-    S1: () => a,
+    S1: () => s,
     TW: () => g,
     TY: () => c,
     Uv: () => d,
     _l: () => f,
     d_: () => h,
     lO: () => o,
-    sI: () => s,
+    sI: () => a,
     we: () => p,
 }),
     n(953529),
@@ -17,13 +17,13 @@ n.d(t, {
 var r = n(570140),
     i = n(749210),
     l = n(228643);
-function s(e) {
+function a(e) {
     r.Z.dispatch({
         type: "GUILD_SETTINGS_ROLES_SORT_UPDATE",
         roles: e,
     });
 }
-function a() {
+function s() {
     r.Z.dispatch({ type: "GUILD_SETTINGS_ROLES_INIT" });
 }
 function o(e, t, n) {
@@ -92,7 +92,7 @@ function h(e, t) {
         roleConnectionConfigurations: t,
     });
 }
-async function x(e, t, n, s, a) {
+async function b(e, t, n, a, s) {
     var o, c, d, u;
     r.Z.dispatch({ type: "GUILD_SETTINGS_ROLES_SUBMITTING" });
     try {
@@ -112,9 +112,9 @@ async function x(e, t, n, s, a) {
                     unicodeEmoji: n.unicodeEmoji,
                 }));
         }
-        if (null != a && null != s)
-            for await (let t of s) {
-                let n = a.get(t);
+        if (null != s && null != a)
+            for await (let t of a) {
+                let n = s.get(t);
                 await (0, l.L_)(e, t, null != n ? n : []);
             }
         r.Z.dispatch({ type: "GUILD_SETTINGS_ROLES_SAVE_SUCCESS" });

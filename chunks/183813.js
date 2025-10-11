@@ -1,4 +1,4 @@
-n.d(t, { S: () => v }), n(388685), n(361932), n(187205);
+n.d(t, { S: () => L }), n(388685), n(361932), n(187205);
 var r = n(951288),
     i = n(647438),
     a = n(512722),
@@ -16,21 +16,21 @@ var r = n(951288),
     m = n(563132),
     x = n(409813),
     g = n(614277),
-    b = n(981631),
-    j = n(388032),
+    j = n(981631),
+    b = n(388032),
     y = n(950174);
-function v(e) {
+function L(e) {
     var t, n;
-    let { handleStepChange: a, handleClose: v } = e,
-        { selectedPlan: L, selectedSkuId: S, step: w } = (0, m.JL)(),
+    let { handleStepChange: a, handleClose: L } = e,
+        { selectedPlan: v, selectedSkuId: S, step: w } = (0, m.JL)(),
         {
-            setSelectedGiftingPromotionReward: O,
+            setSelectedGiftingPromotionReward: I,
             selectedGiftingPromotionReward: P,
-            claimableRewards: I,
+            claimableRewards: O,
             claimableVariants: E,
         } = (0, h.wD)(),
         k = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
-        T = (0, c.ZP)(I, E, P),
+        T = (0, c.ZP)(O, E, P),
         [A, M] = i.useState(null != (n = null == T ? void 0 : T.defaultCategory) ? n : c.KN.Trick),
         [Z, B] = i.useState(null == T || null == (t = T.defaultHighlightedReward) ? void 0 : t.skuId),
         [N, R] = i.useState(!1),
@@ -38,8 +38,8 @@ function v(e) {
         F = i.useMemo(
             () =>
                 null == E
-                    ? null != I
-                        ? I
+                    ? null != O
+                        ? O
                         : []
                     : E.flatMap((e) => {
                           var t, n;
@@ -85,33 +85,33 @@ function v(e) {
                                       }),
                                 t);
                       }),
-            [E, I, A],
+            [E, O, A],
         );
     i.useEffect(() => {
         let e = null == T ? void 0 : T.defaultHighlightedReward;
-        !N && null == P && null != e && null != e && F.some((t) => t.skuId === e.skuId) && (O(e), B(e.skuId));
-    }, [T, N, P, F, O]),
+        !N && null == P && null != e && null != e && F.some((t) => t.skuId === e.skuId) && (I(e), B(e.skuId));
+    }, [T, N, P, F, I]),
         i.useEffect(() => {
             (null == T ? void 0 : T.defaultCategory) == null || N || M(T.defaultCategory);
         }, [null == T ? void 0 : T.defaultCategory, N]),
-        l()(null != L, "Expected plan to selected"),
+        l()(null != v, "Expected plan to selected"),
         l()(null != S, "Expected selectedSkuId"),
         l()(null != w, "Step should be set");
-    let H = i.useMemo(() => null != Z && (null != I ? I : []).some((e) => e.skuId === Z), [Z, I]),
+    let H = i.useMemo(() => null != Z && (null != O ? O : []).some((e) => e.skuId === Z), [Z, O]),
         U = i.useMemo(() => null != P && F.some((e) => e.skuId === P.skuId), [F, P]),
         D = i.useMemo(() => 0 === F.length || null == Z || !U || !H, [F, Z, H, U]);
     i.useEffect(() => {
         if (0 === F.length) {
-            B(void 0), O(void 0);
+            B(void 0), I(void 0);
             return;
         }
-        (H && F.some((e) => e.skuId === Z)) || null == Z || (B(void 0), O(void 0));
-    }, [F, H, Z, O]),
+        (H && F.some((e) => e.skuId === Z)) || null == Z || (B(void 0), I(void 0));
+    }, [F, H, Z, I]),
         i.useEffect(() => {
-            G.current === A || U || (O(void 0), B(void 0)), (G.current = A);
-        }, [A, U, O]);
+            G.current === A || U || (I(void 0), B(void 0)), (G.current = A);
+        }, [A, U, I]);
     let z = (e) => {
-            O(F.find((t) => t.skuId === e)), B(e), R(!0);
+            I(F.find((t) => t.skuId === e)), B(e), R(!0);
         },
         W = F.map((e) => {
             var t, n;
@@ -122,7 +122,7 @@ function v(e) {
                     assetId: e.assetId,
                     productName: null == (t = e.name) ? void 0 : t.call(e),
                     a11yLabel: null == (n = e.a11yLabel) ? void 0 : n.call(e),
-                    claimed: null != I && I.every((t) => t.skuId !== e.skuId),
+                    claimed: null != O && O.every((t) => t.skuId !== e.skuId),
                     user: k,
                     onSelect: z,
                     selectedSkuId: Z,
@@ -139,7 +139,7 @@ function v(e) {
                     onStepChange: (e) => {
                         null != k &&
                             null != P &&
-                            f.default.track(b.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
+                            f.default.track(j.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
                                 user_id: k.id,
                                 reward_sku_id: P.skuId,
                             }),
@@ -148,8 +148,8 @@ function v(e) {
                     onBackClick: () => a(x.h8.PLAN_SELECT),
                     shouldRenderUpdatedPaymentModal: !0,
                     showBackButton: !0,
-                    planOptions: [L.id],
-                    selectedPlanId: L.id,
+                    planOptions: [v.id],
+                    selectedPlanId: v.id,
                     isNextDisabled: D,
                 }),
             }),
@@ -166,18 +166,18 @@ function v(e) {
                     (0, r.jsx)(s.Heading, {
                         variant: "heading-lg/bold",
                         color: "header-primary",
-                        children: j.intl.string(j.t["3JCuX1"]),
+                        children: b.intl.string(b.t["3JCuX1"]),
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-md/normal",
                         color: "text-secondary",
                         className: y.headerSubtitle,
-                        children: j.intl.string(j.t.MhwtRU),
+                        children: b.intl.string(b.t.MhwtRU),
                     }),
                     (0, r.jsx)(s.olH, {
                         "data-migration-pending": !0,
                         className: y.closeButton,
-                        onClick: v,
+                        onClick: L,
                     }),
                 ],
             }),

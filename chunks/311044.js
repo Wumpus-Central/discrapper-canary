@@ -16,7 +16,7 @@ function m(e) {
     let { user: t, guildId: n, channelId: m, onClose: b } = e,
         { analyticsLocations: _ } = (0, a.ZP)(),
         { context: O, trackUserProfileAction: E } = (0, s.KZ)(),
-        { mutualFriends: y, mutualFriendsCount: v } = (0, c.Z)(t),
+        { mutualFriends: v, mutualFriendsCount: y } = (0, c.Z)(t),
         I = (0, l.Z)();
     return (
         i.useEffect(() => {
@@ -25,8 +25,8 @@ function m(e) {
         (0, r.jsx)(h.F, {
             className: g.scroller,
             children:
-                null == y
-                    ? Array.from({ length: null != v ? v : 10 }).map((e, t) =>
+                null == v
+                    ? Array.from({ length: null != y ? y : 10 }).map((e, t) =>
                           (0, r.jsxs)(
                               "div",
                               {
@@ -45,9 +45,9 @@ function m(e) {
                               t,
                           ),
                       )
-                    : 0 === y.length
+                    : 0 === v.length
                       ? (0, r.jsx)(f.s_, {})
-                      : y.map((e) => {
+                      : v.map((e) => {
                             let { key: t, user: i, status: l } = e;
                             return (0, r.jsx)(
                                 p.Z,

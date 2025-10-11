@@ -76,7 +76,7 @@ let C = (e) => {
             preloadSound: H,
         } = (0, p.Z)(null != R ? R[V] : null, { soundId: t.id }),
         z = _[t.styleKey],
-        q = i.useCallback(() => {
+        B = i.useCallback(() => {
             n || !S
                 ? ((0, b.v6)(C === t.id ? null : t.id, o),
                   N &&
@@ -86,7 +86,7 @@ let C = (e) => {
                       ))
                 : (0, d.i)();
         }, [n, S, C, t.id, o, N]),
-        B = i.useCallback(() => {
+        q = i.useCallback(() => {
             m.default.track(h.rMx.VOICE_FILTER_PREVIEW_PLAYED, w({ voice_filter_id: t.id }, (0, g.w)(o))),
                 U({
                     volume: 0.5,
@@ -121,7 +121,7 @@ let C = (e) => {
                 children: (0, r.jsxs)(u.P3F, {
                     className: _.selector,
                     onClick: () => {
-                        q();
+                        B();
                     },
                     onMouseEnter: () => {
                         H();
@@ -209,7 +209,7 @@ let C = (e) => {
                     text: P.intl.string(L ? P.t.ItuPbm : P.t["0gtbEx"]),
                     children: (0, r.jsx)(u.P3F, {
                         className: l()([_.hoverButtonCircle, _.previewButton], { [_.visible]: L }),
-                        onClick: L ? Y : B,
+                        onClick: L ? Y : q,
                         "aria-label": P.intl.formatToPlainString(P.t.gDzvjY, { voiceFilterName: W }),
                         children: L
                             ? (0, r.jsx)(u.wNq, {

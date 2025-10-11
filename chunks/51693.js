@@ -6,18 +6,18 @@ var l = n(951288),
     a = n(507453),
     o = n(388032);
 function d(e) {
-    let { mfaChallenge: t, finish: n, setSlide: d, onClose: c, isSlideReady: u, headerAlignStart: h } = e,
+    let { mfaChallenge: t, finish: n, setSlide: d, onClose: u, isSlideReady: c, headerAlignStart: h } = e,
         [f, g] = r.useState(!1),
         [m, p] = r.useState(null),
-        [x, S] = r.useState(""),
-        b = r.useRef(null);
+        [b, S] = r.useState(""),
+        x = r.useRef(null);
     return (
         r.useEffect(() => {
-            if (u) {
+            if (c) {
                 var e;
-                null == (e = b.current) || e.focus();
+                null == (e = x.current) || e.focus();
             }
-        }, [u]),
+        }, [c]),
         (0, l.jsxs)("form", {
             onSubmit: (e) => {
                 e.preventDefault(),
@@ -25,7 +25,7 @@ function d(e) {
                     p(null),
                     n({
                         mfaType: "totp",
-                        data: x,
+                        data: b,
                     })
                         .catch((e) => {
                             var t, n;
@@ -37,7 +37,7 @@ function d(e) {
             },
             children: [
                 (0, l.jsx)(a.Z.SlideHeader, {
-                    onClose: c,
+                    onClose: u,
                     headerAlignStart: h,
                 }),
                 (0, l.jsxs)(a.Z.SlideContent, {
@@ -45,12 +45,12 @@ function d(e) {
                     children: [
                         (0, l.jsx)(s.oil, {
                             label: o.intl.string(o.t.HZPBOT),
-                            inputRef: b,
+                            inputRef: x,
                             onChange: S,
                             placeholder: o.intl.string(o.t.tARzgo),
                             maxLength: i.gH,
                             minLength: i.gH,
-                            value: x,
+                            value: b,
                             autoComplete: "one-time-code",
                             spellCheck: "false",
                             disabled: f,
@@ -62,7 +62,7 @@ function d(e) {
                     mfaChallenge: t,
                     setSlide: d,
                     showConfirm: !0,
-                    disabled: x.length !== i.gH,
+                    disabled: b.length !== i.gH,
                     submitting: f,
                 }),
             ],

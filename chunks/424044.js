@@ -21,8 +21,8 @@ let E = (e) => {
         n = (0, l.e7)([p.default], () => p.default.isAuthenticated()),
         E = (0, l.e7)([d.Z], () => d.Z.hasLoadedExperiments),
         v = (0, g.oK)("RSL - Landing Page"),
-        [b, I] = i.useState(!1),
-        [j, N] = i.useState(_.intl.string(_.t["9exy+f"])),
+        [b, j] = i.useState(!1),
+        [I, N] = i.useState(_.intl.string(_.t["9exy+f"])),
         [S, O] = i.useState(!0),
         y = (e) => {
             switch (e) {
@@ -65,10 +65,10 @@ let E = (e) => {
                 } catch (e) {
                     y(null == (n = e.body) ? void 0 : n.code);
                 } finally {
-                    I(!1);
+                    j(!1);
                 }
             };
-            I(!0), e((0, c.Z)(t)), (0, m.e)("report_second_look");
+            j(!0), e((0, c.Z)(t)), (0, m.e)("report_second_look");
         }, [t]),
         v &&
             !S &&
@@ -76,7 +76,7 @@ let E = (e) => {
                 children: [
                     (0, r.jsx)(u.Dx, {
                         className: x.marginBottom8,
-                        children: j,
+                        children: I,
                     }),
                     b && (0, r.jsx)(s.$jN, {}),
                 ],

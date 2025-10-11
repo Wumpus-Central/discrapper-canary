@@ -136,7 +136,7 @@ function A(e) {
                 comparator: i,
             });
     }
-    (O = n), D.emitChange();
+    (O = n), k.emitChange();
 }
 function w() {
     return null != i && (i.destroy(), (i = null)), s.Z.getUserSearchContext(A, 1000);
@@ -147,12 +147,12 @@ function M(e) {
 }
 function R(e) {
     if (e.key !== y.vTt) return !1;
-    k();
+    L();
 }
-function k() {
+function L() {
     null != i && (i.destroy(), (i = null)), P();
 }
-class L extends (r = a.ZP.Store) {
+class D extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(C.default, f.Z, b.Z, c.Z, m.Z), this.syncWith([C.default, f.Z], Z), this.syncWith([b.Z], T);
     }
@@ -178,15 +178,15 @@ class L extends (r = a.ZP.Store) {
         };
     }
 }
-(l = "displayName") in L
-    ? Object.defineProperty(L, l, {
+(l = "displayName") in D
+    ? Object.defineProperty(D, l, {
           value: "PrivateChannelRecipientsInviteStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (L[l] = "PrivateChannelRecipientsInviteStore");
-let D = new L(o.Z, {
+    : (D[l] = "PrivateChannelRecipientsInviteStore");
+let k = new D(o.Z, {
         CONNECTION_OPEN: function () {
             P();
         },
@@ -203,7 +203,7 @@ let D = new L(o.Z, {
         },
         MODAL_POP: R,
         HIDE_ACTION_SHEET: R,
-        PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: k,
+        PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: L,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_QUERY: function (e) {
             (S = e.channelId), I(e.query);
         },
@@ -219,4 +219,4 @@ let D = new L(o.Z, {
             E.delete(t), (E = new Set(E));
         },
     }),
-    U = D;
+    U = k;

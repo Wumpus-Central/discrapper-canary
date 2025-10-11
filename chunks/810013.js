@@ -1,32 +1,32 @@
-n.d(t, { Z: () => f });
-var r = n(951288),
-    i = n(442837),
-    l = n(481060),
-    s = n(314897),
-    o = n(938475),
-    a = n(499596),
-    c = n(537135),
-    d = n(388032),
-    u = n(542257);
-function f(e) {
-    let { channel: t } = e,
-        n = (0, i.e7)([s.default], () => s.default.getId()),
-        f = (0, i.e7)([o.ZP], () => o.ZP.getVoiceStatesForChannel(t), [t]);
-    return (0, r.jsx)("div", {
-        className: u.modalContent,
-        children: (0, r.jsx)(l.gNt, {
-            label: d.intl.string(d.t.KPuWsr),
-            children: (0, r.jsx)(c.Z, {
-                children: (0, r.jsx)(a.Z, {
-                    channel: t,
-                    users: f
+t.d(n, { Z: () => m });
+var l = t(951288),
+    r = t(442837),
+    i = t(481060),
+    s = t(314897),
+    a = t(938475),
+    c = t(499596),
+    o = t(537135),
+    u = t(388032),
+    d = t(542257);
+function m(e) {
+    let { channel: n } = e,
+        t = (0, r.e7)([s.default], () => s.default.getId()),
+        m = (0, r.e7)([a.ZP], () => a.ZP.getVoiceStatesForChannel(n), [n]);
+    return (0, l.jsx)("div", {
+        className: d.modalContent,
+        children: (0, l.jsx)(i.gNt, {
+            label: u.intl.string(u.t.KPuWsr),
+            children: (0, l.jsx)(o.Z, {
+                children: (0, l.jsx)(c.Z, {
+                    channel: n,
+                    users: m
                         .filter((e) => {
-                            let { user: t } = e;
-                            return t.id !== n;
+                            let { user: n } = e;
+                            return n.id !== t;
                         })
                         .map((e) => {
-                            let { user: t } = e;
-                            return t;
+                            let { user: n } = e;
+                            return n;
                         }),
                 }),
             }),

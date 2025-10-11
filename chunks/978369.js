@@ -1,15 +1,15 @@
-r.d(t, { Z: () => f }), r(539854), r(388685);
-var n = r(951288),
-    i = r(647438),
-    a = r(481060),
-    o = r(785717),
-    l = r(86419),
-    c = r(286957),
-    s = r(388032),
-    u = r(44258);
+n.d(t, { Z: () => f }), n(539854), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(481060),
+    o = n(785717),
+    l = n(86419),
+    c = n(286957),
+    s = n(388032),
+    u = n(44258);
 let d = i.memo(function (e) {
-    let { currentTags: t, onTagSelect: r, onNoneSelect: i, onClose: o } = e;
-    return (0, n.jsx)(a.v2r, {
+    let { currentTags: t, onTagSelect: n, onNoneSelect: i, onClose: o } = e;
+    return (0, r.jsx)(a.v2r, {
         navId: "widget-game-tags",
         "aria-label": s.intl.string(s.t.r6EJOj),
         onClose: o,
@@ -22,7 +22,7 @@ let d = i.memo(function (e) {
                     return (
                         o.type === c.kd.RADIO &&
                             l.push(
-                                (0, n.jsx)(
+                                (0, r.jsx)(
                                     a.k5B,
                                     {
                                         id: "".concat(e, "-none"),
@@ -39,26 +39,26 @@ let d = i.memo(function (e) {
                             null != s &&
                                 (o.type === c.kd.RADIO
                                     ? l.push(
-                                          (0, n.jsx)(
+                                          (0, r.jsx)(
                                               a.k5B,
                                               {
                                                   id: i,
                                                   group: e,
                                                   label: s.getText(),
                                                   checked: t.includes(i),
-                                                  action: () => r(i, !0),
+                                                  action: () => n(i, !0),
                                               },
                                               i,
                                           ),
                                       )
                                     : l.push(
-                                          (0, n.jsx)(
+                                          (0, r.jsx)(
                                               a.S89,
                                               {
                                                   id: i,
                                                   label: s.getText(),
                                                   checked: t.includes(i),
-                                                  action: () => r(i, !1),
+                                                  action: () => n(i, !1),
                                               },
                                               i,
                                           ),
@@ -67,7 +67,7 @@ let d = i.memo(function (e) {
                         l
                     );
                 })(o, l);
-            return (0, n.jsx)(
+            return (0, r.jsx)(
                 a.kSQ,
                 {
                     label: l.getLabel(),
@@ -79,43 +79,43 @@ let d = i.memo(function (e) {
     });
 });
 function f(e) {
-    let { tags: t, widgetType: r, applicationId: f, ref: g } = e,
+    let { tags: t, widgetType: n, applicationId: f, ref: g } = e,
         p = (0, i.useRef)(null),
         { trackUserProfileEditAction: b } = (0, o.KZ)(),
         m = (0, i.useMemo)(() => (null != t ? t : []), [t]),
         O = (0, i.useCallback)(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                    n = new Set(m);
+                    r = new Set(m);
                 if (t) {
                     let t = Object.values(c.aE).find((t) => t.tags.includes(e));
                     null != t &&
                         (t.tags.forEach((e) => {
-                            n.delete(e);
+                            r.delete(e);
                         }),
-                        n.add(e),
+                        r.add(e),
                         b({
                             action: "TAG_ADDED",
-                            widgetEdited: r,
+                            widgetEdited: n,
                             gameId: f,
                         }));
                 } else
-                    n.has(e)
-                        ? (n.delete(e),
+                    r.has(e)
+                        ? (r.delete(e),
                           b({
                               action: "TAG_REMOVED",
-                              widgetEdited: r,
+                              widgetEdited: n,
                               gameId: f,
                           }))
-                        : (n.add(e),
+                        : (r.add(e),
                           b({
                               action: "TAG_ADDED",
-                              widgetEdited: r,
+                              widgetEdited: n,
                               gameId: f,
                           }));
-                (0, l.n$)(r, f, Array.from(n));
+                (0, l.n$)(n, f, Array.from(r));
             },
-            [m, b, r, f],
+            [m, b, n, f],
         ),
         y = (0, i.useCallback)(
             (e) => {
@@ -125,26 +125,26 @@ function f(e) {
                 }),
                     b({
                         action: "TAG_REMOVED",
-                        widgetEdited: r,
+                        widgetEdited: n,
                         gameId: f,
                     }),
-                    (0, l.n$)(r, f, Array.from(t));
+                    (0, l.n$)(n, f, Array.from(t));
             },
-            [m, b, r, f],
+            [m, b, n, f],
         );
-    return (0, n.jsx)(a.yRy, {
+    return (0, r.jsx)(a.yRy, {
         targetElementRef: p,
         position: "right",
         align: "top",
         onRequestOpen: () => {
             b({
                 action: "PRESS_ADD_TAG",
-                widgetEdited: r,
+                widgetEdited: n,
             });
         },
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, n.jsx)(d, {
+            return (0, r.jsx)(d, {
                 currentTags: m,
                 onTagSelect: O,
                 onNoneSelect: y,
@@ -152,62 +152,62 @@ function f(e) {
             });
         },
         children: (e) => {
-            var t, r;
-            return (0, n.jsx)("div", {
+            var t, n;
+            return (0, r.jsx)("div", {
                 ref: (e) => (
                     null != e && ((p.current = e), (g.current = e)),
                     () => {
                         (p.current = null), (g.current = null);
                     }
                 ),
-                children: (0, n.jsx)(
+                children: (0, r.jsx)(
                     a.P3F,
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
-                            var r = null != arguments[t] ? arguments[t] : {},
-                                n = Object.keys(r);
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
                             "function" == typeof Object.getOwnPropertySymbols &&
-                                (n = n.concat(
-                                    Object.getOwnPropertySymbols(r).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                     }),
                                 )),
-                                n.forEach(function (t) {
-                                    var n;
-                                    (n = r[t]),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
-                                                  value: n,
+                                                  value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0,
                                               })
-                                            : (e[t] = n);
+                                            : (e[t] = r);
                                 });
                         }
                         return e;
                     })({}, e)),
-                    (r = r =
+                    (n = n =
                         {
                             className: u.addButton,
                             "aria-label": s.intl.string(s.t.r6EJOj),
-                            children: (0, n.jsx)(a.Text, {
+                            children: (0, r.jsx)(a.Text, {
                                 variant: "text-xxs/medium",
                                 color: "none",
                                 children: s.intl.string(s.t.fZSej4),
                             }),
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                         : (function (e, t) {
-                              var r = Object.keys(e);
+                              var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
-                                  var n = Object.getOwnPropertySymbols(e);
-                                  r.push.apply(r, n);
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
                               }
-                              return r;
-                          })(Object(r)).forEach(function (e) {
-                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                              return n;
+                          })(Object(n)).forEach(function (e) {
+                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                           }),
                     t),
                 ),

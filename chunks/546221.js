@@ -13,24 +13,24 @@ var r = n(951288),
     p = n(791382),
     f = n(277369),
     h = n(215124),
-    x = n(981631),
-    b = n(388032),
+    b = n(981631),
+    x = n(388032),
     j = n(150043);
 function v(e) {
     let { payoutsByPeriod: t, team: n } = e,
         l = (0, c.mY)()
             ? null
-            : b.intl.format(b.t.d1sCiY, { url: null != n ? x.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(n.id) : null });
+            : x.intl.format(x.t.d1sCiY, { url: null != n ? b.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(n.id) : null });
     return 0 === t.length
         ? (0, r.jsxs)(i.Text, {
               variant: "text-sm/medium",
-              children: [b.intl.string(b.t.RrtXu7), " ", l],
+              children: [x.intl.string(x.t.RrtXu7), " ", l],
           })
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)(i.Text, {
                       variant: "text-sm/medium",
-                      children: [b.intl.string(b.t["9Ub4KS"]), " ", l],
+                      children: [x.intl.string(x.t["9Ub4KS"]), " ", l],
                   }),
                   (0, r.jsx)(i.LZC, { size: 16 }),
                   (0, r.jsx)(m.ZP, { payoutsByPeriod: t }),
@@ -62,15 +62,15 @@ let C = (e) => {
                       (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(l.Z, {
-                                  children: b.intl.format(b.t["2raBCQ"], {
-                                      insightsURL: x.EYA.DEVELOPER_PORTAL_GUILD_ANALYTICS_ROLE_SUBSCRIPTION(s),
+                                  children: x.intl.format(x.t["2raBCQ"], {
+                                      insightsURL: b.EYA.DEVELOPER_PORTAL_GUILD_ANALYTICS_ROLE_SUBSCRIPTION(s),
                                   }),
                               }),
                               (0, r.jsx)(i.LZC, { size: 32 }),
                           ],
                       }),
                   (0, r.jsxs)(i.C3N, {
-                      label: b.intl.string(b.t.ofmOzc),
+                      label: x.intl.string(x.t.ofmOzc),
                       className: j.formSection,
                       children: [
                           (0, r.jsx)(i.LZC, { size: 8 }),
@@ -78,15 +78,15 @@ let C = (e) => {
                               className: j.metricsContainer,
                               children: [
                                   (0, r.jsx)(p.Z, {
-                                      label: b.intl.string(b.t.iY1jW1),
-                                      value: (0, a.T4)(null != (t = y.revenue) ? t : 0, x.pKx.USD),
+                                      label: x.intl.string(x.t.iY1jW1),
+                                      value: (0, a.T4)(null != (t = y.revenue) ? t : 0, b.pKx.USD),
                                       additionalContent: (0, r.jsx)(p.H, {
                                           value: y.revenuePctChange,
                                           isPercent: !0,
                                       }),
                                   }),
                                   (0, r.jsx)(p.Z, {
-                                      label: b.intl.string(b.t.cXyw29),
+                                      label: x.intl.string(x.t.cXyw29),
                                       value: (0, r.jsxs)(r.Fragment, {
                                           children: [
                                               null != (n = y.subscribers) ? n : "-",
@@ -110,7 +110,7 @@ let C = (e) => {
                       ],
                   }),
                   (0, r.jsx)(i.C3N, {
-                      label: b.intl.string(b.t["+5Rmho"]),
+                      label: x.intl.string(x.t["+5Rmho"]),
                       className: j.formSection,
                       children: (0, r.jsx)(v, {
                           payoutsByPeriod: O,
@@ -118,7 +118,7 @@ let C = (e) => {
                       }),
                   }),
                   (0, r.jsx)(i.C3N, {
-                      label: b.intl.string(b.t.O8cDAA),
+                      label: x.intl.string(x.t.O8cDAA),
                       className: j.formSection,
                       disabled: E,
                       children: (0, r.jsx)(f.Z, {
@@ -127,7 +127,7 @@ let C = (e) => {
                       }),
                   }),
                   (0, r.jsx)(i.C3N, {
-                      label: b.intl.string(b.t["0n7R2d"]),
+                      label: x.intl.string(x.t["0n7R2d"]),
                       className: j.formSection,
                       children: (0, r.jsx)(h.Z, {
                           guildId: s,

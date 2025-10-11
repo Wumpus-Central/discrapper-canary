@@ -1,20 +1,20 @@
 n.d(t, {
     K: () => g,
-    Z: () => p,
+    Z: () => f,
 });
 var r = n(951288);
 n(647438);
 var l = n(120356),
-    a = n.n(l),
+    i = n.n(l),
     s = n(128922),
-    i = n(401975),
-    o = n(638758),
+    o = n(401975),
+    a = n(638758),
     c = n(887353),
     u = n(198501),
     d = n(300179);
 let g = () =>
         (0, r.jsx)("div", {
-            className: a()(u.skeleton, d.shopCard),
+            className: i()(u.skeleton, d.shopCard),
             children: (0, r.jsxs)("div", {
                 className: u.cardBody,
                 children: [
@@ -25,7 +25,7 @@ let g = () =>
                 ],
             }),
         }),
-    p = () => {
+    f = () => {
         let e = s.Z.useConfig({ location: "ShopSkeleton" }).showCardsV2;
         return (0, r.jsx)("div", {
             className: u.skeletonsContainer,
@@ -36,12 +36,12 @@ let g = () =>
                         className: c.cardsContainer,
                         children: [
                             e
-                                ? (0, r.jsx)("div", { className: a()(o.catalogBanner, u.bannerSkeletonV2) })
+                                ? (0, r.jsx)("div", { className: i()(a.catalogBanner, u.bannerSkeletonV2) })
                                 : (0, r.jsx)("div", {
-                                      className: a()(u.skeleton, u.bannerSkeleton, o.catalogBanner),
+                                      className: i()(u.skeleton, u.bannerSkeleton, a.catalogBanner),
                                       children: (0, r.jsx)("div", { className: u.bannerBody }),
                                   }),
-                            Array.from({ length: 12 }, (t, n) => (e ? (0, r.jsx)(i.Z, {}, n) : (0, r.jsx)(g, {}, n))),
+                            Array.from({ length: 12 }, (t, n) => (e ? (0, r.jsx)(o.Z, {}, n) : (0, r.jsx)(g, {}, n))),
                         ],
                     },
                     n,

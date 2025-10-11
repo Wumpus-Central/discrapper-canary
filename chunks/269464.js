@@ -2,8 +2,8 @@ n.d(t, { O: () => h });
 var r = n(951288),
     i = n(647438),
     l = n(481060),
-    s = n(906732),
-    a = n(516129),
+    a = n(906732),
+    s = n(516129),
     o = n(768581),
     c = n(821458),
     d = n(981631),
@@ -15,16 +15,16 @@ var r = n(951288),
 function h(e) {
     let { guild: t, canManageGuild: n } = e,
         h = t.features.has(d.oNc.BANNER),
-        x = t.features.has(d.oNc.ANIMATED_BANNER),
-        b = h && n,
-        { analyticsLocations: j } = (0, s.ZP)(),
-        _ = i.useCallback(
+        b = t.features.has(d.oNc.ANIMATED_BANNER),
+        x = h && n,
+        { analyticsLocations: j } = (0, a.ZP)(),
+        v = i.useCallback(
             (e, n) => {
                 (0, c.f4)(t, j, e, n);
             },
             [j, t],
         ),
-        v = i.useCallback(
+        _ = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
@@ -38,7 +38,7 @@ function h(e) {
             },
             [j, t],
         ),
-        C = (0, r.jsx)(a.Z, {
+        C = (0, r.jsx)(s.Z, {
             image: t.banner,
             makeURL: (e) =>
                 null != e
@@ -47,11 +47,11 @@ function h(e) {
                               id: t.id,
                               banner: e,
                           },
-                          x,
+                          b,
                       )
                     : null,
-            disabled: !b,
-            onChange: _,
+            disabled: !x,
+            onChange: v,
             hint: p.intl.string(p.t.uPvxqK),
             onOpenImageSelectModal: () =>
                 (0, c.mw)({
@@ -59,7 +59,7 @@ function h(e) {
                     maxFileSizeBytes: m.B,
                     onComplete: (e) => {
                         let { imageUri: t, file: n } = e;
-                        return _(t, n);
+                        return v(t, n);
                     },
                     analyticsLocation: {
                         page: d.ZY5.GUILD_SETTINGS,
@@ -67,7 +67,7 @@ function h(e) {
                     },
                     analyticsLocations: j,
                 }),
-            enabled: b,
+            enabled: x,
         });
     return h
         ? C
@@ -75,7 +75,7 @@ function h(e) {
               "aria-hidden": !0,
               tabIndex: -1,
               className: f.upsell,
-              onClick: v,
+              onClick: _,
               children: C,
           });
 }

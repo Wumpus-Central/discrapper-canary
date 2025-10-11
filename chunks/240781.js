@@ -95,23 +95,23 @@ let f = [
             g = (0, o.e7)([x.Z], () => x.Z.getStatus(t.id)),
             { product: P, purchase: b } = (0, d.Z)(null == l ? void 0 : l.skuId),
             E = v.ZP.canUseCollectibles(t),
-            C = (0, u.qS)(b),
-            A = (0, u.G1)(P),
-            I = !E && C,
-            w = (0, p.M)(!A || E),
+            I = (0, u.qS)(b),
+            C = (0, u.G1)(P),
+            A = !E && I,
+            w = (0, p.M)(!C || E),
             T = (0, m.kd)(P),
             N = i.useMemo(
                 () =>
-                    I
+                    A
                         ? y.intl.string(y.t["7vkeu7"])
-                        : (0, a.EQ)([A, E, w])
+                        : (0, a.EQ)([C, E, w])
                               .with([!0, !0, !1], () => y.intl.string(y.t.hmyYKy))
                               .with([!0, !1, !0], () => y.intl.string(y.t.q0PlFh))
                               .with([!0, !1, !1], () => y.intl.string(y.t["0xs2sL"]))
                               .otherwise(() => y.intl.string(y.t.fEGjVV)),
-                [I, A, E, w],
+                [A, C, E, w],
             );
-        return null != P && (null == b || I)
+        return null != P && (null == b || A)
             ? (0, n.jsxs)("div", {
                   className: s()(O.modalPreview, O.shopPreviewContainer, h),
                   children: [

@@ -2,8 +2,8 @@ n.d(t, { Z: () => f }), n(388685), n(781311);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    s = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    s = n(442837),
     o = n(28664),
     c = n(481060),
     d = n(393238),
@@ -12,21 +12,21 @@ var r = n(951288),
     m = n(180002);
 let p = i.forwardRef(function (e, t) {
     var n, l;
-    let { value: a, isSelected: c, isEditing: d, forceShowErrorTooltip: u = !1, error: g } = e,
+    let { value: s, isSelected: c, isEditing: d, forceShowErrorTooltip: u = !1, error: g } = e,
         [p, f, h] = i.useMemo(() => {
             if (null == g) return [];
-            let { erroringCharacterOffset: e = 0, erroringCharacterLength: t = a.length } = null != g ? g : {},
-                n = a.slice(0, e);
-            return [n, a.slice(e, e + t), a.slice(e + t)];
-        }, [a, g]);
+            let { erroringCharacterOffset: e = 0, erroringCharacterLength: t = s.length } = null != g ? g : {},
+                n = s.slice(0, e);
+            return [n, s.slice(e, e + t), s.slice(e + t)];
+        }, [s, g]);
     return null == g
         ? (0, r.jsx)("div", {
-              className: s()(m.chipletValue, {
+              className: a()(m.chipletValue, {
                   [m.isEditing]: d,
                   [m.isSelected]: c,
               }),
               ref: t,
-              children: a,
+              children: s,
           })
         : (null != (n = null == p ? void 0 : p.length) ? n : 0) +
                 (null != (l = null == f ? void 0 : f.length) ? l : 0) >
@@ -48,7 +48,7 @@ let p = i.forwardRef(function (e, t) {
                 forceOpen: u || void 0,
                 children: (0, r.jsxs)("div", {
                     ref: t,
-                    className: s()(m.chipletValue, {
+                    className: a()(m.chipletValue, {
                         [m.isEditing]: d,
                         [m.isError]: null != g && !d,
                         [m.isOverflowing]: null != g && !d,
@@ -65,7 +65,7 @@ let p = i.forwardRef(function (e, t) {
             })
           : (0, r.jsxs)("div", {
                 ref: t,
-                className: s()(m.chipletValue, {
+                className: a()(m.chipletValue, {
                     [m.isEditing]: d,
                     [m.isError]: null != g && !d,
                 }),
@@ -92,16 +92,16 @@ function f(e) {
             onFocus: o,
             onRemove: f,
             isSelected: h,
-            isSelecting: x,
-            error: b,
+            isSelecting: b,
+            error: x,
             forceShowErrorTooltip: j,
         } = e,
-        _ = i.useRef(null),
         v = i.useRef(null),
+        _ = i.useRef(null),
         [C, O] = i.useState(!1),
         { ref: y, width: N = 0 } = (0, d.ZP)(C),
         { ref: E, width: I = 0 } = (0, d.ZP)(C),
-        S = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
+        S = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         [T, P] = i.useState(j),
         w = i.useRef(null),
         Z = N > I ? N : I;
@@ -128,13 +128,13 @@ function f(e) {
         D = i.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                if ((t.trim().length <= 0 && f(), null != _.current && null != y.current && null != v.current)) {
+                if ((t.trim().length <= 0 && f(), null != v.current && null != y.current && null != _.current)) {
                     var n;
-                    _.current.scrollTo(0, 0),
-                        _.current.setSelectionRange(0, 0),
-                        (_.current.scrollLeft = 0),
+                    v.current.scrollTo(0, 0),
+                        v.current.setSelectionRange(0, 0),
+                        (v.current.scrollLeft = 0),
                         (y.current.scrollLeft = 0),
-                        (null == (n = v.current) ? void 0 : n.ref) != null && (v.current.ref.scrollLeft = 0);
+                        (null == (n = _.current) ? void 0 : n.ref) != null && (_.current.ref.scrollLeft = 0);
                 }
                 O(!1), l(e);
             },
@@ -166,12 +166,12 @@ function f(e) {
         className: m.chipletFlexContainer,
         children: (0, r.jsxs)("div", {
             ref: E,
-            className: s()(m.chipletContainer, {
+            className: a()(m.chipletContainer, {
                 [m.isEditing]: C,
                 [m.smallBlink]: !C && !S,
                 [m.isSelected]: h,
-                [m.isSelecting]: x,
-                [m.isError]: null != b && !C,
+                [m.isSelecting]: b,
+                [m.isError]: null != x && !C,
             }),
             children: [
                 (0, r.jsxs)(c.P3F, {
@@ -181,18 +181,18 @@ function f(e) {
                     ignoreKeyPress: !0,
                     onMouseEnter: () => P(!0),
                     onMouseLeave: () => P(!1),
-                    className: s()(m.chipletContainerInner, {
-                        [m.isSelecting]: x,
+                    className: a()(m.chipletContainerInner, {
+                        [m.isSelecting]: b,
                         [m.isEditing]: C,
                     }),
-                    ref: v,
+                    ref: _,
                     children: [
                         (0, r.jsx)("input", {
-                            className: s()(m.chipletInput, {
+                            className: a()(m.chipletInput, {
                                 [m.isEditing]: C,
-                                [m.isSelecting]: x,
+                                [m.isSelecting]: b,
                             }),
-                            ref: _,
+                            ref: v,
                             onChange: R,
                             onKeyDownCapture: A,
                             value: t,
@@ -203,7 +203,7 @@ function f(e) {
                             value: t,
                             isEditing: C,
                             isSelected: h,
-                            error: b,
+                            error: x,
                             forceShowErrorTooltip: T || C,
                         }),
                     ],

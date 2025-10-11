@@ -17,11 +17,11 @@ var r = n(951288),
     _ = n(746728),
     O = n(140700),
     E = n(665807),
-    y = n(188493),
-    v = n(294330),
+    v = n(188493),
+    y = n(294330),
     I = n(981631),
-    S = n(857847);
-let C = Object.freeze({
+    C = n(857847);
+let S = Object.freeze({
         top: 0,
         bottom: 0,
         left: 32,
@@ -87,7 +87,7 @@ function P(e) {
         }, [Z, s, t, x, w, I]);
     let z = i.useCallback((e) => n(e, x), [n, x]),
         W = i.useMemo(() => (f ? [s.length, 0] : [s.length]), [s.length, f]),
-        q = i.useCallback(
+        Y = i.useCallback(
             (e, n, i) => {
                 switch (e) {
                     case 0:
@@ -98,12 +98,12 @@ function P(e) {
                                     paddingLeft: n.left,
                                     width: n.width - 16,
                                 },
-                                className: a()(S.heading, { [S.headingTopbar]: !R }),
+                                className: a()(C.heading, { [C.headingTopbar]: !R }),
                                 children: [
                                     !R &&
                                         (0, r.jsxs)("div", {
-                                            className: S.headingFilters,
-                                            children: [(0, r.jsx)(O.Z, { loadId: t }), (0, r.jsx)(y.Z, { loadId: t })],
+                                            className: C.headingFilters,
+                                            children: [(0, r.jsx)(O.Z, { loadId: t }), (0, r.jsx)(v.Z, { loadId: t })],
                                         }),
                                     A && (0, r.jsx)(E.Z, { loadId: t }),
                                 ],
@@ -111,12 +111,12 @@ function P(e) {
                             i,
                         );
                     case 1:
-                        return (0, r.jsx)(c.$jN, { className: a()(S.spinner, { [S.spinnerWithSidebar]: R }) }, i);
+                        return (0, r.jsx)(c.$jN, { className: a()(C.spinner, { [C.spinnerWithSidebar]: R }) }, i);
                 }
             },
             [A, R, t],
         ),
-        Y = i.useCallback(
+        q = i.useCallback(
             (e) => {
                 switch (e) {
                     case 0:
@@ -171,7 +171,7 @@ function P(e) {
                         "div",
                         {
                             style: n,
-                            children: (0, r.jsx)(v.ZP, {
+                            children: (0, r.jsx)(y.ZP, {
                                 guildId: e,
                                 onClick: async (e) => await X(e, t, x, N),
                                 onView: (e) => z(e),
@@ -221,20 +221,20 @@ function P(e) {
                 ),
             [P],
         ),
-        ee = R ? C : T;
+        ee = R ? S : T;
     return (0, r.jsx)("div", {
-        className: S.container,
+        className: C.container,
         ref: F,
         children: (0, r.jsx)(c.GMG, {
             ref: B,
-            className: S.masonryList,
+            className: C.masonryList,
             sections: W,
             columns: M,
             itemGutter: 16,
             padding: ee,
             renderItem: J,
-            renderSection: q,
-            getSectionHeight: Y,
+            renderSection: Y,
+            getSectionHeight: q,
             getItemKey: K,
             getItemHeight: Q,
             chunkSize: 24,
@@ -242,14 +242,14 @@ function P(e) {
             renderAccessory: (e) =>
                 R
                     ? (0, r.jsx)("div", {
-                          className: S.sidebar,
+                          className: C.sidebar,
                           style: { height: e },
                           children: (0, r.jsxs)("div", {
-                              className: S.sidebarContent,
+                              className: C.sidebarContent,
                               children: [
                                   (0, r.jsx)("div", {
-                                      className: S.sidebarLanguageSelect,
-                                      children: (0, r.jsx)(y.Z, { loadId: t }),
+                                      className: C.sidebarLanguageSelect,
+                                      children: (0, r.jsx)(v.Z, { loadId: t }),
                                   }),
                                   (0, r.jsx)(_.Z, { loadId: t }),
                               ],

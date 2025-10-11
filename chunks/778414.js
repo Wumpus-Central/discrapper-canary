@@ -21,11 +21,11 @@ var r = n(951288),
     _ = n(836197),
     O = n(880421),
     E = n(206599),
-    y = n(50130),
-    v = n(5136),
+    v = n(50130),
+    y = n(5136),
     I = n(690760),
-    S = n(747101),
-    C = n(517157),
+    C = n(747101),
+    S = n(517157),
     T = n(860717),
     N = n(28671),
     j = n(430790),
@@ -107,9 +107,9 @@ function G() {
 }
 function B(e) {
     let { user: t } = e,
-        { application: n } = (0, y.G)(),
+        { application: n } = (0, v.G)(),
         { token: i } = (0, d.o)(null == n ? void 0 : n.id),
-        l = (0, C.Z)(t.id),
+        l = (0, S.Z)(t.id),
         a = (0, O.k)({ location: "ApplicationWidgetUpsell" }),
         o = l.some((e) => e instanceof b.q && e.applicationId === (null == n ? void 0 : n.id));
     return null == n || !a || null == i || o
@@ -130,7 +130,7 @@ function B(e) {
 }
 function H(e) {
     let { user: t, guildId: n, channelId: l } = e,
-        a = (0, C.Z)(t.id),
+        a = (0, S.Z)(t.id),
         s = (0, o.e7)([g.default], () => g.default.getId() === t.id),
         c = (() => {
             let [e, t] = (0, o.Wu)([m.Z], () => [m.Z.ipCountryCode, m.Z.ipCountryCodeRequest]),
@@ -144,11 +144,11 @@ function H(e) {
         })(),
         d = (0, O.k)({ location: "UserProfileModalV2Widgets" }),
         p = 0 === a.length && s,
-        y = i.useMemo(() => a.filter(_.Wc), [a]),
-        v = i.useMemo(() => a.filter((e) => e instanceof b.q), [a]);
-    (0, S.ZP)(y), (0, E.J)(s, y);
+        v = i.useMemo(() => a.filter(_.Wc), [a]),
+        y = i.useMemo(() => a.filter((e) => e instanceof b.q), [a]);
+    (0, C.ZP)(v), (0, E.J)(s, v);
     var T = t.id;
-    (0, I.s)(v);
+    (0, I.s)(y);
     let { data: N, refetch: P } = (0, h.O)(T),
         x = i.useRef(N);
     if (
@@ -185,7 +185,7 @@ function V(e) {
     var { user: t } = e,
         n = M(e, ["user"]);
     let l = i.useRef(null);
-    (0, v.r)({ container: l.current });
+    (0, y.r)({ container: l.current });
     let o = (0, Z.h)(t.id);
     return (0, r.jsxs)(w.F, {
         "data-scroller": !0,

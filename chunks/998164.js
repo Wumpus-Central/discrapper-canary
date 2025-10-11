@@ -2,8 +2,8 @@ n.d(t, { Z: () => j });
 var r = n(951288),
     i = n(647438),
     l = n(399606),
-    s = n(481060),
-    a = n(710344),
+    a = n(481060),
+    s = n(710344),
     o = n(734893),
     c = n(8426),
     d = n(969632),
@@ -54,7 +54,7 @@ function f(e, t) {
     );
 }
 let h = [];
-function x() {
+function b() {
     return (0, r.jsx)("div", {
         className: m.actionItemContainer,
         children: (0, r.jsxs)("div", {
@@ -62,7 +62,7 @@ function x() {
             children: [
                 (0, r.jsx)("div", {
                     className: m.actionItemEmojiWrapper,
-                    children: (0, r.jsx)(s.snC, {
+                    children: (0, r.jsx)(a.snC, {
                         size: "custom",
                         color: "currentColor",
                         height: 20,
@@ -71,7 +71,7 @@ function x() {
                 }),
                 (0, r.jsx)("div", {
                     className: m.actionItemText,
-                    children: (0, r.jsx)(s.Text, {
+                    children: (0, r.jsx)(a.Text, {
                         variant: "text-md/semibold",
                         color: "header-primary",
                         children: g.intl.string(g.t["K/i3iY"]),
@@ -81,11 +81,11 @@ function x() {
         }),
     });
 }
-function b(e) {
+function x(e) {
     let { guildId: t, onAddAction: l } = e,
-        a = i.useCallback(() => {
+        s = i.useCallback(() => {
             if (null != t)
-                return (0, s.ZDy)(async () => {
+                return (0, a.ZDy)(async () => {
                     let { default: e } = await Promise.all([n.e("7590"), n.e("83975")]).then(n.bind(n, 380716));
                     return (n) =>
                         (0, r.jsx)(
@@ -97,15 +97,15 @@ function b(e) {
                         );
                 });
         }, [t, l]);
-    return (0, r.jsxs)(s.P3F, {
+    return (0, r.jsxs)(a.P3F, {
         className: m.addActionItem,
-        onClick: a,
+        onClick: s,
         children: [
-            (0, r.jsx)(s.oFk, {
+            (0, r.jsx)(a.oFk, {
                 size: "xs",
                 color: "currentColor",
             }),
-            (0, r.jsx)(s.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: "text-md/normal",
                 color: "none",
                 children: g.intl.string(g.t.qce3EB),
@@ -119,7 +119,7 @@ let j = function (e) {
             var e;
             return null != (e = d.Z.getSettings().newMemberActions) ? e : h;
         }),
-        s = i.useCallback(
+        a = i.useCallback(
             (e, n) => {
                 (0, c.vR)(e), (0, c.ad)(t, e.channelId, n, !0);
             },
@@ -127,9 +127,9 @@ let j = function (e) {
         ),
         g = i.useCallback(
             (e, r, i, l) => {
-                var s;
-                let a = null == (s = n[e]) ? void 0 : s.channelId;
-                null != a && null != d.Z.getSettings() && ((0, c.el)(a, r), (0, c.ad)(t, a, i, l));
+                var a;
+                let s = null == (a = n[e]) ? void 0 : a.channelId;
+                null != s && null != d.Z.getSettings() && ((0, c.el)(s, r), (0, c.ad)(t, s, i, l));
             },
             [n, t],
         ),
@@ -141,11 +141,11 @@ let j = function (e) {
             },
             [n],
         ),
-        _ = n.map((e) => f(p({}, e), { id: e.channelId })),
-        v = i.useCallback((e) => {
+        v = n.map((e) => f(p({}, e), { id: e.channelId })),
+        _ = i.useCallback((e) => {
             (0, c.hS)(e);
         }, []),
-        { handleDragStart: C, handleDragReset: O, handleDragComplete: y } = (0, a.Z)(_, v);
+        { handleDragStart: C, handleDragReset: O, handleDragComplete: y } = (0, s.Z)(v, _);
     return (0, r.jsxs)("div", {
         className: m.section,
         children: [
@@ -165,11 +165,11 @@ let j = function (e) {
                     e.channelId,
                 ),
             ),
-            (0, r.jsx)(x, {}),
+            (0, r.jsx)(b, {}),
             n.length < o.O9 &&
-                (0, r.jsx)(b, {
+                (0, r.jsx)(x, {
                     guildId: t,
-                    onAddAction: s,
+                    onAddAction: a,
                 }),
         ],
     });

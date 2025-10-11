@@ -1,4 +1,4 @@
-t.d(n, { p: () => g });
+t.d(n, { p: () => x });
 var a = t(951288),
     o = t(120356),
     r = t.n(o),
@@ -12,11 +12,11 @@ var a = t(951288),
     _ = t(784238),
     p = t(474936),
     f = t(388032),
-    x = t(851499);
-let g = (e) => {
+    g = t(851499);
+let x = (e) => {
     let { buttonAnalyticsObject: n, className: t, upsellText: o } = e,
-        g = c.default.getCurrentUser(),
-        h = (0, u.yd)(null == g ? void 0 : g.premiumType, p.PremiumTypes.TIER_2),
+        x = c.default.getCurrentUser(),
+        h = (0, u.yd)(null == x ? void 0 : x.premiumType, p.PremiumTypes.TIER_2),
         C = (0, m._)({
             defaultResponse: f.intl.string(f.t["8x0jKS"]),
             onNonTier2Subscriber: f.intl.string(f.t.IJI7ys),
@@ -24,10 +24,10 @@ let g = (e) => {
     return h
         ? null
         : (0, a.jsxs)("div", {
-              className: r()(x.upsellContainer, t),
+              className: r()(g.upsellContainer, t),
               children: [
                   (0, a.jsxs)("div", {
-                      className: x.row,
+                      className: g.row,
                       children: [
                           (0, a.jsx)(i.SrA, {
                               size: "md",
@@ -36,13 +36,13 @@ let g = (e) => {
                           (0, a.jsx)(l.xvT, {
                               variant: "text-sm/medium",
                               color: "header-primary",
-                              className: x.upsellText,
+                              className: g.upsellText,
                               children: o,
                           }),
                       ],
                   }),
                   (0, a.jsx)(_.Z, {
-                      className: x.button,
+                      className: g.button,
                       size: s.zx.Sizes.SMALL,
                       look: s.zx.Looks.BLANK,
                       color: s.zx.Colors.CUSTOM,

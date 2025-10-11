@@ -66,8 +66,8 @@ function A(e) {
             setValue: M,
             openClips: R,
         } = e,
-        { analyticsLocations: k, newestAnalyticsLocation: L } = (0, d.ZP)(),
-        D = (0, g.Dt)({ channel: t });
+        { analyticsLocations: L, newestAnalyticsLocation: D } = (0, d.ZP)(),
+        k = (0, g.Dt)({ channel: t });
     function U() {
         (0, b.R6)(t, void 0, "Plus Button");
     }
@@ -146,7 +146,7 @@ function A(e) {
                           }
                         : { type: "contextless" },
                 openInPopout: !1,
-                analyticsLocation: L,
+                analyticsLocation: D,
             }),
             (0, u.w1)({ guildId: t.guild_id });
     }
@@ -252,7 +252,7 @@ function A(e) {
                                             channelId: t.id,
                                             type: E.mFx.JOIN,
                                             activity: n,
-                                            location: k[k.length - 1],
+                                            location: L[L.length - 1],
                                         })
                                     );
                                 },
@@ -273,7 +273,7 @@ function A(e) {
                                             channelId: t.id,
                                             type: E.mFx.LISTEN,
                                             activity: n,
-                                            location: k[k.length - 1],
+                                            location: L[L.length - 1],
                                         })
                                     );
                                 },
@@ -294,7 +294,7 @@ function A(e) {
                                             channelId: t.id,
                                             type: E.mFx.WATCH,
                                             activity: n,
-                                            location: k[k.length - 1],
+                                            location: L[L.length - 1],
                                         })
                                     );
                                 },
@@ -339,7 +339,7 @@ function A(e) {
                                 id: "scheduled_message",
                                 label: r,
                                 action: () => (0, g.$f)({ channel: t }),
-                                children: D,
+                                children: k,
                             },
                             "scheduled_message",
                         );

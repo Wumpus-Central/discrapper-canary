@@ -4,8 +4,8 @@ n(647438);
 var l = n(120356),
     i = n.n(l),
     s = n(442837),
-    a = n(481060),
-    o = n(594174),
+    o = n(481060),
+    a = n(594174),
     c = n(381585),
     u = n(597688),
     d = n(128922),
@@ -15,7 +15,7 @@ var l = n(120356),
     C = n(310582);
 let h = (e) => {
     let { shelf: t, handleTransition: n, tab: l } = e,
-        h = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
+        h = (0, s.e7)([a.default], () => a.default.getCurrentUser()),
         _ = d.Z.useConfig({ location: "ShelfBlock" }).showCardsV2;
     return null == h
         ? null
@@ -25,11 +25,11 @@ let h = (e) => {
                   (0, r.jsxs)("div", {
                       className: C.blockHeader,
                       children: [
-                          (0, r.jsx)(a.Heading, {
+                          (0, r.jsx)(o.Heading, {
                               variant: "heading-lg/semibold",
                               children: t.name,
                           }),
-                          (0, r.jsx)(a.Button, {
+                          (0, r.jsx)(o.Button, {
                               variant: "secondary",
                               text: p.intl.formatToPlainString(p.t.bc9RBA, { category_name: t.name }),
                               onClick: () => n("shelf block see all", t.categorySkuId),

@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(906732),
     d = n(580552),
     u = n(104505),
-    p = n(680295),
-    h = n(5192),
+    h = n(680295),
+    p = n(5192),
     f = n(785717),
     g = n(221292),
     m = n(687158),
@@ -17,13 +17,13 @@ var r = n(951288),
     y = n(899007),
     _ = n(648052),
     j = n(867176),
-    x = n(280885),
-    O = n(900927),
+    O = n(280885),
+    x = n(900927),
     v = n(678738),
     C = n(502762),
     I = n(530),
-    E = n(679332),
-    S = n(544989),
+    S = n(679332),
+    E = n(544989),
     Z = n(671955),
     T = n(388032),
     P = n(231688),
@@ -97,7 +97,7 @@ function w(e) {
                 children: [
                     (0, r.jsxs)(l.u2D, {
                         children: [
-                            (0, r.jsx)(S.Z, { children: (0, r.jsx)(E.Z, { user: n }) }),
+                            (0, r.jsx)(E.Z, { children: (0, r.jsx)(S.Z, { user: n }) }),
                             (0, r.jsxs)("div", {
                                 className: P.header,
                                 children: [
@@ -122,7 +122,7 @@ function w(e) {
                                     (0, r.jsx)(I.Z, {
                                         user: n,
                                         guildId: w.guild_id,
-                                        nickname: h.ZP.getName(null, w.id, n),
+                                        nickname: p.ZP.getName(null, w.id, n),
                                         pronouns: null == D ? void 0 : D.pronouns,
                                         onOpenProfile: A ? void 0 : B,
                                         tags: (0, r.jsx)(_.Z, {
@@ -136,7 +136,7 @@ function w(e) {
                                             (0, r.jsx)(v.Z, {
                                                 heading: T.intl.string(T.t["61W33d"]),
                                                 headingColor: "header-primary",
-                                                children: (0, r.jsx)(x.Z, {
+                                                children: (0, r.jsx)(O.Z, {
                                                     userBio: null == D ? void 0 : D.bio,
                                                     userId: n.id,
                                                     animateOnHoverOrFocusOnly: !0,
@@ -146,7 +146,7 @@ function w(e) {
                                             (0, r.jsx)(v.Z, {
                                                 heading: T.intl.string(T.t["A//N4u"]),
                                                 headingColor: "header-primary",
-                                                children: (0, r.jsx)(O.Z, { userId: n.id }),
+                                                children: (0, r.jsx)(x.Z, { userId: n.id }),
                                             }),
                                         ],
                                     }),
@@ -175,7 +175,7 @@ function w(e) {
                             }),
                         }),
                     (null == D ? void 0 : D.profileEffect) != null &&
-                        (0, r.jsx)(p.Z, {
+                        (0, r.jsx)(h.Z, {
                             skuId: null == D || null == (t = D.profileEffect) ? void 0 : t.skuId,
                             isHovering: F,
                         }),

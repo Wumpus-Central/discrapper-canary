@@ -16,8 +16,8 @@ var i = n(951288),
     y = n(430824),
     _ = n(699516),
     O = n(944486),
-    v = n(707878),
-    b = n(518084),
+    b = n(707878),
+    v = n(518084),
     E = n(388032),
     x = n(846602);
 function S(e, t, n) {
@@ -76,10 +76,10 @@ class Z extends r.Component {
             } = this.props,
             { showOpacitySlider: g } = this.state;
         return g && !n
-            ? (0, i.jsxs)(b.ZP.Bar, {
+            ? (0, i.jsxs)(v.ZP.Bar, {
                   className: x.opacityHeader,
                   children: [
-                      (0, i.jsx)(v.Z, {}),
+                      (0, i.jsx)(b.Z, {}),
                       (0, i.jsx)(p.Z.Icon, {
                           icon: a.Dio,
                           onClick: this.handleCloseOpacitySettings,
@@ -87,7 +87,7 @@ class Z extends r.Component {
                       }),
                   ],
               })
-            : (0, i.jsx)(b.ZP.Background, {
+            : (0, i.jsx)(v.ZP.Background, {
                   opacityOverride: n || u ? null : 1,
                   children: (0, i.jsx)("div", {
                       className: o()(e, t, x.headerContainer),

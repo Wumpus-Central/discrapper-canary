@@ -12,12 +12,12 @@ var r = n(442837),
     m = n(707592),
     x = n(388032);
 let j = function (e) {
-    let { guildId: t, formFields: n, user: j, showRequirements: h = !0 } = e;
+    let { guildId: t, formFields: n, user: j, showRequirements: b = !0 } = e;
     return null == (0, r.e7)([a.default], () => (null != j ? j : a.default.getCurrentUser()))
         ? null
         : (0, l.jsxs)(l.Fragment, {
               children: [
-                  h &&
+                  b &&
                       (0, l.jsx)(o.Ih, {
                           icon: i.b7C,
                           text: x.intl.string(x.t.v2z4c3),

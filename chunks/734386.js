@@ -36,14 +36,14 @@ function M(e) {
         o = (0, f.ZP)(t, !0),
         M = t.guild_id,
         R = (0, u.e7)([v.Z], () => (null != M ? v.Z.getSortedRoles(M) : void 0)),
-        k = (0, u.e7)([j.default, x.Z], () => {
+        L = (0, u.e7)([j.default, x.Z], () => {
             var e;
             return j.default.getUser(null == (e = x.Z.getGuild(M)) ? void 0 : e.ownerId);
         }),
-        L = r.useMemo(() => (null != R ? R.filter((e) => !(0, _.fI)(e)) : []), [R]),
-        D = r.useMemo(
+        D = r.useMemo(() => (null != R ? R.filter((e) => !(0, _.fI)(e)) : []), [R]),
+        k = r.useMemo(
             () =>
-                s()(L)
+                s()(D)
                     .filter((e) => {
                         if (null == M) return !1;
                         let n = E.I0({
@@ -53,11 +53,11 @@ function M(e) {
                         return c.Db(n, c.$e(T.Plq.ADMINISTRATOR, T.Plq.VIEW_CHANNEL));
                     })
                     .value(),
-            [t, M, L],
+            [t, M, D],
         ),
         U = (0, u.Wu)([j.default], () => {
             let e = {};
-            for (let n of (null != k && (e[k.id] = k), Object.values(t.permissionOverwrites))) {
+            for (let n of (null != L && (e[L.id] = L), Object.values(t.permissionOverwrites))) {
                 if (n.type !== h.BN.MEMBER || null != e[n.id]) continue;
                 let t = j.default.getUser(n.id);
                 null != t && (e[t.id] = t);
@@ -75,7 +75,7 @@ function M(e) {
                     return i || l;
                 })
                 .value();
-        }, [t, k]),
+        }, [t, L]),
         B = O.Z.can(T.Plq.MANAGE_CHANNELS, t) || O.Z.can(T.Plq.MANAGE_ROLES, t),
         H = r.useCallback(() => l(!1), []);
     return (0, i.jsxs)(I.ZP, {
@@ -122,7 +122,7 @@ function M(e) {
                 className: A.members,
                 children: [
                     (function () {
-                        if (1 !== U.length || D.length > 0)
+                        if (1 !== U.length || k.length > 0)
                             return (0, i.jsx)(Z.Z, {
                                 guildId: t.guild_id,
                                 className: A.avatars,
@@ -155,7 +155,7 @@ function M(e) {
                             ],
                         });
                     })(),
-                    D.map((e, n) => {
+                    k.map((e, n) => {
                         var r, l;
                         let o = null != (l = e.colorString) ? l : T.Pbq,
                             s = (null == (r = e.tags) ? void 0 : r.guild_connections) !== void 0;
@@ -163,7 +163,7 @@ function M(e) {
                             ? (0, i.jsx)(
                                   g.Z,
                                   {
-                                      className: a()(A.role, { [A.last]: n === D.length - 1 }),
+                                      className: a()(A.role, { [A.last]: n === k.length - 1 }),
                                       roleName: e.name,
                                       roleColor: o,
                                       disabled: !B,
@@ -177,7 +177,7 @@ function M(e) {
                             : (0, i.jsx)(
                                   b.Z,
                                   {
-                                      className: a()(A.role, { [A.last]: n === D.length - 1 }),
+                                      className: a()(A.role, { [A.last]: n === k.length - 1 }),
                                       roleName: e.name,
                                       roleColor: o,
                                       verified: s,

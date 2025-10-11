@@ -1,9 +1,9 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => a });
 var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(696936);
-function s(e) {
+function a(e) {
     return (0, r.jsx)(
         l.Z,
         (function (e) {

@@ -3,16 +3,16 @@ var n = r(951288);
 r(647438);
 var s = r(755721),
     i = r(481060),
-    o = r(600164),
-    a = r(7557),
+    a = r(600164),
+    o = r(7557),
     l = r(388905),
     c = r(388032),
     u = r(158017),
     d = r(197571);
 function h(e) {
     let { title: t, subtitle: r, error: h, onSubmit: p, onCancel: f } = e;
-    return (0, n.jsxs)(o.Z, {
-        direction: o.Z.Direction.VERTICAL,
+    return (0, n.jsxs)(a.Z, {
+        direction: a.Z.Direction.VERTICAL,
         children: [
             (0, n.jsx)(l.Dx, {
                 className: d.marginBottom8,
@@ -24,7 +24,7 @@ function h(e) {
             }),
             (0, n.jsxs)("div", {
                 children: [
-                    (0, n.jsx)(a.Z, {
+                    (0, n.jsx)(o.Z, {
                         inputClassName: u.codeInput,
                         onSubmit: p,
                     }),

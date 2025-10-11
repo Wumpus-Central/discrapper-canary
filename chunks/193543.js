@@ -1,7 +1,7 @@
 o.d(t, { VoiceFilterFeedbackModal: () => p });
-var i = o(951288);
+var n = o(951288);
 o(647438);
-var n = o(990547),
+var i = o(990547),
     a = o(957115),
     c = o(332664),
     l = o(445102),
@@ -63,11 +63,11 @@ let d = [_.aZ.BAD, _.aZ.GOOD],
     ];
 function p(e) {
     let { onClose: t, transitionState: o, analyticsData: p } = e;
-    return (0, i.jsx)(c.Z, {
+    return (0, n.jsx)(c.Z, {
         modalType: "voice_filter",
         header: s.intl.string(s.t.zZAORE),
         impression: {
-            impressionName: n.ImpressionNames.VOICE_FILTER_FEEDBACK_MODAL,
+            impressionName: i.ImpressionNames.VOICE_FILTER_FEEDBACK_MODAL,
             impressionProperties: {
                 rtc_connection_id: p.rtc_connection_id,
                 media_session_id: p.media_session_id,
@@ -80,17 +80,17 @@ function p(e) {
         freeformNeededProblems: b,
         onSubmit: function (e) {
             var t, o;
-            let { rating: i, problem: n, dontShowAgain: c, feedback: s } = e;
+            let { rating: n, problem: i, dontShowAgain: c, feedback: s } = e;
             c &&
                 (0, a.Uv)({
                     feedbackType: _.nw.VOICE_FILTER,
                     location: "VoiceFilterFeedbackModal",
                 }),
-                null != i &&
+                null != n &&
                     (0, l.Z)(r.rMx.VOICE_FILTER_FEEDBACK, {
-                        rating: i,
-                        reasonCode: null != (t = null == n ? void 0 : n.code) ? t : null,
-                        reasonDescription: null != (o = null == n ? void 0 : n.value) ? o : null,
+                        rating: n,
+                        reasonCode: null != (t = null == i ? void 0 : i.code) ? t : null,
+                        reasonDescription: null != (o = null == i ? void 0 : i.value) ? o : null,
                         feedback: s,
                         analyticsData: p,
                     });

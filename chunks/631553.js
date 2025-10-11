@@ -16,8 +16,8 @@ var r = n(951288),
     y = n(668781),
     _ = n(239091),
     O = n(13245),
-    v = n(425493),
-    b = n(593472),
+    b = n(425493),
+    v = n(593472),
     E = n(951483),
     x = n(714338),
     S = n(185666),
@@ -42,14 +42,14 @@ var I = n(266454),
     U = n(449224),
     G = n(574254),
     B = n(556296),
-    F = n(808506),
-    H = n(372679),
+    H = n(808506),
+    F = n(372679),
     Y = n(237997),
     K = n(451478),
     X = n(70956),
     J = n(358085),
-    q = n(998502),
-    Q = n(378799),
+    Q = n(998502),
+    q = n(378799),
     $ = n(13140),
     ee = n(145597),
     et = n(658785),
@@ -84,8 +84,8 @@ function eO(e, t, n) {
     );
 }
 (f.ZP.PersistedStore.disableWrites = __OVERLAY__), f.ZP.initialize();
-let ev = null;
-function eb(e) {
+let eb = null;
+function ev(e) {
     e.preventDefault();
 }
 function eE(e) {
@@ -148,8 +148,8 @@ let ex = (e) => {
                 ? null
                 : (0, r.jsx)("div", {
                       className: e_.closeContainer,
-                      children: (0, r.jsx)(v.Z, {
-                          variant: v.Z.Variants.BOLD,
+                      children: (0, r.jsx)(b.Z, {
+                          variant: b.Z.Variants.BOLD,
                           keybind: t,
                           closeAction: n,
                       }),
@@ -184,9 +184,9 @@ class eZ extends s.Component {
                 return;
             }
             if (!e.locked && this.props.locked) {
-                if ((window.addEventListener("contextmenu", eb, !1), null != ev)) {
-                    let e = Date.now() - ev;
-                    O.Z.track(em.rMx.OVERLAY_LOCKED, { unlocked_duration: e }), (ev = null);
+                if ((window.addEventListener("contextmenu", ev, !1), null != eb)) {
+                    let e = Date.now() - eb;
+                    O.Z.track(em.rMx.OVERLAY_LOCKED, { unlocked_duration: e }), (eb = null);
                 }
                 x.Z.disable(),
                     (this.activeKeyEventShapes = []),
@@ -194,8 +194,8 @@ class eZ extends s.Component {
             } else
                 e.locked &&
                     !this.props.locked &&
-                    (window.removeEventListener("contextmenu", eb, !1),
-                    null == ev && ((ev = Date.now()), O.Z.track(em.rMx.OVERLAY_UNLOCKED)),
+                    (window.removeEventListener("contextmenu", ev, !1),
+                    null == eb && ((eb = Date.now()), O.Z.track(em.rMx.OVERLAY_UNLOCKED)),
                     x.Z.disable(),
                     (this.activeKeyEventShapes = []),
                     x.Z.setLayout(E.Sr),
@@ -250,13 +250,13 @@ class eZ extends s.Component {
                         game: l,
                     }),
             setTimeout(async () => {
-                await (0, Q.s5)(), null != e ? O.Z.overlayMounted(e) : O.Z.overlayMounted();
+                await (0, q.s5)(), null != e ? O.Z.overlayMounted(e) : O.Z.overlayMounted();
             }, 128),
             window.addEventListener("resize", this.handleWindowResize),
-            n && window.addEventListener("contextmenu", eb, !1),
+            n && window.addEventListener("contextmenu", ev, !1),
             J.isPlatformEmbedded)
         ) {
-            let e = (0, H.M)();
+            let e = (0, F.M)();
             if (null == e) return;
             if (void 0 !== e.setPerfInfoCallback) {
                 var f;
@@ -269,9 +269,9 @@ class eZ extends s.Component {
                             interval: 15 * X.Z.Millis.MINUTE,
                         });
             }
-            q.ZP.on("REQUEST_OPEN_EXTERNAL_URL", (e, t) => {
+            Q.ZP.on("REQUEST_OPEN_EXTERNAL_URL", (e, t) => {
                 Y.default.getDisableExternalLinkAlert() || t === W.Z.getLastURL()
-                    ? q.ZP.send("OPEN_EXTERNAL_URL", t)
+                    ? Q.ZP.send("OPEN_EXTERNAL_URL", t)
                     : y.Z.show({
                           title: ey.intl.string(ey.t.WLx4Fx),
                           body: ey.intl.string(ey.t.H8O1TE),
@@ -281,7 +281,7 @@ class eZ extends s.Component {
                           onConfirmSecondary: () => {
                               O.Z.disableExternalLinkAlert();
                           },
-                          onConfirm: () => q.ZP.send("OPEN_EXTERNAL_URL", t),
+                          onConfirm: () => Q.ZP.send("OPEN_EXTERNAL_URL", t),
                       });
             });
         }
@@ -292,7 +292,7 @@ class eZ extends s.Component {
         window.removeEventListener("resize", this.handleWindowResize),
             window.removeEventListener("keydown", this.onKeyDownGlobal, !0),
             window.removeEventListener("keyup", this.onKeyUpGlobal, !0),
-            this.props.locked && window.removeEventListener("contextmenu", eb, !1),
+            this.props.locked && window.removeEventListener("contextmenu", ev, !1),
             T.Z.terminate(),
             S.Z.terminate(),
             D.Z.terminate();
@@ -374,7 +374,7 @@ class eZ extends s.Component {
         super(e),
             eO(this, "didUpdate", !1),
             eO(this, "handleWindowResize", () => {
-                F.default.isFocusedPidOutOfProcess()
+                H.default.isFocusedPidOutOfProcess()
                     ? this.forceUpdate()
                     : u()(() => {
                           this.forceUpdate();
@@ -429,8 +429,8 @@ function eC() {
         y = (0, f.e7)([z.Z], () => (0, w.Z)(z.Z)),
         _ = (0, f.e7)([k.Z], () => null != k.Z.getCurrentUserActiveStream()),
         { analyticsLocations: O } = (0, C.ZP)(Z.Z.OVERLAY),
-        { showKeybindIndicators: v, dismissKeybindNotification: E } = (0, eo.K)(),
-        x = (null == c ? void 0 : c.fullscreenType) === b.Jx.FULLSCREEN,
+        { showKeybindIndicators: b, dismissKeybindNotification: E } = (0, eo.K)(),
+        x = (null == c ? void 0 : c.fullscreenType) === v.Jx.FULLSCREEN,
         S = null != (e = null == c ? void 0 : c.oopEnabled) && e,
         j = en.v.oopEnabled,
         I = null != (t = null == c ? void 0 : c.hasChangedRenderMode) && t,
@@ -456,7 +456,7 @@ function eC() {
                 game: m,
                 canGoLive: y,
                 isStreaming: _,
-                showKeybindNotification: v,
+                showKeybindNotification: b,
                 dismissKeybindNotification: E,
                 isOOPOverlayAvailable: (!T || (j && S && x && !I)) && !D,
             }),

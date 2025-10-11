@@ -1,6 +1,6 @@
 n.d(t, {
     Cd: () => m,
-    YR: () => x,
+    YR: () => b,
 }),
     n(388685),
     n(415506);
@@ -11,8 +11,8 @@ var l = n(951288),
     a = n(873124),
     o = n(248902),
     d = n(160511),
-    c = n(51693),
-    u = n(973810),
+    u = n(51693),
+    c = n(973810),
     h = n(388032);
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -59,7 +59,7 @@ function g(e, t) {
 }
 function m(e) {
     var t, n;
-    let { mfaChallenge: h, mfaFinish: m, onEarlyClose: p, onClose: x, headerAlignStart: S, width: b = 440 } = e,
+    let { mfaChallenge: h, mfaFinish: m, onEarlyClose: p, onClose: b, headerAlignStart: S, width: x = 440 } = e,
         [j, y] = r.useState(null != (n = null == (t = h.methods[0]) ? void 0 : t.type) ? n : "select"),
         [v, C] = r.useState(j),
         Z = async (e) => {
@@ -69,7 +69,7 @@ function m(e) {
                 data: n,
                 ticket: h.ticket,
             }),
-                null != x && x();
+                null != b && b();
         },
         w = {
             mfaChallenge: h,
@@ -80,7 +80,7 @@ function m(e) {
         };
     return (0, l.jsxs)(i.MyZ, {
         activeSlide: j,
-        width: b,
+        width: x,
         onSlideReady: C,
         children: [
             (0, l.jsx)(i.Mi4, {
@@ -89,11 +89,11 @@ function m(e) {
             }),
             (0, l.jsx)(i.Mi4, {
                 id: "webauthn",
-                children: (0, l.jsx)(u.Z, f({}, w)),
+                children: (0, l.jsx)(c.Z, f({}, w)),
             }),
             (0, l.jsx)(i.Mi4, {
                 id: "totp",
-                children: (0, l.jsx)(c.Z, g(f({}, w), { isSlideReady: "totp" === v })),
+                children: (0, l.jsx)(u.Z, g(f({}, w), { isSlideReady: "totp" === v })),
             }),
             (0, l.jsx)(i.Mi4, {
                 id: "sms",
@@ -125,7 +125,7 @@ function p(e) {
         }),
     });
 }
-function x(e, t, n) {
+function b(e, t, n) {
     (0, i.h7j)(
         (n) =>
             (0, l.jsx)(

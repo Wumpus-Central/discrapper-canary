@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(951288),
     s = n(647438),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     i = n(793030),
     l = n(442837),
     c = n(28664),
@@ -20,20 +20,20 @@ var r = n(951288),
     x = n(113434),
     _ = n(497505),
     b = n(475595),
-    v = n(602667),
-    j = n(667105),
+    j = n(602667),
+    v = n(667105),
     C = n(981631),
     y = n(388032),
     E = n(301889);
 function O(e) {
     var t;
-    let { quest: n, errorHints: o, transitionState: v, onClose: O, sourceQuestContent: T } = e,
-        [w, P] = (0, s.useState)(o),
+    let { quest: n, errorHints: a, transitionState: j, onClose: O, sourceQuestContent: T } = e,
+        [w, P] = (0, s.useState)(a),
         N = (0, x.KX)(),
-        A = (0, g.O5)(),
-        R = null == (t = (0, f.WD)()) ? void 0 : t.getId(),
+        R = (0, g.O5)(),
+        A = null == (t = (0, f.WD)()) ? void 0 : t.getId(),
         B = (0, l.e7)([p.Z], () => p.Z.useReducedMotion),
-        k = (0, j.g2)({
+        k = (0, v.g2)({
             useReducedMotion: B,
             className: E.colorTransition,
         }),
@@ -45,7 +45,7 @@ function O(e) {
             questId: n.id,
             beforeRequest: () => {
                 k.startAnimation(),
-                    A({
+                    R({
                         questId: n.id,
                         questContent: _.jn.CONNECTIONS_MODAL,
                         questContentCTA: g.jZ.DEFIBRILLATOR,
@@ -57,7 +57,7 @@ function O(e) {
             },
         });
     return (0, r.jsx)(i.Modal, {
-        transitionState: v,
+        transitionState: j,
         onClose: O,
         title: y.intl.string(y.t.W5lmKi),
         subtitle: N.message,
@@ -71,7 +71,7 @@ function O(e) {
                         {
                             content: _.jn.CONNECTIONS_MODAL,
                             ctaContent: g.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
-                            impressionId: R,
+                            impressionId: A,
                             sourceQuestContent: T,
                         },
                     )),
@@ -94,7 +94,7 @@ function O(e) {
                             children: y.intl.string(y.t["+/hZMz"]),
                         }),
                         (0, r.jsxs)(u.P3F, {
-                            className: a()(E.refreshWrapper, { [E.disabled]: Q }),
+                            className: o()(E.refreshWrapper, { [E.disabled]: Q }),
                             onClick: V,
                             children: [
                                 k.render(),
@@ -151,14 +151,14 @@ function O(e) {
     });
 }
 function S(e) {
-    let { icon: t, text: n, errors: s = [], gameTile: o } = e,
+    let { icon: t, text: n, errors: s = [], gameTile: a } = e,
         i = s.length > 0,
         l = i ? u._3e : u.B_b;
     return (0, r.jsxs)("div", {
         className: E.connectionRow,
         children: [
             (0, r.jsxs)("div", {
-                className: a()(E.connectionRowHeader, { [E.connectionRowHeaderError]: i }),
+                className: o()(E.connectionRowHeader, { [E.connectionRowHeaderError]: i }),
                 children: [
                     (0, r.jsxs)("div", {
                         className: E.connectionRowHeaderContent,
@@ -174,11 +174,11 @@ function S(e) {
                     (0, r.jsxs)("div", {
                         className: E.connectionRowHeaderContent,
                         children: [
-                            o,
+                            a,
                             (0, r.jsx)(l, {
                                 color: "currentColor",
                                 size: "sm",
-                                className: a()({
+                                className: o()({
                                     [E.success]: !i,
                                     [E.error]: i,
                                 }),
@@ -218,7 +218,7 @@ function T(e) {
     (0, u.ZDy)(async () => {
         let { default: t } = await Promise.resolve().then(n.bind(n, 623249));
         return function (n) {
-            return (0, r.jsx)(v.A, {
+            return (0, r.jsx)(j.A, {
                 overrideVisibility: !0,
                 questOrQuests: e.quest,
                 questContent: _.jn.CONNECTIONS_MODAL,

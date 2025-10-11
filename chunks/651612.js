@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(871499),
     d = n(306680),
     u = n(111583),
-    p = n(459273),
-    h = n(566620),
+    h = n(459273),
+    p = n(566620),
     f = n(317381),
     g = n(918559),
     m = n(981631),
@@ -39,11 +39,11 @@ function _(e) {
             return i;
         })(e, ["channelId", "className"]);
     let j = i.useRef(null),
-        x = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout() === g.MI.RESIZABLE),
-        O = i.useCallback(() => {
-            let e = x ? g.MI.NO_CHAT : g.MI.RESIZABLE;
-            (0, h.gC)(e);
-        }, [x]),
+        O = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout() === g.MI.RESIZABLE),
+        x = i.useCallback(() => {
+            let e = O ? g.MI.NO_CHAT : g.MI.RESIZABLE;
+            (0, p.gC)(e);
+        }, [O]),
         { unreadCount: v, mentionCount: C } = (function (e) {
             let t = (0, a.e7)([u.Z], () => !(0, l.isEmpty)(u.Z.getTypingUsers(e)), [e]),
                 { unreadCount: n, mentionCount: r } = (0, a.cj)(
@@ -64,14 +64,14 @@ function _(e) {
             var e;
             null == (e = j.current) || e.focus();
         }, []);
-    (0, p.yp)({
+    (0, h.yp)({
         event: m.CkL.FOCUS_CHAT_BUTTON,
         handler: I,
     });
-    let E = x ? b.intl.string(b.t["5MstTk"]) : b.intl.string(b.t.kkKapK),
-        S = [E];
-    C > 0 && S.push(b.intl.formatToPlainString(b.t["3l1GOz"], { mentionCount: C })),
-        v > 0 && S.push(b.intl.string(b.t.x5zAGR));
+    let S = O ? b.intl.string(b.t["5MstTk"]) : b.intl.string(b.t.kkKapK),
+        E = [S];
+    C > 0 && E.push(b.intl.formatToPlainString(b.t["3l1GOz"], { mentionCount: C })),
+        v > 0 && E.push(b.intl.string(b.t.x5zAGR));
     let Z = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout()),
         T = C > 0 ? C : v,
         P = T > 0;
@@ -108,9 +108,9 @@ function _(e) {
                     {
                         isTrayButton: !0,
                         buttonRef: j,
-                        onClick: O,
-                        label: E,
-                        "aria-label": S.join(", "),
+                        onClick: x,
+                        label: S,
+                        "aria-label": E.join(", "),
                         tooltipPosition: "top",
                         iconComponent: Z === g.MI.NO_CHAT ? s.sXD : s.hic,
                         themeable: !0,

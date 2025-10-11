@@ -17,7 +17,7 @@ var r = n(13245),
     y = n(388032);
 function _(e, t, n, _) {
     var O;
-    let { icon: v, title: b, body: E } = (0, s.Xi)(e, t, n),
+    let { icon: b, title: v, body: E } = (0, s.Xi)(e, t, n),
         { trackView: x, trackClick: S } = (0, f.R)(m.n0.TextChat, {
             notif_type: m.n0.TextChat,
             notif_user_id: null == (O = t.author) ? void 0 : O.id,
@@ -28,8 +28,8 @@ function _(e, t, n, _) {
             channel_type: e.type,
         });
     return {
-        icon: v,
-        title: b,
+        icon: b,
+        title: v,
         body: E,
         renderFooter: (e) =>
             e

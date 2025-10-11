@@ -1,4 +1,4 @@
-n.d(e, { default: () => y }), n(388685);
+n.d(t, { default: () => y }), n(388685);
 var r = n(951288),
     l = n(647438),
     o = n(990547),
@@ -14,12 +14,12 @@ var r = n(951288),
     E = n(981631),
     m = n(630724),
     A = n(388032);
-function y(t) {
-    let { transitionState: e, onClose: n } = t,
+function y(e) {
+    let { transitionState: t, onClose: n } = e,
         [y, b] = l.useState(null),
         [g, T] = l.useState(null),
-        [O, S] = l.useState(!1),
-        N = l.useRef(null),
+        [O, N] = l.useState(!1),
+        S = l.useRef(null),
         v = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
         h = l.useRef(null);
     l.useEffect(() => {
@@ -28,35 +28,35 @@ function y(t) {
         l.useEffect(() => {
             (null == v ? void 0 : v.nsfwAllowed) != null && n();
         }, [v, n]);
-    let G = async (t) => {
-            if ((t.preventDefault(), null != y)) {
-                S(!0);
+    let G = async (e) => {
+            if ((e.preventDefault(), null != y)) {
+                N(!0);
                 try {
                     await p.Av(y, E.jXE.CLAIM_ACCOUNT_MODAL);
-                } catch (t) {
-                    if (null != t.body && null != t.body.date_of_birth)
+                } catch (e) {
+                    if (null != e.body && null != e.body.date_of_birth)
                         u.Z.flowStep(m.MK.ANY, m.FF.AGE_GATE_UNDERAGE),
                             p.wE(_.L0.CLAIM_ACCOUNT),
                             p.hp(_.L0.CLAIM_ACCOUNT),
                             n();
                     else {
-                        var e;
-                        (null == t || null == (e = t.body) ? void 0 : e.username) != null
+                        var t;
+                        (null == e || null == (t = e.body) ? void 0 : t.username) != null
                             ? T(A.intl.string(A.t["TGg/2t"]))
-                            : T(null == t ? void 0 : t.body.message);
+                            : T(null == e ? void 0 : e.body.message);
                     }
                 }
-                S(!1);
+                N(!1);
             }
         },
         w = l.useCallback(() => {
-            var t;
-            null == (t = h.current) || t.focus();
+            var e;
+            null == (e = h.current) || e.focus();
         }, [h]);
     return (0, r.jsx)("form", {
         onSubmit: G,
         children: (0, r.jsx)(a.Modal, {
-            transitionState: e,
+            transitionState: t,
             onClose: n,
             title: A.intl.string(A.t.QpSKo6),
             subtitle: A.intl.format(A.t.EcJBEB, { helpURL: f.Z.getArticleURL(E.BhN.AGE_GATE) }),
@@ -79,11 +79,11 @@ function y(t) {
                 autoFocus: !0,
                 label: A.intl.string(A.t.rhBeKS),
                 name: "birthday",
-                onChange: (t) => b(t),
+                onChange: (e) => b(e),
                 onPopulated: w,
                 error: g,
                 value: y,
-                ref: N,
+                ref: S,
             }),
         }),
     });

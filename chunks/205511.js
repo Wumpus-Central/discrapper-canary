@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O });
 var r = n(951288),
     s = n(647438),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     i = n(959078),
     l = n(442837),
     c = n(481060),
@@ -16,8 +16,8 @@ var r = n(951288),
     x = n(497505),
     _ = n(667105),
     b = n(585857),
-    v = n(795057),
-    j = n(388032),
+    j = n(795057),
+    v = n(388032),
     C = n(19672);
 function y(e) {
     return (0, r.jsx)(c.Text, {
@@ -29,11 +29,11 @@ function y(e) {
 }
 function E(e) {
     let { quest: t, useReducedMotion: n } = e,
-        o = (0, g.n)(),
+        a = (0, g.n)(),
         l = (0, _.k3)(t.id, x.jn.QUEST_BAR_V2, x.jn.QUEST_BAR_V2),
         d = (0, _.g2)({ useReducedMotion: n }),
         b = (0, p.O5)(),
-        v = (0, m.aM)(),
+        j = (0, m.aM)(),
         {
             errorHints: E,
             startingConsoleQuest: O,
@@ -57,34 +57,34 @@ function E(e) {
             return {
                 header: e
                     ? (0, f.Pb)(t)
-                        ? j.intl.string(j.t.N33EuL)
-                        : j.intl.formatToPlainString(j.t["28Ql29"], { gameTitle: n })
+                        ? v.intl.string(v.t.N33EuL)
+                        : v.intl.formatToPlainString(v.t["28Ql29"], { gameTitle: n })
                     : (0, f.Pb)(t)
-                      ? j.intl.string(j.t.YstzGB)
-                      : j.intl.formatToPlainString(j.t.gX0Qc3, { gameTitle: n }),
+                      ? v.intl.string(v.t.YstzGB)
+                      : v.intl.formatToPlainString(v.t.gX0Qc3, { gameTitle: n }),
                 renderBody: e
                     ? () =>
                           (0, r.jsx)(r.Fragment, {
                               children: E.map((e, n) => {
-                                  if (e.type === i.K.EXPIRED_CREDENTIAL && o) {
+                                  if (e.type === i.K.EXPIRED_CREDENTIAL && a) {
                                       let s = u.Z.getAccount(e.connected_account_id, e.connected_account_type),
-                                          o = (0, f.C9)(e),
-                                          a = (0, f._j)(e);
+                                          a = (0, f.C9)(e),
+                                          o = (0, f._j)(e);
                                       return (0, r.jsx)(
                                           y,
                                           {
-                                              children: j.intl.format(o, {
+                                              children: v.intl.format(a, {
                                                   account_name: null == s ? void 0 : s.name,
                                                   onClick: () => {
                                                       (0, f.fY)(
                                                           {
                                                               quest: t,
-                                                              platformType: a,
+                                                              platformType: o,
                                                           },
                                                           {
                                                               content: x.jn.QUEST_BAR,
                                                               ctaContent: p.jZ.DEFIBRILLATOR_RECONNECT_CONSOLE,
-                                                              impressionId: v,
+                                                              impressionId: j,
                                                               sourceQuestContent: x.jn.QUEST_BAR_V2,
                                                           },
                                                       );
@@ -103,11 +103,11 @@ function E(e) {
                               color: "text-muted",
                               variant: "text-xxs/normal",
                               children: (0, f.Pb)(t)
-                                  ? j.intl.string(j.t.bUyEZW)
-                                  : j.intl.format(j.t.GXqvCw, { gameTitle: n }),
+                                  ? v.intl.string(v.t.bUyEZW)
+                                  : v.intl.format(v.t.GXqvCw, { gameTitle: n }),
                           }),
             };
-        }, [E, t, o, v]);
+        }, [E, t, a, j]);
     return (0, r.jsxs)("div", {
         className: C.microphoneUnit,
         children: [
@@ -126,14 +126,14 @@ function E(e) {
                         children: T,
                     }),
                     (0, r.jsx)(c.P3F, {
-                        className: a()(C.microphoneUnitRefreshIconWrapper, { [C.disabled]: O }),
+                        className: o()(C.microphoneUnitRefreshIconWrapper, { [C.disabled]: O }),
                         onClick: () => S(),
                         children: d.render(),
                     }),
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: a()({ [C.opacity_50]: O }),
+                className: o()({ [C.opacity_50]: O }),
                 children: [w(), 0 === E.length ? null : (0, r.jsx)(y, { children: l })],
             }),
         ],
@@ -141,11 +141,11 @@ function E(e) {
 }
 let O = function (e) {
     let { quest: t, taskDetails: n } = e,
-        o = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        a = (0, h.z6)(),
+        a = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
+        o = (0, h.z6)(),
         i = s.useMemo(
-            () => (0, f.B3)(t).filter((e) => a.xboxAndPlaystationAccounts.find((t) => t.type === e)),
-            [a.xboxAndPlaystationAccounts, t],
+            () => (0, f.B3)(t).filter((e) => o.xboxAndPlaystationAccounts.find((t) => t.type === e)),
+            [o.xboxAndPlaystationAccounts, t],
         ),
         {
             steps: c,
@@ -155,7 +155,7 @@ let O = function (e) {
         } = s.useMemo(() => {
             var e;
             let s = i.length > 0,
-                o = s && (0, f.Bz)(t),
+                a = s && (0, f.Bz)(t),
                 l = t.config.messages.gameTitle,
                 c = (null == (e = t.userStatus) ? void 0 : e.completedAt) != null;
             return {
@@ -189,7 +189,7 @@ let O = function (e) {
                                             });
                                     }
                                     return e;
-                                })({}, a)),
+                                })({}, o)),
                                 (n = n =
                                     {
                                         quest: t,
@@ -210,39 +210,39 @@ let O = function (e) {
                                 e),
                             );
                         },
-                        isComplete: s || o || c,
+                        isComplete: s || a || c,
                     },
                     {
                         renderContent: () =>
-                            (0, r.jsx)(v.y3, {
+                            (0, r.jsx)(j.y3, {
                                 children: (0, f.Pb)(t)
-                                    ? j.intl.string(j.t["5tXqFR"])
-                                    : j.intl.formatToPlainString(j.t["+8JB6e"], { gameTitle: l }),
+                                    ? v.intl.string(v.t["5tXqFR"])
+                                    : v.intl.formatToPlainString(v.t["+8JB6e"], { gameTitle: l }),
                             }),
-                        isComplete: o || c,
+                        isComplete: a || c,
                     },
                     {
                         renderContent: () =>
-                            (0, r.jsx)(v.y3, {
-                                children: j.intl.formatToPlainString(j.t.HhfrYW, { numMinutes: n.targetMinutes }),
+                            (0, r.jsx)(j.y3, {
+                                children: v.intl.formatToPlainString(v.t.HhfrYW, { numMinutes: n.targetMinutes }),
                             }),
                         isComplete: c,
                     },
                 ],
                 hasConnectedAccounts: s,
-                isProgressingQuestForLaunchedGame: o,
+                isProgressingQuestForLaunchedGame: a,
                 isQuestComplete: c,
             };
-        }, [a, i.length, t, n.targetMinutes]);
-    return (0, r.jsx)(v.ZP, {
-        heading: j.intl.string(j.t.UPWlJi),
+        }, [o, i.length, t, n.targetMinutes]);
+    return (0, r.jsx)(j.ZP, {
+        heading: v.intl.string(v.t.UPWlJi),
         steps: c,
         children:
             u &&
             !p &&
             !m &&
             (0, r.jsx)(E, {
-                useReducedMotion: o,
+                useReducedMotion: a,
                 quest: t,
             }),
     });

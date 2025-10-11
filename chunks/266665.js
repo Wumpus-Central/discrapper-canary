@@ -2,8 +2,8 @@ n.d(t, { Z: () => Z }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    s = n.n(l),
-    a = n(100568),
+    a = n.n(l),
+    s = n(100568),
     o = n(417865),
     c = n(442837),
     d = n(28664),
@@ -13,11 +13,11 @@ var r = n(951288),
     p = n(493773),
     f = n(607070),
     h = n(134433),
-    x = n(325476),
-    b = n(884902),
+    b = n(325476),
+    x = n(884902),
     j = n(345162),
-    _ = n(496675),
-    v = n(671533),
+    v = n(496675),
+    _ = n(671533),
     C = n(103576),
     O = n(970129),
     y = n(712181),
@@ -36,9 +36,9 @@ function w(e) {
             highestRole: m,
             selectedItem: p,
             onClick: f,
-            currentPosition: x,
-            onDragStart: _,
-            onDragReset: v,
+            currentPosition: b,
+            onDragStart: v,
+            onDragReset: _,
             onDragComplete: C,
             roleStyle: y,
         } = e,
@@ -46,20 +46,20 @@ function w(e) {
         E = (0, j.fI)(d),
         S = null == N && !E,
         w = (null == (t = d.tags) ? void 0 : t.guild_connections) !== void 0,
-        Z = (0, b._f)(c.id, d, d.colorStrings),
-        [, R] = (0, a.c)({
+        Z = (0, x._f)(c.id, d, d.colorStrings),
+        [, R] = (0, s.c)({
             type: P,
             item: () => (
-                _(d.id),
+                v(d.id),
                 {
                     id: d.id,
-                    position: x,
+                    position: b,
                 }
             ),
             canDrag: () => S,
             end: (e, t) => {
                 let n = t.getDropResult();
-                if (null == n) return void v();
+                if (null == n) return void _();
                 C(n.roleId);
             },
         }),
@@ -94,9 +94,9 @@ function w(e) {
                     colors: Z,
                 })),
         (0, r.jsxs)(u.njP.Item, {
-            className: s()(T.row, {
-                [T.dragBefore]: null !== D && x < D,
-                [T.dragAfter]: null !== D && x > D,
+            className: a()(T.row, {
+                [T.dragBefore]: null !== D && b < D,
+                [T.dragAfter]: null !== D && b > D,
             }),
             id: d.id,
             selectedItem: p,
@@ -180,11 +180,11 @@ function w(e) {
     );
 }
 function Z(e) {
-    let { guild: t, currentRoleId: n, setCurrentRoleId: l, setSelectedSection: a } = e,
+    let { guild: t, currentRoleId: n, setCurrentRoleId: l, setSelectedSection: s } = e,
         o = (0, c.e7)([C.Z], () => C.Z.roles),
-        g = (0, c.e7)([_.Z], () => _.Z.getHighestRole(t)),
+        g = (0, c.e7)([v.Z], () => v.Z.getHighestRole(t)),
         h = (0, c.e7)([f.Z], () => f.Z.roleStyle),
-        [b, j] = i.useState(o.length),
+        [x, j] = i.useState(o.length),
         { scrolledToTop: O, handleScroll: I } = (0, N.V)(),
         { handleDragStart: P, handleDragReset: Z, handleDragComplete: R } = (0, y.Z)(o),
         D = i.useRef(null),
@@ -203,21 +203,21 @@ function Z(e) {
             A(n);
         }),
         i.useEffect(() => {
-            o.length > b && A(n), o.length !== b && j(o.length);
-        }, [o.length, b, j, A, n]),
-        (0, r.jsx)(x.ZP.Sidebar, {
+            o.length > x && A(n), o.length !== x && j(o.length);
+        }, [o.length, x, j, A, n]),
+        (0, r.jsx)(b.ZP.Sidebar, {
             className: T.sidebar,
             children: (0, r.jsxs)("div", {
                 className: T.container,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: s()(T.titleContainer, { [T.titleElevated]: !O }),
+                        className: a()(T.titleContainer, { [T.titleElevated]: !O }),
                         children: [
                             (0, r.jsxs)(u.P3F, {
                                 className: T.title,
                                 onClick: () => l(null),
                                 children: [
-                                    (0, r.jsx)(v.Z, { direction: v.Z.Directions.LEFT }),
+                                    (0, r.jsx)(_.Z, { direction: _.Z.Directions.LEFT }),
                                     (0, r.jsx)(u.Text, {
                                         className: T.titleText,
                                         variant: "text-md/semibold",
@@ -237,7 +237,7 @@ function Z(e) {
                                 children: (0, r.jsx)(u.P3F, {
                                     className: T.addRole,
                                     onClick: () => {
-                                        m.Z.createRole(t.id), a(E.ZI.DISPLAY);
+                                        m.Z.createRole(t.id), s(E.ZI.DISPLAY);
                                     },
                                     children: (0, r.jsx)(u.qJs, {
                                         size: "custom",

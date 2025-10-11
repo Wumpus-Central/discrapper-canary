@@ -2,8 +2,8 @@ n.d(t, { Z: () => h });
 var r = n(951288),
     i = n(647438),
     l = n(536982),
-    s = n(285318),
-    a = n(456677),
+    a = n(285318),
+    s = n(456677),
     o = n(55889),
     c = n(300453),
     d = n(620436),
@@ -55,12 +55,12 @@ function f(e, t) {
 }
 function h(e) {
     var t, n, h;
-    let { rule: x, onChangeRule: b } = e,
+    let { rule: b, onChangeRule: x } = e,
         j = i.useCallback(
             (e) => {
-                b(f(p({}, x), { triggerMetadata: f(p({}, x.triggerMetadata), { allowList: e }) }));
+                x(f(p({}, b), { triggerMetadata: f(p({}, b.triggerMetadata), { allowList: e }) }));
             },
-            [b, x],
+            [x, b],
         );
     return (0, r.jsxs)("div", {
         className: m.cardContentsContainer,
@@ -69,17 +69,17 @@ function h(e) {
                 step: 1,
                 header: g.intl.string(g.t.CX5YfX),
                 children: [
-                    (0, r.jsx)(s.Z, {
-                        rule: x,
-                        onChangeRule: b,
+                    (0, r.jsx)(a.Z, {
+                        rule: b,
+                        onChangeRule: x,
                     }),
                     (0, r.jsx)(l.Z, {
                         onChange: j,
-                        initialValue: null == (t = x.triggerMetadata) ? void 0 : t.allowList,
+                        initialValue: null == (t = b.triggerMetadata) ? void 0 : t.allowList,
                         maxWordCount: u.I3,
                         collapsed:
-                            (null == (n = x.triggerMetadata) ? void 0 : n.allowList) == null ||
-                            (null == (h = x.triggerMetadata) ? void 0 : h.allowList.length) === 0,
+                            (null == (n = b.triggerMetadata) ? void 0 : n.allowList) == null ||
+                            (null == (h = b.triggerMetadata) ? void 0 : h.allowList.length) === 0,
                     }),
                 ],
             }),
@@ -87,9 +87,9 @@ function h(e) {
             (0, r.jsx)(c.Z, {
                 step: 2,
                 header: g.intl.string(g.t["18TOiY"]),
-                children: (0, r.jsx)(a.Z, {
-                    rule: x,
-                    onChangeRule: b,
+                children: (0, r.jsx)(s.Z, {
+                    rule: b,
+                    onChangeRule: x,
                 }),
             }),
             (0, r.jsx)(d.Z, { type: d.Z.Type.CROSS }),
@@ -97,8 +97,8 @@ function h(e) {
                 step: 3,
                 header: g.intl.string(g.t.eq3gjo),
                 children: (0, r.jsx)(o.Z, {
-                    rule: x,
-                    onChangeRule: b,
+                    rule: b,
+                    onChangeRule: x,
                 }),
             }),
         ],

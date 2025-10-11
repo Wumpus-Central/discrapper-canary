@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => v });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -89,7 +89,7 @@ class E extends i.Component {
         });
     }
 }
-let y = o.ZP.connectStores([f.Z, d.default, h.Z, c.Z, p.Z, u.Z], (e) => {
+let v = o.ZP.connectStores([f.Z, d.default, h.Z, c.Z, p.Z, u.Z], (e) => {
     let { sku: t } = e;
     return {
         socialReasons: (0, g.Gg)(t.id, f.Z, d.default, c.Z, p.Z),

@@ -122,14 +122,14 @@ function y() {
             krispModels: N,
             krispModelOverride: P,
             inputMode: I,
-            echoCancellation: k,
-            autoThreshold: w,
+            echoCancellation: w,
+            autoThreshold: k,
             vadUseKrisp: R,
             vadKrispActivationThreshold: A,
             noiseCancellation: Z,
             noiseSuppression: D,
-            noiseSuppressionSupported: L,
-            noiseCancellationSupported: M,
+            noiseSuppressionSupported: M,
+            noiseCancellationSupported: L,
             noiseCancellationEnableStats: U,
             vadDuringPreProcess: F,
         } = (0, s.cj)([x.Z], () => ({
@@ -147,50 +147,50 @@ function y() {
             noiseCancellationEnableStats: x.Z.getKrispEnableStats(),
             vadDuringPreProcess: x.Z.getModeOptions().vadDuringPreProcess,
         })),
-        G = Z ? "KRISP" : D ? "STANDARD" : "NONE",
-        z = (0, m.N)(),
-        B = r.useCallback(() => {
+        B = Z ? "KRISP" : D ? "STANDARD" : "NONE",
+        G = (0, m.N)(),
+        z = r.useCallback(() => {
             var e;
             null == (e = E.current) || e.stop(), (E.current = null), C(null);
         }, []);
     function V() {
         x.Z.getMediaEngine().stopRecordingRawSamples();
     }
-    function W(e) {
-        if ((t && V(), B(), null == z)) return;
-        let n = z.createBufferSource();
+    function H(e) {
+        if ((t && V(), z(), null == G)) return;
+        let n = G.createBufferSource();
         (n.buffer = e.audioBuffer),
-            (S.current = z.createGain()),
+            (S.current = G.createGain()),
             (S.current.gain.value = T),
             n.connect(S.current),
-            S.current.connect(z.destination),
+            S.current.connect(G.destination),
             (n.loop = !0),
             n.start(),
             (E.current = n),
             C(e);
     }
     r.useEffect(() => {
-        B();
-    }, [B]),
+        z();
+    }, [z]),
         (0, u.zq)(() => {
             d.Z.setMode(x.Z.getMode(), {
                 vadDuringPreProcess: null,
                 vadKrispActivationThreshold: void 0,
             });
         });
-    let H = [];
+    let W = [];
     return (
-        M &&
-            H.push({
+        L &&
+            W.push({
                 label: "Krisp",
                 value: "KRISP",
             }),
-        L &&
-            H.push({
+        M &&
+            W.push({
                 label: "Standard",
                 value: "STANDARD",
             }),
-        H.push({
+        W.push({
             label: "Disabled",
             value: "NONE",
         }),
@@ -210,14 +210,14 @@ function y() {
                     }),
                     (0, a.jsx)(c.q4e, {
                         label: "Noise Cancellation",
-                        value: G,
+                        value: B,
                         onChange: (e) => {
                             d.Z.setNoiseCancellation("KRISP" === e), d.Z.setNoiseSuppression("STANDARD" === e);
                         },
-                        options: H,
+                        options: W,
                         popoutLayerContext: f.O$,
                     }),
-                    "KRISP" === G &&
+                    "KRISP" === B &&
                         (0, a.jsxs)(a.Fragment, {
                             children: [
                                 (0, a.jsx)(c.iRW, {
@@ -256,10 +256,10 @@ function y() {
                             children: [
                                 (0, a.jsx)(c.rsf, {
                                     label: "Auto Threshold",
-                                    checked: w,
+                                    checked: k,
                                     onChange: (e) => d.Z.setMode(b.pM.VOICE_ACTIVITY, { autoThreshold: e }),
                                 }),
-                                w &&
+                                k &&
                                     (0, a.jsxs)(a.Fragment, {
                                         children: [
                                             (0, a.jsx)(c.rsf, {
@@ -289,7 +289,7 @@ function y() {
                         }),
                     (0, a.jsx)(c.rsf, {
                         label: "Echo Cancellation",
-                        checked: k,
+                        checked: w,
                         onChange: (e) => d.Z.setEchoCancellation(e),
                     }),
                     (0, a.jsxs)(c.Kqy, {
@@ -304,7 +304,7 @@ function y() {
                                 onClick: t
                                     ? V
                                     : function () {
-                                          B(),
+                                          z(),
                                               n(!0),
                                               d.Z.setLoopback("krisp_test", !0),
                                               x.Z.getMediaEngine().startRecordingRawSamples((t, a, r) => {
@@ -326,8 +326,8 @@ function y() {
                                                           inputName: e,
                                                           audioBuffer: i,
                                                           createdAt: Date.now(),
-                                                          suppression: G,
-                                                          echoCancellation: k,
+                                                          suppression: B,
+                                                          echoCancellation: w,
                                                           krispSuppressionLevel: j,
                                                       },
                                                   ]);
@@ -359,8 +359,8 @@ function y() {
                                     {
                                         recording: e,
                                         playing: e === y,
-                                        onPlay: W,
-                                        onStop: B,
+                                        onPlay: H,
+                                        onStop: z,
                                     },
                                     t,
                                 ),

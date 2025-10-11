@@ -19,11 +19,11 @@ function g(e) {
         { applicationId: _ } = g.params,
         [O] = (0, c.Z)([_]),
         E = null == O || null == (t = O.bot) ? void 0 : t.id,
-        y = (0, i.e7)([d.default], () => d.default.getCurrentUser());
+        v = (0, i.e7)([d.default], () => d.default.getCurrentUser());
     return (
         r.useEffect(() => {
             null != E &&
-                null != y &&
+                null != v &&
                 (async () => {
                     try {
                         var e;
@@ -44,7 +44,7 @@ function g(e) {
                         });
                     } catch (e) {}
                 })();
-        }, [b, _, E, y]),
+        }, [b, _, E, v]),
         r.useEffect(() => {
             let e = setTimeout(() => {
                 null == E &&

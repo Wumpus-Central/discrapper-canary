@@ -21,7 +21,7 @@ function u(e, t, n) {
     );
 }
 var f = (((r = f || {}).WRAP = "wrap"), (r.STACK = "stack"), r);
-class m extends (i = s.PureComponent) {
+class p extends (i = s.PureComponent) {
     renderChildren() {
         let e,
             { children: t, layout: n, columns: r } = this.props;
@@ -54,10 +54,10 @@ class m extends (i = s.PureComponent) {
         });
     }
 }
-u(m, "Layout", f),
-    u(m, "defaultProps", {
+u(p, "Layout", f),
+    u(p, "defaultProps", {
         children: [],
         layout: "wrap",
         columns: 4,
     });
-let h = m;
+let h = p;

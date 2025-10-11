@@ -20,13 +20,13 @@ t.d(n, {
     t(410992);
 var a = t(512722),
     l = t.n(a),
-    i = t(304809),
-    r = t(70956),
+    r = t(304809),
+    i = t(70956),
     o = t(208049),
     s = t(419202);
 let u = null;
 try {
-    let e = (0, i.N)();
+    let e = (0, r.N)();
     if (null == e) throw Error("Failed to create media audio context");
     u = new AudioContext({ sampleRate: Math.min(e.sampleRate, 48000) });
 } catch (e) {}
@@ -52,14 +52,14 @@ async function d(e) {
     return t;
 }
 async function f(e) {
-    let { readPromise: n, guildId: t, name: a, volume: l, emojiId: i, emojiName: r } = e;
+    let { readPromise: n, guildId: t, name: a, volume: l, emojiId: r, emojiName: i } = e;
     return (0, o.Dx)({
         guildId: t,
         name: a,
         sound: await n,
         volume: l,
-        emojiId: i,
-        emojiName: r,
+        emojiId: r,
+        emojiName: i,
     });
 }
 async function m(e) {
@@ -91,14 +91,14 @@ async function m(e) {
             timestamp: 1000 * e.duration * 1000,
             data: t,
         }),
-        i = new AudioEncoder({
+        r = new AudioEncoder({
             output: function (t) {
                 l()(null != t.duration, "Chunk duration must not be null");
                 let a = (t.duration / 1000000) * e.sampleRate,
-                    i = new Uint8Array(t.byteLength);
-                t.copyTo(i),
+                    r = new Uint8Array(t.byteLength);
+                t.copyTo(r),
                     n.push({
-                        buffer: i,
+                        buffer: r,
                         numSamples: a,
                     });
             },
@@ -107,13 +107,13 @@ async function m(e) {
             },
         });
     return (
-        i.configure({
+        r.configure({
             codec: "opus",
             sampleRate: e.sampleRate,
             numberOfChannels: e.numberOfChannels,
         }),
-        i.encode(a),
-        await i.flush(),
+        r.encode(a),
+        await r.flush(),
         new Blob(
             [
                 (0, s.Z)(n, {
@@ -130,15 +130,15 @@ async function m(e) {
 async function g(e, n) {
     let t = (function (e, n) {
         let { startMs: t, endMs: a } = n,
-            { sampleRate: l, numberOfChannels: i, duration: o } = e,
-            s = o * r.Z.Millis.SECOND,
+            { sampleRate: l, numberOfChannels: r, duration: o } = e,
+            s = o * i.Z.Millis.SECOND,
             c = Math.min(a, s);
         if (0 === t && c === s) return e;
         if (null == u) throw Error("Failed to create audio context");
         let d = Math.floor((t / s) * e.length),
             f = Math.floor((c / s) * e.length),
-            m = u.createBuffer(i, f - d, l);
-        for (let n = 0; n < i; n++) {
+            m = u.createBuffer(r, f - d, l);
+        for (let n = 0; n < r; n++) {
             let t = m.getChannelData(n),
                 a = e.getChannelData(n),
                 l = 0;

@@ -1,10 +1,10 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => b });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    s = n(442837),
-    a = n(481060),
+    a = n(442837),
+    s = n(481060),
     o = n(471445),
     c = n(977258),
     d = n(637853),
@@ -14,9 +14,9 @@ var i = n(120356),
     p = n(838324),
     f = n(388032),
     h = n(628682);
-function x(e) {
+function b(e) {
     let { guild: t, scrollToQuestions: n } = e,
-        i = (0, s.e7)([m.Z], () => m.Z.editedDefaultChannelIds),
+        i = (0, a.e7)([m.Z], () => m.Z.editedDefaultChannelIds),
         l = (0, u.b)(t.id, i).filter((e) => e.isCategory() || (0, c.s)(e.guild_id, e.id));
     return (0, r.jsxs)("div", {
         className: h.container,
@@ -30,23 +30,23 @@ function x(e) {
             }),
             (0, r.jsxs)("div", {
                 className: h.channelList,
-                children: [(0, r.jsx)(_, {}), 0 === l.length && (0, r.jsx)(b, {}), (0, r.jsx)(j, { channels: l })],
+                children: [(0, r.jsx)(v, {}), 0 === l.length && (0, r.jsx)(x, {}), (0, r.jsx)(j, { channels: l })],
             }),
         ],
     });
 }
-function b() {
+function x() {
     return (0, r.jsxs)("div", {
         className: h.emptyState,
         children: [
             (0, r.jsx)("div", {
                 className: h.emptyStateIcon,
-                children: (0, r.jsx)(a.VL1, {
+                children: (0, r.jsx)(s.VL1, {
                     size: "md",
                     color: "currentColor",
                 }),
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(s.Text, {
                 className: h.channelName,
                 variant: "text-md/normal",
                 color: "text-muted",
@@ -59,14 +59,14 @@ function j(e) {
     let { channels: t } = e;
     return (0, r.jsx)(r.Fragment, {
         children: t.map((e) =>
-            e.isCategory() ? (0, r.jsx)(v, { label: e.name }, e.id) : (0, r.jsx)(C, { channel: e }, e.id),
+            e.isCategory() ? (0, r.jsx)(_, { label: e.name }, e.id) : (0, r.jsx)(C, { channel: e }, e.id),
         ),
     });
 }
-function _() {
+function v() {
     return (0, r.jsx)("div", { className: h.divider });
 }
-function v(e) {
+function _(e) {
     let { label: t } = e;
     return (0, r.jsxs)("div", {
         className: h.category,
@@ -77,7 +77,7 @@ function v(e) {
                 height: 12,
                 direction: g.Z.Directions.DOWN,
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(s.Text, {
                 variant: "text-xs/semibold",
                 color: "text-muted",
                 lineClamp: 1,
@@ -90,16 +90,16 @@ function C(e) {
     var t;
     let { channel: n } = e,
         i = (0, d.iF)(n),
-        s = null != (t = (0, o.KS)(n)) ? t : a.VL1;
+        a = null != (t = (0, o.KS)(n)) ? t : s.VL1;
     return (0, r.jsxs)("div", {
         className: h.channel,
         children: [
-            (0, r.jsx)(s, {
+            (0, r.jsx)(a, {
                 className: h.channelIcon,
                 size: "xs",
                 color: "currentColor",
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(s.Text, {
                 className: h.channelName,
                 variant: "text-md/normal",
                 color: "text-muted",

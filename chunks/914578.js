@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => y });
 var r = n(951288),
     l = n(647438),
     o = n(120356),
@@ -9,12 +9,12 @@ var r = n(951288),
     u = n(31336),
     d = n(906467),
     f = n(63063),
-    b = n(604227),
-    m = n(924983),
+    m = n(604227),
+    b = n(924983),
     p = n(981631),
     j = n(388032),
-    v = n(989281);
-function y(e) {
+    x = n(989281);
+function v(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(a.v2r, {
         navId: "settings-footer-more-menu",
@@ -42,20 +42,20 @@ function y(e) {
         }),
     });
 }
-function x() {
+function y() {
     let e = l.useRef(null),
         t = d.Z.isDeveloper;
     return (0, r.jsxs)("div", {
         children: [
             t &&
                 (0, r.jsx)(a.P3F, {
-                    className: v.devToolsEducation,
+                    className: x.devToolsEducation,
                     onClick: () => (0, u.d8)(),
-                    children: (0, r.jsx)(m.$, { legacy: !1 }),
+                    children: (0, r.jsx)(b.$, { legacy: !1 }),
                 }),
-            (0, r.jsx)(b.Z, { compact: !0 }),
+            (0, r.jsx)(m.Z, { compact: !0 }),
             (0, r.jsxs)("div", {
-                className: v.links,
+                className: x.links,
                 children: [
                     (0, r.jsx)(a.Anchor, {
                         href: p.EYA.PRIVACY,
@@ -67,7 +67,7 @@ function x() {
                         }),
                     }),
                     (0, r.jsx)("span", {
-                        className: v.bullet,
+                        className: x.bullet,
                         "aria-hidden": "true",
                         children: "\u2022",
                     }),
@@ -81,7 +81,7 @@ function x() {
                         }),
                     }),
                     (0, r.jsx)("span", {
-                        className: v.bullet,
+                        className: x.bullet,
                         "aria-hidden": "true",
                         children: "\u2022",
                     }),
@@ -93,7 +93,7 @@ function x() {
                         animation: a.yRy.Animation.NONE,
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
-                            return (0, r.jsx)(y, { onClose: t });
+                            return (0, r.jsx)(v, { onClose: t });
                         },
                         children: (t, n) => {
                             var l, o;
@@ -128,7 +128,7 @@ function x() {
                                     {
                                         ref: e,
                                         useDefaultUnderlineStyles: !1,
-                                        className: i()(v.moreButton, { [v.active]: n.isShown }),
+                                        className: i()(x.moreButton, { [x.active]: n.isShown }),
                                         children: (0, r.jsx)(a.Text, {
                                             tag: "span",
                                             variant: "text-xxs/normal",

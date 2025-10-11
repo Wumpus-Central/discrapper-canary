@@ -17,8 +17,8 @@ var l = n(951288),
     p = n(933409),
     Z = n(389052),
     P = n(158508),
-    j = n(88966),
-    m = n(712301),
+    m = n(88966),
+    j = n(712301),
     v = n(567711),
     h = n(358386),
     _ = n(37258),
@@ -61,7 +61,7 @@ let N = (0, c.Z)(
                     guildId: u,
                     sourceAnalyticsLocations: T,
                 }),
-                V = (0, j.Z)(n.id, M),
+                V = (0, m.Z)(n.id, M),
                 F = (0, g.Z)({
                     guildId: u,
                     userId: n.id,
@@ -69,13 +69,13 @@ let N = (0, c.Z)(
                     analyticsLocations: [R],
                     context: M,
                 }),
-                K = (0, Z.Z)({
+                Y = (0, Z.Z)({
                     user: n,
                     guildId: u,
                     location: R,
                     channelId: c,
                 }),
-                Y = (0, P.Z)({
+                K = (0, P.Z)({
                     user: n,
                     guildId: u,
                     location: R,
@@ -90,7 +90,7 @@ let N = (0, c.Z)(
                     label: C.intl.string(C.t["/AXYnJ"]),
                     onSuccess: q,
                 }),
-                J = (0, m.Z)(n, u),
+                J = (0, j.Z)(n, u),
                 $ = !!(null == n ? void 0 : n.isNonUserBot());
             return (0, l.jsxs)(a.v2r, {
                 navId: "user-context",
@@ -107,7 +107,7 @@ let N = (0, c.Z)(
                                     children: [G, V],
                                 }),
                                 (0, l.jsxs)(a.kSQ, {
-                                    children: [F, Y, K],
+                                    children: [F, K, Y],
                                 }),
                                 B &&
                                     (0, l.jsxs)(l.Fragment, {

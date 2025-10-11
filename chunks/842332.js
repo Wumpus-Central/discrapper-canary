@@ -1,4 +1,4 @@
-n.d(t, { U: () => h }), n(388685), n(781311);
+n.d(t, { U: () => p }), n(388685), n(781311);
 var r = n(951288),
     i = n(647438),
     l = n(544891),
@@ -8,7 +8,7 @@ var r = n(951288),
     c = n(375954),
     d = n(981631),
     u = n(388032);
-async function p(e) {
+async function h(e) {
     try {
         var t, n;
         let r = await l.tn.post({
@@ -22,8 +22,8 @@ async function p(e) {
         return null;
     }
 }
-function h(e) {
-    let { parentChannel: t, parentMessageId: n, updateThreadSettings: l, threadSettings: d, textAreaState: h } = e,
+function p(e) {
+    let { parentChannel: t, parentMessageId: n, updateThreadSettings: l, threadSettings: d, textAreaState: p } = e,
         [f, g] = i.useState(!1),
         [m, b] = i.useState(!1),
         { enableAIFeatures: y } = o.C.useExperiment({ location: "CreateThreadSidebar" }),
@@ -36,16 +36,16 @@ function h(e) {
                         var e;
                         let i = c.Z.getMessage(t.id, n);
                         r = null != (e = null == i ? void 0 : i.content) ? e : null;
-                    } else h.textValue.trim().length >= 10 && (r = h.textValue);
+                    } else p.textValue.trim().length >= 10 && (r = p.textValue);
                     if (null != r) {
-                        let e = await p(r);
+                        let e = await h(r);
                         null != e && "" !== e.trim() && l({ name: e });
                     }
                 } finally {
                     g(!1);
                 }
             }
-        }, [t.id, n, l, y, h.textValue]);
+        }, [t.id, n, l, y, p.textValue]);
     i.useEffect(() => {
         b(!1), g(!1), t.id === d.parentChannelId && n !== d.parentMessageId && l({ name: "" });
     }, [n, l, t.id, d.parentChannelId, d.parentMessageId]),
@@ -60,14 +60,14 @@ function h(e) {
                         icon: s.$2U,
                         onClick: _,
                         "aria-label": u.intl.string(u.t.ZF2oBg),
-                        disabled: e || f || (null == n && h.textValue.trim().length < 10),
+                        disabled: e || f || (null == n && p.textValue.trim().length < 10),
                         tooltip: u.intl.string(u.t.ZF2oBg),
                         loading: f,
                     };
             },
-            [y, _, f, n, h.textValue],
+            [y, _, f, n, p.textValue],
         ),
-        x = i.useCallback(
+        O = i.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                 return y
@@ -79,20 +79,20 @@ function h(e) {
                               size: "sm",
                               "aria-label": u.intl.string(u.t.ZF2oBg),
                               onClick: _,
-                              disabled: e || f || (null == n && h.textValue.trim().length < 10),
+                              disabled: e || f || (null == n && p.textValue.trim().length < 10),
                               loading: f,
                               type: "button",
                           }),
                       })
                     : null;
             },
-            [y, f, n, h.textValue, _],
+            [y, f, n, p.textValue, _],
         );
     return {
         isGeneratingAI: f,
         generateAIName: _,
         enableAIFeatures: y,
-        renderAiGenerateButton: x,
+        renderAiGenerateButton: O,
         getThreadNameInputAccessory: j,
     };
 }

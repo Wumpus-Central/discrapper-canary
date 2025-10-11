@@ -85,8 +85,8 @@ function R(e) {
         ),
         A = t.isGuildVoice() && !n,
         { hasParticipantsPanel: R } = (0, T.Z)({ location: "ChannelCallHeaderToolbar" }),
-        k = !P && R && (t.isGuildVoice() || t.isGroupDM()),
-        { enabled: L, inInbox: D } = C.Z.useExperiment({ location: "ChannelCallHeaderToolbar" }),
+        L = !P && R && (t.isGuildVoice() || t.isGroupDM()),
+        { enabled: D, inInbox: k } = C.Z.useExperiment({ location: "ChannelCallHeaderToolbar" }),
         U = [];
     return (
         u &&
@@ -211,8 +211,8 @@ function R(e) {
                     "call-members-popout",
                 ),
             ),
-        L && !D && U.push((0, i.jsx)(y.Z, { className: w.button }, "for-later")),
-        k &&
+        D && !k && U.push((0, i.jsx)(y.Z, { className: w.button }, "for-later")),
+        L &&
             U.push(
                 (0, i.jsx)(
                     E.Z,

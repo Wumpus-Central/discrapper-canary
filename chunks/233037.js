@@ -1,56 +1,56 @@
-n.d(t, { Z: () => g });
-var r = n(951288);
-n(647438);
-var i = n(442837),
-    l = n(755721),
-    s = n(984933),
-    o = n(430824),
-    a = n(496675),
-    c = n(594174),
-    d = n(938475),
-    u = n(102172),
-    f = n(499596),
-    m = n(148381),
-    h = n(388032),
-    p = n(376681);
-function g(e) {
-    let { selectedChannelId: t, guildId: n, onChangeSelectedChannelId: g } = e,
-        x = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
-        _ = (0, i.e7)([o.Z, s.ZP, a.Z], () => (0, u.h_)(s.ZP.getChannels(n), o.Z, a.Z)),
-        v = (0, i.e7)([d.ZP], () => d.ZP.getVoiceStates(n)),
-        j = _.map((e) => {
-            var n;
+t.d(n, { Z: () => j });
+var l = t(951288);
+t(647438);
+var r = t(442837),
+    i = t(755721),
+    s = t(984933),
+    a = t(430824),
+    c = t(496675),
+    o = t(594174),
+    u = t(938475),
+    d = t(102172),
+    m = t(499596),
+    x = t(148381),
+    g = t(388032),
+    h = t(376681);
+function j(e) {
+    let { selectedChannelId: n, guildId: t, onChangeSelectedChannelId: j } = e,
+        p = (0, r.e7)([o.default], () => o.default.getCurrentUser()),
+        v = (0, r.e7)([a.Z, s.ZP, c.Z], () => (0, d.h_)(s.ZP.getChannels(t), a.Z, c.Z)),
+        f = (0, r.e7)([u.ZP], () => u.ZP.getVoiceStates(t)),
+        Z = v.map((e) => {
+            var t;
             return {
-                name: (0, r.jsx)(f.Z, {
+                name: (0, l.jsx)(m.Z, {
                     channel: e,
                     users:
-                        null == (n = v[e.id])
+                        null == (t = f[e.id])
                             ? void 0
-                            : n
+                            : t
                                   .filter((e) => {
-                                      let { user: t } = e;
-                                      return t.id !== (null == x ? void 0 : x.id);
+                                      let { user: n } = e;
+                                      return n.id !== (null == p ? void 0 : p.id);
                                   })
                                   .map((e) => {
-                                      let { user: t } = e;
-                                      return t;
+                                      let { user: n } = e;
+                                      return n;
                                   }),
-                    selected: e.id === t,
+                    selected: e.id === n,
                 }),
                 value: e.id,
             };
         });
-    return (0, r.jsx)(m.Z, {
-        title: h.intl.string(h.t["eg7R/v"]),
-        scrollerInnerClassName: p.channelSelectScrollerInner,
-        children: (0, r.jsx)(l.Gu, {
-            options: j,
-            value: t,
-            itemInfoClassName: p.channelInfoWrapper,
-            itemTitleClassName: p.channelTitleWrapper,
+    return (0, l.jsx)(x.Z, {
+        title: g.intl.string(g.t["eg7R/v"]),
+        scrollerInnerClassName: h.channelSelectScrollerInner,
+        children: (0, l.jsx)(i.Gu, {
+            options: Z,
+            value: n,
+            itemInfoClassName: h.channelInfoWrapper,
+            itemTitleClassName: h.channelTitleWrapper,
             onChange: (e) => {
-                let { value: t } = e;
-                return g(t);
+                let { value: n } = e;
+                return j(n);
             },
         }),
     });

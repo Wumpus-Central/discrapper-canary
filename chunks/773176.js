@@ -32,9 +32,9 @@ var i = n(951288),
     w = n(995774),
     M = n(931651),
     R = n(280845),
-    k = n(2818),
-    L = n(768943),
-    D = n(665906),
+    L = n(2818),
+    D = n(768943),
+    k = n(665906),
     U = n(695346),
     B = n(314897),
     H = n(323873),
@@ -43,9 +43,9 @@ var i = n(951288),
     G = n(607744),
     z = n(496675),
     W = n(626135),
-    q = n(572004),
-    Y = n(176354),
-    K = n(823379),
+    Y = n(572004),
+    K = n(176354),
+    q = n(823379),
     X = n(970257),
     J = n(418476),
     Q = n(151007),
@@ -85,7 +85,7 @@ function eu(e) {
     }
     return e;
 }
-let ed = [C.ZP.getByName("100"), C.ZP.getByName("laughing"), C.ZP.getByName("sparkling_heart")].filter(K.lm);
+let ed = [C.ZP.getByName("100"), C.ZP.getByName("laughing"), C.ZP.getByName("sparkling_heart")].filter(q.lm);
 function ep(e) {
     e.stopPropagation();
 }
@@ -113,7 +113,7 @@ let ef = r.memo(function (e) {
     let { channel: t, message: n } = e,
         r = (0, b.q5)(t.guild_id).filter(
             (e) =>
-                !Y.ZP.isEmojiFilteredOrLocked({
+                !K.ZP.isEmojiFilteredOrLocked({
                     emoji: e,
                     channel: t,
                     intention: eo.Hz.REACTION,
@@ -193,8 +193,8 @@ function em(e) {
             canForward: w,
             isExpanded: M,
             showMoreUtilities: H,
-            showEmojiPicker: Y,
-            showMessageBookmarksActions: K,
+            showEmojiPicker: K,
+            showMessageBookmarksActions: q,
             isMessageBookmark: er,
             setPopout: eo,
             hasDeveloperMode: ec,
@@ -213,8 +213,8 @@ function em(e) {
                 { author: d } = n,
                 p = (0, u.e7)([F.Z], () => F.Z.getGuild(t.guild_id), [t.guild_id]),
                 h = (0, u.e7)([B.default], () => B.default.getId()),
-                g = (0, D.$R)(t),
-                b = (0, D.Gu)(t),
+                g = (0, k.$R)(t),
+                b = (0, k.Gu)(t),
                 { firstMessage: C } = (0, u.e7)([_.Z], () => _.Z.getMessage(t.id), [t.id]),
                 y = U.nc.useSetting(),
                 x = U.Sb.useSetting(),
@@ -228,8 +228,8 @@ function em(e) {
                     [t, O],
                 ),
                 P = (0, R.U)(t, n),
-                I = (0, D.NE)(t, n),
-                Z = (0, D.Ek)(n),
+                I = (0, k.NE)(t, n),
+                Z = (0, k.Ek)(n),
                 T = (0, u.e7)([E.Z], () => null != t.guild_id && E.Z.isLurking(t.guild_id), [t]),
                 N = (0, u.e7)([V.ZP], () => null != t.guild_id && V.ZP.isCurrentUserGuest(t.guild_id), [t]),
                 A = d.id === h,
@@ -239,7 +239,7 @@ function em(e) {
             let M = (0, X.a4)(n),
                 H = (0, Q.Z)(n, t),
                 W = !t.isSystemDM() && (0, J.Z)(n, h) && g && !b,
-                { disableReactionCreates: Y } = (0, ee.Z)({
+                { disableReactionCreates: K } = (0, ee.Z)({
                     channel: t,
                     canChat: O,
                     renderReactions: y,
@@ -248,7 +248,7 @@ function em(e) {
                     isGuest: N,
                     isActiveChannelOrUnarchivableThread: g,
                 }),
-                K =
+                q =
                     t.type === el.d4z.GUILD_ANNOUNCEMENT &&
                     null != p &&
                     p.features.has(el.oNc.NEWS) &&
@@ -260,8 +260,8 @@ function em(e) {
                     n.type === el.uaV.USER_JOIN &&
                     z.Z.canWithPartialContext(el.Plq.MANAGE_GUILD, { guildId: et }),
                 ei = (0, v.a)(n),
-                { enabled: er } = k.Z.useExperiment({ location: "message_utilities" }),
-                ea = (0, u.e7)([L.Z], () => null != L.Z.getSavedMessage(t.id, n.id)),
+                { enabled: er } = L.Z.useExperiment({ location: "message_utilities" }),
+                ea = (0, u.e7)([D.Z], () => null != D.Z.getSavedMessage(t.id, n.id)),
                 eo = (0, c.Z)(a),
                 es = (0, u.e7)([f.Z], () => f.Z.keyboardModeEnabled);
             return {
@@ -275,10 +275,10 @@ function em(e) {
                 canStartThread: I,
                 canViewThread: Z,
                 canForward: ei,
-                canCopy: q.wS,
+                canCopy: Y.wS,
                 hasDeveloperMode: x,
-                canReact: !Y && y,
-                canPublish: K,
+                canReact: !K && y,
+                canPublish: q,
                 canConfigureJoin: en,
                 isExpanded: eo && !es && !i && !r && !l,
                 showEmojiPicker: i,
@@ -300,9 +300,9 @@ function em(e) {
                 eo({ moreUtilities: !H });
         }, [H, eo, n]),
         eg = r.useCallback(() => {
-            eo({ emojiPicker: !Y });
-        }, [Y, eo]),
-        eb = (0, D.$R)(t),
+            eo({ emojiPicker: !K });
+        }, [K, eo]),
+        eb = (0, k.$R)(t),
         ey = n.hasFlag(el.iLy.CROSSPOSTED),
         [e_, ev] = (0, g.cv)(w ? [d.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []),
         ex = e_ === d.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE,
@@ -381,7 +381,7 @@ function em(e) {
                                     "mark-unread",
                                 )
                               : null,
-                          K
+                          q
                               ? (0, i.jsx)(
                                     et.sF,
                                     {
@@ -447,7 +447,7 @@ function em(e) {
                           (0, i.jsx)(ei.Z, {
                               togglePopout: eg,
                               renderEmojiPicker: eC,
-                              shouldShow: Y,
+                              shouldShow: K,
                               isFocused: ed,
                               channel: t,
                               message: n,

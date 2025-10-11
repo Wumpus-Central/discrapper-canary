@@ -1,4 +1,4 @@
-n.d(t, { default: () => T });
+n.d(t, { default: () => _ });
 var l = n(951288);
 n(647438);
 var i = n(481060),
@@ -29,8 +29,8 @@ var i = n(481060),
     x = n(700994),
     N = n(332031),
     A = n(981631),
-    _ = n(388032);
-let T = (0, a.Z)(
+    D = n(388032);
+let _ = (0, a.Z)(
     (0, o.Z)(
         function (e) {
             let {
@@ -39,10 +39,10 @@ let T = (0, a.Z)(
                     showModalItems: o = !0,
                     showMediaItems: a = !1,
                     showChatItems: u = !0,
-                    context: T,
-                    onSelect: U,
+                    context: _,
+                    onSelect: T,
                 } = e,
-                D = {
+                U = {
                     page: A.ZY5.GUILD_CHANNEL,
                     section: A.jXE.CHAT_USERNAME,
                     object: A.qAy.CONTEXT_MENU_ITEM,
@@ -51,17 +51,17 @@ let T = (0, a.Z)(
                     userId: t.id,
                     guildId: n,
                 }),
-                w = (0, P.Z)(t, n, T),
-                k = (0, p.Z)(t.id, T),
+                w = (0, P.Z)(t, n, _),
+                k = (0, p.Z)(t.id, _),
                 R = (0, N.Z)(t.id),
                 B = (0, v.Z)({
                     user: t,
-                    context: T,
+                    context: _,
                 }),
                 q = (0, m.Z)({
                     user: t,
                     guildId: n,
-                    context: T,
+                    context: _,
                 }),
                 V = (0, f.Z)({ user: t }),
                 G = (0, x.Z)(t.id),
@@ -69,8 +69,8 @@ let T = (0, a.Z)(
                 Y = (0, c.Z)({
                     guildId: n,
                     userId: t.id,
-                    analyticsLocation: D,
-                    context: T,
+                    analyticsLocation: U,
+                    context: _,
                 }),
                 H = (0, g.Z)({
                     user: t,
@@ -99,14 +99,14 @@ let T = (0, a.Z)(
                 en = (0, y.Z)(t, n),
                 el = (0, d.Z)({
                     id: t.id,
-                    label: _.intl.string(_.t["/AXYnJ"]),
+                    label: D.intl.string(D.t["/AXYnJ"]),
                 }),
                 ei = t.isNonUserBot();
             return (0, l.jsxs)(i.v2r, {
                 navId: "user-context",
                 onClose: r.Zy,
-                "aria-label": _.intl.string(_.t.liqwPD),
-                onSelect: U,
+                "aria-label": D.intl.string(D.t.liqwPD),
+                onSelect: T,
                 children: [
                     !ei &&
                         (0, l.jsxs)(l.Fragment, {

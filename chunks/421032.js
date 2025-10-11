@@ -29,9 +29,9 @@ function v(e) {
                 ? new Date(null == j ? void 0 : j.scheduled_start_time)
                 : a,
         S = (0, g.DK)(I),
-        E = y ? b.p1.CANCELED : b.p1.SCHEDULED;
-    S === n && (E = I.status);
-    let P =
+        P = y ? b.p1.CANCELED : b.p1.SCHEDULED;
+    S === n && (P = I.status);
+    let E =
             (null == I ? void 0 : I.scheduled_start_time) != null
                 ? (0, g.lh)(j, N, new Date(null == I ? void 0 : I.scheduled_start_time))
                 : null,
@@ -94,7 +94,7 @@ function v(e) {
         children: [
             (0, i.jsx)(m.z, {
                 startTime: N.toISOString(),
-                status: null != P ? P : E,
+                status: null != E ? E : P,
                 eventType: I.entity_type,
                 guildEventId: I.id,
                 recurrenceId: n,

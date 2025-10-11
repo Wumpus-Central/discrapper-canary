@@ -4,7 +4,7 @@ var r = n(951288),
     o = n(120356),
     i = n.n(o),
     a = n(713447),
-    s = n(137317),
+    s = n(599273),
     c = n(574583),
     u = n(754700),
     d = n(670081),
@@ -183,7 +183,7 @@ function ee(e) {
         e4 = (0, l.useRef)(null),
         e7 = l.useRef(!0),
         e6 = (null == (t = et.userStatus) ? void 0 : t.completedAt) != null,
-        [e3, e9] = l.useState(null),
+        [e9, e3] = l.useState(null),
         [e5, te] = l.useState(!1),
         [tt, tn] = l.useState(!1),
         [tr, tl] = l.useState(null),
@@ -368,7 +368,7 @@ function ee(e) {
                 if ((ti.info("[QV] | updatePlayerState | playerState: ".concat(e)), e_(e), null != e8.current))
                     switch (e) {
                         case Z.rq.PLAYING:
-                            e8.current.paused && tg(e3), e9(null), e8.current.play();
+                            e8.current.paused && tg(e9), e3(null), e8.current.play();
                             break;
                         case Z.rq.PAUSED:
                             e8.current.paused || tA(), e8.current.pause(), (ez.current = !1);
@@ -377,11 +377,11 @@ function ee(e) {
                             tA(), em(!1);
                     }
             },
-            [tg, e3, tA, em, ti],
+            [tg, e9, tA, em, ti],
         );
     l.useEffect(() => {
-        tO(e3);
-    }, [e3, tO]),
+        tO(e9);
+    }, [e9, tO]),
         l.useEffect(() => {
             eO && tb(eg, eC);
         }, [eg, eO, eC, tb]);
@@ -412,7 +412,7 @@ function ee(e) {
                     .concat(e6),
             ),
             tL(Z.rq.PAUSED),
-            e6 || e9(x.yE.LOST_FOCUS));
+            e6 || e3(x.yE.LOST_FOCUS));
     }, [ei, eg, eO, eb, eh, eC, e6, tL, tM, ti]);
     let [tV, tZ] = l.useState(!1),
         tB = l.useRef(null),
@@ -491,7 +491,7 @@ function ee(e) {
                         tW(0), tL(Z.rq.PLAYING);
                         break;
                     case Z.rq.PLAYING:
-                        tL(Z.rq.PAUSED), e9(x.yE.PAUSE_BUTTON);
+                        tL(Z.rq.PAUSED), e3(x.yE.PAUSE_BUTTON);
                         break;
                     default:
                         tL(Z.rq.PLAYING);
@@ -602,7 +602,7 @@ function ee(e) {
             [tH, t2, e2, eY, t1],
         );
     let t6 = eC === Z.rq.ENDED,
-        t3 = l.useCallback(
+        t9 = l.useCallback(
             async (e) => {
                 if (ev) {
                     var t;
@@ -623,7 +623,7 @@ function ee(e) {
             },
             [th, et, es, ev, e8, tY, eE, tj, ec],
         ),
-        t9 = l.useMemo(() => (0, N.z0)(et, u.X.WATCH_VIDEO, N.n1.VIDEO, N.O.THUMBNAIL), [et]),
+        t3 = l.useMemo(() => (0, N.z0)(et, u.X.WATCH_VIDEO, N.n1.VIDEO, N.O.THUMBNAIL), [et]),
         t5 = l.useMemo(() => (0, N.z0)(et, u.X.WATCH_VIDEO, N.n1.VIDEO, N.O.CAPTION), [et]),
         ne = e6 || e$.maxTimestampSec >= (null != (F = null == (p = e8.current) ? void 0 : p.currentTime) ? F : 0) + 1,
         nt = l.useMemo(() => null === (0, N.z0)(et, u.X.WATCH_VIDEO, N.n1.VIDEO, N.O.TRANSCRIPT), [et]);
@@ -661,7 +661,7 @@ function ee(e) {
                                         subtitle: ts,
                                         icon: f.d4D,
                                         className: W.endScreenPanelRight,
-                                        onClick: () => t3(x.jn.VIDEO_MODAL),
+                                        onClick: () => t9(x.jn.VIDEO_MODAL),
                                     }),
                                 ],
                             });
@@ -682,7 +682,7 @@ function ee(e) {
                                     null != (n = null == l ? void 0 : l.messages.videoEndCtaButtonLabel)
                                         ? n
                                         : G.intl.string(G.t.iiTtpK),
-                                onCTAClick: () => t3(x.jn.VIDEO_MODAL_END_CARD),
+                                onCTAClick: () => t9(x.jn.VIDEO_MODAL_END_CARD),
                                 sourceQuestContent: ec,
                             });
                         }
@@ -699,7 +699,7 @@ function ee(e) {
                         [W.videoInner]: !0,
                     }),
                     controls: !1,
-                    poster: null == t9 ? void 0 : t9.url,
+                    poster: null == t3 ? void 0 : t3.url,
                     disablePictureInPicture: !0,
                     onTimeUpdate: (e) => {
                         null != e8.current &&
@@ -811,7 +811,7 @@ function ee(e) {
                         type: f.$jN.Type.WANDERING_CUBES,
                         className: W.loadingSpinner,
                     }),
-                eC === Z.rq.PAUSED && e3 === x.yE.LOST_FOCUS && (0, r.jsx)(X, {}),
+                eC === Z.rq.PAUSED && e9 === x.yE.LOST_FOCUS && (0, r.jsx)(X, {}),
                 ed &&
                     eC !== Z.rq.ENDED &&
                     (0, r.jsxs)(r.Fragment, {

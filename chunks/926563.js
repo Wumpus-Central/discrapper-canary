@@ -5,8 +5,8 @@ var i = n(481060),
     l = n(680295),
     a = n(687158),
     o = n(899007),
-    u = n(648052),
-    s = n(867176),
+    s = n(648052),
+    u = n(867176),
     c = n(502762),
     d = n(530),
     m = n(4517),
@@ -24,7 +24,7 @@ function b(e) {
         children: [
             (0, r.jsxs)("header", {
                 children: [
-                    (0, r.jsx)(s.Z, {
+                    (0, r.jsx)(u.Z, {
                         user: t,
                         displayProfile: T,
                         themeType: p.l.POPOUT,
@@ -57,7 +57,7 @@ function b(e) {
                     user: t,
                     nickname: f.ZP.getName(null, null, t),
                     pronouns: null == T ? void 0 : T.pronouns,
-                    tags: (0, r.jsx)(u.Z, {
+                    tags: (0, r.jsx)(s.Z, {
                         displayProfile: T,
                         themeType: p.l.POPOUT,
                     }),

@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    s = n(852860),
-    a = n(699553),
+    a = n(852860),
+    s = n(699553),
     o = n(314852),
     c = n(434404),
     d = n(999382),
@@ -32,15 +32,15 @@ function m() {
                 badgeColorPrimary: m.badgeColorPrimary,
                 badgeColorSecondary: m.badgeColorSecondary,
             };
-            (0, a.pV)(e.id, t);
+            (0, s.pV)(e.id, t);
         }, [e, m]),
-        x = i.useCallback(() => {
+        b = i.useCallback(() => {
             null != t && c.Z.init(t);
         }, [t]);
-    return (0, r.jsx)(s.Z, {
+    return (0, r.jsx)(a.Z, {
         submitting: p,
         errorMessage: f,
         onSave: h,
-        onReset: x,
+        onReset: b,
     });
 }

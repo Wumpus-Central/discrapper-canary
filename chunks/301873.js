@@ -1,13 +1,13 @@
 n.d(t, {
-    WV: () => c,
-    xU: () => d,
+    WV: () => d,
+    xU: () => c,
     zv: () => o,
 });
 var l = n(399606),
     i = n(818083),
-    s = n(430824),
+    a = n(430824),
     r = n(971130),
-    a = n(981631);
+    s = n(981631);
 let o = r.ZP.INVITE_OPTIONS_7_DAYS.value,
     u = (0, i.B)({
         kind: "guild",
@@ -32,36 +32,36 @@ let o = r.ZP.INVITE_OPTIONS_7_DAYS.value,
             },
         ],
     });
-function d(e) {
+function c(e) {
     let { guildId: t, location: n } = e,
         i = u.useExperiment({
-            guildId: null != t ? t : a.lds,
+            guildId: null != t ? t : s.lds,
             location: n,
         }),
-        d = (0, l.e7)([s.Z], () => s.Z.getGuild(t));
+        c = (0, l.e7)([a.Z], () => a.Z.getGuild(t));
     return null == t
         ? null
         : (function (e) {
               var t;
               let { guild: n, experimentConfig: l } = e;
-              if (null == n ? void 0 : n.features.has(a.oNc.HUB)) return r.ZP.INVITE_OPTIONS_FOREVER.value;
+              if (null == n ? void 0 : n.features.has(s.oNc.HUB)) return r.ZP.INVITE_OPTIONS_FOREVER.value;
               let { defaultMaxAge: i } =
                   null != l
                       ? l
                       : u.getCurrentConfig({
-                            guildId: null != (t = null == n ? void 0 : n.id) ? t : a.lds,
+                            guildId: null != (t = null == n ? void 0 : n.id) ? t : s.lds,
                             location: "getDefaultInviteExpiration",
                         });
               return null != i ? i : o;
           })({
-              guild: d,
+              guild: c,
               experimentConfig: i,
           });
 }
-function c(e) {
+function d(e) {
     let { guildId: t, location: n } = e,
         l = u.useExperiment({
-            guildId: null != t ? t : a.lds,
+            guildId: null != t ? t : s.lds,
             location: n,
         });
     return r.ZP.getMaxAgeOptions({ includeExperimentalValues: [null == l ? void 0 : l.defaultMaxAge] });

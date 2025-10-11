@@ -1,5 +1,5 @@
 n.d(t, {
-    B: () => _,
+    B: () => v,
     Z: () => j,
 }),
     n(953529),
@@ -8,8 +8,8 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    s = n(392711),
-    a = n.n(s),
+    a = n(392711),
+    s = n.n(a),
     o = n(481060),
     c = n(668781),
     d = n(603211),
@@ -19,7 +19,7 @@ var i = n(120356),
     p = n(290511),
     f = n(388032),
     h = n(900492);
-function x(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function x(e) {
     }
     return e;
 }
-function b(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -63,11 +63,11 @@ function b(e, t) {
     );
 }
 function j(e) {
-    var t, i, s, c;
+    var t, i, a, c;
     let {
             guild: j,
-            prompt: _,
-            singleColumn: v,
+            prompt: v,
+            singleColumn: _,
             promptIndex: C,
             option: O,
             hasError: y,
@@ -76,14 +76,14 @@ function j(e) {
             onDragReset: I,
         } = e,
         S = null,
-        T = a().findIndex(_.options, (e) => e.id === O.id),
+        T = s().findIndex(v.options, (e) => e.id === O.id),
         {
             drag: P,
             dragSourcePosition: w,
             drop: Z,
             setIsDraggable: R,
         } = (0, d.Z)({
-            type: "ONBOARDING_PROMPT_OPTION_CARD-".concat(_.id),
+            type: "ONBOARDING_PROMPT_OPTION_CARD-".concat(v.id),
             index: T,
             optionId: O.id,
             onDragStart: N,
@@ -101,7 +101,7 @@ function j(e) {
                 [h.hasError]: y || null != S,
                 [h.dropIndicatorBefore]: null != w && T < w,
                 [h.dropIndicatorAfter]: null != w && T > w,
-                [h.singleColumn]: v,
+                [h.singleColumn]: _,
             }),
             onClick: () =>
                 (0, o.ZDy)(async () => {
@@ -109,16 +109,16 @@ function j(e) {
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            b(x({}, t), {
+                            x(b({}, t), {
                                 guild: j,
-                                prompt: _,
+                                prompt: v,
                                 option: O,
                                 index: C,
                                 onSave: (e) => {
-                                    (0, m.Kk)(j, _.id, { options: _.options.map((t) => (t.id === O.id ? e : t)) });
+                                    (0, m.Kk)(j, v.id, { options: v.options.map((t) => (t.id === O.id ? e : t)) });
                                 },
                                 onDelete: () => {
-                                    (0, m.Kk)(j, _.id, { options: _.options.filter((e) => e.id !== O.id) });
+                                    (0, m.Kk)(j, v.id, { options: v.options.filter((e) => e.id !== O.id) });
                                 },
                             }),
                         );
@@ -143,7 +143,7 @@ function j(e) {
                         (0, r.jsx)("div", {
                             className: h.emoji,
                             children: (0, r.jsx)(g.Z, {
-                                emojiId: null == (s = O.emoji) ? void 0 : s.id,
+                                emojiId: null == (a = O.emoji) ? void 0 : a.id,
                                 emojiName: null == (c = O.emoji) ? void 0 : c.name,
                                 defaultComponent: null,
                             }),
@@ -178,15 +178,15 @@ function j(e) {
         })
     );
 }
-function _(e) {
-    let { guild: t, prompt: i, promptIndex: s, singleColumn: a } = e,
+function v(e) {
+    let { guild: t, prompt: i, promptIndex: a, singleColumn: s } = e,
         d = () => {
             (0, o.ZDy)(async () => {
                 let { default: e } = await n.e("1862").then(n.bind(n, 801001));
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        b(x({}, n), {
+                        x(b({}, n), {
                             guild: t,
                             prompt: i,
                             onSave: (e) =>
@@ -194,7 +194,7 @@ function _(e) {
                                     options: [...i.options, e],
                                 }),
                             onDelete: () => {},
-                            index: s,
+                            index: a,
                         }),
                     );
             });
@@ -202,7 +202,7 @@ function _(e) {
     return (0, r.jsx)(o.P3F, {
         className: l()(h.optionCard, h.addOptionCard, {
             [h.addFirstOptionCard]: 0 === i.options.length,
-            [h.singleColumn]: a,
+            [h.singleColumn]: s,
         }),
         onClick: () => {
             i.options.length + 1 === p.fY

@@ -40,7 +40,7 @@ let O = function (e) {
         a.useEffect(() => () => N(!0), [N]);
     let R = null == A ? void 0 : A.storefront_available,
         [Z, w] = a.useState(null != E ? E : y.GlobalDiscoveryAppsSections.ABOUT),
-        k = a.useCallback(
+        D = a.useCallback(
             (e) => {
                 var t;
                 null == (t = T.current) || t.scrollTo({ to: 0 }), w(y.GlobalDiscoveryAppsSections.ABOUT), n(e);
@@ -50,20 +50,20 @@ let O = function (e) {
     a.useEffect(() => {
         (null == A ? void 0 : A.storefront_available) && null != t && (0, l.Z)(t);
     }, [null == A ? void 0 : A.storefront_available, t]);
-    let D = (0, _.Uc)(),
+    let k = (0, _.Uc)(),
         M = (0, i.e7)([p.Z], () => p.Z.getFetchState({ applicationId: null == A ? void 0 : A.id })),
         G = (0, i.e7)([p.Z], () => p.Z.getSimilarApplications({ applicationId: null == A ? void 0 : A.id })),
         B = a.useMemo(() => (null == G ? void 0 : G.applications.slice(0, 3)), [G]),
-        z = {
+        U = {
             displayedSimilarApplications: B,
-            previousView: D,
+            previousView: k,
         },
-        U = a.useRef(z);
+        z = a.useRef(U);
     a.useEffect(() => {
-        U.current = z;
+        z.current = U;
     }),
         a.useEffect(() => {
-            let { displayedSimilarApplications: e, previousView: t } = U.current;
+            let { displayedSimilarApplications: e, previousView: t } = z.current;
             (null == A ? void 0 : A.id) != null &&
                 M !== p.M.FETCHING &&
                 (0, m.zZ)(I.rMx.APP_DIRECTORY_PAGE_VIEWED, {
@@ -87,7 +87,7 @@ let O = function (e) {
             ],
             [],
         ),
-        V = a.useMemo(() => {
+        H = a.useMemo(() => {
             if (null == A) return null;
             switch (Z) {
                 case y.GlobalDiscoveryAppsSections.ABOUT:
@@ -96,7 +96,7 @@ let O = function (e) {
                     return (0, r.jsx)(j.Z, { application: A });
             }
         }, [Z, A]),
-        H = a.useCallback(
+        V = a.useCallback(
             (e) => {
                 (0, m.zZ)(I.rMx.APP_DIRECTORY_PROFILE_TAB_CLICKED, {
                     application_id: t,
@@ -143,16 +143,16 @@ let O = function (e) {
                                                       className: P.contentTabs,
                                                       children: (0, r.jsx)(o.Z, {
                                                           tabs: F,
-                                                          onTabSelect: H,
+                                                          onTabSelect: V,
                                                           selectedTab: Z,
                                                       }),
                                                   }),
-                                              V,
+                                              H,
                                               (0, r.jsx)(C.Z, {
                                                   applicationId: t,
                                                   fetchState: M,
                                                   similarApplications: B,
-                                                  onSelectApplication: k,
+                                                  onSelectApplication: D,
                                                   similarLoadId: null == G ? void 0 : G.loadId,
                                               }),
                                           ],

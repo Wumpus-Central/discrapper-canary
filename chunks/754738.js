@@ -1,6 +1,6 @@
-n.d(t, { b: () => i });
-var l,
-    i =
-        (((l = {})[(l.APPENDS_REMAINING_ACTIVITIES = 1)] = "APPENDS_REMAINING_ACTIVITIES"),
-        (l[(l.DEFAULT = 0)] = "DEFAULT"),
-        l);
+n.d(t, { b: () => l });
+var i,
+    l =
+        (((i = {})[(i.APPENDS_REMAINING_ACTIVITIES = 1)] = "APPENDS_REMAINING_ACTIVITIES"),
+        (i[(i.DEFAULT = 0)] = "DEFAULT"),
+        i);

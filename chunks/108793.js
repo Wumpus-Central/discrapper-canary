@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(388685);
 var r = n(951288),
     i = n(647438),
-    o = n(137317),
-    a = n(481060),
+    a = n(599273),
+    o = n(481060),
     s = n(687158),
     l = n(518596),
     c = n(63063),
@@ -15,8 +15,8 @@ var r = n(951288),
 function p(e) {
     var t,
         n,
-        { userRef: p, usernameSuggestionLoading: y = !1, oneClickFlow: O = !1 } = e,
-        h = (function (e, t) {
+        { userRef: p, usernameSuggestionLoading: h = !1, oneClickFlow: y = !1 } = e,
+        O = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -25,21 +25,21 @@ function p(e) {
                     var n,
                         r,
                         i = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        a = Object.keys(e);
+                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++)
-                    (n = o[r]),
+                var a = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < a.length; r++)
+                    (n = a[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ["userRef", "usernameSuggestionLoading", "oneClickFlow"]);
-    let { user: b, editState: S, onClose: _ } = h,
-        v = (0, s.ZP)(b.id),
-        j = (function (e, t, n) {
+    let { user: S, editState: b, onClose: _ } = O,
+        N = (0, s.ZP)(S.id),
+        v = (function (e, t, n) {
             switch (e) {
                 case m.Wq.EDIT_USERNAME:
                     return {
@@ -72,14 +72,14 @@ function p(e) {
                         subtitle: f.intl.string(f.t.gGz0sb),
                     };
             }
-        })(S, u.ZP.getName(b), _),
-        [N, x] = (0, a.q_F)(() => ({
+        })(b, u.ZP.getName(S), _),
+        [x, T] = (0, o.q_F)(() => ({
             opacity: 0,
             y: 10,
         }));
     return (
         i.useEffect(() => {
-            x({
+            T({
                 y: 0,
                 opacity: 1,
                 from: {
@@ -87,36 +87,36 @@ function p(e) {
                     opacity: 0,
                 },
             });
-        }, [x, S]),
+        }, [T, b]),
         (0, r.jsxs)("div", {
             className: E.displayNameContainer,
             children: [
-                (0, r.jsxs)(o.animated.div, {
+                (0, r.jsxs)(a.animated.div, {
                     style: {
-                        opacity: N.opacity,
-                        y: N.y,
+                        opacity: x.opacity,
+                        y: x.y,
                     },
                     children: [
-                        (0, r.jsx)(a.Heading, {
+                        (0, r.jsx)(o.Heading, {
                             className: E.title,
                             color: "header-primary",
                             variant: "heading-xl/extrabold",
-                            children: j.header,
+                            children: v.header,
                         }),
                         (0, r.jsxs)("div", {
                             className: E.subtitle,
                             children: [
-                                (0, r.jsx)(a.Heading, {
+                                (0, r.jsx)(o.Heading, {
                                     color: "header-secondary",
                                     variant: "heading-sm/medium",
-                                    children: j.subtitle,
+                                    children: v.subtitle,
                                 }),
-                                null != j.link &&
-                                    (0, r.jsx)(a.Text, {
+                                null != v.link &&
+                                    (0, r.jsx)(o.Text, {
                                         className: E.link,
                                         color: "header-secondary",
                                         variant: "text-sm/medium",
-                                        children: j.link,
+                                        children: v.link,
                                     }),
                             ],
                         }),
@@ -148,13 +148,13 @@ function p(e) {
                                 });
                         }
                         return e;
-                    })({}, h)),
+                    })({}, O)),
                     (n = n =
                         {
-                            displayProfile: v,
+                            displayProfile: N,
                             ref: p,
-                            usernameSuggestionLoading: y,
-                            oneClickFlow: O,
+                            usernameSuggestionLoading: h,
+                            oneClickFlow: y,
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

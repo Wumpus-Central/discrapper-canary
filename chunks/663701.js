@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => eC,
-    d: () => eS,
+    Z: () => eS,
+    d: () => eC,
 }),
     n(388685);
 var r = n(951288),
@@ -21,11 +21,11 @@ var r = n(951288),
     _ = n(607070),
     O = n(557968),
     E = n(213609),
-    y = n(463119),
-    v = n(377171),
+    v = n(463119),
+    y = n(377171),
     I = n(111028),
-    S = n(243778),
-    C = n(702456),
+    C = n(243778),
+    S = n(702456),
     T = n(882579),
     N = n(518311),
     j = n(488634),
@@ -47,8 +47,8 @@ var r = n(951288),
     F = n(905423),
     z = n(155409),
     W = n(210887),
-    q = n(695346),
-    Y = n(283595),
+    Y = n(695346),
+    q = n(283595),
     K = n(923834),
     Q = n(55563),
     X = n(774343),
@@ -324,22 +324,22 @@ let eh = (e) => {
                 })
               : (0, r.jsx)("div", {
                     className: eu.familyCenterButtonContainer,
-                    children: (0, r.jsx)(S.ZP, {
+                    children: (0, r.jsx)(C.ZP, {
                         contentTypes: [p.z.FAMILY_CENTER_NEW_BADGE],
                         children: (e) => {
                             let { visibleContent: t } = e;
                             return t === p.z.FAMILY_CENTER_NEW_BADGE
                                 ? (0, r.jsx)(g.IGR, {
                                       text: es.intl.string(es.t.y2b7CA),
-                                      color: v.Z.BG_BRAND,
+                                      color: y.Z.BG_BRAND,
                                   })
                                 : null;
                         },
                     }),
                 });
     },
-    ey = () => (0, V.$Z)("DM_SEARCH");
-function ev(e) {
+    ev = () => (0, V.$Z)("DM_SEARCH");
+function ey(e) {
     switch (e) {
         case ei.Z5c.APPLICATION_LIBRARY:
             return ei.ZY5.LIBRARY;
@@ -374,7 +374,7 @@ let eI = i.memo(function (e) {
         _ = i.useRef(null),
         O = i.useRef(null),
         E = i.useRef(null),
-        v = i.useRef(null);
+        y = i.useRef(null);
     return (0, r.jsxs)("nav", {
         className: eu.privateChannels,
         "aria-label": es.intl.string(es.t.ZH9aPz),
@@ -392,7 +392,7 @@ let eI = i.memo(function (e) {
                         color: h.zx.Colors.PRIMARY,
                         size: h.zx.Sizes.SMALL,
                         fullWidth: !0,
-                        onClick: ey,
+                        onClick: ev,
                         children: (0, r.jsx)(I.Z, { children: es.intl.string(es.t.LzcpeX) }),
                     }),
                 }),
@@ -442,12 +442,12 @@ let eI = i.memo(function (e) {
                                       (0, r.jsx)(
                                           U.g,
                                           {
-                                              nitroTabButtonRef: v,
+                                              nitroTabButtonRef: y,
                                               selected: null == b ? o : b.startsWith(ei.Z5c.APPLICATION_STORE),
                                               route: ei.Z5c.APPLICATION_STORE,
                                               locationState: {
                                                   analyticsSource: {
-                                                      page: ev(l),
+                                                      page: ey(l),
                                                       section: ei.jXE.NAVIGATION,
                                                       object: ei.qAy.NAVIGATION_LINK,
                                                   },
@@ -455,12 +455,12 @@ let eI = i.memo(function (e) {
                                           },
                                           "premium",
                                       ),
-                                      c && (0, r.jsx)(M.F, { targetElementRef: v }),
+                                      c && (0, r.jsx)(M.F, { targetElementRef: y }),
                                   ],
                               })
                             : null,
                         (0, r.jsx)(
-                            y.i,
+                            v.i,
                             {
                                 selected:
                                     b === ei.Z5c.COLLECTIBLES_SHOP ||
@@ -468,7 +468,7 @@ let eI = i.memo(function (e) {
                                 listItemRef: O,
                                 locationState: {
                                     analyticsSource: {
-                                        page: ev(l),
+                                        page: ey(l),
                                         section: ei.jXE.NAVIGATION,
                                         object: ei.qAy.NAVIGATION_LINK,
                                     },
@@ -499,8 +499,8 @@ let eI = i.memo(function (e) {
                                   "quests",
                               )
                             : null,
-                        (0, r.jsx)(eS, {}, "section-divider-top"),
-                        (0, r.jsx)(C.Z, {}, "frequent-friends"),
+                        (0, r.jsx)(eC, {}, "section-divider-top"),
+                        (0, r.jsx)(S.Z, {}, "frequent-friends"),
                         "full-width" === g && (0, r.jsx)(em, {}, "create-dm"),
                     ],
                 }),
@@ -508,10 +508,10 @@ let eI = i.memo(function (e) {
         ],
     });
 });
-function eS() {
+function eC() {
     return (0, r.jsx)("div", { className: eu.sectionDivider });
 }
-function eC() {
+function eS() {
     let e = (0, d.e7)([X.Z], () => X.Z.getHomeLink()),
         t = (0, d.e7)([Q.Z], () => {
             if (e === ei.Z5c.APPLICATION_STORE) return !0;
@@ -522,9 +522,9 @@ function eC() {
             }
             return !1;
         }, [e]),
-        n = !q.bm.useSetting(),
+        n = !Y.bm.useSetting(),
         { theme: i } = (0, d.cj)([W.Z], () => ({ theme: W.Z.theme })),
-        l = (0, d.e7)([Y.Z], () => Y.Z.hasLibraryApplication()),
+        l = (0, d.e7)([q.Z], () => q.Z.hasLibraryApplication()),
         a = (0, d.e7)([K.Z], () => K.Z.getCurrentPath()),
         [s, c] = (0, F.Z)((e) => {
             let { channelId: t, path: n } = e;
@@ -534,7 +534,7 @@ function eC() {
         p = (0, k.eW)(),
         f = (0, x.a)(),
         h = (function () {
-            let e = q.Ex.useSetting(),
+            let e = Y.Ex.useSetting(),
                 t = (0, A.Z)();
             return !0 === e && !0 === t;
         })(),

@@ -1,14 +1,14 @@
-a.d(e, {
-    X: () => o,
+n.d(e, {
+    X: () => c,
     h: () => r,
 }),
-    a(704826),
-    a(35282),
-    a(388685);
-var n = a(647438),
-    l = a(902676);
+    n(704826),
+    n(35282),
+    n(388685);
+var a = n(647438),
+    l = n(902676);
 function r(t) {
-    let { protocol: e, hostname: a } = n.useMemo(
+    let { protocol: e, hostname: n } = a.useMemo(
             () => ({
                 protocol: (0, l.E)(t),
                 hostname: (0, l.F)(t),
@@ -16,31 +16,31 @@ function r(t) {
             [t],
         ),
         r = "//" === t.substr(e.length, 2) ? "//" : "",
-        o = "".concat(e).concat(r).concat(a);
+        c = "".concat(e).concat(r).concat(n);
     return {
         protocol: e,
         authorityPrefix: r,
-        hostname: a,
-        theRestOfTheUrl: t.replace(o, ""),
+        hostname: n,
+        theRestOfTheUrl: t.replace(c, ""),
     };
 }
-function o(t) {
-    let { url: e, trustUrl: a, onConfirm: l, onCancel: o, onClose: s } = t,
-        [c, i] = n.useState(!1),
-        { protocol: d, authorityPrefix: u, hostname: m, theRestOfTheUrl: x } = r(e),
-        p = n.useCallback(() => {
-            c && a(e), null == s || s(), l();
-        }, [e, c, a, l, s]);
+function c(t) {
+    let { url: e, trustUrl: n, onConfirm: l, onCancel: c, onClose: i } = t,
+        [o, s] = a.useState(!1),
+        { protocol: d, authorityPrefix: u, hostname: x, theRestOfTheUrl: m } = r(e),
+        h = a.useCallback(() => {
+            o && n(e), null == i || i(), l();
+        }, [e, o, n, l, i]);
     return {
         protocol: d,
         authorityPrefix: u,
-        hostname: m,
-        theRestOfTheUrl: x,
-        shouldTrustUrl: c,
-        setShouldTrustUrl: i,
-        handleConfirm: p,
-        handleCancel: n.useCallback(() => {
-            null == s || s(), o();
-        }, [o, s]),
+        hostname: x,
+        theRestOfTheUrl: m,
+        shouldTrustUrl: o,
+        setShouldTrustUrl: s,
+        handleConfirm: h,
+        handleCancel: a.useCallback(() => {
+            null == i || i(), c();
+        }, [c, i]),
     };
 }

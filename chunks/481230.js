@@ -99,8 +99,8 @@ function _(e) {
         guildTemplateCode: E,
         birthday: v,
         invite: b = null,
-        giftCodeSKUId: I = null,
-        promoEmailConsent: j = null,
+        giftCodeSKUId: j = null,
+        promoEmailConsent: I = null,
         usedUsernameSuggestion: N = null,
     } = e;
     if ((s.Z.dispatch({ type: "REGISTER" }), null != v)) {
@@ -127,17 +127,17 @@ function _(e) {
             consent: _,
             phone_token: n,
             date_of_birth: null == v ? void 0 : v.format("YYYY-MM-DD"),
-            gift_code_sku_id: I,
+            gift_code_sku_id: j,
             guild_template_code: E,
-            promotional_email_opt_in: null == j ? void 0 : j.checked,
+            promotional_email_opt_in: null == I ? void 0 : I.checked,
         },
         trackedActionData: {
             event: l.NetworkActionNames.USER_REGISTER,
             properties: {
                 invite_code: b,
                 used_username_suggestion: N,
-                promotional_email_opt_in: null == j ? void 0 : j.checked,
-                promotional_email_pre_checked: null == j ? void 0 : j.preChecked,
+                promotional_email_opt_in: null == I ? void 0 : I.checked,
+                promotional_email_pre_checked: null == I ? void 0 : I.preChecked,
                 was_unique_username: !0,
             },
         },

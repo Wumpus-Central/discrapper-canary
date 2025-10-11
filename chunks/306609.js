@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     o = n(120356),
     l = n.n(o),
-    a = n(137317),
+    a = n(599273),
     s = n(442837),
     c = n(481060),
     u = n(493773),
@@ -83,13 +83,13 @@ function H(e, t) {
 }
 function z(e) {
     let { onSettingsButtonClick: t, wide: n, showOutputDevices: o = !1, showSearchBar: z = !0 } = e,
-        [q, B] = i.useState(""),
-        { analyticsLocations: W, newestAnalyticsLocation: X } = (0, m.ZP)(p.Z.VOICE_FILTER_POPOUT),
-        K = i.useRef(null),
+        [B, q] = i.useState(""),
+        { analyticsLocations: W, newestAnalyticsLocation: K } = (0, m.ZP)(p.Z.VOICE_FILTER_POPOUT),
+        X = i.useRef(null),
         G = (0, d.Z)({
             minDimension: 400,
             maxDimension: 600,
-            resizableDomNodeRef: K,
+            resizableDomNodeRef: X,
             onElementResize: (e, t) => {},
             onElementResizeEnd: (e) => {},
             orientation: d.y.VERTICAL_TOP,
@@ -124,8 +124,8 @@ function z(e) {
         }),
         ea = (0, c.q_F)({
             to: {
-                bottom: "" !== q ? "translateY(75px)" : "translateY(50px)",
-                opacity: +("" === q),
+                bottom: "" !== B ? "translateY(75px)" : "translateY(50px)",
+                opacity: +("" === B),
             },
             config: {
                 tension: 280,
@@ -139,13 +139,13 @@ function z(e) {
             ei && (0, w.jG)(),
             x.default.track(M.rMx.VOICE_FILTER_PICKER_OPENED, { active_voice_filter_id: null != er ? er : null });
     });
-    let ec = i.useCallback(() => B(""), [B]),
+    let ec = i.useCallback(() => q(""), [q]),
         eu = i.useRef(null),
         ed = (0, g.bp)() !== M.IlC.OVERLAY;
     return (0, r.jsx)(m.Gt, {
         value: W,
         children: (0, r.jsxs)("div", {
-            ref: K,
+            ref: X,
             className: l()(U.voiceFiltersPopout, {
                 [U.wide]: n,
                 [U.notResizable]: !ed,
@@ -162,12 +162,12 @@ function z(e) {
                     (0, r.jsx)(c.E1j, {
                         placeholder: L.intl.string(L.t.hHCZJS),
                         autoFocus: !0,
-                        onChange: B,
-                        query: q,
+                        onChange: q,
+                        query: B,
                         onClear: ec,
                     }),
                 (0, r.jsx)(k.w, {
-                    query: q,
+                    query: B,
                     columns: n ? 5 : 4,
                     handleScroll: (e) => {
                         let t = es.current;
@@ -251,7 +251,7 @@ function z(e) {
                                     renderOutputDevices: o,
                                     renderOutputVolume: o,
                                     onClose: t,
-                                    onInteraction: (0, b.u)("AudioDeviceMenu", X, { entrypoint: A.A5.THREE_DOT }),
+                                    onInteraction: (0, b.u)("AudioDeviceMenu", K, { entrypoint: A.A5.THREE_DOT }),
                                     minimal: !0,
                                 }),
                             children: (e) =>

@@ -1,7 +1,7 @@
 n.d(t, {
-    Ct: () => L,
-    px: () => k,
-    uz: () => x,
+    Ct: () => x,
+    px: () => j,
+    uz: () => L,
 }),
     n(388685),
     n(953529);
@@ -102,7 +102,7 @@ function w(e, t) {
     return i;
 }
 let D = { keys: ["label"] };
-function x(e) {
+function L(e) {
     var { children: t, isCollapsible: n = !1, maxOptionsVisible: a = 5, isOpen: o, setIsOpen: l, options: c } = e,
         u = P(e, ["children", "isCollapsible", "maxOptionsVisible", "isOpen", "setIsOpen", "options"]);
     let {
@@ -122,8 +122,8 @@ function x(e) {
         [A, N] = i.useState(!1),
         [R, w] = i.useState(""),
         {
-            options: x,
-            loading: L,
+            options: L,
+            loading: x,
             onQueryChange: M,
         } = (0, y.U)({
             active: null == o || o,
@@ -136,13 +136,13 @@ function x(e) {
         i.useEffect(() => {
             o || S(null);
         }, [o, S]);
-    let k = i.useMemo(() => ("" === R ? x : (0, s.Lu)(x, R, null != b ? b : D)), [x, R, b]),
-        j = i.useMemo(
+    let j = i.useMemo(() => ("" === R ? L : (0, s.Lu)(L, R, null != b ? b : D)), [L, R, b]),
+        k = i.useMemo(
             () =>
                 null == g || (Array.isArray(g) && 0 === g.length)
                     ? []
-                    : (Array.isArray(g) ? g : [g]).map((e) => x.find((t) => t.value === e)).filter((e) => null != e),
-            [g, x],
+                    : (Array.isArray(g) ? g : [g]).map((e) => L.find((t) => t.value === e)).filter((e) => null != e),
+            [g, L],
         ),
         U = f || _,
         G = i.useCallback(
@@ -159,7 +159,7 @@ function x(e) {
             },
             [U, d, m, p, o, l, O],
         ),
-        B = j.length > 0;
+        B = k.length > 0;
     return (0, r.jsx)(E.Z.Provider, {
         value: C(
             {
@@ -171,13 +171,13 @@ function x(e) {
                 isCollapsible: n,
                 hasValue: B,
                 value: g,
-                options: x,
-                filteredOptions: k,
-                selectedOptions: j,
+                options: L,
+                filteredOptions: j,
+                selectedOptions: k,
                 maxOptionsVisible: a,
                 query: R,
                 setQuery: w,
-                loading: L,
+                loading: x,
                 handleSelectionChange: G,
                 isOpen: o,
                 setIsOpen: l,
@@ -189,7 +189,7 @@ function x(e) {
         children: t,
     });
 }
-function L(e) {
+function x(e) {
     var { hideLabel: t, description: n, helperText: i, errorMessage: a, successMessage: o, ref: s } = e,
         l = P(e, ["hideLabel", "description", "helperText", "errorMessage", "successMessage", "ref"]);
     let { id: u, required: d, label: f } = l;
@@ -223,12 +223,12 @@ function M(e) {
             ref: w,
         } = e,
         D = i.useRef(null),
-        x = i.useRef(null),
         L = i.useRef(null),
+        x = i.useRef(null),
         M = i.useContext(u.z),
         {
-            activeDescendantIndex: k,
-            setActiveDescendantIndex: j,
+            activeDescendantIndex: j,
+            setActiveDescendantIndex: k,
             selectionMode: U,
             disabled: G,
             readOnly: B,
@@ -254,7 +254,7 @@ function M(e) {
             setIsEditing: eo,
         } = (0, E.T)(),
         es = "multiple" === U && q,
-        el = null != k ? (0, O.cA)(H, k) : void 0;
+        el = null != j ? (0, O.cA)(H, j) : void 0;
     i.useEffect(() => {
         var e;
         null != el &&
@@ -269,7 +269,7 @@ function M(e) {
         }, [K, J, $]),
         eu = i.useCallback(() => {
             var e;
-            "multiple" === U ? Q([]) : Q(null), null == (e = x.current) || e.focus();
+            "multiple" === U ? Q([]) : Q(null), null == (e = L.current) || e.focus();
         }, [Q, U]),
         ed = i.useCallback(
             (e) => {
@@ -288,9 +288,9 @@ function M(e) {
     i.useEffect(() => {
         es &&
             !P &&
-            (L.current = setTimeout(() => {
+            (x.current = setTimeout(() => {
                 var e;
-                null == (e = x.current) ||
+                null == (e = L.current) ||
                     e.scrollIntoView({
                         behavior: "smooth",
                         block: "nearest",
@@ -299,11 +299,11 @@ function M(e) {
     }, [et, es, P]);
     let e_ = i.useCallback(() => {
             var e;
-            null == (e = x.current) || e.focus();
+            null == (e = L.current) || e.focus();
         }, []),
         ep = i.useCallback(() => {
             var e;
-            null == (e = x.current) || e.select();
+            null == (e = L.current) || e.select();
         }, []),
         eh = i.useCallback(
             (e) => {
@@ -320,7 +320,7 @@ function M(e) {
                     case "ArrowDown":
                         if (0 === t) return;
                         e.preventDefault(),
-                            j((e) => {
+                            k((e) => {
                                 if (null === e) return 0;
                                 let n = e + 1;
                                 return n >= t && (n = W ? 0 : e), n;
@@ -330,7 +330,7 @@ function M(e) {
                     case "ArrowUp":
                         if (0 === t) return;
                         e.preventDefault(),
-                            j((e) => {
+                            k((e) => {
                                 if (null === e) return 0;
                                 let n = e - 1;
                                 return n < 0 && (n = W ? t - 1 : 0), n;
@@ -338,8 +338,8 @@ function M(e) {
                             null == $ || $(!0);
                         break;
                     case "Enter":
-                        if ((e.preventDefault(), e.stopPropagation(), null == k || 0 === t)) return;
-                        let n = en[k];
+                        if ((e.preventDefault(), e.stopPropagation(), null == j || 0 === t)) return;
+                        let n = en[j];
                         if (!0 === n.disabled || (V && 1 === et.length && et.includes(n))) return;
                         X((0, O.cq)(U, et, n));
                         break;
@@ -354,13 +354,13 @@ function M(e) {
                 }
                 null == N || N(e);
             },
-            [U, V, F, q, W, N, eu, X, et, er, $, en, k, j],
+            [U, V, F, q, W, N, eu, X, et, er, $, en, j, k],
         ),
         eg = i.useCallback(
             (e) => {
-                eo(!0), ei(e.target.value), null == $ || $(!0), null == h || h(e), j(null);
+                eo(!0), ei(e.target.value), null == $ || $(!0), null == h || h(e), k(null);
             },
-            [h, eo, ei, $, j],
+            [h, eo, ei, $, k],
         ),
         eE = i.useMemo(() => {
             if (0 === et.length) return null;
@@ -429,7 +429,7 @@ function M(e) {
                             (0, r.jsx)(_.tEY, {
                                 ringTarget: Y,
                                 children: (0, r.jsx)(p.I, {
-                                    ref: x,
+                                    ref: L,
                                     id: t,
                                     className: o()(S.input, T.comboBoxInput, {
                                         [T.hiddenVisually]: "single" === U && q && !ea,
@@ -472,7 +472,7 @@ function M(e) {
         ],
     });
 }
-function k(e) {
+function j(e) {
     let { renderListItem: t, renderEmptyState: n, maxVisibleItems: a = 5 } = e,
         {
             filteredOptions: o,

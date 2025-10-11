@@ -1,12 +1,12 @@
 t.d(a, { k: () => o }), t(388685);
 var r = t(647438),
-    s = t(110924),
-    n = t(626135),
+    n = t(110924),
+    s = t(626135),
     l = t(798930),
     i = t(981631);
 function o(e, a) {
     let [t, o] = r.useState(l.O.LANDING),
-        c = (0, s.Z)(t),
+        c = (0, n.Z)(t),
         [d, x] = r.useState(null),
         [u, h] = r.useState(null),
         [m, N] = r.useState(void 0),
@@ -34,7 +34,7 @@ function o(e, a) {
     return (
         r.useEffect(() => {
             t !== c &&
-                n.default.track(i.rMx.ACCOUNT_LINK_STEP, {
+                s.default.track(i.rMx.ACCOUNT_LINK_STEP, {
                     location_stack: e,
                     previous_step: c,
                     current_step: t,

@@ -9,65 +9,65 @@ function r(e) {
             d = e[0] | (e[1] << 8) | (e[2] << 16),
             u = e[3] | (e[4] << 8),
             f = (63 & d) / 63,
-            m = ((d >> 6) & 63) / 31.5 - 1,
+            p = ((d >> 6) & 63) / 31.5 - 1,
             h = ((d >> 12) & 63) / 31.5 - 1,
-            p = d >> 23,
-            g = u >> 15,
-            x = o(3, g ? (p ? 5 : 7) : 7 & u),
-            _ = o(3, g ? 7 & u : p ? 5 : 7),
-            v = p ? (15 & e[5]) / 15 : 1,
+            m = d >> 23,
+            _ = u >> 15,
+            g = o(3, _ ? (m ? 5 : 7) : 7 & u),
+            x = o(3, _ ? 7 & u : m ? 5 : 7),
+            v = m ? (15 & e[5]) / 15 : 1,
             j = (e[5] >> 4) / 15,
-            b = p ? 6 : 5,
+            b = m ? 6 : 5,
             S = 0,
-            C = (t, n, r) => {
+            y = (t, n, r) => {
                 let i = [];
                 for (let l = 0; l < n; l++)
                     for (let s = +!l; s * n < t * (n - l); s++)
                         i.push((((e[b + (S >> 1)] >> ((1 & S++) << 2)) & 15) / 7.5 - 1) * r);
                 return i;
             },
-            y = C(x, _, ((d >> 18) & 31) / 31),
-            O = C(3, 3, (((u >> 3) & 63) / 63) * 1.25),
-            w = C(3, 3, (((u >> 9) & 63) / 63) * 1.25),
-            Z = p && C(5, 5, j),
-            I =
+            O = y(g, x, ((d >> 18) & 31) / 31),
+            C = y(3, 3, (((u >> 3) & 63) / 63) * 1.25),
+            w = y(3, 3, (((u >> 9) & 63) / 63) * 1.25),
+            P = m && y(5, 5, j),
+            Z =
                 ((n = (t = e)[3]),
                 (r = 128 & t[2]),
                 ((i = 128 & t[4]) ? (r ? 5 : 7) : 7 & n) / (i ? 7 & n : r ? 5 : 7)),
-            P = c(I > 1 ? 32 : 32 * I),
-            N = c(I > 1 ? 32 / I : 32),
-            T = new Uint8Array(P * N * 4),
-            E = [],
-            R = [];
-        for (let e = 0, t = 0; e < N; e++)
-            for (let n = 0; n < P; n++, t += 4) {
+            I = c(Z > 1 ? 32 : 32 * Z),
+            E = c(Z > 1 ? 32 / Z : 32),
+            T = new Uint8Array(I * E * 4),
+            N = [],
+            A = [];
+        for (let e = 0, t = 0; e < E; e++)
+            for (let n = 0; n < I; n++, t += 4) {
                 let r = f,
-                    i = m,
+                    i = p,
                     c = h,
                     d = v;
-                for (let e = 0, t = o(x, p ? 5 : 3); e < t; e++) E[e] = a((l / P) * (n + 0.5) * e);
-                for (let t = 0, n = o(_, p ? 5 : 3); t < n; t++) R[t] = a((l / N) * (e + 0.5) * t);
-                for (let e = 0, t = 0; e < _; e++)
-                    for (let n = +!e, i = 2 * R[e]; n * _ < x * (_ - e); n++, t++) r += y[t] * E[n] * i;
+                for (let e = 0, t = o(g, m ? 5 : 3); e < t; e++) N[e] = a((l / I) * (n + 0.5) * e);
+                for (let t = 0, n = o(x, m ? 5 : 3); t < n; t++) A[t] = a((l / E) * (e + 0.5) * t);
+                for (let e = 0, t = 0; e < x; e++)
+                    for (let n = +!e, i = 2 * A[e]; n * x < g * (x - e); n++, t++) r += O[t] * N[n] * i;
                 for (let e = 0, t = 0; e < 3; e++)
-                    for (let n = +!e, r = 2 * R[e]; n < 3 - e; n++, t++) {
-                        let e = E[n] * r;
-                        (i += O[t] * e), (c += w[t] * e);
+                    for (let n = +!e, r = 2 * A[e]; n < 3 - e; n++, t++) {
+                        let e = N[n] * r;
+                        (i += C[t] * e), (c += w[t] * e);
                     }
-                if (p)
+                if (m)
                     for (let e = 0, t = 0; e < 5; e++)
-                        for (let n = +!e, r = 2 * R[e]; n < 5 - e; n++, t++) d += Z[t] * E[n] * r;
+                        for (let n = +!e, r = 2 * A[e]; n < 5 - e; n++, t++) d += P[t] * N[n] * r;
                 let u = r - (2 / 3) * i,
-                    g = (3 * r - u + c) / 2,
-                    j = g - c;
-                (T[t] = o(0, 255 * s(1, g))),
+                    _ = (3 * r - u + c) / 2,
+                    j = _ - c;
+                (T[t] = o(0, 255 * s(1, _))),
                     (T[t + 1] = o(0, 255 * s(1, j))),
                     (T[t + 2] = o(0, 255 * s(1, u))),
                     (T[t + 3] = o(0, 255 * s(1, d)));
             }
         return {
-            w: P,
-            h: N,
+            w: I,
+            h: E,
             rgba: T,
         };
     })(e);

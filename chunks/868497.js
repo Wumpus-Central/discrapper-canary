@@ -49,9 +49,9 @@ function d(t, e, a, N, A = "auto.http.browser") {
             }
         })(h),
         P = O ? (0, r.en)(O).host : void 0,
-        g = !!(0, s.HN)(),
-        D =
-            T && g
+        D = !!(0, s.HN)(),
+        g =
+            T && D
                 ? (0, u.qp)({
                       name: `${p} ${h}`,
                       attributes: {
@@ -65,7 +65,7 @@ function d(t, e, a, N, A = "auto.http.browser") {
                       },
                   })
                 : new l.b();
-    if (((t.fetchData.__span = D.spanContext().spanId), (N[D.spanContext().spanId] = D), a(t.fetchData.url) && L)) {
+    if (((t.fetchData.__span = g.spanContext().spanId), (N[g.spanContext().spanId] = g), a(t.fetchData.url) && L)) {
         let e = t.args[0];
         t.args[1] = t.args[1] || {};
         let a = t.args[1];
@@ -108,7 +108,7 @@ function d(t, e, a, N, A = "auto.http.browser") {
                     }
                 );
             }
-        })(e, L, f, a, (0, E.z)() && g ? D : void 0);
+        })(e, L, f, a, (0, E.z)() && D ? g : void 0);
     }
-    return D;
+    return g;
 }

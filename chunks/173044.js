@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => x });
 var r = n(951288);
 n(647438);
 var i = n(755721),
@@ -10,34 +10,34 @@ var i = n(755721),
     d = n(639119),
     u = n(767714),
     f = n(74538),
-    m = n(156582),
+    p = n(156582),
     h = n(474936),
-    p = n(637824),
-    g = n(388032),
-    x = n(312518);
-function _(e) {
-    var t, n, _;
+    m = n(637824),
+    _ = n(388032),
+    g = n(312518);
+function x(e) {
+    var t, n, x;
     let { onClose: v } = e,
         { analyticsLocations: j } = (0, o.ZP)(s.Z.GO_LIVE_MODAL_V2),
         b = (0, d.N)(),
         S = (0, c.Ng)(),
-        C =
+        y =
             (null == b || null == (t = b.subscription_trial) ? void 0 : t.sku_id) === h.Si.TIER_2 ||
             (0, c.Wp)(S, h.Si.TIER_2),
-        y = g.intl.string(p.default["+f+cqq"]);
+        O = _.intl.string(m.default["+f+cqq"]);
     return (
-        C &&
+        y &&
             (null != b
-                ? (y = (0, f.Rt)({
+                ? (O = (0, f.Rt)({
                       intervalType: null == b || null == (n = b.subscription_trial) ? void 0 : n.interval,
-                      intervalCount: null == b || null == (_ = b.subscription_trial) ? void 0 : _.interval_count,
+                      intervalCount: null == b || null == (x = b.subscription_trial) ? void 0 : x.interval_count,
                   }))
-                : null != S && (y = g.intl.formatToPlainString(g.t.bkQ4bG, { percent: S.discount.amount }))),
+                : null != S && (O = _.intl.formatToPlainString(_.t.bkQ4bG, { percent: S.discount.amount }))),
         (0, r.jsxs)("div", {
-            className: x.root,
+            className: g.root,
             children: [
                 (0, r.jsxs)(l.Text, {
-                    className: x.infoText,
+                    className: g.infoText,
                     variant: "text-xs/normal",
                     color: "always-white",
                     children: [
@@ -45,9 +45,9 @@ function _(e) {
                             size: "xxs",
                             color: "currentColor",
                         }),
-                        g.intl.format(g.t.sLJ3ER, {
+                        _.intl.format(_.t.sLJ3ER, {
                             onNitroClick: function () {
-                                (0, m.E)({
+                                (0, p.E)({
                                     analyticsLocation: j[0],
                                     onClose: v,
                                 });
@@ -56,19 +56,19 @@ function _(e) {
                     ],
                 }),
                 (0, r.jsx)(u.Z, {
-                    className: x.ctaButton,
-                    iconClassName: x.premiumIcon,
+                    className: g.ctaButton,
+                    iconClassName: g.premiumIcon,
                     size: i.zx.Sizes.TINY,
                     color: i.zx.Colors.BRAND_INVERTED,
                     subscriptionTier: h.Si.TIER_2,
-                    buttonShineClassName: x.premiumShine,
+                    buttonShineClassName: g.premiumShine,
                     iconColor: a.JX.PREMIUM_TIER_2,
                     onClick: () => {
                         v();
                     },
                     textOptions: {
-                        subscribeText: y,
-                        textClassName: x.ctaButtonText,
+                        subscribeText: O,
+                        textClassName: g.ctaButtonText,
                     },
                 }),
             ],

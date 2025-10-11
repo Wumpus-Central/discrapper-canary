@@ -2,13 +2,13 @@ n.d(t, { R: () => u }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(843991),
-    s = n(442837),
-    a = n(852860),
+    a = n(442837),
+    s = n(852860),
     o = n(434404),
     c = n(999382),
     d = n(203377);
 function u() {
-    let { guild: e, originalGuild: t, submitting: n, errors: u } = (0, s.cj)([c.Z], () => c.Z.getProps()),
+    let { guild: e, originalGuild: t, submitting: n, errors: u } = (0, a.cj)([c.Z], () => c.Z.getProps()),
         g = i.useMemo(() => (0, d.LG)(u), [u]),
         m = i.useCallback(async () => {
             if (null == e) return Promise.resolve();
@@ -32,7 +32,7 @@ function u() {
         p = i.useCallback(() => {
             null != e && o.Z.init(e.id);
         }, [e]);
-    return (0, r.jsx)(a.Z, {
+    return (0, r.jsx)(s.Z, {
         submitting: n,
         errorMessage: g,
         onSave: m,

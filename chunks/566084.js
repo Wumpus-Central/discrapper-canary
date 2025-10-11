@@ -2,21 +2,21 @@ n.d(t, { Z: () => m });
 var r,
     i,
     l = n(442837),
-    s = n(570140);
-let a = null,
+    a = n(570140);
+let s = null,
     o = 0,
     c = null,
     d = null,
     u = !1;
 class g extends (i = l.ZP.Store) {
     hasChanges() {
-        return a !== c;
+        return s !== c;
     }
     showNotice() {
         return this.hasChanges();
     }
     get vanityURLCode() {
-        return a;
+        return s;
     }
     get originalVanityURLCode() {
         return c;
@@ -42,19 +42,19 @@ class g extends (i = l.ZP.Store) {
           writable: !0,
       })
     : (g[r] = "GuildSettingsVanityURLStore");
-let m = new g(s.Z, {
+let m = new g(a.Z, {
     GUILD_SETTINGS_SET_VANITY_URL: function (e) {
         var t, n;
-        (c = a = null != (t = e.code) ? t : ""), (o = e.uses), (d = null != (n = e.error) ? n : null), (u = !0);
+        (c = s = null != (t = e.code) ? t : ""), (o = e.uses), (d = null != (n = e.error) ? n : null), (u = !0);
     },
     GUILD_SETTINGS_CLOSE: function () {
-        (c = a = null), (o = 0), (d = null), (u = !1);
+        (c = s = null), (o = 0), (d = null), (u = !1);
     },
     GUILD_SETTINGS_VANITY_URL_RESET: function () {
-        (a = c), (o = 0), (d = null);
+        (s = c), (o = 0), (d = null);
     },
     GUILD_SETTINGS_VANITY_URL_SET: function (e) {
-        (a = e.code), (o = 0);
+        (s = e.code), (o = 0);
     },
     GUILD_SETTINGS_VANITY_URL_ERROR: function (e) {
         d = e.error;

@@ -12,11 +12,11 @@ t.d(n, {
     t(415506);
 var a = t(647438),
     l = t(772848),
-    i = t(304809),
-    r = t(586826),
+    r = t(304809),
+    i = t(586826),
     o = t(943351);
 let s = new Worker(new URL("/assets/" + t.u("14315"), t.b)),
-    u = (0, i.N)();
+    u = (0, r.N)();
 async function c(e) {
     if (null == u) throw Error("Failed to create audio context");
     let n = await e.arrayBuffer();
@@ -24,12 +24,12 @@ async function c(e) {
 }
 function d(e) {
     let [n, t] = a.useState(null),
-        [l, i] = a.useState(null);
+        [l, r] = a.useState(null);
     return (
         a.useEffect(() => {
             if (null == e) return;
             let n = (0, o.hp)(e);
-            n !== l && (i(n), t(null), c(e).then(t));
+            n !== l && (r(n), t(null), c(e).then(t));
         }, [l, e]),
         n
     );
@@ -60,27 +60,27 @@ let f = (function (e) {
     return e;
 })({}, o.nl);
 function m(e, n, t) {
-    let [i, u] = a.useState(null),
+    let [r, u] = a.useState(null),
         [c, d] = a.useState(null),
         [m, g] = a.useState(1),
-        { setMaxVolume: h } = (0, r.p)(),
+        { setMaxVolume: h } = (0, i.p)(),
         p = a.useCallback(
             (e, n) => {
                 var a;
                 d(null),
                     ((a = n.offsetWidth),
                     new Promise((n) => {
-                        let i = (0, l.Z)(),
-                            r = (e) => {
+                        let r = (0, l.Z)(),
+                            i = (e) => {
                                 let {
                                     data: { waveform: t, id: a, normalizedVolumeMultipler: l },
                                 } = e;
-                                i === a && (n(t), g(l)), null == s || s.removeEventListener("message", r);
+                                r === a && (n(t), g(l)), null == s || s.removeEventListener("message", i);
                             };
-                        null == s || s.addEventListener("message", r),
+                        null == s || s.addEventListener("message", i),
                             null == s ||
                                 s.postMessage({
-                                    id: i,
+                                    id: r,
                                     options: t,
                                     config: f,
                                     width: a,
@@ -94,8 +94,8 @@ function m(e, n, t) {
         a.useEffect(() => {
             if (null == e || null == n) return;
             let a = (0, o.V3)(e, t);
-            i !== a && (u(a), p(e, n));
-        }, [e, p, n, t, i]),
+            r !== a && (u(a), p(e, n));
+        }, [e, p, n, t, r]),
         a.useEffect(() => {
             h(m);
         }, [m, h]),

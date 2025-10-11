@@ -17,11 +17,11 @@ var r = n(392711),
     _ = n(594174),
     O = n(979651),
     E = n(996106),
-    y = n(914946),
-    v = n(238679),
+    v = n(914946),
+    y = n(238679),
     I = n(452426),
-    S = n(295424),
-    C = n(222263),
+    C = n(295424),
+    S = n(222263),
     T = n(863141),
     N = n(186901),
     j = n(981631);
@@ -32,7 +32,7 @@ function x(e) {
             socket: n,
         } = e,
         r = f.Z.getChannel(t);
-    if (null == r || !(0, y.zM)(r, n.application.id, n.authorization.scopes))
+    if (null == r || !(0, v.zM)(r, n.application.id, n.authorization.scopes))
         throw new E.Z({ errorCode: j.lTL.INVALID_CHANNEL }, "Invalid channel id: ".concat(t));
     if ((0, s.ft)(r)) throw new E.Z({ errorCode: j.lTL.INVALID_CHANNEL }, "Invalid nsfw channel id: ".concat(r.id));
 }
@@ -95,7 +95,7 @@ let w = {
                                 let { userId: t } = e;
                                 return t;
                             })
-                            .forEach((e) => r((0, y.aE)(a, l.id, e))),
+                            .forEach((e) => r((0, v.aE)(a, l.id, e))),
                     o
                 );
             };
@@ -124,7 +124,7 @@ let w = {
                             let { userId: t } = e;
                             return t;
                         })
-                        .forEach((e) => r((0, y.aE)(a, l.id, e))),
+                        .forEach((e) => r((0, v.aE)(a, l.id, e))),
                     o
                 );
             };
@@ -146,7 +146,7 @@ let w = {
                     l = f.Z.getChannel(t);
                 if (null == l) return;
                 let a = l.getGuildId(),
-                    o = Object.values(O.Z.getVoiceStatesForChannel(l.id)).map((e) => (0, y.aE)(a, l.id, e));
+                    o = Object.values(O.Z.getVoiceStatesForChannel(l.id)).map((e) => (0, v.aE)(a, l.id, e));
                 return (
                     i()
                         .differenceWith(o, n, i().isEqual)
@@ -163,7 +163,7 @@ let w = {
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
                 r = {
-                    state: (0, y.zy)(b.Z.getState()),
+                    state: (0, v.zy)(b.Z.getState()),
                     hostname: b.Z.getHostname(),
                     pings: b.Z.getPings(),
                     average_ping: b.Z.getAveragePing(),
@@ -253,7 +253,7 @@ let w = {
         scope: void 0,
         handler() {},
     },
-    [j.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: v.gQ,
+    [j.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: y.gQ,
     [j.zMe.THERMAL_STATE_UPDATE]: {
         scope: { [N.Gp.ANY]: [N.wE] },
         handler() {},
@@ -303,7 +303,7 @@ let w = {
                 let { prevState: n, dispatch: r } = e,
                     i = { currentGuildMember: h.ZP.getSelfMember(t) };
                 return (
-                    null == i.currentGuildMember || (null != n && (0, o.Z)(i, n)) || r((0, C.Z)(i.currentGuildMember)),
+                    null == i.currentGuildMember || (null != n && (0, o.Z)(i, n)) || r((0, S.Z)(i.currentGuildMember)),
                     i
                 );
             };
@@ -331,7 +331,7 @@ let w = {
                 l = p.Z.getStreamerActiveStreamMetadata(),
                 a = (null == l ? void 0 : l.pid) != null ? u.ZP.getGameForPID(l.pid) : null,
                 o = (null == a ? void 0 : a.id) != null ? c.Z.getApplication(a.id) : null,
-                s = null != o ? (0, S.Z)(o) : null,
+                s = null != o ? (0, C.Z)(o) : null,
                 d = null == l ? void 0 : l.sourceName,
                 f = {
                     active: null != l,
