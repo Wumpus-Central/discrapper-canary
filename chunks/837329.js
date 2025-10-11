@@ -9,7 +9,7 @@ function s(e) {
         t = r.useRef(null),
         s = r.useCallback(
             async (n) => {
-                if (null == e) return;
+                if ("" === e) return;
                 let r = [],
                     i = !1;
                 try {
@@ -74,7 +74,7 @@ function s(e) {
     let c = null != n;
     return (
         r.useEffect(() => {
-            if (null == e || c) return;
+            if ("" === e || c) return;
             let n = a.Z.getRegionStateForPingUrl(e);
             if ((null == n ? void 0 : n.rtt) != null || (null == n ? void 0 : n.loading) === !0) return;
             (0, l.hz)(e, {
