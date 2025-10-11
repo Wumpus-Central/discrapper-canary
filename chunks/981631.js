@@ -5117,6 +5117,7 @@ var nE = (function (e) {
             (e.DESKTOP_TTI = "desktop_tti"),
             (e.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY = "desktop_perf_attributed_module_memory"),
             (e.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY_CALLSTACK = "desktop_perf_attributed_module_memory_callstack"),
+            (e.DESKTOP_PERF_HEARTBEAT = "desktop_perf_heartbeat"),
             (e.RTC_PANEL_VIEWED = "rtc_panel_viewed"),
             (e.E2EE_USER_VERIFICATION_VIEWED = "e2ee_user_verification_viewed"),
             (e.E2EE_USER_VERIFIED = "e2ee_user_verified"),
