@@ -26,7 +26,9 @@ function v(e) {
                     section: p.oAB.PROFILE_CUSTOMIZATION,
                     analyticsLocations: v,
                 }),
-                (0, m.I)({ analyticsLocations: v });
+                setTimeout(() => {
+                    (0, m.I)({ analyticsLocations: v });
+                }, 200);
         }, [t, v]),
         C = (0, r.useCallback)(() => {
             t(h.L.USER_DISMISS);

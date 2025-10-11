@@ -176,7 +176,9 @@ let eE = () => {
                 section: x.oAB.PROFILE_CUSTOMIZATION,
                 analyticsLocations: e,
             }),
-                (0, m.I)({ analyticsLocations: e });
+                setTimeout(() => {
+                    (0, m.I)({ analyticsLocations: e });
+                }, 200);
         }, [e]),
         eB = {
             clientThemes: {

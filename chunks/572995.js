@@ -1,7 +1,7 @@
 n.d(t, {
-    NA: () => ea,
-    ZP: () => es,
-    y$: () => ei,
+    NA: () => el,
+    ZP: () => eu,
+    y$: () => es,
 });
 var r = n(647438),
     i = n(100527),
@@ -25,38 +25,41 @@ var r = n(647438),
     v = n(985443),
     I = n(612253),
     T = n(872532),
-    S = n(404583),
-    A = n(295349),
-    C = n(631572),
-    N = n(999675),
-    R = n(238027),
-    P = n(997585),
-    w = n(138431),
-    D = n(305516),
-    L = n(980984),
-    x = n(952842),
-    M = n(38244),
-    j = n(491878),
-    k = n(751049),
-    U = n(518971),
-    G = n(85726),
-    B = n(281652),
-    Z = n(982935),
-    F = n(831399),
-    V = n(91342),
-    H = n(181708),
-    Y = n(290650),
-    W = n(751125),
-    K = n(904505),
-    z = n(712626),
-    q = n(386014),
-    X = n(845571),
-    Q = n(220046),
-    J = n(385874),
-    $ = n(371000),
-    ee = n(377679),
-    et = n(825087);
-function en(e, t, n) {
+    S = n(184071),
+    A = n(368243),
+    C = n(119121),
+    N = n(404583),
+    R = n(295349),
+    P = n(631572),
+    w = n(999675),
+    D = n(238027),
+    L = n(997585),
+    x = n(138431),
+    M = n(305516),
+    j = n(980984),
+    k = n(952842),
+    U = n(38244),
+    G = n(491878),
+    B = n(751049),
+    Z = n(518971),
+    F = n(85726),
+    V = n(281652),
+    H = n(982935),
+    Y = n(831399),
+    W = n(91342),
+    K = n(181708),
+    z = n(290650),
+    q = n(751125),
+    X = n(904505),
+    Q = n(712626),
+    J = n(386014),
+    $ = n(845571),
+    ee = n(220046),
+    et = n(385874),
+    en = n(371000),
+    er = n(377679),
+    ei = n(825087);
+function ea(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -69,7 +72,7 @@ function en(e, t, n) {
         e
     );
 }
-function er(e) {
+function eo(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -80,15 +83,15 @@ function er(e) {
                 }),
             )),
             r.forEach(function (t) {
-                en(e, t, n[t]);
+                ea(e, t, n[t]);
             });
     }
     return e;
 }
-var ei = (function (e) {
+var es = (function (e) {
         return (e.SMALL = "small"), (e.MEDIUM = "medium"), (e.LARGE = "large"), e;
     })({}),
-    ea = (function (e) {
+    el = (function (e) {
         return (
             (e.REFERRAL_PROGRAM = "referralProgram"),
             (e.SERVER_PROFILES = "serverProfiles"),
@@ -101,69 +104,69 @@ var ei = (function (e) {
             e
         );
     })({});
-let eo = (e, t) =>
-        er(
+let ec = (e, t) =>
+        eo(
             {
                 serverProfiles: {
                     thumbnail: T,
-                    assetUrl: e ? X.ZP : Q.ZP,
+                    assetUrl: e ? $.ZP : ee.ZP,
                 },
                 customThemes: {
-                    thumbnail: Z.Z,
-                    assetUrl: e ? B.Z : F.Z,
+                    thumbnail: H.Z,
+                    assetUrl: e ? V.Z : Y.Z,
                 },
                 displayNameStyles: {
-                    thumbnail: Z.Z,
-                    assetUrl: e ? B.Z : F.Z,
+                    thumbnail: A.Z,
+                    assetUrl: e ? S.Z : C.Z,
                 },
             },
             t
                 ? {
                       referralProgram: {
-                          thumbnail: D.Z,
-                          assetUrl: e ? w.Z : L.Z,
-                      },
-                      showYourStyle: {
                           thumbnail: M.Z,
                           assetUrl: e ? x.Z : j.Z,
                       },
-                      yourSpace: {
+                      showYourStyle: {
                           thumbnail: U.Z,
                           assetUrl: e ? k.Z : G.Z,
                       },
-                      emojis: {
-                          thumbnail: A.Z,
-                          assetUrl: e ? S.Z : C.Z,
+                      yourSpace: {
+                          thumbnail: Z.Z,
+                          assetUrl: e ? B.Z : F.Z,
                       },
-                      noLimits: {
+                      emojis: {
                           thumbnail: R.Z,
                           assetUrl: e ? N.Z : P.Z,
+                      },
+                      noLimits: {
+                          thumbnail: D.Z,
+                          assetUrl: e ? w.Z : L.Z,
                       },
                   }
                 : {
                       referralProgram: {
-                          thumbnail: z.Z,
-                          assetUrl: e ? K.ZP : q.ZP,
+                          thumbnail: Q.Z,
+                          assetUrl: e ? X.ZP : J.ZP,
                       },
                       showYourStyle: {
                           thumbnail: I,
-                          assetUrl: e ? J.Z : $.Z,
+                          assetUrl: e ? et.Z : en.Z,
                       },
                       yourSpace: {
                           thumbnail: v,
-                          assetUrl: e ? ee.Z : et.Z,
+                          assetUrl: e ? er.Z : ei.Z,
                       },
                       emojis: {
                           thumbnail: y,
-                          assetUrl: e ? V.ZP : H.ZP,
+                          assetUrl: e ? W.ZP : K.ZP,
                       },
                       noLimits: {
                           thumbnail: O,
-                          assetUrl: e ? Y.ZP : W.ZP,
+                          assetUrl: e ? z.ZP : q.ZP,
                       },
                   },
         ),
-    es = () => {
+    eu = () => {
         let e,
             { analyticsLocations: t } = (0, a.ZP)(i.Z.PREMIUM_MARKETING_BENTO_BOX),
             y = (0, c.Z)({
@@ -176,7 +179,9 @@ let eo = (e, t) =>
                     section: h.oAB.PROFILE_CUSTOMIZATION,
                     analyticsLocations: t,
                 }),
-                    (0, l.I)({ analyticsLocations: t });
+                    setTimeout(() => {
+                        (0, l.I)({ analyticsLocations: t });
+                    }, 200);
             }, [t]),
             I = () => {
                 {
@@ -189,7 +194,7 @@ let eo = (e, t) =>
             },
             T = (0, f.rO)(),
             S = _.Z.getArticleURL(h.BhN.REFERRAL_PROGRAM),
-            A = eo(T, (0, p.ZP)({ location: "useBentoBoxes" })),
+            A = ec(T, (0, p.ZP)({ location: "useBentoBoxes" })),
             C = {
                 name: "serverProfiles",
                 title: g.intl.string(g.t.I9TYMj),
