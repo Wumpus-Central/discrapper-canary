@@ -12,8 +12,8 @@ var r,
     g = t(905551),
     f = t(60482),
     x = t(858594),
-    b = t(899789),
-    _ = t(735276),
+    _ = t(899789),
+    b = t(735276),
     v = t(619733),
     p = t(948208),
     j = t(388032),
@@ -91,7 +91,7 @@ function C(e) {
                   o &&
                       (0, i.jsx)("div", {
                           className: h.maxInstancesWarning,
-                          children: (0, i.jsx)(b.C, {}),
+                          children: (0, i.jsx)(_.C, {}),
                       }),
                   (0, i.jsx)(c.zJl, {
                       className: l()(h.gameContainerWrapper, { [h.disabled]: o }),
@@ -103,7 +103,7 @@ function C(e) {
                                   {
                                       game: e,
                                       onClick: () =>
-                                          (0, _.Z)({
+                                          (0, b.Z)({
                                               guildId: n,
                                               stepConfig: y,
                                               initialGameServerGame: e,

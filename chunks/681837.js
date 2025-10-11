@@ -3,7 +3,7 @@ var r = n(951288);
 n(647438);
 var i = n(442837),
     a = n(692547),
-    o = n(981729),
+    o = n(506802),
     s = n(481060),
     l = n(320582),
     c = n(621853),
@@ -20,7 +20,7 @@ function _(e) {
         });
     return _.length > 0 || p.length > 0 || null == h
         ? null
-        : (0, r.jsx)(o.DY, {
+        : (0, r.jsx)(o.jS, {
               className: f.container,
               text: d.intl.string(d.t.p3Q9Y2),
               delay: u.vB,

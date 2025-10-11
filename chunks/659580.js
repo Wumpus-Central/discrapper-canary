@@ -54,8 +54,8 @@ function w(e) {
             analyticsLocations: M,
             asSubmenu: N,
         }),
-        F = (0, o.e7)([v.Z], () => v.Z.getActiveInputProfile()),
-        L = (0, b.Z)(M),
+        L = (0, o.e7)([v.Z], () => v.Z.getActiveInputProfile()),
+        F = (0, b.Z)(M),
         U = (0, m.Z)(M),
         Y = (0, f.Z)(M),
         H = (0, g.Z)(M),
@@ -76,8 +76,8 @@ function w(e) {
             children: [
                 w && R,
                 n && V,
-                C && L,
-                !N && E && F !== h._.STUDIO
+                C && F,
+                !N && E && L !== h._.STUDIO
                     ? (0, r.jsx)(a.kSQ, {
                           label: P.intl.string(P.t["pS+K2N"]),
                           children: U,
@@ -110,7 +110,7 @@ function w(e) {
                                   id: "input-mode",
                                   label: P.intl.string(P.t.Q8gkVF),
                                   action: () => s.Z.setMode(W, void 0, void 0, { analyticsLocations: M }),
-                                  disabled: F === h._.STUDIO,
+                                  disabled: L === h._.STUDIO,
                               })
                             : null,
                         A,

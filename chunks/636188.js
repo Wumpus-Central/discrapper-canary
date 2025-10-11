@@ -264,7 +264,7 @@ function Z(e) {
         m.Kw(S.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW);
     }
     let l = a ? N.intl.string(N.t["5TUJOj"]) : n;
-    return (0, r.jsxs)(c.DY3, {
+    return (0, r.jsxs)(c.jSM, {
         text: l,
         className: R.newBackgroundTooltipContainer,
         children: [

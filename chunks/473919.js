@@ -67,7 +67,7 @@ function _(e) {
               color: _,
               className: a()(l.icon, c),
           })
-        : (0, r.jsx)(o.ua7, {
+        : (0, r.jsx)(o.aML, {
               "data-migration-pending": !0,
               text: n,
               "aria-label": i,

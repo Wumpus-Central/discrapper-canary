@@ -146,7 +146,7 @@ function ed(e) {
                 c(!0), s(!0);
             });
         };
-    return (0, i.jsx)(p.ua7, {
+    return (0, i.jsx)(p.aML, {
         forceOpen: l,
         text: o ? r : n,
         children: (e) => {
@@ -615,7 +615,7 @@ class eh extends (r = a.PureComponent) {
                 children: (0, B.vc)(c()(r.createdAt), "MM/DD/YYYY"),
             }),
             E = r.isGift
-                ? (0, i.jsx)(p.ua7, {
+                ? (0, i.jsx)(p.aML, {
                       text: z.intl.string(z.t.QddTpq),
                       children: (e) =>
                           (0, i.jsx)(

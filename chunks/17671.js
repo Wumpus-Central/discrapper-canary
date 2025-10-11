@@ -31,29 +31,29 @@ function w(e) {
         I = (0, d.Dt)(),
         S = (0, c.e7)([p.Z], () => p.Z.getGuild(w)),
         D = (0, b.Z)(null == S ? void 0 : S.id),
-        T = (0, x.ZP)(w),
-        L = i.useRef(h.ZP.ackMessageId(w, P.W.GUILD_EVENT)),
-        _ = (0, C.Z)();
+        L = (0, x.ZP)(w),
+        T = i.useRef(h.ZP.ackMessageId(w, P.W.GUILD_EVENT)),
+        M = (0, C.Z)();
     return (
         i.useEffect(() => {
-            T.forEach((e) => f.Z.getGuildEventUserCounts(w, e.id, [])), f.Z.getGuildEventsForCurrentUser(w);
-        }, [T, w]),
+            L.forEach((e) => f.Z.getGuildEventUserCounts(w, e.id, [])), f.Z.getGuildEventsForCurrentUser(w);
+        }, [L, w]),
         (0, u.ZP)(() => {
             m.default.track(N.rMx.OPEN_MODAL, {
                 type: Z.zw,
                 guild_id: w,
-                guild_events_count: T.length,
+                guild_events_count: L.length,
             });
         }),
         i.useEffect(() => {
-            a()(T)
+            a()(L)
                 .map((e) => e.creator_id)
                 .filter(v.lm)
                 .uniq()
                 .forEach((e) => {
                     g.Z.requestMember(w, e);
                 });
-        }, [w, T]),
+        }, [w, L]),
         i.useEffect(() => {
             null != w && (0, s.Ju)(w, P.W.GUILD_EVENT);
         }, [w]),
@@ -77,8 +77,8 @@ function w(e) {
                             id: I,
                             variant: "heading-md/semibold",
                             children:
-                                T.length > 0
-                                    ? k.intl.formatToPlainString(k.t.IBdqSk, { number: T.length })
+                                L.length > 0
+                                    ? k.intl.formatToPlainString(k.t.IBdqSk, { number: L.length })
                                     : k.intl.string(k.t.tlopTE),
                         }),
                         D &&
@@ -156,7 +156,7 @@ function w(e) {
                                                         t),
                                                     );
                                                 };
-                                            }, _);
+                                            }, M);
                                         },
                                         text: k.intl.string(k.t["60lJ0N"]),
                                     }),
@@ -178,14 +178,14 @@ function w(e) {
                     className: E.content,
                     "data-migration-pending": !0,
                     children:
-                        T.length > 0
-                            ? T.map((e) =>
+                        L.length > 0
+                            ? L.map((e) =>
                                   (0, r.jsx)(
                                       O.Z,
                                       {
                                           guildEvent: e,
                                           onActionTaken: l,
-                                          isNew: null != L.current && j.default.compare(e.id, L.current) > 0,
+                                          isNew: null != T.current && j.default.compare(e.id, T.current) > 0,
                                       },
                                       e.id,
                                   ),

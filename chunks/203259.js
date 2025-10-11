@@ -9,12 +9,12 @@ var i = n(755721),
     c = n(703849);
 function u(e) {
     let { onOpenClipsGallery: t, clipIconRef: n, lastClipsSession: u } = e;
-    return (0, r.jsxs)(l.Cys, {
+    return (0, r.jsxs)(l.gqK, {
         tooltipClassName: c.reminderTooltip,
         tooltipContentClassName: c.tooltipContent,
         targetElementRef: { current: n },
         position: "bottom",
-        color: l.FGA.PRIMARY,
+        color: l.r6K.PRIMARY,
         children: [
             (0, r.jsx)(o.Z, {}),
             (0, r.jsx)(l.Heading, {

@@ -26,21 +26,21 @@ function j(e) {
         S = (0, a.e7)([c.Z], () => c.Z.isLurking(N), [N]),
         Z = j.entity_type === x.WX.STAGE_INSTANCE,
         [O, _] = l.useState(Z),
-        [T, { loading: P, error: G }] = (0, v.Z)();
+        [T, { loading: L, error: P }] = (0, v.Z)();
     if (!I) return null;
-    let A = k === x.j8.PUBLIC ? p.intl.string(p.t.HhlaLC) : p.intl.string(p.t.GI3xXV),
-        L = () => {
+    let G = k === x.j8.PUBLIC ? p.intl.string(p.t.HhlaLC) : p.intl.string(p.t.GI3xXV),
+        A = () => {
             null == f || f(), y(), (0, u.Ku)(!1);
         },
         X = async () => {
-            await T(j, O, { onSuccess: L });
+            await T(j, O, { onSuccess: A });
         };
     return (0, i.jsxs)(r.Modal, {
         transitionState: t,
         onClose: y,
         title: j.name,
         subtitle: p.intl.format(p.t.UMajoq, {
-            privacyLevel: A,
+            privacyLevel: G,
             privacyLevelHook: (e, n) =>
                 k !== x.j8.PUBLIC
                     ? null
@@ -75,7 +75,7 @@ function j(e) {
                 variant: "active",
                 text: p.intl.string(p.t.cK1GGR),
                 onClick: X,
-                loading: P,
+                loading: L,
             },
         ],
         children: [
@@ -102,12 +102,12 @@ function j(e) {
                         labelType: "secondary",
                     }),
                 }),
-            null != G && null != G.getAnyErrorMessage()
+            null != P && null != P.getAnyErrorMessage()
                 ? (0, i.jsx)(s.Text, {
                       color: "text-danger",
                       variant: "text-sm/normal",
                       className: C.errorMessage,
-                      children: G.getAnyErrorMessage(),
+                      children: P.getAnyErrorMessage(),
                   })
                 : null,
         ],

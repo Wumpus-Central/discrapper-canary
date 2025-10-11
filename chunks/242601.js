@@ -183,9 +183,9 @@ class em extends i.PureComponent {
                   }),
               })
             : t
-              ? (0, r.jsx)(f.ua7, {
+              ? (0, r.jsx)(f.aML, {
                     forceOpen: !0,
-                    color: f.FGA.BRAND,
+                    color: f.r6K.BRAND,
                     position: "bottom",
                     shouldShow: !e && !i,
                     text: es.intl.string(es.t.sFSrFB),

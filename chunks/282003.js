@@ -67,7 +67,7 @@ let g = () => {
             }),
             [N, P] = r.useState(null),
             [I, w] = r.useState(!1),
-            [k, R] = r.useState(!1),
+            [R, k] = r.useState(!1),
             [A, Z] = r.useState(!1);
         (0, r.useEffect)(() => {
             (0, l.Y2)();
@@ -184,7 +184,7 @@ let g = () => {
                                     intervalCount: 1,
                                 },
                                 errorOnCancel: I,
-                                errorOnRedeem: k,
+                                errorOnRedeem: R,
                                 setActiveStep: (e) => {
                                     g(e), t.onClose();
                                 },
@@ -214,7 +214,7 @@ let g = () => {
                             }),
                         ),
                 );
-        }, [e, j, y, N, I, k, n, T]);
+        }, [e, j, y, N, I, R, n, T]);
         return (
             (0, r.useEffect)(() => {
                 A && D();
@@ -328,9 +328,9 @@ let g = () => {
                             }),
                             (0, a.jsx)(d.BZ, {
                                 children: (0, a.jsx)(i.Checkbox, {
-                                    checked: k,
+                                    checked: R,
                                     onChange: () => {
-                                        R(!k);
+                                        k(!R);
                                     },
                                     label: "Error on Redeem Offer",
                                 }),

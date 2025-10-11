@@ -132,7 +132,7 @@ let _ = (e) => {
         let e = h.intl.string(h.t["50TX9v"]);
         return (
             H ? (e = h.intl.string(h.t.UfDp3N)) : z && (e = h.intl.string(h.t.KsFBMj)),
-            (0, r.jsx)(c.ua7, {
+            (0, r.jsx)(c.aML, {
                 "data-migration-pending": !0,
                 text: e,
                 children: (e) =>
@@ -169,7 +169,7 @@ let _ = (e) => {
                   ],
               })
             : X;
-    return (0, r.jsx)(c.ua7, {
+    return (0, r.jsx)(c.aML, {
         "data-migration-pending": !0,
         text: J,
         "aria-label": X,

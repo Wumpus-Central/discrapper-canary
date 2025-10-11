@@ -148,7 +148,7 @@ let v = (e) => {
     A = i.createContext(!1);
 class C extends i.PureComponent {
     renderWithTooltip(e) {
-        return (0, r.jsx)(l.ua7, {
+        return (0, r.jsx)(l.aML, {
             position: "left",
             text: this.state.visible ? null : this.tooltipText,
             children: (t) => {

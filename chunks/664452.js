@@ -141,7 +141,7 @@ function y(e) {
                                 }),
                             ],
                         }),
-                        (0, i.jsx)(o.ua7, {
+                        (0, i.jsx)(o.aML, {
                             "data-migration-pending": !0,
                             text: h.intl.string(h.t["9GPbsb"]),
                             shouldShow: C,

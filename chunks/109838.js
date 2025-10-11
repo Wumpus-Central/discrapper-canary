@@ -12,8 +12,8 @@ var r = t(951288),
     g = t(52021),
     f = t(809121),
     x = t(546303),
-    b = t(948208),
-    _ = t(388032),
+    _ = t(948208),
+    b = t(388032),
     v = t(215365);
 function p(e) {
     var n;
@@ -35,10 +35,10 @@ function p(e) {
                         icon: i.Ucv,
                         "aria-label": "",
                     }),
-                    (0, r.jsx)(c.ZP.Title, { children: _.intl.string(b.default.vCzwMz) }),
+                    (0, r.jsx)(c.ZP.Title, { children: b.intl.string(_.default.vCzwMz) }),
                     (0, r.jsx)(o.IGR, {
                         disableColor: !0,
-                        text: _.intl.string(_.t.oW0eUV),
+                        text: b.intl.string(b.t.oW0eUV),
                         className: v.badge,
                     }),
                 ],

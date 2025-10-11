@@ -85,7 +85,7 @@ function x(e) {
                             (0, r.jsx)(d.Z, {
                                 className: _.guildBadge,
                                 guild: t,
-                                tooltipColor: l.ua7.Colors.PRIMARY,
+                                tooltipColor: l.aML.Colors.PRIMARY,
                             }),
                             (0, r.jsx)(l.Heading, {
                                 variant: "heading-md/semibold",

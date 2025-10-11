@@ -1,4 +1,4 @@
-t.d(n, { Z: () => D }), t(388685);
+t.d(n, { Z: () => _ }), t(388685);
 var l = t(951288),
     r = t(647438),
     i = t(120356),
@@ -109,7 +109,7 @@ function w(e) {
         { value: g, label: h } = r;
     return (
         a
-            ? ((n = (0, l.jsx)(d.DY3, {
+            ? ((n = (0, l.jsx)(d.jSM, {
                   tooltipClassName: E.tooltip,
                   spacing: 6,
                   "aria-label": T.intl.string(T.t.sEAnVF),
@@ -150,7 +150,7 @@ function w(e) {
         }
     );
 }
-function D(e) {
+function _(e) {
     let {
             onClose: n,
             selectedPreset: t,
@@ -159,8 +159,8 @@ function D(e) {
             onResolutionChange: a,
             onFPSChange: j,
             onPresetChange: R,
-            targetGuildPremiumTier: D,
-            captureDeviceSelected: _,
+            targetGuildPremiumTier: _,
+            captureDeviceSelected: D,
         } = e,
         M = (0, o.e7)([Z.default], () => {
             let e = Z.default.getCurrentUser();
@@ -173,16 +173,16 @@ function D(e) {
         W = (0, p.B4)(),
         V = !L && !G,
         [B, F] = r.useState(!1),
-        H = _ ? b.z8 : b.WC,
-        Y = A(y({}, z), { section: P.jXE.STREAM_SETTINGS }),
-        X = (0, l.jsx)(u.hE, {
+        H = D ? b.z8 : b.WC,
+        X = A(y({}, z), { section: P.jXE.STREAM_SETTINGS }),
+        Y = (0, l.jsx)(u.hE, {
             buttons: H.map((e) =>
                 w({
                     type: e,
                     selected: e.value === i,
-                    needsPremium: !(0, S.Z)(t, e.value, s, M, D, U),
+                    needsPremium: !(0, S.Z)(t, e.value, s, M, _, U),
                     needsDemo: W && e.value !== b.ApplicationStreamResolutions.RESOLUTION_720,
-                    analyticsLocation: Y,
+                    analyticsLocation: X,
                     onClick: () => a(e.value),
                     onClose: n,
                     setIsHovering: F,
@@ -194,9 +194,9 @@ function D(e) {
                 w({
                     type: e,
                     selected: e.value === s,
-                    needsPremium: !(0, S.Z)(t, i, e.value, M, D, U),
+                    needsPremium: !(0, S.Z)(t, i, e.value, M, _, U),
                     needsDemo: W && e.value === b.ApplicationStreamFPS.FPS_60,
-                    analyticsLocation: Y,
+                    analyticsLocation: X,
                     onClick: () => j(e.value),
                     onClose: n,
                     setIsHovering: F,
@@ -208,7 +208,7 @@ function D(e) {
                 value: b.ApplicationStreamPresets.PRESET_VIDEO,
                 label: T.intl.string(T.t.HcwHc3),
             },
-            ...(_
+            ...(D
                 ? []
                 : [
                       {
@@ -251,7 +251,7 @@ function D(e) {
                               children: [
                                   (0, l.jsx)(d.gNt, {
                                       label: T.intl.string(T.t.rHyPXl),
-                                      children: X,
+                                      children: Y,
                                   }),
                                   (0, l.jsx)(d.gNt, {
                                       label: T.intl.string(T.t.SkkeIi),
@@ -271,7 +271,7 @@ function D(e) {
                   });
     return (0, l.jsx)(
         m.Z,
-        A(y({}, Y), {
+        A(y({}, X), {
             children: (0, l.jsx)("div", {
                 className: I.modalContent,
                 children: (0, l.jsxs)("div", {

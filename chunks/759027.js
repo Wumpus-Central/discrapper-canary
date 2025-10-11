@@ -78,7 +78,7 @@ function E(e) {
     let { subscription: T, onUpdated: O } = e,
         [N, P] = r.useState(!1),
         [I, w] = r.useState(!1),
-        [k, R] = r.useState(!1),
+        [R, k] = r.useState(!1),
         [A, Z] = r.useState(!1),
         [D, M] = r.useState(null),
         L = (e) => ((null == e && (e = T.status), e in _) ? _[e] : "Unknown status ".concat(e)),
@@ -202,7 +202,7 @@ function E(e) {
                             children: [
                                 (0, a.jsxs)(d.P3F, {
                                     onClick: () => {
-                                        R(!k);
+                                        k(!R);
                                     },
                                     className: j.collapsablePaneHeader,
                                     children: [
@@ -212,10 +212,10 @@ function E(e) {
                                                 children: "Trial Info",
                                             }),
                                         }),
-                                        (0, a.jsx)(u.Z, { direction: k ? u.Z.Directions.UP : u.Z.Directions.DOWN }),
+                                        (0, a.jsx)(u.Z, { direction: R ? u.Z.Directions.UP : u.Z.Directions.DOWN }),
                                     ],
                                 }),
-                                k &&
+                                R &&
                                     (0, a.jsxs)("ul", {
                                         className: j.collapsiblePaneList,
                                         children: [

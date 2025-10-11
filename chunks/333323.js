@@ -1,4 +1,4 @@
-t.d(n, { Z: () => H }), t(388685);
+t.d(n, { Z: () => L }), t(388685);
 var l = t(951288),
     r = t(647438),
     a = t(120356),
@@ -70,8 +70,8 @@ function A(e, n) {
         e
     );
 }
-let k = v.q + 300 + 64,
-    M = r.memo(function (e) {
+let M = v.q + 300 + 64,
+    k = r.memo(function (e) {
         let { guild: n } = e;
         return (0, l.jsxs)(h.Z, {
             channelId: O.oC.GUILD_HOME,
@@ -89,11 +89,11 @@ let k = v.q + 300 + 64,
             ],
         });
     });
-function H(e) {
+function L(e) {
     var n, t;
     let { guild: a, width: h } = e,
         P = (0, s.e7)([g.ZP], () => g.ZP.getSection(O.oC.GUILD_HOME)),
-        [H, L] = r.useState(!1),
+        [L, H] = r.useState(!1),
         [T, D] = r.useState(N.$Y6),
         R = P === N.ULH.SIDEBAR_CHAT,
         B = (0, c.mFp)(),
@@ -103,7 +103,7 @@ function H(e) {
         F = !G && (null != (t = null == W || null == (n = W.resourceChannels) ? void 0 : n.length) ? t : 0) === 0,
         z = (0, d.Z)("(max-width: 1300px)"),
         V = h - N.PrS - T,
-        q = (R && V < k) || z || F;
+        q = (R && V < M) || z || F;
     return (r.useEffect(() => {
         if (W === b.P) (0, x.cP)(a.id);
         else if (null != W) {
@@ -135,10 +135,10 @@ function H(e) {
                   (0, l.jsxs)("div", {
                       className: i()(E.chat, w.background, {
                           [E.threadSidebarOpen]: R,
-                          [E.threadSidebarFloating]: R && H,
+                          [E.threadSidebarFloating]: R && L,
                       }),
                       children: [
-                          (0, l.jsx)(M, { guild: a }),
+                          (0, l.jsx)(k, { guild: a }),
                           (0, l.jsx)(
                               c.yWw,
                               A(S({}, B), {
@@ -190,7 +190,7 @@ function H(e) {
                       ? (0, l.jsx)(v.Z, {
                             pageWidth: h,
                             onSidebarResize: (e, n) => {
-                                L(n), D(e);
+                                H(n), D(e);
                             },
                         })
                       : null,

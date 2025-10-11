@@ -100,7 +100,7 @@ function T(e) {
                       channel: t,
                       className: o()(b.icon, f),
                   })
-                : (0, r.jsx)(s.ua7, {
+                : (0, r.jsx)(s.aML, {
                       "data-migration-pending": !0,
                       text: A,
                       "aria-label": (0, c.ZP)({ channel: t }),

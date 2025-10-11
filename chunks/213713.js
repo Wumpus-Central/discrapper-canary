@@ -28,7 +28,7 @@ var a = n(951288),
     P = n(206583),
     I = n(680027),
     w = n(451429);
-let k = [
+let R = [
     {
         key: "type",
         cellClassName: l()(I.cell, I.cellType),
@@ -58,11 +58,11 @@ let k = [
         cellClassName: I.cell,
         render(e) {
             let { type: t } = e;
-            return (0, a.jsx)(R, { type: t });
+            return (0, a.jsx)(k, { type: t });
         },
     },
 ];
-function R(e) {
+function k(e) {
     var t, n;
     let { type: r } = e,
         i = (0, u.e7)([S.Z], () => S.Z.getFilters()),
@@ -102,17 +102,17 @@ function A() {
             var e;
             return (null == (e = S.Z.getFeedState(P.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
         }),
-        [R, A] = r.useState(""),
+        [k, A] = r.useState(""),
         D = (0, u.e7)([_.Z, x.Z], () => {
             var e, t, n;
-            return parseInt(R) > 0
-                ? R
-                : null != (n = null == (e = _.Z.getGameByName(R)) ? void 0 : e.id)
+            return parseInt(k) > 0
+                ? k
+                : null != (n = null == (e = _.Z.getGameByName(k)) ? void 0 : e.id)
                   ? n
-                  : null == (t = x.Z.getApplicationByName(R))
+                  : null == (t = x.Z.getApplicationByName(k))
                     ? void 0
                     : t.id;
-        }, [R]),
+        }, [k]),
         M = (0, j.Z)({
             applicationId: D,
             location: "DevToolsContentInventory",
@@ -143,7 +143,7 @@ function A() {
                         }),
                         s.length > 0 &&
                             (0, a.jsx)(g.Z, {
-                                columns: k,
+                                columns: R,
                                 data: s,
                             }),
                         (0, a.jsx)(N.Z, {}),
@@ -217,11 +217,11 @@ function A() {
                             onChange: (e) => (0 === e.length || e.length >= 18) && A(e),
                             onKeyDown: (e) => {
                                 "Enter" === e.key &&
-                                    (R === e.currentTarget.value ? null == M || M(e) : A(e.currentTarget.value));
+                                    (k === e.currentTarget.value ? null == M || M(e) : A(e.currentTarget.value));
                             },
                             error:
-                                R.length > 0 && null == M
-                                    ? "No game profile for ".concat(null != D ? D : R + " - try by id", ".")
+                                k.length > 0 && null == M
+                                    ? "No game profile for ".concat(null != D ? D : k + " - try by id", ".")
                                     : void 0,
                             successMessage: null != M ? "Game profile found" : void 0,
                         }),

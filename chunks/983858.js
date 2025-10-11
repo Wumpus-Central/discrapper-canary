@@ -37,8 +37,8 @@ let h = [16, 16, 14, 14, 12, 10, 8],
                     [S.cardDisabled]: v,
                 }),
             });
-        let { name: R } = r,
-            L =
+        let { name: L } = r,
+            R =
                 null != r.discoverySplash && /^data:/.test(r.discoverySplash)
                     ? r.discoverySplash
                     : f.ZP.getGuildDiscoverySplashURL({
@@ -58,17 +58,17 @@ let h = [16, 16, 14, 14, 12, 10, 8],
                     : void 0,
             V = null != r.description ? r.description : A,
             G = null != N ? N : null == r ? void 0 : r.memberCount,
-            x = null != C ? C : null == r ? void 0 : r.presenceCount,
-            M = null;
+            M = null != C ? C : null == r ? void 0 : r.presenceCount,
+            x = null;
         if (null != j)
-            M = (0, n.jsx)("img", {
+            x = (0, n.jsx)("img", {
                 src: j,
                 alt: "",
                 className: S.avatar,
             });
         else {
             let e = (0, I.Zg)(r.name);
-            M = (0, n.jsx)("div", {
+            x = (0, n.jsx)("div", {
                 className: S.defaultIcon,
                 children: (0, n.jsx)(u.Text, {
                     className: S.acronym,
@@ -91,7 +91,7 @@ let h = [16, 16, 14, 14, 12, 10, 8],
                         (0, n.jsx)("div", {
                             className: S.splash,
                             children: (0, n.jsx)("img", {
-                                src: null != L ? L : b,
+                                src: null != R ? R : b,
                                 alt: "",
                                 className: S.splashImage,
                                 onLoad: () => P(!0),
@@ -109,7 +109,7 @@ let h = [16, 16, 14, 14, 12, 10, 8],
                                         mask: c.ZP.Masks.SQUIRCLE,
                                         width: 40,
                                         height: 40,
-                                        children: null != M ? M : null,
+                                        children: null != x ? x : null,
                                     }),
                                 }),
                             }),
@@ -125,12 +125,12 @@ let h = [16, 16, 14, 14, 12, 10, 8],
                                 (0, n.jsx)(d.Z, {
                                     className: S.verifiedIcon,
                                     guild: r,
-                                    tooltipColor: u.ua7.Colors.PRIMARY,
+                                    tooltipColor: u.aML.Colors.PRIMARY,
                                 }),
                                 (0, n.jsx)(u.Text, {
                                     className: S.guildName,
                                     variant: "text-md/normal",
-                                    children: (0, n.jsx)("span", { children: R }),
+                                    children: (0, n.jsx)("span", { children: L }),
                                 }),
                             ],
                         }),
@@ -147,7 +147,7 @@ let h = [16, 16, 14, 14, 12, 10, 8],
                         (0, n.jsxs)("div", {
                             className: S.memberInfo,
                             children: [
-                                null != x &&
+                                null != M &&
                                     (0, n.jsxs)("div", {
                                         className: S.memberCount,
                                         children: [
@@ -155,8 +155,8 @@ let h = [16, 16, 14, 14, 12, 10, 8],
                                             (0, n.jsx)(u.Text, {
                                                 variant: "text-xs/normal",
                                                 children: T
-                                                    ? _.intl.formatToPlainString(_.t.YMor7u, { count: x })
-                                                    : _.intl.formatToPlainString(_.t["LC+S+v"], { membersOnline: x }),
+                                                    ? _.intl.formatToPlainString(_.t.YMor7u, { count: M })
+                                                    : _.intl.formatToPlainString(_.t["LC+S+v"], { membersOnline: M }),
                                             }),
                                         ],
                                     }),

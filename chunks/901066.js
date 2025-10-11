@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M });
+n.d(t, { Z: () => Z });
 var l = n(951288),
     r = n(647438),
     i = n(120356),
@@ -246,7 +246,7 @@ function A(e) {
         ],
     });
 }
-function Z(e) {
+function M(e) {
     let { user: t, joinRequest: n } = e;
     return (0, l.jsxs)(l.Fragment, {
         children: [
@@ -294,7 +294,7 @@ function Z(e) {
         ],
     });
 }
-function M(e) {
+function Z(e) {
     let { guildId: t } = e,
         n = (0, b.L)({ guildId: t }),
         { user: i } = null != n ? n : {},
@@ -343,7 +343,7 @@ function M(e) {
                                       user: o,
                                       showRequirements: !1,
                                   }),
-                                  (0, l.jsx)(Z, {
+                                  (0, l.jsx)(M, {
                                       guildId: t,
                                       user: o,
                                       joinRequest: n,

@@ -37,9 +37,9 @@ let g = i.memo(function (e) {
                 e
             );
         })();
-    return (0, r.jsx)(a.ua7, {
+    return (0, r.jsx)(a.aML, {
         forceOpen: l,
-        color: a.FGA.GREEN,
+        color: a.r6K.GREEN,
         hideOnClick: !0,
         spacing: 12,
         position: "right",

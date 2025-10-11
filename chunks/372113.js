@@ -193,7 +193,7 @@ function U(e) {
         }),
         y = c && !f;
     return (0, r.jsx)(
-        u.ua7,
+        u.aML,
         {
             text: b.tooltipText,
             tooltipContentClassName: P.ctaTooltipText,

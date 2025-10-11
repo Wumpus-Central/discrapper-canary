@@ -347,7 +347,7 @@ function X(e) {
 }
 function Q(e) {
     let { guild: t, disabled: n = !1, "aria-label": a = !1, children: o, includeActivity: s = !0 } = e;
-    return (0, r.jsx)(u.ua7, {
+    return (0, r.jsx)(u.aML, {
         hideOnClick: !0,
         spacing: 12,
         position: "right",

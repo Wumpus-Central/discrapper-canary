@@ -224,12 +224,12 @@ function D(e) {
                                     "div",
                                     {
                                         className: I.slot,
-                                        children: (0, r.jsx)(c.DY3, {
+                                        children: (0, r.jsx)(c.jSM, {
                                             text: e.name,
                                             position: "top",
                                             "aria-label": e.name,
                                             tooltipClassName: I.tooltipContainer,
-                                            color: c.ua7.Colors.BRAND,
+                                            color: c.aML.Colors.BRAND,
                                             children: (0, r.jsx)(P, {
                                                 emoji: e,
                                                 isDisabled: n,

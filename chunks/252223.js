@@ -293,7 +293,7 @@ function Z(e) {
                             className: o()(w.activityContainer, $ && w.iconOnly),
                             children: [et(), er()],
                         })
-                      : (0, r.jsx)(u.ua7, {
+                      : (0, r.jsx)(u.aML, {
                             "data-migration-pending": !0,
                             tooltipContentClassName: o()(w.container, w.activitiesTooltip, w.hasMultipleActivities),
                             delay: N.X,

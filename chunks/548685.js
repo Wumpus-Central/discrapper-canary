@@ -93,7 +93,7 @@ let B = (e) => {
                                       children: i,
                                   }),
                                   G &&
-                                      (0, r.jsx)(a.ua7, {
+                                      (0, r.jsx)(a.aML, {
                                           "data-migration-pending": !0,
                                           text: L.intl.string(L.t["3taPdn"]),
                                           position: "top",

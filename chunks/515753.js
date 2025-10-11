@@ -33,8 +33,8 @@ var r = n(951288),
     w = n(43267),
     Z = n(933557),
     T = n(163889),
-    I = n(111028),
-    M = n(181430),
+    M = n(111028),
+    I = n(181430),
     D = n(821795),
     k = n(892567),
     _ = n(853856),
@@ -305,13 +305,13 @@ function em(e) {
         eE = !eS && !eP && t.type === et.d4z.DM,
         ew = eE && (null == p ? void 0 : p.primaryGuild) != null,
         eZ = (0, m.e7)([J.ZP], () => J.ZP.isChannelMuted(t.getGuildId(), t.id)),
-        { ignored: eT, blocked: eI } = (0, m.cj)([V.Z], () => ({
+        { ignored: eT, blocked: eM } = (0, m.cj)([V.Z], () => ({
             ignored: V.Z.isIgnored(t.getRecipientId()),
             blocked: V.Z.isBlocked(t.getRecipientId()),
         })),
-        eM = eE && eT,
-        eD = eE && eI,
-        ek = (eZ || eM || eD) && !(o || ee),
+        eI = eE && eT,
+        eD = eE && eM,
+        ek = (eZ || eI || eD) && !(o || ee),
         e_ = (0, m.e7)([Y.ZP], () => Y.ZP.getMentionCount(t.id) > 0),
         eR = (0, Z.ZP)(t),
         eL = (0, m.e7)([_.Z], () => _.Z.isFavorite(t.id)),
@@ -453,7 +453,7 @@ function em(e) {
               })
             : eX,
         e0 = i.useRef(null),
-        e1 = (0, M.Y)({ location: "PrivateChannel" }) && (null == p ? void 0 : p.displayNameStyles) != null,
+        e1 = (0, I.Y)({ location: "PrivateChannel" }) && (null == p ? void 0 : p.displayNameStyles) != null,
         e8 = (0, f.Z)();
     return (0, r.jsx)(d.mh, {
         id: t.id,
@@ -590,7 +590,7 @@ function em(e) {
                                                           iconClassName: ek ? er.mutedIcon : void 0,
                                                       })
                                                     : null,
-                                            name: (0, r.jsx)(I.Z, {
+                                            name: (0, r.jsx)(M.Z, {
                                                 className: a()(er.overflowTooltip, { [er.withDisplayNameStyles]: e1 }),
                                                 children: e$,
                                             }),
@@ -610,7 +610,7 @@ function em(e) {
                                 className: a()(er.iconsContainer, { [er.nameplated]: eG }),
                                 children: [
                                     eL && !eO ? (0, r.jsx)(eu, {}) : null,
-                                    eM ? (0, r.jsx)(ed, {}) : null,
+                                    eI ? (0, r.jsx)(ed, {}) : null,
                                     eD ? (0, r.jsx)(ep, {}) : null,
                                     eU && !e8
                                         ? (0, r.jsx)(b.u, {

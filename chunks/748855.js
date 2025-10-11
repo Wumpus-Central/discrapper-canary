@@ -39,7 +39,7 @@ function f(e) {
             }),
             g &&
                 null != m &&
-                (0, i.jsx)(c.ua7, {
+                (0, i.jsx)(c.aML, {
                     "data-migration-pending": !0,
                     text: C && !f ? d.intl.string(d.t.YSDH9v) : void 0,
                     children: (e) => {

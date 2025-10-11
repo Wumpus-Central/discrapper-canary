@@ -87,7 +87,7 @@ class b extends i.PureComponent {
         let {
                 className: i,
                 badgeStrokeColor: a,
-                tooltipColor: c = s.ua7.Colors.BRAND,
+                tooltipColor: c = s.aML.Colors.BRAND,
                 tooltipPosition: u,
                 tooltipDelay: d,
                 size: f = 16,
@@ -96,7 +96,7 @@ class b extends i.PureComponent {
                 flowerStarClassName: b,
             } = this.props,
             y = E(e);
-        return (0, r.jsx)(s.ua7, {
+        return (0, r.jsx)(s.aML, {
             color: c,
             position: u,
             delay: d,

@@ -25,11 +25,11 @@ let C = function (e) {
         N = r.useRef(T),
         [P, I] = (0, c.US)([T], void 0, !0),
         w = r.useMemo(() => (0, i.Z)(), []),
-        k = r.useRef(!1);
+        R = r.useRef(!1);
     r.useEffect(() => {
         N.current = P;
     }, [P]);
-    let { loading: R, ageVerificationMethods: A } = (0, b.Z)(
+    let { loading: k, ageVerificationMethods: A } = (0, b.Z)(
         () => {
             null == E || E(), C();
         },
@@ -40,10 +40,10 @@ let C = function (e) {
     return (
         r.useLayoutEffect(
             () => () => {
-                if (k.current) return;
+                if (R.current) return;
                 let e = N.current;
                 null != e &&
-                    ((k.current = !0),
+                    ((R.current = !0),
                     m.Z.maybeOpenAgeVerificationUserFeedback({
                         location: "age_verification_get_started_modal",
                         visibleContent: e,
@@ -138,7 +138,7 @@ let C = function (e) {
                                           variant: "clickable",
                                           title: t,
                                           description: n,
-                                          buttonDisabled: R,
+                                          buttonDisabled: k,
                                           onButtonPress: () => r(w),
                                       },
                                       t,

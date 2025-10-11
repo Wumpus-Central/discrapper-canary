@@ -558,7 +558,7 @@ function eM(e) {
                           ? a
                           : "",
                       null != p && p.verified
-                          ? (0, r.jsx)(h.ua7, {
+                          ? (0, r.jsx)(h.aML, {
                                 "data-migration-pending": !0,
                                 text: e_.intl.string(e_.t["4PJP5u"]),
                                 children: (e) =>

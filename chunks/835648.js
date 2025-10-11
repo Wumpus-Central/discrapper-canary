@@ -208,7 +208,7 @@ function M(e) {
 function j(e) {
     let { category: t, categoryIndex: n, onClick: i, isSelected: a, isNitroLocked: o } = e,
         l = (0, s.JA)("soundboard_guild_".concat(n));
-    return (0, r.jsx)(c.ua7, {
+    return (0, r.jsx)(c.aML, {
         text: x(t),
         "aria-label": M(t),
         position: "right",

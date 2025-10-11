@@ -108,7 +108,7 @@ function y(e) {
                         }),
                     (0, r.jsx)("div", {
                         className: x.actionButtons,
-                        children: (0, r.jsx)(o.ua7, {
+                        children: (0, r.jsx)(o.aML, {
                             text: m.intl.string(m.t.hsvh0t),
                             children: (e) => {
                                 var t, n;

@@ -31,8 +31,8 @@ var l = t(951288),
     k = t(989941),
     R = t(618407),
     w = t(586290),
-    D = t(233037),
-    _ = t(810013),
+    _ = t(233037),
+    D = t(810013),
     M = t(537135),
     U = t(641115),
     L = t(143135),
@@ -86,7 +86,7 @@ function H(e) {
         }),
     });
 }
-function Y(e) {
+function X(e) {
     let { onChange: n, guildId: t } = e,
         r = (0, a.e7)([S.Z], () => S.Z.getGuild(t));
     return null == r
@@ -118,7 +118,7 @@ function Y(e) {
               }),
           });
 }
-function X(e) {
+function Y(e) {
     let { text: n } = e;
     return (0, l.jsxs)(m.Z, {
         align: m.Z.Align.CENTER,
@@ -246,7 +246,7 @@ function Q(e) {
                               onChangeSource: y,
                               selectedSource: n,
                           }),
-                          null != en ? (0, l.jsx)(X, { text: en }) : null,
+                          null != en ? (0, l.jsx)(Y, { text: en }) : null,
                           null != n && null == en
                               ? (0, l.jsx)(K, {
                                     enabled: h,
@@ -257,22 +257,22 @@ function Q(e) {
                       ],
                   }),
             g && null != u
-                ? (0, l.jsx)(Y, {
+                ? (0, l.jsx)(X, {
                       guildId: u,
                       onChange: M,
                   })
                 : null,
             null != F
-                ? (0, l.jsx)(_.Z, { channel: F })
-                : (0, l.jsx)(D.Z, {
+                ? (0, l.jsx)(D.Z, { channel: F })
+                : (0, l.jsx)(_.Z, {
                       guildId: u,
                       selectedChannelId: i,
                       onChangeSelectedChannelId: E,
                   }),
             null != u && el && er ? (0, l.jsx)(q, { guildId: u }) : null,
-            Q ? (0, l.jsx)(X, { text: V.intl.string(V.t.q65tS0) }) : null,
+            Q ? (0, l.jsx)(Y, { text: V.intl.string(V.t.q65tS0) }) : null,
             $
-                ? (0, l.jsx)(X, {
+                ? (0, l.jsx)(Y, {
                       text: V.intl.format(V.t.RrLvub, {
                           helpCenterLink: O.Z.getArticleURL(G.BhN.NVIDIA_DRIVER_ISSUES),
                       }),

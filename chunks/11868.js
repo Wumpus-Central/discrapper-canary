@@ -102,7 +102,7 @@ let w = (e, t) => (n) => {
                                 (0, r.jsx)(d.Z, {
                                     guild: _,
                                     tooltipPosition: "top",
-                                    tooltipColor: l.ua7.Colors.PRIMARY,
+                                    tooltipColor: l.aML.Colors.PRIMARY,
                                     size: 16,
                                     className: P.guildBadge,
                                 }),

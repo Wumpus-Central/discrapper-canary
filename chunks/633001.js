@@ -28,8 +28,8 @@ var a = n(951288),
     P = n(352527),
     I = n(355863),
     w = n(449224),
-    k = n(808506),
-    R = n(572004),
+    R = n(808506),
+    k = n(572004),
     A = n(55935),
     Z = n(70956),
     D = n(136015),
@@ -152,7 +152,7 @@ function Q(e) {
             color: u.zx.Colors.LINK,
             size: u.zx.Sizes.MIN,
             onClick: function () {
-                (0, R.JG)(t, () => i(!0));
+                (0, k.JG)(t, () => i(!0));
             },
             className: W.copyId,
             children: ["Application Id: ", t, " ", n ? H.intl.string(H.t["t5VZ8/"]) : null],
@@ -295,12 +295,12 @@ let $ = r.memo(function (e) {
     }),
     ee = r.memo(function (e) {
         let { pid: t } = e,
-            n = (0, d.cj)([k.default], () => k.default.getOverlayPIDStatuses()),
+            n = (0, d.cj)([R.default], () => R.default.getOverlayPIDStatuses()),
             r = (0, d.cj)([C.default], () => C.default.getTrackedGames()),
-            i = (0, d.e7)([k.default], () => k.default.isInputLocked(t), [t]),
-            l = (0, d.e7)([k.default], () => k.default.DEV_isInputLockedV3(t), [t]),
-            s = (0, d.e7)([k.default], () => k.default.DEV_isInputLocked(t), [t]),
-            o = (0, d.e7)([k.default], () => k.default.isReady(t), [t]);
+            i = (0, d.e7)([R.default], () => R.default.isInputLocked(t), [t]),
+            l = (0, d.e7)([R.default], () => R.default.DEV_isInputLockedV3(t), [t]),
+            s = (0, d.e7)([R.default], () => R.default.DEV_isInputLocked(t), [t]),
+            o = (0, d.e7)([R.default], () => R.default.isReady(t), [t]);
         return (0, a.jsxs)("div", {
             className: W.panelGroup,
             children: [
@@ -485,7 +485,7 @@ function er() {
                         return (0, a.jsx)(
                             r.Fragment,
                             {
-                                children: (0, a.jsx)(m.ua7, {
+                                children: (0, a.jsx)(m.aML, {
                                     "data-migration-pending": !0,
                                     position: "left",
                                     text: i === y.d5.TRACK_FOCUS ? "Tracked Focus Event" : "Clear Focus Event",
@@ -580,7 +580,7 @@ let ei = r.memo(function (e) {
                 ),
                 [],
             ),
-            (0, a.jsx)(m.ua7, {
+            (0, a.jsx)(m.aML, {
                 "data-migration-pending": !0,
                 position: "left",
                 text: "The most recent screen types we've logged, indexed by pid",
@@ -641,8 +641,8 @@ let ei = r.memo(function (e) {
             r = (0, M.getPID)(),
             i = (0, d.e7)([C.default], () => C.default.isOverlayOOPEnabledForPid(r), [r]),
             [l, s] = (0, d.Wu)([P.Z], () => [P.Z.enabled, P.Z.keepOpen]),
-            o = (0, d.e7)([k.default], () => k.default.getFocusedPID()),
-            c = (0, d.e7)([k.default], () => k.default.isFocusedPidOutOfProcess());
+            o = (0, d.e7)([R.default], () => R.default.getFocusedPID()),
+            c = (0, d.e7)([R.default], () => R.default.isFocusedPidOutOfProcess());
         return (0, a.jsxs)("div", {
             className: W.panelGroup,
             children: [
@@ -774,7 +774,7 @@ let ei = r.memo(function (e) {
         return (0, a.jsxs)(a.Fragment, {
             children: [
                 t.length > 0 &&
-                    (0, a.jsx)(m.ua7, {
+                    (0, a.jsx)(m.aML, {
                         "data-migration-pending": !0,
                         position: "left",
                         text: "Games that are running but not tracked by the overlay",
@@ -814,7 +814,7 @@ let ei = r.memo(function (e) {
                                 }),
                             ),
                     }),
-                (0, a.jsx)(m.ua7, {
+                (0, a.jsx)(m.aML, {
                     "data-migration-pending": !0,
                     position: "left",
                     text: "The current running games process information",
@@ -864,7 +864,7 @@ let ei = r.memo(function (e) {
                     value: y.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
                 },
             ].map((t) => Y(q({}, t), { label: "".concat(t.label, " ").concat(e === t.value ? "(current)" : "") }));
-        return (0, a.jsx)(m.ua7, {
+        return (0, a.jsx)(m.aML, {
             "data-migration-pending": !0,
             position: "left",
             text: "Override the overlay render mode",
@@ -1105,7 +1105,7 @@ let eb = ["__webpack_require__", "fn"],
                                         (0, a.jsx)(m.P3F, {
                                             tag: "span",
                                             className: W.copyEventButton,
-                                            onClick: () => (0, R.JG)(d),
+                                            onClick: () => (0, k.JG)(d),
                                             children: (0, a.jsx)(m.TIy, {
                                                 color: "currentColor",
                                                 size: "sm",
@@ -1117,7 +1117,7 @@ let eb = ["__webpack_require__", "fn"],
                                     icon: m.TIy,
                                     tooltip: "Copy all properties",
                                     onClick: () => {
-                                        (0, R.JG)(ef(s));
+                                        (0, k.JG)(ef(s));
                                     },
                                 }),
                                 (0, a.jsx)(j.Z.Icon, {
@@ -1253,7 +1253,7 @@ function e_() {
             [y, h, u, o, C],
         ),
         [P, I] = r.useState(O),
-        [w, k] = r.useState(null),
+        [w, R] = r.useState(null),
         A = r.useMemo(() => y.find((e) => e.key === w), [y, w]),
         Z = r.useCallback((e) => {
             I(e);
@@ -1266,7 +1266,7 @@ function e_() {
         [U, z] = r.useState(!1),
         V = r.useRef(null),
         H = r.useCallback(() => {
-            (0, R.JG)(JSON.stringify(O)), z(!0);
+            (0, k.JG)(JSON.stringify(O)), z(!0);
         }, [O]);
     r.useEffect(() => {
         if (U)
@@ -1396,7 +1396,7 @@ function e_() {
                     columns: eh,
                     data: P,
                     selectedRowKey: null != w ? w : void 0,
-                    onClickRow: (e) => k(e.key),
+                    onClickRow: (e) => R(e.key),
                 }),
             }),
             null != A &&
@@ -1406,7 +1406,7 @@ function e_() {
                     initialHeight: null != t ? t / 3 : 300,
                     children: M({
                         breadcrumb: A,
-                        onClose: () => k(null),
+                        onClose: () => R(null),
                     }),
                 }),
         ],

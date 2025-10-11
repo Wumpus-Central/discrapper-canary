@@ -1,4 +1,4 @@
-t.d(n, { Z: () => x });
+t.d(n, { Z: () => T });
 var i = t(951288),
     l = t(647438),
     r = t(120356),
@@ -23,7 +23,7 @@ var i = t(951288),
     O = t(474936),
     b = t(388032),
     M = t(22706);
-function T(e) {
+function L(e) {
     let { shouldUpsellFromNoneTier: n } = e,
         t = (0, a.e7)([S.default], () => S.default.locale);
     return (0, i.jsxs)("div", {
@@ -61,7 +61,7 @@ function T(e) {
         ],
     });
 }
-function x(e) {
+function T(e) {
     var n;
     let {
             premiumSubscriptionPlan: t,
@@ -70,14 +70,14 @@ function x(e) {
             onSkip: h,
             onSubscriptionConfirmation: S,
             analyticsLocation: y,
-            analyticsSourceLocation: x,
-            priceOptions: L,
+            analyticsSourceLocation: T,
+            priceOptions: x,
         } = e,
         { analyticsLocations: j, sourceAnalyticsLocations: C } = (0, p.ZP)(d.Z.GUILD_BOOSTING_PREMIUM_UPSELL),
         { theme: A } = (0, u.TCT)(),
         R = (0, o.ap)(A) ? c.zx.Colors.PRIMARY : c.zx.Colors.WHITE,
         k = null == t || null == t.premiumSubscriptionType,
-        v = f.ZP.getPrice(O.Xh.PREMIUM_MONTH_TIER_2, !1, !1, L),
+        v = f.ZP.getPrice(O.Xh.PREMIUM_MONTH_TIER_2, !1, !1, x),
         D = (0, I.T4)(v.amount, v.currency),
         Z = (0, P.N)(),
         w = null == Z ? void 0 : Z.trial_id,
@@ -109,7 +109,7 @@ function x(e) {
                                     ? b.intl.string(b.t.AoSzEh)
                                     : b.intl.format(b.t["7vePZW"], { monthlyPrice: D }),
                         }),
-                        (0, i.jsx)(T, { shouldUpsellFromNoneTier: k }),
+                        (0, i.jsx)(L, { shouldUpsellFromNoneTier: k }),
                     ],
                 }),
                 (0, i.jsxs)(u.mzw, {
@@ -188,7 +188,7 @@ function x(e) {
                                                               );
                                                           }),
                                                     e),
-                                                analyticsSourceLocation: x,
+                                                analyticsSourceLocation: T,
                                                 onSubscriptionConfirmation: S,
                                                 trialId: w,
                                             });

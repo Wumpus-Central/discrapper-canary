@@ -37,9 +37,9 @@ function y(e) {
     let Z = (0, i.e7)([f.Z], () => f.Z.getStateForGuild(P)),
         _ = (0, i.e7)([c.Z], () => c.Z.getGuild(P)),
         { analyticsLocations: T } = (0, r.ZP)(N),
-        [E, L] = a.useState(null != (n = I.initialStep) ? n : Object.keys(I.steps)[0]),
+        [L, E] = a.useState(null != (n = I.initialStep) ? n : Object.keys(I.steps)[0]),
         B = (0, v.Td)(P, void 0),
-        D = I.steps[E],
+        D = I.steps[L],
         [G, F] = a.useState(null == k ? void 0 : k.id);
     a.useEffect(() => {
         var e, t, n;
@@ -57,10 +57,10 @@ function y(e) {
                 return Object.values(null != (e = null == Z ? void 0 : Z.catalog) ? e : {}).find((e) => e.id === G);
         }, [null == Z ? void 0 : Z.catalog, G]),
         [A, K] = a.useState(S),
-        [R, U] = a.useState(
+        [R, M] = a.useState(
             null != (u = null == k || null == (t = k.plans[0]) ? void 0 : t.id) ? u : null == S ? void 0 : S.planId,
         ),
-        X = (function (e, t, n, l) {
+        U = (function (e, t, n, l) {
             var a, r, s, o, c, u, d, m;
             let v = (0, i.e7)([f.Z], () => {
                     var t;
@@ -83,11 +83,11 @@ function y(e) {
                           ? m
                           : 0);
         })(P, H, R, A),
-        Y = a.useCallback((e, t) => {
+        X = a.useCallback((e, t) => {
             var n;
-            F(null == e ? void 0 : e.id), U(null != t ? t : null == e || null == (n = e.plans[0]) ? void 0 : n.id);
+            F(null == e ? void 0 : e.id), M(null != t ? t : null == e || null == (n = e.plans[0]) ? void 0 : n.id);
         }, []),
-        M = a.useCallback(
+        Y = a.useCallback(
             (e) => {
                 var t, n, l;
                 K(e);
@@ -95,7 +95,7 @@ function y(e) {
                     null == Z || null == (l = Z.entitlements) || null == (n = l[e.entitlementId]) || null == (t = n.sku)
                         ? void 0
                         : t.product_id;
-                null != a && F(a), U(e.planId), Q(e.name), ee(e.regionId);
+                null != a && F(a), M(e.planId), Q(e.name), ee(e.regionId);
             },
             [null == Z ? void 0 : Z.entitlements],
         ),
@@ -124,10 +124,10 @@ function y(e) {
                         en(!1);
                     });
             };
-            B < X
+            B < U
                 ? (0, s.u)({
                       analyticsLocation: N,
-                      numberOfBoostsToAdd: X - B,
+                      numberOfBoostsToAdd: U - B,
                       analyticsLocations: T,
                       guild: _,
                       intent: o.P.PERK,
@@ -137,7 +137,7 @@ function y(e) {
                       onSubscribeComplete: e,
                   })
                 : e();
-        }, [T, _, B, R, N, H, $, V, C, X, A]),
+        }, [T, _, B, R, N, H, $, V, C, U, A]),
         ea = a.useCallback(
             (e) => {
                 switch (e.type) {
@@ -145,7 +145,7 @@ function y(e) {
                         C();
                         break;
                     case "go-to-step":
-                        L(e.step);
+                        E(e.step);
                         break;
                     case "save":
                         el();
@@ -170,7 +170,7 @@ function y(e) {
     return (0, l.jsx)(j.Provider, {
         value: {
             guildId: P,
-            step: E,
+            step: L,
             stepAction: D,
             stepLoading: et,
             onBack: ei,
@@ -178,16 +178,16 @@ function y(e) {
             gameServerGames: null != (O = null == Z ? void 0 : Z.catalog) ? O : {},
             instances: Object.values(null != (h = null == Z ? void 0 : Z.instances) ? h : {}),
             currentGame: H,
-            setCurrentGame: Y,
+            setCurrentGame: X,
             gameServerInstance: A,
-            setGameServerInstance: M,
+            setGameServerInstance: Y,
             name: $,
             setName: Q,
             regionId: V,
             setRegionId: ee,
-            planCost: X,
+            planCost: U,
             planId: R,
-            setPlanId: U,
+            setPlanId: M,
             footerNode: q,
             setFooterNode: W,
             availableBoostCount: B,

@@ -153,7 +153,7 @@ let b = (e) => {
                 "innerClassName",
                 "shouldShowTooltip",
             ]);
-        return (0, r.jsx)(l.DY3, {
+        return (0, r.jsx)(l.jSM, {
             text: i,
             position: a,
             align: c,

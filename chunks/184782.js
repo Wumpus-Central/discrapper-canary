@@ -187,7 +187,7 @@ let k = (e) => {
                                                         guild: h,
                                                         className: S.headerGuildBadge,
                                                         flowerStarClassName: S.flowerStar,
-                                                        tooltipColor: s.ua7.Colors.PRIMARY,
+                                                        tooltipColor: s.aML.Colors.PRIMARY,
                                                     }),
                                                     (0, a.jsx)("strong", {
                                                         className: S.headerGuildName,

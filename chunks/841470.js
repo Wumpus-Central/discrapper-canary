@@ -17,7 +17,7 @@ let c = (e) => {
         } = e,
         m =
             null != g
-                ? (0, r.jsx)(l.ua7, {
+                ? (0, r.jsx)(l.aML, {
                       "data-migration-pending": !0,
                       text: g,
                       position: "top",

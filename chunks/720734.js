@@ -33,8 +33,8 @@ var a = n(951288),
     P = n(541638),
     I = n(676742),
     w = n(1585),
-    k = n(304761),
-    R = n(865427),
+    R = n(304761),
+    k = n(865427),
     A = n(358221),
     Z = n(571250),
     D = n(628581),
@@ -87,8 +87,8 @@ var a = n(951288),
     eP = n(74650),
     eI = n(306609),
     ew = n(170293),
-    ek = n(8404),
-    eR = n(199902),
+    eR = n(8404),
+    ek = n(199902),
     eA = n(314897),
     eZ = n(592125),
     eD = n(831506),
@@ -860,7 +860,7 @@ function tf() {
                 status: eB.Z.getStatus(),
             };
         }),
-        m = (0, d.e7)([eR.Z], () => eR.Z.getAnyStreamForUser(r)),
+        m = (0, d.e7)([ek.Z], () => ek.Z.getAnyStreamForUser(r)),
         p = (0, v.Z)({ userId: r }),
         h = e0.ZP.useUserTag(n, { decoration: "never" }),
         x = (0, d.e7)([eG.Z], () => eG.Z.hidePersonalInformation),
@@ -870,10 +870,10 @@ function tf() {
         }),
         { mute: g, selfMute: j, suppress: _ } = (0, ej.Z)(b),
         { selfDeaf: C, deaf: E } = (0, ev.Z)(b),
-        S = (0, d.e7)([k.C], () => {
+        S = (0, d.e7)([R.C], () => {
             var e;
-            return (0, R.fD)()
-                ? null == (e = k.C.getCurrentBuildOverride().overrides)
+            return (0, k.fD)()
+                ? null == (e = R.C.getCurrentBuildOverride().overrides)
                     ? void 0
                     : e.discord_web
                 : null;
@@ -1016,7 +1016,7 @@ function tb(e) {
                     {
                         ref: x,
                         tooltipText: t,
-                        tooltipColor: g ? f.FGA.GREEN : void 0,
+                        tooltipColor: g ? f.r6K.GREEN : void 0,
                         tooltipForceOpen: g,
                         tooltipClassName: tr.accountButtonsTooltip,
                         tooltipContentClassName: tr.accountButtonsTooltipContent,
@@ -1058,16 +1058,16 @@ function tg(e) {
         E = n || s || i,
         S = r.useRef(null),
         T = r.useRef(null),
-        P = (0, ek.b)(E),
-        { activeVoice: I, mostRecentlyRequestedVoiceId: w, lastInitAttemptMayHaveCrashed: k } = (0, eS.o)(),
-        { showSilentLagWarning: R } = (0, eE.Y)(),
+        P = (0, eR.b)(E),
+        { activeVoice: I, mostRecentlyRequestedVoiceId: w, lastInitAttemptMayHaveCrashed: R } = (0, eS.o)(),
+        { showSilentLagWarning: k } = (0, eE.Y)(),
         A = null != I,
         Z = (0, eC.z)(I),
         U = (0, d.e7)([eU.Z], () => eU.Z.isConnected()),
         { Component: F, events: B, play: z } = P,
         V = i || s ? f.v0G : F,
         H = (0, D.Z)(n, i, s, o),
-        K = R ? ta.intl.string(ta.t.ARRV6u) : null;
+        K = k ? ta.intl.string(ta.t.ARRV6u) : null;
     t = _
         ? ta.intl.string(ta.t["29gnR0"])
         : null != K
@@ -1134,10 +1134,10 @@ function tg(e) {
         );
     }, [U]);
     let er = r.useCallback(() => {
-            k || (0, eT.r5)();
-        }, [k]),
-        ei = E ? f.TVs.colors.STATUS_DANGER : R ? f.TVs.colors.STATUS_WARNING : "currentColor",
-        el = E || R,
+            R || (0, eT.r5)();
+        }, [R]),
+        ei = E ? f.TVs.colors.STATUS_DANGER : k ? f.TVs.colors.STATUS_WARNING : "currentColor",
+        el = E || k,
         es = (0, eo.Z)({ location: "Account" }),
         { name: ec } = (0, et.p6)(tn.h7.AUDIO_INPUT),
         { showRefreshedAudioContextMenu: ed } = (0, e4.e)({ location: "MicrophoneButton" }),
@@ -1210,11 +1210,11 @@ function tg(e) {
                                   onMouseLeave: () => {
                                       h(), B.onMouseLeave();
                                   },
-                                  orangeGlow: R,
+                                  orangeGlow: k,
                                   plated: null != v,
                                   redGlow: E,
                                   role: "switch",
-                                  tooltipColor: _ ? f.FGA.GREEN : void 0,
+                                  tooltipColor: _ ? f.r6K.GREEN : void 0,
                                   tooltipForceOpen: _,
                                   tooltipText: t,
                               }),
@@ -1235,11 +1235,11 @@ function tg(e) {
                                   onContextMenu: r,
                                   onMouseEnter: p,
                                   onMouseLeave: h,
-                                  orangeGlow: R,
+                                  orangeGlow: k,
                                   plated: null != v,
                                   redGlow: E,
                                   tooltipClassName: tr.accountButtonsTooltip,
-                                  tooltipColor: y ? f.FGA.GREEN : void 0,
+                                  tooltipColor: y ? f.r6K.GREEN : void 0,
                                   tooltipContentClassName: tr.accountButtonsTooltipContent,
                                   tooltipForceOpen: y,
                                   tooltipPositionKeyStemOverride: y
@@ -1263,7 +1263,7 @@ function tg(e) {
                   children: [
                       (0, a.jsx)(e2.Z, {
                           tooltipText: t,
-                          tooltipColor: _ ? f.FGA.GREEN : void 0,
+                          tooltipColor: _ ? f.r6K.GREEN : void 0,
                           tooltipForceOpen: _,
                           plated: null != v,
                           onMouseEnter: () => {
@@ -1283,7 +1283,7 @@ function tg(e) {
                           onContextMenu: X,
                           role: "switch",
                           className: l()({ [tr.micButtonWithMenu]: Y }),
-                          orangeGlow: R,
+                          orangeGlow: k,
                           redGlow: E,
                           "aria-label": ta.intl.string(ta.t["w4m94+"]),
                           "aria-checked": E,
@@ -1369,7 +1369,7 @@ function tg(e) {
                                                                   ref: T,
                                                                   plated: null != v,
                                                                   tooltipForceOpen: en,
-                                                                  tooltipColor: en ? f.FGA.GREEN : void 0,
+                                                                  tooltipColor: en ? f.r6K.GREEN : void 0,
                                                                   tooltipContentClassName: en
                                                                       ? tr.voiceFilterWarning
                                                                       : void 0,
@@ -1403,14 +1403,14 @@ function tg(e) {
                                                                   }),
                                                                   role: "button",
                                                                   className: tr.buttonChevron,
-                                                                  orangeGlow: R,
+                                                                  orangeGlow: k,
                                                                   redGlow: E,
                                                                   "aria-label": ta.intl.string(ta.t.Hapb4O),
                                                                   disabled: o,
                                                                   onClick: (e) => {
                                                                       i(te.L.INDIRECT_ACTION),
                                                                           n(e),
-                                                                          null != w && !Q && k
+                                                                          null != w && !Q && R
                                                                               ? (0, ew.$)(() => $(!0))
                                                                               : $(!Q);
                                                                   },
@@ -1548,7 +1548,7 @@ function tv(e) {
                                   plated: null != d,
                                   redGlow: h,
                                   tooltipClassName: tr.accountButtonsTooltip,
-                                  tooltipColor: u ? f.FGA.GREEN : void 0,
+                                  tooltipColor: u ? f.r6K.GREEN : void 0,
                                   tooltipContentClassName: tr.accountButtonsTooltipContent,
                                   tooltipForceOpen: u,
                                   tooltipPositionKeyStemOverride: u

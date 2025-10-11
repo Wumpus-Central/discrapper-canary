@@ -28,8 +28,8 @@ var a = n(951288),
     P = n(246992),
     I = n(981631),
     w = n(474936),
-    k = n(443582);
-function R(e) {
+    R = n(443582);
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
@@ -120,7 +120,7 @@ let D = function () {
     return (0, a.jsx)(x.Gt, {
         value: K,
         children: (0, a.jsx)(d.zJl, {
-            className: k.scroller,
+            className: R.scroller,
             children: (0, a.jsxs)(d.Kqy, {
                 direction: "vertical",
                 gap: 24,
@@ -250,7 +250,7 @@ let D = function () {
                                             (0, a.jsx)(
                                                 d.Button,
                                                 A(
-                                                    R(
+                                                    k(
                                                         {
                                                             variant: "primary",
                                                             text: "Open Link",
@@ -291,7 +291,7 @@ let D = function () {
                                         label: "Nitro Basic",
                                     },
                                 ],
-                                onChange: (e) => z((t) => A(R({}, t), { plan_id: e })),
+                                onChange: (e) => z((t) => A(k({}, t), { plan_id: e })),
                                 popoutLayerContext: P.O$,
                             }),
                             (0, a.jsx)(d.q4e, {
@@ -307,7 +307,7 @@ let D = function () {
                                         label: "Not Gift",
                                     },
                                 ],
-                                onChange: (e) => z((t) => A(R({}, t), { gift: e })),
+                                onChange: (e) => z((t) => A(k({}, t), { gift: e })),
                                 popoutLayerContext: P.O$,
                             }),
                         ],
@@ -319,7 +319,7 @@ let D = function () {
                             (0, a.jsx)(
                                 d.Button,
                                 A(
-                                    R(
+                                    k(
                                         {
                                             variant: "primary",
                                             text: "Open Link",
@@ -329,7 +329,7 @@ let D = function () {
                                     {
                                         disabled: V,
                                         onClick: () => {
-                                            window.open(I.Z5c.BILLING_PREMIUM_SUBSCRIBE + "?" + i.stringify(R({}, G)));
+                                            window.open(I.Z5c.BILLING_PREMIUM_SUBSCRIBE + "?" + i.stringify(k({}, G)));
                                         },
                                     },
                                 ),
@@ -350,11 +350,11 @@ let D = function () {
                                     }),
                                     $
                                         ? (0, a.jsx)("div", {
-                                              className: k.loader,
+                                              className: R.loader,
                                               children: (0, a.jsx)(d.$jN, { type: d.RAz.SPINNING_CIRCLE }),
                                           })
                                         : (0, a.jsxs)("div", {
-                                              className: k.balanceWidgetPillContainer,
+                                              className: R.balanceWidgetPillContainer,
                                               children: [
                                                   null !== ee &&
                                                       (0, a.jsxs)(d.Text, {

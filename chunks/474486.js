@@ -41,7 +41,7 @@ let u = (e) => {
                     }),
                 ],
             });
-        return (0, r.jsx)(l.ua7, {
+        return (0, r.jsx)(l.aML, {
             text: n,
             position: "right",
             "aria-label": s.intl.string(s.t.USo4s7),

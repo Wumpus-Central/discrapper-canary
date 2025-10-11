@@ -12,8 +12,8 @@ var r = t(951288),
     g = t(690221),
     f = t(77498),
     x = t(572004),
-    b = t(823379),
-    _ = t(49012),
+    _ = t(823379),
+    b = t(49012),
     v = t(639777),
     p = t(905551),
     j = t(441494),
@@ -132,7 +132,7 @@ function A(e) {
         W = (0, v.Z)(n),
         z = a.useCallback(() => {
             var e;
-            (0, _.q)({ href: null != (e = t.gameServerPanelUrl) ? e : "" });
+            (0, b.q)({ href: null != (e = t.gameServerPanelUrl) ? e : "" });
         }, [t.gameServerPanelUrl]),
         U = a.useCallback(() => {
             (0, p.WX)(n, t.id);
@@ -187,7 +187,7 @@ function A(e) {
         }, [t, B, W, z, U]),
         K = a.useMemo(() => {
             if (null == t.gameConfig) return null;
-            let e = [t.gameConfig.type, t.gameConfig.version].filter(b.lm).join(" ");
+            let e = [t.gameConfig.type, t.gameConfig.version].filter(_.lm).join(" ");
             return "" === e ? null : e;
         }, [t.gameConfig]),
         q = a.useMemo(() => {
@@ -227,7 +227,7 @@ function A(e) {
                                     (0, r.jsx)(u.Text, {
                                         variant: "text-sm/medium",
                                         color: "text-tertiary",
-                                        children: [null == V ? void 0 : V.name, K].filter(b.lm).join(" \u2022 "),
+                                        children: [null == V ? void 0 : V.name, K].filter(_.lm).join(" \u2022 "),
                                     }),
                                 ],
                             }),

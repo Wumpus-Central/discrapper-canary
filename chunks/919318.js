@@ -1,4 +1,4 @@
-t.d(n, { ZP: () => H }), t(388685), t(953529);
+t.d(n, { ZP: () => L }), t(388685), t(953529);
 var l = t(951288),
     r = t(647438),
     a = t(120356),
@@ -29,7 +29,7 @@ var l = t(951288),
     E = t(877762),
     S = t(430864),
     A = t(931057);
-function k(e) {
+function M(e) {
     let n,
         t,
         { firstMedia: r, channelId: a } = e,
@@ -70,7 +70,7 @@ function k(e) {
         })
     );
 }
-function M(e) {
+function k(e) {
     let { resource: n } = e,
         t = (0, s.e7)([j.Z], () => j.Z.getChannel(n.channelId)),
         a = (0, s.e7)([v.Z], () => v.Z.getMessages(n.channelId)),
@@ -157,7 +157,7 @@ function M(e) {
                   })
                 : null,
             null == C && null != p
-                ? (0, l.jsx)(k, {
+                ? (0, l.jsx)(M, {
                       firstMedia: p,
                       channelId: n.channelId,
                   })
@@ -165,7 +165,7 @@ function M(e) {
         ],
     });
 }
-function H(e) {
+function L(e) {
     let { guild: n, isNewMember: t } = e,
         r = (0, O.Z)(n.id);
     return 0 === r.length
@@ -207,7 +207,7 @@ function H(e) {
                       color: "header-primary",
                       children: w.intl.string(w.t.xwY4LS),
                   }),
-                  r.map((e) => (0, l.jsx)(M, { resource: e }, e.channelId)),
+                  r.map((e) => (0, l.jsx)(k, { resource: e }, e.channelId)),
               ],
           });
 }

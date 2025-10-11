@@ -81,11 +81,11 @@ class y extends (r = l.Component) {
             a = null != l ? l.numRequired : null,
             s = null != a ? a - e : null;
         return (0, i.jsxs)(
-            g.Cys,
+            g.gqK,
             {
                 targetElementRef: this.foregroundTooltipElementRef,
                 position: "right",
-                color: g.ua7.Colors.PRIMARY,
+                color: g.aML.Colors.PRIMARY,
                 tooltipClassName: b.foregroundTooltip,
                 children: [
                     (0, i.jsx)("div", { children: h.intl.format(h.t.gDsyBw, { numSubscriptions: e }) }),
@@ -137,7 +137,7 @@ class y extends (r = l.Component) {
             h = this.state.tierMarkerActive >= t,
             j = !m && u && h;
         return (0, i.jsx)(
-            g.ua7,
+            g.aML,
             {
                 text: this.renderTierMarkerTooltip(e),
                 position: "right",

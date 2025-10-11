@@ -23,11 +23,11 @@ class m extends r.PureComponent {
         n(e, t);
     }
     renderDisabledIndicator(e) {
-        return (0, i.jsx)(a.ua7, {
+        return (0, i.jsx)(a.aML, {
             "data-migration-pending": !0,
             text: e,
             position: "top",
-            color: a.ua7.Colors.RED,
+            color: a.aML.Colors.RED,
             children: (e) => {
                 var t, n;
                 return (0, i.jsx)(

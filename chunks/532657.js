@@ -95,7 +95,7 @@ function p(e) {
     return null == p && g
         ? null
         : v
-          ? (0, r.jsx)(s.ua7, {
+          ? (0, r.jsx)(s.aML, {
                 "data-migration-pending": !0,
                 text: b(),
                 "aria-label": f,

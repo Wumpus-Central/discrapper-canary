@@ -51,8 +51,8 @@ let f = {
             w = r.useCallback(() => {
                 S && I();
             }, [S, I]),
-            k = (0, s.Z)(null, w),
-            R = r.useMemo(
+            R = (0, s.Z)(null, w),
+            k = r.useMemo(
                 () =>
                     (0, a.jsx)(u.L, {
                         analyticsPage: g,
@@ -87,8 +87,8 @@ let f = {
                             [x.hidden]: O,
                             [x.visible]: !O,
                         }),
-                        ref: k,
-                        children: R,
+                        ref: R,
+                        children: k,
                     }),
             ],
         });

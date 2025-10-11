@@ -212,11 +212,11 @@ function E(e) {
                                     (0, i.jsx)(c.izJ, { className: C.bottomDivider }),
                                     (0, i.jsxs)(m.Z, {
                                         children: [
-                                            (0, i.jsx)(c.ua7, {
+                                            (0, i.jsx)(c.aML, {
                                                 "data-migration-pending": !0,
                                                 text: _.intl.string(_.t.wwdb3t),
                                                 forceOpen: Z,
-                                                color: c.FGA.GREEN,
+                                                color: c.r6K.GREEN,
                                                 disableTooltipPointerEvents: !0,
                                                 children: (e) => {
                                                     var {

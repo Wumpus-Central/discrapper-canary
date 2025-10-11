@@ -216,7 +216,7 @@ class R extends a.PureComponent {
     renderTooltip() {
         let { guild: e, showTooltip: t, tooltipPosition: n } = this.props;
         return t
-            ? (0, i.jsx)(d.ua7, {
+            ? (0, i.jsx)(d.aML, {
                   text: e.name,
                   position: n,
                   "aria-label": !1,

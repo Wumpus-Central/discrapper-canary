@@ -46,8 +46,8 @@ function E(e) {
         name: i.ImpressionNames.AUDIO_DEVICE_MENU,
         properties: { location_stack: V },
     });
-    let F = (0, h.Z)(t),
-        L = (0, m.M)({
+    let L = (0, h.Z)(t),
+        F = (0, m.M)({
             deviceType: _.h7.AUDIO_INPUT,
             analyticsLocations: V,
             asSubmenu: !0,
@@ -85,7 +85,7 @@ function E(e) {
             className: C.menu,
             children: [
                 (0, r.jsxs)(a.kSQ, {
-                    children: [k && L, N && H, D && U],
+                    children: [k && F, N && H, D && U],
                 }),
                 (0, r.jsxs)(a.kSQ, {
                     children: [
@@ -132,7 +132,7 @@ function E(e) {
                                 },
                                 "self-deafen",
                             ),
-                        R && F,
+                        R && L,
                     ],
                 }),
             ],

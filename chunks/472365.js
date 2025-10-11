@@ -24,9 +24,9 @@ var i = t(951288),
     C = t(626135),
     A = t(768581),
     T = t(358085),
-    P = t(998502),
-    b = t(379164),
-    L = t(590965),
+    L = t(998502),
+    P = t(379164),
+    b = t(590965),
     R = t(981631),
     z = t(474936),
     Z = t(388032),
@@ -115,7 +115,7 @@ function U(e) {
                     }),
                     (0, i.jsx)(p.zx, {
                         size: p.zx.Sizes.LARGE,
-                        onClick: () => b.Z.close(),
+                        onClick: () => P.Z.close(),
                         color: p.zx.Colors.BRAND,
                         children: Z.intl.string(Z.t.wcqOoK),
                     }),
@@ -135,7 +135,7 @@ function y(e) {
         return null == (e = v.default.getCurrentUser()) ? void 0 : e.premiumType;
     });
     let E = (0, o.e7)([v.default], () => v.default.getCurrentUser()),
-        { invite: j, error: S, submitting: z } = (0, o.cj)([L.Z], () => L.Z.getProps());
+        { invite: j, error: S, submitting: z } = (0, o.cj)([b.Z], () => b.Z.getProps());
     l.useEffect(() => {
         if (null != j && null != j.guild) {
             var e;
@@ -149,7 +149,7 @@ function y(e) {
     ]);
     let O = (0, f.yr)();
     l.useEffect(() => {
-        !__OVERLAY__ && T.isPlatformEmbedded && ((0, T.isWindows)() ? P.ZP.minimize() : P.ZP.restore(), P.ZP.focus());
+        !__OVERLAY__ && T.isPlatformEmbedded && ((0, T.isWindows)() ? L.ZP.minimize() : L.ZP.restore(), L.ZP.focus());
     }, []);
     let y = (0, N.Dt)(),
         { analyticsLocations: F } = (0, _.ZP)(m.Z.INVITE_MODAL);
@@ -158,7 +158,7 @@ function y(e) {
         return (0, i.jsx)(U, { transitionState: g });
     if (null == j.channel) return null;
     function G() {
-        null != j && b.Z.acceptInvite(j);
+        null != j && P.Z.acceptInvite(j);
     }
     let { guild: V, channel: W, inviter: B, target_application: w } = j,
         H = null != V,
@@ -213,7 +213,7 @@ function y(e) {
                                     children: [
                                         K ? (0, i.jsx)(k, {}) : null,
                                         null == w
-                                            ? (0, i.jsx)(c.ua7, {
+                                            ? (0, i.jsx)(c.aML, {
                                                   "data-migration-pending": !0,
                                                   text: K ? Z.intl.string(Z.t.iLyuDA) : null,
                                                   position: "bottom",
@@ -277,7 +277,7 @@ function y(e) {
                                                         invite_code: null == j ? void 0 : j.code,
                                                         guild_id: null == j || null == (e = j.guild) ? void 0 : e.id,
                                                     }),
-                                                        b.Z.close();
+                                                        P.Z.close();
                                                 },
                                                 color: p.zx.Colors.TRANSPARENT,
                                                 children: Z.intl.string(Z.t.ndsK4e),

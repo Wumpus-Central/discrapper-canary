@@ -158,7 +158,7 @@ let T = {
         let Z = !x && P.fractionalState === h.a$.NONE,
             F = Z ? s.P3F : "div",
             V = Z ? { onClick: B } : {};
-        return (0, r.jsx)(s.ua7, {
+        return (0, r.jsx)(s.aML, {
             tooltipClassName: E.tooltip,
             text: x
                 ? m.intl.formatToPlainString(m.t["1o48kp"], { tierName: (0, d.nW)(A, { useLevels: !1 }) })

@@ -370,7 +370,7 @@ let Y = function (e) {
                                       text: D.intl.string(D.t["ETE/oK"]),
                                   }),
                               }),
-                        (0, r.jsx)(l.ua7, {
+                        (0, r.jsx)(l.aML, {
                             text: t,
                             children: (t) =>
                                 (0, r.jsx)(

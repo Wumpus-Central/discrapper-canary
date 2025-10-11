@@ -117,7 +117,7 @@ function b(e) {
                 showBadge: !0,
                 className: null != b.icon ? g.icon : g.noIcon,
                 badgeStrokeColor: (0, a.Lq)((0, i.wj)(O) ? h.Ilk.PRIMARY_600 : h.Ilk.WHITE_500),
-                badgeTooltipColor: l.FGA.PRIMARY,
+                badgeTooltipColor: l.r6K.PRIMARY,
                 badgeTooltipDelay: p.vB,
                 size: c.Z.Sizes.MEDIUM,
                 active: !0,

@@ -98,7 +98,7 @@ let R = (e) => {
                       className: I.userAvatarProgressBarUnitNum,
                       children: n,
                   });
-        return (0, r.jsx)(c.ua7, {
+        return (0, r.jsx)(c.aML, {
             text: v.intl.string(v.t.UnKHdn),
             shouldShow: !o,
             tooltipContentClassName: I.unsentTooltipContent,

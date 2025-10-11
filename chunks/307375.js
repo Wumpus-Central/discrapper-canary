@@ -76,7 +76,7 @@ function f(e) {
                             className: p.joinOptionTab,
                             disabled: !e.enabled,
                             "aria-label": e.title,
-                            children: (0, r.jsx)(o.DY3, {
+                            children: (0, r.jsx)(o.jSM, {
                                 text: e.ineligibleText,
                                 position: "bottom",
                                 shouldShow: !e.enabled,

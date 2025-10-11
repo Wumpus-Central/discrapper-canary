@@ -33,7 +33,7 @@ let d = i.forwardRef(function (e, t) {
             tooltipShouldShow: Z,
             plated: T,
         } = e,
-        I =
+        M =
             "function" == typeof f
                 ? (0, r.jsx)(f, {
                       width: 20,
@@ -43,7 +43,7 @@ let d = i.forwardRef(function (e, t) {
                       color: "currentColor",
                   })
                 : f;
-    return (0, r.jsx)(s.ua7, {
+    return (0, r.jsx)(s.aML, {
         "data-migration-pending": !0,
         tooltipClassName: g,
         text: n,
@@ -149,9 +149,9 @@ let d = i.forwardRef(function (e, t) {
                                       width: 20,
                                       height: 20,
                                       mask: c.ZP.Masks.PANEL_BUTTON,
-                                      children: I,
+                                      children: M,
                                   })
-                                : I,
+                                : M,
                             i,
                         ],
                     }),

@@ -30,8 +30,8 @@ var l = n(951288),
     R = n(995596),
     w = n(937283),
     A = n(440857),
-    Z = n(707113),
-    M = n(981631),
+    M = n(707113),
+    Z = n(981631),
     D = n(176505),
     k = n(388032),
     G = n(350013),
@@ -82,7 +82,7 @@ function U(e) {
             sortOrder: D,
         });
     r.useEffect(() => {
-        (null == v ? void 0 : v.features.has(M.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) || b(S.e.ALL_MEMBERS);
+        (null == v ? void 0 : v.features.has(Z.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) || b(S.e.ALL_MEMBERS);
     }, [v]);
     let U = (0, T.n2)(n),
         F = (0, m.m)(n),
@@ -135,7 +135,7 @@ function U(e) {
                                           ? (0, l.jsxs)(l.Fragment, {
                                                 children: [
                                                     (0, l.jsx)(y.Z, { guild: v }),
-                                                    (0, l.jsx)(Z.Z, { guild: v }),
+                                                    (0, l.jsx)(M.Z, { guild: v }),
                                                 ],
                                             })
                                           : (0, l.jsx)(I.Z, {

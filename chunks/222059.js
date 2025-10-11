@@ -166,7 +166,7 @@ function D(e) {
                         className: A.pill,
                     }),
                     (0, r.jsx)(I.Z, {
-                        color: s.ua7.Colors.PRIMARY,
+                        color: s.aML.Colors.PRIMARY,
                         hideOnClick: !0,
                         text: k,
                         selected: o,

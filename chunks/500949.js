@@ -55,8 +55,8 @@ var a,
     P = n(596136),
     I = n(341901),
     w = n(856308),
-    k = n(665352),
-    R = n(394900),
+    R = n(665352),
+    k = n(394900),
     A = n(661105),
     Z = n(525169),
     D = n(433517),
@@ -134,7 +134,7 @@ let B = {
         XYZ_D65: w.Z,
     },
     G = Object.fromEntries(Object.keys(B).map((e) => [e, e]));
-Object.values(B).forEach((e) => k.Z.register(e));
+Object.values(B).forEach((e) => R.Z.register(e));
 let { SemanticColors: z } = M.V,
     V = z,
     H = CSS.supports("color", "color(display-p3 1 0 0)") && CSS.supports("color", "color(display-p3 1 0 0 / 1)");
@@ -182,7 +182,7 @@ function Y(e) {
     return F(U({}, e), { highlight: !e.highlight });
 }
 function J(e) {
-    return (0, R.Z)((0, A.Z)(e, l.Z), { format: "hex" });
+    return (0, k.Z)((0, A.Z)(e, l.Z), { format: "hex" });
 }
 var X = (((a = {}).TOKENS = "Tokens"), (a.PALETTES = "Palettes"), a);
 function Q() {

@@ -1,4 +1,4 @@
-t.d(n, { Z: () => b });
+t.d(n, { Z: () => _ });
 var r = t(951288),
     a = t(647438),
     i = t(481060),
@@ -19,12 +19,12 @@ let x = {
         },
     },
 };
-function b(e) {
+function _(e) {
     let { guildId: n, instance: t } = e,
-        b = a.useRef(null);
+        _ = a.useRef(null);
     return (0, c.Z)(n)
         ? (0, r.jsx)(i.yRy, {
-              targetElementRef: b,
+              targetElementRef: _,
               align: "top",
               position: "right",
               animationPosition: "bottom",
@@ -103,7 +103,7 @@ function b(e) {
                       )),
                       (t = t =
                           {
-                              innerRef: b,
+                              innerRef: _,
                               children: (0, r.jsx)(i.xhG, {
                                   color: "currentColor",
                                   size: "sm",

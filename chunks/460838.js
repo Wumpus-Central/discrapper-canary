@@ -76,7 +76,7 @@ function P(e) {
         l = (0, c.e7)([p.Z], () => !n.isGuildVocal() || p.Z.can(j.Plq.CONNECT, n), [n]),
         g = r.useMemo(() => (0, d.Z)(n), [n]),
         m = (0, u.KS)(n);
-    return (0, a.jsx)(s.ua7, {
+    return (0, a.jsx)(s.aML, {
         "data-migration-pending": !0,
         text: k.intl.string(k.t.nHjY9P),
         shouldShow: !l && null != t,
@@ -90,7 +90,7 @@ function P(e) {
                     }),
                     onClick: t,
                     children: [
-                        (0, a.jsx)(s.ua7, {
+                        (0, a.jsx)(s.aML, {
                             "data-migration-pending": !0,
                             text: k.intl.string(k.t["48WXaW"]),
                             shouldShow: i && g && l && null != t,

@@ -50,7 +50,7 @@ class Z extends r.Component {
                     ? ((e = E.intl.string(E.t["4ry6ys"])), (l = a.gkL))
                     : (e = E.intl.string(E.t["0D/6R0"]))
                 : o
-                  ? ((e = E.intl.string(E.t.PHzjvb)), (t = a.ua7.Colors.RED), (c = !0))
+                  ? ((e = E.intl.string(E.t.PHzjvb)), (t = a.aML.Colors.RED), (c = !0))
                   : (e = E.intl.string(E.t.focH1t)),
             (0, i.jsx)(p.Z.Icon, {
                 icon: l,

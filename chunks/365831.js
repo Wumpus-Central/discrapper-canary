@@ -133,7 +133,7 @@ function w(e) {
             },
             "respect-motion-settings",
         ),
-        F = (0, c.Yzy)(
+        L = (0, c.Yzy)(
             null == w ? void 0 : w.id,
             {
                 key: Z,
@@ -156,7 +156,7 @@ function w(e) {
             },
             "respect-motion-settings",
         ),
-        [L] = (0, c.bYB)(
+        [F] = (0, c.bYB)(
             2,
             (e) => ({
                 from: A
@@ -277,7 +277,7 @@ function w(e) {
             (0, r.jsx)("div", {
                 className: l()([y.bgGradient, y.bgGradientHighlight]),
             }),
-            F((e) =>
+            L((e) =>
                 (0, r.jsx)(a.animated.div, {
                     className: y.bgGradient,
                     style: e,
@@ -323,7 +323,7 @@ function w(e) {
             (0, r.jsxs)("div", {
                 className: y.buttonWrapper,
                 children: [
-                    (0, r.jsx)(c.ua7, {
+                    (0, r.jsx)(c.aML, {
                         "data-migration-pending": !0,
                         "aria-label": H,
                         tooltipClassName: y.tooltip,
@@ -347,7 +347,7 @@ function w(e) {
                         children: (e) =>
                             (0, r.jsx)(a.animated.div, {
                                 className: y.buttonWrapper,
-                                style: L[0],
+                                style: F[0],
                                 children: (0, r.jsx)(
                                     c.P3F,
                                     O(
@@ -373,14 +373,14 @@ function w(e) {
                                 ),
                             }),
                     }),
-                    (0, r.jsx)(c.ua7, {
+                    (0, r.jsx)(c.aML, {
                         "data-migration-pending": !0,
                         shouldShow: k,
                         text: v.intl.string(v.t.UvMx7O),
                         children: (e) =>
                             (0, r.jsx)(a.animated.div, {
                                 className: y.buttonWrapper,
-                                style: L[1],
+                                style: F[1],
                                 children: (0, r.jsx)(
                                     c.P3F,
                                     O(

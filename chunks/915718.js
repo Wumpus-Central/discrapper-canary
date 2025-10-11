@@ -67,10 +67,10 @@ class A extends i.PureComponent {
             p = !1;
         return (
             d
-                ? ((p = !0), (h = R.intl.string(R.t.izMR7u)), (e = o.ua7.Colors.RED))
+                ? ((p = !0), (h = R.intl.string(R.t.izMR7u)), (e = o.aML.Colors.RED))
                 : x.Z.supports(N.AN.VIDEO)
                   ? a
-                      ? ((h = R.intl.string(R.t.PHzjvb)), (e = o.ua7.Colors.RED), (p = !0))
+                      ? ((h = R.intl.string(R.t.PHzjvb)), (e = o.aML.Colors.RED), (p = !0))
                       : i && c === Z.WtW.VIDEO
                         ? ((t = this.handleJoinVideoCall),
                           (h = u ? R.intl.string(R.t.S0W8Z2) : R.intl.string(R.t.W68MhI)))
@@ -102,11 +102,11 @@ class A extends i.PureComponent {
         let p = d.isManaged(),
             f = !1;
         h
-            ? ((f = !0), (e = R.intl.string(R.t.izMR7u)), (t = o.ua7.Colors.RED))
+            ? ((f = !0), (e = R.intl.string(R.t.izMR7u)), (t = o.aML.Colors.RED))
             : l
-              ? ((e = p ? R.intl.string(R.t.LW2Gho) : R.intl.string(R.t.rF7lNz)), (t = o.ua7.Colors.RED), (f = !0))
+              ? ((e = p ? R.intl.string(R.t.LW2Gho) : R.intl.string(R.t.rF7lNz)), (t = o.aML.Colors.RED), (f = !0))
               : c
-                ? ((e = R.intl.string(R.t.PHzjvb)), (t = o.ua7.Colors.RED), (f = !0))
+                ? ((e = R.intl.string(R.t.PHzjvb)), (t = o.aML.Colors.RED), (f = !0))
                 : (e = i
                       ? p
                           ? R.intl.string(R.t.S0W8Z2)

@@ -25,8 +25,8 @@ var i,
     T = n(471445),
     b = n(600164),
     _ = n(687516),
-    P = n(648159),
-    M = n(227672),
+    M = n(648159),
+    P = n(227672),
     Z = n(427679),
     A = n(601964),
     w = n(199902),
@@ -362,7 +362,7 @@ class ex extends (i = s.PureComponent) {
                                         }),
                                     ],
                                 }),
-                            null != s ? (0, l.jsx)(P.Z, {}) : null,
+                            null != s ? (0, l.jsx)(M.Z, {}) : null,
                             g,
                         ],
                     }),
@@ -493,7 +493,7 @@ class ex extends (i = s.PureComponent) {
                                 children: ea.intl.string(ea.t.QKJru7),
                             }),
                         }),
-                        (0, l.jsx)(I.ua7, {
+                        (0, l.jsx)(I.aML, {
                             "data-migration-pending": !0,
                             text: ea.intl.string(ea.t.Yx4IiI),
                             children: (e) => {
@@ -758,8 +758,8 @@ let eS = s.forwardRef(function (e, t) {
                 null != t ? t : O.ZP.getDefaultChannel(r.id, !0, el.Plq.CREATE_INSTANT_INVITE)
             );
         }, [a, r.id]),
-        P = null;
-    null != u ? (P = ei.Iq.STREAM) : null != c && (P = ei.Iq.EMBEDDED_APPLICATION);
+        M = null;
+    null != u ? (M = ei.Iq.STREAM) : null != c && (M = ei.Iq.EMBEDDED_APPLICATION);
     let A = null != a ? a.getGuildId() : null != r ? r.id : null,
         w = (0, K.xU)({
             guildId: A,
@@ -774,11 +774,11 @@ let eS = s.forwardRef(function (e, t) {
             return null == e
                 ? null
                 : L.Z.getInvite(e, {
-                      targetType: P,
+                      targetType: M,
                       targetUserId: u,
                       targetApplicationId: c,
                   });
-        }, [_, P, u, c]),
+        }, [_, M, u, c]),
         { isFriendsInVCInvitesEnabled: H } = (0, W.am)({
             guildId: null != A ? A : void 0,
             location: "instant_invite_modal",
@@ -815,7 +815,7 @@ let eS = s.forwardRef(function (e, t) {
                       })
                     : null != A &&
                       null != ee &&
-                      P !== ei.Iq.EMBEDDED_APPLICATION &&
+                      M !== ei.Iq.EMBEDDED_APPLICATION &&
                       ee.rows.forEach((t) => {
                           t.type === V.so.MEMBER && e.add(t.userId);
                       }),
@@ -830,9 +830,9 @@ let eS = s.forwardRef(function (e, t) {
             guild: r,
             channel: a,
             applicationId: c,
-            inviteTargetType: P,
+            inviteTargetType: M,
         }).catch(el.VqG);
-    }, [ea, a, r, c, P]);
+    }, [ea, a, r, c, M]);
     let [ed] = (0, f.Z)(null != c ? [c] : []),
         eu = null != F ? F.code : void 0,
         ec = null == F ? void 0 : F.maxAge,
@@ -864,7 +864,7 @@ let eS = s.forwardRef(function (e, t) {
         e_ = s.useCallback((e) => {
             eb((t) => eh({}, t, e));
         }, []),
-        eP = s.useCallback(
+        eM = s.useCallback(
             (e) => {
                 e_({
                     currentPage: e,
@@ -873,19 +873,19 @@ let eS = s.forwardRef(function (e, t) {
             },
             [eT.currentPage, e_],
         ),
-        eM = eN && !ej && !en && !ef,
-        { enabled: eZ } = M.o.useExperiment(
+        eP = eN && !ej && !en && !ef,
+        { enabled: eZ } = P.o.useExperiment(
             {
                 guildId: null == r ? void 0 : r.id,
                 location: "acc417_3",
             },
-            { autoTrackExposure: eM },
+            { autoTrackExposure: eP },
         ),
         { maxAge: eA, maxUses: ew, temporary: eV, savedMaxAge: eR, flags: eO } = eT,
         eL = s.useCallback(() => {
             let { currentPage: e, lastPage: t } = eT;
-            e === ei.RV.SETTINGS && null != t ? eP(t) : v();
-        }, [eP, eT, v]),
+            e === ei.RV.SETTINGS && null != t ? eM(t) : v();
+        }, [eM, eT, v]),
         ek = s.useCallback(() => {
             let e = null == _ ? void 0 : _.id;
             0 === ew && 0 === eA && !eV && ej
@@ -904,7 +904,7 @@ let eS = s.forwardRef(function (e, t) {
                       {
                           max_age: eA,
                           max_uses: ew,
-                          target_type: P,
+                          target_type: M,
                           target_user_id: u,
                           target_application_id: null == ed ? void 0 : ed.id,
                           temporary: eV,
@@ -918,7 +918,7 @@ let eS = s.forwardRef(function (e, t) {
                       }),
                   )),
                 eA !== em.value && eR !== em.value && e_({ savedMaxAge: em.value });
-        }, [ej, et, _, o, null == ed ? void 0 : ed.id, P, u, eA, ew, eV, e_, eR, eO]),
+        }, [ej, et, _, o, null == ed ? void 0 : ed.id, M, u, eA, ew, eV, e_, eR, eO]),
         eU = (0, j.Z)(_),
         eD = (0, j.Z)((0, G.yE)(eO, g.$.IS_APPLICATION_BYPASS)),
         eB = null != eU && eU !== _,
@@ -938,7 +938,7 @@ let eS = s.forwardRef(function (e, t) {
             guildScheduledEvent: d,
             streamUserId: u,
             vanityURLCode: eS,
-            targetType: P,
+            targetType: M,
             targetUserId: u,
             application: ed,
             rows: Y,
@@ -954,11 +954,11 @@ let eS = s.forwardRef(function (e, t) {
             transitionState: h,
             onClose: v,
             canShowVanityURL: ej,
-            isGuestInviteCreationToggleEnabled: eZ && eM,
-            shouldHideTemporaryInviteToggle: (eZ && eM) || eH,
+            isGuestInviteCreationToggleEnabled: eZ && eP,
+            shouldHideTemporaryInviteToggle: (eZ && eP) || eH,
             modalState: eT,
             setModalState: e_,
-            changePage: eP,
+            changePage: eM,
             onGenerateNewLink: ek,
             handleDone: eL,
             isApplicationBypassToggleEnabled: ez && !en,

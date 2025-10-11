@@ -159,7 +159,7 @@ let j = l.forwardRef(function (e, t) {
                     }),
             ],
         });
-        return (0, r.jsx)(d.ua7, {
+        return (0, r.jsx)(d.aML, {
             text: e,
             "aria-label": p,
             tooltipContentClassName: S.videoControlsBtnTooltip,

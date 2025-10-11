@@ -60,7 +60,7 @@ function y(e, t) {
 let j = (e) => {
         let { widgetTitle: t, children: n } = e,
             { isDragging: i } = (0, o.f)((e) => ({ isDragging: e.isDragging() }));
-        return (0, r.jsx)(l.ua7, {
+        return (0, r.jsx)(l.aML, {
             "aria-label": b.intl.formatToPlainString(b.t.HWNJJC, { widgetTitle: t }),
             text: (0, r.jsx)(x, {}),
             position: "top",

@@ -99,7 +99,7 @@ function v(e) {
                               : t.name,
                 }),
             }),
-            (0, r.jsx)(d.ua7, {
+            (0, r.jsx)(d.aML, {
                 "data-migration-pending": !0,
                 text: h.intl.string(h.t.N86XcH),
                 children: (e) =>

@@ -97,11 +97,11 @@ let _ = i.memo(function (e) {
     }, [O, _, t]);
     return null == _
         ? null
-        : (0, r.jsx)(s.ua7, {
+        : (0, r.jsx)(s.aML, {
               "data-migration-pending": !0,
               forceOpen: I,
               text: S,
-              color: s.FGA.BRAND,
+              color: s.r6K.BRAND,
               position: "bottom",
               tooltipClassName: y.tooltip,
               tooltipContentClassName: y.tooltipContent,

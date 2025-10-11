@@ -154,7 +154,7 @@ function T() {
                                 className: C.frequentFriendsTitle,
                                 children: I.intl.string(I.t.QEh90N),
                             }),
-                            (0, r.jsx)(s.ua7, {
+                            (0, r.jsx)(s.aML, {
                                 text: I.intl.string(I.t.tqCMcX),
                                 children: (e) => {
                                     var t, n;

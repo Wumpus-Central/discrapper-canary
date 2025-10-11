@@ -135,7 +135,7 @@ function w(e) {
                       ),
                   )
                 : c;
-    return (0, r.jsx)(d.DY3, {
+    return (0, r.jsx)(d.jSM, {
         text: u,
         "aria-label": c,
         children: (0, r.jsxs)("div", {

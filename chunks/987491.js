@@ -63,7 +63,7 @@ function A(e) {
         ],
     });
 }
-function Z(e) {
+function M(e) {
     let { sortOrder: t, onSortChange: n } = e;
     return (0, l.jsx)("thead", {
         children: (0, l.jsxs)("tr", {
@@ -112,7 +112,7 @@ function Z(e) {
         }),
     });
 }
-let M = r.memo(function (e) {
+let Z = r.memo(function (e) {
         let { joinRequest: t, user: n } = e,
             { joinRequestId: i, guildId: a } = t,
             { analyticsLocations: s } = (0, j.ZP)(),
@@ -187,7 +187,7 @@ let M = r.memo(function (e) {
                   }),
                   children: [
                       (0, l.jsx)("td", {
-                          children: (0, l.jsx)(M, {
+                          children: (0, l.jsx)(Z, {
                               joinRequest: t,
                               user: b,
                           }),
@@ -363,7 +363,7 @@ function G(e) {
                   children: (0, l.jsxs)("table", {
                       className: I.table,
                       children: [
-                          (0, l.jsx)(Z, {
+                          (0, l.jsx)(M, {
                               sortOrder: s,
                               onSortChange: x,
                           }),

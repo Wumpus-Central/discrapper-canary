@@ -72,7 +72,7 @@ function E(e) {
                   size: 20,
               }))
             : null == a && (a = p.ZP.getURL(s)),
-        (0, r.jsx)(o.ua7, {
+        (0, r.jsx)(o.aML, {
             text: (0, p.nY)(t),
             hideOnClick: !0,
             spacing: 16,

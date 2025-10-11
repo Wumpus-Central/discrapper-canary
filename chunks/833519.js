@@ -78,10 +78,10 @@ function z(e) {
         } = e,
         q = j.Z.getVideoComponent(),
         Y = (0, o.e7)([C.default], () => C.default.getId()),
-        G = (0, b.Z)(),
-        { stream: K, user: Q, streamId: X } = t,
-        J = (0, o.e7)([w.Z], () => w.Z.getChannel(K.channelId)),
-        $ = (0, o.e7)([I.Z], () => I.Z.getActiveStreamForUser(Q.id, K.guildId), [Q.id, K.guildId]),
+        K = (0, b.Z)(),
+        { stream: G, user: Q, streamId: X } = t,
+        J = (0, o.e7)([w.Z], () => w.Z.getChannel(G.channelId)),
+        $ = (0, o.e7)([I.Z], () => I.Z.getActiveStreamForUser(Q.id, G.guildId), [Q.id, G.guildId]),
         { defaultWatchMultipleStreams: ee } = (0, E.P)({ location: "StreamTile" }),
         et = (0, o.e7)([I.Z], () => I.Z.getAllActiveStreams().length > 0),
         en = (0, o.e7)([Z.Z], () => Z.Z.isFocused()),
@@ -93,7 +93,7 @@ function z(e) {
         !et &&
             (null == J ? void 0 : J.isGuildStageVoice()) &&
             !er &&
-            ((0, u.rn)(K), s.Z.updateStageStreamSize(K.channelId, !1));
+            ((0, u.rn)(G), s.Z.updateStageStreamSize(G.channelId, !1));
     });
     let eo = (0, m.c)(V.Yn.STREAM, t.user.id);
     if (
@@ -106,7 +106,7 @@ function z(e) {
                     .concat(j.Z.supports(V.AN.VIDEO)),
             );
         }, [q, $, n]),
-        G)
+        K)
     )
         return (0, r.jsx)(D.Z, {
             stream: t.stream,
@@ -161,7 +161,7 @@ function z(e) {
                                         className: W.addCTA,
                                         tooltip: U.intl.string(U.t.wCrzur),
                                         onClick: (e) => {
-                                            e.stopPropagation(), (0, u.rn)(K, { forceMultiple: !0 });
+                                            e.stopPropagation(), (0, u.rn)(G, { forceMultiple: !0 });
                                         },
                                         isSmall: ea,
                                         children: (0, r.jsx)(c.OgY, {
@@ -185,7 +185,7 @@ function z(e) {
                           guildId: J.guild_id,
                           streamerId: Q.id,
                           hasScreenMessage: null != el,
-                          stream: K,
+                          stream: G,
                       })
                     : null,
                 (0, r.jsx)(
@@ -235,7 +235,7 @@ function z(e) {
                       )
                     : null,
                 (0, r.jsx)(A.Z, {
-                    stream: K,
+                    stream: G,
                     inPopout: _,
                 }),
             ],

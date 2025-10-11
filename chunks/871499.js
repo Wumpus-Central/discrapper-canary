@@ -117,7 +117,7 @@ function I(e) {
         color: x,
     } = e;
     return (0, r.jsx)(_.Z, {
-        children: (0, r.jsx)(c.ua7, {
+        children: (0, r.jsx)(c.aML, {
             "data-migration-pending": !0,
             position: S,
             text: t,

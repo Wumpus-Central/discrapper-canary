@@ -68,9 +68,9 @@ let C = (e) => {
         }),
         A = (0, a.e7)([y.Z], () => y.Z.isVoiceFilterDownloaded(t.id), [t]),
         R = null == I ? void 0 : I.previewSoundURLs,
-        [V, F] = i.useState(0),
+        [V, L] = i.useState(0),
         {
-            isPlaying: L,
+            isPlaying: F,
             playSound: U,
             stopSound: Y,
             preloadSound: H,
@@ -92,7 +92,7 @@ let C = (e) => {
                     volume: 0.5,
                     outputChannel: x.w.VOICE,
                 }),
-                (0.25 > Math.random() || V > 0) && null != R && F((e) => (e + 1) % R.length);
+                (0.25 > Math.random() || V > 0) && null != R && L((e) => (e + 1) % R.length);
         }, [o, U, V, R, t.id]),
         W = null != I ? P.intl.string(I.name) : "";
     return (0, r.jsxs)("div", {
@@ -206,12 +206,12 @@ let C = (e) => {
             null != R &&
                 (0, r.jsx)(c.u, {
                     asContainer: !0,
-                    text: P.intl.string(L ? P.t.ItuPbm : P.t["0gtbEx"]),
+                    text: P.intl.string(F ? P.t.ItuPbm : P.t["0gtbEx"]),
                     children: (0, r.jsx)(u.P3F, {
-                        className: l()([_.hoverButtonCircle, _.previewButton], { [_.visible]: L }),
-                        onClick: L ? Y : q,
+                        className: l()([_.hoverButtonCircle, _.previewButton], { [_.visible]: F }),
+                        onClick: F ? Y : q,
                         "aria-label": P.intl.formatToPlainString(P.t.gDzvjY, { voiceFilterName: W }),
-                        children: L
+                        children: F
                             ? (0, r.jsx)(u.wNq, {
                                   size: "custom",
                                   height: 16,

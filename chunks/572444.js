@@ -123,8 +123,8 @@ function y() {
             krispModelOverride: P,
             inputMode: I,
             echoCancellation: w,
-            autoThreshold: k,
-            vadUseKrisp: R,
+            autoThreshold: R,
+            vadUseKrisp: k,
             vadKrispActivationThreshold: A,
             noiseCancellation: Z,
             noiseSuppression: D,
@@ -256,18 +256,18 @@ function y() {
                             children: [
                                 (0, a.jsx)(c.rsf, {
                                     label: "Auto Threshold",
-                                    checked: k,
+                                    checked: R,
                                     onChange: (e) => d.Z.setMode(b.pM.VOICE_ACTIVITY, { autoThreshold: e }),
                                 }),
-                                k &&
+                                R &&
                                     (0, a.jsxs)(a.Fragment, {
                                         children: [
                                             (0, a.jsx)(c.rsf, {
                                                 label: "Use Krisp VAD",
-                                                checked: R,
+                                                checked: k,
                                                 onChange: (e) => d.Z.setMode(b.pM.VOICE_ACTIVITY, { vadUseKrisp: e }),
                                             }),
-                                            R &&
+                                            k &&
                                                 (0, a.jsx)(c.iRW, {
                                                     label: "Krisp VAD Activation Threshold",
                                                     initialValue: A,

@@ -106,9 +106,9 @@ class D extends i.Component {
                   position: "right",
                   children: (e, t) => {
                       let { isShown: a } = t;
-                      return (0, r.jsx)(u.DY3, {
+                      return (0, r.jsx)(u.jSM, {
                           text: g,
-                          color: u.FGA.PRIMARY,
+                          color: u.r6K.PRIMARY,
                           "aria-label": p ? S.intl.string(S.t.Kfcszs) : S.intl.string(S.t.lfIHs7),
                           tooltipClassName: T.__invalid_addReactionTooltip,
                           children: (0, r.jsxs)(

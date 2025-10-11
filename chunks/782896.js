@@ -86,7 +86,7 @@ function m(e) {
                       numTruncatedTooltipGuilds: e.length - 15,
                   };
         }, [m, n]);
-    return (0, r.jsx)(o.DY3, {
+    return (0, r.jsx)(o.jSM, {
         "aria-label": p.intl.string(d.default.TG0Qsb),
         text: (0, r.jsx)(g, {
             guilds: y,

@@ -381,7 +381,7 @@ function F(e) {
                         channel: s,
                         applicationId: p,
                     }),
-                    (0, l.jsx)(m.ua7, {
+                    (0, l.jsx)(m.aML, {
                         "data-migration-pending": !0,
                         position: "top",
                         text: C.intl.string(C.t["4QuV7O"]),
@@ -415,7 +415,7 @@ function F(e) {
                                             variant: "heading-md/medium",
                                             children: C.intl.string(C.t.YlT5MT),
                                         }),
-                                        (0, l.jsx)(m.ua7, {
+                                        (0, l.jsx)(m.aML, {
                                             "data-migration-pending": !0,
                                             position: "top",
                                             text: C.intl.string(C.t.efLzgY),
@@ -458,7 +458,7 @@ function F(e) {
                                                 variant: "heading-md/medium",
                                                 children: C.intl.string(C.t.EPIOl5),
                                             }),
-                                            (0, l.jsx)(m.ua7, {
+                                            (0, l.jsx)(m.aML, {
                                                 "data-migration-pending": !0,
                                                 position: "top",
                                                 text: C.intl.string(C.t["jvd/LC"]),
@@ -491,7 +491,7 @@ function F(e) {
                                                 variant: "heading-md/medium",
                                                 children: C.intl.string(C.t.NKqlpq),
                                             }),
-                                            (0, l.jsx)(m.ua7, {
+                                            (0, l.jsx)(m.aML, {
                                                 "data-migration-pending": !0,
                                                 position: "top",
                                                 text: C.intl.string(C.t.pBOevb),
@@ -524,7 +524,7 @@ function F(e) {
                                                 variant: "heading-md/medium",
                                                 children: C.intl.string(C.t.UL177u),
                                             }),
-                                            (0, l.jsx)(m.ua7, {
+                                            (0, l.jsx)(m.aML, {
                                                 "data-migration-pending": !0,
                                                 position: "top",
                                                 text: C.intl.string(C.t.cl1HNT),
@@ -551,7 +551,7 @@ function F(e) {
             (0, l.jsxs)("div", {
                 className: Z.buttonRow,
                 children: [
-                    (0, l.jsx)(m.ua7, {
+                    (0, l.jsx)(m.aML, {
                         "data-migration-pending": !0,
                         position: "top",
                         text: J,

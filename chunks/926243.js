@@ -277,7 +277,7 @@ function w(e) {
         };
     return I
         ? (0, r.jsx)(
-              l.ua7,
+              l.aML,
               {
                   "data-migration-pending": !0,
                   text: O.intl.formatToPlainString(O.t.glqNsb, { key: (0, b.isMac)() ? "Opt" : "Alt" }),

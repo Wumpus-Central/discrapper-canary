@@ -28,8 +28,8 @@ var a = n(951288),
     P = n(648052),
     I = n(867176),
     w = n(537006),
-    k = n(483424),
-    R = n(681837),
+    R = n(483424),
+    k = n(681837),
     A = n(638970),
     Z = n(502762),
     D = n(530),
@@ -121,8 +121,8 @@ function ec(e) {
         eP = (0, Y.g)(n),
         eI = (0, j.Z)({ analyticsLocations: ef }),
         ew = (0, W.I5)(t),
-        ek = (0, h.p)({ location: "UserProfileAccountPopout" }),
-        eR = (0, E.b)({ location: "UserProfileAccountPopout" }),
+        eR = (0, h.p)({ location: "UserProfileAccountPopout" }),
+        ek = (0, E.b)({ location: "UserProfileAccountPopout" }),
         eA = r.useRef(null),
         eZ = r.useRef(null),
         eD = r.useRef((0, K.Z)((e) => e.shouldRenderTenureLevelUp)),
@@ -198,7 +198,7 @@ function ec(e) {
                                         user: t,
                                         themeType: er.l.POPOUT,
                                         onCloseProfile: n,
-                                        prompt: ek ? eM : null,
+                                        prompt: eR ? eM : null,
                                     }),
                                 ],
                             }),
@@ -221,7 +221,7 @@ function ec(e) {
                                         }),
                                         nicknameIcons: (0, a.jsxs)(a.Fragment, {
                                             children: [
-                                                (0, a.jsx)(R.Z, { userId: t.id }),
+                                                (0, a.jsx)(k.Z, { userId: t.id }),
                                                 (0, a.jsx)(M.Z, {
                                                     user: t,
                                                     isVisible: ev,
@@ -247,14 +247,14 @@ function ec(e) {
                                         isPremiumUser: ew,
                                         onInteraction: n,
                                     }),
-                                    eR
+                                    ek
                                         ? (0, a.jsx)(A.Z, {
                                               user: t,
                                               currentUser: t,
                                               onOpenUserProfileModal: eF,
                                               onClose: n,
                                           })
-                                        : (0, a.jsx)(k.Z, {
+                                        : (0, a.jsx)(R.Z, {
                                               user: t,
                                               currentUser: t,
                                               onClose: n,

@@ -85,7 +85,7 @@ let C = {
             O = r.useRef(null),
             [N, P] = r.useState(!1),
             [I, w] = r.useState(!1),
-            [k, R] = r.useState([]),
+            [R, k] = r.useState([]),
             [A, Z] = r.useState(C),
             D = r.useRef([]),
             [M, L] = r.useState(t.name),
@@ -99,10 +99,10 @@ let C = {
                     accessibilityLabel: E,
                     reducedMotionSrc: "",
                     thumbnailPreviewSrc: "",
-                    effects: k,
+                    effects: R,
                     animationType: s.y.ANIMATION_TYPE_UNSPECIFIED,
                 }),
-                [k],
+                [R],
             ),
             B = (e) => {
                 let t = e.currentTarget.files;
@@ -118,7 +118,7 @@ let C = {
         r.useEffect(() => {
             let e = t.config.effects;
             e.length > 0 &&
-                R(
+                k(
                     [...e].map((e) => {
                         if (null != e.base64) {
                             let t = (0, f.$j)(e.base64);
@@ -154,11 +154,11 @@ let C = {
                     skuId: e.skuId,
                     name: M,
                     config: {
-                        effects: k,
+                        effects: R,
                         stillFrames: A,
                     },
                 });
-        }, [k, A, M]),
+        }, [R, A, M]),
         r.useEffect(
             () => () => {
                 D.current.forEach((e) => {
@@ -258,8 +258,8 @@ let C = {
                                                           let t = B(e);
                                                           null != t &&
                                                               (0, f.i0)(t, async (e) => {
-                                                                  let n = await (0, f.Xv)(e, t, k.length);
-                                                                  R((e) => [...e, n]);
+                                                                  let n = await (0, f.Xv)(e, t, R.length);
+                                                                  k((e) => [...e, n]);
                                                               });
                                                       },
                                                       multiple: !1,
@@ -339,7 +339,7 @@ let C = {
                                               className: g.row,
                                               children: [
                                                   (0, a.jsx)(u.Z, {
-                                                      fileContents: () => (0, f.yR)(k),
+                                                      fileContents: () => (0, f.yR)(R),
                                                       contentType: "text/plain",
                                                       fileName: "".concat(U, "_timing_config.txt"),
                                                       children: (0, a.jsx)(d.Button, {
@@ -354,7 +354,7 @@ let C = {
                                                               y(_({}, t), {
                                                                   name: M,
                                                                   config: y(_({}, t.config), {
-                                                                      effects: k,
+                                                                      effects: R,
                                                                       stillFrames: A,
                                                                   }),
                                                               }),
@@ -414,7 +414,7 @@ let C = {
                                           }),
                                       ],
                                   }),
-                                  k.some((e) => {
+                                  R.some((e) => {
                                       var t;
                                       return (null != (t = e.randomizedSources) ? t : []).length > 0;
                                   }) &&
@@ -475,11 +475,11 @@ let C = {
                                           variant: "critical-secondary",
                                           text: "Clear Assets",
                                           onClick: () => {
-                                              R([]), Z(C);
+                                              k([]), Z(C);
                                           },
                                       }),
                                   }),
-                                  k.map((e, t) =>
+                                  R.map((e, t) =>
                                       (0, a.jsxs)(
                                           "div",
                                           {
@@ -547,7 +547,7 @@ let C = {
                                                                       value: e.start,
                                                                       className: g.input,
                                                                       onChange: (e) => {
-                                                                          R((n) => {
+                                                                          k((n) => {
                                                                               let a = [...n],
                                                                                   r = n[t];
                                                                               return (
@@ -573,7 +573,7 @@ let C = {
                                                                       value: e.duration,
                                                                       className: g.input,
                                                                       onChange: (e) => {
-                                                                          R((n) => {
+                                                                          k((n) => {
                                                                               let a = [...n],
                                                                                   r = n[t];
                                                                               return (
@@ -604,7 +604,7 @@ let C = {
                                                                       checked: e.loop,
                                                                       className: g.checkBox,
                                                                       onChange: (e) => {
-                                                                          R((n) => {
+                                                                          k((n) => {
                                                                               let a = [...n],
                                                                                   r = n[t];
                                                                               return (
@@ -632,7 +632,7 @@ let C = {
                                                                               value: e.loopDelay,
                                                                               className: g.input,
                                                                               onChange: (e) => {
-                                                                                  R((n) => {
+                                                                                  k((n) => {
                                                                                       let a = [...n],
                                                                                           r = n[t];
                                                                                       return (
@@ -668,7 +668,7 @@ let C = {
                                                                               let n = B(e);
                                                                               null != n &&
                                                                                   (0, f.i0)(n, (e) => {
-                                                                                      R((a) => {
+                                                                                      k((a) => {
                                                                                           let r = [...a],
                                                                                               i = a[t];
                                                                                           if (null == i) return a;
@@ -696,7 +696,7 @@ let C = {
                                                               variant: "critical-secondary",
                                                               text: "Remove Layer",
                                                               onClick: () => {
-                                                                  R((t) => t.filter((t) => t !== e));
+                                                                  k((t) => t.filter((t) => t !== e));
                                                               },
                                                           }),
                                                       ],

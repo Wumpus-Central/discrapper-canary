@@ -189,12 +189,12 @@ function E(e) {
         R = r.useMemo(() => (i === g.e.ALL_MEMBERS ? I : null != y && null != y.user), [i, I, y]),
         w = r.useMemo(() => S.slice(0, T + 1), [T, S]),
         A = r.useMemo(() => S.slice(T + 1), [T, S]),
-        Z = (0, m.Z)((e) => {
+        M = (0, m.Z)((e) => {
             let t = e.contentRect.width;
             null != t && E.current !== t && (x(t), (E.current = t));
         });
     return (
-        (0, u.s)(_, Z, [R]),
+        (0, u.s)(_, M, [R]),
         (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(h.Z.Divider, { className: v.divider }),

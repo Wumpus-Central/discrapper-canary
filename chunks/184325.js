@@ -197,7 +197,7 @@ function U(e) {
                     currentUserOwnsOrbBadge: Y,
                 });
             return (0, r.jsx)(
-                o.DY3,
+                o.jSM,
                 {
                     text: S,
                     "aria-label": e.description,

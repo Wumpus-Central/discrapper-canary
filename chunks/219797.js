@@ -13,7 +13,7 @@ var r = n(951288),
     i = n(647438),
     a = n(442837),
     o = n(993365),
-    s = n(981729),
+    s = n(506802),
     l = n(481060),
     c = n(543651),
     u = n(177751),
@@ -115,7 +115,7 @@ function A(e) {
         a = i.useCallback(() => {
             var e;
             return (0, p.yE)(null != (e = n.flags) ? e : 0, E.J0y.IS_CLIP)
-                ? (0, r.jsxs)(s.DY, {
+                ? (0, r.jsxs)(s.jS, {
                       text: b.intl.string(b.t["/fgfWl"]),
                       className: y.clipPill,
                       children: [

@@ -441,7 +441,7 @@ let F = (e) => {
                     tooltipCopy: i ? r[n] : "",
                 };
             }, [n, t, a.amount, a.currency]);
-        return (0, r.jsx)(c.ua7, {
+        return (0, r.jsx)(c.aML, {
             tooltipContentClassName: P.tooltip,
             text: u,
             shouldShow: !!s,

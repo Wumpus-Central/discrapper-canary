@@ -86,7 +86,7 @@ function I(e) {
     );
 }
 let w = new Set(["client_performance_cpu", "client_performance_memory"]),
-    k = [
+    R = [
         {
             id: "details",
             name: "Details",
@@ -268,11 +268,11 @@ let w = new Set(["client_performance_cpu", "client_performance_memory"]),
             },
         },
     ],
-    R = {
+    k = {
         events: {
             label: "Events",
             filter: (e) =>
-                Object.entries(R)
+                Object.entries(k)
                     .filter((e) => {
                         let [t] = e;
                         return "events" !== t;
@@ -308,19 +308,19 @@ function Z() {
     let e = r.useRef(null),
         [t, n] = r.useState(""),
         i = (0, c.e7)([v.Z], () => v.Z.loggedEventsVersion),
-        [s, o] = r.useState(() => Object.keys(R)),
+        [s, o] = r.useState(() => Object.keys(k)),
         [m, p] = r.useState(v.Z.loggedEvents),
         h = r.useCallback((e) => {
             p(e);
         }, []);
     (0, x.BO)(t, v.Z.loggedEvents, h, A, [i]);
     let f = m.filter((e) => {
-            for (let t of s) if (R[t].filter(e)) return !0;
+            for (let t of s) if (k[t].filter(e)) return !0;
             return !1;
         }),
         [b, g] = r.useState(void 0),
         _ = f.find((e) => e.key === b),
-        { TabBar: P, renderSelectedTab: I } = (0, E.ZP)({ tabs: k }, []);
+        { TabBar: P, renderSelectedTab: I } = (0, E.ZP)({ tabs: R }, []);
     return (0, a.jsxs)("div", {
         ref: e,
         className: l()(O.panel, T.panel),
@@ -345,7 +345,7 @@ function Z() {
                     (0, a.jsx)("div", { className: T.toolbarDivider }),
                     (0, a.jsx)("div", {
                         className: T.filters,
-                        children: Object.entries(R).map((e) => {
+                        children: Object.entries(k).map((e) => {
                             let [t, n] = e;
                             return (0, a.jsx)(
                                 u.P3F,

@@ -92,7 +92,7 @@ function N(e) {
         H = (null == t || "" === t) && n ? C.intl.string(C.t.ZvKwYW) : t;
     return null == H || "" === H
         ? null
-        : (0, r.jsx)(c.ua7, {
+        : (0, r.jsx)(c.aML, {
               "data-migration-pending": !0,
               shouldShow: n,
               "aria-label": C.intl.string(C.t["7P/+q6"]),

@@ -13,7 +13,7 @@ var l = n(951288),
     g = n(678873);
 function f(e) {
     let { guildId: t, gameInstance: n, cost: a } = e;
-    return (0, l.jsx)(r.ua7, {
+    return (0, l.jsx)(r.aML, {
         "aria-label": v.intl.string(m.default.TZsu1d),
         text: (0, l.jsx)(o.Po, { cost: a }),
         children: (e) => {

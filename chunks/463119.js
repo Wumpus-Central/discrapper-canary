@@ -267,7 +267,7 @@ let k = (e) => {
                 P(!1), null == e || e();
             }, []),
             H = I.title();
-        return (0, r.jsx)(c.ua7, {
+        return (0, r.jsx)(c.aML, {
             "data-migration-pending": !0,
             text: (0, r.jsx)(B, {
                 displayOptions: I,
@@ -332,7 +332,7 @@ let k = (e) => {
                 children: [null != n && (0, r.jsx)(u.Z, { emojiName: n }), t.title()],
             });
         }, [t]);
-        return (0, r.jsx)(c.ua7, {
+        return (0, r.jsx)(c.aML, {
             "data-migration-pending": !0,
             text: l,
             tooltipClassName: w.marketingBadgeTooltip,

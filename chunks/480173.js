@@ -30,7 +30,7 @@ function h(e) {
                 children: [
                     (0, a.jsx)("div", {
                         className: u.closeButton,
-                        children: (0, a.jsx)(l.ua7, {
+                        children: (0, a.jsx)(l.aML, {
                             text: d.intl.string(d.t.cpT0Cg),
                             children: (e) => {
                                 var t, n;

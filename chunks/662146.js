@@ -44,7 +44,7 @@ function u(e) {
         tooltipClass: m,
         tooltipContentClass: b,
     } = e;
-    return (0, r.jsx)(a.ua7, {
+    return (0, r.jsx)(a.aML, {
         shouldShow: h,
         forceOpen: f,
         spacing: 12,
