@@ -102,8 +102,9 @@ function O(e) {
                                 ? null
                                 : (0, r.jsx)("div", {
                                       className: b.errorBlockWrapper,
-                                      children: (0, r.jsx)(c.kzN, {
-                                          ref: P,
+                                      ref: P,
+                                      children: (0, r.jsx)(c.M14, {
+                                          type: "critical",
                                           children: j,
                                       }),
                                   }),

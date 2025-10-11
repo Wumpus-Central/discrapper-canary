@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685), n(953529);
+n.d(t, { Z: () => S }), n(388685), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(512722),
@@ -19,13 +19,12 @@ var r = n(951288),
     v = n(723047),
     _ = n(927954),
     C = n(164000),
-    O = n(587431),
-    y = n(293810),
-    N = n(333866),
-    E = n(388032),
-    I = n(858760);
-let S = (0, x.Mg)(d.Z.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_OVERVIEW_SETTINGS_MAX_WIDTH);
-function T(e) {
+    O = n(293810),
+    y = n(333866),
+    N = n(388032),
+    E = n(858760);
+let I = (0, x.Mg)(d.Z.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_OVERVIEW_SETTINGS_MAX_WIDTH);
+function S(e) {
     var t;
     let { guild: n, isGuildProducts: l = !1 } = e,
         { format: s } = (0, C.Z)(n.id),
@@ -34,75 +33,81 @@ function T(e) {
             var e;
             return (null == d || null == (e = d.cover_image_asset) ? void 0 : e.application_id) == null
                 ? null
-                : (0, b._W)(d.cover_image_asset.application_id, d.cover_image_asset, S);
+                : (0, b._W)(d.cover_image_asset.application_id, d.cover_image_asset, I);
         }, [d]),
-        [T, P] = i.useState(s),
-        [w, Z] = i.useState(null != (t = null == d ? void 0 : d.description) ? t : ""),
-        [R, D] = i.useState(x),
-        [A, L] = i.useState(null == d ? void 0 : d.store_page_guild_products_default_sort),
-        [k, G] = i.useState(null == d ? void 0 : d.server_shop_tab_order),
-        { loading: M, error: U, updateSubscriptionsSettings: B } = (0, j.QV)(),
-        { imageCTA: F, imageAriaLabel: H, setFilename: W } = (0, _.Z)(null == d ? void 0 : d.cover_image_asset),
-        V = (0, p.Dt)();
-    function z(e, t) {
-        a()(null != e, "Null value not allowed"), null != t && W(t.name), D(e);
+        [S, T] = i.useState(s),
+        [P, w] = i.useState(null != (t = null == d ? void 0 : d.description) ? t : ""),
+        [Z, R] = i.useState(x),
+        [D, A] = i.useState(null == d ? void 0 : d.store_page_guild_products_default_sort),
+        [L, k] = i.useState(null == d ? void 0 : d.server_shop_tab_order),
+        { loading: M, error: G, updateSubscriptionsSettings: U } = (0, j.QV)(),
+        { imageCTA: B, imageAriaLabel: F, setFilename: H } = (0, _.Z)(null == d ? void 0 : d.cover_image_asset),
+        W = (0, p.Dt)();
+    function V(e, t) {
+        a()(null != e, "Null value not allowed"), null != t && H(t.name), R(e);
     }
-    let K = i.useMemo(() => {
+    let z = i.useMemo(() => {
             var e;
             return (
-                (null != w && w !== (null != (e = null == d ? void 0 : d.description) ? e : "")) ||
-                (null == R ? void 0 : R.startsWith("data:")) === !0 ||
-                T !== s ||
-                (null == d ? void 0 : d.store_page_guild_products_default_sort) !== A ||
-                (null == d ? void 0 : d.server_shop_tab_order) !== k
+                (null != P && P !== (null != (e = null == d ? void 0 : d.description) ? e : "")) ||
+                (null == Z ? void 0 : Z.startsWith("data:")) === !0 ||
+                S !== s ||
+                (null == d ? void 0 : d.store_page_guild_products_default_sort) !== D ||
+                (null == d ? void 0 : d.server_shop_tab_order) !== L
             );
-        }, [R, s, w, d, T, A, k]),
-        Y = null != w && "" !== w && null != R;
+        }, [Z, s, P, d, S, D, L]),
+        K = null != P && "" !== P && null != Z;
     i.useEffect(() => {
         var e;
         (null == d || null == (e = d.cover_image_asset) ? void 0 : e.application_id) != null &&
-            D((0, b._W)(d.cover_image_asset.application_id, d.cover_image_asset, S));
+            R((0, b._W)(d.cover_image_asset.application_id, d.cover_image_asset, I));
     }, [null == d ? void 0 : d.cover_image_asset]);
-    let q = (0, v.mY)(),
-        X = i.useMemo(
+    let Y = (0, v.mY)(),
+        q = i.useMemo(
             () =>
-                N.kL.map((e) => ({
-                    label: (0, N.eJ)(e),
+                y.kL.map((e) => ({
+                    label: (0, y.eJ)(e),
                     value: e,
                 })),
             [],
         ),
-        Q = i.useMemo(
+        X = i.useMemo(
             () => [
                 {
-                    label: E.intl.string(E.t.X6h2g4),
-                    value: N.a3.PRODUCTS_FIRST,
+                    label: N.intl.string(N.t.X6h2g4),
+                    value: y.a3.PRODUCTS_FIRST,
                 },
                 {
-                    label: E.intl.string(E.t["KzCF//"]),
-                    value: N.a3.SUBS_FIRST,
+                    label: N.intl.string(N.t["KzCF//"]),
+                    value: y.a3.SUBS_FIRST,
                 },
             ],
             [],
         );
     return (0, r.jsxs)("div", {
-        className: I.container,
+        className: E.container,
         children: [
-            null != U &&
+            null != G &&
                 (0, r.jsxs)(r.Fragment, {
-                    children: [(0, r.jsx)(O.Z, { children: U.getAnyErrorMessage() }), (0, r.jsx)(g.LZC, { size: 16 })],
+                    children: [
+                        (0, r.jsx)(g.M14, {
+                            type: "critical",
+                            children: G.getAnyErrorMessage(),
+                        }),
+                        (0, r.jsx)(g.LZC, { size: 16 }),
+                    ],
                 }),
             l
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(g.FXm, {
-                              label: E.intl.string(E.t["PAVi+/"]),
-                              description: E.intl.string(E.t.x87YqK),
-                              value: T,
+                              label: N.intl.string(N.t["PAVi+/"]),
+                              description: N.intl.string(N.t.x87YqK),
+                              value: S,
                               onChange: (e) => {
                                   s !== e &&
-                                      e === y.e3.ALL_CHANNELS &&
+                                      e === O.e3.ALL_CHANNELS &&
                                       (0, g.h7j)((e) => {
                                           var t, n;
                                           return (0, r.jsx)(
@@ -135,12 +140,12 @@ function T(e) {
                                               })({}, e)),
                                               (n = n =
                                                   {
-                                                      header: E.intl.string(E.t.dmVoOz),
-                                                      confirmText: E.intl.string(E.t["NX+WJC"]),
+                                                      header: N.intl.string(N.t.dmVoOz),
+                                                      confirmText: N.intl.string(N.t["NX+WJC"]),
                                                       confirmButtonColor: u.zx.Colors.BRAND,
                                                       children: (0, r.jsx)(g.Text, {
                                                           variant: "text-md/normal",
-                                                          children: E.intl.string(E.t.mtwzdH),
+                                                          children: N.intl.string(N.t.mtwzdH),
                                                       }),
                                                   }),
                                               Object.getOwnPropertyDescriptors
@@ -162,61 +167,61 @@ function T(e) {
                                               t),
                                           );
                                       }),
-                                      P(e);
+                                      T(e);
                               },
-                              disabled: q,
+                              disabled: Y,
                               options: [
                                   {
-                                      name: E.intl.string(E.t.rXqxhI),
-                                      desc: E.intl.string(E.t.yQiJnZ),
-                                      value: y.e3.SOME_CHANNELS,
+                                      name: N.intl.string(N.t.rXqxhI),
+                                      desc: N.intl.string(N.t.yQiJnZ),
+                                      value: O.e3.SOME_CHANNELS,
                                       icon: g.VL1,
                                   },
                                   {
-                                      name: E.intl.string(E.t.WzC9s7),
-                                      desc: E.intl.string(E.t.WmagiI),
-                                      value: y.e3.ALL_CHANNELS,
+                                      name: N.intl.string(N.t.WzC9s7),
+                                      desc: N.intl.string(N.t.WmagiI),
+                                      value: O.e3.ALL_CHANNELS,
                                       icon: g._m8,
                                   },
                               ],
                           }),
-                          (0, r.jsx)(g.izJ, { className: I.divider }),
+                          (0, r.jsx)(g.izJ, { className: E.divider }),
                       ],
                   }),
             (0, r.jsx)(g.Kx8, {
-                label: E.intl.string(E.t["1+Ho1d"]),
-                placeholder: l ? E.intl.string(E.t.SD6LRU) : E.intl.string(E.t["aVhW/f"]),
+                label: N.intl.string(N.t["1+Ho1d"]),
+                placeholder: l ? N.intl.string(N.t.SD6LRU) : N.intl.string(N.t["aVhW/f"]),
                 maxLength: 1500,
-                value: w,
+                value: P,
                 autosize: !0,
-                onChange: Z,
-                "aria-labelledby": V,
-                disabled: q,
+                onChange: w,
+                "aria-labelledby": W,
+                disabled: Y,
             }),
-            (0, r.jsx)(g.izJ, { className: I.divider }),
+            (0, r.jsx)(g.izJ, { className: E.divider }),
             (0, r.jsxs)(g.gNt, {
-                label: E.intl.string(E.t["0kpTpK"]),
-                description: E.intl.string(E.t.i2rCwc),
+                label: N.intl.string(N.t["0kpTpK"]),
+                description: N.intl.string(N.t.i2rCwc),
                 children: [
                     (0, r.jsx)(h.Z, {
-                        image: R,
-                        hint: F,
+                        image: Z,
+                        hint: B,
                         showIcon: !0,
                         showRemoveButton: !1,
                         hideSize: !0,
-                        className: I.coverImageUploader,
-                        iconWrapperClassName: I.coverImageUploaderIconWrapper,
-                        imageClassName: I.coverImageUploaderInner,
-                        iconClassName: I.coverImageUploaderIcon,
-                        onChange: z,
-                        "aria-label": H,
-                        disabled: q,
+                        className: E.coverImageUploader,
+                        iconWrapperClassName: E.coverImageUploaderIconWrapper,
+                        imageClassName: E.coverImageUploaderInner,
+                        iconClassName: E.coverImageUploaderIcon,
+                        onChange: V,
+                        "aria-label": F,
+                        disabled: Y,
                     }),
                     (0, r.jsx)(f.Z, {
-                        onChange: z,
-                        "aria-label": H,
-                        disabled: q,
-                        text: F,
+                        onChange: V,
+                        "aria-label": F,
+                        disabled: Y,
+                        text: B,
                         variant: "secondary",
                         size: "md",
                     }),
@@ -225,61 +230,61 @@ function T(e) {
             l
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)(g.izJ, { className: I.divider }),
+                          (0, r.jsx)(g.izJ, { className: E.divider }),
                           (0, r.jsx)(g.q4e, {
-                              label: E.intl.string(E.t.aaZ9pK),
-                              description: E.intl.string(E.t.TILN8v),
-                              value: A,
-                              placeholder: E.intl.string(E.t.XqMe3N),
-                              options: X,
-                              onChange: (e) => L(e),
+                              label: N.intl.string(N.t.aaZ9pK),
+                              description: N.intl.string(N.t.TILN8v),
+                              value: D,
+                              placeholder: N.intl.string(N.t.XqMe3N),
+                              options: q,
+                              onChange: (e) => A(e),
                           }),
                       ],
                   })
                 : null,
-            Q.length > 0 &&
+            X.length > 0 &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(g.izJ, { className: I.divider }),
+                        (0, r.jsx)(g.izJ, { className: E.divider }),
                         (0, r.jsx)(g.q4e, {
-                            label: E.intl.string(E.t["+dtmw8"]),
-                            description: E.intl.string(E.t.n8WSWF),
-                            value: k,
-                            placeholder: E.intl.string(E.t.XqMe3N),
-                            options: Q,
-                            onChange: (e) => G(e),
+                            label: N.intl.string(N.t["+dtmw8"]),
+                            description: N.intl.string(N.t.n8WSWF),
+                            value: L,
+                            placeholder: N.intl.string(N.t.XqMe3N),
+                            options: X,
+                            onChange: (e) => k(e),
                         }),
                     ],
                 }),
             (0, r.jsx)(c.W, {
                 component: "div",
-                className: I.contentRegion,
+                className: E.contentRegion,
                 children:
-                    K &&
+                    z &&
                     (0, r.jsx)(g.oXn, {
                         children: (0, r.jsx)(m.Z, {
                             submitting: M,
-                            disabled: !Y,
+                            disabled: !K,
                             onReset: () => {
                                 var e;
-                                P(s),
-                                    Z(null != (e = null == d ? void 0 : d.description) ? e : ""),
-                                    D(x),
-                                    L(null == d ? void 0 : d.store_page_guild_products_default_sort),
-                                    G(null == d ? void 0 : d.server_shop_tab_order);
+                                T(s),
+                                    w(null != (e = null == d ? void 0 : d.description) ? e : ""),
+                                    R(x),
+                                    A(null == d ? void 0 : d.store_page_guild_products_default_sort),
+                                    k(null == d ? void 0 : d.server_shop_tab_order);
                             },
                             onSave: () => {
                                 a()(null != d, "Settings must be defined");
                                 let e = {};
-                                w !== d.description && (e.description = w),
-                                    null != R && R.startsWith("data:") && (e.cover_image = R),
-                                    T !== s && (e.full_server_gate = T === y.e3.ALL_CHANNELS),
-                                    A !== d.store_page_guild_products_default_sort &&
-                                        (e.store_page_guild_products_default_sort = A),
-                                    k !== d.server_shop_tab_order && (e.server_shop_tab_order = k),
-                                    o().isEmpty(e) || B(n.id, e);
+                                P !== d.description && (e.description = P),
+                                    null != Z && Z.startsWith("data:") && (e.cover_image = Z),
+                                    S !== s && (e.full_server_gate = S === O.e3.ALL_CHANNELS),
+                                    D !== d.store_page_guild_products_default_sort &&
+                                        (e.store_page_guild_products_default_sort = D),
+                                    L !== d.server_shop_tab_order && (e.server_shop_tab_order = L),
+                                    o().isEmpty(e) || U(n.id, e);
                             },
-                            saveButtonTooltip: Y ? void 0 : E.intl.string(E.t["6HRvio"]),
+                            saveButtonTooltip: K ? void 0 : N.intl.string(N.t["6HRvio"]),
                         }),
                     }),
             }),

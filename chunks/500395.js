@@ -1,73 +1,71 @@
-n.d(t, { Z: () => f });
-var r = n(951288);
-n(647438);
-var i = n(990547),
+n.d(t, { Z: () => m });
+var r = n(951288),
+    i = n(990547),
     l = n(481060),
     a = n(213609),
     s = n(787051),
-    o = n(696936),
-    c = n(539290),
-    d = n(975464),
-    u = n(388032),
-    g = n(370511),
-    m = n(270395);
-function p(e) {
+    o = n(975464),
+    c = n(388032),
+    d = n(370511),
+    u = n(270395);
+function g(e) {
     let { config: t } = e,
         { noticeText: n, ctaLabel: i, ctaClickable: a, onCtaClicked: s } = t;
     return (0, r.jsxs)("div", {
-        className: g.__invalid_ctaContainer,
+        className: d.__invalid_ctaContainer,
         children: [
             (0, r.jsx)("img", {
-                className: g.__invalid_heroBanner,
-                src: m,
-                alt: u.intl.string(u.t.Af4klJ),
+                className: d.__invalid_heroBanner,
+                src: u,
+                alt: c.intl.string(c.t.Af4klJ),
             }),
             (0, r.jsxs)("div", {
-                className: g.__invalid_ctaContent,
+                className: d.__invalid_ctaContent,
                 children: [
                     (0, r.jsx)(l.Heading, {
                         variant: "heading-xl/semibold",
                         color: "header-primary",
-                        children: u.intl.string(u.t.PqYfh4),
+                        children: c.intl.string(c.t.PqYfh4),
                     }),
                     (0, r.jsx)(l.LZC, { size: 12 }),
                     (0, r.jsx)(l.Text, {
                         variant: "text-md/normal",
                         color: "header-secondary",
-                        children: u.intl.string(u.t["41wkMT"]),
+                        children: c.intl.string(c.t["41wkMT"]),
                     }),
                     (0, r.jsx)(l.LZC, { size: 24 }),
-                    (0, r.jsx)(c.Z, {
-                        className: g.waitlist,
-                        color: o.W.BROWN,
-                        buttonPosition: c.E.RIGHT,
-                        notice: n,
-                        ctaLabel: i,
-                        ctaDisabled: !a,
-                        onClick: s,
+                    (0, r.jsx)(l.Wn, {
+                        messageType: l.QYI.INFO,
+                        action: (0, r.jsx)(l.Button, {
+                            variant: "overlay-secondary",
+                            text: i,
+                            onClick: s,
+                            disabled: !a,
+                        }),
+                        children: n,
                     }),
                 ],
             }),
         ],
     });
 }
-function f(e) {
+function m(e) {
     let { guild: t, config: n } = e,
-        { isLoading: o, error: c, creatorMonetizationOnboardingMarketing: u } = (0, s.Z)(t.id);
+        { isLoading: c, error: u, creatorMonetizationOnboardingMarketing: m } = (0, s.Z)(t.id);
     return ((0, a.Z)({
         type: i.ImpressionTypes.PANE,
         name: i.ImpressionNames.ENABLE_CREATOR_MONETIZATION_WAITLIST_LANDING,
         properties: { guild_id: t.id },
     }),
-    o)
+    c)
         ? (0, r.jsx)(l.$jN, {})
         : (0, r.jsxs)("div", {
-              className: g.__invalid_container,
+              className: d.__invalid_container,
               children: [
-                  (0, r.jsx)(p, { config: n }),
-                  (0, r.jsx)(d.C, {
-                      onboardingMarketing: u,
-                      onboardingMarketingError: c,
+                  (0, r.jsx)(g, { config: n }),
+                  (0, r.jsx)(o.C, {
+                      onboardingMarketing: m,
+                      onboardingMarketingError: u,
                   }),
               ],
           });

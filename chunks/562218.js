@@ -2,7 +2,7 @@ n.d(e, { G: () => p }), n(388685), n(539854);
 var i = n(951288),
     r = n(647438),
     a = n(793030),
-    l = n(434333),
+    l = n(481060),
     s = n(63063),
     o = n(74538),
     c = n(45474),
@@ -22,14 +22,14 @@ let p = () => {
                 planId: x,
                 handleCancellation: P,
             } = (0, u.a)(),
-            [C, v] = (0, r.useState)(!1),
-            [y, T] = (0, r.useState)(!1),
+            [C, y] = (0, r.useState)(!1),
+            [v, T] = (0, r.useState)(!1),
             E = async () => {
-                v(!0), T(!1);
+                y(!0), T(!1);
                 try {
                     await P(), n();
                 } catch (t) {
-                    T(!0), v(!1);
+                    T(!0), y(!1);
                 }
             },
             S =
@@ -75,7 +75,12 @@ let p = () => {
                 subtitle: g(h, s, p),
                 actions: _,
                 onClose: async () => n(),
-                children: y ? (0, i.jsx)(l.k, { children: f.intl.string(f.t["5mlOCQ"]) }) : null,
+                children: v
+                    ? (0, i.jsx)(l.M14, {
+                          type: "critical",
+                          children: f.intl.string(f.t["5mlOCQ"]),
+                      })
+                    : null,
             })
         );
     },

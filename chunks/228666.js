@@ -68,9 +68,12 @@ let m = (e) => {
         (0, r.jsxs)(i.Fragment, {
             children: [
                 E
-                    ? (0, r.jsx)(o.kzN, {
+                    ? (0, r.jsx)("div", {
                           className: _.errorBlock,
-                          children: f.intl.string(f.t.vZ8y7u),
+                          children: (0, r.jsx)(o.M14, {
+                              type: "critical",
+                              children: f.intl.string(f.t.vZ8y7u),
+                          }),
                       })
                     : null,
                 (0, r.jsx)(

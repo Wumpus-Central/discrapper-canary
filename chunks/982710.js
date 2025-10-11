@@ -35,5 +35,4 @@ e.exports = {
     sectionDivider: "sectionDivider_e9cb00 divider_e9cb00",
     guildProductBenefits: "guildProductBenefits_e9cb00",
     guildProductBenefitLabel: "guildProductBenefitLabel_e9cb00",
-    warningBlock: "warningBlock_e9cb00",
 };

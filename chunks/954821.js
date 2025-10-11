@@ -98,7 +98,12 @@ let b = "MMMM Do, YYYY",
             children: (0, r.jsxs)(l.Kqy, {
                 gap: 8,
                 children: [
-                    null != v ? (0, r.jsx)(l.kzN, { children: v.message }) : null,
+                    null != v
+                        ? (0, r.jsx)(l.M14, {
+                              type: "critical",
+                              children: v.message,
+                          })
+                        : null,
                     (0, r.jsx)(_.c, {
                         listingId: i.id,
                         guildId: n.guild_id,

@@ -54,9 +54,12 @@ function E(e) {
     function w() {
         return null == E
             ? null
-            : (0, r.jsx)(s.kzN, {
+            : (0, r.jsx)("div", {
                   className: h.marginBottom20,
-                  children: E,
+                  children: (0, r.jsx)(s.M14, {
+                      type: "critical",
+                      children: E,
+                  }),
               });
     }
     function D() {

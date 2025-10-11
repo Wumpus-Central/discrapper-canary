@@ -1,91 +1,95 @@
-n.d(e, { w: () => h }), n(388685);
+n.d(e, { w: () => g }), n(388685);
 var i = n(951288),
     r = n(647438),
     a = n(120356),
     l = n.n(a),
     s = n(793030),
-    o = n(434333),
-    c = n(74538),
-    u = n(937615),
-    d = n(811334),
-    m = n(42818),
-    f = n(594135),
-    p = n(388032),
-    g = n(704442);
-let h = () => {
+    o = n(74538),
+    c = n(937615),
+    u = n(811334),
+    d = n(42818),
+    m = n(594135),
+    f = n(388032),
+    p = n(704442);
+let g = () => {
     let {
             transitionState: t,
             planId: e,
             renewalInvoice: n,
             onClose: a,
-            handleCancellation: h,
-            renewalInvoiceDetails: x,
-            fullPrice: P,
-            premiumSubscription: C,
-        } = (0, f.a)(),
-        [v, y] = r.useState(!1),
-        [T, E] = r.useState(!1);
+            handleCancellation: g,
+            renewalInvoiceDetails: h,
+            fullPrice: x,
+            premiumSubscription: P,
+        } = (0, m.a)(),
+        [C, y] = r.useState(!1),
+        [v, T] = r.useState(!1);
     if (null == n) return null;
-    let S = async () => {
-            y(!0), E(!1);
+    let E = async () => {
+            y(!0), T(!1);
             try {
-                await h(), a();
+                await g(), a();
             } catch (t) {
-                E(!0), y(!1);
+                T(!0), y(!1);
             }
         },
-        _ = [
+        S = [
             {
-                text: p.intl.string(p.t.h9tkAA),
+                text: f.intl.string(f.t.h9tkAA),
                 onClick: () => a(),
                 variant: "secondary",
             },
             {
                 text: "".concat(
-                    p.intl.format(p.t.yxFzdH, { planPremiumType: c.ZP.getDisplayPremiumType("".concat(e)) }),
+                    f.intl.format(f.t.yxFzdH, { planPremiumType: o.ZP.getDisplayPremiumType("".concat(e)) }),
                 ),
-                onClick: S,
-                disabled: v,
+                onClick: E,
+                disabled: C,
                 variant: "critical-primary",
-                loading: v,
+                loading: C,
             },
         ];
-    if (null == x) return null;
-    let { intervalType: N, intervalCount: j } = x,
-        D = (0, u.og)("".concat(P), N, j);
+    if (null == h) return null;
+    let { intervalType: _, intervalCount: N } = h,
+        j = (0, c.og)("".concat(x), _, N);
     return (0, i.jsxs)(s.Modal, {
         size: "md",
         transitionState: t,
-        title: "".concat(p.intl.format(p.t.LZunzc, { planPremiumType: c.ZP.getDisplayPremiumType("".concat(e)) })),
+        title: "".concat(f.intl.format(f.t.LZunzc, { planPremiumType: o.ZP.getDisplayPremiumType("".concat(e)) })),
         subtitle:
             0 !== n.total
-                ? p.intl.format(p.t.ycyeBw, {
+                ? f.intl.format(f.t.ycyeBw, {
                       renewalDate: n.subscriptionPeriodStart,
-                      rate: (0, u.og)((0, u.T4)(n.total, n.currency), N, j),
+                      rate: (0, c.og)((0, c.T4)(n.total, n.currency), _, N),
                   })
-                : p.intl.format(p.t["+y0Tj4"], { renewalDate: n.subscriptionPeriodStart }),
-        actions: _,
+                : f.intl.format(f.t["+y0Tj4"], { renewalDate: n.subscriptionPeriodStart }),
+        actions: S,
         onClose: async () => a(),
         children: [
-            (0, i.jsxs)(d.aO, {
+            (0, i.jsxs)(u.aO, {
                 isPremiumRebrand: !0,
-                className: l()({ [g.hasError]: T }),
+                className: l()({ [p.hasError]: v }),
                 children: [
-                    (0, i.jsx)(d.Z9, { children: p.intl.string(p.t.iqhIp6) }),
-                    (0, i.jsx)(d.B1, {
-                        label: p.intl.formatToPlainString(p.t.r3jVZm, { planName: c.ZP.getDisplayName("".concat(e)) }),
-                        value: "".concat(D),
-                        className: g.canceled,
+                    (0, i.jsx)(u.Z9, { children: f.intl.string(f.t.iqhIp6) }),
+                    (0, i.jsx)(u.B1, {
+                        label: f.intl.formatToPlainString(f.t.r3jVZm, { planName: o.ZP.getDisplayName("".concat(e)) }),
+                        value: "".concat(j),
+                        className: p.canceled,
                     }),
-                    (0, i.jsx)(d.UN, {}),
-                    (0, i.jsx)(m.nd, {
-                        premiumSubscription: C,
+                    (0, i.jsx)(u.UN, {}),
+                    (0, i.jsx)(d.nd, {
+                        premiumSubscription: P,
                         renewalInvoice: n,
                         isUpdate: !0,
                     }),
                 ],
             }),
-            T ? (0, i.jsx)(o.k, { children: p.intl.string(p.t["5mlOCQ"]) }) : null,
+            v
+                ? (0, i.jsx)(s.M14, {
+                      type: "critical",
+                      children: f.intl.string(f.t["5mlOCQ"]),
+                  })
+                : null,
         ],
     });
 };

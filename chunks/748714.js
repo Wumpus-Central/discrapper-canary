@@ -184,7 +184,10 @@ let _ = (e) => {
                     : t.code === c.SM.ALREADY_PURCHASED
                       ? h.intl.string(h.t.m371Mz)
                       : h.intl.string(h.t.fqJZ19)),
-            (0, r.jsx)(a.kzN, { children: n })
+            (0, r.jsx)(a.M14, {
+                type: "critical",
+                children: n,
+            })
         );
     },
     N = (e) => {

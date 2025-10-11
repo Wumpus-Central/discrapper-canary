@@ -204,6 +204,15 @@ function O(t) {
                 autoFocus: !0,
             },
         ],
-        children: [E, A, null != v && "" !== v && (0, r.jsx)(l.kzN, { children: v })],
+        children: [
+            E,
+            A,
+            null != v &&
+                "" !== v &&
+                (0, r.jsx)(l.M14, {
+                    type: "critical",
+                    children: v,
+                }),
+        ],
     });
 }

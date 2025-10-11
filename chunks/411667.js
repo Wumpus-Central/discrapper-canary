@@ -1,48 +1,55 @@
-n.d(t, { Z: () => d });
-var r = n(951288);
-n(647438);
-var i = n(346163),
-    l = n(587431),
-    a = n(539290),
-    s = n(981631),
-    o = n(388032),
-    c = n(515444);
-function d(e) {
+n.d(t, { Z: () => c });
+var r = n(951288),
+    i = n(793030),
+    l = n(346163),
+    a = n(981631),
+    s = n(388032),
+    o = n(515444);
+function c(e) {
     let t,
         { guild: n } = e,
         {
-            resubmittingEnableRequest: d,
-            resubmissionError: u,
-            createEnableRequest: g,
-            resubmittedRequest: m,
-            requestRejectedNoticeText: p,
-            reapplyNoticeText: f,
-        } = (0, i.Z)(n),
-        h = n.features.has(s.oNc.CREATOR_MONETIZABLE_RESTRICTED),
-        b = n.features.has(s.oNc.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING);
-    if (null != u)
-        return (0, r.jsx)(l.Z, {
-            className: c.noticeContainer,
-            children: u.getAnyErrorMessage(),
+            resubmittingEnableRequest: c,
+            resubmissionError: d,
+            createEnableRequest: u,
+            resubmittedRequest: g,
+            requestRejectedNoticeText: m,
+            reapplyNoticeText: p,
+        } = (0, l.Z)(n),
+        f = n.features.has(a.oNc.CREATOR_MONETIZABLE_RESTRICTED),
+        h = n.features.has(a.oNc.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING);
+    if (null != d)
+        return (0, r.jsx)("div", {
+            className: o.noticeContainer,
+            children: (0, r.jsx)(i.M14, {
+                type: "critical",
+                children: d.getAnyErrorMessage(),
+            }),
         });
-    let x = null;
+    let b = null;
     return (
-        null != p
-            ? (x = p)
-            : m
-              ? (x = o.intl.string(o.t.MyJpJS))
-              : null != f
-                ? ((x = f), (t = o.intl.string(o.t["YKw/NT"])))
-                : b
-                  ? (x = o.intl.string(o.t.e2g9sb))
-                  : h && (x = o.intl.string(o.t.rxI9sr)),
-        null != x
-            ? (0, r.jsx)(a.Z, {
-                  className: c.noticeContainer,
-                  notice: x,
-                  ctaLabel: t,
-                  ctaLoading: d,
-                  onClick: g,
+        null != m
+            ? (b = m)
+            : g
+              ? (b = s.intl.string(s.t.MyJpJS))
+              : null != p
+                ? ((b = p), (t = s.intl.string(s.t["YKw/NT"])))
+                : h
+                  ? (b = s.intl.string(s.t.e2g9sb))
+                  : f && (b = s.intl.string(s.t.rxI9sr)),
+        null != b
+            ? (0, r.jsx)("div", {
+                  className: o.noticeContainer,
+                  children: (0, r.jsx)(i.Wn, {
+                      messageType: i.QYI.WARNING,
+                      action: (0, r.jsx)(i.zxk, {
+                          variant: "overlay-secondary",
+                          text: t,
+                          onClick: u,
+                          loading: c,
+                      }),
+                      children: b,
+                  }),
               })
             : null
     );

@@ -58,7 +58,12 @@ function _(e) {
                             children: u.intl.formatToPlainString(u.t["3x6NGx"], {}),
                         })
                       : null,
-                  null != l && "" !== l && (0, r.jsx)(o.kzN, { children: l }),
+                  null != l &&
+                      "" !== l &&
+                      (0, r.jsx)(o.M14, {
+                          type: "critical",
+                          children: l,
+                      }),
               ],
           })
         : t.hasInvoiceURL && null != n
@@ -82,7 +87,12 @@ function _(e) {
                               ),
                           )
                         : null,
-                    null != l && "" !== l && (0, r.jsx)(o.kzN, { children: l }),
+                    null != l &&
+                        "" !== l &&
+                        (0, r.jsx)(o.M14, {
+                            type: "critical",
+                            children: l,
+                        }),
                 ],
             })
           : m

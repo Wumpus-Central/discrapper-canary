@@ -397,10 +397,12 @@ function E(e) {
                                                     onClick: (e) => B(),
                                                 }),
                                                 null !== D &&
-                                                    (0, a.jsx)(d.kzN, {
+                                                    (0, a.jsx)("div", {
                                                         className: j.error,
-                                                        onDismiss: () => M(null),
-                                                        children: D,
+                                                        children: (0, a.jsx)(d.M14, {
+                                                            type: "critical",
+                                                            children: D,
+                                                        }),
                                                     }),
                                             ],
                                         }),

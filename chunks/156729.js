@@ -83,14 +83,20 @@ class R extends (r = a.PureComponent) {
         let { updateError: e, removeError: t } = this.props;
         return null == e || e.hasCardError() || e.hasAddressError()
             ? null != t
-                ? (0, i.jsx)(d.kzN, {
+                ? (0, i.jsx)("div", {
                       className: v.formError,
-                      children: t.message,
+                      children: (0, i.jsx)(d.M14, {
+                          type: "critical",
+                          children: t.message,
+                      }),
                   })
                 : null
-            : (0, i.jsx)(d.kzN, {
+            : (0, i.jsx)("div", {
                   className: v.formError,
-                  children: e.message,
+                  children: (0, i.jsx)(d.M14, {
+                      type: "critical",
+                      children: e.message,
+                  }),
               });
     }
     renderBillingAddressSection() {

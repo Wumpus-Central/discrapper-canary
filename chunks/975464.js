@@ -1,6 +1,6 @@
 n.d(t, {
-    C: () => v,
-    Z: () => _,
+    C: () => j,
+    Z: () => v,
 });
 var r = n(951288),
     i = n(647438),
@@ -11,24 +11,23 @@ var r = n(951288),
     c = n(605288),
     d = n(787051),
     u = n(346163),
-    g = n(587431),
-    m = n(271267),
-    p = n(320893),
-    f = n(81509),
-    h = n(662379),
-    b = n(60533),
-    x = n(581050),
-    j = n(169400);
-function v(e) {
+    g = n(271267),
+    m = n(320893),
+    p = n(81509),
+    f = n(662379),
+    h = n(60533),
+    b = n(581050),
+    x = n(169400);
+function j(e) {
     let { onboardingMarketing: t, onboardingMarketingError: n } = e,
         i = (e) => {
             let { children: t } = e;
             return (0, r.jsxs)(r.Fragment, {
-                children: [(0, r.jsx)(a.izJ, { className: j.sectionDivider }), t],
+                children: [(0, r.jsx)(a.izJ, { className: x.sectionDivider }), t],
             });
         },
-        l = (0, r.jsx)(i, { children: (0, r.jsx)(h.Z, {}) }, x.q.HOW_IT_WORKS),
-        s = (0, r.jsx)(i, { children: (0, r.jsx)(p.Z, {}) }, x.q.BENEFITS);
+        l = (0, r.jsx)(i, { children: (0, r.jsx)(f.Z, {}) }, b.q.HOW_IT_WORKS),
+        s = (0, r.jsx)(i, { children: (0, r.jsx)(m.Z, {}) }, b.q.BENEFITS);
     return null != n || (null == t ? void 0 : t.sections) == null
         ? (0, r.jsxs)(r.Fragment, {
               children: [l, s],
@@ -36,26 +35,26 @@ function v(e) {
         : (0, r.jsx)(r.Fragment, {
               children: t.sections.map((e) => {
                   switch (e.type) {
-                      case x.q.HOW_IT_WORKS:
+                      case b.q.HOW_IT_WORKS:
                           return l;
-                      case x.q.BENEFITS:
+                      case b.q.BENEFITS:
                           return s;
-                      case x.q.OTHER_CREATORS:
+                      case b.q.OTHER_CREATORS:
                           return (0, r.jsx)(
                               i,
-                              { children: (0, r.jsx)(f.Z, { highlightedCreators: e.creators }) },
-                              x.q.OTHER_CREATORS,
+                              { children: (0, r.jsx)(p.Z, { highlightedCreators: e.creators }) },
+                              b.q.OTHER_CREATORS,
                           );
                   }
               }),
           });
 }
-function _(e) {
+function v(e) {
     let { guild: t } = e,
         n = (0, u.Z)(t),
-        { eligibilityLoading: p, eligibilityError: f, eligibility: h } = n,
-        x = (0, c.j)(h),
-        { isLoading: _, error: C, creatorMonetizationOnboardingMarketing: O } = (0, d.Z)(t.id);
+        { eligibilityLoading: m, eligibilityError: p, eligibility: f } = n,
+        b = (0, c.j)(f),
+        { isLoading: v, error: _, creatorMonetizationOnboardingMarketing: C } = (0, d.Z)(t.id);
     return (i.useEffect(() => {
         (0, o.k)(t.id);
     }, [t.id]),
@@ -67,27 +66,30 @@ function _(e) {
                 guild_id: t.id,
                 is_owner: n.isGuildOwner,
                 is_eligible: n.eligibleForMonetization,
-                ineligible_reasons: x,
+                ineligible_reasons: b,
             },
         },
-        { disableTrack: null == t.id || null == h },
+        { disableTrack: null == t.id || null == f },
     ),
-    p || null == h || _)
+    m || null == f || v)
         ? (0, r.jsx)(a.$jN, {})
-        : h.actionRequired
-          ? (0, r.jsx)(b.Z, { guild: t })
-          : null != f
-            ? (0, r.jsx)(g.Z, { children: f.message })
+        : f.actionRequired
+          ? (0, r.jsx)(h.Z, { guild: t })
+          : null != p
+            ? (0, r.jsx)(a.M14, {
+                  type: "critical",
+                  children: p.message,
+              })
             : (0, r.jsxs)("div", {
-                  className: j.container,
+                  className: x.container,
                   children: [
-                      (0, r.jsx)(m.Z, {
+                      (0, r.jsx)(g.Z, {
                           guild: t,
                           monetizationEligibility: n,
                       }),
-                      (0, r.jsx)(v, {
-                          onboardingMarketing: O,
-                          onboardingMarketingError: C,
+                      (0, r.jsx)(j, {
+                          onboardingMarketing: C,
+                          onboardingMarketingError: _,
                       }),
                   ],
               });

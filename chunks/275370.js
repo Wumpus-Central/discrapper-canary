@@ -1,60 +1,64 @@
-t.d(r, { default: () => h }), t(388685);
-var n = t(951288),
-    o = t(647438),
-    i = t(512722),
-    a = t.n(i),
-    s = t(481060),
-    l = t(51144),
-    c = t(985002),
-    d = t(880257),
-    u = t(957656),
-    f = t(130310),
-    b = t(345909),
-    p = t(388032),
-    m = t(986360);
-let h = (e) => {
-    let { currentUser: r, otherUser: t, transitionState: i, onClose: h } = e,
-        j = o.useCallback(() => {
-            h();
-        }, [h]),
+r.d(t, { default: () => m }), r(388685);
+var n = r(951288),
+    i = r(647438),
+    o = r(512722),
+    a = r.n(o),
+    s = r(481060),
+    l = r(51144),
+    c = r(985002),
+    d = r(880257),
+    u = r(957656),
+    f = r(130310),
+    p = r(345909),
+    b = r(388032),
+    h = r(986360);
+let m = (e) => {
+    let { currentUser: t, otherUser: r, transitionState: o, onClose: m } = e,
+        j = i.useCallback(() => {
+            m();
+        }, [m]),
         x = (0, d.Z)(),
-        [g, y] = o.useState(!1),
-        O = o.useCallback(() => {
+        [g, y] = i.useState(!1),
+        O = i.useCallback(() => {
             y(!0);
         }, []),
-        { acceptLinkRequest: v, isAcceptLoading: _ } = (0, c.G)({
+        { acceptLinkRequest: v, isAcceptLoading: w } = (0, c.G)({
             onError: O,
             onSuccess: j,
         });
     return (
         a()(!x, "FamilyCenterAcceptLinkModal should only be rendered for teens."),
         (0, n.jsxs)(u.Z, {
-            transitionState: i,
-            "aria-label": p.intl.string(b.default.rlNJwc),
-            className: m.root,
+            transitionState: o,
+            "aria-label": b.intl.string(p.default.rlNJwc),
+            className: h.root,
             children: [
-                (0, n.jsx)(u.Z.Error, { error: g ? p.intl.string(b.default.pegSMz) : void 0 }),
+                g &&
+                    (0, n.jsx)(s.M14, {
+                        type: "critical",
+                        children: b.intl.string(p.default.pegSMz),
+                    }),
                 (0, n.jsxs)(s.hzk, {
                     "data-migration-pending": !0,
                     children: [
                         (0, n.jsx)(u.Z.Header, {
-                            currentUser: r,
-                            otherUser: t,
-                            header: p.intl.string(b.default.rlNJwc),
+                            currentUser: t,
+                            otherUser: r,
+                            header: b.intl.string(p.default.rlNJwc),
                             icon: (0, n.jsx)(s.xPt, {
                                 size: "md",
                                 color: "currentColor",
-                                className: m.linkIcon,
+                                className: h.linkIcon,
                             }),
                         }),
                         (0, n.jsxs)(u.Z.Content, {
                             children: [
                                 (0, n.jsx)(f.Z, { inModal: !0 }),
                                 (0, n.jsx)(s.Text, {
-                                    className: m.disclaimer,
+                                    className: h.disclaimer,
                                     variant: "text-xs/normal",
                                     color: "text-default",
-                                    children: p.intl.format(b.default.snlFqa, { username: l.ZP.getName(t) }),
+                                    children: b.intl.format(p.default.snlFqa, { username: l.ZP.getName(r) }),
                                 }),
                             ],
                         }),
@@ -64,7 +68,7 @@ let h = (e) => {
                     "data-migration-pending": !0,
                     children: (0, n.jsx)("form", {
                         onSubmit: (e) => {
-                            e.preventDefault(), v(t.id);
+                            y(!1), e.preventDefault(), v(r.id);
                         },
                         children: (0, n.jsx)(u.Z.ButtonFooter, {
                             children: (0, n.jsxs)(s.ButtonGroup, {
@@ -73,18 +77,18 @@ let h = (e) => {
                                     (0, n.jsx)(s.Button, {
                                         variant: "secondary",
                                         size: "sm",
-                                        text: p.intl.string(p.t["ETE/oK"]),
+                                        text: b.intl.string(b.t["ETE/oK"]),
                                         type: "button",
-                                        disabled: _,
-                                        onClick: h,
+                                        disabled: w,
+                                        onClick: m,
                                     }),
                                     (0, n.jsx)(s.Button, {
                                         variant: "primary",
                                         size: "sm",
-                                        text: p.intl.string(b.default["wI/jo6"]),
+                                        text: b.intl.string(p.default["wI/jo6"]),
                                         type: "submit",
-                                        disabled: _,
-                                        loading: _,
+                                        disabled: w,
+                                        loading: w,
                                     }),
                                 ],
                             }),

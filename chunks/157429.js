@@ -13,8 +13,8 @@ var a = n(512722),
 function h(t) {
     let { transitionState: i, guild: n, onClose: a } = t,
         h = (0, u.Dt)(),
-        [x, { loading: g, error: k }] = (0, c.Z)(d.oL),
-        m = async () => {
+        [x, { loading: g, error: m }] = (0, c.Z)(d.oL),
+        E = async () => {
             e()(null != n, "no guild"), null != (await x(n.id)) && a();
         };
     return (0, l.jsx)(r.Modal, {
@@ -25,7 +25,7 @@ function h(t) {
                 variant: "critical-primary",
                 text: p.intl.string(p.t.R3BPHx),
                 loading: g,
-                onClick: m,
+                onClick: E,
             },
         ],
         title: p.intl.string(p.t.rRpcEx),
@@ -35,9 +35,15 @@ function h(t) {
         }),
         onClose: a,
         children:
-            null != k
+            null != m
                 ? (0, l.jsxs)(l.Fragment, {
-                      children: [(0, l.jsx)(s.kzN, { children: k.message }), (0, l.jsx)(s.LZC, { size: 24 })],
+                      children: [
+                          (0, l.jsx)(s.M14, {
+                              type: "critical",
+                              children: m.message,
+                          }),
+                          (0, l.jsx)(s.LZC, { size: 24 }),
+                      ],
                   })
                 : null,
     });

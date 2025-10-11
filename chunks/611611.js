@@ -58,19 +58,19 @@ function P(e) {
     });
 }
 function w(e) {
-    let { channel: t, transitionState: n, onClose: p, initialQuestion: C, initialAnswers: k, initialDuration: R } = e;
+    let { channel: t, transitionState: n, onClose: p, initialQuestion: C, initialAnswers: R, initialDuration: k } = e;
     (0, u.Z)({
         type: O.n.MODAL,
         name: a.z.POLL_EDITOR_VIEWED,
     });
     let x = l.useRef(null),
         E = l.useRef([]),
-        _ = l.useRef(null),
-        S = l.useCallback((e) => {
+        S = l.useRef(null),
+        _ = l.useCallback((e) => {
             var t, n;
             let { indexToRemove: r, numberOfAnswers: l } = e;
             l === j.gY + 1
-                ? null == (t = _.current) || t.focus()
+                ? null == (t = S.current) || t.focus()
                 : null == (n = E.current[r === l - 1 ? r - 1 : r + 1]) || n.focusDeleteButton();
         }, []),
         {
@@ -82,11 +82,11 @@ function w(e) {
             setDuration: L,
             handleQuestionChange: T,
             handleAnswerTextChange: Z,
-            handleEmojiSelect: B,
-            canAddMoreAnswers: Y,
-            handleRemoveAnswerImage: K,
-            canRemoveMoreAnswers: z,
-            handleAddAnswer: M,
+            handleEmojiSelect: Y,
+            canAddMoreAnswers: K,
+            handleRemoveAnswerImage: B,
+            canRemoveMoreAnswers: M,
+            handleAddAnswer: z,
             handleRemoveAnswer: H,
             createPollError: q,
             handleSubmitPoll: W,
@@ -94,10 +94,10 @@ function w(e) {
             submitting: G,
             shouldFocusOnInvalidField: V,
             setShouldFocusOnInvalidField: X,
-        } = (0, m.Z)(t, p, S, {
+        } = (0, m.Z)(t, p, _, {
             initialQuestion: C,
-            initialAnswers: k,
-            initialDuration: R,
+            initialAnswers: R,
+            initialDuration: k,
         }),
         { trackPollCreationCancelled: J } = (0, b.l)(D, I),
         Q = l.useRef(D.length),
@@ -221,8 +221,8 @@ function w(e) {
             onKeyDown: en,
             children: [
                 null != q &&
-                    (0, r.jsx)(c.kzN, {
-                        className: h.apiErrorBlock,
+                    (0, r.jsx)(c.M14, {
+                        type: "critical",
                         children: q.getAnyErrorMessage(),
                     }),
                 (0, r.jsx)(v, {
@@ -244,15 +244,15 @@ function w(e) {
                                     channelId: t.id,
                                     index: n,
                                     isLastAnswer: n === D.length - 1,
-                                    onEmojiSelect: B,
-                                    onEmojiRemove: K,
+                                    onEmojiSelect: Y,
+                                    onEmojiRemove: B,
                                     onAnswerTextChange: Z,
                                     onRemoveAnswer: H,
-                                    addAnswer: M,
+                                    addAnswer: z,
                                     submitPoll: et,
                                     answerRowRefs: E,
                                     error: null == F ? void 0 : F["answer-".concat(e.localCreationAnswerId)],
-                                    canRemoveAnswer: z,
+                                    canRemoveAnswer: M,
                                     ref: (e) => {
                                         E.current[n] = e;
                                     },
@@ -260,15 +260,15 @@ function w(e) {
                                 e.localCreationAnswerId,
                             ),
                         ),
-                        Y &&
+                        K &&
                             (0, r.jsx)("div", {
                                 className: h.addAnswerButton,
                                 children: (0, r.jsx)(c.Button, {
                                     icon: c.qJs,
                                     variant: "secondary",
-                                    onClick: M,
+                                    onClick: z,
                                     "aria-label": y.intl.string(y.t.B2UvmZ),
-                                    buttonRef: _,
+                                    buttonRef: S,
                                     text: y.intl.string(y.t.B2UvmZ),
                                 }),
                             }),

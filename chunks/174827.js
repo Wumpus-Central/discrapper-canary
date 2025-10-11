@@ -29,8 +29,8 @@ var r = n(951288),
     E = n(51499),
     k = n(456251),
     T = n(614277),
-    A = n(435020),
-    M = n(809144),
+    M = n(435020),
+    A = n(809144),
     Z = n(698708),
     B = n(844068),
     N = n(981631),
@@ -66,7 +66,7 @@ function H(e) {
         ec = (0, _.a5)(ee),
         eu = (null == (t = (0, p.Z)()) ? void 0 : t.planSelectionBanner) != null,
         ep = el && ec && null != ed && ed.length > 0 && eu,
-        e_ = (0, A.m)(X, Q),
+        e_ = (0, M.m)(X, Q),
         { newPlans: ef } = c.ZP.useExperiment({ location: "d17fd6_3" }, { autoTrackExposure: !1 }),
         eh = (0, o.e7)([b.default], () => b.default.getCurrentUser()),
         em =
@@ -128,9 +128,9 @@ function H(e) {
             { tags: { app_context: "billing" } },
         );
     let eT = null != (H = null == ek ? void 0 : ek.message) ? H : G.intl.string(G.t.R0RpRU),
-        eA = eL && null == ek,
-        eM = eL && null != ek,
-        eZ = eA && null == q && !!eL && (null == eE ? void 0 : eE.subscriptionPeriodEnd) == null,
+        eM = eL && null == ek,
+        eA = eL && null != ek,
+        eZ = eM && null == q && !!eL && (null == eE ? void 0 : eE.subscriptionPeriodEnd) == null,
         eB = !el && (null == ew ? void 0 : ew.skuId) === R.Si.TIER_2 && (null == ex ? void 0 : ex.referrer_id) != null,
         eN = null;
     return ((eN = null != eC ? eC : eB ? (0, r.jsx)(g.Z, {}) : (0, r.jsx)(x.Z, {})), eZ)
@@ -139,16 +139,19 @@ function H(e) {
           l()(ev.length > 0, "Premium plan options should be set"),
           (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(M.P, { giftMessage: es }),
+                  (0, r.jsx)(A.P, { giftMessage: es }),
                   !(el && (0, L.pO)(eo)) && (0, r.jsx)(E.Z, { isEligibleForTrial: eg }),
                   (0, r.jsxs)(T.C3, {
                       children: [
-                          eA && (0, r.jsx)("hr", { className: F.planSelectSeparatorUpper }),
+                          eM && (0, r.jsx)("hr", { className: F.planSelectSeparatorUpper }),
                           eN,
                           (0, r.jsx)(B.Z, {}),
                           (0, r.jsx)(Z.Z, {}),
-                          eM
-                              ? (0, r.jsx)(s.kzN, { children: eT })
+                          eA
+                              ? (0, r.jsx)(s.M14, {
+                                    type: "critical",
+                                    children: eT,
+                                })
                               : (0, r.jsx)(j.O, {
                                     planOptions: ev,
                                     eligibleForMultiMonthPlans: em,
@@ -160,7 +163,7 @@ function H(e) {
                                     useCompactGiftComponents: ep,
                                     handleClose: V,
                                 }),
-                          eA &&
+                          eM &&
                               (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       (0, r.jsx)("hr", { className: F.planSelectSeparatorLower }),
@@ -187,7 +190,7 @@ function H(e) {
                                   onBackClick: () => U(P.h8.SKU_SELECT),
                                   showBackButton: null == D && null == W,
                                   planOptions: ev,
-                                  shouldRenderUpdatedPaymentModal: eA,
+                                  shouldRenderUpdatedPaymentModal: eM,
                                   isTrial: eg,
                               }),
                           }),

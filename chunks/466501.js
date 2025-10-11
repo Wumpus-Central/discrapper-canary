@@ -1,4 +1,4 @@
-i.d(t, { default: () => f }), i(953529);
+i.d(t, { default: () => j }), i(953529);
 var n = i(951288),
     r = i(647438),
     c = i(793030),
@@ -6,45 +6,49 @@ var n = i(951288),
     o = i(651711),
     s = i(434404),
     a = i(202858),
-    d = i(587431),
-    h = i(400842),
-    u = i(271267),
-    b = i(981631),
-    p = i(388032);
-function j(e) {
-    let { eligibility: t, eligibilityLoading: i, eligibilityError: c, guildId: p, onEligibilityBecameStale: j } = e,
-        f = r.useMemo(
+    d = i(400842),
+    h = i(271267),
+    u = i(981631),
+    b = i(388032);
+function p(e) {
+    let { eligibility: t, eligibilityLoading: i, eligibilityError: c, guildId: b, onEligibilityBecameStale: p } = e,
+        j = r.useMemo(
             () => ({
-                onEligibilityBecameStale: j,
+                onEligibilityBecameStale: p,
                 sortedByIneligible: !0,
                 actions: {
                     onEnableMFAClick: a.ZP.enableMFA,
                     onRequireModeratorMFAClick: () => {
-                        (0, l.Mr3)(u.Q), s.Z.open(p, b.pNK.SAFETY, void 0, b.KsC.SAFETY_PERMISSIONS);
+                        (0, l.Mr3)(h.Q), s.Z.open(b, u.pNK.SAFETY, void 0, u.KsC.SAFETY_PERMISSIONS);
                     },
                 },
             }),
-            [p, j],
+            [b, p],
         ),
-        g = (0, o.Z)(t, f);
+        f = (0, o.Z)(t, j);
     return null != c
-        ? (0, n.jsx)("div", { children: (0, n.jsx)(d.Z, { children: c.message }) })
-        : null == g || i
+        ? (0, n.jsx)("div", {
+              children: (0, n.jsx)(l.M14, {
+                  type: "critical",
+                  children: c.message,
+              }),
+          })
+        : null == f || i
           ? (0, n.jsx)("div", { children: (0, n.jsx)(l.$jN, {}) })
           : (0, n.jsx)("div", {
-                children: g.map((e, t) =>
+                children: f.map((e, t) =>
                     (0, n.jsxs)(
                         r.Fragment,
                         {
                             children: [
-                                (0, n.jsx)(h.d, {
+                                (0, n.jsx)(d.d, {
                                     name: e.checked ? e.checkedLabel : e.uncheckedLabel,
                                     description: e.description,
                                     checked: e.checked,
                                     actionLabel: e.actionLabel,
                                     actionHandler: e.actionHandler,
                                 }),
-                                t < g.length - 1 ? (0, n.jsx)(l.izJ, {}) : null,
+                                t < f.length - 1 ? (0, n.jsx)(l.izJ, {}) : null,
                             ],
                         },
                         e.checkedLabel,
@@ -52,7 +56,7 @@ function j(e) {
                 ),
             });
 }
-function f(e) {
+function j(e) {
     let {
         eligibility: t,
         eligibilityLoading: i,
@@ -63,12 +67,12 @@ function f(e) {
     } = e;
     return (0, n.jsx)(c.Modal, {
         transitionState: a,
-        title: p.intl.string(p.t["3s47iI"]),
+        title: b.intl.string(b.t["3s47iI"]),
         actions: [],
         onClose: async () => {
-            await (0, l.Mr3)(u.Q);
+            await (0, l.Mr3)(h.Q);
         },
-        children: (0, n.jsx)(j, {
+        children: (0, n.jsx)(p, {
             eligibility: t,
             eligibilityLoading: i,
             eligibilityError: r,

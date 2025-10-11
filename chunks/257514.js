@@ -1,6 +1,6 @@
 n.d(e, { default: () => O }), n(388685);
-var a = n(951288),
-    i = n(647438),
+var i = n(951288),
+    a = n(647438),
     l = n(793030),
     r = n(481060),
     s = n(355467),
@@ -12,8 +12,8 @@ var a = n(951288),
     d = n(225715),
     p = n(553334),
     I = n(981631),
-    N = n(388032),
-    A = n(304495);
+    A = n(388032),
+    N = n(304495);
 function O(t) {
     let { transitionState: e, application: n, storeListing: O, subscription: E, guild: S, onClose: P } = t,
         { analyticsLocations: T } = (0, c.ZP)(o.Z.APPLICATION_SUBSCRIPTION_CANCELLATION_MODAL),
@@ -22,8 +22,8 @@ function O(t) {
             error: g,
             submitting: m,
         } = ((t) => {
-            let [e, n] = i.useState(!1),
-                [a, l] = i.useState(null);
+            let [e, n] = a.useState(!1),
+                [i, l] = a.useState(null);
             return {
                 cancelSubscription: async (e) => {
                     try {
@@ -34,7 +34,7 @@ function O(t) {
                         n(!1);
                     }
                 },
-                error: a,
+                error: i,
                 submitting: e,
             };
         })(T),
@@ -46,29 +46,29 @@ function O(t) {
                           async () => (
                               await P(),
                               (t) =>
-                                  (0, a.jsx)(
+                                  (0, i.jsx)(
                                       p.Z,
                                       (function (t) {
                                           for (var e = 1; e < arguments.length; e++) {
                                               var n = null != arguments[e] ? arguments[e] : {},
-                                                  a = Object.keys(n);
+                                                  i = Object.keys(n);
                                               "function" == typeof Object.getOwnPropertySymbols &&
-                                                  (a = a.concat(
+                                                  (i = i.concat(
                                                       Object.getOwnPropertySymbols(n).filter(function (t) {
                                                           return Object.getOwnPropertyDescriptor(n, t).enumerable;
                                                       }),
                                                   )),
-                                                  a.forEach(function (e) {
-                                                      var a;
-                                                      (a = n[e]),
+                                                  i.forEach(function (e) {
+                                                      var i;
+                                                      (i = n[e]),
                                                           e in t
                                                               ? Object.defineProperty(t, e, {
-                                                                    value: a,
+                                                                    value: i,
                                                                     enumerable: !0,
                                                                     configurable: !0,
                                                                     writable: !0,
                                                                 })
-                                                              : (t[e] = a);
+                                                              : (t[e] = i);
                                                   });
                                           }
                                           return t;
@@ -83,16 +83,16 @@ function O(t) {
                           ),
                       ));
         };
-    i.useEffect(() => {
+    a.useEffect(() => {
         C.default.track(I.rMx.CANCELLATION_FLOW_STARTED, { location_stack: T });
     }, [T]);
     let L = (0, _.KW)(O.skuFlags);
-    return (0, a.jsx)(l.ExpressiveModal, {
+    return (0, i.jsx)(l.ExpressiveModal, {
         actions: [
             {
                 loading: m,
                 onClick: b,
-                text: N.intl.string(N.t.KSqyfX),
+                text: A.intl.string(A.t.KSqyfX),
                 variant: "critical-primary",
             },
         ],
@@ -102,30 +102,35 @@ function O(t) {
             aspectRatio: "16/9",
             props: {
                 application: n,
-                className: A.largeAppIcon,
+                className: N.largeAppIcon,
             },
         },
-        title: N.intl.string(N.t.CeCHk5),
+        title: A.intl.string(A.t.CeCHk5),
         subtitle: L
-            ? N.intl.format(N.t.fZP9QE, {
+            ? A.intl.format(A.t.fZP9QE, {
                   applicationName: n.name,
                   timestamp: E.currentPeriodEnd.getTime(),
               })
-            : N.intl.format(N.t["3LeWBA"], {
+            : A.intl.format(A.t["3LeWBA"], {
                   guild: null == S ? void 0 : S.name,
                   applicationName: n.name,
                   timestamp: E.currentPeriodEnd.getTime(),
               }),
         transitionState: e,
         onClose: P,
-        children: (0, a.jsxs)("div", {
-            className: A.cancelModalBody,
+        children: (0, i.jsxs)("div", {
+            className: N.cancelModalBody,
             children: [
-                null != g ? (0, a.jsx)(r.kzN, { children: g.message }) : null,
-                (0, a.jsx)(d.G9, {
+                null != g
+                    ? (0, i.jsx)(l.M14, {
+                          type: "critical",
+                          children: g.message,
+                      })
+                    : null,
+                (0, i.jsx)(d.G9, {
                     applicationId: n.id,
                     storeListingBenefits: O.benefits,
-                    className: A.benefitsContainer,
+                    className: N.benefitsContainer,
                 }),
             ],
         }),

@@ -190,10 +190,12 @@ function eO(e) {
         className: J.body,
         children: [
             null != n &&
-                (0, r.jsx)(c.kzN, {
+                (0, r.jsx)("div", {
                     className: J.infoNotice,
-                    backgroundColor: c.mTc.BACKGROUND_TERTIARY,
-                    children: n,
+                    children: (0, r.jsx)(c.M14, {
+                        type: "info",
+                        children: n,
+                    }),
                 }),
             (0, r.jsx)(b.j, {
                 billingError: i,

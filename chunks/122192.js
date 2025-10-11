@@ -12,9 +12,12 @@ let u = (e) => {
     return (0, r.jsxs)(i.Fragment, {
         children: [
             u
-                ? (0, r.jsx)(a.kzN, {
+                ? (0, r.jsx)("div", {
                       className: c.errorBlock,
-                      children: l.intl.string(l.t["4vnhKS"]),
+                      children: (0, r.jsx)(a.M14, {
+                          type: "critical",
+                          children: l.intl.string(l.t["4vnhKS"]),
+                      }),
                   })
                 : null,
             (0, r.jsx)(o.Z, {
