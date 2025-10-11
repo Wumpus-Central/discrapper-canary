@@ -1,35 +1,35 @@
-t.d(n, { Z: () => l });
-var r = t(951288);
+t.d(n, { Z: () => r });
+var i = t(951288);
 t(647438);
-var i = t(906732);
-function l(e, n) {
+var l = t(906732);
+function r(e, n) {
     return function (t) {
-        let { analyticsLocations: l } = (0, i.ZP)(n);
-        return (0, r.jsx)(i.Gt, {
-            value: l,
-            children: (0, r.jsx)(
+        let { analyticsLocations: r } = (0, l.ZP)(n);
+        return (0, i.jsx)(l.Gt, {
+            value: r,
+            children: (0, i.jsx)(
                 e,
                 (function (e) {
                     for (var n = 1; n < arguments.length; n++) {
                         var t = null != arguments[n] ? arguments[n] : {},
-                            r = Object.keys(t);
+                            i = Object.keys(t);
                         "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
+                            (i = i.concat(
                                 Object.getOwnPropertySymbols(t).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
                                 }),
                             )),
-                            r.forEach(function (n) {
-                                var r;
-                                (r = t[n]),
+                            i.forEach(function (n) {
+                                var i;
+                                (i = t[n]),
                                     n in e
                                         ? Object.defineProperty(e, n, {
-                                              value: r,
+                                              value: i,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (e[n] = r);
+                                        : (e[n] = i);
                             });
                     }
                     return e;

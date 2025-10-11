@@ -1,5 +1,5 @@
 e.exports = {
-    modal: "modal_ac72c6 " + n(154257).scrollbarGhostHairline,
+    modal: "modal_ac72c6 " + c(154257).scrollbarGhostHairline,
     modalContent: "modalContent_ac72c6",
     modalFooter: "modalFooter_ac72c6",
     description: "description_ac72c6",

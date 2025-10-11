@@ -1,14 +1,14 @@
-n.d(t, { f: () => s }), n(388685);
-var a = n(647438),
-    r = n(751648),
+n.d(t, { f: () => a }), n(388685);
+var r = n(647438),
+    l = n(751648),
     i = n(388032);
-function s() {
-    let [e, t] = (0, a.useState)(""),
-        [n, s] = (0, a.useState)([]),
-        [o, l] = (0, a.useState)(null),
-        [c, d] = (0, a.useState)(!1);
+function a() {
+    let [e, t] = (0, r.useState)(""),
+        [n, a] = (0, r.useState)([]),
+        [o, s] = (0, r.useState)(null),
+        [c, u] = (0, r.useState)(!1);
     return (
-        (0, a.useEffect)(() => {
+        (0, r.useEffect)(() => {
             if (null != o)
                 return void t(
                     i.intl.format(i.t["7gHWra"], {
@@ -41,17 +41,17 @@ function s() {
             isSubmitting: c,
             responseMessage: e,
             redeemVirtualCurrency: function (e, t, n) {
-                return (0, r.df)({
+                return (0, l.df)({
                     skuId: e,
                     loadId: t,
                     onRedeemStart: () => {
-                        d(!0), l(null);
+                        u(!0), s(null);
                     },
                     onRedeemSucceed: (e) => {
-                        s(e), d(!1), null == n || n(e);
+                        a(e), u(!1), null == n || n(e);
                     },
                     onRedeemFail: (e) => {
-                        l(e), d(!1);
+                        s(e), u(!1);
                     },
                 });
             },
