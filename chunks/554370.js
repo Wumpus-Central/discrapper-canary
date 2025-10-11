@@ -55,10 +55,10 @@ let Q = !Z.isPlatformEmbedded && !1,
           })
         : null,
     X = null;
-function J(e) {
+function q(e) {
     e.preventDefault();
 }
-function q(e) {
+function J(e) {
     (0, c.jW)(e, async () => {
         let { default: e } = await n.e("17610").then(n.bind(n, 385620));
         return (t) => {
@@ -123,7 +123,7 @@ let $ = r.memo(function (e) {
                 let { currentTarget: t, target: i, button: r } = e;
                 r === B.AeJ.PRIMARY && t === i && n();
             },
-            onContextMenu: q,
+            onContextMenu: J,
             children: r
                 ? null
                 : (0, i.jsx)(L.Z, {
@@ -152,10 +152,10 @@ function et() {
     d.Z.setInputLocked(!0, (0, w.getPID)());
 }
 function en() {
-    d.Z.setFocusedPID(w.DEV_PID);
+    d.Z.setFocusedPID(w.DEV_PID, null);
 }
 function ei() {
-    d.Z.setFocusedPID(null);
+    d.Z.setFocusedPID(null, null);
 }
 function er(e) {
     let t = z.ZP.isInputLocked((0, w.getPID)());
@@ -221,7 +221,7 @@ function eo(e) {
                     n.addEventListener("keydown", er),
                     n.addEventListener("keyup", er),
                     Q &&
-                        (n.document.hasFocus() && d.Z.setFocusedPID(w.DEV_PID),
+                        (n.document.hasFocus() && d.Z.setFocusedPID(w.DEV_PID, null),
                         n.addEventListener("focus", en),
                         n.addEventListener("blur", ei));
             },
@@ -281,15 +281,15 @@ function eo(e) {
         }),
         r.useEffect(() => {
             if ((C.S.dispatch(B.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !0 }), l)) {
-                if (((0, s.Ay)(u.u1M), n.addEventListener("contextmenu", J, !1), null != X)) {
+                if (((0, s.Ay)(u.u1M), n.addEventListener("contextmenu", q, !1), null != X)) {
                     let e = Date.now() - X;
                     d.Z.track(B.rMx.OVERLAY_LOCKED, { unlocked_duration: e }), (X = null);
                 }
                 return () => {
-                    n.removeEventListener("contextmenu", J, !1);
+                    n.removeEventListener("contextmenu", q, !1);
                 };
             }
-            n.removeEventListener("contextmenu", J, !1),
+            n.removeEventListener("contextmenu", q, !1),
                 null == X && ((X = Date.now()), d.Z.track(B.rMx.OVERLAY_UNLOCKED));
         }, [l, n]),
         (0, i.jsx)(f.Gt, {

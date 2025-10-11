@@ -425,7 +425,7 @@ function eh(e, t) {
     (null === n || r === n) &&
         r !== t &&
         (null == t ? W.delete(e) : W.set(e, t),
-        (null == t || "CRASHED" === t) && (f.Z.setFocusedPID(null), ep()),
+        (null == t || "CRASHED" === t) && (f.Z.setFocusedPID(null, null), ep()),
         ee.delete(e),
         eo.info(
             "pid="
@@ -596,7 +596,7 @@ let eI = e_("setOverlayEnabled", async (e) => {
     z || (await eb(void 0)), W.size > 0 && (await em(t));
 });
 function eT(e) {
-    f.Z.setFocusedPID(0 === e ? null : e);
+    f.Z.setFocusedPID(0 === e ? null : e, null);
 }
 function eS(e, t, n) {
     var r;
@@ -727,7 +727,7 @@ function eM(e) {
     let { port: t } = e;
     $ = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let n = new URLSearchParams();
-    n.append("build_id", "4de661b256f6cc68cdc0a6f4a22c8666a9047f86"),
+    n.append("build_id", "8bd741450f33612e29ae7d21cc8ab0672c903cb8"),
         n.append("rpc", String(t)),
         n.append("rpc_auth_token", $),
         (r = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(n.toString()));
@@ -760,7 +760,7 @@ function eG() {
     (X = !0), (Y = !1), ez();
 }
 function eB() {
-    (X = !1), f.Z.setFocusedPID(null), ey(void 0), eo.verbose("OverlayBridgeStore: handleConnectionClosed");
+    (X = !1), f.Z.setFocusedPID(null, null), ey(void 0), eo.verbose("OverlayBridgeStore: handleConnectionClosed");
 }
 function eZ() {
     return !0;
