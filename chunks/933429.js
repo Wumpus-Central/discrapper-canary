@@ -515,7 +515,7 @@ let eQ = [
         [eS.kVF.PASSKEY_BACKUP]: {
             predicate: (e) => {
                 let { currentUser: t } = e;
-                return null != t && t.mfaEnabled && !W.Z.hasCredentials;
+                return (null == t ? void 0 : t.mfaEnabled) && W.Z.hasFetchedCredentials() && !W.Z.hasCredentials;
             },
         },
         [eS.kVF.PREMIUM_TIER_2_TRIAL_ENDING]: {

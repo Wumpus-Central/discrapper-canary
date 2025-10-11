@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -23,12 +23,33 @@ function d() {
     (c = []), (l = !1), (u = !1);
 }
 function f() {
+    if (u) return !1;
     u = !0;
 }
 function _() {
+    if (!u) return !1;
     u = !1;
 }
-class p extends (r = i.ZP.Store) {
+function p(e) {
+    let t = !1;
+    return c !== e.credentials && ((c = e.credentials), (t = !0)), l || ((l = !0), (t = !0)), t;
+}
+function h(e) {
+    let { credential: t } = e;
+    if (t.type !== o.Pi.WEBAUTHN || void 0 !== c.find((e) => e.id === t.id)) return !1;
+    c = [...c, t];
+}
+function m(e) {
+    let { credential: t } = e;
+    if (t.type !== o.Pi.WEBAUTHN) return !1;
+    c = c.map((e) => (e.id === t.id ? t : e));
+}
+function g(e) {
+    let { credential: t } = e;
+    if (t.type !== o.Pi.WEBAUTHN) return !1;
+    c = c.filter((e) => e.id !== t.id);
+}
+class E extends (r = i.ZP.Store) {
     hasFetchedCredentials() {
         return l;
     }
@@ -42,24 +63,13 @@ class p extends (r = i.ZP.Store) {
         return u;
     }
 }
-s(p, "displayName", "WebAuthnStore");
-let h = new p(a.Z, {
+s(E, "displayName", "WebAuthnStore");
+let b = new E(a.Z, {
     LOGOUT: d,
-    MFA_WEBAUTHN_CREDENTIALS_LOADED(e) {
-        (c = e.credentials), (l = !0);
-    },
-    AUTHENTICATOR_CREATE(e) {
-        let { credential: t } = e;
-        t.type === o.Pi.WEBAUTHN && void 0 === c.find((e) => e.id === t.id) && (c = [...c, t]);
-    },
-    AUTHENTICATOR_UPDATE(e) {
-        let { credential: t } = e;
-        t.type === o.Pi.WEBAUTHN && (c = c.map((e) => (e.id === t.id ? t : e)));
-    },
-    AUTHENTICATOR_DELETE(e) {
-        let { credential: t } = e;
-        t.type === o.Pi.WEBAUTHN && (c = c.filter((e) => e.id !== t.id));
-    },
+    MFA_WEBAUTHN_CREDENTIALS_LOADED: p,
+    AUTHENTICATOR_CREATE: h,
+    AUTHENTICATOR_UPDATE: m,
+    AUTHENTICATOR_DELETE: g,
     WEBAUTHN_TRIGGER_REGISTER: f,
     WEBAUTHN_CLEAR_REGISTER_TRIGGER: _,
 });

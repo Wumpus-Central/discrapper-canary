@@ -811,5 +811,11 @@ let i = {
         actions: ["MEDIA_ENGINE_CONNECTION_STATS"],
         inlineRequire: () => n(216405).Z,
     },
+    WebAuthnCredentialManager: {
+        actions: ["POST_CONNECTION_OPEN", "LOGIN_RESET", "LOGOUT"],
+        inlineRequire: () => n(268194).Z,
+        neverLoadBeforeConnectionOpen: !0,
+        hasStoreChangeListeners: !0,
+    },
 };
 (0, r.j)(i);
