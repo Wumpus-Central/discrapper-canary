@@ -1,8 +1,7 @@
 n.d(t, {
-    A7: () => v,
-    hQ: () => A,
-    lo: () => N,
-    yn: () => I,
+    hQ: () => S,
+    lo: () => C,
+    yn: () => v,
 }),
     n(388685);
 var r = n(951288),
@@ -95,18 +94,6 @@ let b = "data-listbox-item-id",
         BRAND: f.selectedBrand,
     });
 function v(e) {
-    let [t, n] = i.useState(() => new Set(e));
-    return [
-        t,
-        i.useCallback((e) => {
-            n((t) => {
-                let n = new Set(t);
-                return n.has(e) ? n.delete(e) : n.add(e), n;
-            });
-        }, []),
-    ];
-}
-function I(e) {
     let [t, n] = i.useState(() => new Set(null != e ? [e] : void 0));
     return [
         t,
@@ -115,16 +102,16 @@ function I(e) {
         }, []),
     ];
 }
-function T(e) {
+function I(e) {
     return String(e);
 }
-let S = i.createContext({
+let T = i.createContext({
     activeDescendant: null,
     selected: new Set(),
     setSelected: () => null,
-    itemToString: T,
+    itemToString: I,
 });
-function A(e) {
+function S(e) {
     let {
             placeholder: t,
             children: n,
@@ -134,9 +121,9 @@ function A(e) {
             listClassName: E,
             "aria-label": O,
             multiSelect: v = !1,
-            autoFocus: I = !1,
+            autoFocus: S = !1,
             maxVisibleItems: A = 5,
-            itemToString: C = T,
+            itemToString: C = I,
             emptyStateText: N,
             emptyStateHeader: R,
             onQueryChange: P,
@@ -218,7 +205,7 @@ function A(e) {
                             className: f.header,
                             children: (0, r.jsx)(c.E, {
                                 size: "sm",
-                                autoFocus: I,
+                                autoFocus: S,
                                 placeholder: t,
                                 query: w,
                                 onChange: L,
@@ -249,7 +236,7 @@ function A(e) {
                                               }),
                                           ],
                                       })
-                                    : (0, r.jsx)(S.Provider, {
+                                    : (0, r.jsx)(T.Provider, {
                                           value: {
                                               activeDescendant: M,
                                               selected: a,
@@ -282,16 +269,16 @@ function A(e) {
         }),
     });
 }
-let C = i.createContext(null);
-function N(e) {
+let A = i.createContext(null);
+function C(e) {
     var t,
         { value: n, children: a, disabled: s = !1, selectedColor: c = O.STANDARD } = e,
         d = g(e, ["value", "children", "disabled", "selectedColor"]);
-    let { activeDescendant: _, selected: h, setSelected: E, itemToString: y } = i.useContext(S),
+    let { activeDescendant: _, selected: h, setSelected: E, itemToString: y } = i.useContext(T),
         v = y(n),
         I = _ === v,
-        T = null != (t = null == d ? void 0 : d.selected) ? t : h.has(n),
-        A = (0, l.JA)(v);
+        S = null != (t = null == d ? void 0 : d.selected) ? t : h.has(n),
+        C = (0, l.JA)(v);
     return (0, r.jsx)(
         u.P3F,
         m(
@@ -303,17 +290,17 @@ function N(e) {
                     [b]: n,
                     className: o()(f.item, {
                         [f.focused]: I,
-                        [c]: T,
+                        [c]: S,
                         [f.disabled]: s,
                     }),
                 },
-                A,
+                C,
             ),
             {
                 role: "option",
-                "aria-selected": T,
+                "aria-selected": S,
                 "aria-disabled": s,
-                children: (0, r.jsx)(C.Provider, {
+                children: (0, r.jsx)(A.Provider, {
                     value: n,
                     children: a,
                 }),
@@ -321,33 +308,33 @@ function N(e) {
         ),
     );
 }
-(N.Colors = O),
-    (N.Label = function (e) {
+(C.Colors = O),
+    (C.Label = function (e) {
         let { children: t } = e;
         return (0, r.jsx)("span", {
             className: f.itemLabel,
             children: t,
         });
     }),
-    (N.Icon = function (e) {
+    (C.Icon = function (e) {
         let { children: t } = e;
         return (0, r.jsx)("span", {
             className: f.itemCheckbox,
             children: t,
         });
     }),
-    (N.Checkbox = function (e) {
+    (C.Checkbox = function (e) {
         let { checked: t } = e,
-            { selected: n } = i.useContext(S),
-            a = i.useContext(C);
+            { selected: n } = i.useContext(T),
+            a = i.useContext(A);
         return (0, r.jsx)("span", {
             className: f.itemCheckbox,
             children: (0, r.jsx)(u.FZ5, { checked: null != t ? t : null != a && n.has(a) }),
         });
     }),
-    (N.Checkmark = function () {
-        let { selected: e } = i.useContext(S),
-            t = i.useContext(C);
+    (C.Checkmark = function () {
+        let { selected: e } = i.useContext(T),
+            t = i.useContext(A);
         return e.has(t)
             ? (0, r.jsx)("span", {
                   className: f.itemCheckbox,
