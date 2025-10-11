@@ -3,8 +3,8 @@ var r = n(951288),
     l = n(647438),
     i = n(120356),
     s = n.n(i),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     c = n(782568),
     u = n(607070),
     d = n(594174),
@@ -22,8 +22,8 @@ var r = n(951288),
     O = n(328626),
     x = n(849275),
     y = n(619899),
-    j = n(642909),
-    T = n(981631),
+    T = n(642909),
+    j = n(981631),
     L = n(388032),
     k = n(345213),
     I = n(310582);
@@ -33,15 +33,15 @@ let B = (e) => {
             isLoading: n,
             title: i,
             sortedSkuIds: B,
-            numVisibleItems: P,
-            hasSorting: N,
-            prioritizeUserDiscounts: A,
-            tab: R,
-            buttonContainerClassName: Z,
+            numVisibleItems: N,
+            prioritizeUserDiscounts: P,
+            tab: A,
+            buttonContainerClassName: R,
+            orbsSupportedOnly: Z,
         } = e,
-        w = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
+        w = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
         H = C.ZP.canUseCollectibles(w),
-        F = (0, j.G)("FeedBlock"),
+        F = (0, T.G)("FeedBlock"),
         {
             sortType: D,
             setSortType: M,
@@ -49,10 +49,15 @@ let B = (e) => {
             sortOptions: U,
             shuffleProducts: V,
             showRecommendationOption: G,
-        } = (0, x.Z)(B, H, A),
+        } = (0, x.Z)({
+            sortedSkuIds: B,
+            isPremiumUser: H,
+            prioritizeUserDiscounts: P,
+            orbsSupportedOnly: Z,
+        }),
         z = (0, y.St)(W),
-        K = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
-        Y = (0, a.e7)([g.Z], () => g.Z.isFocused()),
+        K = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
+        Y = (0, o.e7)([g.Z], () => g.Z.isFocused()),
         q = !K && Y,
         { animationPhase: Q, startAnimation: J } = (0, O.y)(),
         X = (0, h.sp)(),
@@ -64,7 +69,7 @@ let B = (e) => {
                     isShuffling: !1,
                     onOutroComplete: () => M(e),
                 }),
-                    f.default.track(T.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
+                    f.default.track(j.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
                         page_session_id: $,
                         sort_type: e,
                     });
@@ -83,12 +88,12 @@ let B = (e) => {
                           (0, r.jsxs)("div", {
                               className: I.headerLeft,
                               children: [
-                                  (0, r.jsx)(o.Heading, {
+                                  (0, r.jsx)(a.Heading, {
                                       variant: "heading-lg/semibold",
                                       children: i,
                                   }),
                                   G &&
-                                      (0, r.jsx)(o.ua7, {
+                                      (0, r.jsx)(a.ua7, {
                                           "data-migration-pending": !0,
                                           text: L.intl.string(L.t["3taPdn"]),
                                           position: "top",
@@ -96,7 +101,7 @@ let B = (e) => {
                                           children: (e) => {
                                               var t, n;
                                               return (0, r.jsx)(
-                                                  o.P3F,
+                                                  a.P3F,
                                                   ((t = (function (e) {
                                                       for (var t = 1; t < arguments.length; t++) {
                                                           var n = null != arguments[t] ? arguments[t] : {},
@@ -127,10 +132,10 @@ let B = (e) => {
                                                       {
                                                           onClick: () =>
                                                               (0, c.Z)(
-                                                                  p.Z.getArticleURL(T.BhN.DATA_USED_FOR_RECOMMENDED),
+                                                                  p.Z.getArticleURL(j.BhN.DATA_USED_FOR_RECOMMENDED),
                                                               ),
                                                           className: I.informationIcon,
-                                                          children: (0, r.jsx)(o.d3s, { size: "sm" }),
+                                                          children: (0, r.jsx)(a.d3s, { size: "sm" }),
                                                       }),
                                                   Object.getOwnPropertyDescriptors
                                                       ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -154,47 +159,45 @@ let B = (e) => {
                                       }),
                               ],
                           }),
-                          N
-                              ? (0, r.jsxs)("div", {
-                                    className: s()(I.headerRight, { [k.shopTakeOver]: F }),
-                                    children: [
-                                        (0, r.jsx)(o.Text, {
-                                            variant: "text-md/medium",
-                                            children: L.intl.string(L.t.uaX709),
-                                        }),
-                                        (0, r.jsx)("div", {
-                                            className: Z,
-                                            children: (0, r.jsx)(o.PhF, {
-                                                options: U,
-                                                select: et,
-                                                className: I.sortSelect,
-                                                popoutClassName: s()({ [k.shopTakeOver]: F }),
-                                                isSelected: (e) => e === D,
-                                                serialize: (e) => e,
-                                            }),
-                                        }),
-                                        (0, r.jsx)("div", {
-                                            className: Z,
-                                            children: (0, r.jsx)(o.Button, {
-                                                variant: "secondary",
-                                                text: L.intl.string(L.t.X3tnc3),
-                                                buttonRef: ee,
-                                                onClick: () => {
-                                                    J({
-                                                        isShuffling: !0,
-                                                        onOutroComplete: V,
-                                                        returnRef: ee,
-                                                    }),
-                                                        f.default.track(T.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
-                                                            page_session_id: $,
-                                                        });
-                                                },
-                                                disabled: Q !== O.g.MOUNTED && Q !== O.g.FINISHED,
-                                            }),
-                                        }),
-                                    ],
-                                })
-                              : null,
+                          (0, r.jsxs)("div", {
+                              className: s()(I.headerRight, { [k.shopTakeOver]: F }),
+                              children: [
+                                  (0, r.jsx)(a.Text, {
+                                      variant: "text-md/medium",
+                                      children: L.intl.string(L.t.uaX709),
+                                  }),
+                                  (0, r.jsx)("div", {
+                                      className: R,
+                                      children: (0, r.jsx)(a.PhF, {
+                                          options: U,
+                                          select: et,
+                                          className: I.sortSelect,
+                                          popoutClassName: s()({ [k.shopTakeOver]: F }),
+                                          isSelected: (e) => e === D,
+                                          serialize: (e) => e,
+                                      }),
+                                  }),
+                                  (0, r.jsx)("div", {
+                                      className: R,
+                                      children: (0, r.jsx)(a.Button, {
+                                          variant: "secondary",
+                                          text: L.intl.string(L.t.X3tnc3),
+                                          buttonRef: ee,
+                                          onClick: () => {
+                                              J({
+                                                  isShuffling: !0,
+                                                  onOutroComplete: V,
+                                                  returnRef: ee,
+                                              }),
+                                                  f.default.track(j.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
+                                                      page_session_id: $,
+                                                  });
+                                          },
+                                          disabled: Q !== O.g.MOUNTED && Q !== O.g.FINISHED,
+                                      }),
+                                  }),
+                              ],
+                          }),
                       ],
                   }),
                   (0, r.jsx)("div", {
@@ -205,7 +208,7 @@ let B = (e) => {
                                     en ? (0, r.jsx)(S.Z, {}, t + 1) : (0, r.jsx)(b.K, {}, t + 1),
                                 ),
                             })
-                          : z.slice(0, P).map((e, t) => {
+                          : z.slice(0, N).map((e, t) => {
                                 let n,
                                     l = _.Z.getCategoryForProduct(e.skuId);
                                 if (null == e || null == l) return null;
@@ -254,7 +257,7 @@ let B = (e) => {
                                                       product: e,
                                                       category: l,
                                                       user: w,
-                                                      tab: R,
+                                                      tab: A,
                                                       className: n,
                                                   }),
                                     },
