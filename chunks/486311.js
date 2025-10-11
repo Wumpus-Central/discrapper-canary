@@ -72,6 +72,8 @@ let j = {
                         return (0, r.jsx)(g.yI, v({ guildId: t }, x.popout));
                     case h.J.NEW_PERK_AVAILABLE:
                         return (0, r.jsx)(g.cO, v({ guildId: t }, x.popout));
+                    case h.J.GAME_SERVER_HOSTING_AVAILABLE:
+                        return (0, r.jsx)(g.dJ, v({ guildId: t }, x.popout));
                     default:
                         return (0, r.jsx)("div", {});
                 }

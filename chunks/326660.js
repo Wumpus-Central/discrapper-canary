@@ -10,4 +10,5 @@ var i,
         (i[(i.PERKS_PURCHASABLE = 1)] = "PERKS_PURCHASABLE"),
         (i[(i.PERKS_AVAILABLE = 2)] = "PERKS_AVAILABLE"),
         (i[(i.NEW_PERK_AVAILABLE = 3)] = "NEW_PERK_AVAILABLE"),
+        (i[(i.GAME_SERVER_HOSTING_AVAILABLE = 4)] = "GAME_SERVER_HOSTING_AVAILABLE"),
         i);

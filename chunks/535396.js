@@ -125,6 +125,7 @@ var v = (function (e) {
         return (
             (e[(e.VANITY_URL = 1)] = "VANITY_URL"),
             (e[(e.GUILD_TAG_BADGE_PACKS_WAVE_ONE = 2)] = "GUILD_TAG_BADGE_PACKS_WAVE_ONE"),
+            (e[(e.GAME_SERVER_HOSTING = 3)] = "GAME_SERVER_HOSTING"),
             e
         );
     })({});
@@ -132,5 +133,6 @@ let T = new Set([r.MB, r.Vk]),
     S = {
         1: new Set([r.A$]),
         2: T,
+        3: new Set(),
     },
     A = "powerupId";
