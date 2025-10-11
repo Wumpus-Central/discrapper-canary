@@ -28,6 +28,7 @@ function p(e, t) {
             !(0, a.yE)(e.flags, c.iLy.SENT_BY_SOCIAL_LAYER_INTEGRATION) ||
             !t.isDM() ||
             e.author.id === l.default.getId() ||
+            null != e.activity ||
             (0, a.yE)(null != (n = t.recipientFlags) ? n : 0, i.V.DISMISSED_IN_GAME_MESSAGE_NUX) ||
             u.has(t.id)
         )
