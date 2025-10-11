@@ -1,7 +1,7 @@
 n.d(t, {
-    O8: () => S,
-    V: () => I,
-    tV: () => T,
+    O8: () => b,
+    V: () => g,
+    tV: () => E,
 });
 var r = n(970683),
     i = n(797156),
@@ -9,13 +9,8 @@ var r = n(970683),
     o = n(981631),
     s = n(388032),
     l = n(829290),
-    c = n(136779),
-    u = n(33346),
-    d = n(857042),
-    f = n(558532),
-    _ = n(346554),
-    p = n(444305);
-function h(e, t, n) {
+    c = n(136779);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +23,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,12 +34,12 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                u(e, t, n[t]);
             });
     }
     return e;
 }
-function g(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,40 +51,18 @@ function g(e, t) {
     }
     return n;
 }
-function E(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let b = () => ({
-        [a.tN.CHILLING]: {
-            title: s.intl.string(s.t["vkpn7+"]),
-            icon: d,
-        },
-        [a.tN.GAMING]: {
-            title: s.intl.string(s.t.lZslwM),
-            icon: f,
-        },
-        [a.tN.FOCUSING]: {
-            title: s.intl.string(s.t.b6AscH),
-            icon: _,
-        },
-        [a.tN.BRB]: {
-            title: s.intl.string(s.t["30yqZW"]),
-            icon: u,
-        },
-        [a.tN.WATCHING]: {
-            title: s.intl.string(s.t.di6IFx),
-            icon: p,
-        },
-    }),
-    y = () => ({
+let p = () => ({
         [a.tN.BRB]: {
             title: s.intl.string(s.t.fFTJTE),
             icon: c,
@@ -111,7 +84,7 @@ let b = () => ({
             icon: r.Nl,
         },
     }),
-    O = () => ({
+    h = () => ({
         [a.tN.BRB]: {
             title: s.intl.string(s.t.fFTJTE),
             emoji: {
@@ -148,8 +121,8 @@ let b = () => ({
             },
         },
     }),
-    v = () =>
-        E(m({}, O()), {
+    m = () =>
+        _(d({}, h()), {
             [a.tN.CHILLING]: {
                 title: s.intl.string(s.t.IeolFR),
                 emoji: {
@@ -158,38 +131,36 @@ let b = () => ({
                 },
             },
         }),
-    I = (e) => {
+    g = (e) => {
         switch (e) {
-            case "original":
-            default:
-                return b();
             case "illocons":
-                return y();
+                return p();
             case "twemoji":
-                return O();
+            default:
+                return h();
             case "twemojimild":
-                return v();
+                return m();
         }
     },
-    T = function (e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "original";
+    E = function (e, t) {
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "twemoji";
         if ((null == t ? void 0 : t.type) !== o.IIU.HANG_STATUS || (null == t ? void 0 : t.state) == null) return null;
         let r = (0, i.F)(e, t.state),
             s = r[0];
         if (s === a.tN.CUSTOM) return null;
-        let l = I(r.length > 1 ? r[1] : n);
+        let l = g(r.length > 1 ? r[1] : n);
         return s in l ? l[s] : null;
     },
-    S = function (e, t) {
+    b = function (e, t) {
         var n;
-        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "original";
+        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "twemoji";
         return (null == t ? void 0 : t.type) !== o.IIU.HANG_STATUS || (null == t ? void 0 : t.state) == null
             ? null
             : (0, i.F)(e, t.state)[0] === a.tN.CUSTOM
               ? null == t
                   ? void 0
                   : t.details
-              : null == (n = T(e, t, r))
+              : null == (n = E(e, t, r))
                 ? void 0
                 : n.title;
     };

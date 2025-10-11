@@ -13,7 +13,7 @@ let o = (0, i.B)({
     defaultConfig: {
         enableHangStatus: !1,
         setDefaultStatus: !1,
-        allowChannelTopic: !0,
+        showEmptyChannelTopic: !0,
         allowPermanentClear: !1,
         defaultStatusVariant: "twemoji",
     },
@@ -25,7 +25,7 @@ let o = (0, i.B)({
             config: {
                 enableHangStatus: !0,
                 setDefaultStatus: !0,
-                allowChannelTopic: !0,
+                showEmptyChannelTopic: !1,
                 allowPermanentClear: !1,
                 defaultStatusVariant: "illocons",
             },
@@ -36,7 +36,7 @@ let o = (0, i.B)({
             config: {
                 enableHangStatus: !0,
                 setDefaultStatus: !0,
-                allowChannelTopic: !0,
+                showEmptyChannelTopic: !1,
                 allowPermanentClear: !1,
                 defaultStatusVariant: "twemoji",
             },
@@ -47,7 +47,7 @@ let o = (0, i.B)({
             config: {
                 enableHangStatus: !0,
                 setDefaultStatus: !0,
-                allowChannelTopic: !0,
+                showEmptyChannelTopic: !1,
                 allowPermanentClear: !1,
                 defaultStatusVariant: "twemojimild",
             },
@@ -58,31 +58,9 @@ let o = (0, i.B)({
             config: {
                 enableHangStatus: !0,
                 setDefaultStatus: !0,
-                allowChannelTopic: !0,
+                showEmptyChannelTopic: !1,
                 allowPermanentClear: !0,
                 defaultStatusVariant: "twemojimild",
-            },
-        },
-        {
-            id: 5,
-            label: "Enable Hang Status with Twemoji - no default, allow clearing statuses",
-            config: {
-                enableHangStatus: !0,
-                setDefaultStatus: !1,
-                allowChannelTopic: !0,
-                allowPermanentClear: !0,
-                defaultStatusVariant: "twemoji",
-            },
-        },
-        {
-            id: 6,
-            label: "Enable Hang Status with original icons - chilling default",
-            config: {
-                enableHangStatus: !0,
-                setDefaultStatus: !0,
-                allowChannelTopic: !0,
-                allowPermanentClear: !1,
-                defaultStatusVariant: "original",
             },
         },
     ],

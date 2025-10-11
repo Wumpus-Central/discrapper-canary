@@ -22,7 +22,7 @@ function _(e) {
             subtitle: _,
             onClick: y,
             enableHangStatus: O,
-            allowChannelTopic: v,
+            showEmptyChannelTopic: v,
         } = e,
         j = (0, a.e7)([u.Z], () => u.Z.getChannelStatus(t)),
         x = null != j && j.length > 0,

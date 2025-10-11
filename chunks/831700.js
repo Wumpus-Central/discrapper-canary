@@ -120,7 +120,7 @@ class er extends H.ZP {
     }
     renderSubtitle() {
         var e;
-        let { channel: t, connected: n, enableHangStatus: i, allowChannelTopic: l } = this.props,
+        let { channel: t, connected: n, enableHangStatus: i, showEmptyChannelTopic: l } = this.props,
             o = null == (e = (0, x.D)(this.props.subtitle)) ? void 0 : e.subtitle,
             { hovered: a } = this.state;
         return (0, r.jsx)(Y.Z, {
@@ -130,7 +130,7 @@ class er extends H.ZP {
             subtitle: o,
             hovered: a,
             enableHangStatus: i,
-            allowChannelTopic: l,
+            showEmptyChannelTopic: l,
         });
     }
     renderVoiceUsers() {
@@ -451,7 +451,7 @@ function el(e) {
         S = (0, C.Z)(),
         N = (0, a.e7)([B.ZP], () => B.ZP.isFavorite(t.id, n.id)),
         w = e.connected || (null == S ? void 0 : S.channelId) === n.id,
-        { enableHangStatus: A, allowChannelTopic: R } = (0, Z.bN)({
+        { enableHangStatus: A, showEmptyChannelTopic: R } = (0, Z.bN)({
             guildId: n.guild_id,
             location: "VoiceChannel",
         }),
@@ -497,7 +497,7 @@ function el(e) {
                 channelInfo: M,
                 resolvedUnreadSetting: d,
                 enableHangStatus: A,
-                allowChannelTopic: R,
+                showEmptyChannelTopic: R,
                 enableOpenTIVForPing: D,
                 hasChannelInfo: null != M,
                 hasStartTime: j,
