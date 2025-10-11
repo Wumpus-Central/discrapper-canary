@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => x });
 var i = n(951288);
 n(647438);
 var r = n(979554),
@@ -115,19 +115,23 @@ let b = a.EFr.SIZE_152,
             }),
         });
     },
-    S = (e) => {
+    x = (e) => {
         let { giftCode: t } = e,
             { product: n, isFetching: l } = (0, f.T)(t.skuId, !0);
-        if (l || null == n) return null;
+        if (l || null == n)
+            return (0, i.jsx)("div", {
+                className: h.spinnerContainer,
+                children: (0, i.jsx)(a.$jN, {}),
+            });
         if (n.type === r.Z.BUNDLE) return 0 === n.items.length ? null : (0, i.jsx)(j, { product: n });
-        let a = null == n ? void 0 : n.items[0];
-        switch (null == a ? void 0 : a.type) {
+        let s = null == n ? void 0 : n.items[0];
+        switch (null == s ? void 0 : s.type) {
             case r.Z.AVATAR_DECORATION:
-                return (0, i.jsx)(O, { item: a });
+                return (0, i.jsx)(O, { item: s });
             case r.Z.PROFILE_EFFECT:
-                return (0, i.jsx)(v, { item: a });
+                return (0, i.jsx)(v, { item: s });
             case r.Z.NAMEPLATE:
-                return (0, i.jsx)(P, { item: a });
+                return (0, i.jsx)(P, { item: s });
             default:
                 return null != t.giftStyle
                     ? (0, i.jsx)(c.Z, {

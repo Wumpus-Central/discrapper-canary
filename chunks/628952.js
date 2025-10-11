@@ -94,10 +94,7 @@ let C = (e) => {
                     return null;
             }
         },
-        M =
-            null != N &&
-            N.id !== (null == P ? void 0 : P.id) &&
-            (x.type === c.Z.AVATAR_DECORATION || x.type === c.Z.PROFILE_EFFECT),
+        M = null != N && N.id !== (null == P ? void 0 : P.id) && C.type !== c.Z.BUNDLE && x.type !== c.Z.NAMEPLATE,
         k = () => {
             null != t && null != s && s(t);
         };

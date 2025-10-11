@@ -5,4 +5,5 @@ e.exports = {
     nameplate: "nameplate__9baf3",
     giftAnimation: "giftAnimation__9baf3",
     bundlePreview: "bundlePreview__9baf3",
+    spinnerContainer: "spinnerContainer__9baf3",
 };
