@@ -1,7 +1,7 @@
 n.d(t, { Z: () => Z }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(137317),
+    a = n(599273),
     o = n(442837),
     s = n(481060),
     l = n(616780),
@@ -209,13 +209,11 @@ function Z(e) {
                                             appContext: q,
                                         }),
                                         (0, r.jsx)(N.Z, {
-                                            shouldShowTooltip: null === ea.interactionType,
                                             themeType: x.l.POPOUT,
                                             user: n,
                                         }),
                                         !el &&
-                                            (0, r.jsx)(P.Z, {
-                                                type: "banner",
+                                            (0, r.jsx)(P.Cn, {
                                                 user: n,
                                                 guildId: G,
                                                 viewProfileItem: ef(),

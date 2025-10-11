@@ -1,8 +1,7 @@
 n.d(t, {
-    ef: () => O,
+    ef: () => y,
     j8: () => E,
-    oY: () => v,
-    tG: () => y,
+    oY: () => O,
 });
 var r = n(951288),
     i = n(647438),
@@ -94,58 +93,40 @@ var E = (function (e) {
     return (e.TEXT = "text"), (e.ICON = "icon"), (e.BANNER = "banner"), (e.HOVER = "hover"), e;
 })({});
 let b = (e) => {
-    var {
-            action: t,
-            color: n = s.Button.Colors.PRIMARY,
-            themeColor: i = "primary",
-            className: a,
-            innerClassName: l,
-            onClick: d,
-            ref: _,
-        } = e,
-        m = h(e, ["action", "color", "themeColor", "className", "innerClassName", "onClick", "ref"]);
-    let { trackUserProfileAction: E } = (0, c.KZ)(),
-        b = (e) => {
-            null != t && E({ action: t }), null == d || d(e);
-        };
-    return (0, r.jsx)(
-        s.Button,
-        p(
-            f(
-                {
-                    buttonRef: _,
-                    className: o()(u.button, a),
-                    innerClassName: o()(u.buttonInner, l),
-                    color: o()(n, g[i]),
-                    look: s.Button.Looks.FILLED,
-                    size: s.Button.Sizes.SMALL,
-                    onClick: b,
-                },
-                m,
+        var {
+                action: t,
+                color: n = s.Button.Colors.PRIMARY,
+                themeColor: i = "primary",
+                className: a,
+                innerClassName: l,
+                onClick: d,
+                ref: _,
+            } = e,
+            m = h(e, ["action", "color", "themeColor", "className", "innerClassName", "onClick", "ref"]);
+        let { trackUserProfileAction: E } = (0, c.KZ)(),
+            b = (e) => {
+                null != t && E({ action: t }), null == d || d(e);
+            };
+        return (0, r.jsx)(
+            s.Button,
+            p(
+                f(
+                    {
+                        buttonRef: _,
+                        className: o()(u.button, a),
+                        innerClassName: o()(u.buttonInner, l),
+                        color: o()(n, g[i]),
+                        look: s.Button.Looks.FILLED,
+                        size: s.Button.Sizes.SMALL,
+                        onClick: b,
+                    },
+                    m,
+                ),
+                { "data-migration-pending": !0 },
             ),
-            { "data-migration-pending": !0 },
-        ),
-    );
-};
-function y(e) {
-    var { text: t, icon: n, ref: i } = e,
-        a = h(e, ["text", "icon", "ref"]);
-    return (0, r.jsxs)(
-        b,
-        p(f({ "aria-label": t }, a), {
-            ref: i,
-            children: [
-                null != n &&
-                    (0, r.jsx)(n, {
-                        size: "xs",
-                        color: "currentColor",
-                    }),
-                t,
-            ],
-        }),
-    );
-}
-let O = i.forwardRef(function (e, t) {
+        );
+    },
+    y = i.forwardRef(function (e, t) {
         var {
                 icon: n,
                 tooltipText: i,
@@ -206,11 +187,11 @@ let O = i.forwardRef(function (e, t) {
             ),
         });
     }),
-    v = i.forwardRef(function (e, t) {
+    O = i.forwardRef(function (e, t) {
         var { className: n, innerClassName: i } = e,
             a = h(e, ["className", "innerClassName"]);
         return (0, r.jsx)(
-            O,
+            y,
             f(
                 {
                     ref: t,

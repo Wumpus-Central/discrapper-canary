@@ -47,10 +47,8 @@ function f(e) {
             });
         default:
             if (n === d.l.MODAL) return null;
-            return (0, r.jsx)(l.Z7, {
-                type: "banner",
+            return (0, r.jsx)(l.lJ, {
                 userId: t.id,
-                shouldShowTooltip: f,
                 analyticsLocation: _,
             });
     }

@@ -1,18 +1,21 @@
 n.d(t, {
-    Z7: () => E,
-    g: () => v,
-    k9: () => I,
+    Z7: () => O,
+    g: () => A,
+    k9: () => C,
+    lJ: () => v,
 });
 var r = n(951288),
     i = n(647438),
     a = n(481060),
     o = n(194359),
     s = n(475413),
-    l = n(156518),
-    c = n(690501),
-    u = n(981631),
-    d = n(388032);
-function f(e, t, n) {
+    l = n(732380),
+    c = n(156518),
+    u = n(690501),
+    d = n(228168),
+    f = n(981631),
+    _ = n(388032);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +28,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,12 +39,12 @@ function _(e) {
                 }),
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function p(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,22 +56,22 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function m(e, t) {
+function E(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = g(e, t);
+        i = b(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -76,7 +79,7 @@ function m(e, t) {
     }
     return i;
 }
-function g(e, t) {
+function b(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -85,66 +88,75 @@ function g(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function E(e) {
-    var { type: t, userId: n, analyticsLocation: l, shouldShowTooltip: c } = e,
-        u = m(e, ["type", "userId", "analyticsLocation", "shouldShowTooltip"]);
-    let f = i.useCallback(() => {
+function y(e) {
+    let { userId: t, analyticsLocation: n } = e,
+        r = i.useCallback(() => {
             o.Z.addRelationship({
-                userId: n,
-                context: { location: l },
+                userId: t,
+                context: { location: n },
             });
-        }, [l, n]),
-        p = t === s.j8.TEXT ? s.tG : s.oY;
-    return (0, r.jsx)(
-        p,
-        _(
-            {
-                action: "SEND_FRIEND_REQUEST",
-                icon: a.oLu,
-                text: d.intl.string(d.t.w5uwoK),
-                tooltipText: d.intl.string(d.t.w5uwoK),
-                shouldShowTooltip: c,
-                onClick: f,
-            },
-            u,
-        ),
-    );
+        }, [n, t]);
+    return {
+        action: d.yM.SEND_FRIEND_REQUEST,
+        icon: a.oLu,
+        text: _.intl.string(_.t.w5uwoK),
+        onClick: r,
+    };
 }
-function b(e) {
+function O(e) {
+    var { userId: t, analyticsLocation: n } = e,
+        i = E(e, ["userId", "analyticsLocation"]);
+    let a = y({
+        userId: t,
+        analyticsLocation: n,
+    });
+    return (0, r.jsx)(l.O1, h({}, a, i));
+}
+function v(e) {
+    let { userId: t, analyticsLocation: n } = e,
+        i = y({
+            userId: t,
+            analyticsLocation: n,
+        }),
+        { text: a } = i,
+        o = E(i, ["text"]);
+    return (0, r.jsx)(l.f6, h({ tooltipText: a }, o));
+}
+function I(e) {
     var { type: t, user: n, analyticsLocation: a } = e,
-        o = m(e, ["type", "user", "analyticsLocation"]);
-    let c = (0, l.Y)({
+        o = E(e, ["type", "user", "analyticsLocation"]);
+    let l = (0, c.Y)({
             user: n,
             analyticsLocation: a,
         }),
         u = i.useRef(null),
         d = t === s.j8.ICON ? s.ef : s.oY;
-    return 0 === c.length
-        ? (0, r.jsx)(d, h(_({}, o), { disabled: !0 }))
-        : (0, r.jsx)(l.Z, {
+    return 0 === l.length
+        ? (0, r.jsx)(d, g(h({}, o), { disabled: !0 }))
+        : (0, r.jsx)(c.Z, {
               targetElementRef: u,
-              menuItems: c,
-              children: (e) => (0, r.jsx)("div", h(_({ ref: u }, e), { children: (0, r.jsx)(d, _({}, o)) })),
+              menuItems: l,
+              children: (e) => (0, r.jsx)("div", g(h({ ref: u }, e), { children: (0, r.jsx)(d, h({}, o)) })),
           });
 }
-let y = {
-        [u.OGo.FRIEND]: a._uN,
-        [u.OGo.PENDING_OUTGOING]: a.iHX,
-        [u.OGo.PENDING_INCOMING]: a.iHX,
+let T = {
+        [f.OGo.FRIEND]: a._uN,
+        [f.OGo.PENDING_OUTGOING]: a.iHX,
+        [f.OGo.PENDING_INCOMING]: a.iHX,
     },
-    O = {
-        [u.OGo.FRIEND]: () => d.intl.string(d.t.G7jMpa),
-        [u.OGo.PENDING_OUTGOING]: () => d.intl.string(d.t["s/+byM"]),
-        [u.OGo.PENDING_INCOMING]: () => d.intl.string(d.t["6QQCQ0"]),
+    S = {
+        [f.OGo.FRIEND]: () => _.intl.string(_.t.G7jMpa),
+        [f.OGo.PENDING_OUTGOING]: () => _.intl.string(_.t["s/+byM"]),
+        [f.OGo.PENDING_INCOMING]: () => _.intl.string(_.t["6QQCQ0"]),
     };
-function v(e) {
+function A(e) {
     var { type: t, user: n, relationshipType: i, analyticsLocation: a, shouldShowTooltip: o } = e,
-        s = m(e, ["type", "user", "relationshipType", "analyticsLocation", "shouldShowTooltip"]);
-    let l = y[i],
-        c = O[i]();
+        s = E(e, ["type", "user", "relationshipType", "analyticsLocation", "shouldShowTooltip"]);
+    let l = T[i],
+        c = S[i]();
     return (0, r.jsx)(
-        b,
-        _(
+        I,
+        h(
             {
                 type: t,
                 user: n,
@@ -157,7 +169,7 @@ function v(e) {
         ),
     );
 }
-function I(e) {
+function C(e) {
     var {
             type: t,
             user: n,
@@ -167,7 +179,7 @@ function I(e) {
             analyticsLocation: s,
             shouldShowTooltip: l,
         } = e,
-        u = m(e, [
+        c = E(e, [
             "type",
             "user",
             "gameFriends",
@@ -179,29 +191,29 @@ function I(e) {
     let {
         tooltipText: d,
         onMouseEnter: f,
-        ariaLabel: p,
-        icon: h,
-    } = (0, c.N)({
+        ariaLabel: _,
+        icon: p,
+    } = (0, u.N)({
         gameFriends: i,
         hasOutgoingPendingGameFriends: a,
         hasIncomingPendingGameFriends: o,
     });
     return (0, r.jsx)(
-        b,
-        _(
+        I,
+        h(
             {
                 type: t,
                 tooltipText: d,
                 tooltipPosition: "left",
                 tooltipAlign: "top",
-                ariaLabel: p,
+                ariaLabel: _,
                 shouldShowTooltip: l,
-                icon: h,
+                icon: p,
                 onMouseEnter: f,
                 user: n,
                 analyticsLocation: s,
             },
-            u,
+            c,
         ),
     );
 }

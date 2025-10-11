@@ -7,7 +7,7 @@ var i = t(442837),
     s = t(335131),
     a = t(592183),
     c = t(224724),
-    d = t(475413),
+    d = t(732380),
     u = t(388032);
 function m(e) {
     var { onClose: n } = e,
@@ -35,7 +35,7 @@ function m(e) {
     let { analyticsLocations: m, newestAnalyticsLocation: p } = (0, o.ZP)(),
         f = (0, i.e7)([c.Z], () => c.Z.hasSaveablePendingChanges());
     return (0, l.jsx)(
-        d.ef,
+        d.pt,
         (function (e) {
             for (var n = 1; n < arguments.length; n++) {
                 var t = null != arguments[n] ? arguments[n] : {},
@@ -65,7 +65,6 @@ function m(e) {
                 action: "VISIT_SHOP",
                 icon: r.EOn,
                 tooltipText: u.intl.string(u.t.b2d0Nz),
-                themeColor: "secondary",
                 onClick: () => {
                     if (f) return void a.Z.notifyPendingWidgets();
                     (0, s.mK)({
