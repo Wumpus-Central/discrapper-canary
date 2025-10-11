@@ -7,6 +7,7 @@ var r = (function (e) {
         (e.GUILD_FAVORITES = "favorites"),
         (e.GUILD_CHANNEL_LIST_OPT_IN_NOTICE = "guild-channel-list-opt-in-notice"),
         (e.GUILD_ROLE_SUBSCRIPTIONS = "role-subscriptions"),
+        (e.GUILD_GAME_SHOP = "game-shop"),
         (e.GUILD_SHOP = "shop"),
         (e.GUILD_HOME = "@home"),
         (e.CHANNELS_AND_ROLES = "channels-and-roles"),

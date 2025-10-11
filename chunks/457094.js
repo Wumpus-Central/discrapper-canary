@@ -20,8 +20,8 @@ var r = n(951288),
     v = n(513202),
     y = n(318891),
     I = n(687751),
-    C = n(64514),
-    S = n(912471),
+    S = n(64514),
+    C = n(912471),
     T = n(100527),
     N = n(77987),
     j = n(679891),
@@ -74,8 +74,8 @@ var r = n(951288),
     ev = n(893607),
     ey = n(703656),
     eI = n(298969),
-    eC = n(719256),
-    eS = n(6025),
+    eS = n(719256),
+    eC = n(6025),
     eT = n(897473),
     eN = n(377368),
     ej = n(262702),
@@ -165,7 +165,7 @@ n(117240),
     n(471073),
     n(606206);
 let tt = !1;
-(0, S.DL)(),
+(0, C.DL)(),
     o.ZP.initialize(),
     eI.Z.loadServer(),
     e8.isPlatformEmbedded &&
@@ -474,6 +474,16 @@ let ts = [
         render: tl,
         isSessionRequired: !0,
     },
+    {
+        path: [e5.Z5c.GAME_SHOP(ev.Hw.guildId(), ":shopPageIndex?", ":shopSkuId?", ":shopSlug?")],
+        render: function (e) {
+            let { match: t } = e,
+                { guildId: n, shopPageIndex: i, shopSkuId: l, shopSlug: o } = t.params,
+                s = parseInt(i, 10);
+            return (s = isNaN(s) ? 0 : s), (0, r.jsx)(a.l_, { to: e5.Z5c.CHANNELS_GAME_SHOP(n, s, l, o) });
+        },
+        isSessionRequired: !0,
+    },
 ];
 function tc(e) {
     for (let { path: t, isChatRoute: n } of ts) {
@@ -526,7 +536,7 @@ class td extends i.PureComponent {
             ek.Z.init(),
             G.Z.initialize(),
             O.Z.initialize(),
-            eC.Z.initialize(),
+            eS.Z.initialize(),
             eN.Z.initialize(),
             ep.Z.initialize(),
             ed.Z.initialize(),
@@ -548,7 +558,7 @@ class td extends i.PureComponent {
             k.Z.initialize(),
             x.Z.initialize(),
             A.Z.initialize(),
-            C.Z.initialize(),
+            S.Z.initialize(),
             (this.rewriterUnlisten = eE.Z.addRouteRewriter(this.ensureChannelMatchesGuild)),
             (this.historyUnlisten = eE.Z.addRouteChangeListener(this.handleHistoryChange));
     }
@@ -570,7 +580,7 @@ class td extends i.PureComponent {
             ea.Z.terminate(),
             O.Z.terminate(),
             eO.Z.terminate(),
-            eC.Z.terminate(),
+            eS.Z.terminate(),
             eN.Z.terminate(),
             ep.Z.terminate(),
             ed.Z.terminate(),
@@ -582,7 +592,7 @@ class td extends i.PureComponent {
             V.Z.terminate(),
             x.Z.terminate(),
             A.Z.terminate(),
-            C.Z.terminate(),
+            S.Z.terminate(),
             F.Z.terminate(),
             this.historyUnlisten(),
             this.rewriterUnlisten();
@@ -635,14 +645,14 @@ class td extends i.PureComponent {
                             else {
                                 let e = { type: eT.Ff.THREAD };
                                 null != o && (e.initialMessageId = o),
-                                    eS.Z.openThreadAsSidebar({
+                                    eC.Z.openThreadAsSidebar({
                                         guildId: r,
                                         baseChannelId: i,
                                         channelId: s,
                                         details: e,
                                     });
                             }
-                    } else null == i || a || eS.Z.closeChannelSidebar(i);
+                    } else null == i || a || eC.Z.closeChannelSidebar(i);
                     let c = es.Z.getIsOpen();
                     if (i === e2.oC.ROLE_SUBSCRIPTIONS) eo.Z.closeSidebar();
                     else if (g && c) {
@@ -694,7 +704,7 @@ class td extends i.PureComponent {
                     );
                 else if ((null == n ? void 0 : n.parent_id) !== i)
                     return (
-                        eS.Z.closeChannelSidebar(i),
+                        eC.Z.closeChannelSidebar(i),
                         {
                             path: e5.Z5c.CHANNEL(r, i),
                             state: e.state,

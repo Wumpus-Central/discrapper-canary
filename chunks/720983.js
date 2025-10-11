@@ -1,25 +1,26 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => u });
 var a = n(951288),
-    r = n(120356),
-    l = n.n(r),
+    l = n(120356),
+    r = n.n(l),
     i = n(481060),
-    o = n(73346),
-    d = n(411935),
-    c = n(260999);
-function s(e) {
-    let { guildId: t, storefront: n, selectedPageIndex: r } = e;
+    o = n(703656),
+    d = n(73346),
+    c = n(981631),
+    s = n(260999);
+function u(e) {
+    let { guildId: t, storefront: n, selectedPageIndex: l } = e;
     if (null == n) return null;
-    let s = null != n.logoAssetId ? (0, o._W)(n.applicationId, n.logoAssetId, 75) : null;
+    let u = null != n.logoAssetId ? (0, d._W)(n.applicationId, n.logoAssetId, 75) : null;
     return (0, a.jsxs)("div", {
-        className: c.headerContainer,
+        className: s.headerContainer,
         children: [
             (0, a.jsxs)("div", {
-                className: c.titleContainer,
+                className: s.titleContainer,
                 children: [
-                    null != s &&
+                    null != u &&
                         (0, a.jsx)("img", {
-                            className: c.logo,
-                            src: s,
+                            className: s.logo,
+                            src: u,
                             alt: n.title,
                         }),
                     (0, a.jsx)(i.Text, {
@@ -35,9 +36,9 @@ function s(e) {
                     i.P3F,
                     {
                         onClick: () => {
-                            (0, d.K)(t, n);
+                            (0, o.uL)(c.Z5c.CHANNELS_GAME_SHOP(t, n));
                         },
-                        className: l()(c.pageTitleContainer, { [c.selectedPageIndicator]: r === n }),
+                        className: r()(s.pageTitleContainer, { [s.selectedPageIndicator]: l === n }),
                         children: (0, a.jsx)(i.Heading, {
                             variant: "heading-md/semibold",
                             color: "text-default",

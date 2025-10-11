@@ -13,6 +13,7 @@ function s(e, t) {
                 case o.oC.CHANNEL_BROWSER:
                 case o.oC.GUILD_HOME:
                 case o.oC.GUILD_SHOP:
+                case o.oC.GAME_SHOP:
                 case o.oC.MEMBER_APPLICATIONS:
                 case o.oC.ROLE_SUBSCRIPTIONS:
                 case o.oC.CUSTOMIZE_COMMUNITY:

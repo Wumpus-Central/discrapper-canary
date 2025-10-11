@@ -2073,6 +2073,22 @@ let em = "@me",
         APPLICATION_DIRECTORY_SEARCH: "/application-directory/search",
         FAMILY_CENTER: "/family-center",
         SERVER_SHOP: (e) => "/channels/".concat(e, "/shop"),
+        CHANNELS_GAME_SHOP: (e, t, n, r) => {
+            let i = "/channels/".concat(e, "/game-shop");
+            return (
+                (i += "/".concat(null != t ? t : 0)),
+                null != n && ((i += "/".concat(n)), null != r && (i += "/".concat(r))),
+                i
+            );
+        },
+        GAME_SHOP: (e, t, n, r) => {
+            let i = "/game-shop/".concat(e);
+            return (
+                (i += "/".concat(null != t ? t : 0)),
+                null != n && ((i += "/".concat(n)), null != r && (i += "/".concat(r))),
+                i
+            );
+        },
         GUILD_PRODUCT: (e, t) => "/channels/".concat(e, "/shop/").concat(t),
         REPORT: "/report",
         REPORT_SECOND_LOOK: "/report-review",

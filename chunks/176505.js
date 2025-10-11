@@ -15,6 +15,7 @@ var r = (function (e) {
     return (
         (e.ROLE_SUBSCRIPTIONS = "role-subscriptions"),
         (e.SERVER_MONETIZATION_ONBOARDING = "server-monetization-onboarding"),
+        (e.GAME_SHOP = "game-shop"),
         (e.GUILD_SHOP = "shop"),
         (e.MEMBER_APPLICATIONS = "member-applications"),
         (e.GUILD_HOME = "@home"),
