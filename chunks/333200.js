@@ -103,22 +103,22 @@ function p(e) {
             "wrapTags",
             "maxOptionsVisible",
         ]);
-    let { disabled: y, required: O } = b,
+    let { disabled: y, required: O, onQueryChange: v, onKeyDown: I, onFocus: T, onBlur: S } = b,
         {
-            isOpen: v,
-            setIsOpen: I,
-            refs: T,
-            floatingStyles: S,
-            getFloatingProps: A,
-            getReferenceProps: C,
-            transitionStyles: N,
+            isOpen: A,
+            setIsOpen: C,
+            refs: N,
+            floatingStyles: R,
+            getFloatingProps: P,
+            getReferenceProps: w,
+            transitionStyles: D,
         } = (0, o.C)();
     return (0, r.jsxs)(
         i.uz,
         d(c({}, b), {
             isCollapsible: !0,
-            isOpen: v,
-            setIsOpen: I,
+            isOpen: A,
+            setIsOpen: C,
             children: [
                 (0, r.jsx)(
                     i.Ct,
@@ -135,23 +135,27 @@ function p(e) {
                             errorMessage: h,
                             successMessage: m,
                             wrapTags: g,
+                            onBlur: S,
+                            onQueryChange: v,
+                            onFocus: T,
+                            onKeyDown: I,
                             showChevronButton: !0,
-                            ref: T.setReference,
+                            ref: N.setReference,
                         },
-                        C(),
+                        w(),
                     ),
                 ),
-                v &&
+                A &&
                     (0, r.jsx)(
                         "div",
                         d(
                             c(
                                 {
-                                    ref: T.setFloating,
+                                    ref: N.setFloating,
                                     className: s.selectDropdown,
-                                    style: c({}, S, N),
+                                    style: c({}, R, D),
                                 },
-                                A(),
+                                P(),
                             ),
                             {
                                 children: (0, r.jsx)(i.px, {
