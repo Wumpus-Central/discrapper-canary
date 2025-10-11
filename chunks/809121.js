@@ -249,13 +249,15 @@ function A(e) {
                                             variant: "text-sm/medium",
                                             children: ""
                                                 .concat(
-                                                    null != t.onlineConnectionsCount
+                                                    null != t.onlineConnectionsCount && t.onlineConnectionsCount >= 0
                                                         ? t.onlineConnectionsCount
                                                         : "\u2014",
                                                     " / ",
                                                 )
                                                 .concat(
-                                                    null != t.maxConnectionsCount ? t.maxConnectionsCount : "\u2014",
+                                                    null != t.maxConnectionsCount && t.maxConnectionsCount >= 0
+                                                        ? t.maxConnectionsCount
+                                                        : "\u2014",
                                                 ),
                                         }),
                                     ],
