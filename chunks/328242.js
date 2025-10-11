@@ -9,8 +9,8 @@ var r = n(951288),
     d = n(442837),
     u = n(481060),
     f = n(579806),
-    m = n(594190),
-    h = n(320724),
+    h = n(594190),
+    m = n(320724),
     p = n(751571),
     g = n(569984),
     x = n(63063),
@@ -19,8 +19,8 @@ var r = n(951288),
     j = n(215915),
     b = n(855403),
     S = n(567126),
-    C = n(615161),
-    y = n(761274),
+    y = n(615161),
+    C = n(761274),
     O = n(637824),
     w = n(388032),
     Z = n(602804);
@@ -96,18 +96,18 @@ function N(e) {
                 discordSourceId: I,
                 hasPermission: N,
             },
-        ] = (0, C.E_)(),
+        ] = (0, y.E_)(),
         { smarterSourceOrdering: E } = (0, j.E)({ location: "GoLiveSourceGrid" }),
-        R = (0, d.e7)([m.ZP], () => m.ZP.getRunningGames()),
-        A = (0, d.cj)([m.ZP], () => {
-            let e = m.ZP.getCandidateGames(),
+        R = (0, d.e7)([h.ZP], () => h.ZP.getRunningGames()),
+        A = (0, d.cj)([h.ZP], () => {
+            let e = h.ZP.getCandidateGames(),
                 t = {};
             for (let n of e) null != n.windowHandle && (t[n.windowHandle] = n.exeName);
             return t;
         }),
         k = (0, d.e7)([g.Z], () => g.Z.quests),
         M = (0, S.jx)(k, R, n);
-    i.useEffect(() => ((0, h.Ky)(), h.P7), []);
+    i.useEffect(() => ((0, m.Ky)(), m.P7), []);
     let D = i.useMemo(
         () =>
             E
@@ -120,7 +120,7 @@ function N(e) {
         [M, E, n, I, A],
     );
     if (x) {
-        if (!N) {
+        if (!1 === N) {
             let e = !1;
             if ((0, _.isMac)()) {
                 var L, B;
@@ -143,7 +143,7 @@ function N(e) {
                         (0, r.jsx)(u.zxk, {
                             text: w.intl.string(w.t["XgZk+v"]),
                             onClick: () => {
-                                p.Z.openSettings(y.Eu.SCREEN_RECORDING);
+                                p.Z.openSettings(C.Eu.SCREEN_RECORDING);
                             },
                         }),
                 ],
@@ -154,12 +154,12 @@ function N(e) {
             children: (0, r.jsx)(u.$jN, {}),
         });
     }
-    let G = [];
-    return ((G = o === c.vA.WINDOW ? D : o === c.vA.SCREEN ? s : l), o === c.vA.CAMERA && 0 === G.length)
+    let U = [];
+    return ((U = o === c.vA.WINDOW ? D : o === c.vA.SCREEN ? s : l), o === c.vA.CAMERA && 0 === U.length)
         ? (0, r.jsx)(T, {})
         : (0, r.jsx)("div", {
               className: Z.root,
-              children: G.map((e) =>
+              children: U.map((e) =>
                   (0, r.jsx)(
                       P,
                       {

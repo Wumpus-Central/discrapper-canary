@@ -1,6 +1,6 @@
 n.d(t, {
-    E_: () => y,
-    Ti: () => C,
+    E_: () => C,
+    Ti: () => y,
     Yw: () => S,
 }),
     n(415506),
@@ -15,8 +15,8 @@ var r = n(951288),
     d = n(361291),
     u = n(131951),
     f = n(580991),
-    m = n(451467),
-    h = n(37113),
+    h = n(451467),
+    m = n(37113),
     p = n(761274);
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -65,13 +65,13 @@ let _ = {
         screenSources: [],
         windowSources: [],
         deviceSources: [],
-        hasPermission: !1,
+        hasPermission: void 0,
         muteStreamAudio: !1,
         notifyFriends: !1,
         hidePreview: !1,
-        preset: h.tI.PRESET_CUSTOM,
-        resolution: h.LY.RESOLUTION_720,
-        fps: h.ws.FPS_30,
+        preset: m.tI.PRESET_CUSTOM,
+        resolution: m.LY.RESOLUTION_720,
+        fps: m.ws.FPS_30,
         sourceType: l.vA.WINDOW,
         fetchingSources: !0,
         selectedSource: void 0,
@@ -111,9 +111,9 @@ function b(e, t) {
             };
             return (
                 t.sourceType === l.vA.CAMERA &&
-                    ((e.preset === h.tI.PRESET_DOCUMENTS || e.preset === h.tI.PRESET_AUTO) &&
-                        (n.preset = h.tI.PRESET_VIDEO),
-                    e.resolution === h.LY.RESOLUTION_SOURCE && (n.resolution = h.LY.RESOLUTION_720)),
+                    ((e.preset === m.tI.PRESET_DOCUMENTS || e.preset === m.tI.PRESET_AUTO) &&
+                        (n.preset = m.tI.PRESET_VIDEO),
+                    e.resolution === m.LY.RESOLUTION_SOURCE && (n.resolution = m.LY.RESOLUTION_720)),
                 g({}, e, n)
             );
         case "set_native_source_type":
@@ -147,23 +147,23 @@ function S(e) {
         }),
     });
 }
-function C(e, t, n) {
+function y(e, t, n) {
     var r, l;
     let v = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "source_select",
         { defaultAutoQuality: j, allowAutoQuality: S } = (0, f._)({ location: "useCreateGoLiveModalState" }),
-        { preset: C, resolution: y, fps: O, soundshareEnabled: w } = (0, s.cj)([d.Z], () => d.Z.getState());
-    j && (C = h.tI.PRESET_AUTO);
+        { preset: y, resolution: C, fps: O, soundshareEnabled: w } = (0, s.cj)([d.Z], () => d.Z.getState());
+    j && (y = m.tI.PRESET_AUTO);
     let Z = (0, s.e7)([u.Z], () => u.Z.getInputDeviceId()),
         I = null != (r = c.I0.useSetting()) && r,
         P = null != (l = c.eo.useSetting()) && l;
-    (C in h.tI && (C !== h.tI.PRESET_AUTO || S)) || (C = h.tI.PRESET_VIDEO),
-        (0, m.Z)(h.tI.PRESET_CUSTOM, y, O, t, n) || ((y = h.LY.RESOLUTION_720), (O = h.ws.FPS_30));
+    (y in m.tI && (y !== m.tI.PRESET_AUTO || S)) || (y = m.tI.PRESET_VIDEO),
+        (0, h.Z)(m.tI.PRESET_CUSTOM, C, O, t, n) || ((C = m.LY.RESOLUTION_720), (O = m.ws.FPS_30));
     let [N, T] = i.useReducer(
         b,
         x(g({}, _), {
             muteStreamAudio: !w,
-            preset: C,
-            resolution: y,
+            preset: y,
+            resolution: C,
             fps: O,
             hidePreview: I,
             notifyFriends: P,
@@ -195,6 +195,6 @@ function C(e, t, n) {
         }
     );
 }
-function y() {
+function C() {
     return [i.useContext(v), i.useContext(j)];
 }
