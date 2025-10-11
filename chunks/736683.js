@@ -1,7 +1,9 @@
 n.d(t, {
     Z: () => u,
     j: () => d,
-});
+}),
+    n(388685),
+    n(642613);
 var r = n(951288);
 n(647438);
 var i = n(481060),
@@ -19,7 +21,14 @@ function u(e) {
           ? (0, r.jsx)(o.Z, { onClick: () => t(l.e5.ALL) })
           : (0, r.jsx)("div", {
                 className: c.gridContainer,
-                children: n.map((e) => (0, r.jsx)(a.Z, { quest: e }, e.id)),
+                children: [...n]
+                    .sort((e, t) => {
+                        var n, r, i, l;
+                        return (null != (i = null == (n = t.userStatus) ? void 0 : n.claimedAt) ? i : "").localeCompare(
+                            null != (l = null == (r = e.userStatus) ? void 0 : r.claimedAt) ? l : "",
+                        );
+                    })
+                    .map((e) => (0, r.jsx)(a.Z, { quest: e }, e.id)),
             });
 }
 function d(e) {
