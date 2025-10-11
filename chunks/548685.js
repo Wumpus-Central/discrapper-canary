@@ -17,14 +17,14 @@ var r = n(951288),
     m = n(128922),
     b = n(38900),
     E = n(709999),
-    S = n(653126),
-    v = n(401975),
+    v = n(653126),
+    S = n(401975),
     x = n(328626),
     O = n(849275),
     y = n(619899),
-    T = n(642909),
-    j = n(981631),
-    k = n(388032),
+    j = n(642909),
+    k = n(981631),
+    T = n(388032),
     L = n(345213),
     I = n(310582);
 let P = (e) => {
@@ -41,7 +41,7 @@ let P = (e) => {
         } = e,
         w = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
         F = C.ZP.canUseCollectibles(w),
-        H = (0, T.G)("FeedBlock"),
+        H = (0, j.G)("FeedBlock"),
         {
             sortType: D,
             setSortType: M,
@@ -49,12 +49,7 @@ let P = (e) => {
             sortOptions: U,
             shuffleProducts: V,
             showRecommendationOption: z,
-        } = (0, O.Z)({
-            sortedSkuIds: P,
-            isPremiumUser: F,
-            prioritizeUserDiscounts: A,
-            tab: R,
-        }),
+        } = (0, O.Z)(P, F, A),
         G = (0, y.St)(W),
         K = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
         q = (0, a.e7)([g.Z], () => g.Z.isFocused()),
@@ -69,7 +64,7 @@ let P = (e) => {
                     isShuffling: !1,
                     onOutroComplete: () => M(e),
                 }),
-                    f.default.track(j.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
+                    f.default.track(k.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
                         page_session_id: $,
                         sort_type: e,
                     });
@@ -95,9 +90,9 @@ let P = (e) => {
                                   z &&
                                       (0, r.jsx)(o.ua7, {
                                           "data-migration-pending": !0,
-                                          text: k.intl.string(k.t["3taPdn"]),
+                                          text: T.intl.string(T.t["3taPdn"]),
                                           position: "top",
-                                          "aria-label": k.intl.string(k.t["3taPdn"]),
+                                          "aria-label": T.intl.string(T.t["3taPdn"]),
                                           children: (e) => {
                                               var t, n;
                                               return (0, r.jsx)(
@@ -132,7 +127,7 @@ let P = (e) => {
                                                       {
                                                           onClick: () =>
                                                               (0, c.Z)(
-                                                                  p.Z.getArticleURL(j.BhN.DATA_USED_FOR_RECOMMENDED),
+                                                                  p.Z.getArticleURL(k.BhN.DATA_USED_FOR_RECOMMENDED),
                                                               ),
                                                           className: I.informationIcon,
                                                           children: (0, r.jsx)(o.d3s, { size: "sm" }),
@@ -165,7 +160,7 @@ let P = (e) => {
                                     children: [
                                         (0, r.jsx)(o.Text, {
                                             variant: "text-md/medium",
-                                            children: k.intl.string(k.t.uaX709),
+                                            children: T.intl.string(T.t.uaX709),
                                         }),
                                         (0, r.jsx)("div", {
                                             className: Z,
@@ -182,7 +177,7 @@ let P = (e) => {
                                             className: Z,
                                             children: (0, r.jsx)(o.zxk, {
                                                 variant: "secondary",
-                                                text: k.intl.string(k.t.X3tnc3),
+                                                text: T.intl.string(T.t.X3tnc3),
                                                 buttonRef: ee,
                                                 onClick: () => {
                                                     X({
@@ -190,7 +185,7 @@ let P = (e) => {
                                                         onOutroComplete: V,
                                                         returnRef: ee,
                                                     }),
-                                                        f.default.track(j.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
+                                                        f.default.track(k.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
                                                             page_session_id: $,
                                                         });
                                                 },
@@ -207,7 +202,7 @@ let P = (e) => {
                       children: n
                           ? (0, r.jsx)(r.Fragment, {
                                 children: [...Array(12)].map((e, t) =>
-                                    en ? (0, r.jsx)(v.Z, {}, t + 1) : (0, r.jsx)(b.K, {}, t + 1),
+                                    en ? (0, r.jsx)(S.Z, {}, t + 1) : (0, r.jsx)(b.K, {}, t + 1),
                                 ),
                             })
                           : G.slice(0, N).map((e, t) => {
@@ -221,7 +216,7 @@ let P = (e) => {
                                                   "div",
                                                   {
                                                       className: I.shuffleOutro,
-                                                      children: (0, r.jsx)(v.Z, { skipPulseAnimation: !0 }),
+                                                      children: (0, r.jsx)(S.Z, { skipPulseAnimation: !0 }),
                                                   },
                                                   "".concat(e.skuId, "-").concat(t),
                                               )
@@ -251,7 +246,7 @@ let P = (e) => {
                                             en && (null == e ? void 0 : e.skuId) != null
                                                 ? (0, r.jsx)("div", {
                                                       className: n,
-                                                      children: (0, r.jsx)(S.Z, {
+                                                      children: (0, r.jsx)(v.Z, {
                                                           skuId: null == e ? void 0 : e.skuId,
                                                       }),
                                                   })

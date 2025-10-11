@@ -17,20 +17,20 @@ var r = n(951288),
     m = n(302933),
     b = n(953655),
     E = n(548685),
-    S = n(580914),
-    v = n(92589),
+    v = n(580914),
+    S = n(92589),
     x = n(963278),
     O = n(531864),
     y = n(384067),
-    T = n(215023),
-    j = n(981631),
-    k = n(388032),
+    j = n(215023),
+    k = n(981631),
+    T = n(388032),
     L = n(310582);
 let I = (e) => {
         var t;
         let { handleTransition: n, numVisibleItems: s, isFetchingCategories: o, tab: c, isFullScreen: u } = e,
             { noCache: h, includeUnpublished: O } = (0, _.Z)(),
-            [j, I] = l.useState(!1),
+            [k, I] = l.useState(!1),
             P = (0, d.sp)(),
             N = null != (t = null == P ? void 0 : P.sessionId) ? t : "";
         l.useEffect(() => {
@@ -88,7 +88,7 @@ let I = (e) => {
               ? (0, r.jsxs)("div", {
                     className: i()(L.loadingContainer, L.feedContent),
                     children: [
-                        (0, r.jsx)(S.Z, {
+                        (0, r.jsx)(v.Z, {
                             isLoading: B,
                             handleTransition: n,
                             tab: c,
@@ -100,9 +100,9 @@ let I = (e) => {
                         }),
                         (0, r.jsx)(E.Z, {
                             isLoading: B,
-                            title: c === T.AW.ORBS ? k.intl.string(k.t.dFgeub) : k.intl.string(k.t.NSv5KS),
+                            title: c === j.AW.ORBS ? T.intl.string(T.t.dFgeub) : T.intl.string(T.t.NSv5KS),
                             numVisibleItems: s,
-                            hasSorting: c === T.AW.HOME,
+                            hasSorting: c === j.AW.HOME,
                             tab: c,
                         }),
                     ],
@@ -116,7 +116,7 @@ let I = (e) => {
                             switch (e.type) {
                                 case a.z.HERO:
                                     d = (0, r.jsx)(
-                                        S.Z,
+                                        v.Z,
                                         {
                                             isLoading: B,
                                             handleTransition: n,
@@ -143,7 +143,7 @@ let I = (e) => {
                                         E.Z,
                                         {
                                             title:
-                                                c === T.AW.ORBS ? k.intl.string(k.t.dFgeub) : k.intl.string(k.t.NSv5KS),
+                                                c === j.AW.ORBS ? T.intl.string(T.t.dFgeub) : T.intl.string(T.t.NSv5KS),
                                             isLoading: B || o,
                                             numVisibleItems: s,
                                             sortedSkuIds: p,
@@ -151,8 +151,8 @@ let I = (e) => {
                                                 (null == t ? void 0 : t.type) === a.z.IMMERSIVE_BANNER
                                                     ? L.feedblockInteractiveBackground
                                                     : void 0,
-                                            hasSorting: c === T.AW.HOME || c === T.AW.ORBS,
-                                            prioritizeUserDiscounts: c === T.AW.HOME,
+                                            hasSorting: c === j.AW.HOME,
+                                            prioritizeUserDiscounts: c === j.AW.HOME,
                                             tab: c,
                                         },
                                         l,
@@ -185,7 +185,7 @@ let I = (e) => {
                                         m.J,
                                         {
                                             countdownTimerBlock: e,
-                                            isVisible: j,
+                                            isVisible: k,
                                             isFullScreen: u,
                                         },
                                         l,
@@ -194,7 +194,7 @@ let I = (e) => {
                                     break;
                                 case a.z.IMMERSIVE_BANNER:
                                     d = (0, r.jsx)(
-                                        v.Z,
+                                        S.Z,
                                         {
                                             immersiveBannerBlock: e,
                                             onVisibilityChange: (e) => I(!e),
@@ -228,7 +228,7 @@ let I = (e) => {
             { handleScroll: g } = (0, c.z)(a, s),
             f = (0, h.R)(),
             p = (0, d.sp)(),
-            [C, _] = l.useState(T.IV),
+            [C, _] = l.useState(j.IV),
             [m, b] = l.useState(!1);
         return (
             l.useEffect(() => {
@@ -236,7 +236,7 @@ let I = (e) => {
                     let e = () => {
                             if (null == a.current) return;
                             let e = a.current.getDistanceFromBottom();
-                            C >= 36 ? b(e < 20) : e <= 200 && _((e) => e + T.IV);
+                            C >= 36 ? b(e < 20) : e <= 200 && _((e) => e + j.IV);
                         },
                         t = a.current.getScrollerNode();
                     return (
@@ -264,26 +264,26 @@ let I = (e) => {
                                     tab: s,
                                     isFullScreen: t,
                                 }),
-                                s !== T.AW.CATALOG &&
+                                s !== j.AW.CATALOG &&
                                     C >= 36 &&
                                     (0, r.jsxs)("div", {
                                         className: L.endOfFeed,
                                         children: [
                                             (0, r.jsx)(o.X6q, {
                                                 variant: "heading-md/semibold",
-                                                children: k.intl.string(k.t.Yr70c3),
+                                                children: T.intl.string(T.t.Yr70c3),
                                             }),
                                             (0, r.jsx)(o.zxk, {
                                                 variant: "primary",
-                                                text: k.intl.string(k.t.AfrvRE),
+                                                text: T.intl.string(T.t.AfrvRE),
                                                 onClick: () => {
                                                     n("shop all button", void 0, !0),
-                                                        u.default.track(j.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                                        u.default.track(k.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                             collectibles_shop_session_id:
                                                                 null == p ? void 0 : p.sessionId,
                                                             page_type: s,
                                                             page_category:
-                                                                s === T.AW.HOME || null == p ? void 0 : p.pageCategory,
+                                                                s === j.AW.HOME || null == p ? void 0 : p.pageCategory,
                                                             cta_name: "browse the shop button",
                                                         });
                                                 },
@@ -298,12 +298,12 @@ let I = (e) => {
                                 children: [
                                     (0, r.jsx)(O.Z, {
                                         peaking: m,
-                                        transitioning: i === T.f7.OUT,
+                                        transitioning: i === j.f7.OUT,
                                     }),
                                     (0, r.jsx)(O.Z, {
                                         style: { left: 1850 },
                                         peaking: m,
-                                        transitioning: i === T.f7.OUT,
+                                        transitioning: i === j.f7.OUT,
                                     }),
                                 ],
                             }),
