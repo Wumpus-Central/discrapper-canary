@@ -83,7 +83,8 @@ let j = (e) => {
             v = x && !i && g,
             h = (0, l.mR)(f),
             _ = (0, l.Hy)(f, { isCurrentUser: x }),
-            w = (0, l.kQ)(f);
+            w = (0, l.kQ)(f),
+            P = 1 === (0, l.Gv)(f.type);
         return (0, r.jsx)(
             j,
             O(
@@ -93,19 +94,20 @@ let j = (e) => {
                     disableInteraction: i,
                     headerTitle: h,
                     headerSubtitle: _,
-                    headerActionButtons: x
-                        ? [
-                              (0, r.jsx)(
-                                  u.Z,
-                                  {
-                                      disabled: w,
-                                      widgetType: f.type,
-                                      widget: f,
-                                  },
-                                  "".concat(f.type, "-browse-games-popout"),
-                              ),
-                          ]
-                        : void 0,
+                    headerActionButtons:
+                        x && !P
+                            ? [
+                                  (0, r.jsx)(
+                                      u.yX,
+                                      {
+                                          disabled: w,
+                                          widgetType: f.type,
+                                          widget: f,
+                                      },
+                                      "".concat(f.type, "-browse-games-popout"),
+                                  ),
+                              ]
+                            : void 0,
                     trailingContent:
                         v &&
                         (0, r.jsx)(b.Z, {

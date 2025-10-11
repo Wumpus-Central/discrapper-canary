@@ -1,8 +1,8 @@
 n.d(t, { Z: () => c });
 var r = n(951288);
 n(647438);
-var i = n(750312),
-    a = n(189988),
+var i = n(436846),
+    a = n(750312),
     o = n(623132);
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -56,7 +56,7 @@ function c(e) {
         })(e, ["user", "widget", "containerClassName"]);
     let f = s.games[0];
     return (0, r.jsx)(
-        i.Z,
+        a.Z,
         ((t = l(
             {
                 userId: c.id,
@@ -81,7 +81,7 @@ function c(e) {
                                   d,
                               ),
                           )
-                        : (0, r.jsx)(a.Z, { widgetType: s.type }),
+                        : (0, r.jsx)(i.Z, { widget: s }),
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
