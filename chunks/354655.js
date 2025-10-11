@@ -21,7 +21,7 @@ function s(e) {
                 if (c) continue;
                 c = !0;
             }
-            if (s.isFortniteActivity(e.extra.application_id)) {
+            if (s.isFortniteTrial(e.extra.application_id)) {
                 if (d) continue;
                 d = !0;
             }

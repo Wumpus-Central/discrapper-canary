@@ -13,6 +13,9 @@ function r(e, t, n) {
 }
 n.d(t, { Z: () => i });
 class i {
+    isFortniteTrial(e) {
+        return e === this.prodActivityId;
+    }
     isFortniteActivity(e) {
         return e === this.prodActivityId || e === this.stagingActivityId || e === this.devActivityId;
     }
