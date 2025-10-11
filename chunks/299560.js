@@ -43,7 +43,7 @@ let y = {
     [o.l.WANT_TO_PLAY_GAMES]: {
         placeholder: () => ({
             variant: "grid",
-            applicationIds: [d.L.MARVEL_RIVALS, d.L.WORLD_OF_WARCRAFT, d.L.RUST, d.L.DELTA_FORCE],
+            applicationIds: [d.L.MARVEL_RIVALS, d.L.WORLD_OF_WARCRAFT, d.L.BATTLEFIELD_6, d.L.RUST],
         }),
         getAriaLabel: () => E.intl.string(E.t.NtoBi4),
     },
