@@ -70,8 +70,11 @@ function N() {
 function R() {
     var e;
     let t = (e) => {
-        let t = Date.now() - e;
-        (null == r || t > r) && ((b = Math.max(t, b)), (r = null)), N(), setTimeout(R, 10 * _.Z.Millis.SECOND);
+        if (d.Z.getConfig({ location: "checkNativeIdle" }).system_wide_input) {
+            let t = Date.now() - e;
+            (null == r || t > r) && ((b = Math.max(t, b)), (r = null));
+        }
+        N(), setTimeout(R, 10 * _.Z.Millis.SECOND);
     };
     if (
         (null === u.Z || void 0 === u.Z || null == (e = u.Z.remotePowerMonitor) ? void 0 : e.getSystemIdleTimeMs) !=
