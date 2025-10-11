@@ -122,7 +122,7 @@ let C = function (e) {
                                       size: "sm",
                                       text: j.intl.string(v.default.hDvmYG),
                                       onClick: () => {
-                                          (0, f.J)();
+                                          (0, f.Jh)();
                                       },
                                   }),
                               ],

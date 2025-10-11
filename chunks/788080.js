@@ -9,6 +9,7 @@ n.d(t, {
     eS: () => p,
     fr: () => h,
     ox: () => g,
+    yF: () => I,
 }),
     n(35282);
 var r = n(913527),
@@ -77,3 +78,6 @@ function O(e) {
     }
 }
 let v = () => null != (0, a.e7)([s.default], () => s.default.getSuspendedUserToken());
+function I() {
+    return null != s.default.getSuspendedUserToken();
+}

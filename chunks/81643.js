@@ -117,7 +117,7 @@ function w(e) {
                 d(!0);
                 try {
                     a.Z.dispatch({ type: "INITIATE_AGE_VERIFICATION" });
-                    let r = await (0, p.K)(n);
+                    let r = await (0, p.K9)(n);
                     _.Z.showAgeVerification({
                         webviewUrl: r.verification_webview_url,
                         onComplete: t,

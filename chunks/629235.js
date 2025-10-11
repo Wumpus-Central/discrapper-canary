@@ -18,7 +18,7 @@ let u = function (e, t) {
         });
     return (
         a.useEffect(() => {
-            null == n && (0, s.J)();
+            null == n && (0, s.Jh)();
         }, [n]),
         {
             ageVerificationMethods:
