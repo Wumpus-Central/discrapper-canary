@@ -21,13 +21,13 @@ function c(e, t, n) {
 let u = !1;
 class d extends r.Z {
     handlePossibleCredentialFetch() {
-        if (u || __OVERLAY__ || i.default.getLoginStatus() !== l.u34.NONE) return;
-        if (s.Z.hasFetchedCredentials()) {
-            u = !0;
-            return;
+        if (!(u || __OVERLAY__) && i.default.getLoginStatus() === l.u34.NONE) {
+            if (s.Z.hasFetchedCredentials()) {
+                u = !0;
+                return;
+            }
+            void 0 !== a.default.getCurrentUser() && ((u = !0), (0, o.hL)());
         }
-        let e = a.default.getCurrentUser();
-        void 0 !== e && e.verified && ((u = !0), (0, o.hL)());
     }
     handleLogout() {
         u = !1;
