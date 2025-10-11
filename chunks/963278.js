@@ -1,48 +1,50 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(951288);
 n(647438);
 var l = n(120356),
     i = n.n(l),
-    s = n(442837),
-    o = n(481060),
+    o = n(442837),
+    s = n(481060),
     a = n(594174),
     c = n(381585),
     u = n(597688),
     d = n(128922),
     g = n(709999),
     f = n(653126),
-    p = n(388032),
-    C = n(310582);
-let h = (e) => {
+    p = n(786040),
+    C = n(215023),
+    h = n(388032),
+    _ = n(310582);
+let m = (e) => {
     let { shelf: t, handleTransition: n, tab: l } = e,
-        h = (0, s.e7)([a.default], () => a.default.getCurrentUser()),
-        _ = d.Z.useConfig({ location: "ShelfBlock" }).showCardsV2;
-    return null == h
+        m = (0, o.e7)([a.default], () => a.default.getCurrentUser()),
+        b = d.Z.useConfig({ location: "ShelfBlock" }).showCardsV2;
+    return null == m
         ? null
         : (0, r.jsxs)("div", {
-              className: i()(C.shelfBlockContainer, C.centeredSection),
+              className: i()(_.shelfBlockContainer, _.centeredSection),
               children: [
                   (0, r.jsxs)("div", {
-                      className: C.blockHeader,
+                      className: _.blockHeader,
                       children: [
-                          (0, r.jsx)(o.Heading, {
+                          (0, r.jsx)(s.Heading, {
                               variant: "heading-lg/semibold",
                               children: t.name,
                           }),
-                          (0, r.jsx)(o.Button, {
+                          (0, r.jsx)(s.Button, {
                               variant: "secondary",
-                              text: p.intl.formatToPlainString(p.t.bc9RBA, { category_name: t.name }),
+                              text: h.intl.formatToPlainString(h.t.bc9RBA, { category_name: t.name }),
                               onClick: () => n("shelf block see all", t.categorySkuId),
                           }),
                       ],
                   }),
                   (0, r.jsx)("div", {
-                      className: C.feed,
+                      className: _.feed,
                       children: (0, r.jsx)(r.Fragment, {
                           children: t.rankedSkuIds.map((e, n) => {
                               let i = u.Z.getCategoryForProduct(e),
-                                  s = u.Z.getProduct(e);
-                              return null == i || null == s
+                                  o = u.Z.getProduct(e);
+                              return null == i || null == o
                                   ? null
                                   : (0, r.jsx)(
                                         c.k0,
@@ -52,14 +54,21 @@ let h = (e) => {
                                                 pageSection: t.name,
                                                 categoryPosition: 2,
                                             },
-                                            children: _
-                                                ? (0, r.jsx)(f.Z, { skuId: e }, e)
+                                            children: b
+                                                ? (0, r.jsx)(
+                                                      f.Z,
+                                                      {
+                                                          skuId: e,
+                                                          prioritizedCurrency: l === C.AW.ORBS ? p.tA.ORBS : void 0,
+                                                      },
+                                                      e,
+                                                  )
                                                 : (0, r.jsx)(
                                                       g.Z,
                                                       {
-                                                          product: s,
+                                                          product: o,
                                                           category: i,
-                                                          user: h,
+                                                          user: m,
                                                           tab: l,
                                                       },
                                                       e,

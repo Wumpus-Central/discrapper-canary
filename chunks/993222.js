@@ -1,68 +1,66 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => E });
 var r = n(951288);
 n(647438);
 var l = n(120356),
     i = n.n(l),
-    s = n(399606),
-    o = n(481060),
+    o = n(399606),
+    s = n(481060),
     a = n(594174),
     c = n(74538),
     u = n(597688),
-    d = n(994587),
-    g = n(884697),
-    f = n(724994),
-    p = n(786040),
-    C = n(445794),
-    h = n(956472),
-    _ = n(215023),
-    m = n(388032),
-    b = n(944525);
-let E = (e) => {
-        let { product: t, badgeOverride: n, className: l } = e,
-            E = (0, d.Nd)(),
-            v = null == E ? void 0 : E.tab,
-            { isPurchased: S, isPartiallyOwnedBundle: O } = (0, f.L)(t),
-            x = (0, s.e7)([u.Z], () => u.Z.getCategoryForProduct(t.skuId)),
-            y = (0, s.e7)([a.default], () => a.default.getCurrentUser()),
-            T = c.ZP.canUseCollectibles(y),
-            j = (0, C.Iw)(t),
-            { isOrbExclusive: L } = (0, h.Ip)({
+    d = n(884697),
+    g = n(724994),
+    f = n(786040),
+    p = n(445794),
+    C = n(956472),
+    h = n(215023),
+    _ = n(388032),
+    m = n(944525);
+let b = (e) => {
+        let { product: t, badgeOverride: n, className: l, prioritizedCurrency: b } = e,
+            { isPurchased: E, isPartiallyOwnedBundle: S } = (0, g.L)(t),
+            v = (0, o.e7)([u.Z], () => u.Z.getCategoryForProduct(t.skuId)),
+            O = (0, o.e7)([a.default], () => a.default.getCurrentUser()),
+            x = c.ZP.canUseCollectibles(O),
+            y = (0, p.Iw)(t),
+            { isOrbExclusive: T } = (0, C.Ip)({
                 product: t,
-                isPremiumUser: T,
-                tab: v,
-                hasDiscountOffer: null != j,
+                isPremiumUser: x,
+                prioritizedCurrency: b,
+                hasDiscountOffer: null != y,
             }),
-            k = (0, g.Yq)(t.skuId),
-            I = (null == x ? void 0 : x.skuId) === _.bu && (0, g.WW)(t.skuId);
-        if (n === p.Zh.NONE) return null;
-        let B = null;
-        return (n === p.Zh.NEW
-            ? (B = m.intl.string(m.t.y2b7CA))
-            : n === p.Zh.ORBS_EXCLUSIVE
-              ? (B = m.intl.string(m.t["0TmQRE"]))
-              : n === p.Zh.NEW_COLOR_VARIANT && (B = m.intl.string(m.t.S6kE9v)),
-        null == B &&
-            (O || S || !k
-                ? L
-                    ? (B = m.intl.string(m.t["0TmQRE"]))
-                    : I && (B = m.intl.string(m.t.S6kE9v))
-                : (B = m.intl.string(m.t.y2b7CA))),
-        null == B)
+            j = (0, d.Yq)(t.skuId),
+            L = (null == v ? void 0 : v.skuId) === h.bu && (0, d.WW)(t.skuId);
+        if (n === f.Zh.NONE) return null;
+        let k = null;
+        return (n === f.Zh.NEW
+            ? (k = _.intl.string(_.t.y2b7CA))
+            : n === f.Zh.ORBS_EXCLUSIVE
+              ? (k = _.intl.string(_.t["0TmQRE"]))
+              : n === f.Zh.NEW_COLOR_VARIANT && (k = _.intl.string(_.t.S6kE9v)),
+        null == k &&
+            (S || E || !j
+                ? T
+                    ? (k = _.intl.string(_.t["0TmQRE"]))
+                    : L && (k = _.intl.string(_.t.S6kE9v))
+                : (k = _.intl.string(_.t.y2b7CA))),
+        null == k)
             ? null
-            : (0, r.jsx)(o.IGR, {
-                  text: B,
+            : (0, r.jsx)(s.IGR, {
+                  text: k,
                   disableColor: !0,
-                  className: i()(l, b.productCardBadge),
+                  className: i()(l, m.productCardBadge),
               });
     },
-    v = (e) => {
-        let { skuId: t, badgeOverride: n, className: l } = e,
-            i = (0, p.LJ)(t);
-        return null == i
+    E = (e) => {
+        let { skuId: t, badgeOverride: n, className: l, prioritizedCurrency: i } = e,
+            o = (0, f.LJ)(t);
+        return null == o
             ? null
-            : (0, r.jsx)(E, {
-                  product: i,
+            : (0, r.jsx)(b, {
+                  product: o,
                   badgeOverride: n,
                   className: l,
+                  prioritizedCurrency: i,
               });
     };
