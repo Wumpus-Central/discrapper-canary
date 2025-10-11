@@ -35,3 +35,9 @@ let i = (0, r.le)({
             2: { enabled: !0 },
         },
     });
+(0, r.le)({
+    name: "2025-10-mobile-quest-home-v2-entrypoint-relocation",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
+});

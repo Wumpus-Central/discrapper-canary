@@ -77,6 +77,7 @@ var r = n(392711),
             (e.IN_APP_NAVIGATION = "in_app_navigation"),
             (e.NAVIGATE_TO_QUEST_HOME_UTIL = "navigate_to_quest_home_util"),
             (e.QUEST_DEEP_LINK_UTIL = "quest_deep_link_util"),
+            (e.YOU_TAB_PROFILE_HEADER = "you_tab_profile_header"),
             e
         );
     })({});
