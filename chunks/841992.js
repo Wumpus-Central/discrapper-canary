@@ -56,10 +56,10 @@ var r = Object.create,
 function g(e, t) {
     return null != t && "undefined" != typeof Symbol && t[Symbol.hasInstance] ? !!t[Symbol.hasInstance](e) : g(e, t);
 }
-var m = h(function () {
-    m();
+var p = h(function () {
+    p();
 });
-function p(e) {
+function v(e) {
     return e && "undefined" != typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e;
 }
 var y = h(function () {}),
@@ -79,7 +79,7 @@ var y = h(function () {}),
             if (!g(this, i)) return new i(e, t);
             (this.data = e), (this.nodeValue = e), (this.length = e.length), (this.ownerDocument = t || null);
         }
-        m(),
+        p(),
             (t.exports = i),
             (i.prototype.nodeType = 8),
             (i.prototype.nodeName = "#comment"),
@@ -92,7 +92,7 @@ var y = h(function () {}),
             if (!g(this, i)) return new i(e);
             (this.data = e || ""), (this.length = this.data.length), (this.ownerDocument = t || null);
         }
-        m(),
+        p(),
             (t.exports = i),
             (i.prototype.type = "DOMTextNode"),
             (i.prototype.nodeType = 3),
@@ -157,7 +157,7 @@ var y = h(function () {}),
                                         var t = [];
                                         for (var i in e)
                                             (function (e, t) {
-                                                var i = p(e[t]);
+                                                var i = v(e[t]);
                                                 return (
                                                     ("style" === t && Object.keys(e.style).length > 0) ||
                                                     (e.hasOwnProperty(t) &&
@@ -270,7 +270,7 @@ var y = h(function () {}),
         }
     }),
     R = d(function (e, t) {
-        m();
+        p();
         var i = E(),
             r = S(),
             s = b(),
@@ -389,7 +389,7 @@ var y = h(function () {}),
             });
     }),
     k = d(function (e, t) {
-        m();
+        p();
         var i = R();
         function r(e) {
             if (!g(this, r)) return new r();
@@ -419,7 +419,7 @@ var y = h(function () {}),
             (i.prototype.preventDefault = function () {});
     }),
     D = d(function (e, t) {
-        m();
+        p();
         var i = E(),
             r = T(),
             s = _(),
@@ -637,8 +637,8 @@ var q = (function (e) {
             get level() {
                 return f;
             },
-            set level(v) {
-                v !== this.level && (f = null != v ? v : n);
+            set level(m) {
+                m !== this.level && (f = null != m ? m : n);
             },
         };
     })("[mux]"),
@@ -707,7 +707,7 @@ function ee(e, t) {
             return (e.__proto__ = t), e;
         })(e, t);
 }
-m(), y();
+p(), y();
 var et = function (e) {
         return ei(e)[0];
     },
@@ -868,7 +868,7 @@ var eg = function (e) {
                     c = u.bytesLoaded,
                     f = u.requestStart,
                     g = u.responseStart,
-                    m = u.responseEnd;
+                    p = u.responseEnd;
                 l(
                     "requestcompleted",
                     eh(eo({}, eg(o)), {
@@ -876,7 +876,7 @@ var eg = function (e) {
                         request_bytes_loaded: c,
                         request_start: f,
                         request_response_start: g,
-                        request_response_end: m,
+                        request_response_end: p,
                         request_type: "manifest",
                         request_hostname: et(s),
                         request_response_headers: ep(n),
@@ -1049,7 +1049,7 @@ var eg = function (e) {
             });
         };
         i.on(r.Events.FRAG_LOAD_EMERGENCY_ABORTED, g);
-        var m = function (e, t) {
+        var p = function (e, t) {
             var r = t.level,
                 a = i.levels[r];
             if (a && a.attrs && a.attrs.BANDWIDTH) {
@@ -1069,7 +1069,7 @@ var eg = function (e) {
                         : s.warn("missing BANDWIDTH from HLS manifest parsed by HLS.js");
             }
         };
-        i.on(r.Events.LEVEL_SWITCHED, m),
+        i.on(r.Events.LEVEL_SWITCHED, p),
             (i._stopMuxMonitor = function () {
                 i.off(r.Events.MANIFEST_LOADED, o),
                     i.off(r.Events.LEVEL_LOADED, h),
@@ -1078,7 +1078,7 @@ var eg = function (e) {
                     i.off(r.Events.FRAG_CHANGED, c),
                     i.off(r.Events.ERROR, f),
                     i.off(r.Events.FRAG_LOAD_EMERGENCY_ABORTED, g),
-                    i.off(r.Events.LEVEL_SWITCHED, m),
+                    i.off(r.Events.LEVEL_SWITCHED, p),
                     i.off(r.Events.DESTROYING, i._stopMuxMonitor),
                     delete i._stopMuxMonitor;
             }),
@@ -1192,8 +1192,8 @@ var eg = function (e) {
                     c = u.requestStart,
                     f = u.requestResponseStart,
                     g = u.requestResponseEnd,
-                    m = u.requestResponseHeaders,
-                    p = u.requestMediaDuration,
+                    p = u.requestResponseHeaders,
+                    v = u.requestMediaDuration,
                     y = u.requestHostname,
                     E = u.requestUrl;
                 a("requestcompleted", {
@@ -1203,11 +1203,11 @@ var eg = function (e) {
                     request_response_end: g,
                     request_bytes_loaded: -1,
                     request_type: o + "_init",
-                    request_response_headers: m,
+                    request_response_headers: p,
                     request_hostname: y,
                     request_id: u.requestId,
                     request_url: E,
-                    request_media_duration: p,
+                    request_media_duration: v,
                     request_rendition_lists: l,
                 });
             };
@@ -1236,8 +1236,8 @@ var eg = function (e) {
                 c = d.requestResponseStart,
                 f = d.requestResponseEnd,
                 g = d.requestBytesLoaded,
-                m = d.requestResponseHeaders,
-                p = d.requestMediaDuration,
+                p = d.requestResponseHeaders,
+                v = d.requestMediaDuration,
                 y = d.requestHostname,
                 E = d.requestUrl,
                 T = d.requestId,
@@ -1252,12 +1252,12 @@ var eg = function (e) {
                 request_response_end: f,
                 request_bytes_loaded: g,
                 request_type: h,
-                request_response_headers: m,
+                request_response_headers: p,
                 request_hostname: y,
                 request_id: T,
                 request_url: E,
                 request_media_start_time: o,
-                request_media_duration: p,
+                request_media_duration: v,
                 request_current_level: S,
                 request_labeled_bitrate: _.renditionBitrate,
                 request_video_width: b,
@@ -1324,7 +1324,7 @@ var eg = function (e) {
             });
         };
         i.on("fragmentLoadingAbandoned", g);
-        var m = function (e) {
+        var p = function (e) {
             var t,
                 i,
                 r = e.error,
@@ -1354,13 +1354,13 @@ var eg = function (e) {
                 player_error_context: l,
             });
         };
-        i.on("error", m),
+        i.on("error", p),
             (i._stopMuxMonitor = function () {
                 i.off("manifestLoaded", n),
                     i.off("initFragmentLoaded", h),
                     i.off("mediaFragmentLoaded", d),
                     i.off("qualityChangeRendered", f),
-                    i.off("error", m),
+                    i.off("error", p),
                     i.off("fragmentLoadingAbandoned", g),
                     delete i._stopMuxMonitor;
             });
@@ -1583,12 +1583,16 @@ var eg = function (e) {
                 (this._playbackTimeTrackerLastPlayheadPosition = -1),
                 (this._lastTime = B()),
                 (this._isAdPlaying = !1),
-                (this._callbackUpdatePlaybackTime = null);
+                (this._callbackUpdatePlaybackTime = null),
+                t.on("viewinit", function () {
+                    i.pm.data.view_playing_time_ms_cumulative = 0;
+                });
             var r = this._startPlaybackTimeTracking.bind(this);
-            t.on("playing", r), t.on("adplaying", r), t.on("seeked", r);
+            t.on("playing", r), t.on("adplaying", r), t.on("seeked", r), t.on("rebufferend", r);
             var s = this._stopPlaybackTimeTracking.bind(this);
             t.on("playbackheartbeatend", s),
                 t.on("seeking", s),
+                t.on("rebufferstart", s),
                 t.on("adplaying", function () {
                     i._isAdPlaying = !0;
                 }),
@@ -1622,6 +1626,7 @@ var eg = function (e) {
                         null === this._callbackUpdatePlaybackTime &&
                             ((this._callbackUpdatePlaybackTime = this._updatePlaybackTime.bind(this)),
                             (this._playbackTimeTrackerLastPlayheadPosition = this.pm.data.player_playhead_time),
+                            (this._lastTime = B()),
                             this.pm.on("playbackheartbeat", this._callbackUpdatePlaybackTime));
                     },
                 },
@@ -1638,14 +1643,20 @@ var eg = function (e) {
                 {
                     key: "_updatePlaybackTime",
                     value: function () {
-                        var e = this.pm.data.player_playhead_time,
+                        var e = this.pm.data.player_playhead_time || 0,
                             t = B(),
-                            i = -1;
+                            i = t - this._lastTime,
+                            r = -1;
                         this._playbackTimeTrackerLastPlayheadPosition >= 0 &&
                         e > this._playbackTimeTrackerLastPlayheadPosition
-                            ? (i = e - this._playbackTimeTrackerLastPlayheadPosition)
-                            : this._isAdPlaying && (i = t - this._lastTime),
-                            i > 0 && i <= 1000 && el(this.pm.data, "view_content_playback_time", i),
+                            ? (r = e - this._playbackTimeTrackerLastPlayheadPosition)
+                            : this._isAdPlaying && (r = i),
+                            r > 0 && r <= 1000 && el(this.pm.data, "view_content_playback_time", r),
+                            null !== this._callbackUpdatePlaybackTime &&
+                                i > 0 &&
+                                i <= 1000 &&
+                                (this._isAdPlaying && el(this.pm.data, "ad_playing_time_ms_cumulative", i),
+                                el(this.pm.data, "view_playing_time_ms_cumulative", i)),
                             (this._playbackTimeTrackerLastPlayheadPosition = e),
                             (this._lastTime = t);
                     },
@@ -1901,6 +1912,7 @@ var eg = function (e) {
                 "renditionchange",
                 "orientationchange",
                 "viewend",
+                "playbackmodechange",
             ].forEach(function (e) {
                 t.on(e, function () {
                     if (
@@ -1934,7 +1946,7 @@ var eg = function (e) {
                     i._lastPlayheadPosition = -1;
                 });
             }),
-            ["playing", "hb", "renditionchange", "orientationchange"].forEach(function (e) {
+            ["playing", "hb", "renditionchange", "orientationchange", "playbackmodechange"].forEach(function (e) {
                 t.on(e, function () {
                     (i._lastPlayheadPosition = t.data.player_playhead_time),
                         (i._lastPlayerWidth = t.data.player_width),
@@ -2117,56 +2129,21 @@ var eg = function (e) {
                                 (this.pm.data.view_preroll_ad_asset_domain = l),
                                     (this.pm.data.view_preroll_ad_asset_hostname = n);
                             }
+                            this.pm.data.ad_type = "preroll";
                         }
                         (this.pm.data.ad_asset_url = null == t ? void 0 : t.ad_asset_url),
                             (this.pm.data.ad_tag_url = null == t ? void 0 : t.ad_tag_url),
                             (this.pm.data.ad_creative_id = null == t ? void 0 : t.ad_creative_id),
                             (this.pm.data.ad_id = null == t ? void 0 : t.ad_id),
-                            (this.pm.data.ad_universal_id = null == t ? void 0 : t.ad_universal_id);
+                            (this.pm.data.ad_universal_id = null == t ? void 0 : t.ad_universal_id),
+                            null != t && t.ad_type && (this.pm.data.ad_type = null == t ? void 0 : t.ad_type);
                     },
                 },
             ]),
             e
         );
     })(),
-    eG = c(f()),
-    eH = function e(t) {
-        Y(this, e);
-        var i,
-            r,
-            s = function () {
-                t.disableRebufferTracking ||
-                    (el(t.data, "view_waiting_rebuffer_count", 1),
-                    (i = B()),
-                    (r = eG.default.setInterval(function () {
-                        if (i) {
-                            var e = B();
-                            el(t.data, "view_waiting_rebuffer_duration", e - i), (i = e);
-                        }
-                    }, 250)));
-            },
-            a = function () {
-                t.disableRebufferTracking ||
-                    (i &&
-                        (el(t.data, "view_waiting_rebuffer_duration", B() - i), (i = !1), eG.default.clearInterval(r)));
-            },
-            n = !1,
-            l = function () {
-                n = !0;
-            },
-            o = function () {
-                (n = !1), a();
-            };
-        t.on("waiting", function () {
-            n && s();
-        }),
-            t.on("playing", function () {
-                a(), l();
-            }),
-            t.on("pause", o),
-            t.on("seeking", o);
-    },
-    eK = function e(t) {
+    eG = function e(t) {
         var i = this;
         Y(this, e), z(this, "lastWallClockTime", void 0);
         var r = function () {
@@ -2189,9 +2166,9 @@ var eg = function (e) {
                 t.off("before*", s), t.one("playbackheartbeat", r);
             });
     },
-    eq = c(f()),
-    eV =
-        ((th = function () {
+    eH = c(f()),
+    eK =
+        ((tl = function () {
             for (var e = 0, t = {}; e < arguments.length; e++) {
                 var i = arguments[e];
                 for (var r in i) t[r] = i[r];
@@ -2203,7 +2180,7 @@ var eg = function (e) {
                 var a;
                 if ("undefined" != typeof document) {
                     if (arguments.length > 1) {
-                        if ("number" == typeof (s = th({ path: "/" }, i.defaults, s)).expires) {
+                        if ("number" == typeof (s = tl({ path: "/" }, i.defaults, s)).expires) {
                             var n = new Date();
                             n.setMilliseconds(n.getMilliseconds() + 86400000 * s.expires), (s.expires = n);
                         }
@@ -2266,17 +2243,17 @@ var eg = function (e) {
                 }),
                 (i.defaults = {}),
                 (i.remove = function (e, t) {
-                    i(e, "", th(t, { expires: -1 }));
+                    i(e, "", tl(t, { expires: -1 }));
                 }),
                 (i.withConverter = e),
                 i
             );
         })(function () {})),
-    ej = "muxData",
-    eW = function () {
+    eq = "muxData",
+    eV = function () {
         var e;
         try {
-            e = (eV.get(ej) || "").split("&").reduce(function (e, t) {
+            e = (eK.get(eq) || "").split("&").reduce(function (e, t) {
                 var i = O(t.split("="), 2),
                     r = i[0],
                     s = i[1],
@@ -2288,10 +2265,10 @@ var eg = function (e) {
         }
         return e;
     },
-    eY = function (e) {
+    ej = function (e) {
         try {
-            eV.set(
-                ej,
+            eK.set(
+                eq,
                 Object.entries(e)
                     .map(function (e) {
                         var t = O(e, 2),
@@ -2304,20 +2281,20 @@ var eg = function (e) {
             );
         } catch (e) {}
     },
-    eQ = function () {
-        var e = eW();
+    eW = function () {
+        var e = eV();
         return (
             (e.mux_viewer_id = e.mux_viewer_id || U()),
             (e.msn = e.msn || Math.random()),
-            eY(e),
+            ej(e),
             {
                 mux_viewer_id: e.mux_viewer_id,
                 mux_sample_number: e.msn,
             }
         );
     },
-    eX = function () {
-        var e = eW(),
+    eY = function () {
+        var e = eV(),
             t = B();
         return (
             e.session_start && ((e.sst = e.session_start), delete e.session_start),
@@ -2325,7 +2302,7 @@ var eg = function (e) {
             e.session_expires && ((e.sex = e.session_expires), delete e.session_expires),
             (!e.sex || e.sex < t) && ((e.sid = U()), (e.sst = t)),
             (e.sex = t + 1500000),
-            eY(e),
+            ej(e),
             {
                 session_id: e.sid,
                 session_start: e.sst,
@@ -2333,10 +2310,10 @@ var eg = function (e) {
             }
         );
     },
-    ez = c(f()),
-    eJ = function () {
+    eQ = c(f()),
+    eX = function () {
         var e;
-        switch (eZ()) {
+        switch (ez()) {
             case "cellular":
                 e = "cellular";
                 break;
@@ -2353,13 +2330,13 @@ var eg = function (e) {
         }
         return e;
     },
-    eZ = function () {
-        var e = ez.default.navigator,
+    ez = function () {
+        var e = eQ.default.navigator,
             t = e && (e.connection || e.mozConnection || e.webkitConnection);
         return t && t.type;
     };
-eJ.getConnectionFromAPI = eZ;
-var e0 = e2({
+eX.getConnectionFromAPI = ez;
+var eJ = e0({
         a: "env",
         b: "beacon",
         c: "custom",
@@ -2380,7 +2357,7 @@ var e0 = e2({
         x: "view",
         y: "sub",
     }),
-    e1 = e2({
+    eZ = e0({
         ad: "ad",
         af: "affiliate",
         ag: "aggregate",
@@ -2416,8 +2393,10 @@ var e0 = e2({
         cs: "captions",
         ct: "content",
         cu: "current",
+        cv: "cumulative",
         cx: "connection",
         cz: "context",
+        da: "data",
         dg: "downscaling",
         dm: "domain",
         dn: "cdn",
@@ -2478,6 +2457,8 @@ var e0 = e2({
         mm: "min",
         mn: "manufacturer",
         mo: "model",
+        mp: "mode",
+        ms: "ms",
         mx: "mux",
         ne: "newest",
         nm: "name",
@@ -2554,12 +2535,12 @@ var e0 = e2({
         wa: "watch",
         wt: "waiting",
     });
-function e2(e) {
+function e0(e) {
     var t = {};
     for (var i in e) e.hasOwnProperty(i) && (t[e[i]] = i);
     return t;
 }
-function e3(e) {
+function e1(e) {
     var t = {},
         i = {};
     return (
@@ -2568,12 +2549,12 @@ function e3(e) {
             if (e.hasOwnProperty(r) && void 0 !== e[r]) {
                 var a = r.split("_"),
                     n = a[0],
-                    l = e0[n];
+                    l = eJ[n];
                 l || (q.info("Data key word `" + a[0] + "` not expected in " + r), (l = n + "_")),
                     a.splice(1).forEach(function (e) {
                         "url" === e && (s = !0),
-                            e1[e]
-                                ? (l += e1[e])
+                            eZ[e]
+                                ? (l += eZ[e])
                                 : Number.isInteger(Number(e))
                                   ? (l += e)
                                   : (q.info("Data key word `" + e + "` not expected in " + r), (l += "_" + e + "_"));
@@ -2584,16 +2565,16 @@ function e3(e) {
         Object.assign(t, i)
     );
 }
-var e4 = c(f()),
-    e5 = c(w()),
-    e8 = {
+var e2 = c(f()),
+    e3 = c(w()),
+    e4 = {
         maxBeaconSize: 300,
         maxQueueLength: 3600,
         baseTimeBetweenBeacons: 10000,
         maxPayloadKBSize: 500,
     },
-    e6 = ["hb", "requestcompleted", "requestfailed", "requestcanceled"],
-    e9 = function (e) {
+    e5 = ["hb", "requestcompleted", "requestfailed", "requestcanceled"],
+    e8 = function (e) {
         var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         (this._beaconUrl = e || "https://img.litix.io"),
             (this._eventQueue = []),
@@ -2601,9 +2582,9 @@ var e4 = c(f()),
             (this._resendAfterPost = !1),
             (this._failureCount = 0),
             (this._sendTimeout = !1),
-            (this._options = Object.assign({}, e8, t));
+            (this._options = Object.assign({}, e4, t));
     };
-(e9.prototype.queueEvent = function (e, t) {
+(e8.prototype.queueEvent = function (e, t) {
     var i = Object.assign({}, t);
     return (
         (this._eventQueue.length <= this._options.maxQueueLength || "eventrateexceeded" === e) &&
@@ -2612,28 +2593,28 @@ var e4 = c(f()),
         this._eventQueue.length <= this._options.maxQueueLength)
     );
 }),
-    (e9.prototype.flushEvents = function () {
+    (e8.prototype.flushEvents = function () {
         var e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         if (e && 1 === this._eventQueue.length) return void this._eventQueue.pop();
         this._eventQueue.length && this._sendBeaconQueue(), this._startBeaconSending();
     }),
-    (e9.prototype.destroy = function () {
+    (e8.prototype.destroy = function () {
         var e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         (this.destroyed = !0),
             e ? this._clearBeaconQueue() : this.flushEvents(),
-            e4.default.clearTimeout(this._sendTimeout);
+            e2.default.clearTimeout(this._sendTimeout);
     }),
-    (e9.prototype._clearBeaconQueue = function () {
+    (e8.prototype._clearBeaconQueue = function () {
         var e =
                 this._eventQueue.length > this._options.maxBeaconSize
                     ? this._eventQueue.length - this._options.maxBeaconSize
                     : 0,
             t = this._eventQueue.slice(e);
-        e > 0 && Object.assign(t[t.length - 1], e3({ mux_view_message: "event queue truncated" }));
+        e > 0 && Object.assign(t[t.length - 1], e1({ mux_view_message: "event queue truncated" }));
         var i = this._createPayload(t);
-        te(this._beaconUrl, i, !0, function () {});
+        e9(this._beaconUrl, i, !0, function () {});
     }),
-    (e9.prototype._sendBeaconQueue = function () {
+    (e8.prototype._sendBeaconQueue = function () {
         var e = this;
         if (this._postInFlight) {
             this._resendAfterPost = !0;
@@ -2643,7 +2624,7 @@ var e4 = c(f()),
         (this._eventQueue = this._eventQueue.slice(this._options.maxBeaconSize)), (this._postInFlight = !0);
         var i = this._createPayload(t),
             r = B();
-        te(this._beaconUrl, i, !1, function (i, s) {
+        e9(this._beaconUrl, i, !1, function (i, s) {
             s
                 ? ((e._eventQueue = t.concat(e._eventQueue)),
                   (e._failureCount += 1),
@@ -2654,20 +2635,20 @@ var e4 = c(f()),
                 e._resendAfterPost && ((e._resendAfterPost = !1), e._eventQueue.length > 0 && e._sendBeaconQueue());
         });
     }),
-    (e9.prototype._getNextBeaconTime = function () {
+    (e8.prototype._getNextBeaconTime = function () {
         if (!this._failureCount) return this._options.baseTimeBetweenBeacons;
         var e = Math.pow(2, this._failureCount - 1);
         return (1 + (e *= Math.random())) * this._options.baseTimeBetweenBeacons;
     }),
-    (e9.prototype._startBeaconSending = function () {
+    (e8.prototype._startBeaconSending = function () {
         var e = this;
-        e4.default.clearTimeout(this._sendTimeout),
+        e2.default.clearTimeout(this._sendTimeout),
             this.destroyed ||
-                (this._sendTimeout = e4.default.setTimeout(function () {
+                (this._sendTimeout = e2.default.setTimeout(function () {
                     e._eventQueue.length && e._sendBeaconQueue(), e._startBeaconSending();
                 }, this._getNextBeaconTime()));
     }),
-    (e9.prototype._createPayload = function (e) {
+    (e8.prototype._createPayload = function (e) {
         var t = this,
             i = { transmission_timestamp: Math.round(B()) };
         this._roundTripTime && (i.rtt_ms = Math.round(this._roundTripTime));
@@ -2689,7 +2670,7 @@ var e4 = c(f()),
             l() ||
                 (q.info("Payload size is too big (" + a + " kb). Removing unnecessary events."),
                 (s = e.filter(function (e) {
-                    return -1 === e6.indexOf(e.e);
+                    return -1 === e5.indexOf(e.e);
                 })),
                 n()),
             l() ||
@@ -2704,23 +2685,23 @@ var e4 = c(f()),
             r
         );
     });
-var e7 =
-        "function" == typeof e5.default.exitPictureInPicture
+var e6 =
+        "function" == typeof e3.default.exitPictureInPicture
             ? function (e) {
                   return e.length <= 57344;
               }
             : function (e) {
                   return !1;
               },
-    te = function (e, t, i, r) {
+    e9 = function (e, t, i, r) {
         if (i && navigator && navigator.sendBeacon && navigator.sendBeacon(e, t)) return void r();
-        if (e4.default.fetch)
-            return void e4.default
+        if (e2.default.fetch)
+            return void e2.default
                 .fetch(e, {
                     method: "POST",
                     body: t,
                     headers: { "Content-Type": "text/plain" },
-                    keepalive: e7(t),
+                    keepalive: e6(t),
                 })
                 .then(function (e) {
                     return r(null, e.ok ? null : "Error");
@@ -2728,8 +2709,8 @@ var e7 =
                 .catch(function (e) {
                     return r(null, e);
                 });
-        if (e4.default.XMLHttpRequest) {
-            var s = new e4.default.XMLHttpRequest();
+        if (e2.default.XMLHttpRequest) {
+            var s = new e2.default.XMLHttpRequest();
             (s.onreadystatechange = function () {
                 if (4 === s.readyState) return r(null, 200 !== s.status ? "error" : void 0);
             }),
@@ -2740,7 +2721,7 @@ var e7 =
         }
         r();
     },
-    tt = [
+    e7 = [
         "env_key",
         "view_id",
         "view_sequence_number",
@@ -2757,8 +2738,10 @@ var e7 =
         "player_error_context",
         "player_error_severity",
         "player_error_business_exception",
+        "view_playing_time_ms_cumulative",
+        "ad_playing_time_ms_cumulative",
     ],
-    ti = [
+    te = [
         "adplay",
         "adplaying",
         "adpause",
@@ -2769,9 +2752,9 @@ var e7 =
         "adresponse",
         "adrequest",
     ],
-    tr = ["ad_id", "ad_creative_id", "ad_universal_id"],
-    ts = ["viewstart", "error", "ended", "viewend"],
-    ta = (function () {
+    tt = ["ad_id", "ad_creative_id", "ad_universal_id"],
+    ti = ["viewstart", "error", "ended", "viewend"],
+    tr = (function () {
         function e(t, i) {
             var r,
                 s,
@@ -2785,8 +2768,8 @@ var e7 =
                 c,
                 f,
                 g,
-                m,
                 p,
+                v,
                 y,
                 E,
                 T,
@@ -2812,7 +2795,7 @@ var e7 =
                 (this.previousBeaconData = null),
                 (this.lastEventTime = 0),
                 (this.rateLimited = !1),
-                (this.eventQueue = new e9(
+                (this.eventQueue = new e8(
                     ((r = this.envKey),
                     (a = (s = this.options).beaconCollectionDomain),
                     (n = s.beaconDomain),
@@ -2840,15 +2823,15 @@ var e7 =
                     viewer_device_manufacturer: null == (u = this.options.platform) ? void 0 : u.manufacturer,
                     viewer_os_family: null == (f = this.options.platform) || null == (c = f.os) ? void 0 : c.family,
                     viewer_os_architecture:
-                        null == (m = this.options.platform) || null == (g = m.os) ? void 0 : g.architecture,
-                    viewer_os_version: null == (y = this.options.platform) || null == (p = y.os) ? void 0 : p.version,
-                    viewer_connection_type: eJ(),
+                        null == (p = this.options.platform) || null == (g = p.os) ? void 0 : g.architecture,
+                    viewer_os_version: null == (y = this.options.platform) || null == (v = y.os) ? void 0 : v.version,
+                    viewer_connection_type: eX(),
                     page_url:
-                        null === eq.default || void 0 === eq.default || null == (E = eq.default.location)
+                        null === eH.default || void 0 === eH.default || null == (E = eH.default.location)
                             ? void 0
                             : E.href,
                 }),
-                (this.viewerData = this.disableCookies ? {} : eQ());
+                (this.viewerData = this.disableCookies ? {} : eW());
         }
         return (
             X(e, [
@@ -2860,7 +2843,7 @@ var e7 =
                                 return q.info("Not sending `" + e + "` because Do Not Track is enabled");
                             if (!t || "object" != typeof t)
                                 return q.error("A data object was expected in send() but was not provided");
-                            var i = this.disableCookies ? {} : eX(),
+                            var i = this.disableCookies ? {} : eY(),
                                 r = eh(eo({}, this.pageLevelData, t, i, this.viewerData), {
                                     event: e,
                                     env_key: this.envKey,
@@ -2868,7 +2851,7 @@ var e7 =
                             r.user_id && ((r.viewer_user_id = r.user_id), delete r.user_id);
                             var s,
                                 a = (null != (s = r.mux_sample_number) ? s : 0) >= this.sampleRate,
-                                n = e3(this._deduplicateBeaconData(e, r));
+                                n = e1(this._deduplicateBeaconData(e, r));
                             if (((this.lastEventTime = this.mux.utils.now()), a))
                                 return q.info("Not sending event due to sample rate restriction", e, r, n);
                             if (
@@ -2889,14 +2872,14 @@ var e7 =
                                     this.eventQueue.destroy(!0);
                                 else {
                                     if (this.mux.WINDOW_HIDDEN && "hb" === e) this.eventQueue.flushEvents(!0);
-                                    else if (ts.indexOf(e) >= 0) {
+                                    else if (ti.indexOf(e) >= 0) {
                                         if ("error" === e && "warning" === t.player_error_severity) return;
                                         this.eventQueue.flushEvents();
                                     }
                                     if (this.rateLimited)
                                         return (
                                             (r.event = "eventrateexceeded"),
-                                            (n = e3(r)),
+                                            (n = e1(r)),
                                             this.eventQueue.queueEvent(r.event, n),
                                             q.error("Beaconing disabled due to rate limit.")
                                         );
@@ -2934,7 +2917,7 @@ var e7 =
                                     l = s[1];
                                 i.previousBeaconData &&
                                     (l !== i.previousBeaconData[n] ||
-                                        tt.indexOf(n) > -1 ||
+                                        e7.indexOf(n) > -1 ||
                                         i.objectHasChanged(a, n, l, i.previousBeaconData[n]) ||
                                         i.eventRequiresKey(e, n)) &&
                                     ((r[n] = l), (i.previousBeaconData[n] = l));
@@ -2961,7 +2944,7 @@ var e7 =
                     value: function (e, t) {
                         return !!(
                             ("renditionchange" === e && 0 === t.indexOf("video_source_")) ||
-                            (tr.includes(t) && ti.includes(e))
+                            (tt.includes(t) && te.includes(e))
                         );
                     },
                 },
@@ -2969,7 +2952,7 @@ var e7 =
             e
         );
     })(),
-    tn = function e(t) {
+    ts = function e(t) {
         Y(this, e);
         var i = 0,
             r = 0,
@@ -3012,7 +2995,7 @@ var e7 =
                 a++, o++, (t.data.view_request_count = a), (t.data.view_request_canceled_count = o);
             });
     },
-    tl = function e(t) {
+    ta = function e(t) {
         var i = this;
         Y(this, e),
             z(this, "_lastEventTime", void 0),
@@ -3036,12 +3019,12 @@ var e7 =
                 }
             });
     };
-function to(e, t) {
+function tn(e, t) {
     return (null == e ? void 0 : e.toLowerCase()) === (null == t ? void 0 : t.toLowerCase());
 }
-var th,
-    td,
-    tu = function e(t) {
+var tl,
+    to,
+    th = function e(t) {
         Y(this, e);
         var i = function (e) {
                 var i,
@@ -3063,7 +3046,7 @@ var th,
                             : null != s && s.viewer_time
                               ? s.viewer_time
                               : Date.now();
-                null != l && !to(l, a) && n <= o && ((a = l), (n = o), t.emit("cdnchange", { video_cdn: l }));
+                null != l && !tn(l, a) && n <= o && ((a = l), (n = o), t.emit("cdnchange", { video_cdn: l }));
             },
             r = null,
             s = null,
@@ -3076,12 +3059,48 @@ var th,
                 var i = null == t ? void 0 : t.video_cdn;
                 i &&
                     (void 0 === t.video_previous_cdn || null === t.video_previous_cdn) &&
-                    (to(i, s)
+                    (tn(i, s)
                         ? (t.video_previous_cdn = null != r ? r : void 0)
                         : ((t.video_previous_cdn = null != s ? s : void 0), (r = s), (s = i)));
             }),
             t.on("requestcompleted", function (e, t) {
                 i(t);
+            });
+    },
+    td = function (e) {
+        try {
+            return JSON.parse(e), !0;
+        } catch (e) {
+            return !1;
+        }
+    },
+    tu = function e(t) {
+        var i = this;
+        Y(this, e),
+            z(this, "_emittingAutomaticEvent", !1),
+            z(this, "_hasInitialized", !1),
+            t.on("viewstart", function () {
+                i._hasInitialized ||
+                    ((i._hasInitialized = !0),
+                    (i._emittingAutomaticEvent = !0),
+                    t.emit("playbackmodechange", {
+                        player_playback_mode: "standard",
+                        player_playback_mode_data: "{}",
+                    }),
+                    (i._emittingAutomaticEvent = !1));
+            }),
+            t.on("viewend", function () {
+                i._hasInitialized = !1;
+            }),
+            t.on("playbackmodechange", function (e, r) {
+                i._emittingAutomaticEvent ||
+                    (r.player_playback_mode_data
+                        ? td(r.player_playback_mode_data) ||
+                          (t.mux.log.warn("Invalid JSON string for player_playback_mode_data"),
+                          (r.player_playback_mode_data = "{}"))
+                        : (r.player_playback_mode_data = "{}"),
+                    (t.data.player_playback_mode_data = r.player_playback_mode_data),
+                    (t.data.player_playback_mode = r.player_playback_mode));
             });
     },
     tc = [
@@ -3115,6 +3134,7 @@ var th,
         "requestcanceled",
         "renditionchange",
         "cdnchange",
+        "playbackmodechange",
     ],
     tf = new Set(["requestcompleted", "requestfailed", "requestcanceled"]),
     tg = (function (e) {
@@ -3143,7 +3163,7 @@ var th,
                         i = J(r);
                     return (
                         (e = t ? Reflect.construct(i, arguments, J(this).constructor) : i.apply(this, arguments)),
-                        e && ("object" === p(e) || "function" == typeof e) ? e : W(this)
+                        e && ("object" === v(e) || "function" == typeof e) ? e : W(this)
                     );
                 });
         function r(e, t, s) {
@@ -3233,7 +3253,7 @@ var th,
                 (a.errorTranslator = s.errorTranslator),
                 (a.emitTranslator = s.emitTranslator),
                 (a.stateDataTranslator = s.stateDataTranslator),
-                (a.playbackEventDispatcher = new ta(e, s.data.env_key, s)),
+                (a.playbackEventDispatcher = new tr(e, s.data.env_key, s)),
                 (a.data = {
                     player_instance_id: U(),
                     mux_sample_rate: s.sampleRate,
@@ -3326,9 +3346,9 @@ var th,
                         delete this.data.player_startup_time,
                         delete this.data.page_load_time;
                 }),
-                (a.longResumeTracker = new tl(W(a))),
+                (a.longResumeTracker = new ta(W(a))),
                 (a.errorTracker = new eD(W(a))),
-                new eK(W(a)),
+                new eG(W(a)),
                 (a.seekingTracker = new eN(W(a))),
                 (a.playheadTime = new ex(W(a))),
                 (a.playbackHeartbeat = new eI(W(a))),
@@ -3339,8 +3359,8 @@ var th,
                 new eO(W(a)),
                 new eC(W(a)),
                 new eM(W(a)),
-                new eH(W(a)),
-                new tn(W(a)),
+                new ts(W(a)),
+                new th(W(a)),
                 new tu(W(a)),
                 s.hlsjs && a.addHLSJS(s),
                 s.dashjs && a.addDashJS(s),
@@ -3605,7 +3625,7 @@ var th,
         4: "MEDIA_ERR_SRC_NOT_SUPPORTED",
     },
     ty = c(f());
-ty.default && ty.default.WeakMap && (td = new WeakMap());
+ty.default && ty.default.WeakMap && (to = new WeakMap());
 var tE = function (e) {
     return (
         (this.buffer = ""),
@@ -3743,8 +3763,8 @@ var tT = function (e, t) {
         getComputedStyle: function (e, t) {
             var i;
             return e && t && ty.default && "function" == typeof ty.default.getComputedStyle
-                ? (td && td.has(e) && (i = td.get(e)),
-                  i || ((i = ty.default.getComputedStyle(e, null)), td && td.set(e, i)),
+                ? (to && to.has(e) && (i = to.get(e)),
+                  i || ((i = ty.default.getComputedStyle(e, null)), to && to.set(e, i)),
                   i.getPropertyValue(t))
                 : "";
         },
@@ -3780,7 +3800,7 @@ var tT = function (e, t) {
     tw = {
         loaded: B(),
         NAME: "mux-embed",
-        VERSION: "5.12.0",
+        VERSION: "5.13.0",
         API_VERSION: "2.1",
         PLAYER_TRACKED: !1,
         monitor: function (e, t) {
@@ -4021,6 +4041,7 @@ var tT = function (e, t) {
             ENDED: "ended",
             RENDITION_CHANGE: "renditionchange",
             ORIENTATION_CHANGE: "orientationchange",
+            PLAYBACK_MODE_CHANGE: "playbackmodechange",
             AD_REQUEST: "adrequest",
             AD_RESPONSE: "adresponse",
             AD_BREAK_START: "adbreakstart",
