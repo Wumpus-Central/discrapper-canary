@@ -8,4 +8,5 @@ var a,
         (a.OFFLINE = "offline"),
         (a.ONLINE = "online"),
         (a.DELETED = "deleted"),
+        (a.PROVIDER_ERRORED = "provider_errored"),
         a);
