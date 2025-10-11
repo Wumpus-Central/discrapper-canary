@@ -3,8 +3,8 @@ var r = n(951288),
     l = n(647438),
     i = n(120356),
     s = n.n(i),
-    a = n(622535),
-    o = n(481060),
+    o = n(622535),
+    a = n(481060),
     c = n(100527),
     u = n(994587),
     d = n(297651),
@@ -27,14 +27,14 @@ let S = l.memo(function (e) {
                 hidePrimaryCTA: O,
                 hideSecondaryCTA: x,
                 badgeOverride: y,
-                onClickCard: j,
-                onClickPrimaryCTA: T,
+                onClickCard: T,
+                onClickPrimaryCTA: j,
                 onClickSecondaryCTA: L,
                 onMouseEnter: k,
                 onMouseLeave: I,
                 onFocus: B,
-                onBlur: P,
-                primaryCTAText: N,
+                onBlur: N,
+                primaryCTAText: P,
                 secondaryCTAIcon: A,
                 productNameClassName: R,
                 badgeClassName: Z,
@@ -47,24 +47,27 @@ let S = l.memo(function (e) {
             { handleCardVisibilityChange: W } = (0, d.E)(t.skuId, F === E.AW.CATALOG ? "full" : F),
             U = (0, _.J7)(t, c.Z.COLLECTIBLES_SHOP_CARD),
             [V, G] = (0, _.SS)(t),
-            z = null != G && !i;
-        return (0, r.jsx)(a.$, {
+            z = null != G && !i,
+            K = !O || !x,
+            Y = !S || z,
+            q = K || z;
+        return (0, r.jsx)(o.$, {
             innerRef: M,
             onChange: W,
             threshold: 0,
             children: (0, r.jsx)("div", {
-                className: v.baseProductCardHoverContainer,
-                children: (0, r.jsx)(o.kL8, {
+                className: v.productCardHoverContainer,
+                children: (0, r.jsx)(a.kL8, {
                     ref: M,
-                    onClick: null != j ? j : U,
+                    onClick: null != T ? T : U,
                     "aria-label": D,
-                    className: s()(w, v.baseProductCardContainer),
+                    className: s()(w, v.productCardContainer),
                     onFocus: () => (null == B ? void 0 : B(t.skuId)),
-                    onBlur: () => (null == P ? void 0 : P(t.skuId)),
+                    onBlur: () => (null == N ? void 0 : N(t.skuId)),
                     onMouseEnter: () => (null == k ? void 0 : k(t.skuId)),
                     onMouseLeave: () => (null == I ? void 0 : I(t.skuId)),
                     children: (0, r.jsxs)("div", {
-                        className: v.baseProductCardContentContainer,
+                        className: v.productCardContentContainer,
                         children: [
                             (0, r.jsx)(g.Z, {
                                 skuId: t.skuId,
@@ -72,57 +75,49 @@ let S = l.memo(function (e) {
                                 className: Z,
                             }),
                             (0, r.jsxs)("div", {
-                                className: v.innerContainer,
+                                className: v.footerContainer,
                                 children: [
-                                    (0, r.jsxs)("div", {
-                                        className: s()(v.baseProductCardDetailsContainer, {
-                                            [v.hasVariantSwitcher]: z,
+                                    !n &&
+                                        (0, r.jsx)(f.Z, {
+                                            skuId: t.skuId,
+                                            className: R,
                                         }),
-                                        children: [
-                                            !n &&
-                                                (0, r.jsx)(f.Z, {
-                                                    skuId: t.skuId,
-                                                    className: R,
-                                                }),
-                                            z &&
-                                                (0, r.jsx)("div", {
-                                                    className: v.hoveredVariantSwitcher,
-                                                    children: G,
-                                                }),
-                                        ],
-                                    }),
-                                    (0, r.jsxs)("div", {
-                                        className: v.baseProductCardFooter,
-                                        children: [!S && (0, r.jsx)(p.Z, { skuId: t.skuId }), z && G],
-                                    }),
+                                    Y &&
+                                        (0, r.jsxs)("div", {
+                                            className: s()(v.footerInfoContainer, { [v.footerHideOnHover]: q }),
+                                            children: [!S && (0, r.jsx)(p.Z, { skuId: t.skuId }), z && G],
+                                        }),
+                                    q &&
+                                        (0, r.jsxs)("div", {
+                                            className: s()(v.footerInteractibleContainer, v.footerShowOnHover),
+                                            children: [
+                                                z && G,
+                                                K &&
+                                                    (0, r.jsxs)(a.ButtonGroup, {
+                                                        wrap: !1,
+                                                        fullWidth: !0,
+                                                        children: [
+                                                            !O &&
+                                                                (0, r.jsx)(C.Z, {
+                                                                    skuId: t.skuId,
+                                                                    cardRef: M,
+                                                                    selectedVariantIndex: V,
+                                                                    onClick: j,
+                                                                    text: P,
+                                                                }),
+                                                            !x &&
+                                                                (0, r.jsx)(h.Z, {
+                                                                    skuId: t.skuId,
+                                                                    cardRef: M,
+                                                                    selectedVariantIndex: V,
+                                                                    onClick: L,
+                                                                    icon: A,
+                                                                }),
+                                                        ],
+                                                    }),
+                                            ],
+                                        }),
                                 ],
-                            }),
-                            (0, r.jsx)("div", {
-                                className: v.innerHover,
-                                children:
-                                    (!O || !x) &&
-                                    (0, r.jsxs)(o.ButtonGroup, {
-                                        wrap: !1,
-                                        fullWidth: !0,
-                                        children: [
-                                            !O &&
-                                                (0, r.jsx)(C.Z, {
-                                                    skuId: t.skuId,
-                                                    cardRef: M,
-                                                    selectedVariantIndex: V,
-                                                    onClick: T,
-                                                    text: N,
-                                                }),
-                                            !x &&
-                                                (0, r.jsx)(h.Z, {
-                                                    skuId: t.skuId,
-                                                    cardRef: M,
-                                                    selectedVariantIndex: V,
-                                                    onClick: L,
-                                                    icon: A,
-                                                }),
-                                        ],
-                                    }),
                             }),
                             (0, r.jsx)(m.Z, { skuId: t.skuId }),
                         ],

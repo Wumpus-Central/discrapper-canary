@@ -1,19 +1,19 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(951288);
 n(647438);
 var l = n(120356),
-    a = n.n(l),
+    i = n.n(l),
     s = n(213301),
-    i = n(586312);
-let o = (e) => {
+    o = n(586312);
+let a = (e) => {
     let { skipPulseAnimation: t = !1 } = e;
     return (0, r.jsx)("div", {
-        className: a()(s.baseProductCardContainer, i.productSkeletonCardContainer, { [i.pulseAnimation]: !t }),
+        className: i()(s.productCardContainer, o.productSkeletonCardContainer, { [o.pulseAnimation]: !t }),
         children: (0, r.jsxs)("div", {
-            className: a()(s.baseProductCardContentContainer, i.productSkeletonContent),
+            className: i()(s.productCardContentContainer, o.productSkeletonContent),
             children: [
-                (0, r.jsx)("div", { className: i.productSkeletonTitle }),
-                (0, r.jsx)("div", { className: i.productSkeletonDescription }),
+                (0, r.jsx)("div", { className: o.productSkeletonTitle }),
+                (0, r.jsx)("div", { className: o.productSkeletonDescription }),
             ],
         }),
     });
