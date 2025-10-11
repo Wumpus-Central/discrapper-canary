@@ -1,40 +1,41 @@
 n.d(t, {
-    NI: () => Q,
-    YF: () => q,
-    bQ: () => K,
+    NI: () => J,
+    YF: () => X,
+    Y_: () => ea,
+    bQ: () => z,
 });
 var r,
     i = n(647438),
     a = n(71448);
 n(951288);
-var o = n(274676);
-n(603113);
-var s = n(863785);
-let l = "data-floating-ui-focusable",
-    c = "active",
-    u = "selected",
-    d = "ArrowLeft",
-    f = "ArrowRight",
-    _ = "ArrowUp",
-    p = "ArrowDown",
-    h = { ...(r || (r = n.t(i, 2))) },
-    m = !1,
-    g = 0,
-    E = () => "floating-ui-" + Math.random().toString(36).slice(2, 6) + g++;
-function b() {
-    let [e, t] = i.useState(() => (m ? E() : void 0));
+var o = n(274676),
+    s = n(603113),
+    l = n(863785);
+let c = "data-floating-ui-focusable",
+    u = "active",
+    d = "selected",
+    f = "ArrowLeft",
+    _ = "ArrowRight",
+    p = "ArrowUp",
+    h = "ArrowDown",
+    m = { ...(r || (r = n.t(i, 2))) },
+    g = !1,
+    E = 0,
+    b = () => "floating-ui-" + Math.random().toString(36).slice(2, 6) + E++;
+function y() {
+    let [e, t] = i.useState(() => (g ? b() : void 0));
     return (
         (0, a.Xj)(() => {
-            null == e && t(E());
+            null == e && t(b());
         }, []),
         i.useEffect(() => {
-            m = !0;
+            g = !0;
         }, []),
         e
     );
 }
-let y = h.useId || b;
-function O() {
+let O = m.useId || y;
+function v() {
     let e = new Map();
     return {
         emit(t, n) {
@@ -50,50 +51,50 @@ function O() {
         },
     };
 }
-let v = i.createContext(null),
-    I = i.createContext(null),
-    T = () => {
+let I = i.createContext(null),
+    T = i.createContext(null),
+    S = () => {
         var e;
-        return (null == (e = i.useContext(v)) ? void 0 : e.id) || null;
+        return (null == (e = i.useContext(I)) ? void 0 : e.id) || null;
     },
-    S = () => i.useContext(I);
-function A(e) {
+    A = () => i.useContext(T);
+function C(e) {
     return "data-floating-ui-" + e;
 }
-let C = null,
-    N = 0;
-function R(e) {
+let N = null,
+    R = 0;
+function P(e) {
     return (null == e ? void 0 : e.ownerDocument) || document;
 }
-let P = {
+let w = {
     inert: new WeakMap(),
     "aria-hidden": new WeakMap(),
     none: new WeakMap(),
 };
-function w(e) {
-    return "inert" === e ? P.inert : "aria-hidden" === e ? P["aria-hidden"] : P.none;
+function D(e) {
+    return "inert" === e ? w.inert : "aria-hidden" === e ? w["aria-hidden"] : w.none;
 }
-let D = new WeakSet(),
-    L = null,
-    x = 0,
-    M = (e) => e && (e.host || M(e.parentNode)),
-    j = (e, t) =>
+let L = new WeakSet(),
+    x = null,
+    M = 0,
+    j = (e) => e && (e.host || j(e.parentNode)),
+    k = (e, t) =>
         t
             .map((t) => {
                 if (e.contains(t)) return t;
-                let n = M(t);
+                let n = j(t);
                 return e.contains(n) ? n : null;
             })
             .filter((e) => null != e);
-function k(e, t, n, r) {
+function U(e, t, n, r) {
     let i = "data-floating-ui-inert",
         a = r ? "inert" : n ? "aria-hidden" : null,
-        o = j(t, e),
+        o = k(t, e),
         s = new Set(),
         l = new Set(o),
         c = [];
-    L[i] || (L[i] = new WeakMap());
-    let u = L[i];
+    x[i] || (x[i] = new WeakMap());
+    let u = x[i];
     function d(e) {
         !(!e || s.has(e)) && (s.add(e), e.parentNode && d(e.parentNode));
     }
@@ -106,13 +107,13 @@ function k(e, t, n, r) {
                     else {
                         let t = a ? e.getAttribute(a) : null,
                             n = null !== t && "false" !== t,
-                            r = w(a),
+                            r = D(a),
                             o = (r.get(e) || 0) + 1,
                             s = (u.get(e) || 0) + 1;
                         r.set(e, o),
                             u.set(e, s),
                             c.push(e),
-                            1 === o && n && D.add(e),
+                            1 === o && n && L.add(e),
                             1 === s && e.setAttribute(i, ""),
                             !n && a && e.setAttribute(a, "inert" === a ? "" : "true");
                     }
@@ -122,52 +123,52 @@ function k(e, t, n, r) {
         o.forEach(d),
         f(t),
         s.clear(),
-        x++,
+        M++,
         () => {
             c.forEach((e) => {
-                let t = w(a),
+                let t = D(a),
                     n = (t.get(e) || 0) - 1,
                     r = (u.get(e) || 0) - 1;
                 t.set(e, n),
                     u.set(e, r),
-                    n || (!D.has(e) && a && e.removeAttribute(a), D.delete(e)),
+                    n || (!L.has(e) && a && e.removeAttribute(a), L.delete(e)),
                     r || e.removeAttribute(i);
             }),
-                --x ||
-                    ((P.inert = new WeakMap()),
-                    (P["aria-hidden"] = new WeakMap()),
-                    (P.none = new WeakMap()),
-                    (D = new WeakSet()),
-                    (L = {}));
+                --M ||
+                    ((w.inert = new WeakMap()),
+                    (w["aria-hidden"] = new WeakMap()),
+                    (w.none = new WeakMap()),
+                    (L = new WeakSet()),
+                    (x = {}));
         }
     );
 }
-let U = null,
-    G = null,
-    B = () => React.useContext(U),
-    Z = 20,
-    F = null;
-function V() {
-    F = F.filter((e) => e.isConnected);
+let G = null,
+    B = null,
+    Z = () => React.useContext(G),
+    F = 20,
+    V = null;
+function H() {
+    V = V.filter((e) => e.isConnected);
 }
-let H = {
+let Y = {
         pointerdown: "onPointerDown",
         mousedown: "onMouseDown",
         click: "onClick",
     },
-    Y = {
+    W = {
         pointerdown: "onPointerDownCapture",
         mousedown: "onMouseDownCapture",
         click: "onClickCapture",
     },
-    W = (e) => {
+    K = (e) => {
         var t, n;
         return {
             escapeKey: "boolean" == typeof e ? e : null != (t = null == e ? void 0 : e.escapeKey) && t,
             outsidePress: "boolean" == typeof e ? e : null == (n = null == e ? void 0 : e.outsidePress) || n,
         };
     };
-function K(e, t) {
+function z(e, t) {
     void 0 === t && (t = {});
     let { open: n, onOpenChange: r, elements: s, dataRef: l } = e,
         {
@@ -181,12 +182,12 @@ function K(e, t) {
             bubbles: m,
             capture: g,
         } = t,
-        E = S(),
+        E = A(),
         b = (0, a.iW)("function" == typeof d ? d : () => !1),
         y = "function" == typeof d ? b : d,
         O = i.useRef(!1),
-        { escapeKey: v, outsidePress: I } = W(m),
-        { escapeKey: T, outsidePress: C } = W(g),
+        { escapeKey: v, outsidePress: I } = K(m),
+        { escapeKey: T, outsidePress: S } = K(g),
         N = i.useRef(!1),
         R = (0, a.iW)((e) => {
             var t;
@@ -224,7 +225,7 @@ function K(e, t) {
             let i = O.current;
             if (((O.current = !1), ("click" === f && i) || n || ("function" == typeof y && !y(e)))) return;
             let c = (0, a.U9)(e),
-                u = "[" + A("inert") + "]",
+                u = "[" + C("inert") + "]",
                 d = (0, a.Me)(s.floating).querySelectorAll(u),
                 _ = (0, o.kK)(c) ? c : null;
             for (; _ && !(0, o.Py)(_); ) {
@@ -309,7 +310,7 @@ function K(e, t) {
             (_.addEventListener("keydown", T ? P : R, T),
             _.addEventListener("compositionstart", i),
             _.addEventListener("compositionend", d)),
-            y && _.addEventListener(f, C ? D : w, C);
+            y && _.addEventListener(f, S ? D : w, S);
         let p = [];
         return (
             h &&
@@ -330,14 +331,14 @@ function K(e, t) {
                     (_.removeEventListener("keydown", T ? P : R, T),
                     _.removeEventListener("compositionstart", i),
                     _.removeEventListener("compositionend", d)),
-                    y && _.removeEventListener(f, C ? D : w, C),
+                    y && _.removeEventListener(f, S ? D : w, S),
                     p.forEach((e) => {
                         e.removeEventListener("scroll", t);
                     }),
                     window.clearTimeout(e);
             }
         );
-    }, [l, s, u, y, f, n, r, h, c, v, I, R, T, P, w, C, D]),
+    }, [l, s, u, y, f, n, r, h, c, v, I, R, T, P, w, S, D]),
         i.useEffect(() => {
             l.current.insideReactTree = !1;
         }, [l, y, f]);
@@ -345,7 +346,7 @@ function K(e, t) {
             () => ({
                 onKeyDown: R,
                 ...(_ && {
-                    [H[p]]: (e) => {
+                    [Y[p]]: (e) => {
                         r(!1, e.nativeEvent, "reference-press");
                     },
                     ...("click" !== p && {
@@ -366,7 +367,7 @@ function K(e, t) {
                 onMouseUp() {
                     O.current = !0;
                 },
-                [Y[f]]: () => {
+                [W[f]]: () => {
                     l.current.insideReactTree = !0;
                 },
             }),
@@ -383,12 +384,12 @@ function K(e, t) {
         [c, L, x],
     );
 }
-function z(e) {
+function q(e) {
     let { open: t = !1, onOpenChange: n, elements: r } = e,
-        o = y(),
+        o = O(),
         s = i.useRef({}),
-        [l] = i.useState(() => O()),
-        c = null != T(),
+        [l] = i.useState(() => v()),
+        c = null != S(),
         [u, d] = i.useState(r.reference),
         f = (0, a.iW)((e, t, r) => {
             (s.current.openEvent = e ? t : void 0),
@@ -422,10 +423,10 @@ function z(e) {
         [t, f, p, l, o, _],
     );
 }
-function q(e) {
+function X(e) {
     void 0 === e && (e = {});
     let { nodeId: t } = e,
-        n = z({
+        n = q({
             ...e,
             elements: {
                 reference: null,
@@ -434,19 +435,19 @@ function q(e) {
             },
         }),
         r = e.rootContext || n,
-        l = r.elements,
+        s = r.elements,
         [c, u] = i.useState(null),
         [d, f] = i.useState(null),
-        _ = (null == l ? void 0 : l.domReference) || c,
+        _ = (null == s ? void 0 : s.domReference) || c,
         p = i.useRef(null),
-        h = S();
+        h = A();
     (0, a.Xj)(() => {
         _ && (p.current = _);
     }, [_]);
-    let m = (0, s.YF)({
+    let m = (0, l.YF)({
             ...e,
             elements: {
-                ...l,
+                ...s,
                 ...(d && { reference: d }),
             },
         }),
@@ -516,18 +517,18 @@ function q(e) {
         )
     );
 }
-function X(e, t, n) {
+function Q(e, t, n) {
     let r = new Map(),
         i = "item" === n,
         a = e;
     if (i && e) {
-        let { [c]: t, [u]: n, ...r } = e;
+        let { [u]: t, [d]: n, ...r } = e;
         a = r;
     }
     return {
         ...("floating" === n && {
             tabIndex: -1,
-            [l]: "",
+            [c]: "",
         }),
         ...a,
         ...t
@@ -541,7 +542,7 @@ function X(e, t, n) {
                     t &&
                         Object.entries(t).forEach((t) => {
                             let [n, a] = t;
-                            if (!(i && [c, u].includes(n)))
+                            if (!(i && [u, d].includes(n)))
                                 if (0 === n.indexOf("on")) {
                                     if ((r.has(n) || r.set(n, []), "function" == typeof a)) {
                                         var o;
@@ -562,14 +563,14 @@ function X(e, t, n) {
             ),
     };
 }
-function Q(e) {
+function J(e) {
     void 0 === e && (e = []);
     let t = e.map((e) => (null == e ? void 0 : e.reference)),
         n = e.map((e) => (null == e ? void 0 : e.floating)),
         r = e.map((e) => (null == e ? void 0 : e.item)),
-        a = i.useCallback((t) => X(t, e, "reference"), t),
-        o = i.useCallback((t) => X(t, e, "floating"), n),
-        s = i.useCallback((t) => X(t, e, "item"), r);
+        a = i.useCallback((t) => Q(t, e, "reference"), t),
+        o = i.useCallback((t) => Q(t, e, "floating"), n),
+        s = i.useCallback((t) => Q(t, e, "item"), r);
     return i.useMemo(
         () => ({
             getReferenceProps: a,
@@ -579,8 +580,8 @@ function Q(e) {
         [a, o, s],
     );
 }
-let J = "Escape";
-function $(e, t, n) {
+let $ = "Escape";
+function ee(e, t, n) {
     switch (e) {
         case "vertical":
             return t;
@@ -590,16 +591,115 @@ function $(e, t, n) {
             return t || n;
     }
 }
-function ee(e, t) {
-    let [n, r] = React.useState(e);
+let et = (e) => e.replace(/[A-Z]+(?![a-z])|[A-Z]/g, (e, t) => (t ? "-" : "") + e.toLowerCase());
+function en(e, t) {
+    return "function" == typeof e ? e(t) : e;
+}
+function er(e, t) {
+    let [n, r] = i.useState(e);
     return (
         e && !n && r(!0),
-        React.useEffect(() => {
+        i.useEffect(() => {
             if (!e && n) {
                 let e = setTimeout(() => r(!1), t);
                 return () => clearTimeout(e);
             }
         }, [e, n, t]),
         n
+    );
+}
+function ei(e, t) {
+    void 0 === t && (t = {});
+    let {
+            open: n,
+            elements: { floating: r },
+        } = e,
+        { duration: o = 250 } = t,
+        l = ("number" == typeof o ? o : o.close) || 0,
+        [c, u] = i.useState("unmounted"),
+        d = er(n, l);
+    return (
+        d || "close" !== c || u("unmounted"),
+        (0, a.Xj)(() => {
+            if (r) {
+                if (n) {
+                    u("initial");
+                    let e = requestAnimationFrame(() => {
+                        s.flushSync(() => {
+                            u("open");
+                        });
+                    });
+                    return () => {
+                        cancelAnimationFrame(e);
+                    };
+                }
+                u("close");
+            }
+        }, [n, r]),
+        {
+            isMounted: d,
+            status: c,
+        }
+    );
+}
+function ea(e, t) {
+    void 0 === t && (t = {});
+    let { initial: n = { opacity: 0 }, open: r, close: o, common: s, duration: l = 250 } = t,
+        c = e.placement,
+        u = c.split("-")[0],
+        d = i.useMemo(
+            () => ({
+                side: u,
+                placement: c,
+            }),
+            [u, c],
+        ),
+        f = "number" == typeof l,
+        _ = (f ? l : l.open) || 0,
+        p = (f ? l : l.close) || 0,
+        [h, m] = i.useState(() => ({
+            ...en(s, d),
+            ...en(n, d),
+        })),
+        { isMounted: g, status: E } = ei(e, { duration: l }),
+        b = (0, a.II)(n),
+        y = (0, a.II)(r),
+        O = (0, a.II)(o),
+        v = (0, a.II)(s);
+    return (
+        (0, a.Xj)(() => {
+            let e = en(b.current, d),
+                t = en(O.current, d),
+                n = en(v.current, d),
+                r = en(y.current, d) || Object.keys(e).reduce((e, t) => ((e[t] = ""), e), {});
+            if (
+                ("initial" === E &&
+                    m((t) => ({
+                        transitionProperty: t.transitionProperty,
+                        ...n,
+                        ...e,
+                    })),
+                "open" === E &&
+                    m({
+                        transitionProperty: Object.keys(r).map(et).join(","),
+                        transitionDuration: _ + "ms",
+                        ...n,
+                        ...r,
+                    }),
+                "close" === E)
+            ) {
+                let r = t || e;
+                m({
+                    transitionProperty: Object.keys(r).map(et).join(","),
+                    transitionDuration: p + "ms",
+                    ...n,
+                    ...r,
+                });
+            }
+        }, [p, O, b, y, v, _, E, d]),
+        {
+            isMounted: g,
+            styles: h,
+        }
     );
 }

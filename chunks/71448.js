@@ -1,12 +1,13 @@
 n.d(t, {
     El: () => h,
+    II: () => b,
     MM: () => m,
     Me: () => p,
     Pe: () => f,
     U9: () => d,
     Xj: () => E,
     ex: () => _,
-    iW: () => y,
+    iW: () => O,
     r3: () => u,
 });
 var r,
@@ -80,11 +81,20 @@ function m(e) {
 }
 var g = function () {},
     E = "undefined" != typeof document ? a.useLayoutEffect : g;
-let b = { ...(r || (r = n.t(a, 2))) }.useInsertionEffect || ((e) => e());
-function y(e) {
+function b(e) {
+    let t = a.useRef(e);
+    return (
+        E(() => {
+            t.current = e;
+        }),
+        t
+    );
+}
+let y = { ...(r || (r = n.t(a, 2))) }.useInsertionEffect || ((e) => e());
+function O(e) {
     let t = a.useRef(() => {});
     return (
-        b(() => {
+        y(() => {
             t.current = e;
         }),
         a.useCallback(function () {
@@ -93,13 +103,13 @@ function y(e) {
         }, [])
     );
 }
-function O(e, t, n) {
+function v(e, t, n) {
     if ("function" == typeof n) return n(t);
     if (n) return n.includes(t);
     let r = e.current[t];
     return null == r || r.hasAttribute("disabled") || "true" === r.getAttribute("aria-disabled");
 }
-let v = () => ({
+let I = () => ({
     getShadowRoot: !0,
     displayCheck:
         "function" == typeof ResizeObserver && ResizeObserver.toString().includes("[native code]") ? "full" : "none",

@@ -1,9 +1,9 @@
 n.d(t, { V: () => p }), n(953529);
 var r = n(951288);
 n(647438);
-var i = n(793030),
-    a = n(496600),
-    o = n(713072),
+var i = n(496600),
+    a = n(713072),
+    o = n(345729),
     s = n(680765);
 function l(e, t, n) {
     return (
@@ -111,19 +111,17 @@ function p(e) {
             floatingStyles: S,
             getFloatingProps: A,
             getReferenceProps: C,
-        } = (0, i.ON0)({
-            placement: "bottom",
-            matchReferenceWidth: !0,
-        });
+            transitionStyles: N,
+        } = (0, o.C)();
     return (0, r.jsxs)(
-        a.uz,
+        i.uz,
         d(c({}, b), {
             isCollapsible: !0,
             isOpen: v,
             setIsOpen: I,
             children: [
                 (0, r.jsx)(
-                    a.Ct,
+                    i.Ct,
                     c(
                         {
                             label: t,
@@ -151,13 +149,13 @@ function p(e) {
                                 {
                                     ref: T.setFloating,
                                     className: s.selectDropdown,
-                                    style: S,
+                                    style: c({}, S, N),
                                 },
                                 A(),
                             ),
                             {
-                                children: (0, r.jsx)(a.px, {
-                                    renderListItem: (e) => (0, r.jsx)(o.W, c({}, e)),
+                                children: (0, r.jsx)(i.px, {
+                                    renderListItem: (e) => (0, r.jsx)(a.W, c({}, e)),
                                     maxVisibleItems: E,
                                 }),
                             },
