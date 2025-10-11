@@ -10,12 +10,14 @@ var r = n(647438),
 function d() {
     let e = (0, l.e7)([a.default], () => a.default.getCurrentUser()),
         t = (0, u.Z)(null == e ? void 0 : e.id),
-        n = (0, c.Un)({ location: "useAvailableWidgetTypes" }),
-        d = (0, s.k)({ location: "useAvailableWidgetTypes" });
+        n = t.some((e) => o.Ki.includes(e.type)),
+        d = (0, c.Un)({ location: "useAvailableWidgetTypes" }),
+        p = (0, s.k)({ location: "useAvailableWidgetTypes" }),
+        f = d || n;
     return r.useMemo(() => {
         let e = new Set(t.map((e) => e.type));
         return Object.values(i.l).filter(
-            (t) => (t !== i.l.APPLICATION || !!d) && (!o.Ki.includes(t) || !!n) && !e.has(t),
+            (t) => (t !== i.l.APPLICATION || !!p) && (!o.Ki.includes(t) || !!f) && !e.has(t),
         );
-    }, [t, n, d]);
+    }, [t, f, p]);
 }
