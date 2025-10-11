@@ -2,8 +2,8 @@ r.d(t, { Z: () => h });
 var e = r(951288),
     n = r(647438),
     a = r(793030),
-    s = r(442837),
-    l = r(99690),
+    l = r(442837),
+    s = r(99690),
     d = r(594174),
     c = r(5888),
     o = r(198358),
@@ -13,7 +13,7 @@ var e = r(951288),
     m = r(388032);
 function h(i) {
     let { slide: t } = i,
-        { sidekicks: r } = (0, s.e7)([c.Z], () => c.Z.getCheckpointData()),
+        { users: r } = (0, l.e7)([c.Z], () => c.Z.getCheckpointData()),
         h = (0, n.useMemo)(
             () =>
                 r
@@ -39,7 +39,7 @@ function h(i) {
                                 "div",
                                 {
                                     children: [
-                                        (0, e.jsx)(l.Z, {
+                                        (0, e.jsx)(s.Z, {
                                             user: i,
                                             size: u.EF.SIZE_120,
                                         }),
@@ -63,7 +63,7 @@ function h(i) {
                             color: "text-primary",
                             children: m.intl.string(p.default.d5HUsL),
                         }),
-                        (0, e.jsx)(l.Z, {
+                        (0, e.jsx)(s.Z, {
                             user: h[0],
                             size: u.EF.SIZE_120,
                         }),

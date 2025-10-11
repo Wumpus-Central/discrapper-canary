@@ -2,8 +2,8 @@ r.d(t, { Z: () => p });
 var e = r(951288),
     n = r(647438),
     a = r(793030),
-    s = r(442837),
-    l = r(565138),
+    l = r(442837),
+    s = r(565138),
     d = r(430824),
     c = r(5888),
     o = r(198358),
@@ -12,13 +12,13 @@ var e = r(951288),
 function p() {
     let {
             guilds: { guilds: i, numGuildsJoined: t },
-        } = (0, s.e7)([c.Z], () => c.Z.getCheckpointData()),
+        } = (0, l.e7)([c.Z], () => c.Z.getCheckpointData()),
         r = (0, n.useMemo)(
             () =>
                 i
                     .map((i) => {
-                        let { guildId: t } = i;
-                        return d.Z.getGuild(t);
+                        let { guild: t } = i;
+                        return d.Z.getGuild(t.id);
                     })
                     .filter((i) => null != i),
             [i],
@@ -38,9 +38,9 @@ function p() {
                     "div",
                     {
                         children: [
-                            (0, e.jsx)(l.Z, {
+                            (0, e.jsx)(s.Z, {
                                 guild: t,
-                                size: l.Z.Sizes.XLARGE,
+                                size: s.Z.Sizes.XLARGE,
                             }),
                             (0, e.jsx)(a.xvT, {
                                 variant: "display-md",
@@ -63,7 +63,7 @@ function p() {
                                         (0, e.jsx)(a.xvT, {
                                             variant: "display-md",
                                             color: "text-primary",
-                                            children: i[0].numMinutesListening + i[0].numMinutesSpeaking,
+                                            children: i[0].numVoiceMinutes,
                                         }),
                                         (0, e.jsx)(a.xvT, {
                                             variant: "display-sm",
