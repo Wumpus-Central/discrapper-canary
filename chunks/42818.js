@@ -169,6 +169,7 @@ function M(e) {
                     children: [b, " "],
                 }),
                 (0, r.jsx)(u.aML, {
+                    "data-migration-pending": !0,
                     text: A.intl.format(A.t.UDop9f, {}),
                     "aria-label": A.intl.string(A.t.P68ePD),
                     tooltipClassName: C.invoiceItemTooltip,
@@ -210,6 +211,7 @@ function j(e) {
         children: [
             t,
             (0, r.jsx)(u.aML, {
+                "data-migration-pending": !0,
                 clickableOnMobile: !0,
                 text: n,
                 "aria-label": i,

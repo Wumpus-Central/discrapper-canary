@@ -9,10 +9,10 @@ var r = n(951288),
     l = n(70097),
     u = n(483444),
     _ = n(626135),
-    b = n(553896),
-    p = n(848572),
-    f = n(474936),
-    g = n(981631),
+    p = n(553896),
+    b = n(848572),
+    g = n(474936),
+    f = n(981631),
     m = n(388032),
     x = n(43860);
 function y(e) {
@@ -21,12 +21,12 @@ function y(e) {
         [i, y] = a.useState(!1),
         [h, O] = a.useState(!1),
         [T, j] = a.useState(!1),
-        v = (0, p.GG)(),
+        v = (0, b.GG)(),
         E = a.useRef(null),
         w = a.useRef(null),
         { currentBadge: P, prevBadge: N, levelUpVideoSrc: U } = n,
         k = a.useCallback(() => {
-            let e = 700 * (P.id !== f.VU.PREMIUM_TENURE_1_MONTH);
+            let e = 700 * (P.id !== g.VU.PREMIUM_TENURE_1_MONTH);
             (w.current.currentTime = 0),
                 setTimeout(() => {
                     j(!0), w.current.play();
@@ -53,7 +53,7 @@ function y(e) {
                 (E.current.style.display = "none"),
                 E.current.offsetWidth,
                 (E.current.style.display = ""),
-                _.default.track(g.rMx.TIERED_TENURE_BADGE_LEVEL_UP_REPLAY_CLICKED, { new_badge_id: P.id });
+                _.default.track(f.rMx.TIERED_TENURE_BADGE_LEVEL_UP_REPLAY_CLICKED, { new_badge_id: P.id });
         }, [P.id, k]),
         C = {
             "--custom-old-badge-color": "linear-gradient(to right, ".concat(
@@ -102,13 +102,14 @@ function y(e) {
                             variant: "text-xs/medium",
                             className: x.subscribedText,
                             children: m.intl.formatToPlainString(m.t["f/OGgI"], {
-                                timeFrame: (0, b.q)(P.id, P.tenureReqNumMonths),
+                                timeFrame: (0, p.q)(P.id, P.tenureReqNumMonths),
                                 date: v,
                             }),
                         }),
                     (0, r.jsx)("div", {
                         className: x.actionButtons,
                         children: (0, r.jsx)(o.aML, {
+                            "data-migration-pending": !0,
                             text: m.intl.string(m.t.hsvh0t),
                             children: (e) => {
                                 var t, n;

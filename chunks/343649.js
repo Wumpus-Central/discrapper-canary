@@ -575,6 +575,7 @@ function ep(e) {
                                   },
                               })
                             : (0, l.jsx)(E.aML, {
+                                  "data-migration-pending": !0,
                                   text: ei.intl.string(ei.t.XdvBLS),
                                   children: (e) =>
                                       (0, l.jsx)(

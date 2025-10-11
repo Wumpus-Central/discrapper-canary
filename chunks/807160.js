@@ -146,6 +146,7 @@ function eu(e) {
             });
         };
     return (0, i.jsx)(p.aML, {
+        "data-migration-pending": !0,
         forceOpen: l,
         text: o ? r : n,
         children: (e) => {
@@ -615,6 +616,7 @@ class ep extends (r = a.PureComponent) {
             }),
             E = r.isGift
                 ? (0, i.jsx)(p.aML, {
+                      "data-migration-pending": !0,
                       text: K.intl.string(K.t.QddTpq),
                       children: (e) =>
                           (0, i.jsx)(

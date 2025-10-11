@@ -244,6 +244,7 @@ let D = function () {
                                         onChange: (e) => B(e),
                                     }),
                                     (0, a.jsx)(d.aML, {
+                                        "data-migration-pending": !0,
                                         text: "Need Promotion Code",
                                         shouldShow: F.length < 1,
                                         children: (e) =>
@@ -313,6 +314,7 @@ let D = function () {
                         ],
                     }),
                     (0, a.jsx)(d.aML, {
+                        "data-migration-pending": !0,
                         text: "Already subscribed",
                         shouldShow: V,
                         children: (e) =>

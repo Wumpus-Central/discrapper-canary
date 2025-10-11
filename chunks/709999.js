@@ -662,6 +662,7 @@ let ex = n.memo(function (e) {
                 children: [
                     X &&
                         (0, l.jsx)(h.aML, {
+                            "data-migration-pending": !0,
                             tooltipContentClassName: eo.premiumWheelTooltipContent,
                             color: h.aML.Colors.PRIMARY,
                             text: es.intl.string(es.t.nKdAlJ),

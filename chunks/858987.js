@@ -158,6 +158,7 @@ function T(e) {
     }
     if (N && G)
         return (0, r.jsx)(o.aML, {
+            "data-migration-pending": !0,
             text: g.intl.string(g.t.L7jbQU),
             children: (e) =>
                 (0, r.jsx)(
@@ -180,6 +181,7 @@ function T(e) {
         });
     if (N && !G)
         return (0, r.jsx)(o.aML, {
+            "data-migration-pending": !0,
             text: g.intl.string(g.t.L7jbQU),
             children: (e) =>
                 (0, r.jsx)(
@@ -202,6 +204,7 @@ function T(e) {
         });
     if ((0, u.yE)(null != (t = null == D ? void 0 : D.flags) ? t : 0, h.udG.EMBEDDED) && U === s.O.LOADING)
         return (0, r.jsx)(o.aML, {
+            "data-migration-pending": !0,
             text: g.intl.string(g.t.cjA5tr),
             children: (e) =>
                 (0, r.jsx)(
@@ -234,6 +237,7 @@ function T(e) {
         });
     else if (!x)
         return (0, r.jsx)(o.aML, {
+            "data-migration-pending": !0,
             text: g.intl.string(g.t.XdvBLS),
             children: (e) =>
                 (0, r.jsx)(

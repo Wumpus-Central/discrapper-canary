@@ -200,6 +200,7 @@ let y = function (e) {
     }
     return null != x.buttonTooltipText
         ? (0, r.jsx)(l.aML, {
+              "data-migration-pending": !0,
               text: x.buttonTooltipText,
               children: j,
           })

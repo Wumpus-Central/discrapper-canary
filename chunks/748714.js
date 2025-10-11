@@ -114,6 +114,7 @@ let _ = (e) => {
         );
         return null === n
             ? (0, r.jsx)(a.aML, {
+                  "data-migration-pending": !0,
                   text: h.intl.string(h.t["c/rcUl"]),
                   children: (e) => (0, r.jsx)(i.zxk, E(x({}, e, c), { disabled: !0 })),
               })

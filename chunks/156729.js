@@ -158,6 +158,7 @@ class R extends (r = a.PureComponent) {
                             children: [
                                 n
                                     ? (0, i.jsx)(d.aML, {
+                                          "data-migration-pending": !0,
                                           text: O.intl.string(O.t["v6/z29"]),
                                           children: (e) =>
                                               (0, i.jsx)(

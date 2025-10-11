@@ -20,8 +20,8 @@ var r = n(951288),
     v = n(399521),
     y = n(981631),
     I = n(388032),
-    C = n(944658);
-function S(e) {
+    S = n(944658);
+function C(e) {
     var t, n;
     let { user: i, isFirst: l, isCompetitive: a } = e,
         { status: u, isMobile: d } = (0, o.cj)([m.Z], () => ({
@@ -46,7 +46,7 @@ function S(e) {
         E = l ? s.YqE : a ? s.XcD : void 0,
         v = l ? I.intl.string(I.t.aI4VOD) : a ? I.intl.string(I.t.kABl29) : void 0;
     return (0, r.jsx)(s.P3F, {
-        className: C.frequentFriendAvatarButton,
+        className: S.frequentFriendAvatarButton,
         onClick: O,
         onMouseEnter: b.onMouseEnter,
         onMouseLeave: b.onMouseLeave,
@@ -144,17 +144,18 @@ function T() {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: C.frequentFriendsRow,
+                className: S.frequentFriendsRow,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: C.frequentFriendsHeader,
+                        className: S.frequentFriendsHeader,
                         children: [
                             (0, r.jsx)(s.Text, {
                                 variant: "text-sm/semibold",
-                                className: C.frequentFriendsTitle,
+                                className: S.frequentFriendsTitle,
                                 children: I.intl.string(I.t.QEh90N),
                             }),
                             (0, r.jsx)(s.aML, {
+                                "data-migration-pending": !0,
                                 text: I.intl.string(I.t.tqCMcX),
                                 children: (e) => {
                                     var t, n;
@@ -185,7 +186,7 @@ function T() {
                                             }
                                             return e;
                                         })({}, e)),
-                                        (n = n = { className: C.frequentFriendsInfoIcon }),
+                                        (n = n = { className: S.frequentFriendsInfoIcon }),
                                         Object.getOwnPropertyDescriptors
                                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                                             : (function (e, t) {
@@ -206,15 +207,15 @@ function T() {
                     }),
                     (0, r.jsx)(s.u2D, {
                         ref: f,
-                        className: a()(C.frequentFriendsAvatars, {
-                            [C.scrollMaskLeft]: _ && T,
-                            [C.scrollMaskRight]: _ && N,
+                        className: a()(S.frequentFriendsAvatars, {
+                            [S.scrollMaskLeft]: _ && T,
+                            [S.scrollMaskRight]: _ && N,
                         }),
                         paddingFix: !1,
                         orientation: "horizontal",
                         children: h.map((e, t) =>
                             (0, r.jsx)(
-                                S,
+                                C,
                                 {
                                     user: e,
                                     isFirst: 0 === t,
