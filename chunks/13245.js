@@ -86,13 +86,14 @@ let v = new o.Z("OverlayActionCreators"),
                 nudges: t,
             });
         },
-        setFocusedPID(e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                n = t ? c.d5.UNTRACK_FOCUS : c.d5.TRACK_FOCUS;
+        setFocusedPID(e, t) {
+            let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                r = n ? c.d5.UNTRACK_FOCUS : c.d5.TRACK_FOCUS;
             i.Z.dispatch({
                 type: "OVERLAY_FOCUSED",
                 pid: e,
-                trackMode: n,
+                windowHandle: t,
+                trackMode: r,
             });
         },
         setInputLocked(e, t) {
@@ -461,10 +462,11 @@ let v = new o.Z("OverlayActionCreators"),
                 newState: n,
             });
         },
-        overlayUIFocusedPid(e) {
+        overlayUIFocusedPid(e, t) {
             i.Z.dispatch({
                 type: "OVERLAY_UI_FOCUSED_PID",
                 pid: e,
+                windowHandle: t,
             });
         },
     },
