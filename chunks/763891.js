@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685);
+n.d(t, { Z: () => R }), n(388685);
 var r = n(951288),
     l = n(647438),
     i = n(979554),
@@ -17,95 +17,96 @@ var r = n(951288),
     m = n(38900),
     b = n(709999),
     E = n(653126),
-    v = n(81136),
-    S = n(215023),
-    O = n(981631),
-    x = n(388032),
-    y = n(887353),
-    j = n(558513),
+    v = n(786040),
+    S = n(81136),
+    O = n(215023),
+    x = n(981631),
+    y = n(388032),
+    j = n(887353),
+    k = n(558513),
     T = n(662128),
     L = n(676790),
-    k = n(665195),
-    I = n(42742),
-    B = n(283727),
+    I = n(665195),
+    B = n(42742),
+    A = n(283727),
     N = n(266058),
     P = n(719138);
-function A(e) {
+function R(e) {
     var t;
-    let { isFetchingCategories: n, isFullScreen: A, scrollerRef: R, tab: Z } = e,
-        w = (0, g.sp)(),
-        H = null != (t = null == w ? void 0 : w.sessionId) ? t : "",
-        { noCache: F, includeUnpublished: D } = (0, v.Z)(),
-        M = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
-        W = (0, s.e7)([f.Z], () => f.Z.productsWithVariantsAsGroup),
-        [U, V] = l.useState(1),
-        z = (0, c.Fg)(),
-        G = (0, o.ap)(z),
-        [K, Y, q] = l.useMemo(() => {
-            switch (Z) {
-                case S.AW.AVATAR_DECORATIONS:
-                    return [x.intl.string(x.t.dRZYND), G ? k.Z : L.Z, i.Z.AVATAR_DECORATION];
-                case S.AW.PROFILE_EFFECTS:
-                    return [x.intl.string(x.t["1cNjt7"]), G ? P.Z : N.Z, i.Z.PROFILE_EFFECT];
-                case S.AW.NAMEPLATES:
-                    return [x.intl.string(x.t.V68Fq6), G ? B.Z : I.Z, i.Z.NAMEPLATE];
-                case S.AW.BUNDLES:
-                    return [x.intl.string(x.t.FYFppq), G ? T.Z : j.Z, i.Z.BUNDLE];
+    let { isFetchingCategories: n, isFullScreen: R, scrollerRef: Z, tab: w } = e,
+        H = (0, g.sp)(),
+        F = null != (t = null == H ? void 0 : H.sessionId) ? t : "",
+        { noCache: D, includeUnpublished: M } = (0, S.Z)(),
+        W = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
+        U = (0, s.e7)([f.Z], () => f.Z.productsWithVariantsAsGroup),
+        [V, z] = l.useState(1),
+        G = (0, c.Fg)(),
+        K = (0, o.ap)(G),
+        [Y, q, Q] = l.useMemo(() => {
+            switch (w) {
+                case O.AW.AVATAR_DECORATIONS:
+                    return [y.intl.string(y.t.dRZYND), K ? I.Z : L.Z, i.Z.AVATAR_DECORATION];
+                case O.AW.PROFILE_EFFECTS:
+                    return [y.intl.string(y.t["1cNjt7"]), K ? P.Z : N.Z, i.Z.PROFILE_EFFECT];
+                case O.AW.NAMEPLATES:
+                    return [y.intl.string(y.t.V68Fq6), K ? A.Z : B.Z, i.Z.NAMEPLATE];
+                case O.AW.BUNDLES:
+                    return [y.intl.string(y.t.FYFppq), K ? T.Z : k.Z, i.Z.BUNDLE];
             }
-        }, [Z, G]),
-        Q = (0, C.a)(),
-        J = l.useMemo(
+        }, [w, K]),
+        J = (0, C.a)(),
+        X = l.useMemo(
             () =>
-                Q(
-                    W.filter((e) => {
+                J(
+                    U.filter((e) => {
                         var t;
                         return (
-                            e.type === q ||
+                            e.type === Q ||
                             (e.type === i.Z.VARIANTS_GROUP &&
-                                (null == (t = e.variants) ? void 0 : t.some((e) => e.type === q)) === !0)
+                                (null == (t = e.variants) ? void 0 : t.some((e) => e.type === Q)) === !0)
                         );
                     }),
                 ),
-            [W, q, Q],
+            [U, Q, J],
         ),
-        X = (0, h.l)(J);
+        $ = (0, h.l)(X);
     l.useEffect(() => {
         (0, _.n)({
-            sessionId: H,
+            sessionId: F,
             checkpoint: _.a.SHOP_MOUNTED,
-            tab: Z,
-            isFullScreen: A,
-            unpublishedCategoriesShown: D,
-            cacheDisabled: F,
+            tab: w,
+            isFullScreen: R,
+            unpublishedCategoriesShown: M,
+            cacheDisabled: D,
         });
     }, []),
         l.useEffect(() => {
             n ||
                 (0, _.n)({
-                    sessionId: H,
+                    sessionId: F,
                     checkpoint: _.a.SHOP_RENDERED,
-                    tab: Z,
-                    isFullScreen: A,
-                    unpublishedCategoriesShown: D,
-                    cacheDisabled: F,
+                    tab: w,
+                    isFullScreen: R,
+                    unpublishedCategoriesShown: M,
+                    cacheDisabled: D,
                 });
-        }, [H, A, D, F, n, Z]);
-    let $ = p.Z.useConfig({ location: "CollectiblesFilterableShop" }).showCardsV2;
-    return n || null == M
+        }, [F, R, M, D, n, w]);
+    let ee = p.Z.useConfig({ location: "CollectiblesFilterableShop" }).showCardsV2;
+    return n || null == W
         ? (0, r.jsx)(m.Z, {})
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)("div", {
-                      style: { backgroundImage: "url(".concat(Y, ")") },
-                      className: y.bannerContainer,
+                      style: { backgroundImage: "url(".concat(q, ")") },
+                      className: j.bannerContainer,
                       children: (0, r.jsx)(a.Heading, {
                           variant: "heading-xxl/extrabold",
-                          children: K,
+                          children: Y,
                       }),
                   }),
                   (0, r.jsx)("div", {
-                      className: y.products,
-                      children: X.slice(40 * (U - 1), 40 * U).map((e, t) => {
+                      className: j.products,
+                      children: $.slice(40 * (V - 1), 40 * V).map((e, t) => {
                           let n = f.Z.getCategory(e.categorySkuId);
                           return null == n
                               ? null
@@ -113,15 +114,22 @@ function A(e) {
                                     g.k0,
                                     {
                                         newValue: { tilePosition: t },
-                                        children: $
-                                            ? (0, r.jsx)(E.Z, { skuId: e.skuId }, e.skuId)
+                                        children: ee
+                                            ? (0, r.jsx)(
+                                                  E.Z,
+                                                  {
+                                                      skuId: e.skuId,
+                                                      onClickAnalytics: (0, v.wO)(e, w, H),
+                                                  },
+                                                  e.skuId,
+                                              )
                                             : (0, r.jsx)(
                                                   b.Z,
                                                   {
                                                       product: e,
-                                                      user: M,
+                                                      user: W,
                                                       category: n,
-                                                      tab: Z,
+                                                      tab: w,
                                                   },
                                                   e.skuId,
                                               ),
@@ -130,27 +138,27 @@ function A(e) {
                                 );
                       }),
                   }),
-                  X.length > 40 &&
+                  $.length > 40 &&
                       (0, r.jsx)("div", {
-                          className: y.paginationContainer,
+                          className: j.paginationContainer,
                           children: (0, r.jsx)("div", {
                               children: (0, r.jsx)(a.DsT, {
-                                  currentPage: U,
-                                  totalCount: X.length,
+                                  currentPage: V,
+                                  totalCount: $.length,
                                   pageSize: 40,
                                   onPageChange: (e) => {
                                       var t;
-                                      d.default.track(O.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                          collectibles_shop_session_id: null == w ? void 0 : w.sessionId,
-                                          page_section: null == w ? void 0 : w.pageSection,
-                                          page_category: null == w ? void 0 : w.pageCategory,
+                                      d.default.track(x.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                          collectibles_shop_session_id: null == H ? void 0 : H.sessionId,
+                                          page_section: null == H ? void 0 : H.pageSection,
+                                          page_category: null == H ? void 0 : H.pageCategory,
                                           page_index: e,
                                           page_size: 40,
-                                          cta_name: "".concat(Z, " page ").concat(e),
-                                          page_type: Z,
+                                          cta_name: "".concat(w, " page ").concat(e),
+                                          page_type: w,
                                       }),
-                                          V(e),
-                                          null == R || null == (t = R.current) || t.scrollToTop({ animate: !0 });
+                                          z(e),
+                                          null == Z || null == (t = Z.current) || t.scrollToTop({ animate: !0 });
                                   },
                                   disablePaginationGap: !0,
                               }),

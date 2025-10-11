@@ -18,7 +18,8 @@ var l = n(120356),
 let m = (e) => {
     let { shelf: t, handleTransition: n, tab: l } = e,
         m = (0, s.e7)([a.default], () => a.default.getCurrentUser()),
-        b = d.Z.useConfig({ location: "ShelfBlock" }).showCardsV2;
+        b = d.Z.useConfig({ location: "ShelfBlock" }).showCardsV2,
+        E = (0, c.sp)();
     return null == m
         ? null
         : (0, r.jsxs)("div", {
@@ -60,6 +61,7 @@ let m = (e) => {
                                                       {
                                                           skuId: e,
                                                           prioritizedCurrency: l === C.AW.ORBS ? p.tA.ORBS : void 0,
+                                                          onClickAnalytics: (0, p.wO)(s, l, E),
                                                       },
                                                       e,
                                                   )

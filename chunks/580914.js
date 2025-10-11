@@ -23,14 +23,14 @@ var r = n(951288),
     x = n(655283),
     y = n(370039),
     j = n(937510),
-    T = n(38900),
-    L = n(709999),
-    k = n(653126),
+    k = n(38900),
+    T = n(709999),
+    L = n(653126),
     I = n(786040),
     B = n(401975),
-    N = n(794324),
-    P = n(934760),
-    A = n(619899),
+    A = n(794324),
+    N = n(934760),
+    P = n(619899),
     R = n(190157),
     Z = n(642909),
     w = n(859788),
@@ -63,7 +63,7 @@ let W = (0, E.IC)(90),
             q = l.useRef(null),
             Q = (0, Z.G)("HeroBlock"),
             J = (0, u.e7)([h.default], () => h.default.getCurrentUser()),
-            X = (0, P.Z)(),
+            X = (0, N.Z)(),
             $ = (0, m.sp)(),
             ee = O.Z.useConfig({ location: "HeroBlock" }).showButtonLeftAligned && G !== H.AW.ORBS,
             et = (0, x.x)("HeroBlock"),
@@ -97,7 +97,7 @@ let W = (0, E.IC)(90),
                 heroBannerStatic: es,
                 heroBannerAnimated: eo,
                 heroBannerRive: ea,
-            } = (0, N.hr)(en),
+            } = (0, A.hr)(en),
             ec = null != (t = null == er ? void 0 : er.responsive) && t,
             eu = null == er ? void 0 : er.backgroundStyle,
             ed = null != ea,
@@ -138,7 +138,7 @@ let W = (0, E.IC)(90),
             })(G !== H.AW.ORBS),
             e_ = (0, y.a)()(ef),
             em = (0, j.l)(e_).slice(0, eh),
-            eb = (0, A.St)(em),
+            eb = (0, P.St)(em),
             eE =
                 G === H.AW.ORBS
                     ? D.intl.string(D.t["1CdL8f"])
@@ -288,7 +288,7 @@ let W = (0, E.IC)(90),
                                       n || ep
                                           ? (0, r.jsx)(r.Fragment, {
                                                 children: [...Array(eh)].map((e, t) =>
-                                                    eO ? (0, r.jsx)(B.Z, {}, t) : (0, r.jsx)(T.K, {}, t),
+                                                    eO ? (0, r.jsx)(B.Z, {}, t) : (0, r.jsx)(k.K, {}, t),
                                                 ),
                                             })
                                           : (0, r.jsx)(r.Fragment, {
@@ -307,18 +307,23 @@ let W = (0, E.IC)(90),
                                                                   children:
                                                                       eO && (null == e ? void 0 : e.skuId) != null
                                                                           ? (0, r.jsx)(
-                                                                                k.Z,
+                                                                                L.Z,
                                                                                 {
                                                                                     skuId: null == e ? void 0 : e.skuId,
                                                                                     prioritizedCurrency:
                                                                                         G === H.AW.ORBS
                                                                                             ? I.tA.ORBS
                                                                                             : void 0,
+                                                                                    onClickAnalytics: (0, I.wO)(
+                                                                                        e,
+                                                                                        G,
+                                                                                        $,
+                                                                                    ),
                                                                                 },
                                                                                 e.skuId,
                                                                             )
                                                                           : (0, r.jsx)(
-                                                                                L.Z,
+                                                                                T.Z,
                                                                                 {
                                                                                     product: e,
                                                                                     category: n,

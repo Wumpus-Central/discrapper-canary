@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => N }), n(388685);
 var r = n(951288),
     l = n(647438),
     i = n(120356),
@@ -23,19 +23,19 @@ var r = n(951288),
     x = n(328626),
     y = n(849275),
     j = n(619899),
-    T = n(642909),
-    L = n(215023),
-    k = n(981631),
+    k = n(642909),
+    T = n(215023),
+    L = n(981631),
     I = n(388032),
     B = n(345213),
-    N = n(310582);
-let P = (e) => {
+    A = n(310582);
+let N = (e) => {
     var t;
     let {
             isLoading: n,
             title: i,
-            sortedSkuIds: P,
-            numVisibleItems: A,
+            sortedSkuIds: N,
+            numVisibleItems: P,
             prioritizeUserDiscounts: R,
             tab: Z,
             buttonContainerClassName: w,
@@ -43,7 +43,7 @@ let P = (e) => {
         } = e,
         F = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
         D = C.ZP.canUseCollectibles(F),
-        M = (0, T.G)("FeedBlock"),
+        M = (0, k.G)("FeedBlock"),
         {
             sortType: W,
             setSortType: U,
@@ -52,7 +52,7 @@ let P = (e) => {
             shuffleProducts: G,
             showRecommendationOption: K,
         } = (0, y.Z)({
-            sortedSkuIds: P,
+            sortedSkuIds: N,
             isPremiumUser: D,
             prioritizeUserDiscounts: R,
             orbsSupportedOnly: H,
@@ -71,7 +71,7 @@ let P = (e) => {
                     isShuffling: !1,
                     onOutroComplete: () => U(e),
                 }),
-                    f.default.track(k.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
+                    f.default.track(L.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
                         page_session_id: et,
                         sort_type: e,
                     });
@@ -82,13 +82,13 @@ let P = (e) => {
     return null == F
         ? null
         : (0, r.jsxs)("div", {
-              className: s()(N.popularPicksSection, N.centeredSection),
+              className: s()(A.popularPicksSection, A.centeredSection),
               children: [
                   (0, r.jsxs)("div", {
-                      className: N.blockHeader,
+                      className: A.blockHeader,
                       children: [
                           (0, r.jsxs)("div", {
-                              className: N.headerLeft,
+                              className: A.headerLeft,
                               children: [
                                   (0, r.jsx)(a.Heading, {
                                       variant: "heading-lg/semibold",
@@ -134,9 +134,9 @@ let P = (e) => {
                                                       {
                                                           onClick: () =>
                                                               (0, c.Z)(
-                                                                  p.Z.getArticleURL(k.BhN.DATA_USED_FOR_RECOMMENDED),
+                                                                  p.Z.getArticleURL(L.BhN.DATA_USED_FOR_RECOMMENDED),
                                                               ),
-                                                          className: N.informationIcon,
+                                                          className: A.informationIcon,
                                                           children: (0, r.jsx)(a.d3s, { size: "sm" }),
                                                       }),
                                                   Object.getOwnPropertyDescriptors
@@ -162,7 +162,7 @@ let P = (e) => {
                               ],
                           }),
                           (0, r.jsxs)("div", {
-                              className: s()(N.headerRight, { [B.shopTakeOver]: M }),
+                              className: s()(A.headerRight, { [B.shopTakeOver]: M }),
                               children: [
                                   (0, r.jsx)(a.Text, {
                                       variant: "text-md/medium",
@@ -173,7 +173,7 @@ let P = (e) => {
                                       children: (0, r.jsx)(a.PhF, {
                                           options: z,
                                           select: er,
-                                          className: N.sortSelect,
+                                          className: A.sortSelect,
                                           popoutClassName: s()({ [B.shopTakeOver]: M }),
                                           isSelected: (e) => e === W,
                                           serialize: (e) => e,
@@ -191,7 +191,7 @@ let P = (e) => {
                                                   onOutroComplete: G,
                                                   returnRef: en,
                                               }),
-                                                  f.default.track(k.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
+                                                  f.default.track(L.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
                                                       page_session_id: et,
                                                   });
                                           },
@@ -203,14 +203,14 @@ let P = (e) => {
                       ],
                   }),
                   (0, r.jsx)("div", {
-                      className: N.feed,
+                      className: A.feed,
                       children: n
                           ? (0, r.jsx)(r.Fragment, {
                                 children: [...Array(12)].map((e, t) =>
                                     el ? (0, r.jsx)(O.Z, {}, t + 1) : (0, r.jsx)(b.K, {}, t + 1),
                                 ),
                             })
-                          : Y.slice(0, A).map((e, t) => {
+                          : Y.slice(0, P).map((e, t) => {
                                 let n,
                                     l = _.Z.getCategoryForProduct(e.skuId);
                                 if (null == e || null == l) return null;
@@ -220,7 +220,7 @@ let P = (e) => {
                                             ? (0, r.jsx)(
                                                   "div",
                                                   {
-                                                      className: N.shuffleOutro,
+                                                      className: A.shuffleOutro,
                                                       children: (0, r.jsx)(O.Z, { skipPulseAnimation: !0 }),
                                                   },
                                                   "".concat(e.skuId, "-").concat(t),
@@ -228,17 +228,17 @@ let P = (e) => {
                                             : (0, r.jsx)(
                                                   "div",
                                                   {
-                                                      className: N.shuffleOutro,
-                                                      children: (0, r.jsx)("div", { className: N.placeholderCard }),
+                                                      className: A.shuffleOutro,
+                                                      children: (0, r.jsx)("div", { className: A.placeholderCard }),
                                                   },
                                                   "".concat(e.skuId, "-").concat(t),
                                               );
                                     else
                                         X === x.g.SORT_OUT
-                                            ? (n = N.sortChangedOutro)
+                                            ? (n = A.sortChangedOutro)
                                             : X === x.g.SHUFFLE_IN
-                                              ? (n = N.shuffleIntro)
-                                              : X === x.g.SORT_IN && (n = N.sortChangedIntro);
+                                              ? (n = A.shuffleIntro)
+                                              : X === x.g.SORT_IN && (n = A.sortChangedIntro);
                                 return (0, r.jsx)(
                                     h.k0,
                                     {
@@ -253,7 +253,8 @@ let P = (e) => {
                                                       className: n,
                                                       children: (0, r.jsx)(v.Z, {
                                                           skuId: null == e ? void 0 : e.skuId,
-                                                          prioritizedCurrency: Z === L.AW.ORBS ? S.tA.ORBS : void 0,
+                                                          prioritizedCurrency: Z === T.AW.ORBS ? S.tA.ORBS : void 0,
+                                                          onClickAnalytics: (0, S.wO)(e, Z, ee),
                                                       }),
                                                   })
                                                 : (0, r.jsx)(E.Z, {

@@ -28,14 +28,14 @@ let x = l.memo(function (e) {
                 hideVariantSwitcher: x,
                 hidePrice: y,
                 hidePrimaryCTA: j,
-                hideSecondaryCTA: T,
-                badgeOverride: L,
-                onClickCard: k,
+                hideSecondaryCTA: k,
+                badgeOverride: T,
+                onClickCard: L,
                 onClickPrimaryCTA: I,
                 onClickSecondaryCTA: B,
-                onMouseEnter: N,
-                onMouseLeave: P,
-                onFocus: A,
+                onMouseEnter: A,
+                onMouseLeave: N,
+                onFocus: P,
                 onBlur: R,
                 primaryCTAText: Z,
                 secondaryCTAIcon: w,
@@ -43,34 +43,35 @@ let x = l.memo(function (e) {
                 badgeClassName: F,
                 cardClassName: D,
                 prioritizedCurrency: M,
+                onClickAnalytics: W,
             } = e,
-            W = (0, d.Nd)(),
-            U = null == W ? void 0 : W.tab,
-            V = (0, v.zQ)(t),
-            z = l.useRef(null),
-            { isHoveringOrFocusing: G } = (0, u.Z)(z),
-            { handleCardVisibilityChange: K } = (0, g.E)(t.skuId, U === S.AW.CATALOG ? "full" : U),
-            Y = (0, m.J7)(t, c.Z.COLLECTIBLES_SHOP_CARD),
-            [q, Q] = (0, m.SS)(t),
-            J = null != Q && !x,
-            X = !j || !T,
-            $ = !y || J,
-            ee = X || J;
+            U = (0, d.Nd)(),
+            V = null == U ? void 0 : U.tab,
+            z = (0, v.zQ)(t),
+            G = l.useRef(null),
+            { isHoveringOrFocusing: K } = (0, u.Z)(G),
+            { handleCardVisibilityChange: Y } = (0, g.E)(t.skuId, V === S.AW.CATALOG ? "full" : V),
+            q = (0, m.J7)(t, c.Z.COLLECTIBLES_SHOP_CARD, W),
+            [Q, J] = (0, m.SS)(t),
+            X = null != J && !x,
+            $ = !j || !k,
+            ee = !y || X,
+            et = $ || X;
         return (0, r.jsx)(o.$, {
-            innerRef: z,
-            onChange: K,
+            innerRef: G,
+            onChange: Y,
             threshold: 0,
             children: (0, r.jsx)("div", {
                 className: O.productCardHoverContainer,
                 children: (0, r.jsx)(a.kL8, {
-                    ref: z,
-                    onClick: null != k ? k : Y,
-                    "aria-label": V,
+                    ref: G,
+                    onClick: null != L ? L : q,
+                    "aria-label": z,
                     className: s()(D, O.productCardContainer),
-                    onFocus: () => (null == A ? void 0 : A(t.skuId)),
+                    onFocus: () => (null == P ? void 0 : P(t.skuId)),
                     onBlur: () => (null == R ? void 0 : R(t.skuId)),
-                    onMouseEnter: () => (null == N ? void 0 : N(t.skuId)),
-                    onMouseLeave: () => (null == P ? void 0 : P(t.skuId)),
+                    onMouseEnter: () => (null == A ? void 0 : A(t.skuId)),
+                    onMouseLeave: () => (null == N ? void 0 : N(t.skuId)),
                     children: (0, r.jsxs)("div", {
                         className: O.productCardContentContainer,
                         children: [
@@ -79,14 +80,14 @@ let x = l.memo(function (e) {
                                 children: [
                                     (0, r.jsx)(f.Z, {
                                         skuId: t.skuId,
-                                        badgeOverride: L,
+                                        badgeOverride: T,
                                         className: F,
                                         prioritizedCurrency: M,
                                     }),
                                     !n &&
                                         (0, r.jsx)(E.Z, {
                                             skuId: t.skuId,
-                                            isCardHovered: G,
+                                            isCardHovered: K,
                                         }),
                                 ],
                             }),
@@ -98,24 +99,24 @@ let x = l.memo(function (e) {
                                             skuId: t.skuId,
                                             className: H,
                                         }),
-                                    $ &&
+                                    ee &&
                                         (0, r.jsxs)("div", {
-                                            className: s()(O.footerInfoContainer, { [O.footerHideOnHover]: ee }),
+                                            className: s()(O.footerInfoContainer, { [O.footerHideOnHover]: et }),
                                             children: [
                                                 !y &&
                                                     (0, r.jsx)(C.Z, {
                                                         skuId: t.skuId,
                                                         prioritizedCurrency: M,
                                                     }),
-                                                J && Q,
+                                                X && J,
                                             ],
                                         }),
-                                    ee &&
+                                    et &&
                                         (0, r.jsxs)("div", {
                                             className: s()(O.footerInteractibleContainer, O.footerShowOnHover),
                                             children: [
-                                                J && Q,
-                                                X &&
+                                                X && J,
+                                                $ &&
                                                     (0, r.jsxs)(a.ButtonGroup, {
                                                         wrap: !1,
                                                         fullWidth: !0,
@@ -123,20 +124,22 @@ let x = l.memo(function (e) {
                                                             !j &&
                                                                 (0, r.jsx)(h.Z, {
                                                                     skuId: t.skuId,
-                                                                    cardRef: z,
-                                                                    selectedVariantIndex: q,
+                                                                    cardRef: G,
+                                                                    selectedVariantIndex: Q,
                                                                     onClick: I,
                                                                     text: Z,
                                                                     prioritizedCurrency: M,
+                                                                    onClickAnalytics: W,
                                                                 }),
-                                                            !T &&
+                                                            !k &&
                                                                 (0, r.jsx)(_.Z, {
                                                                     skuId: t.skuId,
-                                                                    cardRef: z,
-                                                                    selectedVariantIndex: q,
+                                                                    cardRef: G,
+                                                                    selectedVariantIndex: Q,
                                                                     onClick: B,
                                                                     icon: w,
                                                                     prioritizedCurrency: M,
+                                                                    onClickAnalytics: W,
                                                                 }),
                                                         ],
                                                     }),
