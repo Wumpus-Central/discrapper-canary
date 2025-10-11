@@ -152,10 +152,10 @@ function et() {
     d.Z.setInputLocked(!0, (0, w.getPID)());
 }
 function en() {
-    d.Z.setFocusedPID(w.DEV_PID, null);
+    d.Z.setFocusedPID(w.DEV_PID);
 }
 function ei() {
-    d.Z.setFocusedPID(null, null);
+    d.Z.setFocusedPID(null);
 }
 function er(e) {
     let t = z.ZP.isInputLocked((0, w.getPID)());
@@ -221,7 +221,7 @@ function eo(e) {
                     n.addEventListener("keydown", er),
                     n.addEventListener("keyup", er),
                     Q &&
-                        (n.document.hasFocus() && d.Z.setFocusedPID(w.DEV_PID, null),
+                        (n.document.hasFocus() && d.Z.setFocusedPID(w.DEV_PID),
                         n.addEventListener("focus", en),
                         n.addEventListener("blur", ei));
             },

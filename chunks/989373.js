@@ -144,20 +144,19 @@ let Z = o.memo(function (e) {
                 (0, c.zq)(() => {
                     clearInterval(Z.current), (S.current = !0);
                 });
-            let A = (0, r.e7)([b.Z], () => b.Z.windowSize(null != a ? (0, C.ZY)(a) : void 0)),
-                E = (0, r.e7)([x.ZP], () => x.ZP.getFocusedWindowHandle());
+            let A = (0, r.e7)([b.Z], () => b.Z.windowSize(null != a ? (0, C.ZY)(a) : void 0));
             return (
                 o.useEffect(() => {
                     if (null == a || !u || a.innerHeight !== A.height || a.innerWidth !== A.width) return;
                     let e = a.requestAnimationFrame(() => {
                         e = a.requestAnimationFrame(() => {
-                            i.Z.overlayUIFocusedPid(null != _ ? _ : m.UNSET_PID, E);
+                            i.Z.overlayUIFocusedPid(null != _ ? _ : m.UNSET_PID);
                         });
                     });
                     return () => {
                         a.cancelAnimationFrame(e);
                     };
-                }, [u, a, _, E, A]),
+                }, [u, a, _, A]),
                 u
             );
         })(n, S.$S),
