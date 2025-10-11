@@ -1,81 +1,80 @@
-r.d(e, { default: () => O }), r(953529), r(388685);
+r.d(t, { default: () => b }), r(953529), r(388685);
 var o = r(951288);
 r(647438);
-var n = r(793030),
-    i = r(481060),
-    c = r(546791),
+var n = r(435935),
+    i = r(793030),
+    c = r(481060),
+    s = r(546791),
     l = r(277537),
-    s = r(785681),
-    a = r(880257),
-    u = r(863552),
-    h = r(292352),
-    d = r(345909),
-    p = r(388032),
-    f = r(441076);
-let C = {
-        [h.MY.USER_INTERACTION]: (0, o.jsx)(u.Z, {
+    a = r(785681),
+    u = r(880257),
+    h = r(863552),
+    d = r(292352),
+    p = r(345909),
+    f = r(388032),
+    C = r(441076);
+let O = {
+        [d.MY.USER_INTERACTION]: (0, o.jsx)(h.Z, {
             width: 18,
             height: 18,
         }),
-        [h.MY.USER_CALLED]: (0, o.jsx)(i.Csw, {
+        [d.MY.USER_CALLED]: (0, o.jsx)(c.Csw, {
             size: "custom",
             color: "currentColor",
             width: 22,
             height: 22,
         }),
-        [h.MY.USER_ADD]: (0, o.jsx)(i.iFz, {
+        [d.MY.USER_ADD]: (0, o.jsx)(c.iFz, {
+            size: "custom",
+            color: "currentColor",
+            className: C.personWavingIcon,
+            width: 22,
+            height: 22,
+        }),
+        [d.MY.GUILD_ADD]: (0, o.jsx)(c.dRF, {
             size: "custom",
             color: "currentColor",
             width: 22,
             height: 22,
         }),
-        [h.MY.GUILD_ADD]: (0, o.jsx)(i.dRF, {
+        [d.MY.GUILD_INTERACTION]: (0, o.jsx)(c.VL1, {
+            size: "custom",
+            color: "currentColor",
+            className: C.threadIcon,
+            width: 22,
+            height: 22,
+        }),
+        [d.MY.TOTAL_VOICE_MINUTES]: (0, o.jsx)(c.Csw, {
             size: "custom",
             color: "currentColor",
             width: 22,
             height: 22,
         }),
-        [h.MY.GUILD_INTERACTION]: (0, o.jsx)(i.VL1, {
-            size: "custom",
-            color: "currentColor",
-            width: 22,
-            height: 22,
-        }),
-        [h.MY.TOTAL_VOICE_MINUTES]: (0, o.jsx)(n.T39, {
-            size: "custom",
-            color: "currentColor",
-            width: 22,
-            height: 22,
-        }),
-        [h.MY.PURCHASES]: (0, o.jsx)(n.ciH, {
+        [d.MY.PURCHASES]: (0, o.jsx)(c.EOn, {
             size: "custom",
             color: "currentColor",
             width: 22,
             height: 22,
         }),
     },
-    j = (t) => {
-        let { header: e, description: r, icon: c } = t;
-        return (0, o.jsxs)(n.Kqy, {
-            direction: "horizontal",
-            className: f.row,
-            padding: 16,
-            align: "center",
-            gap: 16,
-            fullWidth: !1,
+    j = (e) => {
+        let { header: t, description: r, icon: i } = e;
+        return (0, o.jsxs)(n.k, {
+            className: C.row,
+            grow: 0,
             children: [
                 (0, o.jsx)("div", {
-                    className: f.iconContainer,
-                    children: c,
+                    className: C.iconContainer,
+                    children: i,
                 }),
                 (0, o.jsxs)("div", {
-                    className: f.rowContent,
+                    className: C.rowContent,
                     children: [
-                        (0, o.jsx)(i.Text, {
+                        (0, o.jsx)(c.Text, {
                             variant: "text-sm/bold",
-                            children: e,
+                            children: t,
                         }),
-                        (0, o.jsx)(i.Text, {
+                        (0, o.jsx)(c.Text, {
                             variant: "text-xs/medium",
                             children: r,
                         }),
@@ -84,32 +83,28 @@ let C = {
             ],
         });
     },
-    O = (t) => {
-        let { transitionState: e, onClose: r } = t,
-            i = (0, l.PO)("family_center_activity_card"),
-            u = (0, s.o)(p.intl.string(d.default.q3IRam), p.intl.string(d.default.JNLpDQ)),
-            h = (0, a.Z)(),
-            f = (0, c._p)(i);
-        return (0, o.jsx)(n.Modal, {
-            transitionState: e,
+    b = (e) => {
+        let { transitionState: t, onClose: r } = e,
+            n = (0, l.PO)("family_center_activity_card"),
+            c = (0, a.o)(f.intl.string(p.default.q3IRam), f.intl.string(p.default.JNLpDQ)),
+            h = (0, u.Z)(),
+            d = (0, s._p)(n);
+        return (0, o.jsx)(i.Modal, {
+            transitionState: t,
             onClose: r,
             actions: [],
-            title: u,
-            children: (0, o.jsx)(n.Kqy, {
-                gap: 8,
-                fullWidth: !1,
-                children: f.map((t) => {
-                    let [e, r] = t;
-                    return (0, o.jsx)(
-                        j,
-                        {
-                            icon: C[e],
-                            header: r.tooltipHeader(),
-                            description: r.tooltipDescription(null != h ? h : void 0),
-                        },
-                        e,
-                    );
-                }),
+            title: c,
+            children: d.map((e) => {
+                let [t, r] = e;
+                return (0, o.jsx)(
+                    j,
+                    {
+                        icon: O[t],
+                        header: r.tooltipHeader(),
+                        description: r.tooltipDescription(null != h ? h : void 0),
+                    },
+                    t,
+                );
             }),
         });
     };
