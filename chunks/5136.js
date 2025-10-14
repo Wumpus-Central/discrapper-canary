@@ -10,16 +10,17 @@ function a(e) {
             (e) => ({
                 isDragging: e.isDragging(),
                 clientOffset: e.getClientOffset(),
+                itemType: e.getItemType(),
             }),
             [],
         ),
-        { isDragging: d, clientOffset: p } = (0, i.f)(u),
-        f = (0, l.zPA)();
+        { isDragging: d, clientOffset: p, itemType: f } = (0, i.f)(u),
+        h = (0, l.zPA)();
     (0, r.useEffect)(
         () => (
             (s.current = requestAnimationFrame(function e(r) {
-                if (f || null == t) return;
-                if (((s.current = requestAnimationFrame(e)), !1 === d || null == p)) {
+                if (h || null == t) return;
+                if (((s.current = requestAnimationFrame(e)), !1 === d || null == p || "WIDGET" !== f)) {
                     (t.style.overflowAnchor = "auto"), (t.style.overscrollBehavior = "auto"), (c.current = r);
                     return;
                 }
@@ -28,18 +29,18 @@ function a(e) {
                 c.current = r;
                 let l = t.getBoundingClientRect(),
                     u = p.y,
-                    h = u - l.top,
-                    g = l.bottom - u,
-                    m = 0;
-                h >= 0 && h < n
-                    ? (m = -a * Math.pow(1 - h / n, o))
-                    : g >= 0 && g < n && (m = a * Math.pow(1 - g / n, o)),
-                    0 !== m && (t.scrollTop += m * i);
+                    g = u - l.top,
+                    m = l.bottom - u,
+                    b = 0;
+                g >= 0 && g < n
+                    ? (b = -a * Math.pow(1 - g / n, o))
+                    : m >= 0 && m < n && (b = a * Math.pow(1 - m / n, o)),
+                    0 !== b && (t.scrollTop += b * i);
             })),
             () => {
                 null !== s.current && cancelAnimationFrame(s.current), (s.current = null), (c.current = 0);
             }
         ),
-        [t, d, p, n, a, o, f],
+        [t, d, p, f, n, a, o, h],
     );
 }

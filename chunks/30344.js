@@ -1,61 +1,84 @@
-n.d(t, { Z: () => o });
-var r = n(951288);
-n(647438);
-var i = n(890814),
-    a = n(753436);
+r.d(t, { Z: () => o });
+var n = r(951288);
+r(647438);
+var i = r(890814),
+    a = r(753436);
 function o(e) {
-    var { games: t } = e,
-        n = (function (e, t) {
+    var { games: t, widgetType: r } = e,
+        o = (function (e, t) {
             if (null == e) return {};
-            var n,
-                r,
+            var r,
+                n,
                 i = (function (e, t) {
                     if (null == e) return {};
-                    var n,
-                        r,
+                    var r,
+                        n,
                         i = {},
                         a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++)
-                    (n = a[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                for (n = 0; n < a.length; n++)
+                    (r = a[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
             return i;
-        })(e, ["games"]);
-    return (0, r.jsx)(i.Z, {
+        })(e, ["games", "widgetType"]);
+    return (0, n.jsx)(i.Z, {
         games: t,
-        renderGame: (e) =>
-            (0, r.jsx)(
+        renderGame: (e, t) => {
+            var i, l;
+            return (0, n.jsx)(
                 a.S,
-                (function (e) {
+                ((i = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
+                        var r = null != arguments[t] ? arguments[t] : {},
+                            n = Object.keys(r);
                         "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            (n = n.concat(
+                                Object.getOwnPropertySymbols(r).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                                 }),
                             )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
+                            n.forEach(function (t) {
+                                var n;
+                                (n = r[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: r,
+                                              value: n,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (e[t] = r);
+                                        : (e[t] = n);
                             });
                     }
                     return e;
-                })({ game: e }, n),
-            ),
+                })(
+                    {
+                        widgetType: r,
+                        game: e,
+                    },
+                    o,
+                )),
+                (l = l = { index: t }),
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                    : (function (e, t) {
+                          var r = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var n = Object.getOwnPropertySymbols(e);
+                              r.push.apply(r, n);
+                          }
+                          return r;
+                      })(Object(l)).forEach(function (e) {
+                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                      }),
+                i),
+                e.applicationId,
+            );
+        },
     });
 }

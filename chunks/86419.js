@@ -1,19 +1,20 @@
 n.d(t, {
-    $b: () => U,
+    $b: () => G,
     Bu: () => j,
     ES: () => k,
+    Eq: () => U,
     Gv: () => T,
     Hy: () => O,
     M8: () => I,
     RZ: () => M,
-    X6: () => G,
-    kQ: () => Z,
+    X6: () => B,
+    kQ: () => F,
     mR: () => y,
     n$: () => x,
     np: () => C,
-    ou: () => W,
+    ou: () => K,
     qH: () => D,
-    tk: () => B,
+    tk: () => Z,
     y8: () => L,
 }),
     n(388685),
@@ -194,14 +195,24 @@ function k(e, t) {
     let f = w(new l.zy(b(g({}, null != s ? s : { type: e }), { games: a })));
     u.Z.setPendingWidgets(f), o.Z.getDetectableGamesSupplemental([t.applicationId]);
 }
-function U(e, t) {
+function U(e, t, n) {
+    let r = P(e);
+    if (null == r || null == r.games || t === n) return;
+    let i = [...r.games];
+    if (t < 0 || t >= i.length || n < 0 || n >= i.length) return;
+    let [a] = i.splice(t, 1);
+    i.splice(n, 0, a);
+    let o = w(new l.zy(b(g({}, r), { games: i })));
+    u.Z.setPendingWidgets(o);
+}
+function G(e, t) {
     let n = P(e);
     if (null == n) return;
     let r = (null != n.games ? n.games : []).filter((e) => e.applicationId !== t),
         i = w(new l.zy(b(g({}, n), { games: r })));
     u.Z.setPendingWidgets(i);
 }
-async function G() {
+async function B() {
     let e = d.Z.getPendingWidgets();
     if (null !== e)
         try {
@@ -210,48 +221,48 @@ async function G() {
             console.error("Failed to save sample widgets:", e);
         }
 }
-async function B() {
+async function Z() {
     try {
         await u.Z.savePendingWidgets([]);
     } catch (e) {
         console.error("Failed to clear saved widgets", e);
     }
 }
-function Z(e) {
+function F(e) {
     let t = T(e.type);
     return e.games.length >= t;
 }
-function F(e) {
+function V(e) {
     return null == e || "" === e || (Array.isArray(e) && 0 === e.length) ? null : e;
 }
-function V(e, t) {
-    return e.applicationId === t.applicationId && F(e.comment) === F(t.comment);
-}
 function H(e, t) {
+    return e.applicationId === t.applicationId && V(e.comment) === V(t.comment);
+}
+function Y(e, t) {
     if (e.applicationId !== t.applicationId) return !1;
-    let n = F(e.tags),
-        r = F(t.tags);
+    let n = V(e.tags),
+        r = V(t.tags);
     return (
         (null === n && null === r) ||
         (null !== n && null !== r && n.length === r.length && n.every((e, t) => e === r[t]))
     );
 }
-function Y(e, t) {
+function W(e, t) {
     return e.applicationId === t.applicationId;
 }
-function W(e, t, n) {
+function K(e, t, n) {
     let r;
     if (e.length !== t.length) return !1;
     switch (n) {
         case a.l.FAVORITE_GAMES:
-            r = V;
+            r = H;
             break;
         case a.l.CURRENT_GAMES:
-            r = H;
+            r = Y;
             break;
         case a.l.WANT_TO_PLAY_GAMES:
         case a.l.PLAYED_GAMES:
-            r = Y;
+            r = W;
             break;
         default:
             throw Error("Unknown widget type: ".concat(n));
