@@ -112,6 +112,9 @@ class C extends (r = i.ZP.PersistedStore) {
             wordSketchData: _.toJSON(),
         };
     }
+    getMaxWordCount() {
+        return h;
+    }
     getAllWordsSorted() {
         return E(p);
     }

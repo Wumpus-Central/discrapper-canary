@@ -1288,7 +1288,7 @@ let e7 = (0, $.oH)((e, t, n) => {
                         b("exact", ey, t);
                         continue c;
                     }
-                let P = /\s+|\./;
+                let P = /\s+|\.|_/;
                 for (let [e, t] of R)
                     if (u === e.split(P, 1)[0]) {
                         b("exact", eO, t);

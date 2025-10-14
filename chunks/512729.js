@@ -15,6 +15,7 @@ function d(e, t, n, d) {
         g = null !== m && m !== i.eq.MENTION_SUGGESTIONS;
     if (
         !_ ||
+        n.isDM() ||
         g ||
         l.bN.areStylesDisabled(e) ||
         !(null == (f = e.chatInputType.autocomplete) ? void 0 : f.mentionSuggestions) ||

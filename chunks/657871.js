@@ -11,6 +11,7 @@ let r = (0, n(818083).B)({
         suggestionDesign: "horizontal",
         highlightDesign: "mention",
         onlyExactMatch: !1,
+        eagerRecentSenders: !1,
     },
     treatments: [
         {
@@ -21,6 +22,7 @@ let r = (0, n(818083).B)({
                 suggestionDesign: "vertical",
                 highlightDesign: "simple",
                 onlyExactMatch: !1,
+                eagerRecentSenders: !1,
             },
         },
         {
@@ -31,6 +33,7 @@ let r = (0, n(818083).B)({
                 suggestionDesign: "vertical",
                 highlightDesign: "simple",
                 onlyExactMatch: !0,
+                eagerRecentSenders: !1,
             },
         },
         {
@@ -41,6 +44,7 @@ let r = (0, n(818083).B)({
                 suggestionDesign: "vertical",
                 highlightDesign: "mention",
                 onlyExactMatch: !1,
+                eagerRecentSenders: !1,
             },
         },
         {
@@ -51,6 +55,18 @@ let r = (0, n(818083).B)({
                 suggestionDesign: "horizontal",
                 highlightDesign: "simple",
                 onlyExactMatch: !1,
+                eagerRecentSenders: !1,
+            },
+        },
+        {
+            id: 5,
+            label: "Exact match + eager recent senders",
+            config: {
+                enabled: !0,
+                suggestionDesign: "vertical",
+                highlightDesign: "simple",
+                onlyExactMatch: !0,
+                eagerRecentSenders: !0,
             },
         },
     ],

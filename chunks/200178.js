@@ -50,6 +50,11 @@ function p() {
                             className: m.sectionTitle,
                             children: ["Word Frequencies (", i.length, " unique words)"],
                         }),
+                        (0, a.jsx)(o.Text, {
+                            variant: "text-sm/normal",
+                            children:
+                                "This is a list of the most common short words found in messages sent and received by this client. They're ignored by the mention suggestions experiment to avoid distracting suggestions. These statistics are stored locally only.",
+                        }),
                         (0, a.jsxs)("div", {
                             className: m.headerSection,
                             children: [

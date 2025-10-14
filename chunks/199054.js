@@ -16,7 +16,7 @@ let _ = {
         var o;
         let { enabled: u } = (0, s.kB)("MentionSuggestionAutocompletes", { autoTrackExposure: !1 });
         return (
-            !!u &&
+            !(!u || e.isDM()) &&
             !!c.HV.getSetting() &&
             !!(null == (o = i.chatInputType.autocomplete) ? void 0 : o.mentionSuggestions) &&
             i.mentions.user !== d.h3.DENY &&
