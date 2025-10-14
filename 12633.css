@@ -21640,7 +21640,7 @@ svg.radioIcon_c1e9c4 {
 .showEffect_dfb989.container_dfb989 .toon_dfb989 {
     --custom-toon-stroke-color: hsl(from var(--custom-display-name-styles-main-color) h s calc(max(12, l * 0.4)));
     --custom-toon-stroke-width: calc(1.6px + 0.04em);
-    --custom-toon-margin: calc(var(--custom-toon-stroke-width)*-1 + 0.02em);
+    --custom-toon-margin: calc(var(--custom-toon-stroke-width)*-1);
     paint-order: stroke fill;
     position: relative;
     -webkit-text-stroke-width: var(--custom-toon-stroke-width);
@@ -21650,9 +21650,13 @@ svg.radioIcon_c1e9c4 {
     margin-left: var(--custom-toon-margin);
     margin-right: var(--custom-toon-margin);
     padding-bottom: var(--custom-toon-stroke-width);
-    padding-left: var(--custom-toon-stroke-width);
-    padding-right: var(--custom-toon-stroke-width);
     transition: color 266ms cubic-bezier(.43, .21, .27, .78)
+}
+
+.showEffect_dfb989.container_dfb989 .toon_dfb989,
+.showEffect_dfb989.container_dfb989 .toon_dfb989:before {
+    padding-left: var(--custom-toon-stroke-width);
+    padding-right: var(--custom-toon-stroke-width)
 }
 
 .showEffect_dfb989.container_dfb989 .toon_dfb989:before {
@@ -21660,12 +21664,10 @@ svg.radioIcon_c1e9c4 {
     background-clip: text;
     -webkit-background-clip: text;
     background-size: 100% 400%;
-    bottom: var(--custom-toon-margin);
     content: attr(data-username-with-effects);
-    left: var(--custom-toon-stroke-width);
+    inset: 0;
+    padding-bottom: var(--custom-toon-margin);
     position: absolute;
-    right: var(--custom-toon-stroke-width);
-    top: 0;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 0;
     -webkit-text-stroke-color: transparent;
@@ -84094,23 +84096,6 @@ html .invoiceCancelRow__968a4 {
     z-index: 1
 }
 
-.button_c6e099 {
-    background-color: var(--primary-500);
-    border-radius: 100px;
-    color: var(--white-500);
-    font-size: 16px;
-    font-weight: var(--font-weight-semibold);
-    padding: 12px 18px
-}
-
-.button_c6e099:hover {
-    background-color: var(--primary-600)
-}
-
-.enable-forced-colors .button_c6e099 {
-    background-color: transparent
-}
-
 .root_e605a1 {
     background-color: var(--opacity-black-60);
     bottom: 0;
@@ -84865,27 +84850,6 @@ html .invoiceCancelRow__968a4 {
     text-align: center
 }
 
-.cta_a3a802 {
-    background-color: var(--primary-500);
-    border-radius: 100px;
-    color: var(--white-500);
-    font-weight: var(--font-weight-semibold);
-    padding: 10px 16px;
-    z-index: 1
-}
-
-.cta_a3a802:hover {
-    background-color: var(--primary-600)
-}
-
-.cta_a3a802.small_a3a802 {
-    padding: 7px 16px
-}
-
-.buttonReset_a3a802 {
-    line-height: 0
-}
-
 .content_c30e20 {
     align-items: center;
     bottom: 0;
@@ -84918,14 +84882,12 @@ html .invoiceCancelRow__968a4 {
     padding-top: 8px
 }
 
-.addStreamIcon_c30e20 {
-    height: 24px;
-    width: 24px
+.cta_c30e20 {
+    z-index: 1
 }
 
-.addCTA_c30e20 {
-    margin-left: 8px;
-    padding: 8px
+.addCta_c30e20 {
+    margin-left: 8px
 }
 
 .content__02686 {
