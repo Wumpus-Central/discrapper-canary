@@ -20,8 +20,8 @@ var r = n(951288),
     v = n(290297),
     y = n(244317),
     I = n(765717),
-    S = n(358221),
-    C = n(823748),
+    C = n(358221),
+    S = n(823748),
     T = n(626421),
     N = n(118379),
     j = n(267161),
@@ -74,8 +74,8 @@ var r = n(951288),
     ev = n(256638),
     ey = n(663701),
     eI = n(697309),
-    eS = n(425369),
-    eC = n(715702),
+    eC = n(425369),
+    eS = n(715702),
     eT = n(981631),
     eN = n(176505),
     ej = n(215023),
@@ -247,7 +247,7 @@ let ew = (0, u.Un)({
                 case eN.oC.GAME_SERVERS:
                     return (0, r.jsx)(eV, { guildId: l });
                 case eN.oC.REPORT_TO_MOD:
-                    return (0, r.jsx)(C.Z, {});
+                    return (0, r.jsx)(S.Z, {});
                 default:
                     (0, eb.vE)(u);
             }
@@ -267,7 +267,7 @@ let ew = (0, u.Un)({
                 i.id,
             );
         }
-        return (0, r.jsx)(C.Z, {});
+        return (0, r.jsx)(S.Z, {});
     },
     ez = i.memo(function () {
         let { guildId: e, channelId: t } = (0, el.Z)(),
@@ -322,26 +322,13 @@ let ew = (0, u.Un)({
               })
             : null;
     },
-    eJ = () => (0, r.jsx)(eS.Z, {}),
-    e$ = () => (0, r.jsx)(eC.Z, {}),
-    e0 = function () {
-        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        return function (t) {
-            let { tab: n } = (0, o.parse)(t.location.search);
-            return Object.values(ej.AW).includes(n)
-                ? (0, r.jsx)(
-                      N.Z,
-                      eZ(
-                          {
-                              isFullScreen: e,
-                              tab: n,
-                          },
-                          t,
-                      ),
-                  )
-                : (0, r.jsx)(N.Z, eZ({ isFullScreen: e }, t));
+    eJ = () => (0, r.jsx)(eC.Z, {}),
+    e$ = () => (0, r.jsx)(eS.Z, {}),
+    e0 = () =>
+        function (e) {
+            let { tab: t } = (0, o.parse)(e.location.search);
+            return Object.values(ej.AW).includes(t) ? (0, r.jsx)(N.Z, eZ({ tab: t }, e)) : (0, r.jsx)(N.Z, eZ({}, e));
         };
-    };
 function e1() {
     return (0, r.jsx)(en.Z, { withTopBorder: !0 });
 }
@@ -379,7 +366,7 @@ let e8 = (e) => (0, r.jsx)(y.Z, eZ({}, e)),
                     case "authorized-apps":
                         return (0, r.jsx)(s.l_, { to: eT.Z5c.SETTINGS("authorized-apps") });
                     case "open-shop":
-                        return (0, r.jsx)(s.l_, { to: eT.Z5c.COLLECTIBLES_SHOP_FULLSCREEN });
+                        return (0, r.jsx)(s.l_, { to: eT.Z5c.COLLECTIBLES_SHOP });
                     case "editProfile":
                         return (0, r.jsx)(s.l_, { to: { pathname: eT.Z5c.SETTINGS("profile-customization") } });
                     case "gift":
@@ -402,27 +389,20 @@ function e6(e) {
     document.body.style.setProperty("--custom-guild-sidebar-width", "".concat(e, "px"));
 }
 function e7(e) {
-    let {
-        hasNotice: t,
-        sidebarTheme: n,
-        hideSidebar: l,
-        hideChannelList: o,
-        isSidebarOpen: s,
-        isOnFullScreenCollectiblesShopRoute: c,
-    } = e;
+    let { hasNotice: t, sidebarTheme: n, hideSidebar: l, hideChannelList: o, isSidebarOpen: s } = e;
     (0, _.t)(!0);
-    let u = "app view user trigger debugging";
-    b.R6.useExperiment({ location: u }, { autoTrackExposure: !1 }), b.R6.trackExposure({ location: u });
-    let g = (0, p.e7)([S.Z], () => S.Z.isFullscreenInContext()),
-        m = (0, A.T)("ChannelSidebar"),
-        E = (0, j.useAppSidebarState)((e) => !e.isOpen) && m;
+    let c = "app view user trigger debugging";
+    b.R6.useExperiment({ location: c }, { autoTrackExposure: !1 }), b.R6.trackExposure({ location: c });
+    let u = (0, p.e7)([C.Z], () => C.Z.isFullscreenInContext()),
+        g = (0, A.T)("ChannelSidebar"),
+        m = (0, j.useAppSidebarState)((e) => !e.isOpen) && g;
     i.useLayoutEffect(() => {
-        if (m) {
+        if (g) {
             var e;
             let t = parseInt(null != (e = f.K.get(eI.nT)) ? e : "");
             Number.isNaN(t) && (t = eI.qO),
                 (t = Math.min(Math.max(t, eI.li), eI.zx)),
-                !m && t <= eI.p8 && (t = eI.qO),
+                !g && t <= eI.p8 && (t = eI.qO),
                 e6(t);
             let n = (e) => {
                 e.metaKey && "b" === e.key && j.useAppSidebarState.setState((e) => ({ isOpen: !e.isOpen }));
@@ -434,17 +414,17 @@ function e7(e) {
                 }
             );
         }
-    }, [m]),
+    }, [g]),
         i.useLayoutEffect(() => {
-            if (E) e6(eI.p8);
+            if (m) e6(eI.p8);
             else {
                 var e;
                 let t = parseInt(null != (e = f.K.get(eI.nT)) ? e : "");
                 Number.isNaN(t) && (t = eI.qO), e6(t);
             }
-        }, [E]);
-    let v = i.useRef(null),
-        y = i.useCallback(
+        }, [m]);
+    let E = i.useRef(null),
+        v = i.useCallback(
             (e, t) => {
                 var n;
                 e6(e);
@@ -456,61 +436,60 @@ function e7(e) {
                         ? document.body.classList.add(eA.draggingMax)
                         : document.body.classList.remove(eA.draggingMax);
                 let i = t - e;
-                null == (n = v.current) ||
+                null == (n = E.current) ||
                     n.style.setProperty("--custom-overdrag", "".concat(1 + Math.min(Math.abs(i / eI.p8), 0.25))),
-                    m && (j.useAppSidebarState.setState({ isOpen: !r }), r && e6(eI.p8));
+                    g && (j.useAppSidebarState.setState({ isOpen: !r }), r && e6(eI.p8));
             },
-            [m],
+            [g],
         ),
-        I = i.useCallback(() => {
+        y = i.useCallback(() => {
             document.body.classList.add(eA.dragging);
         }, []),
-        C = i.useCallback((e) => {
+        I = i.useCallback((e) => {
             var t;
             document.body.classList.remove(eA.dragging),
                 document.body.classList.remove(eA.draggingMin),
                 document.body.classList.remove(eA.draggingMax),
                 document.body.classList.remove(eA.collapsing),
-                null == (t = v.current) || t.style.setProperty("--custom-overdrag", "0px"),
+                null == (t = E.current) || t.style.setProperty("--custom-overdrag", "0px"),
                 f.K.set(eI.nT, e),
                 em.default.track(eT.rMx.CHANNEL_SIDEBAR_RESIZED, { width: e });
         }, []),
-        T = (0, O.Z)({
+        S = (0, O.Z)({
             minDimension: eI.li,
             maxDimension: eI.zx,
-            resizableDomNodeRef: v,
-            onElementResize: y,
-            onElementResizeStart: I,
-            onElementResizeEnd: C,
+            resizableDomNodeRef: E,
+            onElementResize: v,
+            onElementResizeStart: y,
+            onElementResizeEnd: I,
             orientation: O.y.HORIZONTAL_RIGHT,
             throttleDuration: 0,
         }),
-        N = i.useCallback(() => {
+        T = i.useCallback(() => {
             j.useAppSidebarState.setState((e) => ({ isOpen: !e.isOpen }));
         }, []);
     if (
         (i.useLayoutEffect(() => {
-            E && e6(eI.p8);
-        }, [E]),
+            m && e6(eI.p8);
+        }, [m]),
         l)
     )
         return null;
-    let P = { className: a()(eA.sidebarList, { [eA.sidebarListRounded]: !t }) };
+    let N = { className: a()(eA.sidebarList, { [eA.sidebarListRounded]: !t }) };
     return (0, r.jsx)(h.f6W, {
         theme: n,
         children: (e) => {
             var t, i;
             return (0, r.jsxs)("div", {
-                ref: v,
-                "data-collapsed": E,
+                ref: E,
+                "data-collapsed": m,
                 className: a()(eA.sidebar, e, {
                     [eA.fullWidth]: d.tq,
-                    [eA.hidden]: g,
+                    [eA.hidden]: u,
                     [eA.channelListHidden]: o,
                 }),
                 children: [
                     s &&
-                        !c &&
                         (0, r.jsx)(H.Z, {
                             className: eA.guilds,
                             themeOverride: n,
@@ -520,7 +499,7 @@ function e7(e) {
                             children: [
                                 (0, r.jsx)(
                                     "div",
-                                    ((t = eZ({}, P)),
+                                    ((t = eZ({}, N)),
                                     (i = i = { children: (0, r.jsx)(ez, {}) }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
@@ -537,10 +516,10 @@ function e7(e) {
                                     t),
                                 ),
                                 (0, r.jsx)(h.P3F, {
-                                    onClick: N,
+                                    onClick: T,
                                     "aria-label": "Resize Sidebar",
                                     className: eA.sidebarResizeHandle,
-                                    onMouseDown: T,
+                                    onMouseDown: S,
                                 }),
                                 (0, r.jsx)(eO.b, {}),
                             ],
@@ -591,53 +570,44 @@ function e9() {
                     : e.isExact) === !0
             );
         })(),
-        u = (function () {
-            var e;
-            let t = (0, s.TH)();
-            return (
-                (null == (e = (0, s.LX)(t.pathname, eT.Z5c.COLLECTIBLES_SHOP_FULLSCREEN)) ? void 0 : e.isExact) === !0
-            );
-        })(),
-        f = (0, p.e7)([K.Z], () => K.Z.getIsOpen()),
-        { notificationCenterVariant: h } = (0, Q.pN)({ location: "Sidebar" }),
-        g = (0, s.$B)([
+        u = (0, p.e7)([K.Z], () => K.Z.getIsOpen()),
+        { notificationCenterVariant: f } = (0, Q.pN)({ location: "Sidebar" }),
+        h = (0, s.$B)([
             eT.Z5c.CHANNEL(eT.ME, eo.Hw.channelId()),
             eT.Z5c.CHANNEL(eo.Hw.guildId(), eo.Hw.channelId({ optional: !0 }), ":messageId?"),
         ]),
-        m = (null == g || null == (e = g.params) ? void 0 : e.channelId) === eN.oC.GUILD_ONBOARDING,
-        b = l || a || o || u || m,
-        _ = i.useCallback(() => q.Z.openSidebar(), []),
-        O = (0, A.T)("AppView"),
-        E = (0, j.useAppSidebarState)((e) => !e.isOpen),
-        y = (0, p.e7)([S.Z], () => S.Z.isFullscreenInContext()),
-        C = (0, p.e7)([Z.Z], () => Z.Z.isFrameActive());
+        g = (null == h || null == (e = h.params) ? void 0 : e.channelId) === eN.oC.GUILD_ONBOARDING,
+        m = i.useCallback(() => q.Z.openSidebar(), []),
+        b = (0, A.T)("AppView"),
+        _ = (0, j.useAppSidebarState)((e) => !e.isOpen),
+        O = (0, p.e7)([C.Z], () => C.Z.isFullscreenInContext()),
+        E = (0, p.e7)([Z.Z], () => Z.Z.isFrameActive());
     return (0, r.jsx)("div", {
         className: eA.container,
         children: (0, r.jsx)(D.Z.Provider, {
-            value: (null == g ? void 0 : g.params.guildId) === eT.ME || null == g ? void 0 : g.params.guildId,
+            value: (null == h ? void 0 : h.params.guildId) === eT.ME || null == h ? void 0 : h.params.guildId,
             children: (0, r.jsxs)("div", {
                 className: eA.base,
-                "data-fullscreen": y,
+                "data-fullscreen": O,
                 children: [
-                    !y && (0, r.jsx)(ew, {}),
+                    !O && (0, r.jsx)(ew, {}),
                     d.tq ? null : (0, r.jsx)(ev.Z, {}),
                     (0, r.jsxs)("div", {
                         className: eA.content,
                         children: [
                             (0, r.jsx)(T.Z, {}),
                             (0, r.jsx)(e7, {
-                                isOnFullScreenCollectiblesShopRoute: u,
-                                isSidebarOpen: f,
+                                isSidebarOpen: u,
                                 hasNotice: t,
                                 sidebarTheme: n,
-                                hideChannelList: b,
-                                hideSidebar: !f || u,
+                                hideChannelList: l || a || o || g,
+                                hideSidebar: !u,
                             }),
                             (0, r.jsx)("div", {
                                 className: eA.page,
-                                "data-collapsed": !!O && E,
+                                "data-collapsed": !!b && _,
                                 children: (0, r.jsxs)(v.Z.Provider, {
-                                    value: _,
+                                    value: m,
                                     children: [
                                         (0, r.jsxs)(s.rs, {
                                             children: [
@@ -668,23 +638,18 @@ function e9() {
                                                     disableTrack: !0,
                                                 }),
                                                 (0, r.jsx)(I.Z, {
-                                                    path: eT.Z5c.COLLECTIBLES_SHOP_FULLSCREEN,
-                                                    render: e0(!0),
-                                                    disableTrack: !0,
-                                                }),
-                                                (0, r.jsx)(I.Z, {
                                                     path: eT.Z5c.COLLECTIBLES_SHOP_WITH_TAB(":tab"),
-                                                    render: e0(!1),
+                                                    render: e0(),
                                                     disableTrack: !0,
                                                 }),
                                                 (0, r.jsx)(I.Z, {
                                                     path: eT.Z5c.COLLECTIBLES_SHOP,
-                                                    render: e0(!1),
+                                                    render: e0(),
                                                     disableTrack: !0,
                                                 }),
                                                 (0, r.jsx)(I.Z, {
                                                     path: eT.Z5c.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"),
-                                                    render: e0(!1),
+                                                    render: e0(),
                                                     disableTrack: !0,
                                                 }),
                                                 (0, r.jsx)(I.Z, {
@@ -704,7 +669,7 @@ function e9() {
                                                     impressionName: c.ImpressionNames.FRIENDS,
                                                     disableTrack: !0,
                                                 }),
-                                                h === Q.jP.SIDEBAR &&
+                                                f === Q.jP.SIDEBAR &&
                                                     (0, r.jsx)(I.Z, {
                                                         path: eT.Z5c.CHANNEL(
                                                             eT.STv,
@@ -808,7 +773,7 @@ function e9() {
                                                 }),
                                             ],
                                         }),
-                                        C && (0, r.jsx)(w.Z, {}),
+                                        E && (0, r.jsx)(w.Z, {}),
                                     ],
                                 }),
                             }),

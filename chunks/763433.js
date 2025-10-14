@@ -1,61 +1,56 @@
 n.d(t, {
-    a: () => f,
-    r: () => _,
+    a: () => h,
+    r: () => m,
 });
 var r,
-    a = n(951288),
-    i = n(647438),
-    l = n(120356),
-    s = n.n(l),
-    o = n(442837),
-    c = n(481060),
-    d = n(410030),
-    u = n(984370),
-    p = n(825102),
-    m = n(594174),
-    h = n(744695),
-    g = n(770593),
-    _ = (((r = {}).DEFAULT = "DEFAULT"), (r.SEARCH = "SEARCH"), r);
-function f(e) {
+    a = n(951288);
+n(647438);
+var i = n(120356),
+    l = n.n(i),
+    s = n(481060),
+    o = n(410030),
+    c = n(984370),
+    d = n(825102),
+    u = n(744695),
+    p = n(770593),
+    m = (((r = {}).DEFAULT = "DEFAULT"), (r.SEARCH = "SEARCH"), r);
+function h(e) {
     let {
             selectedTabId: t,
             handleTransition: n,
             tabs: r,
-            state: l = "DEFAULT",
-            onAvailableWidthChange: _,
-            icon: f,
-            children: b,
+            state: i = "DEFAULT",
+            onAvailableWidthChange: m,
+            icon: h,
+            children: g,
         } = e,
-        x = (0, d.ZP)(),
-        v = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
-        C = (null == v ? void 0 : v.isStaff()) || (null == v ? void 0 : v.isStaffPersonal()),
-        { enabled: j } = (0, p.WX)({ location: "global_discovery_header_bar" });
-    return (0, a.jsx)(c.f6W, {
-        theme: x,
+        _ = (0, o.ZP)(),
+        { enabled: f } = (0, d.WX)({ location: "global_discovery_header_bar" });
+    return (0, a.jsx)(s.f6W, {
+        theme: _,
         children: (e) =>
-            (0, a.jsxs)(u.Z, {
-                className: s()(e, g.headerBar),
-                innerClassname: j ? g.headerBarInner : void 0,
-                toolbar: C ? (0, a.jsx)(i.Fragment, {}) : null,
+            (0, a.jsxs)(c.Z, {
+                className: l()(e, p.headerBar),
+                innerClassname: f ? p.headerBarInner : void 0,
                 children: [
-                    "DEFAULT" === l &&
+                    "DEFAULT" === i &&
                         (0, a.jsxs)(a.Fragment, {
                             children: [
-                                (0, a.jsx)(f, {
+                                (0, a.jsx)(h, {
                                     color: "currentColor",
                                     size: "md",
                                 }),
-                                (0, a.jsx)(h.Z, {
+                                (0, a.jsx)(u.Z, {
                                     tabs: r,
                                     selectedTab: t,
                                     onTabSelect: n,
-                                    onAvailableWidthChange: _,
+                                    onAvailableWidthChange: m,
                                 }),
                             ],
                         }),
                     (0, a.jsx)("div", {
-                        className: s()(g.headerBarContent, { [g.headerBarSearchContent]: "SEARCH" === l }),
-                        children: b,
+                        className: l()(p.headerBarContent, { [p.headerBarSearchContent]: "SEARCH" === i }),
+                        children: g,
                     }),
                 ],
             }),

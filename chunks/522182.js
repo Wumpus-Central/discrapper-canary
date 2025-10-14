@@ -69,7 +69,6 @@ function m(e) {
                     if (f) return void a.Z.notifyPendingWidgets();
                     (0, s.mK)({
                         analyticsLocations: m,
-                        openInLayer: !1,
                         analyticsSource: p,
                     }),
                         null == n || n();

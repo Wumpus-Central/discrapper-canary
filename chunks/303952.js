@@ -16,13 +16,12 @@ var r = n(626135),
         );
     })({});
 let o = (e) => {
-    let { sessionId: t, checkpoint: n, tab: a, isFullScreen: o, unpublishedCategoriesShown: s, cacheDisabled: l } = e;
+    let { sessionId: t, checkpoint: n, tab: a, unpublishedCategoriesShown: o, cacheDisabled: s } = e;
     r.default.track(i.rMx.COLLECTIBLES_SHOP_PERF_TRACKED, {
         page_session_id: t,
         checkpoint: n,
         tab: a,
-        is_full_screen: o,
-        unpublished_categories_shown: s,
-        cache_disabled: l,
+        unpublished_categories_shown: o,
+        cache_disabled: s,
     });
 };

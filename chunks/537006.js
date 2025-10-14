@@ -87,7 +87,6 @@ function w(e) {
                     onClick: () => {
                         (0, f.mK)({
                             analyticsLocations: a,
-                            openInLayer: !1,
                             analyticsSource: o,
                         }),
                             null == i || i();

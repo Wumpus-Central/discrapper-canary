@@ -17,7 +17,6 @@ let _ = (e) => {
             t(),
                 (0, l.uL)(u.Z5c.COLLECTIBLES_SHOP),
                 (0, c.mK)({
-                    openInLayer: !1,
                     analyticsSource: o.Z.PREMIUM_PAYMENT_MODAL,
                     analyticsLocations: n,
                 }),

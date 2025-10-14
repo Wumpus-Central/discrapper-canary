@@ -2,8 +2,8 @@ n.d(t, { Z: () => v }), n(388685);
 var r = n(951288),
     l = n(647438),
     i = n(442837),
-    s = n(607070),
-    o = n(594174),
+    o = n(607070),
+    s = n(594174),
     a = n(960048),
     c = n(597688),
     u = n(1870),
@@ -20,52 +20,49 @@ let E = [b.AW.HOME, b.AW.ORBS];
 function v(e) {
     let {
             tab: t,
-            isFullScreen: n,
-            sortedCategories: o,
-            transitionToTab: a,
-            transitionState: c,
-            updateAnalyticsState: u,
-            refreshCategories: h,
+            sortedCategories: n,
+            transitionToTab: s,
+            transitionState: a,
+            updateAnalyticsState: c,
+            refreshCategories: u,
         } = e,
-        v = S();
-    O(v);
-    let x = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
-        [y, j] = l.useState(void 0),
-        T = l.useCallback(
-            async (e, t, r) => {
-                u(e, t);
-                let l = r && !n && !x,
-                    i = (0, d.$2)(t) ? b.AW.ORBS : b.AW.CATALOG;
-                j(t), await a(i, l);
+        h = O();
+    x(h);
+    let v = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
+        [S, y] = l.useState(void 0),
+        k = l.useCallback(
+            async (e, t, n) => {
+                c(e, t);
+                let r = n && !v,
+                    l = (0, d.$2)(t) ? b.AW.ORBS : b.AW.CATALOG;
+                y(t), await s(l, r);
             },
-            [n, x, a, u],
+            [v, s, c],
         ),
-        L = (0, g.FF)("CollectiblesContent"),
-        { searchError: k } = (0, f.a)();
-    return L && null != k
+        j = (0, g.FF)("CollectiblesContent"),
+        { searchError: T } = (0, f.a)();
+    return j && null != T
         ? (0, r.jsx)(m.Z, {})
-        : null != v
+        : null != h
           ? (0, r.jsx)(C.Z, {
-                onRetry: h,
-                errorMessage: v,
+                onRetry: u,
+                errorMessage: h,
                 errorOrigin: C.i.SHOP_PAGE,
             })
           : E.includes(t)
             ? (0, r.jsx)(_.Z, {
-                  isFullScreen: n,
-                  handleTransition: T,
+                  handleTransition: k,
                   tab: t,
-                  transitionState: c,
+                  transitionState: a,
               })
             : (0, r.jsx)(p.Z, {
-                  isFullScreen: n,
                   tab: t,
-                  sortedCategories: o,
-                  initialCategoryId: y,
-                  onUnmount: () => j(void 0),
+                  sortedCategories: n,
+                  initialCategoryId: S,
+                  onUnmount: () => y(void 0),
               });
 }
-let S = () =>
+let O = () =>
         (0, i.e7)([c.Z, u.Z], () =>
             null != c.Z.error
                 ? "shop load fetch categories error: ".concat(c.Z.error.message)
@@ -75,8 +72,8 @@ let S = () =>
                     ? "shop load fetch purchase error: ".concat(u.Z.fetchError.message)
                     : void 0,
         ),
-    O = (e) => {
-        let t = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
+    x = (e) => {
+        let t = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
             { noCache: n, includeUnpublished: r } = (0, h.Z)();
         l.useEffect(() => {
             var l, i;

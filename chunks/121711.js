@@ -264,7 +264,6 @@ let eh = function (e) {
                 ctaObject: ee.qAy.CTA_TO_ORBS_SHOP,
             }),
                 (0, _.mK)({
-                    openInLayer: !1,
                     tab: et.AW.ORBS,
                     analyticsLocations: [],
                     analyticsSource: h.Z.ORBS_BALANCE_MENU,
@@ -337,7 +336,6 @@ let eh = function (e) {
                                                                   text: er.intl.string(er.t["1Wm129"]),
                                                                   onClick: () =>
                                                                       (0, _.mK)({
-                                                                          openInLayer: !1,
                                                                           tab: et.AW.ORBS,
                                                                           analyticsLocations: [],
                                                                           analyticsSource:

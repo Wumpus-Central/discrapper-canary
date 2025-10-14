@@ -266,7 +266,6 @@ function U(e) {
         t(),
             (0, a.pTH)(),
             (0, c.mK)({
-                openInLayer: !1,
                 analyticsLocations: n,
                 analyticsSource: s.Z.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL,
             });
@@ -325,7 +324,6 @@ function G(e) {
             (0, a.pTH)(),
             null == n
                 ? (0, c.mK)({
-                      openInLayer: !1,
                       analyticsLocations: i,
                       analyticsSource: s.Z.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL,
                   })

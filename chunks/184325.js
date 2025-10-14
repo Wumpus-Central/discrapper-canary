@@ -134,7 +134,6 @@ function U(e) {
                         i)
                     )
                         return void (0, u.mK)({
-                            openInLayer: !1,
                             tab: N.AW.ORBS,
                             analyticsLocations: G,
                             analyticsSource: l.Z.VIRTUAL_CURRENCY_ORB_PROFILE_BADGE,

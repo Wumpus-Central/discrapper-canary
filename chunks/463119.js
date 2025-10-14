@@ -146,7 +146,6 @@ let k = (e) => {
                 void 0 !== o && o(),
                     void 0 !== s &&
                         (0, y.mK)({
-                            openInLayer: !1,
                             tab: s,
                             analyticsLocations: O,
                             analyticsSource: _,

@@ -1,4 +1,4 @@
-n.d(a, { default: () => g });
+n.d(a, { default: () => m });
 var e = n(951288),
     s = n(647438),
     c = n(990547),
@@ -16,13 +16,13 @@ var e = n(951288),
     C = n(335131),
     b = n(981631),
     k = n(388032),
-    y = n(890767),
-    I = n(480443);
-function g(t) {
-    let { transitionState: a, onClose: n, skuId: g } = t,
-        { analyticsLocations: h } = (0, l.ZP)(u.Z.COLLECTIBLES_EXPIRY_MODAL),
-        m = (0, r.wjy)((0, d.ZP)()),
-        O = (0, f.Z)({ analyticsLocations: h }),
+    g = n(890767),
+    h = n(480443);
+function m(t) {
+    let { transitionState: a, onClose: n, skuId: m } = t,
+        { analyticsLocations: y } = (0, l.ZP)(u.Z.COLLECTIBLES_EXPIRY_MODAL),
+        I = (0, r.wjy)((0, d.ZP)()),
+        O = (0, f.Z)({ analyticsLocations: y }),
         Z = s.useRef(null);
     s.useEffect(
         () => (
@@ -30,30 +30,29 @@ function g(t) {
             () => {
                 E.default.track(b.rMx.COLLECTIBLES_EXPIRY_MODAL_CLOSED, {
                     reason: Z.current,
-                    sku_id: g,
+                    sku_id: m,
                 });
             }
         ),
-        [g],
+        [m],
     ),
         (0, _.Z)({
             type: c.ImpressionTypes.MODAL,
             name: c.ImpressionNames.COLLECTIBLES_EXPIRY_MODAL,
             properties: {
-                location_stack: h,
-                sku_id: g,
+                location_stack: y,
+                sku_id: m,
             },
         });
     let M = async () => {
-            (Z.current = "change_avatar_decoration"), await n(), (0, o.xf)(), O(), (0, L.ps)({ analyticsLocations: h });
+            (Z.current = "change_avatar_decoration"), await n(), (0, o.xf)(), O(), (0, L.ps)({ analyticsLocations: y });
         },
         x = async () => {
             (Z.current = "go_to_shop"),
                 await n(),
                 (0, C.mK)({
-                    analyticsLocations: h,
+                    analyticsLocations: y,
                     analyticsSource: u.Z.COLLECTIBLES_EXPIRY_MODAL,
-                    openInLayer: !1,
                 });
         },
         D = async () => {
@@ -74,7 +73,7 @@ function g(t) {
     return (0, e.jsx)(i.ExpressiveModal, {
         graphic: {
             type: "image",
-            src: m ? y.Z : I.Z,
+            src: I ? g.Z : h.Z,
         },
         title: k.intl.string(k.t.xz81o6),
         subtitle: k.intl.string(k.t.Vrbnnp),

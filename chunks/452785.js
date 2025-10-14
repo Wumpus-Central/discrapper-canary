@@ -1,7 +1,6 @@
 e.exports = {
     inventory: "inventory__1feb0",
     inventoryFilter: "inventoryFilter__1feb0",
-    pageFullscreen: "pageFullscreen__1feb0",
     controls: "controls__1feb0",
     controlsLeftSide: "controlsLeftSide__1feb0",
     controlsRightSide: "controlsRightSide__1feb0",

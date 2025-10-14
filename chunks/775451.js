@@ -25,70 +25,68 @@ let f = {
                 showNotificationBadge: t,
                 ctaText: n,
                 ctaOnClick: i,
-                anchorPillType: b,
-                analyticsPage: g,
-                linkText: v = h.intl.string(h.t.XRdyj4),
-                cardAlignment: j = f.START,
-                className: _,
+                analyticsPage: b,
+                linkText: g = h.intl.string(h.t.XRdyj4),
+                cardAlignment: v = f.START,
+                className: j,
             } = e,
-            { balance: y } = (0, c.A)(),
-            [C, S] = r.useState(d.b.DEFAULT),
-            [E, T] = r.useState(!1),
-            [O, N] = r.useState(!1),
-            P = r.useRef(null),
-            I = r.useCallback(() => {
-                let e = !E;
+            { balance: _ } = (0, c.A)(),
+            [y, C] = r.useState(d.b.DEFAULT),
+            [S, E] = r.useState(!1),
+            [T, O] = r.useState(!1),
+            N = r.useRef(null),
+            P = r.useCallback(() => {
+                let e = !S;
                 e &&
-                    null != g &&
+                    null != b &&
                     (0, o.Y)({
-                        pageType: g,
+                        pageType: b,
                         sectionType: p.jXE.ORBS_BALANCE_MENU,
                         ctaObject: p.qAy.OPEN_ORB_BALANCE_MENU_FROM_PILL,
                     }),
-                    S(e ? d.b.SELECTED : d.b.DEFAULT),
-                    T(e);
-            }, [E, g]),
-            w = r.useCallback(() => {
-                E && I();
-            }, [E, I]),
-            R = (0, s.Z)(null, w),
-            k = r.useMemo(
+                    C(e ? d.b.SELECTED : d.b.DEFAULT),
+                    E(e);
+            }, [S, b]),
+            I = r.useCallback(() => {
+                S && P();
+            }, [S, P]),
+            w = (0, s.Z)(null, I),
+            R = r.useMemo(
                 () =>
                     (0, a.jsx)(u.L, {
-                        analyticsPage: g,
+                        analyticsPage: b,
                         ctaText: n,
                         ctaOnClick: () => {
-                            I(), i();
+                            P(), i();
                         },
-                        linkText: v,
+                        linkText: g,
                     }),
-                [g, n, v, I, i],
+                [b, n, g, P, i],
             );
         return (0, a.jsxs)("div", {
-            className: l()(x.container, _, {
-                [x.hidden]: O,
-                [x.visible]: !O,
+            className: l()(x.container, j, {
+                [x.hidden]: T,
+                [x.visible]: !T,
             }),
             children: [
                 (0, a.jsx)(m.y, {
-                    pillRef: P,
-                    anchorPillType: b,
-                    balance: y,
-                    balanceWidgetMode: C,
+                    pillRef: N,
+                    balance: _,
+                    balanceWidgetMode: y,
                     onMouseDown: (e) => {
                         e.stopPropagation();
                     },
-                    onClick: I,
+                    onClick: P,
                     showNotificationBadge: t,
                 }),
-                E &&
+                S &&
                     (0, a.jsx)("div", {
-                        className: l()(x.cardContainer, j, {
-                            [x.hidden]: O,
-                            [x.visible]: !O,
+                        className: l()(x.cardContainer, v, {
+                            [x.hidden]: T,
+                            [x.visible]: !T,
                         }),
-                        ref: R,
-                        children: k,
+                        ref: w,
+                        children: R,
                     }),
             ],
         });

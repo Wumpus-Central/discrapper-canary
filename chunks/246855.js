@@ -11,13 +11,13 @@ var a = n(951288),
     m = n(335131),
     p = n(70097),
     f = n(507808),
-    _ = n(43747),
-    C = n(960919),
+    C = n(43747),
+    _ = n(960919),
     b = n(509212),
     h = n(272008),
     x = n(497505),
-    y = n(515108),
-    g = n(291967),
+    g = n(515108),
+    y = n(291967),
     j = n(46140),
     v = n(981631),
     E = n(215023),
@@ -48,17 +48,17 @@ function w(e) {
         i = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
         [u, m] = r.useState(!i),
         f = (0, c.ZP)(),
-        _ = (0, l.apv)(f),
-        C = _ ? S.Z : A.Z,
-        b = _ ? L.Z : T.Z,
+        C = (0, l.apv)(f),
+        _ = C ? S.Z : A.Z,
+        b = C ? L.Z : T.Z,
         h = r.useRef(null),
         x = r.useRef(null),
-        [y, g] = r.useState(!1),
+        [g, y] = r.useState(!1),
         [j, v] = r.useState(!1),
         [E, R] = r.useState(!1);
     r.useEffect(() => {
-        y && j && E && t();
-    }, [y, j, E, t]),
+        g && j && E && t();
+    }, [g, j, E, t]),
         r.useEffect(() => {
             n ||
                 i ||
@@ -97,10 +97,10 @@ function w(e) {
                 playsInline: !0,
                 className: N.centerOrb,
                 controls: !1,
-                onCanPlayThrough: r.useCallback(() => g(!0), []),
+                onCanPlayThrough: r.useCallback(() => y(!0), []),
                 onEnded: O,
                 children: (0, a.jsx)("source", {
-                    src: C,
+                    src: _,
                     type: "video/webm",
                 }),
             }),
@@ -126,7 +126,6 @@ function I(e) {
             }),
                 await n(),
                 (0, m.mK)({
-                    openInLayer: !1,
                     tab: E.AW.ORBS,
                     analyticsLocations: [],
                     analyticsSource: u.Z.QUEST_REWARD_MODAL,
@@ -145,7 +144,7 @@ function I(e) {
                     (0, a.jsxs)("div", {
                         className: N.heading,
                         children: [
-                            (0, a.jsx)(C.M, {
+                            (0, a.jsx)(_.M, {
                                 shouldUseThemeColor: !0,
                                 className: N.orbsIcon,
                             }),
@@ -192,10 +191,10 @@ function P(e) {
     var t;
     let { quest: n, onClose: i, transitionState: s, sourceQuestContent: o, location: l } = e,
         c = (null == (t = n.userStatus) ? void 0 : t.claimedAt) != null,
-        { balance: d, error: u } = (0, _.A)(),
+        { balance: d, error: u } = (0, C.A)(),
         m = (0, b.LM)(n.config),
         [p, f] = r.useState(c ? "success" : "loading"),
-        [C, v] = r.useState(!1),
+        [_, v] = r.useState(!1),
         E = r.useCallback(() => {
             v(!0);
         }, []);
@@ -206,9 +205,9 @@ function P(e) {
                 .then(() => f("success"))
                 .catch(() => f("error"));
     }, [n.id, c, p, l]);
-    let N = !C || "loading" === p || (null == d && null == u),
+    let N = !_ || "loading" === p || (null == d && null == u),
         A = "error" === p || null == m || (null == d && null != u);
-    return (0, a.jsx)(y.Z, {
+    return (0, a.jsx)(g.Z, {
         onClose: i,
         transitionState: s,
         quest: n,
@@ -218,7 +217,7 @@ function P(e) {
         rewardContentHasError: A,
         rewardContent: A
             ? null
-            : (0, a.jsx)(g.Z, {
+            : (0, a.jsx)(y.Z, {
                   rewardName: R.intl.string(R.t.Lmysvb),
                   children: (0, a.jsx)(I, {
                       onClose: i,

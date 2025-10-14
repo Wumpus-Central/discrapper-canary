@@ -94,7 +94,7 @@ let A = (e) => {
                 let r,
                     i = e[2],
                     a = i.startsWith("https://discordapp.com/nitro") || i.startsWith("https://discord.com/nitro"),
-                    o = i.startsWith("/shop/fullscreen?source=1") || i.startsWith("/activities");
+                    o = i.startsWith("/activities");
                 return (
                     (r = a
                         ? (e) => {

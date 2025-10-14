@@ -41,7 +41,6 @@ let p = (e) => {
                     onClick: () => {
                         null == p || p(),
                             (0, s.mK)({
-                                openInLayer: !1,
                                 analyticsLocations: f,
                                 analyticsSource: a.Z.HOME_PAGE_SHOP_TAB,
                                 tab: c.AW.HOME,

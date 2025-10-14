@@ -20,8 +20,8 @@ var r = n(951288),
     h = n(667105),
     C = n(35215),
     b = n(46140),
-    y = n(215023),
-    v = n(388032),
+    v = n(215023),
+    y = n(388032),
     O = n(165016);
 function k(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -94,8 +94,8 @@ let N = (e) => {
                 return null != n
                     ? n
                     : (0, p.pO)(t) || t.config.features.includes(b.S7.NON_GAMING_PLAY_QUEST)
-                      ? v.intl.string(v.t.hvVgAQ)
-                      : v.intl.string(v.t.lwQdjI);
+                      ? y.intl.string(y.t.hvVgAQ)
+                      : y.intl.string(y.t.lwQdjI);
             })();
         return (0, r.jsx)(o.zxk, {
             size: "sm",
@@ -127,7 +127,7 @@ let N = (e) => {
                     },
                 ),
             size: "sm",
-            text: v.intl.string(v.t.csptqa),
+            text: y.intl.string(y.t.csptqa),
         });
     },
     _ = (e) => {
@@ -170,7 +170,7 @@ let N = (e) => {
                             variant: "secondary",
                             fullWidth: !0,
                             size: "sm",
-                            text: v.intl.string(v.t["93PTEh"]),
+                            text: y.intl.string(y.t["93PTEh"]),
                         },
                         e,
                     ),
@@ -232,8 +232,7 @@ let N = (e) => {
                     null == b || b(e),
                         (0, p.xN)(d.config) && (null == (t = d.userStatus) ? void 0 : t.claimedAt) != null
                             ? (0, c.mK)({
-                                  openInLayer: !1,
-                                  tab: y.AW.ORBS,
+                                  tab: v.AW.ORBS,
                                   analyticsLocations: [],
                                   analyticsSource: a.Z.QUEST_HOME_PAGE,
                               })
@@ -258,7 +257,7 @@ let N = (e) => {
                           },
                           w,
                       ),
-                      { children: null != C ? C : v.intl.string(v.t.cfY4PD) },
+                      { children: null != C ? C : y.intl.string(y.t.cfY4PD) },
                   ),
               )
             : (0, r.jsx)(
@@ -268,7 +267,7 @@ let N = (e) => {
                           {
                               fullWidth: !0,
                               onClick: z,
-                              text: null != C ? C : v.intl.string(v.t.cfY4PD),
+                              text: null != C ? C : y.intl.string(y.t.cfY4PD),
                           },
                           w,
                       ),
@@ -348,7 +347,7 @@ function B(e) {
             e.showBackButton &&
                 (0, r.jsx)(o.hU, {
                     size: "sm",
-                    "aria-label": v.intl.string(v.t["13/7kZ"]),
+                    "aria-label": y.intl.string(y.t["13/7kZ"]),
                     onClick: e.onBack,
                     icon: i.V7D,
                     variant: "secondary",

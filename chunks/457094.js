@@ -20,8 +20,8 @@ var r = n(951288),
     v = n(513202),
     y = n(318891),
     I = n(687751),
-    S = n(64514),
-    C = n(912471),
+    C = n(64514),
+    S = n(912471),
     T = n(100527),
     N = n(77987),
     j = n(679891),
@@ -74,8 +74,8 @@ var r = n(951288),
     ev = n(893607),
     ey = n(703656),
     eI = n(298969),
-    eS = n(719256),
-    eC = n(6025),
+    eC = n(719256),
+    eS = n(6025),
     eT = n(897473),
     eN = n(377368),
     ej = n(262702),
@@ -165,7 +165,7 @@ n(117240),
     n(471073),
     n(606206);
 let tt = !1;
-(0, C.DL)(),
+(0, S.DL)(),
     o.ZP.initialize(),
     eI.Z.loadServer(),
     e8.isPlatformEmbedded &&
@@ -452,7 +452,6 @@ let ts = [
             e5.Z5c.APPLICATION_STORE,
             e5.Z5c.MESSAGE_REQUESTS,
             e5.Z5c.COLLECTIBLES_SHOP,
-            e5.Z5c.COLLECTIBLES_SHOP_FULLSCREEN,
             e5.Z5c.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"),
             e5.Z5c.GUILD_DISCOVERY,
             e5.Z5c.QUEST_HOME,
@@ -536,7 +535,7 @@ class td extends i.PureComponent {
             ek.Z.init(),
             G.Z.initialize(),
             O.Z.initialize(),
-            eS.Z.initialize(),
+            eC.Z.initialize(),
             eN.Z.initialize(),
             ep.Z.initialize(),
             ed.Z.initialize(),
@@ -558,7 +557,7 @@ class td extends i.PureComponent {
             k.Z.initialize(),
             x.Z.initialize(),
             A.Z.initialize(),
-            S.Z.initialize(),
+            C.Z.initialize(),
             (this.rewriterUnlisten = eE.Z.addRouteRewriter(this.ensureChannelMatchesGuild)),
             (this.historyUnlisten = eE.Z.addRouteChangeListener(this.handleHistoryChange));
     }
@@ -580,7 +579,7 @@ class td extends i.PureComponent {
             ea.Z.terminate(),
             O.Z.terminate(),
             eO.Z.terminate(),
-            eS.Z.terminate(),
+            eC.Z.terminate(),
             eN.Z.terminate(),
             ep.Z.terminate(),
             ed.Z.terminate(),
@@ -592,7 +591,7 @@ class td extends i.PureComponent {
             V.Z.terminate(),
             x.Z.terminate(),
             A.Z.terminate(),
-            S.Z.terminate(),
+            C.Z.terminate(),
             F.Z.terminate(),
             this.historyUnlisten(),
             this.rewriterUnlisten();
@@ -645,14 +644,14 @@ class td extends i.PureComponent {
                             else {
                                 let e = { type: eT.Ff.THREAD };
                                 null != o && (e.initialMessageId = o),
-                                    eC.Z.openThreadAsSidebar({
+                                    eS.Z.openThreadAsSidebar({
                                         guildId: r,
                                         baseChannelId: i,
                                         channelId: s,
                                         details: e,
                                     });
                             }
-                    } else null == i || a || eC.Z.closeChannelSidebar(i);
+                    } else null == i || a || eS.Z.closeChannelSidebar(i);
                     let c = es.Z.getIsOpen();
                     if (i === e2.oC.ROLE_SUBSCRIPTIONS) eo.Z.closeSidebar();
                     else if (g && c) {
@@ -704,7 +703,7 @@ class td extends i.PureComponent {
                     );
                 else if ((null == n ? void 0 : n.parent_id) !== i)
                     return (
-                        eC.Z.closeChannelSidebar(i),
+                        eS.Z.closeChannelSidebar(i),
                         {
                             path: e5.Z5c.CHANNEL(r, i),
                             state: e.state,

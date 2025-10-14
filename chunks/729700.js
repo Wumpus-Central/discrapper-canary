@@ -45,7 +45,6 @@ let h = (e) => {
                         null == g || g(),
                             (0, u.uL)(p.Z5c.COLLECTIBLES_SHOP),
                             (0, d.mK)({
-                                openInLayer: !1,
                                 analyticsLocations: m,
                                 analyticsSource: s.Z.HOME_PAGE_SHOP_TAB,
                             });

@@ -9,8 +9,8 @@ n.d(t, {
 var r = n(647438),
     l = n(191336),
     i = n(180059),
-    s = n(497598),
-    o = n(792091),
+    o = n(497598),
+    s = n(792091),
     a = n(653654),
     c = n(870289),
     u = n(149705);
@@ -62,16 +62,16 @@ function f(e, t) {
     return n.has(t) ? n.delete(t) : n.add(t), n;
 }
 let p = {
-        sortType: o.E.RECENCY,
-        sortDirection: s.F.DESC,
+        sortType: s.E.RECENCY,
+        sortDirection: o.F.DESC,
     },
     C = {
-        sortType: o.E.POPULARITY,
-        sortDirection: s.F.DESC,
+        sortType: s.E.POPULARITY,
+        sortDirection: o.F.DESC,
     },
     h = {
-        sortType: o.E.RELEVANCE,
-        sortDirection: s.F.DESC,
+        sortType: s.E.RELEVANCE,
+        sortDirection: o.F.DESC,
     },
     _ = {
         itemTypeFilters: new Set(),
@@ -83,7 +83,6 @@ let p = {
         queryPageSize: 0,
         queryPageOffset: 0,
         isFetchingResults: !1,
-        fullScreenOpen: !1,
         userHasSelectedSort: !1,
         currentTab: null,
     },
@@ -203,9 +202,6 @@ let p = {
                         }),
                     );
                 },
-                setFullScreenOpen: (t) => {
-                    e({ fullScreenOpen: t });
-                },
                 setCurrentTab: (t) => {
                     e({ currentTab: t });
                 },
@@ -219,8 +215,8 @@ let p = {
             themeFilters: r,
             orbEligible: l,
             sort: i,
-            searchQuery: s,
-            queryPageSize: o,
+            searchQuery: o,
+            queryPageSize: s,
             queryPageOffset: a,
         } = e;
         return {
@@ -229,10 +225,10 @@ let p = {
             themes: Array.from(r),
             orbs_eligible: !!l || void 0,
             offset: a,
-            limit: o,
+            limit: s,
             sort_type: i.sortType,
             sort_direction: i.sortDirection,
-            search: "" !== s ? s : void 0,
+            search: "" !== o ? o : void 0,
         };
     },
     v = () => {
@@ -270,7 +266,7 @@ let p = {
             };
             r(E(b.getState()));
             let i = b.subscribe(E, r, { equalityFn: (e, t) => JSON.stringify(e) === JSON.stringify(t) }),
-                s = b.subscribe(
+                o = b.subscribe(
                     (e) => e.hasFilters(),
                     (e, t) => {
                         if (!e && t) {
@@ -280,7 +276,7 @@ let p = {
                     },
                 );
             return () => {
-                i(), s();
+                i(), o();
             };
         }, [e, t, n, l]);
     };

@@ -58,7 +58,6 @@ function C(e) {
                 (0, p.mK)({
                     analyticsLocations: T,
                     analyticsSource: u.Z.USER_PROFILE_WISHLIST,
-                    openInLayer: !1,
                 });
         }, [T]);
     return null != Z

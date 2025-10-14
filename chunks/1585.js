@@ -1,15 +1,13 @@
 n.d(t, {
-    ps: () => _,
-    y9: () => f,
+    ps: () => d,
+    y9: () => u,
 });
 var r = n(951288);
 n(647438);
-var i = n(481060),
-    a = n(703656);
+var i = n(481060);
 n(956664);
-var o = n(419061),
-    s = n(981631);
-function l(e, t, n) {
+var a = n(419061);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +20,7 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,12 +31,12 @@ function c(e) {
                 }),
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
 }
-function u(e, t) {
+function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,35 +48,34 @@ function u(e, t) {
     }
     return n;
 }
-function d(e, t) {
+function c(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
+            : l(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function f(e) {
-    return "number" != typeof e ? (0, i.pxk)(e) * o.hs : e * o.hs;
+function u(e) {
+    return "number" != typeof e ? (0, i.pxk)(e) * a.hs : e * a.hs;
 }
-let _ = (e) => {
-    let { analyticsLocations: t, initialSelectedDecoration: o, isTryItOutFlow: l, guild: u, onClose: f } = e;
+let d = (e) => {
+    let { analyticsLocations: t, initialSelectedDecoration: a, isTryItOutFlow: o, guild: l, onClose: u } = e;
     (0, i.ZDy)(async () => {
-        (0, a.s1)().location.pathname === s.Z5c.COLLECTIBLES_SHOP_FULLSCREEN && (0, a.uL)(s.Z5c.APP);
         let { default: e } = await Promise.all([n.e("79589"), n.e("87510")]).then(n.bind(n, 235400));
         return (n) =>
             (0, r.jsx)(
                 e,
-                d(c({}, n), {
+                c(s({}, n), {
                     onCloseModal: n.onClose,
-                    onClose: f,
+                    onClose: u,
                     analyticsLocations: t,
-                    initialSelectedDecoration: o,
-                    isTryItOutFlow: l,
-                    guild: u,
+                    initialSelectedDecoration: a,
+                    isTryItOutFlow: o,
+                    guild: l,
                 }),
             );
     }, {});

@@ -11,7 +11,7 @@ n.d(t, {
     n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(599273),
+    a = n(258536),
     o = n(442837),
     s = n(481060),
     l = n(100527),
@@ -236,7 +236,6 @@ function B(e) {
                 ctaObject: R.qAy.CTA_TO_ORBS_SHOP,
             }),
                 (0, c.mK)({
-                    openInLayer: !1,
                     tab: P.AW.ORBS,
                     analyticsLocations: [],
                     analyticsSource: l.Z.QUEST_HOME_PAGE,
