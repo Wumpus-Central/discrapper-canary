@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => v });
 var r = n(951288),
     l = n(647438),
     o = n(120356),
@@ -22,11 +22,11 @@ function p(e) {
     });
 }
 function j(e) {
-    let { title: t, onClose: n } = e,
-        { setShowNavigationMobile: l } = (0, d.t)(),
-        o = (0, u.Ll)();
+    let { title: t, badge: n, onClose: l } = e,
+        { setShowNavigationMobile: o } = (0, d.t)(),
+        s = (0, u.Ll)();
     return (0, r.jsx)(c.f6W, {
-        theme: o,
+        theme: s,
         children: (e) =>
             (0, r.jsxs)("div", {
                 className: i()(b.contentHeader, e),
@@ -37,7 +37,7 @@ function j(e) {
                             a.tq &&
                                 (0, r.jsx)(p, {
                                     icon: c.yFM,
-                                    onClick: () => l(!0),
+                                    onClick: () => o(!0),
                                     label: m.intl.string(m.t["13/7kZ"]),
                                 }),
                             (0, r.jsx)(c.Heading, {
@@ -45,34 +45,38 @@ function j(e) {
                                 color: "header-secondary",
                                 children: t,
                             }),
+                            null != n && n,
                         ],
                     }),
                     (0, r.jsx)(p, {
                         icon: c.Uz9,
-                        onClick: n,
+                        onClick: l,
                         label: m.intl.string(m.t.cpT0Cg),
                     }),
                 ],
             }),
     });
 }
-let x = l.memo(function (e) {
-    let { onClose: t, setting: n } = e,
-        l = null == n ? void 0 : n.useTitle(),
-        { showNavigationMobile: o } = (0, d.t)();
+let v = l.memo(function (e) {
+    var t, n;
+    let { onClose: l, setting: o } = e,
+        s = null != (n = null == o ? void 0 : o.useTitle()) ? n : "",
+        c = null == o || null == (t = o.useBadge) ? void 0 : t.call(o),
+        { showNavigationMobile: u } = (0, d.t)();
     return (0, r.jsxs)("div", {
         className: i()(b.content, {
             [b.mobile]: a.tq,
-            [b.mobileNavigationOpen]: o,
+            [b.mobileNavigationOpen]: u,
         }),
         children: [
             (0, r.jsx)(j, {
-                title: l,
-                onClose: t,
+                title: s,
+                badge: c,
+                onClose: l,
             }),
             (0, r.jsx)("div", {
                 className: b.contentBody,
-                children: null != n && (0, r.jsx)(f.Z, { node: n }),
+                children: null != o && (0, r.jsx)(f.Z, { node: o }),
             }),
         ],
     });
