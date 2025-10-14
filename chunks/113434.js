@@ -191,9 +191,9 @@ function q(e) {
 }
 function X(e, t) {
     switch (t) {
-        case k.XJ.TASK_VIDEO:
+        case k.oH.VIDEO:
             return (0, C.q8)(e);
-        case k.XJ.TASK_PLAY:
+        case k.oH.PLAY:
             return (0, C.Nj)({ quest: e }) || (0, C.Dr)({ quest: e }) || (0, C.pO)(e);
         default:
             return !1;
@@ -201,11 +201,11 @@ function X(e, t) {
 }
 function Q(e, t) {
     switch (t) {
-        case k.XJ.REWARD_VIRTUAL_CURRENCY:
+        case k.UP.VIRTUAL_CURRENCY:
             return (0, C.xN)(e.config);
-        case k.XJ.REWARD_COLLECTIBLE:
+        case k.UP.COLLECTIBLE:
             return (0, C.Xv)(e.config);
-        case k.XJ.REWARD_IN_GAME:
+        case k.UP.IN_GAME:
             return (0, C.vQ)(e.config) || (0, C.wj)(e.config);
         default:
             return !1;
@@ -245,32 +245,18 @@ function er(e, t, n) {
     let r = 0 === n ? Z : F;
     return e.localeCompare(t) * r;
 }
-function ei(e, t, n) {
-    let i = r.useRef([]),
-        a = r.useRef(t.sortMethod),
-        o = r.useRef(t.filters),
-        s = r.useRef(n),
-        l = r.useRef(0);
+function ei(e, t) {
+    let n = r.useRef([]),
+        i = r.useRef(t.sortMethod),
+        a = r.useRef(t.filters),
+        o = r.useRef(0);
     return r.useMemo(() => {
         if (0 === e.length) return [];
-        if (
-            i.current.length > 0 &&
-            l.current === e.length &&
-            a.current === t.sortMethod &&
-            o.current === t.filters &&
-            s.current === n
-        )
-            return i.current;
+        if (n.current.length > 0 && o.current === e.length && i.current === t.sortMethod && a.current === t.filters)
+            return n.current;
         let r = en(e, t).map((e) => e.id);
-        return (
-            (i.current = r),
-            (a.current = t.sortMethod),
-            (o.current = t.filters),
-            (s.current = n),
-            (l.current = e.length),
-            r
-        );
-    }, [e, t, n]);
+        return (n.current = r), (i.current = t.sortMethod), (a.current = t.filters), (o.current = e.length), r;
+    }, [e, t]);
 }
 function ea(e) {
     let t = r.useMemo(
@@ -309,28 +295,27 @@ var eo = (function (e) {
     })({});
 function el(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : et,
-        n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         {
-            quests: r,
-            isFetchingCurrentQuests: i,
-            hasFetched: a,
+            quests: n,
+            isFetchingCurrentQuests: r,
+            hasFetched: i,
         } = V({
             fetchPolicy: "cache-and-network",
             callerSource: "use_filtered_quests",
         }),
-        o = new Map(r.map((e) => [e.id, e])),
-        s = ei(r, t, n),
-        l = ea(r),
-        c = [],
-        u = [];
-    for (let t of (c = "all" === e ? s : l)) {
-        let e = o.get(t);
-        null != e && u.push(e);
+        a = new Map(n.map((e) => [e.id, e])),
+        o = ei(n, t),
+        s = ea(n),
+        l = [],
+        c = [];
+    for (let t of (l = "all" === e ? o : s)) {
+        let e = a.get(t);
+        null != e && c.push(e);
     }
     return {
-        quests: u,
-        isFetchingCurrentQuests: i,
-        hasFetched: a,
+        quests: c,
+        isFetchingCurrentQuests: r,
+        hasFetched: i,
     };
 }
 function ec() {

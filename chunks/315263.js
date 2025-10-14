@@ -201,19 +201,28 @@ function H(e) {
             );
         };
     if (null != w && w.type === m.g.QUESTS_EMBED && (0, A.c)({ location: B.dr.EMBED_MOBILE }))
-        return (e) => (
-            null == e || e.preventDefault(),
-            Promise.resolve()
-                .then(n.bind(n, 110560))
-                .then((e) => {
-                    let { navigateToQuestHome: t } = e;
-                    t({
-                        fromContent: i.j.QUEST_SHARE_LINK,
-                        questId: w.code,
-                    });
-                }),
-            !0
-        );
+        return (e) => {
+            var t, r, a;
+            let o, s;
+            null == e || e.preventDefault();
+            let { search: l } = null != (t = j.Z.toURLSafe(w.url)) ? t : {};
+            if (null != l) {
+                let e = new URLSearchParams(l);
+                (o = null != (r = e.get("sort")) ? r : void 0), (s = null != (a = e.get("filter")) ? a : void 0);
+            }
+            return (
+                Promise.resolve()
+                    .then(n.bind(n, 110560))
+                    .then((e) => {
+                        let { navigateToQuestHome: t } = e;
+                        t({
+                            fromContent: i.j.QUEST_SHARE_LINK,
+                            questId: w.code,
+                        });
+                    }),
+                !0
+            );
+        };
     let { host: x, hostname: Z, pathname: H, search: Y, hash: W } = null != (t = j.Z.toURLSafe(e)) ? t : {},
         K =
             j.Z.isDiscordHostname(null != Z ? Z : null) ||

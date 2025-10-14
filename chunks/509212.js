@@ -1045,15 +1045,15 @@ function tF(e) {
 }
 function tV(e) {
     switch (e) {
-        case j.XJ.REWARD_VIRTUAL_CURRENCY:
+        case j.UP.VIRTUAL_CURRENCY:
             return G.intl.string(G.t.ElYQFR);
-        case j.XJ.REWARD_COLLECTIBLE:
+        case j.UP.COLLECTIBLE:
             return G.intl.string(G.t.Jg17Ul);
-        case j.XJ.REWARD_IN_GAME:
+        case j.UP.IN_GAME:
             return G.intl.string(G.t["O/J2kp"]);
-        case j.XJ.TASK_VIDEO:
+        case j.oH.VIDEO:
             return G.intl.string(G.t.e0iISE);
-        case j.XJ.TASK_PLAY:
+        case j.oH.PLAY:
             return G.intl.string(G.t["1nJR4u"]);
     }
 }

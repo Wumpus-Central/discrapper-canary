@@ -1,6 +1,6 @@
 n.d(t, {
     Dp: () => O,
-    Ew: () => L,
+    Ew: () => x,
     HO: () => E,
     Jp: () => N,
     Lv: () => A,
@@ -9,14 +9,15 @@ n.d(t, {
     R4: () => p,
     S7: () => u.S,
     Ts: () => y,
+    UP: () => w,
     V6: () => I,
     V_: () => v,
-    XJ: () => P,
     XZ: () => _,
     a_: () => c.a,
     cd: () => h,
     dr: () => d,
     l$: () => S,
+    oH: () => P,
     tD: () => g,
     tt: () => C,
     v6: () => T,
@@ -155,16 +156,17 @@ var R = (function (e) {
         );
     })({}),
     P = (function (e) {
+        return (e.VIDEO = "task_video"), (e.PLAY = "task_play"), e;
+    })({}),
+    w = (function (e) {
         return (
-            (e.REWARD_VIRTUAL_CURRENCY = "reward_virtual_currency"),
-            (e.REWARD_COLLECTIBLE = "reward_collectible"),
-            (e.REWARD_IN_GAME = "reward_in_game"),
-            (e.TASK_VIDEO = "task_video"),
-            (e.TASK_PLAY = "task_play"),
+            (e.VIRTUAL_CURRENCY = "reward_virtual_currency"),
+            (e.COLLECTIBLE = "reward_collectible"),
+            (e.IN_GAME = "reward_in_game"),
             e
         );
     })({});
-let w = [
+let D = [
         {
             group: "task",
             filter: "task_play",
@@ -186,9 +188,9 @@ let w = [
             filter: "reward_in_game",
         },
     ],
-    D = ["reward", "task"],
-    L = Object.entries((0, r.groupBy)(w, "group")).sort((e, t) => {
-        let n = D.indexOf(e[0]),
-            r = D.indexOf(t[0]);
+    L = ["reward", "task"],
+    x = Object.entries((0, r.groupBy)(D, "group")).sort((e, t) => {
+        let n = L.indexOf(e[0]),
+            r = L.indexOf(t[0]);
         return n < r ? -1 : +(r < n);
     });
