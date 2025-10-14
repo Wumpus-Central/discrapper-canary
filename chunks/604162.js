@@ -1,8 +1,8 @@
 n.d(t, {
-    G6: () => d,
-    JC: () => c,
-    qP: () => m,
-    yv: () => u,
+    G6: () => m,
+    JC: () => u,
+    PW: () => p,
+    yv: () => d,
 }),
     n(388685);
 var r = n(647438),
@@ -10,14 +10,15 @@ var r = n(647438),
     o = n(960904),
     i = n(830121),
     a = n(701190),
-    s = n(771845);
-let c = (e) => null != e.text;
-function u(e) {
+    s = n(771845),
+    c = n(591759);
+let u = (e) => null != e.text;
+function d(e) {
     let t = 0 | Math.round(e),
         n = t % 60;
     return "".concat((t - n) / 60, ":").concat(String(n).padStart(2, "0"));
 }
-function d(e, t) {
+function m(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 2000,
         [l, o] = (0, r.useState)(e),
         i = (0, r.useRef)(null);
@@ -40,7 +41,7 @@ function d(e, t) {
         ]
     );
 }
-async function m(e) {
+async function f(e) {
     try {
         var t;
         let n = (0, i.zO)(e);
@@ -54,6 +55,14 @@ async function m(e) {
         let c = s.ZP.getFlattenedGuildIds(),
             u = null == r || null == (t = r.guild) ? void 0 : t.id;
         return null != u && c.includes(u);
+    } catch (e) {
+        return !1;
+    }
+}
+async function p(e) {
+    try {
+        if (c.Z.isDiscordUrl(e)) return !0;
+        return await f(e);
     } catch (e) {
         return !1;
     }
