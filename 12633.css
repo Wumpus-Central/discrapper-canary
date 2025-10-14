@@ -17541,7 +17541,7 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 
 .modal_e44912 {
     --custom-viewport-padding: calc(var(--space-40) + var(--custom-app-top-bar-height));
-    background: var(--background-base-low);
+    background: var(--background-base-lower);
     box-sizing: border-box;
     container: modal-container/inline-size;
     height: calc(100% - (var(--custom-viewport-padding))*2);
@@ -75519,7 +75519,7 @@ div.nagbar_d74ef8 {
 }
 
 .headerContainer__7db08 {
-    background-color: var(--custom-settings-content-background, var(--background-base-low));
+    background-color: var(--background-base-low);
     display: flex;
     flex-direction: column;
     gap: 16px;
