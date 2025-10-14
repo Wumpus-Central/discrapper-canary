@@ -185,6 +185,7 @@ function w(e) {
                             currentIndex: f,
                             onGalleryItemClick: P,
                             className: e,
+                            enabledContentHarmTypeFlags: l,
                         }),
                 }),
         ],

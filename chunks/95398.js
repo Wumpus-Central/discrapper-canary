@@ -1,6 +1,6 @@
 n.d(t, {
-    ZP: () => R,
-    aQ: () => A,
+    ZP: () => P,
+    aQ: () => C,
 }),
     n(388685);
 var r = n(951288),
@@ -13,11 +13,12 @@ var r = n(951288),
     u = n(480916),
     d = n(81643),
     f = n(247206),
-    _ = n(936141),
-    p = n(823379),
-    h = n(388032),
-    m = n(926095);
-function g(e, t, n) {
+    _ = n(557069),
+    p = n(936141),
+    h = n(823379),
+    m = n(388032),
+    g = n(926095);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,7 +31,7 @@ function g(e, t, n) {
         e
     );
 }
-function E(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,12 +42,12 @@ function E(e) {
                 }),
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                E(e, t, n[t]);
             });
     }
     return e;
 }
-function b(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -58,31 +59,31 @@ function b(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-var O = (function (e) {
+var v = (function (e) {
     return (e.TEXT = "text"), (e.ATTACHMENT = "attachment"), (e.EMBED = "embed"), e;
-})(O || {});
-let v = (e) => {
+})(v || {});
+let I = (e) => {
         let { className: t } = e;
         return (0, r.jsx)("div", {
-            className: o()(m.spoilerWarning, t),
-            children: h.intl.string(h.t["F+x38P"]),
+            className: o()(g.spoilerWarning, t),
+            children: m.intl.string(m.t["F+x38P"]),
         });
     },
-    I = (e) => {
+    T = (e) => {
         let { className: t, isSingleMosaicItem: n, obscureOnly: i } = e;
         return (0, r.jsx)("div", {
-            className: o()(m.explicitContentWarning, t),
+            className: o()(g.explicitContentWarning, t),
             children: i
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
@@ -95,44 +96,44 @@ let v = (e) => {
                               (0, r.jsx)(l.Text, {
                                   variant: "text-sm/normal",
                                   color: "always-white",
-                                  className: m.explicitContentWarningText,
-                                  children: h.intl.string(h.t.SpxcUV),
+                                  className: g.explicitContentWarningText,
+                                  children: m.intl.string(m.t.SpxcUV),
                               }),
                       ],
                   }),
         });
     },
-    T = (e) => {
-        let { reason: t = _.wk.SPOILER, className: n, isSingleMosaicItem: i = !1 } = e;
+    S = (e) => {
+        let { reason: t = p.wk.SPOILER, className: n, isSingleMosaicItem: i = !1 } = e;
         switch (t) {
-            case _.wk.SPOILER:
-                return (0, r.jsx)(v, { className: n });
-            case _.wk.EXPLICIT_CONTENT:
-            case _.wk.GORE_CONTENT:
-                return (0, r.jsx)(I, {
+            case p.wk.SPOILER:
+                return (0, r.jsx)(I, { className: n });
+            case p.wk.EXPLICIT_CONTENT:
+            case p.wk.GORE_CONTENT:
+                return (0, r.jsx)(T, {
                     isSingleMosaicItem: i,
                     className: n,
                 });
-            case _.wk.POTENTIAL_EXPLICIT_CONTENT:
-                return (0, r.jsx)(I, {
+            case p.wk.POTENTIAL_EXPLICIT_CONTENT:
+                return (0, r.jsx)(T, {
                     isSingleMosaicItem: i,
                     className: n,
                     obscureOnly: !0,
                 });
             default:
-                return (0, p.vE)(t);
+                return (0, h.vE)(t);
         }
     },
-    S = (e) => {
+    A = (e) => {
         let { obscureReason: t, isVisible: n, handleToggleObscurity: i, obscurityControlClassName: a } = e;
-        return t !== _.wk.EXPLICIT_CONTENT && t !== _.wk.GORE_CONTENT
+        return t !== p.wk.EXPLICIT_CONTENT && t !== p.wk.GORE_CONTENT
             ? null
             : (0, r.jsx)("div", {
-                  className: o()(m.obscureButtonContainer, a),
+                  className: o()(g.obscureButtonContainer, a),
                   children: (0, r.jsx)(l.P3F, {
-                      className: m.obscureHoverButton,
+                      className: g.obscureHoverButton,
                       onClick: i,
-                      "aria-label": h.intl.string(h.t.ex5G9v),
+                      "aria-label": m.intl.string(m.t.ex5G9v),
                       children: n
                           ? (0, r.jsx)(l.tEF, {
                                 size: "md",
@@ -145,8 +146,8 @@ let v = (e) => {
                   }),
               });
     },
-    A = i.createContext(!1);
-class C extends i.PureComponent {
+    C = i.createContext(!1);
+class N extends i.PureComponent {
     renderWithTooltip(e) {
         return (0, r.jsx)(l.aML, {
             position: "left",
@@ -167,78 +168,79 @@ class C extends i.PureComponent {
                 className: n,
                 containerStyles: i,
                 obscured: a = !0,
-                reason: s = _.wk.SPOILER,
+                reason: s = p.wk.SPOILER,
                 isSingleMosaicItem: c = !1,
                 obscurityControlClassName: u,
                 shouldAgeVerify: d,
                 isVerifiedTeen: f,
+                forceOpaqueObscure: _,
             } = this.props,
-            { visible: p } = this.state,
-            h = (0, r.jsx)(A.Consumer, {
-                children: (h) => {
-                    let g = h || p || !a;
-                    return _.Xh.has(s) && !t
+            { visible: h } = this.state,
+            m = (0, r.jsx)(C.Consumer, {
+                children: (m) => {
+                    let E = m || h || !a;
+                    return p.Xh.has(s) && !t
                         ? (0, r.jsxs)("div", {
-                              "aria-label": g ? void 0 : this.ariaLabel,
-                              "aria-expanded": g,
+                              "aria-label": E ? void 0 : this.ariaLabel,
+                              "aria-expanded": E,
                               style: i,
-                              className: o()(n, m.spoilerContent, m.spoilerContainer, m.attachmentContainer, {
-                                  [m.hidden]: !g,
-                                  [m.constrainedObscureContent]: c,
-                                  [m.opaque]: d || f,
+                              className: o()(n, g.spoilerContent, g.spoilerContainer, g.attachmentContainer, {
+                                  [g.hidden]: !E,
+                                  [g.constrainedObscureContent]: c,
+                                  [g.opaque]: d || f || _,
                               }),
-                              role: g ? "presentation" : "button",
-                              tabIndex: g ? -1 : 0,
+                              role: E ? "presentation" : "button",
+                              tabIndex: E ? -1 : 0,
                               children: [
-                                  g || t
+                                  E || t
                                       ? null
-                                      : (0, r.jsx)(T, {
+                                      : (0, r.jsx)(S, {
                                             reason: s,
                                             isSingleMosaicItem: c,
                                         }),
                                   (0, r.jsx)("div", {
-                                      "aria-hidden": !g,
-                                      className: m.spoilerInnerContainer,
-                                      children: e(!g),
+                                      "aria-hidden": !E,
+                                      className: g.spoilerInnerContainer,
+                                      children: e(!E),
                                   }),
                                   f
                                       ? null
-                                      : (0, r.jsx)(S, {
+                                      : (0, r.jsx)(A, {
                                             obscureReason: s,
-                                            isVisible: p,
+                                            isVisible: h,
                                             handleToggleObscurity: this.handleToggleObscurity,
                                             obscurityControlClassName: u,
                                         }),
                               ],
                           })
                         : (0, r.jsxs)(l.P3F, {
-                              onClick: g ? void 0 : this.removeObscurity,
-                              "aria-label": g ? void 0 : this.ariaLabel,
-                              "aria-expanded": g,
+                              onClick: E ? void 0 : this.removeObscurity,
+                              "aria-label": E ? void 0 : this.ariaLabel,
+                              "aria-expanded": E,
                               style: i,
-                              className: o()(n, m.spoilerContent, m.spoilerContainer, m.attachmentContainer, {
-                                  [m.hidden]: !g,
-                                  [m.hiddenSpoiler]: !g,
+                              className: o()(n, g.spoilerContent, g.spoilerContainer, g.attachmentContainer, {
+                                  [g.hidden]: !E,
+                                  [g.hiddenSpoiler]: !E,
                               }),
-                              role: g ? "presentation" : "button",
-                              tabIndex: g ? -1 : 0,
+                              role: E ? "presentation" : "button",
+                              tabIndex: E ? -1 : 0,
                               children: [
-                                  g || t
+                                  E || t
                                       ? null
-                                      : (0, r.jsx)(T, {
+                                      : (0, r.jsx)(S, {
                                             reason: s,
                                             isSingleMosaicItem: c,
                                         }),
                                   (0, r.jsx)("div", {
-                                      "aria-hidden": !g,
-                                      className: m.spoilerInnerContainer,
-                                      children: e(!g),
+                                      "aria-hidden": !E,
+                                      className: g.spoilerInnerContainer,
+                                      children: e(!E),
                                   }),
                               ],
                           });
                 },
             });
-        return t ? this.renderWithTooltip(h) : h;
+        return t ? this.renderWithTooltip(m) : m;
     }
     renderObscuredEmbed() {
         let {
@@ -247,42 +249,43 @@ class C extends i.PureComponent {
                 containerStyles: n,
                 isSingleMosaicItem: i,
                 obscurityControlClassName: a,
-                reason: s = _.wk.SPOILER,
+                reason: s = p.wk.SPOILER,
                 shouldAgeVerify: c,
                 isVerifiedTeen: u,
+                forceOpaqueObscure: d,
             } = this.props,
-            { visible: d } = this.state;
-        return (0, r.jsx)(A.Consumer, {
-            children: (f) => {
-                let p = f || d;
-                return _.Xh.has(s)
+            { visible: f } = this.state;
+        return (0, r.jsx)(C.Consumer, {
+            children: (_) => {
+                let h = _ || f;
+                return p.Xh.has(s)
                     ? (0, r.jsxs)("div", {
-                          "aria-label": d ? void 0 : this.ariaLabel,
-                          "aria-expanded": p,
+                          "aria-label": f ? void 0 : this.ariaLabel,
+                          "aria-expanded": h,
                           style: n,
-                          className: o()(t, m.spoilerContent, m.spoilerContainer, m.embedContainer, {
-                              [m.hidden]: !p,
-                              [m.opaque]: c || u,
+                          className: o()(t, g.spoilerContent, g.spoilerContainer, g.embedContainer, {
+                              [g.hidden]: !h,
+                              [g.opaque]: c || u || d,
                           }),
-                          role: p ? "presentation" : "button",
-                          tabIndex: p ? -1 : 0,
+                          role: h ? "presentation" : "button",
+                          tabIndex: h ? -1 : 0,
                           children: [
-                              p
+                              h
                                   ? null
-                                  : (0, r.jsx)(T, {
+                                  : (0, r.jsx)(S, {
                                         reason: s,
                                         isSingleMosaicItem: i,
                                     }),
                               (0, r.jsx)("div", {
-                                  "aria-hidden": !p,
-                                  className: m.spoilerInnerContainer,
-                                  children: e(!p),
+                                  "aria-hidden": !h,
+                                  className: g.spoilerInnerContainer,
+                                  children: e(!h),
                               }),
                               u
                                   ? null
-                                  : (0, r.jsx)(S, {
+                                  : (0, r.jsx)(A, {
                                         obscureReason: s,
-                                        isVisible: d,
+                                        isVisible: f,
                                         handleToggleObscurity: this.handleToggleObscurity,
                                         obscurityControlClassName: a,
                                     }),
@@ -290,22 +293,22 @@ class C extends i.PureComponent {
                       })
                     : (0, r.jsxs)(l.P3F, {
                           "aria-label": this.ariaLabel,
-                          "aria-expanded": p,
-                          className: o()(t, m.spoilerContent, m.spoilerContainer, m.embedContainer, { [m.hidden]: !p }),
-                          onClick: p ? void 0 : this.removeObscurity,
+                          "aria-expanded": h,
+                          className: o()(t, g.spoilerContent, g.spoilerContainer, g.embedContainer, { [g.hidden]: !h }),
+                          onClick: h ? void 0 : this.removeObscurity,
                           style: n,
-                          role: p ? "presentation" : "button",
-                          tabIndex: p ? -1 : 0,
+                          role: h ? "presentation" : "button",
+                          tabIndex: h ? -1 : 0,
                           children: [
-                              p
+                              h
                                   ? null
-                                  : (0, r.jsx)(T, {
+                                  : (0, r.jsx)(S, {
                                         reason: s,
-                                        className: m.embed,
+                                        className: g.embed,
                                     }),
                               (0, r.jsx)("div", {
-                                  "aria-hidden": !p,
-                                  children: e(!p),
+                                  "aria-hidden": !h,
+                                  children: e(!h),
                               }),
                           ],
                       });
@@ -315,7 +318,7 @@ class C extends i.PureComponent {
     renderObscuredText() {
         let { children: e, renderTextElement: t, className: n } = this.props,
             { visible: a } = this.state,
-            s = (0, r.jsx)(A.Consumer, {
+            s = (0, r.jsx)(C.Consumer, {
                 children: (s) => {
                     let c = s || a,
                         u = i.Children.toArray(e(c)),
@@ -327,12 +330,12 @@ class C extends i.PureComponent {
                         "aria-expanded": c,
                         tabIndex: c ? -1 : 0,
                         role: c ? "presentation" : "button",
-                        className: o()("obscured", n, m.spoilerContent, m.spoilerMarkdownContent, { [m.hidden]: !c }),
+                        className: o()("obscured", n, g.spoilerContent, g.spoilerMarkdownContent, { [g.hidden]: !c }),
                         children: (0, r.jsx)("span", {
-                            className: m.obscuredTextContent,
+                            className: g.obscuredTextContent,
                             children: (0, r.jsx)("span", {
                                 "aria-hidden": !c,
-                                className: m.obscuredTextContentInner,
+                                className: g.obscuredTextContentInner,
                                 children: d,
                             }),
                         }),
@@ -351,48 +354,48 @@ class C extends i.PureComponent {
             case "embed":
                 return this.renderObscuredEmbed();
             default:
-                return (0, p.vE)(e);
+                return (0, h.vE)(e);
         }
     }
     get ariaLabel() {
-        let { reason: e = _.wk.SPOILER } = this.props;
+        let { reason: e = p.wk.SPOILER } = this.props;
         switch (e) {
-            case _.wk.SPOILER:
-                return h.intl.string(h.t["F+x38P"]);
-            case _.wk.EXPLICIT_CONTENT:
-            case _.wk.GORE_CONTENT:
-                return h.intl.string(h.t.mlJ8VV);
-            case _.wk.POTENTIAL_EXPLICIT_CONTENT:
-                return h.intl.string(h.t["MRdR7+"]);
+            case p.wk.SPOILER:
+                return m.intl.string(m.t["F+x38P"]);
+            case p.wk.EXPLICIT_CONTENT:
+            case p.wk.GORE_CONTENT:
+                return m.intl.string(m.t.mlJ8VV);
+            case p.wk.POTENTIAL_EXPLICIT_CONTENT:
+                return m.intl.string(m.t["MRdR7+"]);
             default:
-                return (0, p.vE)(e);
+                return (0, h.vE)(e);
         }
     }
     get tooltipText() {
-        let { reason: e = _.wk.SPOILER } = this.props;
+        let { reason: e = p.wk.SPOILER } = this.props;
         switch (e) {
-            case _.wk.SPOILER:
-                return h.intl.string(h.t["F+x38P"]);
-            case _.wk.EXPLICIT_CONTENT:
-            case _.wk.GORE_CONTENT:
-                return h.intl.string(h.t.mlJ8VV);
-            case _.wk.POTENTIAL_EXPLICIT_CONTENT:
-                return h.intl.string(h.t["MRdR7+"]);
+            case p.wk.SPOILER:
+                return m.intl.string(m.t["F+x38P"]);
+            case p.wk.EXPLICIT_CONTENT:
+            case p.wk.GORE_CONTENT:
+                return m.intl.string(m.t.mlJ8VV);
+            case p.wk.POTENTIAL_EXPLICIT_CONTENT:
+                return m.intl.string(m.t["MRdR7+"]);
             default:
-                return (0, p.vE)(e);
+                return (0, h.vE)(e);
         }
     }
     constructor(...e) {
         super(...e),
-            g(this, "state", { visible: !1 }),
-            g(this, "removeObscurity", (e) => {
+            E(this, "state", { visible: !1 }),
+            E(this, "removeObscurity", (e) => {
                 let { visible: t } = this.state;
                 if (t) return;
                 t || (e.preventDefault(), e.stopPropagation()), this.setState({ visible: !0 });
                 let { onReveal: n } = this.props;
                 null != n && n();
             }),
-            g(this, "handleToggleObscurity", (e) => {
+            E(this, "handleToggleObscurity", (e) => {
                 if (
                     (e.stopPropagation(),
                     e.nativeEvent.stopPropagation(),
@@ -403,22 +406,24 @@ class C extends i.PureComponent {
                 let { onToggleObscurity: t } = this.props;
                 null != t && t(e), this.setState((e) => ({ visible: !e.visible }));
             }),
-            g(this, "obscure", () => {
+            E(this, "obscure", () => {
                 let { visible: e } = this.state;
                 e && this.setState({ visible: !1 });
             });
     }
 }
-let N = (e) => {
-    let t = (0, f.m8)() && null != e.reason && _.eq.has(e.reason),
-        n = (0, d.Jm)();
+let R = (e) => {
+    let t = (0, f.m8)() && null != e.reason && p.eq.has(e.reason),
+        n = (0, d.Jm)(),
+        i = (0, _.z)("ObscuredConnected");
     return (0, r.jsx)(
-        C,
-        y(E({}, e), {
+        N,
+        O(b({}, e), {
             shouldAgeVerify: t,
             isVerifiedTeen: n,
+            forceOpaqueObscure: i,
         }),
     );
 };
-(N.Types = O), (N.Reasons = _.wk);
-let R = N;
+(R.Types = v), (R.Reasons = p.wk);
+let P = R;

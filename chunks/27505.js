@@ -5,4 +5,5 @@ e.exports = {
     first: "first_d75751",
     last: "last_d75751",
     inactive: "inactive_d75751",
+    obscured: "obscured_d75751",
 };

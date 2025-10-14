@@ -10051,6 +10051,11 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     opacity: .15
 }
 
+.obscured_d75751 {
+    background-color: var(--spoiler-hidden-background);
+    border-color: var(--spoiler-hidden-background)
+}
+
 .button_aec7ab {
     background-color: var(--bg-surface-overlay);
     border-radius: 8px;
