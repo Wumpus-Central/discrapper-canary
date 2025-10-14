@@ -97,8 +97,8 @@ let m = function () {
                             className: p.controlsContainer,
                             children: [
                                 (0, r.jsx)(o.PhF, {
+                                    className: p.select,
                                     variant: "text-only",
-                                    popoutWidth: "auto",
                                     options: [
                                         {
                                             label: _.intl.string(_.t.STMPJy),
