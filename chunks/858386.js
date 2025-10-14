@@ -73,8 +73,8 @@ class E extends o.Z {
                   async () => {
                       let { default: e } = await Promise.resolve().then(n.bind(n, 194530));
                       return function (t) {
-                          let n = () => {
-                                  t.onClose(), a.Z.logout("login_required_account_manager", d.Z5c.LOGIN);
+                          let n = async () => {
+                                  await t.onClose(), a.Z.logout("login_required_account_manager", d.Z5c.LOGIN);
                               },
                               i = () => {
                                   l.default.track(d.rMx.FORCED_UPDATE_PASSWORD_SUCCEEDED), t.onClose();
