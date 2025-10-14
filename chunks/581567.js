@@ -23,6 +23,7 @@ function l(e) {
             distributor: void 0,
             sku: void 0,
             gameMetadata: void 0,
+            rawExePath: void 0,
         };
     let c = i.Z.getGameByName(e.name),
         u = "exePath" in e ? e.exePath : e.exe;
@@ -33,11 +34,12 @@ function l(e) {
         distributor: null != (o = e.distributor) ? o : void 0,
         sku: null != (l = e.sku) ? l : void 0,
         gameMetadata: null != e ? (0, r.sD)(e) : void 0,
+        rawExePath: u,
     };
 }
 function c(e, t) {
     if (null == e || null == t) return !1;
-    let n = s(e),
+    let n = o(e),
         r = (0, a.getPlatformName)();
     return t.some((e) => e.os === r && (null == n ? void 0 : n.endsWith(e.name)));
 }
