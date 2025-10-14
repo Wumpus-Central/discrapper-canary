@@ -365,6 +365,7 @@ function D(e) {
                                         renderListItem: (e) => (0, r.jsx)(h.W, T({}, e)),
                                         maxVisibleItems: G,
                                         loading: et,
+                                        typeahead: !0,
                                     }),
                                 }),
                             },

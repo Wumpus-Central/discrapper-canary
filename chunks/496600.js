@@ -339,42 +339,55 @@ function M(e) {
         ),
         eg = i.useCallback(
             (e) => {
-                let t = en.length;
+                let t = en.length,
+                    n = 1;
                 switch (e.key) {
                     case "ArrowDown":
-                        if (0 === t) return;
-                        e.preventDefault(),
-                            k((e) => {
-                                if (null === e) return 0;
-                                let n = e + 1;
-                                return n >= t && (n = W ? 0 : e), n;
-                            }),
-                            null == $ || $(!0);
+                    case "PageDown":
+                        if (
+                            ((n = "PageDown" === e.key ? 10 : 1),
+                            0 === t || (e.preventDefault(), null == $ || $(!0), e.altKey))
+                        )
+                            return;
+                        k((e) => {
+                            if (null === e) return 0;
+                            let r = e + n;
+                            return r >= t && W ? 0 : Math.min(r, t - 1);
+                        });
                         break;
                     case "ArrowUp":
-                        if (0 === t) return;
+                    case "PageUp":
+                        if (((n = "PageUp" === e.key ? 10 : 1), 0 === t)) return;
                         e.preventDefault(),
                             k((e) => {
                                 if (null === e) return 0;
-                                let n = e - 1;
-                                return n < 0 && (n = W ? t - 1 : 0), n;
+                                let r = e - n;
+                                return r < 0 && W ? t - 1 : Math.max(r, 0);
                             }),
                             null == $ || $(!0);
                         break;
                     case "Enter":
                         if ((e.preventDefault(), e.stopPropagation(), null == j || 0 === t)) return;
-                        let n = en[j];
-                        if (!0 === n.disabled || (V && 1 === et.length && et.includes(n))) return;
-                        X("single" === U ? [n] : (0, O.cq)(U, et, n));
+                        let r = en[j];
+                        if (!0 === r.disabled || (V && 1 === et.length && et.includes(r))) return;
+                        X("single" === U ? [r] : (0, O.cq)(U, et, r));
                         break;
                     case "Backspace":
                         if ("multiple" === U && "" === er && et.length > 0 && null != D.current) {
-                            var r;
-                            e.preventDefault(), e.stopPropagation(), null == (r = D.current.lastChild) || r.focus();
+                            var i;
+                            e.preventDefault(), e.stopPropagation(), null == (i = D.current.lastChild) || i.focus();
                         }
                         break;
                     case "Escape":
                         q && F && (e.preventDefault(), e.stopPropagation(), eu());
+                        break;
+                    case "Home":
+                        if ((e.preventDefault(), 0 === t)) return;
+                        k(0);
+                        break;
+                    case "End":
+                        if ((e.preventDefault(), 0 === t)) return;
+                        k(t - 1);
                 }
                 null == N || N(e);
             },
