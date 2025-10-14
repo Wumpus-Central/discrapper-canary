@@ -172,13 +172,14 @@ let eE = () => {
             });
         },
         eG = i.useCallback(() => {
-            (0, v.openUserSettings)(y.n.PROFILE_PANEL, {
-                section: x.oAB.PROFILE_CUSTOMIZATION,
-                analyticsLocations: e,
-            }),
-                setTimeout(() => {
-                    (0, m.I)({ analyticsLocations: e });
-                }, 200);
+            (0, v.openUserSettings)(
+                y.n.PROFILE_PANEL,
+                {
+                    section: x.oAB.PROFILE_CUSTOMIZATION,
+                    analyticsLocations: e,
+                },
+                () => (0, m.I)({ analyticsLocations: e }),
+            );
         }, [e]),
         eB = {
             clientThemes: {

@@ -175,13 +175,14 @@ let ec = (e, t) =>
             }),
             O = s.wL.useConfig({ location: "useBentoBoxes" }).enabled,
             v = (0, r.useCallback)(() => {
-                (0, d.openUserSettings)(u.n.PROFILE_PANEL, {
-                    section: h.oAB.PROFILE_CUSTOMIZATION,
-                    analyticsLocations: t,
-                }),
-                    setTimeout(() => {
-                        (0, l.I)({ analyticsLocations: t });
-                    }, 200);
+                (0, d.openUserSettings)(
+                    u.n.PROFILE_PANEL,
+                    {
+                        section: h.oAB.PROFILE_CUSTOMIZATION,
+                        analyticsLocations: t,
+                    },
+                    () => (0, l.I)({ analyticsLocations: t }),
+                );
             }, [t]),
             I = () => {
                 {
