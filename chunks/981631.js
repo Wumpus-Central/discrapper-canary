@@ -2611,7 +2611,14 @@ var tw = (function (e) {
         );
     })({}),
     tM = (function (e) {
-        return (e.JOIN = "join"), (e.ASK_TO_JOIN = "ask to join"), (e.LAUNCH = "launch"), (e.SPECTATE = "spectate"), e;
+        return (
+            (e.JOIN = "join"),
+            (e.ASK_TO_JOIN = "ask to join"),
+            (e.LAUNCH = "launch"),
+            (e.SPECTATE = "spectate"),
+            (e.PLAY = "play"),
+            e
+        );
     })({}),
     tj = (function (e) {
         return (

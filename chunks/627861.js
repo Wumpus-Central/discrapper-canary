@@ -506,13 +506,14 @@ function ep(e) {
                   remoteJoinPlatform: ed,
               });
     if (K) {
-        let e = (0, r.jsx)(c.Text, {
-            variant: "text-xs/medium",
-            className: eo.description,
-            color: "none",
-            lineClamp: 3,
-            children: (0, B.wR)(P, S, A, C),
-        });
+        let e = ev.length > 0,
+            t = (0, r.jsx)(c.Text, {
+                variant: "text-xs/medium",
+                className: eo.description,
+                color: "none",
+                lineClamp: 3,
+                children: (0, B.wR)(P, S, A, C, e),
+            });
         return (0, r.jsx)(h.W, {
             header: eT,
             title: S.name,
@@ -520,7 +521,7 @@ function ep(e) {
             onClickBanner: eO,
             bannerAspectRatio: W,
             iconSrc: null != G ? G : void 0,
-            info: e,
+            info: t,
             actions: ev,
             onClickContent: eO,
             trackingConfig: {
