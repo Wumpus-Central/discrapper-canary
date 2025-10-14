@@ -48,6 +48,7 @@ function b(e) {
                     id: n.name,
                     file: i,
                     draftType: d.d.SlashCommand,
+                    allowOptimization: !1,
                 });
             },
             [t, n],
@@ -80,6 +81,7 @@ function b(e) {
                 id: n.name,
                 file: r,
                 draftType: d.d.SlashCommand,
+                allowOptimization: !1,
             }),
                 (e.currentTarget.value = "");
         }

@@ -196,6 +196,7 @@ function L(e) {
                             id: n,
                             file: r,
                             draftType: y.d.InteractionModal,
+                            allowOptimization: !1,
                         }),
                         n
                     );
