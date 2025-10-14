@@ -8,7 +8,7 @@ var r = n(594928),
     c = n(388032),
     u = n(693450);
 let d = () => {
-    let e = r.wL.useConfig({ location: "useGetPlanComparisonTableRowsApplicationHome" }).enabled,
+    let e = (0, r.cL)({ location: "useGetPlanComparisonTableRowsApplicationHome" }),
         t = [
             {
                 id: 10,

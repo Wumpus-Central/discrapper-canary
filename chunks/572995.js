@@ -173,7 +173,7 @@ let ec = (e, t) =>
                 scrollPosition: m.Y_.TRY_IT_OUT,
                 analyticsLocations: t,
             }),
-            O = s.wL.useConfig({ location: "useBentoBoxes" }).enabled,
+            O = (0, s.cL)({ location: "useBentoBoxes" }),
             v = (0, r.useCallback)(() => {
                 (0, d.openUserSettings)(
                     u.n.PROFILE_PANEL,

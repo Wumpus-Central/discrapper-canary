@@ -79,7 +79,7 @@ function j(e) {
     let Q = (0, u.gS)(X.id),
         J = (0, o.e7)([T.ZP], () => (null == X.id ? null : T.ZP.getMember(X.id, G.id))),
         $ = (0, o.e7)([I.Z], () => I.Z.getGuildMemberProfile(G.id, X.id)),
-        { enabled: ee } = c.wL.useConfig({ location: "GuildIdentityCustomizationSections" }),
+        ee = (0, c.cL)({ location: "GuildIdentityCustomizationSections" }),
         et = A.ZP.canUsePremiumProfileCustomization(G),
         en = (0, f.gd)(Z, null == J ? void 0 : J.avatar),
         er = (0, f.f$)(V, null == $ ? void 0 : $.banner),

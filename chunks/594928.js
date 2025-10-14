@@ -1,5 +1,6 @@
 n.d(t, {
     JH: () => s,
+    cL: () => c,
     fN: () => o,
     wL: () => l,
 });
@@ -62,3 +63,8 @@ let o = (0, r.B)({
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     });
+function c(e) {
+    let { location: t } = e,
+        n = s.useExperiment({ location: t }).enabled;
+    return l.useConfig({ location: t }).enabled && n;
+}

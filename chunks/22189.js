@@ -121,7 +121,7 @@ let eE = () => {
         eS = null != eg && eg.hasPremiumAtLeast(L.PremiumTypes.TIER_2),
         eA = (0, p.Nj)(o.z.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE),
         eC = d.Mc.useExperiment({ location: "usePremiumPerksCards" }).v2EditorEnabled,
-        eN = h.wL.useConfig({ location: "usePremiumPerksCards" }).enabled,
+        eN = (0, h.cL)({ location: "usePremiumPerksCards" }),
         eR = (0, g.Z)({
             scrollPosition: k.Y_.TRY_IT_OUT,
             analyticsLocations: e,
