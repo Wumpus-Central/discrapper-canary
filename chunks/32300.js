@@ -10,6 +10,7 @@ n.d(t, {
     XE: () => u,
     YB: () => g,
     Yo: () => d,
+    ZU: () => A,
     aq: () => I,
     dj: () => f,
     eV: () => C,
@@ -270,14 +271,22 @@ function S(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return T.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
-let A = (0, i.le)({
-    name: "2025-09-overlay-default-keybind",
+let A = (0, r.B)({
+    id: "2025-10_overlay_default_keybind",
+    label: "Overlay Default Keybind",
     kind: "user",
     defaultConfig: { keybindOverride: void 0 },
-    variations: { 1: { keybindOverride: "alt+a" } },
+    treatments: [
+        {
+            id: 1,
+            label: "alt + a Keybind",
+            config: { keybindOverride: "alt+a" },
+        },
+    ],
 });
 function C(e) {
-    return A.getConfig({ location: e });
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+    return A.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
 let N = (0, r.B)({
     kind: "user",

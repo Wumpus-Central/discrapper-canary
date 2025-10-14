@@ -336,7 +336,13 @@ let i = {
         neverLoadBeforeConnectionOpen: !0,
     },
     OverlayKeybindExperimentManager: {
-        actions: ["OVERLAY_READY", "KEYBINDS_SET_KEYBIND"],
+        actions: [
+            "POST_CONNECTION_OPEN",
+            "EXPERIMENTS_FETCH_SUCCESS",
+            "EXPERIMENT_OVERRIDE_BUCKET",
+            "KEYBINDS_SET_KEYBIND",
+            "OVERLAY_READY",
+        ],
         inlineRequire: () => n(991186).Z,
         neverLoadBeforeConnectionOpen: !0,
     },
