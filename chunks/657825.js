@@ -30,11 +30,12 @@ let _ = i.memo((e) => {
                                   color: "interactive-active",
                                   children: u.ZP.getName(a),
                               }),
-                              (0, r.jsx)(l.Text, {
-                                  variant: "text-sm/medium",
-                                  color: "text-secondary",
-                                  children: n,
-                              }),
+                              null != n &&
+                                  (0, r.jsx)(l.Text, {
+                                      variant: "text-sm/medium",
+                                      color: "text-secondary",
+                                      children: n,
+                                  }),
                           ],
                       }),
                   }),

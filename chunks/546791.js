@@ -1,5 +1,6 @@
 n.d(t, {
     E2: () => A,
+    Kp: () => L,
     LI: () => b,
     MH: () => D,
     Qr: () => E,
@@ -108,4 +109,13 @@ let f = 60,
             t = w(),
             n = (0, l.vE)("settings-controls");
         return (null == e ? void 0 : e.nsfwAllowed) === !1 && t && n;
-    };
+    },
+    L = (e, t) =>
+        t > 0 && 0 === e
+            ? d.intl.formatToPlainString(u.default["L/Cj7e"], { callCount: t })
+            : e > 0 && 0 === t
+              ? d.intl.formatToPlainString(u.default["6X1F0t"], { messageCount: e })
+              : d.intl.formatToPlainString(u.default.IYqGMD, {
+                    messageCount: e,
+                    callCount: t,
+                });
