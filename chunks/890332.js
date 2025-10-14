@@ -20,12 +20,10 @@ e.exports = {
     withText: "withText_e131a9",
     voicePanelIntroductionHeader: "voicePanelIntroductionHeader_e131a9",
     voicePanelIntroductionText: "voicePanelIntroductionText_e131a9",
-    voicePanelIntroductionButton: "voicePanelIntroductionButton_e131a9",
     voicePanelIntroductionWrapper: "voicePanelIntroductionWrapper_e131a9",
     wrapper: "wrapper_e131a9",
     viewAsRolesWarning: "viewAsRolesWarning_e131a9",
     viewAsRolesWarningText: "viewAsRolesWarningText_e131a9",
-    viewAsRolesWarningButton: "viewAsRolesWarningButton_e131a9",
     disabled: "disabled_e131a9",
     voiceButtonsContainer: "voiceButtonsContainer_e131a9",
 };
