@@ -90,35 +90,37 @@ function g(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let E = "USER_SETTINGS_MODAL_MODAL_KEY",
-    b = function () {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.n.ACCOUNT_PANEL,
-            t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { section: d.oAB.ACCOUNT };
-        var { subsection: s } = t,
-            l = m(t, ["subsection"]);
-        a.Z.dispatch(
-            _(
-                {
-                    type: "USER_SETTINGS_MODAL_OPEN",
-                    subsection: null != s ? s : null,
-                },
-                l,
-            ),
+let E = "USER_SETTINGS_MODAL_MODAL_KEY";
+async function b() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.n.ACCOUNT_PANEL,
+        t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { section: d.oAB.ACCOUNT },
+        s = arguments.length > 2 ? arguments[2] : void 0;
+    var { subsection: l } = t,
+        f = m(t, ["subsection"]);
+    a.Z.dispatch(
+        _(
+            {
+                type: "USER_SETTINGS_MODAL_OPEN",
+                subsection: null != l ? l : null,
+            },
+            f,
         ),
-            (0, u.yP)("openUserSettings")
-                ? (0, i.ZDy)(
-                      async () => {
-                          let { default: t } = await Promise.all([n.e("9452"), n.e("75685")]).then(n.bind(n, 245286));
-                          return (n) => (0, r.jsx)(t, h(_({}, n), { target: e }));
-                      },
-                      {
-                          modalKey: E,
-                          stackingBehavior: "replaceAll",
-                          stackNextByDefault: !0,
-                      },
-                  )
-                : (0, o.jN)(d.S9g.USER_SETTINGS);
-    };
+    ),
+        (0, u.yP)("openUserSettings")
+            ? await (0, i.ZDy)(
+                  async () => {
+                      let { default: t } = await Promise.all([n.e("9452"), n.e("75685")]).then(n.bind(n, 245286));
+                      return (n) => (0, r.jsx)(t, h(_({}, n), { target: e }));
+                  },
+                  {
+                      modalKey: E,
+                      stackingBehavior: "replaceAll",
+                      stackNextByDefault: !0,
+                  },
+              )
+            : (0, o.jN)(d.S9g.USER_SETTINGS),
+        null == s || s();
+}
 function y(e) {
     let { section: t, subsection: n, urlOrigin: r } = e;
     l.default.track(d.rMx.USER_SETTINGS_URL_PARSED, {
