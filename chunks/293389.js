@@ -339,17 +339,12 @@ function Z(e) {
                     children: (t) =>
                         (0, r.jsx)(
                             c.P3F,
-                            M(
-                                L(
-                                    {
-                                        "aria-label": C.intl.string(C.t["1+O+Tk"]),
-                                        className: N.toggleIcon,
-                                        onClick: () => K(!e),
-                                    },
-                                    t,
-                                ),
-                                { children: n },
-                            ),
+                            M(L({}, t), {
+                                "aria-label": C.intl.string(C.t["1+O+Tk"]),
+                                className: N.toggleIcon,
+                                onClick: () => K(!e),
+                                children: n,
+                            }),
                         ),
                 }),
             ],
@@ -380,17 +375,12 @@ function Z(e) {
                     S
                         ? (0, r.jsx)(
                               c.P3F,
-                              M(
-                                  L(
-                                      {
-                                          "aria-label": C.intl.string(C.t.QmitzM),
-                                          className: N.toggleIcon,
-                                          onClick: z,
-                                      },
-                                      e,
-                                  ),
-                                  { children: t },
-                              ),
+                              M(L({}, e), {
+                                  "aria-label": C.intl.string(C.t.QmitzM),
+                                  className: N.toggleIcon,
+                                  onClick: z,
+                                  children: t,
+                              }),
                           )
                         : t,
             }),
@@ -407,24 +397,17 @@ function Z(e) {
                       children: (e) =>
                           (0, r.jsx)(
                               c.P3F,
-                              M(
-                                  L(
-                                      {
-                                          "aria-label": C.intl.string(C.t["y0B+lp"]),
-                                          className: N.toggleIcon,
-                                          onClick: q,
-                                      },
-                                      e,
-                                  ),
-                                  {
-                                      children: (0, r.jsx)(c.U65, {
-                                          size: "md",
-                                          color: "currentColor",
-                                          className: N.toggleIconOn,
-                                          colorClass: N.fill,
-                                      }),
-                                  },
-                              ),
+                              M(L({}, e), {
+                                  "aria-label": C.intl.string(C.t["y0B+lp"]),
+                                  className: N.toggleIcon,
+                                  onClick: q,
+                                  children: (0, r.jsx)(c.U65, {
+                                      size: "md",
+                                      color: "currentColor",
+                                      className: N.toggleIconOn,
+                                      colorClass: N.fill,
+                                  }),
+                              }),
                           ),
                   }),
               });
