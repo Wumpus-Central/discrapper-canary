@@ -345,13 +345,13 @@ let O = (e) => (null == e ? void 0 : e.premiumType) != null,
         e.sort((e, r) => {
             var i, a;
             let o = n
-                    ? (0, _.T)({
+                    ? (0, _.T4)({
                           product: e,
                           isPremiumUser: t,
                       })
                     : S(e, t, !1),
                 s = n
-                    ? (0, _.T)({
+                    ? (0, _.T4)({
                           product: r,
                           isPremiumUser: t,
                       })

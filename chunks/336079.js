@@ -26,7 +26,7 @@ let p = (0, l.createContext)({
             { product: m } = (0, o.T)(t),
             O = (0, l.useMemo)(() => {
                 if (null == m) return null;
-                let e = (0, s.T)({
+                let e = (0, s.T4)({
                         product: m,
                         isPremiumUser: y,
                     }),

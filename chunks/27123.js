@@ -1,6 +1,7 @@
 n.d(t, {
-    T: () => a,
-    v: () => i,
+    T4: () => a,
+    vH: () => i,
+    yB: () => o,
 });
 var r = n(981631);
 let i = (e) => {
@@ -26,4 +27,11 @@ let i = (e) => {
             }).find((e) => e.currency === r.pKx.DISCORD_ORB))
             ? t
             : null;
+    },
+    o = (e) => {
+        let t = i({
+            product: e,
+            isPremiumUser: !1,
+        });
+        return 1 === t.length && t[0].currency === r.pKx.DISCORD_ORB;
     };

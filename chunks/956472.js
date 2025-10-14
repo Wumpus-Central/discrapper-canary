@@ -43,7 +43,7 @@ function f(e) {
 }
 let _ = (e) => {
         let { product: t, isPremiumUser: n } = e,
-            r = (0, s.v)({
+            r = (0, s.vH)({
                 product: t,
                 isPremiumUser: n,
             }),
