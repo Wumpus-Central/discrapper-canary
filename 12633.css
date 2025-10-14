@@ -3144,6 +3144,7 @@
 
 .leadingIcon__714a9 {
     color: var(--icon-primary);
+    flex-shrink: 0;
     height: 20px;
     width: 20px
 }
@@ -18125,7 +18126,10 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 }
 
 .radioItemIcon__5a85a {
-    color: var(--interactive-active)
+    color: var(--icon-primary);
+    flex-shrink: 0;
+    height: 20px;
+    width: 20px
 }
 
 .label__5a85a {
