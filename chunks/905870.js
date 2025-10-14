@@ -41,9 +41,10 @@ class O extends r.Z {
         if (!y()) return;
         let n = null == (e = (t = i.Z.remoteApp).getReleaseChannel) ? void 0 : e.call(t);
         ("development" === n || "canary" === n) &&
+            (clearInterval(this._checkInterval),
             (this._checkInterval = setInterval(async () => {
                 await this.trackPerformanceStats();
-            }, _));
+            }, _)));
     }
     async trackPerformanceStats() {
         var e, t, n, r, i;
