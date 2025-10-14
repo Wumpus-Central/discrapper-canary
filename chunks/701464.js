@@ -17,20 +17,20 @@ function h(e) {
         n = (0, l.ZP)(null == t ? void 0 : t.id),
         {
             defaultWishlistId: c,
-            wishlist: u,
-            popularProducts: h,
-            isFetchingWishlist: m,
-            isFetchingShopHome: x,
-            isFetchingCategories: g,
-            wishlistError: j,
-            fetchShopHomeError: b,
+            wishlist: h,
+            popularProducts: m,
+            isFetchingWishlist: x,
+            isFetchingShopHome: g,
+            isFetchingCategories: j,
+            wishlistError: b,
+            fetchShopHomeError: y,
         } = (0, d.ZL)(t),
-        { displayItems: y, wishlistLength: L } = (0, d.UD)({
-            wishlist: u,
+        { displayItems: L, wishlistLength: S } = (0, d.UD)({
+            wishlist: h,
             defaultWishlistId: c,
-            popularProducts: h,
-            wishlistError: j,
-            fetchShopHomeError: b,
+            popularProducts: m,
+            wishlistError: b,
+            fetchShopHomeError: y,
         }),
         v = i.useCallback(() => {
             (0, o.openUserProfileModal)({
@@ -38,9 +38,9 @@ function h(e) {
                 section: p.oh.WISHLIST,
             });
         }, [t.id]);
-    if (null == c || null != j || null != b) return null;
-    let S = C.ZP.getName(t),
-        w =
+    if (null == c || null != b || null != y) return null;
+    let w = C.ZP.getName(t),
+        I =
             null == n
                 ? void 0
                 : n.getBannerURL({
@@ -51,10 +51,10 @@ function h(e) {
         className: f.wishlistBanner,
         style: { width: 714 },
         children: [
-            null != w &&
+            null != I &&
                 (0, r.jsx)("div", {
                     className: f.backgroundImage,
-                    style: { backgroundImage: "url(".concat(w, ")") },
+                    style: { backgroundImage: "url(".concat(I, ")") },
                 }),
             (0, r.jsxs)("div", {
                 className: f.wishlistBannerHeader,
@@ -70,13 +70,13 @@ function h(e) {
                             (0, r.jsx)(a.Text, {
                                 variant: "text-sm/medium",
                                 color: "always-white",
-                                children: _.intl.format(_.t.BjEX39, { username: S }),
+                                children: _.intl.format(_.t.BjEX39, { username: w }),
                             }),
                         ],
                     }),
                     (0, r.jsx)(a.Button, {
                         variant: "overlay-secondary",
-                        text: _.intl.format(_.t["8uYD+P"], { username: S }),
+                        text: _.intl.format(_.t["8uYD+P"], { username: w }),
                         onClick: v,
                         disabled: (null == t ? void 0 : t.id) == null,
                     }),
@@ -85,9 +85,9 @@ function h(e) {
             (0, r.jsx)("div", {
                 className: f.wishlistBannerGrid,
                 children:
-                    m || x || g || null == u || 0 === y.length
+                    x || g || j || null == h || 0 === L.length
                         ? (0, r.jsx)("div", {})
-                        : y.map((e) => {
+                        : L.map((e) => {
                               let { item: n, source: i } = e;
                               return (0, r.jsx)(
                                   s.Z,
@@ -97,8 +97,9 @@ function h(e) {
                                       wishlistId: c,
                                       isOwner: !1,
                                       size: "sm",
-                                      showIcons: L < d.zL,
+                                      showIcons: S < d.zL,
                                       collectibleSource: i,
+                                      giftingOrigin: i === d.lr.WISHLIST ? u.Wt.DM_CHANNEL_WISHLIST : u.Wt.DM_CHANNEL,
                                   },
                                   n.skuId,
                               );

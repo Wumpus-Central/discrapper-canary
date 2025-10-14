@@ -194,7 +194,7 @@ function k(e) {
                 skusById: Y,
                 formatPrice: I.T4,
             });
-            return M === R.Wt.USER_PROFILE_WISHLIST
+            return M === R.Wt.USER_PROFILE_WISHLIST || M === R.Wt.DM_CHANNEL_WISHLIST
                 ? (0, r.jsxs)("div", {
                       className: w.bodyColumnRight,
                       children: [

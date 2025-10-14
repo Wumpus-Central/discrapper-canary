@@ -757,6 +757,7 @@ var eJ = (function (e) {
             (e[(e.DM_CHANNEL = 0)] = "DM_CHANNEL"),
             (e[(e.SHOP_PAGE = 1)] = "SHOP_PAGE"),
             (e[(e.USER_PROFILE_WISHLIST = 2)] = "USER_PROFILE_WISHLIST"),
+            (e[(e.DM_CHANNEL_WISHLIST = 3)] = "DM_CHANNEL_WISHLIST"),
             e
         );
     })({});

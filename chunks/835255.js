@@ -40,19 +40,20 @@ function R(e) {
             size: D = "lg",
             showIcons: k = !1,
             collectibleSource: M = C.lr.WISHLIST,
+            giftingOrigin: U = Z.Wt.USER_PROFILE_WISHLIST,
         } = e,
-        U = i.useRef(null),
         G = i.useRef(null),
-        { isHoveringOrFocusing: B } = (0, O.Z)(G),
-        H = t.collectiblesItem,
-        { analyticsLocations: V } = (0, f.ZP)(),
-        F = (0, o.TH)(),
-        z = H.type,
-        [W] = (0, u.Wu)([I.Z], () => [I.Z.hasSentGift(t.skuId, n.id)], [t.skuId, n.id]),
-        Y = !W && B,
-        q = R ? w.t.FdGl5O : w.t.ilhtIS,
-        K = R ? void 0 : d.OgN,
-        Q = (0, r.jsx)("div", {
+        B = i.useRef(null),
+        { isHoveringOrFocusing: H } = (0, O.Z)(B),
+        V = t.collectiblesItem,
+        { analyticsLocations: F } = (0, f.ZP)(),
+        z = (0, o.TH)(),
+        W = V.type,
+        [Y] = (0, u.Wu)([I.Z], () => [I.Z.hasSentGift(t.skuId, n.id)], [t.skuId, n.id]),
+        q = !Y && H,
+        K = R ? w.t.FdGl5O : w.t.ilhtIS,
+        Q = R ? void 0 : d.OgN,
+        X = (0, r.jsx)("div", {
             className: L.cardStateIconWrapper,
             children: (0, r.jsx)(d.sV5, {
                 size: "custom",
@@ -62,22 +63,22 @@ function R(e) {
                 className: a()(L.cardStateIcon, L.checkmark),
             }),
         }),
-        X = (0, r.jsx)("div", {
+        J = (0, r.jsx)("div", {
             className: L.overlay,
             children: (0, r.jsx)(d.Button, {
-                focusProps: { ringTarget: G },
+                focusProps: { ringTarget: B },
                 variant: "primary",
                 size: "sm",
-                text: w.intl.string(q),
-                icon: K,
+                text: w.intl.string(K),
+                icon: Q,
                 onClick: (e) => {
-                    e.stopPropagation(), $();
+                    e.stopPropagation(), ee();
                 },
                 fullWidth: !0,
             }),
         }),
-        J = i.useCallback(() => {
-            if (F.pathname.startsWith(x.Z5c.COLLECTIBLES_SHOP)) {
+        $ = i.useCallback(() => {
+            if (z.pathname.startsWith(x.Z5c.COLLECTIBLES_SHOP)) {
                 let e = h.Z.getProduct(t.skuId),
                     n = h.Z.getCategoryForProduct(t.skuId);
                 if (null != e && null != n) {
@@ -86,7 +87,7 @@ function R(e) {
                             product: e,
                             category: n,
                             shouldCheckoutWithOrbs: (0, _.oQ)({ product: e }),
-                            analyticsLocations: V,
+                            analyticsLocations: F,
                             analyticsSource: p.Z.USER_PROFILE_WISHLIST,
                             returnRef: void 0,
                             tab: void 0,
@@ -97,47 +98,47 @@ function R(e) {
             }
             (0, N.closeUserProfileModal)(),
                 (0, y.uL)("".concat(x.Z5c.COLLECTIBLES_SHOP, "#itemSkuId=").concat(t.skuId));
-        }, [F.pathname, t.skuId, V]),
-        $ = () => {
+        }, [z.pathname, t.skuId, F]),
+        ee = () => {
             if (
                 ((0, T.Er)({
                     wishlistId: l,
                     action: P.NW.WISHLIST_ITEM_CLICKED,
                     skuId: t.skuId,
-                    analyticsLocations: V,
+                    analyticsLocations: F,
                 }),
                 R)
             )
-                J();
+                $();
             else {
-                if (W) return;
+                if (Y) return;
                 (0, E.Z)({
                     skuId: t.skuId,
                     isGift: !0,
-                    giftingOrigin: Z.Wt.USER_PROFILE_WISHLIST,
-                    analyticsLocations: V,
+                    giftingOrigin: U,
+                    analyticsLocations: F,
                     giftRecipient: n,
                     variantsReturnStyle: c.v.VARIANTS_GROUP,
                 });
             }
         };
     return (0, r.jsxs)("div", {
-        ref: U,
+        ref: G,
         className: L.container,
         children: [
             (0, r.jsxs)("div", {
-                ref: G,
+                ref: B,
                 className: a()(L.card, {
-                    [L.giftSent]: W,
+                    [L.giftSent]: Y,
                     [L.smallCard]: "sm" === D,
                     [L.largeCard]: "lg" === D,
                 }),
-                onClick: $,
+                onClick: ee,
                 children: [
                     (0, r.jsx)(d.nn4, {
                         children: (0, r.jsx)(d.H, {
                             children: (() => {
-                                switch (z) {
+                                switch (W) {
                                     case s.Z.AVATAR_DECORATION:
                                         return w.intl.formatToPlainString(w.t.IQQYeX, { itemName: t.skuName });
                                     case s.Z.PROFILE_EFFECT:
@@ -145,7 +146,7 @@ function R(e) {
                                     case s.Z.NAMEPLATE:
                                         return w.intl.formatToPlainString(w.t.eVNt6O, { itemName: t.skuName });
                                     default:
-                                        (0, S.vE)(z);
+                                        (0, S.vE)(W);
                                 }
                             })(),
                         }),
@@ -153,13 +154,13 @@ function R(e) {
                     (0, r.jsx)("div", {
                         className: L.cardPreview,
                         children: (() => {
-                            switch (H.type) {
+                            switch (V.type) {
                                 case s.Z.PROFILE_EFFECT:
                                     return (0, r.jsx)("div", {
                                         className: L.profileEffectPreview,
                                         children: (0, r.jsx)(v.Z, {
-                                            skuId: H.skuId,
-                                            isHighlighted: Y,
+                                            skuId: V.skuId,
+                                            isHighlighted: q,
                                             isPurchased: !1,
                                             removeSetHeight: !0,
                                         }),
@@ -168,9 +169,9 @@ function R(e) {
                                     return (0, r.jsx)("div", {
                                         className: L.avatarDecorationPreview,
                                         children: (0, r.jsx)(m.R, {
-                                            item: H,
+                                            item: V,
                                             user: n,
-                                            isHighlighted: Y,
+                                            isHighlighted: q,
                                             isPurchased: !1,
                                             avatarSize: d.EFr.SIZE_80,
                                         }),
@@ -183,8 +184,8 @@ function R(e) {
                                                 className: L.nameplateTopLeft,
                                                 children: (0, r.jsx)(b.Z, {
                                                     user: n,
-                                                    nameplate: H,
-                                                    isHighlighted: Y,
+                                                    nameplate: V,
+                                                    isHighlighted: q,
                                                     showPlaceholderUser: !0,
                                                     showStatus: !0,
                                                     isPurchased: !1,
@@ -197,8 +198,8 @@ function R(e) {
                                                 "aria-hidden": !0,
                                                 children: (0, r.jsx)(b.Z, {
                                                     user: n,
-                                                    nameplate: H,
-                                                    isHighlighted: Y,
+                                                    nameplate: V,
+                                                    isHighlighted: q,
                                                     showPlaceholderUser: !0,
                                                     showStatus: !0,
                                                     isPurchased: !1,
@@ -213,8 +214,8 @@ function R(e) {
                             }
                         })(),
                     }),
-                    W && Q,
-                    !W && X,
+                    Y && X,
+                    !Y && J,
                 ],
             }),
             k

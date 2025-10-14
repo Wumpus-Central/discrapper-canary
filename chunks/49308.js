@@ -107,7 +107,7 @@ function A(e) {
             t &&
                 null != p &&
                 null != A &&
-                y === O.Wt.USER_PROFILE_WISHLIST &&
+                (y === O.Wt.USER_PROFILE_WISHLIST || y === O.Wt.DM_CHANNEL_WISHLIST) &&
                 l.Z.dispatch({
                     type: "WISHLIST_GIFT_SENT",
                     skuId: A,
