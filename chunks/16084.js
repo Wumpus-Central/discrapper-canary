@@ -1,10 +1,11 @@
 n.d(t, {
     $N: () => v,
-    ZZ: () => A,
-    pB: () => N,
+    ZZ: () => C,
+    pB: () => R,
+    t_: () => A,
     uE: () => I,
     x2: () => T,
-    xA: () => C,
+    xA: () => N,
 }),
     n(415506);
 var r = n(311570),
@@ -166,7 +167,52 @@ async function T(e, t, n, r) {
     return i;
 }
 let S = { isGift: !1 };
-async function A(e, t, n) {
+async function A(e, t, n, r, s) {
+    a.Z.dispatch({ type: "ORDER_CREATE_START" });
+    try {
+        let o = {
+            order_line_items: [
+                {
+                    sku_id: e,
+                    quantity: 1,
+                    purchase_type: 0,
+                },
+            ],
+            billing_facet: { payment_source_id: t },
+            location_facet: { request_gateway_country_code: n },
+        };
+        r &&
+            (o.gifting_facet = {
+                is_gift: !0,
+                gift_customization: {
+                    recipient_id: s.recipient_id,
+                    gift_style: s.gift_style,
+                    emoji_id: s.emoji_id,
+                    emoji_name: s.emoji_name,
+                    sound_id: s.sound_id,
+                    reward_sku_ids: s.reward_sku_ids,
+                    custom_message_contents: s.custom_message,
+                },
+            });
+        let l = (
+            await i.tn.post({
+                url: g.ANM.ORDER_CREATE,
+                body: o,
+                rejectWithError: !1,
+            })
+        ).body.id;
+        return (
+            a.Z.dispatch({
+                type: "ORDER_CREATE_SUCCESS",
+                orderId: l,
+            }),
+            l
+        );
+    } catch (e) {
+        throw (a.Z.dispatch({ type: "ORDER_CREATE_FAIL" }), new o.HF("Failed to create order: ".concat(e)));
+    }
+}
+async function C(e, t, n) {
     let {
         paymentSource: r,
         expectedAmount: l,
@@ -256,7 +302,7 @@ async function A(e, t, n) {
         return (0, m.sk)(i.body, r);
     }
 }
-async function C() {
+async function N() {
     try {
         let e = { purchase_token: (0, p.d)() },
             t = await i.tn.post({
@@ -270,6 +316,6 @@ async function C() {
         throw e instanceof o.HF ? e : new o.HF(e);
     }
 }
-function N() {
+function R() {
     a.Z.dispatch({ type: "SKU_PURCHASE_CLEAR_ERROR" });
 }

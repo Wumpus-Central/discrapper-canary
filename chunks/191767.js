@@ -1,24 +1,31 @@
-n.d(t, { f: () => S }), n(388685), n(49124);
+n.d(t, { f: () => A }), n(415506), n(388685), n(35282), n(49124);
 var a = n(951288),
     r = n(647438),
     i = n(289008),
     l = n(120356),
-    s = n.n(l),
-    o = n(159691),
-    c = n(481060),
-    d = n(801937),
-    u = n(502109),
-    m = n(241209),
-    p = n(563132),
-    h = n(586585),
-    x = n(439021),
-    f = n(954824),
-    b = n(237012),
-    g = n(231338),
-    v = n(388032),
-    j = n(306197),
-    _ = n(818033);
-function y(e) {
+    o = n.n(l),
+    s = n(442837),
+    c = n(544891),
+    d = n(159691),
+    u = n(481060),
+    m = n(355467),
+    p = n(16084),
+    h = n(801937),
+    x = n(502109),
+    f = n(241209),
+    g = n(563132),
+    b = n(586585),
+    v = n(439021),
+    j = n(853872),
+    _ = n(622999),
+    y = n(954824),
+    C = n(237012),
+    S = n(981631),
+    E = n(231338),
+    T = n(388032),
+    O = n(306197),
+    N = n(818033);
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
@@ -43,7 +50,7 @@ function y(e) {
     }
     return e;
 }
-function C(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,53 +68,286 @@ function C(e, t) {
         e
     );
 }
-function S() {
-    return (0, a.jsx)(p.PaymentContextProvider, {
+async function w(e) {
+    return (
+        await c.tn.post({
+            url: S.ANM.ORDER_SIGN(e),
+            rejectWithError: !0,
+        })
+    ).body;
+}
+async function R(e) {
+    try {
+        let t = (
+            await c.tn.get({
+                url: S.ANM.ORDER_UPDATE(e),
+                rejectWithError: !0,
+            })
+        ).body;
+        console.log("Order data:", t);
+        let n = t.billing_facet;
+        if (null == n) throw Error("Order does not have billing facet information");
+        let a = n.order_signing_deferral_context;
+        if (null == a) throw Error("Order does not have payment redirect context");
+        let r = a.stripe_3ds_context;
+        if (null == r) throw Error("Order does not have 3DS context information");
+        console.log("3DS Context:", r);
+        let i = await (0, _.d2)();
+        if (null == i) throw Error("Stripe not loaded");
+        let l = r.client_secret;
+        if (null == l || "" === l) throw Error("No client secret found in 3DS context");
+        let { error: o, paymentIntent: s } = await i.confirmCardPayment(l, { payment_method: r.payment_method_id });
+        if (null != o) throw Error("3DS authentication failed: ".concat(o.message));
+        if (null == s) throw Error("No payment intent returned from 3DS authentication");
+        console.log("3DS authentication completed successfully:", s);
+    } catch (e) {
+        throw (console.error("3DS completion error:", e), e);
+    }
+}
+function k() {
+    let [e, t] = r.useState(!1),
+        [n, i] = r.useState(!1),
+        [l, o] = r.useState(!1),
+        [c, h] = r.useState(null),
+        [x, f] = r.useState(null),
+        [g, b] = r.useState(null),
+        [v, _] = r.useState(!1),
+        y = (0, s.e7)([j.Z], () => j.Z.paymentSources),
+        S = (0, s.e7)([j.Z], () => j.Z.hasFetchedPaymentSources),
+        T = (0, s.e7)([j.Z], () => j.Z.defaultPaymentSourceId);
+    r.useEffect(() => {
+        S || (0, m.tZ)();
+    }, [S]),
+        r.useEffect(() => {
+            null != T && null == g && b(T);
+        }, [T, g]);
+    let N = r.useMemo(
+            () =>
+                Object.values(y).map((e) => {
+                    let t = String(e.type);
+                    if (e.type === E.He.CARD && "last4" in e) {
+                        var n, a;
+                        let r = null != (n = e.last4) ? n : "",
+                            i = null != (a = e.brand) ? a : "Unknown";
+                        t += " - ****".concat(r, " (").concat(i, ")");
+                    } else null != e.brand && "" !== e.brand && (t += " - ".concat(e.brand));
+                    return {
+                        value: e.id,
+                        label: t,
+                    };
+                }),
+            [y],
+        ),
+        k = (0, u.nVN)({
+            value: g,
+            onChange: b,
+        }),
+        A = async () => {
+            if (null == g || "" === g) return void h("Please select a payment source first.");
+            t(!0), h(null), f(null), _(!1);
+            try {
+                let e = await (0, p.t_)("1420045362965512212", g, "US", !1, {
+                    gift_style: null,
+                    recipient_id: void 0,
+                    custom_message: void 0,
+                    emoji_id: void 0,
+                    emoji_name: void 0,
+                    sound_id: void 0,
+                    reward_sku_ids: void 0,
+                });
+                f(e),
+                    h("Order created successfully! Order ID: ".concat(e)),
+                    console.log("Order created successfully with ID:", e);
+            } catch (t) {
+                let e = t instanceof Error ? t.message : String(t);
+                h("Failed to create order: ".concat(e)), console.error("Failed to create order:", t);
+            } finally {
+                t(!1);
+            }
+        },
+        D = async () => {
+            if (null == x || "" === x) return void h("No order ID available. Please create an order first.");
+            i(!0);
+            try {
+                var e;
+                let t = (await w(x)).billing_facet,
+                    n =
+                        (null == t || null == (e = t.order_signing_deferral_context) ? void 0 : e.stripe_3ds_context) !=
+                        null;
+                _(n);
+                let a = "Order signed successfully! Order ID: ".concat(x);
+                n &&
+                    (a = "Order signing in progress! Order ID: ".concat(
+                        x,
+                        ". This order requires additional authentication (3DS).",
+                    )),
+                    h(a);
+            } catch (t) {
+                let e = t instanceof Error ? t.message : String(t);
+                h("Failed to sign order: ".concat(e)), console.error("Failed to sign order:", t);
+            } finally {
+                i(!1);
+            }
+        },
+        Z = async () => {
+            if (null == x || "" === x) return void h("No order ID available. Please create an order first.");
+            o(!0);
+            try {
+                await R(x),
+                    h("3DS authentication completed successfully! Order ID: ".concat(x)),
+                    console.log("3DS authentication completed successfully for order:", x);
+            } catch (t) {
+                let e = t instanceof Error ? t.message : String(t);
+                h("Failed to complete 3DS: ".concat(e)), console.error("Failed to complete 3DS:", t);
+            } finally {
+                o(!1);
+            }
+        };
+    return (0, a.jsxs)(C.$0, {
+        children: [
+            (0, a.jsx)(u.Heading, {
+                variant: "heading-xl/semibold",
+                children: "Order SKU Test",
+            }),
+            (0, a.jsxs)(C.E_, {
+                label: "Test Order Creation, Signing & 3DS",
+                direction: "vertical",
+                children: [
+                    (0, a.jsx)(u.Text, {
+                        variant: "text-md/normal",
+                        className: O.labelSpacing,
+                        children:
+                            "This section tests the orderSKU function, order signing, and 3DS authentication with example parameters. Check the console for detailed logs.",
+                    }),
+                    (0, a.jsxs)("div", {
+                        style: { marginBottom: "16px" },
+                        children: [
+                            (0, a.jsx)(u.Text, {
+                                variant: "text-sm/medium",
+                                className: O.labelSpacing,
+                                children: "Payment Source:",
+                            }),
+                            (0, a.jsx)(
+                                u.PhF,
+                                I(P({}, k), {
+                                    options: N,
+                                    placeholder: "Select a payment source...",
+                                    isDisabled: !S,
+                                    label: "Payment Source",
+                                    clearable: !0,
+                                }),
+                            ),
+                            !S &&
+                                (0, a.jsx)(u.Text, {
+                                    variant: "text-sm/normal",
+                                    color: "text-muted",
+                                    className: O.labelSpacing,
+                                    children: "Loading payment sources...",
+                                }),
+                        ],
+                    }),
+                    (0, a.jsxs)("div", {
+                        style: {
+                            display: "flex",
+                            gap: "8px",
+                            marginBottom: "8px",
+                            flexWrap: "wrap",
+                        },
+                        children: [
+                            (0, a.jsx)(d.zxk, {
+                                variant: "primary",
+                                size: "sm",
+                                text: e ? "Creating Order..." : "Create Order",
+                                onClick: A,
+                                disabled: e || null == g || "" === g,
+                            }),
+                            (0, a.jsx)(d.zxk, {
+                                variant: "secondary",
+                                size: "sm",
+                                text: n ? "Signing Order..." : "Sign Order",
+                                onClick: D,
+                                disabled: n || null == x || "" === x,
+                            }),
+                            (0, a.jsx)(d.zxk, {
+                                variant: "secondary",
+                                size: "sm",
+                                text: l ? "Completing 3DS..." : "Complete 3DS",
+                                onClick: Z,
+                                disabled: l || null == x || "" === x || !v,
+                            }),
+                        ],
+                    }),
+                    null != c &&
+                        (0, a.jsx)("div", {
+                            className: O.labelSpacing,
+                            children: c.split("\n").map((e, t) =>
+                                (0, a.jsx)(
+                                    u.Text,
+                                    {
+                                        variant: "text-md/normal",
+                                        style: {
+                                            display: "block",
+                                            marginBottom: t < c.split("\n").length - 1 ? "4px" : "0",
+                                        },
+                                        children: e,
+                                    },
+                                    t,
+                                ),
+                            ),
+                        }),
+                ],
+            }),
+        ],
+    });
+}
+function A() {
+    return (0, a.jsx)(g.PaymentContextProvider, {
         stepConfigs: [],
         skuIDs: [],
         activeSubscription: null,
         children: (0, a.jsxs)("div", {
             children: [
-                (0, a.jsx)(E, {}),
-                (0, a.jsx)(c.Text, {
+                (0, a.jsx)(k, {}),
+                (0, a.jsx)(D, {}),
+                (0, a.jsx)(u.Text, {
                     variant: "text-md/normal",
                     color: "text-feedback-info",
-                    className: j.labelSpacing,
+                    className: O.labelSpacing,
                     children:
                         "Payment-method-specific components and views may not appear for you unless your browser is supported for that payment method and they have been configured on your browser.",
                 }),
-                (0, a.jsx)(T, {}),
-                (0, a.jsx)(w, {}),
-                (0, a.jsx)(L, {}),
+                (0, a.jsx)(Z, {}),
+                (0, a.jsx)(B, {}),
+                (0, a.jsx)(q, {}),
             ],
         }),
     });
 }
-function E() {
+function D() {
     let [e, t] = r.useState("discord://".concat(location.host, "/feature/apple-payment-link"));
-    return (0, a.jsxs)(b.$0, {
+    return (0, a.jsxs)(C.$0, {
         children: [
-            (0, a.jsx)(c.Heading, {
+            (0, a.jsx)(u.Heading, {
                 variant: "heading-xl/semibold",
                 children: "Deeplinking",
             }),
-            (0, a.jsxs)(b.E_, {
+            (0, a.jsxs)(C.E_, {
                 label: "Test Deeplinking with a Custom Path",
                 direction: "vertical",
                 children: [
-                    (0, a.jsx)(c.oil, {
+                    (0, a.jsx)(u.oil, {
                         value: e,
                         onChange: (e) => t(e),
                         placeholder: "Enter DeepLink Url",
                         fullWidth: !0,
                     }),
-                    (0, a.jsx)(o.zxk, {
+                    (0, a.jsx)(d.zxk, {
                         variant: "primary",
                         size: "sm",
                         text: "Test Deeplink",
                         onClick: () => {
                             console.log("Opening deep link... ", e),
-                                f.Z.launch(e, (e) => {
+                                y.Z.launch(e, (e) => {
                                     console.log("onDone response: ", e);
                                 });
                         },
@@ -117,83 +357,83 @@ function E() {
         ],
     });
 }
-function T() {
-    return (0, a.jsxs)(b.$0, {
+function Z() {
+    return (0, a.jsxs)(C.$0, {
         children: [
-            (0, a.jsx)(c.Heading, {
+            (0, a.jsx)(u.Heading, {
                 variant: "heading-xl/semibold",
                 children: "Payment Request Components - Google Pay",
             }),
-            (0, a.jsx)(b.E_, {
+            (0, a.jsx)(C.E_, {
                 label: "Google Pay - Default View",
-                children: (0, a.jsx)(O, { paymentRequestWallet: "googlePay" }),
+                children: (0, a.jsx)(M, { paymentRequestWallet: "googlePay" }),
             }),
-            (0, a.jsx)(b.E_, {
+            (0, a.jsx)(C.E_, {
                 label: "Google Pay - Connector View",
-                children: (0, a.jsx)(O, {
+                children: (0, a.jsx)(M, {
                     paymentRequestWallet: "googlePay",
                     renderConnectorView: !0,
                 }),
             }),
-            (0, a.jsx)(b.E_, {
+            (0, a.jsx)(C.E_, {
                 label: "Google Pay - Add Payment Step Body Connector View",
-                children: (0, a.jsx)(P, { paymentRequestWallet: "googlePay" }),
+                children: (0, a.jsx)(U, { paymentRequestWallet: "googlePay" }),
             }),
-            (0, a.jsx)(c.Heading, {
+            (0, a.jsx)(u.Heading, {
                 variant: "heading-xl/semibold",
                 children: "Payment Request Components - Apple Pay",
             }),
-            (0, a.jsx)(b.E_, {
+            (0, a.jsx)(C.E_, {
                 label: "Apple Pay - Default View",
-                children: (0, a.jsx)(O, { paymentRequestWallet: "applePay" }),
+                children: (0, a.jsx)(M, { paymentRequestWallet: "applePay" }),
             }),
-            (0, a.jsx)(b.E_, {
+            (0, a.jsx)(C.E_, {
                 label: "Apple Pay - Connector View",
-                children: (0, a.jsx)(O, {
+                children: (0, a.jsx)(M, {
                     renderConnectorView: !0,
                     paymentRequestWallet: "applePay",
                 }),
             }),
-            (0, a.jsx)(b.E_, {
+            (0, a.jsx)(C.E_, {
                 label: "Apple Pay - Add Payment Step Body Connector View",
-                children: (0, a.jsx)(P, { paymentRequestWallet: "applePay" }),
+                children: (0, a.jsx)(U, { paymentRequestWallet: "applePay" }),
             }),
         ],
     });
 }
-function O(e) {
+function M(e) {
     let t = r.useRef(null),
         n = {
-            paymentLabel: v.intl.string(v.t.ZURqX1),
+            paymentLabel: T.intl.string(T.t.ZURqX1),
             paymentRequestRef: t,
             onStripePaymentMethodReceived: () => {},
             onPaymentRequestFailure: () => {},
             onValidPaymentRequest: () => {},
             onChooseType: () => {},
-            loadingComponent: (0, a.jsx)(c.$jN, {
+            loadingComponent: (0, a.jsx)(u.$jN, {
                 style: { marginTop: 16 },
-                type: c.RAz.PULSING_ELLIPSIS,
+                type: u.RAz.PULSING_ELLIPSIS,
             }),
         };
     return e.renderStepBody
-        ? (0, a.jsx)(x.t, y({}, n, e))
+        ? (0, a.jsx)(v.t, P({}, n, e))
         : "applePay" === e.paymentRequestWallet
-          ? (0, a.jsx)(u.Ch, y({}, n, e))
-          : (0, a.jsx)(u.Tr, y({}, n, e));
+          ? (0, a.jsx)(x.Ch, P({}, n, e))
+          : (0, a.jsx)(x.Tr, P({}, n, e));
 }
-function N(e) {
+function L(e) {
     let { children: t, footer: n, className: r } = e;
     return (0, a.jsx)("div", {
-        className: s()(_.root, _.focusLock, _.small, _.rootWithShadow, j.modal, r),
-        "aria-label": v.intl.string(v.t.eQ2bLi),
+        className: o()(N.root, N.focusLock, N.small, N.rootWithShadow, O.modal, r),
+        "aria-label": T.intl.string(T.t.eQ2bLi),
         children: (0, a.jsxs)("form", {
-            className: j.form,
+            className: O.form,
             onSubmit: (e) => {
                 e.preventDefault();
             },
             children: [
-                (0, a.jsx)(c.hzk, {
-                    className: j.scrollerContent,
+                (0, a.jsx)(u.hzk, {
+                    className: O.scrollerContent,
                     children: t,
                 }),
                 n,
@@ -201,19 +441,19 @@ function N(e) {
         }),
     });
 }
-function P(e) {
+function U(e) {
     let { paymentRequestWallet: t } = e,
         n = r.useRef(null),
         [i, l] = r.useState(!1);
-    return (0, a.jsx)(N, {
-        footer: (0, a.jsx)(h.Z, {
-            primaryCTA: h.Z.CTAType.CONTINUE,
-            primaryText: v.intl.string("applePay" === t ? v.t.WoXvJC : v.t.wnVVr6),
+    return (0, a.jsx)(L, {
+        footer: (0, a.jsx)(b.Z, {
+            primaryCTA: b.Z.CTAType.CONTINUE,
+            primaryText: T.intl.string("applePay" === t ? T.t.WoXvJC : T.t.wnVVr6),
             primaryDisabled: !i,
             onPrimary: () => void (null != n.current && n.current.show()),
             onBack: () => {},
         }),
-        children: (0, a.jsx)(O, {
+        children: (0, a.jsx)(M, {
             renderConnectorView: !0,
             renderStepBody: !0,
             paymentRequestWallet: t,
@@ -222,17 +462,17 @@ function P(e) {
         }),
     });
 }
-function I(e) {
+function F(e) {
     let { children: t } = e;
-    return (0, a.jsx)(N, {
-        className: j.choosePaymentTypeModal,
+    return (0, a.jsx)(L, {
+        className: O.choosePaymentTypeModal,
         children: (0, a.jsx)("div", {
-            className: j.choosePaymentTypeContainer,
+            className: O.choosePaymentTypeContainer,
             children: t,
         }),
     });
 }
-function w() {
+function B() {
     let e = {
         onChooseType: () => {},
         onStripePaymentMethodReceived: (e) => {
@@ -240,42 +480,42 @@ function w() {
         },
         isEligibleForTrial: !1,
     };
-    return (0, a.jsxs)(b.$0, {
+    return (0, a.jsxs)(C.$0, {
         children: [
-            (0, a.jsx)(c.Heading, {
+            (0, a.jsx)(u.Heading, {
                 variant: "heading-xl/semibold",
                 children: "Choose Payment Source Type Component",
             }),
-            (0, a.jsx)(b.E_, {
+            (0, a.jsx)(C.E_, {
                 label: "All Payment Request Wallets Enabled",
-                children: (0, a.jsx)(I, {
+                children: (0, a.jsx)(F, {
                     children: (0, a.jsx)(
-                        d.Z,
-                        C(y({}, e), {
+                        h.Z,
+                        I(P({}, e), {
                             onChooseType: () => {},
                             paymentRequestWallets: ["googlePay", "applePay"],
                         }),
                     ),
                 }),
             }),
-            (0, a.jsx)(b.E_, {
+            (0, a.jsx)(C.E_, {
                 label: "No Payment Wallets Enabled",
-                children: (0, a.jsx)(I, {
+                children: (0, a.jsx)(F, {
                     children: (0, a.jsx)(
-                        d.Z,
-                        C(y({}, e), {
+                        h.Z,
+                        I(P({}, e), {
                             onChooseType: () => {},
                             paymentRequestWallets: [],
                         }),
                     ),
                 }),
             }),
-            (0, a.jsx)(b.E_, {
+            (0, a.jsx)(C.E_, {
                 label: "Is Eligible for Trial",
-                children: (0, a.jsx)(I, {
+                children: (0, a.jsx)(F, {
                     children: (0, a.jsx)(
-                        d.Z,
-                        C(y({}, e), {
+                        h.Z,
+                        I(P({}, e), {
                             isEligibleForTrial: !0,
                             onChooseType: () => {},
                             paymentRequestWallets: [],
@@ -283,15 +523,15 @@ function w() {
                     ),
                 }),
             }),
-            (0, a.jsx)(b.E_, {
+            (0, a.jsx)(C.E_, {
                 label: "Only Stripe Card Enabled",
-                children: (0, a.jsx)(I, {
+                children: (0, a.jsx)(F, {
                     children: (0, a.jsx)(
-                        d.Z,
-                        C(y({}, e), {
+                        h.Z,
+                        I(P({}, e), {
                             onChooseType: () => {},
                             paymentRequestWallets: [],
-                            paymentSourceTypeRestrictions: [g.He.CARD.valueOf()],
+                            paymentSourceTypeRestrictions: [E.He.CARD.valueOf()],
                         }),
                     ),
                 }),
@@ -299,14 +539,14 @@ function w() {
         ],
     });
 }
-let R = {
+let G = {
         DEFAULT: "Express Checkout Element - Default (No Config)",
         GPAY_FILTERED: "Express Checkout Element - Filtered for Google Pay",
         APPLE_PAY_FILTERED: "Express Checkout Element - Filtered for Apple Pay",
         APPLE_AND_GPAY_DISABLED: "Express Checkout Element - Google Pay and Apple Pay Disabled",
         CONFIGURABLE: "Express Checkout Element - Configurable",
     },
-    k = {
+    z = {
         GPAY_FILTERED: {
             wallets: {
                 googlePay: "always",
@@ -326,7 +566,7 @@ let R = {
             },
         },
     },
-    A = {
+    V = {
         appearance: {
             theme: "flat",
             variables: {
@@ -335,7 +575,7 @@ let R = {
             },
         },
     },
-    Z = {
+    H = {
         buttonType: {
             googlePay: "pay",
             applePay: "book",
@@ -346,30 +586,30 @@ let R = {
         },
         buttonHeight: 40,
     },
-    D = (e) => (void 0 !== e ? JSON.stringify(e, null, 2) : "undefined");
-function M() {
-    let [e, t] = r.useState(D(A)),
-        [n, l] = r.useState(A),
-        [s, d] = r.useState(D(Z)),
-        [u, p] = r.useState(Z),
-        [h, x] = r.useState(null),
-        [f, g] = r.useState(
-            (0, a.jsx)(b.DS, {
-                errorLabel: R.CONFIGURABLE,
-                elementOptions: A,
+    W = (e) => (void 0 !== e ? JSON.stringify(e, null, 2) : "undefined");
+function K() {
+    let [e, t] = r.useState(W(V)),
+        [n, l] = r.useState(V),
+        [o, s] = r.useState(W(H)),
+        [c, m] = r.useState(H),
+        [p, h] = r.useState(null),
+        [x, g] = r.useState(
+            (0, a.jsx)(C.DS, {
+                errorLabel: G.CONFIGURABLE,
+                elementOptions: V,
                 children: (0, a.jsx)(i.ExpressCheckoutElement, {
                     onConfirm: (e) => {
                         console.log("ExpressCheckoutElement onConfirm event: ", e);
                     },
-                    options: Z,
+                    options: H,
                 }),
             }),
         );
     return (0, a.jsxs)("div", {
         children: [
-            (0, a.jsxs)(c.Text, {
+            (0, a.jsxs)(u.Text, {
                 variant: "text-md/normal",
-                className: j.labelSpacing,
+                className: O.labelSpacing,
                 children: [
                     "Try configuring options for the Stripe Element container and Express Checkout Element here. Not all settings will change the appearance or functionality of the checkout button - use this to figure out the customizability of the Express Checkout Element.",
                     (0, a.jsx)("br", {}),
@@ -377,20 +617,20 @@ function M() {
                     "Start by changing the `borderRadius` or `buttonHeight` as a test!",
                 ],
             }),
-            (0, a.jsxs)(c.Text, {
+            (0, a.jsxs)(u.Text, {
                 variant: "text-md/normal",
-                className: j.labelSpacing,
+                className: O.labelSpacing,
                 children: [
                     (0, a.jsx)("b", { children: "elements.options:" }),
                     (0, a.jsx)("br", {}),
-                    (0, a.jsx)(b.lD, {
+                    (0, a.jsx)(C.lD, {
                         href: "https://github.com/stripe/stripe-js/blob/master/types/stripe-js/elements-group.d.ts#L632",
                     }),
                 ],
             }),
             (0, a.jsx)("div", {
-                className: j.textarea,
-                children: (0, a.jsx)(c.Kx8, {
+                className: O.textarea,
+                children: (0, a.jsx)(u.Kx8, {
                     placeholder: "Stripe Elements Container Options",
                     showCharacterCount: !0,
                     value: e,
@@ -398,59 +638,59 @@ function M() {
                     rows: 7,
                 }),
             }),
-            (0, a.jsxs)(c.Text, {
+            (0, a.jsxs)(u.Text, {
                 variant: "text-md/normal",
-                className: j.labelSpacing,
+                className: O.labelSpacing,
                 children: [
                     (0, a.jsx)("b", { children: "expressCheckoutElement.options:" }),
                     (0, a.jsx)("br", {}),
-                    (0, a.jsx)(b.lD, {
+                    (0, a.jsx)(C.lD, {
                         href: "https://github.com/stripe/stripe-js/blob/master/types/stripe-js/elements/express-checkout.d.ts#L314",
                     }),
                     (0, a.jsx)("br", {}),
-                    (0, a.jsx)(b.lD, {
+                    (0, a.jsx)(C.lD, {
                         href: "https://docs.stripe.com/elements/express-checkout-element/migration#customize-express-checkout-element",
                     }),
                 ],
             }),
             (0, a.jsx)("div", {
-                className: j.textarea,
-                children: (0, a.jsx)(c.Kx8, {
+                className: O.textarea,
+                children: (0, a.jsx)(u.Kx8, {
                     placeholder: "Stripe Express Checkout Element Options",
                     showCharacterCount: !0,
-                    value: s,
-                    onChange: d,
+                    value: o,
+                    onChange: s,
                     rows: 7,
                 }),
             }),
-            null != h &&
-                (0, a.jsx)(c.Text, {
+            null != p &&
+                (0, a.jsx)(u.Text, {
                     variant: "text-md/normal",
                     color: "text-danger",
-                    children: h,
+                    children: p,
                 }),
             (0, a.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,
-                className: j.applyChangesButton,
-                children: (0, a.jsx)(o.zxk, {
+                className: O.applyChangesButton,
+                children: (0, a.jsx)(d.zxk, {
                     variant: "primary",
                     size: "sm",
                     text: "Apply Changes",
                     onClick: () => {
                         try {
                             let t = JSON.parse(e),
-                                n = JSON.parse(s);
+                                n = JSON.parse(o);
                             g(null),
                                 g(
                                     (0, a.jsxs)(a.Fragment, {
                                         children: [
-                                            (0, a.jsxs)(c.Text, {
+                                            (0, a.jsxs)(u.Text, {
                                                 variant: "text-md/normal",
-                                                className: j.labelSpacing,
+                                                className: O.labelSpacing,
                                                 children: ["Element updated at: ", new Date().toString()],
                                             }),
-                                            (0, a.jsx)(b.DS, {
-                                                errorLabel: R.CONFIGURABLE,
+                                            (0, a.jsx)(C.DS, {
+                                                errorLabel: G.CONFIGURABLE,
                                                 elementOptions: t,
                                                 children: (0, a.jsx)(i.ExpressCheckoutElement, {
                                                     onConfirm: (e) => {
@@ -463,49 +703,49 @@ function M() {
                                     }),
                                 ),
                                 l(t),
-                                p(n),
-                                x(null);
+                                m(n),
+                                h(null);
                         } catch (e) {
                             console.error("ConfigurableStripeExpressCheckoutElement - error parsing JSON: ", e),
-                                x("Error parsing JSON. Check console for more information.");
+                                h("Error parsing JSON. Check console for more information.");
                         }
                     },
                 }),
             }),
-            (0, a.jsx)(c.Text, {
+            (0, a.jsx)(u.Text, {
                 variant: "text-md/normal",
-                className: j.labelSpacing,
+                className: O.labelSpacing,
                 children: "Current Element Options:",
             }),
-            (0, a.jsx)(m.Z, {
-                className: j.markdown,
-                children: "".concat("``", " ").concat(D(n), " ").concat("``"),
+            (0, a.jsx)(f.Z, {
+                className: O.markdown,
+                children: "".concat("``", " ").concat(W(n), " ").concat("``"),
             }),
-            (0, a.jsx)(c.Text, {
+            (0, a.jsx)(u.Text, {
                 variant: "text-md/normal",
-                className: j.labelSpacing,
+                className: O.labelSpacing,
                 children: "Current Express Checkout Element Options:",
             }),
-            (0, a.jsx)(m.Z, {
-                className: j.markdown,
-                children: "".concat("``", " ").concat(D(u), " ").concat("``"),
+            (0, a.jsx)(f.Z, {
+                className: O.markdown,
+                children: "".concat("``", " ").concat(W(c), " ").concat("``"),
             }),
-            f,
+            x,
         ],
     });
 }
-function L() {
-    return (0, a.jsxs)(b.$0, {
+function q() {
+    return (0, a.jsxs)(C.$0, {
         children: [
-            (0, a.jsx)(c.Heading, {
+            (0, a.jsx)(u.Heading, {
                 variant: "heading-xl/semibold",
                 children: "Stripe Express Checkout Buttons",
             }),
-            (0, a.jsx)(b.E_, {
-                label: R.DEFAULT,
+            (0, a.jsx)(C.E_, {
+                label: G.DEFAULT,
                 children: (0, a.jsx)("div", {
-                    children: (0, a.jsx)(b.DS, {
-                        errorLabel: R.DEFAULT,
+                    children: (0, a.jsx)(C.DS, {
+                        errorLabel: G.DEFAULT,
                         children: (0, a.jsx)(i.ExpressCheckoutElement, {
                             onConfirm: (e) => {
                                 console.log("ExpressCheckoutElement onConfirm event: ", e);
@@ -516,29 +756,29 @@ function L() {
                 }),
             }),
             ["GPAY_FILTERED", "APPLE_PAY_FILTERED", "APPLE_AND_GPAY_DISABLED"].map((e) => {
-                let t = R[e];
+                let t = G[e];
                 return (0, a.jsx)(
-                    b.E_,
+                    C.E_,
                     {
                         label: t,
                         children: (0, a.jsxs)("div", {
                             children: [
-                                (0, a.jsx)(c.Text, {
+                                (0, a.jsx)(u.Text, {
                                     variant: "text-md/normal",
-                                    className: j.labelSpacing,
+                                    className: O.labelSpacing,
                                     children: "expressCheckoutElement.options:",
                                 }),
-                                (0, a.jsx)(m.Z, {
-                                    className: j.markdown,
-                                    children: "".concat("``").concat(D(k[e]), " ").concat("``"),
+                                (0, a.jsx)(f.Z, {
+                                    className: O.markdown,
+                                    children: "".concat("``").concat(W(z[e]), " ").concat("``"),
                                 }),
-                                (0, a.jsx)(b.DS, {
+                                (0, a.jsx)(C.DS, {
                                     errorLabel: t,
                                     children: (0, a.jsx)(i.ExpressCheckoutElement, {
                                         onConfirm: (e) => {
                                             console.log("ExpressCheckoutElement onConfirm event: ", e);
                                         },
-                                        options: k[e],
+                                        options: z[e],
                                     }),
                                 }),
                             ],
@@ -547,9 +787,9 @@ function L() {
                     e,
                 );
             }),
-            (0, a.jsx)(b.E_, {
-                label: R.CONFIGURABLE,
-                children: (0, a.jsx)(M, {}),
+            (0, a.jsx)(C.E_, {
+                label: G.CONFIGURABLE,
+                children: (0, a.jsx)(K, {}),
             }),
         ],
     });
