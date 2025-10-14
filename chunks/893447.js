@@ -1,10 +1,11 @@
-n.d(t, { Q: () => f }), n(388685);
+n.d(t, { Q: () => _ }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(375316),
-    o = n(179067),
-    s = n(571527);
-function l(e, t, n) {
+    o = n(590154),
+    s = n(179067),
+    l = n(571527);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,7 +18,7 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -28,12 +29,12 @@ function c(e) {
                 }),
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                c(e, t, n[t]);
             });
     }
     return e;
 }
-function u(e, t) {
+function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -45,54 +46,57 @@ function u(e, t) {
     }
     return n;
 }
-function d(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
+            : d(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function f(e) {
+function _(e) {
     let {
             listRef: t,
             label: n,
-            disabledKeys: l,
-            selectionMode: u = "none",
-            layout: f = "default",
-            items: _,
-            onRemove: p,
-            children: h,
+            disabledKeys: c,
+            selectionMode: d = "none",
+            layout: _ = "default",
+            items: p,
+            onRemove: h,
+            children: m,
         } = e,
-        [m, g] = i.useState(() => new Set());
+        [g, E] = i.useState(() => new Set()),
+        b = i.useContext(o.z);
     return (0, r.jsxs)(a.QS, {
         "aria-label": n,
-        "data-layout": f,
-        className: s.tagGroup,
-        selectionMode: u,
-        selectedKeys: m,
-        onSelectionChange: g,
-        disabledKeys: l,
-        onRemove: p,
+        id: null == b ? void 0 : b.controlId,
+        "aria-describedby": null == b ? void 0 : b.describedById,
+        "data-layout": _,
+        className: l.tagGroup,
+        selectionMode: d,
+        selectedKeys: g,
+        onSelectionChange: E,
+        disabledKeys: c,
+        onRemove: h,
         children: [
             (0, r.jsx)(a.PS, {
                 ref: t,
-                className: s.tagList,
-                children: _.map((e) =>
+                className: l.tagList,
+                children: p.map((e) =>
                     (0, i.createElement)(
-                        o.V,
-                        d(c({}, e), {
+                        s.V,
+                        f(u({}, e), {
                             key: e.id,
-                            layout: f,
+                            layout: _,
                             accessibilityHint: e.accessibilityHint,
                         }),
                     ),
                 ),
             }),
-            h,
+            m,
         ],
     });
 }

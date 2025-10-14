@@ -1,20 +1,19 @@
-n.d(t, { i: () => c }), n(781311);
+n.d(t, { i: () => l }), n(781311);
 var r = n(951288),
     i = n(49800),
     a = n(481060),
-    o = n(540863),
-    s = n(383838),
-    l = n(512983);
-let c = {
+    o = n(383838),
+    s = n(512983);
+let l = {
     title: "Form Components",
     stories: [
         {
             id: "formnotice",
             name: "FormNotice",
             component: function (e) {
-                let { type: t, title: n, body: i, hasButton: o } = e,
-                    l = o ? (0, r.jsx)(a.Button, { text: "Action" }) : void 0;
-                return (0, r.jsx)(s.To, {
+                let { type: t, title: n, body: i, hasButton: s } = e,
+                    l = s ? (0, r.jsx)(a.Button, { text: "Action" }) : void 0;
+                return (0, r.jsx)(o.To, {
                     type: t,
                     title: n,
                     body: i,
@@ -71,92 +70,19 @@ let c = {
             },
         },
         {
-            id: "formitem",
-            name: "FormItem",
-            component: function (e) {
-                let { title: t, errorMessage: n, disabled: i, required: s, tag: l } = e,
-                    c = (null == n ? void 0 : n.trim()) === "" ? void 0 : n;
-                return (0, r.jsx)(o.x, {
-                    title: t,
-                    error: c,
-                    disabled: i,
-                    required: s,
-                    tag: l,
-                    children: (0, r.jsx)(a.oil, { placeholder: "Enter text here..." }),
-                });
-            },
-            controls: {
-                title: {
-                    type: "text",
-                    label: "Title",
-                    defaultValue: "Form Field",
-                },
-                errorMessage: {
-                    type: "text",
-                    label: "Error Message",
-                    defaultValue: "",
-                },
-                disabled: {
-                    type: "boolean",
-                    label: "Disabled",
-                    defaultValue: !1,
-                },
-                required: {
-                    type: "boolean",
-                    label: "Required",
-                    defaultValue: !1,
-                },
-                tag: {
-                    type: "select",
-                    label: "Title Tag",
-                    defaultValue: "h5",
-                    options: [
-                        {
-                            label: "H1",
-                            value: "h1",
-                        },
-                        {
-                            label: "H2",
-                            value: "h2",
-                        },
-                        {
-                            label: "H3",
-                            value: "h3",
-                        },
-                        {
-                            label: "H4",
-                            value: "h4",
-                        },
-                        {
-                            label: "H5",
-                            value: "h5",
-                        },
-                        {
-                            label: "Label",
-                            value: "label",
-                        },
-                        {
-                            label: "Legend",
-                            value: "legend",
-                        },
-                    ],
-                },
-            },
-        },
-        {
             id: "formtitle",
             name: "FormTitle",
             component: function (e) {
                 let { children: t, disabled: n, required: i, errorMessage: a } = e,
                     o = (null == a ? void 0 : a.trim()) === "" ? void 0 : a,
-                    s = ["h1", "h2", "h3", "h4", "h5", "legend"];
+                    l = ["h1", "h2", "h3", "h4", "h5", "legend"];
                 return (0, r.jsx)("div", {
                     style: {
                         display: "flex",
                         flexDirection: "column",
                         gap: "16px",
                     },
-                    children: s.map((e) =>
+                    children: l.map((e) =>
                         (0, r.jsxs)(
                             "div",
                             {
@@ -174,7 +100,7 @@ let c = {
                                         },
                                         children: [e, ":"],
                                     }),
-                                    (0, r.jsx)(l.v, {
+                                    (0, r.jsx)(s.v, {
                                         tag: e,
                                         disabled: n,
                                         required: i,

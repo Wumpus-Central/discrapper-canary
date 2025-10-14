@@ -1,7 +1,7 @@
 n.d(t, { z: () => m }), n(388685), n(953529);
 var r = n(951288),
     i = n(647438),
-    a = n(755721),
+    a = n(793030),
     o = n(481060),
     s = n(377089),
     l = n(231338);
@@ -438,140 +438,96 @@ let h = [
                             label: t,
                             hideLabel: n,
                             description: i,
-                            required: c,
-                            error: d,
-                            disabled: _,
-                            placeholder: p,
-                            value: m = "",
-                            readOnly: g,
-                            helperText: E,
-                            successMessage: b,
-                            showCharacterCount: y,
+                            required: s,
+                            error: c,
+                            disabled: d,
+                            placeholder: _,
+                            value: p = "",
+                            readOnly: m,
+                            helperText: g,
+                            successMessage: E,
+                            showCharacterCount: b,
                         } = e,
-                        O = (0, s.U)("UserSettingsDesignSystems"),
-                        v = {
+                        y = {
                             label: t,
                             hideLabel: n,
                             description: i,
-                            required: c,
-                            value: m,
-                            error: d,
-                            disabled: _,
-                            placeholder: p,
-                            readOnly: g,
-                            helperText: E,
-                            showCharacterCount: y,
-                            successMessage: b,
+                            required: s,
+                            value: p,
+                            error: c,
+                            disabled: d,
+                            placeholder: _,
+                            readOnly: m,
+                            helperText: g,
+                            showCharacterCount: b,
+                            successMessage: E,
                         };
                     return (0, r.jsxs)(o.Kqy, {
+                        gap: 24,
                         children: [
-                            (0, r.jsxs)(o.Kqy, {
+                            (0, r.jsxs)(a.C3N, {
+                                label: "Text Input",
                                 children: [
-                                    (0, r.jsx)(o.xJW, {
-                                        title: "Text Input",
-                                        children: (0, r.jsxs)(o.Kqy, {
-                                            children: [
-                                                (0, r.jsx)(o.oil, u({}, v)),
-                                                (0, r.jsx)(o.oil, f(u({}, v), { clearable: !0 })),
-                                                O &&
-                                                    (0, r.jsxs)(r.Fragment, {
-                                                        children: [
-                                                            (0, r.jsx)(o.xJW, {
-                                                                title: "Leading Icons",
-                                                                children: (0, r.jsxs)(o.Kqy, {
-                                                                    children: [
-                                                                        (0, r.jsx)(
-                                                                            o.oil,
-                                                                            f(u({}, v), {
-                                                                                leading: {
-                                                                                    icon: o.lOy,
-                                                                                    onClick: l.dG,
-                                                                                    "aria-label": "At",
-                                                                                },
-                                                                            }),
-                                                                        ),
-                                                                        (0, r.jsx)(
-                                                                            o.oil,
-                                                                            f(u({}, v), { leading: o.lOy }),
-                                                                        ),
-                                                                        (0, r.jsx)(
-                                                                            o.oil,
-                                                                            f(u({}, v), {
-                                                                                leading: "https://discord.gg/",
-                                                                            }),
-                                                                        ),
-                                                                    ],
-                                                                }),
-                                                            }),
-                                                            (0, r.jsx)(o.xJW, {
-                                                                title: "Trailing Icons",
-                                                                children: (0, r.jsxs)(o.Kqy, {
-                                                                    children: [
-                                                                        (0, r.jsx)(
-                                                                            o.oil,
-                                                                            f(u({}, v), {
-                                                                                trailing: {
-                                                                                    icon: o.lOy,
-                                                                                    onClick: l.dG,
-                                                                                    "aria-label": "At",
-                                                                                },
-                                                                            }),
-                                                                        ),
-                                                                        (0, r.jsx)(
-                                                                            o.oil,
-                                                                            f(u({}, v), { trailing: o.lOy }),
-                                                                        ),
-                                                                    ],
-                                                                }),
-                                                            }),
-                                                            (0, r.jsx)(
-                                                                o.oil,
-                                                                f(u({}, v), {
-                                                                    leading: {
-                                                                        type: "tags",
-                                                                        label: "Tags",
-                                                                        items: h.slice(0, 3),
-                                                                    },
-                                                                }),
-                                                            ),
-                                                        ],
-                                                    }),
-                                            ],
+                                    (0, r.jsx)(o.oil, u({}, y)),
+                                    (0, r.jsx)(o.oil, f(u({}, y), { clearable: !0 })),
+                                    (0, r.jsx)(
+                                        o.oil,
+                                        f(u({}, y), {
+                                            leading: {
+                                                icon: o.lOy,
+                                                onClick: l.dG,
+                                                "aria-label": "At",
+                                            },
                                         }),
+                                    ),
+                                    (0, r.jsx)(o.oil, f(u({}, y), { leading: o.lOy })),
+                                    (0, r.jsx)(o.oil, f(u({}, y), { leading: "https://discord.gg/" })),
+                                    (0, r.jsx)(
+                                        o.oil,
+                                        f(u({}, y), {
+                                            trailing: {
+                                                icon: o.lOy,
+                                                onClick: l.dG,
+                                                "aria-label": "At",
+                                            },
+                                        }),
+                                    ),
+                                    (0, r.jsx)(o.oil, f(u({}, y), { trailing: o.lOy })),
+                                    (0, r.jsx)(
+                                        o.oil,
+                                        f(u({}, y), {
+                                            leading: {
+                                                type: "tags",
+                                                label: "Tags",
+                                                items: h.slice(0, 3),
+                                            },
+                                        }),
+                                    ),
+                                ],
+                            }),
+                            (0, r.jsx)(a.izJ, {}),
+                            (0, r.jsxs)(a.C3N, {
+                                label: "Search Bar",
+                                children: [
+                                    (0, r.jsx)(o.E1j, {
+                                        query: p,
+                                        onChange: l.dG,
+                                        disabled: d,
+                                        placeholder: _,
                                     }),
-                                    (0, r.jsx)(o.xJW, {
-                                        title: "Text Input (Legacy)",
-                                        children: (0, r.jsx)(a.Is, u({}, v)),
+                                    (0, r.jsx)(o.E1j, {
+                                        query: p,
+                                        onChange: l.dG,
+                                        size: "sm",
+                                        disabled: d,
+                                        placeholder: _,
                                     }),
                                 ],
                             }),
-                            (0, r.jsx)(o.xJW, {
-                                title: "Search Bar",
-                                children: (0, r.jsxs)(o.Kqy, {
-                                    children: [
-                                        (0, r.jsx)(o.E1j, {
-                                            query: m,
-                                            onChange: l.dG,
-                                            disabled: _,
-                                            placeholder: p,
-                                        }),
-                                        (0, r.jsx)(o.E1j, {
-                                            query: m,
-                                            onChange: l.dG,
-                                            size: "sm",
-                                            disabled: _,
-                                            placeholder: p,
-                                        }),
-                                    ],
-                                }),
-                            }),
-                            (0, r.jsx)(o.xJW, {
-                                title: "Text Area",
-                                children: (0, r.jsx)(o.Kx8, u({}, v)),
-                            }),
-                            (0, r.jsx)(o.xJW, {
-                                title: "Text Area (Legacy)",
-                                children: (0, r.jsx)(a.iS, u({}, v)),
+                            (0, r.jsx)(a.izJ, {}),
+                            (0, r.jsx)(a.C3N, {
+                                label: "Text Area",
+                                children: (0, r.jsx)(o.Kx8, u({}, y)),
                             }),
                         ],
                     });

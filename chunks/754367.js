@@ -17,15 +17,13 @@ function _() {
             (0, r.jsx)(l.Z, { children: (0, r.jsx)(u.Z, {}) }),
             (0, r.jsx)(o.F, {
                 setting: d.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS,
-                children: (0, r.jsx)(i.xJW, {
-                    children: (0, r.jsx)(i.Button, {
-                        variant: "critical-secondary",
-                        size: "sm",
-                        text: f.intl.string(f.t["4iKQ//"]),
-                        onClick: () => {
-                            (0, c.Z)(f.intl.string(f.t["4iKQ//"]), f.intl.string(f.t.sQ42iY), a.Z.reset);
-                        },
-                    }),
+                children: (0, r.jsx)(i.Button, {
+                    variant: "critical-secondary",
+                    size: "sm",
+                    text: f.intl.string(f.t["4iKQ//"]),
+                    onClick: () => {
+                        (0, c.Z)(f.intl.string(f.t["4iKQ//"]), f.intl.string(f.t.sQ42iY), a.Z.reset);
+                    },
                 }),
             }),
         ],
