@@ -1,83 +1,69 @@
-n.d(t, { Z: () => x });
+n.d(e, { Z: () => _ });
 var a = n(951288),
-    s = n(481060),
-    r = n(488889),
-    i = n(226186),
-    l = n(626135),
+    r = n(481060),
+    i = n(488889),
+    l = n(226186),
+    s = n(626135),
     o = n(981631),
     c = n(308569),
-    d = n(388032),
-    u = n(583073),
-    m = n(780187);
-function x(e) {
-    let { onNext: t, onClose: n, reason: x, onReasonChange: _, freeTextResponse: E, setFreeTextResponse: N } = e,
-        p = c.zf.map((e) => ({
-            value: e,
-            name: (0, r.S)(e),
+    u = n(388032),
+    E = n(800010);
+function _(t) {
+    let {
+            onNext: e,
+            onClose: n,
+            reason: _,
+            onReasonChange: d,
+            freeTextResponse: A,
+            setFreeTextResponse: x,
+            transitionState: C,
+        } = t,
+        g = c.zf.map((t) => ({
+            value: t,
+            name: (0, i.S)(t),
         })),
-        h = (0, i.u)("change_email_collect_reasons_slide");
-    return (0, a.jsxs)("form", {
-        onSubmit: t,
+        p = (0, l.u)("change_email_collect_reasons_slide");
+    return (0, a.jsxs)(r.Ioy, {
+        graphic: {
+            type: "image",
+            src: E,
+        },
+        title: u.intl.string(u.t["41NIIi"]),
+        onClose: n,
+        transitionState: C,
+        actions: [
+            {
+                variant: "secondary",
+                text: u.intl.string(u.t["ETE/oK"]),
+                onClick: n,
+            },
+            {
+                variant: "primary",
+                text: u.intl.string(u.t["3PatS0"]),
+                disabled: null == _,
+                onClick: e,
+            },
+        ],
         children: [
-            (0, a.jsxs)(s.xBx, {
-                separator: !1,
-                className: m.header,
-                children: [
-                    (0, a.jsx)(s.Heading, {
-                        variant: "heading-xl/extrabold",
-                        children: d.intl.string(d.t["41NIIi"]),
-                    }),
-                    (0, a.jsx)(s.olH, {
-                        onClick: n,
-                        className: m.modalCloseButton,
-                    }),
-                ],
+            (0, a.jsx)(r.FXm, {
+                value: _,
+                options: g,
+                onChange: (t) => {
+                    s.default.track(o.rMx.USER_ACCOUNT_EMAIL_CHANGE_REASON_SELECTED, { change_email_reason_enum: t }),
+                        d(t),
+                        x(""),
+                        t === c.pw.SOMETHING_ELSE &&
+                            l.Z.trackExposure({ location: "change_email_collect_reasons_slide" });
+                },
             }),
-            (0, a.jsxs)(s.hzk, {
-                className: u.content,
-                children: [
-                    (0, a.jsx)(s.FXm, {
-                        value: x,
-                        options: p,
-                        onChange: (e) => {
-                            l.default.track(o.rMx.USER_ACCOUNT_EMAIL_CHANGE_REASON_SELECTED, {
-                                change_email_reason_enum: e,
-                            }),
-                                _(e),
-                                N(""),
-                                e === c.pw.SOMETHING_ELSE &&
-                                    i.Z.trackExposure({ location: "change_email_collect_reasons_slide" });
-                        },
-                    }),
-                    h &&
-                        x === c.pw.SOMETHING_ELSE &&
-                        (0, a.jsx)(s.Kx8, {
-                            value: E,
-                            maxLength: c.mF,
-                            onChange: N,
-                            placeholder: d.intl.string(d.t.Q8Rk7O),
-                        }),
-                ],
-            }),
-            (0, a.jsx)(s.mzw, {
-                className: m.modalFooter,
-                children: (0, a.jsxs)(s.ButtonGroup, {
-                    direction: "horizontal-reverse",
-                    children: [
-                        (0, a.jsx)(s.Button, {
-                            variant: "primary",
-                            text: d.intl.string(d.t["3PatS0"]),
-                            disabled: null == x,
-                            onClick: t,
-                        }),
-                        (0, a.jsx)(s.Button, {
-                            variant: "secondary",
-                            text: d.intl.string(d.t["ETE/oK"]),
-                            onClick: n,
-                        }),
-                    ],
+            p &&
+                _ === c.pw.SOMETHING_ELSE &&
+                (0, a.jsx)(r.Kx8, {
+                    value: A,
+                    maxLength: c.mF,
+                    onChange: x,
+                    placeholder: u.intl.string(u.t.Q8Rk7O),
                 }),
-            }),
         ],
     });
 }

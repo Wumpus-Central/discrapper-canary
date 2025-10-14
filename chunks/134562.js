@@ -1,61 +1,43 @@
-n.d(t, { Z: () => o }), n(953529);
+n.d(e, { Z: () => c }), n(953529);
 var a = n(951288);
 n(647438);
-var s = n(481060),
-    r = n(308569),
-    i = n(388032),
-    l = n(780187);
-function o(e) {
-    let { onNext: t, onClose: n } = e;
-    return (0, a.jsxs)("form", {
-        onSubmit: t,
+var r = n(481060),
+    i = n(308569),
+    l = n(388032),
+    s = n(780187),
+    o = n(75277);
+function c(t) {
+    let { onNext: e, onClose: n, transitionState: c } = t;
+    return (0, a.jsxs)(r.Ioy, {
+        graphic: {
+            type: "image",
+            src: o,
+        },
+        title: l.intl.string(l.t.hhR7gY),
+        onClose: n,
+        transitionState: c,
+        actions: [
+            {
+                variant: "secondary",
+                text: l.intl.string(l.t.rwTBFh),
+                onClick: e,
+            },
+            {
+                variant: "primary",
+                text: l.intl.string(l.t["ETE/oK"]),
+                onClick: n,
+            },
+        ],
         children: [
-            (0, a.jsxs)(s.xBx, {
-                separator: !1,
-                className: l.header,
-                children: [
-                    (0, a.jsx)(s.Heading, {
-                        variant: "heading-xl/extrabold",
-                        children: i.intl.string(i.t.hhR7gY),
-                    }),
-                    (0, a.jsx)(s.olH, {
-                        onClick: n,
-                        className: l.modalCloseButton,
-                    }),
-                ],
+            (0, a.jsx)(r.Text, {
+                className: s.description,
+                variant: "text-md/normal",
+                children: l.intl.format(l.t.rqWXUV, { hcArticle: i.j1 }),
             }),
-            (0, a.jsxs)(s.hzk, {
-                className: l.content,
-                children: [
-                    (0, a.jsx)(s.Text, {
-                        className: l.description,
-                        variant: "text-md/normal",
-                        children: i.intl.format(i.t.rqWXUV, { hcArticle: r.j1 }),
-                    }),
-                    (0, a.jsx)(s.Text, {
-                        className: l.description,
-                        variant: "text-md/normal",
-                        children: i.intl.string(i.t["3LW10N"]),
-                    }),
-                ],
-            }),
-            (0, a.jsx)(s.mzw, {
-                className: l.modalFooter,
-                children: (0, a.jsxs)(s.ButtonGroup, {
-                    direction: "horizontal-reverse",
-                    children: [
-                        (0, a.jsx)(s.Button, {
-                            variant: "primary",
-                            text: i.intl.string(i.t["ETE/oK"]),
-                            onClick: n,
-                        }),
-                        (0, a.jsx)(s.Button, {
-                            variant: "secondary",
-                            text: i.intl.string(i.t.rwTBFh),
-                            onClick: t,
-                        }),
-                    ],
-                }),
+            (0, a.jsx)(r.Text, {
+                className: s.description,
+                variant: "text-md/normal",
+                children: l.intl.string(l.t["3LW10N"]),
             }),
         ],
     });

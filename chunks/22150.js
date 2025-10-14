@@ -1,78 +1,54 @@
-n.d(t, { Z: () => m }), n(388685), n(953529);
+n.d(e, { Z: () => d }), n(388685), n(953529);
 var a = n(951288),
-    s = n(647438),
-    r = n(442837),
-    i = n(481060),
-    l = n(479531),
+    r = n(647438),
+    i = n(442837),
+    l = n(481060),
+    s = n(479531),
     o = n(393869),
     c = n(594174),
-    d = n(388032),
-    u = n(780187);
-function m(e) {
-    let { onNext: t, onClose: n } = e,
-        [m, x] = s.useState(!1),
-        _ = (0, r.e7)([c.default], () => c.default.getCurrentUser()),
-        E = async (e) => {
-            e.preventDefault(), x(!0);
+    u = n(388032),
+    E = n(780187),
+    _ = n(800010);
+function d(t) {
+    let { onNext: e, onClose: n, transitionState: d } = t,
+        [A, x] = r.useState(!1),
+        C = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
+        g = async (t) => {
+            t.preventDefault(), x(!0);
             try {
-                await (0, o.i)(), t();
-            } catch (t) {
-                let e = new l.Z(t).getAnyErrorMessage();
-                null != e && (0, i.showToast)((0, i.createToast)(e, i.ToastType.FAILURE));
+                await (0, o.i)(), e();
+            } catch (e) {
+                let t = new s.Z(e).getAnyErrorMessage();
+                null != t && (0, l.showToast)((0, l.createToast)(t, l.ToastType.FAILURE));
             } finally {
                 x(!1);
             }
         };
-    return (0, a.jsxs)("form", {
-        onSubmit: E,
-        children: [
-            (0, a.jsxs)(i.xBx, {
-                separator: !1,
-                className: u.header,
-                children: [
-                    (0, a.jsx)(i.Heading, {
-                        className: u.title,
-                        variant: "heading-xl/extrabold",
-                        children: d.intl.string(d.t.uFxYq6),
-                    }),
-                    (0, a.jsx)(i.olH, {
-                        onClick: n,
-                        className: u.modalCloseButton,
-                    }),
-                ],
-            }),
-            (0, a.jsx)(i.hzk, {
-                className: u.content,
-                children: (0, a.jsx)(i.Text, {
-                    className: u.description,
-                    variant: "text-md/normal",
-                    children: d.intl.format(d.t.oMFSgo, { oldEmail: null == _ ? void 0 : _.email }),
-                }),
-            }),
-            (0, a.jsxs)(i.mzw, {
-                className: u.modalFooter,
-                children: [
-                    (0, a.jsx)("div", {
-                        "data-button-hoisted-classname-wrapper": !0,
-                        className: u.__invalid_submit,
-                        children: (0, a.jsx)(i.Button, {
-                            variant: "primary",
-                            text: d.intl.string(d.t.rXV81N),
-                            type: "submit",
-                            loading: m,
-                        }),
-                    }),
-                    (0, a.jsx)("div", {
-                        "data-button-hoisted-classname-wrapper": !0,
-                        className: u.__invalid_cancel,
-                        children: (0, a.jsx)(i.Button, {
-                            variant: "secondary",
-                            text: d.intl.string(d.t["ETE/oK"]),
-                            onClick: n,
-                        }),
-                    }),
-                ],
-            }),
+    return (0, a.jsx)(l.Ioy, {
+        graphic: {
+            type: "image",
+            src: _,
+        },
+        title: u.intl.string(u.t.uFxYq6),
+        onClose: n,
+        transitionState: d,
+        actions: [
+            {
+                variant: "secondary",
+                text: u.intl.string(u.t["ETE/oK"]),
+                onClick: n,
+            },
+            {
+                variant: "primary",
+                text: u.intl.string(u.t.rXV81N),
+                loading: A,
+                onClick: g,
+            },
         ],
+        children: (0, a.jsx)(l.Text, {
+            className: E.description,
+            variant: "text-md/normal",
+            children: u.intl.format(u.t.oMFSgo, { oldEmail: null == C ? void 0 : C.email }),
+        }),
     });
 }
