@@ -1,82 +1,81 @@
 n.d(t, {
-    L: () => u,
-    Z: () => d,
+    L: () => c,
+    Z: () => u,
 }),
     n(953529);
 var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
-    o = n(755721),
-    s = n(481060),
-    l = n(600164),
-    c = n(388354);
-function u(e) {
+    o = n(481060),
+    s = n(600164),
+    l = n(388354);
+function c(e) {
     return e < 400 ? "small" : e < 1000 ? "medium" : "large";
 }
-function d(e) {
+function u(e) {
     let {
         onCTAClick: t,
         callToAction: n,
         header: i,
-        description: u,
-        errorCodeMessage: d,
-        size: f,
-        className: _,
-        artURL: p,
-        noArt: h = !1,
-        selected: m = !1,
+        description: c,
+        errorCodeMessage: u,
+        size: d,
+        className: f,
+        artURL: _,
+        noArt: p = !1,
+        selected: h = !1,
     } = e;
-    return (0, r.jsxs)(l.Z, {
-        className: _,
-        justify: l.Z.Justify.CENTER,
-        align: l.Z.Align.CENTER,
-        direction: l.Z.Direction.VERTICAL,
+    return (0, r.jsxs)(s.Z, {
+        className: f,
+        justify: s.Z.Justify.CENTER,
+        align: s.Z.Align.CENTER,
+        direction: s.Z.Direction.VERTICAL,
         style: { padding: 4 },
         children: [
-            !h &&
-                null != p &&
+            !p &&
+                null != _ &&
                 (0, r.jsx)("div", {
-                    className: a()(c.art, c[f]),
-                    style: { backgroundImage: "url(".concat(p, ")") },
+                    className: a()(l.art, l[d]),
+                    style: { backgroundImage: "url(".concat(_, ")") },
                 }),
             null != i
-                ? (0, r.jsx)(s.Text, {
+                ? (0, r.jsx)(o.Text, {
                       color: "none",
                       variant: "text-md/semibold",
-                      className: c.header,
+                      className: l.header,
                       children: i,
                   })
                 : null,
-            null != d
-                ? (0, r.jsx)(s.Text, {
-                      className: c.errorCodeMessage,
+            null != u
+                ? (0, r.jsx)(o.Text, {
+                      className: l.errorCodeMessage,
                       variant: "text-sm/semibold",
                       color: "text-muted",
                       selectable: !0,
-                      children: d,
-                  })
-                : null,
-            null != u && (null == d || "small" !== f)
-                ? (0, r.jsx)(s.Text, {
-                      color: "none",
-                      className: c.description,
-                      variant: "text-sm/medium",
                       children: u,
                   })
                 : null,
-            m || null == n
+            null != c && (null == u || "small" !== d)
+                ? (0, r.jsx)(o.Text, {
+                      color: "none",
+                      className: l.description,
+                      variant: "text-sm/medium",
+                      children: c,
+                  })
+                : null,
+            h || null == n
                 ? null
-                : (0, r.jsx)(o.zx, {
-                      className: c.outerButton,
-                      size: o.zx.Sizes.NONE,
-                      color: o.zx.Colors.WHITE,
-                      look: o.zx.Looks.BLANK,
-                      innerClassName: c.button,
-                      onClick: (e) => {
-                          e.stopPropagation(), null == t || t(e);
-                      },
-                      children: n,
+                : (0, r.jsx)("div", {
+                      className: l.outerButton,
+                      children: (0, r.jsx)(o.Button, {
+                          size: "small" === d ? "sm" : "md",
+                          variant: "secondary",
+                          onClick: (e) => {
+                              e.stopPropagation(), null == t || t(e);
+                          },
+                          text: n,
+                      }),
                   }),
         ],
     });

@@ -4,6 +4,6 @@ e.exports = {
     streamHiddenEmptyState: "streamHiddenEmptyState_c30e20",
     streamHiddenCTA: "streamHiddenCTA_c30e20",
     largePaddingTop: "largePaddingTop_c30e20",
-    addStreamIcon: "addStreamIcon_c30e20",
-    addCTA: "addCTA_c30e20",
+    cta: "cta_c30e20",
+    addCta: "addCta_c30e20",
 };

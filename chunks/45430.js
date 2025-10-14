@@ -1,31 +1,30 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => c });
 var i = n(951288),
-    r = n(755721),
-    l = n(481060),
-    a = n(475179),
-    o = n(841397),
-    s = n(388032),
-    c = n(427538);
-function u(e) {
+    r = n(481060),
+    l = n(475179),
+    a = n(841397),
+    o = n(388032),
+    s = n(427538);
+function c(e) {
     let { channelId: t } = e;
     return (0, i.jsxs)("div", {
-        className: c.container,
+        className: s.container,
         children: [
-            (0, i.jsx)(o.Z, {}),
+            (0, i.jsx)(a.Z, {}),
             (0, i.jsxs)("div", {
-                className: c.content,
+                className: s.content,
                 children: [
-                    (0, i.jsx)(l.Heading, {
+                    (0, i.jsx)(r.Heading, {
                         variant: "heading-lg/normal",
-                        children: s.intl.format(s.t.ilLVLi, {}),
+                        children: o.intl.format(o.t.ilLVLi, {}),
                     }),
-                    (0, i.jsx)(r.zx, {
-                        size: r.zx.Sizes.LARGE,
-                        color: r.zx.Colors.PRIMARY,
+                    (0, i.jsx)(r.Button, {
+                        variant: "secondary",
+                        size: "md",
                         onClick: (e) => {
-                            e.stopPropagation(), a.Z.toggleVoiceParticipantsHidden(t, !1);
+                            e.stopPropagation(), l.Z.toggleVoiceParticipantsHidden(t, !1);
                         },
-                        children: s.intl.string(s.t.kLQySE),
+                        text: o.intl.string(o.t.kLQySE),
                     }),
                 ],
             }),

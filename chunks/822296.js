@@ -1,63 +1,55 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
     o = n(442837),
-    s = n(755721),
-    l = n(481060),
-    c = n(872810),
-    u = n(493773),
-    d = n(569545),
-    f = n(592125),
-    _ = n(231338),
-    p = n(388032),
-    h = n(15456);
-function m(e) {
-    let { stream: t, width: n } = e,
-        i = (0, o.e7)([f.Z], () => f.Z.getChannel(t.channelId));
-    function m(e) {
-        return e < 550 ? "small" : e < 1000 ? "medium" : "large";
-    }
-    (0, u.ZP)(() => {
-        (null == i ? void 0 : i.isGuildStageVoice()) && (0, c.aP)((0, d.V9)(t), !1);
+    s = n(481060),
+    l = n(872810),
+    c = n(493773),
+    u = n(569545),
+    d = n(592125),
+    f = n(231338),
+    _ = n(388032),
+    p = n(15456);
+function h(e) {
+    var t;
+    let { stream: n, width: i } = e,
+        h = (0, o.e7)([d.Z], () => d.Z.getChannel(n.channelId));
+    (0, c.ZP)(() => {
+        (null == h ? void 0 : h.isGuildStageVoice()) && (0, l.aP)((0, u.V9)(n), !1);
     });
-    let g = () => (0, c.aP)((0, d.V9)(t)),
-        E = p.intl.string(p.t["4EGMWF"]),
-        b = m(n);
-    return (0, r.jsx)(l.f6W, {
+    let m = () => (0, l.aP)((0, u.V9)(n)),
+        g = (t = i) < 550 ? "small" : t < 1000 ? "medium" : "large";
+    return (0, r.jsx)(s.f6W, {
         disableAdaptiveTheme: !0,
-        theme: _.BR.MIDNIGHT,
+        theme: f.BR.MIDNIGHT,
         children: (e) =>
             (0, r.jsx)("div", {
-                className: a()(h.container, e),
+                className: a()(p.container, e),
                 children: (0, r.jsxs)("div", {
-                    className: h.content,
+                    className: p.content,
                     children: [
                         (0, r.jsx)("div", {
-                            className: a()(h.artContainer, h[b]),
-                            children: (0, r.jsx)("div", { className: a()(h.art, h[b]) }),
+                            className: a()(p.artContainer, p[g]),
+                            children: (0, r.jsx)("div", { className: a()(p.art, p[g]) }),
                         }),
                         (0, r.jsxs)("div", {
-                            className: h.cta,
+                            className: p.cta,
                             children: [
-                                (0, r.jsx)(l.Heading, {
+                                (0, r.jsx)(s.Heading, {
                                     color: "none",
-                                    variant: "small" === b ? "heading-md/normal" : "heading-lg/normal",
-                                    className: h.header,
-                                    children: p.intl.formatToMarkdownString(p.t.Kb4Ukp, {}),
+                                    variant: "small" === g ? "heading-md/normal" : "heading-lg/normal",
+                                    className: p.header,
+                                    children: _.intl.formatToMarkdownString(_.t.Kb4Ukp, {}),
                                 }),
-                                (0, r.jsx)(s.zx, {
-                                    size: "small" === b ? s.zx.Sizes.MEDIUM : s.zx.Sizes.LARGE,
-                                    color: s.zx.Colors.PRIMARY,
+                                (0, r.jsx)(s.Button, {
+                                    variant: "secondary",
+                                    size: "small" === g ? "sm" : "md",
                                     onClick: (e) => {
-                                        e.stopPropagation(), g();
+                                        e.stopPropagation(), m();
                                     },
-                                    children: (0, r.jsx)(l.Text, {
-                                        color: "none",
-                                        variant: "text-md/semibold",
-                                        children: E,
-                                    }),
+                                    text: _.intl.string(_.t["4EGMWF"]),
                                 }),
                             ],
                         }),

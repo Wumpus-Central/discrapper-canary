@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => z,
+    Z: () => q,
     _: () => B,
 });
 var r = n(951288),
@@ -7,28 +7,28 @@ var r = n(951288),
     l = n(120356),
     a = n.n(l),
     o = n(442837),
-    c = n(481060),
-    s = n(475179),
-    u = n(872810),
-    d = n(493773),
-    f = n(763520),
-    p = n(194082),
-    _ = n(710845),
-    m = n(965048),
-    b = n(590293),
-    E = n(595816),
-    g = n(863908),
-    v = n(871118),
-    h = n(517525),
+    c = n(681715),
+    s = n(481060),
+    u = n(475179),
+    d = n(872810),
+    f = n(493773),
+    p = n(763520),
+    _ = n(194082),
+    m = n(710845),
+    g = n(965048),
+    E = n(590293),
+    b = n(595816),
+    v = n(863908),
+    h = n(871118),
+    y = n(517525),
     S = n(352978),
-    y = n(590076),
-    O = n(507675),
-    I = n(199902),
-    C = n(314897),
-    w = n(592125),
-    j = n(131951),
-    Z = n(451478),
-    P = n(685203),
+    O = n(590076),
+    I = n(507675),
+    C = n(199902),
+    w = n(314897),
+    j = n(592125),
+    Z = n(131951),
+    P = n(451478),
     x = n(112560),
     A = n(442168),
     T = n(822296),
@@ -42,18 +42,18 @@ var r = n(951288),
     V = n(65154),
     U = n(388032),
     W = n(7504);
-let H = new _.Z("StreamTile");
+let H = new m.Z("StreamTile");
 function B(e) {
     let { participant: t, selected: n, focused: i, idle: l, width: a, premiumIndicator: c } = e,
-        s = (0, o.e7)([I.Z], () => I.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)),
+        s = (0, o.e7)([C.Z], () => C.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)),
         u = (0, k.K)(a);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             n || i ? null : (0, r.jsx)(M.Z, { participant: t }),
             i || null == s || s.state === F.jm8.ENDED || s.state === F.jm8.FAILED
                 ? null
-                : (0, r.jsx)(h.Z, {
-                      size: p.ZP.Sizes.SMALL,
+                : (0, r.jsx)(y.Z, {
+                      size: _.ZP.Sizes.SMALL,
                       className: W.liveIndicator,
                       participant: t,
                       showQuality: !u && !l,
@@ -63,56 +63,56 @@ function B(e) {
         ],
     });
 }
-function z(e) {
+function q(e) {
     let {
             participant: t,
             selected: n,
             onVideoResize: l,
-            fit: p,
-            inPopout: _,
-            inOverlayPopout: h = !1,
+            fit: _,
+            inPopout: m,
+            inOverlayPopout: y = !1,
             width: M,
             focused: k,
             wrapperClassName: B,
-            paused: z = !1,
+            paused: q = !1,
         } = e,
-        q = j.Z.getVideoComponent(),
-        Y = (0, o.e7)([C.default], () => C.default.getId()),
-        K = (0, b.Z)(),
+        Y = Z.Z.getVideoComponent(),
+        z = (0, o.e7)([w.default], () => w.default.getId()),
+        K = (0, E.Z)(),
         { stream: G, user: Q, streamId: X } = t,
-        J = (0, o.e7)([w.Z], () => w.Z.getChannel(G.channelId)),
-        $ = (0, o.e7)([I.Z], () => I.Z.getActiveStreamForUser(Q.id, G.guildId), [Q.id, G.guildId]),
-        { defaultWatchMultipleStreams: ee } = (0, E.P)({ location: "StreamTile" }),
-        et = (0, o.e7)([I.Z], () => I.Z.getAllActiveStreams().length > 0),
-        en = (0, o.e7)([Z.Z], () => Z.Z.isFocused()),
-        er = (null == $ ? void 0 : $.ownerId) === Y,
-        ei = er && !en && !_,
-        el = null != $ ? (0, g.Z)($, Q, Q.id === Y, ei) : null,
+        J = (0, o.e7)([j.Z], () => j.Z.getChannel(G.channelId)),
+        $ = (0, o.e7)([C.Z], () => C.Z.getActiveStreamForUser(Q.id, G.guildId), [Q.id, G.guildId]),
+        { defaultWatchMultipleStreams: ee } = (0, b.P)({ location: "StreamTile" }),
+        et = (0, o.e7)([C.Z], () => C.Z.getAllActiveStreams().length > 0),
+        en = (0, o.e7)([P.Z], () => P.Z.isFocused()),
+        er = (null == $ ? void 0 : $.ownerId) === z,
+        ei = er && !en && !m,
+        el = null != $ ? (0, v.Z)($, Q, Q.id === z, ei) : null,
         ea = M < 195;
-    (0, d.ZP)(() => {
+    (0, f.ZP)(() => {
         !et &&
             (null == J ? void 0 : J.isGuildStageVoice()) &&
             !er &&
-            ((0, u.rn)(G), s.Z.updateStageStreamSize(G.channelId, !1));
+            ((0, d.rn)(G), u.Z.updateStageStreamSize(G.channelId, !1));
     });
-    let eo = (0, m.c)(V.Yn.STREAM, t.user.id);
+    let eo = (0, g.c)(V.Yn.STREAM, t.user.id);
     if (
         (i.useEffect(() => {
             H.info(
                 "Stream Tile State - activeStream: "
                     .concat(null != $, " | selected: ")
                     .concat(n, " | Video: ")
-                    .concat(null != q, " | MediaEngine: ")
-                    .concat(j.Z.supports(V.AN.VIDEO)),
+                    .concat(null != Y, " | MediaEngine: ")
+                    .concat(Z.Z.supports(V.AN.VIDEO)),
             );
-        }, [q, $, n]),
+        }, [Y, $, n]),
         K)
     )
         return (0, r.jsx)(D.Z, {
             stream: t.stream,
             isSmall: ea,
             selected: n,
-            isSelfStream: Q.id === Y,
+            isSelfStream: Q.id === z,
         });
     if ((null == $ ? void 0 : $.state) === F.jm8.ENDED)
         return (0, r.jsx)(T.Z, {
@@ -134,11 +134,11 @@ function z(e) {
             participant: t,
             width: M,
         });
-    if (!(null != $ && !n && null != q && j.Z.supports(V.AN.VIDEO)))
+    if (!(null != $ && !n && null != Y && Z.Z.supports(V.AN.VIDEO)))
         return (0, r.jsxs)("div", {
             className: a()(W.content, W.streamPreview, { [W.small]: ea }),
             children: [
-                (0, r.jsx)(v.Z, {
+                (0, r.jsx)(h.Z, {
                     noImage: !0,
                     noText: !0,
                     className: a()(W.absoluteFill, { [W.streamPreviewOpacity]: null == $ }),
@@ -148,26 +148,28 @@ function z(e) {
                     ? null
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(P.a, {
-                                  isSmall: ea,
-                                  children: (0, r.jsx)(c.Text, {
-                                      variant: ea ? "text-sm/semibold" : "text-md/semibold",
-                                      color: "none",
-                                      children: M < 175 ? U.intl.string(U.t["I6JG4+"]) : U.intl.string(U.t["7Xq/nZ"]),
+                              (0, r.jsx)("div", {
+                                  className: W.cta,
+                                  children: (0, r.jsx)(s.Button, {
+                                      variant: "secondary",
+                                      size: ea ? "sm" : "md",
+                                      text: M < 175 ? U.intl.string(U.t["I6JG4+"]) : U.intl.string(U.t["7Xq/nZ"]),
                                   }),
                               }),
                               et && !ee
-                                  ? (0, r.jsx)(P.a, {
-                                        className: W.addCTA,
-                                        tooltip: U.intl.string(U.t.wCrzur),
-                                        onClick: (e) => {
-                                            e.stopPropagation(), (0, u.rn)(G, { forceMultiple: !0 });
-                                        },
-                                        isSmall: ea,
-                                        children: (0, r.jsx)(c.OgY, {
-                                            size: "xs",
-                                            color: "currentColor",
-                                            className: W.addStreamIcon,
+                                  ? (0, r.jsx)("div", {
+                                        className: a()(W.cta, W.addCta),
+                                        children: (0, r.jsx)(c.u, {
+                                            text: U.intl.string(U.t.wCrzur),
+                                            children: (0, r.jsx)(s.hU, {
+                                                variant: "secondary",
+                                                size: ea ? "sm" : "md",
+                                                icon: s.OgY,
+                                                "aria-label": U.intl.string(U.t.wCrzur),
+                                                onClick: (e) => {
+                                                    e.stopPropagation(), (0, d.rn)(t.stream, { forceMultiple: !0 });
+                                                },
+                                            }),
                                         }),
                                     })
                                   : null,
@@ -179,7 +181,7 @@ function z(e) {
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 null != J
-                    ? (0, r.jsx)(y.Z, {
+                    ? (0, r.jsx)(O.Z, {
                           focused: k,
                           channelId: J.id,
                           guildId: J.guild_id,
@@ -195,10 +197,10 @@ function z(e) {
                         wrapperClassName: a()(W.videoWrapper, B),
                         className: W.content,
                         streamId: X,
-                        videoComponent: q,
-                        fit: p,
-                        paused: z || (null == $ ? void 0 : $.state) === F.jm8.PAUSED || ei,
-                        videoSpinnerContext: er ? f.m.SELF_STREAM : f.m.REMOTE_STREAM,
+                        videoComponent: Y,
+                        fit: _,
+                        paused: q || (null == $ ? void 0 : $.state) === F.jm8.PAUSED || ei,
+                        videoSpinnerContext: er ? p.m.SELF_STREAM : p.m.REMOTE_STREAM,
                         userId: Q.id,
                         streamKey: t.id,
                     },
@@ -206,7 +208,7 @@ function z(e) {
                 ),
                 null != el
                     ? (0, r.jsx)(
-                          O.Z,
+                          I.Z,
                           (function (e) {
                               for (var t = 1; t < arguments.length; t++) {
                                   var n = null != arguments[t] ? arguments[t] : {},
@@ -236,7 +238,7 @@ function z(e) {
                     : null,
                 (0, r.jsx)(A.Z, {
                     stream: G,
-                    inPopout: _,
+                    inPopout: m,
                 }),
             ],
         });

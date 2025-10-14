@@ -10,5 +10,4 @@ e.exports = {
     small: "small_ecf309",
     header: "header_ecf309",
     buttons: "buttons_ecf309",
-    button: "button_ecf309",
 };
