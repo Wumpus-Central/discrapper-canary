@@ -204,6 +204,9 @@ class E extends o.C {
                 case 29:
                     a.engineFeatureFlags.push(e.string());
                     break;
+                case 30:
+                    a.debugConfig = T.internalBinaryRead(e, e.uint32(), n, a.debugConfig);
+                    break;
                 default:
                     let o = n.readUnknownField;
                     if ("throw" === o)
@@ -258,6 +261,7 @@ class E extends o.C {
         }
         for (let n = 0; n < e.engineFeatureFlags.length; n++)
             t.tag(29, r.TD.LengthDelimited).string(e.engineFeatureFlags[n]);
+        e.debugConfig && T.internalBinaryWrite(e.debugConfig, t.tag(30, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -435,6 +439,12 @@ class E extends o.C {
                 kind: "scalar",
                 repeat: 2,
                 T: 9,
+            },
+            {
+                no: 30,
+                name: "debug_config",
+                kind: "message",
+                T: () => T,
             },
         ]);
     }
@@ -623,3 +633,110 @@ class O extends o.C {
     }
 }
 let v = new O();
+class I extends o.C {
+    create(e) {
+        let t = {
+            enableDecisionLogging: !1,
+            metricsSampleRate: 0,
+            logContextOnFailure: !1,
+            logRawHeaders: !1,
+            tagFilterMetrics: !1,
+            decisionLogSampleRate: 0,
+        };
+        return (
+            globalThis.Object.defineProperty(t, a.C, {
+                enumerable: !1,
+                value: this,
+            }),
+            void 0 !== e && (0, i.l)(this, t, e),
+            t
+        );
+    }
+    internalBinaryRead(e, t, n, i) {
+        let a = null != i ? i : this.create(),
+            o = e.pos + t;
+        for (; e.pos < o; ) {
+            let [t, i] = e.tag();
+            switch (t) {
+                case 1:
+                    a.enableDecisionLogging = e.bool();
+                    break;
+                case 2:
+                    a.metricsSampleRate = e.double();
+                    break;
+                case 3:
+                    a.logContextOnFailure = e.bool();
+                    break;
+                case 4:
+                    a.logRawHeaders = e.bool();
+                    break;
+                case 5:
+                    a.tagFilterMetrics = e.bool();
+                    break;
+                case 6:
+                    a.decisionLogSampleRate = e.double();
+                    break;
+                default:
+                    let o = n.readUnknownField;
+                    if ("throw" === o)
+                        throw new globalThis.Error(
+                            "Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName),
+                        );
+                    let s = e.skip(i);
+                    !1 !== o && (!0 === o ? r.z.onRead : o)(this.typeName, a, t, i, s);
+            }
+        }
+        return a;
+    }
+    internalBinaryWrite(e, t, n) {
+        !1 !== e.enableDecisionLogging && t.tag(1, r.TD.Varint).bool(e.enableDecisionLogging),
+            0 !== e.metricsSampleRate && t.tag(2, r.TD.Bit64).double(e.metricsSampleRate),
+            !1 !== e.logContextOnFailure && t.tag(3, r.TD.Varint).bool(e.logContextOnFailure),
+            !1 !== e.logRawHeaders && t.tag(4, r.TD.Varint).bool(e.logRawHeaders),
+            !1 !== e.tagFilterMetrics && t.tag(5, r.TD.Varint).bool(e.tagFilterMetrics),
+            0 !== e.decisionLogSampleRate && t.tag(6, r.TD.Bit64).double(e.decisionLogSampleRate);
+        let i = n.writeUnknownFields;
+        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+    }
+    constructor() {
+        super("discord_protos.discord_experimentation.v1.DebugConfig", [
+            {
+                no: 1,
+                name: "enable_decision_logging",
+                kind: "scalar",
+                T: 8,
+            },
+            {
+                no: 2,
+                name: "metrics_sample_rate",
+                kind: "scalar",
+                T: 1,
+            },
+            {
+                no: 3,
+                name: "log_context_on_failure",
+                kind: "scalar",
+                T: 8,
+            },
+            {
+                no: 4,
+                name: "log_raw_headers",
+                kind: "scalar",
+                T: 8,
+            },
+            {
+                no: 5,
+                name: "tag_filter_metrics",
+                kind: "scalar",
+                T: 8,
+            },
+            {
+                no: 6,
+                name: "decision_log_sample_rate",
+                kind: "scalar",
+                T: 1,
+            },
+        ]);
+    }
+}
+let T = new I();
