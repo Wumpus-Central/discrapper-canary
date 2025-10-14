@@ -1,4 +1,4 @@
-n.d(t, { n: () => p });
+n.d(t, { n: () => h });
 var r = n(951288);
 n(647438);
 var i = n(925513),
@@ -10,8 +10,9 @@ var i = n(925513),
     u = n(526761),
     d = n(726985),
     f = n(981631),
-    _ = n(388032);
-function p() {
+    _ = n(388032),
+    p = n(20492);
+function h() {
     let e = (0, i.v6)(),
         t = [
             {
@@ -40,6 +41,7 @@ function p() {
                 settingsSection: f.oAB.CONTENT_AND_SOCIAL,
                 tabs: t,
                 orientation: "vertical",
+                tabsClassName: p.tabs,
             }),
         ],
     });

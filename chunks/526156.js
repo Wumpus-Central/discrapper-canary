@@ -12,37 +12,44 @@ var r = n(951288),
     c = n(528084),
     u = n(9352);
 let d = (e) => {
-        let { tabs: t, panelClassName: n, defaultTab: a, onTabChange: l, orientation: c = "horizontal" } = e,
-            d = null != a ? a : t[0],
-            [f, _] = i.useState(null != d ? d : t[0]);
+        let {
+                tabs: t,
+                panelClassName: n,
+                tabsClassName: a,
+                defaultTab: l,
+                onTabChange: c,
+                orientation: d = "horizontal",
+            } = e,
+            f = null != l ? l : t[0],
+            [_, p] = i.useState(null != f ? f : t[0]);
         i.useEffect(() => {
-            _(d);
-        }, [d]);
-        let p = (e) => {
+            p(f);
+        }, [f]);
+        let h = (e) => {
                 let t = e.component;
                 return "function" == typeof t ? (0, r.jsx)(t, {}) : t;
             },
-            h = (e) => {
+            m = (e) => {
                 var n;
-                _(null != (n = t.find((t) => t.setting === e)) ? n : t[0]), null == l || l(e);
+                p(null != (n = t.find((t) => t.setting === e)) ? n : t[0]), null == c || c(e);
             };
         return (0, r.jsxs)("div", {
-            className: o()(u.tabbedSettingsContainer, { [u.vertical]: "vertical" === c }),
+            className: o()(u.tabbedSettingsContainer, { [u.vertical]: "vertical" === d }),
             children: [
                 (0, r.jsx)(s.njP, {
-                    className: o()(u.tabBar, { [u.vertical]: "vertical" === c }),
-                    selectedItem: f.setting,
-                    onItemSelect: h,
-                    orientation: c,
-                    type: "vertical" === c ? "side" : "top",
+                    className: o()(u.tabBar, { [u.vertical]: "vertical" === d }, a),
+                    selectedItem: _.setting,
+                    onItemSelect: m,
+                    orientation: d,
+                    type: "vertical" === d ? "side" : "top",
                     look: "brand",
                     children: t.map((e) =>
                         (0, r.jsx)(
                             s.njP.Item,
                             {
                                 className: o()(u.tab, {
-                                    [u.vertical]: "vertical" === c,
-                                    [u.selected]: e.setting === f.setting,
+                                    [u.vertical]: "vertical" === d,
+                                    [u.selected]: e.setting === _.setting,
                                 }),
                                 id: e.setting,
                                 "aria-label": e.title,
@@ -53,10 +60,10 @@ let d = (e) => {
                     ),
                 }),
                 (0, r.jsx)(s.njP.Panel, {
-                    id: f.setting,
-                    "aria-labelledby": f.title,
-                    className: o()(u.tabBarPanel, n, { [u.vertical]: "vertical" === c }),
-                    children: p(f),
+                    id: _.setting,
+                    "aria-labelledby": _.title,
+                    className: o()(u.tabBarPanel, n, { [u.vertical]: "vertical" === d }),
+                    children: h(_),
                 }),
             ],
         });

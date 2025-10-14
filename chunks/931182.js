@@ -1,14 +1,14 @@
-n.d(t, { n: () => d });
-var r = n(951288);
-n(647438);
-var i = n(925513),
+n.d(t, { n: () => f });
+var r = n(951288),
+    i = n(925513),
     a = n(526156),
     o = n(838436),
     s = n(63063),
     l = n(291511),
     c = n(295822),
-    u = n(388032);
-function d() {
+    u = n(388032),
+    d = n(852017);
+function f() {
     let e = (0, i.v6)(),
         t = [
             {
@@ -33,6 +33,7 @@ function d() {
             (0, r.jsx)(a.z, {
                 tabs: t,
                 orientation: "vertical",
+                tabsClassName: d.tabs,
             }),
         ],
     });

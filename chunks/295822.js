@@ -1,81 +1,45 @@
-n.d(t, { I: () => _ }), n(388685);
+n.d(t, { I: () => d });
 var r = n(951288);
 n(647438);
 var i = n(524437),
-    a = n(481060),
-    o = n(249996),
-    s = n(838436),
-    l = n(800651),
-    c = n(915009),
-    u = n(652262),
-    d = n(388032),
-    f = n(460982);
-function _() {
-    let e = (0, u.M)(),
-        t = (0, c.T3)();
+    a = n(400313),
+    o = n(947707),
+    s = n(800651),
+    l = n(915009),
+    c = n(652262),
+    u = n(388032);
+function d() {
+    let e = (0, c.M)(),
+        t = (0, l.T3)();
     if (null == t || null == e) return null;
-    let { goreContentFriendDm: n, goreContentNonFriendDm: _ } = t,
-        p = (t) => {
-            (0, l.Jr)(e, t);
+    let { goreContentFriendDm: n, goreContentNonFriendDm: d } = t,
+        f = (t) => {
+            (0, s.Jr)(e, t);
         },
-        h = [
+        _ = [
             {
                 value: i.Q4.BLUR,
-                label: d.intl.string(d.t.S49UaW),
+                label: u.intl.string(u.t.S49UaW),
             },
             {
                 value: i.Q4.BLOCK,
-                label: d.intl.string(d.t["D/157e"]),
+                label: u.intl.string(u.t["D/157e"]),
             },
         ];
-    return (0, r.jsxs)(s.U, {
+    return (0, r.jsxs)(a.n, {
+        description: u.intl.string(u.t.XgH9en),
         children: [
-            (0, r.jsxs)("div", {
-                className: f.selectItemRow,
-                children: [
-                    (0, r.jsx)(a.Text, {
-                        variant: "text-md/medium",
-                        children: d.intl.string(d.t["+uI23N"]),
-                    }),
-                    (0, r.jsx)(a.q4e, {
-                        variant: "text-only",
-                        className: f.select,
-                        options: h,
-                        value: n,
-                        onChange: (e) => p({ goreContentFriendDm: e }),
-                        renderOptionValue: (e) => {
-                            let [t] = e;
-                            return (0, r.jsx)(o.Z, { option: t });
-                        },
-                        renderOptionLabel: (e) => (0, r.jsx)(o.Z, { option: e }),
-                    }),
-                ],
+            (0, r.jsx)(o.Z, {
+                title: u.intl.string(u.t["+uI23N"]),
+                value: n,
+                onChange: (e) => f({ goreContentFriendDm: e }),
+                options: _,
             }),
-            (0, r.jsxs)("div", {
-                className: f.selectItemRow,
-                children: [
-                    (0, r.jsx)(a.Text, {
-                        variant: "text-md/medium",
-                        children: d.intl.string(d.t["Yh+HX1"]),
-                    }),
-                    (0, r.jsx)(a.q4e, {
-                        variant: "text-only",
-                        className: f.select,
-                        options: h,
-                        value: _,
-                        onChange: (e) => p({ goreContentNonFriendDm: e }),
-                        renderOptionValue: (e) => {
-                            let [t] = e;
-                            return (0, r.jsx)(o.Z, { option: t });
-                        },
-                        renderOptionLabel: (e) => (0, r.jsx)(o.Z, { option: e }),
-                    }),
-                ],
-            }),
-            (0, r.jsx)(a.Text, {
-                variant: "text-sm/normal",
-                color: "text-muted",
-                children: d.intl.string(d.t.XgH9en),
+            (0, r.jsx)(o.Z, {
+                title: u.intl.string(u.t["Yh+HX1"]),
+                value: d,
+                onChange: (e) => f({ goreContentNonFriendDm: e }),
+                options: _,
             }),
         ],
     });

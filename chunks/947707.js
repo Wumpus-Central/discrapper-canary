@@ -56,13 +56,14 @@ function d(e, t) {
     return i;
 }
 function f(e) {
-    let { title: t, value: n, onChange: i, options: l, isDisabled: c } = e;
+    let { title: t, value: n, onChange: i, options: l, isDisabled: c = !1 } = e;
     return (0, r.jsxs)("div", {
         className: s.selectItemRow,
         children: [
             (0, r.jsx)(a.Text, {
                 variant: "text-md/medium",
                 color: c ? "text-muted" : "text-primary",
+                className: s.title,
                 children: t,
             }),
             (0, r.jsx)(a.q4e, {
