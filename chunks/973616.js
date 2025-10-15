@@ -129,6 +129,7 @@ class h extends i.Z {
                   id: this.id,
                   icon: this.coverImage,
                   size: e,
+                  keepAspectRatio: !0,
               })
             : null;
     }
