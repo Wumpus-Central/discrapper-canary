@@ -1,13 +1,13 @@
-n.d(t, {
+r.d(t, {
     XV: () => l,
     aE: () => u,
     kd: () => s,
     zK: () => c,
 });
-var r,
-    i = n(379405),
-    a = n(481060),
-    o = n(388032);
+var n,
+    i = r(379405),
+    a = r(481060),
+    o = r(388032);
 let l = {
         [i._.BETTER_THAN_YOU]: {
             getText: () => o.intl.string(o.t.jbIRBA),
@@ -24,6 +24,10 @@ let l = {
         [i._.EXPERT]: {
             getText: () => o.intl.string(o.t.RIOFc3),
             icon: a.jrt,
+        },
+        [i._.OBSESSED]: {
+            getText: () => o.intl.string(o.t.isPJDg),
+            icon: a.lbB,
         },
         [i._.LOVE_IT]: {
             getText: () => o.intl.string(o.t["1rN7BA"]),
@@ -57,12 +61,16 @@ let l = {
             getText: () => o.intl.string(o.t["5HhQo6"]),
             icon: a.iFz,
         },
+        [i._.LOOKING_TO_DISCUSS]: {
+            getText: () => o.intl.string(o.t.GipOCg),
+            icon: a.iFz,
+        },
     },
     c = (e) => {
         let t = l[e];
         return null != t ? t : null;
     };
-var s = (((r = {}).RADIO = "radio"), (r.CHECKBOX = "checkbox"), r);
+var s = (((n = {}).RADIO = "radio"), (n.CHECKBOX = "checkbox"), n);
 let u = {
     skill_level: {
         getLabel: () => o.intl.string(o.t.MKqADA),
