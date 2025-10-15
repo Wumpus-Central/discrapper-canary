@@ -3,55 +3,54 @@ var a = n(951288),
     r = n(647438),
     i = n(120356),
     l = n.n(i),
-    s = n(793030),
-    o = n(442837),
-    c = n(481060),
-    d = n(678717),
-    u = n(715495),
-    m = n(928518),
-    p = n(538645),
-    h = n(383036),
-    x = n(981631),
-    f = n(440543);
-let b = (e) => {
+    o = n(793030),
+    s = n(442837),
+    c = n(678717),
+    d = n(715495),
+    u = n(928518),
+    m = n(538645),
+    p = n(383036),
+    h = n(981631),
+    x = n(440543);
+let f = (e) => {
         let { setTab: t } = e,
-            n = (0, o.e7)([m.Z], () => m.Z.getWindowOpen(x.KJ3.DEVTOOLS_POPOUT));
+            n = (0, s.e7)([u.Z], () => u.Z.getWindowOpen(h.KJ3.DEVTOOLS_POPOUT));
         return (0, a.jsxs)("div", {
-            className: f.content,
+            className: x.content,
             children: [
-                (0, a.jsx)(c.P3F, {
+                (0, a.jsx)(o.P3F, {
                     onClick: () => {
                         t(1);
                     },
                     children: (0, a.jsx)("div", {
-                        className: l()(f.banner, f.pfxBanner),
-                        children: (0, a.jsx)(s.xvT, {
+                        className: l()(x.banner, x.pfxBanner),
+                        children: (0, a.jsx)(o.xvT, {
                             variant: "text-md/bold",
                             color: "always-white",
                             children: "Profile Effects",
                         }),
                     }),
                 }),
-                (0, a.jsx)(c.P3F, {
+                (0, a.jsx)(o.P3F, {
                     onClick: () => {
                         t(2);
                     },
                     children: (0, a.jsx)("div", {
-                        className: l()(f.banner, f.nameplateBanner),
-                        children: (0, a.jsx)(s.xvT, {
+                        className: l()(x.banner, x.nameplateBanner),
+                        children: (0, a.jsx)(o.xvT, {
                             variant: "text-md/bold",
                             color: "always-white",
                             children: "Nameplates",
                         }),
                     }),
                 }),
-                (0, a.jsx)(c.P3F, {
+                (0, a.jsx)(o.P3F, {
                     onClick: () => {
                         t(3);
                     },
                     children: (0, a.jsx)("div", {
-                        className: l()(f.banner, f.bundlesBanner),
-                        children: (0, a.jsx)(s.xvT, {
+                        className: l()(x.banner, x.bundlesBanner),
+                        children: (0, a.jsx)(o.xvT, {
                             variant: "text-md/bold",
                             color: "always-white",
                             children: "Product Preview Tool",
@@ -59,24 +58,30 @@ let b = (e) => {
                     }),
                 }),
                 !n &&
-                    (0, a.jsx)(c.ToO, {
-                        className: f.notice,
-                        type: c.Dd5.WARNING,
-                        title: "Not enough space?",
-                        body: (0, a.jsxs)("div", {
-                            className: f.noticeBody,
-                            children: [
-                                (0, a.jsx)("span", {
-                                    children: " You can pop out the DevTools to see the full layout. ",
-                                }),
-                                (0, a.jsx)(c.Button, {
-                                    size: "sm",
-                                    icon: s.rgF,
-                                    variant: "secondary",
-                                    onClick: d.openDevToolsPopout,
-                                    text: "Popout DevTools",
-                                }),
-                            ],
+                    (0, a.jsx)("div", {
+                        style: { marginTop: 16 },
+                        children: (0, a.jsx)(o.M14, {
+                            type: "warning",
+                            children: (0, a.jsxs)(o.Kqy, {
+                                gap: 8,
+                                children: [
+                                    (0, a.jsx)(o.xvT, {
+                                        variant: "text-md/semibold",
+                                        children: "Not enough space?",
+                                    }),
+                                    (0, a.jsx)(o.xvT, {
+                                        variant: "text-sm/normal",
+                                        children: "You can pop out the DevTools to see the full layout.",
+                                    }),
+                                    (0, a.jsx)(o.zxk, {
+                                        size: "sm",
+                                        icon: o.rgF,
+                                        variant: "secondary",
+                                        onClick: c.openDevToolsPopout,
+                                        text: "Popout DevTools",
+                                    }),
+                                ],
+                            }),
                         }),
                     }),
             ],
@@ -84,18 +89,18 @@ let b = (e) => {
     },
     g = () => {
         let [e, t] = r.useState(0);
-        return (0, a.jsxs)(s.zJl, {
-            className: f.wrapper,
+        return (0, a.jsxs)(o.zJl, {
+            className: x.wrapper,
             children: [
                 (0, a.jsxs)("div", {
-                    className: f.nav,
+                    className: x.nav,
                     children: [
-                        (0, a.jsx)(s.X6q, {
+                        (0, a.jsx)(o.X6q, {
                             variant: "heading-xxl/medium",
                             children: "ShopKeeper",
                         }),
                         0 !== e &&
-                            (0, a.jsx)(c.Button, {
+                            (0, a.jsx)(o.zxk, {
                                 variant: "primary",
                                 onClick: () => t(0),
                                 text: "Back",
@@ -105,13 +110,13 @@ let b = (e) => {
                 (() => {
                     switch (e) {
                         case 1:
-                            return (0, a.jsx)(p.Z, {});
+                            return (0, a.jsx)(m.Z, {});
                         case 2:
-                            return (0, a.jsx)(u.Z, {});
+                            return (0, a.jsx)(d.Z, {});
                         case 3:
-                            return (0, a.jsx)(h.Z, {});
+                            return (0, a.jsx)(p.Z, {});
                         default:
-                            return (0, a.jsx)(b, { setTab: t });
+                            return (0, a.jsx)(f, { setTab: t });
                     }
                 })(),
             ],
