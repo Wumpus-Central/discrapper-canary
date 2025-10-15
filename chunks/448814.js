@@ -123,7 +123,7 @@ function A(e) {
             wrap: R,
             preserveFocusPosition: !0,
         }),
-        { activeIndex: H, handleKeyDown: Y } = N(f);
+        { activeIndex: H, handleKeyDown: Y } = N(j, f);
     i.useEffect(() => {
         if (null != H && j) {
             let e = (0, l.jb)(U, (0, g.cA)(U, H)),
@@ -266,32 +266,40 @@ function C(e) {
         }),
     );
 }
-function N(e) {
-    let [t, n] = i.useState(""),
-        r = i.useMemo(() => e.map((e) => e.label.toLowerCase()), [e]),
-        a = i.useCallback((e) => {
-            e.metaKey || e.ctrlKey || e.altKey || e.shiftKey || e.key.length > 1 || n((t) => t + e.key);
+function N(e, t) {
+    let [n, r] = i.useState(""),
+        a = i.useMemo(
+            () =>
+                e
+                    ? t.map((e) =>
+                          null != e.label && "function" == typeof e.label.toLowerCase ? e.label.toLowerCase() : "",
+                      )
+                    : [],
+            [t, e],
+        ),
+        o = i.useCallback((e) => {
+            e.metaKey || e.ctrlKey || e.altKey || e.shiftKey || e.key.length > 1 || r((t) => t + e.key);
         }, []),
-        o = i.useRef(null);
+        s = i.useRef(null);
     return (
         i.useEffect(
             () => (
-                (o.current = setTimeout(() => {
-                    n("");
+                (s.current = setTimeout(() => {
+                    r("");
                 }, 750)),
                 () => {
-                    clearTimeout(o.current);
+                    clearTimeout(s.current);
                 }
             ),
-            [t],
+            [n],
         ),
         {
             activeIndex: i.useMemo(() => {
-                if ("" === t) return null;
-                let e = r.findIndex((e) => e.startsWith(t.toLowerCase()));
-                return e >= 0 ? e : null;
-            }, [r, t]),
-            handleKeyDown: a,
+                if ("" === n || !e) return null;
+                let t = a.findIndex((e) => e.startsWith(n.toLowerCase()));
+                return t >= 0 ? t : null;
+            }, [a, n, e]),
+            handleKeyDown: o,
         }
     );
 }

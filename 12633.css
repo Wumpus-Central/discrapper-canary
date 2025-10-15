@@ -44045,7 +44045,8 @@ div.modalOverrideBody__34eac {
 .staticToolbar_bba883 {
     border-radius: 4px 4px 0 0;
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    margin-bottom: calc(var(--space-4)*-1)
 }
 
 .staticToolbar_bba883 .button_bba883:first-of-type {

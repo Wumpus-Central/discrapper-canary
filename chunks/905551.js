@@ -1,9 +1,9 @@
 n.d(t, {
     EY: () => _,
     NE: () => j,
-    UM: () => g,
+    UM: () => b,
     WX: () => S,
-    WY: () => b,
+    WY: () => g,
     _k: () => C,
     ce: () => h,
     hz: () => v,
@@ -16,8 +16,8 @@ var a = n(544891),
     r = n(570140),
     i = n(594174),
     l = n(626135),
-    s = n(73346),
-    o = n(602831),
+    o = n(73346),
+    s = n(602831),
     c = n(351721),
     d = n(651667),
     u = n(893605),
@@ -31,11 +31,11 @@ function h(e) {
             r.Z.dispatch({
                 type: "GAME_SERVER_FETCH_CATALOG_SUCCESS",
                 guildId: e,
-                catalog: o.j.reduce((e, t) => ((e[t.id] = t), e), {}),
+                catalog: s.j.reduce((e, t) => ((e[t.id] = t), e), {}),
             });
         }, 5000);
     let l = null != (n = null == (t = i.default.getCurrentUser()) ? void 0 : t.isStaff()) && n;
-    return (0, s.Kb)({
+    return (0, o.Kb)({
         url: p.ANM.COLLECTION_PUBLISHED_LISTINGS_SKU(m.SW),
         query: {
             guild_id: e,
@@ -44,6 +44,7 @@ function h(e) {
         },
         oldFormErrors: !0,
         rejectWithError: !1,
+        retries: 2,
     }).then((t) => {
         let n = t.body.products.reduce((e, t) => {
             let n = (0, d.m)(t);
@@ -63,13 +64,14 @@ function x(e) {
               r.Z.dispatch({
                   type: "GAME_SERVER_FETCH_INSTANCES_SUCCESS",
                   guildId: e,
-                  instances: o.K.reduce((e, t) => ((e[t.id] = t), e), {}),
+                  instances: s.K.reduce((e, t) => ((e[t.id] = t), e), {}),
               });
           }, 5000)
         : a.tn
               .get({
                   url: p.ANM.GAME_SERVERS(e),
                   rejectWithError: !0,
+                  retries: 2,
               })
               .then((t) => {
                   if (null != t.body) {
@@ -87,30 +89,31 @@ function f(e, t) {
         .get({
             url: p.ANM.PRODUCT_FOR_SKU(t),
             rejectWithError: !0,
+            retries: 3,
         })
         .then((n) => {
             if (null != n.body) {
-                var a, i, l, s;
-                let o =
+                var a, i, l, o;
+                let s =
                     null !=
-                    (s =
+                    (o =
                         null == (l = n.body.tenant_metadata) ||
                         null == (i = l.guild_monetization) ||
                         null == (a = i.game_server)
                             ? void 0
                             : a.instructions.pc)
-                        ? s
+                        ? o
                         : [];
                 r.Z.dispatch({
                     type: "GAME_SERVER_FETCH_GAME_INSTRUCTIONS_SUCCESS",
                     guildId: e,
                     skuId: t,
-                    instructions: o,
+                    instructions: s,
                 });
             }
         });
 }
-function b(e, t) {
+function g(e, t) {
     if (e) {
         var n;
         l.default.track(p.rMx.GAME_SERVER_HOSTING_THIRD_PARTY_CONSENT_ACCEPTED, {
@@ -119,7 +122,7 @@ function b(e, t) {
         });
     }
 }
-function g() {
+function b() {
     r.Z.dispatch({ type: "GAME_SERVER_REGION_PING_STATE_RESET" });
 }
 function v(e, t) {
@@ -165,6 +168,7 @@ function C(e) {
             url: p.ANM.GAME_SERVER_REGIONS(e),
             rejectWithError: !0,
             oldFormErrors: !0,
+            retries: 3,
         })
         .then((e) => {
             r.Z.dispatch({
