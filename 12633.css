@@ -55048,8 +55048,8 @@ h3.improved__1689b:after {
 
 .image_bb8774 {
     align-items: center;
-    background-color: var(--brand-experiment);
-    border-radius: 100%;
+    background-color: var(--brand-500);
+    border-radius: var(--radius-md);
     flex-shrink: 0;
     justify-content: center
 }
