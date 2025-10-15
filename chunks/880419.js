@@ -1,7 +1,4 @@
-n.d(t, {
-    Po: () => b,
-    ZP: () => y,
-});
+n.d(t, { ZP: () => O });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -82,8 +79,8 @@ function _(e) {
     }
     if (i.type === p.A3.POWERUP_ACTIVATED) return (0, r.jsx)(b, { cost: n.cost });
 }
-function y(e) {
-    let { guildId: t, powerup: n, compact: l, iconSize: b, size: y, grow: O, className: v, onError: j } = e,
+function O(e) {
+    let { guildId: t, powerup: n, compact: l, iconSize: b, size: O, grow: y, className: v, onError: j } = e,
         { onActivate: x, isLoading: C, error: E, onShowDeactivate: S } = (0, d.ZP)(t, n),
         I = (0, u.ZP)(t, n).type !== p.A3.INACTIVE,
         { disabled: P, reason: N } = (0, c.Z)(t, n, I);
@@ -113,8 +110,8 @@ function y(e) {
                             className: o()(
                                 g.secondaryButton,
                                 {
-                                    [g.buttonWrapper]: O,
-                                    [g.noGrow]: !O,
+                                    [g.buttonWrapper]: y,
+                                    [g.noGrow]: !y,
                                 },
                                 v,
                             ),
@@ -159,8 +156,8 @@ function y(e) {
                                             disabled: P,
                                             onClick: I ? S : x,
                                             loading: C,
-                                            fullWidth: O,
-                                            size: null != y ? y : l ? "md" : void 0,
+                                            fullWidth: y,
+                                            size: null != O ? O : l ? "md" : void 0,
                                             text: e,
                                             minWidth: 0,
                                         },
