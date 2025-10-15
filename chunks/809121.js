@@ -190,7 +190,7 @@ function A(e) {
             let e = [t.gameConfig.type, t.gameConfig.version].filter(_.lm).join(" ");
             return "" === e ? null : e;
         }, [t.gameConfig]),
-        q = a.useMemo(() => {
+        H = a.useMemo(() => {
             switch (t.status) {
                 case o.V.STARTING:
                     if (null == t.gameServerPanelUrl) return T.intl.string(P.default["1A3US0"]);
@@ -221,7 +221,7 @@ function A(e) {
                                 className: w.serverInfo,
                                 children: [
                                     (0, r.jsx)(u.Heading, {
-                                        variant: "heading-sm/medium",
+                                        variant: "heading-md/medium",
                                         children: t.name,
                                     }),
                                     (0, r.jsx)(u.Text, {
@@ -323,7 +323,6 @@ function A(e) {
                                                     ? (0, r.jsx)(u.$jN, {
                                                           type: u.RAz.SPINNING_CIRCLE_SIMPLE,
                                                           className: w.statusLoading,
-                                                          itemClassName: w.statusLoadingItem,
                                                       })
                                                     : (0, r.jsx)("span", {
                                                           className: s()(
@@ -354,10 +353,10 @@ function A(e) {
                                                         }
                                                     })(t.status),
                                                 }),
-                                                null != q &&
+                                                null != H &&
                                                     (0, r.jsx)(d.u, {
                                                         position: "top",
-                                                        text: q,
+                                                        text: H,
                                                         children: (0, r.jsx)(u.idN, {
                                                             className: w.statusTooltipIcon,
                                                             size: "xs",
