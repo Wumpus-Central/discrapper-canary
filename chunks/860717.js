@@ -20,8 +20,8 @@ var r = n(951288),
     v = n(124347),
     y = n(929677),
     I = n(77498),
-    S = n(823379),
-    C = n(621853),
+    C = n(823379),
+    S = n(621853),
     T = n(750312),
     N = n(919498),
     j = n(388032),
@@ -389,12 +389,12 @@ function W(e, t) {
 }
 let Y = i.createContext(null);
 function q(e) {
-    return (0, o.cj)([p.Z, C.Z, I.Z], () => {
+    return (0, o.cj)([p.Z, S.Z, I.Z], () => {
         let t = p.Z.getApplication(e.applicationId);
         return {
             application: t,
             game: null != t ? I.Z.getGameByApplication(t) : null,
-            config: C.Z.getApplicationWidgetApplicationConfig(e.applicationId),
+            config: S.Z.getApplicationWidgetApplicationConfig(e.applicationId),
         };
     });
 }
@@ -451,26 +451,26 @@ function Q(e) {
 }
 let X = Object.assign(
     function (e) {
-        let { user: t, widget: n, containerClassName: l, cta: o } = e,
-            { application: u, game: p, config: g } = q(n),
-            m = null == u ? void 0 : u.getIconURL(16),
-            b = (0, y.O)(t.id).data,
-            _ = null == b ? void 0 : b.find((e) => e.application_id === n.applicationId),
-            O = (0, h.Z)({
+        let { user: t, widget: n, cta: l } = e,
+            { application: o, game: u, config: p } = q(n),
+            g = null == o ? void 0 : o.getIconURL(16),
+            m = (0, y.O)(t.id).data,
+            b = null == m ? void 0 : m.find((e) => e.application_id === n.applicationId),
+            _ = (0, h.Z)({
                 location: "UserProfileApplicationWidget",
-                applicationId: null == p ? void 0 : p.id,
+                applicationId: null == u ? void 0 : u.id,
                 source: f.m1.UserProfile,
                 sourceUserId: t.id,
                 trackEntryPointImpression: !0,
             }),
-            { fetched: v, hasAlreadyLinked: I, canStartAuthorization: C, startAuthorization: N } = (0, d.FG)(u),
-            Z = null == o && v && !I && C,
-            L = (0, r.jsxs)(r.Fragment, {
+            { fetched: O, hasAlreadyLinked: v, canStartAuthorization: I, startAuthorization: S } = (0, d.FG)(o),
+            N = null == l && O && !v && I,
+            Z = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    null != m
+                    null != g
                         ? (0, r.jsx)("img", {
                               className: P.appIcon,
-                              src: m,
+                              src: g,
                               width: 16,
                               height: 16,
                               alt: "",
@@ -479,33 +479,33 @@ let X = Object.assign(
                     (0, r.jsx)(c.Text, {
                         variant: "text-sm/medium",
                         children:
-                            (null == u ? void 0 : u.name) != null
-                                ? u.name
+                            (null == o ? void 0 : o.name) != null
+                                ? o.name
                                 : (0, r.jsx)("div", { className: P.textPlaceholder }),
                     }),
                 ],
             }),
-            D =
-                null == p
+            L =
+                null == u
                     ? (0, r.jsx)("div", {
                           className: P.header,
-                          children: L,
+                          children: Z,
                       })
                     : (0, r.jsx)(s.u, {
                           asContainer: !0,
                           text: j.intl.string(j.t.ajHoOj),
                           children: (0, r.jsx)(c.P3F, {
                               className: a()(P.header, P.headerClickable),
-                              onClick: O,
+                              onClick: _,
                               "aria-label": j.intl.string(j.t.ajHoOj),
-                              children: L,
+                              children: Z,
                           }),
                       }),
-            k = i.useMemo(() => {
+            D = i.useMemo(() => {
                 var e, t, n, r, i;
                 let l =
-                    ((e = null != _ ? _ : null),
-                    (t = null != g ? g : null),
+                    ((e = null != b ? b : null),
+                    (t = null != p ? p : null),
                     null == e
                         ? {
                               mode: "skeleton",
@@ -520,7 +520,7 @@ let X = Object.assign(
                                           null == (i = e.profile) || null == (r = i.data) ? void 0 : r.primary,
                                       ),
                                   )
-                                      .filter(S.V5)
+                                      .filter(C.V5)
                                       .map((e) => {
                                           let [t, n] = e;
                                           if ("object" == typeof n) {
@@ -550,7 +550,7 @@ let X = Object.assign(
                                               ];
                                           return null;
                                       })
-                                      .filter(S.lm),
+                                      .filter(C.lm),
                               ),
                               config: t,
                           });
@@ -593,21 +593,21 @@ let X = Object.assign(
                             return t;
                     }
                 });
-            }, [g, _]);
+            }, [p, b]);
         return (0, r.jsxs)(
             T.Z,
             A(x({}, e), {
                 userId: t.id,
                 widget: n,
-                className: a()(l, P.widgetContainer),
-                headerTitle: D,
+                className: P.widgetContainer,
+                headerTitle: L,
                 dragHandleAdditionalMenuItems:
-                    null != p
+                    null != u
                         ? (0, r.jsx)(c.sNh, {
                               id: "view-game-profile",
                               label: "View Game Profile",
                               icon: c.iWm,
-                              action: O,
+                              action: _,
                           })
                         : null,
                 children: [
@@ -615,13 +615,13 @@ let X = Object.assign(
                         value: e,
                         children: (0, r.jsx)(K, {
                             widget: n,
-                            children: (0, r.jsx)(R, { component: k }),
+                            children: (0, r.jsx)(R, { component: D }),
                         }),
                     }),
                     (0, r.jsxs)("div", {
                         className: P.footer,
                         children: [
-                            null != _ || Z
+                            null != b || N
                                 ? null
                                 : (0, r.jsxs)("div", {
                                       className: P.stillSyncing,
@@ -634,16 +634,16 @@ let X = Object.assign(
                                           }),
                                       ],
                                   }),
-                            Z
+                            N
                                 ? (0, r.jsx)(Q, {
                                       heading: j.intl.string(j.t.UDPRLC),
                                       content: j.intl.string(j.t["OW/2am"]),
                                       buttons: (0, r.jsx)(c.Button, {
                                           text: j.intl.string(j.t.S0W8Z2),
-                                          onClick: N,
+                                          onClick: S,
                                       }),
                                   })
-                                : o,
+                                : l,
                         ],
                     }),
                 ],
