@@ -55,8 +55,8 @@ function l(e) {
         (c = (a + i) / 2),
         {
             h: s,
-            s: (l = +(100 * (l = 0 === o ? 0 : o / (1 - Math.abs(2 * c - 1)))).toFixed(1)),
-            l: (c = +(100 * c).toFixed(1)),
+            s: +(l = 0 === o ? 0 : o / (1 - Math.abs(2 * c - 1))).toFixed(3),
+            l: +c.toFixed(3),
         }
     );
 }
@@ -64,16 +64,18 @@ function c(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
         r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
-        { h: i, s: a, l: o } = l(e);
+        { h: i, s: a, l: o } = l(e),
+        s = +(100 * a).toFixed(1),
+        c = +(100 * o).toFixed(1);
     return t
-        ? "hsla(".concat(i, ", calc(var(--saturation-factor, 1) * ").concat(a, "%), ").concat(o, "%, ").concat(r, ")")
+        ? "hsla(".concat(i, ", calc(var(--saturation-factor, 1) * ").concat(s, "%), ").concat(c, "%, ").concat(r, ")")
         : null != n
           ? "hsla("
                 .concat(i, ", ")
-                .concat(n * a, "%, ")
-                .concat(o, "%, ")
+                .concat(n * s, "%, ")
+                .concat(c, "%, ")
                 .concat(r, ")")
-          : "hsla(".concat(i, ", ").concat(a, "%, ").concat(o, "%, ").concat(r, ")");
+          : "hsla(".concat(i, ", ").concat(s, "%, ").concat(c, "%, ").concat(r, ")");
 }
 function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
