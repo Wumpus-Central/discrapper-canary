@@ -10,17 +10,17 @@ var i = n(780384),
     u = n(5192),
     d = n(652853),
     p = n(228168),
-    h = n(981631),
-    f = n(671955),
+    f = n(981631),
+    h = n(671955),
     g = n(323759);
 let m = (0, l.pxk)(l.EFr.SIZE_16);
 function b(e) {
-    let { user: t, guild: b, nick: _, onSelect: y } = e,
-        { theme: O, themeType: v } = (0, d.z)(),
+    let { user: t, guild: b, nick: _, onSelect: O } = e,
+        { theme: y, themeType: v } = (0, d.z)(),
         j = t.hasAvatarForGuild(b.id);
     return (0, r.jsxs)(l.P3F, {
         focusProps:
-            v === f.l.MODAL_V2
+            v === h.l.MODAL_V2
                 ? {
                       offset: {
                           top: 4,
@@ -30,24 +30,23 @@ function b(e) {
                   }
                 : { offset: { right: 8 } },
         className: g.row,
-        onClick: y,
+        onClick: O,
         onContextMenu: (e) => {
             (0, o.jW)(e, async () => {
                 let { default: e } = await Promise.all([
                     n.e("57804"),
                     n.e("13599"),
-                    n.e("74318"),
-                    n.e("49049"),
                     n.e("36599"),
-                    n.e("7654"),
+                    n.e("49049"),
                     n.e("76692"),
                     n.e("8271"),
                     n.e("15851"),
                     n.e("51453"),
+                    n.e("7654"),
                     n.e("845"),
                     n.e("38697"),
                     n.e("63575"),
-                    n.e("59077"),
+                    n.e("87641"),
                     n.e("6850"),
                     n.e("58227"),
                     n.e("62856"),
@@ -116,7 +115,7 @@ function b(e) {
                 guild: b,
                 showBadge: !0,
                 className: null != b.icon ? g.icon : g.noIcon,
-                badgeStrokeColor: (0, a.Lq)((0, i.wj)(O) ? h.Ilk.PRIMARY_600 : h.Ilk.WHITE_500),
+                badgeStrokeColor: (0, a.Lq)((0, i.wj)(y) ? f.Ilk.PRIMARY_600 : f.Ilk.WHITE_500),
                 badgeTooltipColor: l.r6K.PRIMARY,
                 badgeTooltipDelay: p.vB,
                 size: c.Z.Sizes.MEDIUM,

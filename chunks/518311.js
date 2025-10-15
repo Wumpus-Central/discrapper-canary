@@ -52,8 +52,8 @@ var i,
     G = n(306680),
     z = n(699516),
     W = n(246946),
-    Y = n(594174),
-    K = n(626135),
+    K = n(594174),
+    Y = n(626135),
     q = n(572004),
     X = n(585483),
     J = n(823379),
@@ -258,7 +258,7 @@ class eg extends (i = l.PureComponent) {
         let { channel: e } = this.props;
         m.Z.wait(() => _.Z.open(null == e ? void 0 : e.id));
         let t = (0, S.v_)(e);
-        K.default.track(
+        Y.default.track(
             ei.rMx.OPEN_POPOUT,
             ec(es({}, t), {
                 type: this._getAnalyticsEntryPoint().entryPointType,
@@ -286,7 +286,7 @@ class eg extends (i = l.PureComponent) {
         let { channel: e } = this.props;
         if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return;
         let { inviteMaxAgeSeconds: t } = ee.Z.getCurrentConfig({ location: "5326c5_1" }, { autoTrackExposure: !1 });
-        y.ZP.createInvite(e.id, { max_age: t }, ei.InstantInviteSources.GROUP_DM);
+        y.ZP.createInvite(e.id, { max_age: t }, ei.t4x.GROUP_DM);
     }
     isPartyFull() {
         let { channel: e } = this.props;
@@ -294,7 +294,7 @@ class eg extends (i = l.PureComponent) {
     }
     getMaxParticipants() {
         let { channel: e } = this.props,
-            t = Y.default.getCurrentUser();
+            t = K.default.getCurrentUser();
         return null != t && t.isStaff() ? ei.p3w : null != e && e.userLimit > 0 ? e.userLimit : ei.pAY;
     }
     getRemaining() {
@@ -351,7 +351,7 @@ class eg extends (i = l.PureComponent) {
         let o = [];
         return (
             a.forEach((e) => {
-                let t = Y.default.getUser(e);
+                let t = K.default.getUser(e);
                 null != t && o.push($.ZP.getName(t));
             }),
             (0, r.jsxs)("div", {
@@ -415,7 +415,7 @@ class eg extends (i = l.PureComponent) {
         if (this.isNotFriends()) {
             let t = null != e ? e.getRecipientId() : null;
             if (null == t) throw Error("no recipient in DM");
-            let n = Y.default.getUser(t),
+            let n = K.default.getUser(t),
                 i = null != n ? n.username : "",
                 l = null != n && z.Z.getRelationshipType(n.id) === ei.OGo.PENDING_OUTGOING;
             return (0, r.jsxs)(eh, {
@@ -683,7 +683,7 @@ class eg extends (i = l.PureComponent) {
                 _.Z.search(e, null == t ? void 0 : t.id),
                     null != this._existingTimeout && clearTimeout(this._existingTimeout),
                     (this._existingTimeout = setTimeout(() => {
-                        K.default.track(
+                        Y.default.track(
                             ei.rMx.SEARCH_USER_LIST_STARTED,
                             ec(es({}, n), {
                                 entry_point_type: this._getAnalyticsEntryPoint().entryPointType,
@@ -728,7 +728,7 @@ class eg extends (i = l.PureComponent) {
                     i = (0, S.v_)(n),
                     r = !0;
                 1 === e.length && (r = null == b.Z._openCachedDMChannel(e[0])),
-                    K.default.track(
+                    Y.default.track(
                         ei.rMx.CREATE_DM_USER_LIST_CLICKED,
                         ec(es({}, i), {
                             is_new_dm: r,
@@ -750,7 +750,7 @@ class eg extends (i = l.PureComponent) {
                             null != this.state.previewIcon && (t.icon = this.state.previewIcon),
                             (null != t.name || null != t.icon) &&
                                 b.Z.updateChannel(e, t, E.Z.NEW_GROUP_DM_INVITE_MODAL),
-                            K.default.track(ei.rMx.GDM_EDIT_INTERACTED, {
+                            Y.default.track(ei.rMx.GDM_EDIT_INTERACTED, {
                                 channel_id: e,
                                 channel_type: ei.d4z.GROUP_DM,
                                 location: E.Z.NEW_GROUP_DM_INVITE_MODAL,
@@ -769,7 +769,7 @@ class eg extends (i = l.PureComponent) {
                         g.Z.ring(n, t, "dm_invite");
                     }
                 }),
-                    K.default.track(
+                    Y.default.track(
                         ei.rMx.CREATE_DM_USER_LIST_CLICKED,
                         ec(es({}, i), {
                             is_new_dm: !0,
@@ -827,7 +827,7 @@ class eg extends (i = l.PureComponent) {
                     (this.copyTimeout = setTimeout(() => {
                         this.setState({ copied: !1 });
                     }, 1000)),
-                    K.default.track(ei.rMx.COPY_INSTANT_INVITE, {
+                    Y.default.track(ei.rMx.COPY_INSTANT_INVITE, {
                         server: null,
                         channel: null != t ? t.id : null,
                         channel_type: null != t ? t.type : null,
@@ -847,7 +847,7 @@ function eb(e) {
     let { selectedUsers: t, channelName: n, previewIcon: i, onIconChange: l, onIconRemove: a, onChange: o } = e,
         { analyticsLocations: s } = (0, P.ZP)(E.Z.NEW_GROUP_DM_INVITE_MODAL);
     if (!(0, A.a)(E.Z.NEW_GROUP_DM_INVITE_MODAL)) return null;
-    let c = (0, Z.pT)(Array.from(t), Y.default, z.Z);
+    let c = (0, Z.pT)(Array.from(t), K.default, z.Z);
     return (0, r.jsxs)("div", {
         className: el.customizationContainer,
         children: [
@@ -977,7 +977,7 @@ function e_(e) {
             location: g,
             subscribeToGlobalHotkey: m,
         }),
-        E = (0, p.e7)([Y.default], () => Y.default.getUser(null == i ? void 0 : i.getRecipientId()));
+        E = (0, p.e7)([K.default], () => K.default.getUser(null == i ? void 0 : i.getRecipientId()));
     return (null != (t = null == E ? void 0 : E.bot) && t) || (null != (n = null == E ? void 0 : E.isProvisional) && n)
         ? null
         : j

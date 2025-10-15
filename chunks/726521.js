@@ -220,7 +220,7 @@ function T(e, t) {
         );
 }
 function S(e, t) {
-    let n = (0, s.dangerouslyConstructGuildRecordFromUntypedObject)({});
+    let n = (0, s.Jh)({});
     D(l.BM.GUILD, { guild_id: n.id }),
         (0, u.m)(
             {

@@ -10,7 +10,7 @@ var i = n(442837),
     u = n(688438),
     d = n(981631),
     p = n(388032);
-function h(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,7 +35,7 @@ function h(e) {
     }
     return e;
 }
-function f(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,7 +80,7 @@ let g = [
                     return (n) =>
                         (0, r.jsx)(
                             i,
-                            f(h({}, n), {
+                            h(f({}, n), {
                                 directoryGuildName: e.name,
                                 directoryGuildId: e.id,
                                 directoryChannelId: t.id,
@@ -94,16 +94,14 @@ let g = [
             getName: () => p.intl.string(p.t.MJQOuL),
             handler: (e, t) =>
                 (0, l.ZDy)(async () => {
-                    let { default: i } = await Promise.all([n.e("74318"), n.e("7654"), n.e("54833")]).then(
-                        n.bind(n, 560114),
-                    );
+                    let { default: i } = await Promise.all([n.e("7654"), n.e("89772")]).then(n.bind(n, 560114));
                     return (n) =>
                         (0, r.jsx)(
                             i,
-                            f(h({}, n), {
+                            h(f({}, n), {
                                 guild: e,
                                 channel: t,
-                                source: d.InstantInviteSources.HUB_SIDEBAR,
+                                source: d.t4x.HUB_SIDEBAR,
                             }),
                         );
                 }),

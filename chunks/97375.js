@@ -51,7 +51,7 @@ let g = {
                     userId: a,
                     prefixedContent: o,
                     location: "RPC_ACTIVITY_INVITE_USER",
-                    inviteAnalyticsMetadata: { source: f.InstantInviteSources.ACTIVITY_INVITE },
+                    inviteAnalyticsMetadata: { source: f.t4x.ACTIVITY_INVITE },
                 });
             } catch (e) {
                 throw new r.O({ errorCode: h.lT.UNKNOWN_ERROR }, "Failed to invite user");

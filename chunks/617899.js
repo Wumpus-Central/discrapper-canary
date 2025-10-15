@@ -25,7 +25,7 @@ function h(e, t, n) {
 }
 class g extends i.PureComponent {
     getInviteText() {
-        return (0, o.jW)({ location: "invite_notice" }).entrypoints
+        return (0, o.LK)({ location: "invite_notice" }).isGuildEntrypointEnabled
             ? p.intl.string(p.t.Sd8Ix8)
             : p.intl.string(p.t.BN75l5);
     }
@@ -49,9 +49,7 @@ class g extends i.PureComponent {
             h(this, "handleInvite", () => {
                 let { guild: e } = this.props;
                 (0, l.ZDy)(async () => {
-                    let { default: t } = await Promise.all([n.e("74318"), n.e("7654"), n.e("54833")]).then(
-                        n.bind(n, 560114),
-                    );
+                    let { default: t } = await Promise.all([n.e("7654"), n.e("89772")]).then(n.bind(n, 560114));
                     return (n) =>
                         (0, r.jsx)(
                             t,
@@ -91,7 +89,7 @@ class g extends i.PureComponent {
                                 })({}, n),
                                 {
                                     guild: e,
-                                    source: u.InstantInviteSources.INVITE_NOTICE,
+                                    source: u.t4x.INVITE_NOTICE,
                                 },
                             ),
                         );

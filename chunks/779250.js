@@ -342,7 +342,7 @@ function z(e) {
                                 max_age: _.value,
                                 max_uses: G.value,
                             },
-                            D.InstantInviteSources.GUILD_EVENTS,
+                            D.t4x.GUILD_EVENTS,
                         ),
                         n ? I(e) : u();
                 })(e.body),

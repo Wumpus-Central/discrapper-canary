@@ -23,8 +23,8 @@ var i = n(951288),
     C = n(933557),
     N = n(346486),
     S = n(600164),
-    I = n(925329),
-    E = n(666657),
+    E = n(925329),
+    I = n(666657),
     P = n(664452),
     w = n(560114),
     T = n(685929),
@@ -229,9 +229,9 @@ function q(e) {
         inviteSource: (0, i.jsxs)("div", {
             className: U.linkedChannelJoinSource,
             children: [
-                (0, i.jsx)(I.Z, {
+                (0, i.jsx)(E.Z, {
                     game: o,
-                    size: I.A.XXSMALL,
+                    size: E.A.XXSMALL,
                 }),
                 (0, i.jsx)(g.Text, {
                     className: U.linkedChannelJoinSourceText,
@@ -316,14 +316,14 @@ function V(e) {
                         K(G({}, e), {
                             channel: u,
                             guild: l,
-                            source: M.InstantInviteSources.SETTINGS_INVITE,
+                            source: M.t4x.SETTINGS_INVITE,
                         }),
                     ),
             );
         },
-        [I, T] = r.useState(62),
+        [E, T] = r.useState(62),
         k = () => {
-            let e = { source: E.Zu.GUILD_SETTINGS };
+            let e = { source: I.Zu.GUILD_SETTINGS };
             (0, g.ZDy)(
                 async () => (t) =>
                     (0, i.jsx)(
@@ -520,7 +520,7 @@ function V(e) {
                 : 1 === e
                   ? 109
                   : 2 === e
-                    ? I
+                    ? E
                     : 3 === e
                       ? 0 === C.length && 0 === t && f
                           ? 62

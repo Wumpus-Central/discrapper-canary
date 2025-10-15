@@ -84,7 +84,7 @@ function w(e) {
         }, [t]),
         T = (0, x.Z)({
             guild: t,
-            source: G.InstantInviteSources.GUILD_CONTEXT_MENU,
+            source: G.t4x.GUILD_CONTEXT_MENU,
             channel: I.isGuildEntrypointEnabled ? null : w,
         }),
         R = (0, m.Z)(u),

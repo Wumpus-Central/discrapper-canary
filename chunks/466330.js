@@ -45,12 +45,8 @@ function d(e) {
     return p ? g : j;
 }
 function O(e, t) {
-    let n = (0, o.jW)({ location: "invite_menu_item" });
-    if (
-        n.isGuildEntrypointEnabled &&
-        null != t &&
-        [s.InstantInviteSources.GUILD_HEADER, s.InstantInviteSources.GUILD_CONTEXT_MENU].includes(t)
-    )
+    let n = (0, o.LK)({ location: "invite_menu_item" });
+    if (n.isGuildEntrypointEnabled && null != t && [s.t4x.GUILD_HEADER, s.t4x.GUILD_CONTEXT_MENU].includes(t))
         return b.intl.string(b.t.Sd8Ix8);
     if (null == e) return n.isGuildEntrypointEnabled ? b.intl.string(b.t.Sd8Ix8) : b.intl.string(b.t.BN75l5);
     let r = e.type === s.d4z.GUILD_VOICE;
@@ -67,12 +63,10 @@ let f = (e, t, i) => {
             id: "invite-people",
             label: o,
             color: "brand",
-            icon: e === s.InstantInviteSources.GUILD_HEADER ? l.ejJ : void 0,
+            icon: e === s.t4x.GUILD_HEADER ? l.ejJ : void 0,
             action: () =>
                 (0, l.ZDy)(async () => {
-                    let { default: l } = await Promise.all([n.e("74318"), n.e("7654"), n.e("81404")]).then(
-                        n.bind(n, 560114),
-                    );
+                    let { default: l } = await Promise.all([n.e("7654"), n.e("89772")]).then(n.bind(n, 560114));
                     return (n) => {
                         var o, c;
                         return (0, r.jsx)(
@@ -108,10 +102,10 @@ let f = (e, t, i) => {
             id: "invite-people",
             label: i,
             color: "brand",
-            icon: e === s.InstantInviteSources.GUILD_HEADER ? l.ejJ : void 0,
+            icon: e === s.t4x.GUILD_HEADER ? l.ejJ : void 0,
             action: () =>
                 (0, l.ZDy)(async () => {
-                    let { default: e } = await n.e("88358").then(n.bind(n, 598402));
+                    let { default: e } = await n.e("18332").then(n.bind(n, 633057));
                     return (t) => (0, r.jsx)(e, p({}, t));
                 }),
         });

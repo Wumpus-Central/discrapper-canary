@@ -142,18 +142,15 @@ function M(e) {
                     }),
                         null != e &&
                             (0, u.ZDy)(async () => {
-                                let { default: t } = await Promise.all([
-                                    n.e("74318"),
-                                    n.e("49049"),
-                                    n.e("7654"),
-                                    n.e("98953"),
-                                ]).then(n.bind(n, 560114));
+                                let { default: t } = await Promise.all([n.e("49049"), n.e("7654"), n.e("68971")]).then(
+                                    n.bind(n, 560114),
+                                );
                                 return (n) =>
                                     (0, i.jsx)(
                                         t,
                                         A(N({}, n), {
                                             guild: e,
-                                            source: P.InstantInviteSources.CHANNEL_WELCOME,
+                                            source: P.t4x.CHANNEL_WELCOME,
                                             analyticsLocation: { section: P.jXE.CHANNEL_WELCOME_CTA },
                                         }),
                                     );
@@ -214,7 +211,7 @@ function M(e) {
             };
         })(l),
         W = !(D || k || U || B),
-        { titleAnimatedStyle: Y, opacities: K } = (function (e) {
+        { titleAnimatedStyle: K, opacities: Y } = (function (e) {
             let t = (0, d.Z)(() => new o.Z.Value(0)),
                 n = (0, d.Z)(() => new o.Z.Value(0)),
                 i = (0, d.Z)(() => [new o.Z.Value(0), new o.Z.Value(0), new o.Z.Value(0), new o.Z.Value(0)]);
@@ -292,7 +289,7 @@ function M(e) {
                     o.Z.div,
                     {
                         className: T.cardWrapper,
-                        style: W ? { opacity: K[Q.length] } : {},
+                        style: W ? { opacity: Y[Q.length] } : {},
                         children: (0, i.jsx)(w, {
                             iconUrl: u.YvY,
                             header: Z.intl.string(Z.t.q9n0TU),
@@ -309,7 +306,7 @@ function M(e) {
                     o.Z.div,
                     {
                         className: T.cardWrapper,
-                        style: W ? { opacity: K[Q.length] } : {},
+                        style: W ? { opacity: Y[Q.length] } : {},
                         children: (0, i.jsx)(w, {
                             iconUrl: u.$_T,
                             header: Z.intl.string(Z.t.c5kxPj),
@@ -326,7 +323,7 @@ function M(e) {
                     o.Z.div,
                     {
                         className: T.cardWrapper,
-                        style: W ? { opacity: K[Q.length] } : {},
+                        style: W ? { opacity: Y[Q.length] } : {},
                         children: (0, i.jsx)(w, {
                             iconUrl: u.qMX,
                             header: Z.intl.string(Z.t["SoP7+v"]),
@@ -343,7 +340,7 @@ function M(e) {
                     o.Z.div,
                     {
                         className: T.cardWrapper,
-                        style: W ? { opacity: K[Q.length] } : {},
+                        style: W ? { opacity: Y[Q.length] } : {},
                         children: (0, i.jsx)(w, {
                             iconUrl: u.yIb,
                             header: Z.intl.string(Z.t.pGVNIy),
@@ -359,7 +356,7 @@ function M(e) {
                 o.Z.div,
                 {
                     className: T.cardWrapper,
-                    style: W ? { opacity: K[Q.length] } : {},
+                    style: W ? { opacity: Y[Q.length] } : {},
                     children: (0, i.jsx)(w, {
                         iconUrl: u.Tg$,
                         header: Z.intl.string(Z.t.IhHDEB),
@@ -384,7 +381,7 @@ function M(e) {
                 className: T.inner,
                 children: [
                     (0, i.jsxs)(o.Z.div, {
-                        style: Y,
+                        style: K,
                         children: [
                             (0, i.jsx)(u.Heading, {
                                 className: T.titleName,

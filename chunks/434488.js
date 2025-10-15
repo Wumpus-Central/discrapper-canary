@@ -122,7 +122,7 @@ function T(e) {
     function f() {
         (0, u.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("74318"), n.e("49049"), n.e("7654"), n.e("98953")]).then(
+                let { default: e } = await Promise.all([n.e("49049"), n.e("7654"), n.e("68971")]).then(
                     n.bind(n, 560114),
                 );
                 return (n) => {
@@ -158,7 +158,7 @@ function T(e) {
                             {
                                 guild: l,
                                 channel: t,
-                                source: j.InstantInviteSources.ACTIVITY_ENTRY_POINT_TILE,
+                                source: j.t4x.ACTIVITY_ENTRY_POINT_TILE,
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))

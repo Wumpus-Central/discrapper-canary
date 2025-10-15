@@ -94,7 +94,7 @@ function O(e) {
                                 server: N.guild_id,
                                 channel: I,
                                 channel_type: t,
-                                location: p.InstantInviteSources.GUILD_EVENTS,
+                                location: p.t4x.GUILD_EVENTS,
                                 code: Z.code,
                                 guild_scheduled_event_id: null == N ? void 0 : N.id,
                             });

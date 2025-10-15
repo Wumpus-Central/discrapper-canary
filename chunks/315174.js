@@ -7,20 +7,20 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     o = n.n(l),
-    a = n(599273),
+    a = n(258536),
     s = n(873546),
     c = n(442837),
     u = n(28664),
     d = n(481060),
     p = n(666188),
-    h = n(340541),
-    f = n(159300),
+    f = n(340541),
+    h = n(159300),
     g = n(553984),
     m = n(695346),
     b = n(496675),
     _ = n(768581),
-    y = n(598056),
-    O = n(358555),
+    O = n(598056),
+    y = n(358555),
     v = n(981631),
     j = n(647086),
     x = n(388032),
@@ -181,7 +181,7 @@ function T(e) {
     } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(O.Z, {
+            (0, r.jsx)(y.Z, {
                 guild: i,
                 isBannerVisible: n,
             }),
@@ -212,25 +212,23 @@ function T(e) {
 let A = [j._, v.STv];
 function R(e) {
     var t;
-    let { bannerVisible: l, guild: o, onClick: a, onContextMenu: s, ariaControls: p, ariaExpanded: h, children: m } = e,
-        _ = (0, c.e7)([b.Z], () => (0, f.b)(b.Z, o)),
-        y = i.useCallback(() => {
+    let { bannerVisible: l, guild: o, onClick: a, onContextMenu: s, ariaControls: p, ariaExpanded: f, children: m } = e,
+        _ = (0, c.e7)([b.Z], () => (0, h.b)(b.Z, o)),
+        O = i.useCallback(() => {
             _
                 ? (0, d.ZDy)(async () => {
-                      let { default: e } = await Promise.all([n.e("74318"), n.e("7654"), n.e("54833")]).then(
-                          n.bind(n, 560114),
-                      );
+                      let { default: e } = await Promise.all([n.e("7654"), n.e("89772")]).then(n.bind(n, 560114));
                       return (t) =>
                           (0, r.jsx)(
                               e,
                               S(E({}, t), {
                                   guild: o,
-                                  source: v.InstantInviteSources.GUILD_HEADER_INVITE_BUTTON,
+                                  source: v.t4x.GUILD_HEADER_INVITE_BUTTON,
                               }),
                           );
                   })
                 : (0, d.ZDy)(async () => {
-                      let { default: e } = await n.e("88358").then(n.bind(n, 598402));
+                      let { default: e } = await n.e("18332").then(n.bind(n, 633057));
                       return (t) => (0, r.jsx)(e, E({}, t));
                   });
         }, [_, o]);
@@ -242,14 +240,14 @@ function R(e) {
                     guildName: null != (t = null == o ? void 0 : o.name) ? t : "",
                 }),
                 "aria-controls": p,
-                "aria-expanded": h,
+                "aria-expanded": f,
                 onContextMenu: s,
                 onClick: a,
                 children: [
                     (0, r.jsxs)("div", {
                         className: C.guildBadgeAndName,
                         children: [
-                            (0, r.jsx)(O.Z, {
+                            (0, r.jsx)(y.Z, {
                                 guild: o,
                                 isBannerVisible: l,
                             }),
@@ -271,7 +269,7 @@ function R(e) {
                     children: (0, r.jsx)(d.P3F, {
                         className: C.inviteButton,
                         onClick: () => {
-                            y();
+                            O();
                         },
                         children: (0, r.jsx)(d.ejJ, {
                             size: "refresh_sm",
@@ -291,10 +289,10 @@ let D = i.memo(function (e) {
             className: a,
             onClick: c,
             onContextMenu: u,
-            onMouseDown: f,
+            onMouseDown: h,
             disableBannerAnimation: g,
             "aria-expanded": b,
-            "aria-controls": O,
+            "aria-controls": y,
             guild: j,
             guildBanner: x,
             animationOverlayHeight: N,
@@ -305,7 +303,7 @@ let D = i.memo(function (e) {
         } = e,
         M = j.features.has(v.oNc.ANIMATED_BANNER),
         k = (0, p.Z)(j),
-        G = !k && (0, y.Z)(j),
+        G = !k && (0, O.Z)(j),
         U = !k && A,
         B = (0, _.xR)(x) && M && !g,
         [V, F] = i.useState(!1),
@@ -333,13 +331,13 @@ let D = i.memo(function (e) {
             let { renderBanner: t, guildBanner: n } = e;
             return null != n && !t;
         },
-        X = (0, h._k)({ location: "guild_header" }),
+        X = (0, f._k)({ location: "guild_header" }),
         Q = {
             bannerVisible: n,
             guild: j,
             onClick: c,
             onContextMenu: u,
-            ariaControls: O,
+            ariaControls: y,
             ariaExpanded: b,
             guildHeaderRef: W,
         };
@@ -362,7 +360,7 @@ let D = i.memo(function (e) {
                             [C.communityInfoVisible]: U || (D && G),
                             [C.invitesRefresh]: X.isGuildEntrypointEnabled,
                         }),
-                        onMouseDown: f,
+                        onMouseDown: h,
                         onClick: X.isGuildEntrypointEnabled ? void 0 : c,
                         onContextMenu: u,
                         children: [

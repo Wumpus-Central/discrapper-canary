@@ -15,10 +15,10 @@ var r,
     m = n(84615),
     b = n(984802),
     _ = n(819640),
-    O = n(585483),
-    E = n(981631),
-    v = n(388032),
-    y = n(484718),
+    E = n(585483),
+    O = n(981631),
+    y = n(388032),
+    v = n(484718),
     I = n(256076);
 function C(e, t, n) {
     return (
@@ -72,22 +72,22 @@ let N = (0, g.Un)({
         webpackId: 989804,
         name: "UserSettings",
     }),
-    j = (0, g.Un)({
+    P = (0, g.Un)({
         createPromise: () => n.e("79835").then(n.bind(n, 72493)),
         webpackId: 72493,
     }),
-    P = (0, g.Un)({
+    j = (0, g.Un)({
         createPromise: () => n.e("80448").then(n.bind(n, 765457)),
         webpackId: 765457,
         name: "CheckpointSlides",
     }),
-    x = (0, g.Un)({
+    A = (0, g.Un)({
         createPromise: () =>
-            Promise.all([n.e("74318"), n.e("36599"), n.e("7654"), n.e("59077"), n.e("86915")]).then(n.bind(n, 869779)),
+            Promise.all([n.e("36599"), n.e("7654"), n.e("87641"), n.e("86915")]).then(n.bind(n, 869779)),
         webpackId: 869779,
         name: "ChannelSettings",
     }),
-    A = (0, g.Un)({
+    x = (0, g.Un)({
         createPromise: () => n.e("45620").then(n.bind(n, 838819)),
         webpackId: 838819,
         name: "CollectiblesShop",
@@ -95,15 +95,14 @@ let N = (0, g.Un)({
     Z = (0, g.Un)({
         createPromise: () =>
             Promise.all([
-                n.e("74318"),
                 n.e("36599"),
-                n.e("7654"),
                 n.e("76692"),
                 n.e("8271"),
                 n.e("15851"),
                 n.e("51453"),
+                n.e("7654"),
                 n.e("845"),
-                n.e("59077"),
+                n.e("87641"),
                 n.e("6850"),
                 n.e("58227"),
                 n.e("44686"),
@@ -115,12 +114,12 @@ let N = (0, g.Un)({
         name: "GuildSettings",
     }),
     w = {
-        [E.S9g.USER_SETTINGS]: () => (0, i.jsx)(N, {}),
-        [E.S9g.CHANNEL_SETTINGS]: () => (0, i.jsx)(x, {}),
-        [E.S9g.GUILD_SETTINGS]: () => (0, i.jsx)(Z, {}),
-        [E.S9g.COLLECTIBLES_SHOP]: () => (0, i.jsx)(A, {}),
-        [E.S9g.MANA_PLAYGROUND]: () => (0, i.jsx)(j, {}),
-        [E.S9g.CHECKPOINT]: () => (0, i.jsx)(P, {}),
+        [O.S9g.USER_SETTINGS]: () => (0, i.jsx)(N, {}),
+        [O.S9g.CHANNEL_SETTINGS]: () => (0, i.jsx)(A, {}),
+        [O.S9g.GUILD_SETTINGS]: () => (0, i.jsx)(Z, {}),
+        [O.S9g.COLLECTIBLES_SHOP]: () => (0, i.jsx)(x, {}),
+        [O.S9g.MANA_PLAYGROUND]: () => (0, i.jsx)(P, {}),
+        [O.S9g.CHECKPOINT]: () => (0, i.jsx)(j, {}),
     },
     L = "SHOWN",
     R = "HIDDEN",
@@ -165,9 +164,9 @@ class M extends (r = l.PureComponent) {
     animateOut(e) {
         c.ZP.Emitter.pause(500);
         let { opacity: t, scale: n } = this.state;
-        O.S.dispatch(E.CkL.LAYER_POP_START),
+        E.S.dispatch(O.CkL.LAYER_POP_START),
             s.Z.parallel([s.Z.spring(t, S({ toValue: 0 }, D)), s.Z.spring(n, S({ toValue: 1.1 }, D))]).start(() => {
-                e(), O.S.dispatch(E.CkL.LAYER_POP_COMPLETE);
+                e(), E.S.dispatch(O.CkL.LAYER_POP_COMPLETE);
             });
     }
     animateUnder() {
@@ -220,16 +219,16 @@ class M extends (r = l.PureComponent) {
                             "aria-label": f
                                 ? (function (e) {
                                       switch (e) {
-                                          case E.S9g.USER_SETTINGS:
-                                              return v.intl.string(v.t.cduTBA);
-                                          case E.S9g.CHANNEL_SETTINGS:
-                                              return v.intl.string(v.t.XPDhcX);
-                                          case E.S9g.COLLECTIBLES_SHOP:
-                                              return v.intl.string(v.t.pWG4zc);
-                                          case E.S9g.MANA_PLAYGROUND:
+                                          case O.S9g.USER_SETTINGS:
+                                              return y.intl.string(y.t.cduTBA);
+                                          case O.S9g.CHANNEL_SETTINGS:
+                                              return y.intl.string(y.t.XPDhcX);
+                                          case O.S9g.COLLECTIBLES_SHOP:
+                                              return y.intl.string(y.t.pWG4zc);
+                                          case O.S9g.MANA_PLAYGROUND:
                                               return "Component Playground";
-                                          case E.S9g.CHECKPOINT:
-                                              return v.intl.string(y.default["CdU/PD"]);
+                                          case O.S9g.CHECKPOINT:
+                                              return y.intl.string(v.default["CdU/PD"]);
                                           default:
                                               return "";
                                       }
@@ -280,10 +279,10 @@ class M extends (r = l.PureComponent) {
 C(M, "defaultProps", { baseLayer: !1 }), C(M, "contextType", d.Sfi);
 class U extends l.PureComponent {
     componentDidMount() {
-        O.S.subscribe(E.CkL.LAYER_POP_ESCAPE_KEY, p.xf);
+        E.S.subscribe(O.CkL.LAYER_POP_ESCAPE_KEY, p.xf);
     }
     componentWillUnmount() {
-        O.S.unsubscribe(E.CkL.LAYER_POP_ESCAPE_KEY, p.xf);
+        E.S.unsubscribe(O.CkL.LAYER_POP_ESCAPE_KEY, p.xf);
     }
     renderLayers() {
         let { children: e, layers: t, hasFullScreenLayer: n } = this.props,

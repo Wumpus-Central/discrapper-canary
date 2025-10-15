@@ -1,4 +1,4 @@
-t.d(n, { Z: () => I });
+t.d(n, { Z: () => Z });
 var l = t(951288),
     r = t(647438),
     a = t(120356),
@@ -47,9 +47,9 @@ function _(e) {
         }),
     });
 }
-let I = r.memo(function (e) {
+let Z = r.memo(function (e) {
     let { guild: n, titleClassName: a } = e,
-        { homeHeaderImage: h, isHomeHeaderImageSet: I } = ((e) => {
+        { homeHeaderImage: h, isHomeHeaderImageSet: Z } = ((e) => {
             let n = r.useMemo(
                 () =>
                     null == e
@@ -66,7 +66,7 @@ let I = r.memo(function (e) {
                 homeHeaderScroll: 200 * (null != n),
             };
         })(n),
-        Z = (0, m.b$)(n.id),
+        I = (0, m.b$)(n.id),
         y = (0, s.e7)([g.Z], () => (0, f.b)(g.Z, n)),
         N = (0, o.ZP)();
     return (0, l.jsxs)("div", {
@@ -76,10 +76,10 @@ let I = r.memo(function (e) {
                 className: j.headerArtWrapper,
                 children: [
                     (0, l.jsx)("div", {
-                        className: i()(j.headerArt, { [j.headerArtPlaceholder]: !I }),
-                        style: { backgroundImage: "url(".concat(I ? h : "dark" === N ? C : v, ")") },
+                        className: i()(j.headerArt, { [j.headerArtPlaceholder]: !Z }),
+                        style: { backgroundImage: "url(".concat(Z ? h : "dark" === N ? C : v, ")") },
                     }),
-                    Z && (0, l.jsx)(_, { guild: n }),
+                    I && (0, l.jsx)(_, { guild: n }),
                 ],
             }),
             (0, l.jsx)("div", {
@@ -118,9 +118,8 @@ let I = r.memo(function (e) {
                                                 onClick: () =>
                                                     (0, c.ZDy)(async () => {
                                                         let { default: e } = await Promise.all([
-                                                            t.e("74318"),
                                                             t.e("7654"),
-                                                            t.e("54833"),
+                                                            t.e("89772"),
                                                         ]).then(t.bind(t, 560114));
                                                         return (t) => {
                                                             var r, a;
@@ -163,7 +162,7 @@ let I = r.memo(function (e) {
                                                                 (a = a =
                                                                     {
                                                                         guild: n,
-                                                                        source: x.InstantInviteSources.GUILD_HOME,
+                                                                        source: x.t4x.GUILD_HOME,
                                                                     }),
                                                                 Object.getOwnPropertyDescriptors
                                                                     ? Object.defineProperties(

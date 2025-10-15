@@ -43,7 +43,7 @@ function b(e) {
 }
 function x(e) {
     let { guildName: t, guildIcon: n, guildAvatarUrl: i, subscriberCount: l } = e,
-        s = (0, u.dangerouslyConstructGuildRecordFromUntypedObject)({
+        s = (0, u.Jh)({
             name: t,
             icon: n,
         });
