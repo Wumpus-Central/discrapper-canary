@@ -1,10 +1,11 @@
-n.d(t, { Z: () => R }), n(388685), n(704826), n(35282), n(642613), n(368063);
+n.d(t, { Z: () => P }), n(388685), n(704826), n(35282), n(642613), n(368063);
 var r,
     i = n(442837),
     a = n(570140),
     o = n(449908),
-    s = n(657871);
-function l(e, t, n) {
+    s = n(657871),
+    l = n(240458);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,116 +18,118 @@ function l(e, t, n) {
         e
     );
 }
-let c = 250,
-    u = 0.001,
-    d = 0.01,
-    f = 10,
-    _ = o.t.createEstimate(u, d),
-    p = new Map(),
-    h = 0;
-function m(e) {
+let u = 250,
+    d = 0.001,
+    f = 0.01,
+    _ = 10,
+    p = o.t.createEstimate(d, f),
+    h = new Map(),
+    m = 0;
+function g(e) {
     return e.replace(/[^\w\s]|\b\d+\b/g, "");
 }
-function g(e) {
-    return m(e)
+function E(e) {
+    return g(e)
         .replace(
             /(https?:\/\/[^\s]+|ftp:\/\/[^\s]+|www\.[^\s]+|[^\s]*\.[a-z]{2,}\/[^\s]*|[^\s]*\.(?:com|org|net)[^\s]*|<a?:(\w+):(\d+)>|<@(?:!|&)?\d+>)/g,
             "",
         )
         .split(/\s+/);
 }
-function E(e) {
+function b(e) {
     return Array.from(e.entries()).sort((e, t) => t[1] - e[1]);
 }
-function b(e, t) {
+function y(e, t) {
     if (e.size <= t) return;
-    let n = E(e);
+    let n = b(e);
     e.clear();
     for (let r = 0; r < t; r++) {
         let [t, i] = n[r];
         e.set(t, i);
     }
 }
-function y() {
+function O() {
     let e = 1000,
         t = 5000,
         n = 0.05;
-    return h < 1000 || Math.random() < (1 - n) * Math.max(0, 1 - (h - e) / (t - e)) + n;
+    return m < 1000 || Math.random() < (1 - n) * Math.max(0, 1 - (m - e) / (t - e)) + n;
 }
-function O(e) {
+function v(e) {
     let t = !1;
     for (let n of e)
-        if (y())
-            for (let e of g(n.content.toLowerCase())) {
+        if (O())
+            for (let e of E(n.content.toLowerCase())) {
                 if (0 === e.length || e.length > 5) continue;
-                _.update(e);
-                let n = _.query(e);
-                p.set(e, n), n > h && (h = n), (t = !0);
+                p.update(e);
+                let n = p.query(e);
+                h.set(e, n), n > m && (m = n), (t = !0);
             }
-    b(p, c), t && N.emitChange();
+    y(h, u), t && R.emitChange();
 }
-function v() {
-    return (0, s.kB)("WordFrequencyStore", { autoTrackExposure: !1 }).enabled;
+function I() {
+    let e = l.V.getCurrentConfig({ location: "WordFrequencyStore" }, { autoTrackExposure: !1 }).enabled,
+        t = (0, s.kB)("WordFrequencyStore", { autoTrackExposure: !1 }).enabled;
+    return e || t;
 }
-function I(e) {
+function T(e) {
     return (
-        !!v() &&
+        !!I() &&
         (requestIdleCallback(() => {
-            O(e);
+            v(e);
         }),
         !1)
     );
 }
-let T = (e) => {
+let S = (e) => {
         let { messages: t } = e;
-        return I(t);
-    },
-    S = (e) => {
-        let { message: t } = e;
-        return I([t]);
+        return T(t);
     },
     A = (e) => {
-        (_ = o.t.createEstimate(u, d)), p.clear(), (h = 0);
+        let { message: t } = e;
+        return T([t]);
+    },
+    C = (e) => {
+        (p = o.t.createEstimate(d, f)), h.clear(), (m = 0);
     };
-class C extends (r = i.ZP.PersistedStore) {
+class N extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
             var t;
             if (e.wordSketchData)
                 try {
-                    e.wordSketchData && (_ = o.t.fromJSON(e.wordSketchData));
+                    e.wordSketchData && (p = o.t.fromJSON(e.wordSketchData));
                 } catch (e) {
-                    _ = o.t.createEstimate(u, d);
+                    p = o.t.createEstimate(d, f);
                 }
-            p = new Map(null != (t = e.wordCounts) ? t : []);
+            h = new Map(null != (t = e.wordCounts) ? t : []);
         }
-        let n = E(p);
+        let n = b(h);
         if (n.length > 0) {
             let [, e] = n[0];
-            h = e;
+            m = e;
         }
     }
     getState() {
         return {
-            wordCounts: E(p),
-            wordSketchData: _.toJSON(),
+            wordCounts: b(h),
+            wordSketchData: p.toJSON(),
         };
     }
     getMaxWordCount() {
-        return h;
+        return m;
     }
     getAllWordsSorted() {
-        return E(p);
+        return b(h);
     }
     isFrequentlyUsedWord(e) {
-        let t = p.get(e.toLowerCase());
-        return null != t && t > f;
+        let t = h.get(e.toLowerCase());
+        return null != t && t > _;
     }
 }
-l(C, "displayName", "WordFrequencyStore"), l(C, "persistKey", "WordFrequencyStore");
-let N = new C(a.Z, {
-        LOAD_MESSAGES_SUCCESS: T,
-        MESSAGE_CREATE: S,
-        DEV_TOOLS_WORD_FREQUENCY_RESET: A,
+c(N, "displayName", "WordFrequencyStore"), c(N, "persistKey", "WordFrequencyStore");
+let R = new N(a.Z, {
+        LOAD_MESSAGES_SUCCESS: S,
+        MESSAGE_CREATE: A,
+        DEV_TOOLS_WORD_FREQUENCY_RESET: C,
     }),
-    R = N;
+    P = R;
