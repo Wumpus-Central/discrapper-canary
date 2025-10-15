@@ -1,10 +1,11 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r,
     i = n(442837),
     a = n(433517),
     o = n(570140),
-    s = n(981631);
-function l(e, t, n) {
+    s = n(365113),
+    l = n(981631);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,48 +18,52 @@ function l(e, t, n) {
         e
     );
 }
-let c = {
+let u = {
         lastViewedPath: null,
         lastViewedNonVoicePath: null,
     },
-    u = c,
-    d = "LAST_VIEWED_PATH";
-function f(e) {
-    let { path: t } = e;
-    return (u.lastViewedPath = t), !0;
-}
+    d = u,
+    f = "LAST_VIEWED_PATH";
 function _(e) {
     let { path: t } = e;
-    return (u.lastViewedNonVoicePath = t), !0;
+    return (d.lastViewedPath = t), !0;
 }
-class p extends (r = i.ZP.PersistedStore) {
+function p(e) {
+    let { path: t } = e;
+    return (d.lastViewedNonVoicePath = t), !0;
+}
+class h extends (r = i.ZP.PersistedStore) {
     initialize() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c;
-        u = null != e ? e : c;
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u;
+        d = null != e ? e : u;
+    }
+    get experimentalDefaultRoute() {
+        let { friendsTab: e } = s.o.getConfig({ location: "default_route" });
+        return e ? l.Z5c.ME_ACTIVITY : l.Z5c.ME;
     }
     get defaultRoute() {
-        return s.Z5c.ME;
+        return this.experimentalDefaultRoute;
     }
     get lastNonVoiceRoute() {
         var e;
-        return null != (e = u.lastViewedNonVoicePath) ? e : s.Z5c.ME;
+        return null != (e = d.lastViewedNonVoicePath) ? e : this.experimentalDefaultRoute;
     }
     get fallbackRoute() {
-        return s.Z5c.ME;
+        return this.experimentalDefaultRoute;
     }
     getState() {
-        return u;
+        return d;
     }
 }
-l(p, "displayName", "DefaultRouteStore"),
-    l(p, "persistKey", "DefaultRouteStore"),
-    l(p, "migrations", [
+c(h, "displayName", "DefaultRouteStore"),
+    c(h, "persistKey", "DefaultRouteStore"),
+    c(h, "migrations", [
         () => {
-            let e = a.K.get(d, null);
-            return a.K.remove(d), { lastViewedPath: e };
+            let e = a.K.get(f, null);
+            return a.K.remove(f), { lastViewedPath: e };
         },
     ]);
-let h = new p(o.Z, {
-    SAVE_LAST_ROUTE: f,
-    SAVE_LAST_NON_VOICE_ROUTE: _,
+let m = new h(o.Z, {
+    SAVE_LAST_ROUTE: _,
+    SAVE_LAST_NON_VOICE_ROUTE: p,
 });

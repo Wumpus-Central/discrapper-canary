@@ -12,4 +12,6 @@ e.exports = {
     themedHeaderMobile: "themedHeaderMobile__35e86",
     familyCenterButtonContainer: "familyCenterButtonContainer__35e86",
     withPadding: "withPadding__35e86",
+    directMessagesHeader: "directMessagesHeader__35e86",
+    directMessagesButton: "directMessagesButton__35e86",
 };

@@ -1,53 +1,67 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => y });
 var r = n(951288);
 n(647438);
-var i = n(442837),
-    l = n(704215),
-    a = n(481060),
-    o = n(410575),
-    s = n(100527),
-    c = n(906732),
-    u = n(313201),
-    d = n(243778),
-    p = n(352455),
-    f = n(480294),
-    h = n(791359),
-    g = n(981631),
-    m = n(388032),
-    b = n(708567);
-function _() {
-    let { analyticsLocations: e } = (0, c.ZP)(s.Z.ACTIVE_NOW_COLUMN),
-        t = (0, i.e7)([f.Z], () => f.Z.hasConsented(g.pjP.PERSONALIZATION)) ? [] : [l.z.NOW_PLAYING_CONSENT_CARD],
-        n = (0, u.Dt)();
-    return (0, r.jsx)(c.Gt, {
-        value: e,
-        children: (0, r.jsx)(o.Z, {
-            section: g.jXE.ACTIVE_NOW_COLUMN,
+var i = n(120356),
+    l = n.n(i),
+    a = n(442837),
+    o = n(704215),
+    s = n(481060),
+    c = n(410575),
+    u = n(100527),
+    d = n(906732),
+    p = n(313201),
+    f = n(243778),
+    h = n(365113),
+    g = n(352455),
+    m = n(480294),
+    b = n(791359),
+    _ = n(981631),
+    E = n(388032),
+    O = n(708567);
+function y(e) {
+    let { isStandalone: t } = e,
+        { analyticsLocations: n } = (0, d.ZP)(u.Z.ACTIVE_NOW_COLUMN),
+        i = (0, a.e7)([m.Z], () => m.Z.hasConsented(_.pjP.PERSONALIZATION)) ? [] : [o.z.NOW_PLAYING_CONSENT_CARD],
+        y = h.o.useConfig({ location: "nowplaying" }).demureActivityCards,
+        v = h.o.useConfig({ location: "nowplaying" }).friendsTab,
+        I = (0, p.Dt)();
+    return (0, r.jsx)(d.Gt, {
+        value: n,
+        children: (0, r.jsx)(c.Z, {
+            section: _.jXE.ACTIVE_NOW_COLUMN,
             children: (0, r.jsx)("aside", {
-                className: b.container,
-                "aria-labelledby": n,
-                children: (0, r.jsxs)(a.Ttm, {
-                    className: b.scroller,
-                    children: [
-                        (0, r.jsx)(a.Heading, {
-                            variant: "heading-lg/semibold",
-                            className: b.header,
-                            id: n,
-                            children: m.intl.string(m.t.F4Zgg4),
-                        }),
-                        (0, r.jsx)(d.ZP, {
-                            contentTypes: t,
-                            children: (e) => {
-                                let { visibleContent: t, markAsDismissed: n } = e;
-                                if (t === l.z.NOW_PLAYING_CONSENT_CARD)
-                                    return (0, r.jsx)(p.Z, {
-                                        className: b.__invalid_consentCard,
-                                        markAsDismissed: n,
-                                    });
-                            },
-                        }),
-                        (0, r.jsx)(h.Z, {}),
-                    ],
+                className: l()(O.container, {
+                    [O.refreshActiveNow]: y,
+                    "refresh-active-now": y,
+                }),
+                "aria-labelledby": I,
+                children: (0, r.jsx)(s.Ttm, {
+                    className: l()(O.scroller, { [O.standalone]: t }),
+                    children: (0, r.jsxs)("div", {
+                        className: l()({ [O.standaloneContainer]: t }),
+                        children: [
+                            v
+                                ? null
+                                : (0, r.jsx)(s.Heading, {
+                                      variant: "heading-lg/semibold",
+                                      className: O.header,
+                                      id: I,
+                                      children: E.intl.string(E.t.F4Zgg4),
+                                  }),
+                            (0, r.jsx)(f.ZP, {
+                                contentTypes: i,
+                                children: (e) => {
+                                    let { visibleContent: t, markAsDismissed: n } = e;
+                                    if (t === o.z.NOW_PLAYING_CONSENT_CARD)
+                                        return (0, r.jsx)(g.Z, {
+                                            className: O.__invalid_consentCard,
+                                            markAsDismissed: n,
+                                        });
+                                },
+                            }),
+                            (0, r.jsx)(b.Z, {}),
+                        ],
+                    }),
                 }),
             }),
         }),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685);
+n.d(t, { Z: () => L }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(392711),
@@ -8,29 +8,30 @@ var r = n(951288),
     c = n(442837),
     u = n(481060),
     d = n(570140),
-    p = n(509212),
-    f = n(569984),
-    h = n(93127),
-    g = n(752048),
-    m = n(594174),
-    b = n(801077),
-    _ = n(626135),
+    p = n(365113),
+    f = n(509212),
+    h = n(569984),
+    g = n(93127),
+    m = n(752048),
+    b = n(594174),
+    _ = n(801077),
+    E = n(626135),
     O = n(70956),
-    E = n(225559),
+    y = n(225559),
     v = n(910436),
-    y = n(203028),
-    I = n(358924),
-    C = n(292140),
-    S = n(525296),
-    T = n(981631),
-    N = n(46140),
+    I = n(203028),
+    C = n(358924),
+    S = n(292140),
+    T = n(525296),
+    N = n(981631),
+    P = n(46140),
     j = n(388032),
-    P = n(559909);
+    A = n(559909);
 let x = 15 * O.Z.Millis.MINUTE,
-    A = (0, S.Z)(function (e) {
+    Z = (0, T.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
             o = i.useRef(null),
-            c = (0, r.jsx)(y.Z, {
+            c = (0, r.jsx)(I.Z, {
                 party: t,
                 onUserContextMenu: n,
             }),
@@ -39,37 +40,38 @@ let x = 15 * O.Z.Millis.MINUTE,
                 onChannelContextMenu: l,
                 quest: a,
             }),
-            { partiedMembers: p, applicationStreams: f, currentActivities: h, voiceChannels: g } = t,
-            m = p.length,
+            { partiedMembers: f, applicationStreams: h, currentActivities: g, voiceChannels: m } = t,
             b = f.length,
-            O = h.length,
-            E = g.length > 0,
-            S = i.useCallback(() => {
-                let e = h
+            _ = h.length,
+            O = g.length,
+            y = m.length > 0,
+            T = p.o.useConfig({ location: "itemcard" }).demureActivityCards,
+            P = i.useCallback(() => {
+                let e = g
                     .filter((e) => {
                         var t, n;
                         return (
                             (null == (t = e.game) ? void 0 : t.name) != null &&
-                            (0, _.isGameApplicationType)(null == (n = e.game) ? void 0 : n.type)
+                            (0, E.isGameApplicationType)(null == (n = e.game) ? void 0 : n.type)
                         );
                     })
                     .map((e) => e.game.name);
-                _.default.track(T.rMx.NOW_PLAYING_CARD_HOVERED, {
-                    num_users: m,
-                    num_streams: b,
+                E.default.track(N.rMx.NOW_PLAYING_CARD_HOVERED, {
+                    num_users: b,
+                    num_streams: _,
                     num_activities: O,
-                    in_voice_channel: E,
+                    in_voice_channel: y,
                     games_detected: e,
                 });
-            }, [m, b, O, E, h]),
-            N = s()(S, x);
+            }, [b, _, O, y, g]),
+            j = s()(P, x);
         return null != c || null != d
             ? (0, r.jsx)(u.yRy, {
                   targetElementRef: o,
                   position: "left",
                   renderPopout: (e) => {
                       let { closePopout: n } = e;
-                      return (0, r.jsx)(C.Z, {
+                      return (0, r.jsx)(S.Z, {
                           party: t,
                           close: n,
                       });
@@ -79,7 +81,7 @@ let x = 15 * O.Z.Millis.MINUTE,
                       var n, i;
                       let { isShown: l } = t;
                       return (0, r.jsx)(
-                          I.Z,
+                          C.Z,
                           ((n = (function (e) {
                               for (var t = 1; t < arguments.length; t++) {
                                   var n = null != arguments[t] ? arguments[t] : {},
@@ -108,10 +110,11 @@ let x = 15 * O.Z.Millis.MINUTE,
                           (i = i =
                               {
                                   ref: o,
-                                  onMouseEnter: N,
+                                  onMouseEnter: j,
                                   "aria-haspopup": "menu",
-                                  className: P.itemCard,
+                                  className: A.itemCard,
                                   active: l,
+                                  flat: T,
                                   children: (0, r.jsxs)("div", {
                                       children: [c, d],
                                   }),
@@ -134,47 +137,47 @@ let x = 15 * O.Z.Millis.MINUTE,
               })
             : null;
     }),
-    Z = a().throttle(() => h._(), 300000);
-function w() {
+    w = a().throttle(() => g._(), 300000);
+function L() {
     let {
             nowPlayingCards: e,
             loaded: t,
             needsRefresh: n,
             fetching: l,
             currentUser: a,
-        } = (0, c.cj)([b.Z, g.Z, m.default], () => ({
-            nowPlayingCards: b.Z.nowPlayingCards,
-            loaded: b.Z.loaded,
-            needsRefresh: g.Z.shouldFetch(),
-            fetching: g.Z.isFetching(),
-            currentUser: m.default.getCurrentUser(),
+        } = (0, c.cj)([_.Z, m.Z, b.default], () => ({
+            nowPlayingCards: _.Z.nowPlayingCards,
+            loaded: _.Z.loaded,
+            needsRefresh: m.Z.shouldFetch(),
+            fetching: m.Z.isFetching(),
+            currentUser: b.default.getCurrentUser(),
         })),
-        o = (0, c.e7)([f.Z], () => f.Z.quests);
-    i.useEffect(() => (d.Z.wait(() => E.L()), () => d.Z.wait(() => E.v())), [null == a ? void 0 : a.id]),
+        o = (0, c.e7)([h.Z], () => h.Z.quests);
+    i.useEffect(() => (d.Z.wait(() => y.L()), () => d.Z.wait(() => y.v())), [null == a ? void 0 : a.id]),
         i.useEffect(() => {
-            n && !l && Z();
+            n && !l && w();
         }, [n, l]);
     let s = i.useMemo(() => {
             let t = new Map(),
                 n = new Set(),
-                r = (0, p.NI)(o, N.l$);
+                r = (0, f.NI)(o, P.l$);
             for (let i of e)
                 i.party.currentActivities.forEach((e) => {
                     let { activity: l } = e;
                     if (null == l) return;
-                    let a = (0, p.ZZ)(r, l);
+                    let a = (0, f.ZZ)(r, l);
                     null == a || n.has(a.id) || (t.set(i.party.id, a), n.add(a.id));
                 });
             return t;
         }, [e, o]),
-        h = null;
+        p = null;
     return t
-        ? (h =
+        ? (p =
               e.length > 0
                   ? e.map((e) => {
                         let { party: t } = e;
                         return (0, r.jsx)(
-                            A,
+                            Z,
                             {
                                 party: t,
                                 quest: s.get(t.id),
@@ -183,23 +186,23 @@ function w() {
                         );
                     })
                   : (0, r.jsxs)("div", {
-                        className: P.emptyCard,
+                        className: A.emptyCard,
                         children: [
                             (0, r.jsx)(u.Heading, {
                                 variant: "heading-md/semibold",
-                                className: P.emptyHeader,
+                                className: A.emptyHeader,
                                 children: j.intl.string(j.t["ngJ/5u"]),
                             }),
                             (0, r.jsx)(u.Text, {
                                 color: "none",
-                                className: P.emptyText,
+                                className: A.emptyText,
                                 variant: "text-sm/normal",
                                 children: j.intl.string(j.t["99ZWxc"]),
                             }),
                         ],
                     }))
         : (0, r.jsx)("div", {
-              className: P.emptyCard,
+              className: A.emptyCard,
               children: (0, r.jsx)(u.$jN, {}),
           });
 }

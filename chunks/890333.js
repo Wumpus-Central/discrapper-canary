@@ -4,4 +4,5 @@ e.exports = {
     padded: "padded_bf1984",
     interactive: "interactive_bf1984",
     active: "active_bf1984",
+    noBackground: "noBackground_bf1984",
 };

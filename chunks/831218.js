@@ -15,8 +15,8 @@ var r,
     m = n(607070),
     b = n(100527),
     _ = n(367907),
-    y = n(906732),
-    O = n(453542),
+    O = n(906732),
+    y = n(453542),
     v = n(702321),
     j = n(82295),
     x = n(313201),
@@ -371,7 +371,7 @@ class V extends (r = l.Component) {
                 (this.hasReportedAnalytics = !0),
                     _.ZP.trackWithMetadata(
                         D.rMx.DM_LIST_VIEWED,
-                        U(G({}, u, (0, O.X)()), {
+                        U(G({}, u, (0, y.X)()), {
                             visible_user_ids: s.filter((e) => null != e),
                             changelog_dm_visible: c,
                         }),
@@ -421,12 +421,12 @@ class V extends (r = l.Component) {
             }),
             k(this, "renderRow", (e) => {
                 let { section: t, row: n } = e,
-                    { privateChannelIds: r } = this.props;
+                    { privateChannelIds: r, hideAllDMs: l } = this.props;
                 return 0 === t
                     ? this.renderChild(n)
-                    : 0 === n && 0 === r.length
-                      ? (0, i.jsx)(B, {}, "no-private-channels")
-                      : this.renderDM(t, n);
+                    : 0 !== n || 0 !== r.length || l
+                      ? this.renderDM(t, n)
+                      : (0, i.jsx)(B, {}, "no-private-channels");
             }),
             k(this, "renderSection", (e) => {
                 let { section: t } = e,
@@ -488,27 +488,36 @@ class V extends (r = l.Component) {
 k(V, "defaultProps", { padding: 8 });
 let F = (e) => {
     let { density: t } = (0, f.TCT)(),
-        { version: n, theme: r, children: o, showDMHeader: a, listScrollerRef: s, createDMCTAButtonVariant: c } = e,
-        h = l.Children.count(o),
-        g = w.Z.getMutablePrivateChannels(),
-        _ = (0, P.k1)(g),
-        O = (0, p.Wu)([A.Z, I.Z, N.Z], () => {
-            let e = A.Z.getPrivateChannelIds();
-            return (0, P.tU)(e, [I.Z, N.Z]);
-        }, []);
+        {
+            version: n,
+            theme: r,
+            children: o,
+            showDMHeader: a,
+            listScrollerRef: s,
+            createDMCTAButtonVariant: c,
+            hideAllDMs: h,
+        } = e,
+        g = l.Children.count(o),
+        _ = w.Z.getMutablePrivateChannels(),
+        y = h ? {} : (0, P.k1)(_),
+        v = (0, p.Wu)([A.Z, I.Z, N.Z], () => {
+            let e = A.Z.getPrivateChannelIds(),
+                t = (0, P.tU)(e, [I.Z, N.Z]);
+            return h ? [] : t;
+        }, [h]);
     (0, E.z)(C.R);
-    let { analyticsLocations: v } = (0, y.ZP)(b.Z.CONTACTS_LIST),
-        j = (0, Z.Ll)(),
-        { keyboardModeEnabled: S, version: T } = (0, p.cj)([m.Z, w.Z], () => ({
+    let { analyticsLocations: j } = (0, O.ZP)(b.Z.CONTACTS_LIST),
+        S = (0, Z.Ll)(),
+        { keyboardModeEnabled: T, version: R } = (0, p.cj)([m.Z, w.Z], () => ({
             keyboardModeEnabled: m.Z.keyboardModeEnabled,
             version:
                 null != n ? "".concat(n, ":").concat(w.Z.getPrivateChannelsVersion()) : w.Z.getPrivateChannelsVersion(),
         })),
-        R = l.useRef(null),
-        D = null != s ? s : R,
-        L = l.useCallback(
+        D = l.useRef(null),
+        L = null != s ? s : D,
+        M = l.useCallback(
             (e) => {
-                let t = D.current,
+                let t = L.current,
                     n = document.querySelector(e);
                 null != t &&
                     null != n &&
@@ -524,21 +533,21 @@ let F = (e) => {
                         },
                     });
             },
-            [D],
-        ),
-        M = l.useCallback(
-            () =>
-                new Promise((e) => {
-                    let t = D.current;
-                    if (null == t) return e();
-                    t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
-                }),
-            [D],
+            [L],
         ),
         k = l.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = D.current;
+                    let t = L.current;
+                    if (null == t) return e();
+                    t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
+                }),
+            [L],
+        ),
+        B = l.useCallback(
+            () =>
+                new Promise((e) => {
+                    let t = L.current;
                     if (null == t) return e();
                     t.scrollToBottom({
                         callback() {
@@ -546,30 +555,30 @@ let F = (e) => {
                         },
                     });
                 }),
-            [D],
+            [L],
         ),
-        B = (0, x.Dt)(),
-        F = (0, d.ZP)({
-            id: "private-channels-".concat(B),
-            isEnabled: S,
-            scrollToStart: M,
-            scrollToEnd: k,
-            defaultFocused: (h + +!!a).toString(),
-            setFocus: L,
+        F = (0, x.Dt)(),
+        H = (0, d.ZP)({
+            id: "private-channels-".concat(F),
+            isEnabled: T,
+            scrollToStart: k,
+            scrollToEnd: B,
+            defaultFocused: (g + +!!a).toString(),
+            setFocus: M,
         });
-    return (0, i.jsx)(y.Gt, {
-        value: v,
+    return (0, i.jsx)(O.Gt, {
+        value: j,
         children: (0, i.jsx)(u.bG, {
-            navigator: F,
+            navigator: H,
             children: (0, i.jsx)(
                 V,
                 U(G({}, e), {
                     density: t,
-                    channels: _,
-                    privateChannelIds: O,
-                    listRef: D,
-                    theme: null != j ? j : r,
-                    version: T,
+                    channels: y,
+                    privateChannelIds: v,
+                    listRef: L,
+                    theme: null != S ? S : r,
+                    version: R,
                     createDMCTAButtonVariant: c,
                 }),
             ),

@@ -620,7 +620,6 @@ var o = n(106351),
             (e.PENDING_IGNORED = "PENDING_IGNORED"),
             (e.SPAM = "SPAM"),
             (e.SUGGESTIONS = "SUGGESTIONS"),
-            (e.YOU = "YOU"),
             e
         );
     })({}),
@@ -1953,6 +1952,7 @@ let em = "@me",
             "/billing/partner-promotions/".concat(e, "/").concat(t),
         NOTIFICATIONS: "/notifications",
         FRIENDS: "/channels/@me",
+        ME_ACTIVITY: "/channels/@me/activity",
         ME: "/channels/@me",
         MESSAGE_REQUESTS: "/message-requests",
         CHANNEL: (e, t, n) => {
@@ -4432,6 +4432,7 @@ var nE = (function (e) {
             (e.ACTIVITY_FEED_VOICE_CHANNEL_VISITED = "af_voice_channel_visited"),
             (e.ACTIVITY_FEED_GUILD_VISITED = "af_guild_visited"),
             (e.ACTIVITY_FEED_DM_VISITED = "af_dm_visited"),
+            (e.ACTIVITY_FEED_VIEWED = "af_viewed"),
             (e.AGE_GATE_SUBMITTED = "age_gate_submitted"),
             (e.AGE_GATE_ACTION = "age_gate_action"),
             (e.REGISTER_SUBMIT_ERRORED = "register_submit_errored"),
@@ -5267,6 +5268,7 @@ var nE = (function (e) {
             (e.MEDIA_PICKER_ASSETS_DEBUG = "media_picker_assets_debug"),
             (e.DEBUG_MISSING_STRING = "debug_missing_string"),
             (e.ORB_BALANCE_ACTION_SHEET_ACTION = "orb_balance_action_sheet_action"),
+            (e.SESSION_START_PAGE_VIEWED = "session_start_page_viewed"),
             e
         );
     })({}),

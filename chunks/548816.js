@@ -49,8 +49,17 @@ function c(e, t) {
     );
 }
 function u(e) {
-    var { padded: t = !0, inset: n = !1, active: i = !1, className: u, children: d, onClick: p, ref: f } = e,
-        h = (function (e, t) {
+    var {
+            padded: t = !0,
+            inset: n = !1,
+            active: i = !1,
+            className: u,
+            children: d,
+            onClick: p,
+            ref: f,
+            noBackground: h = !1,
+        } = e,
+        g = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -70,7 +79,7 @@ function u(e) {
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(e, ["padded", "inset", "active", "className", "children", "onClick", "ref"]);
+        })(e, ["padded", "inset", "active", "className", "children", "onClick", "ref", "noBackground"]);
     return null != p
         ? (0, r.jsx)(
               a.P3F,
@@ -86,9 +95,10 @@ function u(e) {
                               [o.padded]: t,
                               [o.active]: i,
                               [o.interactive]: null != p,
+                              [o.noBackground]: h,
                           }),
                       },
-                      h,
+                      g,
                   ),
                   { children: d },
               ),
@@ -104,9 +114,10 @@ function u(e) {
                               [o.inset]: n,
                               [o.padded]: t,
                               [o.active]: i,
+                              [o.noBackground]: h,
                           }),
                       },
-                      h,
+                      g,
                   ),
                   { children: d },
               ),
