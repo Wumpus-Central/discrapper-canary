@@ -22,28 +22,28 @@ function u(e) {
         children: [
             (0, i.jsx)(l.rsf, {
                 checked: n.suppressEveryone,
-                label: c.intl.format(c.t.OWiWAp, {}),
+                label: c.intl.format(c.t.OWiWAg, {}),
                 onChange: (e) => u(t, { suppress_everyone: e }, o.UE.suppressEveryone(e)),
             }),
             (0, i.jsx)(l.rsf, {
                 checked: n.suppressRoles,
-                label: c.intl.string(c.t["O/QdoD"]),
+                label: c.intl.string(c.t["O/QdoK"]),
                 onChange: (e) => u(t, { suppress_roles: e }, o.UE.suppressRoles(e)),
             }),
             (0, i.jsx)(l.rsf, {
-                label: c.intl.string(c.t.gPuteJ),
-                description: c.intl.string(c.t["Vw/Xn8"]),
+                label: c.intl.string(c.t.gPuteH),
+                description: c.intl.string(c.t["Vw/Xn5"]),
                 checked: n.highligths === d.gLR.ENABLED,
                 onChange: (e) => u(t, { notify_highlights: e ? d.gLR.ENABLED : d.gLR.DISABLED }, o.UE.highlights(e)),
             }),
             (0, i.jsx)(l.rsf, {
                 checked: n.muteScheduledEvents,
-                label: c.intl.string(c.t.ONG3Yz),
+                label: c.intl.string(c.t.ONG3Y2),
                 onChange: (e) => u(t, { mute_scheduled_events: e }, o.UE.mutedEvents(e)),
             }),
             (0, i.jsx)(l.rsf, {
                 checked: n.mobilePush,
-                label: c.intl.string(c.t.h1DL66),
+                label: c.intl.string(c.t["h1DL6+"]),
                 onChange: (e) => u(t, { mobile_push: e }, o.UE.mobilePush(e)),
             }),
         ],

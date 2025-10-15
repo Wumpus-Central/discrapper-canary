@@ -12,7 +12,7 @@ var r = n(951288),
     _ = n(726985),
     p = n(981631),
     h = n(388032),
-    m = n(660886);
+    m = n(345909);
 function g() {
     let e = (0, s.LN)(),
         t = (0, a.e7)([l.Z], () => l.Z.hasConsented(p.pjP.USAGE_STATISTICS)),
@@ -20,10 +20,10 @@ function g() {
             e
                 ? (0, o.g)([p.pjP.USAGE_STATISTICS], []).catch(f.S)
                 : (0, f.V)({
-                      header: h.intl.string(h.t.OdPCbN),
-                      body: h.intl.string(h.t.MGWabA),
-                      confirmText: h.intl.string(h.t["D3+rU4"]),
-                      cancelText: h.intl.string(h.t.kYpG0u),
+                      header: h.intl.string(h.t.OdPCbG),
+                      body: h.intl.string(h.t.MGWabG),
+                      confirmText: h.intl.string(h.t["D3+rU1"]),
+                      cancelText: h.intl.string(h.t.kYpG0t),
                       onConfirm: () => (0, o.g)([], [p.pjP.USAGE_STATISTICS]).catch(f.S),
                   });
         }, []);
@@ -31,11 +31,11 @@ function g() {
         setting: _.s6.PRIVACY_DATA_IMPROVE_DISCORD_V2,
         children: (0, r.jsx)(d.ZP, {
             title: h.intl.string(h.t.XuADY2),
-            note: h.intl.format(h.t["igTSG/"], { helpdeskArticle: c.Z.getArticleURL(p.BhN.DATA_PRIVACY_CONTROLS) }),
+            note: h.intl.format(h.t.igTSGx, { helpdeskArticle: c.Z.getArticleURL(p.BhN.DATA_PRIVACY_CONTROLS) }),
             value: t,
             onChange: n,
             disabled: e,
-            tooltipText: e ? h.intl.string(m.default["6Af/cw"]) : void 0,
+            tooltipText: e ? h.intl.string(m.default["6Af/c3"]) : void 0,
         }),
     });
 }

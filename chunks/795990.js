@@ -24,18 +24,18 @@ function p() {
                     (0, r.jsx)(l.Heading, {
                         variant: "heading-md/medium",
                         color: "header-primary",
-                        children: u.intl.string(u.t["oqalC+"]),
+                        children: u.intl.string(u.t.oqalCw),
                     }),
                     (0, r.jsx)(l.Text, {
                         variant: "text-sm/normal",
                         color: "header-secondary",
-                        children: u.intl.string(u.t.O9SQ1c),
+                        children: u.intl.string(u.t.O9SQ1d),
                     }),
                 ],
             }),
             (0, r.jsx)("ul", {
                 className: d.widgetGrid,
-                "aria-label": u.intl.string(u.t["+EIBSA"]),
+                "aria-label": u.intl.string(u.t["+EIBSE"]),
                 children: n.map((t) =>
                     (0, r.jsx)(
                         "li",

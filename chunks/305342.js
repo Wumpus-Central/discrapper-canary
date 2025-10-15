@@ -41,7 +41,7 @@ let L = 24,
             l = o ? t : t.slice(0, x),
             u = t.length > x,
             f = t.length - x,
-            _ = w.intl.formatToPlainString(w.t.XSdy72, { numTruncated: f }),
+            _ = w.intl.formatToPlainString(w.t["XSdy7+"], { numTruncated: f }),
             p = () => s((e) => !e),
             m = (0, d.Dt)();
         return 0 === t.length
@@ -107,7 +107,7 @@ let L = 24,
                           variant: "text-xs/bold",
                           color: "header-secondary",
                           className: D.sectionHeader,
-                          children: w.intl.format(w.t.NAnXEo, { count: o.length }),
+                          children: w.intl.format(w.t.NAnXEh, { count: o.length }),
                       }),
                       (0, r.jsx)(c.LZC, { size: 12 }),
                       (0, r.jsx)("div", {
@@ -153,7 +153,7 @@ let L = 24,
                                   variant: "text-xs/bold",
                                   color: "header-secondary",
                                   className: D.sectionHeader,
-                                  children: w.intl.string(w.t.FJZmYx),
+                                  children: w.intl.string(w.t.FJZmY2),
                               }),
                               children: [
                                   (0, r.jsx)(c.LZC, { size: 8 }),
@@ -165,12 +165,12 @@ let L = 24,
                               ],
                           }),
                       (0, r.jsx)(M, {
-                          header: w.intl.string(w.t.LtfhAj),
+                          header: w.intl.string(w.t.LtfhAg),
                           benefits: l,
                           guildId: n,
                       }),
                       (0, r.jsx)(M, {
-                          header: w.intl.string(w.t["8oxWpO"]),
+                          header: w.intl.string(w.t["8oxWpK"]),
                           benefits: u,
                           guildId: n,
                       }),
@@ -183,7 +183,7 @@ let L = 24,
     },
     U = (e) => {
         let { onToggle: t, isViewAll: n, showMoreText: i } = e,
-            a = n ? w.intl.string(w.t["r/xxPU"]) : i;
+            a = n ? w.intl.string(w.t["r/xxPT"]) : i;
         return (0, r.jsx)(c.Avr, {
             text: a,
             onClick: t,
@@ -224,7 +224,7 @@ let L = 24,
             en = (0, s.e7)([f.Z], () => f.Z.isViewingServerShop(n)),
             er = (null == p ? void 0 : p.published) === !0,
             ei = (null == p ? void 0 : p.soft_deleted) === !0,
-            ea = w.intl.string(w.t.KzmEA9);
+            ea = w.intl.string(w.t.KzmEAw);
         return (er || en) && !ei
             ? (0, r.jsxs)("article", {
                   className: D.container,
@@ -234,14 +234,14 @@ let L = 24,
                           (0, r.jsxs)("div", {
                               className: o()(D.tierTrialIndicator, D.tierTopIndicator),
                               children: [
-                                  w.intl.format(w.t.L2ouip, {
+                                  w.intl.format(w.t.L2ouio, {
                                       trialPeriodDuration: (0, h.iG)({
                                           interval: W.interval,
                                           interval_count: W.interval_count,
                                       }),
                                   }),
                                   (0, r.jsx)(l.u, {
-                                      text: w.intl.formatToPlainString(w.t.FYyR4o, {
+                                      text: w.intl.formatToPlainString(w.t.FYyR4u, {
                                           activeTrialUserLimit: null != K ? K : 0,
                                       }),
                                       children: (0, r.jsx)(c.d3s, {
@@ -280,8 +280,8 @@ let L = 24,
                                                             fullWidth: !0,
                                                             variant: j ? "secondary" : "primary",
                                                             text: j
-                                                                ? w.intl.string(w.t.iKHmu0)
-                                                                : w.intl.string(w.t.XvAuMo),
+                                                                ? w.intl.string(w.t.iKHmu7)
+                                                                : w.intl.string(w.t.XvAuMj),
                                                         })
                                                       : (0, r.jsxs)(r.Fragment, {
                                                             children: [
@@ -294,7 +294,7 @@ let L = 24,
                                                                       }),
                                                                 (0, r.jsx)(c.Button, {
                                                                     fullWidth: !0,
-                                                                    text: w.intl.string(w.t.fM5ZsX),
+                                                                    text: w.intl.string(w.t.fM5Zsb),
                                                                     disabled: !O || S,
                                                                     loading: I,
                                                                     onClick: y,

@@ -54,7 +54,7 @@ function m(e) {
                                     color: "text-brand",
                                     tag: "span",
                                     className: h.username,
-                                    children: p.intl.string(p.t.hG1StD),
+                                    children: p.intl.string(p.t.hG1StL),
                                 }),
                                 (0, r.jsx)(s.Z, {
                                     type: _.Hb.SYSTEM_DM,
@@ -69,12 +69,12 @@ function m(e) {
                         className: a()(h.__invalid_messageContent, { [h.compact]: n }),
                         children:
                             t.type === f.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED
-                                ? p.intl.format(p.t["+m8eD7"], {
+                                ? p.intl.format(p.t["+m8eDw"], {
                                       username: m.nick,
                                       usernameHook: g,
                                       time: O,
                                   })
-                                : p.intl.format(p.t["BHeke+"], {
+                                : p.intl.format(p.t.BHeke3, {
                                       username: m.nick,
                                       usernameHook: g,
                                   }),

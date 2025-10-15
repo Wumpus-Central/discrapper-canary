@@ -59,25 +59,25 @@ var r = n(2818),
 function Z(e) {
     switch (e) {
         case "NAVIGATION":
-            return G.intl.string(G.t["yGE+jg"]);
+            return G.intl.string(G.t["yGE+jo"]);
         case "VOICE_AND_VIDEO":
             return G.intl.string(G.t.bI8F5u);
         case "CHAT":
-            return G.intl.string(G.t.hDhbb3);
+            return G.intl.string(G.t.hDhbb2);
         case "MISCELLANEOUS":
-            return G.intl.string(G.t.cBdwqs);
+            return G.intl.string(G.t.cBdwqq);
         case "MESSAGE":
-            return G.intl.string(G.t["5fpmX9"]);
+            return G.intl.string(G.t["5fpmX1"]);
         case "DND":
-            return G.intl.string(G.t["69j6+4"]);
+            return G.intl.string(G.t["69j6+/"]);
     }
 }
 function F(e) {
     switch (e) {
         case "MESSAGE":
-            return G.intl.string(G.t.iepGDn);
+            return G.intl.string(G.t.iepGDg);
         case "DND":
-            return G.intl.string(G.t.LBsB0a);
+            return G.intl.string(G.t.LBsB0d);
         default:
             return;
     }
@@ -143,207 +143,207 @@ let H = {
 function Y() {
     let e = [
             {
-                description: G.intl.string(G.t.bx4Uyz),
+                description: G.intl.string(G.t.bx4Uy8),
                 binds: V(U.EkH.SERVER_PREV, U.EkH.SERVER_NEXT),
                 group: "NAVIGATION",
             },
             {
-                description: G.intl.string(G.t["+Wem6h"]),
+                description: G.intl.string(G.t["+Wem6u"]),
                 binds: V(U.EkH.CHANNEL_PREV, U.EkH.CHANNEL_NEXT),
                 group: "NAVIGATION",
             },
             {
-                description: G.intl.string(G.t["+2fcdz"]),
+                description: G.intl.string(G.t["+2fcd3"]),
                 binds: V(U.EkH.NAVIGATE_BACK, U.EkH.NAVIGATE_FORWARD),
                 group: "NAVIGATION",
             },
             {
-                description: G.intl.string(G.t.eVmj1H),
+                description: G.intl.string(G.t.eVmj1N),
                 binds: V(U.EkH.UNREAD_PREV, U.EkH.UNREAD_NEXT),
                 group: "NAVIGATION",
             },
             {
-                description: G.intl.string(G.t.EcqS7Y),
+                description: G.intl.string(G.t.EcqS7e),
                 binds: V(U.EkH.MENTION_CHANNEL_PREV, U.EkH.MENTION_CHANNEL_NEXT),
                 group: "NAVIGATION",
             },
             {
-                description: G.intl.string(G.t["4I3pwW"]),
+                description: G.intl.string(G.t["4I3pwc"]),
                 binds: V(U.EkH.JUMP_TO_CURRENT_CALL),
                 group: "NAVIGATION",
             },
             {
-                description: G.intl.string(G.t.Bqss72),
+                description: G.intl.string(G.t["Bqss7+"]),
                 binds: V(U.EkH.TOGGLE_PREVIOUS_GUILD),
                 group: "NAVIGATION",
             },
             {
-                description: G.intl.string(G.t.yYsRlD),
+                description: G.intl.string(G.t.yYsRlJ),
                 binds: V(U.EkH.QUICKSWITCHER_SHOW),
                 group: "NAVIGATION",
             },
             {
-                description: G.intl.string(G.t.O7ouXO),
+                description: G.intl.string(G.t.O7ouXF),
                 binds: V(U.EkH.CREATE_GUILD),
                 group: "NAVIGATION",
                 groupEnd: !0,
             },
             {
-                description: G.intl.string(G.t.Lns0Fc),
+                description: G.intl.string(G.t.Lns0FR),
                 binds: ["mod+d"],
                 group: "DND",
             },
             {
-                description: G.intl.string(G.t.dmMqay),
+                description: G.intl.string(G.t.dmMqa2),
                 binds: ["up", "down"],
                 group: "DND",
             },
             {
-                description: G.intl.string(G.t["cs/HVH"]),
+                description: G.intl.string(G.t["cs/HVF"]),
                 binds: ["spacebar", "enter"],
                 group: "DND",
             },
             {
-                description: G.intl.string(G.t["1ioMJQ"]),
+                description: G.intl.string(G.t["1ioMJS"]),
                 binds: ["esc"],
                 group: "DND",
                 groupEnd: !0,
             },
             {
-                description: G.intl.string(G.t.UaXAPx),
+                description: G.intl.string(G.t.UaXAPz),
                 binds: V(U.EkH.MARK_SERVER_READ),
                 group: "CHAT",
             },
             {
-                description: G.intl.string(G.t["5X9vFj"]),
+                description: G.intl.string(G.t["5X9vFh"]),
                 binds: V(U.EkH.MARK_CHANNEL_READ),
                 group: "CHAT",
             },
             {
-                description: G.intl.string(G.t.wxQFsl),
+                description: G.intl.string(G.t.wxQFsr),
                 binds: V(U.EkH.CREATE_DM_GROUP),
                 group: "CHAT",
             },
             {
-                description: G.intl.string(G.t["C+XV7f"]),
+                description: G.intl.string(G.t["C+XV7e"]),
                 binds: V(U.EkH.TOGGLE_CHANNEL_PINS),
                 group: "CHAT",
             },
             {
-                description: G.intl.string(G.t["Q+YV/T"]),
+                description: G.intl.string(G.t["Q+YV/f"]),
                 binds: V(U.EkH.TOGGLE_INBOX),
                 group: "CHAT",
             },
             {
-                description: G.intl.string(G.t["YEjV+W"]),
+                description: G.intl.string(G.t["YEjV+f"]),
                 binds: V(U.EkH.MARK_TOP_INBOX_CHANNEL_READ),
                 group: "CHAT",
             },
             {
-                description: G.intl.string(G.t.AcBI9S),
+                description: G.intl.string(G.t.AcBI9f),
                 binds: V(U.EkH.TOGGLE_USERS),
                 group: "CHAT",
             },
             {
-                description: G.intl.string(G.t.JoxNnl),
+                description: G.intl.string(G.t.JoxNnp),
                 binds: V(U.EkH.SEARCH_EMOJIS),
                 group: "CHAT",
             },
             {
-                description: G.intl.string(G.t["3PHxo8"]),
+                description: G.intl.string(G.t["3PHxo6"]),
                 binds: V(U.EkH.SEARCH_GIFS),
                 group: "CHAT",
             },
             {
-                description: G.intl.string(G.t.YFl7eb),
+                description: G.intl.string(G.t.YFl7eX),
                 binds: V(U.EkH.SEARCH_STICKERS),
                 group: "CHAT",
             },
             {
-                description: G.intl.string(G.t.L3RYYJ),
+                description: G.intl.string(G.t.L3RYYG),
                 binds: V(U.EkH.SCROLL_UP, U.EkH.SCROLL_DOWN),
                 group: "CHAT",
             },
             {
-                description: G.intl.string(G.t["3HAurM"]),
+                description: G.intl.string(G.t["3HAurK"]),
                 binds: V(U.EkH.JUMP_TO_FIRST_UNREAD),
                 group: "CHAT",
             },
             {
-                description: G.intl.string(G.t.rrYBEu),
+                description: G.intl.string(G.t.rrYBEh),
                 binds: V(U.EkH.TEXTAREA_FOCUS),
                 group: "CHAT",
             },
             {
-                description: G.intl.string(G.t.sUJlPL),
+                description: G.intl.string(G.t.sUJlPD),
                 binds: V(U.EkH.UPLOAD_FILE),
                 group: "CHAT",
                 groupEnd: !0,
             },
             {
-                description: G.intl.string(G.t.tL6eVW),
+                description: G.intl.string(G.t.tL6eVV),
                 binds: V(U.EkH.TOGGLE_MUTE),
                 group: "VOICE_AND_VIDEO",
             },
             {
-                description: G.intl.string(G.t["QXe/7T"]),
+                description: G.intl.string(G.t["QXe/7e"]),
                 binds: V(U.EkH.TOGGLE_DEAFEN),
                 group: "VOICE_AND_VIDEO",
             },
             {
-                description: G.intl.string(G.t.d6UIii),
+                description: G.intl.string(G.t.d6UIio),
                 binds: V(U.EkH.CALL_ACCEPT),
                 group: "VOICE_AND_VIDEO",
             },
             {
-                description: G.intl.string(G.t.IcEW06),
+                description: G.intl.string(G.t.IcEW09),
                 binds: V(U.EkH.MARK_CHANNEL_READ),
                 group: "VOICE_AND_VIDEO",
             },
             {
-                description: G.intl.string(G.t.WN2dsS),
+                description: G.intl.string(G.t.WN2dsb),
                 binds: V(U.EkH.CALL_START),
                 group: "VOICE_AND_VIDEO",
                 groupEnd: !0,
             },
             {
-                description: G.intl.string(G.t.rUK0kk),
+                description: G.intl.string(G.t.rUK0kp),
                 binds: V(U.EkH.SEARCH_SOUNDBOARD),
                 group: "VOICE_AND_VIDEO",
             },
             {
-                description: G.intl.string(G.t.vkGkSn),
+                description: G.intl.string(G.t.vkGkSk),
                 binds: V(U.EkH.TOGGLE_HELP),
                 group: "MISCELLANEOUS",
             },
             {
-                description: G.intl.string(G.t.FJvZ87),
+                description: G.intl.string(G.t["FJvZ8/"]),
                 binds: V(U.EkH.FOCUS_SEARCH),
                 group: "MISCELLANEOUS",
             },
             {
-                description: G.intl.string(G.t.HnNtEI),
+                description: G.intl.string(G.t.HnNtEB),
                 binds: ["h+h+right+n+k"],
                 group: "MISCELLANEOUS",
                 groupEnd: !0,
             },
             {
-                description: G.intl.string(G.t.fsBWmS),
+                description: G.intl.string(G.t.fsBWmZ),
                 binds: ["e"],
                 group: "MESSAGE",
             },
             {
-                description: G.intl.string(G.t.xwMqD7),
+                description: G.intl.string(G.t.xwMqDw),
                 binds: ["backspace"],
                 group: "MESSAGE",
             },
             {
-                description: G.intl.string(G.t.CvQ18w),
+                description: G.intl.string(G.t["CvQ18/"]),
                 binds: ["p"],
                 group: "MESSAGE",
             },
             {
-                description: G.intl.string(G.t.lfIHs4),
+                description: G.intl.string(G.t.lfIHs7),
                 binds: ["plus"],
                 group: "MESSAGE",
             },
@@ -353,28 +353,28 @@ function Y() {
                 group: "MESSAGE",
             },
             {
-                description: G.intl.string(G.t.zSyDdA),
+                description: G.intl.string(G.t.zSyDdH),
                 binds: ["f"],
                 group: "MESSAGE",
             },
             {
-                description: G.intl.string(G.t.JrGD7E),
+                description: G.intl.string(G.t.JrGD7O),
                 binds: ["mod+c"],
                 group: "MESSAGE",
             },
             {
-                description: G.intl.string(G.t.RpE9k7),
+                description: G.intl.string(G.t.RpE9k5),
                 binds: ["alt+enter"],
                 group: "MESSAGE",
             },
             {
-                description: G.intl.string(G.t.rrYBEu),
+                description: G.intl.string(G.t.rrYBEh),
                 binds: ["escape"],
                 group: "MESSAGE",
                 groupEnd: !0,
             },
             {
-                description: G.intl.string(G.t.z9c6mt),
+                description: G.intl.string(G.t.z9c6mp),
                 binds: V(U.EkH.VIBE_WITH_WUMPUS),
                 group: "MISCELLANEOUS",
             },
@@ -384,7 +384,7 @@ function Y() {
         t &&
             !n &&
             e.push({
-                description: G.intl.string(G.t.IWNSoH),
+                description: G.intl.string(G.t.IWNSoK),
                 binds: V(U.EkH.TOGGLE_FOR_LATER),
                 group: "CHAT",
             }),

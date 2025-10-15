@@ -81,12 +81,12 @@ function O(e) {
         }),
         C = (0, l.Z)({
             id: n.id,
-            label: p.intl.string(p.t["/AXYnE"]),
+            label: p.intl.string(p.t["/AXYnJ"]),
         }),
         N = "application_id" in O.extra ? O.extra.application_id : null,
         R = (0, l.Z)({
             id: N,
-            label: p.intl.string(p.t["FfCL+6"]),
+            label: p.intl.string(p.t["FfCL+/"]),
         }),
         P = (0, f.dX)(O),
         w = (0, u.Z)({
@@ -108,7 +108,7 @@ function O(e) {
                 onClose: () => {
                     (0, s.Zy)(), t();
                 },
-                "aria-label": p.intl.string(p.t.liqwPJ),
+                "aria-label": p.intl.string(p.t.liqwPD),
                 onSelect: v,
                 children: (0, r.jsxs)(r.Fragment, {
                     children: [
@@ -118,7 +118,7 @@ function O(e) {
                                 null != w &&
                                     (0, r.jsx)(o.sNh, {
                                         id: "game-profile",
-                                        label: p.intl.string(p.t.f7aVGn),
+                                        label: p.intl.string(p.t.f7aVGh),
                                         action: (e) => {
                                             w(e), null == S || S();
                                         },
@@ -135,7 +135,7 @@ function O(e) {
         children: (e) =>
             (0, r.jsx)(a.u, {
                 asContainer: !0,
-                text: p.intl.string(p.t["UKOtz+"]),
+                text: p.intl.string(p.t.UKOtz8),
                 children: (0, r.jsx)(
                     o.P3F,
                     b(

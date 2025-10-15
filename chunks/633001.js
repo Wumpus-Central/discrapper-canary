@@ -155,7 +155,7 @@ function Q(e) {
                 (0, k.JG)(t, () => i(!0));
             },
             className: W.copyId,
-            children: ["Application Id: ", t, " ", n ? H.intl.string(H.t.t5VZ88) : null],
+            children: ["Application Id: ", t, " ", n ? H.intl.string(H.t["t5VZ8/"]) : null],
         })
     );
 }

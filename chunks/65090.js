@@ -119,8 +119,8 @@ let E = {
             );
         return (
             m.mentions.user === u.h3.DENY
-                ? ((t = f.t.MLiD1e), (n = f.intl.string(f.t["LPJmL/"])))
-                : ((t = f.t.rPNimn), (n = f.intl.string(f.t["9Oq93m"]))),
+                ? ((t = f.t.MLiD1d), (n = f.intl.string(f.t.LPJmLy)))
+                : ((t = f.t.rPNimp), (n = f.intl.string(f.t["9Oq93t"]))),
             (0, r.jsxs)(
                 i.Fragment,
                 {

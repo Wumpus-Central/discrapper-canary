@@ -8,15 +8,15 @@ var l = n(951288),
     c = n(626135),
     d = n(660662),
     u = n(981631),
-    p = n(592186),
+    p = n(693450),
     m = n(388032),
     f = n(745993),
     g = n(959389);
 function h(e) {
     var t;
-    let { selectedColors: n, setSelectedColors: h, defaultColor: x, selectedEffectId: b, className: _ } = e,
-        S = b === r.m.GRADIENT,
-        j = (0, o.useCallback)(
+    let { selectedColors: n, setSelectedColors: h, defaultColor: x, selectedEffectId: _, className: b } = e,
+        S = _ === r.m.GRADIENT,
+        C = (0, o.useCallback)(
             (e) => {
                 h([e]),
                     c.default.track(u.rMx.DISPLAY_NAME_STYLES_COLOR_SELECTED, {
@@ -26,7 +26,7 @@ function h(e) {
             },
             [h, x],
         ),
-        C = (0, o.useCallback)(
+        j = (0, o.useCallback)(
             (e) => {
                 h(e),
                     c.default.track(u.rMx.DISPLAY_NAME_STYLES_COLOR_SELECTED, {
@@ -37,13 +37,13 @@ function h(e) {
             [h],
         );
     return (0, l.jsxs)("div", {
-        className: _,
+        className: b,
         children: [
             (0, l.jsxs)(i.X6q, {
                 variant: "heading-md/semibold",
                 className: g.selectorHeading,
                 children: [
-                    m.intl.string(p.default.JOpi7z),
+                    m.intl.string(p.default["JOpi7+"]),
                     (0, l.jsx)(a.SrA, {
                         size: "xs",
                         color: a.TVs.colors.TEXT_DEFAULT,
@@ -57,8 +57,8 @@ function h(e) {
                 colors: S ? d.vK : d.gD,
                 value: n[0],
                 secondaryValue: null != (t = n[1]) ? t : void 0,
-                onChange: j,
-                onChangeGradientColors: C,
+                onChange: C,
+                onChangeGradientColors: j,
                 isGradient: S,
                 gradientButtonClassName: f.gradientPicker,
                 gradientDegrees: 90,

@@ -25,8 +25,8 @@ let c = (e) => {
             };
         return (0, r.jsx)(a.Z, {
             className: t,
-            title: o.intl.string(o.t["DU0dy/"]),
-            description: o.intl.string(o.t.bpycfA),
+            title: o.intl.string(o.t.DU0dy8),
+            description: o.intl.string(o.t.bpycfH),
             icons: s.pA,
             onDrop: (e) => {
                 let t = null == e ? void 0 : e[0];
@@ -71,8 +71,8 @@ let c = (e) => {
         return (0, r.jsx)(a.Z, {
             className: t,
             style: n,
-            title: o.intl.string(o.t["DU0dy/"]),
-            description: o.intl.string(o.t.bpycfA),
+            title: o.intl.string(o.t.DU0dy8),
+            description: o.intl.string(o.t.bpycfH),
             icons: s.pA,
             onDrop: i,
         });

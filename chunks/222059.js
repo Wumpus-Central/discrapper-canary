@@ -55,8 +55,8 @@ function D(e) {
             x(null), Z(0), clearTimeout(j);
         };
     if (null == d) return null;
-    let k = T.intl.string(T.t.YUU0RF);
-    y && (k = a.K.get(N.wli) ? T.intl.string(T.t["nkq1l+"]) : T.intl.string(T.t.Be8Q5E));
+    let k = T.intl.string(T.t.YUU0RE);
+    y && (k = a.K.get(N.wli) ? T.intl.string(T.t.nkq1l5) : T.intl.string(T.t.Be8Q5O));
     let G = null;
     !o &&
         b &&
@@ -117,7 +117,7 @@ function D(e) {
                             }
                         },
                         selected: U,
-                        ariaLabel: T.intl.string(T.t.YUU0RF),
+                        ariaLabel: T.intl.string(T.t.YUU0RE),
                         "aria-owns": "guild-list-unread-dms",
                         "aria-selected": o,
                     },

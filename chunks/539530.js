@@ -40,19 +40,19 @@ let p = { skuId: "None" },
                         section: "purchase",
                         items: [p, _, ...i.purchase],
                         height: 12,
-                        header: d.intl.string(d.t.WfGV52),
+                        header: d.intl.string(d.t["WfGV5+"]),
                     },
                     {
                         section: "premium_purchase",
                         items: i.premium_purchase,
                         height: 12,
-                        header: d.intl.string(d.t.TiLCgw),
+                        header: d.intl.string(d.t.TiLCg4),
                     },
                     {
                         section: "preview",
                         items: i.preview,
                         height: 12,
-                        header: d.intl.string(d.t["1vbbee"]),
+                        header: d.intl.string(d.t["1vbbeX"]),
                     },
                 ].filter((e) => {
                     let { items: t } = e;

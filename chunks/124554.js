@@ -1,3 +1,0 @@
-a.exports = JSON.parse(
-    '{"o/An3l":[[1,"username"]," đã yêu cầu bạn stream ",[1,"applicationName"]],"DKHhec":["Yêu cầu Stream"],"8qq+H7":["Yêu cầu Stream ",[1,"applicationName"]],"s7bMT0":[[1,"username"]," đang yêu cầu bạn stream ",[1,"applicationName"]],"7pndSl":["Bạn đã yêu cầu người khác stream ",[1,"applicationName"]],"P0wwmM":["Đang stream rồi"],"u4QmWl":["Yêu cầu đã hết hạn"],"qRXats":["Không ở trong kênh thoại"],"43zohO":["Không đang chạy trò chơi"],"fac+eE":["Không có quyền hạn"],"8HU1M2":["Đã gửi yêu cầu"],"5+172e":["Stream"],"nAyuPp":["Yêu Cầu Stream"],"d/qbC0":[[1,"username"]," đã yêu cầu bạn stream"],"8B3U5O":["Bạn đã yêu cầu người khác stream"],"UGbmBp":["Stream"],"jTbTAF":[[8,"$b",[[1,"username"]]]," muốn xem bạn chơi ",[8,"$b",[[1,"game"]]],"."]}',
-);

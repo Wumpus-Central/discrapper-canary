@@ -23,10 +23,10 @@ function c(e, t, n) {
     return 0 === c && null == u && (o.minimumFractionDigits = 0), (0, r.T4)(e, t, s, o);
 }
 function u(e, t, n) {
-    if (t === o.rV.YEAR) return s.intl.formatToPlainString(s.t["rS8FA+"], { price: e });
-    if (t === o.rV.MONTH && 1 === n) return s.intl.formatToPlainString(s.t.AbOLNu, { price: e });
+    if (t === o.rV.YEAR) return s.intl.formatToPlainString(s.t.rS8FAw, { price: e });
+    if (t === o.rV.MONTH && 1 === n) return s.intl.formatToPlainString(s.t.AbOLNj, { price: e });
     if (t === o.rV.MONTH && n > 1)
-        return s.intl.formatToPlainString(s.t["Qc+9ww"], {
+        return s.intl.formatToPlainString(s.t["Qc+9w8"], {
             price: e,
             intervalCount: n,
         });

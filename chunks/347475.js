@@ -6,7 +6,7 @@ var i = n(120356),
     o = n(755721),
     s = n(481060),
     l = n(906732),
-    c = n(47280),
+    c = n(283066),
     u = n(736519),
     d = n(117791),
     f = n(388032),
@@ -16,7 +16,7 @@ var i = n(120356),
     m = n(373425);
 let g = (e) => {
     let { className: t, location: n, analyticsLocation: i } = e,
-        g = (0, c.ZP)({ location: "GiftNitro" }),
+        g = (0, c.Z)({ location: "GiftNitro" }),
         { analyticsLocations: E } = (0, l.ZP)(n);
     return g
         ? (0, r.jsx)(l.Gt, {

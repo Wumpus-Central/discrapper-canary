@@ -1,4 +1,4 @@
-n.d(t, { Z: () => q }), n(388685);
+n.d(t, { Z: () => K }), n(388685);
 var i = n(951288),
     r = n(647438),
     l = n(512722),
@@ -68,7 +68,7 @@ function G(e) {
     }
     return e;
 }
-function W(e, t) {
+function z(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -86,7 +86,7 @@ function W(e, t) {
         e
     );
 }
-class z extends r.PureComponent {
+class W extends r.PureComponent {
     componentDidMount() {
         let { isFollowable: e, channelFollowingUsersSeen: t, channel: n } = this.props;
         e && null == t && d.Z.fetchChannelFollowerStats(n.id);
@@ -128,59 +128,59 @@ class z extends r.PureComponent {
                 useReducedMotion: b,
             };
         if (e && !h) {
-            if (((E.message = H.intl.string(H.t.Hl0Mqh)), null != f && f >= 1000)) {
+            if (((E.message = H.intl.string(H.t.Hl0Mqq)), null != f && f >= 1000)) {
                 let e = 1000 * Math.floor(f / 1000);
-                E.subtitle = H.intl.formatToPlainString(H.t.C5bgrC, { count: e.toLocaleString() });
+                E.subtitle = H.intl.formatToPlainString(H.t.C5bgrK, { count: e.toLocaleString() });
             }
-            (E.buttonText = H.intl.string(H.t["3aOv+h"])),
+            (E.buttonText = H.intl.string(H.t["3aOv+v"])),
                 (E.onButtonClick = this.handleFollowAnnouncement),
                 t &&
                     ((E.onSecondaryButtonClick = this.handleJoinServer),
-                    (E.secondaryButtonText = H.intl.string(H.t.RLch70)));
+                    (E.secondaryButtonText = H.intl.string(H.t["RLch7+"])));
         } else if (n)
-            (E.message = H.intl.string(H.t["Eg3/c9"])),
-                (E.buttonText = H.intl.string(H.t.fiNVin)),
+            (E.message = H.intl.string(H.t["Eg3/c3"])),
+                (E.buttonText = H.intl.string(H.t.fiNVio)),
                 (E.onButtonClick = g ? this.handleShowMemberVerification : this.handleClaimAccount);
         else if (g)
             switch (null == _ ? void 0 : _.applicationStatus) {
                 case C.wB.SUBMITTED:
-                    (E.message = H.intl.string(H.t["5iLvSx"])),
-                        (E.subtitle = H.intl.string(H.t.FdsK4h)),
-                        (E.buttonText = H.intl.string(H.t.mqtdmQ)),
+                    (E.message = H.intl.string(H.t["5iLvS0"])),
+                        (E.subtitle = H.intl.string(H.t.FdsK4u)),
+                        (E.buttonText = H.intl.string(H.t.mqtdmZ)),
                         (E.onButtonClick = this.handleCancelApplication);
                     break;
                 case C.wB.REJECTED:
-                    (E.message = H.intl.string(H.t.lk30cY)),
-                        (E.buttonText = H.intl.string(H.t["8RrsHr"])),
+                    (E.message = H.intl.string(H.t.lk30cX)),
+                        (E.buttonText = H.intl.string(H.t["8RrsHh"])),
                         (E.onButtonClick = this.handleViewApplicationRejection);
                     break;
                 default:
-                    (E.message = H.intl.string(H.t.rEBKvg)),
-                        (E.buttonText = H.intl.string(H.t["r8/DT+"])),
+                    (E.message = H.intl.string(H.t.rEBKvr)),
+                        (E.buttonText = H.intl.string(H.t["r8/DT0"])),
                         (E.buttonVariant = "primary"),
                         (E.onButtonClick = this.handleShowMemberVerification);
             }
         else if (v || null == x)
             r && !y
-                ? ((E.message = H.intl.string(H.t["2dThMM"])),
-                  (E.buttonText = H.intl.string(H.t["50gfOv"])),
+                ? ((E.message = H.intl.string(H.t["2dThMD"])),
+                  (E.buttonText = H.intl.string(H.t["50gfOj"])),
                   (E.onButtonClick = this.handleVerifyPhone))
                 : l
-                  ? ((E.message = H.intl.string(H.t.FkGPS5)),
-                    (E.buttonText = H.intl.string(H.t.lm1UKt)),
+                  ? ((E.message = H.intl.string(H.t.FkGPS0)),
+                    (E.buttonText = H.intl.string(H.t.lm1UKi)),
                     (E.onButtonClick = this.handleResendVerification))
                   : a
-                    ? ((E.message = H.intl.formatToPlainString(H.t.IH7RMF, { min: k.YeM.MEMBER_AGE })),
+                    ? ((E.message = H.intl.formatToPlainString(H.t.IH7RMD, { min: k.YeM.MEMBER_AGE })),
                       (E.countdown = o))
                     : s &&
-                      ((E.message = H.intl.formatToPlainString(H.t["2JA2GH"], { min: k.YeM.ACCOUNT_AGE })),
+                      ((E.message = H.intl.formatToPlainString(H.t["2JA2GB"], { min: k.YeM.ACCOUNT_AGE })),
                       (E.countdown = u));
         else {
             var S;
             (E.imageSrc = null != (S = x.getIconURL(U.Si.SMALL)) ? S : void 0),
-                (E.message = H.intl.format(H.t.EvDn1D, { name: x.name })),
+                (E.message = H.intl.format(H.t.EvDn1N, { name: x.name })),
                 null != x.connectionEntrypointUrl &&
-                    ((E.buttonText = H.intl.string(H.t.S0W8Z5)),
+                    ((E.buttonText = H.intl.string(H.t.S0W8Z2)),
                     (E.onButtonClick = () => {
                         window.open(x.connectionEntrypointUrl, "_blank");
                     }));
@@ -195,7 +195,7 @@ class z extends r.PureComponent {
             children: (e) =>
                 (0, i.jsx)(
                     D.Z,
-                    W(G({}, E), {
+                    z(G({}, E), {
                         children: (0, i.jsxs)("div", {
                             ref: this.textAreaContainerRef,
                             children: [
@@ -209,7 +209,7 @@ class z extends r.PureComponent {
                                           children: (e) =>
                                               (0, i.jsx)(
                                                   c.P3F,
-                                                  W(G({ innerRef: this.upsellTargetRef }, e), {
+                                                  z(G({ innerRef: this.upsellTargetRef }, e), {
                                                       className: V.clickableChannelTextArea,
                                                       onClick: this.handleTextAreaClick,
                                                       children: p,
@@ -249,12 +249,12 @@ class z extends r.PureComponent {
                     (0, c.h7j)((t) =>
                         (0, i.jsx)(
                             c.ConfirmModal,
-                            W(
+                            z(
                                 G(
                                     {
-                                        header: H.intl.string(H.t.aIz1oV),
-                                        confirmText: H.intl.string(H.t["cY+Oob"]),
-                                        cancelText: H.intl.string(H.t["ETE/oC"]),
+                                        header: H.intl.string(H.t.aIz1oa),
+                                        confirmText: H.intl.string(H.t["cY+Ooa"]),
+                                        cancelText: H.intl.string(H.t["ETE/oK"]),
                                         onConfirm: () => m.Z.removeGuildJoinRequest(e.id),
                                         confirmButtonColor: s.Tt.BRAND,
                                     },
@@ -302,13 +302,13 @@ class z extends r.PureComponent {
                     (0, c.h7j)((e) =>
                         (0, i.jsx)(
                             c.ConfirmModal,
-                            W(G({}, e), {
-                                header: H.intl.string(H.t.LykQYk),
-                                confirmText: H.intl.string(H.t.BddRzS),
+                            z(G({}, e), {
+                                header: H.intl.string(H.t.LykQYm),
+                                confirmText: H.intl.string(H.t.BddRzc),
                                 confirmButtonColor: s.Tt.BRAND,
                                 children: (0, i.jsx)(c.Text, {
                                     variant: "text-md/normal",
-                                    children: H.intl.format(H.t.azKEPy, { email: t }),
+                                    children: H.intl.format(H.t.azKEPz, { email: t }),
                                 }),
                             }),
                         ),
@@ -362,7 +362,7 @@ class z extends r.PureComponent {
                     renderModal: (t) =>
                         (0, i.jsx)(
                             v.Z,
-                            W(G({}, t), {
+                            z(G({}, t), {
                                 onAccept: r,
                                 guildName: e.name,
                             }),
@@ -372,7 +372,7 @@ class z extends r.PureComponent {
             });
     }
 }
-function q(e) {
+function K(e) {
     var t, n;
     let { channel: r, children: l } = e,
         a = r.getGuildId(),
@@ -392,7 +392,7 @@ function q(e) {
         j = (0, o.e7)([w.Z], () => w.Z.can(k.Plq.SEND_MESSAGES, r)),
         E = (0, o.e7)([_.Z], () => _.Z.getRequest(a)),
         { showLinkedLobbyApplicationLoadingIndicator: S, requiredLinkedLobbyApplication: P } = (0, L.Z)(r.linkedLobby),
-        D = W(G({}, c), {
+        D = z(G({}, c), {
             guild: s,
             isLurking: p,
             isFollowable: u,
@@ -411,8 +411,8 @@ function q(e) {
             isStaff: m,
         });
     return (0, i.jsx)(
-        z,
-        W(G({}, D), {
+        W,
+        z(G({}, D), {
             channel: r,
             children: l,
         }),

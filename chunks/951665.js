@@ -83,7 +83,7 @@ function g(e) {
                           children: [
                               (0, r.jsx)(l.Heading, {
                                   variant: "text-sm/medium",
-                                  children: o.intl.string(o.t["dnunm+"]),
+                                  children: o.intl.string(o.t.dnunm5),
                               }),
                               p
                                   ? (0, r.jsx)(l.u04, {

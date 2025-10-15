@@ -66,7 +66,7 @@ function O(e) {
         ref: (e) => {
             (h.current = e), d(e);
         },
-        "data-dnd-name": g.intl.formatToPlainString(g.t["A5aDw+"], { itemName: t }),
+        "data-dnd-name": g.intl.formatToPlainString(g.t.A5aDw8, { itemName: t }),
         className: m.target,
     });
 }
@@ -90,7 +90,7 @@ function y(e) {
             ref: (e) => {
                 (d.current = e), u(e);
             },
-            "data-dnd-name": g.intl.formatToPlainString(g.t.qiQ0QI, { itemName: t }),
+            "data-dnd-name": g.intl.formatToPlainString(g.t.qiQ0QE, { itemName: t }),
             className: o()(m.centerTarget, {}),
         }),
     });

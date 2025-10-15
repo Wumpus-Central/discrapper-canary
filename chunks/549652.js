@@ -1,4 +1,4 @@
-n.r(e), n.d(e, { default: () => B }), n(35282);
+n.r(e), n.d(e, { default: () => b }), n(35282);
 var s = n(951288),
     r = n(647438),
     i = n(593473),
@@ -34,7 +34,7 @@ function N() {
         window.close();
     } catch (t) {}
 }
-class B extends r.PureComponent {
+class b extends r.PureComponent {
     componentDidMount() {
         let { stage: t, key: e } = this.state;
         t === j
@@ -70,15 +70,15 @@ class B extends r.PureComponent {
                 }),
                 (0, s.jsx)(d.Dx, {
                     className: g.marginBottom8,
-                    children: p.intl.string(p.t.YsLqvs),
+                    children: p.intl.string(p.t.YsLqvr),
                 }),
                 (0, s.jsx)(d.DK, {
                     className: g.marginBottom40,
-                    children: p.intl.string(p.t.CSBYDo),
+                    children: p.intl.string(p.t.CSBYDg),
                 }),
                 (0, s.jsx)(d.zx, {
                     onClick: this.handleOpenApp,
-                    children: p.intl.string(p.t.fIv16B),
+                    children: p.intl.string(p.t.fIv16O),
                 }),
             ],
         });
@@ -92,15 +92,15 @@ class B extends r.PureComponent {
                 }),
                 (0, s.jsx)(d.Dx, {
                     className: g.marginBottom8,
-                    children: p.intl.string(p.t.hsLIsW),
+                    children: p.intl.string(p.t.hsLIsb),
                 }),
                 (0, s.jsx)(d.DK, {
                     className: g.marginBottom40,
-                    children: p.intl.string(p.t.CSBYDo),
+                    children: p.intl.string(p.t.CSBYDg),
                 }),
                 (0, s.jsx)(d.zx, {
                     onClick: this.handleOpenApp,
-                    children: p.intl.string(p.t.fIv16B),
+                    children: p.intl.string(p.t.fIv16O),
                 }),
             ],
         });
@@ -111,9 +111,9 @@ class B extends r.PureComponent {
                 (0, s.jsx)(d.Hh, {}),
                 (0, s.jsx)(d.Dx, {
                     className: g.marginBottom8,
-                    children: p.intl.string(p.t.ctWa65),
+                    children: p.intl.string(p.t["ctWa6+"]),
                 }),
-                (0, s.jsx)(d.DK, { children: p.intl.string(p.t["53IHoo"]) }),
+                (0, s.jsx)(d.DK, { children: p.intl.string(p.t["53IHoq"]) }),
             ],
         });
     }

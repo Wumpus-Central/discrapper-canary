@@ -13,7 +13,7 @@ var a = n(951288),
     h = n(237012),
     x = n(981631),
     f = n(388032),
-    g = n(386521);
+    g = n(113648);
 function b() {
     let { enabled: e } = (0, s.WX)({ location: "revenue_storybook" });
     return (0, a.jsxs)("div", {
@@ -46,7 +46,7 @@ function v() {
             (0, a.jsx)(h.E_, {
                 label: "Balance Widget Menu",
                 children: (0, a.jsx)(u.V9, {
-                    ctaText: f.intl.string(f.t["J+vlIR"]),
+                    ctaText: f.intl.string(f.t["J+vlIS"]),
                     ctaOnClick: x.dG4,
                 }),
             }),
@@ -135,8 +135,8 @@ function v() {
             (0, a.jsx)(h.E_, {
                 label: "Balance Widget Card",
                 children: (0, a.jsx)(d.L, {
-                    ctaText: f.intl.string(f.t.H57f41),
-                    linkText: f.intl.string(f.t["7f4H7D"]),
+                    ctaText: f.intl.string(f.t["H57f4+"]),
+                    linkText: f.intl.string(f.t["7f4H7O"]),
                     ctaOnClick: x.dG4,
                 }),
             }),

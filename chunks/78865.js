@@ -3,7 +3,7 @@ var n = r(951288);
 r(647438);
 var o = r(952265),
     a = r(174609),
-    c = r(47280),
+    c = r(283066),
     l = r(790527),
     i = r(731502),
     s = r(703656),
@@ -76,7 +76,7 @@ function y(e) {
     }
     let h = d.intl.string(d.t.ewxv3N),
         j = d.intl.string(d.t.qlsCDA);
-    return (0, c.ZP)({ location: "StreamUpsellModal" })
+    return (0, c.Z)({ location: "StreamUpsellModal" })
         ? (0, n.jsx)(
               i.Z,
               O(

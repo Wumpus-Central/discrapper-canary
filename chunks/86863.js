@@ -29,7 +29,7 @@ let f = (e) => {
         color: l.zx.Colors.PRIMARY,
         onClick: () =>
             (function (e, t, n) {
-                let r = h.intl.formatToPlainString(h.t.QWGvxA, { applicationName: e.name });
+                let r = h.intl.formatToPlainString(h.t.QWGvxM, { applicationName: e.name });
                 (0, a.h7j)((e) =>
                     (0, i.jsx)(
                         s.default,
@@ -59,11 +59,11 @@ let f = (e) => {
                             return e;
                         })(
                             {
-                                title: h.intl.string(h.t["DT39A+"]),
+                                title: h.intl.string(h.t.DT39Aw),
                                 body: r,
-                                confirmText: h.intl.string(h.t.xUqheM),
+                                confirmText: h.intl.string(h.t.xUqheH),
                                 confirmColor: l.Tt.RED,
-                                cancelText: h.intl.string(h.t["ETE/oC"]),
+                                cancelText: h.intl.string(h.t["ETE/oK"]),
                                 onConfirm: t,
                             },
                             e,
@@ -76,6 +76,6 @@ let f = (e) => {
                         channel_type: n.type,
                     });
             })(m, C, n),
-        children: h.intl.string(h.t["5S3sQF"]),
+        children: h.intl.string(h.t["5S3sQE"]),
     });
 };

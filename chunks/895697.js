@@ -122,7 +122,7 @@ function R(e) {
                 }),
             null != P &&
                 (0, r.jsx)(m.Z, {
-                    heading: A.intl.string(A.t["LPJmL/"]),
+                    heading: A.intl.string(A.t.LPJmLy),
                     children: (0, r.jsx)(I.Z, {
                         user: t,
                         currentUser: n,

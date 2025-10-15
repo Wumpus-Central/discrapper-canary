@@ -1,4 +1,4 @@
-e.d(n, { default: () => g });
+e.d(n, { default: () => O });
 var r = e(951288);
 e(647438);
 var o = e(692547),
@@ -23,7 +23,7 @@ function y(t, n) {
         n,
     );
 }
-function g(t) {
+function O(t) {
     var { guildCount: n, onClose: e, analyticsLocations: o } = t,
         p = (function (t, n) {
             if (null == t) return {};
@@ -46,7 +46,7 @@ function g(t) {
             }
             return o;
         })(t, ["guildCount", "onClose", "analyticsLocations"]);
-    let g = function (t, n) {
+    let O = function (t, n) {
             return (0, r.jsx)(
                 a.P3F,
                 {
@@ -60,9 +60,9 @@ function g(t) {
                 n,
             );
         },
-        { analyticsLocations: O } = (0, c.ZP)(o);
+        { analyticsLocations: g } = (0, c.ZP)(o);
     return (0, r.jsx)(c.Gt, {
-        value: O,
+        value: g,
         children: (0, r.jsx)(
             l.Z,
             (function (t) {
@@ -94,23 +94,23 @@ function g(t) {
                     artURL: b.Z,
                     onClose: e,
                     type: s.cd.GUILD_CAP_MODAL_UPSELL,
-                    title: f.intl.string(f.t["CoNXB+"]),
+                    title: f.intl.string(f.t.CoNXBw),
                     body:
                         n < u.DZw
-                            ? f.intl.format(f.t["5qLH7B"], {
+                            ? f.intl.format(f.t["5qLH7O"], {
                                   guildCount: n,
-                                  onAndMore: g,
+                                  onAndMore: O,
                                   newBadgeHook: y,
                               })
-                            : f.intl.format(f.t.mk9CS6, {
-                                  onAndMore: g,
+                            : f.intl.format(f.t.mk9CS0, {
+                                  onAndMore: O,
                                   newBadgeHook: y,
                               }),
                     context:
                         n < u.DZw
                             ? f.intl.formatToPlainString(f.t["C+Hqzs"], { guildCount: n })
-                            : f.intl.string(f.t.m0xavd),
-                    glowUp: f.intl.format(f.t["6Dl5X1"], { onAndMore: g }),
+                            : f.intl.string(f.t.m0xavb),
+                    glowUp: f.intl.format(f.t["6Dl5X1"], { onAndMore: O }),
                 },
                 p,
             ),

@@ -5,100 +5,100 @@ function l(e) {
     switch (e) {
         case r.HQ.CLASSROOM:
             return {
-                header: i.intl.string(i.t["x7+QD9"]),
-                description: i.intl.string(i.t["11e3sB"]),
-                nameLabel: i.intl.string(i.t.dqIIT8),
-                terms: i.t["2bprXx"],
-                defaultName: i.t["23nK4J"],
-                author: i.intl.string(i.t.uvGmCx),
+                header: i.intl.string(i.t["x7+QDw"]),
+                description: i.intl.string(i.t["11e3sL"]),
+                nameLabel: i.intl.string(i.t.dqIIT0),
+                terms: i.t["2bprX1"],
+                defaultName: i.t["23nK4O"],
+                author: i.intl.string(i.t.uvGmCw),
             };
         case r.HQ.LOCAL_COMMUNITIES:
             return {
-                header: i.intl.string(i.t.AhPF5a),
-                description: i.intl.string(i.t.j8g45p),
-                nameLabel: i.intl.string(i.t.h92KNA),
-                terms: i.t["2bprXx"],
+                header: i.intl.string(i.t.AhPF5e),
+                description: i.intl.string(i.t.j8g45u),
+                nameLabel: i.intl.string(i.t.h92KND),
+                terms: i.t["2bprX1"],
                 defaultName: i.t.m0gjgY,
-                author: i.intl.string(i.t.uvGmCx),
+                author: i.intl.string(i.t.uvGmCw),
             };
         case r.HQ.CREATORS_HOBBIES:
             return {
-                header: i.intl.string(i.t.Wx7UUY),
+                header: i.intl.string(i.t.Wx7UUV),
                 description: i.intl.string(i.t.Eazykp),
-                nameLabel: i.intl.string(i.t.qRmhxu),
-                terms: i.t["2bprXx"],
-                defaultName: i.t.odrS6x,
-                author: i.intl.string(i.t.uvGmCx),
+                nameLabel: i.intl.string(i.t.qRmhxs),
+                terms: i.t["2bprX1"],
+                defaultName: i.t["odrS6+"],
+                author: i.intl.string(i.t.uvGmCw),
             };
         case r.HQ.GLOBAL_COMMUNITIES:
             return {
-                header: i.intl.string(i.t.sn5Z8t),
-                description: i.intl.string(i.t["0RE0DR"]),
-                nameLabel: i.intl.string(i.t.ywzcXf),
-                terms: i.t["2bprXx"],
-                defaultName: i.t.T1ocgk,
-                author: i.intl.string(i.t.uvGmCx),
+                header: i.intl.string(i.t.sn5Z8v),
+                description: i.intl.string(i.t["0RE0DQ"]),
+                nameLabel: i.intl.string(i.t.ywzcXV),
+                terms: i.t["2bprX1"],
+                defaultName: i.t.T1ocgo,
+                author: i.intl.string(i.t.uvGmCw),
             };
         case r.HQ.FRIENDS_FAMILY:
             return {
-                header: i.intl.string(i.t.QmGwQ6),
-                description: i.intl.string(i.t.zJiGfG),
-                nameLabel: i.intl.string(i.t.AERuYh),
-                terms: i.t["2bprXx"],
-                defaultName: i.t.MPaut5,
-                author: i.intl.string(i.t.uvGmCx),
+                header: i.intl.string(i.t.QmGwQ0),
+                description: i.intl.string(i.t.zJiGfH),
+                nameLabel: i.intl.string(i.t.AERuYm),
+                terms: i.t["2bprX1"],
+                defaultName: i.t.MPaut7,
+                author: i.intl.string(i.t.uvGmCw),
             };
         case r.HQ.STUDY_GROUPS:
             return {
-                header: i.intl.string(i.t.sJDGZT),
-                description: i.intl.string(i.t.ILQuET),
-                nameLabel: i.intl.string(i.t.aEHEag),
-                terms: i.t["2bprXx"],
-                defaultName: i.t.jvVOeZ,
-                author: i.intl.string(i.t.uvGmCx),
+                header: i.intl.string(i.t.sJDGZW),
+                description: i.intl.string(i.t.ILQuER),
+                nameLabel: i.intl.string(i.t.aEHEam),
+                terms: i.t["2bprX1"],
+                defaultName: i.t.jvVOeX,
+                author: i.intl.string(i.t.uvGmCw),
             };
         case r.HQ.CREATE_FROM_SCRATCH:
             return {
-                header: i.intl.string(i.t["M/gqdd"]),
-                description: i.intl.string(i.t.shE8hW),
-                nameLabel: i.intl.string(i.t.k80WHf),
-                terms: i.t["2bprXx"],
-                defaultName: i.t.xhgNd0,
-                author: i.intl.string(i.t.uvGmCx),
+                header: i.intl.string(i.t["M/gqdX"]),
+                description: i.intl.string(i.t.shE8hY),
+                nameLabel: i.intl.string(i.t.k80WHR),
+                terms: i.t["2bprX1"],
+                defaultName: i.t.xhgNd3,
+                author: i.intl.string(i.t.uvGmCw),
             };
         case r.HQ.CAMPUS_CLUBS:
             return {
-                header: i.intl.string(i.t.v6JIt3),
-                description: i.intl.string(i.t.v71ZJG),
+                header: i.intl.string(i.t.v6JIt7),
+                description: i.intl.string(i.t.v71ZJC),
                 nameLabel: i.intl.string(i.t.dBih7e),
-                terms: i.t["2bprXx"],
-                defaultName: i.t.VlEPTN,
-                author: i.intl.string(i.t.uvGmCx),
+                terms: i.t["2bprX1"],
+                defaultName: i.t.VlEPTE,
+                author: i.intl.string(i.t.uvGmCw),
             };
         case r.HQ.LEAGUE_CLUBS:
             return {
-                header: i.intl.string(i.t["zHGbB/"]),
-                description: i.intl.string(i.t["KQo/dF"]),
+                header: i.intl.string(i.t.zHGbBw),
+                description: i.intl.string(i.t["KQo/dH"]),
                 nameLabel: i.intl.string(i.t.dBih7e),
-                terms: i.t["2bprXx"],
-                defaultName: i.t.Y6Qfju,
-                author: i.intl.string(i.t.uvGmCx),
+                terms: i.t["2bprX1"],
+                defaultName: i.t.Y6Qfjo,
+                author: i.intl.string(i.t.uvGmCw),
             };
         case r.HQ.GITHUB_HACKATHON:
             return {
-                header: i.intl.string(i.t.Gde9Ve),
-                description: i.intl.string(i.t.GPMwST),
+                header: i.intl.string(i.t.Gde9VV),
+                description: i.intl.string(i.t.GPMwSU),
                 nameLabel: i.intl.string(i.t.dBih7e),
-                terms: i.t["2bprXx"],
-                defaultName: i.t.Y6Qfju,
+                terms: i.t["2bprX1"],
+                defaultName: i.t.Y6Qfjo,
                 author: "GitHub Education",
             };
         default:
             return {
                 header: i.intl.string(i.t.xr59t7),
                 nameLabel: i.intl.string(i.t.dBih7e),
-                terms: i.t["2bprXx"],
-                defaultName: i.t.Y6Qfju,
+                terms: i.t["2bprX1"],
+                defaultName: i.t.Y6Qfjo,
             };
     }
 }

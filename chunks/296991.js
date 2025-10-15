@@ -142,7 +142,7 @@ function I(e) {
                         textValue: T,
                         richValue: P,
                         channel: n,
-                        placeholder: C.intl.string(C.t.BRkD41),
+                        placeholder: C.intl.string(C.t["BRkD4+"]),
                         focused: x,
                         onChange: (e, n, r) => {
                             let i = N ? t.value : n;
@@ -171,7 +171,7 @@ function I(e) {
                         size: "sm",
                         variant: "icon-only",
                         icon: g.k$p,
-                        "aria-label": C.intl.string(C.t.VkKicb),
+                        "aria-label": C.intl.string(C.t.VkKicX),
                         onClick: u,
                     }),
                 }),
@@ -242,29 +242,29 @@ function S(e) {
         ),
         R = t.length === v.X2,
         D = i.useMemo(() => {
-            let e = R ? C.intl.formatToPlainString(C.t.tU718E, { number: v.X2 }) : void 0;
+            let e = R ? C.intl.formatToPlainString(C.t.tU718P, { number: v.X2 }) : void 0;
             return [
                 {
-                    text: C.intl.string(C.t.DXq2od),
-                    onClick: () => T(C.intl.string(C.t.XudkSq)),
+                    text: C.intl.string(C.t.DXq2oa),
+                    onClick: () => T(C.intl.string(C.t.XudkSk)),
                     disabled: R || a,
                     tooltipText: e,
                 },
                 {
-                    text: C.intl.string(C.t.nSqTjM),
-                    onClick: () => T(C.intl.string(C.t.np91jA)),
+                    text: C.intl.string(C.t.nSqTjI),
+                    onClick: () => T(C.intl.string(C.t.np91jI)),
                     disabled: R || a,
                     tooltipText: e,
                 },
                 {
-                    text: C.intl.string(C.t.AtRxsO),
-                    onClick: () => T(C.intl.string(C.t.PNIDDJ)),
+                    text: C.intl.string(C.t.AtRxsL),
+                    onClick: () => T(C.intl.string(C.t.PNIDDA)),
                     disabled: R || a,
                     tooltipText: e,
                 },
                 {
-                    text: C.intl.string(C.t["0K5NJt"]),
-                    onClick: () => T(C.intl.string(C.t.HolIDy)),
+                    text: C.intl.string(C.t["0K5NJi"]),
+                    onClick: () => T(C.intl.string(C.t.HolIDw)),
                     disabled: R || a,
                     tooltipText: e,
                 },
@@ -311,7 +311,7 @@ function S(e) {
             }),
             !R &&
                 (0, r.jsx)(x.A, {
-                    text: C.intl.string(C.t.Cq5JuR),
+                    text: C.intl.string(C.t.Cq5Jub),
                     onClick: P,
                     disabled: a,
                 }),
@@ -319,7 +319,7 @@ function S(e) {
                 variant: "text-xs/bold",
                 color: "text-muted",
                 className: O.exampleRulesTitle,
-                children: C.intl.string(C.t.XHWj8W),
+                children: C.intl.string(C.t.XHWj8f),
             }),
             (0, r.jsx)(j.j, {
                 pills: D,

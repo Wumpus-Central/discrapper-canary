@@ -5,7 +5,7 @@ var r = n(592125),
     o = n(51144),
     s = n(484710),
     l = n(388032),
-    c = n(833540);
+    c = n(764295);
 function u(e, t, n) {
     var u;
     let d = i.default.getUser(t),
@@ -16,32 +16,32 @@ function u(e, t, n) {
                 : o.ZP.getGlobalName(d);
     switch (e) {
         case s.wQ.IGNORE_SUCCESS:
-            return l.intl.formatToPlainString(l.t["+joqrP"], { username: _ });
+            return l.intl.formatToPlainString(l.t["+joqrK"], { username: _ });
         case s.wQ.UNIGNORE_SUCCESS:
-            return l.intl.formatToPlainString(l.t.THExKa, { username: _ });
+            return l.intl.formatToPlainString(l.t.THExKS, { username: _ });
         case s.wQ.BLOCK_SUCCESS:
-            return l.intl.formatToPlainString(l.t.XXPrIs, { username: _ });
+            return l.intl.formatToPlainString(l.t.XXPrIi, { username: _ });
         case s.wQ.UNBLOCK_SUCCESS:
-            return l.intl.formatToPlainString(l.t.uExcGX, { username: _ });
+            return l.intl.formatToPlainString(l.t.uExcGR, { username: _ });
         case s.wQ.MUTE_SUCCESS:
-            return l.intl.formatToPlainString(l.t.X4NtYb, { username: _ });
+            return l.intl.formatToPlainString(l.t.X4NtYW, { username: _ });
         case s.wQ.UNMUTE_SUCCESS:
-            return l.intl.formatToPlainString(l.t.tRaBfY, { username: _ });
+            return l.intl.formatToPlainString(l.t.tRaBfX, { username: _ });
         case s.wQ.REPORT_SUCCESS:
-            return l.intl.formatToPlainString(l.t.FOptFU, { username: _ });
+            return l.intl.formatToPlainString(l.t.FOptFR, { username: _ });
         case s.wQ.TIGGER_PAWTECT_ERROR:
-            return l.intl.string(l.t.c6kn6F);
+            return l.intl.string(l.t.c6kn6O);
         case s.wQ.TIGGER_PAWTECT_VERIFIED:
-            return l.intl.string(l.t.XwKo1k);
+            return l.intl.string(l.t.XwKo1t);
         case s.wQ.GENERIC_ERROR:
-            return l.intl.string(l.t.zBpoc7);
+            return l.intl.string(l.t.zBpoc3);
         case s.wQ.REPORT_TO_MOD_SUCCESS:
-            return l.intl.string(c.default.iBypeZ);
+            return l.intl.string(c.default.iBypeX);
         case s.wQ.SAFETY_FEEDBACK_SUCCESS:
-            return l.intl.string(l.t.TcFR5k);
+            return l.intl.string(l.t.TcFR5u);
         case s.wQ.EXISTING_USER_AGE_GATE_SUCCESS:
-            return l.intl.string(l.t["susqq/"]);
+            return l.intl.string(l.t.susqq6);
         default:
-            return l.intl.string(l.t["+c5xtT"]);
+            return l.intl.string(l.t["+c5xtb"]);
     }
 }

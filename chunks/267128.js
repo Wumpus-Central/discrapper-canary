@@ -219,7 +219,7 @@ function k(e, t, n) {
                 onClick: d,
                 children: (0, r.jsx)("span", {
                     className: P.repliedTextPlaceholder,
-                    children: R.intl.string(R.t["1i+hMi"]),
+                    children: R.intl.string(R.t["1i+hMj"]),
                 }),
             });
         case g.Y.DELETED:
@@ -227,7 +227,7 @@ function k(e, t, n) {
                 className: P.repliedTextPreview,
                 children: (0, r.jsx)("span", {
                     className: P.repliedTextPlaceholder,
-                    children: R.intl.string(R.t.mE3KJN),
+                    children: R.intl.string(R.t.mE3KJC),
                 }),
             });
         default:
@@ -257,9 +257,9 @@ function U(e, t, n, i, a, s) {
             })),
         n)
     )
-        l = R.intl.string(R.t.XAkOo2);
-    else if (i) l = R.intl.string(R.t["G7p6v/"]);
-    else if (E.type === N.uaV.CHANNEL_PINNED_MESSAGE) l = R.intl.string(R.t.sCfDDl);
+        l = R.intl.string(R.t.XAkOo6);
+    else if (i) l = R.intl.string(R.t.G7p6v7);
+    else if (E.type === N.uaV.CHANNEL_PINNED_MESSAGE) l = R.intl.string(R.t.sCfDDg);
     else if (E.type === N.uaV.EMOJI_ADDED)
         u = (0, r.jsx)(f.Zh, {
             message: E,
@@ -276,14 +276,14 @@ function U(e, t, n, i, a, s) {
             L
                 ? (l = (0, m.N4)(E))
                 : S
-                  ? (l = R.intl.string(R.t.kHdYCW))
+                  ? (l = R.intl.string(R.t.kHdYCQ))
                   : A
-                    ? (l = R.intl.string(R.t["E+6SSY"]))
+                    ? (l = R.intl.string(R.t["E+6SSU"]))
                     : C
-                      ? (l = R.intl.string(R.t.XC3A52))
+                      ? (l = R.intl.string(R.t["XC3A5+"]))
                       : E.hasFlag(N.iLy.IS_COMPONENTS_V2)
-                        ? (l = R.intl.string(R.t.Xxat6S))
-                        : ((l = R.intl.string(R.t["6hGo0c"])),
+                        ? (l = R.intl.string(R.t.Xxat6e))
+                        : ((l = R.intl.string(R.t["6hGo0d"])),
                           (d = (0, r.jsx)(c.XBm, {
                               size: "custom",
                               color: "currentColor",
@@ -360,7 +360,7 @@ function G(e) {
         T = i.useMemo(() => (e.compact ? (0, A.Z)((0, O.vc)(l()(), "LT")) : null), [e.compact]);
     null != n &&
         null != a &&
-        (t = R.intl.formatToPlainString(R.t.RhbQ2K, {
+        (t = R.intl.formatToPlainString(R.t.RhbQ2N, {
             author: null == a ? void 0 : a.nick,
             repliedAuthor: null == n ? void 0 : n.nick,
         }));
@@ -374,7 +374,7 @@ function G(e) {
                 _ &&
                 (0, r.jsx)(c.P3F, {
                     tag: "div",
-                    "aria-label": R.intl.string(R.t.dpjpOp),
+                    "aria-label": R.intl.string(R.t.dpjpOj),
                     className: o()(P.repliedMessageClickableSpine, { [P.repliedMessageContentHovered]: p }),
                     onClick: e.onClickReply,
                     onMouseEnter: E,

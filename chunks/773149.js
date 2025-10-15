@@ -12,8 +12,8 @@ var r = n(951288),
     f = n(279475),
     m = n(60482),
     g = n(735276),
-    v = n(149829),
-    x = n(470658),
+    v = n(989308),
+    x = n(948208),
     _ = n(388032),
     b = n(237522),
     h = n(922434),
@@ -34,11 +34,11 @@ function I(e) {
                   }
                 : {
                       type: "active",
-                      statusText: _.intl.string(v.default.FFLkmx),
+                      statusText: _.intl.string(v.default.FFLkm5),
                   };
         }, [null == n ? void 0 : n.entitlements]),
         I = (0, f.d)((null == o ? void 0 : o.type) === "active"),
-        w = i.useMemo(() => {
+        E = i.useMemo(() => {
             if ((null == n ? void 0 : n.catalog) == null) return 0;
             let e = Object.values(n.catalog);
             return 0 === e.length ? 0 : Math.min(...e.map((e) => e.baseCost));
@@ -46,7 +46,7 @@ function I(e) {
     return null == n
         ? null
         : (0, r.jsxs)(p.aB, {
-              label: _.intl.string(x.default["B3OfL/"]),
+              label: _.intl.string(x.default.B3OfLy),
               badge: "beta",
               isActive: (null == o ? void 0 : o.type) === "active",
               isWarning: (null == o ? void 0 : o.type) === "expiring",
@@ -68,10 +68,10 @@ function I(e) {
                       ],
                   }),
                   (0, r.jsx)(p.Q9, {
-                      title: _.intl.string(x.default["B3OfL/"]),
+                      title: _.intl.string(x.default.B3OfLy),
                       textColor: I,
                       footer: (0, r.jsx)(p.uf, {
-                          cost: w,
+                          cost: E,
                           costDecorator: "+",
                           status: o,
                       }),
@@ -79,14 +79,14 @@ function I(e) {
                           className: b.description,
                           color: I,
                           variant: "text-sm/medium",
-                          children: _.intl.string(x.default.EGkJAG),
+                          children: _.intl.string(x.default.EGkJAA),
                       }),
                   }),
                   (0, r.jsx)(p.N4, {
                       children: (0, r.jsx)(c.Button, {
                           variant: "primary",
                           fullWidth: !0,
-                          text: _.intl.string(x.default.PuvU5b),
+                          text: _.intl.string(x.default.PuvU5e),
                           onClick: (e) => {
                               e.stopPropagation(),
                                   (0, g.Z)({

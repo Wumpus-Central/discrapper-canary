@@ -175,7 +175,9 @@ class x extends i.PureComponent {
                                       (0, r.jsx)(f.Z, {
                                           type: f.Z.Types.INLINE,
                                           className: C.protip,
-                                          children: __OVERLAY__ ? A.intl.string(A.t.YRdw70) : A.intl.string(A.t.CCTgbF),
+                                          children: __OVERLAY__
+                                              ? A.intl.string(A.t["YRdw7+"])
+                                              : A.intl.string(A.t.CCTgbG),
                                       }),
                               ],
                           }),

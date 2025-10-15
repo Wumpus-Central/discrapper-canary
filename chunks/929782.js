@@ -90,9 +90,9 @@ function S() {
                 v(
                     y(
                         {
-                            header: E.intl.string(E.t.ilMTy0),
-                            confirmText: E.intl.string(E.t["BK8LK+"]),
-                            cancelText: E.intl.string(E.t["ETE/oC"]),
+                            header: E.intl.string(E.t.ilMTy8),
+                            confirmText: E.intl.string(E.t.BK8LKy),
+                            cancelText: E.intl.string(E.t["ETE/oK"]),
                             onConfirm: T,
                             confirmButtonColor: i.zx.Colors.BRAND,
                         },
@@ -101,7 +101,7 @@ function S() {
                     {
                         children: (0, r.jsx)(a.Text, {
                             variant: "text-md/normal",
-                            children: E.intl.string(E.t.h66vlB),
+                            children: E.intl.string(E.t.h66vlJ),
                         }),
                     },
                 ),

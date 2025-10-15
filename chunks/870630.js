@@ -49,17 +49,17 @@ let m = function (e) {
                     gap: 16,
                     children: [
                         (0, r.jsx)(s.oil, {
-                            label: u.intl.string(u.t["w/qqKK"]),
+                            label: u.intl.string(u.t["w/qqKC"]),
                             inputRef: n,
-                            name: u.intl.string(u.t["w/qqKK"]),
-                            placeholder: u.intl.string(u.t["w/qqKK"]),
+                            name: u.intl.string(u.t["w/qqKC"]),
+                            placeholder: u.intl.string(u.t["w/qqKC"]),
                             onChange: (e) => c(e),
                             value: g.email,
                         }),
                         (0, r.jsx)(s.oil, {
-                            label: u.intl.string(u.t["yf7ms+"]),
-                            name: u.intl.string(u.t["yf7ms+"]),
-                            placeholder: u.intl.string(u.t["yf7ms+"]),
+                            label: u.intl.string(u.t.yf7ms7),
+                            name: u.intl.string(u.t.yf7ms7),
+                            placeholder: u.intl.string(u.t.yf7ms7),
                             onChange: (e) => l(e),
                             value: g.name,
                         }),
@@ -68,7 +68,7 @@ let m = function (e) {
                             children: [
                                 (0, r.jsx)(s.Text, {
                                     variant: "text-sm/semibold",
-                                    children: u.intl.string(u.t.De3b8t),
+                                    children: u.intl.string(u.t.De3b8v),
                                 }),
                                 (0, r.jsx)(a.P24BankElement, {
                                     options: {
@@ -99,10 +99,10 @@ let m = function (e) {
                     gap: 16,
                     children: [
                         (0, r.jsx)(s.oil, {
-                            label: u.intl.string(u.t.sN3wrd),
+                            label: u.intl.string(u.t.sN3wra),
                             inputRef: n,
-                            name: u.intl.string(u.t.sN3wrd),
-                            placeholder: u.intl.string(u.t.sN3wrd),
+                            name: u.intl.string(u.t.sN3wra),
+                            placeholder: u.intl.string(u.t.sN3wra),
                             onChange: (e) => i(e),
                             value: p.name,
                         }),
@@ -111,7 +111,7 @@ let m = function (e) {
                             children: [
                                 (0, r.jsx)(s.Text, {
                                     variant: "text-sm/semibold",
-                                    children: u.intl.string(u.t.dFyV07),
+                                    children: u.intl.string(u.t.dFyV09),
                                 }),
                                 (0, r.jsx)(a.EpsBankElement, {
                                     options: {

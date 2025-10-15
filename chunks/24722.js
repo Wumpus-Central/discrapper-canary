@@ -18,30 +18,30 @@ var a = r(951288),
     p = r(388032),
     R = r(98678);
 function h(e) {
-    let { transitionState: t, onClose: r, roleId: h, guildId: k } = e,
-        y = (0, l.e7)([w.Z], () => w.Z.getRole(h), [h]),
+    let { transitionState: t, onClose: r, roleId: h, guildId: y } = e,
+        k = (0, l.e7)([w.Z], () => w.Z.getRole(h), [h]),
         [T, C] = n.useState(""),
         [M, v] = n.useState({}),
         [E, Z] = n.useState(!1),
         [S, H] = n.useState(null),
         B = n.useRef(null);
     n.useEffect(() => {
-        d.Z.requestMembers(k, T.trim().toLowerCase(), x._4);
-    }, [k, T]);
+        d.Z.requestMembers(y, T.trim().toLowerCase(), x._4);
+    }, [y, T]);
     let L = n.useCallback((e) => !e.roles.includes(h), [h]),
-        O = (0, x.lJ)(k, L),
+        O = (0, x.lJ)(y, L),
         j = n.useMemo(() => O.filter((e) => (0, x.eg)(T, e)), [T, O]),
         P = n.useCallback(async () => {
             let e = Object.values(M).map((e) => e.row.id);
             Z(!0);
             try {
-                await g.Z.bulkAddMemberRoles(k, h, e), (0, m.H)(k, h, !1), r();
+                await g.Z.bulkAddMemberRoles(y, h, e), (0, m.H)(y, h, !1), r();
             } catch (t) {
                 let e = new c.Hx(t);
                 Z(!1), H(e);
             }
-        }, [k, h, M, r]),
-        q = n.useMemo(
+        }, [y, h, M, r]),
+        A = n.useMemo(
             () =>
                 j.map((e) => {
                     var t;
@@ -61,8 +61,8 @@ function h(e) {
                 }),
             [j],
         ),
-        A = u.Z.useSections({ members: q }),
-        N = n.useCallback(
+        N = u.Z.useSections({ members: A }),
+        U = n.useCallback(
             (e) =>
                 e.rowType === f.aC.MEMBER || e.rowType === f.aC.OWNER
                     ? {
@@ -73,30 +73,30 @@ function h(e) {
                     : null,
             [],
         ),
-        U = n.useMemo(() => Object.keys(M).length, [M]);
+        q = n.useMemo(() => Object.keys(M).length, [M]);
     return (0, a.jsx)(u.Z.Provider, {
         listRef: B,
         query: T,
         setQuery: C,
         pendingAdditions: M,
         setPendingAdditions: v,
-        members: q,
-        getRichTag: N,
+        members: A,
+        getRichTag: U,
         maxPendingRows: _.ey,
         children: (0, a.jsx)(i.Modal, {
             onClose: r,
             transitionState: t,
-            title: p.intl.string(p.t.ZYOK46),
+            title: p.intl.string(p.t["ZYOK4+"]),
             subtitle:
-                null != y
-                    ? p.intl.format(p.t["qP+nuZ"], {
+                null != k
+                    ? p.intl.format(p.t["qP+nub"], {
                           numMembers: _.ey,
-                          roleName: y.name,
+                          roleName: k.name,
                       })
-                    : p.intl.format(p.t["3OxP4q"], { numMembers: _.ey }),
+                    : p.intl.format(p.t["3OxP4u"], { numMembers: _.ey }),
             input: (0, a.jsxs)("div", {
                 children: [
-                    (0, a.jsx)(u.Z.SearchBox, { placeholderText: p.intl.string(p.t.vMiCaQ) }),
+                    (0, a.jsx)(u.Z.SearchBox, { placeholderText: p.intl.string(p.t.vMiCaW) }),
                     null != S
                         ? (0, a.jsx)(o.Text, {
                               className: R.errorText,
@@ -113,20 +113,20 @@ function h(e) {
                 renderSection: u.Z.renderSection,
                 rowHeight: u.Z.ROW_HEIGHT,
                 renderRow: u.Z.renderRow,
-                sections: A,
+                sections: N,
             },
             actions: [
                 {
-                    text: p.intl.string(p.t["ETE/oC"]),
+                    text: p.intl.string(p.t["ETE/oK"]),
                     variant: "secondary",
                     onClick: r,
                 },
                 {
-                    text: p.intl.string(p.t.OYkgVk),
+                    text: p.intl.string(p.t.OYkgVl),
                     variant: "primary",
                     onClick: P,
                     loading: E,
-                    disabled: 0 === U || U > _.ey,
+                    disabled: 0 === q || q > _.ey,
                 },
             ],
         }),

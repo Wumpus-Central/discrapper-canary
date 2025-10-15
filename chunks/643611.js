@@ -1,4 +1,4 @@
-e.d(n, { default: () => S }), e(388685);
+e.d(n, { default: () => _ }), e(388685);
 var l = e(951288),
     r = e(647438),
     i = e(793030),
@@ -38,35 +38,35 @@ let N = (t) => {
             let n = i.find((n) => n.id === t);
             r(null != n ? n : void 0);
         },
-        placeholder: E.intl.string(E.t["N+T69y"]),
+        placeholder: E.intl.string(E.t["N+T69/"]),
     });
 };
-function S(t) {
-    let { action: n, triggerType: e, guildId: s, isEdit: d, onEditChannel: j, onClose: o, transitionState: S } = t,
-        [_, C] = r.useState(n.metadata.channelId),
+function _(t) {
+    let { action: n, triggerType: e, guildId: s, isEdit: d, onEditChannel: j, onClose: o, transitionState: _ } = t,
+        [S, C] = r.useState(n.metadata.channelId),
         [h, g] = r.useState(null),
-        I = (0, a.e7)([c.Z], () => c.Z.getChannel(_), [_]),
+        I = (0, a.e7)([c.Z], () => c.Z.getChannel(S), [S]),
         L = (0, A.c)(n.type, n, e);
     if (null == L) return null;
     let { headerText: T } = L;
     return (0, l.jsx)(i.Modal, {
         onClose: o,
-        transitionState: S,
+        transitionState: _,
         title: T,
-        subtitle: E.intl.string(E.t["z/ZF2i"]),
+        subtitle: E.intl.string(E.t["z/ZF2t"]),
         actions: [
             {
-                text: E.intl.string(E.t["ETE/oC"]),
+                text: E.intl.string(E.t["ETE/oK"]),
                 onClick: () => {
                     o();
                 },
                 variant: "secondary",
             },
             {
-                text: d ? E.intl.string(E.t.bt75uw) : E.intl.string(E.t["R3BPH+"]),
+                text: d ? E.intl.string(E.t.bt75u7) : E.intl.string(E.t.R3BPHx),
                 onClick: () => {
-                    if (null == _) return void g(E.intl.string(E.t.lM1NLh));
-                    j(_);
+                    if (null == S) return void g(E.intl.string(E.t.lM1NLi));
+                    j(S);
                 },
             },
         ],
@@ -90,7 +90,7 @@ function S(t) {
                     : (0, l.jsx)(u.Text, {
                           color: "text-muted",
                           variant: "text-sm/normal",
-                          children: E.intl.string(E.t["ric+5q"]),
+                          children: E.intl.string(E.t["ric+5u"]),
                       }),
             ],
         }),

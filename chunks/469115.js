@@ -28,7 +28,7 @@ let l = [
                 },
             ],
             angle: 180,
-            getName: () => s.intl.string(s.t.kCdS4d),
+            getName: () => s.intl.string(s.t.kCdS4e),
             midpointPercentage: 27,
         },
         {
@@ -46,7 +46,7 @@ let l = [
                 },
             ],
             angle: 180,
-            getName: () => s.intl.string(s.t.S4UnEz),
+            getName: () => s.intl.string(s.t.S4UnEx),
             midpointPercentage: 27,
         },
         {
@@ -72,7 +72,7 @@ let l = [
                 },
             ],
             angle: 148.71,
-            getName: () => s.intl.string(s.t["48xnKc"]),
+            getName: () => s.intl.string(s.t["48xnKS"]),
             midpointPercentage: 50,
         },
         {
@@ -94,7 +94,7 @@ let l = [
                 },
             ],
             angle: 38.08,
-            getName: () => s.intl.string(s.t.G4HsBJ),
+            getName: () => s.intl.string(s.t.G4HsBA),
             midpointPercentage: 50,
         },
         {
@@ -116,7 +116,7 @@ let l = [
                 },
             ],
             angle: 154.19,
-            getName: () => s.intl.string(s.t.NAt885),
+            getName: () => s.intl.string(s.t["NAt88/"]),
             midpointPercentage: 50,
         },
         {
@@ -134,7 +134,7 @@ let l = [
                 },
             ],
             angle: 180.14,
-            getName: () => s.intl.string(s.t.godtzA),
+            getName: () => s.intl.string(s.t.godtzM),
             midpointPercentage: 50,
         },
         {
@@ -160,7 +160,7 @@ let l = [
                 },
             ],
             angle: 179.52,
-            getName: () => s.intl.string(s.t.hlS2xq),
+            getName: () => s.intl.string(s.t.hlS2xs),
             midpointPercentage: 27,
         },
         {
@@ -182,7 +182,7 @@ let l = [
                 },
             ],
             angle: 38.99,
-            getName: () => s.intl.string(s.t.abMn9y),
+            getName: () => s.intl.string(s.t["abMn9/"]),
             midpointPercentage: 50,
         },
     ],
@@ -203,7 +203,7 @@ let l = [
                 },
             ],
             angle: 141.68,
-            getName: () => s.intl.string(s.t.JKDra4),
+            getName: () => s.intl.string(s.t.JKDra2),
             midpointPercentage: 35,
         },
         {
@@ -233,7 +233,7 @@ let l = [
                 },
             ],
             angle: 128.92,
-            getName: () => s.intl.string(s.t.kwc8Us),
+            getName: () => s.intl.string(s.t.kwc8Ul),
             midpointPercentage: 15,
         },
         {
@@ -263,7 +263,7 @@ let l = [
                 },
             ],
             angle: 162.27,
-            getName: () => s.intl.string(s.t["TeA/j8"]),
+            getName: () => s.intl.string(s.t["TeA/j4"]),
             midpointPercentage: 50,
         },
         {
@@ -281,7 +281,7 @@ let l = [
                 },
             ],
             angle: 64.92,
-            getName: () => s.intl.string(s.t.blIucj),
+            getName: () => s.intl.string(s.t.blIucn),
             midpointPercentage: 30,
         },
         {
@@ -299,7 +299,7 @@ let l = [
                 },
             ],
             angle: 48.17,
-            getName: () => s.intl.string(s.t.O1yOXG),
+            getName: () => s.intl.string(s.t.O1yOXF),
             midpointPercentage: 24,
         },
         {
@@ -317,7 +317,7 @@ let l = [
                 },
             ],
             angle: 170.82,
-            getName: () => s.intl.string(s.t["1swi9s"]),
+            getName: () => s.intl.string(s.t["1swi9v"]),
             midpointPercentage: 50,
         },
         {
@@ -335,7 +335,7 @@ let l = [
                 },
             ],
             angle: 180,
-            getName: () => s.intl.string(s.t.So2Wuh),
+            getName: () => s.intl.string(s.t.So2Wur),
             midpointPercentage: 50,
         },
         {
@@ -357,7 +357,7 @@ let l = [
                 },
             ],
             angle: 179.14,
-            getName: () => s.intl.string(s.t.a22o48),
+            getName: () => s.intl.string(s.t["a22o4+"]),
             midpointPercentage: 50,
         },
         {
@@ -383,7 +383,7 @@ let l = [
                 },
             ],
             angle: 148.71,
-            getName: () => s.intl.string(s.t.Bf294R),
+            getName: () => s.intl.string(s.t.Bf294e),
             midpointPercentage: 61,
         },
         {
@@ -405,7 +405,7 @@ let l = [
                 },
             ],
             angle: 180,
-            getName: () => s.intl.string(s.t["p+XCta"]),
+            getName: () => s.intl.string(s.t["p+XCtb"]),
             midpointPercentage: 50,
         },
         {
@@ -427,7 +427,7 @@ let l = [
                 },
             ],
             angle: 161.03,
-            getName: () => s.intl.string(s.t["d5Ar+j"]),
+            getName: () => s.intl.string(s.t["d5Ar+v"]),
             midpointPercentage: 32,
         },
         {
@@ -457,7 +457,7 @@ let l = [
                 },
             ],
             angle: 239.16,
-            getName: () => s.intl.string(s.t.Je1FWC),
+            getName: () => s.intl.string(s.t.Je1FWF),
             midpointPercentage: 34,
         },
         {
@@ -475,7 +475,7 @@ let l = [
                 },
             ],
             angle: 69.98,
-            getName: () => s.intl.string(s.t["Z+Un40"]),
+            getName: () => s.intl.string(s.t["Z+Un4+"]),
             midpointPercentage: 50,
         },
     ],
@@ -494,7 +494,7 @@ let l = [
             },
         ],
         angle: 47.61,
-        getName: () => s.intl.string(s.t.Mfoe3p),
+        getName: () => s.intl.string(s.t.Mfoe3t),
         midpointPercentage: 50,
     },
     f = [
@@ -516,7 +516,7 @@ let l = [
                 },
             ],
             angle: 180,
-            getName: () => s.intl.string(s.t.mFinbb),
+            getName: () => s.intl.string(s.t.mFinbW),
             midpointPercentage: 50,
         },
     ];

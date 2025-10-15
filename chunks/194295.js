@@ -10,7 +10,7 @@ var i = n(278323),
     u = n(388032);
 function p(e, t, n, p) {
     let h = t.username,
-        f = u.intl.format(u.t.VDODnv, {
+        f = u.intl.format(u.t.VDODnp, {
             username: "",
             game: n.name,
         }),
@@ -25,9 +25,9 @@ function p(e, t, n, p) {
         icon: g,
         title: h,
         body: f,
-        hint: (e) => (0, o.QR)(e, (0, a.P)(), u.t.Odi54y),
-        confirmText: u.intl.string(u.t["fgP/wX"]),
-        cancelText: u.intl.string(u.t["tpXzJ+"]),
+        hint: (e) => (0, o.QR)(e, (0, a.P)(), u.t["Odi54+"]),
+        confirmText: u.intl.string(u.t["fgP/wc"]),
+        cancelText: u.intl.string(u.t.tpXzJy),
         onNotificationShow: () => {
             m();
         },

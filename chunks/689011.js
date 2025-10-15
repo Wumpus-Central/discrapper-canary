@@ -38,7 +38,7 @@ let h = (e) => {
                       (0, r.jsx)(i.P3F, {
                           className: f.closeContainer,
                           onClick: () => n(),
-                          "aria-label": d.intl.string(d.t.cpT0Cq),
+                          "aria-label": d.intl.string(d.t.cpT0Cg),
                           children: (0, r.jsx)(i.Dio, {
                               size: "md",
                               color: "currentColor",
@@ -98,19 +98,19 @@ function g(e) {
                 className: f.confirmationTitle,
                 variant: "heading-xl/extrabold",
                 color: "header-primary",
-                children: d.intl.format(d.t.wLFT6z, { tier: t }),
+                children: d.intl.format(d.t["wLFT6+"], { tier: t }),
             }),
             (0, r.jsx)(i.Text, {
                 className: f.confirmationSubtitle,
                 variant: "text-md/medium",
                 color: "header-secondary",
-                children: d.intl.format(d.t.OsAK9h, { timestamp: null == a ? void 0 : a.currentPeriodEnd }),
+                children: d.intl.format(d.t.OsAK9v, { timestamp: null == a ? void 0 : a.currentPeriodEnd }),
             }),
             (0, r.jsx)(l.O3, {
                 children: (0, r.jsx)(s.Z, {
                     onPrimary: n,
                     primaryCTA: s.g.CONTINUE,
-                    primaryText: d.intl.string(d.t["JtWl+a"]),
+                    primaryText: d.intl.string(d.t["JtWl+f"]),
                 }),
             }),
         ],

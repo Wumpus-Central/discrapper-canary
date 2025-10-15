@@ -107,7 +107,7 @@ function k(e) {
                 b = null != (p = a.name) ? p : "";
             if ("" === b && d) {
                 let e = j(t, n);
-                b = "" !== e ? e : w.intl.string(w.t["7Xm5QI"]);
+                b = "" !== e ? e : w.intl.string(w.t["7Xm5QE"]);
             }
             let y = (0, S.WD)(t),
                 O = g.Z.getChannel(I.default.castMessageIdAsChannelId(n)),
@@ -224,8 +224,8 @@ async function Z(e, t, n, r) {
         (i = await r()),
             null == i.body
                 ? o.Z.show({
-                      title: w.intl.string(w.t.j2d6Km),
-                      body: w.intl.string(w.t.fEptJP),
+                      title: w.intl.string(w.t.j2d6Ki),
+                      body: w.intl.string(w.t.fEptJC),
                   })
                 : (a.Z.dispatch({
                       type: "SLOWMODE_RESET_COOLDOWN",
@@ -240,13 +240,13 @@ async function Z(e, t, n, r) {
         var c, f, p, m, E, b, v, I, T;
         if ((null == (c = r.body) ? void 0 : c.code) === R.evJ.TOO_MANY_THREADS)
             o.Z.show({
-                title: s ? w.intl.string(w.t.vWNFkx) : w.intl.string(w.t["1KEdvB"]),
-                body: s ? w.intl.string(w.t.KGaiEK) : w.intl.string(w.t.P0wT5S),
+                title: s ? w.intl.string(w.t.vWNFk5) : w.intl.string(w.t["1KEdvL"]),
+                body: s ? w.intl.string(w.t.KGaiEB) : w.intl.string(w.t.P0wT5e),
             });
         else if ((null == (f = r.body) ? void 0 : f.code) === R.evJ.TOO_MANY_ANNOUNCEMENT_THREADS)
             o.Z.show({
-                title: w.intl.string(w.t["1KEdvB"]),
-                body: w.intl.string(w.t.jDMxz2),
+                title: w.intl.string(w.t["1KEdvL"]),
+                body: w.intl.string(w.t.jDMxz8),
             });
         else if ((null == (p = r.body) ? void 0 : p.code) === R.evJ.SLOWMODE_RATE_LIMITED) {
             let t = null != (b = r.body.retry_after) ? b : 0;
@@ -259,8 +259,8 @@ async function Z(e, t, n, r) {
                 });
         } else if (429 === r.status)
             o.Z.show({
-                title: s ? w.intl.string(w.t.vWNFkx) : w.intl.string(w.t["1KEdvB"]),
-                body: w.intl.string(w.t.Whhv4w),
+                title: s ? w.intl.string(w.t.vWNFk5) : w.intl.string(w.t["1KEdvL"]),
+                body: w.intl.string(w.t["Whhv4+"]),
             });
         else if (N.fZ.has(null == (m = r.body) ? void 0 : m.code)) throw r;
         else if (N.RN.has(null == (E = r.body) ? void 0 : E.code)) {
@@ -301,8 +301,8 @@ async function Z(e, t, n, r) {
             });
         } else
             o.Z.show({
-                title: w.intl.string(w.t.j2d6Km),
-                body: w.intl.string(w.t.fEptJP),
+                title: w.intl.string(w.t.j2d6Ki),
+                body: w.intl.string(w.t.fEptJC),
             });
     }
     let S = await new Promise((e, t) => {

@@ -19,8 +19,8 @@ var r = n(951288),
     O = n(131951),
     h = n(594174),
     x = n(626135),
-    _ = n(111361),
-    P = n(74538),
+    P = n(111361),
+    _ = n(74538),
     w = n(743498),
     C = n(967021),
     E = n(709706),
@@ -28,14 +28,14 @@ var r = n(951288),
     T = n(358820),
     S = n(448697),
     N = n(946196),
-    Z = n(365831),
-    D = n(639539),
+    D = n(365831),
+    Z = n(639539),
     k = n(627325),
     M = n(981631),
     A = n(354459),
     R = n(474936),
-    L = n(65154),
-    V = n(179288),
+    V = n(65154),
+    L = n(696162),
     F = n(388032),
     U = n(640292);
 function Y(e) {
@@ -84,18 +84,18 @@ function H(e, t) {
 function z(e) {
     let { onSettingsButtonClick: t, wide: n, showOutputDevices: o = !1, showSearchBar: z = !0 } = e,
         [B, q] = i.useState(""),
-        { analyticsLocations: W, newestAnalyticsLocation: X } = (0, m.ZP)(p.Z.VOICE_FILTER_POPOUT),
-        G = i.useRef(null),
-        K = (0, d.Z)({
+        { analyticsLocations: W, newestAnalyticsLocation: K } = (0, m.ZP)(p.Z.VOICE_FILTER_POPOUT),
+        X = i.useRef(null),
+        G = (0, d.Z)({
             minDimension: 400,
             maxDimension: 600,
-            resizableDomNodeRef: G,
+            resizableDomNodeRef: X,
             onElementResize: (e, t) => {},
             onElementResizeEnd: (e) => {},
             orientation: d.y.VERTICAL_TOP,
         });
-    (0, F.useSyncMessages)(V.messagesLoader);
-    let Q = (0, s.e7)([h.default], () => (0, _.I5)(h.default.getCurrentUser())),
+    (0, F.useSyncMessages)(L.messagesLoader);
+    let Q = (0, s.e7)([h.default], () => (0, P.I5)(h.default.getCurrentUser())),
         J = (0, s.e7)([E.Z], () => E.Z.getCatalogUpdateTime()),
         [$, ee] = i.useState(!1),
         [et, en] = i.useState(!1),
@@ -145,7 +145,7 @@ function z(e) {
     return (0, r.jsx)(m.Gt, {
         value: W,
         children: (0, r.jsxs)("div", {
-            ref: G,
+            ref: X,
             className: l()(U.voiceFiltersPopout, {
                 [U.wide]: n,
                 [U.notResizable]: !ed,
@@ -155,12 +155,12 @@ function z(e) {
                 ed &&
                     (0, r.jsx)("div", {
                         className: U.resizeHandle,
-                        onMouseDown: K,
+                        onMouseDown: G,
                         children: (0, r.jsx)("div", { className: U.resizePill }),
                     }),
                 z &&
                     (0, r.jsx)(c.E1j, {
-                        placeholder: F.intl.string(F.t.hHCZJQ),
+                        placeholder: F.intl.string(F.t.hHCZJS),
                         autoFocus: !0,
                         onChange: q,
                         query: B,
@@ -185,7 +185,7 @@ function z(e) {
                             null != J &&
                                 (0, r.jsx)(a.animated.div, {
                                     style: eo,
-                                    children: (0, r.jsx)(D.J, {
+                                    children: (0, r.jsx)(Z.J, {
                                         catalogUpdateTime: J,
                                         isScrolled: $,
                                     }),
@@ -199,11 +199,11 @@ function z(e) {
                                     },
                                     children: (0, r.jsx)(y.p, {
                                         showUpsell: !0,
-                                        text: F.intl.format(F.t.XMDm8z, {
-                                            nitroTierName: (0, P.Px)(R.PremiumTypes.TIER_2),
+                                        text: F.intl.format(F.t["XMDm8/"], {
+                                            nitroTierName: (0, _.Px)(R.PremiumTypes.TIER_2),
                                             onClick: () => (0, j.i)(),
                                         }),
-                                        button: F.intl.string(F.t.cRCCJ3),
+                                        button: F.intl.string(F.t.cRCCJy),
                                         buttonAnalyticsObject: { section: M.jXE.VOICE_FILTERS_FLOATING_UPSELL },
                                         showShadow: !1,
                                         position: "inline",
@@ -218,12 +218,12 @@ function z(e) {
                     }),
                 (0, r.jsx)(N.l, {}),
                 (0, r.jsx)(S.R, {}),
-                (0, r.jsx)(Z.y, {}),
+                (0, r.jsx)(D.y, {}),
                 (0, r.jsxs)("div", {
                     className: l()(U.voiceFiltersFooter, { [U.hasActiveVoice]: null != er }),
                     children: [
                         (0, r.jsx)(v.j, {
-                            deviceType: L.h7.AUDIO_INPUT,
+                            deviceType: V.h7.AUDIO_INPUT,
                             location: "VoiceFiltersPopout",
                             onOpen: () => {
                                 var e;
@@ -235,7 +235,7 @@ function z(e) {
                         }),
                         o &&
                             (0, r.jsx)(v.j, {
-                                deviceType: L.h7.AUDIO_OUTPUT,
+                                deviceType: V.h7.AUDIO_OUTPUT,
                                 location: "VoiceFiltersPopout",
                                 popoutPosition: "top",
                             }),
@@ -251,7 +251,7 @@ function z(e) {
                                     renderOutputDevices: o,
                                     renderOutputVolume: o,
                                     onClose: t,
-                                    onInteraction: (0, b.u)("AudioDeviceMenu", X, { entrypoint: A.A5.THREE_DOT }),
+                                    onInteraction: (0, b.u)("AudioDeviceMenu", K, { entrypoint: A.A5.THREE_DOT }),
                                     minimal: !0,
                                 }),
                             children: (e) =>
@@ -267,7 +267,7 @@ function z(e) {
                                             }),
                                                 null == (n = e.onClick) || n.call(e, t);
                                         },
-                                        "aria-label": F.intl.string(F.t["ClGM/G"]),
+                                        "aria-label": F.intl.string(F.t["ClGM/P"]),
                                     }),
                                 ),
                         }),

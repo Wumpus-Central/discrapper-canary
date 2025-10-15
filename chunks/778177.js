@@ -286,7 +286,7 @@ function en(e) {
                 d,
             ),
             {
-                "aria-label": G.intl.formatToPlainString(G.t.WoiGrV, { suggestion: f }),
+                "aria-label": G.intl.formatToPlainString(G.t.WoiGra, { suggestion: f }),
                 children: [
                     _,
                     (0, r.jsx)(h.qJs, {
@@ -301,22 +301,22 @@ function en(e) {
 }
 let er = {
     [U.dCx.FILTER_FROM]: {
-        titleText: () => G.intl.string(G.t.catERA),
+        titleText: () => G.intl.string(G.t.catERE),
         component: $,
     },
     [U.dCx.FILTER_MENTIONS]: {
-        titleText: () => G.intl.string(G.t["l3K4B/"]),
+        titleText: () => G.intl.string(G.t.l3K4Bw),
         component: $,
     },
-    [U.dCx.FILTER_HAS]: { titleText: () => G.intl.string(G.t.IC7gHM) },
-    [U.dCx.FILTER_FILE_TYPE]: { titleText: () => G.intl.string(G.t.SXIfVw) },
+    [U.dCx.FILTER_HAS]: { titleText: () => G.intl.string(G.t.IC7gHB) },
+    [U.dCx.FILTER_FILE_TYPE]: { titleText: () => G.intl.string(G.t.SXIfV1) },
     [U.dCx.FILTER_IN]: {
-        titleText: () => G.intl.string(G.t.vHyCgl),
+        titleText: () => G.intl.string(G.t.vHyCgo),
         component: ee,
     },
-    [U.rtL.DATES]: { titleText: () => G.intl.string(G.t.UiL5ey) },
+    [U.rtL.DATES]: { titleText: () => G.intl.string(G.t.UiL5e3) },
     [U.rtL.HISTORY]: {
-        titleText: () => G.intl.string(G.t.tSZd5c),
+        titleText: () => G.intl.string(G.t.tSZd5e),
         groupTip(e) {
             let { searchContext: t } = e;
             return (0, r.jsx)(p.u, {
@@ -339,16 +339,16 @@ let er = {
         component: en,
     },
     [U.rtL.SEARCH_OPTIONS]: {
-        titleText: () => G.intl.string(G.t["8Zkyw+"]),
+        titleText: () => G.intl.string(G.t["8Zkyw8"]),
         groupTip: () =>
             (0, r.jsx)(p.u, {
-                text: G.intl.string(G.t.hvVgAZ),
+                text: G.intl.string(G.t.hvVgAQ),
                 position: "left",
                 children: (0, r.jsx)("div", {
                     className: B.searchLearnMore,
                     children: (0, r.jsx)(h.Anchor, {
                         href: C.Z.getArticleURL(U.BhN.USING_SEARCH),
-                        title: G.intl.string(G.t.hvVgAZ),
+                        title: G.intl.string(G.t.hvVgAQ),
                         children: (0, r.jsx)(h.idN, {
                             size: "md",
                             color: "currentColor",
@@ -622,7 +622,7 @@ class ei extends i.PureComponent {
                             children: [
                                 (0, r.jsxs)("span", {
                                     className: B.hint,
-                                    children: [G.intl.string(G.t.fmtCi3), "\xA0"],
+                                    children: [G.intl.string(G.t.fmtCi4), "\xA0"],
                                 }),
                                 (0, r.jsx)(h.P3F, {
                                     tag: "span",

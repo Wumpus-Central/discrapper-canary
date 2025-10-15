@@ -13,14 +13,14 @@ let i = function (e) {
         children: [
             (0, r.jsx)(s.Button, {
                 onClick: t,
-                text: a.intl.string(a.t["QXc01+"]),
+                text: a.intl.string(a.t.QXc019),
                 variant: "secondary",
                 icon: s.pzj,
                 iconPosition: "end",
             }),
             (0, r.jsx)(s.Button, {
                 onClick: n,
-                text: a.intl.string(a.t["8lAfuB"]),
+                text: a.intl.string(a.t["8lAfuL"]),
                 variant: "secondary",
                 icon: s.iWm,
                 iconPosition: "end",

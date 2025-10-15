@@ -5,7 +5,7 @@ var r = n(951288),
     o = n.n(a),
     s = n(692547),
     l = n(481060),
-    c = n(47280),
+    c = n(283066),
     u = n(697426),
     d = n(603074),
     f = n(388032),
@@ -15,7 +15,7 @@ function h(e) {
     let { onSelect: t, sound: n } = e,
         [a, h] = i.useState(!1),
         m = i.useRef(null),
-        g = (0, c.ZP)({ location: "GiftSoundboard" }),
+        g = (0, c.Z)({ location: "GiftSoundboard" }),
         E = o()(_.text, g && _.refresh);
     function b(e) {
         h(!1), null == t || t(e);

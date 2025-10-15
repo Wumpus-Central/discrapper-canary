@@ -12,15 +12,15 @@ let p = 0,
     h = (e) => {
         switch (e) {
             case a._vf.TOP_LEFT:
-                return c.intl.string(c.t.xlchpU);
+                return c.intl.string(c.t.xlchpa);
             case a._vf.TOP_RIGHT:
-                return c.intl.string(c.t["4uHRHH"]);
+                return c.intl.string(c.t["4uHRHB"]);
             case a._vf.BOTTOM_LEFT:
-                return c.intl.string(c.t.ovWFnD);
+                return c.intl.string(c.t.ovWFnJ);
             case a._vf.BOTTOM_RIGHT:
-                return c.intl.string(c.t["M/9V75"]);
+                return c.intl.string(c.t["M/9V7+"]);
             default:
-                return c.intl.string(c.t.AlY4Za);
+                return c.intl.string(c.t.AlY4ZW);
         }
     },
     f = [a._vf.DISABLED, a._vf.TOP_LEFT, a._vf.TOP_RIGHT, a._vf.BOTTOM_LEFT, a._vf.BOTTOM_RIGHT];
@@ -29,8 +29,8 @@ function g(e) {
         [s] = r.useState(() => "notification-position-selector-".concat(p++)),
         g =
             t === a._vf.DISABLED
-                ? c.intl.string(c.t.R6LxVf)
-                : c.intl.formatToPlainString(c.t["XXHDM/"], { position: h(t) });
+                ? c.intl.string(c.t.R6LxVV)
+                : c.intl.formatToPlainString(c.t.XXHDMz, { position: h(t) });
     return (0, i.jsxs)("div", {
         children: [
             (0, i.jsx)(l.tEY, {

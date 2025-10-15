@@ -42,29 +42,29 @@ function p(e) {
         }, []),
         (0, n.jsx)(i.Z, {
             modalType: "video_background",
-            header: s.intl.string(s.t.Wl8qXg),
-            body: s.intl.string(s.t.vPw6j0),
-            problemTitle: s.intl.string(s.t.UNFF85),
+            header: s.intl.string(s.t.Wl8qXl),
+            body: s.intl.string(s.t.vPw6j4),
+            problemTitle: s.intl.string(s.t["UNFF8/"]),
             problems: [
                 {
                     value: "BAD_OUTLINE",
-                    label: s.intl.string(s.t.pyhS3j),
+                    label: s.intl.string(s.t.pyhS3t),
                 },
                 {
                     value: "BACKGROUND_DETECTION_ACCURACY",
-                    label: s.intl.string(s.t.cymRTb),
+                    label: s.intl.string(s.t.cymRTU),
                 },
                 {
                     value: "FLICKERING",
-                    label: s.intl.string(s.t.xZ60CB),
+                    label: s.intl.string(s.t.xZ60CA),
                 },
                 {
                     value: "BACKGROUND_DETECTION_LAG",
-                    label: s.intl.string(s.t.DweTcb),
+                    label: s.intl.string(s.t.DweTcX),
                 },
                 {
                     value: "OTHER",
-                    label: s.intl.string(s.t.emlT91),
+                    label: s.intl.string(s.t["emlT9/"]),
                 },
             ],
             freeformNeededProblems: d,
@@ -104,7 +104,7 @@ function p(e) {
                         null != f &&
                             (0, c.ZDy)(async () => {
                                 let { default: e } = await o.e("14466").then(o.bind(o, 729328));
-                                return (t) => (0, n.jsx)(e, u({ body: s.intl.string(s.t.aHB11f) }, t));
+                                return (t) => (0, n.jsx)(e, u({ body: s.intl.string(s.t.aHB11d) }, t));
                             }));
             },
             onClose: m,

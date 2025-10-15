@@ -33,11 +33,11 @@ function p(l) {
                       className: E.card,
                       children: (0, t.jsx)(u.Text, {
                           variant: "text-md/normal",
-                          children: C.intl.string(C.t.dq3At2),
+                          children: C.intl.string(C.t.dq3At7),
                       }),
                   }),
             (0, t.jsx)(u.oil, {
-                label: n ? C.intl.string(C.t.EyA4q5) : C.intl.string(C.t["621LJD"]),
+                label: n ? C.intl.string(C.t.EyA4q6) : C.intl.string(C.t["621LJC"]),
                 disabled: n,
                 inputRef: x,
                 maxLength: v.l$U,
@@ -61,7 +61,7 @@ function p(l) {
                       size: s.zx.Sizes.NONE,
                       onClick: h,
                       className: E.reset,
-                      children: C.intl.string(C.t.aE02Rz),
+                      children: C.intl.string(C.t.aE02R0),
                   })
                 : null,
         ],
@@ -83,7 +83,7 @@ let j = function (l) {
         }),
         [_, y] = r.useState(!1),
         [I, M] = r.useState(null != (n = null == A ? void 0 : A.nick) ? n : ""),
-        [Z, z] = r.useState({});
+        [Z, P] = r.useState({});
     (0, d.ZP)(() => {
         m.default.track(v.rMx.OPEN_MODAL, {
             type: "Change Server Identity",
@@ -95,7 +95,7 @@ let j = function (l) {
             location: null == b ? void 0 : b[0],
             targetUserId: s.id,
         }),
-        P = r.useCallback(
+        S = r.useCallback(
             async (l) => {
                 var n, e, t, r, i, u, d, x, h;
                 l.preventDefault();
@@ -122,29 +122,29 @@ let j = function (l) {
                         ? (l =
                               (null == (u = n.nick) || null == (i = u._errors) || null == (r = i[0])
                                   ? void 0
-                                  : r.message) || C.intl.string(C.t.xex86n))
+                                  : r.message) || C.intl.string(C.t.xex86u))
                         : (null == n ? void 0 : n.username) != null &&
                           (l =
                               (null == (h = n.username) || null == (x = h._errors) || null == (d = x[0])
                                   ? void 0
-                                  : d.message) || C.intl.string(C.t.xex86n)),
-                        z({ nick: l });
+                                  : d.message) || C.intl.string(C.t.xex86u)),
+                        P({ nick: l });
                 }
             },
             [c, I, k, s, A, G],
         );
     return (0, t.jsx)(u.Y0X, {
-        "aria-label": C.intl.string(C.t["PKQB/H"]),
+        "aria-label": C.intl.string(C.t["PKQB/P"]),
         transitionState: e,
         parentComponent: "ChangeGuildIdentity",
         children: (0, t.jsxs)("form", {
-            onSubmit: P,
+            onSubmit: S,
             children: [
                 (0, t.jsx)(u.xBx, {
                     separator: !1,
                     children: (0, t.jsx)(u.Heading, {
                         variant: "heading-lg/semibold",
-                        children: C.intl.string(C.t.dilOF6),
+                        children: C.intl.string(C.t.dilOFx),
                     }),
                 }),
                 (0, t.jsx)(u.hzk, {
@@ -164,13 +164,13 @@ let j = function (l) {
                         children: [
                             (0, t.jsx)(u.Button, {
                                 variant: "primary",
-                                text: C.intl.string(C.t["R3BPH+"]),
+                                text: C.intl.string(C.t.R3BPHx),
                                 type: "submit",
                                 disabled: _,
                             }),
                             (0, t.jsx)(u.Button, {
                                 variant: "secondary",
-                                text: C.intl.string(C.t["ETE/oC"]),
+                                text: C.intl.string(C.t["ETE/oK"]),
                                 onClick: k,
                             }),
                         ],

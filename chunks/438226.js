@@ -10,13 +10,13 @@ var r = n(5192),
     i = n(561308),
     a = n(388032);
 let o = (e, t) =>
-        a.intl.formatToPlainString(a.t.tAwI1k, {
+        a.intl.formatToPlainString(a.t.tAwI1t, {
             username: t.username,
             activity: e.extra.game_name,
         }),
     s = (e) => {
         let t = (0, i.kr)(e);
-        return (0, i.Ol)(e) ? (t ? a.t.MHO1AV : a.t.i7AOzw) : t ? a.t["lLPKY+"] : a.t["bES+y2"];
+        return (0, i.Ol)(e) ? (t ? a.t.MHO1AQ : a.t.i7AOz8) : t ? a.t.lLPKY2 : a.t["bES+y8"];
     },
     l = (e, t, n) => {
         let i = s(e),
@@ -31,7 +31,7 @@ let o = (e, t) =>
     },
     c = (e) => {
         let { entry: t, channel: n, users: o, countOthers: s } = e,
-            l = (0, i.kr)(t) ? a.t.QaUWPd : a.t["7j/5mg"];
+            l = (0, i.kr)(t) ? a.t.QaUWPT : a.t["7j/5mp"];
         return a.intl
             .formatToMarkdownString(l, {
                 gameName: t.extra.game_name,

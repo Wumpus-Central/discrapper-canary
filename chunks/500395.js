@@ -17,7 +17,7 @@ function g(e) {
             (0, r.jsx)("img", {
                 className: d.__invalid_heroBanner,
                 src: u,
-                alt: c.intl.string(c.t.Af4klP),
+                alt: c.intl.string(c.t.Af4klJ),
             }),
             (0, r.jsxs)("div", {
                 className: d.__invalid_ctaContent,
@@ -25,13 +25,13 @@ function g(e) {
                     (0, r.jsx)(l.Heading, {
                         variant: "heading-xl/semibold",
                         color: "header-primary",
-                        children: c.intl.string(c.t["PqYfh/"]),
+                        children: c.intl.string(c.t.PqYfh4),
                     }),
                     (0, r.jsx)(l.LZC, { size: 12 }),
                     (0, r.jsx)(l.Text, {
                         variant: "text-md/normal",
                         color: "header-secondary",
-                        children: c.intl.string(c.t["41wkMc"]),
+                        children: c.intl.string(c.t["41wkMT"]),
                     }),
                     (0, r.jsx)(l.LZC, { size: 24 }),
                     (0, r.jsx)(l.Wn, {

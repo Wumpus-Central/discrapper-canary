@@ -1,0 +1,3 @@
+a.exports = JSON.parse(
+    '{"+utqa2":["Hediye Arka Planı Seçeneği: ",[1,"giftStyle"]],"B9XqQk":"Kutu","AJ4iio":"Pasta","P5keo6":"Sandık","w84vER":"Kahve","6dCq/v":"Kupa","+HMF8v":"Nitrocadı","vd1fu7":"Yılbaşı Kutusu","aubYGR":"Yılbaşı Pastası","vjxYqa":"Yılbaşı Sandığı","bHuJLS":"Yılbaşı Kahvesi","M6cPwM":"Kar Küresi","GzPel5":"Kutu"}',
+);

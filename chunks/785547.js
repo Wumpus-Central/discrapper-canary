@@ -102,20 +102,20 @@ let L = Object.freeze({
         [S.apO.RESUME]: "paused",
     }),
     x = () => [
-        A.intl.string(A.t.r9wmKn),
-        A.intl.string(A.t["6CpimS"]),
-        A.intl.string(A.t.ysbNDc),
-        A.intl.string(A.t["TLnXx/"]),
-        A.intl.string(A.t.Qi8mne),
-        A.intl.string(A.t.yvMu3S),
-        A.intl.string(A.t["PnNUZ/"]),
-        A.intl.string(A.t.hU2TEJ),
-        A.intl.string(A.t["YyY51/"]),
-        A.intl.string(A.t.PbHJb3),
+        A.intl.string(A.t.r9wmKi),
+        A.intl.string(A.t["6CpimZ"]),
+        A.intl.string(A.t.ysbNDQ),
+        A.intl.string(A.t.TLnXx8),
+        A.intl.string(A.t.Qi8mnZ),
+        A.intl.string(A.t.yvMu3d),
+        A.intl.string(A.t.PnNUZ2),
+        A.intl.string(A.t.hU2TEB),
+        A.intl.string(A.t.YyY519),
+        A.intl.string(A.t.PbHJb2),
     ];
 function M(e) {
     let t = v.en(e.sku);
-    return null != t ? A.intl.formatToPlainString(A.t.Aqe2ZC, { date: t }) : null;
+    return null != t ? A.intl.formatToPlainString(A.t.Aqe2ZG, { date: t }) : null;
 }
 class j extends (r = a.Component) {
     get analyticsLocation() {
@@ -125,13 +125,13 @@ class j extends (r = a.Component) {
         switch (("uninstalling" !== e && (this._uninstallStringIndex = null), e)) {
             case "install":
             case "unsupported_os":
-                return A.intl.string(A.t.nL0WvC);
+                return A.intl.string(A.t.nL0WvL);
             case "update":
-                return A.intl.string(A.t.tkhwp9);
+                return A.intl.string(A.t.tkhwp6);
             case "paused":
                 return A.intl.string(A.t["6EKrh4"]);
             case "locate":
-                return A.intl.string(A.t["nIj+a0"]);
+                return A.intl.string(A.t["nIj+a2"]);
             case "uninstalling":
                 let t = x();
                 return (
@@ -140,13 +140,13 @@ class j extends (r = a.Component) {
                     t[this._uninstallStringIndex]
                 );
             case "queued":
-                return A.intl.string(A.t.TiJg5l);
+                return A.intl.string(A.t.TiJg5u);
             case "downloading":
-                return A.intl.string(A.t.Tdhepf);
+                return A.intl.string(A.t.Tdhepa);
             case "preorder_wait":
-                return A.intl.string(A.t.xiXyPc);
+                return A.intl.string(A.t.xiXyPT);
             case "add_to_library":
-                return A.intl.string(A.t.r3fwuQ);
+                return A.intl.string(A.t.r3fwub);
             default:
                 throw Error("Unexpected button state");
         }
@@ -246,9 +246,9 @@ class j extends (r = a.Component) {
         if ("unsupported_os" === n)
             return this.renderDisabledButton(
                 n,
-                A.intl.formatToPlainString(A.t.LBm0A4, { operatingSystem: A.intl.string(A.t["0/xHFO"]) }),
+                A.intl.formatToPlainString(A.t.LBm0Aw, { operatingSystem: A.intl.string(A.t["0/xHFB"]) }),
             );
-        if ("install" === n && e) return this.renderDisabledButton(n, A.intl.string(A.t.QUSQIA));
+        if ("install" === n && e) return this.renderDisabledButton(n, A.intl.string(A.t.QUSQIC));
         let r = this.onClickHandlers[n];
         return null == r ? this.renderDisabledButton(n) : this.renderActionButton(n, r);
     }

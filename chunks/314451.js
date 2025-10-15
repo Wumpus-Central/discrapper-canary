@@ -52,12 +52,12 @@ function _(e) {
         navId: "staff-help-popout",
         variant: "fixed",
         onClose: t,
-        "aria-label": g.intl.string(g.t.HpQykc),
+        "aria-label": g.intl.string(g.t.HpQykZ),
         children: (0, r.jsxs)(a.kSQ, {
             children: [
                 (0, r.jsx)(a.sNh, {
                     id: "staff-help-bug-reporter",
-                    label: g.intl.string(g.t["5LqopY"]),
+                    label: g.intl.string(g.t["5Lqopa"]),
                     icon: a.nnZ,
                     action: b,
                 }),
@@ -123,7 +123,7 @@ function O(e) {
                             ref: f,
                             onClick: b,
                             icon: a.nnZ,
-                            "aria-label": g.intl.string(g.t["cqEoj/"]),
+                            "aria-label": g.intl.string(g.t.cqEoj4),
                             selected: l,
                             className: t,
                         },

@@ -1,57 +1,57 @@
-t.d(n, { Z: () => u });
-var a = t(951288);
-t(647438);
-var o = t(780384),
-    r = t(481060),
-    i = t(410030),
-    l = t(388032),
-    s = t(597412),
-    d = t(167969),
-    c = t(557256);
+n.d(t, { Z: () => u });
+var a = n(951288);
+n(647438);
+var r = n(780384),
+    o = n(481060),
+    i = n(410030),
+    s = n(388032),
+    d = n(597412),
+    l = n(167969),
+    c = n(557256);
 let u = function (e) {
-    let { onClose: n } = e,
-        t = (0, i.ZP)(),
-        u = (0, o.wj)(t);
+    let { onClose: t } = e,
+        n = (0, i.ZP)(),
+        u = (0, r.wj)(n);
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, a.jsxs)(r.xBx, {
+            (0, a.jsxs)(o.xBx, {
                 "data-migration-pending": !0,
                 separator: !1,
-                className: s.header,
+                className: d.header,
                 children: [
                     (0, a.jsx)("img", {
                         alt: "",
-                        className: s.headerImage,
-                        src: u ? d : c,
+                        className: d.headerImage,
+                        src: u ? l : c,
                     }),
-                    (0, a.jsx)(r.Heading, {
-                        className: s.title,
+                    (0, a.jsx)(o.Heading, {
+                        className: d.title,
                         variant: "heading-xl/medium",
-                        children: l.intl.string(l.t["tWYWJ+"]),
+                        children: s.intl.string(s.t.tWYWJy),
                     }),
-                    (0, a.jsx)(r.olH, {
+                    (0, a.jsx)(o.olH, {
                         "data-migration-pending": !0,
-                        onClick: n,
-                        className: s.modalCloseButton,
+                        onClick: t,
+                        className: d.modalCloseButton,
                     }),
                 ],
             }),
-            (0, a.jsx)(r.hzk, {
+            (0, a.jsx)(o.hzk, {
                 "data-migration-pending": !0,
-                className: s.content,
+                className: d.content,
                 scrollbarType: "none",
-                children: (0, a.jsx)(r.Text, {
+                children: (0, a.jsx)(o.Text, {
                     variant: "text-md/normal",
-                    children: l.intl.string(l.t.JNQRU4),
+                    children: s.intl.string(s.t.JNQRU1),
                 }),
             }),
-            (0, a.jsx)(r.mzw, {
+            (0, a.jsx)(o.mzw, {
                 "data-migration-pending": !0,
-                className: s.modalFooter,
-                children: (0, a.jsx)(r.Button, {
+                className: d.modalFooter,
+                children: (0, a.jsx)(o.Button, {
                     variant: "primary",
-                    text: l.intl.string(l.t.cpT0Cq),
-                    onClick: n,
+                    text: s.intl.string(s.t.cpT0Cg),
+                    onClick: t,
                 }),
             }),
         ],

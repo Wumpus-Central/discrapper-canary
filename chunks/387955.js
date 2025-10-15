@@ -25,19 +25,19 @@ function f(e) {
                 className: m.title,
                 color: "header-primary",
                 variant: "heading-xl/bold",
-                children: d.intl.format(d.t["au+lPv"], { n: t.tag }),
+                children: d.intl.format(d.t["au+lPj"], { n: t.tag }),
             }),
             (0, r.jsx)(o.Text, {
                 className: m.subtitleInfo,
                 color: "header-secondary",
                 variant: "text-md/medium",
-                children: d.intl.format(d.t["5fwX56"], {}),
+                children: d.intl.format(d.t["5fwX5+"], {}),
             }),
             (0, r.jsx)(o.Text, {
                 className: m.prompt,
                 color: "header-secondary",
                 variant: "text-sm/medium",
-                children: d.intl.format(d.t.i2vB8z, { helpdeskArticle: s.Z.getArticleURL(u.BhN.POMELO_FAQ) }),
+                children: d.intl.format(d.t["i2vB8/"], { helpdeskArticle: s.Z.getArticleURL(u.BhN.POMELO_FAQ) }),
             }),
             (0, r.jsxs)("div", {
                 className: a()([m.infoItem, m.infoItemSpacing]),
@@ -54,7 +54,7 @@ function f(e) {
                     (0, r.jsx)(o.Text, {
                         color: "header-secondary",
                         variant: "text-sm/medium",
-                        children: d.intl.format(d.t.SzUaZ1, {}),
+                        children: d.intl.format(d.t.SzUaZ2, {}),
                     }),
                 ],
             }),
@@ -71,7 +71,7 @@ function f(e) {
                     (0, r.jsx)(o.Text, {
                         color: "header-secondary",
                         variant: "text-sm/medium",
-                        children: d.intl.format(d.t["UwPc+G"], {}),
+                        children: d.intl.format(d.t["UwPc+P"], {}),
                     }),
                 ],
             }),
@@ -88,7 +88,7 @@ function f(e) {
                     (0, r.jsx)(o.Text, {
                         color: "header-secondary",
                         variant: "text-sm/medium",
-                        children: d.intl.format(d.t.okLjju, { username: t.tag }),
+                        children: d.intl.format(d.t.okLjjo, { username: t.tag }),
                     }),
                 ],
             }),

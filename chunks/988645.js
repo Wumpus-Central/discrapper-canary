@@ -11,12 +11,12 @@ var l = n(990547),
     c = n(981631),
     b = n(531578),
     f = n(388032),
-    O = n(468430);
+    O = n(805388);
 function v(e) {
     let { onClose: t, transitionState: v, analyticsData: _ } = e,
         { surveyEmojiKind: m } = (0, o.R)({ location: "VoiceCallFeedback" }),
-        E = f.intl.string(f.t.Ss6tlb),
-        p = f.intl.string(f.t.tLi4cR),
+        E = f.intl.string(f.t.Ss6tlZ),
+        p = f.intl.string(f.t.tLi4cX),
         g = {
             impressionName: l.ImpressionNames.VOICE_FEEDBACK_MODAL,
             impressionProperties: {
@@ -26,42 +26,42 @@ function v(e) {
         },
         h = {
             value: b.tX.CONNECTION,
-            label: f.intl.string(O.default.FVhMw6),
-            problemsHeader: f.intl.string(f.t.FJmoxF),
+            label: f.intl.string(O.default.FVhMw8),
+            problemsHeader: f.intl.string(f.t.FJmoxM),
             problemOptions: (0, r.Z1)(),
             freeformConfig: {
                 value: b.T_.FREEFORM,
-                label: f.intl.string(f.t.emlT91),
+                label: f.intl.string(f.t["emlT9/"]),
             },
         },
         S = {
             value: b.tX.AUDIO,
-            label: f.intl.string(O.default.PL2l6A),
-            problemsHeader: f.intl.string(f.t.FJmoxF),
+            label: f.intl.string(O.default.PL2l6O),
+            problemsHeader: f.intl.string(f.t.FJmoxM),
             problemOptions: (0, r.w9)({ isMobile: !1 }),
             freeformConfig: {
                 value: b.b9.FREEFORM,
-                label: f.intl.string(f.t.emlT91),
+                label: f.intl.string(f.t["emlT9/"]),
             },
         },
         j = {
             value: b.tX.VIDEO,
-            label: f.intl.string(O.default["0WFzPh"]),
-            problemsHeader: f.intl.string(f.t.FJmoxF),
+            label: f.intl.string(O.default["0WFzPj"]),
+            problemsHeader: f.intl.string(f.t.FJmoxM),
             problemOptions: (0, r.NX)(),
             freeformConfig: {
                 value: b.ct.FREEFORM,
-                label: f.intl.string(f.t.emlT91),
+                label: f.intl.string(f.t["emlT9/"]),
             },
         },
         y = {
             value: b.tX.PEOPLE,
-            label: f.intl.string(O.default.Moa3W9),
-            problemsHeader: f.intl.string(f.t.FJmoxF),
+            label: f.intl.string(O.default.Moa3W1),
+            problemsHeader: f.intl.string(f.t.FJmoxM),
             problemOptions: (0, r.hP)(),
             freeformConfig: {
                 value: b.s_.FREEFORM,
-                label: f.intl.string(f.t.emlT91),
+                label: f.intl.string(f.t["emlT9/"]),
             },
         };
     return (0, a.jsx)(s.Z, {
@@ -118,7 +118,7 @@ function v(e) {
                                                 });
                                         }
                                         return e;
-                                    })({ body: f.intl.string(f.t["d9+vQ8"]) }, t),
+                                    })({ body: f.intl.string(f.t["d9+vQ0"]) }, t),
                                 );
                         }));
         },
@@ -126,7 +126,7 @@ function v(e) {
         ratingHeader: E,
         ratingEmojiKind: m,
         ratingBody: p,
-        categoriesHeader: f.intl.string(O.default.tq8598),
+        categoriesHeader: f.intl.string(O.default["tq859/"]),
         optionsTree: [h, S, j, y],
         impression: g,
         transitionState: v,

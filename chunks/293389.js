@@ -101,7 +101,7 @@ function B(e) {
     }));
     return (0, r.jsxs)(c.VqE, {
         className: o()(N.addGamePopout, R.elevationBorderHigh),
-        "aria-label": C.intl.string(C.t.GTCx0p),
+        "aria-label": C.intl.string(C.t.GTCx0t),
         children: [
             (0, r.jsx)(c.VcW, {
                 placeholder: C.intl.string(C.t.XqMe3N),
@@ -122,12 +122,12 @@ function B(e) {
                 children: [
                     (0, r.jsx)(c.Avr, {
                         variant: "secondary",
-                        text: C.intl.string(C.t["ETE/oC"]),
+                        text: C.intl.string(C.t["ETE/oK"]),
                         onClick: t,
                     }),
                     (0, r.jsx)(c.Button, {
                         variant: "primary",
-                        text: C.intl.string(C.t.GTCx0p),
+                        text: C.intl.string(C.t.GTCx0t),
                         disabled: null == a,
                         onClick: f,
                     }),
@@ -151,7 +151,7 @@ function Z(e) {
                 (0, E.le)(T)
                     ? v
                         ? T.gameName
-                        : C.intl.formatToPlainString(C.t.G6BGdx, { subgameName: T.gameName })
+                        : C.intl.formatToPlainString(C.t.G6BGd3, { subgameName: T.gameName })
                     : T.name,
             [T, v],
         ),
@@ -187,16 +187,16 @@ function Z(e) {
                       (0, r.jsx)(
                           e,
                           M(L({}, t), {
-                              title: C.intl.formatToPlainString(C.t.PZ4fKc, { platform: G }),
-                              subtitle: C.intl.formatToPlainString(C.t.ZIQbfb, { platform: G }),
+                              title: C.intl.formatToPlainString(C.t.PZ4fKS, { platform: G }),
+                              subtitle: C.intl.formatToPlainString(C.t.ZIQbfX, { platform: G }),
                               actions: [
                                   {
-                                      text: C.intl.string(C.t["ETE/oC"]),
+                                      text: C.intl.string(C.t["ETE/oK"]),
                                       onClick: () => t.onClose(),
                                       variant: "secondary",
                                   },
                                   {
-                                      text: C.intl.string(C.t.Fmjztz),
+                                      text: C.intl.string(C.t.Fmjzt7),
                                       onClick: () => {
                                           u.Z.toggleDetection(T), t.onClose();
                                       },
@@ -237,7 +237,7 @@ function Z(e) {
                   }))
                 : ((0, c.showToast)(
                       (0, c.createToast)(
-                          C.intl.formatToPlainString(C.t["6klMOk"], { gameName: (0, E.le)(T) ? T.gameName : T.name }),
+                          C.intl.formatToPlainString(C.t["6klMOj"], { gameName: (0, E.le)(T) ? T.gameName : T.name }),
                           c.ToastType.SUCCESS,
                       ),
                   ),
@@ -254,7 +254,7 @@ function Z(e) {
                       }),
                       (0, r.jsx)(c.aML, {
                           "data-migration-pending": !0,
-                          text: C.intl.string(C.t["4PJP5p"]),
+                          text: C.intl.string(C.t["4PJP5u"]),
                           children: (e) =>
                               (0, r.jsx)(
                                   m.Z,
@@ -295,8 +295,8 @@ function Z(e) {
             { played: t, exePath: n } = T;
         return (
             a || en
-                ? (e = C.intl.string(C.t.VbV5dv))
-                : null != t && "" !== t && (e = C.intl.format(C.t["gGeOE+"], { when: t })),
+                ? (e = C.intl.string(C.t.VbV5dn))
+                : null != t && "" !== t && (e = C.intl.format(C.t.gGeOEx, { when: t })),
             (0, r.jsx)("div", {
                 className: N.lastPlayed,
                 children: (0, r.jsx)(f.Z, {
@@ -325,7 +325,7 @@ function Z(e) {
             i = t
                 ? (0, r.jsx)(c.aML, {
                       "data-migration-pending": !0,
-                      text: C.intl.string(C.t.Vfw2L5),
+                      text: C.intl.string(C.t.Vfw2Ly),
                       children: (e) => (0, r.jsx)("i", L({ className: N.overlayWarningIcon }, e)),
                   })
                 : null;
@@ -335,12 +335,12 @@ function Z(e) {
                 i,
                 (0, r.jsx)(c.aML, {
                     "data-migration-pending": !0,
-                    text: C.intl.string(C.t["1+O+Tu"]),
+                    text: C.intl.string(C.t["1+O+Tk"]),
                     children: (t) =>
                         (0, r.jsx)(
                             c.P3F,
                             M(L({}, t), {
-                                "aria-label": C.intl.string(C.t["1+O+Tu"]),
+                                "aria-label": C.intl.string(C.t["1+O+Tk"]),
                                 className: N.toggleIcon,
                                 onClick: () => K(!e),
                                 children: n,
@@ -393,12 +393,12 @@ function Z(e) {
                   className: o()(P.flexCenter, P.noWrap, P.justifyBetween, N.toggleContainer),
                   children: (0, r.jsx)(c.aML, {
                       "data-migration-pending": !0,
-                      text: C.intl.string(C.t["y0B+lo"]),
+                      text: C.intl.string(C.t["y0B+lp"]),
                       children: (e) =>
                           (0, r.jsx)(
                               c.P3F,
                               M(L({}, e), {
-                                  "aria-label": C.intl.string(C.t["y0B+lo"]),
+                                  "aria-label": C.intl.string(C.t["y0B+lp"]),
                                   className: N.toggleIcon,
                                   onClick: q,
                                   children: (0, r.jsx)(c.U65, {
@@ -472,11 +472,11 @@ function F() {
             children: [
                 (0, r.jsx)("div", {
                     className: N.gameName,
-                    children: C.intl.string(C.t.H68X9x),
+                    children: C.intl.string(C.t["H68X9/"]),
                 }),
                 (0, r.jsx)("div", {
                     className: N.lastPlayed,
-                    children: C.intl.string(C.t.T5Ilmw),
+                    children: C.intl.string(C.t.T5Ilm5),
                 }),
             ],
         }),
@@ -519,11 +519,11 @@ let H = (0, v.oH)(function () {
             _ = i.useRef(null);
         function m() {
             return 0 === d.length
-                ? (0, r.jsx)(V, { children: (0, r.jsx)(c.OZU, { children: C.intl.string(C.t["1yiJwn"]) }) })
+                ? (0, r.jsx)(V, { children: (0, r.jsx)(c.OZU, { children: C.intl.string(C.t["1yiJws"]) }) })
                 : (0, r.jsx)(c.C3N, {
                       className: w.marginTop40,
-                      label: C.intl.string(C.t.jCOdvx),
-                      description: C.intl.format(C.t.KPA3m9, { igdbLink: G }),
+                      label: C.intl.string(C.t.jCOdv7),
+                      description: C.intl.format(C.t.KPA3m5, { igdbLink: G }),
                       children: d.map((e) =>
                           (0, r.jsx)(
                               Z,
@@ -540,7 +540,7 @@ let H = (0, v.oH)(function () {
         return (
             i.useEffect(() => ((0, h.Ky)(), h.P7), []),
             (0, r.jsxs)(S.Z, {
-                title: n ? C.intl.string(C.t.AVDyEj) : null,
+                title: n ? C.intl.string(C.t.AVDyEh) : null,
                 className: t,
                 children: [
                     null != l
@@ -558,7 +558,7 @@ let H = (0, v.oH)(function () {
                     (0, r.jsxs)("div", {
                         className: o()(N.nowPlayingAdd, w.marginReset, w.marginTop8, w.marginBottom20),
                         children: [
-                            (0, r.jsx)("span", { children: C.intl.string(C.t.xwhoqM) }),
+                            (0, r.jsx)("span", { children: C.intl.string(C.t.xwhoqK) }),
                             (0, r.jsx)(c.yRy, {
                                 targetElementRef: _,
                                 renderPopout: (e) => {
@@ -574,7 +574,7 @@ let H = (0, v.oH)(function () {
                                             buttonRef: _,
                                             variant: "primary",
                                             textVariant: "text-sm/medium",
-                                            text: C.intl.string(C.t.GjgdXe),
+                                            text: C.intl.string(C.t.GjgdXV),
                                         }),
                                     ),
                             }),

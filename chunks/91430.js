@@ -110,7 +110,7 @@ function K(e) {
                                 (0, T.openUserSettings)(I.n.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, {
                                     section: F.oAB.GUILD_BOOSTING,
                                 }),
-                            text: H.intl.string(H.t["NQ5g/U"]),
+                            text: H.intl.string(H.t["NQ5g/f"]),
                         }),
                 ],
             }),
@@ -118,7 +118,7 @@ function K(e) {
                 (0, r.jsx)(p.Text, {
                     className: Y.boostingDesktopAppBlurb,
                     variant: "text-sm/normal",
-                    children: H.intl.format(d.tq ? H.t.uxYBEa : H.t.k6haR9, { openAppHook: () => (0, E.Z)(W) }),
+                    children: H.intl.format(d.tq ? H.t.uxYBER : H.t.k6haR0, { openAppHook: () => (0, E.Z)(W) }),
                 }),
         ],
     });
@@ -141,7 +141,7 @@ function z() {
                 (0, r.jsx)(p.Text, {
                     className: Y.paymentBannerText,
                     variant: "text-sm/normal",
-                    children: H.intl.string(H.t.xFHEMa),
+                    children: H.intl.string(H.t.xFHEMT),
                 }),
             ],
         })
@@ -165,7 +165,7 @@ function q() {
                 (0, r.jsx)(p.Text, {
                     className: Y.paymentBannerText,
                     variant: "text-sm/normal",
-                    children: H.intl.string(H.t["j+nuQZ"]),
+                    children: H.intl.string(H.t["j+nuQU"]),
                 }),
             ],
         })
@@ -191,7 +191,7 @@ function X(e) {
                 (0, r.jsx)(p.Text, {
                     className: Y.paymentBannerText,
                     variant: "text-sm/normal",
-                    children: H.intl.format(H.t["0nbf/G"], {
+                    children: H.intl.format(H.t["0nbf/P"], {
                         daysPastDue: t,
                         paymentModalRedirect: () => {
                             (0, v.Z)({
@@ -214,7 +214,7 @@ function Q(e) {
             (0, r.jsx)(p.Heading, {
                 variant: "heading-md/semibold",
                 className: Y.detailBlockHeader,
-                children: H.intl.string(H.t.KXQjfc),
+                children: H.intl.string(H.t.KXQjfX),
             }),
             (0, r.jsx)("div", { children: R.ZP.getBillingInformationString(t, n, i, !1, s) }),
         ],
@@ -230,7 +230,7 @@ function J() {
             }),
             (0, r.jsx)("p", {
                 className: Y.sectionDescription,
-                children: H.intl.string(H.t.D8UpUo),
+                children: H.intl.string(H.t.D8UpUl),
             }),
             (0, r.jsx)(p.Zbd, {
                 className: Y.noItemsCard,
@@ -245,7 +245,7 @@ function J() {
                         }),
                         (0, r.jsx)("span", {
                             className: Y.cardText,
-                            children: H.intl.string(H.t.xCRgr1),
+                            children: H.intl.string(H.t.xCRgr6),
                         }),
                     ],
                 }),
@@ -333,7 +333,7 @@ function $(e) {
             }),
             (0, r.jsx)("div", {
                 children: (0, r.jsx)(p.C3N, {
-                    label: H.intl.string(H.t.Sb6wI1),
+                    label: H.intl.string(H.t.Sb6wIy),
                     children: (0, r.jsxs)("div", {
                         className: Y.details,
                         children: [
@@ -349,10 +349,10 @@ function $(e) {
                                 children: (0, r.jsx)(p.gNt, {
                                     label:
                                         t.isPurchasedExternally && null != t.paymentGateway
-                                            ? H.intl.formatToPlainString(H.t["rTk9v/"], {
+                                            ? H.intl.formatToPlainString(H.t.rTk9v7, {
                                                   paymentGatewayName: F.Vzj[t.paymentGateway],
                                               })
-                                            : H.intl.string(H.t.iRzXKd),
+                                            : H.intl.string(H.t.iRzXKS),
                                     children: (0, r.jsx)(G.Z, {
                                         subscription: t,
                                         onPaymentSourceAdded: P.i1,
@@ -388,7 +388,7 @@ function et() {
                 (0, r.jsx)(p.Text, {
                     className: Y.duplicateSubscriptionsBannerText,
                     variant: "text-sm/normal",
-                    children: H.intl.format(H.t["6eXiiC"], { helpCenterLink: N.Z.getArticleURL(F.BhN.NITRO) }),
+                    children: H.intl.format(H.t["6eXiiI"], { helpCenterLink: N.Z.getArticleURL(F.BhN.NITRO) }),
                 }),
             ],
         })
@@ -475,7 +475,7 @@ function en(e) {
               })),
           (0, r.jsxs)(p.C3N, {
               label: H.intl.string(H.t["/gs+Pz"]),
-              description: H.intl.string(H.t.D8UpUo),
+              description: H.intl.string(H.t.D8UpUl),
               children: [
                   M ? (0, r.jsx)(z, {}) : null,
                   j ? (0, r.jsx)(q, {}) : null,

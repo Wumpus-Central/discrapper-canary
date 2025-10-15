@@ -26,13 +26,13 @@ function h(e) {
                                           (0, r.jsx)(l.Text, {
                                               variant: "text-sm/medium",
                                               color: "text-primary",
-                                              children: d.intl.string(d.t.b2nFyA),
+                                              children: d.intl.string(d.t.b2nFyM),
                                           }),
                                           (0, r.jsx)(l.Text, {
                                               className: p.menuItemDescription,
                                               variant: "text-xs/medium",
                                               color: "text-tertiary",
-                                              children: d.intl.string(d.t.dw58pE),
+                                              children: d.intl.string(d.t.dw58pK),
                                           }),
                                       ],
                                   }),
@@ -45,7 +45,7 @@ function h(e) {
                                   label: (0, r.jsx)(l.Text, {
                                       variant: "text-sm/medium",
                                       color: "text-primary",
-                                      children: d.intl.string(d.t.hvVgAZ),
+                                      children: d.intl.string(d.t.hvVgAQ),
                                   }),
                                   icon: l.Gr1,
                                   action: () => window.open(f),
@@ -67,7 +67,7 @@ function h(e) {
                           navId: "wishlist-overflow-menu",
                           onSelect: void 0,
                           onClose: t,
-                          "aria-label": d.intl.string(d.t.GdNkvG),
+                          "aria-label": d.intl.string(d.t.GdNkvL),
                           children: g,
                       });
                   },
@@ -102,7 +102,7 @@ function h(e) {
                               {
                                   buttonRef: u,
                                   icon: l.xhG,
-                                  tooltipText: d.intl.string(d.t["UKOtz+"]),
+                                  tooltipText: d.intl.string(d.t.UKOtz8),
                                   action: "PRESS_OPTIONS",
                               },
                               e,

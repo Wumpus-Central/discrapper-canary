@@ -13,15 +13,15 @@ function g() {
     return [
         {
             setting: u.bL.ALL_MESSAGES,
-            label: d.intl.string(d.t["n/bTaY"]),
+            label: d.intl.string(d.t["n/bTaW"]),
         },
         {
             setting: u.bL.ONLY_MENTIONS,
-            label: d.intl.format(d.t.L2hmYy, {}),
+            label: d.intl.format(d.t.L2hmY2, {}),
         },
         {
             setting: u.bL.NO_MESSAGES,
-            label: d.intl.string(d.t.CtVGyQ),
+            label: d.intl.string(d.t.CtVGyc),
         },
     ];
 }
@@ -72,19 +72,19 @@ function b(e) {
                         children: [
                             (0, i.jsx)(s.S89, {
                                 id: "suppress-everyone",
-                                label: d.intl.format(d.t.OWiWAp, {}),
+                                label: d.intl.format(d.t.OWiWAg, {}),
                                 action: () => E({ suppress_everyone: !t }, a.UE.suppressEveryone(!t)),
                                 checked: t,
                             }),
                             (0, i.jsx)(s.S89, {
                                 id: "suppress-roles",
-                                label: d.intl.string(d.t["O/QdoD"]),
+                                label: d.intl.string(d.t["O/QdoK"]),
                                 action: () => E({ suppress_roles: !n }, a.UE.suppressRoles(!n)),
                                 checked: n,
                             }),
                             (0, i.jsx)(s.S89, {
                                 id: "suppress-highlights",
-                                label: d.intl.string(d.t.gPuteJ),
+                                label: d.intl.string(d.t.gPuteH),
                                 action: () => {
                                     E({ notify_highlights: h ? u.gLR.ENABLED : u.gLR.DISABLED }, a.UE.highlights(h));
                                 },
@@ -96,7 +96,7 @@ function b(e) {
                     (0, i.jsx)(s.kSQ, {
                         children: (0, i.jsx)(s.S89, {
                             id: "mobile-push",
-                            label: d.intl.string(d.t.h1DL66),
+                            label: d.intl.string(d.t["h1DL6+"]),
                             action: () => E({ mobile_push: !b }, a.UE.mobilePush(!b)),
                             checked: b,
                         }),
@@ -117,7 +117,7 @@ function b(e) {
     return null != p
         ? (0, i.jsx)(s.sNh, {
               id: "guild-notifications",
-              label: d.intl.string(d.t.h850Ss),
+              label: d.intl.string(d.t.h850Sk),
               subtext: h,
               action: () =>
                   (0, s.ZDy)(async () => {

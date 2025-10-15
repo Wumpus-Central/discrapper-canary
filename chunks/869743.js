@@ -68,12 +68,12 @@ let h = (e) => {
         return (0, r.jsxs)(a.v2r, {
             navId: "authorized-app-action-menu",
             onClose: n,
-            "aria-label": c.intl.string(c.t.tKobzb),
+            "aria-label": c.intl.string(c.t.tKobzc),
             onSelect: void 0,
             children: [
                 (0, r.jsx)(a.sNh, {
                     id: "report",
-                    label: c.intl.string(c.t["+78Pfm"]),
+                    label: c.intl.string(c.t["+78Pfn"]),
                     color: "danger",
                     action: () =>
                         (0, s.uu)({
@@ -134,7 +134,7 @@ let h = (e) => {
                             {
                                 innerRef: s,
                                 className: u.actionMenuButton,
-                                "aria-label": c.intl.string(c.t["UKOtz+"]),
+                                "aria-label": c.intl.string(c.t.UKOtz8),
                             },
                             e,
                         ),

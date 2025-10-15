@@ -8,7 +8,7 @@ var r = t(951288),
     c = t(639777),
     d = t(735276),
     u = t(619733),
-    m = t(470658),
+    m = t(948208),
     g = t(388032),
     f = t(799070);
 let x = {
@@ -36,7 +36,7 @@ function _(e) {
                       onClose: () => {
                           (0, s.Zy)(), a();
                       },
-                      "aria-label": g.intl.string(m.default["yb+ork"]),
+                      "aria-label": g.intl.string(m.default["yb+orq"]),
                       onSelect: void 0,
                       children: (0, r.jsxs)(i.kSQ, {
                           children: [
@@ -44,7 +44,7 @@ function _(e) {
                                   (0, r.jsx)(i.sNh, {
                                       id: "get-support",
                                       icon: i.kBi,
-                                      label: g.intl.string(m.default.bBkeMs),
+                                      label: g.intl.string(m.default.bBkeMj),
                                       action: () => {
                                           (0, l.q)({ href: u.uz[t.providerType] });
                                       },
@@ -52,7 +52,7 @@ function _(e) {
                               (0, r.jsx)(i.sNh, {
                                   id: "settings",
                                   icon: i.ewm,
-                                  label: g.intl.string(m.default["feUiM/"]),
+                                  label: g.intl.string(m.default.feUiMz),
                                   action: () => {
                                       (0, d.Z)({
                                           guildId: n,
@@ -96,7 +96,7 @@ function _(e) {
                           return e;
                       })(
                           {
-                              "aria-label": g.intl.string(g.t["UKOtz+"]),
+                              "aria-label": g.intl.string(g.t.UKOtz8),
                               className: f.clickable,
                           },
                           e,

@@ -1,3 +1,0 @@
-e.exports = JSON.parse(
-    '{"o/An3l":[[1,"username"]," ba deg om å strømme ",[1,"applicationName"]],"DKHhec":["Be om å strømme"],"8qq+H7":["Be om å strømme ",[1,"applicationName"]],"s7bMT0":[[1,"username"]," ber deg om å strømme ",[1,"applicationName"]],"7pndSl":["Du ba noen om å strømme ",[1,"applicationName"]],"P0wwmM":["Strømmer allerede"],"u4QmWl":["Forespørsel utløpt"],"qRXats":["Ikke i talekanal"],"43zohO":["Kjører ikke spill"],"fac+eE":["Ingen tillatelser"],"8HU1M2":["Forespørsel sendt"],"5+172e":["Strøm"],"nAyuPp":["Strømmeforespørsel"],"d/qbC0":[[1,"username"]," ba deg om å strømme"],"8B3U5O":["Du ba noen om å strømme"],"UGbmBp":["Strøm"],"jTbTAF":[[8,"$b",[[1,"username"]]]," vil se deg spille ",[8,"$b",[[1,"game"]]],"."]}',
-);

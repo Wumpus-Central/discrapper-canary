@@ -10,7 +10,7 @@ var i = n(120356),
     u = n(631885),
     d = n(568671),
     f = n(292352),
-    _ = n(660886),
+    _ = n(345909),
     p = n(388032),
     h = n(26919),
     m = n(519279),
@@ -27,7 +27,7 @@ let b = () => {
                   children: t
                       ? (0, r.jsx)(o.Button, {
                             variant: "primary",
-                            text: p.intl.string(p.t.LhlgY9),
+                            text: p.intl.string(p.t.LhlgY2),
                             onClick: () => n(f.dG.REQUESTS),
                         })
                       : (0, r.jsx)(d.Z, {}),
@@ -35,12 +35,12 @@ let b = () => {
     },
     y = () => {
         let e = (0, c.Z)(),
-            t = (0, s.o)(p.intl.string(_.default["T7GyW+"]), p.intl.string(_.default.goKE2b)),
+            t = (0, s.o)(p.intl.string(_.default.T7GyW1), p.intl.string(_.default.goKE2d)),
             n = (0, s.o)(
-                p.intl.format(_.default.MXjDSv, {
+                p.intl.format(_.default.MXjDSk, {
                     articleLink: "https://support.discord.com/hc/articles/14155060633623",
                 }),
-                p.intl.format(_.default.EMCf6j, {
+                p.intl.format(_.default.EMCf6u, {
                     articleLink: "https://support.discord.com/hc/articles/14155043715735",
                 }),
             );
@@ -72,7 +72,7 @@ let b = () => {
                     className: h.headerImage,
                     children: (0, r.jsx)("img", {
                         src: e ? g : E,
-                        alt: p.intl.string(_.default.ffg6xd),
+                        alt: p.intl.string(_.default.ffg6xc),
                     }),
                 }),
             ],

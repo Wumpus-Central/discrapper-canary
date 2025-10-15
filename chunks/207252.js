@@ -14,12 +14,12 @@ function d(e) {
             d(), h();
         }, [d, h]);
     return (0, i.jsx)(c.u_l, {
-        title: s.intl.string(s.t["Q8OFN+"]),
+        title: s.intl.string(s.t.Q8OFNz),
         subtitle: s.intl.string(s.t["WT+829"]),
         actions: [
             {
                 disabled: !b,
-                text: s.intl.string(s.t["qjtt/p"]),
+                text: s.intl.string(s.t["qjtt/v"]),
                 onClick: k,
             },
         ],

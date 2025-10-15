@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => N,
-    m: () => P,
+    m: () => T,
 }),
     n(388685),
     n(953529);
@@ -71,7 +71,7 @@ function Z(e, t) {
         e
     );
 }
-let P = (e) => {
+let T = (e) => {
     let { onClick: t } = e;
     return (0, r.jsxs)(c.P3F, {
         onClick: t,
@@ -85,12 +85,12 @@ let P = (e) => {
                 variant: "text-sm/semibold",
                 color: "header-primary",
                 className: I.addServerText,
-                children: C.intl.string(C.t.H9jxS1),
+                children: C.intl.string(C.t.H9jxS0),
             }),
         ],
     });
 };
-function T(e) {
+function P(e) {
     let { entry: t } = e,
         [l, s] = i.useState(!1),
         d = i.useRef(null),
@@ -101,7 +101,7 @@ function T(e) {
             children: [
                 u
                     ? (0, r.jsx)(o.u, {
-                          text: C.intl.string(C.t.XnuOvN),
+                          text: C.intl.string(C.t.XnuOvL),
                           children: (0, r.jsx)(p.zx, {
                               onClick: () => {
                                   (0, c.ZDy)(async () => {
@@ -109,7 +109,7 @@ function T(e) {
                                       return (n) => (0, r.jsx)(e, Z(E({}, n), { entry: t }));
                                   });
                               },
-                              "aria-label": C.intl.string(C.t.XnuOvN),
+                              "aria-label": C.intl.string(C.t.XnuOvL),
                               children: (0, r.jsx)(c.vdY, {
                                   size: "xs",
                                   color: "currentColor",
@@ -150,7 +150,7 @@ function T(e) {
                                 return i;
                             })(e, ["onClick"]);
                         return (0, r.jsx)(o.u, {
-                            text: C.intl.string(C.t["UKOtz+"]),
+                            text: C.intl.string(C.t.UKOtz8),
                             children: (0, r.jsx)(
                                 p.zx,
                                 Z(E({}, n), {
@@ -158,7 +158,7 @@ function T(e) {
                                         t(e);
                                     },
                                     ref: d,
-                                    "aria-label": C.intl.string(C.t["UKOtz+"]),
+                                    "aria-label": C.intl.string(C.t.UKOtz8),
                                     children: (0, r.jsx)(c.xhG, {
                                         size: "md",
                                         color: "currentColor",
@@ -200,9 +200,9 @@ let N = (e) => {
             }))
                 ? t
                 : void 0,
-        P = C.intl.string(C.t.VJlc0S);
+        T = C.intl.string(C.t.VJlc0d);
     return (
-        p && (P = C.intl.string(C.t.cqWE2Z)),
+        p && (T = C.intl.string(C.t.cqWE2d)),
         (0, r.jsxs)("div", {
             className: I.card,
             onContextMenu: (e) => {
@@ -280,7 +280,7 @@ let N = (e) => {
                                             (0, r.jsx)(c.Text, {
                                                 variant: "text-xs/normal",
                                                 color: "header-secondary",
-                                                children: C.intl.format(C.t["LC+S+m"], {
+                                                children: C.intl.format(C.t["LC+S+v"], {
                                                     membersOnline: l.approximatePresenceCount,
                                                 }),
                                             }),
@@ -294,7 +294,7 @@ let N = (e) => {
                                             (0, r.jsx)(c.Text, {
                                                 variant: "text-xs/normal",
                                                 color: "header-secondary",
-                                                children: C.intl.format(C.t.zRl6XR, {
+                                                children: C.intl.format(C.t.zRl6XV, {
                                                     count: l.approximateMemberCount,
                                                 }),
                                             }),
@@ -308,13 +308,13 @@ let N = (e) => {
                                 loading: a,
                                 variant: p ? "secondary" : "active",
                                 onClick: O,
-                                text: P,
+                                text: T,
                                 fullWidth: !0,
                             }),
                         }),
                     ],
                 }),
-                (0, r.jsx)(T, { entry: l }),
+                (0, r.jsx)(P, { entry: l }),
             ],
         })
     );

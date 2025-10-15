@@ -1,3 +1,0 @@
-e.exports = JSON.parse(
-    '{"RPb8Zk":["Din feedback hjälper oss att förbättra Discords säkerhetsfunktioner."],"cDP3b4":["Feedback skickad"],"KZw6kn":["Vad fungerar inte bra?"],"eSP1F9":["Jag har ändrat mig om att se det här innehållet"],"bC0QVX":["Instruktionerna var förvirrande"],"8JFGXc":["Jag försökte gå igenom stegen, men det fungerade inte"],"Dl4A+U":["Jag hade inte rätt dokument med mig"],"ZsnNgz":["Jag är tveksam till att dela personuppgifter"],"ep5SQp":["Något annat"],"kkKhVJ":["Det här tar för lång tid"],"maxf2S":["Jag förstod inte riktigt varför det behövdes"],"Q5cQ46":["Beskriv ditt problem"],"zApKaR":["Vill du berätta mer för oss?"],"4djgO/":["Tack för din feedback!"],"RqoA4v":["Hur upplevde du åldersverifieringen?"]}',
-);

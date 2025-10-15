@@ -1,12 +1,12 @@
 n.d(t, {
     Z: () => f,
-    u: () => p,
+    u: () => m,
 });
 var r = n(951288);
 n(647438);
 var i = n(120356),
-    l = n.n(i),
-    s = n(692547),
+    s = n.n(i),
+    l = n(692547),
     a = n(481060),
     o = n(388905),
     c = n(600164),
@@ -14,19 +14,19 @@ var i = n(120356),
     d = n(388032),
     h = n(736688),
     g = n(149715),
-    m = n(197571);
-function p(e) {
+    p = n(197571);
+function m(e) {
     let { text: t, buttonCta: i, onClick: u } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(o.Ee, { src: n(689411) }),
             (0, r.jsx)(o.Dx, {
-                className: l()(m.marginTop20, m.marginBottom8, g.flexCenter),
-                children: d.intl.string(d.t.eL5z0i),
+                className: s()(p.marginTop20, p.marginBottom8, g.flexCenter),
+                children: d.intl.string(d.t.eL5z0t),
             }),
             (0, r.jsx)(o.DK, {
-                className: m.marginBottom40,
-                children: d.intl.string(d.t.poAv63),
+                className: p.marginBottom40,
+                children: d.intl.string(d.t["poAv6+"]),
             }),
             (0, r.jsxs)(a.Zbd, {
                 className: h.card,
@@ -52,7 +52,7 @@ function p(e) {
                                 tag: "strong",
                                 className: h.buttonTitle,
                                 variant: "text-md/normal",
-                                style: { color: s.Z.unsafe_rawColors.PRIMARY_300.css },
+                                style: { color: l.Z.unsafe_rawColors.PRIMARY_300.css },
                                 children: t,
                             }),
                             (0, r.jsx)(o.zx, {
@@ -68,13 +68,13 @@ function p(e) {
     });
 }
 function f(e) {
-    let { text: t, buttonCta: n, theme: i = u.BRd.DARK, onClick: l } = e;
+    let { text: t, buttonCta: n, theme: i = u.BRd.DARK, onClick: s } = e;
     return (0, r.jsx)(o.ZP, {
         theme: i,
-        children: (0, r.jsx)(p, {
+        children: (0, r.jsx)(m, {
             text: t,
             buttonCta: n,
-            onClick: l,
+            onClick: s,
         }),
     });
 }

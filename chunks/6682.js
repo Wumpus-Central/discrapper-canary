@@ -1,0 +1,4 @@
+a.r(o), a.d(o, { default: () => r });
+let r = JSON.parse(
+    '{"b7Oqdn":"Choose another method","ar3a3t":"The information you provide is only used to confirm your age group, then it\u2019s deleted.","0vTx7u":"Reload","XYYm+/":"Choose another method to verify your age","rVLCwM":"Choose another method","RpMIT0":["We use age groups to determine access to certain experiences. ",[8,"$link",["Learn more"],[[1,"handleOnHelpUrlHook"]]]],"1/6wtb":"Restore access to Discord by verifying your age using one of the options below.","eJmat7":"Usually fastest and totally automatic. All you need is a camera.","2yLvkZ":"Take a video selfie","ZdmRwc":"You\u2019ll need a driver\u2019s license, passport, or other ID. Then a photo selfie to confirm it\u2019s you.","dwkwo6":"Scan your ID","htWh1N":[[8,"$link",["Learn more"],[[1,"handleOnHelpUrlHook"]]]," on our Help Center"],"cR6339":"No age verification methods available. This may be an error.","hDvmYG":"Reload"}',
+);

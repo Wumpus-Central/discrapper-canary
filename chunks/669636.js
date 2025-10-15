@@ -3,13 +3,13 @@ var n = r(951288),
     i = r(647438),
     a = r(512722),
     s = r.n(a),
-    l = r(599273),
+    l = r(258536),
     o = r(278074),
     c = r(979554),
     u = r(314794),
     d = r(399606),
     f = r(481060),
-    p = r(47280),
+    p = r(283066),
     g = r(876917),
     h = r(594174),
     m = r(508925),
@@ -55,7 +55,7 @@ let C = (e) => {
                 return s()(null != e, "User cannot be undefined"), e;
             }),
             w = Object.values(u.a).includes(t.skuId),
-            _ = (0, p.ZP)({ location: "CollectiblesProductPreview" });
+            _ = (0, p.Z)({ location: "CollectiblesProductPreview" });
         return (0, o.EQ)(t.type)
             .with(c.Z.PROFILE_EFFECT, () =>
                 (0, n.jsx)("div", {

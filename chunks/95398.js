@@ -77,7 +77,7 @@ let I = (e) => {
         let { className: t } = e;
         return (0, r.jsx)("div", {
             className: o()(g.spoilerWarning, t),
-            children: m.intl.string(m.t["F+x38C"]),
+            children: m.intl.string(m.t["F+x38P"]),
         });
     },
     T = (e) => {
@@ -97,7 +97,7 @@ let I = (e) => {
                                   variant: "text-sm/normal",
                                   color: "always-white",
                                   className: g.explicitContentWarningText,
-                                  children: m.intl.string(m.t.SpxcUR),
+                                  children: m.intl.string(m.t.SpxcUV),
                               }),
                       ],
                   }),
@@ -133,7 +133,7 @@ let I = (e) => {
                   children: (0, r.jsx)(l.P3F, {
                       className: g.obscureHoverButton,
                       onClick: i,
-                      "aria-label": m.intl.string(m.t.ex5G9m),
+                      "aria-label": m.intl.string(m.t.ex5G9v),
                       children: n
                           ? (0, r.jsx)(l.tEF, {
                                 size: "md",
@@ -361,12 +361,12 @@ class N extends i.PureComponent {
         let { reason: e = p.wk.SPOILER } = this.props;
         switch (e) {
             case p.wk.SPOILER:
-                return m.intl.string(m.t["F+x38C"]);
+                return m.intl.string(m.t["F+x38P"]);
             case p.wk.EXPLICIT_CONTENT:
             case p.wk.GORE_CONTENT:
-                return m.intl.string(m.t.mlJ8Vf);
+                return m.intl.string(m.t.mlJ8VV);
             case p.wk.POTENTIAL_EXPLICIT_CONTENT:
-                return m.intl.string(m.t.MRdR7z);
+                return m.intl.string(m.t["MRdR7+"]);
             default:
                 return (0, h.vE)(e);
         }
@@ -375,12 +375,12 @@ class N extends i.PureComponent {
         let { reason: e = p.wk.SPOILER } = this.props;
         switch (e) {
             case p.wk.SPOILER:
-                return m.intl.string(m.t["F+x38C"]);
+                return m.intl.string(m.t["F+x38P"]);
             case p.wk.EXPLICIT_CONTENT:
             case p.wk.GORE_CONTENT:
-                return m.intl.string(m.t.mlJ8Vf);
+                return m.intl.string(m.t.mlJ8VV);
             case p.wk.POTENTIAL_EXPLICIT_CONTENT:
-                return m.intl.string(m.t.MRdR7z);
+                return m.intl.string(m.t["MRdR7+"]);
             default:
                 return (0, h.vE)(e);
         }

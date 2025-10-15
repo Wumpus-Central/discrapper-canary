@@ -10,7 +10,7 @@ var i = n(120356),
     s = n(466377),
     l = n(313201),
     c = n(174609),
-    u = n(47280),
+    u = n(283066),
     d = n(355314),
     f = n(911311),
     _ = n(703656),
@@ -18,7 +18,7 @@ var i = n(120356),
     h = n(310752),
     m = n(731994),
     g = n(981631),
-    E = n(995751);
+    E = n(374450);
 function b(e, t, n) {
     return (
         t in e
@@ -52,7 +52,7 @@ function O(e) {
     let { title: t, help: n, showPremiumUpsell: i, transitionState: o, icons: b, fileSize: y, onClose: O } = e,
         v = (0, l.Dt)(),
         I = null != b ? b : m.J6,
-        T = (0, u.ZP)({ location: "UploadError" }),
+        T = (0, u.Z)({ location: "UploadError" }),
         S = () => {
             (0, c.Z)(),
                 O(),

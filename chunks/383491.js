@@ -1,3 +1,0 @@
-e.exports = JSON.parse(
-    '{"RPb8Zk":["A visszajelzéseddel javíthatunk a Discord biztonsági funkcióin."],"cDP3b4":["Visszajelzés beküldve"],"KZw6kn":["Mi nem működik jól?"],"eSP1F9":["Meggondoltam magam a tartalom megtekintésével kapcsolatban"],"bC0QVX":["Összezavarónak találtam az utasításokat"],"8JFGXc":["Próbáltam elvégezni a lépéseket, de nem működött"],"Dl4A+U":["Nem rendelkeztem megfelelő okmányokkal"],"ZsnNgz":["Aggaszt a személyes adatok megadása"],"ep5SQp":["Valami más"],"kkKhVJ":["Túl sok időbe telik"],"maxf2S":["Nem értettem, miért van rá szükség"],"Q5cQ46":["A probléma leírása"],"zApKaR":["Szívesen megosztanál velünk néhány további részletet?"],"4djgO/":["Köszönjük a visszajelzést!"],"RqoA4v":["Milyennek találtad az életkor-ellenőrzési élményt?"]}',
-);

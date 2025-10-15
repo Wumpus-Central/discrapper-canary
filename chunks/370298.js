@@ -242,7 +242,7 @@ function k(e) {
         onSelect: t,
         navId: "image-context-commands-popout",
         onClose: n,
-        "aria-label": D.intl.string(D.t["P3ShV+"]),
+        "aria-label": D.intl.string(D.t.P3ShV1),
         children: [
             (0, r.jsx)(
                 l.sNh,
@@ -315,8 +315,8 @@ function k(e) {
                                                               l.sNh,
                                                               {
                                                                   id: "".concat(e.command.id, "-send"),
-                                                                  label: D.intl.string(D.t["M+BhUW"]),
-                                                                  subtext: D.intl.string(D.t.zXFjJV),
+                                                                  label: D.intl.string(D.t["M+BhUV"]),
+                                                                  subtext: D.intl.string(D.t.zXFjJS),
                                                                   action: () =>
                                                                       H(t, m.Vh.IMAGE_RECS_SUBMENU, n.imageOption),
                                                                   icon: l.Uuj,
@@ -327,8 +327,8 @@ function k(e) {
                                                               l.sNh,
                                                               {
                                                                   id: "".concat(e.command.id, "-edit"),
-                                                                  label: D.intl.string(D.t["wTaN+K"]),
-                                                                  subtext: D.intl.string(D.t.bIB3bs),
+                                                                  label: D.intl.string(D.t["wTaN+P"]),
+                                                                  subtext: D.intl.string(D.t.bIB3bm),
                                                                   action: () => {
                                                                       V(
                                                                           e.command,

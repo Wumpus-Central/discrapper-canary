@@ -19,7 +19,7 @@ var r = n(951288),
     m = n(526167),
     g = n(74538),
     E = n(357355),
-    b = n(47280),
+    b = n(283066),
     y = n(639119),
     O = n(638212),
     v = n(767714),
@@ -83,7 +83,7 @@ function j(e) {
             var e;
             return null != (e = (0, g.fr)(z, S.Si.TIER_2)) ? e : C.intl.string(C.t.pj0XBA);
         }, [z]),
-        X = (0, b.ZP)({ location: "PremiumUpsellPickerOverlay" }),
+        X = (0, b.Z)({ location: "PremiumUpsellPickerOverlay" }),
         Q = (0, I.Z)(S.Si.TIER_2);
     if (X) {
         let e;

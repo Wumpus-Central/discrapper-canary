@@ -15,7 +15,7 @@ var r = n(951288),
     m = n(484459),
     g = n(78839),
     E = n(626135),
-    b = n(47280),
+    b = n(283066),
     y = n(331972),
     O = n(230916),
     v = n(373539),
@@ -57,7 +57,7 @@ let x = (e) => {
         q = (0, s.e7)([h.Z], () => (null != t ? h.Z.getUserProfile(t) : null)),
         X = "true" === new URLSearchParams(window.location.search).get("autoScroll");
     window.history.replaceState({}, "", window.location.pathname);
-    let Q = (0, b.ZP)({ location: "SubscriberNitroHome" });
+    let Q = (0, b.Z)({ location: "SubscriberNitroHome" });
     return null == q
         ? (0, r.jsx)("div", {
               className: o()(D.container, D.loading),

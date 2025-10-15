@@ -48,10 +48,10 @@ function O() {
                             .then(
                                 (e) => {
                                     null != e && null != e.body
-                                        ? c.Z.show({ body: E.intl.string(E.t["6Nmv4i"]) })
+                                        ? c.Z.show({ body: E.intl.string(E.t["6Nmv4u"]) })
                                         : c.Z.show({
-                                              title: E.intl.string(E.t.OjbtDm),
-                                              body: E.intl.string(E.t["0F5Jyt"]),
+                                              title: E.intl.string(E.t.OjbtDg),
+                                              body: E.intl.string(E.t["0F5Jys"]),
                                           });
                                 },
                                 (e) => {
@@ -59,9 +59,9 @@ function O() {
                                     let n =
                                         (null == e ? void 0 : e.message) ||
                                         (null == e || null == (t = e.body) ? void 0 : t.message) ||
-                                        E.intl.string(E.t["0F5Jyt"]);
+                                        E.intl.string(E.t["0F5Jys"]);
                                     c.Z.show({
-                                        title: E.intl.string(E.t.OjbtDm),
+                                        title: E.intl.string(E.t.OjbtDg),
                                         body: n,
                                     });
                                 },
@@ -74,15 +74,15 @@ function O() {
         setting: m.s6.PRIVACY_DATA_REQUEST_V2,
         children: [
             (0, r.jsx)(h.H, {
-                header: E.intl.string(E.t.XAHCgJ),
-                description: E.intl.format(E.t.P3kNfr, { helpdeskArticle: d.Z.getArticleURL(g.BhN.GDPR_REQUEST_DATA) }),
+                header: E.intl.string(E.t.XAHCgI),
+                description: E.intl.format(E.t.P3kNfn, { helpdeskArticle: d.Z.getArticleURL(g.BhN.GDPR_REQUEST_DATA) }),
             }),
             T
                 ? (0, r.jsx)(l.Zbd, {
                       className: b.card,
                       children: (0, r.jsx)(l.Text, {
                           variant: "text-md/normal",
-                          children: E.intl.format(E.t.RNDlV9, {
+                          children: E.intl.format(E.t.RNDlV1, {
                               date: o()(t.created_at).add(g.eBq, "days").format("MMMM Do YYYY"),
                           }),
                       }),
@@ -92,7 +92,7 @@ function O() {
                         className: b.card,
                         children: (0, r.jsx)(l.Text, {
                             variant: "text-md/normal",
-                            children: E.intl.string(E.t.ZPQLH2),
+                            children: E.intl.string(E.t.ZPQLHx),
                         }),
                     })
                   : (0, r.jsxs)(r.Fragment, {
@@ -102,7 +102,7 @@ function O() {
                                       className: b.card,
                                       children: (0, r.jsx)(l.Text, {
                                           variant: "text-md/normal",
-                                          children: E.intl.string(E.t.c1f88z),
+                                          children: E.intl.string(E.t["c1f88/"]),
                                       }),
                                   })
                                 : null,
@@ -110,7 +110,7 @@ function O() {
                                 className: b.button,
                                 children: (0, r.jsx)(l.Button, {
                                     variant: "primary",
-                                    text: E.intl.string(E.t.dmBSKo),
+                                    text: E.intl.string(E.t.dmBSKi),
                                     disabled: v,
                                     onClick: C,
                                     loading: a || n,

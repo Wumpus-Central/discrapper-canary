@@ -265,8 +265,8 @@ function Y(e) {
         let e = t.body.retry_after;
         null != e &&
             l.Z.show({
-                title: N.intl.string(N.t.Whhv4w),
-                body: N.intl.formatToPlainString(N.t.qoxdQB, { retryAfterMinutes: Math.ceil(e / 60) }),
+                title: N.intl.string(N.t["Whhv4+"]),
+                body: N.intl.formatToPlainString(N.t.qoxdQE, { retryAfterMinutes: Math.ceil(e / 60) }),
             });
     }
 }

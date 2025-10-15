@@ -84,40 +84,40 @@ let C = {
     D = () => [
         {
             location: y.Hn.CHAT_INPUT,
-            title: O.intl.string(O.t.elTtyz),
-            description: O.intl.string(O.t.HtKfMi),
+            title: O.intl.string(O.t.elTty8),
+            description: O.intl.string(O.t.HtKfMj),
         },
         {
             location: y.Hn.REACTION,
-            title: O.intl.string(O.t.Ik4VIa),
-            description: O.intl.string(O.t.y4rqK0),
+            title: O.intl.string(O.t.Ik4VIS),
+            description: O.intl.string(O.t.y4rqKy),
         },
         {
             location: y.Hn.MEMBER_USER,
-            title: O.intl.string(O.t.ZXBlAn),
-            description: O.intl.string(O.t["m9RD+c"]),
+            title: O.intl.string(O.t.ZXBlAg),
+            description: O.intl.string(O.t["m9RD+f"]),
         },
         {
             location: y.Hn.CALL_TILE,
-            title: O.intl.string(O.t.V66giQ),
+            title: O.intl.string(O.t.V66giY),
             description: O.intl.string(O.t.fiHV7u),
         },
     ],
     L = () => [
         {
             location: y.oZ.CHAT_INPUT,
-            title: O.intl.string(O.t.vUcvPP),
-            description: O.intl.string(O.t.y00OrF),
+            title: O.intl.string(O.t.vUcvPD),
+            description: O.intl.string(O.t.y00OrK),
         },
         {
             location: y.oZ.VOICE_USER,
-            title: O.intl.string(O.t.TcRO54),
-            description: O.intl.string(O.t.YJCxVY),
+            title: O.intl.string(O.t["TcRO5+"]),
+            description: O.intl.string(O.t.YJCxVV),
         },
         {
             location: y.oZ.MENTION,
-            title: O.intl.string(O.t.oW4shO),
-            description: O.intl.string(O.t["mqfw/H"]),
+            title: O.intl.string(O.t.oW4shI),
+            description: O.intl.string(O.t["mqfw/P"]),
         },
     ];
 function x(e) {
@@ -136,7 +136,7 @@ function x(e) {
             ),
         );
     return (0, r.jsx)(l.C3N, {
-        label: O.intl.string(O.t.bWVN1D),
+        label: O.intl.string(O.t.bWVN1N),
         children: o,
     });
 }
@@ -164,9 +164,9 @@ function j(e) {
                               A(
                                   T(
                                       {
-                                          header: a ? O.intl.string(O.t["FxT+p0"]) : O.intl.string(O.t.TAZ4F9),
-                                          confirmText: O.intl.string(O.t.JFfins),
-                                          cancelText: O.intl.string(O.t["ETE/oC"]),
+                                          header: a ? O.intl.string(O.t["FxT+p6"]) : O.intl.string(O.t.TAZ4Fx),
+                                          confirmText: O.intl.string(O.t.JFfinp),
+                                          cancelText: O.intl.string(O.t["ETE/oK"]),
                                           onConfirm: () =>
                                               i(
                                                   a
@@ -182,7 +182,7 @@ function j(e) {
                                   {
                                       children: (0, r.jsx)(l.Text, {
                                           variant: "text-md/normal",
-                                          children: a ? O.intl.string(O.t.gmixrx) : O.intl.string(O.t.jN3t3K),
+                                          children: a ? O.intl.string(O.t.gmixr6) : O.intl.string(O.t.jN3t3N),
                                       }),
                                   },
                               ),
@@ -191,8 +191,8 @@ function j(e) {
                     : i({ enabled: e });
         };
     return (0, r.jsx)(l.rsf, {
-        label: O.intl.string(O.t.vuiXm9),
-        description: O.intl.string(O.t.KuYbWN),
+        label: O.intl.string(O.t.vuiXm5),
+        description: O.intl.string(O.t.KuYbWF),
         checked: t,
         onChange: s,
     });
@@ -210,11 +210,11 @@ function k(e) {
         } = e,
         c = !t || !n;
     return (0, r.jsxs)(l.C3N, {
-        label: O.intl.string(O.t.mqxwJO),
+        label: O.intl.string(O.t.mqxwJC),
         children: [
             (0, r.jsx)(l.rsf, {
-                label: O.intl.string(O.t.s0KCgF),
-                description: O.intl.string(O.t.O1Vflg),
+                label: O.intl.string(O.t.s0KCgI),
+                description: O.intl.string(O.t.O1Vflp),
                 checked: n,
                 disabled: !t,
                 onChange: (e) => s({ confettiEnabled: e }, 0),
@@ -225,9 +225,9 @@ function k(e) {
                         variant: "text-md/semibold",
                         color: c ? "text-muted" : "header-primary",
                         className: v.sliderLabel,
-                        children: O.intl.string(O.t.vd0D81),
+                        children: O.intl.string(O.t["vd0D8/"]),
                     }),
-                    (0, r.jsx)(M, { children: O.intl.string(O.t.a18Sug) }),
+                    (0, r.jsx)(M, { children: O.intl.string(O.t.a18Sur) }),
                     (0, r.jsx)(l.iRW, {
                         disabled: c,
                         markers: P,
@@ -246,9 +246,9 @@ function k(e) {
                         variant: "text-md/semibold",
                         color: c ? "text-muted" : "header-primary",
                         className: v.sliderLabel,
-                        children: O.intl.string(O.t.sPO3ij),
+                        children: O.intl.string(O.t.sPO3io),
                     }),
-                    (0, r.jsx)(M, { children: O.intl.string(O.t.xoldVn) }),
+                    (0, r.jsx)(M, { children: O.intl.string(O.t.xoldVl) }),
                     (0, r.jsx)(l.iRW, {
                         disabled: c,
                         markers: w,
@@ -277,18 +277,18 @@ function U(e) {
         } = e,
         s = !t || !n;
     return (0, r.jsxs)(l.C3N, {
-        label: O.intl.string(O.t.Xz0ole),
+        label: O.intl.string(O.t.Xz0olZ),
         children: [
             (0, r.jsx)(l.rsf, {
-                label: O.intl.string(O.t.o3iV7B),
-                description: O.intl.string(O.t["31Z8Ee"]),
+                label: O.intl.string(O.t.o3iV7O),
+                description: O.intl.string(O.t["31Z8ER"]),
                 checked: n,
                 disabled: !t,
                 onChange: (e) => o({ combosEnabled: e }),
             }),
             (0, r.jsx)(l.rsf, {
-                label: O.intl.string(O.t["Ax+IoW"]),
-                description: O.intl.string(O.t["9rgQEr"]),
+                label: O.intl.string(O.t["Ax+Ioa"]),
+                description: O.intl.string(O.t["9rgQEh"]),
                 checked: i,
                 disabled: !t,
                 onChange: (e) => o({ comboSoundsEnabled: e }),
@@ -299,9 +299,9 @@ function U(e) {
                         variant: "text-md/semibold",
                         color: s ? "text-muted" : "header-primary",
                         className: v.sliderLabel,
-                        children: O.intl.string(O.t.L0oQuh),
+                        children: O.intl.string(O.t.L0oQur),
                     }),
-                    (0, r.jsx)(M, { children: O.intl.string(O.t["/OOFpL"]) }),
+                    (0, r.jsx)(M, { children: O.intl.string(O.t["/OOFpK"]) }),
                     (0, r.jsx)(l.iRW, {
                         disabled: s,
                         markers: N,
@@ -328,12 +328,12 @@ function G(e) {
             null != e.shakeIntensity && e.shakeIntensity > i && (0, p.T)(h.hn.MORE), s(e, t);
         };
     return (0, r.jsxs)(l.C3N, {
-        label: O.intl.string(O.t.wVS5Sd),
+        label: O.intl.string(O.t.wVS5SU),
         children: [
             (0, r.jsx)(l.rsf, {
-                label: O.intl.string(O.t.N004zO),
-                description: O.intl.string(O.t.Qq5W3v),
-                helperText: u ? O.intl.string(O.t.GckHGw) : void 0,
+                label: O.intl.string(O.t.N004zM),
+                description: O.intl.string(O.t.Qq5W3t),
+                helperText: u ? O.intl.string(O.t.GckHGx) : void 0,
                 checked: n && !u,
                 disabled: !t || u,
                 onChange: (e) => s({ screenshakeEnabled: e }, 1),
@@ -344,9 +344,9 @@ function G(e) {
                         variant: "text-md/semibold",
                         color: d ? "text-muted" : "header-primary",
                         className: v.sliderLabel,
-                        children: O.intl.string(O.t.UxnnC4),
+                        children: O.intl.string(O.t.UxnnCw),
                     }),
-                    (0, r.jsx)(M, { children: O.intl.string(O.t.CEOEOb) }),
+                    (0, r.jsx)(M, { children: O.intl.string(O.t.CEOEOT) }),
                     (0, r.jsx)(l.iRW, {
                         disabled: d,
                         markers: R,
@@ -357,7 +357,7 @@ function G(e) {
                         initialValue: i,
                         onValueChange: (e) => f({ shakeIntensity: e }, 1),
                         onMarkerRender: (e) =>
-                            e === R[R.length - 1] ? O.intl.string(O.t["4rbMWc"]) : "".concat(100 * e, "%"),
+                            e === R[R.length - 1] ? O.intl.string(O.t["4rbMWV"]) : "".concat(100 * e, "%"),
                     }),
                 ],
             }),
@@ -380,18 +380,18 @@ function B(e) {
                 (0, f.default)();
         };
     return (0, r.jsx)(l.C3N, {
-        label: O.intl.string(O.t.EuXv2q),
+        label: O.intl.string(O.t.EuXv2t),
         children: (0, r.jsxs)(l.Kqy, {
             gap: 16,
             children: [
-                (0, r.jsx)("div", { children: O.intl.string(O.t["1SLnki"]) }),
+                (0, r.jsx)("div", { children: O.intl.string(O.t["1SLnkp"]) }),
                 (0, r.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
                     className: v.hideButton,
                     children: (0, r.jsx)(l.Button, {
                         variant: "primary",
                         size: "sm",
-                        text: O.intl.string(O.t.qz65yY),
+                        text: O.intl.string(O.t.qz65yc),
                         onClick: n,
                     }),
                 }),
@@ -419,12 +419,12 @@ function Z(e) {
                     (0, r.jsx)(l.Heading, {
                         variant: "heading-md/semibold",
                         color: "header-primary",
-                        children: O.intl.string(O.t["6jI0hd"]),
+                        children: O.intl.string(O.t["6jI0hY"]),
                     }),
                     (0, r.jsx)(l.Text, {
                         variant: "text-md/normal",
                         color: "header-secondary",
-                        children: O.intl.string(O.t.GuUItX),
+                        children: O.intl.string(O.t.GuUItb),
                     }),
                 ],
             }),
@@ -499,7 +499,7 @@ function V(e) {
             children: [
                 (0, r.jsx)(l.Heading, {
                     variant: "heading-lg/semibold",
-                    children: O.intl.string(O.t.AtCukI),
+                    children: O.intl.string(O.t.AtCukJ),
                 }),
                 (0, r.jsx)(j, {
                     settings: a,

@@ -21,7 +21,7 @@ let _ = (e) => {
     let { tabs: t, selectedTab: n, onTabSelect: r, onClose: i } = e;
     return (0, l.jsx)(d.v2r, {
         navId: "members-tabs-overflow-menu",
-        "aria-label": p.intl.string(p.t.riPnr0),
+        "aria-label": p.intl.string(p.t.riPnr6),
         hideScroller: !0,
         onClose: i,
         onSelect: i,
@@ -111,12 +111,12 @@ function C(e) {
                         clickableInnerRef: s,
                         color: "text-muted",
                         className: a()(v.more, { [v.selected]: m }),
-                        "aria-label": p.intl.string(p.t["UKOtz+"]),
+                        "aria-label": p.intl.string(p.t.UKOtz8),
                         children: [
                             (0, l.jsx)(d.Text, {
                                 variant: "text-md/medium",
                                 color: j,
-                                children: p.intl.string(p.t["UKOtz+"]),
+                                children: p.intl.string(p.t.UKOtz8),
                             }),
                             i
                                 ? (0, l.jsx)(d.u04, {
@@ -158,16 +158,16 @@ function E(e) {
             [
                 {
                     id: g.e.ALL_MEMBERS,
-                    label: p.intl.string(p.t.NOOm1Z),
+                    label: p.intl.string(p.t.NOOm1d),
                 },
                 {
                     id: g.e.PENDING,
                     label:
-                        t > 0 ? p.intl.formatToPlainString(p.t["Wo+zL0"], { count: t }) : p.intl.string(p.t["4eQVBO"]),
+                        t > 0 ? p.intl.formatToPlainString(p.t["Wo+zLy"], { count: t }) : p.intl.string(p.t["4eQVBA"]),
                 },
                 {
                     id: g.e.REJECTED,
-                    label: p.intl.string(p.t.bSZkla),
+                    label: p.intl.string(p.t.bSZklZ),
                 },
                 {
                     id: g.e.APPROVED,
@@ -189,12 +189,12 @@ function E(e) {
         R = r.useMemo(() => (i === g.e.ALL_MEMBERS ? I : null != y && null != y.user), [i, I, y]),
         w = r.useMemo(() => S.slice(0, T + 1), [T, S]),
         A = r.useMemo(() => S.slice(T + 1), [T, S]),
-        M = (0, m.Z)((e) => {
+        Z = (0, m.Z)((e) => {
             let t = e.contentRect.width;
             null != t && E.current !== t && (x(t), (E.current = t));
         });
     return (
-        (0, u.s)(_, M, [R]),
+        (0, u.s)(_, Z, [R]),
         (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(h.Z.Divider, { className: v.divider }),
@@ -231,7 +231,7 @@ function E(e) {
                             ],
                         }),
                         (0, l.jsxs)(d.njP, {
-                            "aria-label": p.intl.string(p.t.tcvVXM),
+                            "aria-label": p.intl.string(p.t.tcvVXF),
                             selectedItem: i,
                             type: "top-pill",
                             onItemSelect: a,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(704826), n(35282);
+n.d(t, { Z: () => E }), n(704826), n(35282);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -59,26 +59,26 @@ function j(e, t) {
         e
     );
 }
-function E(e) {
+function S(e) {
     return d.ZP.getByName(e.replace(/(^:|:$)/g, ""));
 }
-function S(e) {
-    let { type: t, id: n, name: S, isInExpressionPicker: P = !1 } = e,
+function E(e) {
+    let { type: t, id: n, name: E, isInExpressionPicker: P = !1 } = e,
         { location: _ } = (0, s.O)(),
-        T = i.useMemo(() => j(v({}, _), { section: P ? m.jXE.EXPRESSION_PICKER : m.jXE.CONTEXT_MENU }), [_, P]),
-        Z = (0, p.Go)(),
+        Z = i.useMemo(() => j(v({}, _), { section: P ? m.jXE.EXPRESSION_PICKER : m.jXE.CONTEXT_MENU }), [_, P]),
+        T = (0, p.Go)(),
         w = (0, l.e7)([O.Z], () => (t === f.S.STICKER && null != n ? O.Z.getStickerById(n) : null)),
-        I = null != w && Z.includes(w.id),
-        N = (0, l.e7)([u.ZP], () => {
+        I = null != w && T.includes(w.id),
+        A = (0, l.e7)([u.ZP], () => {
             if (t === f.S.EMOJI) {
                 if (null != n) return u.ZP.getDisambiguatedEmojiContext().getById(n);
-                else if (null != S) {
+                else if (null != E) {
                     var e;
-                    return null != (e = E(S)) ? e : E(d.ZP.convertSurrogateToName(S));
+                    return null != (e = S(E)) ? e : S(d.ZP.convertSurrogateToName(E));
                 }
             }
         }),
-        A = (0, c.C1)(null, N);
+        N = (0, c.C1)(null, A);
     return null != w && t === f.S.STICKER
         ? (0, y.J8)(w) && !(0, y.V9)(w)
             ? null
@@ -86,36 +86,36 @@ function S(e) {
               ? (0, r.jsx)(a.sNh, {
                     id: "unfavorite",
                     action: () => (0, g.hW)(w.id),
-                    label: h.intl.string(h.t.XhzKyF),
+                    label: h.intl.string(h.t.XhzKyM),
                 })
               : (0, r.jsx)(a.sNh, {
                     id: "favorite",
                     action: () => {
                         (0, b.cQ)({
                             sticker: w,
-                            location: j(v({}, T), { object: m.qAy.STICKER }),
+                            location: j(v({}, Z), { object: m.qAy.STICKER }),
                         }),
                             (0, g.SA)(null == w ? void 0 : w.id);
                     },
-                    label: h.intl.string(h.t.kWmiPW),
+                    label: h.intl.string(h.t.kWmiPT),
                 })
-        : null != N && t === f.S.EMOJI
-          ? A
+        : null != A && t === f.S.EMOJI
+          ? N
               ? (0, r.jsx)(a.sNh, {
                     id: "unfavorite",
-                    action: () => (0, o.Xe)(N),
-                    label: h.intl.string(h.t.Ay49KA),
+                    action: () => (0, o.Xe)(A),
+                    label: h.intl.string(h.t.Ay49KC),
                 })
               : (0, r.jsx)(a.sNh, {
                     id: "favorite",
                     action: () => {
                         (0, c.J1)({
-                            emoji: N,
-                            location: j(v({}, T), { object: m.qAy.EMOJI }),
+                            emoji: A,
+                            location: j(v({}, Z), { object: m.qAy.EMOJI }),
                         }),
-                            (0, o.$K)(N);
+                            (0, o.$K)(A);
                     },
-                    label: h.intl.string(h.t.nNsr67),
+                    label: h.intl.string(h.t["nNsr6+"]),
                 })
           : void 0;
 }

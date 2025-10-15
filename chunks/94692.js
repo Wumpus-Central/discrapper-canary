@@ -84,20 +84,20 @@ class m extends n.PureComponent {
         return null != e[t] && !1 === e[t].hasPermission
             ? (0, l.jsx)("div", {
                   className: c.error,
-                  children: u.intl.string(u.t.cEUT8B),
+                  children: u.intl.string(u.t.cEUT8P),
               })
             : this.hasEnoughDiskSpace(t)
               ? null
               : (0, l.jsx)("div", {
                     className: c.error,
-                    children: u.intl.string(u.t["duXbE/"]),
+                    children: u.intl.string(u.t.duXbEx),
                 });
     }
     renderLabel(t, e) {
         let { installationPathsMetadata: s } = this.props,
             l = null != e ? e : t;
         return null != s[t] && null != s[t].availableKB
-            ? u.intl.formatToPlainString(u.t["Y+M3rp"], {
+            ? u.intl.formatToPlainString(u.t["Y+M3rq"], {
                   path: l,
                   size: (0, o.BU)(s[t].availableKB, { useKibibytes: !0 }),
               })
@@ -109,7 +109,7 @@ class m extends n.PureComponent {
             className: e,
             children: [
                 (0, l.jsx)(i.q4e, {
-                    label: u.intl.string(u.t.WTJuNr),
+                    label: u.intl.string(u.t.WTJuNj),
                     autoFocus: s,
                     options: this.getOptions(),
                     value: t,

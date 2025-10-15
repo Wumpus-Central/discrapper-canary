@@ -17,4 +17,7 @@ e.exports = {
     overlay: "overlay__39b32",
     itemIcon: "itemIcon__39b32",
     itemIconHeart: "itemIconHeart__39b32",
+    placeholderPulse: "placeholderPulse__39b32",
+    placeholderCard: "placeholderCard__39b32",
+    placeholderAvatar: "placeholderAvatar__39b32",
 };

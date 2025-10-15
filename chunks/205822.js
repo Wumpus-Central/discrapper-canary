@@ -8,7 +8,7 @@ var n = A(951288),
     s = A(310752),
     d = A(531643),
     u = A(388032),
-    c = A(995751),
+    c = A(374450),
     g = A(162130);
 function f(e, t, A) {
     return (
@@ -127,8 +127,8 @@ class h extends r.Component {
                     A &&
                         (t.setState({ isDragging: !1 }),
                         (0, d.openUploadError)({
-                            title: u.intl.string(u.t.azO1Pe),
-                            help: u.intl.string(u.t["Koklr/"]),
+                            title: u.intl.string(u.t.azO1PT),
+                            help: u.intl.string(u.t.Koklr6),
                             icons: t.props.icons,
                         })),
                     !1)

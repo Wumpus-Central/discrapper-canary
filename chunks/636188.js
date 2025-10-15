@@ -83,7 +83,7 @@ let x = 25,
 function j() {
     return [
         {
-            name: N.intl.string(N.t["Sp2NF+"]),
+            name: N.intl.string(N.t.Sp2NFx),
             extensions: ["jpg", "jpeg", "png", "gif", "mp4"],
         },
     ];
@@ -252,7 +252,7 @@ function B() {
             }),
             (0, r.jsx)(c.Text, {
                 variant: "text-sm/normal",
-                children: N.intl.string(N.t["T+yRY3"]),
+                children: N.intl.string(N.t["T+yRY2"]),
             }),
         ],
     });
@@ -263,7 +263,7 @@ function Z(e) {
     function o() {
         m.Kw(S.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW);
     }
-    let l = a ? N.intl.string(N.t["5TUJOv"]) : n;
+    let l = a ? N.intl.string(N.t["5TUJOj"]) : n;
     return (0, r.jsxs)(c.jSM, {
         text: l,
         className: R.newBackgroundTooltipContainer,
@@ -285,7 +285,7 @@ function Z(e) {
                         }),
                         (0, r.jsx)("div", {
                             className: R.overflowEllipsis,
-                            children: N.intl.string(N.t["1t7U8W"]),
+                            children: N.intl.string(N.t["1t7U8f"]),
                         }),
                     ],
                 }),
@@ -316,14 +316,14 @@ function F(e) {
         }),
         (0, r.jsx)(Z, {
             onClick: t,
-            tooltipText: N.intl.string(N.t["IqE0T/"]),
+            tooltipText: N.intl.string(N.t.IqE0T0),
         })
     );
 }
 function V(e) {
     let { onAddBackgroundImage: t, disabled: i } = e,
         a = (0, c.vRw)(),
-        o = i ? N.intl.formatToPlainString(N.t.ykGFeD, { maxCustomBackgrounds: x }) : N.intl.string(N.t.Qx0tFc),
+        o = i ? N.intl.formatToPlainString(N.t.ykGFeH, { maxCustomBackgrounds: x }) : N.intl.string(N.t.Qx0tFR),
         s = j();
     function l() {
         (0, c.ZDy)(
@@ -343,9 +343,9 @@ function V(e) {
                                 },
                                 uploadType: A.pC.VIDEO_BACKGROUND,
                                 filters: s,
-                                modalTitle: N.intl.string(N.t.yG2pUi),
-                                imageSpecifications: N.intl.string(N.t["72OaxN"]),
-                                uploadOptionTitle: N.intl.string(N.t.xsW8u6),
+                                modalTitle: N.intl.string(N.t.yG2pUl),
+                                imageSpecifications: N.intl.string(N.t["72OaxM"]),
+                                uploadOptionTitle: N.intl.string(N.t.xsW8u7),
                                 showUpsellHeader: !0,
                             },
                             n,
@@ -392,13 +392,13 @@ function H(e) {
                     selected: null == a,
                     icon: c.t6m,
                     onClick: () => o(null),
-                    text: N.intl.string(N.t.fUdMeO),
+                    text: N.intl.string(N.t.fUdMeH),
                 }),
                 (0, r.jsx)(k, {
                     selected: a === I.f7,
                     icon: c.yMH,
                     onClick: () => o(I.f7),
-                    text: N.intl.string(N.t.LhSyL8),
+                    text: N.intl.string(N.t.LhSyLy),
                     children: (0, r.jsx)("div", { className: R.backgroundOptionBlurBackground }),
                 }),
                 t
@@ -420,7 +420,7 @@ function H(e) {
                               l.u,
                               {
                                   __unsupportedReactNodeAsText: (0, r.jsx)(B, {}),
-                                  "aria-label": N.intl.string(N.t["T+yRY3"]),
+                                  "aria-label": N.intl.string(N.t["T+yRY2"]),
                                   children: (0, r.jsx)(
                                       G,
                                       {

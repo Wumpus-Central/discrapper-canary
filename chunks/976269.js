@@ -20,7 +20,7 @@ function u(e) {
         onSave: u,
         onReset: o.bj,
         submitting: s,
-        onSaveText: d.intl.string(d.t["R3BPH+"]),
+        onSaveText: d.intl.string(d.t.R3BPHx),
     });
 }
 let g = function () {

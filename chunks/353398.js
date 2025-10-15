@@ -112,13 +112,13 @@ function w() {
         children: (0, i.jsxs)(m.y5t, {
             component: (0, i.jsx)(m.Heading, {
                 variant: "heading-lg/semibold",
-                children: O.intl.string(O.t.KUw7Ss),
+                children: O.intl.string(O.t.KUw7Sk),
             }),
             children: [
                 (0, i.jsx)(m.Text, {
                     className: N.marginBottom20,
                     variant: "text-sm/normal",
-                    children: O.intl.format(O.t.c0m8bK, {}),
+                    children: O.intl.format(O.t.c0m8bG, {}),
                 }),
                 (0, i.jsx)(R, {}),
                 (0, i.jsx)(m.izJ, { className: y.divider }),
@@ -206,7 +206,7 @@ function R() {
                 children: [
                     (0, i.jsx)(m.Heading, {
                         variant: "eyebrow",
-                        children: O.intl.string(O.t["f8u+VO"]),
+                        children: O.intl.string(O.t["f8u+VF"]),
                     }),
                     (0, i.jsxs)("div", {
                         className: y.descriptionRow,
@@ -217,7 +217,7 @@ function R() {
                                 color: u.Z.unsafe_rawColors.GREEN_360.css,
                                 secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css,
                             }),
-                            O.intl.string(O.t.K2tn16),
+                            O.intl.string(O.t.K2tn19),
                         ],
                     }),
                     (0, i.jsxs)("div", {
@@ -229,7 +229,7 @@ function R() {
                                 color: u.Z.unsafe_rawColors.GREEN_360.css,
                                 secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css,
                             }),
-                            O.intl.string(O.t.om5gNq),
+                            O.intl.string(O.t.om5gNj),
                         ],
                     }),
                     (0, i.jsxs)("div", {
@@ -241,7 +241,7 @@ function R() {
                                 color: u.Z.unsafe_rawColors.GREEN_360.css,
                                 secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css,
                             }),
-                            O.intl.string(O.t["/VNqdD"]),
+                            O.intl.string(O.t["/VNqdH"]),
                         ],
                     }),
                 ],
@@ -251,7 +251,7 @@ function R() {
                 children: [
                     (0, i.jsx)(m.Heading, {
                         variant: "eyebrow",
-                        children: O.intl.string(O.t["8zhJEr"]),
+                        children: O.intl.string(O.t["8zhJEh"]),
                     }),
                     (0, i.jsxs)("div", {
                         className: y.descriptionRow,
@@ -262,7 +262,7 @@ function R() {
                                 color: u.Z.unsafe_rawColors.RED_400.css,
                                 secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css,
                             }),
-                            O.intl.string(O.t.WOKI6t),
+                            O.intl.string(O.t.WOKI6u),
                         ],
                     }),
                     (0, i.jsxs)("div", {
@@ -274,7 +274,7 @@ function R() {
                                 color: u.Z.unsafe_rawColors.RED_400.css,
                                 secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css,
                             }),
-                            O.intl.string(O.t.ddhDJH),
+                            O.intl.string(O.t.ddhDJC),
                         ],
                     }),
                     (0, i.jsxs)("div", {
@@ -286,7 +286,7 @@ function R() {
                                 color: u.Z.unsafe_rawColors.RED_400.css,
                                 secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css,
                             }),
-                            O.intl.string(O.t["6Q/DHk"]),
+                            O.intl.string(O.t["6Q/DHh"]),
                         ],
                     }),
                 ],
@@ -298,15 +298,15 @@ function D(e) {
     let { cancel: t, confirm: n } = e;
     return (0, i.jsx)(m.sYh, {
         dismissable: !0,
-        header: O.intl.string(O.t["cN/RFD"]),
-        confirmText: O.intl.string(O.t["cN/RFD"]),
-        cancelText: O.intl.string(O.t["ETE/oC"]),
+        header: O.intl.string(O.t["cN/RFB"]),
+        confirmText: O.intl.string(O.t["cN/RFB"]),
+        cancelText: O.intl.string(O.t["ETE/oK"]),
         onCancel: t,
         onConfirm: n,
         children: (0, i.jsx)(m.Text, {
             variant: "text-md/normal",
             color: "text-default",
-            children: O.intl.string(O.t["apCQv/"]),
+            children: O.intl.string(O.t.apCQv7),
         }),
     });
 }
@@ -322,28 +322,28 @@ function A() {
             a(!0);
         }, []),
         c = l.useMemo(() => {
-            if (!(r || e.length < 1 || P(e))) return O.intl.string(O.t.IHAlh1);
+            if (!(r || e.length < 1 || P(e))) return O.intl.string(O.t.IHAlh4);
         }, [e, r]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(m.oil, {
-                label: O.intl.string(O.t.z1a9R1),
+                label: O.intl.string(O.t.z1a9R0),
                 required: !0,
                 error: null != c ? c : null == n ? void 0 : n.getFirstFieldErrorMessage("name"),
                 value: e,
                 onChange: (e) => S.setName(e),
-                placeholder: O.intl.string(O.t.bMlpvk),
+                placeholder: O.intl.string(O.t.bMlpvr),
                 maxLength: 100,
                 onBlur: s,
                 onFocus: o,
                 autoFocus: !0,
             }),
             (0, i.jsx)(m.Kx8, {
-                label: O.intl.string(O.t.GxirWa),
+                label: O.intl.string(O.t.GxirWV),
                 error: null == n ? void 0 : n.getFirstFieldErrorMessage("description"),
                 value: t,
                 onChange: (e) => S.setDescription(e),
-                placeholder: O.intl.string(O.t.n1FBXh),
+                placeholder: O.intl.string(O.t.n1FBXl),
                 maxLength: 120,
             }),
         ],
@@ -356,7 +356,7 @@ function L(e) {
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(m.gNt, {
-                      label: O.intl.string(O.t.zGGcLw),
+                      label: O.intl.string(O.t.zGGcLy),
                       children: (0, i.jsx)(f.Z, {
                           buttonLook: g.zx.Looks.FILLED,
                           buttonColor: g.zx.Colors.BRAND,
@@ -368,7 +368,7 @@ function L(e) {
                           color: "text-feedback-warning",
                           className: N.marginTop8,
                           variant: "text-sm/normal",
-                          children: O.intl.string(O.t.aWsjtD),
+                          children: O.intl.string(O.t.aWsjtL),
                       }),
                   (0, i.jsxs)("div", {
                       className: s()(N.marginTop20, y.buttonContainer),
@@ -393,7 +393,7 @@ function L(e) {
                   n.isDirty &&
                       (0, i.jsx)("div", {
                           className: y.lastSync,
-                          children: O.intl.format(O.t.v0AVum, { timestamp: new Date(n.updatedAt) }),
+                          children: O.intl.format(O.t.v0AVur, { timestamp: new Date(n.updatedAt) }),
                       }),
               ],
           });
@@ -413,7 +413,7 @@ function k(e) {
         };
     return (0, i.jsx)(m.Button, {
         variant: "primary",
-        text: O.intl.string(O.t.Wxdi8A),
+        text: O.intl.string(O.t.Wxdi8P),
         loading: r,
         disabled: !P(n),
         onClick: s,
@@ -436,7 +436,7 @@ function M(e) {
         className: y.button,
         children: (0, i.jsx)(m.Button, {
             variant: "primary",
-            text: O.intl.string(O.t["Nw+0Y/"]),
+            text: O.intl.string(O.t["Nw+0Y2"]),
             loading: r,
             onClick: s,
         }),
@@ -461,7 +461,7 @@ function G(e) {
                 className: y.button,
                 children: (0, i.jsx)(m.Button, {
                     variant: "critical-secondary",
-                    text: O.intl.string(O.t["cN/RFD"]),
+                    text: O.intl.string(O.t["cN/RFB"]),
                     onClick: () => a(!0),
                 }),
             }),
@@ -481,7 +481,7 @@ function U(e) {
         className: y.button,
         children: (0, i.jsx)(m.Button, {
             variant: "secondary",
-            text: O.intl.string(O.t.YI3iV6),
+            text: O.intl.string(O.t.YI3iV1),
             onClick: () =>
                 (0, m.ZDy)(async () => {
                     let { default: e } = await Promise.all([n.e("10778"), n.e("86015")]).then(n.bind(n, 766775));

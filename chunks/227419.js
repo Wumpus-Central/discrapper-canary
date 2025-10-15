@@ -70,7 +70,7 @@ function O(e) {
     switch (e) {
         case h.nkL.GIF.title:
         case h.nkL.TENOR.title:
-            return m.intl.string(m.t["0vrCgJ"]);
+            return m.intl.string(m.t["0vrCgI"]);
         default:
             return "";
     }
@@ -99,10 +99,10 @@ let v = [
                               displayName: "query",
                               type: c.jw.STRING,
                               get description() {
-                                  return m.intl.string(m.t["+9g3Du"]);
+                                  return m.intl.string(m.t["+9g3Dg"]);
                               },
                               get displayDescription() {
-                                  return m.intl.string(m.t["+9g3Du"]);
+                                  return m.intl.string(m.t["+9g3Dg"]);
                               },
                               required: !0,
                           },
@@ -120,10 +120,10 @@ let v = [
         inputType: _.iw.BUILT_IN,
         applicationId: p.bi.BUILT_IN,
         get untranslatedDescription() {
-            return m.intl.string(m.t["26C4oi"]);
+            return m.intl.string(m.t["26C4oq"]);
         },
         get displayDescription() {
-            return m.intl.string(m.t["26C4oi"]);
+            return m.intl.string(m.t["26C4oq"]);
         },
         options: [
             {
@@ -131,10 +131,10 @@ let v = [
                 displayName: "silent",
                 type: c.jw.BOOLEAN,
                 get description() {
-                    return m.intl.string(m.t.YH7PkD);
+                    return m.intl.string(m.t.YH7PkJ);
                 },
                 get displayDescription() {
-                    return m.intl.string(m.t.bq3JXs);
+                    return m.intl.string(m.t.bq3JXl);
                 },
                 required: !1,
             },
@@ -148,20 +148,20 @@ let v = [
             let { channel: a } = t;
             if (null == a) return;
             let c = (0, u.F6)(a, f.default, d.Z),
-                _ = m.intl.formatToPlainString(m.t.hJ5Ap4, { name: c }),
-                p = m.intl.format(m.t.SSIVOu, { name: c }),
+                _ = m.intl.formatToPlainString(m.t.hJ5Ap6, { name: c }),
+                p = m.intl.format(m.t.SSIVOj, { name: c }),
                 h = null != (i = null == (n = e.find((e) => "silent" === e.name)) ? void 0 : n.value) && i;
             async function g() {
                 if (null != a)
                     try {
                         await s.Z.closePrivateChannel(a.id, void 0, h);
                     } catch (e) {
-                        l.Z.sendBotMessage(a.id, m.intl.string(m.t["YOsuT/"]));
+                        l.Z.sendBotMessage(a.id, m.intl.string(m.t.YOsuT0));
                     }
             }
             a.isManaged() &&
-                ((_ = m.intl.formatToPlainString(m.t.hVGjEW, { name: c })),
-                (p = m.intl.format(m.t.IK1Qvs, { name: c }))),
+                ((_ = m.intl.formatToPlainString(m.t.hVGjER, { name: c })),
+                (p = m.intl.format(m.t.IK1Qvr, { name: c }))),
                 (0, o.h7j)((e) =>
                     (0, r.jsx)(
                         o.ConfirmModal,
@@ -169,8 +169,8 @@ let v = [
                             E(
                                 {
                                     header: _,
-                                    confirmText: m.intl.string(m.t["26C4oi"]),
-                                    cancelText: m.intl.string(m.t["ETE/oC"]),
+                                    confirmText: m.intl.string(m.t["26C4oq"]),
+                                    cancelText: m.intl.string(m.t["ETE/oK"]),
                                     onConfirm: g,
                                 },
                                 e,
@@ -194,10 +194,10 @@ let v = [
         inputType: _.iw.BUILT_IN_INTEGRATION,
         applicationId: p.bi.BUILT_IN,
         get untranslatedDescription() {
-            return m.intl.string(m.t.GUH9II);
+            return m.intl.string(m.t.GUH9IC);
         },
         get displayDescription() {
-            return m.intl.string(m.t.GUH9II);
+            return m.intl.string(m.t.GUH9IC);
         },
         options: [
             {
@@ -205,10 +205,10 @@ let v = [
                 displayName: "query",
                 type: c.jw.STRING,
                 get description() {
-                    return m.intl.string(m.t.hIbHm1);
+                    return m.intl.string(m.t.hIbHm5);
                 },
                 get displayDescription() {
-                    return m.intl.string(m.t.hIbHm1);
+                    return m.intl.string(m.t.hIbHm5);
                 },
                 required: !0,
             },

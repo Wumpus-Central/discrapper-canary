@@ -85,7 +85,7 @@ function h(e, t) {
               id: "change-video-background",
               label: (0, r.jsx)("div", {
                   className: u.item,
-                  children: _ ? c.intl.string(c.t.mZKxHb) : c.intl.string(c.t["vkV93/"]),
+                  children: _ ? c.intl.string(c.t.mZKxHR) : c.intl.string(c.t.vkV939),
               }),
               action: E,
               icon: _ ? a.yMH : a.tEF,

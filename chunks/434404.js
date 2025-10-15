@@ -205,8 +205,8 @@ let R = new s.Z("GuildSettingsActionCreators"),
                     }),
                 {
                     modalProps: {
-                        title: v.intl.string(v.t.Wi9LEV),
-                        actionText: r ? v.intl.string(v.t["MP0Ho+"]) : v.intl.string(v.t.yZcYGa),
+                        title: v.intl.string(v.t.Wi9LER),
+                        actionText: r ? v.intl.string(v.t.MP0Ho6) : v.intl.string(v.t.yZcYGR),
                     },
                     checkEnabled: !1,
                 },
@@ -393,8 +393,8 @@ let R = new s.Z("GuildSettingsActionCreators"),
                     }),
                 {
                     modalProps: {
-                        title: v.intl.string(v.t.Z5s7PM),
-                        actionText: v.intl.string(v.t.Z5s7PM),
+                        title: v.intl.string(v.t.Z5s7PD),
+                        actionText: v.intl.string(v.t.Z5s7PD),
                     },
                     checkEnabled: !1,
                 },
@@ -426,8 +426,8 @@ let R = new s.Z("GuildSettingsActionCreators"),
                     }),
                 {
                     modalProps: {
-                        title: v.intl.formatToPlainString(v.t.us7mC1, { name: t }),
-                        actionText: v.intl.string(v.t.l3hWP6),
+                        title: v.intl.formatToPlainString(v.t.us7mCw, { name: t }),
+                        actionText: v.intl.string(v.t.l3hWPz),
                         disallowBackupCodes: !0,
                     },
                     checkEnabled: !1,

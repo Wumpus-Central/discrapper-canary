@@ -143,16 +143,16 @@ let Y = Object.freeze({
                         isCoachmark: !0,
                         isPreview: !0,
                     },
-                    () => j.intl.string(j.t.D29k16),
+                    () => j.intl.string(j.t.D29k19),
                 )
                 .with(
                     {
                         type: "EDITOR",
                         isCoachmark: !0,
                     },
-                    () => j.intl.string(j.t["8+vbqd"]),
+                    () => j.intl.string(j.t["8+vbqa"]),
                 )
-                .otherwise(() => j.intl.string(j.t.hjV0fZ));
+                .otherwise(() => j.intl.string(j.t.hjV0fX));
         return (0, r.jsxs)("div", {
             className: k.title,
             children: [
@@ -181,24 +181,24 @@ let Y = Object.freeze({
                     type: "EDITOR",
                     isPreview: !0,
                 },
-                () => j.intl.format(j.t.G8yQXi, { onPremiumClick: () => m.z }),
+                () => j.intl.format(j.t.G8yQXl, { onPremiumClick: () => m.z }),
             )
             .with(
                 {
                     type: "EDITOR",
                     isCoachmark: !0,
                 },
-                () => j.intl.string(j.t.jmZiNu),
+                () => j.intl.string(j.t.jmZiNj),
             )
             .with(
                 {
                     type: "EDITOR",
                     isPreview: !1,
                 },
-                () => j.intl.string(j.t.dqDFwe),
+                () => j.intl.string(j.t.dqDFwc),
             )
-            .with({ isPreview: !0 }, () => j.intl.format(j.t["DWIjJ/"], { onPremiumClick: () => m.z }))
-            .otherwise(() => j.intl.string(j.t["np0X/u"]));
+            .with({ isPreview: !0 }, () => j.intl.format(j.t.DWIjJy, { onPremiumClick: () => m.z }))
+            .otherwise(() => j.intl.string(j.t["np0X/v"]));
         return (0, r.jsx)(c.Heading, {
             variant: "text-sm/normal",
             className: k.subtext,
@@ -215,7 +215,7 @@ let Y = Object.freeze({
             ? (0, r.jsx)(E.ZP, {
                   type: D.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                   subscriptionTier: D.Si.TIER_2,
-                  children: j.intl.format(j.t.G8yQXi, { onPremiumClick: () => m.z }),
+                  children: j.intl.format(j.t.G8yQXl, { onPremiumClick: () => m.z }),
               })
             : (0, r.jsxs)("div", {
                   className: k.header,
@@ -440,7 +440,7 @@ let Y = Object.freeze({
                     (0, r.jsx)(c.Heading, {
                         className: k.upsellText,
                         variant: "heading-sm/semibold",
-                        children: j.intl.string(j.t.POSLGY),
+                        children: j.intl.string(j.t.POSLGR),
                     }),
                 (0, r.jsxs)(c.Kqy, {
                     direction: "horizontal",

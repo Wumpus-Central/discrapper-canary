@@ -87,9 +87,9 @@ let g = {
         [c.kG.PLAYSTATION]: a.Z,
     },
     E = {
-        [c.kG.SPOTIFY]: () => u.intl.string(u.t["0ZB/XE"]),
-        [c.kG.CRUNCHYROLL]: () => u.intl.string(u.t.jdJYXw),
-        [c.kG.XBOX]: () => u.intl.string(u.t.Nfvo72),
+        [c.kG.SPOTIFY]: () => u.intl.string(u.t["0ZB/XF"]),
+        [c.kG.CRUNCHYROLL]: () => u.intl.string(u.t.jdJYX1),
+        [c.kG.XBOX]: () => u.intl.string(u.t["Nfvo7+"]),
         [c.kG.PLAYSTATION]: () => u.intl.string(u.t.fFl4jo),
     };
 function b(e) {

@@ -70,7 +70,7 @@ function f(e) {
             {
                 variant: l,
                 size: d,
-                text: s.intl.string(s.t.I6JG46),
+                text: s.intl.string(s.t["I6JG4+"]),
                 onClick: _,
                 fullWidth: !0,
             },

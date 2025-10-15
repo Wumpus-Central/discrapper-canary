@@ -22,13 +22,13 @@ function _(e) {
     }
     return (0, r.jsx)(c.Z, {
         artURL: f,
-        header: d.intl.string(d.t["z+mxvo"]),
+        header: d.intl.string(d.t["z+mxvr"]),
         size: (0, c.L)(_),
         noArt: m,
         selected: h,
-        description: d.intl.format(d.t.d486Wm, { helpUrl: l.Z.getArticleURL(u.BhN.VOICE_VIDEO_TROUBLESHOOTING) }),
-        errorCodeMessage: d.intl.formatToPlainString(d.t.ejOT95, { errorCode: g }),
+        description: d.intl.format(d.t.d486Wl, { helpUrl: l.Z.getArticleURL(u.BhN.VOICE_VIDEO_TROUBLESHOOTING) }),
+        errorCodeMessage: d.intl.formatToPlainString(d.t["ejOT9/"], { errorCode: g }),
         onCTAClick: E,
-        callToAction: d.intl.string(d.t["hxmQ/e"]),
+        callToAction: d.intl.string(d.t["hxmQ/f"]),
     });
 }

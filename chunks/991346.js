@@ -104,7 +104,7 @@ function V(e) {
         r = v.Z.isDeveloper,
         i = [
             {
-                header: U.intl.string(U.t.cduTBL),
+                header: U.intl.string(U.t.cduTBA),
                 settings: n
                     ? [
                           j.s6.ACCOUNT,
@@ -131,12 +131,12 @@ function V(e) {
                       ],
             },
             {
-                header: U.intl.string(U.t["4uOdGr"]),
+                header: U.intl.string(U.t["4uOdGh"]),
                 divider: !0,
                 settings: [j.s6.PREMIUM, j.s6.GUILD_BOOSTING, j.s6.SUBSCRIPTIONS, j.s6.GIFT_INVENTORY, j.s6.BILLING],
             },
             {
-                header: U.intl.string(U.t.f2n1TP),
+                header: U.intl.string(U.t.f2n1TE),
                 divider: !0,
                 settings: [
                     j.s6.APPEARANCE,
@@ -172,7 +172,7 @@ function V(e) {
             },
         ],
         a = {
-            header: U.intl.string(U.t.SmHCFf),
+            header: U.intl.string(U.t.SmHCFR),
             divider: !0,
             settings: [j.s6.ACTIVITY_PRIVACY, j.s6.REGISTERED_GAMES, j.s6.OVERLAY],
         };
@@ -188,7 +188,7 @@ function H() {
     return r.useMemo(
         () => [
             {
-                header: U.intl.string(U.t["zkoeq/"]),
+                header: U.intl.string(U.t.zkoeq6),
                 settings: [
                     ...n
                         .map((e) => {

@@ -1,4 +1,4 @@
-t.d(e, { default: () => h });
+t.d(e, { default: () => b });
 var a = t(951288);
 t(647438);
 var r = t(481060),
@@ -9,19 +9,19 @@ var r = t(481060),
     o = t(299206),
     u = t(703656),
     d = t(852245),
-    b = t(388032);
-let h = (0, c.Z)(
+    h = t(388032);
+let b = (0, c.Z)(
     function (n) {
         let { channel: e, onSelect: t } = n,
             c = (0, d.Z)(e),
             s = (0, o.Z)({
                 id: e.id,
-                label: b.intl.string(b.t.gFHI3k),
+                label: h.intl.string(h.t.gFHI3t),
             });
         return (0, a.jsxs)(r.v2r, {
             navId: "channel-context",
             onClose: i.Zy,
-            "aria-label": b.intl.string(b.t.Xm41aV),
+            "aria-label": h.intl.string(h.t.Xm41aW),
             onSelect: t,
             children: [
                 (0, a.jsxs)(r.kSQ, {
@@ -31,7 +31,7 @@ let h = (0, c.Z)(
                             ? null
                             : (0, a.jsx)(r.sNh, {
                                   id: "jump-to-channel",
-                                  label: b.intl.string(b.t.bQIM40),
+                                  label: h.intl.string(h.t["bQIM4+"]),
                                   action: () => {
                                       (0, u.XU)(e.guild_id, e.id), (0, l.xf)();
                                   },

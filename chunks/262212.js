@@ -14,7 +14,7 @@ var i = n(120356),
     d = n(827397),
     p = n(279604),
     h = n(535396),
-    f = n(149829),
+    f = n(989308),
     g = n(388032),
     m = n(292609);
 function b() {
@@ -63,7 +63,7 @@ function O(e) {
         children: (0, r.jsx)(o.zxk, {
             variant: "primary",
             fullWidth: !0,
-            text: u ? g.intl.string(f.default.g5Ds69) : g.intl.string(g.t["0Q61kF"]),
+            text: u ? g.intl.string(f.default["g5Ds6+"]) : g.intl.string(g.t["0Q61kJ"]),
             onClick: (e) => {
                 null == a || a(e), u ? null == s || s(e) : null == c || c();
             },
@@ -80,7 +80,7 @@ function y(e) {
             children: (0, r.jsx)(o.zxk, {
                 variant: "primary",
                 fullWidth: !0,
-                text: i.type === h.Us.LEVEL ? g.intl.string(g.t["0Q61kF"]) : g.intl.string(g.t.Xa11Ep),
+                text: i.type === h.Us.LEVEL ? g.intl.string(g.t["0Q61kJ"]) : g.intl.string(g.t.Xa11Eh),
                 onClick: a,
             }),
         }),

@@ -32,8 +32,8 @@ function v(e) {
             width: 20,
         }),
         color: o.Z.unsafe_rawColors.PRIMARY_700.css,
-        title: O.intl.string(O.t["jMLfp/"]),
-        description: O.intl.string(O.t["Vd/rEX"]),
+        title: O.intl.string(O.t.jMLfp6),
+        description: O.intl.string(O.t["Vd/rER"]),
         onClick: t,
         className: n,
     });
@@ -55,14 +55,14 @@ function C(e) {
                 color: "header-secondary",
                 children: (function (e) {
                     if (0 === e.length) return "";
-                    if (1 === e.length) return O.intl.formatToPlainString(O.t["5ULgaQ"], { first: e[0].userNick });
+                    if (1 === e.length) return O.intl.formatToPlainString(O.t["5ULgaW"], { first: e[0].userNick });
                     if (2 === e.length)
-                        return O.intl.formatToPlainString(O.t.BHK0Op, {
+                        return O.intl.formatToPlainString(O.t.BHK0Oj, {
                             first: e[0].userNick,
                             second: e[1].userNick,
                         });
                     let t = e.length - 2;
-                    return O.intl.formatToPlainString(O.t.T3MT4n, {
+                    return O.intl.formatToPlainString(O.t.T3MT4u, {
                         first: e[0].userNick,
                         second: e[1].userNick,
                         numOthers: t,
@@ -93,13 +93,13 @@ function I(e) {
                             (0, r.jsx)(c.Heading, {
                                 className: x.__invalid_title,
                                 variant: "heading-xxl/normal",
-                                children: O.intl.string(O.t.QGnDLs),
+                                children: O.intl.string(O.t.QGnDLi),
                             }),
                             (0, r.jsx)(c.Text, {
                                 tag: "div",
                                 className: x.subtitle,
                                 variant: "heading-lg/normal",
-                                children: O.intl.string(O.t.djfK36),
+                                children: O.intl.string(O.t.djfK39),
                             }),
                         ],
                     }),

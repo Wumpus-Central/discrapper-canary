@@ -24,11 +24,11 @@ var r = n(951288),
     p = n(430824),
     C = n(496675),
     D = n(699516),
-    U = n(944486),
-    L = n(594174),
+    L = n(944486),
+    U = n(594174),
     M = n(607802),
-    b = n(101695),
-    x = n(683101),
+    x = n(101695),
+    b = n(683101),
     v = n(981631),
     P = n(388032),
     j = n(858283);
@@ -77,18 +77,18 @@ function G(e) {
             scrollTo: h,
             renderEmbeds: R,
             offset: M,
-            jumpToMessage: b,
+            jumpToMessage: x,
             listNavigator: P,
             favoriteSearch: G,
         } = e,
         k = f.cC.useSetting(),
         F = (0, I.p)(),
         w = l.useCallback((e) => {
-            if (e === U.Z.getChannelId()) return;
+            if (e === L.Z.getChannelId()) return;
             let t = S.Z.getChannel(e);
             null != t && (C.Z.can(v.Plq.VIEW_CHANNEL, t) || t.isPrivate()) && (0, O.Kh)(t.id);
         }, []),
-        z = null != s ? (0, _.F6)(s, L.default, D.Z, !1) : "???",
+        z = null != s ? (0, _.F6)(s, U.default, D.Z, !1) : "???",
         V = G && null != s.guild_id ? (null == (t = p.Z.getGuild(s.guild_id)) ? void 0 : t.name) : null,
         Z = (null == s ? void 0 : s.parent_id) != null ? S.Z.getChannel(s.parent_id) : null,
         B = null != (n = null == Z ? void 0 : Z.name) ? n : null,
@@ -148,7 +148,7 @@ function G(e) {
                 a.map((e, t) => {
                     let n = E + t;
                     return (0, r.jsx)(
-                        x.Z,
+                        b.Z,
                         {
                             ref: (e) => {
                                 d.current[n] = e;
@@ -160,7 +160,7 @@ function G(e) {
                             pageResultsLength: a.length,
                             message: e,
                             index: n,
-                            onJump: b,
+                            onJump: x,
                             listItemProps: P.getItemProps({ index: n }),
                         },
                         "search-result-".concat(n),
@@ -186,9 +186,9 @@ let k = l.memo(function (e) {
             onBlockedResultsClick: R,
             searchRequestAnalyticsId: p,
             searchResultsQuery: C,
-            isFavoritesSearch: U,
+            isFavoritesSearch: L,
         } = e,
-        { offset: L, totalResults: x, isSearching: y, showBlockedResults: k } = s,
+        { offset: U, totalResults: b, isSearching: y, showBlockedResults: k } = s,
         F = l.useCallback(
             (e, t) => {
                 if ((null == g || g(e, t), (0, N.Z)(e))) {
@@ -259,13 +259,13 @@ let k = l.memo(function (e) {
                     highlighter: K,
                     startIndex: l,
                     resultRefs: z,
-                    totalResults: x,
+                    totalResults: b,
                     scrollTo: _,
                     renderEmbeds: o,
-                    offset: L,
+                    offset: U,
                     jumpToMessage: F,
                     listNavigator: H,
-                    favoriteSearch: null != U && U,
+                    favoriteSearch: null != L && L,
                 },
                 "".concat(t.id, "-").concat(l),
             );
@@ -338,26 +338,26 @@ let k = l.memo(function (e) {
                               className: j.__invalid_resultsBlockedText,
                               children: k
                                   ? T > 0 && I > 0
-                                      ? P.intl.formatToPlainString(P.t.OvJs9w, { count: T + I })
+                                      ? P.intl.formatToPlainString(P.t["OvJs9/"], { count: T + I })
                                       : T > 0
-                                        ? P.intl.formatToPlainString(P.t["n/1QFS"], { count: T })
-                                        : P.intl.formatToPlainString(P.t.ypezTA, { count: I })
+                                        ? P.intl.formatToPlainString(P.t["n/1QFR"], { count: T })
+                                        : P.intl.formatToPlainString(P.t.ypezTE, { count: I })
                                   : T > 0 && I > 0
-                                    ? P.intl.formatToPlainString(P.t.EJHRcV, { count: T + I })
+                                    ? P.intl.formatToPlainString(P.t.EJHRcX, { count: T + I })
                                     : T > 0
-                                      ? P.intl.formatToPlainString(P.t.HTE8JP, { count: T })
-                                      : P.intl.formatToPlainString(P.t.e7f8r9, { count: I }),
+                                      ? P.intl.formatToPlainString(P.t.HTE8JC, { count: T })
+                                      : P.intl.formatToPlainString(P.t.e7f8r6, { count: I }),
                           }),
                       ],
                   })
                 : null,
             !y &&
-                !U &&
-                (0, r.jsx)(b.Z, {
+                !L &&
+                (0, r.jsx)(x.Z, {
                     renderPageWrapper: f,
                     onPageChange: m,
-                    offset: L,
-                    totalCount: null != O ? O : x,
+                    offset: U,
+                    totalCount: null != O ? O : b,
                     pageSize: v.vpv,
                 }),
         ],

@@ -19,7 +19,7 @@ var r = n(951288),
     j = n(359110),
     O = n(585483),
     x = n(407908),
-    v = n(739830),
+    v = n(131694),
     C = n(488131),
     I = n(981631),
     S = n(388032);
@@ -66,14 +66,14 @@ function Z(e, t) {
         e
     );
 }
-function P(e) {
+function T(e) {
     let { channel: t } = e,
         [n, a] = i.useState(!1),
         s = i.useRef(null);
     function o() {
         a((e) => !e);
     }
-    let c = S.intl.string(S.t["UKOtz+"]);
+    let c = S.intl.string(S.t.UKOtz8);
     return (0, r.jsx)(l.yRy, {
         targetElementRef: s,
         shouldShow: n,
@@ -83,7 +83,7 @@ function P(e) {
         autoInvert: !1,
         onRequestClose: () => a(!1),
         renderPopout: function (e) {
-            return (0, r.jsx)(T, Z(E({}, e), { channel: t }));
+            return (0, r.jsx)(P, Z(E({}, e), { channel: t }));
         },
         children: (e, t) => {
             let { isShown: n } = t;
@@ -101,7 +101,7 @@ function P(e) {
         },
     });
 }
-function T(e) {
+function P(e) {
     let { channel: t, closePopout: n, onSelect: i } = e,
         y = (0, c.Z)(t, "Sidebar Overflow"),
         _ = (0, u.Z)(t),
@@ -110,12 +110,12 @@ function T(e) {
         C = (0, a.Z)(t),
         E = (0, d.Z)(t),
         Z = (0, p.Z)(t.id),
-        P = (0, h.Z)(t),
-        T = (0, o.Z)(t),
+        T = (0, h.Z)(t),
+        P = (0, o.Z)(t),
         N = (0, s.Z)(t),
         R = (0, b.Z)({
             id: t.id,
-            label: S.intl.string(S.t.DQ797g),
+            label: S.intl.string(S.t.DQ797u),
         }),
         w = (0, m.Z)(t);
     function A() {
@@ -124,7 +124,7 @@ function T(e) {
     return (0, r.jsxs)(l.v2r, {
         navId: "thread-context",
         onClose: n,
-        "aria-label": S.intl.string(S.t["1NBjqb"]),
+        "aria-label": S.intl.string(S.t["1NBjqa"]),
         onSelect: i,
         children: [
             (0, r.jsxs)(l.kSQ, {
@@ -132,7 +132,7 @@ function T(e) {
                     y,
                     (0, r.jsx)(l.sNh, {
                         id: "open",
-                        label: S.intl.string(S.t.IxVmZi),
+                        label: S.intl.string(S.t.IxVmZm),
                         action: A,
                     }),
                 ],
@@ -141,13 +141,13 @@ function T(e) {
                 children: [x, v],
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [P, _, Z],
+                children: [T, _, Z],
             }),
             (0, r.jsxs)(l.kSQ, {
                 children: [
                     (0, r.jsx)(l.sNh, {
                         id: "search",
-                        label: S.intl.string(S.t["5h0QOP"]),
+                        label: S.intl.string(S.t["5h0QOD"]),
                         icon: l.rgF,
                         action: function () {
                             A(),
@@ -158,7 +158,7 @@ function T(e) {
                     }),
                     (0, r.jsx)(l.sNh, {
                         id: "pins",
-                        label: S.intl.string(S.t["2BSH7n"]),
+                        label: S.intl.string(S.t["2BSH7u"]),
                         icon: l.rgF,
                         action: function () {
                             A(), O.S.dispatch(I.CkL.TOGGLE_CHANNEL_PINS);
@@ -167,7 +167,7 @@ function T(e) {
                 ],
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [w, C, E, T],
+                children: [w, C, E, P],
             }),
             (0, r.jsxs)(l.kSQ, {
                 children: [N, R],
@@ -181,10 +181,10 @@ function N(e) {
         children: [
             t.isForumPost() ? null : (0, r.jsx)(v.Z, { channel: t }),
             t.isModeratorReportChannel() ? (0, r.jsx)(x.Z, { channel: t }) : null,
-            (0, r.jsx)(P, { channel: t }),
+            (0, r.jsx)(T, { channel: t }),
             (0, r.jsx)(_.ZP.Icon, {
                 icon: l.Dio,
-                tooltip: S.intl.string(S.t.cpT0Cq),
+                tooltip: S.intl.string(S.t.cpT0Cg),
                 onClick: () => (0, C.vN)((0, y.e)(t), null != n ? n : t.parent_id),
             }),
         ],

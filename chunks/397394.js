@@ -113,7 +113,7 @@ function x(e, t) {
 function M(e) {
     let { message: t, footer: n, headerClassName: i, showsCloseWindowText: a, spinner: s } = e;
     return (
-        (0, p.Tt)({ location: C.intl.string(C.t["3S2494"]) }),
+        (0, p.Tt)({ location: C.intl.string(C.t["3S249/"]) }),
         (0, r.jsxs)("div", {
             className: N.wrapper,
             children: [
@@ -130,7 +130,7 @@ function M(e) {
                           variant: "text-sm/normal",
                           color: "text-muted",
                           className: N.cta,
-                          children: C.intl.string(C.t["k7J/w/"]),
+                          children: C.intl.string(C.t["k7J/w8"]),
                       })
                     : null,
             ],
@@ -180,7 +180,7 @@ function k(e) {
             (null != o &&
                 N.push({
                     variant: "secondary",
-                    text: C.intl.string(C.t.cpT0Cq),
+                    text: C.intl.string(C.t.cpT0Cg),
                     onClick: c,
                 }),
             v &&
@@ -189,13 +189,13 @@ function k(e) {
                     text:
                         (null == t ? void 0 : t.name.length) > 30
                             ? C.intl.string(C.t.M35zFB)
-                            : C.intl.format(C.t.UdYYP3, { guildName: null == t ? void 0 : t.name }),
+                            : C.intl.format(C.t.UdYYPz, { guildName: null == t ? void 0 : t.name }),
                     onClick: s,
                 }),
             T &&
                 N.push({
                     variant: "primary",
-                    text: C.intl.string(C.t["0cCDKP"]),
+                    text: C.intl.string(C.t["0cCDKC"]),
                     onClick: f,
                 })),
         (0, r.jsx)(
@@ -219,7 +219,7 @@ function k(e) {
 function U(e) {
     var { guild: t, application: n } = e,
         a = L(e, ["guild", "application"]);
-    let o = C.intl.string(C.t.se5gLj);
+    let o = C.intl.string(C.t.se5gLi);
     i.useEffect(() => {
         O.default.track(A.rMx.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: null == n ? void 0 : n.id });
     }, [null == n ? void 0 : n.id]);
@@ -227,12 +227,12 @@ function U(e) {
             () =>
                 null != n
                     ? null != t
-                        ? C.intl.format(C.t.IlF6IY, {
+                        ? C.intl.format(C.t.IlF6IS, {
                               installedApplicationName: null == n ? void 0 : n.name,
                               guildName: null == t ? void 0 : t.name,
                           })
-                        : C.intl.format(C.t.vTVC5T, { installedApplicationName: null == n ? void 0 : n.name })
-                    : C.intl.string(C.t["Dp+rgP"]),
+                        : C.intl.format(C.t.vTVC5e, { installedApplicationName: null == n ? void 0 : n.name })
+                    : C.intl.string(C.t["Dp+rgI"]),
             [n, t],
         ),
         l = (0, r.jsx)(d.x, {
@@ -267,7 +267,7 @@ function G(e) {
             actions: [
                 {
                     variant: "primary",
-                    text: C.intl.string(C.t["31Bci5"]),
+                    text: C.intl.string(C.t["31Bci4"]),
                     onClick: o,
                 },
             ],
@@ -291,12 +291,12 @@ function G(e) {
                             (0, r.jsx)(f.Heading, {
                                 variant: "heading-xl/semibold",
                                 color: "header-primary",
-                                children: C.intl.format(C.t["1Q+p1k"], { appName: t.name }),
+                                children: C.intl.format(C.t["1Q+p1t"], { appName: t.name }),
                             }),
                             (0, r.jsx)(d.x, {
                                 variant: "text-md/normal",
                                 color: "text-muted",
-                                children: C.intl.format(C.t.Mr7x5U, { appName: t.name }),
+                                children: C.intl.format(C.t.Mr7x5e, { appName: t.name }),
                             }),
                         ],
                     }),
@@ -309,11 +309,11 @@ function B(e) {
     return (0, r.jsx)(
         S.j,
         D(P({}, e), {
-            title: C.intl.string(C.t.j2d6Km),
-            subtitle: C.intl.string(C.t["/B7kXy"]),
+            title: C.intl.string(C.t.j2d6Ki),
+            subtitle: C.intl.string(C.t["/B7kX1"]),
             actions: [
                 {
-                    text: C.intl.string(C.t["31Bci5"]),
+                    text: C.intl.string(C.t["31Bci4"]),
                     onClick: e.onClose,
                 },
             ],
@@ -349,7 +349,7 @@ function V(e) {
             (0, m.uL)(A.Z5c.INDEX);
     }, [a]);
     let o = null != a ? (0, s.parse)(a.search) : {},
-        l = null != (n = null != (t = o.error_description) ? t : o.error) ? n : C.intl.string(C.t.mqn873);
+        l = null != (n = null != (t = o.error_description) ? t : o.error) ? n : C.intl.string(C.t["mqn87+"]);
     return (0, r.jsx)(S.G, {
         removeChildWrapper: !0,
         children: (0, r.jsx)(S.j, {

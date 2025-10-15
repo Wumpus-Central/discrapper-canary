@@ -72,9 +72,9 @@ function x() {
     }
     let I = (0, s.mY)();
     return (0, r.jsxs)(l.gNt, {
-        label: f.intl.string(f.t["D0qeO+"]),
-        description: f.intl.format(f.t.zuwely, { premiumEmojiMaximum: y }),
-        helperText: f.intl.format(f.t.sEkgBk, { handleTransitionToManageEmoji: C }),
+        label: f.intl.string(f.t.D0qeOz),
+        description: f.intl.format(f.t.zuwel5, { premiumEmojiMaximum: y }),
+        helperText: f.intl.format(f.t.sEkgBg, { handleTransitionToManageEmoji: C }),
         disabled: I,
         children: [
             (0, r.jsx)(m.E, {
@@ -117,7 +117,7 @@ function x() {
                     });
                 },
                 disabled: I,
-                children: f.intl.string(f.t.ouOOVy),
+                children: f.intl.string(f.t.ouOOV1),
             }),
         ],
     });

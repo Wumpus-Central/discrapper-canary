@@ -98,12 +98,12 @@ function E() {
             (0, r.jsx)(s.Heading, {
                 variant: "heading-md/medium",
                 color: "header-primary",
-                children: _.intl.string(_.t["oqalC+"]),
+                children: _.intl.string(_.t.oqalCw),
             }),
             (0, r.jsx)(s.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: _.intl.format(_.t.YnNFWa, { applicationName: E.name }),
+                children: _.intl.format(_.t.YnNFWV, { applicationName: E.name }),
             }),
         ],
     });
@@ -137,7 +137,7 @@ function E() {
                             T,
                             (0, r.jsx)(s.Button, {
                                 icon: s.qJs,
-                                text: _.intl.string(_.t["lBG2s/"]),
+                                text: _.intl.string(_.t.lBG2s7),
                                 size: "md",
                                 color: "secondary",
                                 onClick: S,

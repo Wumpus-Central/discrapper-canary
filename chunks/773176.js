@@ -41,11 +41,11 @@ var i = n(951288),
     V = n(271383),
     F = n(430824),
     G = n(607744),
-    W = n(496675),
-    z = n(626135),
-    q = n(572004),
+    z = n(496675),
+    W = n(626135),
+    K = n(572004),
     Y = n(176354),
-    K = n(823379),
+    q = n(823379),
     X = n(970257),
     J = n(418476),
     Q = n(151007),
@@ -85,7 +85,7 @@ function eu(e) {
     }
     return e;
 }
-let ed = [C.ZP.getByName("100"), C.ZP.getByName("laughing"), C.ZP.getByName("sparkling_heart")].filter(K.lm);
+let ed = [C.ZP.getByName("100"), C.ZP.getByName("laughing"), C.ZP.getByName("sparkling_heart")].filter(q.lm);
 function ep(e) {
     e.stopPropagation();
 }
@@ -106,7 +106,7 @@ function eh(e) {
         onHeightUpdate: l,
         onClose: r,
         navId: "message-actions",
-        ariaLabel: es.intl.string(es.t.Lv7LxN),
+        ariaLabel: es.intl.string(es.t.Lv7LxM),
     });
 }
 let ef = r.memo(function (e) {
@@ -126,12 +126,12 @@ let ef = r.memo(function (e) {
         children: l.map((e) => {
             var r;
             let l = a.find((t) => (0, w.ir)(t.emoji, (0, w.g1)(e))),
-                o = null != l ? es.intl.string(es.t.wunKKA) : es.intl.string(es.t.XVx5BN),
+                o = null != l ? es.intl.string(es.t.wunKKC) : es.intl.string(es.t.XVx5BA),
                 s = null == e.id ? e.uniqueName : e.name,
                 c =
                     null != l
-                        ? es.intl.formatToPlainString(es.t.vjeruO, { emojiName: s })
-                        : es.intl.formatToPlainString(es.t.L1JQwE, { emojiName: s });
+                        ? es.intl.formatToPlainString(es.t.vjeruL, { emojiName: s })
+                        : es.intl.formatToPlainString(es.t.L1JQwM, { emojiName: s });
             return (0, i.jsx)(
                 et.sF,
                 {
@@ -194,7 +194,7 @@ function em(e) {
             isExpanded: M,
             showMoreUtilities: H,
             showEmojiPicker: Y,
-            showMessageBookmarksActions: K,
+            showMessageBookmarksActions: q,
             isMessageBookmark: er,
             setPopout: eo,
             hasDeveloperMode: ec,
@@ -220,10 +220,10 @@ function em(e) {
                 x = U.Sb.useSetting(),
                 O = (0, u.e7)([G.Z], () => null == t.guild_id || G.Z.canChatInGuild(t.guild_id), [t]),
                 { canManageMessages: j, canAddNewReactions: S } = (0, u.cj)(
-                    [W.Z],
+                    [z.Z],
                     () => ({
-                        canAddNewReactions: O && W.Z.can(el.Plq.ADD_REACTIONS, t),
-                        canManageMessages: W.Z.can(el.Plq.MANAGE_MESSAGES, t),
+                        canAddNewReactions: O && z.Z.can(el.Plq.ADD_REACTIONS, t),
+                        canManageMessages: z.Z.can(el.Plq.MANAGE_MESSAGES, t),
                     }),
                     [t, O],
                 ),
@@ -238,7 +238,7 @@ function em(e) {
                 t.isModeratorReportChannel() && (w = w && n.id !== (null == C ? void 0 : C.id) && !(0, $.Z)(n));
             let M = (0, X.a4)(n),
                 H = (0, Q.Z)(n, t),
-                z = !t.isSystemDM() && (0, J.Z)(n, h) && g && !b,
+                W = !t.isSystemDM() && (0, J.Z)(n, h) && g && !b,
                 { disableReactionCreates: Y } = (0, ee.Z)({
                     channel: t,
                     canChat: O,
@@ -248,7 +248,7 @@ function em(e) {
                     isGuest: N,
                     isActiveChannelOrUnarchivableThread: g,
                 }),
-                K =
+                q =
                     t.type === el.d4z.GUILD_ANNOUNCEMENT &&
                     null != p &&
                     p.features.has(el.oNc.NEWS) &&
@@ -258,7 +258,7 @@ function em(e) {
                 en =
                     null != et &&
                     n.type === el.uaV.USER_JOIN &&
-                    W.Z.canWithPartialContext(el.Plq.MANAGE_GUILD, { guildId: et }),
+                    z.Z.canWithPartialContext(el.Plq.MANAGE_GUILD, { guildId: et }),
                 ei = (0, v.a)(n),
                 { enabled: er } = L.Z.useExperiment({ location: "message_utilities" }),
                 ea = (0, u.e7)([D.Z], () => null != D.Z.getSavedMessage(t.id, n.id)),
@@ -268,17 +268,17 @@ function em(e) {
                 channel: t,
                 message: n,
                 canPin: H,
-                canEdit: z,
+                canEdit: W,
                 canDelete: w,
                 canReport: M,
                 canReply: P,
                 canStartThread: I,
                 canViewThread: Z,
                 canForward: ei,
-                canCopy: q.wS,
+                canCopy: K.wS,
                 hasDeveloperMode: x,
                 canReact: !Y && y,
-                canPublish: K,
+                canPublish: q,
                 canConfigureJoin: en,
                 isExpanded: eo && !es && !i && !r && !l,
                 showEmojiPicker: i,
@@ -293,7 +293,7 @@ function em(e) {
         ep = r.useRef(null),
         em = r.useCallback(() => {
             H ||
-                z.default.track(el.rMx.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
+                W.default.track(el.rMx.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
                     message_id: n.id,
                     channel: n.channel_id,
                 }),
@@ -327,7 +327,7 @@ function em(e) {
                 try {
                     (0, S.qc)(t.id, n.id, e);
                 } catch (e) {
-                    (0, p.showToast)((0, p.createToast)(es.intl.string(es.t.xsfC2S), p.ToastType.FAILURE));
+                    (0, p.showToast)((0, p.createToast)(es.intl.string(es.t.xsfC2d), p.ToastType.FAILURE));
                 }
             },
             [t.id, n.id],
@@ -341,7 +341,7 @@ function em(e) {
                               ? (0, i.jsx)(
                                     et.sF,
                                     {
-                                        label: es.intl.string(es.t.zBoHlf),
+                                        label: es.intl.string(es.t.zBoHlZ),
                                         icon: p.VuL,
                                         onClick: (e) => (0, en.F4)(t, n, e),
                                     },
@@ -352,7 +352,7 @@ function em(e) {
                               ? (0, i.jsx)(
                                     et.sF,
                                     {
-                                        label: es.intl.string(es.t.WqhZss),
+                                        label: es.intl.string(es.t.WqhZsr),
                                         icon: p.xPt,
                                         onClick: () => (0, en.fB)(t, n),
                                     },
@@ -363,7 +363,7 @@ function em(e) {
                               ? (0, i.jsx)(
                                     et.sF,
                                     {
-                                        label: es.intl.string(es.t.NpHUi1),
+                                        label: es.intl.string(es.t.NpHUi4),
                                         icon: p.idN,
                                         onClick: () => (0, en.zW)(t),
                                     },
@@ -374,18 +374,18 @@ function em(e) {
                               ? (0, i.jsx)(
                                     et.sF,
                                     {
-                                        label: es.intl.string(es.t.RpE9k7),
+                                        label: es.intl.string(es.t.RpE9k5),
                                         icon: p.z7b,
                                         onClick: () => (0, en.B8)(t, n),
                                     },
                                     "mark-unread",
                                 )
                               : null,
-                          K
+                          q
                               ? (0, i.jsx)(
                                     et.sF,
                                     {
-                                        label: er ? es.intl.string(es.t.LHUP9D) : es.intl.string(es.t["9p3D9p"]),
+                                        label: er ? es.intl.string(es.t.LHUP9P) : es.intl.string(es.t["9p3D9v"]),
                                         icon: er ? p.plf : p.gt9,
                                         onClick: () => (er ? (0, en.eM)(t, n) : (0, en.dF)(t, n)),
                                     },
@@ -396,7 +396,9 @@ function em(e) {
                               ? (0, i.jsx)(
                                     et.sF,
                                     {
-                                        label: n.pinned ? es.intl.string(es.t["Bse+F/"]) : es.intl.string(es.t.CvQ18w),
+                                        label: n.pinned
+                                            ? es.intl.string(es.t["Bse+Fx"])
+                                            : es.intl.string(es.t["CvQ18/"]),
                                         icon: p.qQX,
                                         onClick: (e) => (0, en.rY)(t, n, e),
                                     },
@@ -407,7 +409,7 @@ function em(e) {
                               ? (0, i.jsx)(
                                     et.sF,
                                     {
-                                        label: es.intl.string(es.t.rBIGBL),
+                                        label: es.intl.string(es.t.rBIGBA),
                                         icon: p.or_,
                                         onClick: () => (0, en.gK)(t, n),
                                     },
@@ -454,10 +456,10 @@ function em(e) {
                               ? (0, i.jsx)(
                                     et.sF,
                                     {
-                                        label: es.intl.string(es.t.icaJW5),
+                                        label: es.intl.string(es.t.icaJW1),
                                         icon: p.l22,
                                         onClick: () => {
-                                            z.default.track(el.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, {
+                                            W.default.track(el.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, {
                                                 location: I.MG.MessageExpandingButtons,
                                             }),
                                                 (0, Z.s)({
@@ -490,7 +492,7 @@ function em(e) {
                 ? (0, i.jsx)(
                       et.sF,
                       {
-                          label: es.intl.string(es.t.bt75uw),
+                          label: es.intl.string(es.t.bt75u7),
                           icon: p.vdY,
                           onClick: () => (0, en.Hd)(t, n),
                       },
@@ -501,7 +503,7 @@ function em(e) {
                 ? (0, i.jsx)(
                       et.sF,
                       {
-                          label: es.intl.string(es.t.I3ltXO),
+                          label: es.intl.string(es.t.I3ltXF),
                           icon: x.Z,
                           onClick: () => eP(t, n),
                           onTooltipShow: eE,
@@ -515,7 +517,7 @@ function em(e) {
                 ? (0, i.jsx)(
                       et.sF,
                       {
-                          label: es.intl.string(es.t.rBIGBL),
+                          label: es.intl.string(es.t.rBIGBA),
                           icon: p.or_,
                           onClick: () => (0, en.gK)(t, n),
                       },
@@ -526,7 +528,7 @@ function em(e) {
                 ? (0, i.jsx)(
                       et.sF,
                       {
-                          label: es.intl.string(es.t["39d0Wj"]),
+                          label: es.intl.string(es.t["39d0Wl"]),
                           icon: p.or_,
                           onClick: () => (0, en.qe)(t, n),
                       },
@@ -537,7 +539,7 @@ function em(e) {
                 ? (0, i.jsx)(
                       et.sF,
                       {
-                          label: ey ? es.intl.string(es.t["1kWJAr"]) : es.intl.string(es.t.MFGE51),
+                          label: ey ? es.intl.string(es.t["1kWJAg"]) : es.intl.string(es.t["MFGE5+"]),
                           icon: p.MqZ,
                           onClick: () => (0, en.Xl)(t, n),
                           disabled: ey,
@@ -549,7 +551,7 @@ function em(e) {
                 ? (0, i.jsx)(
                       et.sF,
                       {
-                          label: es.intl.string(es.t.oyYWHE),
+                          label: es.intl.string(es.t.oyYWHB),
                           icon: p.XHJ,
                           onClick: (e) => (0, en.$Z)(t, n, e),
                           dangerous: !0,
@@ -608,7 +610,7 @@ function em(e) {
                               eu(
                                   {
                                       ref: ep,
-                                      label: es.intl.string(es.t["UKOtz+"]),
+                                      label: es.intl.string(es.t.UKOtz8),
                                       icon: p.xhG,
                                       selected: l,
                                       onClick: em,
@@ -633,7 +635,7 @@ function eg(e) {
                 (0, i.jsx)(
                     et.sF,
                     {
-                        label: es.intl.string(es.t["5911Lb"]),
+                        label: es.intl.string(es.t["5911LS"]),
                         icon: p.Oe7,
                         onClick: () => (0, en.mG)(t, n),
                     },
@@ -642,7 +644,7 @@ function eg(e) {
             (0, i.jsx)(
                 et.sF,
                 {
-                    label: es.intl.string(es.t.oyYWHE),
+                    label: es.intl.string(es.t.oyYWHB),
                     icon: p.XHJ,
                     onClick: (e) => (0, en.$Z)(t, n, e),
                 },
@@ -722,7 +724,7 @@ let ey = r.memo(function (e) {
               onClick: ep,
               onContextMenu: ep,
               role: "group",
-              "aria-label": es.intl.string(es.t.Lv7LxN),
+              "aria-label": es.intl.string(es.t.Lv7LxM),
               children: (0, i.jsxs)(et.ZP, {
                   className: e.innerClassName,
                   children: [s, c],

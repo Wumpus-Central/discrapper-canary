@@ -24,7 +24,7 @@ let p = (e) => {
                 className: _.backButtonContainer,
                 children: (0, r.jsx)(s.zxk, {
                     onClick: n,
-                    text: f.intl.string(f.t["13/7kX"]),
+                    text: f.intl.string(f.t["13/7kZ"]),
                     variant: "overlay-secondary",
                 }),
             }),
@@ -37,7 +37,7 @@ let p = (e) => {
                             containerVisibilityPercentage: h,
                             isMotionReduced: i,
                         }),
-                        (0, r.jsx)(c.Z, { children: f.intl.string(f.t["hqjDX/"]) }),
+                        (0, r.jsx)(c.Z, { children: f.intl.string(f.t.hqjDX1) }),
                     ],
                 }),
             }),

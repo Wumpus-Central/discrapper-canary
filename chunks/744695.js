@@ -112,9 +112,9 @@ function b(e) {
                     wrapperClassName: h.tabWrapper,
                     className: l()(h.tab, h.more, { [h.selected]: s }),
                     id: p.GlobalDiscoverySharedTabId.MORE,
-                    "aria-label": m.intl.string(m.t["UKOtz+"]),
+                    "aria-label": m.intl.string(m.t.UKOtz8),
                     children: [
-                        m.intl.string(m.t["UKOtz+"]),
+                        m.intl.string(m.t.UKOtz8),
                         n ? (0, r.jsx)(o.u04, { size: "xs" }) : (0, r.jsx)(o.CJ0, { size: "xs" }),
                     ],
                 }),

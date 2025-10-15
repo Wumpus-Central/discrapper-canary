@@ -53,8 +53,8 @@ function w() {
         : 0 === t.length
           ? (0, r.jsx)(E.Z, {
                 Icon: d.T39,
-                header: I.intl.string(I.t.aJQZfZ),
-                tip: I.intl.string(I.t.rCN4pN),
+                header: I.intl.string(I.t.aJQZfX),
+                tip: I.intl.string(I.t.rCN4pK),
             })
           : (0, r.jsx)(c.bG, {
                 navigator: o,
@@ -215,27 +215,27 @@ let A = i.memo(function (e) {
                 case b._.ERROR_CHANNEL_NOT_FOUND:
                     return {
                         isError: !0,
-                        stateMessage: I.intl.string(I.t.v5O2dK),
+                        stateMessage: I.intl.string(I.t.v5O2dH),
                     };
                 case b._.ERROR_USER_NOT_FOUND:
                     return {
                         isError: !0,
-                        stateMessage: I.intl.string(I.t.j8uIfG),
+                        stateMessage: I.intl.string(I.t.j8uIfH),
                     };
                 case b._.ERROR_USER_CANNOT_USE_SCHEDULED_MESSAGES:
                     return {
                         isError: !0,
-                        stateMessage: I.intl.string(I.t["w6zHX/"]),
+                        stateMessage: I.intl.string(I.t.w6zHX1),
                     };
                 case b._.ERROR_SEND_FAILED:
                     return {
                         isError: !0,
-                        stateMessage: I.intl.string(I.t.pflV7z),
+                        stateMessage: I.intl.string(I.t["pflV7+"]),
                     };
                 case b._.ERROR_SCHEDULED_MESSAGES_DISABLED:
                     return {
                         isError: !0,
-                        stateMessage: I.intl.string(I.t.j8uIfG),
+                        stateMessage: I.intl.string(I.t.j8uIfH),
                     };
                 default:
                     (0, x.vE)(e);

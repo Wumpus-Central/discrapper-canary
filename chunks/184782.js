@@ -14,27 +14,27 @@ var a = i(951288),
     p = i(372769),
     j = i(703656),
     x = i(592125),
-    N = i(430824),
-    g = i(496675),
+    g = i(430824),
+    N = i(496675),
     C = i(259580),
     b = i(626135),
     E = i(524329),
     Z = i(995532),
     f = i(845606),
-    I = i(981631),
-    v = i(231338),
+    v = i(981631),
+    I = i(231338),
     T = i(388032),
     S = i(557401);
 let k = (e) => {
         var n;
         let { channelData: i, onClose: l, trackOptionClick: o } = e,
             d = (0, t.e7)([x.Z], () => x.Z.getChannel(i.channel_id)),
-            u = (0, t.e7)([g.Z], () => null != d && g.Z.can(v.Pl.VIEW_CHANNEL, d)),
+            u = (0, t.e7)([N.Z], () => null != d && N.Z.can(I.Pl.VIEW_CHANNEL, d)),
             _ = (0, t.e7)([m.ZP], () => (null != i.emoji_id ? m.ZP.getCustomEmojiById(i.emoji_id) : null), [
                 i.emoji_id,
             ]),
             p = null != i.emoji_name ? h.ZP.getByName(h.ZP.convertSurrogateToName(i.emoji_name, !1)) : null,
-            N = null != (n = (0, c.KS)(d)) ? n : s.VL1;
+            g = null != (n = (0, c.KS)(d)) ? n : s.VL1;
         return null != d && u
             ? (0, a.jsxs)(s.P3F, {
                   className: S.optionContainer,
@@ -50,7 +50,7 @@ let k = (e) => {
                                 autoplay: !0,
                                 className: S.optionEmoji,
                             })
-                          : (0, a.jsx)(N, { className: S.channelIcon }),
+                          : (0, a.jsx)(g, { className: S.channelIcon }),
                       (0, a.jsxs)("div", {
                           className: S.optionTextContainer,
                           children: [
@@ -63,7 +63,7 @@ let k = (e) => {
                                   variant: "text-xs/normal",
                                   color: "header-secondary",
                                   children: [
-                                      (0, a.jsx)(N, {
+                                      (0, a.jsx)(g, {
                                           className: S.channelTitleIcon,
                                           size: "xxs",
                                           color: "currentColor",
@@ -84,11 +84,11 @@ let k = (e) => {
     P = (e) => {
         var n;
         let { onClose: i, transitionState: r, guildId: c, isPreview: m } = e,
-            h = (0, t.e7)([N.Z], () => N.Z.getGuild(c)),
+            h = (0, t.e7)([g.Z], () => g.Z.getGuild(c)),
             {
                 welcomeScreen: j,
                 fetching: x,
-                hasError: g,
+                hasError: N,
             } = (0, t.cj)([Z.Z], () => ({
                 welcomeScreen: Z.Z.get(c),
                 fetching: Z.Z.isFetching(),
@@ -99,19 +99,19 @@ let k = (e) => {
             null == j && (0, E.RM)(c);
         }, [c, j]),
             l.useEffect(() => {
-                !1 === x && !0 === g && null == j && i();
-            }, [x, g, i, j]),
+                !1 === x && !0 === N && null == j && i();
+            }, [x, N, i, j]),
             l.useEffect(() => {
                 j === Z.a && !1 === x && i();
             }, [i, j, x]),
             l.useEffect(() => {
                 !0 !== m &&
-                    b.default.track(I.rMx.OPEN_MODAL, {
+                    b.default.track(v.rMx.OPEN_MODAL, {
                         type: f._,
                         guild_id: c,
                     });
             }, [c, m]);
-        let v = l.useCallback(
+        let I = l.useCallback(
             (e) => {
                 var n;
                 if (null == j || !0 === m) return;
@@ -122,7 +122,7 @@ let k = (e) => {
                     n.forEach((e) => {
                         i.push(e.description), a.push(e.channel_id), null != e.emoji_id && (l = !0);
                     }),
-                    b.default.track(I.rMx.GUILD_WELCOME_SCREEN_OPTION_SELECTED, {
+                    b.default.track(v.rMx.GUILD_WELCOME_SCREEN_OPTION_SELECTED, {
                         index: e,
                         guild_id: c,
                         options: i,
@@ -138,8 +138,8 @@ let k = (e) => {
             : null == j
               ? (0, a.jsx)(o.Modal, {
                     transitionState: r,
-                    "aria-label": T.intl.string(T.t.ZTNur7),
-                    title: T.intl.string(T.t.ZTNur7),
+                    "aria-label": T.intl.string(T.t.ZTNur6),
+                    title: T.intl.string(T.t.ZTNur6),
                     onClose: () => Promise.resolve(i()),
                     actions: [],
                     children: (0, a.jsx)(s.$jN, { type: s.$jN.Type.SPINNING_CIRCLE }),
@@ -149,12 +149,12 @@ let k = (e) => {
                     "aria-labelledby": C,
                     actions: [
                         {
-                            text: T.intl.string(T.t.jizr82),
+                            text: T.intl.string(T.t["jizr8/"]),
                             onClick: i,
                             variant: "secondary",
                         },
                     ],
-                    title: T.intl.string(T.t["3iCBUn"]),
+                    title: T.intl.string(T.t["3iCBUl"]),
                     onClose: () => Promise.resolve(i()),
                     children: (0, a.jsxs)("div", {
                         className: S.modalContent,
@@ -176,7 +176,7 @@ let k = (e) => {
                                 variant: "heading-xl/semibold",
                                 className: S.header,
                                 id: C,
-                                children: T.intl.format(T.t["0aydCN"], {
+                                children: T.intl.format(T.t["0aydCA"], {
                                     guildName: h.name,
                                     guildNameHook: (e, n) =>
                                         (0, a.jsxs)(
@@ -210,7 +210,7 @@ let k = (e) => {
                             (0, a.jsx)(s.Heading, {
                                 variant: "heading-sm/semibold",
                                 className: S.choiceHeader,
-                                children: T.intl.string(T.t["haj5+i"]),
+                                children: T.intl.string(T.t["haj5+v"]),
                             }),
                             (0, a.jsx)("div", {
                                 className: S.options,
@@ -222,7 +222,7 @@ let k = (e) => {
                                                   k,
                                                   {
                                                       channelData: e,
-                                                      trackOptionClick: () => v(n),
+                                                      trackOptionClick: () => I(n),
                                                       onClose: i,
                                                   },
                                                   "".concat(e.channel_id, "-").concat(n),

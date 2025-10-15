@@ -14,7 +14,7 @@ n.d(t, {
     n(388685);
 var r = n(704215),
     i = n(70956),
-    a = n(714664),
+    a = n(565287),
     o = n(388032);
 let s = 6 * i.Z.Millis.DAYS_30;
 var l = (function (e) {
@@ -32,7 +32,7 @@ function c() {
     return [
         {
             value: "too_many_notifications",
-            label: o.intl.string(o.t["bQHhT+"]),
+            label: o.intl.string(o.t.bQHhT0),
         },
         {
             value: "temporary_break",
@@ -40,19 +40,19 @@ function c() {
         },
         {
             value: "annoying",
-            label: o.intl.string(o.t["3kmAMM"]),
+            label: o.intl.string(o.t["3kmAMD"]),
         },
         {
             value: "unsafe",
-            label: o.intl.string(o.t.nmW7jO),
+            label: o.intl.string(o.t.nmW7jI),
         },
         {
             value: "spam",
-            label: o.intl.string(o.t.cCPYjk),
+            label: o.intl.string(o.t.cCPYjo),
         },
         {
             value: "other",
-            label: o.intl.string(o.t["7ZIIJ9"]),
+            label: o.intl.string(o.t["7ZIIJy"]),
         },
     ];
 }
@@ -69,19 +69,19 @@ function d() {
     return [
         {
             value: "confusion",
-            label: o.intl.string(o.t["64Oph/"]),
+            label: o.intl.string(o.t["64Oph4"]),
         },
         {
             value: "does_not_achieve_wants",
-            label: o.intl.string(o.t["wH5R/r"]),
+            label: o.intl.string(o.t["wH5R/v"]),
         },
         {
             value: "hard_to_access",
-            label: o.intl.string(o.t["4uZBRp"]),
+            label: o.intl.string(o.t["4uZBRk"]),
         },
         {
             value: "something_else",
-            label: o.intl.string(o.t.YicFbD),
+            label: o.intl.string(o.t.YicFbG),
         },
     ];
 }
@@ -98,19 +98,19 @@ function _() {
     return [
         {
             value: "confusion",
-            label: o.intl.string(o.t.IumZmj),
+            label: o.intl.string(o.t.IumZmp),
         },
         {
             value: "does_not_achieve_wants",
-            label: o.intl.string(o.t.mXkYyW),
+            label: o.intl.string(o.t.mXkYyc),
         },
         {
             value: "hard_to_access",
-            label: o.intl.string(o.t.eg1hVP),
+            label: o.intl.string(o.t.eg1hVF),
         },
         {
             value: "something_else",
-            label: o.intl.string(o.t.WAYoTx),
+            label: o.intl.string(o.t.WAYoT0),
         },
     ];
 }
@@ -131,19 +131,19 @@ function h(e) {
     let t = [
         {
             value: "pid_concern",
-            label: o.intl.string(a.default.ZsnNgz),
+            label: o.intl.string(a.default.ZsnNg4),
         },
         {
             value: "too_much_time",
-            label: o.intl.string(a.default.kkKhVJ),
+            label: o.intl.string(a.default.kkKhVF),
         },
         {
             value: "confusion",
-            label: o.intl.string(a.default.bC0QVX),
+            label: o.intl.string(a.default.bC0QVV),
         },
         {
             value: "something_else",
-            label: o.intl.string(o.t.WAYoTx),
+            label: o.intl.string(o.t.WAYoT0),
         },
     ];
     return e === r.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE
@@ -151,22 +151,22 @@ function h(e) {
               ...t,
               {
                   value: "need_documents",
-                  label: o.intl.string(a.default["Dl4A+U"]),
+                  label: o.intl.string(a.default["Dl4A+f"]),
               },
               {
                   value: "didnt_work",
-                  label: o.intl.string(a.default["8JFGXc"]),
+                  label: o.intl.string(a.default["8JFGXV"]),
               },
           ]
         : [
               ...t,
               {
                   value: "changed_mind",
-                  label: o.intl.string(a.default.eSP1F9),
+                  label: o.intl.string(a.default.eSP1Fx),
               },
               {
                   value: "unnecessary",
-                  label: o.intl.string(a.default.maxf2S),
+                  label: o.intl.string(a.default.maxf2d),
               },
           ];
 }

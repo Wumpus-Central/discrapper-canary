@@ -17,8 +17,8 @@ function N(n) {
     let { className: e, isDsaEligible: i, onClose: N, onNext: C, onBack: j } = n,
         _ = (0, s.e7)([d.Z], () => d.Z.getAppealClassificationId()),
         { classification: E } = (0, m.YG)(null != _ ? _ : g.lds),
-        I = (0, x.c7)(null == E ? void 0 : E.description),
-        v = (0, s.e7)([d.Z], () => d.Z.getIsSubmitting()),
+        v = (0, x.c7)(null == E ? void 0 : E.description),
+        I = (0, s.e7)([d.Z], () => d.Z.getIsSubmitting()),
         T = (0, s.e7)([d.Z], () => d.Z.getAppealSignal()),
         S = (0, s.e7)([d.Z], () => d.Z.getFreeTextAppealReason()),
         [A, k] = a.useState(!1),
@@ -49,13 +49,13 @@ function N(n) {
                     (0, t.jsx)(l.Heading, {
                         className: h.title,
                         variant: "heading-xl/semibold",
-                        children: p.intl.string(p.t["C5q+pW"]),
+                        children: p.intl.string(p.t["C5q+pa"]),
                     }),
                     (0, t.jsx)(l.Text, {
                         className: h.subtitle,
                         color: "header-secondary",
                         variant: "text-md/normal",
-                        children: p.intl.string(p.t["G2g/g5"]),
+                        children: p.intl.string(p.t["G2g/g4"]),
                     }),
                     null != N &&
                         (0, t.jsx)(l.olH, {
@@ -97,7 +97,7 @@ function N(n) {
                                 children: (0, t.jsx)(l.Heading, {
                                     variant: "heading-md/normal",
                                     color: "text-link",
-                                    children: S.length > 0 ? p.intl.string(p.t.tnE3bZ) : p.intl.string(p.t.uoQFIp),
+                                    children: S.length > 0 ? p.intl.string(p.t.tnE3bW) : p.intl.string(p.t.uoQFIi),
                                 }),
                             }),
                         }),
@@ -114,14 +114,14 @@ function N(n) {
                         className: h.policyContainer,
                         children: (0, t.jsx)(l.Text, {
                             variant: "text-md/semibold",
-                            children: I,
+                            children: v,
                         }),
                     }),
                     (0, t.jsx)(l.Text, {
                         variant: "text-xs/medium",
                         color: "header-secondary",
                         className: u.footerText,
-                        children: p.intl.string(p.t["d6qgY/"]),
+                        children: p.intl.string(p.t.d6qgY2),
                     }),
                 ],
             }),
@@ -143,15 +143,15 @@ function N(n) {
                             children: [
                                 (0, t.jsx)(l.Button, {
                                     variant: "secondary",
-                                    text: p.intl.string(p.t["13/7kX"]),
+                                    text: p.intl.string(p.t["13/7kZ"]),
                                     onClick: j,
-                                    disabled: v,
+                                    disabled: I,
                                 }),
                                 (0, t.jsx)(l.Button, {
                                     variant: "critical-primary",
-                                    text: p.intl.string(p.t.geKm7t),
+                                    text: p.intl.string(p.t.geKm7u),
                                     onClick: b,
-                                    loading: v,
+                                    loading: I,
                                 }),
                             ],
                         }),

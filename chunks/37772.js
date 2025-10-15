@@ -87,7 +87,7 @@ let B = i.memo(function e(t) {
             compact: R = !1,
             className: M,
             onContextMenu: B,
-            onClick: V,
+            onClick: F,
             disableInteraction: H = !1,
             hasThread: z,
             treatSpam: W,
@@ -139,12 +139,12 @@ let B = i.memo(function e(t) {
               }),
           )
         : (m.Z.isBlockedForMessage(s)
-                ? (i = L.t["+FcYM/"])
+                ? (i = L.t["+FcYMz"])
                 : m.Z.isIgnoredForMessage(s)
-                  ? (i = L.t["VFWjc+"])
-                  : (0, y.DQ)(s) && W && (i = L.t.xfkfTK),
+                  ? (i = L.t.VFWjc3)
+                  : (0, y.DQ)(s) && W && (i = L.t.xfkfTE),
             void 0 !== i)
-          ? (0, r.jsx)(F, {
+          ? (0, r.jsx)(V, {
                 className: M,
                 compact: R,
                 count: 1,
@@ -191,17 +191,17 @@ let B = i.memo(function e(t) {
                 childrenMessageContent: (0, N.Z)(t, er),
                 childrenSystemMessage: (0, w.Z)(t),
                 onContextMenu: B,
-                onClick: V,
+                onClick: F,
                 hasThread: !1 !== z && null != eo && s.hasFlag(D.iLy.HAS_THREAD),
                 hasReply: s.type === D.uaV.REPLY,
                 isSystemMessage: (0, v.Z)(s),
                 messageRef: ec,
                 author: el,
                 "aria-labelledby": eh,
-                "aria-roledescription": L.intl.string(L.t.BAB0yK),
+                "aria-roledescription": L.intl.string(L.t.BAB0yM),
             });
 });
-function F(e) {
+function V(e) {
     let { className: t, count: n, compact: i, collapsedReason: l } = e;
     return (0, r.jsx)(C.Z, {
         className: t,

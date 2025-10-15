@@ -116,19 +116,19 @@ function el(e) {
     let { amount: t, currency: n, intervalType: r, intervalCount: i = 1 } = e,
         a = (0, z.T4)(t, n);
     return r === J.rV.YEAR
-        ? ee.intl.formatToPlainString(ee.t["8M04YJ"], { price: a })
+        ? ee.intl.formatToPlainString(ee.t["8M04YG"], { price: a })
         : r === J.rV.MONTH && 1 === i
-          ? ee.intl.formatToPlainString(ee.t.VStWCR, { price: a })
+          ? ee.intl.formatToPlainString(ee.t.VStWCQ, { price: a })
           : r === J.rV.MONTH && i > 1
-            ? ee.intl.formatToPlainString(ee.t.xJvAFU, { price: a })
+            ? ee.intl.formatToPlainString(ee.t.xJvAFR, { price: a })
             : null;
 }
 function ec(e) {
     let { intervalType: t, intervalCount: n = 1 } = e;
     return t === J.rV.YEAR
-        ? ee.intl.string(ee.t.YDpAzZ)
+        ? ee.intl.string(ee.t.YDpAzc)
         : t === J.rV.MONTH && 1 === n
-          ? ee.intl.string(ee.t["6ZR3By"])
+          ? ee.intl.string(ee.t["6ZR3Bw"])
           : null;
 }
 function eu(e) {
@@ -140,7 +140,7 @@ function eu(e) {
             (0, r.jsx)(_.Text, {
                 variant: "text-sm/normal",
                 className: et.reverseTrialContextText,
-                children: ee.intl.format(ee.t.IeaYqg, { endDate: t }),
+                children: ee.intl.format(ee.t.IeaYqq, { endDate: t }),
             }),
             (0, r.jsx)("div", { className: et.reverseTrialContextInfoDivider }),
         ],
@@ -216,8 +216,8 @@ function ed(e) {
             K.ZP.hasBoostDiscount(M, U.fractionalState) &&
             null != p &&
             K.ZP.getPremiumType(p.planId) === J.PremiumTypes.TIER_2
-                ? ee.intl.format(ee.t.hf6YOY, { planName: K.ZP.getDisplayPremiumType(p.planId) })
-                : ee.intl.format(eh ? ee.t.ba1L74 : ee.t.fkffDT, {
+                ? ee.intl.format(ee.t.hf6YOT, { planName: K.ZP.getDisplayPremiumType(p.planId) })
+                : ee.intl.format(eh ? ee.t["ba1L7+"] : ee.t.fkffDQ, {
                       onPremiumSubscriptionClick: m,
                       discountPercentage: (0, W.T3)(k.default.locale, J.Rr / 100),
                       freeSubscriptionCount: J.cb,
@@ -236,7 +236,7 @@ function ed(e) {
                     ? (0, r.jsx)(eu, { endDate: p.currentPeriodEnd })
                     : (0, r.jsx)("div", {
                           className: o()(et.planSelectText, et.bodyText),
-                          children: ee.intl.string(ee.t.jNY1FO),
+                          children: ee.intl.string(ee.t.jNY1FB),
                       }),
                 g.length > 0
                     ? (0, r.jsxs)("div", {
@@ -248,11 +248,11 @@ function ed(e) {
                               }),
                               (0, r.jsxs)("div", {
                                   children: [
-                                      ee.intl.format(ee.t.F8xlhr, { slotCount: g.length }),
+                                      ee.intl.format(ee.t.F8xlho, { slotCount: g.length }),
                                       ev > 0 && null != p
                                           ? (0, r.jsx)(_.aML, {
                                                 "data-migration-pending": !0,
-                                                text: ee.intl.formatToPlainString(ee.t.SFpsCH, {
+                                                text: ee.intl.formatToPlainString(ee.t.SFpsCA, {
                                                     canceledCount: ev,
                                                     date: p.currentPeriodEnd,
                                                 }),
@@ -301,7 +301,7 @@ function ed(e) {
                                               intervalType: P,
                                               intervalCount: D,
                                           })
-                                        : ee.intl.string(ee.t.K9Bmze),
+                                        : ee.intl.string(ee.t.K9Bmzc),
                                 }),
                             ],
                         }),
@@ -326,7 +326,7 @@ function ed(e) {
                     children: [
                         (0, r.jsx)("div", {
                             className: et.planSelectorSubtotal,
-                            children: ee.intl.string(ee.t.RtA7nR),
+                            children: ee.intl.string(ee.t.RtA7nZ),
                         }),
                         (0, r.jsx)("div", {
                             className: o()(et.__invalid_planSelectorSubtotalPrice, { [et.loadingSpinner]: ep }),
@@ -408,9 +408,9 @@ function ef(e) {
                     }),
             (0, r.jsxs)(R.aO, {
                 children: [
-                    (0, r.jsx)(R.Z9, { children: ee.intl.string(ee.t.CWIwms) }),
+                    (0, r.jsx)(R.Z9, { children: ee.intl.string(ee.t.CWIwmp) }),
                     (0, r.jsx)(R.i$, {
-                        label: ee.intl.formatToPlainString(ee.t.a3cAOg, {
+                        label: ee.intl.formatToPlainString(ee.t.a3cAOj, {
                             numGuildSubscriptions: h,
                             planName: (0, K.Gf)(d.id, !1, A),
                         }),
@@ -424,10 +424,10 @@ function ef(e) {
                     0 !== g
                         ? (0, r.jsx)(R.B1, {
                               label: (0, r.jsx)(M.As, {
-                                  label: ee.intl.formatToPlainString(ee.t.ZSVged, {
+                                  label: ee.intl.formatToPlainString(ee.t.ZSVgeX, {
                                       planName: (0, K.aq)(m[0].subscriptionPlanId),
                                   }),
-                                  tooltipText: ee.intl.string(ee.t.JmwQJM),
+                                  tooltipText: ee.intl.string(ee.t.JmwQJC),
                               }),
                               value: (0, z.T4)(g, i.currency),
                           })
@@ -435,15 +435,15 @@ function ef(e) {
                     0 !== v
                         ? (0, r.jsx)(R.B1, {
                               label: (0, r.jsx)(M.As, {
-                                  label: ee.intl.string(ee.t["+as5ZZ"]),
-                                  tooltipText: ee.intl.string(ee.t.JmwQJM),
+                                  label: ee.intl.string(ee.t["+as5ZW"]),
+                                  tooltipText: ee.intl.string(ee.t.JmwQJC),
                               }),
                               value: (0, z.T4)(v, i.currency),
                           })
                         : null,
                     (0, r.jsx)(R.UN, {}),
                     (0, r.jsx)(R.az, {
-                        label: ee.intl.format(i.taxInclusive ? (A ? ee.t.BqdxQt : ee.t.XH4raN) : ee.t.RUI48E, {}),
+                        label: ee.intl.format(i.taxInclusive ? (A ? ee.t.BqdxQk : ee.t.XH4raG) : ee.t.RUI48P, {}),
                         value: O,
                     }),
                     null != t
@@ -539,9 +539,9 @@ function e_(e) {
                             ? null != D
                                 ? (0, r.jsx)(f.u, {
                                       asContainer: !0,
-                                      text: ee.intl.string(ee.t.XiuuV9),
+                                      text: ee.intl.string(ee.t.XiuuV1),
                                       children: (0, r.jsx)(m.ZP, {
-                                          label: ee.intl.string(ee.t["mmDvV+"]),
+                                          label: ee.intl.string(ee.t.mmDvV1),
                                           paymentSources: [D],
                                           selectedPaymentSourceId: D.id,
                                           hidePersonalInformation: L,
@@ -550,7 +550,7 @@ function e_(e) {
                                   })
                                 : (0, r.jsx)("div", { children: (0, r.jsx)(_.$jN, {}) })
                             : (0, r.jsx)(m.ZP, {
-                                  label: ee.intl.string(ee.t["mmDvV+"]),
+                                  label: ee.intl.string(ee.t.mmDvV1),
                                   paymentSources: Object.values(o),
                                   selectedPaymentSourceId: P,
                                   onChange: O,
@@ -604,13 +604,13 @@ function ep(e) {
     return (
         (n = l
             ? null == y
-                ? ee.intl.format(ee.t.P52e1r, {})
-                : ee.intl.format(ee.t["4UnIk9"], { guildName: y })
+                ? ee.intl.format(ee.t.P52e1t, {})
+                : ee.intl.format(ee.t["4UnIk5"], { guildName: y })
             : d
-              ? ee.intl.format(ee.t.gFaKd1, { helpCenterLink: Y.Z.getArticleURL(X.BhN.FRACTIONAL_PREMIUM_ABOUT) })
+              ? ee.intl.format(ee.t.gFaKd3, { helpCenterLink: Y.Z.getArticleURL(X.BhN.FRACTIONAL_PREMIUM_ABOUT) })
               : null == y
-                ? ee.intl.format(ee.t.SZ5ohR, { guildSubscriptionQuantity: s })
-                : ee.intl.format(ee.t.GxK3Mv, {
+                ? ee.intl.format(ee.t.SZ5ohY, { guildSubscriptionQuantity: s })
+                : ee.intl.format(ee.t.GxK3Mj, {
                       guildName: y,
                       guildSubscriptionQuantity: s,
                   })),
@@ -649,7 +649,7 @@ function ep(e) {
                 }),
                 (0, r.jsx)(_.Button, {
                     variant: "primary",
-                    text: p === Q.cL.APPLE_PAYMENT_LINK ? ee.intl.string(ee.t.qXV2XU) : ee.intl.string(ee.t["/iTxgz"]),
+                    text: p === Q.cL.APPLE_PAYMENT_LINK ? ee.intl.string(ee.t.qXV2XV) : ee.intl.string(ee.t["/iTxg4"]),
                     onClick: a,
                 }),
             ],

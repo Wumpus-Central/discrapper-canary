@@ -198,9 +198,9 @@ function ey(e) {
         B = K.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
         Z =
             null != t && g
-                ? ec.intl.formatToPlainString(ec.t["8lzR/R"], { channel: "#".concat(t.name) })
-                : ec.intl.formatToPlainString(ec.t["4c+CAx"], { channel: "@".concat(B) }),
-        F = g ? ec.intl.string(ec.t.Z2CUgn) : ec.intl.string(ec.t.XLGiTG),
+                ? ec.intl.formatToPlainString(ec.t["8lzR/f"], { channel: "#".concat(t.name) })
+                : ec.intl.formatToPlainString(ec.t["4c+CAw"], { channel: "@".concat(B) }),
+        F = g ? ec.intl.string(ec.t.Z2CUgo) : ec.intl.string(ec.t.XLGiTE),
         V = async (e) => {
             let r,
                 { emoji: i } = e;
@@ -361,7 +361,7 @@ function ey(e) {
                                             variant: "secondary",
                                             onClick: () => X(!0),
                                             size: M ? "sm" : "md",
-                                            text: ec.intl.string(ec.t.OAJQlP),
+                                            text: ec.intl.string(ec.t.OAJQlJ),
                                         },
                                         "toggleMessageMode",
                                     ),
@@ -406,9 +406,9 @@ let eO = (e) => {
                       {
                           children: (0, r.jsx)(f.u, {
                               asContainer: !0,
-                              text: ec.intl.formatToPlainString(ec.t.kilW3l, { emojiName: t.name }),
+                              text: ec.intl.formatToPlainString(ec.t.kilW3t, { emojiName: t.name }),
                               position: "top",
-                              "aria-label": ec.intl.formatToPlainString(ec.t.kilW3l, { emojiName: t.name }),
+                              "aria-label": ec.intl.formatToPlainString(ec.t.kilW3t, { emojiName: t.name }),
                               shouldShow: !s && void 0,
                               children: (0, r.jsx)(x.u, {
                                   emoji: t,
@@ -697,7 +697,7 @@ function eS(e) {
                                         children: (0, r.jsx)(_.Text, {
                                             variant: "text-md/normal",
                                             color: "always-white",
-                                            children: ec.intl.string(ec.t["7Xq/nV"]),
+                                            children: ec.intl.string(ec.t["7Xq/nZ"]),
                                         }),
                                     }),
                             ],
@@ -766,7 +766,7 @@ function eA(e) {
                       className: eu.voiceChannelPopoutReactorHeader,
                       children: [
                           (0, r.jsxs)(_.P3F, {
-                              "aria-label": ec.intl.string(ec.t["W/A4Qp"]),
+                              "aria-label": ec.intl.string(ec.t["W/A4Qk"]),
                               onClick: () => (0, L.Kh)(n.id),
                               className: eu.voiceChannelPopoutReactorChannel,
                               children: [
@@ -865,14 +865,14 @@ function eC(e) {
                                       height: 13,
                                       className: eu.popoutBlockedWarningIcon,
                                   }),
-                              ec.intl.string(ec.t.d6DpXI),
+                              ec.intl.string(ec.t.d6DpXF),
                           ],
                       })
                     : n;
             return (0, r.jsx)(
                 f.u,
                 {
-                    "aria-label": i ? ec.intl.string(ec.t.d6DpXI) : null != n && n,
+                    "aria-label": i ? ec.intl.string(ec.t.d6DpXF) : null != n && n,
                     __unsupportedReactNodeAsText: a,
                     shouldShow: !0,
                     children: t,
@@ -887,10 +887,10 @@ function eC(e) {
                     className: eu.voiceChannelPopoutReactorHeader,
                     children: [
                         (0, r.jsx)(v, {
-                            text: ec.intl.string(ec.t.WIVYqJ),
+                            text: ec.intl.string(ec.t.WIVYqK),
                             hasRestrictedOrMutedVCParticipant: g,
                             children: (0, r.jsxs)(_.P3F, {
-                                "aria-label": ec.intl.string(ec.t.WIVYqJ),
+                                "aria-label": ec.intl.string(ec.t.WIVYqK),
                                 onClick: b,
                                 className: eu.voiceChannelPopoutReactorChannel,
                                 children: [
@@ -950,7 +950,7 @@ function eC(e) {
                   children: (0, r.jsx)(_.Button, {
                       onClick: y,
                       fullWidth: !0,
-                      text: E ? ec.intl.string(ec.t.I6JG46) : ec.intl.string(ec.t.VJlc0S),
+                      text: E ? ec.intl.string(ec.t["I6JG4+"]) : ec.intl.string(ec.t.VJlc0d),
                       icon: E ? _.pzj : _.gj8,
                       variant: "active",
                       size: "md",

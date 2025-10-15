@@ -5,46 +5,46 @@ var r = n(284363),
 function o(e, t) {
     let n =
         t === i.PZ.PUBLIC
-            ? a.intl.string(a.t.op2cJ6)
+            ? a.intl.string(a.t.op2cJy)
             : t === i.PZ.APPLY_TO_JOIN
-              ? a.intl.string(a.t.YwZfbt)
-              : a.intl.string(a.t.TME4LJ);
+              ? a.intl.string(a.t.YwZfbm)
+              : a.intl.string(a.t.TME4LC);
     switch (e) {
         case r.Q.STAFF:
             return {
-                tooltipTitle: a.intl.string(a.t.lMrv96),
-                tooltipSubtitle: a.intl.string(a.t.lMrv96),
-                tooltipDescription: a.intl.string(a.t.lMrv96),
+                tooltipTitle: a.intl.string(a.t["lMrv9/"]),
+                tooltipSubtitle: a.intl.string(a.t["lMrv9/"]),
+                tooltipDescription: a.intl.string(a.t["lMrv9/"]),
             };
         case r.Q.VERIFIED:
             return {
-                tooltipTitle: a.intl.string(a.t.K7iRig),
-                tooltipSubtitle: a.intl.string(a.t.iCehw9),
+                tooltipTitle: a.intl.string(a.t.K7iRio),
+                tooltipSubtitle: a.intl.string(a.t.iCehw8),
                 tooltipDescription: n,
             };
         case r.Q.PARTNERED:
             return {
-                tooltipTitle: a.intl.string(a.t.K7iRig),
-                tooltipSubtitle: a.intl.string(a.t.hfYfEE),
+                tooltipTitle: a.intl.string(a.t.K7iRio),
+                tooltipSubtitle: a.intl.string(a.t.hfYfEB),
                 tooltipDescription: n,
             };
         case r.Q.VERIFIED_AND_PARTNERED:
             return {
-                tooltipTitle: a.intl.string(a.t.K7iRig),
-                tooltipSubtitle: a.intl.string(a.t["TX+iFC"]),
+                tooltipTitle: a.intl.string(a.t.K7iRio),
+                tooltipSubtitle: a.intl.string(a.t["TX+iFB"]),
                 tooltipDescription: n,
             };
         case r.Q.COMMUNITY:
             return {
-                tooltipTitle: a.intl.string(a.t.K7iRig),
+                tooltipTitle: a.intl.string(a.t.K7iRio),
                 tooltipDescription: n,
             };
         case r.Q.DISCOVERABLE:
             return {
-                tooltipTitle: a.intl.string(a.t.K7iRig),
-                tooltipDescription: a.intl.string(a.t.op2cJ6),
+                tooltipTitle: a.intl.string(a.t.K7iRio),
+                tooltipDescription: a.intl.string(a.t.op2cJy),
             };
         default:
-            return { tooltipTitle: a.intl.string(a.t["iZRkC/"]) };
+            return { tooltipTitle: a.intl.string(a.t.iZRkCw) };
     }
 }

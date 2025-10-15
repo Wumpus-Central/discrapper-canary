@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => x,
+    A: () => f,
     default: () => O,
 }),
     n(388685),
@@ -20,8 +20,8 @@ var r = n(951288),
     C = n(146085),
     b = n(71080),
     N = n(388032),
-    f = n(878713);
-function x(e, t) {
+    x = n(878713);
+function f(e, t) {
     return {
         id: e,
         type: t,
@@ -57,17 +57,17 @@ function O(e) {
     let j = (0, l.e7)([p.Z], () => p.Z.getChannel(m)),
         I = (0, l.e7)([g.Z], () => g.Z.getGuild(null == j ? void 0 : j.getGuildId())),
         [v, y] = i.useState(""),
-        [S, A] = i.useState({}),
-        [T, _] = i.useState(!1),
-        [P, L] = i.useState(null),
-        D = i.useRef(null),
-        { roles: G, members: U, getRichTag: w } = (0, u.Q)(I, j, C.yP, v),
-        M = h.Z.useSections({
+        [S, T] = i.useState({}),
+        [A, _] = i.useState(!1),
+        [D, P] = i.useState(null),
+        L = i.useRef(null),
+        { roles: G, members: w, getRichTag: U } = (0, u.Q)(I, j, C.yP, v),
+        Z = h.Z.useSections({
             roles: G,
-            members: U,
+            members: w,
         });
     if (null == j || null == I) return null;
-    let R = async () => {
+    let M = async () => {
         _(!0);
         try {
             await (function (e, t) {
@@ -78,25 +78,25 @@ function O(e) {
                     })
                     .map((e) => {
                         let { row: t } = e;
-                        return t.rowType === b.aC.ROLE ? x(t.id, d.BN.ROLE) : x(t.id, d.BN.MEMBER);
+                        return t.rowType === b.aC.ROLE ? f(t.id, d.BN.ROLE) : f(t.id, d.BN.MEMBER);
                     });
                 return (0, o.hw)(e.id, n, !0);
             })(j, S),
                 O();
         } catch (t) {
             let e = new c.Hx(t);
-            _(!1), L(e);
+            _(!1), P(e);
         }
     };
     return (0, r.jsx)(h.Z.Provider, {
-        listRef: D,
+        listRef: L,
         query: v,
         setQuery: y,
         pendingAdditions: S,
-        setPendingAdditions: A,
+        setPendingAdditions: T,
         roles: G,
-        members: U,
-        getRichTag: w,
+        members: w,
+        getRichTag: U,
         children: (0, r.jsx)(
             s.Modal,
             ((t = (function (e) {
@@ -126,17 +126,17 @@ function O(e) {
             })({}, E)),
             (n = n =
                 {
-                    title: N.intl.string(N.t.dMJ3Y6),
+                    title: N.intl.string(N.t.dMJ3Y2),
                     onClose: O,
                     input: (0, r.jsxs)("div", {
                         children: [
                             (0, r.jsxs)(a.Text, {
-                                className: f.channelName,
+                                className: x.channelName,
                                 variant: "text-lg/normal",
                                 color: "header-secondary",
                                 children: [
                                     (0, r.jsx)(a.ewx, {
-                                        className: f.channelIcon,
+                                        className: x.channelIcon,
                                         size: "sm",
                                         color: "currentColor",
                                     }),
@@ -146,45 +146,45 @@ function O(e) {
                             j.isGuildStageVoice() &&
                                 (0, r.jsx)(a.Text, {
                                     color: "header-secondary",
-                                    className: f.description,
+                                    className: x.description,
                                     variant: "text-sm/normal",
-                                    children: N.intl.string(N.t.f7VbhF),
+                                    children: N.intl.string(N.t.f7VbhI),
                                 }),
-                            (0, r.jsx)(h.Z.SearchBox, { placeholderText: N.intl.string(N.t.iezLLn) }),
+                            (0, r.jsx)(h.Z.SearchBox, { placeholderText: N.intl.string(N.t.iezLLi) }),
                             (0, r.jsx)(a.Text, {
-                                className: f.subtext,
+                                className: x.subtext,
                                 variant: "text-xs/normal",
-                                children: N.intl.string(N.t.rwFx85),
+                                children: N.intl.string(N.t["rwFx8/"]),
                             }),
-                            null != P
+                            null != D
                                 ? (0, r.jsx)(a.Text, {
-                                      className: f.subtext,
+                                      className: x.subtext,
                                       variant: "text-xs/normal",
                                       color: "text-danger",
-                                      children: P.getAnyErrorMessage(),
+                                      children: D.getAnyErrorMessage(),
                                   })
                                 : null,
                         ],
                     }),
                     listProps: {
-                        ref: D,
+                        ref: L,
                         sectionHeight: h.Z.SECTION_HEIGHT,
                         renderSection: h.Z.renderSection,
                         rowHeight: h.Z.ROW_HEIGHT,
                         renderRow: h.Z.renderRow,
-                        sections: M,
+                        sections: Z,
                     },
                     actions: [
                         {
                             variant: "secondary",
-                            text: N.intl.string(N.t["ETE/oC"]),
+                            text: N.intl.string(N.t["ETE/oK"]),
                             onClick: O,
                         },
                         {
                             variant: "primary",
-                            text: N.intl.string(N.t.OYkgVk),
-                            onClick: R,
-                            loading: T,
+                            text: N.intl.string(N.t.OYkgVl),
+                            onClick: M,
+                            loading: A,
                         },
                     ],
                 }),

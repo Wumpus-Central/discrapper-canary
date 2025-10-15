@@ -26,7 +26,7 @@ function m(e) {
             (0, r.jsx)(i.Heading, {
                 variant: "heading-lg/semibold",
                 color: "header-primary",
-                children: d.intl.string(d.t.QzDgMq),
+                children: d.intl.string(d.t.QzDgMj),
             }),
             (0, r.jsxs)("div", {
                 className: u.contentContainer,
@@ -38,39 +38,39 @@ function m(e) {
                                 (0, r.jsx)(i.Heading, {
                                     variant: "heading-md/semibold",
                                     color: "header-secondary",
-                                    children: d.intl.string(d.t.U6KH5S),
+                                    children: d.intl.string(d.t.U6KH5e),
                                 }),
                                 n &&
                                     (0, r.jsx)(h, {
                                         icon: i.kBi,
-                                        heading: d.intl.string(d.t.gJpBO2),
-                                        body: d.intl.string(d.t["L+QVbh"]),
+                                        heading: d.intl.string(d.t.gJpBOz),
+                                        body: d.intl.string(d.t["L+QVbm"]),
                                     }),
                                 s &&
                                     (0, r.jsx)(h, {
                                         icon: i.z65,
-                                        heading: d.intl.string(d.t["jo0oj/"]),
-                                        body: d.intl.string(d.t.Dm0jqx),
+                                        heading: d.intl.string(d.t.jo0oj4),
+                                        body: d.intl.string(d.t.Dm0jq6),
                                     }),
                                 c &&
                                     (0, r.jsx)(h, {
                                         icon: i.BFJ,
                                         heading: d.intl.string(d.t.QZql7O),
-                                        body: d.intl.string(d.t["ez/N/R"]),
+                                        body: d.intl.string(d.t["ez/N/f"]),
                                     }),
                             ],
                         }),
                     (0, r.jsx)(i.Text, {
                         variant: "text-md/normal",
                         color: "header-secondary",
-                        children: d.intl.format(d.t.b6nqk0, { helpCenterUrl: p }),
+                        children: d.intl.format(d.t.b6nqk5, { helpCenterUrl: p }),
                     }),
                     null != t.privacy_policy_url &&
                         (0, r.jsx)(i.Text, {
                             variant: "text-md/normal",
                             color: "header-secondary",
                             className: u.privacyPolicy,
-                            children: d.intl.format(d.t.agYVY5, { onClick: g }),
+                            children: d.intl.format(d.t.agYVY2, { onClick: g }),
                         }),
                 ],
             }),

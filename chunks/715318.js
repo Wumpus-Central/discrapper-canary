@@ -64,7 +64,7 @@ function h(e) {
         _ = i.useRef(null),
         h = (0, l.Z)({
             id: t,
-            label: u.intl.string(u.t["FfCL+6"]),
+            label: u.intl.string(u.t["FfCL+/"]),
         }),
         m = (0, c.M)({
             applicationId: t,
@@ -84,7 +84,7 @@ function h(e) {
                       onClose: () => {
                           (0, s.Zy)(), t();
                       },
-                      "aria-label": u.intl.string(u.t.PNeFgW),
+                      "aria-label": u.intl.string(u.t.PNeFgY),
                       onSelect: () => {},
                       children: (0, r.jsxs)(r.Fragment, {
                           children: [(0, r.jsx)(o.kSQ, { children: h }), (0, r.jsx)(o.kSQ, { children: m })],
@@ -93,7 +93,7 @@ function h(e) {
               },
               children: (e) =>
                   (0, r.jsx)(a.u, {
-                      text: u.intl.string(u.t["UKOtz+"]),
+                      text: u.intl.string(u.t.UKOtz8),
                       children: (0, r.jsx)(
                           o.P3F,
                           p(

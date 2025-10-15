@@ -102,7 +102,7 @@ function ei() {
         l = (0, G.K)(),
         c = (0, g.N)(),
         u = i.useCallback(() => {
-            (0, p.showToast)((0, p.createToast)($.intl.string($.t["EDYbS+"]), p.ToastType.FAILURE));
+            (0, p.showToast)((0, p.createToast)($.intl.string($.t.EDYbS0), p.ToastType.FAILURE));
         }, []),
         { rejectAll: d } = (0, B.m)({ onError: u }),
         f = (0, b.Z)("message-requests-list"),
@@ -141,7 +141,7 @@ function ei() {
                     {
                         className: ee.sectionTitle,
                         children: [
-                            t > 0 ? $.intl.formatToPlainString($.t.rA4iWY, { count: t }) : $.intl.string($.t.flPU6g),
+                            t > 0 ? $.intl.formatToPlainString($.t.rA4iWV, { count: t }) : $.intl.string($.t.flPU6u),
                             c && t > 0
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
@@ -155,8 +155,8 @@ function ei() {
                                           (0, r.jsx)(p.Avr, {
                                               onClick: m,
                                               textVariant: "text-sm/normal",
-                                              text: $.intl.string($.t.p6t7RC),
-                                              "aria-label": $.intl.string($.t.p6t7RC),
+                                              text: $.intl.string($.t.p6t7RE),
+                                              "aria-label": $.intl.string($.t.p6t7RE),
                                           }),
                                       ],
                                   })
@@ -203,7 +203,7 @@ function ei() {
                               {
                                   className: ee.list,
                                   innerRole: l,
-                                  innerAriaLabel: $.intl.string($.t.e7GWjQ),
+                                  innerAriaLabel: $.intl.string($.t.e7GWjY),
                                   ref: (t) => {
                                       var n;
                                       (e.current = t),
@@ -273,11 +273,11 @@ let ea = (e) => {
                                     ? (0, r.jsx)(
                                           d.J2,
                                           er(en({}, a), {
-                                              title: $.intl.string($.t.hRT8tc),
-                                              body: $.intl.string($.t.apPgJG),
+                                              title: $.intl.string($.t.hRT8tb),
+                                              body: $.intl.string($.t.apPgJC),
                                               actions: [
                                                   {
-                                                      text: $.intl.string($.t.LNoAQW),
+                                                      text: $.intl.string($.t.LNoAQU),
                                                       onClick: () => l(X.L.TAKE_ACTION),
                                                   },
                                               ],
@@ -286,11 +286,11 @@ let ea = (e) => {
                                     : (0, r.jsx)(
                                           d.J2,
                                           er(en({}, a), {
-                                              title: $.intl.string($.t.hRT8tc),
-                                              body: $.intl.string($.t["8JWods"]),
+                                              title: $.intl.string($.t.hRT8tb),
+                                              body: $.intl.string($.t["8JWodn"]),
                                               actions: [
                                                   {
-                                                      text: $.intl.string($.t.JN6EOJ),
+                                                      text: $.intl.string($.t.JN6EOD),
                                                       onClick: (e) => {
                                                           e.stopPropagation(),
                                                               (0, Z.openUserSettings)(A.n.CONTENT_AND_SOCIAL_PANEL, {
@@ -301,7 +301,7 @@ let ea = (e) => {
                                                       },
                                                   },
                                                   {
-                                                      text: $.intl.string($.t.LNoAQW),
+                                                      text: $.intl.string($.t.LNoAQU),
                                                       onClick: () => l(X.L.USER_DISMISS),
                                                       variant: "secondary",
                                                   },
@@ -347,7 +347,7 @@ let es = (0, h.Z)(function (e) {
             I(e);
         };
     return (
-        (0, v.Tt)({ location: $.intl.string($.t.e7GWjQ) }),
+        (0, v.Tt)({ location: $.intl.string($.t.e7GWjY) }),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)("div", {
@@ -371,12 +371,12 @@ let es = (0, h.Z)(function (e) {
                                             targetElementRef: E,
                                             children: (0, r.jsx)(C.Z.Title, {
                                                 ref: E,
-                                                children: $.intl.string($.t.e7GWjQ),
+                                                children: $.intl.string($.t.e7GWjY),
                                             }),
                                         }),
                                         (0, r.jsx)(C.Z.Divider, {}),
                                         (0, r.jsxs)(p.njP, {
-                                            "aria-label": $.intl.string($.t.e7GWjQ),
+                                            "aria-label": $.intl.string($.t.e7GWjY),
                                             selectedItem: y,
                                             type: "top-pill",
                                             onItemSelect: A,
@@ -384,14 +384,14 @@ let es = (0, h.Z)(function (e) {
                                                 (0, r.jsx)(p.njP.Item, {
                                                     id: K.pS.REQUESTS,
                                                     className: ee.item,
-                                                    children: $.intl.string($.t["7RFcXZ"]),
+                                                    children: $.intl.string($.t["7RFcXV"]),
                                                 }),
                                                 (0, r.jsx)(p.njP.Item, {
                                                     id: K.pS.SPAM,
                                                     className: ee.item,
                                                     children:
                                                         0 === o
-                                                            ? $.intl.string($.t.ulKXHp)
+                                                            ? $.intl.string($.t.ulKXHh)
                                                             : $.intl.formatToPlainString($.t["5jtrlZ"], { count: o }),
                                                 }),
                                             ],

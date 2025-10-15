@@ -1,10 +1,10 @@
 n.d(t, {
-    UD: () => I,
-    ZL: () => y,
-    kZ: () => E,
-    lr: () => O,
-    ny: () => v,
-    zL: () => _,
+    UD: () => C,
+    ZL: () => I,
+    kZ: () => v,
+    lr: () => E,
+    ny: () => y,
+    zL: () => O,
 }),
     n(388685),
     n(539854);
@@ -14,31 +14,32 @@ var r,
     a = n(482820),
     o = n(442837),
     s = n(597688),
-    c = n(223143),
-    u = n(364111),
-    d = n(621853),
-    p = n(46841),
-    f = n(277511),
-    h = n(607550),
-    g = n(541699),
-    m = n(981631),
-    b = n(215023);
-let _ = 6;
-var O = (((r = {}).WISHLIST = "wishlist"), (r.POPULAR = "popular"), r);
-function E(e, t) {
-    let n = (0, p.S)({ location: "UserProfileModalV2" }),
-        [r, l, a, s] = (0, o.Wu)([h.Z], () =>
+    c = n(884697),
+    u = n(223143),
+    d = n(364111),
+    p = n(621853),
+    f = n(46841),
+    h = n(277511),
+    g = n(607550),
+    m = n(541699),
+    b = n(981631),
+    _ = n(215023);
+let O = 6;
+var E = (((r = {}).WISHLIST = "wishlist"), (r.POPULAR = "popular"), r);
+function v(e, t) {
+    let n = (0, f.S)({ location: "UserProfileModalV2" }),
+        [r, l, a, s] = (0, o.Wu)([g.Z], () =>
             null != e && n
-                ? [h.Z.getWishlist(e), h.Z.isFetching(e), h.Z.getError(e), h.Z.getUpdatedAt(e)]
+                ? [g.Z.getWishlist(e), g.Z.isFetching(e), g.Z.getError(e), g.Z.getUpdatedAt(e)]
                 : [null, !1, void 0, void 0],
         ),
-        c = (0, o.e7)([d.Z], () => {
+        c = (0, o.e7)([p.Z], () => {
             var n;
-            if (null != e && null != t) return null == (n = d.Z.getWishlistSettings(t, e)) ? void 0 : n.updated_at;
+            if (null != e && null != t) return null == (n = p.Z.getWishlistSettings(t, e)) ? void 0 : n.updated_at;
         });
     return (
         (0, i.useEffect)(() => {
-            null != e && !l && n && null == a && (null == r || (null != c && s !== c)) && f.Z.fetchWishlist(e, c);
+            null != e && !l && n && null == a && (null == r || (null != c && s !== c)) && h.Z.fetchWishlist(e, c);
         }, [e, r, l, n, c, s, a]),
         {
             wishlist: r,
@@ -47,29 +48,29 @@ function E(e, t) {
         }
     );
 }
-function v(e, t) {
-    return (0, o.e7)([h.Z], () => null != e && h.Z.hasSkuId(e, t));
+function y(e, t) {
+    return (0, o.e7)([g.Z], () => null != e && g.Z.hasSkuId(e, t));
 }
-function y(e) {
-    let { defaultWishlistId: t } = (0, o.cj)([d.Z], () => ({ defaultWishlistId: d.Z.getFirstWishlistId(e.id) })),
-        { wishlist: n, isFetching: r, error: p } = E(t),
-        f = i.useMemo(() => null != n && n.items.filter(g.Q).length >= _, [n]),
+function I(e) {
+    let { defaultWishlistId: t } = (0, o.cj)([p.Z], () => ({ defaultWishlistId: p.Z.getFirstWishlistId(e.id) })),
+        { wishlist: n, isFetching: r, error: f } = v(t),
+        h = i.useMemo(() => null != n && n.items.filter(m.Q).length >= O, [n]),
         {
-            shopBlocks: h,
-            isFetchingShopHome: m,
-            fetchShopHomeError: O,
-        } = (0, u.E)(b.AW.HOME, {
+            shopBlocks: g,
+            isFetchingShopHome: b,
+            fetchShopHomeError: E,
+        } = (0, d.E)(_.AW.HOME, {
             includeBundles: !0,
             includePopularPicks: !0,
             includeDynamicBlocks: !0,
         }),
-        { isFetchingCategories: v } = (0, c.ZP)();
+        { isFetchingCategories: y } = (0, u.ZP)();
     return {
         defaultWishlistId: t,
         wishlist: n,
         popularProducts: i.useMemo(
             () =>
-                f || null == h || m
+                h || null == g || b
                     ? []
                     : (function (e) {
                           var t, n;
@@ -79,22 +80,22 @@ function y(e) {
                           for (let e of null != (n = null == (t = r.sortedSkuIds) ? void 0 : t[a.m.POPULAR])
                               ? n
                               : r.rankedSkuIds) {
-                              if (i.length >= _) break;
+                              if (i.length >= O) break;
                               let t = s.Z.getProduct(e);
-                              null != t && i.push(t);
+                              null == t || (0, c.x6)(t) || i.push(t);
                           }
                           return i;
-                      })(h),
-            [f, h, m],
+                      })(g),
+            [h, g, b],
         ),
         isFetchingWishlist: r,
-        isFetchingShopHome: !f && m,
-        isFetchingCategories: v,
-        wishlistError: p,
-        fetchShopHomeError: f ? void 0 : O,
+        isFetchingShopHome: !h && b,
+        isFetchingCategories: y,
+        wishlistError: f,
+        fetchShopHomeError: h ? void 0 : E,
     };
 }
-function I(e) {
+function C(e) {
     let { wishlist: t, defaultWishlistId: n, popularProducts: r, wishlistError: l, fetchShopHomeError: a } = e;
     return i.useMemo(() => {
         if (null == t || null == n || null != l || null != a)
@@ -102,9 +103,9 @@ function I(e) {
                 displayItems: [],
                 wishlistLength: 0,
             };
-        let e = t.items.filter(g.Q),
+        let e = t.items.filter(m.Q),
             i = [],
-            o = e.slice(0, _),
+            o = e.slice(0, O),
             s = o.length;
         if (
             (i.push(
@@ -113,20 +114,20 @@ function I(e) {
                     source: "wishlist",
                 })),
             ),
-            i.length < _)
+            i.length < O)
         ) {
             let e = new Set(o.map((e) => e.skuId)),
                 t = r.filter((t) => !e.has(t.skuId));
-            for (let e = 0; e < t.length && i.length < _; e++) {
+            for (let e = 0; e < t.length && i.length < O; e++) {
                 let n = (function (e) {
                     if (null == e.items || 0 === e.items.length) return null;
                     let t = {
                         sku_id: e.skuId,
                         sku_name: e.name,
-                        sku_product_line: m.POd.COLLECTIBLES,
+                        sku_product_line: b.POd.COLLECTIBLES,
                         collectibles_item: e.items[0],
                     };
-                    return g.Z.fromServer(t);
+                    return m.Z.fromServer(t);
                 })(t[e]);
                 null !== n &&
                     i.push({

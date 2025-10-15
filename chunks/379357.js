@@ -40,8 +40,8 @@ function E(e) {
             src: t,
             alt:
                 null == n
-                    ? m.intl.string(m.t["2B/phM"])
-                    : m.intl.formatToPlainString(m.t.tiKyYg, { applicationName: n }),
+                    ? m.intl.string(m.t["2B/phI"])
+                    : m.intl.formatToPlainString(m.t.tiKyYm, { applicationName: n }),
         };
 }
 function b(e) {
@@ -99,7 +99,7 @@ function y(e, t) {
         return {
             largeImage: {
                 src: r.Z.get(p.ABu.XBOX).icon.customPNG,
-                alt: m.intl.string(m.t.Nfvo72),
+                alt: m.intl.string(m.t["Nfvo7+"]),
             },
             smallImage: void 0,
         };

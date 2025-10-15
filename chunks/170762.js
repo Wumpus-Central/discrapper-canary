@@ -19,7 +19,7 @@ let l = (e) => {
                 className: s.content,
                 children: (0, r.jsx)(i.Text, {
                     variant: "text-xs/normal",
-                    children: o.intl.string(o.t.xdRf69),
+                    children: o.intl.string(o.t["xdRf6+"]),
                 }),
             }),
             (0, r.jsx)(i.P3F, {

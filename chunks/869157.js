@@ -17,16 +17,16 @@ var i = n(951288),
     x = n(485386),
     j = n(430824),
     v = n(594174),
-    O = n(626135),
-    y = n(5192),
+    y = n(626135),
+    O = n(5192),
     _ = n(709054),
     C = n(145260),
     N = n(905753),
     S = n(399860),
     I = n(335049),
-    w = n(617012),
-    E = n(981631),
-    P = n(388032),
+    E = n(617012),
+    P = n(981631),
+    w = n(388032),
     T = n(547063);
 function Z(e) {
     let {
@@ -40,8 +40,8 @@ function Z(e) {
         g = (0, o.e7)([j.Z], () => j.Z.getGuild(l));
     a()(null != g, "");
     let h = (0, o.e7)([x.Z], () => x.Z.getSortedRoles(l)),
-        [O, I] = r.useState(new Set()),
-        w = r.useMemo(() => {
+        [y, I] = r.useState(new Set()),
+        E = r.useMemo(() => {
             let e = (0, b.bD)(l),
                 t = h.toReversed().reduce((e, t, n) => ((e[t.id] = n), e), {});
             return Object.values(c)
@@ -57,8 +57,8 @@ function Z(e) {
                                 let r = v.default.getUser(e.id),
                                     l = v.default.getUser(t.id);
                                 if (null != r && null != l) {
-                                    let e = y.ZP.getName(n, void 0, r),
-                                        t = y.ZP.getName(n, void 0, l);
+                                    let e = O.ZP.getName(n, void 0, r),
+                                        t = O.ZP.getName(n, void 0, l);
                                     return null == e ? void 0 : e.localeCompare(t);
                                 }
                                 return _.default.compare(e.id, t.id);
@@ -75,13 +75,13 @@ function Z(e) {
                     }
                 });
         }, [l, c, h]),
-        E = r.useCallback(
+        P = r.useCallback(
             (e, t) => {
                 n({}, [(0, S.rE)(e, t)]);
             },
             [n],
         ),
-        P = r.useCallback(
+        w = r.useCallback(
             (e, t, i) => {
                 let r = (0, S.rE)(e, t);
                 null != c[r] &&
@@ -100,10 +100,10 @@ function Z(e) {
         );
     r.useEffect(() => {
         let e = Object.values(c)
-            .filter((e) => e.type === m.Kw.USER && !e.canRead && !O.has(e.id))
+            .filter((e) => e.type === m.Kw.USER && !e.canRead && !y.has(e.id))
             .map((e) => e.id);
         0 !== e.length && (u.Z.requestMembersById(l, e, !1), I((t) => new Set([...t, ...e])));
-    }, [l, c, O, I]);
+    }, [l, c, y, I]);
     let Z = (0, o.e7)([N.Z], () => N.Z.getApplicationId()),
         A = (0, o.e7)([C.default], () =>
             null == Z
@@ -114,15 +114,15 @@ function Z(e) {
                   }),
         ),
         D = (0, o.e7)([f.Z], () => void 0 !== A && f.Z.canShowToggleTooltip(A.id));
-    return w.length > 0
-        ? w.map((e) =>
+    return E.length > 0
+        ? E.map((e) =>
               (0, i.jsx)(
                   k,
                   {
                       guild: g,
                       commandId: t,
-                      onChange: (t) => P(e.id, e.type, t),
-                      onRemove: () => E(e.id, e.type),
+                      onChange: (t) => w(e.id, e.type, t),
+                      onRemove: () => P(e.id, e.type),
                       overwrite: e,
                       integration: A,
                       canShowMigrationTooltip: D,
@@ -151,24 +151,24 @@ function k(e) {
             overwrite: x,
             integration: j,
             canShowMigrationTooltip: v,
-            hasAccessToMutatePermissions: y,
+            hasAccessToMutatePermissions: O,
         } = e,
         _ = x.id === o.id || x.id === (0, b.bD)(o.id),
         C = null == j || null == (n = j.application) || null == (t = n.bot) ? void 0 : t.username,
-        N = !x.canWrite || !y,
+        N = !x.canWrite || !O,
         S = h.default.getId();
-    y
+    O
         ? x.canWrite ||
           (x.type === m.Kw.USER
-              ? (a = x.id === S ? P.intl.string(P.t["1VF/0x"]) : P.intl.string(P.t.P1GnEd))
-              : x.type === m.Kw.ROLE && (a = P.intl.string(P.t.mcAijf)))
-        : (a = null != d ? P.intl.string(P.t.tybdas) : P.intl.string(P.t["z2hjk/"]));
+              ? (a = x.id === S ? w.intl.string(w.t["1VF/09"]) : w.intl.string(w.t.P1GnER))
+              : x.type === m.Kw.ROLE && (a = w.intl.string(w.t.mcAijY)))
+        : (a = null != d ? w.intl.string(w.t.tybdam) : w.intl.string(w.t.z2hjk5));
     let Z = v && null != j && x.id === o.id && void 0 !== C && !x.permission;
     r.useEffect(() => {
         if (Z) {
             var e, t, n;
-            O.default.track(
-                E.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED,
+            y.default.track(
+                P.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -222,7 +222,7 @@ function k(e) {
             position: "left",
             children: (0, i.jsx)("div", {
                 ref: k,
-                children: (0, i.jsx)(w.Z, {
+                children: (0, i.jsx)(E.Z, {
                     isDisabled: N,
                     currentValue: x.permission,
                     onChange: Z
@@ -235,8 +235,8 @@ function k(e) {
         }),
         R = (0, i.jsx)(s.J2, {
             targetElementRef: k,
-            title: P.intl.string(P.t.ufFDiC),
-            body: P.intl.format(P.t.pW4Crz, {
+            title: w.intl.string(w.t.ufFDiI),
+            body: w.intl.format(w.t.pW4Cr6, {
                 botName: C,
                 link: "https://discord.com/blog/welcome-to-the-new-era-of-discord-apps/",
             }),
@@ -267,7 +267,7 @@ function k(e) {
                         (0, i.jsx)(A, {
                             commandId: d,
                             isSentinel: _,
-                            isDisabled: !y,
+                            isDisabled: !O,
                             onRemove: f,
                         }),
                         D,
@@ -289,7 +289,7 @@ function A(e) {
                 className: T.removeActions,
                 children: (0, i.jsx)(d.P3F, {
                     className: T.removeContainer,
-                    "aria-label": P.intl.string(P.t.mT0CQM),
+                    "aria-label": w.intl.string(w.t.mT0CQE),
                     onClick: l,
                     children: (0, i.jsx)(d.XHJ, {
                         size: "md",

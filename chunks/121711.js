@@ -178,11 +178,11 @@ function ef(e) {
                     icon: d.qDn,
                 }),
                 (0, r.jsx)(I.Z, {
-                    title: er.intl.string(er.t.z8YP2A),
+                    title: er.intl.string(er.t.z8YP2N),
                     titleColor: "always-white",
                     button: (0, r.jsx)(d.Button, {
                         variant: "overlay-primary",
-                        text: er.intl.string(er.t.GURBQl),
+                        text: er.intl.string(er.t.GURBQk),
                         onClick: u,
                     }),
                     className: ei.redirectNoticeBannerContainer,
@@ -194,15 +194,15 @@ function ef(e) {
                         children: [
                             (0, r.jsx)(d.Heading, {
                                 variant: "heading-xl/semibold",
-                                children: er.intl.string(er.t.z8YP2A),
+                                children: er.intl.string(er.t.z8YP2N),
                             }),
                             (0, r.jsx)(d.Text, {
                                 color: "text-secondary",
                                 variant: "text-md/normal",
-                                children: er.intl.string(er.t.HdKh65),
+                                children: er.intl.string(er.t["HdKh6+"]),
                             }),
                             (0, r.jsx)(d.Avr, {
-                                text: er.intl.string(er.t["1CdL8d"]),
+                                text: er.intl.string(er.t["1CdL8f"]),
                                 onClick: u,
                                 textVariant: "text-md/normal",
                                 variant: "primary",
@@ -253,9 +253,9 @@ let eh = function (e) {
             if (es) return void window.open(ee.EYA.PAID_TERMS_ORBS);
             window.open(R.Z.getArticleURL(ee.BhN.QUESTS_LEARN_MORE));
         }, [es]);
-    (0, O.Tt)({ location: er.intl.string(er.t.JALI2K) });
-    let eu = es ? er.intl.format(er.t.BCBIlp, {}) : er.intl.format(er.t.lmMBfy, {}),
-        ep = es ? er.intl.format(er.t.U9FY0J, {}) : er.intl.string(er.t.oWCrBq),
+    (0, O.Tt)({ location: er.intl.string(er.t.JALI2N) });
+    let eu = es ? er.intl.format(er.t.BCBIlp, {}) : er.intl.format(er.t.lmMBf3, {}),
+        ep = es ? er.intl.format(er.t.U9FY0N, {}) : er.intl.string(er.t.oWCrBg),
         eh = i.useRef(null),
         eg = i.useCallback(() => {
             (0, P.Y)({
@@ -316,7 +316,7 @@ let eh = function (e) {
                                     children: (0, r.jsx)(A.V9, {
                                         analyticsPage: ee.ZY5.GLOBAL_DISCOVERY_QUESTS,
                                         cardAlignment: A.ek.END,
-                                        ctaText: er.intl.string(er.t["J+vlIR"]),
+                                        ctaText: er.intl.string(er.t["J+vlIS"]),
                                         ctaOnClick: eg,
                                     }),
                                 }),
@@ -333,7 +333,7 @@ let eh = function (e) {
                                                           children: [
                                                               (0, r.jsx)(d.Button, {
                                                                   variant: "overlay-primary",
-                                                                  text: er.intl.string(er.t["1Wm127"]),
+                                                                  text: er.intl.string(er.t["1Wm129"]),
                                                                   onClick: () =>
                                                                       (0, _.mK)({
                                                                           tab: et.AW.ORBS,
@@ -344,14 +344,14 @@ let eh = function (e) {
                                                               }),
                                                               (0, r.jsx)(d.Button, {
                                                                   variant: "overlay-secondary",
-                                                                  text: er.intl.string(er.t["7kTAgJ"]),
+                                                                  text: er.intl.string(er.t["7kTAgI"]),
                                                                   onClick: ec,
                                                               }),
                                                           ],
                                                       })
                                                     : (0, r.jsx)(d.Button, {
                                                           variant: "overlay-primary",
-                                                          text: er.intl.string(er.t.hvVgAZ),
+                                                          text: er.intl.string(er.t.hvVgAQ),
                                                           onClick: ec,
                                                           icon: d.Gr1,
                                                           iconPosition: "end",
@@ -397,7 +397,7 @@ let eh = function (e) {
                                                 description: ep,
                                                 button: (0, r.jsx)(d.Button, {
                                                     variant: "overlay-primary",
-                                                    text: er.intl.string(er.t.hvVgAZ),
+                                                    text: er.intl.string(er.t.hvVgAQ),
                                                     onClick: ec,
                                                     icon: d.Gr1,
                                                     iconPosition: "end",

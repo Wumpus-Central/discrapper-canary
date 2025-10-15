@@ -43,7 +43,7 @@ function O(e) {
         [P, k] = o.useState(!1),
         v = {
             onClick: () => O(),
-            text: f.intl.string(f.t.cpT0Cq),
+            text: f.intl.string(f.t.cpT0Cg),
         },
         x = o.useCallback(() => {
             k(!0), O();
@@ -78,7 +78,7 @@ function O(e) {
                   return e;
               })(
                   {
-                      title: f.intl.string(f.t["grUgR+"]),
+                      title: f.intl.string(f.t.grUgR0),
                       actions: w ? [] : [v],
                       size: w ? "md" : "sm",
                       onClose: O,
@@ -89,7 +89,7 @@ function O(e) {
                   {
                       children: w
                           ? (0, n.jsx)("ul", {
-                                "aria-label": f.intl.string(f.t["+EIBSA"]),
+                                "aria-label": f.intl.string(f.t["+EIBSE"]),
                                 className: b.options,
                                 children: m.map((e) =>
                                     (0, n.jsx)(
@@ -107,7 +107,7 @@ function O(e) {
                           : (0, n.jsx)(l.Text, {
                                 variant: "text-md/medium",
                                 color: "text-secondary",
-                                children: f.intl.string(f.t["1nkDOs"]),
+                                children: f.intl.string(f.t["1nkDOj"]),
                             }),
                   }),
               Object.getOwnPropertyDescriptors

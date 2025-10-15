@@ -3,7 +3,7 @@ var a = n(951288),
     r = n(647438),
     i = n(481060),
     l = n(118589),
-    o = n(424709),
+    o = n(241945),
     s = n(388032),
     c = n(58571);
 let d = (e) => {
@@ -17,20 +17,20 @@ let d = (e) => {
             (0, a.jsx)(i.Heading, {
                 variant: "heading-lg/bold",
                 className: c.title,
-                children: s.intl.string(o.default.v52itt),
+                children: s.intl.string(o.default.v52itr),
             }),
             (0, a.jsx)(i.Text, {
                 variant: "text-md/normal",
                 color: "text-muted",
                 className: c.description,
-                children: s.intl.string(o.default["5am8D3"]),
+                children: s.intl.string(o.default["5am8Dw"]),
             }),
             (0, a.jsx)(i.Kqy, {
                 direction: "horizontal",
                 justify: "end",
                 children: (0, a.jsx)(i.Button, {
                     variant: "primary",
-                    text: s.intl.string(o.default["GDsHl+"]),
+                    text: s.intl.string(o.default.GDsHl5),
                     onClick: d,
                     disabled: n,
                 }),

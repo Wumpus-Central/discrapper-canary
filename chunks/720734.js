@@ -289,7 +289,7 @@ function tm(e) {
                                 var n;
                                 null == (n = e.onClick) || n.call(e, t), null == c || c(t);
                             },
-                            "aria-label": ta.intl.string(ta.t["3Uj+2p"]),
+                            "aria-label": ta.intl.string(ta.t["3Uj+2t"]),
                             "data-jump-section": g,
                             className: l()(tr.avatarWrapper, { [tr.plated]: null != m }),
                             children: [
@@ -330,17 +330,17 @@ class tp extends r.PureComponent {
     renderCopiedSuccess() {
         let { copiedStreak: e } = this.state,
             t = [
-                ta.intl.string(ta.t.MSaeTe),
-                ta.intl.string(ta.t.UmrCw7),
-                ta.intl.string(ta.t.gKE0Jq),
-                ta.intl.string(ta.t["4DSKbi"]),
-                ta.intl.string(ta.t["+8ENdT"]),
-                ta.intl.string(ta.t.GlWHv8),
-                ta.intl.string(ta.t.hIzxU9),
-                ta.intl.string(ta.t["26uMPL"]),
-                ta.intl.string(ta.t.uFs7R2),
-                ta.intl.string(ta.t.bLXdcY),
-                ta.intl.string(ta.t.gPg9fS),
+                ta.intl.string(ta.t.MSaeTU),
+                ta.intl.string(ta.t.UmrCw8),
+                ta.intl.string(ta.t.gKE0Ji),
+                ta.intl.string(ta.t["4DSKbm"]),
+                ta.intl.string(ta.t["+8ENdX"]),
+                ta.intl.string(ta.t.GlWHv7),
+                ta.intl.string(ta.t.hIzxU1),
+                ta.intl.string(ta.t["26uMPD"]),
+                ta.intl.string(ta.t.uFs7R0),
+                ta.intl.string(ta.t.bLXdcX),
+                ta.intl.string(ta.t.gPg9fX),
             ],
             n = Math.min(Math.max(0, e - 1), t.length - 1);
         return (0, a.jsx)(f.UkV, {
@@ -994,17 +994,17 @@ function tg(e) {
         { name: v } = (0, et.p6)(tn.h7.AUDIO_INPUT),
         { name: j } = (0, et.p6)(tn.h7.AUDIO_OUTPUT);
     !g && m
-        ? ((t = ta.intl.format(ta.t["18wnuD"], { inputDeviceName: v })),
-          (n = ta.intl.formatToPlainString(ta.t["18wnuD"], { inputDeviceName: v })),
-          (i = ta.intl.formatToPlainString(ta.t["18wnuD"], { inputDeviceName: v })))
+        ? ((t = ta.intl.format(ta.t["18wnuL"], { inputDeviceName: v })),
+          (n = ta.intl.formatToPlainString(ta.t["18wnuL"], { inputDeviceName: v })),
+          (i = ta.intl.formatToPlainString(ta.t["18wnuL"], { inputDeviceName: v })))
         : !g && p
-          ? ((t = ta.intl.format(ta.t["f+DDY/"], { outputDeviceName: j })),
-            (n = ta.intl.formatToPlainString(ta.t["f+DDY/"], { outputDeviceName: j })),
-            (i = ta.intl.formatToPlainString(ta.t["f+DDY/"], { outputDeviceName: j })))
+          ? ((t = ta.intl.format(ta.t["f+DDY2"], { outputDeviceName: j })),
+            (n = ta.intl.formatToPlainString(ta.t["f+DDY2"], { outputDeviceName: j })),
+            (i = ta.intl.formatToPlainString(ta.t["f+DDY2"], { outputDeviceName: j })))
           : (t =
                 null != l
-                    ? ta.intl.formatToPlainString(ta.t.Gzh6ZP, { webBuildOverride: l.id })
-                    : ta.intl.string(ta.t.cduTBL));
+                    ? ta.intl.formatToPlainString(ta.t.Gzh6ZG, { webBuildOverride: l.id })
+                    : ta.intl.string(ta.t.cduTBA));
     let _ = f.ewm,
         y = (0, h.i)();
     return (
@@ -1067,9 +1067,9 @@ function tb(e) {
         { Component: F, events: B, play: z } = P,
         V = i || o ? f.v0G : F,
         H = (0, Z.Z)(n, i, o, s),
-        K = k ? ta.intl.string(ta.t.ARRV6m) : null;
+        K = k ? ta.intl.string(ta.t.ARRV6u) : null;
     t = _
-        ? ta.intl.string(ta.t["29gnR4"])
+        ? ta.intl.string(ta.t["29gnR0"])
         : null != K
           ? (0, a.jsxs)("div", {
                 className: tr.tooltipWithSubtext,
@@ -1192,7 +1192,7 @@ function tb(e) {
                           children: [
                               (0, a.jsx)(e2.Z, {
                                   "aria-checked": S,
-                                  "aria-label": ta.intl.string(ta.t.w4m945),
+                                  "aria-label": ta.intl.string(ta.t["w4m94+"]),
                                   className: l()({ [tr.micButtonWithMenu]: !0 }),
                                   disabled: s,
                                   icon: (0, a.jsx)(V, {
@@ -1220,8 +1220,8 @@ function tb(e) {
                               }),
                               (0, a.jsx)(e2.Z, {
                                   "aria-label": y
-                                      ? ta.intl.formatToPlainString(ta.t["18wnuD"], { inputDeviceName: ec })
-                                      : ta.intl.string(ta.t.fRzCbB),
+                                      ? ta.intl.formatToPlainString(ta.t["18wnuL"], { inputDeviceName: ec })
+                                      : ta.intl.string(ta.t.fRzCbG),
                                   className: l()(tr.buttonChevron, { [tr.popoutOpen]: i }),
                                   disabled: s,
                                   icon: (0, a.jsx)(o, {
@@ -1243,12 +1243,12 @@ function tb(e) {
                                   tooltipContentClassName: tr.accountButtonsTooltipContent,
                                   tooltipForceOpen: y,
                                   tooltipPositionKeyStemOverride: y
-                                      ? ta.intl.formatToPlainString(ta.t["18wnuD"], { inputDeviceName: ec })
+                                      ? ta.intl.formatToPlainString(ta.t["18wnuL"], { inputDeviceName: ec })
                                       : void 0,
                                   tooltipShouldShow: !i,
                                   tooltipText: y
-                                      ? ta.intl.format(ta.t["18wnuD"], { inputDeviceName: ec })
-                                      : ta.intl.string(ta.t.fRzCbB),
+                                      ? ta.intl.format(ta.t["18wnuL"], { inputDeviceName: ec })
+                                      : ta.intl.string(ta.t.fRzCbG),
                               }),
                           ],
                       });
@@ -1285,7 +1285,7 @@ function tb(e) {
                           className: l()({ [tr.micButtonWithMenu]: Y }),
                           orangeGlow: k,
                           redGlow: S,
-                          "aria-label": ta.intl.string(ta.t.w4m945),
+                          "aria-label": ta.intl.string(ta.t["w4m94+"]),
                           "aria-checked": S,
                           disabled: s,
                       }),
@@ -1388,12 +1388,12 @@ function tb(e) {
                                                                                     variant: "text-sm/medium",
                                                                                     color: "always-white",
                                                                                     children: ta.intl.string(
-                                                                                        ta.t.VlC1de,
+                                                                                        ta.t.VlC1dX,
                                                                                     ),
                                                                                 }),
                                                                             ],
                                                                         })
-                                                                      : ta.intl.string(ta.t.Hapb4J),
+                                                                      : ta.intl.string(ta.t.Hapb4O),
                                                                   icon: (0, a.jsx)(l, {
                                                                       className: tr.buttonChevronIcon,
                                                                       size: "custom",
@@ -1405,7 +1405,7 @@ function tb(e) {
                                                                   className: tr.buttonChevron,
                                                                   orangeGlow: k,
                                                                   redGlow: S,
-                                                                  "aria-label": ta.intl.string(ta.t.Hapb4J),
+                                                                  "aria-label": ta.intl.string(ta.t.Hapb4O),
                                                                   disabled: s,
                                                                   onClick: (e) => {
                                                                       i(te.L.INDIRECT_ACTION),
@@ -1509,7 +1509,7 @@ function tv(e) {
                           children: [
                               (0, a.jsx)(e2.Z, {
                                   "aria-checked": h,
-                                  "aria-label": ta.intl.string(ta.t.wjcRFX),
+                                  "aria-label": ta.intl.string(ta.t.wjcRFR),
                                   className: tr.micButtonWithMenu,
                                   disabled: i,
                                   icon: (0, a.jsx)(j, {
@@ -1532,8 +1532,8 @@ function tv(e) {
                               }),
                               (0, a.jsx)(e2.Z, {
                                   "aria-label": u
-                                      ? ta.intl.formatToPlainString(ta.t["f+DDY/"], { outputDeviceName: _ })
-                                      : ta.intl.string(ta.t.aA4Vce),
+                                      ? ta.intl.formatToPlainString(ta.t["f+DDY2"], { outputDeviceName: _ })
+                                      : ta.intl.string(ta.t.aA4VcX),
                                   className: l()(tr.buttonChevron, { [tr.popoutOpen]: s }),
                                   disabled: i,
                                   icon: (0, a.jsx)(m, {
@@ -1552,12 +1552,12 @@ function tv(e) {
                                   tooltipContentClassName: tr.accountButtonsTooltipContent,
                                   tooltipForceOpen: u,
                                   tooltipPositionKeyStemOverride: u
-                                      ? ta.intl.formatToPlainString(ta.t["f+DDY/"], { outputDeviceName: _ })
+                                      ? ta.intl.formatToPlainString(ta.t["f+DDY2"], { outputDeviceName: _ })
                                       : void 0,
                                   tooltipShouldShow: !s,
                                   tooltipText: u
-                                      ? ta.intl.format(ta.t["f+DDY/"], { outputDeviceName: _ })
-                                      : ta.intl.string(ta.t.aA4Vce),
+                                      ? ta.intl.format(ta.t["f+DDY2"], { outputDeviceName: _ })
+                                      : ta.intl.string(ta.t.aA4VcX),
                               }),
                           ],
                       });
@@ -1584,7 +1584,7 @@ function tv(e) {
                   iconForeground: h ? tr.strikethrough : void 0,
                   role: "switch",
                   redGlow: h,
-                  "aria-label": ta.intl.string(ta.t.wjcRFX),
+                  "aria-label": ta.intl.string(ta.t.wjcRFR),
                   "aria-checked": h,
                   disabled: i,
               }),

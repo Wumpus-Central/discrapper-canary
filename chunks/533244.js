@@ -66,17 +66,17 @@ function E(e, t) {
         a = null != e.invitesDisabledUntil;
     switch (!0) {
         case i && a:
-            return s.intl.formatToPlainString(s.t.hCZitf, {
+            return s.intl.formatToPlainString(s.t.hCZitb, {
                 guildName: t,
                 time: new Date(r).toLocaleString(s.intl.currentLocale, l),
             });
         case i:
-            return s.intl.formatToPlainString(s.t["HNKxf+"], {
+            return s.intl.formatToPlainString(s.t.HNKxf3, {
                 guildName: t,
                 time: new Date(r).toLocaleString(s.intl.currentLocale, l),
             });
         case a:
-            return s.intl.formatToPlainString(s.t.M3iSyL, {
+            return s.intl.formatToPlainString(s.t.M3iSyM, {
                 guildName: t,
                 time: new Date(r).toLocaleString(s.intl.currentLocale, l),
             });

@@ -14,8 +14,8 @@ var d = t(120356),
     x = t(111361),
     b = t(784238),
     v = t(553896),
-    T = t(848572),
-    h = t(787528),
+    h = t(848572),
+    T = t(787528),
     _ = t(474936),
     N = t(981631),
     j = t(388032),
@@ -26,24 +26,24 @@ let B = (e) => {
         { analyticsLocations: S } = (0, o.ZP)(c.Z.TIERED_TENURE_BADGES_MODAL),
         I = (0, u.Dt)(),
         L = Object.values(_.vK),
-        A = (0, T.SI)(null == E ? void 0 : E.userId),
-        D = (0, T.Rw)(),
-        R = g.default.getCurrentUser(),
+        R = (0, h.SI)(null == E ? void 0 : E.userId),
+        A = (0, h.Rw)(),
+        D = g.default.getCurrentUser(),
         f =
-            null != (t = (0, T.a1)(null != (a = null == E ? void 0 : E.userId) ? a : null == R ? void 0 : R.id))
+            null != (t = (0, h.a1)(null != (a = null == E ? void 0 : E.userId) ? a : null == D ? void 0 : D.id))
                 ? t
                 : new Date(),
-        k = (0, x.yd)(null == R ? void 0 : R.premiumType, _.PremiumTypes.TIER_2),
+        k = (0, x.yd)(null == D ? void 0 : D.premiumType, _.PremiumTypes.TIER_2),
         P = L.map((e) => {
             let { id: a, nameUnformatted: t, tenureReqNumMonths: d } = e,
                 l = j.intl.string(t),
-                r = (0, h.J)(a),
+                r = (0, T.J)(a),
                 c = (0, v.q)(a, d),
                 o = null == E,
-                u = o && (null == D ? void 0 : D.id) === a,
-                m = !o && (null == A ? void 0 : A.id) === a,
-                g = u && (null == D ? void 0 : D.status) === T.Vq.EARNED,
-                x = u && (null == D ? void 0 : D.status) === T.Vq.UPCOMING,
+                u = o && (null == A ? void 0 : A.id) === a,
+                m = !o && (null == R ? void 0 : R.id) === a,
+                g = u && (null == A ? void 0 : A.status) === h.Vq.EARNED,
+                x = u && (null == A ? void 0 : A.status) === h.Vq.UPCOMING,
                 b = m || g;
             return (0, n.jsxs)(
                 "div",
@@ -72,15 +72,15 @@ let B = (e) => {
                                         variant: "text-xs/normal",
                                         color: "text-muted",
                                         className: p.earnedBadgeSubSince,
-                                        children: j.intl.formatToPlainString(j.t.Hu4jfi, { date: f }),
+                                        children: j.intl.formatToPlainString(j.t.Hu4jfn, { date: f }),
                                     }),
                                 x &&
                                     (0, n.jsx)(s.xvT, {
                                         variant: "text-xs/normal",
                                         color: "text-muted",
                                         className: p.earnedBadgeSubSince,
-                                        children: j.intl.formatToPlainString(j.t.PPL1Il, {
-                                            days: null == D ? void 0 : D.daysLeft,
+                                        children: j.intl.formatToPlainString(j.t.PPL1Ii, {
+                                            days: null == A ? void 0 : A.daysLeft,
                                         }),
                                     }),
                             ],
@@ -118,24 +118,24 @@ let B = (e) => {
                               (0, n.jsx)(s.xvT, {
                                   variant: "display-md",
                                   className: p.header,
-                                  children: j.intl.string(j.t.Og62j7),
+                                  children: j.intl.string(j.t.Og62j4),
                               }),
                               (0, n.jsx)(s.xvT, {
                                   variant: "text-md/medium",
                                   className: p.subHeader,
-                                  children: j.intl.string(j.t.IdAP91),
+                                  children: j.intl.string(j.t["IdAP9/"]),
                               }),
                               (0, n.jsx)("div", {
                                   className: p.badgeList,
                                   children: P,
                               }),
                               null != E &&
-                                  E.userId !== (null == R ? void 0 : R.id) &&
+                                  E.userId !== (null == D ? void 0 : D.id) &&
                                   (0, n.jsx)(r.gtL, {
                                       "data-migration-pending": !0,
                                       className: p.learnMoreButton,
                                       onClick: y,
-                                      children: j.intl.string(j.t.hvVgAZ),
+                                      children: j.intl.string(j.t.hvVgAQ),
                                   }),
                           ],
                       })
@@ -144,12 +144,12 @@ let B = (e) => {
                               (0, n.jsx)(s.xvT, {
                                   variant: "display-md",
                                   className: p.header,
-                                  children: j.intl.string(j.t.RtGeFS),
+                                  children: j.intl.string(j.t.RtGeFR),
                               }),
                               (0, n.jsx)(s.xvT, {
                                   variant: "text-md/medium",
                                   className: p.subHeader,
-                                  children: j.intl.format(j.t.ffatnT, { onClick: y }),
+                                  children: j.intl.format(j.t.ffatnZ, { onClick: y }),
                               }),
                               (0, n.jsx)("div", {
                                   className: p.badgeList,
@@ -158,7 +158,7 @@ let B = (e) => {
                               (0, n.jsx)(b.Z, {
                                   className: p.subscribeButton,
                                   premiumModalAnalyticsLocation: { page: N.ZY5.TIERED_TENURE_BADGES_MODAL },
-                                  textOptions: { subscribeText: j.intl.string(j.t.JST6jl) },
+                                  textOptions: { subscribeText: j.intl.string(j.t.JST6jo) },
                                   subscriptionTier: _.Si.TIER_2,
                                   showGradient: !0,
                                   color: l.Tt.BRAND,

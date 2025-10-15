@@ -1,8 +1,8 @@
 n.d(t, { R: () => _ }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(120356),
-    s = n.n(l),
+    s = n(120356),
+    l = n.n(s),
     a = n(481060),
     o = n(590965),
     c = n(695346),
@@ -10,13 +10,13 @@ var r = n(951288),
     d = n(259580),
     h = n(626135),
     g = n(978986),
-    m = n(981631),
-    p = n(388032),
+    p = n(981631),
+    m = n(388032),
     f = n(181174);
 let _ = () => {
     var e;
     let [t, n] = i.useState(!1),
-        l = c.G6.useSetting(),
+        s = c.G6.useSetting(),
         {
             nickname: _,
             dmsAllowed: x,
@@ -27,15 +27,15 @@ let _ = () => {
             guildId: I,
             inviteCode: N,
         } = (0, g.XW)(),
-        S = null == (e = o.Z.getProps().invite) ? void 0 : e.is_nickname_changeable;
+        O = null == (e = o.Z.getProps().invite) ? void 0 : e.is_nickname_changeable;
     return (0, r.jsxs)("div", {
-        className: s()(f.editProfileContainer, { [f.opened]: t }),
+        className: l()(f.editProfileContainer, { [f.opened]: t }),
         children: [
             (0, r.jsxs)(a.P3F, {
                 className: f.header,
                 onClick: () => {
                     t ||
-                        h.default.track(m.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
+                        h.default.track(p.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
                             guild_id: I,
                             invite_code: N,
                         }),
@@ -52,17 +52,17 @@ let _ = () => {
                             (0, r.jsx)(a.Text, {
                                 variant: "eyebrow",
                                 color: "header-secondary",
-                                children: p.intl.string(p.t["A5wHQ/"]),
+                                children: m.intl.string(m.t.A5wHQ0),
                             }),
                             (0, r.jsx)(a.Text, {
                                 variant: "text-sm/medium",
                                 color: "interactive-normal",
-                                children: p.intl.string(p.t.UKCSEd),
+                                children: m.intl.string(m.t.UKCSER),
                             }),
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        className: s()(f.caret, { [f.opened]: t }),
+                        className: l()(f.caret, { [f.opened]: t }),
                         children: (0, r.jsx)(d.Z, {
                             width: 18,
                             height: 18,
@@ -72,33 +72,33 @@ let _ = () => {
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: s()(f.customizationSection, { [f.opened]: t }, S ? null : f.condensed),
+                className: l()(f.customizationSection, { [f.opened]: t }, O ? null : f.condensed),
                 children: [
-                    S &&
+                    O &&
                         (0, r.jsxs)("div", {
                             className: f.serverNickname,
                             children: [
                                 (0, r.jsx)(a.Text, {
                                     variant: "eyebrow",
                                     color: "header-secondary",
-                                    children: p.intl.string(p.t.me1lRk),
+                                    children: m.intl.string(m.t.me1lRk),
                                 }),
                                 (0, r.jsx)(a.oil, {
-                                    placeholder: p.intl.string(p.t["09Q8yp"]),
-                                    maxLength: m.l$U,
+                                    placeholder: m.intl.string(m.t["09Q8ys"]),
+                                    maxLength: p.l$U,
                                     value: _,
                                     onChange: v,
                                 }),
                             ],
                         }),
                     (0, r.jsx)(u.ZP, {
-                        title: p.intl.string(p.t["/2ed37"]),
+                        title: m.intl.string(m.t["/2ed39"]),
                         value: x,
                         onChange: b,
                     }),
-                    l &&
+                    s &&
                         (0, r.jsx)(u.ZP, {
-                            title: p.intl.string(p.t.bN4m1G),
+                            title: m.intl.string(m.t.bN4m1N),
                             value: E,
                             onChange: j,
                         }),

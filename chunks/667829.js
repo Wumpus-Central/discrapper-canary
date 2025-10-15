@@ -228,7 +228,7 @@ class G extends i.Component {
     }
     getPlaceholder() {
         let { disabled: e, placeholder: t, isPreviewing: n, showValueWhenDisabled: r } = this.props;
-        return e && !n ? (r ? "" : w.intl.string(w.t.IYKTTc)) : t;
+        return e && !n ? (r ? "" : w.intl.string(w.t.IYKTTU)) : t;
     }
     render() {
         var e, t, n, i, a, s;
@@ -484,8 +484,8 @@ class G extends i.Component {
                                 return "is_directory" === t;
                             })) &&
                           (0, h.openUploadError)({
-                              title: w.intl.string(w.t.azO1Pe),
-                              help: w.intl.string(w.t["Koklr/"]),
+                              title: w.intl.string(w.t.azO1PT),
+                              help: w.intl.string(w.t.Koklr6),
                           }),
                       !1)
                     : (e.preventDefault(), e.stopPropagation(), this.saveCurrentText(), O(I), this.focus(), !0);

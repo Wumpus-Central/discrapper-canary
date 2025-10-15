@@ -38,8 +38,8 @@ var r = n(951288),
     G = n(594190),
     U = n(925329),
     B = n(102172),
-    F = n(74299),
-    V = n(914923),
+    V = n(74299),
+    F = n(914923),
     H = n(662304),
     z = n(989941),
     W = n(690221),
@@ -177,8 +177,8 @@ class eN extends i.PureComponent {
                       let { visibleContent: t, markAsDismissed: n } = e;
                       return t === d.z.ACCOUNT_LINK_INVITE_FRIENDS
                           ? (0, r.jsx)(h.J2, {
-                                title: ex.intl.string(ex.t["0l2pEt"]),
-                                body: ex.intl.string(ex.t["DSZUK/"]),
+                                title: ex.intl.string(ex.t["0l2pEh"]),
+                                body: ex.intl.string(ex.t.DSZUKy),
                                 targetElementRef: this.inviteButtonRef,
                                 align: "right",
                                 shouldShow: !0,
@@ -186,7 +186,7 @@ class eN extends i.PureComponent {
                                 caretConfig: { align: "end" },
                                 actions: [
                                     {
-                                        text: ex.intl.string(ex.t.YdkBCH),
+                                        text: ex.intl.string(ex.t.YdkBCA),
                                         onClick: () => {
                                             var e;
                                             n(ey.L.TAKE_ACTION),
@@ -209,15 +209,15 @@ class eN extends i.PureComponent {
                             })
                           : t === d.z.POST_ACCOUNT_CONNECTION_RTC_POPOVER
                             ? (0, r.jsx)(h.J2, {
-                                  title: ex.intl.string(ex.t.MxAlrB),
-                                  body: ex.intl.string(ex.t["/UTTEg"]),
+                                  title: ex.intl.string(ex.t.MxAlrK),
+                                  body: ex.intl.string(ex.t["/UTTEh"]),
                                   targetElementRef: this.accountLinkUpsellTargetRef,
                                   position: "top",
                                   align: "left",
                                   caretConfig: { align: "start" },
                                   actions: [
                                       {
-                                          text: ex.intl.string(ex.t.aRIFWD),
+                                          text: ex.intl.string(ex.t.aRIFWF),
                                           onClick: () => {
                                               n(ey.L.TAKE_ACTION),
                                                   window.open(ed.Z.getArticleURL(e_.BhN.IN_GAME_FEATURES), "_blank");
@@ -235,7 +235,7 @@ class eN extends i.PureComponent {
                                         props: { application: i },
                                     },
                                     title: ex.intl.formatToPlainString(ex.t["lo6H6+"], { gameName: i.name }),
-                                    body: ex.intl.string(ex.t.qYAzOp),
+                                    body: ex.intl.string(ex.t.qYAzOj),
                                     targetElementRef: g,
                                     align: "right",
                                     shouldShow: !0,
@@ -244,7 +244,7 @@ class eN extends i.PureComponent {
                                     caretConfig: { align: "end" },
                                     actions: [
                                         {
-                                            text: ex.intl.string(ex.t.lw71Nf),
+                                            text: ex.intl.string(ex.t.lw71NT),
                                             onClick: () => {
                                                 n(ey.L.TAKE_ACTION), b();
                                             },
@@ -276,7 +276,7 @@ class eN extends i.PureComponent {
     }
     renderScreenshare() {
         let { isStreaming: e, streamMetadata: t, streamQualityIndicator: n } = this.props,
-            { title: i, sanitizedTitle: l } = (0, V.Z)(t);
+            { title: i, sanitizedTitle: l } = (0, F.Z)(t);
         return (0, r.jsxs)("div", {
             className: eC.gameWrapper,
             ref: this.accountLinkUpsellTargetRef,
@@ -540,12 +540,12 @@ let eZ = (0, y.Z)(function (e) {
         x = (0, u.e7)([R.Z], () => R.Z.getFakeGameData()),
         S = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
         Z = (0, E.Z)() && null != S && (0, j.R)(),
-        w = (0, u.e7)([er.Z], () => (0, F.Z)(er.Z) && (0, ep.isWindows)()),
+        w = (0, u.e7)([er.Z], () => (0, V.Z)(er.Z) && (0, ep.isWindows)()),
         A = (0, u.e7)([el.Z], () => (null != o ? el.Z.findActivity(o, (e) => e.type === e_.IIU.PLAYING) : null)),
         D = null != f && f.ownerId === o && f.state !== e_.jm8.ENDED,
         L = (0, u.e7)([es.default, eo.Z], () => (null != p ? (0, T.F6)(p, es.default, eo.Z) : void 0)),
         M = (0, Y.Z)(),
-        [U, V] = i.useState(!1),
+        [U, F] = i.useState(!1),
         H = (0, u.e7)([K.Z], () => K.Z.getWindowOpen(e_.KJ3.ACTIVITY_POPOUT)),
         {
             hasAlreadyLinked: W,
@@ -586,7 +586,7 @@ let eZ = (0, y.Z)(function (e) {
             guildForConnectedChannel: h,
             streamQualityIndicator: M,
             isForceShowSharingPopout: U,
-            setIsForceShowSharingPopout: V,
+            setIsForceShowSharingPopout: F,
             isActivityPopoutOpen: H,
             hasAlreadyLinked: W,
             blockAccountLinkDismissibleContent: !eg || !ef,

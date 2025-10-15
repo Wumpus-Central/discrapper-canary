@@ -20,23 +20,23 @@ function O(t) {
         size: "sm",
         transitionState: e,
         onClose: r,
-        title: p.intl.string(p.t["g+02d5"]),
+        title: p.intl.string(p.t["g+02d3"]),
         actions: [
             {
                 variant: "secondary",
                 onClick: () => r(),
-                text: p.intl.string(p.t.cpT0Cq),
+                text: p.intl.string(p.t.cpT0Cg),
             },
         ],
         children: (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsx)(c.Text, {
                     variant: "text-md/normal",
-                    children: p.intl.string(p.t["XEHDT/"]),
+                    children: p.intl.string(p.t.XEHDT0),
                 }),
                 (0, n.jsx)(c.Text, {
                     variant: "text-md/normal",
-                    children: p.intl.formatToPlainString(p.t["+5XVH+"], { countdownString: d }),
+                    children: p.intl.formatToPlainString(p.t["+5XVHx"], { countdownString: d }),
                 }),
             ],
         }),

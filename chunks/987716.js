@@ -9,7 +9,7 @@ var r = n(951288),
     u = n(321051),
     d = n(669079),
     f = n(479446),
-    _ = n(47280),
+    _ = n(283066),
     p = n(543995),
     h = n(981632),
     m = n(96848),
@@ -109,7 +109,7 @@ let A = (e) => {
         k = j === d.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
         U = j !== d.xr.DEFAULT,
         G = (0, p.m)(),
-        B = (0, _.ZP)({ location: "GiftAnimationOptions" }),
+        B = (0, _.Z)({ location: "GiftAnimationOptions" }),
         Z = (e) => {
             null != R && R(null == e ? void 0 : e);
         };

@@ -12,7 +12,7 @@ var e = g(120356),
     n = g(839008),
     C = g(685184),
     w = g(9377),
-    l = g(234786),
+    l = g(659854),
     Q = g(388032),
     i = g(783385);
 function H(A) {
@@ -96,20 +96,20 @@ let o = function (A) {
                 avatar: B.Z,
                 username: "Roka",
                 usernameStyle: { color: "var(--brand-400)" },
-                message: Q.intl.string(l.default.bpghV6),
+                message: Q.intl.string(l.default.bpghV1),
             }),
             (0, v.jsx)(H, {
                 className: i.unfocusedMessage,
                 avatar: h.Z,
                 username: "hongo",
                 usernameStyle: { color: "var(--green-230)" },
-                message: Q.intl.string(l.default.rnpv79),
+                message: Q.intl.string(l.default["rnpv7+"]),
             }),
             (0, v.jsx)(H, {
                 avatar: n.Z,
                 username: "Lily",
                 usernameStyle: { color: "var(--orange-300)" },
-                message: Q.intl.string(l.default.u7tjsh),
+                message: Q.intl.string(l.default.u7tjsr),
                 decorations: (0, v.jsx)(
                     w.S,
                     (function (A) {
@@ -144,14 +144,14 @@ let o = function (A) {
                 avatar: C.Z,
                 username: "sharon",
                 usernameStyle: { color: "var(--brand-400)" },
-                message: Q.intl.string(l.default.GlWVJH),
+                message: Q.intl.string(l.default.GlWVJC),
             }),
             (0, v.jsx)(H, {
                 className: i.unfocusedMessage,
                 avatar: n.Z,
                 username: "Lily",
                 usernameStyle: { color: "var(--orange-300)" },
-                message: Q.intl.string(l.default.AIp9hh),
+                message: Q.intl.string(l.default.AIp9ho),
             }),
         ],
     });

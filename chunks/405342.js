@@ -1,3 +1,0 @@
-a.exports = JSON.parse(
-    '{"o/An3l":[[1,"username"]," 님이 ",[1,"applicationName"]," 방송을 요청했어요"],"DKHhec":["스트리밍 요청"],"8qq+H7":[[1,"applicationName"]," 스트리밍을 요청해요"],"s7bMT0":[[1,"username"]," 님이 ",[1,"applicationName"]," 방송을 요청하고 있어요"],"7pndSl":[[1,"applicationName"]," 님에게 방송해 달라고 요청했어요"],"P0wwmM":["이미 방송 중이에요"],"u4QmWl":["요청이 만료되었어요"],"qRXats":["음성 채널에 없어요"],"43zohO":["게임을 실행하고 있지 않아요"],"fac+eE":["권한 없음"],"8HU1M2":["요청 제출하기"],"5+172e":["방송"],"nAyuPp":["스트리밍 요청"],"d/qbC0":[[1,"username"]," 님이 스트리밍을 요청했어요"],"8B3U5O":["다른 사용자에게 스트리밍해 달라고 요청했어요"],"UGbmBp":["방송"],"jTbTAF":[[8,"$b",[[1,"username"]]]," 님이 ",[8,"$b",[[1,"game"]]]," 게임플레이를 스트리밍으로 보고 싶어 해요."]}',
-);

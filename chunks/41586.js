@@ -102,11 +102,11 @@ let O = l.forwardRef(function (e, t) {
                     children: a
                         ? (0, r.jsx)(d.Heading, {
                               variant: "heading-md/medium",
-                              children: j.intl.string(j.t.y12ALM),
+                              children: j.intl.string(j.t.y12ALC),
                           })
                         : (0, r.jsx)(d.Heading, {
                               variant: "heading-md/medium",
-                              children: j.intl.string(j.t.BUqwK8),
+                              children: j.intl.string(j.t.BUqwKy),
                           }),
                 }),
                 (0, r.jsx)("div", {
@@ -116,7 +116,7 @@ let O = l.forwardRef(function (e, t) {
                         children: (0, r.jsx)(d.E1j, {
                             size: "sm",
                             query: S,
-                            placeholder: j.intl.string(j.t["NVoAM+"]),
+                            placeholder: j.intl.string(j.t.NVoAMz),
                             onChange: R,
                             onClear: L,
                             autoComplete: "off",
@@ -170,7 +170,7 @@ let O = l.forwardRef(function (e, t) {
                                 d.Button,
                                 y(v({}, n), {
                                     buttonRef: i,
-                                    text: j.intl.string(j.t.XvNMNk),
+                                    text: j.intl.string(j.t.XvNMNj),
                                     onClick: t,
                                     size: "sm",
                                     variant: "secondary",
@@ -190,9 +190,9 @@ let O = l.forwardRef(function (e, t) {
                             children: (0, r.jsx)(d.Button, {
                                 variant: "critical-secondary",
                                 size: "sm",
-                                text: j.intl.string(j.t["2mIlKQ"]),
+                                text: j.intl.string(j.t["2mIlKS"]),
                                 onClick: H,
-                                "aria-label": j.intl.string(j.t.zbyz7p),
+                                "aria-label": j.intl.string(j.t.zbyz7u),
                             }),
                         }),
                 }),

@@ -40,13 +40,13 @@ function v(e) {
                         className: y.inboxTitle,
                         variant: "text-lg/semibold",
                         color: "interactive-active",
-                        children: O.intl.string(O.t.GSmTKJ),
+                        children: O.intl.string(O.t.GSmTKC),
                     }),
                     (0, r.jsxs)(o.kL8, {
                         className: y.controls,
                         onClick: (e) => e.stopPropagation(),
                         focusProps: { enabled: !1 },
-                        "aria-label": O.intl.string(O.t["8k+6QY"]),
+                        "aria-label": O.intl.string(O.t["8k+6QU"]),
                         children: [(0, r.jsx)(j, { tab: t }), (0, r.jsx)(g.Z, { closePopout: m })],
                     }),
                 ],
@@ -62,10 +62,10 @@ function v(e) {
                     children: [
                         (0, r.jsxs)(o.njP.Item, {
                             id: l.X.FOR_YOU,
-                            "aria-label": O.intl.string(O.t["En+D+u"]),
+                            "aria-label": O.intl.string(O.t["En+D+v"]),
                             className: y.tab,
                             children: [
-                                O.intl.string(O.t["En+D+u"]),
+                                O.intl.string(O.t["En+D+v"]),
                                 (null == f ? void 0 : f.badgeForYou)
                                     ? (0, r.jsx)(o.fWl, {
                                           color: s.Z.STATUS_DANGER,
@@ -77,13 +77,13 @@ function v(e) {
                         (0, r.jsx)(o.njP.Item, {
                             id: l.X.UNREADS,
                             className: y.tab,
-                            children: O.intl.string(O.t.sRUdB8),
+                            children: O.intl.string(O.t.sRUdBw),
                         }),
                         (0, r.jsx)(o.njP.Item, {
-                            "aria-label": O.intl.string(O.t.GRZF96),
+                            "aria-label": O.intl.string(O.t["GRZF9/"]),
                             id: l.X.MENTIONS,
                             className: y.tab,
-                            children: O.intl.string(O.t.GRZF96),
+                            children: O.intl.string(O.t["GRZF9/"]),
                         }),
                         x
                             ? (0, r.jsxs)(o.njP.Item, {
@@ -91,7 +91,7 @@ function v(e) {
                                   id: l.X.GAME_INVITES,
                                   className: y.tab,
                                   children: [
-                                      O.intl.string(O.t.apq3cU),
+                                      O.intl.string(O.t.apq3cX),
                                       C > 0
                                           ? (0, r.jsx)(o.fWl, {
                                                 color: s.Z.STATUS_DANGER,
@@ -109,7 +109,7 @@ function v(e) {
                                   children:
                                       0 === E
                                           ? O.intl.string(O.t["2pAkDA"])
-                                          : O.intl.formatToPlainString(O.t.I4fryG, { count: E }),
+                                          : O.intl.formatToPlainString(O.t.I4fryM, { count: E }),
                               })
                             : null,
                         v

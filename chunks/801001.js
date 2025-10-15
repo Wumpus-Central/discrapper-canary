@@ -12,75 +12,75 @@ var l = n(951288),
     j = n(313201),
     g = n(984933),
     v = n(485386),
-    p = n(402148),
-    h = n(570961),
+    h = n(402148),
+    p = n(570961),
     x = n(208665),
     f = n(460117),
     b = n(290511),
     y = n(388032),
     O = n(82513);
 function C(e) {
-    let { transitionState: t, onClose: n, onSave: r, onDelete: v, option: p, guild: C, prompt: P, index: I } = e,
+    let { transitionState: t, onClose: n, onSave: r, onDelete: v, option: h, guild: C, prompt: I, index: P } = e,
         S = (0, j.Dt)(),
-        Z = (0, a.e7)([g.ZP], () => g.ZP.getDefaultChannel(C.id)),
-        [w, E] = i.useState(() => {
+        w = (0, a.e7)([g.ZP], () => g.ZP.getDefaultChannel(C.id)),
+        [E, Z] = i.useState(() => {
             var e;
-            return null != (e = null == p ? void 0 : p.emoji) ? e : null;
+            return null != (e = null == h ? void 0 : h.emoji) ? e : null;
         }),
-        [k, _] = i.useState(() => {
+        [k, M] = i.useState(() => {
             var e;
-            return null != (e = null == p ? void 0 : p.title) ? e : "";
+            return null != (e = null == h ? void 0 : h.title) ? e : "";
         }),
-        [M, R] = i.useState(() => {
+        [R, _] = i.useState(() => {
             var e;
-            return null != (e = null == p ? void 0 : p.description) ? e : "";
+            return null != (e = null == h ? void 0 : h.description) ? e : "";
         }),
         [T, B] = i.useState(() => {
             var e;
-            return new Set(null != (e = null == p ? void 0 : p.channelIds) ? e : []);
+            return new Set(null != (e = null == h ? void 0 : h.channelIds) ? e : []);
         }),
         [D, q] = i.useState(() => {
             var e;
-            return new Set(null != (e = null == p ? void 0 : p.roleIds) ? e : []);
+            return new Set(null != (e = null == h ? void 0 : h.roleIds) ? e : []);
         }),
-        [z, A] = i.useState({}),
-        L = i.useRef(null);
+        [z, H] = i.useState({}),
+        F = i.useRef(null);
     i.useLayoutEffect(() => {
         var e;
-        return null == (e = L.current) ? void 0 : e.focus();
+        return null == (e = F.current) ? void 0 : e.focus();
     }, []);
-    let F = i.useCallback(() => {
+    let J = i.useCallback(() => {
             var e;
             let t = {
-                    id: null != (e = null == p ? void 0 : p.id) ? e : "".concat(Date.now()),
+                    id: null != (e = null == h ? void 0 : h.id) ? e : "".concat(Date.now()),
                     title: k,
-                    description: M,
+                    description: R,
                     channelIds: Array.from(T).sort(),
                     roleIds: Array.from(D).sort(),
-                    emoji: null == w ? void 0 : w,
+                    emoji: null == E ? void 0 : E,
                 },
                 l = (function (e, t, n, l) {
                     let i = {};
-                    l.title.length <= 0 && (i.title = y.intl.string(y.t.p3PKzA));
-                    let r = (0, h.en)(e, t, n, l);
+                    l.title.length <= 0 && (i.title = y.intl.string(y.t.p3PKzM));
+                    let r = (0, p.en)(e, t, n, l);
                     return null != r && (i.roles = r), i;
-                })(C, x.Z.editedOnboardingPrompts, P, t);
-            A(l), o().isEmpty(l) && (r(t), n());
-        }, [T, M, w, C, n, r, null == p ? void 0 : p.id, P, D, k]),
-        H = i.useMemo(
+                })(C, x.Z.editedOnboardingPrompts, I, t);
+            H(l), o().isEmpty(l) && (r(t), n());
+        }, [T, R, E, C, n, r, null == h ? void 0 : h.id, I, D, k]),
+        K = i.useMemo(
             () => [
                 {
-                    text: y.intl.string(y.t["ETE/oC"]),
+                    text: y.intl.string(y.t["ETE/oK"]),
                     onClick: n,
                     variant: "secondary",
                 },
                 {
-                    text: y.intl.string(y.t["R3BPH+"]),
-                    onClick: F,
+                    text: y.intl.string(y.t.R3BPHx),
+                    onClick: J,
                     variant: "primary",
                 },
             ],
-            [F, n],
+            [J, n],
         );
     return (0, l.jsxs)(s.IX, {
         transitionState: t,
@@ -97,38 +97,38 @@ function C(e) {
                         className: O.questionNumber,
                         variant: "text-xs/semibold",
                         color: "text-muted",
-                        children: y.intl.format(y.t.yjS3zs, { index: I + 1 }),
+                        children: y.intl.format(y.t.yjS3zs, { index: P + 1 }),
                     }),
                     (0, l.jsx)(u.Heading, {
                         id: S,
                         variant: "heading-lg/semibold",
-                        children: null != P.title && P.title.length > 0 ? P.title : y.intl.string(y.t.vY91C9),
+                        children: null != I.title && I.title.length > 0 ? I.title : y.intl.string(y.t.vY91Cw),
                     }),
                     (0, l.jsxs)(u.Kqy, {
                         gap: 8,
                         children: [
                             (0, l.jsx)(u.oil, {
-                                label: y.intl.string(y.t.VWdcBp),
+                                label: y.intl.string(y.t.VWdcBg),
                                 required: !0,
-                                inputRef: L,
-                                placeholder: y.intl.string(y.t.EHe6gZ),
+                                inputRef: F,
+                                placeholder: y.intl.string(y.t.EHe6gY),
                                 value: k,
-                                onChange: (e) => _(e),
+                                onChange: (e) => M(e),
                                 maxLength: b.NE,
                                 autoFocus: !0,
                                 error: z.title,
                             }),
                             (0, l.jsx)(u.oil, {
-                                placeholder: y.intl.string(y.t.mIjgJK),
-                                value: M,
-                                onChange: (e) => R(e),
+                                placeholder: y.intl.string(y.t.mIjgJC),
+                                value: R,
+                                onChange: (e) => _(e),
                                 maxLength: b.NO,
                             }),
                         ],
                     }),
                     (0, l.jsx)(u.izJ, {}),
                     (0, l.jsxs)(s.gNt, {
-                        label: y.intl.string(y.t.TtIbPA),
+                        label: y.intl.string(y.t.TtIbPD),
                         children: [
                             (0, l.jsxs)(u.Kqy, {
                                 gap: 8,
@@ -136,17 +136,17 @@ function C(e) {
                                     (0, l.jsx)(d.Z, {
                                         guildId: C.id,
                                         selectedChannelIds: T,
-                                        placeholder: y.intl.string(y.t.vephiL),
+                                        placeholder: y.intl.string(y.t.vephiI),
                                         onChange: B,
-                                        helperText: y.intl.string(y.t.SoT6we),
+                                        helperText: y.intl.string(y.t.SoT6wc),
                                     }),
                                     (0, l.jsx)(m.Z, {
                                         guildId: C.id,
                                         selectedRoleIds: D,
                                         disableEveryoneRole: !0,
-                                        placeholder: y.intl.string(y.t.aFO1I6),
+                                        placeholder: y.intl.string(y.t.aFO1Iy),
                                         onChange: q,
-                                        helperText: y.intl.string(y.t.Mbvpv8),
+                                        helperText: y.intl.string(y.t.Mbvpv7),
                                         selectableRoleFilter: (e) => !e.managed,
                                     }),
                                 ],
@@ -162,21 +162,21 @@ function C(e) {
                     (0, l.jsx)("div", {
                         className: O.emojiQuestionContainer,
                         children: (0, l.jsx)(s.gNt, {
-                            label: y.intl.string(y.t["4ahTBl"]),
-                            description: y.intl.string(y.t.Iv9RGg),
+                            label: y.intl.string(y.t["4ahTBg"]),
+                            description: y.intl.string(y.t.Iv9RGh),
                             children: (0, l.jsx)(f.Z, {
-                                emoji: w,
-                                setEmoji: E,
-                                channel: Z,
+                                emoji: E,
+                                setEmoji: Z,
+                                channel: w,
                             }),
                         }),
                     }),
                 ],
             }),
             (0, l.jsx)(s.Go$, {
-                actions: H,
+                actions: K,
                 leading: (0, l.jsx)(u.Avr, {
-                    text: y.intl.string(y.t.N86XcP),
+                    text: y.intl.string(y.t.N86XcH),
                     onClick: () => {
                         v(), n();
                     },
@@ -188,7 +188,7 @@ function C(e) {
 }
 function N(e) {
     let { guild: t, roleIds: n } = e,
-        i = (0, a.e7)([v.Z], () => v.Z.getManyRoles(t.id, n).find(p.F));
+        i = (0, a.e7)([v.Z], () => v.Z.getManyRoles(t.id, n).find(h.F));
     return null == i
         ? null
         : (0, l.jsx)("div", {
@@ -205,7 +205,7 @@ function N(e) {
                       }),
                       (0, l.jsx)(u.Text, {
                           variant: "text-sm/normal",
-                          children: y.intl.format(y.t["5zPJEZ"], { permissions: (0, p.i)(t, i).join(", ") }),
+                          children: y.intl.format(y.t["5zPJER"], { permissions: (0, h.i)(t, i).join(", ") }),
                       }),
                   ],
               }),

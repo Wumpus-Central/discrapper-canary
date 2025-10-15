@@ -75,8 +75,8 @@ function O(e) {
         I = {
             action: h.yM.PRESS_OPTIONS,
             icon: a.xhG,
-            tooltipText: m.intl.string(m.t["UKOtz+"]),
-            "aria-label": m.intl.string(m.t["UKOtz+"]),
+            tooltipText: m.intl.string(m.t.UKOtz8),
+            "aria-label": m.intl.string(m.t.UKOtz8),
         },
         T = (0, d.Z)({
             user: t,
@@ -164,7 +164,7 @@ function O(e) {
             [
                 (0, l.Z)({
                     id: t.id,
-                    label: m.intl.string(m.t["/AXYnE"]),
+                    label: m.intl.string(m.t["/AXYnJ"]),
                     onSuccess: () =>
                         y({
                             action: "COPY_USER_ID",
@@ -185,7 +185,7 @@ function O(e) {
                           navId: "user-profile-overflow-menu",
                           onSelect: void 0,
                           onClose: t,
-                          "aria-label": m.intl.string(m.t.AXIHpV),
+                          "aria-label": m.intl.string(m.t.AXIHpa),
                           children: N.map((e, t) => (0, r.jsx)(a.kSQ, { children: e.map((e) => e) }, t)),
                       });
                   },

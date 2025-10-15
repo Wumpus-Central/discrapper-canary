@@ -19,7 +19,7 @@ var r = n(951288),
     g = n(17622),
     k = n(279604),
     x = n(535396),
-    v = n(149829),
+    v = n(989308),
     O = n(388032),
     I = n(514186);
 function j(e) {
@@ -88,17 +88,17 @@ function T(e) {
         (n = n =
             {
                 size: a,
-                title: O.intl.formatToPlainString(v.default.iEBw1M, { perk: c }),
-                subtitle: O.intl.formatToPlainString(v.default["7o0K+2"], { perk: c }),
+                title: O.intl.formatToPlainString(v.default.iEBw1N, { perk: c }),
+                subtitle: O.intl.formatToPlainString(v.default["7o0K+/"], { perk: c }),
                 actions: [
                     {
                         variant: "secondary",
-                        text: O.intl.string(O.t["ETE/oC"]),
+                        text: O.intl.string(O.t["ETE/oK"]),
                         onClick: p.onClose,
                     },
                     {
                         variant: "critical-primary",
-                        text: O.intl.string(v.default.PYPdl4),
+                        text: O.intl.string(v.default.PYPdl5),
                         loading: m,
                         onClick: b,
                         disabled: null != d && !g,
@@ -112,7 +112,7 @@ function T(e) {
                             (0, r.jsx)(i.xvT, {
                                 color: "text-danger",
                                 variant: "eyebrow",
-                                children: O.intl.string(v.default.OVt5CC),
+                                children: O.intl.string(v.default.OVt5CA),
                             }),
                             (0, r.jsx)(i.xvT, {
                                 className: I.warningText,
@@ -160,16 +160,16 @@ function h(e) {
     var { guildId: t, powerup: n } = e,
         s = _(e, ["guildId", "powerup"]);
     let { onDeactivate: h, error: y, isLoading: w } = (0, k.ZP)(t, n),
-        { onClose: C } = s,
-        E = o.useCallback(
+        { onClose: E } = s,
+        S = o.useCallback(
             (e) => {
                 h(e).then(() => {
-                    null == C || C();
+                    null == E || E();
                 });
             },
-            [C, h],
+            [E, h],
         ),
-        S = (function (e, t) {
+        C = (function (e, t) {
             let n = (0, c.e7)([u.Z], () => u.Z.getMemberCount(e)),
                 s = (0, l.Z)(e),
                 m = (0, c.e7)([f.Z], () => {
@@ -196,33 +196,33 @@ function h(e) {
                     case a.If:
                         e =
                             g > 0
-                                ? O.intl.formatToPlainString(v.default["4jSvr1"], {
+                                ? O.intl.formatToPlainString(v.default["4jSvr6"], {
                                       perk: t.title,
                                       memberCount: g,
                                   })
-                                : O.intl.formatToPlainString(v.default.cavtEo, { perk: t.title });
+                                : O.intl.formatToPlainString(v.default.cavtEh, { perk: t.title });
                         break;
                     case a.A$:
                         e = m
                             ? (0, r.jsx)(i.xvT, {
                                   color: "text-danger",
                                   variant: "text-sm/semibold",
-                                  children: O.intl.string(v.default.hN75yb),
+                                  children: O.intl.string(v.default.hN75yc),
                               })
                             : (0, r.jsx)(i.xvT, {
                                   color: "text-danger",
                                   variant: "text-sm/semibold",
-                                  children: O.intl.string(v.default.Du91Rb),
+                                  children: O.intl.string(v.default.Du91RU),
                               });
                         break;
                     case a.MB:
                     case a.Vk:
-                        e = O.intl.string(v.default.Vf2ZcR);
+                        e = O.intl.string(v.default.Vf2ZcX);
                         break;
                     default:
-                        e = O.intl.formatToPlainString(v.default["4jSvr1"], {
+                        e = O.intl.formatToPlainString(v.default["4jSvr6"], {
                             perk: t.title,
-                            memberCount: null != n ? n : 0,
+                            memberCount: n,
                         });
                 }
                 return (
@@ -234,7 +234,7 @@ function h(e) {
                                 (0, r.jsx)(i.xvT, {
                                     color: "text-danger",
                                     variant: "text-sm/semibold",
-                                    children: p ? O.intl.string(v.default.TkNA7b) : O.intl.string(v.default.M4XL5n),
+                                    children: p ? O.intl.string(v.default.TkNA7e) : O.intl.string(v.default.M4XL5u),
                                 }),
                             ],
                         })),
@@ -261,10 +261,10 @@ function h(e) {
                                 });
                         }
                     })(),
-                    warningText: S,
+                    warningText: C,
                     error: y,
                     isLoading: w,
-                    onDeactivate: E,
+                    onDeactivate: S,
                 },
                 s,
             ),

@@ -12,7 +12,7 @@ var i = n(278323),
 function p(e, t, n, p) {
     if (s.Z.isNotificationDisabled(c.n0.ActivityInvite)) return null;
     let f = t.username,
-        m = h.intl.format(h.t.VDODnv, {
+        m = h.intl.format(h.t.VDODnp, {
             username: "",
             game: n.name,
         }),
@@ -27,8 +27,8 @@ function p(e, t, n, p) {
         icon: g,
         title: f,
         body: m,
-        confirmText: h.intl.string(h.t["fgP/wX"]),
-        cancelText: h.intl.string(h.t["tpXzJ+"]),
+        confirmText: h.intl.string(h.t["fgP/wc"]),
+        cancelText: h.intl.string(h.t.tpXzJy),
         onNotificationShow: () => {
             y();
         },

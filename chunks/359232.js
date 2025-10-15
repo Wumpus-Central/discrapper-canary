@@ -11,22 +11,22 @@ let l = (e, t, n) => {
             l = s(t);
         return 0 === l
             ? ("modal" === n ? a : 0 !== r)
-                ? o.intl.string(o.t.eJEUvD)
+                ? o.intl.string(o.t.eJEUvL)
                 : null
             : l < r
-              ? o.intl.formatToPlainString(o.t.Jmwzdx, { count: r })
+              ? o.intl.formatToPlainString(o.t.Jmwzd3, { count: r })
               : l > i
-                ? o.intl.formatToPlainString(o.t.LDvfRP, { count: i })
+                ? o.intl.formatToPlainString(o.t.LDvfRE, { count: i })
                 : null;
     },
     c = (e, t) => {
         let { minLength: n, maxLength: r, required: i } = e;
         return null == t || 0 === t.value.length
             ? i
-                ? o.intl.string(o.t.eJEUvD)
+                ? o.intl.string(o.t.eJEUvL)
                 : null
             : t.value.length < n || t.value.length > r
-              ? o.intl.formatToPlainString(o.t.ONSqYd, {
+              ? o.intl.formatToPlainString(o.t.ONSqYW, {
                     min: n,
                     max: r,
                 })
@@ -38,12 +38,12 @@ let l = (e, t, n) => {
             s = null != (n = null == t ? void 0 : t.uploadIds.length) ? n : 0;
         return 0 === s
             ? a
-                ? o.intl.string(o.t.eJEUvD)
+                ? o.intl.string(o.t.eJEUvL)
                 : null
             : s < r
-              ? o.intl.formatToPlainString(o.t.pmAt62, { minValues: r })
+              ? o.intl.formatToPlainString(o.t["pmAt6+"], { minValues: r })
               : s > i
-                ? o.intl.formatToPlainString(o.t.dy6viJ, { maxValues: i })
+                ? o.intl.formatToPlainString(o.t.dy6viI, { maxValues: i })
                 : null;
     };
 function d(e, t, n) {

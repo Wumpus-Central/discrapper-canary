@@ -37,26 +37,26 @@ function m(t) {
             await m();
     }
     return (0, i.jsx)(l.Modal, {
-        "aria-label": y.intl.string(y.t.E9kB45),
-        title: y.intl.string(y.t.E9kB45),
+        "aria-label": y.intl.string(y.t["E9kB4+"]),
+        title: y.intl.string(y.t["E9kB4+"]),
         subtitle: (0, d.Q0)(n.planId)
-            ? y.intl.format(y.t.GMp54C, {
+            ? y.intl.format(y.t.GMp54O, {
                   downgradedPlan: p.ZP.getDisplayName(a.planId),
                   existingRate: f,
               })
-            : y.intl.format(y.t["vx/NZ0"], {
+            : y.intl.format(y.t["vx/NZ2"], {
                   existingPlan: p.ZP.getDisplayName(n.planId),
                   downgradedPlan: p.ZP.getDisplayName(a.planId),
                   existingRate: f,
               }),
         actions: [
             {
-                text: y.intl.string(y.t.oEAioF),
+                text: y.intl.string(y.t.oEAioK),
                 onClick: m,
                 variant: "secondary",
             },
             {
-                text: y.intl.string(y.t.frE8KO),
+                text: y.intl.string(y.t.frE8KC),
                 onClick: v,
                 variant: "primary",
             },

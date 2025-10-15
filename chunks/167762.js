@@ -48,8 +48,8 @@ var i,
     q = n(151459),
     W = n(981631),
     z = n(388032),
-    H = n(712103);
-function V(e) {
+    V = n(712103);
+function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -74,7 +74,7 @@ function V(e) {
     }
     return e;
 }
-function J(e, t) {
+function K(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -112,7 +112,7 @@ function Q(e, t) {
     }
     return r;
 }
-let K = d.EFr.SIZE_32,
+let J = d.EFr.SIZE_32,
     B = [_.OV, _.wO, _.f, _.v1, _.pQ];
 var Y =
     (((i = {}).USER_CONTEXT_MENU = "user_context_menu"),
@@ -148,7 +148,7 @@ let X = l.memo((e) => {
             eventHandlers: q,
         } = (0, x.Z)({
             userId: F,
-            size: K,
+            size: J,
             animateOnHover: !0,
             guildId: null,
         }),
@@ -195,10 +195,10 @@ let X = l.memo((e) => {
         eg = l.useCallback(() => {
             if (null != a) {
                 let e = a.traits,
-                    t = J(V({}, a), { traits: e.slice(0, 3) });
+                    t = K(H({}, a), { traits: e.slice(0, 3) });
                 return (0, r.jsx)(_.Gk, {
                     location: _.Gt.FRIENDS_POPOUT,
-                    className: H.badgesContainer,
+                    className: V.badgesContainer,
                     children: B.map((e, n) => (0, r.jsx)(e, { entry: t }, n)),
                 });
             }
@@ -240,7 +240,7 @@ let X = l.memo((e) => {
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                J(V({}, n), {
+                                K(H({}, n), {
                                     user: t,
                                     appContext: w,
                                 }),
@@ -280,7 +280,7 @@ let X = l.memo((e) => {
                     null != n.application_id && "" !== n.application_id && !$[n.application_id])
                 )
                     try {
-                        ee((e) => J(V({}, e), { [n.application_id]: !0 })),
+                        ee((e) => K(H({}, e), { [n.application_id]: !0 })),
                             await f.Z.sendActivityInviteUser({
                                 type: W.mFx.JOIN,
                                 userId: t.id,
@@ -288,9 +288,9 @@ let X = l.memo((e) => {
                                 location: W.Sbl.FRIENDS_POPOUT,
                             }),
                             null == T || T("send_activity_invite", t.id),
-                            ee((e) => J(V({}, e), { [n.application_id]: !1 }));
+                            ee((e) => K(H({}, e), { [n.application_id]: !1 }));
                     } finally {
-                        ee((e) => J(V({}, e), { [n.application_id]: !1 }));
+                        ee((e) => K(H({}, e), { [n.application_id]: !1 }));
                     }
             },
             [T, $, t.id],
@@ -303,7 +303,7 @@ let X = l.memo((e) => {
                     null != n.application_id && "" !== n.application_id && !$[n.application_id])
                 )
                     try {
-                        ee((e) => J(V({}, e), { [n.application_id]: !0 })),
+                        ee((e) => K(H({}, e), { [n.application_id]: !0 })),
                             await f.Z.sendActivityInviteUser({
                                 type: W.mFx.JOIN_REQUEST,
                                 userId: t.id,
@@ -311,9 +311,9 @@ let X = l.memo((e) => {
                                 location: W.Sbl.FRIENDS_POPOUT,
                             }),
                             null == T || T("ask_to_join", t.id),
-                            ee((e) => J(V({}, e), { [n.application_id]: !1 }));
+                            ee((e) => K(H({}, e), { [n.application_id]: !1 }));
                     } finally {
-                        ee((e) => J(V({}, e), { [n.application_id]: !1 }));
+                        ee((e) => K(H({}, e), { [n.application_id]: !1 }));
                     }
             },
             [T, $, t.id],
@@ -327,33 +327,33 @@ let X = l.memo((e) => {
             var i;
             let { isShown: l } = n;
             return (0, r.jsxs)("div", {
-                className: H.row,
+                className: V.row,
                 ref: ed,
                 children: [
                     (0, r.jsx)(
                         S.Z,
-                        V(
+                        H(
                             {
-                                innerClassName: H.rowInner,
+                                innerClassName: V.rowInner,
                                 onContextMenu: eh,
                                 onMouseEnter: ef,
                                 onMouseLeave: ep,
                                 avatar: (0, r.jsx)(
                                     d.qEK,
-                                    J(V({}, q), {
-                                        size: K,
+                                    K(H({}, q), {
+                                        size: J,
                                         src: M,
                                         isMobile: es,
                                         isTyping: !1,
                                         status: eo,
-                                        className: H.avatar,
+                                        className: V.avatar,
                                         "aria-label": t.username,
                                         statusTooltip: !0,
                                         avatarDecoration: L,
                                     }),
                                 ),
                                 name: (0, r.jsx)("span", {
-                                    className: H.username,
+                                    className: V.username,
                                     children: null != (i = null != k ? k : t.globalName) ? i : t.username,
                                 }),
                                 subText: eg(),
@@ -366,7 +366,7 @@ let X = l.memo((e) => {
                         ),
                     ),
                     (0, r.jsxs)(C.ZP, {
-                        className: H.hoverBar,
+                        className: V.hoverBar,
                         children: [
                             j === W.OGo.PENDING_INCOMING
                                 ? (0, r.jsxs)(r.Fragment, {
@@ -385,7 +385,7 @@ let X = l.memo((e) => {
                                               },
                                           }),
                                           (0, r.jsx)(C.sF, {
-                                              label: z.intl.string(z.t.ytCpKs),
+                                              label: z.intl.string(z.t.ytCpKi),
                                               icon: d.Dio,
                                               onClick: (e) => {
                                                   e.preventDefault(),
@@ -409,7 +409,7 @@ let X = l.memo((e) => {
                                     })
                                   : E
                                     ? (0, r.jsx)(C.sF, {
-                                          label: z.intl.string(z.t.w5uwoI),
+                                          label: z.intl.string(z.t.w5uwoK),
                                           icon: d.oLu,
                                           onClick: em,
                                       })
@@ -421,8 +421,8 @@ let X = l.memo((e) => {
                                             C.sF,
                                             {
                                                 label: $[e.application_id]
-                                                    ? z.intl.string(z.t["8BEiNn"])
-                                                    : z.intl.string(z.t.OKsSCR),
+                                                    ? z.intl.string(z.t["8BEiNj"])
+                                                    : z.intl.string(z.t.OKsSCQ),
                                                 icon: $[e.application_id] ? d.dz2 : d.V9,
                                                 onClick: (t) => eN(t, e),
                                             },
@@ -435,8 +435,8 @@ let X = l.memo((e) => {
                                             C.sF,
                                             {
                                                 label: $[e.application_id]
-                                                    ? z.intl.string(z.t["8BEiNn"])
-                                                    : z.intl.formatToPlainString(z.t["KHLo+F"], {
+                                                    ? z.intl.string(z.t["8BEiNj"])
+                                                    : z.intl.formatToPlainString(z.t["KHLo+P"], {
                                                           channel: null != (n = t.globalName) ? n : t.username,
                                                           game: e.name,
                                                       }),
@@ -456,7 +456,7 @@ let X = l.memo((e) => {
                                     onClick: ey,
                                 }),
                             (0, r.jsx)(C.sF, {
-                                label: z.intl.string(z.t["UKOtz+"]),
+                                label: z.intl.string(z.t.UKOtz8),
                                 icon: d.xhG,
                                 onClick: eh,
                             }),
@@ -603,7 +603,7 @@ let et = l.memo(function (e) {
                                 : d.length > 0
                                   ? r.activities.push(g)
                                   : u
-                                    ? r.activities.push(J(V({}, g), { activities: s }))
+                                    ? r.activities.push(K(H({}, g), { activities: s }))
                                     : a === W.Skl.ONLINE || a === W.Skl.IDLE || a === W.Skl.DND
                                       ? r.online.push(g)
                                       : r.offline.push(g);
@@ -692,16 +692,16 @@ let et = l.memo(function (e) {
             (e) => {
                 (0, g.jW)(e, async () => {
                     let { default: e } = await n.e("23087").then(n.bind(n, 29131));
-                    return (t) => (0, r.jsx)(e, J(V({}, t), { onClose: o }));
+                    return (t) => (0, r.jsx)(e, K(H({}, t), { onClose: o }));
                 }),
                     null == p || p("open_settings_modal");
             },
             [o, p],
         ),
-        K = l.useCallback(() => {
+        J = l.useCallback(() => {
             (0, d.ZDy)(async () => {
                 let { default: e } = await n.e("49078").then(n.bind(n, 539725));
-                return (t) => (0, r.jsx)(e, V({}, t));
+                return (t) => (0, r.jsx)(e, H({}, t));
             }),
                 null == p || p("open_friend_modal");
         }, [p]),
@@ -712,30 +712,30 @@ let et = l.memo(function (e) {
                     i = 0;
                 switch (t) {
                     case 0:
-                        (n = z.intl.string(z.t.fyA115)), (i = w.friendRequests.length);
+                        (n = z.intl.string(z.t.fyA119)), (i = w.friendRequests.length);
                         break;
                     case 1:
                         (n = S.currentActivityName), (i = w.sameActivity.length);
                         break;
                     case 3:
-                        (n = z.intl.string(z.t.qm9dSj)), (i = w.suggestions.length);
+                        (n = z.intl.string(z.t.qm9dSk)), (i = w.suggestions.length);
                         break;
                     case 2:
-                        (n = z.intl.string(z.t.TxqPQR)), (i = w.activities.length);
+                        (n = z.intl.string(z.t.TxqPQU)), (i = w.activities.length);
                         break;
                     case 4:
-                        (n = z.intl.string(z.t.WbGtnH)), (i = w.online.length);
+                        (n = z.intl.string(z.t.WbGtnJ)), (i = w.online.length);
                         break;
                     case 5:
-                        (n = z.intl.string(z.t.Vv0abJ)), (i = w.offline.length);
+                        (n = z.intl.string(z.t.Vv0abG)), (i = w.offline.length);
                 }
                 let l = (3 === t || 0 === t) && i > 3,
                     a = N.includes(t);
                 return (0, r.jsxs)(E.Z, {
-                    className: H.section,
+                    className: V.section,
                     children: [
                         (0, r.jsx)(d.nn4, {
-                            children: z.intl.format(z.t.Uaqbke, {
+                            children: z.intl.format(z.t.UaqbkZ, {
                                 title: n,
                                 count: i,
                             }),
@@ -743,7 +743,7 @@ let et = l.memo(function (e) {
                         (0, r.jsxs)(d.P3F, {
                             onClick: () => l && k(t),
                             "aria-hidden": !0,
-                            className: l ? H.sectionCollapsible : void 0,
+                            className: l ? V.sectionCollapsible : void 0,
                             children: [
                                 n,
                                 " \u2014 ",
@@ -753,12 +753,12 @@ let et = l.memo(function (e) {
                                         ? (0, r.jsx)(d.Fbu, {
                                               size: "md",
                                               color: "currentColor",
-                                              className: H.chevronIcon,
+                                              className: V.chevronIcon,
                                           })
                                         : (0, r.jsx)(d.CJ0, {
                                               size: "md",
                                               color: "currentColor",
-                                              className: H.chevronIcon,
+                                              className: V.chevronIcon,
                                           })
                                     : null,
                             ],
@@ -797,7 +797,7 @@ let et = l.memo(function (e) {
                     ? null
                     : (0, r.jsx)(
                           X,
-                          J(V({}, t), {
+                          K(H({}, t), {
                               index: e.row,
                               closeParentPopout: o,
                               isSuggestion: 3 === e.section,
@@ -828,33 +828,33 @@ let et = l.memo(function (e) {
         children: [
             null != f
                 ? (0, r.jsx)("div", {
-                      className: H.header,
+                      className: V.header,
                       children: f(),
                   })
                 : (0, r.jsxs)("div", {
-                      className: H.header,
+                      className: V.header,
                       children: [
                           (0, r.jsx)(d.Heading, {
                               variant: "heading-lg/semibold",
-                              children: z.intl.string(z.t.TdEu5X),
+                              children: z.intl.string(z.t.TdEu5e),
                           }),
                           (0, r.jsxs)("div", {
-                              className: H.controlButtons,
+                              className: V.controlButtons,
                               children: [
                                   (0, r.jsx)(u.u, {
-                                      text: z.intl.string(z.t.w5uwoI),
+                                      text: z.intl.string(z.t.w5uwoK),
                                       children: (0, r.jsx)(d.hU, {
-                                          "aria-label": z.intl.string(z.t.w5uwoI),
+                                          "aria-label": z.intl.string(z.t.w5uwoK),
                                           size: "sm",
                                           variant: "secondary",
                                           icon: d.oLu,
-                                          onClick: K,
+                                          onClick: J,
                                       }),
                                   }),
                                   (0, r.jsx)(u.u, {
-                                      text: z.intl.string(z.t["3D5yo/"]),
+                                      text: z.intl.string(z.t["3D5yo6"]),
                                       children: (0, r.jsx)(d.hU, {
-                                          "aria-label": z.intl.string(z.t["3D5yo/"]),
+                                          "aria-label": z.intl.string(z.t["3D5yo6"]),
                                           size: "sm",
                                           variant: "secondary",
                                           icon: d.xhG,
@@ -866,22 +866,22 @@ let et = l.memo(function (e) {
                       ],
                   }),
             (0, r.jsx)("div", {
-                className: H.searchContainer,
+                className: V.searchContainer,
                 children: (0, r.jsx)(d.E1j, {
                     query: P,
                     onChange: A,
                     onClear: D,
-                    placeholder: z.intl.string(z.t["5h0QOP"]),
+                    placeholder: z.intl.string(z.t["5h0QOD"]),
                     autoFocus: m,
                 }),
             }),
             en
                 ? (0, r.jsx)("div", {
-                      className: H.emptyStateContainer,
+                      className: V.emptyStateContainer,
                       children: (0, r.jsx)(d.Text, {
                           variant: "text-md/normal",
                           color: "text-muted",
-                          children: z.intl.string(z.t["7sW4h1"]),
+                          children: z.intl.string(z.t["7sW4h4"]),
                       }),
                   })
                 : (0, r.jsx)(s.bG, {
@@ -894,10 +894,10 @@ let et = l.memo(function (e) {
                                   children: (e) =>
                                       (0, r.jsx)(
                                           d.aVo,
-                                          V(
+                                          H(
                                               {
                                                   innerRole: n,
-                                                  innerAriaLabel: z.intl.string(z.t.TdEu5X),
+                                                  innerAriaLabel: z.intl.string(z.t.TdEu5e),
                                                   ref: (e) => {
                                                       var n;
                                                       (v.current = e),
@@ -943,8 +943,8 @@ function en(e) {
         g = l.useCallback(
             () =>
                 (0, r.jsx)(et, {
-                    containerClassName: H.container,
-                    listClassName: H.list,
+                    containerClassName: V.container,
+                    listClassName: V.list,
                     closePopout: f,
                     autoFocus: !0,
                 }),

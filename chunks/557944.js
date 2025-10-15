@@ -21,8 +21,8 @@ function m(e) {
             hasMemberSearch: l,
             headerText: m,
             onClose: k,
-            overwrittenKeys: C,
-            search: j,
+            overwrittenKeys: j,
+            search: C,
             searchPlaceholderText: v,
             selectedPermissionCount: E,
             transitionState: w,
@@ -30,7 +30,7 @@ function m(e) {
         O = (0, o.e7)([b.Z], () => b.Z.getGuild(n), [n]);
     s()(null != O, "");
     let [x, M] = r.useState(null),
-        { query: T, results: P, setQuery: S } = j(n),
+        { query: T, results: P, setQuery: S } = C(n),
         [Z, _] = r.useState({}),
         q = r.useMemo(() => Object.keys(Z).length, [Z]),
         I = q + E >= g._n,
@@ -38,9 +38,9 @@ function m(e) {
             () =>
                 P.filter((e) => {
                     let t = (0, p.rE)(e.id, e.type);
-                    return !C.includes(t);
+                    return !j.includes(t);
                 }),
-            [C, P],
+            [j, P],
         ),
         D = r.useCallback(
             (e, t) => {
@@ -137,10 +137,10 @@ function m(e) {
             d.Z.requestMembers(n, void 0, 200, !1);
         }, [n]),
         (0, i.jsx)(a.Modal, {
-            "aria-label": h.intl.string(h.t["N+InBa"]),
+            "aria-label": h.intl.string(h.t["N+InBQ"]),
             transitionState: w,
             title: m,
-            subtitle: I ? h.intl.string(h.t["XTwtW/"]) : void 0,
+            subtitle: I ? h.intl.string(h.t.XTwtW1) : void 0,
             onClose: k,
             input: (0, i.jsx)(c.E1j, {
                 query: T,
@@ -151,12 +151,12 @@ function m(e) {
             }),
             actions: [
                 {
-                    text: h.intl.string(h.t["ETE/oC"]),
+                    text: h.intl.string(h.t["ETE/oK"]),
                     onClick: k,
                     variant: "secondary",
                 },
                 {
-                    text: h.intl.string(h.t.OYkgVk),
+                    text: h.intl.string(h.t.OYkgVl),
                     onClick: H,
                     variant: "primary",
                     disabled: 0 === q,

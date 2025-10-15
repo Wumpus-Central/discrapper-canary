@@ -74,10 +74,10 @@ let g = {
             h = l.charAt(0) === i.xQ.VOICE_CHANNEL;
         return (
             h
-                ? ((t = p.t["rMUL3+"]), (n = p.intl.string(p.t.CYnO4s)), (l = l.substring(1)))
+                ? ((t = p.t.rMUL39), (n = p.intl.string(p.t.CYnO4u)), (l = l.substring(1)))
                 : c.forNonStringCommandOption
-                  ? ((t = p.t.upNFT5), (n = p.intl.string(p.t.OGiMXJ)))
-                  : ((t = p.t.UhnmJD), (n = p.intl.string(p.t.nIfr0Y))),
+                  ? ((t = p.t.upNFT0), (n = p.intl.string(p.t.OGiMXF)))
+                  : ((t = p.t.UhnmJC), (n = p.intl.string(p.t.nIfr0d))),
             (0, u.HI)({
                 query: l,
                 selectedIndex: o,

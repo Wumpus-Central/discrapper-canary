@@ -6,30 +6,30 @@ function o(e) {
         n = [
             {
                 value: i.K8.FAILED_LOAD,
-                label: e ? a.intl.string(a.t.uaiF6B) : a.intl.string(a.t.aO6OMZ),
+                label: e ? a.intl.string(a.t.uaiF6O) : a.intl.string(a.t.aO6OMT),
             },
             {
                 value: i.K8.LAGGING,
-                label: e ? a.intl.string(a.t["/nJOlj"]) : a.intl.string(a.t["79HFwf"]),
+                label: e ? a.intl.string(a.t["/nJOlp"]) : a.intl.string(a.t["79HFwc"]),
             },
             {
                 value: i.K8.CONFUSING,
-                label: e ? a.intl.string(a.t["/8psS7"]) : a.intl.string(a.t.iSv55N),
+                label: e ? a.intl.string(a.t["/8psS0"]) : a.intl.string(a.t.iSv55O),
             },
             {
                 value: i.K8.NOT_FUN,
-                label: e ? a.intl.string(a.t["7GVmLm"]) : a.intl.string(a.t.GnVff5),
+                label: e ? a.intl.string(a.t["7GVmLi"]) : a.intl.string(a.t.GnVff3),
             },
             {
                 value: i.K8.OTHER,
-                label: a.intl.string(a.t.emlT91),
+                label: a.intl.string(a.t["emlT9/"]),
             },
         ];
     return (
         t &&
             n.push({
                 value: i.K8.ADS,
-                label: e ? a.intl.string(a.t["5o1UL6"]) : a.intl.string(a.t.XeeDhK),
+                label: e ? a.intl.string(a.t["5o1ULy"]) : a.intl.string(a.t.XeeDhI),
             }),
         n
     );

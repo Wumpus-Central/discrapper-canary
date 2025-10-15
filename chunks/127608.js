@@ -45,8 +45,8 @@ function o() {
                 (o = o =
                     {
                         header: l.intl.string(l.t.GFr0GR),
-                        body: l.intl.string(l.t.QSk6E8),
-                        confirmText: l.intl.string(l.t["BK8LK+"]),
+                        body: l.intl.string(l.t.QSk6Ex),
+                        confirmText: l.intl.string(l.t.BK8LKy),
                         onConfirm: e,
                     }),
                 Object.getOwnPropertyDescriptors

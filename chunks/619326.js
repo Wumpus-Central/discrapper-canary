@@ -109,11 +109,11 @@ function v(e) {
         })(y, ["ref"]),
         I = (0, o.jm)({
             isSelected: _,
-            label: p.intl.formatToPlainString(p.t.ZC69mL, { colorHex: m.Pbq }),
+            label: p.intl.formatToPlainString(p.t.ZC69mJ, { colorHex: m.Pbq }),
         }),
         S = (0, o.jm)({
             isSelected: !_,
-            label: p.intl.formatToPlainString(p.t["3kiLZZ"], { colorHex: (0, s.Rf)(t) }),
+            label: p.intl.formatToPlainString(p.t["3kiLZW"], { colorHex: (0, s.Rf)(t) }),
         });
     return (0, r.jsxs)(
         "div",
@@ -121,7 +121,7 @@ function v(e) {
             h(
                 {
                     className: f.buttonsContainer,
-                    "aria-label": p.intl.string(p.t["FJjrI/"]),
+                    "aria-label": p.intl.string(p.t.FJjrIy),
                     ref: N,
                 },
                 E,
@@ -156,7 +156,7 @@ function v(e) {
                                             color: "header-secondary",
                                             variant: "text-xs/normal",
                                             "aria-hidden": !0,
-                                            children: p.intl.string(p.t.Mcfzar),
+                                            children: p.intl.string(p.t.Mcfzam),
                                         }),
                                     ],
                                 },
@@ -188,7 +188,7 @@ function v(e) {
                                                 color: "header-secondary",
                                                 variant: "text-xs/normal",
                                                 "aria-hidden": !0,
-                                                children: p.intl.string(p.t["2ArXy1"]),
+                                                children: p.intl.string(p.t["2ArXy8"]),
                                             }),
                                         ],
                                     },
@@ -212,7 +212,7 @@ function v(e) {
                                             b(h({}, e), {
                                                 innerRef: d,
                                                 className: f.dropperIconButton,
-                                                "aria-label": p.intl.string(p.t.Qp04hK),
+                                                "aria-label": p.intl.string(p.t.Qp04hI),
                                                 children: (0, r.jsx)(c.ilE, {
                                                     size: "custom",
                                                     className: f.dropperIcon,

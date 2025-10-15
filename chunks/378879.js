@@ -129,13 +129,13 @@ function g(e) {
                       modalClassName: h ? R.modal : void 0,
                       modalContentClassName: h ? R.modalContent : void 0,
                       type: n === l.pC.AVATAR ? A.cd.ANIMATED_AVATAR_MODAL_UPSELL : A.cd.ANIMATED_BANNER_MODAL_UPSELL,
-                      title: n === l.pC.AVATAR ? u.intl.string(u.t.X7tO60) : u.intl.string(u.t.zXPa2C),
-                      body: n === l.pC.AVATAR ? u.intl.string(u.t.ifCRdB) : u.intl.string(u.t.yQAnf4),
-                      glowUp: n === l.pC.AVATAR ? u.intl.string(u.t.ifCRdB) : u.intl.string(u.t.yQAnf4),
+                      title: n === l.pC.AVATAR ? u.intl.string(u.t["X7tO6+"]) : u.intl.string(u.t.zXPa2N),
+                      body: n === l.pC.AVATAR ? u.intl.string(u.t.ifCRdH) : u.intl.string(u.t.yQAnf3),
+                      glowUp: n === l.pC.AVATAR ? u.intl.string(u.t.ifCRdH) : u.intl.string(u.t.yQAnf3),
                       onSecondaryClick: () => {
                           null == g || g(), (0, i.$)(r);
                       },
-                      secondaryCTA: u.intl.string(u.t.PcTCB7),
+                      secondaryCTA: u.intl.string(u.t.PcTCBw),
                       onClose: r,
                       enableArtBoxShadow: !1,
                       analyticsSource: b,

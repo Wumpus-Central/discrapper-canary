@@ -16,15 +16,15 @@ var t = l(951288),
     g = l(592125),
     x = l(984933),
     b = l(430824),
-    y = l(768581),
-    f = l(823379),
-    C = l(700785),
-    N = l(969632),
+    f = l(768581),
+    y = l(823379),
+    N = l(700785),
+    C = l(969632),
     S = l(580357),
     T = l(981631),
     O = l(185923),
-    P = l(388032),
-    I = l(353441);
+    I = l(388032),
+    P = l(353441);
 function E(e) {
     for (var n = 1; n < arguments.length; n++) {
         var l = null != arguments[n] ? arguments[n] : {},
@@ -71,11 +71,11 @@ function k(e, n) {
 function w(e, n) {
     switch (e) {
         case v.NewMemberActionTypes.VIEW:
-            return C.Uu(T.Plq.VIEW_CHANNEL, n);
+            return N.Uu(T.Plq.VIEW_CHANNEL, n);
         case v.NewMemberActionTypes.CHAT:
             if (T.TPd.GUILD_THREADS_ONLY.has(n.type))
-                return C.Uu(T.Plq.SEND_MESSAGES_IN_THREADS, n) || C.Uu(T.Plq.SEND_MESSAGES, n);
-            return C.Uu(T.Plq.SEND_MESSAGES, n);
+                return N.Uu(T.Plq.SEND_MESSAGES_IN_THREADS, n) || N.Uu(T.Plq.SEND_MESSAGES, n);
+            return N.Uu(T.Plq.SEND_MESSAGES, n);
         default:
             return !1;
     }
@@ -95,7 +95,7 @@ function M(e) {
         l = g.Z.getChannel(e.channelId);
     return (
         (null == e.title || e.title.length < v.Wz) &&
-            n.title.push(P.intl.formatToPlainString(P.t.iu6AGk, { minLength: v.Wz })),
+            n.title.push(I.intl.formatToPlainString(I.t.iu6AGh, { minLength: v.Wz })),
         null == e.actionType ||
             null == l ||
             w(e.actionType, l) ||
@@ -103,11 +103,11 @@ function M(e) {
                 (function (e) {
                     switch (e) {
                         case v.NewMemberActionTypes.VIEW:
-                            return P.intl.string(P.t.lD7FOX);
+                            return I.intl.string(I.t.lD7FOT);
                         case v.NewMemberActionTypes.CHAT:
-                            return P.intl.string(P.t.fIF2Uy);
+                            return I.intl.string(I.t.fIF2U1);
                         default:
-                            (0, f.vE)(e);
+                            (0, y.vE)(e);
                     }
                 })(e.actionType),
             ),
@@ -115,11 +115,11 @@ function M(e) {
     );
 }
 function A(e) {
-    var n, l, a, f, C, A;
-    let { transitionState: D, onClose: _, guildId: R, action: G, onSave: H, onDelete: U } = e,
+    var n, l, a, y, N, A;
+    let { transitionState: D, onClose: _, guildId: H, action: G, onSave: R, onDelete: U } = e,
         L = i.useRef(null),
-        F = i.useRef(null),
-        [z] = i.useState(
+        z = i.useRef(null),
+        [F] = i.useState(
             (function (e) {
                 if (null == e) return null;
                 let n = g.Z.getChannel(e.channelId);
@@ -131,63 +131,63 @@ function A(e) {
                       };
             })(G),
         ),
-        [W, V] = i.useState(z),
-        Y = (0, s.e7)([g.Z], () => g.Z.getChannel(null == W ? void 0 : W.value)),
+        [V, W] = i.useState(F),
+        Y = (0, s.e7)([g.Z], () => g.Z.getChannel(null == V ? void 0 : V.value)),
         q = (null == Y ? void 0 : Y.isMediaChannel()) === !0,
         X = i.useMemo(
             () => [
                 {
                     value: v.NewMemberActionTypes.VIEW,
-                    name: P.intl.string(P.t.jfieRw),
+                    name: I.intl.string(I.t.jfieR0),
                 },
                 {
                     value: v.NewMemberActionTypes.CHAT,
                     name:
                         (null == Y ? void 0 : Y.type) === T.d4z.GUILD_FORUM
                             ? q
-                                ? P.intl.string(P.t["1EgDpA"])
-                                : P.intl.string(P.t.x5Di7M)
-                            : P.intl.string(P.t["R+dC4C"]),
+                                ? I.intl.string(I.t["1EgDpK"])
+                                : I.intl.string(I.t.x5Di7O)
+                            : I.intl.string(I.t["R+dC4O"]),
                 },
             ],
             [null == Y ? void 0 : Y.type, q],
         ),
-        [B, K] = i.useState(Z()),
+        [K, B] = i.useState(Z()),
         [Q, J] = i.useState(null != (n = null == G ? void 0 : G.title) ? n : ""),
-        $ = (0, s.e7)([N.Z], () => {
-            let e = N.Z.getSettings();
+        $ = (0, s.e7)([C.Z], () => {
+            let e = C.Z.getSettings();
             if (null == e.newMemberActions) return new Set();
             let n = new Set(e.newMemberActions.map((e) => e.channelId));
-            return null != z && n.delete(z.value), n;
+            return null != F && n.delete(F.value), n;
         }),
         [ee, en] = i.useState(
             null == G
                 ? null
-                : null != (A = null == (C = X.find((e) => e.value === G.actionType)) ? void 0 : C.value)
+                : null != (A = null == (N = X.find((e) => e.value === G.actionType)) ? void 0 : N.value)
                   ? A
                   : null,
         ),
         [el, et] = i.useState(null != (l = null == G ? void 0 : G.emoji) ? l : null),
-        ei = (0, s.e7)([N.Z], () => {
+        ei = (0, s.e7)([C.Z], () => {
             var e;
-            return null == (e = N.Z.getNewMemberAction(null == G ? void 0 : G.channelId)) ? void 0 : e.icon;
+            return null == (e = C.Z.getNewMemberAction(null == G ? void 0 : G.channelId)) ? void 0 : e.icon;
         }),
         [ea, er] = i.useState(
-            null != ei && null != W
-                ? y.ZP.getNewMemberActionIconURL({
-                      channelId: W.value,
+            null != ei && null != V
+                ? f.ZP.getNewMemberActionIconURL({
+                      channelId: V.value,
                       icon: ei,
                   })
                 : null,
         ),
         eo = (0, m.Z)(ea),
         es = (0, m.Z)(el),
-        eu = null == Q || 0 === Q.length || null == ee || null == W,
-        ec = Object.values(B).flat().length > 0,
+        eu = null == Q || 0 === Q.length || null == ee || null == V,
+        ec = Object.values(K).flat().length > 0,
         ed = i.useCallback(() => {
-            if (null == W || null == ee || Q.length <= 0) return;
+            if (null == V || null == ee || Q.length <= 0) return;
             let e = {
-                    channelId: W.value,
+                    channelId: V.value,
                     title: Q,
                     description: "",
                     actionType: ee,
@@ -195,17 +195,17 @@ function A(e) {
                     icon: null != ei ? ei : null,
                 },
                 n = ea !== eo || el !== es;
-            H(e, null != ea ? ea : null, n), _();
-        }, [H, _, Q, ee, W, el, ei, ea, eo, es]),
+            R(e, null != ea ? ea : null, n), _();
+        }, [R, _, Q, ee, V, el, ei, ea, eo, es]),
         em = i.useCallback(() => {
             null == U || U(), _();
         }, [U, _]),
         eh = i.useCallback(
             (e) => {
                 J(e),
-                    K(
+                    B(
                         M({
-                            channelId: null == W ? void 0 : W.value,
+                            channelId: null == V ? void 0 : V.value,
                             title: e,
                             description: "",
                             actionType: null != ee ? ee : void 0,
@@ -213,12 +213,12 @@ function A(e) {
                         }),
                     );
             },
-            [J, K, W, ee, el],
+            [J, B, V, ee, el],
         ),
         ep = i.useCallback(
             (e) => {
-                V(e),
-                    K(
+                W(e),
+                    B(
                         M({
                             channelId: null == e ? void 0 : e.value,
                             title: Q,
@@ -228,14 +228,14 @@ function A(e) {
                         }),
                     );
             },
-            [V, K, Q, ee, el],
+            [W, B, Q, ee, el],
         ),
         ev = i.useCallback(
             (e) => {
                 en(e),
-                    K(
+                    B(
                         M({
-                            channelId: null == W ? void 0 : W.value,
+                            channelId: null == V ? void 0 : V.value,
                             title: Q,
                             description: "",
                             actionType: e,
@@ -243,25 +243,25 @@ function A(e) {
                         }),
                     );
             },
-            [en, K, W, Q, el],
+            [en, B, V, Q, el],
         ),
         ej = i.useCallback(
             (e) =>
                 Promise.resolve(
-                    x.ZP.getSelectableChannels(R)
+                    x.ZP.getSelectableChannels(H)
                         .filter((n) => !$.has(n.channel.id) && (0, v.kb)(n.channel) && r()(e, n.channel.name))
                         .map((e) => ({
                             value: e.channel.id,
                             label: e.channel.name,
                         })),
                 ),
-            [R, $],
+            [H, $],
         ),
         eg = i.useCallback(
             (e) => {
-                if (null == e || null == R) return null;
+                if (null == e || null == H) return null;
                 let n = g.Z.getChannel(e.value),
-                    l = b.Z.getGuild(R);
+                    l = b.Z.getGuild(H);
                 if (null == n || null == l) return null;
                 let i = (0, h.KS)(n, l);
                 return null == i
@@ -269,24 +269,24 @@ function A(e) {
                     : (0, t.jsx)(i, {
                           size: "xs",
                           color: "customColor",
-                          className: I.channelIcon,
+                          className: P.channelIcon,
                       });
             },
-            [R],
+            [H],
         ),
         ex = i.useCallback(function (e) {
             let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
             et(n), er(e);
         }, []),
         eb = i.useCallback(() => (null != ea ? ea : null), [ea, el])(),
-        ey = i.useCallback(
+        ef = i.useCallback(
             (e) => {
                 null != e && ex(e, null);
             },
             [ex],
         ),
-        ef = null;
-    ef =
+        ey = null;
+    ey =
         null != eb
             ? (0, t.jsxs)(t.Fragment, {
                   children: [
@@ -294,12 +294,12 @@ function A(e) {
                           src: eb,
                           alt: "",
                           "aria-hidden": !0,
-                          className: I.__invalid_image,
+                          className: P.__invalid_image,
                           width: 24,
                           height: 24,
                       }),
                       (0, t.jsx)("div", {
-                          className: I.imageOverlay,
+                          className: P.imageOverlay,
                           children: (0, t.jsx)(c.vdY, {
                               size: "md",
                               color: "currentColor",
@@ -316,7 +316,7 @@ function A(e) {
                             emojiName: el.name,
                         }),
                         (0, t.jsx)("div", {
-                            className: I.imageOverlay,
+                            className: P.imageOverlay,
                             children: (0, t.jsx)(c.vdY, {
                                 size: "md",
                                 color: "currentColor",
@@ -328,15 +328,15 @@ function A(e) {
                     size: "md",
                     color: "currentColor",
                 });
-    let eC = i.useMemo(
+    let eN = i.useMemo(
         () => [
             {
-                text: P.intl.string(P.t["ETE/oC"]),
+                text: I.intl.string(I.t["ETE/oK"]),
                 onClick: _,
                 variant: "secondary",
             },
             {
-                text: P.intl.string(P.t["R3BPH+"]),
+                text: I.intl.string(I.t.R3BPHx),
                 variant: "primary",
                 onClick: ed,
                 disabled: eu || ec,
@@ -349,43 +349,43 @@ function A(e) {
         onClose: _,
         children: [
             (0, t.jsx)("div", {
-                className: I.closeButton,
+                className: P.closeButton,
                 children: (0, t.jsx)(u.PZ7, { onClick: _ }),
             }),
             (0, t.jsxs)("div", {
-                className: I.container,
+                className: P.container,
                 children: [
                     (0, t.jsxs)("div", {
-                        className: I.formGroup,
+                        className: P.formGroup,
                         children: [
                             (0, t.jsxs)(c.Heading, {
                                 variant: "heading-md/semibold",
                                 color: "header-primary",
-                                children: [P.intl.string(P.t["j+fhOY"]), (0, t.jsx)(S.Z, {})],
+                                children: [I.intl.string(I.t["j+fhOT"]), (0, t.jsx)(S.Z, {})],
                             }),
                             (0, t.jsx)(c.oil, {
                                 value: Q,
                                 error:
-                                    (null != (f = null == Q ? void 0 : Q.length) ? f : 0) > 0
-                                        ? B.title.join(", ")
+                                    (null != (y = null == Q ? void 0 : Q.length) ? y : 0) > 0
+                                        ? K.title.join(", ")
                                         : null,
                                 onChange: eh,
-                                placeholder: P.intl.string(P.t.oN1Sm2),
+                                placeholder: I.intl.string(I.t.oN1Sm5),
                                 maxLength: v.Z3,
                             }),
                         ],
                     }),
-                    (0, t.jsx)("div", { className: I.separator }),
+                    (0, t.jsx)("div", { className: P.separator }),
                     (0, t.jsxs)("div", {
-                        className: I.formGroup,
+                        className: P.formGroup,
                         children: [
                             (0, t.jsxs)(c.Heading, {
                                 variant: "heading-md/semibold",
                                 color: "header-primary",
-                                children: [P.intl.string(P.t.jVDc5W), (0, t.jsx)(S.Z, {})],
+                                children: [I.intl.string(I.t.jVDc5e), (0, t.jsx)(S.Z, {})],
                             }),
                             (0, t.jsx)(c.VcW, {
-                                value: W,
+                                value: V,
                                 renderOptionPrefix: eg,
                                 options: ej,
                                 onChange: ep,
@@ -393,30 +393,30 @@ function A(e) {
                             (0, t.jsx)(c.Text, {
                                 variant: "text-xs/medium",
                                 color: "text-muted",
-                                children: P.intl.string(P.t.cypQPz),
+                                children: I.intl.string(I.t.cypQPz),
                             }),
                         ],
                     }),
-                    (0, t.jsx)("div", { className: I.separator }),
+                    (0, t.jsx)("div", { className: P.separator }),
                     (0, t.jsxs)("div", {
-                        className: I.splitGroup,
+                        className: P.splitGroup,
                         children: [
                             (0, t.jsxs)("div", {
                                 children: [
                                     (0, t.jsx)(c.Heading, {
                                         variant: "heading-md/semibold",
                                         color: "header-primary",
-                                        children: P.intl.string(P.t.gs5rQm),
+                                        children: I.intl.string(I.t.gs5rQk),
                                     }),
                                     (0, t.jsx)(c.Text, {
                                         variant: "text-xs/medium",
                                         color: "text-muted",
-                                        children: P.intl.string(P.t.LjsoiT),
+                                        children: I.intl.string(I.t.LjsoiY),
                                     }),
                                 ],
                             }),
                             (0, t.jsx)("div", {
-                                className: I.iconUploadContainer,
+                                className: P.iconUploadContainer,
                                 children: (0, t.jsx)(c.yRy, {
                                     position: "bottom",
                                     renderPopout: (e) => {
@@ -425,14 +425,14 @@ function A(e) {
                                                 children: [
                                                     (0, t.jsx)(j.ZP, {
                                                         onChange: (e) => {
-                                                            ey(e), n();
+                                                            ef(e), n();
                                                         },
                                                         tabIndex: 0,
                                                     }),
                                                     (0, t.jsx)(c.Text, {
                                                         variant: "text-sm/medium",
                                                         color: "none",
-                                                        children: P.intl.string(P.t["2YKkdd"]),
+                                                        children: I.intl.string(I.t["2YKkdX"]),
                                                     }),
                                                 ],
                                             }),
@@ -488,7 +488,7 @@ function A(e) {
                                                             variant: "text-sm/medium",
                                                             color: "none",
                                                             ref: L,
-                                                            children: P.intl.string(P.t["amsyN+"]),
+                                                            children: I.intl.string(I.t.amsyNz),
                                                         }),
                                                     ),
                                             });
@@ -504,7 +504,7 @@ function A(e) {
                                                     icon: c.EO4,
                                                 }),
                                                 (0, t.jsx)(c.sNh, {
-                                                    className: I.uploadMenuItem,
+                                                    className: P.uploadMenuItem,
                                                     id: "upload",
                                                     label: l,
                                                     icon: c.rG2,
@@ -513,7 +513,7 @@ function A(e) {
                                                     ? (0, t.jsx)(c.sNh, {
                                                           id: "clear",
                                                           color: "danger",
-                                                          label: P.intl.string(P.t.ZCLmoR),
+                                                          label: I.intl.string(I.t.ZCLmoa),
                                                           icon: c.XHJ,
                                                           action: () => {
                                                               ex(null);
@@ -523,36 +523,36 @@ function A(e) {
                                             ],
                                         });
                                     },
-                                    targetElementRef: F,
+                                    targetElementRef: z,
                                     children: (e) =>
                                         (0, t.jsx)(
                                             "div",
                                             k(E({}, e), {
-                                                className: I.iconUpload,
-                                                ref: F,
-                                                children: ef,
+                                                className: P.iconUpload,
+                                                ref: z,
+                                                children: ey,
                                             }),
                                         ),
                                 }),
                             }),
                         ],
                     }),
-                    (0, t.jsx)("div", { className: I.separator }),
+                    (0, t.jsx)("div", { className: P.separator }),
                     (0, t.jsxs)("div", {
-                        className: I.formGroup,
+                        className: P.formGroup,
                         children: [
                             (0, t.jsxs)(c.Heading, {
                                 variant: "heading-md/semibold",
                                 color: "header-primary",
-                                children: [P.intl.string(P.t.MIMVLa), (0, t.jsx)(S.Z, {})],
+                                children: [I.intl.string(I.t.MIMVLS), (0, t.jsx)(S.Z, {})],
                             }),
                             (0, t.jsx)(c.FXm, {
                                 value: ee,
                                 onChange: ev,
                                 options: null == Y ? X : X.map((e) => k(E({}, e), { disabled: !w(e.value, Y) })),
                             }),
-                            null != ee && B.actionType.length > 0
-                                ? B.actionType.map((e) =>
+                            null != ee && K.actionType.length > 0
+                                ? K.actionType.map((e) =>
                                       (0, t.jsx)(
                                           c.Text,
                                           {
@@ -569,11 +569,11 @@ function A(e) {
                 ],
             }),
             (0, t.jsx)(o.Go$, {
-                actions: eC,
+                actions: eN,
                 leading:
                     null != G
                         ? (0, t.jsx)(c.Avr, {
-                              text: P.intl.string(P.t.N86XcP),
+                              text: I.intl.string(I.t.N86XcH),
                               onClick: em,
                               variant: "critical",
                           })

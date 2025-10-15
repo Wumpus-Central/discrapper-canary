@@ -42,8 +42,8 @@ function d(e) {
                         variant: "secondary",
                         icon: l.aAc,
                         onClick: n,
-                        text: s.intl.string(s.t.RDE0Sc),
-                        "aria-label": s.intl.string(s.t.Ej3B3Y),
+                        text: s.intl.string(s.t.RDE0SU),
+                        "aria-label": s.intl.string(s.t.Ej3B3d),
                     }
                   : {
                         variant: "secondary",
@@ -52,8 +52,8 @@ function d(e) {
                             null != n && n(e), u(!0), c.start(1000, () => u(!1));
                         },
                         disabled: d,
-                        text: d ? s.intl.string(s.t.t5VZ88) : s.intl.string(s.t.RDE0Sc),
-                        "aria-label": s.intl.string(s.t.Ej3B3Y),
+                        text: d ? s.intl.string(s.t["t5VZ8/"]) : s.intl.string(s.t.RDE0SU),
+                        "aria-label": s.intl.string(s.t.Ej3B3d),
                     };
         })({
             onInviteClick: b,
@@ -75,9 +75,9 @@ function d(e) {
                         ? n
                             ? s.intl.string(s.t.aW2YlJ)
                             : i
-                              ? s.intl.string(s.t.nxUtoQ)
-                              : s.intl.string(s.t.ZYO5OK)
-                        : s.intl.string(s.t.TVBCKZ);
+                              ? s.intl.string(s.t.nxUtoa)
+                              : s.intl.string(s.t.ZYO5OD)
+                        : s.intl.string(s.t.TVBCKS);
                 })({
                     isJoined: v,
                     canJoin: x,
@@ -90,7 +90,7 @@ function d(e) {
             I.push({
                 variant: "active",
                 size: "sm",
-                text: s.intl.string(s.t["2BP08E"]),
+                text: s.intl.string(s.t["2BP08P"]),
                 onClick: f,
             }),
         !t && !n && null != g)
@@ -100,7 +100,7 @@ function d(e) {
             variant: e ? "active" : "secondary",
             size: "sm",
             icon: e ? l.dz2 : l.Dkj,
-            text: s.intl.string(s.t.DlcqlU),
+            text: s.intl.string(s.t.DlcqlZ),
             onClick: g,
             disabled: t,
         });
@@ -112,7 +112,7 @@ function d(e) {
                 variant: "primary",
                 size: "sm",
                 onClick: m,
-                text: s.intl.string(s.t.I0v0Qv),
+                text: s.intl.string(s.t.I0v0Qk),
             }),
         n &&
             null != h &&
@@ -120,7 +120,7 @@ function d(e) {
                 variant: "secondary",
                 size: "sm",
                 onClick: h,
-                text: s.intl.string(s.t.qaYzPA),
+                text: s.intl.string(s.t.qaYzPD),
             }),
         I
     );
@@ -130,7 +130,7 @@ function u(e) {
     return (0, i.jsx)(l.hU, {
         icon: l.xhG,
         variant: "secondary",
-        "aria-label": s.intl.string(s.t.bt75uw),
+        "aria-label": s.intl.string(s.t.bt75u7),
         onClick: n,
     });
 }

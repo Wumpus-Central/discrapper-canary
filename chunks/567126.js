@@ -1,9 +1,9 @@
 n.d(t, {
-    Hu: () => J,
+    Hu: () => X,
     jx: () => H,
     oA: () => W,
     ov: () => F,
-    se: () => X,
+    se: () => J,
 }),
     n(35282),
     n(388685),
@@ -23,8 +23,8 @@ var r = n(951288),
     h = n(600164),
     m = n(152708),
     _ = n(594190),
-    x = n(751571),
-    g = n(509212),
+    g = n(751571),
+    x = n(509212),
     v = n(569984),
     j = n(977156),
     S = n(28798),
@@ -92,7 +92,7 @@ function H(e, t, n) {
             var i, l;
             let n = t.find((e) => (0, w.Z)(r.id, e.windowHandle));
             if ((null == n ? void 0 : n.id) == null) continue;
-            let s = (0, g.lQ)(e, n.id);
+            let s = (0, x.lQ)(e, n.id);
             if (
                 null != s &&
                 (null == (i = s.userStatus) ? void 0 : i.enrolledAt) != null &&
@@ -111,7 +111,7 @@ function W(e) {
         { enableGoLiveCaptureCard: l } = O.Z.useExperiment({ location: "GoLive_Source_Select" }),
         o = b.Z.supports(B.AN.GO_LIVE_HARDWARE),
         [a, p] = i.useState(null),
-        [g, j] = i.useState(null),
+        [x, j] = i.useState(null),
         [y, C] = i.useState(null),
         w = null != y && y.length > 0,
         [P, Z] = i.useState(c.vA.WINDOW),
@@ -122,16 +122,16 @@ function W(e) {
         U = H(
             (0, d.e7)([v.Z], () => v.Z.quests),
             D,
-            g,
+            x,
         ),
         W = i.useMemo(
             () =>
-                null == g
+                null == x
                     ? null
-                    : [...g].sort(
+                    : [...x].sort(
                           (e, t) => F(t, null == U ? void 0 : U.source.id) - F(e, null == U ? void 0 : U.source.id),
                       ),
-            [U, g],
+            [U, x],
         );
     i.useEffect(() => {
         let e = M.current;
@@ -162,11 +162,11 @@ function W(e) {
     let z = i.useCallback((e) => {
             null !== e && ((A.current = e), T(!e.isScrolledToTop()));
         }, []),
-        [V, X] = i.useState(void 0);
+        [V, J] = i.useState(void 0);
     i.useEffect(() => {
-        x.Z.hasPermission(k.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }).then(X);
+        g.Z.hasPermission(k.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }).then(J);
     }, []);
-    let J = (function (e) {
+    let X = (function (e) {
         switch (e) {
             case c.vA.WINDOW:
                 return W;
@@ -176,13 +176,13 @@ function W(e) {
                 return y;
         }
     })(P);
-    if (null == J)
+    if (null == X)
         return !1 === V
             ? (0, r.jsxs)(f.Text, {
                   className: G.errorMessage,
                   variant: "text-md/normal",
                   color: "text-danger",
-                  children: [L.intl.string(L.t["kW5h/W"]), (0, r.jsx)("br", {}), L.intl.string(L.t["5Jvu1R"])],
+                  children: [L.intl.string(L.t["kW5h/f"]), (0, r.jsx)("br", {}), L.intl.string(L.t["5Jvu1d"])],
               })
             : (0, r.jsx)(h.Z, {
                   className: G.spinner,
@@ -190,7 +190,7 @@ function W(e) {
                   align: h.Z.Align.CENTER,
                   children: (0, r.jsx)(f.$jN, {}),
               });
-    let Y = J.map((e) => {
+    let K = X.map((e) => {
         let { id: i } = e,
             l = (null == t ? void 0 : t.id) === i;
         return (0, r.jsx)(
@@ -224,7 +224,7 @@ function W(e) {
                                     value: c.vA.WINDOW,
                                 },
                                 {
-                                    name: L.intl.string(L.t["/iX8uz"]),
+                                    name: L.intl.string(L.t["/iX8u7"]),
                                     value: c.vA.SCREEN,
                                 },
                             ];
@@ -233,7 +233,7 @@ function W(e) {
                                     o &&
                                     w &&
                                     e.push({
-                                        name: L.intl.string(L.t.cWt5Up),
+                                        name: L.intl.string(L.t.cWt5Ul),
                                         value: c.vA.CAMERA,
                                     }),
                                 e
@@ -262,7 +262,7 @@ function W(e) {
                         layout: m.Z.Layout.WRAP,
                         columns: 2,
                         className: G.sourceContainer,
-                        children: Y,
+                        children: K,
                     }),
                 ],
             }),
@@ -274,7 +274,7 @@ function z(e) {
         n = i.useCallback(() => {
             t({
                 id: "prepicked:",
-                name: L.intl.string(L.t.KKcy95),
+                name: L.intl.string(L.t["KKcy9/"]),
                 url: "",
             });
         }, [t]);
@@ -291,7 +291,7 @@ function z(e) {
                 (0, r.jsx)(f.Text, {
                     variant: "text-md/medium",
                     color: "none",
-                    children: L.intl.string(L.t.Yp6h5W),
+                    children: L.intl.string(L.t.Yp6h5e),
                 }),
             ],
         }),
@@ -325,7 +325,7 @@ function V(e) {
         }),
     });
 }
-function X(e) {
+function J(e) {
     let { onSourceSelect: t, selectedSource: n } = e,
         [l, o] = i.useState([]),
         [c, d] = i.useState({}),
@@ -385,11 +385,11 @@ function X(e) {
             [t, c],
         ),
         _ = (0, C.isMac)() && a().satisfies(null === p.Z || void 0 === p.Z ? void 0 : p.Z.os.release, M.jR),
-        x = (0, C.isMac)(),
-        [g, v] = i.useState(!1),
+        g = (0, C.isMac)(),
+        [x, v] = i.useState(!1),
         j = i.useCallback(() => {
-            v(!g);
-        }, [g]),
+            v(!x);
+        }, [x]),
         S = _
             ? (0, r.jsx)(z, { onSelect: t })
             : (0, r.jsxs)("div", {
@@ -398,23 +398,23 @@ function X(e) {
                       (0, r.jsx)(V, {
                           onSelect: t,
                           id: "screen",
-                          name: L.intl.string(L.t.R4wpLN),
-                          text: L.intl.string(L.t.cVUFXY),
+                          name: L.intl.string(L.t.R4wpLC),
+                          text: L.intl.string(L.t.cVUFXV),
                           icon: f.pzj,
                       }),
                       (0, r.jsx)(V, {
                           onSelect: t,
                           id: "window",
-                          name: L.intl.string(L.t["+SLJCh"]),
-                          text: L.intl.string(L.t.dG2A1E),
+                          name: L.intl.string(L.t["+SLJCg"]),
+                          text: L.intl.string(L.t.dG2A1N),
                           icon: f.GON,
                       }),
-                      x
+                      g
                           ? (0, r.jsx)(V, {
                                 onSelect: t,
                                 id: "app",
-                                name: L.intl.string(L.t.ct7AKQ),
-                                text: L.intl.string(L.t["8lQwf8"]),
+                                name: L.intl.string(L.t.ct7AKS),
+                                text: L.intl.string(L.t["8lQwf3"]),
                                 icon: f.gw7,
                             })
                           : null,
@@ -427,13 +427,13 @@ function X(e) {
                 className: G.nativePickerLabel,
                 variant: "text-md/semibold",
                 color: "interactive-normal",
-                children: L.intl.string(L.t.XyYoFc),
+                children: L.intl.string(L.t.XyYoFR),
             }),
             S,
             0 === l.length
                 ? null
                 : (0, r.jsxs)("div", {
-                      className: s()(G.nativePickerCaptureSection, g ? null : G.nativePickerCollapsed),
+                      className: s()(G.nativePickerCaptureSection, x ? null : G.nativePickerCollapsed),
                       children: [
                           (0, r.jsxs)(f.P3F, {
                               onClick: j,
@@ -443,7 +443,7 @@ function X(e) {
                                       className: G.nativeCaptureDevicesText,
                                       variant: "text-md/semibold",
                                       color: "interactive-normal",
-                                      children: L.intl.string(L.t.rO0Vix),
+                                      children: L.intl.string(L.t.rO0Vi4),
                                   }),
                                   (0, r.jsx)(f.CJ0, {
                                       size: "sm",
@@ -472,7 +472,7 @@ function X(e) {
         ],
     });
 }
-function J(e) {
+function X(e) {
     let { onSourceSelect: t, onCancel: n, pickerType: l } = e,
         { lastPickerAction: s, lastPickerError: o } = (0, T.Z)(t, n);
     return (
@@ -487,7 +487,7 @@ function J(e) {
                   className: G.errorMessage,
                   variant: "text-md/normal",
                   color: "text-danger",
-                  children: null != o && o.length > 0 ? o : L.intl.string(L.t.CKsXk3),
+                  children: null != o && o.length > 0 ? o : L.intl.string(L.t.CKsXk5),
               })
             : (0, r.jsx)(A.Z, {
                   animated: !0,

@@ -73,8 +73,8 @@ class I extends i.PureComponent {
             children: [
                 (0, r.jsx)(m.Z, {
                     children: this.isHost()
-                        ? _.intl.formatToPlainString(_.t["6UJ7mh"], { count: this.props.party.length })
-                        : _.intl.string(_.t.RZufbH),
+                        ? _.intl.formatToPlainString(_.t["6UJ7mp"], { count: this.props.party.length })
+                        : _.intl.string(_.t.RZufbG),
                 }),
                 (0, r.jsx)(g.Z, { children: _.intl.string(_.t["0ZHLIi"]) }),
             ],
@@ -85,7 +85,7 @@ class I extends i.PureComponent {
         return this.isHost()
             ? null
             : (0, r.jsx)(h.Z, {
-                  tooltipText: _.intl.string(_.t.LeZSpz),
+                  tooltipText: _.intl.string(_.t.LeZSp6),
                   onClick: e,
                   icon: s.Dio,
               });
@@ -93,7 +93,7 @@ class I extends i.PureComponent {
     renderHelpIcon() {
         return this.isHost()
             ? (0, r.jsx)(h.Z, {
-                  tooltipText: _.intl.string(_.t.U7N2Hs),
+                  tooltipText: _.intl.string(_.t.U7N2Hh),
                   onClick: () => {
                       window.open(f.Z.getArticleURL(b.BhN.SPOTIFY_CONNECTION), "_blank");
                   },
@@ -132,10 +132,7 @@ class I extends i.PureComponent {
                 if (null == e) return null;
                 let { host: l, onUserContextMenu: u } = this.props;
                 return (
-                    (n =
-                        (null == l ? void 0 : l.id) === e.id
-                            ? _.intl.string(_.t["N9bqD+"])
-                            : _.intl.string(_.t.Z2Y4c9)),
+                    (n = (null == l ? void 0 : l.id) === e.id ? _.intl.string(_.t.N9bqDw) : _.intl.string(_.t.Z2Y4c3)),
                     (0, r.jsx)(
                         d.Z,
                         {
@@ -175,7 +172,7 @@ class I extends i.PureComponent {
                         targetElementRef: this.partyMemberOverflowRef,
                         children: (n) =>
                             (0, r.jsx)(o.u, {
-                                text: _.intl.string(_.t.Zf4NPe),
+                                text: _.intl.string(_.t.Zf4NPT),
                                 children: (0, r.jsx)(
                                     "div",
                                     y(v({}, n), {

@@ -67,13 +67,13 @@ function p(e) {
             children: (e) =>
                 (0, r.jsx)(a.u, {
                     targetElementRef: t,
-                    text: l.intl.string(l.t["UKOtz+"]),
+                    text: l.intl.string(l.t.UKOtz8),
                     "aria-label": !1,
                     children: (0, r.jsx)(
                         o.P3F,
                         _(d({}, e), {
                             innerRef: t,
-                            "aria-label": l.intl.string(l.t["UKOtz+"]),
+                            "aria-label": l.intl.string(l.t.UKOtz8),
                             onClick: (t) => {
                                 t.stopPropagation(), e.onClick(t);
                             },

@@ -21,28 +21,28 @@ var r = n(951288),
     y = n(394369);
 let I = [
         {
-            getOs: () => v.intl.string(v.t.NK5ySJ),
+            getOs: () => v.intl.string(v.t.NK5ySE),
             icon: y.apple,
             url: () => (0, O.w4)("osx", !1),
             platformKey: 0,
         },
         {
-            getOs: () => v.intl.string(v.t.OvKGE6),
+            getOs: () => v.intl.string(v.t.OvKGEx),
             icon: y.windows,
             url: () => (0, O.w4)("win", !1),
             platformKey: 1,
         },
         {
-            getOs: () => v.intl.string(v.t.dJB4PN),
+            getOs: () => v.intl.string(v.t.dJB4PD),
             icon: y.linux,
             url: [
                 {
                     url: () => (0, O.w4)("linux", !1, "deb"),
-                    getText: () => v.intl.string(v.t.Sodsus),
+                    getText: () => v.intl.string(v.t.Sodsur),
                 },
                 {
                     url: () => (0, O.w4)("linux", !1, "tar.gz"),
-                    getText: () => v.intl.string(v.t.G3U6IV),
+                    getText: () => v.intl.string(v.t.G3U6IS),
                 },
             ],
             platformKey: 2,
@@ -56,7 +56,7 @@ let I = [
             platformKey: 3,
         },
         {
-            getOs: () => v.intl.string(v.t.wuQpJD),
+            getOs: () => v.intl.string(v.t.wuQpJC),
             icon: y.android,
             url: () => E.fzT.ANDROID,
             platformKey: 4,
@@ -97,7 +97,7 @@ let I = [
             t = (0, r.jsx)(S, {
                 url: e,
                 onClick: () => i(h),
-                text: v.intl.string(v.t["1WjMbC"]),
+                text: v.intl.string(v.t["1WjMbG"]),
             });
         }
         return (0, r.jsx)("li", {
@@ -197,7 +197,7 @@ function N(e) {
                     (0, r.jsx)(f.nn4, {
                         children: (0, r.jsx)(f.H, {
                             id: P,
-                            children: v.intl.string(v.t["BK8LK+"]),
+                            children: v.intl.string(v.t.BK8LKy),
                         }),
                     }),
                     !c.tq &&
@@ -207,7 +207,7 @@ function N(e) {
                                 (0, r.jsx)(f.Heading, {
                                     variant: "heading-lg/semibold",
                                     className: y.header,
-                                    children: v.intl.string(v.t["0KK0bP"]),
+                                    children: v.intl.string(v.t["0KK0bG"]),
                                 }),
                                 (0, r.jsx)("ul", {
                                     className: y.platforms,
@@ -234,7 +234,7 @@ function N(e) {
                                 (0, r.jsx)(f.Heading, {
                                     variant: "heading-lg/semibold",
                                     className: y.header,
-                                    children: v.intl.string(v.t.RdSNWa),
+                                    children: v.intl.string(v.t.RdSNWV),
                                 }),
                             (0, r.jsx)("ul", {
                                 className: y.platforms,
@@ -260,7 +260,7 @@ function N(e) {
                 className: y.footer,
                 children: (0, r.jsx)(f.Text, {
                     variant: "text-sm/normal",
-                    children: v.intl.format(v.t["RJS+1P"], {}),
+                    children: v.intl.format(v.t["RJS+1N"], {}),
                 }),
             }),
         ],

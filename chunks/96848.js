@@ -6,7 +6,7 @@ var r = n(951288),
     s = n(692547),
     l = n(481060),
     c = n(907040),
-    u = n(47280),
+    u = n(283066),
     d = n(981631),
     f = n(185923),
     _ = n(388032),
@@ -20,7 +20,7 @@ function g(e) {
     let { setEmojiConfetti: t, emojiConfetti: n } = e,
         [a, d] = i.useState(!1),
         f = i.useRef(null),
-        g = (0, u.ZP)({ location: "GiftEmoji" }),
+        g = (0, u.Z)({ location: "GiftEmoji" }),
         E = o()(p.text, g && p.refresh),
         b = (e) =>
             (0, r.jsxs)("div", {

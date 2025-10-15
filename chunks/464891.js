@@ -560,12 +560,12 @@ let ea = i.memo(function (e) {
         return (0, r.jsx)(c.u, {
             asContainer: !0,
             shouldShow: null != i,
-            text: V.intl.formatToPlainString(V.t["8zbGNR"], { date: i }),
+            text: V.intl.formatToPlainString(V.t["8zbGNT"], { date: i }),
             onTooltipShow: () => (0, T.Z)(n.id),
             children: (0, r.jsx)(u.P3F, {
                 className: H.nitroAuthorBadgeContainer,
                 onClick: () => er(t),
-                "aria-label": V.intl.formatToPlainString(V.t["8zbGNR"], { date: i }),
+                "aria-label": V.intl.formatToPlainString(V.t["8zbGNT"], { date: i }),
                 children: (0, r.jsx)("img", {
                     alt: "",
                     className: H.nitroBadgeSvg,
@@ -639,7 +639,7 @@ let ea = i.memo(function (e) {
                 children: [
                     R &&
                         (0, r.jsx)(c.u, {
-                            text: V.intl.string(V.t["AeYyL+"]),
+                            text: V.intl.string(V.t.AeYyLy),
                             children: (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)(u.YlB, {
@@ -647,7 +647,7 @@ let ea = i.memo(function (e) {
                                         color: "currentColor",
                                         className: a ? H.compactCommunicationDisabled : H.communicationDisabled,
                                     }),
-                                    (0, r.jsx)(u.nn4, { children: V.intl.string(V.t.AmHag5) }),
+                                    (0, r.jsx)(u.nn4, { children: V.intl.string(V.t.AmHag4) }),
                                 ],
                             }),
                         }),

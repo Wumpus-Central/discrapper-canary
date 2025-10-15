@@ -68,7 +68,7 @@ function b() {
     return (0, r.jsx)(l.F, {
         setting: _.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_EXPERIMENTAL_ENCODERS,
         children: (0, r.jsx)(o.rsf, {
-            label: p.intl.string(p.t.AxnPm1),
+            label: p.intl.string(p.t.AxnPm5),
             checked: e,
             onChange: s.Z.setExperimentalEncoders,
         }),
@@ -90,9 +90,9 @@ function y() {
                       E(
                           m(
                               {
-                                  header: p.intl.string(p.t.mly1DB),
-                                  confirmText: p.intl.string(p.t.BddRzS),
-                                  cancelText: p.intl.string(p.t["ETE/oC"]),
+                                  header: p.intl.string(p.t.mly1DA),
+                                  confirmText: p.intl.string(p.t.BddRzc),
+                                  cancelText: p.intl.string(p.t["ETE/oK"]),
                                   onConfirm: () => s.Z.setHardwareEncoding(!1),
                               },
                               e,
@@ -100,7 +100,7 @@ function y() {
                           {
                               children: (0, r.jsx)(o.Text, {
                                   variant: "text-sm/normal",
-                                  children: p.intl.format(p.t.aPStAW, {}),
+                                  children: p.intl.format(p.t.aPStAQ, {}),
                               }),
                           },
                       ),
@@ -115,7 +115,7 @@ function y() {
                 (0, r.jsx)(l.F, {
                     setting: _.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_OPENH264,
                     children: (0, r.jsx)(o.rsf, {
-                        label: p.intl.string(p.t["71Ve1y"]),
+                        label: p.intl.string(p.t["71Ve19"]),
                         checked: e,
                         onChange: s.Z.setOpenH264,
                     }),
@@ -127,7 +127,7 @@ function y() {
                             ref: n,
                             style: { scrollMarginTop: "48px" },
                             children: (0, r.jsx)(o.rsf, {
-                                label: p.intl.string(p.t.Sln58X),
+                                label: p.intl.string(p.t.Sln58f),
                                 description: p.intl.string(p.t.P1UKqq),
                                 checked: t,
                                 onChange: h,
@@ -136,7 +136,7 @@ function y() {
                         !t &&
                             (0, r.jsx)(d.Z, {
                                 look: d.z.WARNING,
-                                children: p.intl.string(p.t.Uz6L6x),
+                                children: p.intl.string(p.t["Uz6L6+"]),
                             }),
                     ],
                 }),

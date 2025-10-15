@@ -56,12 +56,12 @@ function h(e) {
                 children: [
                     (0, r.jsx)(c.Heading, {
                         variant: "heading-xl/semibold",
-                        children: p.intl.string(h ? p.t.PBfFnx : p.t.NqFP6z),
+                        children: p.intl.string(h ? p.t.PBfFn5 : p.t["NqFP6+"]),
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: "text-md/normal",
                         color: "text-secondary",
-                        children: h ? p.intl.format(p.t.LdYS1H, { onClick: g }) : p.intl.string(p.t.LhD4yH),
+                        children: h ? p.intl.format(p.t.LdYS1N, { onClick: g }) : p.intl.string(p.t.LhD4yM),
                     }),
                 ],
             })

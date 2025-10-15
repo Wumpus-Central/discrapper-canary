@@ -11,13 +11,13 @@ var r = n(951288),
     u = n(474936),
     p = n(228168),
     _ = n(388032),
-    f = n(391763);
-function h(e) {
+    h = n(391763);
+function f(e) {
     let { giftRecipient: t } = e,
         n = (0, l.ZP)(null == t ? void 0 : t.id),
         {
             defaultWishlistId: c,
-            wishlist: h,
+            wishlist: f,
             popularProducts: m,
             isFetchingWishlist: x,
             isFetchingShopHome: g,
@@ -26,7 +26,7 @@ function h(e) {
             fetchShopHomeError: y,
         } = (0, d.ZL)(t),
         { displayItems: L, wishlistLength: S } = (0, d.UD)({
-            wishlist: h,
+            wishlist: f,
             defaultWishlistId: c,
             popularProducts: m,
             wishlistError: b,
@@ -48,23 +48,23 @@ function h(e) {
                       size: 714,
                   });
     return (0, r.jsxs)("div", {
-        className: f.wishlistBanner,
+        className: h.wishlistBanner,
         style: { width: 714 },
         children: [
             null != I &&
                 (0, r.jsx)("div", {
-                    className: f.backgroundImage,
+                    className: h.backgroundImage,
                     style: { backgroundImage: "url(".concat(I, ")") },
                 }),
             (0, r.jsxs)("div", {
-                className: f.wishlistBannerHeader,
+                className: h.wishlistBannerHeader,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: f.wishlistBannerTitleContainer,
+                        className: h.wishlistBannerTitleContainer,
                         children: [
                             (0, r.jsx)(a.Heading, {
                                 variant: "display-md",
-                                className: f.wishlistBannerTitle,
+                                className: h.wishlistBannerTitle,
                                 children: _.intl.string(_.t["7lZ31N"]),
                             }),
                             (0, r.jsx)(a.Text, {
@@ -82,39 +82,56 @@ function h(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)("div", {
-                className: f.wishlistBannerGrid,
-                children:
-                    x || g || j || null == h || 0 === L.length
-                        ? (0, r.jsx)("div", {})
-                        : L.map((e) => {
-                              let { item: n, source: i } = e;
-                              return (0, r.jsx)(
-                                  s.Z,
-                                  {
+            x || g || j || 0 === L.length
+                ? (0, r.jsxs)(r.Fragment, {
+                      children: [
+                          (0, r.jsx)(a.nn4, { children: _.intl.string(_.t.pfChQk) }),
+                          (0, r.jsx)("div", {
+                              className: h.wishlistBannerGrid,
+                              children: Array.from({ length: d.zL }, (e, t) =>
+                                  (0, r.jsx)(s.w, { size: "sm" }, "placeholder-".concat(t)),
+                              ),
+                          }),
+                      ],
+                  })
+                : (0, r.jsx)("ul", {
+                      className: h.wishlistBannerGrid,
+                      style: {
+                          listStyle: "none",
+                          margin: 0,
+                          padding: 0,
+                      },
+                      children: L.map((e) => {
+                          let { item: n, source: i } = e;
+                          return (0, r.jsx)(
+                              "li",
+                              {
+                                  style: { display: "contents" },
+                                  children: (0, r.jsx)(s.Z, {
                                       item: n,
                                       profileOwner: t,
                                       wishlistId: c,
                                       isOwner: !1,
                                       size: "sm",
-                                      showIcons: S < d.zL,
-                                      collectibleSource: i,
                                       giftingOrigin: i === d.lr.WISHLIST ? u.Wt.DM_CHANNEL_WISHLIST : u.Wt.DM_CHANNEL,
-                                  },
-                                  n.skuId,
-                              );
-                          }),
-            }),
+                                      collectibleSource: i,
+                                      showIcons: S < d.zL,
+                                  }),
+                              },
+                              n.skuId,
+                          );
+                      }),
+                  }),
         ],
     });
 }
 let m = function (e) {
     let { onSelectSku: t, isGift: n, priceOptions: i, showPromotionalGiftBanner: a, giftRecipient: l } = e;
     return (0, r.jsxs)("div", {
-        className: f.giftOptionContainer,
+        className: h.giftOptionContainer,
         children: [
             (0, r.jsxs)("div", {
-                className: f.cardsRow,
+                className: h.cardsRow,
                 children: [
                     (0, r.jsx)(c.jB, {
                         onClick: () => t(u.Si.TIER_2),
@@ -131,7 +148,7 @@ let m = function (e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(h, { giftRecipient: l }),
+            (0, r.jsx)(f, { giftRecipient: l }),
         ],
     });
 };

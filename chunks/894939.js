@@ -63,14 +63,14 @@ function R() {
     }, []);
     return (0, r.jsx)(b.Z, {
         children: (0, r.jsxs)(o.C3N, {
-            label: S.intl.string(S.t.nzUc3B),
-            description: S.intl.format(S.t.u9RWmv, { helpdeskArticle: g.Z.getArticleURL(I.BhN.SOUNDBOARD) }),
+            label: S.intl.string(S.t.nzUc3N),
+            description: S.intl.format(S.t.u9RWmp, { helpdeskArticle: g.Z.getArticleURL(I.BhN.SOUNDBOARD) }),
             children: [
                 (0, r.jsx)(c.Z, {
                     guildId: t,
                     className: A.guildSelector,
                     globalOption: {
-                        label: S.intl.string(S.t["CpEUP/"]),
+                        label: S.intl.string(S.t.CpEUPz),
                         value: T.hY,
                     },
                     onChange: (e) => {
@@ -80,7 +80,7 @@ function R() {
                     hideDivider: !0,
                 }),
                 (0, r.jsxs)(u.Z, {
-                    title: S.intl.format(S.t.I2TsYN, {
+                    title: S.intl.format(S.t.I2TsYG, {
                         nitroWheelHook: () =>
                             (0, r.jsx)(o.SrA, {
                                 size: "md",

@@ -1,6 +1,6 @@
 n.d(t, { _: () => o });
 var r = n(479446),
-    i = n(47280),
+    i = n(283066),
     a = n(474936);
 let o = (e, t) => {
     let o;
@@ -36,7 +36,7 @@ let o = (e, t) => {
                     });
             break;
         case a.Cj.STANDARD_BOX:
-            if ((0, i.YI)({ location: "GiftAnimationData" }))
+            if ((0, i.Y)({ location: "GiftAnimationData" }))
                 switch (t) {
                     case r.SR.IDLE:
                         o = () =>

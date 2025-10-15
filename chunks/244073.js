@@ -142,20 +142,20 @@ class D extends r.PureComponent {
                               grow: 0,
                               children: [
                                   (0, i.jsx)(g.Z, {
-                                      tooltipText: h ? j.intl.string(j.t.YqAjXy) : j.intl.string(j.t.w4m945),
+                                      tooltipText: h ? j.intl.string(j.t.YqAjX1) : j.intl.string(j.t["w4m94+"]),
                                       icon: h ? c.nRN : c.S6n,
                                       iconForeground: h ? I.strikethrough : null,
                                       onClick: this.handleToggleSelfMute,
                                   }),
                                   (0, i.jsx)(g.Z, {
-                                      tooltipText: p ? j.intl.string(j.t["2US872"]) : j.intl.string(j.t.wjcRFX),
+                                      tooltipText: p ? j.intl.string(j.t["2US87+"]) : j.intl.string(j.t.wjcRFR),
                                       icon: p ? c.wE8 : c.VWR,
                                       onClick: this.handleToggleSelfDeaf,
                                       iconForeground: p ? I.strikethrough : null,
                                   }),
                                   null == r &&
                                       (0, i.jsx)(g.Z, {
-                                          tooltipText: j.intl.string(j.t["6vrfgt"]),
+                                          tooltipText: j.intl.string(j.t["6vrfgo"]),
                                           onClick: this.handleDisconnect,
                                           icon: c.gkL,
                                       }),

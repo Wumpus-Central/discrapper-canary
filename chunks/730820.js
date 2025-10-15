@@ -135,11 +135,11 @@ class U extends i.PureComponent {
                 t = (0, r.jsxs)(c.Text, {
                     variant: "text-sm/normal",
                     children: [
-                        P.intl.format(P.t.PXVoEO, { phoneNumber: e }),
+                        P.intl.format(P.t.PXVoEB, { phoneNumber: e }),
                         (0, r.jsx)(c.Anchor, {
                             onClick: this.togglePhoneNumberVisibility,
                             className: w.phoneRevealer,
-                            children: n ? P.intl.string(P.t.FfltIN) : P.intl.string(P.t.llArAg),
+                            children: n ? P.intl.string(P.t.FfltIC) : P.intl.string(P.t.llArAg),
                         }),
                     ],
                 });
@@ -148,7 +148,7 @@ class U extends i.PureComponent {
                 e = (0, r.jsx)(c.Button, {
                     variant: "critical-secondary",
                     size: "sm",
-                    text: P.intl.string(P.t.KLWnit),
+                    text: P.intl.string(P.t.KLWnio),
                     loading: a,
                     onClick: this.handleDisableSMS,
                 });
@@ -160,7 +160,7 @@ class U extends i.PureComponent {
                         (0, r.jsx)(c.Button, {
                             variant: "primary",
                             size: "sm",
-                            text: null != t ? t : P.intl.string(P.t.DZQe23),
+                            text: null != t ? t : P.intl.string(P.t.DZQe29),
                             onClick: this.handleEnableSMS,
                             loading: a,
                             disabled: null != t,
@@ -169,7 +169,7 @@ class U extends i.PureComponent {
                             ? (0, r.jsx)(c.Button, {
                                   variant: "secondary",
                                   size: "sm",
-                                  text: P.intl.string(P.t.Ulqq6K),
+                                  text: P.intl.string(P.t.Ulqq6O),
                                   onClick: this.handleChangePhoneNumber,
                               })
                             : null,
@@ -179,8 +179,8 @@ class U extends i.PureComponent {
             return (0, r.jsx)(g.F, {
                 setting: C.s6.ACCOUNT_SMS_BACKUP,
                 children: (0, r.jsxs)(c.gNt, {
-                    label: P.intl.string(P.t.uHAJ5v),
-                    description: P.intl.string(P.t.fspJ4H),
+                    label: P.intl.string(P.t.uHAJ5u),
+                    description: P.intl.string(P.t.fspJ4O),
                     children: [t, e],
                 }),
             });
@@ -194,7 +194,7 @@ class U extends i.PureComponent {
                 children: (0, r.jsx)(c.Button, {
                     variant: "primary",
                     size: "sm",
-                    text: P.intl.string(P.t.xZEzbu),
+                    text: P.intl.string(P.t.xZEzbm),
                     onClick: this.sendMFABackupCodesVerificationKeyEmail,
                 }),
             });
@@ -206,7 +206,7 @@ class U extends i.PureComponent {
                 children: (0, r.jsx)(c.Button, {
                     variant: "primary",
                     size: "sm",
-                    text: P.intl.string(P.t.qZZUy6),
+                    text: P.intl.string(P.t.qZZUy8),
                 }),
             });
             let i = (e) => e.map((e) => (0, r.jsx)(k, { code: e }, e.code));
@@ -214,8 +214,8 @@ class U extends i.PureComponent {
                 gap: 16,
                 children: [
                     (0, r.jsxs)(c.gNt, {
-                        label: P.intl.string(P.t.GfqHPn),
-                        description: P.intl.format(P.t.OhmvYt, {}),
+                        label: P.intl.string(P.t.GfqHPj),
+                        description: P.intl.format(P.t.OhmvYm, {}),
                         children: [
                             (0, r.jsxs)(h.Z, {
                                 children: [
@@ -236,7 +236,7 @@ class U extends i.PureComponent {
                             (0, r.jsx)(c.Avr, {
                                 textVariant: "text-sm/medium",
                                 onClick: this.generateBackupCodes,
-                                text: P.intl.string(P.t.RIThUu),
+                                text: P.intl.string(P.t.RIThUl),
                             }),
                         ],
                     }),
@@ -247,8 +247,8 @@ class U extends i.PureComponent {
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(c.gNt, {
-                    label: P.intl.string(P.t.EPVq00),
-                    description: P.intl.string(P.t.bQwxib),
+                    label: P.intl.string(P.t.EPVq09),
+                    description: P.intl.string(P.t.bQwxiY),
                     children: (0, r.jsxs)(c.ButtonGroup, {
                         size: "sm",
                         children: [
@@ -258,7 +258,7 @@ class U extends i.PureComponent {
                                 children: (0, r.jsx)(c.Button, {
                                     variant: "critical-secondary",
                                     size: "sm",
-                                    text: P.intl.string(P.t["D+aE7g"]),
+                                    text: P.intl.string(P.t["D+aE7u"]),
                                     onClick: this.handleDisableMFA,
                                 }),
                             }),
@@ -267,7 +267,7 @@ class U extends i.PureComponent {
                                 children: (0, r.jsx)(c.Button, {
                                     variant: "primary",
                                     size: "sm",
-                                    text: P.intl.string(P.t.cDgKte),
+                                    text: P.intl.string(P.t.cDgKtb),
                                     onClick: A.ZP.enableMFA,
                                 }),
                             }),
@@ -287,12 +287,12 @@ class U extends i.PureComponent {
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(c.gNt, {
-                    label: P.intl.string(P.t.EPVq00),
+                    label: P.intl.string(P.t.EPVq09),
                     description: P.intl.string(P.t["8aDa1t"]),
                     children: (0, r.jsx)(c.Button, {
                         variant: "primary",
                         size: "sm",
-                        text: P.intl.string(P.t.cDgKte),
+                        text: P.intl.string(P.t.cDgKtb),
                         onClick: A.ZP.enableMFA,
                     }),
                 }),
@@ -308,17 +308,17 @@ class U extends i.PureComponent {
                     ? this.renderEnabled()
                     : this.renderDisabled()
                 : (0, r.jsx)(c.gNt, {
-                      label: P.intl.string(P.t.EPVq00),
+                      label: P.intl.string(P.t.EPVq09),
                       children: (0, r.jsx)(c.Wn, {
                           messageType: c.QYI.WARNING,
-                          children: P.intl.string(P.t.uggF7o),
+                          children: P.intl.string(P.t.uggF7u),
                       }),
                   })
             : (0, r.jsx)(c.gNt, {
-                  label: P.intl.string(P.t.EPVq00),
+                  label: P.intl.string(P.t.EPVq09),
                   children: (0, r.jsx)(c.Wn, {
                       messageType: c.QYI.INFO,
-                      children: P.intl.string(P.t.PhHhsj),
+                      children: P.intl.string(P.t.PhHhsr),
                   }),
               });
     }
@@ -337,9 +337,9 @@ class U extends i.PureComponent {
             }),
             L(this, "handleDisableMFA", () => {
                 d.Z.show({
-                    title: P.intl.string(P.t["D+aE7g"]),
-                    body: P.intl.string(P.t.EA4ZEk),
-                    cancelText: P.intl.string(P.t["ETE/oC"]),
+                    title: P.intl.string(P.t["D+aE7u"]),
+                    body: P.intl.string(P.t.EA4ZEh),
+                    cancelText: P.intl.string(P.t["ETE/oK"]),
                     onConfirm: () => u.Z.disable(),
                 });
             }),
@@ -356,8 +356,8 @@ class U extends i.PureComponent {
                                 u.Z.sendMFABackupCodesVerificationKeyEmail(e).then(() => {
                                     this.viewBackupCodes(e);
                                 }),
-                            title: P.intl.string(P.t.PsQmzU),
-                            actionText: P.intl.string(P.t.ajkYcF),
+                            title: P.intl.string(P.t.PsQmzc),
+                            actionText: P.intl.string(P.t.ajkYcH),
                         }),
                     ),
                 );
@@ -369,14 +369,14 @@ class U extends i.PureComponent {
                         j(x({}, t), {
                             handleSubmit: (e) => u.Z.confirmViewBackupCodes(e, !1).then(() => t.onClose()),
                             maxLength: 8,
-                            title: P.intl.string(P.t["mGppp/"]),
-                            label: P.intl.string(P.t.TjGb4Q),
+                            title: P.intl.string(P.t.mGppp6),
+                            label: P.intl.string(P.t.TjGb4e),
                             forceNoPlaceholder: !0,
-                            retryPrompt: P.intl.string(P.t.PZgmxv),
-                            retrySuccessMessage: P.intl.string(P.t.j4qu8n),
+                            retryPrompt: P.intl.string(P.t.PZgmxs),
+                            retrySuccessMessage: P.intl.string(P.t.j4qu8v),
                             onRetry: () => u.Z.sendMFABackupCodesVerificationKeyEmail(e),
-                            actionText: P.intl.string(P.t.piW6YS),
-                            helpMessage: P.intl.string(P.t["37S9yU"]),
+                            actionText: P.intl.string(P.t.piW6YW),
+                            helpMessage: P.intl.string(P.t["37S9yc"]),
                         }),
                     ),
                 );
@@ -391,7 +391,7 @@ class U extends i.PureComponent {
                                 .concat(t ? "(used)" : "");
                         })
                         .join("\r\n"),
-                    t = P.intl.formatToPlainString(P.t["uYWwh/"], { email: this.props.currentUser.email });
+                    t = P.intl.formatToPlainString(P.t.uYWwh4, { email: this.props.currentUser.email });
                 return "".concat(t, "\r\n\r\n").concat(e);
             }),
             L(this, "handleChangePhoneNumber", () => {
@@ -407,8 +407,8 @@ class U extends i.PureComponent {
                         p.Z,
                         j(x({}, e), {
                             handleSubmit: u.Z.disableSMS,
-                            title: P.intl.string(P.t.KLWnit),
-                            children: P.intl.string(P.t["W0/Duf"]),
+                            title: P.intl.string(P.t.KLWnio),
+                            children: P.intl.string(P.t["W0/Dub"]),
                         }),
                     ),
                 );

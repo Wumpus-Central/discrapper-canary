@@ -56,24 +56,24 @@ function m(e) {
             m &&
                 (0, l.jsx)(u, {
                     icon: o.kBi,
-                    title: c.intl.string(c.t["7Tmhfu"]),
-                    description: c.intl.string(c.t.eu5x7z),
+                    title: c.intl.string(c.t["7Tmhfn"]),
+                    description: c.intl.string(c.t["eu5x7+"]),
                 }),
             p &&
                 (0, l.jsx)(u, {
                     icon: o.iWm,
-                    title: c.intl.string(c.t.awYSsM),
-                    description: c.intl.string(c.t.TpsXoC),
+                    title: c.intl.string(c.t.awYSsL),
+                    description: c.intl.string(c.t.TpsXoK),
                 }),
             f &&
                 (0, l.jsx)(u, {
                     icon: o.BFJ,
-                    title: c.intl.string(c.t.WuKeSJ),
-                    description: c.intl.string(c.t.wOBmtV),
+                    title: c.intl.string(c.t.WuKeSE),
+                    description: c.intl.string(c.t.wOBmtb),
                 }),
             (0, l.jsx)(o.Text, {
                 variant: "text-xs/normal",
-                children: c.intl.format(c.t.b6nqk0, {
+                children: c.intl.format(c.t.b6nqk5, {
                     helpCenterUrl: "https://support.discord.com/hc/articles/7933951485975",
                 }),
             }),

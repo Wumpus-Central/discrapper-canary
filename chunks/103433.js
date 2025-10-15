@@ -26,7 +26,7 @@ let u = (e) => {
                         children: (0, r.jsxs)(o.P3F, {
                             onClick: n,
                             className: l.backButton,
-                            children: [(0, r.jsx)(o.V7D, { color: "currentColor" }), s.intl.string(s.t["13/7kX"])],
+                            children: [(0, r.jsx)(o.V7D, { color: "currentColor" }), s.intl.string(s.t["13/7kZ"])],
                         }),
                     }),
                     (0, r.jsx)("div", {
@@ -36,7 +36,7 @@ let u = (e) => {
                             children: (0, r.jsx)(o.Heading, {
                                 variant: "display-lg",
                                 color: "always-white",
-                                children: s.intl.string(s.t["hqjDX/"]),
+                                children: s.intl.string(s.t.hqjDX1),
                             }),
                         }),
                     }),

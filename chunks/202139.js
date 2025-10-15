@@ -1,3 +1,0 @@
-e.exports = JSON.parse(
-    '{"RPb8Zk":["Opinie użytkowników pomagają nam ulepszać funkcje bezpieczeństwa Discorda."],"cDP3b4":["Przesłano opinię"],"KZw6kn":["Co nie działa dobrze?"],"eSP1F9":["Zmieniłem(-am) zdanie na temat tej zawartości"],"bC0QVX":["Instrukcje były niejasne"],"8JFGXc":["Próbowałem(-am) wykonać wszystkie kroki, ale to nie zadziałało"],"Dl4A+U":["Nie miałem(-am) pod ręką odpowiednich dokumentów"],"ZsnNgz":["Niepokoję się o udostępnianie danych osobowych"],"ep5SQp":["Coś innego"],"kkKhVJ":["To zajmuje zbyt dużo czasu"],"maxf2S":["Powód weryfikacji był niejasny"],"Q5cQ46":["Opisz swój problem"],"zApKaR":["Czy chcesz podzielić się szczegółami?"],"4djgO/":["Dzięki za feedback!"],"RqoA4v":["Jak oceniasz doświadczenie weryfikacji wieku?"]}',
-);

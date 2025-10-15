@@ -67,7 +67,7 @@ class m extends (r = a.PureComponent) {
     render() {
         let { text: e } = this.props,
             { mode: t } = this.state,
-            n = t === l.kO8.Modes.SUCCESS ? u.intl.string(u.t.t5VZ88) : e;
+            n = t === l.kO8.Modes.SUCCESS ? u.intl.string(u.t["t5VZ8/"]) : e;
         return (0, i.jsx)(
             l.kO8,
             p(f({}, this.props), {

@@ -67,9 +67,9 @@ function C() {
             },
             [i],
         ),
-        O = c.status === p.O0b.PAUSED ? S.intl.string(S.t.Lp9WoG) : S.intl.string(S.t.eSR83U),
+        O = c.status === p.O0b.PAUSED ? S.intl.string(S.t.Lp9WoK) : S.intl.string(S.t.eSR83d),
         b = (function (t) {
-            let e = t.status === p.O0b.PAUSED ? S.t.o3upfT : S.t.dBXZEm,
+            let e = t.status === p.O0b.PAUSED ? S.t.o3upfX : S.t.dBXZEh,
                 { durations: n, currentDaysPaused: a } = (0, _.AT)(t),
                 r = [];
             for (let t of n) {
@@ -83,7 +83,7 @@ function C() {
             return (
                 r.sort((t, e) => t.value - e.value),
                 r.push({
-                    name: S.intl.string(S.t.OCPUM6),
+                    name: S.intl.string(S.t.OCPUMz),
                     value: 0,
                     radioBarClassName: y.cancelText,
                     radioItemIconClassName: y.cancelText,
@@ -97,7 +97,7 @@ function C() {
         }),
         (0, a.jsx)(u.Modal, {
             transitionState: t,
-            title: S.intl.string(S.t["f3nnB/"]),
+            title: S.intl.string(S.t.f3nnBw),
             subtitle: O,
             onClose: async () => {
                 await e();
@@ -105,13 +105,13 @@ function C() {
             actions: [
                 {
                     variant: "secondary",
-                    text: S.intl.string(S.t.h9tkAK),
+                    text: S.intl.string(S.t.h9tkAA),
                     onClick: e,
                 },
                 {
                     variant: "primary",
                     disabled: null === l,
-                    text: S.intl.string(S.t["3PatSz"]),
+                    text: S.intl.string(S.t["3PatS0"]),
                     onClick: () => {
                         0 === l ? n(f.R.WHAT_YOU_LOSE) : n(f.R.PAUSE_CONFIRM);
                     },
@@ -140,35 +140,35 @@ function P() {
     if (null == n) return void o(f.R.PAUSE_SELECT);
     let P = null,
         R = [p.O0b.PAST_DUE, p.O0b.PAUSED].includes(i.status) ? i.currentPeriodStart : i.currentPeriodEnd,
-        T = l()(R).add(n, "days").toDate();
+        v = l()(R).add(n, "days").toDate();
     switch (i.status) {
         case p.O0b.PAST_DUE:
             P = S.intl.format(S.t["xaS18/"], {
                 pauseDuration: n,
-                resumeDate: T,
+                resumeDate: v,
             });
             break;
         case p.O0b.PAUSED:
-            P = S.intl.format(S.t.Vur3Fc, { resumeDate: T });
+            P = S.intl.format(S.t.Vur3FR, { resumeDate: v });
             break;
         default:
-            P = S.intl.format(S.t.W85vFA, {
+            P = S.intl.format(S.t.W85vFB, {
                 pauseDate: R,
-                resumeDate: T,
+                resumeDate: v,
                 pauseDuration: n,
             });
     }
     return (0, a.jsxs)(u.Modal, {
-        title: S.intl.string(S.t.AnMG5x),
+        title: S.intl.string(S.t["AnMG5+"]),
         transitionState: t,
         actions: [
             {
-                text: S.intl.string(S.t.h9tkAK),
+                text: S.intl.string(S.t.h9tkAA),
                 variant: "primary",
                 onClick: e,
             },
             {
-                text: S.intl.string(S.t["cY+Oob"]),
+                text: S.intl.string(S.t["cY+Ooa"]),
                 variant: "critical-primary",
                 disabled: _ || null == n,
                 onClick: async () => {
@@ -192,7 +192,7 @@ function P() {
                 ? (0, a.jsx)(c.Wn, {
                       messageType: c.QYI.ERROR,
                       className: y.errorBlock,
-                      children: S.intl.string(S.t["5mlOCW"]),
+                      children: S.intl.string(S.t["5mlOCQ"]),
                   })
                 : null,
             (0, a.jsx)("div", {

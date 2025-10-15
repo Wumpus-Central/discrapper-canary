@@ -84,7 +84,7 @@ class y extends i.Component {
                           (0, r.jsx)(d.Heading, {
                               variant: "heading-md/semibold",
                               className: g.formTitle,
-                              children: m.intl.string(m.t.Ogvn5o),
+                              children: m.intl.string(m.t.Ogvn5u),
                           }),
                       null != e && (a || !i)
                           ? (0, r.jsx)(u.$q, {
@@ -95,7 +95,7 @@ class y extends i.Component {
                                 className: g.checkbox,
                                 children: (0, r.jsx)("div", {
                                     className: g.checkboxLabel,
-                                    children: m.intl.format(m.t.IodJKT, {
+                                    children: m.intl.format(m.t.IodJKS, {
                                         applicationName: t,
                                         onClick: (t) => {
                                             (0, d.ZDy)(async () => {
@@ -126,12 +126,12 @@ class y extends i.Component {
                                         className: o()(g.checkbox, f),
                                         children: (0, r.jsx)("div", {
                                             className: o()(g.checkboxLabel, E),
-                                            children: m.intl.string(m.t["DFCVN+"]),
+                                            children: m.intl.string(m.t.DFCVNz),
                                         }),
                                     }),
                                     (0, r.jsx)("div", {
                                         className: g.finePrint,
-                                        children: m.intl.string(m.t.jhu6zm),
+                                        children: m.intl.string(m.t.jhu6zs),
                                     }),
                                 ],
                             })
@@ -141,7 +141,7 @@ class y extends i.Component {
                               className: g.finePrint,
                               children: [
                                   "*",
-                                  m.intl.format(m.t["5zmY3F"], {
+                                  m.intl.format(m.t["5zmY3N"], {
                                       documentationLink: _.Z.getArticleURL(h.BhN.LOCALIZED_PRICING),
                                   }),
                               ],
@@ -151,7 +151,7 @@ class y extends i.Component {
                           (0, r.jsx)(d.Text, {
                               variant: "text-xs/medium",
                               color: "interactive-normal",
-                              children: m.intl.format(m.t["Hvo/Z5"], {
+                              children: m.intl.format(m.t["Hvo/Z2"], {
                                   buttonText: (0, p.W_)(null, A),
                                   interval: p.ZP.formatInterval(null == A ? void 0 : A.interval),
                                   cancelSubscriptionArticle: _.Z.getArticleURL(h.BhN.PREMIUM_DETAILS_CANCEL_SUB),
@@ -163,7 +163,7 @@ class y extends i.Component {
                           (0, r.jsx)(d.Text, {
                               variant: "text-xs/medium",
                               color: "interactive-normal",
-                              children: m.intl.format(m.t.Oo2FeS, {
+                              children: m.intl.format(m.t.Oo2FeX, {
                                   buttonText: (0, p.W_)(null, A),
                                   interval: p.ZP.formatInterval(null == A ? void 0 : A.interval),
                                   cancelSubscriptionArticle: _.Z.getArticleURL(h.BhN.PREMIUM_DETAILS_CANCEL_SUB),
@@ -175,7 +175,7 @@ class y extends i.Component {
                           (0, r.jsx)(d.Text, {
                               variant: "text-xs/medium",
                               color: "interactive-normal",
-                              children: m.intl.format(m.t["Z2c+aV"], {
+                              children: m.intl.format(m.t["Z2c+aW"], {
                                   buttonText: (0, p.W_)(null, A),
                                   interval: p.ZP.formatInterval(null == A ? void 0 : A.interval),
                                   cancelSubscriptionArticle: _.Z.getArticleURL(h.BhN.PREMIUM_DETAILS_CANCEL_SUB),

@@ -57,7 +57,7 @@ function v(e) {
         );
     }, []),
         i.useEffect(() => {
-            S && c.uvj.announce(O.intl.string(O.t["0Y/qkL"]));
+            S && c.uvj.announce(O.intl.string(O.t["0Y/qkJ"]));
         }, [S]);
     let P = i.useCallback(async () => {
             try {
@@ -101,13 +101,13 @@ function v(e) {
                   style: e,
                   children: (0, r.jsxs)("section", {
                       className: a()(E.content, { [E.emphasized]: l }),
-                      "aria-label": O.intl.string(O.t["odDw+z"]),
+                      "aria-label": O.intl.string(O.t["odDw+/"]),
                       children: [
                           (0, r.jsx)(c.Text, {
                               variant: "text-md/medium",
                               color: "text-primary",
                               className: E.message,
-                              children: O.intl.string(O.t["/lQiX/"]),
+                              children: O.intl.string(O.t["/lQiX1"]),
                           }),
                           (0, r.jsxs)("div", {
                               className: E.actions,
@@ -115,14 +115,14 @@ function v(e) {
                                   (0, r.jsx)(c.Button, {
                                       size: "sm",
                                       variant: "secondary",
-                                      text: O.intl.string(O.t.yBZMsQ),
+                                      text: O.intl.string(O.t.yBZMsb),
                                       onClick: x,
                                       disabled: !S || T,
                                   }),
                                   (0, r.jsx)(c.Button, {
                                       size: "sm",
                                       variant: "primary",
-                                      text: O.intl.string(O.t["R3BPH+"]),
+                                      text: O.intl.string(O.t.R3BPHx),
                                       onClick: P,
                                       loading: T,
                                       disabled: !S || T,

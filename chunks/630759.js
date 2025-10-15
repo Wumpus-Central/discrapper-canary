@@ -78,8 +78,8 @@ function D(e, t, n) {
 }
 function L(e, t) {
     I.Z.openSecureFramesUpdateConfirmation({
-        title: C.intl.string(C.t.hdL152),
-        subtitle: C.intl.string(C.t["8VGYKg"]),
+        title: C.intl.string(C.t["hdL15+"]),
+        subtitle: C.intl.string(C.t["8VGYKi"]),
         onConfirm: () => {
             O.Z.deleteSecureFramesVerifiedKey(e, t), (0, T.Pn)();
         },
@@ -89,8 +89,8 @@ function x(e) {
     let t = h.default.getUser(e),
         n = y.ZP.getName(t);
     I.Z.openSecureFramesUpdateConfirmation({
-        title: C.intl.formatToPlainString(C.t.K6NGBy, { username: n }),
-        subtitle: C.intl.string(C.t.F1BQK3),
+        title: C.intl.formatToPlainString(C.t.K6NGBw, { username: n }),
+        subtitle: C.intl.string(C.t.F1BQKy),
         onConfirm: () => {
             O.Z.deleteSecureFramesUserVerifiedKeys(e), (0, T.DF)();
         },
@@ -101,41 +101,41 @@ function M(e) {
         n = s()().diff(t, "s");
     if (n > 12 * m.Z.Seconds.DAYS_30) {
         let e = Math.round(n / (12 * m.Z.Seconds.DAYS_30));
-        return C.intl.formatToPlainString(C.t.F1wqkD, { count: e });
+        return C.intl.formatToPlainString(C.t.F1wqkJ, { count: e });
     }
     if (n > m.Z.Seconds.DAYS_30) {
         let e = Math.round(n / m.Z.Seconds.DAYS_30);
-        return C.intl.formatToPlainString(C.t["iT+b+2"], { count: e });
+        return C.intl.formatToPlainString(C.t["iT+b+/"], { count: e });
     }
     if (n > 7 * m.Z.Seconds.DAY) {
         let e = Math.round(n / (7 * m.Z.Seconds.DAY));
-        return C.intl.formatToPlainString(C.t.dLurKZ, { count: e });
+        return C.intl.formatToPlainString(C.t.dLurKS, { count: e });
     }
     if (n > m.Z.Seconds.DAY) {
         let e = Math.round(n / m.Z.Seconds.DAY);
-        return C.intl.formatToPlainString(C.t.LE8a2H, { count: e });
+        return C.intl.formatToPlainString(C.t.LE8a2N, { count: e });
     }
     if (n > m.Z.Seconds.HOUR) {
         let e = Math.round(n / m.Z.Seconds.HOUR);
-        return C.intl.formatToPlainString(C.t.KULxVS, { count: e });
+        return C.intl.formatToPlainString(C.t.KULxVV, { count: e });
     } else {
-        if (!(n > m.Z.Seconds.MINUTE)) return C.intl.formatToPlainString(C.t["/w0Qpw"], { count: n });
+        if (!(n > m.Z.Seconds.MINUTE)) return C.intl.formatToPlainString(C.t["/w0Qp6"], { count: n });
         let e = Math.round(n / m.Z.Seconds.MINUTE);
-        return C.intl.formatToPlainString(C.t.ws6rWq, { count: e });
+        return C.intl.formatToPlainString(C.t.ws6rWl, { count: e });
     }
 }
 function j(e) {
     let { isCurrentUserKeyPersistent: t, isOtherUserKeyPersistent: n, otherUserNickname: r } = e;
     return t && n
-        ? C.intl.format(C.t["FJN+kh"], { helpArticle: N() })
+        ? C.intl.format(C.t["FJN+kp"], { helpArticle: N() })
         : t
-          ? C.intl.format(C.t["p/9PGp"], {
+          ? C.intl.format(C.t["p/9PGh"], {
                 username: r,
                 helpArticle: N(),
             })
           : n
-            ? C.intl.format(C.t.qT5z87, { helpArticle: N() })
-            : C.intl.format(C.t["6JLy+i"], { helpArticle: N() });
+            ? C.intl.format(C.t["qT5z8/"], { helpArticle: N() })
+            : C.intl.format(C.t["6JLy+v"], { helpArticle: N() });
 }
 async function k(e) {
     let t = d.default.getStaticAuthSessionId();
@@ -215,8 +215,8 @@ function Y(e) {
         reason: S.Xe.OTHER_USER_INCONSISTENT_KEYS,
     }),
         u.Z.show({
-            title: C.intl.string(C.t.mznLyR),
-            body: C.intl.format(C.t.WY6IKb, { username: r }),
+            title: C.intl.string(C.t.mznLyc),
+            body: C.intl.format(C.t.WY6IKS, { username: r }),
         });
 }
 function W(e) {

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(893776),
-    s = n(129293),
+    s = n(893776),
+    l = n(129293),
     a = n(388905),
     o = n(108427),
     c = n(388032),
@@ -12,11 +12,11 @@ function d(e) {
         [d, h] = i.useState("submitting");
     return (i.useEffect(() => {
         (0, o.e)("authorize_payment");
-        let e = (0, s.Z)(t);
+        let e = (0, l.Z)(t);
         if (null == e) return void h("failed");
         (async () => {
             try {
-                await l.Z.authorizePayment(e), h("succeeded");
+                await s.Z.authorizePayment(e), h("succeeded");
             } catch (e) {
                 h("failed");
             }
@@ -32,11 +32,11 @@ function d(e) {
                   }),
                   (0, r.jsx)(a.Dx, {
                       className: u.marginBottom8,
-                      children: c.intl.string(c.t.GHRpue),
+                      children: c.intl.string(c.t.GHRpub),
                   }),
                   (0, r.jsx)(a.DK, {
                       className: u.marginBottom40,
-                      children: c.intl.string(c.t["1nO55v"]),
+                      children: c.intl.string(c.t["1nO55u"]),
                   }),
               ],
           })
@@ -50,15 +50,15 @@ function d(e) {
                     }),
                     (0, r.jsx)(a.Dx, {
                         className: u.marginBottom8,
-                        children: c.intl.string(c.t.ihHX53),
+                        children: c.intl.string(c.t["ihHX5+"]),
                     }),
                     (0, r.jsx)(a.DK, {
                         className: u.marginBottom40,
-                        children: c.intl.string(c.t["pGPCv+"]),
+                        children: c.intl.string(c.t.pGPCv7),
                     }),
                 ],
             })
           : (0, r.jsxs)(a.ZP, {
-                children: [(0, r.jsx)(a.Hh, {}), (0, r.jsx)(a.Dx, { children: c.intl.string(c.t.T3vC7n) })],
+                children: [(0, r.jsx)(a.Hh, {}), (0, r.jsx)(a.Dx, { children: c.intl.string(c.t.T3vC7u) })],
             });
 }

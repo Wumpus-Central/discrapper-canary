@@ -88,29 +88,29 @@ function b() {
                     roles: [
                         [
                             {
-                                name: m.intl.string(m.t["7oaPPo"]),
+                                name: m.intl.string(m.t["7oaPPj"]),
                                 color: "#7e00fc",
                             },
                             {
-                                name: m.intl.string(m.t["Z/HN61"]),
+                                name: m.intl.string(m.t["Z/HN6+"]),
                                 color: "#faa61a",
                             },
                             {
-                                name: m.intl.string(m.t.lvHTg0),
+                                name: m.intl.string(m.t.lvHTg4),
                                 color: "#f06ea8",
                             },
                         ],
                         [
                             {
-                                name: m.intl.string(m.t["6yECkg"]),
+                                name: m.intl.string(m.t["6yECkp"]),
                                 color: "#45ddc0",
                             },
                             {
-                                name: m.intl.string(m.t["5DabCV"]),
+                                name: m.intl.string(m.t["5DabCQ"]),
                                 color: "#00b0f4",
                             },
                             {
-                                name: m.intl.string(m.t.bB900T),
+                                name: m.intl.string(m.t.bB900d),
                                 color: "#ba1616",
                             },
                         ],
@@ -127,25 +127,25 @@ function b() {
                                 color: "#4a76e6",
                             },
                             {
-                                name: m.intl.string(m.t.Bceruw),
+                                name: m.intl.string(m.t.Bceru7),
                                 color: "#ad87ff",
                             },
                             {
-                                name: m.intl.string(m.t.W51slj),
+                                name: m.intl.string(m.t.W51slp),
                                 color: "#6defcf",
                             },
                         ],
                         [
                             {
-                                name: m.intl.string(m.t.y9gTiX),
+                                name: m.intl.string(m.t.y9gTiY),
                                 color: "#ff73fa",
                             },
                             {
-                                name: m.intl.string(m.t.HslvdS),
+                                name: m.intl.string(m.t.HslvdX),
                                 color: "#3ba55c",
                             },
                             {
-                                name: m.intl.string(m.t.ipL1AG),
+                                name: m.intl.string(m.t.ipL1AA),
                                 color: "#ff1b66",
                             },
                         ],
@@ -158,21 +158,21 @@ function b() {
                     roles: [
                         [
                             {
-                                name: m.intl.string(m.t.pAFEbr),
+                                name: m.intl.string(m.t.pAFEbm),
                                 color: "#20d6b8",
                             },
                             {
-                                name: m.intl.string(m.t["p/HZEE"]),
+                                name: m.intl.string(m.t["p/HZEB"]),
                                 color: "#236136",
                             },
                             {
-                                name: m.intl.string(m.t["9Qp/JQ"]),
+                                name: m.intl.string(m.t["9Qp/JS"]),
                                 color: "#ff9a15",
                             },
                         ],
                         [
                             {
-                                name: m.intl.string(m.t.craF5a),
+                                name: m.intl.string(m.t.craF5e),
                                 color: "#ff78b9",
                             },
                             {
@@ -180,7 +180,7 @@ function b() {
                                 color: "#00b0f4",
                             },
                             {
-                                name: m.intl.string(m.t.lqKz9F),
+                                name: m.intl.string(m.t.lqKz9P),
                                 color: "#6f52e4",
                             },
                         ],
@@ -231,7 +231,7 @@ function x(e) {
             children: [
                 (0, r.jsx)(s.Heading, {
                     variant: "heading-lg/semibold",
-                    children: m.intl.string(m.t["LPJmL/"]),
+                    children: m.intl.string(m.t.LPJmLy),
                 }),
                 (0, r.jsxs)("div", {
                     className: p.container,
@@ -239,20 +239,20 @@ function x(e) {
                         (0, r.jsx)(b, {}),
                         (0, r.jsx)(s.Heading, {
                             variant: "heading-xl/semibold",
-                            children: m.intl.string(m.t.ALlnbi),
+                            children: m.intl.string(m.t.ALlnbm),
                         }),
                         (0, r.jsx)(s.Text, {
                             color: "header-secondary",
                             variant: "text-md/normal",
                             className: p.introBody,
-                            children: m.intl.string(m.t["1ydhVp"]),
+                            children: m.intl.string(m.t["1ydhVl"]),
                         }),
                         (0, r.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
                             className: p.button,
                             children: (0, r.jsx)(s.Button, {
                                 variant: "primary",
-                                text: m.intl.string(m.t.JZZjQK),
+                                text: m.intl.string(m.t.JZZjQE),
                                 onClick: g,
                                 loading: a,
                             }),

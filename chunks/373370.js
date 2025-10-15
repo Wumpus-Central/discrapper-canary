@@ -87,18 +87,18 @@ function I(e) {
             a && d
                 ? p
                     ? h
-                        ? m.t.ztXW8V
-                        : m.t["eb/Sna"]
+                        ? m.t.ztXW8f
+                        : m.t["eb/SnZ"]
                     : h
-                      ? m.t["1AcTqm"]
-                      : m.t.ziB0HF
+                      ? m.t["1AcTqq"]
+                      : m.t.ziB0HB
                 : d || null != o
                   ? h
-                      ? m.t.enQ3jU
-                      : m.t.AwuMRS
+                      ? m.t.enQ3jY
+                      : m.t.AwuMRU
                   : h
-                    ? m.t["e+K3xJ"]
-                    : m.t.NIimTt),
+                    ? m.t["e+K3xM"]
+                    : m.t.NIimTk),
         {
             gameTitle: u,
             streamingDurationRequirement: c,
@@ -118,7 +118,7 @@ function T(e) {
         d = (0, l.f$)(n.config),
         _ = (0, l._p)(n.config);
     return v(
-        (t = a && d ? (_ ? m.t["eb/Sna"] : m.t.ziB0HF) : d || null != o ? m.t.AwuMRS : m.t.NIimTt),
+        (t = a && d ? (_ ? m.t["eb/SnZ"] : m.t.ziB0HB) : d || null != o ? m.t.AwuMRU : m.t.NIimTk),
         {
             gameTitle: u,
             targetMinutes: c,
@@ -143,18 +143,18 @@ function S(e) {
             a && d
                 ? p
                     ? h
-                        ? m.t.ztXW8V
-                        : m.t["eb/Sna"]
+                        ? m.t.ztXW8f
+                        : m.t["eb/SnZ"]
                     : h
-                      ? m.t["1AcTqm"]
-                      : m.t.ziB0HF
+                      ? m.t["1AcTqq"]
+                      : m.t.ziB0HB
                 : d || null != o
                   ? h
-                      ? m.t.enQ3jU
-                      : m.t.AwuMRS
+                      ? m.t.enQ3jY
+                      : m.t.AwuMRU
                   : h
-                    ? m.t["03VJqu"]
-                    : m.t.FZL5Q5),
+                    ? m.t["03VJqq"]
+                    : m.t.FZL5Q0),
         {
             gameTitle: u,
             streamingDurationRequirement: c,
@@ -170,7 +170,7 @@ function A(e) {
         { targetMinutes: i } = n,
         a = t.config.messages.gameTitle;
     return v(
-        m.t["a/ia7F"],
+        m.t["a/ia7O"],
         {
             gameTitle: a,
             streamingDurationRequirement: i,
@@ -190,13 +190,13 @@ function C(e, t, n, r) {
         (a =
             u && n
                 ? d
-                    ? m.t["xqX+r5"]
-                    : m.t["vs/xBu"]
+                    ? m.t["xqX+r6"]
+                    : m.t["vs/xBg"]
                 : u || null != t
-                  ? m.t["W/HkLO"]
+                  ? m.t["W/HkLC"]
                   : e.id === _.V6
-                    ? m.t.Rsd5bL
-                    : m.t["g+InPC"]),
+                    ? m.t.Rsd5bG
+                    : m.t["g+InPD"]),
         {
             videoTitle: s,
             rewardNameWithArticle: c,
@@ -211,7 +211,7 @@ function N(e) {
         s = f.r.build(t.config).defaultRewardNameWithArticle;
     return (0, l.KM)(t)
         ? v(
-              m.t.VYwSSu,
+              m.t.VYwSSk,
               {
                   streamingDurationRequirement: a,
                   questReward: s,
@@ -221,7 +221,7 @@ function N(e) {
         : t.config.features.includes(_.S7.CLOUD_GAMING_ACTIVITY)
           ? i === u.jn.QUESTS_EMBED
               ? v(
-                    m.t["C+2RxC"],
+                    m.t["C+2RxM"],
                     {
                         activityName: t.config.application.name,
                         providerName: O,
@@ -231,7 +231,7 @@ function N(e) {
                     r,
                 )
               : v(
-                    m.t["0NNM3l"],
+                    m.t["0NNM3t"],
                     {
                         activityName: t.config.application.name,
                         providerName: O,
@@ -242,7 +242,7 @@ function N(e) {
                     r,
                 )
           : v(
-                m.t.UuzHh8,
+                m.t.UuzHh4,
                 {
                     activityName: t.config.application.name,
                     streamingDurationRequirement: a,
@@ -260,7 +260,7 @@ function R(e) {
         d = (0, l.f$)(n.config),
         _ = (0, l._p)(n.config);
     return v(
-        (t = a && d ? (_ ? m.t["X8Yt/1"] : m.t.smG9ql) : d || null != o ? m.t.BLyDvO : m.t["hkJ+Gs"]),
+        (t = a && d ? (_ ? m.t["X8Yt//"] : m.t.smG9qq) : d || null != o ? m.t.BLyDvL : m.t["hkJ+Gh"]),
         {
             gameTitle: u,
             streamingDurationRequirement: c,
@@ -274,16 +274,16 @@ function P(e) {
     var t;
     let { quest: n, gameSheetHook: r, rewardNameWithArticle: i, targetMinutes: a } = e,
         o = {
-            [_.S7.PACKAGE_ACTION_ADVENTURE]: m.t.H485IA,
-            [_.S7.PACKAGE_RPG_MMO]: m.t["3XS8Ni"],
-            [_.S7.PACKAGE_RACING_SPORTS]: m.t["X+UCju"],
-            [_.S7.PACKAGE_SANDBOX_CREATIVE]: m.t["6o4n1Q"],
-            [_.S7.PACKAGE_FAMILY_FRIENDLY]: m.t.DUsNmf,
-            [_.S7.PACKAGE_HOLIDAY_SEASON]: m.t["cWP8/Z"],
-            [_.S7.PACKAGE_NEW_YEARS]: m.t["8+sIJz"],
+            [_.S7.PACKAGE_ACTION_ADVENTURE]: m.t.H485IC,
+            [_.S7.PACKAGE_RPG_MMO]: m.t["3XS8Nj"],
+            [_.S7.PACKAGE_RACING_SPORTS]: m.t["X+UCjo"],
+            [_.S7.PACKAGE_SANDBOX_CREATIVE]: m.t["6o4n1d"],
+            [_.S7.PACKAGE_FAMILY_FRIENDLY]: m.t.DUsNmZ,
+            [_.S7.PACKAGE_HOLIDAY_SEASON]: m.t["cWP8/f"],
+            [_.S7.PACKAGE_NEW_YEARS]: m.t["8+sIJy"],
         },
         s = n.config.features.find((e) => e in o),
-        l = null != (t = null != s ? o[s] : null) ? t : m.t.CDeHul;
+        l = null != (t = null != s ? o[s] : null) ? t : m.t.CDeHur;
     return m.intl.format(l, {
         rewardNameWithArticle: i,
         targetMinutes: a,
@@ -303,7 +303,7 @@ function w(e) {
         l = f.r.build(t.config).defaultRewardNameWithArticle,
         { targetMinutes: c, applications: u } = n;
     if (i)
-        return m.intl.formatToPlainString(m.t["1votF6"], {
+        return m.intl.formatToPlainString(m.t["1votFx"], {
             rewardNameWithArticle: l,
             targetMinutes: c,
         });
@@ -435,16 +435,16 @@ function k(e) {
     let { quest: t, shortText: n = !1 } = e;
     switch (j(t)) {
         case 0:
-            if (t.config.features.includes(_.S7.CLOUD_GAMING_ACTIVITY)) return m.intl.string(m.t["+qoymD"]);
-            if (t.config.features.includes(_.S7.START_QUEST_CTA)) return m.intl.string(n ? m.t.E4kW5O : m.t["Ie9++s"]);
-            return m.intl.string(m.t.l7E81v);
+            if (t.config.features.includes(_.S7.CLOUD_GAMING_ACTIVITY)) return m.intl.string(m.t["+qoymJ"]);
+            if (t.config.features.includes(_.S7.START_QUEST_CTA)) return m.intl.string(n ? m.t.E4kW5O : m.t["Ie9++v"]);
+            return m.intl.string(m.t.l7E81t);
         case 1:
-            return m.intl.string(m.t.l7E81v);
+            return m.intl.string(m.t.l7E81t);
         case 2:
-            return m.intl.string(m.t.umdNin);
+            return m.intl.string(m.t.umdNio);
         case 3:
             return t.config.features.includes(_.S7.START_QUEST_CTA)
-                ? m.intl.string(n ? m.t.CkUzLd : m.t["hRIVy+"])
-                : m.intl.string(m.t.l7E81v);
+                ? m.intl.string(n ? m.t.CkUzLS : m.t.hRIVy8)
+                : m.intl.string(m.t.l7E81t);
     }
 }

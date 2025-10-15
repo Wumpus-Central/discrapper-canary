@@ -100,7 +100,7 @@ function Y(e) {
                 color: "currentColor",
                 className: B.libraryIcon,
             }),
-            (0, r.jsx)("div", { children: n.isHidden() ? G.intl.string(G.t.Wi99Ro) : G.intl.string(G.t["+tXad7"]) }),
+            (0, r.jsx)("div", { children: n.isHidden() ? G.intl.string(G.t.Wi99Rk) : G.intl.string(G.t["+tXad3"]) }),
         ],
     });
 }
@@ -127,25 +127,25 @@ class W extends i.PureComponent {
                 (0, r.jsx)("div", { className: o()(B.invalidPoop, { [B.invalidPoopHorizontal]: this.isHorizontal }) }),
             ),
             Z(this, "renderTitle", () =>
-                this.props.isSelfGift ? G.intl.string(G.t.mT9B49) : G.intl.string(G.t.Vo5yHw),
+                this.props.isSelfGift ? G.intl.string(G.t["mT9B4+"]) : G.intl.string(G.t.Vo5yHx),
             ),
             Z(this, "renderActions", () =>
                 this.props.isSelfGift
                     ? (0, r.jsx)(d.Button, {
                           variant: "primary",
                           size: "sm",
-                          text: G.intl.string(G.t["jcSP+g"]),
+                          text: G.intl.string(G.t["jcSP+v"]),
                           onClick: this.handleViewInventory,
                       })
                     : (0, r.jsx)(d.Button, {
                           variant: "primary",
                           size: "sm",
-                          text: G.intl.string(G.t.bUvv1f),
+                          text: G.intl.string(G.t.bUvv1d),
                           disabled: !0,
                       }),
             ),
             Z(this, "renderTagline", () =>
-                this.props.isSelfGift ? G.intl.string(G.t.eEM3dq) : G.intl.string(G.t.tB8S6u),
+                this.props.isSelfGift ? G.intl.string(G.t.eEM3dn) : G.intl.string(G.t.tB8S6u),
             );
     }
 }
@@ -182,7 +182,7 @@ class K extends i.Component {
                         e.redeemed || e.isClaimed || null != t || null == e.expiresAt
                             ? null
                             : (0, r.jsx)("div", {
-                                  children: G.intl.format(G.t.nZBvUR, { hours: e.expiresAt.diff(l()(), "h") }),
+                                  children: G.intl.format(G.t.nZBvUV, { hours: e.expiresAt.diff(l()(), "h") }),
                               }),
                     ],
                 }),
@@ -190,7 +190,7 @@ class K extends i.Component {
         });
     }
     renderGiftCodeCopiesLeft(e) {
-        let t = e.isSubscription ? G.t["4iHwKT"] : G.t.YeLq88;
+        let t = e.isSubscription ? G.t["4iHwKS"] : G.t["YeLq8/"];
         return G.intl.format(t, {
             remaining: e.remainingUses,
             total: e.maxUses,
@@ -214,10 +214,10 @@ class K extends i.Component {
                     className: (0, m.mO)(e) ? B.collectiblesAcceptButton : null,
                     size: u.zx.Sizes.SMALL,
                     children: e.redeemed
-                        ? G.intl.string(G.t.BTihou)
+                        ? G.intl.string(G.t.BTihoq)
                         : null != e.giftStyle
-                          ? G.intl.string(G.t.TiZFqX)
-                          : G.intl.string(G.t.bUvv1f),
+                          ? G.intl.string(G.t.TiZFqa)
+                          : G.intl.string(G.t.bUvv1d),
                 }),
             )
         );
@@ -229,16 +229,16 @@ class K extends i.Component {
     renderTitle(e) {
         let { currentUser: t, isSelfGift: n, sku: r } = this.props;
         return this.isCustomGiftMessage() && !n
-            ? G.intl.formatToPlainString(G.t.t1SOId, { recipientDisplayName: M.ZP.getName(t) })
+            ? G.intl.formatToPlainString(G.t.t1SOIS, { recipientDisplayName: M.ZP.getName(t) })
             : null == r
               ? null
               : e.isSubscription
                 ? n
-                    ? G.intl.string(G.t["2PJ1NP"])
-                    : G.intl.string(G.t.hrnGng)
+                    ? G.intl.string(G.t["2PJ1ND"])
+                    : G.intl.string(G.t.hrnGnp)
                 : n
-                  ? G.intl.string(G.t.QLEMld)
-                  : G.intl.string(G.t.W4DBcy);
+                  ? G.intl.string(G.t.QLEMlZ)
+                  : G.intl.string(G.t.W4DBc3);
     }
     renderBody(e) {
         let {
@@ -249,12 +249,12 @@ class K extends i.Component {
             subscriptionPlan: a,
             currentUser: o,
         } = this.props;
-        if (null == r) return G.intl.string(G.t.ZTNur7);
+        if (null == r) return G.intl.string(G.t.ZTNur6);
         if (!n && this.isCustomGiftMessage() && !e.redeemed) return;
-        let s = r.isPreorder() ? G.intl.formatToPlainString(G.t.evinTd, { name: r.name }) : r.name;
+        let s = r.isPreorder() ? G.intl.formatToPlainString(G.t.evinTU, { name: r.name }) : r.name;
         if (e.redeemed)
             return e.isSubscription || (0, m.mO)(e) || (0, D.HL)({ productLine: null == r ? void 0 : r.productLine })
-                ? G.intl.string(G.t.mVC3Cv)
+                ? G.intl.string(G.t.mVC3Cg)
                 : G.intl.format(G.t["ss/L+/"], {
                       skuName: s,
                       onViewInLibrary: this.handleViewLibrary,
@@ -264,52 +264,52 @@ class K extends i.Component {
                 skuName: s,
                 onViewInLibrary: this.handleViewLibrary,
             });
-        if (e.isClaimed) return G.intl.string(G.t.ARWFQX);
-        if (!o.verified) return G.intl.format(G.t.GQxl7v, { onClick: this.handleVerificationClick });
+        if (e.isClaimed) return G.intl.string(G.t.ARWFQU);
+        if (!o.verified) return G.intl.format(G.t.GQxl7u, { onClick: this.handleVerificationClick });
         if (n)
             return e.isSelfRedeemable
-                ? G.intl.string(G.t["lQI+cB"])
+                ? G.intl.string(G.t["lQI+cH"])
                 : G.intl.formatToPlainString(G.t["A+etHx"], { skuName: s });
-        if (e.isExistingPremiumSubscriptionDisallowed) return G.intl.string(G.t.UCIU9y);
+        if (e.isExistingPremiumSubscriptionDisallowed) return G.intl.string(G.t["UCIU9/"]);
         if (e.hasMultipleCopies)
             return null != i
                 ? e.isSubscription
-                    ? G.intl.format(G.t.l3VxgG, {
+                    ? G.intl.format(G.t.l3VxgI, {
                           username: M.ZP.getUserTag(i),
                           maxUses: e.maxUses,
                           skuName: s,
                       })
-                    : G.intl.format(G.t["9cYrw5"], {
+                    : G.intl.format(G.t["9cYrw8"], {
                           username: M.ZP.getUserTag(i),
                           totalCopies: e.maxUses,
                           skuName: s,
                       })
                 : e.isSubscription
-                  ? G.intl.formatToPlainString(G.t.svrO3W, {
+                  ? G.intl.formatToPlainString(G.t.svrO3d, {
                         maxUses: e.maxUses,
                         skuName: s,
                     })
-                  : G.intl.formatToPlainString(G.t["3AgAn3"], {
+                  : G.intl.formatToPlainString(G.t["3AgAn5"], {
                         totalCopies: e.maxUses,
                         skuName: s,
                     });
         if (e.isSubscription) {
-            if (null == a) return G.intl.string(G.t.ZTNur7);
+            if (null == a) return G.intl.string(G.t.ZTNur6);
             if (null != i) {
-                let e = a.interval === U.rV.MONTH ? G.t["/RDIEA"] : G.t["3CX6Ev"];
+                let e = a.interval === U.rV.MONTH ? G.t["/RDIEB"] : G.t["3CX6Eh"];
                 return G.intl.format(e, {
                     username: M.ZP.getUserTag(i),
                     skuName: s,
                     intervalCount: a.intervalCount,
                 });
             }
-            let e = a.interval === U.rV.MONTH ? G.t["2O4lo5"] : G.t["+XjmsR"];
+            let e = a.interval === U.rV.MONTH ? G.t["2O4lo6"] : G.t["+Xjmsb"];
             return G.intl.format(e, {
                 skuName: s,
                 intervalCount: a.intervalCount,
             });
         }
-        return null != i ? G.intl.format(G.t["3HsdQ/"], { username: M.ZP.getUserTag(i) }) : G.intl.string(G.t.Jdnjjj);
+        return null != i ? G.intl.format(G.t["3HsdQ0"], { username: M.ZP.getUserTag(i) }) : G.intl.string(G.t.Jdnjjo);
     }
     renderPromotionActions() {
         return (0, r.jsx)(d.Button, {
@@ -342,8 +342,8 @@ class K extends i.Component {
                 onEmbedClick: this.handleClaimPromotion,
                 analyticsSection: k.jXE.GIFT_CODE_EMBED,
                 renderCustomActions: () => this.renderPromotionActions(),
-                renderCustomTitle: () => G.intl.string(G.t.X4p5uH),
-                renderCustomTagline: () => G.intl.string(G.t.VIuwD7),
+                renderCustomTitle: () => G.intl.string(G.t.X4p5uL),
+                renderCustomTagline: () => G.intl.string(G.t.VIuwDw),
                 width: n,
             });
         if (null == e || e.revoked)

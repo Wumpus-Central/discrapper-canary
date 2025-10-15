@@ -61,14 +61,14 @@ function m(e) {
         b = i.useMemo(
             () =>
                 3 === h.length
-                    ? f.intl.formatToPlainString(f.t.c7ETJH, { username: E(h[2]) })
+                    ? f.intl.formatToPlainString(f.t.c7ETJC, { username: E(h[2]) })
                     : 2 === h.length
-                      ? f.intl.formatToPlainString(f.t["st8Rh/"], {
+                      ? f.intl.formatToPlainString(f.t.st8Rh4, {
                             username: E(h[1]),
                             otherUsername: E(h[0]),
                         })
                       : 1 === h.length
-                        ? f.intl.formatToPlainString(f.t.dpjXPL, { username: E(h[0]) })
+                        ? f.intl.formatToPlainString(f.t.dpjXPD, { username: E(h[0]) })
                         : "",
             [h],
         );

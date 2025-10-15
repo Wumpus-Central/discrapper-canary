@@ -84,7 +84,7 @@ function h(e) {
         s.Z,
         d(
             {
-                label: l.intl.string(l.t["jNqDh/"]),
+                label: l.intl.string(l.t.jNqDh4),
                 iconComponent: (e) => {
                     let { className: n } = e;
                     return (0, r.jsx)(p, {

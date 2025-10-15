@@ -64,14 +64,14 @@ function b() {
                     height: 110,
                     position: a.SwA.RIGHT,
                 },
-                title: h.intl.string(h.t.bxGbHL),
-                body: h.intl.format(h.t["4rmZnx"], { streamkitURL: p.EYA.STREAMKIT }),
+                title: h.intl.string(h.t.bxGbHB),
+                body: h.intl.format(h.t["4rmZn5"], { streamkitURL: p.EYA.STREAMKIT }),
             }),
         S = () => {
             if (c.isPlatformEmbedded)
                 return (0, r.jsx)(a.rsf, {
-                    label: h.intl.string(h.t["PKDAJ/"]),
-                    description: h.intl.string(h.t.ZPi4lM),
+                    label: h.intl.string(h.t.PKDAJy),
+                    description: h.intl.string(h.t.ZPi4lJ),
                     checked: t,
                     onChange: (e) => A("autoToggle", e),
                 });
@@ -83,7 +83,7 @@ function b() {
             I(u.n.KEYBINDS_PANEL, { section: p.oAB.KEYBINDS });
         };
     return (0, r.jsx)(d.Z, {
-        title: h.intl.string(h.t.S5GfOW),
+        title: h.intl.string(h.t.S5GfOT),
         children: (0, r.jsxs)(a.Kqy, {
             gap: 24,
             children: [
@@ -97,8 +97,8 @@ function b() {
                         gap: 16,
                         children: [
                             (0, r.jsx)(a.rsf, {
-                                label: h.intl.string(h.t.p9ZAJZ),
-                                description: h.intl.format(h.t.MLVL2M, { onClick: C }),
+                                label: h.intl.string(h.t.p9ZAJS),
+                                description: h.intl.format(h.t.MLVL2N, { onClick: C }),
                                 checked: e,
                                 onChange: (e) => A("enabled", e),
                             }),
@@ -108,14 +108,14 @@ function b() {
                     }),
                 }),
                 (0, r.jsxs)(a.C3N, {
-                    label: h.intl.string(h.t["+1H47t"]),
+                    label: h.intl.string(h.t["+1H47u"]),
                     className: m.sectionLabel,
                     children: [
                         (0, r.jsx)(s.F, {
                             setting: _.s6.STREAMER_MODE_HIDE_PERSONAL_INFORMATION,
                             children: (0, r.jsx)(a.rsf, {
-                                label: h.intl.string(h.t.UpQziA),
-                                description: h.intl.string(h.t["+9Lra7"]),
+                                label: h.intl.string(h.t.UpQziI),
+                                description: h.intl.string(h.t["+9Lra2"]),
                                 checked: b,
                                 onChange: (e) => A("hidePersonalInformation", e),
                             }),
@@ -123,8 +123,8 @@ function b() {
                         (0, r.jsx)(s.F, {
                             setting: _.s6.STREAMER_MODE_HIDE_INVITE_LINKS,
                             children: (0, r.jsx)(a.rsf, {
-                                label: h.intl.string(h.t.q7WNGv),
-                                description: h.intl.string(h.t.m7mS2U),
+                                label: h.intl.string(h.t.q7WNGh),
+                                description: h.intl.string(h.t.m7mS2d),
                                 checked: g,
                                 onChange: (e) => A("hideInstantInvites", e),
                             }),
@@ -132,8 +132,8 @@ function b() {
                         (0, r.jsx)(s.F, {
                             setting: _.s6.STREAMER_MODE_DISABLE_SOUNDS,
                             children: (0, r.jsx)(a.rsf, {
-                                label: h.intl.string(h.t.o56OZu),
-                                description: h.intl.string(h.t.eAkaik),
+                                label: h.intl.string(h.t.o56OZm),
+                                description: h.intl.string(h.t.eAkaio),
                                 checked: y,
                                 onChange: (e) => A("disableSounds", e),
                             }),
@@ -141,8 +141,8 @@ function b() {
                         (0, r.jsx)(s.F, {
                             setting: _.s6.STREAMER_MODE_DISABLE_NOTIFICATIONS,
                             children: (0, r.jsx)(a.rsf, {
-                                label: h.intl.string(h.t.qmYiYd),
-                                description: h.intl.string(h.t["ZAmpQ/"]),
+                                label: h.intl.string(h.t.qmYiYW),
+                                description: h.intl.string(h.t.ZAmpQ0),
                                 checked: O,
                                 onChange: (e) => A("disableNotifications", e),
                             }),
@@ -150,8 +150,8 @@ function b() {
                         (0, r.jsx)(s.F, {
                             setting: _.s6.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE,
                             children: (0, r.jsx)(a.rsf, {
-                                label: h.intl.string(h.t["iA81+a"]),
-                                description: h.intl.string(h.t.P4vj0h),
+                                label: h.intl.string(h.t["iA81+f"]),
+                                description: h.intl.string(h.t.P4vj0t),
                                 checked: v,
                                 onChange: (e) => A("enableContentProtection", e),
                             }),

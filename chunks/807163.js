@@ -38,24 +38,24 @@ var r = t(951288),
     L = t(430824),
     A = t(594174),
     S = t(314884),
-    Z = t(626135),
-    w = t(768581),
+    w = t(626135),
+    Z = t(768581),
     V = t(63063),
     k = t(74538),
     F = t(998502),
-    D = t(768634),
-    G = t(848572),
+    G = t(768634),
+    D = t(848572),
     z = t(787528),
     B = t(768865),
     K = t(789155),
-    W = t(798769),
-    H = t(474936),
+    H = t(798769),
+    W = t(474936),
     Y = t(981631),
     q = t(388032),
-    J = t(616885),
+    Q = t(616885),
     X = t(834982),
     $ = t(912450),
-    Q = t(703548),
+    J = t(703548),
     ee = t(869333),
     es = t(652528),
     et = t(874692),
@@ -76,14 +76,14 @@ function el() {
         }).apply(this, arguments);
 }
 let ec = {
-        [H.VU.PREMIUM_TENURE_1_MONTH]: J.badgeGradientBronze,
-        [H.VU.PREMIUM_TENURE_3_MONTH]: J.badgeGradientSilver,
-        [H.VU.PREMIUM_TENURE_6_MONTH]: J.badgeGradientGold,
-        [H.VU.PREMIUM_TENURE_12_MONTH]: J.badgeGradientPlatinum,
-        [H.VU.PREMIUM_TENURE_24_MONTH]: J.badgeGradientDiamond,
-        [H.VU.PREMIUM_TENURE_36_MONTH]: J.badgeGradientEmerald,
-        [H.VU.PREMIUM_TENURE_60_MONTH]: J.badgeGradientRuby,
-        [H.VU.PREMIUM_TENURE_72_MONTH]: J.badgeGradientOpal,
+        [W.VU.PREMIUM_TENURE_1_MONTH]: Q.badgeGradientBronze,
+        [W.VU.PREMIUM_TENURE_3_MONTH]: Q.badgeGradientSilver,
+        [W.VU.PREMIUM_TENURE_6_MONTH]: Q.badgeGradientGold,
+        [W.VU.PREMIUM_TENURE_12_MONTH]: Q.badgeGradientPlatinum,
+        [W.VU.PREMIUM_TENURE_24_MONTH]: Q.badgeGradientDiamond,
+        [W.VU.PREMIUM_TENURE_36_MONTH]: Q.badgeGradientEmerald,
+        [W.VU.PREMIUM_TENURE_60_MONTH]: Q.badgeGradientRuby,
+        [W.VU.PREMIUM_TENURE_72_MONTH]: Q.badgeGradientOpal,
     },
     eu = F.ZP.getEnableHardwareAcceleration() ? p.Xo$ : p.qEK,
     em = {
@@ -99,7 +99,7 @@ let ec = {
         boostItemVisual: X,
         emojiStickersVisual: $,
         screenShareItemVisual: ei,
-        uploadsMessagesItemVisual: Q,
+        uploadsMessagesItemVisual: J,
         uploadsMessagesItemVisualV2: ee,
         PL: ea,
         TR: eo,
@@ -112,10 +112,10 @@ function ef(e) {
     let { description: s, onLearnMore: t, renderVisual: n } = e,
         a = eT();
     return (0, r.jsxs)("div", {
-        className: i()(J.whatYouLoseItem, { [J.premiumRebrand]: a }),
+        className: i()(Q.whatYouLoseItem, { [Q.premiumRebrand]: a }),
         children: [
             (0, r.jsxs)("div", {
-                className: i()(J.whatYouLoseItemLeftColumn, { [J.premiumRebrand]: a }),
+                className: i()(Q.whatYouLoseItemLeftColumn, { [Q.premiumRebrand]: a }),
                 children: [
                     (0, r.jsx)(p.Text, {
                         variant: "text-md/normal",
@@ -123,12 +123,12 @@ function ef(e) {
                     }),
                     (0, r.jsx)(p.Avr, {
                         onClick: t,
-                        text: q.intl.string(q.t.hvVgAZ),
+                        text: q.intl.string(q.t.hvVgAQ),
                     }),
                 ],
             }),
             (0, r.jsx)("div", {
-                className: i()(J.whatYouLoseItemRightColumn, { [J.premiumRebrand]: a }),
+                className: i()(Q.whatYouLoseItemRightColumn, { [Q.premiumRebrand]: a }),
                 children: n(),
             }),
         ],
@@ -194,16 +194,16 @@ function eg(e) {
         { currentUser: t, premiumType: n, onClose: a } = e,
         i = (0, b.ZP)(t.id),
         o = (0, m.e7)([j.Z], () => j.Z.useReducedMotion),
-        l = n === H.PremiumTypes.TIER_1;
+        l = n === W.PremiumTypes.TIER_1;
     return (
         (s =
-            (null == i ? void 0 : i.premiumType) === H.PremiumTypes.TIER_2
+            (null == i ? void 0 : i.premiumType) === W.PremiumTypes.TIER_2
                 ? (0, r.jsxs)(P.Z, {
                       user: t,
                       displayProfile: i,
                       forceShowPremium: !0,
                       themeType: null,
-                      className: J.profileCard,
+                      className: Q.profileCard,
                       children: [
                           (0, r.jsx)(v.b, {
                               user: t,
@@ -216,56 +216,56 @@ function eg(e) {
                               themePadding: 4,
                           }),
                           (0, r.jsx)(eu, {
-                              className: J.profileAvatar,
+                              className: Q.profileAvatar,
                               src: t.getAvatarURL(void 0, (0, p.pxk)(p.EFr.SIZE_56), !o),
                               size: p.EFr.SIZE_56,
                               "aria-label": t.username,
                           }),
                           (0, r.jsxs)("div", {
-                              className: J.profileUserInfo,
+                              className: Q.profileUserInfo,
                               children: [
                                   (0, r.jsx)(U.Z, {
-                                      className: J.profileNameTag,
-                                      usernameClass: J.profileNameTagUsername,
+                                      className: Q.profileNameTag,
+                                      usernameClass: Q.profileNameTagUsername,
                                       name: t.toString(),
                                   }),
-                                  (0, r.jsx)(ex, { className: J.profilePremiumIcon }),
+                                  (0, r.jsx)(ex, { className: Q.profilePremiumIcon }),
                               ],
                           }),
                       ],
                   })
                 : (0, r.jsxs)("div", {
-                      className: J.profileCardTier1,
+                      className: Q.profileCardTier1,
                       children: [
                           (0, r.jsx)(eu, {
-                              className: J.profileAvatarTier1,
+                              className: Q.profileAvatarTier1,
                               src: t.getAvatarURL(void 0, (0, p.pxk)(p.EFr.SIZE_56), !o),
                               size: p.EFr.SIZE_56,
                               "aria-label": t.username,
                           }),
                           (0, r.jsxs)("div", {
-                              className: J.profileUserInfoTier1,
+                              className: Q.profileUserInfoTier1,
                               children: [
                                   (0, r.jsx)(U.Z, {
-                                      className: J.profileNameTag,
-                                      usernameClass: J.profileNameTagUsername,
+                                      className: Q.profileNameTag,
+                                      usernameClass: Q.profileNameTagUsername,
                                       name: t.toString(),
                                   }),
                                   (0, r.jsx)(p.SrA, {
                                       size: "md",
                                       color: "currentColor",
-                                      className: J.profilePremiumIcon,
+                                      className: Q.profilePremiumIcon,
                                   }),
                               ],
                           }),
                       ],
                   })),
         (0, r.jsx)(ef, {
-            description: l ? q.intl.format(q.t.xCaYwE, {}) : q.intl.format(q.t["gpqr+n"], {}),
+            description: l ? q.intl.format(q.t.xCaYwM, {}) : q.intl.format(q.t["gpqr+v"], {}),
             onLearnMore: () => {
                 a(),
                     (0, O.openUserSettings)(y.n.PROFILE_PANEL, { section: Y.oAB.PROFILE_CUSTOMIZATION }),
-                    Z.default.track(Y.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, {
+                    w.default.track(Y.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, {
                         action: "user_profile_customization",
                     });
             },
@@ -276,27 +276,27 @@ function eg(e) {
 function ej(e) {
     var s, t, n, a;
     let { currentUser: o, onClose: l } = e,
-        c = (0, D.C)(o, "BadgeItem"),
-        u = (0, G.Rw)(),
+        c = (0, G.C)(o, "BadgeItem"),
+        u = (0, D.Rw)(),
         { analyticsLocations: m } = (0, N.ZP)(C.Z.PREMIUM_UNCANCEL_MODAL),
-        d = (0, G.GG)();
+        d = (0, D.GG)();
     if (!c || null == d) return null;
-    let f = null != (s = null == u ? void 0 : u.id) ? s : H.VU.PREMIUM_TENURE_1_MONTH,
-        x = null != (t = null == u ? void 0 : u.status) ? t : G.Vq.UPCOMING,
+    let f = null != (s = null == u ? void 0 : u.id) ? s : W.VU.PREMIUM_TENURE_1_MONTH,
+        x = null != (t = null == u ? void 0 : u.status) ? t : D.Vq.UPCOMING,
         g =
             null != (n = null == u ? void 0 : u.nameUnformatted)
                 ? n
-                : H.vK[H.VU.PREMIUM_TENURE_1_MONTH].nameUnformatted,
+                : W.vK[W.VU.PREMIUM_TENURE_1_MONTH].nameUnformatted,
         j = (0, z.J)(f),
         h = q.intl.string(g),
-        E = x === G.Vq.EARNED,
+        E = x === D.Vq.EARNED,
         I = null != u && "daysLeft" in u ? u.daysLeft : 1,
-        T = q.t.pwkxYF;
+        T = q.t.pwkxYG;
     if (E) {
         let e = Math.max((0, k.k)(d), 1);
-        e >= 365 ? ((I = Math.floor(e / 365)), (T = q.t["/ojPfi"])) : ((I = e), (T = q.t.IItWYo));
+        e >= 365 ? ((I = Math.floor(e / 365)), (T = q.t["/ojPfn"])) : ((I = e), (T = q.t.IItWYm));
     }
-    let _ = null != (a = ec[f]) ? a : J.badgeGradientBronze;
+    let _ = null != (a = ec[f]) ? a : Q.badgeGradientBronze;
     return (0, r.jsx)(ef, {
         description: q.intl.format(T, { time: I }),
         onLearnMore: () => {
@@ -305,21 +305,21 @@ function ej(e) {
                     analyticsLocations: m,
                     displayProfile: null,
                 }),
-                Z.default.track(Y.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "badges" });
+                w.default.track(Y.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "badges" });
         },
         renderVisual: () =>
             (0, r.jsxs)(p.$1m, {
-                className: i()(J.badgeGradientWrapper, _),
+                className: i()(Q.badgeGradientWrapper, _),
                 children: [
                     (0, r.jsx)("img", {
                         alt: "",
                         src: j,
-                        className: i()(J.badgeImage, J.blurredBadgeImage),
+                        className: i()(Q.badgeImage, Q.blurredBadgeImage),
                     }),
                     (0, r.jsx)("img", {
                         alt: h,
                         src: j,
-                        className: J.badgeImage,
+                        className: Q.badgeImage,
                     }),
                 ],
             }),
@@ -333,23 +333,23 @@ function eC(e) {
             .slice(0, 3),
         a = (0, m.Wu)([T.Z], () => T.Z.stickerFrecencyWithoutFetchingLatest.frequently.slice(0, 3 - n.length)),
         i = ep().emojiStickersVisual,
-        o = s === H.PremiumTypes.TIER_1;
+        o = s === W.PremiumTypes.TIER_1;
     return (0, r.jsx)(ef, {
-        description: o ? q.intl.format(q.t.couiKJ, {}) : q.intl.format(q.t["0hUHi6"], {}),
+        description: o ? q.intl.format(q.t.couiKC, {}) : q.intl.format(q.t["0hUHi4"], {}),
         onLearnMore: () => {
             window.open(V.Z.getArticleURL(Y.BhN.PREMIUM_DETAILS)),
-                Z.default.track(Y.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "emojis_stickers" });
+                w.default.track(Y.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "emojis_stickers" });
         },
         renderVisual: () =>
             (null != n && n.length > 0) || (!o && null != a && a.length > 0)
                 ? (0, r.jsxs)("div", {
-                      className: J.emojiStickersPersonalizedContainer,
+                      className: Q.emojiStickersPersonalizedContainer,
                       children: [
                           n
                               .map((e) =>
                                   null == e.id
                                       ? e.url
-                                      : w.ZP.getEmojiURL({
+                                      : Z.ZP.getEmojiURL({
                                             id: e.id,
                                             animated: !t && e.animated,
                                             size: 58,
@@ -360,7 +360,7 @@ function eC(e) {
                                       ? (0, r.jsx)(
                                             "img",
                                             {
-                                                className: J.personalizedEmoji,
+                                                className: Q.personalizedEmoji,
                                                 alt: "",
                                                 src: e,
                                             },
@@ -385,7 +385,7 @@ function eC(e) {
                       ],
                   })
                 : (0, r.jsx)("img", {
-                      className: J.nonPersonalizedGraphic,
+                      className: Q.nonPersonalizedGraphic,
                       alt: "",
                       src: i,
                   }),
@@ -418,43 +418,43 @@ function eN(e) {
         c = null != o && l > 0,
         d = ep().boostItemVisual;
     return (0, r.jsx)(ef, {
-        description: s === H.PremiumTypes.TIER_1 ? q.intl.format(q.t.K4Hv69, {}) : q.intl.format(q.t.wRxEDW, {}),
+        description: s === W.PremiumTypes.TIER_1 ? q.intl.format(q.t["K4Hv6+"], {}) : q.intl.format(q.t.wRxEDQ, {}),
         onLearnMore: () => {
             t(),
                 (0, O.openUserSettings)(y.n.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, { section: Y.oAB.GUILD_BOOSTING }),
-                Z.default.track(Y.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "boosts" });
+                w.default.track(Y.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "boosts" });
         },
         renderVisual: () =>
             c
                 ? (0, r.jsx)("div", {
-                      className: J.boostCardContainer,
+                      className: Q.boostCardContainer,
                       children: (0, r.jsxs)("div", {
-                          className: J.boostCard,
+                          className: Q.boostCard,
                           children: [
                               (0, r.jsx)(I.Z, {
                                   guild: o,
                                   size: I.Z.Sizes.MEDIUM,
                                   animate: !a,
-                                  className: J.boostCardIcon,
+                                  className: Q.boostCardIcon,
                               }),
                               (0, r.jsxs)("div", {
-                                  className: J.boostCardInfo,
+                                  className: Q.boostCardInfo,
                                   children: [
                                       (0, r.jsx)(p.Text, {
                                           variant: "text-md/normal",
-                                          className: i()(J.textSingleLineEllipsis, J.boostCardTitle),
+                                          className: i()(Q.textSingleLineEllipsis, Q.boostCardTitle),
                                           children: o.name,
                                       }),
                                       (0, r.jsxs)("div", {
-                                          className: J.boostCardSubtitle,
+                                          className: Q.boostCardSubtitle,
                                           children: [
                                               (0, r.jsx)(p.Ucv, {
                                                   color: p.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                                                  className: J.boostCardGem,
+                                                  className: Q.boostCardGem,
                                               }),
                                               (0, r.jsx)(p.Text, {
                                                   variant: "text-xs/normal",
-                                                  className: i()(J.textSingleLineEllipsis, J.boostCardCount),
+                                                  className: i()(Q.textSingleLineEllipsis, Q.boostCardCount),
                                                   children: q.intl.format(q.t["Ou/g/P"], { boostCount: l }),
                                               }),
                                           ],
@@ -473,10 +473,10 @@ function eN(e) {
 let eh = () => {
     let e = ep().screenShareItemVisual;
     return (0, r.jsx)(ef, {
-        description: q.intl.format(q.t.wK04T1, {}),
+        description: q.intl.format(q.t.wK04T0, {}),
         onLearnMore: () => {
             window.open(V.Z.getArticleURL(Y.BhN.STREAM_QUALITY_SETTINGS)),
-                Z.default.track(Y.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "screen_share" });
+                w.default.track(Y.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "screen_share" });
         },
         renderVisual: () =>
             (0, r.jsx)("img", {
@@ -489,10 +489,10 @@ function eE(e) {
     let { premiumType: s } = e,
         t = ep().uploadsMessagesItemVisual;
     return (0, r.jsx)(ef, {
-        description: s === H.PremiumTypes.TIER_2 ? q.intl.format(q.t.GsOFRJ, {}) : q.intl.format(q.t.wFWO6D, {}),
+        description: s === W.PremiumTypes.TIER_2 ? q.intl.format(q.t.GsOFRE, {}) : q.intl.format(q.t.wFWO6O, {}),
         onLearnMore: () => {
             window.open(V.Z.getArticleURL(Y.BhN.PREMIUM_DETAILS)),
-                Z.default.track(Y.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "msgs_uploads" });
+                w.default.track(Y.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "msgs_uploads" });
         },
         renderVisual: () =>
             (0, r.jsx)("img", {
@@ -508,10 +508,10 @@ function e_(e) {
         c = n.useMemo(() => {
             let e = [];
             switch (t) {
-                case H.PremiumTypes.TIER_0:
+                case W.PremiumTypes.TIER_0:
                     e.push((0, r.jsx)(eC, { premiumType: t }), (0, r.jsx)(eE, { premiumType: t }));
                     break;
-                case H.PremiumTypes.TIER_1:
+                case W.PremiumTypes.TIER_1:
                     o
                         ? e.push(
                               (0, r.jsx)(
@@ -556,7 +556,7 @@ function e_(e) {
                               ),
                           );
                     break;
-                case H.PremiumTypes.TIER_2:
+                case W.PremiumTypes.TIER_2:
                     o
                         ? e.push(
                               (0, r.jsx)(
@@ -614,9 +614,9 @@ function e_(e) {
     return (0, r.jsx)(eI.Provider, {
         value: { isPremiumRebrand: l },
         children: (0, r.jsx)("div", {
-            className: i()(J.whatYouLoseItemContainer, {
-                [J.premiumRebrand]: l,
-                [J.noMargin]: l && c.length <= 2,
+            className: i()(Q.whatYouLoseItemContainer, {
+                [Q.premiumRebrand]: l,
+                [Q.noMargin]: l && c.length <= 2,
             }),
             children: c,
         }),
@@ -648,7 +648,7 @@ let eb = function (e) {
     let h = null != x && !f;
     return (n.useEffect(() => {
         h &&
-            Z.default.track(Y.rMx.CANCELLATION_FLOW_DISCOUNT_OFFER_PROMPT_VIEWED, {
+            w.default.track(Y.rMx.CANCELLATION_FLOW_DISCOUNT_OFFER_PROMPT_VIEWED, {
                 location_stack: d,
                 discount_id: null == x ? void 0 : x.discount_id,
             });
@@ -656,31 +656,31 @@ let eb = function (e) {
     f)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(W.Z, {
+                  (0, r.jsx)(H.Z, {
                       premiumType: s,
                       onClose: o,
                   }),
                   (0, r.jsx)(p.hzk, {
                       "data-migration-pending": !0,
-                      className: J.body,
-                      children: (0, r.jsx)(p.$jN, { className: J.spinner }),
+                      className: Q.body,
+                      children: (0, r.jsx)(p.$jN, { className: Q.spinner }),
                   }),
               ],
           })
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(W.Z, {
+                  (0, r.jsx)(H.Z, {
                       premiumType: s,
                       onClose: o,
                   }),
                   (0, r.jsxs)(p.hzk, {
                       "data-migration-pending": !0,
-                      className: J.body,
+                      className: Q.body,
                       children: [
                           (0, r.jsx)(p.Heading, {
                               variant: "heading-xl/semibold",
                               color: "header-primary",
-                              className: J.title,
+                              className: Q.title,
                               children: t,
                           }),
                           (0, r.jsxs)("div", {

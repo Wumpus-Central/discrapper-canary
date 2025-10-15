@@ -1,0 +1,3 @@
+a.exports = JSON.parse(
+    '{"o/An3t":[[1,"username"]," paprašė transliuoti ",[1,"applicationName"]],"DKHheX":"Prašyti transliuoti","8qq+Hx":["Prašyti transliuoti ",[1,"applicationName"]],"s7bMT0":[[1,"username"]," prašo transliuoti ",[1,"applicationName"]],"7pndSk":["Paprašei transliuoti ",[1,"applicationName"]],"P0wwmJ":"Jau transliuojama","u4QmWl":"Prašymas nebegalioja","qRXatr":"Ne balso kanale","43zohI":"Žaidimas nežaidžiamas","fac+eH":"Jokių leidimų","8HU1Mz":"Prašymas išsiųstas","5+172d":"Transliuoti","nAyuPj":"Prašymas transliuoti","d/qbCw":[[1,"username"]," paprašė transliuoti"],"8B3U5O":"Paprašei transliuoti","UGbmBg":"Transliuoti","jTbTAA":[[8,"$b",[[1,"username"]]]," nori pažiūrėti, kaip žaidi ",[8,"$b",[[1,"game"]]],"."]}',
+);

@@ -82,15 +82,15 @@ function y(e) {
         ),
         [],
     );
-    let x = i.useMemo(
+    let w = i.useMemo(
         () => [
             {
-                text: O.intl.string(O.t["ETE/oC"]),
+                text: O.intl.string(O.t["ETE/oK"]),
                 onClick: y,
                 variant: "secondary",
             },
             {
-                text: O.intl.string(O.t["R3BPH+"]),
+                text: O.intl.string(O.t.R3BPHx),
                 onClick: v,
                 variant: "primary",
             },
@@ -99,36 +99,36 @@ function y(e) {
     );
     return (0, r.jsxs)(a.Modal, {
         transitionState: n,
-        title: O.intl.string(O.t["0Osu3x"]),
-        actions: x,
+        title: O.intl.string(O.t["0Osu39"]),
+        actions: w,
         onClose: y,
         children: [
             (0, r.jsx)(c.Wn, {
                 className: f.warning,
                 messageType: c.QYI.WARNING,
-                children: O.intl.string(O.t["O2v/eP"]),
+                children: O.intl.string(O.t["O2v/eH"]),
             }),
             (0, r.jsx)(c.Heading, {
                 className: f.formHeader,
                 variant: "eyebrow",
                 color: "header-secondary",
-                children: O.intl.string(O.t.UUpAD6),
+                children: O.intl.string(O.t.UUpADw),
             }),
             (0, r.jsx)(c.Text, {
                 className: f.action,
                 variant: "text-md/normal",
-                children: O.intl.string(O.t["1xFbP/"]),
+                children: O.intl.string(O.t["1xFbPz"]),
             }),
             (0, r.jsx)(c.Text, {
                 className: f.actionDescription,
                 variant: "text-sm/normal",
-                children: O.intl.string(O.t.laNlTl),
+                children: O.intl.string(O.t.laNlTk),
             }),
             (0, r.jsx)(c.Heading, {
                 className: f.formHeader,
                 variant: "eyebrow",
                 color: "header-secondary",
-                children: O.intl.string(O.t["1La4tC"]),
+                children: O.intl.string(O.t["1La4tL"]),
             }),
             (0, r.jsx)(l.Z, {
                 defaultValue: m,
@@ -137,7 +137,7 @@ function y(e) {
             (0, r.jsx)(c.Anchor, {
                 className: f.resetButton,
                 onClick: () => j((0, b.Kd)(p.D_)),
-                children: O.intl.string(O.t["s7+2rQ"]),
+                children: O.intl.string(O.t["s7+2ra"]),
             }),
         ],
     });

@@ -33,15 +33,15 @@ function _(e) {
         [Z, k] = l.useState(null != (r = null == S ? void 0 : S.volume) ? r : 1),
         [T, F] = l.useState(null == S ? void 0 : S.emojiId),
         [D, R] = l.useState(null == S ? void 0 : S.emojiName),
-        { file: B, loadAudioFromFile: U, maxVolume: A, setMaxVolume: H } = (0, p.p)(),
+        { file: B, loadAudioFromFile: A, maxVolume: U, setMaxVolume: H } = (0, p.p)(),
         [z, L] = l.useState(!1),
         [G, V] = l.useState(null),
         [q, W] = l.useState(null),
         [Y, J] = l.useState("ready"),
-        [K, Q] = l.useState(C);
-    async function X(e) {
+        [K, X] = l.useState(C);
+    async function Q(e) {
         try {
-            await U(null != e ? e : null), J("ready"), V(null);
+            await A(null != e ? e : null), J("ready"), V(null);
         } catch (e) {
             $(e);
         }
@@ -60,20 +60,20 @@ function _(e) {
         (null == N ? void 0 : N.file) != null && e(N.file);
         async function e(e) {
             try {
-                await U(e), J("ready"), V(null);
+                await A(e), J("ready"), V(null);
             } catch (e) {
                 $(e);
             }
         }
-    }, [null == N ? void 0 : N.file, U]);
+    }, [null == N ? void 0 : N.file, A]);
     let ee = (function (e) {
             switch (e) {
                 case "encoding":
-                    return j.intl.string(j.t["4IMMdB"]);
+                    return j.intl.string(j.t["4IMMdH"]);
                 case "encoding-failed":
-                    return j.intl.string(j.t.Ka29xq);
+                    return j.intl.string(j.t.Ka29xs);
                 case "uploading":
-                    return j.intl.string(j.t.ndr58Q);
+                    return j.intl.string(j.t.ndr58f);
             }
             return null;
         })(Y),
@@ -135,7 +135,7 @@ function _(e) {
                           emojiName: D,
                       })
                     : (await er(),
-                      (0, s.showToast)((0, s.createToast)(j.intl.string(j.t.T7dhBL), s.ToastType.SUCCESS))),
+                      (0, s.showToast)((0, s.createToast)(j.intl.string(j.t.T7dhBA), s.ToastType.SUCCESS))),
                     O();
             } catch (e) {
                 $(e);
@@ -144,15 +144,15 @@ function _(e) {
             }
         }, [et, O, K, S, I, Z, T, D, er, H]);
     (0, c.ZP)(() => {
-        U(null),
+        A(null),
             m.default.track(x.rMx.OPEN_MODAL, {
                 type: "Soundboard Upload Sound",
                 guild_id: K,
             });
     }),
         l.useEffect(() => {
-            k(Math.min(Z, A));
-        }, [Z, k, A]);
+            k(Math.min(Z, U));
+        }, [Z, k, U]);
     let eo = (0, a.jsx)(d.Z, {
             guildId: K,
             emojiId: T,
@@ -166,12 +166,12 @@ function _(e) {
             () => [
                 {
                     variant: "secondary",
-                    text: j.intl.string(j.t.Khpixd),
+                    text: j.intl.string(j.t.Khpixc),
                     onClick: O,
                     disabled: z,
                 },
                 {
-                    text: et ? j.intl.string(j.t.bZY171) : j.intl.string(j.t.RGJbYB),
+                    text: et ? j.intl.string(j.t["bZY17+"]) : j.intl.string(j.t.RGJbYG),
                     onClick: ei,
                     variant: "primary",
                     disabled: !ea,
@@ -183,7 +183,7 @@ function _(e) {
     return (0, a.jsx)(o.Modal, {
         onClose: O,
         transitionState: E,
-        title: et ? j.intl.string(j.t.HmsZGS) : j.intl.string(j.t["ioD/9I"]),
+        title: et ? j.intl.string(j.t.HmsZGR) : j.intl.string(j.t["ioD/9P"]),
         actions: es,
         children: (0, a.jsxs)(o.C3N, {
             children: [
@@ -195,9 +195,9 @@ function _(e) {
                     }),
                 P
                     ? (0, a.jsx)(y.Z, {
-                          label: j.intl.string(j.t.UYt7iQ),
+                          label: j.intl.string(j.t.UYt7iY),
                           value: K,
-                          onChange: Q,
+                          onChange: X,
                       })
                     : null,
                 (et || null != B) &&
@@ -212,12 +212,12 @@ function _(e) {
                     : (0, a.jsx)(o.gNt, {
                           required: !0,
                           errorMessage: null == G ? void 0 : G.getFirstFieldErrorMessage("sound"),
-                          label: j.intl.string(j.t.sSHaG7),
+                          label: j.intl.string(j.t.sSHaGx),
                           children: (0, a.jsx)(f.Z, {
                               filename: null != (_ = null == B ? void 0 : B.name) ? _ : "",
-                              buttonText: j.intl.string(j.t.zpi3XG),
-                              placeholder: j.intl.string(j.t["x+YUL9"]),
-                              onFileSelect: X,
+                              buttonText: j.intl.string(j.t.zpi3XF),
+                              placeholder: j.intl.string(j.t["x+YULy"]),
+                              onFileSelect: Q,
                               filters: w,
                           }),
                       }),
@@ -225,8 +225,8 @@ function _(e) {
                     children: [
                         (0, a.jsx)(s.oil, {
                             required: !0,
-                            label: j.intl.string(j.t.NpJGaM),
-                            placeholder: j.intl.string(j.t.NpJGaM),
+                            label: j.intl.string(j.t.NpJGaG),
+                            placeholder: j.intl.string(j.t.NpJGaG),
                             error: null == G ? void 0 : G.getFirstFieldErrorMessage("name"),
                             value: I,
                             onChange: M,
@@ -236,13 +236,13 @@ function _(e) {
                     ],
                 }),
                 (0, a.jsx)(s.iRW, {
-                    label: j.intl.string(j.t["3CJlb1"]),
+                    label: j.intl.string(j.t["3CJlb2"]),
                     errorMessage: null == G ? void 0 : G.getFirstFieldErrorMessage("volume"),
                     helperText: null != ee ? ee : void 0,
                     initialValue: Z,
                     onValueChange: (e) => k(e),
                     minValue: 0,
-                    maxValue: A,
+                    maxValue: U,
                 }),
             ],
         }),

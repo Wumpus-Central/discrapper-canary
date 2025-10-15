@@ -1,4 +1,4 @@
-n.d(t, { default: () => w }), n(388685);
+n.d(t, { default: () => x }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(512722),
@@ -34,7 +34,7 @@ function m(e) {
                 options: l,
                 onChange: (e) => i(e),
             }),
-            (0, r.jsx)(p.Z, { children: v.intl.string(v.t.dI4HFq) }),
+            (0, r.jsx)(p.Z, { children: v.intl.string(v.t.dI4HFh) }),
         ],
     });
 }
@@ -49,59 +49,59 @@ function y() {
         }),
     });
 }
-function w(e) {
+function x(e) {
     let t,
         n,
         l,
         d,
         { channel: p, platform: g, transitionState: O, onClose: j } = e,
-        w = (0, c.e7)([h.default], () => h.default.getDevicesForPlatform(g), [g]),
-        x = (0, c.e7)([h.default], () => h.default.getLastSelectedDeviceByPlatform(g)),
-        P = i.useMemo(() => Object.values(w), [w]),
+        x = (0, c.e7)([h.default], () => h.default.getDevicesForPlatform(g), [g]),
+        w = (0, c.e7)([h.default], () => h.default.getLastSelectedDeviceByPlatform(g)),
+        P = i.useMemo(() => Object.values(x), [x]),
         S = (0, c.e7)([h.default], () => h.default.getFetchingDevices(g)),
         D = (0, c.e7)([h.default], () => {
             var e;
             return null == (e = h.default.getAwaitingRemoteSessionInfo()) ? void 0 : e.deviceId;
         }),
         [N, k] = i.useState(!1),
-        [I, Z] = i.useState(() => {
+        [I, E] = i.useState(() => {
             var e, t;
-            return null != (t = null == (e = w[null != D ? D : ""]) ? void 0 : e.id) ? t : null;
+            return null != (t = null == (e = x[null != D ? D : ""]) ? void 0 : e.id) ? t : null;
         });
     i.useEffect(() => {
         C.LO(g);
     }, [g]),
         i.useEffect(() => {
-            1 === P.length ? Z(P[0].id) : null != x && Z(x);
-        }, [P, x]);
-    let E = async () => {
-        let e = w[null != I ? I : ""];
+            1 === P.length ? E(P[0].id) : null != w && E(w);
+        }, [P, w]);
+    let Z = async () => {
+        let e = x[null != I ? I : ""];
         o()(null != e, "Cannot transfer without selected device");
         try {
             k(!0), await C.sh(g, e.id, p), j();
         } catch (t) {
             k(!1),
                 f.Z.show({
-                    title: v.intl.string(v.t.QL1y93),
-                    body: v.intl.formatToPlainString(v.t["6ZyNH/"], { deviceName: e.name }),
+                    title: v.intl.string(v.t["QL1y9/"]),
+                    body: v.intl.formatToPlainString(v.t["6ZyNHx"], { deviceName: e.name }),
                 });
         }
     };
     return (
         S
-            ? ((n = v.intl.string(v.t["+d9SH8"])),
+            ? ((n = v.intl.string(v.t["+d9SHx"])),
               (t = (0, r.jsx)("div", {
                   className: b.spinnerContainer,
                   children: (0, r.jsx)(u.$jN, {}),
               })))
             : 0 === P.length
-              ? ((n = v.intl.string(v.t.OkJf1e)), (l = v.intl.string(v.t["of/l5Z"])), (t = (0, r.jsx)(y, {})))
-              : ((n = v.intl.string(v.t["+d9SH8"])),
-                (l = v.intl.string(v.t["5DtaWg"])),
+              ? ((n = v.intl.string(v.t.OkJf1d)), (l = v.intl.string(v.t["of/l5e"])), (t = (0, r.jsx)(y, {})))
+              : ((n = v.intl.string(v.t["+d9SHx"])),
+                (l = v.intl.string(v.t["5DtaWl"])),
                 (d = [
                     {
-                        text: v.intl.string(v.t.FJR4bD),
-                        onClick: E,
+                        text: v.intl.string(v.t.FJR4bG),
+                        onClick: Z,
                         loading: N || null != D,
                         disabled: null == I,
                     },
@@ -110,7 +110,7 @@ function w(e) {
                     devices: P,
                     selectedDeviceId: I,
                     onSelectDeviceId: (e) => {
-                        Z(e), (0, C.bp)(g, e);
+                        E(e), (0, C.bp)(g, e);
                     },
                 }))),
         (0, r.jsx)(a.Modal, {

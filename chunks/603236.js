@@ -24,7 +24,7 @@ let b = a.ZP.connectStores([d.Z], () => ({ hideValue: d.Z.hideInstantInvites }))
         let { value: t, autoFocus: n, hideValue: l, onCopy: i, disabled: a } = e;
         return (0, r.jsx)(c.Z, {
             value: t,
-            hideMessage: l ? j.intl.string(j.t["6HzNgZ"]) : null,
+            hideMessage: l ? j.intl.string(j.t["6HzNgY"]) : null,
             buttonColor: s.zx.Colors.BRAND,
             onCopy: i,
             autoFocus: n,
@@ -49,8 +49,8 @@ let b = a.ZP.connectStores([d.Z], () => ({ hideValue: d.Z.hideInstantInvites }))
                 disabled: I,
                 application: T,
             } = e,
-            { maxAge: Z, maxUses: w, networkError: D, showVanityURL: k, flags: A } = c,
-            R = l.useCallback(() => {
+            { maxAge: Z, maxUses: w, networkError: D, showVanityURL: k, flags: R } = c,
+            A = l.useCallback(() => {
                 g.default.track(p.rMx.COPY_INSTANT_INVITE, {
                     server: u.Z.getGuildId(),
                     channel: null == N ? void 0 : N.id,
@@ -67,16 +67,16 @@ let b = a.ZP.connectStores([d.Z], () => ({ hideValue: d.Z.hideInstantInvites }))
                 (0, r.jsx)(b, {
                     value: O,
                     autoFocus: a,
-                    onCopy: R,
+                    onCopy: A,
                     disabled: I,
                 }),
                 d &&
                     (0, r.jsx)(o.rsf, {
-                        checked: (0, m.yE)(A, i.$.IS_APPLICATION_BYPASS),
-                        onChange: (e) => y((0, m.mB)(A, i.$.IS_APPLICATION_BYPASS, e)),
+                        checked: (0, m.yE)(R, i.$.IS_APPLICATION_BYPASS),
+                        onChange: (e) => y((0, m.mB)(R, i.$.IS_APPLICATION_BYPASS, e)),
                         disabled: I,
                         label: j.intl.string(j.t["1i1bUl"]),
-                        description: j.intl.string(j.t["jvd/LF"]),
+                        description: j.intl.string(j.t["jvd/LC"]),
                     }),
                 n || k
                     ? null
@@ -89,7 +89,7 @@ let b = a.ZP.connectStores([d.Z], () => ({ hideValue: d.Z.hideInstantInvites }))
                               a
                                   ? (0, r.jsx)(o.Anchor, {
                                         onClick: () => E(v.RV.SETTINGS),
-                                        children: j.intl.string(j.t["VNe8P/"]),
+                                        children: j.intl.string(j.t.VNe8Pz),
                                     })
                                   : null,
                           ],
@@ -98,7 +98,7 @@ let b = a.ZP.connectStores([d.Z], () => ({ hideValue: d.Z.hideInstantInvites }))
                     ? (0, r.jsxs)(o.Text, {
                           variant: "text-xs/normal",
                           className: f.footerText,
-                          children: [j.intl.string(j.t["0M2U95"]), " "],
+                          children: [j.intl.string(j.t["0M2U9/"]), " "],
                       })
                     : null,
                 null != D

@@ -25,7 +25,7 @@ n.d(t, {
 var r = n(860911),
     i = n(70956),
     a = n(546791),
-    o = n(660886),
+    o = n(345909),
     s = n(388032);
 let l = 30 * i.Z.Millis.SECOND,
     c = 8,
@@ -109,20 +109,20 @@ let S = new Map([
             3,
             {
                 priority: 100,
-                tooltipHeader: () => s.intl.string(o.default.kvTgWP),
+                tooltipHeader: () => s.intl.string(o.default.kvTgWF),
                 tooltipDescription: (e) =>
                     e
-                        ? (0, a.lW)(s.intl.string(o.default.cY19uR), s.intl.string(o.default.w4wmnb))
-                        : (0, a.lW)(s.intl.string(o.default["K5r+sN"]), s.intl.string(o.default.foTzbd)),
-                sectionHeader: (e) => s.intl.formatToPlainString(o.default["4T3zWT"], { count: e }),
+                        ? (0, a.lW)(s.intl.string(o.default.cY19ub), s.intl.string(o.default.w4wmnZ))
+                        : (0, a.lW)(s.intl.string(o.default["K5r+sL"]), s.intl.string(o.default.foTzbW)),
+                sectionHeader: (e) => s.intl.formatToPlainString(o.default["4T3zWV"], { count: e }),
                 sectionDescription: (e) =>
                     e
-                        ? (0, a.lW)(s.intl.string(o.default.cY19uR), s.intl.string(o.default.w4wmnb))
-                        : (0, a.lW)(s.intl.string(o.default["K5r+sN"]), s.intl.string(o.default.foTzbd)),
+                        ? (0, a.lW)(s.intl.string(o.default.cY19ub), s.intl.string(o.default.w4wmnZ))
+                        : (0, a.lW)(s.intl.string(o.default["K5r+sL"]), s.intl.string(o.default.foTzbW)),
                 timestampFormatter: () => ({
-                    today: s.intl.string(o.default.fLBUx7),
-                    yesterday: s.intl.string(o.default.cHHgxI),
-                    days: o.default.qvKjp8,
+                    today: s.intl.string(o.default.fLBUx8),
+                    yesterday: s.intl.string(o.default.cHHgxM),
+                    days: o.default.qvKjp6,
                 }),
             },
         ],
@@ -130,20 +130,20 @@ let S = new Map([
             5,
             {
                 priority: 200,
-                tooltipHeader: () => s.intl.string(o.default.D7Sngz),
+                tooltipHeader: () => s.intl.string(o.default.D7Sng4),
                 tooltipDescription: (e) =>
                     e
-                        ? (0, a.lW)(s.intl.string(o.default["w7j/Lt"]), s.intl.string(o.default.aiAhnQ))
-                        : (0, a.lW)(s.intl.string(o.default.SCIaWK), s.intl.string(o.default["4ufgdz"])),
-                sectionHeader: (e) => s.intl.formatToPlainString(o.default["0GE4Ni"], { count: e }),
+                        ? (0, a.lW)(s.intl.string(o.default["w7j/Li"]), s.intl.string(o.default.aiAhnZ))
+                        : (0, a.lW)(s.intl.string(o.default.SCIaWF), s.intl.string(o.default["4ufgd3"])),
+                sectionHeader: (e) => s.intl.formatToPlainString(o.default["0GE4Nj"], { count: e }),
                 sectionDescription: (e) =>
                     e
-                        ? (0, a.lW)(s.intl.string(o.default["w7j/Lt"]), s.intl.string(o.default.aiAhnQ))
-                        : (0, a.lW)(s.intl.string(o.default.SCIaWK), s.intl.string(o.default["4ufgdz"])),
+                        ? (0, a.lW)(s.intl.string(o.default["w7j/Li"]), s.intl.string(o.default.aiAhnZ))
+                        : (0, a.lW)(s.intl.string(o.default.SCIaWF), s.intl.string(o.default["4ufgd3"])),
                 timestampFormatter: () => ({
-                    today: s.intl.string(o.default.IHd5cZ),
-                    yesterday: s.intl.string(o.default.wOsfxv),
-                    days: o.default.oCk8c4,
+                    today: s.intl.string(o.default.IHd5cX),
+                    yesterday: s.intl.string(o.default.wOsfxs),
+                    days: o.default.oCk8c3,
                 }),
             },
         ],
@@ -151,20 +151,20 @@ let S = new Map([
             1,
             {
                 priority: 300,
-                tooltipHeader: () => s.intl.string(o.default.kIcKAj),
+                tooltipHeader: () => s.intl.string(o.default.kIcKAg),
                 tooltipDescription: (e) =>
                     e
-                        ? (0, a.lW)(s.intl.string(o.default.HvsFJf), s.intl.string(o.default.BkVb1X))
-                        : (0, a.lW)(s.intl.string(o.default["1/QpPy"]), s.intl.string(o.default.mpHHfa)),
-                sectionHeader: (e) => s.intl.formatToPlainString(o.default["TEvo+H"], { count: e }),
+                        ? (0, a.lW)(s.intl.string(o.default.HvsFJS), s.intl.string(o.default.BkVb1d))
+                        : (0, a.lW)(s.intl.string(o.default["1/QpPz"]), s.intl.string(o.default.mpHHfX)),
+                sectionHeader: (e) => s.intl.formatToPlainString(o.default["TEvo+P"], { count: e }),
                 sectionDescription: (e) =>
                     e
-                        ? (0, a.lW)(s.intl.string(o.default.HvsFJf), s.intl.string(o.default.BkVb1X))
-                        : (0, a.lW)(s.intl.string(o.default["1/QpPy"]), s.intl.string(o.default.mpHHfa)),
+                        ? (0, a.lW)(s.intl.string(o.default.HvsFJS), s.intl.string(o.default.BkVb1d))
+                        : (0, a.lW)(s.intl.string(o.default["1/QpPz"]), s.intl.string(o.default.mpHHfX)),
                 timestampFormatter: () => ({
-                    today: s.intl.string(o.default.JUHIYZ),
-                    yesterday: s.intl.string(o.default.GiswUW),
-                    days: o.default["fwQgE/"],
+                    today: s.intl.string(o.default.JUHIYW),
+                    yesterday: s.intl.string(o.default.GiswUV),
+                    days: o.default.fwQgEx,
                 }),
             },
         ],
@@ -172,16 +172,16 @@ let S = new Map([
             2,
             {
                 priority: 400,
-                tooltipHeader: () => (0, a.lW)(s.intl.string(o.default["NulX9+"]), s.intl.string(o.default.uav9Bh)),
+                tooltipHeader: () => (0, a.lW)(s.intl.string(o.default["NulX9/"]), s.intl.string(o.default.uav9Bg)),
                 tooltipDescription: (e) =>
                     e
-                        ? (0, a.lW)(s.intl.string(o.default.Lmz9Vh), s.intl.string(o.default.LVNgTD))
-                        : (0, a.lW)(s.intl.string(o.default.MTFxYc), s.intl.string(o.default.TA8GFt)),
-                sectionHeader: (e) => s.intl.formatToPlainString(o.default["7feG7T"], { count: e }),
+                        ? (0, a.lW)(s.intl.string(o.default.Lmz9Vl), s.intl.string(o.default.LVNgTE))
+                        : (0, a.lW)(s.intl.string(o.default.MTFxYW), s.intl.string(o.default.TA8GFh)),
+                sectionHeader: (e) => s.intl.formatToPlainString(o.default["7feG7e"], { count: e }),
                 sectionDescription: (e) =>
                     e
-                        ? (0, a.lW)(s.intl.string(o.default.Lmz9Vh), s.intl.string(o.default.LVNgTD))
-                        : (0, a.lW)(s.intl.string(o.default.MTFxYc), s.intl.string(o.default.TA8GFt)),
+                        ? (0, a.lW)(s.intl.string(o.default.Lmz9Vl), s.intl.string(o.default.LVNgTE))
+                        : (0, a.lW)(s.intl.string(o.default.MTFxYW), s.intl.string(o.default.TA8GFh)),
             },
         ],
         [
@@ -191,13 +191,13 @@ let S = new Map([
                 tooltipHeader: () => s.intl.string(o.default.CcrbCw),
                 tooltipDescription: (e) =>
                     e
-                        ? (0, a.lW)(s.intl.string(o.default.c0NgBX), s.intl.string(o.default.BLgIrk))
-                        : (0, a.lW)(s.intl.string(o.default.DLVyFw), s.intl.string(o.default.sSJauZ)),
-                sectionHeader: (e) => s.intl.formatToPlainString(o.default.rcPInc, { count: e }),
+                        ? (0, a.lW)(s.intl.string(o.default.c0NgBQ), s.intl.string(o.default.BLgIrq))
+                        : (0, a.lW)(s.intl.string(o.default.DLVyFx), s.intl.string(o.default.sSJaub)),
+                sectionHeader: (e) => s.intl.formatToPlainString(o.default.rcPInZ, { count: e }),
                 sectionDescription: (e) =>
                     e
-                        ? (0, a.lW)(s.intl.string(o.default.c0NgBX), s.intl.string(o.default.BLgIrk))
-                        : (0, a.lW)(s.intl.string(o.default.DLVyFw), s.intl.string(o.default.sSJauZ)),
+                        ? (0, a.lW)(s.intl.string(o.default.c0NgBQ), s.intl.string(o.default.BLgIrq))
+                        : (0, a.lW)(s.intl.string(o.default.DLVyFx), s.intl.string(o.default.sSJaub)),
             },
         ],
     ]),
@@ -206,36 +206,36 @@ let S = new Map([
             6,
             {
                 priority: 175,
-                tooltipHeader: () => s.intl.string(o.default.eo4Fxh),
-                tooltipDescription: () => s.intl.string(o.default["O/AElu"]),
-                sectionHeader: (e) => s.intl.formatToPlainString(o.default.eGFWUd, { count: e }),
-                sectionDescription: () => s.intl.string(o.default["O/AElu"]),
+                tooltipHeader: () => s.intl.string(o.default.eo4Fxs),
+                tooltipDescription: () => s.intl.string(o.default["O/AElp"]),
+                sectionHeader: (e) => s.intl.formatToPlainString(o.default.eGFWUV, { count: e }),
+                sectionDescription: () => s.intl.string(o.default["O/AElp"]),
             },
         ],
         [
             7,
             {
                 priority: 150,
-                tooltipHeader: () => s.intl.string(o.default.NMYKsh),
-                tooltipDescription: (e) => (e ? s.intl.string(o.default.cqIdqZ) : s.intl.string(o.default["85PtWu"])),
-                sectionHeader: (e) => s.intl.formatToPlainString(o.default.FPViWL, { amount: e }),
-                sectionDescription: (e) => (e ? s.intl.string(o.default.cqIdqZ) : s.intl.string(o.default["85PtWu"])),
+                tooltipHeader: () => s.intl.string(o.default.NMYKsr),
+                tooltipDescription: (e) => (e ? s.intl.string(o.default.cqIdqa) : s.intl.string(o.default["85PtWl"])),
+                sectionHeader: (e) => s.intl.formatToPlainString(o.default.FPViWF, { amount: e }),
+                sectionDescription: (e) => (e ? s.intl.string(o.default.cqIdqa) : s.intl.string(o.default["85PtWl"])),
             },
         ],
     ]),
     C = () => ({
-        seconds: s.intl.string(o.default.CJdoee),
-        minutes: o.default.InzMn3,
-        hours: o.default.ErkYCI,
-        yesterday: s.intl.string(o.default.GvfssA),
-        days: o.default.pWig18,
-        date: o.default.MP3khg,
+        seconds: s.intl.string(o.default.CJdoeX),
+        minutes: o.default.InzMn5,
+        hours: o.default.ErkYCA,
+        yesterday: s.intl.string(o.default.GvfssL),
+        days: o.default.pWig19,
+        date: o.default.MP3kho,
     }),
     N = () => ({
-        seconds: s.intl.string(o.default.Bqsamd),
-        minutes: o.default.kX3wJg,
+        seconds: s.intl.string(o.default.BqsamZ),
+        minutes: o.default.kX3wJi,
         hours: o.default.J18GbG,
-        yesterday: s.intl.string(o.default.Ln9zMn),
-        days: o.default.WRtySz,
-        date: o.default.Y3ZYtM,
+        yesterday: s.intl.string(o.default.Ln9zMj),
+        days: o.default.WRtyS0,
+        date: o.default.Y3ZYtL,
     });

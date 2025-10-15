@@ -84,7 +84,7 @@ function A() {
         children: [
             (0, r.jsx)(u.Text, {
                 variant: "text-sm/normal",
-                children: b.intl.string(b.t["2JbvKw"]),
+                children: b.intl.string(b.t["2JbvKy"]),
             }),
             (0, r.jsx)(u.iRW, {
                 onValueChange: t,
@@ -122,7 +122,7 @@ function C(e) {
                               variant: "text-xs/medium",
                               color: "always-white",
                               className: y.infoNitroText,
-                              children: b.intl.string(b.t["BMw+7I"]),
+                              children: b.intl.string(b.t["BMw+7O"]),
                           }),
                           (0, r.jsx)(u.IGR, {
                               text: "BETA",
@@ -161,7 +161,7 @@ function N(e) {
                         className: y.infoSoundInnerContainer,
                         children: (0, r.jsx)(u.Text, {
                             variant: "text-sm/normal",
-                            children: b.intl.string(b.t.D6eYmf),
+                            children: b.intl.string(b.t.D6eYmZ),
                         }),
                     }),
                 ],
@@ -238,7 +238,7 @@ function P(e) {
             (0, r.jsx)(R, {
                 setTooltipShowing: i,
                 renderPopout: () => (0, r.jsx)(A, {}),
-                tooltipText: b.intl.string(b.t["19lt24"]),
+                tooltipText: b.intl.string(b.t["19lt29"]),
                 position: "top",
                 children: (0, r.jsx)(u.gj8, {
                     size: "md",
@@ -259,7 +259,7 @@ function P(e) {
                             e,
                         ),
                     ),
-                tooltipText: b.intl.string(b.t["KVbJU/"]),
+                tooltipText: b.intl.string(b.t.KVbJU1),
                 position: "right",
                 children: (0, r.jsx)(u.d3s, {
                     size: "md",

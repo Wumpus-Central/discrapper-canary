@@ -1,4 +1,4 @@
-n.d(t, { Z: () => K }), n(388685);
+n.d(t, { Z: () => q }), n(388685);
 var i = n(951288),
     r = n(647438),
     l = n(120356),
@@ -65,7 +65,7 @@ function G(e) {
     }
     return e;
 }
-function W(e, t) {
+function z(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -83,7 +83,7 @@ function W(e, t) {
         e
     );
 }
-function z(e, t) {
+function W(e, t) {
     if (null == e) return {};
     var n,
         i,
@@ -103,7 +103,7 @@ function z(e, t) {
     }
     return r;
 }
-let q = (0, o.animated)(u.eTT),
+let K = (0, o.animated)(u.eTT),
     Y = r.memo(
         function (e) {
             var t, n;
@@ -129,7 +129,7 @@ let q = (0, o.animated)(u.eTT),
                     typingGradient: R,
                 } = e,
                 [D, Y] = r.useState(null != (n = E.Z.isAtBottom(m.id)) && n),
-                K = r.useMemo(
+                q = r.useMemo(
                     () =>
                         y
                             ? (0, L.aJ)({
@@ -156,7 +156,7 @@ let q = (0, o.animated)(u.eTT),
                     compact: y,
                     hasUnreads: j,
                     focusId: S,
-                    placeholderHeight: K.totalHeight,
+                    placeholderHeight: q.totalHeight,
                     canLoadMore: null == T,
                     handleScrollToBottom: r.useCallback(() => Y(!0), [Y]),
                     handleScrollFromBottom: r.useCallback(() => Y(!1), [Y]),
@@ -187,7 +187,7 @@ let q = (0, o.animated)(u.eTT),
                     uploads: x,
                     loadMore: X.loadMore,
                     scrollManager: X,
-                    specs: K,
+                    specs: q,
                     filterAfterTimestamp: null != T ? T : Q,
                     showingQuarantineBanner: N,
                     hideSummaries: A,
@@ -228,7 +228,7 @@ let q = (0, o.animated)(u.eTT),
             let er = (0, u.mFp)(),
                 el = (0, s.l2)(J),
                 { ref: ea } = el,
-                eo = z(el, ["ref"]),
+                eo = W(el, ["ref"]),
                 es = (0, h.Z)((e) => {
                     var t;
                     (X.ref.current = e),
@@ -259,8 +259,8 @@ let q = (0, o.animated)(u.eTT),
                         children: [
                             null == ei && ee,
                             (0, i.jsxs)(
-                                q,
-                                W(
+                                K,
+                                z(
                                     G(
                                         {
                                             ref: es,
@@ -281,13 +281,13 @@ let q = (0, o.animated)(u.eTT),
                                             en,
                                             (0, i.jsxs)(
                                                 "ol",
-                                                W(
+                                                z(
                                                     G(
                                                         {
                                                             className: a()(F.scrollerInner, {
                                                                 [F.scrollerAllowSticky]: m.isModeratorReportChannel(),
                                                             }),
-                                                            "aria-label": V.intl.formatToPlainString(V.t.XarRiL, {
+                                                            "aria-label": V.intl.formatToPlainString(V.t.XarRiI, {
                                                                 channelName: m.name,
                                                             }),
                                                         },
@@ -299,7 +299,7 @@ let q = (0, o.animated)(u.eTT),
                                                                 className: F.navigationDescription,
                                                                 id: "messagesNavigationDescription",
                                                                 "aria-hidden": !0,
-                                                                children: V.intl.string(V.t["Spb3s/"]),
+                                                                children: V.intl.string(V.t.Spb3s7),
                                                             }),
                                                             $,
                                                             (0, i.jsx)("div", {
@@ -332,7 +332,7 @@ let q = (0, o.animated)(u.eTT),
         },
         (e, t) => null != e.isHidden && null != t.isHidden && e.isHidden && t.isHidden,
     ),
-    K = r.memo(function (e) {
+    q = r.memo(function (e) {
         var {
                 channel: t,
                 showingQuarantineBanner: n,
@@ -341,7 +341,7 @@ let q = (0, o.animated)(u.eTT),
                 forceCozy: o = !1,
                 typingGradient: s = !1,
             } = e,
-            u = z(e, [
+            u = W(e, [
                 "channel",
                 "showingQuarantineBanner",
                 "hideSummaries",
@@ -465,7 +465,7 @@ let q = (0, o.animated)(u.eTT),
             children: (0, i.jsx)(D.v, {
                 children: (0, i.jsx)(
                     Y,
-                    W(G({}, u), {
+                    z(G({}, u), {
                         messageGroupSpacing: O,
                         showNewMessagesBar: !0,
                         channel: t,

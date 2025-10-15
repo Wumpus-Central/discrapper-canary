@@ -1,4 +1,4 @@
-n.d(t, { default: () => O }), n(388685);
+n.d(t, { default: () => y }), n(388685);
 var i = n(951288),
     r = n(647438),
     l = n(793030),
@@ -58,43 +58,43 @@ function v(e, t) {
         e
     );
 }
-function O(e) {
-    let { guildId: t, transitionState: n, onClose: O, analyticsData: y } = e,
+function y(e) {
+    let { guildId: t, transitionState: n, onClose: y, analyticsData: O } = e,
         _ = (0, a.e7)([s.Z], () => s.Z.getGuild(t), [t]),
         C = !!(null == _ ? void 0 : _.features.has(f.oNc.INVITES_DISABLED)),
         [N] = r.useState(!1),
         [S, I] = r.useState(g.Fl),
-        w = (0, a.e7)([m.Z], () => m.Z.getGuildIncident(t)),
-        E = (0, u.BT)(_),
-        P = (0, p.SG)(w) || C,
-        T = (0, p.sN)(w),
-        [Z, k] = r.useState(P),
+        E = (0, a.e7)([m.Z], () => m.Z.getGuildIncident(t)),
+        P = (0, u.BT)(_),
+        w = (0, p.SG)(E) || C,
+        T = (0, p.sN)(E),
+        [Z, k] = r.useState(w),
         [A, D] = r.useState(T),
         [R, L] = r.useState(!1),
-        M = Z !== P || A !== T || R,
-        B = C && !E;
-    if (null == _) return O(), null;
+        M = Z !== w || A !== T || R,
+        B = C && !P;
+    if (null == _) return y(), null;
     function U() {
         k((e) => !e);
     }
     return (0, i.jsx)(l.Modal, {
         transitionState: n,
-        title: h.intl.string(h.t.oCYAc7),
+        title: h.intl.string(h.t.oCYAc3),
         actions: [
             {
-                text: h.intl.string(h.t["ETE/oC"]),
-                onClick: O,
+                text: h.intl.string(h.t["ETE/oK"]),
+                onClick: y,
                 variant: "secondary",
                 disabled: N,
             },
             {
-                text: h.intl.string(h.t["pwm/z0"]),
+                text: h.intl.string(h.t["pwm/z8"]),
                 onClick: () => {
-                    (P || T) && !Z && !A
+                    (w || T) && !Z && !A
                         ? ((0, d.n)(_.id, !1, !1),
                           (0, o.ZDy)(() => Promise.resolve((e) => (0, i.jsx)(b.default, v(j({}, e), { guildId: t })))))
                         : (0, d.n)(_.id, Z, A, S);
-                    let { source: e, alertType: n, messageId: r } = y;
+                    let { source: e, alertType: n, messageId: r } = O;
                     c.default.track(f.rMx.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
                         guild_id: t,
                         source: e,
@@ -104,13 +104,13 @@ function O(e) {
                         intervention_type_disabled: (0, p.lk)(Z, A),
                         duration: 60 * S,
                     }),
-                        O();
+                        y();
                 },
                 loading: N,
                 disabled: !M,
             },
         ],
-        onClose: O,
+        onClose: y,
         children: (0, i.jsxs)("div", {
             className: x.mainContainer,
             children: [
@@ -132,18 +132,18 @@ function O(e) {
                                 (0, i.jsx)(o.Text, {
                                     variant: "text-md/semibold",
                                     color: "header-primary",
-                                    children: h.intl.string(h.t.Uwsjn6),
+                                    children: h.intl.string(h.t.Uwsjn5),
                                 }),
                                 (0, i.jsx)(o.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
-                                    children: h.intl.string(h.t.qPJkZh),
+                                    children: h.intl.string(h.t.qPJkZm),
                                 }),
                             ],
                         }),
                         (0, i.jsx)(o.aML, {
                             "data-migration-pending": !0,
-                            text: h.intl.string(h.t["9GPbsV"]),
+                            text: h.intl.string(h.t["9GPbsb"]),
                             shouldShow: C,
                             children: (e) =>
                                 (0, i.jsx)(
@@ -169,12 +169,12 @@ function O(e) {
                                 (0, i.jsx)(o.Text, {
                                     variant: "text-md/semibold",
                                     color: "header-primary",
-                                    children: h.intl.string(h.t["wrDmA/"]),
+                                    children: h.intl.string(h.t.wrDmAw),
                                 }),
                                 (0, i.jsx)(o.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
-                                    children: h.intl.string(h.t.UQbJW7),
+                                    children: h.intl.string(h.t.UQbJW1),
                                 }),
                             ],
                         }),

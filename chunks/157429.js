@@ -13,9 +13,9 @@ var a = n(512722),
 function h(t) {
     let { transitionState: i, guild: n, onClose: a } = t,
         h = (0, u.Dt)(),
-        [g, { loading: m, error: E }] = (0, c.Z)(d.oL),
-        b = async () => {
-            e()(null != n, "no guild"), null != (await g(n.id)) && a();
+        [x, { loading: g, error: m }] = (0, c.Z)(d.oL),
+        E = async () => {
+            e()(null != n, "no guild"), null != (await x(n.id)) && a();
         };
     return (0, l.jsx)(r.Modal, {
         transitionState: i,
@@ -23,24 +23,24 @@ function h(t) {
         actions: [
             {
                 variant: "critical-primary",
-                text: p.intl.string(p.t["R3BPH+"]),
-                loading: m,
-                onClick: b,
+                text: p.intl.string(p.t.R3BPHx),
+                loading: g,
+                onClick: E,
             },
         ],
-        title: p.intl.string(p.t.rRpcE1),
-        subtitle: p.intl.format(p.t.Oa5P6w, {
+        title: p.intl.string(p.t.rRpcEx),
+        subtitle: p.intl.format(p.t["Oa5P6+"], {
             guildName: n.name,
             url: o.EYA.DEVELOPER_PORTAL_TEAMS,
         }),
         onClose: a,
         children:
-            null != E
+            null != m
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(s.M14, {
                               type: "critical",
-                              children: E.message,
+                              children: m.message,
                           }),
                           (0, l.jsx)(s.LZC, { size: 24 }),
                       ],

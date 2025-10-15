@@ -1,21 +1,21 @@
-i.d(n, { default: () => x });
-var e = i(951288),
-    a = i(442837),
-    l = i(481060),
-    s = i(812206),
-    r = i(600164),
-    o = i(63063),
-    c = i(981631),
-    m = i(388032),
-    p = i(281556);
-let d = o.Z.getArticleURL(c.BhN.MISSING_ENTITLEMENT),
+n.d(i, { default: () => x });
+var e = n(951288),
+    a = n(442837),
+    l = n(481060),
+    s = n(812206),
+    r = n(600164),
+    c = n(63063),
+    o = n(981631),
+    m = n(388032),
+    p = n(281556);
+let d = c.Z.getArticleURL(o.BhN.MISSING_ENTITLEMENT),
     x = a.ZP.connectStores([s.Z], (t) => {
-        let { applicationId: n } = t;
-        return { application: s.Z.getApplication(n) };
+        let { applicationId: i } = t;
+        return { application: s.Z.getApplication(i) };
     })(function (t) {
-        let { application: n, transitionState: i, onClose: a } = t;
+        let { application: i, transitionState: n, onClose: a } = t;
         return (0, e.jsxs)(l.Y0X, {
-            transitionState: i,
+            transitionState: n,
             size: l.CgR.MEDIUM,
             parentComponent: "MissingEntitlementModal",
             children: [
@@ -26,9 +26,9 @@ let d = o.Z.getArticleURL(c.BhN.MISSING_ENTITLEMENT),
                         (0, e.jsx)(l.Heading, {
                             variant: "heading-lg/semibold",
                             children:
-                                null != n
-                                    ? m.intl.formatToPlainString(m.t.N2mILu, { applicationName: n.name })
-                                    : m.intl.string(m.t.nS8PUT),
+                                null != i
+                                    ? m.intl.formatToPlainString(m.t.N2mILi, { applicationName: i.name })
+                                    : m.intl.string(m.t.nS8PUV),
                         }),
                         (0, e.jsx)(l.olH, { onClick: a }),
                     ],
@@ -40,19 +40,19 @@ let d = o.Z.getArticleURL(c.BhN.MISSING_ENTITLEMENT),
                             className: p.text,
                             variant: "text-md/normal",
                             children:
-                                null != n
-                                    ? m.intl.format(m.t["MM/7qx"], {
-                                          applicationName: n.name,
+                                null != i
+                                    ? m.intl.format(m.t["MM/7q6"], {
+                                          applicationName: i.name,
                                           supportArticleURL: d,
                                       })
-                                    : m.intl.format(m.t["IfQUx+"], { supportArticleURL: d }),
+                                    : m.intl.format(m.t.IfQUx8, { supportArticleURL: d }),
                         }),
                     ],
                 }),
                 (0, e.jsx)(l.mzw, {
                     children: (0, e.jsx)(l.Button, {
                         variant: "primary",
-                        text: m.intl.string(m.t.BddRzS),
+                        text: m.intl.string(m.t.BddRzc),
                         onClick: a,
                     }),
                 }),

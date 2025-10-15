@@ -1,4 +1,4 @@
-n.d(t, { default: () => P }), n(388685);
+n.d(t, { default: () => Z }), n(388685);
 var r = n(951288),
     l = n(647438),
     a = n(793030),
@@ -20,12 +20,12 @@ var r = n(951288),
     S = n(388032),
     j = n(834505),
     E = n(621054);
-function P(e) {
+function Z(e) {
     let {
             applicationId: t,
             customId: n,
-            linkId: P,
-            message: Z,
+            linkId: Z,
+            message: P,
             onClose: _,
             onCopyLink: O,
             onShare: C,
@@ -33,8 +33,8 @@ function P(e) {
         } = e,
         [T] = (0, c.Z)([t]),
         N = (0, i.e7)([p.default], () => p.default.getCurrentUser()),
-        [w, R] = l.useState(!1),
-        [k, D] = l.useState(""),
+        [w, D] = l.useState(!1),
+        [R, k] = l.useState(""),
         [M, A] = l.useState("");
     l.useEffect(() => {
         A(
@@ -42,53 +42,53 @@ function P(e) {
                 applicationId: t,
                 referrerId: null == N ? void 0 : N.id,
                 customId: n,
-                linkId: P,
+                linkId: Z,
             }),
         );
-    }, [t, N, n, P, A]);
+    }, [t, N, n, Z, A]);
     let I = l.useRef(0),
-        [U, F] = l.useState([]),
-        H = U.length,
-        q = H >= 5;
+        [U, H] = l.useState([]),
+        F = U.length,
+        q = F >= 5;
     l.useEffect(() => {
-        if ("" === k) {
+        if ("" === R) {
             var e;
             null == (e = z.current) || e.focus();
         }
-    }, [k]);
+    }, [R]);
     let G = l.useCallback(() => {
-            D("");
-        }, [D]),
+            k("");
+        }, [k]),
         z = l.useRef(null),
-        { results: V, updateSearchText: W } = (0, b.s)({
+        { results: W, updateSearchText: V } = (0, b.s)({
             selectedDestinations: U,
             includeMissingDMs: !0,
         }),
         Q = l.useCallback(
             (e) => {
-                D(e), W(e);
+                k(e), V(e);
             },
-            [D, W],
+            [k, V],
         ),
-        J = l.useCallback(
+        X = l.useCallback(
             (e) => {
-                F((t) => {
+                H((t) => {
                     let n = t.findIndex((t) => {
                         let { type: n, id: r } = t;
                         return n === e.type && r === e.id;
                     });
-                    if (-1 === n) return q ? t : (D(""), (I.current += 1), [e, ...t]);
+                    if (-1 === n) return q ? t : (k(""), (I.current += 1), [e, ...t]);
                     let r = [...t];
                     return r.splice(n, 1), (I.current += 1), r;
                 });
             },
             [q],
         ),
-        X = l.useCallback(
+        J = l.useCallback(
             async (e) => {
                 if (null == T) return;
-                let t = (0, y.P)(Z, T, M);
-                R(!0),
+                let t = (0, y.P)(P, T, M);
+                D(!0),
                     (await Promise.all(e.map(f.qx))).filter(g.lm).forEach(async (e) => {
                         let n = h.Z.getChannel(e);
                         null != n &&
@@ -96,27 +96,27 @@ function P(e) {
                     }),
                     (0, s.showToast)(
                         (0, s.createToast)(
-                            S.intl.formatToPlainString(S.t.jQULqL, { applicationName: T.name }),
+                            S.intl.formatToPlainString(S.t.jQULqK, { applicationName: T.name }),
                             s.ToastType.SUCCESS,
                         ),
                     ),
                     C(!0),
                     _();
             },
-            [Z, M, _, C, T],
+            [P, M, _, C, T],
         ),
-        Y = l.useCallback(() => {
+        B = l.useCallback(() => {
             (0, m.JG)(M, () => {
-                O(), (0, s.showToast)((0, s.createToast)(S.intl.string(S.t.t5VZ88), s.ToastType.SUCCESS));
+                O(), (0, s.showToast)((0, s.createToast)(S.intl.string(S.t["t5VZ8/"]), s.ToastType.SUCCESS));
             });
         }, [M, O]),
-        B =
-            V.length > 0
+        K =
+            W.length > 0
                 ? (0, r.jsx)(x.Q, {
                       paddingBottom: 8,
                       paddingTop: 8,
-                      rowData: V,
-                      handleToggleDestination: J,
+                      rowData: W,
+                      handleToggleDestination: X,
                       selectedDestinations: U,
                       disableSelection: q,
                   })
@@ -131,39 +131,39 @@ function P(e) {
                           (0, r.jsx)(s.Text, {
                               variant: "text-md/normal",
                               color: "text-muted",
-                              children: S.intl.string(S.t.V6nAfF),
+                              children: S.intl.string(S.t.V6nAfH),
                           }),
                       ],
                   });
     return (0, r.jsx)(a.Modal, {
         transitionState: L,
         onClose: _,
-        title: S.intl.string(S.t.r9qKow),
-        subtitle: Z,
+        title: S.intl.string(S.t.r9qKo6),
+        subtitle: P,
         size: "md",
         input: (0, r.jsx)(s.E1j, {
             ref: z,
-            query: k,
+            query: R,
             onChange: Q,
             onClear: G,
-            placeholder: S.intl.string(S.t["5h0QOP"]),
-            "aria-label": S.intl.string(S.t["5h0QOP"]),
+            placeholder: S.intl.string(S.t["5h0QOD"]),
+            "aria-label": S.intl.string(S.t["5h0QOD"]),
             autoFocus: !0,
         }),
         actions: [
             {
-                text: S.intl.string(S.t.WqhZss),
+                text: S.intl.string(S.t.WqhZsr),
                 variant: "secondary",
-                onClick: Y,
+                onClick: B,
             },
             {
-                text: S.intl.string(S.t.TXNS7S),
+                text: S.intl.string(S.t.TXNS7e),
                 variant: "primary",
-                onClick: () => X(U),
+                onClick: () => J(U),
                 loading: w,
-                disabled: !(H > 0),
+                disabled: !(F > 0),
             },
         ],
-        children: B,
+        children: K,
     });
 }

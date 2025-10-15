@@ -12,17 +12,17 @@ var o,
 function a() {
     return [
         {
-            label: r.intl.string(r.t.cigGCe),
+            label: r.intl.string(r.t.cigGCQ),
             code: 2,
             value: "I couldn't find what I was looking for",
         },
         {
-            label: r.intl.string(r.t.ZyXA0q),
+            label: r.intl.string(r.t.ZyXA0t),
             code: 3,
             value: "I found the language confusing",
         },
         {
-            label: r.intl.string(r.t.emlT91),
+            label: r.intl.string(r.t["emlT9/"]),
             code: 1,
             value: "Other",
         },

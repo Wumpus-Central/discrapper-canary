@@ -36,12 +36,12 @@ function d(e) {
         .concat(p);
 }
 function f(e) {
-    return null == e ? c.intl.string(c.t.lqaIxI) : e.split(",")[0];
+    return null == e ? c.intl.string(c.t.lqaIxM) : e.split(",")[0];
 }
 function _(e) {
     let { filename: t, assetOrigin: n = s.q.NEW_ASSET } = null != e ? e : {};
     if (n === s.q.ARCHIVED_ASSET) return;
-    let r = null != t ? t : c.intl.string(c.t.lqaIxI),
+    let r = null != t ? t : c.intl.string(c.t.lqaIxM),
         i = new Date().toLocaleString(c.intl.currentLocale, {
             year: "numeric",
             day: "numeric",
@@ -49,7 +49,7 @@ function _(e) {
             hour: "numeric",
             minute: "numeric",
         });
-    return c.intl.formatToPlainString(n === s.q.EDITED_ARCHIVED_ASSET ? c.t.eC2sZi : c.t.DYil93, {
+    return c.intl.formatToPlainString(n === s.q.EDITED_ARCHIVED_ASSET ? c.t.eC2sZm : c.t["DYil9/"], {
         name: r,
         dateTime: i,
     });

@@ -1,0 +1,3 @@
+e.exports = JSON.parse(
+    '{"+utqa2":["Option d\'arrière-plan des cadeaux\xA0: ",[1,"giftStyle"]],"B9XqQk":"Boîte","AJ4iio":"Gâteau","P5keo6":"Coffre","w84vER":"Café","6dCq/v":"Coupe","+HMF8v":"Nitroween","vd1fu7":"Boîte hivernale","aubYGR":"Gâteau hivernal","vjxYqa":"Coffre hivernal","bHuJLS":"Café hivernal","M6cPwM":"Boule de neige","GzPel5":"Boîte"}',
+);

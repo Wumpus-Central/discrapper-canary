@@ -119,8 +119,8 @@ function X(e, t) {
     return i;
 }
 function Q(e, t) {
-    let n = V.intl.string(V.t.BYa62u),
-        r = V.intl.string(V.t.CDa6Dq),
+    let n = V.intl.string(V.t.BYa62t),
+        r = V.intl.string(V.t.CDa6Dg),
         i = (() => {
             switch (e.interval) {
                 case B.rV.YEAR:
@@ -135,7 +135,7 @@ function Q(e, t) {
         case B.Si.TIER_0:
             switch (a) {
                 case B.Si.TIER_1:
-                    return V.intl.string(V.t.q6mxDS);
+                    return V.intl.string(V.t.q6mxDQ);
                 case B.Si.TIER_2:
                     return V.intl.string(V.t.seZVS0);
                 default:
@@ -144,9 +144,9 @@ function Q(e, t) {
         case B.Si.TIER_1:
             switch (a) {
                 case B.Si.TIER_0:
-                    return V.intl.string(V.t["7+u2zg"]);
+                    return V.intl.string(V.t["7+u2zs"]);
                 case B.Si.TIER_2:
-                    return V.intl.string(V.t.NG2qcc);
+                    return V.intl.string(V.t.NG2qcX);
                 default:
                     return i;
             }
@@ -154,10 +154,10 @@ function Q(e, t) {
             switch (a) {
                 case B.Si.TIER_0:
                 case B.Si.TIER_1:
-                    return V.intl.string(V.t["eB0/w9"]);
+                    return V.intl.string(V.t["eB0/w8"]);
                 case B.Si.TIER_2:
                     return e.interval === B.rV.MONTH
-                        ? V.intl.formatToPlainString(V.t.RqUv86, { numFreeGuildSubscriptions: B.cb })
+                        ? V.intl.formatToPlainString(V.t["RqUv8/"], { numFreeGuildSubscriptions: B.cb })
                         : i;
                 default:
                     return i;
@@ -254,9 +254,9 @@ function J(e) {
             () =>
                 (null == eT ? void 0 : eT.interval) === B.rV.DAY
                     ? (null == eT ? void 0 : eT.interval_count) > 7
-                        ? V.intl.string(V.t.Z1V2cs)
-                        : V.intl.string(V.t.MI1rHs)
-                    : V.intl.string(V.t["+S5lrV"]),
+                        ? V.intl.string(V.t.Z1V2cn)
+                        : V.intl.string(V.t.MI1rHh)
+                    : V.intl.string(V.t["+S5lra"]),
             [eT],
         ),
         eH = !ef && (eL || (null != eT && eD && null != et)),
@@ -271,7 +271,7 @@ function J(e) {
             if (!eH)
                 return (0, r.jsx)("div", {
                     className: H.selectPlanChooseTitle,
-                    children: V.intl.string(V.t.a19jpU),
+                    children: V.intl.string(V.t.a19jpa),
                 });
             if (t) {
                 let t = (null == e ? void 0 : e.trial_id) === B.a7;
@@ -281,8 +281,8 @@ function J(e) {
                             variant: "text-sm/normal",
                             className: H.trialPlanSelectHeader,
                             children: t
-                                ? V.intl.format(V.t.nG95hA, { endDate: et })
-                                : V.intl.format(V.t.s4E7kb, {
+                                ? V.intl.format(V.t.nG95hI, { endDate: et })
+                                : V.intl.format(V.t.s4E7kZ, {
                                       trialEnd: et,
                                       trialPeriod: eV,
                                   }),
@@ -297,7 +297,7 @@ function J(e) {
                         (0, r.jsx)(c.Text, {
                             variant: "text-sm/normal",
                             className: H.trialPlanSelectHeader,
-                            children: V.intl.format(V.t["nG7g/E"], {
+                            children: V.intl.format(V.t["nG7g/P"], {
                                 numMonths: null == eS ? void 0 : eS.discount.user_usage_limit,
                                 discountedPrice: (0, v.T4)(ex.amount - eY, ex.currency),
                                 regularPrice: (0, v.T4)(ex.amount, ex.currency),
@@ -312,7 +312,7 @@ function J(e) {
                 children: [
                     (0, r.jsx)("div", { className: H.selectPlanDivider }),
                     (0, r.jsx)(w.az, {
-                        label: V.intl.string(V.t.txajQG),
+                        label: V.intl.string(V.t.txajQE),
                         value: (0, r.jsx)(D.Z, {
                             price: t.amount,
                             currency: t.currency,
@@ -361,7 +361,7 @@ function J(e) {
         let e = () => {
                 if ((0, b.MY)(e_) === b.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null != em)
                     return (0, r.jsx)(x.Z, {
-                        sectionTitle: V.intl.string(V.t.B3miE8),
+                        sectionTitle: V.intl.string(V.t.B3miEx),
                         className: H.customGiftMessageWrapper,
                         innerClassName: H.customGiftMessage,
                         onTextChange: (e) => em(e),
@@ -371,7 +371,7 @@ function J(e) {
             },
             t = (e) =>
                 (0, r.jsx)(c.gNt, {
-                    label: V.intl.string(V.t["3E5hXj"]),
+                    label: V.intl.string(V.t["3E5hXl"]),
                     children: e,
                 });
         if ((0, b.pO)(e_))
@@ -503,7 +503,7 @@ function ee(e) {
         { step: _, selectedPlan: p } = (0, h.JL)(),
         { hasEntitlements: g } = (0, k.H)(n, i),
         b = (null != f && null != f.paymentSourceId) || Object.keys(o).length > 0 || (g && !u);
-    var y = l ? V.intl.string(V.t.PDTjLN) : V.intl.string(V.t.XqMe3N),
+    var y = l ? V.intl.string(V.t.PDTjLC) : V.intl.string(V.t.XqMe3N),
         O = m.h8.ADD_PAYMENT_STEPS;
     return (
         b && (O = m.h8.REVIEW),

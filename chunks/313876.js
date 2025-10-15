@@ -11,8 +11,8 @@ function c(e) {
     let { author: c, inviteError: u } = e,
         d =
             (0, i.e7)([o.default], () => o.default.getId()) === c.id
-                ? l.intl.string(l.t.C89OLE)
-                : l.intl.string(l.t.YVub5y),
+                ? l.intl.string(l.t.C89OLC)
+                : l.intl.string(l.t["YVub5+"]),
         f = (0, s.l)(null == u ? void 0 : u.code);
     return (0, r.jsxs)(a.Z, {
         children: [
@@ -22,7 +22,7 @@ function c(e) {
                     (0, r.jsx)(a.Z.Icon, { expired: !0 }),
                     (0, r.jsx)(a.Z.Info, {
                         expired: !0,
-                        title: null != (t = null == f ? void 0 : f.title) ? t : l.intl.string(l.t["Jhx/ud"]),
+                        title: null != (t = null == f ? void 0 : f.title) ? t : l.intl.string(l.t["Jhx/ub"]),
                         children: null != (n = null == f ? void 0 : f.description) ? n : null == u ? void 0 : u.message,
                     }),
                 ],

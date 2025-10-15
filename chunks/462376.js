@@ -92,7 +92,7 @@ class N extends l.Component {
                       size: a.zx.Sizes.SMALL,
                       disabled: !0,
                       color: (0, s.wj)(c.Z.theme) ? a.zx.Colors.WHITE : a.zx.Colors.BRAND,
-                      children: S.intl.string(S.t.dVT149),
+                      children: S.intl.string(S.t["dVT14+"]),
                   })
                 : (0, i.jsx)(a.zx, {
                       color: a.zx.Colors.GREEN,
@@ -101,7 +101,7 @@ class N extends l.Component {
                       size: a.zx.Sizes.SMALL,
                       submitting: l,
                       onClick: this.handleClickInvite,
-                      children: S.intl.string(S.t.jYnGPG),
+                      children: S.intl.string(S.t.jYnGPD),
                   })),
             (0, i.jsxs)("div", {
                 className: y.inviteRow,

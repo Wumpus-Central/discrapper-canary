@@ -16,8 +16,8 @@ var r = n(951288),
     _ = n(194082),
     m = n(710845),
     g = n(965048),
-    b = n(590293),
-    E = n(595816),
+    E = n(590293),
+    b = n(595816),
     v = n(863908),
     h = n(871118),
     S = n(517525),
@@ -78,11 +78,11 @@ function q(e) {
         } = e,
         Y = Z.Z.getVideoComponent(),
         z = (0, o.e7)([w.default], () => w.default.getId()),
-        K = (0, b.Z)(),
+        K = (0, E.Z)(),
         { stream: G, user: Q, streamId: X } = t,
         J = (0, o.e7)([j.Z], () => j.Z.getChannel(G.channelId)),
         $ = (0, o.e7)([C.Z], () => C.Z.getActiveStreamForUser(Q.id, G.guildId), [Q.id, G.guildId]),
-        { defaultWatchMultipleStreams: ee } = (0, E.P)({ location: "StreamTile" }),
+        { defaultWatchMultipleStreams: ee } = (0, b.P)({ location: "StreamTile" }),
         et = (0, o.e7)([C.Z], () => C.Z.getAllActiveStreams().length > 0),
         en = (0, o.e7)([P.Z], () => P.Z.isFocused()),
         er = (null == $ ? void 0 : $.ownerId) === z,
@@ -153,19 +153,19 @@ function q(e) {
                                   children: (0, r.jsx)(s.Button, {
                                       variant: "secondary",
                                       size: ea ? "sm" : "md",
-                                      text: M < 175 ? U.intl.string(U.t.I6JG46) : U.intl.string(U.t["7Xq/nV"]),
+                                      text: M < 175 ? U.intl.string(U.t["I6JG4+"]) : U.intl.string(U.t["7Xq/nZ"]),
                                   }),
                               }),
                               et && !ee
                                   ? (0, r.jsx)("div", {
                                         className: a()(W.cta, W.addCta),
                                         children: (0, r.jsx)(c.u, {
-                                            text: U.intl.string(U.t.wCrzut),
+                                            text: U.intl.string(U.t.wCrzur),
                                             children: (0, r.jsx)(s.hU, {
                                                 variant: "secondary",
                                                 size: ea ? "sm" : "md",
                                                 icon: s.OgY,
-                                                "aria-label": U.intl.string(U.t.wCrzut),
+                                                "aria-label": U.intl.string(U.t.wCrzur),
                                                 onClick: (e) => {
                                                     e.stopPropagation(), (0, d.rn)(t.stream, { forceMultiple: !0 });
                                                 },

@@ -31,7 +31,7 @@ function h(e) {
     return null == n
         ? null
         : (0, r.jsx)(u.gNt, {
-              label: g.intl.string(g.t["LPJmL/"]),
+              label: g.intl.string(g.t.LPJmLy),
               children: (0, r.jsx)(I.WM, {
                   children: (0, r.jsx)(I._2, {
                       description:
@@ -41,8 +41,8 @@ function h(e) {
                                     children: [
                                         (0, r.jsx)(o.u, {
                                             asContainer: !0,
-                                            "aria-label": g.intl.string(g.t["0g8Xd/"]),
-                                            text: g.intl.string(g.t["93S+lG"]),
+                                            "aria-label": g.intl.string(g.t["0g8Xd3"]),
+                                            text: g.intl.string(g.t["93S+lJ"]),
                                             children: (0, r.jsx)(u.P3F, {
                                                 children: (0, r.jsx)(d.Z, {
                                                     className: s()(N.roleTooltipItem, N.highestRole),
@@ -65,8 +65,8 @@ function h(e) {
                                         S &&
                                             (0, r.jsx)(o.u, {
                                                 asContainer: !0,
-                                                "aria-label": g.intl.string(g.t.ljnBlo),
-                                                text: g.intl.string(g.t.ljnBlo),
+                                                "aria-label": g.intl.string(g.t.ljnBlp),
+                                                text: g.intl.string(g.t.ljnBlp),
                                                 children: (0, r.jsx)(u.P3F, {
                                                     onClick: R,
                                                     className: N.addRoleContainer,
@@ -85,7 +85,7 @@ function h(e) {
                                     className: N.noRoles,
                                     children: (0, r.jsx)(u.Text, {
                                         variant: "text-sm/normal",
-                                        children: g.intl.string(g.t.nZfHsf),
+                                        children: g.intl.string(g.t.nZfHsb),
                                     }),
                                 }),
                   }),

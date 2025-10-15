@@ -71,8 +71,8 @@ let p = (e, t) =>
         if ((null == e || null == (t = e.body) ? void 0 : t.retry_after) != null) {
             let t = (0, r.Z)(new Date(), e.body.retry_after);
             a.Z.show({
-                title: d.intl.string(d.t.Whhv4w),
-                body: d.intl.format(d.t.VIJkAy, {
+                title: d.intl.string(d.t["Whhv4+"]),
+                body: d.intl.format(d.t.VIJkAw, {
                     duration: (0, i.jsx)(c.Z, {
                         showUnits: !0,
                         deadline: t,
