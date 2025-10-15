@@ -2612,6 +2612,14 @@ class e_ extends o.C {
                         a.enableVoiceActivityNotifications,
                     );
                     break;
+                case 12:
+                    a.enableFriendOnlineNotifications = s.D5.internalBinaryRead(
+                        e,
+                        e.uint32(),
+                        n,
+                        a.enableFriendOnlineNotifications,
+                    );
+                    break;
                 default:
                     let o = n.readUnknownField;
                     if ("throw" === o)
@@ -2652,6 +2660,12 @@ class e_ extends o.C {
                 s.D5.internalBinaryWrite(
                     e.enableVoiceActivityNotifications,
                     t.tag(11, r.TD.LengthDelimited).fork(),
+                    n,
+                ).join(),
+            e.enableFriendOnlineNotifications &&
+                s.D5.internalBinaryWrite(
+                    e.enableFriendOnlineNotifications,
+                    t.tag(12, r.TD.LengthDelimited).fork(),
                     n,
                 ).join();
         let i = n.writeUnknownFields;
@@ -2722,6 +2736,12 @@ class e_ extends o.C {
             {
                 no: 11,
                 name: "enable_voice_activity_notifications",
+                kind: "message",
+                T: () => s.D5,
+            },
+            {
+                no: 12,
+                name: "enable_friend_online_notifications",
                 kind: "message",
                 T: () => s.D5,
             },
