@@ -57054,7 +57054,10 @@ h3.improved__1689b:after {
 
 .compact__2debe {
     flex-direction: column;
-    gap: var(--space-4)
+    gap: var(--space-4);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content
 }
 
 .compactInfo__2debe>:not(:last-child):after {
