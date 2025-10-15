@@ -24,4 +24,5 @@ e.exports = {
     churnEntrypointDescriptionBrandRefresh: "churnEntrypointDescriptionBrandRefresh__3ce43",
     churnEntrypointDescription: "churnEntrypointDescription__3ce43",
     churnDiscountHeader: "churnDiscountHeader__3ce43",
+    heroOfferCountdown: "heroOfferCountdown__3ce43",
 };

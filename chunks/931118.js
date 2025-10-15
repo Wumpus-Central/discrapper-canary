@@ -10,6 +10,7 @@ var r = n(722733),
             (e.NAGBAR_REFRESH = "nagbar-refresh"),
             (e.OFFER_BADGE = "offer-badge"),
             (e.OFFER_COUNTDOWN = "offer-countdown"),
+            (e.HERO_COUNTDOWN = "hero-countdown"),
             e
         );
     })({});
@@ -31,6 +32,10 @@ let a = (0, r.Z)({
             },
             3: {
                 variant: "offer-countdown",
+                showNagbar: !1,
+            },
+            4: {
+                variant: "hero-countdown",
                 showNagbar: !1,
             },
         },

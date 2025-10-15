@@ -28,7 +28,7 @@ var i = n(120356),
     N = n(784238),
     R = n(117791),
     P = n(638212),
-    w = n(508070),
+    w = n(403503),
     D = n(382791),
     L = n(45474),
     x = n(175418),
@@ -154,9 +154,14 @@ let X = (e, t, i) => {
                         className: V.headerContainer,
                         children: [
                             (0, r.jsx)(k.Z, { containerVisibilityPercentage: J }),
-                            j && null != y.expires_at && (0, r.jsx)(w.Z, { expiresAt: y.expires_at }),
+                            j &&
+                                null != y.expires_at &&
+                                (0, r.jsx)(w.Z, {
+                                    expiresAt: y.expires_at,
+                                    className: F.heroOfferCountdown,
+                                }),
                             (0, r.jsx)(x.Z, {
-                                children: j ? Z.intl.format(Z.t["3yZP0N"], { percent: y.discount.amount }) : m,
+                                children: j ? Z.intl.format(Z.t["3yZP0G"], { percent: y.discount.amount }) : m,
                             }),
                             j &&
                                 null != O &&
@@ -164,7 +169,7 @@ let X = (e, t, i) => {
                                     className: F.churnEntrypointDescriptionBrandRefresh,
                                     variant: "text-sm/medium",
                                     color: "text-primary",
-                                    children: Z.intl.format(Z.t["3Q4wCw"], {
+                                    children: Z.intl.format(Z.t["3Q4wCy"], {
                                         discountedPrice: O,
                                         billingPeriod: (0, E.JP)(y.discount.user_usage_limit_interval),
                                         numMonths: y.discount.user_usage_limit,
@@ -190,13 +195,13 @@ let X = (e, t, i) => {
                                     variant: "expressive",
                                     icon: l.SrA,
                                     size: "md",
-                                    text: Z.intl.string(Z.t.zrCzVF),
+                                    text: Z.intl.string(Z.t.zrCzVB),
                                     onClick: () => X(C, D, L.R.CONFIRM_DISCOUNT),
                                 }),
                             (0, r.jsx)(R.Z, {
                                 variant: z || j ? "secondary" : "expressive",
                                 size: "md",
-                                buttonTextOverride: Z.intl.string(Z.t["3KomGR"]),
+                                buttonTextOverride: Z.intl.string(Z.t["3KomGa"]),
                             }),
                         ],
                     }),
@@ -231,12 +236,17 @@ let X = (e, t, i) => {
                     className: O ? F.churnDiscountContent : F.content,
                     children: [
                         f,
-                        O && null != p.expires_at && (0, r.jsx)(w.Z, { expiresAt: p.expires_at }),
+                        O &&
+                            null != p.expires_at &&
+                            (0, r.jsx)(w.Z, {
+                                expiresAt: p.expires_at,
+                                className: F.heroOfferCountdown,
+                            }),
                         (0, r.jsx)(l.Heading, {
                             variant: "display-lg",
                             color: "always-white",
                             className: O ? F.churnDiscountHeader : F.header,
-                            children: O && null != p ? Z.intl.format(Z.t["3yZP0N"], { percent: p.discount.amount }) : c,
+                            children: O && null != p ? Z.intl.format(Z.t["3yZP0G"], { percent: p.discount.amount }) : c,
                         }),
                         O &&
                             null != m &&
@@ -244,7 +254,7 @@ let X = (e, t, i) => {
                                 className: F.churnEntrypointDescription,
                                 variant: "text-sm/medium",
                                 color: "always-white",
-                                children: Z.intl.format(Z.t["3Q4wCw"], {
+                                children: Z.intl.format(Z.t["3Q4wCy"], {
                                     discountedPrice: m,
                                     billingPeriod: (0, E.JP)(p.discount.user_usage_limit_interval),
                                     numMonths: p.discount.user_usage_limit,
@@ -271,14 +281,14 @@ let X = (e, t, i) => {
                                                 variant: "expressive",
                                                 icon: l.SrA,
                                                 size: "md",
-                                                text: Z.intl.string(Z.t.zrCzVF),
+                                                text: Z.intl.string(Z.t.zrCzVB),
                                                 onClick: () => X(b, y, L.R.CONFIRM_DISCOUNT),
                                                 fullWidth: !0,
                                             }),
                                             (0, r.jsx)(R.Z, {
                                                 variant: "overlay-secondary",
                                                 size: "md",
-                                                buttonTextOverride: Z.intl.string(Z.t.Ve9Ge3),
+                                                buttonTextOverride: Z.intl.string(Z.t.Ve9Ge6),
                                                 fullWidth: !0,
                                             }),
                                         ],
@@ -289,7 +299,7 @@ let X = (e, t, i) => {
                                         children: (0, r.jsx)(C.Z, {
                                             look: s.iL.FILLED,
                                             color: s.Tt.BRAND,
-                                            textOptions: { textOverride: Z.intl.string(Z.t["3KomGR"]) },
+                                            textOptions: { textOverride: Z.intl.string(Z.t["3KomGa"]) },
                                             className: F.button,
                                         }),
                                     }),
@@ -327,7 +337,7 @@ let X = (e, t, i) => {
                                 children: (0, r.jsx)(C.Z, {
                                     look: s.iL.FILLED,
                                     color: s.Tt.BRAND,
-                                    textOptions: { textOverride: Z.intl.string(Z.t["3KomGR"]) },
+                                    textOptions: { textOverride: Z.intl.string(Z.t["3KomGa"]) },
                                     className: F.button,
                                 }),
                             }),
@@ -369,7 +379,7 @@ let X = (e, t, i) => {
                             children: (0, r.jsx)(C.Z, {
                                 look: s.iL.FILLED,
                                 color: s.Tt.BRAND,
-                                textOptions: { textOverride: Z.intl.string(Z.t["3KomGR"]) },
+                                textOptions: { textOverride: Z.intl.string(Z.t["3KomGa"]) },
                                 className: F.button,
                             }),
                         }),
@@ -393,15 +403,15 @@ let X = (e, t, i) => {
             h = (0, O.W)(),
             m = (0, b.Vi)(),
             E = (0, y._O)(),
-            v = Z.intl.string(Z.t.qYKftb),
+            v = Z.intl.string(Z.t.qYKftX),
             I = (0, S.b)(),
             T = (0, r.jsx)(J, { className: t }),
-            A = Z.intl.string(Z.t.ifwQZW),
+            A = Z.intl.string(Z.t.ifwQZb),
             { fractionalState: C, endsAt: N } = (0, _.Z)(),
             R = (0, f.ZP)(N, f.aj.CREDITS_ENDS_IN);
         h || m
             ? (T = (0, r.jsx)(ee, { isEligibleForBogoPromotion: m }))
-            : I && ((v = Z.intl.string(Z.t.qYKftb)), (T = (0, r.jsx)($, {})));
+            : I && ((v = Z.intl.string(Z.t.qYKftX)), (T = (0, r.jsx)($, {})));
         let P = null;
         if (C === G.a$.NONE || h)
             P = n
@@ -423,7 +433,7 @@ let X = (e, t, i) => {
                         color: "var(--premium-tier-2-purple-for-gradients)",
                     }),
                 }),
-                t = Z.intl.format(Z.t["yR+oDA"], { helpCenterLink: g.Z.getArticleURL(B.BhN.FRACTIONAL_PREMIUM_ABOUT) });
+                t = Z.intl.format(Z.t["yR+oDD"], { helpCenterLink: g.Z.getArticleURL(B.BhN.FRACTIONAL_PREMIUM_ABOUT) });
             P = (0, r.jsx)(p.Z, {
                 text: t,
                 "aria-label": t.toString(),
