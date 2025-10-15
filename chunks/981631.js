@@ -5956,6 +5956,7 @@ var nW = (function (e) {
             (e.SLOWMODE = "360016150952"),
             (e.CUSTOM_PROFILES_WISHLIST = "4403147417623#h_01K6DY1CJBBQHBFPETCDTJHE9B"),
             (e.NVIDIA_GEFORCE_CLOUD_GAMING_QUEST = "35372187686295"),
+            (e.GAME_SERVER_HOSTING = "35370817986839"),
             e
         );
     })({}),
