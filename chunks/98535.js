@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(951288),
     l = n(647438),
     i = n(442837),
@@ -16,8 +16,8 @@ var r = n(951288),
     _ = n(566564),
     m = n(795477),
     b = n(215023);
-let E = [b.AW.HOME, b.AW.ORBS];
-function v(e) {
+let v = [b.AW.HOME, b.AW.ORBS];
+function E(e) {
     let {
             tab: t,
             sortedCategories: n,
@@ -28,20 +28,21 @@ function v(e) {
         } = e,
         h = O();
     x(h);
-    let v = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
+    let E = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
         [S, y] = l.useState(void 0),
-        k = l.useCallback(
-            async (e, t, n) => {
+        [k, j] = l.useState(!0),
+        T = l.useCallback(
+            async (e, t, n, r) => {
                 c(e, t);
-                let r = n && !v,
-                    l = (0, d.$2)(t) ? b.AW.ORBS : b.AW.CATALOG;
-                y(t), await s(l, r);
+                let l = n && !E,
+                    i = (0, d.$2)(t) ? b.AW.ORBS : b.AW.CATALOG;
+                y(t), j(!r), await s(i, l);
             },
-            [v, s, c],
+            [E, s, c],
         ),
-        j = (0, g.FF)("CollectiblesContent"),
-        { searchError: T } = (0, f.a)();
-    return j && null != T
+        L = (0, g.FF)("CollectiblesContent"),
+        { searchError: I } = (0, f.a)();
+    return L && null != I
         ? (0, r.jsx)(m.Z, {})
         : null != h
           ? (0, r.jsx)(C.Z, {
@@ -49,9 +50,9 @@ function v(e) {
                 errorMessage: h,
                 errorOrigin: C.i.SHOP_PAGE,
             })
-          : E.includes(t)
+          : v.includes(t)
             ? (0, r.jsx)(_.Z, {
-                  handleTransition: k,
+                  handleTransition: T,
                   tab: t,
                   transitionState: a,
               })
@@ -59,7 +60,10 @@ function v(e) {
                   tab: t,
                   sortedCategories: n,
                   initialCategoryId: S,
-                  onUnmount: () => y(void 0),
+                  showFilterInitially: k,
+                  onUnmount: () => {
+                      y(void 0), j(!0);
+                  },
               });
 }
 let O = () =>

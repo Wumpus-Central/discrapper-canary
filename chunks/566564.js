@@ -16,8 +16,8 @@ var r = n(951288),
     _ = n(81136),
     m = n(302933),
     b = n(953655),
-    E = n(548685),
-    v = n(580914),
+    v = n(548685),
+    E = n(580914),
     O = n(92589),
     x = n(963278),
     S = n(531864),
@@ -85,7 +85,7 @@ let I = (e) => {
               ? (0, r.jsxs)("div", {
                     className: o()(L.loadingContainer, L.feedContent),
                     children: [
-                        (0, r.jsx)(v.Z, {
+                        (0, r.jsx)(E.Z, {
                             isLoading: A,
                             handleTransition: n,
                             tab: c,
@@ -95,7 +95,7 @@ let I = (e) => {
                             handleTransition: n,
                             categories: [],
                         }),
-                        (0, r.jsx)(E.Z, {
+                        (0, r.jsx)(v.Z, {
                             isLoading: A,
                             title: c === k.AW.ORBS ? T.intl.string(T.t.dFgeub) : T.intl.string(T.t.NSv5KS),
                             numVisibleItems: i,
@@ -112,7 +112,7 @@ let I = (e) => {
                             switch (e.type) {
                                 case s.z.HERO:
                                     u = (0, r.jsx)(
-                                        v.Z,
+                                        E.Z,
                                         {
                                             isLoading: A,
                                             handleTransition: n,
@@ -136,7 +136,7 @@ let I = (e) => {
                                 case s.z.FEED:
                                     let f = e.sortedSkuIds;
                                     u = (0, r.jsx)(
-                                        E.Z,
+                                        v.Z,
                                         {
                                             title:
                                                 c === k.AW.ORBS ? T.intl.string(T.t.dFgeub) : T.intl.string(T.t.NSv5KS),
@@ -271,7 +271,7 @@ let I = (e) => {
                                                 variant: "primary",
                                                 text: T.intl.string(T.t.AfrvRE),
                                                 onClick: () => {
-                                                    t("shop all button", void 0, !0),
+                                                    t("shop all button", void 0, !0, !1),
                                                         u.default.track(j.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                             collectibles_shop_session_id:
                                                                 null == f ? void 0 : f.sessionId,

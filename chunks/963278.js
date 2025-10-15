@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var l = n(120356),
     i = n.n(l),
-    s = n(442837),
-    o = n(481060),
+    o = n(442837),
+    s = n(481060),
     a = n(594174),
     c = n(381585),
     u = n(597688),
@@ -17,9 +17,9 @@ var l = n(120356),
     _ = n(310582);
 let m = (e) => {
     let { shelf: t, handleTransition: n, tab: l } = e,
-        m = (0, s.e7)([a.default], () => a.default.getCurrentUser()),
+        m = (0, o.e7)([a.default], () => a.default.getCurrentUser()),
         b = d.Z.useConfig({ location: "ShelfBlock" }).showCardsV2,
-        E = (0, c.sp)();
+        v = (0, c.sp)();
     return null == m
         ? null
         : (0, r.jsxs)("div", {
@@ -28,14 +28,14 @@ let m = (e) => {
                   (0, r.jsxs)("div", {
                       className: _.blockHeader,
                       children: [
-                          (0, r.jsx)(o.Heading, {
+                          (0, r.jsx)(s.Heading, {
                               variant: "heading-lg/semibold",
                               children: t.name,
                           }),
-                          (0, r.jsx)(o.Button, {
+                          (0, r.jsx)(s.Button, {
                               variant: "secondary",
                               text: h.intl.formatToPlainString(h.t.bc9RBA, { category_name: t.name }),
-                              onClick: () => n("shelf block see all", t.categorySkuId),
+                              onClick: () => n("shelf block see all", t.categorySkuId, void 0, !0),
                           }),
                       ],
                   }),
@@ -44,8 +44,8 @@ let m = (e) => {
                       children: (0, r.jsx)(r.Fragment, {
                           children: t.rankedSkuIds.map((e, n) => {
                               let i = u.Z.getCategoryForProduct(e),
-                                  s = u.Z.getProduct(e);
-                              return null == i || null == s
+                                  o = u.Z.getProduct(e);
+                              return null == i || null == o
                                   ? null
                                   : (0, r.jsx)(
                                         c.k0,
@@ -61,14 +61,14 @@ let m = (e) => {
                                                       {
                                                           skuId: e,
                                                           prioritizedCurrency: l === C.AW.ORBS ? p.tA.ORBS : void 0,
-                                                          onClickAnalytics: (0, p.wO)(s, l, E),
+                                                          onClickAnalytics: (0, p.wO)(o, l, v),
                                                       },
                                                       e,
                                                   )
                                                 : (0, r.jsx)(
                                                       g.Z,
                                                       {
-                                                          product: s,
+                                                          product: o,
                                                           category: i,
                                                           user: m,
                                                           tab: l,

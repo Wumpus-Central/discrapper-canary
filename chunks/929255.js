@@ -16,61 +16,61 @@ var r = n(951288),
     _ = n(841875),
     m = n(312030),
     b = n(795343),
-    E = n(763891),
-    v = n(215023),
+    v = n(763891),
+    E = n(215023),
     O = n(981631),
     x = n(388032),
     S = n(452785);
 function y(e) {
-    let { tab: t, sortedCategories: n, initialCategoryId: i, onUnmount: c } = e;
+    let { tab: t, sortedCategories: n, initialCategoryId: i, showFilterInitially: c = !0, onUnmount: u } = e;
     (0, g.A)();
-    let u = (0, d.FF)("CollectiblesBrowse"),
-        f = l.useRef(null),
-        { handleScroll: p } = (0, a.z)(f, t),
-        { setCategoryRef: h, handleScrollToCategory: m } = (0, C.xV)(f.current),
-        [b, E] = l.useState(u),
-        [v, O] = l.useState(!1);
+    let f = (0, d.FF)("CollectiblesBrowse"),
+        p = l.useRef(null),
+        { handleScroll: h } = (0, a.z)(p, t),
+        { setCategoryRef: m, handleScrollToCategory: b } = (0, C.xV)(p.current),
+        [v, E] = l.useState(f && c),
+        [O, x] = l.useState(!1);
     return (
         l.useEffect(() => {
-            null != i && m(i);
-        }, [i, m]),
+            null != i && b(i);
+        }, [i, b]),
         l.useEffect(
             () => () => {
-                null != c && c();
+                null != u && u();
             },
             [],
         ),
         l.useEffect(() => {
             let e = () => {
-                O(window.innerWidth < 1400);
+                x(window.innerWidth < 1400);
             };
             return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
         }, []),
         l.useEffect(() => {
-            u || E(!1);
-        }, [u, E]),
+            f || E(!1);
+        }, [f, E]),
         (0, r.jsx)("div", {
-            className: o()(S.pageWrapper, { [S.pageWrapperFilter]: u }),
+            className: o()(S.pageWrapper, { [S.pageWrapperFilter]: f }),
             children: (0, r.jsxs)("main", {
-                className: o()(S.page, { [S.pageFilter]: u }),
+                className: o()(S.page, { [S.pageFilter]: f }),
                 children: [
                     (0, r.jsx)(s.yWw, {
                         className: S.shopScroll,
-                        ref: f,
-                        onScroll: p,
+                        ref: p,
+                        onScroll: h,
                         children: (0, r.jsx)(k, {
-                            isSmallScreen: v,
-                            filterBarOpen: b,
+                            isSmallScreen: O,
+                            filterBarOpen: v,
                             setFilterBarOpen: E,
                             tab: t,
-                            scrollerRef: f,
+                            scrollerRef: p,
                             sortedCategories: n,
-                            setCategoryRef: h,
+                            setCategoryRef: m,
                         }),
                     }),
-                    b && !v && (0, r.jsx)("div", { className: S.divider }),
-                    b &&
-                        !v &&
+                    v && !O && (0, r.jsx)("div", { className: S.divider }),
+                    v &&
+                        !O &&
                         (0, r.jsx)(s.Ttm, {
                             className: S.filterBar,
                             children: (0, r.jsx)(_.Z, {}),
@@ -207,9 +207,9 @@ let k = (e) => {
                               },
                               a,
                           )
-                        : (0, v.RE)(a)
+                        : (0, E.RE)(a)
                           ? (0, r.jsx)(
-                                E.Z,
+                                v.Z,
                                 {
                                     scrollerRef: C,
                                     tab: a,
