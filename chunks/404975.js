@@ -1,4 +1,4 @@
-n.d(t, { P: () => j }), n(539854), n(388685);
+n.d(t, { P: () => p }), n(539854), n(388685);
 var r = n(951288),
     l = n(647438),
     o = n(120356),
@@ -7,14 +7,14 @@ var r = n(951288),
     s = n(481060),
     c = n(243778),
     u = n(984802),
-    d = n(59662),
-    f = n(28682),
-    m = n(854014),
-    b = n(388032),
-    p = n(845435);
-function j(e) {
-    let { root: t, header: n, footer: o, onClose: m, emptyState: j } = e,
-        { showNavigationMobile: v } = (0, d.t)(),
+    d = n(28682),
+    f = n(996435),
+    b = n(854014),
+    m = n(388032),
+    v = n(845435);
+function p(e) {
+    let { root: t, header: n, footer: o, onClose: b, emptyState: p } = e,
+        x = f.Z.useField("showNavigationMobile"),
         y = l.useMemo(() => {
             let e = [];
             return (
@@ -23,8 +23,8 @@ function j(e) {
                     n.forEach((t) => {
                         if (null != t.trailing)
                             switch (t.trailing.type) {
-                                case f.PU.BADGE_NEW:
-                                case f.PU.STRONGLY_DISCOURAGED_CUSTOM:
+                                case d.PU.BADGE_NEW:
+                                case d.PU.STRONGLY_DISCOURAGED_CUSTOM:
                                     var n, r, l;
                                     null == (r = (l = t.trailing).getDismissibleContentTypes) ||
                                         null == (n = r.call(l)) ||
@@ -56,29 +56,29 @@ function j(e) {
                 children: (t) => {
                     let { visibleContent: l } = t;
                     return (0, r.jsxs)("div", {
-                        className: i()(p.sidebar, e, {
-                            [p.mobile]: a.tq,
-                            [p.mobileNavigationOpen]: v,
+                        className: i()(v.sidebar, e, {
+                            [v.mobile]: a.tq,
+                            [v.mobileNavigationOpen]: x,
                         }),
                         children: [
                             (0, r.jsxs)("div", {
-                                className: p.fixedContent,
+                                className: v.fixedContent,
                                 children: [
                                     a.tq &&
                                         (0, r.jsx)("div", {
-                                            className: p.mobileCloseButton,
+                                            className: v.mobileCloseButton,
                                             children: (0, r.jsx)(s.hU, {
                                                 icon: s.Uz9,
-                                                onClick: m,
+                                                onClick: b,
                                                 variant: "icon-only",
                                                 size: "sm",
-                                                "aria-label": b.intl.string(b.t.cpT0Cg),
+                                                "aria-label": m.intl.string(m.t.cpT0Cg),
                                             }),
                                         }),
                                     (0, r.jsx)("div", {
                                         children: h.map((e) =>
                                             (0, r.jsx)(
-                                                x,
+                                                j,
                                                 {
                                                     section: e,
                                                     visibleContent: l,
@@ -88,18 +88,18 @@ function j(e) {
                                         ),
                                     }),
                                     null != n && (0, r.jsx)(n, {}),
-                                    null != j && 0 === g.length && (0, r.jsx)(j, {}),
+                                    null != p && 0 === g.length && (0, r.jsx)(p, {}),
                                 ],
                             }),
                             (0, r.jsxs)(s.zJl, {
-                                className: p.navScroller,
+                                className: v.navScroller,
                                 fade: !0,
                                 children: [
                                     (0, r.jsx)("nav", {
-                                        className: p.nav,
+                                        className: v.nav,
                                         children: g.map((e) =>
                                             (0, r.jsx)(
-                                                x,
+                                                j,
                                                 {
                                                     section: e,
                                                     visibleContent: l,
@@ -117,18 +117,18 @@ function j(e) {
             }),
     });
 }
-function x(e) {
+function j(e) {
     var t;
     let { section: n, visibleContent: l } = e,
         o = null == (t = n.useLabel) ? void 0 : t.call(n);
     return (0, r.jsxs)("ul", {
-        className: p.section,
+        className: v.section,
         children: [
             null != o &&
                 (0, r.jsx)("div", {
-                    className: p.sectionLabel,
+                    className: v.sectionLabel,
                     children: (0, r.jsx)(s.Heading, {
-                        className: p.label,
+                        className: v.label,
                         variant: "heading-sm/medium",
                         color: "text-tertiary",
                         children: o,
@@ -138,7 +138,7 @@ function x(e) {
                 (0, r.jsx)(
                     "li",
                     {
-                        children: (0, r.jsx)(m.y, {
+                        children: (0, r.jsx)(b.y, {
                             node: e,
                             visibleContent: l,
                         }),

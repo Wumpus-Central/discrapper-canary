@@ -2,7 +2,7 @@ n.d(t, { Z: () => f }), n(388685);
 var r = n(647438),
     i = n(399606),
     a = n(313789),
-    o = n(947889),
+    o = n(518596),
     s = n(663389),
     l = n(981631),
     c = n(526761);
@@ -13,19 +13,18 @@ let u = new Set(Object.values(c.NB)),
                 let e = s.Z.getSubsection();
                 return d(e) ? e : c.NB.USER_PROFILE;
             }),
-            t = (0, o.Z)(),
-            n = r.useCallback(
-                (n) => {
-                    e !== n &&
-                        t(a.n.PROFILE_PANEL, {
+            t = r.useCallback(
+                (t) => {
+                    e !== t &&
+                        (0, o.openUserSettings)(a.n.PROFILE_PANEL, {
                             section: l.oAB.PROFILE_CUSTOMIZATION,
-                            subsection: n,
+                            subsection: t,
                         });
                 },
-                [e, t],
+                [e],
             );
         return {
             subsection: e,
-            setSubsection: n,
+            setSubsection: t,
         };
     };

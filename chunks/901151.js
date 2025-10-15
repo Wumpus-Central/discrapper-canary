@@ -11,7 +11,7 @@ var r = n(951288),
     f = n(695346),
     _ = n(313789),
     p = n(749876),
-    h = n(947889),
+    h = n(518596),
     m = n(546957),
     g = n(838436),
     E = n(51331),
@@ -95,10 +95,9 @@ function S(e) {
                 e
             );
         }, [n]),
-        u = (0, h.Z)(),
-        f = i.useCallback(() => {
-            u(_.n.AUTHORIZED_APPS_PANEL, { section: y.oAB.AUTHORIZED_APPS });
-        }, [u]);
+        u = () => {
+            (0, h.openUserSettings)(_.n.AUTHORIZED_APPS_PANEL, { section: y.oAB.AUTHORIZED_APPS });
+        };
     return (0, r.jsxs)("div", {
         className: v.header,
         children: [
@@ -111,7 +110,7 @@ function S(e) {
                         children: a,
                     }),
                     (0, r.jsxs)(l.P3F, {
-                        onClick: f,
+                        onClick: u,
                         className: v.manageGamesLink,
                         children: [
                             (0, r.jsx)(l.Text, {

@@ -26,7 +26,7 @@ var r = n(951288),
     C = n(313789),
     N = n(317941),
     R = n(342386),
-    P = n(947889),
+    P = n(518596),
     w = n(981631),
     D = n(474936),
     L = n(388032),
@@ -216,12 +216,11 @@ let B = function () {
                     autoTrackExposure: !1,
                     disable: a,
                 },
-            ).enabled && k,
-        B = (0, P.Z)();
-    function Z() {
-        B(C.n.NITRO_PANEL, { section: w.oAB.PREMIUM });
+            ).enabled && k;
+    function B() {
+        (0, P.openUserSettings)(C.n.NITRO_PANEL, { section: w.oAB.PREMIUM });
     }
-    function F() {
+    function Z() {
         var e;
         let t = n.find((e) => e.giftCodeBatchId === D.m8 && !e.consumed),
             i = null != (e = n.filter((e) => e.giftCodeBatchId === D.rX && !e.consumed)) ? e : [],
@@ -344,7 +343,7 @@ let B = function () {
             ],
         });
     }
-    function V() {
+    function F() {
         return (0, r.jsxs)("div", {
             className: x.emptyState,
             children: [
@@ -355,7 +354,7 @@ let B = function () {
                 }),
                 (0, r.jsx)("p", {
                     className: x.emptyStateSubtext,
-                    children: L.intl.format(L.t.HezvJy, { onClick: Z }),
+                    children: L.intl.format(L.t.HezvJy, { onClick: B }),
                 }),
             ],
         });
@@ -363,7 +362,7 @@ let B = function () {
     return _ && m
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  F(),
+                  Z(),
                   (0, r.jsx)("div", {
                       className: x.marginContainer,
                       children: (0, r.jsxs)(u.y5t, {
@@ -374,7 +373,7 @@ let B = function () {
                           children: [
                               (0, r.jsx)(u.izJ, { className: x.divider }),
                               0 === Object.keys(s).length
-                                  ? V()
+                                  ? F()
                                   : l()
                                         .keys(s)
                                         .map((e) => {

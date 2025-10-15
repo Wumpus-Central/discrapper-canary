@@ -9,30 +9,29 @@ var r = n(951288),
     u = n(886880),
     d = n(82084),
     f = n(131051),
-    m = n(663389),
-    b = n(594174),
-    p = n(88658),
-    j = n(996733),
-    x = n(313789),
-    v = n(914578),
+    b = n(663389),
+    m = n(594174),
+    v = n(88658),
+    p = n(996733),
+    j = n(313789),
+    x = n(914578),
     y = n(920952),
     h = n(518596),
     g = n(388032),
     O = n(942408);
 function C(e) {
     let { destinationPanel: t, originPanel: n } = e;
-    (0, p.QB)({
+    (0, v.QB)({
         destinationPane: t,
         originPane: n,
-        subsection: m.Z.getSubsection(),
-        source: m.Z.getAnalyticsLocation(),
-        locationStack: m.Z.getAnalyticsLocations(),
+        subsection: b.Z.getSubsection(),
+        source: b.Z.getAnalyticsLocation(),
+        locationStack: b.Z.getAnalyticsLocations(),
     });
 }
 function S(e) {
-    var t,
-        { target: n } = e,
-        i = (function (e, t) {
+    var { target: t } = e,
+        n = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -53,20 +52,20 @@ function S(e) {
             }
             return l;
         })(e, ["target"]);
-    let a = j.Z.useField("query"),
-        { node: c, directory: u } = (0, f.Z)(y.Z, a),
-        p = ((t = x.n.ACCOUNT_PANEL), null == u.entry(n) ? t : n),
-        g = l.useRef(null);
+    let i = p.Z.useField("query"),
+        { node: a, directory: c } = (0, f.Z)(y.Z, i),
+        u = null != t && null != c.entry(t) ? t : void 0,
+        v = l.useRef(null);
     return ((0, s.ZP)(() => {
-        let e = m.Z.getSection();
+        let e = b.Z.getSection();
         null != e &&
             (C({
                 destinationPanel: e,
                 originPanel: null,
             }),
-            (g.current = e));
+            (v.current = e));
     }),
-    (0, o.e7)([b.default], () => null != b.default.getCurrentUser()))
+    (0, o.e7)([m.default], () => null != m.default.getCurrentUser()))
         ? (0, r.jsx)(
               d.Z,
               (function (e) {
@@ -95,29 +94,30 @@ function S(e) {
                   return e;
               })(
                   {
-                      root: c,
-                      directory: u,
-                      sidebarHeader: _,
-                      emptyState: P,
-                      sidebarFooter: v.Z,
+                      root: a,
+                      directory: c,
+                      sidebarHeader: P,
+                      emptyState: _,
+                      sidebarFooter: x.Z,
                       onPanelChange: (e) => {
                           let t = (0, h.getUserSettingsSectionsByWebUserSettings)().get(e);
                           null != t &&
                               (C({
                                   destinationPanel: t,
-                                  originPanel: g.current,
+                                  originPanel: v.current,
                               }),
-                              (g.current = t));
+                              (v.current = t));
                       },
-                      target: p,
+                      target: u,
+                      defaultTarget: j.n.ACCOUNT_PANEL,
                   },
-                  i,
+                  n,
               ),
           )
         : null;
 }
-function _() {
-    let e = j.Z.useField("query"),
+function P() {
+    let e = p.Z.useField("query"),
         t = l.useRef(null),
         [n, o] = (0, c.US)([i.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER]),
         s = l.useMemo(
@@ -132,10 +132,10 @@ function _() {
             [],
         ),
         d = l.useCallback((e) => {
-            j.Z.setState({ query: e });
+            p.Z.setState({ query: e });
         }, []),
         f = l.useCallback(() => {
-            j.Z.setState({ query: "" });
+            p.Z.setState({ query: "" });
         }, []);
     return (0, r.jsx)("div", {
         children: (0, r.jsxs)("div", {
@@ -162,7 +162,7 @@ function _() {
         }),
     });
 }
-function P() {
+function _() {
     return (0, r.jsxs)("div", {
         className: O.emptySearchResultsContainer,
         children: [

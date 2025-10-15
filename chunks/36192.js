@@ -19,7 +19,7 @@ var r = n(951288),
     y = n(823379),
     O = n(313789),
     v = n(10298),
-    I = n(947889),
+    I = n(518596),
     T = n(981631),
     S = n(921944),
     A = n(388032),
@@ -247,7 +247,6 @@ function R(e) {
     );
 }
 function P() {
-    let e = (0, I.Z)();
     return (0, r.jsxs)("div", {
         className: o()(C.session, C.legacySession),
         children: [
@@ -274,7 +273,7 @@ function P() {
                         children: (0, r.jsx)("span", {
                             children: A.intl.format(A.t["044+8v"], {
                                 onClick: () =>
-                                    e(O.n.ACCOUNT_PANEL, {
+                                    (0, I.openUserSettings)(O.n.ACCOUNT_PANEL, {
                                         section: T.oAB.ACCOUNT,
                                         analyticsLocations: [_.Z.USER_SETTINGS_SESSIONS],
                                     }),

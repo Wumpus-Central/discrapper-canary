@@ -58,7 +58,7 @@ var r = n(951288),
     X = n(494620),
     Q = n(273313),
     J = n(869743),
-    $ = n(947889),
+    $ = n(518596),
     ee = n(981631),
     et = n(468788),
     en = n(388032),
@@ -594,8 +594,7 @@ let ef = (e) => {
                     : null,
             eE = (0, q.O)(a.id),
             eb = (0, N.Z)(a),
-            ey = (0, $.Z)(),
-            eO = () =>
+            ey = () =>
                 (0, r.jsxs)("div", {
                     className: er.footer,
                     children: [
@@ -610,7 +609,9 @@ let ef = (e) => {
                                     text: en.intl.format(en.t.jUhnwc, {
                                         applicationName: a.name,
                                         onConnectionPress: () =>
-                                            ey(Y.n.CONNECTIONS_PANEL, { section: ee.oAB.CONNECTIONS }),
+                                            (0, $.openUserSettings)(Y.n.CONNECTIONS_PANEL, {
+                                                section: ee.oAB.CONNECTIONS,
+                                            }),
                                     }),
                                 })
                               : null,
@@ -625,14 +626,14 @@ let ef = (e) => {
                         }),
                     ],
                 }),
-            ev = (0, z.wy)("AuthorizedApps");
+            eO = (0, z.wy)("AuthorizedApps");
         return (0, r.jsx)("div", {
-            className: o()(er.authedAppV2, { [er.authedAppV2UserSettingsRedesign]: ev }),
+            className: o()(er.authedAppV2, { [er.authedAppV2UserSettingsRedesign]: eO }),
             children: (0, r.jsx)(g.y5t, {
                 component: eu(),
                 children: (0, r.jsxs)("div", {
                     className: er.appDetailsContainer,
-                    children: [ec(), eo(), eg(), eO()],
+                    children: [ec(), eo(), eg(), ey()],
                 }),
             }),
         });

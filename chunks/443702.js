@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => D });
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -17,7 +17,7 @@ var r = n(951288),
     E = n(78839),
     b = n(706454),
     y = n(313789),
-    O = n(947889),
+    O = n(518596),
     v = n(726985),
     I = n(981631),
     T = n(388032),
@@ -52,33 +52,10 @@ function C(e) {
     return e;
 }
 function N(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function R(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : N(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function P(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = w(e, t);
+        i = R(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -86,7 +63,7 @@ function P(e, t) {
     }
     return i;
 }
-function w(e, t) {
+function R(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -95,19 +72,19 @@ function w(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let D = () =>
+let P = () =>
     (0, r.jsx)("div", {
         className: S.syncing,
         children: (0, r.jsx)(o.$jN, {}),
     });
-class L extends i.PureComponent {
+class w extends i.PureComponent {
     componentDidMount() {
         s.Z.wait(() => {
             l.tZ(), l.jg();
         });
     }
     handleRedemptionRedirect() {
-        this.props.navigateTo(y.n.GIFT_PANEL, { section: I.oAB.INVENTORY });
+        (0, O.openUserSettings)(y.n.GIFT_PANEL, { section: I.oAB.INVENTORY });
     }
     render() {
         let {
@@ -125,7 +102,7 @@ class L extends i.PureComponent {
             : (0, r.jsxs)("div", {
                   children: [
                       e && 0 === Object.keys(n).length
-                          ? (0, r.jsx)(D, {})
+                          ? (0, r.jsx)(P, {})
                           : (0, r.jsx)(_.F, {
                                 setting: v.s6.BILLING_PAYMENT_METHODS,
                                 children: (0, r.jsx)(d.Z, {
@@ -164,29 +141,28 @@ class L extends i.PureComponent {
               });
     }
 }
-function x() {
+function D() {
     let e = (0, a.cj)([b.default, m.Z, g.Z, h.default, p.Z, E.Z], () => {
-            let e = E.Z.getPremiumTypeSubscription(),
-                t = h.default.getCurrentUser();
-            return null == t
-                ? { shouldRenderBillingSettings: !1 }
-                : {
-                      shouldRenderBillingSettings: !0,
-                      locale: b.default.locale,
-                      hide: p.Z.enabled,
-                      isClaimed: t.isClaimed(),
-                      isVerified: t.verified,
-                      premiumSubscription: e,
-                      defaultPaymentSourceId: g.Z.defaultPaymentSourceId,
-                      paymentSources: g.Z.paymentSources,
-                      syncing: m.Z.isSyncing,
-                      isRemovingPaymentSource: m.Z.isRemovingPaymentSource,
-                      isUpdatingPaymentSource: m.Z.isUpdatingPaymentSource,
-                  };
-        }),
-        t = (0, O.Z)();
-    if (!e.shouldRenderBillingSettings) return (0, r.jsx)(D, {});
-    let { shouldRenderBillingSettings: n } = e,
-        i = P(e, ["shouldRenderBillingSettings"]);
-    return (0, r.jsx)(L, R(C({}, i), { navigateTo: t }));
+        let e = E.Z.getPremiumTypeSubscription(),
+            t = h.default.getCurrentUser();
+        return null == t
+            ? { shouldRenderBillingSettings: !1 }
+            : {
+                  shouldRenderBillingSettings: !0,
+                  locale: b.default.locale,
+                  hide: p.Z.enabled,
+                  isClaimed: t.isClaimed(),
+                  isVerified: t.verified,
+                  premiumSubscription: e,
+                  defaultPaymentSourceId: g.Z.defaultPaymentSourceId,
+                  paymentSources: g.Z.paymentSources,
+                  syncing: m.Z.isSyncing,
+                  isRemovingPaymentSource: m.Z.isRemovingPaymentSource,
+                  isUpdatingPaymentSource: m.Z.isUpdatingPaymentSource,
+              };
+    });
+    if (!e.shouldRenderBillingSettings) return (0, r.jsx)(P, {});
+    let { shouldRenderBillingSettings: t } = e,
+        n = N(e, ["shouldRenderBillingSettings"]);
+    return (0, r.jsx)(w, C({}, n));
 }

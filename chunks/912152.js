@@ -6,23 +6,22 @@ var i = n(481060),
     o = n(74538),
     s = n(937615),
     l = n(313789),
-    c = n(947889),
+    c = n(518596),
     u = n(981631),
     d = n(474936),
     f = n(388032),
     _ = n(137435);
 function p(e) {
     let {
-            hasAppliedGuildBoosts: t,
-            hasBoostPerk: n,
-            hasGuildAffinitiesOrInGuild: r,
-            subscriptionIsPausedOrPausePending: i,
-        } = e,
-        _ = (0, c.Z)();
+        hasAppliedGuildBoosts: t,
+        hasBoostPerk: n,
+        hasGuildAffinitiesOrInGuild: r,
+        subscriptionIsPausedOrPausePending: i,
+    } = e;
     if (i)
         return {
             flavor: f.intl.format(f.t.doslJi, {
-                onClick: () => _(l.n.SUBSCRIPTIONS_PANEL, { section: u.oAB.SUBSCRIPTIONS }),
+                onClick: () => (0, c.openUserSettings)(l.n.SUBSCRIPTIONS_PANEL, { section: u.oAB.SUBSCRIPTIONS }),
             }),
         };
     if (!r) return { subtitle: f.intl.string(f.t.oiWYAQ) };
@@ -31,12 +30,12 @@ function p(e) {
             subtitle: f.intl.string(f.t.W5rDjY),
             flavor: f.intl.format(f.t.cUHcaW, { helpdeskArticle: a.Z.getArticleURL(u.BhN.GUILD_SUBSCRIPTIONS) }),
         };
-    let p = d.GP[d.Xh.PREMIUM_MONTH_GUILD],
-        h = o.ZP.getDefaultPrice(p.id, n),
-        m = (0, s.og)((0, s.T4)(h.amount, h.currency), p.interval, p.intervalCount);
+    let _ = d.GP[d.Xh.PREMIUM_MONTH_GUILD],
+        p = o.ZP.getDefaultPrice(_.id, n),
+        h = (0, s.og)((0, s.T4)(p.amount, p.currency), _.interval, _.intervalCount);
     return {
         subtitle: n ? f.intl.string(f.t.bhPzXV) : f.intl.string(f.t.Zs9h9f),
-        flavor: f.intl.formatToPlainString(f.t.PGgTdH, { monthlyGuildBoostPrice: m }),
+        flavor: f.intl.formatToPlainString(f.t.PGgTdH, { monthlyGuildBoostPrice: h }),
     };
 }
 let h = function (e) {

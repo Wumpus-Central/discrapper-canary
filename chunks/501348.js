@@ -36,7 +36,7 @@ var r = n(951288),
     k = n(329013),
     U = n(333859),
     G = n(273313),
-    B = n(947889),
+    B = n(518596),
     Z = n(726985),
     F = n(981631),
     V = n(921944),
@@ -202,14 +202,12 @@ let J = "cozy",
                 (0, r.jsx)(k.g, {}),
             ],
         }),
-    ea = () => {
-        let e = (0, B.Z)();
-        return Y.intl.format(Y.t.Jae48P, {
+    ea = () =>
+        Y.intl.format(Y.t.Jae48P, {
             onClick: () => {
-                e(j.n.ACCESSIBILITY_PANEL, { section: F.oAB.ACCESSIBILITY });
+                (0, B.openUserSettings)(j.n.ACCESSIBILITY_PANEL, { section: F.oAB.ACCESSIBILITY });
             },
         });
-    };
 class eo extends i.Component {
     renderZoomSlider() {
         return (

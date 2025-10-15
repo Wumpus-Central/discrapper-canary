@@ -34,7 +34,7 @@ var r = n(951288),
     M = n(263937),
     j = n(996073),
     k = n(273313),
-    U = n(947889),
+    U = n(518596),
     G = n(526761),
     B = n(726985),
     Z = n(981631),
@@ -109,8 +109,7 @@ function er(e) {
     p.U.useExperiment({ location: "useAccessibilityItems" }, { autoTrackExposure: !0 }).enabled;
     let t = g.Z.useConfig({ location: "UserSettingsAccessibility" }).enableShopTakeOver,
         n = O.fN.useExperiment({ location: "UserSettingsAccessibility" }).enabled,
-        i = (0, b.A)("UserSettingsAccessibility"),
-        a = (0, U.Z)();
+        i = (0, b.A)("UserSettingsAccessibility");
     return (0, r.jsx)(k.Z, {
         title: H.intl.string(H.t.G0neg4),
         children: (0, r.jsxs)(u.Kqy, {
@@ -177,7 +176,7 @@ function er(e) {
                         variant: "text-md/normal",
                         children: H.intl.format(H.t.DHpTjY, {
                             onAppearanceClick() {
-                                a(x.n.APPEARANCE_PANEL, { section: Z.oAB.APPEARANCE });
+                                (0, U.openUserSettings)(x.n.APPEARANCE_PANEL, { section: Z.oAB.APPEARANCE });
                             },
                         }),
                     }),
@@ -384,27 +383,28 @@ function ed() {
 function ef() {
     let e = (0, s.e7)([_.Z], () => _.Z.syncProfileThemeWithUserTheme),
         t = i.useRef(null);
-    (0, j.Z)(t, G.rP.SYNC_PROFILE_THEME_WITH_USER_THEME);
-    let n = (0, U.Z)();
-    return (0, r.jsx)("div", {
-        ref: t,
-        children: (0, r.jsx)(u.C3N, {
-            label: H.intl.string(H.t.BT8Bmp),
-            children: (0, r.jsx)(N.F, {
-                setting: B.s6.ACCESSIBILITY_PROFILE_COLORS_SYNC_THEMES,
-                children: (0, r.jsx)(u.rsf, {
-                    label: H.intl.string(H.t["sSY+mJ"]),
-                    description: H.intl.format(H.t.u6UjrK, {
-                        onThemeClick() {
-                            n(x.n.APPEARANCE_PANEL, { section: Z.oAB.APPEARANCE });
-                        },
+    return (
+        (0, j.Z)(t, G.rP.SYNC_PROFILE_THEME_WITH_USER_THEME),
+        (0, r.jsx)("div", {
+            ref: t,
+            children: (0, r.jsx)(u.C3N, {
+                label: H.intl.string(H.t.BT8Bmp),
+                children: (0, r.jsx)(N.F, {
+                    setting: B.s6.ACCESSIBILITY_PROFILE_COLORS_SYNC_THEMES,
+                    children: (0, r.jsx)(u.rsf, {
+                        label: H.intl.string(H.t["sSY+mJ"]),
+                        description: H.intl.format(H.t.u6UjrK, {
+                            onThemeClick() {
+                                (0, U.openUserSettings)(x.n.APPEARANCE_PANEL, { section: Z.oAB.APPEARANCE });
+                            },
+                        }),
+                        checked: e,
+                        onChange: f.Uv,
                     }),
-                    checked: e,
-                    onChange: f.Uv,
                 }),
             }),
-        }),
-    });
+        })
+    );
 }
 function e_() {
     let [e] = (0, s.Wu)([_.Z], () => [_.Z.syncForcedColors, _.Z.systemForcedColors]),

@@ -3,17 +3,17 @@ var r = n(951288),
     l = n(647438),
     o = n(120356),
     i = n.n(o),
-    a = n(599273),
+    a = n(258536),
     s = n(481060),
-    c = n(59662),
+    c = n(996435),
     u = n(910557);
 function d(e) {
     var t;
     let { category: n, onClick: l, active: o } = e,
         { useTitle: a, useNavigationTitle: c, key: d } = n,
         f = null == a ? void 0 : a(),
-        m = null != (t = null == c ? void 0 : c()) ? t : f;
-    return null == m
+        b = null != (t = null == c ? void 0 : c()) ? t : f;
+    return null == b
         ? null
         : (0, r.jsx)(
               s.P3F,
@@ -21,7 +21,7 @@ function d(e) {
                   onClick: l,
                   tag: "li",
                   className: i()({ [u.active]: o }),
-                  children: m,
+                  children: b,
               },
               d,
           );
@@ -29,8 +29,7 @@ function d(e) {
 function f(e) {
     let { categories: t } = e,
         [n, o] = l.useState(t[0].key),
-        { setShowNavigationMobile: i, navigateTo: f } = (0, c.t)(),
-        [m, b] = (0, s.q_F)(() => ({
+        [i, f] = (0, s.q_F)(() => ({
             y: 0,
             config: {
                 mass: 0.1,
@@ -40,7 +39,7 @@ function f(e) {
         }));
     return (
         l.useEffect(() => {
-            b({
+            f({
                 y:
                     36 *
                     Math.max(
@@ -48,7 +47,7 @@ function f(e) {
                         0,
                     ),
             });
-        }, [t, n, b]),
+        }, [t, n, f]),
         (0, r.jsxs)("div", {
             className: u.subnav,
             children: [
@@ -56,7 +55,7 @@ function f(e) {
                     className: u.track,
                     children: (0, r.jsx)(a.animated.div, {
                         className: u.thumb,
-                        style: m,
+                        style: i,
                     }),
                 }),
                 (0, r.jsx)("ul", {
@@ -66,7 +65,11 @@ function f(e) {
                             {
                                 onClick: () => {
                                     var t;
-                                    o((t = e.key)), i(!1), f(t);
+                                    o((t = e.key)),
+                                        c.Z.setState({
+                                            targetKey: t,
+                                            showNavigationMobile: !1,
+                                        });
                                 },
                                 active: e.key === n,
                                 category: e,

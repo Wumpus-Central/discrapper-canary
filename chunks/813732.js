@@ -23,7 +23,7 @@ var r = n(951288),
     T = n(856888),
     S = n(921801),
     A = n(313789),
-    C = n(947889),
+    C = n(518596),
     N = n(246946),
     R = n(663389),
     P = n(351402),
@@ -137,8 +137,7 @@ let J = function () {
         W = null !== e ? e.currentPeriodEnd : void 0,
         z =
             !(G && !(U.unactivatedUnits.length > 0)) &&
-            (U.fractionalState !== F.a$.NONE || U.unactivatedUnits.length > 0),
-        J = (0, C.Z)();
+            (U.fractionalState !== F.a$.NONE || U.unactivatedUnits.length > 0);
     return (i.useEffect(
         () => (
             c.Z.wait(() => {
@@ -183,7 +182,7 @@ let J = function () {
                                           (0, r.jsx)(O.Z, {
                                               count: j,
                                               onClickManageSubscription: () =>
-                                                  J(A.n.SUBSCRIPTIONS_PANEL, {
+                                                  (0, C.openUserSettings)(A.n.SUBSCRIPTIONS_PANEL, {
                                                       section: V.oAB.SUBSCRIPTIONS,
                                                       subsection: H.cP,
                                                   }),
@@ -197,7 +196,7 @@ let J = function () {
                                           (0, r.jsx)(I.Z, {
                                               count: M,
                                               onClickManageSubscription: () => {
-                                                  J(A.n.SUBSCRIPTIONS_PANEL, {
+                                                  (0, C.openUserSettings)(A.n.SUBSCRIPTIONS_PANEL, {
                                                       section: V.oAB.SUBSCRIPTIONS,
                                                       subsection: H.XZ,
                                                   }),

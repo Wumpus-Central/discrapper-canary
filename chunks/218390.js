@@ -31,7 +31,7 @@ var r = n(951288),
     N = n(703656),
     R = n(313789),
     P = n(342386),
-    w = n(947889),
+    w = n(518596),
     D = n(246946),
     L = n(78839),
     x = n(483444),
@@ -129,14 +129,13 @@ function ef() {
         i = (0, c.e7)([L.Z], () => L.Z.getPremiumTypeSubscription()),
         a = (0, T.Z)(),
         s = (0, G.W)(),
-        l = null !== i && null !== i.planIdFromItems,
-        u = (0, w.Z)();
+        l = null !== i && null !== i.planIdFromItems;
     if (!l && !a.isFractionalPremiumActive) return null;
-    let _ = a.isFractionalPremiumActive,
-        h = null !== i && i.hasActiveTrial,
-        m = e || h,
-        g = () =>
-            _ && !s
+    let u = a.isFractionalPremiumActive,
+        _ = null !== i && i.hasActiveTrial,
+        h = e || _,
+        m = () =>
+            u && !s
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(z.mn, {
@@ -180,8 +179,8 @@ function ef() {
                           ],
                       })
                     : null,
-        E = () =>
-            _ && !l
+        g = () =>
+            u && !l
                 ? (0, r.jsxs)(d.hE2, {
                       fullWidth: !0,
                       direction: "vertical",
@@ -230,7 +229,9 @@ function ef() {
                                       cta_type: ea,
                                       target: eo,
                                   }),
-                                      u(R.n.SUBSCRIPTIONS_PANEL, { section: ee.oAB.SUBSCRIPTIONS });
+                                      (0, w.openUserSettings)(R.n.SUBSCRIPTIONS_PANEL, {
+                                          section: ee.oAB.SUBSCRIPTIONS,
+                                      });
                               },
                               text: et.intl.string(et.t["9uDy6O"]),
                               fullWidth: !0,
@@ -239,15 +240,15 @@ function ef() {
                       ],
                   });
     return (0, r.jsxs)("div", {
-        className: o()(en.tierCard, { [en.withTier2Rim]: m }),
+        className: o()(en.tierCard, { [en.withTier2Rim]: h }),
         children: [
             (0, r.jsxs)("div", {
                 className: en.tierInfo,
                 children: [
                     (0, r.jsx)(x.Z, { className: en.tierTitle }),
+                    m(),
+                    (0, r.jsx)(q.nT, { featureSet: u ? q.uZ.FRACTIONAL_PREMIUM : q.uZ.DEFAULT }),
                     g(),
-                    (0, r.jsx)(q.nT, { featureSet: _ ? q.uZ.FRACTIONAL_PREMIUM : q.uZ.DEFAULT }),
-                    E(),
                 ],
             }),
             (0, r.jsx)("div", {

@@ -36,7 +36,7 @@ var r = n(951288),
     k = n(695346),
     U = n(313789),
     G = n(461877),
-    B = n(947889),
+    B = n(518596),
     Z = n(726985),
     F = n(981631),
     V = n(815660),
@@ -97,10 +97,7 @@ function X(e, t) {
 }
 let Q = j.ZP.getEnableHardwareAcceleration() ? f.Xo$ : f.qEK;
 function J() {
-    let e = (0, B.Z)();
-    return () => {
-        e(U.n.PROFILE_PANEL, { section: F.oAB.PROFILE_CUSTOMIZATION });
-    };
+    (0, B.openUserSettings)(U.n.PROFILE_PANEL, { section: F.oAB.PROFILE_CUSTOMIZATION });
 }
 function $(e) {
     var t, a;
@@ -215,63 +212,64 @@ function ee(e) {
         _ = M.ZP.getGlobalName(a),
         p = i.useRef(null),
         [h, m] = i.useState(!1);
-    i.useEffect(() => {
-        m(null != p.current && p.current.scrollWidth > p.current.clientWidth);
-    }, [_]);
-    let g = J();
-    return (0, r.jsxs)("div", {
-        className: o()(W.field, s),
-        children: [
-            (0, r.jsx)("div", {
-                className: W.constrainedRow,
-                children: (0, r.jsxs)("div", {
-                    className: W.usernameRow,
-                    children: [
-                        (0, r.jsx)(f.Text, {
-                            variant: "text-md/medium",
-                            className: W.fieldTitle,
-                            children: Y.intl.string(Y.t["9AjdkJ"]),
-                        }),
-                        (0, r.jsx)("div", {
-                            className: W.usernameInnerRow,
-                            ref: p,
-                            children: (0, r.jsx)(f.Text, {
-                                tag: "span",
-                                color: "header-primary",
-                                variant: "text-md/normal",
-                                children: null == _ ? Y.intl.string(Y.t.ep5kjI) : _,
-                            }),
-                        }),
-                    ],
-                }),
-            }),
-            null != c &&
+    return (
+        i.useEffect(() => {
+            m(null != p.current && p.current.scrollWidth > p.current.clientWidth);
+        }, [_]),
+        (0, r.jsxs)("div", {
+            className: o()(W.field, s),
+            children: [
                 (0, r.jsx)("div", {
-                    className: W.pomeloWarning,
-                    children: (0, r.jsx)(d.u, {
-                        __unsupportedReactNodeAsText: c,
-                        "aria-label": !1,
-                        children: (0, r.jsx)(f.Mgn, {
-                            size: "custom",
-                            width: 20,
-                            height: 20,
-                            color: u.Z.colors.STATUS_WARNING.css,
-                        }),
+                    className: W.constrainedRow,
+                    children: (0, r.jsxs)("div", {
+                        className: W.usernameRow,
+                        children: [
+                            (0, r.jsx)(f.Text, {
+                                variant: "text-md/medium",
+                                className: W.fieldTitle,
+                                children: Y.intl.string(Y.t["9AjdkJ"]),
+                            }),
+                            (0, r.jsx)("div", {
+                                className: W.usernameInnerRow,
+                                ref: p,
+                                children: (0, r.jsx)(f.Text, {
+                                    tag: "span",
+                                    color: "header-primary",
+                                    variant: "text-md/normal",
+                                    children: null == _ ? Y.intl.string(Y.t.ep5kjI) : _,
+                                }),
+                            }),
+                        ],
                     }),
                 }),
-            (0, r.jsx)("div", {
-                "data-button-hoisted-classname-wrapper": !0,
-                className: W.fieldButton,
-                children: (0, r.jsx)(f.Button, {
-                    variant: "secondary",
-                    size: "sm",
-                    text: h ? Y.intl.string(Y.t["16kTw8"]) : Y.intl.string(Y.t.bt75u7),
-                    "aria-label": Y.intl.string(Y.t.YXeWYG),
-                    onClick: g,
+                null != c &&
+                    (0, r.jsx)("div", {
+                        className: W.pomeloWarning,
+                        children: (0, r.jsx)(d.u, {
+                            __unsupportedReactNodeAsText: c,
+                            "aria-label": !1,
+                            children: (0, r.jsx)(f.Mgn, {
+                                size: "custom",
+                                width: 20,
+                                height: 20,
+                                color: u.Z.colors.STATUS_WARNING.css,
+                            }),
+                        }),
+                    }),
+                (0, r.jsx)("div", {
+                    "data-button-hoisted-classname-wrapper": !0,
+                    className: W.fieldButton,
+                    children: (0, r.jsx)(f.Button, {
+                        variant: "secondary",
+                        size: "sm",
+                        text: h ? Y.intl.string(Y.t["16kTw8"]) : Y.intl.string(Y.t.bt75u7),
+                        "aria-label": Y.intl.string(Y.t.YXeWYG),
+                        onClick: J,
+                    }),
                 }),
-            }),
-        ],
-    });
+            ],
+        })
+    );
 }
 function et(e) {
     let { text: t, censor: n, revealLabel: a, hideLabel: o } = e,
@@ -561,8 +559,7 @@ function eo() {
             userId: null == t ? void 0 : t.id,
             size: f.EFr.SIZE_80,
         }),
-        p = J(),
-        h = (0, A.Z)();
+        p = (0, A.Z)();
     return (0, r.jsxs)("div", {
         className: W.accountProfileCard,
         children: [
@@ -572,7 +569,7 @@ function eo() {
                 avatarSize: f.EFr.SIZE_80,
                 avatarOffsetX: 16,
                 avatarOffsetY: -22,
-                bannerWidth: h ? 696 : 660,
+                bannerWidth: p ? 696 : 660,
                 bannerHeight: 100,
                 themePadding: 0,
             }),
@@ -612,7 +609,7 @@ function eo() {
                         variant: "primary",
                         size: "sm",
                         text: Y.intl.string(Y.t["2p2aY2"]),
-                        onClick: p,
+                        onClick: J,
                     }),
                 ],
             }),

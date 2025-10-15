@@ -9,7 +9,7 @@ var i = n(442837),
     c = n(358085),
     u = n(313789),
     d = n(273313),
-    f = n(947889),
+    f = n(518596),
     _ = n(726985),
     p = n(981631),
     h = n(388032),
@@ -53,8 +53,7 @@ function b() {
             disableNotifications: O,
             enableContentProtection: v,
         } = (0, i.cj)([l.Z], () => E({}, l.Z.getSettings())),
-        I = (0, f.Z)(),
-        T = () =>
+        I = () =>
             (0, r.jsx)(a.ToO, {
                 iconClassName: m.noticeIcon,
                 type: a.Dd5.PRIMARY,
@@ -67,20 +66,20 @@ function b() {
                 title: h.intl.string(h.t.bxGbHB),
                 body: h.intl.format(h.t["4rmZn5"], { streamkitURL: p.EYA.STREAMKIT }),
             }),
-        S = () => {
+        T = () => {
             if (c.isPlatformEmbedded)
                 return (0, r.jsx)(a.rsf, {
                     label: h.intl.string(h.t.PKDAJy),
                     description: h.intl.string(h.t.ZPi4lJ),
                     checked: t,
-                    onChange: (e) => A("autoToggle", e),
+                    onChange: (e) => S("autoToggle", e),
                 });
         },
-        A = (e, t) => {
+        S = (e, t) => {
             o.Z.update({ [e]: t });
         },
-        C = () => {
-            I(u.n.KEYBINDS_PANEL, { section: p.oAB.KEYBINDS });
+        A = () => {
+            (0, f.openUserSettings)(u.n.KEYBINDS_PANEL, { section: p.oAB.KEYBINDS });
         };
     return (0, r.jsx)(d.Z, {
         title: h.intl.string(h.t.S5GfOT),
@@ -89,7 +88,7 @@ function b() {
             children: [
                 (0, r.jsx)(s.F, {
                     setting: _.s6.STREAMER_MODE_INTEGRATIONS,
-                    children: T(),
+                    children: I(),
                 }),
                 (0, r.jsx)(s.F, {
                     setting: _.s6.STREAMER_MODE_ENABLE,
@@ -98,11 +97,11 @@ function b() {
                         children: [
                             (0, r.jsx)(a.rsf, {
                                 label: h.intl.string(h.t.p9ZAJS),
-                                description: h.intl.format(h.t.MLVL2N, { onClick: C }),
+                                description: h.intl.format(h.t.MLVL2N, { onClick: A }),
                                 checked: e,
-                                onChange: (e) => A("enabled", e),
+                                onChange: (e) => S("enabled", e),
                             }),
-                            S(),
+                            T(),
                             (0, r.jsx)(a.izJ, {}),
                         ],
                     }),
@@ -117,7 +116,7 @@ function b() {
                                 label: h.intl.string(h.t.UpQziI),
                                 description: h.intl.string(h.t["+9Lra2"]),
                                 checked: b,
-                                onChange: (e) => A("hidePersonalInformation", e),
+                                onChange: (e) => S("hidePersonalInformation", e),
                             }),
                         }),
                         (0, r.jsx)(s.F, {
@@ -126,7 +125,7 @@ function b() {
                                 label: h.intl.string(h.t.q7WNGh),
                                 description: h.intl.string(h.t.m7mS2d),
                                 checked: g,
-                                onChange: (e) => A("hideInstantInvites", e),
+                                onChange: (e) => S("hideInstantInvites", e),
                             }),
                         }),
                         (0, r.jsx)(s.F, {
@@ -135,7 +134,7 @@ function b() {
                                 label: h.intl.string(h.t.o56OZm),
                                 description: h.intl.string(h.t.eAkaio),
                                 checked: y,
-                                onChange: (e) => A("disableSounds", e),
+                                onChange: (e) => S("disableSounds", e),
                             }),
                         }),
                         (0, r.jsx)(s.F, {
@@ -144,7 +143,7 @@ function b() {
                                 label: h.intl.string(h.t.qmYiYW),
                                 description: h.intl.string(h.t.ZAmpQ0),
                                 checked: O,
-                                onChange: (e) => A("disableNotifications", e),
+                                onChange: (e) => S("disableNotifications", e),
                             }),
                         }),
                         (0, r.jsx)(s.F, {
@@ -153,7 +152,7 @@ function b() {
                                 label: h.intl.string(h.t["iA81+f"]),
                                 description: h.intl.string(h.t.P4vj0t),
                                 checked: v,
-                                onChange: (e) => A("enableContentProtection", e),
+                                onChange: (e) => S("enableContentProtection", e),
                             }),
                         }),
                     ],

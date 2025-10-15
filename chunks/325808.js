@@ -11,7 +11,7 @@ var r = n(951288),
     f = n(358085),
     _ = n(383451),
     p = n(313789),
-    h = n(947889),
+    h = n(518596),
     m = n(962100),
     g = n(981631),
     E = n(388032);
@@ -52,15 +52,14 @@ function I(e) {
     let t,
         { inputMode: n } = e,
         { shortcut: i, delay: o, pttLatchingEnabled: u } = (0, a.cj)([d.Z], () => d.Z.getModeOptions()),
-        { enableLatching: b } = (0, _.H)({ location: "PTTTools" }),
-        y = (0, h.Z)();
+        { enableLatching: b } = (0, _.H)({ location: "PTTTools" });
     return (
         (t =
             f.isPlatformEmbedded || n !== g.pM4.PUSH_TO_TALK
                 ? (0, r.jsx)(s.Wn, {
                       messageType: s.QYI.INFO,
                       children: E.intl.format(E.t.HVvn5e, {
-                          onClick: () => y(p.n.KEYBINDS_PANEL, { section: g.oAB.KEYBINDS }),
+                          onClick: () => (0, h.openUserSettings)(p.n.KEYBINDS_PANEL, { section: g.oAB.KEYBINDS }),
                       }),
                   })
                 : (0, r.jsx)(s.Wn, {
