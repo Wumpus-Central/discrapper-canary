@@ -1,61 +1,66 @@
 n.d(t, {
-    F: () => h,
-    a: () => g,
+    F: () => m,
+    a: () => b,
 }),
     n(388685);
 var r = n(951288),
-    i = n(28664),
-    l = n(481060),
-    a = n(774078),
-    o = n(535278),
-    s = n(246965),
-    c = n(197155),
-    u = n(476398);
-let d = (e) => {
+    i = n(704215),
+    l = n(28664),
+    a = n(481060),
+    o = n(774078),
+    s = n(266454),
+    c = n(535278),
+    u = n(246965),
+    d = n(197155),
+    p = n(476398);
+let f = (e) => {
         let { digit: t } = e;
         return (0, r.jsx)("div", {
-            className: c.digit,
-            children: (0, r.jsx)(l.Text, {
+            className: d.digit,
+            children: (0, r.jsx)(a.Text, {
                 variant: "text-xxs/semibold",
                 color: "text-primary",
                 children: t,
             }),
         });
     },
-    p = (e) => {
+    h = (e) => {
         let { value: t } = e,
             n = t.toString().padStart(2, "0"),
             [i, l] = [n[0], n[1]];
         return (0, r.jsxs)("div", {
-            className: c.timeUnit,
-            children: [(0, r.jsx)(d, { digit: i }), (0, r.jsx)(d, { digit: l })],
+            className: d.timeUnit,
+            children: [(0, r.jsx)(f, { digit: i }), (0, r.jsx)(f, { digit: l })],
         });
     },
-    f = (e) => {
+    g = (e) => {
         let { countdown: t, tooltipText: n } = e,
-            { days: a, hours: o, minutes: s, seconds: d } = t,
-            f = a > 0 ? [a, o, s] : o > 0 ? [o, s, d] : [s, d];
-        return (0, r.jsx)(i.u, {
+            { days: o, hours: c, minutes: u, seconds: f } = t,
+            g = o > 0 ? [o, c, u] : c > 0 ? [c, u, f] : [u, f],
+            m = (0, s.zu)(i.z.NITRO_TAB_BADGE_COUNTDOWN);
+        return (0, r.jsx)(l.u, {
             text: n,
             position: "right",
-            children: (0, r.jsxs)("div", {
+            children: (0, r.jsxs)(a.P3F, {
+                onClick: () => (0, s.Q3)(i.z.NITRO_TAB_BADGE_COUNTDOWN),
                 children: [
-                    (0, r.jsx)("img", {
-                        src: u,
-                        alt: "",
-                        className: c.gradientCircles,
-                    }),
-                    (0, r.jsx)(l.Kqy, {
+                    !m &&
+                        (0, r.jsx)("img", {
+                            src: p,
+                            alt: "",
+                            className: d.gradientCircles,
+                        }),
+                    (0, r.jsx)(a.Kqy, {
                         gap: 0,
                         direction: "horizontal",
-                        className: c.countdownContainer,
-                        children: f.map((e, t) =>
+                        className: d.countdownContainer,
+                        children: g.map((e, t) =>
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    (0, r.jsx)(p, { value: e }, t),
-                                    t !== f.length - 1 &&
+                                    (0, r.jsx)(h, { value: e }, t),
+                                    t !== g.length - 1 &&
                                         (0, r.jsx)("div", {
-                                            className: c.delinator,
+                                            className: d.delinator,
                                             children: ":",
                                         }),
                                 ],
@@ -66,25 +71,25 @@ let d = (e) => {
             }),
         });
     },
-    h = (e) => {
+    m = (e) => {
         let { trialOffer: t, subscriptionTier: n } = e,
             i = new Date(t.expires_at),
-            l = (0, a.Z)(i, 1000);
+            l = (0, o.Z)(i, 1000);
         return null == l
             ? null
-            : (0, r.jsx)(f, {
+            : (0, r.jsx)(g, {
                   countdown: l,
-                  tooltipText: (0, s.A)(n, l),
+                  tooltipText: (0, u.A)(n, l),
               });
     },
-    g = (e) => {
+    b = (e) => {
         let { discountOffer: t } = e,
             n = new Date(t.expires_at),
-            i = (0, a.Z)(n, 1000);
+            i = (0, o.Z)(n, 1000);
         return null == i
             ? null
-            : (0, r.jsx)(f, {
+            : (0, r.jsx)(g, {
                   countdown: i,
-                  tooltipText: (0, o.A)(i, Number(t.discount.amount)),
+                  tooltipText: (0, c.A)(i, Number(t.discount.amount)),
               });
     };
