@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685), n(65234), n(111804), n(490233), n(97749), n(35282);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -55,9 +55,7 @@ let x = (e) => {
         { analyticsLocations: W } = (0, f.ZP)(d.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [K, z] = i.useState(!1),
         q = (0, s.e7)([h.Z], () => (null != t ? h.Z.getUserProfile(t) : null)),
-        X = "true" === new URLSearchParams(window.location.search).get("autoScroll");
-    window.history.replaceState({}, "", window.location.pathname);
-    let Q = (0, b.Z)({ location: "SubscriberNitroHome" });
+        X = (0, b.Z)({ location: "SubscriberNitroHome" });
     return null == q
         ? (0, r.jsx)("div", {
               className: o()(D.container, D.loading),
@@ -71,7 +69,7 @@ let x = (e) => {
                       children: [
                           (0, r.jsx)(c.$1m, {
                               color: "nitro-pink",
-                              className: o()(D.container, D.responsiveContainer, { [D.hiddenGradient]: !Q }),
+                              className: o()(D.container, D.responsiveContainer, { [D.hiddenGradient]: !X }),
                               children: (0, r.jsxs)(f.Gt, {
                                   value: W,
                                   children: [
@@ -83,7 +81,7 @@ let x = (e) => {
                                           children: (0, r.jsx)(S.Z, {
                                               buttonVisibilityRef: U,
                                               className: D.heroHeading,
-                                              enablePremiumBrandRefresh: Q,
+                                              enablePremiumBrandRefresh: X,
                                               userDiscountOffer: k,
                                               discountedPrice: H,
                                           }),
@@ -93,7 +91,6 @@ let x = (e) => {
                                           className: D.whatsNew,
                                           noBackground: !0,
                                           leftAlignHeaders: !0,
-                                          shouldAutoScroll: X,
                                       }),
                                       (0, r.jsx)(I.Z, {
                                           className: D.perksDiscoverability,
@@ -153,7 +150,7 @@ let x = (e) => {
                       isAllPerksVisible: G,
                       setIsAllPerksVisible: B,
                       previousComponent: A.MQ.HOME,
-                      enablePremiumBrandRefresh: Q,
+                      enablePremiumBrandRefresh: X,
                   }),
               ],
           });
