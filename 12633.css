@@ -67079,44 +67079,6 @@ html .progress__61462 {
     text-transform: capitalize
 }
 
-.notice__29487 {
-    align-items: center;
-    background: linear-gradient(90deg, var(--color-scoped-expressive-background-nitro-1-start, rgba(179, 38, 156, .7)) 0, var(--color-scoped-expressive-background-nitro-1-end, rgba(20, 20, 203, .7)) 100%), var(--background-base-lowest);
-    display: flex;
-    height: 54px;
-    position: relative;
-    z-index: 101
-}
-
-@supports not ((grid-template-columns:subgrid) and (white-space-collapse:collapse)) {
-    .notice__29487 {
-        border-top-left-radius: 0
-    }
-}
-
-@supports (grid-template-columns:subgrid) and (white-space-collapse:collapse) {
-    .notice__29487 {
-        grid-area: notice
-    }
-}
-
-.noticeContent__29487 {
-    align-items: center;
-    display: flex;
-    flex: 1;
-    gap: var(--space-16);
-    justify-content: center
-}
-
-.noticeText__29487 strong {
-    font-weight: var(--font-weight-semibold)
-}
-
-.closeButton__29487 {
-    margin-left: auto;
-    margin-right: var(--space-12)
-}
-
 .premiumIcon__9671b {
     height: 24px;
     margin-right: 8px;
