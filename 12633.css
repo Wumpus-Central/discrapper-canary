@@ -1567,7 +1567,7 @@
 
 .dim__61c93 span {
     background-color: var(--background-mod-subtle);
-    color: var(--text-primary)
+    color: var(--text-secondary)
 }
 
 .dim__61c93 span .bindArrow__61c93 g {
@@ -1575,11 +1575,11 @@
 }
 
 .dim__61c93 span:active {
-    color: var(--text-primary)
+    color: var(--text-secondary)
 }
 
 .dim__61c93 span:active .bindArrow__61c93 g {
-    fill: var(--text-primary)
+    fill: var(--text-secondary)
 }
 
 .keybindShortcutSearchPopout__61c93 {
