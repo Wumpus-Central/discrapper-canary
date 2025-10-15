@@ -266,6 +266,7 @@ function P(e) {
                                 isOpen: W,
                                 isInert: es,
                                 hasValue: eo,
+                                hasError: (null == en ? void 0 : en.errorMessageId) != null,
                                 width: eh,
                                 handleToggle: eu,
                                 handleClear: ef,

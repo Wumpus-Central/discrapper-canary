@@ -446,6 +446,7 @@ function M(e) {
                 isOpen: !!J,
                 isInert: K,
                 hasValue: q,
+                hasError: (null == M ? void 0 : M.errorMessageId) != null,
                 handleToggle: ec,
                 handleClear: eu,
                 children: (0, r.jsx)("div", {

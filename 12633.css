@@ -4792,8 +4792,13 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     --custom-input-border-color: var(--input-border-critical);
     --custom-input-text-color: var(--input-foreground-critical);
     --custom-input-background-color: var(--input-background-critical);
-    --custom-input-hover-border-color: var(--input-border-critical-hover);
+    --custom-input-hover-border-color: var(--input-border-critical);
     --custom-input-focus-border-color: var(--input-border-critical)
+}
+
+.mana-text-inputs .wrapper__3412a[data-error=true]:not([data-read-only=true], [data-disabled=true], :focus-within):hover {
+    outline: 2px solid var(--input-border-critical);
+    outline-offset: -2px
 }
 
 .wrapper__3412a[data-disabled=true] {

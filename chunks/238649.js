@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => D });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -11,85 +11,87 @@ var r = n(951288),
     f = n(431),
     _ = n(357355),
     p = n(140465),
-    h = n(104494),
-    m = n(639119),
-    g = n(105759),
-    E = n(117791),
-    b = n(638212),
-    y = n(403503),
-    O = n(422034),
-    v = n(206127),
-    I = n(710220),
-    T = n(164662),
-    S = n(638631),
-    A = n(254139),
-    C = n(474936),
-    N = n(388032),
-    R = n(350169);
-let P = (e, t) => {
+    h = n(931118),
+    m = n(104494),
+    g = n(639119),
+    E = n(105759),
+    b = n(117791),
+    y = n(638212),
+    O = n(403503),
+    v = n(422034),
+    I = n(206127),
+    T = n(710220),
+    S = n(164662),
+    A = n(638631),
+    C = n(254139),
+    N = n(474936),
+    R = n(388032),
+    P = n(350169);
+let w = (e, t) => {
         var n;
-        let { className: i, subscriptionTier: a, isEligibleForBogoPromotion: P } = e,
-            { analyticsLocations: w } = (0, d.ZP)(u.Z.PREMIUM_MARKETING_HERO_CTA),
-            D = (0, p.Nx)(),
-            L = (0, v.$)(),
-            x = (0, g.Z)(),
-            M = null != x,
-            j = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
-            { visibilityPercentageRef: k, visibilityPercentage: U } = (0, T.E)(!j),
-            G = (0, s.e7)([_.Z], () => _.Z.affinities),
-            B = !M && G.length > 0,
-            Z = (0, m.N)(),
-            F = (0, h.Ng)(),
-            V = null != (n = null == Z ? void 0 : Z.expires_at) ? n : null == F ? void 0 : F.expires_at,
-            H = f.Z.getAlmostExpiringTrialOffers([C.Si.TIER_2]),
-            Y = f.Z.getAlmostExpiringDiscountOffers([C.Si.TIER_2]),
-            W = null != V && (H.length > 0 || Y.length > 0);
+        let { className: i, subscriptionTier: a, isEligibleForBogoPromotion: w } = e,
+            { analyticsLocations: D } = (0, d.ZP)(u.Z.PREMIUM_MARKETING_HERO_CTA),
+            L = (0, p.Nx)(),
+            x = (0, I.$)(),
+            M = (0, E.Z)(),
+            j = null != M,
+            k = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
+            { visibilityPercentageRef: U, visibilityPercentage: G } = (0, S.E)(!k),
+            B = (0, s.e7)([_.Z], () => _.Z.affinities),
+            Z = !j && B.length > 0,
+            { variant: F } = (0, h.ZP)("PremiumBrandRefreshMarketingHeroHeading"),
+            V = (0, g.N)(),
+            H = (0, m.Ng)(),
+            Y = null != (n = null == V ? void 0 : V.expires_at) ? n : null == H ? void 0 : H.expires_at,
+            W = f.Z.getAlmostExpiringTrialOffers([N.Si.TIER_2]),
+            K = f.Z.getAlmostExpiringDiscountOffers([N.Si.TIER_2]),
+            z = F === h.tE.HERO_COUNTDOWN && null != Y && (W.length > 0 || K.length > 0);
         return (0, r.jsx)(d.Gt, {
-            value: w,
+            value: D,
             children: (0, r.jsx)("div", {
                 ref: t,
-                className: o()(R.container, W && R.containerWithOfferCountdown, i),
+                className: o()(P.container, z && P.containerWithOfferCountdown, i),
                 "data-testid": "marketing-page-hero-header",
                 children: (0, r.jsx)("div", {
-                    ref: k,
+                    ref: U,
                     children: (0, r.jsxs)("div", {
-                        className: R.contentContainer,
+                        className: P.contentContainer,
                         children: [
-                            (0, r.jsx)(A.Z, { containerVisibilityPercentage: U }),
-                            D &&
-                                (W
-                                    ? (0, r.jsx)(y.Z, {
-                                          expiresAt: V,
-                                          className: R.heroOfferCountdown,
+                            (0, r.jsx)(C.Z, { containerVisibilityPercentage: G }),
+                            L &&
+                                (z
+                                    ? (0, r.jsx)(O.Z, {
+                                          expiresAt: Y,
+                                          className: P.heroOfferCountdown,
                                       })
                                     : (0, r.jsx)("div", {
-                                          className: R.offerPillContainer,
-                                          children: (0, r.jsx)(S.Z, { enablePremiumBrandRefresh: !0 }),
+                                          className: P.offerPillContainer,
+                                          children: (0, r.jsx)(A.Z, { enablePremiumBrandRefresh: !0 }),
                                       })),
                             (0, r.jsx)("div", {
-                                className: R.marketingPageTextContainer,
+                                className: P.marketingPageTextContainer,
                                 children: (0, r.jsx)(l.Heading, {
                                     variant: "display-md",
                                     color: "header-primary",
-                                    className: R.header,
-                                    children: N.intl.string(N.t.YCZldK),
+                                    className: P.header,
+                                    children: R.intl.string(R.t.YCZldH),
                                 }),
                             }),
                             (0, r.jsxs)("div", {
-                                className: R.body,
+                                className: P.body,
                                 children: [
-                                    M &&
+                                    j &&
                                         (0, r.jsx)("div", {
-                                            className: R.referrerAttributionContainer,
-                                            children: (0, r.jsx)(I.Z, {
-                                                referrer: x,
+                                            className: P.referrerAttributionContainer,
+                                            children: (0, r.jsx)(T.Z, {
+                                                referrer: M,
                                                 enablePremiumBrandRefresh: !0,
                                             }),
                                         }),
-                                    B &&
+                                    Z &&
                                         (0, r.jsx)("div", {
-                                            className: R.affinitiesContainer,
-                                            children: (0, r.jsx)(O.Z, {
+                                            className: P.affinitiesContainer,
+                                            children: (0, r.jsx)(v.Z, {
                                                 textColor: "text-primary",
                                                 smallerText: !1,
                                                 isApplicationHome: !0,
@@ -97,27 +99,27 @@ let P = (e, t) => {
                                             }),
                                         }),
                                     (0, r.jsxs)("div", {
-                                        className: D ? R.singleButtonContainer : R.twoButtonContainer,
+                                        className: L ? P.singleButtonContainer : P.twoButtonContainer,
                                         children: [
-                                            (0, r.jsx)(b.Z, {
+                                            (0, r.jsx)(y.Z, {
                                                 size: "md",
-                                                fullWidth: D,
-                                                hasActivePromotion: !!P,
+                                                fullWidth: L,
+                                                hasActivePromotion: !!w,
                                                 subscriptionTier: a,
                                             }),
-                                            !D &&
-                                                (0, r.jsx)(E.Z, {
+                                            !L &&
+                                                (0, r.jsx)(b.Z, {
                                                     variant: "secondary",
                                                     size: "md",
                                                 }),
                                         ],
                                     }),
                                     (0, r.jsx)("div", {
-                                        className: R.descriptionContainer,
+                                        className: P.descriptionContainer,
                                         children: (0, r.jsx)(l.Text, {
                                             color: "text-tertiary",
                                             variant: "text-xs/medium",
-                                            children: N.intl.format(N.t.kt9wxs, { cheapestMonthlyPrice: L }),
+                                            children: R.intl.format(R.t.kt9wxs, { cheapestMonthlyPrice: x }),
                                         }),
                                     }),
                                 ],
@@ -128,4 +130,4 @@ let P = (e, t) => {
             }),
         });
     },
-    w = i.memo(i.forwardRef(P));
+    D = i.memo(i.forwardRef(w));
