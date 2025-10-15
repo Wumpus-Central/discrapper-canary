@@ -43,15 +43,15 @@ function M(e) {
         });
     return 0 === r.length
         ? null
-        : (0, i.jsx)(i.Fragment, {
-              children: r.map((e, t) =>
+        : (0, i.jsx)("div", {
+              className: w.speakers,
+              children: r.map((e) =>
                   (0, i.jsx)(
                       u.u,
                       {
                           position: "bottom",
                           text: A.intl.formatToPlainString(A.t.JjdizM, { username: e.user.username }),
                           children: (0, i.jsx)(S.ZP, {
-                              className: a()(w.speaker, { [w.last]: t === r.length - 1 }),
                               user: e.user,
                               speaking: !0,
                               collapsed: !0,
