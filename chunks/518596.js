@@ -152,6 +152,7 @@ function I() {
         [f.oAB.CONNECTIONS, u.n.CONNECTIONS_PANEL],
         [f.oAB.CLIPS, u.n.CLIPS_PANEL],
         [f.oAB.PREMIUM, u.n.NITRO_PANEL],
+        [f.oAB.GUILD_BOOSTING, u.n.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL],
         [f.oAB.SUBSCRIPTIONS, u.n.SUBSCRIPTIONS_PANEL],
         [f.oAB.INVENTORY, u.n.GIFT_PANEL],
         [f.oAB.BILLING, u.n.BILLING_PANEL],
