@@ -227,56 +227,54 @@ function q(e) {
         _ = null != g.Z.useHolidaySoundpack();
     return (0, r.jsx)(C.F, {
         setting: G.s6.NOTIFICATIONS_SOUNDS,
-        children: (0, r.jsxs)("div", {
-            children: [
-                _ ? (0, r.jsx)(E.Z, {}) : null,
-                (0, r.jsxs)(u.C3N, {
-                    label: F.intl.string(F.t.MKWyKS),
-                    children: [
-                        (0, r.jsx)(u.rsf, {
-                            label: F.intl.string(F.t.lF5GGR),
-                            description: F.intl.string(F.t["7oXUio"]),
-                            checked: a,
-                            onChange: f.default.setNotifyMessagesInSelectedChannel,
-                        }),
-                        (0, r.jsx)(u.rsf, {
-                            label: F.intl.string(F.t["2ZhCOT"]),
-                            description: F.intl.string(F.t["+B0XLC"]),
-                            checked: n,
-                            onChange: f.default.toggleDisableAllSounds,
-                        }),
-                        d.map((e, i) => {
-                            let { label: a, sound: o, focusModeDisabled: s } = e;
-                            return (0, r.jsxs)(
-                                u.Kqy,
-                                {
-                                    children: [
-                                        i > 0 && (0, r.jsx)(u.izJ, { gap: 8 }),
-                                        (0, r.jsx)(
-                                            z,
-                                            {
-                                                label: a,
-                                                disabled: n || !0 === s,
-                                                onChange: (e) => c(o, e),
-                                                onPreview: (e) => l(o, e),
-                                                enabled: !n && !t.includes(o) && !0 !== s,
-                                            },
-                                            o,
-                                        ),
-                                        s
-                                            ? (0, r.jsx)(u.Wn, {
-                                                  messageType: u.QYI.WARNING,
-                                                  children: F.intl.string(F.t.cIRG0t),
-                                              })
-                                            : null,
-                                    ],
-                                },
-                                o,
-                            );
-                        }),
-                    ],
-                }),
-            ],
+        children: (0, r.jsx)("div", {
+            children: (0, r.jsxs)(u.C3N, {
+                label: F.intl.string(F.t.MKWyKS),
+                children: [
+                    _ ? (0, r.jsx)(E.Z, {}) : null,
+                    (0, r.jsx)(u.rsf, {
+                        label: F.intl.string(F.t.lF5GGR),
+                        description: F.intl.string(F.t["7oXUio"]),
+                        checked: a,
+                        onChange: f.default.setNotifyMessagesInSelectedChannel,
+                    }),
+                    (0, r.jsx)(u.rsf, {
+                        label: F.intl.string(F.t["2ZhCOT"]),
+                        description: F.intl.string(F.t["+B0XLC"]),
+                        checked: n,
+                        onChange: f.default.toggleDisableAllSounds,
+                    }),
+                    d.map((e, i) => {
+                        let { label: a, sound: o, focusModeDisabled: s } = e;
+                        return (0, r.jsxs)(
+                            u.Kqy,
+                            {
+                                children: [
+                                    i > 0 && (0, r.jsx)(u.izJ, { gap: 8 }),
+                                    (0, r.jsx)(
+                                        z,
+                                        {
+                                            label: a,
+                                            disabled: n || !0 === s,
+                                            onChange: (e) => c(o, e),
+                                            onPreview: (e) => l(o, e),
+                                            enabled: !n && !t.includes(o) && !0 !== s,
+                                        },
+                                        o,
+                                    ),
+                                    s
+                                        ? (0, r.jsx)(u.Wn, {
+                                              messageType: u.QYI.WARNING,
+                                              children: F.intl.string(F.t.cIRG0t),
+                                          })
+                                        : null,
+                                ],
+                            },
+                            o,
+                        );
+                    }),
+                ],
+            }),
         }),
     });
 }
