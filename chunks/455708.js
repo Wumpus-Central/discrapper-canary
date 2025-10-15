@@ -92,18 +92,20 @@ class C extends i.PureComponent {
                 : this.state.resultType !== E.wI2.SEARCH && this.setState({ resultType: E.wI2.SEARCH });
     }
     renderHeaderContent() {
-        let { query: e } = this.props,
-            { resultType: t } = this.state;
-        switch (t) {
+        let { query: e, headingColor: t } = this.props,
+            { resultType: n } = this.state;
+        switch (n) {
             case E.wI2.FAVORITES:
                 return (0, r.jsx)(c.Heading, {
                     variant: "heading-md/semibold",
+                    color: t,
                     className: O.searchHeader,
                     children: y.intl.string(y.t.y3LQCA),
                 });
             case E.wI2.TRENDING_GIFS:
                 return (0, r.jsx)(c.Heading, {
                     variant: "heading-md/semibold",
+                    color: t,
                     className: O.searchHeader,
                     children: y.intl.string(y.t.H6zNFx),
                 });
