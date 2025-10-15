@@ -1,4 +1,4 @@
-t.d(n, { Z: () => I }), t(642613);
+t.d(n, { Z: () => P }), t(642613);
 var r = t(951288),
     i = t(647438),
     l = t(120356),
@@ -7,33 +7,35 @@ var r = t(951288),
     s = t(681715),
     c = t(481060),
     d = t(494620),
-    u = t(49012),
-    g = t(905551),
-    m = t(802659),
-    f = t(241306),
-    x = t(343312),
-    p = t(30910),
-    v = t(281014),
-    h = t(837329),
-    j = t(531508),
-    b = t(133091),
-    _ = t(669460),
-    C = t(619733),
-    E = t(948208),
-    N = t(388032),
-    S = t(817121);
-function O(e) {
+    u = t(63063),
+    g = t(49012),
+    m = t(905551),
+    f = t(802659),
+    x = t(241306),
+    p = t(343312),
+    v = t(30910),
+    h = t(281014),
+    j = t(837329),
+    b = t(531508),
+    _ = t(133091),
+    C = t(669460),
+    E = t(619733),
+    N = t(981631),
+    S = t(470658),
+    O = t(388032),
+    y = t(817121);
+function I(e) {
     let { plan: n, selected: t, className: i } = e;
     return null == n
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)("div", {
-                      className: a()(S.optionContainer, i),
+                      className: a()(y.optionContainer, i),
                       children: [
                           (0, r.jsx)("span", { children: n.name }),
                           (0, r.jsxs)("div", {
-                              className: S.labelContainer,
+                              className: y.labelContainer,
                               children: [
                                   (0, r.jsx)(c.Ucv, {
                                       size: "xs",
@@ -41,35 +43,35 @@ function O(e) {
                                   }),
                                   (0, r.jsx)(c.Text, {
                                       variant: "text-xs/medium",
-                                      children: N.intl.format(E.default.kOMlHh, { boostCount: n.cost }),
+                                      children: O.intl.format(S.default.kOMlHs, { boostCount: n.cost }),
                                   }),
                               ],
                           }),
                       ],
                   }),
-                  !t && (0, r.jsx)("div", { className: S.optionSpacer }),
+                  !t && (0, r.jsx)("div", { className: y.optionSpacer }),
               ],
           });
 }
-function y(e) {
+function T(e) {
     let { region: n, selected: t, disabled: i, className: l } = e,
-        { pingText: o, pingCircleStyle: s } = (0, h.u)(n.pingUrl);
+        { pingText: o, pingCircleStyle: s } = (0, j.u)(n.pingUrl);
     return null == n
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)("div", {
-                      className: a()(S.optionContainer, { [S.disabled]: i }, l),
+                      className: a()(y.optionContainer, { [y.disabled]: i }, l),
                       children: [
                           (0, r.jsx)("span", { children: n.name }),
                           (0, r.jsx)("div", {
-                              className: S.labelContainer,
+                              className: y.labelContainer,
                               children: i
-                                  ? (0, r.jsx)("span", { children: N.intl.string(E.default.aCyHe3) })
+                                  ? (0, r.jsx)("span", { children: O.intl.string(S.default.aCyHe2) })
                                   : "" !== n.pingUrl
                                     ? (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              (0, r.jsx)("div", { className: a()(S.pingCircle, s) }),
+                                              (0, r.jsx)("div", { className: a()(y.pingCircle, s) }),
                                               (0, r.jsx)(c.Text, {
                                                   variant: "text-xs/medium",
                                                   children: o,
@@ -80,44 +82,42 @@ function y(e) {
                           }),
                       ],
                   }),
-                  !t && (0, r.jsx)("div", { className: S.optionSpacer }),
+                  !t && (0, r.jsx)("div", { className: y.optionSpacer }),
               ],
           });
 }
-function I() {
+function P() {
     let {
         guildId: e,
         currentGame: n,
         regionId: t,
         gameServerInstance: l,
         setRegionId: a,
-        name: h,
-        setName: I,
-        planId: P,
-        setPlanId: T,
-        planCost: w,
+        name: j,
+        setName: P,
+        planId: w,
+        setPlanId: R,
+        planCost: G,
         stepLoading: Z,
-        error: G,
-        gameProvider: R,
-    } = (0, x.JL)();
+        error: k,
+        gameProvider: M,
+    } = (0, p.JL)();
     i.useEffect(() => {
-        (0, g._k)(e);
+        (0, m._k)(e);
     }, [e]);
-    let k = (0, o.e7)([m.Z], () => m.Z.getRegions()),
-        M = (0, o.e7)([m.Z], () => m.Z.getRegionState()),
-        B = i.useMemo(() => {
+    let B = (0, o.e7)([f.Z], () => f.Z.getRegions()),
+        L = (0, o.e7)([f.Z], () => f.Z.getRegionState()),
+        H = i.useMemo(() => {
             var e;
             return null !=
-                (e = k
-                    .sort((e, n) => (0, b.Z)(e, n, M))
-                    .map((e) => ({
-                        value: e,
-                        label: e.name,
-                    })))
+                (e = B.sort((e, n) => (0, _.Z)(e, n, L)).map((e) => ({
+                    value: e,
+                    label: e.name,
+                })))
                 ? e
                 : [];
-        }, [M, k]),
-        L = i.useMemo(() => {
+        }, [L, B]),
+        z = i.useMemo(() => {
             var e;
             return null !=
                 (e =
@@ -130,87 +130,87 @@ function I() {
                 ? e
                 : [];
         }, [n]),
-        z = (0, v.Z)(),
-        D = null != l,
-        H = (0, j.Z)(l),
-        F = (0, _.Z)(R),
-        U = null != R && null != C.nd[R] ? C.nd[R] : "";
+        D = (0, h.Z)(),
+        F = null != l,
+        U = (0, b.Z)(l),
+        A = (0, C.Z)(M),
+        V = null != M && null != E.nd[M] ? E.nd[M] : "";
     return null == n
         ? (0, r.jsx)("div", {
-              className: S.spinnerContainer,
+              className: y.spinnerContainer,
               children: (0, r.jsx)(c.$jN, { type: c.RAz.SPINNING_CIRCLE }),
           })
         : (0, r.jsxs)("div", {
-              className: S.container,
+              className: y.container,
               children: [
                   (0, r.jsxs)("div", {
-                      className: S.contentContainer,
+                      className: y.contentContainer,
                       children: [
                           (0, r.jsxs)("div", {
-                              className: S.settingsContainer,
+                              className: y.settingsContainer,
                               children: [
                                   (0, r.jsxs)("div", {
-                                      className: S.sectionContainer,
+                                      className: y.sectionContainer,
                                       children: [
                                           (0, r.jsxs)("div", {
-                                              className: S.sectionHeader,
+                                              className: y.sectionHeader,
                                               children: [
                                                   (0, r.jsx)(c.Heading, {
-                                                      className: S.headerText,
+                                                      className: y.headerText,
                                                       variant: "heading-sm/semibold",
                                                       color: "text-secondary",
-                                                      children: N.intl.string(E.default.rOMEZW),
+                                                      children: O.intl.string(S.default.rOMEZd),
                                                   }),
                                                   (0, r.jsx)(s.u, {
                                                       position: "top",
-                                                      text: N.intl.string(E.default.THJY1t),
+                                                      text: O.intl.string(S.default.THJY1n),
                                                       children: (0, r.jsx)(c.idN, {
-                                                          className: S.sectionHeaderIcon,
+                                                          className: y.sectionHeaderIcon,
                                                           size: "xs",
                                                       }),
                                                   }),
                                               ],
                                           }),
                                           (0, r.jsx)(c.oil, {
-                                              value: h,
-                                              onChange: I,
-                                              placeholder: N.intl.string(E.default.ElVYr6),
-                                              maxLength: C.Sg,
-                                              disabled: Z || !H,
+                                              value: j,
+                                              onChange: P,
+                                              placeholder: O.intl.string(S.default.ElVYr3),
+                                              maxLength: E.Sg,
+                                              disabled: Z || !U,
                                           }),
                                       ],
                                   }),
                                   (0, r.jsxs)("div", {
-                                      className: S.sectionContainer,
+                                      className: y.sectionContainer,
                                       children: [
                                           (0, r.jsxs)("div", {
-                                              className: S.sectionHeader,
+                                              className: y.sectionHeader,
                                               children: [
                                                   (0, r.jsx)(c.Heading, {
-                                                      className: S.headerText,
+                                                      className: y.headerText,
                                                       variant: "heading-sm/semibold",
                                                       color: "text-secondary",
-                                                      children: N.intl.string(E.default.nB5OZ2),
+                                                      children: O.intl.string(S.default.nB5OZ4),
                                                   }),
                                                   (0, r.jsx)(s.u, {
                                                       position: "top",
-                                                      text: N.intl.string(
-                                                          null != l ? E.default["7mX0gI"] : E.default["61N+Pz"],
+                                                      text: O.intl.string(
+                                                          null != l ? S.default["7mX0gE"] : S.default["61N+P6"],
                                                       ),
                                                       children: (0, r.jsx)(c.idN, {
-                                                          className: S.sectionHeaderIcon,
+                                                          className: y.sectionHeaderIcon,
                                                           size: "xs",
                                                       }),
                                                   }),
                                                   (0, r.jsx)("div", {
-                                                      className: S.refresh,
+                                                      className: y.refresh,
                                                       children: (0, r.jsx)(s.u, {
                                                           asContainer: !0,
                                                           position: "top",
-                                                          text: N.intl.string(E.default.kGkE7e),
+                                                          text: O.intl.string(S.default.kGkE7a),
                                                           children: (0, r.jsx)(c.P3F, {
-                                                              className: S.sectionHeaderIcon,
-                                                              onClick: () => (0, g.UM)(),
+                                                              className: y.sectionHeaderIcon,
+                                                              onClick: () => (0, m.UM)(),
                                                               children: (0, r.jsx)(c.DuK, { size: "xs" }),
                                                           }),
                                                       }),
@@ -220,14 +220,14 @@ function I() {
                                           (0, r.jsx)(c.PhF, {
                                               serialize: (e) => e.id,
                                               isSelected: (e) => e.id === t,
-                                              isDisabled: Z || D || !H,
-                                              options: B,
-                                              optionClassName: S.option,
+                                              isDisabled: Z || F || !U,
+                                              options: H,
+                                              optionClassName: y.option,
                                               select: (e) => a(e.id),
-                                              placeholder: N.intl.string(E.default["k+RTIi"]),
+                                              placeholder: O.intl.string(S.default["k+RTIm"]),
                                               renderOptionLabel: (e) => {
                                                   var n;
-                                                  return (0, r.jsx)(y, {
+                                                  return (0, r.jsx)(T, {
                                                       region: e.value,
                                                       selected: e.value.id === t,
                                                       disabled: null != (n = e.disabled) && n,
@@ -237,33 +237,33 @@ function I() {
                                                   var n;
                                                   return null == e[0]
                                                       ? null
-                                                      : (0, r.jsx)(y, {
+                                                      : (0, r.jsx)(T, {
                                                             region: e[0].value,
                                                             selected: e[0].value.id === t,
                                                             disabled: null != (n = e[0].disabled) && n,
-                                                            className: S.value,
+                                                            className: y.value,
                                                         });
                                               },
                                           }),
                                       ],
                                   }),
                                   (0, r.jsxs)("div", {
-                                      className: S.sectionContainer,
+                                      className: y.sectionContainer,
                                       children: [
                                           (0, r.jsxs)("div", {
-                                              className: S.sectionHeader,
+                                              className: y.sectionHeader,
                                               children: [
                                                   (0, r.jsx)(c.Heading, {
-                                                      className: S.headerText,
+                                                      className: y.headerText,
                                                       variant: "heading-sm/semibold",
                                                       color: "text-secondary",
-                                                      children: N.intl.string(E.default["K+zMYm"]),
+                                                      children: O.intl.string(S.default["K+zMYp"]),
                                                   }),
                                                   (0, r.jsx)(s.u, {
                                                       position: "top",
-                                                      text: N.intl.string(E.default["/wD5IC"]),
+                                                      text: O.intl.string(S.default["/wD5IM"]),
                                                       children: (0, r.jsx)(c.idN, {
-                                                          className: S.sectionHeaderIcon,
+                                                          className: y.sectionHeaderIcon,
                                                           size: "xs",
                                                       }),
                                                   }),
@@ -271,27 +271,27 @@ function I() {
                                           }),
                                           (0, r.jsx)(c.PhF, {
                                               serialize: (e) => e.id,
-                                              isSelected: (e) => e.id === P,
-                                              isDisabled: Z || !H,
-                                              options: L,
-                                              optionClassName: S.option,
-                                              select: (e) => T(e.id),
-                                              placeholder: N.intl.string(E.default.JdMW0t),
+                                              isSelected: (e) => e.id === w,
+                                              isDisabled: Z || !U,
+                                              options: z,
+                                              optionClassName: y.option,
+                                              select: (e) => R(e.id),
+                                              placeholder: O.intl.string(S.default.JdMW0i),
                                               renderOptionValue: (e) => {
                                                   var n, t, i;
-                                                  return (0, r.jsx)(O, {
+                                                  return (0, r.jsx)(I, {
                                                       plan: null == (n = e[0]) ? void 0 : n.value,
                                                       selected:
                                                           (null == (i = e[0]) || null == (t = i.value)
                                                               ? void 0
-                                                              : t.id) === P,
-                                                      className: S.value,
+                                                              : t.id) === w,
+                                                      className: y.value,
                                                   });
                                               },
                                               renderOptionLabel: (e) =>
-                                                  (0, r.jsx)(O, {
+                                                  (0, r.jsx)(I, {
                                                       plan: e.value,
-                                                      selected: e.value.id === P,
+                                                      selected: e.value.id === w,
                                                   }),
                                           }),
                                       ],
@@ -299,52 +299,52 @@ function I() {
                               ],
                           }),
                           (0, r.jsx)("div", {
-                              className: S.gameDetailsContainer,
-                              children: (0, r.jsx)(f.Z, {}),
+                              className: y.gameDetailsContainer,
+                              children: (0, r.jsx)(x.Z, {}),
                           }),
                       ],
                   }),
                   null != l &&
-                      0 !== w &&
+                      0 !== G &&
                       (0, r.jsx)(d.Z, {
-                          className: S.infoBox,
+                          className: y.infoBox,
                           children: (0, r.jsx)(c.Text, {
                               variant: "text-xs/medium",
                               children:
-                                  w < 0
-                                      ? N.intl.format(E.default.SorKam, { boostCount: Math.abs(w) })
-                                      : N.intl.format(E.default.n2wpys, { boostCount: w }),
+                                  G < 0
+                                      ? O.intl.format(S.default.SorKas, { boostCount: Math.abs(G) })
+                                      : O.intl.format(S.default.n2wpym, { boostCount: G }),
                           }),
                       }),
-                  !H &&
+                  !U &&
                       (0, r.jsx)(d.Z, {
-                          className: S.infoBox,
+                          className: y.infoBox,
                           look: d.z.WARNING,
                           children: (0, r.jsx)(c.Text, {
                               variant: "text-xs/medium",
-                              children: N.intl.string(E.default["/JNPWV"]),
+                              children: O.intl.string(S.default["/JNPWb"]),
                           }),
                       }),
                   (0, r.jsx)(c.Text, {
                       variant: "text-sm/medium",
                       children:
-                          null != R &&
-                          N.intl.format(D ? E.default.num0a2 : E.default.p5KZDg, {
-                              provider: F,
-                              termsOfServiceUrl: () => (0, u.q)({ href: U }),
-                              helpCenterUrl: "https://google.com/help-center",
+                          null != M &&
+                          O.intl.format(F ? S.default.num0a6 : S.default.p5KZDr, {
+                              provider: A,
+                              termsOfServiceUrl: () => (0, g.q)({ href: V }),
+                              helpCenterUrl: u.Z.getArticleURL(N.BhN.GAME_SERVER_HOSTING),
                           }),
                   }),
-                  null != G &&
+                  null != k &&
                       (0, r.jsx)(c.Text, {
                           variant: "text-xs/medium",
                           color: "text-danger",
-                          children: G,
+                          children: k,
                       }),
-                  (0, r.jsxs)(p.o2, {
-                      step: C.EK.SERVER_SETTINGS,
-                      className: S.footerContainer,
-                      children: [(0, r.jsx)(p.c_, {}), (0, r.jsx)(p.$b, { disabled: !z })],
+                  (0, r.jsxs)(v.o2, {
+                      step: E.EK.SERVER_SETTINGS,
+                      className: y.footerContainer,
+                      children: [(0, r.jsx)(v.c_, {}), (0, r.jsx)(v.$b, { disabled: !D })],
                   }),
               ],
           });

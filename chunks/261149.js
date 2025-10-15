@@ -1,58 +1,60 @@
-r.d(e, { default: () => p });
-var n = r(951288),
-    i = r(468194),
-    o = r(793030),
-    l = r(49012),
-    s = r(905551),
-    a = r(619733),
-    c = r(948208),
-    u = r(388032);
-function p(t) {
-    var { provider: e, onAccept: r } = t,
-        p = (function (t, e) {
+n.d(e, { default: () => f });
+var r = n(951288),
+    i = n(468194),
+    o = n(793030),
+    l = n(63063),
+    a = n(49012),
+    s = n(905551),
+    u = n(619733),
+    c = n(981631),
+    d = n(470658),
+    p = n(388032);
+function f(t) {
+    var { provider: e, onAccept: n } = t,
+        f = (function (t, e) {
             if (null == t) return {};
-            var r,
-                n,
+            var n,
+                r,
                 i = (function (t, e) {
                     if (null == t) return {};
-                    var r,
-                        n,
+                    var n,
+                        r,
                         i = {},
                         o = Object.keys(t);
-                    for (n = 0; n < o.length; n++) (r = o[n]), e.indexOf(r) >= 0 || (i[r] = t[r]);
+                    for (r = 0; r < o.length; r++) (n = o[r]), e.indexOf(n) >= 0 || (i[n] = t[n]);
                     return i;
                 })(t, e);
             if (Object.getOwnPropertySymbols) {
                 var o = Object.getOwnPropertySymbols(t);
-                for (n = 0; n < o.length; n++)
-                    (r = o[n]),
-                        !(e.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(t, r) && (i[r] = t[r]);
+                for (r = 0; r < o.length; r++)
+                    (n = o[r]),
+                        !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (i[n] = t[n]);
             }
             return i;
         })(t, ["provider", "onAccept"]);
-    return (0, n.jsx)(o.Modal, {
-        title: u.intl.string(c.default.ny8Szc),
-        subtitle: u.intl.format(c.default.D3STV1, {
+    return (0, r.jsx)(o.Modal, {
+        title: p.intl.string(d.default.ny8Szd),
+        subtitle: p.intl.format(d.default.D3STVx, {
             provider: (0, i.De)(e),
-            providerUrl: () => (0, l.q)({ href: a.nd[e] }),
-            helpCenterUrl: "https://support.discord.com/hc/en-us/articles/35370817986839/",
+            providerUrl: () => (0, a.q)({ href: u.nd[e] }),
+            helpCenterUrl: l.Z.getArticleURL(c.BhN.GAME_SERVER_HOSTING),
         }),
         size: "md",
         actions: [
             {
-                text: u.intl.string(u.t["/g10LC"]),
-                onClick: p.onClose,
+                text: p.intl.string(p.t["/g10LC"]),
+                onClick: f.onClose,
                 variant: "secondary",
             },
             {
-                text: u.intl.string(c.default.K1xIXV),
+                text: p.intl.string(d.default.K1xIXf),
                 onClick: () => {
-                    (0, s.WY)(!0, e), null == r || r(), p.onClose();
+                    (0, s.WY)(!0, e), null == n || n(), f.onClose();
                 },
                 variant: "primary",
             },
         ],
-        transitionState: p.transitionState,
-        onClose: p.onClose,
+        transitionState: f.transitionState,
+        onClose: f.onClose,
     });
 }
