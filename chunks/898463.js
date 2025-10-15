@@ -17,7 +17,7 @@ var r = n(951288),
     s = n(442837),
     l = n(481060),
     c = n(166459),
-    u = n(95152),
+    u = n(403592),
     d = n(476326),
     f = n(543651),
     _ = n(377171),
@@ -115,13 +115,13 @@ function R(e) {
                                 null != t && "" !== t
                                     ? (0, r.jsx)("span", {
                                           className: I.altTag,
-                                          children: v.intl.string(v.t.QEW819),
+                                          children: v.intl.string(v.t.QEW81z),
                                       })
                                     : null,
                                 l && n
                                     ? (0, r.jsx)("span", {
                                           className: I.altTag,
-                                          children: v.intl.string(v.t["F+x38P"]),
+                                          children: v.intl.string(v.t["F+x38C"]),
                                       })
                                     : null,
                             ],
@@ -196,14 +196,14 @@ function P(e) {
                     shouldHideMediaOptions: !0,
                 });
         }, [u]),
-        b = (null == t ? void 0 : t.name) != null ? t.name : v.intl.string(v.t.lduvqK),
+        b = (null == t ? void 0 : t.name) != null ? t.name : v.intl.string(v.t.lduvqL),
         y =
             null != n && "" !== n
-                ? v.intl.formatToPlainString(v.t["8TRAzc"], {
+                ? v.intl.formatToPlainString(v.t["8TRAzR"], {
                       filename: b,
                       alt: n,
                   })
-                : v.intl.formatToPlainString(v.t.lXoOER, { filename: b });
+                : v.intl.formatToPlainString(v.t.lXoOEZ, { filename: b });
     return (0, r.jsx)("div", {
         onMouseEnter: c,
         className: o()(I.mediaContainer, { [I.imageSmall]: p }),
@@ -293,7 +293,7 @@ function D(e) {
                     children: n.spoiler
                         ? (0, r.jsx)("span", {
                               className: I.altTag,
-                              children: v.intl.string(v.t["F+x38P"]),
+                              children: v.intl.string(v.t["F+x38C"]),
                           })
                         : null,
                 }),
@@ -344,7 +344,7 @@ function L(e) {
                 m
                     ? (0, r.jsx)(y.Z, {
                           className: o()({ [I.action]: N }),
-                          tooltip: A ? v.intl.string(v.t.MYgdY2) : v.intl.string(v.t.cuurzM),
+                          tooltip: A ? v.intl.string(v.t.MYgdY2) : v.intl.string(v.t.cuurzA),
                           onClick: () => c.Z.update(t, a.id, n, { spoiler: !a.spoiler }),
                           children: a.spoiler
                               ? (0, r.jsx)(l.kZF, {
@@ -362,7 +362,7 @@ function L(e) {
                 m && !A
                     ? (0, r.jsx)(y.Z, {
                           className: o()({ [I.action]: N }),
-                          tooltip: v.intl.string(v.t.Y8ujqq),
+                          tooltip: v.intl.string(v.t.Y8ujqr),
                           onClick: P,
                           children: (0, r.jsx)(l.vdY, {
                               size: "xs",
@@ -373,7 +373,7 @@ function L(e) {
                     : null,
                 (0, r.jsx)(y.Z, {
                     className: o()({ [I.action]: N }),
-                    tooltip: A ? v.intl.string(v.t.MskAXV) : v.intl.string(v.t.vN7REx),
+                    tooltip: A ? v.intl.string(v.t.MskAXa) : v.intl.string(v.t.vN7REz),
                     onClick: () => c.Z.remove(t, a.id, n),
                     dangerous: !0,
                     children: (0, r.jsx)(l.XHJ, {
@@ -421,7 +421,7 @@ function L(e) {
                         (0, r.jsx)(l.IGR, {
                             color: _.Z.BG_BRAND,
                             className: I.clipsBadge,
-                            text: v.intl.string(v.t.oA4afH),
+                            text: v.intl.string(v.t.oA4afG),
                         }),
                     ],
                 }),

@@ -1,4 +1,8 @@
-n.d(t, { Z: () => y }), n(415506);
+n.d(t, {
+    A: () => y,
+    Z: () => v,
+}),
+    n(415506);
 var r = n(951288);
 n(647438);
 var i = n(990547),
@@ -8,104 +12,121 @@ var i = n(990547),
     l = n(906732),
     c = n(213609),
     u = n(963249),
-    d = n(639119),
-    f = n(474936),
-    _ = n(981631),
-    p = n(388032),
-    h = n(50953);
-function m(e) {
+    d = n(931118),
+    f = n(639119),
+    _ = n(959052),
+    p = n(474936),
+    h = n(981631),
+    m = n(388032),
+    g = n(50953);
+function E(e) {
     switch (e) {
-        case f.Si.TIER_0:
+        case p.Si.TIER_0:
             return s.Z.PREMIUM_TIER_0_TRIAL_ENDING_NOTICE;
-        case f.Si.TIER_2:
+        case p.Si.TIER_2:
             return s.Z.PREMIUM_TIER_2_TRIAL_ENDING_NOTICE;
-        default:
-            throw Error("Unsupported subscription tier: ".concat(e));
-    }
-}
-function g(e) {
-    switch (e) {
-        case f.Si.TIER_0:
-            return a.DM8.PREMIUM_TIER_0;
-        case f.Si.TIER_2:
-            return a.DM8.PREMIUM_TIER_2;
-        default:
-            throw Error("Unsupported subscription tier: ".concat(e));
-    }
-}
-function E(e, t) {
-    switch (e) {
-        case f.Si.TIER_0:
-            return t.days > 0
-                ? p.intl.formatToPlainString(p.t.sP5OqC, { days: t.days })
-                : t.hours > 0
-                  ? p.intl.formatToPlainString(p.t["7Lhfu7"], { hours: t.hours })
-                  : p.intl.formatToPlainString(p.t.coDiS0, { minutes: Math.max(t.minutes, 1) });
-        case f.Si.TIER_2:
-            return t.days > 0
-                ? p.intl.formatToPlainString(p.t["4prs5b"], { days: t.days })
-                : t.hours > 0
-                  ? p.intl.formatToPlainString(p.t.OD5nIR, { hours: t.hours })
-                  : p.intl.formatToPlainString(p.t.rvyXjD, { minutes: Math.max(t.minutes, 1) });
         default:
             throw Error("Unsupported subscription tier: ".concat(e));
     }
 }
 function b(e) {
     switch (e) {
-        case f.Si.TIER_0:
-            return p.intl.string(p.t.mCG023);
-        case f.Si.TIER_2:
-            return p.intl.string(p.t["7590Pe"]);
+        case p.Si.TIER_0:
+            return a.DM8.PREMIUM_TIER_0;
+        case p.Si.TIER_2:
+            return a.DM8.PREMIUM_TIER_2;
         default:
             throw Error("Unsupported subscription tier: ".concat(e));
     }
 }
-let y = function (e) {
+function y(e, t) {
+    switch (e) {
+        case p.Si.TIER_0:
+            return t.days > 0
+                ? m.intl.formatToPlainString(m.t.sP5OqC, { days: t.days })
+                : t.hours > 0
+                  ? m.intl.formatToPlainString(m.t["7Lhfu7"], { hours: t.hours })
+                  : m.intl.formatToPlainString(m.t.coDiS0, { minutes: Math.max(t.minutes, 1) });
+        case p.Si.TIER_2:
+            return t.days > 0
+                ? m.intl.formatToPlainString(m.t["4prs5b"], { days: t.days })
+                : t.hours > 0
+                  ? m.intl.formatToPlainString(m.t.OD5nIR, { hours: t.hours })
+                  : m.intl.formatToPlainString(m.t.rvyXjD, { minutes: Math.max(t.minutes, 1) });
+        default:
+            throw Error("Unsupported subscription tier: ".concat(e));
+    }
+}
+function O(e) {
+    switch (e) {
+        case p.Si.TIER_0:
+            return m.intl.string(m.t.mCG023);
+        case p.Si.TIER_2:
+            return m.intl.string(m.t["7590Pe"]);
+        default:
+            throw Error("Unsupported subscription tier: ".concat(e));
+    }
+}
+let v = function (e) {
     var t;
     let { dismissCurrentNotice: n, subscriptionTier: s } = e,
-        { analyticsLocations: f } = (0, l.ZP)(m(s)),
-        p = (0, d.N)(),
-        y = (0, o.Z)(null != p && null != p.expires_at ? Date.parse(p.expires_at) : 0),
-        O =
-            null == p ||
-            (null == (t = p.subscription_trial) ? void 0 : t.sku_id) !== s ||
-            null == p.expires_at ||
-            Object.values(y).every((e) => 0 === e);
-    return ((0, c.Z)(
-        {
-            type: i.ImpressionTypes.VIEW,
-            name: i.ImpressionNames.TRIAL_NOTICE,
-            properties: { trial_id: null == p ? void 0 : p.trial_id },
-        },
-        { disableTrack: O },
-    ),
-    O)
-        ? null
+        { analyticsLocations: p } = (0, l.ZP)(E(s)),
+        m = (0, f.N)(),
+        v = (0, o.Z)(null != m && null != m.expires_at ? Date.parse(m.expires_at) : 0),
+        { variant: I } = (0, d.ZP)("PremiumTrialEndingNotice"),
+        T =
+            null == m ||
+            (null == (t = m.subscription_trial) ? void 0 : t.sku_id) !== s ||
+            null == m.expires_at ||
+            Object.values(v).every((e) => 0 === e);
+    if (
+        ((0, c.Z)(
+            {
+                type: i.ImpressionTypes.VIEW,
+                name: i.ImpressionNames.TRIAL_NOTICE,
+                properties: { trial_id: null == m ? void 0 : m.trial_id },
+            },
+            { disableTrack: T },
+        ),
+        T)
+    )
+        return null;
+    let S = () => {
+        (0, u.Z)({
+            trialId: m.trial_id,
+            subscriptionTier: s,
+            analyticsLocations: p,
+            analyticsObject: {
+                page: h.ZY5.IN_APP,
+                section: h.jXE.NOTIFICATION_BAR,
+                object: h.qAy.BUTTON_CTA,
+            },
+        });
+    };
+    return I === d.tE.NAGBAR_REFRESH
+        ? (0, r.jsxs)(_.eJ, {
+              onClick: n,
+              children: [
+                  (0, r.jsx)(_.Jy, { children: y(s, v) }),
+                  (0, r.jsx)(_.OJ, {
+                      onClick: S,
+                      text: O(s),
+                  }),
+              ],
+          })
         : (0, r.jsxs)(a.qXd, {
-              color: g(s),
+              color: b(s),
               children: [
                   (0, r.jsx)(a.RyX, { onClick: n }),
                   (0, r.jsx)(a.SrA, {
                       size: "md",
                       color: "currentColor",
-                      className: h.premiumIcon,
+                      className: g.premiumIcon,
                   }),
-                  E(s, y),
+                  y(s, v),
                   (0, r.jsx)(a.EyT, {
-                      onClick: () => {
-                          (0, u.Z)({
-                              trialId: p.trial_id,
-                              subscriptionTier: s,
-                              analyticsLocations: f,
-                              analyticsObject: {
-                                  page: _.ZY5.IN_APP,
-                                  section: _.jXE.NOTIFICATION_BAR,
-                                  object: _.qAy.BUTTON_CTA,
-                              },
-                          });
-                      },
-                      children: b(s),
+                      onClick: S,
+                      children: O(s),
                   }),
               ],
           });

@@ -99,7 +99,7 @@ let I = (e) => {
                     (0, m.ZDy)(async () => {
                         let e = C.upload;
                         o()(null != e, "upload should not be null");
-                        let { default: t } = await Promise.resolve().then(n.bind(n, 95152));
+                        let { default: t } = await Promise.resolve().then(n.bind(n, 403592));
                         return (n) => {
                             var i, l;
                             return (0, r.jsx)(
@@ -170,7 +170,7 @@ let I = (e) => {
             "aria-hidden": !0,
             filters: N,
             "aria-describedby": O,
-            "aria-label": I ? w.intl.string(w.t.MxJI3d) : w.intl.string(w.t.CbiofX),
+            "aria-label": I ? w.intl.string(w.t.MxJI3f) : w.intl.string(w.t.Cbiofa),
             children: I
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
@@ -187,7 +187,7 @@ let I = (e) => {
                                   (0, r.jsx)(m.Text, {
                                       variant: "text-xs/medium",
                                       color: "header-secondary",
-                                      children: w.intl.string(w.t.MxJI3d),
+                                      children: w.intl.string(w.t.MxJI3f),
                                   }),
                                   null == C &&
                                       (0, r.jsx)(m.vdY, {
@@ -211,7 +211,7 @@ let I = (e) => {
                           (0, r.jsx)(m.Text, {
                               variant: "text-xs/normal",
                               color: "text-muted",
-                              children: w.intl.string(w.t.CbiofX),
+                              children: w.intl.string(w.t.Cbiofa),
                           }),
                       ],
                   }),
@@ -226,7 +226,7 @@ let I = (e) => {
                           children: [
                               (0, r.jsx)(x.Z, {
                                   className: S.action,
-                                  tooltip: w.intl.string(w.t.Y8ujqq),
+                                  tooltip: w.intl.string(w.t.Y8ujqr),
                                   onClick: M,
                                   children: (0, r.jsx)(m.vdY, {
                                       size: "xs",
@@ -235,7 +235,7 @@ let I = (e) => {
                               }),
                               (0, r.jsx)(x.Z, {
                                   className: S.action,
-                                  tooltip: w.intl.string(w.t.vN7REx),
+                                  tooltip: w.intl.string(w.t.vN7REz),
                                   onClick: () => h.Z.remove(a.id, C.id, f.Ie.CREATE_FORUM_POST.drafts.type),
                                   dangerous: !0,
                                   children: (0, r.jsx)(m.XHJ, {

@@ -12,8 +12,8 @@ var l = t(951288),
     Z = t(430824),
     f = t(496675),
     b = t(594174),
-    m = t(981631),
-    O = t(388032),
+    O = t(981631),
+    m = t(388032),
     p = t(766509);
 function h(e) {
     let { guildId: n, userId: h, analyticsLocation: j, analyticsLocations: P, context: v, icon: x } = e,
@@ -24,19 +24,19 @@ function h(e) {
     (0, r.e7)([f.Z], () => f.Z.getGuildVersion(n), [n]);
     let C = i.useMemo(() => ({ [n]: [h] }), [n, h]);
     (0, u.$)(C, "useChangeIdentityItem");
-    let I = v === m.IlC.POPOUT,
+    let I = v === O.IlC.POPOUT,
         S = (0, s.Z)({
             guild: y,
             analyticsLocations: P,
         }),
         T = (0, o.Aq)();
     if (null == y || I) return null;
-    let U = N === h && (f.Z.can(m.Plq.CHANGE_NICKNAME, y) || f.Z.can(m.Plq.MANAGE_NICKNAMES, y)),
+    let U = N === h && (f.Z.can(O.Plq.CHANGE_NICKNAME, y) || f.Z.can(O.Plq.MANAGE_NICKNAMES, y)),
         A = N === h,
-        k = f.Z.canManageUser(m.Plq.MANAGE_NICKNAMES, h, y);
-    if (!(U || k || A) || null == E || _) return null;
-    let M = y.features.has(m.oNc.HUB) ? O.intl.string(O.t["+MWrWl"]) : O.intl.string(O.t["PKQB/P"]),
-        w = A ? M : O.intl.string(O.t.dilOFx);
+        M = f.Z.canManageUser(O.Plq.MANAGE_NICKNAMES, h, y);
+    if (!(U || M || A) || null == E || _) return null;
+    let k = y.features.has(O.oNc.HUB) ? m.intl.string(m.t["+MWrWt"]) : m.intl.string(m.t["PKQB/H"]),
+        w = A ? k : m.intl.string(m.t.dilOF6);
     return (0, l.jsx)(a.sNh, {
         id: "change-nickname",
         label: (0, l.jsx)("div", {
@@ -51,10 +51,10 @@ function h(e) {
             A
                 ? ((0, d.Z)(E.id, E.getAvatarURL(n, 80), { guildId: n }),
                   S(),
-                  T.dispatch(m.CkL.POPOUT_CLOSE),
+                  T.dispatch(O.CkL.POPOUT_CLOSE),
                   (0, a.pTH)())
                 : (0, a.ZDy)(async () => {
-                      let { default: e } = await t.e("17712").then(t.bind(t, 620021));
+                      let { default: e } = await t.e("56698").then(t.bind(t, 82035));
                       return (t) => {
                           var i, r;
                           return (0, l.jsx)(

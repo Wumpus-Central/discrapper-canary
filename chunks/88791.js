@@ -9,11 +9,11 @@ function o(e) {
         ? null
         : (0, r.jsx)(i.sNh, {
               id: "reactions",
-              label: a.intl.string(a.t.wikODg),
+              label: a.intl.string(a.t.wikODq),
               icon: i.EO4,
               action: () =>
                   (0, i.ZDy)(async () => {
-                      let { default: t } = await Promise.resolve().then(n.bind(n, 785388));
+                      let { default: t } = await Promise.resolve().then(n.bind(n, 6839));
                       return (n) => {
                           var i, l;
                           return (0, r.jsx)(
