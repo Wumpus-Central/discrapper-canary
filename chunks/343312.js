@@ -10,8 +10,8 @@ var l = n(951288),
     r = n(906732),
     s = n(879892),
     o = n(343649),
-    c = n(430824),
-    u = n(975104),
+    u = n(430824),
+    c = n(975104),
     d = n(823379),
     m = n(713081),
     v = n(279604),
@@ -19,9 +19,9 @@ var l = n(951288),
     f = n(60482),
     b = n(627045),
     p = n(619733);
-let [j, x] = (0, u.Z)();
+let [j, x] = (0, c.Z)();
 function y(e) {
-    var t, n, u, x, y, O, h;
+    var t, n, c, x, y, O, h;
     let {
         guildId: P,
         initialGameServerInstance: S,
@@ -35,7 +35,7 @@ function y(e) {
         (0, g.ce)(P), (0, m.BN)(P, !0), null == S && (0, g.mF)(P);
     }, [P, S]);
     let Z = (0, i.e7)([f.Z], () => f.Z.getStateForGuild(P)),
-        _ = (0, i.e7)([c.Z], () => c.Z.getGuild(P)),
+        _ = (0, i.e7)([u.Z], () => u.Z.getGuild(P)),
         { analyticsLocations: T } = (0, r.ZP)(N),
         [L, E] = a.useState(null != (n = I.initialStep) ? n : Object.keys(I.steps)[0]),
         B = (0, v.Td)(P, void 0),
@@ -58,10 +58,10 @@ function y(e) {
         }, [null == Z ? void 0 : Z.catalog, G]),
         [A, K] = a.useState(S),
         [R, M] = a.useState(
-            null != (u = null == k || null == (t = k.plans[0]) ? void 0 : t.id) ? u : null == S ? void 0 : S.planId,
+            null != (c = null == k || null == (t = k.plans[0]) ? void 0 : t.id) ? c : null == S ? void 0 : S.planId,
         ),
         U = (function (e, t, n, l) {
-            var a, r, s, o, c, u, d, m;
+            var a, r, s, o, u, c, d, m;
             let v = (0, i.e7)([f.Z], () => {
                     var t;
                     return null == (t = f.Z.getStateForGuild(e)) ? void 0 : t.entitlements;
@@ -73,9 +73,9 @@ function y(e) {
                       (null !=
                       (m =
                           null == v ||
-                          null == (u = v[l.entitlementId]) ||
-                          null == (c = u.sku) ||
-                          null == (o = c.tenant_metadata) ||
+                          null == (c = v[l.entitlementId]) ||
+                          null == (u = c.sku) ||
+                          null == (o = u.tenant_metadata) ||
                           null == (s = o.guild_monetization) ||
                           null == (r = s.game_server)
                               ? void 0
@@ -83,21 +83,32 @@ function y(e) {
                           ? m
                           : 0);
         })(P, H, R, A),
-        X = a.useCallback((e, t) => {
-            var n;
-            F(null == e ? void 0 : e.id), M(null != t ? t : null == e || null == (n = e.plans[0]) ? void 0 : n.id);
-        }, []),
-        Y = a.useCallback(
+        X = a.useCallback(
             (e) => {
-                var t, n, l;
+                var t, n, l, a, i, r;
                 K(e);
-                let a =
-                    null == Z || null == (l = Z.entitlements) || null == (n = l[e.entitlementId]) || null == (t = n.sku)
+                let s =
+                    null == Z ||
+                    null == (l = Z.entitlements) ||
+                    null == (n = l[null != (a = null == e ? void 0 : e.entitlementId) ? a : ""]) ||
+                    null == (t = n.sku)
                         ? void 0
                         : t.product_id;
-                null != a && F(a), M(e.planId), Q(e.name), ee(e.regionId);
+                null != s && F(s),
+                    M(null == e ? void 0 : e.planId),
+                    Q(null != (i = null == e ? void 0 : e.name) ? i : ""),
+                    ee(null != (r = null == e ? void 0 : e.regionId) ? r : "");
             },
             [null == Z ? void 0 : Z.entitlements],
+        ),
+        Y = a.useCallback(
+            (e, t) => {
+                var n;
+                X(void 0),
+                    F(null == e ? void 0 : e.id),
+                    M(null != t ? t : null == e || null == (n = e.plans[0]) ? void 0 : n.id);
+            },
+            [X],
         ),
         [q, W] = a.useState(),
         [$, Q] = a.useState(null != (x = null == S ? void 0 : S.name) ? x : ""),
@@ -178,9 +189,9 @@ function y(e) {
             gameServerGames: null != (O = null == Z ? void 0 : Z.catalog) ? O : {},
             instances: Object.values(null != (h = null == Z ? void 0 : Z.instances) ? h : {}),
             currentGame: H,
-            setCurrentGame: X,
+            setCurrentGame: Y,
             gameServerInstance: A,
-            setGameServerInstance: Y,
+            setGameServerInstance: X,
             name: $,
             setName: Q,
             regionId: V,
