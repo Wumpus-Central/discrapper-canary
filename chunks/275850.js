@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => S }), n(415506), n(388685);
+n.d(t, { ZP: () => A }), n(415506), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -112,7 +112,31 @@ function I(e, t) {
         };
     throw Error("Invalid Payment Source");
 }
-function T(e, t) {
+function T(e, t, n) {
+    if (t.value === O)
+        return (0, r.jsx)("div", {
+            className: g.paymentSourceLabel,
+            children: t.label,
+        });
+    if (null != e) {
+        let { brand: t, label: i } = I(e, n);
+        return (0, r.jsxs)("div", {
+            className: g.paymentSourceSelectedOption,
+            children: [
+                null != t ? (0, r.jsx)(d.ZP, { type: d.ZP.getType(t) }) : null,
+                (0, r.jsx)("div", {
+                    className: o()(g.paymentSourceLabel, { [g.error]: e.invalid }),
+                    children: i,
+                }),
+            ],
+        });
+    }
+    return (0, r.jsx)("div", {
+        className: g.paymentSourceLabel,
+        children: t.label,
+    });
+}
+function S(e, t) {
     let n = null;
     return (
         e && null != t && !t.canRedeemTrial()
@@ -126,60 +150,49 @@ function T(e, t) {
         n
     );
 }
-function S(e) {
+function A(e) {
     let {
             label: t,
             selectedPaymentSourceId: n,
             paymentSources: a,
             prependOption: u,
-            hidePersonalInformation: _,
-            onChange: p,
-            onPaymentSourceAdd: h,
-            isTrial: E = !1,
-            disabled: b = !1,
-            className: y,
-            optionClassName: S,
+            hidePersonalInformation: d,
+            onChange: _,
+            onPaymentSourceAdd: p,
+            isTrial: h = !1,
+            disabled: E = !1,
+            className: b,
+            optionClassName: y,
             dropdownLoading: A,
             paymentGatewayRestrictions: C,
         } = e,
         N = 0 === a.length,
         R = (e) => {
-            if (e === O) null != h && h();
+            if (e === O) null != p && p();
             else {
                 let t = a.find((t) => t.id === e);
-                null != p && p(t);
+                null != _ && _(t);
             }
         },
         P = [...(null != u ? [u] : []), ...a, v].map((e, t) => {
             if (e instanceof f.ZP) {
-                let { brand: t, label: n } = I(e, _),
-                    i = e === v || null == C || (null == C ? void 0 : C.includes(e.paymentGateway));
+                let { label: t } = I(e, d),
+                    n = e === v || null == C || (null == C ? void 0 : C.includes(e.paymentGateway));
                 return {
                     value: e.id,
-                    label: (0, r.jsxs)("div", {
-                        className: g.paymentSourceSelectedOption,
-                        children: [
-                            null != t ? (0, r.jsx)(d.ZP, { type: d.ZP.getType(t) }) : null,
-                            (0, r.jsx)("div", {
-                                className: o()(g.paymentSourceLabel, { [g.error]: e.invalid }),
-                                children: n,
-                            }),
-                        ],
-                    }),
-                    disabled: !i,
+                    label: t,
+                    disabled: !n,
                 };
             }
             return {
                 key: t,
                 value: e.value,
-                label: (0, r.jsx)("div", {
-                    className: g.paymentSourceLabel,
-                    children: e.label,
-                }),
+                label: e.label,
             };
         }),
-        w = T(
-            E,
+        w = i.useMemo(() => new Map(a.map((e) => [e.id, e])), [a]),
+        D = S(
+            h,
             i.useMemo(() => a.find((e) => e.id === n), [a, n]),
         );
     if (null == n && null != C && C.length > 0) {
@@ -192,7 +205,7 @@ function S(e) {
                 ? (0, r.jsx)(l.zxk, {
                       variant: "primary",
                       fullWidth: !0,
-                      onClick: h,
+                      onClick: p,
                       text: m.intl.string(m.t.eQ2bLi),
                   })
                 : (0, r.jsx)(c.q4e, {
@@ -200,16 +213,19 @@ function S(e) {
                       value: n,
                       label: t,
                       onChange: R,
-                      isDisabled: b,
-                      className: o()({ [g.paymentSourceHasWarning]: null != w }, y),
-                      optionClassName: S,
+                      isDisabled: E,
+                      className: o()({ [g.paymentSourceHasWarning]: null != D }, b),
+                      optionClassName: y,
                       placeholder: m.intl.string(m.t["8lqkf3"]),
                       renderOptionValue: (e) => {
                           let [t] = e;
-                          return A ? (0, r.jsx)(c.$jN, { type: c.RAz.SPINNING_CIRCLE }) : t.label;
+                          return A
+                              ? (0, r.jsx)(c.$jN, { type: c.RAz.SPINNING_CIRCLE })
+                              : T(null == t.value ? void 0 : w.get(t.value), t, d);
                       },
+                      renderOptionLabel: (e) => T(null == e.value ? void 0 : w.get(e.value), e, d),
                   }),
-            null != w
+            null != D
                 ? (0, r.jsxs)("div", {
                       className: g.paymentSourceWarning,
                       children: [
@@ -222,7 +238,7 @@ function S(e) {
                           }),
                           (0, r.jsx)(c.Text, {
                               variant: "text-xs/normal",
-                              children: w,
+                              children: D,
                           }),
                       ],
                   })
