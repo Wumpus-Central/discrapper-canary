@@ -12,8 +12,8 @@ var r = n(951288),
     p = n(74538),
     _ = n(987209),
     h = n(563132),
-    f = n(409813),
-    m = n(614223),
+    m = n(409813),
+    f = n(614223),
     x = n(48175),
     g = n(474936),
     j = n(388032),
@@ -29,10 +29,10 @@ function y(e) {
             defaultPlanId: j,
         } = (0, h.JL)(),
         { isGift: b, claimableRewards: y } = (0, _.wD)(),
-        S = b && null != y && y.length > 0,
-        v = (0, C.N)(i),
+        v = b && null != y && y.length > 0,
+        S = (0, C.N)(i),
         w = (0, o.Nx)(),
-        I = (0, s.Z)({ location: "PremiumPaymentSelect" });
+        O = (0, s.Z)({ location: "PremiumPaymentSelect" });
     return (0, r.jsx)(L, {
         selectSku: (e) =>
             (function (e) {
@@ -48,21 +48,21 @@ function y(e) {
                     defaultPlanId: d,
                 } = e;
                 r(n);
-                let C = f.h8.PLAN_SELECT,
+                let C = m.h8.PLAN_SELECT,
                     c = (0, p.k5)(t);
-                (c !== g.Si.TIER_1 && c !== g.Si.TIER_2) || n !== g.Si.TIER_0 || a || (C = f.h8.WHAT_YOU_LOSE);
+                (c !== g.Si.TIER_1 && c !== g.Si.TIER_2) || n !== g.Si.TIER_0 || a || (C = m.h8.WHAT_YOU_LOSE);
                 let u = (0, x.T)({
                         userTrialOffer: l,
                         isGift: a,
                         skuId: n,
                     }),
-                    _ = (0, m.Kp)({
+                    _ = (0, f.Kp)({
                         isTrial: u,
                         isGift: a,
                         selectedSkuId: n,
                         startedPaymentFlowWithPaymentSources: s,
                     });
-                C !== f.h8.WHAT_YOU_LOSE && _ && ((C = f.h8.REVIEW), o((0, m.nA)(n, t, d))),
+                C !== m.h8.WHAT_YOU_LOSE && _ && ((C = m.h8.REVIEW), o((0, f.nA)(n, t, d))),
                     i(C, { analyticsDataOverride: { sku_id: n } });
             })({
                 activeSubscription: l,
@@ -70,7 +70,7 @@ function y(e) {
                 setSelectedSkuId: a,
                 handleStepChange: t,
                 isGift: b,
-                userTrialOffer: v,
+                userTrialOffer: S,
                 startedPaymentFlowWithPaymentSources: d.current,
                 setSelectedPlanId: c,
                 defaultPlanId: j,
@@ -79,8 +79,8 @@ function y(e) {
         isGift: b,
         inOfferExperience: w,
         priceOptions: u,
-        showPromotionalGiftBanner: S,
-        enablePremiumBrandRefresh: I,
+        showPromotionalGiftBanner: v,
+        enablePremiumBrandRefresh: O,
     });
 }
 function L(e) {
@@ -93,17 +93,22 @@ function L(e) {
             showPromotionalGiftBanner: C,
             enablePremiumBrandRefresh: h,
         } = e,
-        f = h
+        { giftRecipient: m } = (0, _.wD)(),
+        f = (0, d.y)({ location: "PremiumPaymentSelect" }) && i && null != m,
+        x = f
             ? (0, r.jsx)(l.Heading, {
                   variant: "heading-lg/bold",
-                  children: j.intl.string(j.t["r+SebW"]),
+                  children: j.intl.string(j.t["wg/30t"]),
               })
-            : (0, r.jsx)(l.Heading, {
-                  variant: "heading-md/semibold",
-                  children: j.intl.string(j.t["r+SebW"]),
-              }),
-        { giftRecipient: m } = (0, _.wD)(),
-        x = (0, d.y)({ location: "PremiumPaymentSelect" }) && i && null != m;
+            : h
+              ? (0, r.jsx)(l.Heading, {
+                    variant: "heading-lg/bold",
+                    children: j.intl.string(j.t["r+SebW"]),
+                })
+              : (0, r.jsx)(l.Heading, {
+                    variant: "heading-md/semibold",
+                    children: j.intl.string(j.t["r+SebW"]),
+                });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l.xBx, {
@@ -114,7 +119,7 @@ function L(e) {
                     direction: "horizontal",
                     justify: "space-between",
                     children: [
-                        f,
+                        x,
                         (0, r.jsx)(l.olH, {
                             "data-migration-pending": !0,
                             className: b.close,
@@ -130,9 +135,9 @@ function L(e) {
                     [b.modalSize]: !h,
                     [b.modalPadding]: o && !h,
                     [b.premiumBrandRefreshContent]: h,
-                    [b.wishlistModalSize]: x,
+                    [b.wishlistModalSize]: f,
                 }),
-                children: x
+                children: f
                     ? (0, r.jsx)(u.Z, {
                           onSelectSku: (e) => t((0, p.Wz)(e)),
                           isGift: i,
