@@ -1,4 +1,10 @@
-n.d(t, { g: () => p }), n(953529), n(539854);
+n.d(t, {
+    X: () => m,
+    g: () => g,
+}),
+    n(953529),
+    n(388685),
+    n(539854);
 var r = n(951288),
     i = n(647438),
     a = n(692547),
@@ -9,31 +15,101 @@ var r = n(951288),
     u = n(777207),
     d = n(590154),
     f = n(877222);
-function _(e) {
+function _(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = p(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function p(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+function h(e) {
     let { id: t, errorMessage: n, helperText: r, successMessage: a, description: o } = e,
-        s = i.useId(),
-        l = i.useId(),
+        [s, l] = i.useState(!1),
         c = i.useId(),
         u = i.useId(),
         d = i.useId(),
-        f = null != o && "" !== o,
-        _ = (null != r && "" !== r) || (null != a && "" !== a),
-        p = [];
-    f && p.push(u), _ && p.push(c);
-    let h = p.length > 0 ? p.join(" ") : void 0;
+        f = i.useId(),
+        _ = i.useId(),
+        p = null != o && "" !== o,
+        h = (null != r && "" !== r) || (null != a && "" !== a),
+        m = [];
+    p && m.push(f), h && m.push(d);
+    let g = m.length > 0 ? m.join(" ") : void 0;
     return i.useMemo(
         () => ({
-            labelId: s,
-            controlId: null != t ? t : l,
-            describedById: h,
-            errorMessageId: null != n && "" !== n ? d : void 0,
-            helperTextId: _ ? c : void 0,
-            descriptionId: f ? u : void 0,
+            labelId: c,
+            controlId: null != t ? t : u,
+            describedById: g,
+            errorMessageId: null != n && "" !== n ? _ : void 0,
+            helperTextId: h ? d : void 0,
+            descriptionId: p ? f : void 0,
+            isLabelHovered: s,
+            setIsLabelHovered: l,
         }),
-        [s, t, l, h, n, d, _, c, f, u],
+        [c, t, u, g, n, _, h, d, p, f, s, l],
     );
 }
-function p(e) {
+function m(e) {
+    let {
+        label: t,
+        hideLabel: n,
+        badge: r,
+        icon: i,
+        required: a,
+        disabled: o,
+        description: s,
+        helperText: l,
+        id: c,
+        errorMessage: u,
+        successMessage: d,
+        layout: f,
+    } = e;
+    return {
+        fieldProps: {
+            label: t,
+            hideLabel: n,
+            badge: r,
+            icon: i,
+            required: a,
+            disabled: o,
+            description: s,
+            helperText: l,
+            id: c,
+            errorMessage: u,
+            successMessage: d,
+            layout: f,
+        },
+        props: _(e, [
+            "label",
+            "hideLabel",
+            "badge",
+            "icon",
+            "required",
+            "disabled",
+            "description",
+            "helperText",
+            "id",
+            "errorMessage",
+            "successMessage",
+            "layout",
+        ]),
+    };
+}
+function g(e) {
     let {
             label: t,
             hideLabel: n = !1,
@@ -41,35 +117,38 @@ function p(e) {
             disabled: a,
             description: l,
             helperText: c,
-            children: p,
-            errorMessage: m,
-            successMessage: g,
-            trailingContent: E,
+            children: _,
+            errorMessage: p,
+            successMessage: m,
+            trailingContent: g,
             role: b,
             layout: y = "vertical",
             badge: O,
             icon: v = null,
+            interactiveLabel: I = !1,
         } = e,
-        I = _(e),
-        { labelId: T, controlId: S, errorMessageId: A, describedById: C, helperTextId: N, descriptionId: R } = I,
-        P = "group" === b || "radiogroup" === b,
-        w = P ? "span" : "label",
-        D = P ? "fieldset" : "div",
-        L = P
+        T = h(e),
+        { labelId: S, controlId: A, errorMessageId: C, describedById: N, helperTextId: R, descriptionId: P } = T,
+        w = "group" === b || "radiogroup" === b,
+        D = w ? "span" : "label",
+        L = w ? "fieldset" : "div",
+        x = w
             ? (0, r.jsx)("legend", {
-                  id: T,
+                  id: S,
                   children: (0, r.jsx)(s.n, { children: t }),
               })
             : null,
-        x = null != t && "" !== t,
-        M = null != l && "" !== l,
-        j = x
+        M = null != t && "" !== t,
+        j = null != l && "" !== l,
+        k = M
             ? (0, r.jsxs)(u.x, {
-                  "aria-hidden": P,
-                  id: T,
-                  tag: w,
+                  "aria-hidden": w,
+                  "data-interactive": I,
+                  id: S,
+                  tag: D,
                   variant: "text-md/medium",
-                  htmlFor: S,
+                  color: "text-primary",
+                  htmlFor: A,
                   className: f.label,
                   children: [
                       null != v
@@ -98,27 +177,27 @@ function p(e) {
               })
             : null;
     return (0, r.jsx)(d.z.Provider, {
-        value: I,
-        children: (0, r.jsxs)(D, {
+        value: T,
+        children: (0, r.jsxs)(L, {
             role: b,
             className: f.container,
             "data-layout": y,
             "data-disabled": a,
-            "aria-describedby": P ? C : void 0,
-            disabled: P ? a : void 0,
+            "aria-describedby": w ? N : void 0,
+            disabled: w ? a : void 0,
             children: [
-                L,
-                x || M
+                x,
+                M || j
                     ? (0, r.jsxs)("div", {
                           className: f.labelContainer,
                           children: [
-                              n ? (0, r.jsx)(s.n, { children: j }) : j,
-                              M &&
+                              n ? (0, r.jsx)(s.n, { children: k }) : k,
+                              j &&
                                   (0, r.jsx)(u.x, {
                                       variant: "text-sm/normal",
                                       color: "text-secondary",
                                       className: f.description,
-                                      id: R,
+                                      id: P,
                                       children: l,
                                   }),
                           ],
@@ -127,14 +206,14 @@ function p(e) {
                 (0, r.jsxs)("div", {
                     className: f.control,
                     children: [
-                        "function" == typeof p ? p(I) : p,
-                        (0, r.jsx)(h, {
-                            successMessage: g,
-                            errorMessage: m,
+                        "function" == typeof _ ? _(T) : _,
+                        (0, r.jsx)(E, {
+                            successMessage: m,
+                            errorMessage: p,
                             helperText: c,
-                            trailingContent: E,
-                            helperTextId: N,
-                            errorMessageId: A,
+                            trailingContent: g,
+                            helperTextId: R,
+                            errorMessageId: C,
                         }),
                     ],
                 }),
@@ -142,7 +221,7 @@ function p(e) {
         }),
     });
 }
-function h(e) {
+function E(e) {
     let {
             successMessage: t,
             errorMessage: n,

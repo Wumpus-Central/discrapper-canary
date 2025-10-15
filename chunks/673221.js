@@ -1,4 +1,4 @@
-n.d(t, { P: () => w }), n(953529);
+n.d(t, { P: () => R });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -71,48 +71,27 @@ function A(e, t) {
         e
     );
 }
-function C(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = N(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
+let C = 24,
+    N = 36;
+function R(e) {
+    let { fieldProps: t, props: n } = (0, l.X)(e),
+        { id: i, required: a, label: o } = t;
+    return (0, r.jsx)(
+        l.g,
+        A(T({}, t), {
+            "data-mana-component": "select",
+            children: (0, r.jsx)(
+                P,
+                A(T({}, n), {
+                    id: i,
+                    required: a,
+                    label: o,
+                }),
+            ),
+        }),
+    );
 }
-function N(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
-let R = 24,
-    P = 36;
-function w(e) {
-    var { layout: t, hideLabel: n, description: i, helperText: a, errorMessage: o, successMessage: s } = e,
-        c = C(e, ["layout", "hideLabel", "description", "helperText", "errorMessage", "successMessage"]);
-    let { id: u, required: d, label: f } = c;
-    return (0, r.jsx)(l.g, {
-        id: u,
-        required: d,
-        layout: t,
-        label: f,
-        hideLabel: n,
-        description: i,
-        helperText: a,
-        errorMessage: o,
-        successMessage: s,
-        "data-mana-component": "select",
-        children: (0, r.jsx)(D, T({}, c)),
-    });
-}
-function D(e) {
+function P(e) {
     let {
             selectionMode: t,
             id: n,
@@ -121,10 +100,10 @@ function D(e) {
             readOnly: _,
             autoFocus: I,
             clearable: S,
-            fullWidth: C,
-            closeOnSelect: N = !0,
-            shouldFocusWrap: w,
-            placeholder: D = O.intl.string(y.default["A+pfVV"]),
+            fullWidth: R,
+            closeOnSelect: P = !0,
+            shouldFocusWrap: L,
+            placeholder: x = O.intl.string(y.default["A+pfVV"]),
             label: M,
             name: j,
             form: k,
@@ -155,10 +134,10 @@ function D(e) {
         en = i.useContext(c.z),
         er = i.useRef(null),
         ei = i.useRef(null),
-        ea = null != N ? N : "multiple" !== t,
+        ea = null != P ? P : "multiple" !== t,
         eo = Array.isArray(V) ? V.length > 0 : null != V,
         es = l || _,
-        { measuredWidth: el, itemsForMeasurement: ec } = L(ee, t),
+        { measuredWidth: el, itemsForMeasurement: ec } = w(ee, t),
         eu = i.useCallback(() => {
             es || K(!W);
         }, [es, K, W]),
@@ -205,12 +184,12 @@ function D(e) {
             return ee.filter((t) => (0, b._s)(t.value, e));
         }, [V, ee]),
         eh = i.useMemo(() => {
-            if (!C)
+            if (!R)
                 return "".concat(
-                    Math.max(null != el ? el : 200, 200) * ("multiple" === t ? 1.5 : 1) + !!S * R + P + 8,
+                    Math.max(null != el ? el : 200, 200) * ("multiple" === t ? 1.5 : 1) + !!S * C + N + 8,
                     "px",
                 );
-        }, [C, el, t, S]),
+        }, [R, el, t, S]),
         em = i.useCallback(
             (e) => {
                 if (es) return;
@@ -283,7 +262,7 @@ function D(e) {
                                 readOnly: _,
                                 loading: et,
                                 clearable: S,
-                                fullWidth: C,
+                                fullWidth: R,
                                 isOpen: W,
                                 isInert: es,
                                 hasValue: eo,
@@ -316,9 +295,9 @@ function D(e) {
                                     (0, r.jsxs)(u.n, {
                                         children: [M, ", "],
                                     }),
-                                    (0, r.jsx)(x, {
+                                    (0, r.jsx)(D, {
                                         tagGroupRef: Y,
-                                        placeholder: D,
+                                        placeholder: x,
                                         selectionMode: t,
                                         selectedItems: ep,
                                         onRemove: ey,
@@ -338,7 +317,7 @@ function D(e) {
                     onSelectionChange: em,
                     listItems: ee,
                 }),
-                !C && ec,
+                !R && ec,
                 !es &&
                     W &&
                     (0, r.jsx)(
@@ -361,7 +340,7 @@ function D(e) {
                                         selectionMode: t,
                                         selectedItems: ep,
                                         onSelectionChange: em,
-                                        shouldFocusWrap: w,
+                                        shouldFocusWrap: L,
                                         renderListItem: (e) => (0, r.jsx)(h.W, T({}, e)),
                                         maxVisibleItems: G,
                                         loading: et,
@@ -375,7 +354,7 @@ function D(e) {
         })
     );
 }
-function L(e, t) {
+function w(e, t) {
     let { ref: n, width: a } = (0, _.ZP)(),
         o = i.useId();
     return {
@@ -406,7 +385,7 @@ function L(e, t) {
         ),
     };
 }
-function x(e) {
+function D(e) {
     let { placeholder: t, selectionMode: n, selectedItems: i, onRemove: a, tagGroupRef: o } = e;
     return null == i || 0 === i.length
         ? (0, r.jsx)("div", {

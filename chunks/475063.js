@@ -1,4 +1,4 @@
-n.d(t, { K: () => T }), n(953529);
+n.d(t, { K: () => T });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -101,15 +101,9 @@ function T(e) {
             showCharacterCount: N,
             showRemainingCharacterCount: R = !0,
             rows: P = 3,
-            disabled: w,
-            label: D,
-            hideLabel: L,
-            description: x,
-            helperText: M,
-            successMessage: j,
-            inputRef: k,
+            inputRef: w,
         } = e,
-        U = y(e, [
+        D = y(e, [
             "value",
             "placeholder",
             "autoFocus",
@@ -121,16 +115,12 @@ function T(e) {
             "showCharacterCount",
             "showRemainingCharacterCount",
             "rows",
-            "disabled",
-            "label",
-            "hideLabel",
-            "description",
-            "helperText",
-            "successMessage",
             "inputRef",
         ]);
-    let G = (0, f.U)("UserSettingsDesignSystems"),
-        B = (0, d.m)({
+    let { fieldProps: L, props: x } = (0, s.XF_)(D),
+        { disabled: M } = L,
+        j = (0, f.U)("UserSettingsDesignSystems"),
+        k = (0, d.m)({
             validateOn: "change",
             error: O,
             value: n,
@@ -138,84 +128,82 @@ function T(e) {
             maxLength: E,
             defaultDirty: T,
         }),
-        Z = i.useMemo(() => {
-            if (G) return;
+        U = i.useMemo(() => {
+            if (j) return;
             if (null == E) return v;
             let e = "".concat(E).length;
             return I * (e += "".concat(E, " / ").length) + v;
-        }, [G, E]),
-        F = (e) => {
-            let { onChange: t } = U;
-            null == t || t(e.currentTarget.value), B.setShouldValidate(!0);
+        }, [j, E]),
+        G = (e) => {
+            let { onChange: t } = x;
+            null == t || t(e.currentTarget.value), k.setShouldValidate(!0);
         },
-        V =
-            G && N
+        B =
+            j && N
                 ? (0, r.jsx)(c.H, {
                       value: n,
                       maxLength: R && null != E ? E : void 0,
                   })
                 : null;
-    return (0, r.jsx)(s.gNt, {
-        label: D,
-        hideLabel: L,
-        description: x,
-        helperText: M,
-        successMessage: j,
-        trailingContent: V,
-        errorMessage: B.hasError && null != (t = B.errorMessage) ? t : void 0,
-        children: (0, r.jsxs)(u.U, {
-            validation: B,
-            disabled: w,
-            children: [
-                (0, r.jsx)(s.tEY, {
-                    children: (0, r.jsx)(
-                        S,
-                        b(
-                            g(
+    return (0, r.jsx)(
+        s.gNt,
+        b(g({}, L), {
+            trailingContent: B,
+            errorMessage: k.hasError && null != (t = k.errorMessage) ? t : void 0,
+            children: (0, r.jsxs)(u.U, {
+                validation: k,
+                disabled: M,
+                children: [
+                    (0, r.jsx)(s.tEY, {
+                        children: (0, r.jsx)(
+                            S,
+                            b(
+                                g(
+                                    {
+                                        autosize: _,
+                                        className: o()(p.textArea, h.scrollbarDefault),
+                                        style: { paddingRight: U },
+                                        placeholder: a,
+                                        value: n,
+                                        autoFocus: l,
+                                        minLength: m,
+                                        maxLength: E,
+                                        rows: P,
+                                        disabled: M,
+                                        "data-mana-component": "text-area",
+                                    },
+                                    x,
+                                ),
                                 {
-                                    autosize: _,
-                                    className: o()(p.textArea, h.scrollbarDefault),
-                                    style: { paddingRight: Z },
-                                    placeholder: a,
-                                    value: n,
-                                    autoFocus: l,
-                                    minLength: m,
-                                    maxLength: E,
-                                    rows: P,
-                                    disabled: w,
-                                    "data-mana-component": "text-area",
+                                    onChange: G,
+                                    ref: w,
                                 },
-                                U,
                             ),
-                            {
-                                onChange: F,
-                                ref: k,
-                            },
                         ),
-                    ),
-                }),
-                G
-                    ? null
-                    : (0, r.jsxs)(r.Fragment, {
-                          children: [
-                              N
-                                  ? (0, r.jsx)(A, {
-                                        value: n,
-                                        maxLength: E,
-                                        hasError: B.hasError,
-                                    })
-                                  : null,
-                              N || !1 === R
-                                  ? null
-                                  : (0, r.jsx)(C, {
-                                        value: n,
-                                        maxLength: E,
-                                    }),
-                          ],
-                      }),
-            ],
+                    }),
+                    j
+                        ? null
+                        : (0, r.jsxs)(r.Fragment, {
+                              children: [
+                                  N
+                                      ? (0, r.jsx)(A, {
+                                            value: n,
+                                            maxLength: E,
+                                            hasError: k.hasError,
+                                        })
+                                      : null,
+                                  N || !1 === R
+                                      ? null
+                                      : (0, r.jsx)(C, {
+                                            value: n,
+                                            maxLength: E,
+                                        }),
+                              ],
+                          }),
+                ],
+            }),
         }),
-    });
+    );
 }
 function S(e) {
     var { "aria-labelledby": t, autosize: n } = e,

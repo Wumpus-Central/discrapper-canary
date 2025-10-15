@@ -3,8 +3,7 @@ n.d(t, {
     px: () => j,
     uz: () => L,
 }),
-    n(388685),
-    n(953529);
+    n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -204,21 +203,16 @@ function L(e) {
     });
 }
 function x(e) {
-    var { hideLabel: t, description: n, helperText: i, errorMessage: a, successMessage: o, ref: s } = e,
-        l = P(e, ["hideLabel", "description", "helperText", "errorMessage", "successMessage", "ref"]);
-    let { id: u, required: d, label: f } = l;
-    return (0, r.jsx)(c.g, {
-        id: u,
-        required: d,
-        label: f,
-        hideLabel: t,
-        description: n,
-        helperText: i,
-        errorMessage: a,
-        successMessage: o,
-        "data-mana-component": "combobox",
-        children: (0, r.jsx)(M, R(C({}, l), { ref: s })),
-    });
+    var { ref: t } = e,
+        n = P(e, ["ref"]);
+    let { fieldProps: i, props: a } = (0, c.X)(n);
+    return (0, r.jsx)(
+        c.g,
+        R(C({}, i), {
+            "data-mana-component": "combobox",
+            children: (0, r.jsx)(M, R(C({}, a), { ref: t })),
+        }),
+    );
 }
 function M(e) {
     let {

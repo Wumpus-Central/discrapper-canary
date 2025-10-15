@@ -1,4 +1,4 @@
-n.d(t, { i: () => I }), n(642613), n(953529), n(415506), n(388685);
+n.d(t, { i: () => I }), n(642613), n(415506), n(388685);
 var r,
     i = n(951288),
     a = n(647438),
@@ -6,7 +6,7 @@ var r,
     s = n.n(o),
     l = n(392711),
     c = n.n(l),
-    u = n(599273),
+    u = n(258536),
     d = n(374470),
     f = n(793030),
     _ = n(506802),
@@ -166,17 +166,12 @@ class I extends (r = a.PureComponent) {
                 "aria-label": U,
                 "aria-labelledby": G,
                 "aria-describedby": B,
-                label: Z,
-                hideLabel: F,
-                description: V,
-                helperText: H,
-                errorMessage: Y,
-                successMessage: W,
             } = this.props,
-            K = 0;
-        y ? null != o && (null != c ? (K = o[c]) : null != l && (K = o[l])) : (K = this.scaleValue(t));
-        let z = "".concat(K, "%"),
-            q =
+            { fieldProps: Z } = (0, f.XF_)(this.props),
+            F = 0;
+        y ? null != o && (null != c ? (F = o[c]) : null != l && (F = o[l])) : (F = this.scaleValue(t));
+        let V = "".concat(F, "%"),
+            H =
                 null != o && null != a
                     ? o.map((e, t) => {
                           let n = a[t],
@@ -210,97 +205,94 @@ class I extends (r = a.PureComponent) {
                           );
                       })
                     : null,
-            X = null != P ? P(t) : "".concat(K.toFixed(0), "%"),
-            Q = null != (e = null == D ? void 0 : D(t)) ? e : void 0;
-        return (0, i.jsx)(f.gNt, {
-            label: Z,
-            hideLabel: F,
-            description: V,
-            helperText: H,
-            errorMessage: Y,
-            successMessage: W,
-            children: (e) =>
-                (0, i.jsx)(T, {
-                    active: n,
-                    keyboardFocused: r && p.Z.keyboardModeEnabled,
-                    children: (a) => {
-                        var o;
-                        return (0, i.jsx)(f.tEY, {
-                            focusTarget: this.containerRef,
-                            ringTarget: this.grabberRef,
-                            children: (0, i.jsxs)(u.animated.div, {
-                                className: s()(h.slider, O, {
-                                    [h.hasMarks]: (null != (o = null == q ? void 0 : q.length) ? o : 0) > 0,
-                                    [h.disabled]: E,
-                                    [h.mini]: A,
+            Y = null != P ? P(t) : "".concat(F.toFixed(0), "%"),
+            W = null != (e = null == D ? void 0 : D(t)) ? e : void 0;
+        return (0, i.jsx)(
+            f.gNt,
+            b(g({}, Z), {
+                children: (e) =>
+                    (0, i.jsx)(T, {
+                        active: n,
+                        keyboardFocused: r && p.Z.keyboardModeEnabled,
+                        children: (a) => {
+                            var o;
+                            return (0, i.jsx)(f.tEY, {
+                                focusTarget: this.containerRef,
+                                ringTarget: this.grabberRef,
+                                children: (0, i.jsxs)(u.animated.div, {
+                                    className: s()(h.slider, O, {
+                                        [h.hasMarks]: (null != (o = null == H ? void 0 : H.length) ? o : 0) > 0,
+                                        [h.disabled]: E,
+                                        [h.mini]: A,
+                                    }),
+                                    style: null == a ? void 0 : a.sliderStyles,
+                                    id: e.controlId,
+                                    "aria-valuemin": d,
+                                    "aria-valuemax": m,
+                                    "aria-valuenow": t,
+                                    "aria-disabled": E,
+                                    "aria-orientation": R,
+                                    "aria-hidden": k,
+                                    "aria-label": U,
+                                    "aria-labelledby": G,
+                                    "aria-describedby": null != B ? B : e.describedById,
+                                    "aria-errormessage": e.errorMessageId,
+                                    "aria-invalid": null != e.errorMessageId,
+                                    "aria-valuetext": W,
+                                    role: "slider",
+                                    tabIndex: 0,
+                                    onKeyDown: this.handleKeyDown,
+                                    onMouseDown: this.handleContainerMouseDown,
+                                    onFocus: () => {
+                                        this.onFocus();
+                                    },
+                                    onBlur: () => {
+                                        this.onBlur();
+                                    },
+                                    onMouseEnter: () => (null == a ? void 0 : a.setHovered(!0)),
+                                    onMouseLeave: () => (null == a ? void 0 : a.setHovered(!1)),
+                                    ref: this.containerRef,
+                                    children: [
+                                        (0, i.jsx)("div", {
+                                            className: h.track,
+                                            children: H,
+                                        }),
+                                        (0, i.jsx)("div", {
+                                            className: s()(h.bar, L),
+                                            style: I,
+                                            children: (0, i.jsx)("div", {
+                                                className: h.barFill,
+                                                style: b(g({}, S), { width: V }),
+                                            }),
+                                        }),
+                                        v,
+                                        (0, i.jsx)("div", {
+                                            className: h.track,
+                                            children: (0, i.jsx)(_.aM, {
+                                                "data-migration-pending": !0,
+                                                color: _.aM.Colors.GREY,
+                                                hideOnClick: !1,
+                                                text: C || y ? null : Y,
+                                                forceOpen: n || (r && p.Z.keyboardModeEnabled),
+                                                children: (e) =>
+                                                    (0, i.jsx)(
+                                                        "div",
+                                                        b(g({}, e), {
+                                                            className: s()(h.grabber, x),
+                                                            style: b(g({}, M), { left: V }),
+                                                            onMouseDown: this.handleMouseDown,
+                                                            ref: this.grabberRef,
+                                                        }),
+                                                    ),
+                                            }),
+                                        }),
+                                    ],
                                 }),
-                                style: null == a ? void 0 : a.sliderStyles,
-                                id: e.controlId,
-                                "aria-valuemin": d,
-                                "aria-valuemax": m,
-                                "aria-valuenow": t,
-                                "aria-disabled": E,
-                                "aria-orientation": R,
-                                "aria-hidden": k,
-                                "aria-label": U,
-                                "aria-labelledby": G,
-                                "aria-describedby": null != B ? B : e.describedById,
-                                "aria-errormessage": e.errorMessageId,
-                                "aria-invalid": null != e.errorMessageId,
-                                "aria-valuetext": Q,
-                                role: "slider",
-                                tabIndex: 0,
-                                onKeyDown: this.handleKeyDown,
-                                onMouseDown: this.handleContainerMouseDown,
-                                onFocus: () => {
-                                    this.onFocus();
-                                },
-                                onBlur: () => {
-                                    this.onBlur();
-                                },
-                                onMouseEnter: () => (null == a ? void 0 : a.setHovered(!0)),
-                                onMouseLeave: () => (null == a ? void 0 : a.setHovered(!1)),
-                                ref: this.containerRef,
-                                children: [
-                                    (0, i.jsx)("div", {
-                                        className: h.track,
-                                        children: q,
-                                    }),
-                                    (0, i.jsx)("div", {
-                                        className: s()(h.bar, L),
-                                        style: I,
-                                        children: (0, i.jsx)("div", {
-                                            className: h.barFill,
-                                            style: b(g({}, S), { width: z }),
-                                        }),
-                                    }),
-                                    v,
-                                    (0, i.jsx)("div", {
-                                        className: h.track,
-                                        children: (0, i.jsx)(_.aM, {
-                                            "data-migration-pending": !0,
-                                            color: _.aM.Colors.GREY,
-                                            hideOnClick: !1,
-                                            text: C || y ? null : X,
-                                            forceOpen: n || (r && p.Z.keyboardModeEnabled),
-                                            children: (e) =>
-                                                (0, i.jsx)(
-                                                    "div",
-                                                    b(g({}, e), {
-                                                        className: s()(h.grabber, x),
-                                                        style: b(g({}, M), { left: z }),
-                                                        onMouseDown: this.handleMouseDown,
-                                                        ref: this.grabberRef,
-                                                    }),
-                                                ),
-                                        }),
-                                    }),
-                                ],
-                            }),
-                        });
-                    },
-                }),
-        });
+                            });
+                        },
+                    }),
+            }),
+        );
     }
     reset() {
         var e, t, n, r;

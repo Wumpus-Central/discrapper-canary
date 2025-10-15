@@ -84,6 +84,7 @@ function f(e) {
             id: o,
             disabled: n,
             layout: "horizontal",
+            interactiveLabel: !0,
             children: (e) =>
                 (0, r.jsx)(a.J, {
                     focusProps: d,

@@ -1,8 +1,7 @@
 n.d(t, {
     I: () => A,
     o: () => S,
-}),
-    n(953529);
+});
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -197,16 +196,9 @@ function S(e) {
             size: L = "md",
             fullWidth: x = !1,
             clearable: M = !1,
-            helperText: j,
-            showCharacterCount: k = !1,
-            successMessage: U,
-            label: G,
-            description: B,
-            hideLabel: Z,
-            required: F,
-            id: V,
+            showCharacterCount: j = !1,
         } = e,
-        H = y(e, [
+        k = y(e, [
             "disabled",
             "editable",
             "inputRef",
@@ -226,16 +218,10 @@ function S(e) {
             "size",
             "fullWidth",
             "clearable",
-            "helperText",
             "showCharacterCount",
-            "successMessage",
-            "label",
-            "description",
-            "hideLabel",
-            "required",
-            "id",
         ]),
-        Y = (0, _.m)({
+        { fieldProps: U } = (0, s.XF_)(k),
+        G = (0, _.m)({
             validateOn: D,
             error: N,
             value: O,
@@ -243,115 +229,111 @@ function S(e) {
             maxLength: E,
             defaultDirty: R,
         }),
-        { setShouldValidate: W } = Y,
-        K = v(O, S),
-        z = "object" == typeof P && "type" in P && "tags" === P.type,
-        q = (e) => {
+        { setShouldValidate: B } = G,
+        Z = v(O, S),
+        F = "object" == typeof P && "type" in P && "tags" === P.type,
+        V = (e) => {
             var t, n;
             let r = e.currentTarget.value;
-            null == (t = H.onChange) || t.call(H, r, u), W(!0), null == (n = K.setHasValue) || n.call(K, "" !== r);
+            null == (t = k.onChange) || t.call(k, r, u), B(!0), null == (n = Z.setHasValue) || n.call(Z, "" !== r);
         },
-        X = (e) => {
+        H = (e) => {
             var t, n;
-            null == (t = H.onFocus) || t.call(H, e), null == (n = K.setIsFocused) || n.call(K, !0);
+            null == (t = k.onFocus) || t.call(k, e), null == (n = Z.setIsFocused) || n.call(Z, !0);
         },
-        Q = (e) => {
+        Y = (e) => {
             var t, n;
-            null == (t = H.onBlur) || t.call(H, e), null == (n = K.setIsFocused) || n.call(K, !1);
+            null == (t = k.onBlur) || t.call(k, e), null == (n = Z.setIsFocused) || n.call(Z, !1);
         },
-        J = (e) => {
-            if (null != H.onClear) H.onClear(e);
+        W = (e) => {
+            if (null != k.onClear) k.onClear(e);
             else {
                 var t;
-                null == (t = H.onChange) || t.call(H, "", u);
+                null == (t = k.onChange) || t.call(k, "", u);
             }
         },
-        $ = i.useRef(null),
-        ee = H.readOnly;
-    null == ee && !1 === a && (ee = !0);
-    let et = null;
-    ("boolean" == typeof M ? M && null != O && "" !== O && !ee : M.show)
-        ? (et = (0, r.jsx)(T, {
+        K = i.useRef(null),
+        z = k.readOnly;
+    null == z && !1 === a && (z = !0);
+    let q = null;
+    ("boolean" == typeof M ? M && null != O && "" !== O && !z : M.show)
+        ? (q = (0, r.jsx)(T, {
               inputSize: L,
-              onClick: J,
+              onClick: W,
           }))
         : null != w &&
-          (et = (0, r.jsx)(I, {
+          (q = (0, r.jsx)(I, {
               accessory: w,
               inputSize: L,
           }));
-    let en = null;
+    let X = null;
     null != P &&
-        (en = (0, r.jsx)(I, {
+        (X = (0, r.jsx)(I, {
             accessory: P,
             inputSize: L,
         }));
-    let er = k
+    let Q = j
         ? (0, r.jsx)(d.H, {
               value: O,
               maxLength: E,
           })
         : null;
-    return (0, r.jsx)(s.gNt, {
-        id: V,
-        label: G,
-        required: F,
-        description: B,
-        hideLabel: Z,
-        helperText: j,
-        errorMessage: Y.hasError && null != (t = Y.errorMessage) ? t : void 0,
-        successMessage: U,
-        trailingContent: er,
-        children: (0, r.jsxs)(f.U, {
-            ref: $,
-            disabled: n,
-            validation: Y,
-            fullWidth: x,
-            readOnly: ee,
-            className: o()(h.container, h[L], {
-                [h.hasLeading]: null != en,
-                [h.hasTrailing]: null != et,
-                [h.hasTags]: z,
-            }),
-            children: [
-                en,
-                (0, r.jsx)(
-                    s.tEY,
-                    b(g({ ringTarget: $ }, c), {
-                        children: (0, r.jsx)(
-                            A,
-                            b(
-                                g(
+    return (0, r.jsx)(
+        s.gNt,
+        b(g({}, U), {
+            errorMessage: G.hasError && null != (t = G.errorMessage) ? t : void 0,
+            trailingContent: Q,
+            children: (0, r.jsxs)(f.U, {
+                ref: K,
+                disabled: n,
+                validation: G,
+                fullWidth: x,
+                readOnly: z,
+                className: o()(h.container, h[L], {
+                    [h.hasLeading]: null != X,
+                    [h.hasTrailing]: null != q,
+                    [h.hasTags]: F,
+                }),
+                children: [
+                    X,
+                    (0, r.jsx)(
+                        s.tEY,
+                        b(g({ ringTarget: K }, c), {
+                            children: (0, r.jsx)(
+                                A,
+                                b(
+                                    g(
+                                        {
+                                            name: u,
+                                            className: h.input,
+                                            disabled: n,
+                                            readOnly: z,
+                                            "aria-required": U.required,
+                                            type: p,
+                                            placeholder: m,
+                                            maxLength: E,
+                                            minLength: C,
+                                            value: O,
+                                            defaultValue: S,
+                                            "data-mana-component": "text-input",
+                                        },
+                                        k,
+                                    ),
                                     {
-                                        name: u,
-                                        className: h.input,
-                                        disabled: n,
-                                        readOnly: ee,
-                                        "aria-required": F,
-                                        type: p,
-                                        placeholder: m,
-                                        maxLength: E,
-                                        minLength: C,
-                                        value: O,
-                                        defaultValue: S,
-                                        "data-mana-component": "text-input",
+                                        onChange: V,
+                                        onBlur: Y,
+                                        onFocus: H,
+                                        ref: l,
                                     },
-                                    H,
                                 ),
-                                {
-                                    onChange: q,
-                                    onBlur: Q,
-                                    onFocus: X,
-                                    ref: l,
-                                },
                             ),
-                        ),
-                    }),
-                ),
-                et,
-            ],
+                        }),
+                    ),
+                    q,
+                ],
+            }),
         }),
-    });
+    );
 }
 function A(e) {
     var { value: t, defaultValue: n, "aria-labelledby": a } = e,

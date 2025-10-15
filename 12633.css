@@ -3384,6 +3384,10 @@
     max-width: 70ch
 }
 
+.label__5a838[data-interactive=true] {
+    cursor: pointer
+}
+
 .label__5a838~.description__5a838 {
     margin-top: -8px
 }
