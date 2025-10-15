@@ -118,7 +118,7 @@ let ea = [14, 14, 12, 12, 10, 8, 6],
                 user: n,
                 supportsAskToJoin: !1,
             }),
-            i = null != r;
+            i = null != r && r.isEnabled;
         return {
             isJoinActivityButtonShown: i,
             joinActivityButtonAction: r,
@@ -151,16 +151,16 @@ let ea = [14, 14, 12, 12, 10, 8, 6],
         return null;
     },
     eg = (e) => {
-        let { activity: t, analyticsLocations: n, hidden: r } = e,
-            { application_id: l, name: a } = t,
-            { data: o } = (0, P.IX)(l),
-            s = (0, S.Z)({
-                application: o,
+        let { activity: t, analyticsLocations: n } = e,
+            { application_id: r, name: l } = t,
+            { data: a } = (0, P.IX)(r),
+            o = (0, S.Z)({
+                application: a,
                 analyticsLocations: n,
             }),
-            c = (0, k.Nj)(u.z.CLOUD_PLAY_NEW_BADGE),
-            d = (0, H.F)(l);
-        return null == s || d || r
+            s = (0, k.Nj)(u.z.CLOUD_PLAY_NEW_BADGE),
+            c = (0, H.F)(r);
+        return null == o || c
             ? null
             : (0, i.jsxs)(i.Fragment, {
                   children: [
@@ -171,7 +171,7 @@ let ea = [14, 14, 12, 12, 10, 8, 6],
                               (0, i.jsxs)("div", {
                                   className: el.cloudPlaySectionTextContainer,
                                   children: [
-                                      c
+                                      s
                                           ? null
                                           : (0, i.jsx)(f.IGR, {
                                                 text: ei.intl.string(ei.t.y2b7CA),
@@ -179,12 +179,12 @@ let ea = [14, 14, 12, 12, 10, 8, 6],
                                             }),
                                       (0, i.jsx)(f.Text, {
                                           variant: "text-xs/medium",
-                                          children: ei.intl.formatToPlainString(ei.t.RmiYFx, { gameName: a }),
+                                          children: ei.intl.formatToPlainString(ei.t.RmiYFx, { gameName: l }),
                                       }),
                                   ],
                               }),
                               (0, i.jsx)(ep, {
-                                  onCloudPlayClick: s,
+                                  onCloudPlayClick: o,
                                   analyticsLocations: n,
                               }),
                           ],
@@ -483,16 +483,16 @@ let eO = (e) => {
             { analyticsLocations: d } = (0, N.ZP)(T.Z.NOW_PLAYING_ITEM_RICH_PRESENCE_SECTION),
             { data: p } = (0, P.IX)(s.application_id),
             { assets: f, details: h, state: g, application_id: m } = s,
-            { hasButton: b, isJoinActivityButtonShown: _ } = ef({
+            { hasButton: b } = ef({
                 activity: s,
                 user: u,
             }),
-            O = null != (r = null == (t = (0, L.T7)(p)) ? void 0 : t.src) ? r : n(211827),
-            I = (0, S.Z)({
+            _ = null != (r = null == (t = (0, L.T7)(p)) ? void 0 : t.src) ? r : n(211827),
+            O = (0, S.Z)({
                 application: p,
                 analyticsLocations: d,
             });
-        return null != s.assets || (0, E.Z)(s) || null != I
+        return null != s.assets || (0, E.Z)(s) || null != O
             ? (0, i.jsxs)(eu, {
                   children: [
                       (0, i.jsxs)("div", {
@@ -522,7 +522,7 @@ let eO = (e) => {
                                         className: el.activitySectionAssets,
                                         children: (0, i.jsx)("img", {
                                             alt: "",
-                                            src: O,
+                                            src: _,
                                             className: el.largeImage,
                                         }),
                                     }),
@@ -557,7 +557,6 @@ let eO = (e) => {
                       (0, i.jsx)(eg, {
                           activity: s,
                           analyticsLocations: d,
-                          hidden: _,
                       }),
                   ],
               })
