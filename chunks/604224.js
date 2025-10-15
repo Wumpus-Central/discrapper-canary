@@ -20,24 +20,25 @@ function E() {
         t = (0, i.e7)([s.Z], () => s.Z.getSubsection()),
         n = [
             {
-                title: g.intl.string(g.t.K3lovL),
+                title: g.intl.string(g.t.K3lovD),
                 component: f.Z,
                 setting: h.s6.VOICE_AND_VIDEO_VOICE_TAB,
+                subsection: p.CO,
             },
             {
-                title: g.intl.string(g.t.FlNoSU),
+                title: g.intl.string(g.t.FlNoSV),
                 component: d.Z,
                 setting: h.s6.VOICE_AND_VIDEO_VIDEO_TAB,
                 subsection: p.gP,
             },
             {
-                title: g.intl.string(g.t.ABjMWF),
+                title: g.intl.string(g.t.ABjMWI),
                 component: u.Z,
                 setting: h.s6.VOICE_AND_VIDEO_SOUNDBOARD_TAB,
                 subsection: p.GA,
             },
             {
-                title: g.intl.string(g.t.OFpL3d),
+                title: g.intl.string(g.t.OFpL3c),
                 component: _.Z,
                 setting: h.s6.VOICE_AND_VIDEO_DEBUG_TAB,
             },
@@ -46,7 +47,7 @@ function E() {
     return (0, r.jsx)(o.Gt, {
         value: e,
         children: (0, r.jsx)(l.N, {
-            header: g.intl.string(g.t.B1fFpa),
+            header: g.intl.string(g.t.B1fFpf),
             children: (0, r.jsx)(c.Z, {
                 parentSetting: h.s6.VOICE_AND_VIDEO,
                 settingsSection: m.oAB.VOICE,

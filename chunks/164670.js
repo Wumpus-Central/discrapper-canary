@@ -1,23 +1,25 @@
 n.d(t, {
-    Do: () => d,
-    FE: () => u,
-    K$: () => o,
-    Uc: () => l,
-    a7: () => f,
-    wK: () => s,
-    x6: () => c,
+    Do: () => _,
+    FE: () => f,
+    K$: () => l,
+    Uc: () => u,
+    a7: () => p,
+    wK: () => c,
+    x6: () => d,
 }),
     n(953529);
-var r = n(73346),
-    i = n(591759),
-    a = n(981631);
-function o(e) {
-    return null != e && e.productLine === a.POd.SOCIAL_LAYER_GAME_ITEM;
-}
-function s(e) {
-    return null != e && e.features.has(a.oNc.SOCIAL_LAYER_STOREFRONT);
-}
+var r = n(392711),
+    i = n.n(r),
+    a = n(73346),
+    o = n(591759),
+    s = n(981631);
 function l(e) {
+    return null != e && e.productLine === s.POd.SOCIAL_LAYER_GAME_ITEM;
+}
+function c(e) {
+    return null != e && e.features.has(s.oNc.SOCIAL_LAYER_STOREFRONT);
+}
+function u(e) {
     return {
         applicationId: e.application_id,
         title: e.title,
@@ -41,9 +43,10 @@ function l(e) {
                       }))
                     : void 0,
         })),
+        assets: i().keyBy(e.assets, "id"),
     };
 }
-function c(e) {
+function d(e) {
     if (null != e)
         return {
             carouselItems: e.carousel_items.map((e) => ({
@@ -60,10 +63,10 @@ function c(e) {
             cardBackgroundImageAssetId: e.card_background_image_asset_id,
         };
 }
-function u(e, t) {
-    var n, a, o;
+function f(e, t) {
+    var n, r, i;
     if (
-        (null == e || null == (a = e.tenantMetadata) || null == (n = a.socialLayer) ? void 0 : n.carouselItems) ==
+        (null == e || null == (r = e.tenantMetadata) || null == (n = r.socialLayer) ? void 0 : n.carouselItems) ==
             null ||
         0 === e.tenantMetadata.socialLayer.carouselItems.length
     )
@@ -78,26 +81,26 @@ function u(e, t) {
               primaryIconLabel: void 0,
           }
         : {
-              primaryIconAsset: null != (o = i.Z.toURLSafe((0, r._W)(t, s.labelIconAssetId, 512, "png"))) ? o : void 0,
+              primaryIconAsset: null != (i = o.Z.toURLSafe((0, a._W)(t, s.labelIconAssetId, 512, "png"))) ? i : void 0,
               primaryIconLabel: s.label,
           };
 }
-function d(e) {
-    var t, n, a;
-    let o = null == e ? void 0 : e.applicationId,
+function _(e) {
+    var t, n, r;
+    let i = null == e ? void 0 : e.applicationId,
         s =
             null !=
-            (a =
+            (r =
                 null == e || null == (n = e.tenantMetadata) || null == (t = n.socialLayer)
                     ? void 0
                     : t.cardImageAssetId)
-                ? a
+                ? r
                 : null == e
                   ? void 0
                   : e.thumbnailAssetId;
-    if (null != s && null != o) return i.Z.toURLSafe((0, r._W)(o, s, 512, "png"));
+    if (null != s && null != i) return o.Z.toURLSafe((0, a._W)(i, s, 512, "png"));
 }
-function f(e) {
+function p(e) {
     var t, n;
     if (
         (null == e || null == (n = e.tenantMetadata) || null == (t = n.socialLayer)
@@ -105,7 +108,7 @@ function f(e) {
             : t.cardBackgroundImageAssetId) != null &&
         (null == e ? void 0 : e.applicationId) != null
     )
-        return i.Z.toURLSafe(
-            (0, r._W)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, 1024, "png"),
+        return o.Z.toURLSafe(
+            (0, a._W)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, 1024, "png"),
         );
 }

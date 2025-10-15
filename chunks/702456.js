@@ -20,8 +20,8 @@ var r = n(951288),
     v = n(399521),
     y = n(981631),
     I = n(388032),
-    S = n(944658);
-function C(e) {
+    C = n(944658);
+function S(e) {
     var t, n;
     let { user: i, isFirst: l, isCompetitive: a } = e,
         { status: u, isMobile: d } = (0, o.cj)([m.Z], () => ({
@@ -44,13 +44,13 @@ function C(e) {
             });
         },
         E = l ? s.YqE : a ? s.XcD : void 0,
-        v = l ? I.intl.string(I.t.aI4VOD) : a ? I.intl.string(I.t.kABl29) : void 0;
+        v = l ? I.intl.string(I.t.aI4VOL) : a ? I.intl.string(I.t.kABl2x) : void 0;
     return (0, r.jsx)(s.P3F, {
-        className: S.frequentFriendAvatarButton,
+        className: C.frequentFriendAvatarButton,
         onClick: O,
         onMouseEnter: b.onMouseEnter,
         onMouseLeave: b.onMouseLeave,
-        "aria-label": I.intl.formatToPlainString(I.t.M5FjCg, { username: i.username }),
+        "aria-label": I.intl.formatToPlainString(I.t.M5FjCr, { username: i.username }),
         children: (0, r.jsx)(s.qEK, {
             src: g,
             "aria-label": null != (t = i.globalName) ? t : i.username,
@@ -108,10 +108,24 @@ function T() {
             scrollWidth: 0,
             clientWidth: 0,
         }),
-        f = (0, d.y)(
+        f = i.useRef(null),
+        h = i.useCallback(() => {
+            var e;
+            let t = null == (e = f.current) ? void 0 : e.getScrollerNode();
+            null != t &&
+                c({
+                    scrollLeft: t.scrollLeft,
+                    scrollWidth: t.scrollWidth,
+                    clientWidth: t.clientWidth,
+                });
+        }, []);
+    i.useEffect(() => {
+        (null == t ? void 0 : t.frequentFriends.length) != null && h();
+    }, [null == t ? void 0 : t.frequentFriends.length, null == t ? void 0 : t.showCompetitiveSpot, h]);
+    let m = (0, d.y)(h, []),
+        _ = i.useCallback(
             (e) => {
-                if (null == e.target) return;
-                let t = e.target;
+                let t = e.currentTarget;
                 c({
                     scrollLeft: t.scrollLeft,
                     scrollWidth: t.scrollWidth,
@@ -120,43 +134,27 @@ function T() {
             },
             [c],
         );
-    if (
-        (i.useEffect(() => {
-            let e = f.current;
-            if (null != e) {
-                let t = setTimeout(() => {
-                    c({
-                        scrollLeft: e.scrollLeft,
-                        scrollWidth: e.scrollWidth,
-                        clientWidth: e.clientWidth,
-                    });
-                }, 0);
-                return () => clearTimeout(t);
-            }
-        }, [t, f]),
-        !e || null == t || !n)
-    )
-        return null;
-    let { frequentFriends: h, showCompetitiveSpot: m } = t,
-        _ = l.scrollWidth > l.clientWidth,
-        T = l.scrollLeft > 0,
-        N = l.scrollLeft < l.scrollWidth - l.clientWidth;
+    if (!e || null == t || !n) return null;
+    let { frequentFriends: T, showCompetitiveSpot: N } = t,
+        j = l.scrollWidth > l.clientWidth,
+        P = l.scrollLeft > 0,
+        x = l.scrollLeft < l.scrollWidth - l.clientWidth - 2;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: S.frequentFriendsRow,
+                className: C.frequentFriendsRow,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: S.frequentFriendsHeader,
+                        className: C.frequentFriendsHeader,
                         children: [
                             (0, r.jsx)(s.Text, {
                                 variant: "text-sm/semibold",
-                                className: S.frequentFriendsTitle,
-                                children: I.intl.string(I.t.QEh90N),
+                                className: C.frequentFriendsTitle,
+                                children: I.intl.string(I.t.QEh90H),
                             }),
                             (0, r.jsx)(s.aML, {
                                 "data-migration-pending": !0,
-                                text: I.intl.string(I.t.tqCMcX),
+                                text: I.intl.string(I.t.tqCMcU),
                                 children: (e) => {
                                     var t, n;
                                     return (0, r.jsx)(
@@ -186,7 +184,7 @@ function T() {
                                             }
                                             return e;
                                         })({}, e)),
-                                        (n = n = { className: S.frequentFriendsInfoIcon }),
+                                        (n = n = { className: C.frequentFriendsInfoIcon }),
                                         Object.getOwnPropertyDescriptors
                                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                                             : (function (e, t) {
@@ -205,21 +203,25 @@ function T() {
                             }),
                         ],
                     }),
-                    (0, r.jsx)(s.u2D, {
-                        ref: f,
-                        className: a()(S.frequentFriendsAvatars, {
-                            [S.scrollMaskLeft]: _ && T,
-                            [S.scrollMaskRight]: _ && N,
+                    (0, r.jsx)(s.xVE, {
+                        ref: (e) => {
+                            (f.current = e),
+                                (m.current =
+                                    (null == e ? void 0 : e.getScrollerNode()) != null ? e.getScrollerNode() : null);
+                        },
+                        className: a()(C.frequentFriendsAvatars, {
+                            [C.scrollMaskLeft]: j && P,
+                            [C.scrollMaskRight]: j && x,
                         }),
-                        paddingFix: !1,
                         orientation: "horizontal",
-                        children: h.map((e, t) =>
+                        onScroll: _,
+                        children: T.map((e, t) =>
                             (0, r.jsx)(
-                                C,
+                                S,
                                 {
                                     user: e,
                                     isFirst: 0 === t,
-                                    isCompetitive: t === h.length - 1 && m,
+                                    isCompetitive: t === T.length - 1 && N,
                                 },
                                 e.id,
                             ),

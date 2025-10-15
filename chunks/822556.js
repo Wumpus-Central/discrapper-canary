@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => p });
 var r = n(951288);
 n(647438);
 var i = n(481060),
@@ -7,15 +7,17 @@ var i = n(481060),
     a = n(313789),
     s = n(518596),
     c = n(981631),
-    u = n(388032);
-function d(e) {
+    u = n(526761),
+    d = n(388032);
+function p(e) {
     let { analyticsLocations: t } = (0, o.ZP)();
     return (0, r.jsx)(i.sNh, {
         id: "voice-settings",
-        label: u.intl.string(u.t.NiTd0d),
+        label: d.intl.string(d.t.NiTd0e),
         action: () => {
             (0, s.openUserSettings)(a.n.VOICE_AND_VIDEO_PANEL, {
                 section: c.oAB.VOICE,
+                subsection: u.CO,
                 analyticsLocations: t,
                 appContext: e,
             }),

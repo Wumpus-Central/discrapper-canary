@@ -6,7 +6,7 @@ var a = n(951288),
     l = n(481060);
 let r = "social-layer-storefront-product-details-modal",
     i = (e) => {
-        let { skuId: t, applicationId: i, onClose: o } = e;
+        let { skuId: t, applicationId: i, guildId: o, onClose: d } = e;
         (0, l.ZDy)(
             async () => {
                 let { default: e } = await n.e("84802").then(n.bind(n, 250317));
@@ -43,6 +43,7 @@ let r = "social-layer-storefront-product-details-modal",
                             {
                                 skuId: t,
                                 applicationId: i,
+                                guildId: o,
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(r))
@@ -63,7 +64,7 @@ let r = "social-layer-storefront-product-details-modal",
             {
                 modalKey: r,
                 onCloseCallback: () => {
-                    null == o || o();
+                    null == d || d();
                 },
             },
         );

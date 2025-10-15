@@ -1,4 +1,4 @@
-n.exports = {
+e.exports = {
     modalRoot: "modalRoot__38ccf",
     modalContent: "modalContent__38ccf",
     infoContainer: "infoContainer__38ccf",
@@ -7,4 +7,8 @@ n.exports = {
     buttonsContainer: "buttonsContainer__38ccf",
     detailsContainer: "detailsContainer__38ccf",
     titleDescriptionContainer: "titleDescriptionContainer__38ccf",
+    carouselContainer: "carouselContainer__38ccf",
+    carousel: "carousel__38ccf",
+    modalHeaderButtonsContainer: "modalHeaderButtonsContainer__38ccf",
+    modalHeaderButton: "modalHeaderButton__38ccf",
 };
