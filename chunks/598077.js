@@ -1,10 +1,4 @@
-n.r(t),
-    n.d(t, {
-        PLACEHOLDER_USER_RECORD: () => O,
-        default: () => y,
-    }),
-    n(415506),
-    n(997841);
+n.d(t, { Z: () => y }), n(415506), n(997841);
 var r = n(149765),
     i = n(81825),
     a = n(864106),
@@ -306,4 +300,4 @@ class y extends i.Z {
             (null == (t = this.globalName) ? void 0 : t.length) === 0 && (this.globalName = null);
     }
 }
-let O = new y({ id: "0" });
+new y({ id: "0" });

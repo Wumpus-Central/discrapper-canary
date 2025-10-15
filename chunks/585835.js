@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(539854), n(388685);
+n.d(t, { Z: () => O }), n(539854), n(388685);
 var i = n(951288),
     r = n(647438),
     l = n(120356),
@@ -17,19 +17,19 @@ var i = n(951288),
     x = n(981631),
     j = n(388032),
     v = n(473059);
-function y(e) {
+function O(e) {
     var t, n, l;
     let {
-            name: y,
-            icon: O,
+            name: O,
+            icon: y,
             imageSrc: _,
             iconBackgroundColor: C,
             iconClassName: N,
             iconWrapperClassName: S,
             details: I,
-            integration: E,
-            buttonText: P,
-            buttonDisabled: w,
+            integration: w,
+            buttonText: E,
+            buttonDisabled: P,
             hasNextSection: T,
             onButtonClick: Z,
             guildId: k,
@@ -38,11 +38,11 @@ function y(e) {
             trailing: R,
         } = e,
         [L, M] = r.useState(!1),
-        B = D && !A && !L && void 0 !== k && null != E,
+        B = D && !A && !L && void 0 !== k && null != w,
         U = r.useRef(null),
         W = r.useRef(null),
         H =
-            null == P || null == Z
+            null == E || null == Z
                 ? null
                 : T
                   ? (0, i.jsxs)(d.Kqy, {
@@ -53,7 +53,7 @@ function y(e) {
                         children: [
                             (0, i.jsx)(d.Text, {
                                 variant: "text-sm/normal",
-                                children: P,
+                                children: E,
                             }),
                             T
                                 ? (0, i.jsx)(d.Fbu, {
@@ -69,9 +69,9 @@ function y(e) {
                   : (0, i.jsx)(d.Button, {
                         size: "sm",
                         buttonRef: U,
-                        disabled: w,
+                        disabled: P,
                         onClick: Z,
-                        text: P,
+                        text: E,
                     });
     r.useEffect(() => {
         var e, t;
@@ -105,7 +105,7 @@ function y(e) {
                 })({}, (0, u.hH)(k))),
                 (t = t =
                     {
-                        application_id: null == E ? void 0 : E.application.id,
+                        application_id: null == w ? void 0 : w.application.id,
                         location: "overview",
                     }),
                 Object.getOwnPropertyDescriptors
@@ -122,15 +122,15 @@ function y(e) {
                       }),
                 e),
             );
-    }, [k, null == E ? void 0 : E.application.id, B]);
+    }, [k, null == w ? void 0 : w.application.id, B]);
     let G =
             B && (null != W.current || null != U.current)
                 ? (0, i.jsx)(c.J2, {
                       targetElementRef: T ? W : U,
-                      title: j.intl.string(j.t.ufFDiI),
-                      body: j.intl.string(j.t.TyMJwM),
+                      title: j.intl.string(j.t.ufFDiC),
+                      body: j.intl.string(j.t.TyMJwC),
                       onRequestClose: () => {
-                          M(!0), h.Z.dismissOverviewTooltip(k, E.integration);
+                          M(!0), h.Z.dismissOverviewTooltip(k, w.integration);
                       },
                       position: "bottom",
                       align: "center",
@@ -139,15 +139,15 @@ function y(e) {
                 : null,
         K = (0, s.Wu)([m.Z], () => {
             var e;
-            return null != E && null != k && null != (e = m.Z.getApplicationEntitlementsForGuild(E.application.id, k))
+            return null != w && null != k && null != (e = m.Z.getApplicationEntitlementsForGuild(w.application.id, k))
                 ? e
                 : [];
         }),
         F = (0, p.LD)(k, !0),
         z =
-            (null == E ? void 0 : E.application) != null &&
+            (null == w ? void 0 : w.application) != null &&
             Object.keys(
-                null != (l = null == (n = F.result) || null == (t = n.sections[E.application.id]) ? void 0 : t.commands)
+                null != (l = null == (n = F.result) || null == (t = n.sections[w.application.id]) ? void 0 : t.commands)
                     ? l
                     : {},
             ).length > 0,
@@ -156,8 +156,8 @@ function y(e) {
             align: "center",
             children: [
                 (0, i.jsx)(f.Z, {
-                    name: y,
-                    icon: O,
+                    name: O,
+                    icon: y,
                     imageSrc: _,
                     iconBackgroundColor: C,
                     iconClassName: N,
@@ -174,15 +174,15 @@ function y(e) {
                                 (null == s || null == (n = s.scopes) ? void 0 : n.includes(o.x.BOT)) &&
                                 l.push({
                                     id: "bot",
-                                    label: new b.default(a.bot).isVerifiedBot()
-                                        ? j.intl.string(j.t.xxcTGx)
-                                        : j.intl.string(j.t.AOdOYm),
+                                    label: new b.Z(a.bot).isVerifiedBot()
+                                        ? j.intl.string(j.t.xxcTGy)
+                                        : j.intl.string(j.t.AOdOYr),
                                     icon: d.wGt,
                                 }),
                             c.length > 0 &&
                                 l.push({
                                     id: "webhooks",
-                                    label: j.intl.formatToPlainString(j.t["6HqDfX"], { count: c.length }),
+                                    label: j.intl.formatToPlainString(j.t["6HqDfT"], { count: c.length }),
                                     icon: d.tYf,
                                 }),
                             (null == s || null == (r = s.scopes) ? void 0 : r.includes(o.x.APPLICATIONS_COMMANDS)) ===
@@ -190,20 +190,20 @@ function y(e) {
                                 t &&
                                 l.push({
                                     id: "commands",
-                                    label: j.intl.string(j.t["0hKkS0"]),
+                                    label: j.intl.string(j.t["0hKkS+"]),
                                     icon: d.SsZ,
                                 }),
                             (0, i.jsx)(d.Kqy, {
                                 direction: "horizontal",
                                 gap: 4,
                                 children: (0, i.jsx)(d.QSK, {
-                                    label: j.intl.string(j.t.G8u3JS),
+                                    label: j.intl.string(j.t.G8u3Jf),
                                     layout: "inline",
                                     items: l,
                                 }),
                             })
                         );
-                    })(E, z),
+                    })(w, z),
                 }),
                 G,
                 H,
@@ -213,7 +213,7 @@ function y(e) {
     return T
         ? (0, i.jsx)(d.P3F, {
               onClick: () => {
-                  D && null != k && null != E && h.Z.dismissOverviewTooltip(k, E.integration), null == Z || Z();
+                  D && null != k && null != w && h.Z.dismissOverviewTooltip(k, w.integration), null == Z || Z();
               },
               children: (0, i.jsx)(d.Zbd, {
                   editable: !0,

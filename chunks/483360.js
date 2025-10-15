@@ -251,7 +251,7 @@ function eJ(e) {
         let e,
             r,
             f = n[m];
-        f instanceof M.default
+        f instanceof M.Z
             ? ((r = f), (e = null == (b = Z.ZP.getNick(c, r.id)) ? void 0 : b.toLocaleLowerCase()))
             : ((e = null == (y = f.nick) ? void 0 : y.toLocaleLowerCase()), (r = l[f.userId]));
         let h = null == (E = es.ZP.getGlobalName(r)) ? void 0 : E.toLocaleLowerCase();
@@ -760,10 +760,10 @@ let e7 = (0, $.oH)((e, t, n) => {
                     queryLower: i,
                 },
                 s = {
-                    [d.Ky.SHOP]: [ef.intl.string(ef.t.pWG4zc)],
-                    [d.Ky.NITRO_HOME]: [ef.intl.string(ef.t.Ipxkoq)],
-                    [d.Ky.QUEST_HOME]: [ef.intl.string(ef.t.JALI2N)],
-                    [d.Ky.APPS_HOME]: [ef.intl.string(ef.t.PHjkRE), ef.intl.string(ef.t.AKcFUl)],
+                    [d.Ky.SHOP]: [ef.intl.string(ef.t.pWG4ze)],
+                    [d.Ky.NITRO_HOME]: [ef.intl.string(ef.t.Ipxkog)],
+                    [d.Ky.QUEST_HOME]: [ef.intl.string(ef.t.JALI2K)],
+                    [d.Ky.APPS_HOME]: [ef.intl.string(ef.t.PHjkRE), ef.intl.string(ef.t.AKcFUj)],
                 },
                 l = [];
             for (let e in s) {
@@ -1004,15 +1004,15 @@ let e7 = (0, $.oH)((e, t, n) => {
                 l = [
                     {
                         id: eu.HY.SERVER_GUIDE,
-                        name: ef.intl.string(ef.t.VbpLyc),
+                        name: ef.intl.string(ef.t.VbpLyU),
                     },
                     {
                         id: eu.HY.CHANNEL_BROWSER,
-                        name: ef.intl.string(ef.t.et6wam),
+                        name: ef.intl.string(ef.t.et6wav),
                     },
                     {
                         id: eu.HY.CUSTOMIZE_COMMUNITY,
-                        name: ef.intl.string(ef.t.h9mGOD),
+                        name: ef.intl.string(ef.t.h9mGOP),
                     },
                 ],
                 c = [];
@@ -1241,7 +1241,7 @@ let e7 = (0, $.oH)((e, t, n) => {
                 var p, h, m, g;
                 let t, o;
                 if (_.length >= r) break;
-                e instanceof M.default
+                e instanceof M.Z
                     ? ((o = e), (t = null == (m = Z.ZP.getNick(c, o.id)) ? void 0 : m.toLocaleLowerCase()))
                     : ((t = null == (g = e.nick) ? void 0 : g.toLocaleLowerCase()), (o = l[e.userId]));
                 let f = null == (p = K.Z.getNickname(o.id)) ? void 0 : p.toLocaleLowerCase(),

@@ -36,7 +36,7 @@ function s() {
     let c = s[0],
         u = s[1];
     if ("string" == typeof c && ("string" == typeof u || null == u)) (e = c), (t = u), (n = s[2]);
-    else if (c instanceof r.default && ("object" == typeof u || null == u))
+    else if (c instanceof r.Z && ("object" == typeof u || null == u))
         (e = c.id), (t = c.getAvatarURL(void 0, 80)), (n = u);
     else throw Error("[preloadUserProfileForPopout] Invalid arguments");
     return null == e

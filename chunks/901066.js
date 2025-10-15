@@ -302,7 +302,7 @@ function Z(e) {
             var e;
             return null != (e = null == n ? void 0 : n.formResponses) ? e : [];
         }, [null == n ? void 0 : n.formResponses]),
-        o = r.useMemo(() => (null != i ? new v.default(i) : null), [i]),
+        o = r.useMemo(() => (null != i ? new v.Z(i) : null), [i]),
         u = (0, c.e7)([_.Z], () => _.Z.getGuild(t), [t]);
     return ((0, m.Tt)({
         subsection: T.intl.string(T.t.nqrK8X),

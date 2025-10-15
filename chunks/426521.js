@@ -15,8 +15,8 @@ var r = n(951288),
     m = n(598077),
     b = n(594174),
     _ = n(626135),
-    y = n(709054),
-    O = n(591759),
+    O = n(709054),
+    y = n(591759),
     v = n(833592),
     j = n(497089),
     x = n(178480),
@@ -39,7 +39,7 @@ function D(e) {
     let d =
             null != (a = b.default.getUser(null == (i = c.message) || null == (n = i.author) ? void 0 : n.id))
                 ? a
-                : new m.default(null == (l = c.message) ? void 0 : l.author),
+                : new m.Z(null == (l = c.message) ? void 0 : l.author),
         h = p.Z.parse(u);
     return (0, r.jsxs)("div", {
         className: T.messagePreviewContainer,
@@ -75,9 +75,9 @@ function L(e) {
 function M(e) {
     let { item: t } = e,
         n = R,
-        i = w.intl.string(w.t.SJTHJS);
+        i = w.intl.string(w.t.SJTHJb);
     return (
-        t.completed && ((n = A), (i = w.intl.string(w.t.f6RTAA))),
+        t.completed && ((n = A), (i = w.intl.string(w.t.f6RTAM))),
         (0, r.jsxs)("div", {
             className: T.lifecycleContainer,
             children: [
@@ -141,12 +141,12 @@ let G = i.memo(function (e) {
                             );
                     });
                 if (null != l.deeplink) {
-                    let t = O.Z.safeParseWithQuery(l.deeplink);
+                    let t = y.Z.safeParseWithQuery(l.deeplink);
                     if (null == t) return;
                     let n = t.hostname,
                         r = t.path;
                     if (null == n || null == r) return;
-                    if (O.Z.isDiscordHostname(n)) {
+                    if (y.Z.isDiscordHostname(n)) {
                         let t = r.match("^/users/(\\d+)");
                         if (null != t && 2 === t.length) {
                             var e;
@@ -215,7 +215,7 @@ let G = i.memo(function (e) {
                                 (0, r.jsx)(o.Text, {
                                     variant: "text-xs/medium",
                                     color: h ? "text-muted" : "header-secondary",
-                                    children: (0, x.a3)(y.default.extractTimestamp(l.id)),
+                                    children: (0, x.a3)(O.default.extractTimestamp(l.id)),
                                 }),
                                 m,
                             ],

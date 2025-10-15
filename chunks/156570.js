@@ -41,7 +41,7 @@ class s extends r.Z {
                 null != t
                     ? {
                           content: t.content,
-                          user: null != t.user ? new a.default(t.user) : null,
+                          user: null != t.user ? new a.Z(t.user) : null,
                       }
                     : null,
             guild:

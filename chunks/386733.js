@@ -99,7 +99,7 @@ let R = (e) => {
                       children: n,
                   });
         return (0, r.jsx)(c.aML, {
-            text: v.intl.string(v.t.UnKHdn),
+            text: v.intl.string(v.t.UnKHdo),
             shouldShow: !o,
             tooltipContentClassName: I.unsentTooltipContent,
             children: (e) => (0, r.jsx)("div", N(A({ className: I.userAvatarProgressBarUnit }, e), { children: s })),
@@ -164,7 +164,7 @@ let R = (e) => {
         let { isInSettings: t = !1 } = e,
             n = (0, s.e7)([g.Z], () => g.Z.getRecipientStatus()),
             { referralSentUsers: a } = (0, E.G)(),
-            f = i.useMemo(() => a.map((e) => new _.default(e)), [a]),
+            f = i.useMemo(() => a.map((e) => new _.Z(e)), [a]),
             p = {
                 redeemed: 0,
                 converted: 0,
@@ -223,7 +223,7 @@ let R = (e) => {
                                                 alt: "",
                                                 className: I.expandedProgressBarSelectFriendsIcon,
                                             }),
-                                            S ? v.intl.string(v.t.SY9tyM) : v.intl.string(v.t.Lm2nFR),
+                                            S ? v.intl.string(v.t.SY9tyI) : v.intl.string(v.t.Lm2nFc),
                                         ],
                                     }),
                                 }),

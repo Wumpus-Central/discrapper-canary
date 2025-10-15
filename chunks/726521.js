@@ -203,7 +203,7 @@ function I(e, t, n, r) {
         );
 }
 function T(e, t) {
-    let n = new o.default({});
+    let n = new o.Z({});
     D(l.BM.USER, { reported_user_id: n.id }),
         (0, u.m)(
             {

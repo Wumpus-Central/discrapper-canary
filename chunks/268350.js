@@ -132,7 +132,7 @@ let I = async (e, t) => {
         o.Z.dispatch({
             type: "GUILD_STICKERS_FETCH_SUCCESS",
             guildId: e,
-            stickers: t.map((e) => (null != e.user ? v(y({}, e), { user: new d.default(e.user) }) : e)),
+            stickers: t.map((e) => (null != e.user ? v(y({}, e), { user: new d.Z(e.user) }) : e)),
         });
     },
     C = async (e) => {
@@ -219,8 +219,8 @@ function L(e) {
         (t) =>
             ((t.stickerIds = D(t.stickerIds)), i().size(t.stickerIds) >= g.oX)
                 ? (s.Z.show({
-                      title: E.intl.string(E.t["+XYXtb"]),
-                      body: E.intl.formatToPlainString(E.t.JaIyFh, { count: g.oX }),
+                      title: E.intl.string(E.t["+XYXtZ"]),
+                      body: E.intl.formatToPlainString(E.t.JaIyFi, { count: g.oX }),
                   }),
                   !1)
                 : !t.stickerIds.includes(e) && void t.stickerIds.push(e),

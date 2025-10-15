@@ -2,8 +2,8 @@ n.d(t, { Z: () => f });
 var r = n(951288);
 n(647438);
 var i = n(755721),
-    l = n(973616),
-    s = n(131704),
+    s = n(973616),
+    l = n(131704),
     a = n(598077),
     o = n(411198),
     c = n(230224),
@@ -11,7 +11,7 @@ var i = n(755721),
     d = n(981631),
     h = n(388032),
     g = n(292660);
-function m(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function m(e) {
     }
     return e;
 }
-function p(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,9 +58,9 @@ function f(e) {
     let { invite: t, onAcceptInvite: n, disableUser: f = !1 } = e;
     if (null == t) return null;
     let _ = null != t.guild ? (0, o.Qs)(t.guild) : null,
-        x = null != t.channel ? (0, s.jD)(t.channel) : null,
-        E = null != t.target_application ? new l.ZP(t.target_application) : null,
-        v = f || null == t.inviter ? null : new a.default(t.inviter),
+        x = null != t.channel ? (0, l.jD)(t.channel) : null,
+        E = null != t.target_application ? new s.ZP(t.target_application) : null,
+        v = f || null == t.inviter ? null : new a.Z(t.inviter),
         b =
             !(
                 (null != t.approximate_member_count && t.approximate_member_count > c.mx) ||
@@ -100,14 +100,14 @@ function f(e) {
                       guild: _,
                       user: b || (0, c.X7)(t) ? v : null,
                   }),
-                  (0, c.X7)(t) ? null : (0, r.jsx)(c.jq, p(m({}, I), { showBigUserIcon: b })),
-                  (0, r.jsx)(c.UM, p(m({}, I), { showBigUserIcon: b })),
-                  (0, r.jsx)(c.V6, m({}, I)),
+                  (0, c.X7)(t) ? null : (0, r.jsx)(c.jq, m(p({}, I), { showBigUserIcon: b })),
+                  (0, r.jsx)(c.UM, m(p({}, I), { showBigUserIcon: b })),
+                  (0, r.jsx)(c.V6, p({}, I)),
                   (0, r.jsx)(i.zx, {
                       onClick: n,
                       submitting: j,
                       className: g.acceptButton,
-                      children: h.intl.string(h.t.ohMvm5),
+                      children: h.intl.string(h.t.ohMvm1),
                   }),
               ],
           });

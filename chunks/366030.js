@@ -91,13 +91,13 @@ function Z(e) {
     if (null != s)
         switch (a) {
             case D.iO.LESS_THAN:
-                t = M.intl.format(M.t["2p7dAw"], {
+                t = M.intl.format(M.t["2p7dA3"], {
                     description: s,
                     count: Math.max(0, Number(o) - 1),
                 });
                 break;
             case D.iO.GREATER_THAN:
-                t = M.intl.format(M.t["2p7dAw"], {
+                t = M.intl.format(M.t["2p7dA3"], {
                     description: s,
                     count: Math.max(0, Number(o) + 1),
                 });
@@ -146,7 +146,7 @@ function F(e) {
                 d = c.find((e) => null != e.application),
                 _ = E.Z.get(e),
                 h = null == d ? void 0 : d.application,
-                g = (null == h ? void 0 : h.bot) != null ? new I.default(h.bot) : null;
+                g = (null == h ? void 0 : h.bot) != null ? new I.Z(h.bot) : null;
             return (
                 A.SJ.includes(null != (t = null == h ? void 0 : h.id) ? t : "")
                     ? (l = (0, r.jsx)(P.Z, {
@@ -254,10 +254,10 @@ function V(e) {
     return (
         (t =
             1 === o.length && 1 === o[0].length
-                ? M.intl.string(M.t.jDym4O)
+                ? M.intl.string(M.t.jDym4E)
                 : 1 === o.length
-                  ? M.intl.format(M.t["0eBj39"], {})
-                  : M.intl.format(M.t.D7uftL, {})),
+                  ? M.intl.format(M.t["0eBj3x"], {})
+                  : M.intl.format(M.t.D7uftB, {})),
         (0, r.jsxs)("div", {
             className: j.popout,
             children: [
@@ -288,7 +288,7 @@ function V(e) {
                             className: j.viewConnectionsButton,
                             color: _.zx.Colors.PRIMARY,
                             onClick: a,
-                            children: M.intl.string(M.t.hgKDnJ),
+                            children: M.intl.string(M.t.hgKDnG),
                         }),
                     ],
                 }),
@@ -346,7 +346,7 @@ function H(e) {
         nudgeAlignIntoViewport: !0,
         children: (e) =>
             (0, r.jsx)(d.u, {
-                text: M.intl.string(M.t.Wpsnam),
+                text: M.intl.string(M.t.Wpsnar),
                 children: (0, r.jsxs)(
                     "div",
                     B(

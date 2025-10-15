@@ -52,13 +52,13 @@ function O(e) {
     return (
         null != g.ZP.getGlobalName(e) && (r.globalName = e.globalName),
         e.bot && (r.isBot = !0),
-        e instanceof l.default
+        e instanceof l.Z
             ? (r.isProvisional = e.isProvisional)
             : "flags" in e
               ? (r.isProvisional = _.yE(null != (t = e.flags) ? t : 0, E.xW$.PROVISIONAL_ACCOUNT))
               : (r.isProvisional = !1),
         d.Z.isFriend(e.id) && ((r.isFriend = !0), (r.friendNickname = d.Z.getNickname(e.id))),
-        e instanceof l.default
+        e instanceof l.Z
             ? (r.isStaff = e.isStaff())
             : "flags" in e
               ? (r.isStaff = _.yE(null != (n = e.flags) ? n : 0, E.xW$.STAFF))

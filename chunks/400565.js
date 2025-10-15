@@ -33,7 +33,7 @@ let d = (e) => {
                 src: c.VH[(0, c.RB)(i.icon_name)],
             });
         else if (null != i.other_user) {
-            let e = i.other_user instanceof a.default ? i.other_user : new a.default(i.other_user),
+            let e = i.other_user instanceof a.Z ? i.other_user : new a.Z(i.other_user),
                 n = null != (t = e.globalName) ? t : e.username;
             (p = (0, r.jsx)("img", {
                 alt: n,

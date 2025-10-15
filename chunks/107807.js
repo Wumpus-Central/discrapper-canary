@@ -15,8 +15,8 @@ var c = t(951288),
     p = t(481060),
     N = t(457330),
     A = t(749210),
-    f = t(99690),
-    v = t(493773),
+    v = t(99690),
+    f = t(493773),
     j = t(410030),
     b = t(726542),
     _ = t(367907),
@@ -163,7 +163,7 @@ function $(e) {
         [i, s] = o.useState({}),
         [u, x] = o.useState(0),
         [N, A] = o.useState(null),
-        [v, j] = o.useState(null),
+        [f, j] = o.useState(null),
         _ = o.useMemo(() => d().flatten(n), [n]),
         y = o.useMemo(
             () =>
@@ -175,9 +175,9 @@ function $(e) {
     o.useEffect(() => x(Date.now()), [_]),
         o.useEffect(() => {
             if (null == N) return;
-            let e = y["".concat(N).concat(null != v ? ":".concat(v.id) : "")];
-            null != e && e.every((e) => e.result) && a(N, v);
-        }, [y, N, v, a]);
+            let e = y["".concat(N).concat(null != f ? ":".concat(f.id) : "")];
+            null != e && e.every((e) => e.result) && a(N, f);
+        }, [y, N, f, a]);
     let g = (0, p.dQu)(h.Z.unsafe_rawColors.GREEN_330).hex();
     return (0, c.jsx)(c.Fragment, {
         children: Object.keys(y)
@@ -192,14 +192,14 @@ function $(e) {
                     h,
                     x,
                     N = y[e],
-                    v = N.find((e) => null == e.operator),
+                    f = N.find((e) => null == e.operator),
                     _ = N.filter((e) => null != e.operator),
-                    I = (null == v || v.result) && _.every((e) => e.result),
+                    I = (null == f || f.result) && _.every((e) => e.result),
                     E = N.find((e) => null != e.application),
                     k = b.Z.get(e),
                     O = null == k || k.enabled,
                     S = null == E ? void 0 : E.application,
-                    G = (null == S ? void 0 : S.bot) != null ? new P.default(S.bot) : null;
+                    G = (null == S ? void 0 : S.bot) != null ? new P.Z(S.bot) : null;
                 D.SJ.includes(null != (n = null == S ? void 0 : S.id) ? n : "")
                     ? (d = (0, c.jsx)(U.Z, {
                           className: q.botTag,
@@ -297,7 +297,7 @@ function $(e) {
                                       })
                                     : null,
                                 null != k ? (0, c.jsx)(J, { platformType: k.type }) : null,
-                                null != G ? (0, c.jsx)(f.Z, { user: G }) : null,
+                                null != G ? (0, c.jsx)(v.Z, { user: G }) : null,
                                 (0, c.jsxs)("div", {
                                     className: q.connectionsChecksGroupTextContainer,
                                     children: [
@@ -374,10 +374,10 @@ function ee(e) {
         [u, h] = o.useState(l.showActivity),
         [m, x] = o.useState(1 === l.metadataVisibility),
         [C, A] = o.useState(1 === l.visibility);
-    (0, v.ZP)(() => {
+    (0, f.ZP)(() => {
         i(!C), r(m);
     });
-    let f = b.Z.get(l.type);
+    let v = b.Z.get(l.type);
     return (
         W.BFP.has(l.type) &&
             (n = (0, c.jsx)(p.rsf, {
@@ -389,13 +389,13 @@ function ee(e) {
             })),
         W.vbS.has(l.type) &&
             (t = (0, c.jsx)(p.rsf, {
-                label: Y.intl.format(Y.t["6u6J0q"], { platform: f.name }),
+                label: Y.intl.format(Y.t["6u6J0q"], { platform: v.name }),
                 checked: u,
                 onChange: (e) => {
                     h(e), N.Z.setShowActivity(l.type, l.id, e);
                 },
             })),
-        !0 === f.hasMetadata &&
+        !0 === v.hasMetadata &&
             (a = (0, c.jsx)(p.rsf, {
                 label: Y.intl.string(Y.t.FYKGsL),
                 checked: m,
@@ -426,8 +426,8 @@ function en(e) {
         [i, s] = o.useState(0),
         [d, h] = o.useState(null),
         [x, C] = o.useState(!1),
-        [N, f] = o.useState(!0),
-        [v, T] = o.useState(!1),
+        [N, v] = o.useState(!0),
+        [f, T] = o.useState(!1),
         [g, P] = o.useState(!0),
         [B, D] = o.useState(!1),
         H = (0, u.e7)([w.Z], () => w.Z.getAccounts()),
@@ -472,20 +472,20 @@ function en(e) {
     return (
         o.useEffect(() => {
             A.Z.fetchGuildRoleConnectionsEligibility(a, l.id).then((e) => {
-                h(e), C(e.some((e) => e.every((e) => e.result))), f(!1);
+                h(e), C(e.some((e) => e.every((e) => e.result))), v(!1);
             });
         }, [a, l.id, H]),
         o.useEffect(() => {
             L.default.track(W.rMx.PASSPORT_CHALLENGE_VIEWED, K({ role_id: l.id }, (0, _.hH)(a)));
         }, [a, l.id]),
         o.useEffect(() => {
-            v &&
+            f &&
                 null != el &&
                 el.roles.includes(l.id) &&
                 (T(!1),
                 ei.length > 0 ? s(2) : null == t || t(),
                 L.default.track(W.rMx.PASSPORT_CHALLENGE_FINISHED, K({ role_id: l.id }, (0, _.hH)(a))));
-        }, [v, ei.length, el, a, l.id, t]),
+        }, [f, ei.length, el, a, l.id, t]),
         (0, c.jsxs)(p.Y0X, {
             size: p.CgR.MEDIUM,
             transitionState: n,
@@ -751,7 +751,7 @@ function en(e) {
                                         variant: "primary",
                                         text: Y.intl.string(Y.t["8SuVoE"]),
                                         onClick: () => eu(),
-                                        disabled: N || !x || v,
+                                        disabled: N || !x || f,
                                     }),
                                     n
                                         ? (0, c.jsx)("div", {

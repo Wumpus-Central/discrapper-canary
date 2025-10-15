@@ -82,7 +82,7 @@ async function h(e, t, n) {
             })
         ).body,
         u = {
-            users: o.map((e) => new a.default(e)),
+            users: o.map((e) => new a.Z(e)),
             nextIndex: l,
         };
     return p.set(i, u), u;

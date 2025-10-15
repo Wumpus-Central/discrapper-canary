@@ -47,7 +47,7 @@ function d(e) {
     }
     return (
         null == p && (p = s.default.getCurrentUser()),
-        p instanceof o.default && (p = u(p)),
+        p instanceof o.Z && (p = u(p)),
         i()(null != p, "createMessage: author cannot be undefined"),
         {
             id: null != m ? m : (0, l.r)(),

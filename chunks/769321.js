@@ -26,7 +26,7 @@ function g(e) {
                 children:
                     null != n.application.bot
                         ? (0, l.jsx)(a.Z, {
-                              user: new p.default(n.application.bot),
+                              user: new p.Z(n.application.bot),
                               size: s.EFr.SIZE_16,
                           })
                         : (0, l.jsx)(s.IMN, {
@@ -69,7 +69,7 @@ function g(e) {
                                 variant: "text-xxs/normal",
                                 color: "text-default",
                                 className: v.connectedAppRoleAccountPoweredBy,
-                                children: j.intl.format(j.t.zIT9YG, { applicationHook: () => n.application.name }),
+                                children: j.intl.format(j.t.zIT9YA, { applicationHook: () => n.application.name }),
                             }),
                         ],
                     }),

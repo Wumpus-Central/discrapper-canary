@@ -1,84 +1,72 @@
-r.d(t, { default: () => f }), r(388685);
+r.d(t, { default: () => b }), r(388685);
 var n = r(951288),
     o = r(647438),
-    i = r(512722),
-    c = r.n(i),
-    a = r(481060),
-    s = r(985002),
-    l = r(880257),
-    d = r(957656),
-    u = r(345909),
-    b = r(388032),
-    p = r(490839);
-let f = (e) => {
-    let { currentUser: t, otherUser: r, transitionState: i, onClose: f } = e,
-        [h, j] = o.useState(!1),
-        m = o.useCallback(() => {
-            j(!0);
-        }, []),
+    c = r(512722),
+    i = r.n(c),
+    l = r(481060),
+    a = r(985002),
+    s = r(957656),
+    d = r(660886),
+    u = r(388032),
+    f = r(490839);
+let b = (e) => {
+    let { currentUser: t, otherUser: r, transitionState: c, onClose: b } = e,
+        [p, h] = o.useState(!1),
         y = o.useCallback(() => {
-            f();
-        }, [f]),
-        g = (0, l.Z)(),
-        { cancelLinkRequest: x, isCancelLoading: O } = (0, s.G)({
-            onError: m,
-            onSuccess: y,
+            h(!0);
+        }, []),
+        j = o.useCallback(() => {
+            b();
+        }, [b]),
+        g = t.nsfwAllowed,
+        { cancelLinkRequest: O, isCancelLoading: m } = (0, a.G)({
+            onError: y,
+            onSuccess: j,
         });
     return (
-        c()(g, "FamilyCenterDeclineLinkModal should only be rendered for parents."),
-        (0, n.jsx)(d.Z, {
-            transitionState: i,
-            children: (0, n.jsxs)("form", {
-                onSubmit: (e) => {
-                    j(!1), e.preventDefault(), x(r.id);
-                },
-                children: [
-                    h &&
-                        (0, n.jsx)(a.M14, {
-                            type: "critical",
-                            children: b.intl.string(u.default["6gyAQU"]),
-                        }),
-                    (0, n.jsx)(a.hzk, {
-                        "data-migration-pending": !0,
-                        children: (0, n.jsx)(d.Z.Header, {
-                            currentUser: t,
-                            otherUser: r,
-                            header: b.intl.string(u.default.HynllZ),
-                            icon: (0, n.jsx)(a.Dio, {
-                                size: "md",
-                                color: "currentColor",
-                                className: p.closeIcon,
-                            }),
+        i()(g, "FamilyCenterDeclineLinkModal should only be rendered for parents."),
+        (0, n.jsxs)(l.IX, {
+            transitionState: c,
+            onClose: b,
+            children: [
+                p &&
+                    (0, n.jsx)(l.M14, {
+                        type: "critical",
+                        children: u.intl.string(d.default["6gyAQZ"]),
+                    }),
+                (0, n.jsx)(l.fef, {
+                    children: (0, n.jsx)(s.Z.Header, {
+                        currentUser: t,
+                        otherUser: r,
+                        header: u.intl.string(d.default.HynllX),
+                        icon: (0, n.jsx)(l.Dio, {
+                            size: "md",
+                            color: "currentColor",
+                            className: f.closeIcon,
                         }),
                     }),
-                    (0, n.jsx)(a.mzw, {
-                        "data-migration-pending": !0,
-                        children: (0, n.jsx)(d.Z.ButtonFooter, {
-                            children: (0, n.jsxs)(a.ButtonGroup, {
-                                direction: "horizontal-reverse",
-                                children: [
-                                    (0, n.jsx)(a.Button, {
-                                        variant: "secondary",
-                                        size: "sm",
-                                        text: b.intl.string(u.default.czincX),
-                                        type: "button",
-                                        disabled: O,
-                                        onClick: f,
-                                    }),
-                                    (0, n.jsx)(a.Button, {
-                                        variant: "critical-primary",
-                                        size: "sm",
-                                        text: b.intl.string(u.default.mK40bm),
-                                        type: "submit",
-                                        disabled: O || h,
-                                        loading: O,
-                                    }),
-                                ],
-                            }),
-                        }),
-                    }),
-                ],
-            }),
+                }),
+                (0, n.jsx)(l.Go$, {
+                    actionsFullWidth: !0,
+                    actions: [
+                        {
+                            variant: "secondary",
+                            text: u.intl.string(d.default.czincX),
+                            onClick: b,
+                            disabled: m,
+                        },
+                        {
+                            variant: "critical-primary",
+                            text: u.intl.string(d.default.mK40bk),
+                            onClick: () => {
+                                h(!1), O(r.id);
+                            },
+                            disabled: m || p,
+                            loading: m,
+                        },
+                    ],
+                }),
+            ],
         })
     );
 };

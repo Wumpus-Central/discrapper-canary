@@ -342,7 +342,7 @@ function q(e) {
         j = (0, O.t0)(a),
         U =
             (null == j ? void 0 : j.type) === _.B8.APPLICATION_COMMAND && null != j.target_user
-                ? new T.default(j.target_user)
+                ? new T.Z(j.target_user)
                 : null,
         B =
             (null == j ? void 0 : j.type) === _.B8.APPLICATION_COMMAND &&
@@ -382,7 +382,7 @@ function q(e) {
             let t = W(e, L, C);
             return (0, r.jsx)(i.Fragment, { children: t }, "command");
         };
-        (n = x.intl.format(x.t["rg7U+P"], {
+        (n = x.intl.format(x.t["rg7U+C"], {
             userHook: X,
             commandHook: t,
         })),
@@ -415,15 +415,15 @@ function q(e) {
                     onClick: e,
                     children: (0, r.jsx)("div", {
                         className: o()(M.commandName, M.clickable),
-                        children: x.intl.string(x.t.YTgRvr),
+                        children: x.intl.string(x.t.YTgRvn),
                     }),
                 });
         n = z
-            ? x.intl.format(x.t.kfV8WF, {
+            ? x.intl.format(x.t.kfV8WM, {
                   userHook: X,
                   activityHook: t,
               })
-            : x.intl.format(x.t["6FeSyc"], { userHook: X });
+            : x.intl.format(x.t["6FeSyT"], { userHook: X });
     }
     return (0, r.jsx)(E.Gt, {
         value: c,

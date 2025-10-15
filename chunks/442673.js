@@ -1,95 +1,85 @@
-r.d(t, { default: () => b }), r(388685);
+r.d(t, { default: () => u }), r(388685);
 var n = r(951288),
     i = r(647438),
     o = r(481060),
     c = r(985002),
-    a = r(880257),
-    s = r(957656),
+    a = r(957656),
     l = r(660886),
-    d = r(388032),
-    u = r(601582);
-let b = (e) => {
-    let { currentUser: t, otherUser: r, transitionState: b, onClose: f } = e,
-        h = i.useCallback(() => {
+    s = r(388032),
+    d = r(601582);
+let u = (e) => {
+    let { currentUser: t, otherUser: r, transitionState: u, onClose: f } = e,
+        b = i.useCallback(() => {
             f();
         }, [f]),
-        p = (0, a.Z)(),
-        [j, g] = i.useState(!1),
-        [m, x] = i.useState(!1),
-        y = i.useCallback(() => {
-            x(!0), g(!1);
+        h = t.nsfwAllowed,
+        [p, j] = i.useState(!1),
+        [g, y] = i.useState(!1),
+        x = i.useCallback(() => {
+            y(!0), j(!1);
         }, []),
-        { disconnectLinkRequest: O, isDisconnectLoading: v } = (0, c.G)({
-            onSuccess: h,
-            onError: y,
+        { disconnectLinkRequest: O, isDisconnectLoading: m } = (0, c.G)({
+            onSuccess: b,
+            onError: x,
         });
-    return (0, n.jsx)(s.Z, {
-        transitionState: b,
-        children: (0, n.jsxs)("form", {
-            onSubmit: (e) => {
-                x(!1), e.preventDefault(), O(r.id);
-            },
-            children: [
-                m &&
-                    (0, n.jsx)(o.M14, {
-                        type: "critical",
-                        children: d.intl.string(l.default.krIDdy),
+    return (0, n.jsxs)(o.IX, {
+        transitionState: u,
+        onClose: f,
+        children: [
+            g &&
+                (0, n.jsx)(o.M14, {
+                    type: "critical",
+                    children: s.intl.string(l.default.krIDdy),
+                }),
+            (0, n.jsxs)(o.fef, {
+                children: [
+                    (0, n.jsx)(a.Z.Header, {
+                        currentUser: t,
+                        otherUser: r,
+                        header: s.intl.formatToPlainString(l.default["NMSTb/"], { isAdult: String(h) }),
+                        icon: (0, n.jsx)(o.Dio, {
+                            size: "md",
+                            color: "currentColor",
+                            className: d.closeIcon,
+                        }),
                     }),
-                (0, n.jsxs)(o.hzk, {
-                    "data-migration-pending": !0,
-                    children: [
-                        (0, n.jsx)(s.Z.Header, {
-                            currentUser: t,
-                            otherUser: r,
-                            header: d.intl.formatToPlainString(l.default["NMSTb/"], { isAdult: String(p) }),
-                            icon: (0, n.jsx)(o.Dio, {
-                                size: "md",
-                                color: "currentColor",
-                                className: u.closeIcon,
+                    (0, n.jsxs)(o.Kqy, {
+                        gap: 16,
+                        children: [
+                            (0, n.jsx)(a.Z.Notice, {
+                                notice: h ? s.intl.string(l.default.EvMGLT) : s.intl.string(l.default.f1SUeW),
                             }),
-                        }),
-                        (0, n.jsx)(s.Z.Notice, {
-                            notice: p ? d.intl.string(l.default.EvMGLT) : d.intl.string(l.default.f1SUeW),
-                        }),
-                        (0, n.jsx)("div", {
-                            className: u.acknowledgementCheckbox,
-                            children: (0, n.jsx)(o.Checkbox, {
-                                checked: j,
+                            (0, n.jsx)(o.Checkbox, {
+                                checked: p,
                                 onChange: (e) => {
-                                    g(e), x(!1);
+                                    j(e), y(!1);
                                 },
-                                label: p ? d.intl.string(l.default["/MYCee"]) : d.intl.string(l.default.VJaHUb),
+                                label: h ? s.intl.string(l.default["/MYCee"]) : s.intl.string(l.default.VJaHUb),
                             }),
-                        }),
-                    ],
-                }),
-                (0, n.jsx)(o.mzw, {
-                    "data-migration-pending": !0,
-                    children: (0, n.jsx)(s.Z.ButtonFooter, {
-                        children: (0, n.jsxs)(o.ButtonGroup, {
-                            direction: "horizontal-reverse",
-                            children: [
-                                (0, n.jsx)(o.Button, {
-                                    variant: "secondary",
-                                    size: "sm",
-                                    text: d.intl.string(d.t["ETE/oC"]),
-                                    type: "button",
-                                    onClick: f,
-                                    disabled: v,
-                                }),
-                                (0, n.jsx)(o.Button, {
-                                    variant: "critical-primary",
-                                    size: "sm",
-                                    text: d.intl.string(l.default["c5L+sl"]),
-                                    type: "submit",
-                                    disabled: !j || v,
-                                    loading: v,
-                                }),
-                            ],
-                        }),
+                        ],
                     }),
-                }),
-            ],
-        }),
+                ],
+            }),
+            (0, n.jsx)(o.Go$, {
+                actionsFullWidth: !0,
+                actions: [
+                    {
+                        variant: "secondary",
+                        text: s.intl.string(s.t["ETE/oC"]),
+                        onClick: f,
+                        disabled: m,
+                    },
+                    {
+                        variant: "critical-primary",
+                        text: s.intl.string(l.default["c5L+sl"]),
+                        onClick: () => {
+                            y(!1), O(r.id);
+                        },
+                        disabled: !p || m,
+                        loading: m,
+                    },
+                ],
+            }),
+        ],
     });
 };

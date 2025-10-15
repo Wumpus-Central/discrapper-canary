@@ -48,7 +48,7 @@ function A(e) {
     let C = null != (t = v.metadata) ? t : {},
         _ = E ? (0, f.FI)(C[O.PC.CREATED_AT], y) : null,
         w = (0, c.dQu)(o.Z.unsafe_rawColors.TWITTER).hex(),
-        D = P.intl.string(P.t["6H6h1t"]);
+        D = P.intl.string(P.t["6H6h1r"]);
     if (E)
         switch (v.type) {
             case Z.ABu.REDDIT:
@@ -60,7 +60,7 @@ function A(e) {
             case Z.ABu.BLUESKY:
             case Z.ABu.MASTODON:
             case Z.ABu.TWITTER:
-                (i = (0, h.rJ)(C)), "1" === C[O.PC.TWITTER_VERIFIED] && ((d = w), (D = P.intl.string(P.t.Jebrw8)));
+                (i = (0, h.rJ)(C)), "1" === C[O.PC.TWITTER_VERIFIED] && ((d = w), (D = P.intl.string(P.t.Jebrww)));
                 break;
             case Z.ABu.PAYPAL:
                 i = (0, h.li)(C);
@@ -84,8 +84,8 @@ function A(e) {
               href: L,
               "aria-label":
                   (null == R ? void 0 : R.name) != null
-                      ? "".concat(R.name, ", ").concat(v.name, ", ").concat(P.intl.string(P.t.q5jLJC))
-                      : "".concat(v.name, ", ").concat(P.intl.string(P.t.q5jLJC)),
+                      ? "".concat(R.name, ", ").concat(v.name, ", ").concat(P.intl.string(P.t.q5jLJB))
+                      : "".concat(v.name, ", ").concat(P.intl.string(P.t.q5jLJB)),
               onClick: (e) => {
                   var n;
                   (n = v.type),
@@ -106,13 +106,13 @@ function A(e) {
                   direction: b.Z.Directions.RIGHT,
               }),
           }));
-    let M = (0, c.dQu)(o.Z.colors.INTERACTIVE_MUTED).hex(),
-        U = (0, c.dQu)(o.Z.colors.INTERACTIVE_ACTIVE).hex(),
+    let U = (0, c.dQu)(o.Z.colors.INTERACTIVE_MUTED).hex(),
+        M = (0, c.dQu)(o.Z.colors.INTERACTIVE_ACTIVE).hex(),
         k = v.verified
             ? (0, l.jsx)(x.Z, {
                   className: T.connectedAccountVerifiedIcon,
-                  color: null != d ? d : M,
-                  forcedIconColor: U,
+                  color: null != d ? d : U,
+                  forcedIconColor: M,
                   size: 16,
                   tooltipText: D,
               })
@@ -130,7 +130,7 @@ function A(e) {
                     (0, l.jsx)(s.u, {
                         __unsupportedReactNodeAsText: null == R ? void 0 : R.name,
                         children: (0, l.jsx)("img", {
-                            alt: P.intl.formatToPlainString(P.t.rtm15O, { name: null == R ? void 0 : R.name }),
+                            alt: P.intl.formatToPlainString(P.t.rtm15P, { name: null == R ? void 0 : R.name }),
                             className: T.connectedAccountIcon,
                             src: (0, a.wj)(g)
                                 ? null == R
@@ -170,7 +170,7 @@ function A(e) {
                                 ? (0, l.jsx)(c.Text, {
                                       variant: "text-xs/normal",
                                       color: "header-secondary",
-                                      children: P.intl.format(P.t["9rfonp"], { date: _ }),
+                                      children: P.intl.format(P.t["9rfonh"], { date: _ }),
                                   })
                                 : null,
                         ],
@@ -250,14 +250,14 @@ function E(e) {
                     children: (0, l.jsx)(c.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: P.intl.format(P.t.zIT9YG, {
+                        children: P.intl.format(P.t.zIT9YA, {
                             applicationHook: () =>
                                 (0, l.jsxs)("div", {
                                     className: T.connectedAccountPoweredByText,
                                     children: [
                                         null != n.application.bot
                                             ? (0, l.jsx)(d.Z, {
-                                                  user: new g.default(n.application.bot),
+                                                  user: new g.Z(n.application.bot),
                                                   size: c.EFr.SIZE_16,
                                               })
                                             : null,

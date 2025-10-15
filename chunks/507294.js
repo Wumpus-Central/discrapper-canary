@@ -104,9 +104,9 @@ let x = function (e) {
     let k = A.filter((e) => null === e.tags.guild_connections);
     return (0, r.jsx)(o.Modal, {
         transitionState: l,
-        title: S.intl.string(S.t.ghtnsr),
+        title: S.intl.string(S.t.ghtnss),
         onClose: x,
-        subtitle: S.intl.format(S.t["Y+TsER"], { helpdeskArticleUrl: y.Z.getArticleURL(C.BhN.CONNECTION_DETAILS) }),
+        subtitle: S.intl.format(S.t["Y+TsEV"], { helpdeskArticleUrl: y.Z.getArticleURL(C.BhN.CONNECTION_DETAILS) }),
         actions: [],
         children: (0, r.jsx)(u.Kqy, {
             children: k.map((e) => {
@@ -126,7 +126,7 @@ let x = function (e) {
                                 o =
                                     (null == i ? void 0 : i.bot) != null
                                         ? (0, r.jsx)("img", {
-                                              src: new b.default(i.bot).getAvatarURL(t, 24),
+                                              src: new b.Z(i.bot).getAvatarURL(t, 24),
                                               alt: "",
                                               className: a()(T.botAvatar, N.avatar),
                                           })

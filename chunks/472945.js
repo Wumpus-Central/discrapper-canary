@@ -18,10 +18,10 @@ var n = s(951288),
     b = s(346486),
     _ = s(600164),
     y = s(210887),
-    C = s(758449),
-    f = s(598077),
-    Z = s(592125),
-    w = s(246946),
+    Z = s(758449),
+    C = s(598077),
+    w = s(592125),
+    f = s(246946),
     N = s(626135),
     I = s(981631),
     E = s(388032),
@@ -78,7 +78,7 @@ function R(e, t) {
 class T extends r.PureComponent {
     render() {
         let { invite: e, hideDiscriminator: t, hideInviteCode: s } = this.props,
-            r = new f.default(e.inviter);
+            r = new C.Z(e.inviter);
         return (0, n.jsxs)(_.Z, {
             className: a()(O.row, k.card),
             children: [
@@ -157,7 +157,7 @@ class A extends r.PureComponent {
             .then((e) => {
                 let t = e.body.map(
                     (e) =>
-                        new C.Z(
+                        new Z.Z(
                             R(S({}, e), {
                                 maxUses: e.max_uses,
                                 maxAge: e.max_age,
@@ -172,7 +172,7 @@ class A extends r.PureComponent {
             }),
             N.default.track(
                 I.rMx.OPEN_MODAL,
-                R(S({}, (0, v.v_)(Z.Z.getChannel(e))), {
+                R(S({}, (0, v.v_)(w.Z.getChannel(e))), {
                     type: "Group DM Invites",
                     source: "Group DM Menu",
                 }),
@@ -207,7 +207,7 @@ class A extends r.PureComponent {
                 (0, n.jsx)(u.RMI, {
                     items: i,
                     children: (e) => {
-                        let t = new f.default(e.inviter);
+                        let t = new C.Z(e.inviter);
                         return (0, n.jsxs)(u.SCH, {
                             id: e.code,
                             children: [
@@ -333,8 +333,8 @@ class A extends r.PureComponent {
             });
     }
 }
-let M = c.ZP.connectStores([w.Z, y.Z], () => ({
-    hideDiscriminators: w.Z.hidePersonalInformation,
-    hideInviteCodes: w.Z.hideInstantInvites,
+let M = c.ZP.connectStores([f.Z, y.Z], () => ({
+    hideDiscriminators: f.Z.hidePersonalInformation,
+    hideInviteCodes: f.Z.hideInstantInvites,
     theme: y.Z.theme,
 }))(A);

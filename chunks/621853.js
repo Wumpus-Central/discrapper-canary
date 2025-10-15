@@ -157,7 +157,7 @@ function X(e) {
     return i()(e)
         .map((e) => ({
             key: e.id,
-            user: new c.default(e),
+            user: new c.Z(e),
             status: _.Z.getStatus(e.id),
         }))
         .sortBy((e) => {
@@ -208,14 +208,14 @@ function J(e) {
                 ? z.badges.map((e) => {
                       let t = (0, m.fv)(e.id);
                       if ((e.id === N || null != t) && null != J) {
-                          let n = y.intl.formatToPlainString(y.t["8zbGNT"], { date: J });
+                          let n = y.intl.formatToPlainString(y.t["8zbGNR"], { date: J });
                           return (
-                              null != t && (n = y.intl.formatToPlainString(y.t.Hu4jfn, { date: J })),
+                              null != t && (n = y.intl.formatToPlainString(y.t.Hu4jfi, { date: J })),
                               T(v({}, e), { description: n })
                           );
                       }
                       return e.id.startsWith(R) && null != ee
-                          ? T(v({}, e), { description: y.intl.formatToPlainString(y.t.IWkAq6, { date: ee }) })
+                          ? T(v({}, e), { description: y.intl.formatToPlainString(y.t.IWkAq7, { date: ee }) })
                           : e;
                   })
                 : [];

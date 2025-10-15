@@ -1,99 +1,86 @@
-r.d(t, { default: () => m }), r(388685);
+r.d(t, { default: () => h }), r(388685);
 var n = r(951288),
     i = r(647438),
     o = r(512722),
     a = r.n(o),
-    s = r(481060),
-    l = r(51144),
-    c = r(985002),
-    d = r(880257),
-    u = r(957656),
-    f = r(130310),
-    p = r(345909),
+    l = r(481060),
+    c = r(51144),
+    s = r(985002),
+    d = r(957656),
+    u = r(130310),
+    f = r(660886),
     b = r(388032),
-    h = r(986360);
-let m = (e) => {
-    let { currentUser: t, otherUser: r, transitionState: o, onClose: m } = e,
+    p = r(986360);
+let h = (e) => {
+    let { currentUser: t, otherUser: r, transitionState: o, onClose: h } = e,
         j = i.useCallback(() => {
-            m();
-        }, [m]),
-        x = (0, d.Z)(),
-        [g, y] = i.useState(!1),
-        O = i.useCallback(() => {
+            h();
+        }, [h]),
+        m = t.nsfwAllowed,
+        [x, y] = i.useState(!1),
+        g = i.useCallback(() => {
             y(!0);
         }, []),
-        { acceptLinkRequest: v, isAcceptLoading: w } = (0, c.G)({
-            onError: O,
+        { acceptLinkRequest: O, isAcceptLoading: v } = (0, s.G)({
+            onError: g,
             onSuccess: j,
         });
     return (
-        a()(!x, "FamilyCenterAcceptLinkModal should only be rendered for teens."),
-        (0, n.jsxs)(u.Z, {
+        a()(!m, "FamilyCenterAcceptLinkModal should only be rendered for teens."),
+        (0, n.jsxs)(l.IX, {
             transitionState: o,
-            "aria-label": b.intl.string(p.default.rlNJwc),
-            className: h.root,
+            onClose: h,
+            "aria-label": b.intl.string(f.default.rlNJwZ),
             children: [
-                g &&
-                    (0, n.jsx)(s.M14, {
+                x &&
+                    (0, n.jsx)(l.M14, {
                         type: "critical",
-                        children: b.intl.string(p.default.pegSMz),
+                        children: b.intl.string(f.default.pegSM5),
                     }),
-                (0, n.jsxs)(s.hzk, {
-                    "data-migration-pending": !0,
+                (0, n.jsxs)(l.fef, {
                     children: [
-                        (0, n.jsx)(u.Z.Header, {
+                        (0, n.jsx)(d.Z.Header, {
                             currentUser: t,
                             otherUser: r,
-                            header: b.intl.string(p.default.rlNJwc),
-                            icon: (0, n.jsx)(s.xPt, {
+                            header: b.intl.string(f.default.rlNJwZ),
+                            icon: (0, n.jsx)(l.xPt, {
                                 size: "md",
                                 color: "currentColor",
-                                className: h.linkIcon,
+                                className: p.linkIcon,
                             }),
                         }),
-                        (0, n.jsxs)(u.Z.Content, {
+                        (0, n.jsxs)(d.Z.Content, {
                             children: [
-                                (0, n.jsx)(f.Z, { inModal: !0 }),
-                                (0, n.jsx)(s.Text, {
-                                    className: h.disclaimer,
+                                (0, n.jsx)(u.Z, { inModal: !0 }),
+                                (0, n.jsx)(l.Text, {
+                                    className: p.disclaimer,
                                     variant: "text-xs/normal",
                                     color: "text-default",
-                                    children: b.intl.format(p.default.snlFqa, { username: l.ZP.getName(r) }),
+                                    children: b.intl.format(f.default.snlFqR, { username: c.ZP.getName(r) }),
                                 }),
                             ],
                         }),
                     ],
                 }),
-                (0, n.jsx)(s.mzw, {
-                    "data-migration-pending": !0,
-                    children: (0, n.jsx)("form", {
-                        onSubmit: (e) => {
-                            y(!1), e.preventDefault(), v(r.id);
+                (0, n.jsx)(l.Go$, {
+                    actionsFullWidth: !0,
+                    actions: [
+                        {
+                            variant: "secondary",
+                            text: b.intl.string(b.t["ETE/oC"]),
+                            onClick: h,
+                            disabled: v,
                         },
-                        children: (0, n.jsx)(u.Z.ButtonFooter, {
-                            children: (0, n.jsxs)(s.ButtonGroup, {
-                                direction: "horizontal-reverse",
-                                children: [
-                                    (0, n.jsx)(s.Button, {
-                                        variant: "secondary",
-                                        size: "sm",
-                                        text: b.intl.string(b.t["ETE/oK"]),
-                                        type: "button",
-                                        disabled: w,
-                                        onClick: m,
-                                    }),
-                                    (0, n.jsx)(s.Button, {
-                                        variant: "primary",
-                                        size: "sm",
-                                        text: b.intl.string(p.default["wI/jo6"]),
-                                        type: "submit",
-                                        disabled: w,
-                                        loading: w,
-                                    }),
-                                ],
-                            }),
-                        }),
-                    }),
+                        {
+                            variant: "primary",
+                            text: b.intl.string(f.default["wI/jo3"]),
+                            onClick: () => {
+                                y(!1), O(r.id);
+                            },
+                            disabled: v,
+                            loading: v,
+                        },
+                    ],
                 }),
             ],
         })

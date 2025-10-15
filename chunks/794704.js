@@ -1056,7 +1056,7 @@ function eH(e) {
             selfStream: !1,
             discoverable: r,
         }),
-        user: new z.default({
+        user: new z.Z({
             id: i,
             username: e,
         }),

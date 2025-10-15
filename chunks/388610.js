@@ -235,7 +235,7 @@ function V(e) {
         code: e.code,
         temporary: e.temporary,
         revoked: e.revoked,
-        inviter: null != e.inviter ? new b.default(e.inviter) : null,
+        inviter: null != e.inviter ? new b.Z(e.inviter) : null,
         channel: (0, g.jD)(e.channel),
         guild: null != e.guild ? (0, y.Qs)(e.guild) : null,
         uses: e.uses,

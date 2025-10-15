@@ -14,8 +14,8 @@ n.d(t, {
     t9: () => Q,
     tr: () => et,
     vv: () => $,
-    zM: () => q,
-    zy: () => K,
+    zM: () => K,
+    zy: () => q,
 }),
     n(35282),
     n(413496),
@@ -172,7 +172,7 @@ function H(e, t) {
 function V(e) {
     let t = p.Z.parseToAST(e.content, !0, { channelId: e.channel_id }).map(U),
         n = b.Z.getChannel(e.channel_id),
-        r = null != e.author ? new m.default(e.author) : void 0,
+        r = null != e.author ? new m.Z(e.author) : void 0,
         i = null != e.author ? (0, f.ij)(r, n) : void 0;
     return {
         id: e.id,
@@ -249,11 +249,11 @@ function Y(e) {
         (null == e.match("staging") && !!(D.test(e) && D.test(n)))
     );
 }
-function q(e, t, n) {
+function K(e, t, n) {
     let r = _.Z.getGuild(e.getGuildId());
     return (null != r ? r.application_id : e.getApplicationId()) === t || n.indexOf(a.x.MESSAGES_READ) > -1;
 }
-function K(e) {
+function q(e) {
     switch (e) {
         case A.hes.RTC_CONNECTED:
         case A.hes.RTC_CONNECTING:

@@ -4,8 +4,8 @@ n(647438);
 var r = n(442837),
     i = n(780384),
     l = n(481060),
-    s = n(44315),
-    o = n(210887),
+    o = n(44315),
+    s = n(210887),
     c = n(598077),
     d = n(246946),
     u = n(594174),
@@ -14,18 +14,18 @@ var r = n(442837),
     h = n(480387),
     x = n(726745),
     f = n(251423),
-    b = n(383832),
-    g = n(981631),
+    g = n(383832),
+    b = n(981631),
     v = n(388032),
     j = n(681285);
 function _(e) {
     let t = (0, r.e7)([u.default], () => u.default.getCurrentUser()),
         n = (0, r.e7)([d.Z], () => d.Z.hidePersonalInformation),
-        _ = (0, r.e7)([o.Z], () => (0, i.wj)(o.Z.theme)),
+        _ = (0, r.e7)([s.Z], () => (0, i.wj)(s.Z.theme)),
         { multiAccountUsers: y } = (0, f.L)(),
         C = y.map((r) => {
-            let i = new c.default(r),
-                o = i.id === (null == t ? void 0 : t.id),
+            let i = new c.Z(r),
+                s = i.id === (null == t ? void 0 : t.id),
                 d = r.tokenStatus === x.q.INVALID,
                 u = n ? null : "#".concat(i.discriminator);
             return (0, a.jsx)(
@@ -62,20 +62,20 @@ function _(e) {
                                             }),
                                     ],
                                 }),
-                                o &&
+                                s &&
                                     (0, a.jsx)(l.owK, {
                                         size: "sm",
-                                        color: (0, s.Lq)(t ? g.Ilk.WHITE_500 : g.Ilk.BRAND_500),
-                                        secondaryColor: (0, s.Lq)(
-                                            (t && _) || (t && !_) ? g.Ilk.BRAND_500 : g.Ilk.WHITE_500,
+                                        color: (0, o.Lq)(t ? b.Ilk.WHITE_500 : b.Ilk.BRAND_500),
+                                        secondaryColor: (0, o.Lq)(
+                                            (t && _) || (t && !_) ? b.Ilk.BRAND_500 : b.Ilk.WHITE_500,
                                         ),
                                         className: j.activeIcon,
                                     }),
                                 d &&
                                     (0, a.jsx)(l.Mgn, {
-                                        color: (0, s.Lq)(g.Ilk.RED_400),
-                                        secondaryColor: (0, s.Lq)(
-                                            (t && _) || (t && !_) ? g.Ilk.BRAND_500 : g.Ilk.WHITE_500,
+                                        color: (0, o.Lq)(b.Ilk.RED_400),
+                                        secondaryColor: (0, o.Lq)(
+                                            (t && _) || (t && !_) ? b.Ilk.BRAND_500 : b.Ilk.WHITE_500,
                                         ),
                                         size: "xs",
                                         className: j.activeIcon,
@@ -84,12 +84,12 @@ function _(e) {
                         });
                     },
                     action: () => {
-                        if ((null == e || e(), d)) (0, b.Z)();
+                        if ((null == e || e(), d)) (0, g.Z)();
                         else {
                             var n;
                             (n = i.id) !== (null == t ? void 0 : t.id) &&
-                                (m.default.track(g.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
-                                    location: { section: g.jXE.USER_PROFILE },
+                                (m.default.track(b.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
+                                    location: { section: b.jXE.USER_PROFILE },
                                 }),
                                 h.yD(n));
                         }
@@ -105,9 +105,9 @@ function _(e) {
                     (0, a.jsx)(l.Clw, {}),
                     (0, a.jsx)(l.sNh, {
                         id: "manage-accounts",
-                        label: v.intl.string(v.t.WbFpq6),
+                        label: v.intl.string(v.t.WbFpq4),
                         action: () => {
-                            null == e || e(), (0, b.Z)();
+                            null == e || e(), (0, g.Z)();
                         },
                     }),
                 ],
