@@ -213,6 +213,7 @@ let eZ = () => {
             isInputProfileCustom: e7,
             isDataUsage3PToggleEnabled: e9,
             isChatMentionSuggestionsSettingEnabled: te,
+            isCrossDMSearchEnabledSettingVisible: tt,
         } = e;
         return Object.freeze({
             [eR.s6.SEARCH_NO_RESULTS]: {
@@ -1325,6 +1326,18 @@ let eZ = () => {
                 ariaLabel: eL.intl.string(eL.t["/VQax8"]),
                 element: eb.Z,
                 url: ew.Z5c.SETTINGS("text"),
+            },
+            [eR.s6.MESSAGE_SEARCH]: {
+                section: ew.oAB.TEXT,
+                searchableTitles: [eL.intl.string(eL.t.VYODPD)],
+                parent: eR.s6.CHAT,
+                predicate: () => tt,
+            },
+            [eR.s6.MESSAGE_SEARCH_ALL_DMS]: {
+                section: ew.oAB.TEXT,
+                searchableTitles: [eL.intl.string(eL.t["t4+fbW"])],
+                parent: eR.s6.MESSAGE_SEARCH,
+                predicate: () => tt,
             },
             [eR.s6.CHAT_INLINE_MEDIA]: {
                 section: ew.oAB.TEXT,

@@ -287,11 +287,12 @@ function w(e) {
                     if (e) {
                         let e = { type: O.aib.DMS };
                         y.Z.transitionQueryStateToSearchContext(n, e, (t) => {
-                            y.Z.fetchCrossDMMessages({
-                                searchContext: e,
-                                selectedPageIndex: 0,
-                                queryString: t,
-                            });
+                            y.Z.cleanUpPrivateChannelSearchState(),
+                                y.Z.fetchCrossDMMessages({
+                                    searchContext: e,
+                                    selectedPageIndex: 0,
+                                    queryString: t,
+                                });
                         });
                     } else {
                         let e = {

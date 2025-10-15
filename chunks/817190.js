@@ -98,6 +98,9 @@ class O extends (r = i.ZP.Store) {
     getIsSearchTokensInitialized() {
         return u;
     }
+    getSearchStateIds() {
+        return Array.from(c.keys());
+    }
 }
 s(O, "displayName", "SearchQueryStore");
 let v = new O(a.Z, {
