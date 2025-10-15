@@ -34,6 +34,7 @@ var c = (function (e) {
         (e.SHOP = "SHOP"),
         (e.ACTIVITIES = "ACTIVITIES"),
         (e.QUEST_PREVIEW_TOOL = "QUEST_PREVIEW_TOOL"),
+        (e.ONE_TIME_LOGIN = "ONE_TIME_LOGIN"),
         e
     );
 })({});

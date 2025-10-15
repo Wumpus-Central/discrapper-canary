@@ -37,19 +37,23 @@ var x = n(857192),
     j = n(44163),
     k = n(710845),
     U = n(70956),
-    G = n(378799);
+    G = n(378799),
+    B = n(758731);
 x.default.cssDebuggingEnabled && n.e("95666").then(n.bind(n, 754261)), (0, G.s5)();
-let B = 5 * U.Z.Millis.MINUTE,
-    Z = document.getElementById("app-mount");
-d()(null != Z, "Could not find app-mount"), (Z.className = __OVERLAY__ ? "" : M.appMount);
-let F = (0, c.createRoot)(Z),
-    V = { "/oauth2/authorize": T.Z };
-function H(e, t, n) {
+let Z = 5 * U.Z.Millis.MINUTE,
+    F = document.getElementById("app-mount");
+d()(null != F, "Could not find app-mount"), (F.className = __OVERLAY__ ? "" : M.appMount);
+let V = (0, c.createRoot)(F),
+    H = {
+        "/oauth2/authorize": T.Z,
+        "/one-time": B.Z,
+    };
+function Y(e, t, n) {
     var r;
     let i = null != n ? new URLSearchParams(n) : null;
-    (null != (r = V[t]) && r.call(V, i)) || (0, A.uL)(t);
+    (null != (r = H[t]) && r.call(H, i)) || (0, A.uL)(t);
 }
-let Y = (e) => F.render((0, l.jsx)(D.w, { children: (0, l.jsx)(w.Z, { children: (0, l.jsx)(e, {}) }) }));
+let W = (e) => V.render((0, l.jsx)(D.w, { children: (0, l.jsx)(w.Z, { children: (0, l.jsx)(e, {}) }) }));
 if (null != P.Z) {
     null == (r = P.Z.setUncaughtExceptionHandler) ||
         r.call(P.Z, (e, t) => {
@@ -76,20 +80,20 @@ if (null != P.Z) {
         v.ZP.initializeExitHook(),
         v.ZP.initializeWERHandler();
 }
-if (((0, N.O)(window), __OVERLAY__)) Y(f.Z.Overlay);
-else if (null != window.require && null == window.DiscordNative) Y(f.Z.OutdatedClient);
+if (((0, N.O)(window), __OVERLAY__)) W(f.Z.Overlay);
+else if (null != window.require && null == window.DiscordNative) W(f.Z.OutdatedClient);
 else {
     if ((document.addEventListener("scroll", (e) => e.preventDefault()), S.isPlatformEmbedded)) {
         (window.onbeforeunload = () => v.ZP.beforeUnload()),
             v.ZP.on("HELP_OPEN", () => window.open(y.Z.getCommunityURL()));
-        let e = new R.sW(B, () => v.ZP.purgeMemory());
+        let e = new R.sW(Z, () => v.ZP.purgeMemory());
         v.ZP.on("MAIN_WINDOW_BLUR", () => {
             e.delay(), v.ZP.setFocused(!1), (0, C.T_)(window, !1);
         }),
             v.ZP.on("MAIN_WINDOW_FOCUS", () => {
                 e.cancel(), v.ZP.setFocused(!0), (0, C.T_)(window, !0);
             }),
-            v.ZP.on("MAIN_WINDOW_PATH", H),
+            v.ZP.on("MAIN_WINDOW_PATH", Y),
             v.ZP.on("MAIN_WINDOW_HIDDEN", () => {
                 (0, C.al)(window);
             });
@@ -104,5 +108,5 @@ else {
         I.Z.initialize(),
         g.j(),
         (0, L.Mn)(),
-        Y(f.Z.App);
+        W(f.Z.App);
 }
