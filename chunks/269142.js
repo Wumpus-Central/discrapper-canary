@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     header: "header__7560f",
     customGiftHeader: "customGiftHeader__7560f",
     backSplash: "backSplash__7560f",
@@ -11,6 +11,4 @@ e.exports = {
     closeButton: "closeButton__7560f",
     seasonalGiftIcon: "seasonalGiftIcon__7560f",
     modal: "modal__7560f",
-    gameItemImageGiftUnopened: "gameItemImageGiftUnopened__7560f",
-    gameItemImageGiftOpened: "gameItemImageGiftOpened__7560f",
 };

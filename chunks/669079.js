@@ -2,11 +2,11 @@ n.d(t, {
     Bg: () => U,
     E5: () => ee,
     Fp: () => Z,
-    HL: () => en,
     JT: () => $,
     L2: () => z,
     MY: () => j,
     Nz: () => V,
+    QW: () => et,
     Q_: () => F,
     TO: () => W,
     Z0: () => G,
@@ -188,10 +188,10 @@ function Y(e, t) {
     u.default.track(h.rMx.GIFT_CODE_COPIED, b({}, (0, s.Z)(t, !1, !1), e.analyticsData));
 }
 function W(e, t, n) {
-    let { error: r, accepted: i, accepting: a, opened: o, isCustomGift: s, isPremiumAppGift: l } = n;
+    let { error: r, accepted: i, accepting: a, opened: o, isCustomGift: s } = n;
     return null == r && (i || a || null == e)
         ? !s || o || i || a
-            ? i && (t.isSubscription || null != e || l)
+            ? i && (t.isSubscription || null != e)
                 ? h.wZ8.SUCCESS
                 : h.wZ8.CONFIRM
             : h.wZ8.OPEN
@@ -213,14 +213,13 @@ function K(e, t, n) {
     }
 }
 function z(e, t, n) {
-    let { isCustomGift: r, isPremiumAppGift: i } = n;
+    let { isCustomGift: r } = n;
     switch (e) {
         case h.wZ8.ERROR:
             return g.intl.string(g.t.w19zb2);
         case h.wZ8.SUCCESS:
             if (__OVERLAY__) return g.intl.string(g.t.zW87EB);
             if (t.isSubscription) return g.intl.string(g.t.ex5TKi);
-            if (i) return g.intl.string(g.t.zW87EB);
             return g.intl.string(g.t.OOkjqq);
         case h.wZ8.OPEN:
             return g.intl.string(g.t.F8ktcn);
@@ -342,8 +341,4 @@ function et(e, t) {
         default:
             return g.intl.string(g.t["s9+XlJ"]);
     }
-}
-function en(e) {
-    let { productLine: t } = e;
-    return t === h.POd.APPLICATION || t === h.POd.SOCIAL_LAYER_GAME_ITEM;
 }

@@ -78,11 +78,10 @@ async function p(e) {
     );
 }
 function h(e) {
-    let { appId: t, skuId: n, analyticsLocations: r, isGift: i } = e;
+    let { appId: t, skuId: n, analyticsLocations: r } = e;
     (0, o.Z)({
         applicationId: t,
         skuId: n,
         analyticsLocations: r,
-        isGift: null != i && i,
     });
 }
