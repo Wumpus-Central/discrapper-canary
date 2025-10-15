@@ -19,4 +19,4 @@ let o = [r.l.APPLICATION, r.l.FAVORITE_GAMES, r.l.PLAYED_GAMES, r.l.CURRENT_GAME
         },
     },
     l = [r.l.FAVORITE_GAMES],
-    c = [r.l.CURRENT_GAMES];
+    c = [r.l.CURRENT_GAMES, r.l.FAVORITE_GAMES];
