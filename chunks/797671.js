@@ -1,7 +1,7 @@
 n.d(t, { default: () => y }), n(539854), n(953529), n(388685), n(457542);
 var i = n(951288),
-    a = n(647438),
-    r = n(990547),
+    r = n(647438),
+    a = n(990547),
     l = n(793030),
     o = n(442837),
     c = n(283693),
@@ -17,63 +17,63 @@ var i = n(951288),
     f = n(430824),
     x = n(934415),
     v = n(700785),
-    w = n(573261),
-    C = n(981631),
-    E = n(231338),
-    L = n(388032),
+    C = n(573261),
+    E = n(981631),
+    L = n(231338),
+    w = n(388032),
     I = n(920454);
 function y(e) {
     var t, n;
     let { guildId: y, transitionState: T, onSubmit: N, onClose: B } = e,
-        [R, M] = a.useState(C.Sc2),
-        [j, D] = a.useState(C.d4z.GUILD_TEXT),
-        [S, k] = a.useState(""),
-        [Z, G] = a.useState(!1),
+        [R, M] = r.useState(E.Sc2),
+        [S, j] = r.useState(E.d4z.GUILD_TEXT),
+        [D, k] = r.useState(""),
+        [G, Z] = r.useState(!1),
         A = (0, o.e7)([f.Z], () => f.Z.getGuild(y), [y]),
         H = (0, b.m)(y),
         O = (0, m.Ui)(A),
-        U = a.useMemo(
+        U = r.useMemo(
             () =>
                 (function (e) {
                     let { canCreateStageChannel: t, canCreateMediaChannel: n } = e,
-                        a = [
+                        r = [
                             {
                                 icon: d.VL1,
-                                label: L.intl.string(L.t.pnuRXF),
-                                value: C.d4z.GUILD_TEXT,
-                                description: L.intl.string(L.t.Hf5Lb2),
+                                label: w.intl.string(w.t.pnuRXC),
+                                value: E.d4z.GUILD_TEXT,
+                                description: w.intl.string(w.t["Hf5Lb+"]),
                             },
                             {
                                 icon: d.gj8,
-                                label: L.intl.string(L.t.Sx55Oj),
-                                value: C.d4z.GUILD_VOICE,
-                                description: L.intl.string(L.t.pqfkoK),
+                                label: w.intl.string(w.t.Sx55Oh),
+                                value: E.d4z.GUILD_VOICE,
+                                description: w.intl.string(w.t.pqfkoF),
                             },
                         ];
                     return (
                         t &&
-                            a.push({
+                            r.push({
                                 icon: d.ewx,
-                                label: L.intl.string(L.t.pNWst7),
-                                value: C.d4z.GUILD_STAGE_VOICE,
-                                description: L.intl.string(L.t.VPAwgo),
+                                label: w.intl.string(w.t.pNWst0),
+                                value: E.d4z.GUILD_STAGE_VOICE,
+                                description: w.intl.string(w.t.VPAwgo),
                             }),
-                        a.push({
+                        r.push({
                             icon: d.Mmi,
-                            label: L.intl.string(L.t.eAVIDw),
-                            value: C.d4z.GUILD_FORUM,
-                            description: L.intl.string(L.t.iZ5pgo),
+                            label: w.intl.string(w.t.eAVID5),
+                            value: E.d4z.GUILD_FORUM,
+                            description: w.intl.string(w.t.iZ5pgg),
                         }),
                         n &&
-                            a.push({
+                            r.push({
                                 icon: d.XBm,
-                                label: L.intl.string(L.t["6x6fVl"]),
-                                value: C.d4z.GUILD_MEDIA,
-                                description: L.intl.string(L.t.JyCrwc),
+                                label: w.intl.string(w.t["6x6fVg"]),
+                                value: E.d4z.GUILD_MEDIA,
+                                description: w.intl.string(w.t.JyCrwS),
                                 isBeta: !0,
                             }),
-                        a.map((e) => {
-                            let { icon: t, label: n, value: a, description: r, isBeta: l } = e;
+                        r.map((e) => {
+                            let { icon: t, label: n, value: r, description: a, isBeta: l } = e;
                             return {
                                 name: (0, i.jsxs)("div", {
                                     className: I.channelOptionWrapper,
@@ -89,13 +89,13 @@ function y(e) {
                                                 (0, i.jsx)(d.Text, {
                                                     variant: "text-xs/normal",
                                                     color: "header-secondary",
-                                                    children: r,
+                                                    children: a,
                                                 }),
                                             ],
                                         }),
                                     ],
                                 }),
-                                value: a,
+                                value: r,
                                 channelIcon: t,
                             };
                         })
@@ -107,7 +107,7 @@ function y(e) {
             [H, O],
         ),
         V = (0, o.e7)([g.Z], () => g.Z.getCategories(y)._categories, [y]),
-        W = a.useMemo(
+        W = r.useMemo(
             () =>
                 V.map((e) => {
                     let { channel: t } = e;
@@ -118,31 +118,31 @@ function y(e) {
                 }),
             [V],
         ),
-        F = null != (n = null == (t = U.find((e) => e.value === j)) ? void 0 : t.channelIcon) ? n : E.Vq,
-        q = "" !== S;
+        F = null != (n = null == (t = U.find((e) => e.value === S)) ? void 0 : t.channelIcon) ? n : L.Vq,
+        q = "" !== D;
     return (0, i.jsx)("form", {
         onSubmit: function (e) {
             if ((e.preventDefault(), !q)) return;
-            G(!0);
+            Z(!0);
             let t = {
-                type: j,
-                name: S,
+                type: S,
+                name: D,
                 parent_id: "null" !== R ? R : void 0,
                 permission_overwrites: [
                     {
                         id: y,
                         type: p.BN.ROLE,
                         allow: v.Hn,
-                        deny: C.Plq.VIEW_CHANNEL,
+                        deny: E.Plq.VIEW_CHANNEL,
                     },
                 ],
             };
-            w.Z.post({
-                url: C.ANM.GUILD_CHANNELS(y),
+            C.Z.post({
+                url: E.ANM.GUILD_CHANNELS(y),
                 body: t,
                 oldFormErrors: !0,
                 trackedActionData: {
-                    event: r.NetworkActionNames.CHANNEL_CREATE,
+                    event: a.NetworkActionNames.CHANNEL_CREATE,
                     properties: (e) => {
                         var t, n;
                         return (0, c.iG)({
@@ -161,22 +161,22 @@ function y(e) {
                     (e) => {},
                 )
                 .finally(() => {
-                    G(!1);
+                    Z(!1);
                 });
         },
         children: (0, i.jsx)(l.Modal, {
             transitionState: T,
-            title: L.intl.string(L.t["fUYU+v"]),
+            title: w.intl.string(w.t["fUYU+j"]),
             onClose: B,
             actionBarInput: (0, i.jsx)(d.Avr, {
-                text: L.intl.string(L.t["13/7kZ"]),
+                text: w.intl.string(w.t["13/7kX"]),
                 onClick: B,
             }),
             actions: [
                 {
                     variant: "primary",
-                    text: L.intl.string(L.t.R3BPHx),
-                    loading: Z,
+                    text: w.intl.string(w.t["R3BPH+"]),
+                    loading: G,
                     disabled: !q,
                     type: "submit",
                 },
@@ -185,29 +185,29 @@ function y(e) {
                 gap: 16,
                 children: [
                     (0, i.jsx)(d.q4e, {
-                        label: L.intl.string(L.t.vHCZws),
-                        placeholder: L.intl.string(L.t["g/Rr2d"]),
+                        label: w.intl.string(w.t.vHCZwr),
+                        placeholder: w.intl.string(w.t["g/Rr2S"]),
                         value: R,
                         options: W,
                         onChange: (e) => M(e),
                     }),
                     (0, i.jsx)(s.Gu, {
-                        label: L.intl.string(L.t["7ZcXGx"]),
+                        label: w.intl.string(w.t["7ZcXG2"]),
                         options: U,
-                        value: j,
+                        value: S,
                         onChange: (e) => {
                             let { value: t } = e;
-                            return D(t);
+                            return j(t);
                         },
                     }),
                     (0, i.jsx)(d.oil, {
-                        label: L.intl.string(L.t.PVbHDg),
-                        value: S,
+                        label: w.intl.string(w.t.PVbHDl),
+                        value: D,
                         onChange: function (e) {
-                            (0, h.zi)(j) && (e = (0, x.Nj)(e)), k(e);
+                            (0, h.zi)(S) && (e = (0, x.Nj)(e)), k(e);
                         },
-                        maxLength: C.HN8,
-                        placeholder: L.intl.string(L.t["bw/b8P"]),
+                        maxLength: E.HN8,
+                        placeholder: w.intl.string(w.t["bw/b8E"]),
                         leading: F,
                         autoFocus: !0,
                     }),

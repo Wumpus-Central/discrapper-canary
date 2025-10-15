@@ -52,11 +52,11 @@ function h(t) {
             () => [
                 {
                     variant: "secondary",
-                    text: d.intl.string(d.t["TJ0N9/"]),
+                    text: d.intl.string(d.t.TJ0N99),
                     onClick: f,
                 },
                 {
-                    text: d.intl.string(d.t.ZwRzIC),
+                    text: d.intl.string(d.t.ZwRzIH),
                     onClick: p,
                     variant: "primary",
                 },
@@ -67,11 +67,11 @@ function h(t) {
         onClose: p,
         actions: j,
         transitionState: b,
-        title: d.intl.string(d.t["yJeV5+"]),
+        title: d.intl.string(d.t.yJeV51),
         children: [
             (0, i.jsx)(o.Text, {
                 variant: "text-md/normal",
-                children: d.intl.format(d.t.fq3Sw8, {
+                children: d.intl.format(d.t.fq3Swz, {
                     keybind: (0, c.BB)(y.shortcut, !0).split(" + "),
                     keybindHook: (t, e) =>
                         (0, i.jsx)(

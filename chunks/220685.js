@@ -98,13 +98,13 @@ let y = [
             children: [
                 (0, r.jsx)(u.Heading, {
                     variant: "heading-lg/semibold",
-                    children: C.intl.string(C.t.N6Tg9P),
+                    children: C.intl.string(C.t.N6Tg9A),
                 }),
                 (0, r.jsxs)(u.Kqy, {
                     gap: 8,
                     children: [
                         (0, r.jsx)(u.rsf, {
-                            label: C.intl.string(C.t.lwvl1t),
+                            label: C.intl.string(C.t.lwvl1g),
                             checked: I,
                             disabled: B || H,
                             description: C.intl.string(C.t["uU/69/"]),
@@ -113,14 +113,14 @@ let y = [
                         H
                             ? (0, r.jsx)(u.Wn, {
                                   messageType: u.QYI.WARNING,
-                                  children: C.intl.string(C.t.mIgfEh),
+                                  children: C.intl.string(C.t.mIgfEu),
                               })
                             : null,
                     ],
                 }),
                 (0, r.jsx)(u.izJ, {}),
                 (0, r.jsxs)(u.gNt, {
-                    label: C.intl.string(C.t.N46WOj),
+                    label: C.intl.string(C.t.N46WOv),
                     disabled: B,
                     children: [
                         (0, r.jsx)(g.Z, {
@@ -132,7 +132,7 @@ let y = [
                             className: O.openPageButton,
                             children: (0, r.jsx)(u.Button, {
                                 variant: "primary",
-                                text: C.intl.string(C.t.CaOYqa),
+                                text: C.intl.string(C.t.CaOYqc),
                                 onClick: () => (0, p.Z)(G),
                                 disabled: B,
                             }),
@@ -141,8 +141,8 @@ let y = [
                 }),
                 (0, r.jsx)(u.izJ, {}),
                 (0, r.jsx)(u.gNt, {
-                    label: C.intl.string(C.t.W39uIC),
-                    description: C.intl.string(C.t.B6XtEx),
+                    label: C.intl.string(C.t.W39uIL),
+                    description: C.intl.string(C.t.B6XtE7),
                     children: (0, r.jsxs)("div", {
                         className: O.accentColorContainer,
                         children: [
@@ -150,7 +150,7 @@ let y = [
                                 variant: "text-md/medium",
                                 style: { backgroundColor: "#".concat(T.toString(16).padStart(6, "0")) },
                                 className: O.buttonPreview,
-                                children: C.intl.string(C.t.l6iM39),
+                                children: C.intl.string(C.t.l6iM36),
                             }),
                             (0, r.jsx)(u.zH8, {
                                 colors: y,
@@ -168,22 +168,22 @@ let y = [
                 }),
                 (0, r.jsx)(u.izJ, {}),
                 (0, r.jsx)(u.oil, {
-                    label: C.intl.string(C.t.k2yRvb),
-                    description: C.intl.string(C.t["amd99/"]),
+                    label: C.intl.string(C.t.k2yRvd),
+                    description: C.intl.string(C.t.amd996),
                     value: null != w ? w : void 0,
                     onChange: (e) => Z("" === e ? null : e),
-                    error: R ? null : C.intl.string(C.t["1kL79f"]),
-                    placeholder: C.intl.string(C.t["+I4gdX"]),
+                    error: R ? null : C.intl.string(C.t["1kL79Q"]),
+                    placeholder: C.intl.string(C.t["+I4gdT"]),
                     trailing: R && U ? u.owK : void 0,
                     disabled: B,
                 }),
                 (0, r.jsx)(u.izJ, {}),
                 (0, r.jsx)(u.C3N, {
-                    label: C.intl.string(C.t.AU2HU1),
-                    description: C.intl.string(C.t.iWBt3d),
+                    label: C.intl.string(C.t.AU2HU0),
+                    description: C.intl.string(C.t.iWBt3Q),
                     children: (0, r.jsx)(u.rsf, {
-                        label: C.intl.string(C.t.hJsAPj),
-                        description: C.intl.string(C.t.hn65ER),
+                        label: C.intl.string(C.t.hJsAPo),
+                        description: C.intl.string(C.t.hn65ET),
                         icon: u.tBG,
                         checked: D,
                         onChange: (e) => A(e),

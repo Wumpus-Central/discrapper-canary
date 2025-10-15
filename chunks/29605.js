@@ -1,6 +1,6 @@
 n.d(t, {
     FT: () => $,
-    L3: () => J,
+    L3: () => Q,
     ZP: () => en,
 }),
     n(388685),
@@ -13,7 +13,7 @@ var r = n(951288),
     o = n.n(s),
     c = n(392711),
     d = n.n(c),
-    u = n(599273),
+    u = n(258536),
     g = n(772848),
     m = n(442837),
     p = n(28664),
@@ -47,8 +47,8 @@ var r = n(951288),
     F = n(806774),
     H = n(981631),
     W = n(185923),
-    V = n(388032),
-    z = n(878341),
+    z = n(388032),
+    V = n(878341),
     K = n(620842);
 function Y(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -110,15 +110,15 @@ let q = d().throttle(x.OQ, 1000),
             ),
             O = M.ZP.useUserTag(s.user);
         return (0, r.jsxs)("div", {
-            className: a()(z.emojiRow, K.card),
+            className: a()(V.emojiRow, K.card),
             role: "row",
             children: [
                 (0, r.jsx)("div", {
-                    className: z.emojiColumn,
+                    className: V.emojiColumn,
                     children: (0, r.jsx)(p.u, {
-                        text: s.available ? null : V.intl.string(V.t["KUzI7+"]),
+                        text: s.available ? null : z.intl.string(z.t.KUzI73),
                         children: (0, r.jsx)(u.animated.div, {
-                            className: a()(z.emojiImage, { [z.emojiDisabled]: !s.available }),
+                            className: a()(V.emojiImage, { [V.emojiDisabled]: !s.available }),
                             style:
                                 ((t = Y({}, d ? _ : {}, d ? C : {})),
                                 (n = n = { backgroundImage: "url(".concat(f, ")") }),
@@ -139,15 +139,15 @@ let q = d().throttle(x.OQ, 1000),
                     }),
                 }),
                 (0, r.jsx)("div", {
-                    className: z.column,
+                    className: V.column,
                     children: (0, r.jsx)("div", {
-                        className: z.emojiAliasInputContainer,
+                        className: V.emojiAliasInputContainer,
                         children: (0, r.jsx)(v.Z, {
-                            className: a()({ [z.emojiAliasInputDisabled]: c }),
+                            className: a()({ [V.emojiAliasInputDisabled]: c }),
                             disabled: c,
                             minLen: 1,
                             maxLen: W.Yc,
-                            name: V.intl.string(V.t.qUpzYG),
+                            name: z.intl.string(z.t.qUpzYO),
                             autoComplete: "off",
                             value: null != g ? g : "",
                             onBlur: () => {
@@ -168,7 +168,7 @@ let q = d().throttle(x.OQ, 1000),
                     }),
                 }),
                 (0, r.jsx)("div", {
-                    className: z.column,
+                    className: V.column,
                     children: (0, r.jsx)(y.Z, {
                         avatar: (0, r.jsx)(h.qEK, {
                             src: s.user.getAvatarURL(l, 20),
@@ -184,25 +184,25 @@ let q = d().throttle(x.OQ, 1000),
                 null != o &&
                     !c &&
                     (0, r.jsx)(h.P3F, {
-                        "aria-label": V.intl.string(V.t.bt75u7),
-                        className: z.editEmojiRolesButton,
+                        "aria-label": z.intl.string(z.t.bt75uw),
+                        className: V.editEmojiRolesButton,
                         onClick: () => o(s, l),
                         children: (0, r.jsx)(h.vdY, {
                             size: "md",
                             color: "currentColor",
-                            className: z.editEmojiRolesIcon,
+                            className: V.editEmojiRolesIcon,
                         }),
                     }),
                 !c &&
                     (0, r.jsx)(j.Z, {
-                        className: z.emojiRemove,
+                        className: V.emojiRemove,
                         onClick: () => {
                             (0, x.RE)(l, s.id).catch((e) => {
                                 let { status: t } = e;
                                 429 === t &&
                                     b.Z.show({
-                                        title: V.intl.string(V.t.iufib2),
-                                        body: V.intl.string(V.t["Whhv4+"]),
+                                        title: z.intl.string(z.t.iufib1),
+                                        body: z.intl.string(z.t.Whhv4w),
                                     });
                             });
                         },
@@ -210,7 +210,7 @@ let q = d().throttle(x.OQ, 1000),
             ],
         });
     },
-    Q = (e) => {
+    J = (e) => {
         let {
             isLoading: t,
             staticEmoji: i,
@@ -222,13 +222,13 @@ let q = d().throttle(x.OQ, 1000),
         } = e;
         return t
             ? (0, r.jsx)(h.$jN, {
-                  className: z.spinner,
+                  className: V.spinner,
                   type: h.$jN.Type.SPINNING_CIRCLE,
               })
             : 0 === i.length && 0 === l.length
               ? (0, r.jsxs)(h.ubH, {
                     theme: a,
-                    className: z.empty,
+                    className: V.empty,
                     children: [
                         (0, r.jsx)(h.oxh, {
                             darkSrc: n(458601),
@@ -237,15 +237,15 @@ let q = d().throttle(x.OQ, 1000),
                             height: 212,
                         }),
                         (0, r.jsx)(h.OZU, {
-                            note: V.intl.string(V.t.RBbtMz),
-                            children: V.intl.string(V.t.lxsmBQ),
+                            note: z.intl.string(z.t.RBbtMy),
+                            children: z.intl.string(z.t.lxsmBd),
                         }),
                     ],
                 })
               : (0, r.jsxs)("div", {
                     children: [
-                        (0, r.jsx)(J, {
-                            title: V.intl.string(V.t.sMOuub),
+                        (0, r.jsx)(Q, {
+                            title: z.intl.string(z.t.sMOuuS),
                             maxSlots: (0, k.y4)(s),
                             emojiCount: i.length,
                             children: (0, r.jsx)($, {
@@ -255,8 +255,8 @@ let q = d().throttle(x.OQ, 1000),
                                 newlyAddedEmojiIds: c,
                             }),
                         }),
-                        (0, r.jsx)(J, {
-                            title: V.intl.string(V.t.wWjQyc),
+                        (0, r.jsx)(Q, {
+                            title: z.intl.string(z.t.wWjQye),
                             maxSlots: (0, k.y4)(s),
                             emojiCount: l.length,
                             children: (0, r.jsx)($, {
@@ -269,12 +269,12 @@ let q = d().throttle(x.OQ, 1000),
                     ],
                 });
     },
-    J = (e) => {
+    Q = (e) => {
         let { title: t, maxSlots: n, emojiCount: i, children: l } = e,
             a = Math.max(n - i, 0);
         return (0, r.jsx)(h.C3N, {
             label: t,
-            description: V.intl.format(V.t.sgL8sL, { count: a }),
+            description: z.intl.format(z.t.sgL8sI, { count: a }),
             children: l,
         });
     },
@@ -286,46 +286,46 @@ let q = d().throttle(x.OQ, 1000),
         return 0 === t.length
             ? (0, r.jsx)(h.ubH, {
                   theme: d,
-                  children: (0, r.jsx)(h.OZU, { children: V.intl.string(V.t.SpxYoa) }),
+                  children: (0, r.jsx)(h.OZU, { children: z.intl.string(z.t.SpxYoT) }),
               })
             : (0, r.jsxs)("div", {
                   role: "table",
-                  "aria-label": V.intl.string(V.t.sMOuub),
-                  className: z.table,
+                  "aria-label": z.intl.string(z.t.sMOuuS),
+                  className: V.table,
                   children: [
                       (0, r.jsxs)("div", {
                           role: "rowgroup",
-                          className: z.tableHeader,
+                          className: V.tableHeader,
                           children: [
                               (0, r.jsx)("div", {
                                   role: "columnheader",
-                                  className: z.emojiColumn,
+                                  className: V.emojiColumn,
                                   children: (0, r.jsx)(h.Text, {
                                       variant: "text-sm/semibold",
-                                      children: V.intl.string(V.t.Z0i3Gh),
+                                      children: z.intl.string(z.t.Z0i3Gp),
                                   }),
                               }),
                               (0, r.jsx)("div", {
                                   role: "columnheader",
-                                  className: z.columnLabel,
+                                  className: V.columnLabel,
                                   children: (0, r.jsx)(h.Text, {
                                       variant: "text-sm/semibold",
-                                      children: V.intl.string(V.t.giajw8),
+                                      children: z.intl.string(z.t.giajw6),
                                   }),
                               }),
                               (0, r.jsx)("div", {
                                   role: "columnheader",
-                                  className: z.columnLabel,
+                                  className: V.columnLabel,
                                   children: (0, r.jsx)(h.Text, {
                                       variant: "text-sm/semibold",
-                                      children: V.intl.string(V.t.edavpq),
+                                      children: z.intl.string(z.t.edavpq),
                                   }),
                               }),
                           ],
                       }),
                       (0, r.jsx)("div", {
                           role: "rowgroup",
-                          className: z.tableBody,
+                          className: V.tableBody,
                           children: o.map((e) => {
                               var t;
                               return (0, r.jsx)(
@@ -356,11 +356,11 @@ let q = d().throttle(x.OQ, 1000),
         return null == u || d === H.Eu4.TIER_3 || c > 0
             ? null
             : (c > o
-                  ? ((t = V.intl.formatToPlainString(V.t.j0UH0t, { level: u })),
-                    (n = V.intl.formatToPlainString(V.t.VQeyKy, { level: u })),
+                  ? ((t = z.intl.formatToPlainString(z.t.j0UH0m, { level: u })),
+                    (n = z.intl.formatToPlainString(z.t.VQeyK6, { level: u })),
                     (i = H.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL))
-                  : ((t = V.intl.string(V.t.zT9Sxc)),
-                    (n = V.intl.formatToPlainString(V.t.dBZ1RU, { level: u })),
+                  : ((t = z.intl.string(z.t.zT9SxY)),
+                    (n = z.intl.formatToPlainString(z.t.dBZ1RU, { level: u })),
                     (i = H.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL)),
               (0, r.jsx)(P.Z, {
                   header: t,
@@ -379,30 +379,30 @@ let q = d().throttle(x.OQ, 1000),
             children: [
                 (0, r.jsx)(h.Heading, {
                     variant: "heading-sm/semibold",
-                    children: V.intl.string(V.t.jrXfy8),
+                    children: z.intl.string(z.t.jrXfyw),
                 }),
                 (0, r.jsxs)("ul", {
-                    className: z.emojiUploadUploadRequirementsList,
+                    className: V.emojiUploadUploadRequirementsList,
                     children: [
                         (0, r.jsx)(h.Text, {
                             variant: "text-sm/normal",
                             tag: "li",
-                            children: V.intl.string(V.t.N2qTQ0),
+                            children: z.intl.string(z.t.N2qTQ3),
                         }),
                         (0, r.jsx)(h.Text, {
                             variant: "text-sm/normal",
                             tag: "li",
-                            children: V.intl.format(V.t.gfAXoa, { maxSize: W.xG }),
+                            children: z.intl.format(z.t.gfAXoR, { maxSize: W.xG }),
                         }),
                         (0, r.jsx)(h.Text, {
                             variant: "text-sm/normal",
                             tag: "li",
-                            children: V.intl.string(V.t.rnwKPD),
+                            children: z.intl.string(z.t.rnwKPH),
                         }),
                         (0, r.jsx)(h.Text, {
                             variant: "text-sm/normal",
                             tag: "li",
-                            children: V.intl.string(V.t["8Vr5QU"]),
+                            children: z.intl.string(z.t["8Vr5Qd"]),
                         }),
                     ],
                 }),
@@ -436,7 +436,7 @@ let q = d().throttle(x.OQ, 1000),
                 animatedEmoji: K,
                 totalAnimatedEmoji: X,
             } = (0, S.t)({ guild: t }),
-            J = (0, E.qt)({
+            Q = (0, E.qt)({
                 location: "guild_settings",
                 autoTrackExposure: !0,
             }),
@@ -465,19 +465,19 @@ let q = d().throttle(x.OQ, 1000),
             }, [p, $]);
         let ei = i.useMemo(
                 () =>
-                    J.isEmojiEditingExperimentEnabled && null != $
+                    Q.isEmojiEditingExperimentEnabled && null != $
                         ? new Set(
                               d()
                                   .differenceBy(p, $, "id")
                                   .map((e) => e.id),
                           )
                         : new Set(),
-                [J.isEmojiEditingExperimentEnabled, p, $],
+                [Q.isEmojiEditingExperimentEnabled, p, $],
             ),
             el = i.useCallback(
                 function () {
                     let { emoji: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                    if (J.isEmojiEditingExperimentEnabled && null != e)
+                    if (Q.isEmojiEditingExperimentEnabled && null != e)
                         return void (0, I.i)({
                             guildId: t.id,
                             emoji: e,
@@ -491,7 +491,7 @@ let q = d().throttle(x.OQ, 1000),
                         },
                     });
                 },
-                [J.isEmojiEditingExperimentEnabled, t],
+                [Q.isEmojiEditingExperimentEnabled, t],
             ),
             ea = async (e, n, r) => {
                 let i = await (0, T.G)({
@@ -532,14 +532,14 @@ let q = d().throttle(x.OQ, 1000),
                 });
             },
             ed = (0, N.l)(t),
-            eu = J.isEmojiEditingExperimentEnabled ? (e) => el({ emoji: e }) : void 0;
+            eu = Q.isEmojiEditingExperimentEnabled ? (e) => el({ emoji: e }) : void 0;
         return (0, r.jsxs)("div", {
-            className: z.emojiSettings,
+            className: V.emojiSettings,
             children: [
                 0 === k
                     ? null
                     : (0, r.jsx)(_.Z, {
-                          className: z.emojiUploadContainer,
+                          className: V.emojiUploadContainer,
                           onDrop: ec,
                       }),
                 (0, r.jsxs)(h.Kqy, {
@@ -550,11 +550,11 @@ let q = d().throttle(x.OQ, 1000),
                             children: [
                                 (0, r.jsx)(h.Heading, {
                                     variant: "heading-lg/semibold",
-                                    children: V.intl.string(V.t.sMOuub),
+                                    children: z.intl.string(z.t.sMOuuS),
                                 }),
                                 (0, r.jsx)(h.Text, {
                                     variant: "text-md/normal",
-                                    children: V.intl.format(V.t.TA1BR0, { count: L }),
+                                    children: z.intl.format(z.t.TA1BR0, { count: L }),
                                 }),
                             ],
                         }),
@@ -564,12 +564,12 @@ let q = d().throttle(x.OQ, 1000),
                             animatedEmojiCount: X,
                         }),
                         (0, r.jsxs)("div", {
-                            className: z.uploader,
+                            className: V.uploader,
                             children: [
                                 ed &&
                                     (0, r.jsx)(h.Wn, {
                                         messageType: h.QYI.INFO,
-                                        children: V.intl.format(V.t.uMkfTk, {
+                                        children: z.intl.format(z.t.uMkfTo, {
                                             onClick: () =>
                                                 G.Z.open(
                                                     t.id,
@@ -579,18 +579,18 @@ let q = d().throttle(x.OQ, 1000),
                                                 ),
                                         }),
                                     }),
-                                J.enabled
+                                Q.enabled
                                     ? (0, r.jsxs)(r.Fragment, {
                                           children: [
                                               (0, r.jsx)(h.Button, {
                                                   variant: "primary",
-                                                  text: V.intl.string(V.t.DU0dy8),
+                                                  text: z.intl.string(z.t["DU0dy/"]),
                                                   onClick: () => el(),
                                                   disabled: 0 === k,
                                               }),
                                               (0, r.jsx)(h.Text, {
                                                   variant: "text-xs/normal",
-                                                  children: V.intl.string(V.t.EgNCTk),
+                                                  children: z.intl.string(z.t.EgNCTi),
                                               }),
                                           ],
                                       })
@@ -613,7 +613,7 @@ let q = d().throttle(x.OQ, 1000),
                                                   submitting: y,
                                                   focusProps: { within: !0 },
                                                   children: [
-                                                      V.intl.string(V.t.DU0dy8),
+                                                      z.intl.string(z.t["DU0dy/"]),
                                                       k > 0
                                                           ? (0, r.jsx)(w.ZP, {
                                                                 ref: e,
@@ -630,7 +630,7 @@ let q = d().throttle(x.OQ, 1000),
                                       }),
                             ],
                         }),
-                        (0, r.jsx)(Q, {
+                        (0, r.jsx)(J, {
                             isLoading: null == p,
                             staticEmoji: M,
                             animatedEmoji: K,

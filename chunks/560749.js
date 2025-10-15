@@ -13,8 +13,8 @@ var r = n(951288),
     h = n(131704),
     m = n(601964),
     _ = n(592125),
-    g = n(580005),
-    x = n(984933),
+    x = n(580005),
+    g = n(984933),
     v = n(430824),
     j = n(496675),
     S = n(914010),
@@ -23,7 +23,7 @@ var r = n(951288),
     C = n(823379),
     O = n(102172),
     w = n(981631),
-    P = n(637824),
+    P = n(489999),
     Z = n(388032),
     I = n(603410);
 function E(e) {
@@ -81,17 +81,17 @@ function E(e) {
 function T(e) {
     let { onSelectChannel: t, className: n } = e,
         { search: l, query: u, results: m } = (0, p.Z)({ searchOptions: { frecencyBoosters: !0 } }),
-        b = (0, o.Wu)([S.Z, x.ZP, _.Z, v.Z, j.Z], () => {
+        b = (0, o.Wu)([S.Z, g.ZP, _.Z, v.Z, j.Z], () => {
             let e = [],
                 t = S.Z.getGuildId();
             if (null == t) return e;
-            for (let n of x.ZP.getVocalChannelIds(t)) {
+            for (let n of g.ZP.getVocalChannelIds(t)) {
                 let t = _.Z.getChannel(n);
                 null != t && (0, O.JL)(t, v.Z, j.Z) && e.push(t);
             }
             return e;
         }),
-        y = (0, o.Wu)([f.Z, _.Z, g.Z, v.Z, j.Z], () => {
+        y = (0, o.Wu)([f.Z, _.Z, x.Z, v.Z, j.Z], () => {
             let e = [],
                 t = new Set();
             for (let n of f.Z.getChannelHistory()) {
@@ -100,7 +100,7 @@ function T(e) {
                     (0, O.JL)(r, v.Z, j.Z) &&
                     (t.add(r.id), e.push(r));
             }
-            for (let n of g.Z.getFrequentlyWithoutFetchingLatest())
+            for (let n of x.Z.getFrequentlyWithoutFetchingLatest())
                 n instanceof h.Sf &&
                     n.type === w.d4z.GUILD_VOICE &&
                     !t.has(n.id) &&
@@ -129,7 +129,7 @@ function T(e) {
             (0, r.jsx)("div", {
                 className: I.searchBar,
                 children: (0, r.jsx)(a.E1j, {
-                    placeholder: Z.intl.string(Z.t["3jvv+/"]),
+                    placeholder: Z.intl.string(Z.t["3jvv+6"]),
                     query: u,
                     onChange: (e) =>
                         l({
@@ -150,7 +150,7 @@ function T(e) {
                           return (0, r.jsx)(a.Text, {
                               variant: "text-xs/semibold",
                               color: "text-muted",
-                              children: Z.intl.string(P.default.FZ9Fl5),
+                              children: Z.intl.string(P.default.FZ9Fl7),
                           });
                       },
                       sections: [A.length],
@@ -186,12 +186,12 @@ function N() {
                 className: I.emptyHeader,
                 variant: "text-lg/medium",
                 color: "header-primary",
-                children: Z.intl.string(P.default.sWGfr6),
+                children: Z.intl.string(P.default.sWGfr9),
             }),
             (0, r.jsx)(a.Text, {
                 variant: "text-sm/medium",
                 color: "text-secondary",
-                children: Z.intl.string(P.default.nBRtt7),
+                children: Z.intl.string(P.default["nBRtt/"]),
             }),
         ],
     });

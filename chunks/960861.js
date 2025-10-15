@@ -106,7 +106,7 @@ function k() {
     return {
         sourceId: "prepicked:0",
         nativePickerStyleUsed: N.lastPresentedPickerStyle,
-        sourceName: null != (e = M()) ? e : O.intl.string(O.t["KKcy9/"]),
+        sourceName: null != (e = M()) ? e : O.intl.string(O.t.KKcy95),
         sound: t,
     };
 }

@@ -40,7 +40,7 @@ function p(e) {
                   (0, r.jsx)(
                       c.O1,
                       {
-                          text: s ? d.intl.string(d.t["I6JG4+"]) : e,
+                          text: s ? d.intl.string(d.t.I6JG46) : e,
                           onClick: (e) => {
                               e.stopPropagation(),
                                   null == i ||
@@ -62,7 +62,7 @@ function p(e) {
                   (0, r.jsx)(
                       c.O1,
                       {
-                          text: s ? d.intl.string(d.t["I6JG4+"]) : e,
+                          text: s ? d.intl.string(d.t.I6JG46) : e,
                           fullWidth: !0,
                           onClick: (e) => {
                               e.stopPropagation(),

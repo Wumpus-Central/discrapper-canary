@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var i = n(951288),
     r = n(647438),
     l = n(392711),
@@ -17,14 +17,14 @@ var i = n(951288),
     x = n(905753),
     j = n(937427),
     v = n(643886),
-    y = n(869157),
-    O = n(454092),
+    O = n(869157),
+    y = n(454092),
     _ = n(289465),
     C = n(981631),
     N = n(689079),
     S = n(388032),
     I = n(591086);
-function E(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -49,7 +49,7 @@ function E(e) {
     }
     return e;
 }
-function P(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -67,13 +67,13 @@ function P(e, t) {
         e
     );
 }
-function w(e) {
+function P(e) {
     let {
             applicationId: t,
             commandId: l,
             guildId: j,
             inModal: v,
-            editedTargetPermissions: w,
+            editedTargetPermissions: P,
             originalApplicationPermissions: k,
             originalCommandPermissions: A,
             selectedPermissionCount: D,
@@ -100,9 +100,9 @@ function w(e) {
         [U, W] = r.useMemo(() => {
             let e = {},
                 t = {};
-            for (let [n, i] of Object.entries(w)) i.type === d.Kw.CHANNEL ? (e[n] = i) : (t[n] = i);
+            for (let [n, i] of Object.entries(P)) i.type === d.Kw.CHANNEL ? (e[n] = i) : (t[n] = i);
             return [e, t];
-        }, [w]),
+        }, [P]),
         H = r.useCallback(
             (e) => {
                 let t = g.Z.getGuild(j),
@@ -134,11 +134,11 @@ function w(e) {
                 let n,
                     i = null;
                 if (0 !== t.length) {
-                    let e = w[t[0]];
-                    if (e.type === d.Kw.USER) n = O.s.REMOVE_SELF;
+                    let e = P[t[0]];
+                    if (e.type === d.Kw.USER) n = y.s.REMOVE_SELF;
                     else {
                         let t = e.id;
-                        if (((n = O.s.REMOVE_ROLE), (0, p.pM)(j, t))) i = "@everyone";
+                        if (((n = y.s.REMOVE_ROLE), (0, p.pM)(j, t))) i = "@everyone";
                         else {
                             let e = b.Z.getRole(j, t);
                             i = null != e ? e.name : "role";
@@ -146,20 +146,20 @@ function w(e) {
                     }
                 } else {
                     let t = Object.values(e)[0].id;
-                    if (((n = O.s.DENY_ROLE), (0, p.pM)(j, t))) i = "@everyone";
+                    if (((n = y.s.DENY_ROLE), (0, p.pM)(j, t))) i = "@everyone";
                     else {
                         let e = b.Z.getRole(j, t);
                         i = null != e ? e.name : "role";
                     }
                 }
-                (0, O._)(n, i);
+                (0, y._)(n, i);
             },
-            [j, w],
+            [j, P],
         ),
         K = r.useCallback(
             (e, n) => {
                 let i = {};
-                for (let [e, t] of Object.entries(w))
+                for (let [e, t] of Object.entries(P))
                     i[e] = {
                         id: t.id,
                         permission: t.permission,
@@ -168,7 +168,7 @@ function w(e) {
                 if (((i = Object.assign(i, e)), n.length > 0 && (i = a().omit(i, n)), !H(i))) return void G(e, n);
                 h.W4(t, B, i);
             },
-            [t, w, B, H, G],
+            [t, P, B, H, G],
         ),
         F = r.useCallback(() => {
             let e = Object.keys(U);
@@ -177,15 +177,15 @@ function w(e) {
                 return (n) =>
                     (0, i.jsx)(
                         t,
-                        E(
+                        w(
                             {
                                 editPermissions: K,
                                 guildId: j,
-                                headerText: S.intl.string(S.t["i1c+kZ"]),
+                                headerText: S.intl.string(S.t["i1c+kV"]),
                                 hasMemberSearch: !1,
                                 overwrittenKeys: e,
                                 search: T,
-                                searchPlaceholderText: S.intl.string(S.t["TLQo/v"]),
+                                searchPlaceholderText: S.intl.string(S.t["TLQo/i"]),
                                 selectedPermissionCount: D,
                             },
                             n,
@@ -200,15 +200,15 @@ function w(e) {
                 return (n) =>
                     (0, i.jsx)(
                         t,
-                        E(
+                        w(
                             {
                                 editPermissions: K,
                                 guildId: j,
                                 hasMemberSearch: !0,
-                                headerText: S.intl.string(S.t["56jRn5"]),
+                                headerText: S.intl.string(S.t["56jRn8"]),
                                 overwrittenKeys: e,
                                 search: Z,
-                                searchPlaceholderText: S.intl.string(S.t.wAfO5e),
+                                searchPlaceholderText: S.intl.string(S.t.wAfO5Y),
                                 selectedPermissionCount: D,
                             },
                             n,
@@ -223,7 +223,7 @@ function w(e) {
                         t = R.defaultMemberPermissions;
                     return (
                         o.fS(t, u.BO) && (t = C.Plq.ADMINISTRATOR),
-                        (n) => (0, i.jsx)(e, P(E({}, n), { defaultMemberPermissions: t }))
+                        (n) => (0, i.jsx)(e, E(w({}, n), { defaultMemberPermissions: t }))
                     );
                 }),
             [R],
@@ -233,17 +233,17 @@ function w(e) {
         J = [
             {
                 buttonClick: z,
-                buttonText: S.intl.string(S.t["56jRn5"]),
-                noneSelectedText: S.intl.string(S.t.C0rYfn),
+                buttonText: S.intl.string(S.t["56jRn8"]),
+                noneSelectedText: S.intl.string(S.t.C0rYfq),
                 overwrites: W,
-                title: null == l ? S.intl.string(S.t["vPWe+/"]) : S.intl.string(S.t["1jLVGB"]),
+                title: null == l ? S.intl.string(S.t["vPWe++"]) : S.intl.string(S.t["1jLVGB"]),
             },
             {
                 buttonClick: F,
-                buttonText: S.intl.string(S.t["i1c+kZ"]),
-                noneSelectedText: S.intl.string(S.t.UBJhCw),
+                buttonText: S.intl.string(S.t["i1c+kV"]),
+                noneSelectedText: S.intl.string(S.t["UBJhC/"]),
                 overwrites: U,
-                title: null == l ? S.intl.string(S.t.OGiMXF) : S.intl.string(S.t.Ujbaqq),
+                title: null == l ? S.intl.string(S.t.OGiMXJ) : S.intl.string(S.t.Ujbaqm),
             },
         ];
     return (0, i.jsxs)(r.Fragment, {
@@ -251,7 +251,7 @@ function w(e) {
             V > 0
                 ? (0, i.jsx)(c.Wn, {
                       messageType: c.QYI.WARNING,
-                      children: S.intl.format(S.t["B/dFBA"], { removeCount: V }),
+                      children: S.intl.format(S.t["B/dFBH"], { removeCount: V }),
                   })
                 : null,
             L
@@ -265,7 +265,7 @@ function w(e) {
                           }),
                           (0, i.jsx)("span", {
                               className: I.message,
-                              children: S.intl.format(S.t["2889Gh"], {}),
+                              children: S.intl.format(S.t["2889Gq"], {}),
                           }),
                           (0, i.jsx)(c.Button, {
                               variant: "secondary",
@@ -280,8 +280,8 @@ function w(e) {
                 let n = null;
                 return (
                     M
-                        ? Y && (n = S.intl.string(S.t.XTwtW1))
-                        : (n = null != l ? S.intl.string(S.t.tybdam) : S.intl.string(S.t.z2hjk5)),
+                        ? Y && (n = S.intl.string(S.t["XTwtW/"]))
+                        : (n = null != l ? S.intl.string(S.t.tybdas) : S.intl.string(S.t["z2hjk/"])),
                     (0, i.jsx)(
                         _.Z,
                         {
@@ -292,7 +292,7 @@ function w(e) {
                                 children: (t) =>
                                     (0, i.jsx)(
                                         c.Button,
-                                        P(E({}, t), {
+                                        E(w({}, t), {
                                             variant: "secondary",
                                             disabled: Y || !M,
                                             onClick: e.buttonClick,
@@ -305,7 +305,7 @@ function w(e) {
                             title: e.title,
                             children: (0, i.jsx)("div", {
                                 className: v ? void 0 : I.listContainer,
-                                children: (0, i.jsx)(y.Z, {
+                                children: (0, i.jsx)(O.Z, {
                                     guildId: j,
                                     commandId: l,
                                     noneSelectedText: e.noneSelectedText,
@@ -324,13 +324,13 @@ function w(e) {
 }
 function T(e) {
     let t = (0, j.w)(e);
-    return P(E({}, t), { results: t.results.map((e) => P(E({}, e), { type: d.Kw.CHANNEL })) });
+    return E(w({}, t), { results: t.results.map((e) => E(w({}, e), { type: d.Kw.CHANNEL })) });
 }
 function Z(e) {
     let t = (0, v.U)(e);
-    return P(E({}, t), {
+    return E(w({}, t), {
         results: t.results.roles
-            .map((e) => P(E({}, e), { type: d.Kw.ROLE }))
-            .concat(t.results.members.map((e) => P(E({}, e), { type: d.Kw.USER }))),
+            .map((e) => E(w({}, e), { type: d.Kw.ROLE }))
+            .concat(t.results.members.map((e) => E(w({}, e), { type: d.Kw.USER }))),
     });
 }

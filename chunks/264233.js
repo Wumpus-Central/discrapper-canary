@@ -37,8 +37,8 @@ function g() {
               className: f.__invalid_emptyStateContainer,
               children: (0, r.jsx)(d.Z, {
                   Icon: s.iWm,
-                  header: h.intl.string(h.t.PbSPWV),
-                  tip: h.intl.string(h.t.BxNbS0),
+                  header: h.intl.string(h.t.PbSPWc),
+                  tip: h.intl.string(h.t.BxNbSz),
               }),
           })
         : (0, r.jsx)(s.h21, {
@@ -48,7 +48,7 @@ function g() {
                       n.length > 0 &&
                           (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)(m, { title: h.intl.string(h.t.yflAJS) }),
+                                  (0, r.jsx)(m, { title: h.intl.string(h.t.yflAJV) }),
                                   n.map((e) =>
                                       (0, r.jsx)(
                                           p.Z,
@@ -64,7 +64,7 @@ function g() {
                       l.length > 0 &&
                           (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)(m, { title: h.intl.string(h.t.f0Ia4e) }),
+                                  (0, r.jsx)(m, { title: h.intl.string(h.t.f0Ia4V) }),
                                   l.map((e) =>
                                       (0, r.jsx)(
                                           p.Z,
@@ -155,7 +155,7 @@ function _() {
     return 0 === (0, a.Wu)([c.Z], () => c.Z.getInvites()).length
         ? null
         : (0, r.jsx)(s.M0o, {
-              tooltip: h.intl.string(h.t.Zy3MR0),
+              tooltip: h.intl.string(h.t["Zy3MR/"]),
               color: s.YX$.SECONDARY,
               icon: (0, r.jsx)(s.XHJ, { size: "xs" }),
               onClick: b,

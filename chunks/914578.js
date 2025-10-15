@@ -13,8 +13,8 @@ var r = n(951288),
     b = n(924983),
     p = n(981631),
     j = n(388032),
-    x = n(989281);
-function v(e) {
+    v = n(989281);
+function x(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(a.v2r, {
         navId: "settings-footer-more-menu",
@@ -25,17 +25,17 @@ function v(e) {
             children: [
                 (0, r.jsx)(a.sNh, {
                     id: "changelog",
-                    label: j.intl.string(j.t.LRmNAg),
+                    label: j.intl.string(j.t.LRmNAl),
                     action: () => (0, c.Z)(!0),
                 }),
                 (0, r.jsx)(a.sNh, {
                     id: "acknowledgements",
-                    label: j.intl.string(j.t["0nUKy8"]),
+                    label: j.intl.string(j.t["0nUKy3"]),
                     action: () => (0, s.Z)(p.EYA.ACKNOWLEDGEMENTS),
                 }),
                 (0, r.jsx)(a.sNh, {
                     id: "support",
-                    label: j.intl.string(j.t["Yl/Rio"]),
+                    label: j.intl.string(j.t["Yl/Riu"]),
                     action: () => (0, s.Z)(f.w),
                 }),
             ],
@@ -49,13 +49,13 @@ function y() {
         children: [
             t &&
                 (0, r.jsx)(a.P3F, {
-                    className: x.devToolsEducation,
+                    className: v.devToolsEducation,
                     onClick: () => (0, u.d8)(),
                     children: (0, r.jsx)(b.$, { legacy: !1 }),
                 }),
             (0, r.jsx)(m.Z, { compact: !0 }),
             (0, r.jsxs)("div", {
-                className: x.links,
+                className: v.links,
                 children: [
                     (0, r.jsx)(a.Anchor, {
                         href: p.EYA.PRIVACY,
@@ -63,11 +63,11 @@ function y() {
                             tag: "span",
                             variant: "text-xxs/normal",
                             color: "currentColor",
-                            children: j.intl.string(j.t["Knf/f3"]),
+                            children: j.intl.string(j.t["Knf/f/"]),
                         }),
                     }),
                     (0, r.jsx)("span", {
-                        className: x.bullet,
+                        className: v.bullet,
                         "aria-hidden": "true",
                         children: "\u2022",
                     }),
@@ -77,11 +77,11 @@ function y() {
                             tag: "span",
                             variant: "text-xxs/normal",
                             color: "currentColor",
-                            children: j.intl.string(j.t.uFSTGh),
+                            children: j.intl.string(j.t.uFSTGq),
                         }),
                     }),
                     (0, r.jsx)("span", {
-                        className: x.bullet,
+                        className: v.bullet,
                         "aria-hidden": "true",
                         children: "\u2022",
                     }),
@@ -93,7 +93,7 @@ function y() {
                         animation: a.yRy.Animation.NONE,
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
-                            return (0, r.jsx)(v, { onClose: t });
+                            return (0, r.jsx)(x, { onClose: t });
                         },
                         children: (t, n) => {
                             var l, o;
@@ -128,12 +128,12 @@ function y() {
                                     {
                                         ref: e,
                                         useDefaultUnderlineStyles: !1,
-                                        className: i()(x.moreButton, { [x.active]: n.isShown }),
+                                        className: i()(v.moreButton, { [v.active]: n.isShown }),
                                         children: (0, r.jsx)(a.Text, {
                                             tag: "span",
                                             variant: "text-xxs/normal",
                                             color: "currentColor",
-                                            children: j.intl.string(j.t.UKOtz8),
+                                            children: j.intl.string(j.t["UKOtz+"]),
                                         }),
                                     }),
                                 Object.getOwnPropertyDescriptors

@@ -1,9 +1,9 @@
-n.d(t, { Z: () => q }), n(388685);
+n.d(t, { Z: () => K }), n(388685);
 var i = n(951288),
     r = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(599273),
+    o = n(258536),
     s = n(91192),
     c = n(442837),
     u = n(481060),
@@ -65,7 +65,7 @@ function G(e) {
     }
     return e;
 }
-function z(e, t) {
+function W(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -83,7 +83,7 @@ function z(e, t) {
         e
     );
 }
-function W(e, t) {
+function z(e, t) {
     if (null == e) return {};
     var n,
         i,
@@ -103,8 +103,8 @@ function W(e, t) {
     }
     return r;
 }
-let Y = (0, o.animated)(u.eTT),
-    K = r.memo(
+let q = (0, o.animated)(u.eTT),
+    Y = r.memo(
         function (e) {
             var t, n;
             let {
@@ -128,8 +128,8 @@ let Y = (0, o.animated)(u.eTT),
                     jumpBarClassName: M,
                     typingGradient: R,
                 } = e,
-                [D, K] = r.useState(null != (n = E.Z.isAtBottom(m.id)) && n),
-                q = r.useMemo(
+                [D, Y] = r.useState(null != (n = E.Z.isAtBottom(m.id)) && n),
+                K = r.useMemo(
                     () =>
                         y
                             ? (0, L.aJ)({
@@ -156,10 +156,10 @@ let Y = (0, o.animated)(u.eTT),
                     compact: y,
                     hasUnreads: j,
                     focusId: S,
-                    placeholderHeight: q.totalHeight,
+                    placeholderHeight: K.totalHeight,
                     canLoadMore: null == T,
-                    handleScrollToBottom: r.useCallback(() => K(!0), [K]),
-                    handleScrollFromBottom: r.useCallback(() => K(!1), [K]),
+                    handleScrollToBottom: r.useCallback(() => Y(!0), [Y]),
+                    handleScrollFromBottom: r.useCallback(() => Y(!1), [Y]),
                     additionalMessagePadding: 48,
                 }),
                 J = (0, k.Z)({
@@ -187,7 +187,7 @@ let Y = (0, o.animated)(u.eTT),
                     uploads: x,
                     loadMore: X.loadMore,
                     scrollManager: X,
-                    specs: q,
+                    specs: K,
                     filterAfterTimestamp: null != T ? T : Q,
                     showingQuarantineBanner: N,
                     hideSummaries: A,
@@ -228,7 +228,7 @@ let Y = (0, o.animated)(u.eTT),
             let er = (0, u.mFp)(),
                 el = (0, s.l2)(J),
                 { ref: ea } = el,
-                eo = W(el, ["ref"]),
+                eo = z(el, ["ref"]),
                 es = (0, h.Z)((e) => {
                     var t;
                     (X.ref.current = e),
@@ -259,8 +259,8 @@ let Y = (0, o.animated)(u.eTT),
                         children: [
                             null == ei && ee,
                             (0, i.jsxs)(
-                                Y,
-                                z(
+                                q,
+                                W(
                                     G(
                                         {
                                             ref: es,
@@ -281,13 +281,13 @@ let Y = (0, o.animated)(u.eTT),
                                             en,
                                             (0, i.jsxs)(
                                                 "ol",
-                                                z(
+                                                W(
                                                     G(
                                                         {
                                                             className: a()(F.scrollerInner, {
                                                                 [F.scrollerAllowSticky]: m.isModeratorReportChannel(),
                                                             }),
-                                                            "aria-label": V.intl.formatToPlainString(V.t.XarRiI, {
+                                                            "aria-label": V.intl.formatToPlainString(V.t.XarRiL, {
                                                                 channelName: m.name,
                                                             }),
                                                         },
@@ -299,7 +299,7 @@ let Y = (0, o.animated)(u.eTT),
                                                                 className: F.navigationDescription,
                                                                 id: "messagesNavigationDescription",
                                                                 "aria-hidden": !0,
-                                                                children: V.intl.string(V.t.Spb3s7),
+                                                                children: V.intl.string(V.t["Spb3s/"]),
                                                             }),
                                                             $,
                                                             (0, i.jsx)("div", {
@@ -332,7 +332,7 @@ let Y = (0, o.animated)(u.eTT),
         },
         (e, t) => null != e.isHidden && null != t.isHidden && e.isHidden && t.isHidden,
     ),
-    q = r.memo(function (e) {
+    K = r.memo(function (e) {
         var {
                 channel: t,
                 showingQuarantineBanner: n,
@@ -341,7 +341,7 @@ let Y = (0, o.animated)(u.eTT),
                 forceCozy: o = !1,
                 typingGradient: s = !1,
             } = e,
-            u = W(e, [
+            u = z(e, [
                 "channel",
                 "showingQuarantineBanner",
                 "hideSummaries",
@@ -464,8 +464,8 @@ let Y = (0, o.animated)(u.eTT),
             value: (0, M.Z)(L, d),
             children: (0, i.jsx)(D.v, {
                 children: (0, i.jsx)(
-                    K,
-                    z(G({}, u), {
+                    Y,
+                    W(G({}, u), {
                         messageGroupSpacing: O,
                         showNewMessagesBar: !0,
                         channel: t,

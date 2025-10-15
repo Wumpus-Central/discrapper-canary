@@ -185,7 +185,7 @@ function k(e) {
                   (0, r.jsx)(
                       l.u,
                       {
-                          text: A.intl.string(A.t["PXMZ//"]),
+                          text: A.intl.string(A.t["PXMZ/+"]),
                           children: (0, r.jsx)(c.Amn, {
                               size: "md",
                               color: "currentColor",
@@ -200,7 +200,7 @@ function k(e) {
                   (0, r.jsx)(
                       l.u,
                       {
-                          text: A.intl.string(A.t.FlNoSU),
+                          text: A.intl.string(A.t.FlNoSV),
                           children: (0, r.jsx)(c.Odl, {
                               size: "md",
                               color: "currentColor",
@@ -215,7 +215,7 @@ function k(e) {
                 (0, r.jsx)(
                     l.u,
                     {
-                        text: A.intl.string(A.t.HFwRpq),
+                        text: A.intl.string(A.t.HFwRpk),
                         children: (0, r.jsx)(c.Mgn, {
                             className: o()(C.icon, N),
                             color: c.TVs.colors.STATUS_WARNING_BACKGROUND,
@@ -249,7 +249,7 @@ function k(e) {
                 (0, r.jsx)(
                     l.u,
                     {
-                        text: A.intl.string(A.t.JH1SJy),
+                        text: A.intl.string(A.t["JH1SJ+"]),
                         children: (0, r.jsx)(c.tEF, {
                             size: "xs",
                             color: "currentColor",
@@ -359,7 +359,7 @@ let U = function (e) {
     function J() {
         return S && !P
             ? (0, r.jsx)(l.u, {
-                  text: A.intl.string(A.t.BVK71t),
+                  text: A.intl.string(A.t.BVK71i),
                   children: (0, r.jsx)("div", {
                       className: o()(C.iconPriortySpeaker, { [C.iconPriortySpeakerSpeaking]: !L && !x && N }),
                   }),
@@ -384,7 +384,7 @@ let U = function (e) {
                     U
                         ? (0, r.jsxs)("span", {
                               className: C.guestSuffix,
-                              children: ["\xA0", A.intl.string(A.t["pFO/Pj"])],
+                              children: ["\xA0", A.intl.string(A.t["pFO/Ph"])],
                           })
                         : "",
                 ],
@@ -450,8 +450,8 @@ function G(e) {
         });
     };
     return (0, r.jsx)(l.u, {
-        text: A.intl.formatToPlainString(A.t.Sq9xJy, { game: t.name }),
-        "aria-label": A.intl.formatToPlainString(A.t.Sq9xJy, { game: t.name }),
+        text: A.intl.formatToPlainString(A.t.Sq9xJ7, { game: t.name }),
+        "aria-label": A.intl.formatToPlainString(A.t.Sq9xJ7, { game: t.name }),
         children: (0, r.jsx)(m.Z, {
             ref: p,
             className: o()(C.icon, C.gameIcon, n),
@@ -466,7 +466,7 @@ function B(e) {
         d = [];
     if (n) {
         let e,
-            n = () => (i ? A.intl.string(A.t.Q8Uzoa) : a ? A.intl.string(A.t.uLddbW) : A.intl.string(A.t.tjtv3N));
+            n = () => (i ? A.intl.string(A.t.Q8Uzof) : a ? A.intl.string(A.t.uLddbQ) : A.intl.string(A.t.tjtv3P));
         e = a || i ? c.v0G : c.nRN;
         let s = (0, r.jsx)(e, {
             className: o()(C.icon, t, { [C.iconServer]: a }),
@@ -493,7 +493,7 @@ function B(e) {
             (0, r.jsx)(
                 l.u,
                 {
-                    text: u ? A.intl.string(A.t.btxSdH) : A.intl.string(A.t.NjmiOD),
+                    text: u ? A.intl.string(A.t.btxSdB) : A.intl.string(A.t.NjmiOL),
                     children: n,
                 },
                 "deaf",

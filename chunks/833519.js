@@ -16,12 +16,12 @@ var r = n(951288),
     _ = n(194082),
     m = n(710845),
     g = n(965048),
-    E = n(590293),
-    b = n(595816),
+    b = n(590293),
+    E = n(595816),
     v = n(863908),
     h = n(871118),
-    y = n(517525),
-    S = n(352978),
+    S = n(517525),
+    y = n(352978),
     O = n(590076),
     I = n(507675),
     C = n(199902),
@@ -52,7 +52,7 @@ function B(e) {
             n || i ? null : (0, r.jsx)(M.Z, { participant: t }),
             i || null == s || s.state === F.jm8.ENDED || s.state === F.jm8.FAILED
                 ? null
-                : (0, r.jsx)(y.Z, {
+                : (0, r.jsx)(S.Z, {
                       size: _.ZP.Sizes.SMALL,
                       className: W.liveIndicator,
                       participant: t,
@@ -70,7 +70,7 @@ function q(e) {
             onVideoResize: l,
             fit: _,
             inPopout: m,
-            inOverlayPopout: y = !1,
+            inOverlayPopout: S = !1,
             width: M,
             focused: k,
             wrapperClassName: B,
@@ -78,11 +78,11 @@ function q(e) {
         } = e,
         Y = Z.Z.getVideoComponent(),
         z = (0, o.e7)([w.default], () => w.default.getId()),
-        K = (0, E.Z)(),
+        K = (0, b.Z)(),
         { stream: G, user: Q, streamId: X } = t,
         J = (0, o.e7)([j.Z], () => j.Z.getChannel(G.channelId)),
         $ = (0, o.e7)([C.Z], () => C.Z.getActiveStreamForUser(Q.id, G.guildId), [Q.id, G.guildId]),
-        { defaultWatchMultipleStreams: ee } = (0, b.P)({ location: "StreamTile" }),
+        { defaultWatchMultipleStreams: ee } = (0, E.P)({ location: "StreamTile" }),
         et = (0, o.e7)([C.Z], () => C.Z.getAllActiveStreams().length > 0),
         en = (0, o.e7)([P.Z], () => P.Z.isFocused()),
         er = (null == $ ? void 0 : $.ownerId) === z,
@@ -153,19 +153,19 @@ function q(e) {
                                   children: (0, r.jsx)(s.Button, {
                                       variant: "secondary",
                                       size: ea ? "sm" : "md",
-                                      text: M < 175 ? U.intl.string(U.t["I6JG4+"]) : U.intl.string(U.t["7Xq/nZ"]),
+                                      text: M < 175 ? U.intl.string(U.t.I6JG46) : U.intl.string(U.t["7Xq/nV"]),
                                   }),
                               }),
                               et && !ee
                                   ? (0, r.jsx)("div", {
                                         className: a()(W.cta, W.addCta),
                                         children: (0, r.jsx)(c.u, {
-                                            text: U.intl.string(U.t.wCrzur),
+                                            text: U.intl.string(U.t.wCrzut),
                                             children: (0, r.jsx)(s.hU, {
                                                 variant: "secondary",
                                                 size: ea ? "sm" : "md",
                                                 icon: s.OgY,
-                                                "aria-label": U.intl.string(U.t.wCrzur),
+                                                "aria-label": U.intl.string(U.t.wCrzut),
                                                 onClick: (e) => {
                                                     e.stopPropagation(), (0, d.rn)(t.stream, { forceMultiple: !0 });
                                                 },
@@ -191,7 +191,7 @@ function q(e) {
                       })
                     : null,
                 (0, r.jsx)(
-                    S.Z,
+                    y.Z,
                     {
                         onResize: l,
                         wrapperClassName: a()(W.videoWrapper, B),

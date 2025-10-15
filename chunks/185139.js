@@ -28,7 +28,7 @@ function O(e) {
             header: I,
             footer: T,
             isGift: S = !1,
-            giftMessage: A = E.intl.string(E.t.DrgnS0),
+            giftMessage: A = E.intl.string(E.t["DrgnS+"]),
             hideBreadcrumbs: C = !1,
             isLoading: N = !1,
             purchaseError: R,
@@ -43,9 +43,9 @@ function O(e) {
     let j = null != M ? M.message : "";
     null != M &&
         M instanceof d.HF &&
-        (M.code === f.SM.CARD_DECLINED && x && (j += " ".concat(E.intl.string(E.t.iWvwQU))),
-        M.code === f.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (j = E.intl.string(E.t.ypuSd3)),
-        M.code === g.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (j = E.intl.string(E.t.mXMmWF)));
+        (M.code === f.SM.CARD_DECLINED && x && (j += " ".concat(E.intl.string(E.t.iWvwQS))),
+        M.code === f.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (j = E.intl.string(E.t.ypuSd8)),
+        M.code === g.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (j = E.intl.string(E.t.mXMmWE)));
     let { stripe: k } = (0, _.JL)();
     N = N || null == k;
     let U = i.useRef(new l.V7());

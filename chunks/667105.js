@@ -187,19 +187,19 @@ function G(e) {
         ? (0, m.pO)(e)
             ? e.config.features.includes(N.S7.CLOUD_GAMING_ACTIVITY)
                 ? {
-                      text: w.intl.string(w.t["+qoymJ"]),
+                      text: w.intl.string(w.t["+qoymD"]),
                       questContentCTA: p.jZ.START_QUEST,
                   }
                 : {
-                      text: w.intl.string(w.t["Ie9++v"]),
+                      text: w.intl.string(w.t["Ie9++s"]),
                       questContentCTA: p.jZ.START_QUEST,
                   }
             : {
-                  text: w.intl.string(w.t.hRIVy8),
+                  text: w.intl.string(w.t["hRIVy+"]),
                   questContentCTA: p.jZ.START_QUEST,
               }
         : {
-              text: w.intl.string(w.t.l7E81t),
+              text: w.intl.string(w.t.l7E81v),
               questContentCTA: p.jZ.ACCEPT_QUEST,
           };
 }
@@ -250,7 +250,7 @@ function B(e) {
         });
     return i.useMemo(() => {
         if (!F && (0, m.HJ)(n) && r !== E.OH.COMPLETED && r !== E.OH.CLAIMED) {
-            let e = w.intl.string(w.t.BkZhUF);
+            let e = w.intl.string(w.t.BkZhUI);
             return {
                 text: e,
                 tooltipText: e,
@@ -259,10 +259,10 @@ function B(e) {
         }
         switch (r) {
             case E.OH.UNACCEPTED:
-                let e = w.intl.string(w.t.kUQLMD),
+                let e = w.intl.string(w.t.kUQLMJ),
                     t = p.jZ.ACCEPT_QUEST;
                 return (
-                    b && ((e = w.intl.string(w.t.umdNio)), (t = p.jZ.START_QUEST)),
+                    b && ((e = w.intl.string(w.t.umdNin)), (t = p.jZ.START_QUEST)),
                     (y || (0, m.pO)(n)) && ({ text: e, questContentCTA: t } = G(n)),
                     {
                         text: e,
@@ -340,7 +340,7 @@ function B(e) {
             case E.OH.IN_PROGRESS:
                 if (C && _)
                     return {
-                        text: w.intl.string(w.t.Cfye4u),
+                        text: w.intl.string(w.t.Cfye4v),
                         tooltipText: null,
                         onClick: () =>
                             (0, m.gI)(
@@ -357,7 +357,7 @@ function B(e) {
                     };
                 if (F && (0, m.HJ)(n))
                     return {
-                        text: w.intl.string(w.t.IsH2Sk),
+                        text: w.intl.string(w.t.IsH2Sp),
                         tooltipText: null,
                         onClick: () => {
                             (0, A.openPushToPhoneModal)(n);
@@ -366,7 +366,7 @@ function B(e) {
                 if (b)
                     return {
                         text: (0, m.F9)(D),
-                        tooltipText: w.intl.string(w.t.hsbwjo),
+                        tooltipText: w.intl.string(w.t.hsbwjv),
                         onClick: () =>
                             (0, A.openVideoQuestModal)({
                                 quest: n,
@@ -379,20 +379,20 @@ function B(e) {
                     let { text: e } = G(n);
                     return {
                         text: e,
-                        tooltipText: w.intl.string(w.t.hsbwjo),
+                        tooltipText: w.intl.string(w.t.hsbwjv),
                         onClick: () => {
                             n.config.features.includes(N.S7.START_QUEST_CTA) && B();
                         },
                     };
                 }
                 return {
-                    text: w.intl.string(w.t.cfY4PD),
-                    tooltipText: w.intl.string(w.t.hsbwjo),
+                    text: w.intl.string(w.t.cfY4PE),
+                    tooltipText: w.intl.string(w.t.hsbwjv),
                     onClick: null,
                 };
             case E.OH.COMPLETED:
                 return {
-                    text: w.intl.string(w.t.cfY4PD),
+                    text: w.intl.string(w.t.cfY4PE),
                     tooltipText: null,
                     onClick: I,
                 };
@@ -405,23 +405,23 @@ function B(e) {
                     return {
                         tooltipText: null,
                         onClick: I,
-                        text: (0, m.wj)(n.config) ? w.intl.string(w.t.bAGFz8) : w.intl.string(w.t.vTgCW1),
+                        text: (0, m.wj)(n.config) ? w.intl.string(w.t.bAGFz3) : w.intl.string(w.t.vTgCWx),
                     };
-                if (a) return M(L({}, i), { text: w.intl.string(w.t.MAS7uL) });
-                if ((0, m.vQ)(n.config)) return M(L({}, i), { text: w.intl.string(w.t.vTgCW1) });
+                if (a) return M(L({}, i), { text: w.intl.string(w.t.MAS7uK) });
+                if ((0, m.vQ)(n.config)) return M(L({}, i), { text: w.intl.string(w.t.vTgCWx) });
                 if ((0, m.Bg)(n.config))
                     return {
                         tooltipText: null,
                         onClick: x,
-                        text: w.intl.string(w.t["eQX+go"]),
+                        text: w.intl.string(w.t["eQX+gg"]),
                     };
                 else if ((0, m.xN)(n.config))
                     return {
                         tooltipText: null,
-                        text: w.intl.string(w.t.WYchdX),
+                        text: w.intl.string(w.t.WYchde),
                         onClick: k,
                     };
-                return M(L({}, i), { text: w.intl.string(w.t.bAGFz8) });
+                return M(L({}, i), { text: w.intl.string(w.t.bAGFz3) });
         }
     }, [r, b, C, _, I, a, n, o, s, f, U, D, x, k, y, B, v, F, Z]);
 }

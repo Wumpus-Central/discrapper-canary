@@ -52,12 +52,12 @@ let _ = () => {
                             (0, r.jsx)(a.Text, {
                                 variant: "eyebrow",
                                 color: "header-secondary",
-                                children: p.intl.string(p.t.A5wHQ0),
+                                children: p.intl.string(p.t["A5wHQ/"]),
                             }),
                             (0, r.jsx)(a.Text, {
                                 variant: "text-sm/medium",
                                 color: "interactive-normal",
-                                children: p.intl.string(p.t.UKCSER),
+                                children: p.intl.string(p.t.UKCSEd),
                             }),
                         ],
                     }),
@@ -84,7 +84,7 @@ let _ = () => {
                                     children: p.intl.string(p.t.me1lRk),
                                 }),
                                 (0, r.jsx)(a.oil, {
-                                    placeholder: p.intl.string(p.t["09Q8ys"]),
+                                    placeholder: p.intl.string(p.t["09Q8yp"]),
                                     maxLength: m.l$U,
                                     value: _,
                                     onChange: v,
@@ -92,13 +92,13 @@ let _ = () => {
                             ],
                         }),
                     (0, r.jsx)(u.ZP, {
-                        title: p.intl.string(p.t["/2ed39"]),
+                        title: p.intl.string(p.t["/2ed37"]),
                         value: x,
                         onChange: b,
                     }),
                     l &&
                         (0, r.jsx)(u.ZP, {
-                            title: p.intl.string(p.t.bN4m1N),
+                            title: p.intl.string(p.t.bN4m1G),
                             value: E,
                             onChange: j,
                         }),

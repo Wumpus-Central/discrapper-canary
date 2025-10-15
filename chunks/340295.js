@@ -54,16 +54,16 @@ let m = function (e) {
                     variant: "text-sm/normal",
                     children:
                         0 === g.length
-                            ? h.intl.string(h.t.zSqdra)
+                            ? h.intl.string(h.t.zSqdrS)
                             : 1 === g.length
-                              ? h.intl.formatToPlainString(h.t.BUyJIC, { a: (0, c.Z)(n, g[0]) })
+                              ? h.intl.formatToPlainString(h.t.BUyJIG, { a: (0, c.Z)(n, g[0]) })
                               : 2 === g.length
-                                ? h.intl.formatToPlainString(h.t.dcyZf3, {
+                                ? h.intl.formatToPlainString(h.t["dcyZf/"], {
                                       a: (0, c.Z)(n, g[0]),
                                       b: (0, c.Z)(n, g[1]),
                                   })
                                 : g.length > 2
-                                  ? h.intl.formatToPlainString(h.t["44/Obm"], {
+                                  ? h.intl.formatToPlainString(h.t["44/Obu"], {
                                         a: (0, c.Z)(n, g[0]),
                                         b: (0, c.Z)(n, g[1]),
                                         n: g.length - 2,
@@ -75,7 +75,7 @@ let m = function (e) {
                 className: f.joinButton,
                 children: (0, i.jsx)(l.Button, {
                     variant: "overlay-primary",
-                    text: m ? h.intl.string(h.t["96ANUF"]) : h.intl.string(h.t.TVBCKS),
+                    text: m ? h.intl.string(h.t["96ANUN"]) : h.intl.string(h.t.TVBCKZ),
                     onClick: C,
                     disabled: !m,
                 }),

@@ -15,8 +15,8 @@ var r = n(951288),
     m = n(155409),
     b = n(944486),
     _ = n(594174),
-    y = n(431),
-    O = n(774343),
+    O = n(431),
+    y = n(774343),
     v = n(417363),
     j = n(941128),
     x = n(780570),
@@ -45,8 +45,8 @@ let R = {
 function D(e) {
     var t, n;
     let { selected: o, user: d, badge: h, link: f, showProgressBadge: b } = e,
-        [_, y] = i.useState(!1),
-        [O, v] = i.useState(!1),
+        [_, O] = i.useState(!1),
+        [y, v] = i.useState(!1),
         [j, x] = i.useState(null),
         [C, Z] = i.useState(0),
         D = (0, l.Ie)("home"),
@@ -55,8 +55,8 @@ function D(e) {
             x(null), Z(0), clearTimeout(j);
         };
     if (null == d) return null;
-    let k = T.intl.string(T.t.YUU0RE);
-    O && (k = a.K.get(N.wli) ? T.intl.string(T.t.nkq1l5) : T.intl.string(T.t.Be8Q5O));
+    let k = T.intl.string(T.t.YUU0RF);
+    y && (k = a.K.get(N.wli) ? T.intl.string(T.t["nkq1l+"]) : T.intl.string(T.t.Be8Q5E));
     let G = null;
     !o &&
         b &&
@@ -98,8 +98,8 @@ function D(e) {
                     return e;
                 })(
                     {
-                        onMouseEnter: () => y(!0),
-                        onMouseLeave: () => y(!1),
+                        onMouseEnter: () => O(!0),
+                        onMouseLeave: () => O(!1),
                         onClick: () => {
                             if (
                                 !__OVERLAY__ &&
@@ -117,7 +117,7 @@ function D(e) {
                             }
                         },
                         selected: U,
-                        ariaLabel: T.intl.string(T.t.YUU0RE),
+                        ariaLabel: T.intl.string(T.t.YUU0RF),
                         "aria-owns": "guild-list-unread-dms",
                         "aria-selected": o,
                     },
@@ -188,16 +188,16 @@ function L() {
         n = (0, f.If)(),
         i = Object.keys(Z.nG),
         l = (0, d.Z)(),
-        { unviewedTrialCount: a, unviewedDiscountCount: s } = (0, o.cj)([y.Z], () => ({
-            unviewedTrialCount: y.Z.getUnacknowledgedOffers(i).length,
-            unviewedDiscountCount: y.Z.getUnacknowledgedDiscountOffers().length,
+        { unviewedTrialCount: a, unviewedDiscountCount: s } = (0, o.cj)([O.Z], () => ({
+            unviewedTrialCount: O.Z.getUnacknowledgedOffers(i).length,
+            unviewedDiscountCount: O.Z.getUnacknowledgedDiscountOffers().length,
         })),
         u = l.fractionalState === Z.a$.NONE ? a + s : 0,
         p = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
         g = (0, h.q)(),
         m = n + u + g,
         E = m === u && u > 0 && n + g === 0,
-        S = O.Z.getHomeLink();
+        S = y.Z.getHomeLink();
     return (
         E && (S = N.Z5c.APPLICATION_STORE),
         (0, r.jsx)(D, {

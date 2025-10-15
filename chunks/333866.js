@@ -19,10 +19,10 @@ var r = n(388032),
     })({});
 function o(e) {
     return {
-        4: r.intl.string(r.t["5tzSRE"]),
-        2: r.intl.string(r.t["WWIr5+"]),
-        3: r.intl.string(r.t.WlSInZ),
-        1: r.intl.string(r.t.uOU7Pz),
+        4: r.intl.string(r.t["5tzSRP"]),
+        2: r.intl.string(r.t.WWIr54),
+        3: r.intl.string(r.t.WlSInQ),
+        1: r.intl.string(r.t.uOU7P1),
     }[e];
 }
 let s = [4, 2, 3, 1];

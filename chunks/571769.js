@@ -1,8 +1,8 @@
 n.d(t, { default: () => _ });
 var s = n(951288),
     r = n(647438),
-    a = n(660815),
-    i = n(793030),
+    i = n(660815),
+    a = n(793030),
     l = n(442837),
     o = n(198168),
     c = n(481060),
@@ -11,7 +11,7 @@ var s = n(951288),
     u = n(905551),
     f = n(60482),
     x = n(986841),
-    m = n(948208),
+    m = n(470658),
     h = n(388032),
     v = n(71124);
 function _(e) {
@@ -26,26 +26,26 @@ function _(e) {
     let N = (0, x.Z)(n),
         j = r.useCallback(() => {
             (0, p.JG)(null != N ? N : ""),
-                (0, c.showToast)((0, c.createToast)(h.intl.string(h.t["+5kSoa"]), c.ToastType.SUCCESS));
+                (0, c.showToast)((0, c.createToast)(h.intl.string(h.t["+5kSoW"]), c.ToastType.SUCCESS));
         }, [N]),
         S = r.useMemo(() => {
             switch (n.status) {
-                case a.V.STARTING:
-                    return h.intl.string(m.default.ud4hxc);
-                case a.V.OFFLINE:
-                    return h.intl.string(m.default["ABAm7+"]);
+                case i.V.STARTING:
+                    return h.intl.string(m.default.ud4hxY);
+                case i.V.OFFLINE:
+                    return h.intl.string(m.default.ABAm7x);
                 default:
                     return;
             }
         }, [n.status]);
-    return (0, s.jsx)(i.ExpressiveModal, {
+    return (0, s.jsx)(a.ExpressiveModal, {
         graphic: {
             type: "dynamic",
             component: o.DynamicGraphicComponent.GAME_SERVER_GAME_INSTRUCTIONS_ASSET,
             props: { instance: n },
         },
         title: n.name,
-        subtitle: h.intl.string(m.default["4HqfaW"]),
+        subtitle: h.intl.string(m.default["4HqfaU"]),
         size: "md",
         transitionState: I,
         onClose: _,
@@ -73,7 +73,7 @@ function _(e) {
                                                   children: (0, s.jsx)(c.Text, {
                                                       variant: "text-xs/semibold",
                                                       color: "text-secondary",
-                                                      children: h.intl.formatToPlainString(m.default.oSU1fH, {
+                                                      children: h.intl.formatToPlainString(m.default.oSU1fF, {
                                                           step: t + 1,
                                                       }),
                                                   }),
@@ -103,7 +103,7 @@ function _(e) {
                                       }),
                                       (0, s.jsx)(c.Button, {
                                           variant: "primary",
-                                          text: h.intl.string(h.t.OpuAlJ),
+                                          text: h.intl.string(h.t.OpuAlK),
                                           onClick: j,
                                           icon: c.TIy,
                                       }),

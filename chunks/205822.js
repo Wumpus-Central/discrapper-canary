@@ -2,13 +2,13 @@ A.d(t, { Z: () => v }), A(953529), A(388685);
 var n = A(951288),
     r = A(647438),
     a = A(120356),
-    l = A.n(a),
-    i = A(481060),
+    i = A.n(a),
+    l = A(481060),
     o = A(710845),
     s = A(310752),
     d = A(531643),
-    c = A(388032),
-    u = A(995751),
+    u = A(388032),
+    c = A(995751),
     g = A(162130);
 function f(e, t, A) {
     return (
@@ -27,13 +27,13 @@ let p = new o.Z("UploadArea");
 function m() {
     return (0, n.jsxs)("div", {
         children: [
-            (0, n.jsx)("div", { className: l()(g.sparkleWhite, u.sparkleOne) }),
-            (0, n.jsx)("div", { className: l()(g.sparkleWhite, u.sparkleTwo) }),
-            (0, n.jsx)("div", { className: l()(g.lightWhite, u.lightOne) }),
-            (0, n.jsx)("div", { className: l()(g.lightWhite, u.lightTwo) }),
-            (0, n.jsx)("div", { className: l()(g.crossWhite, u.crossOne) }),
-            (0, n.jsx)("div", { className: l()(g.crossWhite, u.crossTwo) }),
-            (0, n.jsx)("div", { className: l()(g.popWhite, u.popOne) }),
+            (0, n.jsx)("div", { className: i()(g.sparkleWhite, c.sparkleOne) }),
+            (0, n.jsx)("div", { className: i()(g.sparkleWhite, c.sparkleTwo) }),
+            (0, n.jsx)("div", { className: i()(g.lightWhite, c.lightOne) }),
+            (0, n.jsx)("div", { className: i()(g.lightWhite, c.lightTwo) }),
+            (0, n.jsx)("div", { className: i()(g.crossWhite, c.crossOne) }),
+            (0, n.jsx)("div", { className: i()(g.crossWhite, c.crossTwo) }),
+            (0, n.jsx)("div", { className: i()(g.popWhite, c.popOne) }),
         ],
     });
 }
@@ -61,26 +61,26 @@ class h extends r.Component {
         let { title: e, description: t, icons: A, style: r, className: a } = this.props;
         return (0, n.jsx)("div", {
             ref: this.elementDOMRef,
-            className: l()(a, u.uploadArea, {
-                [u.droppable]: this.state.isDragging,
-                [u.uploadModalIn]: this.state.isOverZone,
+            className: i()(a, c.uploadArea, {
+                [c.droppable]: this.state.isDragging,
+                [c.uploadModalIn]: this.state.isOverZone,
             }),
             style: r,
             children: (0, n.jsxs)("div", {
-                className: u.uploadDropModal,
+                className: c.uploadDropModal,
                 children: [
                     this.state.isDragging && (0, n.jsx)(m, {}),
-                    (0, n.jsx)("div", { className: u.bgScale }),
+                    (0, n.jsx)("div", { className: c.bgScale }),
                     (0, n.jsxs)("div", {
-                        className: u.inner,
+                        className: c.inner,
                         children: [
                             (0, n.jsx)(s.Z, { icons: A }),
                             (0, n.jsx)("div", {
-                                className: u.title,
+                                className: c.title,
                                 children: e,
                             }),
                             (0, n.jsx)("div", {
-                                className: u.instructions,
+                                className: c.instructions,
                                 children: (0, n.jsx)("pre", { children: t }),
                             }),
                         ],
@@ -127,8 +127,8 @@ class h extends r.Component {
                     A &&
                         (t.setState({ isDragging: !1 }),
                         (0, d.openUploadError)({
-                            title: c.intl.string(c.t.azO1PT),
-                            help: c.intl.string(c.t.Koklr6),
+                            title: u.intl.string(u.t.azO1Pe),
+                            help: u.intl.string(u.t["Koklr/"]),
                             icons: t.props.icons,
                         })),
                     !1)
@@ -141,7 +141,7 @@ class h extends r.Component {
                 if (null != r) {
                     if (
                         ("move" === r.effectAllowed ? (r.dropEffect = "move") : (r.dropEffect = "copy"),
-                        (0, i.nfh)(d.A) && (0, i.Mr3)(d.A),
+                        (0, l.nfh)(d.A) && (0, l.Mr3)(d.A),
                         e.stopPropagation(),
                         e.preventDefault(),
                         null == (t = (A = this.props).onDragOver) || t.call(A, e),

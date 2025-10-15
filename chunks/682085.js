@@ -21,7 +21,7 @@ function E() {
         t = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
         { application: E, config: v } = (0, h.G)(),
         { token: y, fetched: I } = (0, c.o)(null == v ? void 0 : v.application_id),
-        S = i.useMemo(
+        C = i.useMemo(
             () =>
                 (null == v ? void 0 : v.application_id) != null
                     ? new f.q({
@@ -31,7 +31,7 @@ function E() {
                     : null,
             [null == v ? void 0 : v.application_id],
         ),
-        C = i.useCallback(() => {
+        S = i.useCallback(() => {
             e({ action: "PRESS_ADD_WIDGET" }),
                 (0, s.ZDy)(
                     async () => {
@@ -85,7 +85,7 @@ function E() {
                     { stackingBehavior: "stack" },
                 );
         }, [e]);
-    if (null == t || null == E || null == S || !I)
+    if (null == t || null == E || null == C || !I)
         return (0, r.jsx)("div", {
             className: O.loading,
             children: (0, r.jsx)(s.$jN, {}),
@@ -98,12 +98,12 @@ function E() {
             (0, r.jsx)(s.Heading, {
                 variant: "heading-md/medium",
                 color: "header-primary",
-                children: _.intl.string(_.t.oqalCw),
+                children: _.intl.string(_.t["oqalC+"]),
             }),
             (0, r.jsx)(s.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: _.intl.format(_.t.YnNFWV, { applicationName: E.name }),
+                children: _.intl.format(_.t.YnNFWa, { applicationName: E.name }),
             }),
         ],
     });
@@ -137,10 +137,10 @@ function E() {
                             T,
                             (0, r.jsx)(s.Button, {
                                 icon: s.qJs,
-                                text: _.intl.string(_.t.lBG2s7),
+                                text: _.intl.string(_.t["lBG2s/"]),
                                 size: "md",
                                 color: "secondary",
-                                onClick: C,
+                                onClick: S,
                             }),
                         ],
                     });

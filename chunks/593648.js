@@ -103,7 +103,7 @@ function K(e) {
         checked: n,
         onChange: o,
         disabled: i,
-        description: Z.intl.format(Z.t.OOiGCA, { onClick: a }),
+        description: Z.intl.format(Z.t.OOiGCM, { onClick: a }),
     });
 }
 function z(e) {
@@ -126,100 +126,100 @@ function z(e) {
     });
     let d = [
             {
-                label: Z.intl.string(Z.t.pz71xM),
+                label: Z.intl.string(Z.t.pz71xC),
                 sound: "message1",
                 focusModeDisabled: s,
             },
             {
-                label: Z.intl.string(Z.t.hK51Ym),
+                label: Z.intl.string(Z.t.hK51Yg),
                 sound: "deafen",
             },
             {
-                label: Z.intl.string(Z.t.XiejaG),
+                label: Z.intl.string(Z.t.XiejaJ),
                 sound: "undeafen",
             },
             {
-                label: Z.intl.string(Z.t["w4m94+"]),
+                label: Z.intl.string(Z.t.w4m945),
                 sound: "mute",
             },
             {
-                label: Z.intl.string(Z.t.YqAjX1),
+                label: Z.intl.string(Z.t.YqAjXy),
                 sound: "unmute",
             },
             {
-                label: Z.intl.string(Z.t.JoTq8v),
+                label: Z.intl.string(Z.t.JoTq8n),
                 sound: "camera_on",
             },
             {
-                label: Z.intl.string(Z.t["8P6tQ0"]),
+                label: Z.intl.string(Z.t["8P6tQ6"]),
                 sound: "camera_off",
             },
             {
-                label: Z.intl.string(Z.t["juL9/P"]),
+                label: Z.intl.string(Z.t["juL9/L"]),
                 sound: "disconnect",
             },
             {
-                label: Z.intl.string(Z.t.x98vQk),
+                label: Z.intl.string(Z.t.x98vQq),
                 sound: "ptt_start",
             },
             {
-                label: Z.intl.string(Z.t["1HjRqK"]),
+                label: Z.intl.string(Z.t["1HjRqC"]),
                 sound: "ptt_stop",
             },
             {
-                label: Z.intl.string(Z.t["9JB1Cg"]),
+                label: Z.intl.string(Z.t["9JB1Ck"]),
                 sound: "user_join",
             },
             {
-                label: Z.intl.string(Z.t.KUBBNj),
+                label: Z.intl.string(Z.t.KUBBNt),
                 sound: "user_leave",
             },
             {
-                label: Z.intl.string(Z.t.EZjqUV),
+                label: Z.intl.string(Z.t.EZjqUT),
                 sound: "user_moved",
             },
             {
-                label: Z.intl.string(Z.t.LnNlQk),
+                label: Z.intl.string(Z.t.LnNlQh),
                 sound: "call_calling",
             },
             {
-                label: Z.intl.string(Z.t.XBrJT0),
+                label: Z.intl.string(Z.t.XBrJT6),
                 sound: "call_ringing",
             },
             {
-                label: Z.intl.string(Z.t["Nd8P5+"]),
+                label: Z.intl.string(Z.t.Nd8P5y),
                 sound: "stream_started",
             },
             {
-                label: Z.intl.string(Z.t["9bYj+P"]),
+                label: Z.intl.string(Z.t["9bYj+G"]),
                 sound: "stream_ended",
             },
             {
-                label: Z.intl.string(Z.t.KccUIy),
+                label: Z.intl.string(Z.t.KccUI1),
                 sound: "stream_user_joined",
             },
             {
-                label: Z.intl.string(Z.t.dsjkiI),
+                label: Z.intl.string(Z.t.dsjkiN),
                 sound: "stream_user_left",
             },
             {
-                label: Z.intl.string(Z.t.nFOcf3),
+                label: Z.intl.string(Z.t.nFOcf9),
                 sound: "activity_launch",
             },
             {
-                label: Z.intl.string(Z.t["a6lw/v"]),
+                label: Z.intl.string(Z.t["a6lw/u"]),
                 sound: "activity_end",
             },
             {
-                label: Z.intl.string(Z.t.KaFxra),
+                label: Z.intl.string(Z.t.KaFxrY),
                 sound: "activity_user_join",
             },
             {
-                label: Z.intl.string(Z.t.S14z9v),
+                label: Z.intl.string(Z.t.S14z9n),
                 sound: "activity_user_left",
             },
             {
-                label: Z.intl.string(Z.t.CP3DCw),
+                label: Z.intl.string(Z.t.CP3DC3),
                 sound: "reconnect",
             },
         ],
@@ -230,17 +230,17 @@ function z(e) {
             children: [
                 _ ? (0, r.jsx)(E.Z, {}) : null,
                 (0, r.jsxs)(u.C3N, {
-                    label: Z.intl.string(Z.t.MKWyKS),
+                    label: Z.intl.string(Z.t.MKWyKc),
                     children: [
                         (0, r.jsx)(u.rsf, {
-                            label: Z.intl.string(Z.t.lF5GGR),
-                            description: Z.intl.string(Z.t["7oXUio"]),
+                            label: Z.intl.string(Z.t.lF5GGe),
+                            description: Z.intl.string(Z.t["7oXUim"]),
                             checked: a,
                             onChange: f.default.setNotifyMessagesInSelectedChannel,
                         }),
                         (0, r.jsx)(u.rsf, {
-                            label: Z.intl.string(Z.t["2ZhCOT"]),
-                            description: Z.intl.string(Z.t["+B0XLC"]),
+                            label: Z.intl.string(Z.t["2ZhCOd"]),
+                            description: Z.intl.string(Z.t["+B0XLE"]),
                             checked: n,
                             onChange: f.default.toggleDisableAllSounds,
                         }),
@@ -265,7 +265,7 @@ function z(e) {
                                         s
                                             ? (0, r.jsx)(u.Wn, {
                                                   messageType: u.QYI.WARNING,
-                                                  children: Z.intl.string(Z.t.cIRG0t),
+                                                  children: Z.intl.string(Z.t.cIRG0s),
                                               })
                                             : null,
                                     ],
@@ -294,11 +294,11 @@ function q() {
         : (0, r.jsx)(A.F, {
               setting: U.s6.NOTIFICATIONS_COMMUNITY_ACTIVITY_ALERTS,
               children: (0, r.jsxs)(u.C3N, {
-                  label: Z.intl.string(Z.t.D9yVAA),
-                  description: Z.intl.string(Z.t["0PhAOD"]),
+                  label: Z.intl.string(Z.t.D9yVAH),
+                  description: Z.intl.string(Z.t["0PhAOH"]),
                   children: [
                       (0, r.jsx)(u.q4e, {
-                          label: Z.intl.string(Z.t.Q0PsXV),
+                          label: Z.intl.string(Z.t.Q0PsXX),
                           value: t,
                           onChange: (e) => {
                               n(e);
@@ -311,8 +311,8 @@ function q() {
                                     (0, r.jsx)(A.F, {
                                         setting: U.s6.NOTIFICATIONS_COMMUNITY_IN_APP_ALERTS,
                                         children: (0, r.jsx)(u.rsf, {
-                                            label: Z.intl.string(Z.t.u6dc5O),
-                                            description: Z.intl.string(Z.t["z8Td4+"]),
+                                            label: Z.intl.string(Z.t.u6dc5B),
+                                            description: Z.intl.string(Z.t.z8Td48),
                                             checked: !e[t].disableRaidAlertNag,
                                             onChange: () => {
                                                 (0, M.PS)(
@@ -328,8 +328,8 @@ function q() {
                                     (0, r.jsx)(A.F, {
                                         setting: U.s6.NOTIFICATIONS_COMMUNITY_PUSH_NOTIFICATIONS,
                                         children: (0, r.jsx)(u.rsf, {
-                                            label: Z.intl.string(Z.t.P8MG6u),
-                                            description: Z.intl.string(Z.t.PyxXs7),
+                                            label: Z.intl.string(Z.t.P8MG6q),
+                                            description: Z.intl.string(Z.t.PyxXs8),
                                             checked: !e[t].disableRaidAlertPush,
                                             onChange: () => {
                                                 (0, M.PS)(
@@ -375,20 +375,20 @@ class X extends i.PureComponent {
                 .map((e) => ({
                     value: 60 * e,
                     label:
-                        0 === e ? Z.intl.string(Z.t["0QN7cX"]) : Z.intl.formatToPlainString(Z.t.iXLF9f, { minutes: e }),
+                        0 === e ? Z.intl.string(Z.t["0QN7cZ"]) : Z.intl.formatToPlainString(Z.t.iXLF9W, { minutes: e }),
                 }));
         return (0, r.jsx)(j.Z, {
-            title: Z.intl.string(Z.t.HcoRu7),
+            title: Z.intl.string(Z.t.HcoRu0),
             children: (0, r.jsxs)(u.Kqy, {
                 gap: 16,
                 children: [
                     (0, r.jsx)(A.F, {
                         setting: U.s6.NOTIFICATIONS_ENABLE_DESKTOP,
                         children: (0, r.jsx)(u.rsf, {
-                            label: Z.intl.string(Z.t["/0WClp"]),
-                            description: Z.intl.string(Z.t.wF9ih4),
+                            label: Z.intl.string(Z.t["/0WCll"]),
+                            description: Z.intl.string(Z.t.wF9ih3),
                             checked: e !== G.qrD.NEVER && !c,
-                            helperText: c ? Z.intl.string(Z.t.cIRG0t) : void 0,
+                            helperText: c ? Z.intl.string(Z.t.cIRG0s) : void 0,
                             onChange: this.handleDesktopChange,
                             disabled: c,
                         }),
@@ -397,8 +397,8 @@ class X extends i.PureComponent {
                     (0, r.jsx)(A.F, {
                         setting: U.s6.NOTIFICATIONS_UNREAD_MESSAGE_BADGE,
                         children: (0, r.jsx)(u.rsf, {
-                            label: Z.intl.string(Z.t.VH8AIC),
-                            description: Z.intl.string(Z.t["9K4qwc"]),
+                            label: Z.intl.string(Z.t.VH8AIJ),
+                            description: Z.intl.string(Z.t["9K4qwX"]),
                             checked: !n,
                             onChange: this.handleToggleShowUnreadBadge,
                         }),
@@ -406,8 +406,8 @@ class X extends i.PureComponent {
                     (0, r.jsx)(A.F, {
                         setting: U.s6.NOTIFICATIONS_ENABLE_TASKBAR_FLASHING,
                         children: (0, r.jsx)(u.rsf, {
-                            label: Z.intl.string(Z.t.xSmFQE),
-                            description: Z.intl.string(Z.t["bd4j4+"]),
+                            label: Z.intl.string(Z.t.xSmFQG),
+                            description: Z.intl.string(Z.t.bd4j4x),
                             checked: i,
                             onChange: this.handleToggleShowFlash,
                         }),
@@ -419,8 +419,8 @@ class X extends i.PureComponent {
                         setting: U.s6.NOTIFICATIONS_PUSH_INACTIVE_TIMEOUT,
                         children: [
                             (0, r.jsx)(u.q4e, {
-                                label: Z.intl.string(Z.t.TTvjd3),
-                                description: Z.intl.string(Z.t.Xytv9P),
+                                label: Z.intl.string(Z.t.TTvjd9),
+                                description: Z.intl.string(Z.t.Xytv9C),
                                 value: t,
                                 onChange: x.CM.updateSetting,
                                 options: f,
@@ -453,15 +453,15 @@ class X extends i.PureComponent {
                 if (!p.Zh) return null;
                 let e = [
                     {
-                        name: Z.intl.string(Z.t.B1AGeH),
+                        name: Z.intl.string(Z.t.B1AGeJ),
                         value: G.PrB.ALL_CHANNELS,
                     },
                     {
-                        name: Z.intl.string(Z.t.uM2rNj),
+                        name: Z.intl.string(Z.t.uM2rNr),
                         value: G.PrB.SELECTED_CHANNEL,
                     },
                     {
-                        name: Z.intl.string(Z.t.DYO5Oj),
+                        name: Z.intl.string(Z.t.DYO5Oi),
                         value: G.PrB.NEVER,
                     },
                 ];
@@ -469,8 +469,8 @@ class X extends i.PureComponent {
                     setting: U.s6.NOTIFICATIONS_TEXT_TO_SPEECH,
                     children: [
                         (0, r.jsx)(c.E, {
-                            label: Z.intl.string(Z.t.VIm5MD),
-                            description: Z.intl.string(Z.t["+4dnAw"]),
+                            label: Z.intl.string(Z.t.VIm5MO),
+                            description: Z.intl.string(Z.t["+4dnA5"]),
                             options: e,
                             onChange: this.handleTTSChange,
                             value: this.props.ttsType,
@@ -524,8 +524,8 @@ function $() {
                       ? (0, r.jsx)(A.F, {
                             setting: U.s6.NOTIFICATIONS_UNREAD_SETTINGS,
                             children: (0, r.jsx)(u.rsf, {
-                                label: Z.intl.string(Z.t.z21l8P),
-                                description: Z.intl.string(Z.t.frbLrK),
+                                label: Z.intl.string(Z.t.z21l8M),
+                                description: Z.intl.string(Z.t.frbLrH),
                                 checked: n,
                                 disabled: a || !n,
                                 onChange: () => ee(o),
@@ -535,7 +535,7 @@ function $() {
                         ? (0, r.jsx)(A.F, {
                               setting: U.s6.NOTIFICATIONS_UNREAD_SETTINGS,
                               children: (0, r.jsx)(u.rsf, {
-                                  label: Z.intl.string(Z.t.z21l8P),
+                                  label: Z.intl.string(Z.t.z21l8M),
                                   description: "Turns on the new notification system",
                                   checked: n,
                                   disabled: a || n,
@@ -600,10 +600,10 @@ async function ee(e) {
     0 === t.length
         ? await (0, v.oL)()
         : d.Z.show({
-              title: Z.intl.string(Z.t["cY+Ooa"]),
-              body: Z.intl.format(Z.t["7zTJJS"], { date: new Date(t[t.length - 1].recorded_at) }),
-              cancelText: Z.intl.string(Z.t["ETE/oK"]),
-              confirmText: Z.intl.string(Z.t.Rm96T0),
+              title: Z.intl.string(Z.t["cY+Oob"]),
+              body: Z.intl.format(Z.t["7zTJJQ"], { date: new Date(t[t.length - 1].recorded_at) }),
+              cancelText: Z.intl.string(Z.t["ETE/oC"]),
+              confirmText: Z.intl.string(Z.t.Rm96Ty),
               onConfirm: v.oL,
           }),
         e(!1);
@@ -628,15 +628,15 @@ function er() {
     let e = x.fz.useSetting(),
         t = [
             {
-                name: Z.intl.string(Z.t["9x/Rtb"]),
+                name: Z.intl.string(Z.t["9x/RtT"]),
                 value: l.Ns.NOTIFICATIONS_ENABLED,
             },
             {
-                name: Z.intl.string(Z.t.fJAbQU),
+                name: Z.intl.string(Z.t.fJAbQd),
                 value: l.Ns.ONLY_DMS,
             },
             {
-                name: Z.intl.string(Z.t["xu+UDQ"]),
+                name: Z.intl.string(Z.t["xu+UDU"]),
                 value: l.Ns.NOTIFICATIONS_DISABLED,
             },
         ],
@@ -648,8 +648,8 @@ function er() {
               setting: U.s6.NOTIFICATIONS_REACTIONS,
               children: [
                   (0, r.jsx)(c.E, {
-                      label: Z.intl.string(Z.t.Rq0NFh),
-                      description: Z.intl.string(Z.t.oWF6eX),
+                      label: Z.intl.string(Z.t.Rq0NFs),
+                      description: Z.intl.string(Z.t.oWF6eQ),
                       options: t,
                       onChange: (e) => n({ value: e }),
                       value: e,
@@ -667,8 +667,8 @@ function ei() {
             (0, r.jsx)(A.F, {
                 setting: U.s6.NOTIFICATIONS_VOICE_ACTIVITY,
                 children: (0, r.jsx)(u.rsf, {
-                    label: Z.intl.string(Z.t.wtk08f),
-                    description: Z.intl.string(Z.t.rngMNz),
+                    label: Z.intl.string(Z.t.wtk08S),
+                    description: Z.intl.string(Z.t.rngMNx),
                     badge: "beta",
                     checked: e,
                     onChange: N.I,
@@ -677,8 +677,8 @@ function ei() {
             (0, r.jsx)(A.F, {
                 setting: U.s6.NOTIFICATIONS_GO_LIVE,
                 children: (0, r.jsx)(u.rsf, {
-                    label: Z.intl.string(Z.t.pW4TMj),
-                    description: Z.intl.string(Z.t["H+WYqa"]),
+                    label: Z.intl.string(Z.t.pW4TMp),
+                    description: Z.intl.string(Z.t["H+WYqZ"]),
                     checked: t,
                     onChange: x.JN.updateSetting,
                 }),

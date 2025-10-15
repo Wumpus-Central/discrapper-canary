@@ -59,7 +59,7 @@ function f(e) {
         b = (0, d.Z)(t) - h.length,
         x = (0, c.mY)();
     return (0, r.jsxs)(l.gNt, {
-        label: g.intl.string(g.t.LDT0Q0),
+        label: g.intl.string(g.t["LDT0Q/"]),
         disabled: x,
         description: g.intl.format(g.t.H9Jxp6, { maxSlots: (0, d.Z)(t) }),
         children: [
@@ -84,12 +84,12 @@ function f(e) {
                 disabled: x || f || 0 === b,
                 size: "md",
                 variant: "primary",
-                text: g.intl.string(g.t.AuPtoq),
+                text: g.intl.string(g.t.AuPtov),
                 loading: f,
             }),
             (0, r.jsx)(l.LZC, { size: 24 }),
             (0, r.jsx)(s.L3, {
-                title: g.intl.string(g.t.lu1ZQ0),
+                title: g.intl.string(g.t.lu1ZQ2),
                 maxSlots: (0, d.Z)(t),
                 emojiCount: h.length,
                 children: (0, r.jsx)(s.FT, {

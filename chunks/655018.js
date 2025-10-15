@@ -82,20 +82,20 @@ function B(e) {
     let { channel: B, setIsHangStatusInputFocused: H, setPopoutRef: V } = e,
         F = r.useRef(null),
         G = (0, u.e7)([_.Z], () => _.Z.getCustomHangStatus()),
-        z = (0, E.Z)(),
-        W = (0, u.e7)([_.Z], () => _.Z.getFavoritedStatuses()),
-        { defaultStatusVariant: Y, allowPermanentClear: K } = (0, y.bN)({
+        W = (0, E.Z)(),
+        z = (0, u.e7)([_.Z], () => _.Z.getFavoritedStatuses()),
+        { defaultStatusVariant: q, allowPermanentClear: Y } = (0, y.bN)({
             guildId: B.guild_id,
             location: "HangStatusPicker",
         }),
-        q = (0, v.V)(Y),
+        K = (0, v.V)(q),
         X = r.useRef(null),
         [J, Q] = r.useState(null != (n = null == G ? void 0 : G.status) ? n : ""),
         [$, ee] = r.useState(null != (l = null == G ? void 0 : G.emoji) ? l : null),
         [et, en] = r.useState(!1),
         ei = (0, u.e7)([_.Z], () => _.Z.getCurrentHangStatus()),
-        er = q[ei],
-        el = W.length > 0,
+        er = K[ei],
+        el = z.length > 0,
         ea = null == J || "" === J.trim(),
         eo = (0, j.Z)(B),
         es =
@@ -109,8 +109,8 @@ function B(e) {
         b.default.track(
             A.rMx.HANG_STATUS_PICKER_OPENED,
             U(k({}, (0, x.Z)(B.id)), {
-                num_favorites: W.length,
-                num_recents: z.length,
+                num_favorites: z.length,
+                num_recents: W.length,
             }),
         );
     }, []),
@@ -214,7 +214,7 @@ function B(e) {
             (e, t, n) => {
                 var r;
                 let l = (0, O.Z)(e),
-                    a = l ? q[e] : null,
+                    a = l ? K[e] : null,
                     o = _.Z.isFavorited(e),
                     s = l
                         ? (0, i.jsx)(I.Z, {
@@ -224,7 +224,7 @@ function B(e) {
                                   type: A.IIU.HANG_STATUS,
                                   state: e,
                               },
-                              fallbackVariant: Y,
+                              fallbackVariant: q,
                               className: R.icon,
                           })
                         : null != e.emoji &&
@@ -247,11 +247,11 @@ function B(e) {
                     "".concat(n, "-").concat(t),
                 );
             },
-            [Y, eb, em, q, e_],
+            [q, eb, em, K, e_],
         ),
         ej = r.useCallback(() => {
-            (0, C.Sc)(!0, K), ee(null), Q(""), en(!1);
-        }, [K]),
+            (0, C.Sc)(!0, Y), ee(null), Q(""), en(!1);
+        }, [Y]),
         eE = r.useCallback((e) => {
             en(!0), Q(e.substring(0, N.s0));
         }, []);
@@ -263,8 +263,8 @@ function B(e) {
         className: a()(L.menu, R.container),
         children: [
             (0, i.jsx)(p.J2, {
-                title: M.intl.string(M.t.waaIiI),
-                body: M.intl.string(M.t.qDoPam),
+                title: M.intl.string(M.t.waaIiO),
+                body: M.intl.string(M.t.qDoPah),
                 badge: "new",
                 shouldShow: eh === d.z.HANG_STATUS_POPOVER_NUX,
                 graphic: {
@@ -290,14 +290,14 @@ function B(e) {
                                     onBlur: ev,
                                     onFocus: ex,
                                     onChange: eE,
-                                    placeholder: M.intl.string(M.t.KPop4u),
+                                    placeholder: M.intl.string(M.t.KPop4s),
                                     leading: {
                                         type: "emoji",
                                         button: (0, i.jsx)(P.A, {
                                             customStatusEmoji: $,
                                             setCustomStatusEmoji: ee,
                                             selectedDefaultStatus: et || ep ? null : ei,
-                                            defaultStatusVariant: Y,
+                                            defaultStatusVariant: q,
                                         }),
                                     },
                                     trailing:
@@ -306,21 +306,21 @@ function B(e) {
                                                 ? {
                                                       icon: h.d4D,
                                                       onClick: eC,
-                                                      "aria-label": M.intl.string(M.t.R3BPHx),
+                                                      "aria-label": M.intl.string(M.t["R3BPH+"]),
                                                       disabled: 0 === J.length,
                                                   }
                                                 : void 0
                                             : {
                                                   icon: h.XHJ,
                                                   onClick: ej,
-                                                  "aria-label": M.intl.string(M.t.S90Fub),
+                                                  "aria-label": M.intl.string(M.t.S90FuQ),
                                               },
                                 }),
                                 (0, i.jsx)(h.hU, {
                                     variant: "secondary",
                                     icon: S.k,
                                     onClick: ey,
-                                    "aria-label": M.intl.string(M.t["5UAi5+"]),
+                                    "aria-label": M.intl.string(M.t["5UAi59"]),
                                 }),
                             ],
                         }),
@@ -329,7 +329,7 @@ function B(e) {
                                 variant: "text-xs/normal",
                                 className: R.inputHint,
                                 color: "text-danger",
-                                children: M.intl.string(M.t["s/oq0d"]),
+                                children: M.intl.string(M.t["s/oq0f"]),
                             }),
                     ],
                 }),
@@ -352,15 +352,15 @@ function B(e) {
                                         (0, i.jsx)(h.Text, {
                                             variant: "text-sm/normal",
                                             color: "text-tertiary",
-                                            children: M.intl.string(M.t.k8fFjo),
+                                            children: M.intl.string(M.t.k8fFjp),
                                         }),
                                         (0, i.jsx)(h.r7p, { size: "xxs" }),
                                     ],
                                 }),
-                                W.map((e, t) => eO(e, t, "favorite")),
+                                z.map((e, t) => eO(e, t, "favorite")),
                             ],
                         }),
-                    z.length > 0 &&
+                    W.length > 0 &&
                         el &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
@@ -374,14 +374,14 @@ function B(e) {
                                         (0, i.jsx)(h.Text, {
                                             variant: "text-sm/normal",
                                             color: "text-tertiary",
-                                            children: M.intl.string(M.t["+9QSnp"]),
+                                            children: M.intl.string(M.t["+9QSnj"]),
                                         }),
                                         (0, i.jsx)(h.T39, { size: "xxs" }),
                                     ],
                                 }),
                             ],
                         }),
-                    z.map((e, t) => eO(e, t, "recent")),
+                    W.map((e, t) => eO(e, t, "recent")),
                 ],
             }),
         ],

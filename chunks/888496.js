@@ -37,7 +37,7 @@ function h(e) {
                     {
                         className: n,
                         count: a,
-                        label: _.t.SbCNo6,
+                        label: _.t.SbCNox,
                     },
                     f.PC.REDDIT_TOTAL_KARMA,
                 ),
@@ -48,7 +48,7 @@ function h(e) {
                     S,
                     {
                         className: n,
-                        label: _.intl.string(_.t["06rDHR"]),
+                        label: _.intl.string(_.t["06rDHU"]),
                     },
                     f.PC.REDDIT_GOLD,
                 ),
@@ -59,7 +59,7 @@ function h(e) {
                     S,
                     {
                         className: n,
-                        label: _.intl.string(_.t.oWM95O),
+                        label: _.intl.string(_.t.oWM95M),
                     },
                     f.PC.REDDIT_MOD,
                 ),
@@ -81,7 +81,7 @@ function m(e) {
                     {
                         className: i,
                         count: o,
-                        label: _.t.llwqqa,
+                        label: _.t.llwqqe,
                     },
                     f.PC.TWITTER_STATUSES_COUNT,
                 ),
@@ -93,7 +93,7 @@ function m(e) {
                     {
                         className: i,
                         count: s,
-                        label: _.t.LMNOUV,
+                        label: _.t.LMNOUQ,
                     },
                     f.PC.TWITTER_FOLLOWERS_COUNT,
                 ),
@@ -116,7 +116,7 @@ function g(e) {
                     {
                         className: o,
                         count: l,
-                        label: _.t.ppXMu7,
+                        label: _.t["ppXMu/"],
                     },
                     f.PC.STEAM_GAME_COUNT,
                 ),
@@ -127,9 +127,9 @@ function g(e) {
                     T,
                     {
                         className: o,
-                        label: _.intl.format(_.t["Y88M5+"], { count: c }),
+                        label: _.intl.format(_.t.Y88M5x, { count: c }),
                         imageSrc: n(738535),
-                        imageAlt: _.intl.string(_.t.HKUEZm),
+                        imageAlt: _.intl.string(_.t.HKUEZo),
                     },
                     f.PC.STEAM_ITEM_COUNT_DOTA2,
                 ),
@@ -140,9 +140,9 @@ function g(e) {
                     T,
                     {
                         className: o,
-                        label: _.intl.format(_.t["Y88M5+"], { count: u }),
+                        label: _.intl.format(_.t.Y88M5x, { count: u }),
                         imageSrc: n(80730),
-                        imageAlt: _.intl.string(_.t.C8p1Sk),
+                        imageAlt: _.intl.string(_.t.C8p1Sh),
                     },
                     f.PC.STEAM_ITEM_COUNT_TF2,
                 ),
@@ -160,7 +160,7 @@ function E(e) {
                     S,
                     {
                         className: a()(t, p.paypalVerifiedTag),
-                        label: _.intl.string(_.t.IhXLy8),
+                        label: _.intl.string(_.t.IhXLyx),
                     },
                     f.PC.PAYPAL_VERIFIED,
                 ),
@@ -194,7 +194,7 @@ function b(e) {
                     S,
                     {
                         className: n,
-                        label: _.intl.string(_.t.TEEYwc),
+                        label: _.intl.string(_.t.TEEYwa),
                     },
                     f.PC.EBAY_TOP_RATED_SELLER,
                 ),
@@ -218,7 +218,7 @@ function y(e) {
                     {
                         className: a,
                         count: l,
-                        label: _.t["Mpm/BQ"],
+                        label: _.t["Mpm/Bc"],
                     },
                     f.PC.TIKTOK_FOLLOWER_COUNT,
                 ),
@@ -230,7 +230,7 @@ function y(e) {
                     {
                         className: a,
                         count: c,
-                        label: _.t.ftf12t,
+                        label: _.t.ftf12v,
                     },
                     f.PC.TIKTOK_FOLLOWING_COUNT,
                 ),
@@ -242,7 +242,7 @@ function y(e) {
                     {
                         className: a,
                         count: u,
-                        label: _.t.Qwhe5u,
+                        label: _.t.Qwhe5j,
                     },
                     f.PC.TIKTOK_LIKES_COUNT,
                 ),
@@ -253,7 +253,7 @@ function y(e) {
                     S,
                     {
                         className: a,
-                        label: _.intl.string(_.t.QHHwRU),
+                        label: _.intl.string(_.t.QHHwRR),
                     },
                     f.PC.TIKTOK_VERIFIED,
                 ),
@@ -321,7 +321,7 @@ function v(e) {
     return (
         (t =
             "string" == typeof i
-                ? _.intl.format(_.t.HLoinJ, {
+                ? _.intl.format(_.t.HLoinF, {
                       name: i,
                       value: l,
                   })
@@ -340,7 +340,7 @@ function I(e) {
         className: a()(p.connectedAccountVanityMetadata, o),
         variant: "text-xxs/normal",
         color: "text-default",
-        children: _.intl.format(_.t.HLoinJ, {
+        children: _.intl.format(_.t.HLoinF, {
             value: (0, d.FI)(t, n),
             name: i,
         }),

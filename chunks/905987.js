@@ -32,13 +32,13 @@ function b(e) {
                     (0, i.jsx)(c.Heading, {
                         variant: "heading-xl/bold",
                         color: "header-primary",
-                        children: j.intl.format(j.t.Wyk03t, { count: t }),
+                        children: j.intl.format(j.t.Wyk03p, { count: t }),
                     }),
                     (0, i.jsx)(c.Text, {
                         className: g.__invalid_subtitle,
                         variant: "text-md/medium",
                         color: "header-secondary",
-                        children: j.intl.string(j.t["jr/rn5"]),
+                        children: j.intl.string(j.t["jr/rn6"]),
                     }),
                 ],
             }),
@@ -55,7 +55,7 @@ function b(e) {
                         children: (0, i.jsx)(c.Text, {
                             variant: "text-sm/medium",
                             color: "server" === n ? "header-primary" : "text-muted",
-                            children: j.intl.string(j.t.pS4WEh),
+                            children: j.intl.string(j.t.pS4WEr),
                         }),
                     }),
                     (0, i.jsx)(c.P3F, {
@@ -64,7 +64,7 @@ function b(e) {
                         children: (0, i.jsx)(c.Text, {
                             variant: "text-sm/medium",
                             color: "channel" === n ? "header-primary" : "text-muted",
-                            children: j.intl.string(j.t.UVxi0d),
+                            children: j.intl.string(j.t.UVxi0U),
                         }),
                     }),
                 ],
@@ -129,27 +129,27 @@ function f(e) {
                                               }),
                                     ],
                                 }),
-                                (0, i.jsx)(N, { name: j.intl.string(j.t.jqWm9f) }),
-                                (0, i.jsx)(N, { name: j.intl.string(j.t.WFejRk) }),
+                                (0, i.jsx)(N, { name: j.intl.string(j.t.jqWm9Z) }),
+                                (0, i.jsx)(N, { name: j.intl.string(j.t.WFejRi) }),
                                 (0, i.jsx)(N, {
                                     grey: !0,
-                                    name: j.intl.string(j.t.p9z9Iy),
+                                    name: j.intl.string(j.t.p9z9Iw),
                                 }),
                                 (0, i.jsx)(N, {
                                     grey: !0,
-                                    name: j.intl.string(j.t["2bdWDw"]),
+                                    name: j.intl.string(j.t["2bdWD/"]),
                                 }),
                                 (0, i.jsx)(N, {
                                     grey: !0,
-                                    name: j.intl.string(j.t["Ci+Our"]),
+                                    name: j.intl.string(j.t["Ci+Ouh"]),
                                 }),
                                 (0, i.jsx)(N, {
                                     nodot: !0,
-                                    name: j.intl.string(j.t["/7TEdn"]),
+                                    name: j.intl.string(j.t["/7TEdh"]),
                                 }),
                                 (0, i.jsx)(N, {
                                     nodot: !0,
-                                    name: j.intl.string(j.t["Ime/t7"]),
+                                    name: j.intl.string(j.t["Ime/t8"]),
                                 }),
                             ],
                         }),
@@ -158,8 +158,8 @@ function f(e) {
                             children: [
                                 (0, i.jsx)(C, {
                                     text: u.isGuildEntrypointEnabled
-                                        ? j.intl.string(j.t.Sd8Ix8)
-                                        : j.intl.string(j.t.BN75l5),
+                                        ? j.intl.string(j.t.Sd8Ixw)
+                                        : j.intl.string(j.t.BN75l9),
                                     icon: (0, i.jsx)(c.ejJ, {
                                         size: "sm",
                                         className: _.icon,
@@ -168,7 +168,7 @@ function f(e) {
                                 (0, i.jsx)("div", { className: _.divider }),
                                 (0, i.jsx)(C, {
                                     active: r >= 2,
-                                    text: j.intl.string(j.t.h850Sk),
+                                    text: j.intl.string(j.t.h850Ss),
                                     icon: (0, i.jsx)(c.Dkj, {
                                         size: "sm",
                                         color: "currentColor",
@@ -176,7 +176,7 @@ function f(e) {
                                     }),
                                 }),
                                 (0, i.jsx)(C, {
-                                    text: j.intl.string(j.t.BayiAg),
+                                    text: j.intl.string(j.t.BayiAo),
                                     icon: (0, i.jsx)(c.b7C, {
                                         size: "sm",
                                         color: "currentColor",
@@ -184,7 +184,7 @@ function f(e) {
                                     }),
                                 }),
                                 (0, i.jsx)(C, {
-                                    text: j.intl.string(j.t["154/bG"]),
+                                    text: j.intl.string(j.t["154/bL"]),
                                     icon: (0, i.jsx)(c.ewm, {
                                         size: "sm",
                                         color: "currentColor",
@@ -192,7 +192,7 @@ function f(e) {
                                     }),
                                 }),
                                 (0, i.jsx)(C, {
-                                    text: j.intl.string(j.t.qyjZub),
+                                    text: j.intl.string(j.t.qyjZua),
                                     icon: (0, i.jsx)(c.VZI, {
                                         size: "sm",
                                         color: "currentColor",
@@ -208,7 +208,7 @@ function f(e) {
                                     className: _.modalHeader,
                                     variant: "text-md/medium",
                                     color: "interactive-active",
-                                    children: j.intl.string(j.t.h850Sk),
+                                    children: j.intl.string(j.t.h850Ss),
                                 }),
                                 (0, i.jsxs)("div", {
                                     className: _.notifTabs,
@@ -224,7 +224,7 @@ function f(e) {
                                                     variant: "text-xs/medium",
                                                     color: "text-muted",
                                                     lineClamp: 1,
-                                                    children: j.intl.string(j.t.hZrr6u),
+                                                    children: j.intl.string(j.t.hZrr6k),
                                                 }),
                                             ],
                                         }),
@@ -239,7 +239,7 @@ function f(e) {
                                                     variant: "text-xs/medium",
                                                     color: "interactive-active",
                                                     lineClamp: 1,
-                                                    children: j.intl.string(j.t.y59NJi),
+                                                    children: j.intl.string(j.t.y59NJm),
                                                 }),
                                             ],
                                         }),
@@ -254,7 +254,7 @@ function f(e) {
                                                     variant: "text-xs/medium",
                                                     color: "text-muted",
                                                     lineClamp: 1,
-                                                    children: j.intl.string(j.t["pGn/bG"]),
+                                                    children: j.intl.string(j.t["pGn/bJ"]),
                                                 }),
                                             ],
                                         }),
@@ -285,7 +285,7 @@ function f(e) {
                 }),
             }),
             (0, i.jsx)(p, {
-                text: j.intl.string(j.t["C//fOz"]),
+                text: j.intl.string(j.t["C//fO+"]),
                 className: _.tipServers2,
                 hidden: t || r < 4,
             }),
@@ -322,28 +322,28 @@ function v(e) {
                                     (0, i.jsx)(N, {
                                         selected: n >= 1,
                                         grey: n >= 5,
-                                        name: j.intl.string(j.t.jqWm9f),
+                                        name: j.intl.string(j.t.jqWm9Z),
                                     }),
-                                    (0, i.jsx)(N, { name: j.intl.string(j.t.WFejRk) }),
+                                    (0, i.jsx)(N, { name: j.intl.string(j.t.WFejRi) }),
                                     (0, i.jsx)(N, {
                                         grey: !0,
-                                        name: j.intl.string(j.t.p9z9Iy),
-                                    }),
-                                    (0, i.jsx)(N, {
-                                        grey: !0,
-                                        name: j.intl.string(j.t["2bdWDw"]),
+                                        name: j.intl.string(j.t.p9z9Iw),
                                     }),
                                     (0, i.jsx)(N, {
                                         grey: !0,
-                                        name: j.intl.string(j.t["Ci+Our"]),
+                                        name: j.intl.string(j.t["2bdWD/"]),
+                                    }),
+                                    (0, i.jsx)(N, {
+                                        grey: !0,
+                                        name: j.intl.string(j.t["Ci+Ouh"]),
                                     }),
                                     (0, i.jsx)(N, {
                                         nodot: !0,
-                                        name: j.intl.string(j.t["/7TEdn"]),
+                                        name: j.intl.string(j.t["/7TEdh"]),
                                     }),
                                     (0, i.jsx)(N, {
                                         nodot: !0,
-                                        name: j.intl.string(j.t["Ime/t7"]),
+                                        name: j.intl.string(j.t["Ime/t8"]),
                                     }),
                                 ],
                             }),
@@ -352,7 +352,7 @@ function v(e) {
                                 children: [
                                     (0, i.jsx)(C, {
                                         small: !0,
-                                        text: j.intl.string(j.t["w4m94+"]),
+                                        text: j.intl.string(j.t.w4m945),
                                         icon: (0, i.jsx)(x.Z, {
                                             className: _.caret,
                                             width: 12,
@@ -361,7 +361,7 @@ function v(e) {
                                     }),
                                     (0, i.jsx)(C, {
                                         small: !0,
-                                        text: j.intl.string(j.t.HcoRu7),
+                                        text: j.intl.string(j.t.HcoRu0),
                                         active: n >= 3,
                                         icon: (0, i.jsx)(x.Z, {
                                             className: _.caret,
@@ -376,7 +376,7 @@ function v(e) {
                                 children: [
                                     (0, i.jsx)(C, {
                                         small: !0,
-                                        text: j.intl.string(j.t.hZrr6u),
+                                        text: j.intl.string(j.t.hZrr6k),
                                         icon:
                                             n <= 4
                                                 ? (0, i.jsx)(u.Z, {
@@ -393,7 +393,7 @@ function v(e) {
                                     }),
                                     (0, i.jsx)(C, {
                                         small: !0,
-                                        text: j.intl.string(j.t.y59NJi),
+                                        text: j.intl.string(j.t.y59NJm),
                                         icon:
                                             n >= 5
                                                 ? (0, i.jsx)(u.Z, {
@@ -410,7 +410,7 @@ function v(e) {
                                     }),
                                     (0, i.jsx)(C, {
                                         small: !0,
-                                        text: j.intl.string(j.t["pGn/bG"]),
+                                        text: j.intl.string(j.t["pGn/bJ"]),
                                         icon: (0, i.jsx)(h.Z, {
                                             className: _.icon,
                                             width: 12,
@@ -419,7 +419,7 @@ function v(e) {
                                     }),
                                     (0, i.jsx)(C, {
                                         small: !0,
-                                        text: j.intl.string(j.t["32yow8"]),
+                                        text: j.intl.string(j.t["32yow9"]),
                                         icon: (0, i.jsx)(h.Z, {
                                             className: _.icon,
                                             width: 12,
@@ -432,12 +432,12 @@ function v(e) {
                     }),
                 }),
                 (0, i.jsx)(p, {
-                    text: j.intl.string(j.t["5Il5fn"]),
+                    text: j.intl.string(j.t["5Il5fq"]),
                     className: _.tipChannels1,
                     hidden: t || n < 4,
                 }),
                 (0, i.jsx)(p, {
-                    text: j.intl.string(j.t["+ROcrq"]),
+                    text: j.intl.string(j.t["+ROcro"]),
                     className: _.tipChannels2,
                     hidden: t || n < 4,
                 }),

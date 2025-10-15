@@ -32,7 +32,7 @@ async function p(e) {
     if (null != C && C.isPurchasedExternally && null != C.paymentGateway) {
         null != g && g(),
             a.Z.show({
-                title: f.intl.formatToPlainString(f.t.rTk9v7, { paymentGatewayName: d.Vzj[C.paymentGateway] }),
+                title: f.intl.formatToPlainString(f.t["rTk9v/"], { paymentGatewayName: d.Vzj[C.paymentGateway] }),
                 body: f.intl.format(f.t.NY03WF, {
                     paymentGatewayName: d.Vzj[C.paymentGateway],
                     subscriptionManagementLink: (0, u.JE)(C.paymentGateway, "SUBSCRIPTION_MANAGEMENT"),

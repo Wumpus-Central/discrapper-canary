@@ -12,7 +12,7 @@ var r = n(647438),
 let c = () => {
         let e = null != (0, s.y3)(),
             [t] = (0, o.US)(e ? [i.z.WHATS_NEW_TENURE_BADGE_REWARD] : []);
-        return t === i.z.WHATS_NEW_TENURE_BADGE_REWARD ? l.intl.string(l.t.jyYgZ2).toLocaleUpperCase() : null;
+        return t === i.z.WHATS_NEW_TENURE_BADGE_REWARD ? l.intl.string(l.t["jyYgZ+"]).toLocaleUpperCase() : null;
     },
     u = () => {
         let e = null != (0, s.y3)(),

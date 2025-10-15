@@ -1,10 +1,10 @@
-n.d(t, { O: () => g }), n(388685);
+n.d(t, { O: () => b }), n(388685);
 var a = n(951288),
     r = n(647438),
     i = n(159691),
     l = n(481060),
-    s = n(52647),
-    o = n(825102),
+    o = n(52647),
+    s = n(825102),
     c = n(317257),
     d = n(120786),
     u = n(775451),
@@ -13,20 +13,20 @@ var a = n(951288),
     h = n(237012),
     x = n(981631),
     f = n(388032),
-    b = n(113648);
-function g() {
-    let { enabled: e } = (0, o.WX)({ location: "revenue_storybook" });
+    g = n(386521);
+function b() {
+    let { enabled: e } = (0, s.WX)({ location: "revenue_storybook" });
     return (0, a.jsxs)("div", {
         children: [e && (0, a.jsx)(j, {}), (0, a.jsx)(v, {}), (0, a.jsx)(_, {})],
     });
 }
 function v() {
     let [e, t] = r.useState(150),
-        [n, s] = r.useState(150),
-        [o, p] = r.useState(500),
-        [g, v] = r.useState(c.b.DEFAULT),
+        [n, o] = r.useState(150),
+        [s, p] = r.useState(500),
+        [b, v] = r.useState(c.b.DEFAULT),
         j = () => {
-            switch (g) {
+            switch (b) {
                 case c.b.DEFAULT:
                     v(c.b.HIGHLIGHTED);
                     break;
@@ -46,7 +46,7 @@ function v() {
             (0, a.jsx)(h.E_, {
                 label: "Balance Widget Menu",
                 children: (0, a.jsx)(u.V9, {
-                    ctaText: f.intl.string(f.t["J+vlIS"]),
+                    ctaText: f.intl.string(f.t["J+vlIR"]),
                     ctaOnClick: x.dG4,
                 }),
             }),
@@ -86,19 +86,19 @@ function v() {
                         children: "Enter a number and click Set Balance to see the balance widget pill update:",
                     }),
                     (0, a.jsx)(l.FiK, {
-                        className: b.numberInput,
+                        className: g.numberInput,
                         value: e,
                         onChange: (e) => t(e),
                     }),
                     (0, a.jsx)(i.zxk, {
-                        onClick: () => s(e),
+                        onClick: () => o(e),
                         text: "Set Balance",
                     }),
                     (0, a.jsx)("div", {
-                        className: b.interactivePillContainer,
+                        className: g.interactivePillContainer,
                         children: (0, a.jsx)(m.A4, {
                             balance: n,
-                            balanceWidgetMode: g,
+                            balanceWidgetMode: b,
                             onClick: () => j(),
                         }),
                     }),
@@ -109,24 +109,24 @@ function v() {
                             "Enter a number (loading time in milliseconds) and click Simulate Loading State to see the balance widget pill update:",
                     }),
                     (0, a.jsx)(l.FiK, {
-                        className: b.numberInput,
-                        value: o,
+                        className: g.numberInput,
+                        value: s,
                         onChange: (e) => p(e),
                     }),
                     (0, a.jsx)(i.zxk, {
                         onClick: () => {
-                            s(null),
+                            o(null),
                                 setTimeout(() => {
-                                    s(e);
-                                }, o);
+                                    o(e);
+                                }, s);
                         },
                         text: "Simulate Loading State",
                     }),
                     (0, a.jsx)("div", {
-                        className: b.interactivePillContainer,
+                        className: g.interactivePillContainer,
                         children: (0, a.jsx)(m.A4, {
                             balance: n,
-                            balanceWidgetMode: g,
+                            balanceWidgetMode: b,
                             onClick: () => j(),
                         }),
                     }),
@@ -135,8 +135,8 @@ function v() {
             (0, a.jsx)(h.E_, {
                 label: "Balance Widget Card",
                 children: (0, a.jsx)(d.L, {
-                    ctaText: f.intl.string(f.t["H57f4+"]),
-                    linkText: f.intl.string(f.t["7f4H7O"]),
+                    ctaText: f.intl.string(f.t.H57f41),
+                    linkText: f.intl.string(f.t["7f4H7D"]),
                     ctaOnClick: x.dG4,
                 }),
             }),
@@ -194,7 +194,7 @@ function j() {
     });
 }
 function _() {
-    let { resetOnboardingExperience: e } = (0, s.Z)();
+    let { resetOnboardingExperience: e } = (0, o.Z)();
     return (0, a.jsxs)(h.$0, {
         children: [
             (0, a.jsx)(l.Heading, {

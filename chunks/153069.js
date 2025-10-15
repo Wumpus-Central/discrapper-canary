@@ -120,7 +120,7 @@ class Z extends (n = s.PureComponent) {
                         alpha2: e.alpha2,
                         countryCode: e.code.split(" ")[0],
                         className: F.marginBottom20,
-                        label: T.intl.string(T.t.tUjnxs),
+                        label: T.intl.string(T.t.tUjnxr),
                         error: null != (t = this.renderError("login")) ? t : this.renderError("email"),
                         onChange: (t, e) =>
                             this.setState({
@@ -137,7 +137,7 @@ class Z extends (n = s.PureComponent) {
                         required: !0,
                     }),
                     (0, o.jsx)(_.II, {
-                        label: T.intl.string(T.t["CIGa+/"]),
+                        label: T.intl.string(T.t["CIGa+7"]),
                         error: this.renderError("password"),
                         onChange: (t) => this.setState({ password: t }),
                         name: "password",
@@ -156,7 +156,7 @@ class Z extends (n = s.PureComponent) {
                                 onClick: this.handleForgotPassword,
                                 look: h.zx.Looks.LINK,
                                 color: h.zx.Colors.LINK,
-                                children: T.intl.string(T.t.wWIufn),
+                                children: T.intl.string(T.t.wWIufs),
                             }),
                             (0, o.jsx)(_.zx, {
                                 onClick: () =>
@@ -176,7 +176,7 @@ class Z extends (n = s.PureComponent) {
                                 look: h.zx.Looks.LINK,
                                 color: h.zx.Colors.LINK,
                                 disabled: r,
-                                children: T.intl.string(T.t["/kpMDg"]),
+                                children: T.intl.string(T.t["/kpMDt"]),
                             }),
                         ],
                     }),
@@ -189,8 +189,8 @@ class Z extends (n = s.PureComponent) {
         return (0, o.jsxs)(o.Fragment, {
             children: [
                 (0, o.jsx)(d.xBx, {
-                    title: T.intl.string(T.t.bPP34e),
-                    subtitle: T.intl.string(T.t.rvx0T0),
+                    title: T.intl.string(T.t.bPP34Q),
+                    subtitle: T.intl.string(T.t.rvx0T4),
                 }),
                 (0, o.jsx)(d.fef, { children: this.renderDefaultForm() }),
                 (0, o.jsx)(d.Go$, {
@@ -198,13 +198,13 @@ class Z extends (n = s.PureComponent) {
                         variant: "secondary",
                         size: "md",
                         onClick: e,
-                        text: T.intl.string(T.t["13/7kZ"]),
+                        text: T.intl.string(T.t["13/7kX"]),
                         type: "button",
                     }),
                     actions: [
                         {
                             variant: "primary",
-                            text: T.intl.string(T.t["3PatS0"]),
+                            text: T.intl.string(T.t["3PatSz"]),
                             onClick: this.handleLogin,
                             loading: t === I.u34.LOGGING_IN,
                         },
@@ -230,8 +230,8 @@ class Z extends (n = s.PureComponent) {
     }
     renderDisabledAccount() {
         let t = this.props.loginStatus === I.u34.ACCOUNT_DISABLED,
-            e = t ? T.intl.string(T.t["j3rC+f"]) : T.intl.string(T.t.ZFWofn),
-            r = t ? T.intl.string(T.t["6eNTWV"]) : T.intl.string(T.t.pCBti4);
+            e = t ? T.intl.string(T.t["j3rC+U"]) : T.intl.string(T.t.ZFWofo),
+            r = t ? T.intl.string(T.t["6eNTWe"]) : T.intl.string(T.t["pCBti+"]);
         return (0, o.jsxs)(o.Fragment, {
             children: [
                 (0, o.jsx)(d.xBx, {
@@ -242,12 +242,12 @@ class Z extends (n = s.PureComponent) {
                     leading: (0, o.jsx)(p.Text, {
                         variant: "text-md/normal",
                         color: "text-secondary",
-                        children: T.intl.format(T.t.js2rr6, { onClick: this.handleCancelAccountDeletion }),
+                        children: T.intl.format(T.t.js2rr5, { onClick: this.handleCancelAccountDeletion }),
                     }),
                     actions: [
                         {
                             variant: "primary",
-                            text: T.intl.string(T.t.JhDw5u),
+                            text: T.intl.string(T.t.JhDw5o),
                             onClick: this.handleReset,
                         },
                     ],
@@ -276,7 +276,7 @@ class Z extends (n = s.PureComponent) {
         return (0, o.jsx)(d.fef, {
             children: (0, o.jsx)(C.Z, {
                 title: T.intl.string(T.t["+xqy3d"]),
-                subtitle: T.intl.format(T.t.ef4uZ2, { onResendClick: this.handleResendCode }),
+                subtitle: T.intl.format(T.t.ef4uZ7, { onResendClick: this.handleResendCode }),
                 error: t,
                 onSubmit: this.handlePasswordReset,
                 onCancel: void 0,
@@ -354,8 +354,8 @@ class Z extends (n = s.PureComponent) {
                             M(
                                 D(
                                     {
-                                        header: T.intl.string(T.t.f5Pi7O),
-                                        confirmText: T.intl.string(T.t.BddRzc),
+                                        header: T.intl.string(T.t.f5Pi7A),
+                                        confirmText: T.intl.string(T.t.BddRzS),
                                         confirmButtonColor: h.zx.Colors.BRAND,
                                     },
                                     t,
@@ -363,7 +363,7 @@ class Z extends (n = s.PureComponent) {
                                 {
                                     children: (0, o.jsx)(p.Text, {
                                         variant: "text-md/normal",
-                                        children: T.intl.format(T.t["6u5hQ0"], { email: r }),
+                                        children: T.intl.format(T.t["6u5hQ9"], { email: r }),
                                     }),
                                 },
                             ),

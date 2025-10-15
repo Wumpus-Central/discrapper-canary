@@ -1,7 +1,7 @@
 i.d(n, { default: () => d }), i(388685), i(415506);
 var a = i(951288),
-    e = i(647438),
-    l = i(793030),
+    l = i(647438),
+    e = i(793030),
     r = i(481060),
     o = i(726542),
     s = i(823985),
@@ -9,55 +9,55 @@ var a = i(951288),
     c = i(388032);
 function d(t) {
     var n, i;
-    let { onClose: d, transitionState: m, location: p, successRedirect: h, platformType: f } = t,
-        [b, g] = e.useState(""),
-        [S, v] = e.useState(null),
-        [x, j] = e.useState(!1),
-        k = null != (i = null == (n = o.Z.get(f)) ? void 0 : n.name) ? i : c.intl.string(c.t["bU/GZm"]),
-        y = async () => {
-            j(!0), v(null);
+    let { onClose: d, transitionState: h, location: m, successRedirect: p, platformType: f } = t,
+        [b, g] = l.useState(""),
+        [S, v] = l.useState(null),
+        [x, k] = l.useState(!1),
+        y = null != (i = null == (n = o.Z.get(f)) ? void 0 : n.name) ? i : c.intl.string(c.t["bU/GZm"]),
+        C = async () => {
+            k(!0), v(null);
             try {
                 let t = await (0, u.H)(f, {
-                    location: p,
-                    successRedirect: h,
+                    location: m,
+                    successRedirect: p,
                     handle: b,
                 });
                 if (null == t) throw Error();
                 d();
             } catch (t) {
-                v(c.intl.string(c.t["7wbPNj"])), j(!1);
+                v(c.intl.string(c.t["7wbPNl"])), k(!1);
             }
         },
-        C = (0, s.r)(f),
-        T = (0, s.j)(b, f);
-    return (0, a.jsx)(l.Modal, {
-        transitionState: m,
-        title: c.intl.formatToPlainString(c.t.ImMhq6, { serviceName: k }),
-        subtitle: c.intl.formatToPlainString(c.t["7TByKi"], { serviceName: k }),
+        T = (0, s.r)(f),
+        j = (0, s.j)(b, f);
+    return (0, a.jsx)(e.Modal, {
+        transitionState: h,
+        title: c.intl.formatToPlainString(c.t["ImMhq+"], { serviceName: y }),
+        subtitle: c.intl.formatToPlainString(c.t["7TByKh"], { serviceName: y }),
         onClose: d,
         actions: [
             {
                 variant: "secondary",
-                text: c.intl.string(c.t["ETE/oK"]),
+                text: c.intl.string(c.t["ETE/oC"]),
                 onClick: d,
             },
             {
                 variant: "primary",
-                text: c.intl.string(c.t.PDTjLC),
-                onClick: y,
+                text: c.intl.string(c.t.PDTjLN),
+                onClick: C,
                 loading: x,
-                disabled: !T,
+                disabled: !j,
             },
         ],
         children: (0, a.jsx)("form", {
             onSubmit: (t) => {
-                t.preventDefault(), y();
+                t.preventDefault(), C();
             },
             children: (0, a.jsx)(r.oil, {
                 label: c.intl.string(c.t.tZ9QFR),
                 error: S,
                 onChange: g,
-                placeholder: C,
+                placeholder: T,
                 value: b,
                 disabled: x,
                 autoFocus: !0,

@@ -1,3 +1,0 @@
-e.exports = JSON.parse(
-    '{"+utqa2":["Optie cadeau-achtergrond: ",[1,"giftStyle"]],"B9XqQk":"Doos","AJ4iio":"Taart","P5keo6":"Kist","w84vER":"Koffie","6dCq/v":"Beker","+HMF8v":"Nitroween","vd1fu7":"Feestdoos","aubYGR":"Feesttaart","vjxYqa":"Feestkist","bHuJLS":"Feestkoffie","M6cPwM":"Sneeuwbol","GzPel5":"Doos"}',
-);

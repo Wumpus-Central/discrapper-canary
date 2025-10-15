@@ -86,20 +86,20 @@ function I() {
                                 (0, r.jsx)(s.Heading, {
                                     variant: "heading-lg/bold",
                                     color: "always-white",
-                                    children: g.intl.string(g.t.z8YP2N),
+                                    children: g.intl.string(g.t.z8YP2A),
                                 }),
                             ],
                         }),
                         (0, r.jsx)(s.Text, {
                             variant: "text-md/medium",
                             color: "text-secondary",
-                            children: g.intl.string(y ? g.t["HdKh6+"] : g.t.IqmRZ2),
+                            children: g.intl.string(y ? g.t.HdKh65 : g.t.IqmRZ9),
                         }),
                     ],
                 }),
                 (0, r.jsx)(s.Button, {
                     variant: e ? "primary" : "overlay-primary",
-                    text: g.intl.string(g.t.GURBQk),
+                    text: g.intl.string(g.t.GURBQl),
                     onClick: n,
                 }),
             ],

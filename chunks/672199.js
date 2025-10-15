@@ -9,11 +9,11 @@ var i = n(13245),
     c = n(981631),
     d = n(37113),
     h = n(388032),
-    p = n(658805);
+    p = n(496107);
 function f(e, t, n, f) {
     if (a.Z.isNotificationDisabled(u.n0.RequestToStream)) return null;
     let m = t.username,
-        g = h.intl.format(p.default.jTbTAA, {
+        g = h.intl.format(p.default.jTbTAF, {
             username: "",
             game: n.name,
         }),
@@ -28,8 +28,8 @@ function f(e, t, n, f) {
         icon: y,
         title: m,
         body: g,
-        confirmText: h.intl.string(p.default.UGbmBg),
-        cancelText: h.intl.string(h.t.tpXzJy),
+        confirmText: h.intl.string(p.default.UGbmBp),
+        cancelText: h.intl.string(h.t["tpXzJ+"]),
         onNotificationShow: () => {
             O();
         },

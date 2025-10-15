@@ -16,7 +16,7 @@ var r = n(951288),
     g = n(233398),
     E = n(866419),
     b = n(771934),
-    y = n(119475),
+    y = n(687101),
     O = n(388032),
     v = n(531604);
 function I() {
@@ -144,11 +144,11 @@ function R(e) {
                 children: [
                     (0, r.jsx)(h.Text, {
                         variant: "text-sm/medium",
-                        children: O.intl.string(y.default["8ZcEfn"]),
+                        children: O.intl.string(y.default["8ZcEfj"]),
                     }),
                     (0, r.jsx)(_.u, {
                         asContainer: !0,
-                        text: O.intl.string(y.default["61KGaW"]),
+                        text: O.intl.string(y.default["61KGad"]),
                         shouldShow: o.length === S,
                         children: (0, r.jsx)(h.P3F, {
                             onClick: o.length === S ? void 0 : j,
@@ -156,7 +156,7 @@ function R(e) {
                             children: (0, r.jsx)(h.Text, {
                                 variant: "text-sm/medium",
                                 className: v.addColorButtonText,
-                                children: O.intl.string(y.default["+tTysr"]),
+                                children: O.intl.string(y.default["+tTysq"]),
                             }),
                         }),
                     }),
@@ -189,24 +189,24 @@ function R(e) {
                         children: [
                             null != c &&
                                 (0, r.jsx)(_.u, {
-                                    text: O.intl.string(y.default["8QXO8v"]),
+                                    text: O.intl.string(y.default["8QXO8g"]),
                                     children: (0, r.jsx)(p.hU, {
                                         variant: "icon-only",
                                         size: "sm",
                                         onClick: M,
                                         icon: d.i,
-                                        "aria-label": O.intl.string(y.default["8QXO8v"]),
+                                        "aria-label": O.intl.string(y.default["8QXO8g"]),
                                     }),
                                 }),
                             G &&
                                 (0, r.jsx)(_.u, {
-                                    text: O.intl.string(y.default["rTik5+"]),
+                                    text: O.intl.string(y.default.rTik5y),
                                     children: (0, r.jsx)(p.hU, {
                                         variant: "icon-only",
                                         size: "sm",
                                         onClick: () => k(I),
                                         icon: f.X,
-                                        "aria-label": O.intl.string(y.default["rTik5+"]),
+                                        "aria-label": O.intl.string(y.default.rTik5y),
                                     }),
                                 }),
                         ],

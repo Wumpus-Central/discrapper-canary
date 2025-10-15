@@ -169,9 +169,9 @@ function E(e) {
                         checked: null != (t = null == n ? void 0 : n.enabled) && t,
                     }),
                     (0, r.jsx)(a.u, {
-                        text: j.intl.string(j.t.UKOtz8),
+                        text: j.intl.string(j.t["UKOtz+"]),
                         position: "top",
-                        "aria-label": j.intl.string(j.t.PdRCRk),
+                        "aria-label": j.intl.string(j.t.PdRCRg),
                         children: (0, r.jsx)(s.P3F, {
                             onClick: (e) => {
                                 y(e), l(e);
@@ -263,9 +263,9 @@ function S(e) {
                     }),
                     !n &&
                         (0, r.jsx)(a.u, {
-                            text: j.intl.string(j.t.UKOtz8),
+                            text: j.intl.string(j.t["UKOtz+"]),
                             position: "top",
-                            "aria-label": j.intl.string(j.t.PdRCRk),
+                            "aria-label": j.intl.string(j.t.PdRCRg),
                             children: (0, r.jsx)(s.P3F, {
                                 onClick: (e) => {
                                     y(e), o(e);
@@ -323,7 +323,7 @@ function T(e) {
                 children: (0, r.jsx)(s.Button, {
                     variant: "primary",
                     size: "sm",
-                    text: t === x.fX.KEYWORD ? j.intl.string(j.t.CumH4u) : j.intl.string(j.t.oRs6mJ),
+                    text: t === x.fX.KEYWORD ? j.intl.string(j.t.CumH4u) : j.intl.string(j.t.oRs6mG),
                     onClick: n,
                 }),
             }),

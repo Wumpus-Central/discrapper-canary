@@ -25,15 +25,15 @@ function c(e, t) {
 function u(e) {
     switch (e) {
         case o.rtL.HISTORY:
-            return s.intl.string(s.t.tSZd5e);
+            return s.intl.string(s.t.tSZd5c);
         case o.dCx.FILTER_FROM:
-            return s.intl.string(s.t.catERE);
+            return s.intl.string(s.t.catERA);
         case o.dCx.FILTER_MENTIONS:
-            return s.intl.string(s.t.l3K4Bw);
+            return s.intl.string(s.t["l3K4B/"]);
         case o.dCx.FILTER_IN:
-            return s.intl.string(s.t.vHyCgo);
+            return s.intl.string(s.t.vHyCgl);
         case o.dCx.FILTER_HAS:
-            return s.intl.string(s.t.IC7gHB);
+            return s.intl.string(s.t.IC7gHM);
         default:
             return "";
     }

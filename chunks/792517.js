@@ -34,7 +34,7 @@ function b(e) {
             noArt: i,
             selected: b,
             size: (0, _.L)(n),
-            header: y ? null : p.intl.string(p.t.epU4ER),
+            header: y ? null : p.intl.string(p.t.epU4Ec),
             description: b
                 ? null
                 : (0, r.jsxs)("div", {
@@ -45,19 +45,19 @@ function b(e) {
                               children: (0, r.jsx)(l.Button, {
                                   variant: "secondary",
                                   size: y ? "sm" : "md",
-                                  text: n < m ? p.intl.string(p.t["I6JG4+"]) : p.intl.string(p.t["7Xq/nZ"]),
+                                  text: n < m ? p.intl.string(p.t.I6JG46) : p.intl.string(p.t["7Xq/nV"]),
                               }),
                           }),
                           v && !O
                               ? (0, r.jsx)("div", {
                                     className: a()(h.cta, h.addCta),
                                     children: (0, r.jsx)(s.u, {
-                                        text: p.intl.string(p.t.wCrzur),
+                                        text: p.intl.string(p.t.wCrzut),
                                         children: (0, r.jsx)(l.hU, {
                                             variant: "secondary",
                                             size: y ? "sm" : "md",
                                             icon: l.OgY,
-                                            "aria-label": p.intl.string(p.t.wCrzur),
+                                            "aria-label": p.intl.string(p.t.wCrzut),
                                             onClick: (e) => {
                                                 e.stopPropagation(), (0, c.rn)(t.stream, { forceMultiple: !0 });
                                             },

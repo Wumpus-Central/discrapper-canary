@@ -22,12 +22,12 @@ function h(e) {
             (0, r.jsx)(a.Text, {
                 variant: "text-md/semibold",
                 color: "text-muted",
-                children: u.intl.string(u.t.omKGKi),
+                children: u.intl.string(u.t.omKGKu),
             }),
             (0, r.jsx)(a.Text, {
                 variant: "text-sm/normal",
                 color: "text-muted",
-                children: u.intl.string(u.t.zUjLl5),
+                children: u.intl.string(u.t["zUjLl+"]),
             }),
             (0, r.jsx)("div", {
                 children: (0, r.jsx)(a.zJl, {

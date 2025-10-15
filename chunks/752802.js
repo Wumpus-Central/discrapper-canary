@@ -101,7 +101,7 @@ function L(e) {
     let { participant: t } = e;
     return (0, i.jsx)(u.aML, {
         "data-migration-pending": !0,
-        text: P.intl.string(P.t["4EGMWF"]),
+        text: P.intl.string(P.t["4EGMWL"]),
         children: (e) => {
             var { onClick: n } = e,
                 r = k(e, ["onClick"]);
@@ -143,7 +143,7 @@ function M(e) {
         }, [n]);
     return (0, i.jsx)(u.aML, {
         "data-migration-pending": !0,
-        text: h ? P.intl.string(P.t.YqAjX1) : P.intl.string(P.t["w4m94+"]),
+        text: h ? P.intl.string(P.t.YqAjXy) : P.intl.string(P.t.w4m945),
         children: (e) => {
             var { onClick: n } = e,
                 r = k(e, ["onClick"]);
@@ -206,7 +206,7 @@ function z(e) {
             var e;
             return null != (e = C.default.getUser(s.id)) ? e : s;
         }, [s]),
-        d = t ? P.intl.string(P.t.tLxK4u) : P.intl.string(P.t.E5RDnJ),
+        d = t ? P.intl.string(P.t.tLxK4l) : P.intl.string(P.t.E5RDnK),
         { enabled: h } = (0, w.aq)("GoLiveTile");
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -240,7 +240,7 @@ function z(e) {
                                         (0, i.jsx)(u.Text, {
                                             variant: "text-sm/semibold",
                                             color: "always-white",
-                                            children: P.intl.string(P.t["I6JG4+"]),
+                                            children: P.intl.string(P.t.I6JG46),
                                         }),
                                         (0, i.jsx)(u.OgY, {
                                             size: "sm",
@@ -291,7 +291,7 @@ function z(e) {
                                     (0, i.jsx)(M, { participant: n }),
                                     (0, i.jsx)(u.aML, {
                                         "data-migration-pending": !0,
-                                        text: P.intl.string(P.t["3D5yo6"]),
+                                        text: P.intl.string(P.t["3D5yo/"]),
                                         children: (e) => {
                                             var { onClick: t } = e,
                                                 r = k(e, ["onClick"]);
@@ -343,7 +343,7 @@ let U = new Set([_.jm8.ENDED, _.jm8.FAILED, _.jm8.PAUSED]),
                           ? (0, i.jsx)("div", {
                                 className: D.streamTile,
                                 children: (0, i.jsx)(u.kL8, {
-                                    "aria-label": P.intl.formatToPlainString(P.t.gHPz3d, {
+                                    "aria-label": P.intl.formatToPlainString(P.t.gHPz3Q, {
                                         streamerName: t.user.username,
                                     }),
                                     onClick: () => {},

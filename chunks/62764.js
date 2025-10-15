@@ -34,7 +34,7 @@ var i = n(951288),
     R = n(228392),
     L = n(981631),
     D = n(388032),
-    k = n(764295),
+    k = n(833540),
     U = n(319720),
     B = n(127947),
     H = n(577650);
@@ -53,7 +53,7 @@ function V(e) {
         ? (0, i.jsx)(u.Button, {
               size: "sm",
               variant: "secondary",
-              text: l ? D.intl.string(k.default["2Y4vkp"]) : D.intl.string(k.default.YIbR4u),
+              text: l ? D.intl.string(k.default["2Y4vkk"]) : D.intl.string(k.default.YIbR4r),
               onClick: () => {
                   !0 === s.K.get(S.F)
                       ? d()
@@ -80,18 +80,18 @@ function F(e) {
         { ref: O, width: j } = (0, h.ZP)(),
         [S, k] = r.useState(3),
         [F, G] = r.useState(!n),
-        [z, W] = (0, f.Z)(!1, 2000),
-        Y = (0, o.e7)([T.Z], () => T.Z.getChannel(t), [t]),
-        { firstMessage: K } = (0, M.cl)(Y),
-        q = (0, o.e7)([I.Z], () => I.Z.hasJoined(t)),
+        [W, z] = (0, f.Z)(!1, 2000),
+        q = (0, o.e7)([T.Z], () => T.Z.getChannel(t), [t]),
+        { firstMessage: Y } = (0, M.cl)(q),
+        K = (0, o.e7)([I.Z], () => I.Z.hasJoined(t)),
         {
             disableReactionUpdates: X,
             disableReactionCreates: J,
             isLurking: Q,
             isGuest: $,
             isPendingMember: ee,
-        } = (0, C.Z)(Y),
-        et = (0, E.nw)(Y),
+        } = (0, C.Z)(q),
+        et = (0, E.nw)(q),
         en = (0, o.e7)([T.Z], () => T.Z.getChannel(s)),
         ei = (0, w.Bs)(en),
         er = (0, o.e7)([m.Z], () => m.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
@@ -122,18 +122,18 @@ function F(e) {
         (r.useEffect(() => {
             null != j && (k(Math.floor((j - 280) / 58)), eo(!1));
         }, [j]),
-        null == Y || null == K)
+        null == q || null == Y)
     )
         return null;
-    let es = K.reactions.length > 0,
+    let es = Y.reactions.length > 0,
         ec = () => {
             (0, R.B)({
-                postId: Y.id,
+                postId: q.id,
                 location: { section: L.jXE.CHANNEL_HEADER },
             }),
-                (0, A.JG)((0, N.EO)(Y, en), () => W(!0));
+                (0, A.JG)((0, N.EO)(q, en), () => z(!0));
         },
-        eu = q ? u.dz2 : u.Dkj;
+        eu = K ? u.dz2 : u.Dkj;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)("div", {
@@ -144,8 +144,8 @@ function F(e) {
                         ? (0, i.jsx)("div", {
                               className: U.reportedMessageActions,
                               children: (0, i.jsx)(P.Z, {
-                                  message: K,
-                                  channel: Y,
+                                  message: Y,
+                                  channel: q,
                               }),
                           })
                         : (0, i.jsxs)("div", {
@@ -157,7 +157,7 @@ function F(e) {
                                       (0, i.jsx)("div", {
                                           className: B.reactions,
                                           children: (0, i.jsx)(x.le, {
-                                              message: K,
+                                              message: Y,
                                               readOnly: !1,
                                               useChatFontScaling: !1,
                                               isLurking: Q,
@@ -174,8 +174,8 @@ function F(e) {
                                           }),
                                       }),
                                   (0, i.jsx)(v.Z, {
-                                      message: K,
-                                      channel: Y,
+                                      message: Y,
+                                      channel: q,
                                       disableReactionCreates: !0,
                                       disableReactionUpdates: X,
                                       isLurking: Q,
@@ -190,12 +190,12 @@ function F(e) {
                                   !J &&
                                       (0, i.jsx)(y.X, {
                                           type: b.O.NORMAL,
-                                          message: K,
-                                          channel: Y,
+                                          message: Y,
+                                          channel: q,
                                           useChatFontScaling: !1,
                                           className: a()(H.secondary, U.addReactButton, { [U.hasNoReactions]: !es }),
                                           isForumToolbar: !0,
-                                          children: !es && D.intl.string(D.t.xpOyTE),
+                                          children: !es && D.intl.string(D.t.xpOyTO),
                                       }),
                               ],
                           }),
@@ -203,37 +203,37 @@ function F(e) {
                         className: U.buttons,
                         children: [
                             et
-                                ? (0, i.jsx)(V, { channel: Y })
+                                ? (0, i.jsx)(V, { channel: q })
                                 : (0, i.jsx)(c.u, {
-                                      text: D.intl.string(D.t.F7oeDg),
+                                      text: D.intl.string(D.t.F7oeDv),
                                       children: (0, i.jsx)(u.Button, {
                                           icon: eu,
                                           size: "sm",
                                           variant: "secondary",
-                                          text: q ? D.intl.string(D.t["7OkUzs"]) : D.intl.string(D.t["3aOv+v"]),
+                                          text: K ? D.intl.string(D.t["7OkUzs"]) : D.intl.string(D.t["3aOv+h"]),
                                           onClick: () => {
-                                              q
-                                                  ? Z.Z.leaveThread(Y, "Forum Toolbar")
-                                                  : Z.Z.joinThread(Y, "Forum Toolbar");
+                                              K
+                                                  ? Z.Z.leaveThread(q, "Forum Toolbar")
+                                                  : Z.Z.joinThread(q, "Forum Toolbar");
                                           },
                                       }),
                                   }),
                             (0, i.jsx)(c.u, {
-                                text: D.intl.string(D.t.WqhZsr),
-                                children: z
+                                text: D.intl.string(D.t.WqhZss),
+                                children: W
                                     ? (0, i.jsx)(u.Button, {
                                           icon: u.dz2,
                                           size: "sm",
                                           variant: "secondary",
                                           onClick: ec,
-                                          text: D.intl.string(D.t["t5VZ8/"]),
+                                          text: D.intl.string(D.t.t5VZ88),
                                       })
                                     : (0, i.jsx)(u.hU, {
                                           icon: u.xPt,
                                           size: "sm",
                                           variant: "secondary",
                                           onClick: ec,
-                                          "aria-label": D.intl.string(D.t.WqhZsr),
+                                          "aria-label": D.intl.string(D.t.WqhZss),
                                       }),
                             }),
                             !n &&
@@ -245,8 +245,8 @@ function F(e) {
                                         variant: "secondary",
                                         onClick: () => {
                                             d.Z.jumpToMessage({
-                                                channelId: Y.id,
-                                                messageId: Y.id,
+                                                channelId: q.id,
+                                                messageId: q.id,
                                                 flash: !0,
                                                 jumpType: p.SR.INSTANT,
                                             });
@@ -260,7 +260,7 @@ function F(e) {
             }),
             er && (0, i.jsx)(g.Z, { threadId: t }),
             (0, i.jsx)(_.Z, {
-                channel: Y,
+                channel: q,
                 isLastItem: l,
             }),
         ],

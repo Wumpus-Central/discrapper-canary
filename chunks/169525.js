@@ -138,7 +138,7 @@ let y = (e) => {
         case a.wk.GORE_CONTENT:
             return _.intl.string(_.t.SEgHFh);
         case a.wk.SPOILER:
-            return _.intl.string(_.t.XpfDHx);
+            return _.intl.string(_.t["XpfDH+"]);
         default:
             return;
     }

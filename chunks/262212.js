@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => j,
-    ms: () => y,
+    ms: () => O,
 });
 var r = n(951288);
 n(647438);
@@ -14,7 +14,7 @@ var i = n(120356),
     d = n(827397),
     p = n(279604),
     h = n(535396),
-    f = n(989308),
+    f = n(149829),
     g = n(388032),
     m = n(292609);
 function b() {
@@ -53,7 +53,7 @@ function _(e) {
     }
     return e;
 }
-function y(e) {
+function O(e) {
     let { className: t, guildId: n, powerup: i, onClick: a } = e,
         s = (0, d.Z)(n, i),
         { onShowMore: c } = (0, p.ZP)(n, i),
@@ -63,14 +63,14 @@ function y(e) {
         children: (0, r.jsx)(o.zxk, {
             variant: "primary",
             fullWidth: !0,
-            text: u ? g.intl.string(f.default["g5Ds6+"]) : g.intl.string(g.t["0Q61kJ"]),
+            text: u ? g.intl.string(f.default.g5Ds69) : g.intl.string(g.t["0Q61kF"]),
             onClick: (e) => {
                 null == a || a(e), u ? null == s || s(e) : null == c || c();
             },
         }),
     });
 }
-function O(e) {
+function y(e) {
     let { className: t, guildId: n, powerup: i } = e,
         { onShowMore: a } = (0, p.ZP)(n, i);
     return (0, r.jsx)("div", {
@@ -80,7 +80,7 @@ function O(e) {
             children: (0, r.jsx)(o.zxk, {
                 variant: "primary",
                 fullWidth: !0,
-                text: i.type === h.Us.LEVEL ? g.intl.string(g.t["0Q61kJ"]) : g.intl.string(g.t.Xa11Eh),
+                text: i.type === h.Us.LEVEL ? g.intl.string(g.t["0Q61kF"]) : g.intl.string(g.t.Xa11Ep),
                 onClick: a,
             }),
         }),
@@ -104,7 +104,7 @@ function v(e) {
                     compact: !f,
                 }),
             s &&
-                (0, r.jsx)(y, {
+                (0, r.jsx)(O, {
                     guildId: n,
                     powerup: i,
                 }),
@@ -119,5 +119,5 @@ function j(e) {
             return e;
         })(e),
     );
-    return (0, s.Z)(t.guildId) ? (0, r.jsx)(v, _({}, t)) : (0, r.jsx)(O, _({}, t));
+    return (0, s.Z)(t.guildId) ? (0, r.jsx)(v, _({}, t)) : (0, r.jsx)(y, _({}, t));
 }

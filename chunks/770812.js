@@ -40,9 +40,9 @@ function O(e) {
         I = (0, a.e7)([_.Z], () => _.Z.getGuild(n)),
         T = (0, a.e7)([p.Z], () => null != n && p.Z.getUserSubscriptionRoles(n).size > 0),
         S = T
-            ? E.intl.string(E.t["GoLM9/"])
-            : E.intl.formatToPlainString(E.t["h0u/Hh"], { serverName: null == I ? void 0 : I.name }),
-        A = T ? E.intl.string(E.t.PjZ7DQ) : E.intl.string(E.t.p8FG1N);
+            ? E.intl.string(E.t.GoLM9z)
+            : E.intl.formatToPlainString(E.t["h0u/Hi"], { serverName: null == I ? void 0 : I.name }),
+        A = T ? E.intl.string(E.t.PjZ7Db) : E.intl.string(E.t.p8FG1D);
     return (0, r.jsxs)("div", {
         className: b.container,
         children: [
@@ -52,12 +52,12 @@ function O(e) {
                 children: [
                     (0, r.jsx)(s.P3F, {
                         className: b.closeButton,
-                        "aria-label": E.intl.string(E.t.cpT0Cg),
+                        "aria-label": E.intl.string(E.t.cpT0Cq),
                         onClick: t,
                         children: (0, r.jsx)(s.Dio, {
                             size: "xs",
                             color: "currentColor",
-                            "aria-label": E.intl.string(E.t.cpT0Cg),
+                            "aria-label": E.intl.string(E.t.cpT0Cq),
                             className: b.closeButtonIcon,
                         }),
                     }),
@@ -71,7 +71,7 @@ function O(e) {
                         color: "header-primary",
                         variant: "heading-lg/extrabold",
                         className: b.header,
-                        children: E.intl.string(E.t.cBjkc3),
+                        children: E.intl.string(E.t.cBjkcx),
                     }),
                     (0, r.jsx)(s.LZC, { size: 4 }),
                     (0, r.jsx)(s.Text, {

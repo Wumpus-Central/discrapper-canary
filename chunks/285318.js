@@ -52,13 +52,13 @@ function d(e) {
         n = "";
     switch (e) {
         case a.Ux.PROFANITY:
-            (t = s.intl.string(s.t["I+BDrK"])), (n = s.intl.string(s.t.hISCmp));
+            (t = s.intl.string(s.t["I+BDrH"])), (n = s.intl.string(s.t.hISCms));
             break;
         case a.Ux.SEXUAL_CONTENT:
-            (t = s.intl.string(s.t.URSMen)), (n = s.intl.string(s.t.oRQDBg));
+            (t = s.intl.string(s.t.URSMet)), (n = s.intl.string(s.t.oRQDBs));
             break;
         case a.Ux.SLURS:
-            (t = s.intl.string(s.t.xjK2Mz)), (n = s.intl.string(s.t.oJYXBA));
+            (t = s.intl.string(s.t["xjK2M/"])), (n = s.intl.string(s.t.oJYXBG));
             break;
         default:
             (t = "Error"), (n = "Unrecognized list");

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -44,7 +44,7 @@ function b(e) {
 function _(e) {
     return e.matches("a") || "highlight" === e.className || e.className.includes("mention");
 }
-class y extends i.Component {
+class O extends i.Component {
     render() {
         let { channel: e } = this.props;
         if (e.isMultiUserDM()) return null;
@@ -63,12 +63,12 @@ class y extends i.Component {
                           children: [
                               (0, r.jsx)(s.P3F, {
                                   onClick: this.handleClick,
-                                  "aria-label": h.intl.string(h.t.mKwsSk),
+                                  "aria-label": h.intl.string(h.t.mKwsSp),
                                   className: f.topicClickTarget,
                               }),
                               null == e.linkedLobby || t
                                   ? u.Z.parseTopic(e.topic, !0, { channelId: e.id })
-                                  : h.intl.string(h.t.XJVlf3),
+                                  : h.intl.string(h.t["XJVlf/"]),
                           ],
                       }),
                   ],
@@ -154,4 +154,4 @@ class y extends i.Component {
             });
     }
 }
-let O = y;
+let y = O;

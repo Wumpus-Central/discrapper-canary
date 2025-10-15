@@ -22,7 +22,7 @@ var r = n(951288),
     I = n(736530),
     T = n(981631),
     S = n(388032),
-    A = n(345909);
+    A = n(660886);
 function C(e) {
     let { ingress: t, guildId: n } = e,
         C = (0, m.c_)(),
@@ -63,10 +63,10 @@ function C(e) {
                 h.mX.updateSetting(e), x(e, !1);
             };
         (0, b.V)({
-            header: S.intl.string(S.t.yAfu1t),
-            body: S.intl.string(S.t["Ry2z7+"]),
-            confirmText: S.intl.string(S.t.gm1Ven),
-            cancelText: S.intl.string(S.t.p89ACg),
+            header: S.intl.string(S.t.yAfu1p),
+            body: S.intl.string(S.t.Ry2z74),
+            confirmText: S.intl.string(S.t.gm1Vej),
+            cancelText: S.intl.string(S.t.p89ACt),
             confirmButtonColor: a.zx.Colors.BRAND,
             onConfirm: n,
             onCancel: t,
@@ -78,21 +78,21 @@ function C(e) {
         children:
             n === I.T
                 ? (0, r.jsx)(E.ZP, {
-                      title: S.intl.string(S.t["3o2ojo"]),
+                      title: S.intl.string(S.t["3o2ojh"]),
                       value: !N && !w,
                       onChange: (e) => M(e, !1),
                       disabled: N || P,
-                      tooltipText: P ? S.intl.string(A.default["6Af/c3"]) : void 0,
-                      note: S.intl.format(S.t.wkm9a2, { helpdeskArticle: d.Z.getArticleURL(T.BhN.MESSAGE_REQUESTS) }),
+                      tooltipText: P ? S.intl.string(A.default["6Af/cw"]) : void 0,
+                      note: S.intl.format(S.t.wkm9a3, { helpdeskArticle: d.Z.getArticleURL(T.BhN.MESSAGE_REQUESTS) }),
                   })
                 : (0, r.jsx)(E.ZP, {
-                      title: S.intl.string(S.t["3o2ojo"]),
+                      title: S.intl.string(S.t["3o2ojh"]),
                       value: !D,
                       onChange: (e) => M(e, !0),
                       disabled: R,
                       note: C
-                          ? S.intl.format(S.t.WpnWLS, { helpdeskArticle: d.Z.getArticleURL(T.BhN.MESSAGE_REQUESTS) })
-                          : S.intl.format(S.t.wkm9a2, { helpdeskArticle: d.Z.getArticleURL(T.BhN.MESSAGE_REQUESTS) }),
+                          ? S.intl.format(S.t.WpnWLc, { helpdeskArticle: d.Z.getArticleURL(T.BhN.MESSAGE_REQUESTS) })
+                          : S.intl.format(S.t.wkm9a3, { helpdeskArticle: d.Z.getArticleURL(T.BhN.MESSAGE_REQUESTS) }),
                   }),
     });
 }

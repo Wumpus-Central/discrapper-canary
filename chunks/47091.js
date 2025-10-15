@@ -74,9 +74,9 @@ function h(e) {
                             p(
                                 f(
                                     {
-                                        header: u.intl.formatToPlainString(u.t["GOFk9/"], { name: _ }),
-                                        confirmText: u.intl.string(u.t["cY+Ooa"]),
-                                        cancelText: u.intl.string(u.t["ETE/oK"]),
+                                        header: u.intl.formatToPlainString(u.t["GOFk9+"], { name: _ }),
+                                        confirmText: u.intl.string(u.t["cY+Oob"]),
+                                        cancelText: u.intl.string(u.t["ETE/oC"]),
                                         onConfirm: () =>
                                             s.Z.removeFriend({
                                                 userId: t.id,
@@ -89,7 +89,7 @@ function h(e) {
                                 {
                                     children: (0, r.jsx)(a.Text, {
                                         variant: "text-md/normal",
-                                        children: u.intl.format(u.t.dsU5bm, {
+                                        children: u.intl.format(u.t.dsU5bl, {
                                             name: _,
                                             gameName: o,
                                         }),
@@ -105,7 +105,7 @@ function h(e) {
         user: t,
         gameRelationships: d,
         menuItemId: "remove-game-friend",
-        label: u.intl.string(u.t["RLcE6+"]),
+        label: u.intl.string(u.t.RLcE6x),
         onClick: h,
         color: "danger",
     });

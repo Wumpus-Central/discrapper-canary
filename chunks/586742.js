@@ -237,7 +237,7 @@ let R = r.memo(function (e) {
               ? (0, i.jsx)("div", {
                     ref: f,
                     children: (0, i.jsx)(I.E, {
-                        emptyText: _.intl.string(_.t["aTiM4+"]),
+                        emptyText: _.intl.string(_.t.aTiM42),
                         icon: s.Odl,
                         absolute: !0,
                     }),

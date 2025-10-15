@@ -6,8 +6,8 @@ var r = n(951288),
     s = n(693789),
     l = n(481060),
     c = n(484614),
-    d = n(110924),
-    u = n(448986),
+    u = n(110924),
+    d = n(448986),
     m = n(475271),
     p = n(63954),
     C = n(454585),
@@ -16,8 +16,8 @@ var r = n(951288),
     j = n(624138),
     y = n(617136),
     x = n(509212),
-    g = n(569984),
-    v = n(497505),
+    v = n(569984),
+    g = n(497505),
     b = n(804127),
     _ = n(566078),
     w = n(602667),
@@ -28,18 +28,18 @@ var r = n(951288),
     E = n(388032),
     I = n(238905);
 function D(e) {
-    let { rewardCode: t, questContent: n, questId: a, sourceQuestContent: i, className: l, inputClassName: d } = e,
-        u = (0, o.e7)([f.Z], () => f.Z.hidePersonalInformation),
+    let { rewardCode: t, questContent: n, questId: a, sourceQuestContent: i, className: l, inputClassName: u } = e,
+        d = (0, o.e7)([f.Z], () => f.Z.hidePersonalInformation),
         m = (0, y.O5)();
     return null == t
         ? null
         : (0, r.jsx)(c.Z, {
               className: l,
-              inputClassName: d,
-              value: u ? E.intl.string(E.t["0n2u0t"]) : t.code,
+              inputClassName: u,
+              value: d ? E.intl.string(E.t["0n2u0k"]) : t.code,
               buttonColor: s.Tt.PRIMARY,
               onCopy: () => {
-                  u && (0, h.JG)(t.code),
+                  d && (0, h.JG)(t.code),
                       m({
                           questId: a,
                           questContent: n,
@@ -56,8 +56,8 @@ function A(e) {
             questContent: o,
             questContentPosition: s,
             sourceQuestContent: c,
-            rewardCode: d,
-            rewardPlatform: u,
+            rewardCode: u,
+            rewardPlatform: d,
             sharedQuestFields: m,
             onClose: p,
             transitionState: f,
@@ -67,13 +67,13 @@ function A(e) {
             null !=
             (t = (0, x.C1)({
                 quest: n,
-                rewardCode: d,
-                selectedPlatformType: u,
+                rewardCode: u,
+                selectedPlatformType: d,
                 sharedQuestFields: m,
             }))
                 ? t
                 : "",
-        g = a.useMemo(() => {
+        v = a.useMemo(() => {
             var e;
             let t =
                 null ==
@@ -84,27 +84,27 @@ function A(e) {
                     ? void 0
                     : e.redemptionLink;
             if ((0, j.Ew)(t)) return null;
-            let r = null == d ? void 0 : d.code;
+            let r = null == u ? void 0 : u.code;
             return (0, j.Ew)(r) ? t : t.replace(T.Dp, encodeURIComponent(r));
-        }, [n, null == d ? void 0 : d.code]),
-        v = (0, b.In)({
+        }, [n, null == u ? void 0 : u.code]),
+        g = (0, b.In)({
             quest: n,
             questContent: o,
             questContentPosition: s,
-            redemptionLink: g,
+            redemptionLink: v,
             sourceQuestContent: c,
         });
     return (0, r.jsx)("div", {
         ref: h,
         children: (0, r.jsx)(i.Modal, {
             size: "md",
-            title: E.intl.string(E.t.NkZ7OT),
+            title: E.intl.string(E.t.NkZ7OU),
             actions: [
-                null != g
+                null != v
                     ? {
                           variant: "primary",
-                          text: E.intl.string(E.t["+zx47e"]),
-                          onClick: v,
+                          text: E.intl.string(E.t["+zx47d"]),
+                          onClick: g,
                       }
                     : {
                           variant: "primary",
@@ -118,10 +118,10 @@ function A(e) {
                         variant: "eyebrow",
                         color: "interactive-normal",
                         className: I.claimInstructionsCodeInputTitle,
-                        children: E.intl.string(E.t.srzsU1),
+                        children: E.intl.string(E.t.srzsU2),
                     }),
                     (0, r.jsx)(D, {
-                        rewardCode: d,
+                        rewardCode: u,
                         questContent: o,
                         questId: n.id,
                         sourceQuestContent: c,
@@ -161,12 +161,12 @@ function q(e) {
                         variant: "heading-xl/semibold",
                         color: "header-primary",
                         className: I.heading,
-                        children: E.intl.string(E.t["5j/Zys"]),
+                        children: E.intl.string(E.t["5j/Zym"]),
                     }),
                     (0, r.jsx)(l.Text, {
                         variant: "text-sm/medium",
                         color: "text-secondary",
-                        children: E.intl.format(E.t.ESmp29, { onClaimInstructions: o }),
+                        children: E.intl.format(E.t["ESmp2+"], { onClaimInstructions: o }),
                     }),
                 ],
             }),
@@ -185,15 +185,15 @@ function R(e) {
     let { quest: t, onClose: n, transitionState: i, preview: s, sourceQuestContent: c, questContentPosition: C } = e,
         f = _.r.build(t.config),
         h = f.rewardPlatforms[0],
-        j = v.jn.REWARD_MODAL,
+        j = g.jn.REWARD_MODAL,
         {
             questStoreRewardCode: y,
             isFetchingRewardCode: x,
             isClaimingReward: O,
-        } = (0, o.cj)([g.Z], () => ({
-            questStoreRewardCode: g.Z.getRewardCode(t.id),
-            isFetchingRewardCode: g.Z.isFetchingRewardCode(t.id),
-            isClaimingReward: g.Z.isClaimingReward(t.id),
+        } = (0, o.cj)([v.Z], () => ({
+            questStoreRewardCode: v.Z.getRewardCode(t.id),
+            isFetchingRewardCode: v.Z.isFetchingRewardCode(t.id),
+            isClaimingReward: v.Z.isClaimingReward(t.id),
         })),
         E = !0 === s ? (0, p.b)(t) : y,
         { hasError: I, setHasError: D } = (0, b.uL)({
@@ -207,9 +207,9 @@ function R(e) {
             preview: s,
         });
     !(function (e) {
-        let t = (0, u.Z)(e),
+        let t = (0, d.Z)(e),
             n = m.default.useIsCaptchaModalOpen(),
-            r = (0, d.Z)(n),
+            r = (0, u.Z)(n),
             i = !!(!n && r);
         a.useEffect(() => {
             i && t();

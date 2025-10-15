@@ -3,7 +3,7 @@ var n = o(647438),
     r = o(823379),
     a = o(267642),
     c = o(535396),
-    s = o(989308),
+    s = o(149829),
     i = o(388032);
 function l(e) {
     let {
@@ -24,7 +24,7 @@ function l(e) {
             t &&
                 n.push({
                     perkIcon: a.Ro.EMOJI,
-                    description: i.intl.formatToPlainString(s.default.NXvV09, {
+                    description: i.intl.formatToPlainString(s.default["NXvV0+"], {
                         totalEmojis: e.features.total_emoji_slots,
                         additionalEmojis: e.features.additional_emoji_slots,
                     }),
@@ -40,7 +40,7 @@ function l(e) {
             l &&
                 n.push({
                     perkIcon: a.Ro.SOUNDBOARD,
-                    description: i.intl.formatToPlainString(s.default["s9u/Ex"], {
+                    description: i.intl.formatToPlainString(s.default["s9u/E7"], {
                         totalSoundboards: e.features.total_sound_slots,
                         additionalSoundboards: e.features.additional_sound_slots,
                     }),

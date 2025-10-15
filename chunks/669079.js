@@ -200,35 +200,35 @@ function W(e, t, n) {
 function K(e, t, n) {
     switch (e) {
         case h.wZ8.ERROR:
-            return g.intl.formatToMarkdownString(g.t.JUvC0t, {});
+            return g.intl.formatToMarkdownString(g.t.JUvC0s, {});
         case h.wZ8.SUCCESS:
             return t.isSubscription
-                ? g.intl.formatToPlainString(g.t["1C2BGx"], { skuName: n.name })
-                : g.intl.string(g.t["+BNMcH"]);
+                ? g.intl.formatToPlainString(g.t["1C2BG/"], { skuName: n.name })
+                : g.intl.string(g.t["+BNMcF"]);
         case h.wZ8.CONFIRM:
         default:
             return t.isSubscription
-                ? g.intl.formatToPlainString(g.t["2VN4Nz"], { skuName: n.name })
-                : g.intl.string(g.t.RmamAA);
+                ? g.intl.formatToPlainString(g.t["2VN4N9"], { skuName: n.name })
+                : g.intl.string(g.t.RmamAI);
     }
 }
 function z(e, t, n) {
     let { isCustomGift: r, isPremiumAppGift: i } = n;
     switch (e) {
         case h.wZ8.ERROR:
-            return g.intl.string(g.t.w19zb2);
+            return g.intl.string(g.t.w19zb6);
         case h.wZ8.SUCCESS:
-            if (__OVERLAY__) return g.intl.string(g.t.zW87EB);
-            if (t.isSubscription) return g.intl.string(g.t.ex5TKi);
-            if (i) return g.intl.string(g.t.zW87EB);
-            return g.intl.string(g.t.OOkjqq);
+            if (__OVERLAY__) return g.intl.string(g.t.zW87EM);
+            if (t.isSubscription) return g.intl.string(g.t.ex5TKr);
+            if (i) return g.intl.string(g.t.zW87EM);
+            return g.intl.string(g.t.OOkjql);
         case h.wZ8.OPEN:
-            return g.intl.string(g.t.F8ktcn);
+            return g.intl.string(g.t.F8ktci);
         case h.wZ8.CONFIRM:
         default:
-            if (null != r && r) return g.intl.string(g.t.n6I6k5);
-            if (null != t.giftStyle) return t.isClaimed ? g.intl.string(g.t.OgpR0d) : g.intl.string(g.t["2BWscn"]);
-            return t.isSubscription ? g.intl.string(g.t.wQ1FHx) : g.intl.string(g.t.OgpR0d);
+            if (null != r && r) return g.intl.string(g.t.n6I6k4);
+            if (null != t.giftStyle) return t.isClaimed ? g.intl.string(g.t.OgpR0c) : g.intl.string(g.t["2BWscv"]);
+            return t.isSubscription ? g.intl.string(g.t.wQ1FHy) : g.intl.string(g.t.OgpR0c);
     }
 }
 function q(e) {
@@ -238,21 +238,21 @@ function q(e) {
                 interval: m.rV.MONTH,
                 premiumSubscriptionType: m.PremiumTypes.TIER_2,
             },
-            () => g.intl.formatToPlainString(g.t["vFfV+P"], { timeInterval: g.intl.string(g.t.FPybU1) }),
+            () => g.intl.formatToPlainString(g.t["vFfV+J"], { timeInterval: g.intl.string(g.t.FPybU7) }),
         )
         .with(
             {
                 interval: m.rV.YEAR,
                 premiumSubscriptionType: m.PremiumTypes.TIER_2,
             },
-            () => g.intl.formatToPlainString(g.t["vFfV+P"], { timeInterval: g.intl.string(g.t.tfqrho) }),
+            () => g.intl.formatToPlainString(g.t["vFfV+J"], { timeInterval: g.intl.string(g.t.tfqrhj) }),
         )
         .with(
             {
                 interval: m.rV.MONTH,
                 premiumSubscriptionType: m.PremiumTypes.TIER_1,
             },
-            () => g.intl.formatToPlainString(g.t.gjKbFx, { intervalCount: e.intervalCount }),
+            () => g.intl.formatToPlainString(g.t.gjKbF4, { intervalCount: e.intervalCount }),
         )
         .with(
             {
@@ -261,7 +261,7 @@ function q(e) {
             },
             () => g.intl.formatToPlainString(g.t.GIe7Bw, { intervalCount: e.intervalCount }),
         )
-        .otherwise(() => g.intl.string(g.t["5ayf7+"]));
+        .otherwise(() => g.intl.string(g.t["5ayf7w"]));
 }
 function X(e) {
     let {
@@ -279,22 +279,22 @@ function X(e) {
             return Q(r, i, a, o, s);
         case h.wZ8.SUCCESS:
             if (null != l) return q(l);
-            return g.intl.formatToPlainString(g.t["3CPsbm"], { skuName: n.name });
+            return g.intl.formatToPlainString(g.t["3CPsbo"], { skuName: n.name });
         case h.wZ8.CONFIRM:
         default:
             if (null != l) {
-                let e = l.interval === m.rV.MONTH ? g.t.P9eTKi : g.t.d8rUd3;
+                let e = l.interval === m.rV.MONTH ? g.t.P9eTKt : g.t.d8rUdy;
                 return g.intl.format(e, {
                     skuName: n.name,
                     intervalCount: l.intervalCount,
                 });
             }
-            return g.intl.formatToPlainString(g.t.l6Ea4e, { skuName: n.name });
+            return g.intl.formatToPlainString(g.t.l6Ea4Z, { skuName: n.name });
     }
 }
 function Q(e, t, n, r, i) {
     let a = n || r ? void 0 : e,
-        o = g.intl.format(g.t["5zyz9/"], { onGoToLibrary: i });
+        o = g.intl.format(g.t["5zyz9y"], { onGoToLibrary: i });
     return null != a ? o : null == t ? null : et(t, c.default.getCurrentUser());
 }
 function J(e, t, n) {
@@ -318,29 +318,27 @@ let ee = (e, t) =>
 function et(e, t) {
     switch (e.code) {
         case h.evJ.INVALID_GIFT_SELF_REDEMPTION:
-            return g.intl.string(g.t.wa9h7O);
+            return g.intl.string(g.t.wa9h7F);
         case h.evJ.INVALID_GIFT_REDEMPTION_EXHAUSTED:
-            return g.intl.string(g.t.Iw2TUV);
+            return g.intl.string(g.t.Iw2TUW);
         case h.evJ.INVALID_GIFT_REDEMPTION_OWNED:
-            return g.intl.string(g.t.mdLtb2);
+            return g.intl.string(g.t.mdLtb5);
         case h.evJ.UNKNOWN_GIFT_CODE:
-            return g.intl.string(g.t.roztIi);
+            return g.intl.string(g.t.roztIr);
         case h.evJ.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE:
-            return g.intl.formatToPlainString(g.t["4YTHKy"], {
-                planName: (0, f.M5)(t, m.PremiumTypes.TIER_2)
-                    ? g.intl.string(g.t["lG6a5+"])
-                    : g.intl.string(g.t["FSOz7+"]),
+            return g.intl.formatToPlainString(g.t["4YTHKw"], {
+                planName: (0, f.M5)(t, m.PremiumTypes.TIER_2) ? g.intl.string(g.t.lG6a5x) : g.intl.string(g.t.FSOz78),
             });
         case h.evJ.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_MANAGED:
-            return g.intl.string(g.t["9i1J39"]);
+            return g.intl.string(g.t["9i1J30"]);
         case h.evJ.INVALID_GIFT_REDEMPTION_INVOICE_OPEN:
-            return g.intl.string(g.t.U26WX1);
+            return g.intl.string(g.t["U26WX+"]);
         case h.evJ.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED:
-            return g.intl.string(g.t.ypuSd3);
+            return g.intl.string(g.t.ypuSd8);
         case h.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE:
-            return g.intl.string(g.t.mXMmWF);
+            return g.intl.string(g.t.mXMmWE);
         default:
-            return g.intl.string(g.t["s9+XlJ"]);
+            return g.intl.string(g.t["s9+XlB"]);
     }
 }
 function en(e) {

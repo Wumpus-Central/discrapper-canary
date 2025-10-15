@@ -1,3 +1,0 @@
-a.exports = JSON.parse(
-    '{"+utqa2":["Opción de fondo del regalo: ",[1,"giftStyle"]],"B9XqQk":"Caja","AJ4iio":"Tarta","P5keo6":"Cofre","w84vER":"Café","6dCq/v":"Taza","+HMF8v":"Nitroween","vd1fu7":"Caja festiva","aubYGR":"Tarta festiva","vjxYqa":"Cofre festivo","bHuJLS":"Café festivo","M6cPwM":"Bola de nieve de cristal","GzPel5":"Caja"}',
-);

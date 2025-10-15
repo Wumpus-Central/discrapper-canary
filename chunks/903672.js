@@ -15,8 +15,8 @@ var r = n(951288),
     m = n(216789),
     b = n(695346),
     _ = n(592125),
-    y = n(731290),
-    O = n(944486),
+    O = n(731290),
+    y = n(944486),
     v = n(455199),
     j = n(655354),
     x = n(324081),
@@ -46,14 +46,14 @@ function N(e, t, n) {
 }
 function Z(e) {
     let { onJump: t } = e,
-        n = (0, a.e7)([_.Z, O.Z], () => _.Z.getChannel(O.Z.getChannelId())),
+        n = (0, a.e7)([_.Z, y.Z], () => _.Z.getChannel(y.Z.getChannelId())),
         {
             messages: l,
             hasMore: s,
             loading: h,
             guildFilter: g,
             roleFilter: b,
-            everyoneFilter: y,
+            everyoneFilter: O,
         } = (0, a.cj)([v.ZP], () => ({
             messages: v.ZP.getMentions(),
             hasMore: v.ZP.hasMore,
@@ -65,11 +65,11 @@ function Z(e) {
         j = (0, m.Us)({ location: "RecentMentions" }),
         x = (0, p.Z)(g),
         C = (0, p.Z)(b),
-        P = (0, p.Z)(y);
+        P = (0, p.Z)(O);
     i.useEffect(() => {
         if (!v.ZP.hasLoadedEver) return void N(n, !0);
-        ((null != x && g !== x) || (null != C && b !== C) || (null != P && y !== P)) && N(n, !0);
-    }, [x, g, C, b, P, y, n, !0]),
+        ((null != x && g !== x) || (null != C && b !== C) || (null != P && O !== P)) && N(n, !0);
+    }, [x, g, C, b, P, O, n, !0]),
         (0, d.ZP)(() => {
             (null == l ? void 0 : l.some(f.k5)) && (c.Z.clearMentions(), N(n, !0));
         }),
@@ -100,7 +100,7 @@ function Z(e) {
         renderHeader: Z,
         renderEmptyState: A,
         renderMessage: w,
-        "aria-label": S.intl.string(S.t.jbV6MD),
+        "aria-label": S.intl.string(S.t.jbV6MM),
         listName: "recents",
     });
 }
@@ -122,7 +122,7 @@ function T(e) {
     if (null == t) return null;
     let l = _.Z.getChannel(t.channel_id);
     if (null == l || (0, h._t)(l) || (0, h.ft)(l)) return null;
-    let o = y.Z.didAgree(l.getGuildId()),
+    let o = O.Z.didAgree(l.getGuildId()),
         a = !!(0, h.qF)(l) && !o;
     return (0, r.jsxs)("div", {
         className: I.container,
@@ -134,7 +134,7 @@ function T(e) {
                     null != i
                         ? (0, r.jsx)(s.M0o, {
                               className: I.closeButton,
-                              tooltip: S.intl.string(S.t.cpT0Cg),
+                              tooltip: S.intl.string(S.t.cpT0Cq),
                               color: s.YX$.TERTIARY,
                               icon: (0, r.jsx)(s.Dio, {
                                   size: "xs",
@@ -173,7 +173,7 @@ function T(e) {
 function A() {
     return (0, r.jsx)(C.Z, {
         Icon: s.lOy,
-        header: S.intl.string(S.t["bgDz7+"]),
-        tip: S.intl.string(S.t.NS15vr),
+        header: S.intl.string(S.t.bgDz74),
+        tip: S.intl.string(S.t.NS15vk),
     });
 }

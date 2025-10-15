@@ -14,8 +14,8 @@ var n,
     m = r(388905),
     g = r(17894),
     y = r(124860),
-    b = r(703656),
-    C = r(108427),
+    C = r(703656),
+    b = r(108427),
     O = r(314897),
     j = r(585483),
     w = r(981631),
@@ -37,7 +37,7 @@ function x(e, t, r) {
 u.ZP.initialize();
 class P extends (n = i.PureComponent) {
     componentDidMount() {
-        (0, C.e)("reset_password");
+        (0, b.e)("reset_password");
     }
     renderPasswordReset() {
         let { password: e, error: t, hasCancel: n, working: i } = this.state,
@@ -54,12 +54,12 @@ class P extends (n = i.PureComponent) {
                     src: null == l ? r(26230) : r(935227),
                     className: S.marginBottom20,
                 }),
-                (0, s.jsx)(m.Dx, { children: v.intl.string(v.t["1LV6Ki"]) }),
+                (0, s.jsx)(m.Dx, { children: v.intl.string(v.t["1LV6Kq"]) }),
                 (0, s.jsxs)(m.gO, {
                     className: S.marginTop20,
                     children: [
                         (0, s.jsx)(m.II, {
-                            label: v.intl.string(v.t["8dM4FB"]),
+                            label: v.intl.string(v.t["8dM4FO"]),
                             className: S.marginBottom20,
                             name: "password",
                             value: e,
@@ -72,7 +72,7 @@ class P extends (n = i.PureComponent) {
                         (0, s.jsx)(m.zx, {
                             type: "submit",
                             submitting: i,
-                            children: v.intl.string(v.t["FRep5+"]),
+                            children: v.intl.string(v.t["FRep5/"]),
                         }),
                         n
                             ? (0, s.jsx)(m.zx, {
@@ -80,7 +80,7 @@ class P extends (n = i.PureComponent) {
                                   onClick: this.handleGoToLogin,
                                   submitting: i,
                                   color: m.zx.Colors.PRIMARY,
-                                  children: v.intl.string(v.t["ETE/oK"]),
+                                  children: v.intl.string(v.t["ETE/oC"]),
                               })
                             : null,
                     ],
@@ -128,7 +128,7 @@ class P extends (n = i.PureComponent) {
                 }),
                 (0, s.jsx)(m.zx, {
                     onClick: this.handleOpenApp,
-                    children: v.intl.string(v.t.uJWIj4),
+                    children: v.intl.string(v.t["uJWIj/"]),
                 }),
             ],
         });
@@ -147,7 +147,7 @@ class P extends (n = i.PureComponent) {
                 let { location: t, onLoginSuccess: r, source: n, resetToken: s } = this.props,
                     { password: i, error: a } = this.state;
                 if ((e.preventDefault(), 0 === i.length)) {
-                    this.setState({ error: v.intl.string(v.t.R98xDw) }), j.S.dispatch(w.CkL.WAVE_EMPHASIZE);
+                    this.setState({ error: v.intl.string(v.t.R98xD5) }), j.S.dispatch(w.CkL.WAVE_EMPHASIZE);
                     return;
                 }
                 null != a && this.setState({ error: null });
@@ -251,8 +251,8 @@ class P extends (n = i.PureComponent) {
     }
 }
 x(P, "defaultProps", {
-    transitionTo: b.uL,
-    replaceWith: b.dL,
+    transitionTo: C.uL,
+    replaceWith: C.dL,
 });
 let N = function (e) {
     let t = (0, u.cj)([O.default], () => ({

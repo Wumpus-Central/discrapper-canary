@@ -23,20 +23,20 @@ function b(e, t) {
     if (t) return i;
     switch (r) {
         case m.rV.MONTH:
-            return g.intl.formatToPlainString(g.t.AbOLNj, { price: i });
+            return g.intl.formatToPlainString(g.t.AbOLNu, { price: i });
         case m.rV.YEAR:
-            return g.intl.formatToPlainString(g.t.rS8FAw, { price: i });
+            return g.intl.formatToPlainString(g.t["rS8FA+"], { price: i });
     }
 }
 let y = (e) => {
         let { isTier0: t, discountAmount: n } = e,
             i = (0, h.N)(),
             s = null != i && i.trial_id === m.a7,
-            l = g.intl.string(g.t.IBYG5e);
+            l = g.intl.string(g.t.IBYG5U);
         return (
             void 0 !== n
-                ? (l = g.intl.formatToPlainString(g.t.iiLbvr, { percent: n }))
-                : s && (l = g.intl.string(g.t.gtNqJS)),
+                ? (l = g.intl.formatToPlainString(g.t.iiLbvu, { percent: n }))
+                : s && (l = g.intl.string(g.t.gtNqJQ)),
             (0, r.jsx)("div", {
                 className: E.trialBadgeContainer,
                 children: (0, r.jsx)(o.Text, {

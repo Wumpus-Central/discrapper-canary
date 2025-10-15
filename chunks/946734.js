@@ -15,8 +15,8 @@ var r = n(951288),
     m = n(271383),
     b = n(430824),
     _ = n(594174),
-    y = n(251625),
-    O = n(823379),
+    O = n(251625),
+    y = n(823379),
     v = n(665149),
     j = n(228168),
     x = n(388032),
@@ -79,7 +79,7 @@ class S {
             E(
                 this,
                 "generateNicknameGuildPairs",
-                (0, y.oH)((e) => {
+                (0, O.oH)((e) => {
                     var t;
                     return o()(m.ZP.getNicknameGuildsMapping(null != (t = null == e ? void 0 : e.id) ? t : this.userId))
                         .toPairs()
@@ -92,7 +92,7 @@ class S {
                                         var t;
                                         return null == (t = b.Z.getGuild(e)) ? void 0 : t.name;
                                     })
-                                    .filter(O.lm),
+                                    .filter(y.lm),
                             ];
                         })
                         .filter((t) => {
@@ -108,7 +108,7 @@ class S {
                     {
                         asContainer: !0,
                         tag: "span",
-                        text: x.intl.string(x.t.UTjREx),
+                        text: x.intl.string(x.t["UTjRE/"]),
                         position: "bottom",
                         children: (0, r.jsx)(c.P3F, {
                             className: C.moreAvatars,
@@ -169,13 +169,13 @@ function I(e) {
             analyticsLocations: g,
             channelId: t.id,
         }),
-        [y, O] = i.useState(!1),
+        [O, y] = i.useState(!1),
         j = i.useCallback(() => {
-            O(!0);
-        }, [O]),
+            y(!0);
+        }, [y]),
         E = i.useCallback(() => {
-            O(!1);
-        }, [O]);
+            y(!1);
+        }, [y]);
     return 0 === m.getNicknameGuildPairs().length && 0 === l.length
         ? (0, r.jsx)("div", { className: C.spacer })
         : (0, r.jsxs)(p.Gt, {
@@ -183,7 +183,7 @@ function I(e) {
               children: [
                   (0, r.jsx)(v.iz, { className: C.divider }),
                   (0, r.jsx)(c.IGR, {
-                      text: x.intl.string(x.t.l1QVfn),
+                      text: x.intl.string(x.t.l1QVfj),
                       disableColor: !0,
                       className: C.akaBadge,
                   }),
@@ -228,7 +228,7 @@ function I(e) {
                             delay: 0,
                             onTooltipShow: j,
                             onTooltipHide: E,
-                            children: m.renderNicknamePairs(!y),
+                            children: m.renderNicknamePairs(!O),
                         })
                       : null,
               ],

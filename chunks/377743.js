@@ -18,8 +18,8 @@ function h(e) {
     return (0, r.jsx)(a.Z, {
         guild: t,
         onDismissed: () => n(u.L.UNKNOWN),
-        cta: p.intl.string(p.t["oPAx7+"]),
-        message: p.intl.format(p.t.AcaNY2, { boostsNeeded: h }),
+        cta: p.intl.string(p.t.oPAx73),
+        message: p.intl.format(p.t.AcaNYw, { boostsNeeded: h }),
         type: c.vID.GUILD_BANNER,
         image: f,
         onClick: () =>

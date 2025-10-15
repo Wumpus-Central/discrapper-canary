@@ -5,9 +5,9 @@ var r = n(106351),
     a = n(82554),
     o = n(388032);
 let s = {
-    getTitle: () => o.intl.string(o.t.vJOqMD),
-    getDisabledTitle: () => o.intl.string(o.t.B5ZvY2),
-    getDescription: () => o.intl.string(o.t["43UEUl"]),
+    getTitle: () => o.intl.string(o.t.vJOqMB),
+    getDisabledTitle: () => o.intl.string(o.t["B5ZvY+"]),
+    getDescription: () => o.intl.string(o.t["43UEUh"]),
     eligibleReportSubtypes: [a.i5.SUB_SPAM],
     eligibleChannelTypes: [r.d.DM, r.d.GROUP_DM],
     onApply: () => l.Xr.updateSetting(i.Xr.NON_FRIENDS),

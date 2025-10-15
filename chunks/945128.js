@@ -3,8 +3,8 @@ var a = n(951288),
     r = n(647438),
     i = n(481060),
     l = n(118589),
-    s = n(241945),
-    o = n(388032),
+    o = n(424709),
+    s = n(388032),
     c = n(58571);
 let d = (e) => {
     let { onSubmit: t, disabled: n } = e,
@@ -17,20 +17,20 @@ let d = (e) => {
             (0, a.jsx)(i.Heading, {
                 variant: "heading-lg/bold",
                 className: c.title,
-                children: o.intl.string(s.default.v52itr),
+                children: s.intl.string(o.default.v52itt),
             }),
             (0, a.jsx)(i.Text, {
                 variant: "text-md/normal",
                 color: "text-muted",
                 className: c.description,
-                children: o.intl.string(s.default["5am8Dw"]),
+                children: s.intl.string(o.default["5am8D3"]),
             }),
             (0, a.jsx)(i.Kqy, {
                 direction: "horizontal",
                 justify: "end",
                 children: (0, a.jsx)(i.Button, {
                     variant: "primary",
-                    text: o.intl.string(s.default.GDsHl5),
+                    text: s.intl.string(o.default["GDsHl+"]),
                     onClick: d,
                     disabled: n,
                 }),

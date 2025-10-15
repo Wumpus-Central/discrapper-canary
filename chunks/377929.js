@@ -71,7 +71,7 @@ function E(e) {
     function s() {
         l((e) => !e);
     }
-    let c = C.intl.string(C.t.UKOtz8);
+    let c = C.intl.string(C.t["UKOtz+"]);
     return (0, r.jsx)(o.yRy, {
         targetElementRef: a,
         shouldShow: n,
@@ -107,11 +107,11 @@ function Z(e) {
         S = (0, m.Z)(t),
         E = (0, _.Z)({
             id: t.id,
-            label: C.intl.string(C.t.DQ797u),
+            label: C.intl.string(C.t.DQ797g),
         }),
         Z = (0, d.Z)(t),
-        T = (0, u.Z)(t),
-        P = (0, h.Z)(t, "Toolbar Overflow"),
+        P = (0, u.Z)(t),
+        T = (0, h.Z)(t, "Toolbar Overflow"),
         N = (0, g.Z)(t),
         R = (0, p.Z)(t),
         w = (0, y.Z)(t),
@@ -120,11 +120,11 @@ function Z(e) {
     return (0, r.jsxs)(o.v2r, {
         navId: "thread-context",
         onClose: n,
-        "aria-label": C.intl.string(C.t["1NBjqa"]),
+        "aria-label": C.intl.string(C.t["1NBjqb"]),
         onSelect: i,
         children: [
             (0, r.jsxs)(o.kSQ, {
-                children: [P, R],
+                children: [T, R],
             }),
             (0, r.jsxs)(o.kSQ, {
                 children: [
@@ -143,7 +143,7 @@ function Z(e) {
                 ],
             }),
             (0, r.jsxs)(o.kSQ, {
-                children: [w, l, j, T],
+                children: [w, l, j, P],
             }),
             (0, r.jsxs)(o.kSQ, {
                 children: [Z, E],

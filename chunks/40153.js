@@ -54,7 +54,7 @@ function _(e, t) {
         }
     );
 }
-function y(e) {
+function O(e) {
     let { name: t, targetNode: n, combine: l, below: o } = e,
         a = i.useMemo(() => _([p.eD.GUILD, p.eD.FOLDER], n, o, l), [n, o, l]),
         [{ canDrop: s, isOver: u }, d] = (0, c.L)(a),
@@ -66,11 +66,11 @@ function y(e) {
         ref: (e) => {
             (h.current = e), d(e);
         },
-        "data-dnd-name": g.intl.formatToPlainString(g.t.A5aDw8, { itemName: t }),
+        "data-dnd-name": g.intl.formatToPlainString(g.t["A5aDw+"], { itemName: t }),
         className: m.target,
     });
 }
-function O(e) {
+function y(e) {
     let { name: t, targetNode: n, onDragOverChanged: l } = e,
         [{ canDrop: a, isOver: s }, u] = (0, c.L)(() => _([p.eD.GUILD], n, !0, !0));
     i.useEffect(() => {
@@ -90,7 +90,7 @@ function O(e) {
             ref: (e) => {
                 (d.current = e), u(e);
             },
-            "data-dnd-name": g.intl.formatToPlainString(g.t.qiQ0QE, { itemName: t }),
+            "data-dnd-name": g.intl.formatToPlainString(g.t.qiQ0QI, { itemName: t }),
             className: o()(m.centerTarget, {}),
         }),
     });
@@ -102,13 +102,13 @@ let v = i.memo(function (e) {
         className: m.wrapper,
         "aria-hidden": !0,
         children: [
-            (0, r.jsx)(y, {
+            (0, r.jsx)(O, {
                 name: t,
                 targetNode: n,
                 below: l,
             }),
             a
-                ? (0, r.jsx)(O, {
+                ? (0, r.jsx)(y, {
                       name: t,
                       targetNode: n,
                       onDragOverChanged: o,

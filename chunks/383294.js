@@ -116,7 +116,7 @@ function T(e) {
                             (0, r.jsx)(l.Heading, {
                                 variant: "heading-lg/medium",
                                 className: O.title,
-                                children: x.intl.format(x.t["8l9H0t"], {
+                                children: x.intl.format(x.t["8l9H0s"], {
                                     balanceHook: () =>
                                         (0, r.jsxs)("span", {
                                             className: O.orbsBalance,
@@ -133,7 +133,7 @@ function T(e) {
                             (0, r.jsx)(l.Text, {
                                 variant: "text-sm/normal",
                                 className: O.subtext,
-                                children: x.intl.string(x.t.EDUOIC),
+                                children: x.intl.string(x.t.EDUOIH),
                             }),
                             (0, r.jsxs)(l.ButtonGroup, {
                                 className: O.buttonContainer,
@@ -144,13 +144,13 @@ function T(e) {
                                     (0, r.jsx)(l.Button, {
                                         variant: "primary",
                                         fullWidth: !0,
-                                        text: x.intl.string(x.t.WYchdX),
+                                        text: x.intl.string(x.t.WYchde),
                                         onClick: a,
                                     }),
                                     (0, r.jsx)(l.Button, {
                                         variant: "secondary",
                                         fullWidth: !0,
-                                        text: x.intl.string(x.t["7kTAgI"]),
+                                        text: x.intl.string(x.t["7kTAgJ"]),
                                         onClick: () => window.open(j.EYA.PAID_TERMS_ORBS),
                                     }),
                                 ],
@@ -171,12 +171,12 @@ function T(e) {
                                     (0, r.jsx)(l.Heading, {
                                         variant: "heading-xl/medium",
                                         className: O.errorHeader,
-                                        children: x.intl.string(x.t.tWYWJy),
+                                        children: x.intl.string(x.t["tWYWJ+"]),
                                     }),
                                     (0, r.jsx)(l.Text, {
                                         variant: "text-md/normal",
                                         color: "text-muted",
-                                        children: x.intl.string(x.t.JNQRU1),
+                                        children: x.intl.string(x.t.JNQRU4),
                                     }),
                                 ],
                             }),
@@ -185,7 +185,7 @@ function T(e) {
                                 children: (0, r.jsx)(l.Button, {
                                     variant: "primary",
                                     fullWidth: !0,
-                                    text: x.intl.string(x.t.cpT0Cg),
+                                    text: x.intl.string(x.t.cpT0Cq),
                                     onClick: o,
                                 }),
                             }),

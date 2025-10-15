@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -12,10 +12,10 @@ var r = n(951288),
     p = n(981631),
     _ = n(388032),
     m = n(606630);
-function b(e) {
+function g(e) {
     let { errorMessage: t, className: n, avError: l } = e,
-        b = "",
-        { text: E, node: g } = (function (e) {
+        g = "",
+        { text: b, node: E } = (function (e) {
             var t;
             if (null == e)
                 return {
@@ -23,8 +23,8 @@ function b(e) {
                     node: null,
                 };
             let n = null == (t = (0, s.hp)(e)) ? void 0 : t.errorCode,
-                i = _.intl.formatToPlainString(_.t["ejOT9/"], { errorCode: n }),
-                l = _.intl.format(_.t.If5Q0t, {
+                i = _.intl.formatToPlainString(_.t.ejOT95, { errorCode: n }),
+                l = _.intl.format(_.t.If5Q0h, {
                     errorCode: n,
                     helpDeskURL: d.Z.getArticleURL(p.BhN.AV_ERROR_CODES),
                 }),
@@ -38,7 +38,7 @@ function b(e) {
                     : l,
             };
         })(l);
-    null != t && null != E ? (b = "".concat(t, " ").concat(E)) : null != t && (b = t);
+    null != t && null != b ? (g = "".concat(t, " ").concat(b)) : null != t && (g = t);
     let [v] = i.useState(new o.V7()),
         [h, S] = i.useState(!1);
     function y() {
@@ -58,19 +58,19 @@ function b(e) {
                 onMouseLeave: y,
                 children: [
                     t,
-                    null != g &&
+                    null != E &&
                         (0, r.jsx)(c.Text, {
                             variant: "text-sm/semibold",
                             color: "text-muted",
                             className: m.errorCodeMessage,
-                            children: g,
+                            children: E,
                         }),
                 ],
             }),
         }),
         position: "bottom",
         color: c.r6K.GREY,
-        "aria-label": b,
+        "aria-label": g,
         children: (e) => {
             var t, i;
             return (0, r.jsx)(
@@ -113,7 +113,7 @@ function b(e) {
                                 width: 20,
                                 height: 20,
                                 color: "currentColor",
-                                "aria-label": b,
+                                "aria-label": g,
                                 className: m.warningIcon,
                             }),
                         }),

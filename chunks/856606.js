@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => ee,
-    n: () => J,
+    n: () => Y,
 }),
     n(539854),
     n(415506);
@@ -27,8 +27,8 @@ var i = n(951288),
     S = n(627050),
     N = n(146085),
     O = n(601964),
-    E = n(598077),
-    Z = n(277053),
+    Z = n(598077),
+    E = n(277053),
     w = n(388610),
     T = n(271383),
     _ = n(485386),
@@ -42,8 +42,8 @@ var i = n(951288),
     k = n(233608),
     B = n(700785),
     H = n(51144),
-    V = n(257017),
-    U = n(188857),
+    U = n(257017),
+    V = n(188857),
     G = n(981631),
     W = n(388032),
     F = n(198750);
@@ -90,26 +90,26 @@ function q(e, t) {
         e
     );
 }
-let J = o.ZP.connectStores([Z.Z, w.Z], () => {
+let Y = o.ZP.connectStores([E.Z, w.Z], () => {
     let e = w.Z.getChannel();
     return {
-        submitting: Z.Z.formState === G.QZA.SUBMITTING,
+        submitting: E.Z.formState === G.QZA.SUBMITTING,
         onReset() {
             (0, g.S1)();
         },
         onSave() {
             if (null == e) return;
-            let t = Z.Z.editedPermissionIds.reduce((e, t) => {
-                let n = Z.Z.getPermissionOverwrite(t);
+            let t = E.Z.editedPermissionIds.reduce((e, t) => {
+                let n = E.Z.getPermissionOverwrite(t);
                 return null != n && e.push(n), e;
             }, []);
             (0, g.hw)(e.id, t);
         },
     };
 })(b.Z);
-function Y(e) {
+function X(e) {
     let { overwrite: t } = e,
-        n = (0, o.e7)([Z.Z], () => Z.Z.channel),
+        n = (0, o.e7)([E.Z], () => E.Z.channel),
         l = (0, o.e7)([R.Z], () => (null != n ? R.Z.getGuild(n.getGuildId()) : null)),
         r = (0, o.e7)([_.Z], () => (null != l && null != t && t.type === x.BN.ROLE ? _.Z.getRole(l.id, t.id) : void 0)),
         s = S.N.useExperiment({
@@ -156,24 +156,24 @@ function Y(e) {
                         null != n && (e = n.name);
                     }
                 }
-                V.X(e);
+                U.X(e);
             }
         },
         j = (e) => {
             let t = P.Z.can(G.Plq.ADMINISTRATOR, l) || P.Z.can(G.Plq.MANAGE_ROLES, n, void 0, void 0, !0);
             return n.isGuildStageVoice() && N.xS.has(e)
-                ? W.intl.string(W.t.bTS5lZ)
+                ? W.intl.string(W.t.bTS5lf)
                 : !((!a.fS(e, G.Plq.MANAGE_ROLES) || t) && (null == e || P.Z.can(e, l) || t)) &&
-                      W.intl.string(W.t.nOtPMD);
+                      W.intl.string(W.t.nOtPMM);
         },
         v = t.id === c,
         y = n.isForumLikeChannel() && a.e$(t.deny, G.Plq.SEND_MESSAGES),
         O = a.e$(t.deny, G.Plq.SEND_MESSAGES),
-        E = a.e$(t.deny, G.Plq.READ_MESSAGE_HISTORY),
+        Z = a.e$(t.deny, G.Plq.READ_MESSAGE_HISTORY),
         w = k.Z.generateChannelPermissionSpec(c, n, v, {
             createPostsDisabled: y,
             sendMessagesDisabled: O,
-            readMessageHistoryDisabled: E,
+            readMessageHistoryDisabled: Z,
             inGameMentionsExperiment: s,
         });
     return (0, i.jsxs)(C.ZP.Content, {
@@ -197,13 +197,13 @@ function Y(e) {
                 ? null
                 : (0, i.jsx)(d.Button, {
                       variant: "critical-secondary",
-                      text: W.intl.format(W.t.txPV7u, { name: m() }),
+                      text: W.intl.format(W.t.txPV7k, { name: m() }),
                       onClick: () => {
                           let e = m();
                           u.Z.show({
-                              title: W.intl.string(W.t.GuPYQE),
+                              title: W.intl.string(W.t.GuPYQB),
                               body: W.intl.format(W.t.xERCnZ, { name: e }),
-                              cancelText: W.intl.string(W.t["ETE/oK"]),
+                              cancelText: W.intl.string(W.t["ETE/oC"]),
                               onConfirm: () => h.Z.clearPermissionOverwrite(p, t.id),
                           });
                       },
@@ -211,7 +211,7 @@ function Y(e) {
         ],
     });
 }
-function X(e) {
+function J(e) {
     let { guildId: t, channelId: n, user: l } = e,
         r = l.getAvatarURL(t, 32),
         s = D.ZP.getNickname(t, n, l),
@@ -271,10 +271,10 @@ function K(e) {
         d = (0, o.e7)([_.Z], () => _.Z.getSortedRoles(t.id)),
         u = (0, o.Wu)([T.ZP], () => T.ZP.getMemberIds(t.id));
     return (0, i.jsx)(y.Z, {
-        label: W.intl.string(W.t.lT5Ztr),
-        placeholder: W.intl.string(W.t.V2pZRk),
-        "aria-label": W.intl.string(W.t["Uvt+p6"]),
-        sections: [W.intl.string(W.t.LPJmLy), W.intl.string(W.t["9Oq93t"])],
+        label: W.intl.string(W.t.lT5Zth),
+        placeholder: W.intl.string(W.t.V2pZRh),
+        "aria-label": W.intl.string(W.t["Uvt+p/"]),
+        sections: [W.intl.string(W.t["LPJmL/"]), W.intl.string(W.t["9Oq93m"])],
         onRenderResult: (e) => {
             if (Q(e)) {
                 let t;
@@ -286,8 +286,8 @@ function K(e) {
                     })
                 );
             }
-            if (e instanceof E.default)
-                return (0, i.jsx)(X, {
+            if (e instanceof Z.default)
+                return (0, i.jsx)(J, {
                     guildId: t.id,
                     channelId: n.id,
                     user: e,
@@ -306,7 +306,7 @@ function K(e) {
             M.Z.requestMembers(t.id, e, 20);
         },
         onSelect: (e) => {
-            null != e && (Q(e) ? a(e.id, x.BN.ROLE) : e instanceof E.default && a(e.id, x.BN.MEMBER));
+            null != e && (Q(e) ? a(e.id, x.BN.ROLE) : e instanceof Z.default && a(e.id, x.BN.MEMBER));
         },
         onClose: r,
         position: c,
@@ -314,7 +314,7 @@ function K(e) {
 }
 function $() {
     let e = l.useRef(null),
-        { channel: t, permissionOverwrites: r, selectedOverwriteId: a } = (0, o.cj)([Z.Z], () => Z.Z),
+        { channel: t, permissionOverwrites: r, selectedOverwriteId: a } = (0, o.cj)([E.Z], () => E.Z),
         f = null == t ? void 0 : t.getGuildId(),
         { guild: b, sortedGuildRoles: y } = (0, o.cj)([R.Z, _.Z], () => {
             let e = null != f ? R.Z.getGuild(f) : void 0,
@@ -324,9 +324,9 @@ function $() {
                 sortedGuildRoles: t,
             };
         }, [f]),
-        S = (0, U.Z)(f, r),
+        S = (0, V.Z)(f, r),
         N = (0, j.ZP)(),
-        E = (0, o.e7)([v.Z], () => v.Z.roleStyle),
+        Z = (0, o.e7)([v.Z], () => v.Z.roleStyle),
         w = l.useCallback(
             (e, l) => {
                 if (null == t) return null;
@@ -345,9 +345,9 @@ function $() {
                                     ? void 0
                                     : () => {
                                           u.Z.show({
-                                              title: W.intl.string(W.t.GuPYQE),
+                                              title: W.intl.string(W.t.GuPYQB),
                                               body: W.intl.format(W.t.xERCnZ, { name: s }),
-                                              cancelText: W.intl.string(W.t["ETE/oK"]),
+                                              cancelText: W.intl.string(W.t["ETE/oC"]),
                                               onConfirm: () => h.Z.clearPermissionOverwrite(t.id, e),
                                           });
                                       },
@@ -388,7 +388,7 @@ function $() {
                     m.Z,
                     {
                         theme: N,
-                        roleStyle: E,
+                        roleStyle: Z,
                         id: e.id,
                         role: e,
                         guild: b,
@@ -415,7 +415,7 @@ function $() {
                         id: e.id,
                         guild: b,
                         theme: N,
-                        roleStyle: E,
+                        roleStyle: Z,
                         "aria-label": H.ZP.getUserTag(e, { decoration: "never" }),
                         onContextMenu: (t) =>
                             w(t, {
@@ -467,9 +467,9 @@ function $() {
                                         children: [
                                             (0, i.jsxs)("span", {
                                                 children: [
-                                                    W.intl.string(W.t.LPJmLy),
+                                                    W.intl.string(W.t["LPJmL/"]),
                                                     "/",
-                                                    W.intl.string(W.t["9Oq93t"]),
+                                                    W.intl.string(W.t["9Oq93m"]),
                                                 ],
                                             }),
                                             (0, i.jsx)("img", {
@@ -499,7 +499,7 @@ function $() {
                             children: (0, i.jsx)(d.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-link",
-                                children: W.intl.string(W.t["pfoA8/"]),
+                                children: W.intl.string(W.t.pfoA83),
                             }),
                         }),
                     ],
@@ -509,7 +509,7 @@ function $() {
     });
 }
 function ee() {
-    let { channel: e, permissionOverwrites: t, selectedOverwriteId: n } = (0, o.cj)([Z.Z], () => Z.Z);
+    let { channel: e, permissionOverwrites: t, selectedOverwriteId: n } = (0, o.cj)([E.Z], () => E.Z);
     if (
         null == (0, o.e7)([R.Z], () => (null != e ? R.Z.getGuild(e.getGuildId()) : null)) ||
         null == e ||
@@ -520,6 +520,6 @@ function ee() {
     let l = t[n];
     return (0, i.jsxs)(C.ZP, {
         className: F.container,
-        children: [(0, i.jsx)($, {}), (0, i.jsx)(Y, { overwrite: l })],
+        children: [(0, i.jsx)($, {}), (0, i.jsx)(X, { overwrite: l })],
     });
 }

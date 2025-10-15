@@ -59,20 +59,20 @@ function g(e, t) {
     }
     return l;
 }
-function p(e) {
+function j(e) {
     var t = (function (e, t) {
-        if ("object" !== j(e) || null === e) return e;
+        if ("object" !== p(e) || null === e) return e;
         var r = e[Symbol.toPrimitive];
         if (void 0 !== r) {
             var n = r.call(e, t || "default");
-            if ("object" !== j(n)) return n;
+            if ("object" !== p(n)) return n;
             throw TypeError("@@toPrimitive must return a primitive value.");
         }
         return ("string" === t ? String : Number)(e);
     })(e, "string");
-    return "symbol" === j(t) ? t : String(t);
+    return "symbol" === p(t) ? t : String(t);
 }
-function j(e) {
+function p(e) {
     return e && "undefined" != typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e;
 }
 let S = (0, d.hQ)(),
@@ -118,9 +118,9 @@ let C = (e) => {
 function P(e) {
     var t, r;
     let { id: o, sectionIndex: u, rowIndex: d, rows: m, children: h, showCheckbox: w, showRowLabel: g } = e,
-        p = (0, s.JA)(o),
+        j = (0, s.JA)(o),
         {
-            selectedSection: j,
+            selectedSection: p,
             selectedRow: S,
             onSelectionChange: v,
             pendingAdditions: R,
@@ -133,13 +133,13 @@ function P(e) {
         I = C.disabled || (!L && k);
     return (0, l.createElement)(
         c.P3F,
-        ((t = y({}, p)),
+        ((t = y({}, j)),
         (r = r =
             {
                 id: o,
                 key: P,
                 role: "option",
-                className: i()(f.clickableRow, { [f.selectedRow]: j === u && S === d }),
+                className: i()(f.clickableRow, { [f.selectedRow]: p === u && S === d }),
                 onClick: (e) => {
                     I || (e.preventDefault(), C.rowType !== b.aC.EMPTY_STATE && T(C));
                 },
@@ -356,7 +356,7 @@ let L = (e) => {
                     maxPendingRows: h,
                 } = e,
                 w = l.useRef(null),
-                [f, j] = l.useState({
+                [f, p] = l.useState({
                     section: 0,
                     row: -1,
                 });
@@ -366,7 +366,7 @@ let L = (e) => {
                 a((t) => {
                     if (r in t) {
                         let { [r]: e } = t;
-                        return g(t, [r].map(p));
+                        return g(t, [r].map(j));
                     }
                     {
                         let n = x(e);
@@ -405,7 +405,7 @@ let L = (e) => {
                     onSelectionChange: function (e, t) {
                         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
                         if (
-                            (j((r) =>
+                            (p((r) =>
                                 r.section === e && r.row === t
                                     ? r
                                     : {
@@ -451,7 +451,7 @@ let L = (e) => {
                     onRemovePendingAddition: function (e) {
                         a((t) => {
                             let { [e]: r } = t;
-                            return g(t, [e].map(p));
+                            return g(t, [e].map(j));
                         });
                     },
                 },
@@ -475,7 +475,7 @@ let L = (e) => {
                     users: y,
                     guilds: g,
                 } = O(),
-                { keys: p, tags: j } = l.useMemo(() => {
+                { keys: j, tags: p } = l.useMemo(() => {
                     let e = Object.keys(c),
                         t = e.map((e) => c[e].display);
                     return {
@@ -497,9 +497,9 @@ let L = (e) => {
                 selectedRow: a,
                 onSelectionChange: d,
                 onSelect: x,
-                tags: j,
+                tags: p,
                 sections: E,
-                onRemoveTag: (e) => b(p[e]),
+                onRemoveTag: (e) => b(j[e]),
                 placeholder: t,
                 focusAfterReady: r,
                 isReady: o,
@@ -511,13 +511,13 @@ let L = (e) => {
             let { section: t } = e;
             switch (t) {
                 case b.m$.ROLES:
-                    return (0, n.jsx)(C, { title: w.intl.string(w.t.LPJmLy) });
+                    return (0, n.jsx)(C, { title: w.intl.string(w.t["LPJmL/"]) });
                 case b.m$.MEMBERS:
-                    return (0, n.jsx)(C, { title: w.intl.string(w.t["9Oq93t"]) });
+                    return (0, n.jsx)(C, { title: w.intl.string(w.t["9Oq93m"]) });
                 case b.m$.USERS:
-                    return (0, n.jsx)(C, { title: w.intl.string(w.t.nqDUBQ) });
+                    return (0, n.jsx)(C, { title: w.intl.string(w.t.nqDUBX) });
                 case b.m$.GUILDS:
-                    return (0, n.jsx)(C, { title: w.intl.string(w.t["7hB4kp"]) });
+                    return (0, n.jsx)(C, { title: w.intl.string(w.t["7hB4kg"]) });
                 default:
                     return null;
             }

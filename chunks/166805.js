@@ -54,7 +54,7 @@ function _(e) {
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(o.rsf, {
-                      label: j.intl.string(j.t.NR6hub),
+                      label: j.intl.string(j.t.NR6huS),
                       checked: y,
                       onChange: Z,
                       disabled: S,
@@ -64,15 +64,15 @@ function _(e) {
                             variant: "text-sm/normal",
                             color: "text-secondary",
                             className: v.subtext,
-                            children: j.intl.string(j.t.zCGuJy),
+                            children: j.intl.string(j.t["zCGuJ+"]),
                         })
                       : null,
                   y
                       ? (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(x.m, {
-                                    label: j.intl.string(j.t.LUo0Q0),
-                                    description: j.intl.string(j.t.LxVR9P),
+                                    label: j.intl.string(j.t.LUo0Q8),
+                                    description: j.intl.string(j.t.LxVR9A),
                                     guildId: t,
                                     widgetEnabled: y,
                                     widgetChannelId: N,
@@ -84,14 +84,14 @@ function _(e) {
                                         (0, r.jsx)("div", {
                                             className: v.column,
                                             children: (0, r.jsx)(a.gNt, {
-                                                label: j.intl.string(j.t.TRyLUl),
+                                                label: j.intl.string(j.t.TRyLUh),
                                                 children: (0, r.jsx)(d.Z, { value: t }),
                                             }),
                                         }),
                                         (0, r.jsx)("div", {
                                             className: v.column,
                                             children: (0, r.jsx)(a.gNt, {
-                                                label: j.intl.string(j.t.VECJcH),
+                                                label: j.intl.string(j.t.VECJcK),
                                                 children: (0, r.jsx)(d.Z, { value: E }),
                                             }),
                                         }),
@@ -104,8 +104,8 @@ function _(e) {
                                         (0, r.jsx)("div", {
                                             className: v.column,
                                             children: (0, r.jsx)(a.gNt, {
-                                                label: j.intl.string(j.t.XVGbn5),
-                                                description: j.intl.string(j.t["+baN19"]),
+                                                label: j.intl.string(j.t.XVGbn1),
+                                                description: j.intl.string(j.t["+baN11"]),
                                                 children: (0, r.jsx)(d.Z, { value: I }),
                                             }),
                                         }),
@@ -128,8 +128,8 @@ function C(e) {
     let { guildId: t } = e,
         n = (0, s.e7)([m.Z], () => m.Z.enabled);
     return (0, r.jsx)(o.C3N, {
-        label: j.intl.string(j.t.qlhNb2),
-        description: j.intl.string(j.t["dNn/1t"]),
+        label: j.intl.string(j.t["qlhNb+"]),
+        description: j.intl.string(j.t["dNn/1i"]),
         children: n ? (0, r.jsx)(c.Z, {}) : (0, r.jsx)(_, { guildId: t }),
     });
 }

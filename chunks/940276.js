@@ -8,7 +8,7 @@ var r = n(951288),
     c = n(797670),
     u = n(304432),
     d = n(981631),
-    f = n(933554),
+    f = n(951917),
     _ = n(388032),
     p = n(378976);
 function h(e) {
@@ -26,7 +26,7 @@ function h(e) {
             }),
             (0, r.jsx)(o.rsf, {
                 label: t.name,
-                description: _.intl.format(_.t.zRl6XV, { count: l }),
+                description: _.intl.format(_.t.zRl6XR, { count: null != l ? l : 0 }),
                 checked: !n,
                 onChange: (e) =>
                     i({
@@ -85,8 +85,8 @@ let m = function () {
                                 activity_restricted_guild_count: b,
                                 total_guild_count: y,
                             }),
-                        placeholder: _.intl.string(_.t["H+nRY2"]),
-                        "aria-label": _.intl.string(_.t["5h0QOD"]),
+                        placeholder: _.intl.string(_.t["H+nRYw"]),
+                        "aria-label": _.intl.string(_.t["5h0QOP"]),
                         inputProps: {
                             "aria-controls": v,
                             "aria-expanded": !0,
@@ -101,15 +101,15 @@ let m = function () {
                                     variant: "text-only",
                                     options: [
                                         {
-                                            label: _.intl.string(_.t.STMPJy),
+                                            label: _.intl.string(_.t.STMPJ2),
                                             value: u.W.SERVER_ORDER,
                                         },
                                         {
-                                            label: _.intl.string(_.t.CbaapK),
+                                            label: _.intl.string(_.t.CbaapP),
                                             value: u.W.RECENTLY_JOINED,
                                         },
                                         {
-                                            label: _.intl.string(f.default.ZI51JS),
+                                            label: _.intl.string(f.default.ZI51JZ),
                                             value: u.W.ACTIVITY_SHARING_ON,
                                         },
                                         {
@@ -132,7 +132,7 @@ let m = function () {
                                 (0, r.jsx)(o.Avr, {
                                     variant: "primary",
                                     onClick: m,
-                                    text: c ? _.intl.string(_.t["7lxcLC"]) : _.intl.string(_.t.zh6UEh),
+                                    text: c ? _.intl.string(_.t["7lxcLO"]) : _.intl.string(_.t.zh6UEs),
                                 }),
                             ],
                         }),
@@ -141,12 +141,12 @@ let m = function () {
             (0, r.jsx)(o.nn4, {
                 "aria-live": "polite",
                 role: "region",
-                children: _.intl.format(f.default.EvzDfX, { count: e.length }),
+                children: _.intl.format(f.default.EvzDff, { count: e.length }),
             }),
             (0, r.jsxs)("ul", {
                 className: p.guildsList,
                 id: v,
-                "aria-label": _.intl.string(_.t["7hB4kp"]),
+                "aria-label": _.intl.string(_.t["7hB4kg"]),
                 children: [
                     0 === e.length &&
                         (0, r.jsx)("div", {
@@ -154,7 +154,7 @@ let m = function () {
                             children: (0, r.jsx)(o.Text, {
                                 className: p.noResultsText,
                                 variant: "text-lg/medium",
-                                children: _.intl.string(_.t["Xe+fJC"]),
+                                children: _.intl.string(_.t["Xe+fJM"]),
                             }),
                         }),
                     e.map((e) =>

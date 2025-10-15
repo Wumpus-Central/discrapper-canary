@@ -24,7 +24,7 @@ var r = t(951288),
     I = t(329871),
     N = t(110381),
     S = t(921944),
-    P = t(948208),
+    P = t(470658),
     T = t(388032),
     w = t(500104);
 function E(e) {
@@ -58,7 +58,7 @@ function k(e) {
         E(
             {
                 fullWidth: !0,
-                text: T.intl.string(P.default.TMzy7e),
+                text: T.intl.string(P.default.TMzy7d),
                 variant: "secondary",
             },
             e,
@@ -71,7 +71,7 @@ function Z(e) {
         E(
             {
                 fullWidth: !0,
-                text: T.intl.string(P.default.tkbVdX),
+                text: T.intl.string(P.default.tkbVdf),
                 variant: "secondary",
                 icon: u.Gr1,
                 iconPosition: "end",
@@ -86,7 +86,7 @@ function G(e) {
         E(
             {
                 fullWidth: !0,
-                text: T.intl.string(P.default.fQCcMz),
+                text: T.intl.string(P.default["fQCcM/"]),
                 variant: "primary",
             },
             e,
@@ -99,7 +99,7 @@ function R(e) {
         E(
             {
                 fullWidth: !0,
-                text: T.intl.string(P.default.gWMqnJ),
+                text: T.intl.string(P.default.gWMqnI),
                 variant: "primary",
                 icon: u.Gr1,
                 iconPosition: "end",
@@ -124,17 +124,17 @@ function A(e) {
                       },
                   });
         }, [t, D, A, n]),
-        L = a.useCallback(() => {
+        M = a.useCallback(() => {
             (0, x.JG)(null != i ? i : ""),
-                (0, u.showToast)((0, u.createToast)(T.intl.string(T.t["+5kSoa"]), u.ToastType.SUCCESS));
+                (0, u.showToast)((0, u.createToast)(T.intl.string(T.t["+5kSoW"]), u.ToastType.SUCCESS));
         }, [i]),
-        M = (0, C.Z)(t.gameId, "cover"),
-        W = (0, v.Z)(n),
-        z = a.useCallback(() => {
+        W = (0, C.Z)(t.gameId, "cover"),
+        L = (0, v.Z)(n),
+        U = a.useCallback(() => {
             var e;
             (0, b.q)({ href: null != (e = t.gameServerPanelUrl) ? e : "" });
         }, [t.gameServerPanelUrl]),
-        U = a.useCallback(() => {
+        z = a.useCallback(() => {
             (0, p.WX)(n, t.id);
         }, [n, t.id]),
         F = a.useMemo(() => {
@@ -142,10 +142,10 @@ function A(e) {
                 case o.V.SLEEPING:
                     return (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(k, { onClick: U }),
-                            W &&
+                            (0, r.jsx)(k, { onClick: z }),
+                            L &&
                                 (0, r.jsx)(Z, {
-                                    onClick: z,
+                                    onClick: U,
                                     disabled: null == t.gameServerPanelUrl,
                                 }),
                         ],
@@ -156,25 +156,25 @@ function A(e) {
                     return (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(G, { onClick: B }),
-                            W &&
+                            L &&
                                 (0, r.jsx)(Z, {
-                                    onClick: z,
+                                    onClick: U,
                                     disabled: null == t.gameServerPanelUrl,
                                 }),
                         ],
                     });
                 case o.V.STARTUP_FAILED:
                 case o.V.MISSING_STOCK:
-                    return W
-                        ? (0, r.jsx)(R, { onClick: z })
+                    return L
+                        ? (0, r.jsx)(R, { onClick: U })
                         : (0, r.jsx)(G, {
                               onClick: B,
                               disabled: !0,
                           });
                 case o.V.DELETED:
-                    return W
+                    return L
                         ? (0, r.jsx)(Z, {
-                              onClick: z,
+                              onClick: U,
                               disabled: null == t.gameServerPanelUrl,
                           })
                         : (0, r.jsx)(G, {
@@ -184,7 +184,7 @@ function A(e) {
                 default:
                     return null;
             }
-        }, [t, B, W, z, U]),
+        }, [t, B, L, U, z]),
         K = a.useMemo(() => {
             if (null == t.gameConfig) return null;
             let e = [t.gameConfig.type, t.gameConfig.version].filter(_.lm).join(" ");
@@ -193,16 +193,16 @@ function A(e) {
         H = a.useMemo(() => {
             switch (t.status) {
                 case o.V.STARTING:
-                    if (null == t.gameServerPanelUrl) return T.intl.string(P.default["1A3US0"]);
+                    if (null == t.gameServerPanelUrl) return T.intl.string(P.default["1A3US2"]);
                     return null;
                 case o.V.STARTUP_FAILED:
-                    return T.intl.string(W ? P.default["Mdoc9/"] : P.default.osZiRk);
+                    return T.intl.string(L ? P.default.Mdoc98 : P.default.osZiRl);
                 case o.V.MISSING_STOCK:
-                    return T.intl.string(W ? P.default.YCakvL : P.default.osZiRk);
+                    return T.intl.string(L ? P.default.YCakvM : P.default.osZiRl);
                 default:
                     return null;
             }
-        }, [t.status, t.gameServerPanelUrl, W]);
+        }, [t.status, t.gameServerPanelUrl, L]);
     return (0, r.jsxs)(h.Z, {
         actions: F,
         children: [
@@ -213,7 +213,7 @@ function A(e) {
                         className: w.serverHeader,
                         children: [
                             (0, r.jsx)("img", {
-                                src: null != M ? M : "",
+                                src: null != W ? W : "",
                                 alt: "",
                                 className: w.gameImage,
                             }),
@@ -243,7 +243,7 @@ function A(e) {
                                         (0, r.jsx)(u.Text, {
                                             variant: "text-xs/semibold",
                                             color: "text-muted",
-                                            children: T.intl.string(P.default.bDdi7u),
+                                            children: T.intl.string(P.default.bDdi7n),
                                         }),
                                         (0, r.jsx)(u.Text, {
                                             variant: "text-sm/medium",
@@ -268,7 +268,7 @@ function A(e) {
                                         (0, r.jsx)(u.Text, {
                                             variant: "text-xs/semibold",
                                             color: "text-muted",
-                                            children: T.intl.string(P.default["7phwMD"]),
+                                            children: T.intl.string(P.default["7phwMG"]),
                                         }),
                                         (0, r.jsx)("div", {
                                             className: w.serverIpContainer,
@@ -287,8 +287,8 @@ function A(e) {
                                                                 }),
                                                                 (0, r.jsx)(u.P3F, {
                                                                     className: w.copyButton,
-                                                                    "aria-label": T.intl.string(T.t.OpuAlJ),
-                                                                    onClick: L,
+                                                                    "aria-label": T.intl.string(T.t.OpuAlK),
+                                                                    onClick: M,
                                                                     children: (0, r.jsx)(u.TIy, { size: "sm" }),
                                                                 }),
                                                             ],
@@ -299,11 +299,11 @@ function A(e) {
                                                                 (0, N.Z)({
                                                                     provider: t.providerType,
                                                                     onAccept: () => {
-                                                                        A(S.L.TAKE_ACTION), L();
+                                                                        A(S.L.TAKE_ACTION), M();
                                                                     },
                                                                 });
                                                             },
-                                                            children: T.intl.string(P.default["f+F7Hx"]),
+                                                            children: T.intl.string(P.default["f+F7H3"]),
                                                         }),
                                         }),
                                     ],
@@ -314,7 +314,7 @@ function A(e) {
                                         (0, r.jsx)(u.Text, {
                                             variant: "text-xs/semibold",
                                             color: "text-muted",
-                                            children: T.intl.string(P.default["n+ZX7+"]),
+                                            children: T.intl.string(P.default["n+ZX7y"]),
                                         }),
                                         (0, r.jsxs)("div", {
                                             className: w.statusContainer,
@@ -335,19 +335,19 @@ function A(e) {
                                                     children: (function (e) {
                                                         switch (e) {
                                                             case o.V.STARTING:
-                                                                return T.intl.string(P.default.SgjaXF);
+                                                                return T.intl.string(P.default.SgjaXI);
                                                             case o.V.STARTUP_FAILED:
-                                                                return T.intl.string(P.default["7C9Z3t"]);
+                                                                return T.intl.string(P.default["7C9Z3s"]);
                                                             case o.V.OFFLINE:
-                                                                return T.intl.string(P.default["Ys/RrK"]);
+                                                                return T.intl.string(P.default["Ys/RrB"]);
                                                             case o.V.ONLINE:
-                                                                return T.intl.string(P.default["60kAzs"]);
+                                                                return T.intl.string(P.default["60kAzo"]);
                                                             case o.V.DELETED:
-                                                                return T.intl.string(P.default.Z1NZwc);
+                                                                return T.intl.string(P.default.Z1NZwX);
                                                             case o.V.MISSING_STOCK:
-                                                                return T.intl.string(P.default["+a5G2t"]);
+                                                                return T.intl.string(P.default["+a5G2l"]);
                                                             case o.V.SLEEPING:
-                                                                return T.intl.string(P.default.y0z8ZG);
+                                                                return T.intl.string(P.default.y0z8ZO);
                                                             default:
                                                                 return "\u2014";
                                                         }
@@ -372,7 +372,7 @@ function A(e) {
                                         (0, r.jsx)(u.Text, {
                                             variant: "text-xs/semibold",
                                             color: "text-muted",
-                                            children: T.intl.string(P.default.mJlz3d),
+                                            children: T.intl.string(P.default.mJlz3T),
                                         }),
                                         (0, r.jsx)(u.Text, {
                                             variant: "text-sm/medium",
@@ -385,7 +385,7 @@ function A(e) {
                     }),
                 ],
             }),
-            W &&
+            L &&
                 (0, r.jsx)("div", {
                     className: w.overflowMenu,
                     children: (0, r.jsx)(y.Z, {
@@ -395,7 +395,7 @@ function A(e) {
                 }),
             (0, r.jsx)("div", {
                 className: w.imageBackground,
-                children: (0, r.jsx)(j.b, { imageUrl: null != M ? M : "" }),
+                children: (0, r.jsx)(j.b, { imageUrl: null != W ? W : "" }),
             }),
         ],
     });

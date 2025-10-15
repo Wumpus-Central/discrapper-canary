@@ -47,7 +47,7 @@ let x = () => {
                 (0, r.jsxs)(g.Dx, {
                     className: s()(_.marginTop20, f.flex, f.justifyCenter, f.alignCenter),
                     children: [
-                        p.intl.string(p.t.WWzQtb),
+                        p.intl.string(p.t.WWzQta),
                         (0, r.jsx)(o.owK, {
                             size: "md",
                             color: "currentColor",
@@ -61,16 +61,16 @@ let x = () => {
         ? Z
         : (0, r.jsxs)(g.ZP, {
               children: [
-                  (0, r.jsx)(g.Dx, { children: p.intl.string(p.t.o4JNrK) }),
+                  (0, r.jsx)(g.Dx, { children: p.intl.string(p.t.o4JNrO) }),
                   (0, r.jsx)(g.DK, {
                       className: _.marginTop8,
-                      children: p.intl.string(p.t.y0tVbm),
+                      children: p.intl.string(p.t.y0tVbq),
                   }),
                   (0, r.jsxs)(g.gO, {
                       className: _.marginTop20,
                       children: [
                           (0, r.jsx)(h.Z, {
-                              label: p.intl.string(p.t.eJnn09),
+                              label: p.intl.string(p.t["eJnn0+"]),
                               alpha2: y.alpha2,
                               countryCode: C,
                               value: e,
@@ -92,13 +92,13 @@ let x = () => {
                               size: g.zx.Sizes.SMALL,
                               look: g.zx.Looks.LINK,
                               onClick: A,
-                              children: p.intl.string(p.t["5b60go"]),
+                              children: p.intl.string(p.t["5b60gi"]),
                           }),
                           (0, r.jsx)(g.zx, {
                               className: _.marginTop20,
                               onClick: T,
                               submitting: E,
-                              children: p.intl.string(p.t.i4jeWV),
+                              children: p.intl.string(p.t.i4jeWR),
                           }),
                       ],
                   }),

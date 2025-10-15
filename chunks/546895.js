@@ -24,8 +24,8 @@ var a = n(951288),
     r = n(647438),
     i = n(108514),
     l = n(793030),
-    s = n(481060);
-let o = {
+    o = n(481060);
+let s = {
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_Messages_Opt.lottie":
         () => n.e("49190").then(n.t.bind(n, 871413, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_Notifications_Opt.lottie":
@@ -274,7 +274,7 @@ let o = {
         n.e("50821").then(n.t.bind(n, 548421, 19)),
     "discord_app/modules/quests/images/confetti.lottiejson": () => n.e("67963").then(n.t.bind(n, 145193, 19)),
     "discord_app/modules/quests/web/images/quest_bar_background.json": () => n.e("30166").then(n.t.bind(n, 235630, 19)),
-    "discord_app/modules/quests/web/images/quest_bar_sparkle.json": () => n.e("63842").then(n.t.bind(n, 403389, 19)),
+    "discord_app/modules/quests/web/images/quest_bar_sparkle.json": () => n.e("4245").then(n.t.bind(n, 403389, 19)),
     "discord_app/modules/self_mod/inappropriate_conversation/images/vibing_wumpus.lottiejson": () =>
         n.e("29641").then(n.t.bind(n, 937359, 19)),
     "discord_common/js/shared/animations/app/everyone_popout/dark.lottiejson": () =>
@@ -379,8 +379,8 @@ function d() {
         children: (0, a.jsxs)(l.Kqy, {
             gap: 24,
             children: [
-                (0, a.jsx)(s.VcW, {
-                    options: Object.keys(o).map((e) => ({
+                (0, a.jsx)(o.VcW, {
+                    options: Object.keys(s).map((e) => ({
                         label: e,
                         value: e,
                     })),
@@ -391,24 +391,24 @@ function d() {
                     gap: 8,
                     direction: "horizontal",
                     children: [
-                        (0, a.jsx)(s.oil, {
+                        (0, a.jsx)(o.oil, {
                             value: n.toString(),
                             onChange: (e) => i(Number(e)),
                             label: "Width",
                         }),
-                        (0, a.jsx)(s.oil, {
+                        (0, a.jsx)(o.oil, {
                             value: d.toString(),
                             onChange: (e) => u(Number(e)),
                             label: "Height",
                         }),
                     ],
                 }),
-                (0, a.jsx)(s.Button, {
+                (0, a.jsx)(o.Button, {
                     size: "sm",
                     disabled: null == e,
                     onClick: async () => {
                         if (null == e) return;
-                        let t = o[e],
+                        let t = s[e],
                             n = new Blob([JSON.stringify(e.endsWith(".lottie") ? await t().then(c) : await t())], {
                                 type: "application/json",
                             }),
@@ -430,10 +430,10 @@ function d() {
                             height: d,
                         },
                         children: (0, a.jsx)(
-                            s.Fmz,
+                            o.Fmz,
                             {
                                 importData: () => {
-                                    let t = o[e];
+                                    let t = s[e];
                                     return e.endsWith(".lottie") ? t().then(c) : t();
                                 },
                             },

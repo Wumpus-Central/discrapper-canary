@@ -90,7 +90,7 @@ let y = function (e) {
         function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                 t = {};
-            return (e || T.name) && "" === v.name && (t.name = _.intl.string(_.t.lIkVsr)), t;
+            return (e || T.name) && "" === v.name && (t.name = _.intl.string(_.t.lIkVsi)), t;
         },
         [T, v],
     );
@@ -107,7 +107,7 @@ let y = function (e) {
                 {
                     id: "card-number",
                     name: "cardNumber",
-                    title: () => _.intl.string(_.t.cVyJ3t),
+                    title: () => _.intl.string(_.t.cVyJ3o),
                     getClassNameForLayout: () => h.width100,
                     renderInput: () =>
                         (0, r.jsx)(f.Z, {
@@ -124,7 +124,7 @@ let y = function (e) {
                 {
                     id: "card-expiration-date",
                     name: "cardExpiry",
-                    title: () => _.intl.string(_.t["CeBa//"]),
+                    title: () => _.intl.string(_.t["CeBa/4"]),
                     getClassNameForLayout: () => h.width50,
                     renderInput: () =>
                         (0, r.jsx)(f.Z, {
@@ -157,9 +157,9 @@ let y = function (e) {
                 {
                     id: "card-name",
                     name: "name",
-                    title: () => _.intl.string(_.t.VUlFdX),
+                    title: () => _.intl.string(_.t.VUlFdU),
                     autoComplete: "cc-name",
-                    placeholder: () => _.intl.string(_.t.yf7ms7),
+                    placeholder: () => _.intl.string(_.t["yf7ms+"]),
                     getClassNameForLayout: () => h.width100,
                     renderInput: (e) => (0, r.jsx)(l.oil, g({}, e)),
                 },
@@ -173,7 +173,7 @@ let y = function (e) {
             i = { name: A.name };
         T[t] || "" === e || (r[t] = !0),
             (n[t] = e),
-            r[t] && "" === e ? "name" === t && (i.name = _.intl.string(_.t.lIkVsr)) : delete i[t],
+            r[t] && "" === e ? "name" === t && (i.name = _.intl.string(_.t.lIkVsi)) : delete i[t],
             I(n),
             S(r),
             C(i);

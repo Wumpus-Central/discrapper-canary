@@ -287,7 +287,7 @@ function k(e) {
     let Y = (e, t, n) => {
             n.stopPropagation(), n.preventDefault(), 2 === t ? M(e) : (1 === t || M(e), k(e));
         },
-        W = l.useCallback(
+        Q = l.useCallback(
             (e) => {
                 let t = _({}, g);
                 I(e) ? (t[e.id] = V(e.record)) : L(e) && (t[e.id] = P(e.record)),
@@ -307,7 +307,7 @@ function k(e) {
             },
             [G, g],
         ),
-        K = l.useCallback(
+        W = l.useCallback(
             (e) => {
                 let { section: n, row: l } = e,
                     i = F[n][l];
@@ -316,7 +316,7 @@ function k(e) {
                     {
                         className: o()(H.selectableSearchRow, H.rowHeight),
                         onClick: (e) => {
-                            e.stopPropagation(), W(i);
+                            e.stopPropagation(), Q(i);
                         },
                         children: (0, r.jsx)("div", {
                             className: H.rowContainer,
@@ -326,9 +326,9 @@ function k(e) {
                     i.id,
                 );
             },
-            [t, W, F],
+            [t, Q, F],
         ),
-        Q = l.useMemo(
+        K = l.useMemo(
             () =>
                 v.map((e) => {
                     var n;
@@ -343,7 +343,7 @@ function k(e) {
                 className: H.searchBox,
                 children: [
                     (0, r.jsx)(d.Z, {
-                        tags: Q,
+                        tags: K,
                         maxHeight: 98,
                         size: d.Z.Sizes.MEDIUM,
                         query: y,
@@ -383,7 +383,7 @@ function k(e) {
                         onQueryChange: (e) => {
                             N(e.trim().toLocaleLowerCase());
                         },
-                        placeholder: null != b ? b : O.intl.string(O.t.uqHLzc),
+                        placeholder: null != b ? b : O.intl.string(O.t.uqHLzW),
                         sections: [v.length],
                         inputProps: {
                             "aria-labelledby": Z,
@@ -403,7 +403,7 @@ function k(e) {
                                 className: H.resultsListContainer,
                                 innerClassName: H.resultsList,
                                 sections: q,
-                                renderRow: K,
+                                renderRow: W,
                                 rowHeight: 34,
                                 renderSection: (e) => {
                                     let { section: t } = e;
@@ -413,9 +413,9 @@ function k(e) {
                                               {
                                                   variant: "heading-sm/semibold",
                                                   className: o()(H.sectionTitle, H.sectionHeight),
-                                                  children: O.intl.string(O.t.OGiMXF),
+                                                  children: O.intl.string(O.t.OGiMXJ),
                                               },
-                                              O.intl.string(O.t.OGiMXF),
+                                              O.intl.string(O.t.OGiMXJ),
                                           )
                                         : 1 === t
                                           ? (0, r.jsx)(
@@ -423,9 +423,9 @@ function k(e) {
                                                 {
                                                     variant: "heading-sm/semibold",
                                                     className: o()(H.sectionTitle, H.sectionHeight),
-                                                    children: O.intl.string(O.t.LPJmLy),
+                                                    children: O.intl.string(O.t["LPJmL/"]),
                                                 },
-                                                O.intl.string(O.t.LPJmLy),
+                                                O.intl.string(O.t["LPJmL/"]),
                                             )
                                           : null;
                                 },

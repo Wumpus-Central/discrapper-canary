@@ -27,7 +27,7 @@ let g = () => {
                         icon: a.VL1,
                         "aria-hidden": !0,
                     }),
-                    (0, r.jsx)(c.Z.Title, { children: u.intl.string(u.t["8LKcho"]) }),
+                    (0, r.jsx)(c.Z.Title, { children: u.intl.string(u.t["8LKchl"]) }),
                 ],
             }),
             (0, r.jsxs)("div", {
@@ -41,12 +41,12 @@ let g = () => {
                     (0, r.jsx)(a.Heading, {
                         className: h.splashHeader,
                         variant: "heading-lg/medium",
-                        children: u.intl.string(u.t.m9gRVF),
+                        children: u.intl.string(u.t.m9gRVN),
                     }),
                     (0, r.jsx)(a.Text, {
                         className: h.splashText,
                         variant: "text-md/normal",
-                        children: u.intl.string(u.t["wC3j5+"]),
+                        children: u.intl.string(u.t.wC3j56),
                     }),
                 ],
             }),

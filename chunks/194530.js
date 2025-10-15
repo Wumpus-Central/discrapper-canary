@@ -24,8 +24,8 @@ function _(e) {
         e.preventDefault(), (0, l.b9)();
         let t = !1;
         if (
-            ("" === O ? (A(f.intl.string(f.t["/7/oPT"])), (t = !0)) : A(null),
-            O !== I ? (N(f.intl.string(f.t.IEKYZ2)), (t = !0)) : N(null),
+            ("" === O ? (A(f.intl.string(f.t["/7/oPU"])), (t = !0)) : A(null),
+            O !== I ? (N(f.intl.string(f.t["IEKYZ/"])), (t = !0)) : N(null),
             t)
         )
             return;
@@ -51,17 +51,17 @@ function _(e) {
             children: (0, r.jsx)(a.Modal, {
                 transitionState: h,
                 onClose: g,
-                title: f.intl.string(f.t["geta7+"]),
-                subtitle: E ? f.intl.string(f.t["37iHbW"]) : f.intl.string(f.t.iOurYm),
+                title: f.intl.string(f.t.geta79),
+                subtitle: E ? f.intl.string(f.t["37iHbZ"]) : f.intl.string(f.t.iOurYj),
                 actions: [
                     {
                         variant: "secondary",
-                        text: f.intl.string(f.t["ETE/oK"]),
+                        text: f.intl.string(f.t["ETE/oC"]),
                         onClick: g,
                     },
                     {
                         variant: "primary",
-                        text: f.intl.string(f.t.i4jeWV),
+                        text: f.intl.string(f.t.i4jeWR),
                         loading: P === d.QZA.SUBMITTING,
                         onClick: D,
                     },
@@ -70,7 +70,7 @@ function _(e) {
                     gap: 20,
                     children: [
                         (0, r.jsx)(s.oil, {
-                            label: f.intl.string(f.t.WBqMRU),
+                            label: f.intl.string(f.t.WBqMRQ),
                             error: null == R || null == (t = R.password) ? void 0 : t[0],
                             type: "password",
                             value: b,
@@ -80,7 +80,7 @@ function _(e) {
                             required: !0,
                         }),
                         (0, r.jsx)(s.oil, {
-                            label: f.intl.string(f.t["8dM4FB"]),
+                            label: f.intl.string(f.t["8dM4FO"]),
                             error:
                                 null !=
                                 (p = null != (_ = null == R || null == (n = R.new_password) ? void 0 : n[0]) ? _ : S)

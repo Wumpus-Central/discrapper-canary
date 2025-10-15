@@ -58,7 +58,7 @@ function u(e) {
             return e;
         })(
             {
-                label: l.intl.string(l.t.UKOtz8),
+                label: l.intl.string(l.t["UKOtz+"]),
                 iconComponent: r.xhG,
                 tooltipPosition: "bottom",
                 onClick: (e) => {

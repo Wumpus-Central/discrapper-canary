@@ -34,7 +34,7 @@ function x(e) {
                     src: null == N ? n(26230) : n(935227),
                     className: s()(_.marginBottom20, _.marginTop8),
                 }),
-                (0, r.jsx)(u.Dx, { children: p.intl.string(p.t["IfBQ5+"]) }),
+                (0, r.jsx)(u.Dx, { children: p.intl.string(p.t.IfBQ56) }),
                 null != N && "" !== N
                     ? (0, r.jsx)(o.Text, {
                           variant: "text-sm/normal",
@@ -48,7 +48,7 @@ function x(e) {
                         (0, r.jsx)(u.II, {
                             name: "password",
                             type: "password",
-                            label: p.intl.string(p.t["8dM4FB"]),
+                            label: p.intl.string(p.t["8dM4FO"]),
                             setRef: C,
                             className: _.marginBottom20,
                             value: O,
@@ -56,14 +56,14 @@ function x(e) {
                             error: j,
                             autoComplete: "new-password",
                             maxLength: 72,
-                            placeholder: p.intl.string(p.t["yY/PXV"]),
+                            placeholder: p.intl.string(p.t["yY/PXY"]),
                         }),
                         (0, r.jsx)(u.zx, {
                             className: _.marginTop8,
                             onClick: () => {
                                 if (!v) {
                                     if (0 === O.length) {
-                                        I(p.intl.string(p.t.R98xDw)), d.S.dispatch(m.CkL.WAVE_EMPHASIZE);
+                                        I(p.intl.string(p.t.R98xD5)), d.S.dispatch(m.CkL.WAVE_EMPHASIZE);
                                         return;
                                     }
                                     return (
@@ -89,7 +89,7 @@ function x(e) {
                                             .catch((e) => {
                                                 if (e instanceof Error)
                                                     S(
-                                                        p.intl.formatToPlainString(p.t.aTVNen, {
+                                                        p.intl.formatToPlainString(p.t.aTVNes, {
                                                             statusPageURL: m.yXt.STATUS,
                                                         }),
                                                     );
@@ -103,11 +103,11 @@ function x(e) {
                                                                       case m.evJ.ACCOUNT_REVERT_INVALID_TOKEN:
                                                                           return p.intl.string(p.t["11zzGR"]);
                                                                       case m.evJ.ACCOUNT_REVERT_EMAIL_ALREADY_TAKEN:
-                                                                          return p.intl.string(p.t["6qmgaG"]);
+                                                                          return p.intl.string(p.t["6qmgaI"]);
                                                                       case m.evJ.ACCOUNT_REVERT_ACCOUNT_NOT_FOUND:
-                                                                          return p.intl.string(p.t.bChnKi);
+                                                                          return p.intl.string(p.t.bChnKs);
                                                                       default:
-                                                                          return p.intl.format(p.t.aTVNen, {
+                                                                          return p.intl.format(p.t.aTVNes, {
                                                                               statusPageURL: m.yXt.STATUS,
                                                                           });
                                                                   }
@@ -124,7 +124,7 @@ function x(e) {
                             },
                             submitting: v,
                             disabled: v,
-                            children: p.intl.string(p.t.ezv91d),
+                            children: p.intl.string(p.t.ezv91b),
                         }),
                     ],
                 }),
@@ -135,7 +135,7 @@ function x(e) {
                         onClick: () => {
                             y(""), l(g.n.START);
                         },
-                        children: p.intl.string(p.t.rzxnQ0),
+                        children: p.intl.string(p.t.rzxnQ8),
                     }),
                 }),
             ],

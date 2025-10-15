@@ -29,7 +29,7 @@ function S(e) {
     return (0, r.jsx)("div", {
         className: I.selectTeamContainer,
         children: (0, r.jsx)(a.zxk, {
-            text: E.intl.string(E.t["5k6FfX"]),
+            text: E.intl.string(E.t["5k6FfR"]),
             disabled: !n,
             onClick: t,
             fullWidth: !0,
@@ -54,8 +54,8 @@ function T(e) {
             (await u(t, o, y.wW.GUILD_ROLE_SUBSCRIPTIONS)) &&
                 (p(t.id),
                 (0, _.B)({
-                    title: E.intl.string(E.t["AP/2qa"]),
-                    body: E.intl.string(E.t.kHMgaG),
+                    title: E.intl.string(E.t["AP/2qe"]),
+                    body: E.intl.string(E.t.kHMgaK),
                 }));
         };
     return (0, r.jsxs)(r.Fragment, {
@@ -66,14 +66,14 @@ function T(e) {
                     (0, r.jsx)(s.q4e, {
                         className: I.teamSelect,
                         options: h,
-                        placeholder: E.intl.string(E.t.QXf93N),
+                        placeholder: E.intl.string(E.t.QXf93A),
                         value: o,
                         isDisabled: 0 === h.length || f || !l,
                         onChange: (e) => c(e),
-                        "aria-label": E.intl.string(E.t.QXf93N),
+                        "aria-label": E.intl.string(E.t.QXf93A),
                     }),
                     (0, r.jsx)(a.zxk, {
-                        text: E.intl.string(E.t["9HU3ZW"]),
+                        text: E.intl.string(E.t["9HU3ZV"]),
                         onClick: b,
                         loading: g,
                         disabled: null == o || f || !l,
@@ -138,13 +138,13 @@ let P = (e) => {
                           className: I.nonOwnerNotice,
                           children: (0, r.jsx)(s.M14, {
                               type: "warning",
-                              children: E.intl.string(E.t.t56qWF),
+                              children: E.intl.string(E.t.t56qWO),
                           }),
                       }),
                   (0, r.jsx)(s.gNt, {
-                      label: E.intl.string(E.t.sYLCY2),
+                      label: E.intl.string(E.t["sYLCY/"]),
                       disabled: !a,
-                      description: E.intl.format(E.t["5mfqpa"], { onCreateTeamHook: Z }),
+                      description: E.intl.format(E.t["5mfqpW"], { onCreateTeamHook: Z }),
                       children: P
                           ? (0, r.jsx)(T, {
                                 guild: t,
@@ -157,7 +157,7 @@ let P = (e) => {
                             }),
                   }),
                   (0, r.jsx)(s.gNt, {
-                      label: E.intl.string(E.t["0n7R2d"]),
+                      label: E.intl.string(E.t["0n7R2X"]),
                       children: (0, r.jsx)(C.Z, {
                           guildId: t.id,
                           allPeriods: [],

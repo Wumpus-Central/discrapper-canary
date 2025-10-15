@@ -154,22 +154,22 @@ let ef = (e) => {
         }, [t]);
     },
     e_ = (e, t) => {
-        let n = en.intl.string(en.t.DT39Aw),
-            i = en.intl.formatToPlainString(en.t.QWGvxM, { applicationName: e.name }),
+        let n = en.intl.string(en.t["DT39A+"]),
+            i = en.intl.formatToPlainString(en.t.QWGvxA, { applicationName: e.name }),
             a = null;
         return (
             (0, C.Z)(e) &&
-                ((n = en.intl.formatToPlainString(en.t["paC+UV"], { applicationName: e.name })),
-                (i = en.intl.formatToPlainString(en.t.inM1Ym, { applicationName: e.name })),
+                ((n = en.intl.formatToPlainString(en.t["paC+US"], { applicationName: e.name })),
+                (i = en.intl.formatToPlainString(en.t.inM1Yt, { applicationName: e.name })),
                 (a = (0, r.jsx)(X.Z, {
                     look: X.z.WARNING,
-                    children: en.intl.string(en.t.LY35Z2),
+                    children: en.intl.string(en.t.LY35Zy),
                 }))),
             (0, q.Z)(e.id) &&
                 (a = (0, r.jsxs)(r.Fragment, {
                     children: [
                         a,
-                        (0, r.jsx)(X.Z, { children: en.intl.format(en.t.KRnERk, { applicationName: e.name }) }),
+                        (0, r.jsx)(X.Z, { children: en.intl.format(en.t.KRnERi, { applicationName: e.name }) }),
                     ],
                 })),
             (0, g.h7j)((e) =>
@@ -182,12 +182,12 @@ let ef = (e) => {
                                 subtitle: i,
                                 actions: [
                                     {
-                                        text: en.intl.string(en.t["ETE/oK"]),
+                                        text: en.intl.string(en.t["ETE/oC"]),
                                         onClick: e.onClose,
                                         variant: "secondary",
                                     },
                                     {
-                                        text: en.intl.string(en.t.xUqheH),
+                                        text: en.intl.string(en.t.xUqheM),
                                         onClick: () => {
                                             t(), e.onClose();
                                         },
@@ -237,7 +237,7 @@ let ef = (e) => {
                                     (0, r.jsx)(g.Text, {
                                         variant: "text-sm/normal",
                                         color: "text-link",
-                                        children: en.intl.string(en.t["lx+GeX"]),
+                                        children: en.intl.string(en.t["lx+Gec"]),
                                     }),
                                     (0, r.jsx)(g.Gr1, {
                                         size: "sm",
@@ -262,7 +262,7 @@ let ef = (e) => {
                                             (0, r.jsx)(g.Text, {
                                                 variant: "text-sm/normal",
                                                 color: "text-link",
-                                                children: en.intl.string(en.t.okSwq6),
+                                                children: en.intl.string(en.t.okSwq9),
                                             }),
                                             (0, r.jsx)(g.Gr1, {
                                                 size: "sm",
@@ -320,7 +320,7 @@ let ef = (e) => {
             eo = () => {
                 let e = [];
                 for (let n of t)
-                    e.push(...(0, w.CI)(n, t)), n === f.x.APPLICATIONS_COMMANDS && e.push(en.intl.string(en.t.Ls2XRk));
+                    e.push(...(0, w.CI)(n, t)), n === f.x.APPLICATIONS_COMMANDS && e.push(en.intl.string(en.t.Ls2XRq));
                 if (e.length > 0 || (null != d && d.length > 0))
                     return (0, r.jsx)(g.zF9, {
                         className: er.appDetailsSection,
@@ -380,7 +380,7 @@ let ef = (e) => {
                                             (0, r.jsx)(g.Heading, {
                                                 variant: "heading-sm/medium",
                                                 color: "header-primary",
-                                                children: en.intl.string(en.t.xrmhRU),
+                                                children: en.intl.string(en.t.xrmhRX),
                                             }),
                                             X
                                                 ? (0, r.jsx)(g.CJ0, {
@@ -398,7 +398,7 @@ let ef = (e) => {
                                             variant: "text-sm/normal",
                                             color: "text-secondary",
                                             className: o()(er.appDetailsContent, er.permissionsDescription),
-                                            children: en.intl.format(en.t.nZOS8v, { numPermissions: e.length }),
+                                            children: en.intl.format(en.t.nZOS8j, { numPermissions: e.length }),
                                         }),
                                 ],
                             });
@@ -492,7 +492,7 @@ let ef = (e) => {
                                 (0, r.jsx)(g.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-default",
-                                    children: en.intl.format(en.t.yOApCA, { date: n }),
+                                    children: en.intl.format(en.t.yOApCK, { date: n }),
                                 }),
                             ],
                         }),
@@ -552,17 +552,17 @@ let ef = (e) => {
                                   variant: "heading-sm/medium",
                                   color: "header-primary",
                                   className: er.dmSettingsHeader,
-                                  children: en.intl.string(en.t.NaZyYG),
+                                  children: en.intl.string(en.t.NaZyYC),
                               }),
                               (0, r.jsxs)(g.Kqy, {
                                   gap: 20,
                                   children: [
                                       null != L
                                           ? (0, r.jsx)(g.rsf, {
-                                                label: en.intl.string(en.t.NkwaBg),
+                                                label: en.intl.string(en.t.NkwaBs),
                                                 description:
                                                     (null == j ? void 0 : j.end_time) != null
-                                                        ? en.intl.format(en.t.j7h4AA, {
+                                                        ? en.intl.format(en.t.j7h4AJ, {
                                                               endTime: new Date(j.end_time).toLocaleString(
                                                                   en.intl.currentLocale,
                                                                   {
@@ -580,8 +580,8 @@ let ef = (e) => {
                                           : null,
                                       v && C.enabled
                                           ? (0, r.jsx)(g.rsf, {
-                                                label: en.intl.string(en.t["Pkw//v"]),
-                                                description: en.intl.string(en.t.hw1nKS),
+                                                label: en.intl.string(en.t["Pkw//o"]),
+                                                description: en.intl.string(en.t.hw1nKf),
                                                 checked: I,
                                                 disabled: B,
                                                 onChange: eh,
@@ -602,12 +602,12 @@ let ef = (e) => {
                         eb
                             ? (0, r.jsx)(ed, {
                                   className: er.warningContainer,
-                                  text: en.intl.format(en.t.j4B7ER, { applicationName: a.name }),
+                                  text: en.intl.format(en.t.j4B7EW, { applicationName: a.name }),
                               })
                             : eE
                               ? (0, r.jsx)(ed, {
                                     className: er.warningContainer,
-                                    text: en.intl.format(en.t.jUhnwc, {
+                                    text: en.intl.format(en.t.jUhnwb, {
                                         applicationName: a.name,
                                         onConnectionPress: () =>
                                             ey(Y.n.CONNECTIONS_PANEL, { section: ee.oAB.CONNECTIONS }),
@@ -619,7 +619,7 @@ let ef = (e) => {
                             children: (0, r.jsx)(g.Button, {
                                 variant: "critical-secondary",
                                 size: "sm",
-                                text: en.intl.string(en.t.xUqheH),
+                                text: en.intl.string(en.t.xUqheM),
                                 onClick: () => e_(a, c),
                             }),
                         }),
@@ -683,8 +683,8 @@ let ef = (e) => {
                         query: d,
                         onChange: _,
                         onClear: h,
-                        placeholder: en.intl.string(en.t["5prvKS"]),
-                        "aria-label": en.intl.string(en.t["5prvKS"]),
+                        placeholder: en.intl.string(en.t["5prvKe"]),
+                        "aria-label": en.intl.string(en.t["5prvKe"]),
                     }),
                 }),
             b = (e, t) =>
@@ -710,10 +710,10 @@ let ef = (e) => {
                           type: g.$jN.Type.SPINNING_CIRCLE,
                       })
                     : 0 === n.length
-                      ? b(en.intl.string(en.t.CpPv5u), en.intl.string(en.t["E+SM6e"]))
+                      ? b(en.intl.string(en.t.CpPv5l), en.intl.string(en.t["E+SM6T"]))
                       : 0 === y.length
                         ? (0, r.jsxs)(r.Fragment, {
-                              children: [m(), b(null, en.intl.string(en.t.EVWFNj))],
+                              children: [m(), b(null, en.intl.string(en.t.EVWFNr))],
                           })
                         : (0, r.jsxs)(r.Fragment, {
                               children: [
@@ -740,13 +740,13 @@ let ef = (e) => {
         return e
             ? (0, r.jsx)(O.Z, {})
             : (0, r.jsx)(Q.Z, {
-                  title: en.intl.string(en.t["f6kk+v"]),
+                  title: en.intl.string(en.t["f6kk+r"]),
                   children: (0, r.jsx)(g.y5t, {
                       component: (0, r.jsx)(g.ToO, {
                           className: ea.marginBottom40,
                           type: g.sje.PRIMARY,
-                          title: en.intl.string(en.t.HU3RFx),
-                          body: en.intl.string(en.t.Nu5Yi4),
+                          title: en.intl.string(en.t.HU3RFw),
+                          body: en.intl.string(en.t.Nu5Yi0),
                       }),
                       children: T(),
                   }),

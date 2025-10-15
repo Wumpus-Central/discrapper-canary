@@ -87,10 +87,10 @@ function p(e) {
         })({}, l)),
         (n = n =
             {
-                title: h.intl.string(h.t.h850Sk),
+                title: h.intl.string(h.t.h850Ss),
                 actions: [
                     {
-                        text: h.intl.string(h.t.i4jeWV),
+                        text: h.intl.string(h.t.i4jeWR),
                         onClick: l.onClose,
                     },
                 ],
@@ -100,15 +100,15 @@ function p(e) {
                         children: (0, i.jsx)(c.Z, { guildId: s }),
                     }),
                     (0, i.jsx)(x, {
-                        title: h.intl.string(h.t["R9Ej9/"]),
+                        title: h.intl.string(h.t.R9Ej96),
                         noPadding: !0,
                         children: (0, i.jsx)(u.Z, { guildId: s }),
                     }),
                     (0, i.jsx)(x, {
-                        title: h.intl.string(h.t["31DySk"]),
+                        title: h.intl.string(h.t["31DySj"]),
                         children: (0, i.jsx)(o.Z, { guildId: s }),
                     }),
-                    (0, i.jsx)(m, { title: h.intl.string(h.t.JrySi4) }),
+                    (0, i.jsx)(m, { title: h.intl.string(h.t.JrySi3) }),
                     (0, i.jsx)(d.Z, { guildId: s }),
                 ],
             }),

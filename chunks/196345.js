@@ -49,7 +49,7 @@ function C(e) {
             checked: !!n,
             onChange: t,
             disabled: l,
-            label: c.intl.string(c.t["2EXfGB"]),
+            label: c.intl.string(c.t["2EXfGJ"]),
         }),
     });
 }
@@ -57,14 +57,14 @@ function m(e) {
     let { formField: t } = e;
     return (0, r.jsx)(s.Ih, {
         icon: o.snC,
-        text: c.intl.string(c.t["2xbmoK"]),
+        text: c.intl.string(c.t["2xbmoG"]),
         meetsRequirement: !!t.response,
     });
 }
 let b = (e) => {
     let { channelId: t, formField: n, onChange: l } = e;
     return (0, r.jsxs)(s.hK, {
-        title: c.intl.string(c.t.Q8OFNz),
+        title: c.intl.string(c.t["Q8OFN+"]),
         children: [
             (0, r.jsx)(d, {
                 className: u.disabledFieldBackground,

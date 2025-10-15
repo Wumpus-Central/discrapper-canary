@@ -253,19 +253,19 @@ let F = (e) => {
                             children: [
                                 (0, r.jsx)(c.Heading, {
                                     variant: "heading-lg/bold",
-                                    children: R.intl.string(R.t["5/knv7"]),
+                                    children: R.intl.string(R.t["5/knv4"]),
                                 }),
                                 (0, r.jsx)(p.Z, {}),
                             ],
                         }),
                         (0, r.jsx)(c.Text, {
                             variant: "text-sm/normal",
-                            children: R.intl.string(R.t.NFTQoa),
+                            children: R.intl.string(R.t.NFTQoc),
                         }),
                         (0, r.jsx)(c.Text, {
                             color: "text-link",
                             variant: "text-sm/normal",
-                            children: R.intl.format(R.t["jerM9/"], {
+                            children: R.intl.format(R.t.jerM90, {
                                 helpCenterLink: g.Z.getArticleURL(C.BhN.CONFETTI_POTION),
                             }),
                         }),
@@ -277,7 +277,7 @@ let F = (e) => {
                     children: [
                         (0, r.jsx)(c.Text, {
                             variant: "eyebrow",
-                            children: R.intl.string(R.t.o8XwoK),
+                            children: R.intl.string(R.t.o8XwoI),
                         }),
                         (0, r.jsx)(H, {
                             channel: t,
@@ -301,7 +301,7 @@ let F = (e) => {
                     null == n
                         ? {
                               emojiName: null,
-                              selectionText: R.intl.string(R.t.KgK5qq),
+                              selectionText: R.intl.string(R.t.KgK5qg),
                           }
                         : {
                               emojiName: null == n.id ? n.optionallyDiverseSequence : n.name,
@@ -374,7 +374,7 @@ let F = (e) => {
             children: [
                 (0, r.jsx)(c.Button, {
                     variant: "secondary",
-                    text: R.intl.string(R.t.w2Qbd3),
+                    text: R.intl.string(R.t.w2Qbd6),
                     onClick: () => {
                         (0, c.Mr3)(U);
                     },
@@ -397,7 +397,7 @@ let F = (e) => {
     W = () => {
         let { entitlement: e, numPotions: t } = (0, A.t6)(v.D1);
         if (null == t || 0 === t) return null;
-        let n = (null == e ? void 0 : e.type) === C.qc2.DEVELOPER_GIFT ? R.t["b+P6ra"] : R.t.RiQ4cn;
+        let n = (null == e ? void 0 : e.type) === C.qc2.DEVELOPER_GIFT ? R.t["b+P6ra"] : R.t.RiQ4ci;
         return (0, r.jsxs)("div", {
             className: P.remaining,
             children: [
@@ -421,18 +421,18 @@ let F = (e) => {
                 tooltipCopy: u,
             } = (0, i.useMemo)(() => {
                 let e = {
-                        0: R.intl.formatToPlainString(R.t.POGRmp, {
+                        0: R.intl.formatToPlainString(R.t.POGRmi, {
                             amount: v.pe,
                             price: (0, E.T4)(a.amount, a.currency),
                         }),
-                        1: R.intl.string(R.t.RrKeDw),
-                        2: R.intl.string(R.t.WOXaWF),
-                        3: R.intl.string(R.t["1Qm829"]),
+                        1: R.intl.string(R.t.RrKeD5),
+                        2: R.intl.string(R.t.WOXaWH),
+                        3: R.intl.string(R.t["1Qm822"]),
                     },
                     r = {
-                        1: R.intl.string(R.t["Cb8/7+"]),
-                        2: R.intl.string(R.t.fMkB9P),
-                        3: R.intl.string(R.t["59ElNj"]),
+                        1: R.intl.string(R.t["Cb8/70"]),
+                        2: R.intl.string(R.t.fMkB9K),
+                        3: R.intl.string(R.t["59ElNn"]),
                     },
                     i = 0 !== n;
                 return {
@@ -469,7 +469,7 @@ let F = (e) => {
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: "text-md/normal",
-                        children: R.intl.string(R.t.oKJdSk),
+                        children: R.intl.string(R.t.oKJdSs),
                     }),
                 ],
             }),

@@ -80,37 +80,37 @@ function p(e, t) {
 function h(e) {
     switch (e) {
         case l.vf.FEATURED:
-            return u.intl.string(u.t["RU+DCQ"]);
+            return u.intl.string(u.t["RU+DCe"]);
         case l.vf.GAMING:
-            return u.intl.string(u.t["CD/USE"]);
+            return u.intl.string(u.t["CD/USA"]);
         case l.vf.MUSIC:
-            return u.intl.string(u.t.nt9PLy);
+            return u.intl.string(u.t["nt9PL+"]);
         case l.vf.ENTERTAINMENT:
-            return u.intl.string(u.t.gSbmdn);
+            return u.intl.string(u.t.gSbmdt);
         case l.vf.TECH:
-            return u.intl.string(u.t["0A0By8"]);
+            return u.intl.string(u.t["0A0By5"]);
         case l.vf.EDUCATION:
             return u.intl.string(u.t.Gy9woq);
         case l.vf.HUBS:
-            return u.intl.string(u.t["q469/f"]);
+            return u.intl.string(u.t["q469/Z"]);
     }
 }
 function m(e) {
     switch (e) {
         case l.vf.FEATURED:
-            return u.intl.string(u.t.OlDfzM);
+            return u.intl.string(u.t.OlDfzP);
         case l.vf.GAMING:
-            return u.intl.string(u.t["CD/USE"]);
+            return u.intl.string(u.t["CD/USA"]);
         case l.vf.MUSIC:
-            return u.intl.string(u.t.nt9PLy);
+            return u.intl.string(u.t["nt9PL+"]);
         case l.vf.ENTERTAINMENT:
-            return u.intl.string(u.t.gSbmdn);
+            return u.intl.string(u.t.gSbmdt);
         case l.vf.TECH:
-            return u.intl.string(u.t["0A0By8"]);
+            return u.intl.string(u.t["0A0By5"]);
         case l.vf.EDUCATION:
             return u.intl.string(u.t.Gy9woq);
         case l.vf.HUBS:
-            return u.intl.string(u.t.X5xPlZ);
+            return u.intl.string(u.t.X5xPlb);
         default:
             throw Error("[getGlobalDiscoveryServerTabTitle] Unsupported tab: ".concat(e));
     }
@@ -118,19 +118,19 @@ function m(e) {
 function g(e) {
     switch (e) {
         case l.vf.FEATURED:
-            return u.intl.string(u.t.SdMhrq);
+            return u.intl.string(u.t.SdMhrk);
         case l.vf.GAMING:
-            return u.intl.string(u.t.AAJ5oq);
+            return u.intl.string(u.t.AAJ5ov);
         case l.vf.MUSIC:
-            return u.intl.string(u.t["SOio+P"]);
+            return u.intl.string(u.t["SOio+D"]);
         case l.vf.ENTERTAINMENT:
-            return u.intl.string(u.t.R09vf3);
+            return u.intl.string(u.t.R09vf0);
         case l.vf.TECH:
-            return u.intl.string(u.t["Ew4d5+"]);
+            return u.intl.string(u.t.Ew4d56);
         case l.vf.EDUCATION:
-            return u.intl.string(u.t.sasIWV);
+            return u.intl.string(u.t.sasIWU);
         case l.vf.HUBS:
-            return u.intl.string(u.t["F/IQCA"]);
+            return u.intl.string(u.t["F/IQCI"]);
         default:
             throw Error("[getGlobalDiscoveryServerTabTitle] Unsupported tab: ".concat(e));
     }
@@ -138,17 +138,17 @@ function g(e) {
 function E(e) {
     switch (e) {
         case l.vf.FEATURED:
-            return u.intl.string(u.t.crt84e);
+            return u.intl.string(u.t.crt84X);
         case l.vf.GAMING:
-            return u.intl.string(u.t.fWbIpa);
+            return u.intl.string(u.t.fWbIpf);
         case l.vf.MUSIC:
-            return u.intl.string(u.t.nfgDz8);
+            return u.intl.string(u.t.nfgDzz);
         case l.vf.ENTERTAINMENT:
-            return u.intl.string(u.t.k1CYxs);
+            return u.intl.string(u.t.k1CYxv);
         case l.vf.TECH:
-            return u.intl.string(u.t["4dawpq"]);
+            return u.intl.string(u.t["4dawps"]);
         case l.vf.EDUCATION:
-            return u.intl.string(u.t.uexPgY);
+            return u.intl.string(u.t.uexPgT);
         default:
             return null;
     }

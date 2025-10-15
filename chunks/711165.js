@@ -15,8 +15,8 @@ var r = n(951288),
     m = n(156012),
     b = n(74365),
     _ = n(618857),
-    y = n(695346),
-    O = n(23750),
+    O = n(695346),
+    y = n(23750),
     v = n(592125),
     j = n(594174),
     x = n(823379),
@@ -53,8 +53,8 @@ function w() {
         : 0 === t.length
           ? (0, r.jsx)(E.Z, {
                 Icon: d.T39,
-                header: I.intl.string(I.t.aJQZfX),
-                tip: I.intl.string(I.t.rCN4pK),
+                header: I.intl.string(I.t.aJQZfZ),
+                tip: I.intl.string(I.t.rCN4pN),
             })
           : (0, r.jsx)(c.bG, {
                 navigator: o,
@@ -198,7 +198,7 @@ function T(e) {
 }
 let A = i.memo(function (e) {
     let { scheduledMessage: t, channel: n, isPendingDeletion: l } = e,
-        a = new O.ZP({
+        a = new y.ZP({
             id: t.scheduledMessageId,
             content: t.scheduledMessage.content,
             author: j.default.getUser(t.userId),
@@ -215,27 +215,27 @@ let A = i.memo(function (e) {
                 case b._.ERROR_CHANNEL_NOT_FOUND:
                     return {
                         isError: !0,
-                        stateMessage: I.intl.string(I.t.v5O2dH),
+                        stateMessage: I.intl.string(I.t.v5O2dK),
                     };
                 case b._.ERROR_USER_NOT_FOUND:
                     return {
                         isError: !0,
-                        stateMessage: I.intl.string(I.t.j8uIfH),
+                        stateMessage: I.intl.string(I.t.j8uIfG),
                     };
                 case b._.ERROR_USER_CANNOT_USE_SCHEDULED_MESSAGES:
                     return {
                         isError: !0,
-                        stateMessage: I.intl.string(I.t.w6zHX1),
+                        stateMessage: I.intl.string(I.t["w6zHX/"]),
                     };
                 case b._.ERROR_SEND_FAILED:
                     return {
                         isError: !0,
-                        stateMessage: I.intl.string(I.t["pflV7+"]),
+                        stateMessage: I.intl.string(I.t.pflV7z),
                     };
                 case b._.ERROR_SCHEDULED_MESSAGES_DISABLED:
                     return {
                         isError: !0,
-                        stateMessage: I.intl.string(I.t.j8uIfH),
+                        stateMessage: I.intl.string(I.t.j8uIfG),
                     };
                 default:
                     (0, x.vE)(e);
@@ -276,7 +276,7 @@ let A = i.memo(function (e) {
                                           message: a,
                                           channel: n,
                                           className: P.message,
-                                          compact: y.jU.getSetting(),
+                                          compact: O.jU.getSetting(),
                                           animateAvatar: !1,
                                           focusProps: N,
                                       },

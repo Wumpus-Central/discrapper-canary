@@ -92,10 +92,10 @@ let j = "???",
 class U extends i.Component {
     getSystemMessageHeader() {
         let e = h.default.getUser(this.trialOffer.user_id);
-        if (this.isSender) return R.intl.format(R.t["4/EMxs"], { receiver: null == e ? void 0 : e.username });
+        if (this.isSender) return R.intl.format(R.t["4/EMxl"], { receiver: null == e ? void 0 : e.username });
         let t = h.default.getUser(this.trialOffer.referrer_id),
             n = (null == t ? void 0 : t.username) !== void 0 ? t.username : "";
-        return R.intl.format(R.t.yisueH, {
+        return R.intl.format(R.t.yisueA, {
             sender: n,
             helpdeskArticle: b.Z.getArticleURL(N.BhN.REFERRAL_PROGRAM),
         });
@@ -106,22 +106,22 @@ class U extends i.Component {
             n = h.default.getUser(this.trialOffer.referrer_id),
             r = null != n ? n.username : j;
         return this.recipientHasNitro && void 0 === this.trialOffer.redeemed_at
-            ? R.intl.formatToPlainString(R.t.Mptau7, { username: t })
+            ? R.intl.formatToPlainString(R.t["Mptau/"], { username: t })
             : this.offerExpired
               ? this.isSender
-                  ? R.intl.string(R.t["9SNdf3"])
-                  : R.intl.formatToPlainString(R.t["H0+MxM"], { userName: r })
-              : R.intl.formatToPlainString(R.t.IiWKws, {
+                  ? R.intl.string(R.t["9SNdf4"])
+                  : R.intl.formatToPlainString(R.t["H0+MxK"], { userName: r })
+              : R.intl.formatToPlainString(R.t.IiWKwg, {
                     senderUserName: r,
                     recipientUserName: t,
                 });
     }
     getBodyText() {
         return this.recipientHasNitro && !this.isSender && void 0 === this.trialOffer.redeemed_at
-            ? R.intl.format(R.t.LwCwT0, { helpdeskArticle: b.Z.getArticleURL(N.BhN.REFERRAL_PROGRAM) })
+            ? R.intl.format(R.t.LwCwT9, { helpdeskArticle: b.Z.getArticleURL(N.BhN.REFERRAL_PROGRAM) })
             : this.offerExpired
               ? null
-              : R.intl.string(R.t.lQLlOT);
+              : R.intl.string(R.t.lQLlOb);
     }
     renderActions() {
         let e =
@@ -138,7 +138,7 @@ class U extends i.Component {
                         variant: "primary",
                         disabled: e,
                         size: "sm",
-                        text: R.intl.string(R.t.O0etsL),
+                        text: R.intl.string(R.t.O0etsF),
                         onClick: () => {
                             (0, p.Z)({
                                 initialPlanId: null,
@@ -160,11 +160,11 @@ class U extends i.Component {
     renderExpirationDate() {
         let { trialOffer: e, trialEndsAt: t } = this.props;
         if (void 0 !== e.redeemed_at && !this.isSender && null !== t)
-            return R.intl.formatToPlainString(R.t.nP0ivb, { date: (0, E.vc)(o()(t), "LL") });
+            return R.intl.formatToPlainString(R.t.nP0ivR, { date: (0, E.vc)(o()(t), "LL") });
         if (this.recipientHasNitro || void 0 === e.expires_at) return null;
         let n = o()(e.expires_at);
         return this.offerExpired
-            ? R.intl.formatToPlainString(R.t.PuSHfX, { date: (0, E.vc)(o()(n), "LL") })
+            ? R.intl.formatToPlainString(R.t.PuSHfU, { date: (0, E.vc)(o()(n), "LL") })
             : (0, v.F6)(n.valueOf());
     }
     renderMedia() {
@@ -179,31 +179,31 @@ class U extends i.Component {
                 if (this.isSender)
                     if (this.recipientHasNitro && void 0 === this.trialOffer.redeemed_at)
                         return {
-                            headerText: R.intl.formatToPlainString(R.t.qABVhI, { recipient: t }),
-                            bodyText: R.intl.formatToPlainString(R.t.u7hyDw, {
+                            headerText: R.intl.formatToPlainString(R.t.qABVhL, { recipient: t }),
+                            bodyText: R.intl.formatToPlainString(R.t.u7hyDx, {
                                 helpdeskArticle: b.Z.getArticleURL(N.BhN.REFERRAL_PROGRAM),
                             }),
                         };
                     else
                         return {
-                            headerText: R.intl.string(R.t.LAGZfn),
+                            headerText: R.intl.string(R.t.LAGZfq),
                             bodyText: R.intl.formatToPlainString(R.t["0gnFLC"], { recipient: t }),
                         };
                 return this.offerExpired
                     ? {
                           headerText: R.intl.string(R.t.nYvpUl),
-                          bodyText: R.intl.formatToPlainString(R.t.wJdBER, { sender: r }),
+                          bodyText: R.intl.formatToPlainString(R.t.wJdBEZ, { sender: r }),
                       }
                     : {
-                          headerText: R.intl.string(R.t.HtTvXF),
-                          bodyText: R.intl.formatToPlainString(R.t.wOQByM, { sender: r }),
+                          headerText: R.intl.string(R.t.HtTvXA),
+                          bodyText: R.intl.formatToPlainString(R.t.wOQByA, { sender: r }),
                       };
             },
             t = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(S.Z, {
                         subscriptionTier: C.Si.TIER_2,
-                        buttonTextOverride: R.intl.string(R.t.O0etsL),
+                        buttonTextOverride: R.intl.string(R.t.O0etsF),
                         size: "md",
                         variantOverride: "expressive",
                     }),
@@ -226,7 +226,7 @@ class U extends i.Component {
                                 ? T.SelectFriendsModalScreens.REMINDER
                                 : T.SelectFriendsModalScreens.SELECT_FRIENDS,
                     }),
-                text: R.intl.string(R.t.Lm2nFR),
+                text: R.intl.string(R.t.Lm2nFc),
             }),
             i = this.isSender ? n : t,
             a = (0, r.jsx)(c.Eep, {

@@ -28,14 +28,14 @@ function v(e) {
             (null == j ? void 0 : j.scheduled_start_time) != null
                 ? new Date(null == j ? void 0 : j.scheduled_start_time)
                 : a,
-        S = (0, g.DK)(I),
-        P = y ? b.p1.CANCELED : b.p1.SCHEDULED;
-    S === n && (P = I.status);
-    let E =
+        E = (0, g.DK)(I),
+        S = y ? b.p1.CANCELED : b.p1.SCHEDULED;
+    E === n && (S = I.status);
+    let Z =
             (null == I ? void 0 : I.scheduled_start_time) != null
                 ? (0, g.lh)(j, N, new Date(null == I ? void 0 : I.scheduled_start_time))
                 : null,
-        Z = (e) => {
+        P = (e) => {
             e.stopPropagation(),
                 null != k &&
                     (0, s.jW)(e, async () => {
@@ -89,12 +89,12 @@ function v(e) {
         onClick: (e) => {
             e.stopPropagation(), y || null == x || x(n);
         },
-        onContextMenu: Z,
+        onContextMenu: P,
         "aria-label": "",
         children: [
             (0, i.jsx)(m.z, {
                 startTime: N.toISOString(),
-                status: null != E ? E : P,
+                status: null != Z ? Z : S,
                 eventType: I.entity_type,
                 guildEventId: I.id,
                 recurrenceId: n,
@@ -105,14 +105,14 @@ function v(e) {
                     variant: "text-sm/semibold",
                     color: "text-danger",
                     className: f.canceledStatus,
-                    children: h.intl.string(h.t.fyBVRk),
+                    children: h.intl.string(h.t.fyBVRm),
                 }),
             (0, i.jsx)(o.u, {
-                text: h.intl.string(h.t.UKOtz8),
+                text: h.intl.string(h.t["UKOtz+"]),
                 position: "top",
-                "aria-label": h.intl.string(h.t.bt75u7),
+                "aria-label": h.intl.string(h.t.bt75uw),
                 children: (0, i.jsx)(c.P3F, {
-                    onClick: Z,
+                    onClick: P,
                     className: f.iconButton,
                     children: (0, i.jsx)(c.xhG, {
                         size: "custom",

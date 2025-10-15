@@ -2,8 +2,8 @@ n.d(t, { default: () => k }), n(388685);
 var r = n(951288),
     s = n(647438),
     i = n(512722),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     l = n(481060),
     c = n(570140),
     d = n(23645),
@@ -11,12 +11,12 @@ var r = n(951288),
     u = n(454585),
     p = n(365007),
     m = n(15980),
-    f = n(325067),
-    b = n(594174),
+    b = n(325067),
+    f = n(594174),
     x = n(63063),
-    g = n(981631),
-    j = n(388032),
-    C = n(505198);
+    C = n(981631),
+    g = n(388032),
+    j = n(505198);
 function y(e, t, n) {
     return (
         t in e
@@ -33,8 +33,8 @@ function y(e, t, n) {
 let O = (e) => {
     var t,
         n,
-        { label: s, text: i, children: o } = e,
-        a = (function (e, t) {
+        { label: s, text: i, children: a } = e,
+        o = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -72,7 +72,7 @@ let O = (e) => {
                     });
             }
             return e;
-        })({ direction: h.Z.Direction.VERTICAL }, a)),
+        })({ direction: h.Z.Direction.VERTICAL }, o)),
         (n = n =
             {
                 children: [
@@ -83,13 +83,13 @@ let O = (e) => {
                     null != i
                         ? (0, r.jsx)(l.Text, {
                               variant: "text-md/normal",
-                              className: C.sectionBody,
+                              className: j.sectionBody,
                               children: i,
                           })
                         : null,
                     (0, r.jsx)(h.Z.Child, {
                         wrap: !0,
-                        children: o,
+                        children: a,
                     }),
                 ],
             }),
@@ -111,7 +111,7 @@ let O = (e) => {
 class P extends s.PureComponent {
     renderBackupCodesSection(e) {
         return (0, r.jsx)(O, {
-            label: j.intl.string(j.t.qZZUy8),
+            label: g.intl.string(g.t.qZZUy6),
             text: e,
             children: (0, r.jsx)(d.Z, {
                 fileContents: this.getDownloadFileContents,
@@ -121,7 +121,7 @@ class P extends s.PureComponent {
                 children: (0, r.jsx)(l.Button, {
                     variant: "active",
                     size: "sm",
-                    text: j.intl.string(j.t.qZZUy8),
+                    text: g.intl.string(g.t.qZZUy6),
                 }),
             }),
         });
@@ -130,20 +130,20 @@ class P extends s.PureComponent {
         return m.Z.hasCredentials
             ? null
             : (0, r.jsxs)(O, {
-                  label: j.intl.string(j.t.xMDCHR),
-                  text: j.intl.string(j.t.okgGTk),
+                  label: g.intl.string(g.t.xMDCHa),
+                  text: g.intl.string(g.t.okgGTu),
                   children: [
                       (0, r.jsx)(l.Text, {
                           variant: "text-md/normal",
-                          className: C.sectionBody,
-                          children: j.intl.format(j.t.OeGXVl, {
-                              learnMoreLink: x.Z.getArticleURL(g.BhN.SETTING_UP_TWO_FACTOR),
+                          className: j.sectionBody,
+                          children: g.intl.format(g.t.OeGXVv, {
+                              learnMoreLink: x.Z.getArticleURL(C.BhN.SETTING_UP_TWO_FACTOR),
                           }),
                       }),
                       (0, r.jsx)(l.Button, {
                           variant: "active",
                           size: "sm",
-                          text: j.intl.string(j.t.NIFmCA),
+                          text: g.intl.string(g.t.NIFmCJ),
                           onClick: this.handleAddPasskey,
                       }),
                   ],
@@ -159,12 +159,12 @@ class P extends s.PureComponent {
                     children: [
                         (0, r.jsx)(l.Heading, {
                             variant: "heading-lg/semibold",
-                            className: C.header,
+                            className: j.header,
                             children: u.Z.parse(e),
                         }),
                         (0, r.jsx)(l.Text, {
                             variant: "text-xs/normal",
-                            className: C.subHeader,
+                            className: j.subHeader,
                             children: t,
                         }),
                     ],
@@ -180,9 +180,9 @@ class P extends s.PureComponent {
         let { onClose: t } = this.props;
         return (0, r.jsx)(l.sYh, {
             dismissable: !0,
-            header: j.intl.string(j.t.mwVXnJ),
-            confirmText: j.intl.string(j.t.MwSEo6),
-            cancelText: j.intl.string(j.t["ETE/oK"]),
+            header: g.intl.string(g.t.mwVXnI),
+            confirmText: g.intl.string(g.t.MwSEoz),
+            cancelText: g.intl.string(g.t["ETE/oC"]),
             onCancel: () => this.setState({ showConfirmModal: !1 }),
             onConfirm: () => {
                 c.Z.dispatch({ type: "MFA_SEEN_BACKUP_CODE_PROMPT" }), t();
@@ -203,19 +203,19 @@ class P extends s.PureComponent {
             { showConfirmModal: t } = this.state;
         return (0, r.jsxs)(l.Y0X, {
             transitionState: e,
-            className: C.modal,
+            className: j.modal,
             parentComponent: "MFAEnableSuccess",
             children: [
-                this.renderHeader(j.intl.string(j.t["681MPT"]), j.intl.format(j.t["/Nhi8f"], {})),
+                this.renderHeader(g.intl.string(g.t["681MPV"]), g.intl.format(g.t["/Nhi8R"], {})),
                 (0, r.jsxs)(l.hzk, {
-                    className: C.modalInner,
+                    className: j.modalInner,
                     children: [
                         this.renderPasskeyCTASection(),
-                        (0, r.jsx)(l.izJ, { className: C.divider }),
-                        this.renderBackupCodesSection(j.intl.format(j.t.M0Dogo, {})),
+                        (0, r.jsx)(l.izJ, { className: j.divider }),
+                        this.renderBackupCodesSection(g.intl.format(g.t.M0Dogh, {})),
                     ],
                 }),
-                t && this.renderConfirmModal(j.intl.string(j.t.WJFPHB)),
+                t && this.renderConfirmModal(g.intl.string(g.t.WJFPHJ)),
             ],
         });
     }
@@ -224,15 +224,15 @@ class P extends s.PureComponent {
             { showConfirmModal: t } = this.state;
         return (0, r.jsxs)(l.Y0X, {
             transitionState: e,
-            className: C.modal,
+            className: j.modal,
             parentComponent: "MFAEnableSuccess",
             children: [
-                this.renderHeader(j.intl.string(j.t.x6ielJ), j.intl.format(j.t["/Nhi8f"], {})),
+                this.renderHeader(g.intl.string(g.t.x6ielD), g.intl.format(g.t["/Nhi8R"], {})),
                 (0, r.jsx)(l.hzk, {
-                    className: C.modalInner,
-                    children: this.renderBackupCodesSection(j.intl.format(j.t.p59QLS, {})),
+                    className: j.modalInner,
+                    children: this.renderBackupCodesSection(g.intl.format(g.t.p59QLQ, {})),
                 }),
-                t && this.renderConfirmModal(j.intl.string(j.t.aoNIXF)),
+                t && this.renderConfirmModal(g.intl.string(g.t.aoNIXB)),
             ],
         });
     }
@@ -253,22 +253,22 @@ class P extends s.PureComponent {
                             return "* "
                                 .concat(n.substr(0, 4), "-")
                                 .concat(n.substr(4), " ")
-                                .concat(t ? "(".concat(j.intl.string(j.t["ycME+/"]), ")") : "");
+                                .concat(t ? "(".concat(g.intl.string(g.t["ycME+9"]), ")") : "");
                         })
                         .join("\r\n"),
-                    t = j.intl.formatToPlainString(j.t.uYWwh4, { email: this.props.currentUser.email });
+                    t = g.intl.formatToPlainString(g.t["uYWwh/"], { email: this.props.currentUser.email });
                 return "".concat(t, "\r\n\r\n").concat(e);
             });
     }
 }
-let k = a.ZP.connectStores([b.default, f.Z], () => {
-    let e = b.default.getCurrentUser();
+let k = o.ZP.connectStores([f.default, b.Z], () => {
+    let e = f.default.getCurrentUser();
     return (
-        o()(null != e, "MFAEnableSuccess: currentUser cannot be undefined"),
+        a()(null != e, "MFAEnableSuccess: currentUser cannot be undefined"),
         {
             currentUser: e,
-            backupCodes: f.Z.getBackupCodes(),
-            hasSeenBackupPrompt: f.Z.hasSeenBackupPrompt,
+            backupCodes: b.Z.getBackupCodes(),
+            hasSeenBackupPrompt: b.Z.hasSeenBackupPrompt,
         }
     );
 })(P);

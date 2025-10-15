@@ -55,7 +55,7 @@ function m(e) {
                     onClick: () => c.default.track(f.rMx.HELP_CLICKED, { highlighted: _ }),
                     icon: a.idN,
                     tooltipPosition: g.has(b) ? "left" : void 0,
-                    tooltip: h.intl.string(h.t.cqEoj4),
+                    tooltip: h.intl.string(h.t["cqEoj/"]),
                 },
                 n,
             ),

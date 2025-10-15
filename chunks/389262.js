@@ -15,7 +15,7 @@ function d(t) {
             {
                 variant: "secondary",
                 onClick: i,
-                text: l.intl.string(l.t["JtWl+f"]),
+                text: l.intl.string(l.t["JtWl+a"]),
             },
         ],
         "aria-labelledby": p,
@@ -25,12 +25,12 @@ function d(t) {
         },
         onClose: i,
         transitionState: e,
-        title: l.intl.formatToPlainString(l.t["wLFT6+"], { tier: d.summary }),
+        title: l.intl.formatToPlainString(l.t.wLFT6z, { tier: d.summary }),
         children: (0, a.jsx)(n.Text, {
             className: o.subtitle,
             variant: "text-md/medium",
             color: "header-secondary",
-            children: l.intl.format(l.t.OsAK9v, { timestamp: null == u ? void 0 : u.currentPeriodEnd }),
+            children: l.intl.format(l.t.OsAK9h, { timestamp: null == u ? void 0 : u.currentPeriodEnd }),
         }),
     });
 }

@@ -10,8 +10,8 @@ var i,
     a = n(597688),
     s = n(1870),
     o = n(884697),
-    d = n(235897),
-    c = n(388032),
+    c = n(235897),
+    d = n(388032),
     u = (((i = {}).PURCHASE = "purchase"), (i.PREMIUM_PURCHASE = "premium_purchase"), (i.PREVIEW = "preview"), i);
 let p = { skuId: "None" },
     _ = { skuId: "Shop" },
@@ -19,7 +19,7 @@ let p = { skuId: "None" },
         let e = (0, l.e7)([s.Z], () => s.Z.purchases),
             [t, n] = (0, l.Wu)([a.Z], () => [a.Z.categories, a.Z.products]);
         return (
-            d.Z.useConfig({ location: "use nameplate sections" }),
+            c.Z.useConfig({ location: "use nameplate sections" }),
             (0, r.useMemo)(() => {
                 let i = (0, o.Y)(e, t).reduce(
                     (t, i) => {
@@ -40,19 +40,19 @@ let p = { skuId: "None" },
                         section: "purchase",
                         items: [p, _, ...i.purchase],
                         height: 12,
-                        header: c.intl.string(c.t["WfGV5+"]),
+                        header: d.intl.string(d.t.WfGV52),
                     },
                     {
                         section: "premium_purchase",
                         items: i.premium_purchase,
                         height: 12,
-                        header: c.intl.string(c.t.TiLCg4),
+                        header: d.intl.string(d.t.TiLCgw),
                     },
                     {
                         section: "preview",
                         items: i.preview,
                         height: 12,
-                        header: c.intl.string(c.t["1vbbeX"]),
+                        header: d.intl.string(d.t["1vbbee"]),
                     },
                 ].filter((e) => {
                     let { items: t } = e;

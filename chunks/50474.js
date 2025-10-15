@@ -2,8 +2,8 @@ t.d(i, { default: () => v }), t(388685);
 var n = t(951288),
     r = t(647438),
     s = t(392711),
-    l = t.n(s),
-    a = t(793030),
+    a = t.n(s),
+    l = t(793030),
     o = t(481060),
     c = t(139387),
     d = t(479531),
@@ -26,9 +26,9 @@ function v(e) {
             transitionState: E,
         } = e,
         [w, O] = r.useState(null),
-        [P, k] = r.useState(!1),
+        [C, P] = r.useState(!1),
         {
-            originalApplicationPermissions: C,
+            originalApplicationPermissions: k,
             originalCommandPermissions: I,
             editedTargetPermissions: K,
             hasChanges: S,
@@ -37,8 +37,8 @@ function v(e) {
         N = r.useCallback(async () => {
             var e, i, n, r, s;
             if (!S) return void x();
-            let a = l().difference(Object.keys(null != (n = m.permissions) ? n : {}), Object.keys(K)),
-                o = l().omit(
+            let l = a().difference(Object.keys(null != (n = m.permissions) ? n : {}), Object.keys(K)),
+                o = a().omit(
                     (function (e) {
                         for (var i = 1; i < arguments.length; i++) {
                             var t = null != arguments[i] ? arguments[i] : {},
@@ -64,19 +64,19 @@ function v(e) {
                         }
                         return e;
                     })({}, K),
-                    a,
+                    l,
                 ),
                 c = (0, p.bD)(v),
                 b = (0, g.rE)(v, u.Kw.ROLE),
                 f = (0, g.rE)(c, u.Kw.CHANNEL),
-                h = null == (r = null == (e = C[b]) ? void 0 : e.permission) || r,
-                j = null == (s = null == (i = C[f]) ? void 0 : i.permission) || s,
+                h = null == (r = null == (e = k[b]) ? void 0 : e.permission) || r,
+                j = null == (s = null == (i = k[f]) ? void 0 : i.permission) || s,
                 E = Object.values(o).map((e) => ({
                     id: e.id,
                     permission: e.permission,
                     type: e.type,
                 }));
-            O(null), k(!0);
+            O(null), P(!0);
             try {
                 await y.U3({
                     defaultEveryoneValue: h,
@@ -86,13 +86,13 @@ function v(e) {
                     guildId: v,
                     permissions: E,
                 }),
-                    k(!1),
+                    P(!1),
                     x();
             } catch (e) {
                 O(new d.Z(e));
             }
-            k(!1);
-        }, [t, C, m.id, m.permissions, v, S, x, K, O, k]);
+            P(!1);
+        }, [t, k, m.id, m.permissions, v, S, x, K, O, P]);
     r.useEffect(
         () => () => {
             y.Ui(m.id), c.Z.stopEditingCommandPermissions(m.id);
@@ -100,11 +100,11 @@ function v(e) {
         [m.id],
     );
     let q = (0, g.gw)(m.type, m.displayName);
-    return (0, n.jsx)(a.Modal, {
-        "aria-label": h.intl.string(h.t["N+InBQ"]),
+    return (0, n.jsx)(l.Modal, {
+        "aria-label": h.intl.string(h.t["N+InBa"]),
         transitionState: E,
         onClose: x,
-        title: h.intl.string(h.t["N+InBQ"]),
+        title: h.intl.string(h.t["N+InBa"]),
         preview: (0, n.jsxs)(o.Kqy, {
             direction: "horizontal",
             gap: 16,
@@ -133,16 +133,16 @@ function v(e) {
         }),
         actions: [
             {
-                text: h.intl.string(h.t["ETE/oK"]),
+                text: h.intl.string(h.t["ETE/oC"]),
                 onClick: x,
                 variant: "secondary",
             },
             {
-                text: h.intl.string(h.t.R3BPHx),
+                text: h.intl.string(h.t["R3BPH+"]),
                 onClick: N,
                 variant: "primary",
                 disabled: !S,
-                loading: P,
+                loading: C,
             },
         ],
         children: (0, n.jsxs)(o.Kqy, {
@@ -160,7 +160,7 @@ function v(e) {
                     commandId: m.id,
                     guildId: v,
                     inModal: !0,
-                    originalApplicationPermissions: C,
+                    originalApplicationPermissions: k,
                     originalCommandPermissions: I,
                     editedTargetPermissions: K,
                     selectedPermissionCount: Z,

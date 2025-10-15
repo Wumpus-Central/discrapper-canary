@@ -40,8 +40,8 @@ var r,
     k = n(585483),
     M = n(358085),
     U = n(481153),
-    G = n(588705),
-    B = n(494526),
+    B = n(588705),
+    G = n(494526),
     F = n(163671),
     z = n(981631),
     V = n(260539),
@@ -197,9 +197,9 @@ class X extends (r = l.PureComponent) {
                 (0, i.jsx)(_.Hh, {}),
                 (0, i.jsx)(_.Dx, {
                     className: W.marginBottom8,
-                    children: K.intl.string(K.t.S6RMND),
+                    children: K.intl.string(K.t.S6RMNA),
                 }),
-                (0, i.jsx)(_.DK, { children: K.intl.string(K.t.YZiJbm) }),
+                (0, i.jsx)(_.DK, { children: K.intl.string(K.t.YZiJbh) }),
             ],
         });
     }
@@ -217,24 +217,24 @@ class X extends (r = l.PureComponent) {
                       }),
                       (0, i.jsx)(_.Dx, {
                           className: W.marginBottom8,
-                          children: K.intl.format(K.t.ot19ho, { name: e.toString() }),
+                          children: K.intl.format(K.t.ot19hv, { name: e.toString() }),
                       }),
                       (0, i.jsx)(_.DK, {
                           className: W.marginBottom40,
-                          children: K.intl.string(K.t["2xkqzc"]),
+                          children: K.intl.string(K.t["2xkqzT"]),
                       }),
                       (0, i.jsxs)(_.gO, {
                           children: [
                               (0, i.jsx)(_.zx, {
                                   onClick: () => t(z.Z5c.APP),
                                   className: W.marginBottom8,
-                                  children: K.intl.format(K.t.fohtv7, { name: e.toString() }),
+                                  children: K.intl.format(K.t.fohtv2, { name: e.toString() }),
                               }),
                               (0, i.jsx)(_.zx, {
                                   look: _.zx.Looks.LINK,
                                   color: _.zx.Colors.LINK,
                                   onClick: this.handleReset,
-                                  children: K.intl.string(K.t.nO564e),
+                                  children: K.intl.string(K.t.nO564d),
                               }),
                           ],
                       }),
@@ -244,8 +244,8 @@ class X extends (r = l.PureComponent) {
     renderDisabledAccount() {
         let { authBoxClassName: e } = this.props,
             t = this.props.loginStatus === z.u34.ACCOUNT_DISABLED,
-            n = t ? K.intl.string(K.t["j3rC+f"]) : K.intl.string(K.t.ZFWofn),
-            r = t ? K.intl.string(K.t["6eNTWV"]) : K.intl.string(K.t.pCBti4);
+            n = t ? K.intl.string(K.t["j3rC+U"]) : K.intl.string(K.t.ZFWofo),
+            r = t ? K.intl.string(K.t["6eNTWe"]) : K.intl.string(K.t["pCBti+"]);
         return (0, i.jsx)(_.ZP, {
             tag: "form",
             onSubmit: this.handleReset,
@@ -265,11 +265,11 @@ class X extends (r = l.PureComponent) {
                             (0, i.jsx)(_.zx, {
                                 color: _.zx.Colors.BRAND,
                                 type: "submit",
-                                children: K.intl.string(K.t.JhDw5u),
+                                children: K.intl.string(K.t.JhDw5o),
                             }),
                             (0, i.jsx)("div", {
                                 className: a()(W.marginTop8, H.needAccount),
-                                children: K.intl.format(K.t.js2rr6, { onClick: this.handleCancelAccountDeletion }),
+                                children: K.intl.format(K.t.js2rr5, { onClick: this.handleCancelAccountDeletion }),
                             }),
                         ],
                     }),
@@ -282,7 +282,7 @@ class X extends (r = l.PureComponent) {
         return (0, i.jsxs)(_.ZP, {
             className: e,
             children: [
-                (0, i.jsx)(G.R, {}),
+                (0, i.jsx)(B.R, {}),
                 (0, i.jsxs)(_.gO, {
                     className: W.marginTop20,
                     children: [
@@ -290,7 +290,7 @@ class X extends (r = l.PureComponent) {
                             className: W.marginBottom20,
                             alpha2: t.alpha2,
                             countryCode: t.code.split(" ")[0],
-                            label: K.intl.string(K.t.tUjnxs),
+                            label: K.intl.string(K.t.tUjnxr),
                             onChange: (e, t) =>
                                 this.setState({
                                     login: e,
@@ -307,7 +307,7 @@ class X extends (r = l.PureComponent) {
                         }),
                         (0, i.jsx)(_.II, {
                             className: W.marginBottom20,
-                            label: K.intl.string(K.t["CIGa+/"]),
+                            label: K.intl.string(K.t["CIGa+7"]),
                             onChange: (e) => this.setState({ password: e }),
                             type: "password",
                             setRef: this.setPasswordRef,
@@ -320,20 +320,20 @@ class X extends (r = l.PureComponent) {
                             className: W.marginBottom8,
                             type: "submit",
                             disabled: !0,
-                            children: K.intl.string(K.t.dKhVQE),
+                            children: K.intl.string(K.t.dKhVQN),
                         }),
                         (0, i.jsx)(_.zx, {
                             disabled: !0,
                             look: _.zx.Looks.LINK,
                             color: _.zx.Colors.LINK,
-                            children: K.intl.string(K.t.wWIufn),
+                            children: K.intl.string(K.t.wWIufs),
                         }),
                         (0, i.jsx)(_.zx, {
                             disabled: !0,
                             className: W.marginTop4,
                             look: _.zx.Looks.LINK,
                             color: _.zx.Colors.LINK,
-                            children: K.intl.string(K.t.tmE73t),
+                            children: K.intl.string(K.t.tmE73r),
                         }),
                     ],
                 }),
@@ -355,7 +355,7 @@ class X extends (r = l.PureComponent) {
         return (
             (n =
                 null != r
-                    ? (0, i.jsx)(G.Z, { invite: r })
+                    ? (0, i.jsx)(B.Z, { invite: r })
                     : null != l
                       ? (0, i.jsx)(U.Z, { giftCode: l })
                       : (0, i.jsxs)("div", {
@@ -365,12 +365,12 @@ class X extends (r = l.PureComponent) {
                                     _.Dx,
                                     {
                                         className: W.marginBottom8,
-                                        children: K.intl.string(K.t["7fNJgI"]),
+                                        children: K.intl.string(K.t["7fNJgA"]),
                                     },
                                     "title",
                                 ),
                                 !1 === (0, M.isAndroidWeb)()
-                                    ? (0, i.jsx)(_.DK, { children: K.intl.string(K.t.euS7r6) }, "subtitle")
+                                    ? (0, i.jsx)(_.DK, { children: K.intl.string(K.t.euS7r4) }, "subtitle")
                                     : null,
                             ],
                         })),
@@ -402,7 +402,7 @@ class X extends (r = l.PureComponent) {
                                                 }),
                                                 (0, i.jsx)(d.Text, {
                                                     variant: "text-md/normal",
-                                                    children: K.intl.string(K.t["1MrpWF"]),
+                                                    children: K.intl.string(K.t["1MrpWO"]),
                                                 }),
                                             ],
                                         }),
@@ -416,7 +416,7 @@ class X extends (r = l.PureComponent) {
                                                 alpha2: o.alpha2,
                                                 countryCode: o.code.split(" ")[0],
                                                 className: W.marginBottom20,
-                                                label: K.intl.string(K.t.tUjnxs),
+                                                label: K.intl.string(K.t.tUjnxr),
                                                 error:
                                                     null != (t = this.renderError("login"))
                                                         ? t
@@ -436,7 +436,7 @@ class X extends (r = l.PureComponent) {
                                                 required: !0,
                                             }),
                                             (0, i.jsx)(_.II, {
-                                                label: K.intl.string(K.t["CIGa+/"]),
+                                                label: K.intl.string(K.t["CIGa+7"]),
                                                 error: this.renderError("password"),
                                                 onChange: (e) => this.setState({ password: e }),
                                                 name: "password",
@@ -453,28 +453,28 @@ class X extends (r = l.PureComponent) {
                                                 look: _.zx.Looks.LINK,
                                                 color: _.zx.Colors.LINK,
                                                 className: a()(W.marginBottom20, W.marginTop4),
-                                                children: K.intl.string(K.t.wWIufn),
+                                                children: K.intl.string(K.t.wWIufs),
                                             }),
                                             (0, i.jsx)(_.zx, {
                                                 type: "submit",
                                                 submitting: s === z.u34.LOGGING_IN,
                                                 color: _.zx.Colors.BRAND,
                                                 className: W.marginBottom8,
-                                                children: K.intl.string(K.t.dKhVQE),
+                                                children: K.intl.string(K.t.dKhVQN),
                                             }),
                                             (0, i.jsxs)("div", {
                                                 className: W.marginTop4,
                                                 children: [
                                                     (0, i.jsx)("span", {
                                                         className: H.needAccount,
-                                                        children: K.intl.string(K.t.tmE73t),
+                                                        children: K.intl.string(K.t.tmE73r),
                                                     }),
                                                     (0, i.jsx)(_.zx, {
                                                         onClick: this.handleGotoRegister,
                                                         look: _.zx.Looks.LINK,
                                                         color: _.zx.Colors.LINK,
                                                         className: H.smallRegisterLink,
-                                                        children: K.intl.string(K.t.pV8xeX),
+                                                        children: K.intl.string(K.t.pV8xeR),
                                                     }),
                                                 ],
                                             }),
@@ -485,7 +485,7 @@ class X extends (r = l.PureComponent) {
                         }),
                         (0, i.jsx)(d.y5t, {
                             children: e
-                                ? (0, i.jsx)(B.Z, {
+                                ? (0, i.jsx)(G.Z, {
                                       authTokenCallback: this.handleAuthToken,
                                       conditionalMediationAbortController:
                                           this.state.conditionalMediationAbortController,
@@ -546,8 +546,8 @@ class X extends (r = l.PureComponent) {
             tag: "form",
             className: e,
             children: (0, i.jsx)(x.Z, {
-                title: K.intl.string(K.t.w55Ocn),
-                subtitle: K.intl.format(K.t.CfRZBg, { onResendClick: this.handleResendCode }),
+                title: K.intl.string(K.t.w55Oco),
+                subtitle: K.intl.format(K.t.CfRZBj, { onResendClick: this.handleResendCode }),
                 error: t,
                 onSubmit: this.handleIPAuthorize,
                 onCancel: this.loginReset,
@@ -562,7 +562,7 @@ class X extends (r = l.PureComponent) {
             className: e,
             children: (0, i.jsx)(x.Z, {
                 title: K.intl.string(K.t["+xqy3d"]),
-                subtitle: K.intl.format(K.t.ef4uZ2, { onResendClick: this.handleResendCode }),
+                subtitle: K.intl.format(K.t.ef4uZ7, { onResendClick: this.handleResendCode }),
                 error: t,
                 onSubmit: this.handlePasswordReset,
                 onCancel: this.loginReset,
@@ -719,8 +719,8 @@ class X extends (r = l.PureComponent) {
                             J(
                                 Y(
                                     {
-                                        header: K.intl.string(K.t.f5Pi7O),
-                                        confirmText: K.intl.string(K.t.BddRzc),
+                                        header: K.intl.string(K.t.f5Pi7A),
+                                        confirmText: K.intl.string(K.t.BddRzS),
                                         confirmButtonColor: _.zx.Colors.BRAND,
                                         className: c.tq ? H.mobile : "",
                                     },
@@ -729,7 +729,7 @@ class X extends (r = l.PureComponent) {
                                 {
                                     children: (0, i.jsx)(d.Text, {
                                         variant: "text-md/normal",
-                                        children: K.intl.format(K.t["6u5hQ0"], { email: t }),
+                                        children: K.intl.format(K.t["6u5hQ9"], { email: t }),
                                     }),
                                 },
                             ),

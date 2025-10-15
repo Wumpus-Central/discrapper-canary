@@ -40,7 +40,7 @@ function u(e) {
                       className: c.sectionHeader,
                       variant: "text-md/semibold",
                       color: "header-primary",
-                      children: o.intl.string(o.t["bNdK5+"]),
+                      children: o.intl.string(o.t.bNdK5x),
                   }),
                   (0, i.jsxs)("div", {
                       className: f ? d.gameProfileMediaSmall : d.gameProfileMediaLarge,
@@ -70,7 +70,7 @@ function u(e) {
                                           children: (0, i.jsx)("img", {
                                               src: e.url,
                                               className: d.gameArtwork,
-                                              alt: o.intl.formatToPlainString(o.t.COYYrq, { game: name }),
+                                              alt: o.intl.formatToPlainString(o.t.COYYrn, { game: name }),
                                           }),
                                       },
                                       t,

@@ -65,7 +65,7 @@ class O extends i.PureComponent {
                                     o
                                         ? (0, r.jsx)("span", {
                                               className: m.defaultIndicator,
-                                              children: g.intl.string(g.t.bBvAEB),
+                                              children: g.intl.string(g.t.bBvAEH),
                                           })
                                         : null,
                                 ],
@@ -73,7 +73,7 @@ class O extends i.PureComponent {
                             null != u && null != e && null != t
                                 ? (0, r.jsx)(s.Z, {
                                       className: m.rowBody,
-                                      hoverText: g.intl.formatToPlainString(g.t.Fxo9e3, {
+                                      hoverText: g.intl.formatToPlainString(g.t["Fxo9e+"], {
                                           available: e,
                                           total: t,
                                       }),
@@ -89,7 +89,7 @@ class O extends i.PureComponent {
                     (0, r.jsx)(a.Button, {
                         variant: "secondary",
                         size: "sm",
-                        text: g.intl.string(g.t.bt75u7),
+                        text: g.intl.string(g.t.bt75uw),
                         disabled: null != l,
                         onClick: this.handleStartEditing,
                     }),
@@ -109,7 +109,7 @@ class O extends i.PureComponent {
                     (0, r.jsxs)(c.Z.Child, {
                         children: [
                             (0, r.jsx)(a.oil, {
-                                label: g.intl.string(g.t.AJkKCA),
+                                label: g.intl.string(g.t.AJkKCB),
                                 value: n,
                                 placeholder: d.Z.getLabelFromPath(e),
                                 onChange: this.handleLabelChange,
@@ -117,7 +117,7 @@ class O extends i.PureComponent {
                             (0, r.jsx)("div", {
                                 className: b.marginTop20,
                                 children: (0, r.jsx)(a.oil, {
-                                    label: g.intl.string(g.t.lnUCwc),
+                                    label: g.intl.string(g.t.lnUCwX),
                                     disabled: !0,
                                     value: e,
                                 }),
@@ -128,7 +128,7 @@ class O extends i.PureComponent {
                                     checked: null != i ? i : this.props.isDefault,
                                     disabled: this.props.isDefault,
                                     onChange: this.handleToggleDefault,
-                                    label: g.intl.string(g.t.Z2MWuL),
+                                    label: g.intl.string(g.t.Z2MWuH),
                                 }),
                             }),
                             (0, r.jsx)(a.izJ, { className: m.separator }),
@@ -137,7 +137,7 @@ class O extends i.PureComponent {
                                     (0, r.jsx)(a.Button, {
                                         variant: "critical-secondary",
                                         size: "sm",
-                                        text: g.intl.string(g.t.iBUzS0),
+                                        text: g.intl.string(g.t.iBUzS5),
                                         disabled: t || this.props.isDefault,
                                         onClick: this.handleRemoveLocation,
                                     }),
@@ -148,13 +148,13 @@ class O extends i.PureComponent {
                                                 (0, r.jsx)(a.Button, {
                                                     variant: "secondary",
                                                     size: "sm",
-                                                    text: g.intl.string(g.t["ETE/oK"]),
+                                                    text: g.intl.string(g.t["ETE/oC"]),
                                                     onClick: this.handleStopEditing,
                                                 }),
                                                 (0, r.jsx)(a.Button, {
                                                     variant: "active",
                                                     size: "sm",
-                                                    text: g.intl.string(g.t.R3BPHx),
+                                                    text: g.intl.string(g.t["R3BPH+"]),
                                                     disabled:
                                                         e === this.props.path &&
                                                         n === this.props.label &&
@@ -236,15 +236,15 @@ class O extends i.PureComponent {
                                 return e;
                             })({}, e),
                             {
-                                header: g.intl.string(g.t.iBUzS0),
-                                confirmText: g.intl.string(g.t.iBUzS0),
-                                cancelText: g.intl.string(g.t["ETE/oK"]),
+                                header: g.intl.string(g.t.iBUzS5),
+                                confirmText: g.intl.string(g.t.iBUzS5),
+                                cancelText: g.intl.string(g.t["ETE/oC"]),
                                 onConfirm: () => {
                                     this.handleStopEditing(), (0, o.iD)(this.props.path);
                                 },
                                 children: (0, r.jsx)(a.Text, {
                                     variant: "text-md/normal",
-                                    children: g.intl.string(g.t["1XqeW1"]),
+                                    children: g.intl.string(g.t["1XqeW2"]),
                                 }),
                             },
                         ),
@@ -281,7 +281,7 @@ class E extends i.PureComponent {
         return (0, r.jsx)("div", {
             className: m.wrapper,
             children: (0, r.jsxs)(a.gNt, {
-                label: g.intl.string(g.t.aLszkJ),
+                label: g.intl.string(g.t.aLszkC),
                 children: [
                     e.map((e) => {
                         let { path: l, label: a } = e;
@@ -304,7 +304,7 @@ class E extends i.PureComponent {
                         children: (0, r.jsx)(a.Button, {
                             variant: "primary",
                             size: "sm",
-                            text: g.intl.string(g.t.pnZ2ur),
+                            text: g.intl.string(g.t.pnZ2uk),
                             disabled: !f.isPlatformEmbedded,
                             onClick: this.handleAddInstallationLocation,
                         }),

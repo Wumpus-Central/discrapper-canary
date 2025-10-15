@@ -32,7 +32,7 @@ function N() {
         j = (0, p.Z)("message-requests-spam-list"),
         { channelId: P } = (0, _._)(),
         x = i.useCallback(() => {
-            (0, c.showToast)((0, c.createToast)(S.intl.string(S.t.EDYbS0), c.ToastType.FAILURE));
+            (0, c.showToast)((0, c.createToast)(S.intl.string(S.t["EDYbS+"]), c.ToastType.FAILURE));
         }, []),
         { rejectAll: A } = (0, b.m)({ onError: x }),
         Z = i.useCallback(() => {
@@ -73,7 +73,7 @@ function N() {
                     {
                         className: T.sectionTitle,
                         children: [
-                            S.intl.format(S.t.C79Edn, { count: n }),
+                            S.intl.format(S.t.C79Edh, { count: n }),
                             N && n > 0
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
@@ -86,9 +86,9 @@ function N() {
                                           }),
                                           (0, r.jsx)(c.Avr, {
                                               textVariant: "text-sm/normal",
-                                              text: S.intl.string(S.t.p6t7RE),
+                                              text: S.intl.string(S.t.p6t7RC),
                                               onClick: Z,
-                                              "aria-label": S.intl.string(S.t.p6t7RE),
+                                              "aria-label": S.intl.string(S.t.p6t7RC),
                                           }),
                                       ],
                                   })
@@ -159,7 +159,7 @@ function N() {
                               {
                                   className: T.list,
                                   innerRole: l,
-                                  innerAriaLabel: S.intl.string(S.t.e7GWjY),
+                                  innerAriaLabel: S.intl.string(S.t.e7GWjQ),
                                   ref: (t) => {
                                       var n;
                                       (e.current = t),

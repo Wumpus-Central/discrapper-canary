@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eW }), n(388685);
+n.d(t, { Z: () => ez }), n(388685);
 var i = n(951288),
     r = n(647438),
     l = n(120356),
@@ -41,11 +41,11 @@ var i = n(951288),
     V = n(928518),
     F = n(703656),
     G = n(880395),
-    z = n(740492),
-    W = n(793319),
-    Y = n(3861),
-    K = n(493754),
-    q = n(937995),
+    W = n(740492),
+    z = n(793319),
+    q = n(3861),
+    Y = n(493754),
+    K = n(937995),
     X = n(618158),
     J = n(880831),
     Q = n(73563),
@@ -148,7 +148,7 @@ let eF = {
         [eD.IlC.APP]: null,
         [eD.IlC.OVERLAY]: null,
     };
-class ez extends r.PureComponent {
+class eW extends r.PureComponent {
     getRootNode() {
         var e, t;
         return (
@@ -200,7 +200,7 @@ class ez extends r.PureComponent {
     }
     get screenMessage() {
         return this.popoutOpen && !this.inPopout && this.props.inCall
-            ? { mainText: ek.intl.string(ek.t.J5bXZW) }
+            ? { mainText: ek.intl.string(ek.t.J5bXZU) }
             : null;
     }
     get inPopout() {
@@ -290,7 +290,7 @@ class ez extends r.PureComponent {
                         children:
                             r && this.popoutOpen && !this.inPopout
                                 ? null
-                                : (0, i.jsx)(Y.Z, {
+                                : (0, i.jsx)(q.Z, {
                                       ref: this._contentRef,
                                       inCall: r,
                                       channel: p,
@@ -358,7 +358,7 @@ class ez extends r.PureComponent {
                             ref: (e) => {
                                 (this._callContainerRef.current = e), (this.props.callContainerRef.current = e);
                             },
-                            children: (0, i.jsx)(q.ZP, {
+                            children: (0, i.jsx)(K.ZP, {
                                 timeout: 2000,
                                 children: (e) => this.renderContent(e),
                             }),
@@ -407,7 +407,7 @@ class ez extends r.PureComponent {
             eB(this, "_contentRef", r.createRef()),
             eB(this, "_videoBackgroundTooltipTimeout", new p.V7()),
             eB(this, "_lastIdleProps", null),
-            eB(this, "state", { resizedHeight: z.ZP.callHeaderHeight }),
+            eB(this, "state", { resizedHeight: W.ZP.callHeaderHeight }),
             eB(this, "handleFullScreenChange", () => {
                 let e = this.getRootNode();
                 null != e &&
@@ -675,7 +675,7 @@ class ez extends r.PureComponent {
             eB(this, "renderBottomCenter", () => {
                 let { channel: e, inCall: t, layout: n } = this.props;
                 return t || n === eD.AEg.MINIMUM || n === eD.AEg.NORMAL
-                    ? (0, i.jsx)(W.ZP, {
+                    ? (0, i.jsx)(z.ZP, {
                           exitFullScreen: this.maybeLeaveFullScreen,
                           channel: e,
                           onDisconnectCall: this.handleDisconnect,
@@ -707,7 +707,7 @@ class ez extends r.PureComponent {
                             : this.handleToggleLayout,
                     { canChangeLayout: g, canInvite: b } = this.viewProperties,
                     C = l
-                        ? (0, i.jsx)(K.Z, {
+                        ? (0, i.jsx)(Y.Z, {
                               channel: n,
                               stream: (null == o ? void 0 : o.type) === eL.fO.STREAM ? (0, k.my)(o.id) : void 0,
                               applicationId:
@@ -736,7 +736,7 @@ class ez extends r.PureComponent {
                                   grow: 0,
                                   children: [
                                       (0, i.jsx)($.Z, {
-                                          label: p ? ek.intl.string(ek.t.kkKapK) : ek.intl.string(ek.t["5MstTk"]),
+                                          label: p ? ek.intl.string(ek.t.kkKapG) : ek.intl.string(ek.t["5MstTl"]),
                                           direction: d,
                                           className: eU.leftTrayIcon,
                                           onClick: () => {
@@ -888,7 +888,7 @@ class ez extends r.PureComponent {
             });
     }
 }
-let eW = function (e) {
+let ez = function (e) {
     var t;
     let { channel: n, renderExternalHeader: l, maxHeight: a, canPopout: o = !0 } = e,
         { width: s = 0, ref: c } = (0, x.ZP)(),
@@ -936,10 +936,10 @@ let eW = function (e) {
             () => ({ selectedStream: null != H ? ea.Z.getActiveStreamForStreamKey(H.id) : null }),
             [H],
         ),
-        W = (0, u.e7)([eu.Z], () => eu.Z.getGuild(n.getGuildId())),
-        Y = (0, u.e7)([ec.Z], () => ec.Z.getCall(n.id), [n.id]),
-        K = (0, u.e7)([ep.ZP], () => ep.ZP.getMentionCount(n.id), [n.id]),
-        q = (0, u.e7)([eo.default], () => eo.default.getId()),
+        z = (0, u.e7)([eu.Z], () => eu.Z.getGuild(n.getGuildId())),
+        q = (0, u.e7)([ec.Z], () => ec.Z.getCall(n.id), [n.id]),
+        Y = (0, u.e7)([ep.ZP], () => ep.ZP.getMentionCount(n.id), [n.id]),
+        K = (0, u.e7)([eo.default], () => eo.default.getId()),
         { popoutWindow: X, popoutWindowAlwaysOnTop: J } = (0, u.cj)([V.Z], () => ({
             popoutWindow: V.Z.getWindow(eD.KJ3.CHANNEL_CALL_POPOUT),
             popoutWindowAlwaysOnTop: V.Z.getIsAlwaysOnTop(eD.KJ3.CHANNEL_CALL_POPOUT),
@@ -947,18 +947,18 @@ let eW = function (e) {
         Q = (0, u.e7)([ed.Z], () => ed.Z.can(eD.Plq.CONNECT, n)),
         $ = (0, u.e7)([es.Z], () => es.Z.getToastsEnabled(n.id)),
         ee = (0, u.e7)([L.default], () => L.default.getAwaitingRemoteSessionInfo()),
-        et = (0, u.e7)([z.ZP], () => z.ZP.callHeaderHeight),
+        et = (0, u.e7)([W.ZP], () => W.ZP.callHeaderHeight),
         en = r.useCallback((e) => {
             y.ZP.updatedUnsyncedSettings({ callHeaderHeight: e });
         }, []),
-        ei = null != (t = null == W ? void 0 : W.id) ? t : null,
+        ei = null != (t = null == z ? void 0 : z.id) ? t : null,
         er = (0, I.Z)(ei, n.id),
         el = (0, u.e7)([E.Z], () => E.Z.getFetchState(), []),
         ef = (0, O.Z)(el);
     r.useEffect(() => {
         el === E.O.ERROR &&
             ef !== E.O.ERROR &&
-            (0, h.showToast)((0, h.createToast)(ek.intl.string(ek.t.AlJyIy), h.ToastType.FAILURE));
+            (0, h.showToast)((0, h.createToast)(ek.intl.string(ek.t["AlJyI+"]), h.ToastType.FAILURE));
     }, [el, ef]);
     let em = (0, u.e7)([P.ZP], () => P.ZP.getSelfEmbeddedActivityForChannel(n.id), [n]);
     r.useEffect(() => {
@@ -989,18 +989,18 @@ let eW = function (e) {
             children: (0, i.jsx)(eE.B2, {
                 children: (0, i.jsxs)(eA._A, {
                     children: [
-                        (0, i.jsx)(ez, {
+                        (0, i.jsx)(eW, {
                             channel: n,
-                            guild: W,
+                            guild: z,
                             hasConnectPermission: Q,
                             participantsOpen: M,
                             participantsListOpen: k && eb,
                             renderExternalHeader: l,
                             appContext: b,
-                            call: Y,
+                            call: q,
                             popoutWindow: X,
                             popoutWindowAlwaysOnTop: J,
-                            mentionCount: K,
+                            mentionCount: Y,
                             selectedStream: G,
                             mode: N,
                             inCall: _,
@@ -1011,7 +1011,7 @@ let eW = function (e) {
                             chatOpen: U,
                             maxSidebarWidth: ev,
                             shouldUseVoiceEffectsActionBar: eg,
-                            currentUserId: q,
+                            currentUserId: K,
                             selectedParticipant: H,
                             allActiveStreams: F,
                             useNewInviteButton: er,

@@ -72,7 +72,7 @@ function c() {
             (0, r.jsx)(l.Text, {
                 variant: "text-sm/medium",
                 color: "text-default",
-                children: o.intl.string(o.t.lBG2s7),
+                children: o.intl.string(o.t["lBG2s/"]),
             }),
         ],
     });

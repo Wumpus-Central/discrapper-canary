@@ -127,13 +127,13 @@ async function w(e) {
                 errorHints: [
                     {
                         type: b.HW.RATE_LIMITED,
-                        message: S.intl.string(S.t["Whhv4+"]),
+                        message: S.intl.string(S.t.Whhv4w),
                         connected_account_id: "",
                         connected_account_type: "",
                     },
                 ],
             };
-        let t = null != (n = e.getAnyErrorMessage()) ? n : S.intl.string(S.t.xSCvBQ);
+        let t = null != (n = e.getAnyErrorMessage()) ? n : S.intl.string(S.t.xSCvBf);
         return {
             errorHints: [
                 {

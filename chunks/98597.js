@@ -21,8 +21,8 @@ var r,
     m = n(427679),
     b = n(155409),
     _ = n(131704),
-    y = n(199902),
-    O = n(430824),
+    O = n(199902),
+    y = n(430824),
     v = n(496675),
     j = n(914010),
     x = n(281029),
@@ -118,7 +118,7 @@ function A(e) {
         ? null
         : (0, i.jsx)(c.u, {
               asContainer: !0,
-              text: E.intl.string(E.t["3gUsJS"]),
+              text: E.intl.string(E.t["3gUsJb"]),
               children: (0, i.jsx)(u.P3F, {
                   className: a()(
                       S.iconItem,
@@ -129,7 +129,7 @@ function A(e) {
                       d.ZP.open(t.id);
                   },
                   tabIndex: r,
-                  "aria-label": E.intl.string(E.t["3gUsJS"]),
+                  "aria-label": E.intl.string(E.t["3gUsJb"]),
                   children: (0, i.jsx)(u.ewm, {
                       size: "xs",
                       color: "currentColor",
@@ -148,18 +148,18 @@ function R(e) {
             hasChannelInfo: _ = !1,
         } = e,
         j = (0, h._k)({ location: "channel_base" }),
-        x = (0, s.e7)([O.Z], () => O.Z.getGuild(t.getGuildId())),
+        x = (0, s.e7)([y.Z], () => y.Z.getGuild(t.getGuildId())),
         I = (0, s.e7)([m.Z], () => m.Z.getStageInstanceByChannel(t.id), [t.id]),
         Z = (0, s.e7)([p.ZP], () => p.ZP.getActiveEventByChannel(t.id), [t.id]),
         w = (0, s.e7)([v.Z], () => (0, f.b)(v.Z, x, t, I)),
         T = (0, s.e7)([v.Z], () =>
             (null == t ? void 0 : t.type) === C.d4z.GUILD_VOICE && j.isVoiceChannelEntrypointEnabled
-                ? E.intl.string(E.t["EE+P0N"])
+                ? E.intl.string(E.t["EE+P0H"])
                 : j.isTextChannelEntrypointEnabled
-                  ? E.intl.string(E.t["0jeAXl"])
+                  ? E.intl.string(E.t["0jeAXt"])
                   : v.Z.can(C.Plq.CREATE_INSTANT_INVITE, t)
-                    ? E.intl.string(E.t.zJrgTE)
-                    : E.intl.string(E.t.Sd8Ix8),
+                    ? E.intl.string(E.t.zJrgTG)
+                    : E.intl.string(E.t.Sd8Ixw),
         ),
         A = l.useRef(null);
     if (o || !w || t.isModeratorReportChannel()) return null;
@@ -188,7 +188,7 @@ function R(e) {
                 className: a()(S.iconItem, g ? S.alwaysShown : void 0, _ ? S.iconWithChannelInfo : S.iconNoChannelInfo),
                 onClick: function () {
                     if (null != x) {
-                        let e = y.Z.getAllActiveStreams().filter(
+                        let e = O.Z.getAllActiveStreams().filter(
                             (e) => e.state !== C.jm8.ENDED && e.channelId === t.id,
                         );
                         (0, u.ZDy)(async () => {
@@ -220,13 +220,13 @@ function D(e) {
     let { channel: t } = e;
     return (0, i.jsx)(c.u, {
         asContainer: !0,
-        text: E.intl.string(E.t.ROh4T0),
+        text: E.intl.string(E.t["ROh4T+"]),
         children: (0, i.jsx)(u.P3F, {
             className: S.iconItem,
             onClick: () => {
                 (0, g._U)(t.guild_id, t.id);
             },
-            "aria-label": E.intl.string(E.t.ROh4T0),
+            "aria-label": E.intl.string(E.t["ROh4T+"]),
             children: (0, i.jsx)(u.Dio, {
                 size: "xs",
                 color: "currentColor",
@@ -239,13 +239,13 @@ function L(e) {
     let { channel: t } = e;
     return (0, i.jsx)(c.u, {
         asContainer: !0,
-        text: E.intl.string(E.t["N2c/Ul"]),
+        text: E.intl.string(E.t["N2c/Un"]),
         children: (0, i.jsx)(u.P3F, {
             className: S.iconItem,
             onClick: () => {
                 (0, g.dM)(t.guild_id, t.id, !0, { section: C.jXE.CHANNEL_LIST });
             },
-            "aria-label": E.intl.string(E.t["N2c/Ul"]),
+            "aria-label": E.intl.string(E.t["N2c/Un"]),
             children: (0, i.jsx)(u.dz2, {
                 size: "xs",
                 color: "currentColor",

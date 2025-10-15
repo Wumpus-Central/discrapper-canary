@@ -25,8 +25,8 @@ var r = n(951288),
     S = n(611004),
     E = n(619753),
     Z = n(902733),
-    T = n(165017),
-    P = n(737),
+    P = n(165017),
+    T = n(737),
     N = n(909125),
     R = n(817190),
     w = n(315322),
@@ -144,12 +144,12 @@ function H(e) {
                 (0, r.jsx)("div", { className: M.errorImage }),
                 (0, r.jsx)("div", {
                     className: a()(M.emptyResultsText, M.errorMessage),
-                    children: L.intl.string(L.t.uvDZBQ),
+                    children: L.intl.string(L.t.uvDZBZ),
                 }),
             ],
         });
     if (j) {
-        let e = s.type === A.aib.GUILD ? L.intl.string(L.t.AXPbZm) : L.intl.string(L.t.Q0JJjo);
+        let e = s.type === A.aib.GUILD ? L.intl.string(L.t.AXPbZr) : L.intl.string(L.t.Q0JJjv);
         return (0, r.jsxs)(U, {
             children: [
                 (0, r.jsx)(C.Z, {}),
@@ -179,7 +179,7 @@ function H(e) {
             isFavoritesSearch: b,
         });
     let { showNoResultsAlt: x } = l,
-        v = x ? L.intl.string(L.t["VrK/2d"]) : L.intl.string(L.t.V6nAfH);
+        v = x ? L.intl.string(L.t["VrK/2R"]) : L.intl.string(L.t.V6nAfF);
     return (0, r.jsxs)(U, {
         children: [
             (0, r.jsx)("div", { className: a()(M.noResultsImage, { [M.alt]: x }) }),
@@ -190,8 +190,8 @@ function H(e) {
         ],
     });
 }
-let F = [],
-    B = i.memo(function (e) {
+let B = [],
+    F = i.memo(function (e) {
         let {
                 searchContext: t,
                 search: n,
@@ -207,8 +207,8 @@ let F = [],
                 searchMode: I,
                 onBlockedResultsClick: E,
                 searchResultsQuery: Z,
-                isFavoritesSearch: T,
-                selectedChannelId: P,
+                isFavoritesSearch: P,
+                selectedChannelId: T,
             } = e,
             D = i.useRef(null),
             k = i.useCallback(() => {
@@ -231,7 +231,7 @@ let F = [],
                 null != e && e.scrollToBottom();
             }
         }, [n.showBlockedResults]);
-        let B = i.useCallback((e, t, n) => {
+        let F = i.useCallback((e, t, n) => {
                 let r = D.current;
                 if (null == r) return;
                 let i = r.getScrollerState().scrollTop - e;
@@ -254,7 +254,7 @@ let F = [],
                     let n = z + 1;
                     if (!W || e.targetPage !== n) return t;
                     {
-                        let e = L.intl.formatToPlainString(L.t["E+2azc"], { maxPages: n });
+                        let e = L.intl.formatToPlainString(L.t["E+2azY"], { maxPages: n });
                         return (0, r.jsx)(c.u, {
                             asContainer: !0,
                             text: e,
@@ -317,9 +317,9 @@ let F = [],
             $ = z + 1,
             ee = (0, _.C)({ location: "SearchResults" }),
             et = (0, s.Wu)([R.Z], () => {
-                if (0 !== n.offset || !ee) return F;
+                if (0 !== n.offset || !ee) return B;
                 let e = u.length;
-                if (e < 10) return F;
+                if (e < 10) return B;
                 let r = 0;
                 if (
                     (u.forEach((e) => {
@@ -327,23 +327,23 @@ let F = [],
                     }),
                     r / e < 0.75)
                 )
-                    return F;
+                    return B;
                 let i = (0, y.Tm)(t),
                     l = R.Z.getSearchResultsQueryString(i);
                 return (0, y.kG)(null != l ? l : "").some((e) => e.type === A.dCx.FILTER_AUTHOR_TYPE)
-                    ? F
+                    ? B
                     : [o.z.SEARCH_AUTHOR_TYPE_SEARCH_RESULTS_HINT];
             }),
             [en, er] = (0, h.US)(et),
             ei = en === o.z.SEARCH_AUTHOR_TYPE_SEARCH_RESULTS_HINT,
             el = i.useCallback(() => {
                 if (n.isSearching) return;
-                let e = "".concat(x.ZP[A.dCx.FILTER_AUTHOR_TYPE].key, " ").concat(L.intl.string(L.t.tPZo4u)) + " ";
+                let e = "".concat(x.ZP[A.dCx.FILTER_AUTHOR_TYPE].key, " ").concat(L.intl.string(L.t.tPZo4p)) + " ";
                 S.Z.appendToSearchInputText(t, e);
             }, [t, n.isSearching]);
         return (0, r.jsxs)("section", {
             className: M.searchResultsWrap,
-            "aria-label": L.intl.string(L.t.zkoeq6),
+            "aria-label": L.intl.string(L.t["zkoeq/"]),
             children: [
                 (0, r.jsx)(v.Z, {
                     searchContext: t,
@@ -353,7 +353,7 @@ let F = [],
                     isSearching: n.isSearching,
                     isIndexing: n.isHistoricalIndexing,
                     documentsIndexed: n.documentsIndexed,
-                    selectedChannelId: P,
+                    selectedChannelId: T,
                 }),
                 (0, r.jsxs)(d.Den, {
                     ref: D,
@@ -364,13 +364,13 @@ let F = [],
                             (0, r.jsx)(d.Wn, {
                                 className: M.paginationLimitHeader,
                                 messageType: d.QYI.WARNING,
-                                children: L.intl.formatToPlainString(L.t["E+2azc"], { maxPages: $ }),
+                                children: L.intl.formatToPlainString(L.t["E+2azY"], { maxPages: $ }),
                             }),
                         ei &&
                             (0, r.jsx)(d.Wn, {
                                 className: M.helpMessageContainer,
                                 messageType: d.QYI.INFO,
-                                children: L.intl.format(L.t["gQeg/f"], { handleClick: el }),
+                                children: L.intl.format(L.t["gQeg/R"], { handleClick: el }),
                             }),
                         (0, r.jsx)(H, {
                             messages: u,
@@ -380,14 +380,14 @@ let F = [],
                             searchContext: t,
                             renderEmbeds: l,
                             onClick: K,
-                            onScrollTo: B,
+                            onScrollTo: F,
                             onPageChange: Q,
                             paginationTotalCount: W ? V : void 0,
                             renderPageWrapper: Y,
                             onBlockedResultsClick: E,
                             searchRequestAnalyticsId: a,
                             searchResultsQuery: Z,
-                            isFavoritesSearch: T,
+                            isFavoritesSearch: P,
                         }),
                     ],
                 }),
@@ -444,7 +444,7 @@ function V(e) {
             };
         }),
         d = (0, s.e7)([b.Z], () => b.Z.getAnalyticsId(o)),
-        { renderedMessages: h, ignoreCount: g, blockCount: m } = (0, P.Z)({ searchContext: t }),
+        { renderedMessages: h, ignoreCount: g, blockCount: m } = (0, T.Z)({ searchContext: t }),
         _ = (0, s.e7)([R.Z], () => {
             var e;
             return null != (e = R.Z.getSearchMode(o)) ? e : A.QIO.NEWEST;
@@ -502,16 +502,16 @@ function V(e) {
         }),
         E = t.type === A.aib.FAVORITES,
         Z = i.useCallback((e) => I.Z.setShowBlockedResults(t, e), [t]),
-        T = i.useDeferredValue(h),
+        P = i.useDeferredValue(h),
         N = i.useDeferredValue(c),
         w = i.useDeferredValue(d);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(B, {
+            (0, r.jsx)(F, {
                 searchContext: t,
                 search: N,
                 searchRequestAnalyticsId: w,
-                messages: T,
+                messages: P,
                 ignoreCount: g,
                 blockCount: m,
                 renderEmbeds: f.NA.useSetting(),
@@ -528,7 +528,7 @@ function V(e) {
             (0, r.jsx)(k, {
                 searchContext: t,
                 searchRequestAnalyticsId: w,
-                messages: T,
+                messages: P,
                 searchOffset: N.offset,
                 searchLimit: A.vpv,
                 searchHasError: N.hasError,
@@ -541,7 +541,7 @@ function V(e) {
 }
 function z(e) {
     let { guildId: t, channelId: n } = e,
-        i = (0, T.H)({
+        i = (0, P.H)({
             guildId: t,
             channelId: n,
         });

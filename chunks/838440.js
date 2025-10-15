@@ -11,12 +11,12 @@ var r = n(570140),
     f = n(388032);
 function _(e, t) {
     i.Z.show({
-        title: f.intl.string(f.t.l8rYLi),
-        body: f.intl.formatToPlainString(f.t.FfjF19, {
+        title: f.intl.string(f.t.l8rYLt),
+        body: f.intl.formatToPlainString(f.t.FfjF15, {
             currentLength: e,
             maxLength: t,
         }),
-        confirmText: f.intl.string(f.t.BddRzc),
+        confirmText: f.intl.string(f.t.BddRzS),
     }),
         l.default.track(d.rMx.OPEN_MODAL, {
             type: "Message Too Long Alert",
@@ -89,9 +89,9 @@ function p(e) {
     }
     if (a.ZP.isFull()) {
         i.Z.show({
-            title: f.intl.string(f.t["7Q4eo6"]),
-            body: f.intl.string(f.t.gi6XHh),
-            confirmText: f.intl.string(f.t.Z4U1g4),
+            title: f.intl.string(f.t["7Q4eo2"]),
+            body: f.intl.string(f.t.gi6XHp),
+            confirmText: f.intl.string(f.t["Z4U1g/"]),
         }),
             b({
                 valid: !1,

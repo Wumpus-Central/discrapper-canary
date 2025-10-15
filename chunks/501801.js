@@ -1,6 +1,6 @@
 n.d(t, {
-    mp: () => x,
-    tP: () => b,
+    mp: () => b,
+    tP: () => x,
     xO: () => D,
 }),
     n(539854),
@@ -33,12 +33,12 @@ function D(e, t) {
     let n = R.vc[e.targetType];
     return null != n && !0 === n[t.key];
 }
-let L = {
+let U = {
     [S.vB8.CREATE]: C.typeCreate,
     [S.vB8.UPDATE]: C.typeUpdate,
     [S.vB8.DELETE]: C.typeDelete,
 };
-function U(e) {
+function L(e) {
     let { applicationId: t } = e,
         n = (0, A.q)(t);
     return null == n
@@ -58,13 +58,13 @@ function M(e, t) {
         e,
     );
 }
-class x extends l.PureComponent {
+class b extends l.PureComponent {
     render() {
         let { actionType: e, targetType: t, action: n, themeOverride: l } = this.props,
             i = null != l ? C["themeOverride".concat((0, O.De)(l))] : null,
             a = s()(
                 C.icon,
-                L[e],
+                U[e],
                 n === S.rsA.MESSAGE_DELETE
                     ? C.targetMessage
                     : n === S.rsA.AUTO_MODERATION_BLOCK_MESSAGE ||
@@ -104,7 +104,7 @@ class x extends l.PureComponent {
         return (0, r.jsx)("div", { className: a });
     }
 }
-function b(e) {
+function x(e) {
     let { log: t, guild: n, onContentClick: i, className: a } = e,
         u = l.useCallback(
             (e) => {
@@ -271,7 +271,7 @@ function b(e) {
                                                                                 className:
                                                                                     C.onboardingChangeLogItemTitle,
                                                                                 children: [
-                                                                                    (0, r.jsx)(x, {
+                                                                                    (0, r.jsx)(b, {
                                                                                         actionType: S.vB8.CREATE,
                                                                                         targetType: t.targetType,
                                                                                         action: t.action,
@@ -279,7 +279,7 @@ function b(e) {
                                                                                     (0, r.jsx)(d.Text, {
                                                                                         variant: "text-md/normal",
                                                                                         children: p.intl.format(
-                                                                                            p.t.CZ1tys,
+                                                                                            p.t.CZ1tyo,
                                                                                             { title: i },
                                                                                         ),
                                                                                     }),
@@ -293,7 +293,7 @@ function b(e) {
                                                                                         (0, r.jsx)(d.Text, {
                                                                                             variant: "text-md/normal",
                                                                                             children: p.intl.format(
-                                                                                                p.t["gt/5z8"],
+                                                                                                p.t["gt/5z1"],
                                                                                                 { roles: u.join(", ") },
                                                                                             ),
                                                                                         }),
@@ -301,7 +301,7 @@ function b(e) {
                                                                                         (0, r.jsx)(d.Text, {
                                                                                             variant: "text-md/normal",
                                                                                             children: p.intl.format(
-                                                                                                p.t["4q006e"],
+                                                                                                p.t["4q006W"],
                                                                                                 {
                                                                                                     channels:
                                                                                                         c.join(", "),
@@ -322,7 +322,7 @@ function b(e) {
                                                                         children: (0, r.jsxs)("div", {
                                                                             className: C.onboardingChangeLogItemTitle,
                                                                             children: [
-                                                                                (0, r.jsx)(x, {
+                                                                                (0, r.jsx)(b, {
                                                                                     actionType: S.vB8.DELETE,
                                                                                     targetType: t.targetType,
                                                                                     action: t.action,
@@ -330,7 +330,7 @@ function b(e) {
                                                                                 (0, r.jsx)(d.Text, {
                                                                                     variant: "text-md/normal",
                                                                                     children: p.intl.format(
-                                                                                        p.t["m3dt+P"],
+                                                                                        p.t["m3dt+K"],
                                                                                         { title: e.title },
                                                                                     ),
                                                                                 }),
@@ -370,7 +370,7 @@ function b(e) {
                                                                                           className:
                                                                                               C.onboardingChangeLogItemTitle,
                                                                                           children: [
-                                                                                              (0, r.jsx)(x, {
+                                                                                              (0, r.jsx)(b, {
                                                                                                   actionType:
                                                                                                       S.vB8.UPDATE,
                                                                                                   targetType:
@@ -382,7 +382,7 @@ function b(e) {
                                                                                                       "text-md/normal",
                                                                                                   children:
                                                                                                       p.intl.format(
-                                                                                                          p.t["WZO+iY"],
+                                                                                                          p.t["WZO+ia"],
                                                                                                           { title: l },
                                                                                                       ),
                                                                                               }),
@@ -399,7 +399,7 @@ function b(e) {
                                                                                                       children:
                                                                                                           p.intl.format(
                                                                                                               p.t[
-                                                                                                                  "R+km+f"
+                                                                                                                  "R+km+d"
                                                                                                               ],
                                                                                                               {
                                                                                                                   roles: A.join(
@@ -415,7 +415,7 @@ function b(e) {
                                                                                                       children:
                                                                                                           p.intl.format(
                                                                                                               p.t
-                                                                                                                  .xIVRoa,
+                                                                                                                  .xIVRoU,
                                                                                                               {
                                                                                                                   roles: T.join(
                                                                                                                       ", ",
@@ -430,7 +430,7 @@ function b(e) {
                                                                                                       children:
                                                                                                           p.intl.format(
                                                                                                               p.t
-                                                                                                                  .iYowX1,
+                                                                                                                  .iYowX4,
                                                                                                               {
                                                                                                                   channels:
                                                                                                                       I.join(
@@ -446,7 +446,7 @@ function b(e) {
                                                                                                       children:
                                                                                                           p.intl.format(
                                                                                                               p.t
-                                                                                                                  .JLdJpK,
+                                                                                                                  .JLdJpL,
                                                                                                               {
                                                                                                                   channels:
                                                                                                                       m.join(
@@ -464,7 +464,7 @@ function b(e) {
                                                                                                           children:
                                                                                                               p.intl.format(
                                                                                                                   p.t[
-                                                                                                                      "0698zc"
+                                                                                                                      "0698za"
                                                                                                                   ],
                                                                                                                   {
                                                                                                                       key: t,
@@ -524,7 +524,7 @@ function b(e) {
                                                                                   children: (0, r.jsx)(d.Text, {
                                                                                       variant: "text-md/normal",
                                                                                       children: p.intl.format(
-                                                                                          p.t.PrOzAw,
+                                                                                          p.t["PrOzA+"],
                                                                                           {
                                                                                               oldUser:
                                                                                                   null !=
@@ -534,7 +534,7 @@ function b(e) {
                                                                                                           : o.username)
                                                                                                       ? i
                                                                                                       : p.intl.string(
-                                                                                                            p.t.PoWNfX,
+                                                                                                            p.t.PoWNfe,
                                                                                                         ),
                                                                                               newUser:
                                                                                                   null !=
@@ -544,7 +544,7 @@ function b(e) {
                                                                                                           : u.username)
                                                                                                       ? s
                                                                                                       : p.intl.string(
-                                                                                                            p.t.PoWNfX,
+                                                                                                            p.t.PoWNfe,
                                                                                                         ),
                                                                                           },
                                                                                       ),
@@ -561,7 +561,7 @@ function b(e) {
                                                                                   children: (0, r.jsx)(d.Text, {
                                                                                       variant: "text-md/normal",
                                                                                       children: p.intl.format(
-                                                                                          p.t.oB7rBQ,
+                                                                                          p.t.oB7rBb,
                                                                                           {
                                                                                               oldMessage:
                                                                                                   null !=
@@ -571,7 +571,7 @@ function b(e) {
                                                                                                           : t.message)
                                                                                                       ? a
                                                                                                       : p.intl.string(
-                                                                                                            p.t.PoWNfX,
+                                                                                                            p.t.PoWNfe,
                                                                                                         ),
                                                                                               newMessage: e.message,
                                                                                           },
@@ -602,7 +602,7 @@ function b(e) {
                                                                                     className:
                                                                                         C.onboardingChangeLogItemTitle,
                                                                                     children: [
-                                                                                        (0, r.jsx)(x, {
+                                                                                        (0, r.jsx)(b, {
                                                                                             actionType: S.vB8.CREATE,
                                                                                             targetType: s,
                                                                                             action: a,
@@ -610,7 +610,7 @@ function b(e) {
                                                                                         (0, r.jsx)(d.Text, {
                                                                                             variant: "text-md/normal",
                                                                                             children: p.intl.format(
-                                                                                                p.t["oFSu6+"],
+                                                                                                p.t.oFSu66,
                                                                                                 { name: e.title },
                                                                                             ),
                                                                                         }),
@@ -628,7 +628,7 @@ function b(e) {
                                                                                     className:
                                                                                         C.onboardingChangeLogItemTitle,
                                                                                     children: [
-                                                                                        (0, r.jsx)(x, {
+                                                                                        (0, r.jsx)(b, {
                                                                                             actionType: S.vB8.DELETE,
                                                                                             targetType: s,
                                                                                             action: a,
@@ -636,7 +636,7 @@ function b(e) {
                                                                                         (0, r.jsx)(d.Text, {
                                                                                             variant: "text-md/normal",
                                                                                             children: p.intl.format(
-                                                                                                p.t.GssWam,
+                                                                                                p.t.GssWar,
                                                                                                 { name: e.title },
                                                                                             ),
                                                                                         }),
@@ -667,7 +667,7 @@ function b(e) {
                                                                                     className:
                                                                                         C.onboardingChangeLogItemTitle,
                                                                                     children: [
-                                                                                        (0, r.jsx)(x, {
+                                                                                        (0, r.jsx)(b, {
                                                                                             actionType: S.vB8.CREATE,
                                                                                             targetType: s,
                                                                                             action: a,
@@ -675,7 +675,7 @@ function b(e) {
                                                                                         (0, r.jsx)(d.Text, {
                                                                                             variant: "text-md/normal",
                                                                                             children: p.intl.format(
-                                                                                                p.t.HlGndH,
+                                                                                                p.t.HlGndE,
                                                                                                 { name: e.title },
                                                                                             ),
                                                                                         }),
@@ -693,7 +693,7 @@ function b(e) {
                                                                                     className:
                                                                                         C.onboardingChangeLogItemTitle,
                                                                                     children: [
-                                                                                        (0, r.jsx)(x, {
+                                                                                        (0, r.jsx)(b, {
                                                                                             actionType: S.vB8.DELETE,
                                                                                             targetType: s,
                                                                                             action: a,
@@ -701,7 +701,7 @@ function b(e) {
                                                                                         (0, r.jsx)(d.Text, {
                                                                                             variant: "text-md/normal",
                                                                                             children: p.intl.format(
-                                                                                                p.t["7pysg4"],
+                                                                                                p.t["7pysg6"],
                                                                                                 { name: e.title },
                                                                                             ),
                                                                                         }),
@@ -736,11 +736,9 @@ function b(e) {
                                     let I = p.intl.format(i, {
                                         oldValue: u,
                                         newValue: c,
-                                        count: Array.isArray(c) ? c.length : null,
+                                        count: Array.isArray(c) ? c.length : 0,
                                         subtarget:
-                                            null != (n = null != (t = o.options.subtarget) ? t : A.subtarget)
-                                                ? n
-                                                : null,
+                                            null != (n = null != (t = o.options.subtarget) ? t : A.subtarget) ? n : "",
                                         newColorHook: (e, t) => M(t, A.newValue),
                                         newColorsHook: (e, t) => {
                                             let { primary_color: n, secondary_color: i, tertiary_color: s } = c;
@@ -792,7 +790,7 @@ function b(e) {
                                         applicationHook: (e, t) => {
                                             var n;
                                             return (0, r.jsx)(
-                                                U,
+                                                L,
                                                 {
                                                     applicationId:
                                                         null != (n = null == u ? void 0 : u.application_id)

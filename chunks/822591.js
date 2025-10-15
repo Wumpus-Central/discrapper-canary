@@ -90,7 +90,7 @@ let Z = "dismissedCommunityFeaturesUpsell",
             l = Object.keys(i),
             s = l.length > 0 ? l[0] : null;
         return (
-            (e = "rules_channel_id" === s ? I.intl.string(I.t["7IrBYm"]) : null != s ? i[s] : void 0),
+            (e = "rules_channel_id" === s ? I.intl.string(I.t["7IrBYt"]) : null != s ? i[s] : void 0),
             (0, r.jsx)(g.Z, {
                 submitting: n,
                 onReset: () => {
@@ -162,18 +162,18 @@ let Z = "dismissedCommunityFeaturesUpsell",
                                       (0, r.jsx)(u.Heading, {
                                           variant: "heading-md/semibold",
                                           className: S.upsellHeader,
-                                          children: I.intl.string(I.t["pR/BgY"]),
+                                          children: I.intl.string(I.t["pR/Bge"]),
                                       }),
                                       (0, r.jsx)(u.Text, {
                                           variant: "text-sm/normal",
-                                          children: I.intl.string(I.t["V+Yo1t"]),
+                                          children: I.intl.string(I.t["V+Yo1l"]),
                                       }),
                                   ],
                               }),
                           ],
                       }),
                       (0, r.jsx)(d.zx, {
-                          "aria-label": I.intl.string(I.t.cpT0Cg),
+                          "aria-label": I.intl.string(I.t.cpT0Cq),
                           look: d.zx.Looks.BLANK,
                           size: d.zx.Sizes.NONE,
                           className: S.upsellClose,
@@ -195,7 +195,7 @@ let Z = "dismissedCommunityFeaturesUpsell",
                                       children: (0, r.jsx)(u.Button, {
                                           variant: "primary",
                                           size: "sm",
-                                          text: I.intl.string(I.t.iF1Asr),
+                                          text: I.intl.string(I.t.iF1Asi),
                                           onClick: O,
                                       }),
                                   }),
@@ -207,7 +207,7 @@ let Z = "dismissedCommunityFeaturesUpsell",
                                         children: (0, r.jsx)(u.Button, {
                                             variant: "primary",
                                             size: "sm",
-                                            text: I.intl.string(I.t["S/DfiY"]),
+                                            text: I.intl.string(I.t["S/Dfid"]),
                                             onClick: () => {
                                                 C.Z.setSection(E.pNK.ONBOARDING);
                                             },
@@ -221,7 +221,7 @@ let Z = "dismissedCommunityFeaturesUpsell",
                                         children: (0, r.jsx)(u.Button, {
                                             variant: "secondary",
                                             size: "sm",
-                                            text: I.intl.string(I.t["0kmJd3"]),
+                                            text: I.intl.string(I.t["0kmJdw"]),
                                             onClick: () => {
                                                 C.Z.setSection(E.pNK.ACCESS, E.KsC.ACCESS_DISCOVERABLE);
                                             },
@@ -233,7 +233,7 @@ let Z = "dismissedCommunityFeaturesUpsell",
                                   children: (0, r.jsx)(u.Button, {
                                       variant: "secondary",
                                       size: "sm",
-                                      text: I.intl.string(I.t.BQIYTU),
+                                      text: I.intl.string(I.t.BQIYTb),
                                       onClick: () => {
                                           C.Z.setSection(E.pNK.ANALYTICS);
                                       },
@@ -284,7 +284,7 @@ let Z = "dismissedCommunityFeaturesUpsell",
             children: [
                 (0, r.jsx)(u.Heading, {
                     variant: "heading-lg/semibold",
-                    children: I.intl.string(I.t.nRtNqq),
+                    children: I.intl.string(I.t.nRtNqn),
                 }),
                 g
                     ? (0, r.jsx)(D, {
@@ -295,8 +295,8 @@ let Z = "dismissedCommunityFeaturesUpsell",
                     : null,
                 (0, r.jsx)(u.VcW, {
                     layout: "horizontal",
-                    label: I.intl.string(I.t.otcXPz),
-                    description: I.intl.string(I.t.BtwmYG),
+                    label: I.intl.string(I.t["otcXP/"]),
+                    description: I.intl.string(I.t.BtwmYB),
                     value: e.rulesChannelId,
                     options: m,
                     onChange: (e) => {
@@ -307,8 +307,8 @@ let Z = "dismissedCommunityFeaturesUpsell",
                 (0, r.jsx)(u.izJ, {}),
                 (0, r.jsx)(u.VcW, {
                     layout: "horizontal",
-                    label: I.intl.string(I.t.vAyDGR),
-                    description: I.intl.string(I.t.ZFeonp),
+                    label: I.intl.string(I.t.vAyDGU),
+                    description: I.intl.string(I.t.ZFeonu),
                     value: e.publicUpdatesChannelId,
                     options: m,
                     onChange: (e) => {
@@ -319,8 +319,8 @@ let Z = "dismissedCommunityFeaturesUpsell",
                 (0, r.jsx)(u.izJ, {}),
                 (0, r.jsx)(u.VcW, {
                     layout: "horizontal",
-                    label: I.intl.string(I.t.sMkYEx),
-                    description: I.intl.string(I.t.htioQk),
+                    label: I.intl.string(I.t.sMkYE8),
+                    description: I.intl.string(I.t.htioQo),
                     value: e.safetyAlertsChannelId,
                     options: m,
                     onChange: (e) => {
@@ -331,8 +331,8 @@ let Z = "dismissedCommunityFeaturesUpsell",
                 (0, r.jsx)(u.izJ, {}),
                 (0, r.jsx)(u.VcW, {
                     layout: "horizontal",
-                    label: I.intl.string(I.t.pO60f3),
-                    description: I.intl.string(I.t.aIR73d),
+                    label: I.intl.string(I.t.pO60fy),
+                    description: I.intl.string(I.t.aIR73T),
                     value: e.preferredLocale,
                     options: d,
                     onChange: (e) => {
@@ -345,10 +345,10 @@ let Z = "dismissedCommunityFeaturesUpsell",
                     var n;
                     if (null != e)
                         return (0, r.jsx)(u.Kx8, {
-                            label: I.intl.string(I.t["RSfm+v"]),
-                            description: I.intl.string(I.t["/B6PR0"]),
+                            label: I.intl.string(I.t["RSfm+i"]),
+                            description: I.intl.string(I.t["/B6PRw"]),
                             value: null != (n = e.description) ? n : "",
-                            placeholder: I.intl.string(I.t.Nvfows),
+                            placeholder: I.intl.string(I.t.Nvfowl),
                             onChange: b,
                             maxLength: l.Us,
                             disabled: !t,
@@ -356,29 +356,29 @@ let Z = "dismissedCommunityFeaturesUpsell",
                 })(),
                 (0, r.jsx)(u.izJ, {}),
                 (0, r.jsx)(u.gNt, {
-                    label: I.intl.string(I.t.c1BmbG),
-                    description: I.intl.string(I.t.aQzVFx),
+                    label: I.intl.string(I.t.c1BmbC),
+                    description: I.intl.string(I.t.aQzVF8),
                     layout: "horizontal",
                     children: (0, r.jsx)(c.u, {
-                        text: n ? null : I.intl.string(I.t["pjG+T0"]),
-                        "aria-label": n ? void 0 : I.intl.string(I.t["pjG+T0"]),
+                        text: n ? null : I.intl.string(I.t["pjG+T3"]),
+                        "aria-label": n ? void 0 : I.intl.string(I.t["pjG+T3"]),
                         children: (0, r.jsx)(u.Button, {
                             variant: "critical-primary",
                             size: "sm",
-                            text: I.intl.string(I.t.c1BmbG),
+                            text: I.intl.string(I.t.c1BmbC),
                             onClick: () => {
                                 e.features.has(E.oNc.DISCOVERABLE) && e.features.has(E.oNc.PARTNERED)
                                     ? (0, u.h7j)((e) =>
                                           (0, r.jsx)(
                                               u.ConfirmModal,
                                               w(P({}, e), {
-                                                  header: I.intl.string(I.t.iBnVHR),
-                                                  confirmText: I.intl.string(I.t["cY+Ooa"]),
-                                                  cancelText: I.intl.string(I.t.oEAioK),
+                                                  header: I.intl.string(I.t.iBnVHc),
+                                                  confirmText: I.intl.string(I.t["cY+Oob"]),
+                                                  cancelText: I.intl.string(I.t.oEAioF),
                                                   onConfirm: f,
                                                   children: (0, r.jsx)(u.Text, {
                                                       variant: "text-sm/normal",
-                                                      children: I.intl.string(I.t["P+Sh8f"]),
+                                                      children: I.intl.string(I.t["P+Sh8V"]),
                                                   }),
                                               }),
                                           ),
@@ -388,13 +388,13 @@ let Z = "dismissedCommunityFeaturesUpsell",
                                             (0, r.jsx)(
                                                 u.ConfirmModal,
                                                 w(P({}, e), {
-                                                    header: I.intl.string(I.t.iBnVHR),
-                                                    confirmText: I.intl.string(I.t["cY+Ooa"]),
-                                                    cancelText: I.intl.string(I.t.oEAioK),
+                                                    header: I.intl.string(I.t.iBnVHc),
+                                                    confirmText: I.intl.string(I.t["cY+Oob"]),
+                                                    cancelText: I.intl.string(I.t.oEAioF),
                                                     onConfirm: f,
                                                     children: (0, r.jsx)(u.Text, {
                                                         variant: "text-sm/normal",
-                                                        children: I.intl.string(I.t["eMx/ub"]),
+                                                        children: I.intl.string(I.t["eMx/uZ"]),
                                                     }),
                                                 }),
                                             ),
@@ -404,9 +404,9 @@ let Z = "dismissedCommunityFeaturesUpsell",
                                               (0, r.jsx)(
                                                   u.ConfirmModal,
                                                   w(P({}, e), {
-                                                      header: I.intl.string(I.t.iBnVHR),
-                                                      confirmText: I.intl.string(I.t["cY+Ooa"]),
-                                                      cancelText: I.intl.string(I.t.oEAioK),
+                                                      header: I.intl.string(I.t.iBnVHc),
+                                                      confirmText: I.intl.string(I.t["cY+Oob"]),
+                                                      cancelText: I.intl.string(I.t.oEAioF),
                                                       onConfirm: f,
                                                       children: (0, r.jsx)(u.Text, {
                                                           variant: "text-sm/normal",

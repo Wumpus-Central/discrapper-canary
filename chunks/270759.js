@@ -31,7 +31,7 @@ function A() {
     return (0, r.jsx)("div", {
         className: x.inviteToolbar,
         children: (0, r.jsx)(b.Z, {
-            tooltip: P.intl.string(P.t.HfOgAw),
+            tooltip: P.intl.string(P.t["HfOgA/"]),
             location: "PeoplePageHeaderToolbar-CreateDMButton",
         }),
     });
@@ -74,13 +74,13 @@ let Z = function (e) {
             {
                 id: N.pJs.ONLINE,
                 show: L.filter(N.pJs.ONLINE).length > 0,
-                content: P.intl.string(P.t.b9w3bG),
+                content: P.intl.string(P.t.b9w3bO),
                 className: x.item,
             },
             {
                 id: N.pJs.ALL,
                 show: D[N.OGo.FRIEND] > 0,
-                content: P.intl.string(P.t.PfjFjY),
+                content: P.intl.string(P.t.PfjFjR),
                 className: x.item,
             },
             {
@@ -88,7 +88,7 @@ let Z = function (e) {
                 show: L.filter(N.pJs.PENDING).length > 0,
                 content: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        P.intl.string(P.t.p6IHGB),
+                        P.intl.string(P.t.p6IHGE),
                         Z > 0 &&
                             (0, r.jsx)(c.mAB, {
                                 count: Z,
@@ -96,7 +96,7 @@ let Z = function (e) {
                             }),
                     ],
                 }),
-                ariaLabel: P.intl.formatToPlainString(P.t.OAC0Z2, { count: Z.toString() }),
+                ariaLabel: P.intl.formatToPlainString(P.t.OAC0Z4, { count: Z.toString() }),
                 className: x.item,
             },
             {
@@ -104,21 +104,21 @@ let Z = function (e) {
                 show: R > 0,
                 content: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        P.intl.string(P.t["8rSi19"]),
+                        P.intl.string(P.t["8rSi1/"]),
                         (0, r.jsx)(c.mAB, {
                             count: R,
                             className: x.badge,
                         }),
                     ],
                 }),
-                ariaLabel: P.intl.formatToPlainString(P.t.AbMQp6, { count: R.toString() }),
+                ariaLabel: P.intl.formatToPlainString(P.t.AbMQp7, { count: R.toString() }),
                 className: x.item,
             },
             {
                 id: N.pJs.ADD_FRIEND,
                 show: !0,
-                content: (0, r.jsx)("span", { children: P.intl.string(P.t.j0wbEx) }),
-                ariaLabel: P.intl.string(P.t.j0wbEx),
+                content: (0, r.jsx)("span", { children: P.intl.string(P.t.j0wbE5) }),
+                ariaLabel: P.intl.string(P.t.j0wbE5),
                 className: a()(x.item, x.addFriend),
             },
         ],
@@ -127,7 +127,7 @@ let Z = function (e) {
         G.unshift({
             id: N.pJs.YOU,
             show: !0,
-            content: P.intl.string(P.t.LuZzxs),
+            content: P.intl.string(P.t.LuZzxn),
             className: x.item,
         });
     let H = null,
@@ -152,9 +152,9 @@ let Z = function (e) {
               : (H = (0, r.jsx)(S.Z, { titleId: U })),
         (0, r.jsxs)("main", {
             className: x.container,
-            "aria-label": P.intl.string(P.t.TdEu5e),
+            "aria-label": P.intl.string(P.t.TdEu5X),
             children: [
-                (0, r.jsx)(f.yY, { location: P.intl.string(P.t.TdEu5e) }),
+                (0, r.jsx)(f.yY, { location: P.intl.string(P.t.TdEu5X) }),
                 (0, r.jsx)(c.f6W, {
                     theme: b,
                     children: (e) =>
@@ -171,11 +171,11 @@ let Z = function (e) {
                                 }),
                                 (0, r.jsx)(m.Z.Title, {
                                     id: M,
-                                    children: P.intl.string(P.t.TdEu5e),
+                                    children: P.intl.string(P.t.TdEu5X),
                                 }),
                                 (0, r.jsx)(m.Z.Divider, {}),
                                 (0, r.jsx)(c.njP, {
-                                    "aria-label": P.intl.string(P.t.TdEu5e),
+                                    "aria-label": P.intl.string(P.t.TdEu5X),
                                     selectedItem: w,
                                     type: "top-pill",
                                     onItemSelect: k,

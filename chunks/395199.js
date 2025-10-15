@@ -52,7 +52,7 @@ let g = (e) => {
                   (0, r.jsx)(u.Text, {
                       variant: "text-md/normal",
                       className: h.pendingCancellationMessage,
-                      children: p.intl.format(p.t.SFpsCA, {
+                      children: p.intl.format(p.t.SFpsCH, {
                           date: n.currentPeriodEnd,
                           canceledCount: t,
                       }),
@@ -103,7 +103,7 @@ function b(e) {
             (0, r.jsx)(u.Text, {
                 variant: "text-xs/bold",
                 className: h.transferGuildCardHeader,
-                children: p.intl.format(p.t["5zQYEx"], { guildCount: y }),
+                children: p.intl.format(p.t["5zQYEz"], { guildCount: null != y ? y : 0 }),
             }),
             null != O
                 ? _.default.keys(O).map((e) =>
@@ -121,7 +121,7 @@ function b(e) {
             (0, r.jsx)(u.Text, {
                 variant: "text-xs/normal",
                 className: h.transferGuildCardHeader,
-                children: p.intl.format(p.t.ct6oxM, { slotCount: f }),
+                children: p.intl.format(p.t.ct6oxD, { slotCount: f }),
             }),
             (0, r.jsx)("div", {
                 className: h.activeTransferGuildCardBorder,
@@ -151,7 +151,7 @@ function y(e) {
                 }),
                 (0, r.jsx)(u.Button, {
                     variant: "secondary",
-                    text: p.intl.string(p.t["ETE/oK"]),
+                    text: p.intl.string(p.t["ETE/oC"]),
                     onClick: o,
                     disabled: i,
                 }),
@@ -163,7 +163,7 @@ function O(e, t, n, r, i) {
     return [
         {
             variant: "secondary",
-            text: p.intl.string(p.t["ETE/oK"]),
+            text: p.intl.string(p.t["ETE/oC"]),
             onClick: i,
             disabled: n,
         },

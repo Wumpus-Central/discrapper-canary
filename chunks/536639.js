@@ -15,7 +15,7 @@ function c(e, t) {
                   action: function (n) {
                       n.shiftKey ? s.Z.pinMessage(t, e.id) : r.Z.confirmPin(t, e);
                   },
-                  label: u.intl.string(u.t["CvQ18/"]),
+                  label: u.intl.string(u.t.CvQ18w),
                   icon: l.qQX,
               })
             : (0, i.jsx)(l.sNh, {
@@ -23,7 +23,7 @@ function c(e, t) {
                   action: function (n) {
                       n.shiftKey ? s.Z.unpinMessage(t, e.id) : r.Z.confirmUnpin(t, e);
                   },
-                  label: u.intl.string(u.t["Bse+Fx"]),
+                  label: u.intl.string(u.t["Bse+F/"]),
                   icon: l.qQX,
               })
         : null;

@@ -14,11 +14,11 @@ function d(e) {
                 [a.po.LOADING]: null,
                 [a.po.SUCCESS_STILL_INDEXING]: {
                     icon: (0, r.jsx)(o.Z, {}),
-                    message: c.intl.string(c.t.AXPbZm),
+                    message: c.intl.string(c.t.AXPbZr),
                 },
                 [a.po.SUCCESS_EMPTY]: {
                     icon: (0, r.jsx)(s.Z, {}),
-                    message: c.intl.string(c.t["wdyR5+"]),
+                    message: c.intl.string(c.t.wdyR52),
                 },
                 [a.po.SUCCESS_FULL]: null,
             }),

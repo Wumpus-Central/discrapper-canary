@@ -5,7 +5,7 @@ var n = r(951288),
     c = r(985002),
     a = r(880257),
     s = r(957656),
-    l = r(345909),
+    l = r(660886),
     d = r(388032),
     u = r(601582);
 let b = (e) => {
@@ -33,7 +33,7 @@ let b = (e) => {
                 m &&
                     (0, n.jsx)(o.M14, {
                         type: "critical",
-                        children: d.intl.string(l.default.krIDd3),
+                        children: d.intl.string(l.default.krIDdy),
                     }),
                 (0, n.jsxs)(o.hzk, {
                     "data-migration-pending": !0,
@@ -41,7 +41,7 @@ let b = (e) => {
                         (0, n.jsx)(s.Z.Header, {
                             currentUser: t,
                             otherUser: r,
-                            header: d.intl.formatToPlainString(l.default.NMSTb2, { isAdult: String(p) }),
+                            header: d.intl.formatToPlainString(l.default["NMSTb/"], { isAdult: String(p) }),
                             icon: (0, n.jsx)(o.Dio, {
                                 size: "md",
                                 color: "currentColor",
@@ -49,7 +49,7 @@ let b = (e) => {
                             }),
                         }),
                         (0, n.jsx)(s.Z.Notice, {
-                            notice: p ? d.intl.string(l.default.EvMGLS) : d.intl.string(l.default.f1SUeX),
+                            notice: p ? d.intl.string(l.default.EvMGLT) : d.intl.string(l.default.f1SUeW),
                         }),
                         (0, n.jsx)("div", {
                             className: u.acknowledgementCheckbox,
@@ -58,7 +58,7 @@ let b = (e) => {
                                 onChange: (e) => {
                                     g(e), x(!1);
                                 },
-                                label: p ? d.intl.string(l.default["/MYCeX"]) : d.intl.string(l.default.VJaHUV),
+                                label: p ? d.intl.string(l.default["/MYCee"]) : d.intl.string(l.default.VJaHUb),
                             }),
                         }),
                     ],
@@ -72,7 +72,7 @@ let b = (e) => {
                                 (0, n.jsx)(o.Button, {
                                     variant: "secondary",
                                     size: "sm",
-                                    text: d.intl.string(d.t["ETE/oK"]),
+                                    text: d.intl.string(d.t["ETE/oC"]),
                                     type: "button",
                                     onClick: f,
                                     disabled: v,
@@ -80,7 +80,7 @@ let b = (e) => {
                                 (0, n.jsx)(o.Button, {
                                     variant: "critical-primary",
                                     size: "sm",
-                                    text: d.intl.string(l.default["c5L+sr"]),
+                                    text: d.intl.string(l.default["c5L+sl"]),
                                     type: "submit",
                                     disabled: !j || v,
                                     loading: v,

@@ -193,20 +193,20 @@ function eo() {
                 !0 === d
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(S.Dx, { children: ee.intl.string(ee.t.csrAMD) }),
+                              (0, r.jsx)(S.Dx, { children: ee.intl.string(ee.t.csrAMJ) }),
                               (0, r.jsx)(S.DK, {
-                                  children: a ? ee.intl.string(ee.t["m1+IBg"]) : ee.intl.string(ee.t.kRzrSE),
+                                  children: a ? ee.intl.string(ee.t["m1+IBn"]) : ee.intl.string(ee.t.kRzrSO),
                               }),
                               (0, r.jsx)(m.zxk, {
                                   onClick: () => l(!0),
                                   variant: "primary",
-                                  text: ee.intl.string(ee.t.fIv16O),
+                                  text: ee.intl.string(ee.t.fIv16B),
                               }),
                           ],
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(S.Dx, { children: ee.intl.string(ee.t["Z+hCVV"]) }),
+                              (0, r.jsx)(S.Dx, { children: ee.intl.string(ee.t["Z+hCVU"]) }),
                               (0, r.jsx)(g.$jN, {}),
                           ],
                       })),
@@ -601,11 +601,11 @@ function ec(e) {
             ? { body: (0, r.jsx)(X.Lk, { message: ex.message }) }
             : eA
               ? {
-                    label: ee.intl.string(ee.t.j2d6Ki),
+                    label: ee.intl.string(ee.t.j2d6Km),
                     header: (0, r.jsx)(g.Text, {
                         variant: "text-lg/bold",
                         color: "header-primary",
-                        children: ee.intl.string(ee.t.j2d6Ki),
+                        children: ee.intl.string(ee.t.j2d6Km),
                     }),
                     body: (0, r.jsx)(g.Text, {
                         variant: "text-md/normal",
@@ -615,18 +615,18 @@ function ec(e) {
                     actions: [
                         {
                             onClick: eI,
-                            text: ee.intl.string(ee.t.cpT0Cg),
+                            text: ee.intl.string(ee.t.cpT0Cq),
                         },
                     ],
                     noPadding: !0,
                 }
               : {
-                    title: ee.intl.string(ee.t.j2d6Ki),
+                    title: ee.intl.string(ee.t.j2d6Km),
                     subtitle: ex.message,
                     actions: [
                         {
                             onClick: eI,
-                            text: ee.intl.string(ee.t.cpT0Cg),
+                            text: ee.intl.string(ee.t.cpT0Cq),
                         },
                     ],
                 };
@@ -645,13 +645,13 @@ function ec(e) {
     switch (eD) {
         case null:
             return {
-                label: ee.intl.string(ee.t.ZTNur6),
+                label: ee.intl.string(ee.t.ZTNur7),
                 body: (0, r.jsx)(el, {}),
             };
         case "SELECT_INSTALL_TYPE":
             if (null == e1)
                 return {
-                    label: ee.intl.string(ee.t.ZTNur6),
+                    label: ee.intl.string(ee.t.ZTNur7),
                     body: (0, r.jsx)(el, {}),
                 };
             (y = (0, r.jsx)(z.Z, {
@@ -666,7 +666,7 @@ function ec(e) {
         case "AUTHORIZE_SCOPES":
             if (null == eP || null == eq || null == eJ)
                 return {
-                    label: ee.intl.string(ee.t.ZTNur6),
+                    label: ee.intl.string(ee.t.ZTNur7),
                     body: (0, r.jsx)(el, {}),
                 };
             let tE = null == ex || ex instanceof Error ? {} : ex,
@@ -698,9 +698,9 @@ function ec(e) {
                         ? (0, r.jsx)("div", {
                               className: et.mobilePushContainer,
                               children: (0, r.jsx)(g.rsf, {
-                                  label: ee.intl.string(ee.t["Pkw//v"]),
+                                  label: ee.intl.string(ee.t["Pkw//o"]),
                                   onChange: ez,
-                                  description: ee.intl.string(ee.t.hw1nKS),
+                                  description: ee.intl.string(ee.t.hw1nKf),
                                   checked: eK,
                               }),
                           })
@@ -738,7 +738,7 @@ function ec(e) {
         case "AUTHORIZE_BOT_PERMISSIONS":
             if (null == eP)
                 return {
-                    label: ee.intl.string(ee.t.ZTNur6),
+                    label: ee.intl.string(ee.t.ZTNur7),
                     body: (0, r.jsx)(el, {}),
                 };
             (y = (0, r.jsx)(Y.Z, {
@@ -795,12 +795,12 @@ function ec(e) {
                     ? {
                           variant: "secondary",
                           onClick: () => eL(S),
-                          text: ee.intl.string(ee.t["13/7kZ"]),
+                          text: ee.intl.string(ee.t["13/7kX"]),
                       }
                     : {
                           variant: "secondary",
                           onClick: () => tr(!1),
-                          text: ee.intl.string(ee.t["ETE/oK"]),
+                          text: ee.intl.string(ee.t["ETE/oC"]),
                       },
             ),
             "SELECT_INSTALL_TYPE" !== eD &&
@@ -811,15 +811,15 @@ function ec(e) {
                               loading: ej,
                               disabled: null == N || t_,
                               text: t_
-                                  ? ee.intl.string(ee.t.BwwiSE)
+                                  ? ee.intl.string(ee.t.BwwiSM)
                                   : null != A
-                                    ? ee.intl.string(ee.t["3PatS0"])
-                                    : ee.intl.string(ee.t["y+/PEx"]),
+                                    ? ee.intl.string(ee.t["3PatSz"])
+                                    : ee.intl.string(ee.t["y+/PE9"]),
                           }
                         : {
                               disabled: !0,
                               loading: ej,
-                              text: ee.intl.string(ee.t.N22i9P),
+                              text: ee.intl.string(ee.t.N22i9F),
                               icon: g.cQm,
                           },
                 )),
@@ -865,7 +865,7 @@ function eu(e, t) {
                               ? void 0
                               : s.get("error"))
                         ? n
-                        : ee.intl.string(ee.t["mqn87+"]);
+                        : ee.intl.string(ee.t.mqn873);
                 return (
                     Array.isArray(i) && (i = i[0]),
                     (0, r.jsx)(

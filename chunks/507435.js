@@ -127,7 +127,7 @@ function N(e) {
                 variant: "text-sm/semibold",
                 color: "text-default",
                 scaleFontToUserSetting: !0,
-                children: E.intl.string(E.t["a+lSZ2"]),
+                children: E.intl.string(E.t["a+lSZ/"]),
             });
             break;
         case "VICTOR":
@@ -156,7 +156,7 @@ function N(e) {
                         variant: "text-xs/medium",
                         color: a,
                         scaleFontToUserSetting: !0,
-                        children: [E.intl.string(E.t.ufIDIy), " \u2022 ", s, "%"],
+                        children: [E.intl.string(E.t.ufIDIx), " \u2022 ", s, "%"],
                     }),
                 ],
             });
@@ -169,7 +169,7 @@ function N(e) {
                         variant: "text-sm/semibold",
                         color: "text-default",
                         scaleFontToUserSetting: !0,
-                        children: E.intl.string(E.t.kPN9sr),
+                        children: E.intl.string(E.t.kPN9si),
                     }),
                     (0, r.jsxs)(l.Text, {
                         variant: "text-xs/medium",
@@ -202,7 +202,7 @@ function R(e) {
                     size: "sm",
                     onClick: a,
                     variant: "secondary",
-                    text: E.intl.string(E.t.Jw7VbW),
+                    text: E.intl.string(E.t.Jw7Vbf),
                 }),
         ],
     });
@@ -238,7 +238,7 @@ function P(e) {
                       iconNode: (0, r.jsx)(l.QDj, { size: "xs" }),
                       timestamp: n.timestamp,
                       compact: o,
-                      children: E.intl.format(E.t["VJcK4+"], {
+                      children: E.intl.format(E.t.VJcK41, {
                           username: O.nick,
                           usernameHook: v(O),
                           title: y,

@@ -42,8 +42,8 @@ var r = n(951288),
     G = n(334374),
     U = n(849171),
     B = n(607187),
-    V = n(833519),
-    F = n(462061),
+    F = n(833519),
+    V = n(462061),
     H = n(623825),
     z = n(839662),
     W = n(981631),
@@ -141,15 +141,15 @@ let J = [K.fO.ACTIVITY],
             })(eP, D, el.getGuildId()),
             eU = D.type === K.fO.STREAM && eZ === eP,
             eB = (0, a.e7)([I.Z], () => (D.type === K.fO.USER && null != eZ ? I.Z.getEffectForUserId(eZ) : null)),
-            eV = (0, a.e7)([R.Z], () => R.Z.getVoicePlatformForChannel(el.id, null != eZ ? eZ : W.lds)),
-            { showGameIcon: eF } = O.ZP.useExperiment({ location: "voice_users" }, { autoTrackExposure: !1 }),
+            eF = (0, a.e7)([R.Z], () => R.Z.getVoicePlatformForChannel(el.id, null != eZ ? eZ : W.lds)),
+            { showGameIcon: eV } = O.ZP.useExperiment({ location: "voice_users" }, { autoTrackExposure: !1 }),
             eH = (0, a.e7)(
                 [A.Z],
                 () =>
-                    eF && null != eZ
+                    eV && null != eZ
                         ? A.Z.findActivity(eZ, (e) => null != e.application_id && e.type === W.IIU.PLAYING)
                         : null,
-                [eF, eZ],
+                [eV, eZ],
             ),
             ez = (0, a.e7)([w.Z], () =>
                 (null == eH ? void 0 : eH.application_id) != null ? w.Z.getDetectableGame(eH.application_id) : null,
@@ -200,7 +200,7 @@ let J = [K.fO.ACTIVITY],
             e4 = "";
         switch (D.type) {
             case K.fO.STREAM:
-                (e0 = (0, r.jsx)(V.Z, {
+                (e0 = (0, r.jsx)(F.Z, {
                     participant: D,
                     selected: eu,
                     width: eo,
@@ -211,7 +211,7 @@ let J = [K.fO.ACTIVITY],
                     focused: eh,
                     inOverlayPopout: ey,
                 })),
-                    (e1 = (0, r.jsx)(V._, {
+                    (e1 = (0, r.jsx)(F._, {
                         participant: D,
                         selected: eu,
                         width: eo,
@@ -219,10 +219,10 @@ let J = [K.fO.ACTIVITY],
                         idle: ev,
                         premiumIndicator: !1,
                     })),
-                    (e4 = X.intl.formatToPlainString(X.t.gHPz3d, { streamerName: D.user.username }));
+                    (e4 = X.intl.formatToPlainString(X.t.gHPz3Q, { streamerName: D.user.username }));
                 break;
             case K.fO.USER:
-                (e0 = (0, r.jsx)(F.Z, {
+                (e0 = (0, r.jsx)(V.Z, {
                     channel: el,
                     inCall: ec,
                     participant: D,
@@ -237,11 +237,11 @@ let J = [K.fO.ACTIVITY],
                     pulseSpeakingIndicator: e_,
                     inOverlayPopout: ey,
                 })),
-                    (e1 = (0, r.jsx)(F.T, {
+                    (e1 = (0, r.jsx)(V.T, {
                         participant: D,
                         channelId: el.id,
                     })),
-                    (e4 = X.intl.formatToPlainString(X.t["iC/x/f"], { username: D.user.username }));
+                    (e4 = X.intl.formatToPlainString(X.t["iC/x/Q"], { username: D.user.username }));
                 break;
             case K.fO.ACTIVITY:
                 (e0 = (0, r.jsx)(U.ZP, {
@@ -251,10 +251,10 @@ let J = [K.fO.ACTIVITY],
                     channel: el,
                     width: eo,
                 })),
-                    (e4 = X.intl.formatToPlainString(X.t.YCvOsL, { activityName: null == ew ? void 0 : ew.name }));
+                    (e4 = X.intl.formatToPlainString(X.t.YCvOsO, { activityName: null == ew ? void 0 : ew.name }));
                 break;
             case K.fO.HIDDEN_STREAM:
-                e0 = (0, r.jsx)(V.Z, {
+                e0 = (0, r.jsx)(F.Z, {
                     participant: D,
                     selected: eu,
                     width: eo,
@@ -398,7 +398,7 @@ let J = [K.fO.ACTIVITY],
                                               (_ = _ =
                                                   {
                                                       idle: ev,
-                                                      platform: eV,
+                                                      platform: eF,
                                                       title: (0, k.Z)(el, D),
                                                       blocked: ef,
                                                       ignored: eg,
@@ -543,7 +543,7 @@ let en = i.memo((e) => {
         return D.Z.addChangeListener(t), () => D.Z.removeChangeListener(t);
     }, []);
     let B = !Z && m === K.fO.STREAM && N && (!k || S),
-        V = (function (e) {
+        F = (function (e) {
             let { localMuted: t, serverMuted: n, serverDeafened: r, deafened: i, muted: l } = e;
             return r ? u.Vm4 : n ? u.v0G : i ? u.wE8 : t ? u.v0G : l ? u.nRN : null;
         })({
@@ -581,7 +581,7 @@ let en = i.memo((e) => {
                                       (0, r.jsx)(u.Text, {
                                           variant: "text-sm/normal",
                                           className: Q.overlayTitleText,
-                                          children: X.intl.string(X.t.m2Hyj4),
+                                          children: X.intl.string(X.t.m2Hyj0),
                                       }),
                                   ],
                               })
@@ -596,9 +596,9 @@ let en = i.memo((e) => {
                             color: "none",
                             variant: k ? "text-sm/normal" : "text-md/normal",
                             children: [
-                                null != V &&
+                                null != F &&
                                     m === K.fO.USER &&
-                                    (0, r.jsx)(V, {
+                                    (0, r.jsx)(F, {
                                         className: o()(Q.experimentTitleIcon, { [Q.compact]: k }),
                                         size: "xs",
                                         color: "currentColor",
@@ -655,14 +655,14 @@ let en = i.memo((e) => {
                                         onClick: (e) => {
                                             e.stopPropagation(), U(!0), x(e, !0, K.A5.THREE_DOT);
                                         },
-                                        tooltipText: X.intl.string(X.t["+1H47u"]),
+                                        tooltipText: X.intl.string(X.t["+1H47t"]),
                                         icon: u.xhG,
                                         hideWhenInactive: !G,
                                     }),
                                     B &&
                                         (0, r.jsx)(et, {
                                             onClick: w,
-                                            tooltipText: S ? X.intl.string(X.t.YqAjX1) : X.intl.string(X.t["w4m94+"]),
+                                            tooltipText: S ? X.intl.string(X.t.YqAjXy) : X.intl.string(X.t.w4m945),
                                             icon: S ? u.OyP : u.gj8,
                                             hideWhenInactive: !S && !G,
                                         }),

@@ -110,7 +110,7 @@ let J = "cozy",
                         {},
                         (0, A.ZP)({
                             channelId: en,
-                            content: Y.intl.string(Y.t.oZxkEh),
+                            content: Y.intl.string(Y.t.oZxkEq),
                         }),
                     ),
                     {
@@ -125,7 +125,7 @@ let J = "cozy",
                         {},
                         (0, A.ZP)({
                             channelId: en,
-                            content: (0, u.wj)(e) ? Y.intl.string(Y.t["WGb/v7"]) : Y.intl.string(Y.t["62m4m5"]),
+                            content: (0, u.wj)(e) ? Y.intl.string(Y.t["WGb/v7"]) : Y.intl.string(Y.t["62m4mz"]),
                         }),
                     ),
                     {
@@ -140,7 +140,7 @@ let J = "cozy",
                         {},
                         (0, A.ZP)({
                             channelId: en,
-                            content: Y.intl.string(Y.t.a0Byo6),
+                            content: Y.intl.string(Y.t.a0Byo5),
                         }),
                     ),
                     {
@@ -155,7 +155,7 @@ let J = "cozy",
                         {},
                         (0, A.ZP)({
                             channelId: en,
-                            content: Y.intl.string(Y.t.bmwEWF),
+                            content: Y.intl.string(Y.t.bmwEWJ),
                         }),
                     ),
                     {
@@ -170,7 +170,7 @@ let J = "cozy",
                         {},
                         (0, A.ZP)({
                             channelId: en,
-                            content: Y.intl.string(Y.t.hK9QW1),
+                            content: Y.intl.string(Y.t["hK9QW/"]),
                         }),
                     ),
                     {
@@ -190,12 +190,12 @@ let J = "cozy",
                     children: [
                         (0, r.jsx)("div", {
                             className: W.title,
-                            children: Y.intl.string(Y.t["0EzVsr"]),
+                            children: Y.intl.string(Y.t["0EzVst"]),
                         }),
                         (0, r.jsx)(d.R94, {
                             type: d.R94.Types.DESCRIPTION,
                             className: W.subtext,
-                            children: Y.intl.string(Y.t.PV3dGR),
+                            children: Y.intl.string(Y.t.PV3dGX),
                         }),
                     ],
                 }),
@@ -204,7 +204,7 @@ let J = "cozy",
         }),
     ea = () => {
         let e = (0, B.Z)();
-        return Y.intl.format(Y.t.Jae48P, {
+        return Y.intl.format(Y.t.Jae48E, {
             onClick: () => {
                 e(j.n.ACCESSIBILITY_PANEL, { section: F.oAB.ACCESSIBILITY });
             },
@@ -215,9 +215,9 @@ class eo extends i.Component {
         return (
             !D.isPlatformEmbedded,
             (0, r.jsx)(d.iRW, {
-                label: Y.intl.string(Y.t.i19n5O),
-                description: Y.intl.string(Y.t.ip0uSU),
-                helperText: Y.intl.format(Y.t.OMkSUl, { modKey: p.Z.modKey }),
+                label: Y.intl.string(Y.t.i19n5L),
+                description: Y.intl.string(Y.t.ip0uSf),
+                helperText: Y.intl.format(Y.t.OMkSUo, { modKey: p.Z.modKey }),
                 initialValue: this.props.zoom,
                 defaultValue: F.yqN.ZOOM_DEFAULT,
                 markers: F.yqN.ZOOM_SCALES,
@@ -231,7 +231,7 @@ class eo extends i.Component {
     renderFontScaleSlider() {
         return (0, r.jsx)(d.iRW, {
             label: Y.intl.string(Y.t.qPOqoK),
-            description: Y.intl.string(Y.t.XrtbPj),
+            description: Y.intl.string(Y.t.XrtbPo),
             initialValue: this.props.fontSize,
             defaultValue: F.yqN.FONT_SIZE_DEFAULT,
             markers: F.yqN.FONT_SIZES,
@@ -245,8 +245,8 @@ class eo extends i.Component {
     renderMessageGroupSpacingSlider() {
         let { messageDisplayCompact: e, messageGroupSpacing: t } = this.props;
         return (0, r.jsx)(d.iRW, {
-            label: Y.intl.string(Y.t.Q6lKkp),
-            description: Y.intl.string(Y.t.p7eUra),
+            label: Y.intl.string(Y.t.Q6lKkg),
+            description: Y.intl.string(Y.t.p7eUrb),
             initialValue: t,
             defaultValue: e ? H.c8 : H.pq,
             markers: H.fP,
@@ -292,14 +292,14 @@ class eo extends i.Component {
         let { useForcedColors: e } = this.props;
         return e
             ? (0, r.jsx)(d.C3N, {
-                  label: Y.intl.string(Y.t.Ksh3io),
+                  label: Y.intl.string(Y.t.Ksh3ik),
                   children: (0, r.jsx)(d.Wn, {
                       messageType: d.QYI.INFO,
-                      children: (0, g.b)() ? (0, r.jsx)(ea, {}) : Y.intl.string(Y.t.AUMSZG),
+                      children: (0, g.b)() ? (0, r.jsx)(ea, {}) : Y.intl.string(Y.t.AUMSZP),
                   }),
               })
             : (0, r.jsx)(d.C3N, {
-                  label: Y.intl.string(Y.t.Ksh3io),
+                  label: Y.intl.string(Y.t.Ksh3ik),
                   children: (0, r.jsx)(d.xJW, {
                       title: (0, r.jsx)(ei, {}),
                       children: (0, r.jsx)(k.i, {}),
@@ -309,18 +309,18 @@ class eo extends i.Component {
     renderTimestampHourCycle() {
         let { timestampHourCycle: e } = this.props;
         return (0, r.jsx)(d.FXm, {
-            label: Y.intl.string(Y.t.dyamEB),
+            label: Y.intl.string(Y.t.dyamEI),
             options: [
                 {
                     name: Y.intl.string(Y.t.FMWYvb),
                     value: c.hg.AUTO,
                 },
                 {
-                    name: Y.intl.string(Y.t.p8NOws),
+                    name: Y.intl.string(Y.t.p8NOwi),
                     value: c.hg.H12,
                 },
                 {
-                    name: Y.intl.string(Y.t["+o/sOj"]),
+                    name: Y.intl.string(Y.t["+o/sOo"]),
                     value: c.hg.H23,
                 },
             ],
@@ -335,7 +335,7 @@ class eo extends i.Component {
         return "".concat(e.toFixed(0), "px");
     }
     handleSliderValueText(e) {
-        return Y.intl.formatToPlainString(Y.t["0hpvOT"], { value: e });
+        return Y.intl.formatToPlainString(Y.t["0hpvOV"], { value: e });
     }
     handleFontSizeChange(e) {
         (0, h.oL)(e);
@@ -365,11 +365,11 @@ class eo extends i.Component {
             }),
             i = [
                 {
-                    name: Y.intl.string(Y.t["7iegX1"]),
+                    name: Y.intl.string(Y.t["7iegX4"]),
                     value: c.Pi.COMPACT,
                 },
                 {
-                    name: Y.intl.string(Y.t.bBvAEB),
+                    name: Y.intl.string(Y.t.bBvAEH),
                     value: c.Pi.DEFAULT,
                 },
                 {
@@ -381,8 +381,8 @@ class eo extends i.Component {
                 setting: Z.s6.APPEARANCE_LIST_SPACING,
                 children: [
                     (0, r.jsx)(d.FXm, {
-                        label: Y.intl.string(Y.t["C/5V0N"]),
-                        description: Y.intl.string(Y.t.QLZhYm),
+                        label: Y.intl.string(Y.t["C/5V0A"]),
+                        description: Y.intl.string(Y.t.QLZhYk),
                         options: i,
                         onChange: (e) => this.handleUIDensityChange({ value: e }),
                         value: e,
@@ -394,19 +394,19 @@ class eo extends i.Component {
                 setting: Z.s6.APPEARANCE_MESSAGE_DISPLAY_COMPACT,
                 children: [
                     (0, r.jsxs)(d.C3N, {
-                        label: Y.intl.string(Y.t["2ed/sL"]),
-                        description: Y.intl.string(Y.t.u9N6Qk),
+                        label: Y.intl.string(Y.t["2ed/sA"]),
+                        description: Y.intl.string(Y.t.u9N6Qh),
                         children: [
                             (0, r.jsx)(d.FXm, {
-                                label: Y.intl.string(Y.t.nKRoPj),
-                                description: Y.intl.string(Y.t.QntEEB),
+                                label: Y.intl.string(Y.t.nKRoPv),
+                                description: Y.intl.string(Y.t.QntEEG),
                                 options: [
                                     {
-                                        name: Y.intl.string(Y.t.Jqj4cX),
+                                        name: Y.intl.string(Y.t.Jqj4cZ),
                                         value: J,
                                     },
                                     {
-                                        name: Y.intl.string(Y.t["1JNcPT"]),
+                                        name: Y.intl.string(Y.t["1JNcPS"]),
                                         value: $,
                                     },
                                 ],
@@ -415,7 +415,7 @@ class eo extends i.Component {
                             }),
                             this.props.messageDisplayCompact &&
                                 (0, r.jsx)(d.rsf, {
-                                    label: Y.intl.string(Y.t["//vhWl"]),
+                                    label: Y.intl.string(Y.t["//vhWi"]),
                                     checked: !this.props.displayCompactAvatars,
                                     onChange: (e) => this.handleDisplayCompactAvatarsChanged(!e),
                                 }),
@@ -429,7 +429,7 @@ class eo extends i.Component {
                 setting: Z.s6.APPEARANCE_SCALING_SPACING,
                 children: [
                     (0, r.jsxs)(d.C3N, {
-                        label: Y.intl.string(Y.t["0Yh+ZW"]),
+                        label: Y.intl.string(Y.t["0Yh+ZX"]),
                         children: [this.renderFontScaleSlider(), this.renderZoomSlider()],
                     }),
                     (0, r.jsx)(d.izJ, { className: W.divider }),
@@ -445,7 +445,7 @@ class eo extends i.Component {
                 children: (0, r.jsx)(ea, {}),
             });
         return (0, r.jsxs)(G.Z, {
-            title: Y.intl.string(Y.t["iHH+k5"]),
+            title: Y.intl.string(Y.t["iHH+ky"]),
             children: [t, n, a, o, s, l, u],
         });
     }

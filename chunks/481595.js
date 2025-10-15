@@ -116,7 +116,7 @@ function U(e) {
                           iconSize: f.Z.Sizes.SMALL,
                           color: f.Z.Colors.WARNING,
                           className: j.errorBlock,
-                          children: M.intl.string(M.t.OvMyMT),
+                          children: M.intl.string(M.t.OvMyMd),
                       },
                       "TEST_MODE",
                   )
@@ -129,7 +129,7 @@ function U(e) {
                           iconSize: f.Z.Sizes.SMALL,
                           color: f.Z.Colors.ERROR,
                           className: j.errorBlock,
-                          children: M.intl.string(M.t.tAmECg),
+                          children: M.intl.string(M.t.tAmECt),
                       },
                       "DEV_SHELF_ERROR",
                   )
@@ -142,7 +142,7 @@ function U(e) {
             em && (0, r.jsx)(D.Z, { sku: er }),
             null != $ ? (0, r.jsx)(b.s, { giftRecipient: $ }) : null,
             (0, r.jsx)(c.gNt, {
-                label: J ? M.intl.string(M.t.PEjaCw) : M.intl.string(M.t.sail9P),
+                label: J ? M.intl.string(M.t.PEjaCx) : M.intl.string(M.t.sail9P),
                 children:
                     null != es
                         ? (0, r.jsx)(L.B, {
@@ -177,7 +177,7 @@ function U(e) {
                     ],
                 }),
             (0, r.jsx)(_.ZP, {
-                label: M.intl.string(M.t.mmDvV1),
+                label: M.intl.string(M.t["mmDvV+"]),
                 paymentSources: Object.values(B),
                 selectedPaymentSourceId: Z,
                 onChange: a,
@@ -199,7 +199,7 @@ function U(e) {
                     isGift: J,
                     checkboxLabel:
                         er.productLine === x.POd.COLLECTIBLES
-                            ? M.intl.format(M.t["1EdAlZ"], { paidURL: x.EYA.PAID_TERMS })
+                            ? M.intl.format(M.t["1EdAld"], { paidURL: x.EYA.PAID_TERMS })
                             : void 0,
                     finePrint: (0, r.jsx)(d.Z, {
                         paymentSourceType: e_,

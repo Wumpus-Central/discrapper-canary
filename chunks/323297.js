@@ -7,7 +7,7 @@ var r = t(951288),
     s = t(796724),
     c = t(343312),
     d = t(619733),
-    u = t(948208),
+    u = t(470658),
     g = t(388032),
     m = t(871404);
 function f(e) {
@@ -35,7 +35,7 @@ function f(e) {
     }
     return e;
 }
-function p(e, n) {
+function x(e, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -53,27 +53,27 @@ function p(e, n) {
         e
     );
 }
-function x(e) {
+function p(e) {
     let { step: n, setFooterNode: t } = (0, c.JL)(),
-        { title: a, subtitle: x } = (function (e) {
+        { title: a, subtitle: p } = (function (e) {
             switch (e) {
                 case d.EK.SELECT_GAME:
                     return {
                         title: g.intl.string(u.default["3vWDMz"]),
-                        subtitle: g.intl.string(u.default.Az5bjo),
+                        subtitle: g.intl.string(u.default.Az5bjs),
                     };
                 case d.EK.SERVER_SETTINGS:
-                    return { title: g.intl.string(u.default["RLGW9/"]) };
+                    return { title: g.intl.string(u.default.RLGW9z) };
             }
         })(n);
     return (0, r.jsxs)(
         i.IX,
-        p(f({}, e), {
+        x(f({}, e), {
             size: "lg",
             children: [
                 (0, r.jsx)(i.xBx, {
                     title: a,
-                    subtitle: x,
+                    subtitle: p,
                 }),
                 (0, r.jsx)(l.zJl, {
                     className: m.modalContent,
@@ -113,6 +113,6 @@ function v(e) {
     let { analyticsLocations: n } = (0, a.ZP)();
     return (0, r.jsx)(a.Gt, {
         value: n,
-        children: (0, r.jsx)(c.BT, p(f({}, e), { children: (0, r.jsx)(x, f({}, e)) })),
+        children: (0, r.jsx)(c.BT, x(f({}, e), { children: (0, r.jsx)(p, f({}, e)) })),
     });
 }

@@ -94,14 +94,14 @@ let x = n(227419).Z,
             id: S.bi.BUILT_IN,
             type: T.Qi.BUILT_IN,
             get name() {
-                return R.intl.string(R.t.fI5MTU);
+                return R.intl.string(R.t.fI5MTa);
             },
         },
         [S.bi.FRECENCY]: {
             id: S.bi.FRECENCY,
             type: T.Qi.BUILT_IN,
             get name() {
-                return R.intl.string(R.t["+cGVV1"]);
+                return R.intl.string(R.t["+cGVV6"]);
             },
         },
     },
@@ -115,10 +115,10 @@ let x = n(227419).Z,
             inputType: T.iw.BUILT_IN_TEXT,
             applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
-                return R.intl.string(R.t.j5xUSU);
+                return R.intl.string(R.t.j5xUSW);
             },
             get displayDescription() {
-                return R.intl.string(R.t.j5xUSU);
+                return R.intl.string(R.t.j5xUSW);
             },
             options: [
                 {
@@ -126,10 +126,10 @@ let x = n(227419).Z,
                     displayName: "message",
                     type: f.jw.STRING,
                     get description() {
-                        return R.intl.string(R.t.JewOra);
+                        return R.intl.string(R.t.JewOrS);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.JewOra);
+                        return R.intl.string(R.t.JewOrS);
                     },
                 },
             ],
@@ -147,10 +147,10 @@ let x = n(227419).Z,
             inputType: T.iw.BUILT_IN_TEXT,
             applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
-                return R.intl.string(R.t.nrQRcX);
+                return R.intl.string(R.t.nrQRce);
             },
             get displayDescription() {
-                return R.intl.string(R.t.nrQRcX);
+                return R.intl.string(R.t.nrQRce);
             },
             options: [
                 {
@@ -158,10 +158,10 @@ let x = n(227419).Z,
                     displayName: "message",
                     type: f.jw.STRING,
                     get description() {
-                        return R.intl.string(R.t.EI80t7);
+                        return R.intl.string(R.t.EI80tw);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.EI80t7);
+                        return R.intl.string(R.t.EI80tw);
                     },
                 },
             ],
@@ -179,10 +179,10 @@ let x = n(227419).Z,
             inputType: T.iw.BUILT_IN_TEXT,
             applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
-                return R.intl.string(R.t.pnnn8f);
+                return R.intl.string(R.t.pnnn8e);
             },
             get displayDescription() {
-                return R.intl.string(R.t.pnnn8f);
+                return R.intl.string(R.t.pnnn8e);
             },
             options: [
                 {
@@ -211,10 +211,10 @@ let x = n(227419).Z,
             inputType: T.iw.BUILT_IN_TEXT,
             applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
-                return R.intl.string(R.t.jZcIiY);
+                return R.intl.string(R.t.jZcIid);
             },
             get displayDescription() {
-                return R.intl.string(R.t.jZcIiY);
+                return R.intl.string(R.t.jZcIid);
             },
             options: [
                 {
@@ -222,10 +222,10 @@ let x = n(227419).Z,
                     displayName: "message",
                     type: f.jw.STRING,
                     get description() {
-                        return R.intl.string(R.t["k+sw9v"]);
+                        return R.intl.string(R.t["k+sw9g"]);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t["k+sw9v"]);
+                        return R.intl.string(R.t["k+sw9g"]);
                     },
                     required: !0,
                 },
@@ -250,10 +250,10 @@ let x = n(227419).Z,
             inputType: T.iw.BUILT_IN_TEXT,
             applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
-                return R.intl.string(R.t.UGO8fX);
+                return R.intl.string(R.t.UGO8fU);
             },
             get displayDescription() {
-                return R.intl.string(R.t.UGO8fX);
+                return R.intl.string(R.t.UGO8fU);
             },
             options: [
                 {
@@ -261,10 +261,10 @@ let x = n(227419).Z,
                     displayName: "message",
                     type: f.jw.STRING,
                     get description() {
-                        return R.intl.string(R.t.RWTgNT);
+                        return R.intl.string(R.t.RWTgNd);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.RWTgNT);
+                        return R.intl.string(R.t.RWTgNd);
                     },
                     required: !0,
                 },
@@ -283,10 +283,10 @@ let x = n(227419).Z,
             inputType: T.iw.BUILT_IN_TEXT,
             applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
-                return R.intl.string(R.t.v0eDdX);
+                return R.intl.string(R.t.v0eDdV);
             },
             get displayDescription() {
-                return R.intl.string(R.t.v0eDdX);
+                return R.intl.string(R.t.v0eDdV);
             },
             options: [
                 {
@@ -294,10 +294,10 @@ let x = n(227419).Z,
                     displayName: "message",
                     type: f.jw.STRING,
                     get description() {
-                        return R.intl.string(R.t.D13pbW);
+                        return R.intl.string(R.t.D13pbc);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.D13pbW);
+                        return R.intl.string(R.t.D13pbc);
                     },
                     required: !0,
                 },
@@ -316,10 +316,10 @@ let x = n(227419).Z,
             inputType: T.iw.BUILT_IN,
             applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
-                return R.intl.string(R.t.jiHfS0);
+                return R.intl.string(R.t["jiHfS/"]);
             },
             get displayDescription() {
-                return R.intl.string(R.t.jiHfS0);
+                return R.intl.string(R.t["jiHfS/"]);
             },
             options: [
                 {
@@ -327,10 +327,10 @@ let x = n(227419).Z,
                     displayName: "new_nick",
                     type: f.jw.STRING,
                     get description() {
-                        return R.intl.string(R.t.WTSzVl);
+                        return R.intl.string(R.t.WTSzVu);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.WTSzVl);
+                        return R.intl.string(R.t.WTSzVu);
                     },
                 },
             ],
@@ -369,10 +369,10 @@ let x = n(227419).Z,
                     displayName: "name",
                     type: f.jw.STRING,
                     get description() {
-                        return R.intl.string(R.t.TffOfX);
+                        return R.intl.string(R.t.TffOfY);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.TffOfX);
+                        return R.intl.string(R.t.TffOfY);
                     },
                     required: !0,
                 },
@@ -381,10 +381,10 @@ let x = n(227419).Z,
                     displayName: "message",
                     type: f.jw.STRING,
                     get description() {
-                        return R.intl.string(R.t.QXfSfX);
+                        return R.intl.string(R.t.QXfSfU);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.QXfSfX);
+                        return R.intl.string(R.t.QXfSfU);
                     },
                     required: !0,
                 },
@@ -410,10 +410,10 @@ let x = n(227419).Z,
             inputType: T.iw.BUILT_IN,
             applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
-                return R.intl.string(R.t["03N0UF"]);
+                return R.intl.string(R.t["03N0UL"]);
             },
             get displayDescription() {
-                return R.intl.string(R.t["03N0UF"]);
+                return R.intl.string(R.t["03N0UL"]);
             },
             options: [
                 {
@@ -421,10 +421,10 @@ let x = n(227419).Z,
                     displayName: "user",
                     type: f.jw.USER,
                     get description() {
-                        return R.intl.string(R.t.gF8IpK);
+                        return R.intl.string(R.t.gF8IpD);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.gF8IpK);
+                        return R.intl.string(R.t.gF8IpD);
                     },
                     required: !0,
                 },
@@ -433,10 +433,10 @@ let x = n(227419).Z,
                     displayName: "reason",
                     type: f.jw.STRING,
                     get description() {
-                        return R.intl.string(R.t.QWldgo);
+                        return R.intl.string(R.t.QWldgj);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.QWldgo);
+                        return R.intl.string(R.t.QWldgj);
                     },
                     required: !1,
                 },
@@ -451,7 +451,7 @@ let x = n(227419).Z,
                 if (null == r || null == i) return;
                 let a = null != (n = M(e, "user")) ? n : "";
                 if (!y.Z.canManageUser(A.Plq.KICK_MEMBERS, a, r))
-                    return void d.Z.sendBotMessage(i.id, R.intl.string(R.t["6RIwPD"]));
+                    return void d.Z.sendBotMessage(i.id, R.intl.string(R.t["6RIwPI"]));
                 (async () => {
                     var t;
                     let n = O.default.getUser(a);
@@ -459,7 +459,7 @@ let x = n(227419).Z,
                     await u.Z.kickUser(r.id, a, null != (t = M(e, "reason")) ? t : ""),
                         d.Z.sendBotMessage(
                             i.id,
-                            R.intl.formatToPlainString(R.t["9wzHDQ"], { user: I.ZP.getUserTag(n) }),
+                            R.intl.formatToPlainString(R.t["9wzHDV"], { user: I.ZP.getUserTag(n) }),
                         );
                 })().catch(() => {
                     d.Z.sendBotMessage(i.id, R.intl.string(R.t.l0gNlp));
@@ -474,10 +474,10 @@ let x = n(227419).Z,
             inputType: T.iw.BUILT_IN,
             applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
-                return R.intl.string(R.t.HWuskp);
+                return R.intl.string(R.t.HWuskv);
             },
             get displayDescription() {
-                return R.intl.string(R.t.HWuskp);
+                return R.intl.string(R.t.HWuskv);
             },
             options: [
                 {
@@ -485,10 +485,10 @@ let x = n(227419).Z,
                     displayName: "user",
                     type: f.jw.USER,
                     get description() {
-                        return R.intl.string(R.t.z3XPjo);
+                        return R.intl.string(R.t.z3XPjr);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.z3XPjo);
+                        return R.intl.string(R.t.z3XPjr);
                     },
                     required: !0,
                 },
@@ -497,27 +497,27 @@ let x = n(227419).Z,
                     displayName: "delete_messages",
                     type: f.jw.INTEGER,
                     get description() {
-                        return R.intl.string(R.t.smrvAw);
+                        return R.intl.string(R.t.smrvA6);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.smrvAw);
+                        return R.intl.string(R.t.smrvA6);
                     },
                     required: !0,
                     get choices() {
                         return [
                             {
-                                name: R.intl.string(R.t["4obaMT"]),
-                                displayName: R.intl.string(R.t["4obaMT"]),
+                                name: R.intl.string(R.t["4obaMS"]),
+                                displayName: R.intl.string(R.t["4obaMS"]),
                                 value: 0,
                             },
                             {
-                                name: R.intl.string(R.t.RKpitb),
-                                displayName: R.intl.string(R.t.RKpitb),
+                                name: R.intl.string(R.t.RKpitY),
+                                displayName: R.intl.string(R.t.RKpitY),
                                 value: v.Z.Seconds.HOUR,
                             },
                             {
-                                name: R.intl.string(R.t["8WfJZ2"]),
-                                displayName: R.intl.string(R.t["8WfJZ2"]),
+                                name: R.intl.string(R.t["8WfJZ8"]),
+                                displayName: R.intl.string(R.t["8WfJZ8"]),
                                 value: 6 * v.Z.Seconds.HOUR,
                             },
                             {
@@ -526,18 +526,18 @@ let x = n(227419).Z,
                                 value: 12 * v.Z.Seconds.HOUR,
                             },
                             {
-                                name: R.intl.string(R.t.XuVkkJ),
-                                displayName: R.intl.string(R.t.XuVkkJ),
+                                name: R.intl.string(R.t.XuVkkD),
+                                displayName: R.intl.string(R.t.XuVkkD),
                                 value: v.Z.Seconds.DAY,
                             },
                             {
-                                name: R.intl.string(R.t.gMcDS0),
-                                displayName: R.intl.string(R.t.gMcDS0),
+                                name: R.intl.string(R.t["gMcDS+"]),
+                                displayName: R.intl.string(R.t["gMcDS+"]),
                                 value: 3 * v.Z.Seconds.DAY,
                             },
                             {
-                                name: R.intl.string(R.t.FA7IUl),
-                                displayName: R.intl.string(R.t.FA7IUl),
+                                name: R.intl.string(R.t.FA7IUk),
+                                displayName: R.intl.string(R.t.FA7IUk),
                                 value: 7 * v.Z.Seconds.DAY,
                             },
                         ];
@@ -548,10 +548,10 @@ let x = n(227419).Z,
                     displayName: "reason",
                     type: f.jw.STRING,
                     get description() {
-                        return R.intl.string(R.t.dG4noa);
+                        return R.intl.string(R.t.dG4noU);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.dG4noa);
+                        return R.intl.string(R.t.dG4noU);
                     },
                     required: !1,
                 },
@@ -566,7 +566,7 @@ let x = n(227419).Z,
                 if (null == r || null == i) return;
                 let a = null != (n = M(e, "user")) ? n : "";
                 if (!y.Z.canManageUser(A.Plq.BAN_MEMBERS, a, r))
-                    return void d.Z.sendBotMessage(i.id, R.intl.string(R.t.R27LJi));
+                    return void d.Z.sendBotMessage(i.id, R.intl.string(R.t.R27LJl));
                 (async () => {
                     var t, n;
                     if ("" === a) throw Error();
@@ -576,10 +576,10 @@ let x = n(227419).Z,
                     await u.Z.banUser(r.id, a, o, s),
                         d.Z.sendBotMessage(
                             i.id,
-                            R.intl.formatToPlainString(R.t.YflWdH, { user: null != l ? I.ZP.getUserTag(l) : a }),
+                            R.intl.formatToPlainString(R.t.YflWdM, { user: null != l ? I.ZP.getUserTag(l) : a }),
                         );
                 })().catch(() => {
-                    d.Z.sendBotMessage(i.id, R.intl.string(R.t.w2J6Qk));
+                    d.Z.sendBotMessage(i.id, R.intl.string(R.t.w2J6Qs));
                 });
             },
         },
@@ -591,10 +591,10 @@ let x = n(227419).Z,
             inputType: T.iw.BUILT_IN,
             applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
-                return R.intl.string(R.t.KkPcen);
+                return R.intl.string(R.t.KkPcep);
             },
             get displayDescription() {
-                return R.intl.string(R.t.KkPcen);
+                return R.intl.string(R.t.KkPcep);
             },
             options: [
                 {
@@ -602,10 +602,10 @@ let x = n(227419).Z,
                     displayName: "user",
                     type: f.jw.USER,
                     get description() {
-                        return R.intl.string(R.t.UU3VRk);
+                        return R.intl.string(R.t.UU3VRm);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.UU3VRk);
+                        return R.intl.string(R.t.UU3VRm);
                     },
                     required: !0,
                 },
@@ -614,10 +614,10 @@ let x = n(227419).Z,
                     displayName: "duration",
                     type: f.jw.INTEGER,
                     get description() {
-                        return R.intl.string(R.t.SNqN1d);
+                        return R.intl.string(R.t.SNqN1e);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.SNqN1d);
+                        return R.intl.string(R.t.SNqN1e);
                     },
                     required: !0,
                     get choices() {
@@ -634,10 +634,10 @@ let x = n(227419).Z,
                     displayName: "reason",
                     type: f.jw.STRING,
                     get description() {
-                        return R.intl.string(R.t.akHScH);
+                        return R.intl.string(R.t.akHScA);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.akHScH);
+                        return R.intl.string(R.t.akHScA);
                     },
                     required: !1,
                 },
@@ -650,7 +650,7 @@ let x = n(227419).Z,
                 let { guild: n, channel: r } = t;
                 if (null == n || null == r) return;
                 let i = M(e, "user");
-                if (!(0, _.F)(n.id, i)) return void d.Z.sendBotMessage(r.id, R.intl.string(R.t.F5pqSU));
+                if (!(0, _.F)(n.id, i)) return void d.Z.sendBotMessage(r.id, R.intl.string(R.t.F5pqSf));
                 (async () => {
                     var t, a;
                     let s = null != (t = M(e, "duration")) ? t : "",
@@ -666,13 +666,13 @@ let x = n(227419).Z,
                     }),
                         d.Z.sendBotMessage(
                             r.id,
-                            R.intl.formatToPlainString(R.t.BbRV6u, {
+                            R.intl.formatToPlainString(R.t.BbRV6o, {
                                 user: I.ZP.getUserTag(c),
                                 duration: s,
                             }),
                         );
                 })().catch(() => {
-                    d.Z.sendBotMessage(r.id, R.intl.string(R.t["+mWyVl"]));
+                    d.Z.sendBotMessage(r.id, R.intl.string(R.t["+mWyVq"]));
                 });
             },
         },
@@ -684,10 +684,10 @@ let x = n(227419).Z,
             inputType: T.iw.BUILT_IN,
             applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
-                return R.intl.string(R.t.Dg8XZ2);
+                return R.intl.string(R.t.Dg8XZw);
             },
             get displayDescription() {
-                return R.intl.string(R.t.Dg8XZ2);
+                return R.intl.string(R.t.Dg8XZw);
             },
             options: [
                 {
@@ -695,10 +695,10 @@ let x = n(227419).Z,
                     displayName: "user",
                     type: f.jw.USER,
                     get description() {
-                        return R.intl.string(R.t["KmVq/P"]);
+                        return R.intl.string(R.t["KmVq/D"]);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t["KmVq/P"]);
+                        return R.intl.string(R.t["KmVq/D"]);
                     },
                     required: !0,
                 },
@@ -707,10 +707,10 @@ let x = n(227419).Z,
                     displayName: "message",
                     type: f.jw.STRING,
                     get description() {
-                        return R.intl.string(R.t.oGUuOD);
+                        return R.intl.string(R.t.oGUuOJ);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.oGUuOD);
+                        return R.intl.string(R.t.oGUuOJ);
                     },
                     required: !0,
                     get maxLength() {
@@ -732,7 +732,7 @@ let x = n(227419).Z,
                             d.Z.sendMessage(t.id, p.ZP.parse(t, o), !0, { location: N.dy.PRIVATE_MESSAGE_COMMAND });
                     });
                 })().catch(() => {
-                    d.Z.sendBotMessage(r.id, R.intl.string(R.t["3XaE9/"]));
+                    d.Z.sendBotMessage(r.id, R.intl.string(R.t["3XaE95"]));
                 });
             },
         },

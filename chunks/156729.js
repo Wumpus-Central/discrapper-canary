@@ -109,7 +109,7 @@ class R extends (r = a.PureComponent) {
                 (0, i.jsx)(d.Text, {
                     className: v.sectionHeader,
                     variant: "text-sm/normal",
-                    children: O.intl.string(O.t["50Auo6"]),
+                    children: O.intl.string(O.t["50Auo2"]),
                 }),
                 (0, i.jsx)(
                     E.ZP,
@@ -133,7 +133,7 @@ class R extends (r = a.PureComponent) {
                 (0, i.jsx)(d.Text, {
                     className: v.sectionHeader,
                     variant: "text-sm/normal",
-                    children: O.intl.string(O.t.Fo2YPz),
+                    children: O.intl.string(O.t.Fo2YP7),
                 }),
                 (0, i.jsx)(b.Z, {
                     expirationDate: n,
@@ -159,7 +159,7 @@ class R extends (r = a.PureComponent) {
                                 n
                                     ? (0, i.jsx)(d.aML, {
                                           "data-migration-pending": !0,
-                                          text: O.intl.string(O.t["v6/z29"]),
+                                          text: O.intl.string(O.t["v6/z28"]),
                                           children: (e) =>
                                               (0, i.jsx)(
                                                   "div",
@@ -180,7 +180,7 @@ class R extends (r = a.PureComponent) {
                                     onClick: this.handleDelete,
                                     variant: "critical-secondary",
                                     size: l.tq ? "sm" : "md",
-                                    text: l.tq ? O.intl.string(O.t.oyYWHB) : O.intl.string(O.t.yk5qfX),
+                                    text: l.tq ? O.intl.string(O.t.oyYWHE) : O.intl.string(O.t.yk5qfb),
                                 }),
                             ],
                         }),
@@ -193,7 +193,7 @@ class R extends (r = a.PureComponent) {
                                 onClick: this.handleCancel,
                                 variant: "secondary",
                                 size: l.tq ? "sm" : "md",
-                                text: O.intl.string(O.t["ETE/oK"]),
+                                text: O.intl.string(O.t["ETE/oC"]),
                             }),
                             (0, i.jsx)(u.zxk, {
                                 loading: e,
@@ -201,7 +201,7 @@ class R extends (r = a.PureComponent) {
                                 type: "submit",
                                 variant: "active",
                                 size: l.tq ? "sm" : "md",
-                                text: O.intl.string(O.t.R3BPHx),
+                                text: O.intl.string(O.t["R3BPH+"]),
                             }),
                         ],
                     }),
@@ -235,12 +235,12 @@ class R extends (r = a.PureComponent) {
                             e.invalid
                                 ? (0, i.jsx)("div", {
                                       className: v.errorSubText,
-                                      children: O.intl.string(O.t["3R0U0d"]),
+                                      children: O.intl.string(O.t["3R0U0b"]),
                                   })
                                 : null,
                             (0, i.jsx)("div", {
                                 className: v.subText,
-                                children: l ? O.intl.format(O.t.w9WkBg, { paypalURL: C }) : O.intl.string(O.t.VXndys),
+                                children: l ? O.intl.format(O.t.w9WkBl, { paypalURL: C }) : O.intl.string(O.t.VXndyr),
                             }),
                         ],
                     }),
@@ -252,7 +252,7 @@ class R extends (r = a.PureComponent) {
                             value: N,
                             checked: o,
                             onChange: (e) => this.handleFieldChange(e, N),
-                            label: O.intl.string(O.t.nag9Oj),
+                            label: O.intl.string(O.t.nag9Og),
                             labelType: "secondary",
                         }),
                     }),

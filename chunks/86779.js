@@ -104,12 +104,12 @@ let b = "mweb_handoff_nonce",
         let P =
             null == C
                 ? (0, r.jsxs)(r.Fragment, {
-                      children: [E.intl.string(E.t.uJ1Jsb), (0, r.jsx)("br", {}), E.intl.string(E.t.GHVWAg)],
+                      children: [E.intl.string(E.t.uJ1JsY), (0, r.jsx)("br", {}), E.intl.string(E.t.GHVWAs)],
                   })
                 : S.has(C)
-                  ? E.intl.string(E.t.EPt55u)
+                  ? E.intl.string(E.t.EPt55r)
                   : N.has(C)
-                    ? E.intl.string(E.t.g87kTk)
+                    ? E.intl.string(E.t.g87kTp)
                     : void 0;
         return null != C && S.has(C)
             ? (0, r.jsx)("div", {
@@ -157,7 +157,7 @@ let b = "mweb_handoff_nonce",
                           children: (0, r.jsx)(d.Text, {
                               className: v.buttonText,
                               variant: "text-sm/semibold",
-                              children: E.intl.string(E.t["NcC75+"]),
+                              children: E.intl.string(E.t.NcC759),
                           }),
                       }),
                   ],

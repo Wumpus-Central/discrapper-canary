@@ -1,6 +1,6 @@
 n.d(t, {
-    R: () => y,
-    Z: () => O,
+    R: () => O,
+    Z: () => y,
 });
 var r,
     i = n(951288);
@@ -43,10 +43,10 @@ function _(e) {
     }
     return e;
 }
-var y = (((r = {})[(r.VOICE = 0)] = "VOICE"), r);
-let O = (e) => {
-    let { type: t, guildId: r, closePopout: y } = e,
-        O = (0, u.Dt)(),
+var O = (((r = {})[(r.VOICE = 0)] = "VOICE"), r);
+let y = (e) => {
+    let { type: t, guildId: r, closePopout: O } = e,
+        y = (0, u.Dt)(),
         {
             notClaimed: v,
             notEmailVerified: j,
@@ -54,27 +54,27 @@ let O = (e) => {
             newAccount: C,
             newMember: E,
         } = (0, l.e7)([p.Z], () => p.Z.getCheck(r), [r]),
-        S = 0 === t ? m.intl.string(m.t["6zY8BA"]) : null,
+        S = 0 === t ? m.intl.string(m.t["6zY8BI"]) : null,
         I = null,
         P = null;
     return (0 === t &&
         (v
-            ? ((I = m.intl.string(m.t.IRxUlJ)), (P = m.intl.string(m.t.fiNVio)))
+            ? ((I = m.intl.string(m.t.IRxUlG)), (P = m.intl.string(m.t.fiNVin)))
             : x
-              ? ((I = m.intl.string(m.t.vW8iUF)), (P = m.intl.string(m.t["50gfOj"])))
+              ? ((I = m.intl.string(m.t.vW8iUF)), (P = m.intl.string(m.t["50gfOv"])))
               : j
-                ? ((I = m.intl.string(m.t.vdSOp6)), (P = m.intl.string(m.t.lm1UKi)))
+                ? ((I = m.intl.string(m.t.vdSOpz)), (P = m.intl.string(m.t.lm1UKt)))
                 : E
-                  ? ((I = m.intl.formatToPlainString(m.t.v1ktYW, { min: f.YeM.MEMBER_AGE })),
-                    (P = m.intl.string(m.t.BddRzc)))
+                  ? ((I = m.intl.formatToPlainString(m.t.v1ktYb, { min: f.YeM.MEMBER_AGE })),
+                    (P = m.intl.string(m.t.BddRzS)))
                   : C &&
-                    ((I = m.intl.formatToPlainString(m.t["sncw4+"], { min: f.YeM.ACCOUNT_AGE })),
-                    (P = m.intl.string(m.t.BddRzc)))),
+                    ((I = m.intl.formatToPlainString(m.t.sncw41, { min: f.YeM.ACCOUNT_AGE })),
+                    (P = m.intl.string(m.t.BddRzS)))),
     null == S || null == I)
         ? null
         : (0, i.jsxs)(a.VqE, {
               className: b.container,
-              "aria-labelledby": O,
+              "aria-labelledby": y,
               children: [
                   (0, i.jsx)("img", {
                       alt: "",
@@ -86,7 +86,7 @@ let O = (e) => {
                       children: [
                           (0, i.jsx)(a.Heading, {
                               variant: "heading-md/semibold",
-                              id: O,
+                              id: y,
                               children: S,
                           }),
                           (0, i.jsx)(a.Text, {
@@ -129,8 +129,8 @@ let O = (e) => {
                                                                     a.ConfirmModal,
                                                                     ((n = _(
                                                                         {
-                                                                            header: m.intl.string(m.t.LykQYm),
-                                                                            confirmText: m.intl.string(m.t.BddRzc),
+                                                                            header: m.intl.string(m.t.LykQYk),
+                                                                            confirmText: m.intl.string(m.t.BddRzS),
                                                                             confirmButtonColor: o.zx.Colors.BRAND,
                                                                         },
                                                                         e,
@@ -139,7 +139,7 @@ let O = (e) => {
                                                                         {
                                                                             children: (0, i.jsx)(a.Text, {
                                                                                 variant: "text-md/normal",
-                                                                                children: m.intl.format(m.t.azKEPz, {
+                                                                                children: m.intl.format(m.t.azKEPy, {
                                                                                     email:
                                                                                         null ==
                                                                                         (t = h.default.getCurrentUser())
@@ -171,15 +171,15 @@ let O = (e) => {
                                                                     n),
                                                                 );
                                                             })),
-                                                        y();
+                                                        O();
                                                 },
                                             }),
                                         })
                                       : null,
                                   v || x || j
                                       ? (0, i.jsx)(a.Avr, {
-                                            onClick: y,
-                                            text: m.intl.string(m.t.oEAioK),
+                                            onClick: O,
+                                            text: m.intl.string(m.t.oEAioF),
                                             variant: "secondary",
                                         })
                                       : null,

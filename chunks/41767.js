@@ -1,4 +1,4 @@
-e.d(n, { default: () => j }), e(388685);
+e.d(n, { default: () => A }), e(388685);
 var l = e(951288),
     r = e(647438),
     i = e(793030),
@@ -19,43 +19,43 @@ let o = (t) => {
             let n = i.find((n) => n.value === t);
             null != n && r(n.value);
         },
-        placeholder: c.intl.string(c.t.k7yo6u),
+        placeholder: c.intl.string(c.t.k7yo6p),
     });
 };
-function j(t) {
-    let { action: n, triggerType: e, isEdit: a, onUpdateDuration: j, onClose: A, transitionState: E } = t,
-        [d, _] = r.useState(() =>
+function A(t) {
+    let { action: n, triggerType: e, isEdit: a, onUpdateDuration: A, onClose: j, transitionState: E } = t,
+        [d, S] = r.useState(() =>
             null != n.metadata.durationSeconds && n.metadata.durationSeconds > 0
                 ? n.metadata.durationSeconds
                 : s.DisableCommunicationDuration.DURATION_60_SEC,
         ),
-        N = (0, u.c)(n.type, n, e);
-    if (null == N) return null;
-    let { headerText: S } = N;
+        _ = (0, u.c)(n.type, n, e);
+    if (null == _) return null;
+    let { headerText: N } = _;
     return (0, l.jsx)(i.Modal, {
-        onClose: A,
+        onClose: j,
         transitionState: E,
-        title: S,
-        subtitle: c.intl.string(c.t.DWGBAg),
+        title: N,
+        subtitle: c.intl.string(c.t.DWGBAh),
         actions: [
             {
-                text: c.intl.string(c.t["ETE/oK"]),
+                text: c.intl.string(c.t["ETE/oC"]),
                 onClick: () => {
-                    A();
+                    j();
                 },
                 variant: "secondary",
             },
             {
-                text: a ? c.intl.string(c.t.bt75u7) : c.intl.string(c.t.R3BPHx),
+                text: a ? c.intl.string(c.t.bt75uw) : c.intl.string(c.t["R3BPH+"]),
                 onClick: () => {
-                    j(d);
+                    A(d);
                 },
             },
         ],
         children: (0, l.jsx)(o, {
             duration: d,
             onSelectDuration: (t) => {
-                _(t);
+                S(t);
             },
         }),
     });

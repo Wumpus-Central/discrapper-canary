@@ -118,7 +118,7 @@ let T = function (e) {
         U = null != k && null != w,
         G = C && U && w === l.h8.REVIEW,
         B = A ? "nitro-pink" : "nitro-green",
-        Z = A ? p.intl.string(p.t["lG6a5+"]) : p.intl.string(p.t["t9uG/v"]);
+        Z = A ? p.intl.string(p.t.lG6a5x) : p.intl.string(p.t["t9uG/o"]);
     return x
         ? (0, r.jsx)("div", {
               className: h.container,

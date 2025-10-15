@@ -106,7 +106,7 @@ function T(e) {
             wrap: !0,
         }),
         A = d.length,
-        E = 0 === A ? y.intl.string(y.t["vR7M+/"]) : y.intl.formatToPlainString(y.t.PCs0oq, { numRoles: A }),
+        E = 0 === A ? y.intl.string(y.t["vR7M+y"]) : y.intl.formatToPlainString(y.t.PCs0oo, { numRoles: A }),
         S = d.map((e) => {
             var i;
             return (0, l.jsx)(
@@ -194,7 +194,7 @@ function A(e) {
     return 0 !== A.length || _
         ? (0, l.jsx)(
               g.Z,
-              N(O({ heading: y.intl.string(y.t.LPJmLy) }, o), {
+              N(O({ heading: y.intl.string(y.t["LPJmL/"]) }, o), {
                   children: (0, l.jsx)(T, {
                       user: n,
                       currentUser: t,

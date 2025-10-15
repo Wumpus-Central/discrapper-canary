@@ -72,7 +72,7 @@ function O(e, t) {
     }
     return r;
 }
-let E = (e) => {
+let C = (e) => {
     let { className: t, onChange: i, textVariant: r = "text-md/normal", label: l, value: s, isArchived: o = !1 } = e;
     return (0, n.jsx)(u.$q, {
         size: 24,
@@ -88,12 +88,12 @@ let E = (e) => {
                     variant: r,
                     children: l,
                 }),
-                o && (0, n.jsx)(m.IGR, { text: w.intl.string(w.t.nhbtEh) }),
+                o && (0, n.jsx)(m.IGR, { text: w.intl.string(w.t.nhbtEl) }),
             ],
         }),
     });
 };
-function C(e) {
+function E(e) {
     let {
             transitionState: t,
             onClose: i,
@@ -122,17 +122,17 @@ function C(e) {
     return (0, n.jsx)(d.Modal, {
         onClose: i,
         transitionState: t,
-        title: w.intl.string(w.t.nP7nDQ),
+        title: w.intl.string(w.t.nP7nDY),
         subtitle: w.intl.string(w.t.I4SYUF),
         preview: !0,
         actions: [
             {
-                text: w.intl.string(w.t["ETE/oK"]),
+                text: w.intl.string(w.t["ETE/oC"]),
                 variant: "secondary",
                 onClick: i,
             },
             {
-                text: w.intl.string(w.t.R3BPHx),
+                text: w.intl.string(w.t["R3BPH+"]),
                 variant: "primary",
                 onClick: () => {
                     h(Array.from(b), i);
@@ -164,10 +164,10 @@ function C(e) {
                 (0, n.jsxs)("div", {
                     children: [
                         (0, n.jsx)(
-                            E,
+                            C,
                             {
                                 className: _.selectAllCheckbox,
-                                label: w.intl.string(w.t["Ve/y5+"]),
+                                label: w.intl.string(w.t["Ve/y5z"]),
                                 textVariant: "text-md/semibold",
                                 value: p,
                                 onChange: () => {
@@ -190,7 +190,7 @@ function C(e) {
                                 children: [
                                     0 !== t && (0, n.jsx)("div", { className: _.seperator }),
                                     (0, n.jsx)(
-                                        E,
+                                        C,
                                         {
                                             onChange: () => {
                                                 let t;
@@ -257,7 +257,7 @@ function R(e) {
         }),
         m = x.ZP.sanitizeEmojiName(l.name.split(".")[0]);
     return (0, n.jsx)(
-        C,
+        E,
         k(
             {
                 emojiName: m,
@@ -300,7 +300,7 @@ function I(e) {
             return t.roles.filter((t) => e.has(t));
         }, [t.roles, u]);
     return (0, n.jsx)(
-        C,
+        E,
         k(
             {
                 emojiName: t.name,

@@ -4,8 +4,8 @@ n(647438);
 var r = n(442837),
     i = n(755721),
     l = n(481060),
-    s = n(767714),
-    o = n(594174),
+    o = n(767714),
+    s = n(594174),
     c = n(74538),
     d = n(921944),
     u = n(474936),
@@ -14,7 +14,7 @@ var r = n(442837),
     h = n(217379);
 function x(e) {
     let { markAsDismissed: t, onCTA: n } = e,
-        x = (0, r.e7)([o.default], () => o.default.getCurrentUser()),
+        x = (0, r.e7)([s.default], () => s.default.getCurrentUser()),
         f = (0, c.M5)(x, u.PremiumTypes.TIER_2);
     return (0, a.jsx)("div", {
         className: p.popup,
@@ -37,24 +37,24 @@ function x(e) {
                             variant: "heading-md/semibold",
                             color: "text-primary",
                             className: p.title,
-                            children: m.intl.string(m.t["PRXV4+"]),
+                            children: m.intl.string(m.t.PRXV49),
                         }),
                         (0, a.jsx)(l.Text, {
                             variant: "text-sm/medium",
                             color: "text-secondary",
-                            children: m.intl.string(m.t.RSHtFx),
+                            children: m.intl.string(m.t["RSHtF+"]),
                         }),
                     ],
                 }),
                 f
                     ? (0, a.jsx)(l.Button, {
-                          text: m.intl.string(m.t.LhcHi4),
+                          text: m.intl.string(m.t.LhcHi5),
                           fullWidth: !0,
                           onClick: () => {
                               t(d.L.TAKE_ACTION), n();
                           },
                       })
-                    : (0, a.jsx)(s.Z, {
+                    : (0, a.jsx)(o.Z, {
                           onClick: () => {
                               t(d.L.TAKE_ACTION);
                           },
@@ -62,7 +62,7 @@ function x(e) {
                           subscriptionTier: u.Si.TIER_2,
                           size: i.zx.Sizes.LARGE,
                           color: i.zx.Colors.CUSTOM,
-                          textOptions: { textOverride: m.intl.string(m.t.pj0XBA) },
+                          textOptions: { textOverride: m.intl.string(m.t.pj0XBN) },
                           className: p.button,
                       }),
             ],

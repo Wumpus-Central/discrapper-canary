@@ -79,8 +79,8 @@ async function P() {
     d.Z.fileManager.showItemInFolder(e);
 }
 function w() {
-    let e = T.intl.string(T.t["fKBB8/"]),
-        t = T.intl.string(T.t.BvyxEx);
+    let e = T.intl.string(T.t["fKBB8+"]),
+        t = T.intl.string(T.t.BvyxE7);
     (0, s.h7j)((n) =>
         (0, r.jsx)(
             s.ConfirmModal,
@@ -89,7 +89,7 @@ function w() {
                     {
                         header: e,
                         confirmButtonColor: o.zx.Colors.BRAND,
-                        confirmText: T.intl.string(T.t.BddRzc),
+                        confirmText: T.intl.string(T.t.BddRzS),
                     },
                     n,
                 ),
@@ -105,10 +105,10 @@ function w() {
 }
 function D(e) {
     var t;
-    let n = T.intl.string(T.t.QZg0Jy),
-        i = null != e ? e : T.intl.string(T.t.VzHcSk),
+    let n = T.intl.string(T.t.QZg0J7),
+        i = null != e ? e : T.intl.string(T.t.VzHcSm),
         a = null == (t = (0, p.hp)(p.u.DEBUG_LOG_UPLOAD_FAILED)) ? void 0 : t.errorCode,
-        l = T.intl.formatToPlainString(T.t["ejOT9/"], { errorCode: a });
+        l = T.intl.formatToPlainString(T.t.ejOT95, { errorCode: a });
     (0, s.h7j)((e) =>
         (0, r.jsx)(
             s.ConfirmModal,
@@ -117,7 +117,7 @@ function D(e) {
                     {
                         header: n,
                         confirmButtonColor: o.zx.Colors.BRAND,
-                        confirmText: T.intl.string(T.t.BddRzc),
+                        confirmText: T.intl.string(T.t.BddRzS),
                     },
                     e,
                 ),
@@ -153,9 +153,9 @@ function L(e) {
             R(
                 C(
                     {
-                        header: T.intl.string(T.t["7UXEFx"]),
-                        confirmText: T.intl.string(T.t.BddRzc),
-                        cancelText: T.intl.string(T.t["ETE/oK"]),
+                        header: T.intl.string(T.t["7UXEF2"]),
+                        confirmText: T.intl.string(T.t.BddRzS),
+                        cancelText: T.intl.string(T.t["ETE/oC"]),
                         onCancel: t.onClose,
                         onConfirm: () => l.Z.setDebugLogging(e),
                     },
@@ -164,7 +164,7 @@ function L(e) {
                 {
                     children: (0, r.jsx)(s.Text, {
                         variant: "text-md/normal",
-                        children: T.intl.string(T.t.IYPrRk),
+                        children: T.intl.string(T.t.IYPrRl),
                     }),
                 },
             ),
@@ -198,7 +198,7 @@ function x() {
                 setting: O.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_STREAM_INFO_OVERLAY,
                 children: (0, r.jsx)(s.rsf, {
                     label: T.intl.string(T.t["0CEP6e"]),
-                    description: T.intl.string(T.t.kBXuW1),
+                    description: T.intl.string(T.t["kBXuW+"]),
                     checked: d,
                     onChange: (e) => {
                         (0, y.Z)("stream_info_overlay_enabled", e, d), (0, c.y)({ isStreamInfoOverlayEnabled: e });
@@ -208,8 +208,8 @@ function x() {
             (0, r.jsx)(h.F, {
                 setting: O.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_AEC_DUMP,
                 children: (0, r.jsx)(s.rsf, {
-                    label: T.intl.string(T.t["r6K+TE"]),
-                    description: T.intl.string(T.t["xl9+Iy"]),
+                    label: T.intl.string(T.t["r6K+TL"]),
+                    description: T.intl.string(T.t["xl9+I6"]),
                     checked: o,
                     onChange: (e) => l.Z.setAecDump(e),
                 }),
@@ -218,7 +218,7 @@ function x() {
                 setting: O.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_CONNECTION_REPLAY,
                 children: [
                     (0, r.jsx)(s.rsf, {
-                        label: T.intl.string(T.t.U4FgFB),
+                        label: T.intl.string(T.t.U4FgFK),
                         description: T.intl.string(T.t.Lm72RU),
                         checked: p,
                         onChange: (e) => u.TC(e),
@@ -231,7 +231,7 @@ function x() {
                             children: (0, r.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
-                                text: T.intl.string(T.t.nJnOHB),
+                                text: T.intl.string(T.t.nJnOHO),
                                 onClick: () => u.z4(),
                             }),
                         }),
@@ -243,8 +243,8 @@ function x() {
                 children: (0, r.jsxs)("div", {
                     children: [
                         (0, r.jsx)(s.rsf, {
-                            label: T.intl.string(T.t["726JHB"]),
-                            description: T.intl.string(T.t["/7ak9f"]),
+                            label: T.intl.string(T.t["726JHL"]),
+                            description: T.intl.string(T.t["/7ak9Q"]),
                             checked: n,
                             onChange: L,
                         }),
@@ -253,13 +253,13 @@ function x() {
                             children: [
                                 (0, r.jsx)(s.Button, {
                                     variant: "primary",
-                                    text: T.intl.string(T.t["3UB9aW"]),
+                                    text: T.intl.string(T.t["3UB9ad"]),
                                     disabled: e,
                                     onClick: A,
                                 }),
                                 (0, r.jsx)(s.Button, {
                                     variant: "primary",
-                                    text: T.intl.string(T.t.nuPtYm),
+                                    text: T.intl.string(T.t.nuPtYi),
                                     onClick: P,
                                 }),
                             ],

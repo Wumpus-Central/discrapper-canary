@@ -1,10 +1,10 @@
-n.d(t, { Z: () => g }), n(388685), n(457542);
+n.d(t, { Z: () => b }), n(388685), n(457542);
 var a = n(951288),
     r = n(647438),
     i = n(442837),
     l = n(704215),
-    s = n(907862),
-    o = n(20471),
+    o = n(907862),
+    s = n(20471),
     c = n(243778),
     d = n(931847),
     u = n(50130),
@@ -13,14 +13,14 @@ var a = n(951288),
     h = n(314897),
     x = n(921944),
     f = n(228168),
-    b = n(388032);
-function g(e) {
+    g = n(388032);
+function b(e) {
     var t;
-    let { targetElementRef: n, onClose: g } = e,
+    let { targetElementRef: n, onClose: b } = e,
         [v, j] = r.useState(!1),
         _ = (0, i.e7)([h.default], () => h.default.getId()),
         { config: y, application: C } = (0, u.G)(),
-        { fetched: S, hasAlreadyLinked: E, canStartAuthorization: T, startAuthorization: O } = (0, o.FG)(C),
+        { fetched: S, hasAlreadyLinked: E, canStartAuthorization: T, startAuthorization: O } = (0, s.FG)(C),
         N = (0, m.ZP)(_),
         P =
             null == N || null == (t = N.widgets)
@@ -39,7 +39,7 @@ function g(e) {
                   let { visibleContent: t, markAsDismissed: r } = e;
                   if (null == t) return null;
                   let i = t === l.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_LINKED;
-                  return (0, a.jsx)(s.J2, {
+                  return (0, a.jsx)(o.J2, {
                       targetElementRef: n,
                       position: "right",
                       gradientColor: "blue",
@@ -47,12 +47,12 @@ function g(e) {
                           type: "image",
                           src: y.edit_profile_upsell_image,
                       },
-                      title: b.intl.format(b.t.TXDztL, { applicationName: C.name }),
-                      body: i ? b.intl.string(b.t["63Kso6"]) : b.intl.string(b.t.HwXoeH),
+                      title: g.intl.format(g.t.TXDztH, { applicationName: C.name }),
+                      body: i ? g.intl.string(g.t["63Kso0"]) : g.intl.string(g.t.HwXoeC),
                       actions: [
                           i
                               ? {
-                                    text: b.intl.string(b.t.VSLDl5),
+                                    text: g.intl.string(g.t.VSLDly),
                                     onClick: () => {
                                         j(!0),
                                             (0, p.openUserProfileModal)({
@@ -60,14 +60,14 @@ function g(e) {
                                                 section: f.oh.WIDGETS,
                                             })
                                                 .then(() => {
-                                                    r(x.L.TAKE_ACTION), g();
+                                                    r(x.L.TAKE_ACTION), b();
                                                 })
                                                 .finally(() => j(!1));
                                     },
                                     loading: v,
                                 }
                               : {
-                                    text: b.intl.string(b.t.DSJi39),
+                                    text: g.intl.string(g.t["DSJi3+"]),
                                     onClick: () => {
                                         O(),
                                             j(!0),
@@ -76,7 +76,7 @@ function g(e) {
                                                 section: f.oh.WIDGETS,
                                             })
                                                 .then(() => {
-                                                    r(x.L.TAKE_ACTION), g();
+                                                    r(x.L.TAKE_ACTION), b();
                                                 })
                                                 .finally(() => j(!1));
                                     },

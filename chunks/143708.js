@@ -44,17 +44,17 @@ function m(e) {
     }
     return (
         v
-            ? ((t = p.intl.string(p.t["F/OLvL"])), (m = p.intl.string(p.t.C89OLC)))
-            : ((m = p.intl.string(p.t["YVub5+"])),
+            ? ((t = p.intl.string(p.t["F/OLvL"])), (m = p.intl.string(p.t.C89OLE)))
+            : ((m = p.intl.string(p.t.YVub5y)),
               E
-                  ? (t = p.intl.string(p.t["57nBt7"]))
+                  ? (t = p.intl.string(p.t["57nBty"]))
                   : null != O && I
-                    ? ((t = p.intl.formatToPlainString(p.t["9Akp1t"], { username: O })),
+                    ? ((t = p.intl.formatToPlainString(p.t["9Akp1s"], { username: O })),
                       (n = (0, r.jsx)(o.Z.Button, {
                           onClick: T,
-                          children: p.intl.string(p.t.P8tvKC),
+                          children: p.intl.string(p.t.P8tvKG),
                       })))
-                    : (t = p.intl.string(p.t["SMJr+f"]))),
+                    : (t = p.intl.string(p.t["SMJr+a"]))),
         (0, r.jsxs)(o.Z, {
             children: [
                 (0, r.jsx)(o.Z.Header, { text: m }),
@@ -66,7 +66,7 @@ function m(e) {
                                 (0, r.jsx)(o.Z.Icon, { expired: !0 }),
                                 (0, r.jsx)(o.Z.Info, {
                                     expired: !0,
-                                    title: p.intl.string(p.t["Jhx/ub"]),
+                                    title: p.intl.string(p.t["Jhx/ud"]),
                                     children: t,
                                 }),
                             ],

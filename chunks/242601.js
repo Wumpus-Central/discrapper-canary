@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(599273),
+    o = n(258536),
     s = n(574583),
     c = n(442837),
     u = n(704215),
@@ -188,8 +188,8 @@ class em extends i.PureComponent {
                     color: f.r6K.BRAND,
                     position: "bottom",
                     shouldShow: !e && !i,
-                    text: es.intl.string(es.t.sFSrFB),
-                    "aria-label": es.intl.string(es.t.sFSrFB),
+                    text: es.intl.string(es.t.sFSrFH),
+                    "aria-label": es.intl.string(es.t.sFSrFH),
                     children: () => this.renderGuildHeaderDropdownButton(e),
                 })
               : i || e
@@ -200,7 +200,7 @@ class em extends i.PureComponent {
                             this.renderGuildHeaderDropdownButton(e),
                             (0, r.jsx)(p.J2, {
                                 targetElementRef: this.guildHeaderDropdownButtonRef,
-                                title: es.intl.string(es.t["Q3qa4+"]),
+                                title: es.intl.string(es.t.Q3qa4x),
                                 body: es.intl.string(es.t.UyHD4O),
                                 onRequestClose: this.handleCloseSubscribeTooltip,
                                 position: "bottom",
@@ -341,7 +341,7 @@ class em extends i.PureComponent {
         return (0, r.jsxs)("nav", {
             className: ec.container,
             onContextMenu: this.handleContextMenu,
-            "aria-label": es.intl.formatToPlainString(es.t.nj5gAQ, {
+            "aria-label": es.intl.formatToPlainString(es.t.nj5gAZ, {
                 guildName: null != (e = null == t ? void 0 : t.name) ? e : "",
             }),
             children: [

@@ -34,7 +34,7 @@ function O(e) {
                     .find((e) => e.author.id !== h.default.getId() && e.state === y.yb.SENT && !(0, C.Z)(e)),
         ),
         E = (0, o.e7)([m.default], () => m.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
-        S = null != (t = b.ZP.useName(E)) ? t : _.intl.string(_.t.y1Wu2d),
+        S = null != (t = b.ZP.useName(E)) ? t : _.intl.string(_.t.y1Wu2f),
         P = (0, o.e7)([d.Z], () => d.Z.getStickerById(x)),
         I = r.useCallback(async () => {
             if (null == l || "" === l)
@@ -47,10 +47,10 @@ function O(e) {
                             type: "Send wave",
                         });
                 } catch (e) {
-                    e.ok || 429 !== e.status || O(_.intl.string(_.t["Whhv4+"]));
+                    e.ok || 429 !== e.status || O(_.intl.string(_.t.Whhv4w));
                 }
         }, [n.id, n.type, l]),
-        Z = _.intl.formatToPlainString(_.t.m0zYbW, { username: S }),
+        Z = _.intl.formatToPlainString(_.t.m0zYbV, { username: S }),
         T =
             null != l && "" !== l
                 ? (0, i.jsx)(s.Text, {
@@ -66,7 +66,7 @@ function O(e) {
               children: [
                   (0, i.jsxs)(s.P3F, {
                       className: null != l && "" !== l ? v.compactButtonDisabled : v.compactButton,
-                      "aria-label": _.intl.string(_.t.pJObYG),
+                      "aria-label": _.intl.string(_.t.pJObYI),
                       onClick: I,
                       children: [
                           (0, i.jsx)(p.Z, {

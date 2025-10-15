@@ -36,29 +36,29 @@ function m(e) {
         user: t,
         widget: _,
         cta: (0, r.jsx)(p.Z.Cta, {
-            heading: g.intl.format(g.t.OIzLCw, { applicationName: n.name }),
-            content: g.intl.format(g.t.BQySrq, { applicationName: n.name }),
+            heading: g.intl.format(g.t.OIzLCy, { applicationName: n.name }),
+            content: g.intl.format(g.t.BQySru, { applicationName: n.name }),
             buttons: (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(a.u, {
-                        text: g.intl.string(g.t.WAI6xs),
+                        text: g.intl.string(g.t.WAI6xu),
                         children: (0, r.jsx)(o.Yd2, {
                             variant: "secondary",
                             size: "sm",
                             icon: o.Dio,
-                            "aria-label": g.intl.string(g.t.WAI6xs),
+                            "aria-label": g.intl.string(g.t.WAI6xu),
                             onClick: () => {
                                 m(h.L.USER_DISMISS);
                             },
                         }),
                     }),
                     (0, r.jsx)(a.u, {
-                        text: g.intl.string(g.t.lBG2s7),
+                        text: g.intl.string(g.t["lBG2s/"]),
                         children: (0, r.jsx)(o.Yd2, {
                             variant: "primary",
                             size: "sm",
                             icon: o.kmB,
-                            "aria-label": g.intl.formatToPlainString(g.t.KfGahI, { applicationName: n.name }),
+                            "aria-label": g.intl.formatToPlainString(g.t.KfGahB, { applicationName: n.name }),
                             onClick: () => {
                                 m(h.L.TAKE_ACTION), O();
                             },

@@ -1,0 +1,3 @@
+i.exports = JSON.parse(
+    '{"RPb8Zk":["Il tuo feedback ci aiuta a migliorare le funzionalità di Discord Safety."],"cDP3b4":["Feedback inviato"],"KZw6kn":["Cosa non funziona come dovrebbe?"],"eSP1F9":["Ho cambiato idea sul vedere questi contenuti"],"bC0QVX":["Le istruzioni non erano chiare"],"8JFGXc":["Ho provato a seguire i passaggi, ma non ha funzionato"],"Dl4A+U":["Non avevo i documenti giusti con me"],"ZsnNgz":["Mi preoccupa condividere informazioni personali"],"ep5SQp":["Altro"],"kkKhVJ":["Ci vuole troppo tempo"],"maxf2S":["Non ero sicuro del perché fosse necessario"],"Q5cQ46":["Descrivi il tuo problema"],"zApKaR":["Puoi dirci di più?"],"4djgO/":["Grazie per il feedback!"],"RqoA4v":["Com\'è stata la tua esperienza di verifica dell\'età?"]}',
+);

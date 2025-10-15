@@ -1,7 +1,7 @@
 n.d(t, { Z: () => U }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(599273),
+    a = n(258536),
     o = n(91192),
     s = n(442837),
     l = n(159691),
@@ -208,30 +208,30 @@ function k(e) {
             if (Q && !q)
                 return {
                     headerText: P.intl.string(P.t.gHerLS),
-                    ctaText: P.intl.string(P.t.cfY4PD),
+                    ctaText: P.intl.string(P.t.cfY4PE),
                     handleClickCta: z,
                     tileAssetType: "reward",
                 };
             if (X && !q)
                 return {
-                    headerText: P.intl.string(P.t.uH2sf3),
-                    ctaText: P.intl.string(P.t.VN1Ajo),
+                    headerText: P.intl.string(P.t.uH2sf2),
+                    ctaText: P.intl.string(P.t.VN1Ajl),
                     handleClickCta: ef,
                     tileAssetType: "reward",
                 };
             if ((0, b.Rc)(Z, K))
                 return {
-                    headerText: P.intl.string(P.t.Bz6SkJ),
-                    ctaText: P.intl.string(P.t.BXFP39),
+                    headerText: P.intl.string(P.t.Bz6SkH),
+                    ctaText: P.intl.string(P.t.BXFP30),
                     handleClickCta: ep,
                     tileAssetType: "game",
                 };
-            let e = (0, b.Rt)(G) ? eh : P.intl.string(P.t.BSXPZ2);
+            let e = (0, b.Rt)(G) ? eh : P.intl.string(P.t["BSXPZ+"]);
             return {
                 headerText:
                     (0, b.Rt)(G) && (0, b.pO)(G) && !G.config.features.includes(C.S7.CLOUD_GAMING_ACTIVITY)
                         ? e
-                        : P.intl.string(P.t.Bz6SkJ),
+                        : P.intl.string(P.t.Bz6SkH),
                 ctaText: e,
                 handleClickCta: ef,
                 tileAssetType: "game",
@@ -276,7 +276,7 @@ function k(e) {
                                             variant: "text-xs/medium",
                                             color: "text-muted",
                                             className: w.helpText,
-                                            children: P.intl.format(P.t["Lm8/mJ"], {
+                                            children: P.intl.format(P.t["Lm8/mH"], {
                                                 gamePublisher: G.config.messages.gamePublisher,
                                             }),
                                         }),
@@ -306,7 +306,7 @@ function k(e) {
                                     ),
                                     "game" === em.tileAssetType &&
                                         (0, r.jsx)("img", {
-                                            alt: P.intl.formatToPlainString(P.t.IskzPj, {
+                                            alt: P.intl.formatToPlainString(P.t.IskzPg, {
                                                 gameTitle: G.config.messages.gameTitle,
                                                 gamePublisher: G.config.messages.gamePublisher,
                                             }),

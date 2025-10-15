@@ -1,0 +1,3 @@
+o.exports = JSON.parse(
+    '{"RPb8Zk":["Tvoje zpětná vazba nám pomůže vylepšit funkce pro zabezpečení Discordu."],"cDP3b4":["Zpětná vazba odeslána"],"KZw6kn":["Co nefungovalo dobře?"],"eSP1F9":["Změnil/a jsem názor na to, že vidím tento obsah"],"bC0QVX":["Pokyny byly matoucí"],"8JFGXc":["Snažil/a jsem se projít kroky, ale nefungovalo to"],"Dl4A+U":["Neměl/a jsem u\xA0sebe správné dokumenty"],"ZsnNgz":["Mám obavy ze sdílení osobních údajů"],"ep5SQp":["Něco jiného"],"kkKhVJ":["Zabírá to příliš mnoho času"],"maxf2S":["Nevím, proč je to nezbytné"],"Q5cQ46":["Popiš svůj problém"],"zApKaR":["Chceš nám k\xA0tomu sdělit víc?"],"4djgO/":["Děkujeme za zpětnou vazbu!"],"RqoA4v":["Jaká byla tvá zkušenost s\xA0ověřením věku?"]}',
+);

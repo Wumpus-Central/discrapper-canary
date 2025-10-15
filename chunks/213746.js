@@ -89,7 +89,7 @@ function y(e) {
                         (0, r.jsx)(i.X6q, {
                             variant: "heading-lg/semibold",
                             color: "header-primary",
-                            children: x.intl.string(x.t.yUGTs7),
+                            children: x.intl.string(x.t.yUGTs8),
                         }),
                         (0, r.jsx)("div", {
                             className: v.products,
@@ -233,9 +233,9 @@ function S(e) {
                           privacyHook: (e) => s(e, l),
                       })
                     : null != a
-                      ? x.intl.format(x.t["0cPyDw"], { termsHook: (e) => s(e, a) })
+                      ? x.intl.format(x.t["0cPyDz"], { termsHook: (e) => s(e, a) })
                       : null != l
-                        ? x.intl.format(x.t.loYGCw, { privacyHook: (e) => s(e, l) })
+                        ? x.intl.format(x.t["loYGC/"], { privacyHook: (e) => s(e, l) })
                         : null,
         }),
     });

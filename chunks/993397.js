@@ -16,14 +16,14 @@ var i = n(951288),
 function b(e) {
     let { expanded: t, onClick: n, count: r, compact: l, collapsedReason: a } = e,
         u = (0, o.EQ)({ collapsedReason: a })
-            .with({ collapsedReason: f.t.VFWjc3 }, () =>
+            .with({ collapsedReason: f.t["VFWjc+"] }, () =>
                 (0, i.jsx)(s.kZF, {
                     size: "md",
                     color: "currentColor",
                     className: m.blockedIcon,
                 }),
             )
-            .with({ collapsedReason: f.t["+FcYMz"] }, () =>
+            .with({ collapsedReason: f.t["+FcYM/"] }, () =>
                 (0, i.jsx)(s.t6m, {
                     size: "md",
                     color: "currentColor",
@@ -54,7 +54,7 @@ function b(e) {
                         tag: "span",
                         onClick: n,
                         className: m.blockedAction,
-                        children: t ? f.intl.string(f.t.fgq1go) : f.intl.string(f.t.XJuakJ),
+                        children: t ? f.intl.string(f.t.fgq1gs) : f.intl.string(f.t.XJuakA),
                     }),
                 ],
             }),

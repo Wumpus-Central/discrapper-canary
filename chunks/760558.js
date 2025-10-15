@@ -68,16 +68,16 @@ let v = (e) => {
                     transitionState: v,
                     onClose: U,
                     size: "md",
-                    title: y.intl.string(y.t["9FFrra"]),
+                    title: y.intl.string(y.t["9FFrrT"]),
                     actions: [
                         {
                             variant: "secondary",
-                            text: y.intl.string(y.t["1BPTsL"]),
+                            text: y.intl.string(y.t["1BPTsK"]),
                             onClick: U,
                         },
                         {
                             variant: "primary",
-                            text: y.intl.string(y.t["/uwYdX"]),
+                            text: y.intl.string(y.t["/uwYda"]),
                             onClick: () => R("CONFIRM"),
                         },
                     ],
@@ -87,7 +87,7 @@ let v = (e) => {
                             (0, r.jsx)(c.Text, {
                                 variant: "text-md/normal",
                                 className: O.quantitySelectorDescription,
-                                children: y.intl.string(y.t.x5qw5e),
+                                children: y.intl.string(y.t.x5qw5U),
                             }),
                             (0, r.jsxs)("div", {
                                 className: O.quantitySelectorWrapper,
@@ -101,7 +101,7 @@ let v = (e) => {
                                     (0, r.jsx)(c.Text, {
                                         className: O.quantitySelectorLabel,
                                         variant: "text-md/normal",
-                                        children: y.intl.string(y.t.Vl8TCw),
+                                        children: y.intl.string(y.t["Vl8TC+"]),
                                     }),
                                 ],
                             }),
@@ -151,7 +151,7 @@ let v = (e) => {
                             }
                         }
                     },
-                    l = k ? y.intl.string(y.t["PR0n//"]) : y.intl.string(y.t["7KP/fH"]);
+                    l = k ? y.intl.string(y.t["PR0n//"]) : y.intl.string(y.t["7KP/fI"]);
                 return (0, r.jsx)(s.Modal, {
                     transitionState: v,
                     onClose: U,
@@ -160,14 +160,14 @@ let v = (e) => {
                     actions: [
                         {
                             variant: "secondary",
-                            text: y.intl.string(y.t["ETE/oK"]),
+                            text: y.intl.string(y.t["ETE/oC"]),
                             onClick: i,
                         },
                         {
                             variant: "primary",
                             text: k
-                                ? y.intl.formatToPlainString(y.t.Oh6mxc, { slotCount: t })
-                                : y.intl.formatToPlainString(y.t["ZU5x5+"], { slotCount: t }),
+                                ? y.intl.formatToPlainString(y.t.Oh6mxU, { slotCount: t })
+                                : y.intl.formatToPlainString(y.t.ZU5x5w, { slotCount: t }),
                             onClick: a,
                             loading: A,
                             disabled: A,
@@ -177,7 +177,7 @@ let v = (e) => {
                         ? (0, r.jsx)(m.Z.TransferBody, {
                               fromGuilds: j,
                               toGuild: D,
-                              blurb: y.intl.formatToPlainString(y.t.SSA2lp, {
+                              blurb: y.intl.formatToPlainString(y.t.SSA2lu, {
                                   slotCount: t,
                                   guildCount: n,
                               }),
@@ -188,8 +188,8 @@ let v = (e) => {
                           })
                         : (0, r.jsx)(m.Z.ApplyBody, {
                               guild: D,
-                              blurb: y.intl.string(y.t.yTlZV1),
-                              warning: y.intl.formatToPlainString(y.t.KPnDlp, {
+                              blurb: y.intl.string(y.t.yTlZV0),
+                              warning: y.intl.formatToPlainString(y.t.KPnDlu, {
                                   days: b.o3l,
                                   slotCount: t,
                               }),
@@ -201,7 +201,7 @@ let v = (e) => {
                 });
             },
             SUCCESS() {
-                let e = k ? y.intl.string(y.t["PR0n//"]) : y.intl.string(y.t["7KP/fH"]);
+                let e = k ? y.intl.string(y.t["PR0n//"]) : y.intl.string(y.t["7KP/fI"]);
                 return (0, r.jsx)(s.Modal, {
                     transitionState: v,
                     onClose: U,
