@@ -1,14 +1,42 @@
-a.r(t), a.d(t, { default: () => r });
-var c = a(951288);
-a(647438);
-var n = a(162190),
-    i = a(205582);
-function r(e) {
-    let { instance: t } = e,
-        a = (0, n.Z)(t.gameId, "cover");
-    return (0, c.jsx)("img", {
-        src: a,
-        alt: "",
-        className: i.gameImage,
+m.r(a), m.d(a, { default: () => n });
+var g = m(951288);
+m(647438);
+var i = m(120356),
+    r = m.n(i),
+    s = m(162190),
+    c = m(205582);
+function n(e) {
+    let { instance: a } = e,
+        m = (0, s.Z)(a.gameId, "cover");
+    return (0, g.jsxs)("div", {
+        className: c.container,
+        children: [
+            (0, g.jsxs)("div", {
+                className: r()(c.gameImage, c.gameImage1),
+                children: [
+                    (0, g.jsx)("div", { className: r()(c.imageDecoration, c.gameImageOverlay) }),
+                    (0, g.jsx)("div", { className: r()(c.imageDecoration, c.gameImageBorder) }),
+                ],
+            }),
+            (0, g.jsxs)("div", {
+                className: r()(c.gameImage, c.gameImage2),
+                children: [
+                    (0, g.jsx)("div", { className: r()(c.imageDecoration, c.gameImageOverlay) }),
+                    (0, g.jsx)("div", { className: r()(c.imageDecoration, c.gameImageBorder) }),
+                ],
+            }),
+            (0, g.jsxs)("div", {
+                className: r()(c.gameImage, c.gameImage3),
+                children: [
+                    (0, g.jsx)("img", {
+                        src: m,
+                        alt: "",
+                        className: c.image,
+                    }),
+                    (0, g.jsx)("div", { className: r()(c.imageDecoration, c.gameImageOverlay) }),
+                    (0, g.jsx)("div", { className: r()(c.imageDecoration, c.gameImageBorder) }),
+                ],
+            }),
+        ],
     });
 }
