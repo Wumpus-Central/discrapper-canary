@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(997841);
+n.d(t, { Z: () => S }), n(997841);
 var r = n(697988),
     i = n(544891),
     a = n(570140),
@@ -13,15 +13,16 @@ var r = n(697988),
     p = n(823379),
     h = n(920303),
     m = n(569471),
-    g = n(91159),
-    E = n(952537),
-    b = n(981631),
-    y = n(176505),
-    O = n(388032);
-function v(e, t) {
+    g = n(286934),
+    E = n(91159),
+    b = n(952537),
+    y = n(981631),
+    O = n(176505),
+    v = n(388032);
+function I(e, t) {
     return i.tn
         .patch({
-            url: b.ANM.CHANNEL(e.id),
+            url: y.ANM.CHANNEL(e.id),
             body: t,
             rejectWithError: !1,
         })
@@ -41,7 +42,7 @@ function v(e, t) {
             ),
         );
 }
-function I(e, t) {
+function T(e, t) {
     a.Z.dispatch({
         type: "THREAD_MEMBER_LOCAL_UPDATE",
         id: e.id,
@@ -50,16 +51,16 @@ function I(e, t) {
         isJoining: t,
     });
 }
-let T = {
+let S = {
     archiveThread(e, t) {
         let n = { archived: !0 };
-        return t && (n.locked = !0), v(e, n);
+        return t && (n.locked = !0), I(e, n);
     },
     async lockThread(e) {
         let t = e.isArchivedThread();
         return (
             t && (await this.unarchiveThread(e, !1)),
-            v(e, {
+            I(e, {
                 locked: !0,
                 archived: t,
             })
@@ -69,7 +70,7 @@ let T = {
         let t = e.isArchivedThread();
         return (
             t && (await this.unarchiveThread(e, !0)),
-            v(e, {
+            I(e, {
                 locked: !1,
                 archived: t,
             })
@@ -80,28 +81,28 @@ let T = {
             r = e.isForumPost();
         t && (n.locked = !1);
         try {
-            return await v(e, n);
+            return await I(e, n);
         } catch (e) {
             var i, a;
             throw (
-                ((null == (i = e.body) ? void 0 : i.code) === b.evJ.TOO_MANY_THREADS
+                ((null == (i = e.body) ? void 0 : i.code) === y.evJ.TOO_MANY_THREADS
                     ? o.Z.show({
-                          title: r ? O.intl.string(O.t.kwyWNT) : O.intl.string(O.t["PeIE/v"]),
-                          body: r ? O.intl.string(O.t.KGaiEB) : O.intl.string(O.t.P0wT5e),
+                          title: r ? v.intl.string(v.t.kwyWNT) : v.intl.string(v.t["PeIE/v"]),
+                          body: r ? v.intl.string(v.t.KGaiEB) : v.intl.string(v.t.P0wT5e),
                       })
-                    : (null == (a = e.body) ? void 0 : a.code) === b.evJ.TOO_MANY_ANNOUNCEMENT_THREADS
+                    : (null == (a = e.body) ? void 0 : a.code) === y.evJ.TOO_MANY_ANNOUNCEMENT_THREADS
                       ? o.Z.show({
-                            title: O.intl.string(O.t["PeIE/v"]),
-                            body: O.intl.string(O.t.jDMxz8),
+                            title: v.intl.string(v.t["PeIE/v"]),
+                            body: v.intl.string(v.t.jDMxz8),
                         })
                       : 429 === e.status
                         ? o.Z.show({
-                              title: r ? O.intl.string(O.t.kwyWNT) : O.intl.string(O.t["PeIE/v"]),
-                              body: O.intl.string(O.t["Whhv4+"]),
+                              title: r ? v.intl.string(v.t.kwyWNT) : v.intl.string(v.t["PeIE/v"]),
+                              body: v.intl.string(v.t["Whhv4+"]),
                           })
                         : o.Z.show({
-                              title: O.intl.string(O.t.j2d6Ki),
-                              body: O.intl.string(O.t.fEptJC),
+                              title: v.intl.string(v.t.j2d6Ki),
+                              body: v.intl.string(v.t.fEptJC),
                           }),
                 e)
             );
@@ -110,85 +111,85 @@ let T = {
     async unarchiveThreadIfNecessary(e) {
         var t;
         let n = f.Z.getChannel(e),
-            r = _.Z.can(b.Plq.MANAGE_THREADS, n);
+            r = _.Z.can(y.Plq.MANAGE_THREADS, n);
         null != n &&
             n.isArchivedThread() &&
             (r || (null == (t = n.threadMetadata) ? void 0 : t.locked) !== !0) &&
             (await this.unarchiveThread(n, !1));
     },
-    setInvitable: (e, t) => v(e, { invitable: t }),
+    setInvitable: (e, t) => I(e, { invitable: t }),
     async joinThread(e, t) {
-        e.isForumPost() && I(e, !0);
+        e.isForumPost() && T(e, !0);
         try {
             return await i.tn.post({
-                url: b.ANM.THREAD_MEMBER(e.id),
+                url: y.ANM.THREAD_MEMBER(e.id),
                 query: { location: t },
                 rejectWithError: !1,
             });
         } catch (t) {
             var n;
-            if ((null == (n = t.body) ? void 0 : n.code) === b.evJ.TOO_MANY_THREAD_MEMBERS) {
+            if ((null == (n = t.body) ? void 0 : n.code) === y.evJ.TOO_MANY_THREAD_MEMBERS) {
                 let t = e.isForumPost();
                 o.Z.show({
-                    title: t ? O.intl.string(O.t.EMYJFh) : O.intl.string(O.t.gtdVcn),
-                    body: t ? O.intl.string(O.t.QYyad3) : O.intl.string(O.t.abMwgo),
+                    title: t ? v.intl.string(v.t.EMYJFh) : v.intl.string(v.t.gtdVcn),
+                    body: t ? v.intl.string(v.t.QYyad3) : v.intl.string(v.t.abMwgo),
                 });
             } else
                 o.Z.show({
-                    title: O.intl.string(O.t.j2d6Ki),
-                    body: O.intl.string(O.t.fEptJC),
+                    title: v.intl.string(v.t.j2d6Ki),
+                    body: v.intl.string(v.t.fEptJC),
                 });
-            e.isForumPost() && I(e, !1);
+            e.isForumPost() && T(e, !1);
         }
     },
     async addMember(e, t, n) {
         try {
             return await i.tn.post({
-                url: b.ANM.THREAD_MEMBER(e.id, t),
+                url: y.ANM.THREAD_MEMBER(e.id, t),
                 query: { location: n },
                 rejectWithError: !1,
             });
         } catch (t) {
             var r;
-            if ((null == (r = t.body) ? void 0 : r.code) === b.evJ.TOO_MANY_THREAD_MEMBERS) {
+            if ((null == (r = t.body) ? void 0 : r.code) === y.evJ.TOO_MANY_THREAD_MEMBERS) {
                 let t = e.isForumPost();
                 o.Z.show({
-                    title: t ? O.intl.string(O.t["0yAqqK"]) : O.intl.string(O.t.YErysL),
-                    body: t ? O.intl.string(O.t.QYyad3) : O.intl.string(O.t.abMwgo),
+                    title: t ? v.intl.string(v.t["0yAqqK"]) : v.intl.string(v.t.YErysL),
+                    body: t ? v.intl.string(v.t.QYyad3) : v.intl.string(v.t.abMwgo),
                 });
             } else
                 o.Z.show({
-                    title: O.intl.string(O.t.j2d6Ki),
-                    body: O.intl.string(O.t.fEptJC),
+                    title: v.intl.string(v.t.j2d6Ki),
+                    body: v.intl.string(v.t.fEptJC),
                 });
         }
     },
     leaveThread: (e, t) => (
-        e.isForumPost() && I(e, !1),
+        e.isForumPost() && T(e, !1),
         i.tn.del({
-            url: b.ANM.THREAD_MEMBER(e.id),
+            url: y.ANM.THREAD_MEMBER(e.id),
             query: { location: t },
             rejectWithError: !1,
         })
     ),
     removeMember: (e, t, n) =>
         i.tn.del({
-            url: b.ANM.THREAD_MEMBER(e, t),
+            url: y.ANM.THREAD_MEMBER(e, t),
             query: { location: n },
             rejectWithError: !1,
         }),
     setAutoArchiveDuration: (e, t) =>
         i.tn.patch({
-            url: b.ANM.CHANNEL(e.id),
+            url: y.ANM.CHANNEL(e.id),
             body: { auto_archive_duration: t },
             rejectWithError: !1,
         }),
     pin(e) {
-        let t = e.flags | y.zZ.PINNED;
+        let t = e.flags | O.zZ.PINNED;
         this.updateFlags(e, t, e.isArchivedThread());
     },
     unpin(e) {
-        let t = e.flags & ~y.zZ.PINNED;
+        let t = e.flags & ~O.zZ.PINNED;
         this.updateFlags(e, t);
     },
     async updateFlags(e, t) {
@@ -201,7 +202,7 @@ let T = {
         n && (r.archived = !1);
         try {
             await i.tn.patch({
-                url: b.ANM.CHANNEL(e.id),
+                url: y.ANM.CHANNEL(e.id),
                 body: r,
                 rejectWithError: !0,
             });
@@ -213,8 +214,8 @@ let T = {
         }
     },
     async replacePin(e, t) {
-        let n = e.merge({ flags: e.flags & ~y.zZ.PINNED }),
-            r = t.merge({ flags: t.flags | y.zZ.PINNED });
+        let n = e.merge({ flags: e.flags & ~O.zZ.PINNED }),
+            r = t.merge({ flags: t.flags | O.zZ.PINNED });
         a.Z.dispatch({
             type: "THREAD_UPDATE",
             channel: n,
@@ -227,8 +228,8 @@ let T = {
             await this.unarchiveThreadIfNecessary(t.id);
         try {
             await i.tn.patch({
-                url: b.ANM.CHANNEL(e.id),
-                body: { flags: e.flags & ~y.zZ.PINNED },
+                url: y.ANM.CHANNEL(e.id),
+                body: { flags: e.flags & ~O.zZ.PINNED },
                 rejectWithError: !0,
             });
         } catch (n) {
@@ -244,8 +245,8 @@ let T = {
         }
         try {
             await i.tn.patch({
-                url: b.ANM.CHANNEL(t.id),
-                body: { flags: t.flags | y.zZ.PINNED },
+                url: y.ANM.CHANNEL(t.id),
+                body: { flags: t.flags | O.zZ.PINNED },
                 rejectWithError: !0,
             });
         } catch (e) {
@@ -256,7 +257,7 @@ let T = {
         }
     },
     openThreadCreationForMobile(e, t, n) {
-        (0, l.yw)(b.rMx.THREAD_CREATION_STARTED, {
+        (0, l.yw)(y.rMx.THREAD_CREATION_STARTED, {
             location: n,
             channel_id: e.id,
             guild_id: e.guild_id,
@@ -275,10 +276,10 @@ let T = {
     },
     async setNotificationSettings(e, t) {
         return (
-            (0, g.ZJ)(e, t),
+            (0, E.ZJ)(e, t),
             m.Z.hasJoined(e.id) || (await this.joinThread(e, "Change Notification Settings")),
             i.tn.patch({
-                url: b.ANM.THREAD_MEMBER_SETTINGS(e.id),
+                url: y.ANM.THREAD_MEMBER_SETTINGS(e.id),
                 body: t,
                 rejectWithError: !1,
             })
@@ -296,7 +297,7 @@ let T = {
             }),
             i.tn
                 .get({
-                    url: b.ANM.THREAD_SEARCH(n),
+                    url: y.ANM.THREAD_SEARCH(n),
                     query: {
                         archived: !0,
                         sort_by: "last_message_time",
@@ -333,7 +334,7 @@ let T = {
                                   threads: i,
                                   firstMessages: d,
                                   mostRecentMessages: f,
-                                  members: (null != c ? c : []).map((e) => (0, E.Z)(e)),
+                                  members: (null != c ? c : []).map((e) => (0, b.Z)(e)),
                                   owners: i.map((e) => e.owner).filter(p.lm),
                                   hasMore: u,
                               });
@@ -355,7 +356,7 @@ let T = {
             {
                 body: { threads: c, members: u, first_messages: d, most_recent_messages: f },
             } = await i.tn.get({
-                url: b.ANM.THREAD_SEARCH(t),
+                url: y.ANM.THREAD_SEARCH(t),
                 query: {
                     name: n,
                     tag: l,
@@ -374,5 +375,33 @@ let T = {
             }),
             c.map((e) => e.id)
         );
+    },
+    summarizeThread(e, t) {
+        if (!(!e.isThread() || g.Z.isInProgress()))
+            return (
+                a.Z.dispatch({ type: "SUMMARIZE_THREAD_START" }),
+                i.tn
+                    .post({
+                        url: y.ANM.AI_SUMMARIZE_THREAD(e.id),
+                        body: { ephemeral: null == t || t },
+                        rejectWithError: !1,
+                    })
+                    .then(() => {
+                        a.Z.dispatch({
+                            type: "SUMMARIZE_THREAD_SUCCESS",
+                            channelId: e.id,
+                        });
+                    })
+                    .catch(() => {
+                        a.Z.dispatch({
+                            type: "SUMMARIZE_THREAD_FAILURE",
+                            channelId: e.id,
+                        }),
+                            o.Z.show({
+                                title: v.intl.string(v.t.j2d6Ki),
+                                body: v.intl.string(v.t.fEptJC),
+                            });
+                    })
+            );
     },
 };

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(413496), n(433524), n(35282), n(539854), n(388685);
+n.d(t, { Z: () => M }), n(413496), n(433524), n(35282), n(539854), n(388685);
 var i = n(951288),
     r = n(647438),
     l = n(831209),
@@ -13,22 +13,24 @@ var i = n(951288),
     f = n(706140),
     m = n(243778),
     g = n(618857),
-    b = n(488131),
-    C = n(375954),
-    y = n(626135),
-    _ = n(585483),
-    v = n(403182),
-    x = n(127654),
-    O = n(752305),
-    j = n(951211),
-    E = n(981631),
-    S = n(921944),
-    P = n(489887),
-    I = n(388032),
-    Z = n(749723);
-let T = RegExp("(.*)```(\\w+)\\n(.*)```(.*)", "s");
-function N() {
-    let e = (0, a.e7)([C.Z], () => C.Z.hasCurrentUserSentMessageSinceAppStart()),
+    b = n(346479),
+    C = n(286934),
+    y = n(488131),
+    _ = n(375954),
+    v = n(626135),
+    x = n(585483),
+    O = n(403182),
+    j = n(127654),
+    E = n(752305),
+    S = n(951211),
+    P = n(981631),
+    I = n(921944),
+    Z = n(489887),
+    T = n(388032),
+    N = n(749723);
+let A = RegExp("(.*)```(\\w+)\\n(.*)```(.*)", "s");
+function w() {
+    let e = (0, a.e7)([_.Z], () => _.Z.hasCurrentUserSentMessageSinceAppStart()),
         t = [];
     e && t.push(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE);
     let [n] = (0, f.cv)(t);
@@ -36,7 +38,7 @@ function N() {
         r.useEffect(
             () => () => {
                 n === o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE &&
-                    (0, h.Q3)(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: S.L.TAKE_ACTION });
+                    (0, h.Q3)(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: I.L.TAKE_ACTION });
             },
             [n],
         ),
@@ -46,7 +48,7 @@ function N() {
                 let { visibleContent: t } = e;
                 return t === o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE
                     ? (0, i.jsx)(s.IGR, {
-                          text: I.intl.string(I.t.y2b7CA),
+                          text: T.intl.string(T.t.y2b7CA),
                           color: l.Z.BUTTON_DANGER_BACKGROUND,
                       })
                     : null;
@@ -54,31 +56,32 @@ function N() {
         })
     );
 }
-function A(e) {
+function M(e) {
     let {
             channel: t,
-            options: a,
-            onFileUpload: f,
-            onClose: m,
-            onSelect: C,
-            draftType: A,
-            editorTextContent: w,
-            setValue: M,
-            openClips: R,
+            options: f,
+            onFileUpload: m,
+            onClose: _,
+            onSelect: M,
+            draftType: R,
+            editorTextContent: L,
+            setValue: D,
+            openClips: k,
         } = e,
-        { analyticsLocations: L, newestAnalyticsLocation: D } = (0, d.ZP)(),
-        k = (0, g.Dt)({ channel: t });
-    function U() {
-        (0, b.R6)(t, void 0, "Plus Button");
+        { analyticsLocations: U, newestAnalyticsLocation: B } = (0, d.ZP)(),
+        H = (0, g.Dt)({ channel: t }),
+        V = (0, a.e7)([C.Z], () => C.Z.isInProgress());
+    function F() {
+        (0, y.R6)(t, void 0, "Plus Button");
     }
-    function B() {
-        y.default.track(E.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), M("/", (0, O.JM)("/"));
+    function G() {
+        v.default.track(P.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), D("/", (0, E.JM)("/"));
     }
-    function H() {
-        R();
+    function z() {
+        k();
     }
-    function V() {
-        (0, h.Q3)(o.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: S.L.TAKE_ACTION }),
+    function W() {
+        (0, h.Q3)(o.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: I.L.TAKE_ACTION }),
             (0, s.ZDy)(
                 async () => {
                     let { default: e } = await n.e("68784").then(n.bind(n, 611611));
@@ -128,11 +131,11 @@ function A(e) {
                         );
                     };
                 },
-                { modalKey: P.$z },
+                { modalKey: Z.$z },
             );
     }
-    function F() {
-        y.default.track(E.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
+    function K() {
+        v.default.track(P.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
             channel_type: t.type,
             channel_id: t.id,
             guild_id: t.guild_id,
@@ -146,99 +149,99 @@ function A(e) {
                           }
                         : { type: "contextless" },
                 openInPopout: !1,
-                analyticsLocation: D,
+                analyticsLocation: B,
             }),
             (0, u.w1)({ guildId: t.guild_id });
     }
-    function G() {
-        let e = w,
+    function Y() {
+        let e = L,
             n = "txt",
             i = "",
-            r = w.match(T);
+            r = L.match(A);
         null != r && ((i = r[1]), (n = r[2]), (e = r[3]), (i += r[4])),
-            (0, x.d)([(0, v.dp)(new Blob([e], { type: "text/plain" }), "message.".concat(n), "text/plain")], t, A),
-            _.S.dispatchToLastSubscribed(E.CkL.CLEAR_TEXT),
-            "" !== i && _.S.dispatchToLastSubscribed(E.CkL.INSERT_TEXT, { plainText: i });
+            (0, j.d)([(0, O.dp)(new Blob([e], { type: "text/plain" }), "message.".concat(n), "text/plain")], t, R),
+            x.S.dispatchToLastSubscribed(P.CkL.CLEAR_TEXT),
+            "" !== i && x.S.dispatchToLastSubscribed(P.CkL.INSERT_TEXT, { plainText: i });
     }
     return (
         r.useEffect(() => {
-            y.default.track(E.rMx.OPEN_POPOUT, {
+            v.default.track(P.rMx.OPEN_POPOUT, {
                 type: "Send Attachment",
                 channel_id: t.id,
                 guild_id: t.guild_id,
             });
         }, [t.guild_id, t.id]),
         (0, i.jsx)(s.v2r, {
-            onSelect: C,
+            onSelect: M,
             navId: "channel-attach",
-            onClose: m,
-            "aria-label": I.intl.string(I.t.Xm41aW),
-            className: Z.menu,
-            children: a.map(function (e) {
+            onClose: _,
+            "aria-label": T.intl.string(T.t.Xm41aW),
+            className: N.menu,
+            children: f.map(function (e) {
                 var n;
                 let r = (0, i.jsxs)("div", {
-                    className: Z.optionLabel,
+                    className: N.optionLabel,
                     children: [
                         (0, i.jsx)(e.icon, {
-                            className: Z.optionIcon,
+                            className: N.optionIcon,
                             color: "currentColor",
                         }),
                         (0, i.jsx)("div", {
-                            className: Z.optionName,
+                            className: N.optionName,
                             children: e.display,
                         }),
                         null != e.badgeVal &&
                             e.badgeVal > 0 &&
                             (0, i.jsx)(s.mAB, {
-                                className: Z.badge,
+                                className: N.badge,
                                 color: null != (n = e.badgeColor) ? n : l.Z.STATUS_DANGER,
                                 count: e.badgeVal,
                             }),
                     ],
                 });
                 switch (e.type) {
-                    case j.r.UPLOAD_A_FILE:
+                    case S.r.UPLOAD_A_FILE:
                         return (0, i.jsx)(
                             s.sNh,
                             {
                                 id: "upload-file",
                                 label: r,
-                                action: f,
+                                action: m,
                             },
                             "upload-file",
                         );
-                    case j.r.UPLOAD_TEXT_AS_FILE:
-                        if ("" === w) return null;
+                    case S.r.UPLOAD_TEXT_AS_FILE:
+                        if ("" === L) return null;
                         return (0, i.jsx)(
                             s.sNh,
                             {
                                 id: "upload-text-as-file",
                                 label: r,
-                                action: G,
+                                action: Y,
                             },
                             "upload-text-as-file",
                         );
-                    case j.r.CLIPS:
+                    case S.r.CLIPS:
                         return (0, i.jsx)(
                             s.sNh,
                             {
                                 id: "clips",
                                 label: r,
-                                action: H,
+                                action: z,
                             },
                             "clips",
                         );
-                    case j.r.POLL:
+                    case S.r.POLL:
                         return (0, i.jsx)(
                             s.sNh,
                             {
                                 id: "poll",
                                 label: r,
-                                action: V,
+                                action: W,
                             },
                             "poll",
                         );
-                    case j.r.INVITE_TO_PLAY_GAME:
+                    case S.r.INVITE_TO_PLAY_GAME:
                         return (0, i.jsx)(
                             s.sNh,
                             {
@@ -250,16 +253,16 @@ function A(e) {
                                         (n = e.activity),
                                         void c.Z.sendActivityInvite({
                                             channelId: t.id,
-                                            type: E.mFx.JOIN,
+                                            type: P.mFx.JOIN,
                                             activity: n,
-                                            location: L[L.length - 1],
+                                            location: U[U.length - 1],
                                         })
                                     );
                                 },
                             },
                             "play",
                         );
-                    case j.r.INVITE_TO_LISTEN:
+                    case S.r.INVITE_TO_LISTEN:
                         return (0, i.jsx)(
                             s.sNh,
                             {
@@ -271,16 +274,16 @@ function A(e) {
                                         (n = e.activity),
                                         void c.Z.sendActivityInvite({
                                             channelId: t.id,
-                                            type: E.mFx.LISTEN,
+                                            type: P.mFx.LISTEN,
                                             activity: n,
-                                            location: L[L.length - 1],
+                                            location: U[U.length - 1],
                                         })
                                     );
                                 },
                             },
                             "listen",
                         );
-                    case j.r.INVITE_TO_WATCH:
+                    case S.r.INVITE_TO_WATCH:
                         return (0, i.jsx)(
                             s.sNh,
                             {
@@ -292,56 +295,94 @@ function A(e) {
                                         (n = e.activity),
                                         void c.Z.sendActivityInvite({
                                             channelId: t.id,
-                                            type: E.mFx.WATCH,
+                                            type: P.mFx.WATCH,
                                             activity: n,
-                                            location: L[L.length - 1],
+                                            location: U[U.length - 1],
                                         })
                                     );
                                 },
                             },
                             "watch",
                         );
-                    case j.r.CREATE_THREAD:
+                    case S.r.CREATE_THREAD:
                         return (0, i.jsx)(
                             s.sNh,
                             {
                                 id: "THREAD",
                                 label: r,
-                                action: U,
+                                action: F,
                             },
                             "THREAD",
                         );
-                    case j.r.SLASH_COMMAND:
+                    case S.r.SLASH_COMMAND:
                         return (0, i.jsx)(
                             s.sNh,
                             {
                                 id: "SLASH_COMMAND",
                                 label: r,
-                                action: B,
+                                action: G,
                             },
                             "SLASH_COMMAND",
                         );
-                    case j.r.ACTIVITY:
+                    case S.r.ACTIVITY:
                         return (0, i.jsx)(
                             s.sNh,
                             {
                                 id: "activity",
                                 label: r,
-                                action: F,
-                                hint: (0, i.jsx)(N, {}),
+                                action: K,
+                                hint: (0, i.jsx)(w, {}),
                             },
                             "activity",
                         );
-                    case j.r.SCHEDULED_MESSAGE:
+                    case S.r.SCHEDULED_MESSAGE:
                         return (0, i.jsx)(
                             s.sNh,
                             {
                                 id: "scheduled_message",
                                 label: r,
                                 action: () => (0, g.$f)({ channel: t }),
-                                children: k,
+                                children: H,
                             },
                             "scheduled_message",
+                        );
+                    case S.r.SUMMARIZE_THREAD:
+                        return (0, i.jsx)(
+                            s.sNh,
+                            {
+                                id: "summarize_thread",
+                                label: r,
+                                action: () => b.Z.summarizeThread(t),
+                                icon: V ? (0, i.jsx)(s.$jN, { type: s.RAz.PULSING_ELLIPSIS }) : null,
+                                disabled: V,
+                                children: V
+                                    ? null
+                                    : (0, i.jsxs)(i.Fragment, {
+                                          children: [
+                                              (0, i.jsx)(
+                                                  s.sNh,
+                                                  {
+                                                      id: "summarize_thread_for_everyone",
+                                                      label: T.intl.string(T.t.eCzSdX),
+                                                      iconLeft: s.BFJ,
+                                                      action: () => b.Z.summarizeThread(t, !1),
+                                                  },
+                                                  "summarize_thread_for_everyone",
+                                              ),
+                                              (0, i.jsx)(
+                                                  s.sNh,
+                                                  {
+                                                      id: "summarize_thread_for_me",
+                                                      label: T.intl.string(T.t["HOe+Hh"]),
+                                                      iconLeft: s.tBG,
+                                                      action: () => b.Z.summarizeThread(t),
+                                                  },
+                                                  "summarize_thread_for_me",
+                                              ),
+                                          ],
+                                      }),
+                            },
+                            "summarize_thread",
                         );
                     default:
                         return null;

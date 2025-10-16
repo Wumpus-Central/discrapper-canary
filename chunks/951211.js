@@ -24,6 +24,7 @@ var i,
         (i.POLL = "POLL"),
         (i.ACTIVITY = "ACTIVITY"),
         (i.SCHEDULED_MESSAGE = "SCHEDULED_MESSAGE"),
+        (i.SUMMARIZE_THREAD = "SUMMARIZE_THREAD"),
         i);
 function h(e) {
     let {
@@ -39,16 +40,17 @@ function h(e) {
             canLaunchActivities: C,
             appContext: y,
             canSendScheduledMessages: _,
+            canSummarizeThreads: v,
         } = e,
-        v = [];
+        x = [];
     return (
         t &&
-            (v.push({
+            (x.push({
                 type: "UPLOAD_A_FILE",
                 icon: r.xD0,
                 display: d.intl.string(d.t["d3+iYm"]),
             }),
-            v.push({
+            x.push({
                 type: "UPLOAD_TEXT_AS_FILE",
                 icon: r.xD0,
                 display: d.intl.string(d.t["G9s+EB"]),
@@ -56,7 +58,7 @@ function h(e) {
         h &&
             t &&
             y !== u.IlC.POPOUT &&
-            v.push({
+            x.push({
                 type: "CLIPS",
                 icon: r.AlX,
                 display: d.intl.string(d.t.o034cn),
@@ -64,26 +66,26 @@ function h(e) {
                 badgeColor: o.Z.BG_BRAND,
             }),
         n &&
-            v.push({
+            x.push({
                 type: "CREATE_THREAD",
                 icon: r.YPH,
                 display: d.intl.string(d.t.rBIGBA),
             }),
         b &&
-            v.push({
+            x.push({
                 type: "POLL",
                 icon: r.QDj,
                 display: d.intl.string(d.t.Flr51t),
             }),
         i &&
             p &&
-            v.push({
+            x.push({
                 type: "SLASH_COMMAND",
                 icon: r.jje,
                 display: d.intl.string(d.t.Bbvp6O),
             }),
         C &&
-            v.push({
+            x.push({
                 type: "ACTIVITY",
                 icon: r.nG3,
                 display: d.intl.string(d.t["16Lfra"]),
@@ -92,7 +94,7 @@ function h(e) {
             !(0, l.Z)(e, u.xjy.EMBEDDED) &&
                 (e.type === u.IIU.PLAYING &&
                     (0, l.Z)(e, u.xjy.JOIN) &&
-                    v.push({
+                    x.push({
                         type: "INVITE_TO_GAME",
                         icon: r.xoD,
                         display: d.intl.formatToPlainString(d.t["KHLo+P"], {
@@ -103,7 +105,7 @@ function h(e) {
                     }),
                 e.type === u.IIU.LISTENING &&
                     (0, l.Z)(e, u.xjy.SYNC) &&
-                    v.push({
+                    x.push({
                         type: "INVITE_TO_LISTEN",
                         icon: r.iOO,
                         display: d.intl.formatToPlainString(d.t.I479p6, {
@@ -114,7 +116,7 @@ function h(e) {
                     }),
                 e.type === u.IIU.WATCHING &&
                     (0, l.Z)(e, u.xjy.SYNC) &&
-                    v.push({
+                    x.push({
                         type: "INVITE_TO_WATCH",
                         icon: r.tEF,
                         display: d.intl.formatToPlainString(d.t["EvCP/v"], {
@@ -125,11 +127,18 @@ function h(e) {
                     }));
         }),
         _ &&
-            v.push({
+            x.push({
                 type: "SCHEDULED_MESSAGE",
                 icon: r.T39,
                 display: d.intl.string(d.t["3+ii4O"]),
             }),
-        v
+        f.isThread() &&
+            v &&
+            x.push({
+                type: "SUMMARIZE_THREAD",
+                icon: r.$2U,
+                display: d.intl.string(d.t.EXfguL),
+            }),
+        x
     );
 }
