@@ -363,22 +363,24 @@ class U extends i.PureComponent {
                 );
             }),
             L(this, "viewBackupCodes", (e) => {
-                (0, c.h7j)((t) =>
-                    (0, r.jsx)(
-                        _.Z,
-                        j(x({}, t), {
-                            handleSubmit: (e) => u.Z.confirmViewBackupCodes(e, !1).then(() => t.onClose()),
-                            maxLength: 8,
-                            title: P.intl.string(P.t.mGppp6),
-                            label: P.intl.string(P.t.TjGb4e),
-                            forceNoPlaceholder: !0,
-                            retryPrompt: P.intl.string(P.t.PZgmxs),
-                            retrySuccessMessage: P.intl.string(P.t.j4qu8v),
-                            onRetry: () => u.Z.sendMFABackupCodesVerificationKeyEmail(e),
-                            actionText: P.intl.string(P.t.piW6YW),
-                            helpMessage: P.intl.string(P.t["37S9yc"]),
-                        }),
-                    ),
+                (0, c.h7j)(
+                    (t) =>
+                        (0, r.jsx)(
+                            _.Z,
+                            j(x({}, t), {
+                                handleSubmit: (e) => u.Z.confirmViewBackupCodes(e, !1).then(() => t.onClose()),
+                                maxLength: 8,
+                                title: P.intl.string(P.t.mGppp6),
+                                label: P.intl.string(P.t.TjGb4e),
+                                forceNoPlaceholder: !0,
+                                retryPrompt: P.intl.string(P.t.PZgmxs),
+                                retrySuccessMessage: P.intl.string(P.t.j4qu8v),
+                                onRetry: () => u.Z.sendMFABackupCodesVerificationKeyEmail(e),
+                                actionText: P.intl.string(P.t.piW6YW),
+                                helpMessage: P.intl.string(P.t["37S9yc"]),
+                            }),
+                        ),
+                    { stackingBehavior: "stack" },
                 );
             }),
             L(this, "getDownloadFileContents", () => {
