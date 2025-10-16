@@ -33,4 +33,5 @@ e.exports = {
     boostingDesktopAppBlurb: "boostingDesktopAppBlurb_e335a7",
     duplicateSubscriptionsBanner: "duplicateSubscriptionsBanner_e335a7",
     duplicateSubscriptionsBannerText: "duplicateSubscriptionsBannerText_e335a7",
+    helpNoticeDismissIcon: "helpNoticeDismissIcon_e335a7",
 };
