@@ -296,6 +296,7 @@ class X extends H {
                 }),
                 (0, i.jsxs)("div", {
                     className: x.autocompleteContentWrapper,
+                    "aria-label": L.intl.formatToPlainString(L.t["9v/R+v"], { name: _ }),
                     children: [
                         (0, i.jsx)(P.z5, {
                             children: (0, i.jsx)(f.Text, {
