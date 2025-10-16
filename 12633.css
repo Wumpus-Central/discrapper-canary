@@ -23883,15 +23883,11 @@ svg.radioIcon_c1e9c4 {
 }
 
 .full-motion .coverArtContainer_e0f8ae {
-    transition: box-shadow .2s ease, transform .3s ease
+    transition: box-shadow .2s ease, transform .1s ease-out
 }
 
 .gameGrid_e0f8ae:hover .gameClickable_e0f8ae:hover .coverArtContainer_e0f8ae {
     box-shadow: 0 0 25px 0 rgba(145, 101, 255, .25)
-}
-
-.full-motion .gameGrid_e0f8ae:hover .gameClickable_e0f8ae:hover .coverArtContainer_e0f8ae {
-    transform: rotateY(-30deg)
 }
 
 .coverArtContainer_e0f8ae:after {
