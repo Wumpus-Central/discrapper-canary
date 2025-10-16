@@ -1,7 +1,8 @@
 n.d(t, {
-    ZP: () => h,
+    QN: () => h,
+    ZP: () => m,
     c7: () => p,
-    mw: () => m,
+    mw: () => g,
 }),
     n(388685);
 var r = n(647438),
@@ -78,12 +79,16 @@ function p() {
         d.current = u;
     }, [u]);
     let f = (0, r.useRef)(s.Z.fetchError);
+    (0, r.useEffect)(() => {
+        f.current = i;
+    }, [i]);
+    let p = (0, r.useRef)(s.Z.isFetching);
     return (
         (0, r.useEffect)(() => {
-            f.current = i;
-        }, [i]),
+            p.current = t;
+        }, [t]),
         (0, r.useEffect)(() => {
-            (!0 === e && d.current && null == f.current) || (0, o.qg)({ variantsReturnStyle: _ });
+            p.current || (!0 === e && d.current && null == f.current) || (0, o.qg)({ variantsReturnStyle: _ });
         }, [e]),
         {
             isClaiming: n,
@@ -95,7 +100,8 @@ function p() {
         }
     );
 }
-function h(e, t) {
+let h = () => p(!0);
+function m(e, t) {
     let n = null == e ? void 0 : e.paymentGateway,
         {
             isFetching: r,
@@ -133,4 +139,4 @@ function h(e, t) {
         hasPreviouslyFetched: _,
     };
 }
-let m = (e) => h(f(u({}, null != e ? e : {}), { stalePurchasesOK: !0 }));
+let g = (e) => m(f(u({}, null != e ? e : {}), { stalePurchasesOK: !0 }));

@@ -26,8 +26,8 @@ var l = i(951288),
     I = i(567400),
     P = i(210887),
     A = i(960919),
-    E = i(275388),
-    S = i(626135),
+    S = i(275388),
+    E = i(626135),
     O = i(74538),
     b = i(335131),
     T = i(381585),
@@ -194,20 +194,19 @@ let ec = (e) => {
                 }
                 return n;
             })(e, ["tab", "product", "onMount", "shopBlockType"]);
-        let o = (0, c.e7)([j.Z], () => j.Z.purchases),
-            d = (0, L.o)(i, o),
-            u = (0, J.W)(i, d),
-            p = n.useRef(null),
-            { previewingVariantIndex: g, handleEntering: h, handleLeaving: m } = (0, et.f)(i),
-            v = (0, ee.o)(i, o, g);
+        let o = (0, L.o)(i),
+            d = (0, J.W)(i, o),
+            u = n.useRef(null),
+            { previewingVariantIndex: c, handleEntering: p, handleLeaving: g } = (0, et.f)(i),
+            h = (0, ee.o)(i, c);
         return (
             n.useEffect(() => {
-                null == r || r(p, i);
+                null == r || r(u, i);
             }, [r, i]),
             (0, l.jsx)(em, {
                 tab: t,
-                selectedProduct: u,
-                cardRef: p,
+                selectedProduct: d,
+                cardRef: u,
                 children: (0, l.jsx)(
                     eC,
                     (function (e) {
@@ -238,13 +237,13 @@ let ec = (e) => {
                         {
                             tab: t,
                             product: i,
-                            selectedVariantIndex: d,
-                            selectedProduct: u,
-                            cardRef: p,
-                            previewingVariantIndex: g,
-                            handleEntering: h,
-                            handleLeaving: m,
-                            firstCollectibleItem: v,
+                            selectedVariantIndex: o,
+                            selectedProduct: d,
+                            cardRef: u,
+                            previewingVariantIndex: c,
+                            handleEntering: p,
+                            handleLeaving: g,
+                            firstCollectibleItem: h,
                             shopBlockType: a,
                         },
                         s,
@@ -383,7 +382,7 @@ function ex(e) {
                             {
                                 if (g) {
                                     let e = async () => {
-                                        S.default.track(es.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                        E.default.track(es.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                             collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
                                             sku_id: t.skuId,
                                             page_type: i,
@@ -426,7 +425,7 @@ function ex(e) {
                                             }),
                                             onClick: (e) => {
                                                 e.stopPropagation(),
-                                                    S.default.track(es.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                                    E.default.track(es.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                         collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
                                                         sku_id: t.skuId,
                                                         page_type: i,
@@ -449,7 +448,7 @@ function ex(e) {
                                                         tile_position: String(null == I ? void 0 : I.tilePosition),
                                                         cta_name: "claim with orbs button",
                                                     }),
-                                                    (0, E.qA)({
+                                                    (0, S.qA)({
                                                         skuId: (0, Y.S)({
                                                             product: t,
                                                             selectedVariantIndex: r,
@@ -491,7 +490,7 @@ function ex(e) {
                                     variant: "primary",
                                     onClick: (e) => {
                                         e.stopPropagation(),
-                                            S.default.track(es.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                            E.default.track(es.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                 collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
                                                 sku_id: t.skuId,
                                                 page_type: i,
@@ -549,7 +548,7 @@ let eC = n.memo(function (e) {
                 firstCollectibleItem: f,
                 selectedVariantIndex: y,
                 handleEntering: A,
-                handleLeaving: E,
+                handleLeaving: S,
                 previewingVariantIndex: b,
                 className: j,
                 shopBlockType: L,
@@ -611,7 +610,7 @@ let eC = n.memo(function (e) {
                 (e) => (i) => {
                     let l = (0, el.oQ)({ product: t });
                     (eC.current = i.currentTarget),
-                        S.default.track(es.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                        E.default.track(es.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                             collectibles_shop_session_id: null == Z ? void 0 : Z.sessionId,
                             sku_id: t.skuId,
                             page_type: u,
@@ -749,7 +748,7 @@ let eC = n.memo(function (e) {
                                           previewingVariantIndexProps: {
                                               previewingVariantIndex: b,
                                               handleEntering: A,
-                                              handleLeaving: E,
+                                              handleLeaving: S,
                                           },
                                           selectedVariantIndex: y,
                                           setIsHoveringOnSwitch: em,
@@ -762,7 +761,7 @@ let eC = n.memo(function (e) {
                                           previewingVariantIndexProps: {
                                               previewingVariantIndex: b,
                                               handleEntering: A,
-                                              handleLeaving: E,
+                                              handleLeaving: S,
                                           },
                                           selectedVariantIndex: y,
                                           setIsHoveringOnSwitch: em,
