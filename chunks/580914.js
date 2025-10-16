@@ -133,7 +133,7 @@ let W = (0, v.IC)(90),
                         },
                         [i, o, e],
                     ),
-                    totalCards: e ? t : 4,
+                    totalCards: e ? t : void 0,
                 };
             })(G !== H.AW.ORBS),
             e_ = (0, y.a)()(ef),
@@ -287,7 +287,7 @@ let W = (0, v.IC)(90),
                                   children:
                                       n || ep
                                           ? (0, r.jsx)(r.Fragment, {
-                                                children: [...Array(eh)].map((e, t) =>
+                                                children: [...Array(null != eh ? eh : 4)].map((e, t) =>
                                                     ex ? (0, r.jsx)(B.Z, {}, t) : (0, r.jsx)(j.K, {}, t),
                                                 ),
                                             })
