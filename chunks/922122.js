@@ -1,231 +1,147 @@
-n.d(t, { Z: () => h }), n(388685);
-var r = n(951288),
-    a = n(647438),
-    i = n(120356),
-    l = n.n(i),
-    s = n(21260),
-    o = n(481060),
-    c = n(393903),
-    d = n(79707),
-    u = n(388032),
-    p = n(16617);
-function m(e) {
-    let { onTabSelect: t, tabs: n, selectedTab: i } = e,
-        s = a.useMemo(
-            () =>
-                null !=
-                n.find((e) => {
-                    let { id: t } = e;
-                    return t === i;
-                }),
-            [i, n],
-        ),
-        [c, m] = a.useState(!1),
-        h = (function (e) {
-            let { selected: t, isHovered: n } = e;
-            return n ? "text-primary" : t ? "text-brand" : "text-default";
-        })({
-            selected: s,
-            isHovered: c,
-        }),
-        g = (function (e) {
-            let { selected: t, isHovered: n } = e;
-            return n ? o.TVs.colors.TEXT_PRIMARY : t ? o.TVs.colors.TEXT_BRAND : o.TVs.colors.INTERACTIVE_NORMAL;
-        })({
-            selected: s,
-            isHovered: c,
-        }),
-        _ = a.useCallback(() => m(!0), []),
-        f = a.useCallback(() => m(!1), []),
-        b = a.useRef(null);
-    return (0, r.jsx)(o.yRy, {
-        targetElementRef: b,
-        renderPopout: (e) => {
-            let { closePopout: a } = e;
-            return (0, r.jsx)(d.Z, {
-                selectedTab: i,
-                onClose: a,
-                tabs: n,
-                onTabSelect: t,
-            });
-        },
-        position: "bottom",
-        align: "left",
-        children: (e, t) => {
-            var n, a;
-            let { isShown: i } = t;
-            return (0, r.jsx)(
-                o.njP.Item,
-                ((n = (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                }),
-                            )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
-                                              value: r,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0,
-                                          })
-                                        : (e[t] = r);
-                            });
-                    }
-                    return e;
-                })({}, e)),
-                (a = a =
-                    {
-                        id: "more",
-                        look: "brand",
-                        selectedItem: s ? "more" : void 0,
-                        className: l()(p.tab, { [p.selected]: !1 }),
-                        clickableRef: (e) => {
-                            null != e && null != e.ref && (b.current = e.ref);
-                        },
-                        "aria-label": u.intl.string(u.t.UKOtz8),
-                        children: (0, r.jsxs)("div", {
-                            className: p.more,
-                            onMouseEnter: _,
-                            onMouseLeave: f,
-                            children: [
-                                (0, r.jsx)(o.Text, {
-                                    variant: "text-sm/semibold",
-                                    color: h,
-                                    children: u.intl.string(u.t.UKOtz8),
-                                }),
-                                i
-                                    ? (0, r.jsx)(o.u04, {
-                                          size: "xs",
-                                          color: g,
-                                      })
-                                    : (0, r.jsx)(o.CJ0, {
-                                          size: "xs",
-                                          color: g,
-                                      }),
-                            ],
-                        }),
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
-                          }
-                          return n;
-                      })(Object(a)).forEach(function (e) {
-                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
-                      }),
-                n),
-            );
-        },
-    });
-}
-function h(e) {
-    let { className: t, selectedTab: n, tabs: i, onTabSelect: d, onAvailableWidthChange: u } = e,
-        [h, g] = a.useState(0),
-        _ = a.useRef(h),
-        {
-            lastVisibleIndex: f,
-            onItemLayout: b,
-            overflowItemsRef: x,
-            itemWidthsRef: v,
-        } = (0, s.zP)({
-            items: i,
-            itemGapPx: 20,
-            maxLines: 1,
-            containerWidth: h,
-        }),
-        C = a.useMemo(() => i.slice(0, f + 1), [f, i]),
-        j = a.useMemo(() => i.slice(f + 1), [f, i]),
-        y = a.useRef(null),
-        I = a.useCallback(
-            (e) => {
-                let t = e.contentRect.width;
-                if (null == t || _.current === t) return;
-                g(t), (_.current = t);
-                let n = v.current.reduce((e, t, n) => e + t + 20 * (0 !== n));
-                null == u || u(t - n);
-            },
-            [v, u],
-        );
-    (0, c.s)(y, I);
-    let S = 0 !== h;
-    return (0, r.jsxs)("div", {
-        className: l()(p.container, t),
-        ref: y,
-        children: [
-            (0, r.jsxs)("div", {
-                className: p.measurements,
-                children: [
-                    i.map((e, t) =>
-                        (0, r.jsx)(
-                            s.AJ,
-                            {
-                                index: t,
-                                onItemLayout: b,
-                                children: (0, r.jsx)(o.njP.Item, {
-                                    id: e.id,
-                                    "aria-label": e.label,
-                                    className: p.tab,
-                                    children: (0, r.jsx)(o.Text, {
-                                        variant: "text-md/medium",
-                                        children: e.label,
-                                    }),
-                                }),
-                            },
-                            e.id,
-                        ),
-                    ),
-                    (0, r.jsx)("div", {
-                        ref: x,
-                        children: (0, r.jsx)(m, {
-                            tabs: j,
-                            onTabSelect: d,
-                            selectedTab: n,
-                        }),
-                    }),
-                ],
+n.d(t, { g: () => u }), n(980754), n(388685), n(415506);
+var r = n(230367),
+    i = n(320215),
+    a = n(240773),
+    o = n(495852);
+class s extends o.C {
+    create(e) {
+        let t = { copy: "" };
+        return (
+            globalThis.Object.defineProperty(t, a.C, {
+                enumerable: !1,
+                value: this,
             }),
-            S &&
-                (0, r.jsxs)(o.njP, {
-                    type: "top",
-                    look: "brand",
-                    selectedItem: n,
-                    onItemSelect: d,
-                    className: p.tabs,
-                    children: [
-                        C.map((e) =>
-                            (0, r.jsx)(
-                                o.njP.Item,
-                                {
-                                    id: e.id,
-                                    look: "brand",
-                                    "aria-label": e.label,
-                                    className: p.tab,
-                                    children: e.label,
-                                },
-                                e.id,
-                            ),
-                        ),
-                        0 !== j.length
-                            ? (0, r.jsx)(m, {
-                                  tabs: j,
-                                  onTabSelect: d,
-                                  selectedTab: n,
-                              })
-                            : null,
-                    ],
-                }),
-        ],
-    });
+            void 0 !== e && (0, i.l)(this, t, e),
+            t
+        );
+    }
+    internalBinaryRead(e, t, n, i) {
+        let a = null != i ? i : this.create(),
+            o = e.pos + t;
+        for (; e.pos < o; ) {
+            let [t, i] = e.tag();
+            if (1 === t) a.copy = e.string();
+            else {
+                let o = n.readUnknownField;
+                if ("throw" === o)
+                    throw new globalThis.Error(
+                        "Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName),
+                    );
+                let s = e.skip(i);
+                !1 !== o && (!0 === o ? r.z.onRead : o)(this.typeName, a, t, i, s);
+            }
+        }
+        return a;
+    }
+    internalBinaryWrite(e, t, n) {
+        "" !== e.copy && t.tag(1, r.TD.LengthDelimited).string(e.copy);
+        let i = n.writeUnknownFields;
+        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+    }
+    constructor() {
+        super("discord_protos.premium_marketing.v1.CTAButton", [
+            {
+                no: 1,
+                name: "copy",
+                kind: "scalar",
+                T: 9,
+            },
+        ]);
+    }
 }
+let l = new s();
+class c extends o.C {
+    create(e) {
+        let t = {
+            assetUrl: "",
+            header: "",
+            body: "",
+            helpArticleId: "",
+        };
+        return (
+            globalThis.Object.defineProperty(t, a.C, {
+                enumerable: !1,
+                value: this,
+            }),
+            void 0 !== e && (0, i.l)(this, t, e),
+            t
+        );
+    }
+    internalBinaryRead(e, t, n, i) {
+        let a = null != i ? i : this.create(),
+            o = e.pos + t;
+        for (; e.pos < o; ) {
+            let [t, i] = e.tag();
+            switch (t) {
+                case 1:
+                    a.assetUrl = e.string();
+                    break;
+                case 2:
+                    a.header = e.string();
+                    break;
+                case 3:
+                    a.body = e.string();
+                    break;
+                case 4:
+                    a.helpArticleId = e.string();
+                    break;
+                case 5:
+                    a.button = l.internalBinaryRead(e, e.uint32(), n, a.button);
+                    break;
+                default:
+                    let o = n.readUnknownField;
+                    if ("throw" === o)
+                        throw new globalThis.Error(
+                            "Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName),
+                        );
+                    let s = e.skip(i);
+                    !1 !== o && (!0 === o ? r.z.onRead : o)(this.typeName, a, t, i, s);
+            }
+        }
+        return a;
+    }
+    internalBinaryWrite(e, t, n) {
+        "" !== e.assetUrl && t.tag(1, r.TD.LengthDelimited).string(e.assetUrl),
+            "" !== e.header && t.tag(2, r.TD.LengthDelimited).string(e.header),
+            "" !== e.body && t.tag(3, r.TD.LengthDelimited).string(e.body),
+            "" !== e.helpArticleId && t.tag(4, r.TD.LengthDelimited).string(e.helpArticleId),
+            e.button && l.internalBinaryWrite(e.button, t.tag(5, r.TD.LengthDelimited).fork(), n).join();
+        let i = n.writeUnknownFields;
+        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+    }
+    constructor() {
+        super("discord_protos.premium_marketing.v1.MobileBottomSheet", [
+            {
+                no: 1,
+                name: "asset_url",
+                kind: "scalar",
+                T: 9,
+            },
+            {
+                no: 2,
+                name: "header",
+                kind: "scalar",
+                T: 9,
+            },
+            {
+                no: 3,
+                name: "body",
+                kind: "scalar",
+                T: 9,
+            },
+            {
+                no: 4,
+                name: "help_article_id",
+                kind: "scalar",
+                T: 9,
+            },
+            {
+                no: 5,
+                name: "button",
+                kind: "message",
+                T: () => l,
+            },
+        ]);
+    }
+}
+let u = new c();
