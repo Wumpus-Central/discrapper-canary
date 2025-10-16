@@ -77670,6 +77670,15 @@ div.nagbar_d74ef8 {
     justify-content: flex-end
 }
 
+.titleContainer__6fa7b {
+    flex: 1;
+    flex-shrink: 0
+}
+
+.grow__6fa7b {
+    flex: 1
+}
+
 .tabs__3f3a2 {
     margin-top: var(--space-12)
 }

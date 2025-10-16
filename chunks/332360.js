@@ -1,104 +1,108 @@
-n.d(t, { k: () => m }), n(388685);
+n.d(t, { k: () => E }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(481060),
-    o = n(985002),
-    s = n(841409),
-    l = n(780985),
-    c = n(631885),
-    u = n(87792),
-    d = n(292352),
-    f = n(345909),
-    _ = n(388032),
-    p = n(84989);
-let h = () => {
-        let e = (0, c.ZM)(),
-            t = (0, l.cz)(),
-            { selectTeenUser: n } = (0, o.G)({}),
-            s = (e) => {
+    a = n(120356),
+    o = n.n(a),
+    s = n(481060),
+    l = n(985002),
+    c = n(841409),
+    u = n(780985),
+    d = n(631885),
+    f = n(87792),
+    _ = n(292352),
+    p = n(345909),
+    h = n(388032),
+    m = n(84989);
+let g = () => {
+        let e = (0, d.ZM)(),
+            t = (0, u.cz)(),
+            { selectTeenUser: n } = (0, l.G)({}),
+            a = (e) => {
                 n(e);
             },
-            d = e.map((e) => ({
+            c = e.map((e) => ({
                 label: e,
                 value: e,
             })),
-            f = i.useCallback(
+            _ = i.useCallback(
                 (e) =>
-                    (0, r.jsx)(u.I, {
+                    (0, r.jsx)(f.I, {
                         userId: e.value,
-                        avatarSize: a.EFr.SIZE_24,
+                        avatarSize: s.EFr.SIZE_24,
                         hideUserTag: !0,
                     }),
                 [],
             );
         return 0 === e.length
             ? null
-            : 1 === e.length
-              ? (0, r.jsx)(u.I, {
-                    userId: e[0],
-                    avatarSize: a.EFr.SIZE_24,
-                    hideUserTag: !0,
-                })
-              : (0, r.jsx)(a.PhF, {
-                    renderOptionLabel: f,
-                    renderOptionValue: (e) => {
-                        let [t] = e;
-                        return f(t);
-                    },
-                    serialize: (e) => e,
-                    select: s,
-                    isSelected: (e) => e === (null == t ? void 0 : t.id),
-                    options: d,
-                });
+            : (0, r.jsx)("div", {
+                  className: o()(m.teenSelector, { [m.grow]: e.length > 1 }),
+                  children:
+                      e.length > 1
+                          ? (0, r.jsx)(s.PhF, {
+                                renderOptionLabel: _,
+                                renderOptionValue: (e) => {
+                                    let [t] = e;
+                                    return _(t);
+                                },
+                                serialize: (e) => e,
+                                select: a,
+                                isSelected: (e) => e === (null == t ? void 0 : t.id),
+                                options: c,
+                            })
+                          : (0, r.jsx)(f.I, {
+                                userId: e[0],
+                                avatarSize: s.EFr.SIZE_24,
+                                hideUserTag: !0,
+                            }),
+              });
     },
-    m = () => {
-        let { selectedTab: e, handleTabChange: t } = (0, s.Z)(),
+    E = () => {
+        let { selectedTab: e, handleTabChange: t } = (0, c.Z)(),
             n = i.useCallback(() => {
-                t(d.dG.ACTIVITY);
+                t(_.dG.ACTIVITY);
             }, [t]);
-        return (0, r.jsxs)(a.Kqy, {
+        return (0, r.jsxs)(s.Kqy, {
             gap: 32,
             children: [
-                (0, r.jsxs)(a.P3F, {
-                    className: p.backButton,
+                (0, r.jsxs)(s.P3F, {
+                    className: m.backButton,
                     onClick: n,
-                    "aria-label": _.intl.string(_.t.ybUZqq),
+                    "aria-label": h.intl.string(h.t.ybUZqq),
                     children: [
-                        (0, r.jsx)(a.j9r, {
+                        (0, r.jsx)(s.j9r, {
                             size: "sm",
-                            color: a.TVs.colors.INTERACTIVE_NORMAL,
+                            color: s.TVs.colors.INTERACTIVE_NORMAL,
                         }),
-                        (0, r.jsx)(a.Text, {
+                        (0, r.jsx)(s.Text, {
                             variant: "eyebrow",
                             color: "header-secondary",
-                            children: _.intl.string(_.t["13/7kZ"]),
+                            children: h.intl.string(h.t["13/7kZ"]),
                         }),
                     ],
                 }),
-                (0, r.jsxs)(a.Kqy, {
+                (0, r.jsxs)(s.Kqy, {
                     direction: "horizontal",
                     align: "center",
                     justify: "space-between",
                     children: [
-                        (0, r.jsxs)(a.Kqy, {
+                        (0, r.jsxs)(s.Kqy, {
                             gap: 4,
+                            className: m.titleContainer,
                             children: [
-                                (0, r.jsx)(a.Text, {
+                                (0, r.jsx)(s.Text, {
                                     variant: "text-sm/medium",
                                     color: "text-secondary",
-                                    children: _.intl.string(f.default.RZqaJi),
+                                    children: h.intl.string(p.default.RZqaJi),
                                 }),
-                                (0, r.jsx)(a.Heading, {
+                                (0, r.jsx)(s.Heading, {
                                     variant: "heading-xl/semibold",
                                     color: "header-primary",
-                                    children: _.intl.string(e === d.dG.CONTENT_AND_SOCIAL ? _.t["+o1pDQ"] : _.t.OAuOHB),
+                                    children: h.intl.string(e === _.dG.CONTENT_AND_SOCIAL ? h.t["+o1pDQ"] : h.t.OAuOHB),
                                 }),
                             ],
                         }),
-                        (0, r.jsx)("div", {
-                            className: p.teenSelector,
-                            children: (0, r.jsx)(h, {}),
-                        }),
+                        (0, r.jsx)(g, {}),
                     ],
                 }),
             ],
