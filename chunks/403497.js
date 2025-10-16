@@ -15,10 +15,10 @@ var r = n(951288),
     m = n(51596),
     b = n(592125),
     _ = n(430824),
-    O = n(944486),
-    E = n(914010),
-    v = n(768581),
-    y = n(981631),
+    E = n(944486),
+    O = n(914010),
+    y = n(768581),
+    v = n(981631),
     I = n(408491),
     C = n(388032),
     S = n(345909),
@@ -27,11 +27,11 @@ function N(e) {
     let t,
         { withFastTravel: n, focusSectionProps: l } = e,
         N = (0, o.TH)(),
-        j = (0, s.e7)([E.Z], () => E.Z.getGuildId()),
-        P = (0, s.e7)([O.Z], () => O.Z.getChannelId()),
-        x = (0, s.e7)([b.Z], () => b.Z.getChannel(P), [P]),
-        A = null != j ? j : null == x ? void 0 : x.guild_id,
-        Z = (0, s.e7)([_.Z], () => _.Z.getGuild(A), [A]),
+        P = (0, s.e7)([O.Z], () => O.Z.getGuildId()),
+        j = (0, s.e7)([E.Z], () => E.Z.getChannelId()),
+        A = (0, s.e7)([b.Z], () => b.Z.getChannel(j), [j]),
+        x = null != P ? P : null == A ? void 0 : A.guild_id,
+        Z = (0, s.e7)([_.Z], () => _.Z.getGuild(x), [x]),
         w = (0, p.Z)(),
         L = (0, g.D)(),
         { guildTitleIconSize: R, guildIconSize: D } = (0, d.T)({ location: "GuildTitle" }),
@@ -44,7 +44,7 @@ function N(e) {
         }),
         U =
             null != k
-                ? v.ZP.getApplicationIconURL({
+                ? y.ZP.getApplicationIconURL({
                       id: k.id,
                       icon: k.icon,
                       bot: k.bot,
@@ -72,20 +72,24 @@ function N(e) {
                         className: T.guildIcon,
                     })),
               (t = Z.name))
-            : null != x && (x.isDM() || x.isGroupDM())
+            : null != A && (A.isDM() || A.isGroupDM())
               ? ((t = C.intl.string(C.t.YUU0RE)), (G = (0, r.jsx)(c.gw7, { size: R })))
-              : N.pathname.startsWith(y.Z5c.GLOBAL_DISCOVERY)
+              : N.pathname.startsWith(v.Z5c.GLOBAL_DISCOVERY)
                 ? ((t = C.intl.string(C.t["4nEZLi"])), (G = (0, r.jsx)(c.Jmo, { size: R })))
-                : N.pathname.startsWith(y.Z5c.NITRO_HOME)
+                : N.pathname.startsWith(v.Z5c.NITRO_HOME)
                   ? ((t = C.intl.string(C.t.Ipxkoq)), (G = (0, r.jsx)(c.SrA, { size: R })))
-                  : N.pathname.startsWith(y.Z5c.COLLECTIBLES_SHOP)
+                  : N.pathname.startsWith(v.Z5c.COLLECTIBLES_SHOP)
                     ? ((t = C.intl.string(C.t.pWG4zc)), (G = (0, r.jsx)(c.EOn, { size: R })))
-                    : N.pathname.startsWith(y.Z5c.FRIENDS)
-                      ? ((t = C.intl.string(C.t.TdEu5e)), (G = (0, r.jsx)(c.iFz, { size: R })))
-                      : N.pathname.startsWith(y.Z5c.FAMILY_CENTER)
-                        ? ((t = C.intl.string(S.default.RZqaJi)), (G = (0, r.jsx)(c.BFJ, { size: R })))
-                        : N.pathname.startsWith(y.Z5c.QUEST_HOME_V2) &&
-                          ((t = C.intl.string(C.t.JALI2N)), (G = (0, r.jsx)(c.qDn, { size: R })));
+                    : N.pathname.startsWith(v.Z5c.ME_ACTIVITY)
+                      ? ((t = C.intl.string(C.t.IC5Anp)), (G = (0, r.jsx)(c.g8d, { size: R })))
+                      : N.pathname.startsWith(v.Z5c.ME_DMS)
+                        ? ((t = C.intl.string(C.t.YUU0RE)), (G = (0, r.jsx)(c.gw7, { size: R })))
+                        : N.pathname.startsWith(v.Z5c.FRIENDS)
+                          ? ((t = C.intl.string(C.t.TdEu5e)), (G = (0, r.jsx)(c.iFz, { size: R })))
+                          : N.pathname.startsWith(v.Z5c.FAMILY_CENTER)
+                            ? ((t = C.intl.string(S.default.RZqaJi)), (G = (0, r.jsx)(c.BFJ, { size: R })))
+                            : N.pathname.startsWith(v.Z5c.QUEST_HOME_V2) &&
+                              ((t = C.intl.string(C.t.JALI2N)), (G = (0, r.jsx)(c.qDn, { size: R })));
     let B = i.useCallback((e) => {
             (0, m.ZN)("fast-travel");
         }, []),
