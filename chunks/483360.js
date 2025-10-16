@@ -710,10 +710,19 @@ let e7 = (0, $.oH)((e, t, n) => {
                 if (!e.isMultiUserDM() || !i(e)) continue;
                 let t = (0, _.F6)(e, X.default, K.Z).toLocaleLowerCase(),
                     n = (0, eo._I)((0, eo.Fv)(t)),
-                    o = eq(n, l, r);
-                if ("" !== e.name) {
-                    let t = (0, _.on)(e, X.default, K.Z).toLocaleLowerCase();
-                    o = Math.max(o, eq((0, eo._I)((0, eo.Fv)(t)), l, r));
+                    o = eq(n, l, r),
+                    s = [];
+                for (let t of e.recipients) {
+                    let e = X.default.getUser(t);
+                    if (null == e) continue;
+                    let n = e.username,
+                        r = es.ZP.getGlobalName(e),
+                        i = K.Z.getNickname(t);
+                    null != n && s.push(n), null != r && s.push(r), null != i && s.push(i);
+                }
+                for (let e of s) {
+                    let t = Math.min(eI, eq((0, eo._I)((0, eo.Fv)(e.toLocaleLowerCase())), l, r));
+                    t > o && (o = t);
                 }
                 o > 0 &&
                     u.push({
