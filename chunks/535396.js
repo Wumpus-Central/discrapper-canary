@@ -1,118 +1,126 @@
 n.d(t, {
-    A3: () => v,
-    Cp: () => _,
-    Du: () => I,
-    Fq: () => f,
-    H2: () => m,
-    Hk: () => y,
-    NL: () => T,
-    NO: () => u,
-    Q1: () => h,
-    Rx: () => O,
-    T1: () => p,
-    Tg: () => g,
-    Us: () => c,
-    ad: () => d,
-    am: () => A,
-    d5: () => b,
-    os: () => S,
-    uc: () => E,
+    A3: () => T,
+    Cp: () => p,
+    Du: () => S,
+    Fq: () => _,
+    H2: () => g,
+    Hk: () => O,
+    NL: () => A,
+    NO: () => d,
+    Q1: () => m,
+    Rx: () => I,
+    T1: () => h,
+    Tg: () => E,
+    Us: () => u,
+    ad: () => f,
+    am: () => N,
+    cG: () => v,
+    d5: () => y,
+    os: () => C,
+    uc: () => b,
 }),
     n(388685);
 var r = n(494497),
     i = n(704215),
     a = n(267642),
-    o = n(474936),
-    s = n(981631),
-    l = n(388032),
-    c = (function (e) {
+    o = n(755458),
+    s = n(474936),
+    l = n(981631),
+    c = n(388032),
+    u = (function (e) {
         return (e.PERK = "perk"), (e.LEVEL = "level"), e;
     })({});
-let u = "1340102344645283891",
-    d = new Set([r.h_, r.NJ, r.XW]),
-    f = "525479941211684874",
-    _ = {
-        [s.Eu4.TIER_1]: r.h_,
-        [s.Eu4.TIER_2]: r.NJ,
-        [s.Eu4.TIER_3]: r.XW,
-        [s.Eu4.NONE]: void 0,
-    },
+let d = "1340102344645283891",
+    f = new Set([r.h_, r.NJ, r.XW]),
+    _ = "525479941211684874",
     p = {
-        [r.h_]: s.Eu4.TIER_1,
-        [r.NJ]: s.Eu4.TIER_2,
-        [r.XW]: s.Eu4.TIER_3,
+        [l.Eu4.TIER_1]: r.h_,
+        [l.Eu4.TIER_2]: r.NJ,
+        [l.Eu4.TIER_3]: r.XW,
+        [l.Eu4.NONE]: void 0,
     },
     h = {
-        [s.Eu4.TIER_1]: i.C.GUILD_POWERUP_LEVEL_1_COACHMARK,
-        [s.Eu4.TIER_2]: i.C.GUILD_POWERUP_LEVEL_2_COACHMARK,
-        [s.Eu4.TIER_3]: i.C.GUILD_POWERUP_LEVEL_3_COACHMARK,
-        [s.Eu4.NONE]: void 0,
+        [r.h_]: l.Eu4.TIER_1,
+        [r.NJ]: l.Eu4.TIER_2,
+        [r.XW]: l.Eu4.TIER_3,
     },
-    m = "guild_powerup_modal",
-    g = [[r.IN], [r.If], [r.A$], [r.MB, r.Vk]],
-    E = new Set([r.IN, r.If, r.A$, r.MB, r.Vk]),
-    b = () => ({
-        [s.oNc.VIDEO_BITRATE_ENHANCED]: {
+    m = {
+        [l.Eu4.TIER_1]: i.C.GUILD_POWERUP_LEVEL_1_COACHMARK,
+        [l.Eu4.TIER_2]: i.C.GUILD_POWERUP_LEVEL_2_COACHMARK,
+        [l.Eu4.TIER_3]: i.C.GUILD_POWERUP_LEVEL_3_COACHMARK,
+        [l.Eu4.NONE]: void 0,
+    },
+    g = "guild_powerup_modal",
+    E = [[r.IN], [r.If], [r.A$], [r.MB, r.Vk]],
+    b = new Set([r.IN, r.If, r.A$, r.MB, r.Vk]),
+    y = () => ({
+        [l.oNc.VIDEO_BITRATE_ENHANCED]: {
             perkIcon: a.Ro.STREAM,
-            description: l.intl.string(l.t.y4ft4O),
+            description: c.intl.string(c.t.y4ft4O),
         },
-        [s.oNc.AUDIO_BITRATE_128_KBPS]: {
+        [l.oNc.AUDIO_BITRATE_128_KBPS]: {
             perkIcon: a.Ro.AUDIO,
-            description: l.intl.formatToPlainString(l.t.zoT1ZG, { bitrate: o.HO[s.Eu4.TIER_1].limits.bitrate / 1000 }),
+            description: c.intl.formatToPlainString(c.t.zoT1ZG, { bitrate: s.HO[l.Eu4.TIER_1].limits.bitrate / 1000 }),
         },
-        [s.oNc.INVITE_SPLASH]: {
+        [l.oNc.INVITE_SPLASH]: {
             perkIcon: a.Ro.CUSTOMIZATION,
-            description: l.intl.string(l.t.Qwlpoq),
+            description: c.intl.string(c.t.Qwlpoq),
         },
-        [s.oNc.ANIMATED_ICON]: {
+        [l.oNc.ANIMATED_ICON]: {
             perkIcon: a.Ro.ANIMATED,
-            description: l.intl.string(l.t.PbAyub),
+            description: c.intl.string(c.t.PbAyub),
         },
-        [s.oNc.AUDIO_BITRATE_256_KBPS]: {
+        [l.oNc.AUDIO_BITRATE_256_KBPS]: {
             perkIcon: a.Ro.AUDIO,
-            description: l.intl.formatToPlainString(l.t.zoT1ZG, { bitrate: o.HO[s.Eu4.TIER_2].limits.bitrate / 1000 }),
+            description: c.intl.formatToPlainString(c.t.zoT1ZG, { bitrate: s.HO[l.Eu4.TIER_2].limits.bitrate / 1000 }),
         },
-        [s.oNc.ROLE_ICONS]: {
+        [l.oNc.ROLE_ICONS]: {
             perkIcon: a.Ro.CUSTOM_ROLE_ICON,
-            description: l.intl.string(l.t["6PV6QU"]),
+            description: c.intl.string(c.t["6PV6QU"]),
         },
-        [s.oNc.MAX_FILE_SIZE_50_MB]: {
+        [l.oNc.MAX_FILE_SIZE_50_MB]: {
             perkIcon: a.Ro.UPLOAD,
-            description: l.intl.formatToPlainString(l.t["aFRl5+"], { uploadSizeLimit: l.intl.string(l.t.M6qV8v) }),
+            description: c.intl.formatToPlainString(c.t["aFRl5+"], { uploadSizeLimit: c.intl.string(c.t.M6qV8v) }),
         },
-        [s.oNc.BANNER]: {
+        [l.oNc.BANNER]: {
             perkIcon: a.Ro.CUSTOMIZATION,
-            description: l.intl.string(l.t["1a5rjo"]),
+            description: c.intl.string(c.t["1a5rjo"]),
         },
-        [s.oNc.ANIMATED_BANNER]: {
+        [l.oNc.ANIMATED_BANNER]: {
             perkIcon: a.Ro.ANIMATED,
-            description: l.intl.string(l.t["1+Vmh4"]),
+            description: c.intl.string(c.t["1+Vmh4"]),
         },
-        [s.oNc.AUDIO_BITRATE_384_KBPS]: {
+        [l.oNc.AUDIO_BITRATE_384_KBPS]: {
             perkIcon: a.Ro.AUDIO,
-            description: l.intl.formatToPlainString(l.t.zoT1ZG, { bitrate: o.HO[s.Eu4.TIER_3].limits.bitrate / 1000 }),
+            description: c.intl.formatToPlainString(c.t.zoT1ZG, { bitrate: s.HO[l.Eu4.TIER_3].limits.bitrate / 1000 }),
         },
-        [s.oNc.VANITY_URL]: {
+        [l.oNc.VANITY_URL]: {
             perkIcon: a.Ro.VANITY,
-            description: l.intl.string(l.t["5XZKy8"]),
+            description: c.intl.string(c.t["5XZKy8"]),
         },
-        [s.oNc.MAX_FILE_SIZE_100_MB]: {
+        [l.oNc.MAX_FILE_SIZE_100_MB]: {
             perkIcon: a.Ro.UPLOAD,
-            description: l.intl.formatToPlainString(l.t["aFRl5+"], { uploadSizeLimit: l.intl.string(l.t.yMOW8P) }),
+            description: c.intl.formatToPlainString(c.t["aFRl5+"], { uploadSizeLimit: c.intl.string(c.t.yMOW8P) }),
         },
     }),
-    y = {
-        [s.oNc.VANITY_URL]: {
+    O = {
+        [l.oNc.VANITY_URL]: {
             boostPrice: 5,
-            includedInLevel: s.Eu4.TIER_3,
+            includedInLevel: l.Eu4.TIER_3,
         },
-        [s.oNc.GUILD_TAGS]: { boostPrice: 3 },
-        [s.oNc.ENHANCED_ROLE_COLORS]: { boostPrice: 3 },
-        [s.oNc.GUILD_TAGS_BADGE_PACK_PETS]: { boostPrice: 3 },
-        [s.oNc.GUILD_TAGS_BADGE_PACK_FLEX]: { boostPrice: 5 },
+        [l.oNc.GUILD_TAGS]: { boostPrice: 3 },
+        [l.oNc.ENHANCED_ROLE_COLORS]: { boostPrice: 3 },
+        [l.oNc.GUILD_TAGS_BADGE_PACK_PETS]: { boostPrice: 3 },
+        [l.oNc.GUILD_TAGS_BADGE_PACK_FLEX]: { boostPrice: 5 },
     },
-    O = { [r.A$]: s.Eu4.TIER_3 };
-var v = (function (e) {
+    v = {
+        [l.oNc.GAME_SERVERS]: {
+            boostPrice: 3,
+            isEnabled: (e) => (0, o.v$)(e, "GuildPowerupsConstants"),
+        },
+    },
+    I = { [r.A$]: l.Eu4.TIER_3 };
+var T = (function (e) {
         return (
             (e.INACTIVE = "inactive"),
             (e.POWERUP_ACTIVATED = "powerup_activated"),
@@ -121,7 +129,7 @@ var v = (function (e) {
             e
         );
     })({}),
-    I = (function (e) {
+    S = (function (e) {
         return (
             (e[(e.VANITY_URL = 1)] = "VANITY_URL"),
             (e[(e.GUILD_TAG_BADGE_PACKS_WAVE_ONE = 2)] = "GUILD_TAG_BADGE_PACKS_WAVE_ONE"),
@@ -129,10 +137,10 @@ var v = (function (e) {
             e
         );
     })({});
-let T = new Set([r.MB, r.Vk]),
-    S = {
+let A = new Set([r.MB, r.Vk]),
+    C = {
         1: new Set([r.A$]),
-        2: T,
+        2: A,
         3: new Set(),
     },
-    A = "powerupId";
+    N = "powerupId";

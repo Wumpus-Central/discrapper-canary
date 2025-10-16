@@ -78,19 +78,20 @@ function E(e) {
     h[t] = f(u({}, y(t)), { appliedBoosts: b(t) });
 }
 function b(e) {
-    var t, n;
-    let r = o.Z.getGuild(e),
-        i =
-            (null == r ? void 0 : r.features.has(l.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0
+    var t, n, r, i;
+    let a = o.Z.getGuild(e),
+        c =
+            (null == a ? void 0 : a.features.has(l.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0
                 ? 0
-                : l.oCV[null != (t = null == r ? void 0 : r.premiumTier) ? t : l.Eu4.NONE];
-    for (let [e, t] of Object.entries(s.Hk)) {
-        let a = e;
-        (null == r || null == (n = r.premiumFeatures) ? void 0 : n.features.includes(a)) &&
-            (null == t.includedInLevel || r.premiumTier < t.includedInLevel) &&
-            (i += t.boostPrice);
+                : l.oCV[null != (t = null == a ? void 0 : a.premiumTier) ? t : l.Eu4.NONE];
+    for (let [t, o] of Object.entries(s.Hk)) {
+        let s = t;
+        (null == a || null == (n = a.premiumFeatures) ? void 0 : n.features.includes(s)) &&
+            (null == (i = null == (r = o.isEnabled) ? void 0 : r.call(o, e)) || i) &&
+            (null == o.includedInLevel || a.premiumTier < o.includedInLevel) &&
+            (c += o.boostPrice);
     }
-    return i;
+    return c;
 }
 function y(e) {
     if (null == h[e]) {

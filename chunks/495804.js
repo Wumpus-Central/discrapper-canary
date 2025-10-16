@@ -5,11 +5,15 @@ var r = n(647438),
 function o(e) {
     return (0, r.useMemo)(() => {
         if (null == e) return 0;
-        let t = (null == e ? void 0 : e.features.has(l.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0 ? 0 : l.oCV[l.Eu4.TIER_3];
+        let t = (null == e ? void 0 : e.features.has(l.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0 ? 0 : l.oCV[l.Eu4.TIER_3],
+            n = Object.values(i.Hk),
+            r = Object.values(i.cG);
         return (
-            Object.keys(i.Hk).forEach((e) => {
-                let n = i.Hk[e];
-                null != n && null == n.includedInLevel && (t += n.boostPrice);
+            n.concat(r).forEach((n) => {
+                var r, i;
+                null == n.includedInLevel &&
+                    (null == (i = null == (r = n.isEnabled) ? void 0 : r.call(n, e.id)) || i) &&
+                    (t += n.boostPrice);
             }),
             t
         );
