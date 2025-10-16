@@ -752,38 +752,38 @@ let { Themes: r } = n(15202).V,
             BACKGROUND_TILE_GRADIENT_PINK_END: {
                 category: "background",
                 [r.DARK]: {
-                    raw: "ILLO_PINK_7",
+                    raw: "ILLO_PINK_70",
                     opacity: 0.3,
                 },
                 [r.LIGHT]: {
-                    raw: "ILLO_PINK_3",
+                    raw: "ILLO_PINK_30",
                     opacity: 0.3,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "ILLO_PINK_7",
+                    raw: "ILLO_PINK_70",
                     opacity: 0.3,
                 },
                 [r.DARKER]: {
-                    raw: "ILLO_PINK_7",
+                    raw: "ILLO_PINK_70",
                     opacity: 0.3,
                 },
             },
             BACKGROUND_TILE_GRADIENT_PINK_START: {
                 category: "background",
                 [r.DARK]: {
-                    raw: "ILLO_PINK_5",
+                    raw: "ILLO_PINK_50",
                     opacity: 0.3,
                 },
                 [r.LIGHT]: {
-                    raw: "ILLO_PINK_1",
+                    raw: "ILLO_PINK_10",
                     opacity: 0.3,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "ILLO_PINK_5",
+                    raw: "ILLO_PINK_50",
                     opacity: 0.3,
                 },
                 [r.DARKER]: {
-                    raw: "ILLO_PINK_5",
+                    raw: "ILLO_PINK_50",
                     opacity: 0.3,
                 },
             },
@@ -6205,76 +6205,76 @@ let { Themes: r } = n(15202).V,
             EXPRESSIVE_GRADIENT_BLUE_END: {
                 category: "generic",
                 [r.DARK]: {
-                    raw: "ILLO_BLUE_6",
+                    raw: "ILLO_BLUE_60",
                     opacity: 0.45,
                 },
                 [r.LIGHT]: {
-                    raw: "ILLO_BLUE_3",
+                    raw: "ILLO_BLUE_30",
                     opacity: 0.8,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "ILLO_BLUE_6",
+                    raw: "ILLO_BLUE_60",
                     opacity: 0.25,
                 },
                 [r.DARKER]: {
-                    raw: "ILLO_BLUE_6",
+                    raw: "ILLO_BLUE_60",
                     opacity: 0.3,
                 },
             },
             EXPRESSIVE_GRADIENT_BLUE_START: {
                 category: "generic",
                 [r.DARK]: {
-                    raw: "ILLO_BLUE_4",
+                    raw: "ILLO_BLUE_40",
                     opacity: 0.45,
                 },
                 [r.LIGHT]: {
-                    raw: "ILLO_BLUE_1",
+                    raw: "ILLO_BLUE_10",
                     opacity: 0.8,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "ILLO_BLUE_4",
+                    raw: "ILLO_BLUE_40",
                     opacity: 0.25,
                 },
                 [r.DARKER]: {
-                    raw: "ILLO_BLUE_4",
+                    raw: "ILLO_BLUE_40",
                     opacity: 0.3,
                 },
             },
             EXPRESSIVE_GRADIENT_GREEN_END: {
                 category: "generic",
                 [r.DARK]: {
-                    raw: "ILLO_GREEN_7",
+                    raw: "ILLO_GREEN_70",
                     opacity: 0.45,
                 },
                 [r.LIGHT]: {
-                    raw: "ILLO_GREEN_3",
+                    raw: "ILLO_GREEN_30",
                     opacity: 0.8,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "ILLO_GREEN_7",
+                    raw: "ILLO_GREEN_70",
                     opacity: 0.25,
                 },
                 [r.DARKER]: {
-                    raw: "ILLO_GREEN_7",
+                    raw: "ILLO_GREEN_70",
                     opacity: 0.3,
                 },
             },
             EXPRESSIVE_GRADIENT_GREEN_START: {
                 category: "generic",
                 [r.DARK]: {
-                    raw: "ILLO_GREEN_5",
+                    raw: "ILLO_GREEN_50",
                     opacity: 0.45,
                 },
                 [r.LIGHT]: {
-                    raw: "ILLO_GREEN_1",
+                    raw: "ILLO_GREEN_10",
                     opacity: 0.8,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "ILLO_GREEN_5",
+                    raw: "ILLO_GREEN_50",
                     opacity: 0.25,
                 },
                 [r.DARKER]: {
-                    raw: "ILLO_GREEN_5",
+                    raw: "ILLO_GREEN_50",
                     opacity: 0.3,
                 },
             },
@@ -6285,7 +6285,7 @@ let { Themes: r } = n(15202).V,
                     opacity: 0.5,
                 },
                 [r.LIGHT]: {
-                    raw: "ILLO_BLUE_4",
+                    raw: "ILLO_BLUE_40",
                     opacity: 0.9,
                 },
                 [r.MIDNIGHT]: {
@@ -6300,19 +6300,19 @@ let { Themes: r } = n(15202).V,
             EXPRESSIVE_GRADIENT_NITRO_GREEN_START: {
                 category: "generic",
                 [r.DARK]: {
-                    raw: "ILLO_GREEN_5",
+                    raw: "ILLO_GREEN_50",
                     opacity: 0.5,
                 },
                 [r.LIGHT]: {
-                    raw: "ILLO_GREEN_1",
+                    raw: "ILLO_GREEN_10",
                     opacity: 0.9,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "ILLO_GREEN_5",
+                    raw: "ILLO_GREEN_50",
                     opacity: 0.3,
                 },
                 [r.DARKER]: {
-                    raw: "ILLO_GREEN_5",
+                    raw: "ILLO_GREEN_50",
                     opacity: 0.4,
                 },
             },
@@ -6323,7 +6323,7 @@ let { Themes: r } = n(15202).V,
                     opacity: 0.5,
                 },
                 [r.LIGHT]: {
-                    raw: "ILLO_BLUE_4",
+                    raw: "ILLO_BLUE_40",
                     opacity: 0.9,
                 },
                 [r.MIDNIGHT]: {
@@ -6338,95 +6338,95 @@ let { Themes: r } = n(15202).V,
             EXPRESSIVE_GRADIENT_NITRO_PINK_START: {
                 category: "generic",
                 [r.DARK]: {
-                    raw: "ILLO_PINK_6",
+                    raw: "ILLO_PINK_60",
                     opacity: 0.5,
                 },
                 [r.LIGHT]: {
-                    raw: "ILLO_PINK_3",
+                    raw: "ILLO_PINK_30",
                     opacity: 0.9,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "ILLO_PINK_6",
+                    raw: "ILLO_PINK_60",
                     opacity: 0.3,
                 },
                 [r.DARKER]: {
-                    raw: "ILLO_PINK_6",
+                    raw: "ILLO_PINK_60",
                     opacity: 0.4,
                 },
             },
             EXPRESSIVE_GRADIENT_PINK_END: {
                 category: "generic",
                 [r.DARK]: {
-                    raw: "ILLO_PINK_7",
+                    raw: "ILLO_PINK_70",
                     opacity: 0.45,
                 },
                 [r.LIGHT]: {
-                    raw: "ILLO_PINK_3",
+                    raw: "ILLO_PINK_30",
                     opacity: 0.8,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "ILLO_PINK_7",
+                    raw: "ILLO_PINK_70",
                     opacity: 0.25,
                 },
                 [r.DARKER]: {
-                    raw: "ILLO_PINK_7",
+                    raw: "ILLO_PINK_70",
                     opacity: 0.3,
                 },
             },
             EXPRESSIVE_GRADIENT_PINK_START: {
                 category: "generic",
                 [r.DARK]: {
-                    raw: "ILLO_PINK_5",
+                    raw: "ILLO_PINK_50",
                     opacity: 0.45,
                 },
                 [r.LIGHT]: {
-                    raw: "ILLO_PINK_1",
+                    raw: "ILLO_PINK_10",
                     opacity: 0.8,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "ILLO_PINK_5",
+                    raw: "ILLO_PINK_50",
                     opacity: 0.25,
                 },
                 [r.DARKER]: {
-                    raw: "ILLO_PINK_5",
+                    raw: "ILLO_PINK_50",
                     opacity: 0.3,
                 },
             },
             EXPRESSIVE_GRADIENT_PURPLE_END: {
                 category: "generic",
                 [r.DARK]: {
-                    raw: "ILLO_PURPLE_6",
+                    raw: "ILLO_PURPLE_60",
                     opacity: 0.45,
                 },
                 [r.LIGHT]: {
-                    raw: "ILLO_PURPLE_3",
+                    raw: "ILLO_PURPLE_30",
                     opacity: 0.8,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "ILLO_PURPLE_6",
+                    raw: "ILLO_PURPLE_60",
                     opacity: 0.25,
                 },
                 [r.DARKER]: {
-                    raw: "ILLO_PURPLE_6",
+                    raw: "ILLO_PURPLE_60",
                     opacity: 0.3,
                 },
             },
             EXPRESSIVE_GRADIENT_PURPLE_START: {
                 category: "generic",
                 [r.DARK]: {
-                    raw: "ILLO_PURPLE_4",
+                    raw: "ILLO_PURPLE_40",
                     opacity: 0.45,
                 },
                 [r.LIGHT]: {
-                    raw: "ILLO_PURPLE_1",
+                    raw: "ILLO_PURPLE_10",
                     opacity: 0.8,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "ILLO_PURPLE_4",
+                    raw: "ILLO_PURPLE_40",
                     opacity: 0.25,
                 },
                 [r.DARKER]: {
-                    raw: "ILLO_PURPLE_4",
+                    raw: "ILLO_PURPLE_40",
                     opacity: 0.3,
                 },
             },
