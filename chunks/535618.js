@@ -1,9 +1,9 @@
-e.d(n, { default: () => _ }), e(388685);
+e.d(n, { default: () => S }), e(388685);
 var i = e(951288),
     a = e(647438),
     s = e(793030),
-    o = e(442837),
-    l = e(780384),
+    l = e(442837),
+    o = e(780384),
     r = e(775644),
     c = e(410030),
     u = e(812206),
@@ -11,19 +11,20 @@ var i = e(951288),
     p = e(669079),
     x = e(823379),
     f = e(133201),
-    C = e(388032),
-    m = e(167969),
-    h = e(557256);
-function _(t) {
-    let { transitionState: n, sku: e, onClose: s, giftCode: l, channelContext: c } = t,
+    m = e(519193),
+    h = e(388032),
+    C = e(167969),
+    g = e(557256);
+function S(t) {
+    let { transitionState: n, sku: e, onClose: s, giftCode: o, channelContext: c } = t,
         [d, p] = a.useState({ state: "LINK" }),
-        [m, h] = a.useState(!1),
-        _ = (0, o.e7)([u.Z], () => u.Z.getApplication(e.applicationId)),
-        g = a.useCallback(async () => {
+        [C, g] = a.useState(!1),
+        S = (0, l.e7)([u.Z], () => u.Z.getApplication(e.applicationId)),
+        T = a.useCallback(async () => {
             try {
-                h(!0),
+                g(!0),
                     await r.Z.redeemGiftCode({
-                        code: l.code,
+                        code: o.code,
                         options: { channelId: c },
                     }),
                     p({ state: "SUCCESS" });
@@ -33,30 +34,30 @@ function _(t) {
                     error: t,
                 });
             } finally {
-                h(!1);
+                g(!1);
             }
-        }, [l, p, c]);
-    if (null == _) return null;
+        }, [o, p, c]);
+    if (null == S) return null;
     switch (d.state) {
         case "LINK":
             return (0, i.jsx)(f.Z, {
                 sku: e,
-                application: _,
+                application: S,
                 transitionState: n,
                 onClose: s,
-                successStateButtonText: C.intl.string(C.t["go1e4+"]),
-                onSuccessButtonClick: g,
-                isSuccessButtonLoading: m,
+                successStateButtonText: h.intl.string(h.t["go1e4+"]),
+                onSuccessButtonClick: T,
+                isSuccessButtonLoading: C,
             });
         case "SUCCESS":
-            return (0, i.jsx)(f.q, {
+            return (0, i.jsx)(m.SocialLayerStorefrontItemClaimedSuccessfullyModal, {
                 transitionState: n,
-                application: _,
+                application: S,
                 sku: e,
                 onClose: s,
             });
         case "ERROR":
-            return (0, i.jsx)(I, {
+            return (0, i.jsx)(_, {
                 transitionState: n,
                 onClose: s,
                 error: d.error,
@@ -65,12 +66,12 @@ function _(t) {
             (0, x.vE)(d);
     }
 }
-let I = (t) => {
+let _ = (t) => {
     let { transitionState: n, onClose: e, error: a } = t,
-        o = d.default.getCurrentUser(),
-        r = (0, p.QW)(a, o),
+        l = d.default.getCurrentUser(),
+        r = (0, p.QW)(a, l),
         u = (0, c.ZP)(),
-        x = (0, l.wj)(u);
+        x = (0, o.wj)(u);
     return (0, i.jsxs)(s.IX, {
         transitionState: n,
         onClose: e,
@@ -78,7 +79,7 @@ let I = (t) => {
             (0, i.jsx)(s.xBx, {
                 graphic: {
                     type: "image",
-                    src: x ? m : h,
+                    src: x ? C : g,
                 },
             }),
             (0, i.jsx)(s.fef, { children: r }),
