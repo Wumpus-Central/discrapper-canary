@@ -1,83 +1,85 @@
-n.d(t, { Z: () => m });
-var r = n(951288);
-n(647438);
-var l = n(120356),
-    i = n.n(l),
-    o = n(442837),
-    s = n(481060),
-    a = n(594174),
-    c = n(381585),
-    u = n(597688),
-    d = n(128922),
-    g = n(709999),
-    f = n(653126),
-    p = n(786040),
-    C = n(215023),
-    h = n(388032),
-    _ = n(310582);
-let m = (e) => {
-    let { shelf: t, handleTransition: n, tab: l } = e,
-        m = (0, o.e7)([a.default], () => a.default.getCurrentUser()),
-        b = d.Z.useConfig({ location: "ShelfBlock" }).showCardsV2,
-        v = (0, c.sp)();
-    return null == m
+n.d(t, { Z: () => v });
+var r = n(951288),
+    l = n(647438),
+    i = n(120356),
+    o = n.n(i),
+    s = n(442837),
+    a = n(481060),
+    c = n(594174),
+    u = n(381585),
+    d = n(597688),
+    g = n(128922),
+    f = n(937510),
+    p = n(709999),
+    C = n(653126),
+    h = n(786040),
+    _ = n(215023),
+    m = n(388032),
+    b = n(310582);
+let v = (e) => {
+    let { shelf: t, handleTransition: n, tab: i } = e,
+        v = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
+        E = g.Z.useConfig({ location: "ShelfBlock" }).showCardsV2,
+        O = (0, u.sp)(),
+        x = l.useMemo(() => t.rankedSkuIds.map((e) => d.Z.getProduct(e)).filter((e) => null != e), [t.rankedSkuIds]),
+        S = (0, f.l)(x).slice(0, 4);
+    return null == v
         ? null
         : (0, r.jsxs)("div", {
-              className: i()(_.shelfBlockContainer, _.centeredSection),
+              className: o()(b.shelfBlockContainer, b.centeredSection),
               children: [
                   (0, r.jsxs)("div", {
-                      className: _.blockHeader,
+                      className: b.blockHeader,
                       children: [
-                          (0, r.jsx)(s.Heading, {
+                          (0, r.jsx)(a.Heading, {
                               variant: "heading-lg/semibold",
                               children: t.name,
                           }),
-                          (0, r.jsx)(s.Button, {
+                          (0, r.jsx)(a.Button, {
                               variant: "secondary",
-                              text: h.intl.formatToPlainString(h.t.bc9RBA, { category_name: t.name }),
+                              text: m.intl.formatToPlainString(m.t.bc9RBA, { category_name: t.name }),
                               onClick: () => n("shelf block see all", t.categorySkuId, void 0, !0),
                           }),
                       ],
                   }),
                   (0, r.jsx)("div", {
-                      className: _.feed,
+                      className: b.feed,
                       children: (0, r.jsx)(r.Fragment, {
-                          children: t.rankedSkuIds.map((e, n) => {
-                              let i = u.Z.getCategoryForProduct(e),
-                                  o = u.Z.getProduct(e);
-                              return null == i || null == o
-                                  ? null
-                                  : (0, r.jsx)(
-                                        c.k0,
-                                        {
-                                            newValue: {
-                                                tilePosition: n,
-                                                pageSection: t.name,
-                                                categoryPosition: 2,
-                                            },
-                                            children: b
-                                                ? (0, r.jsx)(
-                                                      f.Z,
-                                                      {
-                                                          skuId: e,
-                                                          prioritizedCurrency: l === C.AW.ORBS ? p.tA.ORBS : void 0,
-                                                          onClickAnalytics: (0, p.wO)(o, l, v),
-                                                      },
-                                                      e,
-                                                  )
-                                                : (0, r.jsx)(
-                                                      g.Z,
-                                                      {
-                                                          product: o,
-                                                          category: i,
-                                                          user: m,
-                                                          tab: l,
-                                                      },
-                                                      e,
-                                                  ),
-                                        },
-                                        e,
-                                    );
+                          children: S.map((e, n) => {
+                              let l = d.Z.getCategoryForProduct(e.skuId);
+                              if (null == l || null == e) return null;
+                              let o = e.skuId;
+                              return (0, r.jsx)(
+                                  u.k0,
+                                  {
+                                      newValue: {
+                                          tilePosition: n,
+                                          pageSection: t.name,
+                                          categoryPosition: 2,
+                                      },
+                                      children: E
+                                          ? (0, r.jsx)(
+                                                C.Z,
+                                                {
+                                                    skuId: o,
+                                                    prioritizedCurrency: i === _.AW.ORBS ? h.tA.ORBS : void 0,
+                                                    onClickAnalytics: (0, h.wO)(e, i, O),
+                                                },
+                                                o,
+                                            )
+                                          : (0, r.jsx)(
+                                                p.Z,
+                                                {
+                                                    product: e,
+                                                    category: l,
+                                                    user: v,
+                                                    tab: i,
+                                                },
+                                                o,
+                                            ),
+                                  },
+                                  o,
+                              );
                           }),
                       }),
                   }),
