@@ -103,7 +103,7 @@ let c = new (class {
                 params: "",
             };
         })(e);
-        if (null != t && (t !== this.lastPage || n !== this.lastParams)) {
+        if (e !== o.Z5c.ME_DMS && null != t && (t !== this.lastPage || n !== this.lastParams)) {
             let e = Date.now();
             l.default.track(o.rMx.SESSION_START_PAGE_VIEWED, {
                 session_id: this.sessionID,
