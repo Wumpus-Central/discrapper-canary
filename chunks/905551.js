@@ -60,13 +60,14 @@ function h(e) {
 function x(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return t
-        ? void setTimeout(() => {
+        ? (setTimeout(() => {
               r.Z.dispatch({
                   type: "GAME_SERVER_FETCH_INSTANCES_SUCCESS",
                   guildId: e,
                   instances: s.K.reduce((e, t) => ((e[t.id] = t), e), {}),
               });
-          }, 5000)
+          }, 5000),
+          Promise.resolve())
         : a.tn
               .get({
                   url: p.ANM.GAME_SERVERS(e),
