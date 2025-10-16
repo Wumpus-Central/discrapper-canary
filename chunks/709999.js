@@ -566,13 +566,11 @@ let eC = n.memo(function (e) {
             Q = n.useMemo(() => (0, L.BH)(t, Y), [t, Y]),
             J = (0, L.G1)(t),
             X = (0, c.e7)([O.Z], () => (0, g.wjy)(O.Z.theme)),
-            $ = (0, L.Yq)(t.skuId),
-            ee = r.skuId === er.bu && (0, L.WW)(t.skuId),
-            { isPurchased: el, isPartiallyOwnedBundle: es } = (0, w.L)(C),
-            { isDisabled: eg } = (0, N.G)(C.skuId),
-            em = null !== S ? S : f,
-            [ev, eC] = n.useState(!1),
-            e_ = n.useCallback(
+            { isPurchased: $, isPartiallyOwnedBundle: ee } = (0, w.L)(C),
+            { isDisabled: el } = (0, N.G)(C.skuId),
+            es = null !== S ? S : f,
+            [eg, em] = n.useState(!1),
+            ev = n.useCallback(
                 function (e, t, n) {
                     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
                     return (0, s.EQ)(e.type)
@@ -603,16 +601,16 @@ let eC = n.memo(function (e) {
                 },
                 [i],
             ),
-            ef = n.useRef(null),
-            { displayPrices: ey, isOrbExclusive: eO } = (0, ei.oo)({
+            eC = n.useRef(null),
+            { displayPrices: e_, isOrbExclusive: ef } = (0, ei.oo)({
                 product: t,
                 isPremiumUser: Y,
                 tab: u,
             }),
-            eP = n.useCallback(
+            ey = n.useCallback(
                 (e) => (i) => {
                     let l = (0, ei.oQ)({ product: t });
-                    (ef.current = i.currentTarget),
+                    (eC.current = i.currentTarget),
                         b.default.track(ea.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                             collectibles_shop_session_id: null == R ? void 0 : R.sessionId,
                             sku_id: t.skuId,
@@ -631,25 +629,25 @@ let eC = n.memo(function (e) {
                             shouldCheckoutWithOrbs: l,
                             analyticsLocations: k,
                             analyticsSource: e,
-                            returnRef: ef,
+                            returnRef: eC,
                             tab: u,
                             variantType: H,
                         });
                 },
                 [t, r, u, k, R, H],
             ),
-            eI = eP(m.Z.COLLECTIBLES_SHOP_CARD);
-        if (0 === ey.length || ((0, L.x6)(t) && null != Q && Q.discountPercentage < 0)) return null;
-        let eb = a()(ed.badge, { [ed.badgeLeftAligned]: W });
+            eO = ey(m.Z.COLLECTIBLES_SHOP_CARD);
+        if (0 === e_.length || ((0, L.x6)(t) && null != Q && Q.discountPercentage < 0)) return null;
+        let eP = a()(ed.badge, { [ed.badgeLeftAligned]: W });
         return (0, l.jsx)(g.tEY, {
             children: (0, l.jsxs)(g.kL8, {
                 className: a()(j, X ? ed.shopCardDark : ed.shopCard, {
-                    [ed.partiallyOwned]: es && !G,
+                    [ed.partiallyOwned]: ee && !G,
                     [ed.shopCardAnimation]: !q,
                     [X ? ed.shopCardDarkHighlighted : ed.shopCardHighlighted]: G,
                 }),
                 ref: p,
-                onClick: eI,
+                onClick: eO,
                 "aria-label": t.name,
                 children: [
                     J &&
@@ -701,55 +699,49 @@ let eC = n.memo(function (e) {
                             className: ed.wishlistButton,
                             isCardHovered: G,
                         }),
-                    es || el || !$
-                        ? eO
-                            ? (0, l.jsx)(g.IGR, {
-                                  text: eo.intl.string(eo.t["0TmQRE"]),
-                                  disableColor: !0,
-                                  className: eb,
-                              })
-                            : ee
-                              ? (0, l.jsx)(g.IGR, {
-                                    text: eo.intl.string(eo.t.S6kE9v),
-                                    disableColor: !0,
-                                    className: eb,
-                                })
-                              : null
-                        : (0, l.jsx)(g.IGR, {
+                    !ee && !$ && (0, L.Yq)(t.skuId)
+                        ? (0, l.jsx)(g.IGR, {
                               text: eo.intl.string(eo.t.y2b7CA),
                               disableColor: !0,
-                              className: eb,
-                          }),
+                              className: eP,
+                          })
+                        : ef
+                          ? (0, l.jsx)(g.IGR, {
+                                text: eo.intl.string(eo.t["0TmQRE"]),
+                                disableColor: !0,
+                                className: eP,
+                            })
+                          : null,
                     (0, l.jsx)("div", {
                         className: a()(ed.preview, { [ed.previewThumbnailVariant]: H === er.Ch.THUMBNAIL }),
                         children: (0, s.EQ)(t.type)
-                            .with(o.Z.PROFILE_EFFECT, o.Z.AVATAR_DECORATION, o.Z.NAMEPLATE, () => e_(_, G, el))
+                            .with(o.Z.PROFILE_EFFECT, o.Z.AVATAR_DECORATION, o.Z.NAMEPLATE, () => ev(_, G, $))
                             .with(o.Z.BUNDLE, () =>
                                 (0, l.jsx)(K.d, {
                                     product: t,
                                     user: i,
-                                    isPurchased: el,
+                                    isPurchased: $,
                                     isHighlighted: G,
                                 }),
                             )
                             .with(o.Z.VARIANTS_GROUP, () => {
                                 if (null == t.variants || 0 === t.variants.length) return null;
-                                let e = t.variants[em];
+                                let e = t.variants[es];
                                 if (null == e) return null;
                                 let [i] = e.items;
-                                return e_(i, G, el, ev);
+                                return ev(i, G, $, eg);
                             })
                             .with(o.Z.EXTERNAL_SKU, () =>
                                 (0, l.jsx)(U.b, {
                                     product: t,
                                     animationState: G ? "on" : "off",
-                                    className: eg || (el && !G) ? ed.externalProductDimmed : void 0,
+                                    className: el || ($ && !G) ? ed.externalProductDimmed : void 0,
                                 }),
                             )
                             .otherwise(() => null),
                     }),
                     (() => {
-                        let e = el ? g.sV5 : eg ? g.mBM : null;
+                        let e = $ ? g.sV5 : el ? g.mBM : null;
                         return null == e
                             ? null
                             : (0, l.jsx)("div", {
@@ -759,7 +751,7 @@ let eC = n.memo(function (e) {
                                       color: "currentColor",
                                       width: 38,
                                       height: 38,
-                                      className: a()(ed.cardStateIcon, { [ed.checkmark]: el }),
+                                      className: a()(ed.cardStateIcon, { [ed.checkmark]: $ }),
                                   }),
                               });
                     })(),
@@ -784,7 +776,7 @@ let eC = n.memo(function (e) {
                                               handleLeaving: I,
                                           },
                                           selectedVariantIndex: f,
-                                          setIsHoveringOnSwitch: eC,
+                                          setIsHoveringOnSwitch: em,
                                           minimal: !G,
                                           alternativeBackgroundColor:
                                               (null == _ ? void 0 : _.type) === o.Z.PROFILE_EFFECT,
@@ -797,22 +789,22 @@ let eC = n.memo(function (e) {
                                               handleLeaving: I,
                                           },
                                           selectedVariantIndex: f,
-                                          setIsHoveringOnSwitch: eC,
+                                          setIsHoveringOnSwitch: em,
                                       })
                                 : null,
                             (0, l.jsx)(ex, {
                                 product: t,
                                 tab: u,
-                                buildHandlePreviewClick: eP,
+                                buildHandlePreviewClick: ey,
                                 selectedProduct: C,
                                 selectedVariantIndex: f,
                                 cardRef: p,
                                 analyticsLocations: k,
                                 isPremiumUser: Y,
                                 isPremiumProduct: J,
-                                isPartiallyOwnedBundle: es,
-                                isPurchased: el,
-                                isDisabled: eg,
+                                isPartiallyOwnedBundle: ee,
+                                isPurchased: $,
+                                isDisabled: el,
                                 discount: Q,
                             }),
                         ],

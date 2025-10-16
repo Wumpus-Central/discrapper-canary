@@ -1,6 +1,6 @@
 n.d(t, {
     $2: () => v,
-    $W: () => er,
+    $W: () => en,
     Ad: () => G,
     BH: () => w,
     Cs: () => x,
@@ -8,31 +8,30 @@ n.d(t, {
     IC: () => Q,
     OT: () => $,
     QG: () => U,
-    Qf: () => ed,
+    Qf: () => eu,
     Vw: () => S,
-    WW: () => et,
     XM: () => A,
     XS: () => V,
     Y: () => z,
     Yq: () => ee,
     bl: () => Y,
-    eu: () => ea,
+    eu: () => ei,
     f_: () => P,
     fp: () => I,
     gc: () => C,
-    hC: () => eu,
+    hC: () => ec,
     iC: () => Z,
     jT: () => W,
-    jm: () => ec,
+    jm: () => el,
     mO: () => q,
-    ne: () => el,
+    ne: () => es,
     qS: () => T,
     ql: () => R,
     rN: () => D,
     uV: () => k,
-    v5: () => ei,
-    x0: () => eo,
-    x6: () => en,
+    v5: () => er,
+    x0: () => ea,
+    x6: () => et,
     yn: () => H,
 }),
     n(539854),
@@ -257,17 +256,13 @@ let O = (e) => (null == e ? void 0 : e.premiumType) != null,
         let t = p.yf[e];
         return null != t && new Date().getTime() < t;
     },
-    et = (e) => {
-        let t = p.i0[e];
-        return null != t && new Date().getTime() < t;
-    },
-    en = (e) => (null == e ? void 0 : e.type) === i.Z.BUNDLE,
-    er = (e) => {
+    et = (e) => (null == e ? void 0 : e.type) === i.Z.BUNDLE,
+    en = (e) => {
         var t, n;
         if (null != e)
             return e.type === i.Z.BUNDLE ? i.Z.BUNDLE : null == (n = e.items) || null == (t = n[0]) ? void 0 : t.type;
     },
-    ei = (e) => {
+    er = (e) => {
         var t, n, r;
         let {
                 selectedSkuPricePreview: i,
@@ -286,42 +281,42 @@ let O = (e) => (null == e ? void 0 : e.premiumType) != null,
         }
         return _;
     },
-    ea =
+    ei =
         (m.pK.KZT,
         m.pK.NGN,
         m.pK.EGP,
         (e, t, n) => {
-            if (en(e)) return N(e);
+            if (et(e)) return N(e);
             let r = R(
                 e,
                 t ? (n ? h.tuJ.MOBILE : h.tuJ.DEFAULT) : n ? h.tuJ.MOBILE_PREMIUM_TIER_2 : h.tuJ.PREMIUM_TIER_2,
             );
             return null == r ? void 0 : r.amount;
         }),
-    eo = (e, t) => {
+    ea = (e, t) => {
         let n = [];
         for (let r of e) {
             let e = r.heroRanking;
             if (null != e)
                 for (let r of e) {
                     let e = t.get(r);
-                    if (null != e && !en(e) && (n.push(r), n.length >= p.K8)) return n;
+                    if (null != e && !et(e) && (n.push(r), n.length >= p.K8)) return n;
                 }
         }
-        return es(n);
+        return eo(n);
     },
-    es = (e) => {
+    eo = (e) => {
         if (e.length < p.K8) {
             let t = p.HU.slice(0, p.K8 - e.length);
             return e.concat(t);
         }
         return e;
     },
-    el = (e) => {
+    es = (e) => {
         let { product: t, isPartiallyOwnedBundle: n, isPurchased: r } = e;
         return !n && !(p.Vt.ORB_PROFILE_BADGE === (null == t ? void 0 : t.skuId) && r);
     },
-    ec = (e, t) => {
+    el = (e, t) => {
         switch (e) {
             case i.Z.AVATAR_DECORATION:
                 return "avatar decoration";
@@ -341,7 +336,7 @@ let O = (e) => (null == e ? void 0 : e.premiumType) != null,
                 return "unknown";
         }
     },
-    eu = (e, t, n) =>
+    ec = (e, t, n) =>
         e.sort((e, r) => {
             var i, a;
             let o = n
@@ -361,7 +356,7 @@ let O = (e) => (null == e ? void 0 : e.premiumType) != null,
                 (null != (a = null == s ? void 0 : s.amount) ? a : 0)
             );
         }),
-    ed = (e, t) => {
+    eu = (e, t) => {
         if (0 === t.length || 0 === e.length) return e;
         let n = t.map((e) => e.discountId);
         return e.sort((e, t) => {
