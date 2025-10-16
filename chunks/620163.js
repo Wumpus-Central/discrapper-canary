@@ -1575,6 +1575,11 @@ let eZ = () => {
                 parent: eR.s6.NOTIFICATIONS,
                 predicate: () => (0, N.bH)("SettingsRendererConfig"),
             },
+            [eR.s6.NOTIFICATIONS_USER_RESURRECTION]: {
+                section: ew.oAB.NOTIFICATIONS,
+                searchableTitles: [eL.intl.string(eL.t.Zyn45e)],
+                parent: eR.s6.NOTIFICATIONS,
+            },
             [eR.s6.NOTIFICATIONS_GO_LIVE]: {
                 section: ew.oAB.NOTIFICATIONS,
                 searchableTitles: [eL.intl.string(eL.t.pW4TMj)],
