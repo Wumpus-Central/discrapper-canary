@@ -90,10 +90,12 @@ function F(e) {
     let { children: t } = e;
     return t([m.Q2.MESSAGE, m.Q2.NAVIGATION, m.Q2.DND, m.Q2.CHAT, m.Q2.VOICE_AND_VIDEO, m.Q2.MISCELLANEOUS]);
 }
-let V = l()((0, m.Rv)())
-    .filter((e) => e.description !== x.intl.string(x.t.HnNtEB))
-    .groupBy((e) => e.group)
-    .value();
+function V() {
+    return l()((0, m.Rv)())
+        .filter((e) => e.description !== x.intl.string(x.t.HnNtEB))
+        .groupBy((e) => e.group)
+        .value();
+}
 class H extends i.PureComponent {
     renderMessage() {
         let { keybind: e } = this.props,
@@ -402,7 +404,8 @@ class Y extends i.PureComponent {
                 )
                 .sortBy((e) => e.id)
                 .sortBy((e) => (!0 === e.managed ? -1 : 0))
-                .value();
+                .value(),
+            n = V();
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(w.Z, {
@@ -467,17 +470,17 @@ class Y extends i.PureComponent {
                             children: (e) =>
                                 (0, r.jsx)(r.Fragment, {
                                     children: e.map((e, t) => {
-                                        let n = (0, m.UD)(e),
-                                            a = (0, m.U6)(e),
-                                            o = V[e];
+                                        let a = (0, m.UD)(e),
+                                            o = (0, m.U6)(e),
+                                            s = n[e];
                                         return (0, r.jsx)(
                                             d.C3N,
                                             {
-                                                label: n,
-                                                description: a,
+                                                label: a,
+                                                description: o,
                                                 children: (0, r.jsx)("div", {
                                                     className: M.defaultKeybindGroup,
-                                                    children: o.map((e, t) =>
+                                                    children: s.map((e, t) =>
                                                         (0, r.jsxs)(
                                                             i.Fragment,
                                                             {
