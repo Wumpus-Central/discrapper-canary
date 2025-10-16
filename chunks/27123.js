@@ -1,8 +1,10 @@
 n.d(t, {
     T4: () => a,
+    cf: () => s,
     vH: () => i,
     yB: () => o,
-});
+}),
+    n(388685);
 var r = n(981631);
 let i = (e) => {
         var t, n, i, a;
@@ -33,5 +35,16 @@ let i = (e) => {
             product: e,
             isPremiumUser: !1,
         });
-        return 1 === t.length && t[0].currency === r.pKx.DISCORD_ORB;
-    };
+        return t.length > 0 && void 0 === t.find((e) => e.currency !== r.pKx.DISCORD_ORB);
+    },
+    s = (e) =>
+        e.filter((e) => {
+            let t = i({
+                    product: e,
+                    isPremiumUser: !1,
+                }),
+                n = !1,
+                a = !1;
+            for (let e of t) if ((e.currency === r.pKx.DISCORD_ORB ? (n = !0) : (a = !0), n && a)) break;
+            return n && a;
+        });
