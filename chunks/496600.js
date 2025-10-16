@@ -277,8 +277,8 @@ function M(e) {
         }, [K, J, $]),
         eu = i.useCallback(() => {
             var e;
-            "multiple" === U ? Q([]) : Q(null), null == (e = L.current) || e.focus();
-        }, [Q, U]),
+            "multiple" === U ? Q([]) : Q(null), ei(""), null == (e = L.current) || e.focus();
+        }, [Q, U, ei]),
         ed = i.useCallback(
             (e) => {
                 var t, n, r;
