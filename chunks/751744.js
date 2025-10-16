@@ -10,8 +10,8 @@ var n = i(951288),
     _ = i(138201),
     d = i(331692),
     E = i(103879),
-    u = i(236289),
-    p = i(800530),
+    p = i(236289),
+    u = i(800530),
     g = i(388032);
 let T = [
         {
@@ -29,8 +29,8 @@ let T = [
     ],
     f = function (t) {
         let { onClose: e, transitionState: i, classificationId: f } = t,
-            y = (0, c.e7)([u.Z], () => u.Z.getAgeVerificationWebviewUrl()),
-            P = (0, c.e7)([u.Z], () => u.Z.getIsLoadingAgeVerification()),
+            y = (0, c.e7)([p.Z], () => p.Z.getAgeVerificationWebviewUrl()),
+            P = (0, c.e7)([p.Z], () => p.Z.getIsLoadingAgeVerification()),
             b = r.useCallback(() => {
                 e(), d.Z.close();
             }, [e]),
@@ -43,7 +43,6 @@ let T = [
                     a.Z.showAgeVerification({
                         webviewUrl: y,
                         onComplete: U,
-                        useV1: !0,
                         entryPoint: o.cU.AUTOMATED_UNDERAGE_APPEALS,
                     });
             }, [y, U]),
@@ -94,7 +93,7 @@ let T = [
                                         description: g.intl.string(g.t["NHq38/"]),
                                         buttonText: g.intl.string(g.t["9iy4lJ"]),
                                         titleVariant: "text-md/medium",
-                                        onButtonPress: () => window.open(p.sQ.AGE_VERIFICATION_LINK, "_blank"),
+                                        onButtonPress: () => window.open(u.sQ.AGE_VERIFICATION_LINK, "_blank"),
                                     }),
                                 }),
                                 (0, n.jsx)(l.Kqy, {
@@ -103,7 +102,7 @@ let T = [
                                         variant: "text-sm/medium",
                                         color: "text-secondary",
                                         children: g.intl.format(g.t.ZbWsOD, {
-                                            learnMoreLink: p.sQ.LEARN_MORE_UU_APPEAL_LINK,
+                                            learnMoreLink: u.sQ.LEARN_MORE_UU_APPEAL_LINK,
                                         }),
                                     }),
                                 }),
