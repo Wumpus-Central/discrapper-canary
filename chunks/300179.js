@@ -13,7 +13,6 @@ e.exports = {
     priceLine: "priceLine_c3d04b",
     priceTag: "priceTag_c3d04b",
     insufficientOrbs: "insufficientOrbs_c3d04b",
-    premiumWheelTooltipContent: "premiumWheelTooltipContent_c3d04b",
     premiumWheelBadge: "premiumWheelBadge_c3d04b",
     premiumWheel: "premiumWheel_c3d04b",
     detailsWrapper: "detailsWrapper_c3d04b",

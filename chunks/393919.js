@@ -14,7 +14,6 @@ e.exports = {
     anomaly: "anomaly__0f18a",
     error: "error__0f18a",
     spinner: "spinner__0f18a",
-    tooltip: "tooltip__0f18a",
     footerRight: "footerRight__0f18a",
     colorCycle: "colorCycle__0f18a",
     remaining: "remaining__0f18a",
