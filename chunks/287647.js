@@ -3,8 +3,8 @@ var a = n(951288),
     r = n(647438),
     i = n(442837),
     l = n(264418),
-    s = n(906732),
-    o = n(710845),
+    o = n(906732),
+    s = n(710845),
     c = n(313789),
     d = n(518596),
     u = n(451478),
@@ -13,11 +13,11 @@ var a = n(951288),
     h = n(921944),
     x = n(693450),
     f = n(388032),
-    b = n(374104);
-let g = new o.Z("DisplayNameStylesCoachmark");
+    g = n(374104);
+let b = new s.Z("DisplayNameStylesCoachmark");
 function v(e) {
-    let { markAsDismissed: t, targetElementRef: n, children: o } = e,
-        { analyticsLocations: v } = (0, s.ZP)(),
+    let { markAsDismissed: t, targetElementRef: n, children: s } = e,
+        { analyticsLocations: v } = (0, o.ZP)(),
         j = (0, r.useRef)(null),
         _ = (0, i.e7)([u.Z], () => u.Z.isFocused()),
         y = (0, r.useCallback)(() => {
@@ -40,12 +40,12 @@ function v(e) {
         (0, r.useEffect)(() => {
             var e, t, n;
             _ && (null == (e = j.current) ? void 0 : e.paused)
-                ? null == (t = j.current) || t.play().catch(g.error)
+                ? null == (t = j.current) || t.play().catch(b.error)
                 : _ || null == (n = j.current) || n.pause();
         }, [_]),
         (0, a.jsxs)(a.Fragment, {
             children: [
-                o,
+                s,
                 (0, a.jsx)(l.J, {
                     targetElementRef: n,
                     shouldShow: !0,
@@ -57,15 +57,11 @@ function v(e) {
                     graphic: {
                         type: "video",
                         ref: j,
-                        src: b.Z,
+                        src: g.Z,
                         aspectRatio: "21/9",
                         loop: !0,
                     },
                     size: "lg",
-                    badge: {
-                        type: "beta",
-                        variant: "expressive",
-                    },
                     title: f.intl.string(x.default["1AE46+"]),
                     body: [f.intl.string(x.default.cNc1g4), f.intl.string(f.t["4JNXHB"])],
                     actions: [
