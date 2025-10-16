@@ -12,9 +12,9 @@ var i = n(951288),
     p = n(434529),
     f = n(145597),
     m = n(830917),
-    g = n(837268),
-    y = n(353038),
-    O = n(610394),
+    g = n(111628),
+    y = n(837268),
+    O = n(353038),
     v = n(430561),
     E = n(561064),
     S = n(981631),
@@ -87,7 +87,7 @@ let I = r.memo(function (e) {
                     anchor: o,
                     size: a,
                 });
-            let d = e === y.B.MOVE,
+            let d = e === O.B.MOVE,
                 f = (0, p.PY)(n, l.width, l.height, r.width, r.height);
             u.Z.track(S.rMx.OVERLAY_LAYOUT_UPDATED, {
                 was_resized: !d,
@@ -139,11 +139,11 @@ let I = r.memo(function (e) {
                     : null,
             [t, l, T, I],
         ),
-        q = (0, a.e7)([O.ZP], () => O.ZP.hasRenderDebugMode(g.GO.WidgetAreas)),
+        q = (0, a.e7)([g.Z], () => g.Z.hasRenderDebugMode(y.GO.WidgetAreas)),
         J = r.useMemo(() => {
             if (null != C) return (e) => C(j(x({}, e), { widget: t }));
         }, [C, t]);
-    return (0, i.jsx)(y.Z, {
+    return (0, i.jsx)(O.Z, {
         className: o()(
             {
                 [b.debug]: q,

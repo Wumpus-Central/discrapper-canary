@@ -63,7 +63,7 @@ function c() {
     return l(o({}, n), {
         tags: o(
             {
-                source: "overlay",
+                source: __OVERLAY__ ? "overlay" : "legacy-overlay",
                 overlayMethod: "".concat(null == t ? null : i.gl[null != t ? t : i.gl.Disabled]),
             },
             null != (e = null == n ? void 0 : n.tags) ? e : {},

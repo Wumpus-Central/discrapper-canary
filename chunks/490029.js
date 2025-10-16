@@ -42,24 +42,24 @@ function _(e, t) {
         });
 }
 function p(e) {
-    if (__OVERLAY__) r.default.request(l.Etm.OVERLAY, (0, s.G)(e));
-    else
-        try {
-            a.Z.dispatchToSubscriptions(l.zMe.OVERLAY, {}, (0, s.G)(e));
-        } catch (i) {
-            let t = e.type,
-                n = [];
-            t === l.BmY.DISPATCH && (n = e.payloads.map((e) => e.type));
-            let r = Error("Error dispatching overlay RPC: ".concat(i.message));
-            throw (
-                (i.stack && (r.stack = i.stack),
-                o.Z.captureException(r, {
-                    extra: {
-                        eventType: t,
-                        payloadTypes: n,
-                    },
-                }),
-                r)
-            );
-        }
+    if (__OVERLAY__) return r.default.request(l.Etm.OVERLAY, (0, s.G)(e));
+    try {
+        return a.Z.dispatchToSubscriptions(l.zMe.OVERLAY, {}, (0, s.G)(e)), Promise.resolve();
+    } catch (i) {
+        let t = e.type,
+            n = [];
+        t === l.BmY.DISPATCH && (n = e.payloads.map((e) => e.type));
+        let r = Error("Error dispatching overlay RPC: ".concat(i.message));
+        throw (
+            (i.stack && (r.stack = i.stack),
+            o.Z.captureException(r, {
+                tags: { source: "legacy-overlay" },
+                extra: {
+                    eventType: t,
+                    payloadTypes: n,
+                },
+            }),
+            r)
+        );
+    }
 }

@@ -38,6 +38,7 @@ var r = (function (e) {
             (e.ForceGPUBoost = "force_gpu_boost"),
             (e.TrackFocusPIDs = "track_focus_pids"),
             (e.OverlayRafManagerForceEnabled = "overlay_raf_manager_force_enabled"),
+            (e.LegacyOverlayLogging = "legacy_overlay_logging"),
             e
         );
     })({}),
