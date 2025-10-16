@@ -1,58 +1,32 @@
-r.d(e, { default: () => o });
-var i = r(951288);
-r(647438);
-var n = r(481060),
-    l = r(600164),
-    a = r(458725),
-    s = r(388032),
-    d = r(959862);
-function o(t) {
-    var e;
-    let { onClose: r, transitionState: o } = t,
-        c = null == (e = (0, a.hp)(a.u.STREAM_FULL)) ? void 0 : e.errorCode,
-        u = s.intl.formatToPlainString(s.t["ejOT9/"], { errorCode: c });
-    return (0, i.jsxs)(n.Y0X, {
-        size: n.CgR.SMALL,
-        transitionState: o,
-        parentComponent: "StreamFullModal",
-        children: [
-            (0, i.jsxs)(n.xBx, {
-                justify: l.Z.Justify.BETWEEN,
-                children: [
-                    (0, i.jsx)(n.Heading, {
-                        variant: "heading-md/semibold",
-                        className: d.header,
-                        children: s.intl.string(s.t.GzjdOz),
-                    }),
-                    (0, i.jsx)(n.olH, {
-                        onClick: r,
-                        className: d.modalCloseButton,
-                    }),
-                ],
-            }),
-            (0, i.jsxs)(n.hzk, {
-                children: [
-                    (0, i.jsx)(n.Text, {
-                        variant: "text-md/medium",
-                        children: s.intl.string(s.t.VVZDBA),
-                    }),
-                    (0, i.jsx)(n.Text, {
-                        variant: "text-md/medium",
-                        selectable: !0,
-                        color: "text-muted",
-                        className: d.errorCode,
-                        children: u,
-                    }),
-                    (0, i.jsx)("div", { className: d.fullArt }),
-                ],
-            }),
-            (0, i.jsx)(n.mzw, {
-                children: (0, i.jsx)(n.Button, {
-                    variant: "primary",
-                    text: s.intl.string(s.t.BddRzc),
-                    onClick: r,
-                }),
-            }),
+n.d(i, { default: () => d });
+var e = n(951288);
+n(647438);
+var r = n(159691),
+    a = n(481060),
+    l = n(458725),
+    s = n(388032);
+function d(t) {
+    var i;
+    let { onClose: n, transitionState: d } = t,
+        o = null == (i = (0, l.hp)(l.u.STREAM_FULL)) ? void 0 : i.errorCode,
+        c = s.intl.formatToPlainString(s.t["ejOT9/"], { errorCode: o });
+    return (0, e.jsx)(r.u_l, {
+        transitionState: d,
+        title: s.intl.string(s.t.GzjdOz),
+        subtitle: s.intl.string(s.t.VVZDBA),
+        onClose: n,
+        actions: [
+            {
+                text: s.intl.string(s.t.BddRzc),
+                variant: "primary",
+                onClick: n,
+            },
         ],
+        children: (0, e.jsx)(a.Text, {
+            variant: "text-md/medium",
+            selectable: !0,
+            color: "text-muted",
+            children: c,
+        }),
     });
 }

@@ -1221,6 +1221,10 @@ let j = {
                 }),
             );
     },
+    StreamFullModal: async () => {
+        let { default: e } = await n.e("63757").then(n.bind(n, 309690));
+        return (t) => (0, a.jsx)(e, b({}, t));
+    },
     FamilyCenterAcceptLinkModal: async () => {
         let e = d.default.getUser("12345"),
             t = d.default.getUser("67890");
