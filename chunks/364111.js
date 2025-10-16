@@ -1,14 +1,13 @@
-n.d(t, { E: () => b }), n(388685);
+n.d(t, { E: () => E }), n(388685);
 var r = n(647438),
     i = n(311570),
     a = n(442837),
     o = n(353926),
-    s = n(358085),
-    l = n(335131),
-    c = n(597688),
-    u = n(52030),
-    d = n(447988);
-function f(e, t, n) {
+    s = n(335131),
+    l = n(597688),
+    c = n(52030),
+    u = n(447988);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +20,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,12 +31,12 @@ function _(e) {
                 }),
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,66 +48,64 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let m = 600000,
-    g = 600000,
-    E = i.v.VARIANTS_GROUP;
-function b(e, t, n) {
+let h = 600000,
+    m = 600000,
+    g = i.v.VARIANTS_GROUP;
+function E(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        f = (0, a.e7)([o.Z], () => o.Z.hasLoadedExperiments),
-        p = (0, a.e7)([c.Z], () => c.Z.skipNumCategories),
-        b = (0, s.isDesktop)() || (0, s.isWeb)(),
-        [y, O, v, I, T, S, A, C] = (0, a.Wu)([u.Z], () => {
+        d = (0, a.e7)([o.Z], () => o.Z.hasLoadedExperiments),
+        _ = (0, a.e7)([l.Z], () => l.Z.skipNumCategories),
+        [E, b, y, O, v, I, T, S] = (0, a.Wu)([c.Z], () => {
             var t, n;
             return [
-                u.Z.getShopBlocks(e),
-                null != (t = u.Z.getLastSuccessfulFetch(e)) ? t : 0,
-                null != (n = u.Z.getLastErrorTimestamp(e)) ? n : 0,
-                u.Z.getLastFetchOptions(e),
-                u.Z.getFetchShopHomeError(e),
-                u.Z.getIsFetchingShopHome(e),
-                u.Z.getHasKnownStaleData(e),
-                u.Z.getShopHomeConfigOverride(),
+                c.Z.getShopBlocks(e),
+                null != (t = c.Z.getLastSuccessfulFetch(e)) ? t : 0,
+                null != (n = c.Z.getLastErrorTimestamp(e)) ? n : 0,
+                c.Z.getLastFetchOptions(e),
+                c.Z.getFetchShopHomeError(e),
+                c.Z.getIsFetchingShopHome(e),
+                c.Z.getHasKnownStaleData(e),
+                c.Z.getShopHomeConfigOverride(),
             ];
         }),
-        N = (0, r.useMemo)(
+        A = (0, r.useMemo)(
             () =>
-                h(_({}, t), {
-                    variantsReturnStyle: E,
-                    includeBundles: b,
+                p(f({}, t), {
+                    variantsReturnStyle: g,
                     includePopularPicks: !0,
                     includeDynamicBlocks: !0,
-                    shopHomeConfig: C,
-                    skipNumCategories: p,
+                    shopHomeConfig: S,
+                    skipNumCategories: _,
                 }),
-            [t, b, C, p],
+            [t, S, _],
         ),
-        R = (0, r.useMemo)(() => !(0, l.oc)(I, N), [I, N]),
-        P = (0, d.J)(y, null != S && S, i),
-        w = (0, r.useMemo)(() => !P && Date.now() - O < m, [O, P]);
+        C = (0, r.useMemo)(() => !(0, s.oc)(O, A), [O, A]),
+        N = (0, u.J)(E, null != I && I, i),
+        R = (0, r.useMemo)(() => !N && Date.now() - b < h, [b, N]);
     return (
         (0, r.useEffect)(() => {
-            if (!f || S) return;
-            let t = Date.now() - v < g;
-            (null == T || !t) && (R || !w || A) && (0, l.Ov)(e, N, n);
-        }, [f, S, T, v, w, A, R, N, e, n]),
+            if (!d || I) return;
+            let t = Date.now() - y < m;
+            (null == v || !t) && (C || !R || T) && (0, s.Ov)(e, A, n);
+        }, [d, I, v, y, R, T, C, A, e, n]),
         {
-            isFetchingShopHome: S,
-            fetchShopHomeError: T,
-            shopBlocks: y,
+            isFetchingShopHome: I,
+            fetchShopHomeError: v,
+            shopBlocks: E,
             refreshShopHome: (0, r.useCallback)(() => {
-                (0, l.Ov)(e, N, n);
-            }, [e, N, n]),
+                (0, s.Ov)(e, A, n);
+            }, [e, A, n]),
         }
     );
 }
