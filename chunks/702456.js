@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685), n(642613), n(539854);
+n.d(t, { Z: () => x }), n(388685), n(642613), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -8,20 +8,21 @@ var r = n(951288),
     c = n(493683),
     u = n(663701),
     d = n(393903),
-    p = n(367907),
-    f = n(752048),
-    h = n(518950),
-    g = n(592125),
-    m = n(480294),
-    b = n(158776),
-    _ = n(699516),
+    p = n(100527),
+    f = n(367907),
+    h = n(752048),
+    g = n(518950),
+    m = n(592125),
+    b = n(480294),
+    _ = n(158776),
+    E = n(699516),
     O = n(111583),
-    E = n(594174),
-    v = n(823379),
-    y = n(399521),
-    I = n(981631),
-    C = n(388032),
-    S = n(944658);
+    v = n(594174),
+    y = n(823379),
+    I = n(399521),
+    C = n(981631),
+    S = n(388032),
+    N = n(944658);
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,7 +48,7 @@ function T(e) {
     }
     return e;
 }
-function N(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -68,49 +69,49 @@ function N(e, t) {
 function j(e) {
     var t, n;
     let { user: i, index: l, isCompetitive: a } = e,
-        { status: u, isMobile: d } = (0, o.cj)([b.Z], () => ({
-            status: b.Z.getStatus(i.id),
-            isMobile: b.Z.isMobileOnline(i.id),
+        { status: u, isMobile: d } = (0, o.cj)([_.Z], () => ({
+            status: _.Z.getStatus(i.id),
+            isMobile: _.Z.isMobileOnline(i.id),
         })),
-        f = (0, o.e7)([O.Z, g.Z], () => {
-            let e = g.Z.getDMFromUserId(i.id);
+        h = (0, o.e7)([O.Z, m.Z], () => {
+            let e = m.Z.getDMFromUserId(i.id);
             return null != e && O.Z.isTyping(e, i.id);
         }, [i]),
-        { avatarSrc: m, eventHandlers: _ } = (0, h.Z)({
+        { avatarSrc: b, eventHandlers: E } = (0, g.Z)({
             userId: i.id,
             size: s.EFr.SIZE_32,
             animateOnHover: !0,
         }),
-        E = async () => {
+        v = async () => {
             await c.Z.openPrivateChannel({
                 recipientIds: [i.id],
-                location: "frequent_friends_row",
+                location: p.Z.FREQUENT_FRIENDS_ROW,
             });
-            let e = g.Z.getDMFromUserId(i.id);
+            let e = m.Z.getDMFromUserId(i.id);
             null != e &&
-                (0, p.yw)(
-                    I.rMx.CHANNEL_OPENED,
-                    N(T({}, (0, p.$H)(e)), { location: "frequent_friends_row_".concat(l + 1) }),
+                (0, f.yw)(
+                    C.rMx.CHANNEL_OPENED,
+                    P(T({}, (0, f.$H)(e)), { location: "".concat(p.Z.FREQUENT_FRIENDS_ROW, " ").concat(l + 1) }),
                 );
         },
-        v = 0 === l,
-        y = v ? s.YqE : a ? s.XcD : void 0,
-        j = v ? C.intl.string(C.t.aI4VOD) : a ? C.intl.string(C.t.kABl29) : void 0;
+        y = 0 === l,
+        I = y ? s.YqE : a ? s.XcD : void 0,
+        j = y ? S.intl.string(S.t.aI4VOD) : a ? S.intl.string(S.t.kABl29) : void 0;
     return (0, r.jsx)(s.P3F, {
-        className: S.frequentFriendAvatarButton,
-        onClick: E,
-        onMouseEnter: _.onMouseEnter,
-        onMouseLeave: _.onMouseLeave,
-        "aria-label": C.intl.formatToPlainString(C.t.M5FjCg, { username: i.username }),
+        className: N.frequentFriendAvatarButton,
+        onClick: v,
+        onMouseEnter: E.onMouseEnter,
+        onMouseLeave: E.onMouseLeave,
+        "aria-label": S.intl.formatToPlainString(S.t.M5FjCg, { username: i.username }),
         children: (0, r.jsx)(s.qEK, {
-            src: m,
+            src: b,
             "aria-label": null != (t = i.globalName) ? t : i.username,
             status: u,
-            isTyping: f,
-            isMobile: d && !f,
+            isTyping: h,
+            isMobile: d && !h,
             size: s.EFr.SIZE_32,
-            CutoutIcon: y,
-            avatarTooltipAsset: v ? "\uD83D\uDD25" : a ? "\u2744️" : void 0,
+            CutoutIcon: I,
+            avatarTooltipAsset: y ? "\uD83D\uDD25" : a ? "\u2744️" : void 0,
             avatarTooltipText: j,
             statusTooltip: !0,
             statusTooltipDelay: 50,
@@ -118,19 +119,19 @@ function j(e) {
         }),
     });
 }
-function P() {
-    let { enabled: e } = (0, y.Q)("frequent_friends_row"),
+function x() {
+    let { enabled: e } = (0, I.Q)("frequent_friends_row"),
         t = (function () {
-            let e = (0, o.Wu)([f.Z], () =>
-                    [...f.Z.getUserAffinities()].sort((e, t) => f.Z.compare(e.otherUserId, t.otherUserId)),
+            let e = (0, o.Wu)([h.Z], () =>
+                    [...h.Z.getUserAffinities()].sort((e, t) => h.Z.compare(e.otherUserId, t.otherUserId)),
                 ),
-                t = (0, o.Wu)([E.default, _.Z], () => {
+                t = (0, o.Wu)([v.default, E.Z], () => {
                     let t = e.map((e) => e.otherUserId),
                         n = [];
                     for (let e of t)
                         if (n.length < 5) {
-                            let t = E.default.getUser(e);
-                            !(0, v.lm)(t) || _.Z.isIgnored(t.id) || _.Z.isBlocked(t.id) || n.push(t);
+                            let t = v.default.getUser(e);
+                            !(0, y.lm)(t) || E.Z.isIgnored(t.id) || E.Z.isBlocked(t.id) || n.push(t);
                         } else break;
                     return n;
                 }, [e]),
@@ -153,14 +154,14 @@ function P() {
                       showCompetitiveSpot: n,
                   };
         })(),
-        n = (0, o.e7)([m.Z], () => m.Z.hasConsented(I.pjP.PERSONALIZATION)),
+        n = (0, o.e7)([b.Z], () => b.Z.hasConsented(C.pjP.PERSONALIZATION)),
         [l, c] = i.useState({
             scrollLeft: 0,
             scrollWidth: 0,
             clientWidth: 0,
         }),
         p = i.useRef(null),
-        h = i.useCallback(() => {
+        f = i.useCallback(() => {
             var e;
             let t = null == (e = p.current) ? void 0 : e.getScrollerNode();
             null != t &&
@@ -171,10 +172,10 @@ function P() {
                 });
         }, []);
     i.useEffect(() => {
-        (null == t ? void 0 : t.frequentFriends.length) != null && h();
-    }, [null == t ? void 0 : t.frequentFriends.length, null == t ? void 0 : t.showCompetitiveSpot, h]);
-    let g = (0, d.y)(h, []),
-        b = i.useCallback(
+        (null == t ? void 0 : t.frequentFriends.length) != null && f();
+    }, [null == t ? void 0 : t.frequentFriends.length, null == t ? void 0 : t.showCompetitiveSpot, f]);
+    let g = (0, d.y)(f, []),
+        m = i.useCallback(
             (e) => {
                 let t = e.currentTarget;
                 c({
@@ -186,28 +187,28 @@ function P() {
             [c],
         );
     if (!e || null == t || !n) return null;
-    let { frequentFriends: O, showCompetitiveSpot: P } = t,
+    let { frequentFriends: _, showCompetitiveSpot: O } = t,
         x = l.scrollWidth > l.clientWidth,
-        A = l.scrollLeft > 0,
-        Z = l.scrollLeft < l.scrollWidth - l.clientWidth - 2;
+        Z = l.scrollLeft > 0,
+        A = l.scrollLeft < l.scrollWidth - l.clientWidth - 2;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: S.frequentFriendsRow,
+                className: N.frequentFriendsRow,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: S.frequentFriendsHeader,
+                        className: N.frequentFriendsHeader,
                         children: [
                             (0, r.jsx)(s.Text, {
                                 variant: "text-sm/semibold",
-                                className: S.frequentFriendsTitle,
-                                children: C.intl.string(C.t.QEh90N),
+                                className: N.frequentFriendsTitle,
+                                children: S.intl.string(S.t.QEh90N),
                             }),
                             (0, r.jsx)(s.aML, {
                                 "data-migration-pending": !0,
-                                text: C.intl.string(C.t.tqCMcX),
+                                text: S.intl.string(S.t.tqCMcX),
                                 children: (e) =>
-                                    (0, r.jsx)(s.d3s, N(T({}, e), { className: S.frequentFriendsInfoIcon })),
+                                    (0, r.jsx)(s.d3s, P(T({}, e), { className: N.frequentFriendsInfoIcon })),
                             }),
                         ],
                     }),
@@ -217,19 +218,19 @@ function P() {
                                 (g.current =
                                     (null == e ? void 0 : e.getScrollerNode()) != null ? e.getScrollerNode() : null);
                         },
-                        className: a()(S.frequentFriendsAvatars, {
-                            [S.scrollMaskLeft]: x && A,
-                            [S.scrollMaskRight]: x && Z,
+                        className: a()(N.frequentFriendsAvatars, {
+                            [N.scrollMaskLeft]: x && Z,
+                            [N.scrollMaskRight]: x && A,
                         }),
                         orientation: "horizontal",
-                        onScroll: b,
-                        children: O.map((e, t) =>
+                        onScroll: m,
+                        children: _.map((e, t) =>
                             (0, r.jsx)(
                                 j,
                                 {
                                     user: e,
                                     index: t,
-                                    isCompetitive: t === O.length - 1 && P,
+                                    isCompetitive: t === _.length - 1 && O,
                                 },
                                 e.id,
                             ),
