@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(599273),
+    s = n(258536),
     l = n(793030),
     c = n(442837),
     u = n(930295),
@@ -129,20 +129,20 @@ function S(e) {
         }),
         G = (e) => {
             var { setPopoutRef: t, position: i } = e,
-                c = y(e, ["setPopoutRef", "position"]);
+                a = y(e, ["setPopoutRef", "position"]);
             return (
                 null != i && i !== L.current && ((L.current = i), D(i), null == C || C(i)),
                 U((e, i) => {
                     if (!i) return null;
-                    let u = (0, r.jsx)(
+                    let c = (0, r.jsx)(
                         l.VqE,
-                        b(g({}, c), {
+                        b(g({}, a), {
                             setDialogRef: t,
                             modal: !1,
                             className: o()(null != A ? h.popoverContentWithGradient : h.popover, {
                                 [h["popover--video"]]: S,
                             }),
-                            returnRef: a,
+                            returnRef: void 0,
                             children: n,
                         }),
                     );
@@ -155,9 +155,9 @@ function S(e) {
                                       offsetBottom: 0.4,
                                       color: A,
                                       className: h.popoverGradientWrapper,
-                                      children: u,
+                                      children: c,
                                   })
-                                : u,
+                                : c,
                     });
                 })
             );
@@ -176,6 +176,7 @@ function S(e) {
         autoInvert: !0,
         nudgeAlignIntoViewport: "top" === w || "bottom" === w,
         closeOnClickOutside: !1,
+        ignoreModalClicks: !0,
         scrollBehavior: N,
         renderPopout: G,
         children: T,
