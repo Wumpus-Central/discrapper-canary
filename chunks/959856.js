@@ -209,6 +209,7 @@ class N extends s.Z {
     getVideoInputDeviceId() {
         return this.videoInputDeviceId;
     }
+    setAsyncVideoInputDeviceInit(e) {}
     getSupportedVideoCodecs(e) {
         e([]);
     }

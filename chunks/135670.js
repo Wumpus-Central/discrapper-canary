@@ -56,6 +56,7 @@ class c extends r.Z {
     getVideoInputDeviceId() {
         return a.Av;
     }
+    setAsyncVideoInputDeviceInit(e) {}
     getSupportedVideoCodecs(e) {
         e([]);
     }

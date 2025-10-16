@@ -286,6 +286,10 @@ class v extends a.Z {
     getVideoInputDeviceId() {
         return this.videoInputDeviceId;
     }
+    setAsyncVideoInputDeviceInit(e) {
+        var t, n;
+        null == (t = (n = (0, d.zS)()).setAsyncVideoInputDeviceInit) || t.call(n, e);
+    }
     getSupportedVideoCodecs(e) {
         (0, d.zS)().getSupportedVideoCodecs(e);
     }
