@@ -205,7 +205,10 @@ function q(e, t) {
     if (null == e) return !1;
     let n = e.name.toLowerCase(),
         r = x.r.build(t.config).application.name.toLowerCase();
-    return K(e) || z(e) ? n === r : null != e.application_id && Q(e.application_id, t);
+    return K(e) || z(e)
+        ? n === r
+        : (null != t && t.id === j.Jk && e.application_id === j.$z) ||
+              (null != e.application_id && Q(e.application_id, t));
 }
 function X(e, t) {
     for (let [n, r] of e) if (q(t, r) && !$(r)) return r;
