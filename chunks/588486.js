@@ -207,6 +207,9 @@ class E extends o.C {
                 case 30:
                     a.debugConfig = T.internalBinaryRead(e, e.uint32(), n, a.debugConfig);
                     break;
+                case 31:
+                    a.expectedEndDate = c.E.internalBinaryRead(e, e.uint32(), n, a.expectedEndDate);
+                    break;
                 default:
                     let o = n.readUnknownField;
                     if ("throw" === o)
@@ -261,7 +264,9 @@ class E extends o.C {
         }
         for (let n = 0; n < e.engineFeatureFlags.length; n++)
             t.tag(29, r.TD.LengthDelimited).string(e.engineFeatureFlags[n]);
-        e.debugConfig && T.internalBinaryWrite(e.debugConfig, t.tag(30, r.TD.LengthDelimited).fork(), n).join();
+        e.debugConfig && T.internalBinaryWrite(e.debugConfig, t.tag(30, r.TD.LengthDelimited).fork(), n).join(),
+            e.expectedEndDate &&
+                c.E.internalBinaryWrite(e.expectedEndDate, t.tag(31, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -445,6 +450,12 @@ class E extends o.C {
                 name: "debug_config",
                 kind: "message",
                 T: () => T,
+            },
+            {
+                no: 31,
+                name: "expected_end_date",
+                kind: "message",
+                T: () => c.E,
             },
         ]);
     }
