@@ -1,44 +1,47 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(704215),
-    o = n(952265),
-    a = n(481060),
-    s = n(243778),
-    c = n(434479),
-    u = n(703656),
-    d = n(933104),
-    p = n(981631),
-    h = n(176505),
-    f = n(921944),
-    g = n(470658),
-    m = n(388032),
-    b = n(990963);
-let _ = i.memo(function (e) {
+    l = n(442837),
+    o = n(704215),
+    a = n(952265),
+    s = n(481060),
+    c = n(243778),
+    u = n(434479),
+    d = n(703656),
+    p = n(819640),
+    f = n(933104),
+    h = n(981631),
+    g = n(176505),
+    m = n(921944),
+    b = n(948208),
+    _ = n(388032),
+    O = n(990963);
+let y = i.memo(function (e) {
     let { guildId: t, selected: n } = e,
-        _ = (0, o.f9)(),
-        [O, y] = (0, s.ZT)([l.z.GAME_SERVER_HOSTING_NEW_BADGE], t),
-        v = i.useCallback(() => {
-            O === l.z.GAME_SERVER_HOSTING_NEW_BADGE && y(f.L.USER_DISMISS),
-                (0, u.uL)(p.Z5c.CHANNEL(t, h.oC.GAME_SERVERS));
-        }, [t, O, y]),
-        j = i.useRef(null),
-        x = O === l.z.GAME_SERVER_HOSTING_NEW_BADGE;
-    return (0, r.jsx)(a.yRy, {
-        targetElementRef: j,
-        shouldShow: x && !_,
+        [y, v] = (0, c.ZT)([o.z.GAME_SERVER_HOSTING_NEW_BADGE], t),
+        j = i.useCallback(() => {
+            y === o.z.GAME_SERVER_HOSTING_NEW_BADGE && v(m.L.USER_DISMISS),
+                (0, d.uL)(h.Z5c.CHANNEL(t, g.oC.GAME_SERVERS));
+        }, [t, y, v]),
+        x = i.useRef(null),
+        C = y === o.z.GAME_SERVER_HOSTING_NEW_BADGE,
+        E = (0, a.f9)(),
+        S = (0, l.e7)([p.Z], () => p.Z.hasLayers());
+    return (0, r.jsx)(s.yRy, {
+        targetElementRef: x,
+        shouldShow: C && !E && !S,
         nudgeAlignIntoViewport: !0,
         animationPosition: "bottom",
         position: "right",
         renderPopout: () =>
-            (0, r.jsx)(d.En, {
+            (0, r.jsx)(f.En, {
                 guildId: t,
-                markAsDismissed: y,
+                markAsDismissed: v,
             }),
         children: (e) => {
             var i, l;
             return (0, r.jsx)(
-                c.m,
+                u.m,
                 ((i = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -66,22 +69,22 @@ let _ = i.memo(function (e) {
                 })({}, e)),
                 (l = l =
                     {
-                        ref: j,
+                        ref: x,
                         id: "game-server-".concat(t),
                         renderIcon: (e) =>
-                            (0, r.jsx)(a.iWm, {
+                            (0, r.jsx)(s.iWm, {
                                 size: "md",
                                 className: e,
                                 color: "currentColor",
                             }),
-                        text: m.intl.string(g.default.vCzwM7),
+                        text: _.intl.string(b.default.vCzwMz),
                         selected: n,
-                        onClick: v,
-                        trailing: x
-                            ? (0, r.jsx)(a.IGR, {
+                        onClick: j,
+                        trailing: C
+                            ? (0, r.jsx)(s.IGR, {
                                   disableColor: !0,
-                                  text: m.intl.string(m.t.y2b7CA),
-                                  className: b.badge,
+                                  text: _.intl.string(_.t.y2b7CA),
+                                  className: O.badge,
                               })
                             : null,
                     }),
