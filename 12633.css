@@ -52462,6 +52462,11 @@ screen and (max-width:485px) {
     margin-left: 8px
 }
 
+.helpNoticeDismissIcon_e335a7 {
+    cursor: pointer;
+    padding-top: 2px
+}
+
 .button__95e2d {
     background-color: var(--background-secondary-alt);
     cursor: pointer
