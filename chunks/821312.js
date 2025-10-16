@@ -1,87 +1,86 @@
-n.d(t, { default: () => m }), n(388685);
+n.d(t, { default: () => p }), n(388685);
 var i = n(951288),
     r = n(647438),
     l = n(793030),
-    a = n(709867),
-    o = n(481060),
-    s = n(367907),
-    c = n(177862),
-    d = n(981631),
-    u = n(388032),
-    p = n(882313);
-function m(e) {
-    let { guildId: t, transitionState: n, onClose: m } = e,
-        [b, g] = r.useState([]),
-        [f, h] = r.useState(),
-        x = [
+    a = n(481060),
+    o = n(367907),
+    s = n(177862),
+    c = n(981631),
+    d = n(388032),
+    u = n(882313);
+function p(e) {
+    let { guildId: t, transitionState: n, onClose: p } = e,
+        [m, b] = r.useState([]),
+        [g, f] = r.useState(),
+        h = [
             {
-                label: u.intl.string(u.t["//3pvr"]),
-                value: c.C2.DM_SPAM,
+                label: d.intl.string(d.t["//3pvr"]),
+                value: s.C2.DM_SPAM,
             },
             {
-                label: u.intl.string(u.t.SdVsio),
-                value: c.C2.MENTION_SPAM,
+                label: d.intl.string(d.t.SdVsio),
+                value: s.C2.MENTION_SPAM,
             },
             {
-                label: u.intl.string(u.t.uTiSVF),
-                value: c.C2.CHANNEL_SPAM,
+                label: d.intl.string(d.t.uTiSVF),
+                value: s.C2.CHANNEL_SPAM,
             },
             {
-                label: u.intl.string(u.t.GQczU1),
-                value: c.C2.SUS_NEW_MEMBERS,
+                label: d.intl.string(d.t.GQczU1),
+                value: s.C2.SUS_NEW_MEMBERS,
             },
             {
-                label: u.intl.string(u.t.AAgqy8),
-                value: c.C2.CHANGING_SETTINGS,
+                label: d.intl.string(d.t.AAgqy8),
+                value: s.C2.CHANGING_SETTINGS,
             },
             {
-                label: u.intl.string(u.t.ryPKb2),
-                value: c.C2.OTHER,
+                label: d.intl.string(d.t.ryPKb2),
+                value: s.C2.OTHER,
             },
         ],
-        j = r.useCallback((e) => {
-            g(e);
+        x = r.useCallback((e) => {
+            b(e);
         }, []);
     return null == t
-        ? (m(), null)
+        ? (p(), null)
         : (0, i.jsx)(l.Modal, {
               transitionState: n,
-              title: u.intl.string(u.t.f5hd9P),
+              title: d.intl.string(d.t.f5hd9P),
               actions: [
                   {
-                      text: u.intl.string(u.t["ETE/oK"]),
-                      onClick: m,
+                      text: d.intl.string(d.t["ETE/oK"]),
+                      onClick: p,
                       variant: "secondary",
                   },
                   {
-                      text: u.intl.string(u.t.nAt0rK),
+                      text: d.intl.string(d.t.nAt0rK),
                       onClick: function () {
-                          (0, s.yw)(d.rMx.GUILD_RAID_LOCKDOWN_FEEDBACK, {
-                              raid_lockdown_feedback_type: b,
-                              raid_lockdown_feedback_other_reason: f,
+                          (0, o.yw)(c.rMx.GUILD_RAID_LOCKDOWN_FEEDBACK, {
+                              raid_lockdown_feedback_type: m,
+                              raid_lockdown_feedback_other_reason: g,
                               guild_id: t,
                           }),
-                              m();
+                              p();
                       },
-                      disabled: 0 === b.length,
+                      disabled: 0 === m.length,
                   },
               ],
-              onClose: m,
-              children: (0, i.jsxs)(o.Kqy, {
+              onClose: p,
+              children: (0, i.jsxs)(a.Kqy, {
                   gap: 8,
                   children: [
-                      (0, i.jsx)(a.c, {
-                          selectedValues: b,
-                          onChange: j,
-                          options: x,
+                      (0, i.jsx)(a.cOn, {
+                          selectedValues: m,
+                          onChange: x,
+                          options: h,
                       }),
-                      b.includes(c.C2.OTHER) &&
+                      m.includes(s.C2.OTHER) &&
                           (0, i.jsx)("div", {
-                              className: p.textboxContainer,
-                              children: (0, i.jsx)(o.Kx8, {
-                                  placeholder: u.intl.string(u.t["PAM+JS"]),
-                                  onChange: h,
-                                  value: f,
+                              className: u.textboxContainer,
+                              children: (0, i.jsx)(a.Kx8, {
+                                  placeholder: d.intl.string(d.t["PAM+JS"]),
+                                  onChange: f,
+                                  value: g,
                                   autoFocus: !0,
                               }),
                           }),

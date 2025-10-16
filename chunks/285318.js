@@ -1,7 +1,7 @@
 n.d(t, { Z: () => u }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(709867),
+    l = n(481060),
     a = n(273504),
     s = n(388032);
 function o(e) {
@@ -106,7 +106,7 @@ function u(e) {
             [],
         );
     return (0, r.jsx)("div", {
-        children: (0, r.jsx)(l.c, {
+        children: (0, r.jsx)(l.cOn, {
             selectedValues: Array.from(u).map(String),
             onChange: p,
             options: f,
