@@ -3,7 +3,6 @@ e.exports = {
     heading: "heading__4c385",
     maxInstancesWarning: "maxInstancesWarning__4c385",
     gameContainerWrapper: "gameContainerWrapper__4c385",
-    disabled: "disabled__4c385",
     gameContainer: "gameContainer__4c385",
     image: "image__4c385",
     title: "title__4c385",

@@ -1,24 +1,22 @@
-t.d(n, { Z: () => C });
+t.d(n, { Z: () => h });
 var r,
     a,
     i = t(951288),
-    s = t(647438),
-    o = t(120356),
-    l = t.n(o),
-    c = t(793030),
-    d = t(442837),
-    u = t(481060),
-    m = t(100527),
-    g = t(905551),
-    f = t(60482),
-    x = t(858594),
-    _ = t(899789),
-    b = t(735276),
-    v = t(619733),
-    p = t(948208),
-    j = t(388032),
-    h = t(62525);
-let y =
+    l = t(647438),
+    s = t(793030),
+    o = t(442837),
+    c = t(481060),
+    d = t(100527),
+    u = t(905551),
+    m = t(60482),
+    g = t(858594),
+    f = t(899789),
+    x = t(735276),
+    _ = t(619733),
+    b = t(948208),
+    v = t(388032),
+    j = t(62525);
+let p =
     ((r = (function (e) {
         for (var n = 1; n < arguments.length; n++) {
             var t = null != arguments[n] ? arguments[n] : {},
@@ -43,8 +41,8 @@ let y =
                 });
         }
         return e;
-    })({}, v.IX)),
-    (a = a = { initialStep: v.EK.SERVER_SETTINGS }),
+    })({}, _.IX)),
+    (a = a = { initialStep: _.EK.SERVER_SETTINGS }),
     Object.getOwnPropertyDescriptors
         ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
         : (function (e, n) {
@@ -58,60 +56,60 @@ let y =
               Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
           }),
     r);
-function C(e) {
+function h(e) {
     let { guildId: n } = e;
-    s.useEffect(() => {
-        (0, g.ce)(n);
+    l.useEffect(() => {
+        (0, u.ce)(n);
     }, [n]);
-    let t = (0, d.e7)([f.Z], () => f.Z.getStateForGuild(n)),
-        { catalog: r, instances: a } = s.useMemo(() => {
+    let t = (0, o.e7)([m.Z], () => m.Z.getStateForGuild(n)),
+        { catalog: r, instances: a } = l.useMemo(() => {
             var e, n;
             return {
                 catalog: Object.values(null != (e = null == t ? void 0 : t.catalog) ? e : {}),
                 instances: Object.values(null != (n = null == t ? void 0 : t.instances) ? n : {}),
             };
         }, [null == t ? void 0 : t.catalog, null == t ? void 0 : t.instances]),
-        o = a.length >= v.YX;
+        h = a.length >= _.YX;
     return 0 === r.length
         ? (0, i.jsx)("div", {
-              className: h.container,
-              children: (0, i.jsx)(u.$jN, {
-                  type: u.RAz.SPINNING_CIRCLE,
-                  className: h.spinner,
+              className: j.container,
+              children: (0, i.jsx)(c.$jN, {
+                  type: c.RAz.SPINNING_CIRCLE,
+                  className: j.spinner,
               }),
           })
         : (0, i.jsxs)("div", {
-              className: h.container,
+              className: j.container,
               children: [
-                  (0, i.jsx)(c.X6q, {
-                      className: h.heading,
+                  (0, i.jsx)(s.X6q, {
+                      className: j.heading,
                       variant: "heading-md/semibold",
-                      children: j.intl.string(p.default["3vWDMz"]),
+                      children: v.intl.string(b.default["3vWDMz"]),
                   }),
-                  o &&
+                  h &&
                       (0, i.jsx)("div", {
-                          className: h.maxInstancesWarning,
-                          children: (0, i.jsx)(_.C, {}),
+                          className: j.maxInstancesWarning,
+                          children: (0, i.jsx)(f.C, {}),
                       }),
-                  (0, i.jsx)(c.zJl, {
-                      className: l()(h.gameContainerWrapper, { [h.disabled]: o }),
+                  (0, i.jsx)(s.zJl, {
+                      className: j.gameContainerWrapper,
                       children: (0, i.jsx)("div", {
-                          className: h.gameContainer,
+                          className: j.gameContainer,
                           children: r.map((e, t) =>
                               (0, i.jsx)(
-                                  x.Z,
+                                  g.Z,
                                   {
                                       game: e,
                                       onClick: () =>
-                                          (0, b.Z)({
+                                          (0, x.Z)({
                                               guildId: n,
-                                              stepConfig: y,
+                                              stepConfig: p,
                                               initialGameServerGame: e,
-                                              analyticsLocation: m.Z.GAME_SERVER_OVERVIEW,
+                                              analyticsLocation: d.Z.GAME_SERVER_OVERVIEW,
                                           }),
-                                      imageClassName: h.image,
-                                      titleClassName: h.title,
-                                      disabled: o,
+                                      imageClassName: j.image,
+                                      titleClassName: j.title,
+                                      disabled: h,
                                   },
                                   "sidebar-game-".concat(t, "-").concat(e.id),
                               ),
