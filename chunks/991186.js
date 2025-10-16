@@ -128,7 +128,10 @@ class y extends s.Z {
                 "isNewOverlayUser",
                 () => (
                     this._storage.hasIsNewOverlayUser() ||
-                        this._storage.setIsNewOverlayUser(!(0, l.zu)(i.z.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX)),
+                        this._storage.setIsNewOverlayUser(
+                            !(0, l.zu)(i.z.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX) &&
+                                !(0, l.zu)(i.z.OVERLAY_OOP_WELCOME_NUX),
+                        ),
                     this._storage.getIsNewOverlayUser()
                 ),
             ),
