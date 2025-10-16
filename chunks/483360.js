@@ -760,10 +760,10 @@ let e7 = (0, $.oH)((e, t, n) => {
                     queryLower: i,
                 },
                 s = {
-                    [d.Ky.SHOP]: [ef.intl.string(ef.t.pWG4ze)],
-                    [d.Ky.NITRO_HOME]: [ef.intl.string(ef.t.Ipxkog)],
-                    [d.Ky.QUEST_HOME]: [ef.intl.string(ef.t.JALI2K)],
-                    [d.Ky.APPS_HOME]: [ef.intl.string(ef.t.PHjkRE), ef.intl.string(ef.t.AKcFUj)],
+                    [d.Ky.SHOP]: [ef.intl.string(ef.t.pWG4zc)],
+                    [d.Ky.NITRO_HOME]: [ef.intl.string(ef.t.Ipxkoq)],
+                    [d.Ky.QUEST_HOME]: [ef.intl.string(ef.t.JALI2N)],
+                    [d.Ky.APPS_HOME]: [ef.intl.string(ef.t.PHjkRE), ef.intl.string(ef.t.AKcFUl)],
                 },
                 l = [];
             for (let e in s) {
@@ -1004,15 +1004,15 @@ let e7 = (0, $.oH)((e, t, n) => {
                 l = [
                     {
                         id: eu.HY.SERVER_GUIDE,
-                        name: ef.intl.string(ef.t.VbpLyU),
+                        name: ef.intl.string(ef.t.VbpLyc),
                     },
                     {
                         id: eu.HY.CHANNEL_BROWSER,
-                        name: ef.intl.string(ef.t.et6wav),
+                        name: ef.intl.string(ef.t.et6wam),
                     },
                     {
                         id: eu.HY.CUSTOMIZE_COMMUNITY,
-                        name: ef.intl.string(ef.t.h9mGOP),
+                        name: ef.intl.string(ef.t.h9mGOD),
                     },
                 ],
                 c = [];
@@ -1249,6 +1249,7 @@ let e7 = (0, $.oH)((e, t, n) => {
                 if (
                     null == o ||
                     o.id === s ||
+                    o.bot ||
                     (!er.BT({
                         permission: el.Plq.VIEW_CHANNEL,
                         user: o,
