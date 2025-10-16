@@ -1,64 +1,72 @@
-n.d(t, { F: () => p });
+n.d(t, { F: () => h });
 var r = n(951288),
     i = n(647438),
     l = n(159691),
     a = n(906732),
-    s = n(821458),
-    o = n(585961),
-    c = n(981631),
-    d = n(30513),
-    u = n(486324),
-    g = n(200299),
-    m = n(388032);
-function p(e) {
-    let { guild: t, canManageGuild: n, buttonClassName: p } = e,
-        { analyticsLocations: f } = (0, a.ZP)(),
-        h = t.features.has(c.GuildFeatures.BANNER),
-        b = i.useCallback(
+    s = n(892803),
+    o = n(465682),
+    c = n(821458),
+    d = n(585961),
+    u = n(981631),
+    g = n(30513),
+    m = n(486324),
+    p = n(200299),
+    f = n(388032);
+function h(e) {
+    let { guild: t, canManageGuild: n, buttonClassName: h } = e,
+        { analyticsLocations: b } = (0, a.ZP)(),
+        x = t.features.has(u.GuildFeatures.BANNER),
+        { enabled: j } = s.Z.useConfig({ location: "GuildSettingsBannerUploadButton" }),
+        v = i.useCallback(
             (e) => {
                 let { imageUri: n, file: r } = e;
-                (0, s.f4)(t, f, n, r);
+                (0, c.f4)(t, b, n, r);
             },
-            [f, t],
+            [b, t],
         ),
-        x = i.useCallback(
+        _ = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
-                    (0, s.E6)({
+                    (0, c.E6)({
                         guild: t,
-                        analyticsLocations: f,
-                        analyticsSection: c.jXE.GUILD_BANNER,
-                        analyticsObject: c.qAy.BUTTON_CTA,
-                        perks: (0, d.XO)(),
+                        analyticsLocations: b,
+                        analyticsSection: u.jXE.GUILD_BANNER,
+                        analyticsObject: u.qAy.BUTTON_CTA,
+                        perks: (0, g.XO)(),
                     });
             },
-            [f, t],
+            [b, t],
         ),
-        j = i.useCallback(() => {
-            (0, s.mw)({
-                uploadType: u.pC.GUILD_BANNER,
-                maxFileSizeBytes: g.B,
-                onComplete: b,
+        C = i.useCallback(() => {
+            (0, c.mw)({
+                uploadType: m.pC.GUILD_BANNER,
+                maxFileSizeBytes: p.B,
+                onComplete: v,
                 analyticsLocation: {
-                    page: c.ZY5.GUILD_SETTINGS,
-                    section: c.jXE.GUILD_BANNER,
+                    page: u.ZY5.GUILD_SETTINGS,
+                    section: u.jXE.GUILD_BANNER,
                 },
-                analyticsLocations: f,
+                analyticsLocations: b,
             });
-        }, [f, b]);
-    return h
+        }, [b, v]);
+    return x
         ? (0, r.jsx)("div", {
-              className: p,
+              className: h,
               children: (0, r.jsx)(l.zxk, {
-                  disabled: !(h && n),
+                  disabled: !(x && n),
                   variant: "primary",
-                  text: m.intl.string(m.t.yG2pUl),
-                  onClick: j,
+                  text: f.intl.string(f.t.yG2pUl),
+                  onClick: C,
               }),
           })
-        : (0, r.jsx)(o.P, {
-              className: p,
-              onClick: x,
-          });
+        : j
+          ? (0, r.jsx)("div", {
+                className: h,
+                children: (0, r.jsx)(o.v, { onClick: _ }),
+            })
+          : (0, r.jsx)(d.P, {
+                className: h,
+                onClick: _,
+            });
 }
