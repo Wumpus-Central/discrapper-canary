@@ -34,7 +34,7 @@ let m = new Date(1682488800000);
 function g(e) {
     return (0, r.e7)([l.Z, c.Z], () => {
         let t = l.Z.getGuild(e),
-            n = !!(null == t ? void 0 : t.features.has(p.oNc.COMMUNITY)),
+            n = !!(null == t ? void 0 : t.features.has(p.GuildFeatures.COMMUNITY)),
             r = c.Z.can(p.Plq.MANAGE_GUILD, t),
             i = c.Z.can(p.Plq.MANAGE_ROLES, t);
         return n && r && i;
@@ -42,7 +42,7 @@ function g(e) {
 }
 function E(e) {
     let t = l.Z.getGuild(e),
-        n = !!(null == t ? void 0 : t.features.has(p.oNc.COMMUNITY)),
+        n = !!(null == t ? void 0 : t.features.has(p.GuildFeatures.COMMUNITY)),
         r = c.Z.can(p.Plq.MANAGE_GUILD, t),
         i = c.Z.can(p.Plq.MANAGE_ROLES, t);
     return n && r && i;
@@ -51,7 +51,7 @@ function b(e, t) {
     var n;
     if (
         null == e ||
-        !e.features.has(p.oNc.GUILD_ONBOARDING) ||
+        !e.features.has(p.GuildFeatures.GUILD_ONBOARDING) ||
         null == t ||
         null == t.joinedAt ||
         new Date(t.joinedAt) < m

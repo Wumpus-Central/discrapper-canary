@@ -15,21 +15,21 @@ var r = n(647438),
 function h(e) {
     let t,
         n = (0, c.Ob)(e),
-        h = null == e ? void 0 : e.features.has(p.oNc.CREATOR_MONETIZABLE_PROVISIONAL),
-        b = null == e ? void 0 : e.features.has(p.oNc.CREATOR_MONETIZABLE),
+        h = null == e ? void 0 : e.features.has(p.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL),
+        b = null == e ? void 0 : e.features.has(p.GuildFeatures.CREATOR_MONETIZABLE),
         x = (0, i.e7)([s.default], () => {
             let t = s.default.getCurrentUser();
             return null != e && (0, a.eM)(e, t);
         }),
         { error: j, loading: v, createEnableRequest: _, submittedRequest: C } = (0, d.Z)(null == e ? void 0 : e.id),
-        { loading: O, error: y, refresh: N, eligibility: E } = (0, u.Z)(null == e ? void 0 : e.id),
-        { isApplicationRejected: I, requestCooldownDuration: S } = (0, g.Z)(E),
+        { loading: O, error: y, refresh: E, eligibility: N } = (0, u.Z)(null == e ? void 0 : e.id),
+        { isApplicationRejected: I, requestCooldownDuration: S } = (0, g.Z)(N),
         T =
-            (null == e ? void 0 : e.features.has(p.oNc.CREATOR_MONETIZABLE_RESTRICTED)) === !0 ||
-            (null == e ? void 0 : e.features.has(p.oNc.CREATOR_MONETIZABLE_DISABLED)) === !0,
+            (null == e ? void 0 : e.features.has(p.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) === !0 ||
+            (null == e ? void 0 : e.features.has(p.GuildFeatures.CREATOR_MONETIZABLE_DISABLED)) === !0,
         { isMonetizationReapplicationDisabled: P } = (0, l.eC)(null == e ? void 0 : e.id),
-        w = C || (null == E ? void 0 : E.isApplicationPending) === !0,
-        Z = (null == E ? void 0 : E.canApply) === !0,
+        w = C || (null == N ? void 0 : N.isApplicationPending) === !0,
+        Z = (null == N ? void 0 : N.canApply) === !0,
         R = f.intl.format(f.t.aJUdOj, { faqUrl: o.Z.getArticleURL(p.BhN.CREATOR_FAQ) });
     I && P
         ? (t =
@@ -48,8 +48,8 @@ function h(e) {
         k = I && Z && x ? f.intl.format(f.t.wbVIUF, {}) : void 0;
     return (
         r.useEffect(() => {
-            D && N();
-        }, [N, D]),
+            D && E();
+        }, [E, D]),
         {
             resubmittingEnableRequest: v,
             resubmissionError: j,
@@ -58,8 +58,8 @@ function h(e) {
             resubmittedRequest: C,
             eligibilityLoading: O,
             eligibilityError: y,
-            refreshEligibility: N,
-            eligibility: E,
+            refreshEligibility: E,
+            eligibility: N,
             eligibleForMonetization: Z,
             isApplicationPending: w,
             hasPreviousApplicationRejection: I,

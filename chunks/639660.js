@@ -27,7 +27,10 @@ function b(e) {
     let { guildId: t } = e,
         n = (0, o.e7)([s.Z], () => {
             var e;
-            return (null == (e = s.Z.getGuild(t)) ? void 0 : e.features.has(m.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0;
+            return (
+                (null == (e = s.Z.getGuild(t)) ? void 0 : e.features.has(m.GuildFeatures.PREMIUM_TIER_3_OVERRIDE)) ===
+                !0
+            );
         }),
         b = (0, c.Z)(t),
         h = b.length > 0,

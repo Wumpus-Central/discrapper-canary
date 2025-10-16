@@ -17,7 +17,7 @@ var r = n(951288),
     x = n(197530);
 let j = function (e) {
     let { guild: t } = e,
-        j = t.features.has(m.oNc.BANNER),
+        j = t.features.has(m.GuildFeatures.BANNER),
         v = i.useCallback(
             (e, i) => {
                 if (null == e || void 0 === i) return void g.Z.saveGuild(t.id, { homeHeader: null });
@@ -123,7 +123,7 @@ let j = function (e) {
                           (0, r.jsx)(s.Z, {
                               className: x.boostIndicator,
                               guild: t,
-                              guildFeature: m.oNc.BANNER,
+                              guildFeature: m.GuildFeatures.BANNER,
                               onClick: _,
                           }),
                       ],
@@ -169,7 +169,7 @@ let j = function (e) {
                           (0, r.jsx)(s.Z, {
                               className: x.boostIndicator,
                               guild: t,
-                              guildFeature: m.oNc.BANNER,
+                              guildFeature: m.GuildFeatures.BANNER,
                               onClick: _,
                           }),
                       ],

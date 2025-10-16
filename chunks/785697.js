@@ -39,6 +39,6 @@ function c(e) {
             { autoTrackExposure: !0 },
         );
     if (null == e) return !1;
-    let s = e.features.has(a.oNc.COMMUNITY);
+    let s = e.features.has(a.GuildFeatures.COMMUNITY);
     return n && s && i;
 }

@@ -1,7 +1,7 @@
 n.d(t, {
-    Eo: () => P,
+    Eo: () => j,
     VD: () => N,
-    ZP: () => x,
+    ZP: () => A,
 }),
     n(388685),
     n(953529);
@@ -21,8 +21,8 @@ var r = n(951288),
     m = n(372769),
     b = n(134432),
     _ = n(768581),
-    O = n(356164),
-    E = n(826946),
+    E = n(356164),
+    O = n(826946),
     v = n(981631),
     y = n(388032),
     I = n(972725),
@@ -32,10 +32,10 @@ var r = n(951288),
 function N(e) {
     let { guild: t, onClick: l, onView: o } = e,
         [h, g] = i.useState(!1),
-        [O, N] = i.useState(!1),
-        [j, P] = i.useState(!1),
-        x = i.useRef(null),
-        A = i.useCallback(async () => {
+        [E, N] = i.useState(!1),
+        [P, j] = i.useState(!1),
+        A = i.useRef(null),
+        x = i.useCallback(async () => {
             N(!0);
             try {
                 await l(t.id);
@@ -103,7 +103,7 @@ function N(e) {
             [t],
         ),
         L = (0, d.ZP)(),
-        R = t.features.has(v.oNc.HUB),
+        R = t.features.has(v.GuildFeatures.HUB),
         D = i.useMemo(() => {
             let e = _.ZP.getGuildDiscoverySplashURL({
                 id: t.id,
@@ -131,7 +131,7 @@ function N(e) {
     return (0, r.jsxs)("div", {
         className: I.container,
         children: [
-            O &&
+            E &&
                 (0, r.jsx)("div", {
                     className: I.spinnerContainer,
                     children: (0, r.jsx)(c.$jN, {
@@ -140,15 +140,15 @@ function N(e) {
                     }),
                 }),
             (0, r.jsx)(s.$, {
-                innerRef: x,
+                innerRef: A,
                 onChange: Z,
                 active: !h,
                 threshold: 0.55,
                 children: (0, r.jsxs)(f.Z, {
-                    ref: x,
+                    ref: A,
                     className: I.card,
-                    onClick: A,
-                    disabled: O,
+                    onClick: x,
+                    disabled: E,
                     onContextMenu: w,
                     "aria-label": y.intl.string(y.t["M9wQ+f"]),
                     children: [
@@ -156,15 +156,15 @@ function N(e) {
                             className: I.header,
                             children: [
                                 (0, r.jsx)("div", {
-                                    className: a()(I.banner, { [I.loaded]: j }),
+                                    className: a()(I.banner, { [I.loaded]: P }),
                                     children: (0, r.jsx)("img", {
                                         src: D,
                                         alt: "",
                                         className: I.bannerImage,
-                                        onLoad: () => P(!0),
+                                        onLoad: () => j(!0),
                                     }),
                                 }),
-                                (0, r.jsx)(E.Z, {
+                                (0, r.jsx)(O.Z, {
                                     className: I.maximizeIcon,
                                     guildId: t.id,
                                 }),
@@ -256,9 +256,9 @@ function N(e) {
         ],
     });
 }
-function j(e) {
+function P(e) {
     let { guildId: t, onClick: n, onView: i } = e,
-        l = (0, o.e7)([O.Z], () => O.Z.getGuild(t));
+        l = (0, o.e7)([E.Z], () => E.Z.getGuild(t));
     return null == l
         ? null
         : (0, r.jsx)(N, {
@@ -267,7 +267,7 @@ function j(e) {
               onView: i,
           });
 }
-function P(e) {
+function j(e) {
     let { guildId: t, index: n, onClick: l, onView: a } = e,
         o = i.useRef(null == t),
         s = i.useCallback(
@@ -288,7 +288,7 @@ function P(e) {
                               state: n,
                               cleanUp: i,
                               animate: o.current,
-                              children: (0, r.jsx)(j, {
+                              children: (0, r.jsx)(P, {
                                   guildId: t.guildId,
                                   onClick: l,
                                   onView: a,
@@ -320,4 +320,4 @@ function P(e) {
         }),
     });
 }
-let x = i.memo(j);
+let A = i.memo(P);

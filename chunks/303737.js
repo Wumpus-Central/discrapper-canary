@@ -177,5 +177,5 @@ function I(e, t) {
     };
 }
 function T(e) {
-    return (0, f.H2)(e) && e.features.has(p.oNc.ROLE_SUBSCRIPTIONS_ENABLED) && (0, c.$F)() && (0, c.hQ)(e.id);
+    return (0, f.H2)(e) && e.features.has(p.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED) && (0, c.$F)() && (0, c.hQ)(e.id);
 }

@@ -21,8 +21,8 @@ var r = n(951288),
     C = n(440857),
     O = n(472596),
     y = n(598948),
-    N = n(428936),
-    E = n(41586),
+    E = n(428936),
+    N = n(41586),
     I = n(918192),
     S = n(981631),
     T = n(388032),
@@ -37,7 +37,9 @@ function Z(e) {
         D = i.useCallback(() => {
             p.Z.closeGuildSidebar(t);
         }, [t]),
-        A = !1 == !!(null == n ? void 0 : n.features.has(S.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
+        A =
+            !1 ==
+            !!(null == n ? void 0 : n.features.has(S.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
         L = (0, s.e7)([x.Z], () => x.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
         k = i.useCallback(
             (e) => {
@@ -50,10 +52,10 @@ function Z(e) {
             },
             [l],
         ),
-        M = i.useRef(null),
-        G = i.useCallback(() => {
+        G = i.useRef(null),
+        M = i.useCallback(() => {
             var e;
-            null == (e = M.current) || e.resetSearchText();
+            null == (e = G.current) || e.resetSearchText();
         }, []);
     if (null == n) return null;
     let U = (0, O.xb)(!1, !1, L);
@@ -102,19 +104,19 @@ function Z(e) {
                                                         ? (0, r.jsxs)("div", {
                                                               className: P.mainTableContainer,
                                                               children: [
-                                                                  (0, r.jsx)(E.Z, {
+                                                                  (0, r.jsx)(N.Z, {
                                                                       guild: n,
-                                                                      ref: M,
+                                                                      ref: G,
                                                                   }),
                                                                   (0, r.jsx)(y.Z, {
                                                                       guild: n,
                                                                       searchState: U,
                                                                       compact: !0,
                                                                       onSelectRow: k,
-                                                                      onResetForNewMembers: G,
+                                                                      onResetForNewMembers: M,
                                                                   }),
                                                                   U !== O.po.SUCCESS_STILL_INDEXING &&
-                                                                      (0, r.jsx)(N.Z, { guildId: n.id }),
+                                                                      (0, r.jsx)(E.Z, { guildId: n.id }),
                                                               ],
                                                           })
                                                         : (0, r.jsx)("div", {

@@ -189,10 +189,10 @@ let u = {
     f = [21, 22, 23, 24, 25],
     _ = [26, 27, 28, 29, 30],
     p = {
-        [i.oNc.GUILD_TAGS_BADGE_PACK_PETS]: f,
-        [i.oNc.GUILD_TAGS_BADGE_PACK_FLEX]: _,
+        [i.GuildFeatures.GUILD_TAGS_BADGE_PACK_PETS]: f,
+        [i.GuildFeatures.GUILD_TAGS_BADGE_PACK_FLEX]: _,
     },
     h = {
-        [i.oNc.GUILD_TAGS_BADGE_PACK_PETS]: r.MB,
-        [i.oNc.GUILD_TAGS_BADGE_PACK_FLEX]: r.Vk,
+        [i.GuildFeatures.GUILD_TAGS_BADGE_PACK_PETS]: r.MB,
+        [i.GuildFeatures.GUILD_TAGS_BADGE_PACK_FLEX]: r.Vk,
     };

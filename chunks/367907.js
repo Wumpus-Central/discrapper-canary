@@ -93,7 +93,7 @@ function M(e) {
         guild_num_roles: r,
         guild_member_num_roles: null != a ? a.roles.length : 0,
         guild_member_perms: String(null != (t = g.Z.getGuildPermissions(n)) ? t : N.Hn),
-        guild_is_vip: n.features.has(P.oNc.VIP_REGIONS),
+        guild_is_vip: n.features.has(P.GuildFeatures.VIP_REGIONS),
         is_member: null != a,
         num_voice_channels_active: x(u),
     };

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685), n(539854), n(472816), n(794429);
+n.d(t, { Z: () => T }), n(388685), n(539854), n(472816), n(794429);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -6,24 +6,23 @@ var r = n(951288),
     s = n(392711),
     o = n.n(s),
     c = n(442837),
-    d = n(538534),
-    u = n(481060),
-    g = n(570140),
-    m = n(275759),
-    p = n(63063),
-    f = n(243730),
-    h = n(84058),
-    b = n(103576),
-    x = n(95242),
-    j = n(530198),
-    v = n(420966),
-    _ = n(203377),
-    C = n(981631),
-    O = n(856651),
-    y = n(388032),
-    N = n(144563),
+    d = n(481060),
+    u = n(570140),
+    g = n(275759),
+    m = n(63063),
+    p = n(243730),
+    f = n(84058),
+    h = n(103576),
+    b = n(95242),
+    x = n(530198),
+    j = n(420966),
+    v = n(203377),
+    _ = n(981631),
+    C = n(856651),
+    O = n(388032),
+    y = n(144563),
     E = n(21321);
-function I(e) {
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,59 +47,59 @@ function I(e) {
     }
     return e;
 }
-function S(e, t) {
-    return t !== m.O1.AND
+function I(e, t) {
+    return t !== g.O1.AND
         ? Object.values(o().groupBy(e, (e) => "".concat(e.connectionType, ":").concat(e.applicationId)))
         : 0 === e.length
           ? []
           : [[...e]];
 }
-function T(e) {
+function S(e) {
     let { handleAddVerificationClicked: t, locked: n } = e;
     return (0, r.jsxs)("div", {
-        className: N.headerNoConfigContainer,
+        className: y.headerNoConfigContainer,
         children: [
-            (0, r.jsx)(u.Heading, {
-                className: N.headerHeading,
+            (0, r.jsx)(d.Heading, {
+                className: y.headerHeading,
                 variant: "eyebrow",
-                children: y.intl.string(y.t.nMir29),
+                children: O.intl.string(O.t.nMir29),
             }),
-            (0, r.jsx)(u.Text, {
+            (0, r.jsx)(d.Text, {
                 variant: "text-sm/normal",
                 color: "header-secondary",
-                className: N.headerNoConfigSubtitle,
-                children: y.intl.format(y.t.q5f7tL, {
-                    helpdeskArticleUrl: p.Z.getArticleURL(C.BhN.CONNECTION_DETAILS_ADMIN),
+                className: y.headerNoConfigSubtitle,
+                children: O.intl.format(O.t.q5f7tL, {
+                    helpdeskArticleUrl: m.Z.getArticleURL(_.BhN.CONNECTION_DETAILS_ADMIN),
                 }),
             }),
-            (0, r.jsx)(u.Button, {
+            (0, r.jsx)(d.Button, {
                 disabled: n,
                 onClick: t,
-                text: y.intl.string(y.t["OSvW5+"]),
+                text: O.intl.string(O.t["OSvW5+"]),
                 fullWidth: !0,
                 variant: "primary",
             }),
         ],
     });
 }
-function P(e) {
+function T(e) {
     let { guild: t, role: n, locked: l, setSelectedSection: s, integrations: o } = e,
-        { headerHeight: P, headerRef: w } = (0, x.Z)(0),
-        { scrolledToTop: Z, handleScroll: R } = (0, v.V)(),
-        D = (0, c.e7)([f.Z], () => {
+        { headerHeight: T, headerRef: P } = (0, b.Z)(0),
+        { scrolledToTop: w, handleScroll: Z } = (0, j.V)(),
+        R = (0, c.e7)([p.Z], () => {
             var e;
-            return null == (e = f.Z.getRoleMemberCount(t.id)) ? void 0 : e[n.id];
+            return null == (e = p.Z.getRoleMemberCount(t.id)) ? void 0 : e[n.id];
         }, [n.id, t.id]),
-        A = (0, c.Wu)([b.Z], () => {
+        D = (0, c.Wu)([h.Z], () => {
             var e;
-            return null != (e = b.Z.getEditedRoleConnectionConfigurationsMap().get(n.id)) ? e : [];
+            return null != (e = h.Z.getEditedRoleConnectionConfigurationsMap().get(n.id)) ? e : [];
         }),
-        L = A.length > 1 ? m.O1.OR : m.O1.AND,
-        k = i.useMemo(() => (L === m.O1.OR ? A.flat() : null != A && A.length > 0 ? A[0] : []), [L, A]),
-        M = i.useMemo(() => new Set(k.map((e) => e.connectionType)), [k]);
+        A = D.length > 1 ? g.O1.OR : g.O1.AND,
+        L = i.useMemo(() => (A === g.O1.OR ? D.flat() : null != D && D.length > 0 ? D[0] : []), [A, D]),
+        k = i.useMemo(() => new Set(L.map((e) => e.connectionType)), [L]);
     function G(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-            r = [...k];
+            r = [...L];
         r.push({
             connectionType: e,
             connectionMetadataField: void 0,
@@ -108,90 +107,90 @@ function P(e) {
             operator: void 0,
             value: void 0,
         }),
-            (0, h.d_)(n.id, S(r, L));
+            (0, f.d_)(n.id, I(r, A));
     }
-    function U() {
-        g.Z.dispatch({
+    function M() {
+        u.Z.dispatch({
             type: "CONNECTIONS_GRID_MODAL_SHOW",
             onComplete: (e) => G(e),
-            excludedPlatformTypes: M,
+            excludedPlatformTypes: k,
             integrations: o,
-            onCompleteApplication: (e) => G(O.Kt, e),
+            onCompleteApplication: (e) => G(C.Kt, e),
         });
     }
-    let B = null;
-    if (0 === k.length)
-        B = (0, r.jsx)(T, {
-            handleAddVerificationClicked: U,
+    let U = null;
+    if (0 === L.length)
+        U = (0, r.jsx)(S, {
+            handleAddVerificationClicked: M,
             locked: l,
         });
-    else if (k.length > 0) {
-        var F;
+    else if (L.length > 0) {
+        var B;
         let e = null;
-        k.length < 10 &&
-            (e = (0, r.jsx)(u.Button, {
+        L.length < 10 &&
+            (e = (0, r.jsx)(d.Button, {
                 disabled: l,
-                onClick: U,
-                text: y.intl.string(y.t["OSvW5+"]),
-                icon: u.oFk,
+                onClick: M,
+                text: O.intl.string(O.t["OSvW5+"]),
+                icon: d.oFk,
                 fullWidth: !0,
                 variant: "secondary",
             })),
-            (B = (0, r.jsxs)(r.Fragment, {
+            (U = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    ((F = () => (0, h.d_)(n.id, [])),
+                    ((B = () => (0, f.d_)(n.id, [])),
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsxs)("div", {
-                                className: N.headerTitleContainer,
+                                className: y.headerTitleContainer,
                                 children: [
                                     (0, r.jsx)("div", {
-                                        className: N.headerTitleTextContainer,
-                                        children: (0, r.jsx)(u.Heading, {
+                                        className: y.headerTitleTextContainer,
+                                        children: (0, r.jsx)(d.Heading, {
                                             variant: "eyebrow",
-                                            children: y.intl.string(y.t.nMir29),
+                                            children: O.intl.string(O.t.nMir29),
                                         }),
                                     }),
-                                    (0, r.jsx)(u.Avr, {
+                                    (0, r.jsx)(d.Avr, {
                                         variant: "critical",
-                                        onClick: F,
+                                        onClick: B,
                                         disabled: l,
-                                        text: y.intl.string(y.t.ntW1cX),
+                                        text: O.intl.string(O.t.ntW1cX),
                                         textVariant: "text-sm/semibold",
                                     }),
                                 ],
                             }),
-                            (0, r.jsx)(u.Text, {
+                            (0, r.jsx)(d.Text, {
                                 variant: "text-sm/normal",
-                                children: y.intl.format(y.t.q5f7tL, {
-                                    helpdeskArticleUrl: p.Z.getArticleURL(C.BhN.CONNECTION_DETAILS_ADMIN),
+                                children: O.intl.format(O.t.q5f7tL, {
+                                    helpdeskArticleUrl: m.Z.getArticleURL(_.BhN.CONNECTION_DETAILS_ADMIN),
                                 }),
                             }),
                         ],
                     })),
                     (function (e, t, n, i, l) {
-                        let a = S(i, m.O1.OR);
-                        return (0, r.jsx)(d.E, {
-                            label: y.intl.string(y.t.Xs7PHR),
+                        let a = I(i, g.O1.OR);
+                        return (0, r.jsx)(d.FXm, {
+                            label: O.intl.string(O.t.Xs7PHR),
                             options: [
                                 {
-                                    name: y.intl.string(y.t["W3iY5+"]),
-                                    value: m.O1.OR,
+                                    name: O.intl.string(O.t["W3iY5+"]),
+                                    value: g.O1.OR,
                                 },
                                 {
-                                    name: y.intl.string(y.t.gHXS9P),
-                                    value: m.O1.AND,
+                                    name: O.intl.string(O.t.gHXS9P),
+                                    value: g.O1.AND,
                                 },
                             ],
                             onChange: (e) => l(i, e),
                             value: n,
                             disabled: e || a.length < 2,
                         });
-                    })(l, n.id, L, k, (e, t) => (0, h.d_)(n.id, S(e, t))),
+                    })(l, n.id, A, L, (e, t) => (0, f.d_)(n.id, I(e, t))),
                     (function (e, t, n, i, l) {
                         function a(n, r) {
                             let i = [];
-                            for (let t of e) i.push(I({}, t));
+                            for (let t of e) i.push(N({}, t));
                             if (null == n) {
                                 let t = e[r];
                                 null !== t && null == t.connectionMetadataField && null == t.operator && null == t.value
@@ -248,7 +247,7 @@ function P(e) {
                                               }),
                                         e
                                     );
-                                })(I({}, t[0].configuration), {
+                                })(N({}, t[0].configuration), {
                                     connectionMetadataField: void 0,
                                     operator: void 0,
                                     value: void 0,
@@ -260,10 +259,10 @@ function P(e) {
                             });
                         }
                         return (0, r.jsx)("div", {
-                            className: N.configurationsContainer,
+                            className: y.configurationsContainer,
                             children: Array.from(s.values()).map((e) =>
                                 (0, r.jsx)(
-                                    j.Z,
+                                    x.Z,
                                     {
                                         configurationItems: e,
                                         onConfigurationChange: a,
@@ -274,48 +273,48 @@ function P(e) {
                                 ),
                             ),
                         });
-                    })(k, (e) => (0, h.d_)(n.id, S(e, L)), l, n.id, o),
+                    })(L, (e) => (0, f.d_)(n.id, I(e, A)), l, n.id, o),
                     e,
                 ],
             }));
     }
-    return (0, r.jsx)(u.yWw, {
-        className: N.scroller,
-        style: { scrollPaddingTop: P },
-        onScroll: R,
+    return (0, r.jsx)(d.yWw, {
+        className: y.scroller,
+        style: { scrollPaddingTop: T },
+        onScroll: Z,
         children: (0, r.jsxs)("div", {
             className: E.contentWidth,
             children: [
                 (0, r.jsx)("div", {
-                    className: a()(E.header, E.stickyHeader, { [E.stickyHeaderElevated]: !Z }),
-                    ref: w,
-                    children: (0, r.jsx)(v.Z, {
+                    className: a()(E.header, E.stickyHeader, { [E.stickyHeaderElevated]: !w }),
+                    ref: P,
+                    children: (0, r.jsx)(j.Z, {
                         guild: t,
                         role: n,
-                        selectedSection: _.ZI.VERIFICATIONS,
+                        selectedSection: v.ZI.VERIFICATIONS,
                         setSelectedSection: s,
                     }),
                 }),
-                (null != D ? D : 0) > 0
+                (null != R ? R : 0) > 0
                     ? (0, r.jsxs)("div", {
-                          className: N.warningContainer,
+                          className: y.warningContainer,
                           children: [
-                              (0, r.jsx)(u.Mgn, {
+                              (0, r.jsx)(d.Mgn, {
                                   size: "custom",
                                   width: 20,
                                   height: 20,
                                   color: "currentColor",
-                                  className: N.warningIcon,
+                                  className: y.warningIcon,
                               }),
-                              (0, r.jsx)(u.Text, {
+                              (0, r.jsx)(d.Text, {
                                   variant: "text-sm/normal",
                                   color: "text-default",
-                                  children: y.intl.string(y.t["2aFeeX"]),
+                                  children: O.intl.string(O.t["2aFeeX"]),
                               }),
                           ],
                       })
                     : null,
-                B,
+                U,
             ],
         }),
     });

@@ -40,7 +40,7 @@ function f(e) {
                 isUserInCreatorMonetizationEligibleCountry: (0, r.DB)(),
                 shouldRestrictUpdatingRoleSubscriptionSettings: (0, i.cu)(c.id),
             }),
-        N =
+        E =
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -80,71 +80,71 @@ function f(e) {
                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                   }),
             t),
-        E = [];
-    E.push({
+        N = [];
+    N.push({
         section: m,
         label: "" !== c.name ? c.name : u.intl.string(u.t["154/bG"]),
     }),
-        E.push(g(d.pNK.PROFILE, N)),
-        E.push(g(d.pNK.TAG, N)),
-        E.push(g(d.pNK.ENGAGEMENT, N)),
-        E.push(g(d.pNK.BOOST_PERKS, N)),
+        N.push(g(d.pNK.PROFILE, E)),
+        N.push(g(d.pNK.TAG, E)),
+        N.push(g(d.pNK.ENGAGEMENT, E)),
+        N.push(g(d.pNK.BOOST_PERKS, E)),
         O &&
-            (E.push({ section: p }),
-            E.push({
+            (N.push({ section: p }),
+            N.push({
                 section: m,
                 label: u.intl.string(u.t.m6lkGx),
             }),
-            E.push(g(d.pNK.EMOJI, N)),
-            E.push(g(d.pNK.STICKERS, N)),
-            E.push(g(d.pNK.SOUNDBOARD, N))),
+            N.push(g(d.pNK.EMOJI, E)),
+            N.push(g(d.pNK.STICKERS, E)),
+            N.push(g(d.pNK.SOUNDBOARD, E))),
         (f || b || j || C) &&
-            (E.push({ section: p }),
-            E.push({
+            (N.push({ section: p }),
+            N.push({
                 section: m,
                 label: u.intl.string(u.t.bMAKMD),
             }),
-            E.push(g(d.pNK.MEMBERS, N)),
-            E.push(g(d.pNK.ROLES, N)),
-            E.push(g(d.pNK.INVITES, N)),
-            E.push(g(d.pNK.ACCESS, N))),
-        E.push({ section: p }),
-        E.push({
+            N.push(g(d.pNK.MEMBERS, E)),
+            N.push(g(d.pNK.ROLES, E)),
+            N.push(g(d.pNK.INVITES, E)),
+            N.push(g(d.pNK.ACCESS, E))),
+        N.push({ section: p }),
+        N.push({
             section: m,
             label: u.intl.string(u.t.wF3KJy),
         }),
-        E.push(g(d.pNK.INTEGRATIONS, N)),
-        E.push(g(d.pNK.APP_DIRECTORY, N));
-    let I = !c.features.has(d.oNc.COMMUNITY) && ((0, l.Nb)(c.id) || (0, l.ze)(c.id));
+        N.push(g(d.pNK.INTEGRATIONS, E)),
+        N.push(g(d.pNK.APP_DIRECTORY, E));
+    let I = !c.features.has(d.GuildFeatures.COMMUNITY) && ((0, l.Nb)(c.id) || (0, l.ze)(c.id));
     (f || h || x || I) &&
-        (E.push({ section: p }),
-        E.push({
+        (N.push({ section: p }),
+        N.push({
             section: m,
             label: u.intl.string(u.t["5tbTdX"]),
         }),
-        E.push(g(d.pNK.SAFETY, N)),
-        E.push(g(d.pNK.MODERATION, N)),
-        E.push(g(d.pNK.AUDIT_LOG, N)),
-        E.push(g(d.pNK.BANS, N)),
-        E.push(g(d.pNK.GUILD_AUTOMOD, N)));
-    let S = c.features.has(d.oNc.COMMUNITY) && v,
+        N.push(g(d.pNK.SAFETY, E)),
+        N.push(g(d.pNK.MODERATION, E)),
+        N.push(g(d.pNK.AUDIT_LOG, E)),
+        N.push(g(d.pNK.BANS, E)),
+        N.push(g(d.pNK.GUILD_AUTOMOD, E)));
+    let S = c.features.has(d.GuildFeatures.COMMUNITY) && v,
         T = y();
     return (
         (f || S || T) &&
-            (E.push({ section: p }),
-            E.push(g(d.pNK.COMMUNITY, N)),
-            E.push(g(d.pNK.ONBOARDING, N)),
-            E.push(g(d.pNK.ANALYTICS, N)),
-            E.push(g(d.pNK.COMMUNITY_WELCOME, N)),
-            E.push(g(d.pNK.DISCOVERY_LANDING_PAGE, N)),
-            E.push(g(d.pNK.ROLE_SUBSCRIPTIONS, N)),
-            E.push(g(d.pNK.GUILD_PRODUCTS, N)),
-            E.push(g(d.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE, N))),
-        E.push({ section: p }),
-        E.push(g(d.pNK.GUILD_PREMIUM, N)),
-        E.push(g(d.pNK.GUILD_TEMPLATES, N)),
-        E.push(g(d.pNK.DELETE, N)),
-        E.filter(o.lm)
+            (N.push({ section: p }),
+            N.push(g(d.pNK.COMMUNITY, E)),
+            N.push(g(d.pNK.ONBOARDING, E)),
+            N.push(g(d.pNK.ANALYTICS, E)),
+            N.push(g(d.pNK.COMMUNITY_WELCOME, E)),
+            N.push(g(d.pNK.DISCOVERY_LANDING_PAGE, E)),
+            N.push(g(d.pNK.ROLE_SUBSCRIPTIONS, E)),
+            N.push(g(d.pNK.GUILD_PRODUCTS, E)),
+            N.push(g(d.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE, E))),
+        N.push({ section: p }),
+        N.push(g(d.pNK.GUILD_PREMIUM, E)),
+        N.push(g(d.pNK.GUILD_TEMPLATES, E)),
+        N.push(g(d.pNK.DELETE, E)),
+        N.filter(o.lm)
     );
 }
 let h = { generateSections: f };

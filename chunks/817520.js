@@ -10,8 +10,8 @@ function c(e) {
         n = (0, a.ss)(e),
         c = (0, a.Gp)(),
         u =
-            (null == t ? void 0 : t.features.has(s.oNc.ROLE_SUBSCRIPTIONS_ENABLED)) === !0 &&
-            (null == t ? void 0 : t.features.has(s.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !1,
+            (null == t ? void 0 : t.features.has(s.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED)) === !0 &&
+            (null == t ? void 0 : t.features.has(s.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !1,
         d = (0, o.H2)(t);
     return (
         u &&

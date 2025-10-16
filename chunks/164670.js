@@ -17,7 +17,7 @@ function l(e) {
     return null != e && e.productLine === s.POd.SOCIAL_LAYER_GAME_ITEM;
 }
 function c(e) {
-    return null != e && e.features.has(s.oNc.SOCIAL_LAYER_STOREFRONT);
+    return null != e && e.features.has(s.GuildFeatures.SOCIAL_LAYER_STOREFRONT);
 }
 function u(e) {
     return {

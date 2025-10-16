@@ -79,14 +79,14 @@ function E(e, t, n) {
             }
             return S.includes(m)
                 ? 2
-                : (null == g ? void 0 : g.includes(h.oNc.MEMBER_VERIFICATION_GATE_ENABLED)) &&
-                    (null == g ? void 0 : g.includes(h.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) &&
+                : (null == g ? void 0 : g.includes(h.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED)) &&
+                    (null == g ? void 0 : g.includes(h.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL)) &&
                     (null != v || e.visibility === p.k.PUBLIC_WITH_RECRUITMENT) &&
                     !I
                   ? 3
                   : null != v
                     ? 5
-                    : (null == g ? void 0 : g.includes(h.oNc.DISCOVERABLE))
+                    : (null == g ? void 0 : g.includes(h.GuildFeatures.DISCOVERABLE))
                       ? 4
                       : null;
         }, [O, S, m, g, v, e.visibility, e.tag, I, t, b, T, y]);

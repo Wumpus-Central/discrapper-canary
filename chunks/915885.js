@@ -9,20 +9,20 @@ var r = n(951288),
     u = n(826581),
     d = n(246364),
     p = n(98493),
-    h = n(434479),
-    f = n(496675),
+    f = n(434479),
+    h = n(496675),
     g = n(527379),
     m = n(981631),
     b = n(388032);
 function _(e) {
     let { guild: t, selected: n } = e,
-        _ = (0, l.e7)([f.Z], () => f.Z.can(m.Plq.KICK_MEMBERS, t)),
-        y = (0, l.e7)([u.Z], () => u.Z.getSubmittedGuildJoinRequestTotal(t.id)),
-        O = _ && null != y ? y : 0;
+        _ = (0, l.e7)([h.Z], () => h.Z.can(m.Plq.KICK_MEMBERS, t)),
+        O = (0, l.e7)([u.Z], () => u.Z.getSubmittedGuildJoinRequestTotal(t.id)),
+        y = _ && null != O ? O : 0;
     i.useEffect(() => {
         _ &&
-            t.features.has(m.oNc.MEMBER_VERIFICATION_GATE_ENABLED) &&
-            t.features.has(m.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) &&
+            t.features.has(m.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED) &&
+            t.features.has(m.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL) &&
             c.Z.fetchGuildJoinRequests({
                 guildId: t.id,
                 status: d.wB.SUBMITTED,
@@ -35,7 +35,7 @@ function _(e) {
         j = (0, s.XL)(t.id, o.z.MEMBERS_LAUNCH_UPSELL);
     return (0, r.jsx)("div", {
         ref: j,
-        children: (0, r.jsx)(h.m, {
+        children: (0, r.jsx)(f.m, {
             id: "members-".concat(t.id),
             renderIcon: (e) =>
                 (0, r.jsx)(a.BFJ, {
@@ -46,7 +46,7 @@ function _(e) {
             text: b.intl.string(b.t.oclz3d),
             selected: n,
             onClick: v,
-            trailing: O > 0 ? (0, r.jsx)(a.mAB, { count: O }) : null,
+            trailing: y > 0 ? (0, r.jsx)(a.mAB, { count: y }) : null,
         }),
     });
 }

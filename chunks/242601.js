@@ -17,8 +17,8 @@ var r = n(951288),
     _ = n(110924),
     E = n(100527),
     O = n(906732),
-    y = n(785203),
-    v = n(211644),
+    v = n(785203),
+    y = n(211644),
     I = n(266454),
     C = n(492162),
     S = n(43740),
@@ -313,7 +313,7 @@ class em extends i.PureComponent {
         if (t || null == n)
             return (0, r.jsx)(er.Z, { withBannerPadding: null != n && null != this.getGuildBannerHash() });
         {
-            if (n.features.has(ei.oNc.HUB) && !l)
+            if (n.features.has(ei.GuildFeatures.HUB) && !l)
                 return (0, r.jsx)("div", {
                     className: ec.hubContainer,
                     children: (0, r.jsx)(Z.Z, {
@@ -423,7 +423,7 @@ class em extends i.PureComponent {
             eu(this, "handleCloseStudentHubPrivacySettingsTooltip", () => {
                 var e;
                 let t = (0, I.zu)(u.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
-                    n = null == (e = this.props.guild) ? void 0 : e.features.has(ei.oNc.HUB);
+                    n = null == (e = this.props.guild) ? void 0 : e.features.has(ei.GuildFeatures.HUB);
                 !t && n && (0, I.Q3)(u.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP, { dismissAction: ea.L.AUTO });
             }),
             eu(this, "handleCloseSubscribeTooltip", () => {
@@ -534,21 +534,21 @@ function eb(e) {
         m = (0, c.e7)([H.Z], () => H.Z.isUnavailable(n)),
         j = (0, c.e7)([K.default], () => K.default.getCurrentUser()),
         { enableStudyGroup: Z } = (0, x.s)(o),
-        w = (0, v.ZP)((e) => e.currentlyShown.has(u.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
+        w = (0, y.ZP)((e) => e.currentlyShown.has(u.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
         [k, M] = i.useState(!w),
         V = (0, _.Z)(n),
         { analyticsLocations: J } = (0, O.ZP)(E.Z.GUILD_HEADER);
     i.useEffect(() => {
         n !== V && M(!w);
     }, [n, V, w]);
-    let [$, ee] = (0, v.ZP)(
+    let [$, ee] = (0, y.ZP)(
             (e) => [
                 el.XN.some((t) => e.currentlyShown.has(t.dismissibleContentType)),
                 e.currentlyShownGroup.has(ea.R.GUILD_HEADER_TOOLTIPS),
             ],
             s.X,
         ),
-        et = (0, y.Z)(o),
+        et = (0, v.Z)(o),
         en = (0, f.s9z)(f.JQI),
         er = (0, c.e7)([z.Z], () => z.Z.hasLayers()),
         eo = (0, c.e7)([U.Z], () => U.Z.shouldShow(eh)),
@@ -558,21 +558,21 @@ function eb(e) {
             (null == o ? void 0 : o.premiumProgressBarEnabled) === !1 &&
             !X.s.isDisallowPopupsSet(),
         ec = (0, P.Z)(n),
-        eu = (null == o ? void 0 : o.features.has(ei.oNc.HUB)) === !0,
-        ed = g && (null == o ? void 0 : o.features.has(ei.oNc.DISCOVERABLE)) === !0,
+        eu = (null == o ? void 0 : o.features.has(ei.GuildFeatures.HUB)) === !0,
+        ed = g && (null == o ? void 0 : o.features.has(ei.GuildFeatures.DISCOVERABLE)) === !0,
         ep = (0, c.e7)(
             [A.Z, z.Z],
             () => null != o && null != j && g && !z.Z.hasLayers() && A.Z.shouldShowGuildTemplateDirtyTooltip(n),
         ),
         ef = (0, c.e7)([G.Z], () => G.Z.getChannel(a)),
         { isPopoutOpen: eg } = (0, S.y)(),
-        eb = null != (t = null == o ? void 0 : o.features.has(ei.oNc.COMMUNITY)) && t,
+        eb = null != (t = null == o ? void 0 : o.features.has(ei.GuildFeatures.COMMUNITY)) && t,
         e_ = Q.ZP.isNewUser(j),
         eE = k && !e_;
     (0, T.Z)(o);
     let eO = (0, I.Nj)(u.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
-        ey = (0, L.Z)(n),
-        ev = (0, N.Z)(n),
+        ev = (0, L.Z)(n),
+        ey = (0, N.Z)(n),
         eI = (0, c.e7)([q.Z], () => q.Z.getChannelId()),
         eC = (0, c.e7)([Y.Z], () => Y.Z.desyncedVoiceStatesCount),
         eS = (0, D.Z)(n);
@@ -598,8 +598,8 @@ function eb(e) {
         showRoleSubscriptionUpsell: ec,
         showHubPrivacySettingsTooltip: eu,
         showNewUnreadsBar: eb,
-        showMediaChannelUpsell: ey,
-        showTierTemplatesUpsell: ev,
+        showMediaChannelUpsell: ev,
+        showTierTemplatesUpsell: ey,
         isHeaderPopoutOpen: eg,
         enableStudyGroup: Z,
         isGuildHeaderDismissibleTooltipShown: ee,

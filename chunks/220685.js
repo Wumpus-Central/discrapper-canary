@@ -24,32 +24,32 @@ let y = [
         14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 2196594, 4752414, 13064760, 13058360, 12401000,
         12933021, 5659039, 4092591, 5868359, 6586142, 8876063, 8484432, 9979976, 5269106, 3421236,
     ],
-    N =
+    E =
         /^(https?:\/\/)?(?:m\.|www\.)?(youtu\.be|youtube\.com)\/(embed\/|v\/|watch\?v=|watch\?.+&v=)?((\w|-){11})(?:\S+)?$/,
-    E = y[4],
+    N = y[4],
     I = (e) => {
         var t, n;
         let { guild: l, canEnable: s } = e,
             c = (0, v.YB)(l.id),
             { loading: b, updateSubscriptionsSettings: j } = (0, v.QV)(),
-            [I, S] = i.useState(l.features.has(_.oNc.CREATOR_STORE_PAGE)),
-            [T, P] = i.useState(null != (t = null == c ? void 0 : c.store_page_primary_color) ? t : E),
+            [I, S] = i.useState(l.features.has(_.GuildFeatures.CREATOR_STORE_PAGE)),
+            [T, P] = i.useState(null != (t = null == c ? void 0 : c.store_page_primary_color) ? t : N),
             [w, Z] = i.useState(null == c ? void 0 : c.store_page_trailer_url),
-            R = null == w || null != w.match(N),
+            R = null == w || null != w.match(E),
             [D, A] = i.useState(null != (n = null == c ? void 0 : c.store_page_show_subscriber_count) && n),
             L = i.useRef(null == c ? void 0 : c.store_page_slug).current,
             k =
-                I !== l.features.has(_.oNc.CREATOR_STORE_PAGE) ||
-                ((null == c ? void 0 : c.store_page_primary_color) == null && T !== E) ||
+                I !== l.features.has(_.GuildFeatures.CREATOR_STORE_PAGE) ||
+                ((null == c ? void 0 : c.store_page_primary_color) == null && T !== N) ||
                 ((null == c ? void 0 : c.store_page_primary_color) != null &&
                     T !== (null == c ? void 0 : c.store_page_primary_color)) ||
                 w !== (null == c ? void 0 : c.store_page_trailer_url) ||
                 (null != D && D !== (null == c ? void 0 : c.store_page_show_subscriber_count)),
-            M = async () => {
+            G = async () => {
                 o()(null != c, "Settings must be defined");
                 let e = {};
-                I !== l.features.has(_.oNc.CREATOR_STORE_PAGE) && (e.store_page_enabled = I),
-                    (((null == c ? void 0 : c.store_page_primary_color) == null && T !== E) ||
+                I !== l.features.has(_.GuildFeatures.CREATOR_STORE_PAGE) && (e.store_page_enabled = I),
+                    (((null == c ? void 0 : c.store_page_primary_color) == null && T !== N) ||
                         ((null == c ? void 0 : c.store_page_primary_color) != null &&
                             T !== (null == c ? void 0 : c.store_page_primary_color))) &&
                         (e.store_page_primary_color = T),
@@ -88,7 +88,7 @@ let y = [
                                 })({ enabled: I }, (0, f.hH)(l.id)),
                             ));
             },
-            G = _.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(L),
+            M = _.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(L),
             U = null != w && w === (null == c ? void 0 : c.store_page_trailer_url),
             { shouldRestrictUpdatingCreatorMonetizationSettings: B } = (0, h.gX)(l.id),
             F = B || !R,
@@ -124,7 +124,7 @@ let y = [
                     disabled: B,
                     children: [
                         (0, r.jsx)(g.Z, {
-                            value: G,
+                            value: M,
                             className: a()({ [O.disabled]: B }),
                         }),
                         (0, r.jsx)("div", {
@@ -133,7 +133,7 @@ let y = [
                             children: (0, r.jsx)(u.Button, {
                                 variant: "primary",
                                 text: C.intl.string(C.t.CaOYqa),
-                                onClick: () => (0, p.Z)(G),
+                                onClick: () => (0, p.Z)(M),
                                 disabled: B,
                             }),
                         }),
@@ -155,7 +155,7 @@ let y = [
                             (0, r.jsx)(u.zH8, {
                                 colors: y,
                                 customColor: null,
-                                defaultColor: E,
+                                defaultColor: N,
                                 value: T,
                                 onChange: (e) => P(e),
                                 renderDefaultButton: () => null,
@@ -200,12 +200,12 @@ let y = [
                                 submitting: b,
                                 onReset: () => {
                                     var e, t;
-                                    S(l.features.has(_.oNc.CREATOR_STORE_PAGE)),
-                                        P(null != (e = null == c ? void 0 : c.store_page_primary_color) ? e : E),
+                                    S(l.features.has(_.GuildFeatures.CREATOR_STORE_PAGE)),
+                                        P(null != (e = null == c ? void 0 : c.store_page_primary_color) ? e : N),
                                         Z(null == c ? void 0 : c.store_page_trailer_url),
                                         A(null != (t = null == c ? void 0 : c.store_page_show_subscriber_count) && t);
                                 },
-                                onSave: M,
+                                onSave: G,
                                 disabled: F,
                             }),
                         }),

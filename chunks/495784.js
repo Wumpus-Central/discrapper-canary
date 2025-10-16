@@ -21,7 +21,7 @@ let _ = {
                 if ((0, a.Z)()) return;
                 let e = u.default.getCurrentUser(),
                     r = null != e && 7 > l()().diff(l()(g.default.extractTimestamp(e.id)), "days"),
-                    c = null != d.Z.getGuildsArray().find((e) => e.features.has(p.oNc.HUB)),
+                    c = null != d.Z.getGuildsArray().find((e) => e.features.has(p.GuildFeatures.HUB)),
                     m = !(0, s.zu)(i.z.HUB_BACK_TO_SCHOOL_UPSELL);
                 !(r || t() || c || !m) &&
                     (0, f.b)() &&

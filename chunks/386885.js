@@ -11,8 +11,8 @@ var n,
         (n.ELIGIBLE_ENABLED = "eligible_enabled"),
         n);
 function s(e, i) {
-    let t = e.features.has(l.oNc.VERIFIED),
-        n = e.features.has(l.oNc.DISCOVERABLE);
+    let t = e.features.has(l.GuildFeatures.VERIFIED),
+        n = e.features.has(l.GuildFeatures.DISCOVERABLE);
     if (t) return n ? "eligible_enabled" : "eligible_disabled";
     if (n) {
         let e = i.sufficientWithoutGracePeriod && null != i.gracePeriodEndDate && i.gracePeriodEndDate > new Date();

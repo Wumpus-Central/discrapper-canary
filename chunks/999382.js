@@ -398,7 +398,7 @@ function ez(e) {
     let { guildId: t } = e;
     null != s &&
         t === s.id &&
-        (s = (0, v.t8)(s, "features", s.features.union(new Set([M.oNc.PIN_PERMISSION_MIGRATION_COMPLETE]))));
+        (s = (0, v.t8)(s, "features", s.features.union(new Set([M.GuildFeatures.PIN_PERMISSION_MIGRATION_COMPLETE]))));
 }
 function eq(e) {
     var t, n, r, i, a, o, l, c, u, d;

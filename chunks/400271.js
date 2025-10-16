@@ -24,7 +24,7 @@ class g extends (r = l.ZP.Store) {
             null != t &&
             t >= d.U3 &&
             u.Z.can(p.Plq.ADMINISTRATOR, e) &&
-            !e.features.has(p.oNc.COMMUNITY)
+            !e.features.has(p.GuildFeatures.COMMUNITY)
         );
     }
 }

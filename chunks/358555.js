@@ -161,7 +161,7 @@ function A(e) {
               disableColor: !1,
               disableBoostClick: n,
           })
-        : t.features.has(g.oNc.VERIFIED) || t.features.has(g.oNc.PARTNERED)
+        : t.features.has(g.GuildFeatures.VERIFIED) || t.features.has(g.GuildFeatures.PARTNERED)
           ? (0, r.jsx)(S, {
                 guild: t,
                 disableColor: !i,

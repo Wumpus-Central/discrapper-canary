@@ -7,8 +7,10 @@ var r = n(951288),
     o = n(594174),
     c = n(981631);
 function d(e) {
-    let t = (null == e ? void 0 : e.features.has(c.oNc.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING)) === !0,
-        d = (null == e ? void 0 : e.features.has(c.oNc.ROLE_SUBSCRIPTIONS_ENABLED)) === !0,
+    let t =
+            (null == e ? void 0 : e.features.has(c.GuildFeatures.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING)) ===
+            !0,
+        d = (null == e ? void 0 : e.features.has(c.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED)) === !0,
         u = (0, l.e7)([o.default], () => o.default.getCurrentUser()),
         g = null != e && (0, s.eM)(e, u);
     i.useEffect(() => {

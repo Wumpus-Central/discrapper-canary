@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(953529);
+n.d(t, { Z: () => G }), n(953529);
 var r = n(951288),
     i = n(442837),
     l = n(28664),
@@ -21,8 +21,8 @@ var r = n(951288),
     C = n(303737),
     O = n(568074),
     y = n(411667),
-    N = n(822531),
-    E = n(909656),
+    E = n(822531),
+    N = n(909656),
     I = n(210591),
     S = n(927731),
     T = n(798680),
@@ -43,7 +43,7 @@ function L(e) {
             (e) => null != e && 0 !== e.color,
         ),
         c = a.some((e) => e.role_benefits.benefits.length > 0),
-        d = null != t && n.features.has(w.oNc.ROLE_SUBSCRIPTIONS_ENABLED),
+        d = null != t && n.features.has(w.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED),
         u = [
             {
                 title: D.intl.string(D.t.p2Rsdn),
@@ -113,11 +113,11 @@ function k(e) {
           })
         : null;
 }
-function M(e) {
+function G(e) {
     let t,
         { guild: n, application: l } = e,
         a = (0, i.e7)([d.Z], () => d.Z.getProps().subsection),
-        s = null != l && n.features.has(w.oNc.ROLE_SUBSCRIPTIONS_ENABLED);
+        s = null != l && n.features.has(w.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED);
     return (
         (0, o.P)(n),
         (t = s ? (a === w.KsC.ROLE_SUBSCRIPTION_EMOJI ? T.ue.EMOJIS : T.ue.TIERS) : T.ue.PAYMENT),
@@ -128,7 +128,7 @@ function M(e) {
                 guildId: n.id,
                 children: (0, r.jsx)(T.M7, {
                     initialTab: t,
-                    children: (0, r.jsx)(G, {
+                    children: (0, r.jsx)(M, {
                         guild: n,
                         application: l,
                     }),
@@ -137,25 +137,25 @@ function M(e) {
         })
     );
 }
-function G(e) {
+function M(e) {
     let t,
         { guild: n, application: o } = e,
-        d = null != o && n.features.has(w.oNc.ROLE_SUBSCRIPTIONS_ENABLED),
+        d = null != o && n.features.has(w.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED),
         { currentTab: p, setCurrentTab: v } = (0, T.dw)(),
         _ = (0, j.f)(),
         I = (0, i.e7)([b.default], () => b.default.getCurrentUser()),
         R = (0, O.Z)(n.id),
-        M = null != n && (0, f.eM)(n, I);
+        G = null != n && (0, f.eM)(n, I);
     if (!_) return (0, r.jsx)(a.$jN, {});
     switch (p) {
         case T.ue.BASIC_INFO:
-            t = (0, r.jsx)(E.Z, { guild: n });
+            t = (0, r.jsx)(N.Z, { guild: n });
             break;
         case T.ue.TIERS:
             t = (0, r.jsx)(S.Z, { guildId: n.id });
             break;
         case T.ue.PAYMENT:
-            t = (0, r.jsx)(N.Z, { guild: n });
+            t = (0, r.jsx)(E.Z, { guild: n });
             break;
         case T.ue.EMOJIS:
             t = (0, r.jsx)(P.Z, { guild: n });
@@ -213,7 +213,7 @@ function G(e) {
                                         disabled: !d,
                                         children: D.intl.string(D.t.XBkDoK),
                                     }),
-                                    M
+                                    G
                                         ? (0, r.jsx)(a.njP.Item, {
                                               className: A.__invalid_tabBarItem,
                                               id: T.ue.PAYMENT,

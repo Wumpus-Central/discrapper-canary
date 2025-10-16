@@ -9,8 +9,8 @@ var r = n(399606),
     u = n(460347),
     d = n(994592),
     p = n(265418),
-    h = n(398758),
-    f = n(755458),
+    f = n(398758),
+    h = n(755458),
     g = n(639777),
     m = n(164670),
     b = n(330791),
@@ -28,13 +28,13 @@ function y(e) {
         S = (0, s.PE)(e.id),
         I = (0, o.n2)(e.id),
         P = [],
-        N = e.features.has(O.oNc.HUB),
-        Z = e.features.has(O.oNc.COMMUNITY),
-        w = (0, b.l)(!(0, h.r1)(e.id)),
-        T = e.features.has(O.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY),
+        N = e.features.has(O.GuildFeatures.HUB),
+        Z = e.features.has(O.GuildFeatures.COMMUNITY),
+        w = (0, b.l)(!(0, f.r1)(e.id)),
+        T = e.features.has(O.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY),
         A = (0, g.Z)(e.id),
-        R = (0, f.BU)(e.id, "useGuildActionRows"),
-        D = e.features.has(O.oNc.GAME_SERVERS);
+        R = (0, h.BU)(e.id, "useGuildActionRows"),
+        D = e.features.has(O.GuildFeatures.GAME_SERVERS);
     return (
         N && P.push(_.z.GUILD_HUB_HEADER_OPTIONS),
         !S && x && E && null != C && C.length > 0
@@ -46,7 +46,7 @@ function y(e) {
         y && P.push(_.z.GUILD_ROLE_SUBSCRIPTIONS),
         v && P.push(_.z.GUILD_SHOP),
         j && P.push(_.z.GUILD_GAME_SHOP),
-        ((I && (Z || T)) || (n && e.features.has(O.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL))) &&
+        ((I && (Z || T)) || (n && e.features.has(O.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL))) &&
             P.push(_.z.GUILD_MOD_DASH_MEMBER_SAFETY),
         A && P.push(_.z.GUILD_BOOSTS),
         R && D && P.push(_.z.GAME_SERVERS),

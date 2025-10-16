@@ -49,7 +49,7 @@ class b extends r.Z {
                     return;
                 let r = o.Z.getGuild(t);
                 null != r &&
-                    r.features.has(_.oNc.COMMUNITY) &&
+                    r.features.has(_.GuildFeatures.COMMUNITY) &&
                     d.Z.shouldFetchPrompts(g, 8 * l.Z.Millis.HOUR) &&
                     (0, u.rj)(g),
                     this._openOnboardingIfIncomplete(g, n);
@@ -62,7 +62,7 @@ class b extends r.Z {
                 var n, r;
                 if ((0, f.hz)(e)) return void (0, i.uL)(_.Z5c.CHANNEL(e, p.oC.GUILD_ONBOARDING));
                 let s = o.Z.getGuild(e);
-                if (null == s || !s.features.has(_.oNc.GUILD_ONBOARDING)) return;
+                if (null == s || !s.features.has(_.GuildFeatures.GUILD_ONBOARDING)) return;
                 let l = a.ZP.getSelfMember(e);
                 !(null == l || (0, c.yE)(null != (n = l.flags) ? n : 0, h.q.COMPLETED_ONBOARDING)) &&
                     (0, c.yE)(null != (r = l.flags) ? r : 0, h.q.STARTED_ONBOARDING) &&

@@ -25,8 +25,8 @@ var i = n(951288),
     y = n(622822),
     C = n(933557),
     S = n(541716),
-    N = n(752305),
-    O = n(893718),
+    O = n(752305),
+    N = n(893718),
     Z = n(409513),
     E = n(600164),
     w = n(313201),
@@ -43,8 +43,8 @@ var i = n(951288),
     B = n(747212),
     H = n(210887),
     V = n(131704),
-    U = n(601964),
-    G = n(314897),
+    G = n(601964),
+    U = n(314897),
     W = n(388610),
     F = n(430824),
     z = n(496675),
@@ -198,7 +198,7 @@ let em = (0, w.hQ)(),
             },
         };
     })(x.Z);
-function eN(e) {
+function eO(e) {
     let { onEmojiPicked: t, channel: n, guildId: r } = e,
         s = l.useRef(null),
         a = l.useCallback(
@@ -248,7 +248,7 @@ function eN(e) {
         },
     });
 }
-class eO extends l.PureComponent {
+class eN extends l.PureComponent {
     componentDidMount() {
         null == this.props.regions && null != this.props.guild && f.Z.fetchRegions(this.props.guild.id);
     }
@@ -259,7 +259,7 @@ class eO extends l.PureComponent {
             r !== this.state.textTopicValue &&
             this.setState({
                 textTopicValue: r,
-                richTopicValue: (0, N.JM)(r),
+                richTopicValue: (0, O.JM)(r),
             });
     }
     getError(e) {
@@ -295,7 +295,7 @@ class eO extends l.PureComponent {
                 canSendMessages: j,
                 isThreadModerator: v,
                 canManageThread: C,
-                guild: N,
+                guild: O,
                 isForumPost: E,
                 isOwner: w,
                 showAdvancedSlowModeSetting: T,
@@ -307,7 +307,7 @@ class eO extends l.PureComponent {
             k = V.TK.has(e.type)
                 ? (0, i.jsx)(p.gNt, {
                       label: R ? ec.intl.string(ec.t.yR6Hwc) : ec.intl.string(ec.t.X8jMDg),
-                      children: (0, i.jsx)(O.ZP, {
+                      children: (0, i.jsx)(N.ZP, {
                           className: s()(ed.topicContainer, { [ed.disabled]: !x }),
                           innerClassName: s()(ed.topic, { [ed.disabled]: !x }),
                           characterCountClassName: ed.topicCharacterCount,
@@ -347,7 +347,7 @@ class eO extends l.PureComponent {
                           showCharacterCount: !0,
                       })
                     : null,
-            G = e.isForumLikeChannel()
+            U = e.isForumLikeChannel()
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)(p.izJ, {}),
@@ -573,7 +573,7 @@ class eO extends l.PureComponent {
                           }),
                       })
                     : null,
-            eu = null != N && (0, U.Y2)(N),
+            eu = null != O && (0, G.Y2)(O),
             eh = V.ov.has(e.type)
                 ? (0, i.jsxs)("div", {
                       children: [
@@ -595,10 +595,10 @@ class eO extends l.PureComponent {
                 : null,
             ej =
                 V.Y0.has(e.type) &&
-                null != N &&
-                N.features.has(el.oNc.NEWS) &&
-                e.id !== (null == N ? void 0 : N.rulesChannelId) &&
-                e.id !== (null == N ? void 0 : N.publicUpdatesChannelId)
+                null != O &&
+                O.features.has(el.GuildFeatures.NEWS) &&
+                e.id !== (null == O ? void 0 : O.rulesChannelId) &&
+                e.id !== (null == O ? void 0 : O.publicUpdatesChannelId)
                     ? (0, i.jsxs)(p.Kqy, {
                           gap: 4,
                           children: [
@@ -641,8 +641,9 @@ class eO extends l.PureComponent {
                       onChange: this.handleChannelSummariesToggled,
                       checked:
                           !e.hasFlag(er.zZ.SUMMARIES_DISABLED) &&
-                          (null == N ? void 0 : N.features.has(el.oNc.SUMMARIES_ENABLED_BY_USER)),
-                      disabled: !x || !(null == N ? void 0 : N.features.has(el.oNc.SUMMARIES_ENABLED_BY_USER)),
+                          (null == O ? void 0 : O.features.has(el.GuildFeatures.SUMMARIES_ENABLED_BY_USER)),
+                      disabled:
+                          !x || !(null == O ? void 0 : O.features.has(el.GuildFeatures.SUMMARIES_ENABLED_BY_USER)),
                   })
                 : null,
             eS = e.isMediaChannel()
@@ -661,7 +662,7 @@ class eO extends l.PureComponent {
               : _
                 ? ((f = ec.intl.string(ec.t.j3XWjI)), (m = "thread-name"))
                 : ((f = ec.intl.string(ec.t.PVbHDg)), (m = "channel-name"));
-        let eO = w ? j : x;
+        let eN = w ? j : x;
         return (0, i.jsxs)(p.Kqy, {
             gap: 24,
             children: [
@@ -675,12 +676,12 @@ class eO extends l.PureComponent {
                     error: this.getError("name"),
                     name: m,
                     autoFocus: !0,
-                    disabled: !eO,
+                    disabled: !eN,
                     maxLength: el.HN8,
-                    trailing: eO
+                    trailing: eN
                         ? {
                               type: "emoji",
-                              button: (0, i.jsx)(eN, {
+                              button: (0, i.jsx)(eO, {
                                   onEmojiPicked: this.insertEmojiAtPosition,
                                   channel: e,
                                   guildId: null == e ? void 0 : e.guild_id,
@@ -690,7 +691,7 @@ class eO extends l.PureComponent {
                 }),
                 k,
                 H,
-                G,
+                U,
                 W,
                 K,
                 ee,
@@ -1019,7 +1020,7 @@ class eO extends l.PureComponent {
         let r = null != (n = null == (t = this.props.channel) ? void 0 : t.topic) ? n : "";
         this.state = {
             textTopicValue: r,
-            richTopicValue: (0, N.JM)(r),
+            richTopicValue: (0, O.JM)(r),
             topicFocused: !1,
             updateNameInputCursorPosition: !1,
         };
@@ -1040,7 +1041,7 @@ function eZ() {
             canSendMessages: z.Z.can(el.Plq.SEND_MESSAGES, t),
         })),
         p = (0, C.ZP)(t),
-        m = G.default.getId(),
+        m = U.default.getId(),
         f = (0, I.v)(),
         b = null == t ? void 0 : t.id,
         x = (0, v.ts)(t, !1, !0),
@@ -1054,7 +1055,7 @@ function eZ() {
             },
             [b, f],
         );
-    return (0, i.jsx)(eO, {
+    return (0, i.jsx)(eN, {
         errors: e,
         channel: t,
         channelName: p,

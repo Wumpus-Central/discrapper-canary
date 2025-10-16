@@ -3,8 +3,8 @@ var n = r(951288),
     i = r(647438),
     l = r(442837),
     o = r(755721),
-    c = r(481060),
-    a = r(239091),
+    a = r(481060),
+    c = r(239091),
     s = r(410575),
     u = r(881052),
     d = r(299206),
@@ -22,7 +22,7 @@ function w(t) {
         x = (0, p.Vb)(e),
         v = (function (t) {
             let { editingRule: e, setEditingRule: r } = (0, y.V)();
-            return (0, n.jsx)(c.sNh, {
+            return (0, n.jsx)(a.sNh, {
                 id: "edit-automod-rule",
                 label: m.intl.string(m.t.uQq6Pz),
                 action: () => {
@@ -33,41 +33,41 @@ function w(t) {
         })(e),
         P = (function (t) {
             let { setEditingRule: e } = (0, y.V)(),
-                [r, a] = i.useState(!1),
+                [r, c] = i.useState(!1),
                 { removeRule: s } = (0, f.pH)(t.guildId),
                 d = (0, l.e7)([b.Z], () => b.Z.getGuild(t.guildId)),
                 p = async () => {
                     if (!r && (await (0, j.gK)(t.name))) {
-                        a(!0);
+                        c(!0);
                         try {
                             await (0, g.mm)(t.id, t.guildId), e(null), s(t.id, t.guildId);
                         } catch (e) {
                             var n;
                             let t = new u.Hx(e);
-                            (0, c.showToast)(
-                                (0, c.createToast)(
+                            (0, a.showToast)(
+                                (0, a.createToast)(
                                     null != (n = t.getAnyErrorMessage()) ? n : m.intl.string(m.t.fEptJC),
-                                    c.ToastType.FAILURE,
+                                    a.ToastType.FAILURE,
                                 ),
                             );
                         } finally {
-                            a(!1);
+                            c(!1);
                         }
                     }
                 },
                 w =
                     t.triggerType === O.fX.MENTION_SPAM &&
                     (null == d ? void 0 : d.features) != null &&
-                    d.features.has(h.oNc.COMMUNITY);
-            return (0, n.jsx)(c.sNh, {
+                    d.features.has(h.GuildFeatures.COMMUNITY);
+            return (0, n.jsx)(a.sNh, {
                 id: "delete-automod-rule",
                 label: m.intl.string(m.t["92m/09"]),
                 action: w
                     ? () => {
-                          (0, c.h7j)((t) => {
+                          (0, a.h7j)((t) => {
                               var e, r;
                               return (0, n.jsx)(
-                                  c.ConfirmModal,
+                                  a.ConfirmModal,
                                   ((e = (function (t) {
                                       for (var e = 1; e < arguments.length; e++) {
                                           var r = null != arguments[e] ? arguments[e] : {},
@@ -102,7 +102,7 @@ function w(t) {
                                   )),
                                   (r = r =
                                       {
-                                          children: (0, n.jsx)(c.Text, {
+                                          children: (0, n.jsx)(a.Text, {
                                               variant: "text-md/normal",
                                               children: m.intl.string(m.t.XMdBLy),
                                           }),
@@ -133,16 +133,16 @@ function w(t) {
     return (0, n.jsx)(s.Z, {
         context: r,
         object: h.qAy.CONTEXT_MENU,
-        children: (0, n.jsxs)(c.v2r, {
+        children: (0, n.jsxs)(a.v2r, {
             navId: "automod-rule-context",
-            onClose: a.Zy,
+            onClose: c.Zy,
             "aria-label": m.intl.string(m.t.uT36Sk),
             onSelect: w,
             children: [
-                (0, n.jsxs)(c.kSQ, {
+                (0, n.jsxs)(a.kSQ, {
                     children: [v, x && P],
                 }),
-                x && (0, n.jsx)(c.kSQ, { children: T }),
+                x && (0, n.jsx)(a.kSQ, { children: T }),
             ],
         }),
     });

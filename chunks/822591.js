@@ -27,8 +27,8 @@ var r = n(951288),
     C = n(434404),
     O = n(999382),
     y = n(906512),
-    N = n(929834),
-    E = n(981631),
+    E = n(929834),
+    N = n(981631),
     I = n(388032),
     S = n(560818),
     T = n(922905);
@@ -122,7 +122,7 @@ let Z = "dismissedCommunityFeaturesUpsell",
         (0, m.ZP)(() => {
             s.tn
                 .get({
-                    url: E.ANM.GUILD_ADMIN_SERVER_ELIGIBILITY(l.id),
+                    url: N.ANM.GUILD_ADMIN_SERVER_ELIGIBILITY(l.id),
                     rejectWithError: !0,
                 })
                 .then((e) => {
@@ -131,12 +131,12 @@ let Z = "dismissedCommunityFeaturesUpsell",
                 .catch(() => j(!1));
         });
         let v = (0, a.e7)([x.Z], () => x.Z.getGuild("942897714956472401")),
-            _ = l.features.has(E.oNc.COMMUNITY) && p >= 1000 && h && null == v;
+            _ = l.features.has(N.GuildFeatures.COMMUNITY) && p >= 1000 && h && null == v;
         if (t && n && !_) return null;
         let O = async () => {
             try {
                 let e = await s.tn.post({
-                    url: E.ANM.JOIN_ADMIN_SERVER(l.id),
+                    url: N.ANM.JOIN_ADMIN_SERVER(l.id),
                     oldFormErrors: !0,
                     rejectWithError: !0,
                 });
@@ -209,7 +209,7 @@ let Z = "dismissedCommunityFeaturesUpsell",
                                             size: "sm",
                                             text: I.intl.string(I.t["S/DfiY"]),
                                             onClick: () => {
-                                                C.Z.setSection(E.pNK.ONBOARDING);
+                                                C.Z.setSection(N.pNK.ONBOARDING);
                                             },
                                         }),
                                     }),
@@ -223,7 +223,7 @@ let Z = "dismissedCommunityFeaturesUpsell",
                                             size: "sm",
                                             text: I.intl.string(I.t["0kmJd3"]),
                                             onClick: () => {
-                                                C.Z.setSection(E.pNK.ACCESS, E.KsC.ACCESS_DISCOVERABLE);
+                                                C.Z.setSection(N.pNK.ACCESS, N.KsC.ACCESS_DISCOVERABLE);
                                             },
                                         }),
                                     }),
@@ -235,7 +235,7 @@ let Z = "dismissedCommunityFeaturesUpsell",
                                       size: "sm",
                                       text: I.intl.string(I.t.BQIYTU),
                                       onClick: () => {
-                                          C.Z.setSection(E.pNK.ANALYTICS);
+                                          C.Z.setSection(N.pNK.ANALYTICS);
                                       },
                                   }),
                               }),
@@ -247,18 +247,18 @@ let Z = "dismissedCommunityFeaturesUpsell",
     A = () => {
         let e = (0, a.e7)([O.Z], () => O.Z.getGuild()),
             { canManageGuild: t, isGuildAdmin: n } = (0, a.cj)([j.Z], () => ({
-                canManageGuild: j.Z.can(E.Plq.MANAGE_GUILD, e),
-                isGuildAdmin: j.Z.can(E.Plq.ADMINISTRATOR, e),
+                canManageGuild: j.Z.can(N.Plq.MANAGE_GUILD, e),
+                isGuildAdmin: j.Z.can(N.Plq.ADMINISTRATOR, e),
             })),
             s = (0, a.e7)([h.ZP], () => (null != e ? h.ZP.getChannels(e.id) : null)),
-            d = i.useMemo(N.jb, []),
+            d = i.useMemo(E.jb, []),
             g = !0 !== o.K.get(Z);
         if (null == e) return null;
         let m = [];
         null != s &&
             s[h.sH].forEach((e) => {
                 let { channel: t } = e;
-                t.type === E.d4z.GUILD_TEXT &&
+                t.type === N.d4z.GUILD_TEXT &&
                     m.push({
                         value: t.id,
                         label: (0, p.F6)(t, _.default, v.Z, !0),
@@ -267,9 +267,9 @@ let Z = "dismissedCommunityFeaturesUpsell",
         let f = () => {
                 if (null == e) return;
                 let t = new Set(e.features);
-                t.delete(E.oNc.COMMUNITY),
-                    t.delete(E.oNc.DISCOVERABLE),
-                    t.delete(E.oNc.PREVIEW_ENABLED),
+                t.delete(N.GuildFeatures.COMMUNITY),
+                    t.delete(N.GuildFeatures.DISCOVERABLE),
+                    t.delete(N.GuildFeatures.PREVIEW_ENABLED),
                     C.Z.updateGuild({
                         features: t,
                         rulesChannelId: null,
@@ -288,8 +288,8 @@ let Z = "dismissedCommunityFeaturesUpsell",
                 }),
                 g
                     ? (0, r.jsx)(D, {
-                          discoveryEnabled: e.features.has(E.oNc.DISCOVERABLE),
-                          onboardingEnabled: e.features.has(E.oNc.GUILD_ONBOARDING),
+                          discoveryEnabled: e.features.has(N.GuildFeatures.DISCOVERABLE),
+                          onboardingEnabled: e.features.has(N.GuildFeatures.GUILD_ONBOARDING),
                           guild: e,
                       })
                     : null,
@@ -367,7 +367,8 @@ let Z = "dismissedCommunityFeaturesUpsell",
                             size: "sm",
                             text: I.intl.string(I.t.c1BmbG),
                             onClick: () => {
-                                e.features.has(E.oNc.DISCOVERABLE) && e.features.has(E.oNc.PARTNERED)
+                                e.features.has(N.GuildFeatures.DISCOVERABLE) &&
+                                e.features.has(N.GuildFeatures.PARTNERED)
                                     ? (0, u.h7j)((e) =>
                                           (0, r.jsx)(
                                               u.ConfirmModal,
@@ -383,7 +384,7 @@ let Z = "dismissedCommunityFeaturesUpsell",
                                               }),
                                           ),
                                       )
-                                    : e.features.has(E.oNc.DISCOVERABLE)
+                                    : e.features.has(N.GuildFeatures.DISCOVERABLE)
                                       ? (0, u.h7j)((e) =>
                                             (0, r.jsx)(
                                                 u.ConfirmModal,
@@ -399,7 +400,7 @@ let Z = "dismissedCommunityFeaturesUpsell",
                                                 }),
                                             ),
                                         )
-                                      : e.features.has(E.oNc.PARTNERED)
+                                      : e.features.has(N.GuildFeatures.PARTNERED)
                                         ? (0, u.h7j)((e) =>
                                               (0, r.jsx)(
                                                   u.ConfirmModal,
@@ -426,5 +427,9 @@ let Z = "dismissedCommunityFeaturesUpsell",
     },
     L = () => {
         let e = (0, a.e7)([O.Z], () => O.Z.getGuild());
-        return null == e ? null : e.features.has(E.oNc.COMMUNITY) ? (0, r.jsx)(A, {}) : (0, r.jsx)(y.Z, { guild: e });
+        return null == e
+            ? null
+            : e.features.has(N.GuildFeatures.COMMUNITY)
+              ? (0, r.jsx)(A, {})
+              : (0, r.jsx)(y.Z, { guild: e });
     };

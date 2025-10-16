@@ -998,9 +998,9 @@ let e7 = (0, $.oH)((e, t, n) => {
                     containQuery: RegExp(ei.Z.escape(r), "i"),
                     queryLower: r,
                 },
-                a = (0, y.s)(n.id) && !n.features.has(el.oNc.HUB),
-                o = n.features.has(el.oNc.COMMUNITY),
-                s = (0, b.t)(n) && n.features.has(el.oNc.COMMUNITY),
+                a = (0, y.s)(n.id) && !n.features.has(el.GuildFeatures.HUB),
+                o = n.features.has(el.GuildFeatures.COMMUNITY),
+                s = (0, b.t)(n) && n.features.has(el.GuildFeatures.COMMUNITY),
                 l = [
                     {
                         id: eu.HY.SERVER_GUIDE,

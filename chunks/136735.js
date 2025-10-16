@@ -22,8 +22,8 @@ var n = l(951288),
     S = l(611480),
     I = l(981631),
     w = l(388032),
-    N = l(491202),
-    C = l(434227),
+    C = l(491202),
+    N = l(434227),
     O = l(600126);
 let k = new Set(["application/json", "image/png", "image/apng", "image/gif", "image/jpeg", "image/jpg"]),
     D = [
@@ -41,20 +41,20 @@ function P(e, t) {
 let Z = (e) => {
     let { stickerPreview: t } = e;
     return (0, n.jsxs)("div", {
-        className: N.preview,
+        className: C.preview,
         children: [
             (0, n.jsx)("div", {
-                className: N.previewDark,
+                className: C.previewDark,
                 children:
                     null != t
                         ? t
                         : (0, n.jsx)("img", {
-                              src: C,
+                              src: N,
                               alt: w.intl.string(w.t.qOsjZm),
                           }),
             }),
             (0, n.jsx)("div", {
-                className: N.previewLight,
+                className: C.previewLight,
                 children:
                     null != t
                         ? t
@@ -74,15 +74,15 @@ async function T(e) {
     return (0, x.Bo)(n, e.name, "image/png");
 }
 function R(e) {
-    var t, l, s, C, O, R, _, z;
+    var t, l, s, N, O, R, _, z;
     let { transitionState: A, onClose: B, guildId: U, sticker: L } = e,
         K = (0, o.e7)([d.ZP], () => ((null == L ? void 0 : L.tags) != null ? d.ZP.getCustomEmojiById(L.tags) : null)),
-        M = null != (l = null == (t = f.default.getCurrentUser()) ? void 0 : t.isStaff()) && l ? S.OC : S.Ht,
-        [F, Y] = i.useState(null),
-        [q, G] = i.useState(null != (s = null == L ? void 0 : L.name) ? s : ""),
+        F = null != (l = null == (t = f.default.getCurrentUser()) ? void 0 : t.isStaff()) && l ? S.OC : S.Ht,
+        [M, G] = i.useState(null),
+        [Y, q] = i.useState(null != (s = null == L ? void 0 : L.name) ? s : ""),
         [V, X] = i.useState({
             file: null,
-            filename: null != (C = (0, y._V)(L)) ? C : "",
+            filename: null != (N = (0, y._V)(L)) ? N : "",
         }),
         [H, Q] = i.useState(null == K ? void 0 : K.id),
         [W, J] = i.useState(null != (O = null == K ? void 0 : K.name) ? O : null == L ? void 0 : L.tags),
@@ -91,15 +91,15 @@ function R(e) {
         [en, ei] = i.useState(null),
         er = (0, o.e7)([g.Z], () => g.Z.getGuild(U)),
         es =
-            (null == er ? void 0 : er.features.has(I.oNc.PARTNERED)) ||
-            (null == er ? void 0 : er.features.has(I.oNc.VERIFIED)),
+            (null == er ? void 0 : er.features.has(I.GuildFeatures.PARTNERED)) ||
+            (null == er ? void 0 : er.features.has(I.GuildFeatures.VERIFIED)),
         ea = null != L,
         eo = ea || (null == V ? void 0 : V.file) != null,
         eu = 0 === $.length || ($.length >= 2 && $.length <= 100),
         ed =
             !et &&
             (null == en ? void 0 : en.isBlocking) !== !0 &&
-            q.length >= 2 &&
+            Y.length >= 2 &&
             (null != H ||
                 null != W ||
                 ((null == L ? void 0 : L.tags) != null && (null == L ? void 0 : L.tags) !== "")) &&
@@ -116,17 +116,17 @@ function R(e) {
                 });
             let n = e;
             if ("image/jpeg" === l || "image/jpg" === l) n = await T(e);
-            else if ("image/png" === l && e.size > M && !(await (0, x.c0)(e))) {
-                let t = (n = await T(e)).size > M;
+            else if ("image/png" === l && e.size > F && !(await (0, x.c0)(e))) {
+                let t = (n = await T(e)).size > F;
                 p.default.track(I.rMx.STICKER_FILE_RESIZED, {
                     original_file_size_bytes: e.size,
                     resized_file_size_bytes: n.size,
                     resized_file_too_big: t,
                 });
             }
-            if (n.size > M) {
+            if (n.size > F) {
                 ei({
-                    message: w.intl.formatToPlainString(w.t["3eK7Rk"], { maxSize: (0, j.IC)(M, { useKibibytes: !0 }) }),
+                    message: w.intl.formatToPlainString(w.t["3eK7Rk"], { maxSize: (0, j.IC)(F, { useKibibytes: !0 }) }),
                     isBlocking: null == V.file,
                 }),
                     p.default.track(I.rMx.STICKER_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, {
@@ -144,7 +144,7 @@ function R(e) {
                     });
                 let e = new FileReader();
                 e.addEventListener("load", () => {
-                    Y({
+                    G({
                         id: (0, r.Z)(),
                         formatType: i,
                         content: e.result,
@@ -154,7 +154,7 @@ function R(e) {
                     e.readAsText(n);
             } else {
                 let e = await (0, x.fD)(n);
-                Y({
+                G({
                     id: (0, r.Z)(),
                     formatType: i,
                     content: e,
@@ -173,13 +173,13 @@ function R(e) {
             try {
                 if ((el(!0), ea))
                     await (0, h.Jf)(U, null != (n = null == L ? void 0 : L.id) ? n : "", {
-                        name: q,
+                        name: Y,
                         tags: a,
                         description: $,
                     });
                 else {
                     let e = new FormData();
-                    e.append("name", q),
+                    e.append("name", Y),
                         e.append("tags", a),
                         e.append("description", $),
                         (null == V ? void 0 : V.file) != null && e.append("file", V.file),
@@ -232,7 +232,7 @@ function R(e) {
             );
         })({
             sticker: L,
-            previewData: F,
+            previewData: M,
             onStickerError: i.useCallback(() => {
                 ei({
                     message: w.intl.string(w.t["/WIYNT"]),
@@ -243,7 +243,7 @@ function R(e) {
         ef = es ? w.t.alYXBA : w.t.kpcMfn;
     return (0, n.jsx)("form", {
         onSubmit: em,
-        className: N.form,
+        className: C.form,
         children: (0, n.jsxs)(a.IX, {
             transitionState: A,
             onClose: B,
@@ -281,7 +281,7 @@ function R(e) {
                                               }),
                                           }),
                                     (0, n.jsx)(c.Z, {
-                                        className: N.formItemRowChild,
+                                        className: C.formItemRowChild,
                                         guildId: U,
                                         emojiId: H,
                                         emojiName: W,
@@ -294,8 +294,8 @@ function R(e) {
                             (0, n.jsx)(u.oil, {
                                 label: w.intl.string(w.t["0VRh6u"]),
                                 required: !0,
-                                value: q,
-                                onChange: G,
+                                value: Y,
+                                onChange: q,
                                 placeholder: w.intl.string(w.t["3fGttb"]),
                                 maxLength: 30,
                             }),
@@ -309,7 +309,7 @@ function R(e) {
                             }),
                             null != en &&
                                 (0, n.jsx)(u.Text, {
-                                    className: N.formItem,
+                                    className: C.formItem,
                                     variant: "text-sm/normal",
                                     color: "text-danger",
                                     children: en.message,

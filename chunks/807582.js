@@ -18,7 +18,7 @@ let m = (e) => {
         j = p.features.has(m),
         v = (0, o.AR)(p.id, "GuildSettingsBoostPerks"),
         _ = (0, c._p)(m);
-    return !j && m === d.oNc.VANITY_URL && v
+    return !j && m === d.GuildFeatures.VANITY_URL && v
         ? null
         : (j
                 ? (null != _ && (i = u.intl.string(u.t.hUgjyM)),

@@ -1,7 +1,7 @@
 n.d(t, { Z: () => g });
 var r = n(951288);
 n(647438);
-var i = n(599273),
+var i = n(258536),
     l = n(442837),
     a = n(481060),
     o = n(536442),
@@ -37,7 +37,7 @@ let g = function (e) {
     let { guild: t } = e,
         n = (0, l.e7)([s.ZP], () => s.ZP.getChannels(t.id)[s.Zb][0]),
         i = (0, l.e7)([c.Z], () => null != n && c.Z.can(f.Plq.CONNECT, n.channel));
-    return t.features.has(f.oNc.HUB) && null != n && i
+    return t.features.has(f.GuildFeatures.HUB) && null != n && i
         ? (0, r.jsx)(h, {
               channel: n.channel,
               guild: t,

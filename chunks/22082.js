@@ -121,7 +121,7 @@ class D extends (r = i.ZP.Store) {
         let r = _.Z.getGuild(e);
         return (
             null != r &&
-            !!r.features.has(E.oNc.COMMUNITY) &&
+            !!r.features.has(E.GuildFeatures.COMMUNITY) &&
             (null != e && null == O[e] && P(e),
             (null == (n = O[e]) ? void 0 : n.has(t)) && null == p.ZP.getTrackedAckMessageId(t))
         );

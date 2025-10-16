@@ -126,7 +126,10 @@ function v(e) {
             [n],
         ),
         g = (0, r.e7)([a.Z], () => a.Z.getGuild(e)),
-        b = null != g && !g.features.has(m.oNc.COMMUNITY) && g.features.has(m.oNc.INTERNAL_EMPLOYEE_ONLY);
+        b =
+            null != g &&
+            !g.features.has(m.GuildFeatures.COMMUNITY) &&
+            g.features.has(m.GuildFeatures.INTERNAL_EMPLOYEE_ONLY);
     if (null != n && null != p && b)
         for (let e = 0; e < n.length; e++) {
             let r = n[e],

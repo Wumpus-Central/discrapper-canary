@@ -2,7 +2,7 @@ n.d(t, { Z: () => p });
 var r = n(951288),
     i = n(647438),
     a = n(442837),
-    o = n(538534),
+    o = n(481060),
     s = n(846027),
     l = n(906732),
     c = n(131951),
@@ -43,7 +43,7 @@ function p() {
         });
     return (0, r.jsx)("div", {
         className: _.marginBottom20,
-        children: (0, r.jsx)(o.E, {
+        children: (0, r.jsx)(o.FXm, {
             label: f.intl.string(f.t.LM3U3t),
             onChange: (e) => p({ value: e }),
             options: h,

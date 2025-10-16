@@ -111,7 +111,7 @@ let x = l.ZP.connectStores([g.Z, m.Z, p.Z, y.default, O.default, d.ZP, f.Z, h.ZP
         selectedGuild: i,
         selectedChannel: l,
         locked: O.default.isLocked((0, v.getPID)()),
-        hasPreviewEnabled: null == o ? void 0 : o.features.has(E.oNc.PREVIEW_ENABLED),
+        hasPreviewEnabled: null == o ? void 0 : o.features.has(E.GuildFeatures.PREVIEW_ENABLED),
         isMemberPending: c,
         postableChannelCount: u,
     };

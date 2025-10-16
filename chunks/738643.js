@@ -10,10 +10,10 @@ function c(e, t) {
         let n = a.Z.getGuild(t);
         if (
             !(
-                (null == n ? void 0 : n.features.has(o.oNc.WELCOME_SCREEN_ENABLED)) === !0 &&
-                n.features.has(o.oNc.COMMUNITY)
+                (null == n ? void 0 : n.features.has(o.GuildFeatures.WELCOME_SCREEN_ENABLED)) === !0 &&
+                n.features.has(o.GuildFeatures.COMMUNITY)
             ) ||
-            n.features.has(o.oNc.GUILD_SERVER_GUIDE)
+            n.features.has(o.GuildFeatures.GUILD_SERVER_GUIDE)
         )
             return !1;
         let r = l.Z.getChannel(e);

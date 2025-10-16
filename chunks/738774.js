@@ -20,7 +20,7 @@ function l(e) {
         l = i.Z.getGuild(e);
     return n === r.M.FETCHED
         ? s(a)
-        : null == (t = null == l ? void 0 : l.features.has(o.oNc.CREATOR_MONETIZABLE_RESTRICTED)) || t;
+        : null == (t = null == l ? void 0 : l.features.has(o.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) || t;
 }
 function c(e) {
     return null != e && e.includes(a.o.SETTINGS_READ_ONLY);
@@ -33,7 +33,7 @@ function u(e) {
         s = i.Z.getGuild(e);
     return n === r.M.FETCHED
         ? c(a)
-        : null == (t = null == s ? void 0 : s.features.has(o.oNc.CREATOR_MONETIZABLE_RESTRICTED)) || t;
+        : null == (t = null == s ? void 0 : s.features.has(o.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) || t;
 }
 function d(e) {
     return null != e && e.includes(a.o.REAPPLICATION_DISABLED);

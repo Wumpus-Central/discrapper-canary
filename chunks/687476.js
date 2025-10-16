@@ -36,7 +36,7 @@ function O(e) {
     let r = new Set(),
         i = new Set(),
         a = new Set();
-    if ((b.set(e, (0, o.eM)(n, t)), n.features.has(_.oNc.ROLE_SUBSCRIPTIONS_ENABLED))) {
+    if ((b.set(e, (0, o.eM)(n, t)), n.features.has(_.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED))) {
         var p;
         let o = l.ZP.getMember(e, t.id),
             u = new Set(null != (p = null == o ? void 0 : o.roles) ? p : []);
@@ -49,7 +49,7 @@ function O(e) {
 function v() {
     let e = u.Z.getGuildsArray(),
         t = new Set();
-    for (let n of e) n.features.has(_.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE) && t.add(n.id);
+    for (let n of e) n.features.has(_.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE) && t.add(n.id);
     return (y = t), t;
 }
 function I() {
@@ -70,7 +70,7 @@ function S(e) {
     if (null == y) return !1;
     let n = u.Z.getGuild(t);
     if (null == n) return !1;
-    let r = n.features.has(_.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
+    let r = n.features.has(_.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
     if (r && !y.has(t)) {
         let e = new Set(y);
         return e.add(t), (y = e), !0;

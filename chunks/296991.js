@@ -45,7 +45,7 @@ function y(e) {
     }
     return e;
 }
-function N(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -63,7 +63,7 @@ function N(e, t) {
         e
     );
 }
-let E = "RULE";
+let N = "RULE";
 function I(e) {
     let {
             rule: t,
@@ -78,13 +78,13 @@ function I(e) {
             onFocus: j,
             previewEnabled: _,
             isDragEnabled: y,
-            disabled: N,
+            disabled: E,
         } = e,
         I = i.useRef(null),
         S = i.useRef(null),
         [{ textValue: T, richValue: P }, w] = i.useState((0, p.eK)(t.value)),
         [, Z, R] = (0, c.c)({
-            type: E,
+            type: N,
             item: {
                 rule: t,
                 index: l,
@@ -94,7 +94,7 @@ function I(e) {
             },
         }),
         [, D] = (0, d.L)({
-            accept: E,
+            accept: N,
             hover: (e, t) => {
                 var n;
                 let { index: r } = e,
@@ -145,7 +145,7 @@ function I(e) {
                         placeholder: C.intl.string(C.t["BRkD4+"]),
                         focused: x,
                         onChange: (e, n, r) => {
-                            let i = N ? t.value : n;
+                            let i = E ? t.value : n;
                             i.length > v.fn && (i = i.slice(0, v.fn)),
                                 n !== i && ((n = i), (r = (0, p.JM)(i))),
                                 s(n),
@@ -194,17 +194,17 @@ function I(e) {
 function S(e) {
     let { rules: t, setRules: n, guild: l, disabled: a } = e,
         s = l.rulesChannelId,
-        c = l.features.has(_.oNc.PREVIEW_ENABLED),
+        c = l.features.has(_.GuildFeatures.PREVIEW_ENABLED),
         d = (0, u.e7)([h.Z], () => (null != s ? h.Z.getChannel(s) : null)),
         m = (0, u.e7)([b.ZP], () => b.ZP.getDefaultChannel(l.id)),
         [p, f] = i.useState(null),
-        [E, S] = i.useState(null),
+        [N, S] = i.useState(null),
         T = i.useCallback(
             (e) => {
                 if (!a && t.length !== v.X2)
                     if (null != e && "" === t[t.length - 1].value) {
                         let r = [...t];
-                        (r[t.length - 1] = N(y({}, r[t.length - 1]), { value: e })), n(r), S(r.length - 1);
+                        (r[t.length - 1] = E(y({}, r[t.length - 1]), { value: e })), n(r), S(r.length - 1);
                     } else
                         n([
                             ...t,
@@ -224,7 +224,7 @@ function S(e) {
             (e, r) => {
                 if (a) return;
                 let i = [...t];
-                (i[r] = N(y({}, i[r]), { value: e })), n(i);
+                (i[r] = E(y({}, i[r]), { value: e })), n(i);
             },
             [a, t, n],
         ),
@@ -299,7 +299,7 @@ function S(e) {
                                 })(i),
                             onRuleReorder: Z,
                             isDropHovered: i === p,
-                            focused: i === E,
+                            focused: i === N,
                             onFocus: S,
                             previewEnabled: null == c || c,
                             isDragEnabled: !a && t.length > 1,

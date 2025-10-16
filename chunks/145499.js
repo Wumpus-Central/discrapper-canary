@@ -21,8 +21,8 @@ var r = n(951288),
     C = n(926491),
     O = n(909707),
     y = n(863562),
-    N = n(399829),
-    E = n(428862),
+    E = n(399829),
+    N = n(428862),
     I = n(981631),
     S = n(535396),
     T = n(388032),
@@ -121,8 +121,8 @@ let w = (e) => {
             }, [t]),
             { analyticsLocations: v } = (0, m.ZP)(),
             D = (0, x.Z)(t.id),
-            A = t.features.has(I.oNc.MORE_STICKERS) ? I.Eu4.TIER_3 : t.premiumTier,
-            L = t.features.has(I.oNc.MORE_STICKERS) ? I.oCV[I.Eu4.TIER_3] : D,
+            A = t.features.has(I.GuildFeatures.MORE_STICKERS) ? I.Eu4.TIER_3 : t.premiumTier,
+            L = t.features.has(I.GuildFeatures.MORE_STICKERS) ? I.oCV[I.Eu4.TIER_3] : D,
             k = (0, j.Z)(t.id);
         if (
             (i.useEffect(() => {
@@ -131,7 +131,7 @@ let w = (e) => {
             l)
         )
             return (0, r.jsx)(d.$jN, {});
-        let M = [
+        let G = [
             {
                 tier: I.Eu4.NONE,
                 title: (0, r.jsx)(w, {
@@ -169,19 +169,19 @@ let w = (e) => {
                 }),
             },
         ];
-        return (0, r.jsx)(N.Z, {
-            tiers: M,
+        return (0, r.jsx)(E.Z, {
+            tiers: G,
             renderTier: (e) => {
                 var i;
                 let l,
                     s,
                     { isAnimatedTo: m, onSetRef: x, tier: j, tiers: C, tierIndex: O } = e,
-                    { canCreateExpressions: N, canManageGuildExpression: w } = (0, h.Gw)(t),
-                    M = C[O - 1],
-                    G = null != M ? (0, _.A3)(M.tier) : 0,
+                    { canCreateExpressions: E, canManageGuildExpression: w } = (0, h.Gw)(t),
+                    G = C[O - 1],
+                    M = null != G ? (0, _.A3)(G.tier) : 0,
                     U = (0, _.A3)(j.tier, t),
                     B = (0, _.ig)(j.tier),
-                    F = g.slice(G, U),
+                    F = g.slice(M, U),
                     H = F.length > 0,
                     W = A < j.tier,
                     V =
@@ -193,12 +193,14 @@ let w = (e) => {
                               : i < (0, _.A3)(I.Eu4.TIER_2)
                                 ? I.Eu4.TIER_2
                                 : i < (0, _.A3)(I.Eu4.TIER_3) ||
-                                    (null != t && t.features.has(I.oNc.MORE_STICKERS) && i < u.D.MAX_STICKER_SLOTS)
+                                    (null != t &&
+                                        t.features.has(I.GuildFeatures.MORE_STICKERS) &&
+                                        i < u.D.MAX_STICKER_SLOTS)
                                   ? I.Eu4.TIER_3
                                   : I.Eu4.NONE),
-                    z = N && !W && V === j.tier && U !== F.length,
+                    z = E && !W && V === j.tier && U !== F.length,
                     K = z || F.length > 0,
-                    Y = U - G,
+                    Y = U - M,
                     q = n(872732),
                     X = B - F.length,
                     Q = z ? Math.min(5 - ((F.length + 0) % 5), X) : 0,
@@ -260,7 +262,7 @@ let w = (e) => {
                           }))
                         : z && (s = (0, r.jsx)(R, { guild: t })),
                     (0, r.jsxs)(
-                        E.Z,
+                        N.Z,
                         {
                             subscriptionCount: L,
                             tier: j,

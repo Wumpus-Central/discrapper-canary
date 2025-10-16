@@ -83,6 +83,8 @@ function h(e) {
 function m(e, t) {
     let n = a.Z.getGuild(e);
     if (null == n || null == t) return !1;
-    let r = n.features.has(c.oNc.CREATOR_MONETIZABLE) || n.features.has(c.oNc.CREATOR_MONETIZABLE_PROVISIONAL);
+    let r =
+        n.features.has(c.GuildFeatures.CREATOR_MONETIZABLE) ||
+        n.features.has(c.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL);
     return !0 === t.isMediaChannel() && r;
 }

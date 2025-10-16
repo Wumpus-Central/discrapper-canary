@@ -37,7 +37,7 @@ function m(e) {
 }
 function p(e) {
     let { analyticsLocations: t, analyticsLocation: n, guild: i, isGIF: l, banner: a } = e,
-        g = l ? (0, s._p)(d.oNc.ANIMATED_BANNER) : (0, s._p)(d.oNc.BANNER);
+        g = l ? (0, s._p)(d.GuildFeatures.ANIMATED_BANNER) : (0, s._p)(d.GuildFeatures.BANNER);
     null != g &&
         (0, o.Z)({
             analyticsLocations: t,

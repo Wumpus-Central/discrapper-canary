@@ -4,7 +4,7 @@ var r = n(430824),
     a = n(341653),
     o = n(981631);
 let s = "13.2",
-    l = [o.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE];
+    l = [o.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE];
 function c(e, t) {
     let n = e.split(".").map(Number),
         r = t.split(".").map(Number),

@@ -1,6 +1,6 @@
 n.d(t, {
     R: () => I,
-    Z: () => y,
+    Z: () => O,
 }),
     n(415506);
 var r = n(951288),
@@ -31,10 +31,10 @@ let I = () =>
                     size: l.EFr.DEPRECATED_SIZE_100,
                     className: j.avatar,
                 }),
-                (0, r.jsx)(a.DK, { children: b.intl.string(b.t["3rE1P8"]) }),
+                (0, r.jsx)(a.DK, { children: b.intl.string(b.t["3rE1Pz"]) }),
                 (0, r.jsx)(a.Dx, {
                     className: j.inviteResolvingGuildName,
-                    children: b.intl.string(b.t.ZTNur7),
+                    children: b.intl.string(b.t.ZTNur6),
                 }),
             ],
         }),
@@ -66,7 +66,7 @@ let I = () =>
                   })
                 : null;
     },
-    y = (e) => {
+    O = (e) => {
         var t;
         let n,
             i,
@@ -74,8 +74,8 @@ let I = () =>
             {
                 invite: c,
                 disableUser: I = !1,
-                error: y,
-                flatActivityCount: O = !1,
+                error: O,
+                flatActivityCount: y = !1,
                 isRegister: S = !1,
                 inUnclaimedFlow: C = !1,
             } = e,
@@ -88,24 +88,24 @@ let I = () =>
             L =
                 !(
                     (null != c.approximate_member_count && c.approximate_member_count > 100) ||
-                    (null != T && T.features.has(x.oNc.COMMUNITY))
+                    (null != T && T.features.has(x.GuildFeatures.COMMUNITY))
                 ) && null != R,
             w = null,
             D = !1;
         if (null != T)
             (w =
                 null == R
-                    ? b.intl.string(b.t["3rE1P8"])
-                    : b.intl.formatToPlainString(b.t["5u47va"], { username: _.ZP.getFormattedName(R) })),
+                    ? b.intl.string(b.t["3rE1Pz"])
+                    : b.intl.formatToPlainString(b.t["5u47vb"], { username: _.ZP.getFormattedName(R) })),
                 c.target_type === v.Iq.STREAM &&
                     null != c.target_user &&
-                    (w = b.intl.formatToPlainString(b.t.x2L32Q, { username: _.ZP.getFormattedName(c.target_user) })),
+                    (w = b.intl.formatToPlainString(b.t.x2L32d, { username: _.ZP.getFormattedName(c.target_user) })),
                 c.target_type === v.Iq.EMBEDDED_APPLICATION &&
                     null != c.target_application &&
                     (w =
                         null != R
-                            ? b.intl.formatToPlainString(b.t.UW1Cav, { username: _.ZP.getFormattedName(R) })
-                            : b.intl.string(b.t.ENSuN3)),
+                            ? b.intl.formatToPlainString(b.t.UW1Cam, { username: _.ZP.getFormattedName(R) })
+                            : b.intl.string(b.t.ENSuNz)),
                 L &&
                     null == P &&
                     (n = (0, r.jsx)(a.Vj, {
@@ -120,7 +120,7 @@ let I = () =>
                         children: [
                             (0, r.jsx)(a.DK, {
                                 className: j.appIn,
-                                children: b.intl.string(b.t["3gg9fF"]),
+                                children: b.intl.string(b.t["3gg9fH"]),
                             }),
                             (0, r.jsxs)("div", {
                                 className: j.guildContainer,
@@ -144,26 +144,26 @@ let I = () =>
             if (null == R) throw Error("no inviter in group DM invite");
             let e = _.ZP.getFormattedName(R);
             null != Z.name && "" !== Z.name
-                ? ((w = b.intl.formatToPlainString(b.t["5u47va"], { username: e })),
+                ? ((w = b.intl.formatToPlainString(b.t["5u47vb"], { username: e })),
                   (i = Z.name),
                   null != Z.icon &&
                       (n = (0, r.jsx)(a.MC, {
                           channel: Z,
                           size: l.EFr.SIZE_32,
                       })))
-                : ((w = b.intl.string(b.t.OsdY8B)), (i = e));
+                : ((w = b.intl.string(b.t.OsdY8P)), (i = e));
         } else if (null != R) {
             let e = _.ZP.getFormattedName(R, !0);
-            (i = b.intl.formatToPlainString(b.t["4aF92R"], { username: e })),
+            (i = b.intl.formatToPlainString(b.t["4aF92d"], { username: e })),
                 (D = !0),
                 (o =
-                    null != y
+                    null != O
                         ? null
                         : (0, r.jsx)(a.DK, {
                               className: j.directInviteSubTitle,
                               children: S
-                                  ? b.intl.format(b.t["6r4JiR"], { username: e })
-                                  : b.intl.format(b.t.Quj7HX, { username: e }),
+                                  ? b.intl.format(b.t["6r4JiY"], { username: e })
+                                  : b.intl.format(b.t.Quj7HR, { username: e }),
                           }));
         }
         return (0, r.jsxs)("div", {
@@ -175,11 +175,11 @@ let I = () =>
                     user: L ? R : null,
                     compact: D,
                 }),
-                null != y
+                null != O
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(a.DK, { children: b.intl.string(b.t.mDFGFj) }),
-                              (0, r.jsx)(a.Dx, { children: y }),
+                              (0, r.jsx)(a.DK, { children: b.intl.string(b.t.mDFGFh) }),
+                              (0, r.jsx)(a.Dx, { children: O }),
                           ],
                       })
                     : (0, r.jsxs)(r.Fragment, {
@@ -208,7 +208,7 @@ let I = () =>
                           className: j.activityCount,
                           online: c.approximate_presence_count,
                           total: c.approximate_member_count,
-                          flat: O,
+                          flat: y,
                       }),
                 C || null == A ? (0, r.jsx)(a.jQ, { user: A }) : (0, r.jsx)(d.R, {}),
             ],

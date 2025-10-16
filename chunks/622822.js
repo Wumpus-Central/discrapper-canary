@@ -110,12 +110,12 @@ function P(e) {
 function w(e) {
     let t = (0, a.u)("age_verification_utils"),
         n = (0, o.yo)();
-    return t && n && (null == e ? void 0 : e.features.has(E.oNc.AGE_VERIFICATION_LARGE_GUILD));
+    return t && n && (null == e ? void 0 : e.features.has(E.GuildFeatures.AGE_VERIFICATION_LARGE_GUILD));
 }
 function D(e) {
     let t = (0, a.z)("age_verification_utils"),
         n = (0, o.Jm)();
-    return t && n && (null == e ? void 0 : e.features.has(E.oNc.AGE_VERIFICATION_LARGE_GUILD));
+    return t && n && (null == e ? void 0 : e.features.has(E.GuildFeatures.AGE_VERIFICATION_LARGE_GUILD));
 }
 function L(e) {
     return null != e && x(f.Z.getGuild(e));
@@ -125,14 +125,14 @@ function x(e) {
         null != e &&
         (0, a.u)("age_verification_utils") &&
         (0, o.sf)() &&
-        e.features.has(E.oNc.AGE_VERIFICATION_LARGE_GUILD)
+        e.features.has(E.GuildFeatures.AGE_VERIFICATION_LARGE_GUILD)
     );
 }
 function M(e) {
     let t = (0, r.e7)([f.Z], () => f.Z.getGuild(e)),
         n = (0, a.z)("age_verification_utils"),
         i = (0, o.L5)();
-    return null != t && n && i && t.features.has(E.oNc.AGE_VERIFICATION_LARGE_GUILD);
+    return null != t && n && i && t.features.has(E.GuildFeatures.AGE_VERIFICATION_LARGE_GUILD);
 }
 function j() {
     let e = (0, l.c_)("age-gate-utils"),

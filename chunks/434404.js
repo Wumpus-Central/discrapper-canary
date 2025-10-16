@@ -132,7 +132,7 @@ let R = new s.Z("GuildSettingsActionCreators"),
                 n.e("89442"),
                 n.e("72615"),
             ]).then(n.bind(n, 994763)),
-                (null == (a = g.Z.getGuild(e)) ? void 0 : a.features.has(O.oNc.COMMUNITY)) &&
+                (null == (a = g.Z.getGuild(e)) ? void 0 : a.features.has(O.GuildFeatures.COMMUNITY)) &&
                     (t === O.pNK.GUILD_AUTOMOD && ((t = O.pNK.SAFETY), (i = O.KsC.SAFETY_AUTOMOD)),
                     t === O.pNK.MEMBER_VERIFICATION && ((t = O.pNK.SAFETY), (i = O.KsC.SAFETY_DM_AND_SPAM_PROTECTION))),
                 P.init(e, t, r, i),
@@ -152,7 +152,7 @@ let R = new s.Z("GuildSettingsActionCreators"),
             var n;
             let r = y.Z.getGuildId();
             null != r &&
-                ((null == (n = g.Z.getGuild(r)) ? void 0 : n.features.has(O.oNc.COMMUNITY)) &&
+                ((null == (n = g.Z.getGuild(r)) ? void 0 : n.features.has(O.GuildFeatures.COMMUNITY)) &&
                     (e === O.pNK.GUILD_AUTOMOD && ((e = O.pNK.SAFETY), (t = O.KsC.SAFETY_AUTOMOD)),
                     e === O.pNK.MEMBER_VERIFICATION && ((e = O.pNK.SAFETY), (t = O.KsC.SAFETY_DM_AND_SPAM_PROTECTION))),
                 a.Z.dispatch({

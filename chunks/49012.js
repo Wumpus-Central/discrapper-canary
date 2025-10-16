@@ -76,7 +76,7 @@ function R(e, t) {
             : (B = j);
         let i =
                 (null == t ? void 0 : t.type) === A.d4z.GUILD_ANNOUNCEMENT &&
-                (null == n ? void 0 : n.features.has(A.oNc.COMMUNITY)) === !0,
+                (null == n ? void 0 : n.features.has(A.GuildFeatures.COMMUNITY)) === !0,
             a = (null == e ? void 0 : e.hasFlag(A.iLy.EPHEMERAL)) === !0;
         k = null != e && !a && (r || i);
     }
@@ -85,7 +85,7 @@ function R(e, t) {
             t = b.Z.getGuild(null == e ? void 0 : e.getGuildId());
         null != e &&
             null != t &&
-            t.features.has(A.oNc.DISCOVERABLE) &&
+            t.features.has(A.GuildFeatures.DISCOVERABLE) &&
             S.default.track(A.rMx.URL_CLICKED, {
                 url_domain: (0, O.F)(M),
                 guild_id: t.id,

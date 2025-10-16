@@ -41,10 +41,9 @@ function u() {
     return [
         {
             name: s.intl.string(s.t.PEzffn),
-            desc: s.intl.string(s.t.nDQy0t),
+            desc: e ? s.intl.string(s.t.j9WtHx) : s.intl.string(s.t.nDQy0t),
             value: o.sFg.NONE,
             disabled: e,
-            tooltipText: e ? s.intl.string(s.t.j9WtHx) : null,
         },
         {
             name: s.intl.string(s.t.SsCK8P),
@@ -83,18 +82,16 @@ function d() {
         },
         {
             name: s.intl.string(s.t.ynfFaG),
-            desc: s.intl.string(s.t["3fRINz"]),
+            desc: e ? s.intl.string(s.t.j9WtHx) : s.intl.string(s.t["3fRINz"]),
             value: o.lxg.MEMBERS_WITHOUT_ROLES,
             disabled: e,
-            tooltipText: e ? s.intl.string(s.t.j9WtHx) : null,
             color: (0, i.Fw)("YELLOW_360"),
         },
         {
             name: s.intl.string(s.t.VbSyAw),
-            desc: s.intl.string(s.t.M6GNsL),
+            desc: e ? s.intl.string(s.t.j9WtHx) : s.intl.string(s.t.M6GNsL),
             value: o.lxg.DISABLED,
             disabled: e,
-            tooltipText: e ? s.intl.string(s.t.j9WtHx) : null,
             color: (0, i.Fw)("PRIMARY_400"),
         },
     ];

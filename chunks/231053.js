@@ -114,7 +114,7 @@ class h extends a.Z {
         return this.features.has(e);
     }
     isDiscoverable() {
-        return this.hasFeature(l.oNc.DISCOVERABLE);
+        return this.hasFeature(l.GuildFeatures.DISCOVERABLE);
     }
     static async getGuildFromEmojiId(e) {
         let t = await p(e);

@@ -18,7 +18,7 @@ function c(e, t) {
                   : a.ZP.getMember(e, i.default.getId()),
         [r] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [s.Z],
         o = r.getGuild(e);
-    if (null == o || null == n || !o.features.has(l.oNc.ROLE_SUBSCRIPTIONS_ENABLED)) return !1;
+    if (null == o || null == n || !o.features.has(l.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED)) return !1;
     for (let e of n.roles) {
         var c;
         let n = null == t ? void 0 : t[e];

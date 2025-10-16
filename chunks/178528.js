@@ -264,7 +264,7 @@ function z(e) {
         k = (0, o.e7)([v.default], () => v.default.getGuildChangeSentinel(n)),
         R = (0, a.QN)(null == r ? void 0 : r.id),
         A = (0, c.gM)(null == r ? void 0 : r.id),
-        L = null != (t = null == r ? void 0 : r.features.has(T.oNc.COMMUNITY)) && t,
+        L = null != (t = null == r ? void 0 : r.features.has(T.GuildFeatures.COMMUNITY)) && t,
         z = (0, o.e7)([Z.Z], () => Z.Z.getChannelId()),
         V = (0, o.e7)([S.Z], () => S.Z.desyncedVoiceStatesCount);
     return (0, i.jsx)(M, {

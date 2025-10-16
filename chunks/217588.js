@@ -265,7 +265,7 @@ let X = (e) => {
             i.useEffect(() => {
                 let { stickerSourceGuild: e } = ee.current;
                 (async () => {
-                    (null == e || e.features.has(w.oNc.DISCOVERABLE)) && C(await (0, g.Z)(n.id)), P(!0);
+                    (null == e || e.features.has(w.GuildFeatures.DISCOVERABLE)) && C(await (0, g.Z)(n.id)), P(!0);
                 })();
             }, [n.id, Z]);
         let et = n.guild_id === a.getGuildId(),

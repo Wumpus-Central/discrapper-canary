@@ -7,8 +7,9 @@ var r = n(442837),
     a = n(981631);
 function o(e) {
     return (
-        !e.features.has(a.oNc.CREATOR_MONETIZABLE_DISABLED) &&
-        (e.features.has(a.oNc.CREATOR_MONETIZABLE) || e.features.has(a.oNc.CREATOR_MONETIZABLE_PROVISIONAL))
+        !e.features.has(a.GuildFeatures.CREATOR_MONETIZABLE_DISABLED) &&
+        (e.features.has(a.GuildFeatures.CREATOR_MONETIZABLE) ||
+            e.features.has(a.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL))
     );
 }
 function s(e) {

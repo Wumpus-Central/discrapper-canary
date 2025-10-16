@@ -82,9 +82,11 @@ let v = [g.Eu4.NONE, g.Eu4.TIER_1, g.Eu4.TIER_2, g.Eu4.TIER_3],
         return e === g.Eu4.NONE ? g.Eu4.TIER_1 : null == (t = B.find((t) => t.tier === e)) ? void 0 : t.nextTier;
     },
     S = (e, t) =>
-        null != t && t.features.has(g.oNc.MORE_STICKERS) && e === g.Eu4.TIER_3 ? a.D.MAX_STICKER_SLOTS : b.$8[e],
+        null != t && t.features.has(g.GuildFeatures.MORE_STICKERS) && e === g.Eu4.TIER_3
+            ? a.D.MAX_STICKER_SLOTS
+            : b.$8[e],
     A = (e) => b.pH[e],
-    C = (e, t) => (null != t && t.features.has(g.oNc.MORE_SOUNDBOARD) ? b.w1 : b._k[e]),
+    C = (e, t) => (null != t && t.features.has(g.GuildFeatures.MORE_SOUNDBOARD) ? b.w1 : b._k[e]),
     N = (e) => {
         if (e === g.Eu4.NONE) return b._k[e];
         let t = v[v.indexOf(e) - 1];
@@ -363,7 +365,8 @@ function U(e) {
 }
 function G(e, t) {
     var n;
-    if ((null == (n = c.Z.getGuild(t)) ? void 0 : n.features.has(g.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0) return 0;
+    if ((null == (n = c.Z.getGuild(t)) ? void 0 : n.features.has(g.GuildFeatures.PREMIUM_TIER_3_OVERRIDE)) === !0)
+        return 0;
     let r = x(t),
         i = g.oCV[r],
         a = e.filter((e) => null != e.endsAt);
@@ -421,12 +424,12 @@ function V(e, t, n) {
 function H(e) {
     var t, n;
     let r = b.XB + (null != (n = null == (t = e.premiumFeatures) ? void 0 : t.additionalSoundSlots) ? n : 0);
-    return Math.max(e.features.has(g.oNc.MORE_SOUNDBOARD) ? b.w1 : b.XB, r);
+    return Math.max(e.features.has(g.GuildFeatures.MORE_SOUNDBOARD) ? b.w1 : b.XB, r);
 }
 function Y(e) {
     var t, n;
     let r = E.xD + (null != (n = null == (t = e.premiumFeatures) ? void 0 : t.additionalEmojiSlots) ? n : 0);
-    return Math.max(e.features.has(g.oNc.MORE_EMOJI) ? E.IE : E.xD, r);
+    return Math.max(e.features.has(g.GuildFeatures.MORE_EMOJI) ? E.IE : E.xD, r);
 }
 function W(e, t) {
     let n = (0, s.I)(e.id).available;

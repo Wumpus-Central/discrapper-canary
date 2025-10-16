@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(953529), n(388685);
+n.d(t, { Z: () => N }), n(953529), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -21,8 +21,8 @@ var r = n(951288),
     C = n(921944),
     O = n(231338),
     y = n(388032),
-    N = n(297827);
-function E(e) {
+    E = n(297827);
+function N(e) {
     let {
             guild: t,
             everyoneRole: n,
@@ -48,7 +48,7 @@ function E(e) {
                 children: y.intl.string(y.t.LPJmLy),
             }),
             (0, r.jsx)(d.Text, {
-                className: N.description,
+                className: E.description,
                 color: "header-secondary",
                 variant: "text-sm/normal",
                 children: y.intl.string(y.t["1ydhVl"]),
@@ -75,7 +75,7 @@ function I(e) {
         });
     }, [t]);
     let n = (0, h.vc)(o()(_.zQD), "LL"),
-        l = t.features.has(_.oNc.PIN_PERMISSION_MIGRATION_COMPLETE)
+        l = t.features.has(_.GuildFeatures.PIN_PERMISSION_MIGRATION_COMPLETE)
             ? (0, r.jsx)(d.Text, {
                   variant: "text-sm/normal",
                   children: y.intl.format(y.t.Vg2oTE, { breakingChangeDate: n }),
@@ -104,7 +104,7 @@ function I(e) {
                 });
     return (0, r.jsx)(p.Z, {
         look: p.z.WARNING,
-        className: N.migrationInfoBox,
+        className: E.migrationInfoBox,
         children: l,
     });
 }
@@ -122,28 +122,28 @@ function S(e) {
                 setQuery: s,
             }),
             (0, r.jsx)(d.Text, {
-                className: N.helpText,
+                className: E.helpText,
                 color: "header-secondary",
                 variant: "text-sm/normal",
                 children: y.intl.format(y.t.xkC3YW, { articleURL: b.Z.getArticleURL(_.BhN.PERMISSIONS_TUTORIAL) }),
             }),
             (0, r.jsx)("div", {
-                className: N.rolesTable,
+                className: E.rolesTable,
                 children: (0, r.jsxs)("div", {
-                    className: N.tableHeader,
+                    className: E.tableHeader,
                     children: [
-                        (0, r.jsx)("div", { className: N.dragSpacing }),
+                        (0, r.jsx)("div", { className: E.dragSpacing }),
                         (0, r.jsx)(d.Text, {
-                            className: a()(N.tableTitle, N.roleNameSpacing),
+                            className: a()(E.tableTitle, E.roleNameSpacing),
                             variant: "text-sm/normal",
                             children: y.intl.format(y.t["38N3V1"], { numRoles: String(i.length) }),
                         }),
                         (0, r.jsx)(d.Text, {
-                            className: a()(N.tableTitle, N.memberSpacing),
+                            className: a()(E.tableTitle, E.memberSpacing),
                             variant: "text-sm/normal",
                             children: y.intl.string(y.t["9Oq93t"]),
                         }),
-                        (0, r.jsx)("div", { className: N.buttonsSpacing }),
+                        (0, r.jsx)("div", { className: E.buttonsSpacing }),
                     ],
                 }),
             }),
@@ -166,9 +166,9 @@ function T(e) {
             s(!0), await g.Z.createRole(t.id), s(!1);
         };
     return (0, r.jsx)("div", {
-        className: N.__invalid_rolesList,
+        className: E.__invalid_rolesList,
         children: (0, r.jsxs)("div", {
-            className: N.searchContainer,
+            className: E.searchContainer,
             children: [
                 (0, r.jsx)(d.E1j, {
                     query: n,

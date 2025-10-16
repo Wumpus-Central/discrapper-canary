@@ -161,7 +161,7 @@ let D = {
         var i;
         let E = new Set();
         return (
-            t.features.has(O.oNc.COMMUNITY) || E.add(O.Plq.VIEW_GUILD_ANALYTICS.toString()),
+            t.features.has(O.GuildFeatures.COMMUNITY) || E.add(O.Plq.VIEW_GUILD_ANALYTICS.toString()),
             (i = A.s4(p(t.id))),
             0 === E.size
                 ? i

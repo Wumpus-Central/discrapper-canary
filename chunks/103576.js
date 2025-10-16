@@ -24,7 +24,7 @@ var a,
     C = n(999382),
     O = n(981631),
     y = n(141006);
-function N(e, t, n) {
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function N(e, t, n) {
         e
     );
 }
-function E(e) {
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function E(e) {
                 }),
             )),
             r.forEach(function (t) {
-                N(e, t, n[t]);
+                E(e, t, n[t]);
             });
     }
     return e;
@@ -64,8 +64,8 @@ let S = new Set(),
     A = new Set(),
     L = new Map(),
     k = new Map(),
-    M = new Map();
-function G() {
+    G = new Map();
+function M() {
     return null == r || null == Z
         ? []
         : j.ZP.calculatePositionDeltas({
@@ -88,7 +88,7 @@ function B() {
         (w = !1),
         (l = void 0),
         S.clear(),
-        M.clear(),
+        G.clear(),
         (T = O.QZA.OPEN),
         (R = [...(Z = null != r ? [...x.Z.getSortedRoles(r.id)] : [])]),
         F(null == r ? void 0 : r.id, R),
@@ -133,7 +133,7 @@ function F(e, t) {
                 tertiary_color: null != (s = t.colors.tertiary_color) ? s : null,
             };
         }
-        M.set(t.id, {
+        G.set(t.id, {
             currentStyle: n,
             styleColors: i,
         });
@@ -141,7 +141,7 @@ function F(e, t) {
 }
 let H = c().debounce(() => {
     let e = !1;
-    w && ((w = G().length > 0) || (e = !0)),
+    w && ((w = M().length > 0) || (e = !0)),
         [...S].forEach((t) => {
             var n;
             c().isEqual(
@@ -160,7 +160,7 @@ let H = c().debounce(() => {
 function W(e, t) {
     let n = Z.indexOf(e);
     if (n < 0) return !1;
-    let r = E({}, e, t),
+    let r = N({}, e, t),
         i = [...Z];
     (i[n] = r), (Z = i), (P = !0), S.add(r.id), H();
 }
@@ -188,13 +188,13 @@ function z(e) {
         0 === S.size && (P = !1);
     let i = new Map();
     S.forEach((e) => {
-        let t = M.get(e);
+        let t = G.get(e);
         null != t && i.set(e, t);
     }),
-        M.clear(),
+        G.clear(),
         F(t, n),
         i.forEach((e, t) => {
-            M.set(t, e);
+            G.set(t, e);
         }),
         (w = !1),
         (Z = [...n]);
@@ -207,7 +207,7 @@ class K extends (a = g.ZP.Store) {
         return P || w || D;
     }
     getRoleStyleData(e) {
-        return M.get(e);
+        return G.get(e);
     }
     get errorMessage() {
         return l;
@@ -234,7 +234,7 @@ class K extends (a = g.ZP.Store) {
         return T;
     }
     getSortDeltas() {
-        return G();
+        return M();
     }
     showNotice() {
         return this.hasChanges();
@@ -249,7 +249,7 @@ class K extends (a = g.ZP.Store) {
         return k;
     }
 }
-N(K, "displayName", "GuildSettingsRolesStore");
+E(K, "displayName", "GuildSettingsRolesStore");
 let Y = new K(
         m.Z,
         __OVERLAY__
@@ -295,7 +295,7 @@ let Y = new K(
                           r = 0 === n ? null : (0, u.Rf)(n),
                           i = V(t);
                       if (null == i) return !1;
-                      let l = M.get(t);
+                      let l = G.get(t);
                       return (
                           null != l &&
                           ((l.currentStyle = "solid"),
@@ -304,7 +304,7 @@ let Y = new K(
                               secondary_color: null,
                               tertiary_color: null,
                           }),
-                          M.set(t, E({}, l)),
+                          G.set(t, N({}, l)),
                           W(i, {
                               color: n,
                               colorString: r,
@@ -329,12 +329,12 @@ let Y = new K(
                           i = V(t);
                       if (null == i) return !1;
                       let l = (0, h.DX)(n),
-                          a = M.get(t);
+                          a = G.get(t);
                       return (
                           null != a &&
                           ((a.styleColors[r] = n),
                           (a.currentStyle = r),
-                          M.set(t, E({}, a)),
+                          G.set(t, N({}, a)),
                           W(i, {
                               color: n.primary_color,
                               colors: n,
@@ -377,9 +377,9 @@ let Y = new K(
                       let { id: n, currentStyle: r } = e,
                           i = V(n);
                       if (null == i) return !1;
-                      let l = M.get(n);
+                      let l = G.get(n);
                       if (null == l) return !1;
-                      M.set(n, {
+                      G.set(n, {
                           currentStyle: r,
                           styleColors: l.styleColors,
                       });
@@ -411,7 +411,7 @@ let Y = new K(
                           (R = Z = []),
                           L.clear(),
                           S.clear(),
-                          M.clear(),
+                          G.clear(),
                           k.clear(),
                           (A = new Set()),
                           (P = !1),
@@ -444,7 +444,7 @@ let Y = new K(
                           (r = (0, p.t8)(
                               r,
                               "features",
-                              r.features.union(new Set([O.oNc.PIN_PERMISSION_MIGRATION_COMPLETE])),
+                              r.features.union(new Set([O.GuildFeatures.PIN_PERMISSION_MIGRATION_COMPLETE])),
                           ));
                   },
               },

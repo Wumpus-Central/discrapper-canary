@@ -19,7 +19,7 @@ function g(t) {
         { channel: g, transitionState: T, onClose: S } = t,
         C = l.Z.getGuild(g.guild_id),
         O = null != (i = null == C ? void 0 : C.maxStageVideoChannelUsers) ? i : 0,
-        f = null != C && C.features.has(_.oNc.COMMUNITY),
+        f = null != C && C.features.has(_.GuildFeatures.COMMUNITY),
         L = p.intl.string(p.t.pqPQLy),
         m = f ? O < _.TU7 : (null == C ? void 0 : C.premiumTier) !== _.Eu4.TIER_3 && O <= _.eez,
         v = d.Z.can(c.yP, g);

@@ -251,7 +251,7 @@ function em(e) {
                 q =
                     t.type === el.d4z.GUILD_ANNOUNCEMENT &&
                     null != p &&
-                    p.features.has(el.oNc.NEWS) &&
+                    p.features.has(el.GuildFeatures.NEWS) &&
                     (A || j) &&
                     (0, m.Z)(n),
                 et = t.getGuildId(),

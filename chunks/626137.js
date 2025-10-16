@@ -21,7 +21,7 @@ var r = n(951288),
     C = n(190378),
     O = n(388032),
     y = n(503562);
-function N(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,7 +46,7 @@ function N(e) {
     }
     return e;
 }
-let E = function (e, t, n) {
+let N = function (e, t, n) {
         let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             i = null;
         return (
@@ -133,8 +133,8 @@ let E = function (e, t, n) {
                 (null != t &&
                     t < 500 &&
                     null != n &&
-                    !n.features.has(_.oNc.PARTNERED) &&
-                    !n.features.has(_.oNc.VERIFIED));
+                    !n.features.has(_.GuildFeatures.PARTNERED) &&
+                    !n.features.has(_.GuildFeatures.VERIFIED));
         i.useEffect(() => {
             null == e || T || ((0, j.Vk)(e), (0, j.SR)(e), (0, j.xl)(e));
         }, [e, T]),
@@ -150,36 +150,36 @@ let E = function (e, t, n) {
                           children: [
                               (0, r.jsx)(
                                   u.Z,
-                                  N(
+                                  E(
                                       {
                                           title: O.intl.string(O.t.i0Nora),
                                           tooltipText: O.intl.string(O.t.KiRbLC),
                                       },
-                                      E(a.visitors, a.visitorsChange, l),
+                                      N(a.visitors, a.visitorsChange, l),
                                   ),
                               ),
                               (0, r.jsx)(
                                   u.Z,
-                                  N(
+                                  E(
                                       {
                                           title: O.intl.string(O.t.DDAHdX),
                                           tooltipText: O.intl.string(O.t.HxWUkZ),
                                       },
-                                      E(a.communicators, a.communicatorsChange, l),
+                                      N(a.communicators, a.communicatorsChange, l),
                                   ),
                               ),
                               (0, r.jsx)(
                                   u.Z,
-                                  N({ title: O.intl.string(O.t.hYeOqK) }, E(a.newMembers, a.newMembersChange, l)),
+                                  E({ title: O.intl.string(O.t.hYeOqK) }, N(a.newMembers, a.newMembersChange, l)),
                               ),
                               (0, r.jsx)(
                                   u.Z,
-                                  N(
+                                  E(
                                       {
                                           title: O.intl.string(O.t.jj7OPz),
                                           tooltipText: O.intl.string(O.t.MQCsl5),
                                       },
-                                      E(a.pctRetained, a.pctRetainedChange, l, !0),
+                                      N(a.pctRetained, a.pctRetainedChange, l, !0),
                                   ),
                               ),
                           ],

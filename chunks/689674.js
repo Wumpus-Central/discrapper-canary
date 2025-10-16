@@ -14,7 +14,7 @@ function f(e) {
         h = (0, o.e7)([s.Z], () => {
             var e;
             let t = s.Z.getGuild(_.guild_id);
-            return null != (e = null == t ? void 0 : t.features.has(u.oNc.COMMUNITY)) && e;
+            return null != (e = null == t ? void 0 : t.features.has(u.GuildFeatures.COMMUNITY)) && e;
         }, [_.guild_id]),
         m =
             (null == (t = f.messageReference) ? void 0 : t.guild_id) != null &&

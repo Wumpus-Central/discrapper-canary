@@ -54,67 +54,67 @@ let d = "1340102344645283891",
     E = [[r.IN], [r.If], [r.A$], [r.MB, r.Vk]],
     b = new Set([r.IN, r.If, r.A$, r.MB, r.Vk]),
     y = () => ({
-        [l.oNc.VIDEO_BITRATE_ENHANCED]: {
+        [l.GuildFeatures.VIDEO_BITRATE_ENHANCED]: {
             perkIcon: a.Ro.STREAM,
             description: c.intl.string(c.t.y4ft4O),
         },
-        [l.oNc.AUDIO_BITRATE_128_KBPS]: {
+        [l.GuildFeatures.AUDIO_BITRATE_128_KBPS]: {
             perkIcon: a.Ro.AUDIO,
             description: c.intl.formatToPlainString(c.t.zoT1ZG, { bitrate: s.HO[l.Eu4.TIER_1].limits.bitrate / 1000 }),
         },
-        [l.oNc.INVITE_SPLASH]: {
+        [l.GuildFeatures.INVITE_SPLASH]: {
             perkIcon: a.Ro.CUSTOMIZATION,
             description: c.intl.string(c.t.Qwlpoq),
         },
-        [l.oNc.ANIMATED_ICON]: {
+        [l.GuildFeatures.ANIMATED_ICON]: {
             perkIcon: a.Ro.ANIMATED,
             description: c.intl.string(c.t.PbAyub),
         },
-        [l.oNc.AUDIO_BITRATE_256_KBPS]: {
+        [l.GuildFeatures.AUDIO_BITRATE_256_KBPS]: {
             perkIcon: a.Ro.AUDIO,
             description: c.intl.formatToPlainString(c.t.zoT1ZG, { bitrate: s.HO[l.Eu4.TIER_2].limits.bitrate / 1000 }),
         },
-        [l.oNc.ROLE_ICONS]: {
+        [l.GuildFeatures.ROLE_ICONS]: {
             perkIcon: a.Ro.CUSTOM_ROLE_ICON,
             description: c.intl.string(c.t["6PV6QU"]),
         },
-        [l.oNc.MAX_FILE_SIZE_50_MB]: {
+        [l.GuildFeatures.MAX_FILE_SIZE_50_MB]: {
             perkIcon: a.Ro.UPLOAD,
             description: c.intl.formatToPlainString(c.t["aFRl5+"], { uploadSizeLimit: c.intl.string(c.t.M6qV8v) }),
         },
-        [l.oNc.BANNER]: {
+        [l.GuildFeatures.BANNER]: {
             perkIcon: a.Ro.CUSTOMIZATION,
             description: c.intl.string(c.t["1a5rjo"]),
         },
-        [l.oNc.ANIMATED_BANNER]: {
+        [l.GuildFeatures.ANIMATED_BANNER]: {
             perkIcon: a.Ro.ANIMATED,
             description: c.intl.string(c.t["1+Vmh4"]),
         },
-        [l.oNc.AUDIO_BITRATE_384_KBPS]: {
+        [l.GuildFeatures.AUDIO_BITRATE_384_KBPS]: {
             perkIcon: a.Ro.AUDIO,
             description: c.intl.formatToPlainString(c.t.zoT1ZG, { bitrate: s.HO[l.Eu4.TIER_3].limits.bitrate / 1000 }),
         },
-        [l.oNc.VANITY_URL]: {
+        [l.GuildFeatures.VANITY_URL]: {
             perkIcon: a.Ro.VANITY,
             description: c.intl.string(c.t["5XZKy8"]),
         },
-        [l.oNc.MAX_FILE_SIZE_100_MB]: {
+        [l.GuildFeatures.MAX_FILE_SIZE_100_MB]: {
             perkIcon: a.Ro.UPLOAD,
             description: c.intl.formatToPlainString(c.t["aFRl5+"], { uploadSizeLimit: c.intl.string(c.t.yMOW8P) }),
         },
     }),
     O = {
-        [l.oNc.VANITY_URL]: {
+        [l.GuildFeatures.VANITY_URL]: {
             boostPrice: 5,
             includedInLevel: l.Eu4.TIER_3,
         },
-        [l.oNc.GUILD_TAGS]: { boostPrice: 3 },
-        [l.oNc.ENHANCED_ROLE_COLORS]: { boostPrice: 3 },
-        [l.oNc.GUILD_TAGS_BADGE_PACK_PETS]: { boostPrice: 3 },
-        [l.oNc.GUILD_TAGS_BADGE_PACK_FLEX]: { boostPrice: 5 },
+        [l.GuildFeatures.GUILD_TAGS]: { boostPrice: 3 },
+        [l.GuildFeatures.ENHANCED_ROLE_COLORS]: { boostPrice: 3 },
+        [l.GuildFeatures.GUILD_TAGS_BADGE_PACK_PETS]: { boostPrice: 3 },
+        [l.GuildFeatures.GUILD_TAGS_BADGE_PACK_FLEX]: { boostPrice: 5 },
     },
     v = {
-        [l.oNc.GAME_SERVERS]: {
+        [l.GuildFeatures.GAME_SERVERS]: {
             boostPrice: 3,
             isEnabled: (e) => (0, o.v$)(e, "GuildPowerupsConstants"),
         },

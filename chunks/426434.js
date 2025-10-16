@@ -25,7 +25,7 @@ function x(e) {
         C = null == v ? void 0 : v.mfaEnabled,
         O = x === f.BpS.ELEVATED,
         y = _ && C,
-        N = (0, i.throttle)(async (e) => {
+        E = (0, i.throttle)(async (e) => {
             y &&
                 (await m.Z.updateMFALevel({
                     guildId: n.id,
@@ -40,7 +40,7 @@ function x(e) {
                   settingsHook: () => (0, c.openUserSettings)(o.n.ACCOUNT_PANEL, { section: f.oAB.ACCOUNT }),
               })
             : h.intl.string(h.t["9Ghu4+"]));
-    let E = n.features.has(f.oNc.DISCOVERABLE);
+    let N = n.features.has(f.GuildFeatures.DISCOVERABLE);
     return (0, r.jsxs)("div", {
         className: b.simpleItemWrapper,
         children: [
@@ -59,9 +59,9 @@ function x(e) {
                     }),
                 ],
             }),
-            !y || (O && E)
+            !y || (O && N)
                 ? (0, r.jsx)(a.u, {
-                      text: E
+                      text: N
                           ? h.intl.string(h.t["KG1V/P"])
                           : _
                             ? h.intl.string(h.t.NmsheX)
@@ -69,13 +69,13 @@ function x(e) {
                       children: (0, r.jsx)(p.Z, {
                           checked: O,
                           disabled: !0,
-                          onChange: N,
+                          onChange: E,
                           className: b.bringToFront,
                       }),
                   })
                 : (0, r.jsx)(p.Z, {
                       checked: O,
-                      onChange: N,
+                      onChange: E,
                       className: b.bringToFront,
                   }),
         ],

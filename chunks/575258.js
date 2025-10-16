@@ -34,7 +34,7 @@ function p(e) {
         m = d = {
             description: null != (i = t.description) ? i : "",
             channels: null != (l = t.welcome_channels) ? l : [],
-            enabled: null == r ? void 0 : r.features.has(s.oNc.WELCOME_SCREEN_ENABLED),
+            enabled: null == r ? void 0 : r.features.has(s.GuildFeatures.WELCOME_SCREEN_ENABLED),
         };
     } else m = d = c;
     g = !1;

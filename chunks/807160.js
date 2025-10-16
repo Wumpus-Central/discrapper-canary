@@ -191,7 +191,7 @@ function ef(e) {
                 ? K.intl.string(K.t.H11qcX)
                 : o,
         c = a.useCallback(async () => {
-            (null == s ? void 0 : s.features.has(H.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE))
+            (null == s ? void 0 : s.features.has(H.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE))
                 ? await (0, S.Z)(H.Z5c.GUILD_PRODUCT(t, n))
                 : await (0, S.Z)(H.Z5c.CHANNEL(t)),
                 (0, P.default)();

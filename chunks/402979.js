@@ -2,14 +2,14 @@ r.d(t, { default: () => u });
 var n = r(951288),
     o = r(647438),
     i = r(481060),
-    c = r(434404),
-    a = r(981631),
+    a = r(434404),
+    c = r(981631),
     l = r(388032);
 function u(e) {
     var t,
         r,
         { guild: u } = e,
-        f = (function (e, t) {
+        s = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -30,10 +30,10 @@ function u(e) {
             }
             return o;
         })(e, ["guild"]);
-    let s = u.id,
+    let f = u.id,
         b = o.useCallback(() => {
-            c.Z.leaveGuild(s, !0);
-        }, [s]);
+            a.Z.leaveGuild(f, !0);
+        }, [f]);
     return (0, n.jsx)(
         i.ConfirmModal,
         ((t = (function (e) {
@@ -63,17 +63,19 @@ function u(e) {
         })(
             {
                 header: l.intl.formatToPlainString(l.t["1GX6Pz"], { name: u.name }),
-                confirmText: u.features.has(a.oNc.HUB) ? l.intl.string(l.t.Dv8gFR) : l.intl.string(l.t.J2TBi4),
+                confirmText: u.features.has(c.GuildFeatures.HUB)
+                    ? l.intl.string(l.t.Dv8gFR)
+                    : l.intl.string(l.t.J2TBi4),
                 cancelText: l.intl.string(l.t["ETE/oK"]),
                 onConfirm: b,
             },
-            f,
+            s,
         )),
         (r = r =
             {
                 children: (0, n.jsx)(i.Text, {
                     variant: "text-md/normal",
-                    children: u.features.has(a.oNc.HUB)
+                    children: u.features.has(c.GuildFeatures.HUB)
                         ? l.intl.format(l.t.ZHTXVF, { name: u.name })
                         : l.intl.format(l.t.ZEXC0t, { name: u.name }),
                 }),

@@ -13,8 +13,8 @@ let u = {
         (0, n.e7)(
             [l.Z, r.Z],
             () => (e) =>
-                e.features.has(o.oNc.ROLE_SUBSCRIPTIONS_ENABLED) &&
-                !e.features.has(o.oNc.CREATOR_MONETIZABLE_RESTRICTED) &&
+                e.features.has(o.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED) &&
+                !e.features.has(o.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED) &&
                 r.Z.can(o.Plq.ADMINISTRATOR, e) &&
                 (0, a.$F)() &&
                 (0, a.hQ)(e.id),

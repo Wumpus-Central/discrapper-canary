@@ -102,11 +102,11 @@ function w(e) {
         }),
         H = (0, j.Z)(t),
         V = (0, g.Z)(t.id),
-        q = (0, d.Z)({
+        F = (0, d.Z)({
             id: t.id,
             label: M.intl.string(M.t["94lLDw"]),
         }),
-        F = (0, N.Z)(t, { section: G.jXE.GUILD_LIST }),
+        q = (0, N.Z)(t, { section: G.jXE.GUILD_LIST }),
         W = (0, S.Z)(t.id),
         X = (0, v.Z)(t.id),
         K = (0, _.Z)(t),
@@ -118,7 +118,7 @@ function w(e) {
             return (n) => (0, i.jsx)(e, D(k({}, n), { guild: t }));
         });
     }
-    return t.features.has(G.oNc.HUB)
+    return t.features.has(G.GuildFeatures.HUB)
         ? (0, i.jsxs)(o.v2r, {
               navId: "guild-context",
               onClose: c.Zy,
@@ -150,7 +150,7 @@ function w(e) {
                                 color: "danger",
                             }),
                         }),
-                  (0, i.jsx)(o.kSQ, { children: q }),
+                  (0, i.jsx)(o.kSQ, { children: F }),
               ],
           })
         : (0, i.jsxs)(o.v2r, {
@@ -159,7 +159,7 @@ function w(e) {
               "aria-label": M.intl.string(M.t.HpQykZ),
               onSelect: r,
               children: [
-                  (0, i.jsx)(o.kSQ, { children: F }),
+                  (0, i.jsx)(o.kSQ, { children: q }),
                   (0, i.jsx)(o.kSQ, { children: T }),
                   (0, i.jsxs)(o.kSQ, {
                       children: [C, J || __OVERLAY__ ? null : B, J && !__OVERLAY__ ? X : null, R, W],
@@ -197,7 +197,7 @@ function w(e) {
                       ],
                   }),
                   (0, i.jsx)(o.kSQ, { children: z }),
-                  (0, i.jsx)(o.kSQ, { children: q }),
+                  (0, i.jsx)(o.kSQ, { children: F }),
               ],
           });
 }

@@ -32,8 +32,8 @@ function f(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return (
         !(null == e || c(e.id)) &&
-        !!e.features.has(o.oNc.SUMMARIES_ENABLED_GA) &&
-        (!t || e.features.has(o.oNc.SUMMARIES_ENABLED_BY_USER))
+        !!e.features.has(o.GuildFeatures.SUMMARIES_ENABLED_GA) &&
+        (!t || e.features.has(o.GuildFeatures.SUMMARIES_ENABLED_BY_USER))
     );
 }
 function _(e) {

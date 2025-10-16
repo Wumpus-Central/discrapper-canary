@@ -20,8 +20,8 @@ var i,
     E = n(110924),
     y = n(100527),
     C = n(906732),
-    N = n(835473),
-    _ = n(447003),
+    _ = n(835473),
+    N = n(447003),
     T = n(471445),
     b = n(600164),
     j = n(687516),
@@ -37,9 +37,9 @@ var i,
     L = n(751771),
     k = n(496675),
     D = n(158776),
-    B = n(944486),
-    G = n(594174),
-    F = n(938475),
+    G = n(944486),
+    F = n(594174),
+    B = n(938475),
     z = n(626135),
     H = n(630388),
     q = n(971130),
@@ -195,7 +195,7 @@ class ev extends (i = s.PureComponent) {
     }
     renderChannelWarning() {
         let { inviteChannel: e } = this.props;
-        return (0, _.Z)(e)
+        return (0, N.Z)(e)
             ? (0, l.jsxs)("div", {
                   className: es.warningContainer,
                   children: [
@@ -259,7 +259,7 @@ class ev extends (i = s.PureComponent) {
                 }));
         }
         return (
-            (h = t.features.has(en.oNc.HUB)
+            (h = t.features.has(en.GuildFeatures.HUB)
                 ? (0, l.jsxs)("div", {
                       className: es.hubHeader,
                       children: [
@@ -410,7 +410,7 @@ class ev extends (i = s.PureComponent) {
         let { guild: t, showFriends: n, streamUserId: i, application: s } = this.props;
         if (n) return this.renderFriendsBody();
         let a = (0, Q.Z)(null != (e = this.getInviteKey()) ? e : ""),
-            r = G.default.getCurrentUser();
+            r = F.default.getCurrentUser();
         d()(null != r, "InstantInviteModal: user cannot be undefined");
         let o = (0, P.eM)(t, r) ? el.intl.string(el.t.HFbByM) : el.intl.string(el.t.ueBhAw);
         return (
@@ -747,9 +747,9 @@ let ex = s.forwardRef(function (e, t) {
             analyticsLocation: T,
         } = e,
         { analyticsLocations: b } = (0, C.ZP)(y.Z.INSTANT_INVITE_MODAL),
-        j = (0, m.e7)([B.Z, O.Z, R.ZP], () => {
+        j = (0, m.e7)([G.Z, O.Z, R.ZP], () => {
             if (null != a) return a;
-            let e = B.Z.getChannelId(),
+            let e = G.Z.getChannelId(),
                 t = null == e || (0, ei.AB)(e) ? void 0 : O.Z.getChannel(e);
             return (
                 (null == t ? void 0 : t.isThread()) && (t = O.Z.getChannel(t.parent_id)),
@@ -767,7 +767,7 @@ let ex = s.forwardRef(function (e, t) {
             guildId: P,
             location: "InstantInviteModalConnected",
         }),
-        G = (0, m.e7)([U.Z], () => {
+        F = (0, m.e7)([U.Z], () => {
             let e = null != j ? j.id : null;
             return null == e
                 ? null
@@ -783,12 +783,12 @@ let ex = s.forwardRef(function (e, t) {
             autoTrackExposure: !0,
         }),
         [Y, Q, $, X] = (0, m.Wu)(
-            [L.Z, F.ZP],
+            [L.Z, B.ZP],
             () => [
                 L.Z.getInviteSuggestionRows(),
                 L.Z.getTotalSuggestionsCount() >= 1,
                 L.Z.getInitialCounts(),
-                null != a && null != j ? F.ZP.getVoiceStatesForChannel(j) : null,
+                null != a && null != j ? B.ZP.getVoiceStatesForChannel(j) : null,
             ],
             [j, a],
         ),
@@ -802,7 +802,7 @@ let ex = s.forwardRef(function (e, t) {
             v.Z,
         ),
         el = (0, m.e7)([k.Z], () => null != j && k.Z.can(en.Plq.CREATE_INSTANT_INVITE, j), [j]),
-        es = null === G || !el,
+        es = null === F || !el,
         [ea] = s.useState(() => {
             let e = new Set();
             return (
@@ -831,19 +831,19 @@ let ex = s.forwardRef(function (e, t) {
             inviteTargetType: A,
         }).catch(en.VqG);
     }, [ea, a, r, c, A]);
-    let [ed] = (0, N.Z)(null != c ? [c] : []),
-        ec = null != G ? G.code : void 0,
-        ep = null == G ? void 0 : G.maxAge,
-        ex = null == G ? void 0 : G.maxUses,
-        eI = null == G ? void 0 : G.temporary,
+    let [ed] = (0, _.Z)(null != c ? [c] : []),
+        ec = null != F ? F.code : void 0,
+        ep = null == F ? void 0 : F.maxAge,
+        ex = null == F ? void 0 : F.maxUses,
+        eI = null == F ? void 0 : F.temporary,
         eS = r.vanityURLCode,
         ef = null != eS && eS.length > 0,
         eE = !el && !(null == j ? void 0 : j.isGuildVocal()) && ef,
-        ey = null != (n = null == G ? void 0 : G.flags) ? n : 0,
+        ey = null != (n = null == F ? void 0 : F.flags) ? n : 0,
         eC = (null == j ? void 0 : j.type) === en.d4z.GUILD_VOICE,
-        eN = (0, _.Z)(j);
+        e_ = (0, N.Z)(j);
     el || (null == eo ? void 0 : eo.invite_code) == null || (ec = eo.invite_code);
-    let e_ = s.useMemo(() => (z && eC ? (0, q.Qq)(Y, P) : null), [z, eC, Y, P]),
+    let eN = s.useMemo(() => (z && eC ? (0, q.Qq)(Y, P) : null), [z, eC, Y, P]),
         [eT, eb] = s.useState({
             query: "",
             maxAgeOptions: D,
@@ -871,7 +871,7 @@ let ex = s.forwardRef(function (e, t) {
             },
             [eT.currentPage, ej],
         ),
-        eZ = eC && !eE && !es && !eN,
+        eZ = eC && !eE && !es && !e_,
         { enabled: eM } = Z.o.useExperiment(
             {
                 guildId: null == r ? void 0 : r.id,
@@ -919,12 +919,12 @@ let ex = s.forwardRef(function (e, t) {
         }, [eE, el, j, o, null == ed ? void 0 : ed.id, A, u, eP, ew, eV, ej, eO, eR]),
         ek = (0, E.Z)(j),
         eD = (0, E.Z)((0, H.yE)(eR, h.$.IS_APPLICATION_BYPASS)),
-        eB = null != ek && ek !== j,
-        eG = null != eD && eD !== (0, H.yE)(eR, h.$.IS_APPLICATION_BYPASS);
+        eG = null != ek && ek !== j,
+        eF = null != eD && eD !== (0, H.yE)(eR, h.$.IS_APPLICATION_BYPASS);
     s.useEffect(() => {
-        !eE && (eB || eG) && eL();
-    }, [eL, eB, eG, eE]);
-    let { canCreateApplicationBypassInvites: eF, isManualApprovalGuild: ez } = (0, J.R)(r);
+        !eE && (eG || eF) && eL();
+    }, [eL, eG, eF, eE]);
+    let { canCreateApplicationBypassInvites: eB, isManualApprovalGuild: ez } = (0, J.R)(r);
     return (0, l.jsx)(C.Gt, {
         value: b,
         children: (0, l.jsx)(ev, {
@@ -940,7 +940,7 @@ let ex = s.forwardRef(function (e, t) {
             targetUserId: u,
             application: ed,
             rows: Y,
-            sections: e_,
+            sections: eN,
             isFriendsInVCInvitesEnabled: z,
             showFriends: Q,
             initialCounts: $,
@@ -959,7 +959,7 @@ let ex = s.forwardRef(function (e, t) {
             changePage: eA,
             onGenerateNewLink: eL,
             handleDone: eU,
-            isApplicationBypassToggleEnabled: eF && !es,
+            isApplicationBypassToggleEnabled: eB && !es,
         }),
     });
 });

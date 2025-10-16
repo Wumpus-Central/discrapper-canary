@@ -10,14 +10,14 @@ var i = n(442837),
     u = n(456269),
     d = n(921711),
     p = n(368442),
-    h = n(601070),
-    f = n(430824),
+    f = n(601070),
+    h = n(430824),
     g = n(496675),
     m = n(306680),
     b = n(979651),
     _ = n(968358),
-    y = n(790901),
-    O = n(714794),
+    O = n(790901),
+    y = n(714794),
     v = n(355363),
     j = n(259404),
     x = n(876548),
@@ -44,23 +44,27 @@ function N(e) {
         G = (0, i.e7)([m.ZP], () => m.ZP.getMentionCount(n.id)),
         U = (0, i.e7)([m.ZP], () => m.ZP.getIsMentionLowImportance(n.id)),
         B = (0, a.ZP)(n),
-        V = (0, i.e7)([g.Z], () => !g.Z.can(E.Plq.CONNECT, n)),
-        F = (0, s.P)(n),
+        F = (0, i.e7)([g.Z], () => !g.Z.can(E.Plq.CONNECT, n)),
+        V = (0, s.P)(n),
         H = (0, i.e7)([b.Z], () => b.Z.hasVideo(n.id)),
         z = (0, p.PK)(n.id) && n.isGuildStageVoice(),
         W = (0, v.ZP)({
             channel: n,
-            locked: V,
-            video: (H || z) && null == F,
+            locked: F,
+            video: (H || z) && null == V,
             selected: N,
         }),
-        K = (0, i.e7)([h.Z], () => h.Z.getNewThreadCount(n.guild_id, n.id)),
+        K = (0, i.e7)([f.Z], () => f.Z.getNewThreadCount(n.guild_id, n.id)),
         Y = (0, u.n2)(n.guild_id, n.id),
-        q = (0, i.e7)([f.Z], () => {
+        q = (0, i.e7)([h.Z], () => {
             var e, t;
-            return null != (t = null == (e = f.Z.getGuild(n.guild_id)) ? void 0 : e.features.has(E.oNc.COMMUNITY)) && t;
+            return (
+                null !=
+                    (t = null == (e = h.Z.getGuild(n.guild_id)) ? void 0 : e.features.has(E.GuildFeatures.COMMUNITY)) &&
+                t
+            );
         });
-    if ((0, O.Z)(G))
+    if ((0, y.Z)(G))
         return (0, r.jsx)(C.Z, {
             mentionsCount: G,
             isMentionLowImportance: U,
@@ -96,12 +100,12 @@ function N(e) {
                 text: I.intl.string(I.t.dI3q4u),
                 color: l.Z.unsafe_rawColors.RED_400.css,
             })
-          : null != F
+          : null != V
             ? (0, r.jsx)(c.x3, {
                   textColor: "text-feedback-positive",
-                  entry: { start: F },
+                  entry: { start: V },
               })
-            : null != A && A && (0, y.u)(B)
+            : null != A && A && (0, O.u)(B)
               ? (0, r.jsx)(j.Z, {
                     embeddedApps: B,
                     muted: M,

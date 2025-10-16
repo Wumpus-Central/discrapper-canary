@@ -542,7 +542,7 @@ class er {
             let t = s[e];
             if (t.type !== B.d4z.GUILD_CATEGORY) {
                 if (t.type === B.d4z.GUILD_DIRECTORY) {
-                    null == l || l.features.has(B.oNc.HUB) || E.push(t);
+                    null == l || l.features.has(B.GuildFeatures.HUB) || E.push(t);
                     continue;
                 }
                 eS(this, t, O)

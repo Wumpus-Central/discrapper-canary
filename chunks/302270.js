@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(481060),
     d = n(475179),
     u = n(100527),
-    h = n(906732),
-    p = n(358221),
+    p = n(906732),
+    h = n(358221),
     f = n(185935),
     g = n(522651),
     m = n(933557),
@@ -25,8 +25,8 @@ var r = n(951288),
     S = n(431328),
     E = n(501655),
     Z = n(200498),
-    T = n(146085),
-    P = n(427679),
+    P = n(146085),
+    T = n(427679),
     N = n(592473),
     R = n(903108),
     w = n(981631),
@@ -35,12 +35,12 @@ var r = n(951288),
     L = n(270479);
 function M(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, showRequestToSpeakSidebar: i } = e,
-        { analyticsLocations: l, newestAnalyticsLocation: o } = (0, h.ZP)(u.Z.VOICE_CHANNEL_HEADER),
+        { analyticsLocations: l, newestAnalyticsLocation: o } = (0, p.ZP)(u.Z.VOICE_CHANNEL_HEADER),
         { chatOpen: c, participantsListOpen: m } = (0, s.cj)(
-            [p.Z],
+            [h.Z],
             () => ({
-                chatOpen: p.Z.getChatOpen(t.id),
-                participantsListOpen: p.Z.getParticipantsListOpen(t.id),
+                chatOpen: h.Z.getChatOpen(t.id),
+                participantsListOpen: h.Z.getParticipantsListOpen(t.id),
             }),
             [t.id],
         ),
@@ -48,7 +48,7 @@ function M(e) {
         _ = (0, S.Rk)(t.id, E.pV.REQUESTED_TO_SPEAK_ONLY),
         { hasParticipantsPanel: j } = (0, f.Z)({ location: "StageChannelCallHeader" }),
         v = j && m;
-    return (0, r.jsxs)(h.Gt, {
+    return (0, r.jsxs)(p.Gt, {
         value: l,
         children: [
             (0, r.jsx)(b.Z, { channelId: t.id }, "clips-enabled-indicator"),
@@ -95,18 +95,18 @@ function M(e) {
 function k(e) {
     var t;
     let { channel: n, toggleRequestToSpeakSidebar: l, showRequestToSpeakSidebar: u } = e,
-        h = (0, m.ZP)(n),
-        p = (0, s.e7)([P.Z], () => P.Z.getStageInstanceByChannel(n.id)),
+        p = (0, m.ZP)(n),
+        h = (0, s.e7)([T.Z], () => T.Z.getStageInstanceByChannel(n.id)),
         f = (0, S.Io)(n.id),
         g = (0, S.Rk)(n.id, E.pV.AUDIENCE),
         b = (0, s.e7)([v.Z], () => v.Z.getGuild(n.guild_id), [n.guild_id]),
         O = null != (t = null == b ? void 0 : b.maxStageVideoChannelUsers) ? t : 0,
         x =
-            null != b && b.features.has(w.oNc.COMMUNITY)
+            null != b && b.features.has(w.GuildFeatures.COMMUNITY)
                 ? O < w.TU7
                 : (null == b ? void 0 : b.premiumTier) !== w.Eu4.TIER_3 && O <= w.eez,
         Z = (0, R.Z)(n),
-        N = (0, s.e7)([C.Z], () => C.Z.can(T.yP, n)),
+        N = (0, s.e7)([C.Z], () => C.Z.can(P.yP, n)),
         k = () => {
             d.Z.updateStageVideoLimitBoostUpsellDismissed(n.id, !0),
                 I.default.track(w.rMx.BOOSTING_UPSELL_CLICKED, {
@@ -155,12 +155,12 @@ function k(e) {
                         disabled: !0,
                         "aria-label": D.intl.string(D.t.EErMzM),
                         className: L.icon,
-                        color: null != p ? o.Z.colors.HEADER_MUTED.css : void 0,
+                        color: null != h ? o.Z.colors.HEADER_MUTED.css : void 0,
                     }),
                     (0, r.jsx)(_.ZP.Title, {
                         className: L.channelName,
                         wrapperClassName: L.channelNameWrapper,
-                        children: null != (t = null == p ? void 0 : p.topic) ? t : h,
+                        children: null != (t = null == h ? void 0 : h.topic) ? t : p,
                     }),
                     (0, r.jsx)(_.ZP.Divider, { className: L.divider }),
                     (0, r.jsxs)(_.ZP.Title, {

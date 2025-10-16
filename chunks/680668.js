@@ -69,7 +69,7 @@ function T(e) {
         F = null != G && G.isGuildVocal(),
         V = null != G && G.isGuildStageVoice(),
         H = (0, h.yE)(null != (t = w.flags) ? t : 0, a.$.IS_GUEST_INVITE),
-        Y = null != (v = null == P ? void 0 : P.features.has(b.oNc.HUB)) && v,
+        Y = null != (v = null == P ? void 0 : P.features.has(b.GuildFeatures.HUB)) && v,
         W = null == P ? void 0 : P.id,
         { analyticsLocations: K } = (0, u.ZP)(c.Z.INVITE_EMBED),
         [z, q] = i.useState(!1),
@@ -198,7 +198,7 @@ function T(e) {
                         }),
                     ],
                 }),
-                P.features.has(b.oNc.HUB) &&
+                P.features.has(b.GuildFeatures.HUB) &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)("div", { className: O.separator }),

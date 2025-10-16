@@ -35,12 +35,15 @@ function f(e) {
     return (
         !!r &&
         (!s || !!n) &&
-        (!!(t.features.has(u.oNc.CREATOR_MONETIZABLE) || t.features.has(u.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) ||
-            (!!t.features.has(u.oNc.COMMUNITY) && (!!i || !!a) && n && o))
+        (!!(
+            t.features.has(u.GuildFeatures.CREATOR_MONETIZABLE) ||
+            t.features.has(u.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)
+        ) ||
+            (!!t.features.has(u.GuildFeatures.COMMUNITY) && (!!i || !!a) && n && o))
     );
 }
 function _(e) {
-    if (e.guild.features.has(u.oNc.CREATOR_MONETIZABLE_DISABLED)) return 0;
+    if (e.guild.features.has(u.GuildFeatures.CREATOR_MONETIZABLE_DISABLED)) return 0;
     if (f(e)) return 3;
     let {
         guild: t,
@@ -50,7 +53,7 @@ function _(e) {
         isGuildEligibleForRoleSubscriptions: a,
         isExpeditedMonetizationOnboardingGuild: o,
     } = e;
-    return n && !r && i ? 1 : n && i && (a || o) && !t.features.has(u.oNc.COMMUNITY) ? 2 : 0;
+    return n && !r && i ? 1 : n && i && (a || o) && !t.features.has(u.GuildFeatures.COMMUNITY) ? 2 : 0;
 }
 function p(e) {
     return 0 !== _(e);

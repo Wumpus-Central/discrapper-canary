@@ -24,6 +24,7 @@ function l(e) {
 }
 function a(e) {
     return (
-        e.features.has(r.oNc.VANITY_URL) || (e.features.has(r.oNc.GUILD_WEB_PAGE_VANITY_URL) && null != e.vanityURLCode)
+        e.features.has(r.GuildFeatures.VANITY_URL) ||
+        (e.features.has(r.GuildFeatures.GUILD_WEB_PAGE_VANITY_URL) && null != e.vanityURLCode)
     );
 }

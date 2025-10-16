@@ -40,6 +40,6 @@ let l = "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/
         var n;
         return (
             (null == t || null == (n = t.tags) ? void 0 : n.subscription_listing_id) != null ||
-            e.features.has(s.oNc.ROLE_ICONS)
+            e.features.has(s.GuildFeatures.ROLE_ICONS)
         );
     };

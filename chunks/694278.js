@@ -1,19 +1,19 @@
 r.d(e, { default: () => p }), r(388685);
 var n = r(951288),
     a = r(647438),
-    i = r(538534),
+    i = r(481060),
     o = r(881052),
     c = r(434404),
     l = r(78451),
     s = r(915509),
-    d = r(981631),
-    u = r(388032);
+    u = r(981631),
+    d = r(388032);
 function p(t) {
     var e, r;
     let { guild: p, onClose: b, hideColors: g } = t,
         [y, f] = a.useState(p.verificationLevel),
         [_, O] = a.useState(null),
-        m = p.features.has(d.oNc.COMMUNITY),
+        m = p.features.has(u.GuildFeatures.COMMUNITY),
         v = (0, l.IF)(m, g).filter((t) => !t.disabled),
         j = a.useCallback(async () => {
             null != _ && O(null);
@@ -52,12 +52,12 @@ function p(t) {
         })({}, t)),
         (r = r =
             {
-                title: u.intl.string(u.t.DpRdYG),
-                description: u.intl.format(u.t.iuRk2t, {}),
+                title: d.intl.string(d.t.DpRdYG),
+                description: d.intl.format(d.t.iuRk2t, {}),
                 errorText: _,
                 onConfirm: j,
                 onCancel: b,
-                children: (0, n.jsx)(i.E, {
+                children: (0, n.jsx)(i.FXm, {
                     value: y,
                     options: v,
                     onChange: (t) => f(t),

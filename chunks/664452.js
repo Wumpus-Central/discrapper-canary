@@ -61,13 +61,13 @@ function v(e, t) {
 function y(e) {
     let { guildId: t, transitionState: n, onClose: y, analyticsData: O } = e,
         _ = (0, a.e7)([s.Z], () => s.Z.getGuild(t), [t]),
-        C = !!(null == _ ? void 0 : _.features.has(f.oNc.INVITES_DISABLED)),
+        C = !!(null == _ ? void 0 : _.features.has(f.GuildFeatures.INVITES_DISABLED)),
         [N] = r.useState(!1),
-        [S, I] = r.useState(g.Fl),
-        E = (0, a.e7)([m.Z], () => m.Z.getGuildIncident(t)),
+        [S, E] = r.useState(g.Fl),
+        I = (0, a.e7)([m.Z], () => m.Z.getGuildIncident(t)),
         P = (0, u.BT)(_),
-        w = (0, p.SG)(E) || C,
-        T = (0, p.sN)(E),
+        w = (0, p.SG)(I) || C,
+        T = (0, p.sN)(I),
         [Z, k] = r.useState(w),
         [A, D] = r.useState(T),
         [R, L] = r.useState(!1),
@@ -118,7 +118,7 @@ function y(e) {
                     placeholder: h.intl.string(h.t.vKYZzc),
                     options: (0, g.c1)(),
                     select: (e) => {
-                        I(e), L(!0);
+                        E(e), L(!0);
                     },
                     isSelected: (e) => e === S,
                     serialize: (e) => String(e),

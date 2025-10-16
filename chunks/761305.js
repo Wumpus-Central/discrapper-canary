@@ -47,7 +47,7 @@ class x extends (r = s.PureComponent) {
                     let {
                             body: { guild: t },
                         } = e,
-                        n = (0, d.Jh)(t);
+                        n = (0, d.dangerouslyConstructGuildRecordFromUntypedObject)(t);
                     this.setState({
                         success: !0,
                         busy: !1,

@@ -43,7 +43,7 @@ function g(e, t, n) {
     );
 }
 function m() {
-    let e = s.Z.getGuildsArray().filter((e) => e.features.has(p.oNc.HUB));
+    let e = s.Z.getGuildsArray().filter((e) => e.features.has(p.GuildFeatures.HUB));
     return (0, r.jsxs)(i.Fragment, {
         children: [
             (0, r.jsxs)("header", {

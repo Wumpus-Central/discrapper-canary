@@ -1,282 +1,281 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => b });
 var r = n(951288),
     i = n(647438),
-    a = n(538534),
-    o = n(481060),
-    s = n(100527),
-    l = n(906732),
-    c = n(454585),
-    u = n(125900),
-    d = n(611004),
-    f = n(921801),
-    _ = n(626135),
-    p = n(695346),
-    h = n(273313),
-    m = n(726985),
-    g = n(981631),
-    E = n(125085),
-    b = n(388032);
-function y() {
+    a = n(481060),
+    o = n(100527),
+    s = n(906732),
+    l = n(454585),
+    c = n(125900),
+    u = n(611004),
+    d = n(921801),
+    f = n(626135),
+    _ = n(695346),
+    p = n(273313),
+    h = n(726985),
+    m = n(981631),
+    g = n(125085),
+    E = n(388032);
+function b() {
     var e;
-    let t = p.fq.useSetting(),
-        n = p.eR.useSetting(),
-        y = (0, u.V2)({ location: "UserSettingsTextImages" }),
-        O = p.R$.useSetting(),
-        v = p.cC.useSetting(),
-        I = p.vF.useSetting(),
-        T = p.H1.useSetting(),
-        S = p.ev.useSetting(),
-        A = p.x4.useSetting(),
-        C = p.RS.useSetting(),
-        N = p.NA.useSetting(),
-        R = p.nc.useSetting(),
-        P = p.HV.useSetting(),
-        w = null != (e = p.rR.useSetting()) ? e : E.K,
-        { analyticsLocations: D } = (0, l.ZP)(s.Z.TEXT_AND_IMAGES),
-        L = i.useCallback((e) => {
+    let t = _.fq.useSetting(),
+        n = _.eR.useSetting(),
+        b = (0, c.V2)({ location: "UserSettingsTextImages" }),
+        y = _.R$.useSetting(),
+        O = _.cC.useSetting(),
+        v = _.vF.useSetting(),
+        I = _.H1.useSetting(),
+        T = _.ev.useSetting(),
+        S = _.x4.useSetting(),
+        A = _.RS.useSetting(),
+        C = _.NA.useSetting(),
+        N = _.nc.useSetting(),
+        R = _.HV.useSetting(),
+        P = null != (e = _.rR.useSetting()) ? e : g.K,
+        { analyticsLocations: w } = (0, s.ZP)(o.Z.TEXT_AND_IMAGES),
+        D = i.useCallback((e) => {
             let t = 1 === e;
-            t ? d.Z.cleanUpPrivateChannelSearchState() : d.Z.cleanUpSearchState({ type: g.aib.DMS }),
-                p.rR.updateSetting(t);
+            t ? u.Z.cleanUpPrivateChannelSearchState() : u.Z.cleanUpSearchState({ type: m.aib.DMS }),
+                _.rR.updateSetting(t);
         }, []),
-        x = () =>
-            (0, r.jsx)(a.E, {
-                label: b.intl.string(b.t.QgwmV1),
-                description: b.intl.string(b.t.TYnRkZ),
+        L = () =>
+            (0, r.jsx)(a.FXm, {
+                label: E.intl.string(E.t.QgwmV1),
+                description: E.intl.string(E.t.TYnRkZ),
                 options: [
                     {
-                        name: b.intl.string(b.t["KFH/mZ"]),
-                        value: g.A2N.ON_CLICK,
+                        name: E.intl.string(E.t["KFH/mZ"]),
+                        value: m.A2N.ON_CLICK,
                     },
                     {
-                        name: b.intl.string(b.t.K5VTBA),
-                        value: g.A2N.IF_MODERATOR,
+                        name: E.intl.string(E.t.K5VTBA),
+                        value: m.A2N.IF_MODERATOR,
                     },
                     {
-                        name: b.intl.string(b.t.Pe1RbG),
-                        value: g.A2N.ALWAYS,
+                        name: E.intl.string(E.t.Pe1RbG),
+                        value: m.A2N.ALWAYS,
                     },
                 ],
-                onChange: (e) => p.cC.updateSetting(e),
-                value: v,
+                onChange: (e) => _.cC.updateSetting(e),
+                value: O,
             });
-    return (0, r.jsx)(h.Z, {
-        title: b.intl.string(b.t["/VQax8"]),
-        children: (0, r.jsxs)(o.Kqy, {
+    return (0, r.jsx)(p.Z, {
+        title: E.intl.string(E.t["/VQax8"]),
+        children: (0, r.jsxs)(a.Kqy, {
             direction: "vertical",
             gap: 24,
             children: [
-                (0, r.jsx)(f.F, {
-                    setting: m.s6.CHAT_INLINE_MEDIA,
-                    children: (0, r.jsxs)(o.C3N, {
-                        label: b.intl.string(b.t.U68Dgo),
+                (0, r.jsx)(d.F, {
+                    setting: h.s6.CHAT_INLINE_MEDIA,
+                    children: (0, r.jsxs)(a.C3N, {
+                        label: E.intl.string(E.t.U68Dgo),
                         children: [
-                            (0, r.jsx)(f.F, {
-                                setting: m.s6.CHAT_INLINE_MEDIA_LINKS,
-                                children: (0, r.jsx)(o.rsf, {
-                                    checked: C,
-                                    onChange: p.RS.updateSetting,
-                                    label: b.intl.string(b.t.U47N1t),
-                                }),
-                            }),
-                            (0, r.jsx)(f.F, {
-                                setting: m.s6.CHAT_INLINE_MEDIA_UPLOADS,
-                                children: (0, r.jsx)(o.rsf, {
+                            (0, r.jsx)(d.F, {
+                                setting: h.s6.CHAT_INLINE_MEDIA_LINKS,
+                                children: (0, r.jsx)(a.rsf, {
                                     checked: A,
-                                    description: b.intl.formatToPlainString(b.t.qjjvqK, { maxSize: 10 }),
-                                    onChange: p.x4.updateSetting,
-                                    label: b.intl.string(b.t.VP11Nj),
+                                    onChange: _.RS.updateSetting,
+                                    label: E.intl.string(E.t.U47N1t),
                                 }),
                             }),
-                            (0, r.jsx)(f.F, {
-                                setting: m.s6.CHAT_INLINE_MEDIA_IMAGE_DESCRIPTIONS,
-                                children: (0, r.jsx)(o.rsf, {
-                                    checked: T,
-                                    description: b.intl.string(b.t.T0rbtL),
-                                    onChange: p.H1.updateSetting,
-                                    label: b.intl.string(b.t["w8j+yc"]),
+                            (0, r.jsx)(d.F, {
+                                setting: h.s6.CHAT_INLINE_MEDIA_UPLOADS,
+                                children: (0, r.jsx)(a.rsf, {
+                                    checked: S,
+                                    description: E.intl.formatToPlainString(E.t.qjjvqK, { maxSize: 10 }),
+                                    onChange: _.x4.updateSetting,
+                                    label: E.intl.string(E.t.VP11Nj),
                                 }),
                             }),
-                        ],
-                    }),
-                }),
-                (0, r.jsxs)(f.F, {
-                    setting: m.s6.CHAT_EMBEDS,
-                    children: [
-                        (0, r.jsx)(o.izJ, {}),
-                        (0, r.jsx)(o.C3N, {
-                            label: b.intl.string(b.t.PWZOn5),
-                            children: (0, r.jsx)(f.F, {
-                                setting: m.s6.CHAT_EMBEDS_LINK_PREVIEWS,
-                                children: (0, r.jsx)(o.rsf, {
-                                    checked: N,
-                                    onChange: p.NA.updateSetting,
-                                    label: b.intl.string(b.t.xX0ZTE),
-                                }),
-                            }),
-                        }),
-                    ],
-                }),
-                (0, r.jsxs)(f.F, {
-                    setting: m.s6.CHAT_EMOJI,
-                    children: [
-                        (0, r.jsx)(o.izJ, {}),
-                        (0, r.jsxs)(o.C3N, {
-                            label: b.intl.string(b.t.sMOuub),
-                            children: [
-                                (0, r.jsx)(f.F, {
-                                    setting: m.s6.CHAT_EMOJI_REACTIONS,
-                                    children: (0, r.jsx)(o.rsf, {
-                                        checked: R,
-                                        onChange: p.nc.updateSetting,
-                                        label: b.intl.string(b.t.Iv24sr),
-                                    }),
-                                }),
-                                (0, r.jsx)(f.F, {
-                                    setting: m.s6.CHAT_EMOJI_EMOTICONS,
-                                    children: (0, r.jsx)(o.rsf, {
-                                        checked: S,
-                                        description: c.Z.parse(b.intl.string(b.t["20dvub"])),
-                                        onChange: p.ev.updateSetting,
-                                        label: b.intl.string(b.t["79qal5"]),
-                                    }),
-                                }),
-                            ],
-                        }),
-                    ],
-                }),
-                (0, r.jsxs)(f.F, {
-                    setting: m.s6.CHAT_STICKERS,
-                    children: [
-                        (0, r.jsx)(o.izJ, {}),
-                        (0, r.jsx)(o.C3N, {
-                            label: b.intl.string(b.t["6NtAuL"]),
-                            children: (0, r.jsx)(f.F, {
-                                setting: m.s6.CHAT_STICKERS_AUTOCOMPLETE,
-                                children: (0, r.jsx)(o.rsf, {
-                                    checked: t,
-                                    description: b.intl.string(b.t["/eVrj4"]),
-                                    onChange: (e) => {
-                                        _.default.track(g.rMx.STICKERS_IN_AUTOCOMPLETE_TOGGLED, {
-                                            enabled: e,
-                                            location: { section: g.jXE.SETTINGS_TEXT_AND_IMAGES },
-                                            location_stack: D,
-                                        }),
-                                            p.fq.updateSetting(e);
-                                    },
-                                    label: b.intl.string(b.t["29xPVV"]),
-                                }),
-                            }),
-                        }),
-                    ],
-                }),
-                y &&
-                    (0, r.jsxs)(f.F, {
-                        setting: m.s6.CHAT_SOUNDMOJI,
-                        children: [
-                            (0, r.jsx)(o.izJ, {}),
-                            (0, r.jsx)(o.C3N, {
-                                label: b.intl.string(b.t.EHlAMT),
-                                children: (0, r.jsx)(f.F, {
-                                    setting: m.s6.CHAT_SOUNDMOJI_AUTOCOMPLETE,
-                                    children: (0, r.jsx)(o.rsf, {
-                                        checked: n,
-                                        description: b.intl.string(b.t.hrSIhI),
-                                        onChange: (e) => {
-                                            _.default.track(g.rMx.SOUNDMOJI_IN_AUTOCOMPLETE_TOGGLED, {
-                                                checked: e,
-                                                location: { section: g.jXE.SETTINGS_TEXT_AND_IMAGES },
-                                            }),
-                                                p.eR.updateSetting(e);
-                                        },
-                                        label: b.intl.string(b.t["CtYr+f"]),
-                                    }),
-                                }),
-                            }),
-                        ],
-                    }),
-                (0, r.jsxs)(f.F, {
-                    setting: m.s6.CHAT_TEXT_BOX,
-                    children: [
-                        (0, r.jsx)(o.izJ, {}),
-                        (0, r.jsxs)(o.C3N, {
-                            label: b.intl.string(b.t.afR0pK),
-                            children: [
-                                (0, r.jsx)(f.F, {
-                                    setting: m.s6.CHAT_TEXT_BOX_PREVIEW,
-                                    children: (0, r.jsx)(o.rsf, {
-                                        checked: O,
-                                        onChange: (e) => {
-                                            _.default.track(g.rMx.PREVIEW_MARKDOWN_TOGGLED, {
-                                                enabled: e,
-                                                location: { section: g.jXE.SETTINGS_TEXT_AND_IMAGES },
-                                            }),
-                                                p.R$.updateSetting(e);
-                                        },
-                                        label: b.intl.string(b.t.AqGrEB),
-                                    }),
-                                }),
-                                (0, r.jsx)(f.F, {
-                                    setting: m.s6.CHAT_MENTION_SUGGESTIONS,
-                                    children: (0, r.jsx)(o.rsf, {
-                                        checked: P,
-                                        description: b.intl.string(b.t.AaXigo),
-                                        onChange: (e) => {
-                                            p.HV.updateSetting(e);
-                                        },
-                                        label: b.intl.string(b.t.uXQ2xc),
-                                    }),
-                                }),
-                            ],
-                        }),
-                    ],
-                }),
-                (0, r.jsxs)(f.F, {
-                    setting: m.s6.CHAT_THREADS,
-                    children: [
-                        (0, r.jsx)(o.izJ, {}),
-                        (0, r.jsx)(o.C3N, {
-                            label: b.intl.string(b.t.B2panJ),
-                            children: (0, r.jsx)(f.F, {
-                                setting: m.s6.CHAT_THREADS_SPLIT_VIEW,
-                                children: (0, r.jsx)(o.rsf, {
+                            (0, r.jsx)(d.F, {
+                                setting: h.s6.CHAT_INLINE_MEDIA_IMAGE_DESCRIPTIONS,
+                                children: (0, r.jsx)(a.rsf, {
                                     checked: I,
-                                    onChange: p.vF.updateSetting,
-                                    label: b.intl.string(b.t.AInv5u),
+                                    description: E.intl.string(E.t.T0rbtL),
+                                    onChange: _.H1.updateSetting,
+                                    label: E.intl.string(E.t["w8j+yc"]),
+                                }),
+                            }),
+                        ],
+                    }),
+                }),
+                (0, r.jsxs)(d.F, {
+                    setting: h.s6.CHAT_EMBEDS,
+                    children: [
+                        (0, r.jsx)(a.izJ, {}),
+                        (0, r.jsx)(a.C3N, {
+                            label: E.intl.string(E.t.PWZOn5),
+                            children: (0, r.jsx)(d.F, {
+                                setting: h.s6.CHAT_EMBEDS_LINK_PREVIEWS,
+                                children: (0, r.jsx)(a.rsf, {
+                                    checked: C,
+                                    onChange: _.NA.updateSetting,
+                                    label: E.intl.string(E.t.xX0ZTE),
                                 }),
                             }),
                         }),
                     ],
                 }),
-                (0, r.jsxs)(f.F, {
-                    setting: m.s6.MESSAGE_SEARCH,
+                (0, r.jsxs)(d.F, {
+                    setting: h.s6.CHAT_EMOJI,
                     children: [
-                        (0, r.jsx)(o.izJ, {}),
-                        (0, r.jsx)(f.F, {
-                            setting: m.s6.MESSAGE_SEARCH_ALL_DMS,
-                            children: (0, r.jsx)(o.C3N, {
-                                label: b.intl.string(b.t.VYODPD),
-                                children: (0, r.jsx)(a.E, {
-                                    label: b.intl.string(b.t["NxjN+v"]),
+                        (0, r.jsx)(a.izJ, {}),
+                        (0, r.jsxs)(a.C3N, {
+                            label: E.intl.string(E.t.sMOuub),
+                            children: [
+                                (0, r.jsx)(d.F, {
+                                    setting: h.s6.CHAT_EMOJI_REACTIONS,
+                                    children: (0, r.jsx)(a.rsf, {
+                                        checked: N,
+                                        onChange: _.nc.updateSetting,
+                                        label: E.intl.string(E.t.Iv24sr),
+                                    }),
+                                }),
+                                (0, r.jsx)(d.F, {
+                                    setting: h.s6.CHAT_EMOJI_EMOTICONS,
+                                    children: (0, r.jsx)(a.rsf, {
+                                        checked: T,
+                                        description: l.Z.parse(E.intl.string(E.t["20dvub"])),
+                                        onChange: _.ev.updateSetting,
+                                        label: E.intl.string(E.t["79qal5"]),
+                                    }),
+                                }),
+                            ],
+                        }),
+                    ],
+                }),
+                (0, r.jsxs)(d.F, {
+                    setting: h.s6.CHAT_STICKERS,
+                    children: [
+                        (0, r.jsx)(a.izJ, {}),
+                        (0, r.jsx)(a.C3N, {
+                            label: E.intl.string(E.t["6NtAuL"]),
+                            children: (0, r.jsx)(d.F, {
+                                setting: h.s6.CHAT_STICKERS_AUTOCOMPLETE,
+                                children: (0, r.jsx)(a.rsf, {
+                                    checked: t,
+                                    description: E.intl.string(E.t["/eVrj4"]),
+                                    onChange: (e) => {
+                                        f.default.track(m.rMx.STICKERS_IN_AUTOCOMPLETE_TOGGLED, {
+                                            enabled: e,
+                                            location: { section: m.jXE.SETTINGS_TEXT_AND_IMAGES },
+                                            location_stack: w,
+                                        }),
+                                            _.fq.updateSetting(e);
+                                    },
+                                    label: E.intl.string(E.t["29xPVV"]),
+                                }),
+                            }),
+                        }),
+                    ],
+                }),
+                b &&
+                    (0, r.jsxs)(d.F, {
+                        setting: h.s6.CHAT_SOUNDMOJI,
+                        children: [
+                            (0, r.jsx)(a.izJ, {}),
+                            (0, r.jsx)(a.C3N, {
+                                label: E.intl.string(E.t.EHlAMT),
+                                children: (0, r.jsx)(d.F, {
+                                    setting: h.s6.CHAT_SOUNDMOJI_AUTOCOMPLETE,
+                                    children: (0, r.jsx)(a.rsf, {
+                                        checked: n,
+                                        description: E.intl.string(E.t.hrSIhI),
+                                        onChange: (e) => {
+                                            f.default.track(m.rMx.SOUNDMOJI_IN_AUTOCOMPLETE_TOGGLED, {
+                                                checked: e,
+                                                location: { section: m.jXE.SETTINGS_TEXT_AND_IMAGES },
+                                            }),
+                                                _.eR.updateSetting(e);
+                                        },
+                                        label: E.intl.string(E.t["CtYr+f"]),
+                                    }),
+                                }),
+                            }),
+                        ],
+                    }),
+                (0, r.jsxs)(d.F, {
+                    setting: h.s6.CHAT_TEXT_BOX,
+                    children: [
+                        (0, r.jsx)(a.izJ, {}),
+                        (0, r.jsxs)(a.C3N, {
+                            label: E.intl.string(E.t.afR0pK),
+                            children: [
+                                (0, r.jsx)(d.F, {
+                                    setting: h.s6.CHAT_TEXT_BOX_PREVIEW,
+                                    children: (0, r.jsx)(a.rsf, {
+                                        checked: y,
+                                        onChange: (e) => {
+                                            f.default.track(m.rMx.PREVIEW_MARKDOWN_TOGGLED, {
+                                                enabled: e,
+                                                location: { section: m.jXE.SETTINGS_TEXT_AND_IMAGES },
+                                            }),
+                                                _.R$.updateSetting(e);
+                                        },
+                                        label: E.intl.string(E.t.AqGrEB),
+                                    }),
+                                }),
+                                (0, r.jsx)(d.F, {
+                                    setting: h.s6.CHAT_MENTION_SUGGESTIONS,
+                                    children: (0, r.jsx)(a.rsf, {
+                                        checked: R,
+                                        description: E.intl.string(E.t.AaXigo),
+                                        onChange: (e) => {
+                                            _.HV.updateSetting(e);
+                                        },
+                                        label: E.intl.string(E.t.uXQ2xc),
+                                    }),
+                                }),
+                            ],
+                        }),
+                    ],
+                }),
+                (0, r.jsxs)(d.F, {
+                    setting: h.s6.CHAT_THREADS,
+                    children: [
+                        (0, r.jsx)(a.izJ, {}),
+                        (0, r.jsx)(a.C3N, {
+                            label: E.intl.string(E.t.B2panJ),
+                            children: (0, r.jsx)(d.F, {
+                                setting: h.s6.CHAT_THREADS_SPLIT_VIEW,
+                                children: (0, r.jsx)(a.rsf, {
+                                    checked: v,
+                                    onChange: _.vF.updateSetting,
+                                    label: E.intl.string(E.t.AInv5u),
+                                }),
+                            }),
+                        }),
+                    ],
+                }),
+                (0, r.jsxs)(d.F, {
+                    setting: h.s6.MESSAGE_SEARCH,
+                    children: [
+                        (0, r.jsx)(a.izJ, {}),
+                        (0, r.jsx)(d.F, {
+                            setting: h.s6.MESSAGE_SEARCH_ALL_DMS,
+                            children: (0, r.jsx)(a.C3N, {
+                                label: E.intl.string(E.t.VYODPD),
+                                children: (0, r.jsx)(a.FXm, {
+                                    label: E.intl.string(E.t["NxjN+v"]),
                                     options: [
                                         {
-                                            name: b.intl.string(b.t["t+fGsr"]),
+                                            name: E.intl.string(E.t["t+fGsr"]),
                                             value: 0,
                                         },
                                         {
-                                            name: b.intl.string(b.t.MwlEGB),
+                                            name: E.intl.string(E.t.MwlEGB),
                                             value: 1,
                                         },
                                     ],
-                                    onChange: L,
-                                    value: +!!w,
+                                    onChange: D,
+                                    value: +!!P,
                                 }),
                             }),
                         }),
                     ],
                 }),
-                (0, r.jsxs)(f.F, {
-                    setting: m.s6.CHAT_SPOILERS,
-                    children: [(0, r.jsx)(o.izJ, {}), x()],
+                (0, r.jsxs)(d.F, {
+                    setting: h.s6.CHAT_SPOILERS,
+                    children: [(0, r.jsx)(a.izJ, {}), L()],
                 }),
             ],
         }),

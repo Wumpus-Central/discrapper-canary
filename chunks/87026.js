@@ -15,8 +15,8 @@ var s = i(951288),
     p = i(313201),
     f = i(434404),
     v = i(999382),
-    N = i(84058),
-    j = i(422559),
+    j = i(84058),
+    N = i(422559),
     b = i(210887),
     C = i(984933),
     S = i(485386),
@@ -409,7 +409,7 @@ function V(e) {
                 case T.Plq.MANAGE_GUILD_EXPRESSIONS.toString():
                     return k.intl.string(k.t.cmp2W1);
                 default:
-                    return (0, j.wt)(e);
+                    return (0, N.wt)(e);
             }
         },
         { enabledPermissions: l, disabledPermissions: n } = t;
@@ -550,7 +550,7 @@ let K = (e) => {
             c = (0, o.e7)([b.Z], () => b.Z.theme),
             [d, u] = l.useState(!1),
             [x, m] = l.useState(!P.$X.some((e) => w.oz(e, a))),
-            [j, E] = l.useState(P.b4),
+            [N, E] = l.useState(P.b4),
             [L, y] = l.useState(P.b4),
             [G] = l.useState(null == a ? void 0 : a.defaultMessageNotifications),
             [R] = l.useState(null == a ? void 0 : a.verificationLevel),
@@ -582,7 +582,7 @@ let K = (e) => {
                 var e, t;
                 if (null == F || !d) return;
                 let i = new Set(a.features);
-                i.add(T.oNc.COMMUNITY);
+                i.add(T.GuildFeatures.COMMUNITY);
                 let s = x ? r.Od(F.permissions, P.mu) : F.permissions,
                     l =
                         ((e = (function (e) {
@@ -624,15 +624,15 @@ let K = (e) => {
                                   Object.defineProperty(e, i, Object.getOwnPropertyDescriptor(t, i));
                               }),
                         e);
-                s !== F.permissions && (await (0, N.Gf)(a.id, [l])),
+                s !== F.permissions && (await (0, j.Gf)(a.id, [l])),
                     f.Z.updateGuild({
                         features: i,
-                        rulesChannelId: j,
+                        rulesChannelId: N,
                         publicUpdatesChannelId: L,
                     }),
                     await f.Z.saveGuild(a.id, {
                         features: i,
-                        rulesChannelId: j,
+                        rulesChannelId: N,
                         verificationLevel: a.verificationLevel,
                         explicitContentFilter: a.explicitContentFilter,
                         publicUpdatesChannelId: L,
@@ -665,7 +665,7 @@ let K = (e) => {
                 onPublicUpdatesChannelChange: (e) => {
                     y(e);
                 },
-                ruleChannel: j,
+                ruleChannel: N,
                 publicUpdatesChannel: L,
                 headerId: z,
                 theme: c,
@@ -722,7 +722,7 @@ let K = (e) => {
                 },
                 {
                     modalContent: et,
-                    disableNextStep: null == j || null == L,
+                    disableNextStep: null == N || null == L,
                     overviewTitle: k.intl.string(k.t["7MEtIS"]),
                 },
                 {

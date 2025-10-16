@@ -2,7 +2,7 @@ n.d(t, { z: () => u }), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    a = n(538534),
+    a = n(481060),
     s = n(650774),
     o = n(434404),
     c = n(981631),
@@ -27,7 +27,7 @@ function u(e) {
         b = i.useCallback((e) => {
             o.Z.updateGuild({ defaultMessageNotifications: e });
         }, []);
-    return (0, r.jsx)(a.E, {
+    return (0, r.jsx)(a.FXm, {
         label: t,
         description: n,
         helperText: u,

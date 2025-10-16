@@ -161,14 +161,16 @@ let I = (e) => {
             p.Z.open(a.guild_id, _.pNK.ROLE_SUBSCRIPTIONS);
         },
         H =
-            null != (t = null == E ? void 0 : E.features.has(_.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) && t
+            null !=
+                (t = null == E ? void 0 : E.features.has(_.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) &&
+            t
                 ? C.intl.string(C.t.n0q7sL)
                 : C.intl.string(C.t.QoYdiY),
         z =
             null !=
                 (n =
-                    (null == E ? void 0 : E.features.has(_.oNc.CREATOR_MONETIZABLE)) ||
-                    (null == E ? void 0 : E.features.has(_.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) && n,
+                    (null == E ? void 0 : E.features.has(_.GuildFeatures.CREATOR_MONETIZABLE)) ||
+                    (null == E ? void 0 : E.features.has(_.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL))) && n,
         B = z ? C.intl.string(C.t["G/7ciY"]) : C.intl.string(C.t.IFOiio),
         U = z ? C.intl.string(C.t.GjgQOz) : C.intl.string(C.t.E7AO6u);
     return (0, r.jsx)(r.Fragment, {

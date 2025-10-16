@@ -81,7 +81,7 @@ function b(e) {
     var t, n, r, i;
     let a = o.Z.getGuild(e),
         c =
-            (null == a ? void 0 : a.features.has(l.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0
+            (null == a ? void 0 : a.features.has(l.GuildFeatures.PREMIUM_TIER_3_OVERRIDE)) === !0
                 ? 0
                 : l.oCV[null != (t = null == a ? void 0 : a.premiumTier) ? t : l.Eu4.NONE];
     for (let [t, o] of Object.entries(s.Hk)) {

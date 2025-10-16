@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => p });
 var r = n(647438),
     i = n(442837),
     l = n(445384),
@@ -8,11 +8,11 @@ var r = n(647438),
     c = n(594174),
     d = n(981631),
     u = n(440493);
-function h(e) {
+function p(e) {
     let t = (0, i.e7)([o.Z, a.Z, c.default, s.ZP], () => {
         let t = o.Z.getGuild(e);
         if (
-            (null == t ? void 0 : t.features.has(d.oNc.HUB)) !== !0 ||
+            (null == t ? void 0 : t.features.has(d.GuildFeatures.HUB)) !== !0 ||
             !0 === a.Z.hasViewedPrompt(u.r.REAL_NAME_PROMPT, t.id)
         )
             return null;

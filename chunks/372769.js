@@ -141,17 +141,17 @@ class b extends i.PureComponent {
     render() {
         let { guild: e } = this.props,
             t = new Set(e.features);
-        return t.has(d.oNc.INTERNAL_EMPLOYEE_ONLY)
+        return t.has(d.GuildFeatures.INTERNAL_EMPLOYEE_ONLY)
             ? this.renderBadge(1, s.Ymb, _.staff)
-            : t.has(d.oNc.VERIFIED) && t.has(d.oNc.HUB)
+            : t.has(d.GuildFeatures.VERIFIED) && t.has(d.GuildFeatures.HUB)
               ? this.renderBadge(4, s.aVH, _.verifiedHub)
-              : t.has(d.oNc.HUB)
+              : t.has(d.GuildFeatures.HUB)
                 ? this.renderBadge(5, s.aVH, _.hub)
-                : t.has(d.oNc.VERIFIED) && t.has(d.oNc.PARTNERED)
+                : t.has(d.GuildFeatures.VERIFIED) && t.has(d.GuildFeatures.PARTNERED)
                   ? this.renderBadge(3, s.kmB, _.verified)
-                  : t.has(d.oNc.VERIFIED)
+                  : t.has(d.GuildFeatures.VERIFIED)
                     ? this.renderBadge(2, s.kmB, _.verified)
-                    : t.has(d.oNc.PARTNERED)
+                    : t.has(d.GuildFeatures.PARTNERED)
                       ? this.renderBadge(0, (0, s.GSL)(c.Z), _.partnered)
                       : null;
     }

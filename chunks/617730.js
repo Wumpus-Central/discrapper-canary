@@ -64,7 +64,7 @@ function f(e) {
         b =
             !(
                 (null != t.approximate_member_count && t.approximate_member_count > c.mx) ||
-                (null != _ && _.features.has(d.oNc.COMMUNITY))
+                (null != _ && _.features.has(d.GuildFeatures.COMMUNITY))
             ) &&
             null != v &&
             (0, c.WT)(t),
@@ -107,7 +107,7 @@ function f(e) {
                       onClick: n,
                       submitting: j,
                       className: g.acceptButton,
-                      children: h.intl.string(h.t.ohMvm1),
+                      children: h.intl.string(h.t.ohMvm5),
                   }),
               ],
           });

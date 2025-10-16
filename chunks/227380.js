@@ -62,7 +62,7 @@ function y(e, t) {
         e
     );
 }
-let N = (e) => {
+let E = (e) => {
     let {
             name: t,
             failingName: n,
@@ -126,7 +126,7 @@ let N = (e) => {
         })
     );
 };
-function E(e, t) {
+function N(e, t) {
     return o()(
         null == e
             ? void 0
@@ -146,7 +146,7 @@ let I = (e) => {
     let { guild: t, guildId: l, className: s, headerContent: o, failedItemsOnly: c = !1 } = e,
         [g, I] = (0, u.Wu)([j.ZP], () => [j.ZP.getDiscoveryChecklist(l), j.ZP.isLoading()], [l]),
         { nsfwProperties: S } = null != g ? g : {},
-        T = null == t ? void 0 : t.features.has(v.oNc.PARTNERED),
+        T = null == t ? void 0 : t.features.has(v.GuildFeatures.PARTNERED),
         P = null == S ? void 0 : S.channels_banned_keywords,
         w = (0, u.e7)(
             [f.ZP],
@@ -170,7 +170,7 @@ let I = (e) => {
                       });
             },
             [t.id, P],
-            E,
+            N,
         );
     if (I || null == g)
         return (0, r.jsxs)("div", {
@@ -435,7 +435,7 @@ let I = (e) => {
                     i.Fragment,
                     {
                         children: [
-                            (0, r.jsx)(N, O({}, e)),
+                            (0, r.jsx)(E, O({}, e)),
                             t < R.length - 1 ? (0, r.jsx)("hr", { className: C.separator }) : null,
                         ],
                     },

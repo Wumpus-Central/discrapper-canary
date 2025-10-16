@@ -13,20 +13,20 @@ var r = n(951288),
     u = n(540126),
     d = n(301342),
     p = n(327530),
-    h = n(981631),
-    f = n(388032),
+    f = n(981631),
+    h = n(388032),
     g = n(776677);
 function m(e, t, n, r) {
     let i = "compact" === r ? 8 : p.$k;
     if (e === u.wZ) return i;
-    if (e === u.wd) return t.features.has(h.oNc.HUB) ? 0 : i;
+    if (e === u.wd) return t.features.has(f.GuildFeatures.HUB) ? 0 : i;
     if (e === n.voiceChannelsSectionNumber) {
         var l;
         let t = n.getCategoryFromSection(e);
         if (null == t || t.isEmpty()) return 0;
         if (t.isCollapsed) return p.Pw + 9;
         let r = null == (l = n.getChannelFromSectionRow(e, 0)) ? void 0 : l.channel;
-        return null == r || r.record.type === h.d4z.GUILD_CATEGORY ? 9 : 25;
+        return null == r || r.record.type === f.d4z.GUILD_CATEGORY ? 9 : 25;
     }
     return "compact" === r ? 32 : p.Pw;
 }
@@ -56,9 +56,9 @@ let _ = i.memo(function (e) {
             guildChannels: m,
             guildChannelsVersion: b,
             selectedChannelId: _,
-            disableManageChannels: y,
+            disableManageChannels: O,
         } = e,
-        { isFavoritesPerk: O } = (0, a.z)("ChannelListSection"),
+        { isFavoritesPerk: y } = (0, a.z)("ChannelListSection"),
         v = i.useCallback(() => {
             let e = m.getCategoryFromSection(m.recentsSectionNumber);
             if (null == e) return;
@@ -72,13 +72,13 @@ let _ = i.memo(function (e) {
         case u.wZ:
             return (0, r.jsx)("div", { style: { height: x } });
         case u.wd:
-            if (n.features.has(h.oNc.HUB)) return null;
+            if (n.features.has(f.GuildFeatures.HUB)) return null;
             return (0, r.jsx)("div", { style: { height: x } });
         case u.p2:
-            return (0, r.jsx)(d.P, { name: O ? f.intl.string(f.t.mlPMCw) : f.intl.string(f.t.k8fFjo) });
+            return (0, r.jsx)(d.P, { name: y ? h.intl.string(h.t.mlPMCw) : h.intl.string(h.t.k8fFjo) });
         case m.recentsSectionNumber:
             return (0, r.jsx)(d.P, {
-                name: f.intl.string(f.t.gKcrqK),
+                name: h.intl.string(h.t.gKcrqK),
                 onDismiss: v,
             });
         case m.voiceChannelsSectionNumber: {
@@ -102,7 +102,7 @@ let _ = i.memo(function (e) {
             return (0, r.jsx)(d.ZP, {
                 channel: e.record,
                 position: e.position,
-                disableManageChannels: y,
+                disableManageChannels: O,
                 children: (0, r.jsx)(c.Z, {
                     inlineSpecs: p.MF,
                     arrowAlignment: o.cy.TOP,
@@ -117,7 +117,7 @@ let _ = i.memo(function (e) {
             return (0, r.jsx)(d.ZP, {
                 channel: e.record,
                 position: e.position,
-                disableManageChannels: y,
+                disableManageChannels: O,
             });
         }
     }

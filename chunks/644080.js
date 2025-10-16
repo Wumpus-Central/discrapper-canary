@@ -24,7 +24,7 @@ function _(e) {
             variant: t,
             icon: r,
             text: a,
-        } = n.features.has(x.oNc.BANNER)
+        } = n.features.has(x.GuildFeatures.BANNER)
             ? {
                   variant: "overlay-secondary",
                   icon: c.FmF,

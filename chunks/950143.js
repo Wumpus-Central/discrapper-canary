@@ -22,7 +22,7 @@ function u(e) {
     var t, n;
     let { guild: i } = e.invite,
         c = null != (n = e.invite.flags) ? n : 0;
-    if (null != i && (null == i || null == (t = i.features) ? void 0 : t.includes(l.oNc.HUB)))
+    if (null != i && (null == i || null == (t = i.features) ? void 0 : t.includes(l.GuildFeatures.HUB)))
         return void a.Z.onOpenHubInvite(e.invite);
     !((0, o.yE)(c, r.$.IS_GUEST_INVITE) || (0, o.yE)(c, r.$.IS_APPLICATION_BYPASS)) &&
         null != i &&

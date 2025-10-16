@@ -23,8 +23,8 @@ var i = n(951288),
     C = n(626135),
     N = n(768581),
     S = n(63063),
-    I = n(709054),
-    E = n(51144),
+    E = n(709054),
+    I = n(51144),
     P = n(466070),
     w = n(585835),
     T = n(997787),
@@ -119,7 +119,7 @@ function W(e) {
                     showTwitchCard: !1,
                     showYoutubeCard: !1,
                 };
-            let e = null == W ? void 0 : W.features.has(Z.oNc.COMMUNITY),
+            let e = null == W ? void 0 : W.features.has(Z.GuildFeatures.COMMUNITY),
                 t = er.filter((e) => e.type === Z.ABu.TWITCH).length > 0,
                 n = er.filter((e) => e.type === Z.ABu.YOUTUBE).length > 0;
             return {
@@ -169,13 +169,13 @@ function W(e) {
                     ? a.push({
                           icon: u.T39,
                           text: A.intl.formatToPlainString(A.t.Nu9sam, {
-                              timestamp: I.default.extractTimestamp(l.id),
-                              user: E.ZP.getUserTag(l.user),
+                              timestamp: E.default.extractTimestamp(l.id),
+                              user: I.ZP.getUserTag(l.user),
                           }),
                       })
                     : a.push({
                           icon: u.T39,
-                          text: A.intl.formatToPlainString(A.t.gcdJ8P, { timestamp: I.default.extractTimestamp(l.id) }),
+                          text: A.intl.formatToPlainString(A.t.gcdJ8P, { timestamp: E.default.extractTimestamp(l.id) }),
                       }),
                 (0, i.jsx)(
                     w.Z,
@@ -266,8 +266,8 @@ function W(e) {
             return t > 0 ? l : a;
         })(ee, ef, null == W ? void 0 : W.id)),
         (eS = null));
-    let eI = S.Z.getArticleURL(Z.BhN.INTEGRATIONS),
-        eE = null != H ? A.t.YV0vh4 : A.t.FnZEJi,
+    let eE = S.Z.getArticleURL(Z.BhN.INTEGRATIONS),
+        eI = null != H ? A.t.YV0vh4 : A.t.FnZEJi,
         eP = [];
     if (el) {
         let e, t, r, a, o;
@@ -411,7 +411,7 @@ function W(e) {
         children: [
             (0, i.jsx)(u.Text, {
                 variant: "text-sm/normal",
-                children: A.intl.format(eE, { helpdeskArticle: eI }),
+                children: A.intl.format(eI, { helpdeskArticle: eE }),
             }),
             (0, i.jsx)(u.izJ, { className: D.divider }),
             q || ei || null == W

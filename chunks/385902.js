@@ -1,5 +1,5 @@
 n.d(t, {
-    K: () => y,
+    K: () => O,
     _: () => _,
 });
 var r = n(647438),
@@ -12,8 +12,8 @@ var r = n(647438),
     u = n(639777),
     d = n(973772),
     p = n(834209),
-    h = n(279604),
-    f = n(535396),
+    f = n(279604),
+    h = n(535396),
     g = n(981631),
     m = n(989308),
     b = n(388032);
@@ -25,15 +25,15 @@ function _(e, t) {
         }),
         a = (0, l.e7)([s.Z], () => s.Z.getStateForGuild(e)),
         u = null == a ? void 0 : a.allPowerups[i.A$],
-        h = (0, d.ZP)(e, u),
+        f = (0, d.ZP)(e, u),
         _ = (0, c.q8)(e, t),
-        y = null == u ? void 0 : u.storeRemovalDate,
-        O = null != (n = null == r ? void 0 : r.has(g.oNc.PARTNERED)) && n,
-        v = _ && null != y && !O && h.type === f.A3.POWERUP_ACTIVATED,
+        O = null == u ? void 0 : u.storeRemovalDate,
+        y = null != (n = null == r ? void 0 : r.has(g.GuildFeatures.PARTNERED)) && n,
+        v = _ && null != O && !y && f.type === h.A3.POWERUP_ACTIVATED,
         j = v
             ? {
                   title: b.intl.formatToPlainString(m.default.mgoPkZ, { perkName: null == u ? void 0 : u.title }),
-                  description: b.intl.formatToPlainString(m.default.UT9pkJ, { dateString: (0, p.Z)(y) }),
+                  description: b.intl.formatToPlainString(m.default.UT9pkJ, { dateString: (0, p.Z)(O) }),
               }
             : null;
     return {
@@ -41,11 +41,11 @@ function _(e, t) {
         notificationConfig: j,
     };
 }
-function y(e, t) {
-    var n, _, y, O;
+function O(e, t) {
+    var n, _, O, y;
     let v = (0, l.e7)([o.Z], () => o.Z.getGuild(e)),
         j = (0, l.e7)([a.Z], () => a.Z.hasLayers()),
-        x = null != (y = (0, u.Z)(e)) && y,
+        x = null != (O = (0, u.Z)(e)) && O,
         C = (0, c.q8)(e, t),
         E = (0, l.e7)([s.Z], () => s.Z.getStateForGuild(e)),
         S = null == E || null == (n = E.allPowerups) ? void 0 : n[i.A$],
@@ -56,9 +56,9 @@ function y(e, t) {
             var t;
             return null == (t = o.Z.getGuild(e)) ? void 0 : t.features;
         }),
-        w = null != (O = null == Z ? void 0 : Z.has(g.oNc.PARTNERED)) && O,
-        { onActivate: T } = (0, h._C)(e, N),
-        A = !j && x && C && null != S && !w && I.type === f.A3.POWERUP_ACTIVATED && null != P && null != N && null != v,
+        w = null != (y = null == Z ? void 0 : Z.has(g.GuildFeatures.PARTNERED)) && y,
+        { onActivate: T } = (0, f._C)(e, N),
+        A = !j && x && C && null != S && !w && I.type === h.A3.POWERUP_ACTIVATED && null != P && null != N && null != v,
         R = r.useCallback(
             (e) => {
                 T(e);

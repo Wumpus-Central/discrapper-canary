@@ -10,7 +10,7 @@ class c extends (i = l.ZP.Store) {
         this.waitFor(o.Z), this.syncWith([o.Z], s.dG4);
     }
     channelNoticePredicate(e, t) {
-        return !e.features.has(s.oNc.BANNER) && Date.now() - t >= s.Hqc;
+        return !e.features.has(s.GuildFeatures.BANNER) && Date.now() - t >= s.Hqc;
     }
 }
 (r = "displayName") in c

@@ -10,8 +10,8 @@ var r = n(305325),
 let l = (e) => {
         var t, n;
         return (
-            (null == (t = e.features) ? void 0 : t.includes(s.oNc.MEMBER_VERIFICATION_GATE_ENABLED)) &&
-            (null == (n = e.features) ? void 0 : n.includes(s.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL))
+            (null == (t = e.features) ? void 0 : t.includes(s.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED)) &&
+            (null == (n = e.features) ? void 0 : n.includes(s.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL))
         );
     },
     c = (e) => {

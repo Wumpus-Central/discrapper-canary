@@ -21,8 +21,8 @@ var r,
     m = n(565799),
     b = n(501655),
     _ = n(192079),
-    O = n(427679),
-    E = n(448206),
+    E = n(427679),
+    O = n(448206),
     v = n(496675),
     y = n(938475),
     I = n(626135),
@@ -30,10 +30,10 @@ var r,
     S = n(15274),
     T = n(924301),
     N = n(504160),
-    j = n(151864),
-    P = n(835184),
-    x = n(725436),
-    A = n(497656),
+    P = n(151864),
+    j = n(835184),
+    A = n(725436),
+    x = n(497656),
     Z = n(79874),
     w = n(554747),
     L = n(230900),
@@ -156,7 +156,7 @@ function V(e) {
     let { guildEvent: t, noticeType: n } = e,
         r = (0, R.DK)(t),
         l = (0, s.e7)([T.ZP], () => T.ZP.isInterestedInEventRecurrence(t.id, r), [t.id, r]),
-        a = (0, s.e7)([P.Z], () => P.Z.getUpcomingNoticeSeenTime(t.id), [t.id]);
+        a = (0, s.e7)([j.Z], () => j.Z.getUpcomingNoticeSeenTime(t.id), [t.id]);
     return (
         l || null != a || (0, N._6)(t.id),
         (0, i.jsx)(c.Button, {
@@ -179,7 +179,7 @@ function F(e) {
     var t;
     let { guildEvent: n, noticeType: r } = e,
         a = (0, L.cS)(n),
-        s = null != a ? (0, x.m)(a, !0) : null,
+        s = null != a ? (0, A.m)(a, !0) : null,
         u = (0, L.nE)(n),
         p = (0, d.KS)(u),
         { startTime: f, endTime: h } = (0, Z.ZP)(n),
@@ -292,7 +292,7 @@ function z(e) {
               onClickCloseIcon: () => (0, N.ji)({ eventId: null == t ? void 0 : t.id }),
               heading: U.intl.string(U.t["1+boPj"]),
               topic: t.name,
-              location: (0, x.m)(n, !0),
+              location: (0, A.m)(n, !0),
               locationIcon: (0, i.jsx)(c._tJ, {
                   size: "custom",
                   color: "currentColor",
@@ -376,7 +376,7 @@ function Q(e) {
         a = t.getGuildId(),
         d = l.useMemo(() => n.slice(0, 3), [n]),
         p = (0, s.e7)([v.Z], () => v.Z.can(M.Plq.CONNECT, t)),
-        f = (0, E.Z)(t.id),
+        f = (0, O.Z)(t.id),
         h = U.intl.string(U.t.VJlc0d);
     switch (r) {
         case 1:
@@ -429,15 +429,15 @@ function Q(e) {
 let X = l.memo(function (e) {
     let { guild: t } = e,
         { showRedesignedLiveChannelNotice: n } = (0, p.o)(!0),
-        r = (0, A.y)(t.id),
+        r = (0, x.y)(t.id),
         l = (0, w.k5)(t.id),
         a = (0, w.Vm)(t.id),
-        o = (0, s.e7)([O.Z], () => O.Z.getStageInstanceByChannel(null == r ? void 0 : r.id), [r]),
+        o = (0, s.e7)([E.Z], () => E.Z.getStageInstanceByChannel(null == r ? void 0 : r.id), [r]),
         { isStageNoticeHidden: c, isEventNoticeHidden: u } = (0, s.cj)(
-            [j.Z],
+            [P.Z],
             () => ({
-                isStageNoticeHidden: j.Z.isLiveChannelNoticeHidden({ stageId: null == o ? void 0 : o.id }),
-                isEventNoticeHidden: j.Z.isLiveChannelNoticeHidden({ eventId: null == l ? void 0 : l.id }),
+                isStageNoticeHidden: P.Z.isLiveChannelNoticeHidden({ stageId: null == o ? void 0 : o.id }),
+                isEventNoticeHidden: P.Z.isLiveChannelNoticeHidden({ eventId: null == l ? void 0 : l.id }),
             }),
             [o, l],
         ),
@@ -463,7 +463,7 @@ let X = l.memo(function (e) {
                   guildEvent: l,
                   channel: r,
               }));
-    let g = t.features.has(M.oNc.COMMUNITY);
+    let g = t.features.has(M.GuildFeatures.COMMUNITY);
     if (null == d && null != a && !g) {
         let { upcomingEvent: e, noticeType: t } = a;
         d = (0, i.jsx)(F, {

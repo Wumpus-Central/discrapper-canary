@@ -19,7 +19,7 @@ var a = n(120356),
 function x(e) {
     let { guild: t, className: n, onClick: a } = e,
         x = (0, s.ZP)(),
-        v = (0, m.Jh)({
+        v = (0, m.dangerouslyConstructGuildRecordFromUntypedObject)({
             name: t.name,
             icon: t.icon,
         }),

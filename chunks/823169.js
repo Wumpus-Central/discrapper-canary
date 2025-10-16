@@ -32,11 +32,11 @@ class d extends i.Z {
                         n = e.filter(
                             (e) =>
                                 (0, l.eM)(e, t) &&
-                                !e.features.has(u.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE) &&
-                                !e.features.has(u.oNc.CREATOR_MONETIZABLE_RESTRICTED) &&
-                                !e.features.has(u.oNc.CREATOR_MONETIZABLE_DISABLED) &&
-                                (e.features.has(u.oNc.CREATOR_MONETIZABLE) ||
-                                    e.features.has(u.oNc.CREATOR_MONETIZABLE_PROVISIONAL)),
+                                !e.features.has(u.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE) &&
+                                !e.features.has(u.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED) &&
+                                !e.features.has(u.GuildFeatures.CREATOR_MONETIZABLE_DISABLED) &&
+                                (e.features.has(u.GuildFeatures.CREATOR_MONETIZABLE) ||
+                                    e.features.has(u.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)),
                         );
                     n.length > 0 && (await (0, c.av)(n.map((e) => e.id)));
                 }

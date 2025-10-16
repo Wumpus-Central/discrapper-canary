@@ -52,7 +52,7 @@ let g = (e) => {
         [i.u.CAPTCHA_AND_RAID_PROTECTION]: [
             {
                 renderComponent: () => (0, r.jsx)(s.Z, { guild: e }, "raid-alerts"),
-                enabled: !e.features.has(d.oNc.RAID_ALERTS_DISABLED),
+                enabled: !e.features.has(d.GuildFeatures.RAID_ALERTS_DISABLED),
             },
             {
                 renderComponent: () =>

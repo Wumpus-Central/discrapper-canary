@@ -69,9 +69,9 @@ function g(e) {
     return (
         !!t &&
         null != n &&
-        (n.features.has(c.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) ||
-        n.features.has(c.oNc.COMMUNITY) ||
-        n.features.has(c.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)
+        (n.features.has(c.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL) ||
+        n.features.has(c.GuildFeatures.COMMUNITY) ||
+        n.features.has(c.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)
             ? (0, a.uL)(c.Z5c.CHANNEL(e, u.oC.MEMBER_SAFETY))
             : i.Z.open(n.id, c.pNK.MEMBERS),
         !0)

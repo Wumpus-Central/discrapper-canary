@@ -190,7 +190,7 @@ function N(e, t, N, A, D) {
         null != Y &&
         null != Y.joinedAt &&
         (z || $) &&
-        U.features.has(y.oNc.GUILD_ONBOARDING_EVER_ENABLED)
+        U.features.has(y.GuildFeatures.GUILD_ONBOARDING_EVER_ENABLED)
     ) {
         var ee;
         X = (0, j.yE)(null != (ee = Y.flags) ? ee : 0, C.q.BYPASSES_VERIFICATION)

@@ -412,7 +412,9 @@ let eJ = [
                         (r =
                             null != i &&
                             null != a &&
-                            !(null == (t = en.Z.getGuild(i)) ? void 0 : t.features.has(eA.oNc.GUILD_ONBOARDING)) &&
+                            !(null == (t = en.Z.getGuild(i))
+                                ? void 0
+                                : t.features.has(eA.GuildFeatures.GUILD_ONBOARDING)) &&
                             (null == (n = et.ZP.getMember(i, a.id)) ? void 0 : n.isPending)) && r
                 );
             },
@@ -706,7 +708,7 @@ let eJ = [
                 return (
                     (null != t &&
                         null != C.Z.getMentionRaidDetected(t) &&
-                        (null == n ? void 0 : n.features.has(eA.oNc.COMMUNITY)) &&
+                        (null == n ? void 0 : n.features.has(eA.GuildFeatures.COMMUNITY)) &&
                         !eQ(eA.kVF.AUTO_MODERATION_MENTION_RAID_DETECTION)) ||
                     !1
                 );

@@ -66,7 +66,7 @@ function N(e) {
         C = (0, s.e7)([_.Z], () => _.Z.isViewingServerShop(o)),
         N = (0, b.g)(T, "guild_shop_page"),
         R = (0, E.RF)(o, "guild_shop_page"),
-        P = (null == T ? void 0 : T.features.has(I.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0,
+        P = (null == T ? void 0 : T.features.has(I.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0,
         w = (0, f.mY)(null == T ? void 0 : T.id),
         D = w && R,
         L = null == (t = (0, d.YB)(o)) ? void 0 : t.server_shop_tab_order,

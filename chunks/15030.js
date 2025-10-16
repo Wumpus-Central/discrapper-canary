@@ -25,8 +25,8 @@ function j() {
         null != t && (0, g.sO)(t) && (0, c.Q3)(a.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE);
     }, [t]);
     let C =
-        (null == t ? void 0 : t.features.has(h.oNc.CREATOR_MONETIZABLE)) === !1 &&
-        (null == t ? void 0 : t.features.has(h.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
+        (null == t ? void 0 : t.features.has(h.GuildFeatures.CREATOR_MONETIZABLE)) === !1 &&
+        (null == t ? void 0 : t.features.has(h.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
     return (
         (e =
             null == t || j

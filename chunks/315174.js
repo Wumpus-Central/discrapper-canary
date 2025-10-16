@@ -103,7 +103,7 @@ function I(e) {
 function P(e) {
     let { guild: t, controller: n, hasBanner: i, hasSubheader: l } = e,
         { value: s } = n.springs,
-        c = t.features.has(v.oNc.DISCOVERABLE),
+        c = t.features.has(v.GuildFeatures.DISCOVERABLE),
         p = (0, r.jsx)("div", {
             className: C.communityInfo,
             children:
@@ -301,12 +301,12 @@ let D = i.memo(function (e) {
             communityInfoVisible: A,
             hasSubheader: D,
         } = e,
-        M = j.features.has(v.oNc.ANIMATED_BANNER),
+        M = j.features.has(v.GuildFeatures.ANIMATED_BANNER),
         k = (0, p.Z)(j),
         G = !k && (0, O.Z)(j),
         U = !k && A,
         B = (0, _.xR)(x) && M && !g,
-        [V, F] = i.useState(!1),
+        [F, V] = i.useState(!1),
         H = i.useRef(!1),
         z = i.useRef(null),
         W = null != t ? t : z,
@@ -315,9 +315,9 @@ let D = i.memo(function (e) {
     i.useEffect(() => {
         if (B && n && !H.current && Y)
             return (
-                F(!0),
+                V(!0),
                 (K.current = setTimeout(() => {
-                    F(!1);
+                    V(!1);
                 }, 5000)),
                 () => {
                     clearTimeout(K.current);
@@ -387,7 +387,7 @@ let D = i.memo(function (e) {
                                       guild: j,
                                       controller: l,
                                       guildBanner: x,
-                                      animate: V,
+                                      animate: F,
                                   })
                                 : null,
                             (0, r.jsx)(L, { controller: l }),
@@ -397,9 +397,9 @@ let D = i.memo(function (e) {
                         ? (0, r.jsx)("div", {
                               className: C.animatedBannerHoverLayer,
                               onMouseEnter: () => {
-                                  F(!0), clearTimeout(K.current);
+                                  V(!0), clearTimeout(K.current);
                               },
-                              onMouseLeave: () => F(!1),
+                              onMouseLeave: () => V(!1),
                               style: { height: N },
                           })
                         : null,

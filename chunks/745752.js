@@ -121,7 +121,7 @@ async function O(e) {
             p.q.COMPLETED_ONBOARDING,
         ),
         a = l.Z.getGuild(e);
-    if (null == a || !a.features.has(_.oNc.GUILD_ONBOARDING)) return Promise.resolve();
+    if (null == a || !a.features.has(_.GuildFeatures.GUILD_ONBOARDING)) return Promise.resolve();
     let c = d.Z.shouldFetchPrompts(e),
         f = d.Z.getOnboardingPrompts(e);
     if (!c && f.length > 0) return f.every((e) => !e.inOnboarding) ? T(e) : i || v(e), Promise.resolve();

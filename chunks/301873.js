@@ -1,15 +1,15 @@
 n.d(t, {
-    WV: () => d,
-    xU: () => c,
+    WV: () => c,
+    xU: () => u,
     zv: () => o,
 });
-var l = n(399606),
-    i = n(818083),
-    a = n(430824),
-    r = n(971130),
-    s = n(981631);
-let o = r.ZP.INVITE_OPTIONS_7_DAYS.value,
-    u = (0, i.B)({
+var i = n(399606),
+    l = n(818083),
+    s = n(430824),
+    a = n(971130),
+    r = n(981631);
+let o = a.ZP.INVITE_OPTIONS_7_DAYS.value,
+    d = (0, l.B)({
         kind: "guild",
         id: "2025-08_default_invite_expiration_guild",
         label: "Default Invite Expiration Guild",
@@ -32,37 +32,37 @@ let o = r.ZP.INVITE_OPTIONS_7_DAYS.value,
             },
         ],
     });
-function c(e) {
+function u(e) {
     let { guildId: t, location: n } = e,
-        i = u.useExperiment({
-            guildId: null != t ? t : s.lds,
+        l = d.useExperiment({
+            guildId: null != t ? t : r.lds,
             location: n,
         }),
-        c = (0, l.e7)([a.Z], () => a.Z.getGuild(t));
+        u = (0, i.e7)([s.Z], () => s.Z.getGuild(t));
     return null == t
         ? null
         : (function (e) {
               var t;
-              let { guild: n, experimentConfig: l } = e;
-              if (null == n ? void 0 : n.features.has(s.oNc.HUB)) return r.ZP.INVITE_OPTIONS_FOREVER.value;
-              let { defaultMaxAge: i } =
-                  null != l
-                      ? l
-                      : u.getCurrentConfig({
-                            guildId: null != (t = null == n ? void 0 : n.id) ? t : s.lds,
+              let { guild: n, experimentConfig: i } = e;
+              if (null == n ? void 0 : n.features.has(r.GuildFeatures.HUB)) return a.ZP.INVITE_OPTIONS_FOREVER.value;
+              let { defaultMaxAge: l } =
+                  null != i
+                      ? i
+                      : d.getCurrentConfig({
+                            guildId: null != (t = null == n ? void 0 : n.id) ? t : r.lds,
                             location: "getDefaultInviteExpiration",
                         });
-              return null != i ? i : o;
+              return null != l ? l : o;
           })({
-              guild: c,
-              experimentConfig: i,
+              guild: u,
+              experimentConfig: l,
           });
 }
-function d(e) {
+function c(e) {
     let { guildId: t, location: n } = e,
-        l = u.useExperiment({
-            guildId: null != t ? t : s.lds,
+        i = d.useExperiment({
+            guildId: null != t ? t : r.lds,
             location: n,
         });
-    return r.ZP.getMaxAgeOptions({ includeExperimentalValues: [null == l ? void 0 : l.defaultMaxAge] });
+    return a.ZP.getMaxAgeOptions({ includeExperimentalValues: [null == i ? void 0 : i.defaultMaxAge] });
 }

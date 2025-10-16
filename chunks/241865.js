@@ -22,8 +22,8 @@ var r = n(951288),
     m = n(481060),
     C = n(333848),
     b = n(749210),
-    N = n(332063),
-    x = n(620123),
+    x = n(332063),
+    N = n(620123),
     f = n(911969),
     O = n(367907),
     E = n(812206),
@@ -127,8 +127,8 @@ function es(e) {
         h = i.useRef(null),
         u = (0, p.e7)([R.Z], () => R.Z.getGuild(n)),
         g = s === W.d4z.GUILD_STAGE_VOICE,
-        { roles: C, members: b, getRichTag: N } = (0, v.Q)(u, null, g ? L.yP : (0, U.CG)(s), a, g),
-        x = I.Z.useSections({
+        { roles: C, members: b, getRichTag: x } = (0, v.Q)(u, null, g ? L.yP : (0, U.CG)(s), a, g),
+        N = I.Z.useSections({
             roles: C,
             members: b,
         });
@@ -145,7 +145,7 @@ function es(e) {
               setPendingAdditions: d,
               roles: C,
               members: b,
-              getRichTag: N,
+              getRichTag: x,
               children: (0, r.jsxs)(m.hzk, {
                   className: ee.addMembersContainer,
                   children: [
@@ -170,7 +170,7 @@ function es(e) {
                           renderSection: I.Z.renderSection,
                           rowHeight: I.Z.ROW_HEIGHT,
                           renderRow: I.Z.renderRow,
-                          sections: x,
+                          sections: N,
                           innerAriaOrientation: "vertical",
                           innerRole: "listbox",
                       }),
@@ -587,7 +587,7 @@ class ea extends i.PureComponent {
                 }),
                 null != t
                     ? (0, r.jsx)(
-                          x.Z,
+                          N.Z,
                           {
                               label: $.intl.string($.t.XNIWFh),
                               applicationId: t,
@@ -611,7 +611,7 @@ class ea extends i.PureComponent {
                     : null,
                 null != t
                     ? (0, r.jsx)(
-                          N.Z,
+                          x.Z,
                           {
                               label: s ? $.intl.string($.t.o7DqFx) : void 0,
                               applicationId: t,
@@ -934,15 +934,15 @@ class ea extends i.PureComponent {
                         channelType: g,
                         skuId: m,
                         branchId: b,
-                        isPrivate: N,
+                        isPrivate: x,
                     } = this.state,
-                    x = this.getGuildId();
-                if (null != x) {
+                    N = this.getGuildId();
+                if (null != N) {
                     if (null != i) (t = d().values(i.permissionOverwrites)), (n = i.bitrate), (r = i.userLimit);
-                    else if (g === W.d4z.GUILD_ANNOUNCEMENT) t = (0, k.rt)(x);
+                    else if (g === W.d4z.GUILD_ANNOUNCEMENT) t = (0, k.rt)(N);
                     else {
-                        if (N) {
-                            t = (0, k.oQ)(x, g, [], !0);
+                        if (x) {
+                            t = (0, k.oQ)(N, g, [], !0);
                             let e = (0, j.Tj)(p, g);
                             e.length > 0 && (t = t.concat(e));
                             let n = null != h && l.id === h.id;
@@ -965,7 +965,7 @@ class ea extends i.PureComponent {
                     });
                     try {
                         let e = await C.Z.createChannel({
-                            guildId: x,
+                            guildId: N,
                             type: g,
                             name: u,
                             permissionOverwrites: t,
@@ -1022,8 +1022,8 @@ let eo = i.forwardRef(function (e, t) {
                 h = Z.Z.getChannel(s);
             return {
                 guild: l,
-                canCreateStoreChannel: null != l && l.features.has(W.oNc.COMMERCE),
-                canCreateAnnouncementChannel: null != l && l.features.has(W.oNc.NEWS),
+                canCreateStoreChannel: null != l && l.features.has(W.GuildFeatures.COMMERCE),
+                canCreateAnnouncementChannel: null != l && l.features.has(W.GuildFeatures.NEWS),
                 user: a,
                 owner: c,
                 memberRoles: null != (t = null == (e = M.ZP.getMember(i, a.id)) ? void 0 : e.roles) ? t : [],

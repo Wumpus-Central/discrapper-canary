@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(481060),
     o = n(528011),
-    c = n(666657),
-    a = n(533244),
+    a = n(666657),
+    c = n(533244),
     u = n(981631),
     s = n(388032);
 function b(e) {
@@ -12,8 +12,8 @@ function b(e) {
         { shouldShowIncidentActions: b, isUnderLockdown: p, incidentData: d } = (0, o.mI)(e.id),
         O = i.useCallback(() => {
             let t = {
-                source: c.Zu.CONTEXT_MENU,
-                alertType: (0, a.T1)(d),
+                source: a.Zu.CONTEXT_MENU,
+                alertType: (0, c.T1)(d),
             };
             (0, l.ZDy)(async () => {
                 let { default: i } = await n.e("61536").then(n.bind(n, 664452));
@@ -68,7 +68,7 @@ function b(e) {
                 };
             });
         }, [e.id, d]);
-    return e.features.has(u.oNc.COMMUNITY) && b
+    return e.features.has(u.GuildFeatures.COMMUNITY) && b
         ? (0, r.jsx)(l.sNh, {
               id: "server-lockdown",
               label: p ? s.intl.string(s.t["+tSVi4"]) : s.intl.string(s.t.EPlEdn),

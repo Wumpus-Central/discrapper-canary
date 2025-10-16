@@ -7,6 +7,6 @@ function o(e) {
         var t;
         if (null == e) return !1;
         let n = i.Z.getGuild(e);
-        return null != (t = null == n ? void 0 : n.features.has(l.oNc.HUB)) && t;
+        return null != (t = null == n ? void 0 : n.features.has(l.GuildFeatures.HUB)) && t;
     }, [e]);
 }

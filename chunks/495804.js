@@ -5,7 +5,10 @@ var r = n(647438),
 function o(e) {
     return (0, r.useMemo)(() => {
         if (null == e) return 0;
-        let t = (null == e ? void 0 : e.features.has(l.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0 ? 0 : l.oCV[l.Eu4.TIER_3],
+        let t =
+                (null == e ? void 0 : e.features.has(l.GuildFeatures.PREMIUM_TIER_3_OVERRIDE)) === !0
+                    ? 0
+                    : l.oCV[l.Eu4.TIER_3],
             n = Object.values(i.Hk),
             r = Object.values(i.cG);
         return (

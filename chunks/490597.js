@@ -13,8 +13,8 @@ function a(e, t) {
         };
     (null == t || e.discoverySplash !== t.discoverySplash) &&
         ((i.discovery_splash_edit_type = null == e.discoverySplash ? "removed" : "uploaded"), (n = !0)),
-        (null == t || e.features.has(l.oNc.DISCOVERABLE) !== t.features.has(l.oNc.DISCOVERABLE)) &&
-            ((i.is_discoverable = e.features.has(l.oNc.DISCOVERABLE)), (n = !0)),
+        (null == t || e.features.has(l.GuildFeatures.DISCOVERABLE) !== t.features.has(l.GuildFeatures.DISCOVERABLE)) &&
+            ((i.is_discoverable = e.features.has(l.GuildFeatures.DISCOVERABLE)), (n = !0)),
         (null == t || e.rulesChannelId !== t.rulesChannelId) && ((i.rules_channel_id = e.rulesChannelId), (n = !0)),
         n && r.default.track(l.rMx.GUILD_SETTINGS_DISCOVERY_UPDATED, i);
 }

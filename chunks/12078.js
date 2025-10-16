@@ -96,7 +96,7 @@ function C(e) {
     var t;
     let { profile: n, onCustomBannerChange: l, canManageGuild: u } = e,
         m = (0, s.e7)([g.Z], () => g.Z.getGuild(n.id)),
-        p = null != (t = null == m ? void 0 : m.features.has(h.oNc.DISCOVERABLE)) && t,
+        p = null != (t = null == m ? void 0 : m.features.has(h.GuildFeatures.DISCOVERABLE)) && t,
         C = n.id,
         O = i.useCallback(
             (e) => () => {

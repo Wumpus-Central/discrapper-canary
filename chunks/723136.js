@@ -16,7 +16,7 @@ async function p(e, t) {
 function f(e) {
     let { guild: t } = e,
         n = (0, l.e7)([o.Z], () => null != t && o.Z.can(d.Plq.MANAGE_GUILD, t), [t]),
-        c = t.features.has(d.oNc.REPORT_TO_MOD_PILOT),
+        c = t.features.has(d.GuildFeatures.REPORT_TO_MOD_PILOT),
         [f, h] = i.useState((0, s.Z)(t) && c),
         b = i.useCallback(
             async (e) => {

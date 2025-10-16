@@ -29,8 +29,8 @@ var r = t(951288),
     T = t(896007),
     j = t(978946),
     E = t(981631),
-    N = t(388032);
-function R(e) {
+    R = t(388032);
+function G(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         t = arguments.length > 2 ? arguments[2] : void 0;
     l.ZP.trackWithMetadata(E.rMx.SETTINGS_PANE_VIEWED, {
@@ -40,7 +40,7 @@ function R(e) {
         location: t,
     });
 }
-let x = {
+let N = {
     canManageGuild: !1,
     canManageChannels: !1,
     canManageRoles: !1,
@@ -55,9 +55,9 @@ let x = {
     isOwnerWithRequiredMfaLevel: !1,
     isGuildAdmin: !1,
 };
-class G extends i.PureComponent {
+class x extends i.PureComponent {
     componentDidMount() {
-        R(this.props.section, null, this.props.analyticsLocation);
+        G(this.props.section, null, this.props.analyticsLocation);
     }
     componentWillUnmount() {
         k.Z.close();
@@ -78,7 +78,7 @@ class G extends i.PureComponent {
                 canAccessMembersPage: g,
                 canViewGuildAnalytics: f,
             } = this.props;
-        t !== n && R(t, n),
+        t !== n && G(t, n),
             ((r || i || a || c || s || l || u || g || d || h) &&
                 (u || t !== E.pNK.AUDIT_LOG) &&
                 (a || t !== E.pNK.ROLES) &&
@@ -141,17 +141,17 @@ class G extends i.PureComponent {
                 section: a,
                 pinPermissionMigrationAvailable: M,
             }),
-            R = (null == (n = E.find((e) => e.section === a)) || null == (e = n.predicate) ? void 0 : e.call(n)) !== !1,
-            x = (0, j.r)();
+            G = (null == (n = E.find((e) => e.section === a)) || null == (e = n.predicate) ? void 0 : e.call(n)) !== !1,
+            N = (0, j.r)();
         return (0, r.jsxs)("div", {
             children: [
                 (0, r.jsx)(c.ZP, {
                     theme: t,
                     sidebarTheme: i,
-                    section: R && null != a ? a : x,
+                    section: G && null != a ? a : N,
                     onSetSection: k.Z.setSection,
                     onClose: o.xf,
-                    title: "" !== s.name ? s.name : N.intl.string(N.t["154/bG"]),
+                    title: "" !== s.name ? s.name : R.intl.string(R.t["154/bG"]),
                     sections: E,
                 }),
                 (0, r.jsx)(b.d, { guildId: s.id }),
@@ -169,16 +169,16 @@ function A() {
             isGuildMetadataLoaded: T,
         } = (0, a.cj)([D.Z], () => D.Z.getProps()),
         { analyticsLocations: j } = (0, u.ZP)(s.Z.GUILD_SETTINGS),
-        N = (0, a.e7)([m.Z], () => m.Z.theme),
-        R = (0, I.Ll)(),
+        R = (0, a.e7)([m.Z], () => m.Z.theme),
+        G = (0, I.Ll)(),
         A = (0, a.e7)([C.ZP], () => (null != o ? C.ZP.getChannels(o.id).SELECTABLE : null), [o]),
-        Z = (0, a.cj)([P.Z], () => (null != o ? P.Z.getGuildPermissionProps(o) : x)),
+        Z = (0, a.cj)([P.Z], () => (null != o ? P.Z.getGuildPermissionProps(o) : N)),
         L = null == o ? void 0 : o.id,
         W = (0, a.e7)([P.Z], () => null != o && P.Z.canAccessGuildSettings(o));
     i.useEffect(() => {
         T || null == L || (0, d.aC)(L);
     }, [T, L]);
-    let U = null != (e = null == o ? void 0 : o.features.has(E.oNc.COMMUNITY)) && e;
+    let U = null != (e = null == o ? void 0 : o.features.has(E.GuildFeatures.COMMUNITY)) && e;
     i.useEffect(() => {
         null != L && U && ((0, h.eM)(L), (0, S.RM)(L));
     }, [L, U]),
@@ -199,14 +199,14 @@ function A() {
             W || k.Z.close();
         }, [W]);
     let K = (0, a.e7)([M.Z], () => M.Z.getCurrentPage()),
-        V = (0, a.e7)([g.Z], () => null != L && g.Z.getEnabled(L)),
-        F = (0, a.e7)([w.Z], () => null != L && w.Z.isEmpty(L)),
+        F = (0, a.e7)([g.Z], () => null != L && g.Z.getEnabled(L)),
+        V = (0, a.e7)([w.Z], () => null != L && w.Z.isEmpty(L)),
         Y = (0, _.F)(L).length > 0,
         q = (0, y.D)(o);
     return (0, r.jsx)(u.Gt, {
         value: j,
         children: (0, r.jsx)(
-            G,
+            x,
             ((n = (function (e) {
                 for (var n = 1; n < arguments.length; n++) {
                     var t = null != arguments[n] ? arguments[n] : {},
@@ -235,8 +235,8 @@ function A() {
                 {
                     guild: o,
                     section: c,
-                    theme: N,
-                    sidebarTheme: R,
+                    theme: R,
+                    sidebarTheme: G,
                     channels: A,
                     showDirtyGuildTemplateIndicator: B,
                     analyticsLocation: l,
@@ -249,8 +249,8 @@ function A() {
                     canUnlinkChannels: Y,
                     canViewGuildAnalytics: Z.canViewGuildAnalytics,
                     onboardingStep: K,
-                    onboardingEnabled: V,
-                    welcomeScreenEmpty: F,
+                    onboardingEnabled: F,
+                    welcomeScreenEmpty: V,
                     guildMetadata: b,
                     pinPermissionMigrationAvailable: q,
                 }),

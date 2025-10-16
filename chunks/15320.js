@@ -75,8 +75,8 @@ function C(e, t) {
 function P(e, t) {
     return (
         !(
-            e.features.has(_.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) &&
-            e.features.has(_.oNc.MEMBER_VERIFICATION_GATE_ENABLED)
+            e.features.has(_.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL) &&
+            e.features.has(_.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED)
         ) && null != t
     );
 }
@@ -373,8 +373,8 @@ function I(e) {
         } = e,
         x = (0, i.e7)([u.Z], () => u.Z.getRulesPrompt(t.id));
     l.useEffect(() => {
-        t.features.has(_.oNc.MEMBER_VERIFICATION_GATE_ENABLED) &&
-            !t.features.has(_.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) &&
+        t.features.has(_.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED) &&
+            !t.features.has(_.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL) &&
             c.ZP.fetchVerificationForm(t.id);
     }, [t]);
     let v = n[a],

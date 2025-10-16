@@ -174,7 +174,7 @@ function ep(e, t) {
 function eh(e) {
     let { guildId: t, channel: r, options: i, analyticsLocations: a = [] } = e,
         o = B.Z.getGuild(t),
-        s = null == o ? void 0 : o.features.has($.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
+        s = null == o ? void 0 : o.features.has($.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL),
         {
             targetUserId: l,
             targetType: c,
@@ -551,7 +551,7 @@ let ev = {
     transitionToInvite(e, t, n) {
         var r, i;
         let { channel: a, guild: s } = e;
-        if (null != s && (null == (r = s.features) ? void 0 : r.includes($.oNc.HUB)))
+        if (null != s && (null == (r = s.features) ? void 0 : r.includes($.GuildFeatures.HUB)))
             return void N.Z.onOpenHubInvite(e);
         let l = (0, K.yE)(null != (i = e.flags) ? i : 0, o.$.IS_APPLICATION_BYPASS);
         if (null != s && !l && (0, C.u)(s)) return void (0, C._)(s.id);

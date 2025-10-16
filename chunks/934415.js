@@ -115,7 +115,7 @@ function w(e, t) {
         : null == e
           ? g.eWB
           : Math.max(
-                e.features.has(g.oNc.VIP_REGIONS) ? E.HO[g.Eu4.TIER_3].limits.bitrate : g.eWB,
+                e.features.has(g.GuildFeatures.VIP_REGIONS) ? E.HO[g.Eu4.TIER_3].limits.bitrate : g.eWB,
                 E.HO[e.premiumTier].limits.bitrate,
             );
 }

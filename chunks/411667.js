@@ -16,8 +16,8 @@ function c(e) {
             requestRejectedNoticeText: m,
             reapplyNoticeText: p,
         } = (0, l.Z)(n),
-        f = n.features.has(a.oNc.CREATOR_MONETIZABLE_RESTRICTED),
-        h = n.features.has(a.oNc.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING);
+        f = n.features.has(a.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED),
+        h = n.features.has(a.GuildFeatures.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING);
     if (null != d)
         return (0, r.jsx)("div", {
             className: o.noticeContainer,

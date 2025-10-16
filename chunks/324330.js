@@ -18,8 +18,8 @@ var i = n(392711),
     p = n(703662);
 function f(e) {
     if (null == e) return !1;
-    let t = e.features.has(g.oNc.COMMUNITY),
-        n = e.features.has(g.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL);
+    let t = e.features.has(g.GuildFeatures.COMMUNITY),
+        n = e.features.has(g.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL);
     return t || n;
 }
 function h() {

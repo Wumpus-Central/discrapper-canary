@@ -4,13 +4,13 @@ r(647438);
 var u = r(481060),
     c = r(336197),
     i = r(430824),
-    o = r(240864),
-    l = r(981631);
+    l = r(240864),
+    o = r(981631);
 function a(e, t) {
     var a;
     let d = i.Z.getGuild(e);
-    o.Z.getGuildProductFetchState(t) === o.M.FETCHED &&
-    (null == (a = o.Z.getGuildProduct(t)) ? void 0 : a.published) !== !0 &&
+    l.Z.getGuildProductFetchState(t) === l.M.FETCHED &&
+    (null == (a = l.Z.getGuildProduct(t)) ? void 0 : a.published) !== !0 &&
     null != d
         ? (0, u.ZDy)(async () => {
               let { default: e } = await r.e("29396").then(r.bind(r, 513239));
@@ -44,7 +44,7 @@ function a(e, t) {
                       })({}, t),
                   );
           })
-        : (null == d ? void 0 : d.features.has(l.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE))
-          ? (0, c.Z)(l.Z5c.GUILD_PRODUCT(e, t))
-          : (0, c.Z)(l.Z5c.CHANNEL(e));
+        : (null == d ? void 0 : d.features.has(o.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE))
+          ? (0, c.Z)(o.Z5c.GUILD_PRODUCT(e, t))
+          : (0, c.Z)(o.Z5c.CHANNEL(e));
 }

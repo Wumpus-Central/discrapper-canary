@@ -36,7 +36,7 @@ function C(e) {
 }
 function O(e) {
     let { guild: t, vanityURLCode: n, vanityURLUses: l, originalVanityURLCode: s, errorDetails: o } = e,
-        c = (null == t ? void 0 : t.features.has(x.oNc.VANITY_URL)) === !0,
+        c = (null == t ? void 0 : t.features.has(x.GuildFeatures.VANITY_URL)) === !0,
         d = i.useCallback(() => {
             (0, m.Gy)("");
         }, []),

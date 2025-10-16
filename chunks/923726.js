@@ -40,7 +40,11 @@ function s(e) {
         location: "504714_7",
     });
 }
-let l = [i.oNc.ROLE_SUBSCRIPTIONS_ENABLED, i.oNc.CREATOR_MONETIZABLE, i.oNc.CREATOR_MONETIZABLE_PROVISIONAL],
+let l = [
+        i.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED,
+        i.GuildFeatures.CREATOR_MONETIZABLE,
+        i.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL,
+    ],
     c = (e) => null != e && l.some((t) => e.features.has(t));
 function u(e) {
     let { enabled: t } = r.jJ.getCurrentConfig(

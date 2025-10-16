@@ -617,7 +617,7 @@ let eA = Object.freeze({
             },
         },
         [i.Eu4.TIER_1]: {
-            features: [i.oNc.INVITE_SPLASH, i.oNc.ANIMATED_ICON],
+            features: [i.GuildFeatures.INVITE_SPLASH, i.GuildFeatures.ANIMATED_ICON],
             limits: {
                 emoji: 100,
                 bitrate: 128000,
@@ -630,7 +630,12 @@ let eA = Object.freeze({
             },
         },
         [i.Eu4.TIER_2]: {
-            features: [i.oNc.INVITE_SPLASH, i.oNc.ANIMATED_ICON, i.oNc.BANNER, i.oNc.ROLE_ICONS],
+            features: [
+                i.GuildFeatures.INVITE_SPLASH,
+                i.GuildFeatures.ANIMATED_ICON,
+                i.GuildFeatures.BANNER,
+                i.GuildFeatures.ROLE_ICONS,
+            ],
             limits: {
                 emoji: 150,
                 bitrate: 256000,
@@ -644,12 +649,12 @@ let eA = Object.freeze({
         },
         [i.Eu4.TIER_3]: {
             features: [
-                i.oNc.INVITE_SPLASH,
-                i.oNc.ANIMATED_ICON,
-                i.oNc.BANNER,
-                i.oNc.ANIMATED_BANNER,
-                i.oNc.VANITY_URL,
-                i.oNc.ROLE_ICONS,
+                i.GuildFeatures.INVITE_SPLASH,
+                i.GuildFeatures.ANIMATED_ICON,
+                i.GuildFeatures.BANNER,
+                i.GuildFeatures.ANIMATED_BANNER,
+                i.GuildFeatures.VANITY_URL,
+                i.GuildFeatures.ROLE_ICONS,
             ],
             limits: {
                 emoji: 250,
