@@ -1,15 +1,13 @@
 n.d(t, { Z: () => r });
 var r = {};
 r = {
-    deselectedItem: (e) => `${e.item} n\xe3o selecionado.`,
-    longPressToSelect: `Prima continuamente para entrar no modo de sele\xe7\xe3o.`,
-    select: "Selecionar",
-    selectedAll: "Todos os itens selecionados.",
-    selectedCount: (e, t) =>
-        `${t.plural(e.count, {
-            "=0": "Nenhum item selecionado",
-            one: () => `${t.number(e.count)} item selecionado`,
-            other: () => `${t.number(e.count)} itens selecionados`,
-        })}.`,
-    selectedItem: (e) => `${e.item} selecionado.`,
+    ascending: "crescente",
+    ascendingSort: (e) => `in ordine crescente in base alla colonna ${e.columnName}`,
+    columnSize: (e) => `${e.value} pixel`,
+    descending: "decrescente",
+    descendingSort: (e) => `in ordine decrescente in base alla colonna ${e.columnName}`,
+    resizerDescription: "Premi Invio per iniziare a ridimensionare",
+    select: "Seleziona",
+    selectAll: "Seleziona tutto",
+    sortable: "colonna ordinabile",
 };

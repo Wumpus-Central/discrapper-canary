@@ -1,7 +1,9 @@
-function r(e, t) {
-    if (!e) return !1;
-    let n = window.getComputedStyle(e),
-        r = /(auto|scroll)/.test(n.overflow + n.overflowX + n.overflowY);
-    return r && t && (r = e.scrollHeight !== e.clientHeight || e.scrollWidth !== e.clientWidth), r;
-}
-n.d(t, { a: () => r });
+n.d(t, { C: () => r }), n(388685);
+var r = (function (e) {
+    return (
+        (e[(e.APPLICATION = 1)] = "APPLICATION"),
+        (e[(e.LINK = 2)] = "LINK"),
+        (e[(e.APPLICATION_BANNER = 3)] = "APPLICATION_BANNER"),
+        e
+    );
+})({});

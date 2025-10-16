@@ -1,6 +1,22 @@
-n.d(t, { Z: () => r });
-var r = {};
-r = {
-    removeButtonLabel: `\u{423}\u{434}\u{430}\u{43B}\u{438}\u{442}\u{44C}`,
-    removeDescription: `\u{41D}\u{430}\u{436}\u{43C}\u{438}\u{442}\u{435} DELETE, \u{447}\u{442}\u{43E}\u{431}\u{44B} \u{443}\u{434}\u{430}\u{43B}\u{438}\u{442}\u{44C} \u{442}\u{435}\u{433}.`,
+n.d(t, { Z: () => c });
+var r = n(647438),
+    i = n(979590),
+    a = n.n(i),
+    o = n(866442),
+    s = n(442837),
+    l = n(607070);
+let c = (e) => {
+    let t = (0, s.e7)([l.Z], () => (l.Z.desaturateUserColors ? l.Z.saturation : 1));
+    return (0, r.useMemo)(() => {
+        let { h: n, s: r, l: i } = a()((0, o.Rf)(e)).toHsl(),
+            s = a()({
+                h: n,
+                s: r * t,
+                l: i,
+            });
+        return {
+            hex: s.toHexString(),
+            hsl: s.toHslString(),
+        };
+    }, [e, t]);
 };

@@ -1,6 +1,1 @@
-n.d(t, { Z: () => r });
-var r = {};
-r = {
-    removeButtonLabel: "Ukloni",
-    removeDescription: `Pritisnite Obri\u{161}i da biste uklonili oznaku.`,
-};
+e.exports = "/assets/2a0b77438773c527.svg";
