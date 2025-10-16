@@ -131,13 +131,7 @@ function R(e) {
         en = !1;
     return (0, s.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([
-                n.e("21145"),
-                n.e("17938"),
-                n.e("88874"),
-                n.e("84992"),
-                n.e("23404"),
-            ]).then(n.bind(n, 7305));
+            let { default: e } = await Promise.all([n.e("17938"), n.e("84992"), n.e("84071")]).then(n.bind(n, 7305));
             return (t) => {
                 var { onClose: n } = t,
                     a = C(t, ["onClose"]);

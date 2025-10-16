@@ -25,8 +25,8 @@ var r = n(951288),
     h = n(468363),
     j = n(326255),
     S = n(956221),
-    N = n(771173),
-    x = n(385499),
+    x = n(771173),
+    N = n(385499),
     E = n(570908),
     P = n(702321),
     C = n(201895),
@@ -36,8 +36,8 @@ var r = n(951288),
     I = n(111028),
     M = n(181430),
     k = n(821795),
-    D = n(892567),
-    _ = n(853856),
+    _ = n(892567),
+    D = n(853856),
     R = n(93687),
     L = n(489618),
     A = n(785232),
@@ -51,8 +51,8 @@ var r = n(951288),
     V = n(199902),
     Y = n(158776),
     W = n(306680),
-    Q = n(699516),
-    q = n(111583),
+    q = n(699516),
+    Q = n(111583),
     J = n(9156),
     X = n(594174),
     $ = n(709054),
@@ -280,7 +280,7 @@ function em(e) {
             status: B,
             isMobile: V,
             nameplate: Y,
-            ref: q,
+            ref: Q,
             "aria-posinset": X,
             "aria-setsize": $,
         } = e,
@@ -289,32 +289,32 @@ function em(e) {
         [ey, eO] = i.useState(!1),
         ev = i.useRef(null),
         eg = i.useRef(null),
-        eh = null != q ? q : eg,
+        eh = null != Q ? Q : eg,
         {
             avatarSrc: ej,
             avatarDecorationSrc: eS,
-            eventHandlers: eN,
+            eventHandlers: ex,
         } = (0, K.Z)({
             userId: null == p ? void 0 : p.id,
             size: y.EFr.SIZE_32,
             animateOnHover: !(s || ee || em || ey),
         }),
-        ex = t.isMultiUserDM(),
+        eN = t.isMultiUserDM(),
         eE = t.isSystemDM(),
         eP = (0, H.Q)(),
-        eC = !ex && !eE && t.type === et.d4z.DM,
+        eC = !eN && !eE && t.type === et.d4z.DM,
         ew = eC && (null == p ? void 0 : p.primaryGuild) != null,
         eT = (0, m.e7)([J.ZP], () => J.ZP.isChannelMuted(t.getGuildId(), t.id)),
-        { ignored: eZ, blocked: eI } = (0, m.cj)([Q.Z], () => ({
-            ignored: Q.Z.isIgnored(t.getRecipientId()),
-            blocked: Q.Z.isBlocked(t.getRecipientId()),
+        { ignored: eZ, blocked: eI } = (0, m.cj)([q.Z], () => ({
+            ignored: q.Z.isIgnored(t.getRecipientId()),
+            blocked: q.Z.isBlocked(t.getRecipientId()),
         })),
         eM = eC && eZ,
         ek = eC && eI,
-        eD = (eT || eM || ek) && !(s || ee),
-        e_ = (0, m.e7)([W.ZP], () => W.ZP.getMentionCount(t.id) > 0),
+        e_ = (eT || eM || ek) && !(s || ee),
+        eD = (0, m.e7)([W.ZP], () => W.ZP.getMentionCount(t.id) > 0),
         eR = (0, T.ZP)(t),
-        eL = (0, m.e7)([_.Z], () => _.Z.isFavorite(t.id)),
+        eL = (0, m.e7)([D.Z], () => D.Z.isFavorite(t.id)),
         { dotsInsteadOfCloseButton: eA, rearrangeContextMenu: eG } = L.Z.useExperiment(
             { location: "private_channel" },
             { autoTrackExposure: !0 },
@@ -343,13 +343,13 @@ function em(e) {
         eW = (e) => {
             e.stopPropagation();
         },
-        eQ = (e) => {
+        eq = (e) => {
             if (e.target === e.currentTarget) {
                 var t;
                 null == (t = ev.current) || t.click();
             }
         },
-        eq = (e) => {
+        eQ = (e) => {
             let i = "contextmenu" === e.type,
                 l = eG && !i,
                 o = i ? u.ImpressionNames.DM_LIST_RIGHT_CLICK_MENU_SHOWN : u.ImpressionNames.DM_LIST_KEBAB_MENU_SHOWN;
@@ -390,7 +390,7 @@ function em(e) {
                                         n.e("98783"),
                                         n.e("6915"),
                                         n.e("56826"),
-                                        n.e("24140"),
+                                        n.e("3091"),
                                     ]).then(n.bind(n, 131404));
                               return (n) =>
                                   (0, r.jsx)(
@@ -431,7 +431,7 @@ function em(e) {
                         );
                 });
         },
-        eX = (0, r.jsx)(D.Z, {
+        eX = (0, r.jsx)(_.Z, {
             userName: eR,
             displayNameStyles: null == p ? void 0 : p.displayNameStyles,
             effectDisplayType: ee || s || ey ? k.F.ANIMATED : k.F.PLAIN,
@@ -447,7 +447,7 @@ function em(e) {
                           userId: null == p ? void 0 : p.id,
                           inline: !0,
                           disableGuildProfile: !0,
-                          className: o()(er.clanTag, { [er.clanTagMuted]: eD }),
+                          className: o()(er.clanTag, { [er.clanTagMuted]: e_ }),
                       }),
                   ],
               })
@@ -473,19 +473,19 @@ function em(e) {
                 onMouseDown: eY,
                 onFocus: eH,
                 onBlur: eK,
-                onContextMenu: eq,
+                onContextMenu: eQ,
                 "aria-setsize": $,
                 "aria-posinset": X,
                 children: [
-                    e_ ? (0, r.jsx)("div", { className: o()(er.unreadPill, { [er.muted]: eD }) }) : null,
+                    eD ? (0, r.jsx)("div", { className: o()(er.unreadPill, { [er.muted]: e_ }) }) : null,
                     (0, r.jsxs)(y.vjx, {
                         className: o()(er.interactive, {
                             [er.interactiveSystemDM]: eP && eE,
                             [er.interactiveSelected]: s || ey,
                         }),
                         as: "div",
-                        onClick: eQ,
-                        muted: eD,
+                        onClick: eq,
+                        muted: e_,
                         selected: s,
                         children: [
                             (0, r.jsx)(z.Z, {
@@ -505,7 +505,7 @@ function em(e) {
                                             className: er.link,
                                             "aria-label": (0, C.ZP)({
                                                 channel: t,
-                                                unread: e_,
+                                                unread: eD,
                                             }),
                                         },
                                         i,
@@ -527,7 +527,7 @@ function em(e) {
                                                     else
                                                         return (0, r.jsx)(
                                                             es,
-                                                            el(ei({}, eN), {
+                                                            el(ei({}, ex), {
                                                                 src: (0, w.x)(t),
                                                                 "aria-hidden": !0,
                                                                 size: e,
@@ -544,7 +544,7 @@ function em(e) {
                                                     p.isSystemUser() || (n = (0, g.Z)(h) ? et.Skl.STREAMING : B),
                                                     (0, r.jsx)(
                                                         es,
-                                                        el(ei({}, eN), {
+                                                        el(ei({}, ex), {
                                                             size: y.EFr.SIZE_32,
                                                             src: ej,
                                                             avatarDecoration: eS,
@@ -557,8 +557,8 @@ function em(e) {
                                                     )
                                                 );
                                             })(),
-                                            highlighted: e_ && !eD,
-                                            muted: eD,
+                                            highlighted: eD && !e_,
+                                            muted: e_,
                                             subText: t.isSystemDM()
                                                 ? (0, r.jsx)("div", {
                                                       className: er.subtext,
@@ -579,7 +579,7 @@ function em(e) {
                                                           applicationStream: S,
                                                           voiceChannel: R,
                                                       })
-                                                    ? (0, r.jsx)(N.Z, {
+                                                    ? (0, r.jsx)(x.Z, {
                                                           location: "PrivateChannel",
                                                           user: p,
                                                           activities: h,
@@ -587,7 +587,7 @@ function em(e) {
                                                           applicationStream: S,
                                                           animateEmoji: ee || em || ey,
                                                           textClassName: er.activityStatusText,
-                                                          iconClassName: eD ? er.mutedIcon : void 0,
+                                                          iconClassName: e_ ? er.mutedIcon : void 0,
                                                       })
                                                     : null,
                                             name: (0, r.jsx)(I.Z, {
@@ -595,9 +595,9 @@ function em(e) {
                                                 children: e$,
                                             }),
                                             decorators: t.isSystemDM()
-                                                ? (0, r.jsx)(x.Z, {
+                                                ? (0, r.jsx)(N.Z, {
                                                       className: er.decorator,
-                                                      type: x.Z.Types.SYSTEM_DM,
+                                                      type: N.Z.Types.SYSTEM_DM,
                                                       verified: !0,
                                                   })
                                                 : null,
@@ -615,14 +615,14 @@ function em(e) {
                                     eA && !e5
                                         ? (0, r.jsx)(b.u, {
                                               asContainer: !0,
-                                              text: en.intl.string(ex ? en.t.Et8qws : en.t["d+e27u"]),
+                                              text: en.intl.string(eN ? en.t.Et8qws : en.t["d+e27u"]),
                                               delay: 500,
                                               targetElementRef: eU,
                                               children: (0, r.jsx)(ec, {
                                                   icon: y.xhG,
                                                   "aria-label": en.intl.string(en.t.PdRCRk),
                                                   onClick: (e) => {
-                                                      eq(e);
+                                                      eQ(e);
                                                   },
                                                   onMouseDown: eW,
                                                   nameplate: Y,
@@ -632,10 +632,10 @@ function em(e) {
                                           })
                                         : (0, r.jsx)(ec, {
                                               icon: y.Dio,
-                                              "aria-label": ex
+                                              "aria-label": eN
                                                   ? en.intl.string(en.t["26C4oq"])
                                                   : en.intl.string(en.t.jsvgc3),
-                                              onClick: ex ? eJ : eV,
+                                              onClick: eN ? eJ : eV,
                                               onMouseDown: eW,
                                               nameplate: Y,
                                               reducedClickTarget: !0,
@@ -680,15 +680,15 @@ let eb =
                   { voiceActivityStatusEnabled: d } = (0, h.U)({ location: "PrivateChannel" }),
                   { voiceChannel: p } = (0, S.Z)({ userId: c }),
                   f = (0, U.K)({ user: l }),
-                  b = (0, m.e7)([X.default, q.Z], () => {
+                  b = (0, m.e7)([X.default, Q.Z], () => {
                       if (t.isMultiUserDM())
                           if (s)
-                              return $.default.keys(q.Z.getTypingUsers(t.id)).some((e) => {
+                              return $.default.keys(Q.Z.getTypingUsers(t.id)).some((e) => {
                                   var t;
                                   return e !== (null == (t = X.default.getCurrentUser()) ? void 0 : t.id);
                               });
                           else return !1;
-                      return null != l && q.Z.isTyping(t.id, t.getRecipientId());
+                      return null != l && Q.Z.isTyping(t.id, t.getRecipientId());
                   }, [t, l, s]);
               return t.isMultiUserDM()
                   ? (0, r.jsx)(

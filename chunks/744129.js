@@ -107,7 +107,7 @@ function B(e) {
         T = (0, C.y_)(v, O),
         S = null != T,
         w = (0, c.ap)((0, d.ZP)()),
-        L = (0, y.y)({ location: "PremiumBrandRefreshTierCards" }),
+        L = (0, y.yc)({ location: "PremiumBrandRefreshTierCards" }),
         x = (0, r.jsxs)(r.Fragment, {
             children: [
                 S &&
