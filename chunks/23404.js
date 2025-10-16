@@ -15,17 +15,17 @@ var r = n(951288),
     m = n(373370),
     b = n(475595),
     _ = n(566078),
-    O = n(602667),
-    E = n(611855),
-    v = n(110560),
-    y = n(670638),
+    E = n(602667),
+    O = n(611855),
+    y = n(110560),
+    v = n(670638),
     I = n(667105),
     C = n(860151),
     S = n(46140),
     T = n(981631),
     N = n(388032),
-    j = n(408228);
-function P(e) {
+    P = n(408228);
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,7 +50,7 @@ function P(e) {
     }
     return e;
 }
-function x(e) {
+function A(e) {
     var t;
     let { quest: n } = e,
         i = (0, f.B6)(n.config.expiresAt),
@@ -59,15 +59,15 @@ function x(e) {
         u = (0, s.wjy)(a) ? T.BRd.DARK : T.BRd.LIGHT,
         d = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null;
     return (0, r.jsxs)("div", {
-        className: j.heading,
+        className: P.heading,
         children: [
             (0, r.jsx)("img", {
-                className: j.headingGameTile,
+                className: P.headingGameTile,
                 alt: "",
                 src: (0, b.fh)(n, b.eC.GAME_TILE, u).url,
             }),
             (0, r.jsxs)("div", {
-                className: j.headingCopy,
+                className: P.headingCopy,
                 children: [
                     (0, r.jsx)(s.Heading, {
                         variant: "heading-md/semibold",
@@ -88,25 +88,27 @@ function x(e) {
         ],
     });
 }
-function A(e) {
+function x(e) {
     var t, n, l;
     let { nodeRef: c, quest: b } = e,
         _ = (0, u.O5)(),
-        O = (0, o.e7)([h.Z], () => h.Z.isEnrolling(b.id), [b]),
-        [T, A] = i.useState(!1),
-        Z = i.useCallback(() => A(!0), []),
-        w = i.useCallback(() => A(!1), []),
-        L = i.useCallback((e) => {
+        E = (0, o.e7)([h.Z], () => h.Z.isEnrolling(b.id), [b]),
+        [T, x] = i.useState(!1),
+        Z = i.useCallback(() => x(!0), []),
+        w = i.useCallback(() => x(!1), []),
+        { launchInGameActivity: L } = (0, f.zB)(b),
+        R = i.useCallback((e) => {
             e.stopPropagation();
         }, []),
-        R = i.useCallback(() => {
+        D = i.useCallback(() => {
             (0, p.AH)(b.id, {
                 questContent: g.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.ACCEPT_QUEST,
                 sourceQuestContent: g.jn.ACTIVITY_PANEL,
-            });
-        }, [b]),
-        D = i.useCallback(() => {
+            }),
+                (0, d.Rt)(b) && L();
+        }, [b, L]),
+        k = i.useCallback(() => {
             null != b &&
                 (_({
                     questId: b.id,
@@ -114,58 +116,58 @@ function A(e) {
                     questContentCTA: u.jZ.TRACK_PROGRESS,
                     sourceQuestContent: g.jn.ACTIVITY_PANEL,
                 }),
-                (0, v.navigateToQuestHome)({
+                (0, y.navigateToQuestHome)({
                     fromContent: g.jn.ACTIVITY_PANEL,
                     questId: b.id,
                 }));
         }, [b, _]),
-        k = i.useCallback(() => {
+        M = i.useCallback(() => {
             _({
                 questId: b.id,
                 questContent: g.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.LEARN_MORE,
                 sourceQuestContent: g.jn.ACTIVITY_PANEL,
             }),
-                (0, v.navigateToQuestHome)({
+                (0, y.navigateToQuestHome)({
                     fromContent: g.jn.ACTIVITY_PANEL,
                     questId: b.id,
                 });
         }, [b.id, _]),
-        M = (0, I.hf)({
+        U = (0, I.hf)({
             quest: b,
             questContent: g.jn.ACTIVITY_PANEL,
             sourceQuestContent: g.jn.ACTIVITY_PANEL,
         }),
-        U = (null == (t = b.userStatus) ? void 0 : t.enrolledAt) != null,
-        G = (null == (n = b.userStatus) ? void 0 : n.completedAt) != null,
-        B = (0, f.Rf)(b),
-        H = (0, m.DD)({
+        G = (null == (t = b.userStatus) ? void 0 : t.enrolledAt) != null,
+        B = (null == (n = b.userStatus) ? void 0 : n.completedAt) != null,
+        H = (0, f.Rf)(b),
+        V = (0, m.DD)({
             quest: b,
-            taskDetails: B,
+            taskDetails: H,
             location: S.dr.ACTIVITY_PANEL,
             questContent: g.jn.ACTIVITY_PANEL,
             sourceQuestContent: g.jn.ACTIVITY_PANEL,
         }),
-        V = (0, d.Rt)(b),
-        F = (0, m.CR)({ quest: b }),
-        z = V ? F : N.intl.string(N.t.l7E81t);
+        F = (0, d.Rt)(b),
+        z = (0, m.CR)({ quest: b }),
+        W = F ? z : N.intl.string(N.t.l7E81t);
     return (0, r.jsxs)("div", {
         ref: (e) => {
             c.current = e;
         },
-        className: a()(j.wrapper, { [j.wrapperQuestAccepted]: U }),
-        onClick: L,
-        onKeyPress: L,
+        className: a()(P.wrapper, { [P.wrapperQuestAccepted]: G }),
+        onClick: R,
+        onKeyPress: R,
         onFocus: Z,
         onMouseEnter: Z,
         onBlur: w,
         onMouseLeave: w,
         children: [
             (0, r.jsxs)("div", {
-                className: j.utils,
+                className: P.utils,
                 children: [
-                    U ? (0, r.jsx)(x, { quest: b }) : (0, r.jsx)(E.Z, {}),
-                    (0, r.jsx)(y.r, {
+                    G ? (0, r.jsx)(A, { quest: b }) : (0, r.jsx)(O.Z, {}),
+                    (0, r.jsx)(v.r, {
                         quest: b,
                         questContent: g.jn.ACTIVITY_PANEL,
                         shouldShowDisclosure: (null == (l = b.userStatus) ? void 0 : l.enrolledAt) == null,
@@ -175,14 +177,14 @@ function A(e) {
                             var t, n;
                             return (0, r.jsx)(
                                 s.P3F,
-                                ((t = P({}, e)),
+                                ((t = j({}, e)),
                                 (n = n =
                                     {
                                         "aria-label": N.intl.string(N.t.DEoVWV),
                                         children: (0, r.jsx)(s.xhG, {
                                             size: "md",
                                             color: "currentColor",
-                                            className: j.submenuIcon,
+                                            className: P.submenuIcon,
                                         }),
                                     }),
                                 Object.getOwnPropertyDescriptors
@@ -203,70 +205,70 @@ function A(e) {
                     }),
                 ],
             }),
-            !U &&
+            !G &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(x, { quest: b }),
+                        (0, r.jsx)(A, { quest: b }),
                         (0, r.jsx)("div", {
-                            className: j.instructions,
+                            className: P.instructions,
                             children: (0, r.jsx)(s.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                children: H,
+                                children: V,
                             }),
                         }),
                     ],
                 }),
-            U &&
-                !G &&
+            G &&
+                !B &&
                 (0, r.jsx)(C.Z, {
                     autoplay: T,
-                    className: j.rewardTileWithInstructions,
+                    className: P.rewardTileWithInstructions,
                     quest: b,
                     questContent: g.jn.ACTIVITY_PANEL,
                     location: S.dr.ACTIVITY_PANEL,
-                    taskDetails: B,
+                    taskDetails: H,
                     sourceQuestContent: g.jn.ACTIVITY_PANEL,
                 }),
             (0, r.jsxs)("div", {
-                className: j.ctas,
+                className: P.ctas,
                 children: [
-                    !U &&
+                    !G &&
                         (0, r.jsxs)(s.ButtonGroup, {
                             size: "sm",
-                            direction: V ? "vertical" : "horizontal",
+                            direction: F ? "vertical" : "horizontal",
                             fullWidth: !0,
                             children: [
                                 (0, r.jsx)(s.Button, {
                                     variant: "secondary",
                                     text: N.intl.string(N.t.LLLLPD),
-                                    onClick: k,
+                                    onClick: M,
                                 }),
                                 (0, r.jsx)(s.Button, {
                                     variant: "primary",
-                                    text: z,
-                                    onClick: R,
-                                    loading: O,
+                                    text: W,
+                                    onClick: D,
+                                    loading: E,
                                     icon: (0, I.gF)(b),
                                 }),
                             ],
                         }),
-                    U &&
-                        !G &&
+                    G &&
+                        !B &&
                         (0, r.jsx)(s.Button, {
                             variant: "primary",
                             size: "sm",
                             fullWidth: !0,
                             text: N.intl.string(N.t.VN1Ajo),
-                            onClick: D,
+                            onClick: k,
                         }),
-                    G &&
+                    B &&
                         (0, r.jsx)(s.Button, {
                             variant: "primary",
                             size: "sm",
                             fullWidth: !0,
                             text: N.intl.string(N.t.cfY4PD),
-                            onClick: M,
+                            onClick: U,
                         }),
                 ],
             }),
@@ -274,10 +276,10 @@ function A(e) {
     });
 }
 let Z = function (e) {
-    return (0, r.jsx)(O.A, {
+    return (0, r.jsx)(E.A, {
         questOrQuests: e.quest,
         questContent: g.jn.ACTIVITY_PANEL,
         sourceQuestContent: g.jn.ACTIVITY_PANEL,
-        children: (t) => (0, r.jsx)(A, P({ nodeRef: t }, e)),
+        children: (t) => (0, r.jsx)(x, j({ nodeRef: t }, e)),
     });
 };

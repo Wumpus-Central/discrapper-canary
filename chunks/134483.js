@@ -125,16 +125,18 @@ function k(e) {
             () => ((null == X ? void 0 : X.id) == null ? null : c.Z.getParticipant(C, X.id)) != null,
             [C, X],
         ),
-        eu = (0, g.B6)(null == k ? void 0 : k.config.expiresAt),
-        ec = (0, g.B6)(null == er ? void 0 : er.rewardsExpireAt),
-        ed = l.useCallback(() => {
+        { launchInGameActivity: eu } = (0, g.zB)(k),
+        ec = (0, g.B6)(null == k ? void 0 : k.config.expiresAt),
+        ed = (0, g.B6)(null == er ? void 0 : er.rewardsExpireAt),
+        ep = l.useCallback(() => {
             (0, T.AH)(k.id, {
                 questContent: h.jn.QUEST_LIVE_STREAM,
                 questContentCTA: j.jZ.ACCEPT_QUEST,
                 sourceQuestContent: h.jn.QUEST_LIVE_STREAM,
-            });
-        }, [k]),
-        ep = l.useCallback(() => {
+            }),
+                (0, v.Rt)(k) && eu();
+        }, [k, eu]),
+        ef = l.useCallback(() => {
             H({
                 questId: k.id,
                 questContent: h.jn.QUEST_LIVE_STREAM,
@@ -146,7 +148,7 @@ function k(e) {
                     questId: k.id,
                 });
         }, [k, H]),
-        ef = l.useCallback(() => {
+        em = l.useCallback(() => {
             H({
                 questId: k.id,
                 questContent: h.jn.QUEST_LIVE_STREAM,
@@ -158,12 +160,12 @@ function k(e) {
                     questId: k.id,
                 });
         }, [k, H]),
-        em = (0, Q.hf)({
+        eb = (0, Q.hf)({
             quest: k,
             questContent: h.jn.QUEST_LIVE_STREAM,
             sourceQuestContent: h.jn.QUEST_LIVE_STREAM,
         }),
-        eb = l.useMemo(
+        eE = l.useMemo(
             () =>
                 (0, y.T)({
                     quest: k,
@@ -171,24 +173,24 @@ function k(e) {
                 }),
             [k],
         ),
-        eE = (0, O.CR)({ quest: k }),
-        ej = (0, v.Rt)(k),
-        ev = (0, g.tP)(k),
-        eT = (null == (t = k.userStatus) ? void 0 : t.enrolledAt) != null,
-        eg = (null == (n = k.userStatus) ? void 0 : n.completedAt) != null,
-        eS = null != k.userStatus && (0, v.zE)(k.userStatus, h.jn.QUEST_LIVE_STREAM),
-        eh = null != k.userStatus && (0, v.zE)(k.userStatus, h.jn.QUEST_BAR),
-        ey = en && !eh;
-    eb.info({
-        isQuestCallHeaderDismissed: eS,
-        isQuestExpired: ev,
-        isQuestBarShowing: ey,
+        ej = (0, O.CR)({ quest: k }),
+        ev = (0, v.Rt)(k),
+        eT = (0, g.tP)(k),
+        eg = (null == (t = k.userStatus) ? void 0 : t.enrolledAt) != null,
+        eS = (null == (n = k.userStatus) ? void 0 : n.completedAt) != null,
+        eh = null != k.userStatus && (0, v.zE)(k.userStatus, h.jn.QUEST_LIVE_STREAM),
+        ey = null != k.userStatus && (0, v.zE)(k.userStatus, h.jn.QUEST_BAR),
+        eO = en && !ey;
+    eE.info({
+        isQuestCallHeaderDismissed: eh,
+        isQuestExpired: eT,
+        isQuestBarShowing: eO,
         isCurrentUserCallParticipant: eo,
     });
-    let eO = null != B && (null == (s = k.userStatus) ? void 0 : s.claimedAt) == null;
-    if ((!eO && (eS || ev || ey)) || (!eO && !eo)) return null;
-    let ex = (0, v.il)(k),
-        eA = (0, r.jsx)(Z.Z, {
+    let ex = null != B && (null == (s = k.userStatus) ? void 0 : s.claimedAt) == null;
+    if ((!ex && (eh || eT || eO)) || (!ex && !eo)) return null;
+    let eA = (0, v.il)(k),
+        eC = (0, r.jsx)(Z.Z, {
             className: M.rewardTile,
             autoplay: z,
             quest: k,
@@ -197,17 +199,17 @@ function k(e) {
             sourceQuestContent: h.jn.QUEST_LIVE_STREAM,
         });
     return (0, r.jsxs)("div", {
-        className: i()(M.wrapper, { [M.wrapperAccepted]: eT }),
+        className: i()(M.wrapper, { [M.wrapperAccepted]: eg }),
         onFocus: F,
         onMouseEnter: F,
         onBlur: K,
         onMouseLeave: K,
         children: [
-            !eT &&
+            !eg &&
                 (0, r.jsxs)("div", {
                     className: M.rewardTileWrapper,
                     children: [
-                        eA,
+                        eC,
                         (0, r.jsx)(w.Z, {
                             bgOpacity: 0.32,
                             className: M.promotedTag,
@@ -220,8 +222,8 @@ function k(e) {
                     (0, r.jsxs)("div", {
                         className: M.heading,
                         children: [
-                            eT && ei
-                                ? eA
+                            eg && ei
+                                ? eC
                                 : (0, r.jsx)("img", {
                                       className: M.gameTile,
                                       alt: k.config.messages.gameTitle,
@@ -239,7 +241,7 @@ function k(e) {
                                                 children: ei
                                                     ? (0, v.AV)({
                                                           quest: k,
-                                                          taskDetails: ex,
+                                                          taskDetails: eA,
                                                       })
                                                     : q.intl.formatToPlainString(q.t.EQa7oq, {
                                                           questName: k.config.messages.questName,
@@ -271,29 +273,29 @@ function k(e) {
                                     (0, r.jsx)(u.Text, {
                                         color: "header-secondary",
                                         variant: "text-xs/medium",
-                                        children: eg
-                                            ? q.intl.formatToPlainString(q.t.APddvL, { expirationDate: ec })
-                                            : q.intl.formatToPlainString(q.t["pX+fmp"], { expirationDate: eu }),
+                                        children: eS
+                                            ? q.intl.formatToPlainString(q.t.APddvL, { expirationDate: ed })
+                                            : q.intl.formatToPlainString(q.t["pX+fmp"], { expirationDate: ec }),
                                     }),
                                 ],
                             }),
                         ],
                     }),
-                    eT &&
-                        !eg &&
+                    eg &&
+                        !eS &&
                         !ei &&
                         (0, r.jsx)(L.Z, {
                             autoplay: z,
                             quest: k,
                             questContent: h.jn.QUEST_LIVE_STREAM,
-                            taskDetails: ex,
+                            taskDetails: eA,
                             location: N.dr.QUEST_CHANNEL_CALL_HEADER,
                             sourceQuestContent: h.jn.QUEST_LIVE_STREAM,
                         }),
                     (0, r.jsxs)("div", {
                         className: M.ctas,
                         children: [
-                            !eT &&
+                            !eg &&
                                 (0, r.jsxs)(u.Kqy, {
                                     direction: "horizontal",
                                     children: [
@@ -301,43 +303,43 @@ function k(e) {
                                             size: "sm",
                                             variant: "secondary",
                                             text: q.intl.string(q.t.LLLLPD),
-                                            onClick: ef,
-                                            fullWidth: !ej || k.config.features.includes(N.S7.CLOUD_GAMING_ACTIVITY),
+                                            onClick: em,
+                                            fullWidth: !ev || k.config.features.includes(N.S7.CLOUD_GAMING_ACTIVITY),
                                         }),
                                         (0, r.jsx)(u.Button, {
                                             size: "sm",
                                             variant: "primary",
                                             fullWidth: !0,
-                                            text: eE,
-                                            onClick: ed,
+                                            text: ej,
+                                            onClick: ep,
                                             loading: ea,
                                         }),
                                     ],
                                 }),
-                            eT &&
-                                !eg &&
+                            eg &&
+                                !eS &&
                                 ei &&
                                 (0, r.jsx)(_.Z, {
                                     color: u.TVs.colors.BG_BRAND,
                                     quest: k,
                                 }),
-                            eT &&
-                                !eg &&
+                            eg &&
+                                !eS &&
                                 !ei &&
                                 (0, r.jsx)(u.Button, {
                                     variant: "primary",
                                     size: "sm",
                                     fullWidth: !0,
                                     text: q.intl.string(q.t.VN1Ajo),
-                                    onClick: ep,
+                                    onClick: ef,
                                 }),
-                            eg &&
+                            eS &&
                                 (0, r.jsx)(u.Button, {
                                     variant: "primary",
                                     size: "sm",
                                     fullWidth: !0,
                                     text: q.intl.string(q.t.cfY4PD),
-                                    onClick: em,
+                                    onClick: eb,
                                 }),
                         ],
                     }),
