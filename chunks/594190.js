@@ -708,17 +708,24 @@ function e8(e) {
         }),
             [
                 ...n.filter((e) => {
-                    var t;
-                    return !(null != (t = e.executables) ? t : []).some((e) => eg.has(e.name.toLowerCase()));
+                    var t, n;
+                    let r = null != (t = e.executables) ? t : [],
+                        i = null != (n = e.thirdPartySkus) ? n : [],
+                        a = r.some((e) => eg.has(e.name.toLowerCase())),
+                        o = i.length > 0;
+                    return a || o;
                 }),
                 ...z,
             ].forEach((n) => {
                 let r = null != n.executables ? n.executables : [],
                     i = {};
-                r.forEach((e) => {
-                    let n = null != e.arguments && e.arguments.length > 0 ? e.arguments : "null";
-                    null == i[n] && (i[n] = []), i[n].push(e.name), e.isLauncher && t.add(e.name);
-                }),
+                if (
+                    (r.forEach((e) => {
+                        let n = null != e.arguments && e.arguments.length > 0 ? e.arguments : "null";
+                        null == i[n] && (i[n] = []), i[n].push(e.name), e.isLauncher && t.add(e.name);
+                    }),
+                    Object.keys(i).length > 0)
+                )
                     Object.keys(i).forEach((t) => {
                         var r;
                         return e.push({
@@ -729,8 +736,24 @@ function e8(e) {
                             thirdPartySkus: null != (r = n.thirdPartySkus) ? r : [],
                         });
                     });
+                else {
+                    var a;
+                    let t = null != (a = n.thirdPartySkus) ? a : [];
+                    t.length > 0 &&
+                        e.push({
+                            name: n.name,
+                            id: n.id,
+                            executables: [],
+                            cmdLine: null,
+                            thirdPartySkus: t,
+                        });
+                }
             }),
-            (e = e.filter((e) => null != e.executables && e.executables.length > 0));
+            (e = e.filter(
+                (e) =>
+                    (null != e.executables && e.executables.length > 0) ||
+                    (null != e.thirdPartySkus && e.thirdPartySkus.length > 0),
+            ));
         let u = j.Tf.getConfig({ location: "RunningGameStore.handleGamesDatabaseUpdate" }).useDetectionV2;
         D.ZP.setObservedGamesCallback(e, u, (e) => {
             let n = [],
