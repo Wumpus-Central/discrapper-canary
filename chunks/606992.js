@@ -14,7 +14,8 @@ function s(e) {
             if (null != s && (null == u || !d)) return void c(void 0);
             if ((null == u ? void 0 : u.type) === a.eq.MENTION_SUGGESTIONS) {
                 let e = f.document.getElementsByClassName(o.mentionSuggestion)[0];
-                if (null != e) {
+                if (null == e) return void c(void 0);
+                {
                     let t = e.getBoundingClientRect();
                     c(new DOMRect(t.x - 10, t.y, t.width, t.height));
                     return;
