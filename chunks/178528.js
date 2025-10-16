@@ -1,7 +1,7 @@
 n.d(t, { Z: () => z }), n(388685);
 var i = n(951288),
     r = n(647438),
-    s = n(599273),
+    s = n(258536),
     o = n(442837),
     l = n(481060),
     a = n(619915),
@@ -22,11 +22,11 @@ var i = n(951288),
     x = n(496675),
     S = n(878884),
     Z = n(19780),
-    C = n(944486),
-    j = n(9156),
+    j = n(944486),
+    C = n(9156),
     I = n(938475),
     P = n(518084),
-    w = n(669083),
+    w = n(312186),
     N = n(711553),
     T = n(981631),
     D = n(647086),
@@ -85,7 +85,7 @@ class M extends r.PureComponent {
     }
     renderSettings(e) {
         let { closePopout: t } = e;
-        return (0, i.jsx)(w.default, { onClose: t });
+        return (0, i.jsx)(w.Z, { onClose: t });
     }
     setAnimatedValue(e) {
         let { guild: t } = this.props,
@@ -247,9 +247,9 @@ function z(e) {
         r = (0, o.e7)([E.Z], () => E.Z.getGuild(n)),
         s = (0, o.e7)([b.ZP], () => b.ZP.getChannels(n)),
         l = (0, o.e7)([O.Z], () => O.Z.getCategories(n)),
-        { mutedChannels: d, collapseMuted: u } = (0, o.cj)([j.ZP], () => ({
-            mutedChannels: j.ZP.getMutedChannels(n),
-            collapseMuted: j.ZP.isGuildCollapsed(n),
+        { mutedChannels: d, collapseMuted: u } = (0, o.cj)([C.ZP], () => ({
+            mutedChannels: C.ZP.getMutedChannels(n),
+            collapseMuted: C.ZP.isGuildCollapsed(n),
         })),
         p = (0, o.e7)([I.ZP], () => I.ZP.getVoiceStates(n)),
         h = (0, o.e7)([y.Z], () => y.Z.getCollapsed()),
@@ -258,7 +258,7 @@ function z(e) {
             let { channelId: t } = e;
             return t;
         }),
-        w = (0, o.e7)([C.Z], () => C.Z.getVoiceChannelId()),
+        w = (0, o.e7)([j.Z], () => j.Z.getVoiceChannelId()),
         N = (0, o.e7)([x.Z], () => x.Z.getGuildVersion(n)),
         D = (0, o.e7)([m.Z], () => m.Z.version),
         k = (0, o.e7)([v.default], () => v.default.getGuildChangeSentinel(n)),

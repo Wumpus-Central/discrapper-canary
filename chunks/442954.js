@@ -242,10 +242,6 @@ let j = {
             });
         return (o.displayName = "PremiumSubscriptionPauseModalWrapper"), (e) => (0, a.jsx)(o, b({}, e));
     },
-    OverlaySettingsModal: async () => {
-        let { default: e } = await n.e("55288").then(n.bind(n, 669083));
-        return (t) => (0, a.jsx)(e, { onClose: t.onClose });
-    },
     NewMemberActionModal: async () => {
         let { default: e } = await Promise.all([n.e("7590"), n.e("81257")]).then(n.bind(n, 380716)),
             { NewMemberActionTypes: t } = await Promise.resolve().then(n.bind(n, 734893)),

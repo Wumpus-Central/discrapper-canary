@@ -10,7 +10,7 @@ var i,
     u = n(914010),
     p = n(518084),
     h = n(178528),
-    f = n(669083),
+    f = n(312186),
     g = n(483962),
     m = n(711553),
     y = n(388032),
@@ -30,7 +30,7 @@ function O(e, t, n) {
 }
 function b(e) {
     let { closePopout: t } = e;
-    return (0, r.jsx)(f.default, { onClose: t });
+    return (0, r.jsx)(f.Z, { onClose: t });
 }
 class v extends (i = s.PureComponent) {
     render() {
