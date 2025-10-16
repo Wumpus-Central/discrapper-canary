@@ -3982,6 +3982,8 @@ var nE = (function (e) {
             (e.MEMBER_LIST_NOTICE_CLOSED = "member_list_notice_closed"),
             (e.MEMBER_LIST_NOTICE_CTA_CLICKED = "member_list_notice_cta_clicked"),
             (e.PREMIUM_PROMOTION_OPENED = "premium_promotion_opened"),
+            (e.RECURRING_PROMOTION_MODAL_OPENED = "recurring_promotion_modal_opened"),
+            (e.RECURRING_PROMOTION_CLAIMED = "recurring_promotion_claimed"),
             (e.PREMIUM_GUILD_PROMOTION_OPENED = "premium_guild_promotion_opened"),
             (e.PREMIUM_GUILD_UPSELL_VIEWED = "premium_guild_upsell_viewed"),
             (e.PREMIUM_GUILD_UPSELL_OPENED = "premium_guild_upsell_opened"),
@@ -5963,6 +5965,7 @@ var nW = (function (e) {
             (e.CUSTOM_PROFILES_WISHLIST = "4403147417623#h_01K6DY1CJBBQHBFPETCDTJHE9B"),
             (e.NVIDIA_GEFORCE_CLOUD_GAMING_QUEST = "35372187686295"),
             (e.GAME_SERVER_HOSTING = "35370817986839"),
+            (e.RECURRING_PROMOTION = "35479903794199"),
             e
         );
     })({}),
