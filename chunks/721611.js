@@ -1,35 +1,82 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(951288),
-    l = n(647438),
-    o = n(120356),
-    i = n.n(o),
+    o = n(647438),
+    l = n(120356),
+    i = n.n(l),
     a = n(258536),
+    c = n(91192),
     s = n(481060),
-    c = n(996435),
-    u = n(910557);
-function d(e) {
-    var t;
-    let { category: n, onClick: l, active: o } = e,
-        { useTitle: a, useNavigationTitle: c, key: d } = n,
-        f = null == a ? void 0 : a(),
-        b = null != (t = null == c ? void 0 : c()) ? t : f;
-    return null == b
-        ? null
-        : (0, r.jsx)(
-              s.P3F,
-              {
-                  onClick: l,
-                  tag: "li",
-                  className: i()({ [u.active]: o }),
-                  children: b,
-              },
-              d,
-          );
-}
+    u = n(996435),
+    d = n(910557);
 function f(e) {
+    var t;
+    let { category: n, onClick: o, active: l } = e,
+        { useTitle: a, useNavigationTitle: u, key: f } = n,
+        b = null == a ? void 0 : a(),
+        p = null != (t = null == u ? void 0 : u()) ? t : b;
+    return null == p
+        ? null
+        : (0, r.jsx)(c.mh, {
+              id: f,
+              children: (e) => {
+                  var t, n;
+                  return (0, r.jsx)(
+                      s.P3F,
+                      ((t = (function (e) {
+                          for (var t = 1; t < arguments.length; t++) {
+                              var n = null != arguments[t] ? arguments[t] : {},
+                                  r = Object.keys(n);
+                              "function" == typeof Object.getOwnPropertySymbols &&
+                                  (r = r.concat(
+                                      Object.getOwnPropertySymbols(n).filter(function (e) {
+                                          return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                      }),
+                                  )),
+                                  r.forEach(function (t) {
+                                      var r;
+                                      (r = n[t]),
+                                          t in e
+                                              ? Object.defineProperty(e, t, {
+                                                    value: r,
+                                                    enumerable: !0,
+                                                    configurable: !0,
+                                                    writable: !0,
+                                                })
+                                              : (e[t] = r);
+                                  });
+                          }
+                          return e;
+                      })(
+                          {
+                              onClick: o,
+                              tag: "li",
+                              className: i()({ [d.active]: l }),
+                          },
+                          e,
+                      )),
+                      (n = n = { children: p }),
+                      Object.getOwnPropertyDescriptors
+                          ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                          : (function (e, t) {
+                                var n = Object.keys(e);
+                                if (Object.getOwnPropertySymbols) {
+                                    var r = Object.getOwnPropertySymbols(e);
+                                    n.push.apply(n, r);
+                                }
+                                return n;
+                            })(Object(n)).forEach(function (e) {
+                                Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                            }),
+                      t),
+                      f,
+                  );
+              },
+          });
+}
+function b(e) {
     let { categories: t } = e,
-        [n, o] = l.useState(t[0].key),
-        [i, f] = (0, s.q_F)(() => ({
+        [n, l] = o.useState(t[0].key),
+        [i, c] = (0, s.q_F)(() => ({
             y: 0,
             config: {
                 mass: 0.1,
@@ -38,8 +85,8 @@ function f(e) {
             },
         }));
     return (
-        l.useEffect(() => {
-            f({
+        o.useEffect(() => {
+            c({
                 y:
                     36 *
                     Math.max(
@@ -47,26 +94,26 @@ function f(e) {
                         0,
                     ),
             });
-        }, [t, n, f]),
+        }, [t, n, c]),
         (0, r.jsxs)("div", {
-            className: u.subnav,
+            className: d.subnav,
             children: [
                 (0, r.jsx)("div", {
-                    className: u.track,
+                    className: d.track,
                     children: (0, r.jsx)(a.animated.div, {
-                        className: u.thumb,
+                        className: d.thumb,
                         style: i,
                     }),
                 }),
                 (0, r.jsx)("ul", {
                     children: t.map((e) =>
                         (0, r.jsx)(
-                            d,
+                            f,
                             {
                                 onClick: () => {
                                     var t;
-                                    o((t = e.key)),
-                                        c.Z.setState({
+                                    l((t = e.key)),
+                                        u.Z.setState({
                                             targetKey: t,
                                             showNavigationMobile: !1,
                                         });
