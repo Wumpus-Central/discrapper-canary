@@ -571,14 +571,6 @@ let i = {
         actions: ["RTC_CONNECTION_STATE", "SOUNDBOARD_MUTE_JOIN_SOUND", "VOICE_STATE_UPDATES"],
         inlineRequire: () => n(783295).Z,
     },
-    NotificationMigrationManager: {
-        actions: ["POST_CONNECTION_OPEN"],
-        inlineRequire: () => n(392888).Z,
-    },
-    UnreadSettingsManager: {
-        actions: ["GUILD_CREATE", "POST_CONNECTION_OPEN"],
-        inlineRequire: () => n(109610).Z,
-    },
     MessageViewTrackingManager: {
         actions: ["CHANNEL_SELECT"],
         inlineRequire: () => n(765383).Z,

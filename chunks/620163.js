@@ -1467,32 +1467,8 @@ let eB = () => {
             },
             [eN.s6.NOTIFICATIONS_UNREAD_SETTINGS]: {
                 section: eP.oAB.NOTIFICATIONS,
-                searchableTitles: [eD.intl.string(eD.t.z21l8P)],
+                searchableTitles: ["New Unreads Setting (Experimental)"],
                 parent: eN.s6.NOTIFICATIONS,
-            },
-            [eN.s6.NOTIFICATIONS_NEW_SETTINGS]: {
-                section: eP.oAB.NOTIFICATIONS,
-                searchableTitles: ["New Notification Settings (Advanced, Staff Only)"],
-                parent: eN.s6.NOTIFICATIONS,
-                predicate: () => !1,
-            },
-            [eN.s6.NOTIFICATIONS_RESTORE_MOST_RECENT_SNAPSHOT]: {
-                section: eP.oAB.NOTIFICATIONS,
-                searchableTitles: ["Restore most recent snapshot"],
-                parent: eN.s6.NOTIFICATIONS_NEW_SETTINGS,
-                predicate: () => !1,
-            },
-            [eN.s6.NOTIFICATIONS_LAUNCH_MIGRATION]: {
-                section: eP.oAB.NOTIFICATIONS,
-                searchableTitles: ["Launch Migration"],
-                parent: eN.s6.NOTIFICATIONS_NEW_SETTINGS,
-                predicate: () => !1,
-            },
-            [eN.s6.NOTIFICATIONS_TOGGLE_NEW_SYSTEM]: {
-                section: eP.oAB.NOTIFICATIONS,
-                searchableTitles: ["Toggle new system on/off"],
-                parent: eN.s6.NOTIFICATIONS_NEW_SETTINGS,
-                predicate: () => !1,
             },
             [eN.s6.NOTIFICATIONS_PUSH_INACTIVE_TIMEOUT]: {
                 section: eP.oAB.NOTIFICATIONS,
