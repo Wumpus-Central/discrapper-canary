@@ -1,76 +1,93 @@
-r.d(t, { S: () => j });
-var n = r(951288),
-    i = r(647438),
-    a = r(120356),
-    o = r.n(a),
-    l = r(79116),
-    c = r(594174),
-    s = r(947790),
-    u = r(747101),
-    d = r(817053),
-    g = r(533815),
-    f = r(919498),
-    p = r(853072),
-    b = r(388032),
-    m = r(932366),
-    O = r(133458);
+n.d(t, { S: () => j });
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    l = n.n(a),
+    o = n(79116),
+    s = n(793030),
+    c = n(594174),
+    u = n(947790),
+    d = n(747101),
+    f = n(817053),
+    g = n(533815),
+    p = n(919498),
+    m = n(853072),
+    b = n(388032),
+    h = n(932366),
+    v = n(133458);
 function y(e) {
-    let { index: t, widgetType: r, game: a, children: l } = e,
+    let { index: t, widgetType: n, game: a, children: o } = e,
         c = i.useRef(null),
-        { isDragging: u, dragSourcePosition: d } = (0, s.g)({
+        d = i.useRef(null),
+        { isDragging: f, dragSourcePosition: g } = (0, u.g)({
             dragRef: c,
-            dropRef: c,
+            dropRef: d,
             index: t,
-            widgetType: r,
+            widgetType: n,
             game: a,
         }),
-        g = null != d,
-        f = g && t < d,
-        p = g && t > d;
-    return (0, n.jsx)("div", {
-        ref: c,
-        className: o()(O.container, {
-            [O.isDragging]: u,
-            [O.dropIndicatorBefore]: f,
-            [O.dropIndicatorAfter]: p,
+        p = null != g,
+        m = p && t < g,
+        h = p && t > g;
+    return (0, r.jsx)("div", {
+        ref: d,
+        className: l()(v.container, {
+            [v.isDragging]: f,
+            [v.dropIndicatorBefore]: m,
+            [v.dropIndicatorAfter]: h,
         }),
         "aria-label": b.intl.formatToPlainString(b.t["0dR3g4"], { positionNumber: t + 1 }),
-        children: l,
+        children: (0, r.jsxs)("div", {
+            ref: c,
+            className: v.dragTarget,
+            children: [
+                o,
+                (0, r.jsx)(s.P3F, {
+                    "aria-label": b.intl.string(b.t.Zc1neH),
+                    className: v.dragHandle,
+                    focusProps: { ringTarget: c },
+                    children: (0, r.jsx)(s.Vni, {
+                        size: "sm",
+                        color: "currentColor",
+                    }),
+                }),
+            ],
+        }),
     });
 }
 function j(e) {
-    let { game: t, userId: r, widgetType: i, guildId: a, channelId: s, disableInteraction: b = !1, index: j } = e,
-        x = (0, p.Z)(t.applicationId).length > 0,
-        v = c.default.getCurrentUser(),
-        h = (null == v ? void 0 : v.id) === r,
-        _ = !b && h,
-        w = (0, u.kO)(t.applicationId),
-        { isDragging: P } = (0, l.f)((e) => ({ isDragging: e.isDragging() })),
-        I = () =>
-            (0, n.jsxs)(n.Fragment, {
+    let { game: t, userId: n, widgetType: i, guildId: a, channelId: s, disableInteraction: u = !1, index: b } = e,
+        j = (0, m.Z)(t.applicationId).length > 0,
+        O = c.default.getCurrentUser(),
+        x = (null == O ? void 0 : O.id) === n,
+        _ = !u && x,
+        P = (0, d.kO)(t.applicationId),
+        { isDragging: I } = (0, o.f)((e) => ({ isDragging: e.isDragging() })),
+        w = () =>
+            (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, n.jsx)(d.Z, {
+                    (0, r.jsx)(f.Z, {
                         imageSrc: t.imageSrc,
                         gameName: t.gameName,
                         applicationId: t.applicationId,
-                        userId: r,
-                        disableInteraction: b,
-                        className: o()(
-                            x ? O.socialProofBackdrop : void 0,
-                            (null == t ? void 0 : t.imageSrc) == null || b ? void 0 : m.hoverActiveEffect,
+                        userId: n,
+                        disableInteraction: u,
+                        className: l()(
+                            j ? v.socialProofBackdrop : void 0,
+                            (null == t ? void 0 : t.imageSrc) == null || u ? void 0 : h.hoverActiveEffect,
                         ),
-                        hideTooltip: P,
+                        hideTooltip: I,
                     }),
                     _ &&
-                        (0, n.jsx)(g.Z, {
+                        (0, r.jsx)(g.Z, {
                             game: t,
                             widgetType: i,
-                            className: O.removeGameButton,
+                            className: v.removeGameButton,
                             iconSize: "xs",
                         }),
-                    !b &&
-                        (0, n.jsx)(f.Z, {
-                            className: O.socialProof,
+                    !u &&
+                        (0, r.jsx)(p.Z, {
+                            className: v.socialProof,
                             applicationId: t.applicationId,
                             guildId: a,
                             channelId: s,
@@ -78,17 +95,17 @@ function j(e) {
                         }),
                 ],
             });
-    return w
-        ? (0, n.jsx)("div", { className: m.loadingCover })
+    return P
+        ? (0, r.jsx)("div", { className: h.loadingCover })
         : _
-          ? (0, n.jsx)(y, {
+          ? (0, r.jsx)(y, {
                 widgetType: i,
-                index: null != j ? j : 0,
+                index: null != b ? b : 0,
                 game: t,
-                children: I(),
+                children: w(),
             })
-          : (0, n.jsx)("div", {
-                className: O.container,
-                children: I(),
+          : (0, r.jsx)("div", {
+                className: v.container,
+                children: w(),
             });
 }
