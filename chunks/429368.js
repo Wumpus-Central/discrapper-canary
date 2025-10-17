@@ -11,23 +11,23 @@ var r = n(574583),
     s = n(223143);
 let c = (0, i.F)(() => ({ selectionStates: new Map() }), r.X),
     u = (e) => {
-        var t, n, r, i;
+        var t, n;
         (0, s.QN)();
-        let u = (0, a.e7)([o.Z], () => o.Z.purchases),
-            d = c();
-        return (null == e ? void 0 : e.type) !== l.Z.VARIANTS_GROUP
-            ? 0
+        let r = (0, a.e7)([o.Z], () => o.Z.purchases),
+            i = c((t) => {
+                var n;
+                return (null == e ? void 0 : e.type) !== l.Z.VARIANTS_GROUP
+                    ? 0
+                    : null == (n = t.selectionStates.get(e.storeListingId))
+                      ? void 0
+                      : n.selectedVariantIndex;
+            });
+        return null != i
+            ? Math.max(0, i)
             : Math.max(
                   0,
-                  null !=
-                      (i =
-                          null !=
-                          (r = null == (t = d.selectionStates.get(e.storeListingId)) ? void 0 : t.selectedVariantIndex)
-                              ? r
-                              : null == (n = e.variants)
-                                ? void 0
-                                : n.findIndex((e) => !u.has(e.skuId)))
-                      ? i
+                  null != (n = null == e || null == (t = e.variants) ? void 0 : t.findIndex((e) => !r.has(e.skuId)))
+                      ? n
                       : 0,
               );
     },
