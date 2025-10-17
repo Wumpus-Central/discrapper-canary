@@ -44,8 +44,8 @@ let w = "seenQSTutorial",
     L = 100,
     x = [u.h8.USER, u.h8.GROUP_DM, u.h8.TEXT_CHANNEL, u.h8.GUILD, u.h8.APPLICATION, u.h8.LINK, u.h8.IN_APP_NAVIGATION],
     M = 0,
-    j = !1,
     k = !1,
+    j = !1,
     U = null,
     G = [],
     B = null,
@@ -54,7 +54,7 @@ let w = "seenQSTutorial",
     V = [],
     H = null;
 function Y() {
-    (k = y.Z.getGuildCount() >= 3 || o().size(m.Z.getMutablePrivateChannels()) >= 20), (F = []);
+    (j = y.Z.getGuildCount() >= 3 || o().size(m.Z.getMutablePrivateChannels()) >= 20), (F = []);
 }
 function W(e) {
     let t = [];
@@ -213,11 +213,17 @@ function X(e) {
         (r =
             null != r
                 ? r
-                : new u.ZP($, x, null != i ? L : D, {
-                      frecencyBoosters: !0,
-                      blacklist: s,
-                      allowSnowflake: !0,
-                  })),
+                : new u.ZP(
+                      $,
+                      x,
+                      null != i ? L : D,
+                      {
+                          frecencyBoosters: !0,
+                          blacklist: s,
+                          allowSnowflake: !0,
+                      },
+                      L,
+                  )),
         (B = null),
         (Z = a.length),
         (U = i),
@@ -280,15 +286,15 @@ function en(e) {
     M = e.selectedIndex;
 }
 function er() {
-    if (j) return !1;
-    (j = !0), l.K.set(w, !0);
+    if (k) return !1;
+    (k = !0), l.K.set(w, !0);
 }
 class ei extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         var t;
         this.waitFor(b.ZP, y.Z, m.Z),
             this.syncWith([p.Z], () => !0),
-            (j = l.K.get(w) || !1),
+            (k = l.K.get(w) || !1),
             (V = null != (t = null == e ? void 0 : e.channelHistory) ? t : []);
     }
     getState() {
@@ -306,7 +312,7 @@ class ei extends (i = s.ZP.PersistedStore) {
     }
     channelNoticePredicate(e, t) {
         let n = Date.now() - t >= N.Hqc;
-        return k && n;
+        return j && n;
     }
     getFrequentGuilds() {
         return null != r ? r.queryGuilds("", 100) : null;
@@ -327,7 +333,7 @@ class ei extends (i = s.ZP.PersistedStore) {
             queryMode: U,
             results: G,
             selectedIndex: M,
-            seenTutorial: j,
+            seenTutorial: k,
             maxQueryLength: Z,
         };
     }
