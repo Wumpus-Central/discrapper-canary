@@ -125,6 +125,7 @@ var r = (function (e) {
             (e[(e.CONTAINER = 17)] = "CONTAINER"),
             (e[(e.LABEL = 18)] = "LABEL"),
             (e[(e.FILE_UPLOAD = 19)] = "FILE_UPLOAD"),
+            (e[(e.CHECKPOINT_CARD = 20)] = "CHECKPOINT_CARD"),
             e
         );
     })({}),

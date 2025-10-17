@@ -1,6 +1,6 @@
 n.d(t, {
-    ZP: () => x,
-    xX: () => D,
+    ZP: () => k,
+    xX: () => x,
 }),
     n(388685);
 var r = n(951288);
@@ -18,18 +18,20 @@ var i = n(120356),
     p = n(574597),
     h = n(368451),
     m = n(732586),
-    g = n(988075),
-    E = n(12067),
-    b = n(676149),
-    y = n(861529),
-    O = n(568248),
-    v = n(770009),
-    I = n(889515),
-    T = n(985184),
-    S = n(424158),
-    A = n(892519),
-    C = n(429577);
-function N(e, t, n) {
+    g = n(628844),
+    E = n(988075),
+    b = n(12067),
+    y = n(676149),
+    O = n(861529),
+    v = n(568248),
+    I = n(48870),
+    T = n(770009),
+    S = n(889515),
+    A = n(985184),
+    C = n(424158),
+    N = n(892519),
+    R = n(429577);
+function P(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +44,7 @@ function N(e, t, n) {
         e
     );
 }
-function R(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,12 +55,12 @@ function R(e) {
                 }),
             )),
             r.forEach(function (t) {
-                N(e, t, n[t]);
+                P(e, t, n[t]);
             });
     }
     return e;
 }
-function P(e, t) {
+function D(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -70,63 +72,67 @@ function P(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : P(Object(t)).forEach(function (n) {
+            : D(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function D(e) {
+function x(e) {
     return e.map((e, t) =>
         (0, r.jsxs)(r.Fragment, {
-            children: [L(e, t.toString()), (0, r.jsx)(o.nn4, { children: "," })],
+            children: [M(e, t.toString()), (0, r.jsx)(o.nn4, { children: "," })],
         }),
     );
 }
-function L(e, t) {
+function M(e, t) {
     switch (e.type) {
         case s.re.ACTION_ROW:
-            return (0, r.jsx)(I.Z, w(R({}, e), { renderComponents: D }), t);
+            return (0, r.jsx)(S.Z, L(w({}, e), { renderComponents: x }), t);
         case s.re.BUTTON:
-            return (0, r.jsx)(d.Z, R({}, e), t);
+            return (0, r.jsx)(d.Z, w({}, e), t);
         case s.re.STRING_SELECT:
-            return (0, r.jsx)(h.Z, R({}, e), t);
+            return (0, r.jsx)(h.Z, w({}, e), t);
         case s.re.CHANNEL_SELECT:
-            return (0, r.jsx)(f.Z, R({}, e), t);
+            return (0, r.jsx)(f.Z, w({}, e), t);
         case s.re.USER_SELECT:
         case s.re.ROLE_SELECT:
         case s.re.MENTIONABLE_SELECT:
-            return (0, r.jsx)(p.Z, R({}, e), t);
+            return (0, r.jsx)(p.Z, w({}, e), t);
         case s.re.TEXT_INPUT:
-            return (0, r.jsx)(m.Z, R({}, e), t);
+            return (0, r.jsx)(m.Z, w({}, e), t);
         case s.re.SECTION:
-            return (0, r.jsx)(A.Z, w(R({}, e), { renderComponents: D }), t);
+            return (0, r.jsx)(N.Z, L(w({}, e), { renderComponents: x }), t);
         case s.re.TEXT_DISPLAY:
-            return (0, r.jsx)(y.Z, R({}, e), t);
+            return (0, r.jsx)(O.Z, w({}, e), t);
         case s.re.MEDIA_GALLERY:
-            return (0, r.jsx)(E.Z, R({}, e), t);
+            return (0, r.jsx)(b.Z, w({}, e), t);
         case s.re.THUMBNAIL:
-            return (0, r.jsx)(O.Z, R({}, e), t);
+            return (0, r.jsx)(v.Z, w({}, e), t);
         case s.re.FILE:
-            return (0, r.jsx)(g.Z, R({}, e), t);
+            return (0, r.jsx)(E.Z, w({}, e), t);
         case s.re.SEPARATOR:
-            return (0, r.jsx)(b.Z, R({}, e), t);
+            return (0, r.jsx)(y.Z, w({}, e), t);
         case s.re.CONTENT_INVENTORY_ENTRY:
-            return (0, r.jsx)(v.Z, R({}, e), t);
+            return (0, r.jsx)(T.Z, w({}, e), t);
         case s.re.CONTAINER:
-            return (0, r.jsx)(T.Z, w(R({}, e), { renderComponents: D }), t);
+            return (0, r.jsx)(A.Z, L(w({}, e), { renderComponents: x }), t);
         case s.re.LABEL:
-            return (0, r.jsx)(S.Z, w(R({}, e), { renderComponent: L }), t);
+            return (0, r.jsx)(C.Z, L(w({}, e), { renderComponent: M }), t);
         case s.re.FILE_UPLOAD:
-            return (0, r.jsx)(_.Z, R({}, e), t);
+            return (0, r.jsx)(_.Z, w({}, e), t);
+        case s.re.CHECKPOINT_CARD:
+            return (0, r.jsx)(g.Z, w({}, e), t);
+        default:
+            return (0, r.jsx)(I.Z, {}, t);
     }
 }
-function x(e) {
+function k(e) {
     let { message: t, shouldDisableInteractiveComponents: n } = e,
         { components: i } = t,
         [o, s] = (0, u.e4)();
@@ -144,8 +150,8 @@ function x(e) {
                           children: (e) =>
                               (0, r.jsx)("div", {
                                   ref: e,
-                                  className: a()([C.container, { [C.isComponentsV2]: (0, l.hv)(t) }]),
-                                  children: D(i),
+                                  className: a()([R.container, { [R.isComponentsV2]: (0, l.hv)(t) }]),
+                                  children: x(i),
                               }),
                       }),
                   }),

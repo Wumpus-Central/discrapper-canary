@@ -1,4 +1,4 @@
-n.d(t, { c: () => v });
+n.d(t, { c: () => y });
 var r = n(951288);
 n(647438);
 var i = n(442837),
@@ -8,69 +8,57 @@ var i = n(442837),
     l = n(906732),
     c = n(737604),
     u = n(539873),
-    d = n(803038),
-    f = n(550385),
-    _ = n(638212),
-    p = n(767714),
-    h = n(626135),
-    m = n(342386),
-    g = n(981631),
-    E = n(474936),
-    b = n(388032),
-    y = n(980676);
-let O = () => {
-        (0, f.XO)(f.wh.APP_ICON), (0, m.default)();
+    d = n(550385),
+    f = n(638212),
+    _ = n(626135),
+    p = n(342386),
+    h = n(981631),
+    m = n(474936),
+    g = n(388032),
+    E = n(980676);
+let b = () => {
+        (0, d.XO)(d.wh.APP_ICON), (0, p.default)();
     },
-    v = () => {
+    y = () => {
         let { analyticsLocations: e } = (0, l.ZP)(s.Z.USER_SETTINGS),
             t = (0, i.e7)([c.Z], () => c.Z.isUpsellPreview);
         (0, o.ZP)(() => {
             t &&
-                h.default.track(g.rMx.PREMIUM_UPSELL_VIEWED, {
-                    type: E.cd.APP_ICON_UPSELL,
+                _.default.track(h.rMx.PREMIUM_UPSELL_VIEWED, {
+                    type: m.cd.APP_ICON_UPSELL,
                     location_stack: e,
                 });
         });
-        let { v2EditorEnabled: n } = d.Mc.useExperiment({ location: "UserSettingsAppearanceInAppIcon" }),
-            f = () => {
-                let e = n ? y.tryItOutButtonsV2 : y.tryItOutButtons;
-                return (0, r.jsxs)("div", {
-                    className: e,
-                    children: [
-                        (0, r.jsx)(a.Button, {
-                            variant: t ? "secondary" : "primary",
-                            text: b.intl.string(b.t["hb/wEx"]),
-                            onClick: () => O(),
-                        }),
-                        t
-                            ? n
-                                ? (0, r.jsx)(_.Z, {
-                                      subscriptionTier: E.Si.TIER_2,
-                                      defaultTextOverride: b.intl.string(b.t.mr4K7O),
-                                      premiumModalAnalyticsLocation: {
-                                          object: g.qAy.BUTTON_CTA,
-                                          objectType: g.Qqv.BUY,
-                                      },
-                                      fullWidth: !0,
-                                  })
-                                : (0, r.jsx)(p.Z, {
-                                      className: y.tryItOutButton,
-                                      showGradient: !1,
-                                      subscriptionTier: E.Si.TIER_2,
-                                      textOptions: { textOverride: b.intl.string(b.t.mr4K7O) },
-                                  })
-                            : null,
-                    ],
-                });
-            };
+        let n = () =>
+            (0, r.jsxs)("div", {
+                className: E.tryItOutButtons,
+                children: [
+                    (0, r.jsx)(a.Button, {
+                        variant: t ? "secondary" : "primary",
+                        text: g.intl.string(g.t["hb/wEx"]),
+                        onClick: () => b(),
+                    }),
+                    t
+                        ? (0, r.jsx)(f.Z, {
+                              subscriptionTier: m.Si.TIER_2,
+                              defaultTextOverride: g.intl.string(g.t.mr4K7O),
+                              premiumModalAnalyticsLocation: {
+                                  object: h.qAy.BUTTON_CTA,
+                                  objectType: h.Qqv.BUY,
+                              },
+                              fullWidth: !0,
+                          })
+                        : null,
+                ],
+            });
         return (0, r.jsxs)("div", {
-            className: y.selectionGroup,
+            className: E.selectionGroup,
             children: [
                 (0, r.jsx)(u.Z, {
                     disabled: t,
-                    renderCTAButtons: f,
+                    renderCTAButtons: n,
                 }),
-                (0, r.jsx)(a.izJ, { className: y.divider }),
+                (0, r.jsx)(a.izJ, { className: E.divider }),
             ],
         });
     };

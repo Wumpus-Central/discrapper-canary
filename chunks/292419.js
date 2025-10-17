@@ -71,6 +71,7 @@ let b = (e) => {
         case a.re.CONTAINER:
         case a.re.LABEL:
         case a.re.FILE_UPLOAD:
+        case a.re.CHECKPOINT_CARD:
             return !0;
         case a.re.CONTENT_INVENTORY_ENTRY:
             return (0, f.Io)("canShowComponent");
@@ -149,6 +150,7 @@ function S(e) {
         case a.re.SEPARATOR:
         case a.re.CONTENT_INVENTORY_ENTRY:
         case a.re.FILE_UPLOAD:
+        case a.re.CHECKPOINT_CARD:
             return [];
         default:
             return p.warn("getComponentChildren: Unknown component type", e.type), [];
@@ -380,6 +382,12 @@ function R(e, t) {
                 required: null != (g = e.required) && g,
                 minValues: e.min_values,
                 maxValues: e.max_values,
+            };
+        case a.re.CHECKPOINT_CARD:
+            return {
+                type: e.type,
+                id: P(t),
+                checkpointData: {},
             };
         default:
             return p.warn("transformComponent: Unknown component type", e.type), null;
