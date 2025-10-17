@@ -287,9 +287,9 @@ let I = (e) => {
                 pending: null == g ? void 0 : g.healthScorePending,
             },
             {
-                name: _.intl.string(_.t["/cghSE"]),
-                failingName: _.intl.string(_.t["0HJNa2"]),
-                description: _.intl.string(_.t.Pbu9AQ),
+                name: _.intl.string(_.t["AUUV//"]),
+                failingName: _.intl.string(_.t.jURyOz),
+                description: _.intl.string(_.t.wikb1t),
                 failingDescription: (0, r.jsxs)(r.Fragment, {
                     children: [
                         (null == S ? void 0 : S.channels) != null
@@ -362,38 +362,14 @@ let I = (e) => {
                                   }),
                               })
                             : null,
-                        (null == S ? void 0 : S.icon) != null
+                        (null == S ? void 0 : S.icon) != null ||
+                        (null == S ? void 0 : S.discovery_splash) != null ||
+                        (null == S ? void 0 : S.invite_splash) != null ||
+                        (null == S ? void 0 : S.banner) != null
                             ? (0, r.jsx)(p.Text, {
                                   color: "text-muted",
                                   variant: "text-sm/normal",
-                                  children: _.intl.format(_.t["4E4/Vl"], {
-                                      iconHook: (e, t) =>
-                                          (0, r.jsx)(
-                                              "span",
-                                              {
-                                                  className: C.doesNot,
-                                                  children: e,
-                                              },
-                                              t,
-                                          ),
-                                  }),
-                              })
-                            : null,
-                        (null == S ? void 0 : S.discovery_splash) != null
-                            ? (0, r.jsx)(p.Text, {
-                                  color: "text-muted",
-                                  variant: "text-sm/normal",
-                                  children: _.intl.format(_.t.PKoNy8, {
-                                      discoveryHook: (e, t) =>
-                                          (0, r.jsx)(
-                                              "span",
-                                              {
-                                                  className: C.doesNot,
-                                                  children: e,
-                                              },
-                                              t,
-                                          ),
-                                  }),
+                                  children: _.intl.string(_.t.WVKQ6u),
                               })
                             : null,
                     ],
