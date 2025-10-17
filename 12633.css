@@ -3230,6 +3230,10 @@
     padding-top: var(--space-4)
 }
 
+.container__5a838[data-layout=horizontal] .description__5a838 {
+    max-width: 70ch
+}
+
 .container__5a838[data-disabled=true] {
     opacity: .5
 }
@@ -3248,8 +3252,7 @@
 }
 
 .description__5a838 {
-    grid-area: description;
-    max-width: 70ch
+    grid-area: description
 }
 
 .label__5a838[data-interactive=true] {
