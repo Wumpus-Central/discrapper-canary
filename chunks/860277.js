@@ -1,4 +1,4 @@
-r.d(t, { Z: () => h });
+r.d(t, { Z: () => v });
 var e = r(951288),
     n = r(647438),
     a = r(793030),
@@ -11,10 +11,10 @@ var e = r(951288),
     u = r(268685),
     p = r(484718),
     m = r(388032);
-function h(i) {
+function v(i) {
     let { slide: t } = i,
         { users: r } = (0, l.e7)([c.Z], () => c.Z.getCheckpointData()),
-        h = (0, n.useMemo)(
+        v = (0, n.useMemo)(
             () =>
                 r
                     .map((i) => {
@@ -26,7 +26,7 @@ function h(i) {
         );
     return (0, e.jsxs)(o.Z, {
         children: [
-            t === x.W.FRIENDS &&
+            t === x.Ww.FRIENDS &&
                 (0, e.jsxs)("div", {
                     children: [
                         (0, e.jsx)(a.xvT, {
@@ -34,7 +34,7 @@ function h(i) {
                             color: "text-primary",
                             children: m.intl.string(p.default["4xZpq6"]),
                         }),
-                        h.slice(1).map((i) =>
+                        v.slice(1).map((i) =>
                             (0, e.jsxs)(
                                 "div",
                                 {
@@ -55,7 +55,7 @@ function h(i) {
                         ),
                     ],
                 }),
-            t === x.W.BEST_FRIEND &&
+            t === x.Ww.BEST_FRIEND &&
                 (0, e.jsxs)("div", {
                     children: [
                         (0, e.jsx)(a.xvT, {
@@ -64,14 +64,14 @@ function h(i) {
                             children: m.intl.string(p.default.d5HUsL),
                         }),
                         (0, e.jsx)(s.Z, {
-                            user: h[0],
+                            user: v[0],
                             size: u.EF.SIZE_120,
                         }),
                         (0, e.jsx)(a.xvT, {
                             variant: "display-md",
                             color: "text-primary",
                             children: m.intl.format(p.default.wz2JuL, {
-                                user: h[0].username,
+                                user: v[0].username,
                                 userHook: (i, t) =>
                                     (0, e.jsx)(
                                         a.xvT,
