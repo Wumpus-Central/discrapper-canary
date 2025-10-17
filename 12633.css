@@ -62054,6 +62054,12 @@ html .progress__61462 {
     width: 100%
 }
 
+.container__6c21f {
+    border: 1px solid var(--status-warning);
+    border-radius: var(--radius-md);
+    padding: var(--space-16)
+}
+
 .inline__6c706 {
     opacity: 1
 }
@@ -75471,10 +75477,6 @@ div.nagbar_d74ef8 {
 }
 
 .tryItOutButtons_fbfab6 {
-    display: flex
-}
-
-.tryItOutButtonsV2_fbfab6 {
     display: flex;
     gap: 12px
 }
@@ -75487,10 +75489,6 @@ div.nagbar_d74ef8 {
 .basicThemeSelectors_fbfab6 {
     margin-bottom: 24px;
     margin-top: 0
-}
-
-.featureBorder_fbfab6 {
-    margin: 0 -8px
 }
 
 .previewThemeButton_fbfab6 {
@@ -75733,11 +75731,6 @@ div.nagbar_d74ef8 {
 
 .tryItOutButtons__6b52d {
     display: flex;
-    gap: 8px
-}
-
-.tryItOutButtonsV2__6b52d {
-    display: flex;
     gap: 12px
 }
 
@@ -75748,10 +75741,6 @@ div.nagbar_d74ef8 {
 .divider__6b52d {
     margin-bottom: 24px;
     margin-top: 32px
-}
-
-.tryItOutButton__6b52d {
-    border-radius: var(--radius-sm)
 }
 
 .pageActions__2d021 {
