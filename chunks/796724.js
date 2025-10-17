@@ -10,8 +10,8 @@ var r = t(951288),
     u = t(63063),
     g = t(49012),
     m = t(905551),
-    x = t(802659),
-    f = t(241306),
+    f = t(802659),
+    x = t(241306),
     p = t(343312),
     v = t(30910),
     h = t(281014),
@@ -97,17 +97,17 @@ function P() {
         setName: P,
         planId: w,
         setPlanId: R,
-        planCost: G,
-        stepLoading: Z,
+        planCost: Z,
+        stepLoading: G,
         error: k,
         gameProvider: M,
     } = (0, p.JL)();
     i.useEffect(() => {
         (0, m._k)(e);
     }, [e]);
-    let B = (0, o.e7)([x.Z], () => x.Z.getRegions()),
-        L = (0, o.e7)([x.Z], () => x.Z.getRegionState()),
-        H = i.useMemo(() => {
+    let B = (0, o.e7)([f.Z], () => f.Z.getRegions()),
+        L = (0, o.e7)([f.Z], () => f.Z.getRegionState()),
+        D = i.useMemo(() => {
             var e;
             return null !=
                 (e = B.sort((e, n) => (0, _.Z)(e, n, L)).map((e) => ({
@@ -117,8 +117,8 @@ function P() {
                 ? e
                 : [];
         }, [L, B]),
-        z = i.useMemo(() => B.some((e) => "" !== e.pingUrl), [B]),
-        D = i.useMemo(() => {
+        H = i.useMemo(() => B.some((e) => "" !== e.pingUrl), [B]),
+        z = i.useMemo(() => {
             var e;
             return null !=
                 (e =
@@ -132,10 +132,11 @@ function P() {
                 : [];
         }, [n]),
         U = (0, h.Z)(),
-        F = null != l,
-        V = (0, b.Z)(l),
-        A = (0, C.Z)(M),
-        K = null != M && null != E.nd[M] ? E.nd[M] : "";
+        { isValid: F, errors: V } = (0, h.a)(j),
+        A = null != l,
+        K = (0, b.Z)(l),
+        W = (0, C.Z)(M),
+        J = null != M && null != E.nd[M] ? E.nd[M] : "";
     return null == n
         ? (0, r.jsx)("div", {
               className: y.spinnerContainer,
@@ -177,7 +178,8 @@ function P() {
                                               onChange: P,
                                               placeholder: O.intl.string(S.default.ElVYr6),
                                               maxLength: E.Sg,
-                                              disabled: Z || !V,
+                                              disabled: G || !K,
+                                              error: V.name,
                                           }),
                                       ],
                                   }),
@@ -203,8 +205,8 @@ function P() {
                                                           size: "xs",
                                                       }),
                                                   }),
-                                                  !F &&
-                                                      z &&
+                                                  !A &&
+                                                      H &&
                                                       (0, r.jsx)("div", {
                                                           className: y.refresh,
                                                           children: (0, r.jsx)(s.u, {
@@ -220,7 +222,7 @@ function P() {
                                                       }),
                                               ],
                                           }),
-                                          F
+                                          A
                                               ? (0, r.jsx)(d.oil, {
                                                     value: null == l ? void 0 : l.regionName,
                                                     disabled: !0,
@@ -229,8 +231,8 @@ function P() {
                                               : (0, r.jsx)(d.PhF, {
                                                     serialize: (e) => e.id,
                                                     isSelected: (e) => e.id === t,
-                                                    isDisabled: Z || F || !V,
-                                                    options: H,
+                                                    isDisabled: G || A || !K,
+                                                    options: D,
                                                     optionClassName: y.option,
                                                     select: (e) => a(e.id),
                                                     placeholder: O.intl.string(S.default["k+RTIi"]),
@@ -281,8 +283,8 @@ function P() {
                                           (0, r.jsx)(d.PhF, {
                                               serialize: (e) => e.id,
                                               isSelected: (e) => e.id === w,
-                                              isDisabled: Z || !V,
-                                              options: D,
+                                              isDisabled: G || !K,
+                                              options: z,
                                               optionClassName: y.option,
                                               select: (e) => R(e.id),
                                               placeholder: O.intl.string(S.default.JdMW0t),
@@ -309,23 +311,23 @@ function P() {
                           }),
                           (0, r.jsx)("div", {
                               className: y.gameDetailsContainer,
-                              children: (0, r.jsx)(f.Z, {}),
+                              children: (0, r.jsx)(x.Z, {}),
                           }),
                       ],
                   }),
                   null != l &&
-                      0 !== G &&
+                      0 !== Z &&
                       (0, r.jsx)(c.Z, {
                           className: y.infoBox,
                           children: (0, r.jsx)(d.Text, {
                               variant: "text-xs/medium",
                               children:
-                                  G < 0
-                                      ? O.intl.format(S.default.SorKam, { boostCount: Math.abs(G) })
-                                      : O.intl.format(S.default.n2wpys, { boostCount: G }),
+                                  Z < 0
+                                      ? O.intl.format(S.default.SorKam, { boostCount: Math.abs(Z) })
+                                      : O.intl.format(S.default.n2wpys, { boostCount: Z }),
                           }),
                       }),
-                  !V &&
+                  !K &&
                       (0, r.jsx)(c.Z, {
                           className: y.infoBox,
                           look: c.z.WARNING,
@@ -339,9 +341,9 @@ function P() {
                       color: "text-muted",
                       children:
                           null != M &&
-                          O.intl.format(F ? S.default.num0a2 : S.default.p5KZDg, {
-                              provider: A,
-                              termsOfServiceUrl: () => (0, g.q)({ href: K }),
+                          O.intl.format(A ? S.default.num0a2 : S.default.p5KZDg, {
+                              provider: W,
+                              termsOfServiceUrl: () => (0, g.q)({ href: J }),
                               helpCenterUrl: u.Z.getArticleURL(N.BhN.GAME_SERVER_HOSTING),
                           }),
                   }),
@@ -354,7 +356,7 @@ function P() {
                   (0, r.jsxs)(v.o2, {
                       step: E.EK.SERVER_SETTINGS,
                       className: y.footerContainer,
-                      children: [(0, r.jsx)(v.c_, {}), (0, r.jsx)(v.$b, { disabled: !U })],
+                      children: [(0, r.jsx)(v.c_, {}), (0, r.jsx)(v.$b, { disabled: !U || !F })],
                   }),
               ],
           });

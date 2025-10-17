@@ -22586,6 +22586,7 @@
   "kGkE7e": "Refresh Ping",
   "nB5OZ2": "Location",
   "THJY1t": "Pick a name to help players identify your server.",
+  "jYZD4+": "Name cannot contain: !!{forbiddenCharacters}!!",
   "ElVYr6": "Enter a name",
   "rOMEZW": "Name",
   "n2wpys": "Your selected plan costs more than your previous plan. You need {boostCount, plural, =1 { additional Boost} other { additional Boosts} }.",
