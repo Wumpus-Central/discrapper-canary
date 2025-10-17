@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ey }), n(388685), n(472816), n(794429);
+n.d(t, { Z: () => ev }), n(388685), n(472816), n(794429);
 var r,
     i = n(951288),
     l = n(647438),
@@ -17,24 +17,24 @@ var r,
     _ = n(638880),
     E = n(655922),
     O = n(122810),
-    y = n(833664),
-    v = n(503438),
+    v = n(833664),
+    y = n(503438),
     I = n(420660),
     C = n(74433),
     S = n(206074),
-    T = n(100527),
-    N = n(906732),
+    N = n(100527),
+    T = n(906732),
     P = n(213609),
     j = n(728345),
-    A = n(812206),
-    x = n(933557),
-    Z = n(194082),
+    x = n(812206),
+    Z = n(933557),
+    A = n(194082),
     w = n(377171),
     L = n(379357),
     R = n(264165),
     D = n(548816),
-    k = n(266454),
-    M = n(925329),
+    M = n(266454),
+    k = n(925329),
     U = n(102172),
     G = n(871118),
     B = n(707409),
@@ -121,7 +121,7 @@ let eo = [14, 14, 12, 12, 10, 8, 6],
                 user: n,
                 supportsAskToJoin: !1,
             }),
-            i = null != r && r.isEnabled;
+            i = null != r;
         return {
             isJoinActivityButtonShown: i,
             joinActivityButtonAction: r,
@@ -138,6 +138,7 @@ let eo = [14, 14, 12, 12, 10, 8, 6],
             let { isJoining: e, handleJoinRequest: t, buttonCTA: n, tooltip: l, isEnabled: a } = r;
             return (0, i.jsx)(p.u, {
                 text: l,
+                asContainer: !a,
                 children: (0, i.jsx)(f.Button, {
                     size: "sm",
                     variant: "secondary",
@@ -161,7 +162,7 @@ let eo = [14, 14, 12, 12, 10, 8, 6],
                 application: a,
                 analyticsLocations: n,
             }),
-            s = (0, k.Nj)(u.z.CLOUD_PLAY_NEW_BADGE),
+            s = (0, M.Nj)(u.z.CLOUD_PLAY_NEW_BADGE),
             c = (0, V.F)(r);
         return null == o || c
             ? null
@@ -388,7 +389,7 @@ let eO = (e) => {
         var t;
         let { guild: n, channel: r, partySize: a, members: s, onChannelContextMenu: c } = e,
             u = l.useRef(null),
-            d = (0, x.ZP)(r, !0),
+            d = (0, Z.ZP)(r, !0),
             p = (0, q.EB)(n, 32),
             g = (0, q.gM)(n);
         return (0, i.jsx)(ed, {
@@ -450,7 +451,7 @@ let eO = (e) => {
     }),
     (eO.GameSection = (e) => {
         let { icon: t, name: n, partySize: r, members: l, activity: a } = e,
-            { analyticsLocations: o } = (0, N.ZP)(T.Z.NOW_PLAYING_ITEM_GAME_SECTION);
+            { analyticsLocations: o } = (0, T.ZP)(N.Z.NOW_PLAYING_ITEM_GAME_SECTION);
         return (0, i.jsxs)(ed, {
             children: [
                 (0, i.jsxs)("div", {
@@ -485,7 +486,7 @@ let eO = (e) => {
     (eO.RichPresenceSection = (e) => {
         var t, r, l, a;
         let { activity: s, getAssetImage: c, user: u } = e,
-            { analyticsLocations: d } = (0, N.ZP)(T.Z.NOW_PLAYING_ITEM_RICH_PRESENCE_SECTION),
+            { analyticsLocations: d } = (0, T.ZP)(N.Z.NOW_PLAYING_ITEM_RICH_PRESENCE_SECTION),
             { data: p } = (0, j.IX)(s.application_id),
             { assets: f, details: h, state: g, application_id: m } = s,
             { hasButton: b } = eh({
@@ -538,7 +539,7 @@ let eO = (e) => {
                                       null != g ? ec(g) : null,
                                       (() => {
                                           let { timestamps: e } = s;
-                                          return null == e || !(0, y.Z)(s) || (0, v.Z)(s)
+                                          return null == e || !(0, v.Z)(s) || (0, y.Z)(s)
                                               ? null
                                               : ec(
                                                     (0, O.Z)(s)
@@ -721,7 +722,7 @@ let eO = (e) => {
                         (0, i.jsxs)("div", {
                             children: [es(en.ZP.getName(l)), ec(g)],
                         }),
-                        (0, i.jsx)(Z.ZP, { size: Z.ZP.Sizes.SMALL }),
+                        (0, i.jsx)(A.ZP, { size: A.ZP.Sizes.SMALL }),
                     ],
                 }),
                 h,
@@ -745,9 +746,9 @@ let eO = (e) => {
                     .filter(et.lm),
             ),
             p = (0, m.O)(),
-            { analyticsLocations: h } = (0, N.ZP)();
+            { analyticsLocations: h } = (0, T.ZP)();
         if (null == u) return null;
-        let g = A.Z.getApplication(u);
+        let g = x.Z.getApplication(u);
         if (null == g) return null;
         let b = null != t.created_at && t.created_at > 0 ? { start: t.created_at } : void 0,
             E = (0, ee.xF)(g.id, o, 300);
@@ -756,9 +757,9 @@ let eO = (e) => {
                 (0, i.jsxs)("div", {
                     className: ea.embeddedActivityTopRow,
                     children: [
-                        (0, i.jsx)(M.Z, {
+                        (0, i.jsx)(k.Z, {
                             game: g,
-                            size: M.A.XSMALL,
+                            size: k.A.XSMALL,
                             className: ea.embeddedActivityIcon,
                         }),
                         (0, i.jsx)("div", {
@@ -822,4 +823,4 @@ let eO = (e) => {
             ],
         });
     });
-let ey = eO;
+let ev = eO;
