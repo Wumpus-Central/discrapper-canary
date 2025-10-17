@@ -87,37 +87,21 @@ function g(e) {
         b = i.useRef(null),
         y = i.useRef(null),
         O = i.useRef(null),
-        v = i.useRef(null),
-        [I, T] = i.useState(!1);
+        [v, I] = i.useState(!1);
     return (
         i.useLayoutEffect(() => {
-            T(!0);
+            I(!0);
         }, []),
         i.useLayoutEffect(() => {
             var e;
             a && ((0, l.F)(b), null == (e = O.current) || e.focus());
         }, [a]),
-        i.useLayoutEffect(() => {
-            if (null == O.current || !a || !I) return;
-            let e = new ResizeObserver(() => {
-                requestAnimationFrame(() => {
-                    var e;
-                    null == (e = v.current) || e.call(v);
-                });
-            });
-            return (
-                e.observe(O.current),
-                () => {
-                    e.disconnect(), (v.current = null);
-                }
-            );
-        }, [a, I]),
         (0, r.jsxs)("div", {
             ref: b,
             children: [
                 (0, r.jsx)("div", { ref: y }),
                 n,
-                a && I
+                a && v
                     ? (0, r.jsx)(c.jRF, {
                           targetRef: y,
                           autoInvert: !0,
@@ -126,8 +110,7 @@ function g(e) {
                           spacing: 4,
                           position: "right",
                           align: "top",
-                          children: (e, n) => (
-                              (v.current = n),
+                          children: () =>
                               (0, r.jsx)("div", {
                                   className: u.submenuPaddingContainer,
                                   children: (0, r.jsx)(
@@ -140,8 +123,7 @@ function g(e) {
                                           }),
                                       }),
                                   ),
-                              })
-                          ),
+                              }),
                       })
                     : null,
             ],
