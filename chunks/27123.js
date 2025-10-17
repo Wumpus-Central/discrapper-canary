@@ -1,8 +1,8 @@
 n.d(t, {
     T4: () => a,
     cf: () => s,
+    r1: () => o,
     vH: () => i,
-    yB: () => o,
 }),
     n(388685);
 var r = n(981631);
@@ -31,6 +31,7 @@ let i = (e) => {
             : null;
     },
     o = (e) => {
+        if (null == e) return !1;
         let t = i({
             product: e,
             isPremiumUser: !1,
