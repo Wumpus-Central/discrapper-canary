@@ -551,7 +551,7 @@ function ew(e) {
                         let t = await (0, d.i6)(e, n, Y);
                         tx(t, n);
                     } catch (e) {
-                        throw (tM(), (0, d.SQ)(e));
+                        tM();
                     }
                 };
             if (eY === R.h8.ATTEMPT_GOOGLE_PAY || eY === R.h8.ATTEMPT_APPLE_PAY) {
