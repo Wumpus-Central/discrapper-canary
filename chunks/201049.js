@@ -11,8 +11,8 @@ var i = t(951288),
     m = t(339085),
     j = t(984933),
     p = t(883429),
-    v = t(981631),
-    g = t(185923),
+    v = t(185923),
+    g = t(295907),
     b = t(388032),
     y = t(851458);
 function f(e) {
@@ -138,7 +138,7 @@ function f(e) {
                                                     ),
                                                     i && n();
                                             },
-                                            pickerIntention: g.Hz.COMMUNITY_CONTENT,
+                                            pickerIntention: v.Hz.COMMUNITY_CONTENT,
                                             onNavigateAway: f,
                                             channel: t,
                                         });
@@ -220,7 +220,7 @@ function f(e) {
                             }),
                         },
                         onKeyDown: (e) => {
-                            e.keyCode === v.yXg.ENTER && P.length > 0 && (P.length > 0 && _(), e.preventDefault());
+                            e.key === g.vn.ENTER && P.length > 0 && (P.length > 0 && _(), e.preventDefault());
                         },
                         trailing:
                             P.length > 0 || null != w

@@ -10,7 +10,7 @@ var r,
     o = n(120356),
     s = n.n(o),
     l = n(481060),
-    c = n(981631),
+    c = n(295907),
     u = n(388032),
     d = n(599684);
 function f(e, t, n) {
@@ -83,41 +83,41 @@ class m extends (r = a.Component) {
             preventEscapePropagation: u,
         } = this.props;
         if (0 !== r.length) {
-            switch (e.keyCode) {
-                case c.yXg.BACKSPACE:
+            switch (e.key) {
+                case c.vn.BACKSPACE:
                     (null == i || 0 === i.length) &&
                         null != a &&
                         a.length > 0 &&
                         (e.preventDefault(), e.stopPropagation(), null == l || l(a.length - 1));
                     break;
-                case c.yXg.ARROW_DOWN:
+                case c.vn.ARROW_DOWN:
                     e.preventDefault(),
                         e.stopPropagation(),
                         -1 === t
                             ? ((t = 0), (n = 0))
                             : ((t += 1) >= r.length && (t = r.length - 1), n >= r[t] && (n = r[t] - 1));
                     break;
-                case c.yXg.ARROW_UP:
+                case c.vn.ARROW_UP:
                     e.preventDefault(),
                         e.stopPropagation(),
                         (t -= 1),
                         t < 0 ? ((t = 0), (n = 0)) : n >= r[t] && (n = r[t] - 1);
                     break;
-                case c.yXg.ARROW_LEFT:
+                case c.vn.ARROW_LEFT:
                     e.preventDefault(),
                         e.stopPropagation(),
                         -1 === t && (t = 0),
                         (n -= 1),
                         n < 0 && ((t -= 1) >= 0 ? (n = r[t] - 1) : t < 0 && ((t = 0), (n = 0)));
                     break;
-                case c.yXg.ARROW_RIGHT:
+                case c.vn.ARROW_RIGHT:
                     e.preventDefault(),
                         e.stopPropagation(),
                         -1 === t && (t = 0),
                         (n += 1),
                         n >= r[t] && ((n = 0), (t += 1) >= r.length && ((t = r.length - 1), (n = r[t] - 1)));
                     break;
-                case c.yXg.ENTER:
+                case c.vn.ENTER:
                     if (
                         (e.preventDefault(),
                         e.stopPropagation(),
@@ -128,7 +128,7 @@ class m extends (r = a.Component) {
                         return;
                     null != s && s(t, n, e);
                     return;
-                case c.yXg.ESCAPE:
+                case c.vn.ESCAPE:
                     e.preventDefault(), u && e.stopPropagation(), null != s && s(null, null, e);
                     return;
                 default:
@@ -150,8 +150,8 @@ class m extends (r = a.Component) {
             } = this.props,
             { current: u } = this.ref;
         if (null != u)
-            switch (e.keyCode) {
-                case c.yXg.BACKSPACE:
+            switch (e.key) {
+                case c.vn.BACKSPACE:
                     if ((null == o || 0 === o.length) && null != s && s.length > 0) {
                         var d, f;
                         e.preventDefault(),
@@ -159,22 +159,22 @@ class m extends (r = a.Component) {
                             null == (d = (f = this.props).onRemoveTag) || d.call(f, s.length - 1);
                     }
                     break;
-                case c.yXg.ARROW_DOWN:
+                case c.vn.ARROW_DOWN:
                     e.preventDefault(),
                         e.stopPropagation(),
                         t.length > n && ++r >= t[n] && (++n >= t.length && (n = 0), (r = 0)),
                         null == a || a(n, r);
                     break;
-                case c.yXg.ARROW_UP:
+                case c.vn.ARROW_UP:
                     e.preventDefault(),
                         e.stopPropagation(),
                         --r < 0 && (--n < 0 && (n = t.length - 1), (r = t[n] - 1)),
                         null == a || a(n, r);
                     break;
-                case c.yXg.ENTER:
+                case c.vn.ENTER:
                     e.preventDefault(), e.stopPropagation(), t.length > n && t[n] > r && (null == i || i(n, r, e));
                     break;
-                case c.yXg.ESCAPE:
+                case c.vn.ESCAPE:
                     e.preventDefault(), l && e.stopPropagation(), null == i || i(null, null, e), u.blur();
             }
     }
@@ -317,10 +317,10 @@ class m extends (r = a.Component) {
                 null != n && n(e);
                 let { current: a } = this.ref;
                 if (null == a || null != t) {
-                    e.keyCode !== c.yXg.TAB && null != t && t(e);
+                    e.key !== c.vn.TAB && (null == t || t(e));
                     return;
                 }
-                if (e.keyCode === c.yXg.ESCAPE && null != a.value && "" !== a.value && a.value.length > 0) {
+                if (e.key === c.vn.ESCAPE && null != a.value && "" !== a.value && a.value.length > 0) {
                     (a.value = ""), null != r && r("");
                     return;
                 }

@@ -1,13 +1,14 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var i = n(951288),
     r = n(647438),
     l = n(911969),
     a = n(925975),
     o = n(957730),
     s = n(981631),
-    c = n(388032),
-    u = n(26896);
-function d(e, t, n) {
+    c = n(295907),
+    u = n(388032),
+    d = n(26896);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,15 +21,15 @@ function d(e, t, n) {
         e
     );
 }
-function p(e) {
+function h(e) {
     e.stopPropagation();
 }
-class h extends r.PureComponent {
+class f extends r.PureComponent {
     render() {
         let { className: e, textValue: t, richValue: n, message: r, channel: l, onCancel: a, children: o } = this.props,
             s = (0, i.jsx)("div", {
-                className: u.operations,
-                children: c.intl.format(c.t.wDsPXl, {
+                className: d.operations,
+                children: u.intl.format(u.t.wDsPXl, {
                     onCancel: () => a(l.id),
                     onSave: this.onClickSave,
                 }),
@@ -36,7 +37,7 @@ class h extends r.PureComponent {
         return (0, i.jsxs)("div", {
             className: e,
             ref: this.node,
-            onContextMenu: p,
+            onContextMenu: h,
             children: [
                 o({
                     textValue: t,
@@ -54,12 +55,12 @@ class h extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            d(this, "node", r.createRef()),
-            d(this, "onClickSave", () => {
+            p(this, "node", r.createRef()),
+            p(this, "onClickSave", () => {
                 let { textValue: e } = this.props;
                 this.onSubmit(e);
             }),
-            d(this, "onSubmit", (e) => {
+            p(this, "onSubmit", (e) => {
                 let {
                     message: t,
                     channel: n,
@@ -113,12 +114,12 @@ class h extends r.PureComponent {
                           );
                       });
             }),
-            d(this, "onChange", (e, t, n) => {
+            p(this, "onChange", (e, t, n) => {
                 let { channel: i, onChange: r } = this.props;
                 r(i.id, t, n);
             }),
-            d(this, "onKeyDown", (e) => {
-                if (e.keyCode === s.yXg.ESCAPE && !e.shiftKey) {
+            p(this, "onKeyDown", (e) => {
+                if (e.key === c.vn.ESCAPE && !e.shiftKey) {
                     let { channel: t, onCancel: n } = this.props;
                     e.preventDefault(), e.stopPropagation(), n(t.id);
                 }

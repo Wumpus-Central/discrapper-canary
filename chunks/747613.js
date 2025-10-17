@@ -17,7 +17,7 @@ var r = n(951288),
     E = n(633302),
     b = n(176354),
     y = n(624138),
-    O = n(981631),
+    O = n(295907),
     v = n(388032),
     I = n(330580);
 function T(e, t, n) {
@@ -201,7 +201,7 @@ let j = (e) => {
                 c(!0);
             },
             m = (e) => {
-                e.keyCode === O.yXg.ESCAPE && (e.stopPropagation(), c(!1), null != d.current && d.current.focus());
+                e.key === O.vn.ESCAPE && (e.stopPropagation(), c(!1), null != d.current && d.current.focus());
             },
             g = (e) => {
                 var n;

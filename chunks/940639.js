@@ -9,7 +9,7 @@ var i,
     d = n(607070),
     u = n(251625),
     h = n(226951),
-    g = n(981631),
+    g = n(295907),
     p = n(388032),
     m = n(508547);
 function f(e, t, n) {
@@ -133,10 +133,10 @@ class b extends (i = r.Component) {
                     { selectedRow: n } = this.state,
                     i = this.getRows(),
                     l = this.getSelectedSection(i);
-                switch (e.keyCode) {
-                    case g.yXg.TAB:
+                switch (e.key) {
+                    case g.vn.TAB:
                         if (t) break;
-                    case g.yXg.ARROW_DOWN:
+                    case g.vn.ARROW_DOWN:
                         e.preventDefault(),
                             this.props.sections.length > l &&
                                 ++n >= i[l].length &&
@@ -146,7 +146,7 @@ class b extends (i = r.Component) {
                                 selectedRow: n,
                             });
                         break;
-                    case g.yXg.ARROW_UP:
+                    case g.vn.ARROW_UP:
                         e.preventDefault(),
                             --n < 0 && (--l < 0 && (l = this.props.sections.length - 1), (n = i[l].length - 1)),
                             this.setState({
@@ -154,13 +154,13 @@ class b extends (i = r.Component) {
                                 selectedRow: n,
                             });
                         break;
-                    case g.yXg.ENTER:
+                    case g.vn.ENTER:
                         e.preventDefault(),
                             this.props.sections.length > l &&
                                 i[l].length > n &&
                                 (this.props.onSelect(i[l][n], l), this.props.onClose());
                         break;
-                    case g.yXg.ESCAPE:
+                    case g.vn.ESCAPE:
                         e.preventDefault(), this.props.onSelect(null, null), this.props.onClose();
                 }
             }),

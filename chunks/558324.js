@@ -2,7 +2,7 @@ n.d(t, { Z: () => o }), n(388685), n(781311);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
-    a = n(981631),
+    a = n(295907),
     s = n(388032);
 let o = (e) => {
     var t,
@@ -64,15 +64,15 @@ let o = (e) => {
         }, [j, f, g, m, o.length]),
         C = i.useCallback(
             (e) => {
-                switch (e.keyCode) {
-                    case a.yXg.BACKSPACE:
+                switch (e.key) {
+                    case a.vn.BACKSPACE:
                         0 === j.length &&
                             o.length > 0 &&
                             (e.preventDefault(), e.stopPropagation(), null == u || u(new Set([o[o.length - 1].id])));
                         break;
-                    case a.yXg.ENTER:
-                    case a.yXg.TAB:
-                    case a.yXg.COMMA:
+                    case a.vn.ENTER:
+                    case a.vn.TAB:
+                    case a.vn.COMMA:
                         e.preventDefault(), e.stopPropagation(), _();
                 }
             },

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(35282), n(388685);
+n.d(t, { Z: () => R }), n(35282), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -16,9 +16,10 @@ var r = n(951288),
     g = n(215016),
     E = n(981631),
     b = n(149203),
-    y = n(388032),
-    O = n(577021);
-function v(e, t, n) {
+    y = n(295907),
+    O = n(388032),
+    v = n(577021);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +32,7 @@ function v(e, t, n) {
         e
     );
 }
-function I(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,12 +43,12 @@ function I(e) {
                 }),
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                I(e, t, n[t]);
             });
     }
     return e;
 }
-function T(e, t) {
+function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -59,19 +60,19 @@ function T(e, t) {
     }
     return n;
 }
-function S(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : T(Object(t)).forEach(function (n) {
+            : S(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let A = (e) => e.stopPropagation();
-class C extends i.PureComponent {
+let C = (e) => e.stopPropagation();
+class N extends i.PureComponent {
     componentDidMount() {
         d.gK(),
             document.addEventListener("keydown", this.backToFrontPage),
@@ -99,23 +100,23 @@ class C extends i.PureComponent {
                 return (0, r.jsx)(c.Heading, {
                     variant: "heading-md/semibold",
                     color: t,
-                    className: O.searchHeader,
-                    children: y.intl.string(y.t.y3LQCA),
+                    className: v.searchHeader,
+                    children: O.intl.string(O.t.y3LQCA),
                 });
             case E.wI2.TRENDING_GIFS:
                 return (0, r.jsx)(c.Heading, {
                     variant: "heading-md/semibold",
                     color: t,
-                    className: O.searchHeader,
-                    children: y.intl.string(y.t.H6zNFx),
+                    className: v.searchHeader,
+                    children: O.intl.string(O.t.H6zNFx),
                 });
             default:
                 return (0, r.jsx)(c.E1j, {
                     query: e,
                     onChange: this.handleChangeQuery,
                     onClear: this.handleClearQuery,
-                    placeholder: y.intl.string(y.t.TnYqkZ),
-                    "aria-label": y.intl.string(y.t.TnYqkZ),
+                    placeholder: O.intl.string(O.t.TnYqkZ),
+                    "aria-label": O.intl.string(O.t.TnYqkZ),
                     ref: this.props.searchBarRef,
                     autoFocus: !0,
                 });
@@ -128,8 +129,8 @@ class C extends i.PureComponent {
             null != e &&
                 (t = (0, r.jsx)(c.P3F, {
                     onClick: this.handleClearQuery,
-                    className: O.backButton,
-                    "aria-label": y.intl.string(y.t["13/7kZ"]),
+                    className: v.backButton,
+                    "aria-label": O.intl.string(O.t["13/7kZ"]),
                     children: (0, r.jsx)(c.whL, {
                         size: "md",
                         color: "currentColor",
@@ -181,16 +182,16 @@ class C extends i.PureComponent {
             id: b.vO,
             role: "tabpanel",
             "aria-labelledby": b._3,
-            className: o()(O.container, e),
-            onClick: A,
+            className: o()(v.container, e),
+            onClick: C,
             ref: t,
             children: [
                 (0, r.jsx)("div", {
-                    className: O.header,
+                    className: v.header,
                     children: this.renderHeader(),
                 }),
                 (0, r.jsx)("div", {
-                    className: O.content,
+                    className: v.content,
                     children: this.renderContent(),
                 }),
             ],
@@ -198,28 +199,28 @@ class C extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            v(this, "state", { resultType: null }),
-            v(this, "backToFrontPage", (e) => {
+            I(this, "state", { resultType: null }),
+            I(this, "backToFrontPage", (e) => {
                 let { resultType: t } = this.state;
-                e.keyCode === E.yXg.ESCAPE &&
+                e.key === y.vn.ESCAPE &&
                     null != t &&
                     (e.stopPropagation(), e.preventDefault(), this.handleClearQuery());
             }),
-            v(this, "handleChangeQuery", (e) => {
+            I(this, "handleChangeQuery", (e) => {
                 (0, _.ql)(e), this.search(e, E.wI2.SEARCH);
             }),
-            v(this, "handleSelectSuggestion", (e) => {
+            I(this, "handleSelectSuggestion", (e) => {
                 (0, _.ql)(""), d.v2(), this.search(e, E.wI2.SEARCH_SUGGESTION, !0);
             }),
-            v(this, "handleClearQuery", () => {
+            I(this, "handleClearQuery", () => {
                 let { current: e } = this.props.searchBarRef;
                 (0, _.ql)(""), d.v2(), this.setState({ resultType: null }), null != e && e.focus();
             }),
-            v(this, "handleSelectGIF", (e) => {
+            I(this, "handleSelectGIF", (e) => {
                 let { onSelectGIF: t } = this.props;
                 null != t && t(e);
             }),
-            v(this, "handleSelectItem", (e, t) => {
+            I(this, "handleSelectItem", (e, t) => {
                 let { current: n } = this.props.searchBarRef;
                 switch (e) {
                     case E.wI2.TRENDING_CATEGORY:
@@ -232,7 +233,7 @@ class C extends i.PureComponent {
             });
     }
 }
-let N = i.forwardRef((e, t) => {
+let R = i.forwardRef((e, t) => {
     e.persistSearch || (0, _.ql)("");
     let {
             query: n,
@@ -263,8 +264,8 @@ let N = i.forwardRef((e, t) => {
             }
         }, [d, g]),
         (0, r.jsx)(
-            C,
-            S(I({}, e), {
+            N,
+            A(T({}, e), {
                 forwardedRef: t,
                 query: f,
                 resultQuery: a,

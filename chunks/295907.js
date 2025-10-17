@@ -454,6 +454,8 @@ var _ = (function (e) {
             (e.ARROW_RIGHT = "ArrowRight"),
             (e.HOME = "Home"),
             (e.END = "End"),
+            (e.BACKSPACE = "Backspace"),
+            (e.COMMA = ","),
             e
         );
     })({}),

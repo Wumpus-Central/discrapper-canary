@@ -1,6 +1,6 @@
 n.d(t, { Z: () => s }), n(388685);
 var r = n(647438),
-    i = n(981631);
+    i = n(295907);
 function a(e, t, n) {
     return (
         t in e
@@ -16,13 +16,13 @@ function a(e, t, n) {
 }
 function o(e) {
     switch (e) {
-        case i.yXg.ARROW_DOWN:
+        case i.vn.ARROW_DOWN:
             return "ARROW_DOWN";
-        case i.yXg.ARROW_UP:
+        case i.vn.ARROW_UP:
             return "ARROW_UP";
-        case i.yXg.ARROW_LEFT:
+        case i.vn.ARROW_LEFT:
             return "ARROW_LEFT";
-        case i.yXg.ARROW_RIGHT:
+        case i.vn.ARROW_RIGHT:
             return "ARROW_RIGHT";
         default:
             return null;
@@ -130,14 +130,14 @@ class s extends r.Component {
             }),
             a(this, "handleKeyDown", (e) => {
                 let { onSelect: t } = this.props;
-                switch (e.keyCode) {
-                    case i.yXg.ARROW_DOWN:
-                    case i.yXg.ARROW_UP:
-                    case i.yXg.ARROW_LEFT:
-                    case i.yXg.ARROW_RIGHT:
-                        this.focusNext(o(e.keyCode));
+                switch (e.key) {
+                    case i.vn.ARROW_DOWN:
+                    case i.vn.ARROW_UP:
+                    case i.vn.ARROW_LEFT:
+                    case i.vn.ARROW_RIGHT:
+                        this.focusNext(o(e.key));
                         break;
-                    case i.yXg.ENTER:
+                    case i.vn.ENTER:
                         let n = this.calculateFocusedItem();
                         null != n && null != t && (e.preventDefault(), e.stopPropagation(), t(n));
                 }

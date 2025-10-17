@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(951288),
     i = n(647438),
     a = n(631562),
@@ -9,10 +9,11 @@ var r = n(951288),
     u = n(607070),
     d = n(446108),
     f = n(981631),
-    _ = n(388032);
-function p(e) {
+    _ = n(295907),
+    p = n(388032);
+function h(e) {
     var t;
-    if (e.ctrlKey || e.altKey || e.metaKey || e.keyCode !== f.yXg.TAB || null == e.target) return;
+    if (e.ctrlKey || e.altKey || e.metaKey || e.key !== _.vn.TAB || null == e.target) return;
     let { target: n } = e,
         r = null == (t = (0, o.uB)(e)) ? void 0 : t.activeElement;
     (0, o.kK)(n) &&
@@ -22,7 +23,7 @@ function p(e) {
             location_object: n.tagName,
         });
 }
-function h(e) {
+function m(e) {
     let { children: t } = e,
         n = (0, s.cj)([u.Z], () => ({
             enabled: u.Z.useReducedMotion,
@@ -34,7 +35,7 @@ function h(e) {
         })),
         c = (0, s.e7)([u.Z], () => u.Z.isHighContrastModeEnabled),
         f = (0, s.e7)([u.Z], () => u.Z.alwaysShowLinkDecorations),
-        h = (0, s.e7)([u.Z], () => u.Z.keyboardModeEnabled),
+        _ = (0, s.e7)([u.Z], () => u.Z.keyboardModeEnabled),
         m = (0, s.e7)([u.Z], () => u.Z.isSwitchIconsEnabled),
         g = i.useMemo(
             () => ({
@@ -43,18 +44,18 @@ function h(e) {
                 forcedColors: o,
                 alwaysShowLinkDecorations: f,
                 highContrastModeEnabled: c,
-                keyboardModeEnabled: h,
+                keyboardModeEnabled: _,
                 switchIconsEnabled: m,
             }),
-            [n, o, f, c, h, m],
+            [n, o, f, c, _, m],
         );
     return (
         i.useEffect(
             () => (
                 (0, a.waitForAllDefaultIntlMessagesLoaded)().then(() => (0, d.d1)()),
-                _.intl.onLocaleChange(() => (0, d.d1)()),
-                window.addEventListener("keydown", p),
-                () => window.removeEventListener("keydown", p)
+                p.intl.onLocaleChange(() => (0, d.d1)()),
+                window.addEventListener("keydown", h),
+                () => window.removeEventListener("keydown", h)
             ),
             [],
         ),

@@ -7,7 +7,7 @@ var r = n(951288),
     l = n(806966),
     c = n(28546),
     u = n(149203),
-    d = n(981631),
+    d = n(295907),
     f = n(388032);
 let _ = i.forwardRef(function (e, t) {
         let {
@@ -36,11 +36,11 @@ let _ = i.forwardRef(function (e, t) {
                 (0, c.ql)("");
             }, []),
             T = (e) => {
-                switch (e.keyCode) {
-                    case d.yXg.ARROW_LEFT:
-                    case d.yXg.ARROW_RIGHT:
-                    case d.yXg.ARROW_UP:
-                    case d.yXg.ARROW_DOWN:
+                switch (e.key) {
+                    case d.vn.ARROW_LEFT:
+                    case d.vn.ARROW_RIGHT:
+                    case d.vn.ARROW_UP:
+                    case d.vn.ARROW_DOWN:
                         document.activeElement !== e.target && e.preventDefault();
                 }
                 p(e);
