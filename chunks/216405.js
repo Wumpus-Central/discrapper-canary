@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => A }), n(388685);
 var r = n(579092),
     i = n(46973),
     a = n(846027),
@@ -10,10 +10,12 @@ var r = n(579092),
     d = n(131951),
     f = n(959457),
     _ = n(594174),
-    p = n(569545),
-    h = n(537413),
-    m = n(37113);
-function g(e, t, n) {
+    p = n(70956),
+    h = n(580991),
+    m = n(569545),
+    g = n(537413),
+    E = n(37113);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,79 +28,87 @@ function g(e, t, n) {
         e
     );
 }
-let E = 10,
-    b = 20,
-    y = 10,
-    O = new r.Yd("AutoQualityStreamingManager"),
-    v = 0;
-class I extends o.Z {
+let y = 10,
+    O = 20,
+    v = 10,
+    I = new r.Yd("AutoQualityStreamingManager"),
+    T = 0;
+class S extends o.Z {
     handleStats() {
-        var e, t, n;
-        if ((v += 1) % y != 0) return;
-        let r = c.Z.getCurrentUserActiveStream();
-        if (null == r) return;
-        let o = f.Z.getRTCConnection((0, p.V9)(r)),
-            g = d.Z.getGoLiveSource();
-        if (null == o || null == g) return;
-        let I = l.Z.getState();
-        if (I.preset !== m.ApplicationStreamPresets.PRESET_AUTO) return;
+        var e, t, n, r;
+        if ((T += 1) % v != 0) return;
+        let o = c.Z.getCurrentUserActiveStream();
+        if (null == o) return;
+        let h = f.Z.getRTCConnection((0, m.V9)(o)),
+            b = d.Z.getGoLiveSource();
+        if (null == h || null == b) return;
+        let S = l.Z.getState();
+        if (S.preset !== E.ApplicationStreamPresets.PRESET_AUTO) return;
         if ((null == (e = c.Z.getStreamerActiveStreamMetadata()) ? void 0 : e.id) != null)
-            return void O.info("Skipping auto quality checker for game stream.");
-        let T = s.Z.getAccumulatedPerformanceStats(o.getMediaEngineConnectionId(), r.ownerId, "long");
-        if (null == T || T.numDatapoints < 30) return;
-        let S = _.default.getCurrentUser(),
-            A = u.Z.getGuild(r.guildId),
-            [C, N] =
+            return void I.info("Skipping auto quality checker for game stream.");
+        let A = s.Z.getAccumulatedPerformanceStats(h.getMediaEngineConnectionId(), o.ownerId, "long"),
+            C = (null != (t = h.analyticsContext.getDuration()) ? t : 30) >= 30 * p.Z.Millis.SECOND ? 30 : 15;
+        if (null == A || A.numDatapoints < C) return;
+        let N = _.default.getCurrentUser(),
+            R = u.Z.getGuild(o.guildId),
+            [P, w] =
                 null !=
-                (t = (0, h.Z)(m.ApplicationStreamPresets.PRESET_DOCUMENTS, S, null == A ? void 0 : A.premiumTier))
-                    ? t
-                    : [m.ApplicationStreamResolutions.RESOLUTION_SOURCE, m.ApplicationStreamFPS.FPS_5],
-            [R, P] =
-                null != (n = (0, h.Z)(m.ApplicationStreamPresets.PRESET_VIDEO, S, null == A ? void 0 : A.premiumTier))
+                (n = (0, g.Z)(E.ApplicationStreamPresets.PRESET_DOCUMENTS, N, null == R ? void 0 : R.premiumTier))
                     ? n
-                    : [m.ApplicationStreamResolutions.RESOLUTION_720, m.ApplicationStreamFPS.FPS_30],
-            w = null;
+                    : [E.ApplicationStreamResolutions.RESOLUTION_SOURCE, E.ApplicationStreamFPS.FPS_5],
+            [D, L] =
+                null != (r = (0, g.Z)(E.ApplicationStreamPresets.PRESET_VIDEO, N, null == R ? void 0 : R.premiumTier))
+                    ? r
+                    : [E.ApplicationStreamResolutions.RESOLUTION_720, E.ApplicationStreamFPS.FPS_30],
+            x = null;
         if (
-            (T.entropy < E && (I.resolution !== C || I.fps !== N)
-                ? (O.info("Low entropy average, switching to screenshare preset."),
-                  (w = {
+            (A.entropy < y && (S.resolution !== P || S.fps !== w)
+                ? (I.info("Low entropy average, switching to screenshare preset."),
+                  (x = {
                       qualityOptions: {
-                          preset: m.ApplicationStreamPresets.PRESET_AUTO,
-                          resolution: C,
-                          frameRate: N,
+                          preset: E.ApplicationStreamPresets.PRESET_AUTO,
+                          resolution: P,
+                          frameRate: w,
                       },
                       context: i.Yn.STREAM,
                   }))
-                : T.entropy > b &&
-                  (I.resolution !== R || I.fps !== P) &&
-                  (O.info("High entropy average, switching to video preset."),
-                  (w = {
+                : A.entropy > O &&
+                  (S.resolution !== D || S.fps !== L) &&
+                  (I.info("High entropy average, switching to video preset."),
+                  (x = {
                       qualityOptions: {
-                          preset: m.ApplicationStreamPresets.PRESET_AUTO,
-                          resolution: R,
-                          frameRate: P,
+                          preset: E.ApplicationStreamPresets.PRESET_AUTO,
+                          resolution: D,
+                          frameRate: L,
                       },
                       context: i.Yn.STREAM,
                   })),
-            null != w)
+            null != x)
         ) {
-            if (null != g.desktopSource)
-                w.desktopSettings = {
-                    sourceId: g.desktopSource.id,
-                    sound: I.soundshareEnabled,
+            if (null != b.desktopSource)
+                x.desktopSettings = {
+                    sourceId: b.desktopSource.id,
+                    sound: S.soundshareEnabled,
                 };
             else {
-                if (null == g.cameraSource) return;
-                w.cameraSettings = {
-                    videoDeviceGuid: g.cameraSource.videoDeviceGuid,
-                    audioDeviceGuid: g.cameraSource.audioDeviceGuid,
+                if (null == b.cameraSource) return;
+                x.cameraSettings = {
+                    videoDeviceGuid: b.cameraSource.videoDeviceGuid,
+                    audioDeviceGuid: b.cameraSource.audioDeviceGuid,
                 };
             }
-            a.Z.setGoLiveSource(w);
+            a.Z.setGoLiveSource(x);
         }
     }
+    handlePostConnectionOpen() {
+        (0, h.Ym)();
+    }
     constructor(...e) {
-        super(...e), g(this, "actions", { MEDIA_ENGINE_CONNECTION_STATS: this.handleStats });
+        super(...e),
+            b(this, "actions", {
+                MEDIA_ENGINE_CONNECTION_STATS: this.handleStats,
+                POST_CONNECTION_OPEN: this.handlePostConnectionOpen,
+            });
     }
 }
-let T = new I();
+let A = new S();

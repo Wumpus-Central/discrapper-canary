@@ -23,7 +23,7 @@ var i = n(268146),
 let y = [
         {
             value: x.ApplicationStreamPresets.PRESET_AUTO,
-            canUse: (e) => e !== i.vA.CAMERA && (0, c.I)({ location: "StreamOptionsMenu" }).allowAutoQuality,
+            canUse: (e) => e !== i.vA.CAMERA && (0, c.IK)({ location: "StreamOptionsMenu" }).allowAutoQuality,
         },
         {
             value: x.ApplicationStreamPresets.PRESET_VIDEO,

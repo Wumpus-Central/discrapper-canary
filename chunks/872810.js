@@ -191,7 +191,8 @@ async function G(e) {
     } catch (e) {}
 }
 function B(e) {
-    (0, v.Ye)(e.preset, e.resolution, e.frameRate), s.Z.dispatch(N({ type: "STREAM_UPDATE_SETTINGS" }, e));
+    !0 !== e.noTrack && (0, v.Ye)(e.preset, e.resolution, e.frameRate),
+        s.Z.dispatch(N({ type: "STREAM_UPDATE_SETTINGS" }, e));
 }
 function Z(e, t) {
     o.tn.patch({

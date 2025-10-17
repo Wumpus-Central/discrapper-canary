@@ -148,7 +148,7 @@ function b(e) {
 }
 function y(e, t, n) {
     var r, l;
-    let { defaultAutoQuality: v, allowAutoQuality: j } = (0, f._)({ location: "useCreateGoLiveModalState" }),
+    let { defaultAutoQuality: v, allowAutoQuality: j } = (0, f._I)({ location: "useCreateGoLiveModalState" }),
         { preset: b, resolution: y, fps: C, soundshareEnabled: O } = (0, s.cj)([d.Z], () => d.Z.getState());
     v && (b = h.ApplicationStreamPresets.PRESET_AUTO);
     let w = (0, s.e7)([u.Z], () => u.Z.getInputDeviceId()),

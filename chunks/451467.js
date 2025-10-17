@@ -4,7 +4,7 @@ var r = n(580991),
     a = n(37113);
 function o(e, t, n, o, s, l) {
     if (e === a.ApplicationStreamPresets.PRESET_AUTO)
-        return (0, r.I)({ location: "canStreamWithSettings" }).allowAutoQuality;
+        return (0, r.IK)({ location: "canStreamWithSettings" }).allowAutoQuality;
     for (let r of a.ND)
         if ((null == r.preset || e === r.preset) && t === r.resolution && n === r.fps && (0, i.Z)(r, o, s, l))
             return !0;

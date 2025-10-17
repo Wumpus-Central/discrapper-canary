@@ -104,7 +104,7 @@ async function C(e, t) {
         return [!1, "no permission"];
     let { preset: M, resolution: k, fps: j, soundshareEnabled: U } = l.Z.getState(),
         G = null != (E = null == t ? void 0 : t.preset) ? E : M,
-        { allowAutoQuality: B } = (0, h.I)({ location: "startStreamWithSource" });
+        { allowAutoQuality: B } = (0, h.IK)({ location: "startStreamWithSource" });
     G !== b.ApplicationStreamPresets.PRESET_AUTO || B || (G = b.ApplicationStreamPresets.PRESET_VIDEO);
     let Z = G === b.ApplicationStreamPresets.PRESET_AUTO ? b.ApplicationStreamPresets.PRESET_VIDEO : G,
         [F, V] = null != (O = (0, g.Z)(Z, R, L)) ? O : [],

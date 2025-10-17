@@ -821,7 +821,7 @@ let i = {
         inlineRequire: () => n(473288).Z,
     },
     AutoQualityStreamingManager: {
-        actions: ["MEDIA_ENGINE_CONNECTION_STATS"],
+        actions: ["MEDIA_ENGINE_CONNECTION_STATS", "POST_CONNECTION_OPEN"],
         inlineRequire: () => n(216405).Z,
     },
     WebAuthnCredentialManager: {

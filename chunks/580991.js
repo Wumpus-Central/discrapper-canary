@@ -1,12 +1,17 @@
 n.d(t, {
-    I: () => _,
-    _: () => p,
+    IK: () => b,
+    Ym: () => O,
+    _I: () => y,
 });
 var r = n(442837),
-    i = n(722733),
-    a = n(633289),
-    o = n(751823);
-function s(e, t, n) {
+    i = n(433517),
+    a = n(872810),
+    o = n(722733),
+    s = n(633289),
+    l = n(751823),
+    c = n(361291),
+    u = n(37113);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +24,7 @@ function s(e, t, n) {
         e
     );
 }
-function l(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,12 +35,12 @@ function l(e) {
                 }),
             )),
             r.forEach(function (t) {
-                s(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function c(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,39 +52,63 @@ function c(e, t) {
     }
     return n;
 }
-function u(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : c(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let d = {
+let h = {
         allowAutoQuality: !1,
         defaultAutoQuality: !1,
+        migrateAutoQuality: !1,
     },
-    f = (0, i.Z)({
+    m = "GoLiveAutoQualityMigrationVersion",
+    g = 1,
+    E = (0, o.Z)({
         name: "2025-10-go-live-auto-quality",
         kind: "user",
-        defaultConfig: d,
+        defaultConfig: h,
         variations: {
-            1: u(l({}, d), { allowAutoQuality: !0 }),
-            2: u(l({}, d), {
+            1: p(f({}, h), {
+                allowAutoQuality: !0,
+                migrateAutoQuality: !0,
+            }),
+            2: p(f({}, h), {
                 allowAutoQuality: !0,
                 defaultAutoQuality: !0,
             }),
         },
     });
-function _(e) {
+function b(e) {
     let { location: t } = e,
-        { isInHoldout: n } = o.L.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
-    return n ? f.definition.defaultConfig : f.getConfig({ location: t });
+        { isInHoldout: n } = l.L.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
+    return n ? E.definition.defaultConfig : E.getConfig({ location: t });
 }
-function p(e) {
+function y(e) {
     let { location: t } = e;
-    return (0, r.e7)([a.Z], () => _({ location: t }));
+    return (0, r.e7)([s.Z], () => b({ location: t }));
+}
+function O() {
+    var e;
+    let t = E.getConfig({ location: "maybeMigrateToAutoQuality" }).migrateAutoQuality,
+        n = Number(null != (e = i.K.get(m)) ? e : 0);
+    if (!t || n >= g) return;
+    let r = c.Z.getState();
+    if (r.preset !== u.ApplicationStreamPresets.PRESET_CUSTOM) {
+        (0, a.Rc)({
+            preset: u.ApplicationStreamPresets.PRESET_AUTO,
+            resolution: r.resolution,
+            frameRate: r.fps,
+            soundshareEnabled: r.soundshareEnabled,
+            noTrack: !0,
+        }),
+            i.K.set(m, g);
+        return;
+    }
 }
