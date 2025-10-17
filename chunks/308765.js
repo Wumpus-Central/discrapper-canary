@@ -80,6 +80,17 @@ let i = {
         actions: ["POST_CONNECTION_OPEN"],
         inlineRequire: () => n(277229).Z,
     },
+    FriendOnlineTimerManager: {
+        actions: [
+            "POST_CONNECTION_OPEN",
+            "CONNECTION_RESUMED",
+            "CONNECTION_CLOSED",
+            "CONNECTION_INTERRUPTED",
+            "SELF_PRESENCE_STORE_UPDATE",
+        ],
+        inlineRequire: () => n(265008).Z,
+        loadRightBeforeConnectionOpen: !0,
+    },
     HangStatusManager: {
         actions: ["POST_CONNECTION_OPEN", "VOICE_CHANNEL_SELECT", "LOGOUT", "GUILD_MEMBER_UPDATE"],
         inlineRequire: () => n(669750).Z,
