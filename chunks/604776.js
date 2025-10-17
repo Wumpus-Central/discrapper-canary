@@ -24,6 +24,8 @@ let b = {
         [h.kNB.INVOICE]: "Invoice",
         [h.kNB.REVERSE_TRIAL]: "Reverse Trial",
         [h.kNB.FRACTIONAL_PREMIUM_GIVEBACK]: "Giveback",
+        [h.kNB.SUBSCRIPTION]: "Subscription",
+        [h.kNB.SUBSCRIPTION_MEMBER]: "Subscription Member",
     },
     v = (e) => {
         var t;

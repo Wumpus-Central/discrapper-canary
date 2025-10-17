@@ -6124,6 +6124,8 @@ var re = (function (e) {
             (e[(e.INVOICE = 3)] = "INVOICE"),
             (e[(e.REVERSE_TRIAL = 4)] = "REVERSE_TRIAL"),
             (e[(e.FRACTIONAL_PREMIUM_GIVEBACK = 8)] = "FRACTIONAL_PREMIUM_GIVEBACK"),
+            (e[(e.SUBSCRIPTION = 9)] = "SUBSCRIPTION"),
+            (e[(e.SUBSCRIPTION_MEMBER = 11)] = "SUBSCRIPTION_MEMBER"),
             e
         );
     })({}),
