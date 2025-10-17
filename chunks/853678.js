@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(997841);
+n.d(t, { Z: () => P }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(997841);
 var r = n(45792),
     i = n(782568),
     l = n(636449),
@@ -15,21 +15,23 @@ var r = n(45792),
     m = n(358085),
     b = n(996106),
     _ = n(914946),
-    O = n(452426),
-    E = n(186901),
+    E = n(452426),
+    O = n(186901),
     v = n(981631),
     y = n(701488),
     I = n(674563);
 let C = new Set([y.Fu, y.JT]),
     S = new Set(["www.nytimes.com", "apps.apple.com", "play.google.com"]),
-    T = new Set([
+    N = new Set([
         "p-ty8do4dje6.exmggames.com",
         "fortnitetrial.fortnite.com",
         "fn.gg",
+        "geforcenow.com",
         "www.fortnite.com",
         "www.nvidia.com",
+        "www.geforcenow.com",
     ]),
-    N = new Map([
+    T = new Map([
         [
             I.Vt,
             {
@@ -54,17 +56,17 @@ let C = new Set([y.Fu, y.JT]),
         [
             I.Zs,
             {
-                trustedHosts: T,
+                trustedHosts: N,
                 trustedUntilEpochMs: new Date("2026-01-01T00:00:00").valueOf(),
             },
         ],
     ]),
-    j = {
+    P = {
         [v.Etm.OPEN_EXTERNAL_LINK]: {
             scope: {
-                [E.Gp.ANY]: [E.wE, E.b_],
+                [O.Gp.ANY]: [O.wE, O.b_],
             },
-            validation: (e) => (0, O.Z)(e).required().keys({ url: e.string().required() }),
+            validation: (e) => (0, E.Z)(e).required().keys({ url: e.string().required() }),
             handler(e) {
                 let {
                     socket: t,
@@ -82,7 +84,7 @@ let C = new Set([y.Fu, y.JT]),
                     }
                     let h = u.Z.getApplication(null == (s = t.application) ? void 0 : s.id),
                         b = (0, c.p)(null == r ? void 0 : r.location),
-                        _ = (null == h ? void 0 : h.id) !== void 0 ? N.get(h.id) : void 0;
+                        _ = (null == h ? void 0 : h.id) !== void 0 ? T.get(h.id) : void 0;
                     if (void 0 !== _ && _.trustedUntilEpochMs >= Date.now() && _.trustedHosts.has(e.host))
                         return (
                             (0, i.Z)(a),
@@ -132,8 +134,8 @@ let C = new Set([y.Fu, y.JT]),
             },
         },
         [v.Etm.NAVIGATE_TO_CONNECTIONS]: {
-            validation: (e) => (0, O.Z)(e),
-            scope: { [E.Gp.ANY]: [E.wE] },
+            validation: (e) => (0, E.Z)(e),
+            scope: { [O.Gp.ANY]: [O.wE] },
             handler(e) {
                 let { socket: t } = e;
                 (0, _.bu)(t.transport);
@@ -150,7 +152,7 @@ let C = new Set([y.Fu, y.JT]),
             },
         },
         [v.Etm.SHARE_LINK]: (0, r.S)(v.Etm.SHARE_LINK, {
-            scope: { [E.Gp.ANY]: [E.wE] },
+            scope: { [O.Gp.ANY]: [O.wE] },
             handler(e) {
                 var t;
                 let {

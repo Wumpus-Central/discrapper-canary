@@ -1,26 +1,26 @@
-i.d(n, { FortniteUpsellModal: () => h });
+i.d(n, { FortniteUpsellModal: () => u });
 var e = i(951288);
 i(647438);
 var s = i(990547),
     a = i(793030),
-    r = i(481060),
-    o = i(782568),
+    o = i(481060),
+    r = i(782568),
     c = i(213609),
     l = i(728345),
     d = i(626135),
     x = i(768581),
     m = i(981631),
     p = i(388032),
-    u = i(625771);
-function h(t) {
+    h = i(625771);
+function u(t) {
     let { onClose: n, transitionState: i } = t,
-        { data: h } = (0, l.IX)("1402418703554842694"),
+        { data: u } = (0, l.IX)("1402418703554842694"),
         { data: g } = (0, l.IX)("1417968406048673952"),
         j =
-            null != h
+            null != u
                 ? x.ZP.getApplicationIconURL({
-                      id: h.id,
-                      icon: h.icon,
+                      id: u.id,
+                      icon: u.icon,
                   })
                 : null,
         b =
@@ -50,31 +50,31 @@ function h(t) {
                 }),
                 (0, e.jsx)(a.fef, {
                     children: (0, e.jsxs)("div", {
-                        className: u.body,
+                        className: h.body,
                         children: [
                             (0, e.jsxs)("div", {
-                                className: u.container,
+                                className: h.container,
                                 children: [
                                     (0, e.jsxs)("div", {
-                                        className: u.text,
+                                        className: h.text,
                                         children: [
                                             (0, e.jsx)("div", {
-                                                className: u.iconContainer,
+                                                className: h.iconContainer,
                                                 children:
                                                     null != j &&
                                                     (0, e.jsx)("div", {
-                                                        className: u.icon,
+                                                        className: h.icon,
                                                         style: { backgroundImage: "url(".concat(j, ")") },
                                                     }),
                                             }),
                                             (0, e.jsxs)("div", {
                                                 children: [
-                                                    (0, e.jsx)(r.Text, {
+                                                    (0, e.jsx)(o.Text, {
                                                         color: "text-primary",
                                                         variant: "text-md/semibold",
                                                         children: p.intl.string(p.t["9g594e"]),
                                                     }),
-                                                    (0, e.jsx)(r.Text, {
+                                                    (0, e.jsx)(o.Text, {
                                                         color: "text-secondary",
                                                         variant: "text-md/normal",
                                                         children: p.intl.string(p.t.Vye3DQ),
@@ -83,12 +83,12 @@ function h(t) {
                                             }),
                                         ],
                                     }),
-                                    (0, e.jsx)(r.Button, {
-                                        icon: () => (0, e.jsx)(r.Gr1, {}),
+                                    (0, e.jsx)(o.Button, {
+                                        icon: () => (0, e.jsx)(o.Gr1, {}),
                                         iconPosition: "end",
                                         onClick: () => {
                                             d.default.track(m.rMx.FORTNITE_DOWNLOAD_CLICKED),
-                                                (0, o.Z)("https://fn.gg/GetGame");
+                                                (0, r.Z)("https://fn.gg/GetGame");
                                         },
                                         text: p.intl.string(p.t.ZDtJ19),
                                         variant: "secondary",
@@ -96,28 +96,28 @@ function h(t) {
                                 ],
                             }),
                             (0, e.jsxs)("div", {
-                                className: u.container,
+                                className: h.container,
                                 children: [
                                     (0, e.jsxs)("div", {
-                                        className: u.text,
+                                        className: h.text,
                                         children: [
                                             (0, e.jsx)("div", {
-                                                className: u.iconContainer,
+                                                className: h.iconContainer,
                                                 children:
                                                     null != b &&
                                                     (0, e.jsx)("div", {
-                                                        className: u.icon,
+                                                        className: h.icon,
                                                         style: { backgroundImage: "url(".concat(b, ")") },
                                                     }),
                                             }),
                                             (0, e.jsxs)("div", {
                                                 children: [
-                                                    (0, e.jsx)(r.Text, {
+                                                    (0, e.jsx)(o.Text, {
                                                         color: "text-primary",
                                                         variant: "text-md/semibold",
                                                         children: p.intl.string(p.t.kOjtOD),
                                                     }),
-                                                    (0, e.jsx)(r.Text, {
+                                                    (0, e.jsx)(o.Text, {
                                                         color: "text-secondary",
                                                         variant: "text-md/normal",
                                                         children: p.intl.string(p.t.X3zPLy),
@@ -126,14 +126,12 @@ function h(t) {
                                             }),
                                         ],
                                     }),
-                                    (0, e.jsx)(r.Button, {
-                                        icon: () => (0, e.jsx)(r.Gr1, {}),
+                                    (0, e.jsx)(o.Button, {
+                                        icon: () => (0, e.jsx)(o.Gr1, {}),
                                         iconPosition: "end",
                                         onClick: () => {
                                             d.default.track(m.rMx.FORTNITE_GFNJOIN_CLICKED),
-                                                (0, o.Z)(
-                                                    "https://www.nvidia.com/en-us/geforce-now/discord?ncid=partn-874834",
-                                                );
+                                                (0, r.Z)("https://geforcenow.com/discord");
                                         },
                                         text: p.intl.string(p.t.ycbXPz),
                                         variant: "secondary",
