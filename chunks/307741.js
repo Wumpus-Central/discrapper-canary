@@ -120,31 +120,30 @@ function T(e) {
 }
 function S(e) {
     let { application: t } = e,
-        n = i.useMemo(() => (0, m.fP)(), []),
-        a = (0, l.e7)([_.Z], () => _.Z.getMute(t.id)),
-        o = i.useMemo(() => (a ? b.intl.string(b.t.tpvw4e) : b.intl.string(b.t["6EwEws"])), [a]);
+        n = (0, l.e7)([_.Z], () => _.Z.getMute(t.id)),
+        a = i.useMemo(() => (n ? b.intl.string(b.t.tpvw4e) : b.intl.string(b.t["6EwEws"])), [n]);
     return (0, r.jsxs)("div", {
         className: y.actionButtonsContainer,
         children: [
             (0, r.jsx)(c.u, {
                 asContainer: !0,
                 tag: "span",
-                text: o,
-                "aria-label": o,
+                text: a,
+                "aria-label": a,
                 delay: 750,
                 children: (0, r.jsx)(u.P3F, {
                     className: y.actionButton,
-                    "aria-label": o,
+                    "aria-label": a,
                     onClick: () => {
                         (0, d.Eq)({
                             gameName: t.name,
                             applicationId: t.id,
-                            label: a ? d.$_.UNMUTED : d.$_.MUTED,
+                            label: n ? d.$_.UNMUTED : d.$_.MUTED,
                             source: d.UE.MINI_GAME_PROFILE_BELL_ICON,
                         }),
-                            (0, f.X)(t.id, !a);
+                            (0, f.X)(t.id, !n);
                     },
-                    children: a
+                    children: n
                         ? (0, r.jsx)(u.owu, {
                               size: "xs",
                               color: u.TVs.colors.WHITE,
@@ -157,7 +156,6 @@ function S(e) {
             }),
             (0, r.jsx)(E.Z, {
                 applicationId: t.id,
-                viewId: n,
                 className: y.actionButton,
             }),
         ],

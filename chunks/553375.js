@@ -1,20 +1,19 @@
 n.d(t, {
-    ZP: () => b,
-    nK: () => g,
-    uj: () => E,
+    ZP: () => E,
+    nK: () => m,
+    uj: () => g,
 });
 var r = n(951288);
 n(647438);
 var i = n(481060),
     a = n(833664),
     o = n(26033),
-    s = n(272304),
-    l = n(810568),
-    c = n(168524),
-    u = n(858042),
-    d = n(981631),
-    f = n(388032);
-function _(e, t, n) {
+    s = n(810568),
+    l = n(168524),
+    c = n(858042),
+    u = n(981631),
+    d = n(388032);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +26,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,12 +37,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,18 +54,18 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function g(e) {
+function m(e) {
     let { user: t, activity: n, entry: r } = e;
     return null != r
         ? {
@@ -75,7 +74,7 @@ function g(e) {
           }
         : null != n
           ? {
-                applicationId: n.type === d.IIU.PLAYING && null != n.application_id ? n.application_id : void 0,
+                applicationId: n.type === u.IIU.PLAYING && null != n.application_id ? n.application_id : void 0,
                 sourceUserId: t.id,
             }
           : {
@@ -83,42 +82,38 @@ function g(e) {
                 sourceUserId: void 0,
             };
 }
-function E(e) {
-    let { user: t, activity: l, entry: c } = e,
-        { applicationId: d } = g({
-            activity: l,
-            entry: c,
+function g(e) {
+    let { user: t, activity: s, entry: l } = e,
+        { applicationId: u } = m({
+            activity: s,
+            entry: l,
             user: t,
         }),
-        _ = (0, s.P6)("UserProfileActivityCard"),
-        h = (0, u.M)({
-            applicationId: d,
-            showOutdatedInfoOption: !1,
-        }),
-        E = _ && null != l && (0, a.Z)(l),
-        b = _ && null != c && (0, o.dX)(c);
-    if (E || b) {
+        f = (0, c.M)(u),
+        p = null != s && (0, a.Z)(s),
+        g = null != l && (0, o.dX)(l);
+    if (p || g) {
         let e = () =>
             (0, i.ZDy)(async () => {
                 let { default: e } = await n.e("82077").then(n.bind(n, 953848));
-                if (null != l)
+                if (null != s)
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            m(p({}, t), {
-                                detectedActivity: l,
+                            h(_({}, t), {
+                                detectedActivity: s,
                                 onSubmitted: () => {},
                             }),
                         );
-                if (null != c && (0, o.dX)(c)) {
+                if (null != l && (0, o.dX)(l)) {
                     let t = {
-                        name: c.extra.game_name,
-                        application_id: c.extra.application_id,
+                        name: l.extra.game_name,
+                        application_id: l.extra.application_id,
                     };
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            m(p({}, n), {
+                            h(_({}, n), {
                                 detectedActivity: t,
                                 onSubmitted: () => {},
                             }),
@@ -127,31 +122,31 @@ function E(e) {
                 return (t) =>
                     (0, r.jsx)(
                         e,
-                        m(p({}, t), {
+                        h(_({}, t), {
                             onSubmitted: () => {},
                         }),
                     );
             });
         return (0, r.jsx)(i.sNh, {
             id: "game-detection-report-issue",
-            label: f.intl.string(f.t.qP2cXV),
+            label: d.intl.string(d.t.qP2cXV),
             action: e,
         });
     }
-    return h;
+    return f;
 }
-function b(e) {
-    let { user: t, activity: n, entry: a, onAction: o, isMenuOpen: s, appContext: u } = e,
-        { applicationId: d, sourceUserId: _ } = g({
+function E(e) {
+    let { user: t, activity: n, entry: a, onAction: o, isMenuOpen: c, appContext: u } = e,
+        { applicationId: f, sourceUserId: _ } = m({
             activity: n,
             entry: a,
             user: t,
         }),
-        p = (0, c.Z)({
+        p = (0, l.Z)({
             location: "UserProfileActivityContextMenu",
-            source: l.m1.UserProfileCardContextMenu,
-            trackEntryPointImpression: s,
-            applicationId: d,
+            source: s.m1.UserProfileCardContextMenu,
+            trackEntryPointImpression: c,
+            applicationId: f,
             sourceUserId: _,
             appContext: u,
         });
@@ -159,7 +154,7 @@ function b(e) {
         ? null
         : (0, r.jsx)(i.sNh, {
               id: "game-profile",
-              label: f.intl.string(f.t.ajHoOj),
+              label: d.intl.string(d.t.ajHoOj),
               action: (e) => {
                   null == o || o({ action: "PRESS_VIEW_GAME_PROFILE_MENU_ITEM" }), p(e);
               },

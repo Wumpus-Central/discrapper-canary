@@ -357,15 +357,16 @@ let j = {
             };
         return (o.displayName = "PlayStationModalWrapper"), o;
     },
-    GameProfileFeedbackModal: async () => {
-        let { default: e } = await n.e("46923").then(n.bind(n, 55396));
+    GameDetectionReportModal: async () => {
+        let { default: e } = await n.e("82077").then(n.bind(n, 953848));
         return (t) =>
             (0, a.jsx)(
                 e,
                 v(b({}, t), {
-                    applicationId: "123456789",
-                    viewId: "dev-tools-test",
-                    showOutdatedInfoOption: !0,
+                    detectedActivity: {
+                        application_id: "123456789",
+                        name: "Test Game",
+                    },
                 }),
             );
     },

@@ -60,20 +60,17 @@ function p(e, t) {
     );
 }
 function h(e) {
-    let { applicationId: t, className: n, viewId: d } = e,
-        _ = i.useRef(null),
-        h = (0, l.Z)({
+    let { applicationId: t, className: n } = e,
+        d = i.useRef(null),
+        _ = (0, l.Z)({
             id: t,
             label: u.intl.string(u.t["FfCL+/"]),
         }),
-        m = (0, c.M)({
-            applicationId: t,
-            viewId: d,
-        });
-    return null == h && null == m
+        h = (0, c.M)(t);
+    return null == _ && null == h
         ? null
         : (0, r.jsx)(o.yRy, {
-              targetElementRef: _,
+              targetElementRef: d,
               align: "top",
               position: "right",
               disablePointerEvents: !1,
@@ -87,7 +84,7 @@ function h(e) {
                       "aria-label": u.intl.string(u.t.PNeFgY),
                       onSelect: () => {},
                       children: (0, r.jsxs)(r.Fragment, {
-                          children: [(0, r.jsx)(o.kSQ, { children: h }), (0, r.jsx)(o.kSQ, { children: m })],
+                          children: [(0, r.jsx)(o.kSQ, { children: _ }), (0, r.jsx)(o.kSQ, { children: h })],
                       }),
                   });
               },
@@ -99,7 +96,7 @@ function h(e) {
                           p(
                               f(
                                   {
-                                      innerRef: _,
+                                      innerRef: d,
                                       className: n,
                                   },
                                   e,
