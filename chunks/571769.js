@@ -1,111 +1,110 @@
-n.d(t, { default: () => _ });
+n.d(e, { default: () => N });
 var s = n(951288),
-    r = n(647438),
-    a = n(660815),
-    i = n(793030),
-    l = n(442837),
-    o = n(198168),
-    c = n(481060),
-    d = n(494620),
-    p = n(572004),
+    i = n(647438),
+    r = n(120356),
+    a = n.n(r),
+    l = n(660815),
+    o = n(793030),
+    c = n(442837),
+    d = n(198168),
+    p = n(481060),
+    f = n(494620),
     u = n(905551),
-    f = n(60482),
-    x = n(986841),
-    m = n(948208),
-    h = n(388032),
-    v = n(71124);
-function _(e) {
-    let { guildId: t, instance: n, onClose: _, transitionState: I } = e,
-        C = (0, l.e7)([f.Z], () => {
-            var e;
-            return null == (e = f.Z.getStateForGuild(t)) ? void 0 : e.instructions[n.planId];
+    m = n(60482),
+    x = n(587065),
+    _ = n(986841),
+    h = n(948208),
+    v = n(388032),
+    I = n(71124);
+function N(t) {
+    let { guildId: e, instance: n, onClose: r, transitionState: N } = t,
+        j = (0, c.e7)([m.Z], () => {
+            var t;
+            return null == (t = m.Z.getStateForGuild(e)) ? void 0 : t.instructions[n.planId];
         });
-    r.useEffect(() => {
-        null == C && (0, u.iX)(t, n.planId);
-    }, [t, n.planId, C]);
-    let N = (0, x.Z)(n),
-        j = r.useCallback(() => {
-            (0, p.JG)(null != N ? N : ""),
-                (0, c.showToast)((0, c.createToast)(h.intl.string(h.t["+5kSoa"]), c.ToastType.SUCCESS));
-        }, [N]),
-        S = r.useMemo(() => {
+    i.useEffect(() => {
+        null == j && (0, u.iX)(e, n.planId);
+    }, [e, n.planId, j]);
+    let C = (0, _.Z)(n),
+        { handleCopyServerIp: S, animateCopyIcon: T } = (0, x.Z)(null != C ? C : ""),
+        g = i.useMemo(() => {
             switch (n.status) {
-                case a.V.STARTING:
-                    return h.intl.string(m.default.ud4hxc);
-                case a.V.OFFLINE:
-                    return h.intl.string(m.default["ABAm7+"]);
+                case l.V.STARTING:
+                    return v.intl.string(h.default.ud4hxc);
+                case l.V.OFFLINE:
+                    return v.intl.string(h.default["ABAm7+"]);
                 default:
                     return;
             }
         }, [n.status]);
-    return (0, s.jsx)(i.ExpressiveModal, {
+    return (0, s.jsx)(o.ExpressiveModal, {
         graphic: {
             type: "dynamic",
-            component: o.DynamicGraphicComponent.GAME_SERVER_GAME_INSTRUCTIONS_ASSET,
+            component: d.DynamicGraphicComponent.GAME_SERVER_GAME_INSTRUCTIONS_ASSET,
             props: { instance: n },
         },
         title: n.name,
-        subtitle: h.intl.string(m.default["4HqfaW"]),
+        subtitle: v.intl.string(h.default["4HqfaW"]),
         size: "md",
-        transitionState: I,
-        onClose: _,
+        transitionState: N,
+        onClose: r,
         children:
-            null == C
-                ? (0, s.jsx)(c.$jN, {})
+            null == j
+                ? (0, s.jsx)(p.$jN, {})
                 : (0, s.jsxs)("div", {
-                      className: v.content,
+                      className: I.content,
                       children: [
-                          null != S &&
-                              (0, s.jsx)(d.Z, {
-                                  className: v.infoBox,
-                                  children: S,
+                          null != g &&
+                              (0, s.jsx)(f.Z, {
+                                  className: I.infoBox,
+                                  children: g,
                               }),
                           (0, s.jsx)("div", {
-                              className: v.stepsContainer,
-                              children: C.map((e, t) =>
+                              className: I.stepsContainer,
+                              children: j.map((t, e) =>
                                   (0, s.jsxs)(
                                       "div",
                                       {
-                                          className: v.step,
+                                          className: I.step,
                                           children: [
                                               (0, s.jsx)("div", {
-                                                  className: v.stepNumber,
-                                                  children: (0, s.jsx)(c.Text, {
+                                                  className: I.stepNumber,
+                                                  children: (0, s.jsx)(p.Text, {
                                                       variant: "text-xs/semibold",
                                                       color: "text-secondary",
-                                                      children: h.intl.formatToPlainString(m.default.oSU1fH, {
-                                                          step: t + 1,
+                                                      children: v.intl.formatToPlainString(h.default.oSU1fH, {
+                                                          step: e + 1,
                                                       }),
                                                   }),
                                               }),
-                                              (0, s.jsx)(c.Text, {
+                                              (0, s.jsx)(p.Text, {
                                                   variant: "text-sm/normal",
                                                   color: "text-secondary",
-                                                  children: e,
+                                                  children: t,
                                               }),
                                           ],
                                       },
-                                      t,
+                                      e,
                                   ),
                               ),
                           }),
-                          null != N &&
+                          null != C &&
                               (0, s.jsxs)("div", {
-                                  className: v.serverIpContainer,
+                                  className: I.serverIpContainer,
                                   children: [
                                       (0, s.jsx)("div", {
-                                          className: v.serverIpInput,
-                                          children: (0, s.jsx)(c.Text, {
+                                          className: a()(I.serverIpInput, T && I.animate),
+                                          children: (0, s.jsx)(p.Text, {
                                               variant: "text-md/medium",
                                               color: "header-primary",
-                                              children: N,
+                                              children: C,
                                           }),
                                       }),
-                                      (0, s.jsx)(c.Button, {
-                                          variant: "primary",
-                                          text: h.intl.string(h.t.OpuAlJ),
-                                          onClick: j,
-                                          icon: c.TIy,
+                                      (0, s.jsx)(p.Button, {
+                                          variant: T ? "active" : "primary",
+                                          text: T ? v.intl.string(v.t["t5VZ8/"]) : v.intl.string(v.t.OpuAlJ),
+                                          onClick: S,
+                                          icon: p.TIy,
                                       }),
                                   ],
                               }),
