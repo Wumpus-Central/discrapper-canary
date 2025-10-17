@@ -1,6 +1,7 @@
 n.d(t, {
     cI: () => o,
     q3: () => a,
+    sI: () => s,
 });
 let r = (0, n(722733).Z)({
     name: "2025-10-soundboard-xp-3",
@@ -22,4 +23,7 @@ function a(e) {
 }
 function o(e) {
     return "top_sounds" === i(e).sortingStrategy;
+}
+function s(e) {
+    return "metrics_capture" === i(e).sortingStrategy;
 }
