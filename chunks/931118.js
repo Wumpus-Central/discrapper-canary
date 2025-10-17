@@ -1,7 +1,6 @@
 n.d(t, {
-    ZP: () => s,
+    ZP: () => o,
     tE: () => i,
-    xZ: () => o,
 });
 var r = n(722733),
     i = (function (e) {
@@ -45,5 +44,4 @@ let a = (0, r.Z)({
             },
         },
     }),
-    o = (e) => a.getConfig({ location: e }),
-    s = (e) => a.useConfig({ location: e });
+    o = (e) => a.useConfig({ location: e });

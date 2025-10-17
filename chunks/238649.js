@@ -34,14 +34,18 @@ let w = (e, t) => {
             L = (0, I.$)(),
             x = (0, E.Z)(),
             M = null != x,
-            j = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
-            { visibilityPercentageRef: k, visibilityPercentage: U } = (0, S.E)(!j),
+            k = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
+            { visibilityPercentageRef: j, visibilityPercentage: U } = (0, S.E)(!k),
             G = (0, s.e7)([_.Z], () => _.Z.affinities),
             B = !M && G.length > 0,
             { variant: Z } = (0, h.ZP)("PremiumBrandRefreshMarketingHeroHeading"),
             F = (0, g.N)(),
             V = (0, m.Ng)(),
-            H = f.Z.getAlmostExpiringTrialOffers([N.Si.TIER_2]).length > 0 && null != F && null != F.expires_at,
+            H =
+                f.Z.getAlmostExpiringTrialOffers([N.Si.TIER_2]).length > 0 &&
+                null != F &&
+                null != F.expires_at &&
+                F.trial_id !== N.a7,
             Y = f.Z.getAlmostExpiringDiscountOffers([N.Si.TIER_2]).length > 0 && null != V && null != V.expires_at,
             W = Z === h.tE.HERO_COUNTDOWN && (H || Y),
             K = H ? F.expires_at : Y ? V.expires_at : null;
@@ -52,7 +56,7 @@ let w = (e, t) => {
                 className: o()(P.container, W && P.containerWithOfferCountdown, n),
                 "data-testid": "marketing-page-hero-header",
                 children: (0, r.jsx)("div", {
-                    ref: k,
+                    ref: j,
                     children: (0, r.jsxs)("div", {
                         className: P.contentContainer,
                         children: [
