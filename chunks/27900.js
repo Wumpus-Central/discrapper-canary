@@ -93,8 +93,8 @@ function A(e) {
         D = (0, E.Z)(t.id),
         C = (0, j.Z)(t.id, a),
         w = (0, m.Z)({ user: t }),
-        N = (0, u.Z)(null, t),
-        T = (0, f.Z)({
+        T = (0, u.Z)(null, t),
+        N = (0, f.Z)({
             user: t,
             appContext: P,
         }),
@@ -127,9 +127,9 @@ function A(e) {
                             children: [A, I, M, x],
                         }),
                         (0, l.jsx)(r.kSQ, { children: D }),
-                        (0, l.jsx)(r.kSQ, { children: N }),
+                        (0, l.jsx)(r.kSQ, { children: T }),
                         (0, l.jsxs)(r.kSQ, {
-                            children: [C, w, T, U, k],
+                            children: [C, w, N, U, k],
                         }),
                         (0, l.jsx)(r.kSQ, { children: B }),
                     ],
@@ -166,11 +166,11 @@ function I(e) {
             user: t,
             appContext: g,
         }),
-        N = (0, Z.Z)({
+        T = (0, Z.Z)({
             user: t,
             appContext: g,
         }),
-        T = (0, s.Z)({
+        N = (0, s.Z)({
             id: t.id,
             label: h.intl.string(h.t["/AXYnJ"]),
         }),
@@ -192,11 +192,11 @@ function I(e) {
                         (0, l.jsx)(r.kSQ, { children: I }),
                         (0, l.jsx)(r.kSQ, { children: D }),
                         (0, l.jsxs)(r.kSQ, {
-                            children: [M, x, C, N, w],
+                            children: [M, x, C, T, w],
                         }),
                     ],
                 }),
-            (0, l.jsx)(r.kSQ, { children: T }),
+            (0, l.jsx)(r.kSQ, { children: N }),
         ],
     });
 }

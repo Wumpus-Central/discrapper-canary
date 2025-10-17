@@ -6,7 +6,7 @@ var n = r(951288),
     l = r(481060),
     s = r(985002),
     a = r(957656),
-    d = r(660886),
+    d = r(345909),
     u = r(388032),
     f = r(544723);
 let b = (e) => {
@@ -32,14 +32,14 @@ let b = (e) => {
                 p &&
                     (0, n.jsx)(l.M14, {
                         type: "critical",
-                        children: u.intl.string(d.default.tJAUyn),
+                        children: u.intl.string(d.default.tJAUys),
                     }),
                 (0, n.jsxs)(l.fef, {
                     children: [
                         (0, n.jsx)(a.Z.Header, {
                             currentUser: t,
                             otherUser: r,
-                            header: u.intl.string(d.default.teIRCR),
+                            header: u.intl.string(d.default.teIRCQ),
                             icon: (0, n.jsx)(l.Dio, {
                                 size: "md",
                                 color: "currentColor",
@@ -47,7 +47,7 @@ let b = (e) => {
                             }),
                         }),
                         (0, n.jsx)(a.Z.Content, {
-                            children: (0, n.jsx)(a.Z.Notice, { notice: u.intl.string(d.default.LcM8BS) }),
+                            children: (0, n.jsx)(a.Z.Notice, { notice: u.intl.string(d.default.LcM8BQ) }),
                         }),
                     ],
                 }),
@@ -56,7 +56,7 @@ let b = (e) => {
                     actions: [
                         {
                             variant: "secondary",
-                            text: u.intl.string(u.t["ETE/oC"]),
+                            text: u.intl.string(u.t["ETE/oK"]),
                             onClick: b,
                             disabled: O,
                         },

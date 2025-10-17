@@ -17,24 +17,24 @@ var r = n(951288),
     _ = n(224336),
     E = n(730749),
     O = n(666743),
-    y = n(115130),
-    v = n(812206),
+    v = n(115130),
+    y = n(812206),
     I = n(770146),
     C = n(600164),
     S = n(606081),
-    T = n(252618),
-    N = n(100159),
+    N = n(252618),
+    T = n(100159),
     P = n(646288),
     j = n(984370),
-    A = n(706454),
-    x = n(210887),
+    x = n(706454),
+    A = n(210887),
     Z = n(430824),
     w = n(496675),
     L = n(525395),
     R = n(558314),
     D = n(580130),
-    k = n(55563),
-    M = n(551428),
+    M = n(55563),
+    k = n(551428),
     U = n(695103),
     G = n(451478),
     B = n(626135),
@@ -190,7 +190,7 @@ class ef extends i.PureComponent {
                     location: r.location.page,
                     source: this._analyticsSource,
                 }),
-                (0, N.Z)(e, !0),
+                (0, T.Z)(e, !0),
             ),
         ),
             (this._trackedViewed = !0);
@@ -443,7 +443,7 @@ class ef extends i.PureComponent {
                   });
             return (0, r.jsxs)(i.Fragment, {
                 children: [
-                    (0, r.jsx)(T.yY, { location: e.name }),
+                    (0, r.jsx)(N.yY, { location: e.name }),
                     this.renderJsonLD(),
                     this.renderHeader(e, t),
                     (0, r.jsx)(J.Z, { game: e }),
@@ -455,7 +455,7 @@ class ef extends i.PureComponent {
             ? (0, r.jsxs)("div", {
                   className: ec.listingWrapper,
                   children: [
-                      (0, r.jsx)(T.yY, { location: e.name }),
+                      (0, r.jsx)(N.yY, { location: e.name }),
                       this.renderJsonLD(),
                       (0, r.jsx)(b.Z, {
                           section: ea.jXE.NAVIGATION,
@@ -469,7 +469,7 @@ class ef extends i.PureComponent {
               })
             : (0, r.jsxs)("div", {
                   children: [
-                      (0, r.jsx)(T.yY, { location: e.name }),
+                      (0, r.jsx)(N.yY, { location: e.name }),
                       this.renderJsonLD(),
                       this.renderHeader(e, t),
                       this.renderListing(),
@@ -491,7 +491,7 @@ class ef extends i.PureComponent {
                 null != r &&
                     B.default.track(
                         ea.rMx.STORE_LISTING_MEDIA_SCROLLED,
-                        ep(ed({}, (0, N.Z)(r)), {
+                        ep(ed({}, (0, T.Z)(r)), {
                             card_index: n,
                             card_type: e.type === ea.s9s.IMG ? "image" : "video",
                         }),
@@ -651,29 +651,29 @@ class ef extends i.PureComponent {
 }
 let eh = (0, E.Z)(
     (0, O.Z)(
-        o.ZP.connectStores([R.Z, x.Z, A.default, G.Z, M.Z, k.Z, U.Z, y.Z, v.Z, L.Z, Z.Z, D.Z], (e) => {
+        o.ZP.connectStores([R.Z, A.Z, x.default, G.Z, k.Z, M.Z, U.Z, v.Z, y.Z, L.Z, Z.Z, D.Z], (e) => {
             let t,
                 n,
                 r,
                 { inputSkuId: i, applicationId: l, storeListingId: a, isAuthenticated: o, channel: s } = e;
             if (null == l) {
                 if (null == i) throw Error("Needs applicationId or skuId");
-                (t = i), null != (l = null != (n = k.Z.get(i)) ? n.applicationId : null) && (r = v.Z.getApplication(l));
+                (t = i), null != (l = null != (n = M.Z.get(i)) ? n.applicationId : null) && (r = y.Z.getApplication(l));
             } else if (null == i) {
                 if (null == l) throw Error("Needs applicationId or skuId");
-                null != (r = v.Z.getApplication(l)) && (t = r.destinationSkuId), (n = null != t ? k.Z.get(t) : null);
+                null != (r = y.Z.getApplication(l)) && (t = r.destinationSkuId), (n = null != t ? M.Z.get(t) : null);
             }
             (null == n ? void 0 : n.flags) != null && (0, V.yE)(n.flags, ea.l4R.STICKER) && (n = null);
-            let c = null != l && (U.Z.inTestModeForApplication(l) || y.Z.inDevModeForApplication(l));
+            let c = null != l && (U.Z.inTestModeForApplication(l) || v.Z.inDevModeForApplication(l));
             return {
                 skuId: t,
-                application: null != l ? v.Z.getApplication(l) : null,
+                application: null != l ? y.Z.getApplication(l) : null,
                 isFetchingEntitlements: null != l && D.Z.applicationIdsFetching.has(l),
                 didFetchEntitlements: null != l && D.Z.applicationIdsFetched.has(l),
                 shouldFetchStatistics: o && null != l && L.Z.shouldFetchStatisticsForApplication(l),
                 sku: n,
                 isFocused: G.Z.isFocused(),
-                storeListing: M.Z.getStoreListing({
+                storeListing: k.Z.getStoreListing({
                     storeListingId: a,
                     skuId: t,
                     channelId: null != s ? s.id : null,
@@ -681,8 +681,8 @@ let eh = (0, E.Z)(
                 }),
                 isInTestMode: null != l && c,
                 matureAgree: R.Z.didMatureAgree,
-                theme: x.Z.theme,
-                locale: A.default.locale,
+                theme: A.Z.theme,
+                locale: x.default.locale,
                 guild: null != s ? Z.Z.getGuild(s.getGuildId()) : null,
             };
         })(ef),

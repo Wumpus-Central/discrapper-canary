@@ -1,7 +1,7 @@
 n.d(t, { Z: () => h });
 var r = n(951288),
     i = n(647438),
-    l = n(599273),
+    l = n(258536),
     a = n(442837),
     o = n(780384),
     c = n(481060),
@@ -36,12 +36,12 @@ function m(e) {
     }
     return e;
 }
-let b = { visibility: "hidden" },
+let g = { visibility: "hidden" },
     E = {
         precision: 0.0001,
         duration: 300,
     },
-    g = {
+    b = {
         tension: 150,
         friction: 20,
         precision: 0.0001,
@@ -65,7 +65,7 @@ function h(e) {
     );
     let j = (e) => {
             let t = null == y ? void 0 : y.getBoundingClientRect();
-            if (((w.current = t), e.timestamp !== I || null == t || n)) return b;
+            if (((w.current = t), e.timestamp !== I || null == t || n)) return g;
             let { top: r, left: i } = t;
             return {
                 top: r + 36,
@@ -105,7 +105,7 @@ function h(e) {
                                   var e;
                                   let t = null == (e = S.current) ? void 0 : e.getBoundingClientRect();
                                   return null == t || n
-                                      ? b
+                                      ? g
                                       : {
                                             width: t.width,
                                             height: t.height,
@@ -140,7 +140,7 @@ function h(e) {
                             })(),
                         ),
                 ),
-                config: h.enabled ? v : g,
+                config: h.enabled ? v : b,
                 onRest: (e, t) => {
                     null != t.item &&
                         null != C.find((e) => e.timestamp === t.item.timestamp) &&

@@ -3,8 +3,8 @@ var a = n(951288),
     r = n(647438),
     i = n(481060),
     l = n(373071),
-    s = n(637443),
-    o = n(619899),
+    o = n(637443),
+    s = n(619899),
     c = n(18868),
     d = n(281598),
     u = n(206878),
@@ -52,38 +52,38 @@ let h = [
         label: "[preview all]",
         value: null,
     },
-    b = () => {
-        (0, i.nfh)(s.g)
-            ? (0, i.Mr3)(s.g)
+    g = () => {
+        (0, i.nfh)(o.g)
+            ? (0, i.Mr3)(o.g)
             : (0, i.ZDy)(
                   async () => {
                       let { ShopAssetsPreviewInstructionModal: e } = await Promise.resolve().then(n.bind(n, 637443));
                       return (t) => (0, a.jsx)(e, p({}, t));
                   },
                   {
-                      modalKey: s.g,
-                      onCloseRequest: () => (0, i.Mr3)(s.g),
+                      modalKey: o.g,
+                      onCloseRequest: () => (0, i.Mr3)(o.g),
                   },
               );
     },
-    g = () => {
-        (0, i.nfh)(s.c)
-            ? (0, i.Mr3)(s.c)
+    b = () => {
+        (0, i.nfh)(o.c)
+            ? (0, i.Mr3)(o.c)
             : (0, i.ZDy)(
                   async () => {
                       let { ShopPFXPreviewInstructionModal: e } = await Promise.resolve().then(n.bind(n, 637443));
                       return (t) => (0, a.jsx)(e, p({}, t));
                   },
                   {
-                      modalKey: s.c,
-                      onCloseRequest: () => (0, i.Mr3)(s.c),
+                      modalKey: o.c,
+                      onCloseRequest: () => (0, i.Mr3)(o.c),
                   },
               );
     },
     v = () => {
         let e = (0, l.lb)(),
-            { previewProfileEffectSkuId: t, setPreviewProfileEffectSkuId: n } = (0, o.N9)(),
-            s = r.useMemo(
+            { previewProfileEffectSkuId: t, setPreviewProfileEffectSkuId: n } = (0, s.N9)(),
+            o = r.useMemo(
                 () => [
                     x,
                     ...e.map((e) => ({
@@ -107,14 +107,14 @@ let h = [
                         (0, a.jsx)(i.hU, {
                             variant: "icon-only",
                             size: "sm",
-                            onClick: g,
+                            onClick: b,
                             icon: i.idN,
                             "aria-label": "Open PFX preview instructions",
                         }),
                     ],
                 }),
                 (0, a.jsx)(i.q4e, {
-                    options: s,
+                    options: o,
                     value: t,
                     maxVisibleItems: 30,
                     onChange: (e) => n(e),
@@ -123,8 +123,8 @@ let h = [
         });
     },
     j = () => {
-        let { previewAvatarDecorationSkuId: e, setPreviewAvatarDecorationSkuId: t } = (0, o.N9)(),
-            { avatarDecorationAssets: n } = (0, o.xq)(),
+        let { previewAvatarDecorationSkuId: e, setPreviewAvatarDecorationSkuId: t } = (0, s.N9)(),
+            { avatarDecorationAssets: n } = (0, s.xq)(),
             l = r.useMemo(
                 () => [
                     f,
@@ -156,8 +156,8 @@ let h = [
     },
     _ = (e) => {
         let { clearAssets: t, clearIgnoredFiles: n } = e,
-            { collectionAssets: l } = (0, o.xq)(),
-            { deleteCollectionAsset: s, clearAssets: c } = (0, o.N9)(),
+            { collectionAssets: l } = (0, s.xq)(),
+            { deleteCollectionAsset: o, clearAssets: c } = (0, s.N9)(),
             d = r.useMemo(
                 () =>
                     Object.values(l).map((e) => ({
@@ -166,7 +166,7 @@ let h = [
                     })),
                 [l],
             ),
-            u = r.useCallback((e) => s(e), [s]),
+            u = r.useCallback((e) => o(e), [o]),
             p = r.useCallback(() => {
                 c(), t(), n();
             }, [c, t, n]);
@@ -258,10 +258,10 @@ let h = [
               });
     },
     C = () => {
-        let { validateShopAssetPackage: e, reset: t, validationComplete: n, warnings: l, errors: s } = (0, u.g)(),
-            o = Object.entries(s),
+        let { validateShopAssetPackage: e, reset: t, validationComplete: n, warnings: l, errors: o } = (0, u.g)(),
+            s = Object.entries(o),
             d = Object.entries(l),
-            p = o.length > 0,
+            p = s.length > 0,
             h = d.length > 0,
             x = r.useCallback(
                 (n) => {
@@ -279,7 +279,7 @@ let h = [
                               (0, a.jsx)(i.Text, {
                                   variant: "text-md/normal",
                                   color: p ? "text-danger" : "text-default",
-                                  children: "".concat(o.length, " errors"),
+                                  children: "".concat(s.length, " errors"),
                               }),
                               (0, a.jsx)(i.Text, {
                                   variant: "text-md/normal",
@@ -309,7 +309,7 @@ let h = [
                             (0, a.jsx)(i.LZC, { size: 8 }),
                             (0, a.jsx)("ul", {
                                 className: m.validationIssuesList,
-                                children: o.map((e, t) => {
+                                children: s.map((e, t) => {
                                     let [n, r] = e;
                                     return (0, a.jsxs)(
                                         "li",
@@ -395,8 +395,8 @@ let h = [
         });
     },
     S = () => {
-        let { previewEnabled: e, setPreviewEnabled: t, clearAssets: n } = (0, o.N9)(),
-            { ignoredFilenames: l, clearAssets: s, clearIgnoredFilenames: u, processAndUpsertAssets: p } = (0, d.hm)(),
+        let { previewEnabled: e, setPreviewEnabled: t, clearAssets: n } = (0, s.N9)(),
+            { ignoredFilenames: l, clearAssets: o, clearIgnoredFilenames: u, processAndUpsertAssets: p } = (0, d.hm)(),
             h = r.useCallback(
                 (e) => {
                     n(), p(e);
@@ -424,7 +424,7 @@ let h = [
                         (0, a.jsx)(i.hU, {
                             variant: "icon-only",
                             size: "sm",
-                            onClick: b,
+                            onClick: g,
                             icon: i.idN,
                             "aria-label": "Open preview instructions",
                         }),
@@ -433,7 +433,7 @@ let h = [
                 (0, a.jsx)(v, {}),
                 (0, a.jsx)(j, {}),
                 (0, a.jsx)(_, {
-                    clearAssets: s,
+                    clearAssets: o,
                     clearIgnoredFiles: u,
                 }),
                 (0, a.jsx)(y, {

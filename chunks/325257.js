@@ -21,7 +21,7 @@ var r = n(951288),
     j = n(771845),
     x = n(727258),
     C = n(276952),
-    E = n(666676),
+    E = n(249792),
     S = n(40153),
     I = n(593618),
     P = n(252686),
@@ -90,7 +90,7 @@ function M(e, t) {
             n.e("51453"),
             n.e("7654"),
             n.e("845"),
-            n.e("87641"),
+            n.e("86736"),
             n.e("6850"),
             n.e("58227"),
             n.e("44686"),
@@ -110,8 +110,8 @@ let k = i.memo(function (e) {
             guildNode: G,
             setRef: U,
             onDragStart: B,
-            onDragEnd: V,
-            route: F,
+            onDragEnd: F,
+            route: V,
             guild: H,
             animatable: z,
             selected: W = !1,
@@ -148,7 +148,7 @@ let k = i.memo(function (e) {
                 }
             ),
             end() {
-                null == V || V(), (0, g.V1)(j.ZP.getCompatibleGuildFolders());
+                null == F || F(), (0, g.V1)(j.ZP.getCompatibleGuildFolders());
             },
             collect: (e) => ({ dragging: e.isDragging() }),
         }),
@@ -160,14 +160,14 @@ let k = i.memo(function (e) {
         [ev] = i.useState(() => new d.sW(70, () => ey(!0)));
     i.useEffect(() => () => ev.cancel(), [ev]);
     let ej = i.useCallback(() => {
-            if (null != F) return void (0, _.uL)(F, { state: L });
+            if (null != V) return void (0, _.uL)(V, { state: L });
             (0, O.X)(eo, { state: L });
-        }, [eo, F]),
+        }, [eo, V]),
         ex = i.useCallback(() => {
-            if (null != F || null == H || q || !et) return;
+            if (null != V || null == H || q || !et) return;
             let e = (0, b.V)(H.id);
             null != e && f.Z.preload(H.id, e);
-        }, [F, H, q, et]),
+        }, [V, H, q, et]),
         eC = (0, u.e7)([v.ZP], () => v.ZP.isCurrentUserGuest(eo)),
         eE = i.useCallback(
             (e) => {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -15,18 +15,18 @@ var r = n(951288),
     m = n(118470),
     b = n(413307),
     _ = n(374023),
-    O = n(661599),
-    E = n(617899),
+    E = n(661599),
+    O = n(617899),
     v = n(8521),
     y = n(760326),
     I = n(785203),
     C = n(652785),
     S = n(921944);
-let T = new Set([a.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, a.z.CHANNEL_NOTICE_GUILD_BANNER]);
-function N(e) {
+let N = new Set([a.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, a.z.CHANNEL_NOTICE_GUILD_BANNER]);
+function T(e) {
     e.stopPropagation();
 }
-function j(e) {
+function P(e) {
     var t;
     let { guild: n } = e,
         [p, h] = i.useState(null != (t = o.K.get(C.Iv)) ? t : 0),
@@ -35,7 +35,7 @@ function j(e) {
             () =>
                 C.XN.filter((e) => {
                     let { dismissibleContentType: t, store: r } = e;
-                    return !0 === (null == r ? void 0 : r.channelNoticePredicate(n, p)) && !T.has(t);
+                    return !0 === (null == r ? void 0 : r.channelNoticePredicate(n, p)) && !N.has(t);
                 }).map((e) => e.dismissibleContentType),
             [n, p],
         );
@@ -56,7 +56,7 @@ function j(e) {
                                 markAsDismissed: l,
                             });
                         case a.z.CHANNEL_NOTICE_INVITE:
-                            return (0, r.jsx)(E.Z, {
+                            return (0, r.jsx)(O.Z, {
                                 guild: n,
                                 markAsDismissed: l,
                             });
@@ -87,13 +87,13 @@ function j(e) {
             return null == c
                 ? null
                 : (0, r.jsx)("div", {
-                      onContextMenu: N,
+                      onContextMenu: T,
                       children: c,
                   });
         },
     });
 }
-let P = (e) => {
+let j = (e) => {
     let { guild: t } = e;
     switch ((0, I.Z)(t)) {
         case I.R.ENABLE_PUBLIC_GUILD:
@@ -103,7 +103,7 @@ let P = (e) => {
         case I.R.GUILD_LIVE_CHANNEL:
             return (0, r.jsx)(p.ZP, { guild: t });
         case I.R.GUILD_MFA_WARNING:
-            return (0, r.jsx)(O.Z, { guild: t });
+            return (0, r.jsx)(E.Z, { guild: t });
         case I.R.COMMANDS_MIGRATION:
             return (0, r.jsx)(g.Z, { guild: t });
         case I.R.APPLICATION_SUBSCRIPTION_EXPIRATION:
@@ -111,5 +111,5 @@ let P = (e) => {
         case I.R.HUB_STUDY_ROOM:
             return (0, r.jsx)(h.Z, { guild: t });
     }
-    return _.s.isDisallowPopupsSet() ? null : (0, r.jsx)(j, { guild: e.guild });
+    return _.s.isDisallowPopupsSet() ? null : (0, r.jsx)(P, { guild: e.guild });
 };

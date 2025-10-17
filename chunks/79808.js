@@ -1,11 +1,11 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var r = n(951288),
     l = n(647438),
     o = n(493773),
     i = n(996733),
     a = n(636298),
-    s = n(404975),
-    c = n(924052),
+    c = n(404975),
+    s = n(924052),
     u = n(59662),
     d = n(996435),
     f = n(990757);
@@ -34,7 +34,7 @@ function b(e) {
     }
     return e;
 }
-function m(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -52,89 +52,89 @@ function m(e, t) {
         e
     );
 }
-function v(e) {
+function y(e) {
     var t;
     let {
             root: n,
-            directory: v,
-            target: p,
-            defaultTarget: j,
-            onClose: x,
-            sidebarHeader: y,
+            directory: y,
+            target: j,
+            defaultTarget: m,
+            onClose: v,
+            sidebarHeader: g,
             sidebarFooter: h,
-            onPanelChange: g,
-            emptyState: O,
+            onPanelChange: O,
+            emptyState: x,
         } = e,
-        C = null != p ? p : j;
+        P = null != j ? j : m;
     (0, o.ZP)(() => {
         var e;
-        let t = null == (e = v.entry(C)) ? void 0 : e.targetPanel;
+        let t = null == (e = y.entry(P)) ? void 0 : e.targetPanel;
         return (
             d.Z.setState({
-                targetKey: C,
+                targetKey: P,
                 currentPanel: t,
-                showNavigationMobile: null == p,
+                showNavigationMobile: null == j,
             }),
             () => d.Z.resetState()
         );
     });
     let S = d.Z.useField("currentPanel"),
-        P = d.Z.useField("targetKey"),
-        [_, N] = l.useState(() => v.typedGet(S)),
+        C = d.Z.useField("targetKey"),
+        [_, w] = l.useState(() => y.typedGet(S)),
         E = l.useCallback(() => k(void 0), []),
-        [T, k] = l.useState({
-            target: C,
-            targetAccordion: null == (t = v.entry(C)) ? void 0 : t.parentAccordion,
+        [N, k] = l.useState({
+            target: P,
+            targetAccordion: null == (t = y.entry(P)) ? void 0 : t.parentAccordion,
             animateScroll: !1,
             complete: E,
         }),
-        { navigateWithValidation: Z } = (0, c.Cu)();
+        { navigateWithValidation: T } = (0, s.Cu)();
     l.useEffect(() => {
-        if (null == P) return;
-        let e = v.entry(P);
+        if (null == C) return;
+        let e = y.entry(C);
         if (null == e) return void i.Z.setState({ query: "" });
         if (null == e.targetPanel) return void d.Z.setState({ targetKey: void 0 });
         let t = {
-            target: P,
+            target: C,
             targetAccordion: e.parentAccordion,
             complete: E,
         };
         if (e.targetPanel.key !== (null == S ? void 0 : S.key)) {
             let n = e.targetPanel;
-            Z(() => {
+            T(() => {
                 d.Z.setState({
                     targetKey: void 0,
                     currentPanel: n,
                     showNavigationMobile: !1,
                 }),
-                    k(m(b({}, t), { animateScroll: !1 })),
-                    N(n),
-                    null == g || g(n.key);
+                    k(p(b({}, t), { animateScroll: !1 })),
+                    w(n),
+                    null == O || O(n.key);
             });
-        } else k(m(b({}, t), { animateScroll: !0 })), d.Z.setState({ targetKey: void 0 });
-    }, [S, P, E, v, Z, g]);
-    let w = l.useMemo(() => ({ navTransition: T }), [T]),
-        I = () => Z(x);
+        } else k(p(b({}, t), { animateScroll: !0 })), d.Z.setState({ targetKey: void 0 });
+    }, [S, C, E, y, T, O]);
+    let Z = l.useMemo(() => ({ navTransition: N }), [N]),
+        D = () => T(v);
     return (0, r.jsx)(u.j.Provider, {
-        value: w,
+        value: Z,
         children: (0, r.jsxs)("div", {
             className: f.container,
             children: [
-                (0, r.jsx)(s.P, {
+                (0, r.jsx)(c.P, {
                     root: n,
-                    header: y,
+                    header: g,
                     footer: h,
-                    onClose: I,
-                    emptyState: O,
+                    onClose: D,
+                    emptyState: x,
                 }),
                 (0, r.jsx)(a.Z, {
-                    onClose: I,
+                    onClose: D,
                     setting: null != S ? S : _,
                 }),
             ],
         }),
     });
 }
-function p(e) {
-    return (0, r.jsx)(c.Ri, { children: (0, r.jsx)(v, b({}, e)) });
+function j(e) {
+    return (0, r.jsx)(s.Ri, { children: (0, r.jsx)(y, b({}, e)) });
 }

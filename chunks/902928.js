@@ -1,58 +1,58 @@
 n.d(t, { u: () => f });
-var a = n(951288),
-    r = n(647438),
-    o = n(159277),
-    i = n(481060),
-    l = n(713938),
-    s = n(388032),
+var r = n(951288),
+    a = n(647438),
+    i = n(159277),
+    o = n(481060),
+    s = n(713938),
+    l = n(388032),
     c = n(359059),
     d = n(942605),
     u = n(534345);
 let f = (e) => {
     let { onComplete: t, data: n } = e,
-        f = (0, r.useId)(),
-        h = null,
+        f = (0, a.useId)(),
         p = null,
-        x = n.scopes.some((e) => (0, l.sg)(e));
+        h = null,
+        x = n.scopes.some((e) => (0, s.sg)(e));
     return (
-        n.clientId === o.t.PLAYSTATION_APPLICATION_ID || n.clientId === o.t.PLAYSTATION_STAGING_APPLICATION_ID
-            ? (h = d.Z)
-            : x && (h = u.Z),
-        null != n.twoWayLinkCode ? (p = s.intl.string(s.t.QhATl5)) : x && (p = s.intl.string(s.t.vBPvKy)),
-        (0, a.jsxs)("div", {
+        n.clientId === i.t.PLAYSTATION_APPLICATION_ID || n.clientId === i.t.PLAYSTATION_STAGING_APPLICATION_ID
+            ? (p = d.Z)
+            : x && (p = u.Z),
+        null != n.twoWayLinkCode ? (h = l.intl.string(l.t.QhATl5)) : x && (h = l.intl.string(l.t.vBPvKy)),
+        (0, r.jsxs)("div", {
             className: c.content,
             children: [
-                null != h
-                    ? (0, a.jsx)("img", {
-                          src: h,
+                null != p
+                    ? (0, r.jsx)("img", {
+                          src: p,
                           className: c.artwork,
                           alt: "",
                           "aria-labelledby": f,
                       })
                     : null,
-                (0, a.jsxs)("div", {
+                (0, r.jsxs)("div", {
                     className: c.innerContent,
                     children: [
-                        (0, a.jsx)(i.Heading, {
+                        (0, r.jsx)(o.Heading, {
                             variant: "heading-xl/extrabold",
                             id: f,
-                            children: s.intl.string(s.t.qDtJmJ),
+                            children: l.intl.string(l.t.qDtJmJ),
                         }),
-                        null != p
-                            ? (0, a.jsx)(i.Text, {
+                        null != h
+                            ? (0, r.jsx)(o.Text, {
                                   variant: "text-md/normal",
                                   color: "header-secondary",
-                                  children: p,
+                                  children: h,
                               })
                             : null,
                     ],
                 }),
-                (0, a.jsx)("div", {
+                (0, r.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
                     className: c.footerButton,
-                    children: (0, a.jsx)(i.Button, {
+                    children: (0, r.jsx)(o.Button, {
                         variant: "primary",
-                        text: s.intl.string(s.t.i4jeWV),
+                        text: l.intl.string(l.t.i4jeWV),
                         onClick: t,
                     }),
                 }),

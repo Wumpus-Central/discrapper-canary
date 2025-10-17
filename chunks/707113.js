@@ -3,7 +3,7 @@ var l = n(951288),
     r = n(647438),
     i = n(120356),
     a = n.n(i),
-    s = n(599273),
+    s = n(258536),
     o = n(399606),
     c = n(481060),
     d = n(201070),
@@ -41,29 +41,29 @@ function g(e) {
             [s],
         ),
         E = (0, m.xb)(_, v, p),
-        N = r.useRef(null),
         S = r.useRef(null),
-        T = r.useCallback(() => {
+        T = r.useRef(null),
+        N = r.useCallback(() => {
             var e;
-            null == (e = N.current) || e.resetSearchText();
+            null == (e = S.current) || e.resetSearchText();
         }, []);
     return (0, l.jsx)("div", {
         className: a()(h.mainTableContainer, n),
         children: (0, l.jsxs)(c.Den, {
             className: h.horizatonalScroller,
-            ref: S,
+            ref: T,
             orientation: "horizontal",
             children: [
                 (0, l.jsx)(b.Z, {
                     guild: t,
-                    ref: N,
+                    ref: S,
                 }),
                 (0, l.jsx)(f, { guild: t }),
                 (0, l.jsx)(x.Z, {
                     guild: t,
                     onSelectRow: C,
                     searchState: E,
-                    onResetForNewMembers: T,
+                    onResetForNewMembers: N,
                 }),
                 E !== m.po.SUCCESS_STILL_INDEXING &&
                     (0, l.jsx)(j.Z, {

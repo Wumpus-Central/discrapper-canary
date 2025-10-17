@@ -32,8 +32,8 @@ var r,
     L = n(430824),
     x = n(853872),
     M = n(509545),
-    j = n(230307),
-    k = n(259580),
+    k = n(230307),
+    j = n(259580),
     U = n(572004),
     G = n(55935),
     B = n(630388),
@@ -728,9 +728,9 @@ class ep extends (r = a.PureComponent) {
                                             className: z.amount,
                                             children: [this.renderStatus(), this.renderPrice()],
                                         }),
-                                        (0, i.jsx)(k.Z, {
+                                        (0, i.jsx)(j.Z, {
                                             className: z.expand,
-                                            direction: r ? k.Z.Directions.UP : k.Z.Directions.DOWN,
+                                            direction: r ? j.Z.Directions.UP : j.Z.Directions.DOWN,
                                         }),
                                     ],
                                 }),
@@ -830,10 +830,10 @@ function eh(e) {
             applicationStatistics: p,
             gameApplication: h,
             paymentSources: g,
-        } = (0, f.cj)([x.Z, j.Z, m.Z], () => {
+        } = (0, f.cj)([x.Z, k.Z, m.Z], () => {
             var e, t;
             return {
-                applicationStatistics: null != u ? j.Z.getCurrentUserStatisticsForApplication(u) : null,
+                applicationStatistics: null != u ? k.Z.getCurrentUserStatisticsForApplication(u) : null,
                 gameApplication:
                     null != (t = m.Z.getApplication(null != u ? u : ""))
                         ? t

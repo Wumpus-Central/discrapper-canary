@@ -3,10 +3,10 @@ n.d(t, {
     Rq: () => m,
     So: () => b,
     Su: () => _,
-    YZ: () => p,
+    YZ: () => h,
     _Q: () => j,
     bF: () => f,
-    c$: () => h,
+    c$: () => p,
     kx: () => g,
 });
 var r = n(954955),
@@ -18,7 +18,7 @@ var r = n(954955),
     c = n(866112),
     d = n(75666),
     u = n(981631);
-let h = i()(async (e, t) => {
+let p = i()(async (e, t) => {
         try {
             s.Z.dispatch({ type: "GUILD_DIRECTORY_FETCH_START" });
             let n = await a.tn.get({
@@ -35,7 +35,7 @@ let h = i()(async (e, t) => {
             s.Z.dispatch({ type: "GUILD_DIRECTORY_FETCH_FAILURE" });
         }
     }, 200),
-    p = i()(async (e) => {
+    h = i()(async (e) => {
         try {
             let t = await a.tn.get({
                 url: u.ANM.DIRECTORY_CHANNEL_CATEGORY_COUNTS(e),

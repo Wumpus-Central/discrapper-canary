@@ -19,17 +19,17 @@ var r = n(951288),
     m = n(609174),
     b = n(257966),
     _ = n(111666),
-    O = n(300986),
-    E = n(314451),
+    E = n(300986),
+    O = n(314451),
     v = n(35583),
     y = n(821020),
     I = n(340137),
-    S = n(522474),
-    C = n(141321),
-    T = n(984802),
-    N = n(451478),
-    j = n(998502),
-    P = n(228488),
+    C = n(522474),
+    S = n(141321),
+    N = n(984802),
+    T = n(451478),
+    P = n(998502),
+    j = n(228488),
     x = n(403497),
     A = n(950796),
     Z = n(741764),
@@ -46,7 +46,7 @@ function R(e) {
 }
 let D = i.memo(function () {
     i.useLayoutEffect(() => {
-        j.ZP.setMinimumSize(Z.J, Z.N);
+        P.ZP.setMinimumSize(Z.J, Z.N);
     }, []);
     let { notificationCenterVariant: e, entrypoint: t } = (0, y.pN)({ location: "AppTitleBar" }),
         { titlebarFastTravel: n, quickSwitcherInsteadOfTitle: l } = (0, g.t)({ location: "AppTitleBar" }),
@@ -54,12 +54,12 @@ let D = i.memo(function () {
         { hasBugReporterAccess: x } = u.Z.useExperiment({ location: "HeaderBar" }, { autoTrackExposure: !1 }),
         { enabled: L } = d.c.useConfig({ location: "AppTitleBar" }),
         D = null !== e && t === y.u3.TITLE_BAR_LEFT,
-        k = null === e;
+        M = null === e;
     i.useLayoutEffect(() => {
-        j.ZP.setMinimumSize(Z.J, Z.N);
+        P.ZP.setMinimumSize(Z.J, Z.N);
     }, []);
-    let M = (0, T.Ll)(),
-        U = (0, s.e7)([N.Z, S.Z], () => (0, P.rB)()),
+    let k = (0, N.Ll)(),
+        U = (0, s.e7)([T.Z, C.Z], () => (0, j.rB)()),
         G = (function (e) {
             let {
                 showBackForwardButtons: t,
@@ -84,14 +84,14 @@ let D = i.memo(function () {
             showBackForwardButtons: o,
             showNotificationsInbox: D,
             titlebarFastTravel: n,
-            showRecentsButton: k,
+            showRecentsButton: M,
         });
     if (U) return null;
     let B = a()(w.button, { [w.smallButton]: "sm" === b });
     return (0, r.jsx)(c.Wdt, {
         children: (e) =>
             (0, r.jsx)(c.f6W, {
-                theme: M,
+                theme: k,
                 children: (t) => {
                     var i, a;
                     return (0, r.jsx)(A.TF, {
@@ -118,9 +118,9 @@ let D = i.memo(function () {
                                     canShowReminder: !0,
                                     className: B,
                                 }),
-                                k &&
+                                M &&
                                     (0, r.jsx)(
-                                        C.Z,
+                                        S.Z,
                                         ((i = (function (e) {
                                             for (var t = 1; t < arguments.length; t++) {
                                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -162,11 +162,11 @@ let D = i.memo(function () {
                                         i),
                                     ),
                                 x
-                                    ? (0, r.jsx)(E.Z, {
+                                    ? (0, r.jsx)(O.Z, {
                                           focusSectionProps: "HELP" === G ? e : void 0,
                                           className: B,
                                       })
-                                    : (0, r.jsx)(O.Z, {
+                                    : (0, r.jsx)(E.Z, {
                                           focusSectionProps: "HELP" === G ? e : void 0,
                                           className: B,
                                       }),

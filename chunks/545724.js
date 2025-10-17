@@ -60,16 +60,16 @@ let g = function (e) {
             channel: m,
             onClick: b,
             isFocused: _,
-            isActive: O,
-            onOtherHover: E,
+            isActive: E,
+            onOtherHover: O,
             className: v,
         } = e,
         [y, I] = i.useState(!1),
         [C, S] = i.useState(!1),
-        T = () => {
-            I(!0), !_ || O || C || null == E || E();
-        },
         N = () => {
+            I(!0), !_ || E || C || null == O || O();
+        },
+        T = () => {
             I(!1);
         };
     return (0, r.jsx)(s.mh, {
@@ -86,7 +86,7 @@ let g = function (e) {
                         f(
                             {
                                 className: a()(p.messageRequestItem, v, {
-                                    [p.active]: O || C,
+                                    [p.active]: E || C,
                                     [p.firstItem]: 0 === t,
                                 }),
                                 onContextMenu: (e) => {
@@ -108,8 +108,8 @@ let g = function (e) {
                                             },
                                         ));
                                 },
-                                onMouseEnter: T,
-                                onMouseLeave: N,
+                                onMouseEnter: N,
+                                onMouseLeave: T,
                                 onClick: null != b ? b : void 0,
                                 style: {
                                     LIST_ROW_HEIGHT: d.WN,
@@ -118,7 +118,7 @@ let g = function (e) {
                             },
                             e,
                         ),
-                        { children: l(y || O || C) },
+                        { children: l(y || E || C) },
                     ),
                 ),
             }),

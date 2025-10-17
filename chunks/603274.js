@@ -10,14 +10,14 @@ var i = n(120356),
     u = n(481060),
     d = n(456100),
     p = n(317381),
-    h = n(884338),
-    f = n(565799),
+    f = n(884338),
+    h = n(565799),
     g = n(501655),
     m = n(199902),
     b = n(592125),
     _ = n(594174),
-    y = n(938475),
-    O = n(823379),
+    O = n(938475),
+    y = n(823379),
     v = n(709054),
     j = n(853856),
     x = n(981631),
@@ -33,7 +33,7 @@ function S(e, t) {
                       className: E.activityIcon,
                       color: "currentColor",
                   }),
-                  (0, r.jsx)(h.ZP, {
+                  (0, r.jsx)(f.ZP, {
                       guildId: void 0,
                       users: t,
                       max: 6,
@@ -46,25 +46,25 @@ function I() {
             v.default
                 .keys(j.Z.getFavoriteChannels())
                 .map((e) => b.Z.getChannel(e))
-                .filter(O.lm),
+                .filter(y.lm),
         ),
         t = e.map((e) => e.id),
         n = e.filter((e) => e.type === x.d4z.GUILD_VOICE),
         i = e.filter((e) => e.type === x.d4z.GUILD_STAGE_VOICE).map((e) => e.id),
         l = (0, s.Wu)(
-            [y.ZP],
+            [O.ZP],
             () =>
                 a().flatMap(n, (e) =>
-                    y.ZP.getVoiceStatesForChannel(e).map((e) => {
+                    O.ZP.getVoiceStatesForChannel(e).map((e) => {
                         let { user: t } = e;
                         return t;
                     }),
                 ),
             [n],
         ),
-        o = (0, s.Wu)([f.Z], () =>
+        o = (0, s.Wu)([h.Z], () =>
             a().flatMap(i, (e) =>
-                f.Z.getMutableParticipants(e, g.pV.SPEAKER)
+                h.Z.getMutableParticipants(e, g.pV.SPEAKER)
                     .filter((e) => e.type === g.Ui.VOICE)
                     .map((e) => {
                         let { user: t } = e;
@@ -72,9 +72,9 @@ function I() {
                     }),
             ),
         ),
-        c = (0, s.e7)([f.Z], () => {
+        c = (0, s.e7)([h.Z], () => {
             let e = 0;
-            for (let t of i) e += f.Z.getParticipantCount(t, g.pV.AUDIENCE);
+            for (let t of i) e += h.Z.getParticipantCount(t, g.pV.AUDIENCE);
             return e;
         }),
         C = (0, s.Wu)(
@@ -115,7 +115,7 @@ function I() {
                               color: "currentColor",
                               className: E.activityIcon,
                           }),
-                          (0, r.jsx)(h.ZP, {
+                          (0, r.jsx)(f.ZP, {
                               guildId: void 0,
                               users: o,
                               max: 3,

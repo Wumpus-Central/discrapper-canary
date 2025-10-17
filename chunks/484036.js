@@ -3,41 +3,41 @@ var a = n(951288),
     r = n(647438),
     i = n(120356),
     l = n.n(i),
-    s = n(347469),
-    o = n(340669);
+    o = n(347469),
+    s = n(340669);
 function c(e) {
     let { resizableNode: t, minHeight: n, onResize: r } = e,
-        i = (0, s.Z)({
+        i = (0, o.Z)({
             minDimension: n,
             resizableDomNodeRef: t,
             onElementResize: r,
-            orientation: s.y.VERTICAL_TOP,
+            orientation: o.y.VERTICAL_TOP,
             usePointerEvents: !0,
         });
     return (0, a.jsx)("div", {
         onPointerDown: i,
-        className: o.resizeHandle,
+        className: s.resizeHandle,
     });
 }
 function d(e) {
-    let { children: t, className: n, initialHeight: i, minHeight: s } = e,
+    let { children: t, className: n, initialHeight: i, minHeight: o } = e,
         d = r.useRef(null),
         [u, m] = r.useState(i);
     return (0, a.jsxs)("div", {
         ref: d,
-        className: o.container,
+        className: s.container,
         style: {
-            minHeight: s,
+            minHeight: o,
             height: u,
         },
         children: [
             (0, a.jsx)(c, {
                 resizableNode: d,
-                minHeight: s,
+                minHeight: o,
                 onResize: m,
             }),
             (0, a.jsx)("div", {
-                className: l()(o.subPanelContent, n),
+                className: l()(s.subPanelContent, n),
                 children: t,
             }),
         ],

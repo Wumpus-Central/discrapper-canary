@@ -1,8 +1,8 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(544891),
     i = n(570140),
-    l = n(893776),
-    s = n(899742),
+    s = n(893776),
+    l = n(899742),
     a = n(743142),
     o = n(117240),
     c = n(626135),
@@ -38,11 +38,11 @@ class g extends u.Z {
                   .then(
                       (e) => {
                           let { body: t } = e;
-                          (0, s.Vb)(t.user), l.Z.loginToken(t.token, !1), h(!0, o);
+                          (0, l.Vb)(t.user), s.Z.loginToken(t.token, !1), h(!0, o);
                       },
                       (e) => {
                           if (
-                              (null != i && h(!1, o), l.Z.setFingerprint(i), (0, s.lx)(), o === a.F.ROLE_SUBSCRIPTION)
+                              (null != i && h(!1, o), s.Z.setFingerprint(i), (0, l.lx)(), o === a.F.ROLE_SUBSCRIPTION)
                           ) {
                               var t;
                               c.default.track(d.rMx.MOBILE_WEB_HANDOFF_FAILURE, {
@@ -53,8 +53,8 @@ class g extends u.Z {
                       },
                   )
             : null != i
-              ? (l.Z.setFingerprint(i), h(!1, o), (0, s.lx)())
-              : (l.Z.setFingerprint(i), (0, s.by)());
+              ? (s.Z.setFingerprint(i), h(!1, o), (0, l.lx)())
+              : (s.Z.setFingerprint(i), (0, l.by)());
     }
     constructor(...e) {
         super(...e),
@@ -77,8 +77,8 @@ class g extends u.Z {
                           fingerprint: n,
                           handoffSource: void 0,
                       })
-                    : (l.Z.setFingerprint(null), (0, s.by)());
+                    : (s.Z.setFingerprint(null), (0, l.by)());
             });
     }
 }
-let m = new g();
+let p = new g();

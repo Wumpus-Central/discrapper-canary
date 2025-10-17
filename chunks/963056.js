@@ -1,10 +1,10 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var a = n(951288);
 n(647438);
-var r = n(599273),
+var r = n(258536),
     i = n(481060),
     l = n(572797);
-function s(e) {
+function o(e) {
     let { text: t } = e,
         n = (0, i.Yzy)(t, {
             from: {

@@ -3,14 +3,14 @@ var a = n(951288),
     r = n(647438),
     i = n(544891),
     l = n(755721),
-    s = n(481060),
-    o = n(317951),
+    o = n(481060),
+    s = n(317951),
     c = n(959546),
     d = n(625299);
 let u = "/users/@me/debug/consumables/",
     m = {
-        [o.FX]: "HD Streaming Potion",
-        [o.D1]: "Confetti Potion",
+        [s.FX]: "HD Streaming Potion",
+        [s.D1]: "Confetti Potion",
     };
 function p() {
     let e,
@@ -38,20 +38,20 @@ function p() {
             className: d.panel,
             children:
                 null != p
-                    ? (0, a.jsx)(s.Text, {
+                    ? (0, a.jsx)(o.Text, {
                           variant: "text-md/normal",
                           children: p,
                       })
                     : 0 === t.length
                       ? (0, a.jsxs)(a.Fragment, {
                             children: [
-                                (0, a.jsx)(s.Text, {
+                                (0, a.jsx)(o.Text, {
                                     variant: "text-lg/bold",
                                     children: "Create Entitlements",
                                 }),
                                 (0, a.jsx)(l.zx, {
                                     onClick:
-                                        ((e = o.D1),
+                                        ((e = s.D1),
                                         async () => {
                                             f(!0);
                                             try {
@@ -73,7 +73,7 @@ function p() {
                                     color: l.Tt.PRIMARY,
                                     children: "Create Confetti Entitlement",
                                 }),
-                                x && (0, a.jsx)(s.$jN, {}),
+                                x && (0, a.jsx)(o.$jN, {}),
                             ],
                         })
                       : (0, a.jsxs)(a.Fragment, {
@@ -81,11 +81,11 @@ function p() {
                                 (0, a.jsxs)("div", {
                                     className: d.title,
                                     children: [
-                                        (0, a.jsx)(s.Text, {
+                                        (0, a.jsx)(o.Text, {
                                             variant: "text-lg/bold",
                                             children: "Existing Entitlements",
                                         }),
-                                        (0, a.jsx)(s.hh5, {}),
+                                        (0, a.jsx)(o.hh5, {}),
                                     ],
                                 }),
                                 (0, a.jsx)("ul", {
@@ -95,17 +95,17 @@ function p() {
                                             {
                                                 children: (0, a.jsxs)("div", {
                                                     children: [
-                                                        (0, a.jsx)(s.Text, {
+                                                        (0, a.jsx)(o.Text, {
                                                             selectable: !0,
                                                             variant: "text-md/normal",
                                                             children: e.id,
                                                         }),
-                                                        (0, a.jsxs)(s.Text, {
+                                                        (0, a.jsxs)(o.Text, {
                                                             selectable: !0,
                                                             variant: "text-md/normal",
                                                             children: ["Type: ", m[e.skuId]],
                                                         }),
-                                                        (0, a.jsxs)(s.Text, {
+                                                        (0, a.jsxs)(o.Text, {
                                                             selectable: !0,
                                                             variant: "text-md/normal",
                                                             children: ["Consumed? : ", e.consumed ? "Yes" : "No"],

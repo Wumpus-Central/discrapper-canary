@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var i = n(951288),
     r = n(647438),
     s = n(120356),
@@ -167,7 +167,7 @@ class Z extends r.Component {
             });
     }
 }
-function C(e) {
+function j(e) {
     var { channel: t } = e,
         n = (function (e, t) {
             if (null == e) return {};

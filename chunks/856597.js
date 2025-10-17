@@ -4,16 +4,16 @@ n(647438);
 var r = n(481060),
     i = n(819557),
     l = n(132392),
-    s = n(118589),
-    o = n(210825),
+    o = n(118589),
+    s = n(210825),
     c = n(345262),
     d = n(241945),
     u = n(388032),
     m = n(133023);
 let p = {
-        [s.UA.EMAIL_VERIFICATION]: u.intl.string(d.default.HC4IiY),
-        [s.UA.REFRESH_APP]: u.intl.string(d.default.SzfxQ0),
-        [s.UA.AGE_VERIFICATION]: u.intl.string(d.default["dSkE/P"]),
+        [o.UA.EMAIL_VERIFICATION]: u.intl.string(d.default.HC4IiY),
+        [o.UA.REFRESH_APP]: u.intl.string(d.default.SzfxQ0),
+        [o.UA.AGE_VERIFICATION]: u.intl.string(d.default["dSkE/P"]),
     },
     h = function () {
         let { task: e } = (0, l.T)(),
@@ -58,7 +58,7 @@ let p = {
                     variant: "text-md/normal",
                     color: "text-secondary",
                     children: u.intl.format(d.default["0DHxys"], {
-                        handleLogOut: () => (0, o.R)("safety_flows_sidebar"),
+                        handleLogOut: () => (0, s.R)("safety_flows_sidebar"),
                     }),
                 }),
             ],

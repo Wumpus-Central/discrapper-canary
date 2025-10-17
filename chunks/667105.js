@@ -2,9 +2,9 @@ n.d(t, {
     DH: () => Z,
     Ks: () => B,
     Ws: () => V,
-    g2: () => k,
+    g2: () => j,
     gF: () => H,
-    hf: () => j,
+    hf: () => k,
     k3: () => U,
     qN: () => F,
 }),
@@ -91,7 +91,7 @@ function M(e, t) {
         e
     );
 }
-function j(e) {
+function k(e) {
     let { quest: t, questContent: n, questContentPosition: r, questContentRowIndex: a, sourceQuestContent: s } = e,
         l = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
         c = null == l ? void 0 : l.hasVerifiedEmailOrPhone(),
@@ -127,7 +127,7 @@ function j(e) {
                   : (0, C.B)());
     }, [t, d, n, r, a, c, u, s]);
 }
-let k = (e) => {
+let j = (e) => {
         let { useReducedMotion: t, className: n } = e,
             [o, l] = (0, s.q_F)(() => ({})),
             c = i.useRef(!1),
@@ -217,7 +217,7 @@ function B(e) {
             inGameQuest: y,
             sourceQuestContent: v,
         } = e,
-        I = j({
+        I = k({
             quest: n,
             questContent: o,
             questContentPosition: s,
@@ -229,7 +229,7 @@ function B(e) {
         x = i.useCallback(() => {
             (0, u.$)();
         }, []),
-        k = i.useCallback(() => {
+        j = i.useCallback(() => {
             (0, d.Y)({
                 pageType: R.ZY5.GLOBAL_DISCOVERY_QUESTS,
                 sectionType: R.jXE.QUEST_TILE_CTA,
@@ -419,11 +419,11 @@ function B(e) {
                     return {
                         tooltipText: null,
                         text: w.intl.string(w.t.WYchdX),
-                        onClick: k,
+                        onClick: j,
                     };
                 return M(L({}, i), { text: w.intl.string(w.t.bAGFz8) });
         }
-    }, [r, b, C, _, I, a, n, o, s, f, U, D, x, k, y, B, v, F, Z]);
+    }, [r, b, C, _, I, a, n, o, s, f, U, D, x, j, y, B, v, F, Z]);
 }
 function Z() {
     return (0, o.e7)([b.Z], () => {

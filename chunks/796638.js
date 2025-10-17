@@ -1,6 +1,6 @@
 n.d(t, {
     ZB: () => E,
-    ZP: () => g,
+    ZP: () => b,
     cF: () => p,
 }),
     n(388685),
@@ -18,7 +18,7 @@ var r = n(951288),
 let p = 112,
     _ = (16 / 9) * 112 + 8,
     m = 10 * c.Z.Millis.SECOND;
-function b(e) {
+function g(e) {
     var t;
     let n = o.default.getId();
     return e.type === d.fO.USER && e.user.id === n && (null == (t = e.voiceState) ? void 0 : t.selfVideo);
@@ -35,10 +35,10 @@ function E(e, t) {
                       cropSelfVideo: !1,
                   },
         { tileWidth: r, tileMinWidth: o, tileMargin: c, limit: u, cropSelfVideo: f, version: p } = n,
-        [E, g] = i.useState(Date.now());
+        [E, b] = i.useState(Date.now());
     i.useEffect(() => {
         let e = setTimeout(() => {
-            g(Date.now());
+            b(Date.now());
         }, m);
         return () => {
             clearTimeout(e);
@@ -79,10 +79,10 @@ function E(e, t) {
                     })(e, n),
                 ),
                 [p, _] = (0, l.partition)(i, d.Io),
-                E = p.findIndex(b),
-                g = null;
-            -1 !== E && ((g = p[E]), p.splice(E, 1));
-            let h = null == g || f ? e : e - r - c,
+                E = p.findIndex(g),
+                b = null;
+            -1 !== E && ((b = p[E]), p.splice(E, 1));
+            let h = null == b || f ? e : e - r - c,
                 S = Math.max(0, Math.min(Math.floor((h - c) / (o + c)), u, t.length)),
                 y = Math.min((h - c) / S - c, r),
                 O = Math.max(0, S - _.length),
@@ -106,7 +106,7 @@ function E(e, t) {
             v.current = (0, l.keyBy)((0, l.range)(j.length), (e) => j[e].id);
             let Z = [...I, ...j];
             return (
-                null != g && (f && Z.length >= S ? (Z[Math.max(0, Z.length - 1)] = g) : Z.push(g)),
+                null != b && (f && Z.length >= S ? (Z[Math.max(0, Z.length - 1)] = b) : Z.push(b)),
                 {
                     visibleParticipants: Z,
                     participantTileWidth: y,
@@ -118,7 +118,7 @@ function E(e, t) {
         participantTileWidth: S,
     };
 }
-function g(e) {
+function b(e) {
     let {
             participants: t,
             participantTileWidth: n,
@@ -136,7 +136,7 @@ function g(e) {
         className: f.root,
         children: t.map((e) => {
             if (null == e) return null;
-            let t = b(e);
+            let t = g(e);
             return (0, r.jsx)(
                 "div",
                 {

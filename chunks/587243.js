@@ -8,8 +8,8 @@ n(647438);
 var r = n(722770),
     i = n(481060),
     l = n(440051),
-    s = n(734934),
-    o = n(158238),
+    o = n(734934),
+    s = n(158238),
     c = n(695346),
     d = n(70956),
     u = n(51144),
@@ -43,14 +43,14 @@ let f = [
             label: () => h.intl.string(h.t["46dqJS"]),
         },
     ],
-    b = "forever";
-function g(e, t) {
+    g = "forever";
+function b(e, t) {
     return e.getFullYear() === t.getFullYear() && e.getMonth() === t.getMonth() && e.getDate() === t.getDate();
 }
 function v(e) {
     let { status: t, currentStatus: n, description: r } = e,
-        { showTempStatusOptions: s } = l.Y.useExperiment({ location: "UserProfileAccountPopout" }),
-        o = s && t !== p.Skl.ONLINE,
+        { showTempStatusOptions: o } = l.Y.useExperiment({ location: "UserProfileAccountPopout" }),
+        s = o && t !== p.Skl.ONLINE,
         c = (0, a.jsx)(a.Fragment, {
             children: f.map((e) => {
                 let { duration: r, label: l } = e;
@@ -67,7 +67,7 @@ function v(e) {
                             }),
                         dontCloseOnAction: !0,
                     },
-                    null != r ? r : b,
+                    null != r ? r : g,
                 );
             }),
         });
@@ -75,7 +75,7 @@ function v(e) {
         id: t,
         className: x.expiringStatusMenuItem,
         keepItemStyles: !0,
-        hasSubmenu: o,
+        hasSubmenu: s,
         label: (e) => {
             let { isFocused: n } = e;
             return (0, a.jsxs)("div", {
@@ -106,16 +106,16 @@ function v(e) {
             });
         },
         dontCloseOnAction: !0,
-        children: o ? c : void 0,
+        children: s ? c : void 0,
     });
 }
 function j(e) {
     if (null == e || "0" === e) return;
     let t = new Date(Number(e)),
-        n = g(t, new Date()),
+        n = b(t, new Date()),
         a = new Date();
     a.setDate(a.getDate() + 1);
-    let r = g(t, a);
+    let r = b(t, a);
     return n
         ? h.intl.formatToPlainString(h.t.ZxxHIC, { timeString: h.intl.data.formatTime(t, { format: "short" }) })
         : h.intl.formatToPlainString(h.t["9OFjSU"], {
@@ -128,10 +128,10 @@ function j(e) {
 function _(e) {
     let { hasNewStrings: t } = l.Y.useExperiment({ location: "UserProfileAccountPopout" }),
         n = c.Cr.useSetting(),
-        d = (0, s.p)(),
-        u = o.e.useExperiment({ location: "UserProfileAccountPopout" }).allowQuietMode || d,
+        d = (0, o.p)(),
+        u = s.e.useExperiment({ location: "UserProfileAccountPopout" }).allowQuietMode || d,
         m = c.fv.useSetting(),
-        g = e === p.Skl.DND,
+        b = e === p.Skl.DND,
         _ = (a) => {
             let r = j(n);
             if (e === a && null != r) return r;
@@ -153,11 +153,11 @@ function _(e) {
                         id: "".concat(e, "-").concat(n),
                         label: r(),
                         action: () => {
-                            (0, s.oW)(!0, n);
+                            (0, o.oW)(!0, n);
                         },
                         dontCloseOnAction: !0,
                     },
-                    null != n ? n : b,
+                    null != n ? n : g,
                 );
             }),
         }),
@@ -214,10 +214,10 @@ function _(e) {
                                                       (0, a.jsx)(i.IGR, {
                                                           text: d
                                                               ? h.intl.string(h.t.ApAu9f)
-                                                              : g
+                                                              : b
                                                                 ? h.intl.string(h.t.gH3Fra)
                                                                 : h.intl.string(h.t["64pl8/"]),
-                                                          color: d ? r.Z.BRAND_500 : g ? r.Z.RED_400 : r.Z.PRIMARY_500,
+                                                          color: d ? r.Z.BRAND_500 : b ? r.Z.RED_400 : r.Z.PRIMARY_500,
                                                       }),
                                                   ],
                                               }),
@@ -241,7 +241,7 @@ function _(e) {
                                           ],
                                       }),
                                   action: () => {
-                                      (0, s.oW)(!d);
+                                      (0, o.oW)(!d);
                                   },
                                   dontCloseOnAction: !0,
                                   children: y,

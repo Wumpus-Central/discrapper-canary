@@ -9,8 +9,8 @@ var i = n(81897),
     c = n(806729),
     d = n(857302),
     u = n(892001),
-    h = n(483517),
-    p = n(252417),
+    p = n(483517),
+    h = n(252417),
     f = n(821179),
     g = n(502762),
     m = n(686625),
@@ -47,7 +47,7 @@ function _(e) {
                               );
                           }),
                       }),
-                  S && I && (0, r.jsx)(h.Z, { className: y.divider }),
+                  S && I && (0, r.jsx)(p.Z, { className: y.divider }),
                   I &&
                       (0, r.jsx)(m.Z, {
                           section: "MUTUAL_FRIENDS",
@@ -78,7 +78,7 @@ function _(e) {
                                   : v.map((e) => {
                                         let { key: t, user: i, status: l } = e;
                                         return (0, r.jsx)(
-                                            p.Z,
+                                            h.Z,
                                             {
                                                 user: i,
                                                 status: l,

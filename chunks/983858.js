@@ -3,11 +3,11 @@ var n = t(951288),
     l = t(647438),
     r = t(120356),
     s = t.n(r),
-    a = t(780384),
-    u = t(481060),
+    u = t(780384),
+    a = t(481060),
     o = t(410030),
-    c = t(686546),
-    d = t(372769),
+    d = t(686546),
+    c = t(372769),
     E = t(134432),
     f = t(768581),
     I = t(624138),
@@ -24,20 +24,20 @@ let h = [16, 16, 14, 14, 12, 10, 8],
                 small: T,
                 loading: p = !1,
                 description: A,
-                memberCount: N,
-                presenceCount: C,
-                className: D,
+                memberCount: C,
+                presenceCount: D,
+                className: y,
             } = e,
-            y = (0, o.ZP)(),
-            [O, P] = l.useState(!1);
+            O = (0, o.ZP)(),
+            [P, L] = l.useState(!1);
         if (null == r || p)
             return (0, n.jsx)("div", {
-                className: s()(D, S.card, S.cardPlaceholder, {
+                className: s()(y, S.card, S.cardPlaceholder, {
                     [S.cardSmall]: T,
                     [S.cardDisabled]: v,
                 }),
             });
-        let { name: L } = r,
+        let { name: N } = r,
             R =
                 null != r.discoverySplash && /^data:/.test(r.discoverySplash)
                     ? r.discoverySplash
@@ -46,8 +46,8 @@ let h = [16, 16, 14, 14, 12, 10, 8],
                           splash: r.discoverySplash,
                           size: 240 * (0, E.x_)(),
                       }),
-            b = (0, a.wj)(y) ? g : m,
-            j =
+            b = (0, u.wj)(O) ? g : m,
+            G =
                 null !=
                 (i = f.ZP.getGuildIconURL({
                     id: r.id,
@@ -56,21 +56,21 @@ let h = [16, 16, 14, 14, 12, 10, 8],
                 }))
                     ? i
                     : void 0,
-            V = null != r.description ? r.description : A,
-            G = null != N ? N : null == r ? void 0 : r.memberCount,
-            M = null != C ? C : null == r ? void 0 : r.presenceCount,
-            x = null;
-        if (null != j)
-            x = (0, n.jsx)("img", {
-                src: j,
+            j = null != r.description ? r.description : A,
+            V = null != C ? C : null == r ? void 0 : r.memberCount,
+            F = null != D ? D : null == r ? void 0 : r.presenceCount,
+            M = null;
+        if (null != G)
+            M = (0, n.jsx)("img", {
+                src: G,
                 alt: "",
                 className: S.avatar,
             });
         else {
             let e = (0, I.Zg)(r.name);
-            x = (0, n.jsx)("div", {
+            M = (0, n.jsx)("div", {
                 className: S.defaultIcon,
-                children: (0, n.jsx)(u.Text, {
+                children: (0, n.jsx)(a.Text, {
                     className: S.acronym,
                     style: { fontSize: null != (t = h[e.length]) ? t : h[h.length - 1] },
                     variant: "text-sm/normal",
@@ -79,10 +79,10 @@ let h = [16, 16, 14, 14, 12, 10, 8],
             });
         }
         return (0, n.jsxs)("div", {
-            className: s()(D, S.card, {
+            className: s()(y, S.card, {
                 [S.cardSmall]: T,
                 [S.cardDisabled]: v,
-                [S.splashLoaded]: O,
+                [S.splashLoaded]: P,
             }),
             children: [
                 (0, n.jsxs)("div", {
@@ -94,22 +94,22 @@ let h = [16, 16, 14, 14, 12, 10, 8],
                                 src: null != R ? R : b,
                                 alt: "",
                                 className: S.splashImage,
-                                onLoad: () => P(!0),
+                                onLoad: () => L(!0),
                             }),
                         }),
                         (0, n.jsx)("div", {
                             className: S.guildIcon,
-                            children: (0, n.jsx)(c.ZP, {
-                                mask: c.ZP.Masks.SQUIRCLE,
+                            children: (0, n.jsx)(d.ZP, {
+                                mask: d.ZP.Masks.SQUIRCLE,
                                 width: 48,
                                 height: 48,
                                 children: (0, n.jsx)("div", {
                                     className: S.iconMask,
-                                    children: (0, n.jsx)(c.ZP, {
-                                        mask: c.ZP.Masks.SQUIRCLE,
+                                    children: (0, n.jsx)(d.ZP, {
+                                        mask: d.ZP.Masks.SQUIRCLE,
                                         width: 40,
                                         height: 40,
-                                        children: null != x ? x : null,
+                                        children: null != M ? M : null,
                                     }),
                                 }),
                             }),
@@ -122,54 +122,54 @@ let h = [16, 16, 14, 14, 12, 10, 8],
                         (0, n.jsxs)("div", {
                             className: S.title,
                             children: [
-                                (0, n.jsx)(d.Z, {
+                                (0, n.jsx)(c.Z, {
                                     className: S.verifiedIcon,
                                     guild: r,
-                                    tooltipColor: u.aML.Colors.PRIMARY,
+                                    tooltipColor: a.aML.Colors.PRIMARY,
                                 }),
-                                (0, n.jsx)(u.Text, {
+                                (0, n.jsx)(a.Text, {
                                     className: S.guildName,
                                     variant: "text-md/normal",
-                                    children: (0, n.jsx)("span", { children: L }),
+                                    children: (0, n.jsx)("span", { children: N }),
                                 }),
                             ],
                         }),
                         (0, n.jsx)("div", {
                             className: S.descriptionContainer,
-                            children: (0, n.jsx)(u.Text, {
+                            children: (0, n.jsx)(a.Text, {
                                 lineClamp: 3,
                                 className: S.description,
                                 variant: "text-sm/normal",
                                 tag: "span",
-                                children: V,
+                                children: j,
                             }),
                         }),
                         (0, n.jsxs)("div", {
                             className: S.memberInfo,
                             children: [
-                                null != M &&
+                                null != F &&
                                     (0, n.jsxs)("div", {
                                         className: S.memberCount,
                                         children: [
                                             (0, n.jsx)("div", { className: S.dotOnline }),
-                                            (0, n.jsx)(u.Text, {
+                                            (0, n.jsx)(a.Text, {
                                                 variant: "text-xs/normal",
                                                 children: T
-                                                    ? _.intl.formatToPlainString(_.t.YMor7u, { count: M })
-                                                    : _.intl.formatToPlainString(_.t["LC+S+v"], { membersOnline: M }),
+                                                    ? _.intl.formatToPlainString(_.t.YMor7u, { count: F })
+                                                    : _.intl.formatToPlainString(_.t["LC+S+v"], { membersOnline: F }),
                                             }),
                                         ],
                                     }),
-                                null != G &&
+                                null != V &&
                                     (0, n.jsxs)("div", {
                                         className: S.memberCount,
                                         children: [
                                             (0, n.jsx)("div", { className: S.dotOffline }),
-                                            (0, n.jsx)(u.Text, {
+                                            (0, n.jsx)(a.Text, {
                                                 variant: "text-xs/normal",
                                                 children: T
-                                                    ? _.intl.formatToPlainString(_.t.YMor7u, { count: G })
-                                                    : _.intl.formatToPlainString(_.t.zRl6XV, { count: G }),
+                                                    ? _.intl.formatToPlainString(_.t.YMor7u, { count: V })
+                                                    : _.intl.formatToPlainString(_.t.zRl6XV, { count: V }),
                                             }),
                                         ],
                                     }),

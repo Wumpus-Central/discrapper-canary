@@ -1,22 +1,22 @@
 n.d(t, {
-    F: () => _,
-    Z: () => E,
+    F: () => v,
+    Z: () => j,
 }),
     n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     o = n(481060),
     s = n(785717),
     c = n(128156),
     u = n(311044),
     d = n(408986),
-    p = n(778414),
-    f = n(414655),
-    h = n(228168),
-    g = n(883101);
-function m(e) {
+    f = n(778414),
+    g = n(414655),
+    p = n(228168),
+    m = n(883101);
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,7 +41,7 @@ function m(e) {
     }
     return e;
 }
-function b(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,9 +59,9 @@ function b(e, t) {
         e
     );
 }
-function _(e) {
+function v(e) {
     var { children: t, className: n, scrollerRef: i } = e,
-        l = (function (e, t) {
+        a = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -70,123 +70,123 @@ function _(e) {
                     var n,
                         r,
                         i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        a = Object.keys(e);
+                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
+                var a = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < a.length; r++)
+                    (n = a[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ["children", "className", "scrollerRef"]);
     return (0, r.jsx)(
         o.Ttm,
-        b(
-            m(
+        h(
+            b(
                 {
                     ref: i,
-                    className: a()(g.tabPanelScroller, n),
+                    className: l()(m.tabPanelScroller, n),
                     fade: !0,
                 },
-                l,
+                a,
             ),
             { children: t },
         ),
     );
 }
-function O(e) {
+function y(e) {
     let {
         user: t,
         currentUser: n,
         section: i,
-        subsection: l,
-        displayProfile: a,
+        subsection: a,
+        displayProfile: l,
         guildId: o,
         channelId: s,
-        onClose: g,
+        onClose: m,
     } = e;
-    return i === h.oh.ACTIVITY
+    return i === p.oh.ACTIVITY
         ? (0, r.jsx)(c.Z, {
               user: t,
               currentUser: n,
-              displayProfile: a,
+              displayProfile: l,
               guildId: o,
               channelId: s,
-              subsection: l,
-              onClose: g,
+              subsection: a,
+              onClose: m,
           })
-        : i === h.oh.MUTUAL_FRIENDS
+        : i === p.oh.MUTUAL_FRIENDS
           ? (0, r.jsx)(u.Z, {
                 user: t,
                 guildId: o,
                 channelId: s,
-                onClose: g,
+                onClose: m,
             })
-          : i === h.oh.MUTUAL_GUILDS
+          : i === p.oh.MUTUAL_GUILDS
             ? (0, r.jsx)(d.Z, {
                   user: t,
-                  onClose: g,
+                  onClose: m,
               })
-            : i === h.oh.WIDGETS
-              ? (0, r.jsx)(p.C, {
+            : i === p.oh.WIDGETS
+              ? (0, r.jsx)(f.C, {
                     user: t,
                     guildId: o,
                     channelId: s,
                 })
-              : i === h.oh.WISHLIST
-                ? (0, r.jsx)(f.Z, { profileOwner: t })
+              : i === p.oh.WISHLIST
+                ? (0, r.jsx)(g.Z, { profileOwner: t })
                 : null;
 }
-function E(e) {
+function j(e) {
     var t;
     let {
             user: n,
-            currentUser: l,
-            displayProfile: a,
+            currentUser: a,
+            displayProfile: l,
             guildId: c,
             channelId: u,
             items: d,
-            initialSection: p,
-            initialSubsection: f,
-            onClose: h,
+            initialSection: f,
+            initialSubsection: g,
+            onClose: p,
         } = e,
-        { trackUserProfileAction: _ } = (0, s.KZ)(),
-        [{ section: E, subsection: v, text: y }, I] = i.useState(
-            b(
-                m(
+        { trackUserProfileAction: v } = (0, s.KZ)(),
+        [{ section: j, subsection: O, text: x }, _] = i.useState(
+            h(
+                b(
                     {},
                     null !=
                         (t = d.find((e) => {
                             let { section: t } = e;
-                            return t === p;
+                            return t === f;
                         }))
                         ? t
                         : d[0],
                 ),
-                { subsection: f },
+                { subsection: g },
             ),
         );
     return (0, r.jsxs)("div", {
-        className: g.container,
+        className: m.container,
         children: [
             (0, r.jsx)(o.Ttm, {
                 orientation: "horizontal",
-                className: g.tabListScroller,
+                className: m.tabListScroller,
                 fade: !0,
                 paddingFix: !1,
                 children: (0, r.jsx)(o.njP, {
                     type: "top",
                     look: "custom",
-                    selectedItem: E,
+                    selectedItem: j,
                     onItemSelect: (e) => {
-                        _({
+                        v({
                             action: "PRESS_SECTION",
                             section: e,
                         }),
-                            I((t) => {
+                            _((t) => {
                                 var n;
                                 return null != (n = d.find((t) => t.section === e)) ? n : t;
                             });
@@ -195,7 +195,7 @@ function E(e) {
                         (0, r.jsx)(
                             o.njP.Item,
                             {
-                                className: g.tabBarItem,
+                                className: m.tabBarItem,
                                 id: e.section,
                                 "aria-label": e.text,
                                 children: e.text,
@@ -206,20 +206,20 @@ function E(e) {
                 }),
             }),
             (0, r.jsx)(o.njP.Panel, {
-                id: E,
-                "aria-label": y,
-                className: g.tabBarPanel,
+                id: j,
+                "aria-label": x,
+                className: m.tabBarPanel,
                 children: (0, r.jsx)(o.y5t, {
-                    component: (0, r.jsx)(o.nn4, { children: (0, r.jsx)(o.H, { children: y }) }),
-                    children: (0, r.jsx)(O, {
+                    component: (0, r.jsx)(o.nn4, { children: (0, r.jsx)(o.H, { children: x }) }),
+                    children: (0, r.jsx)(y, {
                         user: n,
-                        currentUser: l,
-                        displayProfile: a,
+                        currentUser: a,
+                        displayProfile: l,
                         guildId: c,
                         channelId: u,
-                        section: E,
-                        subsection: v,
-                        onClose: h,
+                        section: j,
+                        subsection: O,
+                        onClose: p,
                     }),
                 }),
             }),

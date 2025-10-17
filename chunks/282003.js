@@ -1,10 +1,10 @@
-n.d(t, { k: () => g }), n(388685);
+n.d(t, { k: () => b }), n(388685);
 var a = n(951288),
     r = n(647438),
     i = n(481060),
     l = n(821849),
-    s = n(45474),
-    o = n(146528),
+    o = n(45474),
+    s = n(146528),
     c = n(246992),
     d = n(237012),
     u = n(729154),
@@ -37,7 +37,7 @@ function f(e) {
     }
     return e;
 }
-function b(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -55,9 +55,9 @@ function b(e, t) {
         e
     );
 }
-let g = () => {
+let b = () => {
         let [e, t] = r.useState(h.PremiumTypes.TIER_0),
-            [n, g] = r.useState(s.R.WHAT_YOU_LOSE),
+            [n, b] = r.useState(o.R.WHAT_YOU_LOSE),
             [j, _] = r.useState(null),
             [y, C] = r.useState(h.Xh.PREMIUM_MONTH_TIER_0),
             [S, E] = r.useState([]),
@@ -67,8 +67,8 @@ let g = () => {
             }),
             [N, P] = r.useState(null),
             [I, w] = r.useState(!1),
-            [R, k] = r.useState(!1),
-            [A, Z] = r.useState(!1);
+            [k, R] = r.useState(!1),
+            [A, D] = r.useState(!1);
         (0, r.useEffect)(() => {
             (0, l.Y2)();
         }, []),
@@ -130,11 +130,11 @@ let g = () => {
                 }
             }, [e]),
             (0, r.useEffect)(() => {
-                [s.R.CONFIRM_DISCOUNT, s.R.DISCOUNT_APPLIED].includes(n) && null === j && _(v()),
-                    n === s.R.PREVIEW &&
+                [o.R.CONFIRM_DISCOUNT, o.R.DISCOUNT_APPLIED].includes(n) && null === j && _(v()),
+                    n === o.R.PREVIEW &&
                         null === N &&
                         P(
-                            new o.Z({
+                            new s.Z({
                                 id: "",
                                 invoiceItems: [
                                     {
@@ -163,17 +163,17 @@ let g = () => {
                                 status: m.hUK.PAID,
                             }),
                         ),
-                    n !== s.R.PREVIEW && null !== N && P(null);
+                    n !== o.R.PREVIEW && null !== N && P(null);
             }, [n, j, T, y, N]);
-        let D = r.useCallback(async () => {
-            Z(!0),
+        let Z = r.useCallback(async () => {
+            D(!0),
                 await (0, i.ZDy)(
                     async () => (t) =>
                         (0, a.jsx)(
                             u.x,
-                            b(f({}, t), {
+                            g(f({}, t), {
                                 onClose: () => {
-                                    t.onClose(), Z(!1);
+                                    t.onClose(), D(!1);
                                 },
                                 premiumType: e,
                                 churnDiscount: j,
@@ -184,9 +184,9 @@ let g = () => {
                                     intervalCount: 1,
                                 },
                                 errorOnCancel: I,
-                                errorOnRedeem: R,
+                                errorOnRedeem: k,
                                 setActiveStep: (e) => {
-                                    g(e), t.onClose();
+                                    b(e), t.onClose();
                                 },
                                 activeStep: n,
                                 premiumSubscription: {
@@ -214,11 +214,11 @@ let g = () => {
                             }),
                         ),
                 );
-        }, [e, j, y, N, I, R, n, T]);
+        }, [e, j, y, N, I, k, n, T]);
         return (
             (0, r.useEffect)(() => {
-                A && D();
-            }, [n, A, D]),
+                A && Z();
+            }, [n, A, Z]),
             (0, a.jsxs)(d.$0, {
                 children: [
                     (0, a.jsx)(i.Heading, {
@@ -286,30 +286,30 @@ let g = () => {
                                     (0, a.jsx)(i.PhF, {
                                         placeholder: "Premium Type",
                                         select: (e) => {
-                                            g(e);
+                                            b(e);
                                         },
                                         isSelected: (e) => n === e,
                                         serialize: (e) => "".concat(e),
                                         options: [
                                             {
                                                 label: "What You Lose",
-                                                value: s.R.WHAT_YOU_LOSE,
+                                                value: o.R.WHAT_YOU_LOSE,
                                             },
                                             {
                                                 label: "Confirm Discount",
-                                                value: s.R.CONFIRM_DISCOUNT,
+                                                value: o.R.CONFIRM_DISCOUNT,
                                             },
                                             {
                                                 label: "Discount Applied",
-                                                value: s.R.DISCOUNT_APPLIED,
+                                                value: o.R.DISCOUNT_APPLIED,
                                             },
                                             {
                                                 label: "Confirm Cancel",
-                                                value: s.R.CONFIRM,
+                                                value: o.R.CONFIRM,
                                             },
                                             {
                                                 label: "Preview Invoice",
-                                                value: s.R.PREVIEW,
+                                                value: o.R.PREVIEW,
                                             },
                                         ],
                                         popoutLayerContext: c.O$,
@@ -328,9 +328,9 @@ let g = () => {
                             }),
                             (0, a.jsx)(d.BZ, {
                                 children: (0, a.jsx)(i.Checkbox, {
-                                    checked: R,
+                                    checked: k,
                                     onChange: () => {
-                                        k(!R);
+                                        R(!k);
                                     },
                                     label: "Error on Redeem Offer",
                                 }),
@@ -350,7 +350,7 @@ let g = () => {
                         label: "Cancellation Modal",
                         children: (0, a.jsx)(i.Button, {
                             onClick: () => {
-                                Z(!0);
+                                D(!0);
                             },
                             variant: "primary",
                             size: "sm",
@@ -364,7 +364,7 @@ let g = () => {
     v = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
             { discount: t = {} } = e;
-        return b(
+        return g(
             f(
                 {
                     id: "",

@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(239091),
     d = n(561472),
     u = n(367907),
-    h = n(731429),
-    p = n(188471),
+    p = n(731429),
+    h = n(188471),
     f = n(933557),
     g = n(287746),
     m = n(541716),
@@ -25,7 +25,7 @@ var r = n(951288),
     S = n(981631),
     E = n(388032),
     Z = n(952899);
-function T(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,7 +50,7 @@ function T(e) {
     }
     return e;
 }
-function P(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -89,9 +89,9 @@ function N(e) {
         (i.useEffect(() => {
             if (null == R || M.current) return;
             M.current = !0;
-            let e = (0, h.K)(j.Z.getChannel(R.id), !0);
-            (0, u.yw)(S.rMx.CHANNEL_OPENED, P(T({}, e, (0, u.$H)(R.id)), { channel_view: N })),
-                (0, p.a)(S.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: R.id });
+            let e = (0, p.K)(j.Z.getChannel(R.id), !0);
+            (0, u.yw)(S.rMx.CHANNEL_OPENED, T(P({}, e, (0, u.$H)(R.id)), { channel_view: N })),
+                (0, h.a)(S.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: R.id });
         }, [R, N]),
         null == R || null == w)
     )
@@ -117,7 +117,7 @@ function N(e) {
                     handleContextMenu: function (e) {
                         (0, c.jW)(e, async () => {
                             let { default: e } = await n.e("40157").then(n.bind(n, 422200));
-                            return (t) => (0, r.jsx)(e, P(T({}, t), { channel: R }));
+                            return (t) => (0, r.jsx)(e, T(P({}, t), { channel: R }));
                         });
                     },
                     handleClick: function () {

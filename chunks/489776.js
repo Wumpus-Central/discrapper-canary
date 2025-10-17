@@ -1,7 +1,7 @@
 n.d(t, { Z: () => h }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(599273),
+    l = n(258536),
     a = n(722770),
     s = n(481060),
     o = n(236413),
@@ -61,8 +61,8 @@ function h(e) {
         { editingRule: v, createNewEditingRule: _ } = (0, d.V)(),
         { getDefaultRuleName: C } = c.I6[n],
         O = !(0, o.Vb)(v) && (null == v ? void 0 : v.triggerType) === n,
-        [y, N] = i.useState(O ? v : b),
-        E = (0, s.q_F)({
+        [y, E] = i.useState(O ? v : b),
+        N = (0, s.q_F)({
             opacity: +!O,
             pointerEvents: O ? "none" : "all",
             config: f(p({}, l.config.stiff), { clamp: !0 }),
@@ -72,10 +72,10 @@ function h(e) {
             pointerEvents: O ? "all" : "none",
             config: f(p({}, l.config.stiff), { clamp: !0 }),
             onStart: () => {
-                N(O ? v : b);
+                E(O ? v : b);
             },
             onRest: () => {
-                N(O ? v : b), j(O);
+                E(O ? v : b), j(O);
             },
         });
     return null == v || O
@@ -93,7 +93,7 @@ function h(e) {
                   }),
                   (0, r.jsx)(l.animated.div, {
                       className: m.animatedNewRuleContainer,
-                      style: E,
+                      style: N,
                       children: (0, r.jsxs)(s.P3F, {
                           className: m.addAnotherRuleCardContainer,
                           onClick: () => {

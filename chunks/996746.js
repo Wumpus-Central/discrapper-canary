@@ -3,13 +3,13 @@ var a = n(951288),
     r = n(442837),
     i = n(696826),
     l = n(720734),
-    s = n(594174),
-    o = n(51144);
+    o = n(594174),
+    s = n(51144);
 function c(e) {
     var t;
     let { nameplate: n } = e,
-        c = (0, r.e7)([s.default], () => s.default.getCurrentUser()),
-        d = null != (t = o.ZP.useName(c)) ? t : "";
+        c = (0, r.e7)([o.default], () => o.default.getCurrentUser()),
+        d = null != (t = s.ZP.useName(c)) ? t : "";
     return (0, a.jsx)(l.m, {
         username: d,
         selfMute: !1,

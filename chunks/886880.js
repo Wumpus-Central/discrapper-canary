@@ -1,26 +1,26 @@
-n.d(t, { Z: () => s }), n(388685);
+n.d(t, { Z: () => c }), n(388685);
 var r = n(951288),
     l = n(647438),
     o = n(264418),
     i = n(493773),
     a = n(921944);
-function s(e) {
-    let { dismissibleContentType: t, targetElementRef: n, visibleContent: s, markAsDismissed: c, props: u } = e,
+function c(e) {
+    let { dismissibleContentType: t, targetElementRef: n, visibleContent: c, markAsDismissed: s, props: u } = e,
         [d, f] = l.useState(!1),
-        m = l.useRef(null);
+        b = l.useRef(null);
     (0, i.ZP)(
         () => (
-            (m.current = setTimeout(() => f(!0), 250)),
+            (b.current = setTimeout(() => f(!0), 250)),
             () => {
-                clearTimeout(m.current), c(a.L.AUTO_DISMISS);
+                clearTimeout(b.current), s(a.L.AUTO_DISMISS);
             }
         ),
     );
-    let b = l.useCallback(
+    let p = l.useCallback(
         (e) => {
-            c("user:explicit" === e ? a.L.USER_DISMISS : a.L.AUTO_DISMISS);
+            s("user:explicit" === e ? a.L.USER_DISMISS : a.L.AUTO_DISMISS);
         },
-        [c],
+        [s],
     );
     return (0, r.jsx)(
         o.Z,
@@ -51,8 +51,8 @@ function s(e) {
         })(
             {
                 targetElementRef: n,
-                shouldShow: d && s === t,
-                onRequestClose: b,
+                shouldShow: d && c === t,
+                onRequestClose: p,
             },
             u,
         ),

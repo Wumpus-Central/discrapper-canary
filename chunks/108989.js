@@ -59,8 +59,8 @@ function u(e) {
         [h, g] = i.useState(null),
         [m, b] = i.useState(null),
         _ = (0, l.uR)(m, h),
-        O = i.useMemo(() => new l.qA({ wind: u }), [u]),
-        E = i.useCallback(() => {
+        E = i.useMemo(() => new l.qA({ wind: u }), [u]),
+        O = i.useCallback(() => {
             var e, t;
             let n = null == m ? void 0 : m.getCanvas();
             if (null == n) return;
@@ -122,15 +122,15 @@ function u(e) {
         }, [_, m, f]);
     return (
         i.useEffect(() => {
-            let e = n ? setInterval(E, s) : null;
+            let e = n ? setInterval(O, s) : null;
             return () => clearInterval(e);
-        }, [n, E]),
+        }, [n, O]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(l.O_, {
                     ref: b,
                     className: t,
-                    environment: O,
+                    environment: E,
                 }),
                 (0, r.jsx)(l.Ji, {
                     ref: g,

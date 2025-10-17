@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => k });
 var r = n(951288);
 n(647438);
 var i = n(512722),
@@ -33,9 +33,9 @@ var i = n(512722),
     L = n(474936),
     x = n(388032),
     M = n(737788);
-function j(e) {
-    var t, n, i, j;
-    let { guild: k, nameplateEnabled: U } = e,
+function k(e) {
+    var t, n, i, k;
+    let { guild: j, nameplateEnabled: U } = e,
         G = (0, o.e7)([S.default], () => {
             let e = S.default.getCurrentUser();
             return a()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e;
@@ -74,7 +74,7 @@ function j(e) {
             userId: G.id,
             image: Z,
         }),
-        X = null != k ? k : z;
+        X = null != j ? j : z;
     a()(null != X, "guild should not be null");
     let Q = (0, u.gS)(X.id),
         J = (0, o.e7)([T.ZP], () => (null == X.id ? null : T.ZP.getMember(X.id, G.id))),
@@ -252,7 +252,7 @@ function j(e) {
                                 ],
                             }),
                             onBioChange: (e) => (0, P.qN)(e, ea),
-                            errors: null != (j = null == K ? void 0 : K.bio) ? j : null == Q ? void 0 : Q.bio,
+                            errors: null != (k = null == K ? void 0 : K.bio) ? k : null == Q ? void 0 : Q.bio,
                             pendingBio: H,
                             currentBio: ea,
                             disabled: !et,

@@ -19,8 +19,8 @@ var r = n(951288),
     m = n(700785),
     C = n(146085),
     b = n(71080),
-    N = n(388032),
-    x = n(878713);
+    x = n(388032),
+    N = n(878713);
 function f(e, t) {
     return {
         id: e,
@@ -126,17 +126,17 @@ function O(e) {
             })({}, E)),
             (n = n =
                 {
-                    title: N.intl.string(N.t.dMJ3Y2),
+                    title: x.intl.string(x.t.dMJ3Y2),
                     onClose: O,
                     input: (0, r.jsxs)("div", {
                         children: [
                             (0, r.jsxs)(a.Text, {
-                                className: x.channelName,
+                                className: N.channelName,
                                 variant: "text-lg/normal",
                                 color: "header-secondary",
                                 children: [
                                     (0, r.jsx)(a.ewx, {
-                                        className: x.channelIcon,
+                                        className: N.channelIcon,
                                         size: "sm",
                                         color: "currentColor",
                                     }),
@@ -146,19 +146,19 @@ function O(e) {
                             j.isGuildStageVoice() &&
                                 (0, r.jsx)(a.Text, {
                                     color: "header-secondary",
-                                    className: x.description,
+                                    className: N.description,
                                     variant: "text-sm/normal",
-                                    children: N.intl.string(N.t.f7VbhI),
+                                    children: x.intl.string(x.t.f7VbhI),
                                 }),
-                            (0, r.jsx)(h.Z.SearchBox, { placeholderText: N.intl.string(N.t.iezLLi) }),
+                            (0, r.jsx)(h.Z.SearchBox, { placeholderText: x.intl.string(x.t.iezLLi) }),
                             (0, r.jsx)(a.Text, {
-                                className: x.subtext,
+                                className: N.subtext,
                                 variant: "text-xs/normal",
-                                children: N.intl.string(N.t["rwFx8/"]),
+                                children: x.intl.string(x.t["rwFx8/"]),
                             }),
                             null != D
                                 ? (0, r.jsx)(a.Text, {
-                                      className: x.subtext,
+                                      className: N.subtext,
                                       variant: "text-xs/normal",
                                       color: "text-danger",
                                       children: D.getAnyErrorMessage(),
@@ -177,12 +177,12 @@ function O(e) {
                     actions: [
                         {
                             variant: "secondary",
-                            text: N.intl.string(N.t["ETE/oK"]),
+                            text: x.intl.string(x.t["ETE/oK"]),
                             onClick: O,
                         },
                         {
                             variant: "primary",
-                            text: N.intl.string(N.t.OYkgVl),
+                            text: x.intl.string(x.t.OYkgVl),
                             onClick: M,
                             loading: A,
                         },

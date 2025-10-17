@@ -50,7 +50,7 @@ var i = n(772848),
     L = n(981631),
     x = n(49898),
     M = n(388032);
-function j(e, t, n) {
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -63,7 +63,7 @@ function j(e, t, n) {
         e
     );
 }
-function k(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -74,7 +74,7 @@ function k(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -123,7 +123,7 @@ function F(e) {
             return (n) =>
                 (0, r.jsx)(
                     e,
-                    G(k({}, n), {
+                    G(j({}, n), {
                         quest: t,
                         preview: o,
                         sourceQuestContent: c,
@@ -137,7 +137,7 @@ function F(e) {
         return (e) =>
             (0, r.jsx)(
                 u,
-                G(k({}, e), {
+                G(j({}, e), {
                     questId: t.id,
                     questContentPosition: a,
                     questContent: i,
@@ -156,7 +156,7 @@ function V(e, t) {
               return (n) =>
                   (0, r.jsx)(
                       i,
-                      G(k({}, n), {
+                      G(j({}, n), {
                           quest: e,
                           location: t,
                       }),
@@ -171,7 +171,7 @@ function H(e, t, i) {
             return (n) =>
                 (0, r.jsx)(
                     a,
-                    G(k({}, n), {
+                    G(j({}, n), {
                         quest: e,
                         location: t,
                         sourceQuestContent: i,
@@ -182,7 +182,7 @@ function H(e, t, i) {
         return (n) =>
             (0, r.jsx)(
                 a,
-                G(k({}, n), {
+                G(j({}, n), {
                     quest: e,
                     location: t,
                     sourceQuestContent: i,
@@ -197,7 +197,7 @@ function Y(e, t, i) {
             return (n) =>
                 (0, r.jsx)(
                     a,
-                    G(k({}, n), {
+                    G(j({}, n), {
                         quest: e,
                         sourceQuestContent: i,
                         location: t,
@@ -208,7 +208,7 @@ function Y(e, t, i) {
         return (n) =>
             (0, r.jsx)(
                 a,
-                G(k({}, n), {
+                G(j({}, n), {
                     quest: e,
                     location: t,
                 }),
@@ -222,7 +222,7 @@ function W(e, t, i, a) {
             return (n) =>
                 (0, r.jsx)(
                     o,
-                    G(k({}, n), {
+                    G(j({}, n), {
                         quest: e,
                         sourceQuestContent: i,
                         location: t,
@@ -234,7 +234,7 @@ function W(e, t, i, a) {
         return (n) =>
             (0, r.jsx)(
                 o,
-                G(k({}, n), {
+                G(j({}, n), {
                     quest: e,
                     location: t,
                     preview: a,
@@ -248,7 +248,7 @@ function K(e, t, i) {
         return (n) =>
             (0, r.jsx)(
                 a,
-                G(k({}, n), {
+                G(j({}, n), {
                     quest: e,
                     location: t,
                     sourceQuestContent: i,
@@ -270,7 +270,7 @@ function z(e, t) {
             return (n) =>
                 (0, r.jsx)(
                     i,
-                    G(k({}, n), {
+                    G(j({}, n), {
                         questContent: t.content,
                         quest: e,
                     }),
@@ -356,7 +356,7 @@ function $(e) {
             return (t) =>
                 (0, r.jsx)(
                     e,
-                    G(k({}, t), {
+                    G(j({}, t), {
                         openStartClockTime: performance.now(),
                         questId: n.id,
                         autoplay: c,
@@ -452,11 +452,11 @@ function er(e) {
 }
 function ei(e) {
     (0, s.ZDy)(async () => {
-        let { default: t } = await Promise.all([n.e("16408"), n.e("33628")]).then(n.bind(n, 570387));
+        let { default: t } = await Promise.all([n.e("54569"), n.e("16794")]).then(n.bind(n, 570387));
         return (n) =>
             (0, r.jsx)(
                 t,
-                G(k({}, n), {
+                G(j({}, n), {
                     questId: e.id,
                     questName: e.config.messages.questName,
                 }),

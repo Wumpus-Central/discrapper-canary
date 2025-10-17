@@ -27,8 +27,8 @@ var r = n(951288),
     C = n(110924),
     O = n(100527),
     y = n(570908),
-    N = n(200876),
-    E = n(556019),
+    E = n(200876),
+    N = n(556019),
     I = n(748523),
     S = n(719403),
     T = n(730089),
@@ -40,8 +40,8 @@ var r = n(951288),
     A = n(768581),
     L = n(176354),
     k = n(267642),
-    M = n(51144),
-    G = n(434404),
+    G = n(51144),
+    M = n(434404),
     U = n(471613),
     B = n(999382),
     F = n(806774),
@@ -108,7 +108,7 @@ let q = d().throttle(x.OQ, 1000),
                 }),
                 d ? "respect-motion-settings" : "animate-never",
             ),
-            O = M.ZP.useUserTag(s.user);
+            O = G.ZP.useUserTag(s.user);
         return (0, r.jsxs)("div", {
             className: a()(z.emojiRow, K.card),
             role: "row",
@@ -431,12 +431,12 @@ let q = d().throttle(x.OQ, 1000),
             {
                 maxEmojiSlots: L,
                 availableEmojiSlots: k,
-                staticEmoji: M,
+                staticEmoji: G,
                 totalStaticEmoji: W,
                 animatedEmoji: K,
                 totalAnimatedEmoji: X,
             } = (0, S.t)({ guild: t }),
-            J = (0, E.qt)({
+            J = (0, N.qt)({
                 location: "guild_settings",
                 autoTrackExposure: !0,
             }),
@@ -531,7 +531,7 @@ let q = d().throttle(x.OQ, 1000),
                     return (n) => (0, r.jsx)(t, Y({ processFiles: () => es(e) }, n));
                 });
             },
-            ed = (0, N.l)(t),
+            ed = (0, E.l)(t),
             eu = J.isEmojiEditingExperimentEnabled ? (e) => el({ emoji: e }) : void 0;
         return (0, r.jsxs)("div", {
             className: z.emojiSettings,
@@ -571,7 +571,7 @@ let q = d().throttle(x.OQ, 1000),
                                         messageType: h.QYI.INFO,
                                         children: V.intl.format(V.t.uMkfTk, {
                                             onClick: () =>
-                                                G.Z.open(
+                                                M.Z.open(
                                                     t.id,
                                                     H.pNK.ROLE_SUBSCRIPTIONS,
                                                     void 0,
@@ -632,7 +632,7 @@ let q = d().throttle(x.OQ, 1000),
                         }),
                         (0, r.jsx)(Q, {
                             isLoading: null == p,
-                            staticEmoji: M,
+                            staticEmoji: G,
                             animatedEmoji: K,
                             guild: t,
                             theme: s,

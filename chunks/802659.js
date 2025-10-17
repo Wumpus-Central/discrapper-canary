@@ -17,10 +17,10 @@ function a(e, n, t) {
 }
 let o = {},
     s = [];
-function c() {
+function d() {
     o = {};
 }
-class d extends (r = i.ZP.Store) {
+class c extends (r = i.ZP.Store) {
     getRegionStateForPingUrl(e) {
         if (null != e) return o[e];
     }
@@ -31,9 +31,9 @@ class d extends (r = i.ZP.Store) {
         return s;
     }
 }
-a(d, "displayName", "GameServerRegionStore");
-let u = new d(l.Z, {
-    LOGOUT: c,
+a(c, "displayName", "GameServerRegionStore");
+let u = new c(l.Z, {
+    LOGOUT: d,
     GAME_SERVER_REGION_PING_STATE_UPDATE: function (e) {
         var n, t;
         let { pingUrl: r, state: i } = e;
@@ -68,7 +68,7 @@ let u = new d(l.Z, {
                   }),
             (o = n);
     },
-    GAME_SERVER_REGION_PING_STATE_RESET: c,
+    GAME_SERVER_REGION_PING_STATE_RESET: d,
     GAME_SERVER_FETCH_REGIONS_SUCCESS: function (e) {
         let { regions: n } = e;
         s = n;

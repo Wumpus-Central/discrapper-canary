@@ -119,8 +119,8 @@ function T(e) {
         ]);
     let { fieldProps: L, props: x } = (0, s.XF_)(D),
         { disabled: M } = L,
-        j = (0, f.U)("UserSettingsDesignSystems"),
-        k = (0, d.m)({
+        k = (0, f.U)("UserSettingsDesignSystems"),
+        j = (0, d.m)({
             validateOn: "change",
             error: O,
             value: n,
@@ -129,17 +129,17 @@ function T(e) {
             defaultDirty: T,
         }),
         U = i.useMemo(() => {
-            if (j) return;
+            if (k) return;
             if (null == E) return v;
             let e = "".concat(E).length;
             return I * (e += "".concat(E, " / ").length) + v;
-        }, [j, E]),
+        }, [k, E]),
         G = (e) => {
             let { onChange: t } = x;
-            null == t || t(e.currentTarget.value), k.setShouldValidate(!0);
+            null == t || t(e.currentTarget.value), j.setShouldValidate(!0);
         },
         B =
-            j && N
+            k && N
                 ? (0, r.jsx)(c.H, {
                       value: n,
                       maxLength: R && null != E ? E : void 0,
@@ -149,9 +149,9 @@ function T(e) {
         s.gNt,
         b(g({}, L), {
             trailingContent: B,
-            errorMessage: k.hasError && null != (t = k.errorMessage) ? t : void 0,
+            errorMessage: j.hasError && null != (t = j.errorMessage) ? t : void 0,
             children: (0, r.jsxs)(u.U, {
-                validation: k,
+                validation: j,
                 disabled: M,
                 children: [
                     (0, r.jsx)(s.tEY, {
@@ -181,7 +181,7 @@ function T(e) {
                             ),
                         ),
                     }),
-                    j
+                    k
                         ? null
                         : (0, r.jsxs)(r.Fragment, {
                               children: [
@@ -189,7 +189,7 @@ function T(e) {
                                       ? (0, r.jsx)(A, {
                                             value: n,
                                             maxLength: E,
-                                            hasError: k.hasError,
+                                            hasError: j.hasError,
                                         })
                                       : null,
                                   N || !1 === R

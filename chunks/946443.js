@@ -14,27 +14,27 @@ var r = n(951288),
     u = n(442837),
     d = n(481060),
     p = n(570140),
-    h = n(493773),
-    f = n(607070),
+    f = n(493773),
+    h = n(607070),
     g = n(724757),
     m = n(626135),
     b = n(585483),
     _ = n(358085),
-    y = n(143316),
-    O = n(240126),
+    O = n(143316),
+    y = n(240126),
     v = n(147522),
     j = n(809780),
     x = n(981631),
     C = n(388032),
     E = n(915087);
 function S(e) {
-    var t, n, l, a, y, S, P;
+    var t, n, l, a, O, S, P;
     let { onJump: N, showTutorial: Z, setSeenTutorial: w, closePopout: T } = e,
         A = i.useRef(null),
         [R, D] = (0, j.ZP)(A),
         { loadState: L, channels: M } = R,
         { maybeLoadMore: k } = D,
-        G = (0, u.e7)([f.Z], () => f.Z.messageGroupSpacing);
+        G = (0, u.e7)([h.Z], () => h.Z.messageGroupSpacing);
     (t = A),
         (n = R),
         (l = D),
@@ -52,11 +52,11 @@ function S(e) {
             (a.offsetTop < s || a.offsetTop > s + c) && i.scrollTo({ to: a.offsetTop });
         }),
         (a = R),
-        (y = D),
+        (O = D),
         i.useEffect(() => {
             let e = () => {
                 let e = a.channels.find((e) => !e.collapsed);
-                null != e && y.markChannelRead(e);
+                null != e && O.markChannelRead(e);
             };
             return (
                 b.S.subscribe(x.CkL.MARK_TOP_INBOX_CHANNEL_READ, e),
@@ -64,7 +64,7 @@ function S(e) {
                     b.S.unsubscribe(x.CkL.MARK_TOP_INBOX_CHANNEL_READ, e);
                 }
             );
-        }, [y, a.channels]),
+        }, [O, a.channels]),
         (S = D),
         i.useEffect(() => {
             let e = (e) => {
@@ -93,7 +93,7 @@ function S(e) {
             ),
             [T],
         ),
-        (0, h.ZP)(
+        (0, f.ZP)(
             () => (
                 b.S.subscribe(x.CkL.INBOX_MARK_ALL_UNREADS_READ, D.markAllRead),
                 () => {
@@ -103,7 +103,7 @@ function S(e) {
         );
     let U = (0, g.Z)("unreads", A);
     if (0 === M.length) {
-        return (0, r.jsx)(O.Z, {
+        return (0, r.jsx)(y.Z, {
             Icon: d.xx7,
             header: C.intl.string(C.t["6XMM+P"]),
             tip:
@@ -246,7 +246,7 @@ function I(e) {
     });
 }
 function P() {
-    return (0, r.jsx)(O.Z, {
+    return (0, r.jsx)(y.Z, {
         Icon: d.xx7,
         disableStars: !0,
         header: C.intl.string(C.t["KG/ynZ"]),
@@ -254,7 +254,7 @@ function P() {
     });
 }
 let N = () =>
-    (0, r.jsx)(y.Z, {
+    (0, r.jsx)(O.Z, {
         onClick: () => b.S.dispatch(x.CkL.INBOX_MARK_ALL_UNREADS_READ),
         type: "top-header",
     });

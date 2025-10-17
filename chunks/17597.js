@@ -16,7 +16,7 @@ var a = n(951288),
     g = n(352138),
     b = n(629235),
     v = n(981631),
-    j = n(847678),
+    j = n(398158),
     _ = n(388032),
     y = n(70402),
     C = n(736056);
@@ -24,8 +24,8 @@ let S = function (e) {
     let { transitionState: t, entryPoint: n, onClose: S, onComplete: E, dismissable: T, classificationId: O } = e,
         [N, P] = r.useState(o.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
         I = r.useRef(N),
-        [w, R] = (0, c.US)([N], void 0, !0),
-        k = r.useMemo(() => (0, i.Z)(), []),
+        [w, k] = (0, c.US)([N], void 0, !0),
+        R = r.useMemo(() => (0, i.Z)(), []),
         A = r.useRef(!1),
         D = (0, m.GE)();
     r.useEffect(() => {
@@ -55,8 +55,8 @@ let S = function (e) {
             [],
         ),
         r.useEffect(() => {
-            (0, f.lA)(k, f.d_.EXPRESSIVE_PRIMARY, n);
-        }, [k, n]),
+            (0, f.lA)(R, f.d_.EXPRESSIVE_PRIMARY, n);
+        }, [R, n]),
         (0, a.jsx)(l.ExpressiveModal, {
             transitionState: t,
             onClose: S,
@@ -66,31 +66,31 @@ let S = function (e) {
                 type: "image",
                 src: C.Z,
             },
-            title: _.intl.string(_.t.JHNunj),
+            title: _.intl.string(_.t.JHNunp),
             subtitle: D
-                ? _.intl.string(j.default["1/6wta"])
+                ? _.intl.string(j.default["1/6wtb"])
                 : _.intl.format(j.default.RpMIT0, {
                       handleOnHelpUrlHook: () => {
                           x.Z.openUrl(h.Z.getArticleURL(v.BhN.TIGGER_PAWTECT_LEARN_MORE)),
-                              (0, f.x3)(k, f.d_.EXPRESSIVE_PRIMARY, f.sU.LEARN_MORE);
+                              (0, f.x3)(R, f.d_.EXPRESSIVE_PRIMARY, f.sU.LEARN_MORE);
                       },
                   }),
             actionBarInput: D
                 ? (0, a.jsx)(s.Text, {
                       variant: "text-xs/medium",
-                      children: _.intl.format(j.default.htWh1G, {
+                      children: _.intl.format(j.default.htWh1N, {
                           handleOnHelpUrlHook: () => {
                               x.Z.openUrl(h.Z.getArticleURL(v.BhN.TIGGER_PAWTECT_LEARN_MORE)),
-                                  (0, f.x3)(k, f.d_.EXPRESSIVE_PRIMARY, f.sU.LEARN_MORE);
+                                  (0, f.x3)(R, f.d_.EXPRESSIVE_PRIMARY, f.sU.LEARN_MORE);
                           },
                       }),
                   })
                 : (0, a.jsx)(s.Avr, {
                       size: "sm",
                       textVariant: "text-sm/medium",
-                      text: _.intl.string(_.t["2jxGer"]),
+                      text: _.intl.string(_.t["2jxGen"]),
                       onClick: () => {
-                          (0, f.x3)(k, f.d_.EXPRESSIVE_PRIMARY, f.sU.LOG_OUT),
+                          (0, f.x3)(R, f.d_.EXPRESSIVE_PRIMARY, f.sU.LOG_OUT),
                               (0, u.R)("age_verification_get_started_modal");
                       },
                   }),
@@ -118,7 +118,7 @@ let S = function (e) {
                             (0, a.jsx)(s.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-feedback-info",
-                                children: _.intl.string(j.default.ar3a3q),
+                                children: _.intl.string(j.default.ar3a3t),
                             }),
                         ],
                     }),
@@ -131,12 +131,12 @@ let S = function (e) {
                                   (0, a.jsx)(s.Text, {
                                       variant: "text-xs/medium",
                                       color: "text-secondary",
-                                      children: _.intl.string(j.default.cR6336),
+                                      children: _.intl.string(j.default.cR6339),
                                   }),
                                   (0, a.jsx)(s.Button, {
                                       variant: "primary",
                                       size: "sm",
-                                      text: _.intl.string(j.default.hDvmYP),
+                                      text: _.intl.string(j.default.hDvmYG),
                                       onClick: () => {
                                           (0, g.Jh)();
                                       },
@@ -155,7 +155,7 @@ let S = function (e) {
                                           title: t,
                                           description: n,
                                           buttonDisabled: Z,
-                                          onButtonPress: () => r(k),
+                                          onButtonPress: () => r(R),
                                       },
                                       t,
                                   );

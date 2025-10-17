@@ -107,8 +107,8 @@ let P = (e) => {
             handleSubscribeModalClose: L,
             withHighlight: x = !1,
             icon: M,
-            intent: j,
-            useExpressiveButton: k = !1,
+            intent: k,
+            useExpressiveButton: j = !1,
         } = e,
         U = N(e, [
             "analyticsLocation",
@@ -150,7 +150,7 @@ let P = (e) => {
                     inPopout: B,
                     applicationId: D,
                     handleSubscribeModalClose: L,
-                    intent: j,
+                    intent: k,
                 }),
                 F(!1);
         },
@@ -174,7 +174,7 @@ let P = (e) => {
         })),
         (U.disabled = !0)),
     null != K)
-        ? k
+        ? j
             ? (0, r.jsx)(l.u, {
                   text: K,
                   children: (0, r.jsx)(u.Button, {
@@ -204,7 +204,7 @@ let P = (e) => {
                           ),
                       ),
               })
-        : k
+        : j
           ? (0, r.jsx)(u.Button, {
                 variant: "expressive",
                 disabled: Q,

@@ -70,7 +70,7 @@ function F(e) {
             authorizedAppToken: _.Z.getNewestTokenForApplication(null == G ? void 0 : G.id),
             authorizedAppsFetchState: _.Z.getFetchState(),
         })),
-        Y = c.Z.useExperiment({ location: "EmptyMessages" }).enabledDesktop;
+        K = c.Z.useExperiment({ location: "EmptyMessages" }).enabledDesktop;
     if (
         (r.useEffect(() => {
             v === D.d4z.DM &&
@@ -109,7 +109,7 @@ function F(e) {
                               channel: p,
                               oauth2Token: z,
                           }),
-                          Y && (0, i.jsx)(f.Z, { channel: p }),
+                          K && (0, i.jsx)(f.Z, { channel: p }),
                       ],
                   }))
                 : (e = (0, i.jsx)(E.Z, {

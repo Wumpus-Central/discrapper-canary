@@ -82,7 +82,7 @@ function C(e) {
             ref: x,
             ...M
         } = O(e),
-        [j, k] = (0, y.useState)(!1),
+        [k, j] = (0, y.useState)(!1),
         U = (0, y.useRef)({
             isPressed: !1,
             ignoreEmulatedMouseEvents: !1,
@@ -103,7 +103,7 @@ function C(e) {
                 let n = new I("pressstart", t, e);
                 a(n), (i = n.shouldStopPropagation);
             }
-            return n && n(!0), (r.isTriggeringEvent = !1), (r.didFirePressStart = !0), k(!0), i;
+            return n && n(!0), (r.isTriggeringEvent = !1), (r.didFirePressStart = !0), j(!0), i;
         }),
         F = (0, f.i)((e, r, i = !0) => {
             let a = U.current;
@@ -114,7 +114,7 @@ function C(e) {
                 let t = new I("pressend", r, e);
                 o(t), (s = t.shouldStopPropagation);
             }
-            if ((n && n(!1), k(!1), t && i && !u)) {
+            if ((n && n(!1), j(!1), t && i && !u)) {
                 let n = new I("press", r, e);
                 t(n), s && (s = n.shouldStopPropagation);
             }
@@ -337,7 +337,7 @@ function C(e) {
             };
         }, [L]),
         {
-            isPressed: v || j,
+            isPressed: v || k,
             pressProps: (0, c.d)(M, z, { [A]: !0 }),
         }
     );

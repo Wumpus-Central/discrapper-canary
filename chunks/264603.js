@@ -3,8 +3,8 @@ var a = n(951288),
     r = n(647438),
     i = n(120356),
     l = n.n(i),
-    s = n(442837),
-    o = n(524437),
+    o = n(442837),
+    s = n(524437),
     c = n(481060),
     d = n(384275),
     u = n(20471),
@@ -13,36 +13,36 @@ var a = n(951288),
     h = n(594190),
     x = n(989941),
     f = n(695346),
-    b = n(881998),
-    g = n(449224),
+    g = n(881998),
+    b = n(449224),
     v = n(246992),
     j = n(451429),
     _ = n(441900);
 let y = [
     {
         label: "Unset",
-        value: o.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET,
+        value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET,
     },
     {
         label: "All",
-        value: o.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL,
+        value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL,
     },
     {
         label: "Users With Game",
-        value: o.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_USERS_WITH_GAME,
+        value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_USERS_WITH_GAME,
     },
     {
         label: "None",
-        value: o.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE,
+        value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE,
     },
 ];
 function C() {
     let e = r.useRef(null),
         t = f.JG.useSetting(),
         [n, i] = r.useState(""),
-        o = (0, s.e7)([h.ZP, g.Z], () => (0, x.Z)(h.ZP, g.Z)),
+        s = (0, o.e7)([h.ZP, b.Z], () => (0, x.Z)(h.ZP, b.Z)),
         C = (0, p.q)(n),
-        S = (0, s.Wu)([m.Z], () => {
+        S = (0, o.Wu)([m.Z], () => {
             var e, t;
             return null !=
                 (t =
@@ -56,7 +56,7 @@ function C() {
         T = (0, u.FG)(C, { allowedFlows: [u.ro.WEB] }),
         O = (0, u.FG)(C),
         { canDeauthorize: N, deauthorize: P } = (function (e) {
-            let t = (0, s.e7)([b.Z], () => b.Z.getNewestTokenForApplication(e)),
+            let t = (0, o.e7)([g.Z], () => g.Z.getNewestTokenForApplication(e)),
                 n = r.useCallback(() => {
                     null != t && d.Z.delete(t.id);
                 }, [t]);
@@ -98,11 +98,11 @@ function C() {
                         value: n,
                         onChange: i,
                     }),
-                    null != o && null != o.id
+                    null != s && null != s.id
                         ? (0, a.jsx)(c.Button, {
-                              onClick: () => i(o.id),
+                              onClick: () => i(s.id),
                               variant: "primary",
-                              text: "Use detected game: ".concat(o.name, " (").concat(o.id, ")"),
+                              text: "Use detected game: ".concat(s.name, " (").concat(s.id, ")"),
                           })
                         : null,
                     (0, a.jsxs)(c.Text, {

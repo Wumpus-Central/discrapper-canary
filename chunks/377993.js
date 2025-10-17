@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(144144),
     d = n(100527),
     u = n(906732),
-    h = n(385499),
-    p = n(545957),
+    p = n(385499),
+    h = n(545957),
     f = n(82295),
     g = n(850020),
     m = n(670188),
@@ -25,8 +25,8 @@ var r = n(951288),
     S = n(276264),
     E = n(981631),
     Z = n(388032),
-    T = n(32482);
-function P(e) {
+    P = n(32482);
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,12 +55,12 @@ let N = [],
     R = I.ZP.getEnableHardwareAcceleration();
 function w(e) {
     let { user: t, channel: s, status: d, activities: u } = e,
-        h = (0, a.e7)([_.Z], () => null != _.Z.getTypingUsers(s.id)[t.id]),
+        p = (0, a.e7)([_.Z], () => null != _.Z.getTypingUsers(s.id)[t.id]),
         f = (0, a.e7)([j.default], () => j.default.getCurrentUser()),
         O = (0, a.e7)([b.Z], () => b.Z.isMobileOnline(t.id)),
         v = (0, a.e7)([y.Z], () => y.Z.getNickname(t.id)),
-        I = (0, p.Z)(t.id),
-        T = i.useRef(null),
+        I = (0, h.Z)(t.id),
+        P = i.useRef(null),
         N = (e) => {
             (0, o.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e("79695"), n.e("98783"), n.e("49062")]).then(
@@ -70,7 +70,7 @@ function w(e) {
                     var i, l;
                     return (0, r.jsx)(
                         e,
-                        ((i = P({}, n)),
+                        ((i = T({}, n)),
                         (l = l =
                             {
                                 user: t,
@@ -106,7 +106,7 @@ function w(e) {
         A = (0, g.K)({ user: t }),
         [D, L] = i.useState(!1);
     return (0, r.jsx)(m.Z, {
-        targetElementRef: T,
+        targetElementRef: P,
         user: t,
         channelId: s.id,
         position: l.tq ? "window_center" : "left",
@@ -141,15 +141,15 @@ function w(e) {
                 })(e, ["onClick", "onMouseDown"]);
             return (0, r.jsx)(
                 S.Z,
-                P(
+                T(
                     {
-                        ref: T,
+                        ref: P,
                         user: t,
                         currentUser: f,
                         isOwner: t.id === s.ownerId,
                         ownerTooltipText: Z.intl.string(Z.t["MRXZ+/"]),
                         shouldAnimateStatus: R,
-                        isTyping: h,
+                        isTyping: p,
                         status: d,
                         activities: u,
                         applicationStream: I,
@@ -225,22 +225,22 @@ function D(e) {
             guild_id: t.guild_id,
         });
     }, [t.guild_id, t.id, t.type]);
-    let p = l && c.every((e) => e.user.isStaff());
+    let h = l && c.every((e) => e.user.isStaff());
     return (0, r.jsx)(u.Gt, {
         value: o,
         children: (0, r.jsx)("div", {
-            className: T.container,
+            className: P.container,
             children: (0, r.jsx)("aside", {
-                className: T.membersWrap,
+                className: P.membersWrap,
                 children: (0, r.jsxs)(s.Ttm, {
-                    className: T.members,
+                    className: P.members,
                     fade: !0,
                     children: [
                         (0, r.jsxs)(f.Z, {
-                            className: T.membersGroup,
+                            className: P.membersGroup,
                             children: [
                                 "".concat(Z.intl.string(Z.t["9Oq93t"]), "\u2014").concat(c.length, " "),
-                                p && (0, r.jsx)(h.Z, { type: h.Z.Types.STAFF_ONLY_DM }),
+                                h && (0, r.jsx)(p.Z, { type: p.Z.Types.STAFF_ONLY_DM }),
                             ],
                         }),
                         c.map((e) =>

@@ -18,8 +18,8 @@ let b = function (e) {
         [n, l] = i.useState(!1),
         b = i.useRef(null),
         _ = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
-        O = d.ZP.useName(_),
-        E = (0, c.Z)(null == _ ? void 0 : _.id),
+        E = d.ZP.useName(_),
+        O = (0, c.Z)(null == _ ? void 0 : _.id),
         v = i.useCallback(
             (e) => {
                 var n, i;
@@ -51,10 +51,10 @@ let b = function (e) {
                         return e;
                     })(
                         {
-                            name: O,
+                            name: E,
                             quest: t,
                             memberListItemRef: b,
-                            applicationStream: E,
+                            applicationStream: O,
                         },
                         e,
                     )),
@@ -79,7 +79,7 @@ let b = function (e) {
                     n),
                 );
             },
-            [t, E, O],
+            [t, O, E],
         );
     return (0, r.jsx)("div", {
         className: g.previewBackground,
@@ -131,7 +131,7 @@ let b = function (e) {
                                                     (0, r.jsx)(s.Text, {
                                                         variant: "text-md/semibold",
                                                         color: "header-primary",
-                                                        children: O,
+                                                        children: E,
                                                     }),
                                                     (0, r.jsx)(s.Text, {
                                                         variant: "text-sm/normal",

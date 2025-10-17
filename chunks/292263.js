@@ -3,14 +3,14 @@ var a,
     r,
     i = n(442837),
     l = n(570140);
-let s = null,
-    o = !1;
+let o = null,
+    s = !1;
 class c extends (r = i.ZP.Store) {
     get loading() {
-        return o;
+        return s;
     }
     get methods() {
-        return s;
+        return o;
     }
 }
 (a = "displayName") in c
@@ -23,13 +23,13 @@ class c extends (r = i.ZP.Store) {
     : (c[a] = "AgeVerificationStore");
 let d = new c(l.Z, {
     AGE_VERIFICATION_METHODS_LOAD_START: function () {
-        o = !0;
+        s = !0;
     },
     AGE_VERIFICATION_METHODS_LOAD_SUCCESS: function (e) {
         let { methods: t } = e;
-        (s = t), (o = !1);
+        (o = t), (s = !1);
     },
     AGE_VERIFICATION_METHODS_LOAD_FAILURE: function () {
-        o = !1;
+        s = !1;
     },
 });

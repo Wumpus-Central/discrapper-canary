@@ -53,7 +53,7 @@ function M() {
         children: (0, r.jsx)(c.$jN, {}),
     });
 }
-function j(e) {
+function k(e) {
     let { section: t, handleItemSelect: n } = e,
         i = (0, O.gU)(),
         a = (0, y.Z)();
@@ -96,7 +96,7 @@ function j(e) {
               ],
           });
 }
-function k(e) {
+function j(e) {
     let { theme: t, section: n, handleItemSelect: i } = e,
         a = (0, p.Dt)(),
         l = (0, O.gU)();
@@ -173,7 +173,7 @@ function U() {
         "aria-label": w.intl.string(P.default.RZqaJi),
         children: [
             (0, r.jsx)(_.yY, { location: w.intl.string(P.default.RZqaJi) }),
-            (0, r.jsx)(j, {
+            (0, r.jsx)(k, {
                 section: n,
                 handleItemSelect: o,
             }),
@@ -220,7 +220,7 @@ function G() {
             "aria-label": w.intl.string(P.default.RZqaJi),
             children: [
                 (0, r.jsx)(_.yY, { location: w.intl.string(P.default.RZqaJi) }),
-                (0, r.jsx)(k, {
+                (0, r.jsx)(j, {
                     theme: a,
                     section: S,
                     handleItemSelect: T,

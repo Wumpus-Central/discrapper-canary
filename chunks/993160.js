@@ -2,8 +2,8 @@ t.d(n, { Z: () => f });
 var l = t(951288);
 t(647438);
 var i = t(572691),
-    r = t(906732),
-    o = t(444141),
+    o = t(906732),
+    r = t(444141),
     s = t(705556),
     a = t(30556),
     c = t(664794),
@@ -12,22 +12,22 @@ var i = t(572691),
     m = t(562831),
     p = t(981631);
 function f(e) {
-    let { user: n, currentUser: t, guildId: f, channelId: h, displayProfile: x, relationshipType: j, onClose: v } = e,
-        { newestAnalyticsLocation: g } = (0, r.ZP)(),
-        b = (0, o.Z)({
+    let { user: n, currentUser: t, guildId: f, channelId: x, displayProfile: h, relationshipType: v, onClose: j } = e,
+        { newestAnalyticsLocation: g } = (0, o.ZP)(),
+        b = (0, r.Z)({
             user: n,
             guildId: f,
-            channelId: h,
-            displayProfile: x,
-            onClose: v,
+            channelId: x,
+            displayProfile: h,
+            onClose: j,
         }),
         {
             gameFriends: I,
             hasOutgoingPendingGameFriends: y,
-            hasIncomingPendingGameFriends: Z,
+            hasIncomingPendingGameFriends: _,
         } = (0, m.H)({ userId: n.id }),
-        O = I.length > 0 || y || Z;
-    return j === p.OGo.BLOCKED
+        Z = I.length > 0 || y || _;
+    return v === p.OGo.BLOCKED
         ? null
         : n.id === t.id
           ? (0, l.jsxs)(l.Fragment, {
@@ -35,9 +35,9 @@ function f(e) {
                     (0, l.jsx)(s.Z, {
                         user: n,
                         guildId: f,
-                        onClose: v,
+                        onClose: j,
                     }),
-                    (0, l.jsx)(d.Z, { onClose: v }),
+                    (0, l.jsx)(d.Z, { onClose: j }),
                     (0, l.jsx)(c.wV, {
                         user: n,
                         guildId: f,
@@ -60,7 +60,7 @@ function f(e) {
                       }),
                   ],
               })
-            : j === p.OGo.PENDING_INCOMING
+            : v === p.OGo.PENDING_INCOMING
               ? (0, l.jsxs)(l.Fragment, {
                     children: [
                         (0, l.jsx)(a.H, {
@@ -74,7 +74,7 @@ function f(e) {
                         }),
                     ],
                 })
-              : j === p.OGo.FRIEND || j === p.OGo.PENDING_OUTGOING
+              : v === p.OGo.FRIEND || v === p.OGo.PENDING_OUTGOING
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(a.H, {
@@ -85,7 +85,7 @@ function f(e) {
                           (0, l.jsx)(u.g, {
                               type: "icon",
                               user: n,
-                              relationshipType: j,
+                              relationshipType: v,
                               shouldShowTooltip: !0,
                               themeColor: "secondary",
                               analyticsLocation: g,
@@ -97,7 +97,7 @@ function f(e) {
                           }),
                       ],
                   })
-                : j === p.OGo.NONE && O
+                : v === p.OGo.NONE && Z
                   ? (0, l.jsxs)(l.Fragment, {
                         children: [
                             (0, l.jsx)(a.H, {
@@ -114,7 +114,7 @@ function f(e) {
                                 tooltipPosition: "top",
                                 tooltipAlign: "center",
                                 shouldShowTooltip: !0,
-                                hasIncomingPendingGameFriends: Z,
+                                hasIncomingPendingGameFriends: _,
                                 hasOutgoingPendingGameFriends: y,
                             }),
                             (0, l.jsx)(c.wV, {

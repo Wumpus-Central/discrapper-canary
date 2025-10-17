@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685), n(781311), n(35282);
+n.d(t, { Z: () => T }), n(388685), n(781311), n(35282);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -15,7 +15,7 @@ var r = n(951288),
     m = n(388032),
     b = n(470840),
     _ = n(197571);
-function O(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function O(e) {
     }
     return e;
 }
-function E(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -68,37 +68,37 @@ let v = n(349181),
     I = (0, p.hQ)(),
     C = "".concat(I, "-decription"),
     S = "".concat(I, "-error");
-function T(e, t) {
+function N(e, t) {
     switch (t.type) {
         case "RESET":
             return y;
         case "SUCCESS":
-            return E(O({}, y), { success: t.text });
+            return O(E({}, y), { success: t.text });
         case "HINT":
-            return E(O({}, y), {
+            return O(E({}, y), {
                 canSend: !0,
                 hint: t.text,
             });
         case "ERROR":
-            return E(O({}, e), {
+            return O(E({}, e), {
                 canSend: !0,
                 error: t.text,
             });
     }
 }
-function N(e) {
+function T(e) {
     let { placeholder: t = m.intl.string(m.t["Rn/sLi"]) } = e,
         n = i.useRef(null),
         l = i.useRef(null),
-        [o, p] = i.useReducer(T, y),
-        { canSend: O, hint: E, error: N, success: j } = o;
+        [o, p] = i.useReducer(N, y),
+        { canSend: E, hint: O, error: T, success: P } = o;
     return (
         i.useEffect(() => {
-            null != j &&
+            null != P &&
                 (s()(null != n.current, "Input is submitting when not mounted"),
                 (n.current.value = ""),
                 n.current.focus());
-        }, [j, n]),
+        }, [P, n]),
         (0, r.jsxs)("form", {
             onSubmit: (e) => {
                 e.preventDefault(), s()(null != n.current, "Input is submitted when not mounted");
@@ -151,8 +151,8 @@ function N(e) {
                     children: (0, r.jsxs)("div", {
                         ref: l,
                         className: a()(b.addFriendInputWrapper, {
-                            [b.success]: j,
-                            [b.error]: N,
+                            [b.success]: P,
+                            [b.error]: T,
                         }),
                         children: [
                             (0, r.jsx)(c.Is, {
@@ -195,26 +195,26 @@ function N(e) {
                                 "data-1p-ignore": !0,
                                 placeholder: t,
                                 "aria-label": t,
-                                "aria-invalid": null != N || void 0,
-                                "aria-describedby": null != N ? S : C,
+                                "aria-invalid": null != T || void 0,
+                                "aria-describedby": null != T ? S : C,
                             }),
-                            null != E &&
+                            null != O &&
                                 (0, r.jsx)("div", {
                                     className: b.addFriendHint,
                                     "aria-hidden": !0,
-                                    children: E,
+                                    children: O,
                                 }),
                             (0, r.jsx)(u.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: m.intl.string(m.t["PMsq/f"]),
-                                disabled: !O,
+                                disabled: !E,
                                 type: "submit",
                             }),
                         ],
                     }),
                 }),
-                null != N &&
+                null != T &&
                     (0, r.jsx)("div", {
                         role: "alert",
                         children: (0, r.jsx)(u.Text, {
@@ -222,17 +222,17 @@ function N(e) {
                             variant: "text-sm/normal",
                             className: _.marginTop8,
                             color: "text-feedback-critical",
-                            children: N,
+                            children: T,
                         }),
                     }),
-                null != j &&
+                null != P &&
                     (0, r.jsx)("div", {
                         role: "status",
                         children: (0, r.jsx)(u.Text, {
                             variant: "text-sm/normal",
                             className: _.marginTop8,
                             color: "text-feedback-positive",
-                            children: j,
+                            children: P,
                         }),
                     }),
             ],

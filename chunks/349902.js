@@ -1,7 +1,7 @@
-t.d(n, { Z: () => r }), t(997841);
+t.d(n, { Z: () => o }), t(997841);
 var l = t(442837),
     i = t(621853);
-function r(e) {
+function o(e) {
     var n;
     let t = (0, l.e7)([i.Z], () => i.Z.getUserProfile(e.id));
     return (

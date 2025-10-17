@@ -48,8 +48,8 @@ function M(e) {
         Y = (0, O.il)(Z),
         Q = (0, h.tP)(Z),
         G = (0, u.e7)([g.Z], () => g.Z.getState().theme),
-        z = (0, m.wj)(G) ? w.BRd.DARK : w.BRd.LIGHT,
-        W = (0, u.e7)([v.Z], () => v.Z.useReducedMotion),
+        W = (0, m.wj)(G) ? w.BRd.DARK : w.BRd.LIGHT,
+        z = (0, u.e7)([v.Z], () => v.Z.useReducedMotion),
         K = (0, b.aM)(),
         [X, $] = l.useState(Y.progressSeconds),
         [J, ee] = l.useState(!1),
@@ -99,7 +99,7 @@ function M(e) {
     let ef = async () => {
             if (null != V) {
                 let e = y.r.build(Z.config).ctaLink;
-                (await (0, R.qP)(e)) && V();
+                (await (0, R.PW)(e)) && V();
             }
             (0, O.nc)(Z, {
                 content: S.jn.VIDEO_MODAL,
@@ -146,7 +146,7 @@ function M(e) {
                                         (0, r.jsx)("img", {
                                             alt: Z.config.messages.gameTitle,
                                             className: i()(L.contentHeaderLogotype, L.accentOnHover),
-                                            src: (0, _.fh)(Z, _.eC.LOGO_TYPE, z).url,
+                                            src: (0, _.fh)(Z, _.eC.LOGO_TYPE, W).url,
                                         }),
                                         (0, r.jsx)(P.Z, {}),
                                         (0, r.jsxs)("div", {
@@ -230,7 +230,7 @@ function M(e) {
                                               className: L.portraitCtaBtn,
                                               size: f.zx.Sizes.MEDIUM,
                                               quest: Z,
-                                              useReducedMotion: W,
+                                              useReducedMotion: z,
                                               isExpanded: (null == (a = Z.userStatus) ? void 0 : a.completedAt) != null,
                                               disabled: (null == (C = Z.userStatus) ? void 0 : C.completedAt) == null,
                                               ctaLabel: eu,
@@ -279,7 +279,7 @@ function M(e) {
                                                   className: L.claimBtn,
                                                   size: f.zx.Sizes.MEDIUM,
                                                   quest: Z,
-                                                  useReducedMotion: W,
+                                                  useReducedMotion: z,
                                                   isExpanded:
                                                       (null == (T = Z.userStatus) ? void 0 : T.completedAt) != null,
                                                   disabled:

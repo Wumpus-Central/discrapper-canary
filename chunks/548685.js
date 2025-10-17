@@ -2,29 +2,29 @@ n.d(t, { Z: () => P }), n(388685);
 var r = n(951288),
     l = n(647438),
     i = n(120356),
-    s = n.n(i),
+    a = n.n(i),
     o = n(442837),
-    a = n(28664),
+    s = n(28664),
     c = n(481060),
     u = n(782568),
     d = n(607070),
     g = n(594174),
-    f = n(451478),
-    p = n(626135),
+    p = n(451478),
+    f = n(626135),
     C = n(63063),
     h = n(74538),
     _ = n(381585),
     m = n(597688),
     b = n(128922),
-    E = n(38900),
-    v = n(709999),
+    v = n(38900),
+    E = n(709999),
     x = n(653126),
     O = n(786040),
     S = n(401975),
     y = n(328626),
-    k = n(849275),
-    T = n(619899),
-    j = n(642909),
+    j = n(849275),
+    k = n(619899),
+    T = n(642909),
     L = n(215023),
     I = n(981631),
     B = n(388032),
@@ -40,27 +40,27 @@ let P = (e) => {
             prioritizeUserDiscounts: Z,
             tab: w,
             buttonContainerClassName: H,
-            orbsSupportedOnly: M,
+            orbsSupportedOnly: D,
         } = e,
-        D = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
-        F = h.ZP.canUseCollectibles(D),
-        W = (0, j.G)("FeedBlock"),
+        M = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
+        F = h.ZP.canUseCollectibles(M),
+        W = (0, T.G)("FeedBlock"),
         {
-            sortType: U,
-            setSortType: V,
+            sortType: V,
+            setSortType: U,
             sortedItems: z,
             sortOptions: G,
             shuffleProducts: K,
             showRecommendationOption: Y,
-        } = (0, k.Z)({
+        } = (0, j.Z)({
             sortedSkuIds: P,
             isPremiumUser: F,
             prioritizeUserDiscounts: Z,
-            orbsSupportedOnly: M,
+            orbsSupportedOnly: D,
         }),
-        q = (0, T.St)(z),
+        q = (0, k.St)(z),
         Q = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
-        J = (0, o.e7)([f.Z], () => f.Z.isFocused()),
+        J = (0, o.e7)([p.Z], () => p.Z.isFocused()),
         X = !Q && J,
         { animationPhase: $, startAnimation: ee } = (0, y.y)(),
         et = (0, _.sp)(),
@@ -70,20 +70,20 @@ let P = (e) => {
             (e) => {
                 ee({
                     isShuffling: !1,
-                    onOutroComplete: () => V(e),
+                    onOutroComplete: () => U(e),
                 }),
-                    p.default.track(I.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
+                    f.default.track(I.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
                         page_session_id: en,
                         sort_type: e,
                     });
             },
-            [ee, V, en],
+            [ee, U, en],
         ),
         ei = b.Z.useConfig({ location: "FeedBlock" }).showCardsV2;
-    return null == D
+    return null == M
         ? null
         : (0, r.jsxs)("div", {
-              className: s()(N.popularPicksSection, N.centeredSection),
+              className: a()(N.popularPicksSection, N.centeredSection),
               children: [
                   (0, r.jsxs)("div", {
                       className: N.blockHeader,
@@ -96,7 +96,7 @@ let P = (e) => {
                                       children: i,
                                   }),
                                   Y &&
-                                      (0, r.jsx)(a.u, {
+                                      (0, r.jsx)(s.u, {
                                           text: B.intl.string(B.t["3taPdn"]),
                                           position: "top",
                                           "aria-label": B.intl.string(B.t["3taPdn"]),
@@ -110,7 +110,7 @@ let P = (e) => {
                               ],
                           }),
                           (0, r.jsxs)("div", {
-                              className: s()(N.headerRight, { [A.shopTakeOver]: W }),
+                              className: a()(N.headerRight, { [A.shopTakeOver]: W }),
                               children: [
                                   (0, r.jsx)(c.Text, {
                                       variant: "text-md/medium",
@@ -122,8 +122,8 @@ let P = (e) => {
                                           options: G,
                                           select: el,
                                           className: N.sortSelect,
-                                          popoutClassName: s()({ [A.shopTakeOver]: W }),
-                                          isSelected: (e) => e === U,
+                                          popoutClassName: a()({ [A.shopTakeOver]: W }),
+                                          isSelected: (e) => e === V,
                                           serialize: (e) => e,
                                       }),
                                   }),
@@ -139,7 +139,7 @@ let P = (e) => {
                                                   onOutroComplete: K,
                                                   returnRef: er,
                                               }),
-                                                  p.default.track(I.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
+                                                  f.default.track(I.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
                                                       page_session_id: en,
                                                   });
                                           },
@@ -155,7 +155,7 @@ let P = (e) => {
                       children: n
                           ? (0, r.jsx)(r.Fragment, {
                                 children: [...Array(12)].map((e, t) =>
-                                    ei ? (0, r.jsx)(S.Z, {}, t + 1) : (0, r.jsx)(E.K, {}, t + 1),
+                                    ei ? (0, r.jsx)(S.Z, {}, t + 1) : (0, r.jsx)(v.K, {}, t + 1),
                                 ),
                             })
                           : q.slice(0, R).map((e, t) => {
@@ -205,10 +205,10 @@ let P = (e) => {
                                                           onClickAnalytics: (0, O.wO)(e, w, et),
                                                       }),
                                                   })
-                                                : (0, r.jsx)(v.Z, {
+                                                : (0, r.jsx)(E.Z, {
                                                       product: e,
                                                       category: l,
-                                                      user: D,
+                                                      user: M,
                                                       tab: w,
                                                       className: n,
                                                   }),

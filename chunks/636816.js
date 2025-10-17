@@ -16,19 +16,19 @@ function u(e) {
     i.useEffect(() => {
         g();
     }, [t, g]);
-    let N = [];
+    let x = [];
     if (
         n === d.d4z.GUILD_ANNOUNCEMENT &&
-        (N.push(h.intl.format(h.t.tI7KNT, { documentationLink: c.Z.getArticleURL(d.BhN.ANNOUNCEMENT_CHANNELS) })),
+        (x.push(h.intl.format(h.t.tI7KNT, { documentationLink: c.Z.getArticleURL(d.BhN.ANNOUNCEMENT_CHANNELS) })),
         !C && !b)
     ) {
         let e = h.intl.string(h.t["2Ab4IS"]);
-        N.push(e);
+        x.push(e);
     }
-    return 0 === N.length
+    return 0 === x.length
         ? null
         : (0, r.jsx)(r.Fragment, {
-              children: N.map((e, t) =>
+              children: x.map((e, t) =>
                   (0, r.jsx)(
                       l.Text,
                       {

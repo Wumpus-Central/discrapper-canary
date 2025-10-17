@@ -84,7 +84,7 @@ function T(e) {
                 onSuccessCallback: B,
             });
     }, [k, D, w, B]);
-    let { fetchState: U, searchResults: z } = (0, o.cj)([b.Z], () => ({
+    let { fetchState: U, searchResults: F } = (0, o.cj)([b.Z], () => ({
             fetchState: b.Z.getFetchState({
                 query: w,
                 categoryId: k,
@@ -100,7 +100,7 @@ function T(e) {
                 source: s.F.APP_DIRECTORY,
             }),
         })),
-        F = (0, o.cj)([b.Z], () => {
+        z = (0, o.cj)([b.Z], () => {
             let e = b.Z.getSearchResults({
                 query: w,
                 source: s.F.APP_DIRECTORY,
@@ -133,8 +133,8 @@ function T(e) {
                   })({ [x.MU]: e.totalCount }, e.countsByCategory)
                 : {};
         }),
-        H = (0, d.Z)(z),
-        V = a.useMemo(() => (U === _.M.FETCHING ? H : z), [U, H, z]),
+        H = (0, d.Z)(F),
+        V = a.useMemo(() => (U === _.M.FETCHING ? H : F), [U, H, F]),
         Y = a.useCallback(
             (e) => {
                 (0, I.pR)({
@@ -190,7 +190,7 @@ function T(e) {
                                     (0, r.jsx)("div", {
                                         className: N.topFilterContainer,
                                         children: (0, r.jsx)(S.V, {
-                                            countsByCategory: F,
+                                            countsByCategory: z,
                                             selectedCategoryId: k,
                                             onSelectCategory: W,
                                         }),
@@ -249,7 +249,7 @@ function T(e) {
                 children: (0, r.jsx)("div", {
                     className: N.sideFilterContent,
                     children: (0, r.jsx)(S.Z, {
-                        countsByCategory: F,
+                        countsByCategory: z,
                         selectedCategoryId: k,
                         onSelectCategory: W,
                     }),

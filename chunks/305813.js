@@ -94,8 +94,8 @@ function A(e) {
             userId: t.id,
             image: z.pendingAvatar,
         }),
-        { userNameplate: K, guildNameplate: q, pendingNameplate: V } = (0, x.Zx)(t, null == n ? void 0 : n.id),
-        X = null != q ? (0, h.Pb)(q) : void 0,
+        { userNameplate: q, guildNameplate: K, pendingNameplate: V } = (0, x.Zx)(t, null == n ? void 0 : n.id),
+        X = null != K ? (0, h.Pb)(K) : void 0,
         W = G ? N.BRd.DARK : N.BRd.LIGHT;
     ((M && G) || (!M && !G)) && (W = Z);
     let $ = (0, o.useCallback)(() => {
@@ -199,7 +199,7 @@ function A(e) {
                                 user: t,
                                 guildId: null == n ? void 0 : n.id,
                                 nameplate: V,
-                                nameplateData: null == V ? (null != X ? X : K) : void 0,
+                                nameplateData: null == V ? (null != X ? X : q) : void 0,
                                 pendingGlobalName: r,
                                 pendingDisplayNameStyles: Q.displayNameStyles,
                                 isHighlighted: !0,

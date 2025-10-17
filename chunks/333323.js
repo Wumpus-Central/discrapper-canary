@@ -19,8 +19,8 @@ var l = t(951288),
     C = t(460347),
     v = t(404488),
     _ = t(605276),
-    I = t(869764),
-    Z = t(919318),
+    Z = t(869764),
+    I = t(919318),
     y = t(150512),
     N = t(981631),
     O = t(176505),
@@ -163,9 +163,9 @@ function L(e) {
                                                                   guildId: a.id,
                                                                   welcomeMessage: U,
                                                               }),
-                                                          G && (0, l.jsx)(I.Z, { guildId: a.id }),
+                                                          G && (0, l.jsx)(Z.Z, { guildId: a.id }),
                                                           !G || q
-                                                              ? (0, l.jsx)(Z.ZP, {
+                                                              ? (0, l.jsx)(I.ZP, {
                                                                     guild: a,
                                                                     isNewMember: G,
                                                                 })

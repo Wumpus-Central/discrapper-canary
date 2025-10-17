@@ -110,8 +110,8 @@ function x(e) {
             handleComplete: L,
             handleProgress: x,
             handleResetDismissibilityClick: M,
-            handleResetStatusClick: j,
-            handleOverrideDeliveryClick: k,
+            handleResetStatusClick: k,
+            handleOverrideDeliveryClick: j,
         } = (0, E.kJ)(e.quest.id),
         U = () => {
             x(0.9 * Math.random() + 0.03);
@@ -176,7 +176,7 @@ function x(e) {
         W = () => (0, g.CS)(e.quest.id, !0).catch(Y),
         K = () => (0, g.is)(e.quest.id).catch(Y),
         z = () => {
-            j(), K();
+            k(), K();
         },
         q = !1,
         X = i.useMemo(() => {
@@ -189,9 +189,9 @@ function x(e) {
                     id: "delivery",
                     label: "Show in Quest Bar",
                     checked: (null == n ? void 0 : n.id) === e.quest.id,
-                    action: k,
+                    action: j,
                 }),
-            [k, e.quest.id, null == n ? void 0 : n.id],
+            [j, e.quest.id, null == n ? void 0 : n.id],
         ),
         J = i.useCallback(() => {
             (0, c.uL)(S.Z5c.QUEST_PREVIEW_TOOL_2(e.quest.id));

@@ -1,9 +1,9 @@
 n.d(t, {
-    am: () => r,
-    s6: () => a,
+    am: () => a,
+    s6: () => s,
 });
-var l = n(973285);
-let i = (0, n(818083).B)({
+var i = n(973285);
+let l = (0, n(818083).B)({
     id: "2025-10_server_friends_in_vc_invites",
     label: "Server Friends in VC Invites",
     kind: "guild",
@@ -16,37 +16,37 @@ let i = (0, n(818083).B)({
         },
     ],
 });
-function a(e) {
-    let { autoTrackExposure: t, location: n, guildId: a } = e,
-        { enabled: r } = l.W.getCurrentConfig({
-            guildId: a,
+function s(e) {
+    let { autoTrackExposure: t, location: n, guildId: s } = e,
+        { enabled: a } = i.W.getCurrentConfig({
+            guildId: s,
             location: n,
         });
-    return i.getCurrentConfig(
+    return l.getCurrentConfig(
         {
-            guildId: a,
+            guildId: s,
             location: n,
         },
         {
             autoTrackExposure: t,
-            disable: !r,
+            disable: !a,
         },
     );
 }
-function r(e) {
-    let { autoTrackExposure: t, location: n, guildId: a } = e,
-        { enabled: r } = l.W.useExperiment({
-            guildId: a,
+function a(e) {
+    let { autoTrackExposure: t, location: n, guildId: s } = e,
+        { enabled: a } = i.W.useExperiment({
+            guildId: s,
             location: n,
         });
-    return i.useExperiment(
+    return l.useExperiment(
         {
-            guildId: a,
+            guildId: s,
             location: n,
         },
         {
             autoTrackExposure: t,
-            disable: !r,
+            disable: !a,
         },
     );
 }

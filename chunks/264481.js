@@ -1,5 +1,5 @@
 n.d(t, {
-    P9: () => I,
+    P9: () => P,
     Uf: () => w,
     b0: () => _,
     s_: () => x,
@@ -112,7 +112,7 @@ function _() {
         bodyText: t,
     });
 }
-function I(e) {
+function P(e) {
     let { user: t, guildId: n, channelId: s, onClose: c } = e,
         u = f.ZP.getName(n, s, t),
         d = m.intl.formatToPlainString(m.t.sjSitL, { name: u }),
@@ -136,7 +136,7 @@ function I(e) {
         }),
     });
 }
-function P() {
+function I() {
     let e = (0, s.ZP)();
     return (0, r.jsx)("div", {
         className: b.connectionPlatforms,
@@ -172,7 +172,7 @@ function w(e) {
         heading: m.intl.string(m.t.VB6LWV),
         bodyText: m.intl.string(m.t.KpjsU1),
         children: [
-            (0, r.jsx)(P, {}),
+            (0, r.jsx)(I, {}),
             (0, r.jsxs)("div", {
                 className: b.buttonRow,
                 children: [

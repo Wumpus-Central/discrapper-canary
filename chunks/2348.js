@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(539854);
+n.d(t, { Z: () => N }), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -137,16 +137,16 @@ let O = i.memo(function () {
             "separator-".concat(t),
         );
     }),
-    N = i.memo(function (e) {
+    E = i.memo(function (e) {
         let {
                 channel: t,
                 category: i,
                 guild: l,
                 isFirstChannel: m,
                 isLastChannel: C,
-                tooltipDirection: N = "right",
+                tooltipDirection: E = "right",
             } = e,
-            E = (0, f.Mf)(t.id, i.id),
+            N = (0, f.Mf)(t.id, i.id),
             I = (0, f.t4)(t.id, i.id),
             S = (0, f.EH)(t.id, i.id),
             T = (0, f.lL)(l.id, i.id),
@@ -157,7 +157,7 @@ let O = i.memo(function () {
                     asContainer: !0,
                     __unsupportedReactNodeAsText: null != S ? S : T,
                     delay: 500,
-                    position: N,
+                    position: E,
                     children: (0, r.jsxs)(o.P3F, {
                         className: a()(j.channelRow, {
                             [j.firstChannel]: m,
@@ -211,7 +211,7 @@ let O = i.memo(function () {
                                           n.e("90508"),
                                           n.e("6915"),
                                           n.e("33285"),
-                                          n.e("46154"),
+                                          n.e("89250"),
                                           n.e("64838"),
                                           n.e("43342"),
                                           n.e("91315"),
@@ -224,8 +224,8 @@ let O = i.memo(function () {
                                           n.e("37220"),
                                           n.e("18320"),
                                           n.e("95546"),
-                                          n.e("50118"),
-                                          n.e("93077"),
+                                          n.e("47840"),
+                                          n.e("26503"),
                                           n.e("63373"),
                                           n.e("21684"),
                                       ]).then(n.bind(n, 373651));
@@ -279,7 +279,7 @@ let O = i.memo(function () {
                                 className: j.channelActions,
                                 children: (0, u.s)(t.guild_id, t.id)
                                     ? (0, r.jsx)(o.FZ5, {
-                                          checked: E,
+                                          checked: N,
                                           disabled: I,
                                       })
                                     : (0, r.jsx)(o.Button, {
@@ -297,7 +297,7 @@ let O = i.memo(function () {
             ],
         });
     });
-function E(e) {
+function N(e) {
     let { categories: t, guild: n, className: l, hasSidebar: a } = e,
         s = i.useCallback(
             (e) => {
@@ -320,7 +320,7 @@ function E(e) {
                 return null == s
                     ? null
                     : (0, r.jsx)(
-                          N,
+                          E,
                           {
                               category: l.channel,
                               channel: s.channel,

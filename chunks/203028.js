@@ -17,9 +17,9 @@ var i = n(512722),
     b = n(388032);
 function _(e) {
     var t, i;
-    let { party: _, onUserContextMenu: O } = e,
-        { priorityMembers: E, guildContext: v } = _,
-        y = E[0],
+    let { party: _, onUserContextMenu: E } = e,
+        { priorityMembers: O, guildContext: v } = _,
+        y = O[0],
         I = (function (e) {
             let { priorityMembers: t, partiedMembers: n } = e,
                 r = new Set(
@@ -51,10 +51,10 @@ function _(e) {
             var t;
             let { priorityMembers: i, partiedMembers: c, voiceChannels: u, currentActivities: p } = e,
                 _ = i.length,
-                O = c.length - _,
-                E = p[0],
-                v = null == E ? void 0 : E.activity,
-                y = null == E ? void 0 : E.startedPlayingTime,
+                E = c.length - _,
+                O = p[0],
+                v = null == O ? void 0 : O.activity,
+                y = null == O ? void 0 : O.startedPlayingTime,
                 I = { name: null != (t = null == v ? void 0 : v.name) ? t : "" };
             if ((0, a.Z)(v) && null != v)
                 return {
@@ -65,8 +65,8 @@ function _(e) {
                     }),
                     icon: null,
                 };
-            if (_ + O === 1 && null != E) {
-                let { game: e } = E;
+            if (_ + E === 1 && null != O) {
+                let { game: e } = O;
                 if (null == v)
                     return {
                         subtitle: null,
@@ -177,7 +177,7 @@ function _(e) {
                 icon: (0, r.jsx)(h.Z.Header.Icon, { src: h.Z.Header.Icon.Src.MULTIPLE }),
             };
         })(_),
-        T = (0, u.Z)({
+        N = (0, u.Z)({
             applicationId: null == (i = _.currentActivities[0]) || null == (t = i.activity) ? void 0 : t.application_id,
             location: "FriendsActivityFeed",
             source: c.m1.FriendsActivityFeed,
@@ -188,8 +188,8 @@ function _(e) {
         title: I,
         subtitle: C,
         icon: S,
-        onSubtitleClick: T,
-        onIconClick: T,
-        onContextMenu: (e) => O(e, y.user),
+        onSubtitleClick: N,
+        onIconClick: N,
+        onContextMenu: (e) => E(e, y.user),
     });
 }

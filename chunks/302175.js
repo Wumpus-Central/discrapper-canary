@@ -70,7 +70,7 @@ function M(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,7 +81,7 @@ function j(e, t) {
         e
     );
 }
-function k(e) {
+function j(e) {
     let { guildId: t, powerup: n, onClose: a } = e,
         { analyticsLocations: d } = (0, p.ZP)(),
         E = (0, O.g1)(t, "GuildPowerupMarketingPowerupCard"),
@@ -89,8 +89,8 @@ function k(e) {
         y = (0, S.ZP)(t, n).type !== C.A3.INACTIVE,
         T = (0, I.Z)(t),
         [L, M] = i.useState(!1),
-        [k, U] = i.useState(!1),
-        G = k,
+        [j, U] = i.useState(!1),
+        G = j,
         B = i.useCallback(() => {
             let e = g.Z.getGuild(t);
             null != e &&
@@ -132,7 +132,7 @@ function k(e) {
             e && M(!0);
         }, []),
         K = (0, c.O)(W),
-        z = (0, v.Z)(n, k);
+        z = (0, v.Z)(n, j);
     return (0, r.jsxs)("div", {
         className: o()(D.topPerksCard, D.animatedTopPerksCard, w.powerupCard, { [D.animate]: L }),
         onMouseEnter: () => U(!0),
@@ -152,7 +152,7 @@ function k(e) {
                 }),
             }),
             (0, r.jsxs)(s.animated.div, {
-                style: j(x({}, H), { transform: H.y.to((e) => "translateY(".concat(e, "px)")) }),
+                style: k(x({}, H), { transform: H.y.to((e) => "translateY(".concat(e, "px)")) }),
                 className: o()(D.contentContainer, w.contentContainer),
                 children: [
                     (0, r.jsx)(m.xm, {
@@ -233,7 +233,7 @@ let U = 3,
                           className: w.powerupsContainer,
                           children: s.map((e) =>
                               (0, r.jsx)(
-                                  k,
+                                  j,
                                   {
                                       guildId: n.id,
                                       powerup: e,

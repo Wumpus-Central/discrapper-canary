@@ -1,43 +1,43 @@
-e.d(n, { Z: () => h }), e(388685);
+e.d(n, { Z: () => f }), e(388685);
 var i = e(951288);
 e(647438);
-var l = e(913527),
-    a = e.n(l),
+var a = e(913527),
+    l = e.n(a),
     r = e(442837),
-    o = e(481060),
-    s = e(777861),
+    s = e(481060),
+    o = e(777861),
     d = e(569471),
     u = e(346479),
     c = e(776568),
-    f = e(388032);
-function h(t) {
-    let [n, e, l] = (0, r.Wu)([d.Z], () => [d.Z.isMuted(t.id), d.Z.getMuteConfig(t.id), d.Z.hasJoined(t.id)]),
-        h = (0, s.U)(e);
+    h = e(388032);
+function f(t) {
+    let [n, e, a] = (0, r.Wu)([d.Z], () => [d.Z.isMuted(t.id), d.Z.getMuteConfig(t.id), d.Z.hasJoined(t.id)]),
+        f = (0, o.U)(e);
     function g(n) {
         u.Z.setNotificationSettings(t, { muted: n });
     }
-    return l
+    return a
         ? n
-            ? (0, i.jsx)(o.sNh, {
+            ? (0, i.jsx)(s.sNh, {
                   id: "unmute-channel",
-                  label: t.isForumPost() ? f.intl.string(f.t["0JQfsL"]) : f.intl.string(f.t["Cq/TzM"]),
-                  subtext: h,
+                  label: t.isForumPost() ? h.intl.string(h.t["0JQfsL"]) : h.intl.string(h.t["Cq/TzM"]),
+                  subtext: f,
                   action: () => g(!1),
               })
-            : (0, i.jsx)(o.sNh, {
+            : (0, i.jsx)(s.sNh, {
                   id: "mute-channel",
-                  label: t.isForumPost() ? f.intl.string(f.t["nP+YkZ"]) : f.intl.string(f.t.bUUd8v),
+                  label: t.isForumPost() ? h.intl.string(h.t["nP+YkZ"]) : h.intl.string(h.t.bUUd8v),
                   action: () => g(!0),
                   children: (0, c.k)().map((n) => {
-                      let { value: e, label: l } = n;
+                      let { value: e, label: a } = n;
                       return (0, i.jsx)(
-                          o.sNh,
+                          s.sNh,
                           {
                               id: "".concat(e),
-                              label: l,
+                              label: a,
                               action: () =>
                                   (function (n) {
-                                      let e = n > 0 ? a()().add(n, "second").toISOString() : null;
+                                      let e = n > 0 ? l()().add(n, "second").toISOString() : null;
                                       u.Z.setNotificationSettings(t, {
                                           muted: !0,
                                           mute_config: {
@@ -51,9 +51,9 @@ function h(t) {
                       );
                   }),
               })
-        : (0, i.jsx)(o.sNh, {
+        : (0, i.jsx)(s.sNh, {
               id: "mute-disabled",
-              label: t.isForumPost() ? f.intl.string(f.t["nP+YkZ"]) : f.intl.string(f.t.bUUd8v),
+              label: t.isForumPost() ? h.intl.string(h.t["nP+YkZ"]) : h.intl.string(h.t.bUUd8v),
               disabled: !0,
           });
 }

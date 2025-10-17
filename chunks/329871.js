@@ -5,7 +5,7 @@ function i(e, n) {
     return (0, a.ZDy)(async () => {
         let { default: a } = await t.e("32076").then(t.bind(t, 571769));
         return (t) => {
-            var i, s;
+            var i, l;
             return (0, r.jsx)(
                 a,
                 ((i = (function (e) {
@@ -33,13 +33,13 @@ function i(e, n) {
                     }
                     return e;
                 })({}, t)),
-                (s = s =
+                (l = l =
                     {
                         guildId: e,
                         instance: n,
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
+                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
                     : (function (e, n) {
                           var t = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -47,8 +47,8 @@ function i(e, n) {
                               t.push.apply(t, r);
                           }
                           return t;
-                      })(Object(s)).forEach(function (e) {
-                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
+                      })(Object(l)).forEach(function (e) {
+                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                       }),
                 i),
             );

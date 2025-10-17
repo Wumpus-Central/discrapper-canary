@@ -1,25 +1,25 @@
 n.d(t, { Z: () => U }), n(997841), n(388685), n(457542);
 var i = n(951288),
     a = n(647438),
-    l = n(392711),
-    o = n(442837),
-    r = n(481060),
-    s = n(640108),
+    o = n(392711),
+    l = n(442837),
+    s = n(481060),
+    r = n(640108),
     c = n(406432),
     d = n(169525),
     u = n(786761),
-    m = n(499376),
-    p = n(3148),
+    p = n(499376),
+    m = n(3148),
     f = n(739566),
     h = n(492593),
     g = n(219797),
     y = n(524444),
-    b = n(884182),
-    v = n(25015),
-    _ = n(963550),
-    x = n(845080),
-    j = n(594174),
-    E = n(630388),
+    _ = n(884182),
+    b = n(25015),
+    v = n(963550),
+    E = n(845080),
+    x = n(594174),
+    j = n(630388),
     O = n(956664),
     A = n(709054),
     P = n(236289),
@@ -76,36 +76,36 @@ let k = (e) => {
         { attachments: n } = t;
     if (0 === n.length) return null;
     let a = 1 === n.length;
-    function o(e, t) {
+    function l(e, t) {
         return (0, d.dn)(e.originalItem, t);
     }
     return (0, i.jsx)("div", {
         className: L.classificationEvidenceMessageAttachment,
-        children: (0, i.jsx)(b.Z, {
+        children: (0, i.jsx)(_.Z, {
             items: n.map((e) => {
                 var n;
                 return {
                     item: {
                         uniqueId: e.id,
                         originalItem: e,
-                        type: (0, m.aw)(e, !0),
+                        type: (0, p.aw)(e, !0),
                         downloadUrl: e.proxy_url,
                         height: e.height,
                         width: e.width,
                         spoiler: e.spoiler,
                         contentType: e.content_type,
-                        srcIsAnimated: (0, E.yE)(null != (n = e.flags) ? n : 0, T.J0y.IS_ANIMATED),
+                        srcIsAnimated: (0, j.yE)(null != (n = e.flags) ? n : 0, T.J0y.IS_ANIMATED),
                     },
                     message: t,
                     mediaLayoutType: S.hV.MOSAIC,
                     autoPlayGif: !1,
                     canRemoveItem: !1,
                     isSingleMosaicItem: a,
-                    onRemoveItem: l.noop,
+                    onRemoveItem: o.noop,
                     renderVideoComponent: (t) =>
                         ((e, t, n) => {
                             let a = w.Sv,
-                                o = w.EY;
+                                l = w.EY;
                             if (null != t.width && null != t.height) {
                                 let e = (0, O.Dc)({
                                     width: t.width,
@@ -113,25 +113,25 @@ let k = (e) => {
                                     maxWidth: w.Sv,
                                     maxHeight: w.EY,
                                 });
-                                (a = (0, l.clamp)(Math.round(t.width * e), 0, w.Sv)),
-                                    (o = (0, l.clamp)(Math.round(t.height * e), 0, w.EY));
+                                (a = (0, o.clamp)(Math.round(t.width * e), 0, w.Sv)),
+                                    (l = (0, o.clamp)(Math.round(t.height * e), 0, w.EY));
                             }
                             return (0, i.jsx)("div", {
                                 style: {
                                     width: n ? a : "100%",
-                                    height: n ? o : "100%",
+                                    height: n ? l : "100%",
                                 },
-                                children: (0, i.jsx)(s.ZP, {
+                                children: (0, i.jsx)(r.ZP, {
                                     className: e.className,
                                     forceExternal: !1,
                                     src: t.url,
                                     width: n ? a : "100%",
-                                    height: n ? o : "100%",
+                                    height: n ? l : "100%",
                                     responsive: !0,
                                     volume: e.volume,
                                     autoPlay: !1,
                                     autoMute: !1,
-                                    type: s.ZP.Types.VIDEO,
+                                    type: r.ZP.Types.VIDEO,
                                     mediaLayoutType: e.mediaLayoutType,
                                     fileName: t.filename,
                                     fileSize: null == t.size ? void 0 : t.size.toString(),
@@ -159,7 +159,7 @@ let k = (e) => {
                     renderPlaintextFilePreview: g.d4,
                     renderGenericFileComponent: g.ZK,
                     renderMosaicItemFooter: g.L9,
-                    getObscureReason: o,
+                    getObscureReason: l,
                     gifFavoriteButton: () => null,
                 };
             }),
@@ -169,31 +169,31 @@ let k = (e) => {
 function U(e) {
     var t;
     let { flaggedContent: n } = e,
-        l = (0, o.e7)([j.default], () => j.default.getCurrentUser()),
-        [s, d] = a.useState({}),
-        [m, g] = a.useState(!0),
-        y = (0, o.e7)([P.Z], () => P.Z.getUsername()),
-        b = n[0],
-        E = ((e, t, n, i) => {
+        o = (0, l.e7)([x.default], () => x.default.getCurrentUser()),
+        [r, d] = a.useState({}),
+        [p, g] = a.useState(!0),
+        y = (0, l.e7)([P.Z], () => P.Z.getUsername()),
+        _ = n[0],
+        j = ((e, t, n, i) => {
             let a = e.attachments.map((e) => {
-                var n, i, a, l;
-                let o = I(N({}, e), {
+                var n, i, a, o;
+                let l = I(N({}, e), {
                     filename: (0, C.eS)(e),
                     size: 0,
                     proxy_url: e.url,
                 });
                 return (0, c.CO)(e.filename) || (0, c.NU)(e.filename)
-                    ? I(N({}, o), {
+                    ? I(N({}, l), {
                           width: null != (a = null == (n = t[e.id]) ? void 0 : n.width) ? a : w.Sv,
-                          height: null != (l = null == (i = t[e.id]) ? void 0 : i.height) ? l : w.EY,
+                          height: null != (o = null == (i = t[e.id]) ? void 0 : i.height) ? o : w.EY,
                       })
-                    : o;
+                    : l;
             });
             return (0, u.e5)(
                 I(
                     N(
                         {},
-                        (0, p.ZP)({
+                        (0, m.ZP)({
                             author:
                                 null != n
                                     ? n
@@ -216,9 +216,9 @@ function U(e) {
                     },
                 ),
             );
-        })(b, s, l, y),
-        O = (0, f.ZP)(E),
-        S = (0, v.Z)(E, {
+        })(_, r, o, y),
+        O = (0, f.ZP)(j),
+        S = (0, b.Z)(j, {
             hideSimpleEmbedContent: !1,
             allowList: !1,
             allowHeading: !1,
@@ -227,7 +227,7 @@ function U(e) {
         });
     return (a.useEffect(() => {
         Promise.all(
-            b.attachments
+            _.attachments
                 .filter((e) => {
                     let { filename: t } = e;
                     return (0, c.CO)(t) || (0, c.NU)(t);
@@ -263,22 +263,22 @@ function U(e) {
                     }).then((t) => d((n) => I(N({}, n), { [e.id]: t }))),
                 ),
         ).finally(() => g(!1));
-    }, [b.attachments]),
-    "" === E.content && 0 === E.attachments.length)
+    }, [_.attachments]),
+    "" === j.content && 0 === j.attachments.length)
         ? null
         : (0, i.jsx)("div", {
               className: L.classificationEvidenceCard,
-              children: m
-                  ? (0, i.jsx)(r.$jN, {})
+              children: p
+                  ? (0, i.jsx)(s.$jN, {})
                   : (0, i.jsx)(h.Z, {
                         compact: !1,
-                        childrenHeader: (0, x.Z)({
-                            author: I(N({}, l), {
+                        childrenHeader: (0, E.Z)({
+                            author: I(N({}, o), {
                                 colorString: "",
                                 colorStrings: null,
-                                nick: null != (t = null == l ? void 0 : l.username) ? t : y,
+                                nick: null != (t = null == o ? void 0 : o.username) ? t : y,
                             }),
-                            message: E,
+                            message: j,
                             channel: void 0,
                             guildId: void 0,
                             compact: !1,
@@ -287,8 +287,8 @@ function U(e) {
                             roleIcon: void 0,
                             hideTimestamp: !1,
                         }),
-                        childrenAccessories: (0, i.jsx)(k, { message: E }),
-                        childrenMessageContent: (0, _.Z)({ message: E }, S.content),
+                        childrenAccessories: (0, i.jsx)(k, { message: j }),
+                        childrenMessageContent: (0, v.Z)({ message: j }, S.content),
                         hasThread: !1,
                         hasReply: !1,
                         author: O,

@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(494404),
     d = n(493773),
     p = n(110924),
-    h = n(622822),
-    f = n(198620),
+    f = n(622822),
+    h = n(198620),
     g = n(294218),
     m = n(216789),
     b = n(695346),
@@ -50,7 +50,7 @@ function Z(e) {
         {
             messages: l,
             hasMore: s,
-            loading: h,
+            loading: f,
             guildFilter: g,
             roleFilter: b,
             everyoneFilter: O,
@@ -71,7 +71,7 @@ function Z(e) {
         ((null != x && g !== x) || (null != C && b !== C) || (null != P && O !== P)) && N(n, !0);
     }, [x, g, C, b, P, O, n, !0]),
         (0, d.ZP)(() => {
-            (null == l ? void 0 : l.some(f.k5)) && (c.Z.clearMentions(), N(n, !0));
+            (null == l ? void 0 : l.some(h.k5)) && (c.Z.clearMentions(), N(n, !0));
         }),
         i.useEffect(
             () => () => {
@@ -90,7 +90,7 @@ function Z(e) {
         },
         channel: n,
         messages: l,
-        loading: h,
+        loading: f,
         hasMore: s,
         analyticsName: "Recent Mentions",
         loadMore: function () {
@@ -121,9 +121,9 @@ function T(e) {
     let { message: t, gotoMessage: n, dismissible: i } = e;
     if (null == t) return null;
     let l = _.Z.getChannel(t.channel_id);
-    if (null == l || (0, h._t)(l) || (0, h.ft)(l)) return null;
+    if (null == l || (0, f._t)(l) || (0, f.ft)(l)) return null;
     let o = O.Z.didAgree(l.getGuildId()),
-        a = !!(0, h.qF)(l) && !o;
+        a = !!(0, f.qF)(l) && !o;
     return (0, r.jsxs)("div", {
         className: I.container,
         children: [

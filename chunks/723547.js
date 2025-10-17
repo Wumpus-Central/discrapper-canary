@@ -1,24 +1,24 @@
-n.d(t, { v: () => o }), n(953529);
+n.d(t, { v: () => s }), n(953529);
 var a = n(951288);
 n(647438);
 var r = n(481060),
     i = n(921944),
     l = n(388032),
-    s = n(820762);
-function o(e) {
+    o = n(820762);
+function s(e) {
     let { markAsDismissed: t, onCTA: n } = e;
     return (0, a.jsx)("div", {
-        className: s.popup,
+        className: o.popup,
         children: (0, a.jsxs)("div", {
-            className: s.content,
+            className: o.content,
             children: [
                 (0, a.jsx)(r.P3F, {
-                    className: s.closeIcon,
+                    className: o.closeIcon,
                     onClick: () => t(i.L.USER_DISMISS),
                     children: (0, a.jsx)(r.Dio, { size: "xs" }),
                 }),
                 (0, a.jsx)(r.Text, {
-                    className: s.description,
+                    className: o.description,
                     variant: "text-md/normal",
                     children: l.intl.string(l.t["Ny/0ur"]),
                 }),

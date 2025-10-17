@@ -12,8 +12,8 @@
             l,
             f,
             c,
-            u,
             d,
+            u,
             y,
             w,
             g,
@@ -29,14 +29,14 @@
                 dataUrl: !1,
                 win: window,
             };
-        ((d = {}).ff = "undefined" != typeof InstallTrigger),
-            (d.chrome = !!window.chrome),
-            (d.opera = !!window.opera || navigator.userAgent.indexOf("Opera") >= 0),
-            (d.ie = !1),
-            (d.safari = Object.prototype.toString.call(window.HTMLElement).indexOf("Constructor") > 0),
-            (d.supported = d.chrome || d.ff || d.opera);
+        ((u = {}).ff = "undefined" != typeof InstallTrigger),
+            (u.chrome = !!window.chrome),
+            (u.opera = !!window.opera || navigator.userAgent.indexOf("Opera") >= 0),
+            (u.ie = !1),
+            (u.safari = Object.prototype.toString.call(window.HTMLElement).indexOf("Constructor") > 0),
+            (u.supported = u.chrome || u.ff || u.opera);
         var x = [];
-        (c = function () {}), (h = u = !1);
+        (c = function () {}), (h = d = !1);
         var m = {};
         (m.ready = function () {
             (h = !0), m.reset(), c();
@@ -48,7 +48,7 @@
                     (f = !1),
                     a.clearRect(0, 0, r, n),
                     a.drawImage(s, 0, 0, r, n),
-                    C.setIcon(i),
+                    E.setIcon(i),
                     window.clearTimeout(y),
                     window.clearTimeout(w));
             }),
@@ -65,7 +65,7 @@
                                     t in x[0].options && (e[t] = x[0].options[t]);
                                 },
                             ),
-                                M.run(
+                                I.run(
                                     x[0].options,
                                     function () {
                                         t();
@@ -74,7 +74,7 @@
                                 );
                         };
                         l
-                            ? M.run(
+                            ? I.run(
                                   l.options,
                                   function () {
                                       o();
@@ -97,15 +97,15 @@
                     t
                 );
             };
-        function A(t) {
-            if (t.paused || t.ended || u) return !1;
+        function C(t) {
+            if (t.paused || t.ended || d) return !1;
             try {
                 a.clearRect(0, 0, r, n), a.drawImage(t, 0, 0, r, n);
             } catch (t) {}
             (w = setTimeout(function () {
-                A(t);
-            }, M.duration)),
-                C.setIcon(i);
+                C(t);
+            }, I.duration)),
+                E.setIcon(i);
         }
         (b.circle = function (t) {
             t = v(t);
@@ -167,8 +167,8 @@
                         : a.fillText(t.n, Math.floor(t.x + t.w / 2), Math.floor(t.y + t.h - 0.15 * t.h)),
                     a.closePath();
             });
-        var C = {};
-        function E(t) {
+        var E = {};
+        function M(t) {
             t = t.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i, function (t, e, o, n) {
                 return e + e + o + o + n + n;
             });
@@ -181,14 +181,14 @@
                 }
             );
         }
-        function I(t, e) {
+        function A(t, e) {
             var o,
                 n = {};
             for (o in t) n[o] = t[o];
             for (o in e) n[o] = e[o];
             return n;
         }
-        (C.getIcon = function () {
+        (E.getIcon = function () {
             var t = !1;
             return (
                 e.element
@@ -213,17 +213,17 @@
                 t
             );
         }),
-            (C.setIcon = function (t) {
+            (E.setIcon = function (t) {
                 var n = t.toDataURL("image/png");
                 if ((e.dataUrl && e.dataUrl(n), e.element))
                     e.element.setAttribute("href", n), e.element.setAttribute("src", n);
                 else if (e.elementId) {
                     var r = g.getElementById(e.elementId);
                     r.setAttribute("href", n), r.setAttribute("src", n);
-                } else if (d.ff || d.opera) {
+                } else if (u.ff || u.opera) {
                     var i = o;
                     (o = g.createElement("link")),
-                        d.opera && o.setAttribute("rel", "icon"),
+                        u.opera && o.setAttribute("rel", "icon"),
                         o.setAttribute("rel", "icon"),
                         o.setAttribute("type", "image/png"),
                         g.getElementsByTagName("head")[0].appendChild(o),
@@ -231,10 +231,10 @@
                         i.parentNode && i.parentNode.removeChild(i);
                 } else o.setAttribute("href", n);
             });
-        var M = {};
-        (M.duration = 40),
-            (M.types = {}),
-            (M.types.fade = [
+        var I = {};
+        (I.duration = 40),
+            (I.types = {}),
+            (I.types.fade = [
                 {
                     x: 0.4,
                     y: 0.4,
@@ -313,7 +313,7 @@
                     o: 1,
                 },
             ]),
-            (M.types.none = [
+            (I.types.none = [
                 {
                     x: 0.4,
                     y: 0.4,
@@ -322,7 +322,7 @@
                     o: 1,
                 },
             ]),
-            (M.types.pop = [
+            (I.types.pop = [
                 {
                     x: 1,
                     y: 1,
@@ -373,7 +373,7 @@
                     o: 1,
                 },
             ]),
-            (M.types.popFade = [
+            (I.types.popFade = [
                 {
                     x: 0.75,
                     y: 0.75,
@@ -424,7 +424,7 @@
                     o: 1,
                 },
             ]),
-            (M.types.slide = [
+            (I.types.slide = [
                 {
                     x: 0.4,
                     y: 1,
@@ -482,37 +482,37 @@
                     o: 1,
                 },
             ]),
-            (M.run = function (t, o, n, r) {
-                var a = M.types[g.hidden || g.msHidden || g.webkitHidden || g.mozHidden ? "none" : e.animation];
+            (I.run = function (t, o, n, r) {
+                var a = I.types[g.hidden || g.msHidden || g.webkitHidden || g.mozHidden ? "none" : e.animation];
                 if (
                     ((r = !0 === n ? (void 0 !== r ? r : a.length - 1) : void 0 !== r ? r : 0),
                     (o = o || function () {}),
                     !(r < a.length) || !(r >= 0))
                 )
                     return void o();
-                b[e.type](I(t, a[r])),
+                b[e.type](A(t, a[r])),
                     (y = setTimeout(function () {
-                        n ? (r -= 1) : (r += 1), M.run(t, o, n, r);
-                    }, M.duration)),
-                    C.setIcon(i);
+                        n ? (r -= 1) : (r += 1), I.run(t, o, n, r);
+                    }, I.duration)),
+                    E.setIcon(i);
             }),
-            ((e = I(p, t)).bgColor = E(e.bgColor)),
-            (e.textColor = E(e.textColor)),
+            ((e = A(p, t)).bgColor = M(e.bgColor)),
+            (e.textColor = M(e.textColor)),
             (e.position = e.position.toLowerCase()),
-            (e.animation = M.types["" + e.animation] ? e.animation : p.animation),
+            (e.animation = I.types["" + e.animation] ? e.animation : p.animation),
             (g = e.win.document);
         var T = e.position.indexOf("up") > -1,
             U = e.position.indexOf("left") > -1;
         if (T || U)
-            for (var R = 0; R < M.types["" + e.animation].length; R++) {
-                var L = M.types["" + e.animation][R];
+            for (var R = 0; R < I.types["" + e.animation].length; R++) {
+                var L = I.types["" + e.animation][R];
                 T && (L.y < 0.6 ? (L.y = L.y - 0.4) : (L.y = L.y - 2 * L.y + (1 - L.w))),
                     U && (L.x < 0.6 ? (L.x = L.x - 0.4) : (L.x = L.x - 2 * L.x + (1 - L.h))),
-                    (M.types["" + e.animation][R] = L);
+                    (I.types["" + e.animation][R] = L);
             }
         return (
             (e.type = b["" + e.type] ? e.type : p.type),
-            (o = C.getIcon()),
+            (o = E.getIcon()),
             (i = document.createElement("canvas")),
             (s = document.createElement("img")),
             o.hasAttribute("href")
@@ -549,11 +549,11 @@
                                     };
                                     if (
                                         ("animation" in e &&
-                                            M.types["" + e.animation] &&
+                                            I.types["" + e.animation] &&
                                             (o.options.animation = "" + e.animation),
                                         "type" in e && b["" + e.type] && (o.options.type = "" + e.type),
                                         ["bgColor", "textColor"].forEach(function (t) {
-                                            t in e && (o.options[t] = E(e[t]));
+                                            t in e && (o.options[t] = M(e[t]));
                                         }),
                                         ["fontStyle", "fontFamily"].forEach(function (t) {
                                             t in e && (o.options[t] = e[t]);
@@ -574,13 +574,13 @@
                     (c = function () {
                         try {
                             if ("stop" === t) {
-                                (u = !0), m.reset(), (u = !1);
+                                (d = !0), m.reset(), (d = !1);
                                 return;
                             }
                             t.addEventListener(
                                 "play",
                                 function () {
-                                    A(this);
+                                    C(this);
                                 },
                                 !1,
                             );
@@ -599,7 +599,7 @@
                                 h = e / r < o / n ? e / r : o / n;
                             s.setAttribute("crossOrigin", "anonymous"),
                                 (s.onload = function () {
-                                    a.clearRect(0, 0, r, n), a.drawImage(s, 0, 0, r, n), C.setIcon(i);
+                                    a.clearRect(0, 0, r, n), a.drawImage(s, 0, 0, r, n), E.setIcon(i);
                                 }),
                                 s.setAttribute("src", t.getAttribute("src")),
                                 (s.height = o / h),
@@ -617,7 +617,7 @@
                             (window.URL.createObjectURL = function (t) {
                                 return t;
                             })),
-                        d.supported)
+                        u.supported)
                     ) {
                         var e = !1;
                         (navigator.getUserMedia =
@@ -629,7 +629,7 @@
                             (c = function () {
                                 try {
                                     if ("stop" === t) {
-                                        (u = !0), m.reset(), (u = !1);
+                                        (d = !0), m.reset(), (d = !1);
                                         return;
                                     }
                                     ((e = document.createElement("video")).width = r),
@@ -640,7 +640,7 @@
                                                 audio: !1,
                                             },
                                             function (t) {
-                                                (e.src = URL.createObjectURL(t)), e.play(), A(e);
+                                                (e.src = URL.createObjectURL(t)), e.play(), C(e);
                                             },
                                             function () {},
                                         );
@@ -652,7 +652,7 @@
                     }
                 },
                 reset: m.reset,
-                browser: { supported: d.supported },
+                browser: { supported: u.supported },
             }
         );
     };

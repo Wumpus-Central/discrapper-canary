@@ -36,8 +36,8 @@ var r = n(647438),
     L = n(997585),
     x = n(138431),
     M = n(305516),
-    j = n(980984),
-    k = n(952842),
+    k = n(980984),
+    j = n(952842),
     U = n(38244),
     G = n(491878),
     B = n(751049),
@@ -124,11 +124,11 @@ let ec = (e, t) =>
                 ? {
                       referralProgram: {
                           thumbnail: M.Z,
-                          assetUrl: e ? x.Z : j.Z,
+                          assetUrl: e ? x.Z : k.Z,
                       },
                       showYourStyle: {
                           thumbnail: U.Z,
-                          assetUrl: e ? k.Z : G.Z,
+                          assetUrl: e ? j.Z : G.Z,
                       },
                       yourSpace: {
                           thumbnail: Z.Z,

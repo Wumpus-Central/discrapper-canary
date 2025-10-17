@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => j,
-    d: () => k,
+    Z: () => k,
+    d: () => j,
 });
 var r = n(951288),
     i = n(647438),
@@ -66,7 +66,7 @@ function x(e) {
 function M(e) {
     return e === A.pNK.ROLE_SUBSCRIPTIONS ? P.intl.string(P.t.hZUCzc) : P.intl.string(P.t["/djIh4"]);
 }
-function j() {
+function k() {
     let e = i.useRef(null),
         t = (0, s.e7)([b.Z], () => b.Z.getGuildId()),
         n = (0, s.e7)([E.Z], () => E.Z.getChannelId(t)),
@@ -82,8 +82,8 @@ function j() {
             isServerShopPreview: null != t && T.Z.isViewingServerShop(t),
         }));
     if (null == a || null == t) return null;
-    let j = x(o),
-        k = M(o),
+    let k = x(o),
+        j = M(o),
         U = n === C.oC.GUILD_ONBOARDING,
         G = (e) => {
             let { backToSettings: n } = e;
@@ -108,7 +108,7 @@ function j() {
                         direction: y.Z.Directions.LEFT,
                         className: w.backArrow,
                     }),
-                    j,
+                    k,
                 ],
             }),
             U && u
@@ -138,7 +138,7 @@ function j() {
                                       onClick: n,
                                       buttonRef: e,
                                       children: [
-                                          k,
+                                          j,
                                           (0, r.jsx)(O.Z, {
                                               width: 16,
                                               height: 16,
@@ -176,7 +176,7 @@ function j() {
         ],
     });
 }
-function k(e) {
+function j(e) {
     let { guildId: t } = e;
     return (0, s.e7)([T.Z], () => T.Z.isViewingRoles(t))
         ? (0, r.jsx)("div", {
@@ -184,7 +184,7 @@ function k(e) {
                   [w.windows]: (0, v.isWindows)(),
                   [w.osx]: (0, v.isMac)(),
               }),
-              children: (0, r.jsx)(j, {}),
+              children: (0, r.jsx)(k, {}),
           })
         : null;
 }

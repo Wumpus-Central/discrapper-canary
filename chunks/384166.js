@@ -1,39 +1,39 @@
-n.d(t, { Z: () => v }), n(388685), n(361932), n(187205);
+n.d(t, { Z: () => O }), n(388685), n(361932), n(187205);
 var r = n(951288),
     i = n(647438),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     o = n(258536),
     s = n(442837),
     c = n(481060),
     u = n(607070),
     d = n(585483),
-    p = n(785717),
-    f = n(836197),
-    h = n(592183),
-    g = n(224724),
-    m = n(872269),
-    b = n(228168),
-    _ = n(981631),
-    O = n(388032),
-    E = n(461671);
-function v(e) {
+    f = n(785717),
+    g = n(836197),
+    p = n(592183),
+    m = n(224724),
+    b = n(872269),
+    h = n(228168),
+    v = n(981631),
+    y = n(388032),
+    j = n(461671);
+function O(e) {
     let { className: t } = e,
-        { trackUserProfileEditSaved: n } = (0, p.KZ)(),
-        [l, v] = i.useState(!1),
-        y = (0, s.Wu)([g.Z], () => {
+        { trackUserProfileEditSaved: n } = (0, f.KZ)(),
+        [a, O] = i.useState(!1),
+        x = (0, s.Wu)([m.Z], () => {
             var e;
-            return null != (e = g.Z.getSaveablePendingWidgets()) ? e : [];
+            return null != (e = m.Z.getSaveablePendingWidgets()) ? e : [];
         }),
-        I = (0, s.Wu)([g.Z], () => g.Z.getChangedWidgets()),
-        C = (0, s.Wu)([g.Z], () => g.Z.getRemovedWidgets()),
-        S = (0, s.e7)([g.Z], () => g.Z.hasSaveablePendingChanges()),
-        T = (0, s.e7)([g.Z], () => g.Z.isSubmitting),
-        N = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
-        j = (0, c.Yzy)(S, {
+        _ = (0, s.Wu)([m.Z], () => m.Z.getChangedWidgets()),
+        P = (0, s.Wu)([m.Z], () => m.Z.getRemovedWidgets()),
+        I = (0, s.e7)([m.Z], () => m.Z.hasSaveablePendingChanges()),
+        w = (0, s.e7)([m.Z], () => m.Z.isSubmitting),
+        S = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
+        E = (0, c.Yzy)(I, {
             from: {
                 opacity: 0,
-                y: 80 * !N,
+                y: 80 * !S,
             },
             enter: {
                 opacity: 1,
@@ -41,37 +41,37 @@ function v(e) {
             },
             leave: {
                 opacity: 0,
-                y: 80 * !N,
+                y: 80 * !S,
             },
         });
     i.useEffect(() => {
         let e = null;
         function t() {
-            v(!0), (e = setTimeout(() => v(!1), 500));
+            O(!0), (e = setTimeout(() => O(!1), 500));
         }
         return (
-            d.S.subscribe(_.CkL.EMPHASIZE_NOTICE, t),
+            d.S.subscribe(v.CkL.EMPHASIZE_NOTICE, t),
             () => {
-                d.S.unsubscribe(_.CkL.EMPHASIZE_NOTICE, t), null !== e && clearTimeout(e);
+                d.S.unsubscribe(v.CkL.EMPHASIZE_NOTICE, t), null !== e && clearTimeout(e);
             }
         );
     }, []),
         i.useEffect(() => {
-            S && c.uvj.announce(O.intl.string(O.t["0Y/qkJ"]));
-        }, [S]);
-    let P = i.useCallback(async () => {
+            I && c.uvj.announce(y.intl.string(y.t["0Y/qkJ"]));
+        }, [I]);
+    let T = i.useCallback(async () => {
             try {
-                await h.Z.savePendingWidgets(y);
+                await p.Z.savePendingWidgets(x);
             } catch (e) {
-                (0, m.L$)(b.qb.WIDGET_SAVE_FAILURE);
+                (0, b.L$)(h.qb.WIDGET_SAVE_FAILURE);
                 return;
             }
-            for (let e of I) {
+            for (let e of _) {
                 let t = {
                     widgetEdited: e.type,
                     isWidgetRemoved: !1,
                 };
-                (0, f.Wc)(e) &&
+                (0, g.Wc)(e) &&
                     ((t.gameIds = e.games.map((e) => e.applicationId)),
                     (t.tags = e.games
                         .flatMap((e) => {
@@ -85,47 +85,47 @@ function v(e) {
                     }, 0))),
                     n(t);
             }
-            for (let e of C)
+            for (let e of P)
                 n({
                     widgetEdited: e.type,
                     isWidgetRemoved: !0,
                 });
-        }, [y, I, C, n]),
-        x = i.useCallback(() => {
-            h.Z.clearPendingWidgets();
+        }, [x, _, P, n]),
+        C = i.useCallback(() => {
+            p.Z.clearPendingWidgets();
         }, []);
-    return j((e, n) =>
+    return E((e, n) =>
         n
             ? (0, r.jsx)(o.animated.div, {
                   className: t,
                   style: e,
                   children: (0, r.jsxs)("section", {
-                      className: a()(E.content, { [E.emphasized]: l }),
-                      "aria-label": O.intl.string(O.t["odDw+/"]),
+                      className: l()(j.content, { [j.emphasized]: a }),
+                      "aria-label": y.intl.string(y.t["odDw+/"]),
                       children: [
                           (0, r.jsx)(c.Text, {
                               variant: "text-md/medium",
                               color: "text-primary",
-                              className: E.message,
-                              children: O.intl.string(O.t["/lQiX1"]),
+                              className: j.message,
+                              children: y.intl.string(y.t["/lQiX1"]),
                           }),
                           (0, r.jsxs)("div", {
-                              className: E.actions,
+                              className: j.actions,
                               children: [
                                   (0, r.jsx)(c.Button, {
                                       size: "sm",
                                       variant: "secondary",
-                                      text: O.intl.string(O.t.yBZMsb),
-                                      onClick: x,
-                                      disabled: !S || T,
+                                      text: y.intl.string(y.t.yBZMsb),
+                                      onClick: C,
+                                      disabled: !I || w,
                                   }),
                                   (0, r.jsx)(c.Button, {
                                       size: "sm",
                                       variant: "primary",
-                                      text: O.intl.string(O.t.R3BPHx),
-                                      onClick: P,
-                                      loading: T,
-                                      disabled: !S || T,
+                                      text: y.intl.string(y.t.R3BPHx),
+                                      onClick: T,
+                                      loading: w,
+                                      disabled: !I || w,
                                   }),
                               ],
                           }),

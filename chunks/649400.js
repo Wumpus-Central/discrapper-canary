@@ -1,8 +1,8 @@
 t.d(e, { default: () => E });
 var r = t(951288);
 t(647438);
-var i = t(481060),
-    l = t(239091),
+var l = t(481060),
+    i = t(239091),
     c = t(108843),
     o = t(100527),
     a = t(299206),
@@ -20,16 +20,16 @@ let E = (0, c.Z)(
                 id: e.id,
                 label: b.intl.string(b.t.gFHI3t),
             });
-        return (0, r.jsxs)(i.v2r, {
+        return (0, r.jsxs)(l.v2r, {
             navId: "channel-context",
-            onClose: l.Zy,
+            onClose: i.Zy,
             "aria-label": b.intl.string(b.t.Xm41aW),
             onSelect: c,
             children: [
-                (0, r.jsx)(i.kSQ, { children: o }),
-                (0, r.jsx)(i.kSQ, { children: E }),
-                (0, r.jsx)(i.kSQ, { children: f }),
-                (0, r.jsx)(i.kSQ, { children: p }),
+                (0, r.jsx)(l.kSQ, { children: o }),
+                (0, r.jsx)(l.kSQ, { children: E }),
+                (0, r.jsx)(l.kSQ, { children: f }),
+                (0, r.jsx)(l.kSQ, { children: p }),
             ],
         });
     },

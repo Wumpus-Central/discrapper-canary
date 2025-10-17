@@ -40,8 +40,8 @@ var r = n(951288),
     z = n(594174),
     B = n(459273),
     U = n(838440),
-    V = n(127654),
-    G = n(681154),
+    G = n(127654),
+    V = n(681154),
     W = n(883429),
     q = n(945141),
     X = n(456269),
@@ -220,7 +220,7 @@ function ed(e) {
                             }
                         );
                     let { content: p, stickers: b, uploads: j, hasNameError: v, hasMessageError: _ } = a(t, i, l);
-                    if ((s(v ? (0, G.V_)() : null), o(_ ? (0, G.T4)() : null), v || _))
+                    if ((s(v ? (0, V.V_)() : null), o(_ ? (0, V.T4)() : null), v || _))
                         return {
                             shouldClear: !1,
                             shouldRefocus: !0,
@@ -258,9 +258,9 @@ function ed(e) {
                         var C, y;
                         return (
                             (null == (C = t.body) ? void 0 : C.code) === er.evJ.AUTOMOD_TITLE_BLOCKED
-                                ? s((0, G.Gx)(t.body, e))
+                                ? s((0, V.Gx)(t.body, e))
                                 : (null == (y = t.body) ? void 0 : y.code) === er.evJ.AUTOMOD_MESSAGE_BLOCKED &&
-                                  o((0, G.Gx)(t.body, e)),
+                                  o((0, V.Gx)(t.body, e)),
                             {
                                 shouldClear: !1,
                                 shouldRefocus: !0,
@@ -460,12 +460,12 @@ let eu = i.memo(function (e) {
                     null != n &&
                         n.type.startsWith("image/") &&
                         (e.preventDefault(),
-                        await (0, V.d)([n], t, L.d.FirstThreadMessage, { origin: "clipboard" }),
+                        await (0, G.d)([n], t, L.d.FirstThreadMessage, { origin: "clipboard" }),
                         j.getState().setFormOpenFromUserAction());
                 },
                 [t, j],
             ),
-            w = (0, G.Op)(m, { content: h });
+            w = (0, V.Op)(m, { content: h });
         return (0, r.jsxs)("div", {
             className: el.titleContainer,
             onPaste: T,
@@ -683,7 +683,7 @@ let eg = i.memo(function (e) {
                 event: er.CkL.TEXTAREA_BLUR,
                 handler: _,
             });
-        let w = (0, G.Op)(m, { content: f.textValue });
+        let w = (0, V.Op)(m, { content: f.textValue });
         return (0, r.jsx)("div", {
             className: el.bodyContainer,
             children: (0, r.jsxs)("div", {
@@ -710,7 +710,7 @@ let eg = i.memo(function (e) {
                                   }),
                                   onChange: y,
                                   onSubmit: T,
-                                  promptToUpload: V.d,
+                                  promptToUpload: G.d,
                                   disabled: a,
                                   onKeyDown: (e) => {
                                       ("ArrowUp" === e.key || "ArrowDown" === e.key) && e.stopPropagation(),

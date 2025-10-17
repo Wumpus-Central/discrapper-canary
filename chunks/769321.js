@@ -2,8 +2,8 @@ t.d(n, { Z: () => b });
 var l = t(951288);
 t(647438);
 var i = t(120356),
-    r = t.n(i),
-    o = t(442837),
+    o = t.n(i),
+    r = t(442837),
     s = t(481060),
     a = t(99690),
     c = t(888496),
@@ -12,17 +12,17 @@ var i = t(120356),
     m = t(706454),
     p = t(598077),
     f = t(914010),
-    h = t(785717),
-    x = t(49898),
-    j = t(388032),
-    v = t(20163);
+    x = t(785717),
+    h = t(49898),
+    v = t(388032),
+    j = t(20163);
 function g(e) {
-    let { applicationRoleConnection: n, locale: t, onApplicationClicked: i, selectedGuildId: r } = e,
-        o = (0, c.rm)(n, t);
+    let { applicationRoleConnection: n, locale: t, onApplicationClicked: i, selectedGuildId: o } = e,
+        r = (0, c.rm)(n, t);
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)("div", {
-                className: v.platformIconContainer,
+                className: j.platformIconContainer,
                 children:
                     null != n.application.bot
                         ? (0, l.jsx)(a.Z, {
@@ -35,18 +35,18 @@ function g(e) {
                           }),
             }),
             (0, l.jsxs)("div", {
-                className: v.connectionInfo,
+                className: j.connectionInfo,
                 children: [
                     (0, l.jsxs)(s.P3F, {
-                        className: v.connectedAppRoleAccountClickable,
+                        className: j.connectedAppRoleAccountClickable,
                         onClick: () => {
                             null == i || i(),
                                 (0, d.transitionToGlobalDiscovery)({
-                                    tab: x.GlobalDiscoveryTab.APPS,
+                                    tab: h.GlobalDiscoveryTab.APPS,
                                     applicationId: n.application.id,
                                     newSessionState: {
                                         entrypoint: { name: u.xF.APPLICATION_DIRECTORY_URL },
-                                        guildId: r,
+                                        guildId: o,
                                     },
                                 });
                         },
@@ -68,15 +68,15 @@ function g(e) {
                             (0, l.jsx)(s.Text, {
                                 variant: "text-xxs/normal",
                                 color: "text-default",
-                                className: v.connectedAppRoleAccountPoweredBy,
-                                children: j.intl.format(j.t.zIT9YA, { applicationHook: () => n.application.name }),
+                                className: j.connectedAppRoleAccountPoweredBy,
+                                children: v.intl.format(v.t.zIT9YG, { applicationHook: () => n.application.name }),
                             }),
                         ],
                     }),
-                    null != o && o.length > 0
+                    null != r && r.length > 0
                         ? (0, l.jsx)("div", {
-                              className: v.metadata,
-                              children: o,
+                              className: j.metadata,
+                              children: r,
                           })
                         : null,
                 ],
@@ -86,18 +86,18 @@ function g(e) {
 }
 function b(e) {
     let { applicationRoleConnections: n, className: t, onClose: i } = e,
-        { trackUserProfileAction: s } = (0, h.KZ)(),
-        a = (0, o.e7)([m.default], () => m.default.locale),
-        c = (0, o.e7)([f.Z], () => f.Z.getGuildId());
+        { trackUserProfileAction: s } = (0, x.KZ)(),
+        a = (0, r.e7)([m.default], () => m.default.locale),
+        c = (0, r.e7)([f.Z], () => f.Z.getGuildId());
     return 0 === n.length
         ? null
         : (0, l.jsx)("ul", {
-              className: r()(v.container, t),
+              className: o()(j.container, t),
               children: n.map((e, n) =>
                   (0, l.jsx)(
                       "li",
                       {
-                          className: v.connection,
+                          className: j.connection,
                           children: (0, l.jsx)(g, {
                               applicationRoleConnection: e,
                               locale: a,

@@ -302,7 +302,7 @@ let x = (e) => {
                   }),
               });
     },
-    j = (e) => {
+    k = (e) => {
         let { guild: t, ref: n } = e;
         return (0, r.jsx)("div", {
             className: y.guildNameWrapper,
@@ -313,7 +313,7 @@ let x = (e) => {
             }),
         });
     },
-    k = (e) => {
+    j = (e) => {
         let { guildTemplate: t } = e;
         return (0, r.jsx)("div", {
             className: y.guildNameWrapper,
@@ -331,8 +331,8 @@ let x = (e) => {
     (x.Channel = D),
     (x.Button = L),
     (x.GuildSplash = M),
-    (x.GuildName = j),
-    (x.GuildTemplateName = k),
+    (x.GuildName = k),
+    (x.GuildTemplateName = j),
     (C.displayName = "InviteButton.Header"),
     (N.displayName = "InviteButton.Body"),
     (R.displayName = "InviteButton.Icon"),
@@ -341,6 +341,6 @@ let x = (e) => {
     (D.displayName = "InviteButton.Channel"),
     (L.displayName = "InviteButton.Button"),
     (M.displayName = "InviteButton.GuildSplash"),
-    (j.displayName = "InviteButton.GuildName"),
-    (k.displayName = "InviteButton.GuildTemplateName");
+    (k.displayName = "InviteButton.GuildName"),
+    (j.displayName = "InviteButton.GuildTemplateName");
 let U = x;

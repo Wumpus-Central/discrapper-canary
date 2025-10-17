@@ -1,6 +1,6 @@
 n.d(t, {
     Ct: () => x,
-    px: () => j,
+    px: () => k,
     uz: () => L,
 }),
     n(388685);
@@ -123,8 +123,8 @@ function L(e) {
         [L, x] = i.useState(""),
         {
             options: M,
-            loading: j,
-            onQueryChange: k,
+            loading: k,
+            onQueryChange: j,
         } = (0, y.U)({
             active: null == o || o,
             options: c,
@@ -134,8 +134,8 @@ function L(e) {
             x(e), w(null != t ? t : e);
         }, []);
     i.useEffect(() => {
-        k(R);
-    }, [k, R]),
+        j(R);
+    }, [j, R]),
         i.useEffect(() => {
             o || S(null);
         }, [o, S]);
@@ -190,7 +190,7 @@ function L(e) {
                 maxOptionsVisible: a,
                 query: L,
                 setQuery: U,
-                loading: j,
+                loading: k,
                 handleSelectionChange: V,
                 isOpen: o,
                 setIsOpen: l,
@@ -235,8 +235,8 @@ function M(e) {
         x = i.useRef(null),
         M = i.useContext(u.z),
         {
-            activeDescendantIndex: j,
-            setActiveDescendantIndex: k,
+            activeDescendantIndex: k,
+            setActiveDescendantIndex: j,
             selectionMode: U,
             disabled: G,
             readOnly: B,
@@ -262,7 +262,7 @@ function M(e) {
             setIsEditing: eo,
         } = (0, E.T)(),
         es = "multiple" === U && q,
-        el = null != j ? (0, O.cA)(H, j) : void 0;
+        el = null != k ? (0, O.cA)(H, k) : void 0;
     i.useEffect(() => {
         var e;
         null != el &&
@@ -343,7 +343,7 @@ function M(e) {
                             0 === t || (e.preventDefault(), null == $ || $(!0), e.altKey))
                         )
                             return;
-                        k((e) => {
+                        j((e) => {
                             if (null === e) return 0;
                             let r = e + n;
                             return r >= t && W ? 0 : Math.min(r, t - 1);
@@ -353,7 +353,7 @@ function M(e) {
                     case "PageUp":
                         if (((n = "PageUp" === e.key ? 10 : 1), 0 === t)) return;
                         e.preventDefault(),
-                            k((e) => {
+                            j((e) => {
                                 if (null === e) return 0;
                                 let r = e - n;
                                 return r < 0 && W ? t - 1 : Math.max(r, 0);
@@ -361,8 +361,8 @@ function M(e) {
                             null == $ || $(!0);
                         break;
                     case "Enter":
-                        if ((e.preventDefault(), e.stopPropagation(), null == j || 0 === t)) return;
-                        let r = en[j];
+                        if ((e.preventDefault(), e.stopPropagation(), null == k || 0 === t)) return;
+                        let r = en[k];
                         if (!0 === r.disabled || (V && 1 === et.length && et.includes(r))) return;
                         X("single" === U ? [r] : (0, O.cq)(U, et, r));
                         break;
@@ -377,21 +377,21 @@ function M(e) {
                         break;
                     case "Home":
                         if ((e.preventDefault(), 0 === t)) return;
-                        k(0);
+                        j(0);
                         break;
                     case "End":
                         if ((e.preventDefault(), 0 === t)) return;
-                        k(t - 1);
+                        j(t - 1);
                 }
                 null == N || N(e);
             },
-            [U, V, F, q, W, N, eu, X, et, er, $, en, j, k],
+            [U, V, F, q, W, N, eu, X, et, er, $, en, k, j],
         ),
         eE = i.useCallback(
             (e) => {
-                eo(!0), ei(e.target.value), null == $ || $(!0), null == h || h(e), k(null);
+                eo(!0), ei(e.target.value), null == $ || $(!0), null == h || h(e), j(null);
             },
-            [h, eo, ei, $, k],
+            [h, eo, ei, $, j],
         ),
         eb = i.useMemo(() => {
             if (0 === et.length) return null;
@@ -506,7 +506,7 @@ function M(e) {
         ],
     });
 }
-function j(e) {
+function k(e) {
     let { renderListItem: t, renderEmptyState: n, maxVisibleItems: a = 5 } = e,
         {
             filteredOptions: o,

@@ -32,8 +32,8 @@ var r = n(951288),
     L = n(836332),
     x = n(903250),
     M = n(954003),
-    j = n(664134),
-    k = n(457227),
+    k = n(664134),
+    j = n(457227),
     U = n(474936),
     G = n(981631),
     B = n(231338),
@@ -68,7 +68,7 @@ let H = () => {
     i.useEffect(() => {
         ei(!0);
     }, []);
-    let ep = [j.h.HOME, j.h.WHATS_NEW, j.h.BEST_OF_NITRO, j.h.PLANS, j.h.COMPARE],
+    let ep = [k.h.HOME, k.h.WHATS_NEW, k.h.BEST_OF_NITRO, k.h.PLANS, k.h.COMPARE],
         { navBarSections: eh, activeSectionId: em } = (0, M.O)(ep),
         { home: eg, whatsNew: eE, bestOfNitro: eb, plans: ey, compare: eO } = eh,
         ev = ef ? Z : F,
@@ -83,7 +83,7 @@ let H = () => {
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(A.Z, { className: Z.topOfPageGradient }),
-                            (0, r.jsx)(k.Z, {
+                            (0, r.jsx)(j.Z, {
                                 navBarSections: eh,
                                 activeSectionId: em,
                             }),

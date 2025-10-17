@@ -10,8 +10,8 @@ var A,
     L = n(497505),
     x = n(184299),
     M = n(5881),
-    j = n(46140);
-function k(e, t, n) {
+    k = n(46140);
+function j(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ function U(e) {
                 }),
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                j(e, t, n[t]);
             });
     }
     return e;
@@ -165,12 +165,12 @@ function et(e) {
         o.set(e.id, e),
             a.set(e.id, (0, D.zi)(e)),
             e.targetedContent.includes(L.jn.QUEST_BAR) &&
-                (0, M.T)({ location: j.dr.QUESTS_STORE }).log(
+                (0, M.T)({ location: k.dr.QUESTS_STORE }).log(
                     "Delivered ".concat(e.config.messages.questName, " (").concat(e.id, ")"),
                 );
     for (let e of ((s = new Map()), n)) s.set(e.id, e);
     for (let e of null == S ? void 0 : S.values()) o.has(e.id) || (o.set(e.id, e), a.set(e.id, (0, D.zi)(e)));
-    (I = a), ek(), (T = null != i ? new Date(i) : null);
+    (I = a), ej(), (T = null != i ? new Date(i) : null);
 }
 function en() {
     (c = 0), (r = !1);
@@ -288,7 +288,7 @@ function eC(e) {
 }
 function eN(e) {
     let { user_status: t } = e,
-        n = (0, M.T)({ location: j.dr.QUESTS_STORE });
+        n = (0, M.T)({ location: k.dr.QUESTS_STORE });
     n.log("Received user status update for ".concat(t.quest_id), t);
     let r = (0, D.U3)(t);
     K(t.quest_id, { userStatus: r });
@@ -347,7 +347,7 @@ function eM(e) {
     let { placement: t } = e;
     v.delete(t), (u = Date.now()), (i = !1);
 }
-function ej() {
+function ek() {
     let e = !1,
         t = new Map(I);
     o.forEach((n, r) => {
@@ -355,11 +355,11 @@ function ej() {
     }),
         e && ((I = t), eZ.emitChange());
 }
-function ek() {
+function ej() {
     null === F &&
-        (ej(),
+        (ek(),
         (F = setInterval(() => {
-            ej();
+            ek();
         }, H)));
 }
 function eU() {
@@ -456,7 +456,7 @@ class eB extends (A = P.ZP.Store) {
         return S.get(e);
     }
 }
-k(eB, "displayName", "QuestsStore");
+j(eB, "displayName", "QuestsStore");
 let eZ = new eB(w.Z, {
         LOGOUT: $,
         QUESTS_FETCH_CURRENT_QUESTS_BEGIN: ee,

@@ -3,16 +3,16 @@ var r = n(951288),
     i = n(647438),
     l = n(481060),
     a = n(100993),
-    o = n(197571);
-let s = (e) => {
-        let { element: t, onChange: n, initialOption: s } = e,
+    s = n(197571);
+let o = (e) => {
+        let { element: t, onChange: n, initialOption: o } = e,
             [c, d] = i.useState("");
         i.useEffect(() => {
-            d(null != s ? s : "");
-        }, [s]);
+            d(null != o ? o : "");
+        }, [o]);
         let u = t.name,
-            { title: _, options: m } = t.data,
-            p = i.useCallback(
+            { title: m, options: p } = t.data,
+            g = i.useCallback(
                 (e) => {
                     null != e && (d(e), n(e));
                 },
@@ -21,15 +21,15 @@ let s = (e) => {
         return (0, r.jsxs)(
             "div",
             {
-                className: o.marginBottom8,
+                className: s.marginBottom8,
                 children: [
-                    null != _ &&
+                    null != m &&
                         (0, r.jsx)("div", {
-                            className: o.marginBottom8,
+                            className: s.marginBottom8,
                             children: (0, r.jsxs)(l.Text, {
                                 variant: "text-sm/bold",
                                 children: [
-                                    _,
+                                    m,
                                     t.should_submit_data &&
                                         (0, r.jsx)("span", {
                                             className: a.required,
@@ -40,8 +40,8 @@ let s = (e) => {
                         }),
                     (0, r.jsx)(l.q4e, {
                         value: c,
-                        onChange: p,
-                        options: m,
+                        onChange: g,
+                        options: p,
                     }),
                 ],
             },
@@ -54,7 +54,7 @@ let s = (e) => {
                 var t, l;
                 let a = e.name;
                 return (0, r.jsx)(
-                    s,
+                    o,
                     {
                         element: e,
                         initialOption: null != (l = null == i || null == (t = i[a]) ? void 0 : t.value) ? l : void 0,

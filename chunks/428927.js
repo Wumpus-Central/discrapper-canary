@@ -2,8 +2,8 @@ t.d(n, { Z: () => m });
 var l = t(951288);
 t(647438);
 var i = t(481060),
-    r = t(37234),
-    o = t(769654),
+    o = t(37234),
+    r = t(769654),
     s = t(785717),
     a = t(806729),
     c = t(821179),
@@ -35,7 +35,7 @@ function m(e) {
                                     nick: s,
                                     onSelect: () => {
                                         var e;
-                                        m({ action: "PRESS_MUTUAL_GUILD" }), (e = i.id), (0, o.X)(e), t(), (0, r.xf)();
+                                        m({ action: "PRESS_MUTUAL_GUILD" }), (e = i.id), (0, r.X)(e), t(), (0, o.xf)();
                                     },
                                 },
                                 i.id,

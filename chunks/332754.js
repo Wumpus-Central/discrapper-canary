@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => O });
 var r = n(951288);
 n(647438);
 var i = n(481060),
@@ -16,8 +16,8 @@ var i = n(481060),
     m = n(981631),
     b = n(815660),
     _ = n(308569),
-    O = n(231338);
-let E = {
+    E = n(231338);
+let O = {
     init() {
         l.Z.subscribe("CONNECTION_OPEN", this.handleRequiredAction),
             l.Z.subscribe("USER_REQUIRED_ACTION_UPDATE", this.handleRequiredAction),
@@ -84,7 +84,7 @@ let E = {
                             ),
                         {
                             modalKey: _.f1,
-                            onCloseRequest: O.Vq,
+                            onCloseRequest: E.Vq,
                         },
                     )
                   : t === m.c2C.REQUIRE_SAFETY_FLOWS

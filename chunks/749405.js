@@ -23,8 +23,8 @@ function h(e) {
             o.Z.closeChannelSidebar(s.uZ), g && (0, a.Kh)(h.id);
         }, [h.id, g]),
         {
-            acceptMessageRequest: O,
-            rejectMessageRequest: E,
+            acceptMessageRequest: E,
+            rejectMessageRequest: O,
             isAcceptLoading: v,
             isRejectLoading: y,
             isUserProfileLoading: I,
@@ -36,7 +36,7 @@ function h(e) {
             onRejectSuccess: b,
             onError: m,
         }),
-        T = v || y || I || C || S;
+        N = v || y || I || C || S;
     return (0, r.jsxs)("div", {
         className: f.container,
         children: [
@@ -56,9 +56,9 @@ function h(e) {
                             size: "sm",
                             text: p.intl.string(p.t.B2nygY),
                             onClick: (e) => {
-                                e.stopPropagation(), E(h.id);
+                                e.stopPropagation(), O(h.id);
                             },
-                            disabled: T,
+                            disabled: N,
                             loading: y || S,
                         }),
                     }),
@@ -70,9 +70,9 @@ function h(e) {
                             size: "sm",
                             text: p.intl.string(p.t.Kz8Pws),
                             onClick: (e) => {
-                                e.stopPropagation(), O(h.id);
+                                e.stopPropagation(), E(h.id);
                             },
-                            disabled: T,
+                            disabled: N,
                             loading: v || I || C,
                         }),
                     }),

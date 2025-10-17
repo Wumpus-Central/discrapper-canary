@@ -6,16 +6,16 @@ var r = n(132392),
 let l = (e) => {
     var t;
     let { onSubmit: n, disabled: l } = e,
-        { task: s } = (0, r.T)(),
-        o = i.o[s.ui_component.component.type];
-    return null == o
+        { task: o } = (0, r.T)(),
+        s = i.o[o.ui_component.component.type];
+    return null == s
         ? null
-        : (0, a.jsx)(o, {
-              configData: s.ui_component.component.data,
+        : (0, a.jsx)(s, {
+              configData: o.ui_component.component.data,
               onSubmit: n,
-              taskId: s.task_id,
-              flowId: null == (t = s.flow_context) ? void 0 : t.flow_id,
-              assignmentId: s.assignment_id,
+              taskId: o.task_id,
+              flowId: null == (t = o.flow_context) ? void 0 : t.flow_id,
+              assignmentId: o.assignment_id,
               disabled: l,
           });
 };

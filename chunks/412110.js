@@ -3,21 +3,21 @@ var n = A(951288);
 A(647438);
 var r = A(952265),
     a = A(871388),
-    l = A(981631),
-    i = A(388032);
+    i = A(981631),
+    l = A(388032);
 function o(e, t, o) {
     var s, d;
     switch (e.code) {
-        case l.evJ.TOO_MANY_PUBLISHED_PRODUCT_LISTINGS:
-            (0, a.B)(i.intl.string(i.t["04e8bG"]), i.t.uVN1Y2);
+        case i.evJ.TOO_MANY_PUBLISHED_PRODUCT_LISTINGS:
+            (0, a.B)(l.intl.string(l.t["04e8bG"]), l.t.uVN1Y2);
             break;
-        case l.evJ.TWO_FA_NOT_ENABLED:
-            (0, a.B)(i.intl.string(i.t["/yBjZ2"]), i.t.kZ6Tgo);
+        case i.evJ.TWO_FA_NOT_ENABLED:
+            (0, a.B)(l.intl.string(l.t["/yBjZ2"]), l.t.kZ6Tgo);
             break;
-        case l.evJ.GUILD_PRODUCT_LISTING_CANNOT_PUBLISH_WITHOUT_BENEFIT:
-            (0, a.B)(i.intl.string(i.t.MeXDxs), i.t["5q146O"]);
+        case i.evJ.GUILD_PRODUCT_LISTING_CANNOT_PUBLISH_WITHOUT_BENEFIT:
+            (0, a.B)(l.intl.string(l.t.MeXDxs), l.t["5q146O"]);
             break;
-        case l.evJ.MONETIZATION_TERMS_NOT_ACCEPTED:
+        case i.evJ.MONETIZATION_TERMS_NOT_ACCEPTED:
             (0, r.ZD)(async () => {
                 let { default: e } = await A.e("31835").then(A.bind(A, 393809));
                 return (A) =>
@@ -51,13 +51,13 @@ function o(e, t, o) {
                     );
             });
             break;
-        case l.evJ.CREATOR_MONETIZATION_PAYMENT_TEAM_REQUIRED:
-            (0, a.B)(i.intl.string(i.t["4hWo0N"]), i.t.Zkhwe3);
+        case i.evJ.CREATOR_MONETIZATION_PAYMENT_TEAM_REQUIRED:
+            (0, a.B)(l.intl.string(l.t["4hWo0N"]), l.t.Zkhwe3);
             break;
-        case l.evJ.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED:
-            let c, u;
-            null != o ? ((c = i.t.j2VMk5), (u = { url: l.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(o) })) : (c = i.t.ZVV1go),
-                (0, a.B)(i.intl.string(i.t["+CT/gY"]), c, u);
+        case i.evJ.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED:
+            let u, c;
+            null != o ? ((u = l.t.j2VMk5), (c = { url: i.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(o) })) : (u = l.t.ZVV1go),
+                (0, a.B)(l.intl.string(l.t["+CT/gY"]), u, c);
             break;
         default:
             let g =
@@ -66,6 +66,6 @@ function o(e, t, o) {
                     : (null == (s = e.hasFieldErrors) ? void 0 : s.call(e))
                       ? void 0
                       : e.message;
-            null != g && (0, a.B)(i.intl.string(i.t.bvWf8f), g);
+            null != g && (0, a.B)(l.intl.string(l.t.bvWf8f), g);
     }
 }

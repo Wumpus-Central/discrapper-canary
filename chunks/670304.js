@@ -1,10 +1,10 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => c });
 var r = n(951288),
     l = n(647438),
     o = n(481060),
     i = n(36361),
     a = n(770877);
-let s = l.memo(function (e) {
+let c = l.memo(function (e) {
     let { node: t } = e;
     return null != t.render
         ? (0, r.jsx)(t.render, {})

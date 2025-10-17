@@ -83,11 +83,11 @@ function M(e, t) {
         e
     );
 }
-function j(e, t) {
+function k(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = k(e, t);
+        i = j(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -95,7 +95,7 @@ function j(e, t) {
     }
     return i;
 }
-function k(e, t) {
+function j(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -123,7 +123,7 @@ function B(e) {
             channel: h,
             userOverride: D,
             compact: x = !1,
-            withMentionPrefix: k = !1,
+            withMentionPrefix: j = !1,
             showPopout: U = !1,
             hideGuildTag: B = !1,
             hideSystemTag: Z = !1,
@@ -141,7 +141,7 @@ function B(e) {
         J = i.useContext(b.Z),
         $ = null != (t = null == h ? void 0 : h.guild_id) ? t : J,
         { analyticsLocations: ee } = (0, p.ZP)(_.Z.USERNAME),
-        et = k ? "@" : "",
+        et = j ? "@" : "",
         { nick: en, colorString: er, colorStrings: ei, colorRoleName: ea, displayNameStyles: eo } = n,
         es = (0, l.e7)([f.Z], () => f.Z.roleStyle),
         el = "username" === es,
@@ -236,7 +236,7 @@ function B(e) {
                       clickTrap: U,
                       children: (e) => {
                           var { onClick: t } = e,
-                              n = j(e, ["onClick"]);
+                              n = k(e, ["onClick"]);
                           return (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsx)(

@@ -53,7 +53,7 @@ function C(e) {
                         onClick: () => {
                             (0, m.P)(o, { isGift: !1 });
                         },
-                        text: b.intl.string(b.t.boqtTA),
+                        text: b.intl.string(b.t.boqtTE),
                         fullWidth: !0,
                     }),
                     (0, n.jsx)(i.Button, {
@@ -62,7 +62,7 @@ function C(e) {
                         onClick: () => {
                             (0, m.P)(o, { isGift: !0 });
                         },
-                        text: b.intl.string(b.t.QAZA5f),
+                        text: b.intl.string(b.t.QAZA5e),
                         fullWidth: !0,
                     }),
                 ],
@@ -121,7 +121,7 @@ function _(e) {
               paused: !0,
           });
 }
-function f(e) {
+function v(e) {
     let { socialLayerTenantMetadata: t, selectedCarouselItemIndex: a, applicationId: l } = e;
     if (null == t || t.carouselItems.length <= a) return null;
     let r = t.carouselItems[a];
@@ -144,7 +144,7 @@ function f(e) {
         ],
     });
 }
-function v(e) {
+function f(e) {
     let { onClick: t, children: a, "aria-label": l } = e;
     return (0, n.jsx)(i.P3F, {
         onClick: t,
@@ -179,7 +179,7 @@ function I(e) {
                       (0, n.jsxs)("div", {
                           className: h.infoContainer,
                           children: [
-                              (0, n.jsx)(f, {
+                              (0, n.jsx)(v, {
                                   applicationId: p,
                                   socialLayerTenantMetadata:
                                       null == j || null == (a = j.tenantMetadata) ? void 0 : a.socialLayer,
@@ -198,9 +198,9 @@ function I(e) {
                               }),
                               (0, n.jsx)("div", {
                                   className: h.modalHeaderButtonsContainer,
-                                  children: (0, n.jsx)(v, {
+                                  children: (0, n.jsx)(f, {
                                       onClick: I,
-                                      "aria-label": b.intl.string(b.t.cpT0Cq),
+                                      "aria-label": b.intl.string(b.t.cpT0Cg),
                                       children: (0, n.jsx)(i.Dio, {
                                           size: "md",
                                           color: "currentColor",

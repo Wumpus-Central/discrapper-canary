@@ -2,13 +2,13 @@ A.d(t, { Z: () => h });
 var n = A(951288),
     r = A(647438),
     a = A(512722),
-    l = A.n(a),
-    i = A(866442),
+    i = A.n(a),
+    l = A(866442),
     o = A(481060),
     s = A(313201),
     d = A(916001),
-    c = A(981631),
-    u = A(388032),
+    u = A(981631),
+    c = A(388032),
     g = A(744422);
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -58,7 +58,7 @@ function h(e) {
     let { newRoleParams: t, setNewRoleParams: A } = e,
         a = r.useRef(null),
         { name: s, color: h } = t,
-        v = (e) => A((t) => (l()(null != t, "newRoleParams should be defined"), p(f({}, t), { color: e })));
+        v = (e) => A((t) => (i()(null != t, "newRoleParams should be defined"), p(f({}, t), { color: e })));
     return (0, n.jsxs)("div", {
         className: g.roleInputContainer,
         children: [
@@ -66,15 +66,15 @@ function h(e) {
                 autoFocus: !0,
                 value: s,
                 onChange: (e) =>
-                    A((t) => (l()(null != t, "newRoleParams should be defined"), p(f({}, t), { name: e }))),
+                    A((t) => (i()(null != t, "newRoleParams should be defined"), p(f({}, t), { name: e }))),
                 id: m,
-                placeholder: u.intl.string(u.t.oNauur),
-                maxLength: c.VKK,
+                placeholder: c.intl.string(c.t.oNauur),
+                maxLength: u.VKK,
             }),
             (0, n.jsxs)("div", {
                 className: g.roleColorContainer,
                 children: [
-                    (0, n.jsx)(o.nn4, { children: u.intl.format(u.t["Vlq/pK"], { color: (0, i.Rf)(h) }) }),
+                    (0, n.jsx)(o.nn4, { children: c.intl.format(c.t["Vlq/pK"], { color: (0, l.Rf)(h) }) }),
                     (0, n.jsx)(o.yRy, {
                         targetElementRef: a,
                         renderPopout: (e) =>
@@ -92,7 +92,7 @@ function h(e) {
                                     variant: "secondary",
                                     icon: o.ilE,
                                     buttonRef: a,
-                                    "aria-label": u.intl.string(u.t.QLgdlZ),
+                                    "aria-label": c.intl.string(c.t.QLgdlZ),
                                 }),
                             ),
                     }),

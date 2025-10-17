@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(781311), n(388685);
+n.d(t, { Z: () => O }), n(781311), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -37,7 +37,7 @@ class _ extends i.PureComponent {
         });
     }
 }
-class O extends i.PureComponent {
+class E extends i.PureComponent {
     static getDerivedStateFromProps(e, t) {
         let { systemRequirements: n } = e,
             { selectedOperatingSystem: r } = t,
@@ -187,4 +187,4 @@ class O extends i.PureComponent {
         this.state = { selectedOperatingSystem: r };
     }
 }
-let E = O;
+let O = E;

@@ -2,7 +2,7 @@ n.d(t, {
     ZP: () => R,
     av: () => T,
     bL: () => y,
-    kA: () => N,
+    kA: () => E,
 }),
     n(539854),
     n(388685);
@@ -34,14 +34,14 @@ let y = (e) => {
             children: t,
         });
     },
-    N = (e) => {
+    E = (e) => {
         let { children: t } = e;
         return (0, r.jsx)("div", {
             className: O.cell,
             children: (0, p.T4)(null != t ? t : 0, v.pKx.USD),
         });
     },
-    E = (e) => {
+    N = (e) => {
         let { children: t } = e;
         return (0, r.jsx)(y, {
             className: O.statusCell,
@@ -140,11 +140,11 @@ let y = (e) => {
             renderHeader: () => (0, r.jsx)(P, {}),
             render(e, t) {
                 let { expandedRows: n } = t,
-                    i = [(0, r.jsx)(N, { children: e.amount }, e.key)];
+                    i = [(0, r.jsx)(E, { children: e.amount }, e.key)];
                 if (n.has(e.key))
                     for (let t in e.ppgs) {
                         let n = e.ppgs[t];
-                        i.push((0, r.jsx)(N, { children: null == n ? void 0 : n.amount }, t));
+                        i.push((0, r.jsx)(E, { children: null == n ? void 0 : n.amount }, t));
                     }
                 return i;
             },
@@ -155,7 +155,7 @@ let y = (e) => {
             renderHeader: () => (0, r.jsx)(w, {}),
             render(e) {
                 let { ppgStatus: t, payoutStatus: n, ppgDeferralReasons: i, periodEndDate: l } = (0, m.j0)(e);
-                return (0, r.jsx)(E, {
+                return (0, r.jsx)(N, {
                     children: ((e, t, n, i) => {
                         let l = null != i ? o()(i).add(15, "days").toISOString() : void 0,
                             a = (0, h.Zo)(l, "MMM D");

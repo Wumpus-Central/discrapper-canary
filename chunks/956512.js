@@ -88,8 +88,8 @@ function N(e) {
                 return null != n && t === n.id;
             }),
         ),
-        j = (0, i.e7)([p.Z], () => p.Z.getCurrentUserActiveStream()),
-        k = (0, i.e7)([m.Z], () => m.Z.getChannelId()),
+        k = (0, i.e7)([p.Z], () => p.Z.getCurrentUserActiveStream()),
+        j = (0, i.e7)([m.Z], () => m.Z.getChannelId()),
         U = b.default.extractTimestamp(T.id) + y.O < Date.now(),
         G = (0, r.jsx)(r.Fragment, { children: (0, o._0)(T, N, t) }),
         { newestAnalyticsLocation: B } = (0, l.ZP)(R, s.Z.REQUEST_TO_STREAM_INVITE_EMBED),
@@ -98,9 +98,9 @@ function N(e) {
     return (
         U
             ? ((Z = I.intl.string(v.default.u4QmWl)), (F = !0))
-            : null != j
+            : null != k
               ? ((Z = I.intl.string(v.default.P0wwmJ)), (F = !0))
-              : k !== N.id
+              : j !== N.id
                 ? ((Z = I.intl.string(v.default.qRXatr)), (F = !0))
                 : null == M && ((Z = I.intl.string(v.default["43zohI"])), (F = !0)),
         (0, r.jsx)(c.W, {

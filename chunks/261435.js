@@ -22,8 +22,8 @@ var i,
     x = n(371651),
     S = n(624864),
     Z = n(695346),
-    C = n(163612),
-    j = n(314897),
+    j = n(163612),
+    C = n(314897),
     I = n(592125),
     P = n(292959),
     w = n(158776),
@@ -41,7 +41,7 @@ var i,
     U = n(981631),
     G = n(987650),
     B = n(388032);
-function H(e, t, n) {
+function F(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -54,7 +54,7 @@ function H(e, t, n) {
         e
     );
 }
-function F(e) {
+function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -65,7 +65,7 @@ function F(e) {
                 }),
             )),
             i.forEach(function (t) {
-                H(e, t, n[t]);
+                F(e, t, n[t]);
             });
     }
     return e;
@@ -90,9 +90,9 @@ function Y(e, t) {
 }
 let K = new a.Yd("LegacyOverlayNotificationsStore"),
     X = 5 * M.Z.Millis.SECOND,
-    J = 8 * M.Z.Millis.SECOND,
-    Q = 30 * M.Z.Millis.SECOND,
-    q = Object.freeze({
+    q = 8 * M.Z.Millis.SECOND,
+    J = 30 * M.Z.Millis.SECOND,
+    Q = Object.freeze({
         priority: 0,
         duration: X,
         expirationExternallyManaged: !1,
@@ -109,7 +109,7 @@ function et(e) {
     let n = $.findIndex((t) => t.id === e);
     if (-1 === n) return !1;
     let i = $[n];
-    clearTimeout(i.timerId), ($ = [...$]), t === U._1z.DISMISSED ? $.splice(n, 1) : ($[n] = Y(F({}, i), { status: t }));
+    clearTimeout(i.timerId), ($ = [...$]), t === U._1z.DISMISSED ? $.splice(n, 1) : ($[n] = Y(H({}, i), { status: t }));
 }
 function en(e) {
     let t = $.length;
@@ -120,10 +120,10 @@ function ei(e) {
     return null != t ? t.id : null;
 }
 function er(e, t) {
-    let n = F({}, q, t);
+    let n = H({}, Q, t);
     if (2 !== n.priority && !L.default.isInstanceFocused()) return null;
     let i = (0, o.Z)(),
-        r = F(
+        r = H(
             {
                 id: i,
                 status: U._1z.ACTIVE,
@@ -138,14 +138,14 @@ function er(e, t) {
 function es(e) {
     let { channelId: t, ringing: n } = e,
         i = ei(t);
-    if (!n.includes(j.default.getId())) return et(i);
+    if (!n.includes(C.default.getId())) return et(i);
     if (null != i) return !1;
     let r = I.Z.getChannel(t);
     if (
         null == r ||
         !r.isRingable() ||
         ("GUILD_RING_START" === e.type &&
-            !C.Z.getCurrentConfig({
+            !j.Z.getCurrentConfig({
                 guildId: e.guildId,
                 location: "OverlayStartRinging",
             }).enabled) ||
@@ -170,7 +170,7 @@ class eo extends (i = l.ZP.Store) {
         return $;
     }
 }
-H(eo, "displayName", "OverlayNotificationsStore");
+F(eo, "displayName", "OverlayNotificationsStore");
 let el = new eo(
     c.Z,
     !__OVERLAY__
@@ -211,7 +211,7 @@ let el = new eo(
                   null != r &&
                       er(r, {
                           priority: 2,
-                          duration: J,
+                          duration: q,
                       });
               },
               OVERLAY_SET_INPUT_LOCKED: function (e) {
@@ -219,7 +219,7 @@ let el = new eo(
                   if (t) return !1;
                   $ = $.map((e) =>
                       e.status === U._1z.ACTIVE
-                          ? (clearTimeout(e.timerId), Y(F({}, e), { timerId: ee(e.id, e.expirationExternallyManaged) }))
+                          ? (clearTimeout(e.timerId), Y(H({}, e), { timerId: ee(e.id, e.expirationExternallyManaged) }))
                           : e,
                   );
               },
@@ -236,7 +236,7 @@ let el = new eo(
                       if (!(0, v.eF)(o, r, !0, !0)) return !1;
                       let e = (function (e, t, n) {
                           let i, r;
-                          if ((s()(null != t.activity, "received null message activity"), n.id === j.default.getId()))
+                          if ((s()(null != t.activity, "received null message activity"), n.id === C.default.getId()))
                               return !1;
                           let o = W.Z.getGame();
                           if (null == o) return !1;
@@ -265,7 +265,7 @@ let el = new eo(
                               expirationExternallyManaged: !0,
                               channelId: e.id,
                           });
-                          return null != l && ee(l, !1, Q), !0;
+                          return null != l && ee(l, !1, J), !0;
                       })(l, o, a);
                       if (!1 !== e) return e;
                   }
@@ -301,13 +301,13 @@ let el = new eo(
               GUILD_RING_STOP: function (e) {
                   let { channelId: t, guildId: n, ringing: i } = e;
                   if (
-                      !C.Z.getCurrentConfig({
+                      !j.Z.getCurrentConfig({
                           guildId: n,
                           location: "OverlayStopRinging",
                       }).enabled
                   )
                       return !1;
-                  i.includes(j.default.getId()) && et(ei(t));
+                  i.includes(C.default.getId()) && et(ei(t));
               },
               ACTIVITY_USER_ACTION: function (e) {
                   let t,

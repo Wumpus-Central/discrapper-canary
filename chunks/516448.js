@@ -21,7 +21,7 @@ function x(e) {
         [_, C] = o.R7(n),
         O = i.useMemo(() => t.filter((e) => e.id !== n), [t, n]),
         { isFullServerGating: y } = (0, c.Z)(x),
-        N = (0, a.mY)();
+        E = (0, a.mY)();
     return (0, r.jsx)(d.Z, {
         title: b.intl.string(b.t.YNw2Sk),
         description: b.intl.string(b.t.zMW5r6),
@@ -29,7 +29,7 @@ function x(e) {
             gap: 24,
             children: [
                 (0, r.jsxs)(l.gNt, {
-                    disabled: N,
+                    disabled: E,
                     label: b.intl.string(b.t.DFlDaG),
                     description: b.intl.string(b.t.kHalVF),
                     children: [
@@ -62,14 +62,14 @@ function x(e) {
                                     ];
                                 });
                             },
-                            disabled: N,
+                            disabled: E,
                         }),
                     ],
                 }),
                 (0, r.jsx)(l.gNt, {
                     label: b.intl.string(b.t.S2kKzM),
                     description: b.intl.string(b.t["5a4Axc"]),
-                    disabled: N,
+                    disabled: E,
                     children: (e) =>
                         (0, r.jsxs)(r.Fragment, {
                             children: [
@@ -78,7 +78,7 @@ function x(e) {
                                         children: [
                                             (0, r.jsx)(g.Z, {
                                                 "aria-labelledby": e.labelId,
-                                                disabled: N,
+                                                disabled: E,
                                             }),
                                             (0, r.jsx)(l.LZC, { size: 8 }),
                                         ],
@@ -90,7 +90,7 @@ function x(e) {
                 (0, r.jsx)(l.gNt, {
                     label: b.intl.string(b.t.RdwKw8),
                     description: b.intl.string(b.t.zAww7e),
-                    disabled: N,
+                    disabled: E,
                     children: (0, r.jsx)(f.Z, {}),
                 }),
                 (0, r.jsx)(p.Z, {}),

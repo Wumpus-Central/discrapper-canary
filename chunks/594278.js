@@ -31,16 +31,16 @@ let m = function (e) {
             },
             [j],
         ),
-        N = i.useCallback(() => {
+        E = i.useCallback(() => {
             C || y(t, 1);
         }, [y, t, C]),
-        E = i.useCallback(() => {
+        N = i.useCallback(() => {
             C || y(t, -1);
         }, [y, t, C]);
     return (
         i.useEffect(() => {
-            null != m && (v ? v && f.stop() : f.start(m, N));
-        }, [v, f, m, N]),
+            null != m && (v ? v && f.stop() : f.start(m, E));
+        }, [v, f, m, E]),
         (0, r.jsxs)("div", {
             className: g.root,
             onMouseEnter: () => _(!0),
@@ -48,7 +48,7 @@ let m = function (e) {
             children: [
                 (0, r.jsx)(o.P3F, {
                     className: a()(g.carouselCaret, l),
-                    onClick: E,
+                    onClick: N,
                     onMouseEnter: () => b(d.n.RIGHT),
                     ignoreKeyPress: C,
                     children: (0, r.jsx)(c.Z, {
@@ -68,7 +68,7 @@ let m = function (e) {
                 }),
                 (0, r.jsx)(o.P3F, {
                     className: a()(g.carouselCaret, l),
-                    onClick: N,
+                    onClick: E,
                     onMouseEnter: () => b(d.n.LEFT),
                     ignoreKeyPress: C,
                     children: (0, r.jsx)(c.Z, {

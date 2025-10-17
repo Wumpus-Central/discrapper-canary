@@ -3,11 +3,11 @@ var a = n(951288),
     r = n(647438),
     i = n(442837),
     l = n(481060),
-    s = n(581612),
-    o = n(91311),
+    o = n(581612),
+    s = n(91311),
     c = n(685960);
 function d() {
-    let e = (0, i.e7)([o.Z], () => o.Z.allWithDescriptions(), [], i.pF),
+    let e = (0, i.e7)([s.Z], () => s.Z.allWithDescriptions(), [], i.pF),
         t = r.useMemo(
             () =>
                 e.map((e) => {
@@ -20,7 +20,7 @@ function d() {
                                     label: r,
                                     description: t,
                                     checked: n,
-                                    onChange: (e) => (0, s.Z)(t, e),
+                                    onChange: (e) => (0, o.Z)(t, e),
                                 },
                                 t,
                             ),
@@ -39,7 +39,7 @@ function d() {
                 children: (0, a.jsx)(l.Button, {
                     variant: "primary",
                     text: "Clear all",
-                    onClick: s.q,
+                    onClick: o.q,
                     fullWidth: !0,
                 }),
             }),

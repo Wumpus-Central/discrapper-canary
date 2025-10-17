@@ -9,8 +9,8 @@ var i = n(442837),
     c = n(109434),
     d = n(456269),
     u = n(432771),
-    h = n(920303),
-    p = n(665149),
+    p = n(920303),
+    h = n(665149),
     f = n(388032);
 function g(e) {
     let { channel: t } = e,
@@ -19,8 +19,8 @@ function g(e) {
         m = (0, u.c)(t.id),
         { sortOrder: b, tagFilter: y, tagSetting: _ } = (0, c.H)(t.id),
         j = (0, i.e7)(
-            [o.Z, h.Z],
-            () => !!(o.Z.getThreadIds(t.id, b, y, _).length > 0) || !!(h.Z.getThreads(t.id, b, y, _).length > 0),
+            [o.Z, p.Z],
+            () => !!(o.Z.getThreadIds(t.id, b, y, _).length > 0) || !!(p.Z.getThreads(t.id, b, y, _).length > 0),
             [t.id, b, y, _],
         ),
         O = t.isMediaChannel();
@@ -32,7 +32,7 @@ function g(e) {
         : O
           ? f.intl.string(f.t.p60yFx)
           : f.intl.string(f.t.SNOqYG);
-    return (0, r.jsx)(p.JO, {
+    return (0, r.jsx)(h.JO, {
         tooltip: x,
         icon: l.d3s,
         onClick: () => s.Z.hideAdminOnboarding(t.id, !g),

@@ -18,16 +18,16 @@ var i = n(120356),
     x = n(396678),
     v = n(37113),
     j = n(65154),
-    b = n(637824),
-    S = n(388032),
+    S = n(637824),
+    b = n(388032),
     y = n(214795);
-function O() {
+function C() {
     return (0, r.jsx)("span", {
         className: y.ellipsis,
         children: "\u2022",
     });
 }
-function C(e) {
+function O(e) {
     let { source: t } = e,
         { data: n } = (0, c.IX)(null != t && (0, _.T)(t) ? t.id : void 0);
     return null == t
@@ -69,17 +69,17 @@ function w() {
         U = B
             ? void 0
             : c === v.ApplicationStreamPresets.PRESET_VIDEO
-              ? S.intl.string(b.default.MuHUFR)
+              ? b.intl.string(S.default.MuHUFR)
               : c === v.ApplicationStreamPresets.PRESET_DOCUMENTS
-                ? S.intl.string(b.default.y0JuYW)
+                ? b.intl.string(S.default.y0JuYW)
                 : c === v.ApplicationStreamPresets.PRESET_AUTO
-                  ? S.intl.string(b.default.m4jtlZ)
+                  ? b.intl.string(S.default.m4jtlZ)
                   : void 0,
         F = (0, o.e7)([f.Z], () => f.Z.getUseSystemScreensharePicker() && (0, p.isLinux)());
     return (0, r.jsxs)("div", {
         className: y.root,
         children: [
-            B && (0, r.jsx)(C, { source: P }),
+            B && (0, r.jsx)(O, { source: P }),
             (0, r.jsxs)("div", {
                 className: y.summary,
                 children: [
@@ -90,7 +90,7 @@ function w() {
                         children: B
                             ? null != (i = null == P ? void 0 : P.name)
                                 ? i
-                                : S.intl.string(b.default["hJMA+/"])
+                                : b.intl.string(S.default["hJMA+/"])
                             : M,
                     }),
                     (0, r.jsxs)(a.Text, {
@@ -112,23 +112,23 @@ function w() {
                                                 M,
                                             ],
                                         }),
-                                        (0, r.jsx)(O, {}),
+                                        (0, r.jsx)(C, {}),
                                     ],
                                 }),
                             null != U && (0, r.jsx)("span", { children: U }),
                             !G &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
-                                        (0, r.jsx)(O, {}),
+                                        (0, r.jsx)(C, {}),
                                         (0, r.jsx)("span", { children: k }),
-                                        (0, r.jsx)(O, {}),
+                                        (0, r.jsx)(C, {}),
                                         (0, r.jsx)("span", { children: "".concat(R, "fps") }),
                                     ],
                                 }),
                             w &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
-                                        (0, r.jsx)(O, {}),
+                                        (0, r.jsx)(C, {}),
                                         (0, r.jsxs)("span", {
                                             className: y.iconSummaryContainer,
                                             children: [
@@ -137,7 +137,7 @@ function w() {
                                                     size: "xxs",
                                                     color: "currentColor",
                                                 }),
-                                                S.intl.string(b.default.FzMGWV),
+                                                b.intl.string(S.default.FzMGWV),
                                             ],
                                         }),
                                     ],
@@ -146,12 +146,12 @@ function w() {
                                 !L &&
                                 F &&
                                 (0, r.jsxs)(r.Fragment, {
-                                    children: [(0, r.jsx)(O, {}), S.intl.string(b.default["n9/rUl"])],
+                                    children: [(0, r.jsx)(C, {}), b.intl.string(S.default["n9/rUl"])],
                                 }),
                             L
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
-                                          (0, r.jsx)(O, {}),
+                                          (0, r.jsx)(C, {}),
                                           (0, r.jsx)("span", {
                                               children:
                                                   null ==

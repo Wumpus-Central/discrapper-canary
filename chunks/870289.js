@@ -1,5 +1,5 @@
 n.d(t, {
-    FF: () => s,
+    FF: () => a,
     KS: () => i,
     eN: () => o,
 });
@@ -33,5 +33,5 @@ let i = (0, r.B)({
             },
         ],
     }),
-    s = (e) => i.useExperiment({ location: e }).filterEnabled,
+    a = (e) => i.useExperiment({ location: e }).filterEnabled,
     o = (e) => i.useExperiment({ location: e }).searchEnabled;

@@ -147,7 +147,7 @@ function v(e) {
                 renderHeader: l,
                 renderContent(e) {
                     let t = n(e);
-                    return (0, r.jsx)(N, { children: t });
+                    return (0, r.jsx)(E, { children: t });
                 },
             },
             a,
@@ -165,7 +165,7 @@ function _(e) {
                 renderHeader: l,
                 renderContent(e) {
                     let t = n(e);
-                    return (0, r.jsx)(E, { children: t });
+                    return (0, r.jsx)(N, { children: t });
                 },
             },
             a,
@@ -216,11 +216,11 @@ let O = (e) => {
             children: t,
         });
     },
-    N = (e) => {
+    E = (e) => {
         let { children: t } = e;
         return (0, r.jsx)(y, { children: (0, c.T4)(null != t ? t : 0, u.pKx.USD) });
     },
-    E = (e) => {
+    N = (e) => {
         let { children: t } = e;
         return (0, r.jsxs)(y, {
             className: m.personCountCell,

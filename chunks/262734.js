@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -15,27 +15,27 @@ var r = n(951288),
     m = n(871499),
     b = n(786915),
     _ = n(944486),
-    O = n(48131),
-    E = n(214143),
+    E = n(48131),
+    O = n(214143),
     v = n(610278),
     y = n(408491),
     I = n(981631),
     C = n(918559),
     S = n(388032),
-    T = n(909357);
-let N = {
-    [C.MI.NO_CHAT]: T.noChat,
-    [C.MI.RESIZABLE]: T.resizable,
+    N = n(909357);
+let T = {
+    [C.MI.NO_CHAT]: N.noChat,
+    [C.MI.RESIZABLE]: N.resizable,
 };
-function j(e) {
+function P(e) {
     let { frame: t } = e,
         n = (0, f.q)(t.applicationId),
         l = (0, d.Z)(),
-        { selectedChannelId: j, selectedVoiceChannelId: P } = (0, o.cj)([_.Z], () => ({
+        { selectedChannelId: P, selectedVoiceChannelId: j } = (0, o.cj)([_.Z], () => ({
             selectedChannelId: _.Z.getChannelId(),
             selectedVoiceChannelId: _.Z.getVoiceChannelId(),
         })),
-        x = (0, o.e7)([h.Z], () => null != P && j === P && h.Z.getChatOpen(P), [j, P]),
+        x = (0, o.e7)([h.Z], () => null != j && P === j && h.Z.getChatOpen(j), [P, j]),
         A = (0, o.e7)([g.ZP], () => g.ZP.callChatSidebarWidth),
         Z = (0, u.dQu)(s.Z.modules.chat.RESIZE_HANDLE_WIDTH),
         w = i.useRef(null),
@@ -44,14 +44,14 @@ function j(e) {
             width: 0,
             height: 0,
         }),
-        k = i.useCallback(() => {
-            O.Z.updateFrameLayoutMode({
+        M = i.useCallback(() => {
+            E.Z.updateFrameLayoutMode({
                 applicationId: t.applicationId,
                 layoutMode: y.U.PIP,
             });
         }, [t.applicationId]),
-        M = i.useCallback(() => {
-            O.Z.stopFrame({ applicationId: t.applicationId });
+        k = i.useCallback(() => {
+            E.Z.stopFrame({ applicationId: t.applicationId });
         }, [t.applicationId]);
     i.useLayoutEffect(() => {
         if (null == L.current) return;
@@ -69,7 +69,7 @@ function j(e) {
                 null == w.current ||
                     w.current.contains(e.target) ||
                     l ||
-                    O.Z.updateFrameLayoutMode({
+                    E.Z.updateFrameLayoutMode({
                         applicationId: t.applicationId,
                         layoutMode: y.U.PIP,
                     });
@@ -100,14 +100,14 @@ function j(e) {
         theme: I.BRd.DARK,
         children: (e) =>
             (0, r.jsxs)("div", {
-                className: a()(T.wrapper, N[V], e),
+                className: a()(N.wrapper, T[V], e),
                 ref: w,
                 style: { right: x && !Number.isNaN(F) ? F : 0 },
                 children: [
                     (0, r.jsx)("div", {
-                        className: T.activityPanelContainer,
+                        className: N.activityPanelContainer,
                         children: (0, r.jsx)("div", {
-                            className: a()(T.activityContainer, { [T.activityContainerNoMargin]: H }),
+                            className: a()(N.activityContainer, { [N.activityContainerNoMargin]: H }),
                             style: {
                                 paddingLeft: G,
                                 paddingRight: G,
@@ -115,35 +115,35 @@ function j(e) {
                                 paddingBottom: B,
                             },
                             ref: L,
-                            children: (0, r.jsx)(E.Z, {
-                                className: T.iframe,
+                            children: (0, r.jsx)(O.Z, {
+                                className: N.iframe,
                                 embedId: z,
                             }),
                         }),
                     }),
                     (0, r.jsxs)("div", {
-                        className: T.footer,
+                        className: N.footer,
                         children: [
                             (0, r.jsx)(b.Z, {
                                 appContext: I.IlC.APP,
                                 applicationId: n.id,
                                 shouldPrioritizeGroupPlusIcon: !0,
                                 isRichPresenceInvite: !0,
-                                iconClassName: T.inviteButtonIcon,
+                                iconClassName: N.inviteButtonIcon,
                                 size: c.zx.Sizes.MEDIUM,
                                 look: c.zx.Looks.FILLED,
                                 buttonText: S.intl.string(S.t["6F9ivr"]),
                                 color: c.zx.Colors.TRANSPARENT,
                             }),
                             (0, r.jsxs)("div", {
-                                className: T.footerButtons,
+                                className: N.footerButtons,
                                 children: [
                                     (0, r.jsx)("div", {
-                                        className: T.buttonSection,
+                                        className: N.buttonSection,
                                         children: (0, r.jsx)(m.d, {
                                             isTrayButton: !0,
                                             label: S.intl.string(S.t.brPQ5e),
-                                            onClick: k,
+                                            onClick: M,
                                             iconComponent: u.dOc,
                                             themeable: !0,
                                         }),
@@ -151,7 +151,7 @@ function j(e) {
                                     (0, r.jsx)(m.d, {
                                         isTrayButton: !1,
                                         label: S.intl.string(S.t["R/FK4O"]),
-                                        onClick: M,
+                                        onClick: k,
                                         iconComponent: u.PBZ,
                                         color: "disconnect",
                                     }),

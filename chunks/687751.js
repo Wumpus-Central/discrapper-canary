@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => O });
 var r = n(951288);
 n(647438);
 var i = n(481060),
@@ -40,7 +40,7 @@ function _(e) {
     }
     return e;
 }
-class O extends a.Z {
+class E extends a.Z {
     _initialize() {
         l.Z.subscribe("CONNECTION_OPEN", this.handleConnectionOpen),
             l.Z.subscribe("CHANNEL_SELECT", this.handleChannelSelect),
@@ -104,4 +104,4 @@ class O extends a.Z {
             return void (0, p.I8)(t.id, null);
     }
 }
-let E = new O();
+let O = new E();

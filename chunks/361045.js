@@ -4,32 +4,32 @@ n(647438);
 var r = n(481060),
     i = n(688465),
     l = n(921944),
-    s = n(388032),
-    o = n(941246);
+    o = n(388032),
+    s = n(941246);
 function c(e) {
     let { markAsDismissed: t, onCTA: c } = e;
     return (0, a.jsxs)("div", {
-        className: o.popup,
+        className: s.popup,
         children: [
             (0, a.jsxs)("div", {
-                className: o.background,
+                className: s.background,
                 children: [
-                    (0, a.jsx)("div", { className: o.blur0 }),
-                    (0, a.jsx)("div", { className: o.blur1 }),
-                    (0, a.jsx)("div", { className: o.blur2 }),
+                    (0, a.jsx)("div", { className: s.blur0 }),
+                    (0, a.jsx)("div", { className: s.blur1 }),
+                    (0, a.jsx)("div", { className: s.blur2 }),
                 ],
             }),
             (0, a.jsxs)("div", {
-                className: o.content,
+                className: s.content,
                 children: [
                     (0, a.jsx)(r.P3F, {
-                        className: o.closeIcon,
+                        className: s.closeIcon,
                         onClick: () => t(l.L.USER_DISMISS),
                         children: (0, a.jsx)(r.Dio, {}),
                     }),
                     (0, a.jsx)("img", {
                         src: n(414190),
-                        className: o.art,
+                        className: s.art,
                         alt: "",
                     }),
                     (0, a.jsxs)("div", {
@@ -37,19 +37,19 @@ function c(e) {
                             (0, a.jsxs)(r.Heading, {
                                 variant: "heading-md/semibold",
                                 color: "header-primary",
-                                className: o.heading,
-                                children: [s.intl.string(s.t.MLt8Hx), (0, a.jsx)(i.Z, { className: o.betaTag })],
+                                className: s.heading,
+                                children: [o.intl.string(o.t.MLt8Hx), (0, a.jsx)(i.Z, { className: s.betaTag })],
                             }),
                             (0, a.jsx)(r.Text, {
                                 variant: "text-sm/normal",
                                 color: "header-secondary",
-                                children: s.intl.string(s.t["l+lSLi"]),
+                                children: o.intl.string(o.t["l+lSLi"]),
                             }),
                         ],
                     }),
                     (0, a.jsx)(r.Button, {
                         variant: "primary",
-                        text: s.intl.string(s.t["9WdoBw"]),
+                        text: o.intl.string(o.t["9WdoBw"]),
                         fullWidth: !0,
                         onClick: () => {
                             t(l.L.TAKE_ACTION), c();

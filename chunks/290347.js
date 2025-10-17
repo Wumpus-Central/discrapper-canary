@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685), n(415506), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
+n.d(t, { Z: () => j }), n(388685), n(415506), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -15,8 +15,8 @@ var r = n(951288),
     m = n(605236),
     b = n(524444),
     _ = n(626135),
-    O = n(960048),
-    E = n(981631),
+    E = n(960048),
+    O = n(981631),
     v = n(921944),
     y = n(388032),
     I = n(188784);
@@ -63,21 +63,21 @@ function S(e, t) {
         e
     );
 }
-let T = [],
-    N = (e) => {
+let N = [],
+    T = (e) => {
         let { tagText: t, className: n } = e;
         return (0, r.jsx)(c.IGR, {
             className: a()(I.tag, n),
             text: t,
         });
     },
-    j = (e) => {
+    P = (e) => {
         let { header: t, subHeader: n, imageSrc: i, tagText: l, wideStyle: o } = e;
         return (0, r.jsxs)("div", {
             className: a()(I.featureCard, { [I.wideStyle]: o }),
             children: [
                 null != l
-                    ? (0, r.jsx)(N, {
+                    ? (0, r.jsx)(T, {
                           tagText: l,
                           className: I.featureCardTag,
                       })
@@ -105,13 +105,13 @@ let T = [],
             ],
         });
     };
-function P(e) {
+function j(e) {
     let {
             className: t,
             renderModalProps: n,
             heroArt: l,
-            heroArtClassName: N,
-            modalDismissibleContent: P,
+            heroArtClassName: T,
+            modalDismissibleContent: j,
             modalTopExtra: x,
             header: A,
             headerClassName: Z,
@@ -119,8 +119,8 @@ function P(e) {
             subHeaderExtra: L,
             featureCards: R,
             changeLogId: D,
-            button: k,
-            body: M,
+            button: M,
+            body: k,
         } = e,
         { onClose: U, transitionState: G } = n,
         B = (0, f.Dt)(),
@@ -136,7 +136,7 @@ function P(e) {
         en = i.useRef(q),
         er = i.useRef(Q),
         ei = i.useRef(J),
-        [el, ea] = i.useState(T),
+        [el, ea] = i.useState(N),
         eo = i.useRef(!1);
     function es() {
         let e = Date.now(),
@@ -164,7 +164,7 @@ function P(e) {
                               });
                     ea(await Promise.all(t));
                 } catch (e) {
-                    O.Z.captureException(e), ea(T);
+                    E.Z.captureException(e), ea(N);
                 }
             };
             !0 !== eo.current && e(), (eo.current = !0);
@@ -185,11 +185,11 @@ function P(e) {
             () => () => {
                 if ("video" === l.type || "embed" === l.type) {
                     let [e, t] = es();
-                    _.default.track(E.rMx.CHANGE_LOG_VIDEO_PLAYED, {
+                    _.default.track(O.rMx.CHANGE_LOG_VIDEO_PLAYED, {
                         change_log_id: D,
                         seconds_played: Math.round(e / 1000),
                     }),
-                        _.default.track(E.rMx.CHANGE_LOG_VIDEO_UNMUTE, {
+                        _.default.track(O.rMx.CHANGE_LOG_VIDEO_UNMUTE, {
                             change_log_id: D,
                             seconds_unmuted: Math.round(t / 1000),
                         });
@@ -198,19 +198,19 @@ function P(e) {
             [D, l.type],
         ),
         i.useEffect(() => {
-            null != P && (0, m.kk)(P);
+            null != j && (0, m.kk)(j);
             let e = Date.now();
             return (
-                _.default.track(E.rMx.CHANGE_LOG_OPENED, { change_log_id: D }),
+                _.default.track(O.rMx.CHANGE_LOG_OPENED, { change_log_id: D }),
                 () => {
-                    _.default.track(E.rMx.CHANGE_LOG_CLOSED, {
+                    _.default.track(O.rMx.CHANGE_LOG_CLOSED, {
                         change_log_id: D,
                         seconds_open: Math.round((Date.now() - e) / 1000),
                     }),
-                        null != P && (0, g.Q3)(P, { dismissAction: v.L.DISMISS });
+                        null != j && (0, g.Q3)(j, { dismissAction: v.L.DISMISS });
                 }
             );
-        }, [P, D]),
+        }, [j, D]),
         (0, r.jsx)(c.Y0X, {
             "data-migration-pending": !0,
             className: a()(I.root, I.largeBorderRadius, t),
@@ -239,7 +239,7 @@ function P(e) {
                             }),
                             "video" === l.type
                                 ? (0, r.jsx)(h.Z, {
-                                      className: a()(I.video, N),
+                                      className: a()(I.video, T),
                                       autoPlay: !V,
                                       loop: !0,
                                       muted: !0,
@@ -248,7 +248,7 @@ function P(e) {
                                       src: l.src,
                                       poster: l.poster,
                                       onPlay: (e) => {
-                                          _.default.track(E.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: D }),
+                                          _.default.track(O.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: D }),
                                               z(Date.now()),
                                               X(!0),
                                               $(e.currentTarget.muted);
@@ -285,7 +285,7 @@ function P(e) {
                                   })
                                 : "embed" === l.type
                                   ? (0, r.jsx)(d.BC, {
-                                        className: a()(I.video, N),
+                                        className: a()(I.video, T),
                                         allowFullScreen: !1,
                                         href: l.href,
                                         thumbnail: l.thumbnail,
@@ -297,13 +297,13 @@ function P(e) {
                                         renderImageComponent: b.Yi,
                                         renderLinkComponent: b.iT,
                                         onPlay: () => {
-                                            _.default.track(E.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: D });
+                                            _.default.track(O.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: D });
                                         },
                                     })
                                   : "image" === l.type
                                     ? (0, r.jsx)("img", {
                                           alt: "",
-                                          className: a()(I.video, N),
+                                          className: a()(I.video, T),
                                           src: l.src,
                                       })
                                     : null,
@@ -313,19 +313,19 @@ function P(e) {
                                 className: I.subHeader,
                                 children: [w, null == L ? void 0 : L()],
                             }),
-                            null != M &&
-                                "" !== M &&
+                            null != k &&
+                                "" !== k &&
                                 (0, r.jsx)(c.Heading, {
                                     variant: "heading-lg/semibold",
                                     className: I.bodyText,
-                                    children: M,
+                                    children: k,
                                 }),
                             R.length > 0 &&
                                 (0, r.jsx)("div", {
                                     className: a()(I.featureCardGroup, { [I.wideStyle]: H }),
                                     children: R.map((e, t) =>
                                         (0, r.jsx)(
-                                            j,
+                                            P,
                                             S(C({}, e), { wideStyle: H }),
                                             "".concat(e.header, "_").concat(t),
                                         ),
@@ -333,7 +333,7 @@ function P(e) {
                                 }),
                             (0, r.jsx)("div", {
                                 className: I.buttonContainer,
-                                children: k(),
+                                children: M(),
                             }),
                         ],
                     }),

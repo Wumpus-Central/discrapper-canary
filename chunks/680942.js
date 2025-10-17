@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
 var r = n(951288),
     l = n(647438),
-    i = n(979554),
-    a = n(311570),
+    a = n(979554),
+    i = n(311570),
     o = n(28664),
     s = n(481060),
     c = n(906732),
@@ -12,32 +12,32 @@ var r = n(951288),
     f = n(410127),
     b = n(67409),
     y = n(981631),
-    m = n(474936),
-    O = n(388032);
+    O = n(474936),
+    v = n(388032);
 let g = (e) => {
-    let { product: t, primary: n, selectedVariantIndex: g, returnRef: j, onSuccess: h, tooltipDelay: v } = e,
+    let { product: t, primary: n, selectedVariantIndex: g, returnRef: m, onSuccess: h, tooltipDelay: j } = e,
         { analyticsLocations: x } = (0, c.ZP)(),
-        E = l.useRef(null),
-        P = (0, p.sp)(),
+        P = l.useRef(null),
+        E = (0, p.sp)(),
         _ = (0, f.Z)();
     return (0, r.jsx)(o.u, {
-        text: O.intl.string(O.t["JCFN//"]),
-        delay: v,
+        text: v.intl.string(v.t["JCFN//"]),
+        delay: j,
         children: (0, r.jsx)(s.hU, {
-            "aria-label": O.intl.string(O.t["JCFN//"]),
-            buttonRef: E,
+            "aria-label": v.intl.string(v.t["JCFN//"]),
+            buttonRef: P,
             variant: n ? "primary" : "secondary",
             icon: s.OgN,
             size: "md",
             onClick: (e) => {
                 e.stopPropagation(),
                     d.default.track(y.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                        collectibles_shop_session_id: null == P ? void 0 : P.sessionId,
+                        collectibles_shop_session_id: null == E ? void 0 : E.sessionId,
                         sku_id: t.skuId,
-                        page_section: null == P ? void 0 : P.pageSection,
-                        page_category: null == P ? void 0 : P.pageCategory,
-                        tile_type: i.Z[t.type],
-                        tile_position: String(null == P ? void 0 : P.tilePosition),
+                        page_section: null == E ? void 0 : E.pageSection,
+                        page_category: null == E ? void 0 : E.pageCategory,
+                        tile_type: a.Z[t.type],
+                        tile_position: String(null == E ? void 0 : E.tilePosition),
                         cta_name: "gift button",
                         page_type: _ || "home",
                     }),
@@ -47,10 +47,10 @@ let g = (e) => {
                             selectedVariantIndex: g,
                         }),
                         isGift: !0,
-                        giftingOrigin: m.Wt.SHOP_PAGE,
+                        giftingOrigin: O.Wt.SHOP_PAGE,
                         analyticsLocations: x,
-                        returnRef: j,
-                        variantsReturnStyle: a.v.VARIANTS_GROUP,
+                        returnRef: m,
+                        variantsReturnStyle: i.v.VARIANTS_GROUP,
                         onClose:
                             null != h
                                 ? (e) => {

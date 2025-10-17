@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -83,13 +83,13 @@ function _(e) {
         }),
     });
 }
-function O(e) {
+function E(e) {
     let { className: t, focusSectionProps: n } = e,
         o = (0, l.e7)([p.Z], () => p.Z.isDeveloper),
         [s, c] = i.useState(!1),
         [u, d] = i.useState(0),
         f = i.useRef(null),
-        O = (e) => {
+        E = (e) => {
             clearTimeout(u),
                 d(
                     setTimeout(() => {
@@ -98,8 +98,8 @@ function O(e) {
                 );
         };
     return (0, r.jsx)("div", {
-        onMouseEnter: () => O(!0),
-        onMouseLeave: () => O(!1),
+        onMouseEnter: () => E(!0),
+        onMouseLeave: () => E(!1),
         children: (0, r.jsx)(a.yRy, {
             targetElementRef: f,
             shouldShow: s,

@@ -21,24 +21,24 @@ var r = n(951288),
     _ = n(529103),
     E = n(607070),
     O = n(557968),
-    y = n(213609),
-    v = n(463119),
+    v = n(213609),
+    y = n(463119),
     I = n(377171),
     C = n(111028),
     S = n(243778),
-    T = n(702456),
-    N = n(882579),
+    N = n(702456),
+    T = n(882579),
     P = n(518311),
     j = n(488634),
-    A = n(899740),
-    x = n(28476),
+    x = n(899740),
+    A = n(28476),
     Z = n(880257),
     w = n(631885),
     L = n(365113),
     R = n(849862),
     D = n(522558),
-    k = n(795448),
-    M = n(441623),
+    M = n(795448),
+    k = n(441623),
     U = n(93237),
     G = n(138176),
     B = n(457396),
@@ -135,13 +135,13 @@ let em = (e) => {
             n = eg(e, ["selected"]);
         let l = (0, u.JA)("friends"),
             a = (0, R.If)(),
-            o = (0, p.e7)([M.Z], () => M.Z.canShowFriendsTabBadge()),
+            o = (0, p.e7)([k.Z], () => k.Z.canShowFriendsTabBadge()),
             s = (0, p.e7)([E.Z], () => E.Z.useReducedMotion),
             { enabled: d } = D.w.useExperiment({ location: "Friends Tab" }, { autoTrackExposure: !1 }),
             f = o && d;
         i.useEffect(() => {
             f &&
-                (0, y.h)({
+                (0, v.h)({
                     name: c.ImpressionNames.GIFT_INTENT_BADGE,
                     type: c.ImpressionTypes.VIEW,
                     properties: { gift_intent_type: es.hX.FRIEND_ANNIVERSARY },
@@ -164,7 +164,7 @@ let em = (e) => {
                                           }),
                                           (e = ea.pJs.ALL),
                                           _.Z.setSection(ea.pJs.ALL),
-                                          (0, k.Gk)())
+                                          (0, M.Gk)())
                                         : (e = ee.ZP.getState().section),
                                         (0, O.Z)({ tab_opened: e });
                                 },
@@ -269,14 +269,14 @@ let em = (e) => {
             }),
         }),
     eO = () => {
-        let e = (0, A.q)();
+        let e = (0, x.q)();
         return e > 0 ? (0, r.jsx)(m.mAB, { count: e }) : null;
     },
-    ey = (e) => {
+    ev = (e) => {
         let { selected: t } = e,
             n = (0, u.JA)("messageRequests"),
             { channelId: i } = (0, j._)();
-        if (!(0, x.a)()) return null;
+        if (!(0, A.a)()) return null;
         let l = null == i ? void 0 : () => b.Z.preload(ea.ME, i);
         return (0, r.jsx)(
             er.Qj,
@@ -295,7 +295,7 @@ let em = (e) => {
             ),
         );
     },
-    ev = (e) => {
+    ey = (e) => {
         let { selected: t } = e,
             n = eu.intl.string(ed.default.Rkdixs),
             l = (0, u.JA)("family-center"),
@@ -379,7 +379,7 @@ let em = (e) => {
             ],
         }),
     eS = () => (0, z.$Z)("DM_SEARCH");
-function eT(e) {
+function eN(e) {
     switch (e) {
         case ea.Z5c.APPLICATION_LIBRARY:
             return ea.ZY5.LIBRARY;
@@ -396,7 +396,7 @@ function eT(e) {
               : ea.ZY5.STORE_LISTING
         : ea.ZY5.DM_CHANNEL;
 }
-let eN = i.memo(function (e) {
+let eT = i.memo(function (e) {
     let {
             showLibrary: t,
             hasLibraryApplication: n,
@@ -414,10 +414,10 @@ let eN = i.memo(function (e) {
             hideAllDMs: E,
         } = e,
         O = i.useRef(null),
-        y = i.useRef(null),
+        v = i.useRef(null),
         I = i.useRef(null),
         S = i.useRef(null),
-        N = L.o.useConfig({ location: "privatechannels" }).friendsTab;
+        T = L.o.useConfig({ location: "privatechannels" }).friendsTab;
     return (0, r.jsxs)("nav", {
         className: ep.privateChannels,
         "aria-label": eu.intl.string(eu.t.ZH9aPz),
@@ -452,7 +452,7 @@ let eN = i.memo(function (e) {
                     listScrollerRef: I,
                     createDMCTAButtonVariant: h,
                     children: [
-                        N && !_
+                        T && !_
                             ? (0, r.jsx)(
                                   eb,
                                   { selected: null != b ? b === ea.Z5c.ME_ACTIVITY : l === ea.Z5c.ME_ACTIVITY },
@@ -481,7 +481,7 @@ let eN = i.memo(function (e) {
                             : null,
                         u && !_
                             ? (0, r.jsx)(
-                                  ey,
+                                  ev,
                                   {
                                       selected:
                                           null == b
@@ -502,7 +502,7 @@ let eN = i.memo(function (e) {
                                               route: ea.Z5c.APPLICATION_STORE,
                                               locationState: {
                                                   analyticsSource: {
-                                                      page: eT(l),
+                                                      page: eN(l),
                                                       section: ea.jXE.NAVIGATION,
                                                       object: ea.qAy.NAVIGATION_LINK,
                                                   },
@@ -517,15 +517,15 @@ let eN = i.memo(function (e) {
                         _
                             ? null
                             : (0, r.jsx)(
-                                  v.i,
+                                  y.i,
                                   {
                                       selected:
                                           b === ea.Z5c.COLLECTIBLES_SHOP ||
                                           (null == l ? void 0 : l.startsWith(ea.Z5c.COLLECTIBLES_SHOP)),
-                                      listItemRef: y,
+                                      listItemRef: v,
                                       locationState: {
                                           analyticsSource: {
-                                              page: eT(l),
+                                              page: eN(l),
                                               section: ea.jXE.NAVIGATION,
                                               object: ea.qAy.NAVIGATION_LINK,
                                           },
@@ -535,7 +535,7 @@ let eN = i.memo(function (e) {
                               ),
                         p && !_
                             ? (0, r.jsx)(
-                                  ev,
+                                  ey,
                                   {
                                       selected:
                                           (null != l && l.startsWith(ea.Z5c.FAMILY_CENTER)) ||
@@ -557,7 +557,7 @@ let eN = i.memo(function (e) {
                               )
                             : null,
                         _ || E ? null : (0, r.jsx)(eP, {}, "section-divider-top"),
-                        E ? null : (0, r.jsx)(T.Z, {}, "frequent-friends"),
+                        E ? null : (0, r.jsx)(N.Z, {}, "frequent-friends"),
                         "full-width" !== h || E || _ ? null : (0, r.jsx)(eE, {}, "create-dm"),
                     ],
                 }),
@@ -589,18 +589,18 @@ function ej() {
         }, s.X),
         d = (0, B.i)({ selected: null == u ? t : u.startsWith(ea.Z5c.APPLICATION_STORE) }),
         f = (0, U.eW)(),
-        h = (0, x.a)(),
+        h = (0, A.a)(),
         g = (function () {
             let e = K.Ex.useSetting(),
                 t = (0, Z.Z)();
             return !0 === e && !0 === t;
         })(),
-        m = (0, N.U)("PrivateChannels", { autoTrackExposure: !0 }),
+        m = (0, T.U)("PrivateChannels", { autoTrackExposure: !0 }),
         { enabled: b } = V.m8.useConfig({ location: ec.dr.PRIVATE_CHANNELS_LIST }),
         { pathname: _ } = (0, o.TH)(),
         E = _.startsWith(ea.Z5c.CHANNEL(ea.ME)) && _ !== ea.Z5c.CHANNEL(ea.ME) && _ !== ea.Z5c.ME_ACTIVITY,
         O = L.o.useConfig({ location: "privatechannels" }).dmsTab;
-    return (0, r.jsx)(eN, {
+    return (0, r.jsx)(eT, {
         theme: i,
         showLibrary: n,
         hasLibraryApplication: l,

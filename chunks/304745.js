@@ -63,7 +63,7 @@ function P(e) {
         (0, h.Z)(t.id) && !A && z.push(a.z.ACTIVITY_GDM_ROCKET_SPARKLE),
         A || z.push(a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP);
     let W = r.useRef(!1),
-        Y = r.useRef(null);
+        K = r.useRef(null);
     return (0, i.jsx)(y.ZP, {
         contentTypes: z,
         children: (e) => {
@@ -73,7 +73,7 @@ function P(e) {
                 W.current && !c && l(E.L.AUTO_DISMISS),
                 W.current !== c && (W.current = c),
                 (0, i.jsx)(s.yRy, {
-                    targetElementRef: Y,
+                    targetElementRef: K,
                     fixed: !0,
                     shouldShow: w && (P === O.D.ACTIVITY || null == P),
                     animation: s.yRy.Animation.FADE,
@@ -113,7 +113,7 @@ function P(e) {
                                             forceOpen: !0,
                                             shouldShow: c,
                                             children: (0, i.jsx)("div", {
-                                                ref: Y,
+                                                ref: K,
                                                 children: (0, i.jsx)(x.Z, {
                                                     disabled: A,
                                                     "aria-label": N,

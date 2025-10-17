@@ -1,12 +1,12 @@
-n.d(t, { S: () => i });
+n.d(e, { S: () => l });
 var a = n(308569),
-    s = n(388032);
-let r = {
-    [a.pw.DISCORD_EMPLOYEE_ASKED_ME_TO]: () => s.intl.string(s.t.naBTFB),
-    [a.pw.SOMEONE_ASKED_ME_TO]: () => s.intl.string(s.t.LQ0RUF),
-    [a.pw.NEW_EMAIL]: () => s.intl.string(s.t.oOqQj4),
-    [a.pw.SOMETHING_ELSE]: () => s.intl.string(s.t.p38n1d),
+    r = n(388032);
+let i = {
+    [a.pw.DISCORD_EMPLOYEE_ASKED_ME_TO]: () => r.intl.string(r.t.naBTFB),
+    [a.pw.SOMEONE_ASKED_ME_TO]: () => r.intl.string(r.t.LQ0RUF),
+    [a.pw.NEW_EMAIL]: () => r.intl.string(r.t.oOqQj4),
+    [a.pw.SOMETHING_ELSE]: () => r.intl.string(r.t.p38n1d),
 };
-function i(e) {
-    return r[e]();
+function l(t) {
+    return i[t]();
 }

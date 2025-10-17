@@ -1,19 +1,19 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => j });
 var r = n(951288),
     i = n(296009),
     a = n(442837),
-    o = n(314897),
-    l = n(86419),
-    c = n(747101),
-    s = n(556045),
+    l = n(314897),
+    o = n(86419),
+    s = n(747101),
+    c = n(556045),
     u = n(881410),
     d = n(985748),
     f = n(566007),
     g = n(173951),
     p = n(455731),
-    b = n(272289),
-    m = n(39642);
-function O(e) {
+    m = n(272289),
+    b = n(39642);
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +38,7 @@ function O(e) {
     }
     return e;
 }
-function y(e, t) {
+function v(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -58,49 +58,49 @@ function y(e, t) {
     }
     return i;
 }
-let j = (e) => {
+let y = (e) => {
         var { widget: t } = e,
-            n = y(e, ["widget"]);
+            n = v(e, ["widget"]);
         switch (t.type) {
             case i.l.FAVORITE_GAMES:
-                return (0, r.jsx)(f.Z, O({ widget: t }, n));
+                return (0, r.jsx)(f.Z, h({ widget: t }, n));
             case i.l.CURRENT_GAMES:
-                return (0, r.jsx)(d.Z, O({ widget: t }, n));
+                return (0, r.jsx)(d.Z, h({ widget: t }, n));
             case i.l.WANT_TO_PLAY_GAMES:
-                return (0, r.jsx)(p.Z, O({ widget: t }, n));
+                return (0, r.jsx)(p.Z, h({ widget: t }, n));
             case i.l.PLAYED_GAMES:
-                return (0, r.jsx)(g.Z, O({ widget: t }, n));
+                return (0, r.jsx)(g.Z, h({ widget: t }, n));
             default:
                 return null;
         }
     },
-    x = (e) => {
+    j = (e) => {
         var { widget: t, user: n, disableInteraction: i } = e,
-            d = y(e, ["widget", "user", "disableInteraction"]);
-        let f = (0, c.FX)(t),
-            { shouldShowSuggestions: g, handleDismissSuggestions: p } = (0, s.h)(f),
-            x = (0, a.e7)([o.default], () => o.default.getId() === n.id),
-            v = x && !i && g,
-            h = (0, l.mR)(f),
-            _ = (0, l.Hy)(f, { isCurrentUser: x }),
-            w = (0, l.kQ)(f),
-            P = 1 === (0, l.Gv)(f.type);
+            d = v(e, ["widget", "user", "disableInteraction"]);
+        let f = (0, s.FX)(t),
+            { shouldShowSuggestions: g, handleDismissSuggestions: p } = (0, c.h)(f),
+            j = (0, a.e7)([l.default], () => l.default.getId() === n.id),
+            O = j && !i && g,
+            x = (0, o.mR)(f),
+            _ = (0, o.Hy)(f, { isCurrentUser: j }),
+            P = (0, o.kQ)(f),
+            I = 1 === (0, o.Gv)(f.type);
         return (0, r.jsx)(
-            j,
-            O(
+            y,
+            h(
                 {
                     widget: f,
                     user: n,
                     disableInteraction: i,
-                    headerTitle: h,
+                    headerTitle: x,
                     headerSubtitle: _,
                     headerActionButtons:
-                        x && !P
+                        j && !I
                             ? [
                                   (0, r.jsx)(
                                       u.yX,
                                       {
-                                          disabled: w,
+                                          disabled: P,
                                           widgetType: f.type,
                                           widget: f,
                                       },
@@ -109,12 +109,12 @@ let j = (e) => {
                               ]
                             : void 0,
                     trailingContent:
-                        v &&
-                        (0, r.jsx)(b.Z, {
+                        O &&
+                        (0, r.jsx)(m.Z, {
                             userId: n.id,
                             widgetType: f.type,
                             onDismiss: p,
-                            className: m.suggestedGames,
+                            className: b.suggestedGames,
                         }),
                 },
                 d,

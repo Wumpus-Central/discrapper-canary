@@ -3,20 +3,20 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     o = n.n(l),
-    a = n(599273),
+    a = n(258536),
     s = n(793030),
     c = n(442837),
     u = n(481060),
     d = n(239091),
     p = n(100527),
-    h = n(667815),
-    f = n(531572),
+    f = n(667815),
+    h = n(531572),
     g = n(259580),
     m = n(639777),
     b = n(495804),
     _ = n(441536),
-    y = n(989308),
-    O = n(388032),
+    O = n(989308),
+    y = n(388032),
     v = n(931942);
 function j(e) {
     let { guild: t, withMargin: l } = e,
@@ -25,12 +25,12 @@ function j(e) {
         C = i.useCallback(() => {
             (0, _.Z)(t.id, p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY);
         }, [t.id]),
-        E = (0, c.e7)([f.Z], () => {
+        E = (0, c.e7)([h.Z], () => {
             var e;
-            return null != (e = f.Z.getCountForGuild(t.id)) ? e : 0;
+            return null != (e = h.Z.getCountForGuild(t.id)) ? e : 0;
         });
     i.useEffect(() => {
-        E !== t.premiumSubscriberCount && (0, h.v)(t.id, t.premiumSubscriberCount);
+        E !== t.premiumSubscriberCount && (0, f.v)(t.id, t.premiumSubscriberCount);
     }, [t.id, E, t.premiumSubscriberCount]);
     let S = Math.min((E / j) * 100, 100),
         [I, P] = (0, u.q_F)(
@@ -130,7 +130,7 @@ function j(e) {
                                 (0, r.jsx)(s.xvT, {
                                     className: v.text,
                                     variant: "text-xs/semibold",
-                                    children: O.intl.string(y.default.NI6IhY),
+                                    children: y.intl.string(O.default.NI6IhY),
                                 }),
                                 t.premiumSubscriberCount >= j &&
                                     (0, r.jsx)(s.xvT, {
@@ -147,8 +147,8 @@ function j(e) {
                                     className: o()(v.text, v.boostCountText),
                                     variant: "text-xs/semibold",
                                     children: N
-                                        ? O.intl.formatToPlainString(y.default["Ehpq+/"], { appliedBoostCount: E })
-                                        : O.intl.formatToPlainString(y.default["/rbPDg"], {
+                                        ? y.intl.formatToPlainString(O.default["Ehpq+/"], { appliedBoostCount: E })
+                                        : y.intl.formatToPlainString(O.default["/rbPDg"], {
                                               appliedBoostCount: E,
                                               maxBoostCount: j,
                                           }),

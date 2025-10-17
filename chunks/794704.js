@@ -32,8 +32,8 @@ var r = n(951288),
     L = n(837268),
     x = n(32300),
     M = n(809357),
-    j = n(371651),
-    k = n(829907),
+    k = n(371651),
+    j = n(829907),
     U = n(624864),
     G = n(610394),
     B = n(957148),
@@ -302,8 +302,8 @@ function eM(e) {
     let { runningGame: o, runningGameApplication: s } = e,
         c = null == o ? void 0 : o.pid,
         u = (0, _.e7)(
-            [j.default],
-            () => (null == o || null == c ? null : j.default.getTrackedGameByPid(c)),
+            [k.default],
+            () => (null == o || null == c ? null : k.default.getTrackedGameByPid(c)),
             [o, c],
             l(),
         ),
@@ -331,7 +331,7 @@ function eM(e) {
     }, [f, d]);
     let C = !(0, es.supportsLegacy)(),
         N = !(0, es.supportsOutOfProcess)(),
-        { legacyEnabled: D, oopEnabled: x } = (0, _.cj)([j.default], () => j.default.getGlobalEnabledStatus()),
+        { legacyEnabled: D, oopEnabled: x } = (0, _.cj)([k.default], () => k.default.getGlobalEnabledStatus()),
         M = (e, t) => {
             var n, r, i;
             if (null == o) return;
@@ -358,7 +358,7 @@ function eM(e) {
                     null != (i = o.id) ? i : null,
                 );
         },
-        k = (e, t) => {
+        j = (e, t) => {
             let n = !t && e,
                 r = !x && g,
                 i = !D && y,
@@ -615,7 +615,7 @@ function eM(e) {
                       checked: (g && x) || (y && D),
                       disabled: G,
                       onChange: (e) => {
-                          U(e, k(e, (g && x) || (y && D)));
+                          U(e, j(e, (g && x) || (y && D)));
                       },
                   }),
               }),
@@ -667,7 +667,7 @@ function eM(e) {
               ],
           });
 }
-function ej(e) {
+function ek(e) {
     let { game: t, gameApplication: n } = e,
         a = i.useMemo(() => (null == t ? null : "pid" in t ? t.pid : null), [t]),
         o = (0, _.e7)([I.Z], () => (null != n ? n : I.Z.getApplication(null == t ? void 0 : t.id)), [n, t]);
@@ -677,7 +677,7 @@ function ej(e) {
         size: R.A.SMALL,
     });
 }
-function ek(e) {
+function ej(e) {
     let {
             rawGame: t,
             gameApplication: n,
@@ -703,7 +703,7 @@ function ek(e) {
     };
     return (0, r.jsx)(ew, {
         title: t.name,
-        icon: (0, r.jsx)(ej, {
+        icon: (0, r.jsx)(ek, {
             game: u,
             gameApplication: n,
         }),
@@ -722,7 +722,7 @@ function ek(e) {
 }
 function eU() {
     let [e, t] = i.useState(!1),
-        { legacyEnabled: n, oopEnabled: a } = (0, _.cj)([j.default], () => j.default.getGlobalEnabledStatus()),
+        { legacyEnabled: n, oopEnabled: a } = (0, _.cj)([k.default], () => k.default.getGlobalEnabledStatus()),
         o = (0, _.Wu)([A.ZP], () => A.ZP.getGamesSeen(!0)).filter((e) => !(0, H.le)(e)),
         s = (0, T.Z)(o.map((e) => e.id)),
         l = !(0, es.supportsLegacy)(),
@@ -790,7 +790,7 @@ function eU() {
                       className: ep.scroller,
                       children: o.map((e, t) =>
                           (0, r.jsx)(
-                              ek,
+                              ej,
                               {
                                   rawGame: e,
                                   clientSettingType: w.OverlayToggledClientSettingType.LEGACY_GAME,
@@ -812,7 +812,7 @@ function eU() {
 }
 function eG() {
     let [e, t] = i.useState(!1),
-        { oopEnabled: n, legacyEnabled: a } = (0, _.cj)([j.default], () => j.default.getGlobalEnabledStatus()),
+        { oopEnabled: n, legacyEnabled: a } = (0, _.cj)([k.default], () => k.default.getGlobalEnabledStatus()),
         o = !(0, es.supportsOutOfProcess)(),
         s = (0, _.Wu)([A.ZP], () => A.ZP.getGamesSeen(!0)).filter((e) => !(0, H.le)(e)),
         l = (0, T.Z)(s.map((e) => e.id)),
@@ -877,7 +877,7 @@ function eG() {
                       className: ep.scroller,
                       children: s.map((e, t) =>
                           (0, r.jsx)(
-                              ek,
+                              ej,
                               {
                                   rawGame: e,
                                   clientSettingType: w.OverlayToggledClientSettingType.OOP_GAME,
@@ -1300,7 +1300,7 @@ function ez(e) {
     let { runningGame: t, runningGameApplication: n } = e,
         a = null == n ? void 0 : n.id,
         o = (0, _.e7)([U.Z], () => U.Z.isLimitedInteractionOverrideEnabled(a), [a]),
-        s = i.useMemo(() => null != t && (0, k.H8)(t.pid), [t]),
+        s = i.useMemo(() => null != t && (0, j.H8)(t.pid), [t]),
         l = (0, M.Z)({ location: "overlay_user_settings" }),
         { disableClickableRegions: c, shouldShowKeybindIndicators: u } = (0, _.cj)([en.default], () => ({
             disableClickableRegions: en.default.disableClickableRegions,

@@ -8,8 +8,8 @@ var r = n(647438),
     c = n(271383),
     d = n(700785),
     u = n(231338);
-let h = [],
-    p = new Set();
+let p = [],
+    h = new Set();
 function f(e) {
     let { entries: t, channelId: n } = e,
         f = (0, l.e7)([s.Z], () => s.Z.getChannel(n)),
@@ -26,13 +26,13 @@ function f(e) {
             });
     }, [b, g]);
     let y = (0, l.Wu)([c.ZP], () => {
-            if (null == g) return h;
+            if (null == g) return p;
             let e = [];
             for (let t of b) c.ZP.isMember(g, t) && e.push(t);
             return e;
         }, [b, g]),
         _ = r.useMemo(() => {
-            if (null == f || 0 === y.length) return p;
+            if (null == f || 0 === y.length) return h;
             let e = new Set();
             for (let t of y) {
                 let n = d.uB({

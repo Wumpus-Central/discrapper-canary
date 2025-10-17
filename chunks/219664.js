@@ -95,7 +95,7 @@ let U = i.memo(function (e) {
         m = (0, o.e7)([y.Z], () => y.Z.getChannel(n));
     return null == m
         ? null
-        : (0, r.jsx)(V, {
+        : (0, r.jsx)(G, {
               id: t,
               channel: m,
               goToThread: i,
@@ -107,7 +107,7 @@ let U = i.memo(function (e) {
               gridSectionBoundaries: d,
           });
 });
-function V(e) {
+function G(e) {
     let {
             id: t,
             channel: n,
@@ -144,7 +144,7 @@ function V(e) {
             boundaries: f,
         }),
         { onFocus: U } = B,
-        V = (function (e, t) {
+        G = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -186,7 +186,7 @@ function V(e) {
                         }),
                         className: H.focusTarget,
                     },
-                    V,
+                    G,
                 ),
             ),
             (0, r.jsxs)("div", {
@@ -233,7 +233,7 @@ function V(e) {
             (0, r.jsx)("div", {
                 className: H.postBody,
                 children: (0, r.jsx)(d.Rny, {
-                    children: (0, r.jsx)(G, {
+                    children: (0, r.jsx)(V, {
                         channel: n,
                         firstMessage: v,
                         isFirstMessageLoaded: _,
@@ -255,7 +255,7 @@ function V(e) {
         ],
     });
 }
-function G(e) {
+function V(e) {
     let { channel: t, firstMessage: n, isFirstMessageLoaded: i, overrideMedia: a, coords: l } = e,
         { isBlocked: s, isIgnored: c } = (0, o.cj)([w.Z], () => ({
             isBlocked: null != n && w.Z.isBlockedForMessage(n),

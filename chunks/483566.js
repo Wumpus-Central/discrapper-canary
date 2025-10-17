@@ -139,8 +139,8 @@ function g(e) {
               })
             : null,
         M = null != t && "" !== t,
-        j = null != l && "" !== l,
-        k = M
+        k = null != l && "" !== l,
+        j = M
             ? (0, r.jsxs)(u.x, {
                   "aria-hidden": w,
                   "data-interactive": I,
@@ -187,12 +187,12 @@ function g(e) {
             disabled: w ? a : void 0,
             children: [
                 x,
-                M || j
+                M || k
                     ? (0, r.jsxs)("div", {
                           className: f.labelContainer,
                           children: [
-                              n ? (0, r.jsx)(s.n, { children: k }) : k,
-                              j &&
+                              n ? (0, r.jsx)(s.n, { children: j }) : j,
+                              k &&
                                   (0, r.jsx)(u.x, {
                                       variant: "text-sm/normal",
                                       color: "text-secondary",

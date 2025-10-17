@@ -344,14 +344,14 @@ let M = (e, t) => {
             : e.id;
         return "".concat(n, "_").concat(t);
     },
-    j = (e) => {
+    k = (e) => {
         let t = Array.isArray(e) ? null : (0, b.uk)(e),
             n = (0, c.Z)(t);
         return t !== n;
     },
-    k = i.createContext(void 0);
+    j = i.createContext(void 0);
 function U() {
-    let e = i.useContext(k);
+    let e = i.useContext(j);
     return null == e ? void 0 : e.current;
 }
 function G() {
@@ -360,7 +360,7 @@ function G() {
 }
 function B(e) {
     let { visible: t, visibleChanged: n, focused: a, reference: o, focusedChanged: c, sourceQuestContent: u } = e,
-        d = j(e.questOrQuests),
+        d = k(e.questOrQuests),
         f = i.useRef(null),
         _ = (0, s.e7)([O.Z], () => null != O.Z.questEnrollmentBlockedUntil, []);
     return (
@@ -400,7 +400,7 @@ function B(e) {
             _,
             u,
         ]),
-        (0, r.jsx)(k.Provider, {
+        (0, r.jsx)(j.Provider, {
             value: f,
             children: e.children(o, f),
         })

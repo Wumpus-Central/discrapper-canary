@@ -42,7 +42,7 @@ function _(e) {
     }
     return e;
 }
-let O = {
+let E = {
     [h.AzA.NOW_PLAYING]: {
         single: (e, t) =>
             g.intl.format(g.t.NEckzc, {
@@ -89,9 +89,9 @@ let O = {
         other: (e) => g.intl.format(g.t.Yx1rjY, { count: e }),
     },
 };
-class E extends i.PureComponent {
+class O extends i.PureComponent {
     renderDescription(e, t) {
-        let n = O[e];
+        let n = E[e];
         return 1 === t.length
             ? n.single(t[0].user, (e) => this.renderActivityDiscordTag(e))
             : 2 === t.length
@@ -226,4 +226,4 @@ class E extends i.PureComponent {
             );
     }
 }
-let v = E;
+let v = O;

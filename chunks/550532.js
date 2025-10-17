@@ -3,14 +3,14 @@ var r,
     i,
     l = n(442837),
     o = n(570140),
-    a = n(780106);
-let s = "None";
+    s = n(780106);
+let a = "None";
 class c extends (i = l.ZP.Store) {
     getFakeGameToShow() {
-        return s;
+        return a;
     }
     getFakeGameData() {
-        return a.O[s];
+        return s.O[a];
     }
 }
 (r = "displayName") in c
@@ -24,6 +24,6 @@ class c extends (i = l.ZP.Store) {
 let u = new c(o.Z, {
     CONTENT_INVENTORY_FORCE_SHOW_GAME_SHARING: function (e) {
         let { gameToShow: t } = e;
-        s = t;
+        a = t;
     },
 });

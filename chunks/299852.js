@@ -71,25 +71,25 @@ class v extends (r = s.PureComponent) {
     }
     renderCategorySuccess(e, t) {
         let { defaultRoute: n, transitionTo: r } = this.props,
-            s = _.intl.formatToPlainString(_.t.YDAohB, { category: t });
+            s = _.intl.formatToPlainString(_.t.YDAohI, { category: t });
         return (0, i.jsxs)(d.ZP, {
             children: [
                 (0, i.jsx)(d.Dx, {
                     className: x.marginBottom8,
-                    children: _.intl.string(_.t.f6rdLg),
+                    children: _.intl.string(_.t.f6rdLi),
                 }),
                 (0, i.jsx)(d.DK, { children: s }),
                 (0, i.jsx)(d.zx, {
                     className: x.marginTop20,
                     onClick: () => r(n),
-                    children: _.intl.string(_.t.fIv16B),
+                    children: _.intl.string(_.t.fIv16O),
                 }),
                 (0, i.jsx)(d.zx, {
                     className: x.marginTop8,
                     color: d.zx.Colors.LINK,
                     look: d.zx.Looks.LINK,
                     onClick: () => r(m.Z5c.SETTINGS("notifications", f.vG)),
-                    children: _.intl.string(_.t.YYTirT),
+                    children: _.intl.string(_.t.YYTira),
                 }),
             ],
         });
@@ -110,13 +110,13 @@ class v extends (r = s.PureComponent) {
                 }),
                 (0, i.jsx)(d.Dx, {
                     className: x.marginBottom8,
-                    children: _.intl.string(_.t["6U6OMQ"]),
+                    children: _.intl.string(_.t["6U6OMT"]),
                 }),
-                (0, i.jsx)(d.DK, { children: _.intl.string(_.t["yaDJ4/"]) }),
+                (0, i.jsx)(d.DK, { children: _.intl.string(_.t["yaDJ4+"]) }),
                 (0, i.jsx)(d.zx, {
                     className: x.marginTop40,
                     onClick: () => t(e),
-                    children: _.intl.string(_.t.fIv16B),
+                    children: _.intl.string(_.t.fIv16O),
                 }),
             ],
         });
@@ -133,11 +133,11 @@ class v extends (r = s.PureComponent) {
                     className: x.marginBottom8,
                     children: _.intl.string(_.t.ox9hIS),
                 }),
-                (0, i.jsx)(d.DK, { children: _.intl.string(_.t["/dcuR5"]) }),
+                (0, i.jsx)(d.DK, { children: _.intl.string(_.t["/dcuR0"]) }),
                 (0, i.jsx)(d.zx, {
                     className: x.marginTop40,
                     onClick: () => t(e),
-                    children: _.intl.string(_.t.fIv16B),
+                    children: _.intl.string(_.t.fIv16O),
                 }),
             ],
         });

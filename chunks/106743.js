@@ -19,19 +19,19 @@ function d(e) {
             (m.fetchStatus === s.iF.SUCCESS && (null == e ? void 0 : e.url) !== m.url)) &&
             (0, a.lL)(n, o.X.WATCH_VIDEO);
     }, [m, n]);
-    let p =
+    let f =
             (null == m ? void 0 : m.questId) === n.id &&
             (null == m ? void 0 : m.fetchStatus) === s.iF.SUCCESS &&
             null != (t = m.text)
                 ? t
                 : "",
-        f = l.useMemo(
+        p = l.useMemo(
             () =>
-                p
+                f
                     .split("\n")
                     .map((e) => e.trim())
                     .filter((e) => e.length > 0),
-            [p],
+            [f],
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -65,7 +65,7 @@ function d(e) {
                                 : (0, r.jsx)(i.Heading, {
                                       variant: "heading-md/normal",
                                       color: "text-muted",
-                                      children: f.map((e, t) => (0, r.jsx)("p", { children: e }, t)),
+                                      children: p.map((e, t) => (0, r.jsx)("p", { children: e }, t)),
                                   }),
                     }),
                 }),

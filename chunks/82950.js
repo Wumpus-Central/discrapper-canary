@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => E });
 var r = n(951288),
     i = n(647438),
     l = n(392711),
@@ -48,8 +48,8 @@ let b = a().debounce(c.ZP.trackWithMetadata, 500),
             imageMarginX: p,
             imageMarginTop: m,
             trackingSource: _,
-            undismissable: O,
-            onDismissed: E,
+            undismissable: E,
+            onDismissed: O,
             onClick: v,
             cta: y,
             ctaColor: I,
@@ -84,11 +84,11 @@ let b = a().debounce(c.ZP.trackWithMetadata, 500),
         return (0, r.jsxs)("div", {
             className: g.channelNotice,
             children: [
-                !0 === O
+                !0 === E
                     ? null
                     : (0, r.jsx)(s.P3F, {
                           onClick: () => {
-                              c.ZP.trackWithMetadata(f.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: d }), null == E || E();
+                              c.ZP.trackWithMetadata(f.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: d }), null == O || O();
                           },
                           className: g.close,
                           "aria-label": h.intl.string(h.t.WAI6xs),
@@ -131,7 +131,7 @@ let b = a().debounce(c.ZP.trackWithMetadata, 500),
             ],
         });
     },
-    O = function (e) {
+    E = function (e) {
         let { showRedesignedChannelNotice: t } = (0, d.o)(!0);
         return t ? (0, r.jsx)(p.Z, m({}, e)) : (0, r.jsx)(_, m({}, e));
     };

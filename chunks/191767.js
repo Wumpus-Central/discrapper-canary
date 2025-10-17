@@ -76,7 +76,7 @@ async function w(e) {
         })
     ).body;
 }
-async function R(e) {
+async function k(e) {
     try {
         let t = (
             await c.tn.get({
@@ -104,7 +104,7 @@ async function R(e) {
         throw (console.error("3DS completion error:", e), e);
     }
 }
-function k() {
+function R() {
     let [e, t] = r.useState(!1),
         [n, i] = r.useState(!1),
         [l, o] = r.useState(!1),
@@ -138,7 +138,7 @@ function k() {
                 }),
             [y],
         ),
-        k = (0, u.nVN)({
+        R = (0, u.nVN)({
             value: g,
             onChange: b,
         }),
@@ -193,7 +193,7 @@ function k() {
             if (null == x || "" === x) return void h("No order ID available. Please create an order first.");
             o(!0);
             try {
-                await R(x),
+                await k(x),
                     h("3DS authentication completed successfully! Order ID: ".concat(x)),
                     console.log("3DS authentication completed successfully for order:", x);
             } catch (t) {
@@ -229,7 +229,7 @@ function k() {
                             }),
                             (0, a.jsx)(
                                 u.PhF,
-                                I(P({}, k), {
+                                I(P({}, R), {
                                     options: N,
                                     placeholder: "Select a payment source...",
                                     isDisabled: !S,
@@ -307,7 +307,7 @@ function A() {
         activeSubscription: null,
         children: (0, a.jsxs)("div", {
             children: [
-                (0, a.jsx)(k, {}),
+                (0, a.jsx)(R, {}),
                 (0, a.jsx)(D, {}),
                 (0, a.jsx)(u.Text, {
                     variant: "text-md/normal",

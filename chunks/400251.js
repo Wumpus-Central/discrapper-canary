@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => N,
-    m: () => T,
+    m: () => P,
 }),
     n(388685),
     n(953529);
@@ -13,8 +13,8 @@ var r = n(951288),
     c = n(481060),
     d = n(239091),
     u = n(749210),
-    h = n(686546),
-    p = n(951394),
+    p = n(686546),
+    h = n(951394),
     f = n(565138),
     g = n(372769),
     m = n(134432),
@@ -71,7 +71,7 @@ function Z(e, t) {
         e
     );
 }
-let T = (e) => {
+let P = (e) => {
     let { onClick: t } = e;
     return (0, r.jsxs)(c.P3F, {
         onClick: t,
@@ -90,19 +90,19 @@ let T = (e) => {
         ],
     });
 };
-function P(e) {
+function T(e) {
     let { entry: t } = e,
         [l, s] = i.useState(!1),
         d = i.useRef(null),
         { canEdit: u } = (0, O.Z)(t);
     return (0, r.jsx)("div", {
         className: a()(I.actionButtonsContainer, { [I.forceButtonsShow]: l }),
-        children: (0, r.jsxs)(p.ZP, {
+        children: (0, r.jsxs)(h.ZP, {
             children: [
                 u
                     ? (0, r.jsx)(o.u, {
                           text: C.intl.string(C.t.XnuOvL),
-                          children: (0, r.jsx)(p.zx, {
+                          children: (0, r.jsx)(h.zx, {
                               onClick: () => {
                                   (0, c.ZDy)(async () => {
                                       let { default: e } = await n.e("34191").then(n.bind(n, 303647));
@@ -152,7 +152,7 @@ function P(e) {
                         return (0, r.jsx)(o.u, {
                             text: C.intl.string(C.t.UKOtz8),
                             children: (0, r.jsx)(
-                                p.zx,
+                                h.zx,
                                 Z(E({}, n), {
                                     onClick: (e) => {
                                         t(e);
@@ -177,11 +177,11 @@ let N = (e) => {
     var t;
     let { entry: l } = e,
         [a, o] = i.useState(!1),
-        p = null != (0, s.e7)([y.Z], () => y.Z.getGuild(l.guildId)),
+        h = null != (0, s.e7)([y.Z], () => y.Z.getGuild(l.guildId)),
         O = async () => {
             o(!0);
             try {
-                p ? (0, b.X)(l.guildId) : await u.Z.joinGuild(l.guildId, { source: v.vtS.DIRECTORY_ENTRY });
+                h ? (0, b.X)(l.guildId) : await u.Z.joinGuild(l.guildId, { source: v.vtS.DIRECTORY_ENTRY });
             } finally {
                 o(!1);
             }
@@ -200,9 +200,9 @@ let N = (e) => {
             }))
                 ? t
                 : void 0,
-        T = C.intl.string(C.t.VJlc0d);
+        P = C.intl.string(C.t.VJlc0d);
     return (
-        p && (T = C.intl.string(C.t.cqWE2d)),
+        h && (P = C.intl.string(C.t.cqWE2d)),
         (0, r.jsxs)("div", {
             className: I.card,
             onContextMenu: (e) => {
@@ -227,8 +227,8 @@ let N = (e) => {
                         }),
                         (0, r.jsx)("div", {
                             className: I.guildIcon,
-                            children: (0, r.jsx)(h.ZP, {
-                                mask: h.ZP.Masks.SQUIRCLE,
+                            children: (0, r.jsx)(p.ZP, {
+                                mask: p.ZP.Masks.SQUIRCLE,
                                 width: 48,
                                 height: 48,
                                 children: (0, r.jsx)("div", {
@@ -306,15 +306,15 @@ let N = (e) => {
                             className: I.joinButton,
                             children: (0, r.jsx)(c.Button, {
                                 loading: a,
-                                variant: p ? "secondary" : "active",
+                                variant: h ? "secondary" : "active",
                                 onClick: O,
-                                text: T,
+                                text: P,
                                 fullWidth: !0,
                             }),
                         }),
                     ],
                 }),
-                (0, r.jsx)(P, { entry: l }),
+                (0, r.jsx)(T, { entry: l }),
             ],
         })
     );

@@ -1,7 +1,7 @@
 n.d(t, {
     AX: () => s,
     BR: () => d,
-    Bo: () => b,
+    Bo: () => g,
     Df: () => f,
     LT: () => E,
     ZZ: () => p,
@@ -82,7 +82,7 @@ function m(e, t) {
         streamerId: t,
     });
 }
-function b(e) {
+function g(e) {
     l.Z.dispatch({
         type: "SHARED_CANVAS_SET_DRAW_MODE",
         drawMode: e,

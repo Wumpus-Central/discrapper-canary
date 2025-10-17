@@ -4,24 +4,24 @@ var r = n(951288),
     o = n(442837),
     i = n(704215),
     a = n(481060),
-    s = n(493773),
-    c = n(243778),
+    c = n(493773),
+    s = n(243778),
     u = n(886880),
     d = n(82084),
     f = n(131051),
     b = n(663389),
-    m = n(594174),
-    v = n(88658),
-    p = n(996733),
-    j = n(313789),
-    x = n(914578),
-    y = n(920952),
+    p = n(594174),
+    y = n(88658),
+    j = n(996733),
+    m = n(313789),
+    v = n(914578),
+    g = n(920952),
     h = n(518596),
-    g = n(388032),
-    O = n(942408);
-function C(e) {
+    O = n(388032),
+    x = n(942408);
+function P(e) {
     let { destinationPanel: t, originPanel: n } = e;
-    (0, v.QB)({
+    (0, y.QB)({
         destinationPane: t,
         originPane: n,
         subsection: b.Z.getSubsection(),
@@ -52,20 +52,20 @@ function S(e) {
             }
             return l;
         })(e, ["target"]);
-    let i = p.Z.useField("query"),
-        { node: a, directory: c } = (0, f.Z)(y.Z, i),
-        u = null != t && null != c.entry(t) ? t : void 0,
-        v = l.useRef(null);
-    return ((0, s.ZP)(() => {
+    let i = j.Z.useField("query"),
+        { node: a, directory: s } = (0, f.Z)(g.Z, i),
+        u = null != t && null != s.entry(t) ? t : void 0,
+        y = l.useRef(null);
+    return ((0, c.ZP)(() => {
         let e = b.Z.getSection();
         null != e &&
-            (C({
+            (P({
                 destinationPanel: e,
                 originPanel: null,
             }),
-            (v.current = e));
+            (y.current = e));
     }),
-    (0, o.e7)([m.default], () => null != m.default.getCurrentUser()))
+    (0, o.e7)([p.default], () => null != p.default.getCurrentUser()))
         ? (0, r.jsx)(
               d.Z,
               (function (e) {
@@ -95,35 +95,35 @@ function S(e) {
               })(
                   {
                       root: a,
-                      directory: c,
-                      sidebarHeader: P,
+                      directory: s,
+                      sidebarHeader: C,
                       emptyState: _,
-                      sidebarFooter: x.Z,
+                      sidebarFooter: v.Z,
                       onPanelChange: (e) => {
                           let t = (0, h.getUserSettingsSectionsByWebUserSettings)().get(e);
                           null != t &&
-                              (C({
+                              (P({
                                   destinationPanel: t,
-                                  originPanel: v.current,
+                                  originPanel: y.current,
                               }),
-                              (v.current = t));
+                              (y.current = t));
                       },
                       target: u,
-                      defaultTarget: j.n.ACCOUNT_PANEL,
+                      defaultTarget: m.n.ACCOUNT_PANEL,
                   },
                   n,
               ),
           )
         : null;
 }
-function P() {
-    let e = p.Z.useField("query"),
+function C() {
+    let e = j.Z.useField("query"),
         t = l.useRef(null),
-        [n, o] = (0, c.US)([i.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER]),
-        s = l.useMemo(
+        [n, o] = (0, s.US)([i.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER]),
+        c = l.useMemo(
             () => ({
-                title: g.intl.string(g.t.Kv519f),
-                body: g.intl.string(g.t.cTGJBQ),
+                title: O.intl.string(O.t.Kv519f),
+                body: O.intl.string(O.t.cTGJBQ),
                 badge: "new",
                 position: "right",
                 align: "center",
@@ -132,14 +132,14 @@ function P() {
             [],
         ),
         d = l.useCallback((e) => {
-            p.Z.setState({ query: e });
+            j.Z.setState({ query: e });
         }, []),
         f = l.useCallback(() => {
-            p.Z.setState({ query: "" });
+            j.Z.setState({ query: "" });
         }, []);
     return (0, r.jsx)("div", {
         children: (0, r.jsxs)("div", {
-            className: O.searchBarContainer,
+            className: x.searchBarContainer,
             children: [
                 (0, r.jsx)(a.E1j, {
                     size: "md",
@@ -148,7 +148,7 @@ function P() {
                     onClear: f,
                 }),
                 (0, r.jsx)("div", {
-                    className: O.popoverAnchor,
+                    className: x.popoverAnchor,
                     ref: t,
                 }),
                 (0, r.jsx)(u.Z, {
@@ -156,7 +156,7 @@ function P() {
                     targetElementRef: t,
                     visibleContent: n,
                     markAsDismissed: o,
-                    props: s,
+                    props: c,
                 }),
             ],
         }),
@@ -164,17 +164,17 @@ function P() {
 }
 function _() {
     return (0, r.jsxs)("div", {
-        className: O.emptySearchResultsContainer,
+        className: x.emptySearchResultsContainer,
         children: [
             (0, r.jsx)(a.Text, {
                 variant: "text-sm/semibold",
                 color: "text-primary",
-                children: g.intl.string(g.t.zihbmp),
+                children: O.intl.string(O.t.zihbmp),
             }),
             (0, r.jsx)(a.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: g.intl.string(g.t.XclvsL),
+                children: O.intl.string(O.t.XclvsL),
             }),
         ],
     });

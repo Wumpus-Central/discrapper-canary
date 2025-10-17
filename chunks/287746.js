@@ -41,11 +41,11 @@ var i = n(951288),
     V = n(893718),
     F = n(436660),
     G = n(680835),
-    W = n(28546),
-    z = n(295474),
-    q = n(521476),
+    z = n(28546),
+    W = n(295474),
+    K = n(521476),
     Y = n(69882),
-    K = n(71619),
+    q = n(71619),
     X = n(185145),
     J = n(736052),
     Q = n(146128),
@@ -95,11 +95,11 @@ var i = n(951288),
     eV = n(655687),
     eF = n(775685),
     eG = n(583027),
-    eW = n(25007),
-    ez = n(685006),
-    eq = n(685722),
+    ez = n(25007),
+    eW = n(685006),
+    eK = n(685722),
     eY = n(199649),
-    eK = n(1397),
+    eq = n(1397),
     eX = n(641861),
     eJ = n(981631),
     eQ = n(959517),
@@ -733,15 +733,15 @@ class te extends r.PureComponent {
             M = c === D.Ie.SIDEBAR;
         t =
             M && n.type === eJ.d4z.GUILD_VOICE
-                ? e$.t.pnnyFZ
+                ? e$.t.pnnyFR
                 : M && n.type === eJ.d4z.GUILD_STAGE_VOICE
-                  ? e$.t.YInSkq
+                  ? e$.t.YInSkp
                   : u.T.THREADS.has(n.type)
-                    ? e$.t["OkzL+Q"]
-                    : e$.t.UbNmGc;
+                    ? e$.t["OkzL+f"]
+                    : e$.t.UbNmGR;
         let R = (0, i.jsx)("div", {
                 className: e0.channelBottomBarArea,
-                children: (0, i.jsx)(eq.Z, {}),
+                children: (0, i.jsx)(eK.Z, {}),
             }),
             L = (0, i.jsxs)("div", {
                 className: e0.channelBottomBarArea,
@@ -828,7 +828,7 @@ class te extends r.PureComponent {
                                                 recipientUser: P,
                                                 voiceChannel: I,
                                             }),
-                                        (0, i.jsx)(eW.Z, {
+                                        (0, i.jsx)(ez.Z, {
                                             channel: n,
                                             guild: r,
                                             narrow: M,
@@ -836,7 +836,7 @@ class te extends r.PureComponent {
                                         (0, i.jsxs)(p.y5t, {
                                             component: (0, i.jsx)(p.nn4, {
                                                 children: (0, i.jsx)(p.H, {
-                                                    children: e$.intl.format(e$.t.eTzKkx, { channelName: n.name }),
+                                                    children: e$.intl.format(e$.t.eTzKk5, { channelName: n.name }),
                                                 }),
                                             }),
                                             children: [
@@ -872,7 +872,7 @@ class te extends r.PureComponent {
                                                                           channel: n,
                                                                           children: U,
                                                                       })
-                                                                    : (0, i.jsx)(eK.Z, {
+                                                                    : (0, i.jsx)(eq.Z, {
                                                                           channel: n,
                                                                           children: U,
                                                                       }),
@@ -956,7 +956,7 @@ class te extends r.PureComponent {
             }),
             e2(this, "handleOpenExpressionPicker", (e) => {
                 let { activeView: t } = e;
-                (0, W.PG)(t, this.props.chatInputType);
+                (0, z.PG)(t, this.props.chatInputType);
             }),
             e2(this, "handleOpenAppLauncher", (e) => {
                 let { applicationId: t } = e;
@@ -988,7 +988,7 @@ class te extends r.PureComponent {
                               disabledUntil: l,
                           })
                         : a
-                          ? (0, i.jsx)(q.h, { guild: r })
+                          ? (0, i.jsx)(K.h, { guild: r })
                           : null;
             }),
             e2(this, "renderAppLauncherButton", () => {
@@ -1011,7 +1011,7 @@ class te extends r.PureComponent {
                 return e && !t
                     ? (0, i.jsx)("div", {
                           className: e0.entryPointButtonContainer,
-                          children: (0, i.jsx)(ez.ZP, {
+                          children: (0, i.jsx)(eW.ZP, {
                               context: {
                                   channel: n,
                                   type: "channel",
@@ -1028,8 +1028,8 @@ let tt = r.memo(function (e) {
     let { channel: t, guild: n, chatInputType: l, filterAfterTimestamp: a } = e,
         { placeholder: o, accessibilityLabel: s } = (0, eV.Z)({ channel: t }),
         c = (0, ed.S)(eN.default.getCurrentUser(), t),
-        [u] = (0, K.AB)(null == n ? void 0 : n.id),
-        h = (0, z.Ux)(null == n ? void 0 : n.id),
+        [u] = (0, q.AB)(null == n ? void 0 : n.id),
+        h = (0, W.Ux)(null == n ? void 0 : n.id),
         f = (0, d.e7)([eN.default], () => eN.default.getCurrentUser()),
         m = (0, d.e7)([eS.ZP], () => {
             var e, t, i;
@@ -1085,8 +1085,8 @@ let tt = r.memo(function (e) {
         H = (0, d.e7)([es.ZP, ev.default], () => es.ZP.getUserCombo(ev.default.getId(), t.id)),
         V = (0, b.iD)(t),
         F = (0, b.d7)(t),
-        W = V.length > 0 || t.rateLimitPerUser > 0 || null != H || null != F,
-        { showLinkedLobbyApplicationLoadingIndicator: q } = (0, eH.Z)(t.linkedLobby),
+        z = V.length > 0 || t.rateLimitPerUser > 0 || null != H || null != F,
+        { showLinkedLobbyApplicationLoadingIndicator: K } = (0, eH.Z)(t.linkedLobby),
         Y = (0, G.Z)("ChannelChat");
     return (0, i.jsx)(te, {
         channel: t,
@@ -1114,8 +1114,8 @@ let tt = r.memo(function (e) {
         pendingScheduledMessage: P,
         recipientUser: B,
         voiceChannel: U,
-        messagesTypingGradient: W,
-        showLinkedLobbyApplicationLoadingIndicator: q,
+        messagesTypingGradient: z,
+        showLinkedLobbyApplicationLoadingIndicator: K,
         announcementComposerEnabled: Y,
     });
 });

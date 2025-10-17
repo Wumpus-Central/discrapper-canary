@@ -4,8 +4,8 @@ n(647438);
 var r = n(442837),
     i = n(481060),
     l = n(911969),
-    s = n(168107),
-    o = n(480916),
+    o = n(168107),
+    s = n(480916),
     c = n(594174),
     d = n(118589),
     u = n(62272);
@@ -20,8 +20,8 @@ let m = function (e) {
                 variant: "primary",
                 onClick: () => {
                     (null == n ? void 0 : n.ageVerificationStatus) === l.F$.UNVERIFIED
-                        ? s.Z.showAgeVerificationGetStartedModal({
-                              entryPoint: o.cU.SAFETY_FLOWS,
+                        ? o.Z.showAgeVerificationGetStartedModal({
+                              entryPoint: s.cU.SAFETY_FLOWS,
                               onClose: () => t({ type: d.rY.Empty }),
                           })
                         : t({ type: d.rY.Empty });

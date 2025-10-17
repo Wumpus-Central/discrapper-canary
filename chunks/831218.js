@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(388685);
+n.d(t, { Z: () => V }), n(388685);
 var r,
     i = n(951288),
     l = n(647438),
@@ -9,8 +9,8 @@ var r,
     u = n(91192),
     d = n(924826),
     p = n(442837),
-    h = n(902704),
-    f = n(481060),
+    f = n(902704),
+    h = n(481060),
     g = n(925549),
     m = n(607070),
     b = n(100527),
@@ -229,7 +229,7 @@ let B = l.memo(function () {
         ],
     });
 });
-class V extends (r = l.Component) {
+class F extends (r = l.Component) {
     static getDerivedStateFromProps(e) {
         let { children: t, privateChannelIds: n } = e;
         if (null == t)
@@ -253,7 +253,7 @@ class V extends (r = l.Component) {
         null != e && null != t && t.indexOf(e) >= 0 && this.scrollToChannel(e), this.reportAnalytics();
     }
     shouldComponentUpdate(e) {
-        return !(0, h.Z)(this.props, e, ["children"]);
+        return !(0, f.Z)(this.props, e, ["children"]);
     }
     componentDidUpdate(e) {
         let { selectedChannelId: t, homeLink: n } = this.props;
@@ -305,10 +305,10 @@ class V extends (r = l.Component) {
                         }
                         return i;
                     })(r, ["ref", "role"]);
-                return (0, i.jsx)(f.Wdt, {
+                return (0, i.jsx)(h.Wdt, {
                     children: (r) =>
                         (0, i.jsx)(
-                            f.aVo,
+                            h.aVo,
                             G(
                                 {
                                     fade: !0,
@@ -449,13 +449,13 @@ class V extends (r = l.Component) {
                                           popoutAlign: "left",
                                           className: M.privateChannelRecipientsInviteButtonIconContainer,
                                           iconClassName: M.privateChannelRecipientsInviteButtonIcon,
-                                          icon: f.BRu,
+                                          icon: h.BRu,
                                           subscribeToGlobalHotkey: !0,
                                       }),
                                   "side" === r &&
                                       (0, i.jsx)(S.l, {
                                           popoutAlign: "left",
-                                          icon: f.kL_,
+                                          icon: h.kL_,
                                           text: L.intl.string(L.t["6Urw1t"]),
                                           size: "sm",
                                           subscribeToGlobalHotkey: !0,
@@ -485,9 +485,9 @@ class V extends (r = l.Component) {
             });
     }
 }
-k(V, "defaultProps", { padding: 8 });
-let F = (e) => {
-    let { density: t } = (0, f.TCT)(),
+k(F, "defaultProps", { padding: 8 });
+let V = (e) => {
+    let { density: t } = (0, h.TCT)(),
         {
             version: n,
             theme: r,
@@ -495,16 +495,16 @@ let F = (e) => {
             showDMHeader: a,
             listScrollerRef: s,
             createDMCTAButtonVariant: c,
-            hideAllDMs: h,
+            hideAllDMs: f,
         } = e,
         g = l.Children.count(o),
         _ = w.Z.getMutablePrivateChannels(),
-        y = h ? {} : (0, P.k1)(_),
+        y = f ? {} : (0, P.k1)(_),
         v = (0, p.Wu)([A.Z, I.Z, N.Z], () => {
             let e = A.Z.getPrivateChannelIds(),
                 t = (0, P.tU)(e, [I.Z, N.Z]);
-            return h ? [] : t;
-        }, [h]);
+            return f ? [] : t;
+        }, [f]);
     (0, E.z)(C.R);
     let { analyticsLocations: j } = (0, O.ZP)(b.Z.CONTACTS_LIST),
         S = (0, Z.Ll)(),
@@ -557,9 +557,9 @@ let F = (e) => {
                 }),
             [L],
         ),
-        F = (0, x.Dt)(),
+        V = (0, x.Dt)(),
         H = (0, d.ZP)({
-            id: "private-channels-".concat(F),
+            id: "private-channels-".concat(V),
             isEnabled: T,
             scrollToStart: k,
             scrollToEnd: B,
@@ -571,7 +571,7 @@ let F = (e) => {
         children: (0, i.jsx)(u.bG, {
             navigator: H,
             children: (0, i.jsx)(
-                V,
+                F,
                 U(G({}, e), {
                     density: t,
                     channels: y,

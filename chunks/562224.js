@@ -102,14 +102,14 @@ async function C(e, t) {
         !(await o.Z.hasPermission(y.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }))
     )
         return [!1, "no permission"];
-    let { preset: M, resolution: j, fps: k, soundshareEnabled: U } = l.Z.getState(),
+    let { preset: M, resolution: k, fps: j, soundshareEnabled: U } = l.Z.getState(),
         G = null != (E = null == t ? void 0 : t.preset) ? E : M,
         { allowAutoQuality: B } = (0, h.I)({ location: "startStreamWithSource" });
     G !== b.ApplicationStreamPresets.PRESET_AUTO || B || (G = b.ApplicationStreamPresets.PRESET_VIDEO);
     let Z = G === b.ApplicationStreamPresets.PRESET_AUTO ? b.ApplicationStreamPresets.PRESET_VIDEO : G,
         [F, V] = null != (O = (0, g.Z)(Z, R, L)) ? O : [],
-        H = null != (I = null != F ? F : null == t ? void 0 : t.resolution) ? I : j,
-        Y = null != (S = null != V ? V : null == t ? void 0 : t.fps) ? S : k,
+        H = null != (I = null != F ? F : null == t ? void 0 : t.resolution) ? I : k,
+        Y = null != (S = null != V ? V : null == t ? void 0 : t.fps) ? S : j,
         W = null != (C = null == t ? void 0 : t.previewDisabled) ? C : s.I0.getSetting(),
         K = null != (N = null == t ? void 0 : t.soundshareEnabled) ? N : U;
     return (

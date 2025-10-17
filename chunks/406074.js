@@ -1,4 +1,4 @@
-n.d(t, { C: () => h });
+n.d(t, { C: () => p });
 var r = n(442837),
     i = n(160404),
     l = n(345162),
@@ -8,15 +8,15 @@ var r = n(442837),
     c = n(584825),
     d = n(790285),
     u = n(981631);
-function h(e) {
+function p(e) {
     let { guildId: t, channelId: n } = e,
-        h = (0, c.qi)(t);
+        p = (0, c.qi)(t);
     return (0, r.Wu)([a.Z, o.Z, i.Z], () => {
         let e = a.Z.getChannel(n),
             r = o.Z.getGuild(t),
             c = i.Z.isViewingServerShop(t);
         return null != r && null != e
-            ? h.filter((t) =>
+            ? p.filter((t) =>
                   (function (e, t, n) {
                       let { isPreviewingRoles: r = !1 } =
                           arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
@@ -26,10 +26,10 @@ function h(e) {
                       let a = s.Z.getEveryoneRole(t),
                           o = null != a && !(0, l.Fs)(a, u.Plq.VIEW_CHANNEL),
                           c = (0, d.wB)(n, n.permissionOverwrites[t.id]),
-                          h = s.Z.getRole(t.id, e.role_id);
-                      return o && !c && null != h && (0, d.yt)(h) && !(0, d.wB)(n, i);
+                          p = s.Z.getRole(t.id, e.role_id);
+                      return o && !c && null != p && (0, d.yt)(p) && !(0, d.wB)(n, i);
                   })(t, r, e, { isPreviewingRoles: c }),
               )
             : [];
-    }, [t, n, h]);
+    }, [t, n, p]);
 }

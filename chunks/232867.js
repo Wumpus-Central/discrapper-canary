@@ -3,11 +3,11 @@ var a = n(647438),
     r = n(544891),
     i = n(959546),
     l = n(981631),
-    s = n(474936);
-let o = async () =>
+    o = n(474936);
+let s = async () =>
         (
             await r.tn.get({
-                url: l.ANM.ENTITLEMENTS_FOR_APPLICATION(s.CL),
+                url: l.ANM.ENTITLEMENTS_FOR_APPLICATION(o.CL),
                 oldFormErrors: !0,
                 query: {
                     exclude_consumed: !0,
@@ -46,7 +46,7 @@ let o = async () =>
             i = (0, a.useCallback)(async () => {
                 try {
                     r(!0);
-                    let e = await o();
+                    let e = await s();
                     t(e);
                 } finally {
                     r(!1);

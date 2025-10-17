@@ -19,7 +19,7 @@ var n = a(951288),
     h = a(585483),
     C = a(981631),
     _ = a(925962);
-function f(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var a = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(a);
@@ -44,14 +44,14 @@ function f(e) {
     }
     return e;
 }
-function v() {
+function f() {
     var e, t;
     let a =
         ((e = ["grayscale(", ")"]),
         t || (t = e.slice(0)),
         Object.freeze(Object.defineProperties(e, { raw: { value: Object.freeze(t) } })));
     return (
-        (v = function () {
+        (f = function () {
             return a;
         }),
         a
@@ -61,7 +61,7 @@ let I = 747,
     x = (e) => {
         var t, a;
         return (0, b.lV)(
-            ((t = f({}, e)),
+            ((t = v({}, e)),
             (a = a =
                 {
                     className: _.videoWrapper,
@@ -82,7 +82,7 @@ let I = 747,
             t),
         );
     },
-    j = (e) => (0, n.jsx)(g.ZP, f({}, e));
+    j = (e) => (0, n.jsx)(g.ZP, v({}, e));
 function y(e) {
     let { item: t, onPlay: a, onEnded: l, onClick: r, playable: i } = e,
         o = (0, n.jsx)(u.BC, {
@@ -124,7 +124,7 @@ function y(e) {
 let k = (0, c.Z)((e) => {
     let { items: t, className: a, paused: r = !1, autoplayInterval: c = 8000 } = e,
         [u, g] = (0, l.useState)(0),
-        [b, f] = (0, l.useState)(!0),
+        [b, v] = (0, l.useState)(!0),
         [x, j] = (0, l.useState)(!1),
         [k, P] = (0, l.useState)(!1),
         [S, N] = (0, l.useState)(!1),
@@ -144,7 +144,7 @@ let k = (0, c.Z)((e) => {
                         outputRange: [0.3, 1],
                         extrapolate: o.Z.Extrapolate.CLAMP,
                     }),
-                    filter: o.Z.template(v(), r),
+                    filter: o.Z.template(f(), r),
                     backgroundImage: null != l ? "url(".concat(l, ")") : void 0,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
@@ -153,31 +153,31 @@ let k = (0, c.Z)((e) => {
             },
             [t],
         ),
-        W = (0, l.useCallback)(
+        E = (0, l.useCallback)(
             function (e) {
                 let a = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                     n = (0, p.gN)(u, t.length),
                     l = (0, p.gN)(e, t.length),
                     r = 1 === Math.abs(e - n) || (e === t.length - 1 && 0 === n) || (0 === e && n === t.length - 1);
-                j(!1), g(l), f(r), P(a);
+                j(!1), g(l), v(r), P(a);
             },
             [u, t],
         ),
-        E = (0, l.useCallback)(() => {
-            W(u + 1, !1);
-        }, [W, u]),
+        W = (0, l.useCallback)(() => {
+            E(u + 1, !1);
+        }, [E, u]),
         L = (0, l.useCallback)(() => {
-            W(u + 1);
-        }, [W, u]),
+            E(u + 1);
+        }, [E, u]),
         R = (0, l.useCallback)(() => {
-            W(u - 1);
-        }, [W, u]),
+            E(u - 1);
+        }, [E, u]),
         Z = (0, l.useCallback)((e) => {
             j(!0), P(!e);
         }, []),
         H = (0, l.useCallback)(() => {
-            k || E();
-        }, [k, E]),
+            k || W();
+        }, [k, W]),
         T = (0, l.useCallback)(
             (e) => {
                 e < u ? N(!0) : e > u && O(!0);
@@ -200,7 +200,7 @@ let k = (0, c.Z)((e) => {
                           }),
                       })
                     : (0, n.jsx)(s.P3F, {
-                          onClick: () => W(t),
+                          onClick: () => E(t),
                           className: _.itemImageWrapper,
                           children: (0, n.jsx)("img", {
                               alt: "",
@@ -209,7 +209,7 @@ let k = (0, c.Z)((e) => {
                               draggable: !1,
                           }),
                       }),
-            [W],
+            [E],
         ),
         M = (0, l.useCallback)(
             (e, a, l) => {
@@ -226,12 +226,12 @@ let k = (0, c.Z)((e) => {
                                   onPlay: Z,
                                   onEnded: H,
                                   playable: r,
-                                  onClick: () => W(a),
+                                  onClick: () => E(a),
                               })
                             : D(e, a, r),
                 });
             },
-            [u, t.length, A, T, B, Z, H, W, D],
+            [u, t.length, A, T, B, Z, H, E, D],
         ),
         Q = (0, l.useCallback)(() => {
             let e = (0, n.jsx)(p.ZP, {
@@ -305,7 +305,7 @@ let k = (0, c.Z)((e) => {
         ),
         (0, n.jsxs)(d.Z, {
             pauseOnHover: !0,
-            onInterval: E,
+            onInterval: W,
             interval: c,
             className: a,
             disable: x || k || r,
@@ -318,7 +318,7 @@ let k = (0, c.Z)((e) => {
                         scrollToPadding: 40,
                         items: t,
                         selectedIndex: u,
-                        onSetItem: W,
+                        onSetItem: E,
                         paginationContainerClass: _.scroller,
                         align: m.ZP.Align.CENTER,
                     }),

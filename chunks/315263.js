@@ -44,8 +44,8 @@ var w = n(701190),
     L = n(914010),
     x = n(771845),
     M = n(626135),
-    j = n(591759),
-    k = n(782568),
+    k = n(591759),
+    j = n(782568),
     U = n(981631);
 n(215023);
 var G = n(49898),
@@ -108,7 +108,7 @@ function H(e) {
                 c = null != (a = L.Z.getGuildId()) ? a : void 0;
             return (
                 null == s
-                    ? (0, k.Z)(e)
+                    ? (0, j.Z)(e)
                     : (M.default.track(U.rMx.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
                           application_id: s,
                           device_platform: r.tq ? "mobile_web" : "desktop_web",
@@ -205,7 +205,7 @@ function H(e) {
             var t, r, a;
             let o, s;
             null == e || e.preventDefault();
-            let { search: l } = null != (t = j.Z.toURLSafe(w.url)) ? t : {};
+            let { search: l } = null != (t = k.Z.toURLSafe(w.url)) ? t : {};
             if (null != l) {
                 let e = new URLSearchParams(l);
                 (o = null != (r = e.get("sort")) ? r : void 0), (s = null != (a = e.get("filter")) ? a : void 0);
@@ -223,10 +223,10 @@ function H(e) {
                 !0
             );
         };
-    let { host: x, hostname: Z, pathname: H, search: Y, hash: W } = null != (t = j.Z.toURLSafe(e)) ? t : {},
+    let { host: x, hostname: Z, pathname: H, search: Y, hash: W } = null != (t = k.Z.toURLSafe(e)) ? t : {},
         K =
-            j.Z.isDiscordHostname(null != Z ? Z : null) ||
-            j.Z.isDiscordLocalhost(null != x ? x : null, null != Z ? Z : null);
+            k.Z.isDiscordHostname(null != Z ? Z : null) ||
+            k.Z.isDiscordLocalhost(null != x ? x : null, null != Z ? Z : null);
     if (
         K &&
         ((null == H ? void 0 : H.startsWith("/application-directory")) ||
@@ -263,7 +263,7 @@ function H(e) {
             );
         };
     }
-    if (null != H && K && j.Z.isAppRoute(H)) {
+    if (null != H && K && k.Z.isAppRoute(H)) {
         let e = {
             navigationReplace: !1,
             openChannel: !0,

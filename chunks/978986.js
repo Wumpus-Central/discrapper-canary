@@ -1,14 +1,14 @@
 n.d(t, {
     NQ: () => b,
-    U1: () => O,
+    U1: () => y,
     XW: () => d,
     _J: () => m,
-    aP: () => f,
+    aP: () => h,
     e7: () => g,
     h6: () => _,
-    oE: () => h,
+    oE: () => f,
     pB: () => p,
-    y: () => y,
+    y: () => O,
     yr: () => v,
 }),
     n(781311);
@@ -134,10 +134,10 @@ let d = (0, r.U)((e) => ({
     p = (e, t, n) => {
         d.getState().initialize(e, t, n);
     },
-    h = () => {
+    f = () => {
         d.getState().reset();
     },
-    f = () => {
+    h = () => {
         let e = d.getState();
         return e.nickname !== c.nickname || e.dmsAllowed !== c.dmsAllowed || e.showActivity !== u(e.guildSize);
     },
@@ -145,8 +145,8 @@ let d = (0, r.U)((e) => ({
     m = () => d.getState().guildId,
     b = () => d.getState().touched,
     _ = () => d.getState().dmsAllowed,
-    y = () => d.getState().nickname,
-    O = () => d.getState().showActivity,
+    O = () => d.getState().nickname,
+    y = () => d.getState().showActivity,
     v = () => {
         var e, t;
         let { nickname: n } = d();

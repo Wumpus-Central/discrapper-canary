@@ -1,35 +1,35 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => p });
 var r = n(951288),
     i = n(647438),
-    l = n(481060),
-    a = n(100527),
+    a = n(481060),
+    l = n(100527),
     o = n(906732),
     s = n(63063),
     c = n(732380),
     u = n(981631),
     d = n(388032),
-    p = n(367155);
-let f = s.Z.getArticleURL(u.BhN.CUSTOM_PROFILES_WISHLIST);
-function h(e) {
+    f = n(367155);
+let g = s.Z.getArticleURL(u.BhN.CUSTOM_PROFILES_WISHLIST);
+function p(e) {
     let { isOwner: t, isWishlistPublic: n, onToggleVisibility: s } = e,
         u = i.useRef(null),
-        { analyticsLocations: h } = (0, o.ZP)(a.Z.USER_PROFILE_WISHLIST),
-        g = i.useMemo(
+        { analyticsLocations: p } = (0, o.ZP)(l.Z.USER_PROFILE_WISHLIST),
+        m = i.useMemo(
             () =>
                 t
-                    ? (0, r.jsxs)(l.kSQ, {
+                    ? (0, r.jsxs)(a.kSQ, {
                           children: [
-                              (0, r.jsx)(l.m76, {
+                              (0, r.jsx)(a.m76, {
                                   id: "wishlist-privacy-setting",
                                   label: (0, r.jsxs)(r.Fragment, {
                                       children: [
-                                          (0, r.jsx)(l.Text, {
+                                          (0, r.jsx)(a.Text, {
                                               variant: "text-sm/medium",
                                               color: "text-primary",
                                               children: d.intl.string(d.t.b2nFyM),
                                           }),
-                                          (0, r.jsx)(l.Text, {
-                                              className: p.menuItemDescription,
+                                          (0, r.jsx)(a.Text, {
+                                              className: f.menuItemDescription,
                                               variant: "text-xs/medium",
                                               color: "text-tertiary",
                                               children: d.intl.string(d.t.dw58pK),
@@ -39,36 +39,36 @@ function h(e) {
                                   checked: n,
                                   action: s,
                               }),
-                              (0, r.jsx)(l.Clw, {}),
-                              (0, r.jsx)(l.sNh, {
+                              (0, r.jsx)(a.Clw, {}),
+                              (0, r.jsx)(a.sNh, {
                                   id: "wishlist-privacy-setting2",
-                                  label: (0, r.jsx)(l.Text, {
+                                  label: (0, r.jsx)(a.Text, {
                                       variant: "text-sm/medium",
                                       color: "text-primary",
                                       children: d.intl.string(d.t.hvVgAQ),
                                   }),
-                                  icon: l.Gr1,
-                                  action: () => window.open(f),
+                                  icon: a.Gr1,
+                                  action: () => window.open(g),
                               }),
                           ],
                       })
                     : null,
             [t, n, s],
         );
-    return null == g
+    return null == m
         ? null
         : (0, r.jsx)(o.Gt, {
-              value: h,
-              children: (0, r.jsx)(l.yRy, {
+              value: p,
+              children: (0, r.jsx)(a.yRy, {
                   targetElementRef: u,
                   renderPopout: (e) => {
                       let { closePopout: t } = e;
-                      return (0, r.jsx)(l.v2r, {
+                      return (0, r.jsx)(a.v2r, {
                           navId: "wishlist-overflow-menu",
                           onSelect: void 0,
                           onClose: t,
                           "aria-label": d.intl.string(d.t.GdNkvL),
-                          children: g,
+                          children: m,
                       });
                   },
                   children: (e) =>
@@ -101,7 +101,7 @@ function h(e) {
                           })(
                               {
                                   buttonRef: u,
-                                  icon: l.xhG,
+                                  icon: a.xhG,
                                   tooltipText: d.intl.string(d.t.UKOtz8),
                                   action: "PRESS_OPTIONS",
                               },

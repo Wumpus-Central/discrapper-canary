@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => p });
 var r = n(647438),
     i = n(592125),
     l = n(944486),
@@ -8,7 +8,7 @@ var r = n(647438),
     c = n(89425),
     d = n(197386),
     u = n(981631);
-function h(e) {
+function p(e) {
     let { onTransition: t } = e;
     r.useEffect(() => {
         async function e(e) {

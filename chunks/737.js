@@ -8,22 +8,22 @@ var r = n(442837),
     c = n(23750),
     d = n(699516),
     u = n(171900),
-    h = n(607802),
-    p = n(817190);
+    p = n(607802),
+    h = n(817190);
 let f = [];
 function g(e) {
     let { searchContext: t } = e,
         n = (0, s.p)(),
         g = a.d.useExperiment({ location: "useMessageRenderedContent" }).enabled,
         m = (0, r.e7)(
-            [p.Z, u.Z, l.Z],
+            [h.Z, u.Z, l.Z],
             () => {
                 var e;
-                let r = (0, h.Tm)(t),
-                    a = p.Z.getSearchResultsQuery(r),
+                let r = (0, p.Tm)(t),
+                    a = h.Z.getSearchResultsQuery(r),
                     s = u.Z.getMessages(r);
                 if (null == a || null == s || 0 === s.length) return f;
-                let d = (0, i.nC)(null != (e = (0, h.UP)(a)) ? e : ""),
+                let d = (0, i.nC)(null != (e = (0, p.UP)(a)) ? e : ""),
                     m = [];
                 return (
                     s.forEach((e) => {

@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => N }), n(388685);
+n.r(t), n.d(t, { default: () => T }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -15,21 +15,21 @@ var r = n(951288),
     m = n(314897),
     b = n(594174),
     _ = n(626135),
-    O = n(361207),
-    E = n(981631),
+    E = n(361207),
+    O = n(981631),
     v = n(388032),
     y = n(394369);
 let I = [
         {
             getOs: () => v.intl.string(v.t.NK5ySE),
             icon: y.apple,
-            url: () => (0, O.w4)("osx", !1),
+            url: () => (0, E.w4)("osx", !1),
             platformKey: 0,
         },
         {
             getOs: () => v.intl.string(v.t.OvKGEx),
             icon: y.windows,
-            url: () => (0, O.w4)("win", !1),
+            url: () => (0, E.w4)("win", !1),
             platformKey: 1,
         },
         {
@@ -37,11 +37,11 @@ let I = [
             icon: y.linux,
             url: [
                 {
-                    url: () => (0, O.w4)("linux", !1, "deb"),
+                    url: () => (0, E.w4)("linux", !1, "deb"),
                     getText: () => v.intl.string(v.t.Sodsur),
                 },
                 {
-                    url: () => (0, O.w4)("linux", !1, "tar.gz"),
+                    url: () => (0, E.w4)("linux", !1, "tar.gz"),
                     getText: () => v.intl.string(v.t.G3U6IS),
                 },
             ],
@@ -52,13 +52,13 @@ let I = [
         {
             getOs: () => v.intl.string(v.t.wCVyNT),
             icon: y.ios,
-            url: () => E.fzT.IOS,
+            url: () => O.fzT.IOS,
             platformKey: 3,
         },
         {
             getOs: () => v.intl.string(v.t.wuQpJC),
             icon: y.android,
-            url: () => E.fzT.ANDROID,
+            url: () => O.fzT.ANDROID,
             platformKey: 4,
         },
     ],
@@ -73,7 +73,7 @@ let I = [
             children: n,
         });
     },
-    T = (e) => {
+    N = (e) => {
         let t,
             { platform: n, onClick: i, onMouseEnter: l, isActive: o, claimed: s } = e,
             { getOs: c, icon: u, url: d, platformKey: p } = n,
@@ -130,12 +130,12 @@ let I = [
             }),
         });
     };
-function N(e) {
+function T(e) {
     let { source: t, onClose: n, transitionState: l } = e,
         a = (0, d.e7)([b.default], () => b.default.getCurrentUser()),
         o = (0, d.e7)([m.default], () => m.default.getFingerprint()),
         p = null == a || a.isClaimed(),
-        [O, S] = i.useState(
+        [E, S] = i.useState(
             (function () {
                 var e;
                 switch (null == (e = s().os) ? void 0 : e.family) {
@@ -159,9 +159,9 @@ function N(e) {
                 }
             })(),
         );
-    function N(e) {
+    function T(e) {
         (null != u.getToken() || null != o) &&
-            _.default.track(E.rMx.DOWNLOAD_APP, {
+            _.default.track(O.rMx.DOWNLOAD_APP, {
                 platform: e,
                 ptb: !1,
                 released: !0,
@@ -171,20 +171,20 @@ function N(e) {
             }),
             p || (n(), h.j());
     }
-    function j(e) {
+    function P(e) {
         S(e);
     }
     i.useEffect(() => {
-        _.default.track(E.rMx.OPEN_MODAL, {
+        _.default.track(O.rMx.OPEN_MODAL, {
             type: "Download App",
             source: { location: t },
         });
     }, [t]);
-    let P = (0, g.Dt)();
+    let j = (0, g.Dt)();
     return (0, r.jsxs)(f.Y0X, {
         className: y.downloadApps,
         transitionState: l,
-        "aria-labelledby": P,
+        "aria-labelledby": j,
         parentComponent: "DownloadAppsModal",
         children: [
             (0, r.jsx)(f.olH, {
@@ -196,7 +196,7 @@ function N(e) {
                 children: [
                     (0, r.jsx)(f.nn4, {
                         children: (0, r.jsx)(f.H, {
-                            id: P,
+                            id: j,
                             children: v.intl.string(v.t.BK8LKy),
                         }),
                     }),
@@ -213,12 +213,12 @@ function N(e) {
                                     className: y.platforms,
                                     children: I.map((e) =>
                                         (0, r.jsx)(
-                                            T,
+                                            N,
                                             {
-                                                isActive: O === e.platformKey,
+                                                isActive: E === e.platformKey,
                                                 platform: e,
-                                                onClick: N,
-                                                onMouseEnter: j,
+                                                onClick: T,
+                                                onMouseEnter: P,
                                                 claimed: p,
                                             },
                                             e.platformKey,
@@ -240,12 +240,12 @@ function N(e) {
                                 className: y.platforms,
                                 children: C.map((e) =>
                                     (0, r.jsx)(
-                                        T,
+                                        N,
                                         {
-                                            isActive: O === e.platformKey,
+                                            isActive: E === e.platformKey,
                                             platform: e,
-                                            onClick: N,
-                                            onMouseEnter: j,
+                                            onClick: T,
+                                            onMouseEnter: P,
                                             claimed: p,
                                         },
                                         e.platformKey,

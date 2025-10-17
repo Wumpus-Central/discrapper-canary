@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => N,
-    y: () => P,
+    y: () => T,
 });
 var r = n(951288),
     i = n(647438),
@@ -11,8 +11,8 @@ var r = n(951288),
     c = n(990547),
     d = n(442837),
     u = n(692547),
-    h = n(481060),
-    p = n(239091),
+    p = n(481060),
+    h = n(239091),
     f = n(100527),
     g = n(906732),
     m = n(213609),
@@ -74,26 +74,26 @@ let Z = i.memo(function (e) {
             className: I.textContainer,
             children: [
                 a
-                    ? (0, r.jsx)(h.t6m, {
+                    ? (0, r.jsx)(p.t6m, {
                           size: "lg",
                           className: I.blockedIcon,
                           color: u.Z.unsafe_rawColors.RED_400.css,
                       })
                     : null,
                 s
-                    ? (0, r.jsx)(h.kZF, {
+                    ? (0, r.jsx)(p.kZF, {
                           size: "lg",
                           className: I.blockedIcon,
                       })
                     : null,
-                (0, r.jsx)(h.Text, {
+                (0, r.jsx)(p.Text, {
                     className: I.text,
                     variant: "text-sm/normal",
                     color: "header-primary",
                     children: x.ZP.getName(t, n, i),
                 }),
                 l
-                    ? (0, r.jsx)(h.Ucv, {
+                    ? (0, r.jsx)(p.Ucv, {
                           className: I.boost,
                           color: u.Z.unsafe_rawColors.GUILD_BOOSTING_PINK,
                       })
@@ -101,22 +101,22 @@ let Z = i.memo(function (e) {
             ],
         });
     }),
-    T = i.memo(function (e) {
+    P = i.memo(function (e) {
         var t;
         let { participant: n, guildId: i, channel: l, isPremium: s } = e,
             { user: o, blocked: c, ignored: d, rtsState: u } = n,
-            p = u === v.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
-            f = u === v.xO.REQUESTED_TO_SPEAK || p;
+            h = u === v.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
+            f = u === v.xO.REQUESTED_TO_SPEAK || h;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)("div", {
                     className: I.avatarContainer,
                     children: [
                         f &&
-                            (0, r.jsx)(h.V9, {
+                            (0, r.jsx)(p.V9, {
                                 size: "md",
                                 color: "currentColor",
-                                className: a()(I.icon, { [I.invited]: p }),
+                                className: a()(I.icon, { [I.invited]: h }),
                             }),
                         (0, r.jsx)("img", {
                             src: null != (t = o.getAvatarURL(l.guild_id, 56, !1)) ? t : void 0,
@@ -137,14 +137,14 @@ let Z = i.memo(function (e) {
             ],
         });
     }),
-    P = () => (0, r.jsx)("div", { className: I.tileBaseContainer }),
+    T = () => (0, r.jsx)("div", { className: I.tileBaseContainer }),
     N = i.memo(function (e) {
         let { participant: t, channel: l } = e,
             { user: s, blocked: u } = t,
             x = l.getGuildId(),
             v = j.default.getId(),
             { newestAnalyticsLocation: Z } = (0, g.ZP)(f.Z.AUDIENCE_TILE),
-            P = (0, y.bp)(),
+            T = (0, y.bp)(),
             N = (0, d.e7)([O.ZP], () => {
                 var e;
                 return null != x && (null == (e = O.ZP.getMember(x, s.id)) ? void 0 : e.premiumSince) != null;
@@ -162,7 +162,7 @@ let Z = i.memo(function (e) {
                         tile_type: C.TH.USER,
                     },
                 }),
-                    (0, p.jW)(
+                    (0, h.jW)(
                         e,
                         async () => {
                             let { default: e } = await Promise.all([
@@ -189,10 +189,10 @@ let Z = i.memo(function (e) {
                                     }),
                                 );
                         },
-                        { context: P },
+                        { context: T },
                     );
             },
-            [s, v, P, x, l, Z],
+            [s, v, T, x, l, Z],
         );
         return (0, r.jsx)(_.Z, {
             targetElementRef: R,
@@ -202,7 +202,7 @@ let Z = i.memo(function (e) {
             clickTrap: !0,
             children: (e) =>
                 (0, r.jsx)(
-                    h.P3F,
+                    p.P3F,
                     E(
                         S(
                             {
@@ -216,7 +216,7 @@ let Z = i.memo(function (e) {
                             e,
                         ),
                         {
-                            children: (0, r.jsx)(T, {
+                            children: (0, r.jsx)(P, {
                                 participant: t,
                                 guildId: x,
                                 channel: l,

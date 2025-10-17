@@ -114,8 +114,8 @@ let w = Object.freeze({
     L = {},
     x = null,
     M = new Set(),
-    j = !1,
-    k = null,
+    k = !1,
+    j = null,
     U = !1,
     G = !1,
     B = new Set(),
@@ -416,7 +416,7 @@ function ey() {
     H.disableExternalLinkAlert = !0;
 }
 function eO() {
-    j = !0;
+    k = !0;
 }
 function ev() {
     o.Z.addInterceptor((e) => {
@@ -504,7 +504,7 @@ class eR extends (r = i.ZP.PersistedStore) {
         ) {
             if (b.isPlatformEmbedded) {
                 let e = (0, O.M)();
-                null == e && F.error("Overlay module failed loaded"), (k = e);
+                null == e && F.error("Overlay module failed loaded"), (j = e);
             }
             M.delete((0, y.getPID)());
         }
@@ -586,7 +586,7 @@ class eR extends (r = i.ZP.PersistedStore) {
         return G;
     }
     get incompatibleApp() {
-        return j;
+        return k;
     }
     getActiveRegions() {
         return B;

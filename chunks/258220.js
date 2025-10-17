@@ -19,11 +19,11 @@ function h(e) {
     let { applicationId: n, transitionState: h, onClose: g } = e,
         [m, b] = i.useState(!1),
         [_] = (0, s.Z)([n]),
-        O = null != (t = null == _ ? void 0 : _.name) ? t : "This Activity";
+        E = null != (t = null == _ ? void 0 : _.name) ? t : "This Activity";
     i.useEffect(() => {
         c.default.track(d.rMx.OPEN_MODAL, { type: f });
     }, []);
-    let E = async () => {
+    let O = async () => {
             let e = "temporary";
             m && ((e = "permanent"), o.ZP.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
                 c.default.track(d.rMx.MODAL_DISMISSED, {
@@ -35,12 +35,12 @@ function h(e) {
         v = async () => {
             c.default.track(d.rMx.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: n }),
                 u.ZP.setEnableHardwareAcceleration(!0),
-                await E();
+                await O();
         };
     return (0, r.jsx)(l.Modal, {
         size: "md",
         transitionState: h,
-        onClose: E,
+        onClose: O,
         "aria-label": p.intl.string(p.t.NQkK4u),
         title: p.intl.string(p.t.NQkK4u),
         actionBarInput: (0, r.jsx)(a.Checkbox, {
@@ -53,7 +53,7 @@ function h(e) {
             {
                 variant: "secondary",
                 text: p.intl.string(p.t["Ibf5/v"]),
-                onClick: E,
+                onClick: O,
             },
             {
                 variant: "primary",
@@ -63,7 +63,7 @@ function h(e) {
         ],
         children: (0, r.jsx)(a.Text, {
             variant: "text-md/normal",
-            children: p.intl.format(p.t.B9eiaG, { applicationName: O }),
+            children: p.intl.format(p.t.B9eiaG, { applicationName: E }),
         }),
     });
 }

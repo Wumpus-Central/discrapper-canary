@@ -1,17 +1,17 @@
 n.d(t, { Z: () => u }), n(388685);
 var r,
     i = n(951288),
-    l = n(647438),
-    s = n(796075),
-    a = n(599273),
+    s = n(647438),
+    l = n(796075),
+    a = n(258536),
     o = n(481060);
-let c = null != (r = window.ResizeObserver) ? r : s.d;
+let c = null != (r = window.ResizeObserver) ? r : l.d;
 function u(e) {
-    let { show: t, children: n, top: r = 0, bottom: s = 0 } = e,
+    let { show: t, children: n, top: r = 0, bottom: l = 0 } = e,
         { ref: u, height: d } = (() => {
-            let e = l.useRef(null),
-                [t, n] = l.useState(0),
-                r = l.useMemo(
+            let e = s.useRef(null),
+                [t, n] = s.useState(0),
+                r = s.useMemo(
                     () =>
                         new c((e) => {
                             let [t] = e;
@@ -20,7 +20,7 @@ function u(e) {
                     [],
                 );
             return (
-                l.useLayoutEffect(() => (null != e.current && r.observe(e.current), () => r.disconnect()), [r]),
+                s.useLayoutEffect(() => (null != e.current && r.observe(e.current), () => r.disconnect()), [r]),
                 {
                     ref: e,
                     height: t,
@@ -35,7 +35,7 @@ function u(e) {
             },
             to: {
                 height: t ? d : 0,
-                paddingBottom: t ? "".concat(s, "px") : "0px",
+                paddingBottom: t ? "".concat(l, "px") : "0px",
                 marginTop: t ? "".concat(r, "px") : "0px",
             },
             config: {

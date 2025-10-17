@@ -11,7 +11,7 @@ function c(e) {
         [d, f] = i.useState(),
         [p, _] = i.useState(),
         m = n.id.split(":").at(-1),
-        b = t === m,
+        g = t === m,
         E = i.useCallback((e, t, n) => {
             var r, i, l;
             let o = n ? a.ZP.getOutboundStats(t) : a.ZP.getInboundStats(e, t);
@@ -29,11 +29,11 @@ function c(e) {
         }, []);
     return (
         i.useEffect(() => {
-            let e = () => E(m, c, b);
+            let e = () => E(m, c, g);
             e();
             let t = setInterval(e, 1000);
             return () => clearInterval(t);
-        }, [b, m, c, E]),
+        }, [g, m, c, E]),
         (0, r.jsxs)("div", {
             className: o.streamInfoContainer,
             children: [
@@ -49,7 +49,7 @@ function c(e) {
                     className: o.infoRow,
                     children: [(0, r.jsx)("span", { children: "Resolution: " }), (0, r.jsx)("strong", { children: d })],
                 }),
-                b &&
+                g &&
                     (0, r.jsxs)("div", {
                         className: o.infoRow,
                         children: [

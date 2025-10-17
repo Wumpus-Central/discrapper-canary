@@ -86,8 +86,8 @@ function f(e) {
         L = null != m,
         x = d(m),
         M = d(f),
-        j = d(g),
-        k = i.useCallback(() => {
+        k = d(g),
+        j = i.useCallback(() => {
             if (!P.current || !w.current) return;
             let e = {
                 placement: t,
@@ -98,7 +98,7 @@ function f(e) {
                 (0, r.oo)(P.current, w.current, e).then((e) => {
                     let t = {
                         ...e,
-                        isPositioned: !1 !== j.current,
+                        isPositioned: !1 !== k.current,
                     };
                     U.current &&
                         !l(D.current, t) &&
@@ -107,7 +107,7 @@ function f(e) {
                             b(t);
                         }));
                 });
-        }, [y, t, n, M, j]);
+        }, [y, t, n, M, k]);
     s(() => {
         !1 === g &&
             D.current.isPositioned &&
@@ -129,10 +129,10 @@ function f(e) {
     ),
         s(() => {
             if ((N && (P.current = N), R && (w.current = R), N && R)) {
-                if (x.current) return x.current(N, R, k);
-                k();
+                if (x.current) return x.current(N, R, j);
+                j();
             }
-        }, [N, R, k, x, L]);
+        }, [N, R, j, x, L]);
     let G = i.useMemo(
             () => ({
                 reference: P,
@@ -173,12 +173,12 @@ function f(e) {
     return i.useMemo(
         () => ({
             ...E,
-            update: k,
+            update: j,
             refs: G,
             elements: B,
             floatingStyles: Z,
         }),
-        [E, k, G, B, Z],
+        [E, j, G, B, Z],
     );
 }
 let _ = (e, t) => ({

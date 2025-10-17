@@ -1,41 +1,41 @@
-n.d(t, { c: () => s });
-var a = n(951288);
+n.d(t, { c: () => l });
+var r = n(951288);
 n(647438);
-var r = n(481060),
-    o = n(388032),
-    i = n(359059),
-    l = n(387852);
-let s = (e) => {
+var a = n(481060),
+    i = n(388032),
+    o = n(359059),
+    s = n(387852);
+let l = (e) => {
     let { onTryAgain: t } = e;
-    return (0, a.jsxs)("div", {
-        className: i.content,
+    return (0, r.jsxs)("div", {
+        className: o.content,
         children: [
-            (0, a.jsx)("img", {
-                src: l,
+            (0, r.jsx)("img", {
+                src: s,
                 width: "254",
                 height: "127",
                 alt: "",
             }),
-            (0, a.jsxs)("div", {
-                className: i.innerContent,
+            (0, r.jsxs)("div", {
+                className: o.innerContent,
                 children: [
-                    (0, a.jsx)(r.Heading, {
+                    (0, r.jsx)(a.Heading, {
                         variant: "heading-xl/extrabold",
-                        children: o.intl.string(o.t["3dgwPD"]),
+                        children: i.intl.string(i.t["3dgwPD"]),
                     }),
-                    (0, a.jsx)(r.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: "text-md/normal",
                         color: "header-secondary",
-                        children: o.intl.string(o.t["/GAO1N"]),
+                        children: i.intl.string(i.t["/GAO1N"]),
                     }),
                 ],
             }),
-            (0, a.jsx)("div", {
+            (0, r.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,
-                className: i.footerButton,
-                children: (0, a.jsx)(r.Button, {
+                className: o.footerButton,
+                children: (0, r.jsx)(a.Button, {
                     variant: "primary",
-                    text: o.intl.string(o.t["7NqTJi"]),
+                    text: i.intl.string(i.t["7NqTJi"]),
                     onClick: t,
                 }),
             }),

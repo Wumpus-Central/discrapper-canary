@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => v });
 var i = n(951288),
     r = n(647438),
     l = n(120356),
@@ -14,13 +14,13 @@ var i = n(951288),
     g = n(297781),
     x = n(388032),
     h = n(192025),
-    v = n(226788);
-let j = (e) => {
+    j = n(226788);
+let v = (e) => {
     let {
             entry: t,
             onClose: n,
             onReaction: l,
-            onRequestOpen: j,
+            onRequestOpen: v,
             disableActivityProfileLinks: O,
             customCTA: y,
             popoutClassname: I,
@@ -60,7 +60,7 @@ let j = (e) => {
               },
               positionKey: "'content-entry-".concat(t.id),
               onRequestOpen: () => {
-                  null == j || j();
+                  null == v || v();
               },
               children: (e) => {
                   var n, r;
@@ -111,7 +111,7 @@ let j = (e) => {
                                           (0, i.jsx)("div", {
                                               className: h.playerInfo,
                                               children: (0, i.jsxs)("div", {
-                                                  className: a()(v.column, v.gapXs),
+                                                  className: a()(j.column, j.gapXs),
                                                   children: [
                                                       (0, i.jsx)(o.Text, {
                                                           variant: "text-md/medium",

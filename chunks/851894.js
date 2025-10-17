@@ -59,7 +59,7 @@ function M(e) {
     }
     return e;
 }
-function j(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -71,12 +71,12 @@ function j(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : j(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -106,7 +106,7 @@ function G(e, t) {
 function B(e) {
     (0, l.ZDy)(async () => {
         let { default: t } = await n.e("84509").then(n.bind(n, 933696));
-        return (n) => (0, r.jsx)(t, M({ source: k(M({}, e), { page: w.ZY5.GUILD_MEMBER_PROFILE_SETTINGS }) }, n));
+        return (n) => (0, r.jsx)(t, M({ source: j(M({}, e), { page: w.ZY5.GUILD_MEMBER_PROFILE_SETTINGS }) }, n));
     });
 }
 function Z(e) {
@@ -117,8 +117,8 @@ function Z(e) {
             return o()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e;
         }),
         x = (0, s.e7)([O.Z], () => !O.Z.isFetchingProfile(a.id, null == t ? void 0 : t.id)),
-        j = (0, s.e7)([v.Z], () => v.Z.hidePersonalInformation),
-        G = (0, s.cj)([C.Z], () => k(M({}, C.Z.getAllPending()), { source: C.Z.getSource() })),
+        k = (0, s.e7)([v.Z], () => v.Z.hidePersonalInformation),
+        G = (0, s.cj)([C.Z], () => j(M({}, C.Z.getAllPending()), { source: C.Z.getSource() })),
         { source: Z, pendingAvatar: F, pendingNameplate: V } = G,
         H = U(G, ["source", "pendingAvatar", "pendingNameplate"]),
         Y = (0, y.SD)({
@@ -140,7 +140,7 @@ function Z(e) {
                 });
         }, [Z]);
     let { enabled: z } = h.Z.useConfig({ location: "GuildIdentitySettingsPage" });
-    return j
+    return k
         ? (0, r.jsx)(u.Z, {})
         : x
           ? (0, r.jsxs)(_.Gt, {
@@ -171,7 +171,7 @@ function Z(e) {
                                       }),
                                       profilePreview: (0, r.jsx)(
                                           b.Z,
-                                          k(M({}, H), {
+                                          j(M({}, H), {
                                               pendingAvatar: Y,
                                               pendingDisplayNameStyles: K,
                                               user: a,

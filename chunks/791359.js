@@ -17,25 +17,25 @@ var r = n(951288),
     _ = n(801077),
     E = n(626135),
     O = n(70956),
-    y = n(225559),
-    v = n(910436),
+    v = n(225559),
+    y = n(910436),
     I = n(203028),
     C = n(358924),
     S = n(292140),
-    T = n(525296),
-    N = n(981631),
+    N = n(525296),
+    T = n(981631),
     P = n(46140),
     j = n(388032),
-    A = n(559909);
-let x = 15 * O.Z.Millis.MINUTE,
-    Z = (0, T.Z)(function (e) {
+    x = n(559909);
+let A = 15 * O.Z.Millis.MINUTE,
+    Z = (0, N.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
             o = i.useRef(null),
             c = (0, r.jsx)(I.Z, {
                 party: t,
                 onUserContextMenu: n,
             }),
-            d = (0, r.jsx)(v.Z, {
+            d = (0, r.jsx)(y.Z, {
                 party: t,
                 onChannelContextMenu: l,
                 quest: a,
@@ -44,8 +44,8 @@ let x = 15 * O.Z.Millis.MINUTE,
             b = f.length,
             _ = h.length,
             O = g.length,
-            y = m.length > 0,
-            T = p.o.useConfig({ location: "itemcard" }).demureActivityCards,
+            v = m.length > 0,
+            N = p.o.useConfig({ location: "itemcard" }).demureActivityCards,
             P = i.useCallback(() => {
                 let e = g
                     .filter((e) => {
@@ -56,15 +56,15 @@ let x = 15 * O.Z.Millis.MINUTE,
                         );
                     })
                     .map((e) => e.game.name);
-                E.default.track(N.rMx.NOW_PLAYING_CARD_HOVERED, {
+                E.default.track(T.rMx.NOW_PLAYING_CARD_HOVERED, {
                     num_users: b,
                     num_streams: _,
                     num_activities: O,
-                    in_voice_channel: y,
+                    in_voice_channel: v,
                     games_detected: e,
                 });
-            }, [b, _, O, y, g]),
-            j = s()(P, x);
+            }, [b, _, O, v, g]),
+            j = s()(P, A);
         return null != c || null != d
             ? (0, r.jsx)(u.yRy, {
                   targetElementRef: o,
@@ -112,9 +112,9 @@ let x = 15 * O.Z.Millis.MINUTE,
                                   ref: o,
                                   onMouseEnter: j,
                                   "aria-haspopup": "menu",
-                                  className: A.itemCard,
+                                  className: x.itemCard,
                                   active: l,
-                                  flat: T,
+                                  flat: N,
                                   children: (0, r.jsxs)("div", {
                                       children: [c, d],
                                   }),
@@ -153,7 +153,7 @@ function L() {
             currentUser: b.default.getCurrentUser(),
         })),
         o = (0, c.e7)([h.Z], () => h.Z.quests);
-    i.useEffect(() => (d.Z.wait(() => y.L()), () => d.Z.wait(() => y.v())), [null == a ? void 0 : a.id]),
+    i.useEffect(() => (d.Z.wait(() => v.L()), () => d.Z.wait(() => v.v())), [null == a ? void 0 : a.id]),
         i.useEffect(() => {
             n && !l && w();
         }, [n, l]);
@@ -186,23 +186,23 @@ function L() {
                         );
                     })
                   : (0, r.jsxs)("div", {
-                        className: A.emptyCard,
+                        className: x.emptyCard,
                         children: [
                             (0, r.jsx)(u.Heading, {
                                 variant: "heading-md/semibold",
-                                className: A.emptyHeader,
+                                className: x.emptyHeader,
                                 children: j.intl.string(j.t["ngJ/5u"]),
                             }),
                             (0, r.jsx)(u.Text, {
                                 color: "none",
-                                className: A.emptyText,
+                                className: x.emptyText,
                                 variant: "text-sm/normal",
                                 children: j.intl.string(j.t["99ZWxc"]),
                             }),
                         ],
                     }))
         : (0, r.jsx)("div", {
-              className: A.emptyCard,
+              className: x.emptyCard,
               children: (0, r.jsx)(u.$jN, {}),
           });
 }

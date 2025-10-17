@@ -3,15 +3,15 @@ var a = n(951288),
     r = n(647438),
     i = n(120356),
     l = n.n(i),
-    s = n(442837),
-    o = n(481060),
+    o = n(442837),
+    s = n(481060),
     c = n(570140),
     d = n(389458),
     u = n(451429),
     m = n(603473);
 function p() {
     let [e, t] = r.useState(""),
-        n = (0, s.e7)(
+        n = (0, o.e7)(
             [d.Z],
             () =>
                 d.Z.getAllWordsSorted().map((e, t) => {
@@ -24,7 +24,7 @@ function p() {
                     };
                 }),
             [],
-            s.pF,
+            o.pF,
         ),
         i = r.useMemo(
             () =>
@@ -45,12 +45,12 @@ function p() {
             n.length > 0 &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
-                        (0, a.jsxs)(o.Text, {
+                        (0, a.jsxs)(s.Text, {
                             variant: "text-md/semibold",
                             className: m.sectionTitle,
                             children: ["Word Frequencies (", i.length, " unique words)"],
                         }),
-                        (0, a.jsx)(o.Text, {
+                        (0, a.jsx)(s.Text, {
                             variant: "text-sm/normal",
                             children:
                                 "This is a list of the most common short words found in messages sent and received by this client. They're ignored by the mention suggestions experiment to avoid distracting suggestions. These statistics are stored locally only.",
@@ -58,14 +58,14 @@ function p() {
                         (0, a.jsxs)("div", {
                             className: m.headerSection,
                             children: [
-                                (0, a.jsx)(o.E1j, {
+                                (0, a.jsx)(s.E1j, {
                                     size: "sm",
                                     query: e,
                                     onChange: t,
                                     onClear: () => t(""),
                                     placeholder: "Filter by words starting with...",
                                 }),
-                                (0, a.jsx)(o.Button, {
+                                (0, a.jsx)(s.Button, {
                                     variant: "secondary",
                                     size: "sm",
                                     text: "Clear Statistics",
@@ -75,7 +75,7 @@ function p() {
                         }),
                         (0, a.jsx)("div", {
                             className: m.resultsSection,
-                            children: (0, a.jsx)(o.zJl, {
+                            children: (0, a.jsx)(s.zJl, {
                                 className: m.resultsContainer,
                                 children: (0, a.jsxs)("div", {
                                     className: m.resultsTable,
@@ -106,21 +106,21 @@ function p() {
                                                     children: [
                                                         (0, a.jsx)("div", {
                                                             className: m.indexColumn,
-                                                            children: (0, a.jsx)(o.Text, {
+                                                            children: (0, a.jsx)(s.Text, {
                                                                 variant: "text-sm/normal",
                                                                 children: r + 1,
                                                             }),
                                                         }),
                                                         (0, a.jsx)("div", {
                                                             className: m.wordColumn,
-                                                            children: (0, a.jsx)(o.Text, {
+                                                            children: (0, a.jsx)(s.Text, {
                                                                 variant: "text-sm/normal",
                                                                 children: t,
                                                             }),
                                                         }),
                                                         (0, a.jsx)("div", {
                                                             className: m.valueColumn,
-                                                            children: (0, a.jsx)(o.Text, {
+                                                            children: (0, a.jsx)(s.Text, {
                                                                 variant: "text-sm/normal",
                                                                 children: n,
                                                             }),
@@ -139,7 +139,7 @@ function p() {
             0 === n.length &&
                 (0, a.jsx)("div", {
                     className: m.emptyState,
-                    children: (0, a.jsx)(o.Text, {
+                    children: (0, a.jsx)(s.Text, {
                         variant: "text-md/normal",
                         color: "text-muted",
                         children: "Load messages in a channel to see word frequency analysis.",
@@ -150,7 +150,7 @@ function p() {
                 e.length > 0 &&
                 (0, a.jsx)("div", {
                     className: m.emptyState,
-                    children: (0, a.jsxs)(o.Text, {
+                    children: (0, a.jsxs)(s.Text, {
                         variant: "text-md/normal",
                         color: "text-muted",
                         children: ['No words found starting with "', e, '".'],

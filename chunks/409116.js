@@ -2,8 +2,8 @@ n.d(t, { F: () => f });
 var r = n(951288);
 n(647438);
 var l = n(120356),
-    i = n.n(l),
-    a = n(28664),
+    a = n.n(l),
+    i = n(28664),
     o = n(481060),
     s = n(937615),
     c = n(884697),
@@ -15,22 +15,22 @@ let f = (e) => {
             price: t,
             nitroIconType: n,
             nitroIconSize: l = "md",
-            className: i,
-            discountOfferAmount: a,
+            className: a,
+            discountOfferAmount: i,
             discount: o = c.f_,
             variant: s = "heading-md/semibold",
         } = e;
         return t.currency === u.pK.DISCORD_ORB
             ? (0, r.jsx)(y, {
                   orbAmount: t.amount,
-                  className: i,
+                  className: a,
               })
             : (0, r.jsx)(b, {
                   price: t,
                   nitroIconType: n,
                   nitroIconSize: l,
-                  className: i,
-                  discountOfferAmount: a,
+                  className: a,
+                  discountOfferAmount: i,
                   discount: o,
                   variant: s,
               });
@@ -43,12 +43,12 @@ let f = (e) => {
                 className: f,
                 discountOfferAmount: b,
                 discount: y = c.f_,
-                variant: m = "heading-md/semibold",
+                variant: O = "heading-md/semibold",
             } = e,
-            O = null != b,
+            v = null != b,
             g = (0, s.qr)(t, n),
-            j =
-                y !== c.f_ && y.discountPercentage >= 5 && !O
+            m =
+                y !== c.f_ && y.discountPercentage >= 5 && !v
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(o.nn4, {
@@ -62,7 +62,7 @@ let f = (e) => {
                                   children: g,
                               }),
                               (0, r.jsxs)(o.Text, {
-                                  variant: m,
+                                  variant: O,
                                   color: "text-feedback-positive",
                                   className: p.discount,
                                   "aria-hidden": !0,
@@ -75,17 +75,17 @@ let f = (e) => {
                               (0, r.jsx)(o.nn4, { children: d.intl.format(d.t["6C36MD"], { price: g }) }),
                               (0, r.jsx)("span", {
                                   "aria-hidden": !0,
-                                  className: i()({ [p.priceStrikethrough]: O }, f),
+                                  className: a()({ [p.priceStrikethrough]: v }, f),
                                   children: g,
                               }),
                           ],
                       });
         return (0, r.jsxs)(o.Text, {
-            variant: m,
-            className: i()({ [p.discountBackgroundColor]: O }, p.container, f),
+            variant: O,
+            className: a()({ [p.discountBackgroundColor]: v }, p.container, f),
             children: [
                 "tooltip" === l
-                    ? (0, r.jsx)(a.u, {
+                    ? (0, r.jsx)(i.u, {
                           text: d.intl.string(d.t.MPFyJy),
                           "aria-label": d.intl.string(d.t.X3Ekj4),
                           children: (0, r.jsx)(o.SrA, {
@@ -101,8 +101,8 @@ let f = (e) => {
                             className: p.icon,
                         })
                       : null,
-                j,
-                O &&
+                m,
+                v &&
                     (0, r.jsxs)(o.Heading, {
                         variant: "heading-md/semibold",
                         className: p.discountPill,
@@ -121,7 +121,7 @@ let f = (e) => {
         let { orbAmount: t, className: n } = e;
         return (0, r.jsxs)(o.Text, {
             variant: "text-md/semibold",
-            className: i()(p.container, n),
+            className: a()(p.container, n),
             children: [
                 (0, r.jsx)(o.nn4, { children: d.intl.format(d.t["a/Y8PD"], { orbAmount: t }) }),
                 (0, r.jsx)(o.aQr, {

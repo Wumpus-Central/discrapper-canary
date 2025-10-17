@@ -15,17 +15,17 @@ var r = n(951288),
     m = n(131704),
     b = n(199902),
     _ = n(314897),
-    O = n(592125),
-    E = n(430824),
+    E = n(592125),
+    O = n(430824),
     v = n(131951),
     y = n(292959),
     I = n(19780),
     C = n(944486),
     S = n(606304),
-    T = n(979651),
-    N = n(938475),
-    j = n(823379),
-    P = n(981631);
+    N = n(979651),
+    T = n(938475),
+    P = n(823379),
+    j = n(981631);
 function x(e, t, n, r) {
     i.useEffect(() => {
         let i = t(),
@@ -85,9 +85,9 @@ function Z() {
 function w() {
     return (
         x(
-            [O.Z, I.Z, C.Z, u.default],
+            [E.Z, I.Z, C.Z, u.default],
             () => {
-                let e = O.Z.getChannel(C.Z.getVoiceChannelId()),
+                let e = E.Z.getChannel(C.Z.getVoiceChannelId()),
                     t = null == e ? void 0 : e.type,
                     n = null == e ? void 0 : e.getGuildId(),
                     r = I.Z.getWasEverRtcConnected(),
@@ -95,8 +95,8 @@ function w() {
                 return {
                     channelType: t,
                     guildId: n,
-                    connected: i === P.hes.RTC_CONNECTED,
-                    connectHasStarted: (!r && i !== P.hes.DISCONNECTED) || i === P.hes.RTC_CONNECTED,
+                    connected: i === j.hes.RTC_CONNECTED,
+                    connectHasStarted: (!r && i !== j.hes.DISCONNECTED) || i === j.hes.RTC_CONNECTED,
                     awaitingRemote: null != u.default.getAwaitingRemoteSessionInfo(),
                     connectedRemote: null != u.default.getRemoteSessionId(),
                 };
@@ -127,7 +127,7 @@ function L() {
             (e, t) => {
                 if (e !== t) {
                     let e = v.Z.isSelfMute();
-                    if (v.Z.getMode() === P.pM4.PUSH_TO_TALK && !e) return t ? "ptt_start" : "ptt_stop";
+                    if (v.Z.getMode() === j.pM4.PUSH_TO_TALK && !e) return t ? "ptt_start" : "ptt_stop";
                 }
             },
         ),
@@ -156,22 +156,7 @@ function D() {
             (e, t) => {
                 if (e !== t) {
                     let e = v.Z.isSelfMute();
-                    if (v.Z.getMode() === P.pM4.VOICE_ACTIVITY && !e) return t ? "ptt_stop" : "ptt_start";
-                }
-            },
-        ),
-        null
-    );
-}
-function k() {
-    return (
-        x(
-            [S.Z],
-            () => S.Z.isCurrentUserPrioritySpeaker(),
-            (e, t) => {
-                if (e !== t) {
-                    let e = v.Z.isSelfMute();
-                    if (v.Z.getMode() === P.pM4.VOICE_ACTIVITY && !e) return t ? "ptt_start" : "ptt_stop";
+                    if (v.Z.getMode() === j.pM4.VOICE_ACTIVITY && !e) return t ? "ptt_stop" : "ptt_start";
                 }
             },
         ),
@@ -181,8 +166,23 @@ function k() {
 function M() {
     return (
         x(
-            [T.Z],
-            () => T.Z.userHasBeenMovedVersion,
+            [S.Z],
+            () => S.Z.isCurrentUserPrioritySpeaker(),
+            (e, t) => {
+                if (e !== t) {
+                    let e = v.Z.isSelfMute();
+                    if (v.Z.getMode() === j.pM4.VOICE_ACTIVITY && !e) return t ? "ptt_start" : "ptt_stop";
+                }
+            },
+        ),
+        null
+    );
+}
+function k() {
+    return (
+        x(
+            [N.Z],
+            () => N.Z.userHasBeenMovedVersion,
             (e, t) => {
                 if (e !== t) return "user_moved";
             },
@@ -193,11 +193,11 @@ function M() {
 function U() {
     return (
         x(
-            [C.Z, T.Z],
+            [C.Z, N.Z],
             () => {
                 let e = C.Z.getVoiceChannelId();
                 if (null == e) return g.xO.NONE;
-                let t = T.Z.getVoiceStateForChannel(e);
+                let t = N.Z.getVoiceStateForChannel(e);
                 return (0, g.gf)(t);
             },
             (e, t) => {
@@ -210,7 +210,7 @@ function U() {
 function G() {
     return (
         x(
-            [C.Z, b.Z, _.default, T.Z, O.Z],
+            [C.Z, b.Z, _.default, N.Z, E.Z],
             () => {
                 let e,
                     t,
@@ -221,16 +221,16 @@ function G() {
                     a = 0,
                     o = b.Z.getAllActiveStreams();
                 if (null != n) {
-                    let r = O.Z.getChannel(n);
+                    let r = E.Z.getChannel(n);
                     null != r &&
                         ((e = r.type),
-                        (t = N.ZP.countVoiceStatesForChannel(r.id) - !!T.Z.isInChannel(r.id)),
+                        (t = T.ZP.countVoiceStatesForChannel(r.id) - !!N.Z.isInChannel(r.id)),
                         (i = b.Z.getAllApplicationStreamsForChannel(r.id).map((e) => e.ownerId)));
                 }
                 let s = null;
                 return (
                     (null == (s = 1 === o.length ? o[0] : b.Z.getCurrentUserActiveStream()) ? void 0 : s.state) ===
-                        P.jm8.CONNECTING && (s = null),
+                        j.jm8.CONNECTING && (s = null),
                     null != s && ((l = (0, d.V9)(s)), (a = b.Z.getViewerIds(l).filter((e) => e !== r).length)),
                     {
                         channelType: e,
@@ -258,11 +258,11 @@ function G() {
                     e.voiceChannelId !== r ||
                     null == r ||
                     (function (e) {
-                        let t = O.Z.getChannel(e);
+                        let t = E.Z.getChannel(e);
                         if (null == t) return !1;
                         let n = t.getGuildId();
                         if (null == n) return !1;
-                        let r = E.Z.getGuild(n);
+                        let r = O.Z.getGuild(n);
                         return null != r && r.afkChannelId === t.id;
                     })(r) ||
                     (null != n && m.Lr.has(n))
@@ -307,10 +307,10 @@ function B() {
                     n = o.ZP.getConnectedActivityLocation(),
                     r = (0, s.p)(n),
                     i = _.default.getId(),
-                    l = (0, j.lm)(t) ? o.ZP.getEmbeddedActivitiesForChannel(t) : o.i6,
-                    a = (0, j.lm)(e) ? o.ZP.getEmbeddedActivitiesForChannel(e) : o.i6,
-                    u = (0, j.lm)(r) ? o.ZP.getEmbeddedActivitiesForChannel(r) : o.i6,
-                    d = (0, j.lm)(n) ? o.ZP.getSelfEmbeddedActivityForLocation(n) : null;
+                    l = (0, P.lm)(t) ? o.ZP.getEmbeddedActivitiesForChannel(t) : o.i6,
+                    a = (0, P.lm)(e) ? o.ZP.getEmbeddedActivitiesForChannel(e) : o.i6,
+                    u = (0, P.lm)(r) ? o.ZP.getEmbeddedActivitiesForChannel(r) : o.i6,
+                    d = (0, P.lm)(n) ? o.ZP.getSelfEmbeddedActivityForLocation(n) : null;
                 return {
                     connectedActivityLocation: n,
                     voiceChannelId: e,
@@ -337,16 +337,16 @@ function B() {
                     d = c.some(
                         (e) => e.applicationId === (null == s ? void 0 : s.applicationId) && e.launchId === s.launchId,
                     );
-                if ((0, j.lm)(i)) {
+                if ((0, P.lm)(i)) {
                     let t = e.voiceChannelActivities.find((e) => e.userIds.has(l)),
                         r = c.find((e) => e.userIds.has(l));
                     e.voiceChannelActivities.length < c.length &&
-                        (0, j.lm)(e.voiceChannelId) &&
+                        (0, P.lm)(e.voiceChannelId) &&
                         (n = "activity_launch"),
-                        void 0 === r && (0, j.lm)(t) && (n = "activity_end"),
-                        void 0 === t && (0, j.lm)(r) && r.userIds.size > 1 && (n = "activity_user_join"),
-                        (0, j.lm)(r) &&
-                            (0, j.lm)(t) &&
+                        void 0 === r && (0, P.lm)(t) && (n = "activity_end"),
+                        void 0 === t && (0, P.lm)(r) && r.userIds.size > 1 && (n = "activity_user_join"),
+                        (0, P.lm)(r) &&
+                            (0, P.lm)(t) &&
                             (r.userIds.size > t.userIds.size && (n = "activity_user_join"),
                             r.userIds.size < t.userIds.size && (n = "activity_user_left"));
                 }
@@ -355,9 +355,9 @@ function B() {
                         e.channelActivities.length < a.length &&
                         (n = "activity_launch");
                     let t = e.userConnectedActivity;
-                    null == s && (0, j.lm)(t) && (n = "activity_end"),
-                        (0, j.lm)(s) &&
-                            (0, j.lm)(t) &&
+                    null == s && (0, P.lm)(t) && (n = "activity_end"),
+                        (0, P.lm)(s) &&
+                            (0, P.lm)(t) &&
                             (s.userIds.size > t.userIds.size && (n = "activity_user_join"),
                             s.userIds.size < t.userIds.size && (n = "activity_user_left"));
                 }
@@ -422,12 +422,12 @@ function V() {
             (0, r.jsx)(w, {}),
             (0, r.jsx)(L, {}),
             (0, r.jsx)(D, {}),
-            (0, r.jsx)(M, {}),
+            (0, r.jsx)(k, {}),
             (0, r.jsx)(G, {}),
             (0, r.jsx)(U, {}),
             (0, r.jsx)(B, {}),
             (0, r.jsx)(R, {}),
-            (0, r.jsx)(k, {}),
+            (0, r.jsx)(M, {}),
             (0, r.jsx)(H, {}),
         ],
     });

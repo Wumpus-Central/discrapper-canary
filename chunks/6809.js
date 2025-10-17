@@ -41,7 +41,7 @@ let g = function () {
             ],
             [g, m, b],
         ),
-        O = i.useCallback(
+        E = i.useCallback(
             (t) => {
                 (0, u.Yk)({
                     isPersisted: !0,
@@ -52,9 +52,9 @@ let g = function () {
             },
             [e],
         ),
-        E = i.useCallback(() => {
-            null != n.current && O(n.current);
-        }, [O]);
+        O = i.useCallback(() => {
+            null != n.current && E(n.current);
+        }, [E]);
     return (0, r.jsx)("div", {
         className: h.themeSection,
         children: (0, r.jsxs)("div", {
@@ -66,7 +66,7 @@ let g = function () {
                         {
                             type: "button",
                             className: h.themeOption,
-                            onClick: () => O(e.theme),
+                            onClick: () => E(e.theme),
                             "aria-label": f.intl.string(e.label),
                             children: [
                                 (0, r.jsx)("div", {
@@ -85,7 +85,7 @@ let g = function () {
                     ),
                 ),
                 (0, r.jsx)(o.hU, {
-                    onClick: E,
+                    onClick: O,
                     "aria-label": f.intl.string(f.t.yBZMsb),
                     icon: o.DuK,
                     variant: "secondary",

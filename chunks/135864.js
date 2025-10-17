@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => N });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -15,8 +15,8 @@ var r = n(951288),
     m = n(626135),
     b = n(836768),
     _ = n(766219),
-    O = n(749681),
-    E = n(49898),
+    E = n(749681),
+    O = n(49898),
     v = n(981631),
     y = n(46140),
     I = n(388032),
@@ -29,54 +29,54 @@ function S(e) {
             () =>
                 (function (e, t) {
                     switch (e) {
-                        case E.GlobalDiscoveryTab.SERVERS:
+                        case O.GlobalDiscoveryTab.SERVERS:
                             return (0, r.jsx)(s.QTo, { color: "currentColor" });
-                        case E.GlobalDiscoveryTab.APPS:
+                        case O.GlobalDiscoveryTab.APPS:
                             return t
                                 ? (0, r.jsx)(s.iWm, { color: "currentColor" })
                                 : (0, r.jsx)(s.jje, { color: "currentColor" });
-                        case E.GlobalDiscoveryTab.QUESTS:
+                        case O.GlobalDiscoveryTab.QUESTS:
                             return (0, r.jsx)(s.qDn, { color: "currentColor" });
                     }
                 })(t, n),
             [t, n],
         ),
         S = i.useMemo(() => (0, _.s)(t), [t]),
-        T = l === t,
-        N = i.useCallback(() => {
+        N = l === t,
+        T = i.useCallback(() => {
             switch (t) {
-                case E.GlobalDiscoveryTab.QUESTS:
+                case O.GlobalDiscoveryTab.QUESTS:
                     return (
-                        T && g.Z.resetState(),
+                        N && g.Z.resetState(),
                         m.default.track(v.rMx.DISCOVERY_QUEST_TAB_CLICKED, { client_ad_session_id: (0, u.Gy)().uuid }),
-                        (0, O.transitionToGlobalDiscovery)({
-                            tab: E.GlobalDiscoveryTab.QUESTS,
+                        (0, E.transitionToGlobalDiscovery)({
+                            tab: O.GlobalDiscoveryTab.QUESTS,
                             location: y.dr.DISCOVERY_SIDEBAR,
                             questContent: o.j.DISCOVERY_SIDEBAR,
                         })
                     );
-                case E.GlobalDiscoveryTab.APPS:
-                    if (!T)
-                        return (0, O.transitionToGlobalDiscovery)({
+                case O.GlobalDiscoveryTab.APPS:
+                    if (!N)
+                        return (0, E.transitionToGlobalDiscovery)({
                             tab: t,
                             newSessionState: {
                                 entrypoint: { name: p.xF.GLOBAL_DISCOVERY_SIDEBAR },
                                 restorePreviousView: !0,
                             },
                         });
-                    d.Z.resetState(), (0, O.transitionToGlobalDiscovery)({ tab: t });
+                    d.Z.resetState(), (0, E.transitionToGlobalDiscovery)({ tab: t });
                     return;
-                case E.GlobalDiscoveryTab.SERVERS:
-                    if (!T) return (0, O.transitionToGlobalDiscovery)({ tab: t });
+                case O.GlobalDiscoveryTab.SERVERS:
+                    if (!N) return (0, E.transitionToGlobalDiscovery)({ tab: t });
                     f.Z.resetState(), h.Z.resetState();
                     return;
                 default:
-                    return (0, O.transitionToGlobalDiscovery)({ tab: t });
+                    return (0, E.transitionToGlobalDiscovery)({ tab: t });
             }
-        }, [t, T]);
+        }, [t, N]);
     return (0, r.jsxs)(s.P3F, {
-        onClick: N,
-        className: a()(C.navItem, { [C.selected]: T }),
+        onClick: T,
+        className: a()(C.navItem, { [C.selected]: N }),
         children: [
             (0, r.jsx)("div", {
                 className: C.navItemIcon,
@@ -90,7 +90,7 @@ function S(e) {
         ],
     });
 }
-let T = function () {
+let N = function () {
     return (0, r.jsxs)("div", {
         className: C.container,
         children: [
@@ -103,7 +103,7 @@ let T = function () {
             }),
             (0, r.jsx)("nav", {
                 className: C.nav,
-                children: E.GLOBAL_DISCOVERY_TABS.map((e) => (0, r.jsx)(S, { tab: e }, e)),
+                children: O.GLOBAL_DISCOVERY_TABS.map((e) => (0, r.jsx)(S, { tab: e }, e)),
             }),
         ],
     });

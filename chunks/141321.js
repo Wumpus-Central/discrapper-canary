@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => O });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -15,18 +15,18 @@ var r = n(951288),
     m = n(178088),
     b = n(490897),
     _ = n(388032),
-    O = n(741047);
-function E(e) {
+    E = n(741047);
+function O(e) {
     let { onOpen: t, onClose: n, "data-jump-section": l } = e,
-        E = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
+        O = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
         v = i.useRef(null),
         y = (0, o.e7)(
             [h.ZP],
-            () => (null == E ? void 0 : E.id) != null && h.ZP.getMentionCount(E.id, b.W.NOTIFICATION_CENTER) > 0,
+            () => (null == O ? void 0 : O.id) != null && h.ZP.getMentionCount(O.id, b.W.NOTIFICATION_CENTER) > 0,
         ),
         { titlebarIconSize: I, titlebarHoverHighlight: C } = (0, p.T)({ location: "RecentsButton" }),
         S = "sm" === I ? "refresh_sm" : "md",
-        T = i.useMemo(
+        N = i.useMemo(
             () =>
                 (0, r.jsx)(u.xx7, {
                     size: S,
@@ -83,7 +83,7 @@ function E(e) {
                                     onClick: e,
                                     "data-jump-section": l,
                                     "aria-label": _.intl.string(_.t.GSmTKC),
-                                    className: a()(O.clickable, { [O.withHighlight]: C }),
+                                    className: a()(E.clickable, { [E.withHighlight]: C }),
                                     children:
                                         y || i
                                             ? (0, r.jsxs)(r.Fragment, {
@@ -92,14 +92,14 @@ function E(e) {
                                                           mask: d.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
                                                           height: s.Z[S],
                                                           width: s.Z[S],
-                                                          children: T,
+                                                          children: N,
                                                       }),
                                                       (0, r.jsx)("span", {
-                                                          className: a()(O.badge, { [O.smol]: "refresh_sm" === S }),
+                                                          className: a()(E.badge, { [E.smol]: "refresh_sm" === S }),
                                                       }),
                                                   ],
                                               })
-                                            : T,
+                                            : N,
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(p))

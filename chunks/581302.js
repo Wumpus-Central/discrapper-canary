@@ -4,12 +4,12 @@ n(647438);
 var r = n(481060),
     i = n(703656),
     l = n(52647),
-    s = n(981631),
-    o = n(906406);
+    o = n(981631),
+    s = n(906406);
 let c = function () {
     let { resetOnboardingExperience: e, resetQuestStatus: t } = (0, l.Z)();
     return (0, a.jsx)("div", {
-        className: o.container,
+        className: s.container,
         children: (0, a.jsxs)(r.C3N, {
             label: "Virtual Currency Configuration",
             description: "Click the button below to reset your onboarding state for Virtual Currency.",
@@ -18,7 +18,7 @@ let c = function () {
                     children: (0, a.jsx)(r.Button, {
                         text: "Reset Onboarding State",
                         onClick: () => {
-                            e(), t(), (0, i.uL)(s.Z5c.APP);
+                            e(), t(), (0, i.uL)(o.Z5c.APP);
                         },
                     }),
                 }),

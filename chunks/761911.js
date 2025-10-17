@@ -1,12 +1,12 @@
-n.d(t, { D: () => s });
+n.d(t, { D: () => o });
 var a = n(951288);
 n(647438);
 var r = n(289008),
     i = n(622999),
     l = n(955926);
-let s = (e) => {
-    let { errorLabel: t, children: n, elementOptions: s } = e,
-        o = Date.now();
+let o = (e) => {
+    let { errorLabel: t, children: n, elementOptions: o } = e,
+        s = Date.now();
     return (0, a.jsx)(
         l.k,
         {
@@ -43,11 +43,11 @@ let s = (e) => {
                         currency: "usd",
                         setup_future_usage: "off_session",
                     },
-                    s,
+                    o,
                 ),
                 children: n,
             }),
         },
-        o,
+        s,
     );
 };

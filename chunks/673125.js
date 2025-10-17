@@ -39,9 +39,9 @@ function p(e) {
 }
 let _ = {},
     m = {},
-    b = {},
+    g = {},
     E = !0,
-    g = null;
+    b = null;
 function v(e) {
     if (null == m[e]) {
         let t = o.default.getUser(e);
@@ -62,10 +62,10 @@ class h extends (r = i.ZP.Store) {
         return m[e];
     }
     getEmojiImage(e) {
-        return b[e];
+        return g[e];
     }
     getDrawMode() {
-        return g;
+        return b;
     }
 }
 f(h, "displayName", "SharedCanvasStore");
@@ -120,10 +120,10 @@ let S = new h(l.Z, {
             e >= 0 ? (_[u][e] = p({}, _[u][e], m)) : _[u].push(m);
         }
         let E = null != (n = null != (t = o.emojiId) ? t : o.emojiName) ? n : "";
-        if (null == b[E]) {
+        if (null == g[E]) {
             let e = null != o.emojiName ? a.ZP.convertNameToSurrogate(o.emojiName) : null;
-            (b[E] = new Image()),
-                (b[E].src = (0, c.qc)(
+            (g[E] = new Image()),
+                (g[E].src = (0, c.qc)(
                     {
                         id: o.emojiId,
                         name: null != (r = null != e ? e : o.emojiName) ? r : "",
@@ -143,7 +143,7 @@ let S = new h(l.Z, {
     },
     SHARED_CANVAS_SET_DRAW_MODE: function (e) {
         let { drawMode: t } = e;
-        g = t;
+        b = t;
     },
     TOGGLE_OVERLAY_CANVAS: function (e) {
         let {} = e;

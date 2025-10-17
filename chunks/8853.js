@@ -1,21 +1,21 @@
-n.d(t, { t: () => f }), n(980754), n(388685), n(415506);
+n.d(t, { t: () => _ }), n(980754), n(388685), n(415506);
 var r = n(230367),
     i = n(320215),
-    l = n(240773),
-    a = n(495852),
-    o = n(472069),
-    s = n(999755),
+    a = n(240773),
+    o = n(495852),
+    s = n(922122),
+    l = n(999755),
     c = n(990830),
     u = n(214611),
     d = n(740111);
-class p extends a.C {
+class f extends o.C {
     create(e) {
         let t = {
             properties: { oneofKind: void 0 },
             contentIdentifier: "",
         };
         return (
-            globalThis.Object.defineProperty(t, l.C, {
+            globalThis.Object.defineProperty(t, a.C, {
                 enumerable: !1,
                 value: this,
             }),
@@ -24,66 +24,66 @@ class p extends a.C {
         );
     }
     internalBinaryRead(e, t, n, i) {
-        let l = null != i ? i : this.create(),
-            a = e.pos + t;
-        for (; e.pos < a; ) {
+        let a = null != i ? i : this.create(),
+            o = e.pos + t;
+        for (; e.pos < o; ) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    l.properties = {
+                    a.properties = {
                         oneofKind: "placeholder",
                         placeholder: e.string(),
                     };
                     break;
                 case 2:
-                    l.properties = {
+                    a.properties = {
                         oneofKind: "announcementModalVariant1",
                         announcementModalVariant1: d.xY.internalBinaryRead(
                             e,
                             e.uint32(),
                             n,
-                            l.properties.announcementModalVariant1,
+                            a.properties.announcementModalVariant1,
                         ),
                     };
                     break;
                 case 4:
-                    l.properties = {
+                    a.properties = {
                         oneofKind: "premiumTab",
-                        premiumTab: u.C.internalBinaryRead(e, e.uint32(), n, l.properties.premiumTab),
+                        premiumTab: u.C.internalBinaryRead(e, e.uint32(), n, a.properties.premiumTab),
                     };
                     break;
                 case 5:
-                    l.properties = {
+                    a.properties = {
                         oneofKind: "marketingPageBanner",
-                        marketingPageBanner: c.w.internalBinaryRead(e, e.uint32(), n, l.properties.marketingPageBanner),
+                        marketingPageBanner: c.w.internalBinaryRead(e, e.uint32(), n, a.properties.marketingPageBanner),
                     };
                     break;
                 case 6:
-                    l.properties = {
+                    a.properties = {
                         oneofKind: "paymentModalBanner",
-                        paymentModalBanner: s.j.internalBinaryRead(e, e.uint32(), n, l.properties.paymentModalBanner),
+                        paymentModalBanner: l.j.internalBinaryRead(e, e.uint32(), n, a.properties.paymentModalBanner),
                     };
                     break;
                 case 7:
-                    l.properties = {
+                    a.properties = {
                         oneofKind: "mobileBottomSheet",
-                        mobileBottomSheet: o.g.internalBinaryRead(e, e.uint32(), n, l.properties.mobileBottomSheet),
+                        mobileBottomSheet: s.g.internalBinaryRead(e, e.uint32(), n, a.properties.mobileBottomSheet),
                     };
                     break;
                 case 3:
-                    l.contentIdentifier = e.string();
+                    a.contentIdentifier = e.string();
                     break;
                 default:
-                    let a = n.readUnknownField;
-                    if ("throw" === a)
+                    let o = n.readUnknownField;
+                    if ("throw" === o)
                         throw new globalThis.Error(
                             "Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName),
                         );
-                    let p = e.skip(i);
-                    !1 !== a && (!0 === a ? r.z.onRead : a)(this.typeName, l, t, i, p);
+                    let f = e.skip(i);
+                    !1 !== o && (!0 === o ? r.z.onRead : o)(this.typeName, a, t, i, f);
             }
         }
-        return l;
+        return a;
     }
     internalBinaryWrite(e, t, n) {
         "placeholder" === e.properties.oneofKind && t.tag(1, r.TD.LengthDelimited).string(e.properties.placeholder),
@@ -102,11 +102,11 @@ class p extends a.C {
                     .internalBinaryWrite(e.properties.marketingPageBanner, t.tag(5, r.TD.LengthDelimited).fork(), n)
                     .join(),
             "paymentModalBanner" === e.properties.oneofKind &&
-                s.j
+                l.j
                     .internalBinaryWrite(e.properties.paymentModalBanner, t.tag(6, r.TD.LengthDelimited).fork(), n)
                     .join(),
             "mobileBottomSheet" === e.properties.oneofKind &&
-                o.g
+                s.g
                     .internalBinaryWrite(e.properties.mobileBottomSheet, t.tag(7, r.TD.LengthDelimited).fork(), n)
                     .join(),
             "" !== e.contentIdentifier && t.tag(3, r.TD.LengthDelimited).string(e.contentIdentifier);
@@ -148,14 +148,14 @@ class p extends a.C {
                 name: "payment_modal_banner",
                 kind: "message",
                 oneof: "properties",
-                T: () => s.j,
+                T: () => l.j,
             },
             {
                 no: 7,
                 name: "mobile_bottom_sheet",
                 kind: "message",
                 oneof: "properties",
-                T: () => o.g,
+                T: () => s.g,
             },
             {
                 no: 3,
@@ -166,4 +166,4 @@ class p extends a.C {
         ]);
     }
 }
-let f = new p();
+let _ = new f();

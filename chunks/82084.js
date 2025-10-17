@@ -4,8 +4,8 @@ var r = n(951288),
     o = n(442837),
     i = n(352065),
     a = n(481060),
-    s = n(607070),
-    c = n(451478),
+    c = n(607070),
+    s = n(451478),
     u = n(585483),
     d = n(79808),
     f = n(981631);
@@ -14,15 +14,15 @@ function b(e) {
         n,
         {
             root: b,
-            directory: m,
-            target: v,
-            defaultTarget: p,
-            onPanelChange: j,
-            sidebarHeader: x,
-            sidebarFooter: y,
+            directory: p,
+            target: y,
+            defaultTarget: j,
+            onPanelChange: m,
+            sidebarHeader: v,
+            sidebarFooter: g,
             emptyState: h,
         } = e,
-        g = (function (e, t) {
+        O = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -52,21 +52,21 @@ function b(e) {
             "sidebarFooter",
             "emptyState",
         ]);
-    let [O, C] = l.useState(!1),
-        [S, P] = l.useState(1.4),
+    let [x, P] = l.useState(!1),
+        [S, C] = l.useState(1.4),
         _ = l.useRef(null),
-        N = (0, o.e7)([s.Z], () => s.Z.useReducedMotion),
-        E = (0, o.e7)([c.Z], () => c.Z.isFocused());
+        w = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
+        E = (0, o.e7)([s.Z], () => s.Z.isFocused());
     return (
         l.useEffect(() => {
             let e = (e) => {
                 let { intensity: t, duration: n } = e;
-                !N &&
+                !w &&
                     E &&
-                    (C(!0),
-                    P(null != t ? t : 1.4),
+                    (P(!0),
+                    C(null != t ? t : 1.4),
                     clearTimeout(_.current),
-                    (_.current = setTimeout(() => C(!1), null != n ? n : 1000)));
+                    (_.current = setTimeout(() => P(!1), null != n ? n : 1000)));
             };
             return (
                 u.S.subscribe(f.CkL.SHAKE_SETTINGS_MODAL, e),
@@ -74,9 +74,9 @@ function b(e) {
                     u.S.unsubscribe(f.CkL.SHAKE_SETTINGS_MODAL, e), clearTimeout(_.current);
                 }
             );
-        }, [N, E]),
+        }, [w, E]),
         (0, r.jsx)(a.UkV, {
-            isShaking: O,
+            isShaking: x,
             intensity: S,
             children: (0, r.jsx)(
                 i.A,
@@ -104,19 +104,19 @@ function b(e) {
                             });
                     }
                     return e;
-                })({}, g)),
+                })({}, O)),
                 (n = n =
                     {
                         children: (0, r.jsx)(d.Z, {
-                            onClose: g.onClose,
+                            onClose: O.onClose,
                             root: b,
-                            directory: m,
-                            target: v,
-                            defaultTarget: p,
-                            onPanelChange: j,
-                            sidebarHeader: x,
+                            directory: p,
+                            target: y,
+                            defaultTarget: j,
+                            onPanelChange: m,
+                            sidebarHeader: v,
                             emptyState: h,
-                            sidebarFooter: y,
+                            sidebarFooter: g,
                         }),
                     }),
                 Object.getOwnPropertyDescriptors

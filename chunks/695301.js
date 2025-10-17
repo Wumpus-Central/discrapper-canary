@@ -9,30 +9,30 @@ var r = n(951288),
     u = n(486472),
     d = n(888369),
     p = n(430824),
-    h = n(451478),
-    f = n(61634),
+    f = n(451478),
+    h = n(61634),
     g = n(325257),
     m = n(144618);
 let b = i.memo(function (e) {
     var t, n;
     let { guildNode: b, lowerBadge: _ } = e,
-        y = b.id,
-        O = (0, l.e7)([p.Z], () => p.Z.getGuild(y)),
-        v = (0, a.E)(O),
-        j = (0, l.e7)([h.Z], () => h.Z.isFocused()),
-        x = (0, l.e7)([u.Z], () => u.Z.isUnavailable(y)),
+        O = b.id,
+        y = (0, l.e7)([p.Z], () => p.Z.getGuild(O)),
+        v = (0, a.E)(y),
+        j = (0, l.e7)([f.Z], () => f.Z.isFocused()),
+        x = (0, l.e7)([u.Z], () => u.Z.isUnavailable(O)),
         C = (0, c.Z)((e) => e.guildId),
-        E = (0, f.Z)(y),
+        E = (0, h.Z)(O),
         {
             badge: S,
             unread: I,
             isMentionLowImportance: P,
         } = (0, l.cj)([d.default], () => ({
-            badge: d.default.getMentionCount(y),
-            isMentionLowImportance: d.default.getIsMentionLowImportance(y),
-            unread: d.default.hasUnread(y),
+            badge: d.default.getMentionCount(O),
+            isMentionLowImportance: d.default.getIsMentionLowImportance(O),
+            unread: d.default.hasUnread(O),
         })),
-        N = (0, s.Ij)(O) && 0 === S,
+        N = (0, s.Ij)(y) && 0 === S,
         Z = i.useMemo(
             () =>
                 null != _
@@ -80,10 +80,10 @@ let b = i.memo(function (e) {
         })({}, e)),
         (n = n =
             {
-                guild: O,
+                guild: y,
                 unavailable: x,
                 animatable: j,
-                selected: C === y,
+                selected: C === O,
                 badge: S,
                 isMentionLowImportance: P,
                 lowerBadge: Z,

@@ -5,7 +5,7 @@ var r = n(951288),
     l = n.n(a),
     s = n(913527),
     o = n.n(s),
-    c = n(599273),
+    c = n(258536),
     d = n(574583),
     u = n(831209),
     m = n(149765),
@@ -52,7 +52,7 @@ function U(e, t, n) {
         e
     );
 }
-function V(e) {
+function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -68,7 +68,7 @@ function V(e) {
     }
     return e;
 }
-function G(e, t) {
+function V(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -100,7 +100,7 @@ let W = {
     };
 class K {
     addStep(e) {
-        ++this.currentIndex, this.steps.push(V({ index: this.currentIndex }, e)), e.isDone && this.completedSteps++;
+        ++this.currentIndex, this.steps.push(G({ index: this.currentIndex }, e)), e.isDone && this.completedSteps++;
     }
     getSteps() {
         return this.steps;
@@ -265,7 +265,7 @@ let Y = (e) => {
                                                                     (n) =>
                                                                         (0, r.jsx)(
                                                                             t,
-                                                                            G(V({}, n), {
+                                                                            V(G({}, n), {
                                                                                 channel: i,
                                                                                 guild: e,
                                                                                 permission: l,
@@ -312,7 +312,7 @@ let Y = (e) => {
                                                         return (n) =>
                                                             (0, r.jsx)(
                                                                 t,
-                                                                G(V({}, n), {
+                                                                V(G({}, n), {
                                                                     channelId: e.id,
                                                                     guildId: e.guild_id,
                                                                 }),
@@ -333,7 +333,7 @@ let Y = (e) => {
                                                 X(D.ZI.DEFAULT_REACTION),
                                                     (0, g.ZDy)(async () => {
                                                         let { default: t } = await n.e("80404").then(n.bind(n, 158586));
-                                                        return (n) => (0, r.jsx)(t, G(V({}, n), { channel: e }));
+                                                        return (n) => (0, r.jsx)(t, V(G({}, n), { channel: e }));
                                                     });
                                             },
                                             isDone: t,
@@ -356,7 +356,7 @@ let Y = (e) => {
                                                               let { default: e } = await n
                                                                   .e("18417")
                                                                   .then(n.bind(n, 740696));
-                                                              return (t) => (0, r.jsx)(e, G(V({}, t), { guildId: i }));
+                                                              return (t) => (0, r.jsx)(e, V(G({}, t), { guildId: i }));
                                                           }));
                                                   },
                                               }),

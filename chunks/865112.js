@@ -1,9 +1,9 @@
 n.d(t, {
-    RB: () => O,
+    RB: () => y,
     VH: () => _,
     Vi: () => v,
     Vu: () => j,
-    q7: () => y,
+    q7: () => O,
 });
 var r = n(692547),
     i = n(497089),
@@ -15,23 +15,23 @@ var r = n(692547),
     u = n(319707),
     d = n(584914),
     p = n(962575),
-    h = n(334702),
-    f = n(333722),
+    f = n(334702),
+    h = n(333722),
     g = n(549931),
     m = n(178561),
     b = n(39863);
 let _ = {
-        MISSED_MESSAGES: f,
+        MISSED_MESSAGES: h,
         FRIEND_REQUEST_REMINDER: d,
         SCHEDULED_GUILD_EVENT: c,
-        TOP_MESSAGES: h,
+        TOP_MESSAGES: f,
         NOTIFICATION_CENTER: a,
         UPDATE_PROFILE: n(130312),
         FIND_FRIENDS: o,
         ADD_FRIEND: o,
         FIRST_MESSAGE: m,
     },
-    y = (e) => {
+    O = (e) => {
         switch (e.type) {
             case "lifecycle_item":
                 switch (e.item_enum) {
@@ -58,7 +58,7 @@ let _ = {
                 return "NOTIFICATION_CENTER";
         }
     },
-    O = (e) => ("icHighlight" === e ? "TOP_MESSAGES" : "NOTIFICATION_CENTER"),
+    y = (e) => ("icHighlight" === e ? "TOP_MESSAGES" : "NOTIFICATION_CENTER"),
     v = (e) => {
         switch (e) {
             case i.DY.GO_LIVE_PUSH:

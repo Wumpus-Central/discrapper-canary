@@ -52,13 +52,13 @@ let C = (e) => {
     var t, n;
     let { guildId: s, application: o } = e,
         { loading: g, team: m, currentPeriod: C, allPeriods: O, metrics: y } = (0, d.Z)(s, o),
-        N = (0, u.u)(s),
-        E = (0, c.mY)();
+        E = (0, u.u)(s),
+        N = (0, c.mY)();
     return g
         ? (0, r.jsx)(i.$jN, {})
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  N &&
+                  E &&
                       (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(l.Z, {
@@ -120,7 +120,7 @@ let C = (e) => {
                   (0, r.jsx)(i.C3N, {
                       label: x.intl.string(x.t.O8cDAA),
                       className: j.formSection,
-                      disabled: E,
+                      disabled: N,
                       children: (0, r.jsx)(f.Z, {
                           guildId: s,
                           application: o,

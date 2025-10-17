@@ -1,19 +1,19 @@
 n.d(t, { P: () => c });
 var r = n(951288);
 n(647438);
-var s = n(755721),
-    i = n(481060),
+var i = n(755721),
+    s = n(481060),
     l = n(388032),
     a = n(463754);
 function c(e) {
     let { onClick: t, className: n } = e;
-    return (0, r.jsxs)(i.gtL, {
-        color: s.zx.Colors.GREEN,
+    return (0, r.jsxs)(s.gtL, {
+        color: i.zx.Colors.GREEN,
         className: n,
         innerClassName: a.upsellButton,
         onClick: t,
         children: [
-            (0, r.jsx)(i.Ucv, {
+            (0, r.jsx)(s.Ucv, {
                 color: "white",
                 size: "custom",
                 height: 16,

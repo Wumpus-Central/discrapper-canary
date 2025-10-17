@@ -39,8 +39,8 @@ var r = n(951288),
     L = n(887766),
     x = n(763296),
     M = n(697426),
-    j = n(242291),
-    k = n(22382),
+    k = n(242291),
+    j = n(22382),
     U = n(747071),
     G = n(421673),
     B = n(663215),
@@ -258,10 +258,10 @@ function eu(e) {
         eP = L.t.useConfig({ location: "SoundboardSoundGrid" }).upsellPinningMode,
         { categories: ew, allSounds: eD, soundCounts: eL } = (0, B.ZP)(a, {}, e_),
         [ex, eM] = i.useState([]),
-        ej = (0, B.FS)(ew, ex, eC),
-        ek = (0, b.Iu)((e) => e.isNitroLockedSectionVisible),
+        ek = (0, B.FS)(ew, ex, eC),
+        ej = (0, b.Iu)((e) => e.isNitroLockedSectionVisible),
         [eU, eG] = i.useState(!1),
-        eB = i.useMemo(() => ej.filter((e) => e.items.length > 0), [ej]),
+        eB = i.useMemo(() => ek.filter((e) => e.items.length > 0), [ek]),
         eZ = i.useMemo(
             () => eB.findLastIndex((e) => !!(0, D._O)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
             [eB],
@@ -281,11 +281,11 @@ function eu(e) {
         eq = i.useCallback(
             (e, t, n) => {
                 if (null != I && !P) return I(e, n);
-                let r = (0, j.Nq)(eI, e, a, !1);
+                let r = (0, k.Nq)(eI, e, a, !1);
                 if (null != I && P && r) I(e, n);
-                else if (!X && r && (0, j.C0)(a)) {
+                else if (!X && r && (0, k.C0)(a)) {
                     var i;
-                    (0, j.GN)(e, null != (i = null == a ? void 0 : a.id) ? i : Y.lds, t),
+                    (0, k.GN)(e, null != (i = null == a ? void 0 : a.id) ? i : Y.lds, t),
                         eN &&
                             w.default.track(Y.rMx.SEARCH_RESULT_SELECTED, {
                                 search_type: Y.aib.SOUNDBOARD,
@@ -294,7 +294,7 @@ function eu(e) {
                                 location_stack: t,
                             });
                 } else {
-                    if ((0, j.Nq)(eI, e, a)) return;
+                    if ((0, k.Nq)(eI, e, a)) return;
                     J && ev(e);
                 }
             },
@@ -484,10 +484,10 @@ function eu(e) {
                         e = !0;
                         break;
                     case L.o.PINNED_ON_SCROLL_DOWN:
-                        e = eU || ek;
+                        e = eU || ej;
                         break;
                     default:
-                        e = ek;
+                        e = ej;
                 }
                 return (0, r.jsx)(v.p, {
                     showUpsell: e,
@@ -497,7 +497,7 @@ function eu(e) {
                 });
             }
             return null;
-        }, [e0, eF, eP, ek, eU]),
+        }, [e0, eF, eP, ej, eU]),
         tt = i.useCallback(
             (e) => {
                 var t;
@@ -517,7 +517,7 @@ function eu(e) {
         ti = i.useCallback(() => {
             var e;
             let t = x.Z.getSoundById(ea),
-                n = new Audio((0, k.Z)(ea));
+                n = new Audio((0, j.Z)(ea));
             null != em.current && em.current.pause(),
                 (em.current = n),
                 (n.currentTime = 0),

@@ -1,17 +1,17 @@
-n.d(t, { R: () => a }), n(35282);
+n.d(t, { R: () => s }), n(35282);
 var r = n(951288);
 n(647438);
 var l = n(481060),
     i = n(774078),
-    s = n(388032),
+    a = n(388032),
     o = n(64092);
-let a = (e) => {
+let s = (e) => {
     let { endDate: t, size: n = "md" } = e,
-        { days: a, hours: c, minutes: u } = (0, i.Z)(t),
+        { days: s, hours: c, minutes: u } = (0, i.Z)(t),
         d = (function (e, t, n) {
             let r = (e) => "".concat(e.toString().padStart(2, "0"));
             return [r(e), r(t), r(n)].join(":");
-        })(a, c, u);
+        })(s, c, u);
     return (0, r.jsxs)("div", {
         className: o.container,
         role: "timer",
@@ -44,8 +44,8 @@ let a = (e) => {
                       ),
             ),
             (0, r.jsx)(l.nn4, {
-                children: s.intl.format(s.t.j6IyVV, {
-                    days: a,
+                children: a.intl.format(a.t.j6IyVV, {
+                    days: s,
                     hours: c,
                     minutes: u,
                 }),

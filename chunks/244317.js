@@ -16,7 +16,7 @@ function m(e) {
     let { applicationId: t } = e.match.params,
         [m, b] = i.useState(!1),
         _ = i.useRef(!1),
-        [O, E] = i.useState(null),
+        [E, O] = i.useState(null),
         v = !u.isPlatformEmbedded && !a.tq && !m,
         y = i.useMemo(() => (0, l.Z)(), []);
     return (i.useEffect(() => {
@@ -36,7 +36,7 @@ function m(e) {
                     })
                         .then((e) => {
                             let n = null != e && e;
-                            E(n),
+                            O(n),
                                 c.default.track(p.rMx.ACTIVITY_DEEP_LINK_ATTEMPTED, {
                                     application_id: t,
                                     source_url: location.href,
@@ -45,7 +45,7 @@ function m(e) {
                                 });
                         })
                         .catch(() => {
-                            E(!1),
+                            O(!1),
                                 c.default.track(p.rMx.ACTIVITY_DEEP_LINK_ATTEMPTED, {
                                     application_id: t,
                                     source_url: location.href,
@@ -57,8 +57,8 @@ function m(e) {
                 }),
             (_.current = !0));
     }, [t, v, y]),
-    v && !1 !== O)
-        ? !0 === O
+    v && !1 !== E)
+        ? !0 === E
             ? (0, r.jsxs)("div", {
                   className: g.container,
                   children: [

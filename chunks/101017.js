@@ -1,12 +1,12 @@
 n.d(t, { Z: () => c }), n(539854), n(388685);
 var r = n(647438),
-    s = n(442837),
-    i = n(999382),
+    i = n(442837),
+    s = n(999382),
     l = n(905128),
     a = n(131085);
 function c() {
-    let e = (0, s.e7)([i.Z], () => i.Z.getGuild()),
-        t = (0, s.e7)([l.Z], () => {
+    let e = (0, i.e7)([s.Z], () => s.Z.getGuild()),
+        t = (0, i.e7)([l.Z], () => {
             var t;
             return null == (t = l.Z.getStateForGuild(null == e ? void 0 : e.id)) ? void 0 : t.allPowerups;
         });
@@ -15,16 +15,16 @@ function c() {
             r = [];
         return (
             (null == e ? void 0 : e.features) == null ||
-                Object.keys(a.Ct).forEach((s) => {
-                    let i = a.Ct[s],
-                        l = a.AC[s],
+                Object.keys(a.Ct).forEach((i) => {
+                    let s = a.Ct[i],
+                        l = a.AC[i],
                         c = null == t ? void 0 : t[l],
                         d = null == c ? void 0 : c.title,
-                        o = i.map((e) => ({
+                        o = s.map((e) => ({
                             kind: e,
                             packName: d,
                         }));
-                    e.features.has(s) ? n.push(...o) : r.push(...o);
+                    e.features.has(i) ? n.push(...o) : r.push(...o);
                 }),
             {
                 unlockedBadges: n,

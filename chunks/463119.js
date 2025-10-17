@@ -15,17 +15,17 @@ var r = n(951288),
     m = n(821982),
     b = n(377171),
     _ = n(243778),
-    O = n(633302),
-    E = n(567400),
+    E = n(633302),
+    O = n(567400),
     v = n(153066),
     y = n(335131),
     I = n(364111),
     C = n(729700),
     S = n(827360),
-    T = n(681435),
-    N = n(81136),
-    j = n(302800),
-    P = n(215023),
+    N = n(681435),
+    T = n(81136),
+    P = n(302800),
+    j = n(215023),
     x = n(981631),
     A = n(921944),
     Z = n(388032),
@@ -93,7 +93,7 @@ function D(e, t) {
     }
     return i;
 }
-let k = (e) => {
+let M = (e) => {
         let { color: t } = e;
         return (0, r.jsx)(c.IGR, {
             className: w.newBadge,
@@ -101,11 +101,11 @@ let k = (e) => {
             text: Z.intl.string(Z.t.y2b7CA),
         });
     },
-    M = () => {
-        let { noCache: e, includeUnpublished: t } = (0, N.Z)();
+    k = () => {
+        let { noCache: e, includeUnpublished: t } = (0, T.Z)();
         return (
             (0, I.E)(
-                P.AW.HOME,
+                j.AW.HOME,
                 {
                     noCache: e,
                     includeUnpublished: t,
@@ -140,26 +140,26 @@ let k = (e) => {
             ]);
         let b = (0, l.JA)("shop"),
             _ = h.Z.HOME_PAGE_SHOP_TAB,
-            { analyticsLocations: O } = (0, g.ZP)(_),
-            [E, v] = i.useState(!1),
+            { analyticsLocations: E } = (0, g.ZP)(_),
+            [O, v] = i.useState(!1),
             I = i.useCallback(() => {
                 void 0 !== o && o(),
                     void 0 !== s &&
                         (0, y.mK)({
                             tab: s,
-                            analyticsLocations: O,
+                            analyticsLocations: E,
                             analyticsSource: _,
                         }),
                     v(!0),
                     (0, y.Sm)({
                         analyticsSource: _,
-                        analyticsLocations: O,
+                        analyticsLocations: E,
                     });
-            }, [_, O, o, v, s]),
+            }, [_, E, o, v, s]),
             C = x.Z5c.COLLECTIBLES_SHOP;
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                E && (0, r.jsx)(M, {}),
+                O && (0, r.jsx)(k, {}),
                 (0, r.jsx)(
                     d.Qj,
                     R(
@@ -185,7 +185,7 @@ let k = (e) => {
             ],
         });
     },
-    G = (e) => (0, r.jsx)(U, R(L({}, e), { children: (0, r.jsx)(k, {}) })),
+    G = (e) => (0, r.jsx)(U, R(L({}, e), { children: (0, r.jsx)(M, {}) })),
     B = i.memo(function (e) {
         var t;
         let { displayOptions: n, assetId: i, reducedMotion: l = !1 } = e,
@@ -235,17 +235,17 @@ let k = (e) => {
             m,
             b,
             _,
-            O,
             E,
+            O,
             y,
             { displayOptions: I } = e,
             C = D(e, ["displayOptions"]);
         let S = (0, a.e7)([f.Z], () => f.Z.useReducedMotion),
-            [T, N] = i.useState(0),
-            [j, P] = i.useState(!1),
+            [N, T] = i.useState(0),
+            [P, j] = i.useState(!1),
             x = (0, p.ZP)(),
             A = (0, s.wj)(x);
-        j
+        P
             ? A
                 ? ((t = null == (l = I.entryPointBackgroundAssets) ? void 0 : l.srcDarkHovered),
                   (n = null == (u = I.entrypointBackgroundStyle) || null == (o = u.hovered) ? void 0 : o.dark))
@@ -254,23 +254,23 @@ let k = (e) => {
             : A
               ? ((t = null == (m = I.entryPointBackgroundAssets) ? void 0 : m.srcDark),
                 (n = null == (_ = I.entrypointBackgroundStyle) || null == (b = _.resting) ? void 0 : b.dark))
-              : ((t = null == (O = I.entryPointBackgroundAssets) ? void 0 : O.srcLight),
-                (n = null == (y = I.entrypointBackgroundStyle) || null == (E = y.resting) ? void 0 : E.light));
-        let M = i.useCallback(
+              : ((t = null == (E = I.entryPointBackgroundAssets) ? void 0 : E.srcLight),
+                (n = null == (y = I.entrypointBackgroundStyle) || null == (O = y.resting) ? void 0 : O.light));
+        let k = i.useCallback(
                 (e) => {
-                    I.assetIds.length > 0 && N((e) => (e + 1) % I.assetIds.length), P(!0), null == e || e();
+                    I.assetIds.length > 0 && T((e) => (e + 1) % I.assetIds.length), j(!0), null == e || e();
                 },
                 [I.assetIds.length],
             ),
             G = i.useCallback((e) => {
-                P(!1), null == e || e();
+                j(!1), null == e || e();
             }, []),
             H = I.title();
         return (0, r.jsx)(c.aML, {
             "data-migration-pending": !0,
             text: (0, r.jsx)(B, {
                 displayOptions: I,
-                assetId: I.assetIds[T],
+                assetId: I.assetIds[N],
                 reducedMotion: S,
             }),
             tooltipClassName: w.marketingBadgeTooltip,
@@ -297,7 +297,7 @@ let k = (e) => {
                             e,
                         ),
                         {
-                            onMouseEnter: () => M(e.onMouseEnter),
+                            onMouseEnter: () => k(e.onMouseEnter),
                             onMouseLeave: () => G(e.onMouseLeave),
                             children: [
                                 (0, r.jsx)("div", {
@@ -312,7 +312,7 @@ let k = (e) => {
                                             "aria-hidden": !0,
                                         }),
                                 }),
-                                (0, r.jsx)(k, { color: I.badgeColor }),
+                                (0, r.jsx)(M, { color: I.badgeColor }),
                             ],
                         },
                     ),
@@ -324,7 +324,7 @@ let k = (e) => {
             n = D(e, ["displayOptions"]);
         let l = i.useMemo(() => {
             var e;
-            let n = null != t.emojiName ? (null == (e = O.ZP.getByName(t.emojiName)) ? void 0 : e.surrogates) : null;
+            let n = null != t.emojiName ? (null == (e = E.ZP.getByName(t.emojiName)) ? void 0 : e.surrogates) : null;
             return (0, r.jsxs)(c.Text, {
                 variant: "text-sm/medium",
                 className: w.marketingBadgeTooltipContent,
@@ -339,7 +339,7 @@ let k = (e) => {
             delay: 100,
             hideOnClick: !1,
             "aria-label": t.title(),
-            children: (e) => (0, r.jsx)(U, R(L({}, n, e), { children: (0, r.jsx)(k, { color: t.badgeColor }) })),
+            children: (e) => (0, r.jsx)(U, R(L({}, n, e), { children: (0, r.jsx)(M, { color: t.badgeColor }) })),
         });
     },
     F = (e) => {
@@ -380,7 +380,7 @@ let k = (e) => {
                                         "aria-hidden": !0,
                                     }),
                             }),
-                            (0, r.jsx)(k, {}),
+                            (0, r.jsx)(M, {}),
                         ],
                     }),
                 ),
@@ -416,8 +416,8 @@ let k = (e) => {
     },
     W = (e) => {
         let { selected: t, onClick: n, locationState: i, listItemRef: l } = e,
-            { shopButtonDisplayOptions: a, dismissShopButtonDC: s } = (0, T.Z)(),
-            u = (0, E.Y)({ location: "CollectiblesShopButton" }),
+            { shopButtonDisplayOptions: a, dismissShopButtonDC: s } = (0, N.Z)(),
+            u = (0, O.Y)({ location: "CollectiblesShopButton" }),
             d = !(0, c.$sL)() && u,
             [p, f] = (0, _.US)(d ? [o.z.WISHLIST_SHOP_BUTTON_POPOVER] : []),
             h = {
@@ -430,13 +430,13 @@ let k = (e) => {
             };
         if (null != a)
             switch (a.type) {
-                case j.k2.TOOLTIP:
+                case P.k2.TOOLTIP:
                     return (0, r.jsx)(V, R(L({}, h), { displayOptions: a }));
-                case j.k2.COACHTIP:
+                case P.k2.COACHTIP:
                     return (0, r.jsx)(H, R(L({}, h), { displayOptions: a }));
-                case j.k2.BADGE:
+                case P.k2.BADGE:
                     return (0, r.jsx)(G, L({}, h));
-                case j.k2.COACHMARK:
+                case P.k2.COACHMARK:
                     return (0, r.jsx)(F, R(L({ dismissContent: s }, h), { displayOptions: a }));
             }
         return p === o.z.WISHLIST_SHOP_BUTTON_POPOVER

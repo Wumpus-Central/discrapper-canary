@@ -4,19 +4,19 @@ var r = n(951288),
     l = n(120356),
     o = n.n(l),
     a = n(100568),
-    s = n(599273),
+    s = n(258536),
     c = n(91192),
     u = n(866442),
     d = n(477690),
     p = n(481060),
-    h = n(153867),
-    f = n(591146),
+    f = n(153867),
+    h = n(591146),
     g = n(771845),
     m = n(624138),
     b = n(727258),
     _ = n(276952),
-    y = n(199540),
-    O = n(40153),
+    O = n(199540),
+    y = n(40153),
     v = n(252686),
     j = n(682662),
     x = n(662146),
@@ -46,14 +46,14 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 renderChildNode: G,
                 folderButtonSize: U,
                 folderButtonContent: B,
-                "aria-setsize": V,
-                "aria-posinset": F,
+                "aria-setsize": F,
+                "aria-posinset": V,
             } = e,
             { id: H, name: z, children: W } = t,
             [K, Y] = i.useState(!1),
             [q, X] = i.useState(!1),
             Q = K || q,
-            J = (0, f.Ml)("FolderItem");
+            J = (0, h.Ml)("FolderItem");
         i.useEffect(() => {
             R && Y(!1);
         }, [R]);
@@ -67,7 +67,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                     }
                 ),
                 end() {
-                    null == L || L(), (0, h.V1)(g.ZP.getCompatibleGuildFolders());
+                    null == L || L(), (0, f.V1)(g.ZP.getCompatibleGuildFolders());
                 },
                 collect: (e) => ({ dragging: e.isDragging() }),
             }),
@@ -123,7 +123,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                             "data-dnd-name": er,
                             children: $
                                 ? (0, r.jsx)(v.Z, { isFolder: !0 })
-                                : (0, r.jsx)(y.Z, {
+                                : (0, r.jsx)(O.Z, {
                                       folderNode: t,
                                       expanded: s,
                                       sorting: R,
@@ -138,13 +138,13 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                                       onKeyDown: en,
                                       treeItemProps: ei,
                                       folderButtonContent: B,
-                                      "aria-setsize": V,
-                                      "aria-posinset": F,
+                                      "aria-setsize": F,
+                                      "aria-posinset": V,
                                   }),
                         }),
                     }),
                     A
-                        ? (0, r.jsx)(O.ZP, {
+                        ? (0, r.jsx)(y.ZP, {
                               name: er,
                               targetNode: t,
                               onDragOverChanged: et,
@@ -186,7 +186,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                     );
                 }),
                 A && s
-                    ? (0, r.jsx)(O.Zu, {
+                    ? (0, r.jsx)(y.Zu, {
                           name: er,
                           targetNode: t,
                       })

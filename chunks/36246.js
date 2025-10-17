@@ -9,7 +9,7 @@ var i = n(120356),
     c = n(245702);
 function d(e) {
     let { guildId: t, children: n, className: i } = e,
-        { horizontalScrollNotice: d, handleScroll: u, handleSetScrollerRef: h, handleSetContainerRef: p } = (0, o.Z)(t),
+        { horizontalScrollNotice: d, handleScroll: u, handleSetScrollerRef: p, handleSetContainerRef: h } = (0, o.Z)(t),
         f = (0, r.jsx)("div", {
             className: c.tierPreviewsContainer,
             children: (0, r.jsx)("div", {
@@ -25,7 +25,7 @@ function d(e) {
                     (0, r.jsx)(s.Den, {
                         className: c.scroller,
                         orientation: "horizontal",
-                        ref: h,
+                        ref: p,
                         onScroll: u,
                         children: f,
                     }),
@@ -33,7 +33,7 @@ function d(e) {
             })),
         (0, r.jsx)("div", {
             className: c.carouselMaxWidth,
-            ref: p,
+            ref: h,
             children: f,
         })
     );

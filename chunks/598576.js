@@ -5,8 +5,8 @@ var r = n(481060),
     i = n(864762),
     s = n(509340),
     a = n(135184),
-    l = n(409553),
-    c = n(494801),
+    c = n(409553),
+    l = n(494801),
     d = n(319392),
     u = n(798930),
     p = n(981631),
@@ -14,13 +14,13 @@ var r = n(481060),
 function b(e) {
     let { transitionState: t, onClose: n, analyticsLocation: b } = e,
         {
-            slide: x,
-            gotoNext: g,
-            gotoError: C,
-            handleWaitingForConnection: h,
+            slide: g,
+            gotoNext: x,
+            gotoError: h,
+            handleWaitingForConnection: C,
             handleAuthToken: _,
             expectedCallbackState: m,
-            callbackData: j,
+            callbackData: O,
         } = (0, i.k)(b, p.ABu.XBOX);
     return (0, o.jsx)(r.Y0X, {
         className: f.modal,
@@ -28,49 +28,49 @@ function b(e) {
         disableTrack: !0,
         parentComponent: "XboxLinkModal",
         children: (0, o.jsxs)(r.MyZ, {
-            activeSlide: x,
+            activeSlide: g,
             width: 408,
             children: [
                 (0, o.jsx)(r.Mi4, {
                     id: u.O.LANDING,
-                    children: (0, o.jsx)(l.Z, {
-                        onContinue: g,
+                    children: (0, o.jsx)(c.Z, {
+                        onContinue: x,
                         onClose: n,
                     }),
                 }),
                 (0, o.jsx)(r.Mi4, {
                     id: u.O.PRE_CONNECT,
-                    children: (0, o.jsx)(c.Z, {
+                    children: (0, o.jsx)(l.Z, {
                         isWaitingForConnection: !1,
-                        onWaitingForConnection: h,
+                        onWaitingForConnection: C,
                         onAuthToken: _,
-                        onError: C,
+                        onError: h,
                         onClose: n,
                     }),
                 }),
                 (0, o.jsx)(r.Mi4, {
                     id: u.O.PRE_CONNECT_WAITING,
-                    children: (0, o.jsx)(c.Z, {
+                    children: (0, o.jsx)(l.Z, {
                         isWaitingForConnection: !0,
                         expectedCallbackState: m,
                         onAuthToken: _,
-                        onError: C,
+                        onError: h,
                         onClose: n,
                     }),
                 }),
                 (0, o.jsx)(r.Mi4, {
                     id: u.O.DISCORD_CONSENT,
                     children: (0, o.jsx)(s.Z, {
-                        authToken: j,
-                        onContinue: g,
-                        onError: C,
+                        authToken: O,
+                        onContinue: x,
+                        onError: h,
                         onClose: n,
                     }),
                 }),
                 (0, o.jsx)(r.Mi4, {
                     id: u.O.ERROR,
                     children: (0, o.jsx)(a.Z, {
-                        onContinue: g,
+                        onContinue: x,
                         onClose: n,
                     }),
                 }),

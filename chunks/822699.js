@@ -1,8 +1,8 @@
 n.r(t), n.d(t, { default: () => eC }), n(35282), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(593473),
-    s = n(990547),
+    s = n(593473),
+    l = n(990547),
     a = n(873546),
     o = n(427398),
     c = n(442837),
@@ -10,8 +10,8 @@ var r = n(951288),
     d = n(893776),
     h = n(533307),
     g = n(447543),
-    m = n(126399),
-    p = n(521379),
+    p = n(126399),
+    m = n(521379),
     f = n(765717),
     _ = n(267394),
     x = n(761305),
@@ -21,9 +21,9 @@ var r = n(951288),
     j = n(962220),
     I = n(637776),
     N = n(264229),
-    S = n(677760),
-    O = n(360887),
-    y = n(893607),
+    O = n(677760),
+    y = n(360887),
+    S = n(893607),
     C = n(314897),
     A = n(82142),
     T = n(701190),
@@ -36,8 +36,8 @@ var r = n(951288),
     k = n(721751),
     M = n(223543),
     U = n(73906),
-    B = n(299852),
-    G = n(39514),
+    G = n(299852),
+    B = n(39514),
     F = n(236446),
     z = n(9325),
     V = n(344295),
@@ -82,7 +82,7 @@ function ei(e) {
     }
     return e;
 }
-function el(e, t) {
+function es(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -101,40 +101,40 @@ function el(e, t) {
     );
 }
 n(179645), c.ZP.initialize();
-let es = (0, D.Z)(K.Z),
+let el = (0, D.Z)(K.Z),
     ea = (0, D.Z)(H.Z),
     eo = (0, D.Z)(V.Z),
     ec = (0, D.Z)(F.Z),
-    eu = (0, D.Z)(G.Z),
-    ed = (0, D.Z)(S.Z),
+    eu = (0, D.Z)(B.Z),
+    ed = (0, D.Z)(O.Z),
     eh = (0, D.Z)(q.Z),
     eg = (0, D.Z)(Q.Z),
-    em = (0, D.Z)(M.Z),
-    ep = (0, D.Z)($.Z),
+    ep = (0, D.Z)(M.Z),
+    em = (0, D.Z)($.Z),
     ef = (0, D.Z)(E.Z),
     e_ = (0, D.Z)(J.Z),
-    ex = (0, D.Z)(B.Z),
+    ex = (0, D.Z)(G.Z),
     eE = (0, D.Z)(x.Z),
     ev = (0, D.Z)(I.Z),
     eb = (0, D.Z)(U.Z),
     ej = (0, D.Z)(W.Z),
     eI = (0, D.Z)(X.Z),
     eN = (0, D.Z)(Y.Z),
-    eS = (0, D.Z)(p.Z),
-    eO = (0, D.Z)(O.Z);
-class ey extends i.PureComponent {
+    eO = (0, D.Z)(m.Z),
+    ey = (0, D.Z)(y.Z);
+class eS extends i.PureComponent {
     static getDerivedStateFromProps(e, t) {
         var n;
         let { invite: r, location: i } = e,
-            { backgroundId: s } = t,
-            a = null != (n = (0, l.parse)(i.search).redirect_to) ? n : null;
+            { backgroundId: l } = t,
+            a = null != (n = (0, s.parse)(i.search).redirect_to) ? n : null;
         (null == a || "" === a || !(0, o.B)(a) || a.startsWith(ee.Z5c.ME)) && (a = null);
         let c = null;
         if (null == r) c = (0, R.gK)(a);
         else if ((null == r ? void 0 : r.state) === ee.r2o.RESOLVED) {
             let { guild: e, target_application: t } = r;
             null != t
-                ? null != s && (c = (0, P.xF)(t.id, s, 1024))
+                ? null != l && (c = (0, P.xF)(t.id, l, 1024))
                 : null != e &&
                   "string" == typeof e.splash &&
                   (c = L.ZP.getGuildSplashURL({
@@ -162,7 +162,7 @@ class ey extends i.PureComponent {
             (t || et.a) && this.resolveInvite(),
             this.resolveGiftCode(),
             this.resolveGuildTemplate(),
-            m.Z.initialize();
+            p.Z.initialize();
     }
     componentDidUpdate(e) {
         var t, n;
@@ -171,7 +171,7 @@ class ey extends i.PureComponent {
                 this.maybeFetchApplicationSplash();
     }
     componentWillUnmount() {
-        m.Z.terminate();
+        p.Z.terminate();
     }
     maybeFetchApplicationSplash() {
         let { invite: e } = this.props;
@@ -219,30 +219,30 @@ class ey extends i.PureComponent {
             children: [
                 (0, r.jsx)(f.Z, {
                     path: ee.Z5c.LOGIN_HANDOFF,
-                    render: (e) => (0, r.jsx)(ea, el(ei({}, e), { redirectTo: t })),
+                    render: (e) => (0, r.jsx)(ea, es(ei({}, e), { redirectTo: t })),
                 }),
                 (0, r.jsx)(f.Z, {
                     path: ee.Z5c.LOGIN_ONE_TIME,
-                    render: (e) => (0, r.jsx)(eO, ei({}, e)),
+                    render: (e) => (0, r.jsx)(ey, ei({}, e)),
                 }),
                 (0, r.jsx)(f.Z, {
-                    impressionName: s.ImpressionNames.USER_LOGIN,
+                    impressionName: l.ImpressionNames.USER_LOGIN,
                     path: ee.Z5c.LOGIN,
-                    render: (e) => (0, r.jsx)(es, el(ei({}, e), { redirectTo: t })),
+                    render: (e) => (0, r.jsx)(el, es(ei({}, e), { redirectTo: t })),
                 }),
                 (0, r.jsx)(f.Z, {
-                    impressionName: s.ImpressionNames.USER_REGISTRATION,
+                    impressionName: l.ImpressionNames.USER_REGISTRATION,
                     path: ee.Z5c.REGISTER,
                     render: (e) =>
                         et.a
                             ? (0, r.jsx)(
                                   eo,
-                                  el(ei({}, e), {
+                                  es(ei({}, e), {
                                       redirectTo: t,
                                       inviteKey: n,
                                   }),
                               )
-                            : (0, r.jsx)(eh, el(ei({}, e), { redirectTo: t })),
+                            : (0, r.jsx)(eh, es(ei({}, e), { redirectTo: t })),
                 }),
                 (0, r.jsx)(f.Z, {
                     path: ee.Z5c.GIFT_CODE_LOGIN(":giftCode"),
@@ -261,22 +261,22 @@ class ey extends i.PureComponent {
                                     path: n,
                                 },
                                 location: i,
-                                transitionTo: l,
+                                transitionTo: s,
                             } = e,
-                            s = (0, N.mb)(t, i.search);
+                            l = (0, N.mb)(t, i.search);
                         return a.tq || a.Em
                             ? (0, r.jsx)(
                                   ed,
                                   {
-                                      inviteKey: s,
-                                      transitionTo: l,
+                                      inviteKey: l,
+                                      transitionTo: s,
                                   },
-                                  s,
+                                  l,
                               )
                             : (0, r.jsx)(eo, {
-                                  inviteKey: s,
+                                  inviteKey: l,
                                   location: i,
-                                  transitionTo: l,
+                                  transitionTo: s,
                                   login: n === ee.Z5c.INVITE_LOGIN(":inviteCode"),
                               });
                     },
@@ -293,21 +293,21 @@ class ey extends i.PureComponent {
                                 path: n,
                             },
                             location: i,
-                            transitionTo: l,
+                            transitionTo: s,
                         } = e;
                         return a.tq || a.Em
                             ? (0, r.jsx)(z.Z, { code: t }, t)
                             : (0, r.jsx)(ec, {
                                   code: t,
                                   location: i,
-                                  transitionTo: l,
+                                  transitionTo: s,
                                   login: n === ee.Z5c.GUILD_TEMPLATE_LOGIN(":guildTemplateCode"),
                               });
                     },
                 }),
                 (0, r.jsx)(f.Z, {
                     path: ee.Z5c.VERIFY,
-                    render: (e) => (0, r.jsx)(ep, ei({}, e)),
+                    render: (e) => (0, r.jsx)(em, ei({}, e)),
                 }),
                 (0, r.jsx)(f.Z, {
                     path: ee.Z5c.VERIFY_HUB_EMAIL,
@@ -339,7 +339,7 @@ class ey extends i.PureComponent {
                 }),
                 (0, r.jsx)(f.Z, {
                     path: ee.Z5c.AUTHORIZE_PAYMENT,
-                    render: (e) => (0, r.jsx)(em, ei({}, e)),
+                    render: (e) => (0, r.jsx)(ep, ei({}, e)),
                 }),
                 (0, r.jsx)(f.Z, {
                     path: ee.Z5c.RESET,
@@ -350,7 +350,7 @@ class ey extends i.PureComponent {
                     render: (e) => (0, r.jsx)(ej, ei({}, e)),
                 }),
                 (0, r.jsx)(f.Z, {
-                    path: ee.Z5c.CHANNEL(y.Hw.guildId(), y.Hw.channelId({ optional: !0 }), ":messageId?"),
+                    path: ee.Z5c.CHANNEL(S.Hw.guildId(), S.Hw.channelId({ optional: !0 }), ":messageId?"),
                     render: (e) => (0, r.jsx)(eb, ei({}, e)),
                 }),
                 (0, r.jsx)(f.Z, {
@@ -363,7 +363,7 @@ class ey extends i.PureComponent {
                 }),
                 (0, r.jsx)(f.Z, {
                     path: ee.Z5c.ACCOUNT_REVERT(":token"),
-                    render: (e) => (0, r.jsx)(eS, ei({}, e)),
+                    render: (e) => (0, r.jsx)(eO, ei({}, e)),
                 }),
             ],
         });
@@ -379,10 +379,10 @@ class ey extends i.PureComponent {
 }
 let eC = c.ZP.connectStores([C.default, T.Z, A.Z, v.Z, b.Z], (e) => {
     var t, n, r;
-    let { match: i, location: l } = e,
-        s = null == i || null == (t = i.params) ? void 0 : t.inviteCode,
+    let { match: i, location: s } = e,
+        l = null == i || null == (t = i.params) ? void 0 : t.inviteCode,
         a = et.a ? et.Y : void 0,
-        o = null != s ? (0, N.mb)(s, l.search) : a,
+        o = null != l ? (0, N.mb)(l, s.search) : a,
         c = null == i || null == (n = i.params) ? void 0 : n.giftCode,
         u = null == i || null == (r = i.params) ? void 0 : r.guildTemplateCode;
     return {
@@ -395,4 +395,4 @@ let eC = c.ZP.connectStores([C.default, T.Z, A.Z, v.Z, b.Z], (e) => {
         guildTemplate: null != u ? b.Z.getGuildTemplate(u) : null,
         hasLoadedExperiments: v.Z.hasLoadedExperiments,
     };
-})(ey);
+})(eS);

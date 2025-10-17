@@ -16,8 +16,8 @@ var i = n(442837),
     m = n(998502),
     b = n(620924),
     _ = n(332712),
-    O = n(81471),
-    E = n(388032),
+    E = n(81471),
+    O = n(388032),
     v = n(79072);
 let y = (e) => {
         let { userId: t } = e,
@@ -27,7 +27,7 @@ let y = (e) => {
                   className: v.mutualGuilds,
                   variant: "text-sm/normal",
                   color: "text-muted",
-                  children: E.intl.string(E.t.jpY0X1),
+                  children: O.intl.string(O.t.jpY0X1),
               })
             : (0, r.jsxs)("div", {
                   className: v.mutualGuildsContainer,
@@ -42,7 +42,7 @@ let y = (e) => {
                           className: v.mutualGuilds,
                           variant: "text-sm/normal",
                           color: "text-muted",
-                          children: E.intl.format(E.t.eE3oen, { count: n.length }),
+                          children: O.intl.format(O.t.eE3oen, { count: n.length }),
                       }),
                   ],
               });
@@ -55,7 +55,7 @@ function C(e) {
         _ = (0, i.e7)([h.Z], () => (null == c ? null : h.Z.getNickname(c.id))),
         C = !m && f,
         S = (0, b.c)(n),
-        { avatarDecorationSrc: T } = (0, d.Z)({
+        { avatarDecorationSrc: N } = (0, d.Z)({
             user: c,
             size: (0, u.y9)(l.EFr.SIZE_40),
             onlyAnimateOnHoverOrFocus: !0,
@@ -65,9 +65,9 @@ function C(e) {
             (0, r.jsx)(I, {
                 className: v.avatar,
                 src: (0, p.x)(n, 40, C),
-                avatarDecoration: T,
+                avatarDecoration: N,
                 size: l.EFr.SIZE_40,
-                "aria-label": null != (t = null == c ? void 0 : c.username) ? t : E.intl.string(E.t["30mdIy"]),
+                "aria-label": null != (t = null == c ? void 0 : c.username) ? t : O.intl.string(O.t["30mdIy"]),
             }),
             (0, r.jsxs)("div", {
                 className: v.userPreview,
@@ -92,7 +92,7 @@ function C(e) {
                         ],
                     }),
                     (0, r.jsx)(s.Z, {
-                        hoverText: (0, r.jsx)(O.Z, { channel: n }),
+                        hoverText: (0, r.jsx)(E.Z, { channel: n }),
                         forceHover: f,
                         children: (0, r.jsx)(y, { userId: c.id }),
                     }),

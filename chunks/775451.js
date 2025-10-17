@@ -1,5 +1,5 @@
 n.d(t, {
-    V9: () => b,
+    V9: () => g,
     ek: () => f,
 }),
     n(388685);
@@ -7,8 +7,8 @@ var a = n(951288),
     r = n(647438),
     i = n(120356),
     l = n.n(i),
-    s = n(351773),
-    o = n(507808),
+    o = n(351773),
+    s = n(507808),
     c = n(790542),
     d = n(317257),
     u = n(120786),
@@ -20,13 +20,13 @@ let f = {
         START: x.alignLeft,
         END: x.alignRight,
     },
-    b = (e) => {
+    g = (e) => {
         let {
                 showNotificationBadge: t,
                 ctaText: n,
                 ctaOnClick: i,
-                analyticsPage: b,
-                linkText: g = h.intl.string(h.t.XRdyj4),
+                analyticsPage: g,
+                linkText: b = h.intl.string(h.t.XRdyj4),
                 cardAlignment: v = f.START,
                 className: j,
             } = e,
@@ -38,30 +38,30 @@ let f = {
             P = r.useCallback(() => {
                 let e = !S;
                 e &&
-                    null != b &&
-                    (0, o.Y)({
-                        pageType: b,
+                    null != g &&
+                    (0, s.Y)({
+                        pageType: g,
                         sectionType: p.jXE.ORBS_BALANCE_MENU,
                         ctaObject: p.qAy.OPEN_ORB_BALANCE_MENU_FROM_PILL,
                     }),
                     C(e ? d.b.SELECTED : d.b.DEFAULT),
                     E(e);
-            }, [S, b]),
+            }, [S, g]),
             I = r.useCallback(() => {
                 S && P();
             }, [S, P]),
-            w = (0, s.Z)(null, I),
-            R = r.useMemo(
+            w = (0, o.Z)(null, I),
+            k = r.useMemo(
                 () =>
                     (0, a.jsx)(u.L, {
-                        analyticsPage: b,
+                        analyticsPage: g,
                         ctaText: n,
                         ctaOnClick: () => {
                             P(), i();
                         },
-                        linkText: g,
+                        linkText: b,
                     }),
-                [b, n, g, P, i],
+                [g, n, b, P, i],
             );
         return (0, a.jsxs)("div", {
             className: l()(x.container, j, {
@@ -86,9 +86,9 @@ let f = {
                             [x.visible]: !T,
                         }),
                         ref: w,
-                        children: R,
+                        children: k,
                     }),
             ],
         });
     };
-b.CardAlignment = f;
+g.CardAlignment = f;

@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(287746),
     d = n(541716),
     u = n(665149),
-    h = n(910611),
-    p = n(703656),
+    p = n(910611),
+    h = n(703656),
     f = n(664342),
     g = n(592125),
     m = n(703558),
@@ -41,7 +41,7 @@ function O(e) {
             (0, r.jsx)(u.ZP, {
                 toolbar: S,
                 "aria-label": _.intl.string(_.t.Pwe8tL),
-                children: (0, h.ud)({
+                children: (0, p.ud)({
                     channel: O,
                     parentChannel: x,
                     channelName: C,
@@ -98,7 +98,7 @@ function O(e) {
                         });
                     },
                     handleClick: function () {
-                        null != O && (0, p.XU)(O.guild_id, O.id);
+                        null != O && (0, h.XU)(O.guild_id, O.id);
                     },
                 }),
             }),

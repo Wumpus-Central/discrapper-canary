@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(35282), n(388685), n(539854);
+n.d(t, { Z: () => I }), n(35282), n(388685), n(539854);
 var i = n(951288),
     r = n(647438),
     l = n(120356),
@@ -17,8 +17,8 @@ var i = n(951288),
     x = n(572004),
     j = n(709054),
     v = n(51144),
-    O = n(486199),
-    y = n(981631),
+    y = n(486199),
+    O = n(981631),
     _ = n(388032),
     C = n(632256);
 function N(e) {
@@ -64,32 +64,32 @@ function S(e, t) {
         e
     );
 }
-function I(e, t) {
+function E(e, t) {
     return null != t && /^data:/.test(t)
         ? t
         : (0, h.ov)({
               id: e.id,
               avatar: t,
-              discriminator: y.fo$,
+              discriminator: O.fo$,
           });
 }
-function w(e) {
+function I(e) {
     let {
             id: t,
             webhook: n,
             editedWebhook: l,
             channelOptions: h,
-            isExpanded: w,
-            isNew: E,
-            errors: P,
+            isExpanded: I,
+            isNew: P,
+            errors: w,
             onToggleExpand: T,
         } = e,
         [Z, k] = r.useState(!1),
         [A] = r.useState(new s.V7());
     r.useEffect(() => () => A.stop(), [A]);
-    let D = r.useMemo(() => I(n, n.avatar), [n]),
+    let D = r.useMemo(() => E(n, n.avatar), [n]),
         R = r.useCallback(() => {
-            let e = "".concat((0, o.K0)(!1)).concat(y.ANM.WEBHOOK_INTEGRATION(n.id, n.token));
+            let e = "".concat((0, o.K0)(!1)).concat(O.ANM.WEBHOOK_INTEGRATION(n.id, n.token));
             (0, x.JG)(e);
         }, [n]),
         L = r.useCallback(() => {
@@ -98,25 +98,25 @@ function w(e) {
                     c.ConfirmModal,
                     S(N({}, e), {
                         header: _.intl.formatToPlainString(_.t.QVFjHh, { name: n.name }),
-                        confirmText: _.intl.string(_.t["W+K1Fs"]),
-                        cancelText: _.intl.string(_.t.xNhj0O),
+                        confirmText: _.intl.string(_.t["W+K1Fh"]),
+                        cancelText: _.intl.string(_.t.xNhj0N),
                         onConfirm: () => {
                             p.Z.delete(n.guild_id, n.id).catch((e) => {
                                 let { status: t } = e;
                                 429 === t
                                     ? d.Z.show({
-                                          title: _.intl.string(_.t.N5riYn),
-                                          body: _.intl.string(_.t.eAxcCc),
+                                          title: _.intl.string(_.t.N5riYm),
+                                          body: _.intl.string(_.t.eAxcCQ),
                                       })
                                     : d.Z.show({
-                                          title: _.intl.string(_.t.N5riYn),
-                                          body: _.intl.string(_.t["/4TwKf"]),
+                                          title: _.intl.string(_.t.N5riYm),
+                                          body: _.intl.string(_.t["/4TwKS"]),
                                       });
                             });
                         },
                         children: (0, i.jsx)(c.Text, {
                             variant: "text-md/normal",
-                            children: _.intl.format(_.t["rIWe+5"], { name: n.name }),
+                            children: _.intl.format(_.t["rIWe+/"], { name: n.name }),
                         }),
                     }),
                 ),
@@ -126,7 +126,7 @@ function w(e) {
     null != n.user
         ? M.push({
               icon: c.T39,
-              text: _.intl.formatToPlainString(_.t["7EcUbr"], {
+              text: _.intl.formatToPlainString(_.t["7EcUbm"], {
                   user: ((e) => {
                       if (null == e) return null;
                       let t = new g.Z(e);
@@ -137,11 +137,11 @@ function w(e) {
           })
         : M.push({
               icon: c.T39,
-              text: _.intl.formatToPlainString(_.t["7mv59O"], { timestamp: j.default.extractTimestamp(n.id) }),
+              text: _.intl.formatToPlainString(_.t["7mv59P"], { timestamp: j.default.extractTimestamp(n.id) }),
           });
     let B = null;
     return (
-        w &&
+        I &&
             null != l &&
             (B = (0, i.jsxs)("div", {
                 className: C.body,
@@ -161,15 +161,15 @@ function w(e) {
                                             onChange: (e) => {
                                                 u.Z.updateWebhook({ avatar: e });
                                             },
-                                            makeURL: (e) => I(n, e),
+                                            makeURL: (e) => E(n, e),
                                             imageClassName: C.avatarUploaderInner,
                                             showIcon: !0,
                                         }),
-                                        null != P.avatar && "" !== P.avatar
+                                        null != w.avatar && "" !== w.avatar
                                             ? (0, i.jsx)(c.Text, {
                                                   color: "text-danger",
                                                   variant: "text-sm/normal",
-                                                  children: P.avatar,
+                                                  children: w.avatar,
                                               })
                                             : null,
                                     ],
@@ -184,26 +184,26 @@ function w(e) {
                                                 wrap: !0,
                                                 basis: "50%",
                                                 children: (0, i.jsx)(c.oil, {
-                                                    label: _.intl.string(_.t.ukdxuo),
+                                                    label: _.intl.string(_.t.ukdxur),
                                                     value: l.name,
                                                     onChange: (e) => {
                                                         u.Z.updateWebhook({ name: e });
                                                     },
                                                     maxLength: 80,
-                                                    error: P.name,
+                                                    error: w.name,
                                                 }),
                                             }),
                                             (0, i.jsx)(m.Z.Child, {
                                                 basis: "50%",
                                                 children: (0, i.jsx)("div", {
                                                     children: (0, i.jsx)(c.VcW, {
-                                                        label: _.intl.string(_.t.GK18KJ),
+                                                        label: _.intl.string(_.t.GK18KC),
                                                         value: l.channel_id,
                                                         options: h,
                                                         onChange: (e) => {
                                                             u.Z.updateWebhook({ channelId: e });
                                                         },
-                                                        placeholder: _.intl.string(_.t.r2ptsz),
+                                                        placeholder: _.intl.string(_.t.r2pts7),
                                                     }),
                                                 }),
                                             }),
@@ -214,7 +214,7 @@ function w(e) {
                                         children: [
                                             (0, i.jsx)(c.aML, {
                                                 "data-migration-pending": !0,
-                                                text: _.intl.string(_.t.wwdb3g),
+                                                text: _.intl.string(_.t.wwdb3t),
                                                 forceOpen: Z,
                                                 color: c.r6K.GREEN,
                                                 disableTooltipPointerEvents: !0,
@@ -269,7 +269,7 @@ function w(e) {
                                                                     {
                                                                         variant: "secondary",
                                                                         size: "sm",
-                                                                        text: _.intl.string(_.t.Ae9rUW),
+                                                                        text: _.intl.string(_.t.Ae9rUV),
                                                                     },
                                                                     s,
                                                                 ),
@@ -278,7 +278,7 @@ function w(e) {
                                                                     onClick: () => {
                                                                         null == t || t(),
                                                                             k(!0),
-                                                                            c.uvj.announce(_.intl.string(_.t.wwdb3g)),
+                                                                            c.uvj.announce(_.intl.string(_.t.wwdb3t)),
                                                                             A.start(1000, () => k(!1)),
                                                                             R();
                                                                     },
@@ -292,7 +292,7 @@ function w(e) {
                                             (0, i.jsx)(c.Button, {
                                                 variant: "critical-secondary",
                                                 size: "sm",
-                                                text: _.intl.string(_.t.jVrUnC),
+                                                text: _.intl.string(_.t.jVrUnJ),
                                                 onClick: L,
                                             }),
                                         ],
@@ -306,25 +306,25 @@ function w(e) {
         (0, i.jsx)(c.Zbd, {
             editable: !0,
             id: t,
-            className: a()(C.card, E ? C.pulse : null),
+            className: a()(C.card, P ? C.pulse : null),
             children: (0, i.jsxs)(m.Z, {
                 direction: m.Z.Direction.VERTICAL,
                 children: [
                     (0, i.jsx)(c.P3F, {
                         className: C.header,
-                        "aria-expanded": w,
+                        "aria-expanded": I,
                         onClick: T,
                         children: (0, i.jsxs)(m.Z, {
                             align: m.Z.Align.CENTER,
                             children: [
-                                (0, i.jsx)(O.Z, {
+                                (0, i.jsx)(y.Z, {
                                     name: n.name,
                                     imageSrc: D,
                                     details: M,
                                 }),
                                 (0, i.jsx)(f.Z, {
                                     className: C.expandIcon,
-                                    expanded: w,
+                                    expanded: I,
                                     "aria-hidden": !0,
                                 }),
                             ],

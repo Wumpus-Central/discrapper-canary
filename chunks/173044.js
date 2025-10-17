@@ -19,20 +19,20 @@ function x(e) {
     var t, n, x;
     let { onClose: v } = e,
         { analyticsLocations: j } = (0, o.ZP)(s.Z.GO_LIVE_MODAL_V2),
-        b = (0, d.N)(),
-        S = (0, c.Ng)(),
+        S = (0, d.N)(),
+        b = (0, c.Ng)(),
         y =
-            (null == b || null == (t = b.subscription_trial) ? void 0 : t.sku_id) === h.Si.TIER_2 ||
-            (0, c.Wp)(S, h.Si.TIER_2),
-        O = _.intl.string(m.default["+f+cqq"]);
+            (null == S || null == (t = S.subscription_trial) ? void 0 : t.sku_id) === h.Si.TIER_2 ||
+            (0, c.Wp)(b, h.Si.TIER_2),
+        C = _.intl.string(m.default["+f+cqq"]);
     return (
         y &&
-            (null != b
-                ? (O = (0, f.Rt)({
-                      intervalType: null == b || null == (n = b.subscription_trial) ? void 0 : n.interval,
-                      intervalCount: null == b || null == (x = b.subscription_trial) ? void 0 : x.interval_count,
+            (null != S
+                ? (C = (0, f.Rt)({
+                      intervalType: null == S || null == (n = S.subscription_trial) ? void 0 : n.interval,
+                      intervalCount: null == S || null == (x = S.subscription_trial) ? void 0 : x.interval_count,
                   }))
-                : null != S && (O = _.intl.formatToPlainString(_.t.bkQ4bG, { percent: S.discount.amount }))),
+                : null != b && (C = _.intl.formatToPlainString(_.t.bkQ4bG, { percent: b.discount.amount }))),
         (0, r.jsxs)("div", {
             className: g.root,
             children: [
@@ -67,7 +67,7 @@ function x(e) {
                         v();
                     },
                     textOptions: {
-                        subscribeText: O,
+                        subscribeText: C,
                         textClassName: g.ctaButtonText,
                     },
                 }),

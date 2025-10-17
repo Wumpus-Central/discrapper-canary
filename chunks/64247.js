@@ -8,18 +8,18 @@ var i = n(481060),
     o = n(723170),
     c = n(124368);
 function d(e) {
-    let { channel: t, closePopout: n, onSelect: d, navId: u, label: h } = e,
-        p = (0, l.Z)(t, "Notifications Bell"),
+    let { channel: t, closePopout: n, onSelect: d, navId: u, label: p } = e,
+        h = (0, l.Z)(t, "Notifications Bell"),
         f = (0, a.Z)(t),
         g = (0, o.B)(t);
     return (0, r.jsxs)(i.v2r, {
         navId: u,
         onClose: n,
-        "aria-label": h,
+        "aria-label": p,
         onSelect: d,
         children: [
             (0, r.jsxs)(i.kSQ, {
-                children: [t.isForumPost() ? p : null, f],
+                children: [t.isForumPost() ? h : null, f],
             }),
             (0, r.jsx)(i.kSQ, {
                 children: (0, c.zb)().map((e) => {

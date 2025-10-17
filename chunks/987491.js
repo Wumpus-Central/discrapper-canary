@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L });
+n.d(t, { Z: () => k });
 var l = n(951288),
     r = n(647438),
     i = n(120356),
@@ -20,9 +20,9 @@ var l = n(951288),
     _ = n(223312),
     C = n(172751),
     E = n(768762),
-    N = n(892001),
-    S = n(598077),
-    T = n(430824),
+    S = n(892001),
+    T = n(598077),
+    N = n(430824),
     P = n(51144),
     O = n(388032),
     I = n(106682),
@@ -35,13 +35,13 @@ function A(e) {
         { status: r } = e;
     switch (r) {
         case f.wB.REJECTED:
-            (t = O.t["7YSJ6f"]), (n = O.t.i05OUR);
+            (t = O.t["7YSJ6e"]), (n = O.t.i05OUV);
             break;
         case f.wB.APPROVED:
-            (t = O.t.bv82GS), (n = O.t.D4OUHT);
+            (t = O.t.bv82GR), (n = O.t.D4OUHR);
             break;
         default:
-            (t = O.t["/wqiSv"]), (n = O.t.o47YZs);
+            (t = O.t["/wqiSk"]), (n = O.t.o47YZm);
     }
     return (0, l.jsxs)("div", {
         className: I.emptyContainer,
@@ -63,7 +63,7 @@ function A(e) {
         ],
     });
 }
-function M(e) {
+function Z(e) {
     let { sortOrder: t, onSortChange: n } = e;
     return (0, l.jsx)("thead", {
         children: (0, l.jsxs)("tr", {
@@ -74,7 +74,7 @@ function M(e) {
                     children: (0, l.jsx)(u.Text, {
                         variant: "eyebrow",
                         color: "interactive-normal",
-                        children: O.intl.string(O.t.Es7n9c),
+                        children: O.intl.string(O.t.Es7n9f),
                     }),
                 }),
                 (0, l.jsx)("th", {
@@ -86,7 +86,7 @@ function M(e) {
                             (0, l.jsx)(u.Text, {
                                 variant: "eyebrow",
                                 color: "interactive-normal",
-                                children: O.intl.string(O.t.EZ5QWL),
+                                children: O.intl.string(O.t.EZ5QWF),
                             }),
                             t === f.Nw.TIMESTAMP_ASC
                                 ? (0, l.jsx)(E.Z, {
@@ -105,14 +105,14 @@ function M(e) {
                     children: (0, l.jsx)(u.Text, {
                         variant: "eyebrow",
                         color: "interactive-normal",
-                        children: O.intl.string(O.t["5Q9xGr"]),
+                        children: O.intl.string(O.t["5Q9xGh"]),
                     }),
                 }),
             ],
         }),
     });
 }
-let Z = r.memo(function (e) {
+let M = r.memo(function (e) {
         let { joinRequest: t, user: n } = e,
             { joinRequestId: i, guildId: a } = t,
             { analyticsLocations: s } = (0, j.ZP)(),
@@ -120,7 +120,7 @@ let Z = r.memo(function (e) {
                 (e) => {
                     e.stopPropagation(),
                         e.preventDefault(),
-                        (0, N.openUserProfileModal)({
+                        (0, S.openUserProfileModal)({
                             userId: n.id,
                             joinRequestId: i,
                             sourceAnalyticsLocations: s,
@@ -174,9 +174,9 @@ let Z = r.memo(function (e) {
     D = r.memo(function (e) {
         let { joinRequest: t, onSelect: i } = e,
             { guildId: s, createdAt: x, applicationStatus: j } = t,
-            b = r.useMemo(() => new S.Z(t.user), [t.user]),
+            b = r.useMemo(() => new T.Z(t.user), [t.user]),
             h = (0, p.L)({ guildId: s }),
-            g = (0, c.e7)([T.Z], () => T.Z.getGuild(s)),
+            g = (0, c.e7)([N.Z], () => N.Z.getGuild(s)),
             v = j === f.wB.SUBMITTED;
         return null == b
             ? null
@@ -187,7 +187,7 @@ let Z = r.memo(function (e) {
                   }),
                   children: [
                       (0, l.jsx)("td", {
-                          children: (0, l.jsx)(Z, {
+                          children: (0, l.jsx)(M, {
                               joinRequest: t,
                               user: b,
                           }),
@@ -205,7 +205,7 @@ let Z = r.memo(function (e) {
                           children:
                               v &&
                               (0, l.jsx)(d.u, {
-                                  text: O.intl.string(O.t.x8Nn4M),
+                                  text: O.intl.string(O.t.x8Nn4O),
                                   children: (0, l.jsx)(u.P3F, {
                                       onClick: (e) => {
                                           (0, m.jW)(
@@ -293,7 +293,7 @@ let Z = r.memo(function (e) {
                   ],
               });
     }),
-    k = () => {
+    G = () => {
         let e = "".concat(Math.floor(50 * Math.random()) + 100, "px"),
             t = "".concat(Math.floor(50 * Math.random()) + 100, "px"),
             n = "".concat(Math.floor(25 * Math.random()) + 50, "px");
@@ -333,10 +333,10 @@ let Z = r.memo(function (e) {
             ],
         });
     };
-function L(e) {
+function k(e) {
     let { guildId: t, currentTab: n } = e,
         i = r.useRef(null),
-        a = (0, c.e7)([T.Z], () => T.Z.getGuild(t)),
+        a = (0, c.e7)([N.Z], () => N.Z.getGuild(t)),
         s = (0, v.C)({ guildId: t }),
         o = (0, c.e7)([h.Z], () => h.Z.isFetching()),
         { guildJoinRequests: d } = (0, _.j)({
@@ -363,13 +363,13 @@ function L(e) {
                   children: (0, l.jsxs)("table", {
                       className: I.table,
                       children: [
-                          (0, l.jsx)(M, {
+                          (0, l.jsx)(Z, {
                               sortOrder: s,
                               onSortChange: x,
                           }),
                           (0, l.jsx)("tbody", {
                               children: o
-                                  ? [, , , , ,].fill(0).map((e, t) => (0, l.jsx)(k, {}, "placeholder-".concat(t)))
+                                  ? [, , , , ,].fill(0).map((e, t) => (0, l.jsx)(G, {}, "placeholder-".concat(t)))
                                   : 0 === d.length
                                     ? (0, l.jsx)("td", {
                                           colSpan: 3,

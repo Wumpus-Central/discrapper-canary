@@ -13,8 +13,8 @@ var r,
     u = n(695346),
     d = n(885110),
     p = n(223730),
-    h = n(933554),
-    f = n(388032),
+    f = n(933554),
+    h = n(388032),
     g = n(87587),
     m = n(354810);
 function b(e) {
@@ -25,7 +25,7 @@ function b(e) {
         children: (0, i.jsx)(s.Button, {
             variant: "primary",
             size: "sm",
-            text: f.intl.string(h.default.Poezn5),
+            text: h.intl.string(f.default.Poezn5),
             onClick: () => {
                 t(), (0, c.Z)({ nextStatus: s.Skl.ONLINE });
             },
@@ -45,7 +45,7 @@ function _(e) {
                     (0, i.jsx)(s.Text, {
                         variant: "text-sm/medium",
                         color: "header-primary",
-                        children: f.intl.string(h.default.WhdCGB),
+                        children: h.intl.string(f.default.WhdCGB),
                     }),
                     n &&
                         (0, i.jsxs)("div", {
@@ -60,8 +60,8 @@ function _(e) {
                                     color: "text-secondary",
                                     children:
                                         r === s.Skl.INVISIBLE
-                                            ? f.intl.string(h.default.a3AofX)
-                                            : f.intl.string(f.t.WbGtnJ),
+                                            ? h.intl.string(f.default.a3AofX)
+                                            : h.intl.string(h.t.WbGtnJ),
                                 }),
                             ],
                         }),
@@ -76,7 +76,7 @@ function _(e) {
         ],
     });
 }
-function y(e) {
+function O(e) {
     let { children: t } = e,
         n = (0, l.useRef)(null);
     return (
@@ -91,16 +91,16 @@ function y(e) {
         })
     );
 }
-function O(e) {
+function y(e) {
     let { closePopout: t } = e,
         n = u.G6.useSetting();
-    return (0, i.jsxs)(y, {
+    return (0, i.jsxs)(O, {
         children: [
             (0, i.jsx)(_, { showCurrentGame: n }),
             (0, i.jsx)(s.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: f.intl.string(h.default["7cfFoa"]),
+                children: h.intl.string(f.default["7cfFoa"]),
             }),
             (0, i.jsx)(s.izJ, { className: g.divider }),
             (0, i.jsx)(p.yj, { onClosePopout: t }),
@@ -109,7 +109,7 @@ function O(e) {
 }
 function v(e) {
     let { closePopout: t } = e;
-    return (0, i.jsxs)(y, {
+    return (0, i.jsxs)(O, {
         children: [
             (0, i.jsxs)(s.Kqy, {
                 align: "start",
@@ -120,7 +120,7 @@ function v(e) {
                         variant: "heading-sm/semibold",
                         color: "header-primary",
                         className: g.controlTitle,
-                        children: f.intl.string(h.default["5YsmGB"]),
+                        children: h.intl.string(f.default["5YsmGB"]),
                     }),
                     (0, i.jsxs)("div", {
                         className: g.toggleContainerOnlineRow,
@@ -132,7 +132,7 @@ function v(e) {
                             (0, i.jsx)(s.Text, {
                                 variant: "text-xs/normal",
                                 color: "text-secondary",
-                                children: f.intl.string(h.default.U8MFdX),
+                                children: h.intl.string(f.default.U8MFdX),
                             }),
                         ],
                     }),
@@ -141,7 +141,7 @@ function v(e) {
             (0, i.jsx)(s.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: f.intl.string(h.default.Yl0mh4),
+                children: h.intl.string(f.default.Yl0mh4),
             }),
             (0, i.jsx)(b, { closePopout: t }),
         ],
@@ -150,7 +150,7 @@ function v(e) {
 function j(e) {
     let { closePopout: t } = e,
         n = u.G6.useSetting();
-    return (0, i.jsxs)(y, {
+    return (0, i.jsxs)(O, {
         children: [
             (0, i.jsx)(_, {
                 showCurrentGame: n,
@@ -159,7 +159,7 @@ function j(e) {
             (0, i.jsx)(s.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: f.intl.string(h.default["7cfFoa"]),
+                children: h.intl.string(f.default["7cfFoa"]),
             }),
             (0, i.jsx)(s.izJ, { className: g.divider }),
             (0, i.jsx)(p.yj, { onClosePopout: t }),
@@ -178,32 +178,32 @@ function C(e) {
     let { showPopout: t, popoutState: n, handleClose: r, popoutTargetRef: o, children: d } = e,
         [g, b] = (0, l.useState)(n),
         _ = (0, l.useRef)(null),
-        y = (function (e) {
+        O = (function (e) {
             if (null === e) return null;
             switch (e) {
                 case 0:
                     return {
                         type: "popover",
-                        title: f.intl.string(h.default.vxVbGB),
-                        body: [f.intl.string(h.default["7cfFoa"])],
+                        title: h.intl.string(f.default.vxVbGB),
+                        body: [h.intl.string(f.default["7cfFoa"])],
                         action: {
-                            text: f.intl.string(h.default.k4tCg4),
+                            text: h.intl.string(f.default.k4tCg4),
                             onClick: () => {
                                 u.G6.updateSetting(!0);
                             },
                         },
                         textLink: {
-                            text: f.intl.string(f.t["ZrN+DQ"]),
+                            text: h.intl.string(h.t["ZrN+DQ"]),
                             onClick: p.S$,
                         },
                     };
                 case 1:
                     return {
                         type: "popover",
-                        title: f.intl.string(h.default.qKDqen),
-                        body: [f.intl.string(h.default.Yl0mh4)],
+                        title: h.intl.string(f.default.qKDqen),
+                        body: [h.intl.string(f.default.Yl0mh4)],
                         action: {
-                            text: f.intl.string(h.default.Poezn5),
+                            text: h.intl.string(f.default.Poezn5),
                             onClick: () => {
                                 (0, c.Z)({ nextStatus: s.Skl.ONLINE });
                             },
@@ -212,23 +212,23 @@ function C(e) {
                 case 2:
                     return {
                         type: "popover",
-                        title: f.intl.string(h.default["6cA8HR"]),
-                        body: [f.intl.string(h.default["7cfFoa"])],
+                        title: h.intl.string(f.default["6cA8HR"]),
+                        body: [h.intl.string(f.default["7cfFoa"])],
                         action: {
-                            text: f.intl.string(h.default.k4tCg4),
+                            text: h.intl.string(f.default.k4tCg4),
                             onClick: () => {
                                 u.G6.updateSetting(!0), (0, c.Z)({ nextStatus: s.Skl.ONLINE });
                             },
                         },
                         textLink: {
-                            text: f.intl.string(f.t["ZrN+DQ"]),
+                            text: h.intl.string(h.t["ZrN+DQ"]),
                             onClick: p.S$,
                         },
                     };
                 case 3:
                     return {
                         type: "popout",
-                        children: O,
+                        children: y,
                     };
                 case 4:
                     return {
@@ -249,12 +249,12 @@ function C(e) {
         ((0, l.useEffect)(() => {
             t && !x.current && b(n), t !== x.current && (x.current = t);
         }, [n, t]),
-        null == y || !t)
+        null == O || !t)
     )
         return d;
-    if ("popover" === y.type) {
+    if ("popover" === O.type) {
         var C, E;
-        let { action: e, title: t, body: n, textLink: l } = y;
+        let { action: e, title: t, body: n, textLink: l } = O;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(a.J2, {
@@ -323,7 +323,7 @@ function C(e) {
             ],
         });
     }
-    let { children: S } = y;
+    let { children: S } = O;
     return (0, i.jsx)(s.yRy, {
         targetElementRef: _,
         shouldShow: !0,

@@ -2,19 +2,19 @@ n.d(t, { Z: () => a }), n(35282);
 var r = n(951288);
 n(647438);
 var i = n(3570),
-    l = n(685311),
-    s = n(186901);
+    s = n(685311),
+    l = n(186901);
 let a = function (e) {
     let { match: t, location: n } = e,
         a = async (e, t) => {
-            await (0, i.s)(s.jE.CHANNEL, {
+            await (0, i.s)(l.jE.CHANNEL, {
                 guildId: e.params.guildId,
                 channelId: e.params.channelId,
                 messageId: e.params.messageId,
                 search: t.search,
             });
         };
-    return (0, r.jsx)(l.Z, {
+    return (0, r.jsx)(s.Z, {
         match: t,
         location: n,
         attemptDeepLink: a,

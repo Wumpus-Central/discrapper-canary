@@ -102,8 +102,8 @@ let A = {},
         [E.bL.ONLY_MENTIONS]: S(I({}, L), { message_notifications: E.bL.ONLY_MENTIONS }),
     },
     M = {},
-    j = {},
-    k = "null",
+    k = {},
+    j = "null",
     U = new Set(),
     G = new Set(),
     B = {},
@@ -125,7 +125,7 @@ function F(e, t) {
         var t;
         return _.yE(null != (t = e.flags) ? t : 0, O.ic.OPT_IN_ENABLED);
     });
-    (j[e] = new Set(l.map((e) => e.channel_id))), H(e), delete C[e];
+    (k[e] = new Set(l.map((e) => e.channel_id))), H(e), delete C[e];
 }
 function V(e, t) {
     !0 === t.muted &&
@@ -153,7 +153,7 @@ function V(e, t) {
 function H(e) {
     var t;
     if (null == e) return;
-    let n = new Set(j[e]),
+    let n = new Set(k[e]),
         r = null != (t = B[e]) ? t : {};
     for (let e in r) {
         let t = r[e];
@@ -218,7 +218,7 @@ function $(e) {
         0 !== e.userGuildSettings.length &&
         ((A = {}),
         (M = {}),
-        (j = {}),
+        (k = {}),
         e.userGuildSettings.forEach((e) => {
             let t = e.guild_id;
             A[t] = e;
@@ -229,11 +229,11 @@ function $(e) {
                 let a = e.channel_overrides[t];
                 (0, l.m$)(a) && n.add(t), _.yE(null != (i = a.flags) ? i : 0, O.ic.OPT_IN_ENABLED) && r.add(t);
             }
-            (M[t] = n), (j[t] = r);
+            (M[t] = n), (k[t] = r);
         }));
 }
 function ee(e) {
-    er(e.notificationSettings), w.reset(), D.reset(), e.userGuildSettings.partial || ((A = {}), (M = {}), (j = {}));
+    er(e.notificationSettings), w.reset(), D.reset(), e.userGuildSettings.partial || ((A = {}), (M = {}), (k = {}));
     let t = new Set();
     for (let n in (e.userGuildSettings.entries.forEach((e) => {
         let n = e;
@@ -249,12 +249,12 @@ function et(e) {
         { userGuildSettings: n, mutedChannels: r, optedInChannelsByGuild: i } = t;
     (A = I({}, n)),
         (M = {}),
-        (j = {}),
+        (k = {}),
         p.default.keys(r).forEach((e) => {
             M[e] = new Set(r[e]);
         }),
         p.default.keys(i).forEach((e) => {
-            j[e] = new Set(i[e]);
+            k[e] = new Set(i[e]);
         });
 }
 function en(e) {
@@ -329,7 +329,7 @@ class eh extends (r = o.ZP.PersistedStore) {
             (N = null != (t = e.useNewNotifications) && t),
                 "userGuildSettings" in e &&
                     ((A = e.userGuildSettings),
-                    (j = a().mapValues(null != (n = e.optedInChannelsByGuild) ? n : {}, (e) => new Set(e))),
+                    (k = a().mapValues(null != (n = e.optedInChannelsByGuild) ? n : {}, (e) => new Set(e))),
                     a().forEach(A, (e, t) => {
                         M[t] = ef(e);
                     }));
@@ -449,7 +449,7 @@ class eh extends (r = o.ZP.PersistedStore) {
         return {
             userGuildSettings: A,
             mutedChannels: M,
-            optedInChannelsByGuild: j,
+            optedInChannelsByGuild: k,
         };
     }
     getChannelIdFlags(e, t) {
@@ -500,7 +500,7 @@ class eh extends (r = o.ZP.PersistedStore) {
             ? null != (t = c.Z.getViewingChannels(e))
                 ? t
                 : G
-            : null != (n = j[e])
+            : null != (n = k[e])
               ? n
               : G;
     }
@@ -540,7 +540,7 @@ class eh extends (r = o.ZP.PersistedStore) {
     }
     getAddedToMessages() {
         var e;
-        return null != (e = j[k]) ? e : G;
+        return null != (e = k[j]) ? e : G;
     }
     get accountNotificationSettings() {
         return P;

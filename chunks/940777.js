@@ -9,14 +9,14 @@ var r = n(951288),
     u = n(493683),
     d = n(239091),
     p = n(317381),
-    h = n(16609),
-    f = n(276952),
+    f = n(16609),
+    h = n(276952),
     g = n(682662),
     m = n(674552),
     b = n(593364),
     _ = n(905423),
-    y = n(199902),
-    O = n(592125),
+    O = n(199902),
+    y = n(592125),
     v = n(944486),
     j = n(979651),
     x = n(709054),
@@ -70,18 +70,18 @@ function R() {
             favoriteServerMuted: C.Z.favoriteServerMuted,
         })),
         U = (0, s.e7)([v.Z], () => v.Z.getChannelId(N.I_8)),
-        B = (0, s.e7)([O.Z], () => O.Z.getChannel(U)),
-        V = (0, _.Z)((e) => e.guildId) === N.I_8,
-        { badge: F, unread: H } = (0, S.Z)(G),
+        B = (0, s.e7)([y.Z], () => y.Z.getChannel(U)),
+        F = (0, _.Z)((e) => e.guildId) === N.I_8,
+        { badge: V, unread: H } = (0, S.Z)(G),
         z = (function (e) {
             let t = (0, s.e7)([v.Z], () => v.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
-                r = (0, s.e7)([y.Z], () => {
+                r = (0, s.e7)([O.Z], () => {
                     if (!n) return !1;
-                    let t = y.Z.getCurrentUserActiveStream();
+                    let t = O.Z.getCurrentUserActiveStream();
                     return null != t && null != e[t.channelId];
                 }),
-                i = (0, s.e7)([y.Z], () => y.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
+                i = (0, s.e7)([O.Z], () => O.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
                 l = (0, s.e7)([j.Z], () => n && null != t && j.Z.hasVideo(t), [n, t]),
                 o = (0, s.Wu)([p.ZP], () =>
                     x.default.keys(e).reduce((e, t) => (e.push(...p.ZP.getEmbeddedActivitiesForChannel(t)), e), []),
@@ -89,35 +89,35 @@ function R() {
                 a = (0, s.e7)([p.ZP], () =>
                     Array.from(p.ZP.getSelfEmbeddedActivities().values()).some((t) => {
                         let { location: n } = t,
-                            r = (0, h.p)(n);
+                            r = (0, f.p)(n);
                         return null != r && null != e[r];
                     }),
                 ),
                 c = o.length > 0,
                 u = !1,
                 d = !1,
-                f = !1,
+                h = !1,
                 g = !1;
             return (
-                n ? ((u = !l), (d = l), (f = r), (g = a)) : ((f = i), (g = c)),
+                n ? ((u = !l), (d = l), (h = r), (g = a)) : ((h = i), (g = c)),
                 (0, m.Or)({
                     audio: u,
                     video: d,
-                    screenshare: f,
+                    screenshare: h,
                     liveStage: !1,
                     isCurrentUserConnected: n,
                     activity: g,
                 })
             );
         })(G),
-        W = F > 0 ? (0, b.N)(F) : null,
+        W = V > 0 ? (0, b.N)(V) : null,
         K = i.useCallback(() => {
             D();
         }, [D]);
     return (0, r.jsxs)(g.H, {
         children: [
-            (0, r.jsx)(f.Z, {
-                selected: V,
+            (0, r.jsx)(h.Z, {
+                selected: F,
                 hovered: L,
                 unread: H && !k,
                 className: w.pill,
@@ -136,14 +136,14 @@ function R() {
                                 {
                                     ariaLabel: Z.intl.formatToPlainString(Z.t["/uzRsr"], {
                                         guildName: Z.intl.string(Z.t.wMWycn),
-                                        mentions: F,
+                                        mentions: V,
                                     }),
-                                    "aria-selected": V,
+                                    "aria-selected": F,
                                     to: {
                                         pathname: N.Z5c.CHANNEL(N.I_8, U),
                                         state: A,
                                     },
-                                    selected: V || L,
+                                    selected: F || L,
                                     onMouseEnter: () => M(!0),
                                     onMouseLeave: () => M(!1),
                                     onMouseDown: function () {

@@ -80,7 +80,7 @@ function L(e, t) {
 }
 let x = 25,
     M = 720;
-function j() {
+function k() {
     return [
         {
             name: N.intl.string(N.t.Sp2NFx),
@@ -88,7 +88,7 @@ function j() {
         },
     ];
 }
-function k(e) {
+function j(e) {
     let {
         icon: t,
         onClick: n,
@@ -268,7 +268,7 @@ function Z(e) {
         text: l,
         className: R.newBackgroundTooltipContainer,
         children: [
-            (0, r.jsxs)(k, {
+            (0, r.jsxs)(j, {
                 className: R.__invalid_backgroundOptionBlurred,
                 disabled: i,
                 icon: c.FmF,
@@ -324,7 +324,7 @@ function V(e) {
     let { onAddBackgroundImage: t, disabled: i } = e,
         a = (0, c.vRw)(),
         o = i ? N.intl.formatToPlainString(N.t.ykGFeH, { maxCustomBackgrounds: x }) : N.intl.string(N.t.Qx0tFR),
-        s = j();
+        s = k();
     function l() {
         (0, c.ZDy)(
             async () => {
@@ -388,13 +388,13 @@ function H(e) {
         children: (0, r.jsxs)("div", {
             className: d ? R.backgroundOptionsSmall : R.backgroundOptionsLarge,
             children: [
-                (0, r.jsx)(k, {
+                (0, r.jsx)(j, {
                     selected: null == a,
                     icon: c.t6m,
                     onClick: () => o(null),
                     text: N.intl.string(N.t.fUdMeH),
                 }),
-                (0, r.jsx)(k, {
+                (0, r.jsx)(j, {
                     selected: a === I.f7,
                     icon: c.yMH,
                     onClick: () => o(I.f7),

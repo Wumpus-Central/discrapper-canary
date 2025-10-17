@@ -1,6 +1,6 @@
 n.d(t, {
-    d: () => N,
-    k: () => C,
+    d: () => C,
+    k: () => y,
 }),
     n(388685);
 var i = n(951288),
@@ -12,16 +12,16 @@ var i = n(951288),
     d = n(43267),
     u = n(933557),
     c = n(210887),
-    h = n(430824),
-    g = n(751771),
+    g = n(430824),
+    h = n(751771),
     m = n(699516),
-    p = n(594174),
-    v = n(768581),
+    v = n(594174),
+    p = n(768581),
     x = n(624138),
     I = n(51144),
     S = n(388032),
-    y = n(451964);
-function j(e, t, n) {
+    f = n(451964);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,8 +34,8 @@ function j(e, t, n) {
         e
     );
 }
-let C = 44;
-class N extends l.Component {
+let y = 44;
+class C extends l.Component {
     shouldComponentUpdate(e, t) {
         return (
             this.state.sending !== t.sending ||
@@ -53,12 +53,12 @@ class N extends l.Component {
         if (null != l) (t = l.getAvatarURL(null == s ? void 0 : s.guild_id, 32)), (n = I.ZP.getName(l));
         else if (
             null != s &&
-            ((t = (0, d.x)(s)), (n = (0, u.F6)(s, p.default, m.Z)), null == t && null != s.guild_id)
+            ((t = (0, d.x)(s)), (n = (0, u.F6)(s, v.default, m.Z)), null == t && null != s.guild_id)
         ) {
-            let n = h.Z.getGuild(s.guild_id);
+            let n = g.Z.getGuild(s.guild_id);
             null != n &&
                 (null != n.icon
-                    ? (t = v.ZP.getGuildIconURL({
+                    ? (t = p.ZP.getGuildIconURL({
                           id: s.guild_id,
                           icon: n.icon,
                           size: 32,
@@ -69,7 +69,7 @@ class N extends l.Component {
             if (null != e)
                 return (0, i.jsx)(r.Text, {
                     variant: "text-md/medium",
-                    className: y.acronym,
+                    className: f.acronym,
                     "aria-hidden": !0,
                     children: e,
                 });
@@ -78,7 +78,7 @@ class N extends l.Component {
             src: t,
             "aria-label": n,
             size: r.EFr.SIZE_32,
-            className: y.inviteRowAvatar,
+            className: f.inviteRowAvatar,
         });
     }
     render() {
@@ -97,24 +97,24 @@ class N extends l.Component {
                 : (0, i.jsx)(a.zx, {
                       color: a.zx.Colors.GREEN,
                       look: o ? a.zx.Looks.FILLED : a.zx.Looks.OUTLINED,
-                      className: y.inviteRowButton,
+                      className: f.inviteRowButton,
                       size: a.zx.Sizes.SMALL,
                       submitting: l,
                       onClick: this.handleClickInvite,
                       children: S.intl.string(S.t.jYnGPD),
                   })),
             (0, i.jsxs)("div", {
-                className: y.inviteRow,
+                className: f.inviteRow,
                 onMouseEnter: this.handleMouseEnter,
                 onMouseLeave: this.handleMouseLeave,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: y.inviteRowInfo,
+                        className: f.inviteRowInfo,
                         children: [
                             this.renderUserOrChannel(),
                             (0, i.jsxs)("div", {
-                                className: y.inviteRowName,
-                                children: [I.ZP.getName(t), null != n ? (0, u.F6)(n, p.default, m.Z, !0) : null],
+                                className: f.inviteRowName,
+                                children: [I.ZP.getName(t), null != n ? (0, u.F6)(n, v.default, m.Z, !0) : null],
                             }),
                         ],
                     }),
@@ -125,26 +125,26 @@ class N extends l.Component {
     }
     constructor(...e) {
         super(...e),
-            j(this, "state", {
+            E(this, "state", {
                 sending: !1,
                 invited: !1,
                 hovered: !1,
             }),
-            j(this, "handleMouseEnter", () => {
+            E(this, "handleMouseEnter", () => {
                 this.setState({ hovered: !0 });
             }),
-            j(this, "handleMouseLeave", () => {
+            E(this, "handleMouseLeave", () => {
                 this.setState({ hovered: !1 });
             }),
-            j(this, "getInviteAnalyticsMetadata", () => {
+            E(this, "getInviteAnalyticsMetadata", () => {
                 let { row: e, source: t } = this.props;
                 if (null != e)
                     return {
-                        suggestionData: g.Z.getSelectedInviteMetadata(e),
+                        suggestionData: h.Z.getSelectedInviteMetadata(e),
                         source: t,
                     };
             }),
-            j(this, "handleClickInvite", () => {
+            E(this, "handleClickInvite", () => {
                 let { user: e, channel: t, inviteKey: n, location: i } = this.props;
                 null != n &&
                     (null != t

@@ -95,12 +95,12 @@ function M(e) {
         (e.pathname.toLowerCase().endsWith(".webp") || e.pathname.toLowerCase().endsWith(".avif"))
     );
 }
-function j(e) {
+function k(e) {
     return ((0, g._M)(e) || (0, g.MO)(e)) && e.pathname.toLowerCase().endsWith(".gif");
 }
-function k(e) {
+function j(e) {
     let t = b.Z.toURLSafe(e),
-        n = null != t && j(t);
+        n = null != t && k(t);
     return null != t && (M(t) || n)
         ? (n && t.searchParams.set("format", "webp"), t.searchParams.set("animated", "true"), t.toString())
         : e;
@@ -145,7 +145,7 @@ class U extends i.PureComponent {
             { loaded: i } = this.state;
         return i
             ? (0, r.jsx)("img", {
-                  src: k(e),
+                  src: j(e),
                   width: t,
                   height: n,
                   className: I.gif,

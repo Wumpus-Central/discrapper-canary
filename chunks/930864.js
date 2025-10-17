@@ -81,7 +81,7 @@ function M() {
     });
 }
 function D(e) {
-    var { message: t, initialSelectedDestinations: D, forwardOptions: E, onClose: F, onRequestSent: N } = e,
+    var { message: t, initialSelectedDestinations: D, forwardOptions: F, onClose: E, onRequestSent: N } = e,
         A = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -105,7 +105,7 @@ function D(e) {
         })(e, ["message", "initialSelectedDestinations", "forwardOptions", "onClose", "onRequestSent"]);
     let { channel_id: L, id: V } = t,
         W = a.useMemo(() => (0, g.dL)(L), [L]),
-        [U, G] = a.useState(!1),
+        [G, U] = a.useState(!1),
         B = (0, s.e7)([b.Z], () => {
             var e;
             return null != (e = b.Z.getMessage(t.channel_id, t.id)) ? e : t;
@@ -151,8 +151,8 @@ function D(e) {
                 numDestinationChanges: Q.current,
                 numQueryChanges: q.current,
             }),
-                await F();
-        }, [L, V, F]),
+                await E();
+        }, [L, V, E]),
         eg = a.useRef(null);
     a.useEffect(() => {
         if ("" === ei) {
@@ -200,7 +200,7 @@ function D(e) {
                     c = null != (a = b.Z.getMessage(L, V)) ? a : t;
                 if (null == c)
                     return void (0, o.showToast)((0, o.createToast)(I.intl.string(I.t.R0RpRU), o.ToastType.FAILURE));
-                G(!0);
+                U(!0);
                 let u = (await Promise.all(e.map(g.qx))).filter(_.lm);
                 if (
                     (0, P.Z)(c, u) &&
@@ -218,13 +218,13 @@ function D(e) {
                         });
                     }))
                 )
-                    return void G(!1);
+                    return void U(!1);
                 s && (0, O.mc)(),
                     null == N || N(),
                     i &&
                         (await d.Z.fetchMessages({ channelId: u[0] }),
                         (0, m.Kh)(u[0], { openTextInVoiceIfVoiceChannel: !0 }));
-                let h = await v.Z.sendForwards(c, u, T(k({}, E), { withMessage: r })),
+                let h = await v.Z.sendForwards(c, u, T(k({}, F), { withMessage: r })),
                     f = u.some((e) => {
                         let t = w.Z.getChannel(e);
                         return null != t && t.rateLimitPerUser > 0;
@@ -262,10 +262,10 @@ function D(e) {
                 (0, O.Np)({
                     message: c,
                     failedDestinations: p,
-                    forwardOptions: E,
+                    forwardOptions: F,
                 });
             },
-            [L, E, V, t, N, ef],
+            [L, F, V, t, N, ef],
         ),
         eb = a.useCallback(
             (e) => {
@@ -321,7 +321,7 @@ function D(e) {
                 children: [
                     (0, l.jsx)(j.O, {
                         message: B,
-                        forwardOptions: E,
+                        forwardOptions: F,
                         channel: ee,
                     }),
                     ea.length > 0 &&
@@ -341,7 +341,7 @@ function D(e) {
                 message: B,
                 canSend: J > 0,
                 selectedDestinations: X,
-                isSending: U,
+                isSending: G,
                 onSend: eb,
                 inputValue: en,
                 setInputValue: el,
@@ -352,7 +352,7 @@ function D(e) {
                     text: ey,
                     onClick: e_,
                     disabled: J <= 0 || en.textValue.length > er,
-                    loading: U,
+                    loading: G,
                     icon: o.Uuj,
                     iconPosition: "end",
                 },

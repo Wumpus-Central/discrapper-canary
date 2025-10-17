@@ -12,8 +12,8 @@ n.d(t, {
     n(314940);
 var r = n(913527),
     i = n.n(r),
-    l = n(278074),
-    s = n(768581),
+    s = n(278074),
+    l = n(768581),
     a = n(709054),
     o = n(624138),
     c = n(219496),
@@ -21,7 +21,7 @@ var r = n(913527),
     d = n(388032);
 function h(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return s.ZP.getUserAvatarURL(
+    return l.ZP.getUserAvatarURL(
         {
             id: e.id,
             avatar: e.avatar,
@@ -36,8 +36,8 @@ function g(e) {
     let t = (0, o._I)(e.username).replace(u.RN, "").replace(u.iF, ".").toLowerCase();
     return "".concat(t).concat(e.discriminator).substring(0, 32);
 }
-let m = ["@", "#", ":"],
-    p = ["```", "discord", "hypesquad", "system message", "system mesage", "sustem message", "sustem mesage", "clyde"],
+let p = ["@", "#", ":"],
+    m = ["```", "discord", "hypesquad", "system message", "system mesage", "sustem message", "sustem mesage", "clyde"],
     f = ["discordtag", "everyone", "here", "discord nitro", "discord", "snowsgiving"];
 function _(e) {
     var t;
@@ -50,9 +50,9 @@ function _(e) {
             .join("")).length < 2
     )
         return !0;
-    for (let e of m) if (n.includes(e)) return !0;
+    for (let e of p) if (n.includes(e)) return !0;
     for (let e of f) if (n === e.toLowerCase()) return !0;
-    for (let e of p) if (n.includes(e.toLowerCase())) return !0;
+    for (let e of m) if (n.includes(e.toLowerCase())) return !0;
     return !1;
 }
 function x(e) {
@@ -66,12 +66,12 @@ function E(e) {
     return null;
 }
 function v(e) {
-    return (0, l.EQ)(e)
+    return (0, s.EQ)(e)
         .with({ rateLimited: !0 }, () => ({
             type: c.K.RATE_LIMIT,
             message: d.intl.string(d.t.T15lqq),
         }))
-        .with({ error: l.P.not(l.P.nullish) }, (e) => {
+        .with({ error: s.P.not(s.P.nullish) }, (e) => {
             let { error: t } = e;
             return {
                 type: c.K.ERROR,
@@ -86,7 +86,7 @@ function v(e) {
             type: c.K.ERROR,
             message: d.intl.string(d.t.mCrAUV),
         }))
-        .with({ error: l.P.nullish }, () => ({
+        .with({ error: s.P.nullish }, () => ({
             type: c.K.INTERNAL_ERROR,
             message: "",
         }))

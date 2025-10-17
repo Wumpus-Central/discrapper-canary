@@ -1,15 +1,15 @@
-n.d(t, { J: () => f });
+n.d(t, { J: () => p });
 var r = n(951288),
     l = n(647438),
     i = n(120356),
-    o = n.n(i),
-    s = n(258536),
-    a = n(873546),
+    a = n.n(i),
+    o = n(258536),
+    s = n(873546),
     c = n(435935),
     u = n(481060),
     d = n(168020),
     g = n(779485);
-let f = l.memo(function (e) {
+let p = l.memo(function (e) {
     let { countdownTimerBlock: t, isVisible: n } = e,
         l = (0, u.q_F)({
             transform: "translateX(-50%) ".concat(n ? "translateY(-75%)" : "translateY(0%)"),
@@ -19,8 +19,8 @@ let f = l.memo(function (e) {
                 friction: 12,
             },
         });
-    return (0, r.jsxs)(s.animated.div, {
-        className: o()([g.countDownWrapper, a.tq && g.mobileWrapper]),
+    return (0, r.jsxs)(o.animated.div, {
+        className: a()([g.countDownWrapper, s.tq && g.mobileWrapper]),
         role: "status",
         style: (function (e) {
             for (var t = 1; t < arguments.length; t++) {

@@ -1,15 +1,15 @@
 n.d(t, { Z: () => L }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(599273),
+    l = n(258536),
     a = n(793030),
     s = n(481060),
     o = n(410030),
     c = n(100527),
     d = n(906732),
     u = n(104505),
-    h = n(680295),
-    p = n(785717),
+    p = n(680295),
+    h = n(785717),
     f = n(221292),
     g = n(687158),
     m = n(612600),
@@ -25,8 +25,8 @@ var r = n(951288),
     S = n(664794),
     E = n(4517),
     Z = n(350207),
-    T = n(277117),
-    P = n(52639),
+    P = n(277117),
+    T = n(52639),
     N = n(228168),
     R = n(671955),
     w = n(388032),
@@ -64,7 +64,7 @@ function L(e) {
         U = (0, o.ZP)(),
         G = i.useRef(Date.now()),
         { analyticsLocations: H } = (0, d.ZP)(c.Z.USER_PROFILE_SIDEBAR),
-        F = (0, p.ZB)({
+        F = (0, h.ZB)({
             layout: "SIDEBAR",
             userId: n.id,
             channelId: w.id,
@@ -92,7 +92,7 @@ function L(e) {
         Q = (null == k ? void 0 : k.widgets) != null && k.widgets.length > 0;
     return (0, r.jsx)(d.Gt, {
         value: H,
-        children: (0, r.jsx)(p.Mt, {
+        children: (0, r.jsx)(h.Mt, {
             value: F,
             openedAt: G.current,
             fetchStartedAt: null == k ? void 0 : k.fetchStartedAt,
@@ -152,7 +152,7 @@ function L(e) {
                                         }),
                                     ],
                                 }),
-                                (0, r.jsx)(T.Z, {
+                                (0, r.jsx)(P.Z, {
                                     user: n,
                                     currentUser: f,
                                     displayProfile: k,
@@ -171,7 +171,7 @@ function L(e) {
                                             },
                                         }),
                                     }),
-                                (0, r.jsx)(P.Z, {
+                                (0, r.jsx)(T.Z, {
                                     user: n,
                                     channelId: w.id,
                                 }),
@@ -184,7 +184,7 @@ function L(e) {
                                 context: F,
                             }),
                         (null == k ? void 0 : k.profileEffect) != null &&
-                            (0, r.jsx)(h.Z, {
+                            (0, r.jsx)(p.Z, {
                                 skuId: null == k || null == (t = k.profileEffect) ? void 0 : t.skuId,
                                 isHovering: z,
                                 urlQueryString: "dmView",

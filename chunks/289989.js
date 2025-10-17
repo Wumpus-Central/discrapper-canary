@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -38,7 +38,7 @@ function j(e) {
         }),
     });
 }
-function b(e) {
+function S(e) {
     let { onSourceSelect: t } = e;
     (0, f.UB)(), (0, p.Z)(t, g.Vq);
     let [{ nativeSourceType: n }, i] = (0, m.E_)(),

@@ -2,8 +2,8 @@ t.d(n, { Z: () => m }), t(953529), t(997841);
 var l = t(951288);
 t(647438);
 var i = t(793030),
-    r = t(442837),
-    o = t(481060),
+    o = t(442837),
+    r = t(481060),
     s = t(860719),
     a = t(621853),
     c = t(388032),
@@ -25,11 +25,11 @@ function u(e) {
             (0, l.jsxs)("div", {
                 className: d.rowText,
                 children: [
-                    (0, l.jsx)(o.Heading, {
+                    (0, l.jsx)(r.Heading, {
                         variant: "text-xs/semibold",
                         children: t,
                     }),
-                    (0, l.jsx)(o.Text, {
+                    (0, l.jsx)(r.Text, {
                         variant: "text-sm/normal",
                         children: i,
                     }),
@@ -40,7 +40,7 @@ function u(e) {
 }
 function m(e) {
     let { user: n } = e,
-        t = (0, r.e7)([a.Z], () => {
+        t = (0, o.e7)([a.Z], () => {
             var e;
             return null == (e = a.Z.getUserProfile(n.id)) ? void 0 : e.application;
         }),
@@ -55,23 +55,23 @@ function m(e) {
         children: [
             m &&
                 (0, l.jsx)(u, {
-                    icon: o.kBi,
+                    icon: r.kBi,
                     title: c.intl.string(c.t["7Tmhfn"]),
                     description: c.intl.string(c.t["eu5x7+"]),
                 }),
             p &&
                 (0, l.jsx)(u, {
-                    icon: o.iWm,
+                    icon: r.iWm,
                     title: c.intl.string(c.t.awYSsL),
                     description: c.intl.string(c.t.TpsXoK),
                 }),
             f &&
                 (0, l.jsx)(u, {
-                    icon: o.BFJ,
+                    icon: r.BFJ,
                     title: c.intl.string(c.t.WuKeSE),
                     description: c.intl.string(c.t.wOBmtb),
                 }),
-            (0, l.jsx)(o.Text, {
+            (0, l.jsx)(r.Text, {
                 variant: "text-xs/normal",
                 children: c.intl.format(c.t.b6nqk5, {
                     helpCenterUrl: "https://support.discord.com/hc/articles/7933951485975",

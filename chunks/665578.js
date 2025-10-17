@@ -23,8 +23,8 @@ var i = n(951288),
     C = n(981631),
     N = n(689079),
     S = n(388032),
-    I = n(591086);
-function E(e) {
+    E = n(591086);
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -177,7 +177,7 @@ function w(e) {
                 return (n) =>
                     (0, i.jsx)(
                         t,
-                        E(
+                        I(
                             {
                                 editPermissions: K,
                                 guildId: j,
@@ -200,7 +200,7 @@ function w(e) {
                 return (n) =>
                     (0, i.jsx)(
                         t,
-                        E(
+                        I(
                             {
                                 editPermissions: K,
                                 guildId: j,
@@ -223,7 +223,7 @@ function w(e) {
                         t = R.defaultMemberPermissions;
                     return (
                         o.fS(t, u.BO) && (t = C.Plq.ADMINISTRATOR),
-                        (n) => (0, i.jsx)(e, P(E({}, n), { defaultMemberPermissions: t }))
+                        (n) => (0, i.jsx)(e, P(I({}, n), { defaultMemberPermissions: t }))
                     );
                 }),
             [R],
@@ -256,15 +256,15 @@ function w(e) {
                 : null,
             L
                 ? (0, i.jsxs)("div", {
-                      className: I.requiredPermissionsBanner,
+                      className: E.requiredPermissionsBanner,
                       children: [
                           (0, i.jsx)(c.d3s, {
                               size: "sm",
                               color: "currentColor",
-                              className: I.icon,
+                              className: E.icon,
                           }),
                           (0, i.jsx)("span", {
-                              className: I.message,
+                              className: E.message,
                               children: S.intl.format(S.t["2889Gh"], {}),
                           }),
                           (0, i.jsx)(c.Button, {
@@ -286,13 +286,13 @@ function w(e) {
                         _.Z,
                         {
                             bar: (0, i.jsx)(c.aML, {
-                                tooltipClassName: I.tooltip,
+                                tooltipClassName: E.tooltip,
                                 text: n,
                                 shouldShow: null != n,
                                 children: (t) =>
                                     (0, i.jsx)(
                                         c.Button,
-                                        P(E({}, t), {
+                                        P(I({}, t), {
                                             variant: "secondary",
                                             disabled: Y || !M,
                                             onClick: e.buttonClick,
@@ -304,7 +304,7 @@ function w(e) {
                             inModal: v,
                             title: e.title,
                             children: (0, i.jsx)("div", {
-                                className: v ? void 0 : I.listContainer,
+                                className: v ? void 0 : E.listContainer,
                                 children: (0, i.jsx)(y.Z, {
                                     guildId: j,
                                     commandId: l,
@@ -324,13 +324,13 @@ function w(e) {
 }
 function T(e) {
     let t = (0, j.w)(e);
-    return P(E({}, t), { results: t.results.map((e) => P(E({}, e), { type: d.Kw.CHANNEL })) });
+    return P(I({}, t), { results: t.results.map((e) => P(I({}, e), { type: d.Kw.CHANNEL })) });
 }
 function Z(e) {
     let t = (0, v.U)(e);
-    return P(E({}, t), {
+    return P(I({}, t), {
         results: t.results.roles
-            .map((e) => P(E({}, e), { type: d.Kw.ROLE }))
-            .concat(t.results.members.map((e) => P(E({}, e), { type: d.Kw.USER }))),
+            .map((e) => P(I({}, e), { type: d.Kw.ROLE }))
+            .concat(t.results.members.map((e) => P(I({}, e), { type: d.Kw.USER }))),
     });
 }

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(35282), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(120356),
-    s = n.n(l),
+    s = n(120356),
+    l = n.n(s),
     a = n(536285),
     o = n(857458),
     c = n(388905),
@@ -10,11 +10,11 @@ var r = n(951288),
     d = n(388032),
     h = n(197571);
 let g = function (e) {
-    let { match: t, location: n, attemptDeepLink: l } = e,
-        [g, m] = i.useState(0);
+    let { match: t, location: n, attemptDeepLink: s } = e,
+        [g, p] = i.useState(0);
     i.useEffect(() => {
         a.default.once("connected", () => {
-            m(1);
+            p(1);
         }),
             a.default.once("disconnected", () => {
                 (0, u.uL)((0, o.M)());
@@ -26,15 +26,15 @@ let g = function (e) {
             let e = setTimeout(() => (0, u.uL)((0, o.M)()), 3000);
             return () => clearTimeout(e);
         }, [g]);
-    let p = i.useCallback(
+    let m = i.useCallback(
         async (e, t) => {
             try {
-                m(2), await l(e, t), m(3);
+                p(2), await s(e, t), p(3);
             } catch (e) {
                 console.error("Error opening deeplink", e);
             }
         },
-        [l],
+        [s],
     );
     if ((0, u.DB)()) return null;
     switch (g) {
@@ -48,11 +48,11 @@ let g = function (e) {
                     (0, r.jsx)(c.DK, { children: d.intl.string(d.t.SXCxyc) }),
                     (0, r.jsx)(c.zx, {
                         className: h.marginTop40,
-                        onClick: () => p(t, n),
+                        onClick: () => m(t, n),
                         children: d.intl.string(d.t.UQvCf3),
                     }),
                     (0, r.jsx)(c.zx, {
-                        className: s()(h.marginTop8, h.marginCenterHorz),
+                        className: l()(h.marginTop8, h.marginCenterHorz),
                         color: c.zx.Colors.LINK,
                         look: c.zx.Looks.LINK,
                         onClick: () => (0, u.uL)((0, o.M)()),

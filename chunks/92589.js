@@ -3,9 +3,9 @@ var r = n(951288);
 n(647438);
 var l = n(907331),
     i = n(481060),
-    s = n(168020),
+    a = n(168020),
     o = n(794324),
-    a = n(859788),
+    s = n(859788),
     c = n(388032),
     u = n(449177);
 function d(e) {
@@ -42,7 +42,7 @@ let g = (e) => {
             0.33,
             null != n,
         ),
-        { bannerUrl: f, bannerAnimatedUrl: p } = (0, o._M)(t),
+        { bannerUrl: p, bannerAnimatedUrl: f } = (0, o._M)(t),
         C = null != t.textColor ? { color: t.textColor } : void 0,
         h = null != t.body && "" !== t.body,
         _ = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
@@ -53,10 +53,10 @@ let g = (e) => {
             (0, r.jsx)("div", {
                 className: u.banner,
                 children:
-                    null != f &&
-                    (0, r.jsx)(a.Z, {
-                        bannerStatic: f,
-                        bannerAnimated: p,
+                    null != p &&
+                    (0, r.jsx)(s.Z, {
+                        bannerStatic: p,
+                        bannerAnimated: f,
                     }),
             }),
             (0, r.jsx)("div", {
@@ -65,7 +65,7 @@ let g = (e) => {
                     className: u.immersiveBannerTextContainer,
                     children: [
                         null != t.endTime
-                            ? (0, r.jsx)(s.R, {
+                            ? (0, r.jsx)(a.R, {
                                   endDate: t.endTime,
                                   size: "lg",
                               })

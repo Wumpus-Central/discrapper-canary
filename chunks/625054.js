@@ -1,8 +1,8 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => l });
 var r = n(525654),
     i = n.n(r),
-    l = n(643191);
-let s = {
+    s = n(643191);
+let l = {
     dump(e) {
         let t;
         null != performance.memory &&
@@ -23,5 +23,5 @@ let s = {
                 memory: t,
             });
     },
-    getTimeSinceNavigationStart: () => Date.now() - l.mb,
+    getTimeSinceNavigationStart: () => Date.now() - s.mb,
 };

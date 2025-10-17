@@ -28,8 +28,8 @@ var r,
     C = n(260539),
     O = n(388032),
     y = n(86477),
-    N = n(197571);
-function E(e, t, n) {
+    E = n(197571);
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -57,10 +57,10 @@ class I extends (r = d.ZP.Store) {
     }
     constructor(...e) {
         super(...e),
-            E(this, "name", ""),
-            E(this, "description", ""),
-            E(this, "error", null),
-            E(this, "reset", () => {
+            N(this, "name", ""),
+            N(this, "description", ""),
+            N(this, "error", null),
+            N(this, "reset", () => {
                 let e = this.getTemplate();
                 if (null != e) {
                     var t, n;
@@ -69,16 +69,16 @@ class I extends (r = d.ZP.Store) {
                 } else (this.name = ""), (this.description = "");
                 this.emitChange();
             }),
-            E(this, "setName", (e) => {
+            N(this, "setName", (e) => {
                 (this.name = e), this.emitChange();
             }),
-            E(this, "setDescription", (e) => {
+            N(this, "setDescription", (e) => {
                 (this.description = e), this.emitChange();
             }),
-            E(this, "setError", (e) => {
+            N(this, "setError", (e) => {
                 (this.error = e), this.emitChange();
             }),
-            E(this, "save", async () => {
+            N(this, "save", async () => {
                 await x.Z.updateGuildTemplate(
                     _.Z.getProps().guild.id,
                     this.getTemplate().code,
@@ -89,7 +89,7 @@ class I extends (r = d.ZP.Store) {
             });
     }
 }
-E(I, "displayName", "GuildSettingsTemplateMetadataStore_");
+N(I, "displayName", "GuildSettingsTemplateMetadataStore_");
 let S = new I(p.Z);
 function T() {
     let [e, t] = l.useState(!1),
@@ -108,7 +108,7 @@ function P(e) {
 }
 function w() {
     return (0, i.jsx)("div", {
-        className: N.marginBottom4,
+        className: E.marginBottom4,
         children: (0, i.jsxs)(m.y5t, {
             component: (0, i.jsx)(m.Heading, {
                 variant: "heading-lg/semibold",
@@ -116,7 +116,7 @@ function w() {
             }),
             children: [
                 (0, i.jsx)(m.Text, {
-                    className: N.marginBottom20,
+                    className: E.marginBottom20,
                     variant: "text-sm/normal",
                     children: O.intl.format(O.t.c0m8bG, {}),
                 }),
@@ -175,7 +175,7 @@ function Z() {
                   variant: "text-sm/normal",
                   children: t.message,
               })
-            : (0, i.jsx)(m.$jN, { className: N.marginTop40 });
+            : (0, i.jsx)(m.$jN, { className: E.marginTop40 });
     let o =
         null != t && null == t.getFirstFieldErrorMessage("name") && null == t.getFirstFieldErrorMessage("description");
     return (0, i.jsxs)(m.Kqy, {
@@ -188,7 +188,7 @@ function Z() {
             }),
             o
                 ? (0, i.jsx)(m.Text, {
-                      className: N.marginTop8,
+                      className: E.marginTop8,
                       color: "text-danger",
                       variant: "text-sm/normal",
                       children: t.getAnyErrorMessage(),
@@ -366,22 +366,22 @@ function L(e) {
                   n.isDirty &&
                       (0, i.jsx)(m.Text, {
                           color: "text-feedback-warning",
-                          className: N.marginTop8,
+                          className: E.marginTop8,
                           variant: "text-sm/normal",
                           children: O.intl.string(O.t.aWsjtL),
                       }),
                   (0, i.jsxs)("div", {
-                      className: s()(N.marginTop20, y.buttonContainer),
+                      className: s()(E.marginTop20, y.buttonContainer),
                       children: [
                           n.isDirty &&
-                              (0, i.jsx)(M, {
+                              (0, i.jsx)(G, {
                                   guild: t,
                                   guildTemplate: n,
                               }),
                           (0, i.jsxs)("div", {
                               className: y.rightButtonContainer,
                               children: [
-                                  (0, i.jsx)(G, {
+                                  (0, i.jsx)(M, {
                                       guild: t,
                                       guildTemplate: n,
                                   }),
@@ -419,7 +419,7 @@ function k(e) {
         onClick: s,
     });
 }
-function M(e) {
+function G(e) {
     let { guild: t, guildTemplate: n } = e,
         [r, a] = l.useState(!1),
         s = async () => {
@@ -442,7 +442,7 @@ function M(e) {
         }),
     });
 }
-function G(e) {
+function M(e) {
     let { guild: t, guildTemplate: n } = e,
         [r, a] = l.useState(!1),
         s = async () => {
@@ -500,7 +500,7 @@ function U(e) {
                                             }),
                                         )),
                                         r.forEach(function (t) {
-                                            E(e, t, n[t]);
+                                            N(e, t, n[t]);
                                         });
                                 }
                                 return e;

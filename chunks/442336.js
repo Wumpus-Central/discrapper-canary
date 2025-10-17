@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(585483),
     d = n(621600),
     u = n(665149),
-    h = n(110255),
-    p = n(981631),
+    p = n(110255),
+    h = n(981631),
     f = n(388032);
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -66,9 +66,9 @@ function b(e) {
     i.useEffect(() => {
         let e = () => j(!0);
         return (
-            c.S.subscribe(p.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e),
+            c.S.subscribe(h.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e),
             () => {
-                c.S.unsubscribe(p.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e);
+                c.S.unsubscribe(h.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e);
             }
         );
     }, []);
@@ -88,7 +88,7 @@ function b(e) {
         onRequestClose: () => j(!1),
         renderPopout: (e) =>
             (0, r.jsx)(
-                h.Z,
+                p.Z,
                 m(g({}, e), {
                     channel: t,
                     navId: "channel-context",
@@ -104,7 +104,7 @@ function b(e) {
                     ref: n,
                     onClick: O,
                     tooltip: i ? null : x,
-                    icon: b || y !== p.bL.ALL_MESSAGES ? a.owu : a.Dkj,
+                    icon: b || y !== h.bL.ALL_MESSAGES ? a.owu : a.Dkj,
                     "aria-label": x,
                     selected: i,
                 }),

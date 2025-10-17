@@ -64,7 +64,7 @@ function M(e) {
     }
     return e;
 }
-function j(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -76,12 +76,12 @@ function j(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : j(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -223,11 +223,11 @@ function H() {
 let Y = function (e) {
     var t;
     let { subscription: i, renewalInvoicePreview: o, paymentSource: _, busy: C, analyticsLocation: x } = e,
-        j = "subscription_header",
+        k = "subscription_header",
         { analyticsLocations: H } = (0, d.ZP)(u.Z.SUBSCRIPTION_HEADER),
         { fractionalState: Y } = (0, f.Z)({ forceFetch: !1 }),
         W = Y === P.a$.FP_SUB_PAUSED,
-        { enabled: K } = (0, S.ZP)({ location: j });
+        { enabled: K } = (0, S.ZP)({ location: k });
     (P.pj.has(i.planId) && w.JwP.ALL_PAUSEABLE.has(i.status) && !W) || (K = !1);
     let z = (0, A.Ng)(),
         q = null == z || null == (t = z.discount) ? void 0 : t.amount,
@@ -255,7 +255,7 @@ let Y = function (e) {
                 return (n) =>
                     (0, r.jsx)(
                         t,
-                        k(M({}, n), {
+                        j(M({}, n), {
                             premiumSubscription: i,
                             analyticsLocation: x,
                             analyticsLocations: H,
@@ -375,7 +375,7 @@ let Y = function (e) {
                             children: (t) =>
                                 (0, r.jsx)(
                                     N.Z,
-                                    k(M({}, t), {
+                                    j(M({}, t), {
                                         className: a()(L.toolsButton, L.premiumSettingsPushButton),
                                         disabled: e,
                                         onClick: () => {

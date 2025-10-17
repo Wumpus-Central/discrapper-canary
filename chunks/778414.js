@@ -1,43 +1,43 @@
 n.d(t, {
-    C: () => V,
-    Z: () => U,
+    C: () => W,
+    Z: () => B,
 }),
     n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     o = n(442837),
     s = n(704215),
     c = n(481060),
     u = n(355467),
     d = n(491662),
-    p = n(243778),
-    f = n(981312),
-    h = n(929677),
-    g = n(314897),
-    m = n(351402),
-    b = n(931847),
-    _ = n(836197),
-    O = n(880421),
-    E = n(206599),
-    v = n(50130),
-    y = n(5136),
-    I = n(690760),
-    C = n(747101),
-    S = n(517157),
-    T = n(860717),
-    N = n(28671),
-    j = n(430790),
-    P = n(640078),
-    x = n(190862),
-    A = n(682085),
-    Z = n(996921),
-    w = n(661462),
-    L = n(795990),
-    R = n(388032),
-    D = n(830202);
-function k(e) {
+    f = n(243778),
+    g = n(981312),
+    p = n(929677),
+    m = n(314897),
+    b = n(351402),
+    h = n(931847),
+    v = n(836197),
+    y = n(880421),
+    j = n(206599),
+    O = n(50130),
+    x = n(5136),
+    _ = n(690760),
+    P = n(747101),
+    I = n(517157),
+    w = n(860717),
+    S = n(28671),
+    E = n(430790),
+    T = n(683881),
+    C = n(190862),
+    N = n(682085),
+    A = n(996921),
+    D = n(661462),
+    k = n(795990),
+    Z = n(388032),
+    R = n(830202);
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -62,7 +62,7 @@ function k(e) {
     }
     return e;
 }
-function M(e, t) {
+function G(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -71,70 +71,70 @@ function M(e, t) {
             var n,
                 r,
                 i = {},
-                l = Object.keys(e);
-            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                a = Object.keys(e);
+            for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
-        var l = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < l.length; r++)
-            (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function U(e) {
+function B(e) {
     var { widget: t } = e,
-        n = M(e, ["widget"]);
-    return t instanceof b.q
-        ? (0, r.jsx)(T.Z, k({ widget: t }, n))
-        : t instanceof _.zy
-          ? (0, r.jsx)(x.Z, k({ widget: t }, n))
+        n = G(e, ["widget"]);
+    return t instanceof h.q
+        ? (0, r.jsx)(w.Z, L({ widget: t }, n))
+        : t instanceof v.zy
+          ? (0, r.jsx)(C.Z, L({ widget: t }, n))
           : null;
 }
-function G() {
+function M() {
     return (0, r.jsxs)("div", {
-        className: D.ukTeenDisclaimer,
+        className: R.ukTeenDisclaimer,
         children: [
             (0, r.jsx)(c.d3s, { size: "xs" }),
             (0, r.jsx)(c.Text, {
-                "aria-label": R.intl.string(R.t["7blcz8"]),
+                "aria-label": Z.intl.string(Z.t["7blcz8"]),
                 variant: "text-xs/normal",
                 color: "text-muted",
-                children: R.intl.string(R.t["7blcz8"]),
+                children: Z.intl.string(Z.t["7blcz8"]),
             }),
         ],
     });
 }
-function B(e) {
+function F(e) {
     let { user: t } = e,
-        { application: n } = (0, v.G)(),
+        { application: n } = (0, O.G)(),
         { token: i } = (0, d.o)(null == n ? void 0 : n.id),
-        l = (0, S.Z)(t.id),
-        a = (0, O.k)({ location: "ApplicationWidgetUpsell" }),
-        o = l.some((e) => e instanceof b.q && e.applicationId === (null == n ? void 0 : n.id));
-    return null == n || !a || null == i || o
+        a = (0, I.Z)(t.id),
+        l = (0, y.k)({ location: "ApplicationWidgetUpsell" }),
+        o = a.some((e) => e instanceof h.q && e.applicationId === (null == n ? void 0 : n.id));
+    return null == n || !l || null == i || o
         ? null
-        : (0, r.jsx)(p.ZP, {
+        : (0, r.jsx)(f.ZP, {
               contentTypes: [s.z.APPLICATION_WIDGET_EMPTY_STATE_CARD_ADD_WIDGET],
               children: (e) => {
-                  let { visibleContent: i, markAsDismissed: l } = e;
+                  let { visibleContent: i, markAsDismissed: a } = e;
                   return i === s.z.APPLICATION_WIDGET_EMPTY_STATE_CARD_ADD_WIDGET
-                      ? (0, r.jsx)(N.Z, {
+                      ? (0, r.jsx)(S.Z, {
                             user: t,
                             application: n,
-                            onDismiss: l,
+                            onDismiss: a,
                         })
                       : null;
               },
           });
 }
-function H(e) {
-    let { user: t, guildId: n, channelId: l } = e,
-        a = (0, S.Z)(t.id),
-        s = (0, o.e7)([g.default], () => g.default.getId() === t.id),
+function U(e) {
+    let { user: t, guildId: n, channelId: a } = e,
+        l = (0, I.Z)(t.id),
+        s = (0, o.e7)([m.default], () => m.default.getId() === t.id),
         c = (() => {
-            let [e, t] = (0, o.Wu)([m.Z], () => [m.Z.ipCountryCode, m.Z.ipCountryCodeRequest]),
-                n = (0, f.U)();
+            let [e, t] = (0, o.Wu)([b.Z], () => [b.Z.ipCountryCode, b.Z.ipCountryCodeRequest]),
+                n = (0, g.U)();
             return (
                 i.useEffect(() => {
                     null == e && null == t && n && (0, u.GE)();
@@ -142,56 +142,56 @@ function H(e) {
                 "GB" === e && n
             );
         })(),
-        d = (0, O.k)({ location: "UserProfileModalV2Widgets" }),
-        p = 0 === a.length && s,
-        v = i.useMemo(() => a.filter(_.Wc), [a]),
-        y = i.useMemo(() => a.filter((e) => e instanceof b.q), [a]);
-    (0, C.ZP)(v), (0, E.J)(s, v);
-    var T = t.id;
-    (0, I.s)(y);
-    let { data: N, refetch: P } = (0, h.O)(T),
-        x = i.useRef(N);
+        d = (0, y.k)({ location: "UserProfileModalV2Widgets" }),
+        f = 0 === l.length && s,
+        O = i.useMemo(() => l.filter(v.Wc), [l]),
+        x = i.useMemo(() => l.filter((e) => e instanceof h.q), [l]);
+    (0, P.ZP)(O), (0, j.J)(s, O);
+    var w = t.id;
+    (0, _.s)(x);
+    let { data: S, refetch: T } = (0, p.O)(w),
+        C = i.useRef(S);
     if (
-        ((x.current = N),
+        ((C.current = S),
         i.useEffect(() => {
-            null !== x.current && P();
-        }, [P]),
-        p)
+            null !== C.current && T();
+        }, [T]),
+        f)
     )
-        if (d) return (0, r.jsx)(A.Z, {});
-        else return (0, r.jsx)(L.Z, {});
+        if (d) return (0, r.jsx)(N.Z, {});
+        else return (0, r.jsx)(k.Z, {});
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            s && c && (0, r.jsx)(G, {}),
-            s && (0, r.jsx)(B, { user: t }),
-            a.map((e, i) =>
+            s && c && (0, r.jsx)(M, {}),
+            s && (0, r.jsx)(F, { user: t }),
+            l.map((e, i) =>
                 (0, r.jsx)(
-                    U,
+                    B,
                     {
                         widget: e,
                         user: t,
                         guildId: n,
-                        channelId: l,
+                        channelId: a,
                         index: i,
                     },
                     e.type,
                 ),
             ),
-            s && (0, r.jsx)(j.Z, {}),
+            s && (0, r.jsx)(E.Z, {}),
         ],
     });
 }
-function V(e) {
+function W(e) {
     var { user: t } = e,
-        n = M(e, ["user"]);
-    let l = i.useRef(null);
-    (0, y.r)({ container: l.current });
-    let o = (0, Z.h)(t.id);
-    return (0, r.jsxs)(w.F, {
+        n = G(e, ["user"]);
+    let a = i.useRef(null);
+    (0, x.r)({ container: a.current });
+    let o = (0, A.h)(t.id);
+    return (0, r.jsxs)(D.F, {
         "data-scroller": !0,
-        scrollerRef: l,
-        className: a()(D.scroller, { [D.hasToolbar]: o }),
+        scrollerRef: a,
+        className: l()(R.scroller, { [R.hasToolbar]: o }),
         fade: !0,
-        children: [(0, r.jsx)(P.Z, { scrollerRef: l }), (0, r.jsx)(H, k({ user: t }, n))],
+        children: [(0, r.jsx)(T.Z, { scrollerRef: a }), (0, r.jsx)(U, L({ user: t }, n))],
     });
 }

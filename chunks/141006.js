@@ -1,19 +1,19 @@
 n.d(t, {
-    Eg: () => s,
+    Eg: () => i,
     SK: () => r,
-    tl: () => i,
+    tl: () => s,
 });
 let r = {
         primary_color: 11127295,
         secondary_color: 16759788,
         tertiary_color: 16761760,
     },
-    s = {
+    i = {
         primary_color: 10382335,
         secondary_color: 10469887,
         tertiary_color: null,
     },
-    i = [
+    s = [
         {
             start: 11156283,
             end: 16730184,

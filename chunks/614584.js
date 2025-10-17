@@ -163,12 +163,12 @@ let S = r.memo(function (e) {
                 referencedAvatarProfile: !1,
             });
         }, [N]),
-        Y = (0, C.Uj)(n);
+        K = (0, C.Uj)(n);
     return (0, i.jsx)(y.Z, {
         repliedAuthor: R,
         baseMessage: n,
         channel: P,
-        baseAuthor: Y,
+        baseAuthor: K,
         referencedMessage: S,
         content: U,
         compact: I,

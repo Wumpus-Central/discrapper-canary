@@ -15,17 +15,17 @@ var r = n(951288),
     m = n(151864),
     b = n(725436),
     _ = n(497656),
-    O = n(554747),
-    E = n(230900),
+    E = n(554747),
+    O = n(230900),
     v = n(954313),
     y = n(703656),
     I = n(922482),
     C = n(565799),
     S = n(501655),
-    T = n(427679),
-    N = n(448206),
-    j = n(670188),
-    P = n(496675),
+    N = n(427679),
+    T = n(448206),
+    P = n(670188),
+    j = n(496675),
     x = n(594174),
     A = n(662868),
     Z = n(981631),
@@ -35,21 +35,21 @@ var r = n(951288),
 function D(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
         l = (0, _.y)(t.id),
-        d = (0, O.k5)(t.id),
-        j = (0, o.e7)([T.Z], () => T.Z.getStageInstanceByChannel(null == l ? void 0 : l.id), [l]),
-        { isStageNoticeHidden: D, isEventNoticeHidden: M } = (0, o.cj)(
+        d = (0, E.k5)(t.id),
+        P = (0, o.e7)([N.Z], () => N.Z.getStageInstanceByChannel(null == l ? void 0 : l.id), [l]),
+        { isStageNoticeHidden: D, isEventNoticeHidden: k } = (0, o.cj)(
             [m.Z],
             () => ({
-                isStageNoticeHidden: m.Z.isLiveChannelNoticeHidden({ stageId: null == j ? void 0 : j.id }),
+                isStageNoticeHidden: m.Z.isLiveChannelNoticeHidden({ stageId: null == P ? void 0 : P.id }),
                 isEventNoticeHidden: m.Z.isLiveChannelNoticeHidden({ eventId: null == d ? void 0 : d.id }),
             }),
-            [j, d],
+            [P, d],
         ),
         U = null == l ? void 0 : l.id,
         G = (0, o.Wu)([C.Z], () => [...new Set(C.Z.getMutableParticipants(U, S.pV.SPEAKER).map((e) => e.user))], [U]),
         B = (0, o.e7)([C.Z], () => (null != U ? C.Z.getParticipantCount(U, S.pV.AUDIENCE) : 0), [U]),
-        H = (0, o.e7)([P.Z], () => P.Z.can(Z.Plq.CONNECT, l)),
-        V = (0, N.Z)(null == l ? void 0 : l.id),
+        H = (0, o.e7)([j.Z], () => j.Z.can(Z.Plq.CONNECT, l)),
+        V = (0, T.Z)(null == l ? void 0 : l.id),
         F = null == d ? void 0 : d.creator_id,
         z = (0, o.e7)([x.default], () => x.default.getUser(F), [F]);
     i.useEffect(() => {
@@ -82,7 +82,7 @@ function D(e) {
                         isStudyRoomNotice: m,
                     } = e,
                     _ = null != n && null != i && !f,
-                    O = null != t ? (0, v.DK)(t) : null;
+                    E = null != t ? (0, v.DK)(t) : null;
                 if (m && null != i) {
                     let e = (0, p.KS)(i);
                     return {
@@ -194,9 +194,9 @@ function D(e) {
                         }
                     );
                 } else if (t.entity_type === w.WX.EXTERNAL) {
-                    let e = (0, E.cS)(t);
+                    let e = (0, O.cS)(t);
                     if (null == e) return { noticeType: null };
-                    let n = h.ZP.getUserCount(t.id, O);
+                    let n = h.ZP.getUserCount(t.id, E);
                     return {
                         noticeType: 1,
                         title: t.name,
@@ -236,7 +236,7 @@ function D(e) {
                     };
                 } else if (t.entity_type === w.WX.VOICE && null != i) {
                     let e = (0, p.KS)(i),
-                        n = h.ZP.getUserCount(t.id, O);
+                        n = h.ZP.getUserCount(t.id, E);
                     return {
                         noticeType: 2,
                         title: t.name,
@@ -279,18 +279,18 @@ function D(e) {
                 return { noticeType: null };
             })({
                 guildEvent: d,
-                stageInstance: j,
+                stageInstance: P,
                 activeChannel: l,
                 canConnect: H,
                 myRole: V,
                 eventCreator: z,
                 speakers: G,
                 listenerCount: B,
-                isEventNoticeHidden: M,
+                isEventNoticeHidden: k,
                 isStageNoticeHidden: D,
                 isStudyRoomNotice: n,
             }),
-        [d, j, l, H, V, z, G, B, M, D, n],
+        [d, P, l, H, V, z, G, B, k, D, n],
     );
     return null == W
         ? null
@@ -330,7 +330,7 @@ function D(e) {
                           children: [
                               J.map((e) =>
                                   (0, r.jsx)(
-                                      k,
+                                      M,
                                       {
                                           user: e,
                                           guildId: t.id,
@@ -384,10 +384,10 @@ function D(e) {
               ],
           });
 }
-function k(e) {
+function M(e) {
     let { user: t, guildId: n } = e,
         l = i.useRef(null);
-    return (0, r.jsx)(j.Z, {
+    return (0, r.jsx)(P.Z, {
         targetElementRef: l,
         user: t,
         guildId: n,

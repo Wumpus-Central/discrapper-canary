@@ -9,23 +9,23 @@ var r = n(951288),
     u = n(956221),
     d = n(747017),
     p = n(140701),
-    h = n(545957),
-    f = n(158776),
+    f = n(545957),
+    h = n(158776),
     g = n(652853),
     m = n(981631),
     b = n(671955),
     _ = n(777267);
-let y = o.EFr.SIZE_40,
-    O = (0, o.pxk)(y);
+let O = o.EFr.SIZE_40,
+    y = (0, o.pxk)(O);
 function v(e) {
     let { user: t, status: v, guildId: j, channelId: x, onSelect: C } = e,
         { theme: E, themeType: S } = (0, g.z)(),
         I = i.useMemo(() => t.isNonUserBot() || (0, p.W)(t, x), [t, x]),
-        { activities: P, isMobileOnline: N } = (0, l.cj)([f.Z], () => ({
-            activities: f.Z.getActivities(t.id),
-            isMobileOnline: f.Z.isMobileOnline(t.id),
+        { activities: P, isMobileOnline: N } = (0, l.cj)([h.Z], () => ({
+            activities: h.Z.getActivities(t.id),
+            isMobileOnline: h.Z.isMobileOnline(t.id),
         })),
-        Z = (0, h.Z)(t.id),
+        Z = (0, f.Z)(t.id),
         { voiceActivityStatusEnabled: w } = (0, c.a)({ location: "UserProfileMutualFriendRow" }),
         { voiceChannel: T } = (0, u.Z)({
             userId: w ? t.id : void 0,
@@ -96,9 +96,9 @@ function v(e) {
         },
         children: [
             (0, r.jsx)(o.qEK, {
-                src: t.getAvatarURL(j, O),
+                src: t.getAvatarURL(j, y),
                 "aria-label": t.username,
-                size: y,
+                size: O,
                 status: I ? m.Skl.UNKNOWN : v,
                 statusBackdropColor: I ? void 0 : (0, o.QFD)(E),
                 isMobile: N,

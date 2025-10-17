@@ -23,8 +23,8 @@ var i = n(951288),
     C = n(720764),
     N = n(981631),
     S = n(388032),
-    I = n(134850);
-function E(e, t) {
+    E = n(134850);
+function I(e, t) {
     switch (e) {
         case N.b4C.APPLICATION:
             var n;
@@ -294,18 +294,18 @@ let P = r.memo(function (e) {
         children: [
             (0, i.jsx)(p.Z, {
                 align: p.Z.Align.CENTER,
-                className: I.breadcrumbs,
+                className: E.breadcrumbs,
                 children:
                     t === N.b4C.OVERVIEW
                         ? (0, i.jsx)(s.Heading, {
                               variant: "heading-lg/semibold",
-                              children: E(N.b4C.OVERVIEW),
+                              children: I(N.b4C.OVERVIEW),
                           })
                         : (0, i.jsx)(s.OoM, {
                               activeId: t.toString(),
                               breadcrumbs: [N.b4C.OVERVIEW, t].map((e) => ({
                                   id: e.toString(),
-                                  label: E(e, V[G]),
+                                  label: I(e, V[G]),
                               })),
                               onBreadcrumbClick: (e) => {
                                   t !== parseInt(e.id) && q(parseInt(e.id));
@@ -313,7 +313,7 @@ let P = r.memo(function (e) {
                               renderCustomBreadcrumb: (e, t) =>
                                   (0, i.jsx)(s.Heading, {
                                       variant: "heading-lg/semibold",
-                                      className: t ? I.breadcrumbActive : I.breadcrumbInactive,
+                                      className: t ? E.breadcrumbActive : E.breadcrumbInactive,
                                       children: e.label,
                                   }),
                           }),

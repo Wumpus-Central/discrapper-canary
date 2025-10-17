@@ -21,15 +21,15 @@ let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
             type: m,
             imageStyles: b,
             imageMarginX: _,
-            imageMarginTop: O,
-            trackingSource: E,
+            imageMarginTop: E,
+            trackingSource: O,
             undismissable: v,
             onDismissed: y,
             onClick: I,
             cta: C,
             ctaColor: S,
-            centerText: T,
-            className: N,
+            centerText: N,
+            className: T,
         } = e;
         i.useEffect(() => {
             g(p.rMx.CHANNEL_NOTICE_VIEWED, {
@@ -37,17 +37,17 @@ let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
                 guild_id: t.id,
             });
         }, [t.id, m]);
-        let j = null;
+        let P = null;
         "function" == typeof C
-            ? (j = C())
+            ? (P = C())
             : null != C &&
-              (j = (0, r.jsx)(s.zx, {
+              (P = (0, r.jsx)(s.zx, {
                   className: h.button,
                   size: s.zx.Sizes.SMALL,
                   onClick: () => {
                       null != m &&
                           d.default.track(p.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
-                              source: E,
+                              source: O,
                               guild_id: t.id,
                               notice_type: m,
                           }),
@@ -57,14 +57,14 @@ let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
                   color: S,
                   children: C,
               }));
-        let P = null;
+        let j = null;
         "function" == typeof n
-            ? (P = n())
+            ? (j = n())
             : null != n &&
-              (P = (0, r.jsx)(c.Text, {
+              (j = (0, r.jsx)(c.Text, {
                   variant: "text-md/medium",
                   color: "header-primary",
-                  className: a()(h.title, { [h.noImageTitle]: null == o }, { [h.center]: T }),
+                  className: a()(h.title, { [h.noImageTitle]: null == o }, { [h.center]: N }),
                   children: n,
               }));
         let x = null;
@@ -72,14 +72,14 @@ let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
             ? (x = l())
             : null != l &&
               (x = (0, r.jsx)(c.Text, {
-                  className: a()({ [h.center]: T }),
+                  className: a()({ [h.center]: N }),
                   variant: "text-sm/normal",
                   color: "text-muted",
                   children: l,
               }));
         let A = null != _ ? "".concat(_, "px") : "16px";
         return (0, r.jsxs)("div", {
-            className: a()(h.container, N),
+            className: a()(h.container, T),
             children: [
                 !0 === v
                     ? null
@@ -99,7 +99,7 @@ let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
                     (0, r.jsx)("div", {
                         className: h.imageContainer,
                         style: {
-                            marginTop: "".concat(O, "px"),
+                            marginTop: "".concat(E, "px"),
                             marginLeft: A,
                             marginRight: A,
                         },
@@ -112,7 +112,7 @@ let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
                     }),
                 (0, r.jsxs)("div", {
                     className: h.message,
-                    children: [P, x, j],
+                    children: [j, x, P],
                 }),
             ],
         });

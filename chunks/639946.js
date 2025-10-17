@@ -2,12 +2,12 @@ n.d(t, { r: () => c }), n(953529);
 var r = n(951288);
 n(647438);
 var i = n(481060),
-    l = n(471445),
-    s = n(742593),
+    s = n(471445),
+    l = n(742593),
     a = n(83908);
 function o(e) {
     let { channel: t } = e,
-        n = (0, l.Th)(t.type);
+        n = (0, s.Th)(t.type);
     return (0, r.jsxs)("div", {
         className: a.channelInfoContainer,
         children: [
@@ -33,13 +33,13 @@ function c(e) {
     return (0, r.jsxs)("div", {
         className: a.container,
         children: [
-            (0, r.jsx)(s.HZ, {
+            (0, r.jsx)(l.HZ, {
                 className: a.statusContainer,
                 guildId: n.guild_id,
                 guildEvent: n,
                 eventPreview: n,
             }),
-            (0, r.jsx)(s.Rf, {
+            (0, r.jsx)(l.Rf, {
                 name: n.name,
                 description: n.description,
                 guildId: n.guild_id,

@@ -1,17 +1,17 @@
-A.d(t, { B: () => i });
+A.d(t, { B: () => l });
 var n = A(951288);
 A(647438);
 var r = A(481060),
     a = A(120651),
-    l = A(388032);
-function i(e, t) {
+    i = A(388032);
+function l(e, t) {
     let A = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     (0, a.Z)({
         title: e,
         body:
             "string" == typeof t
                 ? t
-                : l.intl.format(
+                : i.intl.format(
                       t,
                       (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
@@ -50,7 +50,7 @@ function i(e, t) {
                           A,
                       ),
                   ),
-        cta: l.intl.string(l.t["NX+WJC"]),
+        cta: i.intl.string(i.t["NX+WJC"]),
         onConfirm: () => {},
     });
 }

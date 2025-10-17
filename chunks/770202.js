@@ -9,14 +9,14 @@ var r = n(951288),
     u = n(146773),
     d = n(201895),
     p = n(703656),
-    h = n(592125),
-    f = n(430824),
+    f = n(592125),
+    h = n(430824),
     g = n(496675),
     m = n(98597),
     b = n(473403),
     _ = n(981631),
-    y = n(490897),
-    O = n(55940);
+    O = n(490897),
+    y = n(55940);
 function v(e, t, n) {
     return (
         t in e
@@ -62,10 +62,10 @@ class C extends m.ZP {
                 canReorderChannel: a,
             } = this.props,
             s = (0, r.jsx)("li", {
-                className: o()(this.getClassName(), { [O.disabled]: this.isDisabled() }),
+                className: o()(this.getClassName(), { [y.disabled]: this.isDisabled() }),
                 "data-dnd-name": e.name,
                 children: (0, r.jsxs)(b.ZP, {
-                    className: O.iconVisibility,
+                    className: y.iconVisibility,
                     channel: e,
                     selected: t,
                     onClick: this.handleClick,
@@ -73,7 +73,7 @@ class C extends m.ZP {
                     onContextMenu: this.handleContextMenu,
                     connectDragPreview: a ? l : null,
                     "aria-label": (0, d.ZP)({ channel: e }),
-                    resolvedUnreadSetting: y.i.ONLY_MENTIONS,
+                    resolvedUnreadSetting: O.i.ONLY_MENTIONS,
                     children: [this.renderInviteButton(), this.renderEditButton()],
                 }),
             });
@@ -83,7 +83,7 @@ class C extends m.ZP {
         super(...e),
             v(this, "handleContextMenu", (e) => {
                 let { channel: t } = this.props,
-                    i = f.Z.getGuild(t.getGuildId());
+                    i = h.Z.getGuild(t.getGuildId());
                 null != i &&
                     (0, c.jW)(e, async () => {
                         let { default: e } = await n.e("99905").then(n.bind(n, 649400));
@@ -134,8 +134,8 @@ class C extends m.ZP {
 let E = (0, u.B)(C),
     S = i.memo(function (e) {
         let { channel: t, guild: n, disableSorting: i } = e,
-            l = (0, a.cj)([h.Z, g.Z], () => {
-                let e = h.Z.getChannel(t.parent_id);
+            l = (0, a.cj)([f.Z, g.Z], () => {
+                let e = f.Z.getChannel(t.parent_id);
                 return {
                     canManageChannel: g.Z.can(_.Plq.MANAGE_CHANNELS, t),
                     canReorderChannel:

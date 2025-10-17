@@ -39,8 +39,8 @@ var r = n(951288),
     L = n(74538),
     x = n(276554),
     M = n(739566),
-    j = n(421399),
-    k = n(453687),
+    k = n(421399),
+    j = n(453687),
     U = n(318713),
     G = n(304176),
     B = n(47930),
@@ -273,7 +273,7 @@ let $ = i.memo(function (e) {
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(j.Z, {
+                  (0, r.jsx)(k.Z, {
                       message: t,
                       channel: a,
                       author: I,
@@ -285,8 +285,8 @@ let $ = i.memo(function (e) {
                       onContextMenu: m,
                       onPopoutRequestClose: b,
                       decorations: {
-                          [j.a.SYSTEM_TAG]: T,
-                          [j.a.BADGES]: D,
+                          [k.a.SYSTEM_TAG]: T,
+                          [k.a.BADGES]: D,
                       },
                       renderRemixTag: !0,
                       previewGuildId: o,
@@ -321,7 +321,7 @@ function ee(e, t, n) {
     } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(j.Z, {
+            (0, r.jsx)(k.Z, {
                 message: i,
                 channel: a,
                 author: o,
@@ -374,8 +374,8 @@ function et(e) {
         x = m ? X : Q,
         {
             avatarSrc: M,
-            avatarDecorationSrc: j,
-            eventHandlers: k,
+            avatarDecorationSrc: k,
+            eventHandlers: j,
         } = (0, I.Z)({
             userId: p.author.id,
             guildId: o,
@@ -451,9 +451,9 @@ function et(e) {
                       clickTrap: v,
                       children: (e) =>
                           J(
-                              q(K({}, k), {
+                              q(K({}, j), {
                                   avatarSrc: G,
-                                  avatarDecorationSrc: j,
+                                  avatarDecorationSrc: k,
                                   compact: m,
                                   onClick: y,
                                   onContextMenu: b,
@@ -469,9 +469,9 @@ function et(e) {
             : (0, r.jsx)(f.Gt, {
                   value: R,
                   children: J(
-                      q(K({}, k), {
+                      q(K({}, j), {
                           avatarSrc: G,
-                          avatarDecorationSrc: j,
+                          avatarDecorationSrc: k,
                           compact: m,
                           onClick: y,
                           onContextMenu: b,
@@ -512,7 +512,7 @@ function en(e) {
                     c &&
                         l &&
                         (0, r.jsx)(U.Z, {
-                            id: (0, k.Dv)(t),
+                            id: (0, j.Dv)(t),
                             compact: !0,
                             timestamp: t.timestamp,
                             isVisibleOnlyOnHover: d,
@@ -529,7 +529,7 @@ function en(e) {
                     c &&
                         !l &&
                         (0, r.jsx)(U.Z, {
-                            id: (0, k.Dv)(t),
+                            id: (0, j.Dv)(t),
                             timestamp: t.timestamp,
                             className: m,
                             application: b,
@@ -627,10 +627,10 @@ let ea = i.memo(function (e) {
                     e
                 );
             }, [t]),
-            j = (0, k.XX)(t, _),
-            U = (0, k.Dv)(t),
-            G = p ? "".concat(j) : "".concat(j, " ").concat(U),
-            Z = (null == n ? void 0 : n.state) === y.Y.LOADED ? (0, k.Gq)(t) : void 0,
+            k = (0, j.XX)(t, _),
+            U = (0, j.Dv)(t),
+            G = p ? "".concat(k) : "".concat(k, " ").concat(U),
+            Z = (null == n ? void 0 : n.state) === y.Y.LOADED ? (0, j.Gq)(t) : void 0,
             Y = !0 !== p;
         return (0, r.jsx)(en, {
             message: t,
@@ -666,7 +666,7 @@ let ea = i.memo(function (e) {
                     ),
                 ],
             }),
-            usernameSpanId: (0, k.XX)(t, _),
+            usernameSpanId: (0, j.XX)(t, _),
             usernameClassName: o()(H.headerText, {
                 [H.hasRoleIcon]: 0 !== x,
                 [H.hasBadges]: null != L || M.length > 0,

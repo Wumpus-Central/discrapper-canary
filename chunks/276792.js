@@ -1,4 +1,4 @@
-n.d(t, { N: () => E });
+n.d(t, { N: () => O });
 var r = n(951288);
 n(647438);
 var i = n(657707),
@@ -40,7 +40,7 @@ function _(e) {
     }
     return e;
 }
-function O(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,21 +58,21 @@ function O(e, t) {
         e
     );
 }
-function E(e) {
-    var t, n, E, v;
+function O(e) {
+    var t, n, O, v;
     let y,
-        { content: I, renderModalProps: C, analyticsLocations: S, analyticsLocation: T, isLightTheme: N } = e,
-        j = "AnnouncementModalVariant1_".concat(l.z[Number(I.dismissKey)]),
-        { onClose: P } = C,
+        { content: I, renderModalProps: C, analyticsLocations: S, analyticsLocation: N, isLightTheme: T } = e,
+        P = "AnnouncementModalVariant1_".concat(l.z[Number(I.dismissKey)]),
+        { onClose: j } = C,
         x = null != (v = null == (t = I.button) ? void 0 : t.copy) ? v : m.intl.string(m.t.YScQSE),
         A =
             (null == (n = I.button) ? void 0 : n.buttonAction) === a.Wc.OPEN_MARKETING_PAGE
                 ? "jump_to_mkt_button"
                 : "get_nitro_button";
-    switch (null == (E = I.button) ? void 0 : E.buttonAction) {
+    switch (null == (O = I.button) ? void 0 : O.buttonAction) {
         case a.Wc.OPEN_MARKETING_PAGE:
             y = () => {
-                (0, u.uL)(g.Z5c.APPLICATION_STORE), P();
+                (0, u.uL)(g.Z5c.APPLICATION_STORE), j();
             };
             break;
         case a.Wc.OPEN_TIER_1_PAYMENT_MODAL:
@@ -80,12 +80,12 @@ function E(e) {
                 (0, c.Z)({
                     subscriptionTier: h.Si.TIER_1,
                     analyticsLocations: S,
-                    analyticsObject: O(_({}, T), {
+                    analyticsObject: E(_({}, N), {
                         object: g.qAy.BUTTON_CTA,
                         objectType: g.Qqv.TIER_1,
                     }),
                     onClose: (e) => {
-                        e && P();
+                        e && j();
                     },
                 });
             break;
@@ -96,12 +96,12 @@ function E(e) {
                 (0, c.Z)({
                     subscriptionTier: h.Si.TIER_2,
                     analyticsLocations: S,
-                    analyticsObject: O(_({}, T), {
+                    analyticsObject: E(_({}, N), {
                         object: g.qAy.BUTTON_CTA,
                         objectType: g.Qqv.TIER_2,
                     }),
                     onClose: (e) => {
-                        e && P();
+                        e && j();
                     },
                 });
     }
@@ -121,7 +121,7 @@ function E(e) {
                 : void 0,
         w = {
             type: "video",
-            src: N ? I.heroArtVideoLinkLightTheme : I.videoLink,
+            src: T ? I.heroArtVideoLinkLightTheme : I.videoLink,
         };
     null != I.heroArtVideoSubtitles &&
         (w.subtitles = I.heroArtVideoSubtitles.map((e) => ({
@@ -132,7 +132,7 @@ function E(e) {
         ("" !== I.heroArtImageLinkDarkTheme || "" !== I.heroArtImageLinkLightTheme) &&
             (w = {
                 type: "image",
-                src: N ? I.heroArtImageLinkLightTheme : I.heroArtImageLinkDarkTheme,
+                src: T ? I.heroArtImageLinkLightTheme : I.heroArtImageLinkDarkTheme,
             });
     let L =
         "" !== I.modalTopPill
@@ -153,10 +153,10 @@ function E(e) {
         featureCards: I.featureCards.map((e) => ({
             header: e.header,
             subHeader: e.body,
-            imageSrc: N ? e.imageLinkLightTheme : e.imageLink,
+            imageSrc: T ? e.imageLinkLightTheme : e.imageLink,
             tagText: "" !== e.pill ? e.pill : void 0,
         })),
-        changeLogId: j,
+        changeLogId: P,
         button: () => {
             let e = Date.now();
             return (0, r.jsx)(o.zxk, {
@@ -164,10 +164,10 @@ function E(e) {
                 size: "md",
                 onClick: () => {
                     d.default.track(g.rMx.CHANGE_LOG_CTA_CLICKED, {
-                        change_log_id: j,
+                        change_log_id: P,
                         cta_type: A,
                         seconds_open: Math.round((Date.now() - e) / 1000),
-                        target: j,
+                        target: P,
                     }),
                         y();
                 },

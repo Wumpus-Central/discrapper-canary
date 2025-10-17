@@ -1,5 +1,5 @@
 n.d(t, {
-    CR: () => k,
+    CR: () => j,
     DD: () => x,
 }),
     n(953529);
@@ -428,12 +428,12 @@ function x(e) {
 function M(e) {
     return (0, l.$J)(e) || (0, l.pO)(e) ? 0 : (0, l.Dr)({ quest: e }) ? 1 : (0, l.q8)(e) ? 2 : 3 * !!(0, l.Vl)(e);
 }
-function j(e) {
+function k(e) {
     return r.useMemo(() => M(e), [e]);
 }
-function k(e) {
+function j(e) {
     let { quest: t, shortText: n = !1 } = e;
-    switch (j(t)) {
+    switch (k(t)) {
         case 0:
             if (t.config.features.includes(_.S7.CLOUD_GAMING_ACTIVITY)) return m.intl.string(m.t["+qoymJ"]);
             if (t.config.features.includes(_.S7.START_QUEST_CTA)) return m.intl.string(n ? m.t.E4kW5O : m.t["Ie9++v"]);

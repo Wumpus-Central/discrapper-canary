@@ -75,7 +75,7 @@ function _(e, t, n) {
             },
             [e, t, n, _],
         ),
-        b = r.useCallback(
+        g = r.useCallback(
             (r, a, o) => {
                 let m = f(d({}, r), {
                     id: i.current,
@@ -109,14 +109,14 @@ function _(e, t, n) {
             },
             [t, n, e],
         ),
-        g = r.useCallback((e, t, n) => b(e, t, n), [b]);
+        b = r.useCallback((e, t, n) => g(e, t, n), [g]);
     return r.useMemo(
         () => ({
             handleMouseDown: m,
-            handleMouseMove: b,
+            handleMouseMove: g,
             handleMouseUp: E,
-            handleMouseEnter: g,
+            handleMouseEnter: b,
         }),
-        [m, g, b, E],
+        [m, b, g, E],
     );
 }

@@ -2,28 +2,28 @@ n.d(t, { Z: () => R }), n(388685);
 var r = n(951288),
     l = n(647438),
     i = n(979554),
-    o = n(399606),
-    s = n(780384),
-    a = n(481060),
+    a = n(399606),
+    o = n(780384),
+    s = n(481060),
     c = n(410030),
     u = n(594174),
     d = n(626135),
     g = n(381585),
-    f = n(597688),
-    p = n(128922),
+    p = n(597688),
+    f = n(128922),
     C = n(370039),
     h = n(937510),
     _ = n(303952),
     m = n(38900),
     b = n(709999),
-    E = n(653126),
-    v = n(786040),
-    O = n(81136),
-    x = n(215023),
+    v = n(653126),
+    E = n(786040),
+    x = n(81136),
+    O = n(215023),
     S = n(981631),
     y = n(388032),
-    k = n(887353),
-    j = n(558513),
+    j = n(887353),
+    k = n(558513),
     T = n(662128),
     L = n(676790),
     I = n(665195),
@@ -36,22 +36,22 @@ function R(e) {
     let { isFetchingCategories: n, scrollerRef: R, tab: Z } = e,
         w = (0, g.sp)(),
         H = null != (t = null == w ? void 0 : w.sessionId) ? t : "",
-        { noCache: D, includeUnpublished: M } = (0, O.Z)(),
-        F = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
-        W = (0, o.e7)([f.Z], () => f.Z.productsWithVariantsAsGroup),
-        [U, V] = l.useState(1),
+        { noCache: D, includeUnpublished: M } = (0, x.Z)(),
+        F = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
+        W = (0, a.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
+        [V, U] = l.useState(1),
         z = (0, c.Fg)(),
-        G = (0, s.ap)(z),
+        G = (0, o.ap)(z),
         [K, Y, q] = l.useMemo(() => {
             switch (Z) {
-                case x.AW.AVATAR_DECORATIONS:
+                case O.AW.AVATAR_DECORATIONS:
                     return [y.intl.string(y.t.dRZYND), G ? I.Z : L.Z, i.Z.AVATAR_DECORATION];
-                case x.AW.PROFILE_EFFECTS:
+                case O.AW.PROFILE_EFFECTS:
                     return [y.intl.string(y.t["1cNjt7"]), G ? P.Z : N.Z, i.Z.PROFILE_EFFECT];
-                case x.AW.NAMEPLATES:
+                case O.AW.NAMEPLATES:
                     return [y.intl.string(y.t.V68Fq6), G ? A.Z : B.Z, i.Z.NAMEPLATE];
-                case x.AW.BUNDLES:
-                    return [y.intl.string(y.t.FYFppq), G ? T.Z : j.Z, i.Z.BUNDLE];
+                case O.AW.BUNDLES:
+                    return [y.intl.string(y.t.FYFppq), G ? T.Z : k.Z, i.Z.BUNDLE];
             }
         }, [Z, G]),
         Q = (0, C.a)(),
@@ -89,23 +89,23 @@ function R(e) {
                     cacheDisabled: D,
                 });
         }, [H, M, D, n, Z]);
-    let $ = p.Z.useConfig({ location: "CollectiblesFilterableShop" }).showCardsV2;
+    let $ = f.Z.useConfig({ location: "CollectiblesFilterableShop" }).showCardsV2;
     return n || null == F
         ? (0, r.jsx)(m.Z, {})
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)("div", {
                       style: { backgroundImage: "url(".concat(Y, ")") },
-                      className: k.bannerContainer,
-                      children: (0, r.jsx)(a.Heading, {
+                      className: j.bannerContainer,
+                      children: (0, r.jsx)(s.Heading, {
                           variant: "heading-xxl/extrabold",
                           children: K,
                       }),
                   }),
                   (0, r.jsx)("div", {
-                      className: k.products,
-                      children: X.slice(40 * (U - 1), 40 * U).map((e, t) => {
-                          let n = f.Z.getCategory(e.categorySkuId);
+                      className: j.products,
+                      children: X.slice(40 * (V - 1), 40 * V).map((e, t) => {
+                          let n = p.Z.getCategory(e.categorySkuId);
                           return null == n
                               ? null
                               : (0, r.jsx)(
@@ -114,10 +114,10 @@ function R(e) {
                                         newValue: { tilePosition: t },
                                         children: $
                                             ? (0, r.jsx)(
-                                                  E.Z,
+                                                  v.Z,
                                                   {
                                                       skuId: e.skuId,
-                                                      onClickAnalytics: (0, v.wO)(e, Z, w),
+                                                      onClickAnalytics: (0, E.wO)(e, Z, w),
                                                   },
                                                   e.skuId,
                                               )
@@ -138,10 +138,10 @@ function R(e) {
                   }),
                   X.length > 40 &&
                       (0, r.jsx)("div", {
-                          className: k.paginationContainer,
+                          className: j.paginationContainer,
                           children: (0, r.jsx)("div", {
-                              children: (0, r.jsx)(a.DsT, {
-                                  currentPage: U,
+                              children: (0, r.jsx)(s.DsT, {
+                                  currentPage: V,
                                   totalCount: X.length,
                                   pageSize: 40,
                                   onPageChange: (e) => {
@@ -155,7 +155,7 @@ function R(e) {
                                           cta_name: "".concat(Z, " page ").concat(e),
                                           page_type: Z,
                                       }),
-                                          V(e),
+                                          U(e),
                                           null == R || null == (t = R.current) || t.scrollToTop({ animate: !0 });
                                   },
                                   disablePaginationGap: !0,

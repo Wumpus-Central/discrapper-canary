@@ -21,8 +21,8 @@ var r = n(951288),
     b = n(318891),
     v = n(884338),
     h = n(719296),
-    y = n(958185),
-    S = n(100527),
+    S = n(958185),
+    y = n(100527),
     O = n(906732),
     I = n(826405),
     C = n(835473),
@@ -83,8 +83,8 @@ function M(e) {
                 ? e
                 : u.ZP.getEmbeddedActivitiesForStartingChannel(m.id).find((e) => e.applicationId === p.id);
         }),
-        { analyticsLocations: y } = (0, O.ZP)(),
-        S = (0, s.O)(),
+        { analyticsLocations: S } = (0, O.ZP)(),
+        y = (0, s.O)(),
         C = A.ZP.getName(m.getGuildId(), m.id, null == v ? void 0 : v[0]),
         w =
             (0, _.s5)({
@@ -149,8 +149,8 @@ function M(e) {
                                       (0, d.Z)({
                                           applicationId: h.applicationId,
                                           activityChannelId: m.id,
-                                          locationObject: S.location,
-                                          analyticsLocations: y,
+                                          locationObject: y.location,
+                                          analyticsLocations: S,
                                           componentId: N,
                                       });
                           },
@@ -165,7 +165,7 @@ function M(e) {
 }
 function k(e) {
     let { participant: t, width: n, selected: l, interactible: a, channel: c } = e,
-        { analyticsLocations: s } = (0, O.ZP)(S.Z.ACTIVITY_TILE),
+        { analyticsLocations: s } = (0, O.ZP)(y.Z.ACTIVITY_TILE),
         { applicationId: u } = t,
         d = (0, m.Z)(),
         f = null != d && (0, p.p)(d.location) === c.id && d.applicationId === u,
@@ -179,7 +179,7 @@ function k(e) {
         j = !f,
         P = !f && !l,
         x = (0, o.e7)([Z.Z, w.Z], () =>
-            (0, y.Z)({
+            (0, S.Z)({
                 LayerStore: Z.Z,
                 PopoutWindowStore: w.Z,
             }),

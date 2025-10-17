@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(906732),
     d = n(580552),
     u = n(104505),
-    h = n(680295),
-    p = n(5192),
+    p = n(680295),
+    h = n(5192),
     f = n(785717),
     g = n(221292),
     m = n(687158),
@@ -25,8 +25,8 @@ var r = n(951288),
     S = n(679332),
     E = n(544989),
     Z = n(671955),
-    T = n(388032),
-    P = n(231688),
+    P = n(388032),
+    T = n(231688),
     N = n(892273);
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -99,7 +99,7 @@ function w(e) {
                         children: [
                             (0, r.jsx)(E.Z, { children: (0, r.jsx)(S.Z, { user: n }) }),
                             (0, r.jsxs)("div", {
-                                className: P.header,
+                                className: T.header,
                                 children: [
                                     (0, r.jsx)(j.Z, {
                                         user: n,
@@ -122,7 +122,7 @@ function w(e) {
                                     (0, r.jsx)(I.Z, {
                                         user: n,
                                         guildId: w.guild_id,
-                                        nickname: p.ZP.getName(null, w.id, n),
+                                        nickname: h.ZP.getName(null, w.id, n),
                                         pronouns: null == D ? void 0 : D.pronouns,
                                         onOpenProfile: A ? void 0 : B,
                                         tags: (0, r.jsx)(_.Z, {
@@ -134,7 +134,7 @@ function w(e) {
                                         className: N.overlay,
                                         children: [
                                             (0, r.jsx)(v.Z, {
-                                                heading: T.intl.string(T.t["61W33d"]),
+                                                heading: P.intl.string(P.t["61W33d"]),
                                                 headingColor: "header-primary",
                                                 children: (0, r.jsx)(O.Z, {
                                                     userBio: null == D ? void 0 : D.bio,
@@ -144,7 +144,7 @@ function w(e) {
                                                 }),
                                             }),
                                             (0, r.jsx)(v.Z, {
-                                                heading: T.intl.string(T.t["A//N4u"]),
+                                                heading: P.intl.string(P.t["A//N4u"]),
                                                 headingColor: "header-primary",
                                                 children: (0, r.jsx)(x.Z, { userId: n.id }),
                                             }),
@@ -156,7 +156,7 @@ function w(e) {
                     }),
                     !A &&
                         (0, r.jsx)("div", {
-                            className: P.footer,
+                            className: T.footer,
                             children: (0, r.jsx)(a.P3F, {
                                 onClick: () => {
                                     B(),
@@ -170,12 +170,12 @@ function w(e) {
                                             ),
                                         );
                                 },
-                                className: P.footerButton,
-                                children: T.intl.string(T.t["+Xp3ho"]),
+                                className: T.footerButton,
+                                children: P.intl.string(P.t["+Xp3ho"]),
                             }),
                         }),
                     (null == D ? void 0 : D.profileEffect) != null &&
-                        (0, r.jsx)(h.Z, {
+                        (0, r.jsx)(p.Z, {
                             skuId: null == D || null == (t = D.profileEffect) ? void 0 : t.skuId,
                             isHovering: F,
                         }),

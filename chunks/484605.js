@@ -14,8 +14,8 @@ var i = n(264418),
     h = n(288541);
 let g = (e) => {
     let { targetElementRef: t, discountOffer: g, premiumSubscription: m, dismissCoachmark: b, children: _ } = e,
-        { analyticsLocations: O } = (0, o.ZP)(a.Z.CHURN_DISCOUNT_POPOVER),
-        E = (0, c.W7)(d.Xh.PREMIUM_MONTH_TIER_2, g, m),
+        { analyticsLocations: E } = (0, o.ZP)(a.Z.CHURN_DISCOUNT_POPOVER),
+        O = (0, c.W7)(d.Xh.PREMIUM_MONTH_TIER_2, g, m),
         v = (0, r.jsx)(i.Z, {
             targetElementRef: t,
             position: "right",
@@ -24,7 +24,7 @@ let g = (e) => {
             caretConfig: { align: "start" },
             title: f.intl.format(f.t["3yZP0N"], { percent: g.discount.amount }).toString(),
             body: f.intl.format(f.t["3Q4wCw"], {
-                discountedPrice: E,
+                discountedPrice: O,
                 billingPeriod: (0, s.JP)(g.discount.user_usage_limit_interval),
                 numMonths: g.discount.user_usage_limit,
             }),
@@ -76,7 +76,7 @@ let g = (e) => {
                                         (i = i =
                                             {
                                                 premiumSubscription: m,
-                                                analyticsLocations: O,
+                                                analyticsLocations: E,
                                                 initialStep: u.R.CONFIRM_DISCOUNT,
                                             }),
                                         Object.getOwnPropertyDescriptors

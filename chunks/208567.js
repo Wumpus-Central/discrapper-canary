@@ -98,8 +98,8 @@ class v extends (i = l.PureComponent) {
                 className: C,
                 imageClassName: N,
                 iconClassName: S,
-                iconWrapperClassName: I,
-                icon: E,
+                iconWrapperClassName: E,
+                icon: I,
                 hideSize: P,
                 imageStyle: w,
                 showRemoveButton: T,
@@ -130,7 +130,7 @@ class v extends (i = l.PureComponent) {
                         _ &&
                             (0, r.jsx)("div", {
                                 className: o()(g.imageUploaderIcon, g.imageUploaderIconDisabled, S),
-                                children: E,
+                                children: I,
                             }),
                     ],
                 }),
@@ -153,7 +153,7 @@ class v extends (i = l.PureComponent) {
                 (0, r.jsx)(d.tEY, {
                     within: !0,
                     children: (0, r.jsxs)("div", {
-                        className: O ? o()(g.imageUploaderIconWrapper, I) : void 0,
+                        className: O ? o()(g.imageUploaderIconWrapper, E) : void 0,
                         children: [
                             (0, r.jsxs)("div", {
                                 className: o()(g.imageUploaderInner, N),
@@ -189,7 +189,7 @@ class v extends (i = l.PureComponent) {
                             O &&
                                 (0, r.jsx)(j, {
                                     className: S,
-                                    icon: E,
+                                    icon: I,
                                 }),
                         ],
                     }),

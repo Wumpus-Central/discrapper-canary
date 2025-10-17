@@ -21,8 +21,8 @@ var r = n(951288),
     C = n(606318),
     O = n(402235),
     y = n(441536),
-    N = n(494620),
-    E = n(345162),
+    E = n(494620),
+    N = n(345162),
     I = n(496675),
     S = n(84058),
     T = n(103576),
@@ -34,8 +34,8 @@ var r = n(951288),
     A = n(275296),
     L = n(203377),
     k = n(494831),
-    M = n(981631),
-    G = n(141006),
+    G = n(981631),
+    M = n(141006),
     U = n(388032),
     B = n(989308),
     F = n(12574),
@@ -59,7 +59,7 @@ function Y(e) {
             required: !0,
             type: "text",
             value: l,
-            maxLength: M.VKK,
+            maxLength: G.VKK,
             onChange: function (e) {
                 a(e), K(t.id, e);
             },
@@ -174,7 +174,7 @@ function q(e) {
 function X() {
     let e = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
         { gradientStyle: t, gradientClassname: n } = (0, m.JUn)({
-            colorStrings: (0, C.DX)(G.SK),
+            colorStrings: (0, C.DX)(M.SK),
             useReducedMotion: e,
             roleStyle: "username",
             includeConvenienceGlow: !0,
@@ -221,8 +221,8 @@ function Q(e) {
             description: U.intl.string(U.t["9UCxlZ"]),
             required: !0,
             children: (0, r.jsx)(z, {
-                defaultColor: M.p6O,
-                colors: a === T.g.GRADIENT && s ? G.tl : M.pmI,
+                defaultColor: G.p6O,
+                colors: a === T.g.GRADIENT && s ? M.tl : G.pmI,
                 value: i.color,
                 disabled: l,
                 onChange: (e) => {
@@ -231,8 +231,8 @@ function Q(e) {
                         (t = e),
                         void (
                             i.color !== t &&
-                            (t !== M.p6O || 0 !== i.color) &&
-                            (t === M.p6O && (t = 0), (0, S.OW)(i.id, t))
+                            (t !== G.p6O || 0 !== i.color) &&
+                            (t === G.p6O && (t = 0), (0, S.OW)(i.id, t))
                         )
                     );
                 },
@@ -279,7 +279,7 @@ function J(e) {
             name: t.name,
         },
         u = (0, v.oC)(n, t),
-        p = [M.BRd.DARK, M.BRd.DARKER, M.BRd.MIDNIGHT, M.BRd.LIGHT];
+        p = [G.BRd.DARK, G.BRd.DARKER, G.BRd.MIDNIGHT, G.BRd.LIGHT];
     return (0, r.jsx)(m.Rny, {
         children: (0, r.jsx)("div", {
             className: a()(F.previewContainer, { [F.disableInteraction]: l }),
@@ -304,7 +304,7 @@ function J(e) {
                                             isGroupStart: !0,
                                         }),
                                     }),
-                                    e === M.BRd.LIGHT &&
+                                    e === G.BRd.LIGHT &&
                                         i !== T.g.SOLID &&
                                         (0, r.jsx)(m.Text, {
                                             variant: "text-xs/medium",
@@ -348,7 +348,7 @@ function ee(e) {
         o = (0, d.e7)([T.Z], () => T.Z.getRoleStyleData(n.id)),
         c = !s,
         u = null != o && s ? o.currentStyle : T.g.SOLID,
-        g = (0, E.fI)(n),
+        g = (0, N.fI)(n),
         p = i || g,
         f = (0, d.e7)([I.Z], () => I.Z.canImpersonateRole(t, n)),
         { headerHeight: h, headerRef: b } = (0, w.Z)(0),
@@ -397,7 +397,7 @@ function ee(e) {
                         hasEnhancedRoleColors: s,
                     }),
                 u === T.g.HOLOGRAPHIC &&
-                    (0, r.jsx)(N.Z, {
+                    (0, r.jsx)(E.Z, {
                         className: F.holographicInfoBox,
                         children: (0, r.jsx)(m.Text, {
                             variant: "text-xs/medium",

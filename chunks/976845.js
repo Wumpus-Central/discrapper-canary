@@ -1,4 +1,4 @@
-r.d(t, { ZP: () => j });
+r.d(t, { ZP: () => d });
 var n = r(951288),
     o = r(647438),
     l = r(60488),
@@ -69,11 +69,11 @@ function f(e, t) {
     }
     return o;
 }
-let O = {
+let p = {
         width: 60,
         height: 60,
     },
-    p = (e) => {
+    O = (e) => {
         let { currentAnimationType: t, animationTypeRef: r, onSetAnimationDurationMS: n, play: l, getDuration: u } = e,
             a = u(),
             c = null != a ? 1000 * a : 3000;
@@ -90,27 +90,10 @@ let O = {
         let o = (0, u.D)(null != t ? t : "earn"),
             { Component: l } = o;
         return (
-            p(s({ currentAnimationType: t }, r, f(o, ["Component"]))),
+            O(s({ currentAnimationType: t }, r, f(o, ["Component"]))),
             (0, n.jsx)(
                 l,
-                b(s({}, O), {
-                    size: "custom",
-                    className: i.orbsLottie,
-                    useLottieDefaultColors: !0,
-                }),
-            )
-        );
-    },
-    g = (e) => {
-        var { currentAnimationType: t } = e,
-            r = f(e, ["currentAnimationType"]);
-        let o = (0, l.v)(null != t ? t : "earn"),
-            { Component: u } = o;
-        return (
-            p(s({ currentAnimationType: t }, r, f(o, ["Component"]))),
-            (0, n.jsx)(
-                u,
-                b(s({}, O), {
+                b(s({}, p), {
                     size: "custom",
                     className: i.orbsLottie,
                     useLottieDefaultColors: !0,
@@ -119,6 +102,23 @@ let O = {
         );
     },
     j = (e) => {
+        var { currentAnimationType: t } = e,
+            r = f(e, ["currentAnimationType"]);
+        let o = (0, l.v)(null != t ? t : "earn"),
+            { Component: u } = o;
+        return (
+            O(s({ currentAnimationType: t }, r, f(o, ["Component"]))),
+            (0, n.jsx)(
+                u,
+                b(s({}, p), {
+                    size: "custom",
+                    className: i.orbsLottie,
+                    useLottieDefaultColors: !0,
+                }),
+            )
+        );
+    },
+    d = (e) => {
         let t = (0, c.ZP)();
-        return (0, a.ap)(t) ? (0, n.jsx)(g, s({}, e)) : (0, n.jsx)(y, s({}, e));
+        return (0, a.ap)(t) ? (0, n.jsx)(j, s({}, e)) : (0, n.jsx)(y, s({}, e));
     };

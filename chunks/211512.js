@@ -4,23 +4,23 @@ var r = n(951288),
     o = n(550964);
 function i(e) {
     let { node: t } = e,
-        { useLabel: n, useTitle: i, useSubtitle: a, useVariant: s, useDisabled: c, onClick: u } = t,
+        { useLabel: n, useTitle: i, useSubtitle: a, useVariant: c, useDisabled: s, onClick: u } = t,
         d = i(),
         f = null == a ? void 0 : a(),
-        m = n(),
-        b = null == s ? void 0 : s(),
-        p = null == c ? void 0 : c();
+        b = n(),
+        p = null == c ? void 0 : c(),
+        y = null == s ? void 0 : s();
     return (0, r.jsx)(o.X, {
         children: (0, r.jsx)(l.gNt, {
             label: d,
             description: f,
-            disabled: p,
+            disabled: y,
             layout: "horizontal",
             children: (0, r.jsx)(l.Button, {
                 onClick: u,
-                text: m,
-                variant: b,
-                disabled: p,
+                text: b,
+                variant: p,
+                disabled: y,
             }),
         }),
     });

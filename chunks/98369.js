@@ -25,14 +25,14 @@ var r,
     p = n(729303),
     _ = n(651941),
     m = n(981631);
-let b = new Map(),
+let g = new Map(),
     E = new Map(),
-    g = !1,
+    b = !1,
     v = null;
 function h() {
     return d.Z.getAllActiveStreamKeys().reduce((e, t) => {
         let { ownerId: n } = (0, c.my)(t),
-            r = !0 === b.get(n),
+            r = !0 === g.get(n),
             i = E.get(t) !== r;
         return E.set(t, r), !!i || e;
     }, !1);
@@ -43,12 +43,12 @@ function S() {
         n = s.default.getId(),
         r = !0;
     for (let e of t)
-        if (n !== e && !0 !== b.get(e)) {
+        if (n !== e && !0 !== g.get(e)) {
             r = !1;
             break;
         }
-    let i = r !== g;
-    return (g = r), i;
+    let i = r !== b;
+    return (b = r), i;
 }
 function y(e) {
     let { userId: t } = e;
@@ -60,28 +60,28 @@ function y(e) {
                 r = _.Z.isKeyVerified(e, n) || p.Z.isKeyVerified(e, n),
                 i = (0, f.UB)(e, [u.Z, d.Z]),
                 l = r && !i,
-                a = l !== b.get(e);
-            return b.set(e, l), a;
+                a = l !== g.get(e);
+            return g.set(e, l), a;
         })(t),
         r = h(),
         i = S();
     return n || r || i;
 }
 function O() {
-    b.clear(), E.clear(), (g = !1);
+    g.clear(), E.clear(), (b = !1);
 }
 class I extends (r = l.ZP.Store) {
     initialize() {
         this.waitFor(p.Z, _.Z, u.Z, d.Z);
     }
     isCallVerified() {
-        return g;
+        return b;
     }
     isStreamVerified(e) {
         return E.get(e);
     }
     isUserVerified(e) {
-        return b.get(e);
+        return g.get(e);
     }
 }
 (i = "displayName") in I

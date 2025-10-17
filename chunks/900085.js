@@ -65,7 +65,7 @@ function B(e) {
     }
     return e;
 }
-function V(e, t) {
+function F(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -83,7 +83,7 @@ function V(e, t) {
         e
     );
 }
-let F = () =>
+let V = () =>
     (0, i.jsxs)("div", {
         className: G.emptyState,
         children: [
@@ -105,7 +105,7 @@ class H extends (r = l.Component) {
         let e = x.Z.getGuild(this.props.channel.guild_id);
         return (0, i.jsx)(
             R.$W,
-            V(B({}, this.props), {
+            F(B({}, this.props), {
                 children: (0, i.jsx)("div", {
                     className: G.miscContainer,
                     children: null != e ? e.name : null,
@@ -237,7 +237,7 @@ class Q extends l.PureComponent {
             let { query: e } = this.state,
                 { results: t } = this.props;
             return 0 === t.length && e.length > 0
-                ? (0, i.jsx)(F, {})
+                ? (0, i.jsx)(V, {})
                 : 0 === t.length
                   ? null
                   : (0, i.jsx)(d._2F, {
@@ -332,7 +332,7 @@ class Q extends l.PureComponent {
                                 n.e("51453"),
                                 n.e("7654"),
                                 n.e("845"),
-                                n.e("87641"),
+                                n.e("86736"),
                                 n.e("6850"),
                                 n.e("58227"),
                                 n.e("44686"),
@@ -346,7 +346,7 @@ class Q extends l.PureComponent {
                             return (n) =>
                                 (0, i.jsx)(
                                     e,
-                                    V(B({}, n), {
+                                    F(B({}, n), {
                                         guild: t.record,
                                         onSelect: T.Cp,
                                         hideSettings: !0,
@@ -372,7 +372,7 @@ class Q extends l.PureComponent {
                                     return (t) =>
                                         (0, i.jsx)(
                                             e,
-                                            V(B({}, t), {
+                                            F(B({}, t), {
                                                 channel: r,
                                                 guild: l,
                                                 onSelect: T.Cp,
@@ -391,7 +391,7 @@ class Q extends l.PureComponent {
                                     return (t) =>
                                         (0, i.jsx)(
                                             e,
-                                            V(B({}, t), {
+                                            F(B({}, t), {
                                                 channel: r,
                                                 guild: l,
                                                 onSelect: T.Cp,
@@ -406,7 +406,7 @@ class Q extends l.PureComponent {
                                     return (t) =>
                                         (0, i.jsx)(
                                             e,
-                                            V(B({}, t), {
+                                            F(B({}, t), {
                                                 channel: r,
                                                 onSelect: T.Cp,
                                             }),
@@ -418,7 +418,7 @@ class Q extends l.PureComponent {
                                     return (t) =>
                                         (0, i.jsx)(
                                             e,
-                                            V(B({}, t), {
+                                            F(B({}, t), {
                                                 channel: r,
                                                 guild: l,
                                                 onSelect: T.Cp,
@@ -428,7 +428,7 @@ class Q extends l.PureComponent {
                             case M.d4z.GUILD_DIRECTORY:
                                 return (0, p.jW)(e, async () => {
                                     let { default: e } = await n.e("70623").then(n.bind(n, 99334));
-                                    return (t) => (0, i.jsx)(e, V(B({}, t), { channel: r }));
+                                    return (t) => (0, i.jsx)(e, F(B({}, t), { channel: r }));
                                 });
                         }
                         break;
@@ -440,7 +440,7 @@ class Q extends l.PureComponent {
                             return (n) =>
                                 (0, i.jsx)(
                                     e,
-                                    V(B({}, n), {
+                                    F(B({}, n), {
                                         channel: t.record,
                                         selected: S.Z.getChannelId() === t.record.id,
                                         onSelect: T.Cp,
@@ -455,7 +455,7 @@ class Q extends l.PureComponent {
                             return (n) =>
                                 (0, i.jsx)(
                                     e,
-                                    V(B({}, n), {
+                                    F(B({}, n), {
                                         user: t.record,
                                         onSelect: T.Cp,
                                     }),

@@ -141,7 +141,7 @@ let y = function (e) {
             confirmationFooter: N,
             paymentModalBanner: R,
         };
-    function j(e) {
+    function k(e) {
         let n = null != P ? P : t === f.Si.TIER_1 ? s.zx.Colors.PRIMARY : s.zx.Colors.GREEN;
         return (0, r.jsx)(
             u.Z,
@@ -202,7 +202,7 @@ let y = function (e) {
         ? (0, r.jsx)(l.aML, {
               "data-migration-pending": !0,
               text: x.buttonTooltipText,
-              children: j,
+              children: k,
           })
-        : j();
+        : k();
 };

@@ -1,10 +1,10 @@
 n.d(t, { default: () => P }), n(388685);
 var i = n(951288),
     a = n(647438),
-    o = n(120356),
-    r = n.n(o),
-    c = n(159691),
-    l = n(481060),
+    r = n(120356),
+    o = n.n(r),
+    l = n(159691),
+    c = n(481060),
     s = n(100527),
     d = n(906732),
     u = n(455708),
@@ -13,24 +13,24 @@ var i = n(951288),
     _ = n(626135),
     p = n(488499),
     x = n(58384),
-    N = n(981631),
-    m = n(486324),
+    m = n(981631),
+    N = n(486324),
     h = n(388032),
     A = n(382775);
 function P(e) {
-    let { transitionState: t, onClose: o, onComplete: P, uploadType: b, showUpsellHeader: v, analyticsPage: E } = e,
+    let { transitionState: t, onClose: r, onComplete: P, uploadType: b, showUpsellHeader: v, analyticsPage: E } = e,
         [j, R] = a.useState(!1),
-        y = (0, l.vRw)(),
+        y = (0, c.vRw)(),
         { analyticsLocations: I, newestAnalyticsLocation: C } = (0, d.ZP)(s.Z.GIF_PICKER);
     async function Z(e) {
         let { gifSrc: t } = e;
         if (null == t || j) return;
         R(!0);
         let a = (0, x.Q)(t),
-            r = await fetch(a),
-            c = await r.blob();
-        o(),
-            (0, l.ZDy)(
+            o = await fetch(a),
+            l = await o.blob();
+        r(),
+            (0, c.ZDy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e("59732"), n.e("42529")]).then(n.bind(n, 712451));
                     return (t) =>
@@ -63,7 +63,7 @@ function P(e) {
                             })(
                                 {
                                     imageUri: a,
-                                    file: new File([c], "tenor.gif", { type: "image/gif" }),
+                                    file: new File([l], "tenor.gif", { type: "image/gif" }),
                                     onCrop: P,
                                     uploadType: b,
                                     showUpsellHeader: v,
@@ -76,21 +76,21 @@ function P(e) {
             );
     }
     a.useEffect(() => {
-        _.default.track(N.rMx.OPEN_MODAL, {
-            type: N.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
+        _.default.track(m.rMx.OPEN_MODAL, {
+            type: m.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
             location_stack: I,
             location: { page: E },
         });
     }, [I, E]);
-    let w = b === m.pC.AVATAR || b === m.pC.BANNER,
+    let w = b === N.pC.AVATAR || b === N.pC.BANNER,
         O = (0, f.M)(!w);
     return (0, i.jsx)(d.Gt, {
         value: I,
-        children: (0, i.jsxs)(c.IX, {
-            onClose: o,
+        children: (0, i.jsxs)(l.IX, {
+            onClose: r,
             transitionState: t,
             children: [
-                (0, i.jsx)(c.xBx, { title: h.intl.string(h.t["xsC+//"]) }),
+                (0, i.jsx)(l.xBx, { title: h.intl.string(h.t["xsC+//"]) }),
                 v &&
                     !O &&
                     (0, i.jsx)("div", {
@@ -98,7 +98,7 @@ function P(e) {
                         children: (0, i.jsx)(p.Z, {
                             type: b,
                             analyticsPage: E,
-                            analyticsSection: N.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
+                            analyticsSection: m.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
                             isGIF: !0,
                         }),
                     }),
@@ -106,12 +106,12 @@ function P(e) {
                     className: A.gifPickerContainer,
                     children: [
                         (0, i.jsx)(u.Z, {
-                            className: r()(A.gifPicker, { [A.loadingOverlay]: j }),
+                            className: o()(A.gifPicker, { [A.loadingOverlay]: j }),
                             onSelectGIF: Z,
                             headingColor: "text-secondary",
                             hideFavorites: !0,
                         }),
-                        j && (0, i.jsx)(l.$jN, { className: A.spinner }),
+                        j && (0, i.jsx)(c.$jN, { className: A.spinner }),
                         v &&
                             O &&
                             (0, i.jsx)(g.Z, {

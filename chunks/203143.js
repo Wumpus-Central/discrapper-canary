@@ -88,11 +88,11 @@ function M(e, t) {
         e
     );
 }
-function j(e, t) {
+function k(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = k(e, t);
+        i = j(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -100,7 +100,7 @@ function j(e, t) {
     }
     return i;
 }
-function k(e, t) {
+function j(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -395,7 +395,7 @@ let q = {
         var t,
             n,
             { answerId: r } = e;
-        let { channelId: i, messageId: a, message: o } = U(j(e, ["answerId"])),
+        let { channelId: i, messageId: a, message: o } = U(k(e, ["answerId"])),
             { tapShouldOpenVotersModal: s } = null != (n = (0, R.Tk)(o)) ? n : {};
         if (!0 === s)
             return void Z({

@@ -1,9 +1,9 @@
-var n = r(179122),
-    i = r(709369);
-t.exports = function (t, e, r, s) {
+var r = n(179122),
+    i = n(709369);
+e.exports = function (e, t, n, a) {
     try {
-        return s ? e(n(r)[0], r[1]) : e(r);
-    } catch (e) {
-        i(t, "throw", e);
+        return a ? t(r(n)[0], n[1]) : t(n);
+    } catch (t) {
+        i(e, "throw", t);
     }
 };

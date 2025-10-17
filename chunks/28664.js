@@ -120,7 +120,7 @@ function y(e) {
         { isVisible: D, triggerProps: L } = (0, u.l)(h({ targetElementRef: P.targetElementRef }, R)),
         x = (0, d.Q)({ shouldShow: D }),
         { defaultLayerContext: M } = (0, o.ZFG)(),
-        j = i.useMemo(
+        k = i.useMemo(
             () =>
                 null != b
                     ? b
@@ -140,8 +140,8 @@ function y(e) {
                         : p,
             [p, m, b],
         );
-    if (null == j || ("string" == typeof j && "" === j)) return n;
-    let k = null != N ? N : (0, c.Sw)(p);
+    if (null == k || ("string" == typeof k && "" === k)) return n;
+    let j = null != N ? N : (0, c.Sw)(p);
     if (y) {
         let e = g(h({}, L), {
             onFocus: (0, c.tS)(L.onFocus, (e) => {
@@ -182,24 +182,24 @@ function y(e) {
                   isRendered: !0,
                   targetElementRef: P.targetElementRef,
                   id: w,
-                  content: j,
+                  content: k,
                   position: v,
                   align: I,
                   spacing: T,
                   caretConfig: C,
                   layerContext: null != S ? S : M,
                   animationStyle: e,
-                  positionKey: k,
+                  positionKey: j,
               })
             : null,
     );
     return (0, r.jsxs)(r.Fragment, {
         children: [
             t,
-            null != j && "" !== j
+            null != k && "" !== k
                 ? (0, r.jsx)(a.n, {
                       id: w,
-                      children: j,
+                      children: k,
                   })
                 : null,
             U,

@@ -52,7 +52,7 @@ let y = (e) => {
         children: d()(t).utc().format("MMMM YYYY"),
     });
 };
-function N(e) {
+function E(e) {
     let { item: t } = e,
         { ppgStatus: n, payoutStatus: r, ppgDeferralReasons: i, periodEndDate: a } = (0, b.j0)(t),
         s = null != a ? d()(a).add(15, "days").toISOString() : void 0,
@@ -135,7 +135,7 @@ function N(e) {
     }
     return null;
 }
-let E = (0, x.i$)({
+let N = (0, x.i$)({
         key: "AMOUNT ",
         cellClassName: C.amountColumn,
         renderHeader() {
@@ -167,11 +167,11 @@ let E = (0, x.i$)({
                 },
             }),
             (0, j.Fd)(
-                ((r = O({}, E)),
+                ((r = O({}, N)),
                 (i = i =
                     {
-                        renderContent: E.render,
-                        renderExpandedContent: (e, t) => E.render(e, t),
+                        renderContent: N.render,
+                        renderExpandedContent: (e, t) => N.render(e, t),
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
@@ -206,7 +206,7 @@ let E = (0, x.i$)({
                 renderContent: (e) =>
                     (0, l.jsx)(x.bL, {
                         className: C.statusCell,
-                        children: (0, l.jsx)(N, { item: e }),
+                        children: (0, l.jsx)(E, { item: e }),
                     }),
             }),
         ],

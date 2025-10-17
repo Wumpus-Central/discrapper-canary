@@ -20,8 +20,8 @@ var i = n(951288),
     y = n(434404),
     C = n(200498),
     S = n(146085),
-    N = n(192079),
-    O = n(277053),
+    O = n(192079),
+    N = n(277053),
     Z = n(271383),
     E = n(485386),
     w = n(430824),
@@ -38,7 +38,7 @@ var i = n(951288),
     B = n(231338),
     H = n(388032),
     V = n(411851);
-function U(e) {
+function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -63,7 +63,7 @@ function U(e) {
     }
     return e;
 }
-function G(e, t) {
+function U(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -94,10 +94,10 @@ function W(e) {
                 S = !1;
             switch (v) {
                 case D.m$.ROLES:
-                    var N;
+                    var O;
                     (j =
                         (g = n[y]).rowType === D.aC.ROLE &&
-                        (null == (N = g.tags) ? void 0 : N.guild_connections) === null
+                        (null == (O = g.tags) ? void 0 : O.guild_connections) === null
                             ? (0, i.jsx)(b.Z, {
                                   className: V.shield,
                                   color: g.colorString,
@@ -159,7 +159,7 @@ function W(e) {
                     g = null;
             }
             if (null == g) return null;
-            let O = !S && null == r && null != g.id;
+            let N = !S && null == r && null != g.id;
             return (0, i.jsxs)(
                 x.Z,
                 {
@@ -186,7 +186,7 @@ function W(e) {
                                     onClick: () => {
                                         var e, n, i;
                                         return (
-                                            O &&
+                                            N &&
                                             null != g &&
                                             ((e = g.id),
                                             (n = g.name),
@@ -211,7 +211,7 @@ function W(e) {
                                             }))
                                         );
                                     },
-                                    "aria-disabled": !O,
+                                    "aria-disabled": !N,
                                     "aria-label": H.intl.string(H.t.N86XcH),
                                     children: (0, i.jsx)(d.k$p, {
                                         size: "md",
@@ -281,7 +281,7 @@ function F(e) {
                                     onClick: function () {
                                         (0, d.ZDy)(async () => {
                                             let { default: e } = await n.e("46786").then(n.bind(n, 388131));
-                                            return (t) => (0, i.jsx)(e, G(U({}, t), { channelId: l.id }));
+                                            return (t) => (0, i.jsx)(e, U(G({}, t), { channelId: l.id }));
                                         });
                                     },
                                     disabled: !g,
@@ -294,7 +294,7 @@ function F(e) {
                         roles: u,
                         members: h,
                         disabledReason: g ? null : H.intl.string(H.t.arRuER),
-                        getRemoveTooltipHint: N.kk,
+                        getRemoveTooltipHint: O.kk,
                     }),
                 ],
             }),
@@ -315,7 +315,7 @@ function z(e) {
                 return (n) =>
                     (0, i.jsx)(
                         e,
-                        G(U({}, n), {
+                        U(G({}, n), {
                             confirmButtonColor: c.Tt.BRAND,
                             header: H.intl.string(H.t.ZzdgUl),
                             confirmText: H.intl.string(H.t.BddRzc),
@@ -406,7 +406,7 @@ function z(e) {
                                                         return (t) =>
                                                             (0, i.jsx)(
                                                                 e,
-                                                                G(U({}, t), {
+                                                                U(G({}, t), {
                                                                     channelId: l.id,
                                                                     inSettings: !0,
                                                                 }),
@@ -443,10 +443,10 @@ function q(e) {
         ],
     });
 }
-let J = a.ZP.connectStores([O.Z, T.Z, Z.ZP, w.Z, E.Z], () => {
+let J = a.ZP.connectStores([N.Z, T.Z, Z.ZP, w.Z, E.Z], () => {
     let e,
-        t = O.Z.channel,
-        n = O.Z.category,
+        t = N.Z.channel,
+        n = N.Z.category,
         i = [],
         l = [],
         r = {},
@@ -456,8 +456,8 @@ let J = a.ZP.connectStores([O.Z, T.Z, Z.ZP, w.Z, E.Z], () => {
         let n = Z.ZP.getMemberIds(null == e ? void 0 : e.id);
         if (null != e) {
             let a = E.Z.getSortedRoles(e.id);
-            (r = O.Z.editedPermissionIds.reduce((e, t) => {
-                let n = O.Z.getPermissionOverwrite(t);
+            (r = N.Z.editedPermissionIds.reduce((e, t) => {
+                let n = N.Z.getPermissionOverwrite(t);
                 return null != n && (e[t] = n), e;
             }, {})),
                 (i = I.kA(e, a, t, t.accessPermissions, r)),
@@ -473,7 +473,7 @@ let J = a.ZP.connectStores([O.Z, T.Z, Z.ZP, w.Z, E.Z], () => {
         filteredRoles: i,
         guild: e,
         isPrivateGuildChannel: s,
-        locked: O.Z.locked,
+        locked: N.Z.locked,
         permissionUpdates: r,
     };
 })(function (e) {
@@ -525,12 +525,12 @@ let J = a.ZP.connectStores([O.Z, T.Z, Z.ZP, w.Z, E.Z], () => {
                                           return (t) =>
                                               (0, i.jsx)(
                                                   e,
-                                                  G(U({}, t), {
+                                                  U(G({}, t), {
                                                       channel: s,
                                                       category: r,
                                                       onConfirm: async () => {
                                                           let { guild_id: e } = r,
-                                                              t = U({}, r.permissionOverwrites);
+                                                              t = G({}, r.permissionOverwrites);
                                                           null != e && null == t[e] && (t[e] = P.we(e)),
                                                               (await (0, j.u)(s, t[e].deny, t[e].allow)) &&
                                                                   (0, g.wk)(s.id, {

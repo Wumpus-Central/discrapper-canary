@@ -152,9 +152,9 @@ function E(e) {
         [c, x] = r.useState(0),
         _ = r.useRef(null),
         E = r.useRef(c),
-        N = (0, b.A)({ guildId: n }),
-        S =
-            ((t = null != N ? N : 0),
+        S = (0, b.A)({ guildId: n }),
+        T =
+            ((t = null != S ? S : 0),
             [
                 {
                     id: g.e.ALL_MEMBERS,
@@ -175,11 +175,11 @@ function E(e) {
                 },
             ]),
         {
-            lastVisibleIndex: T,
+            lastVisibleIndex: N,
             onItemLayout: P,
             overflowItemsRef: O,
         } = (0, o.zP)({
-            items: S,
+            items: T,
             itemGapPx: 16,
             maxLines: 1,
             containerWidth: c - 200,
@@ -187,8 +187,8 @@ function E(e) {
         I = (0, s.e7)([f.ZP], () => null != f.ZP.getGuildSidebarState(n), [n]),
         y = (0, j.L)({ guildId: n }),
         R = r.useMemo(() => (i === g.e.ALL_MEMBERS ? I : null != y && null != y.user), [i, I, y]),
-        w = r.useMemo(() => S.slice(0, T + 1), [T, S]),
-        A = r.useMemo(() => S.slice(T + 1), [T, S]),
+        w = r.useMemo(() => T.slice(0, N + 1), [N, T]),
+        A = r.useMemo(() => T.slice(N + 1), [N, T]),
         Z = (0, m.Z)((e) => {
             let t = e.contentRect.width;
             null != t && E.current !== t && (x(t), (E.current = t));
@@ -205,7 +205,7 @@ function E(e) {
                         (0, l.jsxs)("div", {
                             className: v.measurements,
                             children: [
-                                S.map((e, t) =>
+                                T.map((e, t) =>
                                     (0, l.jsx)(
                                         o.AJ,
                                         {

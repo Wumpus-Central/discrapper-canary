@@ -16,8 +16,8 @@ var i = n(481060),
     m = n(22382),
     b = n(747071),
     _ = n(49230),
-    O = n(981631),
-    E = n(65154);
+    E = n(981631),
+    O = n(65154);
 function v(e, t, n) {
     return (
         t in e
@@ -54,7 +54,7 @@ class y extends p.Z {
             (t = this),
             v(this, "playingSoundsWeb", new Map()),
             v(this, "_stopAndClearSounds", () => {
-                c.Z.supports(E.AN.SAMPLE_PLAYBACK) &&
+                c.Z.supports(O.AN.SAMPLE_PLAYBACK) &&
                     c.Z.getMediaEngine().eachConnection((e) => {
                         e.stopAllSamplesLocalPlayback();
                     }),
@@ -76,7 +76,7 @@ class y extends p.Z {
                             soundVolume: (0, b.Z)(n),
                             reportSoundStartedPlaying: () => (0, f.xR)(e, r),
                         };
-                        c.Z.supports(E.AN.SAMPLE_PLAYBACK) ? await (0, _.$)(i) : await (0, _.h)(i, t.playingSoundsWeb);
+                        c.Z.supports(O.AN.SAMPLE_PLAYBACK) ? await (0, _.$)(i) : await (0, _.h)(i, t.playingSoundsWeb);
                     } finally {
                         (0, f.R)(e, r);
                     }
@@ -87,7 +87,7 @@ class y extends p.Z {
             v(this, "_handleOpenEducationModal", (e, t) => {
                 if (null == e) return;
                 let l = s.Z.getChannel(t),
-                    c = d.ZP.getKeybindForAction(O.kg4.SOUNDBOARD_HOLD);
+                    c = d.ZP.getKeybindForAction(E.kg4.SOUNDBOARD_HOLD);
                 null != l &&
                     (0, g.Z)(l) &&
                     null != c &&

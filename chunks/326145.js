@@ -15,8 +15,8 @@ var r = n(951288),
     m = n(745752),
     b = n(17181),
     _ = n(388032),
-    O = n(76531),
-    E = n(718215);
+    E = n(76531),
+    O = n(718215);
 function v(e) {
     let { guildId: t, channelId: n } = e,
         { ref: l, width: v, height: y } = (0, c.ZP)(),
@@ -40,36 +40,36 @@ function v(e) {
                       }),
             [C],
         ),
-        T = (0, d.N)(S);
+        N = (0, d.N)(S);
     return (0, r.jsxs)("div", {
-        className: a()(O.outerWrapping, E.main, { [E.fullBorderWithGradient]: null == S }),
+        className: a()(E.outerWrapping, O.main, { [O.fullBorderWithGradient]: null == S }),
         ref: l,
         children: [
             null != S
                 ? (0, r.jsx)(u.Z, {
-                      className: E.artwork,
+                      className: O.artwork,
                       src: S,
                       width: v,
                       height: y,
-                      imageClassName: E.cover,
+                      imageClassName: O.cover,
                   })
                 : (0, r.jsx)(p.Z, {}),
-            null != T &&
+            null != N &&
                 null != S &&
                 (0, r.jsx)("div", {
-                    className: E.gradient,
+                    className: O.gradient,
                     style: {
                         background: "linear-gradient(180deg, "
-                            .concat((0, g.aD)(T, 0.16), " 0%, ")
-                            .concat((0, g.aD)(T, 1), " 100%)"),
+                            .concat((0, g.aD)(N, 0.16), " 0%, ")
+                            .concat((0, g.aD)(N, 1), " 100%)"),
                     },
                 }),
-            null != S && (0, r.jsx)("div", { className: E.gradient }),
+            null != S && (0, r.jsx)("div", { className: O.gradient }),
             (0, r.jsxs)("div", {
-                className: a()(O.explainerContainer, O.transparentBackground),
+                className: a()(E.explainerContainer, E.transparentBackground),
                 children: [
                     (0, r.jsxs)("div", {
-                        className: O.header,
+                        className: E.header,
                         children: [
                             (0, r.jsx)(s.Heading, {
                                 variant: "heading-xxl/normal",

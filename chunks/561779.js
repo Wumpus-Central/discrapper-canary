@@ -161,8 +161,8 @@ class I extends (r = a.PureComponent) {
                 barClassName: L,
                 grabberClassName: x,
                 grabberStyles: M = {},
-                markerPosition: j = 0,
-                "aria-hidden": k,
+                markerPosition: k = 0,
+                "aria-hidden": j,
                 "aria-label": U,
                 "aria-labelledby": G,
                 "aria-describedby": B,
@@ -182,8 +182,8 @@ class I extends (r = a.PureComponent) {
                               {
                                   className: s()(h.mark, {
                                       [h.defaultValue]: r,
-                                      [h.markAbove]: 0 === j,
-                                      [h.markBelow]: 1 === j,
+                                      [h.markAbove]: 0 === k,
+                                      [h.markBelow]: 1 === k,
                                   }),
                                   style: { left: "".concat(e, "%") },
                                   children:
@@ -232,7 +232,7 @@ class I extends (r = a.PureComponent) {
                                     "aria-valuenow": t,
                                     "aria-disabled": E,
                                     "aria-orientation": R,
-                                    "aria-hidden": k,
+                                    "aria-hidden": j,
                                     "aria-label": U,
                                     "aria-labelledby": G,
                                     "aria-describedby": null != B ? B : e.describedById,

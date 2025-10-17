@@ -1,20 +1,20 @@
-n.d(t, { default: () => m });
+n.d(t, { default: () => p });
 var i = n(951288);
 n(647438);
 var a = n(481060),
-    l = n(313789),
-    o = n(518596),
-    r = n(181211),
-    s = n(188879),
+    o = n(313789),
+    l = n(518596),
+    s = n(181211),
+    r = n(188879),
     c = n(981631),
     d = n(726985),
     u = n(22860);
-let m = (e) => {
-    let { transitionState: t, onClose: n, classificationId: m, source: p } = e,
-        f = (0, r.Z)(),
+let p = (e) => {
+    let { transitionState: t, onClose: n, classificationId: p, source: m } = e,
+        f = (0, s.Z)(),
         h = () => {
             n(),
-                (0, o.openUserSettings)(l.n.ACCOUNT_PANEL, {
+                (0, l.openUserSettings)(o.n.ACCOUNT_PANEL, {
                     section: c.oAB.ACCOUNT,
                     subsection: d.s6.PRIVACY_AND_SAFETY_STANDING,
                 });
@@ -38,9 +38,9 @@ let m = (e) => {
                 className: u.modalContent,
                 children: f
                     ? (0, i.jsx)(a.$jN, {})
-                    : (0, i.jsx)(s.Z, {
-                          classificationId: m,
-                          source: p,
+                    : (0, i.jsx)(r.Z, {
+                          classificationId: p,
+                          source: m,
                           onError: h,
                           onClose: h,
                       }),

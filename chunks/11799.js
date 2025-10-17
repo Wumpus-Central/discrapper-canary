@@ -14,15 +14,15 @@ let p = () => {
         loading: t,
         items: n,
         hasMore: p,
-        loadMore: h,
+        loadMore: f,
     } = ((e) => {
-        let { isFocused: t, navigatedAway: n, isDesktop: p, withMentions: h = !1, initialPageSize: f } = e,
+        let { isFocused: t, navigatedAway: n, isDesktop: p, withMentions: f = !1, initialPageSize: h } = e,
             g = (0, i.e7)([u.Z], () => u.Z.shouldReload()),
             m = r.useRef(!1),
             [b, _] = r.useState(!1),
             {
-                initialized: y,
-                loading: O,
+                initialized: O,
+                loading: y,
                 items: v,
                 hasMore: j,
                 cursor: x,
@@ -41,8 +41,8 @@ let p = () => {
             }));
         r.useEffect(() => ((0, s.Vk)(!0), () => (0, s.Vk)(!1)), []),
             r.useEffect(() => {
-                y && t && (0, l.FT)(d.W.NOTIFICATION_CENTER);
-            }, [t, y]);
+                O && t && (0, l.FT)(d.W.NOTIFICATION_CENTER);
+            }, [t, O]);
         let I = (0, o.Z)();
         r.useEffect(
             () => () => {
@@ -52,18 +52,18 @@ let p = () => {
         ),
             r.useEffect(() => {
                 let e = g && t;
-                (!y || e) &&
+                (!O || e) &&
                     (0, s.jk)({
-                        limit: null != f ? f : h ? 8 : 20,
-                        with_mentions: h,
+                        limit: null != h ? h : f ? 8 : 20,
+                        with_mentions: f,
                         roles_filter: E,
                         everyone_filter: S,
                     });
-            }, [y, g, t, h, E, S, f]);
+            }, [O, g, t, f, E, S, h]);
         let P = r.useCallback(
             async (e) => {
                 !m.current &&
-                    y &&
+                    O &&
                     j &&
                     null != x &&
                     (e || !C) &&
@@ -72,10 +72,10 @@ let p = () => {
                     await (0, s.jk)(
                         {
                             after: x,
-                            with_mentions: h,
+                            with_mentions: f,
                             roles_filter: E,
                             everyone_filter: S,
-                            limit: h ? 8 : 20,
+                            limit: f ? 8 : 20,
                         },
                         () => {
                             m.current = !1;
@@ -83,11 +83,11 @@ let p = () => {
                     ),
                     _(!1));
             },
-            [y, j, x, C, h, E, S],
+            [O, j, x, C, f, E, S],
         );
         return {
-            initialized: y,
-            loading: O,
+            initialized: O,
+            loading: y,
             items: v,
             hasMore: j,
             loadMore: P,
@@ -106,6 +106,6 @@ let p = () => {
         loading: t,
         items: n.filter((e) => "notification-center-item" === e.kind),
         hasMore: p,
-        loadMore: h,
+        loadMore: f,
     };
 };

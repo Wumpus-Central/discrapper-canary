@@ -148,7 +148,7 @@ function I(e) {
                 null == C || C(),
                 null == A || A();
         }, [D, A, C]),
-        j = w
+        k = w
             ? (0, r.jsx)(a.zsu, {
                   type: "image",
                   src: b,
@@ -190,7 +190,7 @@ function I(e) {
                     (0, r.jsx)(d.$, { caretConfig: I }),
                     (0, r.jsx)("div", {
                         className: m.assetContainer,
-                        children: j,
+                        children: k,
                     }),
                     (0, r.jsx)(f.Y, {
                         title: t,

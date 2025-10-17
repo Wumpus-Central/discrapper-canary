@@ -20,10 +20,10 @@ var i = n(951288),
     y = n(533947),
     C = n(277053),
     S = n(388610),
-    N = n(592125),
-    O = n(496675),
-    E = n(699516),
-    Z = n(594174),
+    O = n(592125),
+    N = n(496675),
+    Z = n(699516),
+    E = n(594174),
     w = n(585483),
     T = n(787263),
     _ = n(975316),
@@ -123,7 +123,7 @@ class k extends l.PureComponent {
                                                           className: A.channelIcon,
                                                       })
                                                     : null,
-                                                (0, g.F6)(t, Z.default, E.Z),
+                                                (0, g.F6)(t, E.default, Z.Z),
                                                 null != n
                                                     ? (0, i.jsx)(s.Text, {
                                                           tag: "span",
@@ -131,7 +131,7 @@ class k extends l.PureComponent {
                                                           color: "header-secondary",
                                                           lineClamp: 1,
                                                           className: A.category,
-                                                          children: (0, g.F6)(n, Z.default, E.Z),
+                                                          children: (0, g.F6)(n, E.default, Z.Z),
                                                       })
                                                     : null,
                                             ],
@@ -223,13 +223,13 @@ function B() {
             canManageRoles: u,
             canManageWebhooks: h,
             canUnlinkChannel: g,
-        } = (0, r.cj)([O.Z], () => ({
-            canManageChannels: O.Z.can(L.Plq.MANAGE_CHANNELS, e),
-            canManageRoles: null != e && O.Z.can(L.Plq.MANAGE_ROLES, e),
-            canManageWebhooks: null != e && O.Z.can(L.Plq.MANAGE_WEBHOOKS, e),
-            canUnlinkChannel: (0, f.C)(e, O.Z),
+        } = (0, r.cj)([N.Z], () => ({
+            canManageChannels: N.Z.can(L.Plq.MANAGE_CHANNELS, e),
+            canManageRoles: null != e && N.Z.can(L.Plq.MANAGE_ROLES, e),
+            canManageWebhooks: null != e && N.Z.can(L.Plq.MANAGE_WEBHOOKS, e),
+            canUnlinkChannel: (0, f.C)(e, N.Z),
         })),
-        p = (0, r.e7)([N.Z], () => N.Z.getChannel(null == e ? void 0 : e.parent_id));
+        p = (0, r.e7)([O.Z], () => O.Z.getChannel(null == e ? void 0 : e.parent_id));
     return (0, i.jsx)(k, {
         channel: e,
         category: p,

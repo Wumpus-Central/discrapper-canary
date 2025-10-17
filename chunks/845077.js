@@ -1,6 +1,6 @@
 n.d(t, {
     PA: () => l,
-    Wl: () => s,
+    Wl: () => o,
 });
 var a = n(990547);
 n(479531);
@@ -14,7 +14,7 @@ async function l() {
     });
     return 204 === e.status ? null : e.body;
 }
-async function s(e) {
+async function o(e) {
     return (
         await r.Z.post({
             url: i.ANM.SAFETY_FLOWS_TASK,

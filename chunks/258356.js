@@ -1,13 +1,13 @@
 n.d(t, {
-    X: () => p,
+    X: () => m,
     Z: () => f,
 }),
     n(953529);
 var r = n(951288);
 n(647438);
 var i = n(755721),
-    l = n(481060),
-    s = n(565138),
+    s = n(481060),
+    l = n(565138),
     a = n(372769),
     o = n(742593),
     c = n(390072),
@@ -15,9 +15,9 @@ var i = n(755721),
     d = n(230224),
     h = n(388032),
     g = n(694527);
-function m(e) {
+function p(e) {
     var t;
-    let { guildScheduledEvent: n, channel: l, onAcceptInvite: s, isSubmitting: a } = e;
+    let { guildScheduledEvent: n, channel: s, onAcceptInvite: l, isSubmitting: a } = e;
     return (0, r.jsxs)("div", {
         className: g.guildEventCard,
         children: [
@@ -30,25 +30,25 @@ function m(e) {
                 guildEvent: n,
                 eventPreview: n,
             }),
-            null != l &&
+            null != s &&
                 (0, r.jsx)("div", {
                     className: g.channelInfo,
                     children: (0, r.jsx)(c.Z, {
                         guildScheduledEvent: n,
-                        channel: l,
+                        channel: s,
                     }),
                 }),
             (0, r.jsx)(i.zx, {
                 className: g.acceptButton,
                 color: i.zx.Colors.GREEN,
-                onClick: s,
+                onClick: l,
                 submitting: a,
                 children: h.intl.string(h.t.riu2R0),
             }),
         ],
     });
 }
-function p(e) {
+function m(e) {
     var t;
     let { invite: n } = e,
         i = null != n.guild ? (0, u.Qs)(n.guild) : null;
@@ -57,7 +57,7 @@ function p(e) {
     return (0, r.jsxs)("div", {
         className: g.guildInfoCard,
         children: [
-            (0, r.jsx)(l.Heading, {
+            (0, r.jsx)(s.Heading, {
                 className: g.presentedBy,
                 variant: "text-sm/medium",
                 children: h.intl.string(h.t.Eabu19),
@@ -65,15 +65,15 @@ function p(e) {
             (0, r.jsxs)("div", {
                 className: g.guildContainer,
                 children: [
-                    (0, r.jsx)(s.Z, {
+                    (0, r.jsx)(l.Z, {
                         guild: i,
                         active: !0,
-                        size: s.Z.Sizes.MEDIUM,
+                        size: l.Z.Sizes.MEDIUM,
                     }),
                     (0, r.jsxs)("div", {
                         className: g.guildDetailsContanier,
                         children: [
-                            (0, r.jsxs)(l.Text, {
+                            (0, r.jsxs)(s.Text, {
                                 className: g.guildName,
                                 color: "header-primary",
                                 variant: "text-sm/medium",
@@ -99,7 +99,7 @@ function p(e) {
             o.length > 0 &&
                 (0, r.jsx)("details", {
                     className: g.guildDescriptionContainer,
-                    children: (0, r.jsx)(l.Text, {
+                    children: (0, r.jsx)(s.Text, {
                         color: "header-secondary",
                         variant: "text-sm/normal",
                         children: o,
@@ -109,14 +109,14 @@ function p(e) {
     });
 }
 function f(e) {
-    let { invite: t, channel: n, isSubmitting: i, onAcceptInvite: l } = e,
-        { guild_scheduled_event: s } = t;
-    return null != s
-        ? (0, r.jsx)(m, {
-              guildScheduledEvent: s,
+    let { invite: t, channel: n, isSubmitting: i, onAcceptInvite: s } = e,
+        { guild_scheduled_event: l } = t;
+    return null != l
+        ? (0, r.jsx)(p, {
+              guildScheduledEvent: l,
               channel: n,
               isSubmitting: i,
-              onAcceptInvite: l,
+              onAcceptInvite: s,
           })
         : null;
 }

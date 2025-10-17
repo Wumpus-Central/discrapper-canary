@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -15,14 +15,14 @@ var r = n(951288),
     m = n(565138),
     b = n(41776),
     _ = n(703656),
-    O = n(769654),
-    E = n(430824),
+    E = n(769654),
+    O = n(430824),
     v = n(411198),
     y = n(843445),
     I = n(981631),
     C = n(388032),
     S = n(295265);
-function T(e, t, n) {
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ function T(e, t, n) {
         e
     );
 }
-class N extends i.PureComponent {
+class T extends i.PureComponent {
     renderMemberInfo() {
         let { approximateMemberCount: e, approximatePresenceCount: t } = this.props.guild;
         return null == e || null == t
@@ -136,9 +136,9 @@ class N extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            T(this, "handleJoinOrView", async () => {
+            N(this, "handleJoinOrView", async () => {
                 let { guild: e, skuId: t, isInGuild: n, isLurking: r } = this.props,
-                    i = () => (0, O.X)(e.id);
+                    i = () => (0, E.X)(e.id);
                 if (r) (0, p.Oj)(t).then(i);
                 else if (n) i();
                 else
@@ -150,7 +150,7 @@ class N extends i.PureComponent {
                             i();
                     } catch (e) {}
             }),
-            T(this, "handleLogin", () => {
+            N(this, "handleLogin", () => {
                 let e = { redirect_to: I.Z5c.APPLICATION_STORE_LISTING_SKU(this.props.skuId) };
                 (0, _.uL)(I.Z5c.LOGIN, {
                     search: (0, o.stringify)(e),
@@ -159,13 +159,13 @@ class N extends i.PureComponent {
             });
     }
 }
-let j = (0, f.Z)(
-    s.ZP.connectStores([E.Z, b.Z], (e) => {
+let P = (0, f.Z)(
+    s.ZP.connectStores([O.Z, b.Z], (e) => {
         let { guild: t } = e,
             n = b.Z.isLurking(t.id);
         return {
-            isInGuild: null != E.Z.getGuild(t.id) && !n,
+            isInGuild: null != O.Z.getGuild(t.id) && !n,
             isLurking: n,
         };
-    })(N),
+    })(T),
 );

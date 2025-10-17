@@ -32,8 +32,8 @@ var r = n(951288),
     L = n(158776),
     x = n(885110),
     M = n(594174),
-    j = n(181106),
-    k = n(768581),
+    k = n(181106),
+    j = n(768581),
     U = n(823379),
     G = n(358085),
     B = n(758371),
@@ -331,7 +331,7 @@ function ep(e) {
         x = (0, O.A)(S),
         M = (0, p.ye)(S),
         { bot: U } = S,
-        G = k.ZP.getApplicationIconURL({
+        G = j.ZP.getApplicationIconURL({
             id: S.id,
             icon: S.icon,
             bot: U,
@@ -380,9 +380,9 @@ function ep(e) {
         eh = (0, Y.g)(N, L),
         em = (0, F.L)(L, P, S, C),
         eg = (0, l.e7)(
-            [j.Z],
+            [k.Z],
             () =>
-                null != L && null != L.application_id && j.Z.getState(L.application_id, en.mFx.JOIN) === en.OcF.LOADING,
+                null != L && null != L.application_id && k.Z.getState(L.application_id, en.mFx.JOIN) === en.OcF.LOADING,
         ),
         eE = i.useMemo(
             () =>

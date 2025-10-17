@@ -32,13 +32,13 @@ function f(e) {
             },
             [f, O],
         ),
-        N = i.useCallback(
+        E = i.useCallback(
             (e) => {
                 O([...f.slice(0, e), ...f.slice(e + 1)]);
             },
             [f, O],
         ),
-        E = i.useCallback(
+        N = i.useCallback(
             (e, t) => {
                 if (f[e] === t) return;
                 let n = [...f];
@@ -74,8 +74,8 @@ function f(e) {
                     index: f.indexOf(e),
                     isDragEnabled: f.length > 1,
                     submittedGuildJoinRequestsCount: x,
-                    removeFormField: N,
-                    updateFormField: E,
+                    removeFormField: E,
+                    updateFormField: N,
                     updateFormFieldOrder: I,
                     canRemove: f.length > 1,
                     actionsLocation: "side",

@@ -4,18 +4,18 @@ n(647438);
 var r = n(913527),
     i = n.n(r),
     l = n(442837),
-    s = n(704215),
-    o = n(713284),
+    o = n(704215),
+    s = n(713284),
     c = n(211644),
     d = n(681619),
     u = n(607669);
 let m = (e) => {
         switch (e) {
-            case o.D.DC_DISMISSED:
+            case s.D.DC_DISMISSED:
                 return "DISMISS:";
-            case o.D.DC_SHOWN:
+            case s.D.DC_SHOWN:
                 return "SHOW:";
-            case o.D.DC_SHOW_REQUEST:
+            case s.D.DC_SHOW_REQUEST:
                 return "REQUEST TO SHOW:";
             default:
                 return "UNKNOWN TYPE:";
@@ -26,7 +26,7 @@ let m = (e) => {
             key: "events",
             render(e) {
                 let { event: t, dismissibleContent: n } = e;
-                return "".concat(t, " ").concat(s.z[n]);
+                return "".concat(t, " ").concat(o.z[n]);
             },
         },
     ],
@@ -35,12 +35,12 @@ let m = (e) => {
             key: "candidates",
             render(e) {
                 let { dismissibleContent: t } = e;
-                return "".concat(s.z[t]);
+                return "".concat(o.z[t]);
             },
         },
     ];
 function x() {
-    let e = (0, l.e7)([o.Z], () => o.Z.getDCFEvents()),
+    let e = (0, l.e7)([s.Z], () => s.Z.getDCFEvents()),
         t = (0, c.ZP)((e) => e.candidates),
         n = (0, c.ZP)((e) => e.lastWinnerTime),
         r = 0 !== n ? i()(n).fromNow() : "n/a",
@@ -53,7 +53,7 @@ function x() {
                 dismissibleContent: n,
             };
         }),
-        b = Array.from(t.keys()).map((e) => ({
+        g = Array.from(t.keys()).map((e) => ({
             key: e.toString(),
             dismissibleContent: e,
         }));
@@ -67,7 +67,7 @@ function x() {
             (0, a.jsx)("br", {}),
             (0, a.jsxs)("div", {
                 className: u.info,
-                children: ["Last winner: ", null != x ? s.z[x] : "None"],
+                children: ["Last winner: ", null != x ? o.z[x] : "None"],
             }),
             (0, a.jsx)("br", {}),
             (0, a.jsx)("div", {
@@ -75,7 +75,7 @@ function x() {
                 children: (0, a.jsx)(d.Z, {
                     className: u.candidatesTable,
                     columns: h,
-                    data: b,
+                    data: g,
                 }),
             }),
             (0, a.jsx)("br", {}),

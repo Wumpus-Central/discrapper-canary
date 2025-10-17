@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => u }), n(388685);
 var r,
     i = n(442837),
     a = n(570140);
@@ -19,7 +19,7 @@ let o = { sentGifts: {} };
 function s(e, t) {
     return "".concat(e, ":").concat(t);
 }
-class d extends (r = i.ZP.PersistedStore) {
+class c extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         null != e && ((o = e), this.cleanupExpiredGifts());
     }
@@ -41,8 +41,8 @@ class d extends (r = i.ZP.PersistedStore) {
         for (let [t, n] of Object.entries(o.sentGifts)) new Date(n.expiresAt) < e && delete o.sentGifts[t];
     }
 }
-l(d, "displayName", "SentGiftsStore"), l(d, "persistKey", "SentGiftsStore");
-let C = new d(a.Z, {
+l(c, "displayName", "SentGiftsStore"), l(c, "persistKey", "SentGiftsStore");
+let u = new c(a.Z, {
     WISHLIST_GIFT_SENT: function (e) {
         let t = s(e.skuId, e.recipientId),
             n = new Date(),

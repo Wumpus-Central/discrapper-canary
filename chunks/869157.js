@@ -23,8 +23,8 @@ var i = n(951288),
     C = n(145260),
     N = n(905753),
     S = n(399860),
-    I = n(335049),
-    E = n(617012),
+    E = n(335049),
+    I = n(617012),
     P = n(981631),
     w = n(388032),
     T = n(547063);
@@ -40,8 +40,8 @@ function Z(e) {
         g = (0, o.e7)([j.Z], () => j.Z.getGuild(l));
     a()(null != g, "");
     let h = (0, o.e7)([x.Z], () => x.Z.getSortedRoles(l)),
-        [y, I] = r.useState(new Set()),
-        E = r.useMemo(() => {
+        [y, E] = r.useState(new Set()),
+        I = r.useMemo(() => {
             let e = (0, b.bD)(l),
                 t = h.toReversed().reduce((e, t, n) => ((e[t.id] = n), e), {});
             return Object.values(c)
@@ -102,8 +102,8 @@ function Z(e) {
         let e = Object.values(c)
             .filter((e) => e.type === m.Kw.USER && !e.canRead && !y.has(e.id))
             .map((e) => e.id);
-        0 !== e.length && (u.Z.requestMembersById(l, e, !1), I((t) => new Set([...t, ...e])));
-    }, [l, c, y, I]);
+        0 !== e.length && (u.Z.requestMembersById(l, e, !1), E((t) => new Set([...t, ...e])));
+    }, [l, c, y, E]);
     let Z = (0, o.e7)([N.Z], () => N.Z.getApplicationId()),
         A = (0, o.e7)([C.default], () =>
             null == Z
@@ -114,8 +114,8 @@ function Z(e) {
                   }),
         ),
         D = (0, o.e7)([f.Z], () => void 0 !== A && f.Z.canShowToggleTooltip(A.id));
-    return E.length > 0
-        ? E.map((e) =>
+    return I.length > 0
+        ? I.map((e) =>
               (0, i.jsx)(
                   k,
                   {
@@ -222,7 +222,7 @@ function k(e) {
             position: "left",
             children: (0, i.jsx)("div", {
                 ref: k,
-                children: (0, i.jsx)(E.Z, {
+                children: (0, i.jsx)(I.Z, {
                     isDisabled: N,
                     currentValue: x.permission,
                     onChange: Z
@@ -253,7 +253,7 @@ function k(e) {
             children: [
                 (0, i.jsx)("div", {
                     className: T.entryName,
-                    children: (0, i.jsx)(I.Z, {
+                    children: (0, i.jsx)(E.Z, {
                         guild: o,
                         id: x.id,
                         type: x.type,

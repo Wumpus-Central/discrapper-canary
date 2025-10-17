@@ -23,7 +23,7 @@ var i = n(951288),
     C = n(981631),
     N = n(388032),
     S = n(243226);
-function I(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -48,7 +48,7 @@ function I(e) {
     }
     return e;
 }
-function E(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -77,7 +77,7 @@ function P(e) {
                 return (t) =>
                     (0, i.jsx)(
                         e,
-                        E(I({}, t), {
+                        I(E({}, t), {
                             id: l,
                             label: N.intl.string(N.t.oJ1Mu7),
                         }),
@@ -188,7 +188,7 @@ function T(e) {
                         return (t) =>
                             (0, i.jsx)(
                                 e,
-                                E(I({}, t), {
+                                I(E({}, t), {
                                     guild: l,
                                     role: m,
                                 }),
@@ -204,7 +204,7 @@ function T(e) {
               className: S.identifier,
               children: [
                   null != b
-                      ? (0, i.jsx)(f.Z, I({ className: a()(S.__invalid_icon, S.image) }, b))
+                      ? (0, i.jsx)(f.Z, E({ className: a()(S.__invalid_icon, S.image) }, b))
                       : (0, i.jsx)(u.lZ8, {
                             size: "custom",
                             width: 23,

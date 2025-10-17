@@ -85,8 +85,8 @@ function v(e) {
             orientation: "horizontal",
             isDisabled: l,
         }),
-        { ref: N } = y,
-        E = (function (e, t) {
+        { ref: E } = y,
+        N = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -122,9 +122,9 @@ function v(e) {
                 {
                     className: f.buttonsContainer,
                     "aria-label": p.intl.string(p.t.FJjrIy),
-                    ref: N,
+                    ref: E,
                 },
-                E,
+                N,
             ),
             {
                 children: [

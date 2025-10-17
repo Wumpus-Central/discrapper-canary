@@ -32,8 +32,8 @@ var r = n(951288),
     L = n(857658),
     x = n(174278),
     M = n(714097),
-    j = n(981631),
-    k = n(921944),
+    k = n(981631),
+    j = n(921944),
     U = n(474936),
     G = n(119475),
     B = n(388032),
@@ -61,7 +61,7 @@ function Y(e) {
         children: (0, r.jsx)(d.PZ7, {
             size: "sm",
             onClick: () => {
-                null == t || t(k.L.USER_DISMISS), (0, g.Ll)();
+                null == t || t(j.L.USER_DISMISS), (0, g.Ll)();
             },
         }),
     });
@@ -298,11 +298,11 @@ function J(e) {
                 icon: n
                     ? {
                           type: "icon",
-                          asset: f.$2U,
+                          asset: f.kBK,
                       }
                     : {
                           type: "rive",
-                          asset: f.xhK,
+                          asset: f.q8_,
                           riveProps: {
                               dataBinding: { fill: f.TVs.colors.ICON_PRIMARY },
                               eventTargetRef: p,
@@ -317,7 +317,7 @@ function J(e) {
               title: B.intl.string(G.default.NJ9m8f),
               body: B.intl.string(G.default["6pabtb"]),
               position: "left",
-              asset: E ? (0, r.jsx)(f.$2U, {}) : void 0,
+              asset: E ? (0, r.jsx)(f.kBK, {}) : void 0,
               forceOpen: a,
               onTooltipShow: m,
               onTooltipHide: g,
@@ -356,8 +356,8 @@ function ee(e) {
                       subscriptionTier: U.Si.TIER_2,
                       buttonTextOverride: B.intl.string(B.t.JST6jo),
                       premiumModalAnalyticsLocation: {
-                          page: j.ZY5.PREMIUM_UPSELL_CUSTOM_THEMES,
-                          section: j.jXE.CUSTOM_THEMES_COACHMARK_FOOTER,
+                          page: k.ZY5.PREMIUM_UPSELL_CUSTOM_THEMES,
+                          section: k.jXE.CUSTOM_THEMES_COACHMARK_FOOTER,
                       },
                       fullWidth: !0,
                   }),
@@ -374,7 +374,7 @@ function et(e) {
             (0, D.Vb)(),
                 (0, E.Q3)(l.z.CUSTOM_THEME_COACHMARK),
                 (null == a ? void 0 : a.from) === g.tE.SETTING
-                    ? ((0, T.openUserSettings)(I.n.APPEARANCE_PANEL, { section: j.oAB.APPEARANCE }), (0, g.Ll)())
+                    ? ((0, T.openUserSettings)(I.n.APPEARANCE_PANEL, { section: k.oAB.APPEARANCE }), (0, g.Ll)())
                     : (null == a ? void 0 : a.from) === g.tE.CLIENT_THEMES_EDITOR
                       ? (0, g.XO)(g.wh.CLIENT_THEMES)
                       : (0, g.Ll)();
@@ -394,7 +394,7 @@ function et(e) {
                       (0, r.jsx)($, {
                           disabled: !i,
                           onApply: () => {
-                              c && S.default.track(j.rMx.CUSTOM_THEME_SHARE_APPLIED, {}), n();
+                              c && S.default.track(k.rMx.CUSTOM_THEME_SHARE_APPLIED, {}), n();
                           },
                       }),
                   ],
@@ -405,8 +405,8 @@ function et(e) {
                           subscriptionTier: U.Si.TIER_2,
                           defaultTextOverride: B.intl.string(B.t.pj0XBA),
                           premiumModalAnalyticsLocation: {
-                              page: j.ZY5.PREMIUM_UPSELL_CUSTOM_THEMES,
-                              section: j.jXE.CUSTOM_THEMES_FOOTER,
+                              page: k.ZY5.PREMIUM_UPSELL_CUSTOM_THEMES,
+                              section: k.jXE.CUSTOM_THEMES_FOOTER,
                           },
                           fullWidth: !0,
                       }),
@@ -432,7 +432,7 @@ function en(e) {
             colors: S,
             chassisMixAmount: C,
             gradientAngle: x,
-            setColors: j,
+            setColors: k,
             setChassisMixAmount: U,
             setGradientAngle: F,
         } = (0, A.Ig)(),
@@ -453,7 +453,7 @@ function en(e) {
                     },
                 }),
                 (0, D.u7)(S, C, x, Y, z),
-                null == a || a(k.L.TAKE_ACTION),
+                null == a || a(j.L.TAKE_ACTION),
                 W || (0, E.Q3)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
                 (0, g.Ll)(),
                 (0, O.UD)();
@@ -480,7 +480,7 @@ function en(e) {
                       chassisMixAmount: q.base_mix,
                   }),
                   (0, N.Bv)(q.base_theme))
-                : (0, N.lT)(S, V, j);
+                : (0, N.lT)(S, V, k);
         }
     }),
     u)
@@ -517,11 +517,11 @@ function en(e) {
                                       }),
                                       (0, r.jsx)(L.U, {
                                           onChange: (e) => {
-                                              H(e), 0 === S.length && (0, N.lT)(S, e, j);
+                                              H(e), 0 === S.length && (0, N.lT)(S, e, k);
                                           },
                                           value: V,
                                           colors: S,
-                                          setColors: j,
+                                          setColors: k,
                                       }),
                                   ],
                               }),
@@ -541,7 +541,7 @@ function en(e) {
                                       (0, r.jsx)(Q, {
                                           chassisMixAmount: C,
                                           setChassisMixAmount: (e) => {
-                                              U(e), 0 === S.length && (0, N.lT)(S, V, j);
+                                              U(e), 0 === S.length && (0, N.lT)(S, V, k);
                                           },
                                       }),
                                   ],

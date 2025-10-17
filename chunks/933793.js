@@ -1,39 +1,39 @@
-e.d(n, { Z: () => h });
+e.d(n, { Z: () => f });
 var i = e(951288);
 e(647438);
-var l = e(442837),
-    a = e(481060),
+var a = e(442837),
+    l = e(481060),
     r = e(240872),
-    o = e(456269),
-    s = e(346479),
+    s = e(456269),
+    o = e(346479),
     d = e(665906),
     u = e(592125),
     c = e(176505),
-    f = e(388032);
-function h(t) {
-    let n = (0, l.e7)([u.Z], () => u.Z.getChannel(t.parent_id)),
+    h = e(388032);
+function f(t) {
+    let n = (0, a.e7)([u.Z], () => u.Z.getChannel(t.parent_id)),
         e = (0, d.Xb)(t),
-        h = (0, o.kF)(t);
+        f = (0, s.kF)(t);
     return (null == n ? void 0 : n.isForumLikeChannel()) && e
         ? t.hasFlag(c.zZ.PINNED)
-            ? (0, i.jsx)(a.sNh, {
+            ? (0, i.jsx)(l.sNh, {
                   id: "unpin-thread",
-                  label: f.intl.string(f.t.trD8am),
-                  action: () => s.Z.unpin(t),
+                  label: h.intl.string(h.t.trD8am),
+                  action: () => o.Z.unpin(t),
               })
-            : (0, i.jsx)(a.sNh, {
+            : (0, i.jsx)(l.sNh, {
                   id: "pin-thread",
-                  label: f.intl.string(f.t.EnaWho),
+                  label: h.intl.string(h.t.EnaWho),
                   action: function () {
-                      null != h
+                      null != f
                           ? r.Z.show({
-                                title: f.intl.string(f.t.IMbjxs),
-                                body: f.intl.string(f.t["mi5+Vl"]),
+                                title: h.intl.string(h.t.IMbjxs),
+                                body: h.intl.string(h.t["mi5+Vl"]),
                                 onConfirm: async () => {
-                                    await s.Z.unpin(h), s.Z.pin(t);
+                                    await o.Z.unpin(f), o.Z.pin(t);
                                 },
                             })
-                          : s.Z.pin(t);
+                          : o.Z.pin(t);
                   },
               })
         : null;

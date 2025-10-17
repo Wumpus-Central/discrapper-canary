@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(28664),
     d = n(481060),
     u = n(153867),
-    h = n(110924),
-    p = n(607070),
+    p = n(110924),
+    h = n(607070),
     f = n(367907),
     g = n(900211),
     m = n(740492),
@@ -25,8 +25,8 @@ var r = n(951288),
     S = n(566620),
     E = n(317381),
     Z = n(389147),
-    T = n(619915),
-    P = n(988980),
+    P = n(619915),
+    T = n(988980),
     N = n(16609),
     R = n(60902),
     w = n(952561),
@@ -77,8 +77,8 @@ function Y(e) {
         J = (0, s.Wu)([E.ZP], () => E.ZP.getEmbeddedActivitiesForLocation(K), [K]),
         $ = (0, N.p)(K),
         ee = (0, s.e7)([j.Z], () => j.Z.getChannel($)),
-        et = (0, T.gb)(J),
-        en = (0, T.uF)(et),
+        et = (0, P.gb)(J),
+        en = (0, P.uF)(et),
         er = i.useCallback(() => {
             (0, S.tg)(G.Ez.PIP);
         }, []),
@@ -90,7 +90,7 @@ function Y(e) {
             u.ZP.updatedUnsyncedSettings({ activityPanelHeight: e });
         }, []),
         ed = i.useRef(null),
-        [eu, eh] = i.useState({
+        [eu, ep] = i.useState({
             width: 0,
             height: 0,
         });
@@ -98,21 +98,21 @@ function Y(e) {
         if (null == ed.current) return;
         let e = new ResizeObserver(() => {
             var e, t, n, r;
-            eh({
+            ep({
                 width: null != (n = null == (e = ed.current) ? void 0 : e.clientWidth) ? n : 0,
                 height: null != (r = null == (t = ed.current) ? void 0 : t.clientHeight) ? r : 0,
             });
         });
         return e.observe(ed.current), () => e.disconnect();
     }, []);
-    let ep = eu.width / Math.max(eu.height, 1) < G.I0,
+    let eh = eu.width / Math.max(eu.height, 1) < G.I0,
         ef = 0,
         eg = 0,
-        em = (0, P.Z)(null == X ? void 0 : X.id);
+        em = (0, T.Z)(null == X ? void 0 : X.id);
     if (!em) {
         let e = eu.width,
             t = eu.height;
-        ep
+        eh
             ? ((t = eu.width / G.I0) > eu.height && (e = (t = eu.height) * G.I0), (eg = (eu.height - t) / 2))
             : ((e = Math.min(eu.height * G.I0)) > eu.width && (t = (e = eu.width) / G.I0), (ef = (eu.width - e) / 2));
     }
@@ -136,7 +136,7 @@ function Y(e) {
             );
         }, [e_]),
         eO = (function (e, t, n) {
-            let r = (0, h.Z)(e),
+            let r = (0, p.Z)(e),
                 l = e !== r,
                 [a, s] = i.useState(!1);
             i.useEffect(() => {
@@ -144,7 +144,7 @@ function Y(e) {
                 let e = setTimeout(() => s(!1), 50);
                 return () => clearTimeout(e);
             }, [e]);
-            let o = !p.Z.useReducedMotion && (l || a);
+            let o = !h.Z.useReducedMotion && (l || a);
             return i.useMemo(() => {
                 var r, i;
                 let l = o

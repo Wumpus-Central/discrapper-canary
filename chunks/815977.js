@@ -21,8 +21,8 @@ var r = n(951288),
     C = n(359191),
     O = n(84658),
     y = n(142961),
-    N = n(729311),
-    E = n(850864),
+    E = n(729311),
+    N = n(850864),
     I = n(729995),
     S = n(966301),
     T = n(707076),
@@ -61,13 +61,13 @@ function D(e) {
             t = (0, r.jsx)(h.Z, {});
             break;
         case O.PG.DEFAULT_CHANNELS:
-            t = (0, r.jsx)(N.Z, { saveOnClose: !_ });
+            t = (0, r.jsx)(E.Z, { saveOnClose: !_ });
             break;
         case O.PG.CUSTOMIZATION_QUESTIONS:
             t = (0, r.jsx)(S.ZP, { saveOnClose: !_ });
             break;
         case O.PG.HOME_SETTINGS:
-            t = (0, r.jsx)(E.Z, { saveOnClose: !_ });
+            t = (0, r.jsx)(N.Z, { saveOnClose: !_ });
             break;
         case O.PG.REVIEW:
             t = (0, r.jsx)(I.Z, {

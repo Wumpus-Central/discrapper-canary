@@ -108,14 +108,14 @@ function I(e) {
             onUserPopoutRequestClose: L,
             "aria-label": x,
             "aria-labelledby": M,
-            "aria-hidden": j,
+            "aria-hidden": k,
         } = e,
-        [k, U] = i.useState(!1),
+        [j, U] = i.useState(!1),
         G = O(I),
         B = i.useRef(null),
         Z = t.length - a,
         F = Z + 1,
-        V = Z > 0 && !C && !j,
+        V = Z > 0 && !C && !k,
         H = () =>
             (0, r.jsx)(u.VqE, {
                 className: m.popoutWrapper,
@@ -213,7 +213,7 @@ function I(e) {
                 {
                     targetElementRef: B,
                     renderPopout: H,
-                    shouldShow: k,
+                    shouldShow: j,
                     position: "bottom",
                     onRequestClose: () => U(!1),
                     children: (t) =>
@@ -245,7 +245,7 @@ function I(e) {
               "aria-label": x,
               "aria-labelledby": M,
               className: o()(b, m.avatars),
-              "aria-hidden": j,
+              "aria-hidden": k,
               children: [Y(), W()],
           });
 }

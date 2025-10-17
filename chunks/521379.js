@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h }), n(35282);
 var r,
     i = n(951288),
-    l = n(647438),
-    s = n(442837),
+    s = n(647438),
+    l = n(442837),
     a = n(388905),
     o = n(703656),
     c = n(108427),
@@ -20,8 +20,8 @@ function d(e, t, n) {
         e
     );
 }
-s.ZP.initialize();
-class h extends (r = l.PureComponent) {
+l.ZP.initialize();
+class h extends (r = s.PureComponent) {
     componentDidMount() {
         (0, c.e)("account_revert");
     }

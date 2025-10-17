@@ -11,8 +11,8 @@ var r = n(951288),
     c = n(481060),
     d = n(475179),
     u = n(239091),
-    h = n(872810),
-    p = n(100527),
+    p = n(872810),
+    h = n(100527),
     f = n(906732),
     g = n(213609),
     m = n(358221),
@@ -28,8 +28,8 @@ var r = n(951288),
     S = n(314897),
     E = n(430824),
     Z = n(496675),
-    T = n(979651),
-    P = n(88751),
+    P = n(979651),
+    T = n(88751),
     N = n(252132),
     R = n(248400),
     w = n(981631),
@@ -89,13 +89,13 @@ let k = 16 / 9,
                 width: o,
                 isModerator: d,
                 onContextMenu: u,
-                inPopout: h,
+                inPopout: p,
             } = e,
-            p = i.useRef(null),
+            h = i.useRef(null),
             { reducedMotion: f } = i.useContext(c.Sfi),
             { blocked: g, ignored: m, id: b } = t;
         return (0, r.jsx)(C.Z, {
-            targetElementRef: p,
+            targetElementRef: h,
             user: s,
             guildId: a,
             channelId: l.id,
@@ -106,7 +106,7 @@ let k = 16 / 9,
                     M(
                         L(
                             {
-                                innerRef: p,
+                                innerRef: h,
                                 onContextMenu: (e) => u(n, e),
                             },
                             e,
@@ -122,7 +122,7 @@ let k = 16 / 9,
                                     channel: l,
                                     className: D.tile,
                                     inCall: !0,
-                                    inPopout: h,
+                                    inPopout: p,
                                     pulseSpeakingIndicator: !f.enabled,
                                     width: o,
                                     onContextMenu: u,
@@ -143,7 +143,7 @@ let k = 16 / 9,
                 width: a,
                 isModerator: s,
                 onContextMenu: u,
-                inPopout: p,
+                inPopout: h,
             } = e,
             { reducedMotion: f } = i.useContext(c.Sfi),
             { id: g, blocked: b, ignored: O } = t,
@@ -152,14 +152,14 @@ let k = 16 / 9,
                 selectedParticipant: null != l ? m.Z.getSelectedParticipant(l.id) : null,
                 largeStream: null != l && m.Z.getStageStreamSize(l.id),
             })),
-            P = i.useCallback(
+            T = i.useCallback(
                 (e, t) => {
                     if (
                         e.type === A.fO.STREAM &&
                         0 === v.filter((t) => (0, _.V9)(t) === e.id && t.state !== w.jm8.ENDED).length
                     ) {
-                        if (!(0, j.p9)(l, T.Z, E.Z, Z.Z, y.default)[0]) return;
-                        (0, h.rn)((0, _.my)(e.id), { forceMultiple: t.shiftKey });
+                        if (!(0, j.p9)(l, P.Z, E.Z, Z.Z, y.default)[0]) return;
+                        (0, p.rn)((0, _.my)(e.id), { forceMultiple: t.shiftKey });
                     }
                     (null == C ? void 0 : C.id) === e.id
                         ? S
@@ -180,8 +180,8 @@ let k = 16 / 9,
                 channel: l,
                 className: D.tile,
                 inCall: !0,
-                inPopout: p,
-                onClick: P,
+                inPopout: h,
+                onClick: T,
                 onContextMenu: u,
                 pulseSpeakingIndicator: !f.enabled,
                 width: a,
@@ -193,14 +193,14 @@ let k = 16 / 9,
     H = i.memo(function (e) {
         var t;
         let { participant: i, channel: l, width: c } = e,
-            { newestAnalyticsLocation: d } = (0, f.ZP)(p.Z.STAGE_TILE),
-            h = (0, O.bp)(),
+            { newestAnalyticsLocation: d } = (0, f.ZP)(h.Z.STAGE_TILE),
+            p = (0, O.bp)(),
             y = l.getGuildId(),
             _ = S.default.getId();
         a()(null != y, "Channel cannot be guildless");
         let { user: j } = i,
             x = (0, o.e7)([m.Z], () => m.Z.getParticipant(l.id, i.id), [l.id, i.id]),
-            C = (0, o.e7)([P.ZP], () => P.ZP.isModerator(j.id, l.id), [l.id, j.id]);
+            C = (0, o.e7)([T.ZP], () => T.ZP.isModerator(j.id, l.id), [l.id, j.id]);
         if (null == x || x.type === A.fO.ACTIVITY) return null;
         let I = (e) => {
                 (0, g.h)({
@@ -227,7 +227,7 @@ let k = 16 / 9,
                                             t,
                                             M(L({}, n), {
                                                 stream: e.stream,
-                                                appContext: h,
+                                                appContext: p,
                                                 exitFullscreen: () => {},
                                                 onInteraction: (0, b.u)("StreamContextMenu", d, {
                                                     entrypoint: a,
@@ -237,13 +237,13 @@ let k = 16 / 9,
                                             }),
                                         );
                                 },
-                                { context: h },
+                                { context: p },
                             );
                         return;
                     case A.fO.USER:
                     default:
                         if ((I(A.TH.USER), i))
-                            return (0, v.D)(t, j, l, { context: h }, (e, t) =>
+                            return (0, v.D)(t, j, l, { context: p }, (e, t) =>
                                 (0, b.o)({
                                     menuName: e,
                                     menuItemProps: t,
@@ -280,7 +280,7 @@ let k = 16 / 9,
                                         }),
                                     );
                             },
-                            { context: h },
+                            { context: p },
                         );
                 }
             };
@@ -294,7 +294,7 @@ let k = 16 / 9,
                   width: c,
                   isModerator: C,
                   onContextMenu: E,
-                  inPopout: h === w.IlC.POPOUT,
+                  inPopout: p === w.IlC.POPOUT,
               })
             : (0, r.jsx)(U, {
                   stageParticipant: i,
@@ -305,6 +305,6 @@ let k = 16 / 9,
                   width: c,
                   isModerator: C,
                   onContextMenu: E,
-                  inPopout: h === w.IlC.POPOUT,
+                  inPopout: p === w.IlC.POPOUT,
               });
     });

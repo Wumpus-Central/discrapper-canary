@@ -1,16 +1,16 @@
-n.d(t, { c: () => l }), n(388685);
-var a = n(647438),
-    r = n(489863),
-    o = n(828878),
-    i = n(388032);
-function l(e, t, n) {
-    let [l, s] = a.useState(!1),
-        [c, d] = a.useState(null),
-        u = a.useCallback(async () => {
+n.d(t, { c: () => s }), n(388685);
+var r = n(647438),
+    a = n(489863),
+    i = n(828878),
+    o = n(388032);
+function s(e, t, n) {
+    let [s, l] = r.useState(!1),
+        [c, d] = r.useState(null),
+        u = r.useCallback(async () => {
             try {
-                s(!0);
-                let n = await (0, r.tV)(e);
-                s(!1),
+                l(!0);
+                let n = await (0, a.tV)(e);
+                l(!1),
                     t({
                         userCode: e,
                         clientId: n.body.client_id,
@@ -18,26 +18,26 @@ function l(e, t, n) {
                         twoWayLinkCode: n.body.two_way_link_code,
                     });
             } catch (e) {
-                var a;
+                var r;
                 d(
-                    429 === (a = null == e ? void 0 : e.status)
-                        ? i.intl.string(i.t.BPmZvr)
-                        : 404 === a || 400 === a
-                          ? i.intl.string(i.t.aWa1Pz)
-                          : i.intl.string(i.t.JNQRU1),
+                    429 === (r = null == e ? void 0 : e.status)
+                        ? o.intl.string(o.t.BPmZvr)
+                        : 404 === r || 400 === r
+                          ? o.intl.string(o.t.aWa1Pz)
+                          : o.intl.string(o.t.JNQRU1),
                 ),
-                    s(!1),
+                    l(!1),
                     (null == e ? void 0 : e.status) === 401 && n();
             }
         }, [e, t, n]);
     return (
-        a.useEffect(() => {
-            e.length === o.A.USER_CODE_LENGTH ? u() : d(null);
+        r.useEffect(() => {
+            e.length === i.A.USER_CODE_LENGTH ? u() : d(null);
         }, [e, u]),
         {
             manualSubmit: u,
             error: c,
-            submitting: l,
+            submitting: s,
         }
     );
 }

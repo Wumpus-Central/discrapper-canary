@@ -1,6 +1,6 @@
 n.d(t, {
     DF: () => g,
-    ZP: () => O,
+    ZP: () => y,
 });
 var r,
     i,
@@ -13,7 +13,7 @@ var o = n(120356),
     u = n(493773),
     d = n(921944),
     p = n(164208);
-function h(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +38,7 @@ function h(e) {
     }
     return e;
 }
-function f(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -77,11 +77,11 @@ let b = Object.freeze({
         brand: "always-white",
         primary: "header-primary",
     }),
-    y = Object.freeze({
+    O = Object.freeze({
         brand: "always-white",
         primary: "text-default",
     });
-function O(e) {
+function y(e) {
     let {
         color: t = "brand",
         className: n,
@@ -90,7 +90,7 @@ function O(e) {
         content: o,
         contentClassName: g,
         buttonCTA: m,
-        secondaryButtonCTA: O,
+        secondaryButtonCTA: y,
         onClick: v,
         onSecondaryClick: j,
         buttonProps: x = {
@@ -107,7 +107,7 @@ function O(e) {
     (0, u.ZP)(() => {
         null == E || E();
     });
-    let Z = null != O;
+    let Z = null != y;
     return (0, l.jsxs)("div", {
         className: a()(n, b[t], p.upsellTooltipWrapper, p[P]),
         children: [
@@ -121,7 +121,7 @@ function O(e) {
                       children: r,
                   }),
             (0, l.jsx)(c.Text, {
-                color: y[t],
+                color: O[t],
                 className: a()(g, p.content),
                 variant: "text-sm/normal",
                 children: o,
@@ -136,12 +136,12 @@ function O(e) {
                           Z
                               ? (0, l.jsx)(
                                     s.zx,
-                                    f(h({}, C), {
+                                    h(f({}, C), {
                                         fullWidth: 1 === N,
                                         onClick: () => {
                                             null == j || j(), null == I || I(d.L.SECONDARY);
                                         },
-                                        children: O,
+                                        children: y,
                                     }),
                                 )
                               : null,
@@ -149,7 +149,7 @@ function O(e) {
                               ? null
                               : (0, l.jsx)(
                                     s.zx,
-                                    f(h({}, x), {
+                                    h(f({}, x), {
                                         fullWidth: !Z || 1 === N,
                                         onClick: (e) => {
                                             v(e), null == I || I(d.L.PRIMARY);
@@ -163,4 +163,4 @@ function O(e) {
         ],
     });
 }
-(O.CaretPosition = g), (O.ButtonLayout = m);
+(y.CaretPosition = g), (y.ButtonLayout = m);

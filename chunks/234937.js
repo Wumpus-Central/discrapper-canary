@@ -4,12 +4,12 @@ n(647438);
 var i = n(442837),
     l = n(481060),
     a = n(565138),
-    o = n(430824),
-    s = n(388032),
+    s = n(430824),
+    o = n(388032),
     c = n(573265);
 let d = (e) => {
     let { event: t } = e,
-        n = (0, i.e7)([o.Z], () => o.Z.getGuild(t.guild_id));
+        n = (0, i.e7)([s.Z], () => s.Z.getGuild(t.guild_id));
     return null == n
         ? null
         : (0, r.jsxs)("div", {
@@ -18,7 +18,7 @@ let d = (e) => {
                   (0, r.jsx)(l.Heading, {
                       className: c.header,
                       variant: "heading-sm/semibold",
-                      children: s.intl.string(s.t.SDTOLy),
+                      children: o.intl.string(o.t.SDTOLy),
                   }),
                   (0, r.jsxs)("div", {
                       className: c.guildContainer,

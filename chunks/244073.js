@@ -21,9 +21,9 @@ var i = n(951288),
     E = n(594174),
     x = n(979651),
     S = n(362446),
-    C = n(518084),
-    Z = n(981631),
-    j = n(388032),
+    Z = n(518084),
+    j = n(981631),
+    C = n(388032),
     I = n(361979),
     P = n(890332);
 function w(e, t, n) {
@@ -81,9 +81,9 @@ class D extends r.PureComponent {
         let { guild: t } = this.props,
             n = (0, h.F6)(e, E.default, v.Z),
             r = null != t ? "".concat(n, " / ").concat(t.name) : n,
-            s = null != t ? t.id : Z.ME;
+            s = null != t ? t.id : j.ME;
         return (0, i.jsx)(l.rU, {
-            to: Z.Z5c.CHANNEL(s),
+            to: j.Z5c.CHANNEL(s),
             onClick: (t) => {
                 t.stopPropagation(), u.Z.channelListScrollTo(s, e.id);
             },
@@ -109,9 +109,9 @@ class D extends r.PureComponent {
         } = this.props;
         return null == s
             ? null
-            : (0, i.jsx)(C.ZP.Bar, {
+            : (0, i.jsx)(Z.ZP.Bar, {
                   className: o()(e, I.controls, { [I.unpinned]: !n }),
-                  children: (0, i.jsxs)(C.ZP.Content, {
+                  children: (0, i.jsxs)(Z.ZP.Content, {
                       className: o()(t, I.content),
                       dynamicSize: !0,
                       children: [
@@ -142,20 +142,20 @@ class D extends r.PureComponent {
                               grow: 0,
                               children: [
                                   (0, i.jsx)(g.Z, {
-                                      tooltipText: h ? j.intl.string(j.t.YqAjX1) : j.intl.string(j.t["w4m94+"]),
+                                      tooltipText: h ? C.intl.string(C.t.YqAjX1) : C.intl.string(C.t["w4m94+"]),
                                       icon: h ? c.nRN : c.S6n,
                                       iconForeground: h ? I.strikethrough : null,
                                       onClick: this.handleToggleSelfMute,
                                   }),
                                   (0, i.jsx)(g.Z, {
-                                      tooltipText: p ? j.intl.string(j.t["2US87+"]) : j.intl.string(j.t.wjcRFR),
+                                      tooltipText: p ? C.intl.string(C.t["2US87+"]) : C.intl.string(C.t.wjcRFR),
                                       icon: p ? c.wE8 : c.VWR,
                                       onClick: this.handleToggleSelfDeaf,
                                       iconForeground: p ? I.strikethrough : null,
                                   }),
                                   null == r &&
                                       (0, i.jsx)(g.Z, {
-                                          tooltipText: j.intl.string(j.t["6vrfgo"]),
+                                          tooltipText: C.intl.string(C.t["6vrfgo"]),
                                           onClick: this.handleDisconnect,
                                           icon: c.gkL,
                                       }),

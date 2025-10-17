@@ -40,7 +40,7 @@ function _(e) {
     }
     return e;
 }
-function O(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +58,7 @@ function O(e, t) {
         e
     );
 }
-let E = 10 * f.Z.Millis.SECOND,
+let O = 10 * f.Z.Millis.SECOND,
     v = {
         [b.Etm.VALIDATE_APPLICATION]: {
             scope: m.lH,
@@ -84,7 +84,7 @@ let E = 10 * f.Z.Millis.SECOND,
                                     "User does not have entitlement.",
                                 );
                         }),
-                        (0, l.GR)(E).then(() => {
+                        (0, l.GR)(O).then(() => {
                             throw new g.Z({ errorCode: b.lTL.INVALID_ENTITLEMENT }, "Timed out fetching entitlement.");
                         }),
                     ]);
@@ -94,7 +94,7 @@ let E = 10 * f.Z.Millis.SECOND,
                             (h.ZP.focus(null, !0),
                             (0, a.ZDy)(async () => {
                                 let { default: e } = await n.e("48748").then(n.bind(n, 52004));
-                                return (t) => (0, r.jsx)(e, O(_({}, t), { applicationId: i }));
+                                return (t) => (0, r.jsx)(e, E(_({}, t), { applicationId: i }));
                             })),
                         e)
                     );
@@ -124,7 +124,7 @@ let E = 10 * f.Z.Millis.SECOND,
                             (h.ZP.focus(null, !0),
                             (0, a.ZDy)(async () => {
                                 let { default: e } = await n.e("48748").then(n.bind(n, 52004));
-                                return (t) => (0, r.jsx)(e, O(_({}, t), { applicationId: l }));
+                                return (t) => (0, r.jsx)(e, E(_({}, t), { applicationId: l }));
                             }),
                             e)
                         );

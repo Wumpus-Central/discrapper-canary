@@ -4,15 +4,15 @@ n(647438);
 var r = n(442837),
     i = n(755721),
     l = n(481060),
-    s = n(570140),
-    o = n(441623),
+    o = n(570140),
+    s = n(441623),
     c = n(246992),
     d = n(636503),
     u = n(451429);
 function m() {
-    let e = (0, r.e7)([o.Z], () => o.Z.getDevToolTotalFriendAnniversaries()),
+    let e = (0, r.e7)([s.Z], () => s.Z.getDevToolTotalFriendAnniversaries()),
         t = (e) => {
-            s.Z.dispatch({
+            o.Z.dispatch({
                 type: "DEV_TOOLS_SET_FRIEND_ANNIVERSARY_COUNT",
                 total: e,
             });
@@ -39,7 +39,7 @@ function m() {
                             size: "sm",
                             text: "Reset",
                             onClick: () => {
-                                s.Z.dispatch({ type: "DEV_TOOLS_GIFT_MESSAGE_COOLDOWN_RESET" });
+                                o.Z.dispatch({ type: "DEV_TOOLS_GIFT_MESSAGE_COOLDOWN_RESET" });
                             },
                         }),
                     ],
@@ -56,7 +56,7 @@ function m() {
                             size: "sm",
                             text: "Reset",
                             onClick: () => {
-                                s.Z.dispatch({ type: "DEV_TOOLS_FRIENDS_TAB_BADGE_COOLDOWN_RESET" });
+                                o.Z.dispatch({ type: "DEV_TOOLS_FRIENDS_TAB_BADGE_COOLDOWN_RESET" });
                             },
                         }),
                     ],
@@ -73,7 +73,7 @@ function m() {
                             size: "sm",
                             text: "Clear",
                             onClick: () => {
-                                s.Z.dispatch({ type: "DEV_TOOLS_FRIENDS_LIST_GIFT_INTENTS_SHOWN_RESET" });
+                                o.Z.dispatch({ type: "DEV_TOOLS_FRIENDS_LIST_GIFT_INTENTS_SHOWN_RESET" });
                             },
                         }),
                     ],

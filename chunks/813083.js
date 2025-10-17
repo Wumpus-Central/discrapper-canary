@@ -6,8 +6,8 @@ n.d(t, {
 var r,
     l = n(951288);
 n(647438);
-var i = n(278074),
-    a = n(685816),
+var a = n(278074),
+    i = n(685816),
     o = n(780384),
     s = n(481060),
     c = n(410030),
@@ -35,9 +35,9 @@ let f = (e) => {
                   },
         });
     }
-    return (0, i.EQ)([n, b > 1])
+    return (0, a.EQ)([n, b > 1])
         .with(["card", !0], () =>
-            null != p && p === a.z.HERO ? y(d.intl.formatToPlainString(d.t.Io7ozs, { days: b })) : null,
+            null != p && p === i.z.HERO ? y(d.intl.formatToPlainString(d.t.Io7ozs, { days: b })) : null,
         )
         .with(["banner", !0], () => y(d.intl.formatToPlainString(d.t["8gsP5O"], { days: b })))
         .with(["modal", !0], () => y(d.intl.formatToPlainString(d.t.Io7ozs, { days: b })))

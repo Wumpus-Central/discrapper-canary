@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => T });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -15,22 +15,22 @@ var r = n(951288),
     m = n(26373),
     b = n(486622),
     _ = n(488634),
-    O = n(727813),
-    E = n(355350),
+    E = n(727813),
+    O = n(355350),
     v = n(307947),
     y = n(125855),
     I = n(687683),
     C = n(981631),
     S = n(388032),
-    T = n(393272);
-function N() {
+    N = n(393272);
+function T() {
     let e = i.useRef(null),
-        t = (0, O.Z)(),
-        n = (0, E.w)(),
+        t = (0, E.Z)(),
+        n = (0, O.w)(),
         l = (0, m.V)(),
-        N = (0, u.N)(),
-        j = (0, p.Z)("message-requests-spam-list"),
-        { channelId: P } = (0, _._)(),
+        T = (0, u.N)(),
+        P = (0, p.Z)("message-requests-spam-list"),
+        { channelId: j } = (0, _._)(),
         x = i.useCallback(() => {
             (0, c.showToast)((0, c.createToast)(S.intl.string(S.t.EDYbS0), c.ToastType.FAILURE));
         }, []),
@@ -54,8 +54,8 @@ function N() {
                     {
                         index: o,
                         className: a()({
-                            [T.selected]: null != P && P === u,
-                            [T.siblingSelected]: null != P && P === c,
+                            [N.selected]: null != j && j === u,
+                            [N.siblingSelected]: null != j && j === c,
                         }),
                         channel: s.channel,
                         user: s.user,
@@ -64,21 +64,21 @@ function N() {
                     u,
                 );
             },
-            [t, l, P],
+            [t, l, j],
         ),
         L = i.useCallback(
             () =>
                 (0, r.jsxs)(
                     f.Z,
                     {
-                        className: T.sectionTitle,
+                        className: N.sectionTitle,
                         children: [
                             S.intl.format(S.t.C79Edn, { count: n }),
-                            N && n > 0
+                            T && n > 0
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(c.Text, {
-                                              className: T.titleDivider,
+                                              className: N.titleDivider,
                                               variant: "eyebrow",
                                               color: "header-secondary",
                                               tag: "span",
@@ -97,12 +97,12 @@ function N() {
                     },
                     "message-requests-spam-title",
                 ),
-            [n, Z, N],
+            [n, Z, T],
         );
     return 0 === t.length
         ? (0, r.jsx)(v.Z, { section: I.pS.SPAM })
         : (0, r.jsx)(o.bG, {
-              navigator: j,
+              navigator: P,
               children: (0, r.jsx)(o.SJ, {
                   children: (n) => {
                       var { ref: i, role: l } = n,
@@ -157,7 +157,7 @@ function N() {
                               return e;
                           })(
                               {
-                                  className: T.list,
+                                  className: N.list,
                                   innerRole: l,
                                   innerAriaLabel: S.intl.string(S.t.e7GWjY),
                                   ref: (t) => {

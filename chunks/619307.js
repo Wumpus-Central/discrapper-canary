@@ -1,10 +1,10 @@
 n.d(t, {
-    Ph: () => k,
+    Ph: () => j,
     UN: () => P,
     cY: () => C,
     gz: () => N,
     nV: () => A,
-    q4: () => j,
+    q4: () => k,
     s6: () => R,
 }),
     n(388685),
@@ -181,8 +181,8 @@ function L(e) {
             popoutPosition: P = "bottom",
             popoutLayerContext: L,
             optionClassName: M,
-            closeOnSelect: j,
-            select: k,
+            closeOnSelect: k,
+            select: j,
             isSelected: U,
             serialize: G,
             clear: B,
@@ -217,12 +217,12 @@ function L(e) {
         ei = (0, c.O)(er),
         ea = i.useCallback(
             (e) => {
-                if ((k(e), j)) {
+                if ((j(e), k)) {
                     var t;
                     null == (t = $.current) || t.focus();
                 }
             },
-            [k, j, $],
+            [j, k, $],
         ),
         eo = i.useCallback(
             (e) => {
@@ -253,7 +253,7 @@ function L(e) {
                 let { closePopout: n, position: i, updatePosition: a } = e;
                 return (0, r.jsx)(x, {
                     className: R,
-                    closeOnSelect: j,
+                    closeOnSelect: k,
                     maxVisibleItems: l,
                     width: "auto" === m ? void 0 : null != m ? m : ee,
                     isSelected: U,
@@ -536,7 +536,7 @@ function M(e) {
         ),
     );
 }
-function j(e) {
+function k(e) {
     var { renderLeading: t, renderTrailing: n, value: i, onChange: a } = e,
         o = T(e, ["renderLeading", "renderTrailing", "value", "onChange"]);
     let s = (0, g.l)("SingleSelect"),
@@ -613,7 +613,7 @@ function j(e) {
     }
     return (0, r.jsx)(L, I(O({}, o, l), { renderOptionLabel: null != N ? N : w() }));
 }
-function k(e) {
+function j(e) {
     var t,
         n,
         { renderLeading: i, renderTrailing: a } = e,

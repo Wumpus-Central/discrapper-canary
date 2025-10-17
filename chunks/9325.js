@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v }), n(953529);
 var r = n(951288),
     i = n(647438),
-    l = n(442837),
-    s = n(481060),
+    s = n(442837),
+    l = n(481060),
     a = n(388905),
     o = n(409059),
     c = n(962220),
@@ -10,14 +10,14 @@ var r = n(951288),
     d = n(108427),
     h = n(314897),
     g = n(626135),
-    m = n(587444),
-    p = n(981631),
+    p = n(587444),
+    m = n(981631),
     f = n(260539),
     _ = n(388032),
     x = n(197571);
 function E(e, t, n) {
     e.preventDefault(),
-        g.default.track(p.rMx.GUILD_TEMPLATE_APP_OPENED, {
+        g.default.track(m.rMx.GUILD_TEMPLATE_APP_OPENED, {
             guild_template_code: t,
             guild_template_name: n.name,
             guild_template_description: n.description,
@@ -29,12 +29,12 @@ function E(e, t, n) {
 }
 function v(e) {
     let { code: t } = e,
-        n = (0, l.e7)([o.Z], () => o.Z.getGuildTemplate(t));
+        n = (0, s.e7)([o.Z], () => o.Z.getGuildTemplate(t));
     return (i.useEffect(() => {
         (0, d.e)("guild_template_mobile");
     }, []),
     null == n || n.state === f.Rj.RESOLVING)
-        ? (0, r.jsx)(a.ZP, { children: (0, r.jsx)(s.$jN, {}) })
+        ? (0, r.jsx)(a.ZP, { children: (0, r.jsx)(l.$jN, {}) })
         : n.state === f.Rj.RESOLVED
           ? (0, r.jsxs)(a.ZP, {
                 children: [
@@ -49,10 +49,10 @@ function v(e) {
                     }),
                 ],
             })
-          : (0, r.jsx)(m.Z, {
+          : (0, r.jsx)(p.Z, {
                 text: _.intl.string(_.t["e/rZ2t"]),
                 buttonCta: _.intl.string(_.t.HAvYn5),
                 onClick: (e) => E(e, t, n),
             });
 }
-l.ZP.initialize();
+s.ZP.initialize();

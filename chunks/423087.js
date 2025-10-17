@@ -136,12 +136,12 @@ let C = function (e) {
         C = i.useId(),
         O = i.useId(),
         y = i.useMemo(() => p.Ek.every((e) => e.primary !== a || e.secondary !== s), [a, s]),
-        N = (0, o.Jb)({
+        E = (0, o.Jb)({
             orientation: "horizontal",
             isDisabled: !1,
             labelledBy: C,
         });
-    function E(e) {
+    function N(e) {
         let t = {};
         void 0 !== e.primary && (t.badgeColorPrimary = e.primary),
             void 0 !== e.secondary && (t.badgeColorSecondary = e.secondary),
@@ -156,7 +156,7 @@ let C = function (e) {
                 children: (e) =>
                     (0, r.jsxs)(
                         "div",
-                        j(x({}, N), {
+                        j(x({}, E), {
                             id: e.controlId,
                             "aria-describedby": O,
                             className: b.pickerGrid,
@@ -168,7 +168,7 @@ let C = function (e) {
                                             palette: e,
                                             badge: l,
                                             isSelected: e.primary === a && e.secondary === s,
-                                            onClick: () => E(e),
+                                            onClick: () => N(e),
                                         },
                                         "".concat(e.primary).concat(e.secondary),
                                     ),
@@ -181,7 +181,7 @@ let C = function (e) {
                                     showColorPopout: d,
                                     setShowColorPopout: u,
                                     palettePopoutTargetRef: g,
-                                    handleChange: E,
+                                    handleChange: N,
                                 }),
                             ],
                         }),

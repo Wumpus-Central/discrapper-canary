@@ -22,13 +22,13 @@ function p(e) {
         C = v < u.md,
         O = _ >= u.X,
         y = j.length - b.length,
-        N = (0, r.jsx)(a.owK, {
+        E = (0, r.jsx)(a.owK, {
             size: "sm",
             color: l.Z.unsafe_rawColors.BRAND_500.css,
             secondaryColor: l.Z.unsafe_rawColors.WHITE_100.css,
             className: m.icon,
         }),
-        E = (0, r.jsx)(a.k$p, {
+        N = (0, r.jsx)(a.k$p, {
             size: "sm",
             className: m.icon,
             color: l.Z.colors.WHITE.css,
@@ -65,7 +65,7 @@ function p(e) {
             (0, r.jsxs)("div", {
                 className: m.requiredItem,
                 children: [
-                    C ? E : N,
+                    C ? N : E,
                     (0, r.jsx)(a.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
@@ -76,7 +76,7 @@ function p(e) {
             (0, r.jsxs)("div", {
                 className: m.requiredItem,
                 children: [
-                    O ? N : E,
+                    O ? E : N,
                     (0, r.jsx)(a.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",

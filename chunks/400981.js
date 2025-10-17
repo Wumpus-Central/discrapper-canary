@@ -1,53 +1,53 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => f });
 var r = n(951288);
 n(647438);
 var i = n(442837),
     a = n(159691),
     l = n(481060),
-    o = n(607070),
-    s = n(906732),
+    s = n(607070),
+    o = n(906732),
     d = n(821982),
-    C = n(832149),
-    c = n(600164),
+    c = n(832149),
+    C = n(600164),
     u = n(347896),
     p = n(594174),
-    _ = n(614277),
-    f = n(215023),
-    h = n(473936);
-function m(e) {
-    let { onClose: t, selectedPromotionalDecoPurchaseRecord: n, selectedGiftingPromotionReward: m } = e,
+    h = n(614277),
+    _ = n(215023),
+    m = n(473936);
+function f(e) {
+    let { onClose: t, selectedPromotionalDecoPurchaseRecord: n, selectedGiftingPromotionReward: f } = e,
         x = (0, i.e7)([p.default], () => p.default.getCurrentUser()),
-        g = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
-        { analyticsLocations: j } = (0, s.ZP)(),
+        g = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
+        { analyticsLocations: j } = (0, o.ZP)(),
         b = l.EFr.SIZE_32,
-        y = (0, d.Z)(null == m ? void 0 : m.assetId, b, !g),
-        L = (0, u.Z)(),
-        v = null == L ? void 0 : L.giftPurchaseConfirmation;
-    return null == n || null == v
+        v = (0, d.Z)(null == f ? void 0 : f.assetId, b, !g),
+        S = (0, u.Z)(),
+        L = null == S ? void 0 : S.giftPurchaseConfirmation;
+    return null == n || null == L
         ? null
-        : (0, r.jsx)(_.O3, {
+        : (0, r.jsx)(h.O3, {
               children: (0, r.jsx)(l.mzw, {
-                  align: c.Z.Align.CENTER,
+                  align: C.Z.Align.CENTER,
                   "data-migration-pending": !0,
                   children: (0, r.jsxs)("div", {
-                      className: h.promotionalFooter,
+                      className: m.promotionalFooter,
                       children: [
                           (0, r.jsx)(l.Xo$, {
                               "aria-label": null == x ? void 0 : x.username,
                               size: b,
                               src: null == x ? void 0 : x.getAvatarURL(void 0, (0, l.pxk)(b), !g),
-                              avatarDecoration: y,
+                              avatarDecoration: v,
                           }),
                           (0, r.jsx)(a.zxk, {
                               variant: "primary",
-                              text: v.collectRewardButtonText(),
+                              text: L.collectRewardButtonText(),
                               onClick: () => {
                                   t(),
-                                      (0, C.Z)({
+                                      (0, c.Z)({
                                           product: n,
                                           shouldShowPromotionalExperience: !0,
                                           analyticsLocations: j,
-                                          purchaseType: f.o8.PROMOTIONAL,
+                                          purchaseType: _.o8.PROMOTIONAL,
                                       });
                               },
                           }),

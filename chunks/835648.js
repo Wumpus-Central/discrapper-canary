@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k });
+n.d(t, { Z: () => j });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -205,7 +205,7 @@ function M(e) {
             return v.intl.string(v.t.Rtvk9f);
     }
 }
-function j(e) {
+function k(e) {
     let { category: t, categoryIndex: n, onClick: i, isSelected: a, isNitroLocked: o } = e,
         l = (0, s.JA)("soundboard_guild_".concat(n));
     return (0, r.jsx)(c.aML, {
@@ -215,7 +215,7 @@ function j(e) {
         children: (e) => L(t, i, a, e, l, o),
     });
 }
-function k(e) {
+function j(e) {
     let {
             soundboardListRef: t,
             categories: n,
@@ -241,7 +241,7 @@ function k(e) {
                         }),
                             n();
                     };
-                return (0, r.jsx)(j, {
+                return (0, r.jsx)(k, {
                     category: e,
                     categoryIndex: t,
                     onClick: l,

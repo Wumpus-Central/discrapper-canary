@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(599273),
+    o = n(258536),
     c = n(468194),
     s = n(442837),
     u = n(692547),
@@ -12,9 +12,9 @@ var r = n(951288),
     p = n(481060),
     _ = n(2052),
     m = n(906732),
-    b = n(194082),
+    g = n(194082),
     E = n(484459),
-    g = n(594174),
+    b = n(594174),
     v = n(626135),
     h = n(74538),
     S = n(557457),
@@ -113,7 +113,7 @@ let P = (0, c.Mg)(f.Z.LIVE_INDICATOR_BORDER_RADIUS),
         }
         let M = t || l,
             { location: k } = (0, _.O)(),
-            F = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
+            F = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
             L = c && !h.ZP.isPremium(F, I.PremiumTypes.TIER_1) && !h.ZP.canStreamQuality(h.ZP.StreamQuality.MID, F),
             V = i.useCallback(() => {
                 L &&
@@ -146,7 +146,7 @@ let P = (0, c.Mg)(f.Z.LIVE_INDICATOR_BORDER_RADIUS),
                 className: a()(
                     w.qualityIndicator,
                     E,
-                    b.eE[f],
+                    g.eE[f],
                     D ? w.qualityIndicatorLowQuality : w.qualityIndicatorFullQuality,
                     { [w.clickable]: L && M },
                 ),
@@ -170,7 +170,7 @@ let P = (0, c.Mg)(f.Z.LIVE_INDICATOR_BORDER_RADIUS),
             text: U,
             className: a()(A, w.qualityIndicatorBadge, { [w.qualityIndicatorBadgePremium]: M && T }),
             color: u.Z.unsafe_rawColors.PRIMARY_500.css,
-            shape: b.eE[f],
+            shape: g.eE[f],
         });
     },
     F = (e) => {
@@ -178,12 +178,12 @@ let P = (0, c.Mg)(f.Z.LIVE_INDICATOR_BORDER_RADIUS),
             [d, f] = i.useState(!1),
             _ = (0, S.W3)(t),
             { reducedMotion: m } = i.useContext(p.Sfi),
-            g = n && null != _;
+            b = n && null != _;
         i.useEffect(() => {
             (0, E.Z)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), { dispatchWait: !0 });
         }, [t]);
         let v = (0, p.Yzy)(
-                g,
+                b,
                 {
                     enter: {
                         from: m.enabled ? T : x,
@@ -196,7 +196,7 @@ let P = (0, c.Mg)(f.Z.LIVE_INDICATOR_BORDER_RADIUS),
             ),
             h = (0, p.q_F)(
                 {
-                    to: g ? D : N,
+                    to: b ? D : N,
                     config: M,
                 },
                 "animate-always",
@@ -228,10 +228,10 @@ let P = (0, c.Mg)(f.Z.LIVE_INDICATOR_BORDER_RADIUS),
                         (0, r.jsx)(o.animated.div, {
                             style: h,
                             className: w.liveIndicator,
-                            children: (0, r.jsx)(b.ZP, {
-                                look: b.jZ.RED,
+                            children: (0, r.jsx)(g.ZP, {
+                                look: g.jZ.RED,
                                 size: c,
-                                shape: g ? p.Dv2.ROUND_RIGHT : p.Dv2.ROUND,
+                                shape: b ? p.Dv2.ROUND_RIGHT : p.Dv2.ROUND,
                             }),
                         }),
                     ],

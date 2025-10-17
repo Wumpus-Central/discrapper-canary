@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(35282);
+n.d(t, { Z: () => v }), n(388685), n(35282);
 var i = n(951288),
     r = n(647438),
     l = n(120356),
@@ -14,9 +14,9 @@ var i = n(951288),
     g = n(981631),
     x = n(388032),
     h = n(226788),
-    v = n(943987);
-function j(e) {
-    let { detectedGame: t, trackClick: n, onInviteResolved: l, closeModal: j } = e,
+    j = n(943987);
+function v(e) {
+    let { detectedGame: t, trackClick: n, onInviteResolved: l, closeModal: v } = e,
         [O, y] = r.useState(),
         I = (0, o.e7)([m.Z], () => {
             var e, t;
@@ -67,12 +67,12 @@ function j(e) {
                 className: a()(h.row, h.gapMd),
                 children: [
                     (0, i.jsx)("img", {
-                        className: v.guildIcon,
+                        className: j.guildIcon,
                         src: E,
                         alt: x.intl.formatToPlainString(x.t.xm6W9P, { guildName: O.guild.name }),
                     }),
                     (0, i.jsxs)("div", {
-                        className: v.inviteInfo,
+                        className: j.inviteInfo,
                         children: [
                             (0, i.jsx)(c.Text, {
                                 variant: "text-sm/normal",
@@ -91,7 +91,7 @@ function j(e) {
                 variant: "secondary",
                 text: I ? x.intl.string(x.t.cEnaW1) : x.intl.string(x.t.XpeFYm),
                 onClick: () => {
-                    j(),
+                    v(),
                         n(p.as.JoinOfficialServer),
                         d.Z.dispatch({
                             type: "INVITE_MODAL_OPEN",

@@ -24,7 +24,7 @@ let _ = function () {
                 case m.GlobalDiscoveryTab.APPS:
                     return (0, r.jsx)(c.default, {});
                 case m.GlobalDiscoveryTab.QUESTS:
-                    return (0, r.jsx)(d.Z, { withTopBorder: !1 });
+                    return (0, r.jsx)(d.Z, { topLevelRoute: !1 });
                 default:
                     (0, p.vE)(e);
             }

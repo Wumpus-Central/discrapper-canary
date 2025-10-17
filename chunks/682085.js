@@ -1,43 +1,43 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => j });
 var r = n(951288),
     i = n(647438),
-    l = n(296009),
-    a = n(442837),
+    a = n(296009),
+    l = n(442837),
     o = n(704215),
     s = n(481060),
     c = n(491662),
     u = n(243778),
     d = n(594174),
-    p = n(785717),
-    f = n(931847),
-    h = n(50130),
-    g = n(28671),
-    m = n(430790),
-    b = n(795990),
-    _ = n(388032),
-    O = n(66582);
-function E() {
-    let { trackUserProfileEditAction: e } = (0, p.KZ)(),
-        t = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
-        { application: E, config: v } = (0, h.G)(),
-        { token: y, fetched: I } = (0, c.o)(null == v ? void 0 : v.application_id),
-        C = i.useMemo(
+    f = n(785717),
+    g = n(931847),
+    p = n(50130),
+    m = n(28671),
+    b = n(430790),
+    h = n(795990),
+    v = n(388032),
+    y = n(66582);
+function j() {
+    let { trackUserProfileEditAction: e } = (0, f.KZ)(),
+        t = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
+        { application: j, config: O } = (0, p.G)(),
+        { token: x, fetched: _ } = (0, c.o)(null == O ? void 0 : O.application_id),
+        P = i.useMemo(
             () =>
-                (null == v ? void 0 : v.application_id) != null
-                    ? new f.q({
-                          type: l.l.APPLICATION,
-                          applicationId: v.application_id,
+                (null == O ? void 0 : O.application_id) != null
+                    ? new g.q({
+                          type: a.l.APPLICATION,
+                          applicationId: O.application_id,
                       })
                     : null,
-            [null == v ? void 0 : v.application_id],
+            [null == O ? void 0 : O.application_id],
         ),
-        S = i.useCallback(() => {
+        I = i.useCallback(() => {
             e({ action: "PRESS_ADD_WIDGET" }),
                 (0, s.ZDy)(
                     async () => {
                         let { default: t } = await n.e("38576").then(n.bind(n, 925170));
                         return (n) => {
-                            var i, l;
+                            var i, a;
                             return (0, r.jsx)(
                                 t,
                                 ((i = (function (e) {
@@ -65,9 +65,9 @@ function E() {
                                     }
                                     return e;
                                 })({}, n)),
-                                (l = l = { trackUserProfileEditAction: e }),
+                                (a = a = { trackUserProfileEditAction: e }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
                                     : (function (e, t) {
                                           var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
@@ -75,8 +75,8 @@ function E() {
                                               n.push.apply(n, r);
                                           }
                                           return n;
-                                      })(Object(l)).forEach(function (e) {
-                                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                                      })(Object(a)).forEach(function (e) {
+                                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
                                       }),
                                 i),
                             );
@@ -85,25 +85,25 @@ function E() {
                     { stackingBehavior: "stack" },
                 );
         }, [e]);
-    if (null == t || null == E || null == C || !I)
+    if (null == t || null == j || null == P || !_)
         return (0, r.jsx)("div", {
-            className: O.loading,
+            className: y.loading,
             children: (0, r.jsx)(s.$jN, {}),
         });
-    if (null == y) return (0, r.jsx)(b.Z, {});
-    let T = (0, r.jsxs)(s.Kqy, {
+    if (null == x) return (0, r.jsx)(h.Z, {});
+    let w = (0, r.jsxs)(s.Kqy, {
         gap: 4,
-        className: O.header,
+        className: y.header,
         children: [
             (0, r.jsx)(s.Heading, {
                 variant: "heading-md/medium",
                 color: "header-primary",
-                children: _.intl.string(_.t.oqalCw),
+                children: v.intl.string(v.t.oqalCw),
             }),
             (0, r.jsx)(s.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: _.intl.format(_.t.YnNFWV, { applicationName: E.name }),
+                children: v.intl.format(v.t.YnNFWV, { applicationName: j.name }),
             }),
         ],
     });
@@ -119,13 +119,13 @@ function E() {
                         align: "center",
                         children: [
                             (0, r.jsx)(s.LZC, { size: 32 }),
-                            T,
-                            (0, r.jsx)(g.Z, {
+                            w,
+                            (0, r.jsx)(m.Z, {
                                 user: t,
-                                application: E,
+                                application: j,
                                 onDismiss: i,
                             }),
-                            (0, r.jsx)(m.Z, {}),
+                            (0, r.jsx)(b.Z, {}),
                         ],
                     });
                 case null:
@@ -134,13 +134,13 @@ function E() {
                         align: "center",
                         children: [
                             (0, r.jsx)(s.LZC, { size: 128 }),
-                            T,
+                            w,
                             (0, r.jsx)(s.Button, {
                                 icon: s.qJs,
-                                text: _.intl.string(_.t.lBG2s7),
+                                text: v.intl.string(v.t.lBG2s7),
                                 size: "md",
                                 color: "secondary",
-                                onClick: S,
+                                onClick: I,
                             }),
                         ],
                     });

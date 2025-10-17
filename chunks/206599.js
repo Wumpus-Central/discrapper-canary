@@ -7,52 +7,52 @@ n.d(t, {
     n(794429);
 var r = n(647438),
     i = n(442837),
-    l = n(669764),
-    a = n(592183),
+    a = n(669764),
+    l = n(592183),
     o = n(224724),
     s = n(938236),
     c = n(747101);
 function u(e) {
     var t;
-    let [n, a] = (0, i.Wu)([l.Z], () => [l.Z.numNoDataAvailable(), l.Z.numSupplementalGames()]),
+    let [n, l] = (0, i.Wu)([a.Z], () => [a.Z.numNoDataAvailable(), a.Z.numSupplementalGames()]),
         { bump: o, bumpMultiple: u, gameIds: d } = (0, s.b)();
     !(function (e) {
         var t, n;
-        let { remove: i, peekedGameIds: a } = (0, s.b)();
-        (0, c.qU)(null != (t = a[e]) ? t : []);
-        let o = r.useCallback((e) => l.Z.isFetching(e), []),
-            u = (0, c.kN)(null != (n = a[e]) ? n : []);
+        let { remove: i, peekedGameIds: l } = (0, s.b)();
+        (0, c.qU)(null != (t = l[e]) ? t : []);
+        let o = r.useCallback((e) => a.Z.isFetching(e), []),
+            u = (0, c.kN)(null != (n = l[e]) ? n : []);
         r.useEffect(() => {
             var t;
-            for (let n of null != (t = a[e]) ? t : []) {
+            for (let n of null != (t = l[e]) ? t : []) {
                 let t = u[n];
                 (null == t ? void 0 : t.coverImageUrl) != null || o(n) || i(n, e);
             }
-        }, [a, i, e, o, u]);
+        }, [l, i, e, o, u]);
     })(e);
-    let p = r.useMemo(() => {
+    let f = r.useMemo(() => {
             var t;
             return null != (t = d[e]) ? t : [];
         }, [d, e]),
-        f = r.useCallback(
+        g = r.useCallback(
             (t) => {
                 o(t, e);
             },
             [o, e],
         );
-    (0, c.qU)(p);
-    let h = (0, c.kN)(p),
-        [g, m] = r.useState([]),
-        b = ((t = p.map((e) => l.Z.isFetching(e))), r.useMemo(() => t.join("\x1F"), [t]));
+    (0, c.qU)(f);
+    let p = (0, c.kN)(f),
+        [m, b] = r.useState([]),
+        h = ((t = f.map((e) => a.Z.isFetching(e))), r.useMemo(() => t.join("\x1F"), [t]));
     return (
         r.useEffect(() => {
-            let t = p.filter((e) => l.Z.noDataAvailable(e));
+            let t = f.filter((e) => a.Z.noDataAvailable(e));
             t.length > 0 && u(t, e);
-        }, [b, p, e, u, h]),
+        }, [h, f, e, u, p]),
         r.useEffect(() => {
-            m(
-                p.map((e) => {
-                    let t = h[e];
+            b(
+                f.map((e) => {
+                    let t = p[e];
                     return {
                         applicationId: e,
                         gameName: null == t ? void 0 : t.name,
@@ -60,15 +60,15 @@ function u(e) {
                     };
                 }),
             );
-        }, [p, h, e, n, a]),
+        }, [f, p, e, n, l]),
         {
-            games: g,
-            onAddGame: f,
+            games: m,
+            onAddGame: g,
         }
     );
 }
 function d(e, t) {
-    let [n, l, c, u] = (0, i.Wu)([o.Z], () => [
+    let [n, a, c, u] = (0, i.Wu)([o.Z], () => [
             o.Z.suggestedFetchAttempted,
             o.Z.suggestedFetchError,
             o.Z.suggestedGameIds,
@@ -76,13 +76,13 @@ function d(e, t) {
         ]),
         { onLoad: d } = (0, s.b)();
     r.useEffect(() => {
-        !n && e && a.Z.fetchSuggestedGames();
+        !n && e && l.Z.fetchSuggestedGames();
     }, [n, e]);
-    let p = n && !u;
+    let f = n && !u;
     r.useEffect(() => {
         var e, n;
-        if (!p) return;
+        if (!f) return;
         let r = t.map((e) => e.games).flat();
-        if (!l) d(null != (e = c.suggestedGamesIds) ? e : [], null != (n = c.suggestedWishlistGamesIds) ? n : [], r);
-    }, [p]);
+        if (!a) d(null != (e = c.suggestedGamesIds) ? e : [], null != (n = c.suggestedWishlistGamesIds) ? n : [], r);
+    }, [f]);
 }

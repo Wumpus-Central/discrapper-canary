@@ -93,20 +93,20 @@ class d extends (r = l.PureComponent) {
                     f.clearRect(0, 0, r.width, r.height),
                     f.translate(0, 0.5 * f.lineWidth);
                 let _ = Math.floor(r.width / (b - 3)),
-                    O = 0.5 * _;
+                    E = 0.5 * _;
                 f.translate(_ - _ * p, 0), f.beginPath();
-                let E = -_;
+                let O = -_;
                 i.forEach((e, r) => {
                     (t = {
-                        x: E,
+                        x: O,
                         y: (g * e) / h,
                     }),
-                        0 === r ? f.moveTo(t.x, t.y) : f.bezierCurveTo(n.x + O, n.y, t.x - O, t.y, t.x, t.y),
+                        0 === r ? f.moveTo(t.x, t.y) : f.bezierCurveTo(n.x + E, n.y, t.x - E, t.y, t.x, t.y),
                         (n = t),
-                        (E += _);
+                        (O += _);
                 }),
                     f.stroke(),
-                    f.lineTo(E - _, 0),
+                    f.lineTo(O - _, 0),
                     f.lineTo(0, 0),
                     f.fill(),
                     u && p < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation));

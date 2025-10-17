@@ -15,8 +15,8 @@ var r = n(951288),
     m = n(210724),
     b = n(905423),
     _ = n(316173),
-    O = n(410575),
-    E = n(981631),
+    E = n(410575),
+    O = n(981631),
     v = n(388032),
     y = n(981028);
 function I(e) {
@@ -93,16 +93,16 @@ let C = i.memo(function () {
                 (0, r.jsx)(_.Z, {}),
                 (0, r.jsx)(m.Z, {}),
                 (0, r.jsx)(h.Z, {}),
-                (0, r.jsx)(O.Z, {
-                    section: E.jXE.ACTIVITY_PANEL,
+                (0, r.jsx)(E.Z, {
+                    section: O.jXE.ACTIVITY_PANEL,
                     children: (0, r.jsx)(I, { className: y.activityPanel }),
                 }),
-                (0, r.jsx)(O.Z, {
-                    section: E.jXE.RTC_CONNECTION_PANEL,
+                (0, r.jsx)(E.Z, {
+                    section: O.jXE.RTC_CONNECTION_PANEL,
                     children: (0, r.jsx)(g.Z, {}),
                 }),
-                (0, r.jsx)(O.Z, {
-                    section: E.jXE.ACCOUNT_PANEL,
+                (0, r.jsx)(E.Z, {
+                    section: O.jXE.ACCOUNT_PANEL,
                     children: (0, r.jsx)(p.Z, {}),
                 }),
             ],

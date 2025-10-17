@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(442837),
-    s = n(481060),
+    s = n(442837),
+    l = n(481060),
     a = n(893776),
     o = n(232567),
     c = n(129293),
@@ -10,21 +10,21 @@ var r = n(951288),
     d = n(353926),
     h = n(185625),
     g = n(551549),
-    m = n(108427),
-    p = n(314897),
+    p = n(108427),
+    m = n(314897),
     f = n(981631),
     _ = n(388032),
     x = n(197571);
-l.ZP.initialize();
+s.ZP.initialize();
 let E = (e) => {
     let { location: t } = e,
-        n = (0, l.e7)([p.default], () => p.default.isAuthenticated()),
-        E = (0, l.e7)([d.Z], () => d.Z.hasLoadedExperiments),
+        n = (0, s.e7)([m.default], () => m.default.isAuthenticated()),
+        E = (0, s.e7)([d.Z], () => d.Z.hasLoadedExperiments),
         v = (0, g.oK)("RSL - Landing Page"),
         [b, j] = i.useState(!1),
         [I, N] = i.useState(_.intl.string(_.t["9exy+f"])),
-        [S, O] = i.useState(!0),
-        y = (e) => {
+        [O, y] = i.useState(!0),
+        S = (e) => {
             switch (e) {
                 case f.evJ.INVALID_FORM_BODY:
                 case f.evJ.DSA_RSL_REPORT_NOT_FOUND:
@@ -46,12 +46,12 @@ let E = (e) => {
     return (
         i.useEffect(() => {
             n
-                ? (O(!0),
+                ? (y(!0),
                   o
                       .k({ withAnalyticsToken: !0 })
-                      .then(() => O(!1))
-                      .catch(() => O(!1)))
-                : O(!1);
+                      .then(() => y(!1))
+                      .catch(() => y(!1)))
+                : y(!1);
         }, [n]),
         i.useEffect(() => {
             E || v || a.Z.getExperiments();
@@ -61,24 +61,24 @@ let E = (e) => {
                 var t, n;
                 try {
                     let n = null != e ? await (0, h.hs)(e) : void 0;
-                    null != n ? N(_.intl.string(_.t.e6mZMj)) : y(null == (t = n.body) ? void 0 : t.code);
+                    null != n ? N(_.intl.string(_.t.e6mZMj)) : S(null == (t = n.body) ? void 0 : t.code);
                 } catch (e) {
-                    y(null == (n = e.body) ? void 0 : n.code);
+                    S(null == (n = e.body) ? void 0 : n.code);
                 } finally {
                     j(!1);
                 }
             };
-            j(!0), e((0, c.Z)(t)), (0, m.e)("report_second_look");
+            j(!0), e((0, c.Z)(t)), (0, p.e)("report_second_look");
         }, [t]),
         v &&
-            !S &&
+            !O &&
             (0, r.jsxs)(u.ZP, {
                 children: [
                     (0, r.jsx)(u.Dx, {
                         className: x.marginBottom8,
                         children: I,
                     }),
-                    b && (0, r.jsx)(s.$jN, {}),
+                    b && (0, r.jsx)(l.$jN, {}),
                 ],
             })
     );

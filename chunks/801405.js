@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(906732),
     d = n(358221),
     u = n(522651),
-    h = n(788983),
-    p = n(268353),
+    p = n(788983),
+    h = n(268353),
     f = n(944486),
     g = n(626135),
     m = n(585483),
@@ -38,8 +38,8 @@ function j(e) {
     i.useEffect(() => {
         I.current = E;
     });
-    let T = i.useRef(S),
-        { currentDocument: P, rootNode: N } = i.useMemo(() => {
+    let P = i.useRef(S),
+        { currentDocument: T, rootNode: N } = i.useMemo(() => {
             let e = null != O && C ? O.document : document,
                 t = x.document.getElementById("app-mount");
             return {
@@ -62,32 +62,32 @@ function j(e) {
             (e) => {
                 null != N &&
                     e === _.AEg.FULL_SCREEN &&
-                    (A(e, T.current),
+                    (A(e, P.current),
                     (0, y.Pr)((e) => {
-                        T.current = e;
-                    }, P));
+                        P.current = e;
+                    }, T));
             },
-            [P, A, N],
+            [T, A, N],
         ),
         L = i.useCallback(
             (e) => () => {
                 null != N &&
                     ((0, u.v)(v, u.d.FULL_SCREEN, e !== _.AEg.FULL_SCREEN),
-                    e !== _.AEg.FULL_SCREEN ? ((T.current = e), A(e, _.AEg.FULL_SCREEN), (0, y.Dj)(N)) : D(e));
+                    e !== _.AEg.FULL_SCREEN ? ((P.current = e), A(e, _.AEg.FULL_SCREEN), (0, y.Dj)(N)) : D(e));
             },
             [A, D, N, v],
         );
     i.useEffect(() => {
         let e = () => {
-            null != N && ((0, y.rB)(N, P) || S !== _.AEg.FULL_SCREEN || L(S)());
+            null != N && ((0, y.rB)(N, T) || S !== _.AEg.FULL_SCREEN || L(S)());
         };
         return (
-            P.addEventListener(y.NO, e),
+            T.addEventListener(y.NO, e),
             () => {
-                P.removeEventListener(y.NO, e);
+                T.removeEventListener(y.NO, e);
             }
         );
-    }, [P, S, L, N]);
+    }, [T, S, L, N]);
     let M = {
             channel: t,
             maybeLeaveFullScreen: D,
@@ -133,13 +133,13 @@ function j(e) {
         );
     }, [S, C]),
     i.useEffect(() => {
-        null != N && I.current === _.WtW.VIDEO && E === _.WtW.VOICE && (0, y.Pr)(N, P);
-    }, [P, E, I, N]),
+        null != N && I.current === _.WtW.VIDEO && E === _.WtW.VOICE && (0, y.Pr)(N, T);
+    }, [T, E, I, N]),
     i.useEffect(() => {
-        !Z && C && a.Z.wait(() => h.xv(_.KJ3.CHANNEL_CALL_POPOUT));
+        !Z && C && a.Z.wait(() => p.xv(_.KJ3.CHANNEL_CALL_POPOUT));
     }, [Z, C]),
     w)
-        ? (0, r.jsx)(p.Z, {
+        ? (0, r.jsx)(h.Z, {
               themeable: !1,
               node: N,
               guestWindow: O,

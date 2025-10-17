@@ -89,12 +89,12 @@ function D() {
         L = (0, s.e7)([m.ZP], () => m.ZP.getKeybindForAction(I.kg4.SAVE_CLIP, !0)),
         x = E.Z.isDecoupledGameClippingEnabled(),
         M = (0, y.Z)(h.Z),
-        { showClipsHeaderEntrypoint: j } = g.NV.useExperiment(
+        { showClipsHeaderEntrypoint: k } = g.NV.useExperiment(
             { location: "clips_recording_settings" },
             { autoTrackExposure: !1 },
         );
     o()(null != L, "Save clip keybind unset");
-    let k = (0, s.e7)([d.default], () => d.default.locale),
+    let j = (0, s.e7)([d.default], () => d.default.locale),
         U = i.useMemo(
             () => [
                 {
@@ -110,7 +110,7 @@ function D() {
                     label: A.intl.formatToPlainString(A.t.ICo9Nj, { count: 2 }),
                 },
             ],
-            [k],
+            [j],
         ),
         G = i.useMemo(
             () => [
@@ -143,7 +143,7 @@ function D() {
                     label: A.intl.string(A.t.XjXqzs),
                 },
             ],
-            [k],
+            [j],
         ),
         B = i.useMemo(
             () => [
@@ -160,7 +160,7 @@ function D() {
                     label: A.intl.formatToPlainString(A.t.Qb44XF, { fps: T.ApplicationStreamFPS.FPS_60 }),
                 },
             ],
-            [k],
+            [j],
         ),
         Z = i.useCallback(
             (e) => {
@@ -219,7 +219,7 @@ function D() {
                         }),
                     ],
                 }),
-            j &&
+            k &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(l.izJ, {}),

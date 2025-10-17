@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
@@ -8,19 +8,19 @@ var r = n(951288),
     c = n(593130),
     d = n(388032),
     u = n(568592);
-function h(e) {
+function p(e) {
     let { channel: t } = e,
-        [n, h] = i.useState(!1),
-        p = i.useRef(null),
+        [n, p] = i.useState(!1),
+        h = i.useRef(null),
         f = (0, a.$5)(t),
         g = i.useCallback(() => {
-            h(!1);
+            p(!1);
         }, []),
         m = i.useCallback(() => {
-            n || (0, o.U4)("Popout"), h(!n);
+            n || (0, o.U4)("Popout"), p(!n);
         }, [n]);
     return (0, r.jsx)(l.yRy, {
-        targetElementRef: p,
+        targetElementRef: h,
         animation: l.yRy.Animation.NONE,
         position: "bottom",
         align: "right",
@@ -69,7 +69,7 @@ function h(e) {
                 })({}, e)),
                 (i = i =
                     {
-                        ref: p,
+                        ref: h,
                         className: u.icon,
                         onClick: m,
                         icon: l.or_,

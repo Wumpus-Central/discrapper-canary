@@ -1,8 +1,8 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(990547),
-    s = n(442837),
+    s = n(990547),
+    l = n(442837),
     a = n(481060),
     o = n(893776),
     c = n(232567),
@@ -10,8 +10,8 @@ var r = n(951288),
     d = n(353926),
     h = n(82554),
     g = n(726521),
-    m = n(185625),
-    p = n(314897),
+    p = n(185625),
+    m = n(314897),
     f = n(63063),
     _ = n(981631),
     x = n(388032),
@@ -60,7 +60,7 @@ function j(e, t) {
         e
     );
 }
-s.ZP.initialize();
+l.ZP.initialize();
 let I = {
         [h.BM.MESSAGE]: x.t.fuqnBA,
         [h.BM.USER]: x.t.F4jrRU,
@@ -68,11 +68,11 @@ let I = {
     },
     N = (e) => {
         let { title: t, menuType: i } = e,
-            s = (e) => {
+            l = (e) => {
                 let t = async () => {
-                        await (0, m.yL)(i, e);
+                        await (0, p.yL)(i, e);
                     },
-                    s = async (t) => await (0, m.RV)(i, e, t),
+                    l = async (t) => await (0, p.RV)(i, e, t),
                     o = (e) => {
                         let t = null == e ? void 0 : e.token;
                         i === h.BM.MESSAGE
@@ -88,12 +88,12 @@ let I = {
                             (0, r.jsx)(
                                 e,
                                 j(b({}, n), {
-                                    onFormSubmit: s,
+                                    onFormSubmit: l,
                                     onResend: t,
                                     onSuccess: o,
                                     headerText: x.intl.string(x.t.H3Q7U1),
                                     confirmButtonText: x.intl.string(x.t["13ofGh"]),
-                                    impression: { impressionName: l.ImpressionNames.URF_CONFIRM_EMAIL_CODE },
+                                    impression: { impressionName: s.ImpressionNames.URF_CONFIRM_EMAIL_CODE },
                                 }),
                             );
                     });
@@ -107,7 +107,7 @@ let I = {
                         (0, r.jsx)(
                             e,
                             j(b({}, t), {
-                                onSuccess: s,
+                                onSuccess: l,
                                 headerText: x.intl.string(x.t.ZLRYGR),
                                 confirmButtonText: x.intl.string(x.t.PDTjLC),
                             }),
@@ -125,21 +125,21 @@ let I = {
             ],
         });
     },
-    S = () => {
+    O = () => {
         let [e, t] = i.useState(!0),
-            [n, l] = i.useState([]),
-            h = (0, s.e7)([p.default], () => p.default.isAuthenticated()),
-            g = (0, s.e7)([d.Z], () => d.Z.hasLoadedExperiments),
+            [n, s] = i.useState([]),
+            h = (0, l.e7)([m.default], () => m.default.isAuthenticated()),
+            g = (0, l.e7)([d.Z], () => d.Z.hasLoadedExperiments),
             b = () => {
-                (0, m.Jj)()
+                (0, p.Jj)()
                     .then((e) => {
                         let {
                             body: { capabilities: n },
                         } = e;
-                        t(!1), l(n);
+                        t(!1), s(n);
                     })
                     .catch(() => {
-                        t(!1), l([]);
+                        t(!1), s([]);
                     });
             };
         return (

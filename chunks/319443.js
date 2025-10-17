@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => z }), n(388685), n(781311);
+n.r(t), n.d(t, { default: () => F }), n(388685), n(781311);
 var r = n(951288),
     a = n(647438),
     i = n(120356),
@@ -10,7 +10,7 @@ var r = n(951288),
     u = n(979233),
     p = n(88693),
     m = n(611928),
-    h = (n(763433), n(922122)),
+    h = (n(763433), n(175118)),
     g = n(680180),
     _ = n(726115),
     f = n(703656),
@@ -119,19 +119,19 @@ function U() {
         ],
     });
 }
-let z = function () {
+let F = function () {
     var e;
     let t = (0, o.e7)([b.default], () => !b.default.isAuthenticated()),
         { onScroll: n, scrollPosition: i, resetScrollPosition: y } = (0, u.M)(),
         R = (0, N.Xh)(),
-        z = (0, P.nu)(),
-        F = (null == R ? void 0 : R.type) === N.m_.CATEGORY ? R.categoryId : void 0,
+        F = (0, P.nu)(),
+        z = (null == R ? void 0 : R.type) === N.m_.CATEGORY ? R.categoryId : void 0,
         { applicationId: H, section: V } = (null == R ? void 0 : R.type) === N.m_.APPLICATION ? R : {},
         { query: Y, categoryId: W } = (null == R ? void 0 : R.type) === N.m_.SEARCH ? R : {},
         K = (0, o.e7)([I.Z], () => I.Z.getCategories()),
         X = a.useMemo(() => [(0, S.KQ)(), ...K], [K]),
         q = a.useMemo(() => X.find((e) => e.id === Number(W)), [X, W]),
-        { tabs: Q, selectedTab: J, onSelectTab: $ } = (0, E.i)(null == F ? void 0 : F.toString()),
+        { tabs: Q, selectedTab: J, onSelectTab: $ } = (0, E.i)(null == z ? void 0 : z.toString()),
         [ee, et] = a.useState(!0),
         en = N.z8.useField("trackedOpenedFromExternalEntrypoint"),
         er = N.z8.useField("sessionId"),
@@ -156,8 +156,8 @@ let z = function () {
             C.CP();
         }, []),
         a.useEffect(() => {
-            z && C.g5();
-        }, [z]),
+            F && C.g5();
+        }, [F]),
         a.useEffect(() => N.aQ.setState({ lastItem: R }), [R]);
     let { enabled: ei } = d.c.useExperiment({ location: "GlobalDiscoveryAppsRoot" }, { autoTrackExposure: !0 }),
         el = null != H,

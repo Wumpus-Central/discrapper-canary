@@ -4,11 +4,11 @@ n(647438);
 var r = n(920981),
     i = n(442837),
     l = n(481060),
-    s = n(335131),
-    o = n(52030),
+    o = n(335131),
+    s = n(52030),
     c = n(978134);
 let d = () => {
-    let e = (0, i.e7)([o.Z], () => o.Z.getShopHomeConfigOverride()),
+    let e = (0, i.e7)([s.Z], () => s.Z.getShopHomeConfigOverride()),
         t = [
             {
                 label: "DISABLED (no override)",
@@ -33,7 +33,7 @@ let d = () => {
                 options: t,
                 value: e,
                 onChange: (e) => {
-                    (0, s.fi)(e);
+                    (0, o.fi)(e);
                 },
             }),
         ],

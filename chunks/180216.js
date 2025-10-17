@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(584825),
     d = n(406074),
     u = n(660196),
-    h = n(36246),
-    p = n(305342),
+    p = n(36246),
+    h = n(305342),
     f = n(981631),
     g = n(388032),
     m = n(200813);
@@ -56,13 +56,13 @@ function b(e) {
                       color: "header-secondary",
                       children: null == _ ? void 0 : _.description,
                   }),
-                  (0, r.jsx)(h.Z, {
+                  (0, r.jsx)(p.Z, {
                       guildId: t,
                       children: b
                           .filter((e) => null != v[e.id])
                           .map((e) =>
                               (0, r.jsx)(
-                                  p.Z,
+                                  h.Z,
                                   {
                                       guildId: t,
                                       listingId: e.id,

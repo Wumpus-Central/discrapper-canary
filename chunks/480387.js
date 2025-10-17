@@ -7,18 +7,18 @@ var a = n(213919),
     r = n(544891),
     i = n(570140),
     l = n(893776),
-    s = n(710845),
-    o = n(314897),
+    o = n(710845),
+    s = n(314897),
     c = n(726745),
     d = n(981631);
-let u = new s.Z("MultiAccountActionCreators");
+let u = new o.Z("MultiAccountActionCreators");
 function m() {
-    let e = o.default.getId();
+    let e = s.default.getId();
     c.Z.getUsers().forEach(async (t) => {
         let n,
             { id: l } = t,
-            s = a.getToken(l);
-        if (null == s || "" === s)
+            o = a.getToken(l);
+        if (null == o || "" === o)
             return void i.Z.dispatch({
                 type: "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE",
                 userId: l,
@@ -30,7 +30,7 @@ function m() {
         try {
             n = await r.tn.get({
                 url: d.ANM.ME,
-                headers: { authorization: s },
+                headers: { authorization: o },
                 retries: 3,
                 rejectWithError: !1,
             });

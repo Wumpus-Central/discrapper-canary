@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(481060),
     d = n(884338),
     u = n(688641),
-    h = n(596449),
-    p = n(459502),
+    p = n(596449),
+    h = n(459502),
     f = n(856691),
     g = n(357156),
     m = n(546247),
@@ -103,7 +103,7 @@ function I(e) {
                             }),
                         ],
                     }),
-                    u ? null : (0, r.jsx)(p.Z, { channelId: t.id }),
+                    u ? null : (0, r.jsx)(h.Z, { channelId: t.id }),
                     l
                         ? (0, r.jsx)(f.Z, {
                               className: x.eventPrompt,
@@ -111,7 +111,7 @@ function I(e) {
                           })
                         : null,
                     d
-                        ? (0, r.jsx)(h.Z, {
+                        ? (0, r.jsx)(p.Z, {
                               className: x.eventPrompt,
                               guildId: o,
                           })

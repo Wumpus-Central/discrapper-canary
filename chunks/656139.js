@@ -49,7 +49,7 @@ let C = (e) => {
                 e && !P && N();
             }),
             M = C.reduce((e, t) => (e.has(t.id) || e.set(t.id, t), e), new Map()),
-            j = () =>
+            k = () =>
                 (0, r.jsx)(f.Z, {
                     className: A.searchbar,
                     size: f.Z.Sizes.MEDIUM,
@@ -66,7 +66,7 @@ let C = (e) => {
                     onQueryChange: b,
                     onClear: () => b(""),
                 }),
-            k = (e) => {
+            j = (e) => {
                 let i,
                     { eligibleRecipients: a } = e,
                     s = I.length > 0 && 0 === a.size;
@@ -169,9 +169,9 @@ let C = (e) => {
                       title: S.intl.string(S.t["2dVCLi"]),
                       subtitle: S.intl.string(S.t.DXgoi4),
                       onClose: t,
-                      input: j(),
+                      input: k(),
                       actions: [],
-                      actionBarInput: k({ eligibleRecipients: M }),
+                      actionBarInput: j({ eligibleRecipients: M }),
                       children: U({ eligibleRecipients: M }),
                   });
     },

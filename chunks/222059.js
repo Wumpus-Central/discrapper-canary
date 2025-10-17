@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(864682),
     d = n(975298),
     p = n(550385),
-    h = n(899740),
-    f = n(365113),
+    f = n(899740),
+    h = n(365113),
     g = n(849862),
     m = n(460181),
     b = n(155409),
@@ -45,7 +45,7 @@ let D = {
 };
 function L(e) {
     var t, n;
-    let { selected: o, user: d, badge: h, link: g, showProgressBadge: _ } = e,
+    let { selected: o, user: d, badge: f, link: g, showProgressBadge: _ } = e,
         [O, y] = i.useState(!1),
         [v, j] = i.useState(!1),
         [x, C] = i.useState(null),
@@ -55,7 +55,7 @@ function L(e) {
         k = () => {
             C(null), w(0), clearTimeout(x);
         },
-        G = f.o.useConfig({ location: "home button" }).dmsTab;
+        G = h.o.useConfig({ location: "home button" }).dmsTab;
     if (null == d) return null;
     let U = G ? A.intl.string(A.t.Ym2Ri4) : A.intl.string(A.t.YUU0RE);
     v && (U = a.K.get(Z.wli) ? A.intl.string(A.t.nkq1l5) : A.intl.string(A.t.Be8Q5O));
@@ -66,12 +66,12 @@ function L(e) {
             className: R.downloadProgress,
             determineOwnVisibility: !1,
         }));
-    let V = o || O || M,
-        F = (0, r.jsx)(s.aRk, {
+    let F = o || O || M,
+        V = (0, r.jsx)(s.aRk, {
             selected: !0,
-            lowerBadge: h > 0 ? (0, N.Ne)(h) : null,
+            lowerBadge: f > 0 ? (0, N.Ne)(f) : null,
             upperBadge: B,
-            lowerBadgeSize: { width: (0, s.OVM)(h) },
+            lowerBadgeSize: { width: (0, s.OVM)(f) },
             children: (0, r.jsx)(
                 s.LYs,
                 ((t = (function (e) {
@@ -118,7 +118,7 @@ function L(e) {
                                     }, 1000);
                             }
                         },
-                        selected: V,
+                        selected: F,
                         ariaLabel: A.intl.string(A.t.YUU0RE),
                         "aria-owns": "guild-list-unread-dms",
                         "aria-selected": o,
@@ -172,7 +172,7 @@ function L(e) {
                         hideOnClick: !0,
                         text: U,
                         selected: o,
-                        children: F,
+                        children: V,
                     }),
                 ],
             }),
@@ -196,9 +196,9 @@ function M() {
         })),
         u = l.fractionalState === w.a$.NONE ? a + s : 0,
         p = (0, o.e7)([O.default], () => O.default.getCurrentUser()),
-        f = (0, h.q)(),
-        m = n + u + f,
-        b = m === u && u > 0 && n + f === 0,
+        h = (0, f.q)(),
+        m = n + u + h,
+        b = m === u && u > 0 && n + h === 0,
         S = v.Z.getHomeLink();
     return (
         b && (S = Z.Z5c.APPLICATION_STORE),

@@ -99,7 +99,7 @@ let R = (e) => {
                       children: n,
                   });
         return (0, r.jsx)(c.aML, {
-            text: v.intl.string(v.t.UnKHdo),
+            text: v.intl.string(v.t.UnKHdn),
             shouldShow: !o,
             tooltipContentClassName: I.unsentTooltipContent,
             children: (e) => (0, r.jsx)("div", N(A({ className: I.userAvatarProgressBarUnit }, e), { children: s })),
@@ -223,7 +223,7 @@ let R = (e) => {
                                                 alt: "",
                                                 className: I.expandedProgressBarSelectFriendsIcon,
                                             }),
-                                            S ? v.intl.string(v.t.SY9tyI) : v.intl.string(v.t.Lm2nFc),
+                                            S ? v.intl.string(v.t.SY9tyM) : v.intl.string(v.t.Lm2nFR),
                                         ],
                                     }),
                                 }),

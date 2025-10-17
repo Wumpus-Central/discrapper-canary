@@ -9,14 +9,14 @@ var r = n(951288),
     u = n(619915),
     d = n(620662),
     p = n(841784),
-    h = n(471445),
-    f = n(430824),
+    f = n(471445),
+    h = n(430824),
     g = n(496675),
     m = n(158776),
     b = n(979651),
     _ = n(823379),
-    y = n(355363),
-    O = n(449932),
+    O = n(355363),
+    y = n(449932),
     v = n(561788),
     j = n(876548),
     x = n(543432),
@@ -26,7 +26,7 @@ var r = n(951288),
     I = n(21265);
 function P(e) {
     var t, l;
-    let { channel: o, guild: h, onAction: f, voiceStates: g, isChannelSelected: b, shouldShowSettingNudge: y } = e,
+    let { channel: o, guild: f, onAction: h, voiceStates: g, isChannelSelected: b, shouldShowSettingNudge: O } = e,
         v = i.useMemo(() => {
             var e;
             return null == g || g.length > 50
@@ -95,12 +95,12 @@ function P(e) {
                   x.map((e, t) => {
                       var n;
                       return (0, r.jsx)(
-                          O.Z,
+                          y.Z,
                           {
                               embeddedApp: e,
                               presenceActivity: null != (n = e.presenceActivity) ? n : void 0,
                               channel: o,
-                              onAction: f,
+                              onAction: h,
                           },
                           t,
                       );
@@ -108,17 +108,17 @@ function P(e) {
                   P.map((e, t) => {
                       let { members: n, activity: i } = e;
                       return (0, r.jsx)(
-                          O.Z,
+                          y.Z,
                           {
                               presenceActivity: i,
                               channel: o,
                               members: n,
-                              onAction: f,
+                              onAction: h,
                           },
                           t,
                       );
                   }),
-                  y &&
+                  O &&
                       (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)("div", { className: S.headerDivider }),
@@ -165,7 +165,7 @@ function P(e) {
                                                               }
                                                               return e;
                                                           })({}, t)),
-                                                          (i = i = { guild: h }),
+                                                          (i = i = { guild: f }),
                                                           Object.getOwnPropertyDescriptors
                                                               ? Object.defineProperties(
                                                                     n,
@@ -202,14 +202,14 @@ function N(e) {
     let { channel: t, isChannelSelected: n, voiceStatesCount: i } = e,
         l = (0, a.e7)([g.Z], () => !g.Z.can(C.Plq.CONNECT, t)),
         s = (0, a.e7)([b.Z], () => b.Z.hasVideo(t.id)),
-        c = (0, y.ZP)({
+        c = (0, O.ZP)({
             channel: t,
             locked: l,
             video: s,
             selected: n,
         }),
-        u = (0, a.e7)([f.Z], () => f.Z.getGuild(t.guild_id));
-    return null == (0, h.KS)(t, u)
+        u = (0, a.e7)([h.Z], () => h.Z.getGuild(t.guild_id));
+    return null == (0, f.KS)(t, u)
         ? null
         : (0, r.jsxs)("div", {
               className: o()(S.popoutHeaderContainer, I.popoutHeaderContainer),

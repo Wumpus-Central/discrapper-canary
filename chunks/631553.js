@@ -1,5 +1,5 @@
 let i;
-n.d(t, { Z: () => eC }), n(539854);
+n.d(t, { Z: () => ej }), n(539854);
 var r = n(951288),
     s = n(647438),
     o = n(120356),
@@ -22,8 +22,8 @@ var r = n(951288),
     x = n(714338),
     S = n(185666),
     Z = n(100527),
-    C = n(906732),
-    j = n(600164);
+    j = n(906732),
+    C = n(600164);
 n(70097);
 var I = n(266454),
     P = n(594190),
@@ -42,14 +42,14 @@ var I = n(266454),
     U = n(449224),
     G = n(574254),
     B = n(556296),
-    H = n(808506),
-    F = n(372679),
+    F = n(808506),
+    H = n(372679),
     Y = n(237997),
     K = n(451478),
     X = n(70956),
-    J = n(358085),
-    Q = n(998502),
-    q = n(378799),
+    q = n(358085),
+    J = n(998502),
+    Q = n(378799),
     $ = n(13140),
     ee = n(145597),
     et = n(658785),
@@ -129,7 +129,7 @@ function eE(e) {
         };
     });
 }
-J.isPlatformEmbedded;
+q.isPlatformEmbedded;
 let ex = (e) => {
         let { keybind: t, onClick: n, isPreviewingInGame: i, locked: s } = e,
             o = s ? m.P3F : "div";
@@ -250,13 +250,13 @@ class eZ extends s.Component {
                         game: l,
                     }),
             setTimeout(async () => {
-                await (0, q.s5)(), null != e ? O.Z.overlayMounted(e) : O.Z.overlayMounted();
+                await (0, Q.s5)(), null != e ? O.Z.overlayMounted(e) : O.Z.overlayMounted();
             }, 128),
             window.addEventListener("resize", this.handleWindowResize),
             n && window.addEventListener("contextmenu", ev, !1),
-            J.isPlatformEmbedded)
+            q.isPlatformEmbedded)
         ) {
-            let e = (0, F.M)();
+            let e = (0, H.M)();
             if (null == e) return;
             if (void 0 !== e.setPerfInfoCallback) {
                 var f;
@@ -269,9 +269,9 @@ class eZ extends s.Component {
                             interval: 15 * X.Z.Millis.MINUTE,
                         });
             }
-            Q.ZP.on("REQUEST_OPEN_EXTERNAL_URL", (e, t) => {
+            J.ZP.on("REQUEST_OPEN_EXTERNAL_URL", (e, t) => {
                 Y.default.getDisableExternalLinkAlert() || t === W.Z.getLastURL()
-                    ? Q.ZP.send("OPEN_EXTERNAL_URL", t)
+                    ? J.ZP.send("OPEN_EXTERNAL_URL", t)
                     : y.Z.show({
                           title: ey.intl.string(ey.t.WLx4Fx),
                           body: ey.intl.string(ey.t.H8O1TE),
@@ -281,7 +281,7 @@ class eZ extends s.Component {
                           onConfirmSecondary: () => {
                               O.Z.disableExternalLinkAlert();
                           },
-                          onConfirm: () => Q.ZP.send("OPEN_EXTERNAL_URL", t),
+                          onConfirm: () => J.ZP.send("OPEN_EXTERNAL_URL", t),
                       });
             });
         }
@@ -298,9 +298,9 @@ class eZ extends s.Component {
             D.Z.terminate();
     }
     renderInvalidSizeMessage() {
-        return (0, r.jsx)(j.Z, {
-            justify: j.Z.Justify.CENTER,
-            align: j.Z.Align.CENTER,
+        return (0, r.jsx)(C.Z, {
+            justify: C.Z.Justify.CENTER,
+            align: C.Z.Align.CENTER,
             className: e_.invalidContainer,
             children: (0, r.jsx)("div", {
                 className: e_.inactiveContainer,
@@ -374,7 +374,7 @@ class eZ extends s.Component {
         super(e),
             eO(this, "didUpdate", !1),
             eO(this, "handleWindowResize", () => {
-                H.default.isFocusedPidOutOfProcess()
+                F.default.isFocusedPidOutOfProcess()
                     ? this.forceUpdate()
                     : u()(() => {
                           this.forceUpdate();
@@ -403,7 +403,7 @@ class eZ extends s.Component {
         x.Z.setLayout(t ? E.Xq : E.Sr), t && x.Z.enable();
     }
 }
-function eC() {
+function ej() {
     var e, t;
     let {
             locked: n,
@@ -428,18 +428,18 @@ function eC() {
         m = (0, f.e7)([P.ZP, U.Z], () => (0, N.Z)(P.ZP, U.Z)),
         y = (0, f.e7)([z.Z], () => (0, w.Z)(z.Z)),
         _ = (0, f.e7)([k.Z], () => null != k.Z.getCurrentUserActiveStream()),
-        { analyticsLocations: O } = (0, C.ZP)(Z.Z.OVERLAY),
+        { analyticsLocations: O } = (0, j.ZP)(Z.Z.OVERLAY),
         { showKeybindIndicators: b, dismissKeybindNotification: E } = (0, eo.K)(),
         x = (null == c ? void 0 : c.fullscreenType) === v.Jx.FULLSCREEN,
         S = null != (e = null == c ? void 0 : c.oopEnabled) && e,
-        j = en.v.oopEnabled,
+        C = en.v.oopEnabled,
         I = null != (t = null == c ? void 0 : c.hasChangedRenderMode) && t,
         { useContextualNudge: T, disableNudge: D } = (0, er.J0)("OverlaySetup");
     return (
         s.useEffect(() => {
             i && (0, er.F3)();
         }, [i]),
-        (0, r.jsx)(C.Gt, {
+        (0, r.jsx)(j.Gt, {
             value: O,
             children: (0, r.jsx)(eZ, {
                 locked: n,
@@ -458,7 +458,7 @@ function eC() {
                 isStreaming: _,
                 showKeybindNotification: b,
                 dismissKeybindNotification: E,
-                isOOPOverlayAvailable: (!T || (j && S && x && !I)) && !D,
+                isOOPOverlayAvailable: (!T || (C && S && x && !I)) && !D,
             }),
         })
     );

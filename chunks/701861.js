@@ -15,15 +15,15 @@ var r = n(951288),
     m = n(699516),
     b = n(51144),
     _ = n(298213),
-    O = n(321488),
-    E = n(417183),
+    E = n(321488),
+    O = n(417183),
     v = n(825682),
     y = n(170245),
     I = n(981631),
     C = n(65154),
     S = n(388032),
-    T = n(934422);
-function N(e, t, n) {
+    N = n(934422);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function N(e, t, n) {
         e
     );
 }
-function j(e) {
+function P(e) {
     let { user: t, applicationId: n, isGameRelationship: l, onSelect: a } = e,
         p = i.useCallback(() => {
             u.Z.openPrivateChannel({
@@ -69,8 +69,8 @@ function j(e) {
                 onConfirm: h,
             });
         }, [h, l, t]),
-        O = (0, o.e7)([g.Z], () => g.Z.supports(C.AN.VIDEO)),
-        E = t.isProvisional,
+        E = (0, o.e7)([g.Z], () => g.Z.supports(C.AN.VIDEO)),
+        O = t.isProvisional,
         v = l ? S.intl.string(S.t["RLcE6+"]) : S.intl.string(S.t.cvSt1N);
     return (0, r.jsxs)(s.v2r, {
         navId: "friend-row",
@@ -78,14 +78,14 @@ function j(e) {
         onClose: d.Zy,
         onSelect: a,
         children: [
-            !E && O
+            !O && E
                 ? (0, r.jsx)(s.sNh, {
                       id: "start-video-call",
                       label: S.intl.string(S.t.oCqlGB),
                       action: f,
                   })
                 : null,
-            !E &&
+            !O &&
                 (0, r.jsx)(s.sNh, {
                     id: "start-voice-call",
                     label: S.intl.string(S.t.focH1t),
@@ -100,7 +100,7 @@ function j(e) {
         ],
     });
 }
-class P extends i.PureComponent {
+class j extends i.PureComponent {
     componentWillLeave(e) {
         null != this.peopleListItemRef.current && this.peopleListItemRef.current.componentWillLeave(e);
     }
@@ -119,7 +119,7 @@ class P extends i.PureComponent {
                 giftIntentType: c,
             } = this.props,
             { isActiveRow: u } = this.state;
-        return (0, r.jsx)(E.Z, {
+        return (0, r.jsx)(O.Z, {
             ref: this.peopleListItemRef,
             isFocused: t,
             isActive: u,
@@ -128,7 +128,7 @@ class P extends i.PureComponent {
             onClick: this.handleOpenPrivateChannel,
             children: (t) =>
                 (0, r.jsxs)("div", {
-                    className: T.listItemContents,
+                    className: N.listItemContents,
                     children: [
                         (0, r.jsx)(y.Z, {
                             user: e,
@@ -146,7 +146,7 @@ class P extends i.PureComponent {
                             showAccountIdentifier: !o && !e.isProvisional,
                         }),
                         (0, r.jsxs)("div", {
-                            className: T.actions,
+                            className: N.actions,
                             children: [
                                 null != c &&
                                     (0, r.jsx)(p.Z, {
@@ -155,13 +155,13 @@ class P extends i.PureComponent {
                                         analyticsPage: I.ZY5.FRIENDS_LIST,
                                         shouldHighlight: t,
                                     }),
-                                (0, r.jsx)(O.Z, {
+                                (0, r.jsx)(E.Z, {
                                     icon: s.kBi,
                                     tooltip: S.intl.string(S.t["g33r/P"]),
                                     onClick: this.handleOpenPrivateChannel,
                                     shouldHighlight: t,
                                 }),
-                                (0, r.jsx)(O.Z, {
+                                (0, r.jsx)(E.Z, {
                                     icon: s.Huf,
                                     tooltip: S.intl.string(S.t.UKOtz8),
                                     onClick: this.handleOpenActionsMenu,
@@ -175,9 +175,9 @@ class P extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            N(this, "peopleListItemRef", i.createRef()),
-            N(this, "state", { isActiveRow: !1 }),
-            N(this, "handleOpenPrivateChannel", (e) => {
+            T(this, "peopleListItemRef", i.createRef()),
+            T(this, "state", { isActiveRow: !1 }),
+            T(this, "handleOpenPrivateChannel", (e) => {
                 let { user: t } = this.props;
                 e.stopPropagation();
                 let n = a().find(
@@ -186,13 +186,13 @@ class P extends i.PureComponent {
                 );
                 null != n ? (0, f.uL)(I.Z5c.CHANNEL(I.ME, n.id)) : u.Z.openPrivateChannel({ recipientIds: t.id });
             }),
-            N(this, "handleOpenActionsMenu", (e) => {
+            T(this, "handleOpenActionsMenu", (e) => {
                 let { user: t, isGameRelationship: n, applicationId: i } = this.props;
                 (0, d.vq)(
                     e,
                     (e) =>
                         (0, r.jsx)(
-                            j,
+                            P,
                             (function (e, t) {
                                 return (
                                     (t = null != t ? t : {}),
@@ -222,7 +222,7 @@ class P extends i.PureComponent {
                                                 }),
                                             )),
                                             r.forEach(function (t) {
-                                                N(e, t, n[t]);
+                                                T(e, t, n[t]);
                                             });
                                     }
                                     return e;
@@ -244,4 +244,4 @@ class P extends i.PureComponent {
             });
     }
 }
-let x = P;
+let x = j;

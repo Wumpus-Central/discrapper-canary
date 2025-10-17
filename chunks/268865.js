@@ -3,11 +3,11 @@ var r = n(951288);
 n(647438);
 var l = n(567400),
     i = n(786040),
-    s = n(143941),
+    a = n(143941),
     o = n(652100);
-let a = (e) => {
+let s = (e) => {
         let { product: t, selectedVariantIndex: n, isCardHovered: l } = e;
-        return (0, r.jsx)(s.a, {
+        return (0, r.jsx)(a.a, {
             product: t,
             selectedVariantIndex: n,
             isCardHovered: l,
@@ -15,14 +15,14 @@ let a = (e) => {
         });
     },
     c = (e) => {
-        let { skuId: t, selectedVariantIndex: n, isCardHovered: s } = e,
+        let { skuId: t, selectedVariantIndex: n, isCardHovered: a } = e,
             o = (0, l.Y)({ location: "ProductWishlistButton" }),
             c = (0, i.LJ)(t);
         return null != c && o
-            ? (0, r.jsx)(a, {
+            ? (0, r.jsx)(s, {
                   product: c,
                   selectedVariantIndex: n,
-                  isCardHovered: s,
+                  isCardHovered: a,
               })
             : null;
     };

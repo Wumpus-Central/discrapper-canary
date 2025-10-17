@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -15,14 +15,14 @@ var r = n(951288),
     m = n(305325),
     b = n(246364),
     _ = n(937111),
-    O = n(381416),
-    E = n(523924),
+    E = n(381416),
+    O = n(523924),
     v = n(390500),
     y = n(981631),
     I = n(898625),
     C = n(388032),
     S = n(555562);
-function T(e) {
+function N(e) {
     let { guild: t, width: n, height: l } = e,
         a = i.useMemo(
             () =>
@@ -59,22 +59,22 @@ function T(e) {
               ],
           });
 }
-let N = (e) => {
+let T = (e) => {
     let { guildId: t } = e,
         { ref: n, width: c, height: u } = (0, s.ZP)(),
         [f, h] = i.useState(I.hO.INITIAL),
-        N = (0, l.e7)([_.Z], () => _.Z.getRequest(t)),
-        j = (0, l.e7)([p.Z], () => p.Z.getGuild(t)),
-        { hasFetchedRequestToJoinGuilds: P, guildPreviewDisabled: x } = (0, l.cj)([_.Z], () => ({
+        T = (0, l.e7)([_.Z], () => _.Z.getRequest(t)),
+        P = (0, l.e7)([p.Z], () => p.Z.getGuild(t)),
+        { hasFetchedRequestToJoinGuilds: j, guildPreviewDisabled: x } = (0, l.cj)([_.Z], () => ({
             hasFetchedRequestToJoinGuilds: _.Z.hasFetchedRequestToJoinGuilds,
             guildPreviewDisabled: _.Z.getJoinRequestGuild(t),
         }));
     i.useEffect(() => {
-        null != j && (0, d.uL)(y.Z5c.CHANNEL(t));
-    }, [j, t]),
+        null != P && (0, d.uL)(y.Z5c.CHANNEL(t));
+    }, [P, t]),
         i.useEffect(() => {
-            P || g.Z.fetchRequestToJoinGuilds();
-        }, [P]);
+            j || g.Z.fetchRequestToJoinGuilds();
+        }, [j]);
     let A = i.useCallback(() => {
             h(Math.max(f, I.hO.FILLING)), g.Z.removeGuildJoinRequest(t), (0, d.uL)(y.Z5c.ME);
         }, [t, f]),
@@ -150,7 +150,7 @@ let N = (e) => {
         className: S.page,
         ref: n,
         children: [
-            (0, r.jsx)(T, {
+            (0, r.jsx)(N, {
                 guild: x,
                 height: u,
                 width: c,
@@ -158,24 +158,24 @@ let N = (e) => {
             (0, r.jsx)("div", {
                 className: S.contentWrapper,
                 children: (() => {
-                    if (null == N) return null;
-                    switch (N.applicationStatus) {
+                    if (null == T) return null;
+                    switch (T.applicationStatus) {
                         case b.wB.SUBMITTED:
                             return (0, r.jsx)(v.Z, {
                                 onWithdrawApplication: L,
                                 guild: x,
                             });
                         case b.wB.REJECTED:
-                            return (0, r.jsx)(E.Z, {
+                            return (0, r.jsx)(O.Z, {
                                 reapplyText: C.intl.string(C.t.I1LYVl),
                                 onReapply: w,
                                 confirmText: C.intl.string(C.t.g9tK0t),
                                 onWithdrawApplication: L,
-                                rejectionReason: N.rejectionReason,
+                                rejectionReason: T.rejectionReason,
                                 guild: x,
                             });
                         default:
-                            return (0, r.jsx)(O.s, {
+                            return (0, r.jsx)(E.s, {
                                 onDiscardApplication: R,
                                 onContinueApplication: () => (0, m.hk)(t),
                                 guild: x,

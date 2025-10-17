@@ -2,16 +2,16 @@ n.d(t, { Z: () => l });
 var i = n(951288);
 n(647438);
 var a = n(180781),
-    o = n(321867),
-    r = n(486324);
+    r = n(321867),
+    o = n(486324);
 function l(e) {
     let { type: t, analyticsPage: n, analyticsSection: l, isGIF: c, banner: s } = e;
-    return [r.pC.BANNER, r.pC.AVATAR].includes(t) && c
-        ? (0, i.jsx)(o.Z, {
+    return [o.pC.BANNER, o.pC.AVATAR].includes(t) && c
+        ? (0, i.jsx)(r.Z, {
               analyticsSection: l,
               type: t,
           })
-        : t === r.pC.GUILD_BANNER
+        : t === o.pC.GUILD_BANNER
           ? (0, i.jsx)(a.Z, {
                 analyticsSection: l,
                 analyticsPage: n,

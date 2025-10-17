@@ -71,7 +71,7 @@ function M(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -82,7 +82,7 @@ function j(e, t) {
         e
     );
 }
-function k(e, t) {
+function j(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -121,7 +121,7 @@ let G = new d.Z("ConnectionStore"),
                     null == i
                         ? void 0
                         : i.merge(
-                              j(x({}, r), {
+                              k(x({}, r), {
                                   recipients: i.recipients,
                                   bitrate: null != (n = r.bitrate) ? n : i.bitrate,
                               }),
@@ -742,7 +742,7 @@ W(
         (e) => v.o.loadGuildIds([e.guild_id]),
         (e, t) => {
             let { newly_created: n } = e,
-                r = k(e, ["newly_created"]);
+                r = j(e, ["newly_created"]);
             q({
                 type: t,
                 isNewlyCreated: n,
@@ -1311,7 +1311,7 @@ W(
             channelId: e.channel_id,
             messageId: e.message_id,
             reactions: e.votes.map((e) =>
-                j(x({}, e), {
+                k(x({}, e), {
                     emoji: {
                         id: e.answer_id,
                         name: "",

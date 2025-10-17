@@ -1,4 +1,4 @@
-e.d(t, { Z: () => s });
+e.d(t, { Z: () => a });
 var l = e(951288);
 e(647438);
 var i = e(481060),
@@ -6,7 +6,7 @@ var i = e(481060),
     o = e(453925),
     u = e(821564),
     c = e(632304);
-function s() {
+function a() {
     let { analyticsLocations: n } = (0, r.ZP)();
     return [
         (0, l.jsx)(i.kSQ, { children: (0, u.Z)(n) }, "input-mode-items"),

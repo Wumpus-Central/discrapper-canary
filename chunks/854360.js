@@ -1,19 +1,19 @@
-n.d(t, { default: () => m }), n(388685);
+n.d(t, { default: () => h }), n(388685);
 var r = n(951288),
     l = n(647438),
     i = n(793030),
     o = n(442837),
     a = n(481060),
     c = n(749210),
-    u = n(910693),
-    s = n(501517),
-    d = n(592125),
-    f = n(51144),
-    _ = n(981631),
+    s = n(910693),
+    u = n(501517),
+    p = n(592125),
+    d = n(51144),
+    f = n(981631),
     g = n(388032),
     b = n(764295),
-    O = n(541770);
-function p(e) {
+    m = n(541770);
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +38,7 @@ function p(e) {
     }
     return e;
 }
-function E(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,9 +56,9 @@ function E(e, t) {
         e
     );
 }
-function m(e) {
-    var { guildId: t, user: n, location: m, modReportId: y } = e,
-        j = (function (e, t) {
+function h(e) {
+    var { guildId: t, user: n, location: h, modReportId: j } = e,
+        v = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -79,14 +79,14 @@ function m(e) {
             }
             return l;
         })(e, ["guildId", "user", "location", "modReportId"]);
-    let [v, h] = l.useState(""),
-        [M, C] = l.useState(!1),
-        A = (0, u.sE)(t, {
-            location: m,
+    let [x, P] = l.useState(""),
+        [C, w] = l.useState(!1),
+        k = (0, s.sE)(t, {
+            location: h,
             targetUserId: n.id,
         }),
-        { isModReportClosed: S, isModReport: P } = (0, o.cj)([d.Z], () => {
-            let e = d.Z.getChannel(y);
+        { isModReportClosed: S, isModReport: I } = (0, o.cj)([p.Z], () => {
+            let e = p.Z.getChannel(j);
             return {
                 isModReportClosed: null == e ? void 0 : e.isArchivedThread(),
                 isModReport: null == e ? void 0 : e.isModeratorReportChannel(),
@@ -94,25 +94,25 @@ function m(e) {
         }),
         T = l.useCallback(() => {
             if (
-                (c.Z.kickUser(t, n.id, v, y).then(() => {
-                    M && null != y && s.Z.resolveFlag(y);
+                (c.Z.kickUser(t, n.id, x, j).then(() => {
+                    C && null != j && u.Z.resolveFlag(j);
                 }),
-                A(u.jQ.KICK),
-                null != y)
+                k(s.jQ.KICK),
+                null != j)
             ) {
                 var e;
-                null == (e = j.onClose) || e.call(j);
+                null == (e = v.onClose) || e.call(v);
             }
-        }, [t, n.id, v, A, y, M, j]),
-        I = l.useCallback((e) => {
-            h(e);
+        }, [t, n.id, x, k, j, C, v]),
+        E = l.useCallback((e) => {
+            P(e);
         }, []);
-    return null != y && P
+    return null != j && I
         ? (0, r.jsx)(
               i.Modal,
-              E(p({}, j), {
+              O(y({}, v), {
                   title: g.intl.formatToPlainString(g.t["1Ie87u"], { user: n.username }),
-                  subtitle: g.intl.format(g.t["/yH0UV"], { user: "@".concat(f.ZP.getName(n)) }),
+                  subtitle: g.intl.format(g.t["/yH0UV"], { user: "@".concat(d.ZP.getName(n)) }),
                   actions: [
                       {
                           text: g.intl.string(g.t["3glT6e"]),
@@ -124,47 +124,47 @@ function m(e) {
                   actionBarInput: S
                       ? void 0
                       : (0, r.jsx)(a.Checkbox, {
-                            checked: M,
+                            checked: C,
                             onChange: (e) => {
-                                C(e);
+                                w(e);
                             },
                             label: g.intl.string(b.default["8yIKen"]),
                         }),
                   children: (0, r.jsx)(a.Kx8, {
-                      label: g.intl.string(null != y ? g.t.hmKy8P : g.t["+2QEPj"]),
-                      maxLength: _.GNZ,
-                      onChange: I,
-                      value: v,
+                      label: g.intl.string(null != j ? g.t.hmKy8P : g.t["+2QEPj"]),
+                      maxLength: f.GNZ,
+                      onChange: E,
+                      value: x,
                       rows: 2,
                   }),
               }),
           )
         : (0, r.jsxs)(
               a.ConfirmModal,
-              E(
-                  p(
+              O(
+                  y(
                       {
                           header: g.intl.formatToPlainString(g.t["1Ie87u"], { user: n.username }),
                           confirmText: g.intl.string(g.t["3glT6e"]),
                           cancelText: g.intl.string(g.t["ETE/oK"]),
                           onConfirm: T,
                       },
-                      j,
+                      v,
                   ),
                   {
                       children: [
                           (0, r.jsx)(a.Text, {
                               variant: "text-md/normal",
-                              className: O.spacing,
-                              children: g.intl.format(g.t["/yH0UV"], { user: "@".concat(f.ZP.getName(n)) }),
+                              className: m.spacing,
+                              children: g.intl.format(g.t["/yH0UV"], { user: "@".concat(d.ZP.getName(n)) }),
                           }),
                           (0, r.jsx)("div", {
-                              className: O.spacing,
+                              className: m.spacing,
                               children: (0, r.jsx)(a.Kx8, {
                                   label: g.intl.string(g.t["+2QEPj"]),
-                                  maxLength: _.GNZ,
-                                  onChange: I,
-                                  value: v,
+                                  maxLength: f.GNZ,
+                                  onChange: E,
+                                  value: x,
                                   rows: 2,
                               }),
                           }),

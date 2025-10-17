@@ -54,10 +54,10 @@ function d(e, t, n) {
         ? t.selectedValue === d && (w = 0)
         : (t.lastFocusedValue === d || null == t.lastFocusedValue) && (w = 0),
         O && (w = void 0);
-    let { name: D, form: L, descriptionId: x, errorMessageId: M, validationBehavior: j } = r.H.get(t);
+    let { name: D, form: L, descriptionId: x, errorMessageId: M, validationBehavior: k } = r.H.get(t);
     return (
         (0, o.y)(n, t.defaultSelectedValue, t.setSelectedValue),
-        (0, u.Q)({ validationBehavior: j }, t, n),
+        (0, u.Q)({ validationBehavior: k }, t, n),
         {
             labelProps: (0, i.d)(
                 A,
@@ -76,7 +76,7 @@ function d(e, t, n) {
                 form: L,
                 tabIndex: w,
                 disabled: O,
-                required: t.isRequired && "native" === j,
+                required: t.isRequired && "native" === k,
                 checked: v,
                 value: d,
                 onChange: I,

@@ -3,8 +3,8 @@ var a = n(647438),
     r = n(442837),
     i = n(675478),
     l = n(914010),
-    s = n(70956),
-    o = n(709054),
+    o = n(70956),
+    s = n(709054),
     c = n(883904),
     d = n(428967),
     u = n(266454),
@@ -16,7 +16,7 @@ function h(e, t) {
 function x(e) {
     let t = (0, r.e7)([l.Z], () => l.Z.getGuildId()),
         n = (0, u.Nj)(e, {
-            cooldownDurationMs: s.Z.Millis.WEEK,
+            cooldownDurationMs: o.Z.Millis.WEEK,
             guildId: t,
         }),
         c = (0, a.useCallback)(() => {
@@ -29,7 +29,7 @@ function x(e) {
                 let t = (0, m.mA)(e, {});
                 return (h(e, n), n)
                     ? ((0, i.Z1)(e), !1)
-                    : ((0, m.po)(e, o.default.fromTimestamp(Date.now() + m.wx), t), !0);
+                    : ((0, m.po)(e, s.default.fromTimestamp(Date.now() + m.wx), t), !0);
             }
             if ((0, d.OQ)(e)) return (h(e, n), n) ? ((0, i.Z1)(e), !1) : ((0, m.z2)(e, (0, m.mA)(e, {})), !0);
             if ((0, d.Vc)(e)) {

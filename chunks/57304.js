@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(728285),
     d = n(306680),
     u = n(585483),
-    h = n(665149),
-    p = n(981631),
+    p = n(665149),
+    h = n(981631),
     f = n(388032);
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -65,14 +65,14 @@ let b = function (e) {
             n || y((e) => !e);
         }, [n]);
     function v(e) {
-        (null == e ? void 0 : e.shiftKey) || j.dispatch(p.CkL.POPOUT_CLOSE);
+        (null == e ? void 0 : e.shiftKey) || j.dispatch(h.CkL.POPOUT_CLOSE);
     }
     return (
         i.useEffect(
             () => (
-                u.S.subscribe(p.CkL.TOGGLE_CHANNEL_PINS, x),
+                u.S.subscribe(h.CkL.TOGGLE_CHANNEL_PINS, x),
                 () => {
-                    u.S.unsubscribe(p.CkL.TOGGLE_CHANNEL_PINS, x);
+                    u.S.unsubscribe(h.CkL.TOGGLE_CHANNEL_PINS, x);
                 }
             ),
             [x],
@@ -99,7 +99,7 @@ let b = function (e) {
             children: (e, t) => {
                 let { isShown: i } = t;
                 return (0, r.jsx)(
-                    h.JO,
+                    p.JO,
                     m(g({}, e), {
                         ref: O,
                         onClick: x,

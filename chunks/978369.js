@@ -2,61 +2,61 @@ n.d(t, { Z: () => f }), n(539854), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(481060),
-    o = n(785717),
-    l = n(86419),
-    c = n(286957),
-    s = n(388032),
+    l = n(785717),
+    o = n(86419),
+    s = n(286957),
+    c = n(388032),
     u = n(44258);
 let d = i.memo(function (e) {
-    let { currentTags: t, onTagSelect: n, onNoneSelect: i, onClose: o } = e;
+    let { currentTags: t, onTagSelect: n, onNoneSelect: i, onClose: l } = e;
     return (0, r.jsx)(a.v2r, {
         navId: "widget-game-tags",
-        "aria-label": s.intl.string(s.t.r6EJOj),
-        onClose: o,
+        "aria-label": c.intl.string(c.t.r6EJOj),
+        onClose: l,
         onSelect: () => {},
         className: u.gameTagsMenu,
-        children: Object.entries(c.aE).map((e) => {
-            let [o, l] = e,
-                u = ((e, o) => {
-                    let l = [];
+        children: Object.entries(s.aE).map((e) => {
+            let [l, o] = e,
+                u = ((e, l) => {
+                    let o = [];
                     return (
-                        o.type === c.kd.RADIO &&
-                            l.push(
+                        l.type === s.kd.RADIO &&
+                            o.push(
                                 (0, r.jsx)(
                                     a.k5B,
                                     {
                                         id: "".concat(e, "-none"),
                                         group: e,
-                                        label: s.intl.string(s.t.PoWNfX),
-                                        checked: !o.tags.some((e) => t.includes(e)),
-                                        action: () => i(o.tags),
+                                        label: c.intl.string(c.t.PoWNfX),
+                                        checked: !l.tags.some((e) => t.includes(e)),
+                                        action: () => i(l.tags),
                                     },
                                     "none",
                                 ),
                             ),
-                        o.tags.forEach((i) => {
-                            let s = c.XV[i];
-                            null != s &&
-                                (o.type === c.kd.RADIO
-                                    ? l.push(
+                        l.tags.forEach((i) => {
+                            let c = s.XV[i];
+                            null != c &&
+                                (l.type === s.kd.RADIO
+                                    ? o.push(
                                           (0, r.jsx)(
                                               a.k5B,
                                               {
                                                   id: i,
                                                   group: e,
-                                                  label: s.getText(),
+                                                  label: c.getText(),
                                                   checked: t.includes(i),
                                                   action: () => n(i, !0),
                                               },
                                               i,
                                           ),
                                       )
-                                    : l.push(
+                                    : o.push(
                                           (0, r.jsx)(
                                               a.S89,
                                               {
                                                   id: i,
-                                                  label: s.getText(),
+                                                  label: c.getText(),
                                                   checked: t.includes(i),
                                                   action: () => n(i, !1),
                                               },
@@ -64,16 +64,16 @@ let d = i.memo(function (e) {
                                           ),
                                       ));
                         }),
-                        l
+                        o
                     );
-                })(o, l);
+                })(l, o);
             return (0, r.jsx)(
                 a.kSQ,
                 {
-                    label: l.getLabel(),
+                    label: o.getLabel(),
                     children: u,
                 },
-                o,
+                l,
             );
         }),
     });
@@ -81,20 +81,20 @@ let d = i.memo(function (e) {
 function f(e) {
     let { tags: t, widgetType: n, applicationId: f, ref: g } = e,
         p = (0, i.useRef)(null),
-        { trackUserProfileEditAction: b } = (0, o.KZ)(),
-        m = (0, i.useMemo)(() => (null != t ? t : []), [t]),
-        O = (0, i.useCallback)(
+        { trackUserProfileEditAction: m } = (0, l.KZ)(),
+        b = (0, i.useMemo)(() => (null != t ? t : []), [t]),
+        h = (0, i.useCallback)(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                    r = new Set(m);
+                    r = new Set(b);
                 if (t) {
-                    let t = Object.values(c.aE).find((t) => t.tags.includes(e));
+                    let t = Object.values(s.aE).find((t) => t.tags.includes(e));
                     null != t &&
                         (t.tags.forEach((e) => {
                             r.delete(e);
                         }),
                         r.add(e),
-                        b({
+                        m({
                             action: "TAG_ADDED",
                             widgetEdited: n,
                             gameId: f,
@@ -102,42 +102,42 @@ function f(e) {
                 } else
                     r.has(e)
                         ? (r.delete(e),
-                          b({
+                          m({
                               action: "TAG_REMOVED",
                               widgetEdited: n,
                               gameId: f,
                           }))
                         : (r.add(e),
-                          b({
+                          m({
                               action: "TAG_ADDED",
                               widgetEdited: n,
                               gameId: f,
                           }));
-                (0, l.n$)(n, f, Array.from(r));
+                (0, o.n$)(n, f, Array.from(r));
             },
-            [m, b, n, f],
+            [b, m, n, f],
         ),
-        y = (0, i.useCallback)(
+        v = (0, i.useCallback)(
             (e) => {
-                let t = new Set(m);
+                let t = new Set(b);
                 e.forEach((e) => {
                     t.delete(e);
                 }),
-                    b({
+                    m({
                         action: "TAG_REMOVED",
                         widgetEdited: n,
                         gameId: f,
                     }),
-                    (0, l.n$)(n, f, Array.from(t));
+                    (0, o.n$)(n, f, Array.from(t));
             },
-            [m, b, n, f],
+            [b, m, n, f],
         );
     return (0, r.jsx)(a.yRy, {
         targetElementRef: p,
         position: "right",
         align: "top",
         onRequestOpen: () => {
-            b({
+            m({
                 action: "PRESS_ADD_TAG",
                 widgetEdited: n,
             });
@@ -145,9 +145,9 @@ function f(e) {
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, r.jsx)(d, {
-                currentTags: m,
-                onTagSelect: O,
-                onNoneSelect: y,
+                currentTags: b,
+                onTagSelect: h,
+                onNoneSelect: v,
                 onClose: t,
             });
         },
@@ -190,11 +190,11 @@ function f(e) {
                     (n = n =
                         {
                             className: u.addButton,
-                            "aria-label": s.intl.string(s.t.r6EJOj),
+                            "aria-label": c.intl.string(c.t.r6EJOj),
                             children: (0, r.jsx)(a.Text, {
                                 variant: "text-xxs/medium",
                                 color: "none",
-                                children: s.intl.string(s.t.fZSej4),
+                                children: c.intl.string(c.t.fZSej4),
                             }),
                         }),
                     Object.getOwnPropertyDescriptors

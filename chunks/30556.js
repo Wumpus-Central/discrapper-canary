@@ -4,8 +4,8 @@ t.d(n, {
 });
 var l = t(951288),
     i = t(647438),
-    r = t(481060),
-    o = t(493683),
+    o = t(481060),
+    r = t(493683),
     s = t(732380),
     a = t(228168),
     c = t(388032);
@@ -43,47 +43,47 @@ function u(e, n) {
             var t,
                 l,
                 i = {},
-                r = Object.keys(e);
-            for (l = 0; l < r.length; l++) (t = r[l]), n.indexOf(t) >= 0 || (i[t] = e[t]);
+                o = Object.keys(e);
+            for (l = 0; l < o.length; l++) (t = o[l]), n.indexOf(t) >= 0 || (i[t] = e[t]);
             return i;
         })(e, n);
     if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        for (l = 0; l < r.length; l++)
-            (t = r[l]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (i[t] = e[t]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (l = 0; l < o.length; l++)
+            (t = o[l]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (i[t] = e[t]);
     }
     return i;
 }
 function m(e) {
     let { userId: n, onClose: t } = e,
         l = i.useCallback(() => {
-            o.Z.openPrivateChannel({ recipientIds: n }), null == t || t(), (0, r.pTH)();
+            r.Z.openPrivateChannel({ recipientIds: n }), null == t || t(), (0, o.pTH)();
         }, [n, t]);
     return {
         action: a.yM.SEND_MESSAGE,
-        icon: r.kBi,
+        icon: o.kBi,
         onClick: l,
         text: c.intl.string(c.t.zROXER),
     };
 }
 function p(e) {
     var { userId: n, onClose: t, variant: i = "primary" } = e,
-        r = u(e, ["userId", "onClose", "variant"]);
-    let o = m({
+        o = u(e, ["userId", "onClose", "variant"]);
+    let r = m({
         userId: n,
         onClose: t,
     });
-    return (0, l.jsx)(s.O1, d({ variant: i }, o, r));
+    return (0, l.jsx)(s.O1, d({ variant: i }, r, o));
 }
 function f(e) {
     var { userId: n, onClose: t, variant: i = "primary" } = e,
-        r = u(e, ["userId", "onClose", "variant"]);
-    let o = m({
+        o = u(e, ["userId", "onClose", "variant"]);
+    let r = m({
             userId: n,
             onClose: t,
         }),
-        { text: a } = o,
-        c = u(o, ["text"]);
+        { text: a } = r,
+        c = u(r, ["text"]);
     return (0, l.jsx)(
         s.pt,
         d(
@@ -93,7 +93,7 @@ function f(e) {
                 variant: i,
             },
             c,
-            r,
+            o,
         ),
     );
 }

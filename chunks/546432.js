@@ -89,11 +89,11 @@ function M(e, t) {
         e
     );
 }
-function j(e, t) {
+function k(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = k(e, t);
+        i = j(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -101,7 +101,7 @@ function j(e, t) {
     }
     return i;
 }
-function k(e, t) {
+function j(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -243,8 +243,8 @@ function V(e) {
             className: L,
             imgContainerClassName: x,
             imgClassName: M,
-            focusable: j,
-            hiddenSpoilers: k,
+            focusable: k,
+            hiddenSpoilers: j,
             mediaLayoutType: U,
             maxWidth: G,
             maxHeight: B,
@@ -355,7 +355,7 @@ function V(e) {
                         message: t,
                         width: q,
                         height: X,
-                        autoPlay: a && !k,
+                        autoPlay: a && !j,
                         onClick: _,
                         onContextMenu: h,
                         shouldHideMediaOptions: eo,
@@ -364,8 +364,8 @@ function V(e) {
                         containerClassName: L,
                         className: x,
                         imageClassName: M,
-                        shouldLink: j,
-                        hiddenSpoilers: k,
+                        shouldLink: k,
+                        hiddenSpoilers: j,
                         responsive: !0,
                         mediaLayoutType: U,
                         maxWidth: G,
@@ -389,7 +389,7 @@ function V(e) {
                 naturalWidth: q,
                 naturalHeight: X,
                 className: o()(L, { [P.hasFooter]: Z }),
-                playable: j,
+                playable: k,
                 responsive: !0,
                 mediaLayoutType: U,
                 maxWidth: G,
@@ -418,7 +418,7 @@ function V(e) {
                 item: n,
                 message: t,
                 className: L,
-                playable: j,
+                playable: k,
                 mimeType: el,
                 renderAdjacentContent: e_,
                 onVolumeShow: () => et(!0),
@@ -477,7 +477,7 @@ let Y = function (e) {
             footer: d,
             displayGridItem: f,
         } = e,
-        _ = j(e, [
+        _ = k(e, [
             "className",
             "item",
             "message",
@@ -497,12 +497,12 @@ let Y = function (e) {
         R = B(y),
         w = (0, A.R_)(y),
         D = u && null != O && (0, m.yf)(h, b),
-        [x, k] = i.useState(!1),
+        [x, j] = i.useState(!1),
         Z = () => {
-            k(!0);
+            j(!0);
         },
         F = () => {
-            k(!1);
+            j(!1);
         },
         Y = function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];

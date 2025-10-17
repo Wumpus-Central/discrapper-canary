@@ -7,7 +7,7 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
-    o = n(599273),
+    o = n(258536),
     s = n(481060),
     l = n(906732),
     c = n(975298),
@@ -109,8 +109,8 @@ let T = {
             L = A <= C || b,
             x = L && A <= i.premiumTier,
             M = L && A < i.premiumTier,
-            j = L && A === i.premiumTier,
-            k = i.premiumTier < A && N >= w,
+            k = L && A === i.premiumTier,
+            j = i.premiumTier < A && N >= w,
             { scaleFactor: U } = (0, s.q_F)({
                 from: { scaleFactor: 0 },
                 to: { scaleFactor: C >= A || (b && C + 1 === A) || (b && -1 === C && A === p.Eu4.NONE) ? 1 : 0 },
@@ -126,7 +126,7 @@ let T = {
                         style: { transform: U.to((e) => "translate(-50%, -50%) scale(".concat(e, ")")) },
                     }),
                     A !== p.Eu4.NONE
-                        ? k
+                        ? j
                             ? (0, r.jsx)(s.zkc, {
                                   className: a()(E.boostedTierIcon, E.disabledIndicator),
                                   size: "xxs",
@@ -142,7 +142,7 @@ let T = {
             });
         function B() {
             L &&
-                (k ||
+                (j ||
                     (0, f.u)({
                         analyticsLocations: R,
                         analyticsLocation: {
@@ -162,7 +162,7 @@ let T = {
             tooltipClassName: E.tooltip,
             text: x
                 ? m.intl.formatToPlainString(m.t["1o48kp"], { tierName: (0, d.nW)(A, { useLevels: !1 }) })
-                : k
+                : j
                   ? m.intl.formatToPlainString(g.default["9CtPjo"], { perk: (0, d.nW)(A, { useLevels: !1 }) })
                   : m.intl.formatToPlainString(m.t.r6NN6e, {
                         numBoostsRequired: D,
@@ -179,7 +179,7 @@ let T = {
                                     [E.progressBarMarkerUnlocked]: x,
                                     [E.progressBarMarkerLocked]: Z,
                                     [E.progressBarMarkerLower]: M,
-                                    [E.progressBarMarkerCurrent]: j,
+                                    [E.progressBarMarkerCurrent]: k,
                                 }),
                                 style: { left: "".concat(100 * T[A], "%") },
                             },

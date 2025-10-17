@@ -45,7 +45,7 @@ function y(e) {
     }
     return e;
 }
-let N = [
+let E = [
         {
             iconSrc: n(348986),
             name: "Pokemon GO Paris",
@@ -83,7 +83,7 @@ let N = [
             rightAlign: !0,
         },
     ],
-    E = (e) => {
+    N = (e) => {
         let { icon: t, color: n, size: i = 24, header: l, body: a } = e;
         return (0, r.jsxs)("div", {
             className: x.featureCard,
@@ -158,7 +158,7 @@ let N = [
                         className: x.banner,
                         ref: (e) => O(e),
                         children: [
-                            N.map((e) => {
+                            E.map((e) => {
                                 var t, i;
                                 return (0, r.jsx)(
                                     I,
@@ -289,7 +289,7 @@ let N = [
                                 header: b.intl.string(b.t.W2kLJC),
                                 body: b.intl.string(b.t.hyNkHx),
                             },
-                        ].map((e, t) => (0, r.jsx)(E, y({}, e), t)),
+                        ].map((e, t) => (0, r.jsx)(N, y({}, e), t)),
                     }),
                 ],
             })

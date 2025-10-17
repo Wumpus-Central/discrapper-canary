@@ -183,13 +183,13 @@ function M(e) {
         (null == e ? void 0 : e.application) != null && (b(o.ZP.createFromServer(e.application)), (n = !0));
     return n;
 }
-function j(e) {
+function k(e) {
     let { guildId: t, applications: n } = e,
         r = [];
     for (let e of n) r.push(e.id), b(o.ZP.createFromServer(e));
     _.set(t, r);
 }
-function k(e) {
+function j(e) {
     let { payments: t } = e,
         n = new Set();
     for (let e of t) {
@@ -323,8 +323,8 @@ let z = new K(a.Z, {
     APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: M,
     ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: M,
     ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: M,
-    GUILD_APPLICATIONS_FETCH_SUCCESS: j,
-    BILLING_PAYMENTS_FETCH_SUCCESS: k,
+    GUILD_APPLICATIONS_FETCH_SUCCESS: k,
+    BILLING_PAYMENTS_FETCH_SUCCESS: j,
     PAYMENT_UPDATE: U,
     INVITE_RESOLVE_SUCCESS: B,
     GIFT_CODE_RESOLVE_SUCCESS: G,

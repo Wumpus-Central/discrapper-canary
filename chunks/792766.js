@@ -2,8 +2,8 @@ n.d(t, { y: () => u }), n(953529);
 var r = n(951288);
 n(647438);
 var i = n(481060),
-    l = n(686546),
-    s = n(565138),
+    s = n(686546),
+    l = n(565138),
     a = n(411198),
     o = n(388032),
     c = n(407749);
@@ -23,13 +23,13 @@ let u = (e) => {
             (0, r.jsxs)("div", {
                 className: c.guild,
                 children: [
-                    (0, r.jsx)(l.ZP, {
-                        mask: l.ZP.Masks.SQUIRCLE,
+                    (0, r.jsx)(s.ZP, {
+                        mask: s.ZP.Masks.SQUIRCLE,
                         width: 40,
                         height: 40,
-                        children: (0, r.jsx)(s.Z, {
+                        children: (0, r.jsx)(l.Z, {
                             guild: u,
-                            size: s.Z.Sizes.MEDIUM,
+                            size: l.Z.Sizes.MEDIUM,
                             active: !0,
                         }),
                     }),

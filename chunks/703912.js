@@ -15,8 +15,8 @@ var r = n(664751),
     m = n(307643),
     b = n(973616),
     _ = n(594174),
-    O = n(70956),
-    E = n(630388),
+    E = n(70956),
+    O = n(630388),
     v = n(700785),
     y = n(996106),
     I = n(186901),
@@ -46,7 +46,7 @@ function S(e) {
     }
     return e;
 }
-function T(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,9 +64,9 @@ function T(e, t) {
         e
     );
 }
-let N = "CachedTokens",
-    j = { "1273616940451102832": new s.Z(2, +O.Z.Millis.MINUTE) };
-async function P(e, t, n) {
+let T = "CachedTokens",
+    P = { "1273616940451102832": new s.Z(2, +E.Z.Millis.MINUTE) };
+async function j(e, t, n) {
     let r,
         l,
         o,
@@ -75,12 +75,12 @@ async function P(e, t, n) {
         {
             client_id: u,
             response_type: d = "code",
-            redirect_uri: O,
+            redirect_uri: E,
             code_challenge: I,
             code_challenge_method: S,
-            state: T,
-            nonce: N,
-            scope: P,
+            state: N,
+            nonce: T,
+            scope: j,
             permissions: x,
             guild_id: A,
             channel_id: Z,
@@ -88,19 +88,19 @@ async function P(e, t, n) {
             disable_guild_select: L,
             integration_type: R,
             pid: D,
-            signal: k,
-            isSocketRpcPrivateScope: M,
+            signal: M,
+            isSocketRpcPrivateScope: k,
         } = e;
-    if (null == k ? void 0 : k.aborted) throw new y.Z({ errorCode: C.lTL.UNKNOWN_ERROR }, "Request aborted");
+    if (null == M ? void 0 : M.aborted) throw new y.Z({ errorCode: C.lTL.UNKNOWN_ERROR }, "Request aborted");
     if (null == u) throw new y.Z({ errorCode: C.lTL.OAUTH2_ERROR }, "No Client ID provided");
-    if (!M && null != O)
+    if (!k && null != E)
         throw new y.Z(
             { errorCode: C.lTL.OAUTH2_ERROR },
             "Redirect URI cannot be used in the RPC OAuth2 Authorization flow",
         );
     let U = [];
     if (
-        ("string" == typeof P ? (U = P.split(" ").filter((e) => e.length > 0)) : Array.isArray(P) && (U = P),
+        ("string" == typeof j ? (U = j.split(" ").filter((e) => e.length > 0)) : Array.isArray(j) && (U = j),
         null == _.default.getCurrentUser())
     )
         throw new y.Z({ errorCode: C.lTL.OAUTH2_ERROR }, "Client is not logged in");
@@ -110,12 +110,12 @@ async function P(e, t, n) {
                 var t;
                 return (
                     null != e &&
-                    (0, E.yE)(e.flags, C.udG.EMBEDDED) &&
+                    (0, O.yE)(e.flags, C.udG.EMBEDDED) &&
                     (null == (t = e.integrationTypesConfig) ? void 0 : t[i.Y.USER_INSTALL]) != null
                 );
             },
             t = p.Z.getApplication(u);
-        l = e(t) || e((t = b.ZP.createFromServer(await (0, m.UM)(u, k)))) ? i.Y.USER_INSTALL : i.Y.GUILD_INSTALL;
+        l = e(t) || e((t = b.ZP.createFromServer(await (0, m.UM)(u, M)))) ? i.Y.USER_INSTALL : i.Y.GUILD_INSTALL;
     }
     try {
         [o, { disclosures: s, allAcked: c }] = await Promise.all([
@@ -123,12 +123,12 @@ async function P(e, t, n) {
                 clientId: u,
                 scopes: U,
                 responseType: d,
-                redirectUri: O,
+                redirectUri: E,
                 codeChallenge: I,
                 codeChallengeMethod: S,
-                state: T,
+                state: N,
                 integrationType: l,
-                signal: k,
+                signal: M,
             }),
             (0, f.de)(u),
         ]);
@@ -147,11 +147,11 @@ async function P(e, t, n) {
                     clientId: u,
                     scopes: U,
                     responseType: d,
-                    redirectUri: O,
+                    redirectUri: E,
                     codeChallenge: I,
                     codeChallengeMethod: S,
-                    state: T,
-                    nonce: N,
+                    state: N,
+                    nonce: T,
                     integrationType: l,
                 })
             ).location;
@@ -171,7 +171,7 @@ async function P(e, t, n) {
         (null != o.integration_type &&
             Object.values(i.Y).includes(o.integration_type) &&
             (r = new Map()).set(o.integration_type, o),
-        null != j[o.application.id] && (await j[o.application.id].process(), null == k ? void 0 : k.aborted))
+        null != P[o.application.id] && (await P[o.application.id].process(), null == M ? void 0 : M.aborted))
     )
         throw new y.Z({ errorCode: C.lTL.UNKNOWN_ERROR }, "Request aborted");
     return t({
@@ -180,10 +180,10 @@ async function P(e, t, n) {
         scopes: U,
         parsedPermissions: G,
         responseType: d,
-        redirectUri: O,
+        redirectUri: E,
         codeChallenge: I,
         codeChallengeMethod: S,
-        state: T,
+        state: N,
         guildId: A,
         channelId: Z,
         prompt: w,
@@ -191,7 +191,7 @@ async function P(e, t, n) {
         disclosures: s,
         integrationType: l,
         pid: D,
-        signal: k,
+        signal: M,
     });
 }
 function x(e, t) {
@@ -227,7 +227,7 @@ function x(e, t) {
                             socketId: e.id,
                             application: e.application,
                         }),
-                        T(S({}, n.body), { access_token: t })
+                        N(S({}, n.body), { access_token: t })
                     );
                 },
                 () => {
@@ -253,7 +253,7 @@ function A(e, t) {
                     if (null == n) throw new y.Z({ errorCode: C.lTL.INVALID_COMMAND }, "No application.");
                     let s = l.x.IDENTIFY,
                         c = () =>
-                            P(
+                            j(
                                 {
                                     client_id: n,
                                     scope: s,
@@ -280,30 +280,30 @@ function A(e, t) {
                                 return (
                                     !(function (e, t, n, r) {
                                         var i;
-                                        let l = null != (i = u.K.get(N)) ? i : {};
+                                        let l = null != (i = u.K.get(T)) ? i : {};
                                         (l[e] = {
                                             accessToken: t,
                                             scope: n,
                                             expires: Date.now() + r,
                                         }),
-                                            u.K.set(N, l);
+                                            u.K.set(T, l);
                                     })(n, l.access_token, l.scope, l.expires_in),
                                     x(i, l.access_token)
                                 );
                             });
                     return null !=
                         (o = (function (e, t) {
-                            let n = u.K.get(N);
+                            let n = u.K.get(T);
                             if (null != n && null != n[e]) {
                                 let r = n[e];
                                 if (!(r.scope !== t || r.expires <= Date.now())) return r.accessToken;
-                                delete n[e], u.K.set(N, n);
+                                delete n[e], u.K.set(T, n);
                             }
                         })(n, s))
                         ? x(i, o).catch(() => {
                               var e;
-                              let t = null != (e = u.K.get(N)) ? e : {};
-                              return delete t[n], u.K.set(N, t), c();
+                              let t = null != (e = u.K.get(T)) ? e : {};
+                              return delete t[n], u.K.set(T, t), c();
                           })
                         : c();
                 }
@@ -336,8 +336,8 @@ function A(e, t) {
                 let s = l.scopes || l.scope;
                 return (
                     delete l.scopes,
-                    P(
-                        T(S({}, l), {
+                    j(
+                        N(S({}, l), {
                             scope: s,
                             signal: i,
                             isSocketRpcPrivateScope: o,

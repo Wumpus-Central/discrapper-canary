@@ -169,7 +169,7 @@ function L(e) {
         R = (0, p.Z)(),
         [L, x] = i.useState(!1),
         M = i.useRef(new u.sW(N, () => x(!1))),
-        j = (0, c.Wu)([m.Z, g.default], () => {
+        k = (0, c.Wu)([m.Z, g.default], () => {
             if (s.type === y.fO.STREAM) {
                 let e = m.Z.getViewerIds(s.id);
                 return e.length > 0 ? e.map((e) => g.default.getUser(e)).filter(E.lm) : D;
@@ -183,7 +183,7 @@ function L(e) {
     i.useEffect(() => {
         R && (M.current.cancel(), x(!1));
     }, [R]);
-    let k = i.useCallback(() => {
+    let j = i.useCallback(() => {
             M.current.cancel(), x(!0);
         }, []),
         U = i.useCallback(() => {
@@ -191,7 +191,7 @@ function L(e) {
         }, []),
         G = i.useCallback(
             (e, t) => {
-                k(),
+                j(),
                     (0, f.jW)(
                         e,
                         async () => {
@@ -203,19 +203,19 @@ function L(e) {
                         { onClose: U },
                     );
             },
-            [U, k],
+            [U, j],
         );
-    if (0 === j.length) return null;
+    if (0 === k.length) return null;
     if (b)
         return (0, r.jsx)(w, {
             maxVisibleUsers: T,
-            users: j,
+            users: k,
             guildId: a,
             channelId: t,
             className: h,
             participantType: s.type,
         });
-    let B = l()(j)
+    let B = l()(k)
         .take(T)
         .map((e) =>
             (0, r.jsx)(
@@ -231,19 +231,19 @@ function L(e) {
         )
         .value();
     return (
-        j.length > T &&
+        k.length > T &&
             (B[B.length - 1] = (0, r.jsxs)(
                 "div",
                 {
                     className: I.overflow,
-                    children: ["+", j.length - T + 1],
+                    children: ["+", k.length - T + 1],
                 },
                 "overflow",
             )),
         (0, r.jsx)(_.Z, {
             section: O.jXE.STREAM_VIEWER_POPOUT,
             children: (0, r.jsx)("div", {
-                onMouseEnter: k,
+                onMouseEnter: j,
                 onMouseLeave: U,
                 children: (0, r.jsx)(d.yRy, {
                     targetElementRef: A,
@@ -253,7 +253,7 @@ function L(e) {
                             handleUserContextMenu: G,
                             guildId: a,
                             channelId: t,
-                            users: j,
+                            users: k,
                             disableInteraction: v,
                         }),
                     shouldShow: L && !R,

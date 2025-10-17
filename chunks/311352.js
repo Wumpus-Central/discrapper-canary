@@ -9,14 +9,14 @@ var r = n(951288),
     u = n(522651),
     d = n(765585),
     p = n(870569),
-    h = n(819640),
-    f = n(556296),
+    f = n(819640),
+    h = n(556296),
     g = n(13140),
     m = n(924557),
     b = n(435064),
     _ = n(39604),
-    y = n(981631),
-    O = n(388032),
+    O = n(981631),
+    y = n(388032),
     v = n(611372);
 function j(e) {
     (0, s.jW)(e, async () => {
@@ -69,7 +69,7 @@ let x = (e) => {
                     position: "top",
                     header: (0, r.jsx)("div", {
                         className: v.header,
-                        children: O.intl.format(O.t["o+srEx"], {
+                        children: y.intl.format(y.t["o+srEx"], {
                             keybind: t,
                             keybindHook: () =>
                                 (0, r.jsx)("span", {
@@ -86,7 +86,7 @@ let x = (e) => {
                         variant: "text-sm/normal",
                         color: "always-white",
                         className: v.bodyText,
-                        children: O.intl.format(O.t.DWeRm5, {
+                        children: y.intl.format(y.t.DWeRm5, {
                             keybindHook: () =>
                                 (0, r.jsx)("div", {
                                     className: v.keyCombo,
@@ -106,13 +106,13 @@ let x = (e) => {
     C = () => {
         let e = i.useRef(null),
             { parentAnalyticsLocation: t } = (0, c.ZP)(),
-            n = (0, l.e7)([h.Z], () => h.Z.hasLayers()),
+            n = (0, l.e7)([f.Z], () => f.Z.hasLayers()),
             o = (0, m.Go)(),
             { clipsEnabled: s, isAtMaxSavingClipsOperations: d } = (0, l.cj)([b.Z], () => ({
                 clipsEnabled: b.Z.getSettings().clipsEnabled,
                 isAtMaxSavingClipsOperations: b.Z.getIsAtMaxSaveClipOperations(),
             })),
-            v = (0, l.e7)([f.ZP], () => f.ZP.getKeybindForAction(y.kg4.SAVE_CLIP));
+            v = (0, l.e7)([h.ZP], () => h.ZP.getKeybindForAction(O.kg4.SAVE_CLIP));
         if (!(o && s) || null == v || n) return null;
         let C = g.BB(v.shortcut, !0);
         return (0, r.jsx)(x, {
@@ -123,8 +123,8 @@ let x = (e) => {
                 disabled: d,
                 tooltipText:
                     null != v
-                        ? O.intl.formatToPlainString(O.t.HIMcv7, { hotkey: g.BB(null == v ? void 0 : v.shortcut, !0) })
-                        : O.intl.string(O.t.s52pjo),
+                        ? y.intl.formatToPlainString(y.t.HIMcv7, { hotkey: g.BB(null == v ? void 0 : v.shortcut, !0) })
+                        : y.intl.string(y.t.s52pjo),
                 onClick: () => {
                     (0, _.C1)(), (0, u.v)(t, u.d.CLIP);
                 },

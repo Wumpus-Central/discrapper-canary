@@ -28,18 +28,18 @@ function g() {
                 [e, n],
             ),
         ),
-        O = i.useCallback(() => {
+        E = i.useCallback(() => {
             g(h);
         }, []),
-        E = i.useRef(null),
+        O = i.useRef(null),
         v = i.useRef(null),
         y = (0, l.TH)(),
         I = (0, l.k6)();
     return (
         i.useEffect(() => {
-            if ("" !== y.hash && null != E.current && null != v.current) {
+            if ("" !== y.hash && null != O.current && null != v.current) {
                 var t, r;
-                (e !== E.current || n !== v.current) &&
+                (e !== O.current || n !== v.current) &&
                     I.replace(
                         ((t = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
@@ -84,7 +84,7 @@ function g() {
             }
         }, [e, n, y, I]),
         i.useEffect(() => {
-            E.current = e;
+            O.current = e;
         }, [e]),
         i.useEffect(() => {
             v.current = n;
@@ -125,7 +125,7 @@ function g() {
                     isFetching: b,
                     hasFetched: _,
                     hasFiltersApplied: n.length > 0,
-                    onClearFilters: O,
+                    onClearFilters: E,
                 }),
             ],
         })

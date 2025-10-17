@@ -2,8 +2,8 @@ n.d(t, { Z: () => c });
 var r = n(951288);
 n(647438);
 var i = n(793030),
-    l = n(159691),
-    s = n(481060),
+    s = n(159691),
+    l = n(481060),
     a = n(388905),
     o = n(294707);
 function c(e) {
@@ -30,7 +30,7 @@ function c(e) {
                                         className: o.image,
                                         children: u,
                                     }),
-                                h && (0, r.jsx)(s.$jN, { type: s.$jN.Type.SPINNING_CIRCLE }),
+                                h && (0, r.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE }),
                                 (0, r.jsx)(i.X6q, {
                                     variant: "heading-xl/semibold",
                                     color: "header-primary",
@@ -49,7 +49,7 @@ function c(e) {
                     ],
                 }),
                 !h &&
-                    (0, r.jsx)(l.zxk, {
+                    (0, r.jsx)(s.zxk, {
                         onClick: d,
                         text: c,
                         variant: "overlay-primary",

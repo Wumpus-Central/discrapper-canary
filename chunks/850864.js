@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685);
+n.d(t, { Z: () => N }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(399606),
@@ -21,10 +21,10 @@ var r = n(951288),
     C = n(470264),
     O = n(710043),
     y = n(847950);
-function N(e) {
+function E(e) {
     let { guild: t, saveOnClose: n } = e,
         [c, d] = i.useState("new"),
-        N = i.useMemo(
+        E = i.useMemo(
             () => [
                 {
                     value: "new",
@@ -37,7 +37,7 @@ function N(e) {
             ],
             [],
         ),
-        E = (0, l.e7)([o.Z], () => o.Z.theme);
+        N = (0, l.e7)([o.Z], () => o.Z.theme);
     i.useEffect(
         () => () => {
             let e = g.Z.getSettings();
@@ -45,7 +45,7 @@ function N(e) {
         },
         [n, t.id],
     );
-    let I = i.useMemo(() => ((0, a.ap)(E) ? ("existing" === c ? C : y) : "existing" === c ? _ : O), [c, E]);
+    let I = i.useMemo(() => ((0, a.ap)(N) ? ("existing" === c ? C : y) : "existing" === c ? _ : O), [c, N]);
     return (0, r.jsxs)("div", {
         className: v.page,
         children: [
@@ -158,7 +158,7 @@ function N(e) {
                         alt: j.intl.string(j.t.ST4UOz),
                     }),
                     (0, r.jsx)(s.sY7, {
-                        options: N,
+                        options: E,
                         value: c,
                         onChange: (e) => d(e.value),
                         look: "pill",
@@ -168,7 +168,7 @@ function N(e) {
         ],
     });
 }
-function E(e) {
+function N(e) {
     let { saveOnClose: t } = e,
         n = (0, l.e7)([d.Z, c.Z], () => {
             let e = d.Z.getGuildId();
@@ -176,7 +176,7 @@ function E(e) {
         });
     return null == n
         ? null
-        : (0, r.jsx)(N, {
+        : (0, r.jsx)(E, {
               guild: n,
               saveOnClose: t,
           });

@@ -22,19 +22,19 @@ var r = n(951288),
     I = n(266454),
     C = n(492162),
     S = n(43740),
-    T = n(596557),
-    N = n(817520),
+    N = n(596557),
+    T = n(817520),
     P = n(999309),
     j = n(408987),
-    A = n(130734),
-    x = n(499137),
+    x = n(130734),
+    A = n(499137),
     Z = n(258871),
     w = n(340541),
     L = n(972264),
     R = n(691698),
     D = n(639777),
-    k = n(304445),
-    M = n(155409),
+    M = n(304445),
+    k = n(155409),
     U = n(10401),
     G = n(592125),
     B = n(796974),
@@ -154,8 +154,8 @@ class em extends i.PureComponent {
         var e;
         this.setAnimatedValue(0),
             h.Z.subscribe("LAYER_PUSH", this.closeAllHeaderNotices),
-            (this.historyUnlisten = k.Z.addRouteChangeListener(this.handleHistoryChange));
-        let { location: t } = k.Z.getHistory();
+            (this.historyUnlisten = M.Z.addRouteChangeListener(this.handleHistoryChange));
+        let { location: t } = M.Z.getHistory();
         (null == (e = t.state) ? void 0 : e.shouldShowSubscribeTooltip) &&
             this.showTimeout.start(1000, () => this.setState({ shouldShowSubscribeTooltip: !0 }));
     }
@@ -175,7 +175,7 @@ class em extends i.PureComponent {
         return n
             ? (0, r.jsx)("div", {
                   onClick: (t) => (e ? null : t.stopPropagation()),
-                  children: (0, r.jsx)(M.Z, {
+                  children: (0, r.jsx)(k.Z, {
                       tutorialId: eh,
                       position: "bottom",
                       inlineSpecs: eg,
@@ -402,7 +402,7 @@ class em extends i.PureComponent {
                             n.e("51453"),
                             n.e("7654"),
                             n.e("845"),
-                            n.e("87641"),
+                            n.e("86736"),
                             n.e("6850"),
                             n.e("58227"),
                             n.e("44686"),
@@ -533,13 +533,13 @@ function eb(e) {
         g = (0, c.e7)([W.Z], () => W.Z.can(ei.Plq.MANAGE_GUILD, o)),
         m = (0, c.e7)([H.Z], () => H.Z.isUnavailable(n)),
         j = (0, c.e7)([K.default], () => K.default.getCurrentUser()),
-        { enableStudyGroup: Z } = (0, x.s)(o),
+        { enableStudyGroup: Z } = (0, A.s)(o),
         w = (0, y.ZP)((e) => e.currentlyShown.has(u.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
-        [k, M] = i.useState(!w),
+        [M, k] = i.useState(!w),
         V = (0, _.Z)(n),
         { analyticsLocations: J } = (0, O.ZP)(E.Z.GUILD_HEADER);
     i.useEffect(() => {
-        n !== V && M(!w);
+        n !== V && k(!w);
     }, [n, V, w]);
     let [$, ee] = (0, y.ZP)(
             (e) => [
@@ -561,18 +561,18 @@ function eb(e) {
         eu = (null == o ? void 0 : o.features.has(ei.GuildFeatures.HUB)) === !0,
         ed = g && (null == o ? void 0 : o.features.has(ei.GuildFeatures.DISCOVERABLE)) === !0,
         ep = (0, c.e7)(
-            [A.Z, z.Z],
-            () => null != o && null != j && g && !z.Z.hasLayers() && A.Z.shouldShowGuildTemplateDirtyTooltip(n),
+            [x.Z, z.Z],
+            () => null != o && null != j && g && !z.Z.hasLayers() && x.Z.shouldShowGuildTemplateDirtyTooltip(n),
         ),
         ef = (0, c.e7)([G.Z], () => G.Z.getChannel(a)),
         { isPopoutOpen: eg } = (0, S.y)(),
         eb = null != (t = null == o ? void 0 : o.features.has(ei.GuildFeatures.COMMUNITY)) && t,
         e_ = Q.ZP.isNewUser(j),
-        eE = k && !e_;
-    (0, T.Z)(o);
+        eE = M && !e_;
+    (0, N.Z)(o);
     let eO = (0, I.Nj)(u.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
         ev = (0, L.Z)(n),
-        ey = (0, N.Z)(n),
+        ey = (0, T.Z)(n),
         eI = (0, c.e7)([q.Z], () => q.Z.getChannelId()),
         eC = (0, c.e7)([Y.Z], () => Y.Z.desyncedVoiceStatesCount),
         eS = (0, D.Z)(n);
@@ -603,7 +603,7 @@ function eb(e) {
         isHeaderPopoutOpen: eg,
         enableStudyGroup: Z,
         isGuildHeaderDismissibleTooltipShown: ee,
-        canShowCoachMarkAtBottom: k,
+        canShowCoachMarkAtBottom: M,
         headerAnalyticsLocations: J,
         isTutorialHighlightDismissed: eO,
         shouldRenderBurstCoachmark: eE,

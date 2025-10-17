@@ -1,19 +1,19 @@
-n.d(t, { Z: () => _ }), n(388685), n(413496), n(433524), n(35282);
+n.d(t, { Z: () => m }), n(388685), n(413496), n(433524), n(35282);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
     a = n(454585),
-    o = n(273744),
-    s = n(388032),
+    s = n(273744),
+    o = n(388032),
     c = n(124252),
     d = n(197571);
 let u = (e) => {
         var t, n;
         let {
-                data: { title: u, subtitle: _, placeholder: m, rows: p, character_limit: g, pattern: f },
-                onChange: h,
-                initialText: b,
-                isRequired: x,
+                data: { title: u, subtitle: m, placeholder: p, rows: g, character_limit: _, pattern: h },
+                onChange: b,
+                initialText: x,
+                isRequired: f,
             } = e,
             v = i.useRef(
                 a.Z.reactParserFor(
@@ -42,7 +42,7 @@ let u = (e) => {
                         }
                         return e;
                     })({}, a.Z.defaultRules)),
-                    (n = n = { link: o.s }),
+                    (n = n = { link: s.s }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                         : (function (e, t) {
@@ -59,29 +59,29 @@ let u = (e) => {
                 ),
             ),
             [j, y] = i.useState(""),
-            [O, C] = i.useState(null);
+            [O, Z] = i.useState(null);
         i.useEffect(() => {
             var e;
-            y(null != (e = null == b ? void 0 : b.value) ? e : "");
-        }, [b]);
+            y(null != (e = null == x ? void 0 : x.value) ? e : "");
+        }, [x]);
         let I = i.useCallback(
             (e) => {
-                let t = null != f ? new RegExp(f) : null;
+                let t = null != h ? new RegExp(h) : null;
                 null == t || t.test(e)
                     ? null != e &&
-                      (C(null),
+                      (Z(null),
                       y(e),
-                      h({
+                      b({
                           value: e,
                           isValid: !0,
                       }))
-                    : (C(s.intl.string(s.t["24xrGR"])),
-                      h({
+                    : (Z(o.intl.string(o.t["24xrGR"])),
+                      b({
                           value: e,
                           isValid: !1,
                       }));
             },
-            [h, f],
+            [b, h],
         );
         return (0, r.jsxs)("div", {
             className: d.marginBottom8,
@@ -93,7 +93,7 @@ let u = (e) => {
                             variant: "text-sm/bold",
                             children: [
                                 u,
-                                x &&
+                                f &&
                                     (0, r.jsx)("span", {
                                         className: c.required,
                                         children: "*",
@@ -102,25 +102,25 @@ let u = (e) => {
                         }),
                     }),
                 (0, r.jsx)(l.Kx8, {
-                    maxLength: g,
+                    maxLength: _,
                     onChange: I,
                     value: j,
                     error: O,
-                    rows: p,
-                    placeholder: m,
+                    rows: g,
+                    placeholder: p,
                     autoFocus: !0,
                 }),
-                null != _ &&
+                null != m &&
                     (0, r.jsx)("div", {
                         children: (0, r.jsx)(l.Text, {
                             variant: "text-sm/normal",
-                            children: v.current(_),
+                            children: v.current(m),
                         }),
                     }),
             ],
         });
     },
-    _ = (e) => {
+    m = (e) => {
         let { elements: t, onChange: n, state: i } = e,
             l = t.map((e) => {
                 var t;

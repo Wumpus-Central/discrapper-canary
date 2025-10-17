@@ -1,10 +1,10 @@
-n.d(t, { Z: () => Z }), n(388685), n(49124);
+n.d(t, { Z: () => D }), n(388685), n(49124);
 var a = n(951288),
     r = n(647438),
     i = n(120356),
     l = n.n(i),
-    s = n(913527),
-    o = n.n(s),
+    o = n(913527),
+    s = n.n(o),
     c = n(442837),
     d = n(755721),
     u = n(481060),
@@ -13,8 +13,8 @@ var a = n(951288),
     h = n(886118),
     x = n(301801),
     f = n(594174),
-    b = n(572004),
-    g = n(55935),
+    g = n(572004),
+    b = n(55935),
     v = n(120816),
     j = n(31336),
     _ = n(257785),
@@ -51,11 +51,11 @@ function P(e) {
 }
 function I(e) {
     let { name: t, children: n, copyValue: i } = e,
-        [l, s] = r.useState(!1);
+        [l, o] = r.useState(!1);
     return (
         r.useEffect(() => {
             if (l) {
-                let e = setTimeout(() => s(!1), 1000);
+                let e = setTimeout(() => o(!1), 1000);
                 return () => clearTimeout(e);
             }
         }, [l]),
@@ -70,7 +70,7 @@ function I(e) {
                 (0, a.jsx)(u.P3F, {
                     tag: "span",
                     className: T.copyPropertyButton,
-                    onClick: () => (0, b.JG)(JSON.stringify(i), () => s(!0)),
+                    onClick: () => (0, g.JG)(JSON.stringify(i), () => o(!0)),
                     children: l
                         ? (0, a.jsx)(u.kmB, {
                               color: "currentColor",
@@ -86,7 +86,7 @@ function I(e) {
     );
 }
 let w = new Set(["client_performance_cpu", "client_performance_memory"]),
-    R = [
+    k = [
         {
             id: "details",
             name: "Details",
@@ -94,11 +94,11 @@ let w = new Set(["client_performance_cpu", "client_performance_memory"]),
             render: (e) => {
                 let {
                         loggedEvent: { event: t, properties: n, timestamp: r, fingerprint: i },
-                        onClose: s,
+                        onClose: o,
                         filteredEvents: c,
                     } = e,
                     d = f.default.getUser(i),
-                    h = o()(r);
+                    h = s()(r);
                 return (0, a.jsxs)("div", {
                     "data-mtctest-ignore": "true",
                     children: [
@@ -116,7 +116,7 @@ let w = new Set(["client_performance_cpu", "client_performance_memory"]),
                                         (0, a.jsx)(u.P3F, {
                                             tag: "span",
                                             className: T.copyEventButton,
-                                            onClick: () => (0, b.JG)(t),
+                                            onClick: () => (0, g.JG)(t),
                                             children: (0, a.jsx)(u.TIy, {
                                                 color: "currentColor",
                                                 size: "sm",
@@ -128,7 +128,7 @@ let w = new Set(["client_performance_cpu", "client_performance_memory"]),
                                     icon: u.TIy,
                                     tooltip: "Copy all properties",
                                     onClick: () => {
-                                        (0, b.JG)(
+                                        (0, g.JG)(
                                             JSON.stringify(
                                                 (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {
@@ -173,7 +173,7 @@ let w = new Set(["client_performance_cpu", "client_performance_memory"]),
                                 (0, a.jsx)(p.ZP.Icon, {
                                     icon: u.k$p,
                                     tooltip: "Close",
-                                    onClick: s,
+                                    onClick: o,
                                 }),
                             ],
                         }),
@@ -185,8 +185,8 @@ let w = new Set(["client_performance_cpu", "client_performance_memory"]),
                                     copyValue: r.toISOString(),
                                     children: (0, a.jsxs)("time", {
                                         dateTime: r.toISOString(),
-                                        title: (0, g.vc)(h, "LLLL"),
-                                        children: ["(", o().locale(), ") ", (0, g.Y4)(h)],
+                                        title: (0, b.vc)(h, "LLLL"),
+                                        children: ["(", s().locale(), ") ", (0, b.Y4)(h)],
                                     }),
                                 }),
                                 null != d &&
@@ -268,11 +268,11 @@ let w = new Set(["client_performance_cpu", "client_performance_memory"]),
             },
         },
     ],
-    k = {
+    R = {
         events: {
             label: "Events",
             filter: (e) =>
-                Object.entries(k)
+                Object.entries(R)
                     .filter((e) => {
                         let [t] = e;
                         return "events" !== t;
@@ -304,23 +304,23 @@ let w = new Set(["client_performance_cpu", "client_performance_memory"]),
         },
         throttleMs: 100,
     };
-function Z() {
+function D() {
     let e = r.useRef(null),
         [t, n] = r.useState(""),
         i = (0, c.e7)([v.Z], () => v.Z.loggedEventsVersion),
-        [s, o] = r.useState(() => Object.keys(k)),
+        [o, s] = r.useState(() => Object.keys(R)),
         [m, p] = r.useState(v.Z.loggedEvents),
         h = r.useCallback((e) => {
             p(e);
         }, []);
     (0, x.BO)(t, v.Z.loggedEvents, h, A, [i]);
     let f = m.filter((e) => {
-            for (let t of s) if (k[t].filter(e)) return !0;
+            for (let t of o) if (R[t].filter(e)) return !0;
             return !1;
         }),
-        [b, g] = r.useState(void 0),
-        _ = f.find((e) => e.key === b),
-        { TabBar: P, renderSelectedTab: I } = (0, S.ZP)({ tabs: R }, []);
+        [g, b] = r.useState(void 0),
+        _ = f.find((e) => e.key === g),
+        { TabBar: P, renderSelectedTab: I } = (0, S.ZP)({ tabs: k }, []);
     return (0, a.jsxs)("div", {
         ref: e,
         className: l()(O.panel, T.panel),
@@ -345,14 +345,14 @@ function Z() {
                     (0, a.jsx)("div", { className: T.toolbarDivider }),
                     (0, a.jsx)("div", {
                         className: T.filters,
-                        children: Object.entries(k).map((e) => {
+                        children: Object.entries(R).map((e) => {
                             let [t, n] = e;
                             return (0, a.jsx)(
                                 u.P3F,
                                 {
-                                    className: l()(T.filter, s.includes(t) && T.activeFilter),
+                                    className: l()(T.filter, o.includes(t) && T.activeFilter),
                                     onClick: () => {
-                                        o((e) => (e.includes(t) ? e.filter((e) => e !== t) : [...e, t]));
+                                        s((e) => (e.includes(t) ? e.filter((e) => e !== t) : [...e, t]));
                                     },
                                     children: n.label,
                                 },
@@ -375,8 +375,8 @@ function Z() {
             (0, a.jsx)(C.Z, {
                 columns: N,
                 data: f,
-                selectedRowKey: b,
-                onClickRow: (e) => g(e.key),
+                selectedRowKey: g,
+                onClickRow: (e) => b(e.key),
             }),
             null != _ &&
                 (0, a.jsxs)(y.Z, {
@@ -387,7 +387,7 @@ function Z() {
                         (0, a.jsx)(P, {}),
                         I({
                             loggedEvent: _,
-                            onClose: () => g(void 0),
+                            onClose: () => b(void 0),
                             filteredEvents: f,
                         }),
                     ],

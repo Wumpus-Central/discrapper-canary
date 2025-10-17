@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(913527),
     i = n.n(r),
-    l = n(990547),
-    s = n(570140),
+    s = n(990547),
+    l = n(570140),
     a = n(479531),
     o = n(771308),
     c = n(353250),
@@ -13,8 +13,8 @@ var r = n(913527),
     d = n(626135),
     h = n(573261),
     g = n(959776),
-    m = n(981631),
-    p = n(723359);
+    p = n(981631),
+    m = n(723359);
 function f(e) {
     var t,
         n,
@@ -55,14 +55,14 @@ function f(e) {
                         var n,
                             r,
                             i = {},
-                            l = Object.keys(e);
-                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                            s = Object.keys(e);
+                        for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                         return i;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
-                    var l = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < l.length; r++)
-                        (n = l[r]),
+                    var s = Object.getOwnPropertySymbols(e);
+                    for (r = 0; r < s.length; r++)
+                        (n = s[r]),
                             !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                 }
                 return i;
@@ -103,20 +103,20 @@ function _(e) {
         promoEmailConsent: I = null,
         usedUsernameSuggestion: N = null,
     } = e;
-    if ((s.Z.dispatch({ type: "REGISTER" }), null != v)) {
-        (0, g.Z)(v, m.jXE.REGISTER),
-            d.default.track(m.rMx.AGE_GATE_ACTION, {
-                source: p.L0.REGISTER,
-                action: p.Al.AGE_GATE_SUBMITTED,
+    if ((l.Z.dispatch({ type: "REGISTER" }), null != v)) {
+        (0, g.Z)(v, p.jXE.REGISTER),
+            d.default.track(p.rMx.AGE_GATE_ACTION, {
+                source: m.L0.REGISTER,
+                action: m.Al.AGE_GATE_SUBMITTED,
             });
         let e = i()().diff(v, "years");
         e < 13 ||
-            d.default.track(m.rMx.USER_AGE_SUBMITTED, {
+            d.default.track(p.rMx.USER_AGE_SUBMITTED, {
                 age_bucket: e >= 13 && e <= 17 ? "13-17" : e >= 18 && e <= 22 ? "18-22" : "23+",
             });
     }
     return h.Z.post({
-        url: m.ANM.REGISTER,
+        url: p.ANM.REGISTER,
         body: {
             fingerprint: u.default.getFingerprint(),
             email: t,
@@ -132,7 +132,7 @@ function _(e) {
             promotional_email_opt_in: null == I ? void 0 : I.checked,
         },
         trackedActionData: {
-            event: l.NetworkActionNames.USER_REGISTER,
+            event: s.NetworkActionNames.USER_REGISTER,
             properties: {
                 invite_code: b,
                 used_username_suggestion: N,
@@ -144,21 +144,21 @@ function _(e) {
         rejectWithError: !1,
     }).then(
         (e) => {
-            s.Z.dispatch({
+            l.Z.dispatch({
                 type: "REGISTER_SUCCESS",
                 token: e.body.token,
             }),
-                d.default.track(m.rMx.AGE_GATE_ACTION, {
-                    source: p.L0.REGISTER,
-                    action: p.Al.AGE_GATE_SUCCESS,
+                d.default.track(p.rMx.AGE_GATE_ACTION, {
+                    source: m.L0.REGISTER,
+                    action: m.Al.AGE_GATE_SUCCESS,
                 });
         },
         (e) => {
             if (e instanceof c.CaptchaCancelError) throw e;
             let t = new a.Z(e);
             throw (
-                (null != t.getFieldErrors("date_of_birth") && o.wE(p.L0.REGISTER),
-                d.default.track(m.rMx.REGISTER_SUBMIT_ERRORED, {
+                (null != t.getFieldErrors("date_of_birth") && o.wE(m.L0.REGISTER),
+                d.default.track(p.rMx.REGISTER_SUBMIT_ERRORED, {
                     is_unique_username_registration: !0,
                     email_error_reason: t.getFirstFieldErrorMessage("email"),
                     phone_error_reason: t.getFirstFieldErrorMessage("phone_token"),

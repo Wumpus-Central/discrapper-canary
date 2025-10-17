@@ -123,7 +123,7 @@ function M(e) {
             L.clipsSettings.clipsEnabled &&
             (L.clipsSettings.decoupledClipsEnabled = !0);
 }
-function j(e) {
+function k(e) {
     let { clip: t } = e;
     for (let [e, n] of I.entries())
         if (n.id === t.id) {
@@ -131,7 +131,7 @@ function j(e) {
             return;
         }
 }
-function k(e) {
+function j(e) {
     let { settings: t } = e;
     L = y(E({}, L), { clipsSettings: E({}, L.clipsSettings, t) });
 }
@@ -436,7 +436,7 @@ g(er, "displayName", "ClipsStore"),
             }),
     ]);
 let ei = new er(a.Z, {
-        CLIPS_SETTINGS_UPDATE: k,
+        CLIPS_SETTINGS_UPDATE: j,
         CLIPS_SAVE_CLIP: Z,
         CLIPS_SAVE_CLIP_PLACEHOLDER: F,
         CLIPS_SAVE_CLIP_PLACEHOLDER_ERROR: V,
@@ -449,7 +449,7 @@ let ei = new er(a.Z, {
         CLIPS_CLEAR_NEW_CLIP_IDS: $,
         CLIPS_LOAD_DIRECTORY_SUCCESS: X,
         CLIPS_DELETE_CLIP: Q,
-        CLIPS_UPDATE_METADATA: j,
+        CLIPS_UPDATE_METADATA: k,
         RTC_CONNECTION_FLAGS: ee,
         CLIPS_SHOW_CALL_WARNING: H,
         VOICE_CHANNEL_SELECT: Y,

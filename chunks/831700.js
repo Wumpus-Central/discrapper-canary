@@ -38,8 +38,8 @@ var r = n(951288),
     G = n(306680),
     U = n(9156),
     B = n(979651),
-    V = n(934415),
-    F = n(98597),
+    F = n(934415),
+    V = n(98597),
     H = n(648501),
     z = n(473403),
     W = n(830993),
@@ -96,7 +96,7 @@ function et(e, t) {
         e
     );
 }
-class en extends F.ZP {
+class en extends V.ZP {
     componentWillUnmount() {
         this.activitiesHideTimeout.stop();
     }
@@ -107,7 +107,7 @@ class en extends F.ZP {
     }
     isFull() {
         let { channel: e } = this.props;
-        return (0, V.rY)(e, B.Z, L.Z);
+        return (0, F.rY)(e, B.Z, L.Z);
     }
     getModeClass() {
         let { position: e, sortingPosition: t, isUserOver: n } = this.props;
@@ -456,7 +456,7 @@ function ei(e) {
             },
             { autoTrackExposure: !1 },
         ),
-        V = (0, H.Z)({
+        F = (0, H.Z)({
             channel: n,
             isChannelSelected: o,
             isChannelCollapsed: s,
@@ -466,7 +466,7 @@ function ei(e) {
             enableConnectedUserLimit: !0,
             enableActivities: !0,
         }),
-        F = T && null == V;
+        V = T && null == F;
     return (0, r.jsx)(
         er,
         et(
@@ -487,13 +487,13 @@ function ei(e) {
             {
                 connected: T,
                 isFavoriteSuggestion: l && !N,
-                forceShowButtons: F,
-                channelInfo: V,
+                forceShowButtons: V,
+                channelInfo: F,
                 resolvedUnreadSetting: d,
                 enableHangStatus: A,
                 showEmptyChannelTopic: R,
                 enableOpenTIVForPing: L,
-                hasChannelInfo: null != V,
+                hasChannelInfo: null != F,
                 hasStartTime: j,
             },
         ),

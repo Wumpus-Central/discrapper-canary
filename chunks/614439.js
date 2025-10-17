@@ -37,8 +37,8 @@ var r = n(951288),
     C = n(718157),
     O = n(450474),
     y = n(328159),
-    N = n(873029),
-    E = n(981631),
+    E = n(873029),
+    N = n(981631),
     I = n(388032),
     S = n(133190);
 let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
@@ -86,12 +86,12 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
         i.useEffect(() => {
             P || null == d || ((0, m.le)(), (0, m.aC)(d.id), (0, m.i3)(d.id), w(!0));
         }, [d, P]);
-        let { canManageGuild: Z } = (0, a.cj)([b.Z], () => ({ canManageGuild: b.Z.can(E.Plq.MANAGE_GUILD, d) })),
+        let { canManageGuild: Z } = (0, a.cj)([b.Z], () => ({ canManageGuild: b.Z.can(N.Plq.MANAGE_GUILD, d) })),
             R = (0, a.e7)([_.Z], () => _.Z.isGuildMetadataLoaded()),
             D = (0, a.e7)([_.Z], () => (null != d ? _.Z.getMetadata() : null)),
             A = (0, a.e7)([_.Z], () => (null != d && (null == D ? void 0 : D.isPublished) ? _.Z.getSlug() : null)),
             [L, k] = i.useState([!0]),
-            [M, G] = i.useState(!0),
+            [G, M] = i.useState(!0),
             [U, B] = i.useState([!1]),
             [F, H] = i.useState([""]);
         i.useEffect(() => {
@@ -105,14 +105,14 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                 var t, n, r, i;
                                 let l = new URL(e).hostname.split(".");
                                 if (3 === l.length && "bandcamp" === l[1].toLowerCase())
-                                    return N.z.bandcamp.presentation;
+                                    return E.z.bandcamp.presentation;
                                 let a = null != (n = null == (t = l.shift()) ? void 0 : t.toLowerCase()) ? n : "";
                                 if (
                                     ("www" === a &&
                                         (a = null != (i = null == (r = l.shift()) ? void 0 : r.toLowerCase()) ? i : ""),
-                                    a in N.z)
+                                    a in E.z)
                                 )
-                                    return N.z[a].presentation;
+                                    return E.z[a].presentation;
                                 return null;
                             } catch (e) {
                                 return null;
@@ -123,7 +123,7 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                 }),
                     H(t),
                     k(e),
-                    G(e.every((e) => !0 === e));
+                    M(e.every((e) => !0 === e));
             }
         }, [D]);
         let W = (0, a.e7)([_.Z], () => (null != d ? _.Z.getErrors() : null));
@@ -247,7 +247,7 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                     }),
                                                     " ",
                                                     I.intl.format(I.t.T6WtKy, {
-                                                        learnMoreURL: j.Z.getArticleURL(E.BhN.SERVER_WEB_PAGES),
+                                                        learnMoreURL: j.Z.getArticleURL(N.BhN.SERVER_WEB_PAGES),
                                                     }),
                                                 ],
                                             }),
@@ -425,7 +425,7 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                         children: [
                                                             D.socialLinks.map((e, t) => {
                                                                 let n = F[t],
-                                                                    i = Object.values(N.z).find(
+                                                                    i = Object.values(E.z).find(
                                                                         (e) => e.presentation === n,
                                                                     ),
                                                                     l = null != i ? "".concat(i.baseUrl) : void 0;
@@ -443,7 +443,7 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                                     ? S.socialLinksDropdownMax
                                                                                     : S.socialLinksDropdownMin,
                                                                                 options: ((e) => {
-                                                                                    let t = Object.entries(N.z)
+                                                                                    let t = Object.entries(E.z)
                                                                                         .filter(
                                                                                             (e) =>
                                                                                                 !F.includes(
@@ -469,11 +469,11 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                                             r = [...F],
                                                                                             i = [...L];
                                                                                         (r[t] = e),
-                                                                                            (n[t] = N.z[e].baseUrl),
+                                                                                            (n[t] = E.z[e].baseUrl),
                                                                                             (i[t] = !0),
                                                                                             k(i),
                                                                                             H(r),
-                                                                                            G(i.every((e) => !0 === e)),
+                                                                                            M(i.every((e) => !0 === e)),
                                                                                             (0, m.t$)(d.id, n);
                                                                                     })(e, t),
                                                                                 isDisabled: !Z,
@@ -597,7 +597,7 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                 children: Y,
                                                 buttonLabel: I.intl.string(I.t.tVK6S0),
                                                 buttonCallback: () => z(!0),
-                                                disabled: !Z || !M,
+                                                disabled: !Z || !G,
                                             }),
                                         }),
                                 ],

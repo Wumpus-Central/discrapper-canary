@@ -1,7 +1,7 @@
-t.d(n, { Z: () => r });
+t.d(n, { Z: () => o });
 var l = t(544891),
     i = t(981631);
-let r = {
+let o = {
     updateNote(e, n) {
         l.tn.put({
             url: i.ANM.NOTE(e),

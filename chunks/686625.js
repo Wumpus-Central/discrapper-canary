@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(689315);
 function d(e) {
     let { section: t, header: n, items: l, listClassName: d, onExpand: u } = e,
-        { trackUserProfileAction: h } = (0, o.KZ)(),
-        p = i.useId(),
+        { trackUserProfileAction: p } = (0, o.KZ)(),
+        h = i.useId(),
         [f, g] = i.useState(!1),
         m = f ? s.CJ0 : s.Fbu;
     return (0, r.jsxs)("section", {
@@ -17,12 +17,12 @@ function d(e) {
         children: [
             (0, r.jsxs)(s.P3F, {
                 className: a()(c.header, c.clickable),
-                "aria-controls": p,
+                "aria-controls": h,
                 "aria-expanded": f,
                 onClick: () => {
                     g(!f),
                         f ||
-                            (h({
+                            (p({
                                 action: "PRESS_SECTION",
                                 section: t,
                             }),
@@ -39,7 +39,7 @@ function d(e) {
             }),
             l.length > 0 &&
                 (0, r.jsx)("ul", {
-                    id: p,
+                    id: h,
                     hidden: !f,
                     className: a()(c.list, d),
                     children: l,

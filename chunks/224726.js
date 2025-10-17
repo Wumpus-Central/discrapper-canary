@@ -21,8 +21,8 @@ var r = n(951288),
     C = n(75733),
     O = n(474024),
     y = n(981631),
-    N = n(388032),
-    E = n(805220);
+    E = n(388032),
+    N = n(805220);
 let I = function () {
     let { analyticsLocations: e } = (0, c.ZP)(o.Z.GUILD_SETTINGS_PROFILE_PAGE),
         t = (0, l.e7)([f.Z], () => f.Z.getGuild(), []),
@@ -55,7 +55,7 @@ let I = function () {
         ? (0, r.jsx)(_.g, { forceFetchGuildProfile: R })
         : S === d.a.NOT_FETCHED || S === d.a.FETCHING
           ? (0, r.jsx)("main", {
-                className: E.spinner,
+                className: N.spinner,
                 children: (0, r.jsx)(a.$jN, {}),
             })
           : null == t || null == T
@@ -63,23 +63,23 @@ let I = function () {
             : (0, r.jsx)(c.Gt, {
                   value: e,
                   children: (0, r.jsxs)("main", {
-                      className: E.content,
+                      className: N.content,
                       children: [
                           (0, r.jsxs)("div", {
-                              className: E.leftColumn,
+                              className: N.leftColumn,
                               children: [
                                   (0, r.jsxs)("div", {
                                       children: [
                                           (0, r.jsx)(a.Heading, {
                                               variant: "heading-lg/semibold",
                                               color: "header-primary",
-                                              children: N.intl.string(N.t.txdaxc),
+                                              children: E.intl.string(E.t.txdaxc),
                                           }),
                                           (0, r.jsx)(a.Text, {
                                               variant: "text-sm/medium",
                                               color: "header-secondary",
-                                              className: E.description,
-                                              children: N.intl.string(N.t["5PGZWV"]),
+                                              className: N.description,
+                                              children: E.intl.string(E.t["5PGZWV"]),
                                           }),
                                       ],
                                   }),
@@ -87,34 +87,34 @@ let I = function () {
                                       profile: T,
                                       canManageGuild: P,
                                   }),
-                                  (0, r.jsx)("div", { className: E.divider }),
+                                  (0, r.jsx)("div", { className: N.divider }),
                                   (0, r.jsx)(j.Z, {
                                       profile: T,
                                       canManageGuild: P,
                                       onIconChange: w,
                                   }),
-                                  (0, r.jsx)("div", { className: E.divider }),
+                                  (0, r.jsx)("div", { className: N.divider }),
                                   (0, r.jsx)(h.Z, {
                                       profile: T,
                                       onCustomBannerChange: Z,
                                       canManageGuild: P,
                                   }),
-                                  (0, r.jsx)("div", { className: E.divider }),
+                                  (0, r.jsx)("div", { className: N.divider }),
                                   (0, r.jsx)(C.Z, {
                                       profile: T,
                                       canManageGuild: P,
                                   }),
-                                  (0, r.jsx)("div", { className: E.divider }),
+                                  (0, r.jsx)("div", { className: N.divider }),
                                   (0, r.jsx)(b.Z, {
                                       profile: T,
                                       canManageGuild: P,
                                   }),
-                                  (0, r.jsx)("div", { className: E.divider }),
+                                  (0, r.jsx)("div", { className: N.divider }),
                                   (0, r.jsx)(x.Z, {
                                       profile: T,
                                       canManageGuild: P,
                                   }),
-                                  (0, r.jsx)("div", { className: E.divider }),
+                                  (0, r.jsx)("div", { className: N.divider }),
                                   (0, r.jsx)(O.Z, {
                                       profile: T,
                                       canManageGuild: P,
@@ -122,11 +122,11 @@ let I = function () {
                               ],
                           }),
                           (0, r.jsx)("div", {
-                              className: E.rightColumn,
+                              className: N.rightColumn,
                               children: (0, r.jsx)(a.Ttm, {
-                                  className: E.profilePreviewContainer,
+                                  className: N.profilePreviewContainer,
                                   children: (0, r.jsx)(g.ZP, {
-                                      className: E.profilePreview,
+                                      className: N.profilePreview,
                                       profile: T,
                                       disableCTA: !0,
                                       onIconChange: P ? w : void 0,

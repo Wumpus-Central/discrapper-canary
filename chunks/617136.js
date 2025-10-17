@@ -1,8 +1,8 @@
 n.d(t, {
-    Ic: () => k,
+    Ic: () => j,
     O5: () => G,
     Zk: () => B,
-    _3: () => j,
+    _3: () => k,
     _F: () => U,
     _b: () => R,
     dA: () => x,
@@ -208,7 +208,7 @@ var M = (function (e) {
         e
     );
 })({});
-async function j(e) {
+async function k(e) {
     let {
             questId: t,
             questContent: n,
@@ -239,7 +239,7 @@ async function j(e) {
         sourceQuestContent: d,
     });
 }
-function k(e) {
+function j(e) {
     let { questContent: t, sourceQuestContent: n, questId: r, mode: i, prevMode: a } = e,
         o = L(t);
     x({

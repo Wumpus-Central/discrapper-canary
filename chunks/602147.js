@@ -9,26 +9,26 @@ var r = n(951288),
     u = n(258971),
     d = n(603592),
     p = n(49898),
-    h = n(128449),
-    f = n(46140),
+    f = n(128449),
+    h = n(46140),
     g = n(388032);
 let m = i.forwardRef(function (e, t) {
     let { selected: n, onClick: m, questId: b, className: _ } = e,
-        y = i.useCallback(() => {
+        O = i.useCallback(() => {
             (0, a.k5)({ source: p.GlobalDiscoveryAnalyticsLocations.GUILDS_BAR_ICON });
             let e = void 0 !== b ? p.GlobalDiscoveryTab.QUESTS : s.Z.getField("selectedTab");
             switch (e) {
                 case p.GlobalDiscoveryTab.QUESTS:
                     return (0, c.transitionToGlobalDiscovery)({
                         tab: p.GlobalDiscoveryTab.QUESTS,
-                        location: f.dr.DISCOVERY_COMPASS,
+                        location: h.dr.DISCOVERY_COMPASS,
                         questContent: l.j.DISCOVERY_COMPASS,
                         questId: b,
                     });
                 case p.GlobalDiscoveryTab.SERVERS:
                     return (0, c.transitionToGlobalDiscovery)({
                         tab: p.GlobalDiscoveryTab.SERVERS,
-                        entrypoint: h.Qq.GUILDS_BAR,
+                        entrypoint: f.Qq.GUILDS_BAR,
                     });
                 case p.GlobalDiscoveryTab.APPS:
                     return (0, c.transitionToGlobalDiscovery)({
@@ -47,7 +47,7 @@ let m = i.forwardRef(function (e, t) {
         ref: t,
         className: _,
         onClick: () => {
-            y(), void 0 !== m && m();
+            O(), void 0 !== m && m();
         },
         selected: n,
         tooltip: g.intl.string(g.t["4nEZLi"]),

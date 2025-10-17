@@ -13,7 +13,7 @@ function p(e) {
     let { analyticsLocations: t } = (0, o.ZP)();
     return (0, r.jsx)(i.sNh, {
         id: "voice-settings",
-        label: d.intl.string(d.t.NiTd0e),
+        label: d.intl.string(d.t.NiTd0d),
         action: () => {
             (0, s.openUserSettings)(a.n.VOICE_AND_VIDEO_PANEL, {
                 section: c.oAB.VOICE,

@@ -92,15 +92,15 @@ function T(e) {
             onSelectBackgroundOption: v,
             selectedBackgroundOption: y,
         },
-        j = i.useRef(M);
+        k = i.useRef(M);
     i.useEffect(() => {
-        j.current = M;
+        k.current = M;
     }),
         i.useEffect(() => {
-            let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: n } = j.current;
+            let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: n } = k.current;
             e ? (0, _.FU)(n, T, { track: !1 }).catch(() => t(null)) : null != n && t(null);
         }, [T]);
-    let k = function (e, t) {
+    let j = function (e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
             return new Promise(async (r) => {
                 try {
@@ -145,7 +145,7 @@ function T(e) {
                       selectedOption: y,
                       onSelectOption: U,
                       onUpsellClick: G,
-                      onAddBackgroundImage: k,
+                      onAddBackgroundImage: j,
                       smallerOptions: S,
                   }),
               }),

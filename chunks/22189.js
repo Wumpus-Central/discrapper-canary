@@ -35,8 +35,8 @@ var r = n(951288),
     L = n(981631),
     x = n(921944),
     M = n(228168),
-    j = n(526761),
-    k = n(332325),
+    k = n(526761),
+    j = n(332325),
     U = n(388032),
     G = n(119475),
     B = n(693450),
@@ -122,7 +122,7 @@ let eE = () => {
         eA = (0, _.Nj)(o.z.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE),
         eC = (0, p.cL)({ location: "usePremiumPerksCards" }),
         eN = (0, m.Z)({
-            scrollPosition: j.Y_.TRY_IT_OUT,
+            scrollPosition: k.Y_.TRY_IT_OUT,
             analyticsLocations: e,
         }),
         eR = () => {
@@ -140,7 +140,7 @@ let eE = () => {
         ew = () => {
             (0, O.openUserSettings)(b.n.VOICE_AND_VIDEO_PANEL, {
                 section: L.oAB.VOICE,
-                subsection: j.GA,
+                subsection: k.GA,
                 analyticsLocations: e,
             });
         },
@@ -148,21 +148,21 @@ let eE = () => {
             (0, g.uL)(L.Z5c.COLLECTIBLES_SHOP);
         },
         eL = () => {
-            (0, y.Z)(k.Z.CLIPS, { analyticsLocations: e });
+            (0, y.Z)(j.Z.CLIPS, { analyticsLocations: e });
         },
         ex = () => {
             (0, O.openUserSettings)(b.n.APPEARANCE_PANEL, {
                 section: L.oAB.APPEARANCE,
-                scrollPosition: j.h1.CUSTOM_APP_ICONS,
+                scrollPosition: k.h1.CUSTOM_APP_ICONS,
             });
         },
         eM = () => {
             window.open(A.Z.getArticleURL(L.BhN.CLIPS), "_blank");
         },
-        ej = () => {
+        ek = () => {
             eA || (0, _.Q3)(o.z.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE, { dismissAction: x.L.TAKE_ACTION }), eN();
         },
-        ek = () => {
+        ej = () => {
             (0, E.openUserProfileModal)({
                 userId: ey.id,
                 sourceAnalyticsLocations: e,
@@ -458,7 +458,7 @@ let eE = () => {
                 description: U.intl.format(U.t.Pd7olp, { learnMoreLink: A.Z.getArticleURL(L.BhN.PERMADECOS) }),
                 descriptionCta: eO ? U.intl.string(U.t.jVcuVV) : U.intl.string(U.t.JST6jo),
                 isPremiumGetCta: !eO,
-                onCtaClick: eO ? ej : void 0,
+                onCtaClick: eO ? ek : void 0,
                 pillText: eA || !eO ? void 0 : U.intl.string(U.t.y2b7CA).toLocaleUpperCase(),
                 perkImage: em.Z,
             },
@@ -477,7 +477,7 @@ let eE = () => {
                 title: U.intl.string(U.t.MyEstL),
                 subtitle: U.intl.string(U.t["0/ClMD"]),
                 descriptionCta: U.intl.string(U.t.jVcuVV),
-                onCtaClick: ek,
+                onCtaClick: ej,
                 perkImage: ef.Z,
                 pillText: U.intl.string(U.t.y2b7CA).toLocaleUpperCase(),
             },

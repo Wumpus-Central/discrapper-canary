@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -20,13 +20,13 @@ function p(e) {
         ],
     );
 }
-function h(e) {
+function f(e) {
     var t;
     let { title: n, className: l, icon: a } = e,
-        [d, h] = i.useState(p(n));
+        [d, f] = i.useState(p(n));
     return (
         i.useEffect(() => {
-            h(p(n));
+            f(p(n));
         }, [n]),
         (0, r.jsxs)("div", {
             className: o()(u.wrapper, l),

@@ -109,7 +109,7 @@ function O(e) {
 let y = (e) => {
         e.stopPropagation(), e.preventDefault();
     },
-    N = (e) => {
+    E = (e) => {
         var { className: t, children: n } = e,
             i = (function (e, t) {
                 if (null == e) return {};
@@ -148,7 +148,7 @@ let y = (e) => {
             ),
         );
     };
-function E(e) {
+function N(e) {
     var t;
     let { rule: n, onChangeRule: i, onContextMenu: l } = e,
         o = () => i(C(_({}, n), { enabled: !n.enabled }));
@@ -161,7 +161,7 @@ function E(e) {
                     onChangeRule: i,
                 }),
             }),
-            (0, r.jsxs)(N, {
+            (0, r.jsxs)(E, {
                 className: v.actionContainer,
                 children: [
                     (0, r.jsx)(s.rsf, {
@@ -202,7 +202,7 @@ function S(e) {
         { isLoading: d, saveRule: m } = (0, p.w)(),
         { updateRule: h } = (0, g.pH)(t.guildId),
         [b, x] = i.useState(t.enabled),
-        E = (0, l.throttle)(async () => {
+        N = (0, l.throttle)(async () => {
             if (!d) {
                 let e = C(_({}, t), { enabled: !b });
                 x(!b);
@@ -254,11 +254,11 @@ function S(e) {
                     }),
                 ],
             }),
-            (0, r.jsxs)(N, {
+            (0, r.jsxs)(E, {
                 className: v.actionContainer,
                 children: [
                     (0, r.jsx)(s.rsf, {
-                        onChange: E,
+                        onChange: N,
                         checked: null != b && b,
                     }),
                     !n &&
@@ -318,7 +318,7 @@ function T(e) {
                     (0, r.jsx)(O, { triggerType: t }),
                 ],
             }),
-            (0, r.jsx)(N, {
+            (0, r.jsx)(E, {
                 className: v.actionContainer,
                 children: (0, r.jsx)(s.Button, {
                     variant: "primary",
@@ -357,7 +357,7 @@ function P(e) {
         null == t ||
             c ||
             (m = l
-                ? (0, r.jsx)(E, {
+                ? (0, r.jsx)(N, {
                       rule: t,
                       onChangeRule: u,
                       onContextMenu: g,

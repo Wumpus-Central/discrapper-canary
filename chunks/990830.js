@@ -1,9 +1,9 @@
-n.d(t, { w: () => s }), n(980754), n(388685), n(415506);
+n.d(t, { w: () => l }), n(980754), n(388685), n(415506);
 var r = n(230367),
     i = n(320215),
-    l = n(240773),
-    a = n(495852);
-class o extends a.C {
+    a = n(240773),
+    o = n(495852);
+class s extends o.C {
     create(e) {
         let t = {
             assetUrl: "",
@@ -12,7 +12,7 @@ class o extends a.C {
             helpArticleId: "",
         };
         return (
-            globalThis.Object.defineProperty(t, l.C, {
+            globalThis.Object.defineProperty(t, a.C, {
                 enumerable: !1,
                 value: this,
             }),
@@ -21,34 +21,34 @@ class o extends a.C {
         );
     }
     internalBinaryRead(e, t, n, i) {
-        let l = null != i ? i : this.create(),
-            a = e.pos + t;
-        for (; e.pos < a; ) {
+        let a = null != i ? i : this.create(),
+            o = e.pos + t;
+        for (; e.pos < o; ) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    l.assetUrl = e.string();
+                    a.assetUrl = e.string();
                     break;
                 case 2:
-                    l.header = e.string();
+                    a.header = e.string();
                     break;
                 case 3:
-                    l.body = e.string();
+                    a.body = e.string();
                     break;
                 case 4:
-                    l.helpArticleId = e.string();
+                    a.helpArticleId = e.string();
                     break;
                 default:
-                    let a = n.readUnknownField;
-                    if ("throw" === a)
+                    let o = n.readUnknownField;
+                    if ("throw" === o)
                         throw new globalThis.Error(
                             "Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName),
                         );
-                    let o = e.skip(i);
-                    !1 !== a && (!0 === a ? r.z.onRead : a)(this.typeName, l, t, i, o);
+                    let s = e.skip(i);
+                    !1 !== o && (!0 === o ? r.z.onRead : o)(this.typeName, a, t, i, s);
             }
         }
-        return l;
+        return a;
     }
     internalBinaryWrite(e, t, n) {
         "" !== e.assetUrl && t.tag(1, r.TD.LengthDelimited).string(e.assetUrl),
@@ -87,4 +87,4 @@ class o extends a.C {
         ]);
     }
 }
-let s = new o();
+let l = new s();

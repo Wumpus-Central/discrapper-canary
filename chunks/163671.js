@@ -2,8 +2,8 @@ n.d(t, { Z: () => o });
 var r = n(951288);
 n(647438);
 var i = n(120356),
-    l = n.n(i),
-    s = n(388905),
+    s = n.n(i),
+    l = n(388905),
     a = n(646956);
 function o(e) {
     var t,
@@ -18,21 +18,21 @@ function o(e) {
                     var n,
                         r,
                         i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        s = Object.keys(e);
+                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
+                var s = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < s.length; r++)
+                    (n = s[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ["children", "className"]);
     let u = i();
     return (0, r.jsx)(
-        s.ZP,
+        l.ZP,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -60,7 +60,7 @@ function o(e) {
         })({}, c)),
         (n = n =
             {
-                className: l()(o, a.container),
+                className: s()(o, a.container),
                 contentClassName: a.content,
                 children: u.map((e, t) =>
                     (0, r.jsx)(

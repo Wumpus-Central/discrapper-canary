@@ -12,9 +12,9 @@ var r = n(647438),
     p = n(262433),
     _ = n(400321),
     m = n(813900);
-let b = 1000 / 60;
+let g = 1000 / 60;
 function E(e, t, n, E) {
-    let g = (0, a.dQu)(l.Z.unsafe_rawColors.BRAND_500).hex(),
+    let b = (0, a.dQu)(l.Z.unsafe_rawColors.BRAND_500).hex(),
         v = (0, a.dQu)(l.Z.unsafe_rawColors.BLACK_500).hex(),
         h = (0, a.dQu)(l.Z.unsafe_rawColors.WHITE_500).hex(),
         S = r.useRef({}),
@@ -39,10 +39,10 @@ function E(e, t, n, E) {
                         if (null == f) return;
                         let m = f.getContext("2d");
                         if (null == m) return;
-                        let { width: b, height: E } = f.getBoundingClientRect(),
-                            g = [];
+                        let { width: g, height: E } = f.getBoundingClientRect(),
+                            b = [];
                         n.forEach((e) => {
-                            if (null == c.Z.getVoiceStateForChannel(a, e.userId)) return void g.push(e);
+                            if (null == c.Z.getVoiceStateForChannel(a, e.userId)) return void b.push(e);
                             !(function (e) {
                                 let {
                                     drawable: t,
@@ -85,21 +85,21 @@ function E(e, t, n, E) {
                             })({
                                 drawable: e,
                                 context: m,
-                                canvasWidth: b,
+                                canvasWidth: g,
                                 canvasHeight: E,
                                 fallbackColor: r,
                                 outlineColorDark: o,
                                 outlineColorLight: u,
                                 linesDrawnAt: i,
-                                deadDrawables: g,
+                                deadDrawables: b,
                                 streamerId: l,
                             });
                         }),
-                            g.length > 0 && (0, s.fW)(g, l);
+                            b.length > 0 && (0, s.fW)(b, l);
                     })({
                         canvasRef: e,
                         drawables: n,
-                        fallbackColor: g,
+                        fallbackColor: b,
                         linesDrawnAt: S,
                         streamerId: t,
                         outlineColorDark: v,
@@ -107,7 +107,7 @@ function E(e, t, n, E) {
                         channelId: E,
                     });
             },
-            [e, E, g, v, h],
+            [e, E, b, v, h],
         );
     r.useEffect(() => {
         let t = new ResizeObserver(() => {
@@ -125,7 +125,7 @@ function E(e, t, n, E) {
         i &&
             null == y.current._ref &&
             (null == y.current._ref
-                ? (O(n), y.current.start(b, () => O(n)))
+                ? (O(n), y.current.start(g, () => O(n)))
                 : i || null == y.current._ref || (y.current.stop(), (0, f.UN)(e)));
     }, [e, O, n]);
     r.useEffect(() => {

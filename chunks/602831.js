@@ -1,6 +1,6 @@
 n.d(t, {
-    K: () => o,
-    j: () => s,
+    K: () => s,
+    j: () => o,
 }),
     n(388685);
 var a = n(763600),
@@ -74,7 +74,7 @@ function l(e, t) {
         gameId: "1",
     };
 }
-let s = [
+let o = [
         l("1", "GameServer Test #1"),
         l("2", "GameServer Test #2"),
         l("3", "GameServer Test #3"),
@@ -88,7 +88,7 @@ let s = [
         l("11", "GameServer Test #11"),
         l("12", "GameServer Test #12"),
     ],
-    o = [
+    s = [
         {
             id: "1",
             gameId: "1",

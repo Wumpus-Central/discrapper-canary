@@ -75,7 +75,7 @@ function M(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -86,7 +86,7 @@ function j(e, t) {
         e
     );
 }
-let k = 10,
+let j = 10,
     U = 1500000,
     G = 1500000,
     B = 5 * A.Z.Millis.SECOND;
@@ -227,8 +227,8 @@ class F extends c.Z {
             null != e &&
                 e < 100000000 &&
                 (this.bandwidthSamples.push(e),
-                this.bandwidthSamples.length > k && this.bandwidthSamples.shift(),
-                this.bandwidthSamples.length === k &&
+                this.bandwidthSamples.length > j && this.bandwidthSamples.shift(),
+                this.bandwidthSamples.length === j &&
                     ((p = i().mean(this.bandwidthSamples)) > G ? (g = "HQ") : p < U && (g = "LQ")));
         }
         let b = null != (a = null == (r = this._goLiveQualityManager) ? void 0 : r.isDowngraded()) && a;
@@ -257,7 +257,7 @@ class F extends c.Z {
         this.on(u.z.State, (e, t, n) => {
             if (
                 (l.Z.dispatch(
-                    j(
+                    k(
                         x(
                             {
                                 type: "RTC_CONNECTION_STATE",
@@ -601,7 +601,7 @@ class F extends c.Z {
         let e = this.isOwner ? (0, P.Z)() : null;
         T.default.track(
             w.rMx.VIDEO_STREAM_STARTED,
-            j(x({}, this.getStreamAnalyticsProperties(), e), {
+            k(x({}, this.getStreamAnalyticsProperties(), e), {
                 connection_type: y.Z.getType(),
                 effective_connection_speed: y.Z.getEffectiveConnectionSpeed(),
                 service_provider: y.Z.getServiceProvider(),
@@ -635,7 +635,7 @@ class F extends c.Z {
             (null != (r = t.num_frames) ? r : 0) > 0 &&
                 T.default.track(
                     w.rMx.VIDEO_STREAM_ENDED,
-                    j(
+                    k(
                         x(
                             {},
                             a,
@@ -667,7 +667,7 @@ class F extends c.Z {
                 (null != (r = null == l ? void 0 : l.num_frames) ? r : 0) > 0 &&
                     T.default.track(
                         w.rMx.VIDEO_STREAM_ENDED,
-                        j(
+                        k(
                             x(
                                 {},
                                 a,

@@ -1,10 +1,10 @@
-n.d(t, { Z: () => h }), n(388685);
-var a,
-    r = n(951288),
-    o = n(647438),
-    i = n(120356),
-    l = n.n(i),
-    s = n(748780),
+n.d(t, { Z: () => p }), n(388685);
+var r,
+    a = n(951288),
+    i = n(647438),
+    o = n(120356),
+    s = n.n(o),
+    l = n(748780),
     c = n(481060),
     d = n(981631),
     u = n(788524);
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-class h extends (a = o.Component) {
+class p extends (r = i.Component) {
     componentDidMount() {
         this.props.show && this.animate(1);
     }
@@ -47,19 +47,19 @@ class h extends (a = o.Component) {
         };
     }
     render() {
-        return (0, r.jsx)(s.Z.a, {
+        return (0, a.jsx)(l.Z.a, {
             href: d.Z5c.INDEX,
             target: "_blank",
             rel: "noopener",
-            className: l()(u.logo, this.props.className),
+            className: s()(u.logo, this.props.className),
             style: this.getAnimatedStyle(),
         });
     }
     constructor(...e) {
         super(...e),
-            f(this, "anim", new s.Z.Value(0)),
+            f(this, "anim", new l.Z.Value(0)),
             f(this, "animate", (e) => {
-                s.Z.spring(this.anim, {
+                l.Z.spring(this.anim, {
                     toValue: e,
                     friction: 10,
                     tension: 100,
@@ -67,4 +67,4 @@ class h extends (a = o.Component) {
             });
     }
 }
-f(h, "contextType", c.Sfi);
+f(p, "contextType", c.Sfi);

@@ -12,8 +12,8 @@ function o(e, t, n) {
         (0, r.Z)(l) && (0, u.TG)(n, i) && o.add(l);
     }
     let s = t[(0, l.lV)(e)],
-        c = !(0, i.Fs)(s, a.Plq.VIEW_CHANNEL),
-        d = (0, u.wB)(n, n.permissionOverwrites[e.id]);
-    if (c && !d) for (let e of Object.values(t)) (0, r.Z)(e) && (0, u.yt)(e) && o.add(e);
+        d = !(0, i.Fs)(s, a.Plq.VIEW_CHANNEL),
+        c = (0, u.wB)(n, n.permissionOverwrites[e.id]);
+    if (d && !c) for (let e of Object.values(t)) (0, r.Z)(e) && (0, u.yt)(e) && o.add(e);
     return [...o];
 }

@@ -1,11 +1,11 @@
-n.d(t, { Z: () => Z }), n(35282), n(388685), n(49124), n(975844), n(781311);
+n.d(t, { Z: () => D }), n(35282), n(388685), n(49124), n(975844), n(781311);
 var a = n(951288),
     r = n(647438),
     i = n(120356),
     l = n.n(i),
-    s = n(392711),
-    o = n(913527),
-    c = n.n(o),
+    o = n(392711),
+    s = n(913527),
+    c = n.n(s),
     d = n(28664),
     u = n(755721),
     m = n(481060),
@@ -13,10 +13,10 @@ var a = n(951288),
     h = n(665149),
     x = n(886118),
     f = n(301801),
-    b = n(4912),
-    g = n(572004),
+    g = n(4912),
+    b = n(572004),
     v = n(55935),
-    j = n(185910),
+    j = n(428530),
     _ = n(257785),
     y = n(484036),
     C = n(681619),
@@ -108,7 +108,7 @@ let w = [
         },
     },
 ];
-function R(e) {
+function k(e) {
     let { actionLog: t, initialHeight: n } = e,
         i = r.useMemo(
             () =>
@@ -118,7 +118,7 @@ function R(e) {
                           {
                               id: "error",
                               name: (0, a.jsxs)(a.Fragment, {
-                                  children: [(0, a.jsx)(b.Z, { className: T.errorIcon }), "Error"],
+                                  children: [(0, a.jsx)(g.Z, { className: T.errorIcon }), "Error"],
                               }),
                               group: S.v0.NONE,
                               render(e) {
@@ -149,13 +149,13 @@ function R(e) {
                     : w,
             [t],
         ),
-        { TabBar: s, renderSelectedTab: o } = (0, S.ZP)({ tabs: i }, [i]);
+        { TabBar: o, renderSelectedTab: s } = (0, S.ZP)({ tabs: i }, [i]);
     return (0, a.jsxs)(y.Z, {
         className: T.subPanel,
         minHeight: 100,
         initialHeight: n,
         children: [
-            (0, a.jsx)(s, {}),
+            (0, a.jsx)(o, {}),
             (0, a.jsxs)(h.ZP, {
                 className: l()(O.headerBar, T.subPanelHeaderBar),
                 children: [
@@ -181,7 +181,7 @@ function R(e) {
                                 null,
                                 2,
                             );
-                            (0, g.JG)(n, () =>
+                            (0, b.JG)(n, () =>
                                 (0, m.showToast)({
                                     id: "copy-action-log-name",
                                     type: m.ToastType.SUCCESS,
@@ -192,18 +192,18 @@ function R(e) {
                     }),
                 ],
             }),
-            o({ actionLog: t }),
+            s({ actionLog: t }),
         ],
     });
 }
-let k = [
+let R = [
         {
             key: "action",
             cellClassName: T.actionColumn,
             render(e) {
                 let { actionLog: t } = e;
                 return (0, a.jsxs)(a.Fragment, {
-                    children: [t.error && (0, a.jsx)(b.Z, { className: T.errorIcon }), t.name],
+                    children: [t.error && (0, a.jsx)(g.Z, { className: T.errorIcon }), t.name],
                 });
             },
         },
@@ -232,13 +232,13 @@ let k = [
         },
         throttleMs: 100,
     };
-function Z() {
+function D() {
     let e = r.useRef(null),
         [t, n] = r.useState(""),
         i = (function (e) {
             let [t, n] = r.useState(e.logs),
                 a = r.useCallback(() => {
-                    (0, s.debounce)(() => {
+                    (0, o.debounce)(() => {
                         n([...e.logs]);
                     }, 500)();
                 }, [e]);
@@ -255,7 +255,7 @@ function Z() {
                 t
             );
         })(p.Z.actionLogger),
-        o = r.useMemo(
+        s = r.useMemo(
             () =>
                 i
                     .map((e) => ({
@@ -265,23 +265,23 @@ function Z() {
                     .toReversed(),
             [i],
         ),
-        [c, u] = r.useState(o),
-        [h, x] = r.useState(o),
-        [b, g] = r.useState(!1),
+        [c, u] = r.useState(s),
+        [h, x] = r.useState(s),
+        [g, b] = r.useState(!1),
         [v, j] = r.useState(),
         _ = r.useCallback((e) => {
             x(e);
         }, []);
-    (0, f.BO)(t, b ? c : o, _, A);
+    (0, f.BO)(t, g ? c : s, _, A);
     let y = r.useCallback(
             (e) => {
-                u(o), g(e);
+                u(s), b(e);
             },
-            [o],
+            [s],
         ),
         S = t.trim().length > 0,
-        E = r.useMemo(() => (S ? h : b ? c : o), [o, h, S, b, c]),
-        N = b ? "Enable Event Tracking" : "Pause Event Tracking";
+        E = r.useMemo(() => (S ? h : g ? c : s), [s, h, S, g, c]),
+        N = g ? "Enable Event Tracking" : "Pause Event Tracking";
     return (0, a.jsxs)("div", {
         ref: e,
         className: l()(O.panel, T.panel),
@@ -293,10 +293,10 @@ function Z() {
                         text: N,
                         children: (0, a.jsx)(m.hU, {
                             size: "sm",
-                            variant: b ? "primary" : "active",
-                            icon: b ? m.o1U : m.fpf,
+                            variant: g ? "primary" : "active",
+                            icon: g ? m.o1U : m.fpf,
                             "aria-label": N,
-                            onClick: () => y(!b),
+                            onClick: () => y(!g),
                         }),
                     }),
                     (0, a.jsx)(m.E1j, {
@@ -309,13 +309,13 @@ function Z() {
                 ],
             }),
             (0, a.jsx)(C.Z, {
-                columns: k,
+                columns: R,
                 data: E,
                 selectedRowKey: null == v ? void 0 : v.id.toString(),
                 onClickRow: (e) => j(e.actionLog),
             }),
             null != v &&
-                (0, a.jsx)(R, {
+                (0, a.jsx)(k, {
                     actionLog: v,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
                 }),

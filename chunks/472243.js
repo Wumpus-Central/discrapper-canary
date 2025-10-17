@@ -30,8 +30,8 @@ function y(e) {
         L = (null == (n = (0, f.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === g.Si.TIER_2,
         x = N - P,
         M = x > R,
-        j = x < 0 && L,
-        k =
+        k = x < 0 && L,
+        j =
             0 === x
                 ? E.intl.string(E.t.tU6YQ0)
                 : x > 0
@@ -59,10 +59,10 @@ function y(e) {
                                   }),
                               })
                             : null,
-                        M || j
+                        M || k
                             ? null
                             : (0, r.jsx)(s.u, {
-                                  text: k,
+                                  text: j,
                                   position: "top",
                                   children: (0, r.jsx)(l.Text, {
                                       variant: "text-sm/semibold",

@@ -3,12 +3,12 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
-    o = n(481060),
-    l = n(313201),
-    c = n(318374),
-    s = n(245583);
+    l = n(481060),
+    o = n(313201),
+    s = n(318374),
+    c = n(245583);
 function u(e) {
-    var { label: t, visuallyHideLabel: n = !1, className: i, size: u = o.EFr.SIZE_16, maxUsers: d = 4 } = e,
+    var { label: t, visuallyHideLabel: n = !1, className: i, size: u = l.EFr.SIZE_16, maxUsers: d = 4 } = e,
         f = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -30,12 +30,12 @@ function u(e) {
             }
             return i;
         })(e, ["label", "visuallyHideLabel", "className", "size", "maxUsers"]);
-    let g = (0, l.Dt)();
+    let g = (0, o.Dt)();
     return (0, r.jsxs)("div", {
-        className: a()(i, s.container),
+        className: a()(i, c.container),
         children: [
             (0, r.jsx)(
-                c.Z,
+                s.Z,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -63,7 +63,7 @@ function u(e) {
                 })(
                     {
                         "aria-labelledby": g,
-                        overflowCountClassName: s.overflowButton,
+                        overflowCountClassName: c.overflowButton,
                         size: u,
                         maxUsers: d,
                     },
@@ -71,11 +71,11 @@ function u(e) {
                 ),
             ),
             n
-                ? (0, r.jsx)(o.nn4, {
+                ? (0, r.jsx)(l.nn4, {
                       id: g,
                       children: t,
                   })
-                : (0, r.jsx)(o.Text, {
+                : (0, r.jsx)(l.Text, {
                       variant: "text-xs/normal",
                       color: "text-secondary",
                       id: g,

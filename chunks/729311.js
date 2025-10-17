@@ -25,8 +25,8 @@ var r = n(951288),
     C = n(208665),
     O = n(868814),
     y = n(974513),
-    N = n(2348),
-    E = n(353890),
+    E = n(2348),
+    N = n(353890),
     I = n(716130),
     S = n(388032),
     T = n(868893),
@@ -304,7 +304,7 @@ function Z(e) {
                                 : (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(w, { guild: n }),
-                                          (0, r.jsx)(N.Z, {
+                                          (0, r.jsx)(E.Z, {
                                               className: T.channelBrowserOuter,
                                               guild: n,
                                               categories: c,
@@ -342,7 +342,7 @@ function Z(e) {
                                 }),
                         ],
                     }),
-                    (0, r.jsx)(E.Z, {
+                    (0, r.jsx)(N.Z, {
                         guild: n,
                         scrollToQuestions: () => {
                             null != g.current && g.current.scrollIntoView({ behavior: "smooth" });

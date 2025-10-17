@@ -2,15 +2,15 @@ n.d(t, {
     ShopAssetsPreviewInstructionModal: () => d,
     ShopPFXPreviewInstructionModal: () => u,
     c: () => c,
-    g: () => o,
+    g: () => s,
 });
 var a = n(951288);
 n(647438);
 var r = n(793030),
     i = n(481060),
     l = n(281598),
-    s = n(117910);
-let o = "shop-assets-preview-instructions-modal",
+    o = n(117910);
+let s = "shop-assets-preview-instructions-modal",
     c = "shop-pfx-preview-instructions-modal",
     d = (e) => {
         let { transitionState: t, onClose: n } = e;
@@ -26,7 +26,7 @@ let o = "shop-assets-preview-instructions-modal",
             ],
             onClose: n,
             children: (0, a.jsxs)("div", {
-                className: s.modalContent,
+                className: o.modalContent,
                 children: [
                     (0, a.jsx)(i.Text, {
                         variant: "text-md/bold",
@@ -45,7 +45,7 @@ let o = "shop-assets-preview-instructions-modal",
                         children: "Valid Upload Types",
                     }),
                     (0, a.jsxs)("ul", {
-                        className: s.instructionsList,
+                        className: o.instructionsList,
                         children: [
                             (0, a.jsx)("li", { children: "One or more image or video files (jpg, png, webm)" }),
                             (0, a.jsx)("li", { children: "A folder containing image or video files" }),
@@ -56,7 +56,7 @@ let o = "shop-assets-preview-instructions-modal",
                         children: "Valid File Names",
                     }),
                     (0, a.jsx)("ul", {
-                        className: s.instructionsList,
+                        className: o.instructionsList,
                         children: Object.keys(l.Kj).map((e) => (0, a.jsx)("li", { children: e }, e)),
                     }),
                 ],
@@ -77,7 +77,7 @@ let o = "shop-assets-preview-instructions-modal",
             ],
             onClose: n,
             children: (0, a.jsxs)("div", {
-                className: s.modalContent,
+                className: o.modalContent,
                 children: [
                     (0, a.jsx)(i.Text, {
                         variant: "text-md/normal",

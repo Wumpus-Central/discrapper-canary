@@ -13,8 +13,8 @@ var l = n(442837),
     u = n(313201),
     d = n(144114),
     p = n(607744),
-    h = n(594174),
-    f = n(981631),
+    f = n(594174),
+    h = n(981631),
     g = n(815660),
     m = n(388032),
     b = n(36973);
@@ -65,10 +65,10 @@ let y = (e) => {
               : j
                 ? ((I = m.intl.string(m.t.vdSOp6)), (P = m.intl.string(m.t.lm1UKi)))
                 : E
-                  ? ((I = m.intl.formatToPlainString(m.t.v1ktYW, { min: f.YeM.MEMBER_AGE })),
+                  ? ((I = m.intl.formatToPlainString(m.t.v1ktYW, { min: h.YeM.MEMBER_AGE })),
                     (P = m.intl.string(m.t.BddRzc)))
                   : C &&
-                    ((I = m.intl.formatToPlainString(m.t["sncw4+"], { min: f.YeM.ACCOUNT_AGE })),
+                    ((I = m.intl.formatToPlainString(m.t["sncw4+"], { min: h.YeM.ACCOUNT_AGE })),
                     (P = m.intl.string(m.t.BddRzc)))),
     null == S || null == I)
         ? null
@@ -142,7 +142,7 @@ let y = (e) => {
                                                                                 children: m.intl.format(m.t.azKEPz, {
                                                                                     email:
                                                                                         null ==
-                                                                                        (t = h.default.getCurrentUser())
+                                                                                        (t = f.default.getCurrentUser())
                                                                                             ? void 0
                                                                                             : t.email,
                                                                                 }),

@@ -3,8 +3,8 @@ var a = n(951288),
     r = n(647438),
     i = n(442837),
     l = n(704215),
-    s = n(264418),
-    o = n(607070),
+    o = n(264418),
+    s = n(607070),
     c = n(243778),
     d = n(7093),
     u = n(819640),
@@ -13,16 +13,16 @@ var a = n(951288),
     h = n(804413),
     x = n(787528),
     f = n(474936),
-    b = n(981631),
-    g = n(921944),
+    g = n(981631),
+    b = n(921944),
     v = n(388032);
 function j(e) {
     let { groupName: t, targetElementRef: n } = e,
         r = (0, h.Z)(),
-        s = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
+        o = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
         m = (0, d.Z)((e) => e.isOpen),
-        p = (0, i.e7)([u.Z], () => u.Z.getLayers().includes(b.S9g.USER_SETTINGS));
-    return s || null == r || m || p
+        p = (0, i.e7)([u.Z], () => u.Z.getLayers().includes(g.S9g.USER_SETTINGS));
+    return o || null == r || m || p
         ? null
         : (0, a.jsx)(c.Nq, {
               contentType: l.z.NITRO_TENURE_BADGE_LEVEL_UP,
@@ -41,16 +41,16 @@ function j(e) {
 }
 function _(e) {
     var t;
-    let { recentlyLeveledTenureBadge: n, markAsDismissed: i, targetElementRef: l, shouldShow: o } = e,
+    let { recentlyLeveledTenureBadge: n, markAsDismissed: i, targetElementRef: l, shouldShow: s } = e,
         c = f.Qh.indexOf(n),
         u = (0, x.J)(f.Qh[c > 0 ? c - 1 : c], { ambient: !0 }),
         h = (0, r.useCallback)(() => {
-            i(g.L.TAKE_ACTION),
+            i(b.L.TAKE_ACTION),
                 d.Z.setState({ shouldRenderTenureLevelUp: !0 }),
-                m.S.dispatch(b.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, {});
+                m.S.dispatch(g.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, {});
         }, [i]),
         j = (0, r.useCallback)(() => {
-            i(g.L.USER_DISMISS);
+            i(b.L.USER_DISMISS);
         }, [i]),
         _ = f.vK[n],
         y = v.intl.formatToPlainString(v.t.ewkaVV, {
@@ -63,10 +63,10 @@ function _(e) {
                 onClick: h,
             },
         ];
-    return (0, a.jsx)(s.J, {
+    return (0, a.jsx)(o.J, {
         targetElementRef: l,
         onRequestClose: j,
-        shouldShow: o,
+        shouldShow: s,
         caretConfig: { align: "center" },
         graphic:
             null != u

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
 var r,
     i,
-    l = n(31775),
-    s = n.n(l),
+    s = n(31775),
+    l = n.n(s),
     a = n(442837),
     o = n(570140),
     c = n(70956);
@@ -12,7 +12,7 @@ let u = {
         rateLimited: !0,
     },
     d = {
-        validations: new (s())({
+        validations: new (l())({
             max: 100,
             maxAge: 60000,
         }),

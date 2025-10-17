@@ -130,7 +130,7 @@ function N(e) {
 function R(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return null != t
-        ? E.intl.formatToPlainString(E.t["/6mw10"], {
+        ? E.intl.formatToPlainString(E.t["/6mw19"], {
               label: e,
               status: (0, p.u5)(t, n),
           })
@@ -351,7 +351,7 @@ let M = {
     "\uD83D\uDD25":
         "M3 14a9 9 0 1 0 18 0c0-2.63-.61-5.22-1.79-7.58L18.2 4.38a.7.7 0 0 0-1.3.18l-.78 3.9a.66.66 0 0 1-1.27.11L12.22 1.6a.9.9 0 0 0-1.48-.33l-4.2 4.2A12.07 12.07 0 0 0 3 14Zm9.26-.84a.57.57 0 0 0-1-.23L9.6 15a3.08 3.08 0 1 0 5.12.48c-.14-.26-.5-.28-.71-.06L13 16.5l-.74-3.34Z",
 };
-function j(e, t, n, i, a) {
+function k(e, t, n, i, a) {
     let o = M[i];
     if (null != o) {
         let i = n / 20;
@@ -381,7 +381,7 @@ function j(e, t, n, i, a) {
         fill: "black",
     });
 }
-function k(e, t, n, i) {
+function j(e, t, n, i) {
     let { status: a, isMobile: o, isTyping: s } = n,
         l = t.size - t.status - t.offset,
         c = t.offset,
@@ -407,7 +407,7 @@ function k(e, t, n, i) {
                     ry: u.avatarCutoutRadius,
                     fill: "black",
                 }),
-            null != i && j(l, c, t.status, i, t),
+            null != i && k(l, c, t.status, i, t),
         ],
     });
 }
@@ -626,18 +626,18 @@ function V(e) {
             avatarTooltipText: L,
             avatarTooltipTitle: M,
         } = e,
-        j = n !== h.Skl.UNKNOWN ? n : null,
+        k = n !== h.Skl.UNKNOWN ? n : null,
         B = (0, g.UC)(a),
-        V = null != j ? Math.ceil((B.status * g.D6 - B.status) / 2) : 0,
+        V = null != k ? Math.ceil((B.status * g.D6 - B.status) / 2) : 0,
         H = B.size + V,
-        Y = (0, u.vj)(j, s),
+        Y = (0, u.vj)(k, s),
         W = i.useId();
     return (0, r.jsx)(
         Z,
         I(O({}, e), {
             ariaLabel: A,
             ariaHidden: S,
-            status: j,
+            status: k,
             specs: B,
             typingOffset: V,
             children: (0, r.jsxs)("svg", {
@@ -649,11 +649,11 @@ function V(e) {
                 "aria-hidden": !0,
                 children: [
                     null != P &&
-                        k(
+                        j(
                             W,
                             B,
                             {
-                                status: j,
+                                status: k,
                                 isMobile: l,
                                 isTyping: f,
                             },
@@ -664,7 +664,7 @@ function V(e) {
                         y: 0,
                         width: B.size,
                         height: B.size,
-                        mask: null != P ? "url(#".concat(W, ")") : "url(#".concat(w(j, a, l, f), ")"),
+                        mask: null != P ? "url(#".concat(W, ")") : "url(#".concat(w(k, a, l, f), ")"),
                         children: (0, r.jsx)(F, {
                             ref: m,
                             src: t,
@@ -672,11 +672,11 @@ function V(e) {
                             className: C,
                         }),
                     }),
-                    null != j && null != T ? x(T, l, B, j) : null,
-                    null != j
+                    null != k && null != T ? x(T, l, B, k) : null,
+                    null != k
                         ? (0, r.jsx)(d.aM, {
                               "data-migration-pending": !0,
-                              text: y ? (0, p.u5)(j) : null,
+                              text: y ? (0, p.u5)(k) : null,
                               "aria-label": !1,
                               position: "top",
                               spacing: 5 + 1.5 * B.stroke,
@@ -686,9 +686,9 @@ function V(e) {
                                       children: [
                                           (0, r.jsx)(
                                               "rect",
-                                              I(O({}, e, D(B, j, l, f)), {
+                                              I(O({}, e, D(B, k, l, f)), {
                                                   fill: Y,
-                                                  mask: "url(#".concat((0, u.rs)(j, l, f), ")"),
+                                                  mask: "url(#".concat((0, u.rs)(k, l, f), ")"),
                                                   className: b.pointerEvents,
                                               }),
                                           ),
@@ -754,7 +754,7 @@ function W(e) {
             "aria-hidden": D = !1,
             "aria-label": L,
             imageClassName: M,
-            pulseStatusIcon: k,
+            pulseStatusIcon: j,
             CutoutIcon: V,
             avatarTooltipAsset: W,
             avatarTooltipText: K,
@@ -825,10 +825,10 @@ function W(e) {
                     clamp: !0,
                 },
                 from: { scale: 1 },
-                to: k ? [{ scale: 0.8 }, { scale: 1.1 }, { scale: 1 }] : [],
+                to: j ? [{ scale: 0.8 }, { scale: 1.1 }, { scale: 1 }] : [],
             },
             C() ? "animate-always" : "animate-never",
-            [k, v],
+            [j, v],
         );
     return (0, r.jsx)(
         Z,
@@ -864,7 +864,7 @@ function W(e) {
                                 rx: ea,
                                 ry: ea,
                             }),
-                            null != W && j(ec.size - ec.status - ec.offset, ec.offset, ec.status, W, ec),
+                            null != W && k(ec.size - ec.status - ec.offset, ec.offset, ec.status, W, ec),
                         ],
                     }),
                     (0, r.jsx)("foreignObject", {

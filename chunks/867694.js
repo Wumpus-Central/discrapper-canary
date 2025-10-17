@@ -5,22 +5,22 @@ var r = n(951288),
 function i(e) {
     var t;
     let { node: n } = e,
-        { useValue: i, setValue: a, useTitle: s, useSubtitle: c, useDisabled: u, useDisabledMessage: d } = n,
-        f = s(),
-        m = null == c ? void 0 : c(),
-        b = i(),
-        p = null != (t = null == u ? void 0 : u()) && t,
+        { useValue: i, setValue: a, useTitle: c, useSubtitle: s, useDisabled: u, useDisabledMessage: d } = n,
+        f = c(),
+        b = null == s ? void 0 : s(),
+        p = i(),
+        y = null != (t = null == u ? void 0 : u()) && t,
         j = null == d ? void 0 : d();
     return (0, r.jsxs)(o.X, {
         children: [
             (0, r.jsx)(l.rsf, {
                 label: f,
-                description: m,
-                checked: b,
+                description: b,
+                checked: p,
                 onChange: (e) => a(e),
-                disabled: p,
+                disabled: y,
             }),
-            p && null != j
+            y && null != j
                 ? (0, r.jsx)(l.Wn, {
                       messageType: l.QYI.WARNING,
                       children: j,

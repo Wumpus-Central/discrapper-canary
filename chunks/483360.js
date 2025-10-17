@@ -47,8 +47,8 @@ var i = n(658722),
     L = n(131704),
     x = n(345162),
     M = n(598077),
-    j = n(314897),
-    k = n(592125),
+    k = n(314897),
+    j = n(592125),
     U = n(580005),
     G = n(77498),
     B = n(984933),
@@ -151,8 +151,8 @@ let eb = new h.Z("AutocompleteUtils"),
     eL = 1,
     ex = 1000,
     eM = 0.2,
-    ej = 0.1,
-    ek = 50,
+    ek = 0.1,
+    ej = 50,
     eU = () => !0,
     eG = /(\t|\s)/,
     eB = [],
@@ -203,7 +203,7 @@ function eW(e) {
         } else o[n] = 1 + r / i;
     }
     for (let e of K.Z.getFriendIDs()) o[e] = (null != (t = o[e]) ? t : 1) + eM;
-    for (let e of k.Z.getDMUserIds()) o[e] = (null != (n = o[e]) ? n : 1) + ej;
+    for (let e of j.Z.getDMUserIds()) o[e] = (null != (n = o[e]) ? n : 1) + ek;
     return o;
 }
 let eK = [B.sH, B.Zb, el.d4z.GUILD_CATEGORY];
@@ -285,7 +285,7 @@ function eJ(e) {
                         comparator: null != (I = null != h ? h : e) ? I : n,
                         sortable: null != (T = null != m ? m : c) ? T : i,
                     })
-                  : g < ek &&
+                  : g < ej &&
                     (a()(u, i) ||
                         a()(d, l) ||
                         (null != c && a()(u, c)) ||
@@ -384,12 +384,12 @@ function e5(e, t) {
     let n = t[e.parent_id];
     if (null == n) {
         var r;
-        n = t[e.parent_id] = null == (r = k.Z.getChannel(e.parent_id)) ? void 0 : r.name.toLocaleLowerCase();
+        n = t[e.parent_id] = null == (r = j.Z.getChannel(e.parent_id)) ? void 0 : r.name.toLocaleLowerCase();
     }
     return n;
 }
 function e6(e, t) {
-    let n = k.Z.getChannel(e);
+    let n = j.Z.getChannel(e);
     return null == e || null == n
         ? []
         : s()(H.Z.getMessages(e).toArray())
@@ -420,7 +420,7 @@ let e7 = (0, $.oH)((e, t, n) => {
             i = new Map(),
             a = [];
         return (
-            s()(k.Z.getMutablePrivateChannels())
+            s()(j.Z.getMutablePrivateChannels())
                 .values()
                 .value()
                 .forEach((e) => {
@@ -461,7 +461,7 @@ let e7 = (0, $.oH)((e, t, n) => {
             let { query: t, limit: n = 10, filter: r } = e;
             return eJ({
                 query: t,
-                members: k.Z.getDMUserIds()
+                members: j.Z.getDMUserIds()
                     .map((e) => X.default.getUser(e))
                     .filter(ee.lm),
                 limit: n,
@@ -478,9 +478,9 @@ let e7 = (0, $.oH)((e, t, n) => {
                     checkRecentlyTalkedOnEmptyQuery: o = !0,
                     allowSnowflake: s = !1,
                 } = e,
-                l = k.Z.getChannel(n);
+                l = j.Z.getChannel(n);
             if (null == l) return [];
-            let c = l.isThread() ? k.Z.getChannel(l.parent_id) : null,
+            let c = l.isThread() ? j.Z.getChannel(l.parent_id) : null,
                 u = null != c ? c : l;
             if (null == u) return [];
             if (u.isPrivate()) {
@@ -591,9 +591,9 @@ let e7 = (0, $.oH)((e, t, n) => {
                 null != r
                     ? s()(B.ZP.getChannels(r)[l])
                           .map((e) => e.channel)
-                          .concat(g ? (h ? k.Z.getAllThreadsForGuild(r) : P.Z.computeAllActiveJoinedThreads(r)) : [])
+                          .concat(g ? (h ? j.Z.getAllThreadsForGuild(r) : P.Z.computeAllActiveJoinedThreads(r)) : [])
                           .value()
-                    : s()(k.Z.loadAllGuildAndPrivateChannelsFromDisk())
+                    : s()(j.Z.loadAllGuildAndPrivateChannelsFromDisk())
                           .values()
                           .concat(g ? P.Z.computeAllActiveJoinedThreads() : [])
                           .value();
@@ -671,7 +671,7 @@ let e7 = (0, $.oH)((e, t, n) => {
                     channelsByRecipientId: i,
                     recipientsById: a,
                     recipients: o,
-                } = e7(k.Z.getPrivateChannelsVersion(), K.Z.getVersion(), X.default.getUserStoreVersion()),
+                } = e7(j.Z.getPrivateChannelsVersion(), K.Z.getVersion(), X.default.getUserStoreVersion()),
                 s = eJ({
                     query: t,
                     members: o,
@@ -704,7 +704,7 @@ let e7 = (0, $.oH)((e, t, n) => {
                     containQuery: RegExp(ei.Z.escape(o), "i"),
                     queryLower: o,
                 },
-                c = s()(k.Z.getMutablePrivateChannels()).values().value(),
+                c = s()(j.Z.getMutablePrivateChannels()).values().value(),
                 u = [];
             for (let e of c) {
                 if (!e.isMultiUserDM() || !i(e)) continue;
@@ -1240,7 +1240,7 @@ let e7 = (0, $.oH)((e, t, n) => {
                           };
                       })
                     : Z.ZP.getMembers(n.guild_id).filter(eX),
-                s = j.default.getId(),
+                s = k.default.getId(),
                 l = X.default.getUsers(),
                 c = q.Z.getGuildId(),
                 u = t.toLocaleLowerCase(),

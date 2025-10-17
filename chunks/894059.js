@@ -1,18 +1,18 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => c });
 var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(518756),
     o = n(576749),
-    c = n(388032);
-function a(e) {
+    a = n(388032);
+function c(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        a = (0, l.Z)(e),
+        c = (0, l.Z)(e),
         u = (0, o.Z)();
-    return a
+    return c
         ? (0, r.jsx)(i.sNh, {
               id: "create-event",
-              label: c.intl.string(c.t["60lJ0N"]),
+              label: a.intl.string(a.t["60lJ0N"]),
               icon: t ? i.VZI : void 0,
               action: () => {
                   (0, i.ZDy)(async () => {

@@ -2,8 +2,8 @@ n.d(t, { Z: () => u });
 var r = n(951288);
 n(647438);
 var i = n(120356),
-    l = n.n(i),
-    s = n(481060),
+    s = n.n(i),
+    l = n(481060),
     a = n(388905),
     o = n(388032),
     c = n(197571);
@@ -13,12 +13,12 @@ function u(e) {
         children: [
             (0, r.jsx)(a.Ee, {
                 src: n(26230),
-                className: l()(c.marginBottom20, c.marginTop8),
+                className: s()(c.marginBottom20, c.marginTop8),
             }),
             (0, r.jsx)(a.Dx, { children: o.intl.string(o.t.ailkVF) }),
             (0, r.jsx)(a.DK, { children: o.intl.format(o.t["4ZMVCA"], { email: t }) }),
-            (0, r.jsx)(s.Text, {
-                className: l()(c.marginBottom8, c.marginTop20),
+            (0, r.jsx)(l.Text, {
+                className: s()(c.marginBottom8, c.marginTop20),
                 variant: "text-md/normal",
                 children: o.intl.string(o.t["dpAn+/"]),
             }),

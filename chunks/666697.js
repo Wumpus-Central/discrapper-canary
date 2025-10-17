@@ -58,12 +58,12 @@ let O = function (e) {
             displayedSimilarApplications: B,
             previousView: k,
         },
-        z = a.useRef(U);
+        F = a.useRef(U);
     a.useEffect(() => {
-        z.current = U;
+        F.current = U;
     }),
         a.useEffect(() => {
-            let { displayedSimilarApplications: e, previousView: t } = z.current;
+            let { displayedSimilarApplications: e, previousView: t } = F.current;
             (null == A ? void 0 : A.id) != null &&
                 M !== p.M.FETCHING &&
                 (0, m.zZ)(I.rMx.APP_DIRECTORY_PAGE_VIEWED, {
@@ -74,7 +74,7 @@ let O = function (e) {
                     suggested_application_ids: null == e ? void 0 : e.map((e) => e.id),
                 });
         }, [null == A ? void 0 : A.id, M]);
-    let F = a.useMemo(
+    let z = a.useMemo(
             () => [
                 {
                     id: y.GlobalDiscoveryAppsSections.ABOUT,
@@ -142,7 +142,7 @@ let O = function (e) {
                                                   (0, r.jsx)("div", {
                                                       className: P.contentTabs,
                                                       children: (0, r.jsx)(o.Z, {
-                                                          tabs: F,
+                                                          tabs: z,
                                                           onTabSelect: V,
                                                           selectedTab: Z,
                                                       }),

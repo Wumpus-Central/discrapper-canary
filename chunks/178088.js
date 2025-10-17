@@ -9,14 +9,14 @@ var r = n(951288),
     u = n(481060),
     d = n(100527),
     p = n(906732),
-    h = n(602478),
-    f = n(2818),
+    f = n(602478),
+    h = n(2818),
     g = n(768943),
     m = n(453473),
     b = n(216789),
     _ = n(675478),
-    y = n(581883),
-    O = n(585483),
+    O = n(581883),
+    y = n(585483),
     v = n(153209),
     j = n(903672),
     x = n(791914),
@@ -41,9 +41,9 @@ function Z(e) {
         { analyticsLocations: L } = (0, p.ZP)(d.Z.NOTIFICATION_CENTER),
         [M, k] = i.useState(!1),
         [G, U] = [
-            (0, s.e7)([y.Z], () => {
+            (0, s.e7)([O.Z], () => {
                 var e, t;
-                return null != (t = null == (e = y.Z.settings.inbox) ? void 0 : e.currentTab) ? t : c.X.UNREADS;
+                return null != (t = null == (e = O.Z.settings.inbox) ? void 0 : e.currentTab) ? t : c.X.UNREADS;
             }),
             i.useCallback((e) => {
                 _.hW.updateAsync(
@@ -56,10 +56,10 @@ function Z(e) {
                 );
             }, []),
         ],
-        { showTutorial: B, setSeenTutorial: V } = (function (e) {
-            let t = (0, s.e7)([y.Z], () => {
+        { showTutorial: B, setSeenTutorial: F } = (function (e) {
+            let t = (0, s.e7)([O.Z], () => {
                     var e, t;
-                    return null != (t = null == (e = y.Z.settings.inbox) ? void 0 : e.viewedTutorial) && t;
+                    return null != (t = null == (e = O.Z.settings.inbox) ? void 0 : e.viewedTutorial) && t;
                 }),
                 n = i.useCallback(() => {
                     _.hW.updateAsync(
@@ -75,24 +75,24 @@ function Z(e) {
                 setSeenTutorial: n,
             };
         })(G),
-        F = i.useCallback(() => {
+        V = i.useCallback(() => {
             k(!1), M && (null == n || n());
         }, [n, M]),
         H = i.useCallback(() => {
             k(!M), M ? null == n || n() : null == t || t();
         }, [n, t, M]);
-    i.useEffect(() => (O.S.subscribe(I.CkL.TOGGLE_INBOX, H), () => void O.S.unsubscribe(I.CkL.TOGGLE_INBOX, H)), [H]);
-    let { enabled: z, inInbox: W } = f.Z.useExperiment({ location: "RecentsPopout" }),
+    i.useEffect(() => (y.S.subscribe(I.CkL.TOGGLE_INBOX, H), () => void y.S.unsubscribe(I.CkL.TOGGLE_INBOX, H)), [H]);
+    let { enabled: z, inInbox: W } = h.Z.useExperiment({ location: "RecentsPopout" }),
         K = (0, s.e7)([g.Z], () => g.Z.hasOverdueReminder(), []) && z && W,
-        { enabled: Y } = h.Z.useExperiment({ location: "RecentsPopout" });
+        { enabled: Y } = f.Z.useExperiment({ location: "RecentsPopout" });
     i.useEffect(() => {
         G !== c.X.BOOKMARKS || z || W || U(c.X.MENTIONS);
     });
     let q = i.useCallback(
             (e) => {
-                e.shiftKey || F();
+                e.shiftKey || V();
             },
-            [F],
+            [V],
         ),
         X = (0, b.Us)({ location: "ForYou" });
     return (0, r.jsx)(p.Gt, {
@@ -104,7 +104,7 @@ function Z(e) {
             align: T,
             autoInvert: !1,
             shouldShow: M,
-            onRequestClose: F,
+            onRequestClose: V,
             renderPopout: function () {
                 return (0, r.jsx)(u.VqE, {
                     "aria-label": P.intl.string(P.t.GSmTKC),
@@ -116,7 +116,7 @@ function Z(e) {
                                 tab: G,
                                 setTab: U,
                                 badgeState: Z,
-                                closePopout: F,
+                                closePopout: V,
                             }),
                             children:
                                 G === c.X.FOR_YOU
@@ -126,7 +126,7 @@ function Z(e) {
                                       : Y && G === c.X.GAME_INVITES
                                         ? (0, r.jsx)(S.Z, {})
                                         : z && W && G === c.X.BOOKMARKS
-                                          ? (0, r.jsx)(m.K, { closePopout: F })
+                                          ? (0, r.jsx)(m.K, { closePopout: V })
                                           : G === c.X.SCHEDULED
                                             ? (0, r.jsx)(C._, {})
                                             : (0, r.jsx)(a.SV, {
@@ -134,8 +134,8 @@ function Z(e) {
                                                   children: (0, r.jsx)(E.ZP, {
                                                       onJump: q,
                                                       showTutorial: B,
-                                                      setSeenTutorial: V,
-                                                      closePopout: F,
+                                                      setSeenTutorial: F,
+                                                      closePopout: V,
                                                   }),
                                               }),
                         }),

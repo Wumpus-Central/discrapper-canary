@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -100,7 +100,7 @@ class _ extends i.PureComponent {
             })(this, "_doneTimer", new a.V7());
     }
 }
-let O = l.ZP.connectStores([c.Z], (e) => {
+let E = l.ZP.connectStores([c.Z], (e) => {
     let { libraryApplication: t } = e;
     return { cloudSyncState: c.Z.getState(t.id, t.branchId) };
 })(_);

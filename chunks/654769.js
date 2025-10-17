@@ -94,14 +94,14 @@ function L(e, t) {
 }
 let x = C.isPlatformEmbedded && (0, C.isWindows)(),
     M = x && 10 > parseFloat(l.Z.os.release),
-    j = !0;
+    k = !0;
 if (x && !M) {
     let [e, , t] = l.Z.os.release.split(".");
-    j = parseInt(e) > 10 || parseInt(t) >= 15063;
+    k = parseInt(e) > 10 || parseInt(t) >= 15063;
 }
-let k = new u.Z("NotificationUtils"),
+let j = new u.Z("NotificationUtils"),
     U =
-        (x && j) ||
+        (x && k) ||
         ("Chrome" === s().name && 47 > parseFloat(s().version)) ||
         ("Firefox" === s().name && 52 > parseFloat(s().version));
 async function G() {
@@ -109,7 +109,7 @@ async function G() {
         try {
             return await N.ZP.invoke("NOTIFICATIONS_GET_SETTINGS");
         } catch (e) {
-            k.warn("Fetching native notification settings failed with error: ", e);
+            j.warn("Fetching native notification settings failed with error: ", e);
         }
     return null;
 }
@@ -139,7 +139,7 @@ async function H(e) {
             await N.ZP.invoke("NOTIFICATIONS_SEND_NOTIFICATION", { sound: V(e, n) });
             return;
         } catch (e) {
-            k.warn("Native notification sound failed with error: ", e);
+            j.warn("Native notification sound failed with error: ", e);
         }
     (0, h.GN)(e, t, void 0, n);
 }
@@ -172,11 +172,11 @@ if (M) {
                     P(this, "onclick", function () {}),
                     P(this, "onclose", function () {}),
                     t.includes("\0")
-                        ? (k.warn("Notification title contains null character, setting to empty string"),
+                        ? (j.warn("Notification title contains null character, setting to empty string"),
                           (this.title = ""))
                         : (this.title = t),
                     n.includes("\0")
-                        ? (k.warn("Notification body contains null character, setting to empty string"),
+                        ? (j.warn("Notification body contains null character, setting to empty string"),
                           (this.body = ""))
                         : (this.body = n),
                     (this.icon = r),
@@ -217,7 +217,7 @@ if (null === l.Z || void 0 === l.Z ? void 0 : l.Z.features.supports("notificatio
         }),
             N.ZP.invoke("NOTIFICATIONS_REMOVE_ALL_NOTIFICATIONS");
     } catch (e) {
-        k.warn("Native notification setup failed with error: ", e);
+        j.warn("Native notification setup failed with error: ", e);
     }
     (null === l.Z || void 0 === l.Z ? void 0 : l.Z.features.supports("notifications_provisional")) &&
         Q().then((e) => {
@@ -236,7 +236,7 @@ function q(e) {
                 });
             return;
         } catch (e) {
-            k.warn("Native notification authorization failed with error: ", e);
+            j.warn("Native notification authorization failed with error: ", e);
         }
     null != K &&
         K.requestPermission(async () => {
@@ -293,8 +293,8 @@ async function $(e, t, n, r, i) {
             i.omitViewTracking || T.default.track(R.rMx.NOTIFICATION_ACTION, w({ action: "VIEW" }, r)));
         return;
     }
-    t.includes("\0") && (k.warn("Notification title contains null character, setting to empty string"), (t = "")),
-        n.includes("\0") && (k.warn("Notification body contains null character, setting to empty string"), (n = ""));
+    t.includes("\0") && (j.warn("Notification title contains null character, setting to empty string"), (t = "")),
+        n.includes("\0") && (j.warn("Notification body contains null character, setting to empty string"), (n = ""));
     let q = null != (o = null == i ? void 0 : i.tag) ? o : null,
         Q = M && (null == g ? void 0 : g.sound) === !0 && (null == g ? void 0 : g.authorizationStatus) === "authorized",
         $ = (e, t) => {
@@ -371,7 +371,7 @@ async function $(e, t, n, r, i) {
                     try {
                         N.ZP.invoke("NOTIFICATIONS_REMOVE_NOTIFICATIONS", [e]);
                     } catch (e) {
-                        k.warn("Native notification removal failed with error: ", e);
+                        j.warn("Native notification removal failed with error: ", e);
                     }
                 },
             };
@@ -383,7 +383,7 @@ async function $(e, t, n, r, i) {
                 }
             );
         } catch (e) {
-            k.warn("Native notification failed with error: ", e);
+            j.warn("Native notification failed with error: ", e);
         }
     }
     null != i.sound && M && (J(i.sound, null != (h = i.volume) ? h : 1, i.soundpack), (r.ping = !0));
@@ -408,7 +408,7 @@ async function $(e, t, n, r, i) {
         let n = "";
         null == (t = i.onClick) || t.call(i, n);
     }),
-    j)
+    k)
         ? {
               notification: m,
               trackingProps: r,

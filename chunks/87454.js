@@ -3,8 +3,8 @@ var a = n(951288),
     r = n(647438),
     i = n(704215),
     l = n(481060),
-    s = n(581883),
-    o = n(428967),
+    o = n(581883),
+    s = n(428967),
     c = n(972118);
 let d = r.memo(function (e) {
     let { className: t, content: n, onChange: d } = e,
@@ -14,7 +14,7 @@ let d = r.memo(function (e) {
         f = r.useCallback(() => {
             null == d || d(n), p();
         }, [d, p, n]),
-        b = r.useCallback(
+        g = r.useCallback(
             (e) => {
                 e.preventDefault(), x(!0), navigator.clipboard.writeText(n.toLowerCase());
             },
@@ -31,22 +31,22 @@ let d = r.memo(function (e) {
                         size: "sm",
                         variant: "icon-only",
                         icon: h ? l.C2q : l.zTD,
-                        onClick: b,
+                        onClick: g,
                         "aria-label": h ? "Copied" : "Copy",
                     }),
                     (0, a.jsx)(l.rsf, {
                         label: "".concat(n.toLowerCase(), " (").concat(i.z[n], ")"),
-                        description: (0, o.qh)(u)
+                        description: (0, s.qh)(u)
                             ? (function (e) {
                                   var t, n;
                                   let a =
-                                      null == (n = s.Z.settings.userContent) ||
+                                      null == (n = o.Z.settings.userContent) ||
                                       null == (t = n.recurringDismissibleContentStates)
                                           ? void 0
                                           : t[e];
                                   if (null == a) return null;
                                   let r = [],
-                                      { lastDismissedVersion: i, lastDismissedAtMs: l, lastDismissedObjectId: o } = a;
+                                      { lastDismissedVersion: i, lastDismissedAtMs: l, lastDismissedObjectId: s } = a;
                                   if (
                                       (void 0 !== i && 0 !== i && r.push("last_dismissed_version: ".concat(i)),
                                       void 0 !== l)
@@ -55,7 +55,7 @@ let d = r.memo(function (e) {
                                           t = Number.isNaN(e) ? "n/a" : new Date(e).toLocaleString();
                                       r.push("last_dismissed_at: ".concat(t));
                                   }
-                                  return (void 0 !== o && "0" !== o && r.push("last_dismissed_object_id: ".concat(o)),
+                                  return (void 0 !== s && "0" !== s && r.push("last_dismissed_object_id: ".concat(s)),
                                   0 === r.length)
                                       ? null
                                       : r.join(", ");

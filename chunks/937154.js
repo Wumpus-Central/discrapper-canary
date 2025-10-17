@@ -1,9 +1,9 @@
-n.d(t, { Z: () => l }), n(388685);
+n.d(t, { Z: () => s }), n(388685);
 var r = n(647438);
 function i() {
     return "undefined" == typeof document || "visible" === document.visibilityState;
 }
-function l() {
+function s() {
     let [e, t] = (0, r.useState)(i());
     return (
         (0, r.useEffect)(() => {

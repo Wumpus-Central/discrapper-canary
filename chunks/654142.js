@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(888369),
     d = n(430824),
     p = n(823379),
-    h = n(179809),
-    f = n(652376),
+    f = n(179809),
+    h = n(652376),
     g = n(981631);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -78,10 +78,10 @@ let _ = i.memo(function (e) {
             }
             return i;
         })(e, ["folderNode"]);
-    let { id: y, name: O, color: v, children: j } = t,
+    let { id: O, name: y, color: v, children: j } = t,
         x = j.map((e) => e.id),
         C = (0, s.Z)((e) => e.guildId),
-        E = (0, l.e7)([c.Z], () => c.Z.isFolderExpanded(y)),
+        E = (0, l.e7)([c.Z], () => c.Z.isFolderExpanded(O)),
         S = (function (e) {
             let t = e.children
                     .map((e) => {
@@ -95,7 +95,7 @@ let _ = i.memo(function (e) {
             for (let e of t) (e.length < n || 0 === r.length) && (r.push(e), (n -= e.length));
             return "".concat(r.join(", ")).concat(r.length < t.length ? ", ..." : "");
         })(t),
-        I = (0, f.Z)(t),
+        I = (0, h.Z)(t),
         {
             mentionCount: P,
             isMentionLowImportance: N,
@@ -106,8 +106,8 @@ let _ = i.memo(function (e) {
             unread: x.some((e) => u.default.hasUnread(e)),
         })),
         w = i.useCallback(() => {
-            a.Z.toggleGuildFolderExpand(y);
-        }, [y]),
+            a.Z.toggleGuildFolderExpand(O);
+        }, [O]),
         T = i.useCallback(
             (e) => {
                 (0, o.jW)(e, async () => {
@@ -116,18 +116,18 @@ let _ = i.memo(function (e) {
                         (0, r.jsx)(
                             e,
                             b(m({}, t), {
-                                folderId: y,
-                                folderName: O,
+                                folderId: O,
+                                folderName: y,
                                 folderColor: v,
                                 unread: Z || P > 0,
                             }),
                         );
                 });
             },
-            [y, O, v, Z, P],
+            [O, y, v, Z, P],
         );
     return (0, r.jsx)(
-        h.Z,
+        f.Z,
         b(m({}, _), {
             folderNode: t,
             expanded: E,

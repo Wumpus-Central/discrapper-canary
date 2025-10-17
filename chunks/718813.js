@@ -17,8 +17,8 @@ var r,
     _ = n(819640),
     E = n(585483),
     O = n(981631),
-    y = n(388032),
-    v = n(484718),
+    v = n(388032),
+    y = n(484718),
     I = n(256076);
 function C(e, t, n) {
     return (
@@ -49,7 +49,7 @@ function S(e) {
     }
     return e;
 }
-function T(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -67,7 +67,7 @@ function T(e, t) {
         e
     );
 }
-let N = (0, g.Un)({
+let T = (0, g.Un)({
         createPromise: () => n.e("69470").then(n.bind(n, 989804)),
         webpackId: 989804,
         name: "UserSettings",
@@ -81,13 +81,13 @@ let N = (0, g.Un)({
         webpackId: 765457,
         name: "CheckpointSlides",
     }),
-    A = (0, g.Un)({
+    x = (0, g.Un)({
         createPromise: () =>
-            Promise.all([n.e("36599"), n.e("7654"), n.e("87641"), n.e("86915")]).then(n.bind(n, 869779)),
+            Promise.all([n.e("36599"), n.e("7654"), n.e("86736"), n.e("86915")]).then(n.bind(n, 869779)),
         webpackId: 869779,
         name: "ChannelSettings",
     }),
-    x = (0, g.Un)({
+    A = (0, g.Un)({
         createPromise: () => n.e("45620").then(n.bind(n, 838819)),
         webpackId: 838819,
         name: "CollectiblesShop",
@@ -102,7 +102,7 @@ let N = (0, g.Un)({
                 n.e("51453"),
                 n.e("7654"),
                 n.e("845"),
-                n.e("87641"),
+                n.e("86736"),
                 n.e("6850"),
                 n.e("58227"),
                 n.e("44686"),
@@ -114,10 +114,10 @@ let N = (0, g.Un)({
         name: "GuildSettings",
     }),
     w = {
-        [O.S9g.USER_SETTINGS]: () => (0, i.jsx)(N, {}),
-        [O.S9g.CHANNEL_SETTINGS]: () => (0, i.jsx)(A, {}),
+        [O.S9g.USER_SETTINGS]: () => (0, i.jsx)(T, {}),
+        [O.S9g.CHANNEL_SETTINGS]: () => (0, i.jsx)(x, {}),
         [O.S9g.GUILD_SETTINGS]: () => (0, i.jsx)(Z, {}),
-        [O.S9g.COLLECTIBLES_SHOP]: () => (0, i.jsx)(x, {}),
+        [O.S9g.COLLECTIBLES_SHOP]: () => (0, i.jsx)(A, {}),
         [O.S9g.MANA_PLAYGROUND]: () => (0, i.jsx)(P, {}),
         [O.S9g.CHECKPOINT]: () => (0, i.jsx)(j, {}),
     },
@@ -127,10 +127,10 @@ let N = (0, g.Un)({
         friction: 10,
         tension: 100,
     };
-function k() {
+function M() {
     return l.useEffect(() => (h.Z.enable(), h.Z.enableTemp(f.u), () => h.Z.disableTemp()), []), null;
 }
-class M extends (r = l.PureComponent) {
+class k extends (r = l.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         return e.mode !== t.mode
             ? {
@@ -209,7 +209,7 @@ class M extends (r = l.PureComponent) {
             f = !u && !a,
             h = (0, i.jsx)(
                 s.Z.div,
-                T(
+                N(
                     S(
                         {
                             ref: (e) => (this.containerRef.current = null != e ? e.componentRef : void 0),
@@ -220,15 +220,15 @@ class M extends (r = l.PureComponent) {
                                 ? (function (e) {
                                       switch (e) {
                                           case O.S9g.USER_SETTINGS:
-                                              return y.intl.string(y.t.cduTBA);
+                                              return v.intl.string(v.t.cduTBA);
                                           case O.S9g.CHANNEL_SETTINGS:
-                                              return y.intl.string(y.t.XPDhcX);
+                                              return v.intl.string(v.t.XPDhcX);
                                           case O.S9g.COLLECTIBLES_SHOP:
-                                              return y.intl.string(y.t.pWG4zc);
+                                              return v.intl.string(v.t.pWG4zc);
                                           case O.S9g.MANA_PLAYGROUND:
                                               return "Component Playground";
                                           case O.S9g.CHECKPOINT:
-                                              return y.intl.string(v.default["CdU/PD"]);
+                                              return v.intl.string(y.default["CdU/PD"]);
                                           default:
                                               return "";
                                       }
@@ -276,7 +276,7 @@ class M extends (r = l.PureComponent) {
             });
     }
 }
-C(M, "defaultProps", { baseLayer: !1 }), C(M, "contextType", d.Sfi);
+C(k, "defaultProps", { baseLayer: !1 }), C(k, "contextType", d.Sfi);
 class U extends l.PureComponent {
     componentDidMount() {
         E.S.subscribe(O.CkL.LAYER_POP_ESCAPE_KEY, p.xf);
@@ -291,7 +291,7 @@ class U extends l.PureComponent {
         return (
             l.push(
                 (0, i.jsx)(
-                    M,
+                    k,
                     {
                         mode: 0 !== r || n ? R : L,
                         baseLayer: !0,
@@ -309,11 +309,11 @@ class U extends l.PureComponent {
         return (
             (r = "string" == typeof e ? w[e]() : (0, i.jsx)(e, {})),
             (0, i.jsxs)(
-                M,
+                k,
                 {
                     name: "string" == typeof e ? e : void 0,
                     mode: t === n - 1 ? L : R,
-                    children: [(0, i.jsx)(k, {}), r],
+                    children: [(0, i.jsx)(M, {}), r],
                 },
                 "layer-".concat(t),
             )
@@ -344,7 +344,7 @@ function G(e) {
         r = (0, m.QP)((e) => e.fullScreenLayers.length > 0);
     return (0, i.jsx)(
         U,
-        T(S({}, e), {
+        N(S({}, e), {
             sidebarTheme: t,
             layers: n,
             hasFullScreenLayer: r,

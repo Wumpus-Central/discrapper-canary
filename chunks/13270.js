@@ -34,14 +34,14 @@ var h = {
                 for (var o in t) !(e.indexOf(o) >= 0) && Object.prototype.hasOwnProperty.call(t, o) && (r[o] = t[o]);
                 return r;
             })(t, ["bgColor", "fgColor", "level", "size", "value"]),
-            c = new n.default(-1, i.default[u]);
-        c.addData(h), c.make();
-        var d = c.modules;
+            d = new n.default(-1, i.default[u]);
+        d.addData(h), d.make();
+        var c = d.modules;
         return s.default.createElement(
             l.default,
             o({}, g, {
                 bgColor: r,
-                bgD: d
+                bgD: c
                     .map(function (t, e) {
                         return t
                             .map(function (t, r) {
@@ -51,7 +51,7 @@ var h = {
                     })
                     .join(" "),
                 fgColor: a,
-                fgD: d
+                fgD: c
                     .map(function (t, e) {
                         return t
                             .map(function (t, r) {
@@ -62,7 +62,7 @@ var h = {
                     .join(" "),
                 ref: e,
                 size: f,
-                viewBoxSize: d.length,
+                viewBoxSize: c.length,
             }),
         );
     });

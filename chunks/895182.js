@@ -3,8 +3,8 @@ var a = n(951288),
     r = n(647438),
     i = n(660815),
     l = n(442837),
-    s = n(481060),
-    o = n(570140),
+    o = n(481060),
+    s = n(570140),
     c = n(905551),
     d = n(60482),
     u = n(430824),
@@ -64,11 +64,11 @@ function f() {
             return null == (t = d.Z.getStateForGuild(e)) ? void 0 : t.instances;
         }),
         f = r.useMemo(() => Object.values(null != n ? n : {})[0], [n]),
-        b = r.useCallback(
+        g = r.useCallback(
             (t) => {
                 null != f &&
                     null != e &&
-                    o.Z.dispatch({
+                    s.Z.dispatch({
                         type: "GAME_SERVER_UPDATE_INSTANCE_SUCCESS",
                         guildId: e,
                         instance: x(h({}, f), { status: t }),
@@ -76,27 +76,27 @@ function f() {
             },
             [f, e],
         ),
-        g = r.useMemo(
+        b = r.useMemo(
             () =>
                 Object.values(i.V).map((e) =>
                     (0, a.jsx)(
-                        s.Button,
+                        o.Button,
                         {
                             variant: "primary",
                             text: e,
                             onClick: () => {
-                                b(e);
+                                g(e);
                             },
                         },
                         e,
                     ),
                 ),
-            [b],
+            [g],
         ),
         v = r.useCallback(() => {
             null != f &&
                 null != e &&
-                o.Z.dispatch({
+                s.Z.dispatch({
                     type: "GAME_SERVER_UPDATE_INSTANCE_SUCCESS",
                     guildId: e,
                     instance: x(h({}, f), {
@@ -108,12 +108,12 @@ function f() {
         }, [f, e]);
     return null == e
         ? null
-        : (0, a.jsxs)(s.zJl, {
+        : (0, a.jsxs)(o.zJl, {
               className: p.container,
               children: [
                   (0, a.jsx)("div", {
                       className: p.section,
-                      children: (0, a.jsx)(s.Heading, {
+                      children: (0, a.jsx)(o.Heading, {
                           variant: "heading-md/normal",
                           children: "Current guild: ".concat(t),
                       }),
@@ -121,31 +121,31 @@ function f() {
                   (0, a.jsxs)("div", {
                       className: p.section,
                       children: [
-                          (0, a.jsx)(s.Text, {
+                          (0, a.jsx)(o.Text, {
                               variant: "eyebrow",
                               children: "Set server state for first server: ".concat(null == f ? void 0 : f.name),
                           }),
                           (0, a.jsx)("div", {
                               className: p.buttonContainer,
-                              children: g,
+                              children: b,
                           }),
-                          (0, a.jsx)(s.Text, {
+                          (0, a.jsx)(o.Text, {
                               variant: "eyebrow",
                               children: "Remove Server Info",
                           }),
                           (0, a.jsx)("div", {
                               className: p.buttonContainer,
-                              children: (0, a.jsx)(s.Button, {
+                              children: (0, a.jsx)(o.Button, {
                                   variant: "primary",
                                   text: "Remove IP Address & Game Server Panel URL",
                                   onClick: v,
                               }),
                           }),
-                          (0, a.jsx)(s.Text, {
+                          (0, a.jsx)(o.Text, {
                               variant: "eyebrow",
                               children: "Reset server",
                           }),
-                          (0, a.jsx)(s.Button, {
+                          (0, a.jsx)(o.Button, {
                               variant: "primary",
                               text: "Reset",
                               onClick: () => {

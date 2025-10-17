@@ -44,7 +44,7 @@ function l(e, t) {
         e
     );
 }
-let s = new Set([
+let o = new Set([
         r.jE.HERO_BANNER_STATIC,
         r.jE.HERO_LOGO,
         r.jE.PDP_BACKGROUND,
@@ -52,7 +52,7 @@ let s = new Set([
         r.jE.MOBILE_BANNER,
         r.jE.MOBILE_BACKGROUND,
     ]),
-    o = ["intro", "idle", "reduced_motion", "static", "thumbnail"],
+    s = ["intro", "idle", "reduced_motion", "static", "thumbnail"],
     c = {
         max: 5000000,
         warn: 2000000,
@@ -105,7 +105,7 @@ let s = new Set([
             r = t.filter((e) => !a.test(e));
         r.length > 0 && n("File names must be in lowercase snake case", r);
     },
-    b = (e, t, n, a) => {
+    g = (e, t, n, a) => {
         let r = t.size,
             i = r > 1000000 ? "".concat((r / 1000000).toFixed(2), "MB") : "".concat((r / 1000).toFixed(2), "KB"),
             l = "".concat(t.name, " - ").concat(i);
@@ -119,9 +119,9 @@ let s = new Set([
             ]);
         } else r > e.warn && a("Files are a tad chonky - are you sure they're optimized?", ["".concat(l)]);
     },
-    g = (e, t, n, a) => {
+    b = (e, t, n, a) => {
         let r = h[e];
-        if (null != r) for (let e of t) e.name.endsWith(".txt") || b(r, e, n, a);
+        if (null != r) for (let e of t) e.name.endsWith(".txt") || g(r, e, n, a);
     },
     v = () => {
         let [e, t] = a.useState(!1),
@@ -170,19 +170,19 @@ let s = new Set([
                                 for (let e of t.collectionFiles) {
                                     let t = (0, r.BU)(e),
                                         i = null != t ? h[t] : null;
-                                    null != i && b(i, e, n, a);
+                                    null != i && g(i, e, n, a);
                                 }
                                 f({
                                     names: t.collectionFiles.map((e) => e.name),
                                     addError: n,
                                 });
                                 let i = new Set(t.collectionFiles.map((e) => e.name)),
-                                    l = Array.from(s).filter((e) => !i.has(e));
+                                    l = Array.from(o).filter((e) => !i.has(e));
                                 l.length > 0 && n("Missing required files", l);
-                                let o = Object.values(r.jE)
-                                    .filter((e) => !s.has(e))
+                                let s = Object.values(r.jE)
+                                    .filter((e) => !o.has(e))
                                     .filter((e) => !i.has(e));
-                                o.length > 0 && a("Missing optional assets", o);
+                                s.length > 0 && a("Missing optional assets", s);
                             })({
                                 files: n,
                                 addError: m,
@@ -204,18 +204,18 @@ let s = new Set([
                                             }),
                                             addError: n,
                                         }),
-                                            g(r.aB.PROFILE_EFFECT, i, n, a);
-                                        let s = o
+                                            b(r.aB.PROFILE_EFFECT, i, n, a);
+                                        let o = s
                                             .filter((e) => !l.some((t) => t.startsWith(e) && t.endsWith(".png")))
                                             .map((e) => "".concat(t, "/").concat(e));
-                                        s.length > 0 && n("Missing required PFX files with prefix", s),
+                                        o.length > 0 && n("Missing required PFX files with prefix", o),
                                             l.some((e) => e.endsWith(".txt")) ||
                                                 n(
                                                     "PFX configs required - please include both exports! (exception: duplicate variant configs are optional)",
                                                     [t],
                                                 );
                                         let c = l
-                                            .filter((e) => !o.some((t) => e.startsWith(t)) && !e.endsWith(".txt"))
+                                            .filter((e) => !s.some((t) => e.startsWith(t)) && !e.endsWith(".txt"))
                                             .map((e) => "".concat(t, "/").concat(e));
                                         c.length > 0 && a("Contains unrecognized files", c);
                                     });
@@ -230,7 +230,7 @@ let s = new Set([
                                     names: t.avatarDecorationFiles.map((e) => e.name),
                                     addError: n,
                                 }),
-                                    g(r.aB.AVATAR_DECORATION, t.avatarDecorationFiles, n, a);
+                                    b(r.aB.AVATAR_DECORATION, t.avatarDecorationFiles, n, a);
                             })({
                                 files: n,
                                 addError: m,

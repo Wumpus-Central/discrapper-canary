@@ -4,8 +4,8 @@ n(647438);
 var r = n(481060),
     i = n(84615),
     l = n(429142),
-    s = n(918714),
-    o = n(852758),
+    o = n(918714),
+    s = n(852758),
     c = n(308569),
     d = n(711322),
     u = n(451429);
@@ -28,7 +28,7 @@ function m() {
                                 variant: "primary",
                                 text: "Open Verification Layer",
                                 onClick: () => {
-                                    (0, i.q4)(() => (0, a.jsx)(o.Z, {}), {
+                                    (0, i.q4)(() => (0, a.jsx)(s.Z, {}), {
                                         layerKey: c.CV,
                                         Layer: l.ZP,
                                     });
@@ -53,7 +53,7 @@ function m() {
                                     (0, i.q4)(
                                         (e) => {
                                             let { closeLayer: t } = e;
-                                            return (0, a.jsx)(s.Z, { onClose: t });
+                                            return (0, a.jsx)(o.Z, { onClose: t });
                                         },
                                         {
                                             layerKey: c.CV,

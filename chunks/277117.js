@@ -9,8 +9,8 @@ var i = n(657707),
     c = n(189156),
     d = n(699516),
     u = n(246946),
-    h = n(5192),
-    p = n(621853),
+    p = n(5192),
+    h = n(621853),
     f = n(209698),
     g = n(172351),
     m = n(648052),
@@ -26,8 +26,8 @@ var i = n(657707),
     S = n(502762),
     E = n(530),
     Z = n(827313),
-    T = n(981631),
-    P = n(671955),
+    P = n(981631),
+    T = n(671955),
     N = n(388032),
     R = n(892273);
 function w(e) {
@@ -39,9 +39,9 @@ function w(e) {
         U = (0, s.vh)(t.id),
         G = (0, o.Y)({ userId: t.id }),
         H = (0, l.e7)([u.Z], () => u.Z.hidePersonalInformation),
-        F = (0, l.e7)([p.Z], () => {
+        F = (0, l.e7)([h.Z], () => {
             var e;
-            return null == (e = p.Z.getUserProfile(t.id)) ? void 0 : e.application;
+            return null == (e = h.Z.getUserProfile(t.id)) ? void 0 : e.application;
         }),
         B = (0, f.b)({ location: "UserProfileSidebarBody" });
     return (0, r.jsxs)("div", {
@@ -50,12 +50,12 @@ function w(e) {
             (0, r.jsx)(E.Z, {
                 user: t,
                 guildId: A.guild_id,
-                nickname: h.ZP.getName(null, A.id, t),
+                nickname: p.ZP.getName(null, A.id, t),
                 pronouns: null == w ? void 0 : w.pronouns,
                 onOpenProfile: L,
                 tags: (0, r.jsx)(m.Z, {
                     displayProfile: w,
-                    themeType: P.l.SIDEBAR,
+                    themeType: T.l.SIDEBAR,
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
                     children: [
@@ -69,7 +69,7 @@ function w(e) {
                     ],
                 }),
             }),
-            M === T.OGo.PENDING_INCOMING &&
+            M === P.OGo.PENDING_INCOMING &&
                 (0, r.jsx)(S.Z.Overlay, {
                     children: (0, r.jsx)(O.Z, {
                         user: t,

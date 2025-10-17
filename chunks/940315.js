@@ -5,8 +5,8 @@ var a = n(647438),
 function l() {
     let e = (0, r.e7)([i.Z], () => i.Z.getLastReportedLagTimestamp()),
         [t, n] = a.useState(!1),
-        [l, s] = a.useState(!1),
-        o = a.useRef(null);
+        [l, o] = a.useState(!1),
+        s = a.useRef(null);
     return (
         a.useEffect(() => {
             let t = null != e;
@@ -17,13 +17,13 @@ function l() {
             };
         }, [e]),
         a.useEffect(() => {
-            let t = null != e && null == o.current;
-            s(t);
+            let t = null != e && null == s.current;
+            o(t);
             let n = null;
             return (
-                t && ((o.current = Date.now()), (n = setTimeout(() => s(!1), 4000))),
+                t && ((s.current = Date.now()), (n = setTimeout(() => o(!1), 4000))),
                 () => {
-                    clearTimeout(n), s(!1);
+                    clearTimeout(n), o(!1);
                 }
             );
         }, [e]),

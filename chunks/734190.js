@@ -9,14 +9,14 @@ var r = n(951288),
     u = n(481060),
     d = n(493683),
     p = n(239091),
-    h = n(99690),
-    f = n(471445),
+    f = n(99690),
+    h = n(471445),
     g = n(111028),
     m = n(569471),
     b = n(488131),
     _ = n(592125),
-    y = n(306680),
-    O = n(594174),
+    O = n(306680),
+    y = n(594174),
     v = n(979651),
     j = n(938475),
     x = n(990734),
@@ -150,9 +150,9 @@ function M(e) {
     let { thread: t } = e,
         n = i.useMemo(() => {
             var e;
-            return null != (e = (0, f.KS)(t)) ? e : u.or_;
+            return null != (e = (0, h.KS)(t)) ? e : u.or_;
         }, [t]),
-        l = (0, f.bT)(t);
+        l = (0, h.bT)(t);
     return (0, r.jsx)(c.u, {
         text: l,
         delay: 500,
@@ -169,21 +169,21 @@ function M(e) {
     });
 }
 let k = i.memo(function (e) {
-    let { thread: t, isSelectedChannel: l, isSelectedVoice: c, isLast: f, withGuildIcon: A } = e,
+    let { thread: t, isSelectedChannel: l, isSelectedVoice: c, isLast: h, withGuildIcon: A } = e,
         k = (0, s.e7)([j.ZP], () => j.ZP.getVoiceStatesForChannel(t), [t]),
         G = (0, s.e7)([v.Z], () => v.Z.hasVideo(t.id)),
         {
             unread: U,
             mentionCount: B,
-            isMentionLowImportance: V,
-        } = (0, s.cj)([y.ZP], () => ({
-            unread: y.ZP.hasUnread(t.id),
-            mentionCount: y.ZP.getMentionCount(t.id),
-            isMentionLowImportance: y.ZP.getIsMentionLowImportance(t.id),
+            isMentionLowImportance: F,
+        } = (0, s.cj)([O.ZP], () => ({
+            unread: O.ZP.hasUnread(t.id),
+            mentionCount: O.ZP.getMentionCount(t.id),
+            isMentionLowImportance: O.ZP.getIsMentionLowImportance(t.id),
         })),
-        F = (0, s.e7)([m.Z], () => m.Z.isMuted(t.id)),
+        V = (0, s.e7)([m.Z], () => m.Z.isMuted(t.id)),
         H = (0, x.p)({ location: "GuildSidebarThreadListEntry" }),
-        z = (0, s.e7)([O.default], () => O.default.getUser(t.ownerId)),
+        z = (0, s.e7)([y.default], () => y.default.getUser(t.ownerId)),
         W = i.useCallback(
             (e) => {
                 (0, b.ok)(t, !e.shiftKey, N.on.CHANNEL_LIST);
@@ -243,7 +243,7 @@ let k = i.memo(function (e) {
         className: o()(w.containerDefault, { [w.selected]: l }),
         children: [
             (0, r.jsx)(L, { withGuildIcon: A }),
-            f
+            h
                 ? null
                 : (0, r.jsx)(L, {
                       withGuildIcon: A,
@@ -261,8 +261,8 @@ let k = i.memo(function (e) {
                 children: (0, r.jsxs)("div", {
                     className: o()(w.iconVisibility, T.wrapper, T.typeThread, {
                         [T.modeSelected]: l,
-                        [T.modeMuted]: !l && F,
-                        [T.modeUnreadImportant]: !F && !l && U,
+                        [T.modeMuted]: !l && V,
+                        [T.modeUnreadImportant]: !V && !l && U,
                         [T.withGuildIcon]: A,
                         [T.threadsInChannelListQoLExperiment]: H.enabled,
                         [T.withThreadAvatar]: "icon-with-avatar" === H.variant,
@@ -271,7 +271,7 @@ let k = i.memo(function (e) {
                     onMouseDown: K,
                     onContextMenu: Y,
                     children: [
-                        !U || F || l ? null : (0, r.jsx)("div", { className: o()(T.unread, T.unreadImportant) }),
+                        !U || V || l ? null : (0, r.jsx)("div", { className: o()(T.unread, T.unreadImportant) }),
                         (0, r.jsx)(
                             u.P3F,
                             D(R({}, J), {
@@ -290,7 +290,7 @@ let k = i.memo(function (e) {
                                                       (0, r.jsx)(M, { thread: t }),
                                                       null == z
                                                           ? null
-                                                          : (0, r.jsx)(h.Z, {
+                                                          : (0, r.jsx)(f.Z, {
                                                                 user: z,
                                                                 size: u.EFr.SIZE_16,
                                                             }),
@@ -316,7 +316,7 @@ let k = i.memo(function (e) {
                                                 (0, C.Z)(B)
                                                     ? (0, r.jsx)(S.Z, {
                                                           mentionsCount: B,
-                                                          isMentionLowImportance: V,
+                                                          isMentionLowImportance: F,
                                                       })
                                                     : null,
                                             ],

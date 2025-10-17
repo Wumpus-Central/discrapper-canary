@@ -196,9 +196,9 @@ function S(e) {
             size: L = "md",
             fullWidth: x = !1,
             clearable: M = !1,
-            showCharacterCount: j = !1,
+            showCharacterCount: k = !1,
         } = e,
-        k = y(e, [
+        j = y(e, [
             "disabled",
             "editable",
             "inputRef",
@@ -220,7 +220,7 @@ function S(e) {
             "clearable",
             "showCharacterCount",
         ]),
-        { fieldProps: U } = (0, s.XF_)(k),
+        { fieldProps: U } = (0, s.XF_)(j),
         G = (0, _.m)({
             validateOn: D,
             error: N,
@@ -235,25 +235,25 @@ function S(e) {
         V = (e) => {
             var t, n;
             let r = e.currentTarget.value;
-            null == (t = k.onChange) || t.call(k, r, u), B(!0), null == (n = Z.setHasValue) || n.call(Z, "" !== r);
+            null == (t = j.onChange) || t.call(j, r, u), B(!0), null == (n = Z.setHasValue) || n.call(Z, "" !== r);
         },
         H = (e) => {
             var t, n;
-            null == (t = k.onFocus) || t.call(k, e), null == (n = Z.setIsFocused) || n.call(Z, !0);
+            null == (t = j.onFocus) || t.call(j, e), null == (n = Z.setIsFocused) || n.call(Z, !0);
         },
         Y = (e) => {
             var t, n;
-            null == (t = k.onBlur) || t.call(k, e), null == (n = Z.setIsFocused) || n.call(Z, !1);
+            null == (t = j.onBlur) || t.call(j, e), null == (n = Z.setIsFocused) || n.call(Z, !1);
         },
         W = (e) => {
-            if (null != k.onClear) k.onClear(e);
+            if (null != j.onClear) j.onClear(e);
             else {
                 var t;
-                null == (t = k.onChange) || t.call(k, "", u);
+                null == (t = j.onChange) || t.call(j, "", u);
             }
         },
         K = i.useRef(null),
-        z = k.readOnly;
+        z = j.readOnly;
     null == z && !1 === a && (z = !0);
     let q = null;
     ("boolean" == typeof M ? M && null != O && "" !== O && !z : M.show)
@@ -272,7 +272,7 @@ function S(e) {
             accessory: P,
             inputSize: L,
         }));
-    let Q = j
+    let Q = k
         ? (0, r.jsx)(d.H, {
               value: O,
               maxLength: E,
@@ -317,7 +317,7 @@ function S(e) {
                                             defaultValue: S,
                                             "data-mana-component": "text-input",
                                         },
-                                        k,
+                                        j,
                                     ),
                                     {
                                         onChange: V,

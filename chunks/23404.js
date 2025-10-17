@@ -17,13 +17,13 @@ var r = n(951288),
     _ = n(566078),
     E = n(602667),
     O = n(611855),
-    y = n(110560),
-    v = n(670638),
+    v = n(110560),
+    y = n(670638),
     I = n(667105),
     C = n(860151),
     S = n(46140),
-    T = n(981631),
-    N = n(388032),
+    N = n(981631),
+    T = n(388032),
     P = n(408228);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -50,13 +50,13 @@ function j(e) {
     }
     return e;
 }
-function A(e) {
+function x(e) {
     var t;
     let { quest: n } = e,
         i = (0, f.B6)(n.config.expiresAt),
         l = (0, f.B6)(_.r.build(n.config).rewardsExpireAt),
         a = (0, o.e7)([c.Z], () => c.Z.getState().theme),
-        u = (0, s.wjy)(a) ? T.BRd.DARK : T.BRd.LIGHT,
+        u = (0, s.wjy)(a) ? N.BRd.DARK : N.BRd.LIGHT,
         d = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null;
     return (0, r.jsxs)("div", {
         className: P.heading,
@@ -73,29 +73,29 @@ function A(e) {
                         variant: "heading-md/semibold",
                         color: "header-primary",
                         children: d
-                            ? N.intl.string(N.t.XBboAA)
-                            : N.intl.formatToPlainString(N.t.EQa7oq, { questName: n.config.messages.questName }),
+                            ? T.intl.string(T.t.XBboAA)
+                            : T.intl.formatToPlainString(T.t.EQa7oq, { questName: n.config.messages.questName }),
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-xs/normal",
                         color: "header-secondary",
                         children: d
-                            ? N.intl.formatToPlainString(N.t.APddvL, { expirationDate: l })
-                            : N.intl.formatToPlainString(N.t["pX+fmp"], { expirationDate: i }),
+                            ? T.intl.formatToPlainString(T.t.APddvL, { expirationDate: l })
+                            : T.intl.formatToPlainString(T.t["pX+fmp"], { expirationDate: i }),
                     }),
                 ],
             }),
         ],
     });
 }
-function x(e) {
+function A(e) {
     var t, n, l;
     let { nodeRef: c, quest: b } = e,
         _ = (0, u.O5)(),
         E = (0, o.e7)([h.Z], () => h.Z.isEnrolling(b.id), [b]),
-        [T, x] = i.useState(!1),
-        Z = i.useCallback(() => x(!0), []),
-        w = i.useCallback(() => x(!1), []),
+        [N, A] = i.useState(!1),
+        Z = i.useCallback(() => A(!0), []),
+        w = i.useCallback(() => A(!1), []),
         { launchInGameActivity: L } = (0, f.zB)(b),
         R = i.useCallback((e) => {
             e.stopPropagation();
@@ -108,7 +108,7 @@ function x(e) {
             }),
                 (0, d.Rt)(b) && L();
         }, [b, L]),
-        k = i.useCallback(() => {
+        M = i.useCallback(() => {
             null != b &&
                 (_({
                     questId: b.id,
@@ -116,19 +116,19 @@ function x(e) {
                     questContentCTA: u.jZ.TRACK_PROGRESS,
                     sourceQuestContent: g.jn.ACTIVITY_PANEL,
                 }),
-                (0, y.navigateToQuestHome)({
+                (0, v.navigateToQuestHome)({
                     fromContent: g.jn.ACTIVITY_PANEL,
                     questId: b.id,
                 }));
         }, [b, _]),
-        M = i.useCallback(() => {
+        k = i.useCallback(() => {
             _({
                 questId: b.id,
                 questContent: g.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.LEARN_MORE,
                 sourceQuestContent: g.jn.ACTIVITY_PANEL,
             }),
-                (0, y.navigateToQuestHome)({
+                (0, v.navigateToQuestHome)({
                     fromContent: g.jn.ACTIVITY_PANEL,
                     questId: b.id,
                 });
@@ -150,7 +150,7 @@ function x(e) {
         }),
         F = (0, d.Rt)(b),
         z = (0, m.CR)({ quest: b }),
-        W = F ? z : N.intl.string(N.t.l7E81t);
+        W = F ? z : T.intl.string(T.t.l7E81t);
     return (0, r.jsxs)("div", {
         ref: (e) => {
             c.current = e;
@@ -166,8 +166,8 @@ function x(e) {
             (0, r.jsxs)("div", {
                 className: P.utils,
                 children: [
-                    G ? (0, r.jsx)(A, { quest: b }) : (0, r.jsx)(O.Z, {}),
-                    (0, r.jsx)(v.r, {
+                    G ? (0, r.jsx)(x, { quest: b }) : (0, r.jsx)(O.Z, {}),
+                    (0, r.jsx)(y.r, {
                         quest: b,
                         questContent: g.jn.ACTIVITY_PANEL,
                         shouldShowDisclosure: (null == (l = b.userStatus) ? void 0 : l.enrolledAt) == null,
@@ -180,7 +180,7 @@ function x(e) {
                                 ((t = j({}, e)),
                                 (n = n =
                                     {
-                                        "aria-label": N.intl.string(N.t.DEoVWV),
+                                        "aria-label": T.intl.string(T.t.DEoVWV),
                                         children: (0, r.jsx)(s.xhG, {
                                             size: "md",
                                             color: "currentColor",
@@ -208,7 +208,7 @@ function x(e) {
             !G &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(A, { quest: b }),
+                        (0, r.jsx)(x, { quest: b }),
                         (0, r.jsx)("div", {
                             className: P.instructions,
                             children: (0, r.jsx)(s.Text, {
@@ -222,7 +222,7 @@ function x(e) {
             G &&
                 !B &&
                 (0, r.jsx)(C.Z, {
-                    autoplay: T,
+                    autoplay: N,
                     className: P.rewardTileWithInstructions,
                     quest: b,
                     questContent: g.jn.ACTIVITY_PANEL,
@@ -241,8 +241,8 @@ function x(e) {
                             children: [
                                 (0, r.jsx)(s.Button, {
                                     variant: "secondary",
-                                    text: N.intl.string(N.t.LLLLPD),
-                                    onClick: M,
+                                    text: T.intl.string(T.t.LLLLPD),
+                                    onClick: k,
                                 }),
                                 (0, r.jsx)(s.Button, {
                                     variant: "primary",
@@ -259,15 +259,15 @@ function x(e) {
                             variant: "primary",
                             size: "sm",
                             fullWidth: !0,
-                            text: N.intl.string(N.t.VN1Ajo),
-                            onClick: k,
+                            text: T.intl.string(T.t.VN1Ajo),
+                            onClick: M,
                         }),
                     B &&
                         (0, r.jsx)(s.Button, {
                             variant: "primary",
                             size: "sm",
                             fullWidth: !0,
-                            text: N.intl.string(N.t.cfY4PD),
+                            text: T.intl.string(T.t.cfY4PD),
                             onClick: U,
                         }),
                 ],
@@ -280,6 +280,6 @@ let Z = function (e) {
         questOrQuests: e.quest,
         questContent: g.jn.ACTIVITY_PANEL,
         sourceQuestContent: g.jn.ACTIVITY_PANEL,
-        children: (t) => (0, r.jsx)(x, j({ nodeRef: t }, e)),
+        children: (t) => (0, r.jsx)(A, j({ nodeRef: t }, e)),
     });
 };

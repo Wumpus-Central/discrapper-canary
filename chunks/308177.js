@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(431328),
     d = n(501655),
     u = n(27931),
-    h = n(260979),
-    p = n(766015),
+    p = n(260979),
+    h = n(766015),
     f = n(755515),
     g = n(12779),
     m = n(450369),
@@ -38,8 +38,8 @@ let j = (0, a.Z)((e) => {
         S = (0, c.Rk)(a.id, d.pV.AUDIENCE),
         E = (0, l.e7)([o.Z], () => (null != x ? o.Z.getParticipant(a.id, x) : null)),
         Z = (0, c.w8)(a.id, d.pV.SPEAKER),
-        T = Z.filter(_),
-        P = null != Z.find((e) => e.type === d.Ui.STREAM),
+        P = Z.filter(_),
+        T = null != Z.find((e) => e.type === d.Ui.STREAM),
         N = Math.floor((j - 32) / 102),
         R = j < 424 ? 1 : j < 624 ? 2 : j < 824 || C ? 3 : 4,
         w = {
@@ -62,7 +62,7 @@ let j = (0, a.Z)((e) => {
         H = (e) => e === D.length - 1 || (0 === S && 1 === e),
         [F, B] = i.useState(!1),
         [V, z] = i.useState(!1);
-    return (0, r.jsx)(p.Z, {
+    return (0, r.jsx)(h.Z, {
         sections: M,
         renderSection: (e) => {
             let { section: t } = e;
@@ -77,9 +77,9 @@ let j = (0, a.Z)((e) => {
                               className: y.header,
                               onClick: () => B(!F),
                               collapsed: F,
-                              speakers: T,
+                              speakers: P,
                               channel: a,
-                              isStreamLive: P,
+                              isStreamLive: T,
                           },
                           "speaker-header-".concat(t),
                       )
@@ -137,7 +137,7 @@ let j = (0, a.Z)((e) => {
                 case 2:
                     if (V) return null;
                     return (0, r.jsx)(
-                        h.Z,
+                        p.Z,
                         {
                             channel: a,
                             participants: l,

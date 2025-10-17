@@ -8,8 +8,8 @@ var a = n(951288),
     r = n(647438),
     i = n(657707),
     l = n(481060),
-    s = n(732380),
-    o = n(388032),
+    o = n(732380),
+    s = n(388032),
     c = n(54482);
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -71,17 +71,17 @@ function m(e) {
     });
 }
 function p(e) {
-    let { action: t, onClick: n, icon: m, label: p, sublabel: h, trailing: x, renderSubmenu: f, ref: b } = e,
-        g = null != n,
-        v = (0, s.Q1)({
+    let { action: t, onClick: n, icon: m, label: p, sublabel: h, trailing: x, renderSubmenu: f, ref: g } = e,
+        b = null != n,
+        v = (0, o.Q1)({
             action: t,
             onClick: n,
         }),
         [j, _] = r.useState(!1),
         y = r.useRef(null),
-        C = null != b ? b : y,
+        C = null != g ? g : y,
         S = null != f,
-        E = S && g,
+        E = S && b,
         T = {
             offset: {
                 top: -8,
@@ -147,7 +147,7 @@ function p(e) {
                                       d(
                                           {
                                               className: c.submenuIconWrapper,
-                                              "aria-label": o.intl.string(o.t.PdRCRk),
+                                              "aria-label": s.intl.string(s.t.PdRCRk),
                                           },
                                           e,
                                       ),

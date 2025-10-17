@@ -6,14 +6,14 @@ var l = n(951288),
     o = n(728345),
     u = n(199902),
     s = n(314897),
-    c = n(763624),
-    d = n(607361),
+    d = n(763624),
+    c = n(607361),
     g = n(463421),
     m = n(981631),
     f = n(658805),
     Z = n(388032);
 function E(e, t) {
-    let { enableRequestToStream: n } = c.A.useExperiment(
+    let { enableRequestToStream: n } = d.A.useExperiment(
             {
                 guildId: t.guild_id,
                 location: "useRequestToStreamItem",
@@ -24,7 +24,7 @@ function E(e, t) {
         P = (0, g.Z)(e, t.guild_id)[0],
         b = (0, i.e7)([u.Z], () => null != u.Z.getStreamForUser(e, t.getGuildId())),
         v = (0, o.IX)(null == P ? void 0 : P.application_id).data,
-        h = (0, d.Z)(e, t.id);
+        h = (0, c.Z)(e, t.id);
     return E !== e && null != P && null != v && n && h && !b
         ? (0, l.jsx)(
               r.sNh,

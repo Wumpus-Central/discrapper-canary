@@ -925,8 +925,8 @@
                             }
                             var x,
                                 M = [],
-                                j = [],
-                                k = [];
+                                k = [],
+                                j = [];
                             function U() {
                                 var e = a.preRun.shift();
                                 M.unshift(e);
@@ -1457,7 +1457,7 @@
                                                     stream: eH,
                                                 },
                                             }),
-                                        16384 == (61440 & (n = ek(e, t, n, r)).mode)
+                                        16384 == (61440 & (n = ej(e, t, n, r)).mode)
                                             ? ((n.l = eb.O.dir.node), (n.m = eb.O.dir.stream), (n.j = {}))
                                             : 32768 == (61440 & n.mode)
                                               ? ((n.l = eb.O.file.node),
@@ -1526,7 +1526,7 @@
                                     ub(e, t, n) {
                                         if (16384 == (61440 & e.mode)) {
                                             try {
-                                                var r = ej(t, n);
+                                                var r = ek(t, n);
                                             } catch (e) {}
                                             if (r) for (var i in r.j) throw new ew(55);
                                         }
@@ -1542,7 +1542,7 @@
                                     },
                                     vb(e, t) {
                                         var n,
-                                            r = ej(e, t);
+                                            r = ek(e, t);
                                         for (n in r.j) throw new ew(55);
                                         delete e.j[t], (e.timestamp = Date.now());
                                     },
@@ -1658,7 +1658,7 @@
                                         var a = i === e.length - 1;
                                         if (a && t.parent) break;
                                         if (
-                                            ((n = ej(n, e[i])),
+                                            ((n = ek(n, e[i])),
                                             (r = et(r + "/" + e[i])),
                                             n.wa && (!a || (a && t.gb)) && (n = n.wa.root),
                                             !a || t.fb)
@@ -1690,7 +1690,7 @@
                                     for (var n = 0, r = 0; r < t.length; r++) n = ((n << 5) - n + t.charCodeAt(r)) | 0;
                                     return ((e + n) >>> 0) % eR.length;
                                 },
-                                ej = (e, t) => {
+                                ek = (e, t) => {
                                     var n;
                                     if ((n = (n = eG(e, "x")) ? n : 2 * !e.l.ka)) throw new ew(n, e);
                                     for (n = eR[eM(e.id, t)]; n; n = n.lc) {
@@ -1699,7 +1699,7 @@
                                     }
                                     return e.l.ka(e, t);
                                 },
-                                ek = (e, t, n, r) => (
+                                ej = (e, t, n, r) => (
                                     (t = eM((e = new nh(e, t, n, r)).parent.id, e.name)), (e.lc = eR[t]), (eR[t] = e)
                                 ),
                                 eU = (e) => {
@@ -1716,7 +1716,7 @@
                                           : 0,
                                 eB = (e, t) => {
                                     try {
-                                        return ej(e, t), 20;
+                                        return ek(e, t), 20;
                                     } catch (e) {}
                                     return eG(e, "wx");
                                 },
@@ -2165,7 +2165,7 @@
                                         (e[t].B[r.ea] = r);
                                 }
                             }
-                            function tj(e, t, n) {
+                            function tk(e, t, n) {
                                 a.hasOwnProperty(e)
                                     ? ((void 0 === n || (void 0 !== a[e].B && void 0 !== a[e].B[n])) &&
                                           e9(`Cannot register public name '${e}' twice`),
@@ -2177,7 +2177,7 @@
                                       (a[e].B[n] = t))
                                     : ((a[e] = t), void 0 !== n && (a[e].Pc = n));
                             }
-                            function tk(e, t, n, r, i, a, o, s) {
+                            function tj(e, t, n, r, i, a, o, s) {
                                 (this.name = e),
                                     (this.constructor = t),
                                     (this.N = n),
@@ -2783,7 +2783,7 @@
                                         eW(
                                             {
                                                 U: () => {
-                                                    var t = ek(e, "fd", 16895, 73);
+                                                    var t = ej(e, "fd", 16895, 73);
                                                     return (
                                                         (t.l = {
                                                             ka: (e, t) => {
@@ -3190,7 +3190,7 @@
                                         c && (c = tK(l, c)),
                                         (f = tK(d, f));
                                     var _ = e4(u);
-                                    tj(_, function () {
+                                    tk(_, function () {
                                         tq(`Cannot construct ${u} due to unbound types`, [r]);
                                     }),
                                         tR([e, t, n], r ? [r] : [], function (t) {
@@ -3215,7 +3215,7 @@
                                                 },
                                             });
                                             t.prototype = o;
-                                            var l = new tk(u, t, o, f, n, a, s, c);
+                                            var l = new tj(u, t, o, f, n, a, s, c);
                                             l.A && (void 0 === l.A.oa && (l.A.oa = []), l.A.oa.push(l)),
                                                 (n = new tF(u, l, !0, !1)),
                                                 (i = new tF(u + "*", l, !1, !1));
@@ -3438,7 +3438,7 @@
                                             readValueFromPointer: t0(t, n, r),
                                             K: null,
                                         }),
-                                        tj(t, i);
+                                        tk(t, i);
                                 },
                                 _embind_register_enum_value: function (e, t, n) {
                                     var r = t_(e, "enum");
@@ -3472,7 +3472,7 @@
                                     var o = tQ(t, n);
                                     (e = ta(e)),
                                         (i = tK(r, i)),
-                                        tj(
+                                        tk(
                                             e,
                                             function () {
                                                 tq(`Cannot call ${e} due to unbound types`, o);
@@ -3918,7 +3918,7 @@
                                         ((v = (I = e = e.exports).memory),
                                         L(),
                                         (x = I.__indirect_function_table),
-                                        j.unshift(I.__wasm_call_ctors),
+                                        k.unshift(I.__wasm_call_ctors),
                                         G--,
                                         a.monitorRunDependencies && a.monitorRunDependencies(G),
                                         0 == G && (null !== B && (clearInterval(B), (B = null)), Z))
@@ -3979,7 +3979,7 @@
                                                 eQ("/dev/stdout", 1),
                                                 eQ("/dev/stderr", 1)),
                                             (eP = !1),
-                                            $(j),
+                                            $(k),
                                             r(a),
                                             a.onRuntimeInitialized && a.onRuntimeInitialized(),
                                             a.postRun)
@@ -3989,9 +3989,9 @@
                                                 a.postRun.length;
                                             ) {
                                                 var e = a.postRun.shift();
-                                                k.unshift(e);
+                                                j.unshift(e);
                                             }
-                                        $(k);
+                                        $(j);
                                     }
                                 }
                                 if (!(0 < G)) {
@@ -4344,7 +4344,7 @@
                         StateMachineInputType: () => i,
                         Testing: () => K,
                         ViewModel: () => x,
-                        ViewModelInstance: () => j,
+                        ViewModelInstance: () => k,
                         ViewModelInstanceBoolean: () => B,
                         ViewModelInstanceColor: () => H,
                         ViewModelInstanceEnum: () => F,
@@ -4352,7 +4352,7 @@
                         ViewModelInstanceNumber: () => G,
                         ViewModelInstanceString: () => U,
                         ViewModelInstanceTrigger: () => Z,
-                        ViewModelInstanceValue: () => k,
+                        ViewModelInstanceValue: () => j,
                         decodeAudio: () => z,
                         decodeFont: () => X,
                         decodeImage: () => q,
@@ -5833,7 +5833,7 @@
                                         if (null !== c) {
                                             var u = c.defaultInstance();
                                             if (null !== u) {
-                                                var d = new j(u, null);
+                                                var d = new k(u, null);
                                                 this.bindViewModelInstance(d);
                                             }
                                         }
@@ -6567,19 +6567,19 @@
                             }),
                             (e.prototype.instanceByIndex = function (e) {
                                 var t = this._viewModel.instanceByIndex(e);
-                                return null !== t ? new j(t, null) : null;
+                                return null !== t ? new k(t, null) : null;
                             }),
                             (e.prototype.instanceByName = function (e) {
                                 var t = this._viewModel.instanceByName(e);
-                                return null !== t ? new j(t, null) : null;
+                                return null !== t ? new k(t, null) : null;
                             }),
                             (e.prototype.defaultInstance = function () {
                                 var e = this._viewModel.defaultInstance();
-                                return null !== e ? new j(e, null) : null;
+                                return null !== e ? new k(e, null) : null;
                             }),
                             (e.prototype.instance = function () {
                                 var e = this._viewModel.instance();
-                                return null !== e ? new j(e, null) : null;
+                                return null !== e ? new k(e, null) : null;
                             }),
                             Object.defineProperty(e.prototype, "properties", {
                                 get: function () {
@@ -6629,7 +6629,7 @@
                         (e.Enum = "enum"),
                         (e.List = "list");
                 })(c || (c = {}));
-                var j = (function () {
+                var k = (function () {
                         function e(e, t) {
                             (this._parents = []),
                                 (this._children = []),
@@ -6955,7 +6955,7 @@
                             e
                         );
                     })(),
-                    k = (function () {
+                    j = (function () {
                         function e(e, t) {
                             (this.callbacks = []), (this._viewModelInstanceValue = e), (this._parentViewModel = t);
                         }
@@ -7019,7 +7019,7 @@
                             }),
                             t
                         );
-                    })(k),
+                    })(j),
                     G = (function (e) {
                         function t(t, n) {
                             return e.call(this, t, n) || this;
@@ -7041,7 +7041,7 @@
                             }),
                             t
                         );
-                    })(k),
+                    })(j),
                     B = (function (e) {
                         function t(t, n) {
                             return e.call(this, t, n) || this;
@@ -7063,7 +7063,7 @@
                             }),
                             t
                         );
-                    })(k),
+                    })(j),
                     Z = (function (e) {
                         function t(t, n) {
                             return e.call(this, t, n) || this;
@@ -7078,7 +7078,7 @@
                             }),
                             t
                         );
-                    })(k),
+                    })(j),
                     F = (function (e) {
                         function t(t, n) {
                             return e.call(this, t, n) || this;
@@ -7117,7 +7117,7 @@
                             }),
                             t
                         );
-                    })(k),
+                    })(j),
                     V = (function (e) {
                         function t(t, n) {
                             return e.call(this, t, n) || this;
@@ -7144,14 +7144,14 @@
                             }),
                             (t.prototype.instanceAt = function (e) {
                                 var t = this._viewModelInstanceValue.instanceAt(e);
-                                return null != t ? new j(t, null) : null;
+                                return null != t ? new k(t, null) : null;
                             }),
                             (t.prototype.internalHandleCallback = function (e) {
                                 e();
                             }),
                             t
                         );
-                    })(k),
+                    })(j),
                     H = (function (e) {
                         function t(t, n) {
                             return e.call(this, t, n) || this;
@@ -7188,7 +7188,7 @@
                             }),
                             t
                         );
-                    })(k),
+                    })(j),
                     Y = function (e) {
                         return m(void 0, void 0, void 0, function () {
                             return g(this, function (t) {

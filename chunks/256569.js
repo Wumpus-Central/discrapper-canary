@@ -73,8 +73,8 @@ function h(e) {
             handlePasteEvent: C,
             handleInputChange: O,
             handleKeyDown: y,
-            handleContainerKeyUp: N,
-            handleRemoveTag: E,
+            handleContainerKeyUp: E,
+            handleRemoveTag: N,
             handleTagChangeEvent: I,
             handleSelectTag: S,
             handleUnselectTag: T,
@@ -89,10 +89,10 @@ function h(e) {
             state: { value: Z, tags: R, selections: D, isSelecting: A },
         } = _,
         L = (0, o.Z)(R),
-        [k, M] = i.useState(!1),
-        G = i.useCallback(() => {
+        [k, G] = i.useState(!1),
+        M = i.useCallback(() => {
             var e;
-            M(!1), P(), null == (e = x.current) || e.focus({ preventScroll: !0 });
+            G(!1), P(), null == (e = x.current) || e.focus({ preventScroll: !0 });
         }, [P]);
     i.useEffect(() => {
         L !== R && l(R);
@@ -103,9 +103,9 @@ function h(e) {
     let U = i.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                e && G(), M(!1);
+                e && M(), G(!1);
             },
-            [G],
+            [M],
         ),
         B = i.useCallback(
             (e) => (t) => {
@@ -124,7 +124,7 @@ function h(e) {
                                           return null == (e = j.current) ? void 0 : e.focus();
                                       }, 16);
                               }));
-                } else T(e, !0), M(!0);
+                } else T(e, !0), G(!0);
             },
             [S, T, D, R],
         );
@@ -132,11 +132,11 @@ function h(e) {
         className: a()(m.mainContainer, h),
         ref: j,
         tabIndex: 0,
-        onKeyUp: N,
+        onKeyUp: E,
         children: [
             (0, r.jsxs)(f, {
                 ref: v,
-                onClick: G,
+                onClick: M,
                 children: [
                     R.map((e, t) =>
                         (0, r.jsx)(
@@ -146,7 +146,7 @@ function h(e) {
                                 onChange: I(t),
                                 onBlur: U,
                                 onFocus: B(t),
-                                onRemove: () => E(t),
+                                onRemove: () => N(t),
                                 isSelected: D.includes(e),
                                 isSelecting: A,
                                 error: u[e],

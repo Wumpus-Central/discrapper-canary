@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => E });
 var r = n(951288);
 n(647438);
 var i = n(442837),
@@ -63,7 +63,7 @@ function y(e, t) {
         e
     );
 }
-function N(e) {
+function E(e) {
     let { guildId: t, completed: n } = e,
         l = (0, i.e7)([o.Z], () => o.Z.getEnabled(t)),
         { location: c } = (0, a.O)();
@@ -160,7 +160,7 @@ function N(e) {
     return n
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(E, {
+                  (0, r.jsx)(N, {
                       guildId: t,
                       handlePreview: f,
                   }),
@@ -194,7 +194,7 @@ function N(e) {
               ],
           });
 }
-function E(e) {
+function N(e) {
     let { guildId: t, handlePreview: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [

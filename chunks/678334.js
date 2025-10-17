@@ -38,8 +38,8 @@ function x(e) {
             onNext: s,
             legalTermsNodeRef: x,
             flashLegalTerms: M,
-            invoiceError: j,
-            planError: k,
+            invoiceError: k,
+            planError: j,
             onPurchaseError: U,
             baseAnalyticsData: G,
             flowStartTime: B,
@@ -104,15 +104,15 @@ function x(e) {
         eL = (0, m.U)(),
         ex = (0, c.e7)([C.Z], () => C.Z.currentOrderId),
         eM = null,
-        ej = null;
+        ek = null;
     if (et === P.GZQ.ONE_TIME) {
-        var ek;
+        var ej;
         l()(null != ei, "SKU must be selected for one-time purchases"),
-            (eM = null != (ek = ea[ei]) ? ek : null),
+            (eM = null != (ej = ea[ei]) ? ej : null),
             l()(null != eM, "SKU must exist and be fetched.");
         let e = eo[ei],
             t = null != en ? en : y.c;
-        ej = null != e ? e[t] : null;
+        ek = null != e ? e[t] : null;
     }
     let eU = (0, _.Iw)(et === P.GZQ.ONE_TIME ? f.Z.getProduct(ei) : void 0),
         eG = null !== eU,
@@ -140,7 +140,7 @@ function x(e) {
                 onNext: s,
                 metadata: W,
                 sku: eM,
-                skuPricePreview: ej,
+                skuPricePreview: ek,
                 purchaseType: et,
                 referralCode: es,
                 loadId: el.loadId,
@@ -185,8 +185,8 @@ function x(e) {
                       }),
                   (0, r.jsx)(b.Z, {
                       legalTermsNodeRef: x,
-                      invoiceError: j,
-                      planError: k,
+                      invoiceError: k,
+                      planError: j,
                       disablePurchase: z,
                       flashLegalTerms: M,
                       isSubmitting: eA,

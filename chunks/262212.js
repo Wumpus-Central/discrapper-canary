@@ -13,8 +13,8 @@ var i = n(120356),
     u = n(880419),
     d = n(827397),
     p = n(279604),
-    h = n(535396),
-    f = n(989308),
+    f = n(535396),
+    h = n(989308),
     g = n(388032),
     m = n(292609);
 function b() {
@@ -57,13 +57,13 @@ function O(e) {
     let { className: t, guildId: n, powerup: i, onClick: a } = e,
         s = (0, d.Z)(n, i),
         { onShowMore: c } = (0, p.ZP)(n, i),
-        u = h.uc.has(i.skuId);
+        u = f.uc.has(i.skuId);
     return (0, r.jsx)("div", {
         className: l()(m.primaryButton, t),
         children: (0, r.jsx)(o.zxk, {
             variant: "primary",
             fullWidth: !0,
-            text: u ? g.intl.string(f.default["g5Ds6+"]) : g.intl.string(g.t["0Q61kJ"]),
+            text: u ? g.intl.string(h.default["g5Ds6+"]) : g.intl.string(g.t["0Q61kJ"]),
             onClick: (e) => {
                 null == a || a(e), u ? null == s || s(e) : null == c || c();
             },
@@ -80,7 +80,7 @@ function y(e) {
             children: (0, r.jsx)(o.zxk, {
                 variant: "primary",
                 fullWidth: !0,
-                text: i.type === h.Us.LEVEL ? g.intl.string(g.t["0Q61kJ"]) : g.intl.string(g.t.Xa11Eh),
+                text: i.type === f.Us.LEVEL ? g.intl.string(g.t["0Q61kJ"]) : g.intl.string(g.t.Xa11Eh),
                 onClick: a,
             }),
         }),
@@ -88,10 +88,10 @@ function y(e) {
 }
 function v(e) {
     let { className: t, guildId: n, powerup: i, onError: o } = e,
-        s = (0, c.ZP)(n, i).type !== h.A3.INACTIVE,
+        s = (0, c.ZP)(n, i).type !== f.A3.INACTIVE,
         d = (0, a.Z)(n, i, "GuildPowerupCardFooterAdmin"),
         p = s || !d,
-        f = !s;
+        h = !s;
     return (0, r.jsxs)("div", {
         className: l()(m.container, t),
         children: [
@@ -100,8 +100,8 @@ function v(e) {
                     guildId: n,
                     powerup: i,
                     onError: o,
-                    grow: f,
-                    compact: !f,
+                    grow: h,
+                    compact: !h,
                 }),
             s &&
                 (0, r.jsx)(O, {

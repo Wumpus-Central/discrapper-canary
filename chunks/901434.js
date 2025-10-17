@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(305325),
     d = n(281956),
     u = n(27457),
-    h = n(546247),
-    p = n(823379),
+    p = n(546247),
+    h = n(823379),
     f = n(5192),
     g = n(501655),
     m = n(504185),
@@ -26,11 +26,11 @@ let _ = (e, t) => f.ZP.getName(e.getGuildId(), e.id, t.user),
             }, [n.id, n.guild_id, j]),
             x = t.filter((e) => e.type === g.Ui.VOICE),
             v = 4 === x.length ? 2 : 3,
-            C = (0, l.Wu)([o.Z], () => x.map((e) => o.Z.getParticipant(n.id, e.id)).filter(p.lm), [n.id, x]);
+            C = (0, l.Wu)([o.Z], () => x.map((e) => o.Z.getParticipant(n.id, e.id)).filter(h.lm), [n.id, x]);
         return (0, r.jsxs)("div", {
             className: y.container,
             children: [
-                (0, r.jsx)(h.Z, {}),
+                (0, r.jsx)(p.Z, {}),
                 (0, r.jsx)("div", {
                     className: y.tiles,
                     style: { maxWidth: 168 * v },

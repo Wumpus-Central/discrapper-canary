@@ -1,15 +1,15 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(481060),
-    a = n(785717),
+    a = n(481060),
+    l = n(785717),
     o = n(810473),
     s = n(299560),
     c = n(247397),
     u = n(388032),
     d = n(958461);
-function p() {
-    let { trackUserProfileEditAction: e } = (0, a.KZ)(),
+function f() {
+    let { trackUserProfileEditAction: e } = (0, l.KZ)(),
         t = (0, o.Z)(),
         n = i.useMemo(() => {
             let e = new Set(t);
@@ -21,12 +21,12 @@ function p() {
             (0, r.jsxs)("div", {
                 className: d.textContainer,
                 children: [
-                    (0, r.jsx)(l.Heading, {
+                    (0, r.jsx)(a.Heading, {
                         variant: "heading-md/medium",
                         color: "header-primary",
                         children: u.intl.string(u.t.oqalCw),
                     }),
-                    (0, r.jsx)(l.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: "text-sm/normal",
                         color: "header-secondary",
                         children: u.intl.string(u.t.O9SQ1d),

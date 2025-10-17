@@ -21,8 +21,8 @@ var r = n(951288),
     C = n(103576),
     O = n(970129),
     y = n(712181),
-    N = n(420966),
-    E = n(203377),
+    E = n(420966),
+    N = n(203377),
     I = n(981631),
     S = n(388032),
     T = n(612894);
@@ -42,9 +42,9 @@ function w(e) {
             onDragComplete: C,
             roleStyle: y,
         } = e,
-        N = (0, O.T)(c, m, d),
-        E = (0, j.fI)(d),
-        S = null == N && !E,
+        E = (0, O.T)(c, m, d),
+        N = (0, j.fI)(d),
+        S = null == E && !N,
         w = (null == (t = d.tags) ? void 0 : t.guild_connections) !== void 0,
         Z = (0, x._f)(c.id, d, d.colorStrings),
         [, R] = (0, s.c)({
@@ -163,15 +163,15 @@ function w(e) {
             },
             children: [
                 l,
-                null != N
+                null != E
                     ? (0, r.jsx)(O.Z, {
                           className: T.lock,
-                          tooltipText: N,
+                          tooltipText: E,
                       })
                     : null,
                 (0, r.jsx)(u.Text, {
                     variant: "text-sm/medium",
-                    color: E ? "header-primary" : "interactive-active",
+                    color: N ? "header-primary" : "interactive-active",
                     lineClamp: 1,
                     children: d.name,
                 }),
@@ -185,7 +185,7 @@ function Z(e) {
         g = (0, c.e7)([v.Z], () => v.Z.getHighestRole(t)),
         h = (0, c.e7)([f.Z], () => f.Z.roleStyle),
         [x, j] = i.useState(o.length),
-        { scrolledToTop: O, handleScroll: I } = (0, N.V)(),
+        { scrolledToTop: O, handleScroll: I } = (0, E.V)(),
         { handleDragStart: P, handleDragReset: Z, handleDragComplete: R } = (0, y.Z)(o),
         D = i.useRef(null),
         A = i.useCallback(
@@ -237,7 +237,7 @@ function Z(e) {
                                 children: (0, r.jsx)(u.P3F, {
                                     className: T.addRole,
                                     onClick: () => {
-                                        m.Z.createRole(t.id), s(E.ZI.DISPLAY);
+                                        m.Z.createRole(t.id), s(N.ZI.DISPLAY);
                                     },
                                     children: (0, r.jsx)(u.qJs, {
                                         size: "custom",

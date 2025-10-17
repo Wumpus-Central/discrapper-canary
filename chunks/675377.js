@@ -21,8 +21,8 @@ var r = n(951288),
     C = n(22382),
     O = n(747071),
     y = n(286654),
-    N = n(892001),
-    E = n(430824),
+    E = n(892001),
+    N = n(430824),
     I = n(594174),
     S = n(15385),
     T = n(768581),
@@ -34,8 +34,8 @@ var r = n(951288),
     A = n(981631),
     L = n(710111),
     k = n(388032),
-    M = n(360054);
-function G(e) {
+    G = n(360054);
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -101,7 +101,7 @@ function F() {
 function H(e) {
     let { children: t } = e;
     return (0, r.jsx)(g.Heading, {
-        className: M.tableHeader,
+        className: G.tableHeader,
         variant: "heading-sm/semibold",
         color: "header-secondary",
         children: t,
@@ -109,7 +109,7 @@ function H(e) {
 }
 function W(e) {
     let { currentTier: t, availableSounds: n, guildId: i } = e,
-        l = E.Z.getGuild(i),
+        l = N.Z.getGuild(i),
         a = null != l ? (0, P.nL)(l) : 0;
     return 0 === t
         ? (0, r.jsx)(r.Fragment, {
@@ -123,7 +123,7 @@ function W(e) {
                   (0, r.jsx)(u.u, {
                       text: k.intl.formatToPlainString(k.t.tuuJJS, { currentBoostLevel: t }),
                       children: (0, r.jsx)(g.P3F, {
-                          className: M.boostingIconWrapper,
+                          className: G.boostingIconWrapper,
                           onClick: () => {
                               (0, x.f)({
                                   guildId: i,
@@ -183,12 +183,12 @@ let V = (e) => {
         return (0, r.jsx)(
             g.yRy,
             U(
-                G(
+                M(
                     {
                         shouldShow: s,
                         renderPopout: (e) =>
                             (0, r.jsx)(g.VqE, {
-                                className: M.browserUnsupportedDialog,
+                                className: G.browserUnsupportedDialog,
                                 onMouseEnter: u,
                                 onMouseLeave: m,
                                 children: t(e),
@@ -215,10 +215,10 @@ let V = (e) => {
             renderPopoutChildren: (t, n) =>
                 (0, r.jsx)(
                     "div",
-                    U(G({ ref: e }, n), {
+                    U(M({ ref: e }, n), {
                         children: (0, r.jsx)(
                             g.Button,
-                            U(G({}, t), {
+                            U(M({}, t), {
                                 disabled: !0,
                                 variant: "primary",
                                 text: k.intl.string(k.t["/uNYPD"]),
@@ -272,7 +272,7 @@ function K(e) {
               onClick: function () {
                   (0, g.ZDy)(async () => {
                       let { default: e } = await n.e("56035").then(n.bind(n, 758961));
-                      return (n) => (0, r.jsx)(e, U(G({}, n), { guildId: t.id }));
+                      return (n) => (0, r.jsx)(e, U(M({}, n), { guildId: t.id }));
                   });
               },
               disabled: m <= 0 || !s,
@@ -283,13 +283,13 @@ function K(e) {
             (0, r.jsxs)("div", {
                 children: [
                     (0, r.jsx)(g.Text, {
-                        className: M.helpText,
+                        className: G.helpText,
                         variant: "text-sm/normal",
                         color: "header-secondary",
                         children: k.intl.string(k.t.BohnsL),
                     }),
                     (0, r.jsx)("div", {
-                        className: M.buttons,
+                        className: G.buttons,
                         children: !h && x,
                     }),
                 ],
@@ -297,7 +297,7 @@ function K(e) {
             h
                 ? (0, r.jsxs)(g.ubH, {
                       theme: d,
-                      className: M.empty,
+                      className: G.empty,
                       children: [
                           (0, r.jsx)(g.oxh, {
                               darkSrc: n(458601),
@@ -307,7 +307,7 @@ function K(e) {
                           }),
                           (0, r.jsx)(g.OZU, {
                               note: k.intl.string(k.t.ZhoSBA),
-                              noteClassName: M.emptyText,
+                              noteClassName: G.emptyText,
                               children: k.intl.string(k.t.I6P1p6),
                           }),
                           x,
@@ -315,9 +315,9 @@ function K(e) {
                   })
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)(g.izJ, { className: M.divider }),
+                          (0, r.jsx)(g.izJ, { className: G.divider }),
                           (0, r.jsx)(g.Heading, {
-                              className: M.tableTitle,
+                              className: G.tableTitle,
                               variant: "heading-md/bold",
                               color: "header-primary",
                               children: (0, r.jsx)(W, {
@@ -332,10 +332,10 @@ function K(e) {
                               isOutOfSlots: 0 === m,
                           }),
                           (0, r.jsxs)("div", {
-                              className: M.soundTable,
+                              className: G.soundTable,
                               children: [
                                   (0, r.jsxs)("div", {
-                                      className: M.tableHeaders,
+                                      className: G.tableHeaders,
                                       children: [
                                           (0, r.jsx)(H, { children: k.intl.string(k.t.sMOuub) }),
                                           (0, r.jsx)(H, { children: k.intl.string(k.t.lLFvlZ) }),
@@ -366,8 +366,8 @@ function Y(e) {
         { soundId: d, name: u, user: f, userId: h, emojiId: x, emojiName: _ } = t,
         { analyticsLocations: C } = (0, b.ZP)(),
         O = (0, c.e7)([I.default], () => (null != f ? f : I.default.getUser(h)), [h, f]),
-        { canManageGuildExpression: E } = (0, j.XJ)(o),
-        S = i.useMemo(() => E(t), [t, E]),
+        { canManageGuildExpression: N } = (0, j.XJ)(o),
+        S = i.useMemo(() => N(t), [t, N]),
         P = null != x || null != _,
         [w, R] = i.useState(!1),
         D = (0, y.z)(t, o.id);
@@ -389,7 +389,7 @@ function Y(e) {
     }, [O, h]);
     let L = i.useCallback(() => {
             null != O &&
-                (0, N.openUserProfileModal)({
+                (0, E.openUserProfileModal)({
                     userId: O.id,
                     guildId: o.id,
                     sourceAnalyticsLocations: C,
@@ -397,48 +397,48 @@ function Y(e) {
         }, [O, o.id, C]),
         B = Z.ZP.useUserTag(O);
     return (0, r.jsxs)("div", {
-        className: a()(M.row, { [M.active]: l }),
+        className: a()(G.row, { [G.active]: l }),
         children: [
             P
                 ? (0, r.jsx)(p.Z, {
                       emojiId: x,
                       emojiName: _,
-                      className: M.emoji,
+                      className: G.emoji,
                   })
                 : (0, r.jsx)(g.XBm, {
                       size: "md",
                       color: "currentColor",
-                      className: M.emoji,
+                      className: G.emoji,
                   }),
             (0, r.jsx)(g.P3F, {
                 onClick: () => {
                     w || s(t);
                 },
                 onContextMenu: D,
-                className: M.soundName,
+                className: G.soundName,
                 children: (0, r.jsxs)(g.Text, {
                     variant: "text-sm/normal",
-                    className: M.soundName,
+                    className: G.soundName,
                     children: [
                         u,
                         " ",
                         (0, r.jsx)(g.gj8, {
                             size: "md",
                             color: "currentColor",
-                            className: M.soundPreviewIcon,
+                            className: G.soundPreviewIcon,
                         }),
                     ],
                 }),
             }),
             null != O &&
                 (0, r.jsxs)(g.P3F, {
-                    className: M.uploader,
+                    className: G.uploader,
                     onClick: L,
                     children: [
                         (0, r.jsx)(g.qEK, {
                             "aria-label": B,
                             size: g.EFr.SIZE_24,
-                            className: M.uploaderAvatar,
+                            className: G.uploaderAvatar,
                             src: (0, T.ov)(O, !1, 24),
                         }),
                         (0, r.jsx)(g.Text, {
@@ -450,10 +450,10 @@ function Y(e) {
                 }),
             S
                 ? (0, r.jsxs)("div", {
-                      className: M.soundEditContainer,
+                      className: G.soundEditContainer,
                       children: [
                           (0, r.jsx)(g.P3F, {
-                              className: M.soundUpdate,
+                              className: G.soundUpdate,
                               onClick: function (e) {
                                   e.stopPropagation(),
                                       (0, g.ZDy)(async () => {
@@ -461,7 +461,7 @@ function Y(e) {
                                           return (n) =>
                                               (0, r.jsx)(
                                                   e,
-                                                  U(G({}, n), {
+                                                  U(M({}, n), {
                                                       guildId: o.id,
                                                       existingSound: t,
                                                   }),
@@ -472,18 +472,18 @@ function Y(e) {
                               children: (0, r.jsx)(g.vdY, {
                                   size: "xs",
                                   color: "currentColor",
-                                  className: M.soundEditIcon,
+                                  className: G.soundEditIcon,
                               }),
                           }),
                           (0, r.jsx)(g.P3F, {
-                              className: M.soundRemove,
+                              className: G.soundRemove,
                               onClick: function (e) {
                                   e.stopPropagation(),
                                       (0, g.h7j)((e) =>
                                           (0, r.jsx)(
                                               g.ConfirmModal,
                                               U(
-                                                  G(
+                                                  M(
                                                       {
                                                           header: k.intl.formatToPlainString(k.t["PR/VbG"], {
                                                               soundName: u,
@@ -508,7 +508,7 @@ function Y(e) {
                               children: (0, r.jsx)(g.Dio, {
                                   size: "md",
                                   color: "currentColor",
-                                  className: M.soundEditIcon,
+                                  className: G.soundEditIcon,
                               }),
                           }),
                       ],

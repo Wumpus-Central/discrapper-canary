@@ -37,8 +37,8 @@ var N = n(587061),
     L = n(746106),
     x = n(892071),
     M = n(358085),
-    j = n(62883),
-    k = n(998502),
+    k = n(62883),
+    j = n(998502),
     U = n(473159),
     G = n(928518),
     B = n(981631),
@@ -110,8 +110,8 @@ class z extends (r = a.Component) {
             (0, U.O)(e),
             e.addEventListener("blur", this.handleBlur),
             M.isPlatformEmbedded
-                ? t.addEventListener("contextmenu", j.contextMenuCallbackNative, !1)
-                : t.addEventListener("contextmenu", j.contextMenuCallbackWeb, !1),
+                ? t.addEventListener("contextmenu", k.contextMenuCallbackNative, !1)
+                : t.addEventListener("contextmenu", k.contextMenuCallbackWeb, !1),
             e.addEventListener("beforeunload", this.beforeUnload),
             this.registerPopoutGlobalKeybinds();
     }
@@ -125,8 +125,8 @@ class z extends (r = a.Component) {
         this.unregisterPopoutGlobalKeybinds(),
             e.removeEventListener("blur", this.handleBlur),
             M.isPlatformEmbedded
-                ? t.removeEventListener("contextmenu", j.contextMenuCallbackNative)
-                : t.removeEventListener("contextmenu", j.contextMenuCallbackWeb),
+                ? t.removeEventListener("contextmenu", k.contextMenuCallbackNative)
+                : t.removeEventListener("contextmenu", k.contextMenuCallbackWeb),
             (0, d.j)(() => p.s9z.setState((e) => W(H({}, e), { [p.u1M]: [] }))),
             e.removeEventListener("beforeunload", this.beforeUnload);
     }
@@ -243,7 +243,7 @@ class z extends (r = a.Component) {
                 let { onBeforeUnload: t } = this.props,
                     n = () => {
                         G.Z.unmountWindow(this.props.windowKey),
-                            M.isPlatformEmbedded && k.ZP.close(this.props.windowKey);
+                            M.isPlatformEmbedded && j.ZP.close(this.props.windowKey);
                     };
                 null != t
                     ? t({

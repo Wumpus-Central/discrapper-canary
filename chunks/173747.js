@@ -58,10 +58,10 @@ function M() {
     if (!(0, y.Q)()) return !1;
     for (let e of A) {
         let { applicationId: t, branchId: n } = (0, b.CP)(e);
-        null != f.Z.getApplication(t) && (A.delete(e), j(t, n));
+        null != f.Z.getApplication(t) && (A.delete(e), k(t, n));
     }
 }
-function j(e, t) {
+function k(e, t) {
     if (null != I[t] && g.Z.shouldBeInstalled(e, t)) {
         let n = I[t],
             r = n.manifestIds,
@@ -75,7 +75,7 @@ function j(e, t) {
             });
     }
 }
-function k(e) {
+function j(e) {
     let { branchId: t } = e;
     v.add(t);
 }
@@ -95,7 +95,7 @@ function U(e) {
             locale: r,
             manifestIds: a,
         }),
-        j(t, n);
+        k(t, n);
 }
 function G(e) {
     let { branchId: t } = e;
@@ -173,7 +173,7 @@ O(K, "displayName", "ApplicationBuildStore");
 let z = new K(l.Z, {
     CONNECTION_OPEN: L,
     GAMES_DATABASE_UPDATE: M,
-    APPLICATION_BUILD_FETCH_START: k,
+    APPLICATION_BUILD_FETCH_START: j,
     APPLICATION_BUILD_FETCH_SUCCESS: U,
     APPLICATION_BUILD_NOT_FOUND: G,
     APPLICATION_BUILD_SIZE_FETCH_START: B,

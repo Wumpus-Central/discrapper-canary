@@ -20,16 +20,16 @@ var l = n(951288),
     _ = n(430824),
     C = n(709054),
     E = n(51144),
-    N = n(981631),
-    S = n(131085),
-    T = n(388032),
+    S = n(981631),
+    T = n(131085),
+    N = n(388032),
     P = n(59678),
     O = n(428331);
 function I(e) {
     let { icon: t, label: n, onClick: r, disabled: i } = e;
     return (0, l.jsxs)(d.P3F, {
         className: a()(P.actionButton, { [P.disabled]: i }),
-        onClick: i ? N.dG4 : r,
+        onClick: i ? S.dG4 : r,
         "aria-label": n,
         children: [
             (0, l.jsx)(t, {
@@ -89,7 +89,7 @@ function y(e) {
                                         primaryGuild: null == t ? void 0 : t.primaryGuild,
                                         userId: null == t ? void 0 : t.id,
                                         contextGuildId: n,
-                                        badgeSize: S.Gg.SIZE_16,
+                                        badgeSize: T.Gg.SIZE_16,
                                         textVariant: "heading-md/semibold",
                                         className: O.memberClanTag,
                                         containerClassName: O.memberClanTagContainer,
@@ -133,19 +133,19 @@ function R(e) {
         children: [
             (0, l.jsx)(I, {
                 icon: d.owK,
-                label: T.intl.string(T.t.BzjDQE),
+                label: N.intl.string(N.t.BzjDQE),
                 onClick: i,
                 disabled: o,
             }),
             (0, l.jsx)(I, {
                 icon: d.k$p,
-                label: T.intl.string(T.t.hDtbs7),
+                label: N.intl.string(N.t.hDtbs7),
                 onClick: a,
                 disabled: o,
             }),
             (0, l.jsx)(I, {
                 icon: d.kBi,
-                label: T.intl.string(T.t.KQeYoK),
+                label: N.intl.string(N.t.KQeYoK),
                 onClick: s,
                 disabled: o,
             }),
@@ -169,7 +169,7 @@ function w(e) {
                     (0, l.jsx)(d.Text, {
                         variant: "text-md/medium",
                         color: "header-primary",
-                        children: T.intl.string(T.t.bSZklZ),
+                        children: N.intl.string(N.t.bSZklZ),
                     }),
                     null != i && null != r
                         ? (0, l.jsxs)("div", {
@@ -178,7 +178,7 @@ function w(e) {
                                   (0, l.jsx)(d.Text, {
                                       variant: "text-sm/normal",
                                       color: "text-muted",
-                                      children: T.intl.formatToPlainString(T.t.qnimbG, {
+                                      children: N.intl.formatToPlainString(N.t.qnimbG, {
                                           username: null != (t = i.global_name) ? t : i.username,
                                       }),
                                   }),
@@ -195,7 +195,7 @@ function w(e) {
                         (0, l.jsx)(d.Text, {
                             variant: "text-sm/normal",
                             color: "text-muted",
-                            children: T.intl.formatToPlainString(T.t.fU5PPD, { rejectionReason: a }),
+                            children: N.intl.formatToPlainString(N.t.fU5PPD, { rejectionReason: a }),
                         }),
                 ],
             }),
@@ -219,7 +219,7 @@ function A(e) {
                     (0, l.jsx)(d.Text, {
                         variant: "text-md/medium",
                         color: "header-primary",
-                        children: T.intl.string(T.t.aURgY2),
+                        children: N.intl.string(N.t.aURgY2),
                     }),
                     null != i && null != r
                         ? (0, l.jsxs)("div", {
@@ -228,7 +228,7 @@ function A(e) {
                                   (0, l.jsx)(d.Text, {
                                       variant: "text-sm/normal",
                                       color: "text-muted",
-                                      children: T.intl.formatToPlainString(T.t.qnimbG, {
+                                      children: N.intl.formatToPlainString(N.t.qnimbG, {
                                           username: null != (t = i.global_name) ? t : i.username,
                                       }),
                                   }),
@@ -254,7 +254,7 @@ function Z(e) {
                 className: P.accountLabel,
                 variant: "text-sm/medium",
                 color: "text-muted",
-                children: T.intl.string(T.t["ldCE/v"]),
+                children: N.intl.string(N.t["ldCE/v"]),
             }),
             (0, l.jsxs)("div", {
                 className: P.userInfoContainer,
@@ -265,7 +265,7 @@ function Z(e) {
                             (0, l.jsx)(d.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                children: T.intl.string(T.t.SaDIpK),
+                                children: N.intl.string(N.t.SaDIpK),
                             }),
                             (0, l.jsx)(d.Text, {
                                 variant: "text-sm/normal",
@@ -280,7 +280,7 @@ function Z(e) {
                             (0, l.jsx)(d.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                children: T.intl.string(T.t.Vt4cn5),
+                                children: N.intl.string(N.t.Vt4cn5),
                             }),
                             (0, l.jsx)(d.Text, {
                                 variant: "text-sm/normal",
@@ -305,7 +305,7 @@ function M(e) {
         o = r.useMemo(() => (null != i ? new v.Z(i) : null), [i]),
         u = (0, c.e7)([_.Z], () => _.Z.getGuild(t), [t]);
     return ((0, m.Tt)({
-        subsection: T.intl.string(T.t.nqrK8f),
+        subsection: N.intl.string(N.t.nqrK8f),
         location: null == u ? void 0 : u.name,
     }),
     null == n || null == u || null == o || null == i)

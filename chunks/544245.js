@@ -3,12 +3,12 @@ var a = n(951288),
     r = n(647438),
     i = n(481060),
     l = n(881052),
-    s = n(972959),
-    o = n(729345),
+    o = n(972959),
+    s = n(729345),
     c = n(620481),
     d = n(608934),
     u = n(981631);
-let m = (0, s.H)(() => ({
+let m = (0, o.H)(() => ({
     includeFrecency: !0,
     includeFriends: !0,
     includeGDMs: !0,
@@ -23,13 +23,13 @@ function p() {
     let e = m.useField("includeFrecency"),
         t = m.useField("includeFriends"),
         n = m.useField("includeDMs"),
-        s = m.useField("includeGDMs"),
+        o = m.useField("includeGDMs"),
         p = m.useField("includeQuickSwitcherState"),
         h = m.useField("includeUserSearchWorkerState"),
         x = m.useField("isUploading"),
         f = m.useField("isSuccess"),
-        b = m.useField("errorMessage"),
-        g = r.useCallback(async () => {
+        g = m.useField("errorMessage"),
+        b = r.useCallback(async () => {
             let {
                 includeFrecency: e,
                 includeFriends: t,
@@ -37,9 +37,9 @@ function p() {
                 includeDMs: a,
                 includeQuickSwitcherState: r,
                 includeUserSearchWorkerState: i,
-                isUploading: s,
+                isUploading: o,
             } = m.getState();
-            if (!s)
+            if (!o)
                 try {
                     m.setState({
                         isUploading: !0,
@@ -52,7 +52,7 @@ function p() {
                         e && (0, c.Sr)(),
                         r && (0, c.OC)(),
                         i && (0, c.Jt)(),
-                        await (0, o.E)(u.GU0.WEB_APP),
+                        await (0, s.E)(u.GU0.WEB_APP),
                         m.setState({
                             isSuccess: !0,
                             errorMessage: null,
@@ -93,8 +93,8 @@ function p() {
                 label: "Group DMs",
                 description:
                     "Includes recipient user ids, usernames, global names, nicknames, and custom channel names for all Group DMs. Does NOT include any message data.",
-                checked: s,
-                onChange: () => m.setState({ includeGDMs: !s }),
+                checked: o,
+                onChange: () => m.setState({ includeGDMs: !o }),
             }),
             (0, a.jsx)(i.rsf, {
                 label: "Quick Switcher Results",
@@ -113,8 +113,8 @@ function p() {
             (0, a.jsx)(d.a, {
                 isUploading: x,
                 isSuccess: f,
-                errorMessage: b,
-                onClick: g,
+                errorMessage: g,
+                onClick: b,
                 title: "Upload Snapshot Logs",
             }),
         ],

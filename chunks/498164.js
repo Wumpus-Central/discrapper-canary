@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(35282), n(65234), n(111804), n(490233), n(97749), n(388685), n(190126), n(368063);
+n.d(t, { Z: () => k }), n(35282), n(65234), n(111804), n(490233), n(97749), n(388685), n(190126), n(368063);
 var r = n(951288);
 n(647438);
 var i = n(772848),
@@ -16,17 +16,17 @@ var i = n(772848),
     m = n(100527),
     b = n(728345),
     _ = n(962220),
-    O = n(69580),
-    E = n(53144),
+    E = n(69580),
+    O = n(53144),
     v = n(113434),
     y = n(937797),
     I = n(36243),
     C = n(703656),
     S = n(553795),
-    T = n(594174),
-    N = n(626135),
-    j = n(585483),
-    P = n(591759),
+    N = n(594174),
+    T = n(626135),
+    P = n(585483),
+    j = n(591759),
     x = n(998502),
     A = n(996106),
     Z = n(109815),
@@ -58,9 +58,9 @@ function D(e) {
     }
     return e;
 }
-function k(e, t) {
+function M(e, t) {
     null != e &&
-        N.default.track(L.rMx.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
+        T.default.track(L.rMx.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
             invite_code: null,
             has_auth_token: null,
             is_backgrounded: null,
@@ -68,7 +68,7 @@ function k(e, t) {
             link_type: t,
         });
 }
-let M = {
+let k = {
     [L.Etm.INVITE_BROWSER]: {
         scope: w.cE,
         async handler(e) {
@@ -84,7 +84,7 @@ let M = {
             let {
                 args: { code: t },
             } = e;
-            if (null == T.default.getCurrentUser()) return;
+            if (null == N.default.getCurrentUser()) return;
             let { guildTemplate: i } = await _.Z.resolveGuildTemplate(t);
             if (null == i)
                 throw new A.Z({ errorCode: L.lTL.INVALID_GUILD_TEMPLATE }, "Invalid guild template id: ".concat(t));
@@ -133,7 +133,7 @@ let M = {
                         .then((i) => {
                             let { giftCode: l } = i;
                             x.ZP.focus(),
-                                N.default.track(L.rMx.OPEN_MODAL, {
+                                T.default.track(L.rMx.OPEN_MODAL, {
                                     type: "gift_accept",
                                     location: L.SaU,
                                 }),
@@ -165,23 +165,23 @@ let M = {
                             pathname: L.Z5c.SETTINGS(n.section, n.subsection),
                             search: n.search,
                         }),
-                        k(n.fingerprint, (0, w.O)(t)));
+                        M(n.fingerprint, (0, w.O)(t)));
                     break;
                 case w.jE.CHANGELOG:
                     null != n &&
-                        ((0, C.dL)(P.Z.formatPathWithQuery(L.Z5c.CHANGELOGS(n.date), n.query)),
-                        k(n.fingerprint, (0, w.O)(t)));
+                        ((0, C.dL)(j.Z.formatPathWithQuery(L.Z5c.CHANGELOGS(n.date), n.query)),
+                        M(n.fingerprint, (0, w.O)(t)));
                     break;
                 case w.jE.LIBRARY:
-                    (0, C.dL)(L.Z5c.APPLICATION_LIBRARY), null != n && k(n.fingerprint, (0, w.O)(t));
+                    (0, C.dL)(L.Z5c.APPLICATION_LIBRARY), null != n && M(n.fingerprint, (0, w.O)(t));
                     break;
                 case w.jE.STORE_HOME:
-                    (0, C.dL)(L.Z5c.APPLICATION_STORE), null != n && k(n.fingerprint, (0, w.O)(t));
+                    (0, C.dL)(L.Z5c.APPLICATION_STORE), null != n && M(n.fingerprint, (0, w.O)(t));
                     break;
                 case w.jE.STORE_LISTING:
                     null != n &&
                         ((0, C.dL)(L.Z5c.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)),
-                        k(n.fingerprint, (0, w.O)(t)));
+                        M(n.fingerprint, (0, w.O)(t)));
                     break;
                 case w.jE.PICK_GUILD_SETTINGS:
                     null != n &&
@@ -189,7 +189,7 @@ let M = {
                             pathname: L.Z5c.PICK_GUILD_SETTINGS(n.section, n.subsection),
                             search: n.search,
                         }),
-                        k(n.fingerprint, (0, w.O)(t)));
+                        M(n.fingerprint, (0, w.O)(t)));
                     break;
                 case w.jE.CHANNEL:
                     null != n &&
@@ -197,7 +197,7 @@ let M = {
                             pathname: L.Z5c.CHANNEL(n.guildId, n.channelId, n.messageId),
                             search: n.search,
                         }),
-                        k(n.fingerprint, (0, w.O)(t)));
+                        M(n.fingerprint, (0, w.O)(t)));
                     break;
                 case w.jE.QUEST_HOME: {
                     let { enabled: e } = y.m8.getConfig({ location: R.dr.QUEST_DEEP_LINK_UTIL });
@@ -206,7 +206,7 @@ let M = {
                               pathname: e ? L.Z5c.QUEST_HOME_V2 : L.Z5c.QUEST_HOME,
                               hash: n.questId,
                           }),
-                          k(n.fingerprint, (0, w.O)(t)))
+                          M(n.fingerprint, (0, w.O)(t)))
                         : (0, C.dL)(e ? L.Z5c.QUEST_HOME_V2 : L.Z5c.QUEST_HOME);
                     break;
                 }
@@ -219,7 +219,7 @@ let M = {
                                 pathname: L.Z5c.QUEST_HOME_V2,
                                 search: "?".concat(e.toString()),
                             }),
-                            k(n.fingerprint, (0, w.O)(t));
+                            M(n.fingerprint, (0, w.O)(t));
                     }
                     break;
                 case w.jE.DISCOVERY_GAME_RESULTS:
@@ -228,16 +228,16 @@ let M = {
                             pathname: L.Z5c.GLOBAL_DISCOVERY_SERVERS,
                             search: "?game=".concat(n.gameId),
                         }),
-                        k(n.fingerprint, (0, w.O)(t)));
+                        M(n.fingerprint, (0, w.O)(t)));
                     break;
                 case w.jE.OAUTH2:
                     let r = new URL(L.Z5c.OAUTH2_AUTHORIZE, window.location.origin);
                     r.search = n.search;
-                    let l = (0, O.getOAuth2AuthorizeProps)(r.toString());
-                    if (null != l) return (0, O.openOAuth2ModalWithCreateGuildModal)(l), !0;
+                    let l = (0, E.getOAuth2AuthorizeProps)(r.toString());
+                    if (null != l) return (0, E.openOAuth2ModalWithCreateGuildModal)(l), !0;
                     return !1;
                 case w.jE.ONE_TIME_LOGIN:
-                    if (null != n) return (0, E.Y)({ token: n.token }), k(n.fingerprint, (0, w.O)(t)), !0;
+                    if (null != n) return (0, O.Y)({ token: n.token }), M(n.fingerprint, (0, w.O)(t)), !0;
                     return !1;
                 case w.jE.SHOP:
                     null != n &&
@@ -245,11 +245,11 @@ let M = {
                             pathname: L.Z5c.COLLECTIBLES_SHOP,
                             search: n.search,
                         }),
-                        k(n.fingerprint, (0, w.O)(t)));
+                        M(n.fingerprint, (0, w.O)(t)));
                     break;
                 case w.jE.FEATURES:
                     (null == n ? void 0 : n.path) != null &&
-                        ((0, C.dL)({ pathname: n.path }), k(n.fingerprint, (0, w.O)(t)));
+                        ((0, C.dL)({ pathname: n.path }), M(n.fingerprint, (0, w.O)(t)));
                     break;
                 case w.jE.ACTIVITIES:
                     if (null != n) {
@@ -260,7 +260,7 @@ let M = {
                                     var r, i;
                                     let l = f.ZP.getCurrentEmbeddedActivity();
                                     if ((null == l ? void 0 : l.applicationId) === e)
-                                        return void N.default.track(L.rMx.ACTIVITY_DEEP_LINK_RECEIVED, {
+                                        return void T.default.track(L.rMx.ACTIVITY_DEEP_LINK_RECEIVED, {
                                             application_id: e,
                                             success: !1,
                                             failure_reason: "activity_already_running",
@@ -269,7 +269,7 @@ let M = {
                                     let a = await b.ZP.fetchApplication(e),
                                         o = null == a || null == (r = a.bot) ? void 0 : r.id;
                                     if (null == o)
-                                        return void N.default.track(L.rMx.ACTIVITY_DEEP_LINK_RECEIVED, {
+                                        return void T.default.track(L.rMx.ACTIVITY_DEEP_LINK_RECEIVED, {
                                             application_id: e,
                                             success: !1,
                                             failure_reason: "no_bot_user",
@@ -290,14 +290,14 @@ let M = {
                                         customId: p,
                                         referrerId: d,
                                     }),
-                                        N.default.track(L.rMx.ACTIVITY_DEEP_LINK_RECEIVED, {
+                                        T.default.track(L.rMx.ACTIVITY_DEEP_LINK_RECEIVED, {
                                             application_id: e,
                                             success: !0,
                                             failure_reason: null,
                                             attempt_id: n,
                                         });
                                 } catch (t) {
-                                    N.default.track(L.rMx.ACTIVITY_DEEP_LINK_RECEIVED, {
+                                    T.default.track(L.rMx.ACTIVITY_DEEP_LINK_RECEIVED, {
                                         application_id: e,
                                         success: !1,
                                         failure_reason: "launch_failed",
@@ -305,7 +305,7 @@ let M = {
                                     });
                                 }
                             })(n.applicationId, n.url, e),
-                            k(n.fingerprint, (0, w.O)(t)),
+                            M(n.fingerprint, (0, w.O)(t)),
                             !0
                         );
                     }
@@ -346,7 +346,7 @@ let M = {
             } catch (e) {
                 if ((null == e ? void 0 : e.status) === 400)
                     throw new A.Z({ errorCode: L.lTL.BAD_REQUEST_FOR_PROVIDER }, "Bad request for provider");
-                throw (j.S.dispatch(L.CkL.CONNECTIONS_CALLBACK_ERROR), e);
+                throw (P.S.dispatch(L.CkL.CONNECTIONS_CALLBACK_ERROR), e);
             }
         },
     },

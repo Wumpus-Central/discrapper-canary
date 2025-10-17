@@ -1,6 +1,6 @@
 n.d(t, {
-    DI: () => E,
-    x3: () => N,
+    DI: () => N,
+    x3: () => E,
 }),
     n(388685),
     n(953529),
@@ -184,7 +184,7 @@ function y(e) {
                 }),
                 f());
     }
-    let N = [
+    let E = [
         {
             text: j.intl.string(j.t["ETE/oK"]),
             variant: "secondary",
@@ -193,7 +193,7 @@ function y(e) {
     ];
     return (
         null != m &&
-            N.push({
+            E.push({
                 text: j.intl.string(j.t.oyYWHB),
                 variant: "critical-secondary",
                 onClick: () => {
@@ -201,7 +201,7 @@ function y(e) {
                 },
                 icon: c.XHJ,
             }),
-        N.push({
+        E.push({
             text: null == l ? j.intl.string(j.t.OYkgVl) : j.intl.string(j.t.R3BPHx),
             variant: "primary",
             onClick: y,
@@ -213,7 +213,7 @@ function y(e) {
                 transitionState: p,
                 onClose: f,
                 title: j.intl.string(j.t["2qf9EB"]),
-                actions: N,
+                actions: E,
                 children: (0, r.jsxs)(c.Kqy, {
                     gap: "md",
                     children: [
@@ -241,7 +241,7 @@ function y(e) {
         })
     );
 }
-function N(e) {
+function E(e) {
     let { guildId: t, omitChannelIds: n, initialData: l, onSave: s, onDelete: o, transitionState: d, onClose: g } = e,
         [m, p] = i.useState(null == l ? void 0 : l.ref_id),
         f = (0, u.Dt)(),
@@ -279,7 +279,7 @@ function N(e) {
         onDelete: o,
     });
 }
-function E(e) {
+function N(e) {
     var t;
     let { initialData: n, onSave: l, transitionState: s, onClose: o, onDelete: d, guildId: g } = e,
         [m, p] = i.useState(null != (t = null == n ? void 0 : n.name) ? t : ""),

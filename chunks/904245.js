@@ -32,8 +32,8 @@ var r = n(278074),
     L = n(467512),
     x = n(779832),
     M = n(786761),
-    j = n(459618),
-    k = n(541288),
+    k = n(459618),
+    j = n(541288),
     U = n(3148),
     G = n(48854),
     B = n(785359),
@@ -144,7 +144,7 @@ class eM {
         eC(this, "completed", !1);
     }
 }
-function ej(e) {
+function ek(e) {
     let {
             content: t,
             channelId: n,
@@ -157,7 +157,7 @@ function ej(e) {
     (0, y.ZP)(t).forEach((e) => {
         let { type: t, code: c, url: u } = e;
         if (t === b.g.INVITE)
-            ek({
+            ej({
                 inviteKey: c,
                 channelId: n,
                 messageId: r,
@@ -206,7 +206,7 @@ function ej(e) {
         else throw Error("Unknown coded link type: ".concat(t));
     });
 }
-function ek(e) {
+function ej(e) {
     var t, n;
     let {
             inviteKey: r,
@@ -869,7 +869,7 @@ let eZ = {
             i = eP(eN({}, i), { nonce: o });
             let s = () => eF._sendMessage(e, t, i),
                 l = x.ZP.backgroundify(s, void 0);
-            return (j.Z.recordMessageSendAttempt(e, o, i), el.Z.isReady(e))
+            return (k.Z.recordMessageSendAttempt(e, o, i), el.Z.isReady(e))
                 ? l()
                 : r && e !== E.V
                   ? (eL.info("Waiting for channel ".concat(e, " to be ready before sending.")),
@@ -989,7 +989,7 @@ let eZ = {
                 })
                 .then(
                     (n) => (
-                        k.Z.donateSentMessage(n.body.content, e),
+                        j.Z.donateSentMessage(n.body.content, e),
                         eF.receiveMessage(e, n.body),
                         s.Z.dispatch({
                             type: "STICKER_TRACK_USAGE",
@@ -1198,7 +1198,7 @@ let eZ = {
                         (o) => {
                             let c = Date.now() - i;
                             if (o.ok) {
-                                k.Z.donateSentMessage(d, e),
+                                j.Z.donateSentMessage(d, e),
                                     eF.receiveMessage(e, o.body, !0, {
                                         sendAnalytics: {
                                             duration: c,
@@ -1230,7 +1230,7 @@ let eZ = {
                                         joinRequestUserId: n,
                                     });
                                 }
-                                j.Z.recordMessageSendApiResponse(en),
+                                k.Z.recordMessageSendApiResponse(en),
                                     s.Z.dispatch({
                                         type: "SLOWMODE_RESET_COOLDOWN",
                                         slowmodeType: ef.S.SendMessage,
@@ -1251,7 +1251,7 @@ let eZ = {
                                             author: e_.default.getCurrentUser(),
                                         },
                                     }),
-                                    ej({
+                                    ek({
                                         content: d,
                                         channelId: e,
                                         messageId: o.body.id,
@@ -1521,6 +1521,6 @@ let eZ = {
                             confirmText: eA.intl.string(eA.t.BddRzc),
                         });
                 }),
-        trackInvite: ek,
+        trackInvite: ej,
     },
     eV = eF;

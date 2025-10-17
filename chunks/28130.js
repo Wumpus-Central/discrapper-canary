@@ -28,8 +28,8 @@ var r = n(951288),
     w = n(486324),
     R = n(869783),
     P = n(388032),
-    _ = n(133495);
-function F(e) {
+    F = n(133495);
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -75,12 +75,12 @@ let Z = [
 function I(e) {
     let { shouldAnimate: t = !0 } = e;
     return (0, r.jsx)("div", {
-        className: _.gifGrid,
+        className: F.gifGrid,
         children: Z.map((e) =>
             (0, r.jsx)(
                 "div",
                 {
-                    className: _.gif,
+                    className: F.gif,
                     style: { backgroundImage: "url(".concat(t ? e.gif : e.png, ")") },
                 },
                 e.gif,
@@ -102,7 +102,7 @@ function k(e) {
 function D(e) {
     let { guildFeature: t, guild: n } = e;
     return (0, r.jsx)("div", {
-        className: _.boostingPill,
+        className: F.boostingPill,
         children: (0, r.jsx)(f.Z, {
             guildFeature: t,
             guild: n,
@@ -114,16 +114,16 @@ function M(e) {
     let { icon: t, label: n, guildFeature: l, guild: a, shouldShowPremiumIcon: s } = e,
         u = null != a && null != l;
     return (0, r.jsxs)("div", {
-        className: i()(_.optionDescription, { [_.hasBoostingPill]: u }),
+        className: i()(F.optionDescription, { [F.hasBoostingPill]: u }),
         "aria-hidden": !0,
         children: [
             (0, r.jsxs)("div", {
-                className: _.optionIconAndLabel,
+                className: F.optionIconAndLabel,
                 children: [
                     t,
                     (0, r.jsxs)(c.Text, {
                         variant: "text-sm/semibold",
-                        className: i()(_.optionLabelText, { [_.hasPremiumIcon]: s }),
+                        className: i()(F.optionLabelText, { [F.hasPremiumIcon]: s }),
                         children: [
                             s &&
                                 (0, r.jsx)(o.u, {
@@ -132,7 +132,7 @@ function M(e) {
                                     children: (0, r.jsx)(c.SrA, {
                                         size: "xs",
                                         color: "currentColor",
-                                        className: _.premiumWheel,
+                                        className: F.premiumWheel,
                                     }),
                                 }),
                             n,
@@ -169,7 +169,7 @@ function L(e) {
             (0, r.jsx)(c.tEY, {
                 within: !0,
                 children: (0, r.jsxs)("div", {
-                    className: i()(_.option, _.imageUploadOption),
+                    className: i()(F.option, F.imageUploadOption),
                     children: [
                         (0, r.jsx)(M, {
                             icon: (0, r.jsx)(c.FmF, {
@@ -209,7 +209,7 @@ function U(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)(c.P3F, {
-                className: _.option,
+                className: F.option,
                 onClick: l,
                 "aria-label": P.intl.string(P.t["xsC+//"]),
                 onMouseEnter: i,
@@ -284,7 +284,7 @@ function B(e) {
                         return (n) =>
                             (0, r.jsx)(
                                 l,
-                                F(
+                                _(
                                     {
                                         imageUri: e,
                                         file: t,
@@ -312,7 +312,7 @@ function B(e) {
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            F(
+                            _(
                                 {
                                     uploadType: o,
                                     onComplete: (e) => {
@@ -351,11 +351,11 @@ function B(e) {
     return (0, r.jsxs)(c.Y0X, {
         transitionState: t,
         size: c.CgR.DYNAMIC,
-        className: _.modal,
+        className: F.modal,
         parentComponent: "SelectImageModal",
         children: [
             (0, r.jsxs)(c.xBx, {
-                className: _.modalHeader,
+                className: F.modalHeader,
                 separator: !1,
                 children: [
                     (0, r.jsx)(c.Heading, {
@@ -364,18 +364,18 @@ function B(e) {
                     }),
                     (0, r.jsx)(c.olH, {
                         onClick: a,
-                        className: _.modalCloseButton,
+                        className: F.modalCloseButton,
                     }),
                 ],
             }),
             (0, r.jsxs)(c.hzk, {
-                className: _.modalContent,
+                className: F.modalContent,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: _.imageSelectionSection,
+                        className: F.imageSelectionSection,
                         children: [
                             (0, r.jsxs)("ul", {
-                                className: _.optionsList,
+                                className: F.optionsList,
                                 "aria-label": P.intl.string(P.t.iBnqtb),
                                 children: [
                                     (0, r.jsx)("li", {
@@ -400,7 +400,7 @@ function B(e) {
                             }),
                             null != Z
                                 ? (0, r.jsx)(c.Text, {
-                                      className: _.imageSpecifications,
+                                      className: F.imageSpecifications,
                                       variant: "text-sm/normal",
                                       color: "text-muted",
                                       children: Z,
@@ -416,7 +416,7 @@ function B(e) {
                             showUpsell: !0,
                             position: "inline",
                             showShadow: !1,
-                            className: _.premiumUpsell,
+                            className: F.premiumUpsell,
                         }),
                 ],
             }),

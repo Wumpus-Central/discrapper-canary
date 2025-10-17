@@ -17,8 +17,8 @@ var r,
     _ = n(158776),
     E = n(699516),
     O = n(594174),
-    y = n(981631),
-    v = n(474936);
+    v = n(981631),
+    y = n(474936);
 function I(e, t, n) {
     return (
         t in e
@@ -66,14 +66,14 @@ function S(e, t) {
         e
     );
 }
-function T(e) {
+function N(e) {
     let t = O.default.getUser(e);
     return {
         user: t,
         usernameLower: null != t ? t.username.toLowerCase() : null,
     };
 }
-function N(e) {
+function T(e) {
     return {
         status: _.Z.getStatus(e),
         isMobile: _.Z.isMobileOnline(e),
@@ -152,13 +152,13 @@ class j extends c.Z {
             (this.isGameRelationship = null != (t = e.isGameRelationship) && t);
     }
 }
-class A {
+class x {
     reset() {
         let e = new Set(),
             t = Array.from(E.Z.getMutableRelationships().entries()).map((t) => {
                 let [n, r] = t;
                 return (
-                    r === y.OGo.FRIEND && e.add(n),
+                    r === v.OGo.FRIEND && e.add(n),
                     new j(
                         S(
                             C(
@@ -168,16 +168,16 @@ class A {
                                     userId: n,
                                     nickname: E.Z.getNickname(n),
                                 },
-                                T(n),
                                 N(n),
+                                T(n),
                                 P(n),
                             ),
                             {
                                 spam: E.Z.isSpam(n),
                                 ignoredUser: E.Z.isIgnored(n),
                                 giftIntentType:
-                                    r === y.OGo.FRIEND && h.Z.isTopAffinityFriendAnniversary({ userId: n })
-                                        ? v.hX.FRIEND_ANNIVERSARY
+                                    r === v.OGo.FRIEND && h.Z.isTopAffinityFriendAnniversary({ userId: n })
+                                        ? y.hX.FRIEND_ANNIVERSARY
                                         : void 0,
                                 applicationId: E.Z.getOriginApplicationId(n),
                             },
@@ -190,9 +190,9 @@ class A {
             i = new Set();
         r.forEach((t) => {
             let { id: r, applicationId: l, type: a } = t;
-            !(a === y.OGo.FRIEND && e.has(r)) &&
-                ((a === y.OGo.FRIEND && i.has(r)) ||
-                    (a === y.OGo.FRIEND && i.add(r),
+            !(a === v.OGo.FRIEND && e.has(r)) &&
+                ((a === v.OGo.FRIEND && i.has(r)) ||
+                    (a === v.OGo.FRIEND && i.add(r),
                     n.push(
                         new j(
                             S(
@@ -204,8 +204,8 @@ class A {
                                         applicationId: l,
                                         nickname: E.Z.getNickname(r),
                                     },
-                                    T(r),
                                     N(r),
+                                    T(r),
                                     P(r),
                                 ),
                                 {
@@ -228,16 +228,16 @@ class A {
                             type: 99,
                             nickname: e.name,
                         },
-                        T(e.key),
                         N(e.key),
+                        T(e.key),
                         P(e.key),
                     ),
                 ),
         );
-        return new A(l().concat(t, n, a));
+        return new x(l().concat(t, n, a));
     }
     clone() {
-        return new A(this._rows);
+        return new x(this._rows);
     }
     update(e) {
         let t = !1;
@@ -262,22 +262,22 @@ class A {
             })
             .filter((t) => {
                 switch (e) {
-                    case y.pJs.ONLINE:
-                        return t.type === y.OGo.FRIEND && t.status !== y.Skl.OFFLINE;
-                    case y.pJs.PENDING:
+                    case v.pJs.ONLINE:
+                        return t.type === v.OGo.FRIEND && t.status !== v.Skl.OFFLINE;
+                    case v.pJs.PENDING:
                         return (
-                            (t.type === y.OGo.PENDING_INCOMING && !t.spam && !t.ignoredUser) ||
-                            t.type === y.OGo.PENDING_OUTGOING
+                            (t.type === v.OGo.PENDING_INCOMING && !t.spam && !t.ignoredUser) ||
+                            t.type === v.OGo.PENDING_OUTGOING
                         );
-                    case y.pJs.SPAM:
-                        return t.type === y.OGo.PENDING_INCOMING && t.spam;
-                    case y.pJs.PENDING_IGNORED:
-                        return t.type === y.OGo.PENDING_INCOMING && t.ignoredUser;
-                    case y.pJs.SUGGESTIONS:
+                    case v.pJs.SPAM:
+                        return t.type === v.OGo.PENDING_INCOMING && t.spam;
+                    case v.pJs.PENDING_IGNORED:
+                        return t.type === v.OGo.PENDING_INCOMING && t.ignoredUser;
+                    case v.pJs.SUGGESTIONS:
                         return 99 === t.type;
-                    case y.pJs.ALL:
+                    case v.pJs.ALL:
                     default:
-                        return t.type === y.OGo.FRIEND;
+                        return t.type === v.OGo.FRIEND;
                 }
             })
             .sortBy((e) => e.comparator)
@@ -285,11 +285,11 @@ class A {
     }
     getRelationshipCounts() {
         let e = {
-            [y.OGo.FRIEND]: 0,
-            [y.OGo.PENDING_INCOMING]: 0,
-            [y.OGo.PENDING_OUTGOING]: 0,
+            [v.OGo.FRIEND]: 0,
+            [v.OGo.PENDING_INCOMING]: 0,
+            [v.OGo.PENDING_OUTGOING]: 0,
             99: 0,
-            [y.OGo.BLOCKED]: 0,
+            [v.OGo.BLOCKED]: 0,
         };
         return (
             this._rows.forEach((t) => {
@@ -302,23 +302,23 @@ class A {
         I(this, "_rows", void 0), (this._rows = e);
     }
 }
-let x = !0,
+let A = !0,
     Z = !1,
-    w = y.pJs.ONLINE,
-    L = new A(),
+    w = v.pJs.ONLINE,
+    L = new x(),
     R = !0,
     D = !1;
-function k() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    x && (e || (w !== y.pJs.ONLINE && w !== y.pJs.ADD_FRIEND)) && !Z && ((x = !1), (Z = !0), s.Z.fetchRelationships());
-}
 function M() {
-    if (((x = !0), R ? (Z = !1) : k(), (L = L.reset()), D)) return;
+    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+    A && (e || (w !== v.pJs.ONLINE && w !== v.pJs.ADD_FRIEND)) && !Z && ((A = !1), (Z = !0), s.Z.fetchRelationships());
+}
+function k() {
+    if (((A = !0), R ? (Z = !1) : M(), (L = L.reset()), D)) return;
     let e = L.getRelationshipCounts();
-    w = 0 === e[y.OGo.FRIEND] ? (0 !== e[y.OGo.PENDING_INCOMING] ? y.pJs.PENDING : y.pJs.ADD_FRIEND) : y.pJs.ONLINE;
+    w = 0 === e[v.OGo.FRIEND] ? (0 !== e[v.OGo.PENDING_INCOMING] ? v.pJs.PENDING : v.pJs.ADD_FRIEND) : v.pJs.ONLINE;
 }
 function U() {
-    L = R ? new A() : L.reset();
+    L = R ? new x() : L.reset();
 }
 function G(e) {
     return function () {
@@ -332,9 +332,9 @@ class B extends (r = a.ZP.Store) {
             this.syncWith([f.Z], U),
             this.syncWith([p.Z], U),
             this.syncWith([h.Z], U),
-            this.syncWith([O.default], G(T)),
-            this.syncWith([_.Z, g.Z], G(N)),
-            M();
+            this.syncWith([O.default], G(N)),
+            this.syncWith([_.Z, g.Z], G(T)),
+            k();
     }
     getState() {
         return {
@@ -347,10 +347,10 @@ class B extends (r = a.ZP.Store) {
 I(B, "displayName", "FriendsStore");
 let H = new B(o.Z, {
     CONNECTION_OPEN: function () {
-        M();
+        k();
     },
     FRIENDS_SET_SECTION: function (e) {
-        (w = e.section), k();
+        (w = e.section), M();
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
@@ -360,7 +360,7 @@ let H = new B(o.Z, {
         Z = !1;
     },
     LOAD_RELATIONSHIPS_FAILURE: function () {
-        (x = !0), (Z = !0);
+        (A = !0), (Z = !0);
     },
     FRIENDS_SET_INITIAL_SECTION: function (e) {
         (w = e.section), (D = !0);

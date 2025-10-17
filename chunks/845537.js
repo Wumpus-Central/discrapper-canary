@@ -1,7 +1,7 @@
 n.d(t, {
-    EK: () => j,
+    EK: () => k,
     Io: () => L,
-    N1: () => k,
+    N1: () => j,
     NY: () => x,
     Ox: () => P,
     Vq: () => D,
@@ -170,14 +170,14 @@ function M(e) {
         children: [t, "(", n, ")"],
     });
 }
-function j(e) {
+function k(e) {
     let { timestamp: t } = e;
     return (0, r.jsx)("span", {
         className: C.timestamp,
         children: t.formatted,
     });
 }
-function k(e) {
+function j(e) {
     var t;
     let { id: n } = e,
         a = (0, i.e7)([g.Z], () => g.Z.getDetectableGame(n)),

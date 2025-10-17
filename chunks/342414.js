@@ -33,8 +33,8 @@ var i = n(120356),
     L = n(45474),
     x = n(175418),
     M = n(164662),
-    j = n(543581),
-    k = n(84804),
+    k = n(543581),
+    j = n(84804),
     U = n(184176),
     G = n(474936),
     B = n(981631),
@@ -133,12 +133,12 @@ let X = (e, t, i) => {
               ? (N = (0, r.jsx)(U.Z, {}))
               : p && (N = (0, r.jsx)(A._, {}));
         let D = (0, o.e7)([h.Z], () => h.Z.getPremiumTypeSubscription()),
-            j = null != D && D.status === B.O0b.CANCELED && null != y,
+            k = null != D && D.status === B.O0b.CANCELED && null != y,
             H = (0, I.N)(),
             Y = (0, v.Ng)(),
             W = (0, v.Wp)(Y, G.Si.TIER_2) ? G.Si.TIER_2 : void 0,
             K = null != D && D.status !== B.O0b.ACCOUNT_HOLD && D.hasAnyPremiumNitro,
-            z = (0, _.Z)().isFractionalPremiumActive && !K && null == N && !j,
+            z = (0, _.Z)().isFractionalPremiumActive && !K && null == N && !k,
             q = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
             { visibilityPercentageRef: Q, visibilityPercentage: J } = (0, M.E)(!q);
         return (0, r.jsx)("div", {
@@ -153,23 +153,23 @@ let X = (e, t, i) => {
                     (0, r.jsxs)("div", {
                         className: V.headerContainer,
                         children: [
-                            (0, r.jsx)(k.Z, { containerVisibilityPercentage: J }),
-                            j &&
+                            (0, r.jsx)(j.Z, { containerVisibilityPercentage: J }),
+                            k &&
                                 null != y.expires_at &&
                                 (0, r.jsx)(w.Z, {
                                     expiresAt: y.expires_at,
                                     className: F.heroOfferCountdown,
                                 }),
                             (0, r.jsx)(x.Z, {
-                                children: j ? Z.intl.format(Z.t["3yZP0G"], { percent: y.discount.amount }) : m,
+                                children: k ? Z.intl.format(Z.t["3yZP0N"], { percent: y.discount.amount }) : m,
                             }),
-                            j &&
+                            k &&
                                 null != O &&
                                 (0, r.jsx)(l.Text, {
                                     className: F.churnEntrypointDescriptionBrandRefresh,
                                     variant: "text-sm/medium",
                                     color: "text-primary",
-                                    children: Z.intl.format(Z.t["3Q4wCy"], {
+                                    children: Z.intl.format(Z.t["3Q4wCw"], {
                                         discountedPrice: O,
                                         billingPeriod: (0, E.JP)(y.discount.user_usage_limit_interval),
                                         numMonths: y.discount.user_usage_limit,
@@ -178,7 +178,7 @@ let X = (e, t, i) => {
                         ],
                     }),
                     (0, r.jsxs)("div", {
-                        className: z || j ? V.twoButtonContainer : void 0,
+                        className: z || k ? V.twoButtonContainer : void 0,
                         children: [
                             z &&
                                 (0, r.jsx)(P.Z, {
@@ -190,18 +190,18 @@ let X = (e, t, i) => {
                                             ? n
                                             : W,
                                 }),
-                            j &&
+                            k &&
                                 (0, r.jsx)(l.Button, {
                                     variant: "expressive",
                                     icon: l.SrA,
                                     size: "md",
-                                    text: Z.intl.string(Z.t.zrCzVB),
+                                    text: Z.intl.string(Z.t.zrCzVF),
                                     onClick: () => X(C, D, L.R.CONFIRM_DISCOUNT),
                                 }),
                             (0, r.jsx)(R.Z, {
-                                variant: z || j ? "secondary" : "expressive",
+                                variant: z || k ? "secondary" : "expressive",
                                 size: "md",
-                                buttonTextOverride: Z.intl.string(Z.t["3KomGa"]),
+                                buttonTextOverride: Z.intl.string(Z.t["3KomGR"]),
                             }),
                         ],
                     }),
@@ -246,7 +246,7 @@ let X = (e, t, i) => {
                             variant: "display-lg",
                             color: "always-white",
                             className: O ? F.churnDiscountHeader : F.header,
-                            children: O && null != p ? Z.intl.format(Z.t["3yZP0G"], { percent: p.discount.amount }) : c,
+                            children: O && null != p ? Z.intl.format(Z.t["3yZP0N"], { percent: p.discount.amount }) : c,
                         }),
                         O &&
                             null != m &&
@@ -254,7 +254,7 @@ let X = (e, t, i) => {
                                 className: F.churnEntrypointDescription,
                                 variant: "text-sm/medium",
                                 color: "always-white",
-                                children: Z.intl.format(Z.t["3Q4wCy"], {
+                                children: Z.intl.format(Z.t["3Q4wCw"], {
                                     discountedPrice: m,
                                     billingPeriod: (0, E.JP)(p.discount.user_usage_limit_interval),
                                     numMonths: p.discount.user_usage_limit,
@@ -281,14 +281,14 @@ let X = (e, t, i) => {
                                                 variant: "expressive",
                                                 icon: l.SrA,
                                                 size: "md",
-                                                text: Z.intl.string(Z.t.zrCzVB),
+                                                text: Z.intl.string(Z.t.zrCzVF),
                                                 onClick: () => X(b, y, L.R.CONFIRM_DISCOUNT),
                                                 fullWidth: !0,
                                             }),
                                             (0, r.jsx)(R.Z, {
                                                 variant: "overlay-secondary",
                                                 size: "md",
-                                                buttonTextOverride: Z.intl.string(Z.t.Ve9Ge6),
+                                                buttonTextOverride: Z.intl.string(Z.t.Ve9Ge3),
                                                 fullWidth: !0,
                                             }),
                                         ],
@@ -299,7 +299,7 @@ let X = (e, t, i) => {
                                         children: (0, r.jsx)(C.Z, {
                                             look: s.iL.FILLED,
                                             color: s.Tt.BRAND,
-                                            textOptions: { textOverride: Z.intl.string(Z.t["3KomGa"]) },
+                                            textOptions: { textOverride: Z.intl.string(Z.t["3KomGR"]) },
                                             className: F.button,
                                         }),
                                     }),
@@ -337,7 +337,7 @@ let X = (e, t, i) => {
                                 children: (0, r.jsx)(C.Z, {
                                     look: s.iL.FILLED,
                                     color: s.Tt.BRAND,
-                                    textOptions: { textOverride: Z.intl.string(Z.t["3KomGa"]) },
+                                    textOptions: { textOverride: Z.intl.string(Z.t["3KomGR"]) },
                                     className: F.button,
                                 }),
                             }),
@@ -379,7 +379,7 @@ let X = (e, t, i) => {
                             children: (0, r.jsx)(C.Z, {
                                 look: s.iL.FILLED,
                                 color: s.Tt.BRAND,
-                                textOptions: { textOverride: Z.intl.string(Z.t["3KomGa"]) },
+                                textOptions: { textOverride: Z.intl.string(Z.t["3KomGR"]) },
                                 className: F.button,
                             }),
                         }),
@@ -403,19 +403,19 @@ let X = (e, t, i) => {
             h = (0, O.W)(),
             m = (0, b.Vi)(),
             E = (0, y._O)(),
-            v = Z.intl.string(Z.t.qYKftX),
+            v = Z.intl.string(Z.t.qYKftb),
             I = (0, S.b)(),
             T = (0, r.jsx)(J, { className: t }),
-            A = Z.intl.string(Z.t.ifwQZb),
+            A = Z.intl.string(Z.t.ifwQZW),
             { fractionalState: C, endsAt: N } = (0, _.Z)(),
             R = (0, f.ZP)(N, f.aj.CREDITS_ENDS_IN);
         h || m
             ? (T = (0, r.jsx)(ee, { isEligibleForBogoPromotion: m }))
-            : I && ((v = Z.intl.string(Z.t.qYKftX)), (T = (0, r.jsx)($, {})));
+            : I && ((v = Z.intl.string(Z.t.qYKftb)), (T = (0, r.jsx)($, {})));
         let P = null;
         if (C === G.a$.NONE || h)
             P = n
-                ? (0, r.jsx)(j.Z, {
+                ? (0, r.jsx)(k.Z, {
                       enablePremiumBrandRefresh: !0,
                       text: v,
                   })
@@ -433,7 +433,7 @@ let X = (e, t, i) => {
                         color: "var(--premium-tier-2-purple-for-gradients)",
                     }),
                 }),
-                t = Z.intl.format(Z.t["yR+oDD"], { helpCenterLink: g.Z.getArticleURL(B.BhN.FRACTIONAL_PREMIUM_ABOUT) });
+                t = Z.intl.format(Z.t["yR+oDA"], { helpCenterLink: g.Z.getArticleURL(B.BhN.FRACTIONAL_PREMIUM_ABOUT) });
             P = (0, r.jsx)(p.Z, {
                 text: t,
                 "aria-label": t.toString(),
@@ -447,7 +447,7 @@ let X = (e, t, i) => {
                             children: (0, r.jsx)("div", {
                                 className: F.flexCentered,
                                 children: n
-                                    ? (0, r.jsx)(j.Z, {
+                                    ? (0, r.jsx)(k.Z, {
                                           enablePremiumBrandRefresh: !0,
                                           text: R,
                                       })

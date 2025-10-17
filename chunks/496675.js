@@ -86,10 +86,10 @@ function M() {
     for (let e in ((C = {}), (N = {}), R)) R[e] += 1;
     P += 1;
 }
-function j() {
+function k() {
     M();
 }
-function k() {
+function j() {
     $();
 }
 function U() {
@@ -299,12 +299,12 @@ function $() {
 }
 A(J, "displayName", "PermissionStore");
 let ee = new J(l.Z, {
-    BACKGROUND_SYNC: j,
-    CONNECTION_OPEN: j,
-    OVERLAY_INITIALIZE: j,
-    CACHE_LOADED: j,
-    CACHE_LOADED_LAZY: j,
-    CONNECTION_CLOSED: k,
+    BACKGROUND_SYNC: k,
+    CONNECTION_OPEN: k,
+    OVERLAY_INITIALIZE: k,
+    CACHE_LOADED: k,
+    CACHE_LOADED_LAZY: k,
+    CONNECTION_CLOSED: j,
     GUILD_CREATE: U,
     GUILD_UPDATE: U,
     GUILD_DELETE: U,

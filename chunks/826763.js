@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => p });
 var r = n(951288);
 n(647438);
 var i = n(481060),
@@ -9,7 +9,7 @@ var i = n(481060),
     c = n(388032),
     d = n(941057),
     u = n(497224);
-function h(e) {
+function p(e) {
     let { guildId: t } = e;
     return (0, r.jsx)("div", {
         className: d.upsellPage,

@@ -1,14 +1,14 @@
 n.d(t, {
     G7: () => l,
     LG: () => o,
-    Pg: () => i,
+    Pg: () => s,
     ZI: () => c,
     _0: () => a,
     mf: () => u,
 });
 var r,
-    s = n(388032);
-let i = 5,
+    i = n(388032);
+let s = 5,
     l = 10,
     a = 30;
 var c =
@@ -18,10 +18,10 @@ var c =
     (r[(r.VERIFICATIONS = 3)] = "VERIFICATIONS"),
     r);
 let d = {
-    afk_channel_id: () => s.intl.string(s.t.KuYcnZ),
-    public_updates_channel_id: () => s.intl.string(s.t.vAyDGR),
-    safety_alerts_channel_id: () => s.intl.string(s.t.sMkYEx),
-    system_channel_id: () => s.intl.string(s.t.NASFnp),
+    afk_channel_id: () => i.intl.string(i.t.KuYcnZ),
+    public_updates_channel_id: () => i.intl.string(i.t.vAyDGR),
+    safety_alerts_channel_id: () => i.intl.string(i.t.sMkYEx),
+    system_channel_id: () => i.intl.string(i.t.NASFnp),
 };
 function o(e) {
     var t;

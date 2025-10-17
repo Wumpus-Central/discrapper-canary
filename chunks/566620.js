@@ -51,8 +51,8 @@ var r = n(990547),
     L = n(430824),
     x = n(496675),
     M = n(594174),
-    j = n(979651),
-    k = n(626135),
+    k = n(979651),
+    j = n(626135),
     U = n(630388),
     G = n(823379),
     B = n(573261),
@@ -338,7 +338,7 @@ async function el(e) {
                     },
                     onFailure: (e, n, a, o) => {
                         null == l || l(),
-                            k.default.track(J.rMx.ACTIVITY_INTERACTION_CALLBACK_ERROR, {
+                            j.default.track(J.rMx.ACTIVITY_INTERACTION_CALLBACK_ERROR, {
                                 channel_id: r,
                                 guild_id: i,
                                 application_id: t,
@@ -402,7 +402,7 @@ async function ec(e) {
         ChannelStore: D.Z,
         GuildStore: L.Z,
         PermissionStore: x.Z,
-        VoiceStateStore: j.Z,
+        VoiceStateStore: k.Z,
     });
     if (p !== W.jy.CAN_LAUNCH) {
         let e = 4;

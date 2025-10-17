@@ -3,16 +3,16 @@ var a = n(951288),
     r = n(442837),
     i = n(481060),
     l = n(536442),
-    s = n(983380);
-function o(e) {
+    o = n(983380);
+function s(e) {
     let { hotspotLocation: t } = e,
-        [n, o] = (0, r.Wu)([l.qc], () => [l.qc.hasHotspot(t, !0), l.qc.getHotspotOverride(t)]);
+        [n, s] = (0, r.Wu)([l.qc], () => [l.qc.hasHotspot(t, !0), l.qc.getHotspotOverride(t)]);
     return (0, a.jsx)(i.q4e, {
         label: t,
         successMessage: n ? "Active" : void 0,
         errorMessage: n ? "Inactive" : void 0,
-        className: s.overrideSelect,
-        value: o,
+        className: o.overrideSelect,
+        value: s,
         options: [
             {
                 value: void 0,
@@ -35,12 +35,12 @@ function c() {
         label: "Hotspots",
         description:
             "All the 'hotspots' in app, and their current status. Use the select menu to override them on or off.",
-        className: s.hotspotsSection,
+        className: o.hotspotsSection,
         children: (0, a.jsx)(i.Kqy, {
             gap: 20,
             children: Object.keys(l.v6)
                 .sort((e, t) => e.localeCompare(t))
-                .map((e) => (0, a.jsx)(o, { hotspotLocation: e }, e)),
+                .map((e) => (0, a.jsx)(s, { hotspotLocation: e }, e)),
         }),
     });
 }

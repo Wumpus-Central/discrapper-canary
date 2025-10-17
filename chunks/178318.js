@@ -14,8 +14,8 @@ var l = n(836560),
     m = n(852926),
     b = n(186901),
     _ = n(981631),
-    O = n(413135).Buffer;
-function E(e, t, n) {
+    E = n(413135).Buffer;
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ let v = p.ZP.requireModule("discord_rpc").RPCWebSocket,
 function S(e) {
     return "function" == typeof e ? e() : e;
 }
-function T() {
+function N() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
         t =
             e > 0
@@ -58,7 +58,7 @@ function T() {
                   };
     i.listen(_.V6Z + (e % _.frH), "127.0.0.1", t);
 }
-function N(e, t, n) {
+function T(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 200,
         i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
         l =
@@ -72,7 +72,7 @@ function N(e, t, n) {
                 : {};
     (n = n ? JSON.stringify(n) : ""),
         (r = 200 === r && 0 === n.length ? 204 : r),
-        t.setHeader("Content-Length", O.byteLength(n).toString()),
+        t.setHeader("Content-Length", E.byteLength(n).toString()),
         t.setHeader("Content-Type", "application/json"),
         t.writeHead(
             r,
@@ -87,7 +87,7 @@ function N(e, t, n) {
                             }),
                         )),
                         r.forEach(function (t) {
-                            E(e, t, n[t]);
+                            O(e, t, n[t]);
                         });
                 }
                 return e;
@@ -95,9 +95,9 @@ function N(e, t, n) {
         ),
         t.end(n);
 }
-function j(e, t, n, r) {
+function P(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-    N(
+    T(
         e,
         t,
         {
@@ -107,7 +107,7 @@ function j(e, t, n, r) {
         n,
     );
 }
-class P extends g.Z {
+class j extends g.Z {
     send(e) {
         (u.default.isLoggingOverlayEvents || (e.cmd !== _.Etm.OVERLAY && e.evt !== _.zMe.OVERLAY)) &&
             I.info("Socket Emit: ".concat(this.id), (0, h.Z)(e)),
@@ -119,7 +119,7 @@ class P extends g.Z {
         this._socket.close(e, t);
     }
     constructor(e, t, n) {
-        if ((super("ws", t, n), E(this, "_socket", void 0), -1 === ["etf", "json"].indexOf(n)))
+        if ((super("ws", t, n), O(this, "_socket", void 0), -1 === ["etf", "json"].indexOf(n)))
             throw new f.Z({ closeCode: _.$VG.INVALID_ENCODING }, "Invalid Encoding: ".concat(n));
         if ("etf" === n && null == r)
             throw new f.Z({ closeCode: _.$VG.INVALID_ENCODING }, "Erlpack cannot be used on this client");
@@ -135,7 +135,7 @@ class x extends g.Z {
         this._closeCallback(t, e);
     }
     constructor(e, t, n, r) {
-        if ((super("http", n, r), E(this, "_sendCallback", void 0), E(this, "_closeCallback", void 0), "json" !== r))
+        if ((super("http", n, r), O(this, "_sendCallback", void 0), O(this, "_closeCallback", void 0), "json" !== r))
             throw new f.Z({ closeCode: _.$VG.INVALID_ENCODING }, "Invalid Encoding: ".concat(r));
         (this._sendCallback = e), (this._closeCallback = t);
     }
@@ -144,7 +144,7 @@ class A extends l.EventEmitter {
     handleRequest(e, t) {
         let [n, r] = S(e.url).split("?"),
             i = S(e.method);
-        if ("/rpc" === n && "OPTIONS" === i) return void N(e, t, { body: "" });
+        if ("/rpc" === n && "OPTIONS" === i) return void T(e, t, { body: "" });
         let l = "POST" === i;
         if ("/rpc" === n && ("GET" === i || l)) {
             let n = new URLSearchParams(r),
@@ -159,13 +159,13 @@ class A extends l.EventEmitter {
                         t.writeHead(301),
                         t.end();
                 },
-                s = new x(!l ? o : N.bind(null, e, t), !l ? o : j.bind(null, e, t, 400), Number(n.get("v")), i);
+                s = new x(!l ? o : T.bind(null, e, t), !l ? o : P.bind(null, e, t, 400), Number(n.get("v")), i);
             if (l)
                 (0, m.em)(s, S(e.headers).origin, n.get("client_id"))
                     .then(() => {
                         let n = "";
                         e.on("data", (e) => (n += e)),
-                            e.on("error", () => j(e, t, 500, "Internal Server Error")),
+                            e.on("error", () => P(e, t, 500, "Internal Server Error")),
                             e.on("end", () => this.handleMessage(s, n));
                     })
                     .catch((e) => {
@@ -179,7 +179,7 @@ class A extends l.EventEmitter {
             }
             return;
         }
-        j(e, t, 404, "Not Found");
+        P(e, t, 404, "Not Found");
     }
     handleConnection(e) {
         var t, n;
@@ -187,7 +187,7 @@ class A extends l.EventEmitter {
             i = new URLSearchParams(S(e.upgradeReq).url.split("?")[1]),
             l = null != (t = S(e.upgradeReq).headers.origin) ? t : "";
         try {
-            r = new P(e, Number(i.get("v")), null != (n = i.get("encoding")) ? n : "json");
+            r = new j(e, Number(i.get("v")), null != (n = i.get("encoding")) ? n : "json");
         } catch (t) {
             e.close(t.code, t.message);
             return;
@@ -228,10 +228,10 @@ class A extends l.EventEmitter {
         let t = 0;
         (i = v.http.createServer()).on("error", (e) => {
             I.error("Error: ".concat(e.message)),
-                ("EADDRINUSE" === e.code || e.message.includes("EADDRINUSE")) && setTimeout(() => T(++t), 1000);
+                ("EADDRINUSE" === e.code || e.message.includes("EADDRINUSE")) && setTimeout(() => N(++t), 1000);
         }),
             i.on("request", this.handleRequest.bind(this)),
-            T(t);
+            N(t);
         let n = {
             instanceId: null != (e = i.instanceId) ? e : 0,
             server: i,

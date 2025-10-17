@@ -19,8 +19,8 @@ var l = t(951288),
     C = t(984933),
     v = t(375954),
     _ = t(496675),
-    I = t(451478),
-    Z = t(768581),
+    Z = t(451478),
+    I = t(768581),
     y = t(526120),
     N = t(689981),
     O = t(825334),
@@ -39,12 +39,12 @@ function M(e) {
             channel: c,
         }),
         m = (0, f.MC)(d),
-        p = (0, s.e7)([I.Z], () => I.Z.isFocused()),
+        p = (0, s.e7)([Z.Z], () => Z.Z.isFocused()),
         x = (0, h.d$)(r.src),
         C = b.QK.useSetting(),
-        { src: v, width: _, height: Z, alt: y } = r;
+        { src: v, width: _, height: I, alt: y } = r;
     return (
-        Z > _ ? (t = 72) : (n = 72),
+        I > _ ? (t = 72) : (n = 72),
         (0, l.jsxs)("div", {
             className: E.media,
             children: [
@@ -53,7 +53,7 @@ function M(e) {
                     maxHeight: n,
                     maxWidth: t,
                     width: _,
-                    height: Z,
+                    height: I,
                     alt: null != y && o && null != m ? m : y,
                     autoPlay: C,
                     animated: x && !o && p,
@@ -92,11 +92,11 @@ function k(e) {
         null == t || null == t.guild_id)
     )
         return null;
-    let C = Z.ZP.getResourceChannelIconURL({
+    let C = I.ZP.getResourceChannelIconURL({
             channelId: t.id,
             icon: n.icon,
         }),
-        I = null == n.description || 0 === n.description.length;
+        Z = null == n.description || 0 === n.description.length;
     return (0, l.jsxs)(c.P3F, {
         className: E.row,
         onClick: (e) => {
@@ -118,7 +118,7 @@ function k(e) {
                         color: "header-primary",
                         children: n.title,
                     }),
-                    I &&
+                    Z &&
                         null != f &&
                         (0, l.jsx)(c.Text, {
                             className: E.messageContent,
@@ -130,7 +130,7 @@ function k(e) {
                                 channelId: t.id,
                             }),
                         }),
-                    !I &&
+                    !Z &&
                         (0, l.jsx)(c.Text, {
                             className: i()(E.messageContent, S.markup),
                             variant: "text-sm/normal",

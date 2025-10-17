@@ -1,6 +1,6 @@
 let r;
 n.d(t, {
-    H: () => b,
+    H: () => g,
     Z: () => S,
 }),
     n(388685),
@@ -17,7 +17,7 @@ var i,
 let p = [],
     _ = {},
     m = [],
-    b = (e) => {
+    g = (e) => {
         null != e &&
             s.Z.dispatch({
                 type: "VOICE_CHANNEL_EFFECT_CLEAR",
@@ -25,7 +25,7 @@ let p = [],
             });
     },
     E = [],
-    g = 10 * u.Z.Millis.SECOND,
+    b = 10 * u.Z.Millis.SECOND,
     v = (0, a.debounce)(() => {
         let e = (0, d.cX)(m);
         c.uv.announce(e, "polite"), (m = []);
@@ -84,7 +84,7 @@ let S = new h(s.Z, {
         if ((E = [e, ...E].slice(0, 20)).length >= 20) {
             let t = E[E.length - 1],
                 n = e.getTime() - t.getTime();
-            n < g && (r = new Date(e.getTime() + g - n));
+            n < b && (r = new Date(e.getTime() + b - n));
         }
     },
     VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: (e) => {

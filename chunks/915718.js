@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(26151),
     d = n(287734),
     u = n(607070),
-    h = n(451576),
-    p = n(358221),
+    p = n(451576),
+    h = n(358221),
     f = n(266454),
     g = n(243778),
     m = n(590293),
@@ -25,8 +25,8 @@ var r = n(951288),
     S = n(585483),
     E = n(665149),
     Z = n(981631),
-    T = n(701488),
-    P = n(921944),
+    P = n(701488),
+    T = n(921944),
     N = n(65154),
     R = n(388032);
 function w(e, t, n) {
@@ -63,25 +63,25 @@ class A extends i.PureComponent {
             } = this.props;
         if (n || (i && c === Z.WtW.VOICE)) return null;
         let u = s.isManaged(),
-            h = null,
-            p = !1;
+            p = null,
+            h = !1;
         return (
             d
-                ? ((p = !0), (h = R.intl.string(R.t.izMR7u)), (e = o.aML.Colors.RED))
+                ? ((h = !0), (p = R.intl.string(R.t.izMR7u)), (e = o.aML.Colors.RED))
                 : x.Z.supports(N.AN.VIDEO)
                   ? a
-                      ? ((h = R.intl.string(R.t.PHzjvb)), (e = o.aML.Colors.RED), (p = !0))
+                      ? ((p = R.intl.string(R.t.PHzjvb)), (e = o.aML.Colors.RED), (h = !0))
                       : i && c === Z.WtW.VIDEO
                         ? ((t = this.handleJoinVideoCall),
-                          (h = u ? R.intl.string(R.t.S0W8Z2) : R.intl.string(R.t.W68MhI)))
+                          (p = u ? R.intl.string(R.t.S0W8Z2) : R.intl.string(R.t.W68MhI)))
                         : ((t = this.handleStartVideoCall),
-                          (h = u ? R.intl.string(R.t.S0W8Z2) : R.intl.string(R.t.oCqlGB)))
-                  : ((p = !0), (t = this.handleBrowserNotSupported), (h = R.intl.string(R.t.UVpg3d))),
+                          (p = u ? R.intl.string(R.t.S0W8Z2) : R.intl.string(R.t.oCqlGB)))
+                  : ((h = !0), (t = this.handleBrowserNotSupported), (p = R.intl.string(R.t.UVpg3d))),
             (0, r.jsx)(E.ZP.Icon, {
                 icon: o.Odl,
                 onClick: t,
-                disabled: p || l,
-                tooltip: h,
+                disabled: h || l,
+                tooltip: p,
                 tooltipColor: e,
             })
         );
@@ -96,22 +96,22 @@ class A extends i.PureComponent {
                 isBlocked: c,
                 channel: d,
                 dismissibleContentTypes: u,
-                isProvisional: h,
+                isProvisional: p,
             } = this.props;
         if (n) return null;
-        let p = d.isManaged(),
+        let h = d.isManaged(),
             f = !1;
-        h
+        p
             ? ((f = !0), (e = R.intl.string(R.t.izMR7u)), (t = o.aML.Colors.RED))
             : l
-              ? ((e = p ? R.intl.string(R.t.LW2Gho) : R.intl.string(R.t.rF7lNz)), (t = o.aML.Colors.RED), (f = !0))
+              ? ((e = h ? R.intl.string(R.t.LW2Gho) : R.intl.string(R.t.rF7lNz)), (t = o.aML.Colors.RED), (f = !0))
               : c
                 ? ((e = R.intl.string(R.t.PHzjvb)), (t = o.aML.Colors.RED), (f = !0))
                 : (e = i
-                      ? p
+                      ? h
                           ? R.intl.string(R.t.S0W8Z2)
                           : R.intl.string(R.t.fdEeb2)
-                      : p
+                      : h
                         ? R.intl.string(R.t.S0W8Z2)
                         : R.intl.string(R.t.focH1t));
         let m = (0, r.jsx)(E.ZP.Icon, {
@@ -133,11 +133,11 @@ class A extends i.PureComponent {
                             ? (0, r.jsx)(s.J2, {
                                   targetElementRef: this.iconRef,
                                   title: R.intl.string(R.t.HOPqzc),
-                                  body: R.intl.format(R.t.xAW71d, { helpdeskUrl: T.sI }),
+                                  body: R.intl.format(R.t.xAW71d, { helpdeskUrl: P.sI }),
                                   position: "bottom",
                                   align: "center",
                                   caretConfig: { align: "center" },
-                                  onRequestClose: () => n(P.L.USER_DISMISS),
+                                  onRequestClose: () => n(T.L.USER_DISMISS),
                               })
                             : null;
                     },
@@ -166,7 +166,7 @@ class A extends i.PureComponent {
                 let { callUnavailable: t, callActive: n, dismissibleContentTypes: r } = this.props;
                 if (
                     (r.includes(a.z.ACTIVITY_GDM_CALL_TOOLTIP) &&
-                        (0, f.Q3)(a.z.ACTIVITY_GDM_CALL_TOOLTIP, { dismissAction: P.L.AUTO }),
+                        (0, f.Q3)(a.z.ACTIVITY_GDM_CALL_TOOLTIP, { dismissAction: T.L.AUTO }),
                     t)
                 );
                 else if (n) return this.handleJoinCall(!1);
@@ -189,7 +189,7 @@ function D(e) {
     var t;
     let { channel: n } = e,
         i = (0, m.Z)(),
-        s = (0, l.e7)([p.Z], () => p.Z.getMode(n.id)),
+        s = (0, l.e7)([h.Z], () => h.Z.getMode(n.id)),
         o = (0, l.e7)([I.Z], () => I.Z.isInChannel(n.id)),
         c = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
         { callActive: d, callUnavailable: f } = (0, l.cj)([j.Z], () => ({
@@ -204,9 +204,9 @@ function D(e) {
         x = (0, l.e7)([C.default], () => C.default.getUser(g)),
         S = (0, b.bp)(),
         E = [],
-        T = (0, h.Z)(n.id),
-        P = (0, l.e7)([O.Z], () => O.Z.hasLayers());
-    return (T && !P && E.push(a.z.ACTIVITY_GDM_CALL_TOOLTIP), i || (null == x ? void 0 : x.bot))
+        P = (0, p.Z)(n.id),
+        T = (0, l.e7)([O.Z], () => O.Z.hasLayers());
+    return (P && !T && E.push(a.z.ACTIVITY_GDM_CALL_TOOLTIP), i || (null == x ? void 0 : x.bot))
         ? null
         : (0, r.jsx)(A, {
               channel: n,

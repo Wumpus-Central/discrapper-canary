@@ -67,7 +67,7 @@ function C(e) {
     return y || 0 !== O.length
         ? y
             ? (0, i.jsx)(l.sNh, {
-                  label: m.intl.string(m.t.PlwgdU),
+                  label: m.intl.string(m.t.PlwgdX),
                   id: "handoff",
                   action: () => {
                       (0, u.F)(C);
@@ -90,12 +90,12 @@ function C(e) {
                                       : m.intl.string(m.t.E8euSk)
                                   : o === f.ABu.PLAYSTATION
                                     ? s
-                                        ? m.intl.string(m.t.vzfxmY)
-                                        : m.intl.string(m.t.QxEYDj)
+                                        ? m.intl.string(m.t.vzfxmZ)
+                                        : m.intl.string(m.t.QxEYDg)
                                     : o === f.ABu.PLAYSTATION_STAGING
                                       ? s
-                                          ? m.intl.string(m.t.BDiXtV)
-                                          : m.intl.string(m.t["bhdB9+"])
+                                          ? m.intl.string(m.t.BDiXtb)
+                                          : m.intl.string(m.t["bhdB9/"])
                                       : void 0),
                           action: () =>
                               ((t) => {

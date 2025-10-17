@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => E });
 var r = n(951288);
 n(647438);
 var i = n(780384),
@@ -227,7 +227,7 @@ function y() {
         ],
     });
 }
-function N() {
+function E() {
     return (0, r.jsxs)("div", {
         children: [
             (0, r.jsx)(l.Heading, {

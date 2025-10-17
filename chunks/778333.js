@@ -59,12 +59,12 @@ function b(e) {
         }, [n, b, T, y]);
     if (null == n.inviter) return null;
     let N = S ? A : C,
-        R = g.intl.string(g.t.ib7Ng1),
+        R = g.intl.string(g.t.ib7Ng4),
         P = u.Z.Button.Colors.GREEN;
     S
-        ? ((R = g.intl.string(g.t.xhxnPn)), (P = u.Z.Button.Colors.PRIMARY))
-        : v && ((R = g.intl.string(g.t.ib7Ng1)), (P = u.Z.Button.Colors.PRIMARY));
-    let w = v ? g.intl.string(g.t.eQyu1F) : g.intl.string(g.t.PYJHW6),
+        ? ((R = g.intl.string(g.t.xhxnPj)), (P = u.Z.Button.Colors.PRIMARY))
+        : v && ((R = g.intl.string(g.t.ib7Ng4)), (P = u.Z.Button.Colors.PRIMARY));
+    let w = v ? g.intl.string(g.t.eQyu1N) : g.intl.string(g.t.PYJHW1),
         D = null != n.inviter ? "".concat(n.inviter.username) : "",
         L = null != n.inviter ? h.ZP.getUserTag(n.inviter) : "";
     return (0, r.jsxs)(u.Z, {

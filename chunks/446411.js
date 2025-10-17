@@ -39,8 +39,8 @@ var r,
     L = n(408433),
     x = n(956664),
     M = n(624138),
-    j = n(591759),
-    k = n(468846),
+    k = n(591759),
+    j = n(468846),
     U = n(401419),
     G = n(249458),
     B = n(981631),
@@ -114,7 +114,7 @@ function er(e, t) {
     return "".concat(r + 1, " / ").concat(r + n + 1);
 }
 function ei(e) {
-    let t = j.Z.toURLSafe(e);
+    let t = k.Z.toURLSafe(e);
     return null == t ? e : (t.searchParams.set("format", "png"), t.toString());
 }
 function ea(e) {
@@ -146,7 +146,7 @@ function ea(e) {
             href: D,
             placeholder: L,
             placeholderVersion: M,
-            sourceMetadata: j,
+            sourceMetadata: k,
         } = e,
         [U, G] = a.useState(b),
         Z = null != d && null == d.proxyURL,
@@ -200,7 +200,7 @@ function ea(e) {
                 onMute: P,
                 onControlsHide: A,
                 onControlsShow: C,
-                sourceMetadata: j,
+                sourceMetadata: k,
             }),
         });
     if (U && null != d) {
@@ -240,7 +240,7 @@ function ea(e) {
             children: (0, i.jsx)("div", {
                 className: s()(V.embedVideo, o),
                 style: a,
-                children: (0, i.jsx)(k.ZP, {
+                children: (0, i.jsx)(j.ZP, {
                     provider: f,
                     src: d.url,
                     style: e,
@@ -273,7 +273,7 @@ function ea(e) {
                 placeholder: L,
                 placeholderVersion: M,
                 onClick: E && null != d ? H : null,
-                sourceMetadata: j,
+                sourceMetadata: k,
                 analyticsSource: "EmbedVideo",
             }),
             (0, i.jsx)("div", {
@@ -285,8 +285,8 @@ function ea(e) {
                               onPlay: null != d ? H : null,
                               externalURL: D,
                               renderLinkComponent: g,
-                              messageId: null == j || null == (t = j.message) ? void 0 : t.id,
-                              channelId: null == j || null == (n = j.message) ? void 0 : n.channel_id,
+                              messageId: null == k || null == (t = k.message) ? void 0 : t.id,
+                              channelId: null == k || null == (n = k.message) ? void 0 : n.channel_id,
                           })
                         : null,
                 }),

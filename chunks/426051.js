@@ -16,11 +16,11 @@ var r = n(951288),
 function b(e) {
     let { active: t, user: n, channel: b } = e,
         _ = (0, d.V)(),
-        O = i.useCallback(() => {
+        E = i.useCallback(() => {
             (0, a.showToast)((0, a.createToast)(g.intl.string(g.t.pIQ3h4), a.ToastType.FAILURE)),
                 o.Z.increment({ name: l.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
         }, []),
-        E = i.useCallback(() => {
+        O = i.useCallback(() => {
             c.Z.closeChannelSidebar(u.uZ);
         }, []),
         v = i.useCallback(() => {
@@ -34,11 +34,11 @@ function b(e) {
         } = (0, p.m)({
             user: n,
             onAcceptSuccess: v,
-            onRejectSuccess: E,
-            onError: O,
+            onRejectSuccess: O,
+            onError: E,
         }),
-        T = I || C,
-        N = T || S;
+        N = I || C,
+        T = N || S;
     return (0, r.jsxs)("div", {
         className: m.container,
         children: [
@@ -57,8 +57,8 @@ function b(e) {
                         onClick: (e) => {
                             y(b.id), e.stopPropagation();
                         },
-                        disabled: N,
-                        loading: T,
+                        disabled: T,
+                        loading: N,
                     }),
                     (0, r.jsx)(h.Z, { channel: b }),
                 ],

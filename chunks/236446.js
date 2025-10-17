@@ -1,8 +1,8 @@
 n.d(t, { Z: () => D }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(120356),
-    s = n.n(l),
+    s = n(120356),
+    l = n.n(s),
     a = n(512722),
     o = n.n(a),
     c = n(442837),
@@ -10,8 +10,8 @@ var r = n(951288),
     d = n(362762),
     h = n(409059),
     g = n(659900),
-    m = n(962220),
-    p = n(473855),
+    p = n(962220),
+    m = n(473855),
     f = n(306453),
     _ = n(929809),
     x = n(108427),
@@ -21,9 +21,9 @@ var r = n(951288),
     j = n(954824),
     I = n(781428),
     N = n(163671),
-    S = n(423527),
-    O = n(981631),
-    y = n(260539),
+    O = n(423527),
+    y = n(981631),
+    S = n(260539),
     C = n(701476),
     A = n(630724),
     T = n(436620),
@@ -47,10 +47,10 @@ c.ZP.initialize();
 class w extends i.PureComponent {
     componentDidMount() {
         (0, x.e)("guildTemplate"),
-            T.KO || j.Z.launch("discord://" + O.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
+            T.KO || j.Z.launch("discord://" + y.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
     }
     componentDidUpdate(e) {
-        this.props.code !== e.code && m.Z.resolveGuildTemplate(this.props.code);
+        this.props.code !== e.code && p.Z.resolveGuildTemplate(this.props.code);
     }
     renderButton(e, t) {
         return T.KO
@@ -74,7 +74,7 @@ class w extends i.PureComponent {
                     className: R.marginBottom8,
                 }),
                 (0, r.jsx)(u.Dx, {
-                    className: s()(R.marginTop8, R.marginBottom8),
+                    className: l()(R.marginTop8, R.marginBottom8),
                     children: Z.intl.string(Z.t.C7ZRNz),
                 }),
                 (0, r.jsx)(u.DK, { children: Z.intl.string(Z.t.A6MwXF) }),
@@ -96,7 +96,7 @@ class w extends i.PureComponent {
     }
     renderAuthenticatedOrDownload() {
         let { guildTemplate: e } = this.props;
-        return (o()(null != e, "guild template must not be null"), e.state === y.Rj.RESOLVING)
+        return (o()(null != e, "guild template must not be null"), e.state === S.Rj.RESOLVING)
             ? (0, r.jsx)(u.ZP, {
                   className: P.authBox,
                   children: (0, r.jsx)(f.Z, { guildTemplate: e }),
@@ -112,31 +112,31 @@ class w extends i.PureComponent {
         });
     }
     render() {
-        let { guildTemplate: e, nativeAppState: t, authenticated: n, transitionTo: i, location: l } = this.props;
+        let { guildTemplate: e, nativeAppState: t, authenticated: n, transitionTo: i, location: s } = this.props;
         if (null == e) return this.renderSpinner(Z.intl.string(Z.t.ZTNur6));
-        if (t === O.kEZ.OPEN) return this.renderAppOpened();
-        if (t === O.kEZ.OPENING) return this.renderSpinner(Z.intl.string(Z.t["Z+hCVV"]));
+        if (t === y.kEZ.OPEN) return this.renderAppOpened();
+        if (t === y.kEZ.OPENING) return this.renderSpinner(Z.intl.string(Z.t["Z+hCVV"]));
         switch (e.state) {
-            case y.Rj.RESOLVING:
+            case S.Rj.RESOLVING:
                 return this.renderSpinner(Z.intl.string(Z.t["Z+hCVV"]));
-            case y.Rj.RESOLVED:
+            case S.Rj.RESOLVED:
                 if (n || !T.KO) return this.renderAuthenticatedOrDownload();
                 if (this.props.login)
                     return (0, r.jsx)(I.Z, {
                         guildTemplate: e,
                         transitionTo: i,
-                        location: l,
+                        location: s,
                     });
-                return (0, r.jsx)(S.Z, {
+                return (0, r.jsx)(O.Z, {
                     guildTemplate: e,
                     transitionTo: i,
-                    location: l,
+                    location: s,
                     onRegister: () => {
                         (0, _.c)(C.M5.ORGANIC_REGISTERED_GUILD_TEMPLATE),
                             E.Z.flowStart(A.MK.ORGANIC_GUILD_TEMPLATES, A.EW.NUF_STARTED);
                     },
                 });
-            case y.Rj.EXPIRED:
+            case S.Rj.EXPIRED:
                 return this.renderInvalidGuildTemplate();
             default:
                 return null;
@@ -181,7 +181,7 @@ function k(e) {
     let { guildTemplate: t } = e,
         { form: n, handleSubmit: i } = (0, g.Z)(t, !1);
     E.Z.flowStep(A.MK.ORGANIC_GUILD_TEMPLATES, A.X2.GUILD_CREATE);
-    let l = (0, r.jsxs)(r.Fragment, {
+    let s = (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(u.Dx, {
                 className: P.header,
@@ -198,12 +198,12 @@ function k(e) {
     return (0, r.jsx)(N.Z, {
         className: P.authBox,
         children: () => [
-            (0, r.jsx)(p.Z, { guildTemplate: t }, "template"),
+            (0, r.jsx)(m.Z, { guildTemplate: t }, "template"),
             (0, r.jsx)(
                 "div",
                 {
                     className: P.formContainer,
-                    children: l,
+                    children: s,
                 },
                 "contents",
             ),

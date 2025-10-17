@@ -1,8 +1,8 @@
 t.d(e, { Z: () => d });
 var r = t(951288);
 t(647438);
-var i = t(442837),
-    l = t(481060),
+var l = t(442837),
+    i = t(481060),
     c = t(787014),
     o = t(685929),
     a = t(496675),
@@ -15,7 +15,7 @@ function d(n) {
         canManageWebhooks: d,
         canAccessChannel: b,
         canUnlinkChannel: E,
-    } = (0, i.cj)(
+    } = (0, l.cj)(
         [a.Z],
         () => ({
             canManageChannels: a.Z.can(u.Plq.MANAGE_CHANNELS, n),
@@ -27,7 +27,7 @@ function d(n) {
         [n],
     );
     return !__OVERLAY__ && b && (e || t || d || E)
-        ? (0, r.jsx)(l.sNh, {
+        ? (0, r.jsx)(i.sNh, {
               id: "edit-channel",
               label: n.type === u.d4z.GUILD_CATEGORY ? s.intl.string(s.t.zdPFs7) : s.intl.string(s.t["3gUsJS"]),
               action: () => c.ZP.open(n.id),

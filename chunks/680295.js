@@ -78,12 +78,12 @@ let I = (e) => {
             } = (0, p.Z)((e) => {
                 D((t) => t + e);
             }),
-            j = i.useRef(v);
+            k = i.useRef(v);
         i.useEffect(() => {
-            j.current = v;
+            k.current = v;
         }),
             i.useEffect(() => {
-                D(-j.current), S((0, m.H)(E.effects));
+                D(-k.current), S((0, m.H)(E.effects));
             }, [E]),
             i.useEffect(() => {
                 let e = 0,
@@ -95,17 +95,17 @@ let I = (e) => {
                     C(t),
                     R(e);
             }, [R, T]);
-        let [k, U] = i.useState(!1);
+        let [j, U] = i.useState(!1);
         return (
             i.useEffect(() => {
                 !0 === u || l || (L(), D(0)),
-                    !l && k && M.current && (L(), D(0)),
+                    !l && j && M.current && (L(), D(0)),
                     a &&
                         l &&
                         !M.current &&
                         (x(),
                         E.animationType === s.y.ANIMATION_TYPE_PERSISTENT ? D(d === _.Q.FromStart ? 0 : A) : D(0));
-            }, [l, k, A, a, L, x, M, E.animationType, u, d]),
+            }, [l, j, A, a, L, x, M, E.animationType, u, d]),
             (0, r.jsx)("div", {
                 ref: I,
                 className: o()(y.profileEffects, { [y.hovered]: l && c }),
@@ -145,7 +145,7 @@ let I = (e) => {
                                 animationType: E.animationType,
                                 ticking: M.current,
                                 time: w,
-                                hasPlayedThrough: k,
+                                hasPlayedThrough: j,
                                 setHasPlayedThrough: U,
                                 urlQueryString: h,
                                 maxLoops: n,

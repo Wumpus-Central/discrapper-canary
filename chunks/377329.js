@@ -21,14 +21,14 @@ function j(e) {
         { channel_id: E, name: N, image: C, description: P } = O,
         S = (0, i.e7)([c.Z], () => c.Z.getChannel(E), [E]),
         I = (0, i.e7)([u.Z], () => u.Z.getGuild(j), [j]),
-        T = (0, m.cS)(O),
-        Z = (0, i.e7)(
+        Z = (0, m.cS)(O),
+        T = (0, i.e7)(
             [d.default],
             () => (null != f.creatorId ? d.default.getUser(f.creatorId) : d.default.getCurrentUser()),
             [f.creatorId],
         ),
         w = (0, i.e7)([o.Z], () => o.Z.isLurking(j), [j]),
-        D = (0, s.KS)(S, I);
+        k = (0, s.KS)(S, I);
     return (0, r.jsxs)("div", {
         className: p.content,
         children: [
@@ -36,8 +36,8 @@ function j(e) {
                 className: p.previewCard,
                 guild: I,
                 channel: S,
-                location: null != T ? T : void 0,
-                creator: Z,
+                location: null != Z ? Z : void 0,
+                creator: T,
                 name: N,
                 description: P,
                 imageSource:
@@ -72,8 +72,8 @@ function j(e) {
                                           return (0, r.jsxs)("div", {
                                               className: p.channelName,
                                               children: [
-                                                  null != D
-                                                      ? (0, r.jsx)(D, {
+                                                  null != k
+                                                      ? (0, r.jsx)(k, {
                                                             size: "custom",
                                                             color: "currentColor",
                                                             width: 20,
@@ -87,7 +87,7 @@ function j(e) {
                                                             width: 18,
                                                             className: p.locationIcon,
                                                         }),
-                                                  null != (e = null == S ? void 0 : S.name) ? e : T,
+                                                  null != (e = null == S ? void 0 : S.name) ? e : Z,
                                               ],
                                           });
                                       },

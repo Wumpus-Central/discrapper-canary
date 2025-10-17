@@ -70,7 +70,7 @@ function M(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -82,7 +82,7 @@ function j(e, t) {
     );
 }
 new b.Z("ChannelEditor.tsx");
-let k = function () {
+let j = function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     },
     U = 1000;
@@ -252,7 +252,7 @@ class G extends i.Component {
                 maxCharacterCount: w,
                 allowNewLines: L,
                 isEditorIdle: M,
-                currentAutocompleteType: k,
+                currentAutocompleteType: j,
                 "aria-describedby": U,
                 "aria-labelledby": G,
                 accessibilityLabel: B,
@@ -294,7 +294,7 @@ class G extends i.Component {
                 spellcheckEnabled: b,
                 useNewSlashCommands: y,
                 isEditorIdle: M,
-                currentAutocompleteType: k,
+                currentAutocompleteType: j,
                 disableAutoFocus: f.tq || (null != (n = g.disableAutoFocus) && n),
                 disableEnterToSubmit: null != (i = null == (e = g.submit) ? void 0 : e.disableEnterToSubmit) && i,
                 "aria-controls": null != (a = V.id) ? a : void 0,
@@ -309,14 +309,14 @@ class G extends i.Component {
             Y = E
                 ? (0, r.jsx)(
                       N.Z,
-                      j(x({ ref: this.ref }, H), {
+                      k(x({ ref: this.ref }, H), {
                           type: g,
                           value: u && !Z ? (0, T.JM)("") : c,
                           canUseCommands: null == (t = g.commands) ? void 0 : t.enabled,
                           canOnlyUseTextCommands: v,
                       }),
                   )
-                : (0, r.jsx)(C.Z, j(x({ ref: this.ref }, H), { value: u && !Z ? "" : l }));
+                : (0, r.jsx)(C.Z, k(x({ ref: this.ref }, H), { value: u && !Z ? "" : l }));
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(O.d9, {
@@ -457,7 +457,7 @@ class G extends i.Component {
                     },
                     v = null != s ? s : c,
                     { files: I, errors: T } = B(e.clipboardData, u.uploadLongMessages ? v : null);
-                return (k(
+                return (j(
                     "onPaste",
                     [...e.clipboardData.items].map((e) => {
                         if ("file" !== e.kind)

@@ -13,14 +13,14 @@ let f = function (e) {
     let { rows: t, renderRow: n, renderSection: f, hasSearchQuery: h, sectionFilter: g, footer: m } = e,
         b = (0, o.e7)([u.Z], () => u.Z.keyboardModeEnabled),
         _ = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
-        O = (0, l.ZP)({
+        E = (0, l.ZP)({
             id: "people",
             isEnabled: b,
             async scrollToStart() {},
             async scrollToEnd() {},
         }),
-        E = g !== d.pJs.ONLINE && g !== d.pJs.ALL,
-        v = _ || h || E,
+        O = g !== d.pJs.ONLINE && g !== d.pJs.ALL,
+        v = _ || h || O,
         y = i.useMemo(
             () =>
                 t.map((e, t) =>
@@ -47,7 +47,7 @@ let f = function (e) {
             [n, f, t, v],
         );
     return (0, r.jsx)(a.bG, {
-        navigator: O,
+        navigator: E,
         children: (0, r.jsx)(a.SJ, {
             children: (e) => {
                 var t,

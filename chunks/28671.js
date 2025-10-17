@@ -1,66 +1,66 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => b });
 var r = n(951288),
     i = n(647438),
-    l = n(296009),
-    a = n(28664),
+    a = n(296009),
+    l = n(28664),
     o = n(481060),
     s = n(785717),
     c = n(931847),
     u = n(86419),
     d = n(872269),
-    p = n(860717),
-    f = n(228168),
-    h = n(921944),
-    g = n(388032);
-function m(e) {
-    let { user: t, application: n, onDismiss: m } = e,
-        { trackUserProfileEditAction: b } = (0, s.KZ)(),
-        _ = i.useMemo(
+    f = n(860717),
+    g = n(228168),
+    p = n(921944),
+    m = n(388032);
+function b(e) {
+    let { user: t, application: n, onDismiss: b } = e,
+        { trackUserProfileEditAction: h } = (0, s.KZ)(),
+        v = i.useMemo(
             () =>
                 new c.q({
-                    type: l.l.APPLICATION,
+                    type: a.l.APPLICATION,
                     applicationId: n.id,
                 }),
             [n.id],
         ),
-        O = i.useCallback(() => {
-            null != _ &&
-                ((0, u.qH)(_.type, _, !0),
-                b({
+        y = i.useCallback(() => {
+            null != v &&
+                ((0, u.qH)(v.type, v, !0),
+                h({
                     action: "WIDGET_ADDED",
-                    widgetEdited: _.type,
+                    widgetEdited: v.type,
                 }),
-                (0, d.L$)(f.qb.WIDGET_ADDED));
-        }, [_, b]);
-    return (0, r.jsx)(p.Z, {
+                (0, d.L$)(g.qb.WIDGET_ADDED));
+        }, [v, h]);
+    return (0, r.jsx)(f.Z, {
         user: t,
-        widget: _,
-        cta: (0, r.jsx)(p.Z.Cta, {
-            heading: g.intl.format(g.t.OIzLCw, { applicationName: n.name }),
-            content: g.intl.format(g.t.BQySrq, { applicationName: n.name }),
+        widget: v,
+        cta: (0, r.jsx)(f.Z.Cta, {
+            heading: m.intl.format(m.t.OIzLCw, { applicationName: n.name }),
+            content: m.intl.format(m.t.BQySrq, { applicationName: n.name }),
             buttons: (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(a.u, {
-                        text: g.intl.string(g.t.WAI6xs),
+                    (0, r.jsx)(l.u, {
+                        text: m.intl.string(m.t.WAI6xs),
                         children: (0, r.jsx)(o.Yd2, {
                             variant: "secondary",
                             size: "sm",
                             icon: o.Dio,
-                            "aria-label": g.intl.string(g.t.WAI6xs),
+                            "aria-label": m.intl.string(m.t.WAI6xs),
                             onClick: () => {
-                                m(h.L.USER_DISMISS);
+                                b(p.L.USER_DISMISS);
                             },
                         }),
                     }),
-                    (0, r.jsx)(a.u, {
-                        text: g.intl.string(g.t.lBG2s7),
+                    (0, r.jsx)(l.u, {
+                        text: m.intl.string(m.t.lBG2s7),
                         children: (0, r.jsx)(o.Yd2, {
                             variant: "primary",
                             size: "sm",
                             icon: o.kmB,
-                            "aria-label": g.intl.formatToPlainString(g.t.KfGahI, { applicationName: n.name }),
+                            "aria-label": m.intl.formatToPlainString(m.t.KfGahI, { applicationName: n.name }),
                             onClick: () => {
-                                m(h.L.TAKE_ACTION), O();
+                                b(p.L.TAKE_ACTION), y();
                             },
                         }),
                     }),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eh }), n(388685);
+n.d(t, { Z: () => ep }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(906732),
     d = n(358221),
     u = n(659580),
-    h = n(793865),
-    p = n(575175),
+    p = n(793865),
+    h = n(575175),
     f = n(522651),
     g = n(795318),
     m = n(258609),
@@ -25,8 +25,8 @@ var r = n(951288),
     S = n(294629),
     E = n(793319),
     Z = n(987329),
-    T = n(560688),
-    P = n(390322),
+    P = n(560688),
+    T = n(390322),
     N = n(871499),
     R = n(88479),
     w = n(386000),
@@ -108,14 +108,14 @@ function es(e) {
     let { channel: t, onSelect: n } = e,
         d = (0, O.bp)(),
         { canManageGuildEvent: u } = (0, x.XJ)(t),
-        h = (0, l.e7)([z.Z], () => z.Z.getStageInstanceByChannel(t.id), [t.id]),
-        p = (0, l.e7)([y.ZP], () => y.ZP.getGuildScheduledEvent(null == h ? void 0 : h.guild_scheduled_event_id)),
+        p = (0, l.e7)([z.Z], () => z.Z.getStageInstanceByChannel(t.id), [t.id]),
+        h = (0, l.e7)([y.ZP], () => y.ZP.getGuildScheduledEvent(null == p ? void 0 : p.guild_scheduled_event_id)),
         { suppress: m } = (0, S.Z)(t),
         b = D.default.getId(),
         [_] = (0, $.Z)(t),
         j = V.ZP.isModerator(b, t.id),
         v = (0, F.B)(t.id),
-        C = u(p),
+        C = u(h),
         { parentAnalyticsLocation: I } = (0, c.ZP)(),
         E = i.useRef(null),
         Z = () =>
@@ -127,12 +127,12 @@ function es(e) {
                 channel: t,
                 appContext: d,
             });
-    return (j || C) && null != h
+    return (j || C) && null != p
         ? (0, r.jsx)(a.yRy, {
               targetElementRef: E,
               renderPopout: (e) => {
                   let { closePopout: i } = e;
-                  return (0, r.jsx)(P.Z, {
+                  return (0, r.jsx)(T.Z, {
                       children: (0, r.jsx)(a.v2r, {
                           navId: "exit-options",
                           "aria-label": en.intl.string(en.t["3Uj+2t"]),
@@ -239,8 +239,8 @@ let ed = i.memo(function (e) {
         targetElementRef: q,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(P.Z, {
-                children: (0, r.jsx)(h.Z, {
+            return (0, r.jsx)(T.Z, {
+                children: (0, r.jsx)(p.Z, {
                     onClose: t,
                     minimal: !0,
                     onInteraction: (0, g.u)("VideoDeviceMenu", n, { entrypoint: et.A5.CARET }),
@@ -261,7 +261,7 @@ let ed = i.memo(function (e) {
                 enabled: O,
                 cameraUnavailable: j,
                 onChange: E.r,
-                onCameraUnavailable: T.Z,
+                onCameraUnavailable: P.Z,
                 channelLimitReached: R,
                 channelLimit: N,
                 popoutOpen: i,
@@ -280,7 +280,7 @@ let ed = i.memo(function (e) {
                               targetElementRef: K,
                               renderPopout: (e) => {
                                   let { closePopout: t } = e;
-                                  return (0, r.jsx)(P.Z, {
+                                  return (0, r.jsx)(T.Z, {
                                       children: (0, r.jsx)(u.default, {
                                           onClose: t,
                                           renderInputDevices: !0,
@@ -309,7 +309,7 @@ let ed = i.memo(function (e) {
                                       serverMute: f,
                                       suppress: s,
                                       popoutOpen: i,
-                                      onClick: () => (0, p.Z)(f, s, "Stage Channel Controls"),
+                                      onClick: () => (0, h.Z)(f, s, "Stage Channel Controls"),
                                       awaitingRemote: _,
                                   });
                               },
@@ -355,7 +355,7 @@ function eu(e) {
         ],
     });
 }
-let eh = i.memo(function (e) {
+let ep = i.memo(function (e) {
     let { channel: t, isOnStartStageScreen: n } = e,
         i = (0, X.Z)(t.id),
         a = (0, F.B)(t.id),

@@ -101,7 +101,7 @@ var c = n(901607),
             t
         );
     })(b.Component),
-    j = (function (e) {
+    k = (function (e) {
         function t(t) {
             var n;
             return (
@@ -397,7 +397,7 @@ var c = n(901607),
             t
         );
     })(b.Component);
-s(j, "defaultProps", {
+s(k, "defaultProps", {
     blockRenderMap: c,
     blockRendererFn: function () {
         return null;
@@ -410,4 +410,4 @@ s(j, "defaultProps", {
     spellCheck: !1,
     stripPastedStyles: !1,
 }),
-    (e.exports = j);
+    (e.exports = k);

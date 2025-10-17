@@ -278,8 +278,8 @@ let R = {
         maxAge: +p.Z.Millis.MINUTE,
         updateAgeOnGet: !0,
     },
-    j = new (o())(M),
-    k = new (o())(M);
+    k = new (o())(M),
+    j = new (o())(M);
 function U(e, t, n) {
     let r = [],
         i = {
@@ -290,7 +290,7 @@ function U(e, t, n) {
             allowGameMentions: !0,
         },
         a = n ? x : L,
-        o = n ? k : j,
+        o = n ? j : k,
         s = o.get(e);
     if (null != s) return s;
     let l =

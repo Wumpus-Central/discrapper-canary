@@ -177,7 +177,7 @@ function w(e) {
         icon: c.rgF,
     });
 }
-function N(e) {
+function A(e) {
     var t, n;
     let { item: r, canCopyImage: l, canCopyLink: a, onClose: o, onSelect: s } = e,
         u =
@@ -191,9 +191,9 @@ function N(e) {
         p = (function (e) {
             var t;
             let { alt: n, sourceMetadata: r, width: l, height: a } = e,
-                o = A(C.intl.string(C.t.ILJuBg), "name", { subtextLineClamp: 1 }),
-                s = A(C.intl.string(C.t["3Nf9u7"]), "size"),
-                u = A(C.intl.string(C.t.eOB2eX), "alt", { subtextLineClamp: 2 });
+                o = N(C.intl.string(C.t.ILJuBg), "name", { subtextLineClamp: 1 }),
+                s = N(C.intl.string(C.t["3Nf9u7"]), "size"),
+                u = N(C.intl.string(C.t.eOB2eX), "alt", { subtextLineClamp: 2 });
             if ((null == r || null == (t = r.identifier) ? void 0 : t.type) !== "attachment") return null;
             let d = (0, y.Z)(r.identifier),
                 f = (0, E.BU)(r.identifier.size / 1000);
@@ -291,7 +291,7 @@ function N(e) {
         ],
     });
 }
-function A(e, t, n) {
+function N(e, t, n) {
     let l = r.useCallback((e) => {
         (0, b.JG)(e, () =>
             (0, c.showToast)({
@@ -343,7 +343,7 @@ function Z(e) {
               onRequestClose: () => s(!1),
               animation: c.yRy.Animation.NONE,
               renderPopout: () =>
-                  (0, i.jsx)(N, {
+                  (0, i.jsx)(A, {
                       item: l,
                       canCopyImage: b,
                       canCopyLink: E,

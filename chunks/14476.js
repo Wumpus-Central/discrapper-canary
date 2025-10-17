@@ -1,76 +1,76 @@
-n.d(t, { c: () => h });
+n.d(t, { c: () => m });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     l = n.n(a),
-    o = n(979554),
-    s = n(780384),
+    s = n(979554),
+    o = n(780384),
     d = n(481060),
-    C = n(410030),
-    c = n(104505),
+    c = n(410030),
+    C = n(104505),
     u = n(699758),
     p = n(616066),
-    _ = n(388032),
-    f = n(632939);
-let h = (e) => {
+    h = n(388032),
+    _ = n(632939);
+let m = (e) => {
     let {
             skuId: t,
             assetId: n,
             user: a,
-            claimed: h,
-            onSelect: m,
+            claimed: m,
+            onSelect: f,
             productName: x,
             a11yLabel: g,
             selectedSkuId: j,
             category: b,
         } = e,
-        y = i.useRef(null),
-        { isHoveringOrFocusing: L } = (0, c.Z)(y),
-        v = !h && L,
-        S = (0, C.ZP)(),
-        w = (0, s.wj)(S),
-        I = {
-            type: o.Z.AVATAR_DECORATION,
+        v = i.useRef(null),
+        { isHoveringOrFocusing: S } = (0, C.Z)(v),
+        L = !m && S,
+        y = (0, c.ZP)(),
+        I = (0, o.wj)(y),
+        w = {
+            type: s.Z.AVATAR_DECORATION,
             label: g,
             asset: n,
         };
     return (0, r.jsx)(d.tEY, {
         children: (0, r.jsxs)(d.kL8, {
-            ref: y,
+            ref: v,
             "aria-label": null != x ? x : "",
             onClick: () => {
-                null == t || null == m || h || m(t);
+                null == t || null == f || m || f(t);
             },
-            className: l()(w ? f.shopCardDark : f.shopCard, {
-                [f.shopCardAnimation]: !h,
-                [w ? f.shopCardDarkHighlighted : f.shopCardHighlighted]: v,
-                [f.shopCardSelected]: j === t,
+            className: l()(I ? _.shopCardDark : _.shopCard, {
+                [_.shopCardAnimation]: !m,
+                [I ? _.shopCardDarkHighlighted : _.shopCardHighlighted]: L,
+                [_.shopCardSelected]: j === t,
             }),
             children: [
                 (0, r.jsx)("div", {
-                    className: l()(f.preview, {
-                        [f.previewTrick]: b === u.KN.Trick,
-                        [f.previewTreat]: b === u.KN.Treat,
-                        [f.shopCardClaimed]: h,
+                    className: l()(_.preview, {
+                        [_.previewTrick]: b === u.KN.Trick,
+                        [_.previewTreat]: b === u.KN.Treat,
+                        [_.shopCardClaimed]: m,
                     }),
                     children: (0, r.jsx)(p.R, {
-                        item: I,
+                        item: w,
                         user: a,
-                        isHighlighted: v,
+                        isHighlighted: L,
                         avatarSize: d.EFr.SIZE_120,
-                        isPurchased: h,
+                        isPurchased: m,
                     }),
                 }),
-                h &&
+                m &&
                     (0, r.jsx)(d.dz2, {
                         size: "custom",
                         width: 48,
                         height: 48,
                         color: d.TVs.colors.WHITE,
-                        className: f.claimedIcon,
+                        className: _.claimedIcon,
                     }),
                 (0, r.jsxs)("div", {
-                    className: f.productName,
+                    className: _.productName,
                     children: [
                         (0, r.jsx)(d.Heading, {
                             variant: "text-md/bold",
@@ -78,7 +78,7 @@ let h = (e) => {
                         }),
                         (0, r.jsx)(d.Text, {
                             variant: "text-md/normal",
-                            children: h ? _.intl.string(_.t["6cfuDg"]) : _.intl.string(_.t.QQsaCQ),
+                            children: m ? h.intl.string(h.t["6cfuDg"]) : h.intl.string(h.t.QQsaCQ),
                         }),
                     ],
                 }),

@@ -7,11 +7,11 @@ var r = n(951288),
     o = n(332148),
     c = n(493773),
     d = n(198620),
-    u = n(210887),
+    u = n(819514),
+    p = n(210887),
     h = n(624453),
-    p = n(306680),
-    f = n(494404),
-    g = n(257559),
+    f = n(306680),
+    g = n(494404),
     m = n(388032);
 let b = [];
 function y(e) {
@@ -25,7 +25,7 @@ function y(e) {
             };
         }),
         O = i.useMemo(() => _.map((e) => e.message), [_]),
-        x = (0, l.e7)([p.ZP], () => p.ZP.hasUnreadPins(t.id));
+        x = (0, l.e7)([f.ZP], () => f.ZP.hasUnreadPins(t.id));
     i.useEffect(() => {
         x && o.Z.ackPins(t.id);
     }, [x, t.id]),
@@ -39,10 +39,10 @@ function y(e) {
             var e;
             o.Z.fetchPins(t.id, { before: null == (e = _.at(-1)) ? void 0 : e.pinnedAt });
         }, [t.id, _]),
-        I = (0, l.e7)([u.Z], () => (0, a.ap)(u.Z.theme));
+        I = (0, l.e7)([p.Z], () => (0, a.ap)(p.Z.theme));
     return (0, r.jsx)(s.VqE, {
         "aria-label": m.intl.string(m.t["mp1N//"]),
-        children: (0, r.jsx)(f.ZP, {
+        children: (0, r.jsx)(g.ZP, {
             channel: t,
             onFetch: v,
             messages: O,
@@ -54,7 +54,7 @@ function y(e) {
                 let e = m.intl.string(t.isPrivate() ? m.t.rhqcbG : m.t.fmyaWF),
                     i = I ? n(306059) : n(281485);
                 return (0, r.jsx)(
-                    f.nH,
+                    g.nH,
                     {
                         msg: e,
                         image: i,
@@ -63,12 +63,12 @@ function y(e) {
                 );
             },
             renderHeader: () =>
-                (0, r.jsx)(f.h4, {
+                (0, r.jsx)(g.h4, {
                     icon: s.qQX,
                     title: m.intl.string(m.t["mp1N//"]),
                 }),
             onCloseMessage: function (e, n) {
-                null != e && (n.shiftKey ? o.Z.unpinMessage(t, e.id) : g.Z.confirmUnpin(t, e));
+                null != e && (n.shiftKey ? o.Z.unpinMessage(t, e.id) : u.Z.confirmUnpin(t, e));
             },
             onJump: y,
             loadMore: C,

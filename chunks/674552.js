@@ -1,5 +1,5 @@
 n.d(t, {
-    Ne: () => f,
+    Ne: () => h,
     Ny: () => g,
     Or: () => b,
     jt: () => _,
@@ -16,7 +16,7 @@ var i = n(120356),
     u = n(460562),
     d = n(981631),
     p = n(816827);
-function h(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,7 +41,7 @@ function h(e) {
     }
     return e;
 }
-function f(e, t, n) {
+function h(e, t, n) {
     return (0, r.jsx)(o.mAB, {
         count: e,
         color: t,
@@ -58,7 +58,7 @@ function g() {
 function m(e) {
     let { enabled: t } = a.c.useExperiment({ location: "renderMediaBadge" }, { autoTrackExposure: !0 }),
         n = t ? o.iWm : o.nG3;
-    return (0, r.jsx)(n, h({}, e));
+    return (0, r.jsx)(n, f({}, e));
 }
 function b(e) {
     let t,
@@ -80,7 +80,7 @@ function b(e) {
         if (!c) return null;
         t = m;
     }
-    return y({
+    return O({
         icon: t,
         isCurrentUserConnected: l,
     });
@@ -99,17 +99,17 @@ function _(e) {
                     return [void 0, o.vdY];
             }
         })(t);
-    return y({
+    return O({
         icon: r,
         color: n,
     });
 }
-function y(e) {
+function O(e) {
     let { icon: t, color: n, isCurrentUserConnected: i } = e,
         a = null == n ? { disableColor: !0 } : { color: (0, s.Lq)(n) };
     return (0, r.jsx)(
         o.G2e,
-        h(
+        f(
             {
                 icon: t,
                 className: l()(p.iconBadge, { [p.isCurrentUserConnected]: i }),

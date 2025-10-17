@@ -1,6 +1,6 @@
 n.d(t, {
-    Dx: () => h,
-    aP: () => p,
+    Dx: () => p,
+    aP: () => h,
 }),
     n(539854),
     n(388685);
@@ -13,7 +13,7 @@ var r = n(647438),
     c = n(565799),
     d = n(431328),
     u = n(501655);
-function h(e) {
+function p(e) {
     let t = (0, d.Rk)(e, u.pV.AUDIENCE),
         [n, i] = r.useState(!1);
     return (
@@ -23,9 +23,9 @@ function h(e) {
         5000 * !!n
     );
 }
-function p(e, t, n) {
+function h(e, t, n) {
     let d = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        h = (function (e, t, n) {
+        p = (function (e, t, n) {
             let a = (0, l.e7)([c.Z], () => [e, c.Z.getParticipantsVersion(e)], [e], o.Q),
                 d = (0, l.e7)([s.Z], () => s.Z.getSelectedParticipantId(e), [e]);
             return r.useMemo(() => {
@@ -37,26 +37,26 @@ function p(e, t, n) {
                     for (let t of c.Z.getMutableParticipants(e, u.pV.SPEAKER))
                         if (t.type === u.Ui.STREAM) t.id !== d && o.push(t), s++;
                         else break;
-                let h = (e, t, n) => {
+                let p = (e, t, n) => {
                         let a = n ? e.filter((e, t) => e.id !== d && t > s) : e,
                             o = (0, i.chunk)(a, t);
                         l.push(o), r.push(o.length);
                     },
-                    p = null != d ? c.Z.getParticipant(e, d) : null;
+                    h = null != d ? c.Z.getParticipant(e, d) : null;
                 return (
-                    (null == p ? void 0 : p.speaker) ? h([p], 1, !1) : h([], 1, !1),
+                    (null == h ? void 0 : h.speaker) ? p([h], 1, !1) : p([], 1, !1),
                     [u.pV.SPEAKER, u.pV.AUDIENCE].forEach((e) => {
-                        h(c.Z.getMutableParticipants(a[0], e), t[e], e === u.pV.SPEAKER);
+                        p(c.Z.getMutableParticipants(a[0], e), t[e], e === u.pV.SPEAKER);
                     }),
-                    h(o, 1, !1),
+                    p(o, 1, !1),
                     [r, l]
                 );
             }, [a, t, d, n, e]);
         })(e, t, d),
-        [p, f] = h,
-        [g, m] = (0, a.T)(h, n, [t[u.pV.AUDIENCE]]);
+        [h, f] = p,
+        [g, m] = (0, a.T)(p, n, [t[u.pV.AUDIENCE]]);
     return [
-        [p[3 * !!d], p[1], g[2]],
+        [h[3 * !!d], h[1], g[2]],
         [f[3 * !!d], f[1], m[2]],
     ];
 }

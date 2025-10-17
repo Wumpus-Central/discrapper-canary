@@ -1,8 +1,8 @@
 n.d(t, { W: () => d }), n(388685);
 var r = n(647438),
     l = n(979554),
-    i = n(809206),
-    a = n(164946),
+    a = n(809206),
+    i = n(164946),
     o = n(350327),
     s = n(884697),
     c = n(328456),
@@ -10,7 +10,7 @@ var r = n(647438),
 let d = (e) => {
     let { product: t, onSuccess: d, onError: p } = e,
         [f, b] = r.useState(!1),
-        { firstAvatarDecoration: y, firstProfileEffect: m, firstNameplate: O } = (0, c.Rj)(t),
+        { firstAvatarDecoration: y, firstProfileEffect: O, firstNameplate: v } = (0, c.Rj)(t),
         g = (0, s.x6)(t)
             ? u.intl.string(u.t.tf1ZZ2)
             : t.type === l.Z.AVATAR_DECORATION
@@ -23,21 +23,21 @@ let d = (e) => {
             b(!0);
             let e = {};
             try {
-                if ((null != y && (e.avatarDecoration = y), null != m)) {
-                    let e = (0, a.g9)({ pendingProfileEffect: m });
+                if ((null != y && (e.avatarDecoration = y), null != O)) {
+                    let e = (0, i.g9)({ pendingProfileEffect: O });
                     await (0, o.Z)(e);
                 }
-                null != O && (e.nameplate = O), Object.keys(e).length > 0 && (await (0, i.Mn)(e));
+                null != v && (e.nameplate = v), Object.keys(e).length > 0 && (await (0, a.Mn)(e));
                 {
                     let {
                         ToastPosition: e,
                         ToastType: t,
                         createToast: r,
                         popToast: l,
-                        showToast: i,
+                        showToast: a,
                     } = await Promise.resolve().then(n.bind(n, 481060));
                     l(),
-                        i(
+                        a(
                             r(g, t.MESSAGE, {
                                 duration: 6000,
                                 position: e.TOP,
@@ -50,7 +50,7 @@ let d = (e) => {
             } finally {
                 b(!1);
             }
-        }, [y, m, O, d, g, p]),
+        }, [y, O, v, d, g, p]),
         isApplying: f,
     };
 };

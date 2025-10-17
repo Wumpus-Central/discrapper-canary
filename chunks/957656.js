@@ -2,16 +2,16 @@ r.d(t, { Z: () => u });
 var n = r(951288);
 r(647438);
 var o = r(481060),
-    i = r(198952),
-    c = r(329242),
-    a = r(345909),
-    s = r(388032),
-    l = r(167154);
+    c = r(198952),
+    i = r(329242),
+    l = r(345909),
+    a = r(388032),
+    s = r(167154);
 let d = (e) => {
     var t,
         r,
-        { children: i, className: c } = e,
-        a = (function (e, t) {
+        { children: c, className: i } = e,
+        l = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -20,14 +20,14 @@ let d = (e) => {
                     var r,
                         n,
                         o = {},
-                        i = Object.keys(e);
-                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
+                        c = Object.keys(e);
+                    for (n = 0; n < c.length; n++) (r = c[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < i.length; n++)
-                    (r = i[n]),
+                var c = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < c.length; n++)
+                    (r = c[n]),
                         !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
             }
             return o;
@@ -61,14 +61,14 @@ let d = (e) => {
         })(
             {
                 "data-migration-pending": !0,
-                className: c,
+                className: i,
             },
-            a,
+            l,
         )),
         (r = r =
             {
                 parentComponent: "FamilyCenterCommonModal",
-                children: i,
+                children: c,
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
@@ -88,28 +88,28 @@ let d = (e) => {
 (d.ButtonFooter = (e) => {
     let { children: t } = e;
     return (0, n.jsx)("div", {
-        className: l.footer,
+        className: s.footer,
         children: t,
     });
 }),
     (d.Header = (e) => {
-        let { icon: t, currentUser: r, otherUser: a, header: s } = e;
+        let { icon: t, currentUser: r, otherUser: l, header: a } = e;
         return (0, n.jsxs)("div", {
-            className: l.header,
+            className: s.header,
             children: [
-                (0, n.jsx)(i.Z, {
+                (0, n.jsx)(c.Z, {
                     currentUser: r,
-                    otherUser: a,
+                    otherUser: l,
                     children: t,
                 }),
                 (0, n.jsxs)("div", {
-                    className: l.heading,
+                    className: s.heading,
                     children: [
                         (0, n.jsx)(o.Heading, {
                             variant: "text-lg/bold",
-                            children: s,
+                            children: a,
                         }),
-                        (0, n.jsx)(c.Z, { user: a }),
+                        (0, n.jsx)(i.Z, { user: l }),
                     ],
                 }),
             ],
@@ -118,19 +118,19 @@ let d = (e) => {
     (d.Content = (e) => {
         let { children: t } = e;
         return (0, n.jsx)("div", {
-            className: l.content,
+            className: s.content,
             children: t,
         });
     }),
     (d.Notice = (e) => {
         let { notice: t } = e;
         return (0, n.jsxs)("div", {
-            className: l.notice,
+            className: s.notice,
             children: [
                 (0, n.jsx)(o.Text, {
                     variant: "eyebrow",
                     color: "header-primary",
-                    children: s.intl.string(a.default.cXgKMD),
+                    children: a.intl.string(l.default.cXgKMD),
                 }),
                 (0, n.jsx)(o.Text, {
                     variant: "text-sm/normal",

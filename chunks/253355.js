@@ -3,17 +3,17 @@ var r = n(951288);
 n(647438);
 var l = n(399606),
     i = n(607070),
-    s = n(70097),
+    a = n(70097),
     o = n(451478),
-    a = n(884697),
+    s = n(884697),
     c = n(813083),
     u = n(794324),
     d = n(638758);
 function g(e) {
     let { category: t } = e,
         n = (0, l.e7)([i.Z], () => i.Z.useReducedMotion),
-        a = (0, l.e7)([o.Z], () => o.Z.isFocused()),
-        { catalogBannerStatic: g, catalogBannerAnimated: f } = (0, u.Oi)(t);
+        s = (0, l.e7)([o.Z], () => o.Z.isFocused()),
+        { catalogBannerStatic: g, catalogBannerAnimated: p } = (0, u.Oi)(t);
     return (0, r.jsxs)("div", {
         className: d.catalogBanner,
         children: [
@@ -22,11 +22,11 @@ function g(e) {
                 src: g,
                 alt: t.name,
             }),
-            null != f &&
+            null != p &&
                 !n &&
-                a &&
-                (0, r.jsx)(s.Z, {
-                    src: f,
+                s &&
+                (0, r.jsx)(a.Z, {
+                    src: p,
                     className: d.animationAsset,
                     autoPlay: !0,
                     loop: !0,
@@ -39,4 +39,4 @@ function g(e) {
         ],
     });
 }
-(0, a.IC)(90);
+(0, s.IC)(90);

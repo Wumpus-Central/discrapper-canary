@@ -1,7 +1,7 @@
 n.d(t, {
     $5: () => X,
     I8: () => Y,
-    Kt: () => k,
+    Kt: () => j,
     Lj: () => C,
     RW: () => H,
     Y3: () => q,
@@ -10,7 +10,7 @@ n.d(t, {
     _t: () => K,
     a1: () => G,
     bN: () => N,
-    dl: () => j,
+    dl: () => k,
     ft: () => z,
     hO: () => P,
     kH: () => U,
@@ -134,13 +134,13 @@ function M(e) {
         i = (0, o.L5)();
     return null != t && n && i && t.features.has(E.GuildFeatures.AGE_VERIFICATION_LARGE_GUILD);
 }
-function j() {
+function k() {
     let e = (0, l.c_)("age-gate-utils"),
         t = (0, a.u)("age-gate-utils"),
         n = (0, o.sf)();
     return (e || t) && n;
 }
-function k() {
+function j() {
     let e = (0, l.pY)("age-gate-utils"),
         t = (0, o.L5)(),
         n = (0, a.z)("age-gate-utils");
@@ -154,7 +154,7 @@ function U(e) {
             var e;
             return (null == (e = _.default.getCurrentUser()) ? void 0 : e.nsfwAllowed) === !1;
         }),
-        l = k(),
+        l = j(),
         u = D(e),
         d = b.intl.string(n ? b.t.xi46lp : b.t.ZmwvDQ);
     if (l) {
@@ -201,7 +201,7 @@ function U(e) {
 }
 function G(e) {
     let t = (0, o.l6)(),
-        n = k(),
+        n = j(),
         i = e === g.L0.NSFW_SERVER || e === g.L0.NSFW_SERVER_INVITE || e === g.L0.NSFW_SERVER_INVITE_EMBED,
         a = (0, r.e7)([_.default], () => {
             var e;
@@ -243,7 +243,7 @@ function G(e) {
 let B = () => {
         let e = _.default.getCurrentUser();
         if (null == e) return !1;
-        let t = j();
+        let t = k();
         return !0 !== e.nsfwAllowed || t;
     },
     Z = (e) => {
@@ -259,7 +259,7 @@ let B = () => {
         );
     },
     F = (e) => !!B() && null != e && q(u.Z.getChannel(e)),
-    V = (e) => j() && F(e),
+    V = (e) => k() && F(e),
     H = (e) => !!V(e) && ((0, m.mN)(g.L0.NSFW_VOICE_CHANNEL), !0);
 function Y(e, t, n) {
     if (P(e)) return void (0, m.mN)(g.L0.ACCESS_LARGE_GUILD_UNDERAGE);

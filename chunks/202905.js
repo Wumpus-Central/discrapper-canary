@@ -44,17 +44,17 @@ function v(e) {
         C = (0, s.e7)([c.Z], () => c.Z.get(_)),
         { fetchGuildProfile: O } = (0, d.u)(_),
         y = (null == v ? void 0 : v.visibility) == null || !l.Y.VISIBLE.has(null == v ? void 0 : v.visibility),
-        N = (null == v ? void 0 : v.visibility) === l.k.PUBLIC_WITH_RECRUITMENT;
+        E = (null == v ? void 0 : v.visibility) === l.k.PUBLIC_WITH_RECRUITMENT;
     i.useEffect(() => {
         null != _ && O();
     }, [_, O]);
-    let E = i.useMemo(() => (null == n || null == v ? j : v), [n, v]),
+    let N = i.useMemo(() => (null == n || null == v ? j : v), [n, v]),
         I = i.useCallback(() => {
             (null == n ? void 0 : n.id) != null &&
-                (N
+                (E
                     ? g.Z.updateGuildProfile(n.id, { visibility: l.k.PUBLIC })
                     : g.Z.updateGuildProfile(n.id, { visibility: l.k.PUBLIC_WITH_RECRUITMENT }));
-        }, [null == n ? void 0 : n.id, N]),
+        }, [null == n ? void 0 : n.id, E]),
         S = i.useCallback(() => {
             g.Z.setSection(h.pNK.PROFILE);
         }, []);
@@ -94,7 +94,7 @@ function v(e) {
                         children: [
                             (0, r.jsx)(o.rsf, {
                                 label: b.intl.string(b.t["N/0239"]),
-                                checked: N,
+                                checked: E,
                                 onChange: I,
                                 disabled: y,
                             }),
@@ -129,7 +129,7 @@ function v(e) {
                                 (0, r.jsx)("div", { className: x.gradient }),
                                 (0, r.jsx)(u.ZP, {
                                     className: x.preview,
-                                    profile: E,
+                                    profile: N,
                                     CTAOverride: (0, r.jsx)(a.zxk, {
                                         variant: "active",
                                         size: "sm",

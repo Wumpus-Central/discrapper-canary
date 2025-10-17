@@ -1,14 +1,14 @@
-A.d(t, { s: () => j }), A(388685);
+A.d(t, { s: () => U }), A(388685);
 var n = A(951288),
     r = A(647438),
     a = A(120356),
-    l = A.n(a),
-    i = A(28664),
+    i = A.n(a),
+    l = A(28664),
     o = A(481060),
     s = A(205822),
     d = A(476326),
-    c = A(377171),
-    u = A(313201),
+    u = A(377171),
+    c = A(313201),
     g = A(374794),
     f = A(587123),
     p = A(863663),
@@ -16,30 +16,30 @@ var n = A(951288),
     h = A(629481),
     v = A(388032),
     q = A(530521);
-let b = (0, u.hQ)();
+let b = (0, c.hQ)();
 function C(e) {
     var t;
     let { upload: A, progress: a = 0, onDeleteAttachment: s } = e,
         d = r.useCallback(() => {
             null == s || s(A.id);
         }, [s, A.id]),
-        u = a >= 1,
+        c = a >= 1,
         g = a < 0,
-        f = u || g,
+        f = c || g,
         m = null != (t = A.filename) ? t : A.id,
         h = (0, p.kg)(a);
-    return (0, n.jsx)(i.u, {
+    return (0, n.jsx)(l.u, {
         asContainer: !0,
         text: h,
         children: (0, n.jsxs)("div", {
-            className: l()(q.attachedFileCard, {
+            className: i()(q.attachedFileCard, {
                 [q.attachedFileCardError]: g,
                 [q.attachedFileCardUploading]: !f,
             }),
             children: [
                 (0, n.jsx)(o.ZKT, {
                     size: "xs",
-                    color: c.Z.INTERACTIVE_MUTED,
+                    color: u.Z.INTERACTIVE_MUTED,
                 }),
                 (0, n.jsx)(o.LZC, {
                     size: 10,
@@ -71,21 +71,21 @@ function C(e) {
         }),
     });
 }
-function j(e) {
+function U(e) {
     let { onFileAdded: t } = e,
         {
             uploads: A,
             canAttachFiles: a,
-            canAttachArchives: l,
-            addAttachment: i,
-            deleteAttachment: c,
-            fileUploadProgresses: u,
+            canAttachArchives: i,
+            addAttachment: l,
+            deleteAttachment: u,
+            fileUploadProgresses: c,
         } = (0, f.P)(),
         p = r.useRef(!1);
-    function j(e) {
+    function U(e) {
         try {
             for (let t of e)
-                i({
+                l({
                     platform: d.ow.WEB,
                     file: t,
                     origin: "unknown:guild_product_attachment",
@@ -105,7 +105,7 @@ function j(e) {
                     title: v.intl.string(v.t["5eTk2t"]),
                     description: v.intl.string(v.t.Ecxoxs),
                     icons: m.J6,
-                    onDrop: j,
+                    onDrop: U,
                 }),
                 (0, n.jsxs)(g.Z, {
                     className: q.addFileButtonLook,
@@ -115,7 +115,7 @@ function j(e) {
                     "aria-describedby": b,
                     multiple: !0,
                     onChange: function (e) {
-                        null != e.currentTarget.files && j(e.currentTarget.files);
+                        null != e.currentTarget.files && U(e.currentTarget.files);
                     },
                     children: [
                         (0, n.jsx)(o.dZu, {
@@ -136,7 +136,7 @@ function j(e) {
                     id: b,
                     color: "text-muted",
                     variant: "text-xs/normal",
-                    children: l
+                    children: i
                         ? v.intl.formatToPlainString(v.t.lvU6sr, { fileUploadLimit: h.TR })
                         : v.intl.formatToPlainString(v.t.DOXzIS, { fileUploadLimit: h.TR }),
                 }),
@@ -153,8 +153,8 @@ function j(e) {
                                         {
                                             children: (0, n.jsx)(C, {
                                                 upload: e,
-                                                onDeleteAttachment: c,
-                                                progress: u[e.id],
+                                                onDeleteAttachment: u,
+                                                progress: c[e.id],
                                             }),
                                         },
                                         e.id,

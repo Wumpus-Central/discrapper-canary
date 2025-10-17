@@ -101,15 +101,15 @@ function v(e) {
         N = l.useRef(null),
         [S, T] = l.useState(!1),
         [w, R] = l.useState(!1),
-        [P, _] = l.useState(null),
-        F = null != P ? P : null == m ? void 0 : m.message,
+        [P, F] = l.useState(null),
+        _ = null != P ? P : null == m ? void 0 : m.message,
         Z = i.length,
         I = Math.max(j.iZ - Z, 0),
         k = (0, c.vRw)(),
         D = l.useCallback(
             async (e) => {
                 if (null == a || S) return;
-                T(!0), _(null);
+                T(!0), F(null);
                 let { id: l, storageHash: i, description: s } = e,
                     o = (0, d.fD)({
                         userId: a.id,
@@ -147,7 +147,7 @@ function v(e) {
                         { contextKey: k },
                     );
                 } catch (e) {
-                    _(A.intl.string(A.t.fZRH9P));
+                    F(A.intl.string(A.t.fZRH9P));
                 } finally {
                     T(!1);
                 }
@@ -230,12 +230,12 @@ function v(e) {
         : (0, r.jsxs)("div", {
               className: x.recentAvatarContainer,
               children: [
-                  null != F &&
+                  null != _ &&
                       !o &&
                       (0, r.jsx)(c.Text, {
                           variant: "text-sm/normal",
                           color: "text-danger",
-                          children: F,
+                          children: _,
                       }),
                   (0, r.jsxs)("div", {
                       className: x.recentAvatarSlots,

@@ -37,7 +37,7 @@ var r = n(951288),
     M = n(436620),
     U = n(388032),
     G = n(197571);
-function F(e, t, n) {
+function B(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -51,11 +51,11 @@ function F(e, t, n) {
     );
 }
 c.ZP.initialize();
-let B = "Accept Invite Page",
+let F = "Accept Invite Page",
     z = "register",
     V = "login";
 async function K(e) {
-    let { invite: t } = await d.ZP.resolveInvite(e, B);
+    let { invite: t } = await d.ZP.resolveInvite(e, F);
     null != t && (0, p.A)(t);
 }
 class H extends i.PureComponent {
@@ -84,7 +84,7 @@ class H extends i.PureComponent {
             }
             d.ZP.acceptInvite({
                 inviteKey: s,
-                context: this.getAcceptInviteContext(B),
+                context: this.getAcceptInviteContext(F),
                 skipOnboarding: !0,
                 callback: this.handleContinue,
             });
@@ -146,7 +146,7 @@ class H extends i.PureComponent {
                             }),
                         )),
                         r.forEach(function (t) {
-                            F(e, t, n[t]);
+                            B(e, t, n[t]);
                         });
                 }
                 return e;
@@ -306,9 +306,9 @@ class H extends i.PureComponent {
         var t;
         super(...e),
             (t = this),
-            F(this, "state", { error: null }),
-            F(this, "getAcceptInviteContext", (e) => d.ZP.getInviteContext(e, this.props.invite)),
-            F(this, "handleContinue", (e) => {
+            B(this, "state", { error: null }),
+            B(this, "getAcceptInviteContext", (e) => d.ZP.getInviteContext(e, this.props.invite)),
+            B(this, "handleContinue", (e) => {
                 let { invite: t, transitionTo: n } = this.props;
                 if (null != t.channel || (null == e ? void 0 : e.channel) != null) {
                     var r;
@@ -317,12 +317,12 @@ class H extends i.PureComponent {
                         : d.ZP.transitionToInvite(null != e ? e : t, n);
                 }
             }),
-            F(this, "handleAccept", () => {
+            B(this, "handleAccept", () => {
                 this.setState({ error: null });
                 let e = this.getInviteKey();
                 d.ZP.acceptInvite({
                     inviteKey: e,
-                    context: this.getAcceptInviteContext(B),
+                    context: this.getAcceptInviteContext(F),
                     skipOnboarding: !0,
                     callback: (t) => {
                         (0, p.A)(t), null != t.channel && d.ZP.openApp(e, t.channel.id);
@@ -345,11 +345,11 @@ class H extends i.PureComponent {
                         });
                 });
             }),
-            F(this, "handleDefaultTransition", () => {
+            B(this, "handleDefaultTransition", () => {
                 let { defaultRoute: e, transitionTo: t } = this.props;
                 t(e);
             }),
-            F(this, "renderButton", function (e) {
+            B(this, "renderButton", function (e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : t.handleDefaultTransition,
                     { invite: i } = t.props,
                     s = null != i.guild_scheduled_event;

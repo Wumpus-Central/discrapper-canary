@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => M }), n(781311), n(642613), n(388685);
+n.d(t, { ZP: () => G }), n(781311), n(642613), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -21,8 +21,8 @@ var r = n(951288),
     C = n(130341),
     O = n(95242),
     y = n(420966),
-    N = n(566476),
-    E = n(203377),
+    E = n(566476),
+    N = n(203377),
     I = n(981631),
     S = n(388032),
     T = n(472039),
@@ -176,7 +176,7 @@ function D(e) {
                             className: T.memberRow,
                             onContextMenu: j,
                             children: [
-                                (0, r.jsx)(N.Z, {
+                                (0, r.jsx)(E.Z, {
                                     className: T.memberDetails,
                                     avatarURL: t.avatarURL,
                                     name: t.name,
@@ -314,7 +314,7 @@ function k(e) {
         ],
     });
 }
-function M(e) {
+function G(e) {
     let { guild: t, role: l, locked: s, setSelectedSection: c } = e,
         [u, g] = i.useState(""),
         { headerHeight: m, headerRef: p } = (0, O.Z)(0),
@@ -326,7 +326,7 @@ function M(e) {
                 var e, n;
                 return null != (n = null == (e = j.Z.getRoleMemberCount(t.id)) ? void 0 : e[l.id]) ? n : 0;
             }) > v.length,
-        N = () => {
+        E = () => {
             x.default.track(I.rMx.OPEN_MODAL, {
                 type: "Add Role Members",
                 location_page: "Role Settings",
@@ -358,14 +358,14 @@ function M(e) {
                             (0, r.jsx)(y.Z, {
                                 guild: t,
                                 role: l,
-                                selectedSection: E.ZI.MEMBERS,
+                                selectedSection: N.ZI.MEMBERS,
                                 setSelectedSection: c,
                             }),
                             (0, r.jsx)(k, {
                                 query: u,
                                 setQuery: g,
                                 locked: b,
-                                handleAddClick: N,
+                                handleAddClick: E,
                             }),
                             _
                                 ? (0, r.jsx)(d.Wn, {
@@ -386,7 +386,7 @@ function M(e) {
                 locked: b,
                 onScroll: h,
                 roleMembers: v,
-                handleAddClick: N,
+                handleAddClick: E,
             }),
         ],
     });

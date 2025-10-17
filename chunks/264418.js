@@ -133,10 +133,10 @@ function O(e) {
             },
             [S],
         ),
-        j = i.useCallback(() => {
+        k = i.useCallback(() => {
             null == S || S("user:explicit");
         }, [S]),
-        k = i.useCallback((e) => {
+        j = i.useCallback((e) => {
             D(e), x((t) => E(m({}, t), { position: (0, _.z)(e) }));
         }, []);
     return (0, r.jsx)(
@@ -145,14 +145,14 @@ function O(e) {
             position: w,
             onRequestClose: M,
             gradientColor: T,
-            onPositionChange: k,
+            onPositionChange: j,
             scrollBehavior: R,
             children: (0, r.jsxs)("div", {
                 ref: A,
                 "data-mana-component": "popover",
                 children: [
                     (0, r.jsx)(d.u, {
-                        onClick: j,
+                        onClick: k,
                         variant: null != T ? "color-mix" : void 0,
                     }),
                     null != y &&

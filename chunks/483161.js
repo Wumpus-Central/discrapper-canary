@@ -1,4 +1,4 @@
-n.d(e, { z: () => N });
+n.d(e, { z: () => L });
 var i = n(951288),
     l = n(657707),
     u = n(442837),
@@ -28,7 +28,7 @@ let _ = (0, c.x1)(O.n.PROFILE_PANE, {
             element: a.Z,
         },
     }),
-    N = (0, c.m7)(O.n.PROFILE_SIDEBAR_ITEM, {
+    L = (0, c.m7)(O.n.PROFILE_SIDEBAR_ITEM, {
         icon: l.tBG,
         useTitle: () => y.intl.string(y.t["vi7f+v"]),
         legacySearchKey: S.s6.PROFILE_CUSTOMIZATION,

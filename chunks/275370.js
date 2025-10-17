@@ -1,18 +1,18 @@
 r.d(t, { default: () => h }), r(388685);
 var n = r(951288),
     i = r(647438),
-    o = r(512722),
-    a = r.n(o),
+    a = r(512722),
+    o = r.n(a),
     l = r(481060),
     c = r(51144),
     s = r(985002),
     d = r(957656),
     u = r(130310),
-    f = r(660886),
+    f = r(345909),
     b = r(388032),
     p = r(986360);
 let h = (e) => {
-    let { currentUser: t, otherUser: r, transitionState: o, onClose: h } = e,
+    let { currentUser: t, otherUser: r, transitionState: a, onClose: h } = e,
         j = i.useCallback(() => {
             h();
         }, [h]),
@@ -26,23 +26,23 @@ let h = (e) => {
             onSuccess: j,
         });
     return (
-        a()(!m, "FamilyCenterAcceptLinkModal should only be rendered for teens."),
+        o()(!m, "FamilyCenterAcceptLinkModal should only be rendered for teens."),
         (0, n.jsxs)(l.IX, {
-            transitionState: o,
+            transitionState: a,
             onClose: h,
-            "aria-label": b.intl.string(f.default.rlNJwZ),
+            "aria-label": b.intl.string(f.default.rlNJwc),
             children: [
                 x &&
                     (0, n.jsx)(l.M14, {
                         type: "critical",
-                        children: b.intl.string(f.default.pegSM5),
+                        children: b.intl.string(f.default.pegSMz),
                     }),
                 (0, n.jsxs)(l.fef, {
                     children: [
                         (0, n.jsx)(d.Z.Header, {
                             currentUser: t,
                             otherUser: r,
-                            header: b.intl.string(f.default.rlNJwZ),
+                            header: b.intl.string(f.default.rlNJwc),
                             icon: (0, n.jsx)(l.xPt, {
                                 size: "md",
                                 color: "currentColor",
@@ -56,7 +56,7 @@ let h = (e) => {
                                     className: p.disclaimer,
                                     variant: "text-xs/normal",
                                     color: "text-default",
-                                    children: b.intl.format(f.default.snlFqR, { username: c.ZP.getName(r) }),
+                                    children: b.intl.format(f.default.snlFqa, { username: c.ZP.getName(r) }),
                                 }),
                             ],
                         }),
@@ -67,13 +67,13 @@ let h = (e) => {
                     actions: [
                         {
                             variant: "secondary",
-                            text: b.intl.string(b.t["ETE/oC"]),
+                            text: b.intl.string(b.t["ETE/oK"]),
                             onClick: h,
                             disabled: v,
                         },
                         {
                             variant: "primary",
-                            text: b.intl.string(f.default["wI/jo3"]),
+                            text: b.intl.string(f.default["wI/jo6"]),
                             onClick: () => {
                                 y(!1), O(r.id);
                             },

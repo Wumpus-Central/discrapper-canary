@@ -101,7 +101,7 @@ let L = 44,
 function M(e) {
     return e.label;
 }
-function j(e) {
+function k(e) {
     let { active: t, loadableOptions: n, debounceTime: r } = e,
         a = "function" == typeof n,
         [o, s] = i.useState({
@@ -179,7 +179,7 @@ function j(e) {
         }
     );
 }
-function k(e, t) {
+function j(e, t) {
     return null == t
         ? []
         : (Array.isArray(t) ? t : [t])
@@ -276,15 +276,15 @@ let U = i.forwardRef(function (e, t) {
             options: eD,
             loading: eL,
             onQueryChange: ex,
-        } = j({
+        } = k({
             active: eT,
             loadableOptions: n,
             debounceTime: z,
         }),
-        eM = i.useMemo(() => k(eD, a), [eD, a]),
-        ej = i.useMemo(() => eM.map((e) => e.value), [eM]),
-        ek = eM[eM.length - 1],
-        eU = (0, f.Z)(ek),
+        eM = i.useMemo(() => j(eD, a), [eD, a]),
+        ek = i.useMemo(() => eM.map((e) => e.value), [eM]),
+        ej = eM[eM.length - 1],
+        eU = (0, f.Z)(ej),
         eG = i.useId(),
         eB = i.useId(),
         eZ = i.useCallback(
@@ -330,7 +330,7 @@ let U = i.forwardRef(function (e, t) {
         ),
         eK = (0, c.ZP)({
             id: eB,
-            defaultFocused: null != ek ? String(ek.value) : void 0,
+            defaultFocused: null != ej ? String(ej.value) : void 0,
             scrollToStart: eY,
             scrollToEnd: eW,
             isEnabled: eT,
@@ -375,8 +375,8 @@ let U = i.forwardRef(function (e, t) {
             }
         }, [eT, eL, ez, eU]),
         i.useLayoutEffect(() => {
-            eT || (h ? eC("") : null != ek && eC(ek.label));
-        }, [h, ek, eT]),
+            eT || (h ? eC("") : null != ej && eC(ej.label));
+        }, [h, ej, eT]),
         i.useLayoutEffect(() => {
             h && eC("");
         }, [h, eM.length]);
@@ -455,7 +455,7 @@ let U = i.forwardRef(function (e, t) {
                         listId: eG,
                         maxVisibleItems: U,
                         width: null != H && "auto" !== H ? H : ey,
-                        selectedValues: ej,
+                        selectedValues: ek,
                         closePopout: t,
                         onSelect: eX,
                         closeOnSelect: E,
@@ -497,7 +497,7 @@ let U = i.forwardRef(function (e, t) {
                                             (null == (r = eP.current) || null == (n = r.getScrollerNode())
                                                 ? void 0
                                                 : n.contains(e.relatedTarget)) ||
-                                            (h || null == ek || eC(ek.label), eR(!1), eZ(!1), null == ei || ei(e));
+                                            (h || null == ej || eC(ej.label), eR(!1), eZ(!1), null == ei || ei(e));
                                     },
                                     children: [
                                         (0, r.jsx)(p.tEY, {

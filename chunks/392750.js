@@ -4,8 +4,8 @@ n(647438);
 var r = n(442837),
     i = n(481060),
     l = n(752048),
-    s = n(594174),
-    o = n(681619),
+    o = n(594174),
+    s = n(681619),
     c = n(996279),
     d = n(451429);
 let u = [
@@ -46,11 +46,11 @@ let u = [
     },
 ];
 function m() {
-    let e = (0, r.Wu)([l.Z, s.default], () =>
+    let e = (0, r.Wu)([l.Z, o.default], () =>
         l.Z.getUserAffinities().map((e) => {
             let { otherUserId: t, communicationProbability: n, vcProbability: a } = e;
             return {
-                user: s.default.getUser(t),
+                user: o.default.getUser(t),
                 affinity: n,
                 vcProbability: a,
                 key: t,
@@ -59,7 +59,7 @@ function m() {
     );
     return 0 === e.length
         ? null
-        : (0, a.jsx)(o.Z, {
+        : (0, a.jsx)(s.Z, {
               className: d.panel,
               columns: u,
               rowClassName: c.row,

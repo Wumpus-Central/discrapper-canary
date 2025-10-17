@@ -1,111 +1,111 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
-    o = n.n(a),
-    l = n(793030),
-    c = n(442837),
-    s = n(313201),
+    l = n.n(a),
+    o = n(793030),
+    s = n(442837),
+    c = n(313201),
     u = n(314897),
     d = n(785717),
     f = n(403239),
     g = n(982072),
     p = n(781040),
-    b = n(840367),
-    m = n(388032),
-    O = n(415734);
-function y(e) {
+    m = n(840367),
+    b = n(388032),
+    h = n(415734);
+function v(e) {
     let {
             userId: t,
             widget: n,
             children: a,
-            disableInteraction: m,
-            className: y,
-            index: x,
-            trailingContent: v,
-            headerTitle: h,
+            disableInteraction: b,
+            className: v,
+            index: j,
+            trailingContent: O,
+            headerTitle: x,
             headerSubtitle: _,
-            headerActionButtons: w,
-            dragHandleAdditionalMenuItems: P,
+            headerActionButtons: P,
+            dragHandleAdditionalMenuItems: I,
         } = e,
-        I = (0, s.Dt)(),
-        S = (0, c.e7)([u.default], () => u.default.getId() === t),
+        w = (0, c.Dt)(),
+        S = (0, s.e7)([u.default], () => u.default.getId() === t),
         E = i.useRef(null),
         T = i.useRef(null),
-        { trackUserProfileAction: D } = (0, d.KZ)(),
-        k = (0, g.Z)({
+        { trackUserProfileAction: C } = (0, d.KZ)(),
+        N = (0, g.Z)({
             widgetType: n.type,
-            onAction: D,
+            onAction: C,
         }),
-        N = S && null != x && !m,
-        { isDragging: C, dragSourcePosition: Z } = (0, f.q)({
+        A = S && null != j && !b,
+        { isDragging: D, dragSourcePosition: k } = (0, f.q)({
             dropRef: E,
             dragRef: T,
             userId: t,
             widget: n,
-            index: x,
-            disableInteraction: !N,
+            index: j,
+            disableInteraction: !A,
         }),
-        [A, R] = i.useState(!1);
-    return (0, r.jsx)(j, {
+        [Z, R] = i.useState(!1);
+    return (0, r.jsx)(y, {
         ref: E,
-        disableInteraction: !N,
+        disableInteraction: !A,
         onMouseEnter: () => R(!0),
         onMouseLeave: () => R(!1),
-        dragSourcePosition: Z,
-        index: null != x ? x : 0,
+        dragSourcePosition: k,
+        index: null != j ? j : 0,
         children: (0, r.jsxs)("section", {
-            ref: k,
-            className: o()(O.container, y, { [O.isDragging]: C }),
-            "aria-labelledby": I,
+            ref: N,
+            className: l()(h.container, v, { [h.isDragging]: D }),
+            "aria-labelledby": w,
             children: [
-                N &&
+                A &&
                     (0, r.jsx)(p.Z, {
                         buttonRef: T,
                         widget: n,
-                        className: o()(O.dragHandleButton, { [O.opacity]: A || C }),
-                        additionalMenuItems: P,
+                        className: l()(h.dragHandleButton, { [h.opacity]: Z || D }),
+                        additionalMenuItems: I,
                     }),
-                (0, r.jsx)(b.Z, {
+                (0, r.jsx)(m.Z, {
                     userId: t,
-                    headingId: I,
-                    title: h,
+                    headingId: w,
+                    title: x,
                     subtitle: _,
-                    actionButtons: w,
+                    actionButtons: P,
                     widget: n,
-                    disableInteraction: m,
+                    disableInteraction: b,
                 }),
-                (0, r.jsxs)(l.y5t, {
-                    children: [a, v],
+                (0, r.jsxs)(o.y5t, {
+                    children: [a, O],
                 }),
             ],
         }),
     });
 }
-let j = (e) => {
+let y = (e) => {
     let {
             ref: t,
             children: n,
             disableInteraction: i,
             onMouseEnter: a,
-            onMouseLeave: l,
-            dragSourcePosition: c,
-            index: s,
+            onMouseLeave: o,
+            dragSourcePosition: s,
+            index: c,
         } = e,
-        u = null != c,
-        d = u && s < c,
-        f = u && s > c;
+        u = null != s,
+        d = u && c < s,
+        f = u && c > s;
     return i
         ? n
         : (0, r.jsx)("div", {
               ref: t,
-              className: o()(O.dragAndDropHitbox, {
-                  [O.dropIndicatorBefore]: d,
-                  [O.dropIndicatorAfter]: f,
+              className: l()(h.dragAndDropHitbox, {
+                  [h.dropIndicatorBefore]: d,
+                  [h.dropIndicatorAfter]: f,
               }),
               onMouseEnter: a,
-              onMouseLeave: l,
-              "aria-label": m.intl.formatToPlainString(m.t.YLczh4, { positionNumber: s + 1 }),
+              onMouseLeave: o,
+              "aria-label": b.intl.formatToPlainString(b.t.YLczh4, { positionNumber: c + 1 }),
               children: n,
           });
 };

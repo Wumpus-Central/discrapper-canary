@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(788111),
     d = n(60577),
     u = n(184301),
-    h = n(124823),
-    p = n(550818),
+    p = n(124823),
+    h = n(550818),
     f = n(983559),
     g = n(388032);
 function m(e) {
@@ -70,7 +70,7 @@ function b(e) {
             }),
             children: j
                 ? (0, r.jsx)(
-                      p.Z,
+                      h.Z,
                       m(
                           {
                               user: b,
@@ -82,7 +82,7 @@ function b(e) {
                   )
                 : b.isNonUserBot()
                   ? (0, r.jsx)(
-                        h.Z,
+                        p.Z,
                         m(
                             {
                                 user: b,

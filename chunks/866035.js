@@ -2,8 +2,8 @@ t.r(n), t.d(n, { default: () => d }), t(388685);
 var l = t(951288);
 t(647438);
 var i = t(788111),
-    r = t(752342),
-    o = t(886794),
+    o = t(752342),
+    r = t(886794),
     s = t(858970),
     a = t(595145);
 function c(e) {
@@ -42,14 +42,14 @@ function d(e) {
                     var t,
                         l,
                         i = {},
-                        r = Object.keys(e);
-                    for (l = 0; l < r.length; l++) (t = r[l]), n.indexOf(t) >= 0 || (i[t] = e[t]);
+                        o = Object.keys(e);
+                    for (l = 0; l < o.length; l++) (t = o[l]), n.indexOf(t) >= 0 || (i[t] = e[t]);
                     return i;
                 })(e, n);
             if (Object.getOwnPropertySymbols) {
-                var r = Object.getOwnPropertySymbols(e);
-                for (l = 0; l < r.length; l++)
-                    (t = r[l]),
+                var o = Object.getOwnPropertySymbols(e);
+                for (l = 0; l < o.length; l++)
+                    (t = o[l]),
                         !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (i[t] = e[t]);
             }
             return i;
@@ -59,8 +59,8 @@ function d(e) {
     return u && !n
         ? (0, l.jsx)(s.Z, c({ onHide: m }, t))
         : d.isNonUserBot()
-          ? (0, l.jsx)(o.Z, c({}, t))
+          ? (0, l.jsx)(r.Z, c({}, t))
           : d.bot
-            ? (0, l.jsx)(r.Z, c({}, t))
+            ? (0, l.jsx)(o.Z, c({}, t))
             : (0, l.jsx)(a.Z, c({}, t));
 }

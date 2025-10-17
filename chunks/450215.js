@@ -26,8 +26,8 @@ function y(e) {
             guildId: l,
             initialEditStateId: s,
             allSubscriptionListings: y,
-            priceTiers: N,
-            onDeleteEditState: E,
+            priceTiers: E,
+            onDeleteEditState: N,
             groupListingId: I,
             onBeforeDispatchNewListing: S,
             onAfterDispatchNewListing: T,
@@ -38,8 +38,8 @@ function y(e) {
         [D, A] = i.useState(R),
         L = null == Z ? void 0 : Z.subscription_plans[0],
         k = null != (t = null == Z ? void 0 : Z.published) && t,
-        M = null != (n = null == Z ? void 0 : Z.archived) && n,
-        G = !M && !k && void 0 !== Z,
+        G = null != (n = null == Z ? void 0 : Z.archived) && n,
+        M = !G && !k && void 0 !== Z,
         U = void 0 === Z,
         B = (0, h.mY)(),
         [F] = x._T(P),
@@ -84,13 +84,13 @@ function y(e) {
                             (0, r.jsxs)("div", {
                                 className: O.headerDescriptionContainer,
                                 children: [
-                                    G &&
+                                    M &&
                                         (0, r.jsx)(d.IGR, {
                                             color: (0, u.Lq)(_.Ilk.YELLOW_300),
                                             text: C.intl.string(C.t.vosPk5),
                                             className: O.draftBadge,
                                         }),
-                                    M &&
+                                    G &&
                                         (0, r.jsx)(d.IGR, {
                                             color: (0, u.Lq)(_.Ilk.PRIMARY_500),
                                             text: C.intl.string(C.t.nhbtEh),
@@ -119,7 +119,7 @@ function y(e) {
                                   (0, r.jsx)(d.Avr, {
                                       variant: "secondary",
                                       onClick: () => {
-                                          x.GM(P), R ? null == E || E() : A(!1);
+                                          x.GM(P), R ? null == N || N() : A(!1);
                                       },
                                       text: C.intl.string(C.t["ETE/oK"]),
                                   }),
@@ -159,7 +159,7 @@ function y(e) {
                     groupListingId: I,
                     children: (0, r.jsx)(v.Z, {
                         allSubscriptionListings: y,
-                        priceTiers: N,
+                        priceTiers: E,
                         loading: et,
                         error: null != X ? X : $,
                         handlePublishTier: () => {
@@ -171,7 +171,7 @@ function y(e) {
                                     listingId: Z.id,
                                 });
                         },
-                        onDeleteEditState: E,
+                        onDeleteEditState: N,
                     }),
                 }),
         ],

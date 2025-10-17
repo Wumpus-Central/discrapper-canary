@@ -7,15 +7,15 @@ var a = n(951288),
     r = n(647438),
     i = n(240666),
     l = n(780384),
-    s = n(481060),
-    o = n(626135),
+    o = n(481060),
+    s = n(626135),
     c = n(756148),
     d = n(981631);
 function u(e) {
     let { sitekey: t, action: n, onVerify: i } = e,
         [l, u] = r.useState("uninitialized"),
         m = r.useCallback((e) => {
-            o.default.track(d.rMx.RECAPTCHA_MODAL_EVENT, { recaptcha_event_name: e });
+            s.default.track(d.rMx.RECAPTCHA_MODAL_EVENT, { recaptcha_event_name: e });
         }, []),
         p = r.useCallback(
             (e) => {
@@ -60,14 +60,14 @@ function u(e) {
             },
             [m],
         ),
-        (0, a.jsx)(s.$jN, {})
+        (0, a.jsx)(o.$jN, {})
     );
 }
 let m = (e) => {
     var t,
         n,
         { theme: r } = e,
-        s = (function (e, t) {
+        o = (function (e, t) {
             if (null == e) return {};
             var n,
                 a,
@@ -88,7 +88,7 @@ let m = (e) => {
             }
             return r;
         })(e, ["theme"]);
-    let o = (0, l.wj)(r) ? "dark" : "light";
+    let s = (0, l.wj)(r) ? "dark" : "light";
     return (0, a.jsx)(
         i.Z,
         ((t = (function (e) {
@@ -115,8 +115,8 @@ let m = (e) => {
                     });
             }
             return e;
-        })({ sitekey: d.OL7 }, s)),
-        (n = n = { theme: o }),
+        })({ sitekey: d.OL7 }, o)),
+        (n = n = { theme: s }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
             : (function (e, t) {

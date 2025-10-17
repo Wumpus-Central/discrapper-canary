@@ -21,8 +21,8 @@ var r = n(951288),
     C = n(426563),
     O = n(909746),
     y = n(501801),
-    N = n(981631),
-    E = n(388032),
+    E = n(981631),
+    N = n(388032),
     I = n(404211);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -103,20 +103,20 @@ let w = i.forwardRef((e, t) => {
             onUserContextMenu: L,
             theme: k,
         } = e,
-        M = i.useRef(null),
-        G = (function () {
+        G = i.useRef(null),
+        M = (function () {
             let { changes: e } = l;
             return (
-                (l.actionType !== N.vB8.DELETE ||
-                    l.action === N.rsA.MEMBER_BAN_ADD ||
-                    l.action === N.rsA.MEMBER_KICK ||
-                    l.action === N.rsA.MEMBER_PRUNE) &&
+                (l.actionType !== E.vB8.DELETE ||
+                    l.action === E.rsA.MEMBER_BAN_ADD ||
+                    l.action === E.rsA.MEMBER_KICK ||
+                    l.action === E.rsA.MEMBER_PRUNE) &&
                 null != e &&
                 e.some((e) => !(0, y.xO)(l, e))
             );
         })(),
         U = I.headerDefault;
-    f ? (U = I.headerExpanded) : G && (U = I.headerClickable);
+    f ? (U = I.headerExpanded) : M && (U = I.headerClickable);
     let B = l.timestampStart.calendar(),
         F = l.timestampEnd.calendar();
     n =
@@ -131,7 +131,7 @@ let w = i.forwardRef((e, t) => {
                   variant: "text-sm/normal",
                   children: [B, "\u2014", F],
               });
-    let H = G ? D : N.dG4;
+    let H = M ? D : E.dG4;
     return (0, r.jsx)(s.mh, {
         id: l.id,
         children: (e) =>
@@ -165,7 +165,7 @@ let w = i.forwardRef((e, t) => {
                                         } = l;
                                         if (null != e && null != t)
                                             return (0, r.jsx)(p.Z, {
-                                                targetElementRef: M,
+                                                targetElementRef: G,
                                                 user: e,
                                                 guildId: _,
                                                 newAnalyticsLocations: [g.Z.AVATAR],
@@ -174,17 +174,17 @@ let w = i.forwardRef((e, t) => {
                                                     return (0, r.jsx)(
                                                         d.qEK,
                                                         T(S({}, e), {
-                                                            ref: M,
+                                                            ref: G,
                                                             onClick: (t) => {
                                                                 t.stopPropagation(), e.onClick(t);
                                                             },
                                                             className: I.avatar,
                                                             src:
-                                                                l.action === N.rsA.AUTO_MODERATION_BLOCK_MESSAGE ||
-                                                                l.action === N.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL ||
+                                                                l.action === E.rsA.AUTO_MODERATION_BLOCK_MESSAGE ||
+                                                                l.action === E.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL ||
                                                                 l.action ===
-                                                                    N.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED ||
-                                                                l.action === N.rsA.AUTO_MODERATION_QUARANTINE_USER
+                                                                    E.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED ||
+                                                                l.action === E.rsA.AUTO_MODERATION_QUARANTINE_USER
                                                                     ? (0, C.j)()
                                                                     : null == (t = l.user)
                                                                       ? void 0
@@ -222,7 +222,7 @@ let w = i.forwardRef((e, t) => {
                                                     return null != a
                                                         ? (0, r.jsx)("div", {
                                                               className: I.overflowEllipsis,
-                                                              children: E.intl.format(a, {
+                                                              children: N.intl.format(a, {
                                                                   user: t,
                                                                   target: e,
                                                                   userHook: (e, t) => {
@@ -241,12 +241,12 @@ let w = i.forwardRef((e, t) => {
                                                                           return null !=
                                                                               (n = null == e ? void 0 : e.name)
                                                                               ? n
-                                                                              : E.intl.string(E.t["n+olu7"]);
+                                                                              : N.intl.string(N.t["n+olu7"]);
                                                                       }
-                                                                      return E.intl.string(E.t["30mdIx"]);
+                                                                      return N.intl.string(N.t["30mdIy"]);
                                                                   },
                                                                   targetHook: (e, t) =>
-                                                                      l.targetType === N.KFR.USER &&
+                                                                      l.targetType === E.KFR.USER &&
                                                                       l.target instanceof h.Z
                                                                           ? (0, r.jsx)(
                                                                                 P,
@@ -287,7 +287,7 @@ let w = i.forwardRef((e, t) => {
                                             n,
                                         ],
                                     }),
-                                    G
+                                    M
                                         ? (0, r.jsx)(j.Z, {
                                               className: I.expand,
                                               foreground: I.expandForeground,

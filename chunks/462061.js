@@ -15,9 +15,9 @@ var r = n(951288),
     p = n(414910),
     _ = n(502053),
     m = n(965048),
-    b = n(266910),
+    g = n(266910),
     E = n(352978),
-    g = n(928518),
+    b = n(928518),
     v = n(518950),
     h = n(470956),
     S = n(314897),
@@ -65,15 +65,15 @@ function M(e) {
         } = e,
         U = O.Z.getVideoComponent(),
         W = (0, o.e7)([S.default], () => S.default.getId()),
-        { user: H, streamId: B, speaking: z } = t,
-        q = H.id === W,
-        Y = (0, w.ZP)(t),
+        { user: H, streamId: B, speaking: q } = t,
+        Y = H.id === W,
+        z = (0, w.ZP)(t),
         K = (0, o.e7)([I.Z], () => I.Z.isFocused()),
-        G = (0, o.e7)([g.Z], () => g.Z.getWindowFocused(P.KJ3.CHANNEL_CALL_POPOUT)),
+        G = (0, o.e7)([b.Z], () => b.Z.getWindowFocused(P.KJ3.CHANNEL_CALL_POPOUT)),
         Q = (0, o.e7)([O.Z], () => null != H.id && O.Z.isLocalVideoDisabled(H.id, (0, p.Z)(t.type)), [H.id, t.type]),
         X = (0, o.e7)([y.ZP], () => y.ZP.isGuestOrLurker(n.guild_id, H.id)),
         J = C.ZP.getName(n.getGuildId(), n.id, H) + (X ? " ".concat(A.intl.string(A.t["pFO/Pj"])) : ""),
-        $ = z && (G || K),
+        $ = q && (G || K),
         ee = c < 124 ? N : R,
         { avatarSrc: et, avatarDecorationSrc: en } = (0, v.Z)({
             userId: H.id,
@@ -95,9 +95,9 @@ function M(e) {
     }),
     i.useEffect(() => {
         let { channel: e, selectedParticipant: t, user: n } = eo.current;
-        e.isGuildStageVoice() && !Y && (null == t ? void 0 : t.id) === n.id && u.Z.selectParticipant(e.id, null);
-    }, [Y]),
-    l && !Q && !k && Y && !s && null != U && O.Z.supports(x.AN.VIDEO))
+        e.isGuildStageVoice() && !z && (null == t ? void 0 : t.id) === n.id && u.Z.selectParticipant(e.id, null);
+    }, [z]),
+    l && !Q && !k && z && !s && null != U && O.Z.supports(x.AN.VIDEO))
         ? null != ei && null == el
             ? (0, r.jsx)(j.Z, {
                   avError: ei,
@@ -111,7 +111,7 @@ function M(e) {
                       onResize: Z,
                       wrapperClassName: T.videoWrapper,
                       className: T.content,
-                      mirror: q,
+                      mirror: Y,
                       streamId: B,
                       videoComponent: U,
                       fit: h,
@@ -123,14 +123,14 @@ function M(e) {
               )
         : (0, r.jsx)("div", {
               className: a()(T.content, { [T.blockedAvatar]: D || M }),
-              children: (0, r.jsx)(b.Z, {
+              children: (0, r.jsx)(g.Z, {
                   "aria-label": J,
                   src: et,
                   avatarDecoration: en,
                   backgroundSrc: H.getAvatarURL(n.guild_id, 80),
                   size: ee,
                   pulseSpeakingIndicator: F,
-                  speaking: z,
+                  speaking: q,
                   userId: H.id,
               }),
           });

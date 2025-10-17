@@ -9,20 +9,20 @@ n(647438);
 var r = n(120356),
     i = n.n(r),
     l = n(481060),
-    s = n(295136);
-let o = () => (0, a.jsx)("hr", { className: s.sectionDivider }),
+    o = n(295136);
+let s = () => (0, a.jsx)("hr", { className: o.sectionDivider }),
     c = (e) => {
         let { label: t, children: n, direction: r = "horizontal", className: c } = e;
         return (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, a.jsx)(o, {}),
+                (0, a.jsx)(s, {}),
                 (0, a.jsx)(l.Text, {
                     variant: "text-md/semibold",
-                    className: s.labelSpacing,
+                    className: o.labelSpacing,
                     children: t,
                 }),
                 (0, a.jsx)("div", {
-                    className: i()(s.container, c, { [s.verticalContainer]: "vertical" === r }),
+                    className: i()(o.container, c, { [o.verticalContainer]: "vertical" === r }),
                     children: n,
                 }),
             ],
@@ -31,17 +31,17 @@ let o = () => (0, a.jsx)("hr", { className: s.sectionDivider }),
     d = (e) => {
         let { children: t } = e;
         return (0, a.jsx)("div", {
-            className: s.section,
+            className: o.section,
             children: t,
         });
     },
     u = (e) =>
         (0, a.jsx)("div", {
-            className: s.inputGroup,
+            className: o.inputGroup,
             children: e.children,
         }),
     m = (e) =>
         (0, a.jsx)("fieldset", {
-            className: s.fieldset,
+            className: o.fieldset,
             children: e.children,
         });

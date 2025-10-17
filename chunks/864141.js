@@ -42,8 +42,8 @@ function N(e) {
         }),
         x = (0, o.e7)([f.Z], () => f.Z.getGuild(i.guild_id)),
         M = (0, p.Z)(i),
-        j = (0, d.ZP)(i),
-        { channelStatusEnabled: k } = (0, _.D)({ location: "UserProfileVoiceActivityCard" }),
+        k = (0, d.ZP)(i),
+        { channelStatusEnabled: j } = (0, _.D)({ location: "UserProfileVoiceActivityCard" }),
         U = () => {
             if (t.id !== n.id) return null;
             let e = i.isDM() || i.isGroupDM() ? A.intl.string(A.t["+DsWbW"]) : A.intl.string(A.t.xOVEjY);
@@ -74,7 +74,7 @@ function N(e) {
             className: a()(C.card, N),
             onAction: D,
             onClose: R,
-            "aria-label": "".concat(B, ", ").concat(j),
+            "aria-label": "".concat(B, ", ").concat(k),
             children: [
                 (0, r.jsx)(b.Z, {
                     text: B,
@@ -103,7 +103,7 @@ function N(e) {
                                         onAction: D,
                                         onClose: R,
                                     }),
-                                    k &&
+                                    j &&
                                         i.isGuildVoice() &&
                                         (0, r.jsx)(v.Z, {
                                             voiceChannel: i,

@@ -178,18 +178,18 @@ var l = s.prototype;
             (o = Math.max(o, f)), (n = Math.max(n, h)), (i[l] = Array(f));
             for (var g = 0; g < i[l].length; g++) i[l][g] = 255 & t.buffer[g + r];
             r += f;
-            var c = a.getErrorCorrectPolynomial(h),
-                d = new u(i[l], c.getLength() - 1).mod(c);
-            s[l] = Array(c.getLength() - 1);
+            var d = a.getErrorCorrectPolynomial(h),
+                c = new u(i[l], d.getLength() - 1).mod(d);
+            s[l] = Array(d.getLength() - 1);
             for (var g = 0; g < s[l].length; g++) {
-                var p = g + d.getLength() - s[l].length;
-                s[l][g] = p >= 0 ? d.get(p) : 0;
+                var v = g + c.getLength() - s[l].length;
+                s[l][g] = v >= 0 ? c.get(v) : 0;
             }
         }
-        for (var v = 0, g = 0; g < e.length; g++) v += e[g].totalCount;
-        for (var m = Array(v), C = 0, g = 0; g < o; g++)
-            for (var l = 0; l < e.length; l++) g < i[l].length && (m[C++] = i[l][g]);
-        for (var g = 0; g < n; g++) for (var l = 0; l < e.length; l++) g < s[l].length && (m[C++] = s[l][g]);
-        return m;
+        for (var m = 0, g = 0; g < e.length; g++) m += e[g].totalCount;
+        for (var p = Array(m), C = 0, g = 0; g < o; g++)
+            for (var l = 0; l < e.length; l++) g < i[l].length && (p[C++] = i[l][g]);
+        for (var g = 0; g < n; g++) for (var l = 0; l < e.length; l++) g < s[l].length && (p[C++] = s[l][g]);
+        return p;
     }),
     (t.exports = s);

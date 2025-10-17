@@ -11,8 +11,8 @@ var r = n(647438),
     c = n(680287),
     d = n(470623),
     u = n(957730),
-    h = n(703558),
-    p = n(117530),
+    p = n(703558),
+    h = n(117530),
     f = n(928477),
     g = n(959517),
     m = n(388032);
@@ -39,13 +39,13 @@ function b(e) {
                         help: null != (d = null == c ? void 0 : c.message) ? d : m.intl.string(m.t.zMEjJi),
                     }),
                         "" !== n &&
-                            "" === h.Z.getDraft(e.id, h.d.FirstThreadMessage) &&
-                            l.Z.saveDraft(e.id, n, h.d.FirstThreadMessage),
-                        0 === p.Z.getUploadCount(e.id, h.d.FirstThreadMessage) &&
+                            "" === p.Z.getDraft(e.id, p.d.FirstThreadMessage) &&
+                            l.Z.saveDraft(e.id, n, p.d.FirstThreadMessage),
+                        0 === h.Z.getUploadCount(e.id, p.d.FirstThreadMessage) &&
                             s.Z.setUploads({
                                 channelId: e.id,
                                 uploads: t,
-                                draftType: h.d.FirstThreadMessage,
+                                draftType: p.d.FirstThreadMessage,
                             });
                 },
             });

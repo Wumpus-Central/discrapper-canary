@@ -1,54 +1,54 @@
-n.d(t, { v: () => h }), n(388685), n(35282);
-var a = n(951288),
-    r = n(647438),
-    o = n(593473),
-    i = n(843611),
-    l = n(481060),
-    s = n(489863),
+n.d(t, { v: () => p }), n(388685), n(35282);
+var r = n(951288),
+    a = n(647438),
+    i = n(593473),
+    o = n(843611),
+    s = n(481060),
+    l = n(489863),
     c = n(511540),
     d = n(828878),
     u = n(388032),
     f = n(962514);
-function h(e) {
+function p(e) {
     let { onUserCodeAccepted: t, usePrefilledCode: n } = e,
-        [h, p] = r.useState(() => {
-            let { user_code: e } = o.parse(window.location.search);
+        [p, h] = a.useState(() => {
+            let { user_code: e } = i.parse(window.location.search);
             return n && null != e ? e : "";
         }),
-        x = (0, i.TH)(),
-        m = r.useCallback(() => {
-            (0, s.c$)(x, "user_code_input_unauthorized");
+        x = (0, o.TH)(),
+        m = a.useCallback(() => {
+            (0, l.c$)(x, "user_code_input_unauthorized");
         }, [x]),
-        { manualSubmit: g, error: v, submitting: b } = (0, c.c)(h, t, m);
-    return (0, a.jsxs)("div", {
+        { manualSubmit: g, error: v, submitting: b } = (0, c.c)(p, t, m);
+    return (0, r.jsxs)("div", {
         className: f.content,
         children: [
-            (0, a.jsxs)("div", {
+            (0, r.jsxs)("div", {
                 className: f.innerContent,
                 children: [
-                    (0, a.jsx)(l.Heading, {
+                    (0, r.jsx)(s.Heading, {
                         variant: "heading-xl/extrabold",
                         className: f.text,
                         children: u.intl.string(u.t.KYPNUl),
                     }),
-                    (0, a.jsxs)(l.Kqy, {
+                    (0, r.jsxs)(s.Kqy, {
                         gap: 24,
                         children: [
-                            (0, a.jsx)(l.Text, {
+                            (0, r.jsx)(s.Text, {
                                 variant: "text-md/medium",
                                 color: "header-secondary",
                                 className: f.text,
                                 children: u.intl.string(u.t.xRHk7e),
                             }),
-                            (0, a.jsx)(l.oil, {
+                            (0, r.jsx)(s.oil, {
                                 placeholder: u.intl.formatToPlainString(u.t["0tbz6+"], {
                                     number: d.A.USER_CODE_LENGTH,
                                 }),
                                 maxLength: d.A.USER_CODE_LENGTH,
                                 autoComplete: "off",
                                 autoFocus: !0,
-                                value: h,
-                                onChange: p,
+                                value: p,
+                                onChange: h,
                                 error: v,
                                 fullWidth: !0,
                             }),
@@ -56,13 +56,13 @@ function h(e) {
                     }),
                 ],
             }),
-            (0, a.jsx)(l.Button, {
+            (0, r.jsx)(s.Button, {
                 fullWidth: !0,
                 variant: "primary",
                 text: u.intl.string(u.t["3PatS0"]),
                 onClick: g,
                 loading: b,
-                disabled: h.length !== d.A.USER_CODE_LENGTH,
+                disabled: p.length !== d.A.USER_CODE_LENGTH,
             }),
         ],
     });

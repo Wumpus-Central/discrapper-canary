@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(12498),
     d = n(111028),
     p = n(454585),
-    h = n(626135),
-    f = n(981631),
+    f = n(626135),
+    h = n(981631),
     g = n(388032),
     m = n(158871),
     b = n(430864);
@@ -20,19 +20,19 @@ function _(e) {
             connected: n,
             hovered: l,
             subtitle: _,
-            onClick: y,
-            enableHangStatus: O,
+            onClick: O,
+            enableHangStatus: y,
             showEmptyChannelTopic: v,
         } = e,
         j = (0, a.e7)([u.Z], () => u.Z.getChannelStatus(t)),
         x = null != j && j.length > 0,
         C = (0, c.ZP)(t, !0),
-        E = (!O || !!v) && C,
+        E = (!y || !!v) && C,
         S = null != _ && _.length > 0;
     if (
         (i.useEffect(() => {
             x &&
-                h.default.track(f.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
+                f.default.track(h.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
                     channel_id: t.id,
                     guild_id: t.guild_id,
                 });
@@ -44,7 +44,7 @@ function _(e) {
     return x
         ? (0, r.jsx)(s.P3F, {
               className: I,
-              onClick: E ? y : void 0,
+              onClick: E ? O : void 0,
               children: (0, r.jsx)(s.Text, {
                   variant: "text-xs/medium",
                   className: o()(m.statusText, b.markup),
@@ -54,7 +54,7 @@ function _(e) {
         : n && E && (!S || l)
           ? (0, r.jsxs)(s.P3F, {
                 className: I,
-                onClick: y,
+                onClick: O,
                 children: [
                     (0, r.jsx)(s.Text, {
                         variant: "text-xs/medium",

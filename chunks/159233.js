@@ -3,8 +3,8 @@ var l = n(951288);
 n(647438);
 var r = n(442837),
     i = n(481060),
-    o = n(357156),
-    u = n(924301),
+    u = n(357156),
+    o = n(924301),
     c = n(894017),
     a = n(79874),
     s = n(576749),
@@ -54,8 +54,8 @@ function f(t, e) {
 }
 function b(t) {
     let { guildEventId: e, guild: b, channel: v, recurrenceId: E, isRecurrenceItem: p } = t,
-        { canManageGuildEvent: Z } = (0, o.XJ)(null != v ? v : b),
-        y = (0, r.e7)([u.ZP], () => u.ZP.getGuildScheduledEvent(e)),
+        { canManageGuildEvent: Z } = (0, u.XJ)(null != v ? v : b),
+        y = (0, r.e7)([o.ZP], () => o.ZP.getGuildScheduledEvent(e)),
         O = Z(y),
         h = (0, s.Z)(),
         P = (0, c.Z)(E, null == y ? void 0 : y.id),
@@ -66,8 +66,8 @@ function b(t) {
             (null == E || t) && !p
                 ? (0, i.ZDy)(async () => {
                       let { default: t } = await Promise.all([
-                          n.e("49049"),
                           n.e("36599"),
+                          n.e("49049"),
                           n.e("61"),
                           n.e("48399"),
                       ]).then(n.bind(n, 779250));

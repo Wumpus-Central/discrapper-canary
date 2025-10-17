@@ -35,8 +35,8 @@ var r = n(951288),
     L = n(458725),
     x = n(492435),
     M = n(353926),
-    j = n(506357),
-    k = n(36459),
+    k = n(506357),
+    j = n(36459),
     U = n(236069),
     G = n(305325),
     B = n(281956),
@@ -269,26 +269,26 @@ let eL = i.memo(function () {
             return (0, r.jsx)($.Z, {});
         case em.kVF.GUILD_RAID_NOTIFICATION:
             let { dismissUntil: eM } = I.metadata;
-            return (0, r.jsx)(j.Z, { onDismiss: () => ew(eM) });
+            return (0, r.jsx)(k.Z, { onDismiss: () => ew(eM) });
         case em.kVF.WIN32_DEPRECATED_MESSAGE:
-            let { dismissUntil: ej } = I.metadata;
-            return (0, r.jsxs)(c.qXd, {
-                color: c.DM8.WARNING,
-                children: [
-                    (0, r.jsx)(c.RyX, {
-                        onClick: () => ew(ej),
-                        noticeType: em.kVF.WIN32_DEPRECATED_MESSAGE,
-                    }),
-                    ey.intl.format(ey.t["08KQ1N"], { helpCenterLink: ef.Z.getArticleURL(em.BhN.WIN32_DEPRECATE) }),
-                ],
-            });
-        case em.kVF.WIN7_8_DEPRECATED_MESSAGE:
             let { dismissUntil: ek } = I.metadata;
             return (0, r.jsxs)(c.qXd, {
                 color: c.DM8.WARNING,
                 children: [
                     (0, r.jsx)(c.RyX, {
                         onClick: () => ew(ek),
+                        noticeType: em.kVF.WIN32_DEPRECATED_MESSAGE,
+                    }),
+                    ey.intl.format(ey.t["08KQ1N"], { helpCenterLink: ef.Z.getArticleURL(em.BhN.WIN32_DEPRECATE) }),
+                ],
+            });
+        case em.kVF.WIN7_8_DEPRECATED_MESSAGE:
+            let { dismissUntil: ej } = I.metadata;
+            return (0, r.jsxs)(c.qXd, {
+                color: c.DM8.WARNING,
+                children: [
+                    (0, r.jsx)(c.RyX, {
+                        onClick: () => ew(ej),
                         noticeType: em.kVF.WIN7_8_DEPRECATED_MESSAGE,
                     }),
                     ey.intl.format(ey.t["8Je+dX"], { helpCenterLink: ef.Z.getArticleURL(em.BhN.WIN7_8_DEPRECATE) }),
@@ -1013,15 +1013,15 @@ let eL = i.memo(function () {
                     (0, r.jsx)(c.RyX, {
                         noticeType: em.kVF.AUTO_MODERATION_MENTION_RAID_DETECTION,
                         onClick: () => {
-                            null != p && (0, k.T9)(p), ew(e$);
+                            null != p && (0, j.T9)(p), ew(e$);
                         },
                     }),
                     ey.intl.string(ey.t.B8ruyc),
                     (0, r.jsx)(c.EyT, {
                         onClick: () => {
                             null != p &&
-                                (0, k.UE)(p, e0, () => {
-                                    ew(e$), (0, k.T9)(p);
+                                (0, j.UE)(p, e0, () => {
+                                    ew(e$), (0, j.T9)(p);
                                 });
                         },
                         children: ey.intl.string(ey.t.oX14Eh),

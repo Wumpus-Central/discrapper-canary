@@ -3,13 +3,13 @@ var a = n(951288),
     r = n(647438),
     i = n(481060),
     l = n(881052),
-    s = n(972959),
-    o = n(729345),
+    o = n(972959),
+    s = n(729345),
     c = n(823385),
     d = n(620481),
     u = n(608934),
     m = n(981631);
-let p = (0, s.H)(() => ({
+let p = (0, o.H)(() => ({
     isRecording: !1,
     isUploading: !1,
     isSuccess: !1,
@@ -19,7 +19,7 @@ function h() {
     let e = p.useField("isRecording"),
         t = p.useField("isUploading"),
         n = p.useField("isSuccess"),
-        s = p.useField("errorMessage"),
+        o = p.useField("errorMessage"),
         h = r.useRef([]),
         x = r.useRef(""),
         f = r.useCallback(() => {
@@ -29,7 +29,7 @@ function h() {
     r.useEffect(() => {
         if (e) return c.Z.addChangeListener(f), () => c.Z.removeChangeListener(f);
     }, [f, e]);
-    let b = r.useCallback(async () => {
+    let g = r.useCallback(async () => {
         let { isUploading: e } = p.getState();
         if (!e)
             try {
@@ -39,7 +39,7 @@ function h() {
                     errorMessage: null,
                     isSuccess: !1,
                 }),
-                    await (0, o.E)(m.GU0.WEB_APP),
+                    await (0, s.E)(m.GU0.WEB_APP),
                     p.setState({
                         isSuccess: !0,
                         errorMessage: null,
@@ -70,8 +70,8 @@ function h() {
                     (0, a.jsx)(u.a, {
                         isUploading: t,
                         isSuccess: n,
-                        errorMessage: s,
-                        onClick: b,
+                        errorMessage: o,
+                        onClick: g,
                         title: "Upload Session Logs",
                     }),
                 ],

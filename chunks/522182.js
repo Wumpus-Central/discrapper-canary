@@ -2,8 +2,8 @@ t.d(n, { Z: () => m });
 var l = t(951288);
 t(647438);
 var i = t(442837),
-    r = t(481060),
-    o = t(906732),
+    o = t(481060),
+    r = t(906732),
     s = t(335131),
     a = t(592183),
     c = t(224724),
@@ -20,19 +20,19 @@ function m(e) {
                     var t,
                         l,
                         i = {},
-                        r = Object.keys(e);
-                    for (l = 0; l < r.length; l++) (t = r[l]), n.indexOf(t) >= 0 || (i[t] = e[t]);
+                        o = Object.keys(e);
+                    for (l = 0; l < o.length; l++) (t = o[l]), n.indexOf(t) >= 0 || (i[t] = e[t]);
                     return i;
                 })(e, n);
             if (Object.getOwnPropertySymbols) {
-                var r = Object.getOwnPropertySymbols(e);
-                for (l = 0; l < r.length; l++)
-                    (t = r[l]),
+                var o = Object.getOwnPropertySymbols(e);
+                for (l = 0; l < o.length; l++)
+                    (t = o[l]),
                         !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (i[t] = e[t]);
             }
             return i;
         })(e, ["onClose"]);
-    let { analyticsLocations: m, newestAnalyticsLocation: p } = (0, o.ZP)(),
+    let { analyticsLocations: m, newestAnalyticsLocation: p } = (0, r.ZP)(),
         f = (0, i.e7)([c.Z], () => c.Z.hasSaveablePendingChanges());
     return (0, l.jsx)(
         d.pt,
@@ -63,7 +63,7 @@ function m(e) {
         })(
             {
                 action: "VISIT_SHOP",
-                icon: r.EOn,
+                icon: o.EOn,
                 tooltipText: u.intl.string(u.t.b2d0Nz),
                 onClick: () => {
                     if (f) return void a.Z.notifyPendingWidgets();

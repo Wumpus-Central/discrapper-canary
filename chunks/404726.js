@@ -104,14 +104,14 @@ function d(e) {
                 }),
                 x.setupRiveListeners());
         }, [x, _, w, b]);
-    let j = i.useRef(0);
+    let k = i.useRef(0);
     i.useEffect(() => {
         if (null == x) return;
         x.play();
         let e = (t) => {
             null != t.data &&
                 "number" == typeof t.data &&
-                ((j.current = t.data),
+                ((k.current = t.data),
                 t.data > 0 &&
                     ("halt" === y && N.reducedMotion.enabled && x.isPlaying && x.pause(),
                     x.off(o.EventType.Advance, e)));
@@ -123,16 +123,16 @@ function d(e) {
             }
         );
     }, [x, N.reducedMotion.enabled, y]);
-    let k = i.useRef(!1);
+    let j = i.useRef(!1);
     return (
         i.useEffect(() => {
             if (null != x)
                 return (
-                    !P && k.current && x.isPlaying && j.current > 0
+                    !P && j.current && x.isPlaying && k.current > 0
                         ? x.pause()
-                        : P && !x.isPlaying && k.current && x.play(),
+                        : P && !x.isPlaying && j.current && x.play(),
                     () => {
-                        null != x && P && (k.current = null != x.frameRequestId);
+                        null != x && P && (j.current = null != x.frameRequestId);
                     }
                 );
         }, [x, P]),

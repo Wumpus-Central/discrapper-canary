@@ -30,11 +30,11 @@ function y(e) {
         {
             entityType: S,
             channelId: I,
-            description: T,
-            name: Z,
+            description: Z,
+            name: T,
             image: w,
-            scheduledEndTime: D,
-            scheduledStartTime: k,
+            scheduledEndTime: k,
+            scheduledStartTime: D,
             recurrenceRule: R,
         } = t,
         A = (0, u._d)(I),
@@ -42,9 +42,9 @@ function y(e) {
         G = null != t && (0, g.xt)(t),
         U = l.useMemo(() => {
             let e = (0, x.v1)(t);
-            return null != e ? e : { startDate: a()(k) };
-        }, [t, k]),
-        [L, M] = l.useState(() => (0, x.zi)(a()(k), R)),
+            return null != e ? e : { startDate: a()(D) };
+        }, [t, D]),
+        [M, L] = l.useState(() => (0, x.zi)(a()(D), R)),
         z = l.useRef(null);
     l.useEffect(() => {
         if (P) {
@@ -52,11 +52,11 @@ function y(e) {
             null == (e = z.current) || e.focus();
         }
     }, [P]);
-    let V = (e) => {
+    let F = (e) => {
             C({ image: e });
         },
-        F = (e, t) => {
-            if (null == e || void 0 === t) return void V(null);
+        V = (e, t) => {
+            if (null == e || void 0 === t) return void F(null);
             (0, s.ZDy)(async () => {
                 let { default: l } = await Promise.all([n.e("91689"), n.e("59732"), n.e("21046")]).then(
                     n.bind(n, 712451),
@@ -94,7 +94,7 @@ function y(e) {
                                 file: t,
                                 onCrop: (e) => {
                                     let { imageUri: t } = e;
-                                    return V(t);
+                                    return F(t);
                                 },
                                 uploadType: j.pC.SCHEDULED_EVENT_IMAGE,
                             },
@@ -103,9 +103,9 @@ function y(e) {
                     );
             });
         },
-        W = null == E ? void 0 : E.getFirstFieldErrorMessage("name"),
-        X = null == E ? void 0 : E.getFirstFieldErrorMessage("description"),
-        B = null == W && null == X ? (null == E ? void 0 : E.getAnyErrorMessage()) : null;
+        B = null == E ? void 0 : E.getFirstFieldErrorMessage("name"),
+        W = null == E ? void 0 : E.getFirstFieldErrorMessage("description"),
+        X = null == B && null == W ? (null == E ? void 0 : E.getAnyErrorMessage()) : null;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
@@ -120,13 +120,13 @@ function y(e) {
                         (0, r.jsx)(s.oil, {
                             label: f.intl.string(f.t["0HbEQ0"]),
                             required: !0,
-                            error: null != W ? W : B,
+                            error: null != B ? B : X,
                             onChange: (e) => {
                                 C({ name: e });
                             },
                             placeholder: f.intl.string(f.t["6/yarq"]),
                             maxLength: p.p,
-                            value: Z,
+                            value: T,
                             autoComplete: "off",
                             inputRef: z,
                         }),
@@ -139,15 +139,15 @@ function y(e) {
                                         scheduledEndTime: null == n ? void 0 : n.toISOString(),
                                     };
                                 null != t &&
-                                    null != D &&
+                                    null != k &&
                                     (null == n ? void 0 : n.isBefore(t)) &&
                                     (r.scheduledEndTime = t.add(1, "hour").toISOString()),
-                                    null != t && null != L && (r.recurrenceRule = (0, x.mF)(L, t)),
+                                    null != t && null != M && (r.recurrenceRule = (0, x.mF)(M, t)),
                                     C(r);
                             },
                             onRecurrenceChange: (e) => {
                                 let t = U.startDate;
-                                null != t && (C({ recurrenceRule: (0, x.mF)(e, t) }), M(e));
+                                null != t && (C({ recurrenceRule: (0, x.mF)(e, t) }), L(e));
                             },
                             schedule: U,
                             recurrenceRule: R,
@@ -159,9 +159,9 @@ function y(e) {
                         (0, r.jsx)(O, { error: N }),
                         (0, r.jsx)(s.Kx8, {
                             label: f.intl.string(f.t["+gRCCw"]),
-                            error: X,
+                            error: W,
                             placeholder: f.intl.string(f.t["kWO/Ex"]),
-                            value: T,
+                            value: Z,
                             onChange: (e) => {
                                 C({ description: e });
                             },
@@ -186,7 +186,7 @@ function y(e) {
                                                           return null != (n = (0, h.Z)((0, m.Gb)(t, y, i))) ? n : null;
                                                       }
                                                   },
-                                                  onChange: F,
+                                                  onChange: V,
                                                   hint: f.intl.string(f.t.G44Xmp),
                                                   showRemoveButton: !1,
                                                   enabled: !0,
@@ -195,14 +195,14 @@ function y(e) {
                                                   variant: "primary",
                                                   size: "sm",
                                                   text: f.intl.string(f.t.gmUvOz),
-                                                  onClick: () => V(null),
+                                                  onClick: () => F(null),
                                               }),
                                           ],
                                       })
                                     : (0, r.jsx)(c.Z, {
                                           size: "sm",
                                           variant: "primary",
-                                          onChange: F,
+                                          onChange: V,
                                           text: f.intl.string(f.t.vKCGYW),
                                       }),
                         }),

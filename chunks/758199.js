@@ -96,10 +96,10 @@ function O(e) {
         L = null != h,
         x = null != E && !1 === P,
         M = L || x,
-        j = 0 === O ? g.bannerAspectRatioBot : g.bannerAspectRatioActivity,
-        k = i.useRef(null),
+        k = 0 === O ? g.bannerAspectRatioBot : g.bannerAspectRatioActivity,
+        j = i.useRef(null),
         U = i.useCallback(() => {
-            let e = k.current;
+            let e = j.current;
             null != e && ("hidden" === getComputedStyle(e).visibility ? e.pause() : e.play());
         }, []),
         G = i.useMemo(() => !!x && new URL(E).pathname.endsWith(".gif"), [x, E]),
@@ -122,7 +122,7 @@ function O(e) {
             M &&
                 (0, r.jsxs)(y, {
                     onClick: Z,
-                    className: o()(g.bannerWrapper, j, { [g.showVideoOnFocus]: x }),
+                    className: o()(g.bannerWrapper, k, { [g.showVideoOnFocus]: x }),
                     children: [
                         x &&
                             (G
@@ -131,7 +131,7 @@ function O(e) {
                                       style: { backgroundImage: "url(".concat(E, ")") },
                                   })
                                 : (0, r.jsx)(s.Z, {
-                                      ref: k,
+                                      ref: j,
                                       src: E,
                                       mediaLayoutType: m.hV.MOSAIC,
                                       loop: !0,

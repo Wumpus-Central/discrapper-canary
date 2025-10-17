@@ -2,19 +2,19 @@ A.d(t, { Z: () => C }), A(388685);
 var n = A(951288),
     r = A(647438),
     a = A(120356),
-    l = A.n(a),
-    i = A(772848),
+    i = A.n(a),
+    l = A(772848),
     o = A(481060),
     s = A(752305),
     d = A(893718),
-    c = A(131704),
-    u = A(703558),
+    u = A(131704),
+    c = A(703558),
     g = A(981631),
     f = A(388032),
     p = A(231319),
     m = A(8542);
-let h = (0, i.Z)(),
-    v = (0, c.createChannelRecord)({
+let h = (0, l.Z)(),
+    v = (0, u.createChannelRecord)({
         id: "1",
         type: g.d4z.DM,
     });
@@ -30,7 +30,7 @@ function b(e) {
     var t;
     let { hasError: A, maxLength: r, text: a } = e;
     return (0, n.jsxs)("div", {
-        className: l()(m.maxLength, { [m.errorOverflow]: A }),
+        className: i()(m.maxLength, { [m.errorOverflow]: A }),
         "aria-hidden": "true",
         children: [null != (t = null == a ? void 0 : a.length) ? t : 0, " ", null != r && "/ ".concat(r)],
     });
@@ -40,23 +40,23 @@ function C(e) {
     let {
             "aria-labelledby": A,
             className: a,
-            id: i,
-            autoFocus: c,
+            id: l,
+            autoFocus: u,
             maxLength: g,
             onChange: m,
             onSubmit: C,
-            showCharacterCount: j = !1,
-            placeholder: U,
-            required: x,
-            value: V,
+            showCharacterCount: U = !1,
+            placeholder: j,
+            required: V,
+            value: x,
             enableThemedBackground: O = !1,
             parentModalKey: P,
             label: F,
             errorMessage: y,
         } = e,
         I = (0, o.Gc0)(),
-        [N, K] = r.useState(() => (0, s.JM)(V)),
-        T = r.useRef(!0 === c),
+        [N, K] = r.useState(() => (0, s.JM)(x)),
+        T = r.useRef(!0 === u),
         Z = null != A ? A : null == I ? void 0 : I.titleId,
         W = null != (t = null == I ? void 0 : I.errorId) ? t : h;
     function X(e, t, A) {
@@ -69,8 +69,8 @@ function C(e) {
                 alwaysUseLayer: !0,
                 small: !0,
             },
-            disableAutoFocus: !0 !== c,
-            drafts: { type: u.d.ChannelMessage },
+            disableAutoFocus: !0 !== u,
+            drafts: { type: c.d.ChannelMessage },
             emojis: { button: !0 },
             permissions: { requireSendMessages: !1 },
             submit: {
@@ -78,29 +78,29 @@ function C(e) {
                 disableEnterToSubmit: !0,
             },
         }),
-        [c],
+        [u],
     );
     return (0, n.jsx)(o.gNt, {
         label: F,
         errorMessage: y,
-        id: i,
-        required: x,
+        id: l,
+        required: V,
         children: (e) => {
             var t, A;
             return (0, n.jsxs)(d.ZP, {
-                id: null != (t = null == e ? void 0 : e.controlId) ? t : i,
+                id: null != (t = null == e ? void 0 : e.controlId) ? t : l,
                 "aria-describedby": null != (A = null == e ? void 0 : e.describedById) ? A : W,
                 "aria-labelledby": Z,
                 "aria-errormessage": null == e ? void 0 : e.errorMessageId,
                 "aria-invalid": (null == e ? void 0 : e.errorMessageId) != null,
                 className: p.textArea,
-                innerClassName: l()(a, p.textAreaInner),
+                innerClassName: i()(a, p.textAreaInner),
                 maxCharacterCount: g,
                 onChange: X,
-                placeholder: U,
-                required: x,
+                placeholder: j,
+                required: V,
                 channel: v,
-                textValue: V,
+                textValue: x,
                 richValue: N,
                 type: Q,
                 onBlur: () => {
@@ -115,10 +115,10 @@ function C(e) {
                 parentModalKey: P,
                 emojiPickerCloseOnModalOuterClick: !0,
                 children: [
-                    !0 === j &&
+                    !0 === U &&
                         (0, n.jsx)(b, {
-                            hasError: null != I.error || (null != g && V.length > g),
-                            text: V,
+                            hasError: null != I.error || (null != g && x.length > g),
+                            text: x,
                             maxLength: g,
                         }),
                     null != g &&

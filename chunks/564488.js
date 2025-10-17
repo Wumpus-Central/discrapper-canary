@@ -29,7 +29,7 @@ let g = i.memo(function (e) {
     i.useEffect(() => {
         g && h(t, !0);
     }, [g, t, h]);
-    let N = i.useCallback(() => {
+    let E = i.useCallback(() => {
         j
             ? m || h(null)
             : m
@@ -50,7 +50,7 @@ let g = i.memo(function (e) {
         }),
         isStuck: j && m,
         isExpanded: j,
-        onExpand: N,
+        onExpand: E,
         children:
             j &&
             (0, r.jsx)(c.Z, {

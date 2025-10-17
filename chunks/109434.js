@@ -12,8 +12,8 @@ var r = n(512722),
     c = n(731965),
     d = n(442837),
     u = n(592125),
-    h = n(559241);
-function p(e, t, n) {
+    p = n(559241);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function f(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -52,17 +52,17 @@ let g = new Set(),
     };
 class b {
     constructor(e, t) {
-        p(this, "set", void 0),
-            p(this, "get", void 0),
-            p(this, "channelStates", void 0),
-            p(this, "setChannelState", void 0),
-            p(this, "getChannelState", void 0),
-            p(this, "toggleTagFilter", void 0),
-            p(this, "setTagFilter", void 0),
-            p(this, "setSortOrder", void 0),
-            p(this, "setLayoutType", void 0),
-            p(this, "setTagSetting", void 0),
-            p(this, "setScrollPosition", void 0),
+        h(this, "set", void 0),
+            h(this, "get", void 0),
+            h(this, "channelStates", void 0),
+            h(this, "setChannelState", void 0),
+            h(this, "getChannelState", void 0),
+            h(this, "toggleTagFilter", void 0),
+            h(this, "setTagFilter", void 0),
+            h(this, "setSortOrder", void 0),
+            h(this, "setLayoutType", void 0),
+            h(this, "setTagSetting", void 0),
+            h(this, "setScrollPosition", void 0),
             (this.set = e),
             (this.get = t),
             (this.channelStates = {}),
@@ -94,16 +94,16 @@ class b {
                 n.has(t) ? n.delete(t) : n.add(t), this.setTagFilter(e, n);
             }),
             (this.setTagFilter = (e, t) => {
-                this.setChannelState(e, { tagFilter: t }), h.Z.setFilterTagIds(t);
+                this.setChannelState(e, { tagFilter: t }), p.Z.setFilterTagIds(t);
             }),
             (this.setSortOrder = (e, t) => {
-                this.setChannelState(e, { sortOrder: t }), h.Z.setSortOrder(t);
+                this.setChannelState(e, { sortOrder: t }), p.Z.setSortOrder(t);
             }),
             (this.setLayoutType = (e, t) => {
-                this.setChannelState(e, { layoutType: t }), h.Z.setLayout(t);
+                this.setChannelState(e, { layoutType: t }), p.Z.setLayout(t);
             }),
             (this.setTagSetting = (e, t) => {
-                this.setChannelState(e, { tagSetting: t }), h.Z.setTagSetting(t);
+                this.setChannelState(e, { tagSetting: t }), p.Z.setTagSetting(t);
             }),
             (this.setScrollPosition = (e, t) => {
                 this.setChannelState(e, { scrollPosition: t });

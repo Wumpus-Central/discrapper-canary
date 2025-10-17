@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(539854);
+n.d(t, { Z: () => k }), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -59,7 +59,7 @@ function M(e) {
     }
     return e;
 }
-function j(e) {
+function k(e) {
     let { toggleShowMenu: t, showMenu: n, className: c, channelId: u, imageUrl: d, mimeType: f } = e,
         _ = (0, a.e7)([T.Z], () => T.Z.getChannel(u)),
         { Component: p, events: h, play: m } = (0, o.w)(),
@@ -72,7 +72,7 @@ function j(e) {
               targetElementRef: b,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
-                  return (0, r.jsx)(k, {
+                  return (0, r.jsx)(j, {
                       onClose: t,
                       channel: _,
                       imageUrl: d,
@@ -110,31 +110,31 @@ function j(e) {
               },
           }));
 }
-function k(e) {
+function j(e) {
     let { onSelect: t, onClose: n, channel: o, imageUrl: s, mimeType: T } = e,
         x = (0, a.e7)([A.Z], () => A.Z.getGuild(o.guild_id)),
-        { fetchState: j, imageRecCommandContexts: k } = (0, R.h)({ channelId: o.id }),
-        U = j === P.M.FETCHING,
+        { fetchState: k, imageRecCommandContexts: j } = (0, R.h)({ channelId: o.id }),
+        U = k === P.M.FETCHING,
         G = (0, b.g)(o),
         B = (0, p.PL)(!0, !0),
         Z = (0, p.LD)(o.guild_id, !0);
     i.useEffect(() => {
-        (j === P.M.ERROR || (j === P.M.FETCHED && 0 === k.length)) && n();
-    }, [j, k.length, n]),
+        (k === P.M.ERROR || (k === P.M.FETCHED && 0 === j.length)) && n();
+    }, [k, j.length, n]),
         i.useEffect(() => {
             var e, t;
-            if (U || 0 === k.length) return;
+            if (U || 0 === j.length) return;
             let n = [];
-            k.forEach((e) => {
+            j.forEach((e) => {
                 n.push(Number(e.command.id)), null != e.overrideSendCommand && n.push(Number(e.overrideSendCommand.id));
             }),
                 C.default.track(w.rMx.APP_IMAGE_RECS_MENU_VIEWED, {
                     guild_id: null != (e = null == o ? void 0 : o.guild_id) ? e : "",
                     channel_id: null != (t = null == o ? void 0 : o.id) ? t : "",
-                    application_ids: [...k.map((e) => Number(e.command.applicationId))],
+                    application_ids: [...j.map((e) => Number(e.command.applicationId))],
                     command_ids: n,
                 });
-        }, [k, o, U]);
+        }, [j, o, U]);
     let F = i.useCallback(
             async (e) => {
                 let t = await fetch(s),
@@ -273,7 +273,7 @@ function k(e) {
                       "menu-image-recs-placeholder",
                   )
                 : (0, r.jsx)(r.Fragment, {
-                      children: k
+                      children: j
                           .filter((e) => null != e.imageOption)
                           .map((e) => {
                               let t = e.overrideSendCommand,

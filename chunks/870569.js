@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     o = n.n(l),
-    a = n(755721),
-    s = n(481060),
+    s = n(755721),
+    a = n(481060),
     c = n(686546),
     u = n(861526);
 let d = i.forwardRef(function (e, t) {
@@ -23,9 +23,9 @@ let d = i.forwardRef(function (e, t) {
             tooltipClassName: g,
             onMouseEnter: h,
             onMouseLeave: j,
-            "aria-label": N,
-            "aria-checked": S,
-            role: x,
+            "aria-label": S,
+            "aria-checked": x,
+            role: N,
             tooltipColor: E,
             tooltipForceOpen: P,
             tooltipContentClassName: C,
@@ -43,11 +43,11 @@ let d = i.forwardRef(function (e, t) {
                       color: "currentColor",
                   })
                 : f;
-    return (0, r.jsx)(s.aML, {
+    return (0, r.jsx)(a.aML, {
         "data-migration-pending": !0,
         tooltipClassName: g,
         text: n,
-        "aria-label": N,
+        "aria-label": S,
         color: E,
         tooltipContentClassName: C,
         forceOpen: P,
@@ -55,9 +55,9 @@ let d = i.forwardRef(function (e, t) {
         positionKeyStemOverride: w,
         children: (e) => {
             var n,
-                s,
+                a,
                 { onClick: f, onMouseEnter: m, onMouseLeave: g } = e,
-                N = (function (e, t) {
+                S = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
@@ -81,7 +81,7 @@ let d = i.forwardRef(function (e, t) {
                     return i;
                 })(e, ["onClick", "onMouseEnter", "onMouseLeave"]);
             return (0, r.jsxs)(
-                a.zx,
+                s.zx,
                 ((n = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -106,12 +106,12 @@ let d = i.forwardRef(function (e, t) {
                             });
                     }
                     return e;
-                })({}, N)),
-                (s = s =
+                })({}, S)),
+                (a = a =
                     {
                         buttonRef: t,
-                        look: a.zx.Looks.BLANK,
-                        size: a.zx.Sizes.NONE,
+                        look: s.zx.Looks.BLANK,
+                        size: s.zx.Sizes.NONE,
                         disabled: p,
                         innerClassName: b,
                         wrapperClassName: o()(u.button, y),
@@ -133,8 +133,8 @@ let d = i.forwardRef(function (e, t) {
                             null == g || g(), null == j || j();
                         },
                         onContextMenu: l,
-                        role: x,
-                        "aria-checked": S,
+                        role: N,
+                        "aria-checked": x,
                         focusProps: {
                             offset: {
                                 left: -1,
@@ -156,7 +156,7 @@ let d = i.forwardRef(function (e, t) {
                         ],
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(s))
+                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -164,8 +164,8 @@ let d = i.forwardRef(function (e, t) {
                               n.push.apply(n, r);
                           }
                           return n;
-                      })(Object(s)).forEach(function (e) {
-                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(s, e));
+                      })(Object(a)).forEach(function (e) {
+                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
                       }),
                 n),
             );

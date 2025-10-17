@@ -3,8 +3,8 @@ var a,
     r = n(951288),
     i = n(647438),
     l = n(120356),
-    s = n.n(l),
-    o = n(873546),
+    o = n.n(l),
+    s = n(873546),
     c = n(481060),
     d = n(599857),
     u = n(63063),
@@ -25,8 +25,8 @@ function f(e, t, n) {
         e
     );
 }
-let b = u.Z.getArticleURL(p.BhN.VERIFICATION_FAQ);
-class g extends (a = i.PureComponent) {
+let g = u.Z.getArticleURL(p.BhN.VERIFICATION_FAQ);
+class b extends (a = i.PureComponent) {
     renderFields() {
         let { types: e, captchaKey: t, theme: n, onCaptchaVerify: a } = this.props;
         return (0, r.jsx)(r.Fragment, {
@@ -62,7 +62,7 @@ class g extends (a = i.PureComponent) {
                 (0, r.jsxs)(c.Kqy, {
                     gap: 16,
                     fullWidth: !1,
-                    className: s()(x.container, { [x.isMobile]: o.tq }),
+                    className: o()(x.container, { [x.isMobile]: s.tq }),
                     align: "center",
                     direction: "vertical",
                     justify: "center",
@@ -87,7 +87,7 @@ class g extends (a = i.PureComponent) {
                                         }),
                                         (0, r.jsx)(c.Text, {
                                             variant: "text-md/normal",
-                                            children: h.intl.format(h.t["0rqMV1"], { helpCenterURL: b }),
+                                            children: h.intl.format(h.t["0rqMV1"], { helpCenterURL: g }),
                                         }),
                                     ],
                                 }),
@@ -125,7 +125,7 @@ class g extends (a = i.PureComponent) {
                                     children: h.intl.format(h.t.WL51ZW, { supportURL: u.Z.getSubmitRequestURL() }),
                                 }),
                                 (0, r.jsx)("div", {
-                                    className: s()(x.footer, x.footerBullet),
+                                    className: o()(x.footer, x.footerBullet),
                                     children: "\u2022",
                                 }),
                                 (0, r.jsx)(c.Text, {
@@ -148,9 +148,9 @@ class g extends (a = i.PureComponent) {
             });
     }
 }
-f(g, "defaultProps", {
+f(b, "defaultProps", {
     types: [p.PUi.CAPTCHA],
     onCaptchaVerify: p.dG4,
     onLogout: p.dG4,
 });
-let v = g;
+let v = b;

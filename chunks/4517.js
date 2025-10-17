@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(599273),
+    s = n(258536),
     l = n(442837),
     c = n(846519),
     u = n(481060),
@@ -179,7 +179,7 @@ let M = i.forwardRef(function (e, t) {
             ],
         });
     }),
-    j = i.forwardRef(function (e, t) {
+    k = i.forwardRef(function (e, t) {
         var n, a;
         let {
                 emoji: _,
@@ -198,8 +198,8 @@ let M = i.forwardRef(function (e, t) {
             D = S.hT + w,
             L = S.YF + w,
             M = i.useRef(null),
-            j = i.useRef(null),
             k = i.useRef(null),
+            j = i.useRef(null),
             U = i.useRef(D),
             G = i.useRef(L),
             B = null != _ && null == p,
@@ -221,9 +221,9 @@ let M = i.forwardRef(function (e, t) {
             },
         }));
         i.useLayoutEffect(() => {
-            if ((F(!0), null == j.current || null == k.current || !K)) return;
-            let e = j.current.getBoundingClientRect().height,
-                t = k.current.getBoundingClientRect().height;
+            if ((F(!0), null == k.current || null == j.current || !K)) return;
+            let e = k.current.getBoundingClientRect().height,
+                t = j.current.getBoundingClientRect().height;
             W(t > e),
                 (U.current = e),
                 (G.current = t),
@@ -276,12 +276,12 @@ let M = i.forwardRef(function (e, t) {
                       }),
             en = null == ee || "" === p ? et : ee,
             er = (0, r.jsxs)("div", {
-                ref: j,
+                ref: k,
                 className: C.content,
                 children: [$, en],
             }),
             ei = (0, r.jsxs)("div", {
-                ref: k,
+                ref: j,
                 className: o()(C.content, C.unclamped),
                 children: [$, en],
             }),
@@ -363,12 +363,12 @@ let M = i.forwardRef(function (e, t) {
                   ],
               });
     }),
-    k = i.forwardRef(function (e, t) {
+    j = i.forwardRef(function (e, t) {
         var { emoji: n, text: a, onCloseProfile: o } = e,
             s = D(e, ["emoji", "text", "onCloseProfile"]);
         let [l, c] = i.useState(!1);
         return (0, r.jsx)(
-            j,
+            k,
             w(R({}, s), {
                 ref: t,
                 emoji: n,
@@ -427,7 +427,7 @@ function U(e) {
         onClose: () => N(!1),
         children: () =>
             (0, r.jsx)(
-                j,
+                k,
                 w(R({}, c), {
                     ref: E,
                     emoji: t,
@@ -479,7 +479,7 @@ let G = i.forwardRef(function (e, t) {
         return (0, r.jsx)(p.Gt, {
             value: b,
             children: (0, r.jsx)(
-                j,
+                k,
                 R(
                     {
                         emoji: e,
@@ -530,7 +530,7 @@ let G = i.forwardRef(function (e, t) {
                 ? (0, r.jsx)(p.Gt, {
                       value: b,
                       children: (0, r.jsx)(
-                          k,
+                          j,
                           R(
                               {
                                   emoji: I,
@@ -545,7 +545,7 @@ let G = i.forwardRef(function (e, t) {
                 : (0, r.jsx)(p.Gt, {
                       value: b,
                       children: (0, r.jsx)(
-                          j,
+                          k,
                           R(
                               {
                                   emoji: I,

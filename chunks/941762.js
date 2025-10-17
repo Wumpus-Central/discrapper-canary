@@ -2,9 +2,9 @@ t.d(n, { Z: () => _ });
 var r = t(951288),
     a = t(647438),
     i = t(481060),
-    s = t(239091),
-    o = t(100527),
-    l = t(49012),
+    l = t(239091),
+    s = t(100527),
+    o = t(49012),
     c = t(639777),
     d = t(735276),
     u = t(619733),
@@ -34,7 +34,7 @@ function _(e) {
                   return (0, r.jsx)(i.v2r, {
                       navId: "game_server-popout-context-menu",
                       onClose: () => {
-                          (0, s.Zy)(), a();
+                          (0, l.Zy)(), a();
                       },
                       "aria-label": g.intl.string(m.default["yb+orq"]),
                       onSelect: void 0,
@@ -46,7 +46,7 @@ function _(e) {
                                       icon: i.kBi,
                                       label: g.intl.string(m.default.bBkeMj),
                                       action: () => {
-                                          (0, l.q)({ href: u.uz[t.providerType] });
+                                          (0, o.q)({ href: u.uz[t.providerType] });
                                       },
                                   }),
                               (0, r.jsx)(i.sNh, {
@@ -58,7 +58,7 @@ function _(e) {
                                           guildId: n,
                                           stepConfig: x,
                                           initialGameServerInstance: t,
-                                          analyticsLocation: o.Z.GAME_SERVER_OVERVIEW,
+                                          analyticsLocation: s.Z.GAME_SERVER_OVERVIEW,
                                       });
                                   },
                               }),

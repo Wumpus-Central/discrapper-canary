@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(100527),
     d = n(906732),
     u = n(699516),
-    h = n(5192),
-    p = n(785717),
+    p = n(5192),
+    h = n(785717),
     f = n(221292),
     g = n(687158),
     m = n(316027),
@@ -50,17 +50,17 @@ function I(e) {
         S = (0, g.ZP)(t.id),
         E = (0, o.ZP)(),
         Z = (0, a.e7)([u.Z], () => u.Z.isBlocked(t.id)),
-        { analyticsLocations: T } = (0, d.ZP)(Z ? c.Z.BLOCKED_PROFILE_PANEL : c.Z.IGNORED_PROFILE_PANEL),
-        P = (0, p.ZB)({
+        { analyticsLocations: P } = (0, d.ZP)(Z ? c.Z.BLOCKED_PROFILE_PANEL : c.Z.IGNORED_PROFILE_PANEL),
+        T = (0, h.ZB)({
             layout: "SIDEBAR",
             userId: t.id,
             channelId: n.id,
         }),
         N = i.useRef(null);
     return (0, r.jsx)(d.Gt, {
-        value: T,
-        children: (0, r.jsx)(p.Mt, {
-            value: P,
+        value: P,
+        children: (0, r.jsx)(h.Mt, {
+            value: T,
             fetchStartedAt: null == S ? void 0 : S.fetchStartedAt,
             fetchEndedAt: null == S ? void 0 : S.fetchEndedAt,
             isLoaded: null == S ? void 0 : S.isLoaded,
@@ -94,7 +94,7 @@ function I(e) {
                                             (0, r.jsx)(s.Text, {
                                                 variant: "text-sm/medium",
                                                 children: O.intl.format(Z ? O.t["8F+WNz"] : O.t["/cZp5u"], {
-                                                    username: h.ZP.getName(n.guild_id, n.id, t),
+                                                    username: p.ZP.getName(n.guild_id, n.id, t),
                                                 }),
                                             }),
                                         ],
@@ -112,9 +112,9 @@ function I(e) {
                                                                     action: Z
                                                                         ? "VIEW_BLOCKED_PROFILE"
                                                                         : "VIEW_IGNORED_PROFILE",
-                                                                    analyticsLocations: T,
+                                                                    analyticsLocations: P,
                                                                 },
-                                                                P,
+                                                                T,
                                                             ),
                                                         );
                                                 },
@@ -127,9 +127,9 @@ function I(e) {
                                                             C(
                                                                 {
                                                                     action: "DONT_SHOW_AGAIN_IGNORED_PROFILE",
-                                                                    analyticsLocations: T,
+                                                                    analyticsLocations: P,
                                                                 },
-                                                                P,
+                                                                T,
                                                             ),
                                                         );
                                                 },

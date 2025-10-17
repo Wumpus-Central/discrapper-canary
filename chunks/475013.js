@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => E,
-    _: () => N,
+    Z: () => N,
+    _: () => E,
 }),
     n(388685);
 var r = n(951288),
@@ -27,7 +27,7 @@ var r = n(951288),
 function y(e) {
     p.Z.selectRole(e);
 }
-let N = () => {
+let E = () => {
     let { guild: e } = (0, s.cj)([f.Z], () => f.Z.getProps()),
         t = (0, s.e7)([b.Z], () => b.Z.formState),
         n = (0, s.e7)([b.Z], () => b.Z.errorMessage);
@@ -48,7 +48,7 @@ let N = () => {
         onReset: h.S1,
     });
 };
-function E(e) {
+function N(e) {
     let { refToScroller: t } = e,
         { guild: n, roles: l } = (0, s.cj)(
             [b.Z],
@@ -71,16 +71,16 @@ function E(e) {
             let e = g.Z.getMemberCount(n.id);
             null != e && e <= x.cm && o.Z.requestMembers(n.id, "", 0, !1);
         });
-    let [N, E] = i.useState(C.ZI.DISPLAY);
+    let [E, N] = i.useState(C.ZI.DISPLAY);
     return (i.useEffect(() => {
-        null == p && E(C.ZI.DISPLAY);
+        null == p && N(C.ZI.DISPLAY);
     }, [p]),
     null != p)
         ? (0, r.jsx)(j.Z, {
               editRoleId: p,
               setEditRoleId: y,
-              selectedSection: N,
-              setSelectedSection: E,
+              selectedSection: E,
+              setSelectedSection: N,
           })
         : h
           ? (0, r.jsx)(_.Z, {
@@ -88,7 +88,7 @@ function E(e) {
                 guild: n,
                 everyoneRole: c,
                 otherRoles: m,
-                setSelectedSection: E,
+                setSelectedSection: N,
                 refToScroller: t,
             })
           : (0, r.jsx)(v.Z, {

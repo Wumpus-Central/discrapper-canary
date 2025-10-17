@@ -18,8 +18,8 @@ function l(t) {
             transitionState: m,
             children: j,
         } = t,
-        [f, C] = a.useState(""),
-        [g, v] = a.useState(null),
+        [f, g] = a.useState(""),
+        [v, C] = a.useState(null),
         _ =
             a.Children.count(j) > 0
                 ? (0, r.jsx)(i.Zbd, {
@@ -38,7 +38,7 @@ function l(t) {
         parentComponent: "TextEntryConfirm",
         children: (0, r.jsxs)("form", {
             onSubmit: function (t) {
-                if ((t.preventDefault(), f.toLowerCase() !== l.toLowerCase())) return void v(c);
+                if ((t.preventDefault(), f.toLowerCase() !== l.toLowerCase())) return void C(c);
                 null == e || e(), n();
             },
             children: [
@@ -61,15 +61,15 @@ function l(t) {
                                     label: h,
                                     value: f,
                                     autoComplete: "off",
-                                    onChange: C,
+                                    onChange: g,
                                     autoFocus: !0,
                                 }),
-                                null != g && "" !== g
+                                null != v && "" !== v
                                     ? (0, r.jsx)(i.Text, {
                                           color: "text-danger",
                                           variant: "text-xs/normal",
                                           className: o.error,
-                                          children: g,
+                                          children: v,
                                       })
                                     : null,
                             ],
@@ -82,12 +82,12 @@ function l(t) {
                         children: [
                             (0, r.jsx)(i.Button, {
                                 variant: "critical-primary",
-                                text: null != p ? p : s.intl.string(s.t["cY+Oob"]),
+                                text: null != p ? p : s.intl.string(s.t["cY+Ooa"]),
                                 type: "submit",
                             }),
                             (0, r.jsx)(i.Button, {
                                 variant: "secondary",
-                                text: null != x ? x : s.intl.string(s.t["ETE/oC"]),
+                                text: null != x ? x : s.intl.string(s.t["ETE/oK"]),
                                 onClick: n,
                             }),
                         ],

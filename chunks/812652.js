@@ -18,8 +18,8 @@ var i = n(268146),
     x = n(37113),
     v = n(65154),
     j = n(637824),
-    b = n(388032),
-    S = n(355669);
+    S = n(388032),
+    b = n(355669);
 let y = [
         {
             value: x.ApplicationStreamPresets.PRESET_AUTO,
@@ -38,7 +38,7 @@ let y = [
             canUse: (e) => !0,
         },
     ],
-    O = [
+    C = [
         {
             value: x.ApplicationStreamResolutions.RESOLUTION_720,
             canUse: (e) => !0,
@@ -56,11 +56,11 @@ let y = [
             canUse: (e) => e !== i.vA.CAMERA,
         },
     ],
-    C = [x.ApplicationStreamFPS.FPS_15, x.ApplicationStreamFPS.FPS_30, x.ApplicationStreamFPS.FPS_60];
+    O = [x.ApplicationStreamFPS.FPS_15, x.ApplicationStreamFPS.FPS_30, x.ApplicationStreamFPS.FPS_60];
 function w(e) {
     let { label: t } = e;
     return (0, r.jsxs)("div", {
-        className: S.premiumOptionContainer,
+        className: b.premiumOptionContainer,
         children: [
             t,
             (0, r.jsx)(l.SrA, {
@@ -72,7 +72,7 @@ function w(e) {
 }
 function P(e) {
     var t, n;
-    let { onClose: c, onSelect: S } = e,
+    let { onClose: c, onSelect: b } = e,
         [
             {
                 audioSourceId: P,
@@ -111,7 +111,7 @@ function P(e) {
             ),
             menuItemOverrideProps: {
                 id: "device-audio-input",
-                label: b.intl.string(j.default.YSdHV1),
+                label: S.intl.string(j.default.YSdHV1),
                 subtextLineClamp: 1,
             },
             computeMenuRadioItemOverrideProps: (e) => ({
@@ -120,13 +120,13 @@ function P(e) {
             }),
         });
     return (0, r.jsxs)(l.v2r, {
-        "aria-label": b.intl.string(b.t["+1H47u"]),
+        "aria-label": S.intl.string(S.t["+1H47u"]),
         navId: "stream-options",
         onClose: c,
-        onSelect: S,
+        onSelect: b,
         children: [
             (0, r.jsx)(l.kSQ, {
-                label: b.intl.string(j.default.P2pjm5),
+                label: S.intl.string(j.default.P2pjm5),
                 children: y
                     .filter((e) => {
                         let { canUse: t } = e;
@@ -144,17 +144,17 @@ function P(e) {
                                 subtext: (function (e) {
                                     switch (e) {
                                         case x.ApplicationStreamPresets.PRESET_VIDEO:
-                                            return b.intl.format(j.default.G5O1Mz, {
+                                            return S.intl.format(j.default.G5O1Mz, {
                                                 resolution: (0, p.M)(L),
                                                 frameRate: G,
                                             });
                                         case x.ApplicationStreamPresets.PRESET_DOCUMENTS:
-                                            return b.intl.format(j.default["8tcFLy"], {
+                                            return S.intl.format(j.default["8tcFLy"], {
                                                 resolution: (0, p.M)(U),
                                                 frameRate: F,
                                             });
                                         case x.ApplicationStreamPresets.PRESET_AUTO:
-                                            return b.intl.string(j.default.m4jtlZ);
+                                            return S.intl.string(j.default.m4jtlZ);
                                         case x.ApplicationStreamPresets.PRESET_CUSTOM:
                                             return;
                                         default:
@@ -177,8 +177,8 @@ function P(e) {
                         (0, r.jsx)(l.Clw, {}),
                         (0, r.jsx)(l.sNh, {
                             id: "resolution",
-                            label: b.intl.string(j.default.IG5n0d),
-                            children: O.filter((e) => {
+                            label: S.intl.string(j.default.IG5n0d),
+                            children: C.filter((e) => {
                                 let { canUse: t } = e;
                                 return t(R);
                             }).map((e) => {
@@ -214,8 +214,8 @@ function P(e) {
                         }),
                         (0, r.jsx)(l.sNh, {
                             id: "frame-rate",
-                            label: b.intl.string(b.t.SkkeIi),
-                            children: C.map((e) =>
+                            label: S.intl.string(S.t.SkkeIi),
+                            children: O.map((e) =>
                                 (0, r.jsx)(
                                     l.k5B,
                                     {
@@ -251,7 +251,7 @@ function P(e) {
             (0, r.jsx)(l.S89, {
                 id: "stream-option-mute",
                 checked: E,
-                label: b.intl.string(j.default["b0+Ira"]),
+                label: S.intl.string(j.default["b0+Ira"]),
                 action: () =>
                     k({
                         type: "set_mute_audio",
@@ -261,12 +261,12 @@ function P(e) {
             R === i.vA.CAMERA && H,
             (0, r.jsxs)(l.sNh, {
                 id: "advanced-items",
-                label: b.intl.string(j.default.eYyK1t),
+                label: S.intl.string(j.default.eYyK1t),
                 children: [
                     (0, r.jsx)(l.S89, {
                         id: "stream-option-share-preview",
                         checked: I,
-                        label: b.intl.string(j.default.H3Qjqa),
+                        label: S.intl.string(j.default.H3Qjqa),
                         action: () =>
                             k({
                                 type: "set_hide_preview",
@@ -277,7 +277,7 @@ function P(e) {
                         (0, r.jsx)(l.S89, {
                             id: "stream-option-notify",
                             checked: Z,
-                            label: b.intl.string(j.default.SiHtX1),
+                            label: S.intl.string(j.default.SiHtX1),
                             action: () =>
                                 k({
                                     type: "set_notify_friends",

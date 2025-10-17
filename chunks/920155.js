@@ -107,7 +107,7 @@ function S(e) {
         L = i.useRef(E),
         x = (0, c.e7)([d.Z], () => d.Z.getLayers()),
         M = null != (t = x[x.length - 1]) ? t : "base",
-        j = i.useMemo(() => {
+        k = i.useMemo(() => {
             var e, t;
             return (
                 null == a.current ||
@@ -117,15 +117,15 @@ function S(e) {
             );
         }, [a, M]);
     i.useEffect(() => {
-        j && p ? P(!0) : j || P(!1);
-    }, [j, p]);
-    let k = () => {
+        k && p ? P(!0) : k || P(!1);
+    }, [k, p]);
+    let j = () => {
             P(!1);
         },
         U = (0, _.i)({
             shouldShow: p,
             caretPosition: (0, f.z)(w),
-            onExitComplete: k,
+            onExitComplete: j,
         }),
         G = (e) => {
             var { setPopoutRef: t, position: i } = e,

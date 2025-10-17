@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(64247),
     d = n(124368),
     u = n(981631),
-    h = n(388032);
-function p(e) {
+    p = n(388032);
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -66,7 +66,7 @@ function g(e) {
             }
         );
     }, []);
-    let y = h.intl.string(h.t.h850Sk);
+    let y = p.intl.string(p.t.h850Sk);
     return (0, r.jsx)(l.yRy, {
         targetElementRef: b,
         shouldShow: g,
@@ -78,17 +78,17 @@ function g(e) {
         renderPopout: (e) =>
             (0, r.jsx)(
                 c.Z,
-                f(p({}, e), {
+                f(h({}, e), {
                     channel: t,
                     navId: "thread-context",
-                    label: h.intl.string(h.t["1NBjqa"]),
+                    label: p.intl.string(p.t["1NBjqa"]),
                 }),
             ),
         children: (e, t) => {
             let { isShown: i } = t;
             return (0, r.jsx)(
                 a.ZP.Icon,
-                f(p({}, e), {
+                f(h({}, e), {
                     ref: b,
                     onClick: () => m((e) => !e),
                     tooltip: i ? null : y,

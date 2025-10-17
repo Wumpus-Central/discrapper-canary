@@ -4,8 +4,8 @@ n(647438);
 var r = n(120356),
     i = n.n(r),
     l = n(481060),
-    s = n(320161),
-    o = n(572004),
+    o = n(320161),
+    s = n(572004),
     c = n(51144),
     d = n(785717),
     u = n(388032),
@@ -13,8 +13,8 @@ var r = n(120356),
 function p(e) {
     let { user: t, isVisible: n } = e,
         { trackUserProfileAction: r } = (0, d.KZ)();
-    return o.wS
-        ? (0, a.jsx)(s.Z, {
+    return s.wS
+        ? (0, a.jsx)(o.Z, {
               text: u.intl.string(u.t.y5MwJy),
               delay: 0,
               "aria-label": !1,

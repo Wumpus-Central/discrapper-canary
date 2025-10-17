@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(871499),
     d = n(306680),
     u = n(111583),
-    h = n(459273),
-    p = n(566620),
+    p = n(459273),
+    h = n(566620),
     f = n(317381),
     g = n(918559),
     m = n(981631),
@@ -42,7 +42,7 @@ function _(e) {
         O = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout() === g.MI.RESIZABLE),
         x = i.useCallback(() => {
             let e = O ? g.MI.NO_CHAT : g.MI.RESIZABLE;
-            (0, p.gC)(e);
+            (0, h.gC)(e);
         }, [O]),
         { unreadCount: v, mentionCount: C } = (function (e) {
             let t = (0, a.e7)([u.Z], () => !(0, l.isEmpty)(u.Z.getTypingUsers(e)), [e]),
@@ -64,7 +64,7 @@ function _(e) {
             var e;
             null == (e = j.current) || e.focus();
         }, []);
-    (0, h.yp)({
+    (0, p.yp)({
         event: m.CkL.FOCUS_CHAT_BUTTON,
         handler: I,
     });
@@ -73,8 +73,8 @@ function _(e) {
     C > 0 && E.push(b.intl.formatToPlainString(b.t["3l1GOz"], { mentionCount: C })),
         v > 0 && E.push(b.intl.string(b.t.x5zAGR));
     let Z = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout()),
-        T = C > 0 ? C : v,
-        P = T > 0;
+        P = C > 0 ? C : v,
+        T = P > 0;
     return (0, r.jsxs)("div", {
         className: y.wrapper,
         children: [
@@ -119,10 +119,10 @@ function _(e) {
                     _,
                 ),
             ),
-            P
+            T
                 ? (0, r.jsx)(o.Z, {
                       hasMentions: C > 0,
-                      truncatedCount: T > 99 ? "99+" : T,
+                      truncatedCount: P > 99 ? "99+" : P,
                       className: y.badge,
                   })
                 : null,

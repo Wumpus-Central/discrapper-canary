@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => N });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -15,8 +15,8 @@ var r = n(951288),
     m = n(321488),
     b = n(417183),
     _ = n(170245),
-    O = n(981631),
-    E = n(388032),
+    E = n(981631),
+    O = n(388032),
     v = n(507694);
 function y(e) {
     var t;
@@ -47,20 +47,20 @@ function y(e) {
                     className: v.staffIndicator,
                     children: (0, r.jsx)(o.IGR, {
                         color: a.Z.unsafe_rawColors.BRAND_500.css,
-                        text: E.intl.string(E.t.oMx98P),
+                        text: O.intl.string(O.t.oMx98P),
                     }),
                 }),
             (0, r.jsx)(m.Z, {
                 icon: o.dz2,
                 actionType: m.Z.ActionTypes.ACCEPT,
-                tooltip: E.intl.string(E.t.ZcibdX),
+                tooltip: O.intl.string(O.t.ZcibdX),
                 onClick: h,
                 shouldHighlight: c,
             }),
             (0, r.jsx)(m.Z, {
                 icon: o.Dio,
                 actionType: m.Z.ActionTypes.DENY,
-                tooltip: E.intl.string(E.t.xuio0N),
+                tooltip: O.intl.string(O.t.xuio0N),
                 onClick: b,
                 shouldHighlight: c,
             }),
@@ -84,14 +84,14 @@ function I(e) {
     return (0, r.jsx)(m.Z, {
         icon: o.Dio,
         actionType: m.Z.ActionTypes.DENY,
-        tooltip: E.intl.string(E.t.eaq81d),
+        tooltip: O.intl.string(O.t.eaq81d),
         onClick: c,
         shouldHighlight: a,
     });
 }
 function C(e) {
     let { isGameRelationship: t, applicationId: n, userTag: a, isProvisional: s } = e,
-        p = i.useMemo(() => (t ? E.intl.string(E.t["Uv/eT0"]) : a), [t, a]),
+        p = i.useMemo(() => (t ? O.intl.string(O.t["Uv/eT0"]) : a), [t, a]),
         f = (0, l.e7)([c.Z], () => (null != n ? c.Z.getApplication(n) : null));
     return (0, r.jsxs)("div", {
         className: v.applicationSublabel,
@@ -140,10 +140,10 @@ function S(e) {
         }),
     });
 }
-function T(e) {
+function N(e) {
     let { user: t, type: n, status: l, isFocused: a, applicationId: o, isGameRelationship: c } = e,
         { analyticsLocations: u } = (0, s.ZP)(),
-        d = l === O.Skl.OFFLINE ? O.Skl.UNKNOWN : l,
+        d = l === E.Skl.OFFLINE ? E.Skl.UNKNOWN : l,
         f = i.useCallback(
             () =>
                 (0, p.openUserProfileModal)({
@@ -170,7 +170,7 @@ function T(e) {
                     (0, r.jsx)("div", {
                         className: v.actions,
                         children:
-                            n === O.OGo.PENDING_INCOMING
+                            n === E.OGo.PENDING_INCOMING
                                 ? (0, r.jsx)(y, {
                                       user: t,
                                       applicationId: o,

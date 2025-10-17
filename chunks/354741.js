@@ -41,7 +41,7 @@ let v = (0, o.Z)(
                           label: P.intl.string(P.t.ngRFjY),
                           action: () =>
                               (0, i.ZDy)(async () => {
-                                  let { default: e } = await n.e("97573").then(n.bind(n, 892382));
+                                  let { default: e } = await n.e("72071").then(n.bind(n, 472945));
                                   return (n) =>
                                       (0, r.jsx)(
                                           e,

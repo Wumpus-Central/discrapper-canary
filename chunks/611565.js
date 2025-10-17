@@ -1,10 +1,10 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var a = n(951288),
     r = n(120356),
     i = n.n(r),
     l = n(399606),
-    s = n(481060),
-    o = n(570140),
+    o = n(481060),
+    s = n(570140),
     c = n(681619),
     d = n(592125),
     u = n(787879),
@@ -17,7 +17,7 @@ let x = [
             cellClassName: i()(p.cell, p.channelName),
             render(e) {
                 let { channelName: t } = e;
-                return (0, a.jsx)(s.Text, {
+                return (0, a.jsx)(o.Text, {
                     variant: "text-md/normal",
                     children: t,
                 });
@@ -28,7 +28,7 @@ let x = [
             cellClassName: i()(p.cell, p.channelId),
             render(e) {
                 let { channelId: t } = e;
-                return (0, a.jsx)(s.Text, {
+                return (0, a.jsx)(o.Text, {
                     variant: "text-md/normal",
                     children: t,
                 });
@@ -41,7 +41,7 @@ let x = [
             cellClassName: i()(p.cell, p.channelName),
             render(e) {
                 let { channelName: t } = e;
-                return (0, a.jsx)(s.Text, {
+                return (0, a.jsx)(o.Text, {
                     variant: "text-md/normal",
                     children: t,
                 });
@@ -52,7 +52,7 @@ let x = [
             cellClassName: i()(p.cell, p.loadState),
             render(e) {
                 let { loadState: t } = e;
-                return (0, a.jsx)(s.Text, {
+                return (0, a.jsx)(o.Text, {
                     variant: "text-md/normal",
                     children: t,
                 });
@@ -63,21 +63,21 @@ let x = [
             cellClassName: i()(p.cell, p.channelId),
             render(e) {
                 let { channelId: t } = e;
-                return (0, a.jsx)(s.Text, {
+                return (0, a.jsx)(o.Text, {
                     variant: "text-md/normal",
                     children: t,
                 });
             },
         },
     ];
-function b() {
+function g() {
     let { unreadRecentMentionsCount: e, unreadChannelIds: t } = (0, m.O4)(),
         {
             isLoading: n,
             hasLoadedEver: r,
             hasPreloaded: i,
-            hasMoreToLoad: b,
-            isLoadingComplete: g,
+            hasMoreToLoad: g,
+            isLoadingComplete: b,
         } = (0, l.cj)([u.Z], () => ({
             isLoading: u.Z.isLoading,
             hasLoadedEver: u.Z.hasLoadedEver,
@@ -108,12 +108,12 @@ function b() {
         S = (0, l.e7)([u.Z], () => u.Z.getDevOverrides().navOnClick);
     return (0, a.jsx)("div", {
         className: h.panel,
-        children: (0, a.jsxs)(s.zJl, {
+        children: (0, a.jsxs)(o.zJl, {
             className: p.content,
             children: [
                 (0, a.jsxs)("div", {
                     children: [
-                        (0, a.jsx)(s.Heading, {
+                        (0, a.jsx)(o.Heading, {
                             variant: "heading-lg/semibold",
                             children: "Inbox",
                         }),
@@ -124,7 +124,7 @@ function b() {
                 }),
                 (0, a.jsxs)("div", {
                     children: [
-                        (0, a.jsx)(s.Heading, {
+                        (0, a.jsx)(o.Heading, {
                             variant: "heading-lg/semibold",
                             children: "Dev Overrides",
                         }),
@@ -134,11 +134,11 @@ function b() {
                                 alignItems: "center",
                                 marginTop: 8,
                             },
-                            children: (0, a.jsx)(s.rsf, {
+                            children: (0, a.jsx)(o.rsf, {
                                 label: "Nav On Click",
                                 checked: !!S,
                                 onChange: (e) => {
-                                    o.Z.dispatch({
+                                    s.Z.dispatch({
                                         type: "NOTIFICATIONS_INBOX_SET_DEV_OVERRIDES",
                                         navOnClick: e,
                                     });
@@ -149,11 +149,11 @@ function b() {
                 }),
                 (0, a.jsxs)("div", {
                     children: [
-                        (0, a.jsx)(s.Heading, {
+                        (0, a.jsx)(o.Heading, {
                             variant: "heading-lg/semibold",
                             children: "Unreads and Badging",
                         }),
-                        (0, a.jsx)(s.LZC, { size: 8 }),
+                        (0, a.jsx)(o.LZC, { size: 8 }),
                         (0, a.jsxs)("div", {
                             children: ["Unread Recent Mentions Count: ", e],
                         }),
@@ -176,7 +176,7 @@ function b() {
                 }),
                 (0, a.jsxs)("div", {
                     children: [
-                        (0, a.jsx)(s.Heading, {
+                        (0, a.jsx)(o.Heading, {
                             variant: "heading-lg/semibold",
                             children: "Store State",
                         }),
@@ -190,10 +190,10 @@ function b() {
                             children: ["Has Loaded Ever: ", r ? "\u2705" : "\u274C"],
                         }),
                         (0, a.jsxs)("div", {
-                            children: ["Has More To Load: ", b ? "\u2705" : "\u274C"],
+                            children: ["Has More To Load: ", g ? "\u2705" : "\u274C"],
                         }),
                         (0, a.jsxs)("div", {
-                            children: ["Is Loading Complete: ", g ? "\u2705" : "\u274C"],
+                            children: ["Is Loading Complete: ", b ? "\u2705" : "\u274C"],
                         }),
                         (0, a.jsxs)("div", {
                             children: ["Last Loading Trigger: ", null == v ? void 0 : v.loadingTrigger],
@@ -202,7 +202,7 @@ function b() {
                 }),
                 (0, a.jsxs)("div", {
                     children: [
-                        (0, a.jsx)(s.Heading, {
+                        (0, a.jsx)(o.Heading, {
                             variant: "heading-lg/semibold",
                             children: "Channel Info Map",
                         }),

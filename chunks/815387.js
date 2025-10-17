@@ -32,8 +32,8 @@ var r = n(951288),
     L = n(911560),
     x = n(488131),
     M = n(814820),
-    j = n(314897),
-    k = n(523746),
+    k = n(314897),
+    j = n(523746),
     U = n(592125),
     G = n(430824),
     B = n(496675),
@@ -138,9 +138,9 @@ function ex(e) {
 function eM(e) {
     let { message: t, compact: n, channel: o } = e,
         { id: s, author: l } = t,
-        u = j.default.getId(),
+        u = k.default.getId(),
         d = t.getChannelId(),
-        f = (0, a.e7)([k.Z], () => k.Z.isCallActive(d, s), [d, s]),
+        f = (0, a.e7)([j.Z], () => j.Z.isCallActive(d, s), [d, s]),
         _ = (0, a.e7)([H.Z], () => H.Z.getVoiceState(eC.ME, u)),
         p = !f && null != t.call && !t.call.participants.includes(u),
         h = f && (null == _ || _.channelId !== d),
@@ -161,7 +161,7 @@ function eM(e) {
         onClickJoinCall: m,
     });
 }
-function ej(e) {
+function ek(e) {
     let { message: t, compact: n, channel: i } = e,
         { author: a } = t,
         o = t.getChannelId(),
@@ -178,7 +178,7 @@ function ej(e) {
         isForumPost: i.isForumPost(),
     });
 }
-function ek(e) {
+function ej(e) {
     let { message: t, compact: n, channel: i } = e,
         { author: a } = t,
         o = t.getChannelId(),
@@ -285,7 +285,7 @@ function eB(e) {
                 let a = U.Z.getChannel(null == (i = t.messageReference) ? void 0 : i.channel_id);
                 null != a &&
                     (0, s.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e("90508"), n.e("46154"), n.e("44141")]).then(
+                        let { default: e } = await Promise.all([n.e("90508"), n.e("89250"), n.e("32925")]).then(
                             n.bind(n, 422200),
                         );
                         return (t) => (0, r.jsx)(e, eL(ew({}, t), { channel: a }));
@@ -725,8 +725,8 @@ let tn = Object.freeze({
     [eC.uaV.RECIPIENT_ADD]: eG,
     [eC.uaV.RECIPIENT_REMOVE]: eZ,
     [eC.uaV.CALL]: eM,
-    [eC.uaV.CHANNEL_NAME_CHANGE]: ej,
-    [eC.uaV.CHANNEL_ICON_CHANGE]: ek,
+    [eC.uaV.CHANNEL_NAME_CHANGE]: ek,
+    [eC.uaV.CHANNEL_ICON_CHANGE]: ej,
     [eC.uaV.CHANNEL_PINNED_MESSAGE]: eU,
     [eC.uaV.USER_JOIN]: eF,
     [eC.uaV.GUILD_BOOST]: eV,

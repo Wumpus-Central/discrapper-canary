@@ -1,16 +1,16 @@
 n.r(t), n.d(t, { default: () => E }), n(388685), n(35282);
-var a = n(951288),
-    r = n(647438),
-    o = n(593473),
-    i = n(843611),
-    l = n(399606),
-    s = n(893776),
+var r = n(951288),
+    a = n(647438),
+    i = n(593473),
+    o = n(843611),
+    s = n(399606),
+    l = n(893776),
     c = n(702493),
     d = n(77987),
     u = n(133853),
     f = n(353926),
-    h = n(703656),
-    p = n(314897),
+    p = n(703656),
+    h = n(314897),
     x = n(643366),
     m = n(94628),
     g = n(659154),
@@ -22,10 +22,10 @@ var a = n(951288),
 let j = n(575703);
 function w() {
     let e,
-        t = (0, i.TH)(),
-        [n, d] = r.useState(() => {
+        t = (0, o.TH)(),
+        [n, d] = a.useState(() => {
             if (t.pathname === C.Z5c.ACTIVATE_HANDOFF) {
-                let { user_code: e } = o.parse(window.location.search);
+                let { user_code: e } = i.parse(window.location.search);
                 return {
                     type: "handoff",
                     code: e,
@@ -36,16 +36,16 @@ function w() {
                 usePrefilledCode: !0,
             };
         }),
-        w = (0, l.e7)([f.Z], () => f.Z.hasLoadedExperiments);
-    r.useEffect(() => {
-        p.default.isAuthenticated() && !w && s.Z.getExperiments();
+        w = (0, s.e7)([f.Z], () => f.Z.hasLoadedExperiments);
+    a.useEffect(() => {
+        h.default.isAuthenticated() && !w && l.Z.getExperiments();
     }, [w]),
         (0, c.Z)(),
         (0, x.Y)(n);
-    let N = r.useCallback(() => {
+    let N = a.useCallback(() => {
             d({ type: "user-code-input" });
         }, [d]),
-        E = r.useCallback(
+        E = a.useCallback(
             (e) => {
                 d({
                     type: "authorization",
@@ -54,7 +54,7 @@ function w() {
             },
             [d],
         ),
-        k = r.useCallback(
+        T = a.useCallback(
             (e) => {
                 d({
                     type: "success",
@@ -63,7 +63,7 @@ function w() {
             },
             [d],
         ),
-        T = r.useCallback(
+        O = a.useCallback(
             (e) => {
                 d({
                     type: "error",
@@ -72,52 +72,52 @@ function w() {
             },
             [d],
         ),
-        O = !0;
+        k = !0;
     switch (n.type) {
         case "handoff":
-            (e = (0, a.jsx)(v.c, { code: n.code })), (O = !1);
+            (e = (0, r.jsx)(v.c, { code: n.code })), (k = !1);
             break;
         case "user-code-input":
-            e = (0, a.jsx)(_.v, {
+            e = (0, r.jsx)(_.v, {
                 usePrefilledCode: n.usePrefilledCode || !1,
                 onUserCodeAccepted: E,
             });
             break;
         case "authorization":
-            (e = (0, a.jsx)(m.B, {
+            (e = (0, r.jsx)(m.B, {
                 data: n.userCodeData,
                 onDenied: N,
-                onError: T,
-                onSuccess: k,
+                onError: O,
+                onSuccess: T,
             })),
-                (O = !1);
+                (k = !1);
             break;
         case "success":
-            e = (0, a.jsx)(b.u, {
-                onComplete: () => (0, h.uL)(C.Z5c.ME),
+            e = (0, r.jsx)(b.u, {
+                onComplete: () => (0, p.uL)(C.Z5c.ME),
                 data: n.userCodeData,
             });
             break;
         case "error":
-            e = (0, a.jsx)(g.c, { onTryAgain: N });
+            e = (0, r.jsx)(g.c, { onTryAgain: N });
             break;
         default:
             e = null;
     }
-    return (0, a.jsxs)("div", {
+    return (0, r.jsxs)("div", {
         className: y.activatePage,
         children: [
-            (0, a.jsx)("img", {
+            (0, r.jsx)("img", {
                 className: y.artwork,
                 src: j,
                 alt: "",
             }),
-            (0, a.jsx)(u.Z, {
+            (0, r.jsx)(u.Z, {
                 show: !0,
                 className: y.logo,
             }),
-            O
-                ? (0, a.jsx)("div", {
+            k
+                ? (0, r.jsx)("div", {
                       className: y.content,
                       children: e,
                   })
@@ -127,5 +127,5 @@ function w() {
 }
 let N = (0, d.e)(w),
     E = function () {
-        return (0, i.TH)().pathname !== C.Z5c.ACTIVATE_HANDOFF ? (0, a.jsx)(N, {}) : (0, a.jsx)(w, {});
+        return (0, o.TH)().pathname !== C.Z5c.ACTIVATE_HANDOFF ? (0, r.jsx)(N, {}) : (0, r.jsx)(w, {});
     };

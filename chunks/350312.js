@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(951288),
     l = n(647438),
     o = n(120356),
@@ -9,7 +9,7 @@ var r = n(951288),
     u = n(720293),
     d = n(602667),
     m = n(524953);
-function p(e) {
+function f(e) {
     let { asset: t } = e;
     return null == t
         ? null
@@ -19,7 +19,7 @@ function p(e) {
               className: m.endScreenImageBackground,
           });
 }
-function f(e) {
+function p(e) {
     let { quest: t, asset: n, sourceQuestContent: l } = e;
     return null == n
         ? null
@@ -43,11 +43,11 @@ function v(e) {
     return (0, r.jsxs)("div", {
         className: m.endScreenCtaContainer,
         children: [
-            (0, r.jsx)(E, {
+            (0, r.jsx)(g, {
                 title: n,
                 subtitle: l,
             }),
-            (0, r.jsx)(g, {
+            (0, r.jsx)(E, {
                 label: t,
                 icon: s.d4D,
                 onClick: o,
@@ -55,7 +55,7 @@ function v(e) {
         ],
     });
 }
-function E(e) {
+function g(e) {
     let { title: t, subtitle: n } = e;
     return (0, r.jsxs)("div", {
         className: m.endScreenCtaTitleContainer,
@@ -73,21 +73,21 @@ function E(e) {
         ],
     });
 }
-function g(e) {
+function E(e) {
     let { label: t, icon: n, onClick: o, className: a } = e,
         [c, u] = l.useState(!1),
         d = () => {
             u(!0);
         },
-        p = () => {
+        f = () => {
             u(!1);
         };
     return (0, r.jsxs)(s.P3F, {
         className: i()(m.endScreenCtaBtn, m.accentOnHover, a),
         onMouseEnter: d,
-        onMouseLeave: p,
+        onMouseLeave: f,
         onFocus: d,
-        onBlur: p,
+        onBlur: f,
         onClick: o,
         children: [
             (0, r.jsx)(s.Heading, {
@@ -103,17 +103,17 @@ function g(e) {
         ],
     });
 }
-let O = function (e) {
+let b = function (e) {
     let { quest: t, ctaBtnLabel: n, title: o, subtitle: i, onCTAClick: s, sourceQuestContent: c } = e,
         d = l.useMemo(() => (0, u.z0)(t, a.X.WATCH_VIDEO, u.n1.VIDEO, u.O.THUMBNAIL), [t]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(p, { asset: d }),
+            (0, r.jsx)(f, { asset: d }),
             (0, r.jsx)("div", { className: m.endScreenOverlay }),
             (0, r.jsxs)("div", {
                 className: m.endScreenContainer,
                 children: [
-                    (0, r.jsx)(f, {
+                    (0, r.jsx)(p, {
                         quest: t,
                         asset: d,
                         sourceQuestContent: c,

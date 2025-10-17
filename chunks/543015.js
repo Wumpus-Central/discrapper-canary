@@ -40,8 +40,8 @@ var r = n(951288),
     z = n(937889),
     B = n(443877),
     U = n(524444),
-    V = n(287151),
-    G = n(267128),
+    G = n(287151),
+    V = n(267128),
     W = n(695346),
     q = n(433355),
     X = n(592125),
@@ -300,7 +300,7 @@ let eu = i.memo(function (e) {
                       contentPlaceholder: null,
                       renderedContent: null,
                   }
-                : (0, G.f)(
+                : (0, V.f)(
                       t,
                       i,
                       !1,
@@ -474,7 +474,7 @@ function eg(e) {
         { disableReactionCreates: l, isLurking: s, isPendingMember: o } = (0, B.Z)(n);
     return null == a || l
         ? null
-        : (0, r.jsx)(V.le, {
+        : (0, r.jsx)(G.le, {
               className: es.updateReactionButton,
               message: t,
               readOnly: n.isArchivedLockedThread(),

@@ -1,24 +1,24 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => v });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
-    o = n(442837),
-    l = n(28664),
-    c = n(481060),
-    s = n(313201),
+    l = n(442837),
+    o = n(28664),
+    s = n(481060),
+    c = n(313201),
     u = n(224724),
     d = n(747101),
     f = n(817053),
     g = n(890814),
     p = n(388032),
-    b = n(932366),
-    m = n(845859);
-function O(e) {
+    m = n(932366),
+    b = n(845859);
+function h(e) {
     var t,
         n,
         { gameName: i, onClick: a } = e,
-        s = (function (e, t) {
+        c = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -40,14 +40,14 @@ function O(e) {
             return i;
         })(e, ["gameName", "onClick"]);
     let g = null != i ? i : p.intl.string(p.t.GIWFlJ),
-        O = p.intl.formatToPlainString(p.t["3mb1s7"], { game: g }),
-        y = (0, o.e7)([u.Z], () => u.Z.suggestedFetchIsLoading);
-    return (0, d.kO)(s.applicationId) || y
-        ? (0, r.jsx)("div", { className: b.loadingCover })
-        : (0, r.jsx)(l.u, {
-              text: O,
-              children: (0, r.jsxs)(c.P3F, {
-                  className: m.addButton,
+        h = p.intl.formatToPlainString(p.t["3mb1s7"], { game: g }),
+        v = (0, l.e7)([u.Z], () => u.Z.suggestedFetchIsLoading);
+    return (0, d.kO)(c.applicationId) || v
+        ? (0, r.jsx)("div", { className: m.loadingCover })
+        : (0, r.jsx)(o.u, {
+              text: h,
+              children: (0, r.jsxs)(s.P3F, {
+                  className: b.addButton,
                   onClick: a,
                   children: [
                       (0, r.jsx)(
@@ -78,10 +78,10 @@ function O(e) {
                               return e;
                           })(
                               {
-                                  className: m.cover,
+                                  className: b.cover,
                                   gameName: i,
                               },
-                              s,
+                              c,
                           )),
                           (n = n = { disableInteraction: !0 }),
                           Object.getOwnPropertyDescriptors
@@ -98,35 +98,35 @@ function O(e) {
                                 }),
                           t),
                       ),
-                      (0, r.jsx)(c.svS, {
+                      (0, r.jsx)(s.svS, {
                           size: "md",
-                          className: m.addIcon,
-                          color: c.TVs.colors.WHITE,
+                          className: b.addIcon,
+                          color: s.TVs.colors.WHITE,
                       }),
                   ],
               }),
           });
 }
-function y(e) {
-    let { userId: t, games: n, onDismiss: i, onClick: o, className: l } = e,
-        u = (0, s.Dt)();
+function v(e) {
+    let { userId: t, games: n, onDismiss: i, onClick: l, className: o } = e,
+        u = (0, c.Dt)();
     return (0, r.jsxs)("aside", {
-        className: a()(m.container, l),
+        className: a()(b.container, o),
         "aria-labelledby": u,
         children: [
             (0, r.jsxs)("div", {
-                className: m.header,
+                className: b.header,
                 children: [
-                    (0, r.jsx)(c.P3F, {
-                        className: m.dismissButton,
+                    (0, r.jsx)(s.P3F, {
+                        className: b.dismissButton,
                         "aria-label": p.intl.string(p.t["pUR+3t"]),
                         onClick: i,
-                        children: (0, r.jsx)(c.Dio, {
+                        children: (0, r.jsx)(s.Dio, {
                             size: "sm",
                             color: "currentColor",
                         }),
                     }),
-                    (0, r.jsx)(c.Heading, {
+                    (0, r.jsx)(s.Heading, {
                         id: u,
                         variant: "text-xs/medium",
                         color: "text-secondary",
@@ -138,8 +138,8 @@ function y(e) {
                 games: n,
                 renderGame: (e) => {
                     let { applicationId: n, gameName: i, imageSrc: a } = e;
-                    return (0, r.jsx)(O, {
-                        onClick: () => o(n, i, a),
+                    return (0, r.jsx)(h, {
+                        onClick: () => l(n, i, a),
                         userId: t,
                         applicationId: n,
                         gameName: i,

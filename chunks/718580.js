@@ -6,7 +6,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(599273),
+    s = n(258536),
     l = n(990547),
     c = n(872175),
     u = n(873546),
@@ -146,11 +146,11 @@ function N(e) {
         properties: M,
         _stackContext: { isSlide: !0 },
     });
-    let { ref: j, width: k = 0, height: U = 0 } = (0, _.ZP)(R),
+    let { ref: k, width: j = 0, height: U = 0 } = (0, _.ZP)(R),
         G = b({}, T, I.springConfig, D.enabled ? { clamp: !0 } : null),
         B = (0, f.q_F)(
             {
-                width: null != (n = I.width) ? n : k,
+                width: null != (n = I.width) ? n : j,
                 height: U,
                 config: G,
             },
@@ -207,7 +207,7 @@ function N(e) {
             return (0, r.jsx)(
                 s.animated.div,
                 {
-                    ref: t === R ? j : null,
+                    ref: t === R ? k : null,
                     style: b(
                         {
                             position: "absolute",

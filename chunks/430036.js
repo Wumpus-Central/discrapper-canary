@@ -21,9 +21,9 @@ var i = n(951288),
     E = n(1397),
     x = n(541716),
     S = n(752305),
-    C = n(974251),
-    Z = n(893718),
-    j = n(249458),
+    Z = n(974251),
+    j = n(893718),
+    C = n(249458),
     I = n(552062),
     P = n(957730),
     w = n(105457),
@@ -41,8 +41,8 @@ var i = n(951288),
     U = n(556296),
     G = n(237997),
     B = n(585483),
-    H = n(838440),
-    F = n(13140),
+    F = n(838440),
+    H = n(13140),
     Y = n(519591),
     K = n(906037),
     X = n(786906),
@@ -156,7 +156,7 @@ class el extends r.Component {
                 },
                 children: () =>
                     (0, i.jsx)(
-                        Z.ZP,
+                        j.ZP,
                         er(ei({}, r), {
                             ref: this.textAreaRef,
                             renderAttachButton: this.renderAttachButton,
@@ -237,7 +237,7 @@ class el extends r.Component {
                           shouldClear: !1,
                           shouldRefocus: !0,
                       })
-                    : (0, H.v)({
+                    : (0, F.v)({
                           openWarningPopout: (e) => this.setState({ contentWarningProps: e }),
                           type: x.Ie.OVERLAY,
                           content: t,
@@ -283,7 +283,7 @@ class el extends r.Component {
                 this.setState({ focused: !1 });
             }),
             en(this, "renderAttachButton", (e, t) =>
-                (0, i.jsx)(C.Z, {
+                (0, i.jsx)(Z.Z, {
                     className: t,
                     channel: this.props.channel,
                     draftType: R.d.ChannelMessage,
@@ -360,7 +360,7 @@ class ea extends r.PureComponent {
                           },
                           t.id,
                       )),
-            (0, i.jsx)(j.G.Provider, {
+            (0, i.jsx)(C.G.Provider, {
                 value: {
                     disableInteractions: u && a && !c,
                     disableAnimations: u && g && !c,
@@ -420,13 +420,13 @@ class ea extends r.PureComponent {
                                                     ),
                                                     children:
                                                         null != t.name && t.name.length > 0
-                                                            ? ee.intl.formatToPlainString(ee.t["9TkYMO"], {
+                                                            ? ee.intl.formatToPlainString(ee.t["9TkYMD"], {
                                                                   keybind: d,
                                                                   channelName: t.isMultiUserDM()
                                                                       ? t.name
                                                                       : "#".concat(t.name),
                                                               })
-                                                            : ee.intl.formatToPlainString(ee.t["hxz/4E"], {
+                                                            : ee.intl.formatToPlainString(ee.t["hxz/4O"], {
                                                                   keybind: d,
                                                               }),
                                                 }),
@@ -557,7 +557,7 @@ function ec(e) {
         s = (0, c.e7)([z.Z], () => z.Z.getChannelId(r)),
         o = (0, c.e7)([k.Z], () => k.Z.getChannel(s)),
         l = (0, c.e7)([U.ZP], () => U.ZP.getOverlayChatKeybind()),
-        a = null != l ? (0, F.BB)(l.shortcut, !0) : "]",
+        a = null != l ? (0, H.BB)(l.shortcut, !0) : "]",
         [d, u, p] = (0, c.Wu)([G.default], () => [
             G.default.getTextWidgetOpacity(),
             G.default.getActiveRegions(),

@@ -2,42 +2,42 @@ n.d(t, { Z: () => f });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
-    o = n.n(a),
-    l = n(481060),
-    c = n(239091),
-    s = n(726521),
+    l = n.n(a),
+    o = n(481060),
+    s = n(239091),
+    c = n(726521),
     u = n(388032),
     d = n(595342);
 function f(e) {
     let { widget: t, userId: n, className: a, menuItems: f } = e,
         g = i.useRef(null),
         p = () => {
-            (0, s.G1)(n, t);
+            (0, c.G1)(n, t);
         };
-    return (0, r.jsx)(l.yRy, {
+    return (0, r.jsx)(o.yRy, {
         targetElementRef: g,
         align: "top",
         position: "right",
         disablePointerEvents: !1,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(l.v2r, {
+            return (0, r.jsx)(o.v2r, {
                 navId: "user-profile-widget-context-menu",
                 onClose: () => {
-                    (0, c.Zy)(), t();
+                    (0, s.Zy)(), t();
                 },
                 onSelect: () => {},
                 "aria-label": u.intl.string(u.t.xpSHSk),
-                children: (0, r.jsxs)(l.kSQ, {
+                children: (0, r.jsxs)(o.kSQ, {
                     children: [
                         (0, r.jsx)(
-                            l.sNh,
+                            o.sNh,
                             {
                                 id: "flag-widget",
                                 label: u.intl.string(u.t.D4GvHB),
                                 action: p,
                                 color: "danger",
-                                icon: l.U65,
+                                icon: o.U65,
                             },
                             "flag-widget",
                         ),
@@ -49,7 +49,7 @@ function f(e) {
         children: (e) => {
             var t, n;
             return (0, r.jsx)(
-                l.P3F,
+                o.P3F,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -79,8 +79,8 @@ function f(e) {
                     {
                         innerRef: g,
                         "aria-label": u.intl.string(u.t.xpSHSk),
-                        className: o()(d.button, a),
-                        children: (0, r.jsx)(l.xhG, {
+                        className: l()(d.button, a),
+                        children: (0, r.jsx)(o.xhG, {
                             size: "sm",
                             color: "currentColor",
                         }),

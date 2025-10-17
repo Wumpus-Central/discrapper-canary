@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(481060),
@@ -16,8 +16,8 @@ var i = n(481060),
     m = n(852926),
     b = n(186901),
     _ = n(981631);
-let O = new u.Z("RPCCommandsOverlay"),
-    E = {
+let E = new u.Z("RPCCommandsOverlay"),
+    O = {
         [_.Etm.SET_OVERLAY_LOCKED]: {
             scope: b.lH,
             validation: (e) =>
@@ -33,7 +33,7 @@ let O = new u.Z("RPCCommandsOverlay"),
                     socket: { application: r },
                 } = e;
                 if (
-                    (O.verbose("RPCCommands.SET_OVERLAY_LOCKED", {
+                    (E.verbose("RPCCommands.SET_OVERLAY_LOCKED", {
                         locked: t,
                         pid: n,
                     }),
@@ -124,7 +124,7 @@ let O = new u.Z("RPCCommandsOverlay"),
                 return new Promise((e) => {
                     (0, i.ZDy)(
                         async () => {
-                            let { default: e } = await n.e("66063").then(n.bind(n, 344516));
+                            let { default: e } = await n.e("51749").then(n.bind(n, 800740));
                             return (t) => {
                                 var n, i;
                                 return (0, r.jsx)(

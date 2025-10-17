@@ -25,7 +25,7 @@ function v(e) {
         }),
         [_, C] = p._T(n),
         [O, y] = p.mR(n),
-        [N, E] = p.PK(n),
+        [E, N] = p.PK(n),
         [I, S] = p.d9(n, 1024),
         { imageCTA: T, imageAriaLabel: P, setFilename: w } = (0, f.Z)(v),
         Z = i.useMemo(() => {
@@ -86,9 +86,9 @@ function v(e) {
                 (0, r.jsx)(a.Kx8, {
                     label: x.intl.string(x.t["1w2WcX"]),
                     placeholder: x.intl.string(x.t.p7Jr4O),
-                    value: N,
+                    value: E,
                     autosize: !0,
-                    onChange: E,
+                    onChange: N,
                     "aria-labelledby": k,
                     disabled: D,
                 }),

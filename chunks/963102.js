@@ -2,43 +2,43 @@ n.d(t, { I: () => A }), n(388685), n(539854);
 var r = n(951288),
     l = n(647438),
     i = n(120356),
-    o = n.n(i),
-    s = n(636977),
-    a = n(442837),
+    a = n.n(i),
+    o = n(636977),
+    s = n(442837),
     c = n(481060),
     u = n(410030),
     d = n(857595),
     g = n(607070),
-    f = n(984370),
-    p = n(110560),
+    p = n(984370),
+    f = n(110560),
     C = n(567400),
     h = n(892001),
     _ = n(507808),
     m = n(825102),
     b = n(775451),
-    E = n(594174),
-    v = n(471731),
-    O = n(870289),
-    x = n(304742),
+    v = n(594174),
+    E = n(471731),
+    x = n(870289),
+    O = n(304742),
     S = n(554067),
     y = n(215023),
-    k = n(981631),
-    j = n(228168),
+    j = n(981631),
+    k = n(228168),
     T = n(388032),
     L = n(421200);
 function I(e) {
     let { tab: t, displayText: n, selected: l, handleTransition: i } = e;
-    return (0, r.jsx)(f.Z.Title, {
+    return (0, r.jsx)(p.Z.Title, {
         onClick: () => i(t),
         wrapperClassName: L.tabWrapper,
-        className: o()(L.tab, { [L.selected]: l }),
+        className: a()(L.tab, { [L.selected]: l }),
         children: n,
     });
 }
 function B(e) {
-    let { tab: t, selected: n, displayText: i, handleTransition: s } = e,
-        [a, u] = l.useState(!1),
-        p = l.useRef(null),
+    let { tab: t, selected: n, displayText: i, handleTransition: o } = e,
+        [s, u] = l.useState(!1),
+        f = l.useRef(null),
         [C, h] = l.useState(0),
         _ = l.useRef(!1),
         m = (e) => {
@@ -58,28 +58,28 @@ function B(e) {
         onMouseEnter: () => m(!0),
         onMouseLeave: () => m(!1),
         children: (0, r.jsx)(c.yRy, {
-            targetElementRef: p,
-            shouldShow: a,
+            targetElementRef: f,
+            shouldShow: s,
             position: "bottom",
             align: "left",
             onRequestOpen: () => m(!0),
             onRequestClose: () => {
                 var e;
-                _.current && !g.Z.keyboardModeEnabled && (0, d.Qj)(), m(!1), null == (e = p.current) || e.focus();
+                _.current && !g.Z.keyboardModeEnabled && (0, d.Qj)(), m(!1), null == (e = f.current) || e.focus();
             },
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, r.jsx)(x.Z, {
-                    handleTransition: s,
+                return (0, r.jsx)(O.Z, {
+                    handleTransition: o,
                     onClose: t,
                 });
             },
             children: (e, l) => {
-                var a, u;
+                var s, u;
                 let { isShown: d } = l;
                 return (0, r.jsx)(
-                    f.Z.Title,
-                    ((a = (function (e) {
+                    p.Z.Title,
+                    ((s = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
@@ -106,11 +106,11 @@ function B(e) {
                     })({}, e)),
                     (u = u =
                         {
-                            ref: p,
-                            onClick: () => s(t),
+                            ref: f,
+                            onClick: () => o(t),
                             onKeyDown: b,
                             wrapperClassName: L.tabWrapper,
-                            className: o()(L.tab, { [L.selected]: n }),
+                            className: a()(L.tab, { [L.selected]: n }),
                             children: (0, r.jsxs)("span", {
                                 className: L.tabWithChevron,
                                 children: [
@@ -128,7 +128,7 @@ function B(e) {
                             }),
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(u))
+                        ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(u))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -137,9 +137,9 @@ function B(e) {
                               }
                               return n;
                           })(Object(u)).forEach(function (e) {
-                              Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(u, e));
+                              Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(u, e));
                           }),
-                    a),
+                    s),
                 );
             },
         }),
@@ -148,9 +148,9 @@ function B(e) {
 function A(e) {
     let { selectedTab: t, handleTransition: n } = e,
         i = (0, u.ZP)(),
-        d = (0, a.e7)([E.default], () => E.default.getCurrentUser()),
+        d = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
         { enabled: g } = (0, m.WX)({ location: "collectibles_shop_header_bar" }),
-        x = (0, C.Y)({ location: "CollectiblesShopHeaderBar" }),
+        O = (0, C.Y)({ location: "CollectiblesShopHeaderBar" }),
         A = [
             {
                 tab: y.AW.HOME,
@@ -166,30 +166,30 @@ function A(e) {
             tab: y.AW.ORBS,
             displayText: T.intl.string(T.t.EBYkzs),
         });
-    let N = t === y.AW.ORBS ? k.ZY5.SHOP_ORBS_TAB : k.ZY5.COLLECTIBLES_SHOP,
+    let N = t === y.AW.ORBS ? j.ZY5.SHOP_ORBS_TAB : j.ZY5.COLLECTIBLES_SHOP,
         P = l.useCallback(() => {
             (0, _.Y)({
                 pageType: N,
-                sectionType: k.jXE.ORBS_BALANCE_MENU,
-                ctaObject: k.qAy.CTA_TO_QUEST_HOME,
+                sectionType: j.jXE.ORBS_BALANCE_MENU,
+                ctaObject: j.qAy.CTA_TO_QUEST_HOME,
             }),
-                (0, p.navigateToQuestHome)({ fromContent: s.j.ORBS_BALANCE_MENU });
+                (0, f.navigateToQuestHome)({ fromContent: o.j.ORBS_BALANCE_MENU });
         }, [N]),
-        R = (0, O.eN)("collectibles_shop_header_bar"),
+        R = (0, x.eN)("collectibles_shop_header_bar"),
         Z = l.useCallback(() => {
             (null == d ? void 0 : d.id) != null &&
                 (0, h.openUserProfileModal)({
                     userId: d.id,
-                    section: j.oh.WISHLIST,
+                    section: k.oh.WISHLIST,
                     showGuildProfile: !1,
                 });
         }, [null == d ? void 0 : d.id]);
     return (0, r.jsx)(c.f6W, {
         theme: i,
         children: (e) =>
-            (0, r.jsxs)(f.Z, {
+            (0, r.jsxs)(p.Z, {
                 disableDoubleClick: !0,
-                className: o()(e, L.headerBar),
+                className: a()(e, L.headerBar),
                 innerClassname: g ? L.headerBarInner : void 0,
                 children: [
                     (0, r.jsxs)(c.P3F, {
@@ -197,8 +197,8 @@ function A(e) {
                         onClick: () => n(y.AW.HOME),
                         "aria-label": T.intl.string(T.t.pWG4zc) + " home",
                         children: [
-                            (0, r.jsx)(v.Z, { className: L.discordLogo }),
-                            (0, r.jsx)(f.Z.Title, { children: T.intl.string(T.t.pWG4zc) }),
+                            (0, r.jsx)(E.Z, { className: L.discordLogo }),
+                            (0, r.jsx)(p.Z.Title, { children: T.intl.string(T.t.pWG4zc) }),
                         ],
                     }),
                     (0, r.jsx)("div", {
@@ -228,7 +228,7 @@ function A(e) {
                                   );
                         }),
                     }),
-                    (g || R || x) &&
+                    (g || R || O) &&
                         (0, r.jsxs)("div", {
                             className: L.alignedRightContent,
                             children: [
@@ -237,7 +237,7 @@ function A(e) {
                                         handleTransition: n,
                                         selectedTab: t,
                                     }),
-                                x &&
+                                O &&
                                     (0, r.jsx)(c.P3F, {
                                         className: L.wishlistButton,
                                         onClick: Z,

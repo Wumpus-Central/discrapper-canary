@@ -3,8 +3,8 @@ var a = n(951288),
     r = n(647438),
     i = n(873546),
     l = n(793030),
-    s = n(442837),
-    o = n(704215),
+    o = n(442837),
+    s = n(704215),
     c = n(481060),
     d = n(393238),
     u = n(100527),
@@ -13,8 +13,8 @@ var a = n(951288),
     h = n(368326),
     x = n(429467),
     f = n(243778),
-    b = n(440051),
-    g = n(734934),
+    g = n(440051),
+    b = n(734934),
     v = n(480173),
     j = n(300284),
     _ = n(680295),
@@ -28,11 +28,11 @@ var a = n(951288),
     P = n(648052),
     I = n(867176),
     w = n(537006),
-    R = n(483424),
-    k = n(681837),
+    k = n(483424),
+    R = n(681837),
     A = n(638970),
-    Z = n(502762),
-    D = n(530),
+    D = n(502762),
+    Z = n(530),
     M = n(309494),
     L = n(4517),
     U = n(350207),
@@ -57,8 +57,8 @@ var a = n(951288),
     er = n(671955),
     ei = n(388032),
     el = n(54482),
-    es = n(116649);
-function eo(e) {
+    eo = n(116649);
+function es(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
@@ -96,36 +96,36 @@ function ec(e) {
         eh = __OVERLAY__,
         ex = (0, E.ZP)(t.id, em),
         { analyticsLocations: ef } = (0, m.ZP)(u.Z.USER_PROFILE_ACCOUNT_POPOUT),
-        eb = (0, y.ZB)({
+        eg = (0, y.ZB)({
             layout: "ACCOUNT_POPOUT",
             userId: t.id,
             guildId: em,
         }),
-        { ref: eg } = (0, d.ZP)(),
-        { isHoveringOrFocusing: ev, isHovering: ej } = (0, p.Z)(eg);
+        { ref: eb } = (0, d.ZP)(),
+        { isHoveringOrFocusing: ev, isHovering: ej } = (0, p.Z)(eb);
     r.useEffect(() => {
-        null == ec || ec(eg.current);
-    }, [eg, ec]),
+        null == ec || ec(eb.current);
+    }, [eb, ec]),
         r.useEffect(() => (K.Z.setState({ isOpen: !0 }), () => K.Z.setState({ isOpen: !1 })), []);
-    let e_ = (0, s.e7)([G.Z], () => G.Z.getStatus(t.id)),
+    let e_ = (0, o.e7)([G.Z], () => G.Z.getStatus(t.id)),
         ey = B.Cr.useSetting(),
         eC = (0, $.F)(ey),
-        { expiringStatusProfileFeedback: eS } = b.Y.useExperiment(
+        { expiringStatusProfileFeedback: eS } = g.Y.useExperiment(
             { location: "UserProfileAccountPopout" },
             { autoTrackExposure: !1 },
         ),
-        eE = (0, s.e7)([z.Z], () => z.Z.hidePersonalInformation),
-        eT = (0, g.p)(),
+        eE = (0, o.e7)([z.Z], () => z.Z.hidePersonalInformation),
+        eT = (0, b.p)(),
         eO = B.Sb.useSetting(),
         eN = (0, $.I)(e_),
         eP = (0, Y.g)(n),
         eI = (0, j.Z)({ analyticsLocations: ef }),
         ew = (0, W.I5)(t),
-        eR = (0, h.p)({ location: "UserProfileAccountPopout" }),
-        ek = (0, S.b)({ location: "UserProfileAccountPopout" }),
+        ek = (0, h.p)({ location: "UserProfileAccountPopout" }),
+        eR = (0, S.b)({ location: "UserProfileAccountPopout" }),
         eA = r.useRef(null),
-        eZ = r.useRef(null),
-        eD = r.useRef((0, K.Z)((e) => e.shouldRenderTenureLevelUp)),
+        eD = r.useRef(null),
+        eZ = r.useRef((0, K.Z)((e) => e.shouldRenderTenureLevelUp)),
         eM = r.useMemo(() => (0, x.Z)(), []),
         [eL, eU] = r.useState(!0);
     r.useEffect(() => {
@@ -136,21 +136,21 @@ function ec(e) {
     let eF = (e) => {
             null == n || n(),
                 (0, O.openUserProfileModal)(
-                    eo(
+                    es(
                         {
                             customStatusPrompt: eM,
                             sourceAnalyticsLocations: ef,
                         },
-                        eb,
+                        eg,
                         e,
                     ),
                 );
         },
         eB = (0, T.Z)({ location: "UserProfileAccountPopout" }),
         eG = (null == ex ? void 0 : ex.widgets) != null && ex.widgets.length > 0,
-        ez = eG ? [] : [o.z.WIDGETS_USER_PROFILE_ACCOUNT_POPOUT_NEW_BADGE],
+        ez = eG ? [] : [s.z.WIDGETS_USER_PROFILE_ACCOUNT_POPOUT_NEW_BADGE],
         [eV, eH] = (0, f.US)(ez),
-        eW = eV === o.z.WIDGETS_USER_PROFILE_ACCOUNT_POPOUT_NEW_BADGE,
+        eW = eV === s.z.WIDGETS_USER_PROFILE_ACCOUNT_POPOUT_NEW_BADGE,
         eK = r.useCallback(() => {
             eH(en.L.USER_DISMISS), n();
         }, [eH, n]),
@@ -163,24 +163,24 @@ function ec(e) {
     return (0, a.jsx)(m.Gt, {
         value: ef,
         children: (0, a.jsx)(y.Mt, {
-            value: eb,
+            value: eg,
             openedAt: eu,
             fetchStartedAt: null == ex ? void 0 : ex.fetchStartedAt,
             fetchEndedAt: null == ex ? void 0 : ex.fetchEndedAt,
             isLoaded: null == ex ? void 0 : ex.isLoaded,
             children: (0, a.jsxs)(c.VqE, {
-                ref: eg,
+                ref: eb,
                 "aria-label": t.username,
                 "data-layer": "base",
                 children: [
-                    (0, a.jsxs)(Z.Z, {
+                    (0, a.jsxs)(D.Z, {
                         className: el.themeContainer,
                         user: t,
                         displayProfile: ex,
                         themeType: er.l.POPOUT,
                         children: [
                             (0, a.jsxs)("div", {
-                                className: es.header,
+                                className: eo.header,
                                 children: [
                                     (0, a.jsx)(I.Z, {
                                         user: t,
@@ -198,7 +198,7 @@ function ec(e) {
                                         user: t,
                                         themeType: er.l.POPOUT,
                                         onCloseProfile: n,
-                                        prompt: eR ? eM : null,
+                                        prompt: ek ? eM : null,
                                     }),
                                 ],
                             }),
@@ -206,7 +206,7 @@ function ec(e) {
                                 className: el.body,
                                 style: { pointerEvents: eL ? "none" : void 0 },
                                 children: [
-                                    (0, a.jsx)(D.Z, {
+                                    (0, a.jsx)(Z.Z, {
                                         user: t,
                                         className: el.username,
                                         nickname: H.ZP.getName(em, null, t),
@@ -217,11 +217,11 @@ function ec(e) {
                                             themeType: er.l.POPOUT,
                                             onClose: n,
                                             shouldOpenBadgeTooltip: null != ed ? (e) => e === ed : void 0,
-                                            shouldGlowTenureBadge: eD.current,
+                                            shouldGlowTenureBadge: eZ.current,
                                         }),
                                         nicknameIcons: (0, a.jsxs)(a.Fragment, {
                                             children: [
-                                                (0, a.jsx)(k.Z, { userId: t.id }),
+                                                (0, a.jsx)(R.Z, { userId: t.id }),
                                                 (0, a.jsx)(M.Z, {
                                                     user: t,
                                                     isVisible: ev,
@@ -247,14 +247,14 @@ function ec(e) {
                                         isPremiumUser: ew,
                                         onInteraction: n,
                                     }),
-                                    ek
+                                    eR
                                         ? (0, a.jsx)(A.Z, {
                                               user: t,
                                               currentUser: t,
                                               onOpenUserProfileModal: eF,
                                               onClose: n,
                                           })
-                                        : (0, a.jsx)(R.Z, {
+                                        : (0, a.jsx)(k.Z, {
                                               user: t,
                                               currentUser: t,
                                               onClose: n,
@@ -262,7 +262,7 @@ function ec(e) {
                                     (0, a.jsxs)("div", {
                                         className: el.menus,
                                         children: [
-                                            (0, a.jsx)(Z.Z.Overlay, {
+                                            (0, a.jsx)(D.Z.Overlay, {
                                                 className: el.menuOverlay,
                                                 children: (0, a.jsxs)(X.XE, {
                                                     children: [
@@ -289,7 +289,7 @@ function ec(e) {
                                                                       text: ei.intl.string(ei.t.y2b7CA),
                                                                   })
                                                                 : void 0,
-                                                            ref: eZ,
+                                                            ref: eD,
                                                         }),
                                                         (0, a.jsx)(X.V4, {
                                                             action: "PRESS_SET_STATUS",
@@ -396,7 +396,7 @@ function ec(e) {
                                                                                               })(e, ["onClose"]);
                                                                                           return (0, a.jsx)(
                                                                                               l.IX,
-                                                                                              ((t = eo(
+                                                                                              ((t = es(
                                                                                                   { onClose: r },
                                                                                                   i,
                                                                                               )),
@@ -479,7 +479,7 @@ function ec(e) {
                                                     ],
                                                 }),
                                             }),
-                                            (0, a.jsx)(Z.Z.Overlay, {
+                                            (0, a.jsx)(D.Z.Overlay, {
                                                 className: el.menuOverlay,
                                                 children: (0, a.jsxs)(X.XE, {
                                                     children: [
@@ -519,14 +519,14 @@ function ec(e) {
                                 ],
                             }),
                             (null == ex ? void 0 : ex.profileEffect) != null &&
-                                !eD.current &&
+                                !eZ.current &&
                                 (0, a.jsx)(_.Z, {
                                     skuId: ex.profileEffect.skuId,
                                     isHovering: ej,
                                 }),
                             !eY && eX
                                 ? (0, a.jsx)(J.Z, {
-                                      targetElementRef: eZ,
+                                      targetElementRef: eD,
                                       onClose: n,
                                   })
                                 : null,

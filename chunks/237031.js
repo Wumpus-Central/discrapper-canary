@@ -71,7 +71,7 @@ let c = "collectibles shop product details modal",
         } = e;
         (0, i.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("16859"), n.e("21885")]).then(n.bind(n, 702370));
+                let { default: e } = await Promise.all([n.e("72740"), n.e("95215")]).then(n.bind(n, 702370));
                 return (n) =>
                     (0, r.jsx)(
                         e,

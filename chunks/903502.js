@@ -3,8 +3,8 @@ var a = n(951288),
     r = n(647438),
     i = n(442837),
     l = n(481060),
-    s = n(570140),
-    o = n(178635),
+    o = n(570140),
+    s = n(178635),
     c = n(115470),
     d = n(246992),
     u = n(531578),
@@ -31,10 +31,10 @@ function h() {
     let [e, t] = r.useState(null),
         [n, h] = r.useState(0),
         [x, f] = r.useState(1000),
-        [b, g] = r.useState(0),
+        [g, b] = r.useState(0),
         v = (0, i.e7)([c.Z], () => {
             var t;
-            return null === e ? null : null != (t = c.Z.getFeedbackConfig(u.nw[e])) ? t : o.R[u.nw[e]];
+            return null === e ? null : null != (t = c.Z.getFeedbackConfig(u.nw[e])) ? t : s.R[u.nw[e]];
         }),
         j = Object.entries(u.nw),
         _ = j.slice(j.length / 2).map((e) => {
@@ -44,7 +44,7 @@ function h() {
                 value: t,
             };
         }),
-        y = r.useMemo(() => null != e && b >= 0 && b <= 100 && n >= 0, [e, b, n]);
+        y = r.useMemo(() => null != e && g >= 0 && g <= 100 && n >= 0, [e, g, n]);
     return (0, a.jsx)("div", {
         className: m.container,
         children: (0, a.jsxs)(l.Kqy, {
@@ -121,9 +121,9 @@ function h() {
                         helperText: "As a percentage",
                         min: 0,
                         max: 100,
-                        value: b.toString(),
+                        value: g.toString(),
                         type: "number",
-                        onChange: (e) => g(parseFloat(e)),
+                        onChange: (e) => b(parseFloat(e)),
                     }),
                 }),
                 (0, a.jsxs)(l.ButtonGroup, {
@@ -134,7 +134,7 @@ function h() {
                             onClick: () =>
                                 void (
                                     null != v &&
-                                    s.Z.dispatch({
+                                    o.Z.dispatch({
                                         type: "FEEDBACK_OVERRIDE_CLEAR",
                                         feedbackType: v.feedbackType,
                                     })
@@ -147,11 +147,11 @@ function h() {
                             onClick: () =>
                                 void (
                                     null != v &&
-                                    s.Z.dispatch({
+                                    o.Z.dispatch({
                                         type: "FEEDBACK_OVERRIDE_SET",
                                         feedbackType: v.feedbackType,
                                         cooldown: n * x,
-                                        chance: b / 100,
+                                        chance: g / 100,
                                     })
                                 ),
                             disabled: !y,
@@ -170,7 +170,7 @@ function h() {
                         color: "text-danger",
                         children: "Error: cooldown needs to be a number greater than 0",
                     }),
-                !(b >= 0 && b <= 100) &&
+                !(g >= 0 && g <= 100) &&
                     (0, a.jsx)(l.Text, {
                         variant: "text-sm/normal",
                         color: "text-danger",

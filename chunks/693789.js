@@ -168,8 +168,8 @@ function v(e) {
             onKeyDown: L,
             children: x,
             rel: M,
-            buttonRef: j,
-            focusProps: k,
+            buttonRef: k,
+            focusProps: j,
             "aria-label": U,
             submittingStartedLabel: G,
             submittingFinishedLabel: B,
@@ -205,7 +205,7 @@ function v(e) {
     let F = _ || m,
         V = F && (null != w || null != D),
         H = V ? null : T,
-        Y = y(k, t),
+        Y = y(j, t),
         W = i.useRef(!1);
     i.useEffect(() => {
         !0 === m && ((W.current = !0), l.uvj.announce(null != G ? G : c.intl.string(c.t.pfChQk))),
@@ -213,14 +213,14 @@ function v(e) {
     }, [m, G, B]);
     let K = (0, r.jsx)(
         l.tEY,
-        p(f({}, k), {
+        p(f({}, j), {
             offset: Y,
             children: (0, r.jsxs)(
                 "button",
                 p(f({}, F ? null : Z), {
                     "aria-label": U,
                     "aria-busy": !!m || void 0,
-                    ref: j,
+                    ref: k,
                     onClick: F ? (e) => e.preventDefault() : C,
                     onDoubleClick: F ? (e) => e.preventDefault() : N,
                     onMouseUp: _ ? void 0 : P,

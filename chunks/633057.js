@@ -37,18 +37,18 @@ function l(t) {
                         (0, i.jsx)(s.Heading, {
                             variant: "heading-xl/semibold",
                             className: o.title,
-                            children: a.intl.string(a.t.xSV3nU),
+                            children: a.intl.string(a.t.xSV3nZ),
                         }),
                         (0, i.jsx)(s.Text, {
                             variant: "text-md/normal",
                             className: o.text,
-                            children: a.intl.string(a.t.jPMGbB),
+                            children: a.intl.string(a.t.jPMGbG),
                         }),
                         (0, i.jsx)("div", {
                             className: o.buttonContainer,
                             children: (0, i.jsx)(s.Button, {
                                 variant: "primary",
-                                text: a.intl.string(a.t["NX+WJN"]),
+                                text: a.intl.string(a.t["NX+WJC"]),
                                 onClick: e,
                             }),
                         }),

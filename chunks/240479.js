@@ -73,12 +73,12 @@ function C(e) {
     }, [u, P, t.guildId, t.soundId]);
     let { buttonType: L, description: x } = (0, y.Z)(t, n, v, C),
         M = L === y.y.JOIN_GUILD,
-        j = !E && w,
-        k = i.useMemo(
+        k = !E && w,
+        j = i.useMemo(
             () => (v ? d.JO.createFromGuildRecord(O) : null != C ? d.JO.createFromDiscoverableGuild(C) : void 0),
             [O, v, C],
         );
-    return j
+    return k
         ? (0, r.jsx)(_.SE, {})
         : (0, r.jsxs)("div", {
               className: S.infoContainer,
@@ -101,7 +101,7 @@ function C(e) {
                                   }),
                               ],
                           }),
-                          null != k &&
+                          null != j &&
                               (0, r.jsxs)("div", {
                                   className: S.infoExpandedGuildContainer,
                                   children: [
@@ -114,7 +114,7 @@ function C(e) {
                                       (0, r.jsx)("div", {
                                           className: S.infoExpandedGuildInfo,
                                           children: (0, r.jsx)(f.Oe, {
-                                              expressionSourceGuild: k,
+                                              expressionSourceGuild: j,
                                               hasJoinedExpressionSourceGuild: v,
                                               isDisplayingJoinGuildButtonInPopout: M,
                                           }),

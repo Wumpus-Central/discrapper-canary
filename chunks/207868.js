@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(557135),
     d = n(590293),
     u = n(66999),
-    h = n(665906),
-    p = n(496675),
+    p = n(665906),
+    h = n(496675),
     f = n(979651),
     g = n(585483),
     m = n(665149),
@@ -20,9 +20,9 @@ let _ = i.memo(function (e) {
         n = (0, d.Z)(),
         l = (0, s.e7)([f.Z], () => f.Z.isInChannel(t.id)),
         _ = (0, s.e7)([f.Z], () => !a().isEmpty(f.Z.getVoiceStatesForChannel(t.id))),
-        j = (0, s.e7)([p.Z], () => p.Z.can(b.Plq.CONNECT, t)),
+        j = (0, s.e7)([h.Z], () => h.Z.can(b.Plq.CONNECT, t)),
         { needSubscriptionToAccess: O } = (0, u.Z)(t.id),
-        x = (0, h.$R)(t),
+        x = (0, p.$R)(t),
         v = i.useCallback(() => {
             c.Z.handleVoiceConnect({
                 channel: t,
@@ -40,7 +40,7 @@ let _ = i.memo(function (e) {
         ),
         [v],
     ),
-    h.tM.useExperiment(
+    p.tM.useExperiment(
         {
             guildId: t.guild_id,
             location: "63250c_1",

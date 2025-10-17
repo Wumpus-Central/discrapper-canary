@@ -21,8 +21,8 @@ var r = n(951288),
     C = n(164000),
     O = n(293810),
     y = n(333866),
-    N = n(388032),
-    E = n(858760);
+    E = n(388032),
+    N = n(858760);
 let I = (0, x.Mg)(d.Z.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_OVERVIEW_SETTINGS_MAX_WIDTH);
 function S(e) {
     var t;
@@ -40,7 +40,7 @@ function S(e) {
         [Z, R] = i.useState(x),
         [D, A] = i.useState(null == d ? void 0 : d.store_page_guild_products_default_sort),
         [L, k] = i.useState(null == d ? void 0 : d.server_shop_tab_order),
-        { loading: M, error: G, updateSubscriptionsSettings: U } = (0, j.QV)(),
+        { loading: G, error: M, updateSubscriptionsSettings: U } = (0, j.QV)(),
         { imageCTA: B, imageAriaLabel: F, setFilename: H } = (0, _.Z)(null == d ? void 0 : d.cover_image_asset),
         W = (0, p.Dt)();
     function V(e, t) {
@@ -74,25 +74,25 @@ function S(e) {
         X = i.useMemo(
             () => [
                 {
-                    label: N.intl.string(N.t.X6h2g4),
+                    label: E.intl.string(E.t.X6h2g4),
                     value: y.a3.PRODUCTS_FIRST,
                 },
                 {
-                    label: N.intl.string(N.t["KzCF//"]),
+                    label: E.intl.string(E.t["KzCF//"]),
                     value: y.a3.SUBS_FIRST,
                 },
             ],
             [],
         );
     return (0, r.jsxs)("div", {
-        className: E.container,
+        className: N.container,
         children: [
-            null != G &&
+            null != M &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(g.M14, {
                             type: "critical",
-                            children: G.getAnyErrorMessage(),
+                            children: M.getAnyErrorMessage(),
                         }),
                         (0, r.jsx)(g.LZC, { size: 16 }),
                     ],
@@ -102,8 +102,8 @@ function S(e) {
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(g.FXm, {
-                              label: N.intl.string(N.t["PAVi+/"]),
-                              description: N.intl.string(N.t.x87YqK),
+                              label: E.intl.string(E.t["PAVi+/"]),
+                              description: E.intl.string(E.t.x87YqK),
                               value: S,
                               onChange: (e) => {
                                   s !== e &&
@@ -140,12 +140,12 @@ function S(e) {
                                               })({}, e)),
                                               (n = n =
                                                   {
-                                                      header: N.intl.string(N.t.dmVoOz),
-                                                      confirmText: N.intl.string(N.t["NX+WJC"]),
+                                                      header: E.intl.string(E.t.dmVoOz),
+                                                      confirmText: E.intl.string(E.t["NX+WJC"]),
                                                       confirmButtonColor: u.zx.Colors.BRAND,
                                                       children: (0, r.jsx)(g.Text, {
                                                           variant: "text-md/normal",
-                                                          children: N.intl.string(N.t.mtwzdH),
+                                                          children: E.intl.string(E.t.mtwzdH),
                                                       }),
                                                   }),
                                               Object.getOwnPropertyDescriptors
@@ -172,25 +172,25 @@ function S(e) {
                               disabled: Y,
                               options: [
                                   {
-                                      name: N.intl.string(N.t.rXqxhI),
-                                      desc: N.intl.string(N.t.yQiJnZ),
+                                      name: E.intl.string(E.t.rXqxhI),
+                                      desc: E.intl.string(E.t.yQiJnZ),
                                       value: O.e3.SOME_CHANNELS,
                                       icon: g.VL1,
                                   },
                                   {
-                                      name: N.intl.string(N.t.WzC9s7),
-                                      desc: N.intl.string(N.t.WmagiI),
+                                      name: E.intl.string(E.t.WzC9s7),
+                                      desc: E.intl.string(E.t.WmagiI),
                                       value: O.e3.ALL_CHANNELS,
                                       icon: g._m8,
                                   },
                               ],
                           }),
-                          (0, r.jsx)(g.izJ, { className: E.divider }),
+                          (0, r.jsx)(g.izJ, { className: N.divider }),
                       ],
                   }),
             (0, r.jsx)(g.Kx8, {
-                label: N.intl.string(N.t["1+Ho1d"]),
-                placeholder: l ? N.intl.string(N.t.SD6LRU) : N.intl.string(N.t["aVhW/f"]),
+                label: E.intl.string(E.t["1+Ho1d"]),
+                placeholder: l ? E.intl.string(E.t.SD6LRU) : E.intl.string(E.t["aVhW/f"]),
                 maxLength: 1500,
                 value: P,
                 autosize: !0,
@@ -198,10 +198,10 @@ function S(e) {
                 "aria-labelledby": W,
                 disabled: Y,
             }),
-            (0, r.jsx)(g.izJ, { className: E.divider }),
+            (0, r.jsx)(g.izJ, { className: N.divider }),
             (0, r.jsxs)(g.gNt, {
-                label: N.intl.string(N.t["0kpTpK"]),
-                description: N.intl.string(N.t.i2rCwc),
+                label: E.intl.string(E.t["0kpTpK"]),
+                description: E.intl.string(E.t.i2rCwc),
                 children: [
                     (0, r.jsx)(h.Z, {
                         image: Z,
@@ -209,10 +209,10 @@ function S(e) {
                         showIcon: !0,
                         showRemoveButton: !1,
                         hideSize: !0,
-                        className: E.coverImageUploader,
-                        iconWrapperClassName: E.coverImageUploaderIconWrapper,
-                        imageClassName: E.coverImageUploaderInner,
-                        iconClassName: E.coverImageUploaderIcon,
+                        className: N.coverImageUploader,
+                        iconWrapperClassName: N.coverImageUploaderIconWrapper,
+                        imageClassName: N.coverImageUploaderInner,
+                        iconClassName: N.coverImageUploaderIcon,
                         onChange: V,
                         "aria-label": F,
                         disabled: Y,
@@ -230,12 +230,12 @@ function S(e) {
             l
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)(g.izJ, { className: E.divider }),
+                          (0, r.jsx)(g.izJ, { className: N.divider }),
                           (0, r.jsx)(g.q4e, {
-                              label: N.intl.string(N.t.aaZ9pK),
-                              description: N.intl.string(N.t.TILN8v),
+                              label: E.intl.string(E.t.aaZ9pK),
+                              description: E.intl.string(E.t.TILN8v),
                               value: D,
-                              placeholder: N.intl.string(N.t.XqMe3N),
+                              placeholder: E.intl.string(E.t.XqMe3N),
                               options: q,
                               onChange: (e) => A(e),
                           }),
@@ -245,12 +245,12 @@ function S(e) {
             X.length > 0 &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(g.izJ, { className: E.divider }),
+                        (0, r.jsx)(g.izJ, { className: N.divider }),
                         (0, r.jsx)(g.q4e, {
-                            label: N.intl.string(N.t["+dtmw8"]),
-                            description: N.intl.string(N.t.n8WSWF),
+                            label: E.intl.string(E.t["+dtmw8"]),
+                            description: E.intl.string(E.t.n8WSWF),
                             value: L,
-                            placeholder: N.intl.string(N.t.XqMe3N),
+                            placeholder: E.intl.string(E.t.XqMe3N),
                             options: X,
                             onChange: (e) => k(e),
                         }),
@@ -258,12 +258,12 @@ function S(e) {
                 }),
             (0, r.jsx)(c.W, {
                 component: "div",
-                className: E.contentRegion,
+                className: N.contentRegion,
                 children:
                     z &&
                     (0, r.jsx)(g.oXn, {
                         children: (0, r.jsx)(m.Z, {
-                            submitting: M,
+                            submitting: G,
                             disabled: !K,
                             onReset: () => {
                                 var e;
@@ -284,7 +284,7 @@ function S(e) {
                                     L !== d.server_shop_tab_order && (e.server_shop_tab_order = L),
                                     o().isEmpty(e) || U(n.id, e);
                             },
-                            saveButtonTooltip: K ? void 0 : N.intl.string(N.t["6HRvio"]),
+                            saveButtonTooltip: K ? void 0 : E.intl.string(E.t["6HRvio"]),
                         }),
                     }),
             }),

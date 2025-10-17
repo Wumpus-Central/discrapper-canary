@@ -105,7 +105,7 @@ function _(e) {
                     (0, a.jsx)(l.Clw, {}),
                     (0, a.jsx)(l.sNh, {
                         id: "manage-accounts",
-                        label: v.intl.string(v.t.WbFpq4),
+                        label: v.intl.string(v.t.WbFpq6),
                         action: () => {
                             null == e || e(), (0, g.Z)();
                         },

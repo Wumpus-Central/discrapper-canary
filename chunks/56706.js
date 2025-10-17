@@ -3,8 +3,8 @@ var a = n(951288),
     r = n(647438),
     i = n(481060),
     l = n(570140),
-    s = n(750180),
-    o = n(358820),
+    o = n(750180),
+    s = n(358820),
     c = n(585483),
     d = n(981631),
     u = n(451429),
@@ -14,7 +14,7 @@ function p() {
         n = r.useCallback(() => {
             l.Z.dispatch({
                 type: "VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE",
-                state: s.O.LOADING,
+                state: o.O.LOADING,
             });
         }, []);
     return (0, a.jsx)(i.zJl, {
@@ -64,7 +64,7 @@ function p() {
                             size: "sm",
                             text: "Reset",
                             onClick: () => {
-                                (0, o.wV)();
+                                (0, s.wV)();
                             },
                         }),
                     ],

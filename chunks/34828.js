@@ -1,6 +1,6 @@
 n.d(t, {
     X: () => C,
-    Z: () => N,
+    Z: () => T,
 }),
     n(35282);
 var r,
@@ -31,8 +31,8 @@ let g = { ignoredDevices: {} },
     m = g,
     b = !1,
     _ = {},
-    O = {},
     E = {},
+    O = {},
     v = {
         id: null,
         justChanged: !1,
@@ -62,7 +62,7 @@ function S(e, t, n) {
             }
           : e;
 }
-class T extends (r = a.ZP.DeviceSettingsStore) {
+class N extends (r = a.ZP.DeviceSettingsStore) {
     initialize(e) {
         this.waitFor(u.Z, c.Z), (m = null != e ? e : g);
     }
@@ -73,7 +73,7 @@ class T extends (r = a.ZP.DeviceSettingsStore) {
         return b;
     }
     get lastDeviceConnected() {
-        return E;
+        return O;
     }
     get inputDevices() {
         return _;
@@ -82,15 +82,15 @@ class T extends (r = a.ZP.DeviceSettingsStore) {
         return v;
     }
     get outputDevices() {
-        return O;
+        return E;
     }
     get lastOutputSystemDevice() {
         return y;
     }
 }
-h(T, "displayName", "ConnectedDeviceStore"),
-    h(T, "persistKey", "ConnectedDeviceStore"),
-    h(T, "migrations", [
+h(N, "displayName", "ConnectedDeviceStore"),
+    h(N, "persistKey", "ConnectedDeviceStore"),
+    h(N, "migrations", [
         (e) => {
             if (null == e.ignoredDevices) {
                 var t, n;
@@ -130,7 +130,7 @@ h(T, "displayName", "ConnectedDeviceStore"),
             return e;
         },
     ]);
-let N = new T(o.Z, {
+let T = new N(o.Z, {
     MEDIA_ENGINE_DEVICES: function (e) {
         let { inputDevices: t, outputDevices: n } = e,
             r = {};
@@ -154,29 +154,29 @@ let N = new T(o.Z, {
             }),
             !b)
         ) {
-            (_ = r), (O = i), (b = !0);
+            (_ = r), (E = i), (b = !0);
             return;
         }
         let a = Object.keys(_),
             o = Object.keys(r),
-            s = Object.keys(O),
+            s = Object.keys(E),
             c = Object.keys(i),
             u = l().difference(a, o),
             d = l().difference(s, c);
         return (
             u.length > 0 || d.length > 0
-                ? (E = {})
+                ? (O = {})
                 : (l()
                       .difference(o, a)
                       .forEach((e) => {
-                          E[e] = S(E[e], e, p.Q.INPUT);
+                          O[e] = S(O[e], e, p.Q.INPUT);
                       }),
                   l()
                       .difference(c, s)
                       .forEach((e) => {
-                          E[e] = S(E[e], e, p.Q.OUTPUT);
+                          O[e] = S(O[e], e, p.Q.OUTPUT);
                       })),
-            !(l().isEqual(a, o) && l().isEqual(s, c)) && ((_ = r), (O = i), !0)
+            !(l().isEqual(a, o) && l().isEqual(s, c)) && ((_ = r), (E = i), !0)
         );
     },
     CONNECTED_DEVICE_SWITCH: function (e) {
@@ -186,20 +186,20 @@ let N = new T(o.Z, {
             null != e && o.Z.wait(() => s.Z.setInputDevice(e, { location: r }));
         }
         if (n === p.a.OUTPUT || n === p.a.INPUT_AND_OUTPUT) {
-            let e = O[t];
+            let e = E[t];
             o.Z.wait(() => s.Z.setOutputDevice(e, { location: r }));
         }
-        delete E[t];
+        delete O[t];
     },
     CONNECTED_DEVICE_DONT_SWITCH: function (e) {
         let { displayName: t } = e;
-        delete E[t];
+        delete O[t];
     },
     CONNECTED_DEVICE_IGNORE: function (e) {
         let { displayName: t } = e;
-        (m.ignoredDevices[t] = !0), delete E[t];
+        (m.ignoredDevices[t] = !0), delete O[t];
     },
     CONNECTED_DEVICE_NEVER_SHOW_MODAL: function () {
-        (E = {}), (m.neverShowModal = !0);
+        (O = {}), (m.neverShowModal = !0);
     },
 });

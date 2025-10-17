@@ -5,15 +5,15 @@ var r = t(951288),
     l = t(442837),
     s = t(481060),
     o = t(809206),
-    d = t(204418),
-    c = t(583434),
+    c = t(204418),
+    d = t(583434),
     u = t(164946),
     m = t(25990),
     p = t(594174),
     f = t(960048),
     g = t(509212),
-    x = t(272008),
-    C = t(113434),
+    C = t(272008),
+    x = t(113434),
     v = t(497505),
     h = t(475595),
     j = t(515108),
@@ -24,8 +24,8 @@ var r = t(951288),
 function w(e) {
     var n;
     let { quest: t, avatarDeco: a, onUseNow: i, user: l, mode: o } = e,
-        c = (0, h.fh)(t, h.eC.REWARD).url,
-        u = (0, C.Qy)(t.config),
+        d = (0, h.fh)(t, h.eC.REWARD).url,
+        u = (0, x.Qy)(t.config),
         m =
             (null == (n = l.avatarDecoration) ? void 0 : n.skuId) != null &&
             l.avatarDecoration.skuId === (null == a ? void 0 : a.skuId);
@@ -34,12 +34,12 @@ function w(e) {
         children: [
             (0, r.jsx)("div", {
                 className: b.previewContainer,
-                children: (0, r.jsx)(d.Z, {
+                children: (0, r.jsx)(c.Z, {
                     user: l,
                     guildId: null,
                     avatarDecorationOverride: a,
                     avatarSize: s.EFr.SIZE_152,
-                    questPreviewRewardAssetUrl: c,
+                    questPreviewRewardAssetUrl: d,
                 }),
             }),
             (0, r.jsxs)("div", {
@@ -72,11 +72,11 @@ function w(e) {
 }
 function T(e) {
     var n, t;
-    let { quest: s, onClose: d, transitionState: C, preview: h, location: N, sourceQuestContent: b } = e,
+    let { quest: s, onClose: c, transitionState: x, preview: h, location: N, sourceQuestContent: b } = e,
         T = a.useMemo(() => (0, g.xn)(s.config), [s]),
         E = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
         [A, P] = (function (e) {
-            let { product: n, isFetching: t } = (0, c.T)(e),
+            let { product: n, isFetching: t } = (0, d.T)(e),
                 r = a.useMemo(() => {
                     if (null == n || t) return null;
                     let e = n.items.find((e) => e.type === i.Z.AVATAR_DECORATION);
@@ -98,7 +98,7 @@ function T(e) {
         [L, S] = a.useState(O ? "loading" : "claimed");
     a.useEffect(() => {
         O &&
-            (0, x.QB)(s.id, v.y$.CROSS_PLATFORM, N)
+            (0, C.QB)(s.id, v.y$.CROSS_PLATFORM, N)
                 .then(() => S("claimed"))
                 .catch(() => S("error"));
     }, [s.id, N, O]);
@@ -110,8 +110,8 @@ function T(e) {
             S("applying"), S((await P()) ? "applied" : "claimed");
         };
     return (0, r.jsx)(j.Z, {
-        onClose: d,
-        transitionState: C,
+        onClose: c,
+        transitionState: x,
         quest: s,
         sourceQuestContent: b,
         location: y.dr.COLLECTIBLE_REWARD_MODAL,

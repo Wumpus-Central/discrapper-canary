@@ -32,8 +32,8 @@ var r = n(951288),
     L = n(981631),
     x = n(228168),
     M = n(388032),
-    j = n(852529);
-function k(e, t, n) {
+    k = n(852529);
+function j(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -57,7 +57,7 @@ function U(e) {
                 }),
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                j(e, t, n[t]);
             });
     }
     return e;
@@ -91,13 +91,13 @@ function Z(e) {
     if (null != s)
         switch (a) {
             case D.iO.LESS_THAN:
-                t = M.intl.format(M.t["2p7dA3"], {
+                t = M.intl.format(M.t["2p7dAw"], {
                     description: s,
                     count: Math.max(0, Number(o) - 1),
                 });
                 break;
             case D.iO.GREATER_THAN:
-                t = M.intl.format(M.t["2p7dA3"], {
+                t = M.intl.format(M.t["2p7dAw"], {
                     description: s,
                     count: Math.max(0, Number(o) + 1),
                 });
@@ -115,12 +115,12 @@ function Z(e) {
     return null == t
         ? null
         : (0, r.jsxs)("div", {
-              className: j.popoutCheck,
+              className: k.popoutCheck,
               children: [
                   (0, r.jsx)(p.dz2, {
                       size: "md",
                       color: "currentColor",
-                      className: j.popoutCheckIcon,
+                      className: k.popoutCheckIcon,
                   }),
                   (0, r.jsx)(p.Text, {
                       variant: "text-xs/medium",
@@ -150,35 +150,35 @@ function F(e) {
             return (
                 A.SJ.includes(null != (t = null == h ? void 0 : h.id) ? t : "")
                     ? (l = (0, r.jsx)(P.Z, {
-                          className: j.botTag,
+                          className: k.botTag,
                           color: i,
                           size: 16,
                       }))
                     : null != g &&
                       (l = (0, r.jsx)(O.Z, {
-                          className: j.botTag,
+                          className: k.botTag,
                           verified: g.isVerifiedBot(),
                       })),
                 (0, r.jsxs)(
                     "div",
                     {
-                        className: j.popoutChecksGroup,
+                        className: k.popoutChecksGroup,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: j.popoutCheckGroupName,
+                                className: k.popoutCheckGroupName,
                                 children: [
                                     null != _
                                         ? (0, r.jsx)("img", {
                                               src: (0, f.wj)(n) ? _.icon.darkSVG : _.icon.lightSVG,
                                               alt: "",
-                                              className: j.popoutCheckGroupPlatformIcon,
+                                              className: k.popoutCheckGroupPlatformIcon,
                                           })
                                         : null,
                                     null != g
                                         ? (0, r.jsx)(m.Z, {
                                               user: g,
                                               size: p.EFr.SIZE_20,
-                                              className: j.popoutCheckGroupPlatformIcon,
+                                              className: k.popoutCheckGroupPlatformIcon,
                                           })
                                         : null,
                                     (0, r.jsx)(p.Text, {
@@ -254,41 +254,41 @@ function V(e) {
     return (
         (t =
             1 === o.length && 1 === o[0].length
-                ? M.intl.string(M.t.jDym4E)
+                ? M.intl.string(M.t.jDym4O)
                 : 1 === o.length
-                  ? M.intl.format(M.t["0eBj3x"], {})
-                  : M.intl.format(M.t.D7uftB, {})),
+                  ? M.intl.format(M.t["0eBj39"], {})
+                  : M.intl.format(M.t.D7uftL, {})),
         (0, r.jsxs)("div", {
-            className: j.popout,
+            className: k.popout,
             children: [
                 (0, r.jsx)("div", {
-                    className: j.popoutHeaderContainer,
+                    className: k.popoutHeaderContainer,
                     children: (0, r.jsx)(p.Text, {
                         variant: "text-xs/normal",
                         color: "text-default",
-                        className: j.popoutHeaderText,
+                        className: k.popoutHeaderText,
                         children: t,
                     }),
                 }),
                 (0, r.jsx)("div", {
-                    className: j.popoutChecks,
+                    className: k.popoutChecks,
                     children: (0, r.jsx)(F, { eligibilityStates: o.flat() }),
                 }),
                 (0, r.jsxs)("div", {
-                    className: j.buttonContainer,
+                    className: k.buttonContainer,
                     children: [
                         f
                             ? null
                             : (0, r.jsx)(_.zx, {
-                                  className: j.getRolesButton,
+                                  className: k.getRolesButton,
                                   onClick: n,
                                   children: M.intl.string(M.t.T1t1WV),
                               }),
                         (0, r.jsx)(_.zx, {
-                            className: j.viewConnectionsButton,
+                            className: k.viewConnectionsButton,
                             color: _.zx.Colors.PRIMARY,
                             onClick: a,
-                            children: M.intl.string(M.t.hgKDnG),
+                            children: M.intl.string(M.t.hgKDnJ),
                         }),
                     ],
                 }),
@@ -346,28 +346,28 @@ function H(e) {
         nudgeAlignIntoViewport: !0,
         children: (e) =>
             (0, r.jsx)(d.u, {
-                text: M.intl.string(M.t.Wpsnar),
+                text: M.intl.string(M.t.Wpsnam),
                 children: (0, r.jsxs)(
                     "div",
                     B(
                         U(
                             {
                                 ref: g,
-                                className: j.badge,
+                                className: k.badge,
                             },
                             e,
                         ),
                         {
                             children: [
                                 (0, r.jsx)(R.Z, {
-                                    className: j.badgeVerifiedIcon,
+                                    className: k.badgeVerifiedIcon,
                                     size: 16,
                                     color: u.colorString,
                                 }),
                                 (0, r.jsx)(p.Text, {
                                     variant: "text-xs/bold",
                                     color: "header-primary",
-                                    className: j.roleName,
+                                    className: k.roleName,
                                     children: u.name,
                                 }),
                             ],

@@ -1,4 +1,4 @@
-n.d(t, { t: () => k }), n(388685), n(35282), n(413496), n(433524);
+n.d(t, { t: () => j }), n(388685), n(35282), n(413496), n(433524);
 var r = n(951288),
     i = n(647438),
     a = n(238651),
@@ -120,7 +120,7 @@ function M(e) {
             return "enter";
     }
 }
-let j = i.forwardRef(function (e, t) {
+let k = i.forwardRef(function (e, t) {
     let { sprites: n } = e,
         [o, l] = i.useState(null),
         { confettiCanvas: c } = i.useContext(s.h),
@@ -175,7 +175,7 @@ let j = i.forwardRef(function (e, t) {
         })
     );
 });
-function k(e) {
+function j(e) {
     let { children: t } = e,
         n = i.useRef({}),
         [a, s] = i.useState(null),
@@ -228,7 +228,7 @@ function k(e) {
                   Object.keys(w).map((e) => {
                       let t = w[e];
                       return (0, r.jsx)(
-                          j,
+                          k,
                           {
                               ref: (t) => {
                                   null != t ? (n.current[e] = t) : delete n.current[e];

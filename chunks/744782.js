@@ -27,24 +27,24 @@ function O(e) {
             return null != C ? (null == (e = u.ZP.getDefaultChannel(C)) ? void 0 : e.id) : null;
         }, [C]),
         S = (0, l.e7)([d.Z], () => d.Z.getGuild(C), [C]),
-        { channel_id: I, id: T } = null != N ? N : {},
-        Z = (0, l.e7)([g.Z], () => {
+        { channel_id: I, id: Z } = null != N ? N : {},
+        T = (0, l.e7)([g.Z], () => {
             let e = null != I ? I : P;
             return null == e ? null : g.Z.getInvite(e);
         }, [I, P]);
     if (null == N) return E(), null;
-    let w = null != (t = null == S ? void 0 : S.vanityURLCode) ? t : null == Z ? void 0 : Z.code,
-        D =
+    let w = null != (t = null == S ? void 0 : S.vanityURLCode) ? t : null == T ? void 0 : T.code,
+        k =
             null != w
                 ? (0, a.tV)({
                       baseCode: w,
-                      guildScheduledEventId: T,
+                      guildScheduledEventId: Z,
                   })
                 : null,
-        k = null == D || null == Z,
-        R = (0, s.Z)(null != D ? D : ""),
-        A = null != (n = null == Z ? void 0 : Z.maxAge) ? n : b.value,
-        _ = null != (O = null == Z ? void 0 : Z.maxUses) ? O : y.value;
+        D = null == k || null == T,
+        R = (0, s.Z)(null != k ? k : ""),
+        A = null != (n = null == T ? void 0 : T.maxAge) ? n : b.value,
+        _ = null != (O = null == T ? void 0 : T.maxUses) ? O : y.value;
     return (0, r.jsxs)("div", {
         className: f.container,
         children: [
@@ -87,7 +87,7 @@ function O(e) {
                         value: R,
                         autoFocus: !1,
                         onCopy: (e) => {
-                            if (k) return;
+                            if (D) return;
                             (0, x.JG)(e);
                             let t = (0, v.xC)(N.entity_type);
                             m.default.track(p.rMx.COPY_INSTANT_INVITE, {
@@ -95,7 +95,7 @@ function O(e) {
                                 channel: I,
                                 channel_type: t,
                                 location: p.t4x.GUILD_EVENTS,
-                                code: Z.code,
+                                code: T.code,
                                 guild_scheduled_event_id: null == N ? void 0 : N.id,
                             });
                         },

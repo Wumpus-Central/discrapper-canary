@@ -24,7 +24,7 @@ function _(e) {
         {
             fetchedEmbed: O,
             embedEnabled: y,
-            embedChannelId: N,
+            embedChannelId: E,
         } = (0, s.cj)([f.Z], () => {
             let { fetchedEmbed: e, embedEnabled: t, embedChannelId: n } = f.Z.getProps();
             return {
@@ -33,7 +33,7 @@ function _(e) {
                 embedChannelId: n,
             };
         }),
-        E = i.useMemo(() => (0, b.S)(t), [t]),
+        N = i.useMemo(() => (0, b.S)(t), [t]),
         I = i.useMemo(() => (0, b.a)(t), [t]),
         [S, T] = i.useState(!1),
         P = null != c && l.Y.VISIBLE.has(c.visibility),
@@ -46,9 +46,9 @@ function _(e) {
         }, [t, m]);
     let Z = i.useCallback(
         async (e) => {
-            T(!0), await (0, h.c)(t, e, N), T(!1);
+            T(!0), await (0, h.c)(t, e, E), T(!1);
         },
-        [N, t],
+        [E, t],
     );
     return O
         ? (0, r.jsxs)(r.Fragment, {
@@ -75,7 +75,7 @@ function _(e) {
                                     description: j.intl.string(j.t.LxVR9P),
                                     guildId: t,
                                     widgetEnabled: y,
-                                    widgetChannelId: N,
+                                    widgetChannelId: E,
                                     enableLocalUpdate: !0,
                                 }),
                                 (0, r.jsxs)("div", {
@@ -92,7 +92,7 @@ function _(e) {
                                             className: v.column,
                                             children: (0, r.jsx)(a.gNt, {
                                                 label: j.intl.string(j.t.VECJcH),
-                                                children: (0, r.jsx)(d.Z, { value: E }),
+                                                children: (0, r.jsx)(d.Z, { value: N }),
                                             }),
                                         }),
                                     ],

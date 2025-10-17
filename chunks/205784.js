@@ -43,7 +43,7 @@ function p(e) {
                         label: f.intl.string(f.t.Dx7im5),
                         action: () =>
                             (0, i.ZDy)(async () => {
-                                let { default: e } = await n.e("66915").then(n.bind(n, 662708));
+                                let { default: e } = await n.e("77250").then(n.bind(n, 643087));
                                 return (t) => {
                                     var n, l;
                                     return (0, r.jsx)(

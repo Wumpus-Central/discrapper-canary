@@ -1,11 +1,11 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => l });
 var i = n(951288);
 n(647438);
 var a = n(481060),
-    l = n(570140);
-let o = {
+    o = n(570140);
+let l = {
     open(e) {
-        l.Z.dispatch({
+        o.Z.dispatch({
             type: "SAFETY_HUB_APPEAL_OPEN",
             classificationId: e,
         }),
@@ -43,6 +43,6 @@ let o = {
             });
     },
     close() {
-        l.Z.dispatch({ type: "SAFETY_HUB_APPEAL_CLOSE" });
+        o.Z.dispatch({ type: "SAFETY_HUB_APPEAL_CLOSE" });
     },
 };

@@ -1,11 +1,11 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => b });
 var a = n(951288);
 n(647438);
 var r = n(442837),
     i = n(524437),
     l = n(481060),
-    s = n(607070),
-    o = n(597688),
+    o = n(607070),
+    s = n(597688),
     c = n(1870),
     d = n(884697),
     u = n(223143),
@@ -14,9 +14,9 @@ var r = n(442837),
     h = n(594174),
     x = n(176038),
     f = n(469115),
-    b = n(685960);
-function g() {
-    var e, t, n, g, v, j, _, y;
+    g = n(685960);
+function b() {
+    var e, t, n, b, v, j, _, y;
     (0, u.mw)();
     let C = (0, r.e7)([h.default], () => h.default.getCurrentUser()),
         S = p.L1.useSetting(),
@@ -27,17 +27,17 @@ function g() {
         P = (0, d.jT)(O),
         I = null == C || null == (e = C.avatarDecoration) ? void 0 : e.skuId,
         w = null == C || null == (n = C.collectibles) || null == (t = n.nameplate) ? void 0 : t.skuId,
-        R = null != I && null != (v = N.find((e) => e.skuId === I)) ? v : null,
-        k = null != w && null != (j = P.find((e) => e.skuId === w)) ? j : null,
-        A = (0, r.e7)([o.Z], () => o.Z.getProduct(null == R ? void 0 : R.skuId)),
-        Z = (0, r.e7)([o.Z], () => o.Z.getProduct(null == k ? void 0 : k.skuId)),
-        D = (0, r.e7)([s.Z], () => s.Z.fontSize),
-        M = (0, r.e7)([s.Z], () => s.Z.messageGroupSpacing),
+        k = null != I && null != (v = N.find((e) => e.skuId === I)) ? v : null,
+        R = null != w && null != (j = P.find((e) => e.skuId === w)) ? j : null,
+        A = (0, r.e7)([s.Z], () => s.Z.getProduct(null == k ? void 0 : k.skuId)),
+        D = (0, r.e7)([s.Z], () => s.Z.getProduct(null == R ? void 0 : R.skuId)),
+        Z = (0, r.e7)([o.Z], () => o.Z.fontSize),
+        M = (0, r.e7)([o.Z], () => o.Z.messageGroupSpacing),
         L = p.YC.useSetting();
     return (
         (0, x.ub)(),
         (0, a.jsxs)("div", {
-            className: b.container,
+            className: g.container,
             children: [
                 (0, a.jsxs)("div", {
                     children: [
@@ -85,7 +85,7 @@ function g() {
                             children: [
                                 "Client Theme ID:",
                                 " ",
-                                null != T ? (null == (g = f.qt[T]) ? void 0 : g.getName()) : "None",
+                                null != T ? (null == (b = f.qt[T]) ? void 0 : b.getName()) : "None",
                             ],
                         }),
                         (0, a.jsxs)(l.Text, {
@@ -94,11 +94,11 @@ function g() {
                         }),
                         (0, a.jsxs)(l.Text, {
                             variant: "text-md/normal",
-                            children: ["Nameplate: ", null != (y = null == Z ? void 0 : Z.name) ? y : "None"],
+                            children: ["Nameplate: ", null != (y = null == D ? void 0 : D.name) ? y : "None"],
                         }),
                         (0, a.jsxs)(l.Text, {
                             variant: "text-md/normal",
-                            children: ["Font Size: ", D, "px"],
+                            children: ["Font Size: ", Z, "px"],
                         }),
                         (0, a.jsxs)(l.Text, {
                             variant: "text-md/normal",

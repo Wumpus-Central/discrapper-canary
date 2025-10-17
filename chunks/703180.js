@@ -1,6 +1,6 @@
 n.d(t, {
-    MemberListContentSettingsMenu: () => h,
-    Z: () => p,
+    MemberListContentSettingsMenu: () => p,
+    Z: () => h,
 });
 var r = n(951288),
     i = n(647438),
@@ -35,7 +35,7 @@ function u(e) {
     }
     return e;
 }
-let h = (e) => {
+let p = (e) => {
         let { closePopout: t } = e,
             i = (0, l.e7)([o.Z], () => o.Z.hidden);
         return (0, r.jsx)(a.v2r, {
@@ -69,7 +69,7 @@ let h = (e) => {
             }),
         });
     },
-    p = () => {
+    h = () => {
         let e = i.useRef(null);
         return (0, r.jsx)(a.yRy, {
             targetElementRef: e,
@@ -78,7 +78,7 @@ let h = (e) => {
             align: "right",
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, r.jsx)(h, { closePopout: t });
+                return (0, r.jsx)(p, { closePopout: t });
             },
             children: (t) => {
                 var n, i;

@@ -1,8 +1,8 @@
 n.d(t, {
     $b: () => U,
     Bu: () => M,
-    ES: () => j,
-    Eq: () => k,
+    ES: () => k,
+    Eq: () => j,
     Gv: () => I,
     Hy: () => y,
     M8: () => v,
@@ -90,8 +90,8 @@ function y(e, t) {
         i = e.games.length > 0;
     if (n && i)
         return 1 === r.kp[e.type]
-            ? p.intl.string(p.t.wiXdEa)
-            : p.intl.format(p.t["zR1+0/"], { numGames: r.kp[e.type] });
+            ? p.intl.string(p.t.wiXdER)
+            : p.intl.format(p.t["zR1+09"], { numGames: r.kp[e.type] });
 }
 function O(e) {
     return d.S5.includes(e);
@@ -179,7 +179,7 @@ function M(e, t, n) {
         l = P(new s.zy(E(m({}, r), { games: o })));
     c.Z.setPendingWidgets(l);
 }
-function j(e, t) {
+function k(e, t) {
     var n, r, i;
     let o,
         l = R(e),
@@ -194,7 +194,7 @@ function j(e, t) {
     let f = P(new s.zy(E(m({}, null != l ? l : { type: e }), { games: o })));
     c.Z.setPendingWidgets(f), a.Z.getDetectableGamesSupplemental([t.applicationId]);
 }
-function k(e, t, n) {
+function j(e, t, n) {
     let r = R(e);
     if (null == r || null == r.games || t === n) return;
     let i = [...r.games];

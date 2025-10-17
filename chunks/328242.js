@@ -17,11 +17,11 @@ var r = n(951288),
     x = n(358085),
     v = n(747268),
     j = n(215915),
-    b = n(855403),
-    S = n(567126),
+    S = n(855403),
+    b = n(567126),
     y = n(615161),
-    O = n(761274),
-    C = n(637824),
+    C = n(761274),
+    O = n(637824),
     w = n(388032),
     P = n(602804);
 function Z(e) {
@@ -92,7 +92,7 @@ function E(e) {
                 screenSources: s,
                 sourceType: o,
                 fetchingSources: g,
-                selectedSource: C,
+                selectedSource: O,
                 discordSourceId: Z,
                 hasPermission: E,
             },
@@ -106,15 +106,15 @@ function E(e) {
             return t;
         }),
         M = (0, d.e7)([_.Z], () => _.Z.quests),
-        k = (0, S.jx)(M, A, n);
+        k = (0, b.jx)(M, A, n);
     i.useEffect(() => ((0, h.Ky)(), h.P7), []);
     let D = i.useMemo(
         () =>
             N
                 ? [...n].sort(
                       (e, t) =>
-                          (0, S.ov)(t, null == k ? void 0 : k.source.id, Z, R) -
-                          (0, S.ov)(e, null == k ? void 0 : k.source.id, Z, R),
+                          (0, b.ov)(t, null == k ? void 0 : k.source.id, Z, R) -
+                          (0, b.ov)(e, null == k ? void 0 : k.source.id, Z, R),
                   )
                 : n,
         [k, N, n, Z, R],
@@ -143,7 +143,7 @@ function E(e) {
                         (0, r.jsx)(u.Button, {
                             text: w.intl.string(w.t["XgZk+v"]),
                             onClick: () => {
-                                m.Z.openSettings(O.Eu.SCREEN_RECORDING);
+                                m.Z.openSettings(C.Eu.SCREEN_RECORDING);
                             },
                         }),
                 ],
@@ -166,9 +166,9 @@ function E(e) {
                           onClick: t,
                           source: e,
                           selected:
-                              null != C && "windowHandle" in C
-                                  ? (0, b.Z)(e.id, C.windowHandle)
-                                  : (null == C ? void 0 : C.id) === e.id,
+                              null != O && "windowHandle" in O
+                                  ? (0, S.Z)(e.id, O.windowHandle)
+                                  : (null == O ? void 0 : O.id) === e.id,
                       },
                       e.id,
                   ),
@@ -188,17 +188,17 @@ function T() {
                 variant: "text-lg/medium",
                 color: "header-primary",
                 className: P.emptyHeader,
-                children: w.intl.string(C.default["/z3YaW"]),
+                children: w.intl.string(O.default["/z3YaW"]),
             }),
             (0, r.jsx)(u.Text, {
                 variant: "text-sm/medium",
                 color: "text-secondary",
                 className: P.emptyBody,
-                children: w.intl.string(C.default.agwSGB),
+                children: w.intl.string(O.default.agwSGB),
             }),
             (0, r.jsx)(u.Text, {
                 variant: "text-sm/semibold",
-                children: w.intl.format(C.default.xpVzr6, { helpdeskURL: g.Z.getArticleURL(360040816151) }),
+                children: w.intl.format(O.default.xpVzr6, { helpdeskURL: g.Z.getArticleURL(360040816151) }),
             }),
         ],
     });

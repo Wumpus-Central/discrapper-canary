@@ -1,9 +1,9 @@
 n.d(t, {
     $Z: () => M,
-    Cp: () => j,
+    Cp: () => k,
     F_: () => w,
     Se: () => B,
-    ZN: () => k,
+    ZN: () => j,
     tF: () => G,
     yC: () => U,
 }),
@@ -170,12 +170,12 @@ function M() {
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
     D(e), i.Z.dispatch(A({ type: "QUICKSWITCHER_SHOW" }, w(t)));
 }
-function j() {
+function k() {
     L(I.rMx.QUICKSWITCHER_CLOSED), x();
 }
-function k() {
+function j() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "KEYBIND";
-    v.Z.isOpen() ? j() : M(e);
+    v.Z.isOpen() ? k() : M(e);
 }
 function U(e) {
     i.Z.dispatch(A({ type: "QUICKSWITCHER_SEARCH" }, w(e)));

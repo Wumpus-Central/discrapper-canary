@@ -8,7 +8,7 @@ var r = n(951288),
     c = n(99325),
     d = n(683818),
     u = n(388032);
-function h(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,7 +33,7 @@ function h(e) {
     }
     return e;
 }
-function p(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -83,7 +83,7 @@ function f(e) {
                               action: function () {
                                   (0, l.ZDy)(async () => {
                                       let { default: e } = await n.e("34191").then(n.bind(n, 303647));
-                                      return (n) => (0, r.jsx)(e, p(h({}, n), { entry: t }));
+                                      return (n) => (0, r.jsx)(e, h(p({}, n), { entry: t }));
                                   }),
                                       x();
                               },
@@ -97,8 +97,8 @@ function f(e) {
                                   (0, l.h7j)((e) =>
                                       (0, r.jsx)(
                                           l.ConfirmModal,
-                                          p(
-                                              h(
+                                          h(
+                                              p(
                                                   {
                                                       header: u.intl.string(u.t.KUxYWF),
                                                       confirmText: u.intl.string(u.t.N86XcH),

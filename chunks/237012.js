@@ -3,7 +3,7 @@ n.d(t, {
     BZ: () => i.BZ,
     DS: () => l.D,
     E_: () => i.E_,
-    lD: () => s,
+    lD: () => o,
     pg: () => i.pg,
 });
 var a = n(951288),
@@ -11,7 +11,7 @@ var a = n(951288),
     i = n(606201);
 n(955926);
 var l = n(761911);
-let s = (e) => {
+let o = (e) => {
     let { href: t } = e;
     return (0, a.jsx)(r.Anchor, {
         href: t,

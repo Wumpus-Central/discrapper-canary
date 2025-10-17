@@ -1,5 +1,5 @@
 n.d(t, {
-    FX: () => b,
+    FX: () => m,
     ZP: () => g,
     kN: () => p,
     kO: () => d,
@@ -9,10 +9,10 @@ n.d(t, {
 var r = n(647438),
     i = n(442837),
     a = n(224706),
-    o = n(669764),
-    l = n(77498),
-    c = n(836197);
-function s(e) {
+    l = n(669764),
+    o = n(77498),
+    s = n(836197);
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,12 +56,12 @@ function u(e, t) {
     );
 }
 function d(e) {
-    return (0, i.e7)([o.Z], () => o.Z.isFetching(e));
+    return (0, i.e7)([l.Z], () => l.Z.isFetching(e));
 }
 function f(e) {
     r.useEffect(() => {
         if (e.length > 0) {
-            let t = e.filter((e) => o.Z.canFetch(e));
+            let t = e.filter((e) => l.Z.canFetch(e));
             t.length > 0 && a.Z.getDetectableGamesSupplemental(t);
         }
     }, [e]);
@@ -86,32 +86,32 @@ function g(e) {
     );
 }
 function p(e) {
-    let [t, n] = (0, i.Wu)([o.Z], () => [o.Z.numNoDataAvailable(), o.Z.numSupplementalGames()]);
+    let [t, n] = (0, i.Wu)([l.Z], () => [l.Z.numNoDataAvailable(), l.Z.numSupplementalGames()]);
     return r.useMemo(() => {
         let t = {};
         return (
             e.forEach((e) => {
-                t[e] = o.Z.getGame(e);
+                t[e] = l.Z.getGame(e);
             }),
             t
         );
     }, [e, t, n]);
 }
-function b(e) {
+function m(e) {
     let t = p(e.games.map((e) => e.applicationId));
     return r.useMemo(
         () =>
-            new c.zy(
-                u(s({}, e), {
+            new s.zy(
+                u(c({}, e), {
                     games: e.games.map((e) => {
                         let n = t[e.applicationId];
                         if (null != n)
-                            return u(s({}, e), {
+                            return u(c({}, e), {
                                 gameName: n.name,
                                 imageSrc: n.coverImageUrl,
                             });
-                        let r = l.Z.getDetectableGame(e.applicationId);
-                        return u(s({}, e), { gameName: null == r ? void 0 : r.name });
+                        let r = o.Z.getDetectableGame(e.applicationId);
+                        return u(c({}, e), { gameName: null == r ? void 0 : r.name });
                     }),
                 }),
             ),

@@ -214,7 +214,7 @@ function C(e) {
             );
         })(null == c || null == (t = c.configuration) ? void 0 : t.value, x),
         [O, y] = i.useState(_),
-        N =
+        E =
             null != s
                 ? h.intl.format(s, {
                       count: O,
@@ -224,7 +224,7 @@ function C(e) {
                       className: b.fieldText,
                       children: a,
                   }),
-        E = i.useId();
+        N = i.useId();
     return (0, r.jsxs)(
         "tr",
         {
@@ -234,7 +234,7 @@ function C(e) {
                     scope: "row",
                     children: (0, r.jsx)(d.nn4, {
                         children: (0, r.jsx)("label", {
-                            htmlFor: E,
+                            htmlFor: N,
                             children: l,
                         }),
                     }),
@@ -251,7 +251,7 @@ function C(e) {
                             className: b.numericalRuleSubItemContainer,
                             children: (0, r.jsx)(d.Text, {
                                 variant: "text-md/normal",
-                                children: N,
+                                children: E,
                             }),
                         }),
                     ],
@@ -295,7 +295,7 @@ function C(e) {
                 }),
                 (0, r.jsx)("td", {
                     children: (0, r.jsx)(d.rsf, {
-                        id: E,
+                        id: N,
                         checked: j,
                         onChange: (e) => {
                             var t, n;
@@ -381,7 +381,7 @@ function y(e) {
         ],
     });
 }
-function N(e) {
+function E(e) {
     let { configMetadataMap: t, onConfigurationChange: n, locked: i } = e,
         l = m.Z.get(p.ABu.STEAM);
     return (0, r.jsxs)(O, {
@@ -425,7 +425,7 @@ function N(e) {
         ],
     });
 }
-function E(e) {
+function N(e) {
     let { configMetadataMap: t, onConfigurationChange: n, locked: i } = e,
         l = m.Z.get(p.ABu.TWITTER);
     return (0, r.jsxs)(O, {
@@ -743,10 +743,10 @@ function Z(e) {
         h = null;
     switch (null == d ? void 0 : d.type) {
         case p.ABu.STEAM:
-            h = (0, r.jsx)(N, x({}, f));
+            h = (0, r.jsx)(E, x({}, f));
             break;
         case p.ABu.TWITTER:
-            h = (0, r.jsx)(E, x({}, f));
+            h = (0, r.jsx)(N, x({}, f));
             break;
         case p.ABu.REDDIT:
             h = (0, r.jsx)(I, x({}, f));

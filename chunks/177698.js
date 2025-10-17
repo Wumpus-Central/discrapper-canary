@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685);
+n.d(t, { Z: () => E }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(481060),
@@ -57,7 +57,7 @@ function _(e, t) {
         e
     );
 }
-let O = (0, f.Z)(
+let E = (0, f.Z)(
     (e) => {
         var t;
         let {
@@ -65,22 +65,22 @@ let O = (0, f.Z)(
                 authorizations: u,
                 scopes: d,
                 parsedPermissions: f,
-                responseType: O,
-                redirectUri: E,
+                responseType: E,
+                redirectUri: O,
                 codeChallenge: v,
                 codeChallengeMethod: y,
                 state: I,
                 guildId: C,
                 channelId: S,
-                prompt: T,
-                disableGuildSelect: N,
-                disclosures: j,
-                integrationType: P,
+                prompt: N,
+                disableGuildSelect: T,
+                disclosures: P,
+                integrationType: j,
                 pid: x,
                 signal: A,
             } = e,
             Z = "OAuth2Authorize_".concat(n, "_").concat(C, "_").concat(S),
-            w = null != P ? (null == u ? void 0 : u.get(P)) : void 0,
+            w = null != j ? (null == u ? void 0 : u.get(j)) : void 0,
             L = null != (t = null == w ? void 0 : w.application) ? t : a.Z.getApplication(n);
         return new Promise((e, t) => {
             let a = (0, h.jU)(x),
@@ -102,7 +102,7 @@ let O = (0, f.Z)(
                                 a.lock();
                             return;
                         }
-                        if ((e(s), null == E || null == L)) return void a.lock();
+                        if ((e(s), null == O || null == L)) return void a.lock();
                         null == new URL(s).searchParams.get("error")
                             ? (0, i.h7j)(
                                   (e) => (0, r.jsx)(c.$0, b({ application: L }, e)),
@@ -124,7 +124,7 @@ let O = (0, f.Z)(
                               );
                     }
                 },
-                { cleanup: k } = (function (e, t) {
+                { cleanup: M } = (function (e, t) {
                     function n() {
                         (0, i.Mr3)(e) &&
                             (0, i.h7j)((e) =>
@@ -160,26 +160,26 @@ let O = (0, f.Z)(
                             authorizations: u,
                             clientId: n,
                             scopes: null != d ? d : [],
-                            disclosures: null != j ? j : [],
+                            disclosures: null != P ? P : [],
                             callback: D,
-                            responseType: O,
-                            redirectUri: E,
+                            responseType: E,
+                            redirectUri: O,
                             codeChallenge: v,
                             codeChallengeMethod: y,
                             state: I,
                             permissions: f,
                             guildId: C,
                             channelId: S,
-                            prompt: T,
-                            disableGuildSelect: "boolean" == typeof N ? N : "true" === N,
-                            integrationType: P,
+                            prompt: N,
+                            disableGuildSelect: "boolean" == typeof T ? T : "true" === T,
+                            integrationType: j,
                             cancelCompletesFlow: !0,
                         }),
                     ),
                 {
                     modalKey: Z,
                     onCloseCallback: () => {
-                        k(),
+                        M(),
                             R ||
                                 (t(new p.Z({ errorCode: g.lTL.OAUTH2_ERROR }, "User cancelled authorization")),
                                 a.lock());

@@ -1,9 +1,9 @@
-n.d(t, { P: () => l });
+n.d(t, { P: () => r });
 var a = n(951288),
-    r = n(481060);
-function l(e, t) {
-    let { isGift: l } = t;
-    (0, r.ZDy)(
+    l = n(481060);
+function r(e, t) {
+    let { isGift: r } = t;
+    (0, l.ZDy)(
         async () => {
             let { default: t } = await n.e("45227").then(n.bind(n, 556266));
             return (n) =>
@@ -38,7 +38,7 @@ function l(e, t) {
                             skuId: e.id,
                             applicationId: e.applicationId,
                             analyticsLocations: [],
-                            isGift: l,
+                            isGift: r,
                         },
                         n,
                     ),

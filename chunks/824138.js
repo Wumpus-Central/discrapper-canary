@@ -15,8 +15,8 @@ var r = n(951288),
     m = n(115530),
     b = n(981631),
     _ = n(388032),
-    O = n(79822);
-function E(e, t, n) {
+    E = n(79822);
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +40,7 @@ function v(e) {
                 }),
             )),
             r.forEach(function (t) {
-                E(e, t, n[t]);
+                O(e, t, n[t]);
             });
     }
     return e;
@@ -103,12 +103,12 @@ class I extends i.PureComponent {
     }
     render() {
         return (0, r.jsxs)("div", {
-            className: O.listeningAlong,
+            className: E.listeningAlong,
             children: [
                 this.renderTitle(),
                 (0, r.jsx)(u.Z, {
                     justify: u.Z.Justify.END,
-                    className: O.party,
+                    className: E.party,
                     children: (0, r.jsx)(p.Z, {
                         users: this.props.party,
                         max: this.isHost() ? 5 : 4,
@@ -117,7 +117,7 @@ class I extends i.PureComponent {
                     }),
                 }),
                 (0, r.jsxs)("div", {
-                    className: O.icons,
+                    className: E.icons,
                     children: [this.renderHelpIcon(), this.renderStopListeningButton()],
                 }),
             ],
@@ -125,9 +125,9 @@ class I extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            E(this, "partyMemberAvatarRef", i.createRef()),
-            E(this, "partyMemberOverflowRef", i.createRef()),
-            E(this, "renderPartyMember", (e, t) => {
+            O(this, "partyMemberAvatarRef", i.createRef()),
+            O(this, "partyMemberOverflowRef", i.createRef()),
+            O(this, "renderPartyMember", (e, t) => {
                 let n;
                 if (null == e) return null;
                 let { host: l, onUserContextMenu: u } = this.props;
@@ -151,7 +151,7 @@ class I extends i.PureComponent {
                                             key: e.id,
                                             src: e.getAvatarURL(void 0, 24),
                                             size: s.EFr.SIZE_24,
-                                            className: a()(O.avatar, t),
+                                            className: a()(E.avatar, t),
                                             "aria-label": e.username,
                                             onContextMenu: (t) => void (null != e && (null == u || u(t, e))),
                                             avatarContentRef: this.partyMemberAvatarRef,
@@ -163,7 +163,7 @@ class I extends i.PureComponent {
                     )
                 );
             }),
-            E(this, "renderPartyMemberOverflow", (e, t, n) => {
+            O(this, "renderPartyMemberOverflow", (e, t, n) => {
                 let { renderOverflowPopout: i } = this.props;
                 return (0, r.jsx)(
                     s.yRy,
@@ -177,7 +177,7 @@ class I extends i.PureComponent {
                                     "div",
                                     y(v({}, n), {
                                         ref: this.partyMemberOverflowRef,
-                                        className: a()(O.overflow, t),
+                                        className: a()(E.overflow, t),
                                         children: e,
                                     }),
                                 ),

@@ -32,8 +32,8 @@ var r = n(951288),
     L = n(626135),
     x = n(669079),
     M = n(74538),
-    j = n(296848),
-    k = n(51144),
+    k = n(296848),
+    j = n(51144),
     U = n(626799),
     G = n(981631),
     B = n(474936),
@@ -231,7 +231,7 @@ class q extends i.Component {
     renderTitle(e) {
         let { currentUser: t, isSelfGift: n, sku: r } = this.props;
         return this.isCustomGiftMessage() && !n
-            ? Z.intl.formatToPlainString(Z.t.t1SOIS, { recipientDisplayName: k.ZP.getName(t) })
+            ? Z.intl.formatToPlainString(Z.t.t1SOIS, { recipientDisplayName: j.ZP.getName(t) })
             : null == r
               ? null
               : e.isSubscription
@@ -277,12 +277,12 @@ class q extends i.Component {
             return null != i
                 ? e.isSubscription
                     ? Z.intl.format(Z.t.l3VxgI, {
-                          username: k.ZP.getUserTag(i),
+                          username: j.ZP.getUserTag(i),
                           maxUses: e.maxUses,
                           skuName: s,
                       })
                     : Z.intl.format(Z.t["9cYrw8"], {
-                          username: k.ZP.getUserTag(i),
+                          username: j.ZP.getUserTag(i),
                           totalCopies: e.maxUses,
                           skuName: s,
                       })
@@ -300,7 +300,7 @@ class q extends i.Component {
             if (null != i) {
                 let e = a.interval === B.rV.MONTH ? Z.t["/RDIEB"] : Z.t["3CX6Eh"];
                 return Z.intl.format(e, {
-                    username: k.ZP.getUserTag(i),
+                    username: j.ZP.getUserTag(i),
                     skuName: s,
                     intervalCount: a.intervalCount,
                 });
@@ -311,7 +311,7 @@ class q extends i.Component {
                 intervalCount: a.intervalCount,
             });
         }
-        return null != i ? Z.intl.format(Z.t["3HsdQ0"], { username: k.ZP.getUserTag(i) }) : Z.intl.string(Z.t.Jdnjjo);
+        return null != i ? Z.intl.format(Z.t["3HsdQ0"], { username: j.ZP.getUserTag(i) }) : Z.intl.string(Z.t.Jdnjjo);
     }
     renderPromotionActions() {
         return (0, r.jsx)(d.Button, {
@@ -450,7 +450,7 @@ let X = (0, p.Z)((0, _.Z)(q)),
             giftCode: i,
             gifter: o,
             currentUser: r,
-            subscriptionPlan: null != i && null != i.subscriptionPlanId ? (0, j.oE)(i.subscriptionPlanId) : null,
+            subscriptionPlan: null != i && null != i.subscriptionPlanId ? (0, k.oE)(i.subscriptionPlanId) : null,
             isSelfGift: null != i ? A.default.getId() === i.userId : A.default.getId() === n.id,
             resolved: C.Z.getIsResolved(t),
             libraryApplication:

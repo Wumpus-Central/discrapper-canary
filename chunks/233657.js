@@ -10,8 +10,8 @@ var i = n(442837),
     u = n(306680),
     d = n(9156),
     p = n(434479),
-    h = n(490897),
-    f = n(388032),
+    f = n(490897),
+    h = n(388032),
     g = n(509612);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -58,11 +58,11 @@ function b(e, t) {
 }
 function _(e) {
     let { guild: t, selected: _ } = e,
-        { hasUnread: y, mentionCount: O } = (0, i.cj)(
+        { hasUnread: O, mentionCount: y } = (0, i.cj)(
             [u.ZP],
             () => ({
-                hasUnread: u.ZP.hasUnread(t.id, h.W.GUILD_EVENT),
-                mentionCount: u.ZP.getMentionCount(t.id, h.W.GUILD_EVENT),
+                hasUnread: u.ZP.hasUnread(t.id, f.W.GUILD_EVENT),
+                mentionCount: u.ZP.getMentionCount(t.id, f.W.GUILD_EVENT),
             }),
             [t.id],
         ),
@@ -75,7 +75,7 @@ function _(e) {
             (0, s.Q3)(l.z.GUILD_HEADER_EVENT_UPSELL);
     }
     let x = (0, c.ZP)(t.id),
-        C = x.length > 0 ? f.intl.formatToPlainString(f.t.IBdqSk, { number: x.length }) : f.intl.string(f.t.tlopTE);
+        C = x.length > 0 ? h.intl.formatToPlainString(h.t.IBdqSk, { number: x.length }) : h.intl.string(h.t.tlopTE);
     return (0, r.jsx)(p.m, {
         id: "upcoming-events-".concat(t.id),
         renderIcon: (e) =>
@@ -93,13 +93,13 @@ function _(e) {
                 return (n) => (0, r.jsx)(e, b(m({}, n), { guildId: t.id }));
             });
         },
-        showUnread: y && !v,
+        showUnread: O && !v,
         trailing:
-            !v && O > 0
+            !v && y > 0
                 ? (0, r.jsx)(o.mAB, {
                       className: g.numberBadge,
                       disableColor: !0,
-                      count: O,
+                      count: y,
                   })
                 : null,
     });

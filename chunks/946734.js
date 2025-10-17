@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(884338),
     d = n(100527),
     p = n(906732),
-    h = n(111028),
-    f = n(150039),
+    f = n(111028),
+    h = n(150039),
     g = n(892001),
     m = n(271383),
     b = n(430824),
@@ -140,7 +140,7 @@ class S {
 function I(e) {
     let { channel: t } = e,
         n = t.getRecipientId(),
-        l = (0, f.gc)(n),
+        l = (0, h.gc)(n),
         o = Array(l.length).fill(null),
         { analyticsLocations: g } = (0, p.ZP)(d.Z.AKA),
         m = (function (e) {
@@ -222,7 +222,7 @@ function I(e) {
                         })
                       : null,
                   m.getNicknameGuildPairs().length > 0
-                      ? (0, r.jsx)(h.Z, {
+                      ? (0, r.jsx)(f.Z, {
                             position: "bottom",
                             className: C.nicknames,
                             delay: 0,

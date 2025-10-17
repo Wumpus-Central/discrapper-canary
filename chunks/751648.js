@@ -6,11 +6,11 @@ n.d(t, {
     n(415506);
 var r = n(544891),
     l = n(570140),
-    i = n(881052),
-    a = n(710845),
+    a = n(881052),
+    i = n(710845),
     o = n(960048),
     s = n(981631);
-let c = new a.Z("VirtualCurrencyActionCreators");
+let c = new i.Z("VirtualCurrencyActionCreators");
 async function u() {
     l.Z.wait(() => {
         l.Z.dispatch({ type: "VIRTUAL_CURRENCY_BALANCE_FETCH" });
@@ -29,7 +29,7 @@ async function u() {
             e.body
         );
     } catch (t) {
-        let e = t instanceof i.HF ? t : new i.HF(t);
+        let e = t instanceof a.HF ? t : new a.HF(t);
         l.Z.dispatch({
             type: "VIRTUAL_CURRENCY_BALANCE_FETCH_FAIL",
             error: e,
@@ -40,7 +40,7 @@ async function d(e) {
     let {
         skuId: t,
         loadId: n,
-        onRedeemStart: a,
+        onRedeemStart: i,
         onRedeemSucceed: d,
         onRedeemFail: p,
         shouldRefetchBalance: f = !0,
@@ -51,7 +51,7 @@ async function d(e) {
             skuId: t,
         });
     }),
-        null == a || a();
+        null == i || i();
     try {
         let e = (
             await r.tn.post({
@@ -76,7 +76,7 @@ async function d(e) {
             e
         );
     } catch (n) {
-        let e = n instanceof i.HF ? n : new i.HF(n);
+        let e = n instanceof a.HF ? n : new a.HF(n);
         l.Z.dispatch({
             type: "VIRTUAL_CURRENCY_REDEEM_FAIL",
             skuId: t,

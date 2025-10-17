@@ -1,4 +1,4 @@
-n.d(t, { d: () => N });
+n.d(t, { d: () => T });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -17,25 +17,25 @@ var r = n(951288),
     _ = n(430824),
     E = n(944486),
     O = n(914010),
-    y = n(768581),
-    v = n(981631),
+    v = n(768581),
+    y = n(981631),
     I = n(408491),
     C = n(388032),
     S = n(345909),
-    T = n(832818);
-function N(e) {
+    N = n(832818);
+function T(e) {
     let t,
         { withFastTravel: n, focusSectionProps: l } = e,
-        N = (0, o.TH)(),
+        T = (0, o.TH)(),
         P = (0, s.e7)([O.Z], () => O.Z.getGuildId()),
         j = (0, s.e7)([E.Z], () => E.Z.getChannelId()),
-        A = (0, s.e7)([b.Z], () => b.Z.getChannel(j), [j]),
-        x = null != P ? P : null == A ? void 0 : A.guild_id,
-        Z = (0, s.e7)([_.Z], () => _.Z.getGuild(x), [x]),
+        x = (0, s.e7)([b.Z], () => b.Z.getChannel(j), [j]),
+        A = null != P ? P : null == x ? void 0 : x.guild_id,
+        Z = (0, s.e7)([_.Z], () => _.Z.getGuild(A), [A]),
         w = (0, p.Z)(),
         L = (0, g.D)(),
         { guildTitleIconSize: R, guildIconSize: D } = (0, d.T)({ location: "GuildTitle" }),
-        { application: k, isFrameInFocusedMode: M } = (0, s.cj)([u.Z, f.Z], () => {
+        { application: M, isFrameInFocusedMode: k } = (0, s.cj)([u.Z, f.Z], () => {
             let e = f.Z.getConnectedFrame();
             return {
                 application: u.Z.getApplication(null == e ? void 0 : e.applicationId),
@@ -43,18 +43,18 @@ function N(e) {
             };
         }),
         U =
-            null != k
-                ? y.ZP.getApplicationIconURL({
-                      id: k.id,
-                      icon: k.icon,
-                      bot: k.bot,
+            null != M
+                ? v.ZP.getApplicationIconURL({
+                      id: M.id,
+                      icon: M.icon,
+                      bot: M.bot,
                   })
                 : void 0,
         G = null;
-    null != k && M
-        ? ((t = k.name),
+    null != M && k
+        ? ((t = M.name),
           (G = (0, r.jsx)("img", {
-              className: T.appIcon,
+              className: N.appIcon,
               alt: C.intl.string(C.t.X4IxWF),
               src: U,
               "aria-hidden": !0,
@@ -69,26 +69,26 @@ function N(e) {
                         guild: Z,
                         size: D,
                         active: !0,
-                        className: T.guildIcon,
+                        className: N.guildIcon,
                     })),
               (t = Z.name))
-            : null != A && (A.isDM() || A.isGroupDM())
+            : null != x && (x.isDM() || x.isGroupDM())
               ? ((t = C.intl.string(C.t.YUU0RE)), (G = (0, r.jsx)(c.gw7, { size: R })))
-              : N.pathname.startsWith(v.Z5c.GLOBAL_DISCOVERY)
+              : T.pathname.startsWith(y.Z5c.GLOBAL_DISCOVERY)
                 ? ((t = C.intl.string(C.t["4nEZLi"])), (G = (0, r.jsx)(c.Jmo, { size: R })))
-                : N.pathname.startsWith(v.Z5c.NITRO_HOME)
+                : T.pathname.startsWith(y.Z5c.NITRO_HOME)
                   ? ((t = C.intl.string(C.t.Ipxkoq)), (G = (0, r.jsx)(c.SrA, { size: R })))
-                  : N.pathname.startsWith(v.Z5c.COLLECTIBLES_SHOP)
+                  : T.pathname.startsWith(y.Z5c.COLLECTIBLES_SHOP)
                     ? ((t = C.intl.string(C.t.pWG4zc)), (G = (0, r.jsx)(c.EOn, { size: R })))
-                    : N.pathname.startsWith(v.Z5c.ME_ACTIVITY)
+                    : T.pathname.startsWith(y.Z5c.ME_ACTIVITY)
                       ? ((t = C.intl.string(C.t.IC5Anp)), (G = (0, r.jsx)(c.g8d, { size: R })))
-                      : N.pathname.startsWith(v.Z5c.ME_DMS)
+                      : T.pathname.startsWith(y.Z5c.ME_DMS)
                         ? ((t = C.intl.string(C.t.YUU0RE)), (G = (0, r.jsx)(c.gw7, { size: R })))
-                        : N.pathname.startsWith(v.Z5c.FRIENDS)
+                        : T.pathname.startsWith(y.Z5c.FRIENDS)
                           ? ((t = C.intl.string(C.t.TdEu5e)), (G = (0, r.jsx)(c.iFz, { size: R })))
-                          : N.pathname.startsWith(v.Z5c.FAMILY_CENTER)
+                          : T.pathname.startsWith(y.Z5c.FAMILY_CENTER)
                             ? ((t = C.intl.string(S.default.RZqaJi)), (G = (0, r.jsx)(c.BFJ, { size: R })))
-                            : N.pathname.startsWith(v.Z5c.QUEST_HOME_V2) &&
+                            : T.pathname.startsWith(y.Z5c.QUEST_HOME_V2) &&
                               ((t = C.intl.string(C.t.JALI2N)), (G = (0, r.jsx)(c.qDn, { size: R })));
     let B = i.useCallback((e) => {
             (0, m.ZN)("fast-travel");
@@ -100,7 +100,7 @@ function N(e) {
               "data-migration-pending": !0,
               shouldShow: n,
               "aria-label": C.intl.string(C.t["7P/+q6"]),
-              tooltipContentClassName: T.navigationTooltip,
+              tooltipContentClassName: N.navigationTooltip,
               text: (0, r.jsxs)(r.Fragment, {
                   children: [
                       C.intl.string(C.t["7P/+q6"]),
@@ -137,7 +137,7 @@ function N(e) {
                                   });
                           }
                           return e;
-                      })({ className: a()(T.title, { [T.fastTravel]: n }) }, e, l)),
+                      })({ className: a()(N.title, { [N.fastTravel]: n }) }, e, l)),
                       (i = i =
                           {
                               onClick: n ? B : void 0,
@@ -150,7 +150,7 @@ function N(e) {
                                   }),
                                   n &&
                                       (0, r.jsx)(c.Fbu, {
-                                          className: T.fastTravelChevron,
+                                          className: N.fastTravelChevron,
                                           size: "xs",
                                       }),
                               ],

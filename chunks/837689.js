@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(873546),
@@ -16,8 +16,8 @@ var i = n(873546),
     m = n(695349),
     b = n(434878),
     _ = n(104494),
-    O = n(29920),
-    E = n(346497),
+    E = n(29920),
+    O = n(346497),
     v = n(727310),
     y = n(318199),
     I = n(474936);
@@ -35,7 +35,7 @@ function C(e, t, n) {
     );
 }
 let S = "PremiumServerDriveAnnouncementModal";
-class T extends s.Z {
+class N extends s.Z {
     _initialize() {
         o.Z.subscribe("PREMIUM_MARKETING_DATA_READY", this.mayShowAnnouncementModal),
             o.Z.subscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview);
@@ -55,7 +55,7 @@ class T extends s.Z {
                     return (
                         (!1 !== t ||
                             (null == i ? void 0 : i.contentIdentifier) !== "summer_bogo_content" ||
-                            !!(await (0, E.k)())) &&
+                            !!(await (0, O.k)())) &&
                         ((0, a.Mr3)(S),
                         (0, a.ZDy)(
                             async () => {
@@ -102,10 +102,10 @@ class T extends s.Z {
                             (0, v.Z)({ upsellType: I.cd.REVERSE_TRIAL_FOLLOWUP_UPSELL })),
                     (null == r || r.verified) && !(0, a.$sL)() && !i.tq)
                 ) {
-                    for (let t of await (0, O.He)(e))
+                    for (let t of await (0, E.He)(e))
                         if (await this.maybeOpenServerDriveAnnouncementModal(t, !1)) break;
                 }
             });
     }
 }
-let N = new T();
+let T = new N();

@@ -15,14 +15,14 @@ var r = n(951288),
     u = n(755721),
     d = n(481060),
     p = n(211739),
-    h = n(239091),
-    f = n(146773),
+    f = n(239091),
+    h = n(146773),
     g = n(82295),
     m = n(111028),
     b = n(680089),
     _ = n(430824),
-    y = n(496675),
-    O = n(9156),
+    O = n(496675),
+    y = n(9156),
     v = n(203818),
     j = n(438144),
     x = n(981631),
@@ -78,7 +78,7 @@ let N = i.memo(function (e) {
         let t,
             {
                 channel: l,
-                connectChannelDragSource: f,
+                connectChannelDragSource: h,
                 connectChannelDropTarget: v,
                 disableManageChannels: j,
                 position: N,
@@ -86,9 +86,9 @@ let N = i.memo(function (e) {
                 hideIcon: w,
                 children: T,
             } = e,
-            A = (0, s.e7)([O.ZP], () => O.ZP.isChannelMuted(l.getGuildId(), l.id)),
+            A = (0, s.e7)([y.ZP], () => y.ZP.isChannelMuted(l.getGuildId(), l.id)),
             R = (0, s.e7)([b.Z], () => b.Z.isCollapsed(l.id)),
-            D = (0, s.e7)([y.Z], () => y.Z.can(x.Plq.MANAGE_CHANNELS, l));
+            D = (0, s.e7)([O.Z], () => O.Z.can(x.Plq.MANAGE_CHANNELS, l));
         t = null != Z ? (N > Z ? E.containerDragAfter : E.containerDragBefore) : E.containerDefault;
         let L = i.useCallback(() => {
                 R ? (0, p.mJ)(l.id) : (0, p.c4)(l.id);
@@ -98,7 +98,7 @@ let N = i.memo(function (e) {
                     if ("null" !== l.id) {
                         let t = _.Z.getGuild(l.getGuildId());
                         null != t &&
-                            (0, h.jW)(e, async () => {
+                            (0, f.jW)(e, async () => {
                                 let { default: e } = await Promise.all([n.e("8965"), n.e("14280")]).then(
                                     n.bind(n, 139035),
                                 );
@@ -120,7 +120,7 @@ let N = i.memo(function (e) {
                     t = l.getGuildId();
                 null != t &&
                     (0, d.ZDy)(async () => {
-                        let { default: i } = await Promise.all([n.e("45094"), n.e("67133")]).then(n.bind(n, 218613));
+                        let { default: i } = await Promise.all([n.e("29497"), n.e("53781")]).then(n.bind(n, 241865));
                         return (n) =>
                             (0, r.jsx)(
                                 i,
@@ -134,7 +134,7 @@ let N = i.memo(function (e) {
             }, [l]),
             G = (0, a.JA)(l.id),
             { role: U, tabIndex: B } = G,
-            V = (function (e, t) {
+            F = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -155,14 +155,14 @@ let N = i.memo(function (e) {
                 }
                 return i;
             })(G, ["role", "tabIndex"]),
-            F = i.useRef(null),
+            V = i.useRef(null),
             H = i.useRef(null),
             z = (0, r.jsxs)("li", {
                 className: t,
                 "data-dnd-name": l.name,
                 children: [
                     (0, r.jsx)(d.tEY, {
-                        focusTarget: F,
+                        focusTarget: V,
                         ringTarget: H,
                         offset: {
                             left: 4,
@@ -182,11 +182,11 @@ let N = i.memo(function (e) {
                                     I(
                                         S(
                                             {
-                                                innerRef: F,
+                                                innerRef: V,
                                                 className: E.mainContent,
                                                 tabIndex: B,
                                             },
-                                            V,
+                                            F,
                                         ),
                                         {
                                             onClick: L,
@@ -248,9 +248,9 @@ let N = i.memo(function (e) {
                     T,
                 ],
             });
-        return null != v && null != f ? v(f(z)) : z;
+        return null != v && null != h ? v(h(z)) : z;
     }),
-    Z = (0, f.B)(N),
+    Z = (0, h.B)(N),
     w = i.memo(function (e) {
         let { name: t, onDismiss: n, className: i } = e;
         return (0, r.jsx)("li", {

@@ -8,15 +8,15 @@ var r = n(951288),
     c = n(728285),
     d = n(887413),
     u = n(359110),
-    h = n(626135),
-    p = n(981631),
+    p = n(626135),
+    h = n(981631),
     f = n(50493),
     g = n(388032),
     m = n(764295);
 function b(e) {
     var t, n;
     let { channel: b } = e,
-        y = i.useContext(h.AnalyticsContext),
+        y = i.useContext(p.AnalyticsContext),
         _ = (0, c.Aq)(),
         j = g.intl.string(m.default["Beo/7u"]),
         { firstMessage: O } = (0, a.cl)(b),
@@ -31,7 +31,7 @@ function b(e) {
                           modViewPanel: f.k.INFO,
                           sourceLocation: null != location ? location : y.location,
                       }),
-                      _.dispatch(p.CkL.POPOUT_CLOSE);
+                      _.dispatch(h.CkL.POPOUT_CLOSE);
               },
               tooltip: j,
               icon: l.HI3,

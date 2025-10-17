@@ -1,7 +1,7 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => N }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(599273),
+    l = n(258536),
     a = n(442837),
     o = n(481060),
     s = n(570140),
@@ -15,8 +15,8 @@ var r = n(951288),
     m = n(594174),
     b = n(482798),
     _ = n(167762),
-    O = n(151459),
-    E = n(981631),
+    E = n(151459),
+    O = n(981631),
     v = n(388032),
     y = n(10058);
 function I(e) {
@@ -68,7 +68,7 @@ function S(e) {
         b = (0, o.dQu)(o.TVs.modules.chat.INPUT_ICON_SIZE),
         S = (function () {
             let [e, t] = i.useState(null),
-                { showActivityTicker: n } = (0, O.Z)(),
+                { showActivityTicker: n } = (0, E.Z)(),
                 r = i.useRef({}),
                 l = i.useRef(null);
             return (
@@ -85,8 +85,8 @@ function S(e) {
                         i = (n, i, a) => {
                             var o, s, c, u, d, p, h, b, _;
                             if (!g.Z.isFriend(n)) return !1;
-                            let O = m.default.getUser(n);
-                            if (null == O) return !1;
+                            let E = m.default.getUser(n);
+                            if (null == E) return !1;
                             let v = !1,
                                 y = null;
                             if (null != i) {
@@ -96,14 +96,14 @@ function S(e) {
                                     (function (e) {
                                         let t = e.type;
                                         return (
-                                            (t === E.IIU.PLAYING && null != e.application_id) ||
-                                            t === E.IIU.LISTENING ||
-                                            t === E.IIU.WATCHING
+                                            (t === O.IIU.PLAYING && null != e.application_id) ||
+                                            t === O.IIU.LISTENING ||
+                                            t === O.IIU.WATCHING
                                         );
                                     })(i)
                                 ) {
                                     let l =
-                                        t === E.IIU.WATCHING || t === E.IIU.LISTENING
+                                        t === O.IIU.WATCHING || t === O.IIU.LISTENING
                                             ? ""
                                                   .concat(t, "-")
                                                   .concat(null != (u = i.name) ? u : "", "-")
@@ -114,7 +114,7 @@ function S(e) {
                                         ((v = !0),
                                         e(n, "presence", l),
                                         (y = {
-                                            user: O,
+                                            user: E,
                                             activity: i,
                                         }));
                                 } else
@@ -129,7 +129,7 @@ function S(e) {
                                         ((v = !0),
                                         e(n, "voice", i),
                                         (y = {
-                                            user: O,
+                                            user: E,
                                             voiceChannel: t,
                                         }));
                                 }
@@ -171,8 +171,8 @@ function S(e) {
                 e
             );
         })(),
-        T = i.useRef(null),
-        N = (0, o.Yzy)(S, {
+        N = i.useRef(null),
+        T = (0, o.Yzy)(S, {
             keys: (e) => {
                 var t, n, r;
                 return null != e
@@ -206,11 +206,11 @@ function S(e) {
         children: [
             (0, r.jsx)("div", {
                 className: y.container,
-                children: N((e, t) =>
+                children: T((e, t) =>
                     null == t
                         ? null
                         : (0, r.jsx)(p.Z, {
-                              targetElementRef: T,
+                              targetElementRef: N,
                               position: "bottom",
                               align: "left",
                               userId: t.user.id,
@@ -221,7 +221,7 @@ function S(e) {
                                       C(
                                           I(
                                               {
-                                                  ref: T,
+                                                  ref: N,
                                                   className: y.activityWrapper,
                                                   style: e,
                                               },
@@ -274,7 +274,7 @@ function S(e) {
         ],
     });
 }
-function T(e) {
+function N(e) {
     let { className: t } = e,
         { enableTopNavButton: n } = (0, b.Cq)({ location: "friends-button" });
     return n ? (0, r.jsx)(S, { className: t }) : null;

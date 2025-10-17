@@ -3,8 +3,8 @@ var a = n(951288),
     r = n(647438),
     i = n(120356),
     l = n.n(i),
-    s = n(793030),
-    o = n(481060),
+    o = n(793030),
+    s = n(481060),
     c = n(488922),
     d = n(191767),
     u = n(595925),
@@ -35,7 +35,7 @@ function f() {
     return (0, a.jsxs)("div", {
         className: l()(m.panel, p.container),
         children: [
-            (0, a.jsx)(o.njP, {
+            (0, a.jsx)(s.njP, {
                 className: p.tabBar,
                 selectedItem: e,
                 onItemSelect: t,
@@ -44,7 +44,7 @@ function f() {
                 orientation: "horizontal",
                 children: h.map((e) =>
                     (0, a.jsx)(
-                        o.njP.Item,
+                        s.njP.Item,
                         {
                             id: e.id,
                             children: e.name,
@@ -53,7 +53,7 @@ function f() {
                     ),
                 ),
             }),
-            (0, a.jsx)(s.w0Z, {
+            (0, a.jsx)(o.w0Z, {
                 children: (0, a.jsx)("div", {
                     className: p.content,
                     children: (0, a.jsx)(n, {}),

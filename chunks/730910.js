@@ -1,7 +1,7 @@
 n.d(t, { Z: () => D }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(599273),
+    l = n(258536),
     a = n(442837),
     s = n(692547),
     o = n(215569),
@@ -21,8 +21,8 @@ var r = n(951288),
     C = n(359191),
     O = n(84658),
     y = n(142961),
-    N = n(232764),
-    E = n(729311),
+    E = n(232764),
+    N = n(729311),
     I = n(966301),
     S = n(976269),
     T = n(981631),
@@ -83,13 +83,13 @@ function A(e) {
         {
             hasChanges: L,
             hasConfiguredAnythingForCurrentStep: k,
-            hasErrors: M,
+            hasErrors: G,
         } = (0, a.cj)([C.Z], () => ({
             hasChanges: C.Z.hasChanges(),
             hasConfiguredAnythingForCurrentStep: C.Z.hasConfiguredAnythingForCurrentStep(),
             hasErrors: C.Z.hasErrors(),
         })),
-        G = (0, a.e7)([C.Z], () => {
+        M = (0, a.e7)([C.Z], () => {
             let e = (0, O.lg)(D);
             return null != e && !C.Z.isEducationUpsellDismissed(e);
         }),
@@ -123,7 +123,7 @@ function A(e) {
             output: [z, (0, d.dQu)(s.Z.colors.STATUS_DANGER).hex()],
         });
     if (A) {
-        if (D === O.PG.DEFAULT_CHANNELS) return (0, r.jsx)(E.j, {});
+        if (D === O.PG.DEFAULT_CHANNELS) return (0, r.jsx)(N.j, {});
         else if (D === O.PG.CUSTOMIZATION_QUESTIONS) return (0, r.jsx)(I.Zm, {});
         else if (D === O.PG.HOME_SETTINGS) return (0, r.jsx)(S.Z, {});
         else if ((D === O.PG.LANDING || D === O.PG.REVIEW) && j.Z.hasChanges()) return (0, r.jsx)(S.Z, {});
@@ -171,16 +171,16 @@ function A(e) {
                 (await q()) && (0, b.Wy)(f, D);
         },
         J = null;
-    G &&
+    M &&
         (D === O.PG.SAFETY_CHECK
-            ? (J = (0, r.jsx)(N.j7, {}))
+            ? (J = (0, r.jsx)(E.j7, {}))
             : D === O.PG.DEFAULT_CHANNELS
-              ? (J = (0, r.jsx)(N.Io, {}))
+              ? (J = (0, r.jsx)(E.Io, {}))
               : D === O.PG.CUSTOMIZATION_QUESTIONS
-                ? (J = (0, r.jsx)(N.cZ, {}))
-                : D === O.PG.HOME_SETTINGS && (J = (0, r.jsx)(N.g6, {})));
+                ? (J = (0, r.jsx)(E.cZ, {}))
+                : D === O.PG.HOME_SETTINGS && (J = (0, r.jsx)(E.g6, {})));
     let $ = (0, r.jsx)("div", {
-            className: G ? w.hidden : void 0,
+            className: M ? w.hidden : void 0,
             children: (0, r.jsx)(d.Button, {
                 size: "sm",
                 variant: "secondary",
@@ -188,7 +188,7 @@ function A(e) {
                 icon: d.whL,
                 iconPosition: "start",
                 onClick: Q,
-                disabled: G || M,
+                disabled: M || G,
             }),
         }),
         ee = (0, r.jsx)(d.Button, {
@@ -198,7 +198,7 @@ function A(e) {
             icon: d.ZSh,
             iconPosition: "end",
             onClick: X,
-            disabled: G || M,
+            disabled: M || G,
         });
     return (0, r.jsx)(o.W, {
         component: "div",
@@ -211,7 +211,7 @@ function A(e) {
                     className: w.flexContainer,
                     ref: B,
                     children: [
-                        G
+                        M
                             ? (0, r.jsxs)("div", {
                                   className: w.educationUpsellRoot,
                                   children: [
@@ -236,7 +236,7 @@ function A(e) {
                                     (0, r.jsxs)("div", {
                                         className: w.next,
                                         children: [
-                                            M
+                                            G
                                                 ? (0, r.jsx)(d.Text, {
                                                       variant: "text-sm/normal",
                                                       color: "status-warning",

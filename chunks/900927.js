@@ -9,15 +9,15 @@ var i = n(399606),
     c = n(706454),
     d = n(271383),
     u = n(430824),
-    h = n(709054),
-    p = n(388032),
+    p = n(709054),
+    h = n(388032),
     f = n(131806);
 function g(e) {
     let { userId: t, guildId: n, textClassName: g, tooltipDelay: m } = e,
         b = (0, i.e7)([c.default], () => c.default.locale),
         y = (0, i.e7)([u.Z], () => (null != n ? u.Z.getGuild(n) : null)),
         _ = (0, i.e7)([d.ZP], () => (null != n ? d.ZP.getMember(n, t) : null)),
-        j = (0, s.FI)(h.default.extractTimestamp(t), b),
+        j = (0, s.FI)(p.default.extractTimestamp(t), b),
         O = (0, s.FI)(null == _ ? void 0 : _.joinedAt, b);
     return null == y || null == _
         ? (0, r.jsx)(a.Text, {
@@ -32,7 +32,7 @@ function g(e) {
                       className: f.memberSince,
                       children: [
                           (0, r.jsx)(l.u, {
-                              text: p.intl.string(p.t.uvGmCw),
+                              text: h.intl.string(h.t.uvGmCw),
                               delay: m,
                               children: (0, r.jsx)(a.gw7, {
                                   size: "custom",

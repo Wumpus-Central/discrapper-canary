@@ -11,8 +11,8 @@ var s = n(951288),
     m = n(760213),
     x = n(383832),
     h = n(71509),
-    f = n(981631),
-    _ = n(388032),
+    _ = n(981631),
+    f = n(388032),
     g = n(518474);
 function C(e) {
     let { transitionState: t, onClose: n } = e,
@@ -21,7 +21,7 @@ function C(e) {
             multiAccountUsers: u.Z.getUsers(),
         })),
         [N, T] = a.useState(!1),
-        [b, A] = a.useState(f.lds),
+        [b, A] = a.useState(_.lds),
         [p, v] = a.useState(null);
     return (
         a.useEffect(() => {
@@ -30,10 +30,10 @@ function C(e) {
                     (0, s.jsx)(c.Wn, {
                         messageType: c.QYI.ERROR,
                         className: g.infoMessage,
-                        children: _.intl.format(_.t.HAuRSE, { maxNumAccounts: h.$H }),
+                        children: f.intl.format(f.t.HAuRSE, { maxNumAccounts: h.$H }),
                     }),
                 ),
-                    A(f.lds);
+                    A(_.lds);
             else if (null != b) {
                 let e = d.default.getUser(b);
                 null != e &&
@@ -41,7 +41,7 @@ function C(e) {
                         (0, s.jsx)(c.Wn, {
                             messageType: c.QYI.POSITIVE,
                             className: g.infoMessage,
-                            children: _.intl.format(_.t["09qidX"], { username: e.username }),
+                            children: f.intl.format(f.t["09qidX"], { username: e.username }),
                         }),
                     ),
                     T(!1);
@@ -58,12 +58,12 @@ function C(e) {
             onClose: n,
             transitionState: t,
             size: "md",
-            "aria-label": _.intl.string(_.t.WbFpq6),
-            title: _.intl.string(_.t.WbFpq6),
-            subtitle: _.intl.string(_.t["+1Uk3d"]),
+            "aria-label": f.intl.string(f.t.WbFpq6),
+            title: f.intl.string(f.t.WbFpq6),
+            subtitle: f.intl.string(f.t["+1Uk3d"]),
             actions: [
                 {
-                    text: _.intl.string(_.t["9g2mqa"]),
+                    text: f.intl.string(f.t["9g2mqa"]),
                     variant: "secondary",
                     onClick: () => {
                         if (E.length >= h.$H) return void T(!0);
@@ -74,7 +74,7 @@ function C(e) {
             children: [
                 p,
                 (0, s.jsx)(m.Z, {
-                    actionText: _.intl.string(_.t.Wf421N),
+                    actionText: f.intl.string(f.t.Wf421N),
                     onAction: (e, t) => {
                         switch (e) {
                             case m.W.LOGIN_REQUIRED:

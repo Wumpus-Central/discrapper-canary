@@ -9,14 +9,14 @@ var r = n(951288),
     u = n(442837),
     d = n(755721),
     p = n(481060),
-    h = n(724757),
-    f = n(100527),
+    f = n(724757),
+    h = n(100527),
     g = n(906732),
     m = n(306680),
     b = n(585483),
     _ = n(709054),
-    y = n(821020),
-    O = n(804932),
+    O = n(821020),
+    y = n(804932),
     v = n(389160),
     j = n(787879),
     x = n(370774),
@@ -57,7 +57,7 @@ function T(e) {
 }
 let A = [S.KZ.UNREAD, S.KZ.TODAY, S.KZ.YESTERDAY, S.KZ.OLDER];
 function R() {
-    let { analyticsLocations: e } = (0, g.ZP)(f.Z.NOTIFICATIONS_INBOX);
+    let { analyticsLocations: e } = (0, g.ZP)(h.Z.NOTIFICATIONS_INBOX);
     return (0, r.jsx)("div", {
         className: Z.emptyStateContainer,
         children: (0, r.jsxs)(p.Kqy, {
@@ -99,25 +99,25 @@ function D(e) {
             loadMore: l,
             renderLoadingState: a,
             renderMessageGroup: d,
-            scrollerClassName: f,
+            scrollerClassName: h,
             className: g,
             listName: P,
             ignoreGrouping: N = !1,
         } = e,
-        D = (0, O.fJ)(),
+        D = (0, y.fJ)(),
         L = i.useRef(null),
-        M = (0, h.Z)(P, L),
-        { entrypoint: k, notificationCenterVariant: G } = (0, y.pN)({ location: "NotificationsInboxSidebarList" }),
+        M = (0, f.Z)(P, L),
+        { entrypoint: k, notificationCenterVariant: G } = (0, O.pN)({ location: "NotificationsInboxSidebarList" }),
         {
             isLoading: U,
             isLoadingComplete: B,
-            hasLoadedEver: V,
+            hasLoadedEver: F,
         } = (0, u.cj)([j.Z], () => ({
             isLoading: j.Z.isLoading,
             isLoadingComplete: j.Z.isLoadingComplete,
             hasLoadedEver: j.Z.hasLoadedEver,
         })),
-        F = !V && U,
+        V = !F && U,
         { messageCategoryOpenStates: H, toggleOpenState: z } = (0, v.Z)(),
         W = (function () {
             let e = (0, u.Wu)([j.Z], () => {
@@ -205,7 +205,7 @@ function D(e) {
             );
         }, [t, n]),
         q = 0 === t.length && 0 === n.length && B,
-        X = 0 === t.length && 0 === n.length && !V && U,
+        X = 0 === t.length && 0 === n.length && !F && U,
         Q = i.useMemo(() => {
             let e = [];
             return (
@@ -226,7 +226,7 @@ function D(e) {
                                               toggleOpenedState: () => {
                                                   let e = H[t];
                                                   z(t),
-                                                      (0, O.RZ)({
+                                                      (0, y.RZ)({
                                                           section: t,
                                                           enabled: !e,
                                                           viewId: D,
@@ -258,7 +258,7 @@ function D(e) {
         }, [o, l, t]);
     })({
         messagesByCategory: Y,
-        loadingInitial: F,
+        loadingInitial: V,
     });
     let en = i.useCallback(() => {
         var e;
@@ -277,7 +277,7 @@ function D(e) {
         });
     }, [en]);
     return (
-        (0, O.vU)({
+        (0, y.vU)({
             notificationCenterVariant: G,
             entrypoint: k,
             messages: t,
@@ -354,7 +354,7 @@ function D(e) {
                                             (i.current =
                                                 null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
                                     },
-                                    className: o()(Z.messagesPopout, f),
+                                    className: o()(Z.messagesPopout, h),
                                     onScroll: K,
                                     fade: !0,
                                 },

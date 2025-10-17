@@ -30,8 +30,8 @@ function b() {
             [l, v],
         ),
         y = (0, d.mY)(),
-        N = (0, o.Dt)(),
-        E = (0, o.Dt)();
+        E = (0, o.Dt)(),
+        N = (0, o.Dt)();
     return (0, r.jsxs)(f.Z, {
         title: h.intl.string(h.t["6antoq"]),
         description: h.intl.string(h.t.urVijY),
@@ -45,7 +45,7 @@ function b() {
             (0, r.jsx)(s.q4e, {
                 label: h.intl.string(h.t.m1KuWV),
                 description: h.intl.string(h.t.NB9NLC),
-                "aria-labelledby": N,
+                "aria-labelledby": E,
                 options: v,
                 placeholder: h.intl.string(h.t.WZG1BQ),
                 value: n,
@@ -57,7 +57,7 @@ function b() {
             (0, r.jsx)(s.q4e, {
                 label: h.intl.string(h.t["/JD9oa"]),
                 description: h.intl.string(h.t.Cg5eBg),
-                "aria-labelledby": E,
+                "aria-labelledby": N,
                 options: _,
                 value: b,
                 onChange: x,

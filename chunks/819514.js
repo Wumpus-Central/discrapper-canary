@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(332148),
     d = n(904245),
     p = n(933557),
-    h = n(576855),
-    f = n(372900),
+    f = n(576855),
+    h = n(372900),
     g = n(726521),
     m = n(501517),
     b = n(699516),
@@ -20,7 +20,7 @@ var r = n(951288),
     v = n(294218),
     j = n(981631),
     x = n(388032),
-    C = n(833540),
+    C = n(764295),
     E = n(625221);
 function S(e, t, n) {
     return (
@@ -99,20 +99,20 @@ class N extends i.PureComponent {
             })(l, ["channel", "message", "showContextMenuHint", "moderatorReportData"]),
             g = o.type === j.d4z.GUILD_ANNOUNCEMENT && (0, O.yE)(s.flags, j.iLy.CROSSPOSTED);
         u &&
-            (e = (0, r.jsx)(h.Z, {
+            (e = (0, r.jsx)(f.Z, {
                 className: E.spacingTop,
-                children: x.intl.format(x.t.IxY7E6, {}),
+                children: x.intl.format(x.t.IxY7Ex, {}),
             })),
             (0, y.vc)(s) &&
                 (t = (0, r.jsx)("div", {
                     className: E.spacingTop,
                     children: (0, r.jsx)(c.rsf, {
-                        label: x.intl.string(x.t.x0jzo9),
+                        label: x.intl.string(x.t.x0jzo6),
                         checked: n,
                         onChange: this.handleToggleReport,
                     }),
                 }));
-        let m = g ? x.intl.string(x.t["2kHABX"]) : x.intl.string(x.t.AMvpS4),
+        let m = g ? x.intl.string(x.t["2kHABQ"]) : x.intl.string(x.t.AMvpS0),
             b = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)("div", {
@@ -129,7 +129,7 @@ class N extends i.PureComponent {
             });
         if ((null == d ? void 0 : d.moderatorReportChannelId) != null) {
             let { isFlagResolved: e } = d;
-            return (0, r.jsx)(f.Z.Provider, {
+            return (0, r.jsx)(h.Z.Provider, {
                 value: o.guild_id,
                 children: (0, r.jsxs)(
                     c.Y0X,
@@ -147,7 +147,7 @@ class N extends i.PureComponent {
                                         }),
                                         (0, r.jsx)(c.Heading, {
                                             variant: "heading-xl/bold",
-                                            children: x.intl.string(x.t.MWMcg7),
+                                            children: x.intl.string(x.t.MWMcg4),
                                         }),
                                     ],
                                 }),
@@ -167,14 +167,14 @@ class N extends i.PureComponent {
                                     (0, r.jsx)(c.Button, {
                                         variant: "critical-primary",
                                         size: "sm",
-                                        text: x.intl.string(x.t.oyYWHE),
+                                        text: x.intl.string(x.t.oyYWHB),
                                         type: "submit",
                                         onClick: this.handleDelete,
                                     }),
                                     !e &&
                                         (0, r.jsx)(c.Checkbox, {
                                             checked: i,
-                                            label: x.intl.string(C.default["8yIKem"]),
+                                            label: x.intl.string(C.default["8yIKen"]),
                                             onChange: (e) => this.handleToggleResolveFlag(e),
                                         }),
                                 ],
@@ -184,19 +184,19 @@ class N extends i.PureComponent {
                 ),
             });
         }
-        return (0, r.jsx)(f.Z.Provider, {
+        return (0, r.jsx)(h.Z.Provider, {
             value: o.guild_id,
             children: (0, r.jsx)(a.Modal, {
-                title: g ? x.intl.string(x.t.aIz1oV) : x.intl.string(x.t.MWMcg7),
+                title: g ? x.intl.string(x.t.aIz1oa) : x.intl.string(x.t.MWMcg4),
                 subtitle: m,
                 actions: [
                     {
-                        text: x.intl.string(x.t["ETE/oC"]),
+                        text: x.intl.string(x.t["ETE/oK"]),
                         onClick: p.onClose,
                         variant: "secondary",
                     },
                     {
-                        text: x.intl.string(x.t.oyYWHE),
+                        text: x.intl.string(x.t.oyYWHB),
                         onClick: this.handleDeleteMana,
                         variant: "critical-primary",
                     },
@@ -252,18 +252,18 @@ let Z = {
                 l = (0, p.F6)(e, _.default, b.Z);
             return (
                 (i = e.isPrivate()
-                    ? x.intl.string(x.t.hMRngA)
-                    : x.intl.formatToPlainString(x.t["3IRluI"], { channelName: l })),
-                (0, r.jsx)(f.Z.Provider, {
+                    ? x.intl.string(x.t.hMRngI)
+                    : x.intl.formatToPlainString(x.t["3IRluL"], { channelName: l })),
+                (0, r.jsx)(h.Z.Provider, {
                     value: e.guild_id,
                     children: (0, r.jsxs)(
                         c.ConfirmModal,
                         P(
                             I(
                                 {
-                                    header: x.intl.string(x.t.bKMaZX),
-                                    confirmText: x.intl.string(x.t.rOQ5BX),
-                                    cancelText: x.intl.string(x.t["ETE/oC"]),
+                                    header: x.intl.string(x.t.bKMaZW),
+                                    confirmText: x.intl.string(x.t.rOQ5BQ),
+                                    cancelText: x.intl.string(x.t["ETE/oK"]),
                                     confirmButtonColor: s.zx.Colors.BRAND,
                                     onConfirm: () => u.Z.pinMessage(e, t.id),
                                 },
@@ -295,7 +295,7 @@ let Z = {
     },
     confirmUnpin: function (e, t) {
         (0, c.h7j)((n) =>
-            (0, r.jsx)(f.Z.Provider, {
+            (0, r.jsx)(h.Z.Provider, {
                 value: e.guild_id,
                 children: (0, r.jsxs)(
                     c.ConfirmModal,
@@ -303,8 +303,8 @@ let Z = {
                         I(
                             {
                                 header: x.intl.string(x.t.CFF2vL),
-                                confirmText: x.intl.string(x.t.lAU5jB),
-                                cancelText: x.intl.string(x.t["ETE/oC"]),
+                                confirmText: x.intl.string(x.t.lAU5jI),
+                                cancelText: x.intl.string(x.t["ETE/oK"]),
                                 onConfirm: () => u.Z.unpinMessage(e, t.id),
                             },
                             n,
@@ -314,7 +314,7 @@ let Z = {
                                 (0, r.jsx)(c.Text, {
                                     variant: "text-md/normal",
                                     className: E.spacing,
-                                    children: x.intl.string(x.t.NjEPp7),
+                                    children: x.intl.string(x.t.NjEPp6),
                                 }),
                                 (0, r.jsx)("div", {
                                     className: o()(E.message, E.spacing),
@@ -324,7 +324,7 @@ let Z = {
                                         disableInteraction: !0,
                                     }),
                                 }),
-                                (0, r.jsx)(h.Z, { children: x.intl.format(x.t.oCVB3Y, {}) }),
+                                (0, r.jsx)(f.Z, { children: x.intl.format(x.t.oCVB3d, {}) }),
                             ],
                         },
                     ),
@@ -357,9 +357,9 @@ let Z = {
                 P(
                     I(
                         {
-                            header: x.intl.string(x.t.aIz1oV),
-                            confirmText: x.intl.string(x.t["cY+Oob"]),
-                            cancelText: x.intl.string(x.t["ETE/oC"]),
+                            header: x.intl.string(x.t.aIz1oa),
+                            confirmText: x.intl.string(x.t["cY+Ooa"]),
+                            cancelText: x.intl.string(x.t["ETE/oK"]),
                             confirmButtonColor: s.zx.Colors.BRAND,
                             onConfirm: () => d.Z.editMessage(e, t, n),
                         },
@@ -369,7 +369,7 @@ let Z = {
                         children: (0, r.jsx)(c.Text, {
                             variant: "text-md/normal",
                             className: E.spacing,
-                            children: x.intl.string(x.t.grBcM8),
+                            children: x.intl.string(x.t.grBcMz),
                         }),
                     },
                 ),

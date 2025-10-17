@@ -12,7 +12,7 @@ var r = n(951288),
     _ = n(475179),
     p = n(925549),
     h = n(37234),
-    m = n(523238),
+    m = n(519938),
     g = n(100527),
     E = n(367907),
     b = n(358221),
@@ -32,8 +32,8 @@ var r = n(951288),
     L = n(937995),
     x = n(618158),
     M = n(922745),
-    j = n(197016),
-    k = n(800965),
+    k = n(197016),
+    j = n(800965),
     U = n(445062),
     G = n(7188),
     B = n(199902),
@@ -320,7 +320,7 @@ class ef extends i.PureComponent {
                 });
             }),
             el(this, "renderDisconnectButton", () =>
-                (0, r.jsx)(j.Z, {
+                (0, r.jsx)(k.Z, {
                     className: eo.rightTrayIcon,
                     onClick: () => (0, v.v)(g.Z.VIDEO_PIP, v.d.DISCONNECT),
                 }),
@@ -352,7 +352,7 @@ class ef extends i.PureComponent {
                 );
             }),
             el(this, "renderPopoutIcon", () =>
-                (0, r.jsx)(k.Z, {
+                (0, r.jsx)(j.Z, {
                     className: eo.rightTrayIcon,
                     popoutOpen: !1,
                     onOpenPopout: this.handleOpenPopout,

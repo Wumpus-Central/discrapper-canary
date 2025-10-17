@@ -93,11 +93,11 @@ var r = n(260674),
         var x = f ? String(n).replace(/\./g, "%2E") : String(n),
             M = o && l(C) && 1 === C.length ? x + "[]" : x;
         if (s && l(C) && 0 === C.length) return M + "[]";
-        for (var j = 0; j < A.length; ++j) {
-            var k = A[j],
-                U = "object" == typeof k && k && void 0 !== k.value ? k.value : C[k];
+        for (var k = 0; k < A.length; ++k) {
+            var j = A[k],
+                U = "object" == typeof j && j && void 0 !== j.value ? j.value : C[j];
             if (!d || null !== U) {
-                var G = b && f ? String(k).replace(/\./g, "%2E") : String(k),
+                var G = b && f ? String(j).replace(/\./g, "%2E") : String(j),
                     B = l(C) ? ("function" == typeof a ? a(M, G) : M) : M + (b ? "." + G : "[" + G + "]");
                 S.set(t, R);
                 var Z = r();

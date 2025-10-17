@@ -10,8 +10,8 @@ var i = n(399606),
     u = n(602478),
     d = n(2818),
     p = n(768943),
-    h = n(216789),
-    f = n(153209),
+    f = n(216789),
+    h = n(153209),
     g = n(818186),
     m = n(999671),
     b = n(946443),
@@ -19,9 +19,9 @@ var i = n(399606),
     O = n(388032),
     y = n(407067);
 function v(e) {
-    let { tab: t, setTab: n, badgeState: f, closePopout: m } = e,
+    let { tab: t, setTab: n, badgeState: h, closePopout: m } = e,
         { enabled: b, inInbox: _ } = d.Z.useExperiment({ location: "RecentsPopout" }),
-        v = (0, h.Us)({ location: "RecentsHeader" }),
+        v = (0, f.Us)({ location: "RecentsHeader" }),
         { enabled: x } = u.Z.useExperiment({ location: "RecentsHeader" }),
         C = (0, i.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
         E = (0, i.e7)([p.Z], () => p.Z.getOverdueMessageReminderCount());
@@ -66,7 +66,7 @@ function v(e) {
                             className: y.tab,
                             children: [
                                 O.intl.string(O.t["En+D+v"]),
-                                (null == f ? void 0 : f.badgeForYou)
+                                (null == h ? void 0 : h.badgeForYou)
                                     ? (0, r.jsx)(o.fWl, {
                                           color: s.Z.STATUS_DANGER,
                                           className: y.iconBadge,
@@ -129,7 +129,7 @@ function v(e) {
 function j(e) {
     let { tab: t } = e;
     return t === l.X.FOR_YOU
-        ? (0, r.jsx)(f.Gp, {})
+        ? (0, r.jsx)(h.Gp, {})
         : t === l.X.UNREADS
           ? (0, r.jsx)(b.QP, {})
           : t === l.X.MENTIONS

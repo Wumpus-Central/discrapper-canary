@@ -3,8 +3,8 @@ var a,
     r,
     i = n(951288),
     l = n(647438),
-    s = n(120356),
-    o = n.n(s),
+    o = n(120356),
+    s = n.n(o),
     c = n(159635),
     d = n.n(c),
     u = n(663993),
@@ -13,8 +13,8 @@ var a,
     h = n(428595),
     x = n(532901),
     f = n(963071),
-    b = n(154257);
-function g(e, t, n) {
+    g = n(154257);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,7 +38,7 @@ function v(e) {
                 }),
             )),
             a.forEach(function (t) {
-                g(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
@@ -138,7 +138,7 @@ let C = j(v({}, d().defaultRules), {
                         "pre",
                         {
                             children: (0, i.jsx)("code", {
-                                className: o()(b.scrollbarGhostHairline, "hljs"),
+                                className: s()(g.scrollbarGhostHairline, "hljs"),
                                 children: y(e),
                             }),
                         },
@@ -160,7 +160,7 @@ let C = j(v({}, d().defaultRules), {
                                           "pre",
                                           {
                                               children: (0, i.jsx)("code", {
-                                                  className: o()(b.scrollbarGhostHairline, "hljs", n.language),
+                                                  className: s()(g.scrollbarGhostHairline, "hljs", n.language),
                                                   dangerouslySetInnerHTML: { __html: n.value },
                                               }),
                                           },
@@ -181,13 +181,13 @@ class T extends (r = l.PureComponent) {
         let { className: e, children: t, state: n, parser: a, output: r } = this.props,
             l = r(a("".concat(t, "\n\n"), v({ inline: !1 }, n)));
         return (0, i.jsx)("div", {
-            className: o()(f.markdown, e),
+            className: s()(f.markdown, e),
             children: l,
         });
     }
 }
-g(T, "rules", C),
-    g(T, "defaultProps", {
+b(T, "rules", C),
+    b(T, "defaultProps", {
         parser: S,
         output: E,
     });

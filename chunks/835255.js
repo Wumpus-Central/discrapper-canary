@@ -85,10 +85,10 @@ function M(e) {
         W = i.useRef(null),
         H = i.useRef(null),
         { isHoveringOrFocusing: z } = (0, j.Z)(H),
-        { analyticsLocations: V } = (0, p.ZP)(),
-        K = (0, o.TH)(),
+        { analyticsLocations: K } = (0, p.ZP)(),
+        V = (0, o.TH)(),
         Y = i.useCallback(() => {
-            if (K.pathname.startsWith(A.Z5c.COLLECTIBLES_SHOP)) {
+            if (V.pathname.startsWith(A.Z5c.COLLECTIBLES_SHOP)) {
                 let e = m.Z.getProduct(t.skuId),
                     n = m.Z.getCategoryForProduct(t.skuId);
                 if (null != e && null != n) {
@@ -97,7 +97,7 @@ function M(e) {
                             product: e,
                             category: n,
                             shouldCheckoutWithOrbs: (0, y.oQ)({ product: e }),
-                            analyticsLocations: V,
+                            analyticsLocations: K,
                             analyticsSource: g.Z.USER_PROFILE_WISHLIST,
                             returnRef: void 0,
                             tab: void 0,
@@ -108,7 +108,7 @@ function M(e) {
             }
             (0, T.closeUserProfileModal)(),
                 (0, _.uL)("".concat(A.Z5c.COLLECTIBLES_SHOP, "#itemSkuId=").concat(t.skuId));
-        }, [K.pathname, t.skuId, V]),
+        }, [V.pathname, t.skuId, K]),
         X = t.collectiblesItem,
         q = X.type,
         [Q] = (0, u.Wu)([P.Z], () => [P.Z.hasSentGift(t.skuId, n.id)], [t.skuId, n.id]),
@@ -146,7 +146,7 @@ function M(e) {
                         wishlistId: a,
                         action: N.NW.WISHLIST_ITEM_CLICKED,
                         skuId: t.skuId,
-                        analyticsLocations: V,
+                        analyticsLocations: K,
                     }),
                 L)
             )
@@ -157,7 +157,7 @@ function M(e) {
                     skuId: t.skuId,
                     isGift: !0,
                     giftingOrigin: U,
-                    analyticsLocations: V,
+                    analyticsLocations: K,
                     giftRecipient: n,
                     variantsReturnStyle: c.v.VARIANTS_GROUP,
                 });

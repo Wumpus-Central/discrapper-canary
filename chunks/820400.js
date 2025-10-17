@@ -3,17 +3,17 @@ var a = n(951288),
     r = n(296009),
     i = n(481060),
     l = n(592183),
-    s = n(86419),
-    o = n(172416),
+    o = n(86419),
+    s = n(172416),
     c = n(667108);
 function d() {
-    let e = (0, o.Un)({
+    let e = (0, s.Un)({
             location: "DevToolsWidgetsPanel",
             autoTrackExposure: !1,
         }),
         t = (e) => {
-            let t = (0, s.np)(e);
-            (0, s.ES)(e, t);
+            let t = (0, o.np)(e);
+            (0, o.ES)(e, t);
         };
     return e
         ? (0, a.jsxs)("div", {
@@ -68,12 +68,12 @@ function d() {
                           (0, a.jsx)(i.Button, {
                               variant: "active",
                               text: "Save Widgets State",
-                              onClick: () => (0, s.X6)(),
+                              onClick: () => (0, o.X6)(),
                           }),
                           (0, a.jsx)(i.Button, {
                               variant: "critical-primary",
                               text: "Clear Saved Widgets",
-                              onClick: () => (0, s.tk)(),
+                              onClick: () => (0, o.tk)(),
                           }),
                       ],
                   }),

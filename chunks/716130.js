@@ -138,7 +138,7 @@ function C(e) {
         C = (0, s.e7)([p.Z], () => p.Z.editedOnboardingPrompts),
         O = C.filter((e) => e.inOnboarding),
         y = C.filter((e) => !0 !== e.inOnboarding),
-        N = [
+        E = [
             ...O.map((e) => ({
                 id: e.id,
                 data: e,
@@ -153,10 +153,10 @@ function C(e) {
             })),
         ],
         {
-            handleDragStart: E,
+            handleDragStart: N,
             handleDragReset: I,
             handleDragComplete: S,
-        } = (0, u.Z)(N, (e) => {
+        } = (0, u.Z)(E, (e) => {
             let t = e.findIndex((e) => "separator" === e.id),
                 n = e.slice(0, t).map((e) => v(j({}, e.data), { inOnboarding: !0 })),
                 r = e.slice(t + 1).map((e) =>
@@ -207,7 +207,7 @@ function C(e) {
                                             singleColumn: a,
                                             promptIndex: t,
                                             dragIndex: t,
-                                            onPromptDragStart: E,
+                                            onPromptDragStart: N,
                                             onPromptDragReset: I,
                                             onPromptDragComplete: S,
                                         },
@@ -233,7 +233,7 @@ function C(e) {
                                             prompt: e,
                                             promptIndex: t + O.length,
                                             dragIndex: t + O.length + 1,
-                                            onPromptDragStart: E,
+                                            onPromptDragStart: N,
                                             onPromptDragReset: I,
                                             onPromptDragComplete: S,
                                         },

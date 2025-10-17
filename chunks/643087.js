@@ -53,15 +53,15 @@ class b extends i.PureComponent {
                             gap: 16,
                             children: [
                                 (0, n.jsx)(s.oil, {
-                                    label: h.intl.string(h.t.tGRbjA),
+                                    label: h.intl.string(h.t.tGRbjI),
                                     maxLength: c.dYL,
                                     value: t,
                                     onChange: this.handleNameChange,
-                                    placeholder: h.intl.string(h.t.xV9hVh),
+                                    placeholder: h.intl.string(h.t.xV9hVl),
                                     autoFocus: !0,
                                 }),
                                 (0, n.jsx)(s.gNt, {
-                                    label: h.intl.string(h.t.xpurRF),
+                                    label: h.intl.string(h.t.xpurRE),
                                     children: (0, n.jsx)(d, {
                                         defaultColor: c.Wyy,
                                         colors: c.pmI,
@@ -76,7 +76,7 @@ class b extends i.PureComponent {
                 (0, n.jsx)(s.mzw, {
                     children: (0, n.jsx)(s.Button, {
                         variant: "primary",
-                        text: h.intl.string(h.t.i4jeWR),
+                        text: h.intl.string(h.t.i4jeWV),
                         type: "submit",
                         onClick: this.handleSubmit,
                     }),

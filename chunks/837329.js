@@ -71,10 +71,10 @@ function s(e) {
         },
         [],
     );
-    let c = null != n;
+    let d = null != n;
     return (
         r.useEffect(() => {
-            if ("" === e || c) return;
+            if ("" === e || d) return;
             let n = a.Z.getRegionStateForPingUrl(e);
             if ((null == n ? void 0 : n.rtt) != null || (null == n ? void 0 : n.loading) === !0) return;
             (0, l.hz)(e, {
@@ -84,7 +84,7 @@ function s(e) {
             });
             let r = new WebSocket("wss://".concat(e));
             (t.current = r), s(r);
-        }, [e, s, c]),
+        }, [e, s, d]),
         {
             pingText: r.useMemo(
                 () =>

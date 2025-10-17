@@ -48,8 +48,8 @@ function w(e) {
                   : F;
         }, [G, H, F]),
         U = (0, s.e7)([b.Z], () => b.Z.getGuild(G)),
-        { userDisplayNameStyles: K, guildDisplayNameStyles: q, pendingDisplayNameStyles: V } = (0, x.mD)(H, G),
-        X = void 0 !== V ? V : null != q ? q : K,
+        { userDisplayNameStyles: q, guildDisplayNameStyles: K, pendingDisplayNameStyles: V } = (0, x.mD)(H, G),
+        X = void 0 !== V ? V : null != K ? K : q,
         [W, $] = o.useState(null != (n = null == X ? void 0 : X.fontId) ? n : a.C.DEFAULT),
         [J, Q] = o.useState(null != (w = null == X ? void 0 : X.effectId) ? w : i.m.SOLID),
         ee = (0, D.R)(J),

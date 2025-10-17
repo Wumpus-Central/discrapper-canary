@@ -1,22 +1,22 @@
-n.d(t, { p: () => l });
+n.d(t, { p: () => a });
 var r = n(573654),
     i = n(647438);
-function l(e) {
+function a(e) {
     var t = {};
     return (
         Object.keys(e).forEach(function (n) {
-            var l = e[n];
+            var a = e[n];
             if (n.endsWith("Ref")) t[n] = e[n];
             else {
-                var s = function () {
+                var o = function () {
                     var e,
                         t,
                         n,
-                        s = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-                        o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-                    if (!(0, i.isValidElement)(s)) return l(s, o), s;
-                    if ("string" != typeof s.type) {
-                        var c = s.type.displayName || s.type.name || "the component";
+                        o = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+                        s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+                    if (!(0, i.isValidElement)(o)) return a(o, s), o;
+                    if ("string" != typeof o.type) {
+                        var c = o.type.displayName || o.type.name || "the component";
                         throw Error(
                             "Only native element nodes can now be passed to React DnD connectors." +
                                 "You can either wrap ".concat(c, " into a <div>, or turn it into a ") +
@@ -24,12 +24,12 @@ function l(e) {
                         );
                     }
                     return (
-                        (e = s),
-                        (t = o
+                        (e = o),
+                        (t = s
                             ? function (e) {
-                                  return l(e, o);
+                                  return a(e, s);
                               }
-                            : l),
+                            : a),
                         (n = e.ref),
                         ((0, r.k)(
                             "string" != typeof n,
@@ -38,20 +38,20 @@ function l(e) {
                         n)
                             ? (0, i.cloneElement)(e, {
                                   ref: function (e) {
-                                      a(n, e), a(t, e);
+                                      l(n, e), l(t, e);
                                   },
                               })
                             : (0, i.cloneElement)(e, { ref: t })
                     );
                 };
                 t[n] = function () {
-                    return s;
+                    return o;
                 };
             }
         }),
         t
     );
 }
-function a(e, t) {
+function l(e, t) {
     "function" == typeof e ? e(t) : (e.current = t);
 }

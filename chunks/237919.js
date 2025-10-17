@@ -15,7 +15,7 @@ var r = n(951288),
     m = n(981631),
     b = n(388032),
     _ = n(108201);
-function O(e, t, n) {
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ function O(e, t, n) {
         e
     );
 }
-class E extends i.Component {
+class O extends i.Component {
     componentDidMount() {
         document.addEventListener("keydown", this.handleKeyDown);
     }
@@ -74,9 +74,9 @@ class E extends i.Component {
     }
     constructor(...e) {
         super(...e),
-            O(this, "searchBarRef", i.createRef()),
-            O(this, "state", { focused: !1 }),
-            O(this, "handleKeyDown", (e) => {
+            E(this, "searchBarRef", i.createRef()),
+            E(this, "state", { focused: !1 }),
+            E(this, "handleKeyDown", (e) => {
                 var t, n, r;
                 let { activeRowKey: i, hasModalOpen: l, applicationViewItems: a } = this.props,
                     { searchBarRef: s } = this;
@@ -122,7 +122,7 @@ class E extends i.Component {
 function v() {
     let e = (0, s.e7)([p.Z], () => p.Z.hasLayers()),
         t = (0, c.s9z)(c.JQI);
-    return (0, r.jsx)(E, {
+    return (0, r.jsx)(O, {
         activeRowKey: (0, s.e7)([h.Z], () => h.Z.activeRowKey),
         hasModalOpen: t || e,
         filterQuery: (0, s.e7)([f.Z], () => f.Z.applicationFilterQuery),

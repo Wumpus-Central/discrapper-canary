@@ -1,14 +1,14 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var a = n(951288),
     r = n(647438),
     i = n(392711),
     l = n(680295);
-let s = (e) => {
+let o = (e) => {
     let { config: t } = e,
         n = r.useMemo(() => (0, i.cloneDeep)(t), [t]),
-        s = r.useMemo(() => t.effects.some((e) => null != e.randomizedSources && e.randomizedSources.length > 0), [t]),
-        o = r.useMemo(() => {
-            if (s) {
+        o = r.useMemo(() => t.effects.some((e) => null != e.randomizedSources && e.randomizedSources.length > 0), [t]),
+        s = r.useMemo(() => {
+            if (o) {
                 var e;
                 let a =
                     1 ===
@@ -27,9 +27,9 @@ let s = (e) => {
                     });
             }
             return n;
-        }, [t.effects, n, s]);
+        }, [t.effects, n, o]);
     return (0, a.jsx)(l.n, {
-        profileEffectConfig: o,
+        profileEffectConfig: s,
         skuId: "debug",
     });
 };

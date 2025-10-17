@@ -27,7 +27,7 @@ function O(e) {
             disableAutofocus: u,
             promptIndex: x,
             dragIndex: O,
-            includeCount: E,
+            includeCount: N,
             singleColumn: I,
             onPromptDragComplete: S,
             onPromptDragStart: T,
@@ -51,8 +51,8 @@ function O(e) {
             var e;
             return null != (e = b.Z.errors[x]) ? e : C;
         }),
-        [k, M] = i.useState(!1),
-        [G, U] = i.useState(!1),
+        [k, G] = i.useState(!1),
+        [M, U] = i.useState(!1),
         B = null != (t = L.options) ? t : L.optionErrors.filter(p.lm)[0],
         F = L.config,
         H = l.options.length >= j.fY,
@@ -80,7 +80,7 @@ function O(e) {
                   className: a()(_.container, {
                       [_.dropIndicatorBefore]: null != R && x < R,
                       [_.dropIndicatorAfter]: null != R && x > R,
-                      [_.containerFocused]: G,
+                      [_.containerFocused]: M,
                   }),
                   ref: (e) => {
                       Z(D(e));
@@ -108,7 +108,7 @@ function O(e) {
                       }),
                       (0, r.jsx)(c.P3F, {
                           className: _.collapseButton,
-                          onClick: () => M(!1),
+                          onClick: () => G(!1),
                           children: (0, r.jsx)(m.Z, {
                               direction: m.Z.Directions.DOWN,
                               height: 16,
@@ -140,7 +140,7 @@ function O(e) {
                   className: a()(_.container, {
                       [_.dropIndicatorBefore]: null != R && x < R,
                       [_.dropIndicatorAfter]: null != R && x > R,
-                      [_.containerFocused]: G,
+                      [_.containerFocused]: M,
                   }),
                   ref: (e) => {
                       Z(D(e));
@@ -183,7 +183,7 @@ function O(e) {
                                             count: l.options.length,
                                             total: j.qm,
                                         }),
-                                  children: (0, r.jsx)(N, {
+                                  children: (0, r.jsx)(E, {
                                       guild: n,
                                       prompt: l,
                                       promptIndex: x,
@@ -209,7 +209,7 @@ function O(e) {
                                                 checked: !!(l.inOnboarding && l.required),
                                                 onChange: (e) => (0, h.Kk)(n, l.id, { required: e }),
                                                 disabled: !l.inOnboarding,
-                                                label: E
+                                                label: N
                                                     ? v.intl.formatToPlainString(v.t["0re8T0"], { count: W })
                                                     : v.intl.string(v.t.Ur8Vrq),
                                             })
@@ -218,7 +218,7 @@ function O(e) {
                               }),
                               (0, r.jsx)(c.P3F, {
                                   className: _.collapseButton,
-                                  onClick: () => M(!0),
+                                  onClick: () => G(!0),
                                   children: (0, r.jsx)(m.Z, {
                                       direction: m.Z.Directions.UP,
                                       height: 16,
@@ -286,7 +286,7 @@ function y(e) {
         ],
     });
 }
-function N(e) {
+function E(e) {
     let { guild: t, prompt: n, promptIndex: i, singleColumn: l, errors: a } = e,
         {
             handleDragStart: s,

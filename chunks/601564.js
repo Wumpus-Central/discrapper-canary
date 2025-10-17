@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: () => x,
-        getPageSize: () => j,
+        getPageSize: () => P,
     }),
     n(388685),
     n(35282);
@@ -21,14 +21,14 @@ var r = n(951288),
     m = n(663993),
     b = n(628123),
     _ = n(703656),
-    O = n(108427),
-    E = n(911314),
+    E = n(108427),
+    O = n(911314),
     v = n(429899),
     y = n(843445),
     I = n(981631),
     C = n(388032),
     S = n(430355);
-function T(e, t, n) {
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,15 +41,15 @@ function T(e, t, n) {
         e
     );
 }
-let N = (0, m.Un)({
+let T = (0, m.Un)({
     createPromise: () => Promise.all([n.e("68264"), n.e("87626")]).then(n.bind(n, 496691)),
     webpackId: 496691,
 });
-function j(e) {
+function P(e) {
     return e < y.x ? y.b.SMALL : y.b.LARGE;
 }
 o.ZP.initialize();
-class P extends i.PureComponent {
+class j extends i.PureComponent {
     componentDidMount() {
         (0, s.Y)(this.props.location),
             (this.stopListeningToHistory = (0, _.s1)().listen((e) => {
@@ -59,7 +59,7 @@ class P extends i.PureComponent {
             g.Z.disable(),
             g.Z.setLayout(f.r),
             g.Z.enable(),
-            (0, O.e)("application_store");
+            (0, E.e)("application_store");
     }
     componentWillUnmount() {
         null != this.stopListeningToHistory && this.stopListeningToHistory(),
@@ -82,7 +82,7 @@ class P extends i.PureComponent {
                       className: S.applicationStore,
                       children: this.renderContent(),
                   })
-                : (0, r.jsx)(N, {
+                : (0, r.jsx)(T, {
                       className: S.applicationStore,
                       location: t,
                       render: this.renderContent,
@@ -94,8 +94,8 @@ class P extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            T(this, "stopListeningToHistory", void 0),
-            T(this, "renderStoreListing", (e) => {
+            N(this, "stopListeningToHistory", void 0),
+            N(this, "renderStoreListing", (e) => {
                 let {
                         match: {
                             params: { skuId: t, applicationId: n, slug: i },
@@ -113,11 +113,11 @@ class P extends i.PureComponent {
                         slug: i,
                         location: a,
                         storeListingId: s.store_listing_id,
-                        pageSize: j(o),
+                        pageSize: P(o),
                     }),
                 });
             }),
-            T(this, "renderContent", () =>
+            N(this, "renderContent", () =>
                 (0, r.jsxs)(a.rs, {
                     children: [
                         (0, r.jsx)(a.AW, {
@@ -127,7 +127,7 @@ class P extends i.PureComponent {
                                 (0, r.jsx)(u.Z, {
                                     page: I.ZY5.STORE_DIRECTORY_HOME,
                                     root: !0,
-                                    children: (0, r.jsx)(E.Z, {}),
+                                    children: (0, r.jsx)(O.Z, {}),
                                 }),
                         }),
                         (0, r.jsx)(a.AW, {
@@ -152,4 +152,4 @@ class P extends i.PureComponent {
             );
     }
 }
-let x = (0, a.EN)((0, d.Z)((0, p.Z)(P)));
+let x = (0, a.EN)((0, d.Z)((0, p.Z)(j)));

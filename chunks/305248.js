@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685), n(642613);
+n.d(t, { Z: () => y }), n(388685), n(642613);
 var r = n(951288),
     i = n(647438),
     l = n(392711),
@@ -9,17 +9,17 @@ var r = n(951288),
     u = n(404616),
     d = n(470623),
     p = n(344185),
-    h = n(488131),
-    f = n(592125),
+    f = n(488131),
+    h = n(592125),
     g = n(823379),
     m = n(709054),
     b = n(981631),
     _ = n(124368),
-    y = n(479014);
-function O(e) {
+    O = n(479014);
+function y(e) {
     let { channel: t, channelRecord: n, deleteChannel: l } = e,
-        O = (0, a.Wu)(
-            [p.Z, f.Z],
+        y = (0, a.Wu)(
+            [p.Z, h.Z],
             () =>
                 o()(p.Z.getThreadsForParent(n.guild_id, n.id))
                     .values()
@@ -29,7 +29,7 @@ function O(e) {
                     })
                     .map((e) => {
                         let { id: t } = e;
-                        return f.Z.getChannel(t);
+                        return h.Z.getChannel(t);
                     })
                     .filter(g.lm)
                     .sort((e, t) => m.default.compare(e.id, t.id))
@@ -37,7 +37,7 @@ function O(e) {
             [t.oldestReadMessageId, n.guild_id, n.id],
         ),
         v = i.useCallback((e, t) => {
-            (0, h.ok)(e, t, _.on.INBOX);
+            (0, f.ok)(e, t, _.on.INBOX);
         }, []);
     return (
         i.useEffect(() => {
@@ -45,7 +45,7 @@ function O(e) {
                 !t.isFullyLoaded ||
                 t.hasError ||
                 t.collapsed ||
-                0 !== O.length ||
+                0 !== y.length ||
                 s.Z.wait(() => {
                     (0, c.In)(
                         t.channelId,
@@ -60,14 +60,14 @@ function O(e) {
                 });
         }),
         (0, r.jsx)("div", {
-            className: y.container,
-            children: O.map((e) =>
+            className: O.container,
+            children: y.map((e) =>
                 (0, r.jsx)(
                     d.oL,
                     {
                         channel: n,
                         children: (0, r.jsx)(u.ZP, {
-                            className: y.forumPost,
+                            className: O.forumPost,
                             threadId: e.id,
                             goToThread: v,
                         }),

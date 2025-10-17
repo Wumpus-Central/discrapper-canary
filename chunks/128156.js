@@ -21,8 +21,8 @@ var i = n(442837),
     O = n(661462),
     x = n(228168),
     _ = n(981631),
-    I = n(388032),
-    P = n(158069);
+    P = n(388032),
+    I = n(158069);
 function w(e) {
     let { user: t, currentUser: n, displayProfile: w, guildId: S, channelId: E, subsection: T, onClose: C } = e,
         { voiceActivityStatusEnabled: N } = (0, l.U)({ location: "UserProfileModalV2Activity" }),
@@ -44,12 +44,12 @@ function w(e) {
         H = k.length > 0;
     if (!W && !H && G)
         return (0, r.jsx)("div", {
-            className: P.cards,
+            className: I.cards,
             children: Array.from({ length: 8 }).map((e, t) =>
                 (0, r.jsxs)(
                     "div",
                     {
-                        className: P.loadingItem,
+                        className: I.loadingItem,
                         children: [
                             (0, r.jsx)(s.ZT, {
                                 width: 60,
@@ -77,14 +77,14 @@ function w(e) {
               });
     }
     return (0, r.jsxs)(O.F, {
-        className: P.scroller,
+        className: I.scroller,
         fade: !0,
         children: [
             W
                 ? (0, r.jsx)(j.Z, {
-                      heading: I.intl.string(I.t.J6STd3),
+                      heading: P.intl.string(P.t.J6STd3),
                       children: (0, r.jsxs)("ul", {
-                          className: P.cards,
+                          className: I.cards,
                           children: [
                               !A &&
                                   U &&
@@ -135,9 +135,9 @@ function w(e) {
                 : null,
             H
                 ? (0, r.jsx)(j.Z, {
-                      heading: I.intl.string(I.t.jzgEoK),
+                      heading: P.intl.string(P.t.jzgEoK),
                       introText: B
-                          ? I.intl.format(I.t["4bk9Ag"], {
+                          ? P.intl.format(P.t["4bk9Ag"], {
                                 learnMoreHook: (e, t) =>
                                     (0, r.jsx)(
                                         a.Anchor,
@@ -151,7 +151,7 @@ function w(e) {
                           : void 0,
                       scrollIntoView: T === x.Tb.RECENT_ACTIVITY,
                       children: (0, r.jsx)("ul", {
-                          className: P.cards,
+                          className: I.cards,
                           children: k.map((e) =>
                               (0, r.jsx)(
                                   "li",

@@ -1,23 +1,23 @@
-t.d(i, { ZP: () => c });
+t.d(i, { ZP: () => d });
 var n,
     l,
     r = t(442837),
     s = t(570140);
-let a = {},
-    u = !1;
+let u = {},
+    a = !1;
 class o extends (l = r.ZP.Store) {
     isLoading() {
-        return u;
+        return a;
     }
     passesChecklist(e) {
         var i;
-        return !u && (null == (i = a[e]) ? void 0 : i.sufficient);
+        return !a && (null == (i = u[e]) ? void 0 : i.sufficient);
     }
     isPendingSuccess(e) {
-        let i = a[e];
+        let i = u[e];
         return (
             null != i &&
-            !u &&
+            !a &&
             i.healthScorePending &&
             i.safeEnvironment &&
             0 === Object.keys(i.nsfwProperties).length &&
@@ -26,7 +26,7 @@ class o extends (l = r.ZP.Store) {
         );
     }
     getDiscoveryChecklist(e) {
-        return a[e];
+        return u[e];
     }
 }
 (n = "displayName") in o
@@ -37,18 +37,18 @@ class o extends (l = r.ZP.Store) {
           writable: !0,
       })
     : (o[n] = "DiscoverGuildChecklistStore");
-let c = new o(s.Z, {
+let d = new o(s.Z, {
     DISCOVER_CHECKLIST_FETCH_START: function (e) {
-        u = !0;
+        a = !0;
     },
     DISCOVER_CHECKLIST_FETCH_FAILURE: function (e) {
-        u = !1;
+        a = !1;
     },
     DISCOVER_CHECKLIST_FETCH_SUCCESS: function (e) {
         var i;
         let { checklist: t, guildId: n } = e;
-        (u = !1),
-            (a[n] = {
+        (a = !1),
+            (u[n] = {
                 guildId: t.guild_id,
                 safeEnvironment: t.safe_environment,
                 healthy: t.healthy,

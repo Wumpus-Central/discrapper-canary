@@ -7,7 +7,7 @@ var r = n(951288),
     o = n(442837),
     c = n(28664),
     d = n(481060),
-    u = n(144991),
+    u = n(722252),
     g = n(496675),
     m = n(594174),
     p = n(626135),
@@ -21,8 +21,8 @@ var r = n(951288),
     C = n(203377),
     O = n(981631),
     y = n(388032),
-    N = n(561646),
-    E = n(21321);
+    E = n(561646),
+    N = n(21321);
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -92,7 +92,7 @@ function T(e) {
         text: f ? y.intl.string(y.t["IQ/6Sk"]) : null,
         position: "top",
         children: (0, r.jsx)("div", {
-            className: N.clearButtonWrapper,
+            className: E.clearButtonWrapper,
             children: (0, r.jsx)(d.Avr, {
                 variant: "primary",
                 textVariant: "text-sm/semibold",
@@ -107,9 +107,9 @@ function P(e) {
     let { guild: t, role: n, specs: i, locked: l } = e;
     if (0 === i.length)
         return (0, r.jsxs)("div", {
-            className: N.noResultsContainer,
+            className: E.noResultsContainer,
             children: [
-                (0, r.jsx)(x.Z, { className: N.noResults }),
+                (0, r.jsx)(x.Z, { className: E.noResults }),
                 (0, r.jsx)(d.Text, {
                     variant: "text-sm/normal",
                     children: y.intl.string(y.t.DEBGqK),
@@ -123,7 +123,7 @@ function P(e) {
             : y.intl.string(y.t.nOtPMD);
     }
     return (0, r.jsxs)("div", {
-        className: N.permissionsWrapper,
+        className: E.permissionsWrapper,
         children: [
             (0, r.jsx)(T, {
                 guild: t,
@@ -134,7 +134,7 @@ function P(e) {
                 (0, r.jsx)(
                     u.Z,
                     {
-                        className: N.permissionsForm,
+                        className: E.permissionsForm,
                         spec: e,
                         permissions: n.permissions,
                         locked: l,
@@ -177,14 +177,14 @@ function w(e) {
                 (p.default.track(O.rMx.SEARCH_STARTED, { search_type: "Permissions" }), (T.current = !0));
         }, [c]),
         (0, r.jsx)(d.yWw, {
-            className: N.scroller,
+            className: E.scroller,
             style: { scrollPaddingTop: m },
             onScroll: x,
             children: (0, r.jsxs)("div", {
-                className: E.contentWidth,
+                className: N.contentWidth,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: a()(E.header, E.stickyHeader, { [E.stickyHeaderElevated]: !b }),
+                        className: a()(N.header, N.stickyHeader, { [N.stickyHeaderElevated]: !b }),
                         ref: h,
                         children: [
                             (0, r.jsx)(v.Z, {
@@ -194,11 +194,11 @@ function w(e) {
                                 setSelectedSection: s,
                             }),
                             (0, r.jsx)("div", {
-                                className: N.noticeContainer,
+                                className: E.noticeContainer,
                                 children: (0, r.jsx)(_.Z, { role: n }),
                             }),
                             (0, r.jsx)("div", {
-                                className: N.searchContainer,
+                                className: E.searchContainer,
                                 children: (0, r.jsx)(d.E1j, {
                                     query: c,
                                     onChange: u,

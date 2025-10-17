@@ -1,10 +1,10 @@
-n.d(t, { Z: () => b }), n(388685), n(781311);
+n.d(t, { Z: () => g }), n(388685), n(781311);
 var a = n(951288),
     r = n(647438),
     i = n(399606),
     l = n(481060),
-    s = n(100527),
-    o = n(594174),
+    o = n(100527),
+    s = n(594174),
     c = n(597688),
     d = n(1870),
     u = n(223143),
@@ -57,19 +57,19 @@ let f = (e) => {
             )
         );
     },
-    b = () => {
-        let e = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
+    g = () => {
+        let e = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
             t = (0, i.e7)([c.Z], () => c.Z.categories),
             n = (0, i.e7)([d.Z], () => d.Z.purchases),
             m = (0, i.e7)([c.Z], () => c.Z.lastSuccessfulFetch),
-            b = t.size > 0 && n.size > 0 && null != m,
-            { isFetching: g, categories: v } = (0, u.ZP)({
+            g = t.size > 0 && n.size > 0 && null != m,
+            { isFetching: b, categories: v } = (0, u.ZP)({
                 logPerf: !1,
                 stalePurchasesOK: !0,
-                noOp: b,
+                noOp: g,
             }),
-            j = b ? t : v,
-            _ = b || (!g && j.size > 0),
+            j = g ? t : v,
+            _ = g || (!b && j.size > 0),
             [y, C] = r.useState(""),
             [S, E] = r.useState(null),
             [T, O] = r.useState(null);
@@ -82,7 +82,7 @@ let f = (e) => {
                 t = c.Z.getCategoryForProduct(y);
             null != e && null != t ? (E(e), O(t)) : (E(null), O(null));
         }, [y, _]),
-        g)
+        b)
             ? (0, a.jsx)(l.Text, {
                   variant: "text-md/normal",
                   children: "Loading categories and collectibles...",
@@ -164,7 +164,7 @@ let f = (e) => {
                                                           null != e &&
                                                           (0, p.Z)({
                                                               product: S,
-                                                              analyticsLocations: [s.Z.COLLECTIBLES_SHOP_CARD],
+                                                              analyticsLocations: [o.Z.COLLECTIBLES_SHOP_CARD],
                                                           });
                                                   },
                                                   text: "Show Collectibles Collected Modal",

@@ -3,15 +3,15 @@ var a = n(951288),
     r = n(647438),
     i = n(442837),
     l = n(481060),
-    s = n(607070),
-    o = n(7093),
+    o = n(607070),
+    s = n(7093),
     c = n(817466),
     d = n(388032),
     u = n(119290);
 let m = r.lazy(() => n.e("77898").then(n.bind(n, 739859)));
 function p() {
-    let e = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
-        t = (0, o.Z)((e) => e.shouldRenderTenureLevelUp),
+    let e = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
+        t = (0, s.Z)((e) => e.shouldRenderTenureLevelUp),
         n = (0, c.Z)();
     return e || !t || null == n ? null : (0, a.jsx)(h, { levelUpData: n });
 }
@@ -19,7 +19,7 @@ function h(e) {
     let { levelUpData: t } = e,
         n = r.useRef(null),
         i = r.useCallback(() => {
-            o.Z.setState({ shouldRenderTenureLevelUp: !1 });
+            s.Z.setState({ shouldRenderTenureLevelUp: !1 });
         }, []);
     return (
         r.useEffect(() => i, [i]),

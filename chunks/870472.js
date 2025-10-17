@@ -340,7 +340,7 @@ function c(e, t) {
             },
             [l, i, u, c.length, o],
         ),
-        N = r.useCallback(
+        E = r.useCallback(
             (e) => {
                 e.relatedTarget !== e.currentTarget && _(e, !1, !1);
             },
@@ -386,6 +386,6 @@ function c(e, t) {
         handleSelectTag: b,
         handleUnselectTag: x,
         handleResetTagSelections: j,
-        handleInputBlurEvent: N,
+        handleInputBlurEvent: E,
     };
 }

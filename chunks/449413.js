@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(481060),
     a = n(454585),
-    o = n(273744),
-    s = n(5323);
+    s = n(273744),
+    o = n(5323);
 let c = (e) => {
     var t, n;
     let {
@@ -37,7 +37,7 @@ let c = (e) => {
                     }
                     return e;
                 })({}, a.Z.defaultRules)),
-                (n = n = { link: o.s }),
+                (n = n = { link: s.s }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                     : (function (e, t) {
@@ -56,7 +56,7 @@ let c = (e) => {
     return null == c
         ? null
         : (0, r.jsx)(l.Wn, {
-              className: s.infoBox,
+              className: o.infoBox,
               messageType: l.QYI.INFO,
               children: d.current(c),
           });

@@ -15,15 +15,15 @@ var r = n(951288),
     m = n(982538);
 let b = function (e) {
     var t, n, b;
-    let { questId: _, setQuestId: O, quest: E, refreshQuest: v } = e,
+    let { questId: _, setQuestId: E, quest: O, refreshQuest: v } = e,
         [y, I] = i.useState(!1),
         [C, S] = i.useState(!1),
-        T = i.useRef(null),
-        N = (0, u.MP)(),
-        j = (0, l.e7)([d.Z], () => (null != _ ? d.Z.getFetchQuestPreviewError(_) : null), [_]),
-        P = (0, l.e7)([d.Z], () => null != _ && d.Z.isFetchingQuestPreview(_), [_]),
+        N = i.useRef(null),
+        T = (0, u.MP)(),
+        P = (0, l.e7)([d.Z], () => (null != _ ? d.Z.getFetchQuestPreviewError(_) : null), [_]),
+        j = (0, l.e7)([d.Z], () => null != _ && d.Z.isFetchingQuestPreview(_), [_]),
         x = i.useMemo(() => {
-            let e = N.map((e) => {
+            let e = T.map((e) => {
                 var t, n, r;
                 return {
                     label: ""
@@ -46,7 +46,7 @@ let b = function (e) {
                     }),
                 e
             );
-        }, [N, _]),
+        }, [T, _]),
         A = i.useCallback(async () => {
             if (null != _) {
                 I(!0);
@@ -80,9 +80,9 @@ let b = function (e) {
         }, [_, I]),
         L = i.useCallback(
             (e) => {
-                (0, s.Ew)(e) || null == O || O(e);
+                (0, s.Ew)(e) || null == E || E(e);
             },
-            [O],
+            [E],
         );
     return (0, r.jsxs)("div", {
         className: m.controlBar,
@@ -128,7 +128,7 @@ let b = function (e) {
                                             .concat(
                                                 null !=
                                                     (b =
-                                                        null == E || null == (n = E.config) || null == (t = n.messages)
+                                                        null == O || null == (n = O.config) || null == (t = n.messages)
                                                             ? void 0
                                                             : t.questName)
                                                     ? b
@@ -139,7 +139,7 @@ let b = function (e) {
                                         onClick: v,
                                         "aria-label": g.intl.string(g.t.wzzjk5),
                                         icon: a.DuK,
-                                        loading: P,
+                                        loading: j,
                                     }),
                                 ],
                             }),
@@ -148,7 +148,7 @@ let b = function (e) {
                 }),
             }),
             null != _ &&
-                null != E &&
+                null != O &&
                 (0, r.jsx)("div", {
                     className: m.controlsSection,
                     children: (0, r.jsxs)(a.ButtonGroup, {
@@ -176,7 +176,7 @@ let b = function (e) {
                                 text: g.intl.string(g.t.cKSLr6),
                             }),
                             (0, r.jsx)(a.yRy, {
-                                targetElementRef: T,
+                                targetElementRef: N,
                                 shouldShow: C,
                                 onRequestClose: () => S(!1),
                                 position: "bottom",
@@ -194,7 +194,7 @@ let b = function (e) {
                                     }),
                                 children: () =>
                                     (0, r.jsx)(a.hU, {
-                                        buttonRef: T,
+                                        buttonRef: N,
                                         onClick: () => S(!C),
                                         "aria-label": g.intl.string(g.t.rNGQfH),
                                         icon: a.TIy,
@@ -204,8 +204,8 @@ let b = function (e) {
                         ],
                     }),
                 }),
-            null != j ? (0, r.jsx)(p.W, { error: j }) : null,
-            P ? (0, r.jsx)(a.$jN, {}) : null,
+            null != P ? (0, r.jsx)(p.W, { error: P }) : null,
+            j ? (0, r.jsx)(a.$jN, {}) : null,
         ],
     });
 };

@@ -104,7 +104,7 @@ function L() {
     !C && (D() || null != v.surveyOverride) && ((C = !0), (0, u.wk)(v.surveyOverride, !0));
 }
 function x(e) {
-    return j(e) && M(e);
+    return k(e) && M(e);
 }
 function M(e) {
     let { guild_requirements: t = [], guild_size: n = [null, null], guild_permissions: r = [] } = e;
@@ -149,10 +149,10 @@ function M(e) {
     }
     return !!i && !!a;
 }
-function j(e) {
+function k(e) {
     return !0;
 }
-function k(e) {
+function j(e) {
     let t = l.K.get(m.z7k);
     return null == t || a()().diff(t, "day") < e;
 }
@@ -162,7 +162,7 @@ function U(e) {
     let n = null != t,
         r = n && null == v.hiddenSurveys[t.key],
         i = n && x(t);
-    k(R);
+    j(R);
     let a = !1;
     A = r && i && !a ? t : null;
 }

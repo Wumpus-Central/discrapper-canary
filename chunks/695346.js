@@ -2,7 +2,7 @@ n.d(t, {
     A2: () => e2,
     AY: () => ei,
     CM: () => el,
-    CW: () => ej,
+    CW: () => ek,
     Cr: () => eE,
     DC: () => ec,
     Eo: () => ez,
@@ -37,7 +37,7 @@ n.d(t, {
     V6: () => N,
     Wp: () => eL,
     Xc: () => F,
-    Xk: () => j,
+    Xk: () => k,
     Xr: () => ep,
     YC: () => e1,
     Yk: () => eD,
@@ -74,7 +74,7 @@ n.d(t, {
     nc: () => eS,
     nh: () => eW,
     no: () => eG,
-    qF: () => k,
+    qF: () => j,
     rN: () => eA,
     rR: () => e4,
     tU: () => eO,
@@ -249,7 +249,7 @@ let A = (0, f.Zc)(
         },
         (e) => o.D5.create({ value: e }),
     ),
-    j = (0, f.Zc)(
+    k = (0, f.Zc)(
         "textAndImages",
         "showCommandSuggestions",
         (e) => {
@@ -258,7 +258,7 @@ let A = (0, f.Zc)(
         },
         (e) => o.D5.create({ value: e }),
     ),
-    k = (0, f.Zc)(
+    j = (0, f.Zc)(
         "voiceAndVideo",
         "alwaysPreviewVideo",
         (e) => {
@@ -837,18 +837,18 @@ let eR = (0, f.KM)(
         (e) => (null != e ? e : ex),
         (e) => e,
     ),
-    ej = (0, f.Zc)(
+    ek = (0, f.Zc)(
         "privacy",
         "activityRestrictedGuildIds",
         (e) => (null != e ? e : ex),
         (e) => e,
         { delay: h.fy.FREQUENT_USER_ACTION },
     ),
-    ek = [],
+    ej = [],
     eU = (0, f.Zc)(
         "privacy",
         "activityJoiningRestrictedGuildIds",
-        (e) => (null != e ? e : ek),
+        (e) => (null != e ? e : ej),
         (e) => e,
     );
 (0, f.TG)({

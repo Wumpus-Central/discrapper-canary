@@ -1,29 +1,29 @@
-n.d(t, { Z: () => c }), n(388685);
+n.d(t, { Z: () => s }), n(388685);
 var r = n(951288),
     l = n(647438),
     o = n(59662),
     i = n(36361),
     a = n(530171),
-    s = n(445642);
-let c = l.memo(function (e) {
+    c = n(445642);
+let s = l.memo(function (e) {
     let { node: t } = e,
-        { useTitle: n, layout: c, useSubtitle: u } = t,
+        { useTitle: n, layout: s, useSubtitle: u } = t,
         [d, f] = l.useState(!1),
-        { navTransition: m } = (0, o.t)();
+        { navTransition: b } = (0, o.t)();
     l.useEffect(() => {
         var e;
-        (null == m || null == (e = m.targetAccordion) ? void 0 : e.key) === t.key && f(!0);
-    }, [null == m ? void 0 : m.targetAccordion, t.key]);
-    let b = null == n ? void 0 : n(d),
-        p = null == u ? void 0 : u();
+        (null == b || null == (e = b.targetAccordion) ? void 0 : e.key) === t.key && f(!0);
+    }, [null == b ? void 0 : b.targetAccordion, t.key]);
+    let p = null == n ? void 0 : n(d),
+        y = null == u ? void 0 : u();
     return (0, r.jsx)("div", {
-        className: s.accordion,
+        className: c.accordion,
         children: (0, r.jsx)(a.I, {
-            title: b,
-            subtitle: p,
+            title: p,
+            subtitle: y,
             isOpen: d,
             setIsOpen: f,
-            children: c.map((e) => (0, r.jsx)(i.Z, { node: e }, e.key)),
+            children: s.map((e) => (0, r.jsx)(i.Z, { node: e }, e.key)),
         }),
     });
 });

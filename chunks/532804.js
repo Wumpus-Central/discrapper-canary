@@ -16,14 +16,14 @@ function f(e) {
     let { changeTitle: f, value: h, options: b, className: x, onChange: j } = e,
         [v, _] = i.useState(h),
         [C, O] = i.useState(!1),
-        [y, N] = i.useState(!1),
-        E = i.useRef(null);
+        [y, E] = i.useState(!1),
+        N = i.useRef(null);
     i.useEffect(() => {
         _(h);
     }, [h]),
         i.useEffect(
             () => () => {
-                clearTimeout(E.current);
+                clearTimeout(N.current);
             },
             [],
         );
@@ -60,11 +60,11 @@ function f(e) {
                     onClick: () => {
                         e.disabled ||
                             e.value === v ||
-                            (N(!0),
+                            (E(!0),
                             null == j || j(e),
                             _(e.value),
-                            (E.current = setTimeout(() => {
-                                N(!1), O(!1);
+                            (N.current = setTimeout(() => {
+                                E(!1), O(!1);
                             }, 1000)));
                     },
                     disabled: e.disabled,

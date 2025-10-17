@@ -35,13 +35,13 @@ function f(e) {
             createGuildDescription: x,
             selectGuildCta: E,
             title: O,
-            description: I,
-            isGuildSupported: _,
+            description: F,
+            isGuildSupported: I,
         } = (0, S.K)(r),
-        [F, M] = l.useState(),
-        [j, N] = l.useState(!1),
-        w = async () => {
-            N(!0);
+        [_, M] = l.useState(),
+        [j, w] = l.useState(!1),
+        y = async () => {
+            w(!0);
             let e = await new Promise((e) => {
                 d.Z.openCreateGuildModal({ onSuccess: e });
             });
@@ -79,7 +79,7 @@ function f(e) {
                         children: [
                             (0, n.jsx)(s.Text, {
                                 variant: "text-md/medium",
-                                children: I,
+                                children: F,
                             }),
                             (0, n.jsxs)("div", {
                                 className: m.guildSelection,
@@ -87,21 +87,21 @@ function f(e) {
                                     (0, n.jsx)("div", {
                                         className: m.guildSelectorContainer,
                                         children: (0, n.jsx)(h, {
-                                            guildId: F,
+                                            guildId: _,
                                             onChange: M,
-                                            isGuildIncluded: _,
+                                            isGuildIncluded: I,
                                         }),
                                     }),
                                     (0, n.jsx)(s.Button, {
                                         variant: "primary",
                                         text: E,
                                         onClick: () => {
-                                            a()(null != F, "Guild ID must not be null on click"),
-                                                p.Z.hasSeenCreatorOnboardingForGuild(F) || (0, c.k)(F),
-                                                g.Z.open(F, b, void 0, C),
+                                            a()(null != _, "Guild ID must not be null on click"),
+                                                p.Z.hasSeenCreatorOnboardingForGuild(_) || (0, c.k)(_),
+                                                g.Z.open(_, b, void 0, C),
                                                 null == i || i();
                                         },
-                                        disabled: null == F,
+                                        disabled: null == _,
                                     }),
                                 ],
                             }),
@@ -117,7 +117,7 @@ function f(e) {
                                     children: x,
                                 }),
                                 (0, n.jsx)(o.zx, {
-                                    onClick: w,
+                                    onClick: y,
                                     submitting: j,
                                     className: m.createGuildButton,
                                     children: Z,

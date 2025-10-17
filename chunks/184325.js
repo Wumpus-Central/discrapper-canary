@@ -71,7 +71,7 @@ function M(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -82,7 +82,7 @@ function j(e, t) {
         e
     );
 }
-let k = (e) => {
+let j = (e) => {
     let { badge: t, tieredTenureBadge: n, currentUserOwnsOrbBadge: i } = e;
     return t.id === m.l.ORB_PROFILE_BADGE
         ? (0, r.jsx)(g.Z, { showSubtext: !i && !t.isPreviewMode })
@@ -177,7 +177,7 @@ function U(e) {
                     e.id === T.i &&
                         b.default.track(
                             C.rMx.QUEST_CONTENT_VIEWED,
-                            j(x({}, (0, _.mH)(p.jn.QUEST_BADGE)), { is_targeted: !1 }),
+                            k(x({}, (0, _.mH)(p.jn.QUEST_BADGE)), { is_targeted: !1 }),
                         ),
                         Z({ action: "HOVER_BADGE" }),
                         (0, I.Qf)(
@@ -190,7 +190,7 @@ function U(e) {
                             ),
                         );
                 },
-                S = k({
+                S = j({
                     badge: e,
                     tieredTenureBadge: E && e.id !== P.a ? c : void 0,
                     currentUserOwnsOrbBadge: Y,

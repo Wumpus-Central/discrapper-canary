@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685), n(415506);
+n.d(t, { Z: () => j }), n(388685), n(415506);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -15,8 +15,8 @@ var r = n(951288),
     m = n(726115),
     b = n(28494),
     _ = n(746728),
-    O = n(140700),
-    E = n(665807),
+    E = n(140700),
+    O = n(665807),
     v = n(188493),
     y = n(294330),
     I = n(981631),
@@ -27,44 +27,44 @@ let S = Object.freeze({
         left: 32,
         right: 202,
     }),
-    T = Object.freeze({
+    N = Object.freeze({
         top: 0,
         bottom: 0,
         left: 32,
         right: 32,
     }),
-    N = {
+    T = {
         page: I.ZY5.GUILD_DISCOVERY,
         object: I.qAy.CARD,
         section: I.jXE.DISCOVER_SEARCH,
     },
-    j = s().throttle(f.c6, 1000, {
+    P = s().throttle(f.c6, 1000, {
         leading: !1,
         trailing: !0,
     });
-function P(e) {
+function j(e) {
     let { loadId: t, onGuildCardSeen: n, onGuildCardClick: l } = e,
-        { guildIds: s, loading: f, searchResultsQuery: I, loadMore: P, searchCategoryId: x } = (0, b.f)({ loadId: t }),
+        { guildIds: s, loading: f, searchResultsQuery: I, loadMore: j, searchCategoryId: x } = (0, b.f)({ loadId: t }),
         A = 0 === s.length && !f,
         Z = i.useContext(d.AnalyticsContext),
         [w, L] = i.useState((0, m.PM)()),
         [R, D] = i.useState(!0),
-        k = i.useRef(R),
-        [M, U] = i.useState(3),
-        G = i.useRef(M),
+        M = i.useRef(R),
+        [k, U] = i.useState(3),
+        G = i.useRef(k),
         B = i.useRef(null),
         H = i.useCallback(
             (e) => {
-                if (null != e && !A && !f) 336 * (s.length / M) <= e.height && P();
+                if (null != e && !A && !f) 336 * (s.length / k) <= e.height && j();
             },
-            [A, f, s.length, M, P],
+            [A, f, s.length, k, j],
         ),
         V = i.useCallback(
             (e) => {
                 let t = e.contentRect;
                 if (null == t) return;
                 let n = t.width;
-                n < 1024 && k.current ? ((k.current = !1), D(!1)) : n > 1024 && !k.current && ((k.current = !0), D(!0));
+                n < 1024 && M.current ? ((M.current = !1), D(!1)) : n > 1024 && !M.current && ((M.current = !0), D(!0));
                 let r = 1;
                 for (n -= 450 * !!R, n -= 280; n > 0; ) (n -= 264), (r += 1);
                 r !== G.current && ((G.current = r), U(r)), H(t);
@@ -76,7 +76,7 @@ function P(e) {
         L((0, m.PM)());
     }, [I]),
         i.useEffect(() => {
-            j({
+            P({
                 loadId: t,
                 searchId: w,
                 query: I,
@@ -103,9 +103,9 @@ function P(e) {
                                     !R &&
                                         (0, r.jsxs)("div", {
                                             className: C.headingFilters,
-                                            children: [(0, r.jsx)(O.Z, { loadId: t }), (0, r.jsx)(v.Z, { loadId: t })],
+                                            children: [(0, r.jsx)(E.Z, { loadId: t }), (0, r.jsx)(v.Z, { loadId: t })],
                                         }),
-                                    A && (0, r.jsx)(E.Z, { loadId: t }),
+                                    A && (0, r.jsx)(O.Z, { loadId: t }),
                                 ],
                             },
                             i,
@@ -173,7 +173,7 @@ function P(e) {
                             style: n,
                             children: (0, r.jsx)(y.ZP, {
                                 guildId: e,
-                                onClick: async (e) => await X(e, t, x, N),
+                                onClick: async (e) => await X(e, t, x, T),
                                 onView: (e) => z(e),
                             }),
                         },
@@ -214,14 +214,14 @@ function P(e) {
                         let t = null == (e = B.current) ? void 0 : e.getScrollerState();
                         if (null == t) return;
                         let n = t.scrollTop + t.offsetHeight;
-                        t.scrollHeight - n < 240 && P();
+                        t.scrollHeight - n < 240 && j();
                     },
                     100,
                     { leading: !0 },
                 ),
-            [P],
+            [j],
         ),
-        ee = R ? S : T;
+        ee = R ? S : N;
     return (0, r.jsx)("div", {
         className: C.container,
         ref: F,
@@ -229,7 +229,7 @@ function P(e) {
             ref: B,
             className: C.masonryList,
             sections: W,
-            columns: M,
+            columns: k,
             itemGutter: 16,
             padding: ee,
             renderItem: J,

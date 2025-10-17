@@ -14,8 +14,8 @@ var i = n(951288),
     g = n(810568),
     x = n(839392),
     h = n(774073),
-    v = n(426482),
-    j = n(644941),
+    j = n(426482),
+    v = n(644941),
     O = n(388032),
     y = n(226788),
     I = n(414642);
@@ -32,7 +32,7 @@ let b = (e) => {
                     (0, u.ZDy)(() =>
                         Promise.resolve((e) =>
                             (0, i.jsx)(
-                                j.default,
+                                v.default,
                                 (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
@@ -70,11 +70,11 @@ let b = (e) => {
                     await new Promise((e) => setTimeout(e, 10)),
                     n();
             },
-            children: (0, i.jsx)(v.C, {
+            children: (0, i.jsx)(j.C, {
                 game: t,
                 application: l,
                 className: I.similarGameImage,
-                size: v.Z.SMALL,
+                size: j.Z.SMALL,
             }),
         }),
     });

@@ -1,9 +1,9 @@
-t.d(n, { Z: () => v }), t(388685);
+t.d(n, { Z: () => j }), t(388685);
 var l = t(951288),
     i = t(647438),
-    r = t(120356),
-    o = t.n(r),
-    s = t(599273),
+    o = t(120356),
+    r = t.n(o),
+    s = t(258536),
     a = t(442837),
     c = t(481060),
     d = t(607070),
@@ -11,8 +11,8 @@ var l = t(951288),
     m = t(228168),
     p = t(388032),
     f = t(361623),
-    h = t(583140);
-let x = {
+    x = t(583140);
+let h = {
         [m.qb.WIDGET_ADDED]: {
             message: p.intl.string(p.t.fFP1U1),
             icon: (0, l.jsx)(c.dz2, {
@@ -48,10 +48,10 @@ let x = {
             type: c.ToastType.FAILURE,
         },
     },
-    j = (e) => {
+    v = (e) => {
         let { message: n, icon: t, type: i } = e;
         return (0, l.jsxs)("div", {
-            className: o()(h.toast, f.toast),
+            className: r()(x.toast, f.toast),
             "data-type": i,
             children: [
                 (0, l.jsx)("div", {
@@ -66,15 +66,15 @@ let x = {
             ],
         });
     },
-    v = (e) => {
+    j = (e) => {
         let { className: n, onAutoHide: t } = e,
-            r = (0, u.be)(),
+            o = (0, u.be)(),
             m = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
-            [p, h] = i.useState(!1),
-            [v, g] = i.useState(null);
+            [p, x] = i.useState(!1),
+            [j, g] = i.useState(null);
         i.useEffect(() => {
-            null !== r ? (h(!0), g(x[r]), c.uvj.announce(x[r].message)) : h(!1);
-        }, [r]);
+            null !== o ? (x(!0), g(h[o]), c.uvj.announce(h[o].message)) : x(!1);
+        }, [o]);
         let b = (0, c.Yzy)(
             p,
             {
@@ -112,12 +112,12 @@ let x = {
                 children: b(
                     (e, t) =>
                         t &&
-                        null !== v &&
+                        null !== j &&
                         (0, l.jsx)(s.animated.div, {
-                            className: o()(n, f.toastContainer),
+                            className: r()(n, f.toastContainer),
                             style: e,
                             children: (0, l.jsx)(
-                                j,
+                                v,
                                 (function (e) {
                                     for (var n = 1; n < arguments.length; n++) {
                                         var t = null != arguments[n] ? arguments[n] : {},
@@ -142,7 +142,7 @@ let x = {
                                             });
                                     }
                                     return e;
-                                })({}, v),
+                                })({}, j),
                             ),
                         }),
                 ),

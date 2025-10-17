@@ -121,20 +121,20 @@ function x() {
 function M(e, t) {
     return [e, e.clone().add(1, t)];
 }
-function j(e) {
+function k(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
     return M(l()().startOf(e).add(t, e), e);
 }
-function k(e, t, n) {
+function j(e, t, n) {
     return M(l()(e, t).local(), n);
 }
 function U() {
     return {
-        [C.intl.string(C.t.HYiVER)]: () => j("day"),
-        [C.intl.string(C.t.cu86KC)]: () => j("day", -1),
-        [C.intl.string(C.t["FvBj//"])]: () => j("week"),
-        [C.intl.string(C.t["20uWCw"])]: () => j("month"),
-        [C.intl.string(C.t["dXC/ho"])]: () => j("year"),
+        [C.intl.string(C.t.HYiVER)]: () => k("day"),
+        [C.intl.string(C.t.cu86KC)]: () => k("day", -1),
+        [C.intl.string(C.t["FvBj//"])]: () => k("week"),
+        [C.intl.string(C.t["20uWCw"])]: () => k("month"),
+        [C.intl.string(C.t["dXC/ho"])]: () => k("year"),
     };
 }
 let G = "([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})",
@@ -175,12 +175,12 @@ function z(e, t) {
         null != a
             ? ([n, r] = a())
             : D().has(i)
-              ? ([n, r] = k(i, "MMMM", "month"))
+              ? ([n, r] = j(i, "MMMM", "month"))
               : L().has(i)
-                ? ([n, r] = k(i, "dddd", "day"))
+                ? ([n, r] = j(i, "dddd", "day"))
                 : x().has(i)
-                  ? ([n, r] = k(i, "YYYY", "year"))
-                  : ([n, r] = k(i, A.b2L, "day")),
+                  ? ([n, r] = j(i, "YYYY", "year"))
+                  : ([n, r] = j(i, A.b2L, "day")),
         !!(n.isValid() && r.isValid()) &&
             ("before" === t ? ((r = n), (n = null)) : "after" === t && ((n = r), (r = null)),
             e.setData("start", n),

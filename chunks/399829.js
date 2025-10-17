@@ -21,8 +21,8 @@ var r = n(951288),
     C = n(430824),
     O = n(594174),
     y = n(267642),
-    N = n(624138),
-    E = n(981631),
+    E = n(624138),
+    N = n(981631),
     I = n(388032),
     S = n(744834);
 function T(e, t, n) {
@@ -38,7 +38,7 @@ function T(e, t, n) {
         e
     );
 }
-let P = (0, N.Mg)(u.Z.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP);
+let P = (0, E.Mg)(u.Z.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP);
 class w extends i.Component {
     componentDidMount() {
         this.measure();
@@ -63,7 +63,7 @@ class w extends i.Component {
             s = e.map((e) => {
                 var n;
                 return {
-                    numRequired: E.oCV[e.tier],
+                    numRequired: N.oCV[e.tier],
                     name: (0, y.nW)(e.tier),
                     y: null != (n = t[e.tier]) ? n : 0,
                     key: e.tier,
@@ -138,7 +138,7 @@ class w extends i.Component {
                                             tiers: l,
                                             tierIndex: i,
                                             onSetRef: this.setTierRef,
-                                            isAnimatedTo: E.oCV[this.state.animatedTier] >= E.oCV[r.tier],
+                                            isAnimatedTo: N.oCV[this.state.animatedTier] >= N.oCV[r.tier],
                                             subscriptionCount: n,
                                             guildId: e,
                                         }),
@@ -156,7 +156,7 @@ class w extends i.Component {
             T(this, "subscribersPopoutTargetRef", i.createRef()),
             T(this, "state", {
                 tierPositions: null,
-                animatedTier: E.Eu4.NONE,
+                animatedTier: N.Eu4.NONE,
             }),
             T(this, "measure", () => {
                 let { uniqueSubscriberCount: e } = this.props,
@@ -290,7 +290,7 @@ class w extends i.Component {
 let Z = c.ZP.connectStores([C.Z, h.Z, f.Z, v.Z, O.default, _.ZP], () => {
     var e, t;
     let n = f.Z.getGuildId(),
-        r = null != (t = null == (e = C.Z.getGuild(n)) ? void 0 : e.premiumTier) ? t : E.Eu4.NONE,
+        r = null != (t = null == (e = C.Z.getGuild(n)) ? void 0 : e.premiumTier) ? t : N.Eu4.NONE,
         i = (0, b.I)(n),
         l = null != n ? v.Z.getAppliedGuildBoostsForGuild(n) : null,
         a = o()(null != l ? l : []).uniqBy((e) => e.userId),

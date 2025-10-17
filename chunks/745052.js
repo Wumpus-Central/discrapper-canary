@@ -15,17 +15,17 @@ var r = n(951288),
     m = n(493773),
     b = n(209613),
     _ = n(325708),
-    O = n(320149),
-    E = n(82295),
+    E = n(320149),
+    O = n(82295),
     v = n(252618),
     y = n(605236),
     I = n(243778),
     C = n(984370),
     S = n(797614),
-    T = n(359110),
-    N = n(6025),
-    j = n(897473),
-    P = n(108427),
+    N = n(359110),
+    T = n(6025),
+    P = n(897473),
+    j = n(108427),
     x = n(210887),
     A = n(313789),
     Z = n(518596),
@@ -33,8 +33,8 @@ var r = n(951288),
     L = n(592125),
     R = n(819640),
     D = n(626135),
-    k = n(647090),
-    M = n(385956),
+    M = n(647090),
+    k = n(385956),
     U = n(610697),
     G = n(26373),
     B = n(486622),
@@ -134,10 +134,10 @@ function ei() {
             },
             [l, n, h],
         ),
-        O = i.useCallback(
+        E = i.useCallback(
             () =>
                 (0, r.jsxs)(
-                    E.Z,
+                    O.Z,
                     {
                         className: ee.sectionTitle,
                         children: [
@@ -214,7 +214,7 @@ function ei() {
                                   paddingBottom: 24,
                                   sectionHeight: K.oi,
                                   rowHeight: K.WN,
-                                  renderSection: O,
+                                  renderSection: E,
                                   renderRow: _,
                                   sections: [n.length],
                                   chunkSize: 30,
@@ -232,13 +232,13 @@ function el(e) {
     let { pageWidth: t, onSidebarResize: n } = e,
         i = (0, c.e7)([w.ZP], () => w.ZP.getSidebarState(w.uZ)),
         l = (0, c.e7)([L.Z], () => L.Z.getChannel(null == i ? void 0 : i.channelId));
-    if (null == i || i.type !== j.tI.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
+    if (null == i || i.type !== P.tI.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
     let a = t - Q.R7I;
     return (0, r.jsx)(_.Z, {
         sidebarType: _.y.MessageRequestSidebar,
         maxWidth: a,
         onWidthChange: n,
-        children: (0, r.jsx)(O.Z, {
+        children: (0, r.jsx)(E.Z, {
             channel: l,
             baseChannelId: w.uZ,
         }),
@@ -323,7 +323,7 @@ let es = (0, h.Z)(function (e) {
         n = (0, V.q)();
     (0, m.ZP)(() => {
         f.Y(Q.Z5c.MESSAGE_REQUESTS),
-            (0, P.e)("message-requests"),
+            (0, j.e)("message-requests"),
             D.default.track(Q.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }),
             S.Z.increment({ name: s.V.MESSAGE_REQUEST_VIEW });
     });
@@ -332,16 +332,16 @@ let es = (0, h.Z)(function (e) {
         [u, d] = i.useState(!1),
         h = (0, c.e7)([w.ZP], () => {
             let e = w.ZP.getSidebarState(w.uZ);
-            return null != e && e.type === j.tI.VIEW_MESSAGE_REQUEST ? e : null;
+            return null != e && e.type === P.tI.VIEW_MESSAGE_REQUEST ? e : null;
         }),
         g = null == h ? void 0 : h.channelId,
         b = null != h,
-        _ = (0, M.T)(g),
-        O = (0, k.J)(g),
-        E = i.useRef(null);
+        _ = (0, k.T)(g),
+        E = (0, M.J)(g),
+        O = i.useRef(null);
     i.useEffect(() => {
-        null != g && !_ && O && b && ((0, T.Kh)(g), N.Z.closeChannelSidebar(w.uZ));
-    }, [g, O, b, _]);
+        null != g && !_ && E && b && ((0, N.Kh)(g), T.Z.closeChannelSidebar(w.uZ));
+    }, [g, E, b, _]);
     let [y, I] = i.useState(K.pS.REQUESTS),
         A = (e) => {
             I(e);
@@ -368,9 +368,9 @@ let es = (0, h.Z)(function (e) {
                                             "aria-hidden": !0,
                                         }),
                                         (0, r.jsx)(ea, {
-                                            targetElementRef: E,
+                                            targetElementRef: O,
                                             children: (0, r.jsx)(C.Z.Title, {
-                                                ref: E,
+                                                ref: O,
                                                 children: $.intl.string($.t.e7GWjY),
                                             }),
                                         }),

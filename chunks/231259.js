@@ -3,8 +3,8 @@ var l = n(951288);
 n(647438);
 var r = n(442837),
     i = n(481060),
-    o = n(357156),
-    u = n(924301),
+    u = n(357156),
+    o = n(924301),
     c = n(482241),
     a = n(894017),
     s = n(79874),
@@ -12,8 +12,8 @@ var r = n(442837),
 function g(t) {
     let { guildEventId: e, recurrenceId: n, guild: g, channel: f } = t,
         b = null != n,
-        { canManageGuildEvent: v } = (0, o.XJ)(null != f ? f : g),
-        [E, p] = (0, r.Wu)([u.ZP], () => [u.ZP.isActive(e), u.ZP.getGuildScheduledEvent(e)]),
+        { canManageGuildEvent: v } = (0, u.XJ)(null != f ? f : g),
+        [E, p] = (0, r.Wu)([o.ZP], () => [o.ZP.isActive(e), o.ZP.getGuildScheduledEvent(e)]),
         Z = (0, a.Z)(n, null == p ? void 0 : p.id),
         y = null != p && v(p),
         O = (null == p ? void 0 : p.recurrence_rule) != null && !b,
@@ -28,10 +28,10 @@ function g(t) {
     }
     let j = (t) => {
         (0, i.h7j)((r) => {
-            var o, u;
+            var u, o;
             return (0, l.jsxs)(
                 i.ConfirmModal,
-                ((o = (function (t) {
+                ((u = (function (t) {
                     for (var e = 1; e < arguments.length; e++) {
                         var n = null != arguments[e] ? arguments[e] : {},
                             l = Object.keys(n);
@@ -56,7 +56,7 @@ function g(t) {
                     }
                     return t;
                 })({}, r)),
-                (u = u =
+                (o = o =
                     {
                         header: d.intl.string(d.t.R5bpio),
                         confirmText: O || t ? d.intl.string(d.t["8ZsNv7"]) : d.intl.string(d.t.B9sJLS),
@@ -77,7 +77,7 @@ function g(t) {
                         ],
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(u))
+                    ? Object.defineProperties(u, Object.getOwnPropertyDescriptors(o))
                     : (function (t, e) {
                           var n = Object.keys(t);
                           if (Object.getOwnPropertySymbols) {
@@ -85,10 +85,10 @@ function g(t) {
                               n.push.apply(n, l);
                           }
                           return n;
-                      })(Object(u)).forEach(function (t) {
-                          Object.defineProperty(o, t, Object.getOwnPropertyDescriptor(u, t));
+                      })(Object(o)).forEach(function (t) {
+                          Object.defineProperty(u, t, Object.getOwnPropertyDescriptor(o, t));
                       }),
-                o),
+                u),
             );
         });
     };

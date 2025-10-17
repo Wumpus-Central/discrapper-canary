@@ -1,10 +1,10 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var a = n(951288),
     r = n(704215),
     i = n(481060),
     l = n(211644),
-    s = n(699867);
-function o(e) {
+    o = n(699867);
+function s(e) {
     let { searchQuery: t = "" } = e,
         n = (0, l.ZP)((e) => e.recentlyShown)
             .map((e) => r.z[e])
@@ -13,6 +13,6 @@ function o(e) {
         ? null
         : (0, a.jsx)(i.C3N, {
               label: "Recently Shown",
-              children: (0, a.jsx)(s.Z, { items: n }),
+              children: (0, a.jsx)(o.Z, { items: n }),
           });
 }

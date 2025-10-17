@@ -3,8 +3,8 @@ var a = n(951288),
     r = n(481060),
     i = n(410030),
     l = n(583901),
-    s = n(780771),
-    o = n(981631),
+    o = n(780771),
+    s = n(981631),
     c = n(407304);
 function d(e) {
     let { selected: t, onSelect: n } = e,
@@ -18,8 +18,8 @@ function d(e) {
             }),
             (0, a.jsx)("div", {
                 className: c.themes,
-                children: s.vs.map((e) => {
-                    let r = d !== o.BRd.LIGHT ? e.darkBackground : e.lightBackground,
+                children: o.vs.map((e) => {
+                    let r = d !== s.BRd.LIGHT ? e.darkBackground : e.lightBackground,
                         i = t === e.name;
                     return (0, a.jsx)(
                         l.S4,

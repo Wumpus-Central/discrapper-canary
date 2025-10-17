@@ -62,10 +62,10 @@ function y(e, t) {
         e
     );
 }
-let N = "guild-role-subscription-tier-template-selector";
-function E(e) {
+let E = "guild-role-subscription-tier-template-selector";
+function N(e) {
     let { guildId: t, priceTiers: l, groupListingId: h } = e,
-        E = (0, f._k)(h),
+        N = (0, f._k)(h),
         {
             editStateIds: I,
             addNewEditStateId: S,
@@ -103,20 +103,20 @@ function E(e) {
                                       }),
                                   );
                           },
-                          { modalKey: N },
+                          { modalKey: E },
                       )
                     : S();
         }, [t, T, S, l, A, D]),
         k = x.Lo(R),
-        M = i.useCallback(() => R.forEach(x.GM), [R]),
-        G = (0, b.mY)(),
+        G = i.useCallback(() => R.forEach(x.GM), [R]),
+        M = (0, b.mY)(),
         U = (0, o.e7)([g.Z], () => g.Z.getProps().subsection);
     return (
         i.useEffect(
             () => (
                 U === v.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && L(),
                 () => {
-                    (0, d.Mr3)(N);
+                    (0, d.Mr3)(E);
                 }
             ),
             [U, L],
@@ -132,7 +132,7 @@ function E(e) {
                                 {
                                     guildId: t,
                                     initialEditStateId: e,
-                                    allSubscriptionListings: E,
+                                    allSubscriptionListings: N,
                                     priceTiers: l,
                                     groupListingId: h,
                                     onDeleteEditState: () => P(e),
@@ -146,9 +146,9 @@ function E(e) {
                             ),
                         ),
                         (0, r.jsxs)(d.P3F, {
-                            onClick: G ? void 0 : L,
-                            className: a()(C.createTierButton, { [C.disabled]: G }),
-                            "aria-disabled": G,
+                            onClick: M ? void 0 : L,
+                            className: a()(C.createTierButton, { [C.disabled]: M }),
+                            "aria-disabled": M,
                             children: [
                                 (0, r.jsx)(d.oFk, {
                                     size: "xs",
@@ -167,7 +167,7 @@ function E(e) {
                 (0, r.jsx)(c.W, {
                     component: "div",
                     className: C.contentRegion,
-                    children: k && (0, r.jsx)(d.oXn, { children: (0, r.jsx)(u.Z, { onReset: M }) }),
+                    children: k && (0, r.jsx)(d.oXn, { children: (0, r.jsx)(u.Z, { onReset: G }) }),
                 }),
             ],
         })
@@ -197,7 +197,7 @@ function I(e) {
     return (0, r.jsx)(d.gNt, {
         label: _.intl.string(_.t["72+Soq"]),
         description: _.intl.format(_.t.nHRSvL, { maxTiers: a }),
-        children: (0, r.jsx)(E, {
+        children: (0, r.jsx)(N, {
             priceTiers: n,
             guildId: t,
             groupListingId: s[0],

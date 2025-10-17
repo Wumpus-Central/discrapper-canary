@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => j });
 var r = n(951288),
     i = n(647438),
     l = n(873546),
@@ -15,31 +15,31 @@ var r = n(951288),
     m = n(430824),
     b = n(351402),
     _ = n(730647),
-    O = n(772021),
-    E = n(396828),
+    E = n(772021),
+    O = n(396828),
     v = n(293423),
     y = n(20967),
     I = n(504762),
     C = n(807152),
     S = n(176505),
-    T = n(388032),
-    N = n(183261);
-function j(e) {
+    N = n(388032),
+    T = n(183261);
+function P(e) {
     let { guildId: t } = e,
         n = (0, a.e7)([m.Z], () => m.Z.getGuild(t), [t]),
-        j = (0, a.e7)([h.Z], () => h.Z.isConnected()),
-        P = (0, p.Z)(t),
-        x = (0, O.Z)(t),
+        P = (0, a.e7)([h.Z], () => h.Z.isConnected()),
+        j = (0, p.Z)(t),
+        x = (0, E.Z)(t),
         A = (0, a.e7)([b.Z], () => b.Z.isSubscriptionFetching),
         Z = (0, _.f)(),
         { shouldHideGuildPurchaseEntryPoints: w, restrictionsLoading: L } = (0, f.uP)(t),
         R = null == n || !Z || A || L;
     (0, u.Tt)({
-        subsection: T.intl.string(T.t["KzCF//"]),
+        subsection: N.intl.string(N.t["KzCF//"]),
         location: null == n ? void 0 : n.name,
     }),
         (0, c.Z)(l.tq ? "role-subscriptions-overview" : void 0);
-    let D = j && (null == n || !(P || x) || (w && !L));
+    let D = P && (null == n || !(j || x) || (w && !L));
     if (
         (i.useEffect(() => {
             s.jg();
@@ -53,27 +53,27 @@ function j(e) {
         return (0, r.jsx)(y.z, { errorType: e });
     }
     return (0, r.jsxs)("div", {
-        className: N.container,
+        className: T.container,
         children: [
             (0, r.jsxs)(g.Z, {
                 toolbar: (0, r.jsx)(i.Fragment, {}),
-                className: N.headerBar,
+                className: T.headerBar,
                 children: [
                     (0, r.jsx)(g.Z.Icon, {
-                        icon: (0, o.GSL)(E.Z),
+                        icon: (0, o.GSL)(O.Z),
                         "aria-hidden": !0,
                     }),
-                    (0, r.jsx)(g.Z.Title, { children: T.intl.string(T.t["KzCF//"]) }),
+                    (0, r.jsx)(g.Z.Title, { children: N.intl.string(N.t["KzCF//"]) }),
                 ],
             }),
             (0, r.jsx)("div", { id: C.v }),
             (0, r.jsx)("div", {
-                className: N.content,
-                children: P
+                className: T.content,
+                children: j
                     ? (0, r.jsx)(o.u2D, {
-                          className: N.scroller,
+                          className: T.scroller,
                           children: (0, r.jsx)("div", {
-                              className: N.scrollerContent,
+                              className: T.scrollerContent,
                               children: R ? (0, r.jsx)(o.$jN, {}) : (0, r.jsx)(v.Z, { guild: n }),
                           }),
                       })
@@ -82,11 +82,11 @@ function j(e) {
         ],
     });
 }
-function P(e) {
+function j(e) {
     let { guildId: t } = e;
     return (0, r.jsx)(_.l, {
         guildId: t,
         refetchOnMount: !0,
-        children: (0, r.jsx)(j, { guildId: t }),
+        children: (0, r.jsx)(P, { guildId: t }),
     });
 }

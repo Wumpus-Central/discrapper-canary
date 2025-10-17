@@ -21,7 +21,7 @@ function g(e) {
             onClick: n,
             icon: {
                 type: "rive",
-                asset: r.xhK,
+                asset: r.q8_,
                 riveProps: { dataBinding: { fill: r.TVs.colors.ICON_PRIMARY } },
             },
             text: m.intl.string(p.default.NOGFdn),

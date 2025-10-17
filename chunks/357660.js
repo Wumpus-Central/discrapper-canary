@@ -4,12 +4,12 @@ var r = n(951288),
     o = n(442837),
     i = n(215569),
     a = n(481060),
-    s = n(924052),
-    c = n(670304),
+    c = n(924052),
+    s = n(670304),
     u = n(764516);
 function d(e) {
     let { notice: t, children: n } = e,
-        { showNotice: c, handleStoreUpdate: d } = (0, s.Cu)(),
+        { showNotice: s, handleStoreUpdate: d } = (0, c.Cu)(),
         f = null == t ? void 0 : t.stores;
     l.useEffect(() => {
         if (null != f) {
@@ -25,20 +25,20 @@ function d(e) {
             );
         }
     }, [f, d]);
-    let m = l.useMemo(() => {
-        if (null == t || !c) return null;
+    let b = l.useMemo(() => {
+        if (null == t || !s) return null;
         let { element: e } = t;
         return (0, r.jsx)(a.oXn, {
             className: u.notice,
             children: (0, r.jsx)(e, {}),
         });
-    }, [t, c]);
+    }, [t, s]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             n,
             (0, r.jsx)(i.W, {
                 component: "div",
-                children: m,
+                children: b,
             }),
         ],
     });
@@ -58,7 +58,7 @@ function f(e) {
                     ref: n,
                     children: (0, r.jsx)(a.JcV, {
                         containerRef: n,
-                        children: (0, r.jsx)(c.Z, { node: t.layout[0] }),
+                        children: (0, r.jsx)(s.Z, { node: t.layout[0] }),
                     }),
                 }),
             },

@@ -9,13 +9,13 @@ var i,
     u = n(592125),
     d = n(430824),
     p = n(701190),
-    h = n(496675),
-    f = n(594174),
+    f = n(496675),
+    h = n(594174),
     g = n(411198),
     m = n(998502),
     b = n(981631),
     _ = n(176505);
-function y(e, t, n) {
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ function y(e, t, n) {
         e
     );
 }
-function O(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function O(e) {
                 }),
             )),
             r.forEach(function (t) {
-                y(e, t, n[t]);
+                O(e, t, n[t]);
             });
     }
     return e;
@@ -53,7 +53,7 @@ function E() {
 }
 class S extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(d.Z, p.Z, f.default);
+        this.waitFor(d.Z, p.Z, h.default);
     }
     isOpen() {
         let e = __OVERLAY__ ? b.IlC.OVERLAY : b.IlC.APP;
@@ -67,7 +67,7 @@ class S extends (i = l.ZP.Store) {
         };
     }
 }
-y(S, "displayName", "InviteModalStore");
+O(S, "displayName", "InviteModalStore");
 let I = new S(o.Z, {
     OVERLAY_INITIALIZE: E,
     CONNECTION_OPEN: E,
@@ -90,7 +90,7 @@ let I = new S(o.Z, {
                         let { channel: t } = e;
                         if (null != t) {
                             let e = u.Z.getChannel(t.id);
-                            if (h.Z.can(b.Plq.VIEW_CHANNEL, e)) return t.id;
+                            if (f.Z.can(b.Plq.VIEW_CHANNEL, e)) return t.id;
                         }
                         return null;
                     })(t);
@@ -132,9 +132,9 @@ let I = new S(o.Z, {
                     is_nickname_changeable: d,
                 };
             return (
-                null != c && (p.channel = O({}, c)),
+                null != c && (p.channel = y({}, c)),
                 null != u && (p.guild = (0, g.Qs)(u)),
-                null != e.inviter && (p.inviter = O({}, e.inviter)),
+                null != e.inviter && (p.inviter = y({}, e.inviter)),
                 p
             );
         })(t);

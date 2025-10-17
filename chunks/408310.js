@@ -13,8 +13,8 @@ let u = (e) => {
         {
             searchQuery: n,
             setSearchQuery: u,
-            mostRecentQuery: h,
-            handleClearSearch: p,
+            mostRecentQuery: p,
+            handleClearSearch: h,
             handleSearchKeyPress: f,
             handleCreateOrAddGuild: g,
             searchResults: m,
@@ -80,7 +80,7 @@ let u = (e) => {
                             className: c.headerTitleWrapper,
                             children: [
                                 (0, r.jsx)(i.P3F, {
-                                    onClick: p,
+                                    onClick: h,
                                     className: c.arrow,
                                     children: (0, r.jsx)(l.Z, { direction: l.Z.Directions.LEFT }),
                                 }),
@@ -89,7 +89,7 @@ let u = (e) => {
                                     className: c.searchPageTitle,
                                     children: s.intl.format(s.t.UkOHRU, {
                                         numResults: m.length,
-                                        query: h,
+                                        query: p,
                                     }),
                                 }),
                             ],
@@ -99,7 +99,7 @@ let u = (e) => {
                             "aria-label": s.intl.string(s.t.nL2wKC),
                             placeholder: s.intl.string(s.t.nL2wKC),
                             onChange: u,
-                            onClear: p,
+                            onClear: h,
                             onKeyDown: f,
                         }),
                     ],

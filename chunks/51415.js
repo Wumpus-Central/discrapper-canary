@@ -4,12 +4,12 @@ n(647438);
 var r = n(481060),
     i = n(703656),
     l = n(272008),
-    s = n(937797),
-    o = n(46140),
+    o = n(937797),
+    s = n(46140),
     c = n(981631),
     d = n(840846);
 let u = function () {
-    let { enabled: e } = s.m8.useConfig({ location: o.dr.INTERNAL_TOOLING });
+    let { enabled: e } = o.m8.useConfig({ location: s.dr.INTERNAL_TOOLING });
     return (0, a.jsxs)("div", {
         className: d.container,
         children: [

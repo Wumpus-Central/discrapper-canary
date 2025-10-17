@@ -68,9 +68,9 @@ function p(e) {
             updateFormFieldOrder: C,
             canRemove: O,
             actionsLocation: y,
-            fieldStyle: N,
+            fieldStyle: E,
         } = e,
-        E = async () => {
+        N = async () => {
             await v(b);
         },
         I = async (e) => {
@@ -102,11 +102,11 @@ function p(e) {
                               );
                       });
             },
-            onRemove: E,
+            onRemove: N,
             onDrop: S,
             canRemove: O,
             actionsLocation: y,
-            fieldStyle: N,
+            fieldStyle: E,
         };
     switch (p.field_type) {
         case a.QJ.TERMS:
@@ -115,7 +115,7 @@ function p(e) {
                 g(
                     {
                         channelId: f.rulesChannelId,
-                        title: N === a.it.COMPACT ? u.intl.string(u.t["55+giY"]) : u.intl.string(u.t["53vNcH"]),
+                        title: E === a.it.COMPACT ? u.intl.string(u.t["55+giY"]) : u.intl.string(u.t["53vNcH"]),
                         formField: p,
                     },
                     w,

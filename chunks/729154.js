@@ -3,8 +3,8 @@ var a = n(951288),
     r = n(647438),
     i = n(100527),
     l = n(906732),
-    s = n(562218),
-    o = n(284829),
+    o = n(562218),
+    s = n(284829),
     c = n(586920),
     d = n(45474),
     u = n(594135),
@@ -15,15 +15,15 @@ let x = (e) => {
         let {
                 transitionState: t,
                 onClose: n,
-                premiumSubscription: s,
-                premiumType: o,
+                premiumSubscription: o,
+                premiumType: s,
                 churnDiscount: c,
                 planId: d,
                 renewalInvoice: m,
                 renewalInvoiceDetails: p,
                 errorOnCancel: x,
-                errorOnRedeem: b,
-                setActiveStep: g,
+                errorOnRedeem: g,
+                setActiveStep: b,
                 activeStep: v,
             } = e,
             { analyticsLocations: j } = (0, l.ZP)(i.Z.USER_SETTINGS),
@@ -34,11 +34,11 @@ let x = (e) => {
             }, [v]),
             (0, a.jsx)(u.CancellationContext.Provider, {
                 value: {
-                    setStep: g,
-                    premiumType: o,
+                    setStep: b,
+                    premiumType: s,
                     onClose: n,
                     transitionState: t,
-                    premiumSubscription: s,
+                    premiumSubscription: o,
                     analyticsLocations: j,
                     analyticsLocation: h.Sbl.USER_SETTINGS,
                     confettiCanvas: null,
@@ -60,7 +60,7 @@ let x = (e) => {
                     applyOffer: () =>
                         new Promise((e, t) => {
                             setTimeout(() => {
-                                if (b) return void t();
+                                if (g) return void t();
                                 e();
                             }, 1000);
                         }),
@@ -76,9 +76,9 @@ let x = (e) => {
             case d.R.DISCOUNT_APPLIED:
                 return (0, a.jsx)(c.i, {});
             case d.R.CONFIRM_DISCOUNT:
-                return (0, a.jsx)(o.U, {});
+                return (0, a.jsx)(s.U, {});
             case d.R.CONFIRM:
-                return (0, a.jsx)(s.G, {});
+                return (0, a.jsx)(o.G, {});
             case d.R.PREVIEW:
                 return (0, a.jsx)(m.w, {});
             case d.R.WHAT_YOU_LOSE:

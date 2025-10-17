@@ -5,14 +5,14 @@ n.d(t, {
 });
 var r = n(544891),
     i = n(570140),
-    l = n(959776),
-    s = n(626135),
+    s = n(959776),
+    l = n(626135),
     a = n(723359),
     o = n(981631);
 function c(e, t) {
     return (
-        (0, l.Z)(e, t),
-        s.default.track(o.rMx.AGE_GATE_ACTION, {
+        (0, s.Z)(e, t),
+        l.default.track(o.rMx.AGE_GATE_ACTION, {
             source: t,
             action: a.Al.AGE_GATE_SUBMITTED,
         }),
@@ -29,7 +29,7 @@ function c(e, t) {
                     type: "CURRENT_USER_UPDATE",
                     user: n,
                 }),
-                    s.default.track(o.rMx.AGE_GATE_ACTION, {
+                    l.default.track(o.rMx.AGE_GATE_ACTION, {
                         source: t,
                         action: a.Al.AGE_GATE_SUCCESS,
                     });
@@ -38,14 +38,14 @@ function c(e, t) {
 }
 function u(e) {
     i.Z.dispatch({ type: "AGE_GATE_PREVENT_UNDERAGE_REGISTRATION" }),
-        s.default.track(o.rMx.AGE_GATE_ACTION, {
+        l.default.track(o.rMx.AGE_GATE_ACTION, {
             source: e,
             action: a.Al.AGE_GATE_PREVENT_UNDERAGE_REGISTRATION,
         });
 }
 function d(e) {
     i.Z.dispatch({ type: "AGE_GATE_LOGOUT_UNDERAGE_NEW_USER" }),
-        s.default.track(o.rMx.AGE_GATE_ACTION, {
+        l.default.track(o.rMx.AGE_GATE_ACTION, {
             source: e,
             action: a.Al.AGE_GATE_LOGOUT_UNDERAGE_NEW_USER,
         });

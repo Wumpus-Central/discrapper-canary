@@ -5,8 +5,8 @@ var r = n(442837),
     i = n(481060),
     d = n(239091),
     s = n(883385),
-    o = n(108843),
-    a = n(911969),
+    a = n(108843),
+    o = n(911969),
     c = n(947440),
     u = n(100527),
     Z = n(441061),
@@ -34,21 +34,21 @@ var r = n(442837),
     U = n(88966),
     R = n(712301),
     T = n(558924),
-    q = n(991307),
-    G = n(37258),
+    G = n(991307),
+    q = n(37258),
     w = n(931617),
     L = n(700994),
     D = n(332031),
     Q = n(981631),
     H = n(388032);
-let V = (0, o.Z)(
+let V = (0, a.Z)(
     (0, s.Z)(
         function (e) {
             let {
                     user: l,
                     guildId: n,
                     channel: s,
-                    showMediaItems: o = !1,
+                    showMediaItems: a = !1,
                     showChatItems: u = !0,
                     showChannelCallItems: V = !1,
                     showModalItems: B = !0,
@@ -65,7 +65,7 @@ let V = (0, o.Z)(
                     section: Q.jXE.CHAT_USERNAME,
                     object: Q.qAy.CONTEXT_MENU_ITEM,
                 },
-                ee = (0, G.Z)({
+                ee = (0, q.Z)({
                     userId: l.id,
                     guildId: n,
                     channelId: $,
@@ -86,8 +86,8 @@ let V = (0, o.Z)(
                 }),
                 ed = (0, m.Z)({ user: l }),
                 es = (0, L.Z)(l.id),
-                eo = (0, q.Z)(l.id),
-                ea = (0, f.B)({
+                ea = (0, G.Z)(l.id),
+                eo = (0, f.B)({
                     userId: l.id,
                     channelId: $,
                     guildId: s.getGuildId(),
@@ -130,7 +130,7 @@ let V = (0, o.Z)(
                 em = (0, E.Z)(l, n, $),
                 eS = (0, r.e7)([P.Z], () => (null != W ? P.Z.getChannel(W) : null)),
                 ex = (0, y.Z)({
-                    commandType: a.yU.USER,
+                    commandType: o.yU.USER,
                     commandTargetId: l.id,
                     channel: null != eS ? eS : s,
                     guildId: n,
@@ -153,18 +153,18 @@ let V = (0, o.Z)(
                         (0, t.jsxs)(t.Fragment, {
                             children: [
                                 (0, t.jsxs)(i.kSQ, {
-                                    children: [eC, o && !F && eI, F && em],
+                                    children: [eC, a && !F && eI, F && em],
                                 }),
                                 (0, t.jsxs)(i.kSQ, {
                                     children: [B && ee, u && el, en, er, ev, B && ei, B && ed, et],
                                 }),
-                                o && (0, t.jsx)(i.kSQ, { children: es }),
+                                a && (0, t.jsx)(i.kSQ, { children: es }),
                                 (0, t.jsx)(i.kSQ, { children: B && eZ }),
                                 (0, t.jsxs)(i.kSQ, {
                                     children: [
-                                        o && eo,
-                                        o && ea,
-                                        o && eE,
+                                        a && ea,
+                                        a && eo,
+                                        a && eE,
                                         B && ec,
                                         ex,
                                         B && eu,

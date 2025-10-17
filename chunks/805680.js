@@ -32,8 +32,8 @@ var r = n(951288),
     L = n(28546),
     x = n(957825),
     M = n(981631),
-    j = n(921944),
-    k = n(149203),
+    k = n(921944),
+    j = n(149203),
     U = n(185923),
     G = n(611480),
     B = n(388032),
@@ -111,7 +111,7 @@ function K(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let z = x.Om + k.Su.MEDIUM,
+let z = x.Om + j.Su.MEDIUM,
     q = i.memo(function (e) {
         var { isActive: t, className: n, viewType: i, autoFocus: a = !1, "aria-controls": s } = e,
             l = W(e, ["isActive", "className", "viewType", "autoFocus", "aria-controls"]);
@@ -292,7 +292,7 @@ function Q(e) {
     }, [el]),
         i.useEffect(
             () => () => {
-                eA && eS(j.L.TAKE_ACTION);
+                eA && eS(k.L.TAKE_ACTION);
             },
             [eA, eS],
         ),
@@ -370,8 +370,8 @@ function Q(e) {
                                                         children: [
                                                             eg
                                                                 ? (0, r.jsx)(q, {
-                                                                      id: k._3,
-                                                                      "aria-controls": k.vO,
+                                                                      id: j._3,
+                                                                      "aria-controls": j.vO,
                                                                       "aria-selected": el === x.X1.GIF,
                                                                       isActive: el === x.X1.GIF,
                                                                       viewType: x.X1.GIF,
@@ -393,8 +393,8 @@ function Q(e) {
                                                                   })
                                                                 : null,
                                                             (0, r.jsx)(q, {
-                                                                id: k.td,
-                                                                "aria-controls": k.cZ,
+                                                                id: j.td,
+                                                                "aria-controls": j.cZ,
                                                                 "aria-selected": el === x.X1.EMOJI,
                                                                 isActive: el === x.X1.EMOJI,
                                                                 viewType: x.X1.EMOJI,
@@ -403,8 +403,8 @@ function Q(e) {
                                                             e_ &&
                                                                 eP &&
                                                                 (0, r.jsx)(q, {
-                                                                    id: k.Hr,
-                                                                    "aria-controls": k.gV,
+                                                                    id: j.Hr,
+                                                                    "aria-controls": j.gV,
                                                                     "aria-selected": el === x.X1.SOUNDBOARD,
                                                                     isActive: el === x.X1.SOUNDBOARD,
                                                                     viewType: x.X1.SOUNDBOARD,
@@ -452,7 +452,7 @@ function Q(e) {
                                                     channel: W,
                                                     containerWidth: eo,
                                                     includeCreateEmojiButton: P,
-                                                    emojiSize: null != eo && eo < z ? k.Su.MEDIUM : k.Su.LARGE,
+                                                    emojiSize: null != eo && eo < z ? j.Su.MEDIUM : j.Su.LARGE,
                                                     pickerIntention: U.Hz.CHAT,
                                                     closePopout: eI,
                                                     onSelectEmoji: V,

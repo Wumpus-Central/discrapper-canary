@@ -4,8 +4,8 @@ n(647438);
 var r = n(120356),
     i = n.n(r),
     l = n(149765),
-    s = n(442837),
-    o = n(481060),
+    o = n(442837),
+    s = n(481060),
     c = n(933557),
     d = n(592125),
     u = n(430824),
@@ -14,22 +14,22 @@ var r = n(120356),
     h = n(914010),
     x = n(233608),
     f = n(71080),
-    b = n(989295),
-    g = n(451429);
+    g = n(989295),
+    b = n(451429);
 function v(e) {
     let { title: t, can: n } = e,
-        r = n ? o.dz2 : o.Dio,
+        r = n ? s.dz2 : s.Dio,
         l = (0, a.jsx)("div", {
-            className: i()(b.iconOuter, n ? b.iconCheck : b.iconCross),
-            children: (0, a.jsx)(r, { className: b.icon }),
+            className: i()(g.iconOuter, n ? g.iconCheck : g.iconCross),
+            children: (0, a.jsx)(r, { className: g.icon }),
         });
     return (0, a.jsxs)("div", {
-        className: b.scope,
+        className: g.scope,
         children: [
             l,
             (0, a.jsx)("div", {
-                className: b.scopeInner,
-                children: (0, a.jsx)(o.Text, {
+                className: g.scopeInner,
+                children: (0, a.jsx)(s.Text, {
                     variant: "text-md/normal",
                     children: t,
                 }),
@@ -38,12 +38,12 @@ function v(e) {
     });
 }
 function j() {
-    let e = (0, s.e7)([p.Z], () => p.Z.getChannelId()),
-        t = (0, s.e7)([h.Z], () => h.Z.getGuildId()),
-        n = (0, s.e7)([d.Z], () => d.Z.getChannel(e)),
-        r = (0, s.e7)([u.Z], () => u.Z.getGuild(t)),
-        j = (0, s.e7)([m.Z], () => m.Z.computePermissions(n)),
-        _ = (0, s.e7)([m.Z], () => m.Z.computePermissions(r)),
+    let e = (0, o.e7)([p.Z], () => p.Z.getChannelId()),
+        t = (0, o.e7)([h.Z], () => h.Z.getGuildId()),
+        n = (0, o.e7)([d.Z], () => d.Z.getChannel(e)),
+        r = (0, o.e7)([u.Z], () => u.Z.getGuild(t)),
+        j = (0, o.e7)([m.Z], () => m.Z.computePermissions(n)),
+        _ = (0, o.e7)([m.Z], () => m.Z.computePermissions(r)),
         y = (0, c.ZP)(n, !0),
         C = null != n ? (0, f.IG)(n, !1) : null,
         S = null != r ? x.Z.getGuildPermissionSpecMap(r) : null,
@@ -72,14 +72,14 @@ function j() {
             );
         });
     return (0, a.jsx)("div", {
-        className: i()(g.panel, b.panel),
+        className: i()(b.panel, g.panel),
         children: (0, a.jsxs)("div", {
-            className: b.panelInner,
+            className: g.panelInner,
             children: [
                 (0, a.jsxs)("section", {
-                    className: b.section,
+                    className: g.section,
                     children: [
-                        (0, a.jsx)(o.Heading, {
+                        (0, a.jsx)(s.Heading, {
                             variant: "heading-md/semibold",
                             children: null != y ? "Permissions in ".concat(y) : "No channel selected",
                         }),
@@ -87,9 +87,9 @@ function j() {
                     ],
                 }),
                 (0, a.jsxs)("section", {
-                    className: b.section,
+                    className: g.section,
                     children: [
-                        (0, a.jsx)(o.Heading, {
+                        (0, a.jsx)(s.Heading, {
                             variant: "heading-md/semibold",
                             children: null != r ? "Permissions in ".concat(r.name) : "No guild selected",
                         }),

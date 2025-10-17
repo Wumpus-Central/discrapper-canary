@@ -1,9 +1,9 @@
-n.d(t, { k: () => s }), n(388685);
+n.d(t, { k: () => o }), n(388685);
 var a = n(951288),
     r = n(647438),
     i = n(481060),
     l = n(295136);
-class s extends r.PureComponent {
+class o extends r.PureComponent {
     componentDidCatch(e, t) {
         console.error("Error rendering component (LocalErrorBoundary): ", e),
             this.setState({

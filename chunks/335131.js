@@ -1,6 +1,6 @@
 n.d(t, {
     B1: () => Z,
-    F$: () => j,
+    F$: () => k,
     Ov: () => V,
     R2: () => F,
     Sm: () => D,
@@ -12,7 +12,7 @@ n.d(t, {
     oK: () => L,
     oc: () => M,
     p8: () => Y,
-    qg: () => k,
+    qg: () => j,
 }),
     n(388685),
     n(49124);
@@ -125,7 +125,7 @@ let w = (e) => {
         (null == e ? void 0 : e.paymentGateway) === (null == t ? void 0 : t.paymentGateway) &&
         (null == e ? void 0 : e.shopHomeConfig) === (null == t ? void 0 : t.shopHomeConfig) &&
         (null == e ? void 0 : e.skipNumCategories) === (null == t ? void 0 : t.skipNumCategories),
-    j = async (e, t, n) => {
+    k = async (e, t, n) => {
         s.Z.dispatch({
             type: "COLLECTIBLES_CATEGORIES_FETCH",
             options: null != e ? e : {},
@@ -184,7 +184,7 @@ let w = (e) => {
                 i && (0, p.v)("fetchCollectiblesCategories failed: ".concat(e.message));
         }
     },
-    k = async (e) => {
+    j = async (e) => {
         if (h.Z.isFetching) return;
         s.Z.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH" });
         let t = c.ZP.get("shop_show_debug_overlay");

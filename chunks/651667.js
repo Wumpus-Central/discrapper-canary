@@ -1,6 +1,6 @@
 function a(e) {
-    var t, n, a, r, i, l, s;
-    let o = e.skus
+    var t, n, a, r, i, l, o;
+    let s = e.skus
             .map((e) => {
                 let t = e.tenant_metadata.plan_features.map((e) => ({
                     title: e.title,
@@ -14,23 +14,23 @@ function a(e) {
                 };
             })
             .sort((e, t) => t.cost - e.cost),
-        c = o.length > 0 ? Math.min(...o.map((e) => e.cost)) : 0;
+        c = s.length > 0 ? Math.min(...s.map((e) => e.cost)) : 0;
     return {
         id: e.id,
         name: e.name,
         gameId:
             null !=
-            (s =
+            (o =
                 null == (a = e.tenant_metadata) || null == (n = a.guild_monetization) || null == (t = n.game_server)
                     ? void 0
                     : t.game_application_id)
-                ? s
+                ? o
                 : "",
         provider:
             null == (l = e.tenant_metadata) || null == (i = l.guild_monetization) || null == (r = i.game_server)
                 ? void 0
                 : r.provider,
-        plans: o,
+        plans: s,
         baseCost: c,
     };
 }

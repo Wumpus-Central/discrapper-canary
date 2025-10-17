@@ -113,8 +113,8 @@ function S(e) {
             applicationIntegration: s,
             selectableWebhookChannels: d,
             editedWebhook: S,
-            errors: I,
-            canNavigate: E,
+            errors: E,
+            canNavigate: I,
         } = e,
         { application: P, integration: w, webhooks: T } = s,
         [Z, k] = (0, a.Wu)(
@@ -124,7 +124,7 @@ function S(e) {
         ),
         A = (0, a.e7)([m.Z], () => m.Z.can(y.Plq.MANAGE_WEBHOOKS, n), [n]),
         D = r.useCallback(() => {
-            E() &&
+            I() &&
                 (0, o.h7j)((e) =>
                     (0, i.jsx)(
                         N,
@@ -138,7 +138,7 @@ function S(e) {
                         ),
                     ),
                 );
-        }, [P, E, n, w]),
+        }, [P, I, n, w]),
         R = r.useMemo(() => {
             let e = [
                 {
@@ -189,7 +189,7 @@ function S(e) {
             Z
                 ? (0, i.jsx)(u.Z, {
                       application: P,
-                      canNavigate: E,
+                      canNavigate: I,
                       guildId: n.id,
                   })
                 : null,
@@ -224,8 +224,8 @@ function S(e) {
                               webhooks: T,
                               editedWebhook: S,
                               selectableWebhookChannels: d,
-                              errors: I,
-                              canNavigate: E,
+                              errors: E,
+                              canNavigate: I,
                           })
                         : (0, i.jsx)(o.Zbd, {
                               className: _.emptyCard,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => G }), n(388685), n(953529), n(781311), n(539854);
+n.d(t, { Z: () => M }), n(388685), n(953529), n(781311), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -21,8 +21,8 @@ var r = n(951288),
     C = n(690221),
     O = n(524329),
     y = n(575258),
-    N = n(592125),
-    E = n(4912),
+    E = n(592125),
+    N = n(4912),
     I = n(626135),
     S = n(700785),
     T = n(434404),
@@ -75,17 +75,17 @@ function L(e, t) {
     );
 }
 let k = "WELCOME_CHANNEL",
-    M = (e) => {
+    G = (e) => {
         var t;
         let l,
             { guildId: s, welcomeChannel: o, onEdit: f, onChannelReorder: h, isDropHovered: v, index: _ } = e,
             C = i.useRef(null),
-            O = (0, u.e7)([N.Z], () => N.Z.getChannel(o.channel_id)),
+            O = (0, u.e7)([E.Z], () => E.Z.getChannel(o.channel_id)),
             y = (0, u.e7)([j.ZP], () => (null != o.emoji_id ? j.ZP.getUsableCustomEmojiById(o.emoji_id) : null)),
             I = null != O && S.Uu(w.Plq.VIEW_CHANNEL, O),
             T = null != (t = (0, x.KS)(O)) ? t : g.VL1,
             P = (0, b.ZP)(O, !1),
-            M = () => {
+            G = () => {
                 (0, g.ZDy)(
                     async () => {
                         let { default: e } = await n.e("73196").then(n.bind(n, 514698));
@@ -103,7 +103,7 @@ let k = "WELCOME_CHANNEL",
                     { onCloseRequest: () => Z.Vq },
                 );
             },
-            [, G] = (0, c.c)({
+            [, M] = (0, c.c)({
                 type: k,
                 item: {
                     channel: o,
@@ -125,12 +125,12 @@ let k = "WELCOME_CHANNEL",
         return (
             i.useLayoutEffect(
                 () => (
-                    G(U(C)),
+                    M(U(C)),
                     () => {
-                        G(null), U(null);
+                        M(null), U(null);
                     }
                 ),
-                [G, U],
+                [M, U],
             ),
             (l = I
                 ? null != y || null != o.emoji_name
@@ -144,7 +144,7 @@ let k = "WELCOME_CHANNEL",
                           color: "currentColor",
                           className: D.channelIcon,
                       })
-                : (0, r.jsx)(E.Z, {
+                : (0, r.jsx)(N.Z, {
                       width: 24,
                       height: 24,
                       className: D.warningIcon,
@@ -163,7 +163,7 @@ let k = "WELCOME_CHANNEL",
                                     guildId: s,
                                     welcomeChannel: o,
                                     onChannelReorder: h,
-                                    onShowDeleteModal: M,
+                                    onShowDeleteModal: G,
                                     index: _,
                                 }),
                             );
@@ -198,30 +198,30 @@ let k = "WELCOME_CHANNEL",
                         variant: "icon-only",
                         icon: g.XHJ,
                         "aria-label": R.intl.string(R.t.JYBc3N),
-                        onClick: M,
+                        onClick: G,
                     }),
                 ],
             })
         );
     },
-    G = (e) => {
+    M = (e) => {
         let { guild: t } = e,
             { welcomeSettings: l, originalWelcomeSettings: a } = (0, u.e7)([y.Z], () => y.Z.getSettingsProps()),
             s = (0, u.e7)([h.Z], () => h.Z.useReducedMotion),
             [c, d] = i.useState(null),
             [m, p] = i.useState(!1),
             [b, x] = i.useState(!1),
-            { description: j, channels: N, enabled: S } = l,
+            { description: j, channels: E, enabled: S } = l,
             Z = (e) => {
                 null != t && (o()(e, a.channels) || ((0, O.Es)(t.id, { channels: e }), p(!0)));
             },
             k = (e) => {
                 null != t && e !== a.enabled && ((0, O.Es)(t.id, { enabled: e }), x(!s), p(!0));
             },
-            G = (e, t, n) => {
-                if (null == N) return;
-                let r = N.indexOf(e),
-                    i = [...N];
+            M = (e, t, n) => {
+                if (null == E) return;
+                let r = E.indexOf(e),
+                    i = [...E];
                 null != t && t !== r && (i.splice(r, 1), i.splice(t, 0, e), (0, O.VP)({ channels: i })),
                     n ? (Z(i), d(null)) : d(t);
             },
@@ -235,8 +235,8 @@ let k = "WELCOME_CHANNEL",
                         let e = [],
                             n = [],
                             r = !1;
-                        null == N ||
-                            N.forEach((t) => {
+                        null == E ||
+                            E.forEach((t) => {
                                 e.push(t.description), n.push(t.channel_id), null != t.emoji_id && (r = !0);
                             }),
                             I.default.track(w.rMx.GUILD_WELCOME_SCREEN_SETTINGS_UPDATED, {
@@ -249,7 +249,7 @@ let k = "WELCOME_CHANNEL",
                             });
                     }
                 },
-                [m, N, j, S, t],
+                [m, E, j, S, t],
             ),
             i.useEffect(() => () => (0, O.sm)(), []);
         let B = i.useCallback(() => {
@@ -268,7 +268,7 @@ let k = "WELCOME_CHANNEL",
                           children: (0, r.jsxs)(g.Text, {
                               variant: "text-md/normal",
                               children: [
-                                  (0, r.jsx)(E.Z, { className: D.noticeIcon }),
+                                  (0, r.jsx)(N.Z, { className: D.noticeIcon }),
                                   R.intl.format(R.t.oj2vi4, {
                                       onboardingLink: (e) =>
                                           (0, r.jsx)(C.Z, {
@@ -286,7 +286,7 @@ let k = "WELCOME_CHANNEL",
                       (0, r.jsx)(P.Z, {
                           enabled: S,
                           onPreview:
-                              (null == N ? void 0 : N.length) === 0
+                              (null == E ? void 0 : E.length) === 0
                                   ? void 0
                                   : () => {
                                         null != t &&
@@ -303,7 +303,7 @@ let k = "WELCOME_CHANNEL",
                                             });
                                     },
                           onToggle:
-                              S || (null == N ? void 0 : N.length) !== 0
+                              S || (null == E ? void 0 : E.length) !== 0
                                   ? () => {
                                         k(!S);
                                     }
@@ -377,16 +377,16 @@ let k = "WELCOME_CHANNEL",
                                       label: R.intl.string(R.t.euJXzc),
                                       description: R.intl.string(R.t.VOnnn5),
                                       children:
-                                          null == N
+                                          null == E
                                               ? void 0
-                                              : N.map((e, n) =>
+                                              : E.map((e, n) =>
                                                     (0, r.jsx)(
-                                                        M,
+                                                        G,
                                                         {
                                                             guildId: t.id,
                                                             welcomeChannel: e,
                                                             onEdit: (e) => {
-                                                                let t = [...(null != N ? N : [])];
+                                                                let t = [...(null != E ? E : [])];
                                                                 null == e ? t.splice(n, 1) : (t[n] = e),
                                                                     (0, O.VP)({ channels: t }),
                                                                     Z(t),
@@ -394,7 +394,7 @@ let k = "WELCOME_CHANNEL",
                                                                         S &&
                                                                         ((0, O.VP)({ enabled: !1 }), k(!1));
                                                             },
-                                                            onChannelReorder: G,
+                                                            onChannelReorder: M,
                                                             isDropHovered: n === c,
                                                             index: n,
                                                         },

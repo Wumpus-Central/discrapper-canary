@@ -9,8 +9,8 @@ var i = n(913527),
     c = n(776568),
     d = n(777861),
     u = n(9156),
-    h = n(621600),
-    p = n(388032);
+    p = n(621600),
+    h = n(388032);
 function f(e, t) {
     let n = null == e ? void 0 : e.id,
         { muted: i, muteConfig: f } = (0, a.cj)(
@@ -27,14 +27,14 @@ function f(e, t) {
         : i
           ? (0, r.jsx)(s.sNh, {
                 id: "unmute-guild",
-                label: p.intl.string(p.t.De0BTE),
+                label: h.intl.string(h.t.De0BTE),
                 subtext: g,
-                action: () => o.Z.updateGuildNotificationSettings(n, { muted: !1 }, h.ZB.Unmuted),
+                action: () => o.Z.updateGuildNotificationSettings(n, { muted: !1 }, p.ZB.Unmuted),
             })
           : (0, r.jsx)(s.sNh, {
                 id: "mute-guild",
-                label: p.intl.string(p.t.vRzp7O),
-                action: () => o.Z.updateGuildNotificationSettings(n, { muted: !0 }, h.ZB.Muted),
+                label: h.intl.string(h.t.vRzp7O),
+                action: () => o.Z.updateGuildNotificationSettings(n, { muted: !0 }, p.ZB.Muted),
                 children: (0, c.k)().map((e) => {
                     let { value: i, label: a } = e;
                     return (0, r.jsx)(
@@ -55,7 +55,7 @@ function f(e, t) {
                                                 end_time: r,
                                             },
                                         },
-                                        h.ZB.Muted,
+                                        p.ZB.Muted,
                                         t,
                                     );
                                 })(i),

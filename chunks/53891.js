@@ -4,8 +4,8 @@ n(647438);
 var r = n(442837),
     i = n(704215),
     l = n(198168),
-    s = n(907862),
-    o = n(570140),
+    o = n(907862),
+    s = n(570140),
     c = n(710845),
     d = n(645041),
     u = n(430824),
@@ -14,11 +14,11 @@ var r = n(442837),
     h = n(446094),
     x = n(921944),
     f = n(388032);
-let b = new c.Z("GuildTagCoachmark");
-function g(e) {
+let g = new c.Z("GuildTagCoachmark");
+function b(e) {
     function t(t) {
         var n;
-        o.Z.dispatch({
+        s.Z.dispatch({
             type: "GUILD_TAG_CHANGED_COACHMARK_SEEN",
             guildId: e.guild.id,
             lastSeenInfo: { tag: e.guild.profile.tag },
@@ -42,7 +42,7 @@ function g(e) {
     return (0, a.jsxs)(a.Fragment, {
         children: [
             e.children,
-            (0, a.jsx)(s.J2, {
+            (0, a.jsx)(o.J2, {
                 targetElementRef: e.targetElementRef,
                 shouldShow: !0,
                 position: "top",
@@ -66,7 +66,7 @@ function g(e) {
 function v(e) {
     function t(t) {
         var n;
-        o.Z.dispatch({
+        s.Z.dispatch({
             type: "GUILD_TAG_CHANGED_COACHMARK_SEEN",
             guildId: e.guild.id,
             lastSeenInfo: { tag: e.guild.profile.tag },
@@ -91,7 +91,7 @@ function v(e) {
     return (0, a.jsxs)(a.Fragment, {
         children: [
             e.children,
-            (0, a.jsx)(s.J2, {
+            (0, a.jsx)(o.J2, {
                 targetElementRef: e.targetElementRef,
                 shouldShow: !0,
                 position: "top",
@@ -117,7 +117,7 @@ function j(e) {
         n = (0, m.S3)(e.guildId);
     return null != t && (0, p.jq)(t) && null !== n
         ? "changed" === n
-            ? (0, a.jsx)(g, {
+            ? (0, a.jsx)(b, {
                   guild: t,
                   onDismiss: e.onDismiss,
                   targetElementRef: e.targetElementRef,
@@ -129,5 +129,5 @@ function j(e) {
                   targetElementRef: e.targetElementRef,
                   children: e.children,
               })
-        : (b.error("GuildTagCoachmark rendered without guildId or coachmark type."), e.children);
+        : (g.error("GuildTagCoachmark rendered without guildId or coachmark type."), e.children);
 }

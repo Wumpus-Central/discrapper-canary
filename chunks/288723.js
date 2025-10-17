@@ -62,9 +62,9 @@ let d = {
             ) {
                 var x = C[L],
                     M = (0, i.Z)(x),
-                    j = (0, c.Z)(x) === l.BL,
-                    k = [l.we, l.I].indexOf(M) >= 0,
-                    U = k ? "width" : "height",
+                    k = (0, c.Z)(x) === l.BL,
+                    j = [l.we, l.I].indexOf(M) >= 0,
+                    U = j ? "width" : "height",
                     G = (0, o.Z)(t, {
                         placement: x,
                         boundary: g,
@@ -72,7 +72,7 @@ let d = {
                         altBoundary: b,
                         padding: m,
                     }),
-                    B = k ? (j ? l.F2 : l.t$) : j ? l.I : l.we;
+                    B = j ? (k ? l.F2 : l.t$) : k ? l.I : l.we;
                 N[U] > R[U] && (B = (0, r.Z)(B));
                 var Z = (0, r.Z)(B),
                     F = [];

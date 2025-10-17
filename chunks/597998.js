@@ -1,7 +1,7 @@
 n.d(t, {
     ZP: () => U,
-    eJ: () => j,
-    nm: () => k,
+    eJ: () => k,
+    nm: () => j,
 }),
     n(539854),
     n(997841),
@@ -130,7 +130,7 @@ let x = 16,
                   }),
               });
     },
-    j = (e) => {
+    k = (e) => {
         let { children: t, collapsed: n = !1, className: i } = e;
         return (0, r.jsx)("div", {
             className: o()(i, C.list, n ? C.listCollapse : C.listDefault),
@@ -138,7 +138,7 @@ let x = 16,
             children: t,
         });
     };
-function k(e) {
+function j(e) {
     let {
             className: t,
             mute: n,
@@ -159,8 +159,8 @@ function k(e) {
             application: D,
             guildId: L,
             channelId: x,
-            user: j,
-            disconnected: k,
+            user: k,
+            disconnected: j,
             hangStatusActivity: U,
             showHangStatus: Z,
             isSelf: F,
@@ -210,7 +210,7 @@ function k(e) {
                       "video",
                   ),
               )),
-        k &&
+        j &&
             K.push(
                 (0, r.jsx)(
                     l.u,
@@ -285,12 +285,12 @@ function k(e) {
                                           iconClassName: N,
                                           guildId: L,
                                           channelId: x,
-                                          userId: j.id,
+                                          userId: k.id,
                                       },
-                                      "".concat(j.id, "-game"),
+                                      "".concat(k.id, "-game"),
                                   )
                                 : (0, r.jsx)(M, {
-                                      userId: j.id,
+                                      userId: k.id,
                                       hangStatusActivity: U,
                                       iconClassName: N,
                                       isSelf: F,
@@ -327,7 +327,7 @@ let U = function (e) {
             mute: L,
             serverMute: x,
             guildId: M,
-            nick: j,
+            nick: k,
             isGuest: U,
             flipped: G,
             className: B,
@@ -380,7 +380,7 @@ let U = function (e) {
         let e = (0, r.jsxs)("div", {
                 className: o()(i, C.username, W, { [C.usernameSpeaking]: !L && !x && N }),
                 children: [
-                    null != j ? j : v.ZP.getName(H),
+                    null != k ? k : v.ZP.getName(H),
                     U
                         ? (0, r.jsxs)("span", {
                               className: C.guestSuffix,
@@ -401,7 +401,7 @@ let U = function (e) {
         return !P || d ? (0, r.jsx)(g.Z, w(R({}, t), { children: e })) : null;
     }
     function et() {
-        return (0, r.jsx)(k, R({ disabled: u }, _));
+        return (0, r.jsx)(j, R({ disabled: u }, _));
     }
     return (0, r.jsx)(c.kL8, {
         ref: f,
@@ -421,7 +421,7 @@ let U = function (e) {
         onMouseLeave: X,
         onMouseDown: Q,
         onKeyDown: E,
-        "aria-label": null != (t = null != F ? F : j) ? t : H.username,
+        "aria-label": null != (t = null != F ? F : k) ? t : H.username,
         focusProps: { offset: { right: 4 } },
         children: (0, r.jsxs)("div", {
             className: o()(C.content, { [C.flipped]: G }),

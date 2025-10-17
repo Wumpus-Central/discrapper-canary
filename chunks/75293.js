@@ -55,7 +55,7 @@ class m extends s.Component {
                         tag: "strong",
                         variant: "text-md/normal",
                         className: c.marginBottom20,
-                        children: h.intl.string(h.t.UCEXPq),
+                        children: h.intl.string(h.t.UCEXPj),
                     }),
                 }),
                 (0, i.jsx)(l.mzw, {
@@ -64,12 +64,12 @@ class m extends s.Component {
                         children: [
                             (0, i.jsx)(l.Button, {
                                 variant: "primary",
-                                text: h.intl.string(h.t.taPRcJ),
+                                text: h.intl.string(h.t.taPRcH),
                                 onClick: this.handleRequestElevated,
                             }),
                             (0, i.jsx)(l.Button, {
                                 variant: "secondary",
-                                text: h.intl.string(h.t.of0VoB),
+                                text: h.intl.string(h.t.of0VoK),
                                 onClick: this.handleStreamWithoutSound,
                             }),
                         ],

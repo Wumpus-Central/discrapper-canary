@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685), n(997841), n(415506), n(35282);
+n.d(t, { Z: () => E }), n(388685), n(997841), n(415506), n(35282);
 var r = n(392711),
     i = n.n(r),
     l = n(243814),
@@ -15,7 +15,7 @@ var r = n(392711),
     m = n(186901),
     b = n(981631);
 let _ = ["1402418171662569542"],
-    O = {
+    E = {
         [b.Etm.SET_ACTIVITY]: {
             scope: {
                 [m.Gp.ANY]: [l.x.RPC, l.x.RPC_ACTIVITIES_WRITE, m.lH],
@@ -80,8 +80,8 @@ let _ = ["1402418171662569542"],
                 let l,
                     {
                         socket: a,
-                        args: { pid: g, activity: O },
-                        isSocketConnected: E,
+                        args: { pid: g, activity: E },
+                        isSocketConnected: O,
                     } = e;
                 if (![m.He.IPC, m.He.WEBSOCKET, m.He.POST_MESSAGE].includes(a.transport))
                     throw new h.Z(
@@ -90,34 +90,34 @@ let _ = ["1402418171662569542"],
                     );
                 if (null == g && m.He.IPC === a.transport)
                     throw new h.Z({ errorCode: b.lTL.INVALID_COMMAND }, "nonzero pid required");
-                if (null == O)
+                if (null == E)
                     return (
                         o.Z.dispatch({
                             type: "LOCAL_ACTIVITY_UPDATE",
                             socketId: a.id,
                             pid: g,
-                            activity: O,
+                            activity: E,
                         }),
-                        Promise.resolve(O)
+                        Promise.resolve(E)
                     );
                 let v = {};
-                O.name || (O.name = a.application.name);
+                E.name || (E.name = a.application.name);
                 let y = a.application.id;
-                O.application_id = y;
+                E.application_id = y;
                 let I = a.transport === m.He.POST_MESSAGE;
-                O.platform = I ? b.M7m.EMBEDDED : b.M7m.DESKTOP;
+                E.platform = I ? b.M7m.EMBEDDED : b.M7m.DESKTOP;
                 let C = c.Z.getApplication(null != y ? y : void 0),
-                    S = null != (r = O.instance) && r,
-                    T = null == (t = O.party) ? void 0 : t.privacy;
-                delete O.instance, null == (n = O.party) || delete n.privacy;
-                let N = (0, s.S)(O, S, I, null != C && (0, u.g)(C) && I, T);
-                N > 0 && (O.flags = N);
-                let { assets: j, party: P, secrets: x, timestamps: A, buttons: Z, type: w } = O;
-                if ((null == w && (O.type = b.IIU.PLAYING), null != x)) {
+                    S = null != (r = E.instance) && r,
+                    N = null == (t = E.party) ? void 0 : t.privacy;
+                delete E.instance, null == (n = E.party) || delete n.privacy;
+                let T = (0, s.S)(E, S, I, null != C && (0, u.g)(C) && I, N);
+                T > 0 && (E.flags = T);
+                let { assets: P, party: j, secrets: x, timestamps: A, buttons: Z, type: w } = E;
+                if ((null == w && (E.type = b.IIU.PLAYING), null != x)) {
                     let e = i()
                         .values(x)
                         .filter((e) => !!e);
-                    if (null != P && i().intersection(e, [P.id]).length > 0 && !_.includes(a.application.id))
+                    if (null != j && i().intersection(e, [j.id]).length > 0 && !_.includes(a.application.id))
                         throw new h.Z(
                             { errorCode: b.lTL.INVALID_ACTIVITY_SECRET },
                             "secrets cannot match the party id",
@@ -131,57 +131,57 @@ let _ = ["1402418171662569542"],
                         );
                 }
                 if (
-                    (null != Z && ((v.button_urls = Z.map((e) => e.url)), (O.buttons = Z.map((e) => e.label))),
-                    (O.metadata = v),
+                    (null != Z && ((v.button_urls = Z.map((e) => e.url)), (E.buttons = Z.map((e) => e.label))),
+                    (E.metadata = v),
                     null != A)
                 )
                     for (let e of Object.keys(A))
                         Date.now().toString().length - A[e].toString().length > 2 &&
                             (A[e] = Math.floor(A[e] * f.Z.Millis.SECOND));
-                if (null == j) l = Promise.resolve([]);
+                if (null == P) l = Promise.resolve([]);
                 else {
                     if (null == a.application || null == a.application.id) throw Error();
-                    l = (0, p.hR)(a.application.id, [j.large_image, j.small_image, j.invite_cover_image]);
+                    l = (0, p.hR)(a.application.id, [P.large_image, P.small_image, P.invite_cover_image]);
                 }
                 return l.then((e) => {
                     var t, n, r, i;
                     let [l, s, c] = e;
                     if (
-                        (null != j &&
-                            (null != l ? (j.large_image = l) : delete j.large_image,
-                            null != s ? (j.small_image = s) : delete j.small_image,
-                            null != c ? (j.invite_cover_image = c) : delete j.invite_cover_image),
-                        !E())
+                        (null != P &&
+                            (null != l ? (P.large_image = l) : delete P.large_image,
+                            null != s ? (P.small_image = s) : delete P.small_image,
+                            null != c ? (P.invite_cover_image = c) : delete P.invite_cover_image),
+                        !O())
                     )
                         return;
                     o.Z.dispatch({
                         type: "LOCAL_ACTIVITY_UPDATE",
                         socketId: a.id,
                         pid: g,
-                        activity: O,
-                        partyPrivacy: T,
+                        activity: E,
+                        partyPrivacy: N,
                     });
-                    let { secrets: u, party: p } = O,
+                    let { secrets: u, party: p } = E,
                         f = {
                             application_id: a.application.id,
-                            type: O.type,
-                            name: O.name,
-                            status_display_type: O.status_display_type,
-                            details: null != (r = O.details) ? r : "",
-                            state: null != (i = O.state) ? i : "",
+                            type: E.type,
+                            name: E.name,
+                            status_display_type: E.status_display_type,
+                            details: null != (r = E.details) ? r : "",
+                            state: null != (i = E.state) ? i : "",
                             has_urls:
-                                null != O.state_url ||
-                                null != O.details_url ||
-                                (null == (t = O.assets) ? void 0 : t.large_url) != null ||
-                                (null == (n = O.assets) ? void 0 : n.small_url) != null,
+                                null != E.state_url ||
+                                null != E.details_url ||
+                                (null == (t = E.assets) ? void 0 : t.large_url) != null ||
+                                (null == (n = E.assets) ? void 0 : n.small_url) != null,
                         };
                     return (
                         null != u && ((f.has_match_secret = !!u.match), (f.has_join_secret = !!u.join)),
-                        null != j && (f.has_images = !!(j.large_image || j.small_image || j.invite_cover_image)),
+                        null != P && (f.has_images = !!(P.large_image || P.small_image || P.invite_cover_image)),
                         null != p &&
                             ((f.party_max = null != p.size && p.size[1] > 0 ? p.size[1] : void 0), (f.party_id = p.id)),
                         d.default.track(b.rMx.ACTIVITY_UPDATED, f),
-                        O
+                        E
                     );
                 });
             },

@@ -3,20 +3,20 @@ var a = n(951288),
     r = n(647438),
     i = n(481060),
     l = n(131051),
-    s = n(28682),
-    o = n(920952),
+    o = n(28682),
+    s = n(920952),
     c = n(544651),
     d = n(546697),
     u = n(547481);
 function m(e) {
     var t;
     let { setting: n, depth: i, highlight: l } = e,
-        s = null == (t = r.useContext(h)) ? void 0 : t.get(n),
-        o = null;
+        o = null == (t = r.useContext(h)) ? void 0 : t.get(n),
+        s = null;
     return (
-        null != s &&
-            s.length > 0 &&
-            (o = s
+        null != o &&
+            o.length > 0 &&
+            (s = o
                 .sort((e, t) => e.localeCompare(t))
                 .map((e) =>
                     (0, a.jsx)(
@@ -33,22 +33,22 @@ function m(e) {
             title: n,
             initExpanded: i <= 2,
             highlight: l,
-            children: o,
+            children: s,
         })
     );
 }
 function p(e) {
     let { setting: t, depth: n } = e,
         r =
-            (0, s.Lk)(t) &&
-            ((t.type === s.Jq.SIDEBAR_ITEM &&
+            (0, o.Lk)(t) &&
+            ((t.type === o.Jq.SIDEBAR_ITEM &&
                 t.layout.some((e) => (null == e ? void 0 : e.layout.some((e) => null != e.render)))) ||
-                (t.type === s.Jq.PANEL && t.layout.some((e) => null != e.render)) ||
-                (t.type === s.Jq.PANE && null != t.render)),
+                (t.type === o.Jq.PANEL && t.layout.some((e) => null != e.render)) ||
+                (t.type === o.Jq.PANE && null != t.render)),
         i = null;
-    if ((0, s.Lk)(t)) {
-        var l, o;
-        0 === t.layout.length && (null == (o = t.parent) || null == (l = o.parent) ? void 0 : l.legacySearchKey) != null
+    if ((0, o.Lk)(t)) {
+        var l, s;
+        0 === t.layout.length && (null == (s = t.parent) || null == (l = s.parent) ? void 0 : l.legacySearchKey) != null
             ? (i = (0, a.jsx)(m, {
                   setting: t.parent.parent.legacySearchKey,
                   depth: n + 1,
@@ -77,7 +77,7 @@ let h = r.createContext(null);
 function x() {
     let [e, t] = r.useState(!1),
         { legacySettingDirectory: n } = (0, d.q)(),
-        { node: s } = (0, l.Z)(o.Z, "");
+        { node: o } = (0, l.Z)(s.Z, "");
     return (0, a.jsxs)(i.zJl, {
         className: u.root,
         children: [
@@ -108,10 +108,10 @@ function x() {
                             (0, a.jsx)(
                                 p,
                                 {
-                                    setting: s,
+                                    setting: o,
                                     depth: 1,
                                 },
-                                s.key,
+                                o.key,
                             ),
                     ],
                 }),

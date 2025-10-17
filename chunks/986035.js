@@ -12,19 +12,19 @@ let o = function (e) {
         disagreement: c,
         onAgree: d,
         onDisagree: u,
-        modalType: h,
-        channelId: p,
+        modalType: p,
+        channelId: h,
         guildId: f,
     } = e;
     i.useEffect(() => {
-        (0, a.YT)(h, p, f);
-    }, [h, p, f]);
+        (0, a.YT)(p, h, f);
+    }, [p, h, f]);
     let g = i.useCallback(() => {
-            (0, a.qd)(a.iP.NSFW_CHANNEL_DISAGREE_CTA, h, p, f), null == u || u();
-        }, [u, h, p, f]),
+            (0, a.qd)(a.iP.NSFW_CHANNEL_DISAGREE_CTA, p, h, f), null == u || u();
+        }, [u, p, h, f]),
         m = i.useCallback(() => {
-            (0, a.qd)(a.iP.NSFW_CHANNEL_AGREE_CTA, h, p, f), null == d || d();
-        }, [d, h, p, f]);
+            (0, a.qd)(a.iP.NSFW_CHANNEL_AGREE_CTA, p, h, f), null == d || d();
+        }, [d, p, h, f]);
     return (0, r.jsxs)(l.Kqy, {
         justify: "center",
         align: "center",

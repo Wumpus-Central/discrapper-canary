@@ -9,18 +9,18 @@ var r = n(512722),
     u = n(51144),
     d = n(497089),
     p = n(981631),
-    h = n(388032);
-function f(e) {
+    f = n(388032);
+function h(e) {
     let { username: t, applicationId: n, renderApplication: r, withApplication: i, withDefault: l } = e;
     return null != n
-        ? h.intl.format(i, {
+        ? f.intl.format(i, {
               username: t,
               applicationName: () => r(n),
           })
-        : h.intl.format(l, { username: t });
+        : f.intl.format(l, { username: t });
 }
 function g(e) {
-    var t, n, r, g, m, b, _, y, O, v, j, x, C, E, S;
+    var t, n, r, g, m, b, _, O, y, v, j, x, C, E, S;
     let { item: I, renderApplication: P } = e,
         N = null != (r = null == (t = I.other_user) ? void 0 : t.id) ? r : p.lds,
         Z = u.ZP.getName(s.default.getUser(null == (n = I.other_user) ? void 0 : n.id)),
@@ -29,8 +29,8 @@ function g(e) {
         case d.O7.FRIEND_REQUESTS_GROUPED:
             let T = u.ZP.getName(s.default.getUser(null == (m = I.other_users) || null == (g = m[0]) ? void 0 : g.id)),
                 A = u.ZP.getName(s.default.getUser(null == (_ = I.other_users) || null == (b = _[1]) ? void 0 : b.id)),
-                R = Math.max((null != (O = null == (y = I.other_users) ? void 0 : y.length) ? O : 0) - 2, 0);
-            return h.intl.format(h.t.g5xyIC, {
+                R = Math.max((null != (y = null == (O = I.other_users) ? void 0 : O.length) ? y : 0) - 2, 0);
+            return f.intl.format(f.t.g5xyIC, {
                 user: T,
                 user2: A,
                 count: R,
@@ -50,38 +50,38 @@ function g(e) {
                 ? null != (E = I.body)
                     ? E
                     : ""
-                : h.intl.format(h.t.AyvfXV, {
+                : f.intl.format(f.t.AyvfXV, {
                       event_name: k,
                       guild_name: G,
                   });
         case d.O7.INCOMING_FRIEND_REQUESTS:
-            return f({
+            return h({
                 username: Z,
                 applicationId: w,
                 renderApplication: P,
-                withApplication: h.t["9Dgf1N"],
-                withDefault: h.t.uIomX1,
+                withApplication: f.t["9Dgf1N"],
+                withDefault: f.t.uIomX1,
             });
         case d.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED:
-            return f({
+            return h({
                 username: Z,
                 applicationId: w,
                 renderApplication: P,
-                withApplication: h.t.nnC1q6,
-                withDefault: h.t["5Uzkdn"],
+                withApplication: f.t.nnC1q6,
+                withDefault: f.t["5Uzkdn"],
             });
         case d.DY.FRIEND_REQUEST_ACCEPTED:
-            return f({
+            return h({
                 username: Z,
                 applicationId: w,
                 renderApplication: P,
-                withApplication: h.t.jXlYiI,
-                withDefault: h.t.McYRBg,
+                withApplication: f.t.jXlYiI,
+                withDefault: f.t.McYRBg,
             });
         case d.O7.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED:
             return (
                 i()(null != w, "Expected application id for ".concat(I.type)),
-                h.intl.format(h.t["BB/0vr"], {
+                f.intl.format(f.t["BB/0vr"], {
                     username: Z,
                     applicationName: () => P(w),
                 })
@@ -89,14 +89,14 @@ function g(e) {
         case d.O7.INCOMING_GAME_FRIEND_REQUESTS:
             return (
                 i()(null != w, "Expected application id for ".concat(I.type)),
-                h.intl.format(h.t["7cqOLC"], {
+                f.intl.format(f.t["7cqOLC"], {
                     username: Z,
                     applicationName: () => P(w),
                 })
             );
         case d.DY.GAME_FRIEND_REQUEST_ACCEPTED:
             if (null == w) return I.body;
-            return h.intl.format(h.t.Wi64vL, {
+            return f.intl.format(f.t.Wi64vL, {
                 username: Z,
                 applicationName: () => P(w),
             });

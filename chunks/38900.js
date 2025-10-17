@@ -1,14 +1,14 @@
 n.d(t, {
     K: () => g,
-    Z: () => f,
+    Z: () => p,
 });
 var r = n(951288);
 n(647438);
 var l = n(120356),
     i = n.n(l),
-    s = n(128922),
+    a = n(128922),
     o = n(401975),
-    a = n(638758),
+    s = n(638758),
     c = n(887353),
     u = n(198501),
     d = n(300179);
@@ -25,8 +25,8 @@ let g = () =>
                 ],
             }),
         }),
-    f = () => {
-        let e = s.Z.useConfig({ location: "ShopSkeleton" }).showCardsV2;
+    p = () => {
+        let e = a.Z.useConfig({ location: "ShopSkeleton" }).showCardsV2;
         return (0, r.jsx)("div", {
             className: u.skeletonsContainer,
             children: Array.from({ length: 3 }).map((t, n) =>
@@ -36,9 +36,9 @@ let g = () =>
                         className: c.cardsContainer,
                         children: [
                             e
-                                ? (0, r.jsx)("div", { className: i()(a.catalogBanner, u.bannerSkeletonV2) })
+                                ? (0, r.jsx)("div", { className: i()(s.catalogBanner, u.bannerSkeletonV2) })
                                 : (0, r.jsx)("div", {
-                                      className: i()(u.skeleton, u.bannerSkeleton, a.catalogBanner),
+                                      className: i()(u.skeleton, u.bannerSkeleton, s.catalogBanner),
                                       children: (0, r.jsx)("div", { className: u.bannerBody }),
                                   }),
                             Array.from({ length: 12 }, (t, n) => (e ? (0, r.jsx)(o.Z, {}, n) : (0, r.jsx)(g, {}, n))),

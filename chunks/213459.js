@@ -88,7 +88,7 @@ function M(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -99,7 +99,7 @@ function j(e, t) {
         e
     );
 }
-let k = new f.Z("ApplicationCommandIndexStore"),
+let j = new f.Z("ApplicationCommandIndexStore"),
     U = Symbol("currentUser"),
     G = Symbol("stale"),
     B = Symbol("current"),
@@ -232,7 +232,7 @@ function er(e) {
             null != t ? (e.bot = t) : u.add(e.bot_id);
         } else null != e.bot && (l[e.bot.id] = e.id);
         let t = {
-            descriptor: j(x({}, (0, N.X0)(eP(e))), {
+            descriptor: k(x({}, (0, N.X0)(eP(e))), {
                 permissions: null != e.permissions ? (0, _.tk)(ex(e.permissions, o)) : void 0,
                 botId: e.bot_id,
             }),
@@ -247,7 +247,7 @@ function er(e) {
     ))) {
         let t = s[e.applicationId];
         if (null == t) {
-            k.error("Command has no matching application");
+            j.error("Command has no matching application");
             continue;
         }
         t.commands[e.id] = e;
@@ -318,7 +318,7 @@ function eo(e, t) {
             let r = i.sections[n];
             o()(null != r, "Bot has no matching index section"),
                 o()(null != r.descriptor.application, "Bot's index section has no application info");
-            let s = (0, N.X0)(j(x({}, r.descriptor.application), { bot: t }));
+            let s = (0, N.X0)(k(x({}, r.descriptor.application), { bot: t }));
             (r.descriptor = x({}, r.descriptor, s)), (a = !0);
         }),
         a
@@ -757,13 +757,13 @@ function eS(e) {
             scoreMethod: O,
             installOnDemand: S,
         },
-        k = null != (i = null == (t = u.result) ? void 0 : t.sections) ? i : {},
+        j = null != (i = null == (t = u.result) ? void 0 : t.sections) ? i : {},
         U = null != (a = null == (n = f.result) ? void 0 : n.sections) ? a : {},
         G = new Set();
     if (g) {
         if (c.hasBaseAccessPermissions)
-            for (let e in k) {
-                let t = k[e];
+            for (let e in j) {
+                let t = j[e];
                 (null == b || t.descriptor.id === b) && G.add(e);
             }
         for (let e in U) {
@@ -780,7 +780,7 @@ function eS(e) {
     for (let e of Array.from(G)) {
         let t,
             n,
-            r = k[e],
+            r = j[e],
             i = U[e],
             a = B.get(e),
             s = null != r,
@@ -820,14 +820,14 @@ function eS(e) {
                     r = d.Z.getScoreWithoutLoadingLatest(t.section.id);
                 if (n !== r) return r - n;
             }
-            return ek(e.section.name, t.section.name);
+            return ej(e.section.name, t.section.name);
         }),
         D.length > 0 || !0 === y)
     ) {
         let e = eA(v.Tm[w.bi.BUILT_IN], D, !0, !0, M);
         null != e && L.push(e);
     }
-    let Z = L.flatMap((e) => e.data.map((t) => j(x({}, t), { section: e.section })));
+    let Z = L.flatMap((e) => e.data.map((t) => k(x({}, t), { section: e.section })));
     if (O === A.p.COMMAND_ONLY || O === A.p.COMMAND_OR_APPLICATION) {
         let e = c.context,
             t = E.Z.getGuild(null == c || null == (l = c.context) ? void 0 : l.guild_id);
@@ -851,7 +851,7 @@ function eS(e) {
                     i = T.ZP.getScoreWithoutLoadingLatest(n, t);
                 if (r !== i) return i - r;
             }
-            return ek(e.displayName, t.displayName);
+            return ej(e.displayName, t.displayName);
         });
     }
     return {
@@ -887,7 +887,7 @@ function eA(e, t, n, r, i) {
             isUserInstalled: r || d,
         }) === P.mF.ALLOWED && E.push(i);
     return 0 !== (a = c !== A.p.NONE && null != o && null != s ? eM(o, s, E, e, c) : E).length || l
-        ? ((c === A.p.NONE || c === A.p.APPLICATION_ONLY) && a.sort((e, t) => ek(e.displayName, t.displayName)),
+        ? ((c === A.p.NONE || c === A.p.APPLICATION_ONLY) && a.sort((e, t) => ej(e.displayName, t.displayName)),
           {
               section: e,
               data: a,
@@ -922,7 +922,7 @@ function eP(e) {
 }
 function ew(e, t) {
     var n, r, i, a, o;
-    let s = j(x({}, e), {
+    let s = k(x({}, e), {
         description: null != (i = null != (r = e.description_default) ? r : e.description) ? i : "",
         dm_permission: e.dm_permission,
         name: null != (a = e.name_default) ? a : e.name,
@@ -937,7 +937,7 @@ function ew(e, t) {
 }
 function eD(e) {
     var t, n, r, i;
-    let a = j(x({}, e), {
+    let a = k(x({}, e), {
         choices: null == (t = e.choices) ? void 0 : t.map(eL),
         description: null != (r = e.description_default) ? r : e.description,
         name: null != (i = e.name_default) ? i : e.name,
@@ -951,7 +951,7 @@ function eD(e) {
 }
 function eL(e) {
     var t;
-    let n = j(x({}, e), { name: null != (t = e.name_default) ? t : e.name });
+    let n = k(x({}, e), { name: null != (t = e.name_default) ? t : e.name });
     return e.name !== e.name_default && (n.name_localized = e.name), n;
 }
 function ex(e, t) {
@@ -997,13 +997,13 @@ function eM(e, t, n, r, i) {
         u = t.slice(1).join(" ");
     for (let t of n) {
         let n;
-        (i === A.p.COMMAND_ONLY || i === A.p.COMMAND_OR_APPLICATION) && (n = ej(t, e, c, u)),
+        (i === A.p.COMMAND_ONLY || i === A.p.COMMAND_OR_APPLICATION) && (n = ek(t, e, c, u)),
             (void 0 === n || (void 0 !== a && a < n)) && (n = a),
-            void 0 !== n && o.push(j(x({}, t), { score: n }));
+            void 0 !== n && o.push(k(x({}, t), { score: n }));
     }
     return o;
 }
-function ej(e, t, n, r) {
+function ek(e, t, n, r) {
     var i;
     let a = e.untranslatedName.toLocaleLowerCase(),
         o = e.displayName.toLocaleLowerCase();
@@ -1033,11 +1033,11 @@ function ej(e, t, n, r) {
         c = e.displayDescription.toLocaleLowerCase();
     if (l.includes(t) || c.includes(t)) return 7;
 }
-function ek(e, t) {
+function ej(e, t) {
     return ep.collator.compare(e, t);
 }
 function eU(e, t) {
-    return ek(e, t);
+    return ej(e, t);
 }
 function eG(e, t) {
     var n, r, i, a, o, s;

@@ -1,11 +1,11 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => l });
 var r = n(951288);
 n(647438);
 var i = n(623132),
     a = n(112794);
-function o(e) {
+function l(e) {
     var { games: t, widgetType: n } = e,
-        o = (function (e, t) {
+        l = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -63,7 +63,7 @@ function o(e) {
                                 game: e,
                                 widgetType: n,
                             },
-                            o,
+                            l,
                         ),
                     ),
                 },

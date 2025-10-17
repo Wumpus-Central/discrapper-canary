@@ -21,8 +21,8 @@ var r = n(951288),
     C = n(384632),
     O = n(981631),
     y = n(388032),
-    N = n(912231);
-function E(e) {
+    E = n(912231);
+function N(e) {
     let { pendingState: t } = e,
         n = i.useRef(!1),
         l = i.useCallback(
@@ -92,7 +92,7 @@ function S(e) {
     }) || n
         ? null
         : (0, r.jsxs)(r.Fragment, {
-              children: [(0, r.jsx)(I, { guildId: t }), (0, r.jsx)("div", { className: N.divider })],
+              children: [(0, r.jsx)(I, { guildId: t }), (0, r.jsx)("div", { className: E.divider })],
           });
 }
 function T() {
@@ -122,9 +122,9 @@ function T() {
                 activeType: s,
                 guild: e,
             }),
-            (0, r.jsx)("div", { className: N.divider }),
+            (0, r.jsx)("div", { className: E.divider }),
             null != e && (0, r.jsx)(S, { guildId: e.id }),
-            (0, r.jsx)("div", { children: (0, r.jsx)(E, { pendingState: t }) }),
+            (0, r.jsx)("div", { children: (0, r.jsx)(N, { pendingState: t }) }),
         ],
     });
 }

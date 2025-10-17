@@ -22,11 +22,11 @@ var r = n(951288),
     O = n(894780);
 function y(e) {
     var t, n;
-    let { guildId: y, setPreventNavigation: N = () => {} } = e,
-        { editingRule: E, setEditingRule: I } = (0, h.V)(),
+    let { guildId: y, setPreventNavigation: E = () => {} } = e,
+        { editingRule: N, setEditingRule: I } = (0, h.V)(),
         { guild: S, subsection: T } = (0, l.cj)([o.Z], () => o.Z.getProps()),
         P = null != (n = null != (t = null == S ? void 0 : S.id) ? t : y) ? n : _.lds,
-        w = null != E,
+        w = null != N,
         [Z] = (0, m.RD)(P),
         { rulesByTriggerType: R } = (0, m.pH)(P),
         D = {
@@ -52,7 +52,7 @@ function y(e) {
             let { isInEditMode: e, setEditingRule: t } = k.current;
             e && t(null);
         }, [P]);
-    let M = i.useCallback(
+    let G = i.useCallback(
             (e, t) => {
                 if (null != e) {
                     var n, r;
@@ -72,16 +72,16 @@ function y(e) {
             },
             [A],
         ),
-        G = i.useMemo(() => {
+        M = i.useMemo(() => {
             var e, t;
-            return M(
-                null != (e = null == E ? void 0 : E.id) ? e : null,
-                null != (t = null == E ? void 0 : E.triggerType) ? t : null,
+            return G(
+                null != (e = null == N ? void 0 : N.id) ? e : null,
+                null != (t = null == N ? void 0 : N.triggerType) ? t : null,
             );
-        }, [M, E]);
+        }, [G, N]);
     i.useEffect(() => {
-        N(w, (0, j.af)(G));
-    }, [N, w, G]);
+        E(w, (0, j.af)(M));
+    }, [E, w, M]);
     let U = (0, p.Z6)(P);
     return (0, r.jsxs)("div", {
         children: [

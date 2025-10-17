@@ -10,8 +10,8 @@ var i = n(481060),
     u = n(594174),
     d = n(431),
     p = n(74538),
-    h = n(970645),
-    f = n(30684),
+    f = n(970645),
+    h = n(30684),
     g = n(937579),
     m = n(522558);
 function b(e, t, n) {
@@ -43,7 +43,7 @@ function _(e) {
     }
     return e;
 }
-function y(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,7 +61,7 @@ function y(e, t) {
         e
     );
 }
-class O extends o.Z {
+class y extends o.Z {
     _initialize() {
         __OVERLAY__
             ? l.Z.subscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen)
@@ -101,7 +101,7 @@ class O extends o.Z {
         if (__OVERLAY__) throw Error("Should not use this function from the overlay, use ModalAPI.openModal instead");
         return new Promise((t, n) => {
             (0, s.Z)(
-                y(_({}, e), {
+                O(_({}, e), {
                     onClose: (e) => {
                         e ? t() : n();
                     },
@@ -138,7 +138,7 @@ class O extends o.Z {
             }),
             b(this, "_maybeFetchCheckoutRecovery", async () => {
                 let e = u.default.getCurrentUser();
-                null != e && e.verified && !(0, p.I5)(e) && f.Z.shouldFetchCheckoutRecovery() && (await (0, h.o)());
+                null != e && e.verified && !(0, p.I5)(e) && h.Z.shouldFetchCheckoutRecovery() && (await (0, f.o)());
             }),
             b(this, "_maybeFetchUserAffinities", () => {
                 let { enabled: e } = m.w.getCurrentConfig({ location: "PremiumManager" }, { autoTrackExposure: !1 });
@@ -146,7 +146,7 @@ class O extends o.Z {
             }),
             b(this, "_handlePremiumPaymentModalOpen", (e) => {
                 (0, s.Z)(
-                    y(_({}, e), {
+                    O(_({}, e), {
                         analyticsLocations: [a.Z.OVERLAY],
                         onClose: (e) => {
                             l.Z.dispatch({
@@ -167,4 +167,4 @@ class O extends o.Z {
             });
     }
 }
-let v = new O();
+let v = new y();

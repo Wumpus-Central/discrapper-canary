@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => j,
-    Zj: () => b,
+    Zj: () => g,
     v0: () => f,
 }),
     n(388685);
@@ -8,8 +8,8 @@ var a,
     r = n(951288),
     i = n(647438),
     l = n(120356),
-    s = n.n(l),
-    o = n(755721),
+    o = n.n(l),
+    s = n(755721),
     c = n(481060),
     d = n(393238),
     u = n(424625),
@@ -33,7 +33,7 @@ var a,
         (a.DEVELOPMENT = "Development"),
         (a.BOOSTING = "Boosting"),
         a);
-let b = [
+let g = [
         "Experiments",
         "Dismissible Content",
         "Events",
@@ -48,10 +48,10 @@ let b = [
         "Audio / Video",
         "Development",
     ],
-    g = i.forwardRef(function (e, t) {
+    b = i.forwardRef(function (e, t) {
         let { id: n, selected: a, onClick: i, children: l } = e;
         return (0, r.jsx)(c.P3F, {
-            className: s()(x.tabItem, { [x.selected]: a }),
+            className: o()(x.tabItem, { [x.selected]: a }),
             "data-tab-id": n,
             innerRef: t,
             onClick: i,
@@ -61,26 +61,26 @@ let b = [
 function v(e) {
     let { tabs: t, selectedTabId: n, onSelectTab: a } = e,
         l = i.useRef(new Map()),
-        [s, f] = i.useState(() => new Set()),
-        { ref: b, width: v } = (0, d.ZP)(),
+        [o, f] = i.useState(() => new Set()),
+        { ref: g, width: v } = (0, d.ZP)(),
         j = i.useRef(null),
         _ = (0, h.F)(t, a);
     i.useEffect(() => {
         var e, a, r, i;
         if (null == v) return;
-        let s = new Set(),
-            o = null != v ? v : 0;
-        for (let c of ((o -=
+        let o = new Set(),
+            s = null != v ? v : 0;
+        for (let c of ((s -=
             null != (a = null == (e = l.current.get(n)) ? void 0 : e.getBoundingClientRect().width) ? a : 0),
         t))
             c.id !== n &&
-                (o -=
+                (s -=
                     null != (i = null == (r = l.current.get(c.id)) ? void 0 : r.getBoundingClientRect().width)
                         ? i
                         : 0) < 0 &&
-                s.add(c.id);
-        f(s);
-    }, [t, v, b, n]);
+                o.add(c.id);
+        f(o);
+    }, [t, v, g, n]);
     let y = i.useCallback(
         (e) => {
             let { closePopout: t } = e;
@@ -100,14 +100,14 @@ function v(e) {
         children: [
             (0, r.jsxs)("div", {
                 className: x.tabBar,
-                ref: b,
+                ref: g,
                 children: [
                     t
                         .map((e) => {
                             let { id: t, name: i } = e;
-                            if (!s.has(t))
+                            if (!o.has(t))
                                 return (0, r.jsx)(
-                                    g,
+                                    b,
                                     {
                                         id: t,
                                         selected: n === t,
@@ -123,7 +123,7 @@ function v(e) {
                         children: t.map((e) => {
                             let { id: t, name: i } = e;
                             return (0, r.jsx)(
-                                g,
+                                b,
                                 {
                                     id: t,
                                     selected: n === t,
@@ -142,7 +142,7 @@ function v(e) {
             (0, r.jsx)("div", {
                 className: x.menu,
                 children:
-                    s.size > 0 &&
+                    o.size > 0 &&
                     (0, r.jsx)(c.yRy, {
                         targetElementRef: j,
                         layerContext: p.O$,
@@ -154,7 +154,7 @@ function v(e) {
                         children: (e) => {
                             var t, n;
                             return (0, r.jsx)(
-                                o.zx,
+                                s.zx,
                                 ((t = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
@@ -184,8 +184,8 @@ function v(e) {
                                     {
                                         buttonRef: j,
                                         className: x.overflowChevron,
-                                        size: o.zx.Sizes.ICON,
-                                        look: o.zx.Looks.BLANK,
+                                        size: s.zx.Sizes.ICON,
+                                        look: s.zx.Looks.BLANK,
                                         children: (0, r.jsx)(u.Z, {
                                             className: x.__invalid_overflowIcon,
                                             width: 16,
@@ -214,13 +214,13 @@ function v(e) {
 }
 function j(e, t) {
     var n, a, l;
-    let { tabs: s, initialSelectedTabId: o, onChangeTab: c } = e,
-        [d, u] = i.useState(null != o ? o : null == (n = s[0]) ? void 0 : n.id);
+    let { tabs: o, initialSelectedTabId: s, onChangeTab: c } = e,
+        [d, u] = i.useState(null != s ? s : null == (n = o[0]) ? void 0 : n.id);
     return {
         TabBar: i.useCallback(
             () =>
                 (0, r.jsx)(v, {
-                    tabs: s,
+                    tabs: o,
                     selectedTabId: d,
                     onSelectTab: (e) => {
                         u(e), null == c || c(e);
@@ -228,7 +228,7 @@ function j(e, t) {
                 }),
             [d, u, c, ...t],
         ),
-        renderSelectedTab: null != (l = null == (a = s.find((e) => e.id === d)) ? void 0 : a.render) ? l : () => null,
+        renderSelectedTab: null != (l = null == (a = o.find((e) => e.id === d)) ? void 0 : a.render) ? l : () => null,
         selectedTabId: d,
     };
 }

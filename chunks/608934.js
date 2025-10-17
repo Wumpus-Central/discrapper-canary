@@ -4,15 +4,15 @@ n(647438);
 var r = n(481060),
     i = n(530146);
 function l(e) {
-    let { isUploading: t, isSuccess: n, errorMessage: l, onClick: s, title: o } = e;
+    let { isUploading: t, isSuccess: n, errorMessage: l, onClick: o, title: s } = e;
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(r.Button, {
                 variant: "primary",
-                onClick: s,
+                onClick: o,
                 loading: t,
                 disabled: t,
-                text: t ? "Uploading\u2026" : o,
+                text: t ? "Uploading\u2026" : s,
             }),
             null != l &&
                 (0, a.jsx)(r.Text, {

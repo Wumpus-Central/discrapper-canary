@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(539854);
+n.d(t, { Z: () => j }), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -15,15 +15,15 @@ var r = n(951288),
     m = n(460181),
     b = n(474873),
     _ = n(706454),
-    O = n(215427),
-    E = n(820254),
+    E = n(215427),
+    O = n(820254),
     v = n(358085),
     y = n(998502),
     I = n(905656),
     C = n(981631),
     S = n(388032),
-    T = n(744749);
-function N(e, t, n) {
+    N = n(744749);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function N(e, t, n) {
         e
     );
 }
-class j extends i.PureComponent {
+class P extends i.PureComponent {
     createSound() {
         let { soundpack: e } = this.props,
             t = (0, m.uk)("discodo", e);
@@ -76,7 +76,7 @@ class j extends i.PureComponent {
                 null != this._eventLoadingText && (i = this._eventLoadingText),
                 null != t && ((i = t.name), (l = t.incident_updates[0].body)),
                 (0, r.jsxs)("div", {
-                    className: T.container,
+                    className: N.container,
                     "data-fade": n,
                     style: {
                         "--connecting-container-fade-duration": "".concat(200, "ms"),
@@ -84,30 +84,30 @@ class j extends i.PureComponent {
                     },
                     children: [
                         (0, r.jsxs)("div", {
-                            className: T.content,
+                            className: N.content,
                             children: [
                                 (0, r.jsx)(I.Z, {
                                     autoPlay: !0,
                                     loop: !e,
                                     setRef: this.setVideoRef,
                                     onReady: this.handleReady,
-                                    className: a()(T.spinner, this.state.ready ? T.ready : ""),
+                                    className: a()(N.spinner, this.state.ready ? N.ready : ""),
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: T.text,
+                                    className: N.text,
                                     children: [
                                         null != t
                                             ? null
                                             : (0, r.jsx)("div", {
-                                                  className: T.tipTitle,
+                                                  className: N.tipTitle,
                                                   children: S.intl.string(S.t.v0R1Li),
                                               }),
                                         (0, r.jsx)("div", {
-                                            className: null != t ? T.title : T.tip,
+                                            className: null != t ? N.title : N.tip,
                                             children: i,
                                         }),
                                         (0, r.jsx)("div", {
-                                            className: T.body,
+                                            className: N.body,
                                             children: l,
                                         }),
                                     ],
@@ -115,33 +115,33 @@ class j extends i.PureComponent {
                             ],
                         }),
                         (0, r.jsxs)("div", {
-                            className: a()(T.problems, { [T.slideIn]: this.state.problems }),
+                            className: a()(N.problems, { [N.slideIn]: this.state.problems }),
                             children: [
                                 (0, r.jsx)("div", {
-                                    className: T.problemsText,
+                                    className: N.problemsText,
                                     children: S.intl.string(S.t.AG2zPD),
                                 }),
                                 (0, r.jsxs)("div", {
                                     children: [
                                         (0, r.jsxs)(d.Anchor, {
-                                            className: T.twitterLink,
+                                            className: N.twitterLink,
                                             href: C.yXt.TWITTER_SUPPORT,
                                             target: "_blank",
                                             children: [
                                                 (0, r.jsx)(d.TAi, {
                                                     size: "xs",
                                                     color: "currentColor",
-                                                    className: T.icon,
+                                                    className: N.icon,
                                                 }),
                                                 S.intl.string(S.t.KlyTbm),
                                             ],
                                         }),
                                         (0, r.jsxs)(d.Anchor, {
-                                            className: T.statusLink,
+                                            className: N.statusLink,
                                             href: C.yXt.STATUS,
                                             target: "_blank",
                                             children: [
-                                                (0, r.jsx)(E.Z, { className: T.icon }),
+                                                (0, r.jsx)(O.Z, { className: N.icon }),
                                                 S.intl.string(S.t.AgXXy8),
                                             ],
                                         }),
@@ -156,11 +156,11 @@ class j extends i.PureComponent {
     }
     constructor(e) {
         super(e),
-            N(this, "videoRef", null),
-            N(this, "_noProblemsTimeout", null),
-            N(this, "_problemsTimeout", null),
-            N(this, "_connectedSound", this.createSound()),
-            N(
+            T(this, "videoRef", null),
+            T(this, "_noProblemsTimeout", null),
+            T(this, "_problemsTimeout", null),
+            T(this, "_connectedSound", this.createSound()),
+            T(
                 this,
                 "_loadingText",
                 (function () {
@@ -176,7 +176,7 @@ class j extends i.PureComponent {
                                     d.M2$,
                                     {
                                         shortcut: "tab",
-                                        className: T.keybind,
+                                        className: N.keybind,
                                     },
                                     t,
                                 ),
@@ -190,7 +190,7 @@ class j extends i.PureComponent {
                                     d.M2$,
                                     {
                                         shortcut: "f6",
-                                        className: T.keybind,
+                                        className: N.keybind,
                                     },
                                     t,
                                 ),
@@ -199,7 +199,7 @@ class j extends i.PureComponent {
                                     d.M2$,
                                     {
                                         shortcut: "tab",
-                                        className: T.keybind,
+                                        className: N.keybind,
                                     },
                                     t,
                                 ),
@@ -250,7 +250,7 @@ class j extends i.PureComponent {
                                     d.M2$,
                                     {
                                         shortcut: "mod+k",
-                                        className: T.keybind,
+                                        className: N.keybind,
                                     },
                                     t,
                                 ),
@@ -261,7 +261,7 @@ class j extends i.PureComponent {
                                     d.M2$,
                                     {
                                         shortcut: "alt+click",
-                                        className: T.keybind,
+                                        className: N.keybind,
                                     },
                                     t,
                                 ),
@@ -272,7 +272,7 @@ class j extends i.PureComponent {
                                     d.M2$,
                                     {
                                         shortcut: "shift+esc",
-                                        className: T.keybind,
+                                        className: N.keybind,
                                     },
                                     t,
                                 ),
@@ -283,7 +283,7 @@ class j extends i.PureComponent {
                                     d.M2$,
                                     {
                                         shortcut: "shift+alt+up",
-                                        className: T.keybind,
+                                        className: N.keybind,
                                     },
                                     t,
                                 ),
@@ -292,7 +292,7 @@ class j extends i.PureComponent {
                                     d.M2$,
                                     {
                                         shortcut: "down",
-                                        className: T.keybind,
+                                        className: N.keybind,
                                     },
                                     t,
                                 ),
@@ -303,7 +303,7 @@ class j extends i.PureComponent {
                                     d.M2$,
                                     {
                                         shortcut: "mod+/",
-                                        className: T.keybind,
+                                        className: N.keybind,
                                     },
                                     t,
                                 ),
@@ -314,7 +314,7 @@ class j extends i.PureComponent {
                                     d.M2$,
                                     {
                                         shortcut: "shift+return",
-                                        className: T.keybind,
+                                        className: N.keybind,
                                     },
                                     t,
                                 ),
@@ -325,7 +325,7 @@ class j extends i.PureComponent {
                                     d.M2$,
                                     {
                                         shortcut: "shift",
-                                        className: T.keybind,
+                                        className: N.keybind,
                                     },
                                     t,
                                 ),
@@ -336,7 +336,7 @@ class j extends i.PureComponent {
                                     d.M2$,
                                     {
                                         shortcut: "up",
-                                        className: T.keybind,
+                                        className: N.keybind,
                                     },
                                     t,
                                 ),
@@ -348,7 +348,7 @@ class j extends i.PureComponent {
                     );
                 })(),
             ),
-            N(
+            T(
                 this,
                 "_eventLoadingText",
                 (function () {
@@ -356,20 +356,20 @@ class j extends i.PureComponent {
                     if (null != e && e.length > 0) return e[s().random(e.length - 1)];
                 })(),
             ),
-            N(this, "handleReady", () => {
+            T(this, "handleReady", () => {
                 this.setState({ ready: !0 }),
                     (0, v.isDesktop)() &&
                         (y.ZP.send("UPDATED_QUOTES", ["Hold Tight \u2014 Loading Discord"]),
                         y.ZP.send("UPDATE_OPEN_ON_STARTUP"));
             }),
-            N(this, "setVideoRef", (e) => {
+            T(this, "setVideoRef", (e) => {
                 this.videoRef = e;
             }),
-            N(this, "setProblemsTimeout", () => {
+            T(this, "setProblemsTimeout", () => {
                 null == this._problemsTimeout &&
                     (this._problemsTimeout = setTimeout(() => this.setState({ problems: !0 }), 10000));
             }),
-            N(this, "clearProblemsTimeout", () => {
+            T(this, "clearProblemsTimeout", () => {
                 clearTimeout(this._problemsTimeout), (this._problemsTimeout = null);
             });
         let { connected: t } = e;
@@ -382,16 +382,16 @@ class j extends i.PureComponent {
             (this._connectedSound.volume = 1);
     }
 }
-let P = c.ZP.connectStores([h.Z, O.Z, b.Z, f.Z], () => ({
+let j = c.ZP.connectStores([h.Z, E.Z, b.Z, f.Z], () => ({
     isTryingToConnect: h.Z.isTryingToConnect(),
     connected: h.Z.isConnected(),
-    incident: O.Z.getIncident(),
+    incident: E.Z.getIncident(),
     soundpack: b.Z.getSoundpack(),
     reducedMotion: f.Z.useReducedMotion,
 }))((e) => {
     let { isTryingToConnect: t, connected: n, incident: i, soundpack: l, reducedMotion: a } = e;
     return t
-        ? (0, r.jsx)(j, {
+        ? (0, r.jsx)(P, {
               reducedMotion: a,
               soundpack: l,
               connected: n,

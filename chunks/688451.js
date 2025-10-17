@@ -256,7 +256,7 @@ function M(e, t, n) {
             : b("ES5").J(t, n);
     return (n ? n.A : O()).p.push(r), r;
 }
-function j(e) {
+function k(e) {
     return (
         i(e) || r(22, e),
         (function e(t) {
@@ -266,8 +266,8 @@ function j(e) {
                 i = s(t);
             if (r) {
                 if (!r.P && (r.i < 4 || !b("ES5").K(r))) return r.t;
-                (r.I = !0), (n = k(t, i)), (r.I = !1);
-            } else n = k(t, i);
+                (r.I = !0), (n = j(t, i)), (r.I = !1);
+            } else n = j(t, i);
             return (
                 o(n, function (t, i) {
                     (r && c(r.t, t) === i) || u(n, t, e(i));
@@ -277,7 +277,7 @@ function j(e) {
         })(e)
     );
 }
-function k(e, t) {
+function j(e, t) {
     switch (t) {
         case 2:
             return new Map(e);
@@ -476,7 +476,7 @@ var ee = new ((function () {
         var t = e.prototype;
         return (
             (t.createDraft = function (e) {
-                a(e) || r(8), i(e) && (e = j(e));
+                a(e) || r(8), i(e) && (e = k(e));
                 var t = S(this),
                     n = M(this, e, void 0);
                 return (n[W].C = !0), T(t), n;

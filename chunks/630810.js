@@ -1,42 +1,42 @@
 n.d(t, {
-    Z: () => m,
-    m: () => d,
+    Z: () => h,
+    m: () => c,
 });
-var l,
-    i = n(493683),
-    a = n(904245),
-    r = n(710845),
-    s = n(592125),
+var i,
+    l = n(493683),
+    s = n(904245),
+    a = n(710845),
+    r = n(592125),
     o = n(70956),
-    u = n(651655);
-let c = +o.Z.Millis.SECOND + 10;
-var d = (((l = {})[(l.GROUP_DM = 0)] = "GROUP_DM"), (l[(l.USER = 1)] = "USER"), (l[(l.CHANNEL = 2)] = "CHANNEL"), l);
-class g extends u.Z {
-    _sendInvite(e, t, n, l, i) {
-        a.Z.sendInvite(e.id, t, n, l).then(
-            () => i(null, !0),
-            () => i(null, !1),
+    d = n(651655);
+let u = +o.Z.Millis.SECOND + 10;
+var c = (((i = {})[(i.GROUP_DM = 0)] = "GROUP_DM"), (i[(i.USER = 1)] = "USER"), (i[(i.CHANNEL = 2)] = "CHANNEL"), i);
+class g extends d.Z {
+    _sendInvite(e, t, n, i, l) {
+        s.Z.sendInvite(e.id, t, n, i).then(
+            () => l(null, !0),
+            () => l(null, !1),
         );
     }
     drain(e, t) {
-        let { location: n, inviteAnalyticsMetadata: l } = e;
+        let { location: n, inviteAnalyticsMetadata: i } = e;
         switch (e.type) {
             case 0:
             case 2:
-                this._sendInvite(e.channel, e.inviteKey, n, l, t);
+                this._sendInvite(e.channel, e.inviteKey, n, i, t);
                 break;
             case 1:
-                i.Z.ensurePrivateChannel(e.user.id).then(
-                    (i) => {
-                        let a = s.Z.getChannel(i);
-                        null != a && this._sendInvite(a, e.inviteKey, n, l, t);
+                l.Z.ensurePrivateChannel(e.user.id).then(
+                    (l) => {
+                        let s = r.Z.getChannel(l);
+                        null != s && this._sendInvite(s, e.inviteKey, n, i, t);
                     },
                     () => t(null, !1),
                 );
         }
     }
     constructor() {
-        super(new r.Z("InviteQueue"), c);
+        super(new a.Z("InviteQueue"), u);
     }
 }
-let m = new g();
+let h = new g();

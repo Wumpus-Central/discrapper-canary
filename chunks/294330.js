@@ -1,7 +1,7 @@
 n.d(t, {
     Eo: () => j,
-    VD: () => N,
-    ZP: () => A,
+    VD: () => T,
+    ZP: () => x,
 }),
     n(388685),
     n(953529);
@@ -28,19 +28,19 @@ var r = n(951288),
     I = n(972725),
     C = n(129512),
     S = n(330065),
-    T = n(755386);
-function N(e) {
+    N = n(755386);
+function T(e) {
     let { guild: t, onClick: l, onView: o } = e,
         [h, g] = i.useState(!1),
-        [E, N] = i.useState(!1),
+        [E, T] = i.useState(!1),
         [P, j] = i.useState(!1),
-        A = i.useRef(null),
-        x = i.useCallback(async () => {
-            N(!0);
+        x = i.useRef(null),
+        A = i.useCallback(async () => {
+            T(!0);
             try {
                 await l(t.id);
             } finally {
-                N(!1);
+                T(!1);
             }
         }, [t.id, l]),
         Z = i.useCallback(
@@ -111,7 +111,7 @@ function N(e) {
                 size: 300 * (0, b.x_)(),
             });
             if (null != e) return e;
-            if (R) return T;
+            if (R) return N;
             switch (L) {
                 case v.BRd.DARK:
                     return C;
@@ -119,7 +119,7 @@ function N(e) {
                     return S;
             }
         }, [t.discoverySplash, t.id, R, L]),
-        k = i.useMemo(
+        M = i.useMemo(
             () =>
                 _.ZP.getGuildIconURL({
                     id: t.id,
@@ -140,14 +140,14 @@ function N(e) {
                     }),
                 }),
             (0, r.jsx)(s.$, {
-                innerRef: A,
+                innerRef: x,
                 onChange: Z,
                 active: !h,
                 threshold: 0.55,
                 children: (0, r.jsxs)(f.Z, {
-                    ref: A,
+                    ref: x,
                     className: I.card,
-                    onClick: x,
+                    onClick: A,
                     disabled: E,
                     onContextMenu: w,
                     "aria-label": y.intl.string(y.t["M9wQ+f"]),
@@ -181,7 +181,7 @@ function N(e) {
                                                 width: 48,
                                                 height: 48,
                                                 children: (0, r.jsx)("img", {
-                                                    src: k,
+                                                    src: M,
                                                     alt: "",
                                                     className: I.avatar,
                                                 }),
@@ -261,7 +261,7 @@ function P(e) {
         l = (0, o.e7)([E.Z], () => E.Z.getGuild(t));
     return null == l
         ? null
-        : (0, r.jsx)(N, {
+        : (0, r.jsx)(T, {
               guild: l,
               onClick: n,
               onView: i,
@@ -320,4 +320,4 @@ function j(e) {
         }),
     });
 }
-let A = i.memo(P);
+let x = i.memo(P);

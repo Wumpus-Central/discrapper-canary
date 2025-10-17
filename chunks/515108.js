@@ -37,17 +37,17 @@ function p(e) {
             onClose: d,
             rewardContent: p,
             isRewardContentLoading: f,
-            rewardContentHasError: _,
-            location: C,
+            rewardContentHasError: C,
+            location: _,
         } = e,
         b = o.jn.REWARD_MODAL,
         [h, x] = r.useState(!0);
-    if (_)
+    if (C)
         return (0, a.jsx)(m, {
             onClose: d,
             transitionState: i,
         });
-    let y = f || h;
+    let g = f || h;
     return (0, a.jsx)(l.A, {
         questOrQuests: t,
         questContent: b,
@@ -55,7 +55,7 @@ function p(e) {
         children: (e) =>
             (0, a.jsxs)(a.Fragment, {
                 children: [
-                    y
+                    g
                         ? (0, a.jsx)(s.$jN, {
                               className: u.spinner,
                               type: s.$jN.Type.WANDERING_CUBES,
@@ -63,10 +63,10 @@ function p(e) {
                         : null,
                     (0, a.jsx)("div", {
                         ref: e,
-                        style: { visibility: y ? "hidden" : "visible" },
+                        style: { visibility: g ? "hidden" : "visible" },
                         children: (0, a.jsxs)(s.Y0X, {
                             "data-migration-pending": !0,
-                            transitionState: y ? s.Dvm.HIDDEN : i,
+                            transitionState: g ? s.Dvm.HIDDEN : i,
                             size: s.CgR.DYNAMIC,
                             className: u.modal,
                             parentComponent: "QuestRewardV2ModalBase",
@@ -90,7 +90,7 @@ function p(e) {
                                                 quest: t,
                                                 sourceQuestContent: n,
                                                 onLoadComplete: () => x(!1),
-                                                location: C,
+                                                location: _,
                                             }),
                                         }),
                                     ],

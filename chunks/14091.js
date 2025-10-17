@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(681715),
     d = n(481060),
     u = n(493773),
-    h = n(243778),
-    p = n(169223),
+    p = n(243778),
+    h = n(169223),
     f = n(695346),
     g = n(592125),
     m = n(585483),
@@ -25,8 +25,8 @@ var r = n(951288),
     S = n(611004),
     E = n(619753),
     Z = n(902733),
-    T = n(165017),
-    P = n(737),
+    P = n(165017),
+    T = n(737),
     N = n(909125),
     R = n(817190),
     w = n(315322),
@@ -130,8 +130,8 @@ function H(e) {
             onClick: c,
             onScrollTo: d,
             onPageChange: u,
-            paginationTotalCount: h,
-            renderPageWrapper: p,
+            paginationTotalCount: p,
+            renderPageWrapper: h,
             onBlockedResultsClick: f,
             searchRequestAnalyticsId: g,
             searchResultsQuery: m,
@@ -171,8 +171,8 @@ function H(e) {
             renderEmbeds: o,
             scrollTo: d,
             onPageChange: u,
-            paginationTotalCount: h,
-            renderPageWrapper: p,
+            paginationTotalCount: p,
+            renderPageWrapper: h,
             onBlockedResultsClick: f,
             searchRequestAnalyticsId: g,
             searchResultsQuery: m,
@@ -198,7 +198,7 @@ let F = [],
                 renderEmbeds: l,
                 searchRequestAnalyticsId: a,
                 messages: u,
-                blockCount: p,
+                blockCount: h,
                 ignoreCount: f,
                 isFeedbackVisible: b,
                 dismissFeedbackEntrypoint: j,
@@ -207,8 +207,8 @@ let F = [],
                 searchMode: I,
                 onBlockedResultsClick: E,
                 searchResultsQuery: Z,
-                isFavoritesSearch: T,
-                selectedChannelId: P,
+                isFavoritesSearch: P,
+                selectedChannelId: T,
             } = e,
             D = i.useRef(null),
             k = i.useCallback(() => {
@@ -334,7 +334,7 @@ let F = [],
                     ? F
                     : [o.z.SEARCH_AUTHOR_TYPE_SEARCH_RESULTS_HINT];
             }),
-            [en, er] = (0, h.US)(et),
+            [en, er] = (0, p.US)(et),
             ei = en === o.z.SEARCH_AUTHOR_TYPE_SEARCH_RESULTS_HINT,
             el = i.useCallback(() => {
                 if (n.isSearching) return;
@@ -353,7 +353,7 @@ let F = [],
                     isSearching: n.isSearching,
                     isIndexing: n.isHistoricalIndexing,
                     documentsIndexed: n.documentsIndexed,
-                    selectedChannelId: P,
+                    selectedChannelId: T,
                 }),
                 (0, r.jsxs)(d.Den, {
                     ref: D,
@@ -374,7 +374,7 @@ let F = [],
                             }),
                         (0, r.jsx)(H, {
                             messages: u,
-                            blockCount: p,
+                            blockCount: h,
                             ignoreCount: f,
                             search: n,
                             searchContext: t,
@@ -387,7 +387,7 @@ let F = [],
                             onBlockedResultsClick: E,
                             searchRequestAnalyticsId: a,
                             searchResultsQuery: Z,
-                            isFavoritesSearch: T,
+                            isFavoritesSearch: P,
                         }),
                     ],
                 }),
@@ -414,7 +414,7 @@ function V(e) {
                 (0, u.ZP)(() => {
                     o &&
                         (a ||
-                            p.Z.possiblyShowFeedbackModal(
+                            h.Z.possiblyShowFeedbackModal(
                                 D.nw.SEARCH_RESULTS,
                                 () => n(!0),
                                 () => n(!1),
@@ -444,7 +444,7 @@ function V(e) {
             };
         }),
         d = (0, s.e7)([b.Z], () => b.Z.getAnalyticsId(o)),
-        { renderedMessages: h, ignoreCount: g, blockCount: m } = (0, P.Z)({ searchContext: t }),
+        { renderedMessages: p, ignoreCount: g, blockCount: m } = (0, T.Z)({ searchContext: t }),
         _ = (0, s.e7)([R.Z], () => {
             var e;
             return null != (e = R.Z.getSearchMode(o)) ? e : A.QIO.NEWEST;
@@ -502,7 +502,7 @@ function V(e) {
         }),
         E = t.type === A.aib.FAVORITES,
         Z = i.useCallback((e) => I.Z.setShowBlockedResults(t, e), [t]),
-        T = i.useDeferredValue(h),
+        P = i.useDeferredValue(p),
         N = i.useDeferredValue(c),
         w = i.useDeferredValue(d);
     return (0, r.jsxs)(r.Fragment, {
@@ -511,7 +511,7 @@ function V(e) {
                 searchContext: t,
                 search: N,
                 searchRequestAnalyticsId: w,
-                messages: T,
+                messages: P,
                 ignoreCount: g,
                 blockCount: m,
                 renderEmbeds: f.NA.useSetting(),
@@ -528,7 +528,7 @@ function V(e) {
             (0, r.jsx)(k, {
                 searchContext: t,
                 searchRequestAnalyticsId: w,
-                messages: T,
+                messages: P,
                 searchOffset: N.offset,
                 searchLimit: A.vpv,
                 searchHasError: N.hasError,
@@ -541,7 +541,7 @@ function V(e) {
 }
 function z(e) {
     let { guildId: t, channelId: n } = e,
-        i = (0, T.H)({
+        i = (0, P.H)({
             guildId: t,
             channelId: n,
         });

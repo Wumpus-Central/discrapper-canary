@@ -189,8 +189,8 @@ function x() {
     if (!e || null == t || !n) return null;
     let { frequentFriends: _, showCompetitiveSpot: O } = t,
         x = l.scrollWidth > l.clientWidth,
-        Z = l.scrollLeft > 0,
-        A = l.scrollLeft < l.scrollWidth - l.clientWidth - 2;
+        A = l.scrollLeft > 0,
+        Z = l.scrollLeft < l.scrollWidth - l.clientWidth - 2;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
@@ -219,8 +219,8 @@ function x() {
                                     (null == e ? void 0 : e.getScrollerNode()) != null ? e.getScrollerNode() : null);
                         },
                         className: a()(N.frequentFriendsAvatars, {
-                            [N.scrollMaskLeft]: x && Z,
-                            [N.scrollMaskRight]: x && A,
+                            [N.scrollMaskLeft]: x && A,
+                            [N.scrollMaskRight]: x && Z,
                         }),
                         orientation: "horizontal",
                         onScroll: m,

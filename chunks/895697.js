@@ -38,11 +38,11 @@ function R(e) {
             onClose: x,
         } = e,
         M = c.ZP.getName(null == P ? void 0 : P.id, L, t),
-        j = (0, i.e7)([u.Z], () => {
+        k = (0, i.e7)([u.Z], () => {
             var e;
             return null == (e = u.Z.getUserProfile(t.id)) ? void 0 : e.application;
         }),
-        k = (0, i.e7)([o.Z, s.Z], () => o.Z.getChannel(s.Z.getChannelId())),
+        j = (0, i.e7)([o.Z, s.Z], () => o.Z.getChannel(s.Z.getChannelId())),
         U = (0, i.e7)([l.Z], () => l.Z.hidePersonalInformation),
         G = (0, d.b)({ location: "BotUserProfilePopoutBody" });
     return (0, r.jsxs)(a.Ttm, {
@@ -111,12 +111,12 @@ function R(e) {
                       guildId: null == P ? void 0 : P.id,
                       onClose: x,
                   }),
-            (null == j ? void 0 : j.popularApplicationCommandIds) != null &&
-                null != k &&
+            (null == k ? void 0 : k.popularApplicationCommandIds) != null &&
+                null != j &&
                 (0, r.jsx)(f.Z, {
-                    applicationId: j.id,
-                    commandIds: j.popularApplicationCommandIds,
-                    channel: k,
+                    applicationId: k.id,
+                    commandIds: k.popularApplicationCommandIds,
+                    channel: j,
                     guildId: null == P ? void 0 : P.id,
                     onClick: x,
                 }),

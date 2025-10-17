@@ -1,19 +1,19 @@
-t.d(n, { default: () => c });
-var i = t(951288);
-t(647438);
-var l = t(481060),
-    r = t(239091),
-    a = t(637853),
-    s = t(434404),
-    u = t(837949),
-    d = t(981631),
-    o = t(388032);
+n.d(t, { default: () => c });
+var i = n(951288);
+n(647438);
+var l = n(481060),
+    r = n(239091),
+    a = n(637853),
+    s = n(434404),
+    u = n(837949),
+    d = n(981631),
+    o = n(388032);
 function c(e) {
-    let { guild: n, onSelect: t } = e,
-        c = (0, u.Z)(n.id),
-        h = (0, a.wC)(n.id);
+    let { guild: t, onSelect: n } = e,
+        c = (0, u.Z)(t.id),
+        h = (0, a.wC)(t.id);
     return (0, i.jsx)(l.v2r, {
-        onSelect: t,
+        onSelect: n,
         navId: "guild-browse-channels-context-menu",
         "aria-label": o.intl.string(o.t.ogxXGh),
         onClose: r.Zy,
@@ -24,7 +24,7 @@ function c(e) {
                         id: "go-to-settings",
                         label: o.intl.string(o.t.X70lV1),
                         action: () => {
-                            s.Z.open(n.id, d.pNK.ONBOARDING);
+                            s.Z.open(t.id, d.pNK.ONBOARDING);
                         },
                     }),
                 c,

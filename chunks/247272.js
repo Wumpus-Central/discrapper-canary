@@ -1,25 +1,25 @@
 n.d(t, {
-    C: () => r,
-    x: () => a,
+    C: () => a,
+    x: () => s,
 }),
     n(388685);
-var l = n(570140),
-    i = n(93127);
-function a(e) {
-    let { omitUserIds: t, guild: n, channel: a, applicationId: r, inviteTargetType: s } = e;
-    return (0, i._)().then(() => {
-        l.Z.dispatch({
+var i = n(570140),
+    l = n(93127);
+function s(e) {
+    let { omitUserIds: t, guild: n, channel: s, applicationId: a, inviteTargetType: r } = e;
+    return (0, l._)().then(() => {
+        i.Z.dispatch({
             type: "LOAD_INVITE_SUGGESTIONS",
             omitUserIds: null != t ? t : new Set(),
             guild: n,
-            channel: a,
-            applicationId: r,
-            inviteTargetType: s,
+            channel: s,
+            applicationId: a,
+            inviteTargetType: r,
         });
     });
 }
-function r(e) {
-    l.Z.dispatch({
+function a(e) {
+    i.Z.dispatch({
         type: "INVITE_SUGGESTIONS_SEARCH",
         query: e,
     });

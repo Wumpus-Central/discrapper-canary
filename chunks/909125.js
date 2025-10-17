@@ -12,9 +12,9 @@ function c(e) {
         n || d(t);
     }, [t, n]);
     let u = c > i.vU + a.vpv,
-        h = (0, l.nd)({ location: "useSearchResultsPagination" });
+        p = (0, l.nd)({ location: "useSearchResultsPagination" });
     return {
-        isPaginationTotalCountLimited: u && !h,
+        isPaginationTotalCountLimited: u && !p,
         paginationTotalCount: Math.min(c, s),
         paginationMaxIndex: o,
     };

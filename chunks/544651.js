@@ -1,19 +1,19 @@
-n.d(t, { r: () => o }), n(388685);
+n.d(t, { r: () => s }), n(388685);
 var a = n(951288),
     r = n(647438),
     i = n(481060),
     l = n(259580),
-    s = n(547481);
-function o(e) {
-    let { title: t, initExpanded: n, highlight: o, children: c } = e,
+    o = n(547481);
+function s(e) {
+    let { title: t, initExpanded: n, highlight: s, children: c } = e,
         [d, u] = r.useState(n),
         m = r.useCallback(() => {
             u(!d);
         }, [d]),
-        p = o ? "status-warning" : "text-default";
+        p = s ? "status-warning" : "text-default";
     return null == c
         ? (0, a.jsx)("div", {
-              className: s.settingNode,
+              className: o.settingNode,
               children: (0, a.jsx)(i.Text, {
                   variant: "text-md/normal",
                   color: p,
@@ -21,10 +21,10 @@ function o(e) {
               }),
           })
         : (0, a.jsxs)("div", {
-              className: s.settingNode,
+              className: o.settingNode,
               children: [
                   (0, a.jsxs)(i.P3F, {
-                      className: s.headerBar,
+                      className: o.headerBar,
                       onClick: m,
                       children: [
                           (0, a.jsx)(i.Text, {
@@ -34,13 +34,13 @@ function o(e) {
                           }),
                           (0, a.jsx)(l.Z, {
                               direction: d ? l.Z.Directions.DOWN : l.Z.Directions.RIGHT,
-                              className: s.headerCaret,
+                              className: o.headerCaret,
                           }),
                       ],
                   }),
                   d &&
                       (0, a.jsx)("div", {
-                          className: s.settingNodeChildren,
+                          className: o.settingNodeChildren,
                           children: c,
                       }),
               ],

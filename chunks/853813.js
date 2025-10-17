@@ -21,8 +21,8 @@ var r = n(951288),
     C = n(322816),
     O = n(266665),
     y = n(203377),
-    N = n(981631),
-    E = n(760150);
+    E = n(981631),
+    N = n(760150);
 function I(e) {
     let t,
         { editRoleId: n, setEditRoleId: l, selectedSection: I, setSelectedSection: S } = e,
@@ -58,7 +58,7 @@ function I(e) {
                 i = (0, x.UT)(I),
                 l = null != (t = null == (e = f.Z.getRoleMemberCount(T.id)) ? void 0 : e[r]) ? t : 0;
             m.default.track(
-                N.rMx.ROLE_PAGE_VIEWED,
+                E.rMx.ROLE_PAGE_VIEWED,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -143,7 +143,7 @@ function I(e) {
             (0, p.vE)(I);
     }
     return (0, r.jsxs)("div", {
-        className: E.page,
+        className: N.page,
         children: [
             (0, r.jsx)(O.Z, {
                 guild: T,
@@ -152,7 +152,7 @@ function I(e) {
                 setSelectedSection: S,
             }),
             (0, r.jsx)("div", {
-                className: E.contentContainer,
+                className: N.contentContainer,
                 ref: D,
                 children: (0, r.jsx)(o.JcV, {
                     containerRef: D,
