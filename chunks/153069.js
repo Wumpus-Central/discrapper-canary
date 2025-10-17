@@ -5,34 +5,35 @@ var n,
     i = r(533126),
     a = r(120356),
     l = r.n(a),
-    u = r(990547),
-    d = r(793030),
-    c = r(442837),
-    h = r(755721),
-    p = r(481060),
-    f = r(893776),
-    g = r(479495),
-    m = r(213609),
+    d = r(990547),
+    u = r(265489),
+    c = r(793030),
+    h = r(442837),
+    p = r(755721),
+    f = r(481060),
+    g = r(893776),
+    m = r(479495),
+    _ = r(213609),
     b = r(254942),
-    _ = r(388905),
-    C = r(379760),
-    y = r(124860),
-    w = r(144114),
+    C = r(388905),
+    y = r(379760),
+    w = r(124860),
+    x = r(144114),
     P = r(541692),
-    x = r(952802),
-    O = r(703656),
+    O = r(952802),
+    j = r(703656),
     A = r(210887),
     S = r(901375),
-    j = r(314897),
+    E = r(314897),
     k = r(896797),
     R = r(585483),
-    E = r(358085),
-    v = r(998502),
-    I = r(981631),
-    T = r(388032),
-    L = r(407791),
-    F = r(197571);
-function N(t, e, r) {
+    v = r(358085),
+    I = r(998502),
+    T = r(981631),
+    L = r(388032),
+    F = r(407791),
+    N = r(197571);
+function D(t, e, r) {
     return (
         e in t
             ? Object.defineProperty(t, e, {
@@ -45,7 +46,7 @@ function N(t, e, r) {
         t
     );
 }
-function D(t) {
+function M(t) {
     for (var e = 1; e < arguments.length; e++) {
         var r = null != arguments[e] ? arguments[e] : {},
             n = Object.keys(r);
@@ -56,12 +57,12 @@ function D(t) {
                 }),
             )),
             n.forEach(function (e) {
-                N(t, e, r[e]);
+                D(t, e, r[e]);
             });
     }
     return t;
 }
-function M(t, e) {
+function Z(t, e) {
     return (
         (e = null != e ? e : {}),
         Object.getOwnPropertyDescriptors
@@ -79,7 +80,7 @@ function M(t, e) {
         t
     );
 }
-class Z extends (n = s.PureComponent) {
+class B extends (n = s.PureComponent) {
     componentDidMount() {
         window.addEventListener("keydown", this.handleTabOrEnter),
             (0, S.j)({
@@ -90,7 +91,7 @@ class Z extends (n = s.PureComponent) {
     componentDidUpdate(t, e) {
         let { authenticated: r, transitionTo: n } = this.props;
         if (
-            (r && !t.authenticated && (n(I.Z5c.APP), this.state.conditionalMediationAbortController.abort()),
+            (r && !t.authenticated && (n(T.Z5c.APP), this.state.conditionalMediationAbortController.abort()),
             e.errors !== this.state.errors)
         ) {
             var o, s, i;
@@ -113,14 +114,14 @@ class Z extends (n = s.PureComponent) {
         let { country: e, isPasswordlessActive: r } = this.props,
             n = !this.hasError("email") && this.hasError("password");
         return (0, o.jsx)("div", {
-            className: L.mainLoginContainer,
-            children: (0, o.jsxs)(_.gO, {
+            className: F.mainLoginContainer,
+            children: (0, o.jsxs)(C.gO, {
                 children: [
-                    (0, o.jsx)(x.Z, {
+                    (0, o.jsx)(O.Z, {
                         alpha2: e.alpha2,
                         countryCode: e.code.split(" ")[0],
-                        className: F.marginBottom20,
-                        label: T.intl.string(T.t.tUjnxs),
+                        className: N.marginBottom20,
+                        label: L.intl.string(L.t.tUjnxs),
                         error: null != (t = this.renderError("login")) ? t : this.renderError("email"),
                         onChange: (t, e) =>
                             this.setState({
@@ -136,8 +137,8 @@ class Z extends (n = s.PureComponent) {
                         autoFocus: !n,
                         required: !0,
                     }),
-                    (0, o.jsx)(_.II, {
-                        label: T.intl.string(T.t["CIGa+/"]),
+                    (0, o.jsx)(C.II, {
+                        label: L.intl.string(L.t["CIGa+/"]),
                         error: this.renderError("password"),
                         onChange: (t) => this.setState({ password: t }),
                         name: "password",
@@ -150,33 +151,33 @@ class Z extends (n = s.PureComponent) {
                         required: !0,
                     }),
                     (0, o.jsxs)("div", {
-                        className: l()(F.marginTop4, L.buttonsContainer),
+                        className: l()(N.marginTop4, F.buttonsContainer),
                         children: [
-                            (0, o.jsx)(_.zx, {
+                            (0, o.jsx)(C.zx, {
                                 onClick: this.handleForgotPassword,
-                                look: h.zx.Looks.LINK,
-                                color: h.zx.Colors.LINK,
-                                children: T.intl.string(T.t.wWIufn),
+                                look: p.zx.Looks.LINK,
+                                color: p.zx.Colors.LINK,
+                                children: L.intl.string(L.t.wWIufn),
                             }),
-                            (0, o.jsx)(_.zx, {
+                            (0, o.jsx)(C.zx, {
                                 onClick: () =>
                                     (function (t) {
                                         let e =
-                                            E.isPlatformEmbedded && v.ZP.supportsFeature(I.eRX.WEBAUTHN)
-                                                ? v.ZP.webAuthnAuthenticate
+                                            v.isPlatformEmbedded && I.ZP.supportsFeature(T.eRX.WEBAUTHN)
+                                                ? I.ZP.webAuthnAuthenticate
                                                 : (t) => {
                                                       let e = (0, i.wz)(JSON.parse(t));
                                                       return (0, i.U2)(e).then((t) => JSON.stringify(t));
                                                   };
-                                        f.Z.authenticatePasswordless({
+                                        g.Z.authenticatePasswordless({
                                             authenticateFunc: e,
                                             conditionalMediationAbortController: t,
                                         }).catch(() => {});
                                     })(this.state.conditionalMediationAbortController),
-                                look: h.zx.Looks.LINK,
-                                color: h.zx.Colors.LINK,
+                                look: p.zx.Looks.LINK,
+                                color: p.zx.Colors.LINK,
                                 disabled: r,
-                                children: T.intl.string(T.t["/kpMDg"]),
+                                children: L.intl.string(L.t["/kpMDg"]),
                             }),
                         ],
                     }),
@@ -188,25 +189,25 @@ class Z extends (n = s.PureComponent) {
         let { loginStatus: t, onBackPressed: e } = this.props;
         return (0, o.jsxs)(o.Fragment, {
             children: [
-                (0, o.jsx)(d.xBx, {
-                    title: T.intl.string(T.t.bPP34e),
-                    subtitle: T.intl.string(T.t.rvx0T0),
+                (0, o.jsx)(c.xBx, {
+                    title: L.intl.string(L.t.bPP34e),
+                    subtitle: L.intl.string(L.t.rvx0T0),
                 }),
-                (0, o.jsx)(d.fef, { children: this.renderDefaultForm() }),
-                (0, o.jsx)(d.Go$, {
-                    leading: (0, o.jsx)(p.Avr, {
+                (0, o.jsx)(c.fef, { children: this.renderDefaultForm() }),
+                (0, o.jsx)(c.Go$, {
+                    leading: (0, o.jsx)(f.Avr, {
                         variant: "secondary",
                         size: "md",
                         onClick: e,
-                        text: T.intl.string(T.t["13/7kZ"]),
+                        text: L.intl.string(L.t["13/7kZ"]),
                         type: "button",
                     }),
                     actions: [
                         {
                             variant: "primary",
-                            text: T.intl.string(T.t["3PatS0"]),
+                            text: L.intl.string(L.t["3PatS0"]),
                             onClick: this.handleLogin,
-                            loading: t === I.u34.LOGGING_IN,
+                            loading: t === T.u34.LOGGING_IN,
                         },
                     ],
                 }),
@@ -218,7 +219,7 @@ class Z extends (n = s.PureComponent) {
             ticket: this.props.mfaTicket,
             methods: this.props.mfaMethods,
         };
-        return (0, o.jsx)(y.Cd, {
+        return (0, o.jsx)(w.Cd, {
             mfaFinish: this.handleTokenSubmitMFA,
             mfaChallenge: t,
             onEarlyClose: () => {
@@ -229,25 +230,25 @@ class Z extends (n = s.PureComponent) {
         });
     }
     renderDisabledAccount() {
-        let t = this.props.loginStatus === I.u34.ACCOUNT_DISABLED,
-            e = t ? T.intl.string(T.t["j3rC+f"]) : T.intl.string(T.t.ZFWofn),
-            r = t ? T.intl.string(T.t["6eNTWV"]) : T.intl.string(T.t.pCBti4);
+        let t = this.props.loginStatus === T.u34.ACCOUNT_DISABLED,
+            e = t ? L.intl.string(L.t["j3rC+f"]) : L.intl.string(L.t.ZFWofn),
+            r = t ? L.intl.string(L.t["6eNTWV"]) : L.intl.string(L.t.pCBti4);
         return (0, o.jsxs)(o.Fragment, {
             children: [
-                (0, o.jsx)(d.xBx, {
+                (0, o.jsx)(c.xBx, {
                     title: e,
                     subtitle: r,
                 }),
-                (0, o.jsx)(d.Go$, {
-                    leading: (0, o.jsx)(p.Text, {
+                (0, o.jsx)(c.Go$, {
+                    leading: (0, o.jsx)(f.Text, {
                         variant: "text-md/normal",
                         color: "text-secondary",
-                        children: T.intl.format(T.t.js2rr6, { onClick: this.handleCancelAccountDeletion }),
+                        children: L.intl.format(L.t.js2rr6, { onClick: this.handleCancelAccountDeletion }),
                     }),
                     actions: [
                         {
                             variant: "primary",
-                            text: T.intl.string(T.t.JhDw5u),
+                            text: L.intl.string(L.t.JhDw5u),
                             onClick: this.handleReset,
                         },
                     ],
@@ -258,12 +259,12 @@ class Z extends (n = s.PureComponent) {
     renderResetPhonePassword() {
         let { resetPasswordPhoneToken: t } = this.state;
         return (0, o.jsx)(
-            g.Z,
-            D(
+            m.Z,
+            M(
                 {
                     resetToken: t,
                     onLoginSuccess: (t) => {
-                        this.setState({ errors: {} }), f.Z.switchAccountToken(t);
+                        this.setState({ errors: {} }), g.Z.switchAccountToken(t);
                     },
                     width: "100%",
                 },
@@ -273,10 +274,10 @@ class Z extends (n = s.PureComponent) {
     }
     renderPhonePasswordRecovery() {
         let { phoneVerifyError: t } = this.state;
-        return (0, o.jsx)(d.fef, {
-            children: (0, o.jsx)(C.Z, {
-                title: T.intl.string(T.t["+xqy3d"]),
-                subtitle: T.intl.format(T.t.ef4uZ2, { onResendClick: this.handleResendCode }),
+        return (0, o.jsx)(c.fef, {
+            children: (0, o.jsx)(y.Z, {
+                title: L.intl.string(L.t["+xqy3d"]),
+                subtitle: L.intl.format(L.t.ef4uZ2, { onResendClick: this.handleResendCode }),
                 error: t,
                 onSubmit: this.handlePasswordReset,
                 onCancel: void 0,
@@ -287,31 +288,31 @@ class Z extends (n = s.PureComponent) {
         let { loginStatus: t } = this.props;
         if (null != this.state.resetPasswordPhoneToken) return this.renderResetPhonePassword();
         switch (t) {
-            case I.u34.LOGGING_IN_MFA_SMS:
-            case I.u34.MFA_SMS_STEP:
-            case I.u34.LOGGING_IN_MFA:
-            case I.u34.MFA_STEP:
+            case T.u34.LOGGING_IN_MFA_SMS:
+            case T.u34.MFA_SMS_STEP:
+            case T.u34.LOGGING_IN_MFA:
+            case T.u34.MFA_STEP:
                 return this.renderMFA();
-            case I.u34.ACCOUNT_SCHEDULED_FOR_DELETION:
-            case I.u34.ACCOUNT_DISABLED:
+            case T.u34.ACCOUNT_SCHEDULED_FOR_DELETION:
+            case T.u34.ACCOUNT_DISABLED:
                 return this.renderDisabledAccount();
-            case I.u34.PASSWORD_RECOVERY_PHONE_VERIFICATION:
+            case T.u34.PASSWORD_RECOVERY_PHONE_VERIFICATION:
                 return this.renderPhonePasswordRecovery();
-            case I.u34.LOGGING_IN:
-            case I.u34.NONE:
+            case T.u34.LOGGING_IN:
+            case T.u34.NONE:
             default:
                 return this.renderDefault();
         }
     }
     constructor(t) {
         super(t),
-            N(this, "loginRef", void 0),
-            N(this, "passwordRef", void 0),
-            N(this, "codeRef", void 0),
-            N(this, "handleAuthToken", async (t) => {
-                this.setState({ errors: {} }), await f.Z.loginToken(t, !1);
+            D(this, "loginRef", void 0),
+            D(this, "passwordRef", void 0),
+            D(this, "codeRef", void 0),
+            D(this, "handleAuthToken", async (t) => {
+                this.setState({ errors: {} }), await g.Z.loginToken(t, !1);
             }),
-            N(this, "handleTabOrEnter", (t) => {
+            D(this, "handleTabOrEnter", (t) => {
                 if ("Tab" === t.key && !t.shiftKey && t.target === this.loginRef) {
                     var e;
                     null == (e = this.passwordRef) || e.focus(), t.stopPropagation(), t.preventDefault();
@@ -320,20 +321,20 @@ class Z extends (n = s.PureComponent) {
                     (t.target === this.loginRef || t.target === this.passwordRef) &&
                     (this.handleLogin(), t.stopPropagation(), t.preventDefault());
             }),
-            N(this, "setLoginRef", (t) => {
+            D(this, "setLoginRef", (t) => {
                 this.loginRef = t;
             }),
-            N(this, "setPasswordRef", (t) => {
+            D(this, "setPasswordRef", (t) => {
                 this.passwordRef = t;
             }),
-            N(this, "setCodeRef", (t) => {
+            D(this, "setCodeRef", (t) => {
                 this.codeRef = t;
             }),
-            N(this, "getFullLogin", () => {
+            D(this, "getFullLogin", () => {
                 let { loginPrefix: t, login: e } = this.state;
                 return t + e;
             }),
-            N(this, "renderError", (t) => {
+            D(this, "renderError", (t) => {
                 let { errors: e } = this.state;
                 if (this.hasError(t)) {
                     let r = e[t];
@@ -341,44 +342,75 @@ class Z extends (n = s.PureComponent) {
                 }
                 return null;
             }),
-            N(this, "handleForgotPassword", async (t) => {
+            D(this, "handleForgotPassword", async (t) => {
                 var e;
                 null == t || t.preventDefault(), null == (e = this.loginRef) || e.focus();
                 let r = this.getFullLogin();
                 this.setState({ errors: {} });
                 try {
-                    if ((R.S.dispatch(I.CkL.WAVE_EMPHASIZE), !(await f.Z.forgotPassword(r)))) return;
-                    (0, p.h7j)((t) =>
-                        (0, o.jsx)(
-                            p.ConfirmModal,
-                            M(
-                                D(
-                                    {
-                                        header: T.intl.string(T.t.f5Pi7O),
-                                        confirmText: T.intl.string(T.t.BddRzc),
-                                        confirmButtonColor: h.zx.Colors.BRAND,
-                                    },
-                                    t,
-                                ),
-                                {
-                                    children: (0, o.jsx)(p.Text, {
-                                        variant: "text-md/normal",
-                                        children: T.intl.format(T.t["6u5hQ0"], { email: r }),
-                                    }),
-                                },
-                            ),
-                        ),
-                    );
+                    R.S.dispatch(T.CkL.WAVE_EMPHASIZE);
+                    let t = await g.Z.forgotPassword(r);
+                    if (!1 === t) return;
+                    t === u.B.ONE_TIME_LOGIN
+                        ? (0, f.h7j)((t) => {
+                              let e = [
+                                  {
+                                      variant: "primary",
+                                      text: L.intl.string(L.t.BddRzc),
+                                      onClick: t.onClose,
+                                      fullWidth: !0,
+                                  },
+                              ];
+                              return (0, o.jsx)(
+                                  c.Modal,
+                                  Z(
+                                      M(
+                                          {
+                                              title: L.intl.string(L.t["6Ecytr"]),
+                                              actions: e,
+                                          },
+                                          t,
+                                      ),
+                                      {
+                                          children: (0, o.jsx)(f.Text, {
+                                              variant: "text-md/normal",
+                                              children: L.intl.string(L.t.iAcrqa),
+                                          }),
+                                      },
+                                  ),
+                              );
+                          })
+                        : (0, f.h7j)((t) =>
+                              (0, o.jsx)(
+                                  f.ConfirmModal,
+                                  Z(
+                                      M(
+                                          {
+                                              header: L.intl.string(L.t.f5Pi7O),
+                                              confirmText: L.intl.string(L.t.BddRzc),
+                                              confirmButtonColor: p.zx.Colors.BRAND,
+                                          },
+                                          t,
+                                      ),
+                                      {
+                                          children: (0, o.jsx)(f.Text, {
+                                              variant: "text-md/normal",
+                                              children: L.intl.format(L.t["6u5hQ0"], { email: r }),
+                                          }),
+                                      },
+                                  ),
+                              ),
+                          );
                 } catch (e) {
                     let t = (0, b.p)(e);
                     this.setState({ errors: t });
                 }
             }),
-            N(this, "handleLogin", async (t) => {
+            D(this, "handleLogin", async (t) => {
                 let { password: e, undelete: r } = this.state;
                 null == t || t.preventDefault(), this.setState({ errors: {} });
                 try {
-                    await f.Z.login({
+                    await g.Z.login({
                         login: this.getFullLogin(),
                         password: e,
                         undelete: r,
@@ -389,33 +421,33 @@ class Z extends (n = s.PureComponent) {
                     this.setState({ errors: t });
                 }
             }),
-            N(this, "handlePasswordReset", async (t) => {
+            D(this, "handlePasswordReset", async (t) => {
                 this.setState({
                     phoneVerifyError: null,
                     errors: {},
                 });
                 try {
-                    let { token: e } = await w.Z.verifyPhone(this.getFullLogin(), t, !1, !0);
+                    let { token: e } = await x.Z.verifyPhone(this.getFullLogin(), t, !1, !0);
                     this.setState({ resetPasswordPhoneToken: e });
                 } catch (t) {
                     null != t.body && null != t.body.message && this.setState({ phoneVerifyError: t.body.message });
                 }
             }),
-            N(this, "handleTokenSubmitMFA", (t) => {
+            D(this, "handleTokenSubmitMFA", (t) => {
                 let { mfaType: e, data: r, ticket: n } = t;
-                return f.Z.loginMFAv2({
+                return g.Z.loginMFAv2({
                     code: r,
                     ticket: n,
                     mfaType: e,
                     isMultiAccount: !0,
                 });
             }),
-            N(this, "handleResendCode", () => {
-                w.Z.resendCode(this.getFullLogin());
+            D(this, "handleResendCode", () => {
+                x.Z.resendCode(this.getFullLogin());
             }),
-            N(this, "handleReset", (t) => {
+            D(this, "handleReset", (t) => {
                 null == t || t.preventDefault(),
-                    f.Z.loginReset(!0),
+                    g.Z.loginReset(!0),
                     this.setState({
                         password: "",
                         loginPrefix: "",
@@ -427,7 +459,7 @@ class Z extends (n = s.PureComponent) {
                         errors: {},
                     });
             }),
-            N(this, "handleCancelAccountDeletion", () => {
+            D(this, "handleCancelAccountDeletion", () => {
                 this.setState({ undelete: !0 }, this.handleLogin);
             }),
             (this.state = {
@@ -444,7 +476,7 @@ class Z extends (n = s.PureComponent) {
             });
     }
 }
-N(Z, "defaultProps", {
+D(B, "defaultProps", {
     transitionTo: (t) => r.g.location.assign(t),
     replaceWith: (t) => r.g.location.replace(t),
 });
@@ -471,34 +503,34 @@ let G = function (t) {
             }
             return o;
         })(t, ["onClose", "transitionState", "onBackPressed"]);
-    let a = (0, c.cj)([k.Z, j.default, P.Z, A.Z], () => ({
-        authenticated: j.default.isAuthenticated(),
-        isPasswordlessActive: j.default.getIsPasswordlessActive(),
-        loginStatus: j.default.getLoginStatus(),
-        mfaTicket: j.default.getMFATicket(),
-        mfaMethods: j.default.getMFAMethods(),
+    let a = (0, h.cj)([k.Z, E.default, P.Z, A.Z], () => ({
+        authenticated: E.default.isAuthenticated(),
+        isPasswordlessActive: E.default.getIsPasswordlessActive(),
+        loginStatus: E.default.getLoginStatus(),
+        mfaTicket: E.default.getMFATicket(),
+        mfaMethods: E.default.getMFAMethods(),
         defaultRoute: k.Z.defaultRoute,
         country: P.Z.getCountryCode(),
         theme: A.Z.theme,
     }));
-    (0, m.Z)({
-        type: u.ImpressionTypes.MODAL,
-        name: u.ImpressionNames.USER_LOGIN,
+    (0, _.Z)({
+        type: d.ImpressionTypes.MODAL,
+        name: d.ImpressionNames.USER_LOGIN,
     });
     let l = s.useCallback(() => {
         e(), n();
     }, [e, n]);
-    return (0, o.jsx)(d.IX, {
+    return (0, o.jsx)(c.IX, {
         size: "md",
         onClose: e,
         transitionState: r,
         children: (0, o.jsx)(
-            Z,
-            M(D({}, i, a), {
-                transitionTo: O.uL,
-                replaceWith: O.dL,
+            B,
+            Z(M({}, i, a), {
+                transitionTo: j.uL,
+                replaceWith: j.dL,
                 onBackPressed: l,
-                authBoxClassName: L.card,
+                authBoxClassName: F.card,
             }),
         ),
     });

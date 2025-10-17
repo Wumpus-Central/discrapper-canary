@@ -523,17 +523,14 @@ let w = {
     async forgotPassword(e) {
         l.Z.dispatch({ type: "FORGOT_PASSWORD_REQUEST" });
         try {
-            return (
-                await g.Z.post({
-                    url: b.ANM.FORGOT_PASSWORD,
-                    body: { login: e },
-                    oldFormErrors: !0,
-                    trackedActionData: { event: i.NetworkActionNames.FORGOT_PASSWORD },
-                    rejectWithError: !1,
-                }),
-                l.Z.dispatch({ type: "FORGOT_PASSWORD_SENT" }),
-                !0
-            );
+            let t = await g.Z.post({
+                url: b.ANM.FORGOT_PASSWORD,
+                body: { login: e },
+                oldFormErrors: !0,
+                trackedActionData: { event: i.NetworkActionNames.FORGOT_PASSWORD },
+                rejectWithError: !1,
+            });
+            return l.Z.dispatch({ type: "FORGOT_PASSWORD_SENT" }), t.body.method;
         } catch (n) {
             let t = new c.yZ(n);
             if (t.code === b.evJ.PHONE_VERIFICATION_REQUIRED)
