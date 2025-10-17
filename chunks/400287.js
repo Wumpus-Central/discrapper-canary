@@ -252,23 +252,20 @@ function b() {
                         (0, r.jsx)(a.izJ, {}),
                         (0, r.jsx)(d.F, {
                             setting: h.s6.MESSAGE_SEARCH_ALL_DMS,
-                            children: (0, r.jsx)(a.C3N, {
-                                label: E.intl.string(E.t.VYODPD),
-                                children: (0, r.jsx)(a.FXm, {
-                                    label: E.intl.string(E.t["NxjN+v"]),
-                                    options: [
-                                        {
-                                            name: E.intl.string(E.t["t+fGsr"]),
-                                            value: 0,
-                                        },
-                                        {
-                                            name: E.intl.string(E.t.MwlEGB),
-                                            value: 1,
-                                        },
-                                    ],
-                                    onChange: D,
-                                    value: +!!P,
-                                }),
+                            children: (0, r.jsx)(a.FXm, {
+                                label: E.intl.string(E.t["NxjN+v"]),
+                                options: [
+                                    {
+                                        name: E.intl.string(E.t["t+fGsr"]),
+                                        value: 0,
+                                    },
+                                    {
+                                        name: E.intl.string(E.t.MwlEGB),
+                                        value: 1,
+                                    },
+                                ],
+                                onChange: D,
+                                value: +!!P,
                             }),
                         }),
                     ],
