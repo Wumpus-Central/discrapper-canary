@@ -1,73 +1,49 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => u }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(268146),
-    s = n(755721),
-    o = n(481060),
-    a = n(855403),
-    c = n(59468),
-    d = n(615161),
-    u = n(157707);
-function f(e) {
-    let { hideBackButton: t = !1 } = e,
-        [{ selectedSource: n }, f] = (0, d.E_)(),
-        [p, h] = i.useState(null);
+    s = n(481060),
+    o = n(855403),
+    a = n(59468),
+    c = n(615161),
+    d = n(157707);
+function u() {
+    let [{ selectedSource: e }] = (0, c.E_)(),
+        [t, n] = i.useState(null);
     return (
         i.useEffect(() => {
-            var e;
-            if (null != n) {
-                if (null == (e = n.id) ? void 0 : e.startsWith(l.vA.CAMERA)) {
-                    "url" in n && h(n.url);
+            var t;
+            if (null != e) {
+                if (null == (t = e.id) ? void 0 : t.startsWith(l.vA.CAMERA)) {
+                    "url" in e && n(e.url);
                     return;
                 }
-                (0, c.t)({
+                (0, a.t)({
                     width: 800,
                     height: 451,
                     types: [l.vA.SCREEN, l.vA.WINDOW],
-                }).then((e) => {
-                    var t;
-                    let { screenSources: r, windowSources: i } = e,
-                        l =
+                }).then((t) => {
+                    var r;
+                    let { screenSources: i, windowSources: l } = t,
+                        s =
                             null !=
-                            (t = i.find((e) => ("windowHandle" in n ? (0, a.Z)(e.id, n.windowHandle) : e.id === n.id)))
-                                ? t
-                                : r.find((e) => n.id === e.id);
-                    null != l && h(l.url);
+                            (r = l.find((t) => ("windowHandle" in e ? (0, o.Z)(t.id, e.windowHandle) : t.id === e.id)))
+                                ? r
+                                : i.find((t) => e.id === t.id);
+                    null != s && n(s.url);
                 });
             }
-        }, [n]),
-        (0, r.jsxs)("div", {
-            className: u.root,
-            children: [
-                null == p
-                    ? (0, r.jsx)(o.$jN, {})
+        }, [e]),
+        (0, r.jsx)("div", {
+            className: d.root,
+            children:
+                null == t
+                    ? (0, r.jsx)(s.$jN, {})
                     : (0, r.jsx)("img", {
-                          src: p,
+                          src: t,
                           alt: "",
-                          className: u.largePreview,
+                          className: d.largePreview,
                       }),
-                !t &&
-                    (0, r.jsx)(s.zx, {
-                        look: s.zx.Looks.FILLED,
-                        color: s.zx.Colors.CUSTOM,
-                        size: s.zx.Sizes.ICON,
-                        onClick: () => {
-                            f({
-                                type: "set_selected_source",
-                                source: null,
-                            }),
-                                f({
-                                    type: "set_step",
-                                    step: "source_select",
-                                });
-                        },
-                        className: u.backButton,
-                        children: (0, r.jsx)(o.j9r, {
-                            color: o.TVs.colors.WHITE,
-                            size: "xs",
-                        }),
-                    }),
-            ],
         })
     );
 }

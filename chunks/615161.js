@@ -1,7 +1,7 @@
 n.d(t, {
-    E_: () => O,
+    E_: () => C,
     Ti: () => y,
-    Yw: () => S,
+    Yw: () => b,
 }),
     n(415506),
     n(388685);
@@ -76,7 +76,6 @@ let x = {
         fetchingSources: !0,
         selectedSource: void 0,
         audioSourceId: void 0,
-        modalStep: "source_select",
         selectedChannel: void 0,
         nativeSourceType: "",
         discordSourceId: "",
@@ -85,7 +84,7 @@ let x = {
     j = i.createContext(() => {
         throw Error("Using uninitialized GoLiveModalContextDispatch");
     });
-function b(e, t) {
+function S(e, t) {
     switch (t.type) {
         case "set_mute_audio":
             return g(_({}, e), { muteStreamAudio: t.value });
@@ -102,8 +101,6 @@ function b(e, t) {
             });
         case "set_preset":
             return g(_({}, e), { preset: t.preset });
-        case "set_step":
-            return g(_({}, e), { modalStep: t.step });
         case "set_source_type":
             let n = {
                 sourceType: t.sourceType,
@@ -139,7 +136,7 @@ function b(e, t) {
             return e;
     }
 }
-function S(e) {
+function b(e) {
     let { dispatch: t, state: n, children: i } = e;
     return (0, r.jsx)(j.Provider, {
         value: t,
@@ -151,54 +148,52 @@ function S(e) {
 }
 function y(e, t, n) {
     var r, l;
-    let v = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "source_select",
-        { defaultAutoQuality: j, allowAutoQuality: S } = (0, f._)({ location: "useCreateGoLiveModalState" }),
-        { preset: y, resolution: O, fps: C, soundshareEnabled: w } = (0, s.cj)([d.Z], () => d.Z.getState());
-    j && (y = h.ApplicationStreamPresets.PRESET_AUTO);
-    let P = (0, s.e7)([u.Z], () => u.Z.getInputDeviceId()),
-        Z = null != (r = c.I0.useSetting()) && r,
-        I = null != (l = c.eo.useSetting()) && l;
-    (y in h.ApplicationStreamPresets && (y !== h.ApplicationStreamPresets.PRESET_AUTO || S)) ||
-        (y = h.ApplicationStreamPresets.PRESET_VIDEO),
-        (0, p.Z)(h.ApplicationStreamPresets.PRESET_CUSTOM, O, C, t, n) ||
-            ((O = h.ApplicationStreamResolutions.RESOLUTION_720), (C = h.ApplicationStreamFPS.FPS_30));
-    let [E, T] = i.useReducer(
-        b,
+    let { defaultAutoQuality: v, allowAutoQuality: j } = (0, f._)({ location: "useCreateGoLiveModalState" }),
+        { preset: b, resolution: y, fps: C, soundshareEnabled: O } = (0, s.cj)([d.Z], () => d.Z.getState());
+    v && (b = h.ApplicationStreamPresets.PRESET_AUTO);
+    let w = (0, s.e7)([u.Z], () => u.Z.getInputDeviceId()),
+        P = null != (r = c.I0.useSetting()) && r,
+        Z = null != (l = c.eo.useSetting()) && l;
+    (b in h.ApplicationStreamPresets && (b !== h.ApplicationStreamPresets.PRESET_AUTO || j)) ||
+        (b = h.ApplicationStreamPresets.PRESET_VIDEO),
+        (0, p.Z)(h.ApplicationStreamPresets.PRESET_CUSTOM, y, C, t, n) ||
+            ((y = h.ApplicationStreamResolutions.RESOLUTION_720), (C = h.ApplicationStreamFPS.FPS_30));
+    let [I, E] = i.useReducer(
+        S,
         g(_({}, x), {
-            muteStreamAudio: !w,
-            preset: y,
-            resolution: O,
+            muteStreamAudio: !O,
+            preset: b,
+            resolution: y,
             fps: C,
-            hidePreview: Z,
-            notifyFriends: I,
+            hidePreview: P,
+            notifyFriends: Z,
             selectedSource: e,
-            audioSourceId: P,
-            modalStep: v,
+            audioSourceId: w,
         }),
     );
     return (
         i.useEffect(() => {
             var e, t;
             a.Z.hasPermission(m.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }).then((e) =>
-                T({
+                E({
                     type: "set_has_permission",
                     value: e,
                 }),
             ),
                 null == (e = (t = o.Z.window).getMediaSourceId) ||
                     e.call(t).then((e) => {
-                        T({
+                        E({
                             type: "set_discord_source_id",
                             sourceId: null != e ? e : "",
                         });
                     });
         }, []),
         {
-            state: E,
-            dispatch: T,
+            state: I,
+            dispatch: E,
         }
     );
 }
-function O() {
+function C() {
     return [i.useContext(v), i.useContext(j)];
 }
