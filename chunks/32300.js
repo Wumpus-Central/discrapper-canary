@@ -279,8 +279,18 @@ let A = (0, r.B)({
     treatments: [
         {
             id: 1,
-            label: "alt + a Keybind",
-            config: { keybindOverride: "alt+a" },
+            label: "Ctrl + Tab Keybind",
+            config: { keybindOverride: "ctrl+tab" },
+        },
+        {
+            id: 2,
+            label: "Alt + X Keybind",
+            config: { keybindOverride: "alt+x" },
+        },
+        {
+            id: 3,
+            label: "Ctrl + L Keybind",
+            config: { keybindOverride: "ctrl+l" },
         },
     ],
 });
