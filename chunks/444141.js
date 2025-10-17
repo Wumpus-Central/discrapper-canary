@@ -55,7 +55,7 @@ function p(e) {
         { analyticsLocations: h, sourceAnalyticsLocations: v } = (0, o.ZP)(),
         { context: j, trackUserProfileAction: g } = (0, s.KZ)(),
         b = (0, c.ZP)(n.id, t);
-    return (null == b ? void 0 : b.guildId) == null || null == j
+    return (null == b ? void 0 : b.guildId) == null
         ? null
         : (null == f ? void 0 : f.guildId) != null
           ? (0, l.jsx)(i.sNh, {
@@ -65,10 +65,19 @@ function p(e) {
                 action: () => {
                     null == x || x(),
                         (0, a.openUserProfileModal)(
-                            m(u({}, j), {
-                                showGuildProfile: !1,
-                                sourceAnalyticsLocations: v,
-                            }),
+                            m(
+                                u(
+                                    {
+                                        userId: n.id,
+                                        guildId: t,
+                                    },
+                                    j,
+                                ),
+                                {
+                                    showGuildProfile: !1,
+                                    sourceAnalyticsLocations: v,
+                                },
+                            ),
                         ),
                         g(
                             u(
@@ -88,10 +97,19 @@ function p(e) {
                 action: () => {
                     null == x || x(),
                         (0, a.openUserProfileModal)(
-                            m(u({}, j), {
-                                showGuildProfile: !0,
-                                sourceAnalyticsLocations: v,
-                            }),
+                            m(
+                                u(
+                                    {
+                                        userId: n.id,
+                                        guildId: t,
+                                    },
+                                    j,
+                                ),
+                                {
+                                    showGuildProfile: !0,
+                                    sourceAnalyticsLocations: v,
+                                },
+                            ),
                         ),
                         g(
                             u(
