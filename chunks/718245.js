@@ -20,7 +20,22 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function c() {
+    return (c =
+        Object.assign ||
+        function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+            }
+            return e;
+        }).apply(this, arguments);
+}
+function u(e) {
+    if (null == e) throw TypeError("Cannot destructure " + e);
+    return e;
+}
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +51,7 @@ function c(e) {
     }
     return e;
 }
-function u(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,37 +63,16 @@ function u(e, t) {
     }
     return n;
 }
-function d(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
-}
-function f(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = _(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function _(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
 }
 function p(e) {
     var t, n;
@@ -87,25 +81,12 @@ function p(e) {
         null == l || null == (n = l.experiments) || null == (t = n.enabledExperiments)
             ? void 0
             : t.includes("mana-toggle-inputs")
-    ) {
-        let t = d(c({}, e), {
-            value: null != e.value ? String(e.value) : void 0,
-            options: e.options.map((e) => d(c({}, e), { value: String(e.value) })),
-            onChange:
-                null != e.onChange
-                    ? (t) => {
-                          let n = e.options.find((e) => String(e.value) === t);
-                          null != n && e.onChange(n.value);
-                      }
-                    : void 0,
-        });
-        return (0, r.jsx)(o.C, c({}, t));
-    }
-    let { size: u } = e,
-        _ = f(e, ["size"]),
+    )
+        return (0, r.jsx)(o.C, d({}, e));
+    let f = c({}, u(e)),
         p = e.options.map((e) => {
             var t, n;
-            return d(c({}, e), {
+            return _(d({}, e), {
                 icon: e.leadingIcon,
                 desc:
                     "string" == typeof e.desc
@@ -115,12 +96,12 @@ function p(e) {
                           : null,
             });
         }),
-        h = d(c({}, _), {
+        h = _(d({}, f), {
             options: p,
             errorMessage: e.errorMessage,
             onChange: null != e.onChange ? (t) => e.onChange(t.value) : void 0,
         });
-    return (0, r.jsx)(s.Gu, c({}, h));
+    return (0, r.jsx)(s.Gu, d({}, h));
 }
 function h(e) {
     var t, n;
