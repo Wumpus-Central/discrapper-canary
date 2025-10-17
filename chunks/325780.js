@@ -94,6 +94,7 @@ function f(e) {
                     onChange: l,
                     hasIcon: f,
                     describedBy: e.describedById,
+                    labelledBy: e.labelId,
                 }),
         }),
     );

@@ -70,31 +70,5 @@ let o = {
                 },
             },
         },
-        {
-            id: "switchIndicator",
-            name: "SwitchIndicator",
-            component: function (e) {
-                let { disabled: t, hasIcon: n } = e,
-                    [o, s] = i.useState(!1);
-                return (0, r.jsx)(a.J_t, {
-                    hasIcon: n,
-                    onChange: s,
-                    disabled: t,
-                    checked: o,
-                });
-            },
-            controls: {
-                disabled: {
-                    type: "boolean",
-                    label: "Disabled",
-                    defaultValue: !1,
-                },
-                hasIcon: {
-                    type: "boolean",
-                    label: "Has Icon",
-                    defaultValue: !1,
-                },
-            },
-        },
     ],
 };
