@@ -29,14 +29,14 @@ function j(e) {
             wishlistError: L,
             fetchShopHomeError: y,
         } = (0, p.ZL)(t),
-        { displayItems: I, wishlistLength: P } = (0, p.UD)({
+        { displayItems: I, wishlistLength: w } = (0, p.UD)({
             wishlist: _,
             popularProducts: j,
             wishlistError: L,
             fetchShopHomeError: y,
         }),
         {
-            theme: w,
+            theme: P,
             primaryColor: E,
             secondaryColor: O,
         } = (0, d.Z)({
@@ -44,7 +44,7 @@ function j(e) {
             displayProfile: n,
         }),
         { profileThemeStyle: T, profileThemeClassName: k } = (0, c.Z)({
-            theme: w,
+            theme: P,
             themeType: null,
             primaryColor: E,
             secondaryColor: O,
@@ -114,18 +114,22 @@ function j(e) {
                                                 variant: "display-md",
                                                 className: g.wishlistBannerTitle,
                                                 children:
-                                                    P > 0 ? x.intl.string(x.t["7lZ31N"]) : x.intl.string(x.t.pWG4zc),
+                                                    w >= p.zL
+                                                        ? x.intl.string(x.t["7lZ31N"])
+                                                        : x.intl.string(x.t.SK5rmp),
                                             }),
                                             (0, r.jsx)(s.Text, {
                                                 variant: "text-sm/medium",
                                                 children:
-                                                    P > 0
+                                                    w >= p.zL
                                                         ? x.intl.format(x.t.BjEX39, { username: Z })
-                                                        : x.intl.format(x.t.dIDKgo, { username: Z }),
+                                                        : w >= 1
+                                                          ? x.intl.format(x.t.dIDKgo, { username: Z })
+                                                          : x.intl.format(x.t.wyMp1t, { username: Z }),
                                             }),
                                         ],
                                     }),
-                                    P >= p.zL &&
+                                    w >= p.zL &&
                                         (0, r.jsx)(s.Button, {
                                             variant: "overlay-secondary",
                                             text: x.intl.format(x.t["8uYD+P"], { username: Z }),
@@ -173,7 +177,7 @@ function j(e) {
                                                                       ? m.Wt.DM_CHANNEL_WISHLIST
                                                                       : m.Wt.DM_CHANNEL,
                                                               collectibleSource: i,
-                                                              showIcons: P > 0 && P < p.zL,
+                                                              showIcons: w > 0 && w < p.zL,
                                                               disableHoverEffects: !0,
                                                           }),
                                                       },
