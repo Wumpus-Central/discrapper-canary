@@ -368,7 +368,7 @@ let y = {
                                                   className: g.row,
                                                   children: [
                                                       (0, a.jsx)(d.Z, {
-                                                          fileContents: () => (0, x.yR)(w),
+                                                          fileContents: () => (0, x.yR)(t.name, w),
                                                           contentType: "text/plain",
                                                           fileName: "".concat(L, "_timing_config.txt"),
                                                           children: (0, a.jsx)(c.Button, {
