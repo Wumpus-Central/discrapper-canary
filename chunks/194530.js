@@ -63,7 +63,7 @@ function _(e) {
                         variant: "primary",
                         text: f.intl.string(f.t.i4jeWV),
                         loading: P === d.QZA.SUBMITTING,
-                        onClick: D,
+                        type: "submit",
                     },
                 ],
                 children: (0, r.jsxs)(s.Kqy, {

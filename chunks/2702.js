@@ -72,7 +72,7 @@ function _(e) {
                 {
                     variant: "primary",
                     text: v.intl.string(v.t.i4jeWV),
-                    onClick: G,
+                    type: "submit",
                     loading: b,
                 },
             ],
