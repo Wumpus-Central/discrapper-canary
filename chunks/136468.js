@@ -58,10 +58,15 @@ function f(e, t) {
     );
 }
 function _(e) {
-    let t = (0, o.A)("Switch"),
-        { switchIconsEnabled: n } = i.useContext(a.S);
-    if (t) {
-        let t = void 0 !== e.hasIcon ? e.hasIcon : n;
+    var t, n;
+    let c = i.useContext(o.KJ),
+        d =
+            null == c || null == (n = c.experiments) || null == (t = n.enabledExperiments)
+                ? void 0
+                : t.includes("mana-toggle-inputs"),
+        { switchIconsEnabled: _ } = i.useContext(a.S);
+    if (d) {
+        let t = void 0 !== e.hasIcon ? e.hasIcon : _;
         return (0, r.jsx)(s.k, f(u({}, e), { hasIcon: t }));
     }
     return (0, r.jsx)(l.T, u({}, e));

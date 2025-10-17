@@ -62,7 +62,15 @@ function f(e, t) {
     );
 }
 function _(e) {
-    return (0, a.A)("Checkbox") ? (0, r.jsx)(s.C, u({}, e)) : (0, r.jsx)(p, u({}, e));
+    var t, n;
+    let o = i.useContext(a.KJ);
+    return (
+        null == o || null == (n = o.experiments) || null == (t = n.enabledExperiments)
+            ? void 0
+            : t.includes("mana-toggle-inputs")
+    )
+        ? (0, r.jsx)(s.C, u({}, e))
+        : (0, r.jsx)(p, u({}, e));
 }
 function p(e) {
     let { label: t, checked: n, onChange: a, labelType: s = "primary", description: c, leadingIcon: d } = e,
