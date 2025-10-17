@@ -1,5 +1,4 @@
 e.exports = {
-    productCardHoverContainer: "productCardHoverContainer_fcbddd",
     productCardContainer: "productCardContainer_fcbddd",
     productCardContentContainer: "productCardContentContainer_fcbddd",
     headerContainer: "headerContainer_fcbddd",

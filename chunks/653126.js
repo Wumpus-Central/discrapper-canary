@@ -62,97 +62,94 @@ let j = l.memo(function (e) {
             innerRef: Y,
             onChange: Q,
             threshold: 0,
-            children: (0, r.jsx)("div", {
-                className: y.productCardHoverContainer,
-                children: (0, r.jsx)(c.kL8, {
-                    ref: Y,
-                    onClick: null != B ? B : J,
-                    "aria-label": K,
-                    className: a()(W, y.productCardContainer),
-                    onFocus: () => (null == Z ? void 0 : Z(t.skuId)),
-                    onBlur: () => (null == w ? void 0 : w(t.skuId)),
-                    onMouseEnter: () => (null == P ? void 0 : P(t.skuId)),
-                    onMouseLeave: () => (null == R ? void 0 : R(t.skuId)),
-                    children: (0, r.jsxs)("div", {
-                        className: y.productCardContentContainer,
-                        children: [
-                            (0, r.jsxs)("div", {
-                                className: y.headerContainer,
-                                children: [
-                                    (0, r.jsx)(f.Z, {
+            children: (0, r.jsx)(c.kL8, {
+                ref: Y,
+                onClick: null != B ? B : J,
+                "aria-label": K,
+                className: a()(W, y.productCardContainer),
+                onFocus: () => (null == Z ? void 0 : Z(t.skuId)),
+                onBlur: () => (null == w ? void 0 : w(t.skuId)),
+                onMouseEnter: () => (null == P ? void 0 : P(t.skuId)),
+                onMouseLeave: () => (null == R ? void 0 : R(t.skuId)),
+                children: (0, r.jsxs)("div", {
+                    className: y.productCardContentContainer,
+                    children: [
+                        (0, r.jsxs)("div", {
+                            className: y.headerContainer,
+                            children: [
+                                (0, r.jsx)(f.Z, {
+                                    skuId: t.skuId,
+                                    badgeOverride: I,
+                                    className: F,
+                                    prioritizedCurrency: V,
+                                }),
+                                !n &&
+                                    (0, r.jsx)(x.Z, {
                                         skuId: t.skuId,
-                                        badgeOverride: I,
-                                        className: F,
-                                        prioritizedCurrency: V,
+                                        isCardHovered: q,
                                     }),
-                                    !n &&
-                                        (0, r.jsx)(x.Z, {
-                                            skuId: t.skuId,
-                                            isCardHovered: q,
-                                        }),
-                                ],
-                            }),
-                            (0, r.jsxs)("div", {
-                                className: y.footerContainer,
-                                children: [
-                                    !i &&
-                                        (0, r.jsx)(C.Z, {
-                                            skuId: t.skuId,
-                                            className: M,
-                                        }),
-                                    ee &&
-                                        (0, r.jsxs)("div", {
-                                            className: a()(y.footerInfoContainer, { [y.footerHideOnHover]: et }),
-                                            children: [
-                                                !k &&
-                                                    (0, r.jsx)(h.Z, {
-                                                        skuId: t.skuId,
-                                                        prioritizedCurrency: V,
-                                                    }),
-                                                X &&
-                                                    (0, r.jsx)(E.Z, {
-                                                        skuId: t.skuId,
-                                                        previewOnly: !0,
-                                                    }),
-                                            ],
-                                        }),
-                                    et &&
-                                        (0, r.jsxs)("div", {
-                                            className: a()(y.footerInteractibleContainer, y.footerShowOnHover),
-                                            children: [
-                                                X && (0, r.jsx)(E.Z, { skuId: t.skuId }),
-                                                $ &&
-                                                    (0, r.jsxs)(c.ButtonGroup, {
-                                                        wrap: !1,
-                                                        fullWidth: !0,
-                                                        children: [
-                                                            !T &&
-                                                                (0, r.jsx)(_.Z, {
-                                                                    skuId: t.skuId,
-                                                                    cardRef: Y,
-                                                                    onClick: A,
-                                                                    text: H,
-                                                                    prioritizedCurrency: V,
-                                                                    onClickAnalytics: U,
-                                                                }),
-                                                            !L &&
-                                                                (0, r.jsx)(m.Z, {
-                                                                    skuId: t.skuId,
-                                                                    cardRef: Y,
-                                                                    onClick: N,
-                                                                    icon: D,
-                                                                    prioritizedCurrency: V,
-                                                                    onClickAnalytics: U,
-                                                                }),
-                                                        ],
-                                                    }),
-                                            ],
-                                        }),
-                                ],
-                            }),
-                            (0, r.jsx)(v.Z, { skuId: t.skuId }),
-                        ],
-                    }),
+                            ],
+                        }),
+                        (0, r.jsxs)("div", {
+                            className: y.footerContainer,
+                            children: [
+                                !i &&
+                                    (0, r.jsx)(C.Z, {
+                                        skuId: t.skuId,
+                                        className: M,
+                                    }),
+                                ee &&
+                                    (0, r.jsxs)("div", {
+                                        className: a()(y.footerInfoContainer, { [y.footerHideOnHover]: et }),
+                                        children: [
+                                            !k &&
+                                                (0, r.jsx)(h.Z, {
+                                                    skuId: t.skuId,
+                                                    prioritizedCurrency: V,
+                                                }),
+                                            X &&
+                                                (0, r.jsx)(E.Z, {
+                                                    skuId: t.skuId,
+                                                    previewOnly: !0,
+                                                }),
+                                        ],
+                                    }),
+                                et &&
+                                    (0, r.jsxs)("div", {
+                                        className: a()(y.footerInteractibleContainer, y.footerShowOnHover),
+                                        children: [
+                                            X && (0, r.jsx)(E.Z, { skuId: t.skuId }),
+                                            $ &&
+                                                (0, r.jsxs)(c.ButtonGroup, {
+                                                    wrap: !1,
+                                                    fullWidth: !0,
+                                                    children: [
+                                                        !T &&
+                                                            (0, r.jsx)(_.Z, {
+                                                                skuId: t.skuId,
+                                                                cardRef: Y,
+                                                                onClick: A,
+                                                                text: H,
+                                                                prioritizedCurrency: V,
+                                                                onClickAnalytics: U,
+                                                            }),
+                                                        !L &&
+                                                            (0, r.jsx)(m.Z, {
+                                                                skuId: t.skuId,
+                                                                cardRef: Y,
+                                                                onClick: N,
+                                                                icon: D,
+                                                                prioritizedCurrency: V,
+                                                                onClickAnalytics: U,
+                                                            }),
+                                                    ],
+                                                }),
+                                        ],
+                                    }),
+                            ],
+                        }),
+                        (0, r.jsx)(v.Z, { skuId: t.skuId }),
+                    ],
                 }),
             }),
         });
