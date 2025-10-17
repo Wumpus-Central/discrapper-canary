@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => M }), n(388685);
 var r = n(579092),
     i = n(433517),
     a = n(765250),
@@ -209,16 +209,21 @@ class P {
 function w() {
     return Object.values(u.i);
 }
-let D = new Set([u.i.WELCOME_GENERAL, u.i.GO_LIVE_NUDGE, u.i.GAME_ACTIVITY]);
-class L extends s.Z {
-    constructor(...e) {
-        var t;
-        super(...e),
-            (t = this),
+let D = new Set([u.i.WELCOME_GENERAL, u.i.GO_LIVE_NUDGE, u.i.GAME_ACTIVITY]),
+    L = "overlay-negative-widget-experiment-bucket";
+class x extends s.Z {
+    constructor() {
+        var e, t;
+        super(),
+            (e = this),
             h(this, "_settings", new P()),
             h(this, "_hasInitialized", !1),
-            h(this, "_hasInitializedLegacyOverlay", !1),
             h(this, "_isProcessing", !1),
+            h(this, "_appliedExperimentBucket", "control"),
+            h(this, "setAppliedExperimentBucket", (e) => {
+                (this._appliedExperimentBucket = e), i.K.set(L, e);
+            }),
+            h(this, "getRawAppliedExperimentBucket", () => (0, d.hb)("applied-experiment-bucket")),
             h(this, "getWidgetExperimentSettings", (e) => {
                 let {
                         voiceWidgetDefaultUnpinned: t,
@@ -242,11 +247,11 @@ class L extends s.Z {
                 );
             }),
             h(this, "processWidgetExperiment", async function () {
-                let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-                    { widgetsToOverride: n, widgetsToRestore: r } = t.getWidgetExperimentSettings(e);
-                for (let e of Object.values(p.Odu)) t._settings.initializeWidget(e);
-                for (let e of r) await t._settings.restoreWidget(e);
-                for (let e of n) await t._settings.unpinWidget(e);
+                let t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+                    { widgetsToOverride: n, widgetsToRestore: r } = e.getWidgetExperimentSettings(t);
+                for (let t of Object.values(p.Odu)) e._settings.initializeWidget(t);
+                for (let t of r) await e._settings.restoreWidget(t);
+                for (let t of n) await e._settings.unpinWidget(t);
                 n.size > 0 &&
                     T.info("Experiment Override: Widgets", {
                         widgetsToRestore: r,
@@ -293,14 +298,16 @@ class L extends s.Z {
                     });
             }),
             h(this, "processAllExperiments", async (e) => {
-                if (!this._isProcessing) {
+                if (this._isProcessing) return;
+                let t = this.getRawAppliedExperimentBucket();
+                if (this._appliedExperimentBucket !== t) {
                     this._isProcessing = !0;
                     try {
                         await this.processWidgetExperiment(e), await this.processNotificationExperiment(e);
                     } catch (e) {
                         T.error("Experiments processing failed", { error: e });
                     } finally {
-                        this._isProcessing = !1;
+                        (this._isProcessing = !1), this.setAppliedExperimentBucket(t);
                     }
                 }
             }),
@@ -330,7 +337,8 @@ class L extends s.Z {
                 EXPERIMENT_OVERRIDE_BUCKET: this.handleExperimentOverrideBucket,
                 OVERLAY_SET_NOTIFICATION_DISABLED_SETTING: this.handleSetNotificationDisabledSetting,
                 LAYOUT_SET_PINNED: this.handleSetPinned,
-            });
+            }),
+            (this._appliedExperimentBucket = null != (t = i.K.get(L)) ? t : "control");
     }
 }
-let x = new L();
+let M = new x();
