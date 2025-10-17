@@ -41,6 +41,7 @@ let c = {
         [i.z.Q2_2025_MARKETING_MOMENT_FIRST_IMPRESSION_MODAL]: 0,
         [i.z.BOGO_2025_ANNOUNCEMENT_MODAL]: 0,
         [i.z.NITRO_DROP_REWARD]: 0,
+        [i.z.QUEST_HOME_ENTRYPOINT_ONBOARDING]: 0,
     },
     u = o.Z.Millis.DAY;
 function d(e) {

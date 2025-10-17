@@ -35,6 +35,7 @@ var r = (function (e) {
             (e.VIRTUAL_CURRENCY_ONBOARDING = "VIRTUAL_CURRENCY_ONBOARDING"),
             (e.ACCOUNT_NAME_ZONE = "ACCOUNT_NAME_ZONE"),
             (e.VIRTUAL_CURRENCY_MOBILE_ONBOARDING = "VIRTUAL_CURRENCY_MOBILE_ONBOARDING"),
+            (e.PRIVATE_CHANNELS_LIST = "PRIVATE_CHANNELS_LIST"),
             e
         );
     })({});
