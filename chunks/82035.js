@@ -1,182 +1,165 @@
-e.d(n, { default: () => j }), e(388685);
-var t = e(951288),
-    r = e(647438),
-    i = e(442837),
-    a = e(544891),
-    s = e(755721),
-    u = e(481060),
-    d = e(493773),
-    o = e(910693),
-    c = e(314897),
-    x = e(271383),
-    h = e(430824),
-    N = e(496675),
-    g = e(594174),
-    m = e(626135),
-    k = e(51144),
-    v = e(981631),
-    C = e(388032),
-    E = e(277081);
+n.d(t, { default: () => A }), n(388685);
+var e = n(951288),
+    r = n(647438),
+    i = n(442837),
+    a = n(544891),
+    u = n(159691),
+    s = n(481060),
+    d = n(493773),
+    c = n(910693),
+    o = n(314897),
+    x = n(271383),
+    v = n(430824),
+    N = n(496675),
+    g = n(594174),
+    k = n(626135),
+    m = n(51144),
+    E = n(981631),
+    h = n(388032),
+    C = n(277081);
 function p(l) {
-    let { disabled: n = !1, user: e, setNickname: i, nickname: a, error: d, hasNick: o } = l,
-        x = r.useRef(null),
-        h = r.useCallback(() => {
+    let { disabled: t = !1, user: n, setNickname: i, nickname: a, error: u, hasNick: d } = l,
+        c = r.useRef(null),
+        x = r.useCallback(() => {
             var l;
-            i(""), null == (l = x.current) || l.focus();
+            i(""), null == (l = c.current) || l.focus();
         }, [i]);
-    return (0, t.jsxs)(t.Fragment, {
+    return (0, e.jsxs)(e.Fragment, {
         children: [
-            n || null == e || e.id === c.default.getId()
+            t || null == n || n.id === o.default.getId()
                 ? null
-                : (0, t.jsx)(u.Zbd, {
-                      type: u.Zbd.Types.WARNING,
-                      className: E.card,
-                      children: (0, t.jsx)(u.Text, {
+                : (0, e.jsx)(s.Zbd, {
+                      type: s.Zbd.Types.WARNING,
+                      className: C.card,
+                      children: (0, e.jsx)(s.Text, {
                           variant: "text-md/normal",
-                          children: C.intl.string(C.t.dq3At7),
+                          children: h.intl.string(h.t.dq3At7),
                       }),
                   }),
-            (0, t.jsx)(u.oil, {
-                label: n ? C.intl.string(C.t.EyA4q6) : C.intl.string(C.t["621LJC"]),
-                disabled: n,
-                inputRef: x,
-                maxLength: v.l$U,
+            (0, e.jsx)(s.oil, {
+                label: t ? h.intl.string(h.t.EyA4q6) : h.intl.string(h.t["621LJC"]),
+                disabled: t,
+                inputRef: c,
+                maxLength: E.l$U,
                 value: a,
-                placeholder: k.ZP.getName(e),
+                placeholder: m.ZP.getName(n),
                 onChange: i,
                 autoFocus: !0,
             }),
-            null != d
-                ? (0, t.jsx)(u.Text, {
+            null != u
+                ? (0, e.jsx)(s.Text, {
                       variant: "text-xs/normal",
                       color: "text-danger",
-                      className: E.nickError,
-                      children: d,
+                      className: C.nickError,
+                      children: u,
                   })
                 : null,
-            o && !n
-                ? (0, t.jsx)(s.zx, {
-                      look: s.zx.Looks.LINK,
-                      color: s.zx.Colors.LINK,
-                      size: s.zx.Sizes.NONE,
-                      onClick: h,
-                      className: E.reset,
-                      children: C.intl.string(C.t.aE02R0),
+            d && !t
+                ? (0, e.jsx)("div", {
+                      className: C.reset,
+                      children: (0, e.jsx)(s.Avr, {
+                          text: h.intl.string(h.t.aE02R0),
+                          onClick: x,
+                          textVariant: "text-sm/normal",
+                      }),
                   })
                 : null,
         ],
     });
 }
-let j = function (l) {
-    var n;
-    let { transitionState: e, user: s, guildId: c, onClose: k, analyticsSource: j, analyticsLocations: b } = l,
-        A = (0, i.e7)([x.ZP], () => (null != c ? x.ZP.getMember(c, s.id) : null)),
-        f = (0, i.e7)([N.Z, g.default, h.Z], () => {
+let A = function (l) {
+    var t;
+    let { transitionState: n, user: s, guildId: o, onClose: m, analyticsSource: C, analyticsLocations: A } = l,
+        f = (0, i.e7)([x.ZP], () => (null != o ? x.ZP.getMember(o, s.id) : null)),
+        _ = (0, i.e7)([N.Z, g.default, v.Z], () => {
             var l;
-            let n = h.Z.getGuild(c);
+            let t = v.Z.getGuild(o);
             return (
-                null != n &&
+                null != t &&
                 ((null == (l = g.default.getCurrentUser()) ? void 0 : l.id) === s.id
-                    ? N.Z.can(v.Plq.CHANGE_NICKNAME, n) || N.Z.can(v.Plq.MANAGE_NICKNAMES, n)
-                    : N.Z.canManageUser(v.Plq.MANAGE_NICKNAMES, s.id, n))
+                    ? N.Z.can(E.Plq.CHANGE_NICKNAME, t) || N.Z.can(E.Plq.MANAGE_NICKNAMES, t)
+                    : N.Z.canManageUser(E.Plq.MANAGE_NICKNAMES, s.id, t))
             );
         }),
-        [_, y] = r.useState(!1),
-        [I, M] = r.useState(null != (n = null == A ? void 0 : A.nick) ? n : ""),
-        [Z, P] = r.useState({});
+        [b, M] = r.useState(!1),
+        [Z, j] = r.useState(null != (t = null == f ? void 0 : f.nick) ? t : ""),
+        [y, I] = r.useState({});
     (0, d.ZP)(() => {
-        m.default.track(v.rMx.OPEN_MODAL, {
+        k.default.track(E.rMx.OPEN_MODAL, {
             type: "Change Server Identity",
-            location: v.ZY5.GUILD_CHANNEL,
-            source: j,
+            location: E.ZY5.GUILD_CHANNEL,
+            source: C,
         });
     });
-    let G = (0, o.sE)(c, {
-            location: null == b ? void 0 : b[0],
+    let P = (0, c.sE)(o, {
+            location: null == A ? void 0 : A[0],
             targetUserId: s.id,
         }),
         S = r.useCallback(
             async (l) => {
-                var n, e, t, r, i, u, d, x, h;
+                var t, n, e, r, i, u, d, x, v;
                 l.preventDefault();
                 let N = null;
                 if (
-                    (I !== (null != (n = null == A ? void 0 : A.nick) ? n : "") && ((N = null != N ? N : {}).nick = I),
+                    (Z !== (null != (t = null == f ? void 0 : f.nick) ? t : "") && ((N = null != N ? N : {}).nick = Z),
                     null == N)
                 )
-                    return void k();
+                    return void m();
                 try {
-                    y(!0),
+                    M(!0),
                         await a.tn.patch({
-                            url: v.ANM.GUILD_MEMBER(c, s.id),
+                            url: E.ANM.GUILD_MEMBER(o, s.id),
                             body: N,
                             rejectWithError: !1,
                         }),
-                        G(o.jQ.CHANGE_NICKNAME),
-                        k();
+                        P(c.jQ.CHANGE_NICKNAME),
+                        m();
                 } catch (a) {
                     let l;
-                    y(!1);
-                    let n = null != (t = null == (e = a.body) ? void 0 : e.errors) ? t : null;
-                    (null == n ? void 0 : n.nick) != null
+                    M(!1);
+                    let t = null != (e = null == (n = a.body) ? void 0 : n.errors) ? e : null;
+                    (null == t ? void 0 : t.nick) != null
                         ? (l =
-                              (null == (u = n.nick) || null == (i = u._errors) || null == (r = i[0])
+                              (null == (u = t.nick) || null == (i = u._errors) || null == (r = i[0])
                                   ? void 0
-                                  : r.message) || C.intl.string(C.t.xex86u))
-                        : (null == n ? void 0 : n.username) != null &&
+                                  : r.message) || h.intl.string(h.t.xex86u))
+                        : (null == t ? void 0 : t.username) != null &&
                           (l =
-                              (null == (h = n.username) || null == (x = h._errors) || null == (d = x[0])
+                              (null == (v = t.username) || null == (x = v._errors) || null == (d = x[0])
                                   ? void 0
-                                  : d.message) || C.intl.string(C.t.xex86u)),
-                        P({ nick: l });
+                                  : d.message) || h.intl.string(h.t.xex86u)),
+                        I({ nick: l });
                 }
             },
-            [c, I, k, s, A, G],
+            [o, Z, m, s, f, P],
         );
-    return (0, t.jsx)(u.Y0X, {
-        "aria-label": C.intl.string(C.t["PKQB/P"]),
-        transitionState: e,
-        parentComponent: "ChangeGuildIdentity",
-        children: (0, t.jsxs)("form", {
-            onSubmit: S,
-            children: [
-                (0, t.jsx)(u.xBx, {
-                    separator: !1,
-                    children: (0, t.jsx)(u.Heading, {
-                        variant: "heading-lg/semibold",
-                        children: C.intl.string(C.t.dilOFx),
-                    }),
-                }),
-                (0, t.jsx)(u.hzk, {
-                    className: E.modalContent,
-                    children: (0, t.jsx)(p, {
-                        disabled: !f,
-                        user: s,
-                        error: Z.nick,
-                        nickname: I,
-                        setNickname: M,
-                        hasNick: (null == A ? void 0 : A.nick) != null,
-                    }),
-                }),
-                (0, t.jsx)(u.mzw, {
-                    children: (0, t.jsxs)(u.ButtonGroup, {
-                        direction: "horizontal-reverse",
-                        children: [
-                            (0, t.jsx)(u.Button, {
-                                variant: "primary",
-                                text: C.intl.string(C.t.R3BPHx),
-                                type: "submit",
-                                disabled: _,
-                            }),
-                            (0, t.jsx)(u.Button, {
-                                variant: "secondary",
-                                text: C.intl.string(C.t["ETE/oK"]),
-                                onClick: k,
-                            }),
-                        ],
-                    }),
-                }),
+    return (0, e.jsx)("form", {
+        onSubmit: S,
+        children: (0, e.jsx)(u.u_l, {
+            transitionState: n,
+            onClose: m,
+            title: h.intl.string(h.t.dilOFx),
+            actions: [
+                {
+                    text: h.intl.string(h.t["ETE/oK"]),
+                    onClick: m,
+                    variant: "secondary",
+                },
+                {
+                    text: h.intl.string(h.t.R3BPHx),
+                    variant: "primary",
+                    type: "submit",
+                    disabled: b,
+                },
             ],
+            children: (0, e.jsx)(p, {
+                disabled: !_,
+                user: s,
+                error: y.nick,
+                nickname: Z,
+                setNickname: j,
+                hasNick: (null == f ? void 0 : f.nick) != null,
+            }),
         }),
     });
 };
