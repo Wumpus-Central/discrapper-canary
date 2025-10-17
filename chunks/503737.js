@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var r = n(951288);
 n(647438);
 var i = n(793030),
@@ -36,7 +36,7 @@ let d = "ActivityInviteManager",
     p = () => {
         o.Z.dispatch({ type: "ACTIVITY_INVITE_MODAL_CLOSE" });
     };
-class h extends a.Z {
+class f extends a.Z {
     _initialize() {
         o.Z.subscribe("ACTIVITY_INVITE_MODAL_OPEN", this.handleModalOpen),
             o.Z.subscribe("ACTIVITY_INVITE_MODAL_CLOSE", this.handleModalClose);
@@ -47,7 +47,7 @@ class h extends a.Z {
     }
     handleModalOpen(e) {
         let { activity: t, isPrivate: o, context: a } = e,
-            h = a === s.IlC.POPOUT ? l.u1M : l.z1l;
+            f = a === s.IlC.POPOUT ? l.u1M : l.z1l;
         o
             ? (0, l.h7j)(
                   (e) => {
@@ -94,17 +94,17 @@ class h extends a.Z {
                       onCloseCallback: p,
                       modalKey: d,
                   },
-                  h,
+                  f,
               )
             : (0, l.ZDy)(
                   async () => {
-                      let { default: e } = await n.e("79921").then(n.bind(n, 699099));
+                      let { default: e } = await n.e("5598").then(n.bind(n, 621566));
                       return (t) => (0, r.jsx)(e, u({}, t));
                   },
                   {
                       onCloseCallback: p,
                       modalKey: d,
-                      contextKey: h,
+                      contextKey: f,
                   },
               );
     }
@@ -112,4 +112,4 @@ class h extends a.Z {
         (0, l.Mr3)(d);
     }
 }
-let f = new h();
+let h = new f();
