@@ -100,9 +100,11 @@ class o {
             (this.handleDraggedElementKeyDown = async (e) => {
                 switch (e.key) {
                     case "ArrowUp":
+                    case "ArrowLeft":
                         e.preventDefault(), e.stopPropagation(), this.hoverNode(await this.getPreviousDropTarget());
                         return;
                     case "ArrowDown":
+                    case "ArrowRight":
                         e.preventDefault(), e.stopPropagation(), this.hoverNode(await this.getNextDropTarget());
                 }
             }),
