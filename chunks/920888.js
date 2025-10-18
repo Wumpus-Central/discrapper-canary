@@ -92,27 +92,27 @@ class T extends i.PureComponent {
                 disableReactionUpdates: n,
                 isLurking: i,
                 isGuest: a,
-                isPendingMember: g,
-                isForumToolbar: E,
-                channel: b,
-                className: y,
-                forceAddReactions: O,
-                reactionClassName: v,
-                useChatFontScaling: I,
-                forceHideReactionCreates: T,
-                remainingReactions: S,
-                combinedReactions: A,
-                visibleReactionsCount: C,
+                isPendingMember: c,
+                isForumToolbar: g,
+                channel: E,
+                className: b,
+                forceAddReactions: y,
+                reactionClassName: O,
+                useChatFontScaling: v,
+                forceHideReactionCreates: I,
+                remainingReactions: T,
+                combinedReactions: S,
+                visibleReactionsCount: A,
             } = this.props,
-            { disableTransitionAppear: N } = this.state,
-            R = I ? m : h,
-            P = C > 0;
-        if (!P && !O) return null;
-        let w = O || P;
+            { disableTransitionAppear: C } = this.state,
+            N = v ? m : h,
+            R = A > 0;
+        if (!R && !y) return null;
+        let P = y || R;
         return (0, r.jsxs)(s.W, {
             component: "div",
-            className: o()(R.reactions, y),
-            transitionAppear: !N,
+            className: o()(N.reactions, b),
+            transitionAppear: !C,
             role: "group",
             transitionLeave: !1,
             id: (0, d.bY)(e),
@@ -120,39 +120,38 @@ class T extends i.PureComponent {
             onMouseLeave: () => this.setState({ isHovered: !1 }),
             children: [
                 (0, r.jsx)(f.l, {
-                    reactions: A,
+                    reactions: S,
                     message: e,
                     readOnly: n,
                     isLurking: i,
                     isGuest: a,
-                    isPendingMember: g,
-                    isForumToolbar: E,
-                    useChatFontScaling: I,
-                    className: v,
+                    isPendingMember: c,
+                    isForumToolbar: g,
+                    useChatFontScaling: v,
+                    className: O,
                 }),
-                S > 0 &&
+                T > 0 &&
                     (0, r.jsx)(l.P3F, {
                         onClick: (t) => {
-                            t.stopPropagation(), (0, _.op)(b, e);
+                            t.stopPropagation(), (0, _.op)(E, e);
                         },
-                        className: o()(R.reaction, v, R.remainingReactions),
+                        className: o()(N.reaction, O, N.remainingReactions),
                         "aria-label": p.intl.string(p.t.lfIHs7),
                         children: (0, r.jsxs)(l.Text, {
-                            className: R.reactionInner,
+                            className: N.reactionInner,
                             variant: "text-sm/normal",
-                            children: ["+", S],
+                            children: ["+", T],
                         }),
                     }),
                 !t &&
-                    !T &&
+                    !I &&
                     (0, r.jsx)(u.X, {
-                        tabIndex: w || this.state.isHovered ? 0 : -1,
-                        type: c.O.NORMAL,
+                        tabIndex: P || this.state.isHovered ? 0 : -1,
                         message: e,
-                        channel: b,
-                        useChatFontScaling: I,
+                        channel: E,
+                        useChatFontScaling: v,
                         isHovered: this.state.isHovered,
-                        className: o()({ [R.forceShow]: w }),
+                        className: o()({ [N.forceShow]: P }),
                     }),
             ],
         });

@@ -189,7 +189,6 @@ function F(e) {
                                   }),
                                   !J &&
                                       (0, i.jsx)(y.X, {
-                                          type: b.O.NORMAL,
                                           message: Y,
                                           channel: K,
                                           useChatFontScaling: !1,

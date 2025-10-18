@@ -1,108 +1,107 @@
-n.d(t, { h: () => f });
+n.d(t, { h: () => h });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
     s = n(442837),
-    o = n(481060),
-    c = n(496675),
-    d = n(63063),
-    u = n(384632),
-    g = n(981631),
-    m = n(388032),
-    p = n(140367);
-function f(e) {
+    o = n(681715),
+    c = n(481060),
+    d = n(496675),
+    u = n(63063),
+    g = n(384632),
+    m = n(981631),
+    p = n(388032),
+    f = n(140367);
+function h(e) {
     let { activeType: t, onTypePicked: n, guild: l } = e,
-        f = l.features.has(g.GuildFeatures.COMMUNITY),
-        h = (0, s.e7)([c.Z], () => c.Z.can(g.Plq.ADMINISTRATOR, l)),
-        b = i.useMemo(() => {
-            let e = t === u.A.DISCOVERABLE && !h,
-                n = f && (t === u.A.DISCOVERABLE || h);
+        h = l.features.has(m.GuildFeatures.COMMUNITY),
+        b = (0, s.e7)([d.Z], () => d.Z.can(m.Plq.ADMINISTRATOR, l)),
+        x = i.useMemo(() => {
+            let e = t === g.A.DISCOVERABLE && !b,
+                n = h && (t === g.A.DISCOVERABLE || b);
             return [
                 {
-                    id: u.A.INVITE,
-                    title: m.intl.string(m.t["HQVS/P"]),
-                    body: m.intl.string(m.t.KzXzFR),
-                    icon: o.mBM,
+                    id: g.A.INVITE,
+                    title: p.intl.string(p.t["HQVS/P"]),
+                    body: p.intl.string(p.t.KzXzFR),
+                    icon: c.mBM,
                     enabled: !e,
-                    ineligibleText: m.intl.string(m.t.LIZgwM),
+                    ineligibleText: p.intl.string(p.t.LIZgwM),
                 },
                 {
-                    id: u.A.APPLY,
-                    title: m.intl.string(m.t.LrFEYW),
-                    body: m.intl.string(m.t.kJj2oK),
-                    icon: o._XJ,
+                    id: g.A.APPLY,
+                    title: p.intl.string(p.t.LrFEYW),
+                    body: p.intl.string(p.t.kJj2oK),
+                    icon: c._XJ,
                     enabled: !e,
-                    ineligibleText: m.intl.string(m.t.LIZgwM),
+                    ineligibleText: p.intl.string(p.t.LIZgwM),
                 },
                 {
-                    id: u.A.DISCOVERABLE,
-                    title: m.intl.string(m.t.lhOHLy),
-                    body: m.intl.string(m.t.pqQylZ),
-                    icon: o.enf,
+                    id: g.A.DISCOVERABLE,
+                    title: p.intl.string(p.t.lhOHLy),
+                    body: p.intl.string(p.t.pqQylZ),
+                    icon: c.enf,
                     enabled: n,
-                    ineligibleText: f ? m.intl.string(m.t.iBpXPj) : m.intl.string(m.t["5TQ+eH"]),
+                    ineligibleText: h ? p.intl.string(p.t.iBpXPj) : p.intl.string(p.t["5TQ+eH"]),
                 },
             ];
-        }, [t, f, h]);
+        }, [t, h, b]);
     return (0, r.jsxs)("div", {
         children: [
-            (0, r.jsx)(o.Heading, {
+            (0, r.jsx)(c.Heading, {
                 color: "header-primary",
                 variant: "text-md/semibold",
-                children: m.intl.string(m.t["N+GnPz"]),
+                children: p.intl.string(p.t["N+GnPz"]),
             }),
-            (0, r.jsx)(o.Text, {
+            (0, r.jsx)(c.Text, {
                 color: "text-secondary",
                 variant: "text-sm/medium",
-                className: p.bodyText,
-                children: m.intl.format(m.t["Y/jYws"], {
-                    helpdeskArticle: d.Z.getArticleURL(g.BhN.MEMBER_APPLICATIONS),
+                className: f.bodyText,
+                children: p.intl.format(p.t["Y/jYws"], {
+                    helpdeskArticle: u.Z.getArticleURL(m.BhN.MEMBER_APPLICATIONS),
                 }),
             }),
-            (0, r.jsx)(o.njP, {
+            (0, r.jsx)(c.njP, {
                 selectedItem: t,
                 onItemSelect: n,
                 orientation: "horizontal",
-                className: p.joinOptions,
-                children: b.map((e) => {
+                className: f.joinOptions,
+                children: x.map((e) => {
                     let n = e.id === t;
                     return (0, r.jsx)(
-                        o.njP.Item,
+                        c.njP.Item,
                         {
                             id: e.id,
                             selectedItem: t,
                             disableItemStyles: !0,
-                            className: p.joinOptionTab,
+                            className: f.joinOptionTab,
                             disabled: !e.enabled,
                             "aria-label": e.title,
-                            children: (0, r.jsx)(o.jSM, {
+                            children: (0, r.jsx)(o.u, {
                                 text: e.ineligibleText,
                                 position: "bottom",
                                 shouldShow: !e.enabled,
                                 spacing: 16,
                                 hideOnClick: !1,
-                                className: p.tooltipContainer,
-                                tooltipClassName: p.tooltip,
                                 children: (0, r.jsxs)("div", {
-                                    className: a()(p.joinOptionContent, {
-                                        [p.active]: n,
-                                        [p.uninteractive]: !e.enabled,
+                                    className: a()(f.joinOptionContent, {
+                                        [f.active]: n,
+                                        [f.uninteractive]: !e.enabled,
                                     }),
                                     children: [
                                         (0, r.jsx)(e.icon, {
                                             size: "md",
                                             color: n
-                                                ? o.TVs.colors.INTERACTIVE_ACTIVE
-                                                : o.TVs.colors.INTERACTIVE_NORMAL,
+                                                ? c.TVs.colors.INTERACTIVE_ACTIVE
+                                                : c.TVs.colors.INTERACTIVE_NORMAL,
                                         }),
-                                        (0, r.jsx)(o.Text, {
+                                        (0, r.jsx)(c.Text, {
                                             tag: "strong",
                                             color: n ? "interactive-active" : "interactive-normal",
                                             variant: "text-md/semibold",
                                             children: e.title,
                                         }),
-                                        (0, r.jsx)(o.Text, {
+                                        (0, r.jsx)(c.Text, {
                                             tag: "span",
                                             color: n ? "interactive-active" : "interactive-normal",
                                             variant: "text-xs/medium",
