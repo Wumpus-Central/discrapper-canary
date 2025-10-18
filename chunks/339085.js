@@ -707,7 +707,7 @@ class eF extends (r = d.ZP.PersistedStore) {
     getSearchResultsOrder(e, t, n, r, i) {
         let a = t.toLowerCase(),
             o = x.Z.escape(a),
-            l = a[0].toUpperCase() + a.slice(1),
+            l = a.slice(0, 1).toUpperCase() + a.slice(1),
             c = x.Z.escape(l);
         if (e.length > 0) {
             let {
