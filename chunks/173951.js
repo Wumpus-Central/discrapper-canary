@@ -1,39 +1,14 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var r = n(951288);
 n(647438);
 var i = n(436846),
     a = n(750312),
     l = n(30344);
 function o(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-function s(e) {
     var t,
         n,
-        { user: s, widget: c } = e,
-        u = (function (e, t) {
+        { user: o, widget: s, guildId: c, channelId: u, disableInteraction: d } = e,
+        f = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -53,33 +28,54 @@ function s(e) {
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(e, ["user", "widget"]);
+        })(e, ["user", "widget", "guildId", "channelId", "disableInteraction"]);
     return (0, r.jsx)(
         a.Z,
-        ((t = o(
+        ((t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                "function" == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        }),
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0,
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })(
             {
-                userId: s.id,
-                widget: c,
+                userId: o.id,
+                widget: s,
+                disableInteraction: d,
             },
-            u,
+            f,
         )),
         (n = n =
             {
                 children:
-                    c.games.length > 0
-                        ? (0, r.jsx)(
-                              l.Z,
-                              o(
-                                  {
-                                      userId: s.id,
-                                      games: c.games,
-                                      disableInteraction: u.disableInteraction,
-                                      widgetType: c.type,
-                                  },
-                                  u,
-                              ),
-                          )
-                        : (0, r.jsx)(i.Z, { widget: c }),
+                    s.games.length > 0
+                        ? (0, r.jsx)(l.Z, {
+                              userId: o.id,
+                              widgetType: s.type,
+                              games: s.games,
+                              guildId: c,
+                              channelId: u,
+                              disableInteraction: d,
+                          })
+                        : (0, r.jsx)(i.Z, { widget: s }),
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
