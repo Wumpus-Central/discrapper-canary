@@ -1,52 +1,56 @@
-n.d(t, { S: () => j });
+n.d(t, { S: () => O });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     l = n.n(a),
     o = n(79116),
-    s = n(793030),
-    c = n(594174),
+    c = n(793030),
+    s = n(594174),
     u = n(947790),
     d = n(747101),
-    f = n(817053),
-    g = n(533815),
-    p = n(919498),
-    m = n(853072),
-    b = n(388032),
-    h = n(932366),
-    v = n(133458);
-function y(e) {
+    f = n(733231),
+    g = n(817053),
+    p = n(533815),
+    m = n(919498),
+    b = n(853072),
+    h = n(388032),
+    v = n(932366),
+    y = n(133458);
+function j(e) {
     let { index: t, widgetType: n, game: a, children: o } = e,
-        c = i.useRef(null),
+        s = i.useRef(null),
         d = i.useRef(null),
-        { isDragging: f, dragSourcePosition: g } = (0, u.g)({
-            dragRef: c,
+        { registerDragHandleRef: g, manageFocusOnReorder: p } = (0, f.C)(),
+        { isDragging: m, dragSourcePosition: b } = (0, u.g)({
+            dragRef: s,
             dropRef: d,
             index: t,
             widgetType: n,
             game: a,
+            onReorder: () => p(a.applicationId),
         }),
-        p = null != g,
-        m = p && t < g,
-        h = p && t > g;
+        v = null != b,
+        j = v && t < b,
+        O = v && t > b;
     return (0, r.jsx)("div", {
         ref: d,
-        className: l()(v.container, {
-            [v.isDragging]: f,
-            [v.dropIndicatorBefore]: m,
-            [v.dropIndicatorAfter]: h,
+        className: l()(y.container, {
+            [y.isDragging]: m,
+            [y.dropIndicatorBefore]: j,
+            [y.dropIndicatorAfter]: O,
         }),
-        "aria-label": b.intl.formatToPlainString(b.t["0dR3g4"], { positionNumber: t + 1 }),
+        "aria-label": h.intl.formatToPlainString(h.t["0dR3g4"], { positionNumber: t + 1 }),
         children: (0, r.jsxs)("div", {
-            ref: c,
-            className: v.dragTarget,
+            ref: s,
+            className: y.dragTarget,
             children: [
                 o,
-                (0, r.jsx)(s.P3F, {
-                    "aria-label": b.intl.string(b.t.Zc1neH),
-                    className: v.dragHandle,
-                    focusProps: { ringTarget: c },
-                    children: (0, r.jsx)(s.Vni, {
+                (0, r.jsx)(c.P3F, {
+                    innerRef: g(a.applicationId),
+                    "aria-label": h.intl.string(h.t.Zc1neH),
+                    className: y.dragHandle,
+                    focusProps: { ringTarget: s },
+                    children: (0, r.jsx)(c.Vni, {
                         size: "sm",
                         color: "currentColor",
                     }),
@@ -55,57 +59,69 @@ function y(e) {
         }),
     });
 }
-function j(e) {
-    let { game: t, userId: n, widgetType: i, guildId: a, channelId: s, disableInteraction: u = !1, index: b } = e,
-        j = (0, m.Z)(t.applicationId).length > 0,
-        O = c.default.getCurrentUser(),
-        x = (null == O ? void 0 : O.id) === n,
-        _ = !u && x,
-        P = (0, d.kO)(t.applicationId),
-        { isDragging: I } = (0, o.f)((e) => ({ isDragging: e.isDragging() })),
-        w = () =>
+function O(e) {
+    let {
+            game: t,
+            userId: n,
+            widgetType: i,
+            guildId: a,
+            channelId: c,
+            disableInteraction: u = !1,
+            index: f,
+            onRemoveGame: h,
+            coverRef: O,
+        } = e,
+        x = (0, b.Z)(t.applicationId).length > 0,
+        _ = s.default.getCurrentUser(),
+        I = (null == _ ? void 0 : _.id) === n,
+        P = !u && I,
+        w = (0, d.kO)(t.applicationId),
+        { isDragging: S } = (0, o.f)((e) => ({ isDragging: e.isDragging() })),
+        E = () =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(f.Z, {
+                    (0, r.jsx)(g.Z, {
                         imageSrc: t.imageSrc,
                         gameName: t.gameName,
                         applicationId: t.applicationId,
                         userId: n,
                         disableInteraction: u,
                         className: l()(
-                            j ? v.socialProofBackdrop : void 0,
-                            (null == t ? void 0 : t.imageSrc) == null || u ? void 0 : h.hoverActiveEffect,
+                            x ? y.socialProofBackdrop : void 0,
+                            (null == t ? void 0 : t.imageSrc) == null || u ? void 0 : v.hoverActiveEffect,
                         ),
-                        hideTooltip: I,
+                        hideTooltip: S,
+                        coverRef: O,
                     }),
-                    _ &&
-                        (0, r.jsx)(g.Z, {
+                    P &&
+                        (0, r.jsx)(p.Z, {
                             game: t,
                             widgetType: i,
-                            className: v.removeGameButton,
+                            className: y.removeGameButton,
                             iconSize: "xs",
+                            onRemove: () => (null == h ? void 0 : h(t.applicationId)),
                         }),
                     !u &&
-                        (0, r.jsx)(p.Z, {
-                            className: v.socialProof,
+                        (0, r.jsx)(m.Z, {
+                            className: y.socialProof,
                             applicationId: t.applicationId,
                             guildId: a,
-                            channelId: s,
+                            channelId: c,
                             visuallyHideLabel: !0,
                         }),
                 ],
             });
-    return P
-        ? (0, r.jsx)("div", { className: h.loadingCover })
-        : _
-          ? (0, r.jsx)(y, {
+    return w
+        ? (0, r.jsx)("div", { className: v.loadingCover })
+        : P
+          ? (0, r.jsx)(j, {
                 widgetType: i,
-                index: null != b ? b : 0,
+                index: null != f ? f : 0,
                 game: t,
-                children: w(),
+                children: E(),
             })
           : (0, r.jsx)("div", {
-                className: v.container,
-                children: w(),
+                className: y.container,
+                children: E(),
             });
 }

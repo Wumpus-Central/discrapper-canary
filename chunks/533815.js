@@ -5,24 +5,26 @@ var i = n(120356),
     a = n.n(i),
     l = n(28664),
     o = n(481060),
-    s = n(785717),
-    c = n(86419),
+    c = n(785717),
+    s = n(86419),
     u = n(388032),
     d = n(51708);
 function f(e) {
-    let { game: t, widgetType: n, iconSize: i = "refresh_sm", className: f } = e,
-        { trackUserProfileEditAction: g } = (0, s.KZ)();
+    let { game: t, widgetType: n, iconSize: i = "refresh_sm", className: f, buttonRef: g, onRemove: p } = e,
+        { trackUserProfileEditAction: m } = (0, c.KZ)();
     return (0, r.jsx)(l.u, {
         text: u.intl.string(u.t.HUvyDQ),
         children: (0, r.jsx)(o.P3F, {
+            innerRef: g,
             onClick: () => {
-                (0, c.$b)(n, t.applicationId),
+                (0, s.$b)(n, t.applicationId),
                     o.uvj.announce(u.intl.string(u.t["08HmMj"])),
-                    g({
+                    m({
                         action: "GAME_REMOVED",
                         gameId: t.applicationId,
                         widgetEdited: n,
-                    });
+                    }),
+                    null == p || p();
             },
             "aria-label": u.intl.string(u.t.HUvyDQ),
             className: a()(f, d.clickable),

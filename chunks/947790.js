@@ -1,22 +1,22 @@
-n.d(t, { g: () => s }), n(388685);
+n.d(t, { g: () => c }), n(388685);
 var r = n(647438),
     i = n(100568),
     a = n(417865),
     l = n(665379),
     o = n(86419);
-function s(e) {
-    let { dragRef: t, dropRef: n, index: s, widgetType: c, game: u } = e,
-        d = "GAME_COVER_".concat(c),
-        f = r.useCallback(
+function c(e) {
+    let { dragRef: t, dropRef: n, index: c, widgetType: s, game: u, onReorder: d } = e,
+        f = "GAME_COVER_".concat(s),
+        g = r.useCallback(
             (e, t) => {
-                (0, o.Eq)(c, e, t);
+                (0, o.Eq)(s, e, t);
             },
-            [c],
+            [s],
         ),
-        [{ isDragging: g }, p, m] = (0, i.c)({
-            type: d,
+        [{ isDragging: p }, m, b] = (0, i.c)({
+            type: f,
             item: {
-                index: s,
+                index: c,
                 id: u.applicationId,
                 itemType: "GAME_COVER",
                 gameName: u.gameName,
@@ -26,15 +26,16 @@ function s(e) {
                 handlerId: e.getHandlerId(),
                 isDragging: e.isDragging(),
             }),
+            end: d,
         });
     r.useEffect(() => {
-        m((0, l.r)(), { captureDraggingState: !0 });
-    }, [m]);
-    let [{ dragSourcePosition: b }, h] = (0, a.L)({
-        accept: d,
+        b((0, l.r)(), { captureDraggingState: !0 });
+    }, [b]);
+    let [{ dragSourcePosition: h }, v] = (0, a.L)({
+        accept: f,
         drop: (e) => {
             let t = e.index;
-            t !== s && (f(t, s), (e.index = s));
+            t !== c && (g(t, c), (e.index = c));
         },
         collect: (e) => {
             let t = e.getItem(),
@@ -49,11 +50,11 @@ function s(e) {
         },
     });
     return (
-        p(t),
-        h(n),
+        m(t),
+        v(n),
         {
-            isDragging: g,
-            dragSourcePosition: b,
+            isDragging: p,
+            dragSourcePosition: h,
         }
     );
 }

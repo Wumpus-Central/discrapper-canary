@@ -1,11 +1,40 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => f });
 var r = n(951288);
 n(647438);
-var i = n(623132),
-    a = n(112794);
-function l(e) {
-    var { games: t, widgetType: n } = e,
-        l = (function (e, t) {
+var i = n(442837),
+    a = n(314897),
+    l = n(733231),
+    o = n(623132),
+    c = n(34335),
+    s = n(112794);
+function u(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function d(e) {
+    var { games: t, user: n, widgetType: i } = e,
+        a = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -25,50 +54,42 @@ function l(e) {
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(e, ["games", "widgetType"]);
+        })(e, ["games", "user", "widgetType"]);
+    let { registerItemRef: c, manageFocusOnDelete: d } = (0, l.C)();
     return (0, r.jsx)("ul", {
-        className: a.cardList,
-        children: t.map((e, t) =>
+        className: s.cardList,
+        children: t.map((e) =>
             (0, r.jsx)(
                 "li",
                 {
                     children: (0, r.jsx)(
-                        i.Z,
-                        (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
-                                "function" == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        }),
-                                    )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        (r = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: r,
-                                                      enumerable: !0,
-                                                      configurable: !0,
-                                                      writable: !0,
-                                                  })
-                                                : (e[t] = r);
-                                    });
-                            }
-                            return e;
-                        })(
+                        o.Z,
+                        u(
                             {
+                                user: n,
                                 game: e,
-                                widgetType: n,
+                                widgetType: i,
+                                coverRef: c(e.applicationId),
+                                onRemoveGame: d,
                             },
-                            l,
+                            a,
                         ),
                     ),
                 },
-                "".concat(e.applicationId, "-").concat(t),
+                e.applicationId,
             ),
         ),
     });
+}
+function f(e) {
+    let { user: t, widgetType: n, disableInteraction: o } = e,
+        s = (0, i.e7)([a.default], () => a.default.getId() === t.id),
+        { getManageButtonForWidget: f } = (0, c.j)(),
+        g = f(n);
+    return s && !o
+        ? (0, r.jsx)(l.d, {
+              emptyListFallbackRef: g,
+              children: (0, r.jsx)(d, u({}, e)),
+          })
+        : (0, r.jsx)(d, u({}, e));
 }
