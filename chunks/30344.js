@@ -5,8 +5,8 @@ var i = n(442837),
     a = n(314897),
     l = n(733231),
     o = n(890814),
-    c = n(753436),
-    s = n(34335);
+    s = n(753436),
+    c = n(34335);
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,43 +58,27 @@ function d(e) {
     let { registerItemRef: i, manageFocusOnDelete: a } = (0, l.C)();
     return (0, r.jsx)(o.Z, {
         games: t,
-        renderGame: (e, t) => {
-            var l, o;
-            return (0, r.jsx)(
-                c.S,
-                ((l = u(
+        renderGame: (e, t) =>
+            (0, r.jsx)(
+                s.S,
+                u(
                     {
+                        index: t,
                         game: e,
                         coverRef: i(e.applicationId),
                         onRemoveGame: a,
                     },
                     n,
-                )),
-                (o = o = { index: t }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
-                          }
-                          return n;
-                      })(Object(o)).forEach(function (e) {
-                          Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
-                      }),
-                l),
-                e.applicationId,
-            );
-        },
+                ),
+            ),
     });
 }
 function f(e) {
     let { userId: t, widgetType: n, disableInteraction: o } = e,
-        c = (0, i.e7)([a.default], () => a.default.getId() === t),
-        { getManageButtonForWidget: f } = (0, s.j)(),
+        s = (0, i.e7)([a.default], () => a.default.getId() === t),
+        { getManageButtonForWidget: f } = (0, c.j)(),
         g = f(n);
-    return c && !o
+    return s && !o
         ? (0, r.jsx)(l.d, {
               emptyListFallbackRef: g,
               children: (0, r.jsx)(d, u({}, e)),

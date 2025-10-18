@@ -4,11 +4,11 @@ var r = n(647438),
     a = n(100568),
     l = n(417865),
     o = n(665379),
-    c = n(592183),
-    s = n(517157);
+    s = n(592183),
+    c = n(517157);
 function u(e) {
     let { dropRef: t, dragRef: n, userId: u, widget: d, index: f, disableInteraction: g = !1, onReorder: p } = e,
-        m = (0, s.Z)(u),
+        m = (0, c.Z)(u),
         { isDragging: b, currentItem: h } = (0, i.f)((e) => ({
             isDragging: e.isDragging(),
             currentItem: e.getItem(),
@@ -17,7 +17,7 @@ function u(e) {
             (e, t) => {
                 let n = m.slice(),
                     [r] = n.splice(e, 1);
-                n.splice(t, 0, r), c.Z.setPendingWidgets(n);
+                n.splice(t, 0, r), s.Z.setPendingWidgets(n);
             },
             [m],
         ),
@@ -26,9 +26,8 @@ function u(e) {
             item: {
                 widgetType: d.type,
                 index: f,
-                widget: d,
-                originalIndex: null != f ? f : 0,
-                type: "WIDGET",
+                itemType: "WIDGET",
+                itemPreviewProps: { widget: d },
             },
             canDrag: () => !g,
             collect: (e) => ({
@@ -47,7 +46,7 @@ function u(e) {
             let t = null,
                 n = e.getItem();
             return (
-                null != n && e.isOver() && e.canDrop() && n.widgetType !== d.type && (t = n.originalIndex),
+                null != n && e.isOver() && e.canDrop() && n.widgetType !== d.type && (t = n.index),
                 {
                     handlerId: e.getHandlerId(),
                     dragSourcePosition: t,
