@@ -1,7 +1,4 @@
-n.d(t, {
-    Y: () => a,
-    m: () => i,
-});
+n.d(t, { Y: () => i });
 let r = (0, n(722733).Z)({
     kind: "user",
     name: "2025-08-negative-hardware-acceleration",
@@ -25,8 +22,5 @@ let r = (0, n(722733).Z)({
     },
 });
 function i(e) {
-    return r.getConfig({ location: e }).forceEnableVideoHardwareAcceleration;
-}
-function a(e) {
     return r.getConfig({ location: e }).forceEnableAppHardwareAcceleration;
 }

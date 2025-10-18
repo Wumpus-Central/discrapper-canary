@@ -66,13 +66,6 @@ class m extends c.Z {
                 quality: t.clipsQuality,
             });
     }
-    handleMediaEngineSetHardwareEncoding(e) {
-        let { enabled: t } = e;
-        if (!t) {
-            let { clipsEnabled: e } = u.Z.getSettings();
-            e && f.em({ clipsEnabled: !1 });
-        }
-    }
     disableClips() {
         f.em({
             clipsEnabled: !1,
