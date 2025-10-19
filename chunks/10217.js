@@ -10,13 +10,13 @@ var l = n(951288),
     d = n(442837),
     p = n(846519),
     m = n(212605),
-    f = n(28664),
-    g = n(755721),
-    b = n(481060),
-    h = n(100527),
-    x = n(906732),
-    j = n(70097),
-    y = n(318374),
+    f = n(36563),
+    g = n(28664),
+    b = n(755721),
+    h = n(481060),
+    x = n(100527),
+    j = n(906732),
+    y = n(70097),
     _ = n(594174),
     v = n(962399),
     C = n(626135),
@@ -29,9 +29,9 @@ var l = n(951288),
     I = n(134351);
 let S = function (e) {
     var t, n, r;
-    let { clip: o, exporting: s, actionsDisabled: u, isNew: m, onDelete: f, onEdit: g, onShare: j } = e,
+    let { clip: o, exporting: s, actionsDisabled: u, isNew: m, onDelete: g, onEdit: b, onShare: y } = e,
         v = (0, d.Wu)([_.default], () => o.users.map((e) => _.default.getUser(e)).filter(O.lm)),
-        { analyticsLocations: w } = (0, x.ZP)(h.Z.CLIPS_GALLERY_ITEM),
+        { analyticsLocations: w } = (0, j.ZP)(x.Z.CLIPS_GALLERY_ITEM),
         [N, S] = a.useState(!1),
         D = a.useRef(null),
         M = (0, c.Z)(null != (r = null == (t = o.editMetadata) ? void 0 : t.start) ? r : 0),
@@ -74,15 +74,15 @@ let S = function (e) {
             minute: "2-digit",
         }),
         K = "".concat(F, " \u2022 ").concat(G);
-    return (0, l.jsx)(x.Gt, {
+    return (0, l.jsx)(j.Gt, {
         value: w,
-        children: (0, l.jsxs)(b.kL8, {
+        children: (0, l.jsxs)(h.kL8, {
             "aria-disabled": u,
             "aria-label": E.intl.string(E.t.bt75u7),
             onClick: u
                 ? void 0
                 : () => {
-                      g(o), C.default.track(T.rMx.CLIP_GALLERY_CARD_CLICKED);
+                      b(o), C.default.track(T.rMx.CLIP_GALLERY_CARD_CLICKED);
                   },
             className: i()(I.clipItem, { [I.disabled]: u }),
             onBlur: B,
@@ -103,13 +103,13 @@ let S = function (e) {
                             focused: N,
                             onFocus: A,
                         }),
-                        (0, l.jsx)(b.Text, {
+                        (0, l.jsx)(h.Text, {
                             className: I.clipMetadata,
                             color: "text-default",
                             variant: "text-md/medium",
                             children: o.applicationName,
                         }),
-                        (0, l.jsx)(b.Text, {
+                        (0, l.jsx)(h.Text, {
                             className: I.clipMetadata,
                             color: "text-default",
                             variant: "text-md/medium",
@@ -118,7 +118,7 @@ let S = function (e) {
                         (0, l.jsxs)("div", {
                             className: I.usersAndDelete,
                             children: [
-                                (0, l.jsx)(y.Z, {
+                                (0, l.jsx)(f.Z, {
                                     maxUsers: 4,
                                     users: v,
                                     onFocusOverflow: (e) => {
@@ -143,9 +143,9 @@ let S = function (e) {
                                         actionsDisabled: u,
                                         exporting: s,
                                         onBeforeDelete: H,
-                                        onDelete: f,
-                                        onEdit: g,
-                                        onShare: j,
+                                        onDelete: g,
+                                        onEdit: b,
+                                        onShare: y,
                                         onBlur: (e) => {
                                             var t;
                                             (null == (t = e.relatedTarget) ? void 0 : t.parentElement) !==
@@ -183,7 +183,7 @@ function k(e) {
                     i &&
                         (0, l.jsx)("div", {
                             className: I.clipProcessingBadge,
-                            children: (0, l.jsx)(b.Text, {
+                            children: (0, l.jsx)(h.Text, {
                                 variant: "text-md/medium",
                                 color: "always-white",
                                 children: E.intl.string(E.t["2Fp7OD"]),
@@ -191,12 +191,12 @@ function k(e) {
                         }),
                     !i &&
                         n &&
-                        (0, l.jsxs)(b.Text, {
+                        (0, l.jsxs)(h.Text, {
                             className: I.clipNewBadge,
                             variant: "eyebrow",
                             color: "always-white",
                             children: [
-                                (0, l.jsx)(b.T$Z, {
+                                (0, l.jsx)(h.T$Z, {
                                     size: "md",
                                     color: "currentColor",
                                     className: I.newIcon,
@@ -209,7 +209,7 @@ function k(e) {
                             className: I.clipDurationBadge,
                             children: [
                                 o ? (0, l.jsx)(v.Z, { className: I.clipDurationEditIcon }) : null,
-                                (0, l.jsx)(b.Text, {
+                                (0, l.jsx)(h.Text, {
                                     variant: "text-md/medium",
                                     color: "always-white",
                                     children: "".concat(c.minutes(), ":").concat(u),
@@ -228,9 +228,9 @@ function Z(e) {
         c = !n.name,
         [u, d] = a.useState(!1),
         [p, f] = a.useState(null != (t = n.name) ? t : ""),
-        [g, h] = a.useState(!1),
+        [g, b] = a.useState(!1),
         x = async () => {
-            h(!0), await (0, w.Tm)(n.id, { name: "" === p ? void 0 : p }), h(!1), d(!1);
+            b(!0), await (0, w.Tm)(n.id, { name: "" === p ? void 0 : p }), b(!1), d(!1);
         };
     return (a.useEffect(() => {
         if (o !== n.name) {
@@ -239,7 +239,7 @@ function Z(e) {
         }
     }, [n.name, o]),
     u)
-        ? (0, l.jsx)(b.oil, {
+        ? (0, l.jsx)(h.oil, {
               onClick: (e) => e.stopPropagation(),
               value: p,
               autoFocus: !0,
@@ -250,7 +250,7 @@ function Z(e) {
               onChange: f,
               onBlur: x,
           })
-        : (0, l.jsxs)(b.P3F, {
+        : (0, l.jsxs)(h.P3F, {
               className: I.clipTitleInputPlaceholder,
               onFocus: i,
               onClick: (e) => {
@@ -258,23 +258,23 @@ function Z(e) {
               },
               children: [
                   c
-                      ? (0, l.jsx)(b.Heading, {
+                      ? (0, l.jsx)(h.Heading, {
                             className: I.clipTitle,
                             color: "text-muted",
                             variant: "heading-lg/medium",
                             children: E.intl.string(E.t["x+/nmJ"]),
                         })
-                      : (0, l.jsx)(b.Heading, {
+                      : (0, l.jsx)(h.Heading, {
                             className: I.clipTitle,
                             color: "text-default",
                             variant: "heading-lg/medium",
                             children: n.name,
                         }),
                   r &&
-                      (0, l.jsx)(b.vdY, {
+                      (0, l.jsx)(h.vdY, {
                           size: "custom",
                           "aria-label": E.intl.string(E.t.bt75u7),
-                          color: b.TVs.colors.TEXT_MUTED,
+                          color: h.TVs.colors.TEXT_MUTED,
                           height: m.Z.sm,
                           width: m.Z.sm,
                           className: I.clipTitleIcon,
@@ -286,12 +286,12 @@ function D(e) {
     let { clip: t, videoRef: n } = e,
         a = (0, N.l)(t);
     return 0 === t.length
-        ? (0, l.jsx)(b.$jN, {
-              type: b.RAz.SPINNING_CIRCLE_SIMPLE,
+        ? (0, l.jsx)(h.$jN, {
+              type: h.RAz.SPINNING_CIRCLE_SIMPLE,
               className: I.clipThumb,
           })
         : null != a
-          ? (0, l.jsx)(j.Z, {
+          ? (0, l.jsx)(y.Z, {
                 preload: "metadata",
                 muted: !0,
                 poster: t.thumbnail,
@@ -326,7 +326,7 @@ function L(e) {
             },
             [o, i, t],
         ),
-        h = a.useCallback(
+        f = a.useCallback(
             (e) => {
                 e.stopPropagation(), s(t), C.default.track(T.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "edit" });
             },
@@ -342,48 +342,48 @@ function L(e) {
         className: I.buttonContainer,
         children: [
             null != o &&
-                (0, l.jsx)(f.u, {
+                (0, l.jsx)(g.u, {
                     text: E.intl.string(E.t.oyYWHB),
-                    children: (0, l.jsx)(g.zx, {
+                    children: (0, l.jsx)(b.zx, {
                         disabled: r,
-                        color: p ? g.zx.Colors.RED : g.zx.Colors.PRIMARY,
+                        color: p ? b.zx.Colors.RED : b.zx.Colors.PRIMARY,
                         onClick: m,
                         className: I.button,
-                        size: g.zx.Sizes.NONE,
-                        look: g.zx.Looks.FILLED,
-                        children: (0, l.jsx)(b.XHJ, {
+                        size: b.zx.Sizes.NONE,
+                        look: b.zx.Looks.FILLED,
+                        children: (0, l.jsx)(h.XHJ, {
                             size: "md",
                             color: "currentColor",
                             className: I.miniIcon,
                         }),
                     }),
                 }),
-            (0, l.jsx)(f.u, {
+            (0, l.jsx)(g.u, {
                 text: E.intl.string(E.t.bt75u7),
-                children: (0, l.jsx)(g.zx, {
+                children: (0, l.jsx)(b.zx, {
                     disabled: r,
-                    color: g.zx.Colors.PRIMARY,
-                    onClick: h,
+                    color: b.zx.Colors.PRIMARY,
+                    onClick: f,
                     className: I.button,
-                    size: g.zx.Sizes.NONE,
-                    look: g.zx.Looks.FILLED,
+                    size: b.zx.Sizes.NONE,
+                    look: b.zx.Looks.FILLED,
                     children: (0, l.jsx)(v.Z, { className: I.miniIcon }),
                 }),
             }),
-            (0, l.jsx)(f.u, {
+            (0, l.jsx)(g.u, {
                 text: E.intl.string(E.t.RDE0SU),
-                children: (0, l.jsx)(g.zx, {
+                children: (0, l.jsx)(b.zx, {
                     disabled: r && !n,
                     submitting: n,
-                    color: g.zx.Colors.BRAND,
+                    color: b.zx.Colors.BRAND,
                     onBlur: (e) => {
                         d(e);
                     },
                     onClick: x,
                     className: I.button,
-                    size: g.zx.Sizes.NONE,
-                    look: g.zx.Looks.FILLED,
-                    children: (0, l.jsx)(b.aAc, {
+                    size: b.zx.Sizes.NONE,
+                    look: b.zx.Looks.FILLED,
+                    children: (0, l.jsx)(h.aAc, {
                         size: "lg",
                         color: "currentColor",
                         className: I.miniIcon,

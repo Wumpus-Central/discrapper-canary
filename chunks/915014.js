@@ -1,9 +1,9 @@
 n.d(t, { Z: () => h });
 var r = n(951288);
 n(647438);
-var i = n(481060),
-    a = n(318374),
-    o = n(522289),
+var i = n(36563),
+    a = n(139117),
+    o = n(481060),
     s = n(565138),
     l = n(806729),
     c = n(708108),
@@ -21,11 +21,11 @@ function h(e) {
     if (!g && !E) return null;
     let y = () =>
             g
-                ? (0, r.jsxs)(i.P3F, {
+                ? (0, r.jsxs)(o.P3F, {
                       className: _.section,
                       onClick: () => (null == n ? void 0 : n(d.oh.MUTUAL_FRIENDS)),
                       children: [
-                          (0, r.jsx)(a.Z, {
+                          (0, r.jsx)(i.Z, {
                               maxUsers: p,
                               users: h.map((e) => {
                                   let { user: t } = e;
@@ -36,7 +36,7 @@ function h(e) {
                               disableUsernameTooltip: !0,
                               "aria-hidden": !0,
                           }),
-                          (0, r.jsx)(i.Text, {
+                          (0, r.jsx)(o.Text, {
                               className: _.text,
                               variant: b,
                               color: "interactive-normal",
@@ -54,12 +54,12 @@ function h(e) {
                 : null,
         v = () =>
             E
-                ? (0, r.jsxs)(i.P3F, {
+                ? (0, r.jsxs)(o.P3F, {
                       className: _.section,
                       onClick: () => (null == n ? void 0 : n(d.oh.MUTUAL_GUILDS)),
                       children: [
                           !g &&
-                              (0, r.jsx)(o.Z, {
+                              (0, r.jsx)(a.Z, {
                                   maxGuilds: p,
                                   guilds: m.map((e) => {
                                       let { guild: t } = e;
@@ -69,7 +69,7 @@ function h(e) {
                                   hideOverflowCount: !0,
                                   disableGuildNameTooltip: !0,
                               }),
-                          (0, r.jsx)(i.Text, {
+                          (0, r.jsx)(o.Text, {
                               className: _.text,
                               variant: b,
                               color: "interactive-normal",

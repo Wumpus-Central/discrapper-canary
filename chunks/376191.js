@@ -2,15 +2,15 @@ n.d(t, { Z: () => C });
 var r = n(951288);
 n(647438);
 var i = n(442837),
-    l = n(481060),
-    a = n(129861),
-    o = n(607070),
-    s = n(570928),
-    c = n(388905),
-    u = n(1585),
-    d = n(125988),
-    p = n(43267),
-    f = n(522289),
+    l = n(139117),
+    a = n(481060),
+    o = n(129861),
+    s = n(607070),
+    c = n(570928),
+    u = n(388905),
+    d = n(1585),
+    p = n(125988),
+    f = n(43267),
     h = n(699516),
     g = n(51144),
     m = n(998502),
@@ -23,7 +23,7 @@ let y = (e) => {
         let { userId: t } = e,
             n = (0, _.O)(t);
         return null == n || 0 === n.length
-            ? (0, r.jsx)(l.Text, {
+            ? (0, r.jsx)(a.Text, {
                   className: v.mutualGuilds,
                   variant: "text-sm/normal",
                   color: "text-muted",
@@ -32,13 +32,13 @@ let y = (e) => {
             : (0, r.jsxs)("div", {
                   className: v.mutualGuildsContainer,
                   children: [
-                      (0, r.jsx)(f.Z, {
+                      (0, r.jsx)(l.Z, {
                           guilds: n,
                           maxGuilds: 3,
-                          size: c.Vj.Sizes.SMOL,
+                          size: u.Vj.Sizes.SMOL,
                           hideOverflowCount: !0,
                       }),
-                      (0, r.jsx)(l.Text, {
+                      (0, r.jsx)(a.Text, {
                           className: v.mutualGuilds,
                           variant: "text-sm/normal",
                           color: "text-muted",
@@ -47,27 +47,27 @@ let y = (e) => {
                   ],
               });
     },
-    I = m.ZP.getEnableHardwareAcceleration() ? l.Xo$ : l.qEK;
+    I = m.ZP.getEnableHardwareAcceleration() ? a.Xo$ : a.qEK;
 function C(e) {
     var t;
-    let { channel: n, otherUser: c, active: f } = e,
-        m = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
-        _ = (0, i.e7)([h.Z], () => (null == c ? null : h.Z.getNickname(c.id))),
-        C = !m && f,
+    let { channel: n, otherUser: l, active: u } = e,
+        m = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
+        _ = (0, i.e7)([h.Z], () => (null == l ? null : h.Z.getNickname(l.id))),
+        C = !m && u,
         S = (0, b.c)(n),
-        { avatarDecorationSrc: N } = (0, d.Z)({
-            user: c,
-            size: (0, u.y9)(l.EFr.SIZE_40),
+        { avatarDecorationSrc: N } = (0, p.Z)({
+            user: l,
+            size: (0, d.y9)(a.EFr.SIZE_40),
             onlyAnimateOnHoverOrFocus: !0,
         });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(I, {
                 className: v.avatar,
-                src: (0, p.x)(n, 40, C),
+                src: (0, f.x)(n, 40, C),
                 avatarDecoration: N,
-                size: l.EFr.SIZE_40,
-                "aria-label": null != (t = null == c ? void 0 : c.username) ? t : O.intl.string(O.t["30mdIy"]),
+                size: a.EFr.SIZE_40,
+                "aria-label": null != (t = null == l ? void 0 : l.username) ? t : O.intl.string(O.t["30mdIy"]),
             }),
             (0, r.jsxs)("div", {
                 className: v.userPreview,
@@ -75,15 +75,15 @@ function C(e) {
                     (0, r.jsxs)("div", {
                         className: v.userContainerWithPreview,
                         children: [
-                            (0, r.jsx)(a.Z, {
+                            (0, r.jsx)(o.Z, {
                                 nick: _,
-                                user: c,
+                                user: l,
                                 showAccountIdentifier: !0,
                                 className: v.tagContainer,
                                 usernameClass: v.username,
-                                discriminatorClass: null != g.ZP.getGlobalName(c) ? v.globalName : v.discriminator,
+                                discriminatorClass: null != g.ZP.getGlobalName(l) ? v.globalName : v.discriminator,
                             }),
-                            (0, r.jsx)(l.Text, {
+                            (0, r.jsx)(a.Text, {
                                 className: v.timestampWithPreview,
                                 color: "text-muted",
                                 variant: "text-xs/normal",
@@ -91,10 +91,10 @@ function C(e) {
                             }),
                         ],
                     }),
-                    (0, r.jsx)(s.Z, {
+                    (0, r.jsx)(c.Z, {
                         hoverText: (0, r.jsx)(E.Z, { channel: n }),
-                        forceHover: f,
-                        children: (0, r.jsx)(y, { userId: c.id }),
+                        forceHover: u,
+                        children: (0, r.jsx)(y, { userId: l.id }),
                     }),
                 ],
             }),

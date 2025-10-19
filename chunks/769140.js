@@ -4,17 +4,17 @@ n(647438);
 var i = n(120356),
     a = n.n(i),
     o = n(442837),
-    s = n(481060),
-    l = n(287734),
-    c = n(872810),
-    u = n(110924),
-    d = n(833664),
-    f = n(579630),
-    _ = n(622822),
-    p = n(100527),
-    h = n(906732),
-    m = n(194082),
-    g = n(318374),
+    s = n(36563),
+    l = n(481060),
+    c = n(287734),
+    u = n(872810),
+    d = n(110924),
+    f = n(833664),
+    _ = n(579630),
+    p = n(622822),
+    h = n(100527),
+    m = n(906732),
+    g = n(194082),
     E = n(449605),
     b = n(102172),
     y = n(592125),
@@ -51,8 +51,8 @@ function Z(e) {
                   })
                 : [],
         ),
-        z = (0, o.e7)([I.Z], () => I.Z.findActivity(t.id, (e) => (0, d.Z)(e) && !(0, f.Z)(e))),
-        { analyticsLocations: q } = (0, h.ZP)(p.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        z = (0, o.e7)([I.Z], () => I.Z.findActivity(t.id, (e) => (0, f.Z)(e) && !(0, _.Z)(e))),
+        { analyticsLocations: q } = (0, m.ZP)(h.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         X = (0, S.Z)({
             display: "live",
             voiceChannelId: null == W ? void 0 : W.id,
@@ -70,9 +70,9 @@ function Z(e) {
             null == i ? void 0 : i.ownerId,
         ),
         [ee, et] = (0, b.wq)(W),
-        en = (0, _.Kt)() && (0, _.zd)(null == W ? void 0 : W.id),
+        en = (0, p.Kt)() && (0, p.zd)(null == W ? void 0 : W.id),
         er = (0, o.e7)([v.Z], () => null != W && !en && v.Z.canBasicChannel(x.S7T.CONNECT, W)),
-        ei = (0, u.Z)($ ? null : J),
+        ei = (0, d.Z)($ ? null : J),
         ea = $ || null == J ? ei : J;
     if (null == Y || null == W || !1 === i.discoverable) return null;
     let eo = () => {
@@ -80,17 +80,17 @@ function Z(e) {
                 e.stopPropagation(),
                     ee &&
                         (X({ action: "PRESS_IMAGE" }),
-                        l.default.selectVoiceChannel(i.channelId),
-                        (0, c.iV)(i),
+                        c.default.selectVoiceChannel(i.channelId),
+                        (0, u.iV)(i),
                         null == F || F());
             };
             return null == ea && $
                 ? (0, r.jsx)("div", {
                       className: U.preview,
-                      children: (0, r.jsx)(s.$jN, {}),
+                      children: (0, r.jsx)(l.$jN, {}),
                   })
                 : null == ea || en
-                  ? (0, r.jsxs)(s.P3F, {
+                  ? (0, r.jsxs)(l.P3F, {
                         className: a()(U.preview, U.overlay, ee ? U.clickable : U.disabled),
                         onClick: e,
                         "aria-label": (0, b.gR)(et),
@@ -104,13 +104,13 @@ function Z(e) {
                                 V !== M.l.MODAL_V2 &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
-                                        (0, r.jsx)(s.Text, {
+                                        (0, r.jsx)(l.Text, {
                                             className: U.overlayText,
                                             variant: "text-sm/medium",
                                             color: "always-white",
                                             children: (0, b.P9)(et),
                                         }),
-                                        (0, r.jsx)(s.Text, {
+                                        (0, r.jsx)(l.Text, {
                                             variant: "text-sm/medium",
                                             children: er ? k.intl.string(k.t.uQZTBQ) : k.intl.string(k.t.pgUTZG),
                                         }),
@@ -118,7 +118,7 @@ function Z(e) {
                                 }),
                         ],
                     })
-                  : (0, r.jsxs)(s.P3F, {
+                  : (0, r.jsxs)(l.P3F, {
                         className: a()(U.preview, U.overlay, ee ? U.clickable : U.disabled),
                         onClick: e,
                         "aria-label": (0, b.gR)(et),
@@ -133,13 +133,13 @@ function Z(e) {
                                 V !== M.l.MODAL_V2 &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
-                                        (0, r.jsx)(s.Text, {
+                                        (0, r.jsx)(l.Text, {
                                             className: U.overlayText,
                                             variant: "text-sm/medium",
                                             color: "always-white",
                                             children: (0, b.P9)(et),
                                         }),
-                                        (0, r.jsx)(s.gw7, {
+                                        (0, r.jsx)(l.gw7, {
                                             size: "xs",
                                             color: "currentColor",
                                             className: U.clyde,
@@ -161,12 +161,12 @@ function Z(e) {
                               onAction: X,
                               onClose: F,
                           }),
-                          (0, r.jsx)(g.Z, {
+                          (0, r.jsx)(s.Z, {
                               users: K,
                               guildId: Y.id,
                               channelId: W.id,
                               maxUsers: w.W,
-                              size: s.EFr.SIZE_16,
+                              size: l.EFr.SIZE_16,
                               onClickOverflow: (e) => {
                                   null == e || e.stopPropagation(),
                                       null == X || X({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
@@ -201,7 +201,7 @@ function Z(e) {
                       }),
                   }),
         eu = null != z ? k.intl.formatToPlainString(k.t["4CQq9f"], { name: z.name }) : k.intl.string(k.t["Jpkr/v"]);
-    return (0, r.jsx)(h.Gt, {
+    return (0, r.jsx)(m.Gt, {
         value: q,
         children: (0, r.jsxs)(N.Z, {
             ref: Q,
@@ -212,7 +212,7 @@ function Z(e) {
             children: [
                 (0, r.jsx)(R.Z, {
                     text: eu,
-                    tags: (0, r.jsx)(m.ZP, { size: m.OH.SMALL }),
+                    tags: (0, r.jsx)(g.ZP, { size: g.OH.SMALL }),
                     contextMenu: (0, r.jsx)(L.Z, {
                         display: "live",
                         user: t,

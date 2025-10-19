@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(481060),
-    l = n(318374),
+    s = n(36563),
+    l = n(481060),
     c = n(5192),
     u = n(192918),
     d = n(256139),
@@ -88,7 +88,7 @@ function y(e) {
                               channel: n,
                               children: (e) =>
                                   (0, r.jsx)(
-                                      s.P3F,
+                                      l.P3F,
                                       b(
                                           g(
                                               {
@@ -98,10 +98,10 @@ function y(e) {
                                               e,
                                           ),
                                           {
-                                              children: (0, r.jsx)(l.Z, {
+                                              children: (0, r.jsx)(s.Z, {
                                                   maxUsers: 3,
                                                   users: y,
-                                                  size: s.EFr.SIZE_20,
+                                                  size: l.EFr.SIZE_20,
                                                   hideOverflowCount: !0,
                                                   disableUsernameTooltip: !0,
                                               }),
@@ -109,14 +109,14 @@ function y(e) {
                                       ),
                                   ),
                           }),
-                          (0, r.jsx)(s.LZC, {
+                          (0, r.jsx)(l.LZC, {
                               size: 6,
                               horizontal: !0,
                           }),
                       ],
                   })
                 : null,
-            (0, r.jsx)(s.Heading, {
+            (0, r.jsx)(l.Heading, {
                 variant: "text-sm/semibold",
                 color: "text-secondary",
                 className: o()(h.truncatedText, h.usersHeader),
@@ -157,7 +157,7 @@ function y(e) {
                                         d.Z,
                                         b(g({}, t), {
                                             tag: "span",
-                                            children: (0, r.jsx)(s.Text, {
+                                            children: (0, r.jsx)(l.Text, {
                                                 ref: E,
                                                 variant: "text-sm/semibold",
                                                 color: "text-primary",
