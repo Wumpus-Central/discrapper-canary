@@ -26,7 +26,7 @@ let o = {
     titleBarStyle: null,
 };
 function s(e, t) {
-    let n = i.ZP.isOverlayV3EnabledForPID(t),
+    let n = i.Z.isOverlayV3EnabledForPID(t),
         a = r.default.disableClickableRegions;
     n ||
         a ||
@@ -48,7 +48,7 @@ function u(e) {
         pid: e,
         enabled: !1,
     });
-    let t = i.ZP.isOverlayV3EnabledForPID(e),
+    let t = i.Z.isOverlayV3EnabledForPID(e),
         n = r.default.disableClickableRegions;
     r.default.isLocked(e) ||
         t ||

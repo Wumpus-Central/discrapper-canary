@@ -18,7 +18,7 @@ var r = n(951288),
     b = n(74299),
     y = n(577153),
     O = n(365023),
-    v = n(610394),
+    v = n(509140),
     I = n(825655),
     T = n(131951),
     S = n(556296),
@@ -533,7 +533,7 @@ class Y extends i.PureComponent {
 function W() {
     let e = (0, c.e7)([S.ZP], () => S.ZP.getState()),
         t = (0, c.e7)([T.Z], () => (0, b.Z)(T.Z)),
-        n = (0, c.e7)([v.ZP], () => v.ZP.isSupported()),
+        n = (0, c.e7)([v.Z], () => v.Z.isSupported),
         i = (0, E.Go)(),
         a = (0, R.wy)("UserSettingsKeybindsConnected");
     return (0, r.jsx)(Y, {

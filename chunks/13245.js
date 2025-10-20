@@ -422,19 +422,6 @@ let v = new o.Z("OverlayActionCreators"),
                 overlayState: t,
             });
         },
-        setLimitedInteractionOverride(e, t) {
-            i.Z.dispatch({
-                type: "OVERLAY_SET_LIMITED_INTERACTION_OVERRIDE",
-                applicationId: e,
-                enabled: t,
-            });
-        },
-        oopUiShowInactiveSuccess() {
-            i.Z.dispatch({ type: "OVERLAY_OOP_UI_SHOW_INACTIVE_SUCCESS" });
-        },
-        oopUiInitialized() {
-            i.Z.dispatch({ type: "OVERLAY_OOP_UI_INITIALIZED" });
-        },
         successfullyShown(e) {
             i.Z.dispatch({
                 type: "OVERLAY_SUCCESSFULLY_SHOWN",

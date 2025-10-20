@@ -59,7 +59,7 @@ let y = null,
             if (null == t || "function" != typeof t.requestAnimationFrame) return (y = "OverlayNotAvailable"), g(e);
             if (!v) return (y = "MainWindowFocused"), g(e);
             if (!b()) return (y = "NoOverlayRendering"), g(e);
-            let n = null !== _.ZP.getFocusedRunningGame(),
+            let n = null !== _.Z.getFocusedRunningGame(),
                 r = o.Z.isFocused((0, l.ZY)(t));
             if ((o.Z.isFocused() && m.error("Main window is reported as focused when it should not be!"), n || r)) {
                 y = n ? "OverlayGameFocused" : "OverlayWindowFocused";
@@ -70,7 +70,7 @@ let y = null,
             }
         } catch (e) {
             m.error("RAF redirect failed, falling back to original. Cause:", e),
-                (0, c.D1)(e, _.ZP.getOverlayMethod((0, s.getPID)()));
+                (0, c.D1)(e, f.default.getOverlayMethod((0, s.getPID)()));
         }
         return (y = "None"), g(e);
     };

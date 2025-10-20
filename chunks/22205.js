@@ -108,7 +108,7 @@ function x(e) {
             },
             [c, o],
         ),
-        M = (0, d.e7)([S.ZP], () => S.ZP.getFocusedRunningGame()),
+        M = (0, d.e7)([S.Z], () => S.Z.getFocusedRunningGame()),
         k = g
             ? (0, r.jsxs)("div", {
                   children: [
@@ -209,7 +209,7 @@ class M extends i.PureComponent {
                               p.Z.setInputLocked(!0, t), this.setState({ showError: !1 });
                           },
                           onDisable: () => {
-                              let e = S.ZP.getFocusedRunningGame();
+                              let e = S.Z.getFocusedRunningGame();
                               null != e && _.Z.toggleOverlay(e, !1, !1);
                           },
                           onCrashDisabled: () => {

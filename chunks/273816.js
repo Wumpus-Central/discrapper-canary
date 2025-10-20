@@ -8,18 +8,18 @@ var i = n(951288),
     u = n(481060),
     c = n(493773),
     d = n(178821),
-    h = n(38618),
-    p = n(522474),
+    p = n(38618),
+    h = n(522474),
     f = n(333031),
-    m = n(610394),
+    m = n(76623),
     g = n(501787),
     y = n(533449);
 function O(e) {
     let { locked: t, pinned: n, anchorLeft: l } = e,
-        O = (0, a.e7)([h.Z], () => h.Z.getSocket()),
-        v = (0, a.e7)([m.ZP], () => m.ZP.isGPUBoosted());
+        O = (0, a.e7)([p.Z], () => p.Z.getSocket()),
+        E = (0, a.e7)([m.Z], () => m.Z.isGPUBoosted());
     (0, d.nU)();
-    let E = (0, a.e7)([p.Z], () => p.Z.getWindow(g.$J)),
+    let v = (0, a.e7)([h.Z], () => h.Z.getWindow(g.$J)),
         [S, b] = (0, d.m8)(O),
         {
             currentFPS: x,
@@ -31,21 +31,21 @@ function O(e) {
             bufferFramecountRef: w,
             frameCheckerEffect: T,
         } = (0, d.d6)(!0, S, !0),
-        [_, P, D] = (0, d.ZF)(O),
-        [A, R] = (0, d.Y5)(_, T, E),
+        [_, P, A] = (0, d.ZF)(O),
+        [D, R] = (0, d.Y5)(_, T, v),
         k = performance.now() - b.current < d.MC,
         L = P(j, w.current);
     (0, c.ZP)(
         () => (
-            A(),
+            D(),
             () => {
                 R();
             }
         ),
     );
     let M = r.useCallback(() => {
-            C(), D(), A();
-        }, [C, D, A]),
+            C(), A(), D();
+        }, [C, A, D]),
         [V, z] = r.useState(!0),
         [U, W] = r.useState(!0),
         [G, F] = r.useState(!0),
@@ -233,7 +233,7 @@ function O(e) {
                               }),
                           }),
                       }),
-                  v &&
+                  E &&
                       (0, i.jsx)(u.Text, {
                           tag: "span",
                           variant: "code",

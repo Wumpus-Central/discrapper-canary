@@ -16,7 +16,7 @@ var r = n(13245),
     d = n(981631);
 let p = ["207646673902501888"];
 function f(e) {
-    return null != e && !!i.default.isOverlayOOPEnabledForPid(e) && l.ZP.isReady(e);
+    return null != e && !!i.default.isOverlayOOPEnabledForPid(e) && l.Z.isReady(e);
 }
 function h(e) {
     return null == e

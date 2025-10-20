@@ -1,6 +1,6 @@
 n.d(t, {
-    Y: () => C,
-    Z: () => D,
+    Y: () => N,
+    Z: () => L,
 }),
     n(388685);
 var r = n(951288),
@@ -16,11 +16,12 @@ var r = n(951288),
     _ = n(691891),
     p = n(333031),
     h = n(610394),
-    m = n(693091),
-    g = n(981631),
-    E = n(388032),
-    b = n(968803);
-function y(e, t, n) {
+    m = n(322155),
+    g = n(693091),
+    E = n(981631),
+    b = n(388032),
+    y = n(968803);
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +34,7 @@ function y(e, t, n) {
         e
     );
 }
-function O(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,12 +45,12 @@ function O(e) {
                 }),
             )),
             r.forEach(function (t) {
-                y(e, t, n[t]);
+                O(e, t, n[t]);
             });
     }
     return e;
 }
-function v(e, t) {
+function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,22 +62,22 @@ function v(e, t) {
     }
     return n;
 }
-function I(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : v(Object(t)).forEach(function (n) {
+            : I(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function T(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = S(e, t);
+        i = A(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -84,7 +85,7 @@ function T(e, t) {
     }
     return i;
 }
-function S(e, t) {
+function A(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -93,157 +94,160 @@ function S(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function A(e) {
+function C(e) {
     e.currentTarget.scrollTo(0, 0);
 }
-let C = i.memo(function (e) {
+let N = i.memo(function (e) {
     let {
             maxBodyLines: t,
             expand: n = !1,
             onNotificationShow: a,
             onDismissClick: d,
             onConfirmClick: p,
-            onCancelClick: m,
-            onNotificationClick: y,
-            hint: O,
-            cancelText: v,
-            confirmText: I,
-            icon: T,
-            body: S,
-            title: C,
-            renderFooter: N,
-            contentOpacity: R,
-            status: P,
-            containerRef: w,
-            className: D,
-            wrapperClassName: L,
+            onCancelClick: g,
+            onNotificationClick: O,
+            hint: v,
+            cancelText: I,
+            confirmText: T,
+            icon: S,
+            body: A,
+            title: N,
+            renderFooter: R,
+            contentOpacity: P,
+            status: w,
+            containerRef: D,
+            className: L,
+            wrapperClassName: x,
         } = e,
-        [x, M] = i.useState(!1),
-        k = n || x || P === g._1z.FOCUSED,
-        j = (0, l.e7)([h.ZP], () => h.ZP.isInputLocked((0, f.getPID)()));
+        [M, k] = i.useState(!1),
+        j = n || M || w === E._1z.FOCUSED,
+        U = (0, l.e7)([m.Z, h.Z], () => {
+            var e;
+            return m.Z.isInputLocked(null != (e = h.Z.getFocusedPID()) ? e : (0, f.getPID)());
+        });
     i.useEffect(() => {
         null == a || a();
     }, [a]);
-    let U = i.useCallback(
+    let G = i.useCallback(
             (e) => {
                 e.stopPropagation(), null == d || d(e);
             },
             [d],
         ),
-        G = i.useCallback(
+        B = i.useCallback(
             (e) => {
                 e.stopPropagation(), null == p || p(e);
             },
             [p],
         ),
-        B = i.useCallback(
+        Z = i.useCallback(
             (e) => {
-                e.stopPropagation(), null == m || m(e);
+                e.stopPropagation(), null == g || g(e);
             },
-            [m],
+            [g],
         ),
-        Z = i.useCallback(() => {
-            M(!0);
-        }, []),
         F = i.useCallback(() => {
-            M(!1);
+            k(!0);
+        }, []),
+        V = i.useCallback(() => {
+            k(!1);
         }, []);
-    function V() {
+    function H() {
         return (0, r.jsx)(_.Z, {
-            className: b.dismissButton,
-            onDismiss: U,
-            "aria-label": E.intl.string(E.t.LnEgqa),
+            className: y.dismissButton,
+            onDismiss: G,
+            "aria-label": b.intl.string(b.t.LnEgqa),
         });
     }
-    function H() {
-        let e = "function" == typeof O ? O(k, j) : O;
-        return null != O
+    function Y() {
+        let e = "function" == typeof v ? v(j, U) : v;
+        return null != v
             ? (0, r.jsx)(u.Text, {
-                  className: b.hint,
+                  className: y.hint,
                   color: "text-muted",
                   variant: "text-xxs/medium",
                   children: e,
               })
             : null;
     }
-    function Y() {
-        return null == p && null == m
+    function W() {
+        return null == p && null == g
             ? null
             : (0, r.jsxs)("div", {
-                  className: b.buttonContainer,
+                  className: y.buttonContainer,
                   children: [
                       null != p
                           ? (0, r.jsx)(c.zx, {
-                                className: b.button,
+                                className: y.button,
                                 size: c.zx.Sizes.SMALL,
                                 color: c.zx.Colors.GREEN,
-                                onClick: G,
-                                children: null != I ? I : E.intl.string(E.t.BddRzc),
+                                onClick: B,
+                                children: null != T ? T : b.intl.string(b.t.BddRzc),
                             })
                           : null,
-                      null != m
+                      null != g
                           ? (0, r.jsx)(c.zx, {
-                                className: b.button,
+                                className: y.button,
                                 size: c.zx.Sizes.SMALL,
                                 look: c.zx.Looks.OUTLINED,
                                 color: c.zx.Colors.PRIMARY,
-                                onClick: B,
-                                children: null != v ? v : E.intl.string(E.t["ETE/oK"]),
+                                onClick: Z,
+                                children: null != I ? I : b.intl.string(b.t["ETE/oK"]),
                             })
                           : null,
                   ],
               });
     }
-    function W() {
-        return null == T
+    function K() {
+        return null == S
             ? null
-            : "string" == typeof T
+            : "string" == typeof S
               ? (0, r.jsx)(u.qEK, {
-                    src: T,
+                    src: S,
                     size: u.EFr.SIZE_40,
-                    className: b.avatar,
+                    className: y.avatar,
                     "aria-hidden": !0,
                 })
               : (0, r.jsx)("div", {
-                    className: b.avatar,
-                    children: T,
+                    className: y.avatar,
+                    children: S,
                 });
     }
-    function K() {
-        let e = null == N ? void 0 : N(k, j);
+    function z() {
+        let e = null == R ? void 0 : R(j, U);
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)(s.animated.div, {
-                    className: b.iconAndDetails,
-                    style: { opacity: R },
+                    className: y.iconAndDetails,
+                    style: { opacity: P },
                     children: [
-                        W(),
+                        K(),
                         (0, r.jsxs)("div", {
-                            className: b.details,
+                            className: y.details,
                             children: [
                                 (0, r.jsx)(u.Text, {
                                     color: "interactive-normal",
                                     variant: "text-sm/semibold",
                                     lineClamp: 2,
-                                    children: C,
+                                    children: N,
                                 }),
-                                null != S
+                                null != A
                                     ? (0, r.jsx)(u.Text, {
                                           color: "interactive-normal",
                                           variant: "text-sm/normal",
-                                          lineClamp: null != t ? t * (k ? 2 : 1) : void 0,
-                                          children: S,
+                                          lineClamp: null != t ? t * (j ? 2 : 1) : void 0,
+                                          children: A,
                                       })
                                     : null,
-                                H(),
                                 Y(),
+                                W(),
                             ],
                         }),
                     ],
                 }),
                 null != e &&
                     (0, r.jsx)(u.P3F, {
-                        className: b.footer,
+                        className: y.footer,
                         ignoreKeyPress: !0,
                         onClick: (e) => e.stopPropagation(),
                         children: e,
@@ -254,23 +258,23 @@ let C = i.memo(function (e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                className: o()(b.overflowWrapper, L),
-                onScroll: A,
+                className: o()(y.overflowWrapper, x),
+                onScroll: C,
                 children: (0, r.jsx)(u.P3F, {
-                    innerRef: w,
+                    innerRef: D,
                     ignoreKeyPress: !0,
-                    onMouseOver: Z,
-                    onMouseLeave: F,
-                    onClick: y,
-                    className: o()(b.container, { [b.clickable]: null != y }, D),
-                    children: K(),
+                    onMouseOver: F,
+                    onMouseLeave: V,
+                    onClick: O,
+                    className: o()(y.container, { [y.clickable]: null != O }, L),
+                    children: z(),
                 }),
             }),
-            V(),
+            H(),
         ],
     });
 });
-function N(e) {
+function R(e) {
     let {
         springs: { opacity: t, scale: n, transform: i, height: a },
         scaleOverride: l,
@@ -280,7 +284,7 @@ function N(e) {
         animationWrapperClassName: f,
     } = e;
     return (0, r.jsx)(s.animated.div, {
-        className: o()(b.animationWrapper, f),
+        className: o()(y.animationWrapper, f),
         style: {
             pointerEvents: d && 0 !== c ? "none" : "auto",
             zIndex: Math.max(5 - c, 0),
@@ -293,26 +297,26 @@ function N(e) {
         children: u,
     });
 }
-function R(e) {
+function P(e) {
     let { observe: t, children: n } = e;
     return t
         ? (0, r.jsx)(p.Z, {
-              className: b.clickZone,
+              className: y.clickZone,
               children: n,
           })
         : n;
 }
-let P = {
+let w = {
     mass: 1,
     friction: 8,
     tension: 300,
 };
-function w() {
+function D() {
     let [e, t] = i.useState(!1),
         [n, r] = i.useState(!1),
         a = (0, u.q_F)({
             scale: e ? 0.975 : 1,
-            config: P,
+            config: w,
             onRest: () => {
                 t(!1),
                     setTimeout(() => {
@@ -327,7 +331,7 @@ function w() {
         }, []),
     };
 }
-function D(e) {
+function L(e) {
     let { notification: t, index: n, locked: a, pinned: o, transitionState: s, cleanUp: l } = e,
         {
             id: c,
@@ -337,7 +341,7 @@ function D(e) {
                 onNotificationClick: _,
                 onConfirmClick: p,
                 onCancelClick: h,
-                renderFooter: g,
+                renderFooter: m,
                 animationWrapperClassName: E,
             },
         } = t,
@@ -350,26 +354,26 @@ function D(e) {
             },
             [c, f],
         ),
-        { clickSpring: v, handleMouseClick: S } = w(),
+        { clickSpring: O, handleMouseClick: I } = D(),
         A = i.useCallback(
             (e) => {
-                null == _ || _(e, c), S();
+                null == _ || _(e, c), I();
             },
-            [_, c, S],
+            [_, c, I],
         ),
-        P = i.useCallback(
+        C = i.useCallback(
             (e) => {
                 null == p || p(e, c);
             },
             [p, c],
         ),
-        D = i.useCallback(
+        w = i.useCallback(
             (e) => {
                 null == h || h(e, c);
             },
             [h, c],
         ),
-        L = i.useCallback((e, t) => (null == g ? void 0 : g(e, c, t)), [g, c]),
+        L = i.useCallback((e, t) => (null == m ? void 0 : m(e, c, t)), [m, c]),
         {
             props: {
                 onNotificationShow: x,
@@ -382,7 +386,7 @@ function D(e) {
             },
             status: Z,
         } = t,
-        F = T(t.props, [
+        F = S(t.props, [
             "onNotificationShow",
             "onDismissClick",
             "renderFooter",
@@ -393,27 +397,27 @@ function D(e) {
         ]),
         V = !o && a,
         H = 0 === n && !B && !V,
-        { ref: Y, springs: W } = (0, m.X4)(t.id, s, l);
-    return (0, r.jsx)(N, {
+        { ref: Y, springs: W } = (0, g.X4)(t.id, s, l);
+    return (0, r.jsx)(R, {
         transitionState: s,
         springs: W,
-        scaleOverride: null == v ? void 0 : v.scale,
+        scaleOverride: null == O ? void 0 : O.scale,
         index: n,
         locked: a,
         animationWrapperClassName: E,
-        children: (0, r.jsx)(R, {
+        children: (0, r.jsx)(P, {
             observe: H,
             children: (0, r.jsx)(
-                C,
-                I(O({}, F), {
+                N,
+                T(v({}, F), {
                     title: "function" == typeof F.title ? F.title(y) : F.title,
                     containerRef: Y,
                     notificationId: t.id,
                     onNotificationShow: 0 === n ? b : void 0,
                     onDismissClick: y,
                     onNotificationClick: A,
-                    onConfirmClick: null != p ? P : void 0,
-                    onCancelClick: null != h ? D : void 0,
+                    onConfirmClick: null != p ? C : void 0,
+                    onCancelClick: null != h ? w : void 0,
                     renderFooter: L,
                     expand: !1,
                     index: n,

@@ -3,7 +3,7 @@ n.d(t, {
     bC: () => l,
 });
 var r = n(442837),
-    i = n(610394),
+    i = n(509140),
     a = n(358085);
 function o() {
     return a.isPlatformEmbedded;
@@ -12,5 +12,5 @@ function s(e) {
     return e || !1;
 }
 function l() {
-    return s((0, r.e7)([i.ZP], () => i.ZP.isSupported()));
+    return s((0, r.e7)([i.Z], () => i.Z.isSupported));
 }

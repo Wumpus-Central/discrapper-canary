@@ -974,7 +974,7 @@ function eh() {
                                   ? (0, r.jsx)(p.Button, {
                                         variant: "primary",
                                         text: "Open Overlay",
-                                        onClick: () => (0, x.f)(t),
+                                        onClick: () => (0, x.f)(),
                                     })
                                   : (0, r.jsx)(p.Button, {
                                         variant: "primary",

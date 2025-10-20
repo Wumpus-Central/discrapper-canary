@@ -18,11 +18,11 @@ var a = n(951288),
     v = n(594190),
     j = n(984370),
     _ = n(427860),
-    y = n(111628),
-    C = n(837268),
-    S = n(371651),
-    E = n(829907),
-    T = n(610394),
+    y = n(837268),
+    C = n(371651),
+    S = n(829907),
+    E = n(610394),
+    T = n(338949),
     O = n(556809),
     N = n(886118),
     P = n(301801),
@@ -197,7 +197,7 @@ let ee = r.memo(function (e) {
                 (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
                     color: "text-default",
-                    children: ["fullscreenType: ", (0, E.sS)(t.fullscreenType)],
+                    children: ["fullscreenType: ", (0, S.sS)(t.fullscreenType)],
                 }),
                 (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
@@ -230,7 +230,7 @@ let ee = r.memo(function (e) {
                         (0, a.jsxs)(m.Text, {
                             variant: "text-sm/normal",
                             color: "text-default",
-                            children: ["overlayMethod: ", (0, E.P_)(t.overlayMethod)],
+                            children: ["overlayMethod: ", (0, S.P_)(t.overlayMethod)],
                         }),
                     ],
                 }),
@@ -256,7 +256,7 @@ let ee = r.memo(function (e) {
                             (0, a.jsxs)(m.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                children: ["raw overlayMethod: ", (0, E.P_)(i.overlayMethod)],
+                                children: ["raw overlayMethod: ", (0, S.P_)(i.overlayMethod)],
                             }),
                         ],
                     }),
@@ -297,7 +297,7 @@ let ee = r.memo(function (e) {
     et = r.memo(function (e) {
         let { pid: t } = e,
             n = (0, d.cj)([R.default], () => R.default.getOverlayPIDStatuses()),
-            r = (0, d.cj)([S.default], () => S.default.getTrackedGames()),
+            r = (0, d.cj)([C.default], () => C.default.getTrackedGames()),
             i = (0, d.e7)([R.default], () => R.default.isInputLocked(t), [t]),
             l = (0, d.e7)([R.default], () => R.default.DEV_isInputLockedV3(t), [t]),
             o = (0, d.e7)([R.default], () => R.default.DEV_isInputLocked(t), [t]),
@@ -429,10 +429,10 @@ let er = r.memo(function (e) {
             }
             return r;
         })(e, ["pid"]);
-    let r = (0, d.e7)([S.default], () => {
+    let r = (0, d.e7)([C.default], () => {
         var e, n;
         if (null == t) return "Unknown";
-        let a = null == (e = S.default.getTrackedGameByPid(t)) ? void 0 : e.gameName;
+        let a = null == (e = C.default.getTrackedGameByPid(t)) ? void 0 : e.gameName;
         return null != a ? ((Q[t] = a), a) : null != (n = Q[t]) ? n : "Unknown";
     }, [t]);
     return (0, a.jsx)(
@@ -445,8 +445,8 @@ let er = r.memo(function (e) {
     );
 });
 function ei() {
-    let e = (0, d.e7)([y.Z], () => y.Z.hasRenderDebugMode(C.GO.TrackFocusPIDs)),
-        t = (0, d.Wu)([S.default], () => S.default.getDevToolsFocusedPidsWithTimestamp());
+    let e = (0, d.e7)([T.Z], () => T.Z.hasRenderDebugMode(y.GO.TrackFocusPIDs)),
+        t = (0, d.Wu)([C.default], () => C.default.getDevToolsFocusedPidsWithTimestamp());
     return (0, a.jsxs)("div", {
         className: K.panelGroup,
         children: [
@@ -457,8 +457,8 @@ function ei() {
                         checked: e,
                         onChange: () =>
                             void x.Z.setRenderDebugMode(
-                                !y.Z.hasRenderDebugMode(C.GO.TrackFocusPIDs),
-                                C.GO.TrackFocusPIDs,
+                                !T.Z.hasRenderDebugMode(y.GO.TrackFocusPIDs),
+                                y.GO.TrackFocusPIDs,
                             ),
                         label: "Track Focus Pids",
                     }),
@@ -489,7 +489,7 @@ function ei() {
                                 children: (0, a.jsx)(m.aML, {
                                     "data-migration-pending": !0,
                                     position: "left",
-                                    text: i === C.d5.TRACK_FOCUS ? "Tracked Focus Event" : "Clear Focus Event",
+                                    text: i === y.d5.TRACK_FOCUS ? "Tracked Focus Event" : "Clear Focus Event",
                                     children: (e) => {
                                         var r;
                                         return (0, a.jsx)(
@@ -497,7 +497,7 @@ function ei() {
                                             J(Y({}, e), {
                                                 children: (0, a.jsxs)(m.Text, {
                                                     variant: "text-sm/medium",
-                                                    color: i === C.d5.TRACK_FOCUS ? "text-default" : "text-danger",
+                                                    color: i === y.d5.TRACK_FOCUS ? "text-default" : "text-danger",
                                                     children: [
                                                         (0, a.jsx)(er, {
                                                             pid: n,
@@ -524,10 +524,10 @@ function ei() {
 }
 let el = r.memo(function (e) {
         let { pid: t } = e,
-            n = (0, d.e7)([S.default, v.ZP], () => {
+            n = (0, d.e7)([C.default, v.ZP], () => {
                 var e, n;
                 if (null == t) return null;
-                let a = null == (e = S.default.getTrackedGameByPid(t)) ? void 0 : e.fullscreenType;
+                let a = null == (e = C.default.getTrackedGameByPid(t)) ? void 0 : e.fullscreenType;
                 if (null != a) return a;
                 let r = v.ZP.getGameOrTransformedSubgameForPID(t);
                 return null != (n = null == r ? void 0 : r.fullscreenType) ? n : f.Jx.UNKNOWN;
@@ -536,11 +536,11 @@ let el = r.memo(function (e) {
             variant: "text-sm/normal",
             color: "text-secondary",
             tag: "span",
-            children: ["Original Screen Type: ", null != n ? (0, E.sS)(n) : "Unknown"],
+            children: ["Original Screen Type: ", null != n ? (0, S.sS)(n) : "Unknown"],
         });
     }),
     eo = r.memo(function () {
-        let e = (0, d.cj)([S.default], () => S.default.getTrackedGames()),
+        let e = (0, d.cj)([C.default], () => C.default.getTrackedGames()),
             [t, n] = r.useState({}),
             i = r.useRef(null);
         return (
@@ -550,7 +550,7 @@ let el = r.memo(function (e) {
                         let e = v.ZP.getRunningGames(),
                             t = [],
                             a = Date.now();
-                        for (let n of e) t.push((0, E.hj)(n.pid, 0).then((e) => [n.pid, e, a]));
+                        for (let n of e) t.push((0, S.hj)(n.pid, 0).then((e) => [n.pid, e, a]));
                         let r = await Promise.all(t);
                         n((e) =>
                             r.reduce(
@@ -618,7 +618,7 @@ let el = r.memo(function (e) {
                                                                     color: "text-default",
                                                                     children: ""
                                                                         .concat(n, ":")
-                                                                        .concat((0, E.sS)(n), " @ ")
+                                                                        .concat((0, S.sS)(n), " @ ")
                                                                         .concat(ea(r)),
                                                                 },
                                                                 "".concat(e.pid, "-").concat(n, "-").concat(r),
@@ -638,9 +638,9 @@ let el = r.memo(function (e) {
     }),
     es = r.memo(function () {
         var e, t;
-        let n = (0, d.cj)([S.default], () => S.default.getTrackedGames()),
+        let n = (0, d.cj)([C.default], () => C.default.getTrackedGames()),
             r = (0, L.getPID)(),
-            i = (0, d.e7)([S.default], () => S.default.isOverlayOOPEnabledForPid(r), [r]),
+            i = (0, d.e7)([C.default], () => C.default.isOverlayOOPEnabledForPid(r), [r]),
             [l, o] = (0, d.Wu)([I.Z], () => [I.Z.enabled, I.Z.keepOpen]),
             s = (0, d.e7)([R.default], () => R.default.getFocusedPID()),
             c = (0, d.e7)([R.default], () => R.default.isFocusedPidOutOfProcess());
@@ -693,38 +693,38 @@ let el = r.memo(function (e) {
     }),
     ec = [
         {
-            mode: C.GO.ClickZones,
+            mode: y.GO.ClickZones,
             label: "Click Zone Debug Mode",
             tooltip: "Enables a red border around click zones to help with debugging.",
         },
         {
-            mode: C.GO.WidgetAreas,
+            mode: y.GO.WidgetAreas,
             label: "Render Debug Mode",
             tooltip:
                 "Enables a border around any widgets that are rendered on screen that are pinned (even if they are hidden). Blue = pinned widgets, Gray = unpinned widgets",
         },
         {
-            mode: C.GO.WindowContainer,
+            mode: y.GO.WindowContainer,
             label: "Window Container Debug Mode",
             tooltip: "Enables a border the overlay window",
         },
         {
-            mode: C.GO.DisabledGPUBoost,
+            mode: y.GO.DisabledGPUBoost,
             label: "Disable GPU Boost",
             tooltip: "Disables GPU Boost, which can help with performance when games compete for GPU resources.",
         },
         {
-            mode: C.GO.ForceGPUBoost,
+            mode: y.GO.ForceGPUBoost,
             label: "Force GPU Boost",
             tooltip: "Forces GPU Boost, which can help with performance when games compete for GPU resources.",
         },
         {
-            mode: C.GO.OverlayRafManagerForceEnabled,
+            mode: y.GO.OverlayRafManagerForceEnabled,
             label: "Overlay SmartRAF",
             tooltip: "Creates a widget that has a clickzone inside of it, which will show/hide every few seconds.",
         },
         {
-            mode: C.GO.LegacyOverlayLogging,
+            mode: y.GO.LegacyOverlayLogging,
             label: "Legacy Overlay Logging",
             tooltip: "Enables legacy overlay logging, which will forward all legacy logging to the main apps console.",
         },
@@ -732,7 +732,7 @@ let el = r.memo(function (e) {
     ed = r.memo(function () {
         let [e, t] = en(V.Odu.CLICK_ZONE_DEBUG),
             [n, i] = en(V.Odu.PERFORMANCE_DEBUG),
-            l = (0, d.e7)([y.Z], () => y.Z.getRenderDebugModes()),
+            l = (0, d.e7)([T.Z], () => T.Z.getRenderDebugModes()),
             [o, s] = r.useState({});
         return (
             r.useEffect(() => {
@@ -745,13 +745,13 @@ let el = r.memo(function (e) {
                 className: K.panelGroup,
                 children: ec.map((o) => {
                     let s =
-                            o.mode === C.GO.OverlayRafManagerForceEnabled
+                            o.mode === y.GO.OverlayRafManagerForceEnabled
                                 ? "".concat(o.label, " (").concat(O.Z.getLastRAFCallbackReason(), ")")
                                 : o.label,
                         c = () =>
-                            o.mode === C.GO.ClickZones
+                            o.mode === y.GO.ClickZones
                                 ? null != e
-                                : o.mode === C.GO.WidgetAreas
+                                : o.mode === y.GO.WidgetAreas
                                   ? null != n
                                   : l.has(o.mode);
                     return (0, a.jsx)(
@@ -762,8 +762,8 @@ let el = r.memo(function (e) {
                                 onChange: () => {
                                     var e;
                                     let n = c();
-                                    o.mode === C.GO.ClickZones && t(),
-                                        o.mode === C.GO.WidgetAreas && i(),
+                                    o.mode === y.GO.ClickZones && t(),
+                                        o.mode === y.GO.WidgetAreas && i(),
                                         (e = o.mode),
                                         x.Z.setRenderDebugMode(!n, e);
                                 },
@@ -778,7 +778,7 @@ let el = r.memo(function (e) {
         );
     }),
     eu = r.memo(function () {
-        let e = (0, d.cj)([S.default], () => S.default.getTrackedGames()),
+        let e = (0, d.cj)([C.default], () => C.default.getTrackedGames()),
             t = (0, d.e7)([v.ZP], () => v.ZP.getRunningGames()).filter((t) => null == e[t.pid]);
         return (0, a.jsxs)(a.Fragment, {
             children: [
@@ -850,27 +850,27 @@ let el = r.memo(function (e) {
         });
     }),
     em = r.memo(function () {
-        let e = (0, d.e7)([S.default], () => S.default.getForcedRenderMode()),
+        let e = (0, d.e7)([C.default], () => C.default.getForcedRenderMode()),
             [t, n] = r.useState(e),
             i = (e) => {
                 n(e), x.Z.forceRenderMode(e);
             },
             l = [
                 {
-                    label: C.R5.UNSET,
-                    value: C.R5.UNSET,
+                    label: y.R5.UNSET,
+                    value: y.R5.UNSET,
                 },
                 {
-                    label: C.R5.IN_PROCESS_V2,
-                    value: C.R5.IN_PROCESS_V2,
+                    label: y.R5.IN_PROCESS_V2,
+                    value: y.R5.IN_PROCESS_V2,
                 },
                 {
-                    label: C.R5.OUT_OF_PROCESS_V3,
-                    value: C.R5.OUT_OF_PROCESS_V3,
+                    label: y.R5.OUT_OF_PROCESS_V3,
+                    value: y.R5.OUT_OF_PROCESS_V3,
                 },
                 {
-                    label: C.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
-                    value: C.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
+                    label: y.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
+                    value: y.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
                 },
             ].map((t) => J(Y({}, t), { label: "".concat(t.label, " ").concat(e === t.value ? "(current)" : "") }));
         return (0, a.jsx)(m.aML, {
@@ -1231,12 +1231,12 @@ let ev = ["__webpack_require__", "fn"],
     };
 function eC() {
     let { ref: e, height: t } = (0, g.ZP)(),
-        n = (0, d.e7)([T.ZP], () => T.ZP.DEV_isOverlayModuleLoggingEnabled()),
+        n = (0, d.e7)([T.Z], () => T.Z.isModuleLoggingEnabled()),
         [i, o] = r.useState(n),
         [s, c] = r.useState(!1),
         [u, p] = r.useState(null),
         [h, f] = r.useState(Object.keys(eh)),
-        [b, v] = (0, d.e7)([T.ZP], () => T.ZP.DEV_getOverlayLoggingBreadcrumbs(), [], M.Q),
+        [b, v] = (0, d.e7)([T.Z], () => T.Z.getOverlayLoggingBreadcrumbs(), [], M.Q),
         [j, _] = r.useState(null),
         y = null != j ? j : b,
         C = null != j ? -1 : v;
@@ -1422,7 +1422,7 @@ function eC() {
     });
 }
 let eS = r.memo(function () {
-        let e = (0, d.e7)([T.ZP], () => T.ZP.getInitializationStages());
+        let e = (0, d.e7)([E.Z], () => E.Z.getPopoutInitializationStages());
         return (0, a.jsxs)("div", {
             className: K.panelGroup,
             children: [
@@ -1443,8 +1443,8 @@ let eS = r.memo(function () {
         });
     }),
     eE = r.memo(function () {
-        let e = (0, d.e7)([T.ZP], () => T.ZP.DEV_isStateDebuggingEnabled()),
-            t = (0, d.e7)([T.ZP], () => T.ZP.DEV_getDebuggingState());
+        let e = (0, d.e7)([T.Z], () => T.Z.isStateDebuggingEnabled()),
+            t = (0, d.e7)([T.Z], () => T.Z.getDebuggingState());
         return (
             r.useEffect(
                 () => (

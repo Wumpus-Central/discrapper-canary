@@ -12,7 +12,7 @@ var o = t(951288),
     p = t(753972),
     f = t(812206),
     m = t(111028),
-    b = t(610394),
+    b = t(322155),
     h = t(522474),
     v = t(788983),
     g = t(695346),
@@ -102,7 +102,7 @@ function Y(e) {
         ),
         en = r.useCallback(() => {
             let e = (0, A.getPID)();
-            d.Z.setInputLocked(!b.ZP.isInputLocked(e), e);
+            d.Z.setInputLocked(!b.Z.isInputLocked(e), e);
         }, []),
         et = (0, E.P)(),
         {

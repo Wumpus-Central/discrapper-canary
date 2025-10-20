@@ -81,6 +81,8 @@ var r = (function (e) {
     })({}),
     u = (function (e) {
         return (
+            (e.NOT_LOADED = "not_loaded"),
+            (e.NOT_TRACKING = "not_tracking"),
             (e.INITIALIZING = "initializing"),
             (e.OVERLAY_DISABLED = "overlay_disabled"),
             (e.WAITING_FOR_SCREEN_TYPE_RESOLUTION = "waiting_for_screen_type_resolution"),
