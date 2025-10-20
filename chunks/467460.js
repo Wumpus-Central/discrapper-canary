@@ -36,12 +36,11 @@ let p = (e) => {
         let { expiresAt: t, tooltipText: n } = e,
             { days: c, hours: p, minutes: h, seconds: g } = (0, o.Z)(Date.parse(t), 1000),
             m = c > 0 ? [c, p, h] : p > 0 ? [p, h, g] : [h, g],
-            b = (0, s.zu)(i.z.NITRO_TAB_BADGE_COUNTDOWN);
+            b = (0, s.zu)(i.z.NITRO_TAB_BADGE_OFFER_REMINDER);
         return (0, r.jsx)(l.u, {
             text: n,
             position: "right",
-            children: (0, r.jsxs)(a.P3F, {
-                onClick: () => (0, s.Q3)(i.z.NITRO_TAB_BADGE_COUNTDOWN),
+            children: (0, r.jsxs)("div", {
                 children: [
                     !b &&
                         (0, r.jsx)("img", {

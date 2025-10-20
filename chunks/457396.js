@@ -118,7 +118,8 @@ let Y = (e) => {
             eP = [],
             ej = [];
         (0, h.Kl)() &&
-            (ed && eP.push(o.z.BOGO_2025_NITRO_TAB_BADGE),
+            (er === N.tE.OFFER_COUNTDOWN && (eb || (em && !eS)) && eP.push(o.z.NITRO_TAB_BADGE_OFFER_REMINDER),
+            ed && eP.push(o.z.BOGO_2025_NITRO_TAB_BADGE),
             eC && eP.push(o.z.VOICE_FILTER_EARLY_ACCESS_PREMIUM_TAB_BADGE),
             eu && eP.push(o.z.Q2_2025_MARKETING_MOMENT_NITRO_TAB_BADGE_V2),
             eN && eP.push(o.z.CUSTOM_THEMES_PREMIUM_TAB_BADGE),

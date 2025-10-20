@@ -490,6 +490,7 @@ var r = (function (e) {
             (e[(e.QUEST_HOME_ENTRYPOINT_ONBOARDING = 632)] = "QUEST_HOME_ENTRYPOINT_ONBOARDING"),
             (e[(e.PREMIUM_MARKETING_MOMENT_MOBILE_BOTTOM_SHEET = 633)] =
                 "PREMIUM_MARKETING_MOMENT_MOBILE_BOTTOM_SHEET"),
+            (e[(e.NITRO_TAB_BADGE_OFFER_REMINDER = 634)] = "NITRO_TAB_BADGE_OFFER_REMINDER"),
             e
         );
     })({}),
