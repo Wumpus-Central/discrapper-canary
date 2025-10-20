@@ -66,6 +66,10 @@ let g = "overlayKeybindExperimentPreviousKeybindSettings",
 class b {
     constructor() {
         _(this, "_settings", void 0),
+            _(this, "setKeybindTreatment", (e) => {
+                (this._settings.keybindTreatment = e), a.K.set(g, this._settings);
+            }),
+            _(this, "getKeybindTreatment", () => this._settings.keybindTreatment),
             _(this, "setPreviousKeybind", (e) => {
                 (this._settings.previousKeybind = e), a.K.set(g, this._settings);
             }),
@@ -102,7 +106,9 @@ class y extends s.Z {
             _(this, "processKeybindExperiment", async () => {
                 this.initializeKeybind();
                 let { keybindOverride: e } = (0, d.eV)("OverlayKeybindExperimentManager", !1);
-                null == e ? await this.restoreKeybind() : await this.dispatchSetKeybind(e);
+                this._storage.getKeybindTreatment() !== e &&
+                    (null == e ? await this.restoreKeybind() : await this.dispatchSetKeybind(e),
+                    this._storage.setKeybindTreatment(e));
             }),
             _(this, "processExperiment", async () => {
                 if (!__OVERLAY__ && !this._isProcessing) {
