@@ -57,6 +57,7 @@ let u = 50,
                 : {
                       primary: t[0],
                       secondary: t[1],
+                      tertiary: t.length > 2 ? t[2] : void 0,
                       border: f(t[0], t[1]).setAlpha(d),
                       label: f(t[0], t[1]).isLight() ? e.dark : e.light,
                   };
@@ -99,6 +100,8 @@ let u = 50,
                           ? {
                                 primary: h(r.backgroundColors.primary, n),
                                 secondary: h(r.backgroundColors.secondary, n),
+                                tertiary:
+                                    null != r.backgroundColors.tertiary ? h(r.backgroundColors.tertiary, n) : void 0,
                                 border: h(r.backgroundColors.border, n),
                                 label: h(r.backgroundColors.label, n),
                             }
