@@ -3,7 +3,6 @@ n.d(t, {
     Ks: () => Z,
     Ws: () => H,
     g2: () => U,
-    gF: () => Y,
     hf: () => j,
     k3: () => G,
     qN: () => V,
@@ -502,7 +501,4 @@ function H(e) {
         isQuestBarEmpty: !n,
         hasLoadedQuestBar: 0 !== r && 0 !== i,
     };
-}
-function Y(e) {
-    if ((0, m.Rt)(e)) return e.config.features.includes(R.S7.CLOUD_GAMING_ACTIVITY) ? s.v3n : s.iWm;
 }

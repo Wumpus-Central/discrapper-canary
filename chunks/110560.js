@@ -1,6 +1,7 @@
 n.r(t),
     n.d(t, {
         enrollAndStartVideoQuestWithErrorHandling: () => ei,
+        getPrimaryCtaIcon: () => ea,
         loadVideoQuestModal: () => Q,
         maybeShowSurveyForQuest: () => X,
         navigateToQuestHome: () => z,
@@ -488,4 +489,7 @@ async function ei(e, t) {
             });
         case E.wF.PREVIOUS_IN_FLIGHT_REQUEST:
     }
+}
+function ea(e) {
+    if ((0, g.Rt)(e)) return e.config.features.includes(w.S7.CLOUD_GAMING_ACTIVITY) ? s.v3n : s.iWm;
 }

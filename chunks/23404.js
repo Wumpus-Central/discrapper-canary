@@ -249,7 +249,7 @@ function A(e) {
                                     text: W,
                                     onClick: D,
                                     loading: E,
-                                    icon: (0, I.gF)(b),
+                                    icon: (0, v.getPrimaryCtaIcon)(b),
                                 }),
                             ],
                         }),
