@@ -41333,6 +41333,14 @@ screen and (max-width:485px) {
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 1))
 }
 
+.theme-dark .avatar__6d099 {
+    background: #0c0e0e
+}
+
+.theme-light .avatar__6d099 {
+    background: #a8a9aa
+}
+
 .container__6d099.threeItemBundle__6d099 .profileEffectShopPreview__6d099 {
     height: 190px;
     left: 25px;

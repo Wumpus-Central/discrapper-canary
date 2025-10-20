@@ -52,6 +52,7 @@ let b = i.memo(function (e) {
                     isPurchased: n,
                     isHighlighted: a,
                     avatarPlaceholderSrc: P,
+                    className: m.avatar,
                 }),
             }),
             N &&

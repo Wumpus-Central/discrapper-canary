@@ -71,28 +71,29 @@ let g = u.ZP.getEnableHardwareAcceleration() ? s.Xo$ : s.qEK,
                 isPurchased: u = !1,
                 avatarSize: _ = s.EFr.SIZE_152,
                 avatarPlaceholderSrc: h,
+                className: E,
             } = e,
-            E = (0, l.y9)(_),
+            b = (0, l.y9)(_),
             {
-                avatarDecorationSrc: b,
-                eventHandlers: y,
-                avatarPlaceholderSrc: O,
+                avatarDecorationSrc: y,
+                eventHandlers: O,
+                avatarPlaceholderSrc: v,
             } = (0, c.Z)({
                 user: n,
                 avatarDecorationOverride: (null == t ? void 0 : t.type) === o.Z.AVATAR_DECORATION ? t : void 0,
-                size: E,
+                size: b,
                 onlyAnimateOnHoverOrFocus: !i,
             }),
-            v = d.intl.formatToPlainString(d.t.Do2lxM, { a11y_text: t.label });
+            I = d.intl.formatToPlainString(d.t.Do2lxM, { a11y_text: t.label });
         return (0, r.jsx)(
             g,
-            m(p({}, y), {
-                avatarDecoration: b,
-                src: i ? (null == n ? void 0 : n.getAvatarURL(void 0, 152, !0)) : null != h ? h : O,
+            m(p({}, O), {
+                avatarDecoration: y,
+                src: i ? (null == n ? void 0 : n.getAvatarURL(void 0, 152, !0)) : null != h ? h : v,
                 imageClassName: i ? f.fadeInAvatarImg : void 0,
-                className: a()(f.avatar, { [f.avatarPurchased]: u && !i }),
+                className: a()(E, f.avatar, { [f.avatarPurchased]: u && !i }),
                 size: _,
-                "aria-label": v,
+                "aria-label": I,
             }),
         );
     };
