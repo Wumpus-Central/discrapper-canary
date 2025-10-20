@@ -260,7 +260,22 @@ function ei(e) {
     t ? en() : er(!0);
 }
 function ea(e, t, n, r) {
-    if (g.isPlatformEmbedded) E.ZP.inputEventRegister(parseInt(e), t, n, r);
+    if (g.isPlatformEmbedded)
+        try {
+            E.ZP.inputEventRegister(parseInt(e), t, n, r);
+        } catch (n) {
+            throw (
+                (w.error(
+                    "Failed to register native keybind",
+                    {
+                        eventId: e,
+                        shortcut: t,
+                    },
+                    n,
+                ),
+                n)
+            );
+        }
     else {
         eo(e);
         let i = (0, _.r)(document);
