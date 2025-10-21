@@ -19,14 +19,14 @@ var l = t(951288),
     b = t(502762),
     I = t(530),
     y = t(679332),
-    _ = t(544989),
-    Z = t(228168),
+    Z = t(544989),
+    _ = t(228168),
     O = t(981631),
     N = t(671955),
     A = t(388032),
-    T = t(673517),
-    P = t(54966),
-    E = t(602727);
+    T = t(526594),
+    P = t(438160),
+    E = t(909735);
 function C(e) {
     var n;
     let {
@@ -86,7 +86,7 @@ function C(e) {
                             themeType: N.l.MODAL,
                             ref: (null == G ? void 0 : G.profileEffect) != null ? z : void 0,
                             children: [
-                                (0, l.jsx)(_.Z, { children: (0, l.jsx)(y.Z, { user: t }) }),
+                                (0, l.jsx)(Z.Z, { children: (0, l.jsx)(y.Z, { user: t }) }),
                                 (0, l.jsxs)("div", {
                                     children: [
                                         (0, l.jsx)(h.Z, {
@@ -128,20 +128,20 @@ function C(e) {
                                                 (0, l.jsx)(o.njP, {
                                                     className: E.tabBar,
                                                     type: "top",
-                                                    selectedItem: Z.oh.BOT_INFO,
+                                                    selectedItem: _.oh.BOT_INFO,
                                                     onItemSelect: O.dG4,
                                                     children: (0, l.jsx)(
                                                         o.njP.Item,
                                                         {
                                                             className: E.tabBarItem,
-                                                            id: Z.oh.BOT_INFO,
+                                                            id: _.oh.BOT_INFO,
                                                             "aria-label": A.intl.string(A.t.jGoPJS),
                                                             children: (0, l.jsx)(o.Text, {
                                                                 variant: "text-sm/normal",
                                                                 children: A.intl.string(A.t.jGoPJS),
                                                             }),
                                                         },
-                                                        Z.oh.BOT_INFO,
+                                                        _.oh.BOT_INFO,
                                                     ),
                                                 }),
                                                 (0, l.jsxs)(o.zJl, {
@@ -158,7 +158,7 @@ function C(e) {
                                                             children: (0, l.jsx)(j.Z, {
                                                                 userId: t.id,
                                                                 guildId: k,
-                                                                tooltipDelay: Z.vB,
+                                                                tooltipDelay: _.vB,
                                                             }),
                                                         }),
                                                     ],

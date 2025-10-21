@@ -19,8 +19,8 @@ var l = t(951288),
     b = t(602733),
     I = t(699516),
     y = t(246946),
-    _ = t(585483),
-    Z = t(5192),
+    Z = t(585483),
+    _ = t(5192),
     O = t(111361),
     N = t(785717),
     A = t(221292),
@@ -57,7 +57,7 @@ var l = t(951288),
     ei = t(981631),
     eo = t(671955),
     er = t(388032),
-    es = t(293496);
+    es = t(7938);
 function ea(e) {
     var n;
     let {
@@ -78,8 +78,8 @@ function ea(e) {
             sourceAnalyticsLocations: eI = [],
             disableActionsForPreview: ey = !1,
         } = e,
-        { analyticsLocations: e_ } = (0, u.ZP)([...eI, d.Z.USER_PROFILE_MODAL_V2]),
-        eZ = (0, N.ZB)({
+        { analyticsLocations: eZ } = (0, u.ZP)([...eI, d.Z.USER_PROFILE_MODAL_V2]),
+        e_ = (0, N.ZB)({
             layout: "MODAL_V2",
             userId: t.id,
             sourceSessionId: ep,
@@ -102,7 +102,7 @@ function ea(e) {
         eS = i.useMemo(() => (null != ec ? { [ec]: [t.id] } : {}), [ec, t.id]);
     (0, c.$)(eS, "UserProfileModalV2");
     let ew = (0, P.ZP)(t.id, eb ? ec : void 0),
-        eR = Z.ZP.useName(null == ew ? void 0 : ew.guildId, ed, t),
+        eR = _.ZP.useName(null == ew ? void 0 : ew.guildId, ed, t),
         { relationshipType: eD, originApplicationId: eL } = (0, r.cj)([I.Z], () => ({
             relationshipType: I.Z.getRelationshipType(t.id),
             originApplicationId: I.Z.getOriginApplicationId(t.id),
@@ -136,16 +136,16 @@ function ea(e) {
                     }, 1000);
             };
             return (
-                _.S.subscribe(ei.CkL.SHAKE_PROFILE_MODAL, e),
+                Z.S.subscribe(ei.CkL.SHAKE_PROFILE_MODAL, e),
                 () => {
-                    _.S.unsubscribe(ei.CkL.SHAKE_PROFILE_MODAL, e), (0, en.L$)(null);
+                    Z.S.unsubscribe(ei.CkL.SHAKE_PROFILE_MODAL, e), (0, en.L$)(null);
                 }
             );
         }, []),
         (0, l.jsx)(u.Gt, {
-            value: e_,
+            value: eZ,
             children: (0, l.jsx)(N.Mt, {
-                value: eZ,
+                value: e_,
                 openedAt: ej,
                 fetchStartedAt: null == ew ? void 0 : ew.fetchStartedAt,
                 fetchEndedAt: null == ew ? void 0 : ew.fetchEndedAt,
@@ -263,7 +263,7 @@ function ea(e) {
                                                                     user: t,
                                                                     guildId: ec,
                                                                     onClose: eg,
-                                                                    nickname: Z.ZP.useName(
+                                                                    nickname: _.ZP.useName(
                                                                         null == ew ? void 0 : ew.guildId,
                                                                         ed,
                                                                         t,
@@ -464,7 +464,7 @@ function ea(e) {
                                                                                             });
                                                                                     }
                                                                                     return e;
-                                                                                })({ action: "SET_NOTE" }, eZ),
+                                                                                })({ action: "SET_NOTE" }, e_),
                                                                             ),
                                                                     }),
                                                                 }),

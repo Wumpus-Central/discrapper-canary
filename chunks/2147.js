@@ -51,8 +51,8 @@ var i = n(951288),
     q = n(903223),
     J = n(594174),
     Y = n(934415),
-    X = n(55935),
-    Q = n(70956),
+    Q = n(55935),
+    X = n(70956),
     K = n(630388),
     $ = n(63063),
     ee = n(129724),
@@ -65,8 +65,8 @@ var i = n(951288),
     ea = n(710352),
     eo = n(124368),
     ec = n(388032),
-    ed = n(257294),
-    eu = n(197571);
+    ed = n(741905),
+    eu = n(10198);
 function eh(e, t, n) {
     return (
         t in e
@@ -137,7 +137,7 @@ let em = (0, w.hQ)(),
     },
     ey = "AUTOMATIC_RTC_REGION",
     eC = {
-        breakingChangeDate: (0, X.vc)(o()(el.zQD), "LL"),
+        breakingChangeDate: (0, Q.vc)(o()(el.zQD), "LL"),
         helpCenterLink: $.Z.getArticleURL(el.BhN.SLOWMODE),
     },
     eS = h.ZP.connectStores([W.Z], () => {
@@ -284,7 +284,7 @@ class eN extends l.PureComponent {
         return (0, ee.A)(e, !0);
     }
     getAutoArchiveDurationSliderMarker(e) {
-        return (0, ee.A)(e * Q.Z.Seconds.MINUTE, !0);
+        return (0, ee.A)(e * X.Z.Seconds.MINUTE, !0);
     }
     renderChannelInfo(e, t) {
         var n, l, r, a, o, h, g;
@@ -491,7 +491,7 @@ class eN extends l.PureComponent {
                   })
                 : null,
             Y = _ ? v : x,
-            X =
+            Q =
                 null ==
                 (r = Z.Z.getCurrentConfig({
                     guildId: e.guild_id,
@@ -499,17 +499,17 @@ class eN extends l.PureComponent {
                 }))
                     ? void 0
                     : r.enabled,
-            Q =
+            X =
                 !0 === T
                     ? (0, i.jsx)(et.Z, {
                           label: ec.intl.string(ec.t["tTHx9/"]),
-                          helperText: this.getSlowmodeHelpText(X),
+                          helperText: this.getSlowmodeHelpText(Q),
                           channel: e,
                           onChange: this.handleChangeSlowmode,
                       })
                     : (0, i.jsx)(p.iRW, {
                           label: ec.intl.string(ec.t["tTHx9/"]),
-                          helperText: this.getSlowmodeHelpText(X),
+                          helperText: this.getSlowmodeHelpText(Q),
                           initialValue: e.rateLimitPerUser,
                           markers: el.BiE,
                           stickToMarkers: !0,
@@ -528,10 +528,10 @@ class eN extends l.PureComponent {
                               (0, i.jsxs)(p.C3N, {
                                   label: ec.intl.string(ec.t.O1c02t),
                                   children: [
-                                      Q,
+                                      X,
                                       (0, i.jsx)(p.iRW, {
                                           label: ec.intl.string(ec.t["fkY5+v"]),
-                                          helperText: X ? ec.intl.format(ec.t.nZSuEh, eC) : ec.intl.string(ec.t.kdZU6O),
+                                          helperText: Q ? ec.intl.format(ec.t.nZSuEh, eC) : ec.intl.string(ec.t.kdZU6O),
                                           initialValue: null != (h = e.defaultThreadRateLimitPerUser) ? h : 0,
                                           markers: el.BiE,
                                           stickToMarkers: !0,
@@ -547,7 +547,7 @@ class eN extends l.PureComponent {
                               (0, i.jsx)(p.izJ, {}),
                           ],
                       })
-                    : Q
+                    : X
                 : null,
             ee =
                 _ && null != e.threadMetadata

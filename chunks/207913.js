@@ -27,16 +27,16 @@ var r = n(951288),
     P = n(592125),
     N = n(720202),
     Z = n(430824),
-    w = n(821020),
-    T = n(948154),
+    T = n(821020),
+    w = n(948154),
     A = n(804932),
     R = n(993609),
     D = n(987889),
     L = n(586694),
     M = n(981631),
-    k = n(677642),
+    k = n(997998),
     G = n(388032),
-    U = n(361584);
+    U = n(66449);
 function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -100,7 +100,7 @@ function V(e) {
             compact: !0,
             isRepliedMessage: !0,
         }),
-        w = (0, r.jsx)("div", {
+        T = (0, r.jsx)("div", {
             className: U.usernameTagContainer,
             inert: !0,
             children: (0, r.jsx)(j.Z, {
@@ -168,7 +168,7 @@ function V(e) {
                                                       (0, r.jsx)("div", {
                                                           className: U.username,
                                                           style: { color: null != y ? y : void 0 },
-                                                          children: (0, r.jsx)(g.Z, { children: w }),
+                                                          children: (0, r.jsx)(g.Z, { children: T }),
                                                       }),
                                                       P,
                                                   ],
@@ -424,7 +424,7 @@ let K = (0, i.memo)(
                 var t;
                 return e.isMenuOpenForMessage(null != (t = null == f ? void 0 : f.id) ? t : null);
             }),
-            { notificationCenterVariant: _ } = (0, w.pN)({ location: "NotificationsInboxMessageUnit" }),
+            { notificationCenterVariant: _ } = (0, T.pN)({ location: "NotificationsInboxMessageUnit" }),
             O = i.useMemo(
                 () => "".concat(null == f ? void 0 : f.author.username, ": ").concat(null == m ? void 0 : m.name),
                 [null == f ? void 0 : f.author.username, null == m ? void 0 : m.name],
@@ -439,11 +439,11 @@ let K = (0, i.memo)(
                       [U.actionMenuOpen]: b,
                   }),
                   onClick: () => {
-                      T.Z.inboxItemClick({
+                      w.Z.inboxItemClick({
                           message: f,
                           channel: m,
                           isUnread: p,
-                          isSidebar: _ === w.jP.SIDEBAR,
+                          isSidebar: _ === T.jP.SIDEBAR,
                           viewId: h,
                       });
                   },

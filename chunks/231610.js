@@ -1,4 +1,144 @@
-e.r(a), e.d(a, { default: () => o });
-let o = JSON.parse(
-    '{"xi8rEx":"\xBFTe gustaría configurar Discord en Español?","09QGGB":"\xBFCambiar idioma?","ofazSU":"Entendido","yQfLwM":"Discord está configurado en Español. Puedes elegir otro idioma en \\"Ajustes de aplicación\\" > \\"Idioma\\".","KUFsLi":"\xA1El cambio fue hecho!","jM7sUl":"No","QkGMPz":"Sí"}',
-);
+n.d(t, { Z: () => p }), n(388685);
+var r = n(951288),
+    i = n(481060),
+    l = n(723047),
+    a = n(727843),
+    s = n(290348),
+    o = n(783454),
+    c = n(893729),
+    d = n(619326),
+    u = n(553204),
+    g = n(388032),
+    m = n(510569);
+function p() {
+    let { editStateId: e, guildId: t } = (0, a.N)(),
+        [, p] = s.p9(e, t),
+        [f, h] = s.Ek(e, t),
+        b = s.qs(e, t);
+    function x() {
+        (0, i.ZDy)(async () => {
+            let { default: e } = await n.e("22942").then(n.bind(n, 660727));
+            return (n) => {
+                var i, l;
+                return (0, r.jsx)(
+                    e,
+                    ((i = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            "function" == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    }),
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0,
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })({}, n)),
+                    (l = l =
+                        {
+                            guildId: t,
+                            onUploadIcon: (e) =>
+                                p({
+                                    icon: e,
+                                    unicodeEmoji: null,
+                                }),
+                            onSelectUnicodeEmoji: (e) =>
+                                p({
+                                    icon: null,
+                                    unicodeEmoji: e,
+                                }),
+                        }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(l)).forEach(function (e) {
+                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                          }),
+                    i),
+                );
+            };
+        });
+    }
+    let j = (0, l.mY)();
+    return (0, r.jsx)(o.Z, {
+        title: g.intl.string(g.t["Ah+sQ0"]),
+        description: g.intl.string(g.t.ixbWiI),
+        children: (0, r.jsxs)(i.Kqy, {
+            direction: "vertical",
+            gap: 24,
+            children: [
+                (0, r.jsx)(i.gNt, {
+                    label: g.intl.string(g.t["6OUqDQ"]),
+                    disabled: j,
+                    children: (0, r.jsx)(d.Z, {
+                        value: f,
+                        onChange: h,
+                        disabled: j,
+                    }),
+                }),
+                (0, r.jsx)(i.gNt, {
+                    label: g.intl.string(g.t["zn8/AQ"]),
+                    disabled: j,
+                    description: g.intl.string(g.t.AqHUra),
+                    children: (0, r.jsxs)(i.Kqy, {
+                        direction: "horizontal",
+                        gap: 16,
+                        children: [
+                            (0, r.jsx)(u.Z, {
+                                role: b,
+                                "aria-label": g.intl.string(g.t.mD1oGB),
+                                onClick: x,
+                                disabled: j,
+                            }),
+                            (0, r.jsx)(i.Button, {
+                                variant: "secondary",
+                                onClick: x,
+                                disabled: j,
+                                text: g.intl.string(g.t.mD1oGB),
+                            }),
+                        ],
+                    }),
+                }),
+                (0, r.jsx)(i.Rny, {
+                    children: (0, r.jsxs)("div", {
+                        className: m.previewContainer,
+                        "aria-hidden": !0,
+                        children: [
+                            (0, r.jsx)(c.Z, {
+                                guildId: t,
+                                role: b,
+                                className: m.messageContainer,
+                                theme: "light",
+                            }),
+                            (0, r.jsx)(c.Z, {
+                                guildId: t,
+                                role: b,
+                                className: m.messageContainer,
+                                theme: "dark",
+                            }),
+                        ],
+                    }),
+                }),
+            ],
+        }),
+    });
+}

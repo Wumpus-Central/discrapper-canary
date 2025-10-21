@@ -8,10 +8,10 @@ var l = n(951288),
     c = n(626135),
     d = n(660662),
     u = n(981631),
-    p = n(693450),
+    p = n(62222),
     m = n(388032),
-    f = n(745993),
-    g = n(959389);
+    f = n(621515),
+    g = n(77426);
 function h(e) {
     var t;
     let { selectedColors: n, setSelectedColors: h, defaultColor: x, selectedEffectId: _, className: b } = e,

@@ -8,30 +8,30 @@ var i = n(951288),
     u = n(592125),
     c = n(944486),
     d = n(594174),
-    h = n(5192),
-    p = n(624864),
+    p = n(5192),
+    h = n(624864),
     f = n(620954),
     m = n(987650),
     g = n(388032),
-    y = n(439419);
+    y = n(64102);
 function O(e, t, n) {
     var O;
-    if (p.Z.isNotificationDisabled(m.n0.NowPlayingNotification)) return null;
-    let v = d.default.getUser(e);
-    if (null == v) return null;
-    let E = c.Z.getCurrentlySelectedChannelId(),
-        S = u.Z.getChannel(E),
+    if (h.Z.isNotificationDisabled(m.n0.NowPlayingNotification)) return null;
+    let E = d.default.getUser(e);
+    if (null == E) return null;
+    let v = c.Z.getCurrentlySelectedChannelId(),
+        S = u.Z.getChannel(v),
         b = o.Z.getApplication(t),
         x = a.ZP.getRunningGames().find((e) => e.id === t),
         j = null != (O = null == x ? void 0 : x.name) ? O : null == b ? void 0 : b.name,
-        I = (0, h.oY)(null == S ? void 0 : S.guild_id, null == S ? void 0 : S.id, v),
+        I = (0, p.oY)(null == S ? void 0 : S.guild_id, null == S ? void 0 : S.id, E),
         C = (0, i.jsxs)("div", {
             className: y.nowPlayingNotification,
             children: [
                 (0, i.jsx)("div", {
                     className: y.nowPlayingNotificationIcon,
                     children: (0, i.jsx)(l.Z, {
-                        user: v,
+                        user: E,
                         "aria-hidden": !0,
                         size: r.EFr.SIZE_24,
                     }),
@@ -43,7 +43,7 @@ function O(e, t, n) {
                         color: "interactive-normal",
                         className: y.bodyText,
                         children: g.intl.format(g.t["q7/rgo"], {
-                            username: null != I ? I : v.username,
+                            username: null != I ? I : E.username,
                             gameName: j,
                             gameIcon: () =>
                                 null != b || null != x
@@ -61,7 +61,7 @@ function O(e, t, n) {
         }),
         { trackView: Z, trackClick: N } = (0, f.R)(m.n0.NowPlayingNotification, {
             notif_type: m.n0.NowPlayingNotification,
-            notif_user_id: v.id,
+            notif_user_id: E.id,
             activity_type: n.type,
             activity_name: null != j ? j : n.name,
         });

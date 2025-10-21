@@ -13,10 +13,10 @@ var r = t(951288),
     f = t(52021),
     x = t(809121),
     _ = t(546303),
-    b = t(981631),
-    v = t(948208),
+    v = t(981631),
+    b = t(45765),
     j = t(388032),
-    p = t(215365);
+    p = t(909842);
 function h(e) {
     var n;
     let { guildId: t } = e;
@@ -37,7 +37,7 @@ function h(e) {
                         icon: i.iWm,
                         "aria-label": "",
                     }),
-                    (0, r.jsx)(c.ZP.Title, { children: j.intl.string(v.default.vCzwMz) }),
+                    (0, r.jsx)(c.ZP.Title, { children: j.intl.string(b.default.vCzwMz) }),
                     (0, r.jsx)(s.IGR, {
                         disableColor: !0,
                         text: j.intl.string(j.t.oW0eUV),
@@ -47,8 +47,8 @@ function h(e) {
                     (0, r.jsx)(s.Text, {
                         variant: "text-sm/normal",
                         color: "text-muted",
-                        children: j.intl.format(v.default.LiR4eH, {
-                            helpCenterUrl: d.Z.getArticleURL(b.BhN.GAME_SERVER_HOSTING),
+                        children: j.intl.format(b.default.LiR4eH, {
+                            helpCenterUrl: d.Z.getArticleURL(v.BhN.GAME_SERVER_HOSTING),
                         }),
                     }),
                 ],

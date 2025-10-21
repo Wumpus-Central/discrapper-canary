@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685), n(35282);
+n.d(t, { Z: () => E }), n(388685), n(35282);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
@@ -14,7 +14,7 @@ var r = n(951288),
     p = n(981631),
     O = n(273504),
     y = n(388032),
-    m = n(335260);
+    m = n(31593);
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -59,19 +59,19 @@ function v(e, t) {
     );
 }
 let j = O.fX.KEYWORD;
-function S(e, t) {
+function E(e, t) {
     let { perGuildMaxCount: n } = c.I6[j],
-        { isLoading: S, saveRule: E, errorMessage: P } = (0, d.w)(),
-        { createNewEditingRule: _ } = (0, d.V)(),
+        { isLoading: E, saveRule: S, errorMessage: _ } = (0, d.w)(),
+        { createNewEditingRule: P } = (0, d.V)(),
         [Z, T] = i.useState(!1),
-        [w, I] = (0, s.I2)(t),
+        [I, w] = (0, s.I2)(t),
         { rulesByTriggerType: A, updateRule: N } = (0, s.pH)(t),
-        D = i.useMemo(() => {
+        x = i.useMemo(() => {
             var e;
             return null != (e = A[j]) ? e : [];
         }, [A]),
-        x = 0 === D.length,
-        M = n > D.length && !x;
+        D = 0 === x.length,
+        M = n > x.length && !D;
     if (!i.useMemo(() => (0, u.ze)(t), [t]) || null == e || 0 === e.length || null == t) return null;
     let C = e.split(" "),
         R = C.length;
@@ -85,7 +85,7 @@ function S(e, t) {
                 ((0, a.Zy)(),
                 b.Z.open(t, p.pNK.GUILD_AUTOMOD),
                 setTimeout(() => {
-                    _(t, j, {
+                    P(t, j, {
                         triggerMetadata: {
                             keywordFilter: [e],
                             regexPatterns: [],
@@ -105,9 +105,9 @@ function S(e, t) {
                     ],
                 }),
             });
-            await E(i, D),
+            await S(i, x),
                 N(i),
-                null != P
+                null != _
                     ? (0, l.showToast)((0, l.createToast)(y.intl.string(y.t.wH6L0t), l.ToastType.FAILURE))
                     : (0, l.showToast)((0, l.createToast)(y.intl.string(y.t["0rdYm5"]), l.ToastType.SUCCESS));
         },
@@ -116,17 +116,17 @@ function S(e, t) {
             label: y.intl.string(y.t.ZTNur6),
         });
     return (
-        w ||
+        I ||
             (G = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    x &&
+                    D &&
                         (0, r.jsx)(l.sNh, {
                             id: "add-first-rule",
                             label: y.intl.string(y.t.f72Zqa),
                             action: L,
-                            disabled: S,
+                            disabled: E,
                         }),
-                    D.map((e) => {
+                    x.map((e) => {
                         let t = (0, c.V9)(j).reduce((t, n) => {
                             let r = e.actions.find((e) => {
                                 let { type: t } = e;
@@ -149,7 +149,7 @@ function S(e, t) {
                                 }),
                                 group: "automod-rule-selection",
                                 checked: !1,
-                                disabled: S,
+                                disabled: E,
                                 action: () => k(e),
                             },
                             e.id,
@@ -163,7 +163,7 @@ function S(e, t) {
                                     id: "add-another-rule",
                                     label: y.intl.string(y.t["0K5jDA"]),
                                     action: L,
-                                    disabled: S,
+                                    disabled: E,
                                 }),
                             ],
                         }),
@@ -173,7 +173,7 @@ function S(e, t) {
             id: "guild-automod-add-selection",
             label: y.intl.formatToPlainString(y.t.Kkjv1t, { keywordCount: R }),
             onFocus: () => {
-                Z || (T(!0), I());
+                Z || (T(!0), w());
             },
             children: G,
         })

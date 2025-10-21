@@ -17,7 +17,7 @@ var r = n(951288),
     v = n(70399),
     y = n(228168),
     j = n(388032),
-    O = n(229870);
+    O = n(73686);
 let x = {
     [o.l.FAVORITE_GAMES]: {
         placeholder: () => ({
@@ -68,7 +68,7 @@ let x = {
 function _(e) {
     let t,
         { widgetType: n, onAddWidget: a, size: c = "default", loading: d = !1, trackUserProfileEditAction: j } = e,
-        { placeholder: _, getAriaLabel: P, icon: I } = x[n],
+        { placeholder: _, getAriaLabel: I, icon: P } = x[n],
         w = "small" === c,
         { config: S } = (0, m.G)(),
         E = i.useMemo(() => {
@@ -101,7 +101,7 @@ function _(e) {
                 (0, b.L$)(y.qb.WIDGET_ADDED),
                 null == a || a());
         }, [d, n, E, j, a]);
-    return (null != E && null != I && (t = I(E)), null == E)
+    return (null != E && null != P && (t = P(E)), null == E)
         ? null
         : (0, r.jsxs)("div", {
               className: O.addButtonContainer,
@@ -109,7 +109,7 @@ function _(e) {
                   (0, r.jsxs)(s.P3F, {
                       className: l()(O.addButtonContent, w && O.sizeSmall, d && O.loading),
                       onClick: T,
-                      "aria-label": P(E),
+                      "aria-label": I(E),
                       "aria-busy": d,
                       children: [
                           (() => {

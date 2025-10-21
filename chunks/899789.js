@@ -15,9 +15,9 @@ var l = t(951288),
     v = t(343312),
     g = t(30910),
     f = t(619733),
-    b = t(948208),
+    b = t(45765),
     p = t(388032),
-    j = t(755350);
+    j = t(179761);
 function x() {
     return (0, l.jsx)(o.Z, {
         className: j.maxInstancesWarning,

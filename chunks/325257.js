@@ -27,9 +27,9 @@ var r = n(951288),
     P = n(252686),
     N = n(682662),
     Z = n(674552),
-    w = n(981631),
-    T = n(388032),
-    A = n(534175);
+    T = n(981631),
+    w = n(388032),
+    A = n(857668);
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -75,9 +75,9 @@ function D(e, t) {
 }
 let L = {
     analyticsSource: {
-        page: w.ZY5.GUILD_CHANNEL,
-        section: w.jXE.CHANNEL_LIST,
-        object: w.qAy.CHANNEL,
+        page: T.ZY5.GUILD_CHANNEL,
+        section: T.jXE.CHANNEL_LIST,
+        object: T.qAy.CHANNEL,
     },
 };
 function M(e, t) {
@@ -90,16 +90,16 @@ function M(e, t) {
             n.e("51453"),
             n.e("7654"),
             n.e("845"),
-            n.e("86736"),
+            n.e("99063"),
             n.e("6850"),
             n.e("58227"),
             n.e("44686"),
             n.e("30378"),
-            n.e("64982"),
+            n.e("29679"),
             n.e("22516"),
             n.e("87154"),
             n.e("33213"),
-            n.e("73709"),
+            n.e("8209"),
         ]).then(n.bind(n, 545135));
         return (n) => (0, r.jsx)(e, D(R({}, n), { guild: t }));
     });
@@ -152,7 +152,7 @@ let k = i.memo(function (e) {
             },
             collect: (e) => ({ dragging: e.isDragging() }),
         }),
-        ef = (0, c.Ie)(null != eo ? eo : w.lds, null != ea ? 2 : 1),
+        ef = (0, c.Ie)(null != eo ? eo : T.lds, null != ea ? 2 : 1),
         [eh, eg] = i.useState(!1),
         em = !ee && eh,
         [eb, e_] = i.useState(!1),
@@ -217,7 +217,7 @@ let k = i.memo(function (e) {
                       D(
                           R(
                               {
-                                  ariaLabel: T.intl.formatToPlainString(T.t["/uzRsr"], {
+                                  ariaLabel: w.intl.formatToPlainString(w.t["/uzRsr"], {
                                       guildName: H.name,
                                       mentions: X,
                                   }),
@@ -244,7 +244,7 @@ let k = i.memo(function (e) {
                           },
                       ),
                   ),
-        ew = ed
+        eT = ed
             ? (0, r.jsx)(S.OG, { children: (0, r.jsx)(P.Z, {}) })
             : (0, r.jsx)(s.animated.div, {
                   ref: $
@@ -281,7 +281,7 @@ let k = i.memo(function (e) {
                 guild: H,
                 disabled: ee,
                 isDragging: ed,
-                children: ew,
+                children: eT,
             }),
             $
                 ? (0, r.jsx)(S.ZP, {

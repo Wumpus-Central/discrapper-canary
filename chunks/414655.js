@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(370523),
@@ -19,13 +19,13 @@ var r = n(951288),
     j = n(778567),
     O = n(228168),
     x = n(388032),
-    _ = n(10094);
-function P(e) {
+    _ = n(363725);
+function I(e) {
     let { profileOwner: t } = e,
         {
             wishlistId: n,
-            currentUser: P,
-            wishlistSettings: I,
+            currentUser: I,
+            wishlistSettings: P,
         } = (0, l.cj)([h.Z, m.default], () => {
             let e = h.Z.getFirstWishlistId(t.id);
             return {
@@ -35,14 +35,14 @@ function P(e) {
             };
         }),
         { analyticsLocations: w } = (0, d.ZP)(),
-        S = (null == P ? void 0 : P.id) === t.id,
+        S = (null == I ? void 0 : I.id) === t.id,
         E = !1 === t.nsfwAllowed,
         [T, C] = i.useState(!0);
     i.useEffect(() => {
-        (null == I ? void 0 : I.visibility) != null && C(I.visibility === a.f.PUBLIC);
-    }, [null == I ? void 0 : I.visibility]);
-    let { wishlist: N, error: A } = (0, p.kZ)(n, t.id),
-        D = i.useCallback(() => {
+        (null == P ? void 0 : P.visibility) != null && C(P.visibility === a.f.PUBLIC);
+    }, [null == P ? void 0 : P.visibility]);
+    let { wishlist: N, error: D } = (0, p.kZ)(n, t.id),
+        A = i.useCallback(() => {
             if (null == n) return;
             let e = T ? a.f.PRIVATE : a.f.PUBLIC;
             C(!T),
@@ -60,7 +60,7 @@ function P(e) {
                     analyticsSource: u.Z.USER_PROFILE_WISHLIST,
                 });
         }, [w]);
-    return null != A
+    return null != D
         ? null
         : null == N || 0 === N.items.length
           ? (0, r.jsx)(v.F, {
@@ -158,7 +158,7 @@ function P(e) {
                                           (0, r.jsx)(j.Z, {
                                               isOwner: S,
                                               isWishlistPublic: T,
-                                              onToggleVisibility: D,
+                                              onToggleVisibility: A,
                                           }),
                                       ],
                                   })

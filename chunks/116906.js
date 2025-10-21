@@ -1,4 +1,4 @@
-t.d(n, { Z: () => Z });
+t.d(n, { Z: () => _ });
 var l = t(951288);
 t(647438);
 var i = t(442837),
@@ -19,16 +19,16 @@ var i = t(442837),
     g = t(228168),
     b = t(981631),
     I = t(388032),
-    y = t(7994),
-    _ = t(878449);
-function Z(e) {
-    let { user: n, currentUser: t, guildId: Z, subsection: O, onClose: N } = e,
+    y = t(847540),
+    Z = t(883172);
+function _(e) {
+    let { user: n, currentUser: t, guildId: _, subsection: O, onClose: N } = e,
         { voiceActivityStatusEnabled: A } = (0, r.U)({ location: "UserProfileModalActivity" }),
         T = (0, u.b)({ location: "UserProfileModalActivity" }),
         { live: P, recent: E, stream: C } = (0, m.Z)(n.id),
         { voiceChannel: S, voiceActivity: w } = (0, p.Z)({
             userId: n.id,
-            guildId: Z,
+            guildId: _,
         }),
         R = (0, i.e7)([s.Z], () => s.Z.isFetchingUserOutbox(n.id)),
         D = n.id === t.id,
@@ -126,7 +126,7 @@ function Z(e) {
               ],
           })
         : (0, l.jsx)("div", {
-              className: _.empty,
+              className: Z.empty,
               children: (0, l.jsx)(o.$jN, {}),
           });
 }

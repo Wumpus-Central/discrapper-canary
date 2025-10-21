@@ -3,7 +3,7 @@ n.d(t, {
     En: () => M,
     cO: () => D,
     dJ: () => L,
-    jG: () => T,
+    jG: () => w,
     yI: () => R,
 });
 var r = n(951288);
@@ -28,15 +28,15 @@ var i = n(120356),
     v = n(981631),
     j = n(176505),
     x = n(921944),
-    C = n(948208),
-    E = n(989308),
+    C = n(45765),
+    E = n(258640),
     S = n(388032),
-    I = n(428197),
+    I = n(718908),
     P = n(611087),
     N = n(928381),
     Z = n(283902),
-    w = n(225375);
-function T(e) {
+    T = n(225375);
+function w(e) {
     let { guildId: t, powerup: n, markAsDismissed: i } = e;
     return (0, r.jsx)(k, {
         asset: (0, r.jsx)(_.g, { className: I.image }),
@@ -115,7 +115,7 @@ function D(e) {
             content: S.intl.string(E.default.mmNkUF),
             asset: (0, r.jsx)("img", {
                 alt: "",
-                src: w.Z,
+                src: T.Z,
                 className: I.image,
             }),
             onClick: () => (0, b.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, l.skuId),

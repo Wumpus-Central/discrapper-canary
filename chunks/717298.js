@@ -1,4 +1,4 @@
-n.d(t, { Z: () => X }), n(388685);
+n.d(t, { Z: () => K }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -37,16 +37,16 @@ var r = n(951288),
     B = n(328242),
     L = n(565574),
     G = n(286420),
-    U = n(173044),
+    U = n(51708),
     F = n(801604),
     H = n(577257),
     W = n(70722),
-    z = n(637824),
+    z = n(137349),
     V = n(388032),
-    J = n(468918);
-function X(e) {
+    J = n(374079);
+function K(e) {
     var t;
-    let { onClose: n, transitionState: l, sourceApplication: o, analyticsLocations: X = [], selectSource: K = !0 } = e,
+    let { onClose: n, transitionState: l, sourceApplication: o, analyticsLocations: K = [], selectSource: X = !0 } = e,
         Y = i.useRef(performance.now()),
         q = (0, f.e7)(
             [b.Z],
@@ -55,16 +55,16 @@ function X(e) {
                 ((0, w.isLinux)() ||
                     ((0, w.isMac)() && a().satisfies(null === _.Z || void 0 === _.Z ? void 0 : _.Z.os.release, W.jR))),
         ),
-        { analyticsLocations: Q } = (0, v.ZP)(X, x.Z.GO_LIVE_MODAL_V2),
+        { analyticsLocations: Q } = (0, v.ZP)(K, x.Z.GO_LIVE_MODAL_V2),
         $ = (0, f.e7)([C.default], () => C.default.getCurrentUser()),
         ee = (0, N.Z)(),
         { state: et, dispatch: en } = (0, k.Ti)(o, $, ee),
-        er = (0, m.Z)((0, w.isWindows)() && null != o && K ? "confirm" : "source_select");
+        er = (0, m.Z)((0, w.isWindows)() && null != o && X ? "confirm" : "source_select");
     (0, H.Z)(q, en, "confirm" === er);
     let ei = !P.ZP.canStreamQuality(P.ZP.StreamQuality.HIGH, $),
         el = !(0, w.isLinux)(),
         es = "confirm" === er,
-        eo = !K && null != o && !es,
+        eo = !X && null != o && !es,
         ea = q && et.sourceType !== u.vA.CAMERA,
         ec = i.useMemo(() => {
             let e = [

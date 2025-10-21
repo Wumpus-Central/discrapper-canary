@@ -27,9 +27,9 @@ var r = n(951288),
     P = n(981631),
     N = n(124368),
     Z = n(388032),
-    w = n(55940),
-    T = n(509612),
-    A = n(113914);
+    T = n(33082),
+    w = n(516966),
+    A = n(95701);
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -160,9 +160,9 @@ function M(e) {
         children: (0, r.jsx)("div", {
             role: "img",
             "aria-label": "".concat(l, " icon"),
-            className: T.iconContainer,
+            className: w.iconContainer,
             children: (0, r.jsx)(n, {
-                className: T.icon,
+                className: w.icon,
                 color: "currentColor",
             }),
         }),
@@ -240,7 +240,7 @@ let k = i.memo(function (e) {
                   : Z.intl.formatToPlainString(Z.t["0nZpiI"], { channelName: t.name });
     return (0, r.jsxs)("li", {
         role: Q,
-        className: o()(w.containerDefault, { [w.selected]: l }),
+        className: o()(T.containerDefault, { [T.selected]: l }),
         children: [
             (0, r.jsx)(L, { withGuildIcon: A }),
             h
@@ -259,33 +259,33 @@ let k = i.memo(function (e) {
                     right: 4,
                 },
                 children: (0, r.jsxs)("div", {
-                    className: o()(w.iconVisibility, T.wrapper, T.typeThread, {
-                        [T.modeSelected]: l,
-                        [T.modeMuted]: !l && V,
-                        [T.modeUnreadImportant]: !V && !l && U,
-                        [T.withGuildIcon]: A,
-                        [T.threadsInChannelListQoLExperiment]: H.enabled,
-                        [T.withThreadAvatar]: "icon-with-avatar" === H.variant,
-                        [T.withThreadIconInBubble]: "icon-in-bubble" === H.variant,
+                    className: o()(T.iconVisibility, w.wrapper, w.typeThread, {
+                        [w.modeSelected]: l,
+                        [w.modeMuted]: !l && V,
+                        [w.modeUnreadImportant]: !V && !l && U,
+                        [w.withGuildIcon]: A,
+                        [w.threadsInChannelListQoLExperiment]: H.enabled,
+                        [w.withThreadAvatar]: "icon-with-avatar" === H.variant,
+                        [w.withThreadIconInBubble]: "icon-in-bubble" === H.variant,
                     }),
                     onMouseDown: K,
                     onContextMenu: Y,
                     children: [
-                        !U || V || l ? null : (0, r.jsx)("div", { className: o()(T.unread, T.unreadImportant) }),
+                        !U || V || l ? null : (0, r.jsx)("div", { className: o()(w.unread, w.unreadImportant) }),
                         (0, r.jsx)(
                             u.P3F,
                             D(R({}, J), {
                                 innerRef: $,
-                                className: T.link,
+                                className: w.link,
                                 onClick: W,
                                 "aria-label": ee,
                                 focusProps: { enabled: !1 },
                                 children: (0, r.jsxs)("div", {
-                                    className: o()(T.linkTop, T.__invalid_threadMainContent),
+                                    className: o()(w.linkTop, w.__invalid_threadMainContent),
                                     children: [
                                         "icon-with-avatar" === H.variant
                                             ? (0, r.jsxs)("div", {
-                                                  className: T.threadIconWithAvatar,
+                                                  className: w.threadIconWithAvatar,
                                                   children: [
                                                       (0, r.jsx)(M, { thread: t }),
                                                       null == z
@@ -299,12 +299,12 @@ let k = i.memo(function (e) {
                                             : null,
                                         "icon-in-bubble" === H.variant ? (0, r.jsx)(M, { thread: t }) : null,
                                         (0, r.jsx)(g.Z, {
-                                            className: T.name,
+                                            className: w.name,
                                             "aria-hidden": !0,
                                             children: t.name,
                                         }),
                                         (0, r.jsxs)("div", {
-                                            className: T.children,
+                                            className: w.children,
                                             children: [
                                                 q > 0 && t.userLimit > 0
                                                     ? (0, r.jsx)(E.Z, {

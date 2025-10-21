@@ -31,8 +31,8 @@ var r = n(951288),
     P = n(274459),
     N = n(314897),
     Z = n(857192),
-    w = n(77498),
-    T = n(131951),
+    T = n(77498),
+    w = n(131951),
     A = n(158776),
     R = n(979651),
     D = n(574254),
@@ -51,7 +51,7 @@ var r = n(951288),
     Y = n(524484),
     q = n(65154),
     X = n(388032),
-    Q = n(7504);
+    Q = n(400872);
 let J = [K.fO.ACTIVITY],
     $ = i.memo((e) => {
         var t, n, l, s, c, b, _;
@@ -90,9 +90,9 @@ let J = [K.fO.ACTIVITY],
             eP = (0, a.e7)([N.default], () => N.default.getId()),
             eN = D.type === K.fO.ACTIVITY ? null : D.user,
             eZ = null != (l = null == eN ? void 0 : eN.id) ? l : null,
-            [ew] = (0, h.Z)(D.type === K.fO.ACTIVITY ? [D.applicationId] : []),
-            eT = (0, a.e7)([T.Z], () => null != eZ && T.Z.isLocalVideoDisabled(eZ, (0, g.Z)(D.type)), [eZ, D.type]),
-            eA = (0, a.e7)([T.Z], () => (null != eZ ? T.Z.getVideoToggleState(eZ, (0, g.Z)(D.type)) : W.ZUi.NONE), [
+            [eT] = (0, h.Z)(D.type === K.fO.ACTIVITY ? [D.applicationId] : []),
+            ew = (0, a.e7)([w.Z], () => null != eZ && w.Z.isLocalVideoDisabled(eZ, (0, g.Z)(D.type)), [eZ, D.type]),
+            eA = (0, a.e7)([w.Z], () => (null != eZ ? w.Z.getVideoToggleState(eZ, (0, g.Z)(D.type)) : W.ZUi.NONE), [
                 eZ,
                 D.type,
             ]),
@@ -112,7 +112,7 @@ let J = [K.fO.ACTIVITY],
                             voiceChannelId: null == i ? void 0 : i.channelId,
                         };
                     }),
-                    u = (0, a.cj)([T.Z], () => {
+                    u = (0, a.cj)([w.Z], () => {
                         let n = (0, g.Z)(t.type);
                         return e === s
                             ? {
@@ -120,9 +120,9 @@ let J = [K.fO.ACTIVITY],
                                   deafened: !1,
                               }
                             : {
-                                  muted: T.Z.isLocalMute(s, n),
-                                  localVideoDisabled: T.Z.isLocalVideoDisabled(s, n),
-                                  localVideoAutoDisabled: T.Z.isLocalVideoAutoDisabled(s, n),
+                                  muted: w.Z.isLocalMute(s, n),
+                                  localVideoDisabled: w.Z.isLocalVideoDisabled(s, n),
+                                  localVideoAutoDisabled: w.Z.isLocalVideoAutoDisabled(s, n),
                               };
                     }, [e, t.type, s]);
                 return {
@@ -151,8 +151,8 @@ let J = [K.fO.ACTIVITY],
                         : null,
                 [eV, eZ],
             ),
-            ez = (0, a.e7)([w.Z], () =>
-                (null == eH ? void 0 : eH.application_id) != null ? w.Z.getDetectableGame(eH.application_id) : null,
+            ez = (0, a.e7)([T.Z], () =>
+                (null == eH ? void 0 : eH.application_id) != null ? T.Z.getDetectableGame(eH.application_id) : null,
             ),
             eW = (0, a.e7)([f.Z], () =>
                 null != ez && (null == eH ? void 0 : eH.application_id) != null
@@ -197,7 +197,7 @@ let J = [K.fO.ACTIVITY],
             ),
             e0 = null,
             e1 = null,
-            e8 = "";
+            e4 = "";
         switch (D.type) {
             case K.fO.STREAM:
                 (e0 = (0, r.jsx)(F.Z, {
@@ -219,7 +219,7 @@ let J = [K.fO.ACTIVITY],
                         idle: ev,
                         premiumIndicator: !1,
                     })),
-                    (e8 = X.intl.formatToPlainString(X.t.gHPz3d, { streamerName: D.user.username }));
+                    (e4 = X.intl.formatToPlainString(X.t.gHPz3d, { streamerName: D.user.username }));
                 break;
             case K.fO.USER:
                 (e0 = (0, r.jsx)(V.Z, {
@@ -241,7 +241,7 @@ let J = [K.fO.ACTIVITY],
                         participant: D,
                         channelId: el.id,
                     })),
-                    (e8 = X.intl.formatToPlainString(X.t["iC/x/f"], { username: D.user.username }));
+                    (e4 = X.intl.formatToPlainString(X.t["iC/x/f"], { username: D.user.username }));
                 break;
             case K.fO.ACTIVITY:
                 (e0 = (0, r.jsx)(U.ZP, {
@@ -251,7 +251,7 @@ let J = [K.fO.ACTIVITY],
                     channel: el,
                     width: eo,
                 })),
-                    (e8 = X.intl.formatToPlainString(X.t.YCvOsL, { activityName: null == ew ? void 0 : ew.name }));
+                    (e4 = X.intl.formatToPlainString(X.t.YCvOsL, { activityName: null == eT ? void 0 : eT.name }));
                 break;
             case K.fO.HIDDEN_STREAM:
                 e0 = (0, r.jsx)(F.Z, {
@@ -266,7 +266,7 @@ let J = [K.fO.ACTIVITY],
                     inOverlayPopout: ey,
                 });
         }
-        let e4 = i.useRef(null),
+        let e8 = i.useRef(null),
             e6 = D.type === K.fO.STREAM ? u.pzj : u.Odl;
         return (0, r.jsx)(p.Z, {
             section: W.jXE.VOICE_CHANNEL_TILE,
@@ -285,7 +285,7 @@ let J = [K.fO.ACTIVITY],
                     className: Q.tile,
                     children: [
                         (0, r.jsx)(B.Z, {
-                            ref: e4,
+                            ref: e8,
                             className: o()(Q.tile, {
                                 [Q.noBorder]: ed,
                                 [Q.noInteraction]: null == H,
@@ -295,7 +295,7 @@ let J = [K.fO.ACTIVITY],
                             style: er,
                             participantUserId: eZ,
                             children: (0, r.jsxs)(u.kL8, {
-                                "aria-label": e8,
+                                "aria-label": e4,
                                 className: Q.tileChild,
                                 onDoubleClick: eJ,
                                 onContextMenu: (e) => e$(e, D.type === K.fO.STREAM),
@@ -322,7 +322,7 @@ let J = [K.fO.ACTIVITY],
                                                       width:
                                                           null !=
                                                           (s =
-                                                              null == e4 || null == (t = e4.current)
+                                                              null == e8 || null == (t = e8.current)
                                                                   ? void 0
                                                                   : t.clientWidth)
                                                               ? s
@@ -330,7 +330,7 @@ let J = [K.fO.ACTIVITY],
                                                       height:
                                                           null !=
                                                           (c =
-                                                              null == e4 || null == (n = e4.current)
+                                                              null == e8 || null == (n = e8.current)
                                                                   ? void 0
                                                                   : n.clientHeight)
                                                               ? c
@@ -402,7 +402,7 @@ let J = [K.fO.ACTIVITY],
                                                       title: (0, k.Z)(el, D),
                                                       blocked: eh,
                                                       ignored: eg,
-                                                      localVideoDisabled: eT,
+                                                      localVideoDisabled: ew,
                                                       videoToggleState: eA,
                                                       hideAudioIcon: eU,
                                                       onContextMenu: e$,
@@ -451,7 +451,7 @@ let J = [K.fO.ACTIVITY],
                             }),
                         (0, r.jsx)(v.Z, {
                             isFiring: ej,
-                            callTileRef: e4.current,
+                            callTileRef: e8.current,
                         }),
                     ],
                 }),
@@ -524,9 +524,9 @@ let en = i.memo((e) => {
             serverDeafened: P,
             hasVideo: N,
             hideAudioIcon: Z,
-            onToggleMute: w,
+            onToggleMute: T,
         } = e,
-        A = (0, a.e7)([T.Z], () => null != O && T.Z.isLocalVideoAutoDisabled(O, (0, g.Z)(m)), [O, m]),
+        A = (0, a.e7)([w.Z], () => null != O && w.Z.isLocalVideoAutoDisabled(O, (0, g.Z)(m)), [O, m]),
         R = (0, b.Z)({
             userId: O,
             guildId: y.getGuildId(),
@@ -661,7 +661,7 @@ let en = i.memo((e) => {
                                     }),
                                     B &&
                                         (0, r.jsx)(et, {
-                                            onClick: w,
+                                            onClick: T,
                                             tooltipText: S ? X.intl.string(X.t.YqAjX1) : X.intl.string(X.t["w4m94+"]),
                                             icon: S ? u.OyP : u.gj8,
                                             hideWhenInactive: !S && !G,

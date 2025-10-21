@@ -1,4 +1,4 @@
-t.d(n, { Z: () => _ }), t(388685), t(953529);
+t.d(n, { Z: () => Z }), t(388685), t(953529);
 var l = t(951288),
     i = t(442837),
     o = t(481060),
@@ -17,7 +17,7 @@ var l = t(951288),
     j = t(981631),
     g = t(671955),
     b = t(388032),
-    I = t(220566);
+    I = t(65464);
 function y(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
@@ -43,12 +43,12 @@ function y(e) {
     }
     return e;
 }
-function _(e) {
+function Z(e) {
     let {
             user: n,
             guildId: t,
-            channelId: _,
-            messageId: Z,
+            channelId: Z,
+            messageId: _,
             roleId: O,
             transitionState: N,
             openedAt: A,
@@ -63,8 +63,8 @@ function _(e) {
             userId: n.id,
             showGuildProfile: !0,
             guildId: E,
-            channelId: _,
-            messageId: Z,
+            channelId: Z,
+            messageId: _,
             roleId: O,
         }),
         R = [
@@ -78,7 +78,7 @@ function _(e) {
             },
         ],
         D = (0, p.ZP)(n.id, E),
-        L = d.ZP.getName(null == D ? void 0 : D.guildId, _, n),
+        L = d.ZP.getName(null == D ? void 0 : D.guildId, Z, n),
         M = b.intl.formatToPlainString(b.t.KRe1Fh, { name: L });
     return (0, l.jsx)(s.Gt, {
         value: S,

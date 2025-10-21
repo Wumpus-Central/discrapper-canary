@@ -12,20 +12,20 @@ var r = n(951288),
     g = n(978369),
     p = n(286957),
     m = n(388032),
-    b = n(44258);
+    b = n(200344);
 function h(e) {
     var t;
     let { tags: n, isCurrentUser: a, widgetType: s, applicationId: c, className: u, disableInteraction: h = !1 } = e,
         x = null != (t = null == n ? void 0 : n.filter((e) => null != (0, p.zK)(e))) ? t : [],
         _ = x.length > 0,
-        P = o.qH,
-        I = a && !h && (0, f.M8)(s) && x.length < P,
+        I = o.qH,
+        P = a && !h && (0, f.M8)(s) && x.length < I,
         { trackUserProfileAction: w } = (0, d.KZ)(),
         S = (0, i.useRef)(new Map()),
         E = (0, i.useRef)(null),
         T = (0, i.useRef)(null),
         [C, N] = (0, i.useState)(0),
-        [A, D] = (0, i.useState)(!1),
+        [D, A] = (0, i.useState)(!1),
         k = O(E, T, x, S, N);
     if (
         ((0, i.useEffect)(
@@ -38,10 +38,10 @@ function h(e) {
             ),
             [k, null == x ? void 0 : x.join("")],
         ),
-        !_ && !I)
+        !_ && !P)
     )
         return null;
-    let Z = A ? x : x.slice(0, x.length - C);
+    let Z = D ? x : x.slice(0, x.length - C);
     return (0, r.jsxs)("div", {
         className: l()(b.tagListContainer, u),
         children: [
@@ -69,23 +69,23 @@ function h(e) {
                             ),
                         }),
                         C > 0 &&
-                            (A
+                            (D
                                 ? (0, r.jsx)(j, {
                                       onClick: () => {
-                                          D(!1), w({ action: "COLLAPSE_GAME_TAGS" });
+                                          A(!1), w({ action: "COLLAPSE_GAME_TAGS" });
                                       },
                                   })
                                 : (0, r.jsx)(y, {
                                       numHidden: C,
                                       onClick: () => {
-                                          D(!0), w({ action: "EXPAND_GAME_TAGS" });
+                                          A(!0), w({ action: "EXPAND_GAME_TAGS" });
                                       },
                                       ref: E,
                                       disableInteraction: h,
                                   })),
                     ],
                 }),
-            I &&
+            P &&
                 (0, r.jsx)(g.Z, {
                     tags: n,
                     widgetType: s,

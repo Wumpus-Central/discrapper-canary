@@ -12,7 +12,7 @@ var r = n(951288),
     g = n(173951),
     p = n(455731),
     m = n(272289),
-    b = n(39642);
+    b = n(517143);
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -83,8 +83,8 @@ let y = (e) => {
             O = j && !i && g,
             x = (0, o.mR)(f),
             _ = (0, o.Hy)(f, { isCurrentUser: j }),
-            P = (0, o.kQ)(f),
-            I = 1 === (0, o.Gv)(f.type);
+            I = (0, o.kQ)(f),
+            P = 1 === (0, o.Gv)(f.type);
         return (0, r.jsx)(
             y,
             h(
@@ -95,12 +95,12 @@ let y = (e) => {
                     headerTitle: x,
                     headerSubtitle: _,
                     headerActionButtons:
-                        j && !I
+                        j && !P
                             ? [
                                   (0, r.jsx)(
                                       u.yX,
                                       {
-                                          disabled: P,
+                                          disabled: I,
                                           widgetType: f.type,
                                           widget: f,
                                       },

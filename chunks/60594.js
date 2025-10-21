@@ -44,15 +44,15 @@ var r = n(951288),
     z = n(399299),
     V = n(351152),
     J = n(567126),
-    X = n(143135),
-    K = n(717298),
+    K = n(143135),
+    X = n(717298),
     Y = n(70722),
     q = n(37113),
     Q = n(981631),
     $ = n(921944),
     ee = n(761274),
     et = n(388032),
-    en = n(542257),
+    en = n(79985),
     er = n(402163);
 function ei(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -118,7 +118,7 @@ function eo(e) {
     let {
             selectGuild: k = !1,
             selectSource: L = !0,
-            guildId: K,
+            guildId: X,
             analyticsLocation: eo,
             onClose: ea,
             transitionState: ec,
@@ -132,7 +132,7 @@ function eo(e) {
             let e = A.default.getCurrentUser();
             return a()(null != e, "GoLiveModal: user cannot be undefined"), e;
         }),
-        ev = null != (t = null == e_ ? void 0 : e_.getGuildId()) ? t : K,
+        ev = null != (t = null == e_ ? void 0 : e_.getGuildId()) ? t : X,
         ej = (0, f.e7)([E.Z], () => {
             var e;
             return null != ev ? (null == (e = E.Z.getGuild(ev)) ? void 0 : e.premiumTier) : null;
@@ -168,8 +168,8 @@ function eo(e) {
         [eF, eH] = i.useState(eu),
         [eW, ez] = i.useState(ef),
         [eV, eJ] = i.useState(ep),
-        [eX, eK] = i.useState(null != (o = P.I0.getSetting()) && o),
-        [eY, eq] = i.useState(null != K ? K : null),
+        [eK, eX] = i.useState(null != (o = P.I0.getSetting()) && o),
+        [eY, eq] = i.useState(null != X ? X : null),
         eQ = null != (d = null == e_ ? void 0 : e_.id) ? d : eR,
         [e$, e1] = i.useState(eO ? "" : void 0);
     async function e0() {
@@ -178,7 +178,7 @@ function eo(e) {
         let n = null != (e = null == e_ ? void 0 : e_.id) ? e : eR;
         a()(null != n, "Received null target channel ID");
         let r = I.Z.getChannel(n),
-            i = null != (t = null == r ? void 0 : r.getGuildId()) ? t : K;
+            i = null != (t = null == r ? void 0 : r.getGuildId()) ? t : X;
         if (null == e_ && !(await (0, v.Z)({ channelId: n }))) return;
         let l = eG,
             s = eF,
@@ -196,7 +196,7 @@ function eo(e) {
         let c = {};
         if (null == ek ? void 0 : ek.id.startsWith("prepicked:")) c = H.ZP.getStreamStartOptions();
         else {
-            let e = (0, X.Z)(eg, ek, C.ZP.getRunningGames()),
+            let e = (0, K.Z)(eg, ek, C.ZP.getRunningGames()),
                 t = !(0, D.isWindows)() || null == e || (null == ek ? void 0 : ek.id.startsWith("camera:"));
             (c.pid = t || null == e ? void 0 : e.pid),
                 null == c.pid && null != ek && ((c.sourceId = ek.id), (c.sourceName = ek.name));
@@ -207,7 +207,7 @@ function eo(e) {
             el(ei({}, c), {
                 audioSourceId: eB,
                 sound: eV,
-                previewDisabled: eX,
+                previewDisabled: eK,
                 nativePickerStyleUsed: e$,
                 goLiveModalDurationMs: Date.now() - em.current,
             }),
@@ -261,11 +261,11 @@ function eo(e) {
             },
             [e$],
         );
-    function e4(e) {
+    function e8(e) {
         if ((e.preventDefault(), 1 === eE)) return e3();
         if (2 === eE) return eT(3);
         if (null != e$) return eT(1);
-        let t = (0, X.Z)(eg, ek, C.ZP.getRunningGames());
+        let t = (0, K.Z)(eg, ek, C.ZP.getRunningGames());
         if (B.ZP.supportsFeature(Q.eRX.ELEVATED_HOOK) && (null == t ? void 0 : t.elevated)) {
             var i;
             let e = null != (i = null == eg ? void 0 : eg.pid) ? i : null;
@@ -282,7 +282,7 @@ function eo(e) {
             });
         } else e2();
     }
-    let e8 = i.useCallback(
+    let e4 = i.useCallback(
             (e) => {
                 eD(e),
                     null != e &&
@@ -301,8 +301,8 @@ function eo(e) {
             },
             [L],
         ),
-        e6 = !(1 === eE && eC && ey === H.Uc.Error),
-        e9 = (function (e) {
+        e9 = !(1 === eE && eC && ey === H.Uc.Error),
+        e6 = (function (e) {
             switch (e) {
                 case 2:
                     return et.intl.string(et.t["aC4/Zm"]);
@@ -328,12 +328,12 @@ function eo(e) {
                         className: en.headerText,
                         children: et.intl.string(et.t.RDkJQ0),
                     }),
-                    e6 && null != e9
+                    e9 && null != e6
                         ? (0, r.jsx)(h.Text, {
                               className: en.headerDescription,
                               variant: "text-md/normal",
                               color: "text-secondary",
-                              children: e9,
+                              children: e6,
                           })
                         : null,
                 ],
@@ -447,7 +447,7 @@ function eo(e) {
                     children: () => {
                         var e;
                         return (0, r.jsxs)("form", {
-                            onSubmit: e4,
+                            onSubmit: e8,
                             ref: eh,
                             children: [
                                 (0, r.jsxs)(h.MyZ, {
@@ -468,12 +468,12 @@ function eo(e) {
                                                 className: en.modalSize,
                                                 children: eC
                                                     ? (0, r.jsx)(J.se, {
-                                                          onSourceSelect: e8,
+                                                          onSourceSelect: e4,
                                                           selectedSource: ek,
                                                       })
                                                     : (0, r.jsx)(J.oA, {
                                                           selectedSource: ek,
-                                                          onChangeSelectedSource: e8,
+                                                          onChangeSelectedSource: e4,
                                                       }),
                                             }),
                                         }),
@@ -489,19 +489,19 @@ function eo(e) {
                                                     selectedSource: ek,
                                                     selectedFPS: eW,
                                                     sound: eV,
-                                                    previewDisabled: eX,
+                                                    previewDisabled: eK,
                                                     sourceChanged: eN,
                                                     selectSource: L,
                                                     onChangeSelectedFPS: (e) => e5(eG, eF, e),
                                                     onChangeSelectedResolution: (e) => e5(eG, e, eW),
                                                     onChangeSelectedPreset: (e) => e5(e, eF, eW),
                                                     onChangeSelectedChannelId: eM,
-                                                    onChangeSelectedSource: e8,
+                                                    onChangeSelectedSource: e4,
                                                     onChangeSource: () => tt(),
                                                     onChangeAudioDevice: (e) => eL(e),
                                                     onChangeGuild: () => eT(0),
                                                     onChangeSound: (e) => eJ(e),
-                                                    onChangePreviewDisabled: (e) => eK(e),
+                                                    onChangePreviewDisabled: (e) => eX(e),
                                                     onClose: ea,
                                                     selectedGuildId: eY,
                                                     targetGuildPremiumTier: ej,
@@ -536,7 +536,7 @@ function ea(e) {
         n = (0, f.e7)([C.ZP], () => (null != e.sourcePID ? C.ZP.getGameForPID(e.sourcePID) : void 0));
     return t
         ? (0, r.jsx)(
-              K.Z,
+              X.Z,
               el(ei({}, e), {
                   selectSource: e.selectSource,
                   sourceApplication: null != n ? n : void 0,

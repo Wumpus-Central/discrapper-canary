@@ -13,9 +13,9 @@ var r,
     f = t(899789),
     x = t(735276),
     _ = t(619733),
-    b = t(948208),
-    v = t(388032),
-    j = t(62525);
+    v = t(45765),
+    b = t(388032),
+    j = t(204613);
 let p =
     ((r = (function (e) {
         for (var n = 1; n < arguments.length; n++) {
@@ -84,7 +84,7 @@ function h(e) {
                   (0, i.jsx)(s.X6q, {
                       className: j.heading,
                       variant: "heading-md/semibold",
-                      children: v.intl.string(b.default["3vWDMz"]),
+                      children: b.intl.string(v.default["3vWDMz"]),
                   }),
                   h &&
                       (0, i.jsx)("div", {

@@ -1,4 +1,4 @@
-t.d(n, { Z: () => N }), t(388685);
+t.d(n, { Z: () => S }), t(388685);
 var l = t(951288),
     r = t(647438),
     i = t(512722),
@@ -14,15 +14,15 @@ var l = t(951288),
     h = t(176940),
     j = t(65154),
     p = t(388032),
-    v = t(591554),
-    f = t(542257),
-    Z = t(197571);
-function N(e) {
+    v = t(477302),
+    f = t(79985),
+    Z = t(10198);
+function S(e) {
     let { selectedSource: n, onChangeVideoDeviceSource: t, onChangeAudioDevice: i } = e;
     s()(null != n, "Camera capture device cannot be null");
     let a = (0, h.Z)(),
-        [N, S] = (0, x.Ls)(j.h7.AUDIO_INPUT, { location: "CaptureDeviceConfig" }),
-        C = N.concat(S),
+        [S, N] = (0, x.Ls)(j.h7.AUDIO_INPUT, { location: "CaptureDeviceConfig" }),
+        C = S.concat(N),
         [b, P] = r.useState(
             (function (e, n, t) {
                 var l;

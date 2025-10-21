@@ -1,6 +1,6 @@
 n.d(t, {
-    P: () => w,
-    Qo: () => T,
+    P: () => T,
+    Qo: () => w,
     ZP: () => Z,
     kw: () => R,
     rj: () => A,
@@ -27,7 +27,7 @@ var r = n(951288),
     j = n(438144),
     x = n(981631),
     C = n(388032),
-    E = n(84688);
+    E = n(973780);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -83,8 +83,8 @@ let N = i.memo(function (e) {
                 disableManageChannels: j,
                 position: N,
                 sortingPosition: Z,
-                hideIcon: w,
-                children: T,
+                hideIcon: T,
+                children: w,
             } = e,
             A = (0, s.e7)([y.ZP], () => y.ZP.isChannelMuted(l.getGuildId(), l.id)),
             R = (0, s.e7)([b.Z], () => b.Z.isCollapsed(l.id)),
@@ -120,7 +120,7 @@ let N = i.memo(function (e) {
                     t = l.getGuildId();
                 null != t &&
                     (0, d.ZDy)(async () => {
-                        let { default: i } = await Promise.all([n.e("29497"), n.e("53781")]).then(n.bind(n, 241865));
+                        let { default: i } = await Promise.all([n.e("29497"), n.e("73209")]).then(n.bind(n, 241865));
                         return (n) =>
                             (0, r.jsx)(
                                 i,
@@ -200,7 +200,7 @@ let N = i.memo(function (e) {
                                                     className: E.name,
                                                     children: (0, r.jsx)(m.Z, { children: l.name }),
                                                 }),
-                                                w
+                                                T
                                                     ? null
                                                     : (0, r.jsx)(d.CJ0, {
                                                           size: "md",
@@ -245,13 +245,13 @@ let N = i.memo(function (e) {
                             ],
                         }),
                     }),
-                    T,
+                    w,
                 ],
             });
         return null != v && null != h ? v(h(z)) : z;
     }),
     Z = (0, h.B)(N),
-    w = i.memo(function (e) {
+    T = i.memo(function (e) {
         let { name: t, onDismiss: n, className: i } = e;
         return (0, r.jsx)("li", {
             className: o()(i, E.containerDefault),
@@ -284,7 +284,7 @@ let N = i.memo(function (e) {
             }),
         });
     }),
-    T = i.memo(function (e) {
+    w = i.memo(function (e) {
         let { category: t } = e,
             n = (0, s.e7)([v.Z], () => v.Z.isVoiceCategoryCollapsed(t.guild.id)),
             l = i.useCallback(() => {
