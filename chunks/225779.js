@@ -1,10 +1,10 @@
 n.d(t, {
     DM: () => E,
     Ey: () => b,
-    No: () => v,
-    Ry: () => T,
-    qX: () => S,
-    u3: () => I,
+    No: () => I,
+    Ry: () => S,
+    qX: () => A,
+    u3: () => T,
 });
 var r = n(951288);
 n(647438);
@@ -120,7 +120,20 @@ function y(e, t) {
 function O(e) {
     null != e && l.default.track(c.rMx.APP_NOTICE_CLOSED, { notice_type: e });
 }
-function v(e) {
+function v(e, t, n) {
+    null != e &&
+        l.default.track(
+            c.rMx.APP_NOTICE_ANCHOR_CLICKED,
+            _(
+                {
+                    notice_type: e,
+                    href: t,
+                },
+                n,
+            ),
+        );
+}
+function I(e) {
     var { children: t, noticeType: n, additionalTrackingProps: i } = e,
         a = m(e, ["children", "noticeType", "additionalTrackingProps"]);
     return (0, r.jsx)(
@@ -133,19 +146,23 @@ function v(e) {
         }),
     );
 }
-function I(e) {
-    var { children: t, href: n } = e,
-        i = m(e, ["children", "href"]);
+function T(e) {
+    var { children: t, href: n, noticeType: i, additionalTrackingProps: a } = e,
+        o = m(e, ["children", "href", "noticeType", "additionalTrackingProps"]);
     return (0, r.jsx)(
         s.Anchor,
-        h(_({}, i), {
+        h(_({}, o), {
             className: d.button,
             href: n,
+            onClick: (e) => {
+                var t;
+                null == (t = o.onClick) || t.call(o, e), v(i, n, a);
+            },
             children: t,
         }),
     );
 }
-function T(e) {
+function S(e) {
     let { onClick: t, noticeType: n, className: i } = e;
     return (0, r.jsx)(s.P3F, {
         focusProps: { offset: 6 },
@@ -161,7 +178,7 @@ function T(e) {
         }),
     });
 }
-function S(e) {
+function A(e) {
     let { color: t = E.DEFAULT, className: n, style: i, ref: s, children: l } = e;
     return (0, r.jsx)("div", {
         ref: s,

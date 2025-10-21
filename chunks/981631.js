@@ -4007,6 +4007,7 @@ var nE = (function (e) {
             (e.APP_NOTICE_VIEWED = "app_notice_viewed"),
             (e.APP_NOTICE_CLOSED = "app_notice_closed"),
             (e.APP_NOTICE_PRIMARY_CTA_OPENED = "app_notice_primary_cta_opened"),
+            (e.APP_NOTICE_ANCHOR_CLICKED = "app_notice_anchor_clicked"),
             (e.VIDEO_LAYOUT_TOGGLED = "video_layout_toggled"),
             (e.VIDEO_INPUT_TOGGLED = "video_input_toggled"),
             (e.AUTHORIZED_APP_CONNECTED = "authorized_app_connected"),
